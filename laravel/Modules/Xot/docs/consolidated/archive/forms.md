@@ -1,3 +1,11 @@
+---
+title: "Forms and Input Handling"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "forms and input handling xot"
+---
 # Forms and Input Handling
 
 ## Basic Forms

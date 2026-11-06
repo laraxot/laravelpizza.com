@@ -1,3 +1,15 @@
+---
+title: "data objects"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "data objects"
+issues: []
+discussions: []
+status: draft
+---
+
 # Data Objects in Laraxot
 
 I Data Objects sono classi che incapsulano dati strutturati utilizzati in tutto il framework Laraxot. Utilizzano la libreria `spatie/laravel-data` e sono progettati per essere immutabili e facilmente trasferibili tra i vari componenti dell'applicazione.

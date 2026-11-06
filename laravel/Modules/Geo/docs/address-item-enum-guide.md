@@ -1,3 +1,15 @@
+---
+title: "address item enum guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address item enum guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # AddressItemEnum - Comprehensive Guide
 
 ## Purpose and Philosophy

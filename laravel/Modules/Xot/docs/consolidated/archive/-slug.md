@@ -1,3 +1,11 @@
+---
+title: "_slug"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_slug xot"
+---
 # _slug
 
 <!-- Contenuto migrato da _docs/_slug.txt -->

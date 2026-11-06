@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Gestione File di Traduzione"
+module: "Lang"
+type: concept
+tags: [readme.es, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme.es 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Gestione File di Traduzione
 
 ## Panoramica
@@ -190,7 +204,7 @@ class TranslationFileResource extends XotBaseResource
 {
     protected static ?string $model = TranslationFile::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Components\TextInput::make('key')
@@ -441,7 +455,7 @@ class TranslationFileResource extends XotBaseResource
 {
     protected static ?string $model = TranslationFile::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Components\TextInput::make('key')

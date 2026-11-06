@@ -1,56 +1,62 @@
-# 📄 Cms
-
-[![Domain-CMS](https://img.shields.io/badge/Domain-CMS%20Folio-00838F.svg)](#)
-[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
-[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
-[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
-[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
-[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
-[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
-[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
-
-> **Pagine che respirano Design Comuni.** Folio, blocchi CMS, JSON content — il frontoffice non è un afterthought.
-
+---
+id: module-cms-readme
+title: "CMS — Content Management e Pagine Componibili"
+type: module-readme
+category: module-documentation
+module: Cms
+status: active
+tags: [cms, cms, pages, builder, folio, content]
+created: 2026-09-14
+updated: 2026-09-14
+qmd: "cms pages builder blocks folio content localization module documentation"
+issues:
+  - "https://github.com/laraxot/module_cms_fila5/issues/53"
+discussions:
+  - "https://github.com/laraxot/module_cms_fila5/discussions/54"
+related:
+  - "./docs/"
+sources: []
 ---
 
-## Perché esiste
+# 🧱 CMS
 
-Gestisce contenuti e composizione pagine `/it` senza hardcode in Blade monolitici.
+> **Content management e pagine componibili.**
 
-## Superpoteri
+Gestisce pagine, Builder Blocks, localizzazione e rendering Folio/Blade.
 
-- Laravel Folio + blocchi riusabili
-- Content JSON-driven
-- Integrazione tema Sixteen
-- Filament per gestione contenuti
+## Cosa offre
 
-## Certificazioni
+- **Pagine pubblicabili** – CRUD per contenuti
+- **Builder Blocks** – componenti riutilizzabili
+- **Contenuti JSON** – dati strutturati
+- **Folio e temi** – tematiche e layout
 
-| Certificazione | Stato |
-|----------------|-------|
-| PHPStan livello 10 | Target progetto |
-| `declare(strict_types=1)` | Su nuovo codice PHP |
-| Filament 5 + XotBase | Admin enterprise |
-| Test PHPUnit / Pest | Suite modulo |
-| Documentazione wiki | Cartella `docs/` |
+## Confini architetturali
 
-## Vuoi entrare nel team?
+This module publishes contracts usable by other modules. Logic resides in `Actions`; admin UI follows Laraxot/XotBase.
 
-Costruisci **pagine civiche** modulari — un blocco alla volta.
+## Integrazione rapida
 
-Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+```bash
+cd laravel
+php artisan module:list
+./vendor/bin/phpstan analyse Modules/Cms
+```
 
----
+See local docs for integration patterns.
 
 ## Documentazione
 
-| Lingua | Link |
-|--------|------|
-| 🇮🇹 Presentazione | Questo file (`README.md`) |
-| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
-| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+The technical map is in [docs/README.md](./docs/README.md).
+
+- [Story BMAD del modulo](./docs/stories/)
+- [Regole del progetto](../../../docs/wiki/)
+- [README del progetto](../../README.md)
+
+## Qualità e manutenzione
+
+Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts change.
 
 ---
 
-**Modulo** `cms` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+**Modulo** `cms` · **Laraxot ecosystem** · **Project-agnostic**

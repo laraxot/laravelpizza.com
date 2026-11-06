@@ -21,11 +21,11 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    expect($form)->toBeArray()->toHaveCount(3);
+    expect($form)->toHaveCount(3);
 
     // Verifica che ogni attachment abbia un FileUpload component
-    foreach ($form as $component) {
-        expect($component)->toBeInstanceOf(FileUpload::class);
+    foreach ($form as $index => $component) {
+        expect($component->getName())->toBe($attachments[$index]);
     }
 });
 
@@ -77,7 +77,7 @@ it('has correct validation', function (): void {
         'docx',
     ];
 
-    expect(collect($acceptedTypes)->contains(fn ($t) => in_array($t, $allowed, true)))->toBeTrue();
+    expect(collect($acceptedTypes)->contains(static fn (mixed $type): bool => is_string($type) && in_array($type, $allowed, true)))->toBeTrue();
 });
 
 /**
@@ -208,7 +208,7 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component->isDeletable())->toBeTrue();
 });
 
 /**
@@ -274,8 +274,7 @@ it('has correct panel', function (): void {
 
     // Assert
     $component = $form[0];
-    // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component->getPanelLayout())->toBe('compact');
 });
 
 /**
@@ -291,9 +290,7 @@ it('has correct help text', function (): void {
 
     // Assert
     $component = $form[0];
-    // FileUpload has helperText property but no getHelper method
-    // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component->shouldPreserveFilenames())->toBeTrue();
 });
 
 /**

@@ -1,3 +1,16 @@
+---
+title: "02 theme content to page component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "02 theme content to page component"
+issues: []
+discussions: []
+status: superseded
+superseded_by: theme-content-to-page-component.md
+---
+
 # Migrazione da $_theme->showPageContent() a <x-page> Component
 
 ## Panoramica
@@ -205,5 +218,5 @@ Si raccomanda di completare questa migrazione in tutti i file del progetto per g
 ## Riferimenti
 
 - [Documentazione Componenti Blade Laravel](https://laravel.com/docs/blade#components)
-- [Componente Page](../components/page.md)
-- [Best Practices per il Rendering delle Pagine](../best-practices/page-rendering.md)
+- [Componente Page](../../components/page.md)
+- [Best Practices per il Rendering delle Pagine](../../best-practices/page-rendering.md)

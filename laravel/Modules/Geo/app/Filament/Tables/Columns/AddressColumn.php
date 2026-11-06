@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Tables\Columns;
 
-use Filament\Tables\Columns\ViewColumn;
 use Modules\Geo\Enums\AddressItemEnum;
+use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
 
 /**
  * AddressColumn - Colonna Filament riutilizzabile per rendering indirizzi.
@@ -27,7 +27,7 @@ use Modules\Geo\Enums\AddressItemEnum;
  *
  * @since 2025-12-12
  */
-class AddressColumn extends ViewColumn
+class AddressColumn extends XotBaseViewColumn
 {
     /**
      * View Blade per il rendering della colonna.

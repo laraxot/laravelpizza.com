@@ -1,3 +1,15 @@
+---
+title: "critical filament rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical filament rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # CRITICAL FILAMENT EXTENSION RULES
 
 ## 🚫 ABSOLUTELY FORBIDDEN: Direct Filament Extensions
@@ -224,13 +236,12 @@ If you find violations in existing code:
 
 ## 📚 Related Documentation
 
-- [XotBaseResource Documentation](../../Xot/docs/readme.md)
-- [Filament Extension Patterns](../../Xot/docs/filament-extension-pattern.md)
+- [XotBaseResource Documentation](../../../../../Xot/docs/README.md)
+- [Filament Extension Patterns](../../../../../Xot/docs/filament-extension-pattern.md)
 - [LangServiceProvider](../../Lang/docs/service-provider.md)
 - [Spatie QueueableAction](https://github.com/spatie/laravel-queueable-action)
 
 ---
-
 **Version**: 1.0 - Critical Rules
 **Enforcement**: Mandatory
 **Violation Level**: Critical Architectural Error

@@ -1,14 +1,25 @@
+---
+title: "VHOST CONFIGURATION SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "VHOST CONFIGURATION SUMMARY"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🌐 VHost Configuration Summary
 
 > **Date**: 2026-03-31  
 > **Status**: ✅ Complete  
-> **Domain**: fixcity.local
+> **Domain**: laraxot.local
 
 ---
-
 ## 📋 Overview
 
-This document summarizes the complete VHost configuration implementation for the FixCity platform.
+This document summarizes the complete VHost configuration implementation for the Notify platform.
 
 ---
 
@@ -16,12 +27,12 @@ This document summarizes the complete VHost configuration implementation for the
 
 ### 1. Configuration File Created
 
-**File**: `laravel/config/vhost/fixcity.local.conf`
+**File**: `laravel/config/vhost/laraxot.local.conf`
 
 **Key Features**:
 - Document root: `public_html/`
-- Server name: `fixcity.local`
-- Server alias: `www.fixcity.local`
+- Server name: `laraxot.local`
+- Server alias: `www.laraxot.local`
 - Dedicated logging
 - mod_rewrite enabled
 - Security headers (optional)
@@ -104,11 +115,11 @@ This document summarizes the complete VHost configuration implementation for the
 ## 📁 File Structure
 
 ```
-base_fixcity_fila5/
+base_ptvx_fila5/
 ├── laravel/
 │   └── config/
 │       └── vhost/
-│           └── fixcity.local.conf          ← Configuration file
+│           └── laraxot.local.conf          ← Configuration file
 ├── docs/
 │   ├── project/
 │   │   ├── README.md                       ← Project index (NEW)
@@ -142,17 +153,17 @@ base_fixcity_fila5/
 
 ```bash
 # 1. Copy configuration to Apache
-sudo cp laravel/config/vhost/fixcity.local.conf /etc/apache2/sites-available/
+sudo cp laravel/config/vhost/laraxot.local.conf /etc/apache2/sites-available/
 
 # 2. Enable site
-sudo a2ensite fixcity.local.conf
+sudo a2ensite laraxot.local.conf
 
 # 3. Reload Apache
 sudo systemctl reload apache2
 
 # 4. Update hosts file
-echo "127.0.0.1 fixcity.local" | sudo tee -a /etc/hosts
-echo "127.0.0.1 www.fixcity.local" | sudo tee -a /etc/hosts
+echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
+echo "127.0.0.1 www.laraxot.local" | sudo tee -a /etc/hosts
 ```
 
 ### Verification
@@ -162,13 +173,13 @@ echo "127.0.0.1 www.fixcity.local" | sudo tee -a /etc/hosts
 apache2ctl configtest
 
 # Check vhost enabled
-apache2ctl -S | grep fixcity
+apache2ctl -S | grep laraxot
 
 # Test domain
-ping fixcity.local
+ping laraxot.local
 
 # Test application
-curl -I http://fixcity.local
+curl -I http://laraxot.local
 ```
 
 ---
@@ -177,7 +188,7 @@ curl -I http://fixcity.local
 
 | Layer | File | Status | Links |
 |-------|------|--------|-------|
-| **Configuration** | `laravel/config/vhost/fixcity.local.conf` | ✅ | - |
+| **Configuration** | `laravel/config/vhost/laraxot.local.conf` | ✅ | - |
 | **Project Docs** | `docs/project/vhost-configuration.md` | ✅ | [Link](docs/project/vhost-configuration.md) |
 | **Modules Docs** | `laravel/Modules/docs/vhost-configuration.md` | ✅ | [Link](laravel/Modules/docs/vhost-configuration.md) |
 | **Themes Docs** | `laravel/Themes/docs/vhost-configuration.md` | ✅ | [Link](laravel/Themes/docs/vhost-configuration.md) |
@@ -185,6 +196,13 @@ curl -I http://fixcity.local
 | **Project Index** | `docs/project/README.md` | ✅ | [Link](docs/project/README.md) |
 | **Rules Index** | `docs/rules/README.md` | ✅ | [Link](docs/rules/README.md) |
 | **Main Index** | `docs/index.md` | ✅ Updated | [Link](docs/index.md) |
+| **Project Docs** | `docs/project/vhost-configuration.md` | ✅ | [Link](vhost-configuration.md) |
+| **Modules Docs** | `laravel/Modules/docs/vhost-configuration.md` | ✅ | [Link](laravel/Modules/docs/vhost-configuration.md) |
+| **Themes Docs** | `laravel/Themes/docs/vhost-configuration.md` | ✅ | [Link](laravel/Themes/docs/vhost-configuration.md) |
+| **Governance** | `docs/rules/vhost-governance.md` | ✅ | [Link](../rules/vhost-governance.md) |
+| **Project Index** | `docs/project/README.md` | ✅ | [Link](README.md) |
+| **Rules Index** | `docs/rules/README.md` | ✅ | [Link](../rules/README.md) |
+| **Main Index** | `docs/index.md` | ✅ Updated | [Link](../index.md) |
 | **Modules Index** | `laravel/Modules/docs/README.md` | ✅ Updated | [Link](laravel/Modules/docs/README.md) |
 | **Themes Index** | `laravel/Themes/docs/README.md` | ✅ Updated | [Link](laravel/Themes/docs/README.md) |
 | **AI Memory** | `.qwen/vhost-configuration.md` | ✅ | - |
@@ -242,7 +260,7 @@ curl -I http://fixcity.local
 |------|--------|----------|
 | Document root = `public_html/` | ✅ | Config file line 7 |
 | Config in `laravel/config/vhost/` | ✅ | File location |
-| Domain uses `.local` TLD | ✅ | `fixcity.local` |
+| Domain uses `.local` TLD | ✅ | `laraxot.local` |
 | Dedicated logging | ✅ | ErrorLog + CustomLog |
 | Least privilege permissions | ✅ | Directory directives |
 | Documentation in 3 layers | ✅ | Project, Modules, Themes |
@@ -259,19 +277,23 @@ curl -I http://fixcity.local
 
 - [Complete Setup Guide](docs/project/vhost-configuration.md)
 - [Troubleshooting](docs/project/vhost-configuration.md#troubleshooting)
+- [Complete Setup Guide](vhost-configuration.md)
+- [Troubleshooting](vhost-configuration.md#troubleshooting)
 - [Quick Reference](.qwen/vhost-configuration.md)
 
 ### For DevOps
 
 - [Governance Rules](docs/rules/vhost-governance.md)
+- [Governance Rules](../rules/vhost-governance.md)
 - [Management Skill](.github/skills/vhost-management/SKILL.md)
-- [Configuration File](laravel/config/vhost/fixcity.local.conf)
+- [Configuration File](laravel/config/vhost/laraxot.local.conf)
 
 ### For AI Agents
 
 - [Memory File](.qwen/vhost-configuration.md)
 - [Skill Definition](.github/skills/vhost-management/SKILL.md)
 - [Project Context](docs/project/README.md)
+- [Project Context](README.md)
 
 ---
 
@@ -285,7 +307,7 @@ curl -I http://fixcity.local
 
 ## 🎉 Conclusion
 
-The VHost configuration for `fixcity.local` is now:
+The VHost configuration for `laraxot.local` is now:
 
 - ✅ **Complete**: All files created
 - ✅ **Documented**: Three-layer documentation

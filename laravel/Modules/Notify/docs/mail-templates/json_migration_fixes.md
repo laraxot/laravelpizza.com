@@ -1,3 +1,15 @@
+---
+title: "json migration fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json migration fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni per le Migrazioni JSON in Laravel
 
 ## Problema Identificato
@@ -44,12 +56,12 @@ if(in_array($this->getColumnType('subject'), ['text', 'string'])) {
     DB::table('mail_templates')->whereNotNull('subject')->update([
         'subject' => DB::raw("JSON_OBJECT('it', subject)")
     ]);
-    
+
     // Passo 2: Gestire i valori NULL (opzionale)
     DB::table('mail_templates')->whereNull('subject')->update([
         'subject' => DB::raw("JSON_OBJECT('it', '')")
     ]);
-    
+
     // Passo 3: Ora è sicuro cambiare il tipo di colonna
     $table->json('subject')->nullable()->change();
 }
@@ -73,7 +85,7 @@ MailTemplate::whereNotNull('subject')->each(function ($template) {
 
 Un'altra strategia sicura è:
 
-1. **Creare una nuova colonna** JSON 
+1. **Creare una nuova colonna** JSON
 2. **Migrare i dati** dalla vecchia colonna a quella nuova, convertendoli
 3. **Eliminare la vecchia colonna**
 4. **Rinominare** la nuova colonna
@@ -83,15 +95,15 @@ Un'altra strategia sicura è:
 if(in_array($this->getColumnType('subject'), ['text', 'string'])) {
     // Passo 1: Aggiungi colonna temporanea
     $table->json('subject_json')->nullable()->after('subject');
-    
+
     // Passo 2: Migra i dati (da eseguire dopo la modifica dello schema)
     Schema::table('mail_templates', function (Blueprint $table) {
         DB::statement("UPDATE mail_templates SET subject_json = JSON_OBJECT('it', subject) WHERE subject IS NOT NULL");
     });
-    
+
     // Passo 3: Elimina vecchia colonna
     $table->dropColumn('subject');
-    
+
     // Passo 4: Rinomina nuova colonna
     $table->renameColumn('subject_json', 'subject');
 }
@@ -119,9 +131,9 @@ if(!$this->hasColumn('subject')) {
 }
 ```
 
-## Applicazione a Quaeris
+## Applicazione a <nome progetto>
 
-Nel contesto di Quaeris, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
+Nel contesto di <nome progetto>, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
 
 1. Le migrazioni per `mail_templates` e tabelle simili
 2. Campi multilingua che utilizzano il trait `HasTranslations`
@@ -132,7 +144,7 @@ Nel contesto di Quaeris, tutte le migrazioni che coinvolgono la conversione di c
 È necessario esaminare tutte le migrazioni esistenti per identificare pattern simili di conversione diretta a JSON:
 
 ```bash
-grep -r "json.*change" /var/www/html/Quaeris/laravel/Modules/*/database/migrations/
+grep -r "json.*change" [project-root]/laravel/Modules/*/database/migrations/
 ```
 
 I problemi più comuni si verificano in migrazioni che coinvolgono campi con traduzioni multilingua o configurazioni serializzate.

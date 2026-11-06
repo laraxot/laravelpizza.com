@@ -1,3 +1,15 @@
+---
+title: "block data flow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "block data flow"
+issues: []
+discussions: []
+status: draft
+---
+
 # Block Data Flow Architecture
 
 This document describes how data flows from the JSON configuration to the final Blade components in the CMS module.

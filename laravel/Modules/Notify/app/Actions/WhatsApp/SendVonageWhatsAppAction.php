@@ -8,12 +8,13 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
+use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Datas\WhatsAppData;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
-final class SendVonageWhatsAppAction
+final class SendVonageWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;
 
@@ -34,6 +35,8 @@ final class SendVonageWhatsAppAction
 
     /**
      * Create a new action instance.
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -73,26 +76,19 @@ final class SendVonageWhatsAppAction
             'timeout' => $this->timeout,
             'headers' => [
                 'Content-Type' => 'application/json',
-                'Accept' => 'application/json',
-            ],
-        ]);
+                'Accept' => 'application/json']]);
 
         $payload = [
             'from' => [
                 'type' => 'whatsapp',
-                'number' => $from,
-            ],
+                'number' => $from],
             'to' => [
                 'type' => 'whatsapp',
-                'number' => $whatsAppData->recipient,
-            ],
+                'number' => $whatsAppData->recipient],
             'message' => [
                 'content' => [
                     'type' => 'text',
-                    'text' => $whatsAppData->body,
-                ],
-            ],
-        ];
+                    'text' => $whatsAppData->body]]];
 
         // Gestione diversi tipi di messaggi
         if ($whatsAppData->type === 'media' && ! empty($whatsAppData->media)) {
@@ -104,26 +100,23 @@ final class SendVonageWhatsAppAction
                 'type' => $mediaType,
                 $mediaType => [
                     'url' => $mediaUrl,
-                    'caption' => $whatsAppData->body,
-                ],
-            ];
+                    'caption' => $whatsAppData->body]];
         } elseif ($whatsAppData->type === 'template' && ! empty($whatsAppData->template)) {
             $payload['message']['content'] = [
                 'type' => 'template',
-                'template' => $whatsAppData->template,
-            ];
+                'template' => $whatsAppData->template];
         }
 
         try {
             $response = $client->post($this->baseUrl, [
                 'json' => $payload,
-                'auth' => [$this->apiKey, $this->apiSecret],
-            ]);
+                'auth' => [$this->apiKey, $this->apiSecret]]);
 
             $statusCode = $response->getStatusCode();
             $responseContent = $response->getBody()->getContents();
+            $decodedResponse = json_decode($responseContent, true);
             /** @var array<string, mixed> $responseData */
-            $responseData = json_decode($responseContent, true) ?: [];
+            $responseData = is_array($decodedResponse) ? $decodedResponse : [];
 
             // Salva i dati della risposta nelle variabili dell'azione
             $this->vars['status_code'] = $statusCode;
@@ -132,8 +125,7 @@ final class SendVonageWhatsAppAction
 
             Log::debug('WhatsApp Vonage inviato con successo', [
                 'to' => $whatsAppData->recipient,
-                'response_code' => $statusCode,
-            ]);
+                'response_code' => $statusCode]);
 
             return [
                 'success' => $statusCode >= 200 && $statusCode < 300,
@@ -141,13 +133,13 @@ final class SendVonageWhatsAppAction
                     ? $responseData['message_uuid']
                     : null,
                 'response' => $responseData,
-                'vars' => $this->vars,
-            ];
+                'vars' => $this->vars];
         } catch (ClientException $e) {
             $response = $e->getResponse();
             $statusCode = $response->getStatusCode();
+            $decodedBody = json_decode($response->getBody()->getContents(), true);
             /** @var array<string, mixed> $responseBody */
-            $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
+            $responseBody = is_array($decodedBody) ? $decodedBody : [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
             $this->vars['error_code'] = $statusCode;
@@ -157,8 +149,7 @@ final class SendVonageWhatsAppAction
             Log::warning('Errore invio WhatsApp Vonage', [
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
-                'response' => $responseBody,
-            ]);
+                'response' => $responseBody]);
 
             return [
                 'success' => false,
@@ -166,8 +157,7 @@ final class SendVonageWhatsAppAction
                     ? $responseBody['title']
                     : 'Errore sconosciuto',
                 'status_code' => $statusCode,
-                'vars' => $this->vars,
-            ];
+                'vars' => $this->vars];
         }
     }
 

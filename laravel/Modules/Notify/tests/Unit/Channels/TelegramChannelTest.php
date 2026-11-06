@@ -3,10 +3,12 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Channels;
-use function Safe\file_get_contents;
-use Modules\Notify\Channels\TelegramChannel;
 
+use Modules\Notify\Channels\TelegramChannel;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 describe('TelegramChannel', function () {
     it('can be instantiated', function () {
         // TelegramChannel requires TelegramActionFactory in constructor
@@ -30,7 +32,7 @@ describe('TelegramChannel', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(TelegramChannel::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 

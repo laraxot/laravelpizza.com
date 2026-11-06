@@ -1,27 +1,26 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{-- Requires Js --}}
 <div class="isolate overflow-hidden">
     <div class="flow-root bg-gray-900 pb-16 pt-24 sm:pt-32 lg:pb-0">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative z-10">
-          <h2 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">Simple pricing, no commitment</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum quos odit doloribus.</p>
+          <h2 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">{{ __('ui::blocks_pricing_plans.header.simple_pricing.title') }}</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">{{ __('ui::blocks_pricing_plans.header.digital_municipality.description') }}</p>
           <div class="mt-16 flex justify-center">
             <fieldset class="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white">
-              <legend class="sr-only">Payment frequency</legend>
+              <legend class="sr-only">{{ __('ui::blocks_pricing_plans.billing.payment_frequency.label') }}</legend>
               <!-- Checked: "bg-indigo-500" -->
               <label class="cursor-pointer rounded-full px-2.5 py-1">
                 <input type="radio" name="frequency" value="monthly" class="sr-only">
-                <span>Monthly</span>
+                <span>{{ __('ui::blocks_pricing_plans.billing.monthly.label') }}</span>
               </label>
               <!-- Checked: "bg-indigo-500" -->
               <label class="cursor-pointer rounded-full px-2.5 py-1">
                 <input type="radio" name="frequency" value="annually" class="sr-only">
-                <span>Annually</span>
+                <span>{{ __('ui::blocks_pricing_plans.billing.annually.label') }}</span>
               </label>
             </fieldset>
           </div>
@@ -39,7 +38,7 @@ declare(strict_types=1);
           <div class="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-gray-800/80 lg:ring-1 lg:ring-white/10" aria-hidden="true"></div>
           <div class="relative rounded-2xl bg-gray-800/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0">
             <div class="p-8 lg:pt-12 xl:p-10 xl:pt-14">
-              <h3 id="tier-starter" class="text-sm font-semibold leading-6 text-white">Starter</h3>
+              <h3 id="tier-starter" class="text-sm font-semibold leading-6 text-white">{{ __('ui::blocks_pricing_plans.tiers.starter.label') }}</h3>
               <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-stretch">
                 <div class="mt-2 flex items-center gap-x-4">
                   <!-- Price, update based on frequency toggle state -->
@@ -47,10 +46,10 @@ declare(strict_types=1);
                   <div class="text-sm leading-5">
                     <p class="text-white">USD</p>
                     <!-- Payment frequency, update based on frequency toggle state -->
-                    <p class="text-gray-400">Billed monthly</p>
+                    <p class="text-gray-400">{{ __('ui::blocks_pricing_plans.billing.billed_monthly.label') }}</p>
                   </div>
                 </div>
-                <a href="#" aria-describedby="tier-starter" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">Buy this plan</a>
+                <a href="#" aria-describedby="tier-starter" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_this_plan.label') }}</a>
               </div>
               <div class="mt-8 flow-root sm:mt-10">
                 <ul role="list" class="-my-2 divide-y border-t text-sm leading-6 lg:border-t-0 divide-white/5 border-white/5 text-white">
@@ -58,19 +57,19 @@ declare(strict_types=1);
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Basic invoicing
+                    {{ __('ui::blocks_pricing_plans.features.basic_invoicing.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Easy to use accounting
+                    {{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Mutli-accounts
+                    {{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}
                   </li>
                 </ul>
               </div>
@@ -78,7 +77,7 @@ declare(strict_types=1);
           </div>
           <div class="relative rounded-2xl z-10 bg-white shadow-xl ring-1 ring-gray-900/10">
             <div class="p-8 lg:pt-12 xl:p-10 xl:pt-14">
-              <h3 id="tier-scale" class="text-sm font-semibold leading-6 text-gray-900">Scale</h3>
+              <h3 id="tier-scale" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.tiers.scale.label') }}</h3>
               <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-stretch">
                 <div class="mt-2 flex items-center gap-x-4">
                   <!-- Price, update based on frequency toggle state -->
@@ -86,10 +85,10 @@ declare(strict_types=1);
                   <div class="text-sm leading-5">
                     <p class="text-gray-900">USD</p>
                     <!-- Payment frequency, update based on frequency toggle state -->
-                    <p class="text-gray-500">Billed monthly</p>
+                    <p class="text-gray-500">{{ __('ui::blocks_pricing_plans.billing.billed_monthly.label') }}</p>
                   </div>
                 </div>
-                <a href="#" aria-describedby="tier-scale" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 shadow-sm hover:bg-indigo-500 focus-visible:outline-indigo-600">Buy this plan</a>
+                <a href="#" aria-describedby="tier-scale" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 shadow-sm hover:bg-indigo-500 focus-visible:outline-indigo-600">{{ __('ui::blocks_pricing_plans.actions.buy_this_plan.label') }}</a>
               </div>
               <div class="mt-8 flow-root sm:mt-10">
                 <ul role="list" class="-my-2 divide-y border-t text-sm leading-6 lg:border-t-0 divide-gray-900/5 border-gray-900/5 text-gray-600">
@@ -97,37 +96,37 @@ declare(strict_types=1);
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Advanced invoicing
+                    {{ __('ui::blocks_pricing_plans.features.advanced_invoicing.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Easy to use accounting
+                    {{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Mutli-accounts
+                    {{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Tax planning toolkit
+                    {{ __('ui::blocks_pricing_plans.features.tax_planning.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    VAT &amp; VATMOSS filing
+                    {{ __('ui::blocks_pricing_plans.features.vat_filing.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Free bank transfers
+                    {{ __('ui::blocks_pricing_plans.features.free_bank_transfers.label') }}
                   </li>
                 </ul>
               </div>
@@ -135,7 +134,7 @@ declare(strict_types=1);
           </div>
           <div class="relative rounded-2xl bg-gray-800/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0">
             <div class="p-8 lg:pt-12 xl:p-10 xl:pt-14">
-              <h3 id="tier-growth" class="text-sm font-semibold leading-6 text-white">Growth</h3>
+              <h3 id="tier-growth" class="text-sm font-semibold leading-6 text-white">{{ __('ui::blocks_pricing_plans.tiers.growth.label') }}</h3>
               <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-stretch">
                 <div class="mt-2 flex items-center gap-x-4">
                   <!-- Price, update based on frequency toggle state -->
@@ -143,10 +142,10 @@ declare(strict_types=1);
                   <div class="text-sm leading-5">
                     <p class="text-white">USD</p>
                     <!-- Payment frequency, update based on frequency toggle state -->
-                    <p class="text-gray-400">Billed monthly</p>
+                    <p class="text-gray-400">{{ __('ui::blocks_pricing_plans.billing.billed_monthly.label') }}</p>
                   </div>
                 </div>
-                <a href="#" aria-describedby="tier-growth" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">Buy this plan</a>
+                <a href="#" aria-describedby="tier-growth" class="rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_this_plan.label') }}</a>
               </div>
               <div class="mt-8 flow-root sm:mt-10">
                 <ul role="list" class="-my-2 divide-y border-t text-sm leading-6 lg:border-t-0 divide-white/5 border-white/5 text-white">
@@ -154,25 +153,25 @@ declare(strict_types=1);
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Basic invoicing
+                    {{ __('ui::blocks_pricing_plans.features.basic_invoicing.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Easy to use accounting
+                    {{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Mutli-accounts
+                    {{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}
                   </li>
                   <li class="flex gap-x-3 py-2">
                     <svg class="h-6 w-5 flex-none text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                     </svg>
-                    Tax planning toolkit
+                    {{ __('ui::blocks_pricing_plans.features.tax_planning.label') }}
                   </li>
                 </ul>
               </div>
@@ -185,18 +184,18 @@ declare(strict_types=1);
       <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <!-- Feature comparison (up to lg) -->
         <section aria-labelledby="mobile-comparison-heading" class="lg:hidden">
-          <h2 id="mobile-comparison-heading" class="sr-only">Feature comparison</h2>
+          <h2 id="mobile-comparison-heading" class="sr-only">{{ __('ui::blocks_pricing_plans.table.feature_comparison.title') }}</h2>
 
           <div class="mx-auto max-w-2xl space-y-16">
             <div class="border-t border-gray-900/10">
               <div class="-mt-px w-72 border-t-2 pt-10 md:w-80 border-transparent">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Starter</h3>
-                <p class="mt-1 text-sm leading-6 text-gray-600">All your essential business finances, taken care of.</p>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.tiers.starter.label') }}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.finances_taken_care.description') }}</p>
               </div>
 
               <div class="mt-10 space-y-10">
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Catered for business</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.catered_for_business.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -204,37 +203,37 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-1 ring-gray-900/10">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Tax Savings</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.tax_savings.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Easy to use accounting</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Multi-accounts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="text-gray-900">3 accounts</span>
+                            <span class="text-gray-900">{{ __('ui::blocks_pricing_plans.features.accounts_3.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Invoicing</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.invoicing.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="text-gray-900">3 invoices</span>
+                            <span class="text-gray-900">{{ __('ui::blocks_pricing_plans.features.invoices_3.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Exclusive offers</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.exclusive_offers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -243,7 +242,7 @@ declare(strict_types=1);
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">6 months free advisor</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_advisor.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -252,7 +251,7 @@ declare(strict_types=1);
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Mobile and web access</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.mobile_web_access.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -268,7 +267,7 @@ declare(strict_types=1);
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Other perks</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.other_perks.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -276,43 +275,43 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-1 ring-gray-900/10">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">24/7 customer support</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.customer_support_24_7.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Instant notifications</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.instant_notifications.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Budgeting tools</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.budgeting_tools.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Digital receipts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.digital_receipts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Pots to separate money</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.money_pots.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -321,7 +320,7 @@ declare(strict_types=1);
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Free bank transfers</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_bank_transfers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -330,7 +329,7 @@ declare(strict_types=1);
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Business debit card</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.business_debit_card.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -349,13 +348,13 @@ declare(strict_types=1);
             </div>
             <div class="border-t border-gray-900/10">
               <div class="-mt-px w-72 border-t-2 pt-10 md:w-80 border-indigo-600">
-                <h3 class="text-sm font-semibold leading-6 text-indigo-600">Scale</h3>
-                <p class="mt-1 text-sm leading-6 text-gray-600">The best financial services for your thriving business.</p>
+                <h3 class="text-sm font-semibold leading-6 text-indigo-600">{{ __('ui::blocks_pricing_plans.tiers.scale.label') }}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.best_financial_services.description') }}</p>
               </div>
 
               <div class="mt-10 space-y-10">
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Catered for business</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.catered_for_business.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -363,60 +362,60 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-2 ring-indigo-600">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Tax Savings</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.tax_savings.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Easy to use accounting</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Multi-accounts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="font-semibold text-indigo-600">Unlimited accounts</span>
+                            <span class="font-semibold text-indigo-600">{{ __('ui::blocks_pricing_plans.features.accounts_unlimited.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Invoicing</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.invoicing.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="font-semibold text-indigo-600">Unlimited invoices</span>
+                            <span class="font-semibold text-indigo-600">{{ __('ui::blocks_pricing_plans.features.invoices_unlimited.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Exclusive offers</dt>
-                          <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                            <span class="sr-only">Yes</span>
-                          </dd>
-                        </div>
-                        <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">6 months free advisor</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.exclusive_offers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Mobile and web access</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_advisor.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.mobile_web_access.label') }}</dt>
+                          <dd class="flex items-center justify-end sm:justify-center sm:px-4">
+                            <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                       </dl>
@@ -427,7 +426,7 @@ declare(strict_types=1);
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Other perks</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.other_perks.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -435,66 +434,66 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-2 ring-indigo-600">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">24/7 customer support</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.customer_support_24_7.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Instant notifications</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.instant_notifications.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Budgeting tools</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.budgeting_tools.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Digital receipts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.digital_receipts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Pots to separate money</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.money_pots.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Free bank transfers</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_bank_transfers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Business debit card</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.business_debit_card.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                       </dl>
@@ -508,13 +507,13 @@ declare(strict_types=1);
             </div>
             <div class="border-t border-gray-900/10">
               <div class="-mt-px w-72 border-t-2 pt-10 md:w-80 border-transparent">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Growth</h3>
-                <p class="mt-1 text-sm leading-6 text-gray-600">Convenient features to take your business to the next level.</p>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.tiers.growth.label') }}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.convenient_features.description') }}</p>
               </div>
 
               <div class="mt-10 space-y-10">
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Catered for business</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.catered_for_business.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -522,55 +521,55 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-1 ring-gray-900/10">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Tax Savings</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.tax_savings.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Easy to use accounting</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Multi-accounts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="text-gray-900">7 accounts</span>
+                            <span class="text-gray-900">{{ __('ui::blocks_pricing_plans.features.accounts_7.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Invoicing</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.invoicing.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <span class="text-gray-900">10 invoices</span>
+                            <span class="text-gray-900">{{ __('ui::blocks_pricing_plans.features.invoices_10.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Exclusive offers</dt>
-                          <dd class="flex items-center justify-end sm:justify-center sm:px-4">
-                            <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                            <span class="sr-only">Yes</span>
-                          </dd>
-                        </div>
-                        <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">6 months free advisor</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.exclusive_offers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Mobile and web access</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_advisor.label') }}</dt>
+                          <dd class="flex items-center justify-end sm:justify-center sm:px-4">
+                            <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.mobile_web_access.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -586,7 +585,7 @@ declare(strict_types=1);
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-semibold leading-6 text-gray-900">Other perks</h4>
+                  <h4 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.other_perks.title') }}</h4>
                   <div class="relative mt-6">
                     <!-- Fake card background -->
                     <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-white shadow-sm sm:block"></div>
@@ -594,52 +593,52 @@ declare(strict_types=1);
                     <div class="relative rounded-lg bg-white shadow-sm sm:rounded-none sm:bg-transparent sm:shadow-none sm:ring-0 ring-1 ring-gray-900/10">
                       <dl class="divide-y divide-gray-200 text-sm leading-6">
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">24/7 customer support</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.customer_support_24_7.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Instant notifications</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.instant_notifications.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Budgeting tools</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.budgeting_tools.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Digital receipts</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.digital_receipts.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Pots to separate money</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.money_pots.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                             </svg>
-                            <span class="sr-only">Yes</span>
+                            <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Free bank transfers</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.free_bank_transfers.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -648,7 +647,7 @@ declare(strict_types=1);
                           </dd>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0">
-                          <dt class="pr-4 text-gray-600">Business debit card</dt>
+                          <dt class="pr-4 text-gray-600">{{ __('ui::blocks_pricing_plans.features.business_debit_card.label') }}</dt>
                           <dd class="flex items-center justify-end sm:justify-center sm:px-4">
                             <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -670,32 +669,32 @@ declare(strict_types=1);
 
         <!-- Feature comparison (lg+) -->
         <section aria-labelledby="comparison-heading" class="hidden lg:block">
-          <h2 id="comparison-heading" class="sr-only">Feature comparison</h2>
+          <h2 id="comparison-heading" class="sr-only">{{ __('ui::blocks_pricing_plans.table.feature_comparison.title') }}</h2>
 
           <div class="grid grid-cols-4 gap-x-8 border-t border-gray-900/10 before:block">
             <div aria-hidden="true" class="-mt-px">
               <div class="border-t-2 pt-10 border-transparent">
-                <p class="text-sm font-semibold leading-6 text-gray-900">Starter</p>
-                <p class="mt-1 text-sm leading-6 text-gray-600">All your essential business finances, taken care of.</p>
+                <p class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.tiers.starter.label') }}</p>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.finances_taken_care.description') }}</p>
               </div>
             </div>
             <div aria-hidden="true" class="-mt-px">
               <div class="border-t-2 pt-10 border-indigo-600">
-                <p class="text-sm font-semibold leading-6 text-indigo-600">Scale</p>
-                <p class="mt-1 text-sm leading-6 text-gray-600">The best financial services for your thriving business.</p>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">{{ __('ui::blocks_pricing_plans.tiers.scale.label') }}</p>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.best_financial_services.description') }}</p>
               </div>
             </div>
             <div aria-hidden="true" class="-mt-px">
               <div class="border-t-2 pt-10 border-transparent">
-                <p class="text-sm font-semibold leading-6 text-gray-900">Growth</p>
-                <p class="mt-1 text-sm leading-6 text-gray-600">Convenient features to take your business to the next level.</p>
+                <p class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.tiers.growth.label') }}</p>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ __('ui::blocks_pricing_plans.header.convenient_features.description') }}</p>
               </div>
             </div>
           </div>
 
           <div class="-mt-6 space-y-16">
             <div>
-              <h3 class="text-sm font-semibold leading-6 text-gray-900">Catered for business</h3>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.catered_for_business.title') }}</h3>
               <div class="relative -mx-8 mt-10">
                 <!-- Fake card backgrounds -->
                 <div class="absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block" aria-hidden="true">
@@ -708,23 +707,23 @@ declare(strict_types=1);
                   <thead>
                     <tr class="text-left">
                       <th scope="col">
-                        <span class="sr-only">Feature</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.feature.label') }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Starter tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Starter']) }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Scale tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Scale']) }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Growth tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Growth']) }}</span>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Tax Savings
+                        {{ __('ui::blocks_pricing_plans.features.tax_savings.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -732,7 +731,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -740,7 +739,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -748,13 +747,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Easy to use accounting
+                        {{ __('ui::blocks_pricing_plans.features.easy_accounting.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -762,7 +761,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -770,7 +769,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -778,55 +777,55 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Multi-accounts
+                        {{ __('ui::blocks_pricing_plans.features.multi_accounts.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 text-gray-900">3 accounts</span>
+                          <span class="text-sm leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.accounts_3.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 font-semibold text-indigo-600">Unlimited accounts</span>
+                          <span class="text-sm leading-6 font-semibold text-indigo-600">{{ __('ui::blocks_pricing_plans.features.accounts_unlimited.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 text-gray-900">7 accounts</span>
+                          <span class="text-sm leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.accounts_7.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Invoicing
+                        {{ __('ui::blocks_pricing_plans.features.invoicing.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 text-gray-900">3 invoices</span>
+                          <span class="text-sm leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.invoices_3.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 font-semibold text-indigo-600">Unlimited invoices</span>
+                          <span class="text-sm leading-6 font-semibold text-indigo-600">{{ __('ui::blocks_pricing_plans.features.invoices_unlimited.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
-                          <span class="text-sm leading-6 text-gray-900">10 invoices</span>
+                          <span class="text-sm leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.invoices_10.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Exclusive offers
+                        {{ __('ui::blocks_pricing_plans.features.exclusive_offers.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -842,7 +841,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -850,13 +849,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        6 months free advisor
+                        {{ __('ui::blocks_pricing_plans.features.free_advisor.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -872,7 +871,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -880,12 +879,12 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">Mobile and web access</th>
+                      <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.mobile_web_access.label') }}</th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
                           <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -899,7 +898,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -923,7 +922,7 @@ declare(strict_types=1);
               </div>
             </div>
             <div>
-              <h3 class="text-sm font-semibold leading-6 text-gray-900">Other perks</h3>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.sections.other_perks.title') }}</h3>
               <div class="relative -mx-8 mt-10">
                 <!-- Fake card backgrounds -->
                 <div class="absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block" aria-hidden="true">
@@ -936,23 +935,23 @@ declare(strict_types=1);
                   <thead>
                     <tr class="text-left">
                       <th scope="col">
-                        <span class="sr-only">Feature</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.feature.label') }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Starter tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Starter']) }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Scale tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Scale']) }}</span>
                       </th>
                       <th scope="col">
-                        <span class="sr-only">Growth tier</span>
+                        <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.tier_name.label', ['tier' => 'Growth']) }}</span>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        24/7 customer support
+                        {{ __('ui::blocks_pricing_plans.features.customer_support_24_7.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -960,7 +959,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -968,7 +967,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -976,13 +975,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Instant notifications
+                        {{ __('ui::blocks_pricing_plans.features.instant_notifications.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -990,7 +989,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -998,7 +997,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1006,13 +1005,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Budgeting tools
+                        {{ __('ui::blocks_pricing_plans.features.budgeting_tools.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1020,7 +1019,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1028,7 +1027,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1036,13 +1035,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Digital receipts
+                        {{ __('ui::blocks_pricing_plans.features.digital_receipts.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1050,7 +1049,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1058,7 +1057,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1066,13 +1065,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Pots to separate money
+                        {{ __('ui::blocks_pricing_plans.features.money_pots.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1088,7 +1087,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1096,13 +1095,13 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">
-                        Free bank transfers
+                        {{ __('ui::blocks_pricing_plans.features.free_bank_transfers.label') }}
                         <div class="absolute inset-x-8 mt-3 h-px bg-gray-200"></div>
                       </th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1118,7 +1117,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">
@@ -1131,7 +1130,7 @@ declare(strict_types=1);
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">Business debit card</th>
+                      <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-normal leading-6 text-gray-900">{{ __('ui::blocks_pricing_plans.features.business_debit_card.label') }}</th>
                       <td class="relative w-1/4 px-4 py-0 text-center">
                         <span class="relative h-full w-full py-3">
                           <svg class="mx-auto h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -1145,7 +1144,7 @@ declare(strict_types=1);
                           <svg class="mx-auto h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                           </svg>
-                          <span class="sr-only">Yes</span>
+                          <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.yes.label') }}</span>
                         </span>
                       </td>
                       <td class="relative w-1/4 px-4 py-0 text-center">

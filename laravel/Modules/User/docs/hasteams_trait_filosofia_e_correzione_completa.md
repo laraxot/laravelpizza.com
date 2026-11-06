@@ -1,3 +1,11 @@
+---
+title: "HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "hasteams trait - filosofia laraxot e strategia di correzione completa user"
+---
 # HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
 
 ## 🧠 LA FILOSOFIA LARAXOT: Perché `belongsToManyX` invece di `belongsToMany`
@@ -257,7 +265,6 @@ Creare test per verificare:
 ### 3. **Documentazione Collegamenti**
 Aggiornare:
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
-- [docs/USER_MODULE.md](../../../../docs/user_module.md)
 - [Modules/User/docs/traits.md](traits.md)
 - File .mdc per Cursor e Windsurf
 
@@ -275,13 +282,11 @@ Il trait `HasTeams` ora è:
 ## 🔗 **Collegamenti Bidirezionali**
 
 ### **📚 Documentazione Root**
+- [docs/laraxot_conventions.md](../../../docs/laraxot_conventions.md) - Convenzioni Laraxot generali
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md) - Documentazione generale modulo User
-- [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md) - Guide PHPStan
-- [docs/TRAIT_BEST_PRACTICES.md](../../../docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
-- [docs/laraxot_conventions.md](../../../../docs/laraxot_conventions.md) - Convenzioni Laraxot generali
-- [docs/USER_MODULE.md](../../../../docs/user_module.md) - Documentazione generale modulo User
 - [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md) - Guide PHPStan
-- [docs/TRAIT_BEST_PRACTICES.md](../../../../docs/trait_best_practices.md) - Best practices per trait
+- [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md) - Guide PHPStan
+- [docs/TRAIT_BEST_PRACTICES.md](../../../docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
 
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User

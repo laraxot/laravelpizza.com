@@ -7,15 +7,20 @@ namespace Modules\Geo\Actions\TimeZone;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Modules\Geo\Datas\TimeZoneData;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
 
 use function Safe\json_decode;
+
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottenere il fuso orario da coordinate geografiche.
  */
 class GetTimeZoneAction
 {
-    private const API_URL = 'https://maps.googleapis.com/maps/api/timezone/json';
+    use QueueableAction;
+
+    private const string API_URL = GeoApiEndpoints::GOOGLE_TIMEZONE;
 
     private Client $client;
 

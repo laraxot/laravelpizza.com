@@ -1,3 +1,15 @@
+---
+title: "custom marker governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "custom marker governance"
+issues: []
+discussions: []
+status: draft
+---
+
 # Custom Marker Implementation for Geo Module
 
 ## Regola: No default Leaflet markers
@@ -44,5 +56,5 @@ const icon = L.divIcon({
 ## Riferimenti
 
 - [Custom marker example from farmshops.eu](https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/js/direktvermarkter.js)
-- [MapPickerLit component](./map-picker-lit.md)
-- [CoordinatePicker component](./coordinate-picker.md)
+- [MapPickerLit component](../../map-picker-lit.md)
+- [CoordinatePicker component](../coordinate-picker.md)

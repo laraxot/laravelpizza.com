@@ -1,3 +1,13 @@
+---
+title: "Widget Implementation Rules - Xot Module"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Widget Implementation Rules - Xot Module"
+---
 # Widget Implementation Rules - Xot Module
 
 ## 🎯 Regole Fondamentali per Widget

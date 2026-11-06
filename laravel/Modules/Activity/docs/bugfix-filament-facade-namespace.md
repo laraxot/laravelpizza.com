@@ -1,3 +1,11 @@
+---
+title: "Bugfix: Filament Facade Namespace Error"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "bugfix: filament facade namespace error activity"
+---
 # Bugfix: Filament Facade Namespace Error
 
 ## 🐛 Errore
@@ -219,16 +227,16 @@ Usare sempre file esistenti del progetto come riferimento per i namespace.
 
 - [ListLogActivitiesAction.php](../app/Filament/Actions/ListLogActivitiesAction.php) - File fixato
 - [XotBasePage.php](../../Xot/app/Filament/Pages/XotBasePage.php) - Reference corretta
-- [Activity Module README](./readme.md)
-
-### Regole e Best Practices
-
-- [Filament Best Practices](../../xot/docs/filament-best-practices.md)
 - [Activity Module README](./README.md)
 
 ### Regole e Best Practices
 
-- [Filament Best Practices](../../Xot/docs/FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Activity Module README](./README.md)
+
+### Regole e Best Practices
+
+- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
 - [Namespace Rules](../../../docs/MODULE_NAMESPACE_RULES.md)
 - [Namespace Rules](../../../../docs/module_namespace_rules.md)
 

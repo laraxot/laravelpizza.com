@@ -1,3 +1,15 @@
+---
+title: "audit logging"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "audit logging"
+issues: []
+discussions: []
+status: draft
+---
+
 # Audit Logging
 
 ## Overview

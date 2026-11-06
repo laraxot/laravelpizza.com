@@ -8,7 +8,7 @@ return [
         'group' => [
             'name' => 'Admin',
         ],
-        'label' => 'domain',
+        'label' => 'Domain',
         'sort' => 6,
         'icon' => 'tenant-domain-animated',
     ],

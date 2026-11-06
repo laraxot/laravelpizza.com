@@ -1,3 +1,15 @@
+---
+title: "sms troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-23
+qmd: "sms troubleshooting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Troubleshooting SMS
 
 ## Errori Comuni e Soluzioni
@@ -77,7 +89,7 @@
 ### 1. Struttura Log
 ```json
 {
-    "timestamp": "[DATE] 10:00:00",
+    "timestamp": "2024-03-20 10:00:00",
     "level": "error",
     "message": "SMS sending failed",
     "context": {

@@ -1,5 +1,5 @@
 ---
-title: "Composer root minimale — modulo Job"
+title: "Composer root minimale: modulo Job"
 type: concept
 tags: [composer, job, nwidart, merge-plugin]
 created: 2026-06-29
@@ -12,7 +12,8 @@ discussions:
 related:
   - ../../../Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
   - ../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md
-  - ../../composer.json
+  - ../../../composer.json
+status: draft
 ---
 
 # Job e composer root minimale
@@ -24,7 +25,7 @@ Dipendenze del dominio **Job** in `Modules/Job/composer.json`. Il root `laravel/
 
 
 
-## Merge root — solo moduli
+## Merge root: solo moduli
 
 `laravel/composer.json` → merge **solo** `Modules/*/composer.json`. **Vietato** `Themes/*/composer.json` (nwidart owner = modulo; tema = vestito Blade/assets).
 

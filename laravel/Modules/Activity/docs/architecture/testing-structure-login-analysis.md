@@ -1,3 +1,11 @@
+---
+title: "Struttura Corretta dei Test di Login - Analisi Completa"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, architecture]
+qmd: "struttura corretta dei test di login - analisi completa activity"
+---
 # Struttura Corretta dei Test di Login - Analisi Completa
 # Struttura Corretta dei Test di Login - Analisi Completa <nome progetto>
 

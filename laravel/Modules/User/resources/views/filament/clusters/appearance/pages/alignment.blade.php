@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
 
@@ -14,7 +13,7 @@ declare(strict_types=1);
 
     <div class="mx-auto w-full max-w-sm">
         <div class="pb-5 mb-5 w-full border-b border-zinc-200">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Heading Alignment</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">{{ __('user::alignment.fields.heading.label') }}</label>
             <div class="flex items-center mt-3">
                 <button :class="{ 'bg-zinc-200' : heading == 'left' }" x-on:click="heading = 'left'" class="p-2 rounded-l-md border border-zinc-200 text-zinc-600">
                     <x-heroicon-o-bars-3-bottom-left class="w-5 h-5" />
@@ -29,7 +28,7 @@ declare(strict_types=1);
         </div>
 
         <div class="pb-5 mb-5 w-full border-b border-zinc-200">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Container Alignment</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">{{ __('user::alignment.fields.container.label') }}</label>
             <div class="flex items-center mt-3 space-x-3">
                 <button :class="{ 'border-blue-500' : container == 'left', 'border-zinc-200 hover:border-blue-500' : container != 'left' }" x-on:click="container = 'left'" class="flex justify-start items-stretch w-28 h-20 rounded-md border-2 bg-zinc-200 text-zinc-600">
                     <div class="w-9 h-full bg-white rounded"></div>
@@ -47,7 +46,7 @@ declare(strict_types=1);
 
 
     <div class="relative w-full">
-        <strong class="block pb-5 text-xs">Preview</strong>
+        <strong class="block pb-5 text-xs">{{ __('user::alignment.sections.preview.label') }}</strong>
         <div :class="{ 'justify-center items-center' : container == 'center', 'justify-start items-stretch' : container == 'left', 'justify-end items-stretch' : container == 'right' }" class="flex overflow-hidden w-full h-80 rounded-lg border border-dashed bg-zinc-200">
 
            <div :class="{ 'items-center' : heading == 'center', 'items-start' : heading == 'left', 'items-end' : heading == 'right', 'h-auto rounded-md' : container == 'center', 'h-full' : container == 'left' || container == 'right'  }" class="flex flex-col gap-1 justify-center p-5 w-40 bg-white">
@@ -63,13 +62,13 @@ declare(strict_types=1);
 </div>
 
 
-    <x-filament-schemas::form wire:submit="updateData">
+    <form wire:submit="updateData">
         {{ $this->form }}
 
         <x-filament::actions
             :actions="$this->getUpdateFormActions()"
         />
 
-    </x-filament-schemas::form>
+    </form>
 
 </x-filament-panels::page>

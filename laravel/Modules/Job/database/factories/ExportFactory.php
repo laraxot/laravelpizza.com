@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Job\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Job\Models\Export;
 
 /**
@@ -22,9 +21,6 @@ class ExportFactory extends Factory
 
     /**
      * Define the model's default state.
-     */
-    /**
-     * @return array<string, mixed>
      */
     public function definition(): array
     {

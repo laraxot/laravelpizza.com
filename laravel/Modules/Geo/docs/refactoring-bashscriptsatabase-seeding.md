@@ -1,3 +1,15 @@
+---
+title: "refactoring bashscriptsatabase seeding"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "refactoring bashscriptsatabase seeding"
+issues: []
+discussions: []
+status: draft
+---
+
 # Refactoring Bashscripts Database Seeding - Rimozione Riferimenti Specifici Progetto
 
 ## Executive Summary

@@ -1,3 +1,15 @@
+---
+title: "setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida Super Semplice: WSL + Laravel + Webmin + HeidiSQL
 
 > **Questa guida è pensata per chi non ha mai usato Linux e vuole installare un ambiente di sviluppo web completo su Windows con pochi semplici passaggi. Seguila nell'ordine indicato.**

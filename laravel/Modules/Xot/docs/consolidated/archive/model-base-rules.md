@@ -1,3 +1,11 @@
+---
+title: "Regole di Estensione dei Modelli Laraxot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole di estensione dei modelli laraxot xot"
+---
 # Regole di Estensione dei Modelli Laraxot
 
 ## Regola Fondamentale di Ereditarietà

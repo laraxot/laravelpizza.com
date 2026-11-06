@@ -1,3 +1,11 @@
+---
+title: "Collegamento alle Traduzioni del Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "collegamento alle traduzioni del modulo xot xot"
+---
 # Collegamento alle Traduzioni del Modulo Xot
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).

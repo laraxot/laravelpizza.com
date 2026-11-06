@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
+use Closure;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 use Modules\Activity\Database\Factories\ActivityFactory;
@@ -166,10 +167,11 @@ test('activity module handles concurrent operations correctly', function () {
     $concurrentActivities = [];
     $concurrentSnapshots = [];
 
+    /** @var list<Closure(): bool> $promises */
     $promises = [];
 
     for ($i = 0; $i < 10; $i++) {
-        $promises[] = function () use ($user, &$concurrentActivities, &$concurrentSnapshots, $i) {
+        $promises[] = function () use ($user, &$concurrentActivities, &$concurrentSnapshots, $i): bool {
             $activity = ActivityFactory::new()->createOne([
                 'causer_type' => User::class,
                 'causer_id' => $user->id,
@@ -196,11 +198,8 @@ test('activity module handles concurrent operations correctly', function () {
         };
     }
 
-    $results = array_map(fn ($promise) => $promise(), $promises);
+    $results = array_map(static fn (Closure $promise): bool => $promise(), $promises);
     Assert::assertCount(10, $results);
-    foreach ($results as $result) {
-        Assert::assertTrue($result);
-    }
 
     $userActivities = Activity::query()
         ->where('causer_type', User::class)

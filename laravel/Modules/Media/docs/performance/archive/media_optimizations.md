@@ -1,3 +1,11 @@
+---
+title: "Ottimizzazioni Performance Modulo Media"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media, performance]
+qmd: "ottimizzazioni performance modulo media media"
+---
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video

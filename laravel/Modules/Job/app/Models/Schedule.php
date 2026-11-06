@@ -13,6 +13,7 @@ use Illuminate\Support\Collection;
 use InvalidArgumentException;
 use Modules\Job\Database\Factories\ScheduleFactory;
 use Modules\Job\Enums\Status;
+use Modules\Job\Models\Traits\ScheduleRelations;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
 
@@ -51,42 +52,42 @@ use Override;
  * @property int|null $histories_count
  * @property ProfileContract|null $updater
  *
- * @method static Builder<static>|Schedule active()
+ * @method static Builder<static> active()
  * @method static ScheduleFactory factory($count = null, $state = [])
- * @method static Builder<static>|Schedule inactive()
- * @method static Builder<static>|Schedule newModelQuery()
- * @method static Builder<static>|Schedule newQuery()
- * @method static Builder<static>|Schedule onlyTrashed()
- * @method static Builder<static>|Schedule query()
- * @method static Builder<static>|Schedule whereCommand($value)
- * @method static Builder<static>|Schedule whereCommandCustom($value)
- * @method static Builder<static>|Schedule whereCreatedAt($value)
- * @method static Builder<static>|Schedule whereCreatedBy($value)
- * @method static Builder<static>|Schedule whereDeletedAt($value)
- * @method static Builder<static>|Schedule whereDeletedBy($value)
- * @method static Builder<static>|Schedule whereEmailOutput($value)
- * @method static Builder<static>|Schedule whereEnvironments($value)
- * @method static Builder<static>|Schedule whereEvenInMaintenanceMode($value)
- * @method static Builder<static>|Schedule whereExpression($value)
- * @method static Builder<static>|Schedule whereId($value)
- * @method static Builder<static>|Schedule whereLogError($value)
- * @method static Builder<static>|Schedule whereLogFilename($value)
- * @method static Builder<static>|Schedule whereLogSuccess($value)
- * @method static Builder<static>|Schedule whereOnOneServer($value)
- * @method static Builder<static>|Schedule whereOptions($value)
- * @method static Builder<static>|Schedule whereOptionsWithValue($value)
- * @method static Builder<static>|Schedule whereParams($value)
- * @method static Builder<static>|Schedule whereRunInBackground($value)
- * @method static Builder<static>|Schedule whereSendmailError($value)
- * @method static Builder<static>|Schedule whereSendmailSuccess($value)
- * @method static Builder<static>|Schedule whereStatus($value)
- * @method static Builder<static>|Schedule whereUpdatedAt($value)
- * @method static Builder<static>|Schedule whereUpdatedBy($value)
- * @method static Builder<static>|Schedule whereWebhookAfter($value)
- * @method static Builder<static>|Schedule whereWebhookBefore($value)
- * @method static Builder<static>|Schedule whereWithoutOverlapping($value)
- * @method static Builder<static>|Schedule withTrashed(bool $withTrashed = true)
- * @method static Builder<static>|Schedule withoutTrashed()
+ * @method static Builder<static> inactive()
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> onlyTrashed()
+ * @method static Builder<static> query()
+ * @method static Builder<static> whereCommand($value)
+ * @method static Builder<static> whereCommandCustom($value)
+ * @method static Builder<static> whereCreatedAt($value)
+ * @method static Builder<static> whereCreatedBy($value)
+ * @method static Builder<static> whereDeletedAt($value)
+ * @method static Builder<static> whereDeletedBy($value)
+ * @method static Builder<static> whereEmailOutput($value)
+ * @method static Builder<static> whereEnvironments($value)
+ * @method static Builder<static> whereEvenInMaintenanceMode($value)
+ * @method static Builder<static> whereExpression($value)
+ * @method static Builder<static> whereId($value)
+ * @method static Builder<static> whereLogError($value)
+ * @method static Builder<static> whereLogFilename($value)
+ * @method static Builder<static> whereLogSuccess($value)
+ * @method static Builder<static> whereOnOneServer($value)
+ * @method static Builder<static> whereOptions($value)
+ * @method static Builder<static> whereOptionsWithValue($value)
+ * @method static Builder<static> whereParams($value)
+ * @method static Builder<static> whereRunInBackground($value)
+ * @method static Builder<static> whereSendmailError($value)
+ * @method static Builder<static> whereSendmailSuccess($value)
+ * @method static Builder<static> whereStatus($value)
+ * @method static Builder<static> whereUpdatedAt($value)
+ * @method static Builder<static> whereUpdatedBy($value)
+ * @method static Builder<static> whereWebhookAfter($value)
+ * @method static Builder<static> whereWebhookBefore($value)
+ * @method static Builder<static> whereWithoutOverlapping($value)
+ * @method static Builder<static> withTrashed(bool $withTrashed = true)
+ * @method static Builder<static> withoutTrashed()
  *
  * @property-read ProfileContract|null $deleter
  *
@@ -95,12 +96,7 @@ use Override;
 class Schedule extends BaseModel
 {
     use ManagesFrequencies;
-
-    public const STATUS_INACTIVE = 0;
-
-    public const STATUS_ACTIVE = 1;
-
-    public const STATUS_TRASHED = 2;
+    use ScheduleRelations;
 
     protected $fillable = [
         'command',
@@ -139,7 +135,10 @@ class Schedule extends BaseModel
      */
     public static function getEnvironments(): Collection
     {
-        return static::whereNotNull('environments')->groupBy('environments')->pluck('environments', 'environments');
+        /** @var Collection<int|string, mixed> $result */
+        $result = static::query()->whereNotNull('environments')->groupBy('environments')->pluck('environments', 'environments');
+
+        return $result;
     }
 
     /**
@@ -147,10 +146,6 @@ class Schedule extends BaseModel
      *
      * @return HasMany<ScheduleHistory, $this>
      */
-    public function histories(): HasMany
-    {
-        return $this->hasMany(ScheduleHistory::class, 'schedule_id', 'id');
-    }
 
     /**
      * Scope a query to only include inactive schedules.
@@ -160,7 +155,7 @@ class Schedule extends BaseModel
      */
     public function scopeInactive(Builder $query): Builder
     {
-        return $query->where('status', self::STATUS_INACTIVE);
+        return $query->where('status', Status::Inactive);
     }
 
     /**
@@ -171,7 +166,7 @@ class Schedule extends BaseModel
      */
     public function scopeActive(Builder $query): Builder
     {
-        return $query->where('status', self::STATUS_ACTIVE);
+        return $query->whereIn('status', Status::activeCases());
     }
 
     /**

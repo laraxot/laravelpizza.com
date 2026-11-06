@@ -1,3 +1,14 @@
+---
+title: "phpstan errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors"
+issues: []
+discussions: []
+---
+
 # Analisi PHPStan - Modulo Performance
 
 ## Data: 2024-03-19

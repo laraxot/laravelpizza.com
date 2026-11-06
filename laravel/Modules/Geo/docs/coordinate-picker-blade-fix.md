@@ -1,3 +1,15 @@
+---
+title: "coordinate picker blade fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker blade fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Coordinate Picker Blade Template Fix
 
 ## Issue
@@ -43,6 +55,6 @@ Verified that:
 - No JavaScript errors in browser console
 
 ## Related Documentation
-- [Geo Module Documentation](../Geo/README.md)
+- [Geo Module Documentation](../README.md)
 - [Filament Form Components](../filament-form-components.md)
 - [Alpine.js Directives](https://alpinejs.dev/directives/)

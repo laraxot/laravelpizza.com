@@ -1,3 +1,12 @@
+---
+title: "Linee Guida API per uno Shop Event Sourced"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "linee guida api per uno shop event sourced activity"
+status: superseded
+superseded_by: api.md
+---
 # Linee Guida API per uno Shop Event Sourced
 
 ## 1. Endpoints Principali

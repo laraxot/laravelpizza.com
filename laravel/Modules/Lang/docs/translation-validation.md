@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Guida Completa alla Validazione delle Traduzioni - <nome progetto>"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text fix"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Guida Completa alla Validazione delle Traduzioni - <nome progetto>
 
 ## Panoramica
@@ -135,12 +149,12 @@ php docs/helper-text-audit-script.php
 
 ### 2. Italian Text Validation
 ```bash
-php docs/raw/root-import/italian-text-validation-refined.php
+php docs/italian-text-validation-refined.php
 ```
 
 ### 3. Obbligatorio Specific Audit
 ```bash
-php docs/raw/root-import/obbligatorio-audit-script.php
+php docs/obbligatorio-audit-script.php
 ```
 
 ## Processo DRY + KISS
@@ -235,11 +249,12 @@ php docs/raw/root-import/obbligatorio-audit-script.php
 - [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
 - [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
 - [Geo Module - Helper Text Fix](../modules/geo/docs/helper-text-normalization-fix.md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
 
 ### Script e Tool
 - [Helper Text Audit Script](helper-text-audit-script.php)
-- [Italian Text Validation Script](raw/root-import/italian-text-validation-refined.php)
-- [Obbligatorio Audit Script](raw/root-import/obbligatorio-audit-script.php)
+- [Italian Text Validation Script](italian-text-validation-refined.php)
+- [Obbligatorio Audit Script](obbligatorio-audit-script.php)
 
 ---
 

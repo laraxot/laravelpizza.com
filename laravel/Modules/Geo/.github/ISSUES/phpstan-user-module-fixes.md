@@ -1,3 +1,14 @@
+---
+title: "phpstan user module fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan user module fixes"
+issues: []
+discussions: []
+---
+
 # PHPStan Level 10 - User Module
 
 **Status**: ✅ COMPLETE
@@ -31,4 +42,12 @@
 
 ---
 
+title: "phpstan user module fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan user module fixes"
+issues: []
+discussions: []
 **Related**: GitHub Discussion #84

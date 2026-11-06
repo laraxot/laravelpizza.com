@@ -4,46 +4,61 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Password;
-// use Filament\Forms\Components\TextInput as FormsTextInput;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\User\Actions\Auth\ConsumeAuthSubmissionSlotAction;
+use Modules\User\Enums\AuthThrottleScope;
+use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**
+ * ForgotPasswordWidget — invio link reset via email.
+ *
+ * Schema da `Schemas\UserForm::getForgotPasswordFormSchema()` — SSoT.
+ *
  * @property Schema $form
  */
-class ForgotPasswordWidget extends XotBaseWidget
+class ForgotPasswordWidget extends XotBaseSchemaWidget
 {
-    protected string $view = 'user::widgets.auth.forgot-password-widget';
-
     /**
-     * Get the form schema for this widget.
-     *
-     * @return array<string, Component>
+     * @return class-string<UserForm>
      */
-    #[\Override]
-    public function getFormSchema(): array
+    protected static function formClass(): string
     {
-        return [
-            'email' => TextInput::make('email')
-                ->email()
-                ->required()
-                ->maxLength(255),
-        ];
+        return UserForm::class;
     }
 
+    protected static function schemaMethod(): string
+    {
+        return 'getForgotPasswordFormSchema';
+    }
+
+    /** Vero dopo un invio valido: la vista mostra l'esito neutro in `role="status"`. */
+    public bool $sent = false;
+
+    /**
+     * Risposta identica per indirizzo registrato, sconosciuto o richiesta frenata dal broker: chi non e' loggato non deve poter
+     * scoprire quali email hanno un account (DCP-290, FO-3-01). L'esito di `Password::sendResetLink` non si mostra mai.
+     */
     public function sendResetLink(): void
     {
-        $data = $this->form->getState();
+        // Freno per IP e per email PRIMA di validare e di scrivere (SEC-012): il broker limita solo per account, ogni 60 s.
+        // Il blocco non dipende dall'esistenza dell'account, quindi non rivela nulla.
+        $typed = is_array($this->data) && is_string($this->data['email'] ?? null) ? $this->data['email'] : '';
+        $secondsToWait = app(ConsumeAuthSubmissionSlotAction::class)->execute(AuthThrottleScope::ForgotPassword, $typed, request()->ip());
+        if ($secondsToWait > 0) {
+            $this->addError('data.email', __('user::throttle.auth_form.retry.message', ['seconds' => $secondsToWait]));
 
-        $status = Password::sendResetLink(['email' => $data['email']]);
-
-        if (Password::RESET_LINK_SENT === $status) {
-            session()->flash('status', __($status));
-        } else {
-            $this->addError('email', __($status));
+            return;
         }
+
+        /** @var array<string, mixed> $data */
+        $data = $this->form->getState();
+        $email = is_string($data['email'] ?? null) ? $data['email'] : '';
+
+        Password::sendResetLink(['email' => $email]);
+
+        $this->sent = true;
+        $this->form->fill();
     }
 }

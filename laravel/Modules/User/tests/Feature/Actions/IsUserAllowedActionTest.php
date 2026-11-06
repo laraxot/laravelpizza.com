@@ -4,45 +4,36 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Actions;
 
-use Laravel\Socialite\Contracts\User as SocialiteUserContract;
-use Modules\User\Actions\Socialite\IsUserAllowedAction;
 use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert as PHPUnitAssert;
 
 uses(TestCase::class);
 
-function fakeSocialiteUser(string $email): SocialiteUserContract
-{
-    $user = Mockery::mock(SocialiteUserContract::class);
-    $user->shouldReceive('getEmail')->andReturn($email);
-
-    return $user;
-}
-
-describe('IsUserAllowedAction', function (): void {
+describe('Is User Allowed Action', function (): void {
     test('allows user with whitelisted email domain', function (): void {
         $user = fakeSocialiteUser('user@allowed-company.com');
         config(['filament-socialite.domain_allowlist' => ['allowed-company.com']]);
 
-        $result = app(IsUserAllowedAction::class)->execute($user);
+        $result = makeIsUserAllowedAction()->execute($user);
 
-        expect($result)->toBeTrue();
+        PHPUnitAssert::assertTrue($result);
     });
 
-    test('denies user with non-whitelisted email domain', function (): void {
+    test('denies user with non whitelisted email domain', function (): void {
         $user = fakeSocialiteUser('user@unknown-domain.com');
         config(['filament-socialite.domain_allowlist' => ['allowed-company.com']]);
 
-        $result = app(IsUserAllowedAction::class)->execute($user);
+        $result = makeIsUserAllowedAction()->execute($user);
 
-        expect($result)->toBeFalse();
+        PHPUnitAssert::assertFalse($result);
     });
 
     test('allows user when whitelist is empty', function (): void {
         $user = fakeSocialiteUser('user@any-domain.com');
         config(['filament-socialite.domain_allowlist' => []]);
 
-        $result = app(IsUserAllowedAction::class)->execute($user);
+        $result = makeIsUserAllowedAction()->execute($user);
 
-        expect($result)->toBeTrue();
+        PHPUnitAssert::assertTrue($result);
     });
 });

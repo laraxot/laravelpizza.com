@@ -1,3 +1,11 @@
+---
+title: "Regole Struttura Directory"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole struttura directory xot"
+---
 # Regole Struttura Directory
 
 ## Struttura Base del Progetto

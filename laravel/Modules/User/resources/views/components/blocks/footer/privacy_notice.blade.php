@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'content' => 'I dati personali forniti saranno trattati nel rispetto della normativa sulla privacy.',
-    'link_text' => 'Informativa sulla Privacy',
+    'content' => __('user::blocks.sections.privacy_notice.description'),
+    'link_text' => __('user::blocks.privacy_notice.link.label'),
     'link_url' => '/privacy-policy'
 ])
 

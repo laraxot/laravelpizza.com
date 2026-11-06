@@ -1,3 +1,15 @@
+---
+title: "componenti header"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "componenti header"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componente Header
 
 Questo documento fornisce un collegamento alla documentazione dettagliata del componente Header nel modulo CMS.

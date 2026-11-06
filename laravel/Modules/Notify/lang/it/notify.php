@@ -285,4 +285,9 @@ return [
     ],
     'label' => 'Notify',
     'plural_label' => 'Notify (Plurale)',
+    'alert' => [
+        'sent' => [
+            'message' => 'Alert Inviato',
+        ],
+    ],
 ];

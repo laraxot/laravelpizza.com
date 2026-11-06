@@ -1,4 +1,12 @@
 ---
+title: "gsd roadmapper.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd roadmapper.agent"
+issues: []
+discussions: []
 name: gsd-roadmapper
 description: Creates project roadmaps with phase breakdown, requirement mapping, success criteria derivation, and coverage validation. Spawned by /gsd-new-project orchestrator.
 tools: ['read', 'edit', 'execute', 'search', 'search']

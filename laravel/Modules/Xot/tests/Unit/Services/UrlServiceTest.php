@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Url\IsValidUrlAction;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('validates correct urls', function (): void {
     $action = app(IsValidUrlAction::class);

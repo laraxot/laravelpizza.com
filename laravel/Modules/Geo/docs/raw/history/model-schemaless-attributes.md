@@ -1,3 +1,14 @@
+---
+title: "model schemaless attributes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model schemaless attributes"
+issues: []
+discussions: []
+---
+
 # Schemaless Attributes with `spatie/laravel-schemaless-attributes`
 
 This document outlines the usage, benefits, and considerations for integrating the `spatie/laravel-schemaless-attributes` package into our Laravel Eloquent models. This package provides a flexible way to store arbitrary JSON data within a single database column, offering NoSQL-like capabilities within a relational database context.

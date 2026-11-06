@@ -1,3 +1,11 @@
+---
+title: "Guida alla Compatibilità HTML per Email"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "guida alla compatibilità html per email notify"
+---
 # Guida alla Compatibilità HTML per Email
 
 ## Introduzione

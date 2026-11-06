@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="relative overflow-hidden bg-white pb-32 pt-16">
     <div class="relative">
@@ -16,10 +15,10 @@ declare(strict_types=1);
               </span>
             </div>
             <div class="mt-6">
-              <h2 class="text-3xl font-bold tracking-tight text-gray-900">Stay on top of customer support</h2>
-              <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.</p>
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.shared.heading_1.title') }}</h2>
+              <p class="mt-4 text-lg text-gray-500">{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.paragraph_1.description') }}</p>
               <div class="mt-6">
-                <a href="#" class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">Get started</a>
+                <a href="#" class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">{{ __('ui::blocks_demo_shared.labels.get_started.label') }}</a>
               </div>
             </div>
           </div>
@@ -33,7 +32,7 @@ declare(strict_types=1);
                   <div class="flex-shrink-0">
                     <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
                   </div>
-                  <div class="text-base font-medium text-gray-700">Marcia Hill, Digital Marketing Manager</div>
+                  <div class="text-base font-medium text-gray-700">{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.text_1.label') }}</div>
                 </div>
               </footer>
             </blockquote>
@@ -41,7 +40,7 @@ declare(strict_types=1);
         </div>
         <div class="mt-12 sm:mt-16 lg:mt-0">
           <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" alt="Inbox user interface">
+            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" alt="{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.inbox_user_interface.alt') }}">
           </div>
         </div>
       </div>
@@ -58,17 +57,17 @@ declare(strict_types=1);
               </span>
             </div>
             <div class="mt-6">
-              <h2 class="text-3xl font-bold tracking-tight text-gray-900">Better understand your customers</h2>
-              <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.</p>
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.better_understand_your_customers.title') }}</h2>
+              <p class="mt-4 text-lg text-gray-500">{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.paragraph_1.description') }}</p>
               <div class="mt-6">
-                <a href="#" class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">Get started</a>
+                <a href="#" class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">{{ __('ui::blocks_demo_shared.labels.get_started.label') }}</a>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
           <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="Customer profile user interface">
+            <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="{{ __('ui::blocks_feature_sections.archivied_alternating_with_optional_testimonial.customer_profile_user_interface.alt') }}">
           </div>
         </div>
       </div>

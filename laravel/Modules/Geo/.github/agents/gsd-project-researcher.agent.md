@@ -1,4 +1,12 @@
 ---
+title: "gsd project researcher.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd project researcher.agent"
+issues: []
+discussions: []
 name: gsd-project-researcher
 description: Researches domain ecosystem before roadmap creation. Produces files in .planning/research/ consumed during roadmap creation. Spawned by /gsd-new-project or /gsd-new-milestone orchestrators.
 tools: ['read', 'edit', 'execute', 'search', 'search', 'websearch', 'webfetch', 'mcp__context7__*']

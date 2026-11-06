@@ -1,3 +1,16 @@
+---
+title: "roadmap "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap "
+issues: []
+discussions: []
+status: superseded
+superseded_by: roadmap/legacy/legacy-roadmap.md
+---
+
 # Cms Module Roadmap 2026
 
 ## 📚 Sacred Philosophy: "Content is King, Structure is Queen"
@@ -13,7 +26,6 @@ Transform content management from a technical constraint into a **creative super
 - **Developer Joy**: Intuitive APIs for content creation and manipulation
 
 ---
-
 ## 📊 Current Architecture Assessment
 
 ### ✅ Architectural Strengths

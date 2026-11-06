@@ -1,3 +1,15 @@
+---
+title: "phpstan level 10 rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level 10 rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Rules & Best Practices
 
 ## Regola immutabile: phpstan.neon
@@ -38,7 +50,6 @@ trait MyTrait {
 - `Modules/Tenant/app/Models/Traits/SushiToJson.php`
 
 ---
-
 ### 2. Collection Type Parameters
 **Severity:** HIGH  
 **Status:** Enforced
@@ -275,9 +286,9 @@ These rules are enforced through:
 
 ## Related Documentation
 
-- [PHPStan Analysis Report 2026-03-02](./phpstan-analysis-2026-03-02.md)
-- [Cms Module PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes.md)
-- [Fixcity Module PHPStan Fixes](../laravel/Modules/Fixcity/docs/phpstan-level-10-fixes.md)
+- [PHPStan Analysis Report 2026-03-02](./phpstan-analysis-level-report.md)
+- [Cms Module PHPStan Fixes](../../Cms/docs/phpstan-fixes.md)
+- [Fixcity Module PHPStan Fixes](../../Fixcity/docs/phpstan-level-10-fixes.md)
 - [PHPStan Official Documentation](https://phpstan.org/)
 
 ---

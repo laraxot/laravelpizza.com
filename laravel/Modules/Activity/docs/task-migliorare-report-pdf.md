@@ -1,3 +1,11 @@
+---
+title: "Task: Migliorare Report PDF - Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "task: migliorare report pdf - activity activity"
+---
 # Task: Migliorare Report PDF - Activity
 
 **Modulo**: Activity

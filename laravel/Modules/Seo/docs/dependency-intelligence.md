@@ -1,3 +1,15 @@
+---
+title: "dependency intelligence"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dependency intelligence"
+issues: []
+discussions: []
+status: active
+---
+
 # Dependency Intelligence - Module Seo
 
 
@@ -38,5 +50,5 @@
 
 ## Deep Study References
 
-- [Composer packages study](../../../../docs/architecture/composer-packages-study.md)
-- [Composer packages full inventory](../../../../docs/architecture/composer-packages-full-inventory.md)
+- [Composer packages study](../../../../docs/architecture/composer-packages-study.md) _(target mancante, verificato 2026-10-08)_
+- [Composer packages full inventory](../../../../docs/architecture/composer-packages-full-inventory.md) _(target mancante, verificato 2026-10-08)_

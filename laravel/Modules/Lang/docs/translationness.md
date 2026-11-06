@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Translation Completeness Audit"
+module: "Lang"
+type: concept
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Translation Completeness Audit
 
 ## Overview
@@ -284,6 +298,7 @@ This document tracks the completeness and quality of translation files across th
 
 - [Theme Translation Files](../laravel/Themes/One/lang/)
 - [Notify Module Translations](../laravel/Modules/Notify/lang/)
+- [Notify Module Translations](../../Notify/lang)
 - [<nome progetto> Module Translations](../laravel/Modules/<nome progetto>/lang/)
 - [PDF Template](../laravel/Themes/One/resources/views/appointment/report_pdf.blade.php)
 
@@ -575,6 +590,7 @@ This document tracks the completeness and quality of translation files across th
 
 - [Theme Translation Files](../laravel/Themes/One/lang/)
 - [Notify Module Translations](../laravel/Modules/Notify/lang/)
+- [Notify Module Translations](../../Notify/lang)
 - [<nome progetto> Module Translations](../laravel/Modules/<nome progetto>/lang/)
 - [PDF Template](../laravel/Themes/One/resources/views/appointment/report_pdf.blade.php)
 

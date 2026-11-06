@@ -1,3 +1,11 @@
+---
+title: "Correzione Errori Override Metodi Final"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "correzione errori override metodi final xot"
+---
 # Correzione Errori Override Metodi Final
 
 ## Problema Identificato (2025-01-06)

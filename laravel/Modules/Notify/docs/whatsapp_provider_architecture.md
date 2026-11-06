@@ -1,6 +1,18 @@
-# Architettura WhatsApp Provider per Quaeris
+---
+title: "whatsapp provider architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "whatsapp provider architecture"
+issues: []
+discussions: []
+status: draft
+---
 
-Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di Quaeris, mantenendo coerenza con le architetture esistenti per SMS ed email.
+# Architettura WhatsApp Provider per SaluteOra
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di SaluteOra, mantenendo coerenza con le architetture esistenti per SMS ed email.
 
 ## Principi Architetturali Fondamentali
 
@@ -14,7 +26,7 @@ L'architettura dei provider WhatsApp segue gli stessi principi dei provider SMS 
 ## Struttura Directory e Namespace
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/
+/var/www/html/saluteora/laravel/Modules/Notify/
 ├── app/
 │   ├── Actions/
 │   │   └── WhatsApp/

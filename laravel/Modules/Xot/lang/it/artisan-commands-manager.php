@@ -34,6 +34,13 @@ return [
         'queue_restart' => [
             'label' => 'Riavvia Code',
         ],
+        'composer_dump_autoload' => [
+            'label' => 'Composer Dump Autoload',
+        ],
+        'notify_migrate_themes_to_mail_templates' => [
+            'label' => 'Importa Vecchi Template Email/SMS',
+            'modal_description' => 'Copia i contenuti email/SMS dalla vecchia tabella notify_themes verso mail_templates (il nuovo sistema di invio inviti). Operazione idempotente: rilanciarla aggiorna i template già migrati invece di duplicarli, sovrascrivendo eventuali modifiche fatte a mano dopo l\'ultima esecuzione.',
+        ],
     ],
     'status' => [
         'completed' => 'Completato',
@@ -48,6 +55,9 @@ return [
         'command_completed_desc' => 'Il comando :command è stato completato con successo',
         'command_failed' => 'Comando Fallito',
         'command_failed_desc' => 'Il comando :command è fallito. Controlla l\'output per i dettagli.',
+        'running_command' => [
+            'message' => 'Comando in esecuzione: :command',
+        ],
     ],
     'hints' => [
         'running' => 'Il comando è in esecuzione. L\'output apparirà in tempo reale.',
@@ -87,4 +97,5 @@ return [
             'label' => 'Elimina Artisan Commands Manager',
         ],
     ],
+    'select_command' => 'Seleziona un comando dall\'intestazione per iniziare.',
 ];

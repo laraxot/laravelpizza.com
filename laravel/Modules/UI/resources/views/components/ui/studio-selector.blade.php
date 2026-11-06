@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{--
     Studio Selector Component - Selezione semplice studio con pulsanti
@@ -69,7 +68,7 @@ declare(strict_types=1);
                                 $address = $studio->addresses->first();
                             @endphp
                             <div class="mt-2 ml-7 text-sm text-gray-600">
-                                <div>{{ $address->street ?? 'Indirizzo non disponibile' }}</div>
+                                <div>{{ $address->street ?? __('ui::studio-selector.card.address_unavailable.label') }}</div>
                                 <div>{{ $address->postal_code }} {{ $address->city }}</div>
                             </div>
                         @endif
@@ -86,7 +85,7 @@ declare(strict_types=1);
                             @if($studio->services && count($studio->services) > 0)
                                 <div class="flex items-center gap-1">
                                     <x-filament::icon name="heroicon-o-wrench-screwdriver" class="w-3 h-3" />
-                                    <span>{{ count($studio->services) }} servizi</span>
+                                    <span>{{ __('ui::studio-selector.list.services_count.label', ['count' => count($studio->services)]) }}</span>
                                 </div>
                             @endif
                         </div>
@@ -111,10 +110,10 @@ declare(strict_types=1);
                     class="w-12 h-12 text-gray-400 mx-auto mb-4"
                 />
                 <h3 class="text-lg font-medium text-gray-900 mb-2">
-                    Nessuno studio trovato
+                    {{ __('ui::studio-selector.list.empty.title') }}
                 </h3>
                 <p class="text-gray-600">
-                    Non ci sono studi disponibili nell'area selezionata.
+                    {{ __('ui::studio-selector.list.empty.description') }}
                 </p>
             </div>
         @endforelse
@@ -132,7 +131,7 @@ declare(strict_types=1);
                     class="w-4 h-4 text-primary-600"
                 />
                 <span class="text-primary-700 font-medium">
-                    Studio selezionato: {{ $studio->name }}
+                    {{ __('ui::studio-selector.list.selected.label', ['name' => $studio->name]) }}
                 </span>
             </div>
         </div>

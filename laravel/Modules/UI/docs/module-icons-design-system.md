@@ -1,3 +1,15 @@
+---
+title: "module icons design system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module icons design system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Design per Icone SVG dei Moduli
 
 ## Principi di Design

@@ -1,3 +1,16 @@
+---
+title: "sms action factory resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms action factory resolution"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sms-action-factory-resolution.md
+---
+
 # Risoluzione dinamica vs match esplicito in SmsActionFactory
 
 ## Contesto
@@ -6,6 +19,14 @@ Nel factory `SmsActionFactory`, invece di usare un `match` esplicito per risolve
 
 ---
 
+title: "sms action factory resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms action factory resolution"
+issues: []
+discussions: []
 ## 1. Esempio di match esplicito
 
 ```php

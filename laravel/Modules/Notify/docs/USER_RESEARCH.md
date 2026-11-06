@@ -1,3 +1,17 @@
+---
+qmd: "USER RESEARCH"
+issues: []
+discussions: []
+title: "Notify Module - User Research"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: bmad/architecture/user-research.md
+---
+
 # Notify Module - User Research
 
 **Module:** Notify  

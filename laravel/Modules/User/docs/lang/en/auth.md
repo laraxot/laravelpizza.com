@@ -1,3 +1,16 @@
+---
+title: "File di Traduzione Inglese per l'Autenticazione"
+type: concept
+tags: [auth]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth file di traduzione inglese per l'autenticazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+status: draft
+---
+
 # File di Traduzione Inglese per l'Autenticazione
 
 ## Panoramica
@@ -38,9 +51,10 @@ Questo file contiene le traduzioni in inglese per tutte le stringhe relative al 
 - Miglioramento dei placeholder
 - Aggiunta di nuovi messaggi di sistema
 ## Collegamenti tra versioni di auth.md
-* [auth.md](../../../xot/docs/install/auth.md)
+* [auth.md](../../../../Xot/docs/install/auth.md)
 * [auth.md](../../../user/docs/lang/en/auth.md)
-* [auth.md](../../../tenant/docs/it/config/auth.md)
+* [auth.md](../../../../Tenant/docs/it/config/auth.md)
+* [auth.md](../../../../Tenant/docs/it/config/auth.md)
 * [auth.md](../../../xot/project_docs/install/auth.md)
 * [auth.md](../../../user/project_docs/lang/en/auth.md)
 * [auth.md](../../../tenant/project_docs/it/config/auth.md)

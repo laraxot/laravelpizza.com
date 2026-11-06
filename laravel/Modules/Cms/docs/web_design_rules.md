@@ -1,3 +1,15 @@
+---
+title: "web design rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole di Web Design UI/UX
 
 ## 1. Regole di Hick-Hyman

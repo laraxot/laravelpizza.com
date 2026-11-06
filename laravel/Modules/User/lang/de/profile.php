@@ -66,27 +66,6 @@ return [
         'is_active' => [
             'label' => 'Attivo',
             'help' => 'Stato attivo del profilo',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'id' => [
-            'label' => 'ID',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'ente' => [
-            'label' => 'Ente',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'matr' => [
-            'label' => 'Matricola',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
     ],
     'actions' => [
@@ -107,4 +86,15 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'privacy_policy' => [
+        'title' => 'Datenschutzerklärung',
+        'description' => 'Wie wir mit Ihren personenbezogenen Daten umgehen.',
+    ],
+    'delete_account' => [
+        'title' => 'Konto löschen',
+        'description' => 'Sobald Ihr Konto gelöscht ist, werden alle zugehörigen Ressourcen und Daten endgültig gelöscht. Laden Sie vor dem Fortfahren alle Daten herunter, die Sie behalten möchten.',
+        'password_confirmation' => 'Bestätigen Sie Ihr Passwort',
+        'delete' => 'Konto löschen',
+        'button' => 'Konto löschen',
+    ],
 ];

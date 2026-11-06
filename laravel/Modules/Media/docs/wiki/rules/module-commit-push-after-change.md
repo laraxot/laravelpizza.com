@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Commit & push dopo modifiche al modulo"
 type: rule
 tags: [git, workflow, media]
@@ -7,6 +9,7 @@ updated: 2026-07-08
 qmd: "Media git commit push dopo modifiche regola"
 related:
   - index.md
+status: draft
 ---
 
 # Commit & push dopo modifiche al modulo

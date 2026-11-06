@@ -43,8 +43,7 @@ abstract class BaseMorphPivot extends MorphPivot
         'post_type',
         'related_type',
         'user_id',
-        'note',
-    ];
+        'note'];
 
     protected function casts(): array
     {
@@ -56,7 +55,6 @@ abstract class BaseMorphPivot extends MorphPivot
             'deleted_at' => 'datetime',
             'updated_by' => 'string',
             'created_by' => 'string',
-            'deleted_by' => 'string',
-        ];
+            'deleted_by' => 'string'];
     }
 }

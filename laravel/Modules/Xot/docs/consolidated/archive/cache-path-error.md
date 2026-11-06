@@ -1,3 +1,11 @@
+---
+title: "Errore Cache Path Mancante"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "errore cache path mancante xot"
+---
 # Errore Cache Path Mancante
 
 ## Descrizione dell'Errore

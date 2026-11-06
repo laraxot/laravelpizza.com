@@ -1,3 +1,15 @@
+---
+title: "specifics"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "specifics"
+issues: []
+discussions: []
+status: draft
+---
+
 # Framework Specifics and Integrations
 
 ## 🏗️ Framework Architecture
@@ -269,5 +281,4 @@ class SendWelcomeEmail
 ```
 
 ---
-
-**See Also**: [Eloquent Properties](eloquent-properties.md) | [Schemaless Attributes](schemaless-attributes.md)
+**See Also**: [Eloquent Properties](../claude/eloquent-properties.md) | [Schemaless Attributes](schemaless-attributes.md)

@@ -1,3 +1,15 @@
+---
+title: "DECISIONE BASEMODEL REFACTORING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DECISIONE BASEMODEL REFACTORING"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 DECISIONE: BaseModel Refactoring - Analisi Approfondita
 
 **Data**: 15 Ottobre 2025  
@@ -5,7 +17,6 @@
 **Risposta**: **SÌ, MA CON ECCEZIONI DOCUMENTATE** ✅⚠️
 
 ---
-
 ## 📊 Situazione Attuale (VERIFICATA)
 
 ### Stato dei 18 Moduli
@@ -161,7 +172,7 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 {
     use SoftDeletes;  // ✅ Specifico
     
-    protected $connection = 'fixcity';
+    protected $connection = 'ptv';
     
     // ❌ DUPLICATO: già in XotBaseModel
     protected $fillable = ['id'];
@@ -183,7 +194,7 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 {
     use SoftDeletes;  // ✅ Specifico
     
-    protected $connection = 'fixcity';
+    protected $connection = 'ptv';
     
     // ✅ RIMOSSO: $fillable (eredita da parent)
     // ✅ RIMOSSO: $dates (deprecato)

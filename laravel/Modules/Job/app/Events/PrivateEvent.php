@@ -10,6 +10,7 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Auth;
 
 class PrivateEvent implements ShouldBroadcast
 {
@@ -31,6 +32,6 @@ class PrivateEvent implements ShouldBroadcast
      */
     public function broadcastOn(): Channel
     {
-        return new PrivateChannel('private.'.auth()->id());
+        return new PrivateChannel('private.'.Auth::id());
     }
 }

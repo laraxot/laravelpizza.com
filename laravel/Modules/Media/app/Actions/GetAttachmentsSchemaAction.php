@@ -7,35 +7,42 @@ namespace Modules\Media\Actions;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
+use Modules\Media\Datas\MediaConfigData;
+use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
 {
+    use QueueableAction;
+
     /**
-     * @param  array<string>  $attachments
-     * @return array<FileUpload>
+     * @param  array<array-key, string>  $attachments
+     * @return list<FileUpload>
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
         $form = [];
+        // Limiti dalla SettingPage di Media (prima scritti qui: 10 MB, pdf/doc/docx).
+        $config = MediaConfigData::make();
 
         foreach ($attachments as $attachment) {
-            $attachmentStr = (string) $attachment;
-            $fileUpload = FileUpload::make($attachmentStr)
-                // $fileUpload=SpatieMediaLibraryFileUpload::make($attachmentStr)
-                ->directory('temp') // Use 'temp' as expected by test
-                ->disk('attachments') // Use 'attachments' as expected by test
-                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Include doc, docx as expected
-                ->maxSize(10 * 1024 * 1024) // 10MB in bytes (what the test expects)
-                ->visibility('public') // Add visibility
+            $form[] = FileUpload::make($attachment)
+                ->directory('temp')
+                ->disk($disk)
+                ->acceptedFileTypes($config->attachment_mime_types)
+                ->maxSize($config->attachment_max_size_kb)
+                ->visibility('public')
                 ->preserveFilenames()
                 ->required()
-                ->previewable(true) // Make previewable
-                ->downloadable(true) // Make downloadable
-                ->reorderable(false) // Not reorderable
-                ->multiple(false) // Not multiple
-                // ->saveUploadedFiles()
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment): void {
+                ->previewable()
+                ->downloadable()
+                ->reorderable(false)
+                ->multiple(false)
+                /**
+                 * `mixed $state` voluto: lo stato FileUpload e' eterogeneo
+                 * (TemporaryUploadedFile|array|string|null) — Arr::wrap lo normalizza.
+                 */
+                ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
                     if (! $state) {
                         return;
                     }
@@ -43,17 +50,14 @@ class GetAttachmentsSchemaAction
 
                     $sessionFiles = [];
 
-                    // Using a simple temp path for tests
                     foreach ($state as $file) {
-                        $sessionFiles[] = $file; // Just pass through the file
+                        $sessionFiles[] = $file;
                     }
 
-                    // Set expects Component|string, pass attachment as string
                     Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
 
-            $form[] = $fileUpload; // Add to numerically indexed array
         }
 
         return $form;

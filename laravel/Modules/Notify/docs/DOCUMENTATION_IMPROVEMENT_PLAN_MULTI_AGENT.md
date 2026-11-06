@@ -1,3 +1,16 @@
+---
+qmd: "DOCUMENTATION IMPROVEMENT PLAN MULTI AGENT"
+issues: []
+discussions: []
+title: "Documentation Improvement Plan - Multi-Agent Edition"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Documentation Improvement Plan - Multi-Agent Edition
 
 > **Status**: 🟡 IN PROGRESS  
@@ -218,11 +231,11 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `DryTraitMethods.md` → `dry-trait-methods.md`
 - [ ] `README_ANALISI_DUPLICATI.md` → `readme-analisi-duplicati.md`
 - [ ] `ANALISI_METODI_DUPLICATI_MASTER.md` → `analisi-metodi-duplicati-master.md`
-- [ ] `DOCUMENTATION_IMPROVEMENT_SUMMARY_2026-03-13.md` → `documentation-improvement-summary.md`
-- [ ] `PHPSTAN_GLOBAL_SUMMARY_2026-03-02.md` → `phpstan-global-summary.md`
-- [ ] `GITHUB_ISSUES_RECOMMENDATIONS_2026-03-02.md` → `github-issues-recommendations.md`
-- [ ] `SYSTEM_ADMIN_SUMMARY_2026-03-13.md` → `system-admin-summary.md`
-- [ ] `LOGGING_OPTIMIZATION_SUMMARY_2026-03-02.md` → `logging-optimization-summary.md`
+- [ ] `documentation-improvement-summary.md` → `documentation-improvement-summary.md`
+- [ ] `phpstan-global-summary.md` → `phpstan-global-summary.md`
+- [ ] `github-issues-recommendations.md` → `github-issues-recommendations.md`
+- [ ] `system-admin-summary.md` → `system-admin-summary.md`
+- [ ] `logging-optimization-summary.md` → `logging-optimization-summary.md`
 
 **Remove dates from filenames**:
 - [ ] All files with `YYYY-MM-DD` pattern

@@ -1,7 +1,32 @@
+---
+title: "MCP (Management Control Panel) Tools for Database Analysis"
+type: concept
+tags: [mcp, database, tools]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "mcp-database-tools mcp (management control panel) tools for database analysis"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # MCP (Management Control Panel) Tools for Database Analysis
 
 ## Overview
-MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the Quaeris_survey database used in the Limesurvey integration.
+MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the survey database used in the Limesurvey integration.
 
 ## Available MCP Tools for Database Work
 
@@ -17,7 +42,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 }
 ```
 
-**Use Cases for Quaeris_survey Database**:
+**Use Cases for survey Database**:
 - Query Limesurvey tables directly
 - Analyze survey responses in `lime_survey_{sid}` tables
 - Examine question structures in `lime_questions`
@@ -51,7 +76,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 
 ### Direct Database Queries (using MySQL MCP)
 ```sql
--- List all survey tables in Quaeris_survey database
+-- List all survey tables in app_survey database
 SHOW TABLES LIKE 'lime_survey_%';
 
 -- Analyze question structure
@@ -93,12 +118,12 @@ Ensure database connections are properly configured in:
 ## MCP Configuration File
 Location: `~/.cursor/mcp.json`
 
-Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the Quaeris_survey database without additional configuration.
+Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the app_survey database without additional configuration.
 
 ## Best Practices for Database Analysis
 
 1. **Always verify survey IDs** before querying dynamic tables like `lime_survey_{id}`
-2. **Use proper connection** (`limesurvey` connection for Quaeris_survey database)
+2. **Use proper connection** (`limesurvey` connection for app_survey database)
 3. **Limit result sets** when exploring large survey response tables
 4. **Check table existence** before querying survey-specific tables
 5. **Respect data privacy** when handling survey responses

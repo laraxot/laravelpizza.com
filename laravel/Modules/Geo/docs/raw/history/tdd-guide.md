@@ -1,3 +1,14 @@
+---
+title: "tdd guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd guide"
+issues: []
+discussions: []
+---
+
 # Test Driven Development (TDD) in Laravel - Guida Completa
 
 ## Overview
@@ -286,5 +297,13 @@ it('uses transactions', function () {
 
 ---
 
+title: "tdd guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd guide"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2026-02-24  
 **Stack**: Laravel 12 | Filament v5 | Pest v4 | PHPStan Level 10

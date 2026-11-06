@@ -1,3 +1,11 @@
+---
+title: "_continuous_integration_tools"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_continuous_integration_tools xot"
+---
 # _continuous_integration_tools
 
 <!-- Contenuto migrato da _docs/_continuous_integration_tools.txt -->

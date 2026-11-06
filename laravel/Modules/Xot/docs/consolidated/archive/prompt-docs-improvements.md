@@ -1,3 +1,11 @@
+---
+title: "Miglioramenti al Prompt docs.txt"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "miglioramenti al prompt docs.txt xot"
+---
 # Miglioramenti al Prompt docs.txt
 
 > **Collegamenti correlati**

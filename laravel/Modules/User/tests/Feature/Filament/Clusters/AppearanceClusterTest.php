@@ -15,11 +15,9 @@ use Modules\User\Filament\Clusters\Appearance\Pages\Logo;
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Filament\Clusters\XotBaseCluster;
 use Modules\Xot\Filament\Pages\XotBasePage;
-
-use function Pest\Laravel\actingAs;
-
 use PHPUnit\Framework\Assert;
 
+use function Pest\Laravel\actingAs;
 use function Safe\file_get_contents;
 use function Safe\glob;
 
@@ -68,12 +66,15 @@ describe('Appearance Cluster', function (): void {
         /** @var TestCase $this */
         $files = glob(base_path('Modules/User/app/Filament/Clusters/Appearance/Pages/*.php'));
 
-        if ([] === $files) {
+        if ($files === []) {
             $this->skipTest('Appearance cluster pages directory not found.');
         }
 
         foreach ($files as $file) {
-            $filePath = (string) $file;
+            if (! is_string($file)) {
+                continue;
+            }
+            $filePath = $file;
             $content = (string) file_get_contents($filePath);
             Assert::assertStringContainsString('extends XotBasePage', $content, basename($filePath));
             Assert::assertStringNotContainsString('extends Page', $content, basename($filePath));
@@ -108,6 +109,30 @@ describe('Appearance Cluster', function (): void {
 
         foreach ($pages as $pageClass) {
             Assert::assertTrue(class_exists($pageClass));
+        }
+    });
+
+    test('unimplemented save handlers fail loudly instead of dumping debug output', function (): void {
+        $handlers = [
+            'Alignment' => static fn () => (new Alignment)->updateData(),
+            'Background' => static fn () => (new Background)->updateData(),
+            'Colors' => static fn () => (new Colors)->updateData(),
+            'CustomCss' => static fn () => (new CustomCss)->updateData(),
+            'Favicon' => static fn () => (new Favicon)->updateData(),
+            'Logo' => static fn () => (new Logo)->updateLogo(),
+        ];
+
+        foreach ($handlers as $name => $handler) {
+            $thrown = null;
+
+            try {
+                $handler();
+            } catch (\LogicException $exception) {
+                $thrown = $exception;
+            }
+
+            Assert::assertInstanceOf(\LogicException::class, $thrown, $name);
+            Assert::assertStringContainsString('non implementato', $thrown->getMessage(), $name);
         }
     });
 });

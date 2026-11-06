@@ -4,17 +4,20 @@ type: index
 module: User
 tags: [user, wiki, index, auth, socialite, permissions]
 created: 2026-04-15
-updated: 2026-06-18
+updated: 2026-07-27
 qmd: "user module wiki index auth socialite permissions filament forms"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../docs/wiki/bmad/architecture.md
-  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
-  - ./concepts/second-brain-local-discipline.md
+  - "./agents.md"
+  - "./Architecture.md"
+  - "./auth-patterns.md"
+  - "./bmad-method.md"
+  - "./context-compression.md"
+  - "./log.md"
+  - "./overview.md"
+  - "./socialite-architecture.md"
+status: draft
 ---
 
 # User Module LLM Wiki
@@ -24,28 +27,30 @@ Indice operativo del wiki User.
 ## AI / second brain (root)
 
 - [ai-harness-user-discipline](./concepts/ai-harness-user-discipline.md)
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) — tips 001–022
-- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md) — pilastri schema/doc (ADR)
-- [architecture-module-directory-structure](../../../../docs/wiki/bmad/architecture-module-directory-structure.md) — PHP solo in `app/`
-- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) — stub → canon Xot
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md): tips 001–022
+- [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md): pilastri schema/doc (ADR)
+- [architecture-module-directory-structure](../../../../../docs/wiki/bmad/architecture-module-directory-structure.md): PHP solo in `app/`
+- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md): stub → canon Xot
 
 ## Struttura canonica (sacred)
 
-- [module-root-folder-violations](./concepts/module-root-folder-violations.md) — bonifica root User ✅
-- [directory-structure-checklist](../directory-structure-checklist.md) — checklist percorsi
+- [module-root-folder-violations](./concepts/module-root-folder-violations.md): bonifica root User ✅
+- [directory-structure-checklist](../directory-structure-checklist.md): checklist percorsi
 - [entities/](./entities/): Modelli e componenti chiave.
 - [sources/](./sources/): Dati di ricerca e link esterni.
 - [comparisons/](./comparisons/): Implementazioni alternative.
 - [decisions/](./decisions/): ADL (Architectural Decision Log).
 - [troubleshooting/](./troubleshooting/): Problemi noti e soluzioni.
+  - [git-push-lfs-missing-objects](./troubleshooting/git-push-lfs-missing-objects.md): push rifiutato per LFS corrotto (squash)
+  - [git-merge-conflict-inventory](./troubleshooting/git-merge-conflict-inventory.md): marker merge / rebase
 - [_archive/](./_archive/): Documentazione legacy.
 - [_templates/](./_templates/): Template standard.
 
 ## Regole collegate
 
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
-- [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md): Mappa tips 001-022.
+- [forbidden-folders-rule](../../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
+- [llm-wiki-standard](../../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md): Mappa tips 001-022.
 - [laravel-socialite](../../../../docs/wiki/concepts/laravel-socialite.md): OAuth social authentication.
 - [laravel-permission](../../../../docs/wiki/concepts/laravel-permission.md): RBAC Spatie Laravel Permission.
 
@@ -53,17 +58,28 @@ Indice operativo del wiki User.
 
 Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 
+## Runtime config & schema (2026-07-27)
+
+| Pagina | Argomento |
+|--------|-----------|
+| [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md) | `permission.php` table_names: non modificare |
+| [spatie-permission-table-names](./concepts/spatie-permission-table-names.md) | Pivot da config |
+| [spatie-permission-migration-no-table-name](./concepts/spatie-permission-migration-no-table-name.md) | Migrazioni pivot |
+| [profile-id-bigint-uuid-fix](./concepts/profile-id-bigint-uuid-fix.md) | Profiles id/uuid |
+| [migration-naming-religion-user](./concepts/migration-naming-religion-user.md) | Naming migrazioni User |
+
 ## Compiled Pages
 
 | Pagina | Tipo | Argomento | Data |
 |--------|------|-----------|------|
+| [auth-registration-verification-lifecycle](./concepts/auth-registration-verification-lifecycle.md) | Concept | Identità, verifica email e confine con Gdpr/Sixteen | 2026-10-14 |
 | [socialite-development](./concepts/socialite-development.md) | Concept | Socialite multi-provider | 2026-04-21 |
 | [filament-widget-resource-form-delegation](./concepts/filament-widget-resource-form-delegation.md) | Concept | RegisterWidget → UserForm (DRY) | 2026-06-04 |
-| [filament-widget-no-validate-form](./concepts/filament-widget-no-validate-form.md) | Concept | Submit: getState(), no validateForm | 2026-06-04 |
+| [filament-widget-no-validate-form](../llm-wiki/concepts/filament-widget-no-validate-form.md) | Concept | Submit: getState(), no validateForm | 2026-06-04 |
 | [filament-widget-linear-crud-model-create](./concepts/filament-widget-linear-crud-model-create.md) | Concept | `getUserClass()::create($data)`, no Action | 2026-06-04 |
 | [filament-langserviceprovider-governance](./concepts/filament-langserviceprovider-governance.md) | Concept | LangServiceProvider | 2026-04-21 |
 | [login-page-design-comuni](./concepts/login-page-design-comuni.md) | Concept | Login Design Comuni | 2026-04-21 |
-| [profile-migration-uid-contract](./concepts/profile-migration-uid-contract.md) | Concept | Profile UID | 2026-04-21 |
+| [profile-migration-uuid-contract](./concepts/profile-migration-uuid-contract.md) | Concept | Profile UUID | 2026-04-21 |
 | [socialite-admin-configuration](./concepts/socialite-admin-configuration.md) | Concept | Socialite admin | 2026-04-21 |
 | [socialite-admin-tutorial](./concepts/socialite-admin-tutorial.md) | Concept | Socialite tutorial | 2026-04-21 |
 | [socialite-architecture-analysis](./concepts/socialite-architecture-analysis.md) | Concept | Socialite analysis | 2026-04-21 |
@@ -81,9 +97,9 @@ Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 | [socialite-github-tenant](./concepts/socialite-github-tenant.md) | Concept | OAuth GitHub | 2026-04-27 |
 | [socialite-facebook-tenant](./concepts/socialite-facebook-tenant.md) | Concept | OAuth Facebook | 2026-04-27 |
 | [socialite-linkedin-tenant](./concepts/socialite-linkedin-tenant.md) | Concept | OAuth LinkedIn | 2026-04-27 |
-| [phpstan-widget-property-types-2026-05-06](./troubleshooting/phpstan-widget-property-types-2026-05-06.md) | Troubleshooting | Widget property types PHPStan | 2026-05-06 |
+| [phpstan-widget-property-types-2026-05-06](./troubleshooting/phpstan-widget-property-types-.md.md) | Troubleshooting | Widget property types PHPStan | 2026-05-06 |
 | [phpstan-module-analysis-memory](./troubleshooting/phpstan-module-analysis-memory.md) | Troubleshooting | PHPStan User OOM/cache vs errori reali | 2026-06-18 |
-| [xotbase-table-columns-enforcement](./concepts/xotbase-table-columns-enforcement.md) | Concept | 24 Table files populated — XotBaseResourceTable enforcement | 2026-05-07 |
+| [xotbase-table-columns-enforcement](./concepts/xotbase-table-columns-enforcement.md) | Concept | 24 Table files populated: XotBaseResourceTable enforcement | 2026-05-07 |
 
 ## Best Practices
 
@@ -96,12 +112,13 @@ Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 
 - NON creare Service classes - usare Actions (vedi [actions-over-services-governance](https://github.com/laraxot/base_fixcity_fila5/blob/main/.opencode/skills/actions-over-services-governance/SKILL.md))
 - NON usare `dehydrated(false)` nei trait - blocca salvataggio (vedi Geo CoordinatePicker fix)
-- NON hardcodare password - usare `.env` (vedi [laravel-security-audit](../../../../docs/wiki/concepts/laravel-security-audit.md))
+- NON modificare `laravel/config/permission.php` → `table_names` per fix 1146 (vedi [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md))
+- NON hardcodare nomi tabella pivot su modelli (`$table`): usare `getTable()` da config
 
 ## False Friends
 
-- `dehydrated(false)` sembra mantenere il campo nei dati ma blocca il salvataggio (vedi [coordinate-picker-filament5-save-pattern](../../Geo/docs/wiki/concepts/coordinate-picker-filament5-save-pattern.md))
-- `live()` in Filament non rende il campo sempre live - serve `$applyStateBindingModifiers()` (vedi [coordinate-picker-state-binding-rule](../../Geo/docs/wiki/concepts/coordinate-picker-state-binding-rule.md))
+- `dehydrated(false)` sembra mantenere il campo nei dati ma blocca il salvataggio (vedi [coordinate-picker-filament5-save-pattern](../../../Geo/docs/wiki/concepts/coordinate-picker-filament5-save-pattern.md))
+- `live()` in Filament non rende il campo sempre live - serve `$applyStateBindingModifiers()` (vedi [coordinate-picker-state-binding-rule](../../../Geo/docs/wiki/concepts/coordinate-picker-state-binding-rule.md))
 
 ## Troubleshooting
 
@@ -109,7 +126,7 @@ Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 |--------|------|-----------|
 | [socialite-development](./concepts/socialite-development.md) | Concept | Socialite troubleshooting |
 | [spatie-permission-team-model-not-configured](./troubleshooting/spatie-permission-team-model-not-configured.md) | Troubleshooting | Team model mancante in config permission |
-| [phpstan-widget-property-types-2026-05-06](./troubleshooting/phpstan-widget-property-types-2026-05-06.md) | Troubleshooting | Tipizzazione widget Livewire/Filament |
+| [phpstan-widget-property-types-2026-05-06](./troubleshooting/phpstan-widget-property-types-.md.md) | Troubleshooting | Tipizzazione widget Livewire/Filament |
 | [phpstan-module-analysis-memory](./troubleshooting/phpstan-module-analysis-memory.md) | Troubleshooting | PHPStan User OOM/cache vs errori reali |
 
-Aggiornato: 2026-05-06
+Aggiornato: 2026-07-27

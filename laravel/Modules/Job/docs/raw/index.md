@@ -1,4 +1,15 @@
-# Raw Sources — Job
+---
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+---
+
+# Raw Sources: Job
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.
 
@@ -21,9 +32,9 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ## Dove va la sintesi
 
-→ `docs/wiki/index.md` — catalogo dei nodi di conoscenza
-→ `docs/wiki/log.md` — log append-only degli ingest
-→ `docs/wiki/concepts/`, `entities/`, `summaries/` — pagine wiki tematiche
+→ `docs/wiki/index.md`: catalogo dei nodi di conoscenza
+→ `docs/wiki/log.md`: log append-only degli ingest
+→ `docs/wiki/concepts/`, `entities/`, `summaries/`: pagine wiki tematiche
 
 ## Schema di riferimento
 
@@ -32,4 +43,12 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ---
 
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2026-04-15*

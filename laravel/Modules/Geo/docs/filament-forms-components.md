@@ -1,3 +1,15 @@
+---
+title: "filament forms components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament forms components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module — Filament Forms Components
 
 ## Overview
@@ -105,7 +117,8 @@ LatitudeLongitudeInput::make('location')
     ->hiddenLabel()
     ->defaultCenter(41.9028, 12.4964)  // Roma
     ->defaultZoom(13)
-    ->mapHeight('340px'),
+    ->mapHeight('340px')
+    ->showMap(true),
 ```
 
 **Renderer Selection**:
@@ -122,7 +135,6 @@ LatitudeLongitudeInput::make('location')
 - `lit` è opt-in esplicito e usa un Web Component dedicato
 - Filament/PHP resta il layer di governo del field; il renderer JS cambia solo la UI
 - valori supportati: `blade`, `lit`
-- la mappa è parte strutturale del componente: niente toggle `showMap()`
 
 **Data Structure** (Livewire state):
 ```php

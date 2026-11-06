@@ -1,3 +1,15 @@
+---
+title: "prompt start aggiunte"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prompt start aggiunte"
+issues: []
+discussions: []
+status: draft
+---
+
 # Aggiunte a start.txt
 
 Data: 2026-07-07

@@ -1,3 +1,11 @@
+---
+title: "filters"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filters xot"
+---
 # filters
 
 <!-- Contenuto migrato da _docs/filters.txt -->

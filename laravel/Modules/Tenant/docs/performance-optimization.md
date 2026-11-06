@@ -1,14 +1,19 @@
 ---
-title: "Performance Optimization — Module Tenant"
+qmd: "performance optimization"
+issues: []
+discussions: []
+title: "Performance Optimization: Module Tenant"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+status: draft
 ---
 
-# Performance Optimization — Module **Tenant**
+# Performance Optimization: Module **Tenant**
 
 ## Ottimizzazioni Applicate
 
@@ -19,7 +24,7 @@ related:
 
 \`\`\`diff
 - 150+ rules embeddate in AGENTS.md
-+ 0 rules embeddate — tutte on-demand
++ 0 rules embeddate: tutte on-demand
 \`\`\`
 
 ### 2. Cache Esterna al Repo
@@ -75,10 +80,10 @@ if trigger in trigger_map:
 ### Query QMD Efficienti
 
 \`\`\`bash
-# ❌ Troppo generico — risultati enormi
+# ❌ Troppo generico: risultati enormi
 qmd search "form"
 
-# ✅ Specifico — risultati precisi
+# ✅ Specifico: risultati precisi
 qmd search "filament form schema conventions"
 \`\`\`
 
@@ -94,10 +99,10 @@ qmd search "global validation rules"
 
 ## Prossimi Miglioramenti (TODO)
 
-1. **Auto-index rebuild** — Dopo 500 file changes, `qmd index rebuild`
-2. **Hooks pre-task** — Auto-memory sync
-3. **Context-mode batch** — Convertire script in batch exec
-4. **Permissions allowlist** — .claude/settings.json
+1. **Auto-index rebuild**: Dopo 500 file changes, `qmd index rebuild`
+2. **Hooks pre-task**: Auto-memory sync
+3. **Context-mode batch**: Convertire script in batch exec
+4. **Permissions allowlist**: .claude/settings.json
 
 ## Monitoring
 
@@ -114,8 +119,8 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
+- [On-Demand Pattern](./on-demand-pattern.md)
+- [QMD Setup](./qmd-setup.md)
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

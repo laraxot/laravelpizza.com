@@ -1,3 +1,15 @@
+---
+title: "address implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Modello Address
 
 ## Panoramica

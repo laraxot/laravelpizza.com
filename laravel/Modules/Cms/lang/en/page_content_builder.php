@@ -23,4 +23,10 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+    'messages' => [
+        'block_unavailable' => [
+            'title' => 'Block unavailable',
+            'body' => 'The block ":block" could not be loaded and is not shown in the editor. Check the log before saving.',
+        ],
+    ],
 ];

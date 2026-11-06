@@ -1,200 +1,118 @@
-# ==============================================
-# LARAXOT MODULE NOTIFY - .GITIGNORE
-# ==============================================
-# Modulo Notify Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-06
-# ==============================================
 
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
+._*
+agentdb.rvf
+archive/
+audit-coverage/
+# --- Audit coverage bridge (never commit) ---
+*.backup
+*.backup.*
 *.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-npm-debug.log
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-bootstrap/compiled.php
-app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
+# --- Backup files ---
+*.bak
+*.bakcup
+/build/
+# --- Build & compiled ---
+*.cache
+cache/
+# --- Cache & temporary ---
+composer.lock
+config/development.php
+config/local.php
+.cursor/
+database/Factories_old/
+database/Migrations_old/
+database_old/
+database/Seeders_old/
+# --- Dependencies & packages ---
+.devcontainer/
+# --- Development tools / quality configs (forbidden at module root) ---
+/dist/
+_docs/
+docs/archive/
+docs/cache/
+docs/phpstan/
+.DS_Store
+.DS_Store?
+ehthumbs.db
+# --- End of NOTIFY .gitignore ---
 .env
 .env.*
 !.env.example
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
+# --- Environment & configuration ---
+error_log
+*.fila2
 .git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
+.git-rewrite/
+# --- Git specific ---
+# Grouped, deduped. See docs/wiki/rules/module-theme-root-cleanup.md
+Homestead.json
+Homestead.yaml
+/.idea
+# --- IDE / dev folders (personal, never commit) ---
+*.jar
+lang/lang/
+# LARAXOT MODULE: NOTIFY — .gitignore (organized)
+legacy/
+lerna-debug.log*
+*.log
+# --- Log files ---
+# --- Module specific ---
+*.new
+/node_modules/
+notification_test_data.json
+npm-debug.log*
 *.old
+*.old*
 *.old1
 *.old2
-*.old*
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
+# --- Old directories (legacy cleanup) ---
+*.orig
+package-lock.json
+*.phar
+.php-cs-fixer.cache
+phpinsights.php
+.phpintel
+phpmd*
+phpmd.ruleset.xml
+phpmd.ruleset.xml.bak
+phpstan*
 .phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
+.phpunit.result.cache
+phpunit.xml
+phpunit.xml.dist
+# --- Project scratch ---
+rector.php
+*.rej
 resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-
-# ==============================================
-# MODULE SPECIFIC - NOTIFY
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
-
-# Queue e notifiche
+# --- Second brain: docs/archive never tracked ---
+.Spotlight-V100
+*.stackdump
 storage/notifications/
 storage/queue/
-
-# File di test notifiche
-notification_test_data.json
+*.swo
+*.swp
+# --- System files ---
 test_notifications.sql
+tests/AuditCoverage/
+Thumbs.db
+*.tmp
+.Trashes
+v8-compile-cache-*
+/.vagrant
+/vendor/
+.vscode/
+.windsurf/
+yarn-error.log*
+yarn.lock
+*:Zone.Identifier
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+.claude/
+.claude-audit/
+test-results/
+notify.code-workspace
 
-# ==============================================
-# END OF NOTIFY .GITIGNORE
-# ==============================================
-
-# 🚫 File specifici del progetto
-*.fila2
-*.old
-laravel
-public_html
-lang/lang/
-_docs/
-_docs/
-
-# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
-docs/archive/.devcontainer/
-.planning/
-.ralph
-_bmad-output/
-bashscripts/
-.agent*/
-.agent*
-.ai*
-.claude*
-.c*
-.i*
-.j*
-.p*
-.w*
-.z*
-laravel/
-config/Config
-config/config
-
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
-
-ruvector.db
-.ai*
-_bmad
-agentdb.rvf
+# module-root-hygiene (story module-root-hygiene)
+/.github/skills/
+docs/graphify
+resources/lang

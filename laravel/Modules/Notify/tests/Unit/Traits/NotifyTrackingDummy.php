@@ -28,4 +28,19 @@ final class NotifyTrackingDummy
     {
         return $this->isTrackingEnabled();
     }
+
+    public function pixelTrackingEnabled(): bool
+    {
+        return $this->isPixelTrackingEnabled();
+    }
+
+    public function linkTrackingEnabled(): bool
+    {
+        return $this->isLinkTrackingEnabled();
+    }
+
+    public function generatedTrackingId(): string
+    {
+        return $this->generateTrackingId();
+    }
 }

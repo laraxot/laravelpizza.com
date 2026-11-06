@@ -3,6 +3,8 @@ title: Ripristinare cartella vendor
 description: Ripristinare cartella vendor
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../filament/vendor.md
 ---
 
 # Ripristinare la cartella vendor

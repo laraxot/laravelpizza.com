@@ -1,3 +1,14 @@
+---
+title: "module structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module structure"
+issues: []
+discussions: []
+---
+
 # Struttura dei Moduli in PTVX
 
 Questo documento definisce le linee guida ufficiali per la struttura dei moduli all'interno del framework PTVX.

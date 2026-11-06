@@ -1,3 +1,14 @@
+---
+title: "novita dettaglio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "novita dettaglio"
+issues: []
+discussions: []
+---
+
 # 🎨 Design Comuni: Novità Dettaglio
 
 ## Pagina
@@ -28,4 +39,12 @@ Da definire dopo l'analisi strutturale.
 - [ ] Documentazione
 
 ---
+title: "novita dettaglio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "novita dettaglio"
+issues: []
+discussions: []
 *Generato automaticamente da bashscripts/design-comuni-parity/create-github-issues.sh*

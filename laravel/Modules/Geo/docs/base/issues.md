@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "issues"
+issues: []
+discussions: []
 title: Errori Comuni
 description: Come Risolvere gli Errori più Comuni
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Come Risolvere gli Errori più Comuni {#issues}

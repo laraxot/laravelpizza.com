@@ -1,3 +1,15 @@
+---
+title: "USER RESEARCH"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "USER RESEARCH"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gdpr Module - User Research
 
 **Module:** Gdpr  
@@ -6,7 +18,6 @@
 **Owner:** Product Team
 
 ---
-
 ## Research Goals
 
 1. Understand privacy concerns

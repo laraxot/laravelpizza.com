@@ -1,5 +1,26 @@
-# tips
+---
+module: theme
+topic: tips
+canonical: ../../../Themes/docs/shared-components/tips.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+title: "tips"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "tips user"
+---
 
-<!-- Contenuto migrato da _docs/tips.txt -->
-
-https://medium.com/@prevailexcellent/deep-dive-into-eloquent-40-rarely-used-eloquent-orm-methods-every-laravel-developer-must-know-9c75b58f456b
+See canonical documentation: ../../../Themes/docs/shared-components/tips.md

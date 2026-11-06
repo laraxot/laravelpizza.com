@@ -1,3 +1,13 @@
+---
+title: "Analisi Violazioni Critiche XotBaseResource"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, filament]
+qmd: "Analisi Violazioni Critiche XotBaseResource"
+---
 # Analisi Violazioni Critiche XotBaseResource
 
 ## 🚨 Violazioni Identificate
@@ -15,13 +25,13 @@ class NotificationTemplateResource extends XotBaseResource
 {
     // ❌ VIOLAZIONE: navigationIcon dichiarato
     protected static ?string $navigationIcon = 'heroicon-o-bell';
-
-    // ❌ VIOLAZIONE: navigationGroup dichiarato
+    
+    // ❌ VIOLAZIONE: navigationGroup dichiarato  
     protected static ?string $navigationGroup = 'Sistema';
-
+    
     // ❌ VIOLAZIONE: navigationSort dichiarato
     protected static ?int $navigationSort = 48;
-
+    
     // ❌ VIOLAZIONE: Override metodi gestiti da NavigationLabelTrait
     public static function getNavigationLabel(): string
     public static function getNavigationGroup(): string
@@ -38,13 +48,13 @@ class NotificationLogResource extends XotBaseResource
 {
     // ❌ VIOLAZIONE: navigationIcon dichiarato
     protected static ?string $navigationIcon = 'heroicon-o-bell';
-
+    
     // ❌ VIOLAZIONE: navigationGroup dichiarato
     protected static ?string $navigationGroup = 'Notifiche';
-
+    
     // ❌ VIOLAZIONE: navigationSort dichiarato
     protected static ?int $navigationSort = 100;
-
+    
     // ❌ VIOLAZIONE: Override metodi gestiti da NavigationLabelTrait
     public static function getNavigationLabel(): string
     public static function getModelLabel(): string
@@ -122,10 +132,7 @@ class NotificationLogResource extends XotBaseResource
 ### Documentazione Moduli
 - [Notify Module README](../../../Notify/docs/README.md)
 - [User Module README](../../../User/docs/README.md)
-- [<nome progetto> Module README](../../../<nome progetto>/docs/README.md)
-- [Notify Module README](../../../notify/docs/readme.md)
-- [User Module README](../../../user/docs/readme.md)
-- [<nome progetto> Module README](../../../<nome progetto>/docs/readme.md)
+- [SaluteOra Module README](../../../SaluteOra/docs/README.md)
 
 ### Standard di Riferimento
 - [NavigationLabelTrait](../traits/navigation-label-trait.md)
@@ -144,9 +151,9 @@ class NotificationLogResource extends XotBaseResource
 
 ### Mantra per il Futuro
 - **Prima di estendere**: Leggi la documentazione della classe base
-- **Prima di dichiarare**: Verifica se è già gestito automaticamente
+- **Prima di dichiarare**: Verifica se è già gestito automaticamente  
 - **Prima di sovrascrivere**: Comprendi il perché dell'implementazione esistente
 
 ---
 
-**Questo documento serve come promemoria permanente dell'importanza di seguire l'architettura stabilita e consultare sempre la documentazione prima di implementare soluzioni.**
+**Questo documento serve come promemoria permanente dell'importanza di seguire l'architettura stabilita e consultare sempre la documentazione prima di implementare soluzioni.** 

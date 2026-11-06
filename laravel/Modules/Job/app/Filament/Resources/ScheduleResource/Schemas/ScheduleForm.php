@@ -34,7 +34,7 @@ class ScheduleForm extends XotBaseResourceForm
      *
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         if (static::$commands === null) {
             static::$commands = app(GetCommandsAction::class)->execute();
@@ -46,7 +46,7 @@ class ScheduleForm extends XotBaseResourceForm
             'main_section' => Section::make([
                 Select::make('command')
                     ->options(fn () => $commands_opts)
-                    ->reactive()
+                    ->live()
                     ->searchable()
                     ->required()
                     ->afterStateUpdated(function (Set $set, ?string $state): void {
@@ -55,7 +55,7 @@ class ScheduleForm extends XotBaseResourceForm
                             static::$commands = app(GetCommandsAction::class)->execute();
                         }
                         Assert::isInstanceOf(
-                            $command = static::$commands->where('name', $state)->first(),
+                            $command = static::$commands->toCollection()->firstWhere('name', $state),
                             CommandData::class,
                         );
                         $params = $command->arguments;

@@ -5,11 +5,15 @@ owner: Modules/User
 severity: high
 created: 2026-05-22
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/89"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/90"
 related:
-  - ./duplicated-profile-form.md
-  - ./duplicated-users-relation-manager.md
+  - "./duplicated-auth-widgets.md"
+  - "./duplicated-profile-form.md"
+  - "./duplicated-ratings-relation-manager.md"
+  - "./duplicated-users-relation-manager.md"
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "oauth: cluster vs `filament/resources/` root user"
 ---
 
 # OAuth: cluster vs `Filament/Resources/` root
@@ -27,15 +31,15 @@ Il modulo User espone **due alberi** per le stesse risorse OAuth: standalone in 
 | OauthAuthCode | idem | idem |
 | OauthRefreshToken | idem | idem |
 | OauthPersonalAccessClient | idem | idem |
-| OauthDeviceCode | — | solo cluster |
+| OauthDeviceCode |: | solo cluster |
 
 Ogni coppia include **Form, Table, Infolist** duplicati sotto `Schemas/` e `Tables/`.
 
-**Nota:** `OauthClient` standalone può usare `Laravel\Passport\Client` mentre il cluster usa `Modules\User\Models\OauthClient` — rischio **schema diverso**, non solo path duplicato.
+**Nota:** `OauthClient` standalone può usare `Laravel\Passport\Client` mentre il cluster usa `Modules\User\Models\OauthClient`: rischio **schema diverso**, non solo path duplicato.
 
 ## Socialite (3 risorse)
 
-- `SsoProviderResource`, `SocialProviderResource`, `SocialiteUserResource` — stesso pattern root ↔ `Clusters/Socialite/`.
+- `SsoProviderResource`, `SocialProviderResource`, `SocialiteUserResource`: stesso pattern root ↔ `Clusters/Socialite/`.
 
 `UsersRelationManager` duplicato su `SsoProvider` (root + cluster).
 

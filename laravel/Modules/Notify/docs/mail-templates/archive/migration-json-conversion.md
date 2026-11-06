@@ -1,3 +1,11 @@
+---
+title: "Gestione Conversioni JSON nelle Migrazioni"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "gestione conversioni json nelle migrazioni notify"
+---
 # Gestione Conversioni JSON nelle Migrazioni
 
 ## Problema Comune

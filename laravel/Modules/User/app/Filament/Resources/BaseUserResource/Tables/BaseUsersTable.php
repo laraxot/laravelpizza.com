@@ -7,6 +7,7 @@ namespace Modules\User\Filament\Resources\BaseUserResource\Tables;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class BaseUsersTable extends XotBaseResourceTable
@@ -20,7 +21,7 @@ class BaseUsersTable extends XotBaseResourceTable
          * @return array<int|string, \Filament\Tables\Columns\Column>
          */
         return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'id' => IDColumn::make('id')->searchable()->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
             'first_name' => TextColumn::make('first_name')->searchable(),
             'last_name' => TextColumn::make('last_name')->searchable(),

@@ -1,3 +1,15 @@
+---
+title: "seasonal email system implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "seasonal email system implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Report di Revisione Sistema Email Stagionali - Dicembre 2025
 
 **Progetto**: TechPlanner Laravel Multi-Tenant Application  

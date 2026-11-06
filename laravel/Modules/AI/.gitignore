@@ -1,8 +1,3 @@
-/vendor/
-node_modules/
-venv/
-npm-debug.log
-yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -58,13 +53,88 @@ _docs/
 
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 docs/archive/
+docs/phpstan/
+docs/legacy/
+
 # Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
 *~HEAD
 *~BASE
+*~head
+*~HEAD
 *~LOCAL
 *~REMOTE
-*.orig
-*.rej
-*~head
-
 agentdb.rvf
+app/storage/
+audit-coverage/
+*.backup
+*.backup.*
+# Backup files
+bin/venv/
+bootstrap/compiled.php
+build/
+*.cache
+cache/
+.claude-audit/
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+.cursor/
+.devcontainer/
+_docs/
+docs/archive/
+docs/cache/
+docs/phpstan/
+.env
+.env.*
+!.env.example
+.git-blame-ignore-revs
+*.git-blame-ignore-revs
+.git-rewrite/
+Homestead.json
+Homestead.yaml
+lang/lang/
+# Laravel 4 specific
+# Laravel 5 & Lumen specific
+# Laravel 5 & Lumen specific with changed public path
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+*.lock
+*.log
+node_modules
+node_modules/
+npm-debug.log
+*.old
+*.old1
+*.orig
+package-lock.json
+# Pest + audit-coverage bridge (claude-audit — path /tests/ nel matcher)
+*.phar
+.php-cs-fixer.cache
+phpinsights.php
+# PHPStan documentation
+.phpunit.result.cache
+public/hot
+public_html/hot
+public_html/storage
+public/storage
+rector.php
+*.rej
+# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
+storage/*.key
+!tests/
+!tests/**
+tests/AuditCoverage/
+# Lock degli agenti (bashscripts/lock): !tests/** li riammetterebbe
+tests/**/*.lock
+/.vagrant
+/vendor
+/vendor/
+vendor/
+venv/
+.vscode/
+.windsurf/
+yarn-error.log
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+.claude/
+.claude-audit/
+test-results/
+ai.code-workspace

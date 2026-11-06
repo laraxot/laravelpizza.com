@@ -1,3 +1,15 @@
+---
+title: "phpstan view string resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan view string resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Problemi PHPStan per `view-string`
 
 ## Contesto

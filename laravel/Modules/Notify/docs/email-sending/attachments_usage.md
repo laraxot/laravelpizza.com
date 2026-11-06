@@ -1,3 +1,15 @@
+---
+title: "attachments usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "attachments usage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo Corretto degli Allegati nelle Email Spatie
 
 Questa documentazione descrive come utilizzare correttamente il metodo `addAttachments()` nella classe `SpatieEmail` del modulo Notify.
@@ -16,13 +28,13 @@ Il metodo `addAttachments()` supporta **due formati** per gli allegati:
 // Formato corretto - allegato da file su filesystem
 $attachments = [
     [
-'path' => '/var/www/html/Quaeris/public_html/images/avatars/default-3.svg',
+        'path' => '[project-root]/public_html/images/avatars/default-3.svg',
         'as' => 'logo.svg',  // Opzionale: nome del file da mostrare nell'email
         'mime' => 'image/svg+xml',  // Opzionale: MIME type del file
     ],
     // Eventualmente altri allegati...
     [
-'path' => '/var/www/html/Quaeris/public_html/documents/terms.pdf',
+        'path' => '[project-root]/public_html/documents/terms.pdf',
         'as' => 'termini.pdf',
         'mime' => 'application/pdf',
     ],
@@ -209,7 +221,6 @@ Ogni allegato può utilizzare **due formati** a seconda della fonte:
 ### Esempio: Email con PDF di Scheda Valutazione
 
 Vedi [Email PDF Attachments](../../../Ptv/docs/email-pdf-attachments.md) per un esempio completo di generazione e invio PDF come allegato email.
-Vedi [Email PDF Attachments](../../../Ptv/docs/email-pdf-attachments.md) per un esempio completo di generazione e invio PDF come allegato email.
 
 ## Esempi Completi
 
@@ -292,6 +303,9 @@ foreach ($records as $record) {
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
 - [EMAIL_TROUBLESHOOTING.md](./EMAIL_TROUBLESHOOTING.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
+- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
+- [EMAIL_TROUBLESHOOTING.md](./email_troubleshooting.md)
 
 ### File Correlati
 - `Modules/Notify/app/Emails/SpatieEmail.php` - Gestione allegati

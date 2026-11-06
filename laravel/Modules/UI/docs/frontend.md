@@ -1,3 +1,15 @@
+---
+title: "frontend"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "frontend"
+issues: []
+discussions: []
+status: draft
+---
+
 # Frontend e Sistema di Componenti
 
 ## Struttura della Homepage

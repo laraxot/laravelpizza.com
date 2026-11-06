@@ -1,3 +1,15 @@
+---
+title: "register page typography"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register page typography"
+issues: []
+discussions: []
+status: draft
+---
+
 # Register Page Typography System
 
 ## Overview

@@ -1,0 +1,57 @@
+---
+title: "Appointment Field Naming Issues"
+type: concept
+tags: [appointment, field, naming, issues]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "appointment-field-naming-issues-2 appointment field naming issues"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-2.md"
+  - "./00-index.md"
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+  - "./action-plan-immediate.md"
+status: draft
+---
+
+# Appointment Field Naming Issues
+
+## Overview
+
+The Appointment model in <nome progetto> module defines both legacy field names (`start_time`, `end_time`) and canonical field names (`starts_at`, `ends_at`). The canonical field names `starts_at` and `ends_at` should be used consistently throughout the codebase.
+The Appointment model in SaluteOra module defines both legacy field names (`start_time`, `end_time`) and canonical field names (`starts_at`, `ends_at`). The canonical field names `starts_at` and `ends_at` should be used consistently throughout the codebase.
+
+## Issues Detected
+
+### SendAppointmentNotificationAction.php.old
+
+**File Path**: `/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/app/Actions/SendAppointmentNotificationAction.php.old`
+**File Path**: `/var/www/html/_bases/base_saluteora/laravel/Modules/Notify/app/Actions/SendAppointmentNotificationAction.php.old`
+**File Path**: `/var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/app/Actions/SendAppointmentNotificationAction.php.old`
+
+**Line 120**:
+```php
+'time' => $appointment->start_time?->format('H:i'),
+```
+
+**Issue**: Using the legacy `start_time` field instead of the canonical `starts_at` field.
+
+**Correction Needed**: Replace `start_time` with `starts_at`.
+
+**Correct Version**:
+```php
+'time' => $appointment->starts_at?->format('H:i'),
+```
+
+## Implementation Notes
+
+The Appointment model currently exposes both field naming conventions:
+1. Legacy fields: `start_time`, `end_time`
+2. Canonical fields: `starts_at`, `ends_at`
+
+While both are present in the $fillable array, the canonical fields (`starts_at`, `ends_at`) should be preferred for all new code and when refactoring existing code.

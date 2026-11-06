@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔧 PHPStan Fixes Summary - FixCity
 
 > **Memoria del progetto**: Correzioni PHPStan applicate seguendo principi DRY + KISS
@@ -21,7 +33,6 @@
 **Legenda**: ✅ Completato | 🔄 In Progress | ⏳ Pending | ⏸️ Bloccato
 
 ---
-
 ## 🆕 NUOVE Correzioni - Modulo Geo (Level 1)
 
 ### 1. CalculateDistanceAction.php (Lines 52-53)
@@ -119,7 +130,7 @@ public function getTableColumns(): array
 - **Tipo di intervento:** Controlli `is_string()` per parametri `to` e `from`
 - **File:** `Modules/Notify/resources/lang/en/mail.php`
 - **Tipo di intervento:** Controllo `is_string()` per `config('app.name')`
-- **Documentazione aggiornata:** [docs/phpstan/README.md](../Modules/Notify/docs/phpstan/README.md)
+- **Documentazione aggiornata:** [docs/phpstan/README.md](phpstan/README.md)
 
 ### Modulo: UI
 - **File:** `Modules/UI/app/Filament/Forms/Components/RadioCollection.php`

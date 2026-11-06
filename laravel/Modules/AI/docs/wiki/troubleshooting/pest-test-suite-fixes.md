@@ -13,6 +13,7 @@ related:
   - ../concepts/second-brain-local-discipline.md
   - ../../../../Xot/docs/wiki/concepts/module-testcase-xotbase-hierarchy.md
   - ../../../../Xot/docs/wiki/memories/data-sacred-no-destructive-db.md
+status: draft
 ---
 
 # Pest test suite AI — fix comuni

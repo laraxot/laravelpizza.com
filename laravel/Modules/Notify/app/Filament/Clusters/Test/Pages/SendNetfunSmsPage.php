@@ -21,13 +21,15 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Notify\Notifications\SmsNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Override;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
 /**
  * @property Schema $smsForm
  */
 class SendNetfunSmsPage extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     /** @var array<string, mixed>|null */
     public ?array $smsData = [];
 
@@ -55,8 +57,7 @@ class SendNetfunSmsPage extends XotBasePage
     protected function getForms(): array
     {
         return [
-            'smsForm',
-        ];
+            'smsForm'];
     }
 
     protected function fillForms(): void
@@ -100,23 +101,22 @@ class SendNetfunSmsPage extends XotBasePage
                     'twilio' => 'Twilio',
                     'nexmo' => 'Nexmo',
                     'plivo' => 'Plivo',
-                    'gammu' => 'Gammu',
-                ])
+                    'gammu' => 'Gammu'])
                 ->default('netfun')
                 ->selectablePlaceholder(false)
-                ->required(),
-        ];
+                ->required()];
     }
 
-    public function sendSms(): void
+    public function sendSMS(): void
     {
+        abort_unless(static::canAccess(), 403);
+
         $data = $this->smsForm->getState();
 
         $smsData = SmsData::from([
-            'recipient' => (string) ($data['recipient'] ?? ''),
-            'body' => (string) ($data['body'] ?? ''),
-            'from' => (string) ($data['from'] ?? ''),
-        ]);
+            'recipient' => is_scalar($data['recipient'] ?? null) ? (string) $data['recipient'] : '',
+            'body' => is_scalar($data['body'] ?? null) ? (string) $data['body'] : '',
+            'from' => is_scalar($data['from'] ?? null) ? (string) $data['from'] : '']);
         $provider = $data['provider'] ?? 'netfun';
 
         try {
@@ -131,15 +131,13 @@ class SendNetfunSmsPage extends XotBasePage
             Log::debug('SMS inviato con successo', [
                 'recipient' => $data['recipient'],
                 'from' => $data['from'],
-                'provider' => $provider,
-            ]);
+                'provider' => $provider]);
         } catch (Exception $e) {
             Log::error('Errore durante l\'invio dell\'SMS', [
                 'error' => $e->getMessage(),
                 'recipient' => $data['recipient'],
                 'from' => $data['from'],
-                'provider' => $provider,
-            ]);
+                'provider' => $provider]);
 
             FilamentNotification::make()
                 ->danger()
@@ -155,11 +153,9 @@ class SendNetfunSmsPage extends XotBasePage
     protected function getSmsFormActions(): array
     {
         return [
-            Action::make('sendSms')->label(__('notify::sms.actions.send'))->submit('sendSms'),
-        ];
+            Action::make('sendSMS')->label(__('notify::sms.actions.send'))->submit('sendSMS')];
     }
 
-    #[Override]
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();

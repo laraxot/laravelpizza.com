@@ -1,3 +1,11 @@
+---
+title: "Convenzioni di Naming"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni di naming xot"
+---
 # Convenzioni di Naming
 
 ## Struttura delle Cartelle nei Moduli

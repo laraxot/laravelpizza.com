@@ -3,10 +3,12 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Channels;
-use function Safe\file_get_contents;
-use Modules\Notify\Channels\WhatsAppChannel;
 
+use Modules\Notify\Channels\WhatsAppChannel;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 describe('WhatsAppChannel', function () {
     it('can be instantiated', function () {
         // WhatsAppChannel requires WhatsAppActionFactory in constructor
@@ -30,7 +32,7 @@ describe('WhatsAppChannel', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(WhatsAppChannel::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 

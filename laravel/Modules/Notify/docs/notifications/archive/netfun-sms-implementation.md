@@ -1,3 +1,11 @@
+---
+title: "Implementazione Netfun SMS"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, notifications]
+qmd: "implementazione netfun sms notify"
+---
 # Implementazione Netfun SMS 
 
 ## Introduzione

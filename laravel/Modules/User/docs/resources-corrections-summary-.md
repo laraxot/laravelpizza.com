@@ -1,3 +1,11 @@
+---
+title: "Resources Corrections Summary - 2025-01-22"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "resources corrections summary - 2025-01-22 user"
+---
 # Resources Corrections Summary - 2025-01-22
 
 ## Obiettivo
@@ -155,3 +163,22 @@ use Filament\Tables\Actions\ViewAction; // Namespace sbagliato
 - [Resources Array Keys Philosophy](./resources-array-keys-philosophy.md)
 - [Filament Resources Philosophical Debate](./filament-resources-philosophical-debate.md)
 - [Filament Best Practices](./filament-best-practices.md)
+---
+module: theme
+topic: resources-corrections-summary-
+canonical: ../../../Themes/docs/shared-components/resources-corrections-summary-.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/resources-corrections-summary-.md

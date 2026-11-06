@@ -1,3 +1,11 @@
+---
+title: "Testing Best Practices - Laraxot Framework"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "testing best practices - laraxot framework xot"
+---
 # Testing Best Practices - Laraxot Framework
 
 ## 🏆 **Gold Standard Pattern**

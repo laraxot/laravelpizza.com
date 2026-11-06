@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "story scheda model hierarchy unification"
+issues: []
+discussions: []
 title: "Story #SU-2026-06-15: Unify Scheda Model Hierarchy"
 type: story
 status: analysis

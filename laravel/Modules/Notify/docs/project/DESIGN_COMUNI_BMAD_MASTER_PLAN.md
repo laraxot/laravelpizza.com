@@ -1,13 +1,24 @@
+---
+title: "DESIGN COMUNI BMAD MASTER PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN COMUNI BMAD MASTER PLAN"
+issues: []
+discussions: []
+status: draft
+---
+
 # Design Comuni Italia - BMad Master Plan
 
-**Project:** FixCity Fila5
+**Project:** Notify Fila5
 **Date:** 2026-04-01
 **Status:** 🔄 **In Progress**
 **Priority:** 🔴 **CRITICAL**
 **Method:** BMAD-METHOD + GSD + Ralph Loop
 
 ---
-
 ## 🎯 Mission Statement
 
 Replicare **ESATTAMENTE** le 38 pagine statiche di Design Comuni Italia utilizzando:
@@ -209,7 +220,7 @@ pages/tests/[slug].blade.php  ← UNICO file per TUTTE
 **Comparison:**
 ```
 Design Comuni: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
-FixCity:       http://fixcity.local/it/tests/homepage
+Notify:       http://laraxot.local/it/tests/homepage
 ```
 
 **Checklist:**
@@ -287,11 +298,11 @@ laravel/Modules/Cms/docs/
 ```
 laravel/Themes/Sixteen/docs/
 ├── README.md
-├── LAYOUT_ARCHITECTURE_AND_NAMESPACE.md  ← Layout hierarchy
+├── layout-architecture-and-namespace.md  ← Layout hierarchy
 ├── THEME_DETECTION_SYSTEM.md             ← Theme detection
 ├── VITE_BUILD_SYSTEM.md                  ← Vite build process
-├── DESIGN_COMUNI_HTML_REPLICATION.md     ← HTML analysis
-├── DESIGN_COMUNI_AMMINISTRAZIONE_ANALYSIS.md
+├── design-comuni-html-replication.md     ← HTML analysis
+├── design-comuni-amministrazione-analysis.md
 └── prompts/
     └── replikate.txt                     ← Replication prompt
 ```
@@ -341,7 +352,7 @@ _bmad-output/
 
 - → [Master Index](../../../docs/project/MODULE_DOCS_INDEX.md)
 - → [Theme Detection](../../../docs/project/THEME_DETECTION_SYSTEM.md)
-- → [Layout Architecture](LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+- → [Layout Architecture](layout-architecture-and-namespace.md)
 ```
 
 ### Link Pattern 3: Master Index → Module/Theme
@@ -355,9 +366,9 @@ _bmad-output/
 - **Files:** 221
 - **Index:** [Sixteen Docs Index](Themes/Sixteen/docs/00-index.md)
 - **Key Topics:**
-  - [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+  - [Layout Architecture](Themes/Sixteen/docs/layout-architecture-and-namespace.md)
   - [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
-  - [Design Comuni Replication](Themes/Sixteen/docs/DESIGN_COMUNI_HTML_REPLICATION.md)
+  - [Design Comuni Replication](Themes/Sixteen/docs/design-comuni-html-replication.md)
 ```
 
 ---
@@ -370,7 +381,7 @@ _bmad-output/
 ## Design Comuni Replication - {Page Name}
 
 **URL Design Comuni:** https://italia.github.io/design-comuni-pagine-statiche/sito/{page}.html
-**URL FixCity:** http://fixcity.local/it/tests/{page}
+**URL Notify:** http://laraxot.local/it/tests/{page}
 
 ### Checklist
 
@@ -384,7 +395,7 @@ _bmad-output/
 ### Screenshots
 
 - [ ] Design Comuni screenshot
-- [ ] FixCity screenshot
+- [ ] Notify screenshot
 - [ ] Comparison analysis
 
 ### Analysis
@@ -576,7 +587,8 @@ pages/tests/argomenti.blade.php     # NO
 
 - [Master Index](docs/project/MODULE_DOCS_INDEX.md)
 - [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
-- [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+- [Theme Detection](THEME_DETECTION_SYSTEM.md)
+- [Layout Architecture](Themes/Sixteen/docs/layout-architecture-and-namespace.md)
 - [Page Component](Modules/Cms/docs/PAGE_COMPONENT_ARCHITECTURE.md)
 
 ### External Resources

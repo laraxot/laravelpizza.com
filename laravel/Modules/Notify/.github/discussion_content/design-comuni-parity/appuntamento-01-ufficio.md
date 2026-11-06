@@ -1,3 +1,14 @@
+---
+title: "appuntamento 01 ufficio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 01 ufficio"
+issues: []
+discussions: []
+---
+
 # 🎨 Design Comuni: Appuntamento - Ufficio
 
 ## Pagina
@@ -28,4 +39,12 @@ Da definire dopo l'analisi strutturale.
 - [ ] Documentazione
 
 ---
+title: "appuntamento 01 ufficio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 01 ufficio"
+issues: []
+discussions: []
 *Generato automaticamente da bashscripts/design-comuni-parity/create-github-issues.sh*

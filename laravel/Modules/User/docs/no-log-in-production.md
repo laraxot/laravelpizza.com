@@ -1,3 +1,28 @@
+---
+title: "No Log calls in production PHP code"
+type: concept
+tags: [log, production]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "no-log-in-production no log calls in production php code"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # No Log calls in production PHP code
 
 ## Rule
@@ -76,7 +101,7 @@ report($e);
 ## When logging IS acceptable
 
 Logging is acceptable only in:
-- `app/Exceptions/Handler.php` — global exception handling
+- `app/Exceptions/Handler.php`: global exception handling
 - Scheduled command output via `$this->info()` / `$this->error()` (Artisan commands only)
 - Dedicated audit trail models (e.g., `Consent` model writing to DB, not log files)
 

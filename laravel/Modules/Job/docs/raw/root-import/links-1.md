@@ -1,3 +1,14 @@
+---
+title: "links 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "links 1"
+issues: []
+discussions: []
+---
+
 https://betterprogramming.pub/laravel-fail-retry-or-delay-a-queued-job-from-itself-41e0bb14440c
 
 

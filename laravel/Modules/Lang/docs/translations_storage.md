@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Storage delle Traduzioni: PHP vs JSON"
+module: "Lang"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Storage delle Traduzioni: PHP vs JSON
 
 ## Introduzione

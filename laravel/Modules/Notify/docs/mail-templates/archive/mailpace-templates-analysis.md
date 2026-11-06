@@ -1,3 +1,11 @@
+---
+title: "Analisi Mailpace Templates"
+type: note
+status: draft
+updated: 2026-10-15
+tags: [docs, notify, mail-templates]
+qmd: "analisi mailpace templates notify"
+---
 # Analisi Mailpace Templates
 
 ## Introduzione
@@ -207,5 +215,5 @@ return [
 
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices.md)
 - [Template Management](./template-management.md) 

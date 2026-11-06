@@ -1,3 +1,15 @@
+---
+title: "decision log removal seasonal action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "decision log removal seasonal action"
+issues: []
+discussions: []
+status: draft
+---
+
 # Decision Log: Rimozione Azioni Seasonal Over-Engineered
 
 **Data**: 19 Dicembre 2025  

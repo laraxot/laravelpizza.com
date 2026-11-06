@@ -1,3 +1,15 @@
+---
+title: "cms"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cms"
+issues: []
+discussions: []
+status: draft
+---
+
 # Documentazione Frontend
 
 > **NOTA**: La documentazione frontend è stata spostata nella documentazione del modulo Cms.
@@ -8,16 +20,16 @@ Questo file contiene i collegamenti alla documentazione frontend che si trova ne
 
 - [Sistema di Blocchi](../laravel/modules/cms/docs/blocks-system.md)
 - [Blocchi](../laravel/modules/cms/docs/blocks.md)
-- [Componenti Blocchi Contenuto](../laravel/modules/cms/docs/componenti-blocchi-contenuto.md)
-- [Componenti](../laravel/modules/cms/docs/components.md)
-- [Gestione Contenuti](../laravel/modules/cms/docs/content-management.md)
-- [Frontoffice](../laravel/modules/cms/docs/frontoffice.md)
-- [Gestione Homepage](../laravel/modules/cms/docs/gestione-homepage.md)
-- [Contenuti Homepage](../laravel/modules/cms/docs/homepage-contenuti.md)
-- [Errori Comuni Homepage](../laravel/modules/cms/docs/homepage-errori-comuni.md)
-- [Struttura Homepage](../laravel/modules/cms/docs/homepage-struttura-corretta.md)
-- [Homepage](../laravel/modules/cms/docs/homepage.md)
-- [Gestione Pagine](../laravel/modules/cms/docs/page-content-management.md)
+- [Componenti Blocchi Contenuto](componenti-blocchi-contenuto.md)
+- [Componenti](components.md)
+- [Gestione Contenuti](content-management.md)
+- [Frontoffice](frontoffice.md)
+- [Gestione Homepage](gestione-homepage.md)
+- [Contenuti Homepage](homepage-contenuti.md)
+- [Errori Comuni Homepage](homepage-errori-comuni.md)
+- [Struttura Homepage](homepage-struttura-corretta.md)
+- [Homepage](homepage.md)
+- [Gestione Pagine](page-content-management.md)
 
 ## Architettura Frontend
 

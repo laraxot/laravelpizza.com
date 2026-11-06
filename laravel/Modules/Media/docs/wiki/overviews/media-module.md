@@ -1,13 +1,20 @@
 ---
+title: "media module"
+tags: [documentation]
+created: 2026-09-26
+qmd: "media module"
+issues: []
+discussions: []
 type: overview
 module: Media
 sources:
-  - ../../../philosophy.md
-  - ../../../file-management-architecture.md
-  - ../../../business-logic-overview.md
-  - ../../../configuration.md
+  - ../../philosophy.md
+  - ../../file-management-architecture.md
+  - ../../business-logic-overview.md
+  - ../../configuration.md
 confidence: high
 updated: 2026-04-15
+status: draft
 ---
 
 # Media Module — Overview

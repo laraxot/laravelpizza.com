@@ -1,12 +1,12 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = HealthCheckResultHistoryItem::class;
 
     /**

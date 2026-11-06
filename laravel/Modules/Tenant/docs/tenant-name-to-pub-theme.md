@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Dal nome tenant al tema pubblico (pub_theme)"
+module: "Tenant"
+type: concept
+tags: [tenant, name, pub, theme]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "tenant name to pub theme"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Dal nome tenant al tema pubblico (pub_theme)
 
 La **risoluzione del tema** dipende dal modulo Tenant: il nome tenant determina la cartella di config da cui si legge `xra.php` e quindi `pub_theme`.

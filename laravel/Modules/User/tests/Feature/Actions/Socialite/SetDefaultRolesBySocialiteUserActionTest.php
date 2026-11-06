@@ -1,16 +1,16 @@
 <?php
 
 declare(strict_types=1);
-
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Mockery\MockInterface;
 use Modules\User\Actions\Socialite\SetDefaultRolesBySocialiteUserAction;
 use Modules\User\Database\Factories\RoleFactory;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Role;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('SetDefaultRolesBySocialiteUserAction', function (): void {
     $getMockUser = static function (string $email = 'user@example.com'): SocialiteUserContract {

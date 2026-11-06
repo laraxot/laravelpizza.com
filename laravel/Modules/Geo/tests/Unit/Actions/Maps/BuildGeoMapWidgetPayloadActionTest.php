@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Geo\Actions\Maps\BuildGeoMapWidgetPayloadAction;
-use Modules\Geo\Datas\Map\GeoMapWidgetData;
 use Modules\Geo\Models\Place;
 use Modules\Geo\Models\PlaceType;
 use Modules\Geo\Tests\LightTestCase;
@@ -13,10 +12,10 @@ use PHPUnit\Framework\Assert;
 uses(LightTestCase::class);
 
 test('build geo map widget payload action returns widget data contract', function () {
-    $placeType = new PlaceType();
+    $placeType = new PlaceType;
     $placeType->setAttribute('slug', 'farm');
 
-    $place = new Place();
+    $place = new Place;
     $place->id = 42;
     $place->name = 'Cascina Demo';
     $place->description = 'Vendita diretta';
@@ -25,12 +24,17 @@ test('build geo map widget payload action returns widget data contract', functio
     $place->setRelation('placeType', $placeType);
     $place->formatted_address = 'Via Roma 1, Milano';
 
-    $action = new class(new Collection([$place])) extends BuildGeoMapWidgetPayloadAction {
+    $action = new class(new Collection([$place])) extends BuildGeoMapWidgetPayloadAction
+    {
+        /** @var Collection<int, Place> */
+        private readonly Collection $places;
+
         /**
-         * @param Collection<int, Place> $places
+         * @param  Collection<int, Place>  $places
          */
-        public function __construct(private readonly Collection $places)
+        public function __construct(Collection $places)
         {
+            $this->places = $places;
         }
 
         /**
@@ -43,8 +47,6 @@ test('build geo map widget payload action returns widget data contract', functio
     };
 
     $payload = $action->execute();
-
-    Assert::assertInstanceOf(GeoMapWidgetData::class, $payload);
 
     $geoJson = $payload->geoJson;
     Assert::assertArrayHasKey('type', $geoJson);

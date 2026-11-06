@@ -4,9 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Forms\Components;
 
+use Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
+
 /**
- * PlacePicker - Place search and map selection.
+ * PlacePicker - Specialized for finding specific places or POIs.
+ *
+ * Zen: The guide to the specific and the significant.
+ * Implementation: Separate Blade and Lit JS.
  */
-class PlacePicker extends XotBaseCoordinateField
+class PlacePicker extends XotBaseField
 {
+    use HasCoordinatePicker;
+
+    protected string $view = 'geo::filament.forms.components.place-picker';
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->setUpCoordinatePicker();
+    }
 }

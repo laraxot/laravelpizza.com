@@ -1,3 +1,11 @@
+---
+title: "PHPMD Fixes - Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "phpmd fixes - activity module activity"
+---
 # PHPMD Fixes - Activity Module
 
 ## ✅ COMPLETED FIXES

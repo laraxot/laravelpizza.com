@@ -1,0 +1,85 @@
+---
+title: "case variant collisions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "case variant collisions"
+issues: []
+discussions: []
+status: draft
+---
+
+# Collisioni di nome per sola differenza di maiuscole
+
+**Misurato**: 2026-08-31
+**Regola violata**: `no-case-variations`, `case_sensitive_naming_critical`
+**Quadro generale**: [Modules/Xot/docs/stato-qualita-progetto.md](../../Xot/docs/stato-qualita-progetto.md)
+
+## Il problema
+
+In questo modulo esistono percorsi che differiscono solo per maiuscole. Su Linux
+convivono. Su filesystem case-insensitive, cioe' macOS di default e Windows, i due
+percorsi sono lo stesso percorso: al clone uno dei due file sovrascrive l'altro, in
+modo non deterministico. Il repository risulta corrotto senza che nulla segnali
+l'errore.
+
+Riproduzione:
+
+```bash
+cd laravel && find Modules/Notify -name '*.php' -not -path '*/vendor/*' \
+  | awk '{print tolower($0)}' | sort | uniq -d
+```
+
+## Coppie a contenuto identico (6)
+
+Pura duplicazione. Si tiene la variante conforme a PSR-4 e si cancella l'altra.
+
+```
+Modules/Notify/config/config/Config/beautymail.php
+Modules/Notify/config/Config/Config/beautymail.php
+
+Modules/Notify/config/config/Config/config.php
+Modules/Notify/config/Config/Config/config.php
+
+Modules/Notify/config/config/beautymail.php
+Modules/Notify/config/Config/beautymail.php
+
+Modules/Notify/config/config/config.php
+Modules/Notify/config/Config/config.php
+
+Modules/Notify/resources/views/emails/templates/minty/contentend.blade.php
+Modules/Notify/resources/views/emails/templates/minty/contentEnd.blade.php
+
+Modules/Notify/resources/views/emails/templates/sunny/contentend.blade.php
+Modules/Notify/resources/views/emails/templates/sunny/contentEnd.blade.php
+```
+
+## Coppie a contenuto divergente (3)
+
+Attenzione: qui i due file **non** sono uguali. Sotto lo stesso nome logico
+convivono due verita' diverse, e non si sa quale sia quella viva. Vanno letti e
+riconciliati a mano, mai cancellati a colpo d'occhio.
+
+```
+Modules/Notify/resources/views/emails/templates/widgets/newfeaturestart.blade.php
+Modules/Notify/resources/views/emails/templates/widgets/newfeatureStart.blade.php
+
+Modules/Notify/tests/Feature/emailtemplatestest.php
+Modules/Notify/tests/Feature/EmailTemplatesTest.php
+
+Modules/Notify/tests/Feature/jsoncomponentstest.php
+Modules/Notify/tests/Feature/JsonComponentsTest.php
+```
+
+## Come si chiude
+
+1. Per ogni coppia divergente, confrontare il contenuto e decidere quale versione
+   sopravvive; portare in quella le parti utili dell'altra.
+2. Rinominare in avanti verso la forma PSR-4 (`Fixtures/`, `Unit/`, `Feature/`,
+   `DataObjects/`, `Config/`, `Providers/`).
+3. Rimuovere la variante superflua.
+4. Verificare che il conteggio del comando qui sopra sia sceso a zero.
+
+Serve un test che impedisca la ricomparsa del difetto: senza, il conteggio torna a
+crescere. Vedi il punto 4 del quadro generale.

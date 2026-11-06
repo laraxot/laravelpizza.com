@@ -1,3 +1,15 @@
+---
+title: "build lint test commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "build lint test commands"
+issues: []
+discussions: []
+status: draft
+---
+
 # 2. Build / Lint / Test Commands
 
 ### Running Tests
@@ -97,4 +109,3 @@ php artisan filament:optimize-clear
 ```
 
 ---
-

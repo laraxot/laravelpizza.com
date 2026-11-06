@@ -1,3 +1,11 @@
+---
+title: "User Module Roadmap"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, roadmap]
+qmd: "user module roadmap user"
+---
 # User Module Roadmap
 
 > "Authentication, authorization, and user management for the entire Laraxot ecosystem."

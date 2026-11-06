@@ -1,3 +1,28 @@
+---
+title: "Traduzioni Auth Social Login - Filosofia Laraxot"
+type: concept
+tags: [auth, social, login, translations]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-social-login-translations traduzioni auth social login - filosofia laraxot"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Traduzioni Auth Social Login - Filosofia Laraxot
 
 ## Scopo
@@ -76,7 +101,7 @@ Evitare classi Tailwind non definite (es. `from-primary-600`) che possono risult
 
 I pulsanti social usano icone da `Modules/UI/resources/svg/` tramite `<x-filament::icon>`:
 
-- `ui-google` (google.svg in root) — preferito rispetto a `ui-brands.google`
+- `ui-google` (google.svg in root): preferito rispetto a `ui-brands.google`
 - `ui-brands.github` (brands/github.svg)
 - `ui-brands.microsoft` (brands/microsoft.svg)
 

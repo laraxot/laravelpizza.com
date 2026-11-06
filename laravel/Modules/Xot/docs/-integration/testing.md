@@ -1,3 +1,11 @@
+---
+title: "testing"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "testing xot"
+---
 # testing
 
 <!-- Contenuto migrato da _docs/testing.txt -->

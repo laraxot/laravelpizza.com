@@ -1,3 +1,14 @@
+---
+title: "case sensitive duplicates cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "case sensitive duplicates cleanup"
+issues: []
+discussions: []
+---
+
 # File Duplicati Case-Sensitive - Rapporto di Pulizia
 
 **Data**: 2026-02-24  
@@ -42,6 +53,14 @@ find ./laravel -type f -name "*test*.php" -o -name "*Test*.php" | grep -v vendor
 
 ---
 
+title: "case sensitive duplicates cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "case sensitive duplicates cleanup"
+issues: []
+discussions: []
 **Stato**: Completato ✅  
 **File rinominati con `.old`**: 3
 

@@ -100,13 +100,13 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 
         $models_collect = collect(array_keys($models));
         $models_collect->implode('|');
-        $models_collect->map(static fn ($item) => Str::plural((string) $item))->implode('|');
+        $models_collect->map(static fn (int|string $item) => Str::plural((string) $item))->implode('|');
 
         /*--pattern vuoto
          * dddx([
          * 'lang_pattern' => $lang_pattern,
          * 'container0_pattern' => $container0_pattern,
-         * 'config_path' => TenantService::getConfigPath('morph_map'),
+        * 'config_path' => app(\Modules\Tenant\Actions\Config\GetTenantConfigPathAction::class)->execute('morph_map'),
          * ]);
          */
         // da erore livewire ?

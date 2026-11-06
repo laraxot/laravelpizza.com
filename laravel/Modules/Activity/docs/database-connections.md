@@ -1,3 +1,11 @@
+---
+title: "Regola: Connessioni Database - Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "regola: connessioni database - modulo activity activity"
+---
 # Regola: Connessioni Database - Modulo Activity
 
 ## Principio

@@ -1,3 +1,11 @@
+---
+title: "tree"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "tree xot"
+---
 # tree
 
 <!-- Contenuto migrato da _docs/tree.txt -->

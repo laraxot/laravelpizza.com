@@ -8,45 +8,34 @@ return [
             'label' => 'mailable',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'subject' => [
             'label' => 'subject',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'html_template' => [
             'label' => 'html_template',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'text_template' => [
             'label' => 'text_template',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'create' => [
-            'label' => 'create',
-        ],
+            'label' => 'create'],
         'createAnother' => [
-            'label' => 'createAnother',
-        ],
+            'label' => 'createAnother'],
         'cancel' => [
-            'label' => 'cancel',
-        ],
-    ],
+            'label' => 'cancel']],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
         'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
+        'sort' => 100],
     'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-];
+    'plural_label' => 'Missing Plural label'];

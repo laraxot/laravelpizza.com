@@ -1,8 +1,13 @@
 ---
+updated: 2026-09-26
+qmd: "has media form duplication"
+issues: []
+discussions: []
 title: "HasMedia Form & Table Duplication Pattern"
 type: concept
 tags: [redundancy, media, filament, duplication, 2026-05]
 created: 2026-05-21
+status: draft
 ---
 
 # HasMedia Form & Table Duplication Pattern

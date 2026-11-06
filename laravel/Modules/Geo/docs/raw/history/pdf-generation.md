@@ -1,3 +1,14 @@
+---
+title: "pdf generation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pdf generation"
+issues: []
+discussions: []
+---
+
 # Generazione PDF con HTML2PDF
 
 > **NOTA IMPORTANTE**: Come da decisione tecnica del 2025-03-20, il modulo Performance utilizza esclusivamente [HTML2PDF](https://github.com/spipu/html2pdf) per la generazione dei PDF, abbandonando altre soluzioni come DomPDF.

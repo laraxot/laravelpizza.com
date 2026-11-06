@@ -1,3 +1,14 @@
+---
+title: "critical mai fare migrate refresh 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical mai fare migrate refresh 1"
+issues: []
+discussions: []
+---
+
 # ⚠️ CRITICAL: MAI FARE migrate:refresh/fresh/rollback O --force 🔴🔴
 
 ## I Dati Sono SACRI
@@ -64,4 +75,12 @@ Se esegui `migrate --force` in produzione:
 
 ---
 
+title: "critical mai fare migrate refresh 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical mai fare migrate refresh 1"
+issues: []
+discussions: []
 **URLATO PER ESSERE LETTO PRIMA DI OGNI MIGRATION** 🔴🔴🔴

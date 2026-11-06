@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 
@@ -29,8 +28,13 @@ class GetAllModelsByModuleNameAction
             return [];
         }
 
-        $mod_path = $mod->getPath().'/Models';
+        // I model vivono in app/Models (PSR-4 Modules\<Mod>\ => app/), non in <Mod>/Models.
+        $mod_path = $mod->getPath().'/app/Models';
         $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
+
+        if (! File::isDirectory($mod_path)) {
+            return [];
+        }
 
         $files = File::files($mod_path);
         /** @var array<string, class-string> $data */
@@ -42,7 +46,7 @@ class GetAllModelsByModuleNameAction
             $ext = '.php';
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
-                $tmp = new \stdClass();
+                $tmp = new \stdClass;
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
                 /**

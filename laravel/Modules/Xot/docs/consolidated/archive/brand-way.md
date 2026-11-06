@@ -1,3 +1,11 @@
+---
+title: "La Via del Brand"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "la via del brand xot"
+---
 # La Via del Brand
 
 ## L'Essenza del Brand

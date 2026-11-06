@@ -1,10 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+?>
 <x-filament::page>
     <div class="space-y-6" wire:poll.visible="{{ $this->isRunning ? '100' : '1000' }}">
         @if($this->isRunning)
             <div class="text-sm text-gray-500 bg-gray-50 p-2 rounded-lg border border-gray-200">
-                The command is running. Please do not close this window.
+                {{ __('user::passport_dashboard.view.running_notice.message') }}
                 <br>
-                Other actions are disabled until the command completes.
+                {{ __('user::passport_dashboard.view.actions_disabled.description') }}
             </div>
         @endif
 
@@ -45,27 +50,27 @@
         >
             @if(filled($this->currentCommand))
                 <div class="flex items-center justify-between mb-4 sticky top-0 bg-gray-900 py-2 border-b border-gray-700">
-                    <h3 class="text-lg font-medium">Running command: php artisan {{ $this->currentCommand }}</h3>
+                    <h3 class="text-lg font-medium">{{ __('user::passport_dashboard.view.running_command.message') }} {{ $this->currentCommand }}</h3>
                     <div>
                         @if($this->status === 'completed')
                             <x-filament::badge color="success">
-                                Completed
+                                {{ __('user::passport_dashboard.status.completed.message') }}
                             </x-filament::badge>
                         @elseif($this->status === 'failed')
                             <x-filament::badge color="danger">
-                                Failed
+                                {{ __('user::passport_dashboard.status.failed.message') }}
                             </x-filament::badge>
                         @elseif($this->isRunning)
                             <div class="flex items-center space-x-2">
                                 <x-filament::loading-indicator class="h-5 w-5" />
-                                <span class="text-sm">Running...</span>
+                                <span class="text-sm">{{ __('user::passport_dashboard.status.running.message') }}</span>
                             </div>
                         @endif
                     </div>
                 </div>
                 @if(empty($this->output))
                     <div class="text-gray-400">
-                        Waiting for output...
+                        {{ __('user::passport_dashboard.view.waiting_output.message') }}
                     </div>
                 @else
                     @foreach($this->output as $line)
@@ -78,14 +83,14 @@
                 @endif
             @else
                 <div class="text-gray-400 italic">
-                    Select a command from the header to begin.
+                    {{ __('user::passport_dashboard.view.select_command.label') }}
                 </div>
             @endif
         </div>
 
         @if(!empty($this->output))
             <div class="text-xs text-gray-500 text-right">
-                Use mouse wheel to scroll output.
+                {{ __('user::passport_dashboard.view.scroll.helper_text') }}
             </div>
         @endif
     </div>

@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bashscripts philosophy"
+issues: []
+discussions: []
 name: Bashscripts Philosophy
 about: Document bashscripts philosophy and gitignore rules
 title: "Philosophy: bashscripts/ must remain in .gitignore"

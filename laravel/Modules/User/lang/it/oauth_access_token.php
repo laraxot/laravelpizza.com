@@ -144,9 +144,6 @@ return [
             'description' => 'Azione per creare',
             'icon' => 'heroicon-o-plus',
         ],
-        'openColumnManager' => [
-            'tooltip' => 'openColumnManager',
-        ],
     ],
     'messages' => [
         'created' => 'Token creato con successo',

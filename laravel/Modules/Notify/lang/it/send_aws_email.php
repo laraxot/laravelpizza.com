@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Invio Email (AWS]',
+        'label' => 'Invio Email (AWS)',
         'group' => 'Notifiche',
         'icon' => 'heroicon-o-envelope',
         'color' => 'primary',
@@ -56,30 +56,18 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-    ],
+        'recipient' => [
+            'label' => 'recipient',
+            'placeholder' => 'recipient',
+            'helper_text' => 'recipient',
+            'description' => 'recipient']],
     'actions' => [
-        'send_email' => [
-            'label' => 'Invia Email',
-            'icon' => 'heroicon-o-paper-airplane',
-            'color' => 'success',
-            'modal_heading' => 'Conferma invio email',
-            'modal_description' => 'Sei sicuro di voler inviare questa email?',
-            'success' => 'Email inviata con successo tramite AWS SES',
-            'error' => 'Errore durante l\'invio dell\'email',
-            'confirmation' => 'L\'email verrà inviata immediatamente',
-        ],
-        'logout' => [
-            'tooltip' => 'logout',
-            'icon' => 'logout',
-            'label' => 'logout',
-        ],
-    ],
-    'messages' => [
-        'loading' => 'Preparazione email in corso...',
-        'sent' => 'Email inviata correttamente',
-        'queue' => 'Email aggiunta alla coda di invio',
-        'failed' => 'Invio email fallito',
-    ],
+        'send_email' => ['label' => 'Invia Email', 'icon' => 'heroicon-o-paper-airplane', 'color' => 'success', 'modal_heading' => 'Conferma invio email', 'modal_description' => 'Sei sicuro di voler inviare questa email?', 'success' => 'Email inviata con successo tramite AWS SES', 'error' => 'Errore durante l\'invio dell\'email', 'confirmation' => 'L\'email verrà inviata immediatamente'],
+        'logout' => ['tooltip' => 'logout', 'icon' => 'logout', 'label' => 'logout'],
+        'sendEmail' => ['label' => 'sendEmail', 'icon' => 'sendEmail', 'tooltip' => 'sendEmail'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+        'profile' => ['label' => 'profile', 'icon' => 'profile', 'tooltip' => 'profile']],
+    'messages' => ['loading' => 'Preparazione email in corso...', 'sent' => 'Email inviata correttamente', 'queue' => 'Email aggiunta alla coda di invio', 'failed' => 'Invio email fallito'],
     'label' => 'Send Aws Email',
     'plural_label' => 'Send Aws Email (Plurale)',
 ];

@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Actions\Otp\Hasher;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 it('makes hashed value', function (): void {
     $hasher = app(Hasher::class);

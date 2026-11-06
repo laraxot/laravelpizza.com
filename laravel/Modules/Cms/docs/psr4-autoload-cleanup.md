@@ -1,3 +1,15 @@
+---
+title: "psr4 autoload cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "psr4 autoload cleanup"
+issues: []
+discussions: []
+status: draft
+---
+
 # PSR-4 Autoload Cleanup (2026-03-09)
 
 ## Context

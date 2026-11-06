@@ -1,3 +1,14 @@
+---
+title: "structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure"
+issues: []
+discussions: []
+---
+
 # Structure Template
 
 Template for `.planning/codebase/STRUCTURE.md` - captures physical file organization.
@@ -6,6 +17,14 @@ Template for `.planning/codebase/STRUCTURE.md` - captures physical file organiza
 
 ---
 
+title: "structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

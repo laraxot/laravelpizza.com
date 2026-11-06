@@ -1,3 +1,14 @@
+---
+title: "infolist compila page fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "infolist compila page fix"
+issues: []
+discussions: []
+---
+
 # Filament v5 custom page infolist pattern (XotBasePage)
 
 ## Scope

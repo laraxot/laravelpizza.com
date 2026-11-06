@@ -1,3 +1,15 @@
+---
+title: "interface naming convention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "interface naming convention"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzione di Naming per le Interfacce 
 
 ## Regola Fondamentale
@@ -23,7 +35,7 @@ interface TelegramProviderActionInterface
 1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
 2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
 3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli .
-3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli Quaeris.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli SaluteOra.
 4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
 
 ## Implementazione
@@ -41,29 +53,29 @@ Per verificare la corretta implementazione:
 ```bash
 
 # Cerca interfacce con naming errato
-grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/Quaeris/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/saluteora/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/Quaeris/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/saluteora/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 ```
 
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot/app/Contracts/)
-- [Quaeris Code Quality Guidelines](/var/www/html/Quaeris/laravel/docs/code-quality.md)
+- [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5/laravel/docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila5/laravel/Modules/Xot/app/Contracts/)
+- [SaluteOra Code Quality Guidelines](/var/www/html/saluteora/laravel/docs/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [Quaeris Code Quality Guidelines](/var/www/html/Quaeris/laravel/project_docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/Quaeris/laravel/Modules/Xot/app/Contracts/)
-- [Quaeris Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [Quaeris Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Xot/app/Contracts/)
+- [SaluteOra Code Quality Guidelines](/var/www/html/saluteora/laravel/project_docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/saluteora/laravel/Modules/Xot/app/Contracts/)
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/project_docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Contracts/)

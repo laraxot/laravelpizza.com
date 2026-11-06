@@ -1,5 +1,5 @@
 ---
-title: "Backup traduzioni User — in-place .bak"
+title: "Backup traduzioni User: in-place .bak"
 type: concept
 module: User
 tags: [user, lang, ponytail, bak]
@@ -7,15 +7,22 @@ created: 2026-06-30
 updated: 2026-06-30
 qmd: "User lang backup in-place bak no archive folder ponytail"
 related:
-  - ../../ponytail-audit-over-engineering.md
-  - ../../../../../../docs/wiki/concepts/no-legacy-folders-code.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
 ---
 
-# Backup traduzioni User — in-place
+# Backup traduzioni User: in-place
 
 ## Problema
 
-~281 file `*.backup_*` sparsi sotto `lang/{locale}/` — rumore ponytail. Tentativo errato wave 4: cartella `lang/archive.bak/` (**anti-pattern** — vedi regola generale).
+~281 file `*.backup_*` sparsi sotto `lang/{locale}/`: rumore ponytail. Tentativo errato wave 4: cartella `lang/archive.bak/` (**anti-pattern**: vedi regola generale).
 
 ## Regola canonica
 

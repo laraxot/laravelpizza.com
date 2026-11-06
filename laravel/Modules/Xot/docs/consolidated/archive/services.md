@@ -1,3 +1,11 @@
+---
+title: "Servizi del Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "servizi del modulo xot xot"
+---
 # Servizi del Modulo Xot
 
 ## LangService

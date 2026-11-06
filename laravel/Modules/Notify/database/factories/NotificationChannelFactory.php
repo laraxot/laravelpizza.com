@@ -7,8 +7,6 @@ namespace Modules\Notify\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Notify\Models\NotificationChannel;
 
-use function Safe\json_encode;
-
 /**
  * @extends Factory<NotificationChannel>
  */
@@ -27,10 +25,9 @@ class NotificationChannelFactory extends Factory
         return [
             'name' => $this->faker->word(),
             'driver' => 'email',
-            'config' => json_encode(['smtp_host' => 'localhost']),
+            'config' => ['smtp_host' => 'localhost'],
             'is_enabled' => true,
-            'priority' => 1,
-        ];
+            'priority' => 1];
     }
 
     /**
@@ -39,8 +36,7 @@ class NotificationChannelFactory extends Factory
     public function enabled(): static
     {
         return $this->state(fn (array $attributes) => [
-            'is_enabled' => true,
-        ]);
+            'is_enabled' => true]);
     }
 
     /**
@@ -49,8 +45,7 @@ class NotificationChannelFactory extends Factory
     public function disabled(): static
     {
         return $this->state(fn (array $attributes) => [
-            'is_enabled' => false,
-        ]);
+            'is_enabled' => false]);
     }
 
     /**
@@ -59,8 +54,7 @@ class NotificationChannelFactory extends Factory
     public function email(): static
     {
         return $this->state(fn (array $attributes) => [
-            'driver' => 'email',
-        ]);
+            'driver' => 'email']);
     }
 
     /**
@@ -69,7 +63,6 @@ class NotificationChannelFactory extends Factory
     public function sms(): static
     {
         return $this->state(fn (array $attributes) => [
-            'driver' => 'sms',
-        ]);
+            'driver' => 'sms']);
     }
 }

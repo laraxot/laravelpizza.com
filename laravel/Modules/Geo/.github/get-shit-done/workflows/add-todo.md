@@ -1,3 +1,14 @@
+---
+title: "add todo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "add todo"
+issues: []
+discussions: []
+---
+
 <purpose>
 Capture an idea, task, or issue that surfaces during a GSD session as a structured todo for later work. Enables "thought → capture → continue" flow without losing context.
 </purpose>
@@ -90,6 +101,12 @@ Write to `.planning/todos/pending/${date}-${slug}.md`:
 
 ```markdown
 ---
+type: note
+tags: [documentation]
+updated: 2026-09-26
+qmd: "add todo"
+issues: []
+discussions: []
 created: [timestamp]
 title: [title]
 area: [area]

@@ -1,3 +1,11 @@
+---
+title: "Notify Module - Roadmap, Issues & Optimization"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, roadmap]
+qmd: "notify module - roadmap, issues & optimization notify"
+---
 # Notify Module - Roadmap, Issues & Optimization
 
 **Modulo**: Notify (Multi-Channel Notifications)  

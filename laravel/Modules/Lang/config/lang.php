@@ -13,9 +13,9 @@ return [
      * |
      */
 
-    'default_locale' => 'it',
+    // `default_locale` e `available_locales` non li leggeva nessuno: le lingue dell'editor delle
+    // traduzioni sono in `Modules\Lang\Datas\LangConfigData` (SettingPage), un'unica definizione.
     'fallback_locale' => 'en',
-    'available_locales' => ['it', 'en', 'de'],
     /*
      * |--------------------------------------------------------------------------
      * | Configurazione Cache e Performance
@@ -189,4 +189,24 @@ return [
         'unified_naming' => true,
         'framework_compliance' => true,
     ],
+
+    /*
+     * |--------------------------------------------------------------------------
+     * | Scrittura delle chiavi mancanti
+     * |--------------------------------------------------------------------------
+     * |
+     * | Quando AutoLabelAction non trova una chiave, SaveTransAction la scrive nel
+     * | file di lingua del modulo. E' comodo mentre si sviluppa e dannoso durante i
+     * | test: la suite tocca migliaia di etichette e riscrive l'albero di lavoro,
+     * | lasciando in `git status` file che nessuno ha modificato a mano.
+     * |
+     * | Solo default: niente env() nei config di modulo (Larastan lo vieta fuori
+     * | dal config/ di root). Lo spegnimento reale sotto test non passa da qui:
+     * | SaveTransAction legge Config::get('lang.save_missing_translations',
+     * | ! app()->runningUnitTests()), e la config di modulo non e' comunque
+     * | caricata nell'app dei test.
+     * |
+     */
+
+    'save_missing_translations' => true,
 ];

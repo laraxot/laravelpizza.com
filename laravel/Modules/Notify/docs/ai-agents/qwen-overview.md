@@ -1,6 +1,19 @@
+---
+title: "qwen overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen overview"
+issues: []
+discussions: []
+status: draft
+---
+
 # QWEN Overview
 
 Panoramica e stato attuale del progetto Base Predict Fila5.
+Panoramica e stato attuale del progetto Base Forecast Fila5.
 
 ## Informazioni Progetto
 
@@ -19,10 +32,10 @@ Panoramica e stato attuale del progetto Base Predict Fila5.
 | Incident Composer | 2026-03-19 | ✅ RISOLTO |
 
 ---
-
 ## 🎯 Obiettivo Principale
 
 **Creare la MIGLIORE predict platform di TUTTI i competitors**
+**Creare la MIGLIORE forecast platform di TUTTI i competitors**
 
 Senza alcun se o ma. Deve essere perfetta in ogni aspetto.
 
@@ -63,4 +76,5 @@ Never: git revert (only forward!)
 
 - [Indice QWEN](./qwen-split-index.md)
 - [QWEN.md originale](../../QWEN.md)
+- [QWEN.md originale](../QWEN.md)
 - [Index principale](./index.md)

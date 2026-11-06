@@ -1,3 +1,13 @@
+---
+title: "Xot Contracts and Interfaces Documentation"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Xot Contracts and Interfaces Documentation"
+---
 # Xot Contracts and Interfaces Documentation
 
 **Last Updated**: 2025-01-23
@@ -45,7 +55,7 @@ interface UserContract extends
 
     // API Token Management
     public function tokens(): MorphMany;
-    public function createToken($name, array $scopes = []): PersonalAccessTokenResult;
+    public function createToken(string $name, array $scopes = []): Token;
     public function token(): ?Token;
 
     // Device Management
@@ -62,14 +72,6 @@ interface UserContract extends
     public function getFilamentAvatarUrl(): ?string;
 }
 ```
-
-> **Update 17-11-2025**
-> La PHPDoc di `UserContract` è stata estesa con:
-> - `@property TeamContract|null $currentTeam`
-> - `@property \Illuminate\Database\Eloquent\Collection<int, UserRole> $roles`
-> - `@property \Illuminate\Database\Eloquent\Collection<int, TeamContract> $teams`
->
-> Questo consente a PHPStan level 10 di riconoscere correttamente i magic attribute Eloquent quando i moduli (es. User, Quaeris) lavorano solo contro il contratto Xot.
 
 ### 2. ProfileContract
 **File**: `app/Contracts/ProfileContract.php`

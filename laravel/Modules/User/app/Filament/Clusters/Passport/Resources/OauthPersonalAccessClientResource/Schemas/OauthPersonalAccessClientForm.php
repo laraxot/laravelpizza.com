@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Schemas;
 
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
@@ -12,14 +12,22 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 class OauthPersonalAccessClientForm extends XotBaseResourceForm
 {
     /**
-     * @return array<int|string, Component>
+     * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    #[\Override]
+    public function getFormSchema(): array
     {
         return [
-            Section::make([
-                'name' => TextInput::make('name'),
-            ]),
+            'oauth_personal_access_client' => Section::make('OAuth Personal Access Client Information')
+                ->schema([
+                    Select::make('client_id')
+                        ->label('Client')
+                        ->relationship('client', 'name')
+                        ->required()
+                        ->searchable()
+                        ->helperText('Associated OAuth client'),
+                ])
+                ->columns(2),
         ];
     }
 }

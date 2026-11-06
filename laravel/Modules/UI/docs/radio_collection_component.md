@@ -1,3 +1,15 @@
+---
+title: "radio collection component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "radio collection component"
+issues: []
+discussions: []
+status: draft
+---
+
 # RadioCollection Component
 
 ## Overview

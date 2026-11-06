@@ -6,12 +6,17 @@ created: 2026-04-20
 updated: 2026-04-20
 tags: [translation, i18n, localization, user-module, laravel, filament]
 sources:
-  - laravel/Modules/User/lang/it/auth.php
-  - laravel/Modules/User/lang/en/auth.php
-  - laravel/Themes/Sixteen/resources/views/pages/auth/login.blade.php
 related:
-  - ../../../../docs/wiki/concepts/translation-management.md
-  - ./filament-no-label-rule.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "translation 5-level structure rule user"
 ---
 
 # Translation 5-Level Structure Rule
@@ -246,3 +251,37 @@ return [
 
 **Last Updated**: 2026-04-20  
 **Rule Owner**: User Module Translation System
+
+---
+
+## Incident 2026-07-16: `/it/auth/login` HTTP 500
+
+`Modules/User/lang/it/auth.php` and `en/auth.php` implement the 5th level as
+`key/text/description/context/placeholder` records (per
+[`bashscripts/ai/wiki/rules/translation-5-elements.md`](../../../../../../bashscripts/ai/wiki/rules/translation-5-elements.md),
+label vs text split), which differs from the `label/placeholder/help/button`
+shape shown as canonical in this doc. **The actually-deployed lang files use
+the `text`/`context`/`description` shape**: this doc's examples above are
+aspirational/out of sync with the real `auth.php`, not the other way round.
+
+`login.blade.php` (`Modules/User/resources/views/filament/widgets/auth/login.blade.php`)
+called 9 keys at only 4 segments (`user::auth.login.submit`, `.google`,
+`.github`, `.microsoft`, `.or_continue_with`, `.forgot_password`, `.logging_in`,
+`.no_account`, `.create_account`), each resolving to the full 5-field array
+instead of a string, causing `htmlspecialchars(): Argument #1 ($string) must
+be of type string, array given` on every request. Also found: `submit`,
+`google`, `github`, `microsoft`, `or_continue_with` were still plain strings
+in the lang file (not yet converted to the 5-field shape): converted them
+to match their siblings.
+
+**Fix**: appended `.text` to all 9 call sites (matches the 5-elements rule's
+label/text distinction: these are all buttons/links/messages, not static
+titles). `en/auth.php`'s `login` key never had these keys at all (only a
+`login.page.*` subtree with the other doc's `label` shape): `/en/auth/login`
+doesn't crash because a fully-missing key returns the literal key string
+(still a string), but shows raw untranslated keys instead of real copy. Not
+yet backfilled: tracked as follow-up, out of scope for the 500 fix.
+
+**Two divergent docs describing the same convention is exactly the entropy
+this repo keeps flagging**: reconcile `translation-5-elements.md` and this
+file into one before writing a third.

@@ -1,3 +1,14 @@
+---
+title: "error correction workflow summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "error correction workflow summary"
+issues: []
+discussions: []
+---
+
 # 📋 Error Correction Workflow - Summary
 
 ## ✅ Cosa è Stato Fatto
@@ -21,6 +32,14 @@ Creato documento completo con **12 passi sacri** da seguire quando ricevi un err
 
 ---
 
+title: "error correction workflow summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "error correction workflow summary"
+issues: []
+discussions: []
 ### 2. **Regole Critiche Aggiornate** 🔴
 
 #### 🚫 MAI FARE

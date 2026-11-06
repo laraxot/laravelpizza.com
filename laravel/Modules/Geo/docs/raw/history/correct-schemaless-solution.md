@@ -1,3 +1,14 @@
+---
+title: "correct schemaless solution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "correct schemaless solution"
+issues: []
+discussions: []
+---
+
 # ✅ SOLUZIONE CORRETTA: Schemaless Attributes & MySQL Collation
 
 **Date**: 2025-01-02  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "correct schemaless solution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "correct schemaless solution"
+issues: []
+discussions: []
 ## 🎯 LA VERITÀ
 
 ### API Usage (SEMPRE Così)

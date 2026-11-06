@@ -1,3 +1,15 @@
+---
+title: "github actions setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github actions setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # GitHub Actions Setup — Semantic Versioning & Auto-Release
 
 **Data:** 2026-05-26
@@ -11,7 +23,6 @@ Ogni modulo e tema deve avere:
 4. ✅ **Version bump** in package.json/composer.json
 
 ---
-
 ## Setup Rapido (Per Modulo/Tema)
 
 ### 1. Crea `.github/workflows/semantic-release.yml`

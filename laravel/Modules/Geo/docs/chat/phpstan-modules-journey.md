@@ -1,4 +1,8 @@
 ---
+title: "phpstan modules journey"
+qmd: "phpstan modules journey"
+issues: []
+discussions: []
 name: phpstan-modules-journey
 description: PHPStan journey narrativa — campagna zero-errori per 30+ moduli Laravel, livello max, con visione spirituale e BMAD-METHOD
 type: project
@@ -177,10 +181,10 @@ Quando PHPStan analizza un modulo grande (Gdpr: 15K+ LoC), ha bisogno di respiro
 
 - **Central Coordination**: [phpstan-modules-coordination.md](./phpstan-modules-coordination.md)
 - **Modules Inventory (Authoritative)**: [../wiki/memories/phpstan-modules-inventory.md](../wiki/memories/phpstan-modules-inventory.md)
-- **BMAD-METHOD Docs**: [../wiki/rules/bmad-method-integration.md](../wiki/rules/bmad-method-integration.md)
+- **BMAD-METHOD Docs**: [../wiki/rules/bmad-method-integration.md](../project/bmad-method-integration.md)
 - **GitHub Issue Template**: [../wiki/_templates/phpstan-module-github-issue.md](../wiki/_templates/phpstan-module-github-issue.md)
 - **PHPStan Prompt (Skills)**: `bashscripts/tools/prompts/phpstan_module.txt`
-- **Laravel CLAUDE.md (On-Demand Pattern)**: [../../laravel/CLAUDE.md](../../laravel/CLAUDE.md)
+- **Laravel CLAUDE.md (On-Demand Pattern)**: [../../laravel/CLAUDE.md](../../../../CLAUDE.md)
 
 ---
 

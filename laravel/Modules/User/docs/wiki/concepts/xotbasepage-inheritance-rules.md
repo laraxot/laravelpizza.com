@@ -6,12 +6,17 @@ created: 2026-04-20
 updated: 2026-04-20
 tags: [filament, xotbasepage, translation, inheritance, navigation, dry]
 sources:
-  - laravel/Modules/Xot/app/Filament/Pages/XotBasePage.php
-  - laravel/Modules/Xot/app/Filament/Traits/TransTrait.php
-  - laravel/Modules/User/app/Filament/Pages/SocialiteProviderSettingsPage.php
 related:
-  - ../../../../docs/wiki/concepts/filament-page-architecture.md
-  - ./translation-5-level-structure.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "xotbasepage inheritance rules user"
 ---
 
 # XotBasePage Inheritance Rules

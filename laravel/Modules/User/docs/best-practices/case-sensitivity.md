@@ -1,3 +1,24 @@
+---
+title: "Case Sensitivity Rules - User Module"
+type: concept
+tags: [case, sensitivity]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "case-sensitivity case sensitivity rules - user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+  - "./dependency.md"
+status: draft
+---
+
 # Case Sensitivity Rules - User Module
 
 ## Problema / Problem

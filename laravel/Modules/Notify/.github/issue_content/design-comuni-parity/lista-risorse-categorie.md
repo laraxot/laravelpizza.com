@@ -1,3 +1,14 @@
+---
+title: "lista risorse categorie"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lista risorse categorie"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Lista Risorse per Categoria (lista-risorse-categorie.html)
 
 ## Obiettivo

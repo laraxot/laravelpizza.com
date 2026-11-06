@@ -1,3 +1,15 @@
+---
+title: "geopoint picker method existence rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geopoint picker method existence rule"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Rule: GeopointPicker Method Existence Check
 
 ### Why This Rule

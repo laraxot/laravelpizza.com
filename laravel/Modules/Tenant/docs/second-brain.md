@@ -1,8 +1,13 @@
 ---
-title: second brain — puntatore modulo
+tags: [documentation]
+created: 2026-09-26
+issues: []
+discussions: []
+title: second brain: puntatore modulo
 type: reference
 qmd: second brain modulo wiki locale laravel
 updated: 2026-05-19
+status: draft
 ---
 
 # Second brain (modulo)

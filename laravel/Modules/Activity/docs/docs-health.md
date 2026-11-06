@@ -1,3 +1,11 @@
+---
+title: "Docs Health - Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "docs health - activity activity"
+---
 # Docs Health - Activity
 
 ## Snapshot

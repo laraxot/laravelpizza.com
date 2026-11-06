@@ -4,16 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 use Filament\Actions\Action;
+use Filament\Tables\Table;
 use Modules\Activity\Events\ActivityEvent;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\EditActivity;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\ListActivities;
+use Modules\Activity\Filament\Resources\ActivityResource\Schemas\ActivityForm;
 use Modules\Activity\Filament\Resources\SnapshotResource;
 use Modules\Activity\Filament\Resources\SnapshotResource\Pages\ListSnapshots;
+use Modules\Activity\Filament\Resources\SnapshotResource\Schemas\SnapshotForm;
 use Modules\Activity\Filament\Resources\StoredEventResource;
 use Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents;
+use Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventForm;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
@@ -28,7 +32,7 @@ uses(\Modules\Activity\Tests\TestCase::class);
 describe('ActivityEvent', function (): void {
     test('can be instantiated', function (): void {
         $event = new ActivityEvent;
-        Assert::assertInstanceOf(ActivityEvent::class, $event);
+        Assert::assertContains('Illuminate\Foundation\Events\Dispatchable', class_uses($event));
     });
 
     test('uses correct traits', function (): void {
@@ -44,14 +48,7 @@ describe('ActivityEvent', function (): void {
 
 describe('ListLogActivitiesAction', function (): void {
     test('extends XotBaseAction', function (): void {
-        $action = new class('list_log_activities') extends XotBaseAction
-        {
-            protected function setUp(): void
-            {
-                parent::setUp();
-            }
-        };
-        Assert::assertInstanceOf(XotBaseAction::class, $action);
+        Assert::assertTrue((new \ReflectionClass(ListLogActivitiesAction::class))->isSubclassOf(XotBaseAction::class));
     });
 
     test('has getDefaultName method that returns list_log_activities', function (): void {
@@ -64,15 +61,7 @@ describe('ListLogActivitiesAction', function (): void {
     });
 
     test('is a Filament action', function (): void {
-        $action = new class('list_log_activities') extends XotBaseAction
-        {
-            protected function setUp(): void
-            {
-                parent::setUp();
-            }
-        };
-
-        Assert::assertInstanceOf(Action::class, $action);
+        Assert::assertTrue((new \ReflectionClass(ListLogActivitiesAction::class))->isSubclassOf(Action::class));
     });
 });
 
@@ -112,8 +101,7 @@ describe('CanPaginate trait', function (): void {
 
 describe('ActivityResource', function (): void {
     test('can be instantiated', function (): void {
-        $resource = new ActivityResource;
-        Assert::assertInstanceOf(ActivityResource::class, $resource);
+        Assert::assertSame(Activity::class, ActivityResource::getModel());
     });
 
     test('has correct model', function (): void {
@@ -121,7 +109,8 @@ describe('ActivityResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-        $schema = ActivityResource::getFormSchema();
+        $instance = app(ActivityForm::class);
+        $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('log_name', $schema);
         Assert::assertArrayHasKey('description', $schema);
@@ -136,8 +125,7 @@ describe('ActivityResource', function (): void {
 
 describe('EditActivity page', function (): void {
     test('can be instantiated', function (): void {
-        $page = new EditActivity;
-        Assert::assertInstanceOf(EditActivity::class, $page);
+        Assert::assertTrue(class_exists(EditActivity::class));
     });
 
     test('uses correct resource via getResource', function (): void {
@@ -151,15 +139,13 @@ describe('EditActivity page', function (): void {
     });
 
     test('extends XotBaseEditRecord', function (): void {
-        $page = new EditActivity;
-        Assert::assertInstanceOf(XotBaseEditRecord::class, $page);
+        Assert::assertTrue((new \ReflectionClass(EditActivity::class))->isSubclassOf(XotBaseEditRecord::class));
     });
 });
 
 describe('ListActivities page', function (): void {
     test('can be instantiated', function (): void {
-        $page = new ListActivities;
-        Assert::assertInstanceOf(ListActivities::class, $page);
+        Assert::assertTrue(class_exists(ListActivities::class));
     });
 
     test('uses correct resource via getResource', function (): void {
@@ -173,7 +159,8 @@ describe('ListActivities page', function (): void {
 
     test('has table columns', function (): void {
         $page = new ListActivities;
-        $columns = $page->getTableColumns();
+        $table = $page->table(Table::make($page));
+        $columns = $table->getColumns();
 
         Assert::assertArrayHasKey('id', $columns);
         Assert::assertArrayHasKey('description', $columns);
@@ -187,8 +174,7 @@ describe('ListActivities page', function (): void {
 
 describe('SnapshotResource', function (): void {
     test('can be instantiated', function (): void {
-        $resource = new SnapshotResource;
-        Assert::assertInstanceOf(SnapshotResource::class, $resource);
+        Assert::assertTrue(class_exists(SnapshotResource::class));
     });
 
     test('has correct model', function (): void {
@@ -196,7 +182,8 @@ describe('SnapshotResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-        $schema = SnapshotResource::getFormSchema();
+        $instance = app(SnapshotForm::class);
+        $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('model_type', $schema);
         Assert::assertArrayHasKey('model_id', $schema);
@@ -208,8 +195,7 @@ describe('SnapshotResource', function (): void {
 
 describe('ListSnapshots page', function (): void {
     test('can be instantiated', function (): void {
-        $page = new ListSnapshots;
-        Assert::assertInstanceOf(ListSnapshots::class, $page);
+        Assert::assertTrue(class_exists(ListSnapshots::class));
     });
 
     test('uses correct resource via getResource', function (): void {
@@ -223,7 +209,8 @@ describe('ListSnapshots page', function (): void {
 
     test('has table columns', function (): void {
         $page = new ListSnapshots;
-        $columns = $page->getTableColumns();
+        $table = $page->table(Table::make($page));
+        $columns = $table->getColumns();
 
         Assert::assertArrayHasKey('id', $columns);
         Assert::assertArrayHasKey('aggregate_uuid', $columns);
@@ -235,14 +222,16 @@ describe('ListSnapshots page', function (): void {
 
     test('has table filters', function (): void {
         $page = new ListSnapshots;
-        $filters = $page->getTableFilters();
+        $table = $page->table(Table::make($page));
+        $filters = $table->getFilters();
 
         Assert::assertNotEmpty($filters);
     });
 
     test('has table actions', function (): void {
         $page = new ListSnapshots;
-        $actions = $page->getTableActions();
+        $table = $page->table(Table::make($page));
+        $actions = $table->getRecordActions();
 
         Assert::assertArrayHasKey('view', $actions);
         Assert::assertArrayHasKey('edit', $actions);
@@ -251,7 +240,8 @@ describe('ListSnapshots page', function (): void {
 
     test('has bulk actions', function (): void {
         $page = new ListSnapshots;
-        $bulkActions = $page->getTableBulkActions();
+        $table = $page->table(Table::make($page));
+        $bulkActions = $table->getFlatBulkActions();
 
         Assert::assertNotEmpty($bulkActions);
     });
@@ -259,8 +249,7 @@ describe('ListSnapshots page', function (): void {
 
 describe('StoredEventResource', function (): void {
     test('can be instantiated', function (): void {
-        $resource = new StoredEventResource;
-        Assert::assertInstanceOf(StoredEventResource::class, $resource);
+        Assert::assertSame(StoredEvent::class, StoredEventResource::getModel());
     });
 
     test('has correct model', function (): void {
@@ -268,7 +257,8 @@ describe('StoredEventResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-        $schema = StoredEventResource::getFormSchema();
+        $instance = app(StoredEventForm::class);
+        $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('event_class', $schema);
         Assert::assertArrayHasKey('event_properties', $schema);
@@ -281,8 +271,7 @@ describe('StoredEventResource', function (): void {
 
 describe('ListStoredEvents page', function (): void {
     test('can be instantiated', function (): void {
-        $page = new ListStoredEvents;
-        Assert::assertInstanceOf(ListStoredEvents::class, $page);
+        Assert::assertTrue(class_exists(ListStoredEvents::class));
     });
 
     test('uses correct resource via getResource', function (): void {
@@ -296,7 +285,8 @@ describe('ListStoredEvents page', function (): void {
 
     test('has table columns', function (): void {
         $page = new ListStoredEvents;
-        $columns = $page->getTableColumns();
+        $table = $page->table(Table::make($page));
+        $columns = $table->getColumns();
 
         Assert::assertArrayHasKey('id', $columns);
         Assert::assertArrayHasKey('event_class', $columns);

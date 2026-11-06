@@ -1,3 +1,16 @@
+---
+qmd: "html comparison config"
+issues: []
+discussions: []
+title: "HTML Structure Comparison Configuration"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # HTML Structure Comparison Configuration
 
 This file provides project-specific paths for the agnostic bashscripts/html/ tools.

@@ -16,6 +16,7 @@ related:
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
   - ./ai-harness-geo-discipline.md
+status: draft
 ---
 
 # Contratto wiki locale — stub Geo

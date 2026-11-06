@@ -1,3 +1,15 @@
+---
+title: "navigation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "navigation"
+issues: []
+discussions: []
+status: draft
+---
+
 # NavigationBlock
 
 ## Descrizione
@@ -61,15 +73,15 @@ Block::make('navigation')
 - Sidebar: Menu di navigazione contestuale con titolo opzionale
 
 ## Collegamenti
-- [Documentazione Blocchi](./readme.md)
+- [Documentazione Blocchi](./README.md)
 - [Componente Header](../components/header.md)
 - [Componente Footer](../components/footer.md)
 - [Convenzioni Filament](../../../../docs/filament-conventions.md)
 
 ## Collegamenti tra versioni di navigation.md
-* [navigation.md](laravel/modules/gdpr/docs/navigation.md)
+* [navigation.md](../../../Gdpr/docs/navigation.md)
 * [navigation.md](laravel/modules/xot/docs/navigation.md)
-* [navigation.md](laravel/modules/ui/docs/navigation.md)
+* [navigation.md](../../../UI/docs/navigation.md)
 * [navigation.md](laravel/modules/cms/docs/blocks/navigation.md)
-* [navigation.md](laravel/modules/cms/docs/navigation.md)
-* [navigation.md](laravel/modules/cms/docs/components/navigation.md)
+* [navigation.md](../navigation.md)
+* [navigation.md](../components/navigation.md)

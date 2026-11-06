@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/husam-tariq/filament-database-schedule/blob/main/src/Filament/resources/ScheduleResource.php
  */
-
-declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
@@ -61,7 +60,7 @@ class ScheduleResource extends XotBaseResource
     }
 
     #[Override]
-    public static function getFormSchema(): array
+    public function getFormSchemaOld(): array
     {
         static::$commands = app(GetCommandsAction::class)->execute();
         $commands_opts = static::$commands->toCollection()->pluck('full_name', 'name')->toArray();
@@ -70,13 +69,13 @@ class ScheduleResource extends XotBaseResource
             'main_section' => Section::make([
                 Select::make('command')
                     ->options(fn () => $commands_opts)
-                    ->reactive()
+                    ->live()
                     ->searchable()
                     ->required()
                     ->afterStateUpdated(function (Set $set, ?string $state): void {
                         Assert::string($state);
                         Assert::isInstanceOf(
-                            $command = static::$commands->where('name', $state)->first(),
+                            $command = static::$commands->toCollection()->firstWhere('name', $state),
                             CommandData::class,
                         );
                         $params = $command->arguments;

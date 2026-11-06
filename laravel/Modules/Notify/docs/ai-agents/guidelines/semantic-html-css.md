@@ -1,3 +1,15 @@
+---
+title: "semantic html css"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic html css"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎨 Semantic HTML & CSS - Best Practices
 
 **Path**: `.agents/docs/guidelines/semantic-html-css.md`  
@@ -6,7 +18,6 @@
 **Priority**: HIGH
 
 ---
-
 ## 🎯 Philosophy
 
 > "Use elements for their **SEMANTIC MEANING**, not their default styling."
@@ -321,6 +332,7 @@ Semantic HTML **REDUCES** need for ARIA:
 ## 📊 Examples from Our Project
 
 ### Predict Detail Page
+### Forecast Detail Page
 
 ```blade
 {{-- ❌ WRONG: Non-semantic --}}
@@ -336,12 +348,12 @@ Semantic HTML **REDUCES** need for ARIA:
 </div>
 
 {{-- ✅ CORRECT: Semantic --}}
-<main class="predict-detail-page">
-  <article class="predict-card">
-    <header class="predict-header">
-      <h1 class="predict-title">F1 Champion 2026</h1>
+<main class="forecast-detail-page">
+  <article class="forecast-card">
+    <header class="forecast-header">
+      <h1 class="forecast-title">F1 Champion 2026</h1>
     </header>
-    <section class="predict-outcomes">
+    <section class="forecast-outcomes">
       <ul class="outcomes-list">
         <li class="outcome-item">
           <span class="outcome-name">Verstappen</span>

@@ -1,3 +1,14 @@
+---
+title: "help"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "help"
+issues: []
+discussions: []
+---
+
 <purpose>
 Display the complete GSD command reference. Output ONLY the reference content. Do NOT add project-specific analysis, git status, next-step suggestions, or any commentary beyond the reference.
 </purpose>

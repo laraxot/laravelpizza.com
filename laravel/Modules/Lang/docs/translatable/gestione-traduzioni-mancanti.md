@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Gestione delle Traduzioni Mancanti con Spatie Laravel Translatable"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+  - "../italian-text-refined-audit-report.md"
+status: draft
+---
 # Gestione delle Traduzioni Mancanti con Spatie Laravel Translatable
 
 Questo documento descrive come gestire i casi in cui un modello non ha una traduzione richiesta utilizzando il pacchetto `spatie/laravel-translatable`.

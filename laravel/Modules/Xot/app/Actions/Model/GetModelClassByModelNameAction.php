@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 
@@ -22,7 +21,7 @@ class GetModelClassByModelNameAction
     {
         Assert::isArray($morph_map = config('morph_map'));
         $modelClass = collect($morph_map)->get($modelName);
-        if (null === $modelClass) {
+        if ($modelClass === null) {
             return app(GetFirstModelClassByModelNameAction::class)->execute($modelName);
         }
         Assert::string($modelClass, __FILE__.':'.__LINE__.' - '.class_basename(self::class));

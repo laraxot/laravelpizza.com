@@ -1,3 +1,14 @@
+---
+title: "Componenti Dropdown, Avatar e Loading Indicator di Filament"
+type: note
+status: draft
+created: 2026-01-27
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "componenti dropdown, avatar e loading indicator di filament ui"
+---
+
 # Componenti Dropdown, Avatar e Loading Indicator di Filament 
 
 ## Indice

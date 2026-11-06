@@ -1,3 +1,11 @@
+---
+title: "Theme Assets Workflow - CSS/JS Frontend"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "theme assets workflow - css/js frontend xot"
+---
 # 🎨 Theme Assets Workflow - CSS/JS Frontend
 
 **⚠️ REGOLA CRITICA**: Per modifiche CSS/JS del frontend, lavorare SEMPRE nella cartella del tema, NON nella root Laravel.

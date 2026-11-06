@@ -18,7 +18,7 @@ class MorphedByManyAction
     public function execute(Model $_model, RelationDTO $_relationDTO): void
     {
         // Assert::isInstanceOf($relation = $relationDTO->rows, HasMany::class);
-        dddx('wip');
+        throw new \LogicException('Update\MorphedByManyAction not implemented');
 
         /*
          * foreach ($data as $k => $v) {

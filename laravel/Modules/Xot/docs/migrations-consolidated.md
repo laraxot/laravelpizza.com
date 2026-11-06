@@ -1,3 +1,11 @@
+---
+title: "Migrations - Documentazione Consolidata DRY + KISS"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "migrations - documentazione consolidata dry + kiss xot"
+---
 # Migrations - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTA la documentazione migrazioni del progetto

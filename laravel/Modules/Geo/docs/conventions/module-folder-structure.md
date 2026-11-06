@@ -1,3 +1,15 @@
+---
+title: "module folder structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module folder structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Module Folder Structure Convention
 
 > **Regola di Struttura per Cartelle Moduli Laravel**
@@ -7,7 +19,6 @@
 > **Owner:** Development Team
 
 ---
-
 ## Regola Generale
 
 La struttura delle cartelle nei moduli Laravel segue la convenzione standard di Laravel, con tutte le classi PHP organizzate sotto la cartella `app/`.
@@ -350,7 +361,7 @@ laravel/Modules/Gdpr/
 
 ### Documenti Correlati
 
-- [Workspace Naming Convention](conventions/workspace-naming.md)
+- [Workspace Naming Convention](workspace-naming.md)
 - [Project Structure](../../docs/project/structure.md)
 - [AGENTS.md](../../AGENTS.md)
 

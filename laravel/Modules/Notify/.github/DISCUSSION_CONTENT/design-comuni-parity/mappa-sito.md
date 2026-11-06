@@ -1,3 +1,14 @@
+---
+title: "mappa sito"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mappa sito"
+issues: []
+discussions: []
+---
+
 # 🎨 Design Comuni: Mappa del Sito
 
 ## Pagina
@@ -28,4 +39,12 @@ Da definire dopo l'analisi strutturale.
 - [ ] Documentazione
 
 ---
+title: "mappa sito"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mappa sito"
+issues: []
+discussions: []
 *Generato automaticamente da bashscripts/design-comuni-parity/create-github-issues.sh*

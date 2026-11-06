@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "PHPStan fix patterns for Tenant module"
 type: troubleshooting
 tags: [phpstan, static-analysis, pest, mockery, tenant]
@@ -6,12 +8,13 @@ created: 2026-06-18
 updated: 2026-06-18
 qmd: "phpstan fix patterns tenant module mockService allows factory WebmozartAssert"
 related:
-  - ../../../../../docs/wiki/PHPSTAN-INDEX.md
+  - ../../../../../../docs/wiki/PHPSTAN-INDEX.md
   - ../../../Xot/docs/wiki/concepts/phpstan-pest-bridge-discipline.md
-  - ../testing-rules.md
+  - ../../testing-rules.md
+status: draft
 ---
 
-# PHPStan fix patterns — Tenant
+# PHPStan fix patterns: Tenant
 
 ## Stato (2026-06-18, aggiornamento)
 
@@ -34,7 +37,7 @@ Fix sessione corrente:
 
 Trait usati fuori Tenant (`SushiToPhpArray` in User) non risultano «used» in scan isolato. Pattern Geo:
 
-I probe `SushiToCsvPhpstanProbe` e `SushiToPhpArrayPhpstanProbe` (in `tests/Fixtures/Traits/`) coprono i trait cross-module usati fuori Tenant.
+`tests/Fixtures/Traits/TenantPhpstanTraitProbes.php`: host `SushiToCsvPhpstanProbe`, `SushiToPhpArrayPhpstanProbe`.
 
 Fix trait associati: return type `getSushiRows()` / `getCsvHeader()` in `SushiToCsv`; `array_values` tipizzato in `SushiToPhpArray`.
 
@@ -49,7 +52,7 @@ Fix trait associati: return type `getSushiRows()` / `getCsvHeader()` in `SushiTo
 | `config/modules.php` | Literal per sezione `composer` (no `env()`) |
 | `TestSushiModel` | `@phpstan-use HasXotFactory<TestSushiModelFactory>` |
 
-## Test — religione
+## Test: religione
 
 **Non creare modelli/classi solo per far passare test obsoleti.** Preferire:
 
@@ -69,17 +72,17 @@ Fix trait associati: return type `getSushiRows()` / `getCsvHeader()` in `SushiTo
 
 ### Test rimossi (ridondanti / rotti)
 
-- `tests/Unit/TenantModelsTest.php` — modelli fantasma
-- `tests/Integration/*SushiToJson*` — duplicati, centinaia di errori
+- `tests/Unit/TenantModelsTest.php`: modelli fantasma
+- `tests/Integration/*SushiToJson*`: duplicati, centinaia di errori
 - `tests/Performance/SushiToJsonPerformanceTest.php`
 - `tests/Unit/SushiToJsonTraitTest.php`, `tests/Unit/Traits/SushiToJsonTest.php`
-- `tests/Unit/ApplicationPublicPathCoverageTest.php` — scope `App\Application`, non Tenant
-- `tests/Unit/DomainModelTest.php` — duplicato di `DomainTest`
+- `tests/Unit/ApplicationPublicPathCoverageTest.php`: scope `App\Application`, non Tenant
+- `tests/Unit/DomainModelTest.php`: duplicato di `DomainTest`
 
 ### Test mantenuti / riscritti
 
-- `tests/Unit/SushiToJsonTraitPestTest.php` — 4 casi essenziali, path isolato in `testing`
-- `tests/Feature/TenantBusinessLogicTest.php` — Pest + `createTenant()` + factory tipizzate
+- `tests/Unit/SushiToJsonTraitPestTest.php`: 4 casi essenziali, path isolato in `testing`
+- `tests/Feature/TenantBusinessLogicTest.php`: Pest + `createTenant()` + factory tipizzate
 
 ## Comandi
 
@@ -91,6 +94,6 @@ vendor/bin/phpinsights analyse Modules/Tenant/app Modules/Tenant/tests --config-
 ./vendor/bin/pest Modules/Tenant/tests
 ```
 
-Regole PHPMD modulo: `Modules/Tenant/phpmd.ruleset.xml` — allineato al [canon Laraxot](../../../../docs/wiki/concepts/phpmd-laraxot-conventions.md) (exclude aggiuntivo `GetTenantNameAction` per bootstrap `$_SERVER`).
+Regole PHPMD modulo: `Modules/Tenant/phpmd.ruleset.xml`: allineato al [canon Laraxot](../../../../../../docs/wiki/concepts/phpmd-laraxot-conventions.md) (exclude aggiuntivo `GetTenantNameAction` per bootstrap `$_SERVER`).
 
 Config PHPInsights: `Modules/Tenant/phpinsights.php` (preset laravel + remove regole incompatibili con Pest/traits).

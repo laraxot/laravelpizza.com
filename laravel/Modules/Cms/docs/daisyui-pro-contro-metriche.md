@@ -1,8 +1,14 @@
 ---
+title: "daisyui pro contro metriche"
+created: 2026-09-26
+qmd: "daisyui pro contro metriche"
+issues: []
+discussions: []
 type: reference
 module: Cms
 tags: [daisyui, tailwind, metriche, governance, fixcity, sixteen]
 updated: 2026-05-15
+status: draft
 ---
 
 # DaisyUI: pro, contro e percentuali

@@ -1,3 +1,15 @@
+---
+title: "file naming rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "file naming rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole di Naming per File
 
 ## 🎯 Regola Fondamentale: NO Duplicati Case-Insensitive
@@ -36,7 +48,7 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 ✅ CORRETTO:
 - README.md (maiuscolo - convenzione universale)
 - ROADMAP.md (maiuscolo - convenzione universale)
-- CHANGELOG.md (maiuscolo - convenzione universale)
+- changelog.md (maiuscolo - convenzione universale)
 - LICENSE.md (maiuscolo - convenzione universale)
 - CONTRIBUTING.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)

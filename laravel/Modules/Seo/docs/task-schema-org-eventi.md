@@ -1,3 +1,15 @@
+---
+title: "task schema org eventi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task schema org eventi"
+issues: []
+discussions: []
+status: active
+---
+
 # Task: Implementare Schema.org per Eventi - Seo
 
 **Modulo**: Seo
@@ -5,7 +17,6 @@
 **Completamento**: 0%
 
 ---
-
 ## Scopo e responsabilita'
 
 - **Seo**: assemblare e rendere disponibile JSON-LD nelle pagine (Cms/Theme), evitando duplicazione di logica di dominio.
@@ -81,5 +92,5 @@ Alcune pagine di ricerca Schema.org (es. `https://schema.org/docs/search_results
 
 ## Collegamenti
 
-- [Meetup: tasks-schema-org-event-series-actions](../../meetup/docs/tasks-schema-org-event-series-actions.md)
-- [Geo: tasks-schema-org-place-geocircle](../../geo/docs/tasks-schema-org-place-geocircle.md)
+- [Meetup: tasks-schema-org-event-series-actions](../../meetup/docs/tasks-schema-org-event-series-actions.md) _(target mancante, verificato 2026-10-08)_
+- [Geo: tasks-schema-org-place-geocircle](../../geo/docs/tasks-schema-org-place-geocircle.md) _(target mancante, verificato 2026-10-08)_

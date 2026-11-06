@@ -1,3 +1,15 @@
+---
+title: "DOCUMENT ROOT UPDATE SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DOCUMENT ROOT UPDATE SUMMARY"
+issues: []
+discussions: []
+status: draft
+---
+
 # Documentation Update Summary - public_html Document Root
 
 **Date**: March 30, 2026
@@ -203,11 +215,11 @@ Next Review: 2026-04-30
 - [Master Module Index](laravel/Modules/docs/README.md)
 - [Master Theme Index](laravel/Themes/docs/README.md)
 - [Project Documentation](docs/README.md)
+- [Project Documentation](../README.md)
 - [AGENTS.md](AGENTS.md)
 - [.windsurfrules](.windsurfrules)
 
 ---
-
 **Status**: ✅ Complete
 **Date**: March 30, 2026
 **Verified By**: AI Agent

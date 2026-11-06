@@ -70,11 +70,6 @@ class OauthClientFactory extends Factory
     /**
      * Create a password client.
      */
-    public function asPersonalAccessTokenClient(): static
-    {
-        return $this->personalAccess();
-    }
-
     public function password(): static
     {
         return $this->state(fn (): array => [
@@ -127,7 +122,7 @@ class OauthClientFactory extends Factory
     /**
      * Create client with specific scopes.
      *
-     * @param array<string> $scopes
+     * @param  array<string>  $scopes
      */
     public function withScopes(array $scopes): static
     {

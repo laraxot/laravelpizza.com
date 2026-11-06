@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "js file english naming standing rule"
+issues: []
+discussions: []
 title: js file english naming standing rule
 type: memory
 module: Geo
@@ -7,6 +12,7 @@ related:
   - ../rules/js-file-english-naming-rule.md
   - ../concepts/map-js-module-naming-rule.md
   - ../../../../../docs/stories/STORY-132-rename-popup-segnalazione-js-english.md
+status: draft
 ---
 
 # Memoria — JS Geo: mai italiano nel filename

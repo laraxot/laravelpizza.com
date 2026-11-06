@@ -1,3 +1,15 @@
+---
+title: "kilo configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kilo configuration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Kilo Configuration Guide
 
 **File**: `.kilo/kilo.jsonc`  
@@ -14,7 +26,7 @@ Kilo è un'estensione VS Code per AI-assisted coding con CLI. La configurazione 
 - Integrazioni (BMAD, GSD, Ralph, OpenViking, NotebookLM)
 - Quality gates (PHPStan, Pint, Pest)
 
-## Configurazione FixCity
+## Configurazione Notify
 
 ### Provider AI Configurati
 
@@ -216,7 +228,7 @@ npm run lint, npm run format
   "modules": "laravel/Modules/",
   "themes": "laravel/Themes/",
   "documentRoot": "public_html/",
-  "config": "laravel/config/local/fixcity/xra.php"
+  "config": "laravel/config/local/laraxot/xra.php"
 }
 ```
 
@@ -358,9 +370,10 @@ kilo chat --model "google/gemini-2.5-pro"
 - [BMAD Integration](docs/project/bmad-gsd-ralph-integration.md)
 - [NotebookLM Integration](docs/project/notebooklm-integration.md)
 - [OpenViking Integration](docs/openviking-integration.md)
+- [NotebookLM Integration](notebooklm-integration.md)
+- [OpenViking Integration](../openviking-integration.md)
 
 ---
-
 **Last Updated**: 2026-03-30  
 **Configuration Version**: 1.0.0  
 **Status**: ✅ Active

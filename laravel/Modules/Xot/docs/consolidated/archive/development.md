@@ -1,3 +1,11 @@
+---
+title: "Sviluppo"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "sviluppo xot"
+---
 # Sviluppo
 
 ## Pacchetti Utilizzati

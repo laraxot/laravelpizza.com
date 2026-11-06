@@ -1,3 +1,15 @@
+---
+title: "readme en"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme en"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🤖 AI — English presentation
 
 [![Domain-AI](https://img.shields.io/badge/Domain-AI%20Integration-512DA8.svg)](#)
@@ -13,7 +25,6 @@
 > **AI that assists, not replaces the municipality.** On-demand LLM integrations, BMAD workflows, agent tooling.
 
 ---
-
 ## Why it exists
 
 Speed up development and operator support with guardrails.
@@ -39,7 +50,7 @@ Speed up development and operator support with guardrails.
 
 The future is **augmented** — let's build it ethically.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

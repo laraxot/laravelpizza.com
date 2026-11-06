@@ -13,6 +13,12 @@ use function Safe\file_put_contents;
 use function Safe\unlink;
 
 uses(TestCase::class);
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
 
 /**
  * @return array<string, mixed>
@@ -53,7 +59,7 @@ describe('Read Translation File Action', function (): void {
         /** @var TestCase $this */
         $filePath = readTranslationTestFilePath();
         $translations = defaultReadTranslationTestData();
-        createTranslationFile($filePath, $translations);
+        TestCase::createTranslationFile($filePath, $translations);
 
         $result = makeReadTranslationFileAction()->execute($filePath);
 
@@ -73,7 +79,7 @@ describe('Read Translation File Action', function (): void {
     test('throws exception for unreadable file', function (): void {
         /** @var TestCase $this */
         $filePath = readTranslationTestFilePath();
-        createTranslationFile($filePath, defaultReadTranslationTestData());
+        TestCase::createTranslationFile($filePath, defaultReadTranslationTestData());
         chmod($filePath, 0o000);
 
         $this->expectApplicationException(\Exception::class, 'File di traduzione non leggibile:');
@@ -156,8 +162,8 @@ describe('Read Translation File Action', function (): void {
         $phpContent = $action->toPhp($translations);
         $lines = explode("\n", $phpContent);
 
-        $parentLine = array_filter($lines, fn ($line) => str_contains($line, "'parent'"));
-        $childLine = array_filter($lines, fn ($line) => str_contains($line, "'child'"));
+        $parentLine = array_filter($lines, fn (string $line) => str_contains($line, "'parent'"));
+        $childLine = array_filter($lines, fn (string $line) => str_contains($line, "'child'"));
 
         Assert::assertStringStartsWith('    ', (string) current($parentLine));
         Assert::assertStringStartsWith('        ', (string) current($childLine));

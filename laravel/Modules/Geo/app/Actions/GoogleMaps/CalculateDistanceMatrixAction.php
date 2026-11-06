@@ -10,13 +10,17 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per calcolare la matrice delle distanze tra punti usando Google Maps.
  */
 class CalculateDistanceMatrixAction
 {
-    private const BASE_URL = 'https://maps.googleapis.com/maps/api/distancematrix/json';
+    use QueueableAction;
+
+    private const string BASE_URL = GeoApiEndpoints::GOOGLE_DISTANCE_MATRIX;
 
     /**
      * Calcola la matrice delle distanze tra origini e destinazioni.

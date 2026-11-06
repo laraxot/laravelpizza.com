@@ -5,19 +5,21 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Pages\Tenancy;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Pages\Tenancy\RegisterTenant;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Contracts\TeamContract;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Pages\Tenancy\XotBaseRegisterTenant;
 
-class RegisterTeam extends RegisterTenant
+class RegisterTeam extends XotBaseRegisterTenant
 {
     public static function getLabel(): string
     {
         return 'Register team';
     }
 
-    /** @return array<int|string, mixed> */
+    /**
+     * @return array<int, TextInput>
+     */
     public function getFormSchema(): array
     {
         return [
@@ -27,7 +29,7 @@ class RegisterTeam extends RegisterTenant
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     protected function handleRegistration(array $data): Model
     {

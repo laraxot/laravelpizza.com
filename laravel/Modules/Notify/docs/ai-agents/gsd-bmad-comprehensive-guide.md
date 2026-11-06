@@ -1,4 +1,16 @@
-# GSD & BMAD — Guida Completa per Agenti AI
+---
+title: "gsd bmad comprehensive guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd bmad comprehensive guide"
+issues: []
+discussions: []
+status: draft
+---
+
+# GSD & BMAD: Guida Completa per Agenti AI
 
 > **Scopo**: Questa guida è la risorsa definitiva per tutti gli agenti AI che lavorano sul progetto PTVX Fila5.
 > 
@@ -7,7 +19,6 @@
 > **Versione**: 2.0 (GSD v1.26.0 + BMAD v6)
 
 ---
-
 ## 📖 Indice
 
 1. [Introduzione](#introduzione)
@@ -178,6 +189,7 @@ Ogni task: Contesto fresco (200k token) → Qualità costante ✅
 │   ├── STACK.md         # Stack tecnologico
 │   ├── FEATURES.md      # Feature research
 │   ├── ARCHITECTURE.md  # Architettura
+│   ├── architecture.md  # Architettura
 │   └── PITFALLS.md      # Pitfalls da evitare
 ├── phase-1-PLAN.md      # Task atomici XML
 ├── phase-1-SUMMARY.md   # Cosa è successo
@@ -446,6 +458,8 @@ Agent N (Verifier):
 Commit Messages:
 - "docs: predict detail research"
 - "docs: predict detail architecture"
+- "docs: forecast detail research"
+- "docs: forecast detail architecture"
 - "feat: add price chart component"
 - "test: verify phase 1 complete"
 

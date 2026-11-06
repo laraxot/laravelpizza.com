@@ -1,3 +1,15 @@
+---
+title: "06 monitoring"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "06 monitoring"
+issues: []
+discussions: []
+status: draft
+---
+
 
 
 # 📊 Fase 6: Monitoraggio

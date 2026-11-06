@@ -1,3 +1,28 @@
+---
+title: "Risoluzione conflitti Git: PHPDoc modelli User"
+type: concept
+tags: [git, conflicts, models, phpdoc]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git-conflicts-models-phpdoc risoluzione conflitti git: phpdoc modelli user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Risoluzione conflitti Git: PHPDoc modelli User
 
 ## Contesto
@@ -23,5 +48,5 @@ Conflitti Git nei blocchi PHPDoc di 25+ modelli del modulo User, causati da merg
 
 ## Riferimenti
 
-- [conflict_resolution_report](conflict_resolution_report.md)
+- [conflict_resolution_report](conflict-resolution-report.md)
 - [rules-index](rules-index.md)

@@ -35,7 +35,6 @@ class NotifyThemeFactory extends Factory
             'subject' => fake()->word,
             'body' => fake()->text,
             'body_html' => fake()->text,
-            'from' => fake()->word,
-        ];
+            'from' => fake()->word];
     }
 }

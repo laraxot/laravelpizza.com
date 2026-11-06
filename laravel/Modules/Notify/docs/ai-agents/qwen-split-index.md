@@ -1,3 +1,15 @@
+---
+title: "qwen split index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen split index"
+issues: []
+discussions: []
+status: draft
+---
+
 # QWEN.md Split Index
 
 > Documentazione QWEN.md spezzata in file più piccoli.
@@ -15,6 +27,7 @@
 ## 🔗 Collegamento
 
 - [QWEN.md originale](../../QWEN.md)
+- [QWEN.md originale](../QWEN.md)
 - [Index principale](./index.md)
 
 ## Note

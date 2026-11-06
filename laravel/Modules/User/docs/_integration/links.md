@@ -1,3 +1,24 @@
+---
+title: "links"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links links"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./eav.md"
+  - "./filament.md"
+  - "./gdpr.md"
+  - "./json.md"
+  - "./passport.md"
+  - "./payment.md"
+  - "./phpstan.md"
+  - "./profile.md"
+status: draft
+---
+
 # links
 
 <!-- Contenuto migrato da _docs/links.txt -->

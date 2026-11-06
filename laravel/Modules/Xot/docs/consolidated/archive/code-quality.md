@@ -1,3 +1,11 @@
+---
+title: "Laraxot Code Quality Standards"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "laraxot code quality standards xot"
+---
 # Laraxot Code Quality Standards
 
 ## Overview

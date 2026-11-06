@@ -1,3 +1,11 @@
+---
+title: "_pivot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_pivot xot"
+---
 # _pivot
 
 <!-- Contenuto migrato da _docs/_pivot.txt -->

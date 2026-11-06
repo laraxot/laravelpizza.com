@@ -21,6 +21,14 @@ return [
         'geocode' => 'Geocodierung',
     ],
     'fields' => [
+        'use_my_location' => [
+            'label' => 'Meinen Standort verwenden',
+        ],
+        'address' => [
+            'label' => 'Adresse',
+            'placeholder' => 'Adresse eingeben',
+            'use_my_location' => 'Meinen Standort verwenden',
+        ],
         'model_type' => [
             'label' => 'Modelltyp',
             'placeholder' => 'Modelltyp auswählen',
@@ -123,6 +131,15 @@ return [
             'helper_text' => '',
             'tooltip' => '',
         ],
+    ],
+    'geolocation' => [
+        'locating' => 'Standort wird ermittelt...',
+        'not_supported' => 'Geolokalisierung wird von Ihrem Browser nicht unterstützt.',
+        'address_not_found' => 'Adresse nicht gefunden.',
+        'error' => 'Fehler bei der Geolokalisierung.',
+        'permission_denied' => 'Geolokalisierungsberechtigung verweigert.',
+        'timeout' => 'Zeitüberschreitung bei der Standortermittlung.',
+        'unavailable' => 'Standort ist derzeit nicht verfügbar.',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',

@@ -1,3 +1,20 @@
+---
+title: "RegistrationWidget FileUpload Error Fix"
+type: concept
+tags: [registration, widget, fileupload, fix]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "registration-widget-fileupload-fix registrationwidget fileupload error fix"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./dashboard-filters-integration.md"
+  - "./edit-user-widget.md"
+  - "./registration-widget-fileupload.md"
+  - "./registration-widget.md"
+status: draft
+---
+
 # RegistrationWidget FileUpload Error Fix
 
 ## Problema Identificato

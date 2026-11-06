@@ -1,3 +1,11 @@
+---
+title: "Conformità PSR-4 nel Progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "conformità psr-4 nel progetto xot"
+---
 # Conformità PSR-4 nel Progetto
 
 ## Introduzione

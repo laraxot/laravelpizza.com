@@ -1,3 +1,15 @@
+---
+title: "filament components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices per l'Utilizzo dei Componenti Filament
 
 ## Principio Fondamentale
@@ -213,7 +225,7 @@ it('renders filament icon buttons for social links', function () {
 - [Testing Components](/laravel/modules/cms/docs/testing/components.md)
 
 ## Collegamenti tra versioni di filament-components.md
-* [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
+* [filament-components.md](../../../User/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/modules/cms/docs/filament-components.md)
+* [filament-components.md](../filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)

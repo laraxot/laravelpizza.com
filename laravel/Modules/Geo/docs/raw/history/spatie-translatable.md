@@ -1,3 +1,14 @@
+---
+title: "spatie translatable"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie translatable"
+issues: []
+discussions: []
+---
+
 # Spatie Laravel Translatable - Guida Completa
 
 ## Introduzione
@@ -412,4 +423,12 @@ foreach (OldPost::all() as $oldPost) {
 
 ---
 
+title: "spatie translatable"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie translatable"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Sistema di documentazione automatica*

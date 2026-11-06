@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!--
   This example requires some changes to your config:
@@ -41,15 +40,15 @@ declare(strict_types=1);
           <div class="relative">
             <div class="sm:text-center">
               <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Get notified when we&rsquo;re launching.</h2>
-              <p class="mx-auto mt-6 max-w-2xl text-lg text-indigo-200">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque.</p>
+              <p class="mx-auto mt-6 max-w-2xl text-lg text-indigo-200">{{ __('ui::blocks_newsletter_archivied.archivied_centered_card_with_graphic.paragraph_1.description') }}</p>
             </div>
             <form action="#" class="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
               <div class="min-w-0 flex-1">
-                <label for="cta-email" class="sr-only">Email address</label>
-                <input id="cta-email" type="email" class="block w-full rounded-md border border-transparent px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600" placeholder="Enter your email">
+                <label for="cta-email" class="sr-only">{{ __('ui::blocks_demo_shared.labels.email_address.label') }}</label>
+                <input id="cta-email" type="email" class="block w-full rounded-md border border-transparent px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600" placeholder="{{ __('ui::blocks_demo_shared.fields.enter_your_email.placeholder') }}">
               </div>
               <div class="mt-4 sm:ml-3 sm:mt-0">
-                <button type="submit" class="block w-full rounded-md border border-transparent bg-indigo-500 px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10">Notify me</button>
+                <button type="submit" class="block w-full rounded-md border border-transparent bg-indigo-500 px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10">{{ __('ui::blocks_demo_shared.labels.notify_me.label') }}</button>
               </div>
             </form>
           </div>

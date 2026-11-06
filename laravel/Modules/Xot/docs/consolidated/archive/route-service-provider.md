@@ -1,3 +1,11 @@
+---
+title: "RouteServiceProvider nei Moduli <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "routeserviceprovider nei moduli <nome progetto> xot"
+---
 # RouteServiceProvider nei Moduli <nome progetto>
 
 Questo documento descrive le linee guida per l'implementazione corretta del RouteServiceProvider nei moduli <nome progetto>.

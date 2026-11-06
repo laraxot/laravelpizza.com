@@ -1,3 +1,15 @@
+---
+title: "architecture rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architecture Rules
 
 > **⚠️ CRITICAL**: These are the most important rules that must always be followed.
@@ -84,6 +96,5 @@ Before every commit, verify:
 - [ ] Translation files properly structured
 
 ---
-
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: architecture-rules.md - Critical architecture rules

@@ -21,8 +21,7 @@ final class NetfunChannelNotifiableDummy extends Model implements CanThemeNotifi
             'from' => 'Xot',
             'recipient' => 'dummy@example.test',
             'body' => 'body',
-            'channels' => ['sms'],
-        ]);
+            'channels' => ['sms']]);
     }
 
     public function getModel(): Model

@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione e monitoraggio dei log di sistema',
         ],
-        'label' => 'log',
+        'label' => 'Log',
         'sort' => '15',
         'icon' => 'xot-log',
     ],

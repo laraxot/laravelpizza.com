@@ -14,7 +14,7 @@ class JobBatchForm extends XotBaseResourceForm
     /**
      * @return array<int|string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Section::make([

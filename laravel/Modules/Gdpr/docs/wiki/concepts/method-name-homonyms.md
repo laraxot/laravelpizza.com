@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "method name homonyms"
+issues: []
+discussions: []
 title: "censimento omonimi metodi — modulo Gdpr"
 type: analysis
 module: Gdpr
@@ -6,6 +11,7 @@ updated: 2026-06-15
 related:
   - ../../../../../../docs/wiki/method-name-homonym-census.md
   - ../../../../../../bashscripts/docs/method-homonym-census.json
+status: draft
 ---
 
 # Censimento omonimi metodi — Gdpr

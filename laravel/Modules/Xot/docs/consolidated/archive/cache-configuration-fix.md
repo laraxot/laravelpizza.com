@@ -1,3 +1,11 @@
+---
+title: "Risoluzione Errore Configurazione Cache"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione errore configurazione cache xot"
+---
 # Risoluzione Errore Configurazione Cache
 
 ## Problema

@@ -1,4 +1,25 @@
+---
+title: "MCP Server Index - Notify Project"
+type: index
+tags: [notify, docs, mcp]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione mcp index mcp server index - laraxot project index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/readme.md
+  - ../integrations/readme.md
+  - ../templates/readme.md
+status: draft
+---
 # MCP Server Index - FixCity Project
+# MCP Server Index - Notify Project
 
 **Purpose**: Central index for all MCP server documentation  
 **Last Updated**: 2026-04-09
@@ -14,6 +35,8 @@
 | **Supermemory Guide** | [Themes/Sixteen/docs/supermemory-setup.md](../../laravel/Themes/Sixteen/docs/supermemory-setup.md) | Supermemory integration guide |
 | **Visual Parity Tool** | [Themes/Sixteen/scripts/visual-parity.mjs](../../laravel/Themes/Sixteen/scripts/visual-parity.mjs) | Playwright-based visual analysis |
 | **Supermemory Script** | [Themes/Sixteen/scripts/supermemory-context.js](../../laravel/Themes/Sixteen/scripts/supermemory-context.js) | AI context indexing |
+| **Visual Parity Tool** | [Themes/Sixteen/scripts/visual-parity.mjs](../../../../Themes/Sixteen/scripts/visual-parity.mjs) | Playwright-based visual analysis |
+| **Supermemory Script** | [Themes/Sixteen/scripts/supermemory-context.js](../../../../Themes/Sixteen/scripts/supermemory-context.js) | AI context indexing |
 
 ---
 

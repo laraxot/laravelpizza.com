@@ -1,6 +1,18 @@
+---
+title: "class inheritance best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "class inheritance best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices per l'Ereditarietà delle Classi
 
-Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema Quaeris, con particolare attenzione alle classi che estendono `XotBasePage`.
+Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema SaluteOra, con particolare attenzione alle classi che estendono `XotBasePage`.
 
 ## Analisi dell'Ereditarietà di XotBasePage
 

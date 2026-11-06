@@ -1,4 +1,7 @@
 ---
+qmd: "entity"
+issues: []
+discussions: []
 title: "Entity Name"
 type: entity
 sources: ["raw/articles/source-filename.md"]
@@ -7,6 +10,8 @@ created: {{date}}
 updated: {{date}}
 tags: [person, organization, module]
 related: []
+status: superseded
+superseded_by: ../../llm-wiki/_templates/entity.md
 ---
 
 # {{title}}

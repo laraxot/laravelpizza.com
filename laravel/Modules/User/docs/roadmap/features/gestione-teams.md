@@ -1,3 +1,23 @@
+---
+title: "Gestione Teams"
+type: concept
+tags: [gestione, teams]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "gestione-teams gestione teams"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./audit-logging.md"
+  - "./autenticazione.md"
+  - "./autorizzazione.md"
+  - "./gestione-utenti.md"
+  - "./legacy-code-cleanup.md"
+  - "./user-analytics.md"
+  - "./user-traits.md"
+status: draft
+---
+
 # Gestione Teams
 
 ⬅️ [Torna alla Roadmap](../../roadmap.md)

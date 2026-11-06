@@ -1,4 +1,28 @@
 ---
+title: "geo map cluster"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map cluster"
+issues: []
+discussions: []
+title: "geo map cluster"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map cluster"
+issues: []
+discussions: []
+title: "geo map cluster"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map cluster"
+issues: []
+discussions: []
 Farmshops-Eu-Style-Clustering
 
 1. Dynamic cluster sizing: 80px radius when zoom < 12, 45px otherwise

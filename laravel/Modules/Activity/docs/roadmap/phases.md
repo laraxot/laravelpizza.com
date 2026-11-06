@@ -1,3 +1,11 @@
+---
+title: "Fasi di sviluppo - Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, roadmap]
+qmd: "fasi di sviluppo - activity module activity"
+---
 # Fasi di sviluppo - Activity Module
 
 ## Fase 1: Qualità e Pulizia (In Corso)

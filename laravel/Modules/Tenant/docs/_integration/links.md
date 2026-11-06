@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "links"
+module: "Tenant"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links"
+related:
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # links
 
 <!-- Contenuto migrato da _docs/links.txt -->

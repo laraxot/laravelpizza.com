@@ -1,3 +1,12 @@
+---
+title: "User Module - PHPStan Level 10 Fix Plan"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - phpstan level 10 fix plan user"
+status: superseded
+superseded_by: phpstan-fix-plan-user.md
+---
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date

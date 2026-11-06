@@ -1,3 +1,15 @@
+---
+title: "laravel path conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel path conventions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni dei Path in Laravel e
 
 ## Regole Fondamentali per i Path di Cartelle

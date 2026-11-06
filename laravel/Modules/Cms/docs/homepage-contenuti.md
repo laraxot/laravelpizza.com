@@ -1,3 +1,15 @@
+---
+title: "homepage contenuti"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage contenuti"
+issues: []
+discussions: []
+status: draft
+---
+
 # Contenuti Homepage il progetto
 
 ## Testo principale della homepage

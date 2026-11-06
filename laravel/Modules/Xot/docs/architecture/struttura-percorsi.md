@@ -1,38 +1,11 @@
-# Struttura dei percorsi nel progetto
-
-> **Ambiente di riferimento**: ``
-
-## 🔑 Regola Fondamentale
-Tutti i percorsi assoluti DEVONO includere il segmento `laravel/` subito dopo la directory di base del progetto.
-
-```
-{componente}/{resto-del-percorso}
-                                 ↑
-                           segmento obbligatorio
-```
-
-## ✅ Percorsi Correttamente Formati
-```
-app/Models/User.php
-Modules/Xot/app/Providers/XotBaseServiceProvider.php
-Themes/One/resources/views/layouts/app.blade.php
-resources/lang/it/validation.php
-vendor/laravel/framework/src/Illuminate/Foundation/Application.php
-```
-
-## ❌ Percorsi Errati (segmento mancante)
-```
-app/Models/User.php
-Modules/Xot/app/Providers/XotBaseServiceProvider.php
-resources/lang/it/validation.php
-```
-
-## 🗂️ Anatomia del Progetto
-```
-
-├── docs/                 # Documentazione generale
-└── laravel/              # ⭐ Applicazione Laravel
-    ├── app/
+---
+title: "Struttura dei percorsi nel progetto <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, architecture]
+qmd: "struttura dei percorsi nel progetto <nome progetto> xot"
+---
 # Struttura dei percorsi nel progetto <nome progetto>
 
 ## Regola fondamentale
@@ -127,10 +100,6 @@ grep -r "app" --include="*.php" laravel
 grep -r "Modules" --include="*.php" laravel
 grep -r "Themes" --include="*.php" laravel
 grep -r "resources" --include="*.php" laravel
-grep -r "app" --include="*.php" laravel
-grep -r "Modules" --include="*.php" laravel
-grep -r "Themes" --include="*.php" laravel
-grep -r "resources" --include="*.php" laravel
 ```
 
 ## Correzzione automatica (opzionale)
@@ -143,40 +112,10 @@ Se si trovano percorsi errati, è possibile correggerli automaticamente con:
 find laravel -type f -name "*.php" -exec sed -i 's|app|app|g' {} \;
 find laravel -type f -name "*.php" -exec sed -i 's|Modules|Modules|g' {} \;
 find laravel -type f -name "*.php" -exec sed -i 's|Themes|Themes|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|app|app|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Modules|Modules|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Themes|Themes|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|app|app|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Modules|Modules|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Themes|Themes|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|app|app|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Modules|Modules|g' {} \;
-find laravel -type f -name "*.php" -exec sed -i 's|Themes|Themes|g' {} \;
 ```
 
 ## Riferimenti correlati
 
-- [Struttura del progetto](../xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../Xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../Xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../Xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../Xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../Xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../Xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../Xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../Xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../Xot/docs/standards/psr4-compliance.md)
-- [Struttura del progetto](../Xot/docs/architecture/struttura-progetto.md)
-- [Regole di namespace](../Xot/docs/standards/namespace-conventions.md)
-- [Autoloading](../Xot/docs/standards/psr4-compliance.md)
+- [Struttura del progetto](modules/xot/project_docs/architecture/struttura-progetto.md)
+- [Regole di namespace](modules/xot/project_docs/standards/namespace-conventions.md)
+- [Autoloading](modules/xot/project_docs/standards/psr4-compliance.md)

@@ -1,3 +1,15 @@
+---
+title: "zsh"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "zsh"
+issues: []
+discussions: []
+status: draft
+---
+
 ~~~ bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 touch ~/.zshrc

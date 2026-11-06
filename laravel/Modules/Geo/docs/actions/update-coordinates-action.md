@@ -1,3 +1,15 @@
+---
+title: "update coordinates action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "update coordinates action"
+issues: []
+discussions: []
+status: draft
+---
+
 # `UpdateCoordinatesAction` (Spatie Queueable Action)
 
 This document describes the `UpdateCoordinatesAction`, a Spatie Queueable Action responsible for handling the core business logic of geocoding and updating the geographic coordinates (latitude/longitude) of a collection of Eloquent models. It is designed to be highly reusable, type-safe, and capable of processing large batches efficiently.

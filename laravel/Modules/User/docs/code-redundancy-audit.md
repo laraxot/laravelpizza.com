@@ -1,5 +1,5 @@
 ---
-title: "Code redundancy audit — User"
+title: "Code redundancy audit: User"
 type: source
 status: draft
 tags: [code-audit, redundancy, dry, second-brain, module]
@@ -7,9 +7,23 @@ created: "2026-05-26"
 updated: "2026-05-26"
 owner: "User"
 issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/150"
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+qmd: "code redundancy audit   user user"
 ---
 
-# Code redundancy audit — User
+# Code redundancy audit: User
 
 ## Scopo
 
@@ -84,7 +98,7 @@ Ridurre rumore, duplicazione e ambiguita' nel codice di questo module, senza per
 - Religione: DRY e KISS sono dogmi utili solo se servono lo scopo.
 - Filosofia: il codice e' memoria operativa; la documentazione spiega perche' esiste.
 
-## Second Brain 2026 — note operative
+## Second Brain 2026: note operative
 
 - Markdown locale + Git restano la base piu' portabile: gli agenti leggono/scrivono file senza database esterni.
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.

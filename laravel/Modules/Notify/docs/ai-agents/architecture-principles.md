@@ -1,6 +1,19 @@
+---
+title: "architecture principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architecture Principles
 
 Key architectural rules for Quaeris Fila5 Mono (Laraxot / Laravel 12 / Filament 5).
+Key architectural rules for App Fila5 Mono (Laraxot / Laravel 12 / Filament 5).
 
 ## 0. Database Configuration (CRITICAL)
 
@@ -74,9 +87,9 @@ FilamentAsset::register([
     Js::make('chart-js-plugins', Vite::asset('resources/js/filament-chart-js-plugins.js', 'assets/chart'))->module(),
 ]);
 
-// WRONG: In other modules like Quaeris, User, etc.
+// WRONG: In other modules like App, User, etc.
 FilamentAsset::register([
-    Js::make('chart-js-plugins', Vite::asset('Resources/assets/js/filament-chart-js-plugins.js', 'assets/quaeris'))->module(),
+    Js::make('chart-js-plugins', Vite::asset('Resources/assets/js/filament-chart-js-plugins.js', 'assets/this-project'))->module(),
 ]);
 ```
 
@@ -131,6 +144,7 @@ Ref: `.claude/docs/spatie-queueable-action.md`
 ```php
 // WRONG - Service class FORBIDDEN
 namespace Modules\Quaeris\Services;
+namespace Modules\App\Services;
 class ReportService
 {
     public function generate(SurveyPdf $pdf): void { ... }
@@ -138,6 +152,7 @@ class ReportService
 
 // CORRECT - QueueableAction obbligatorio
 namespace Modules\Quaeris\Actions;
+namespace Modules\App\Actions;
 use Spatie\QueueableAction\QueueableAction;
 
 class GenerateReportAction
@@ -161,11 +176,11 @@ app(GenerateReportAction::class)->onQueue('reports')->execute($pdf);
 - Constructor injection ammessa per collaboratori stabili
 - Composizione: chiamare altre action via `app()` o injection
 - MAI creare un Job separato: usare `onQueue()` sull'action esistente
-- I ServiceProvider (`XotBaseServiceProvider`, `AdminPanelProvider`) NON sono "Service classes" — sono infrastruttura Laravel, si mantengono come sono
+- I ServiceProvider (`XotBaseServiceProvider`, `AdminPanelProvider`) NON sono "Service classes": sono infrastruttura Laravel, si mantengono come sono
 
 **Servizi legacy esistenti** (da non rimuovere, ma non creare di nuovi):
-- `Modules/Xot/app/Services/` — infrastruttura framework, non business logic
-- `Modules/Job/app/Services/ScheduleService.php` — wrapper scheduling
+- `Modules/Xot/app/Services/`: infrastruttura framework, non business logic
+- `Modules/Job/app/Services/ScheduleService.php`: wrapper scheduling
 
 ## 7. Type Safety Rules
 

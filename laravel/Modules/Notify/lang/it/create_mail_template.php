@@ -8,38 +8,29 @@ return [
             'label' => 'mailable',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'subject' => [
             'label' => 'subject',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'html_template' => [
             'label' => 'html_template',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'text_template' => [
             'label' => 'text_template',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'create' => [
-            'label' => 'create',
-        ],
+            'label' => 'create'],
         'createAnother' => [
-            'label' => 'createAnother',
-        ],
+            'label' => 'createAnother'],
         'cancel' => [
-            'label' => 'cancel',
-        ],
-    ],
+            'label' => 'cancel']],
     'label' => 'Create Mail Template',
     'plural_label' => 'Create Mail Template (Plurale)',
     'navigation' => [
@@ -47,10 +38,7 @@ return [
         'plural' => 'Create Mail Template',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings',
-        ],
+            'description' => 'General Settings'],
         'label' => 'Create Mail Template',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-];
+        'icon' => 'heroicon-o-collection']];

@@ -1,3 +1,15 @@
+---
+title: "cta"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cta"
+issues: []
+discussions: []
+status: draft
+---
+
 # CTA Block
 
 Il blocco CTA (Call-to-Action) è utilizzato per creare sezioni di chiamata all'azione che guidano l'utente verso una specifica azione.
@@ -88,5 +100,5 @@ Il blocco CTA può essere utilizzato in diverse posizioni:
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Best Practices UX](../ui/ux-guidelines.md)

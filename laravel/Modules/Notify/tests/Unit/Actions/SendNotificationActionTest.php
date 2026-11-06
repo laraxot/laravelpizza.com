@@ -14,11 +14,10 @@ use Modules\Notify\Actions\SendNotificationAction;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Notifications\GenericNotification;
-use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
-
+uses(\Modules\Notify\Tests\TestCase::class);
 /**
  * @param  array<string, mixed>  $attributes
  */
@@ -40,18 +39,21 @@ function makeDummySendNotificationRecipient(array $attributes = []): Model
 
         public function routeNotificationForMail(): string
         {
-            return (string) $this->getAttribute('email');
+            $email = $this->getAttribute('email');
+
+            return is_string($email) ? $email : '';
         }
 
         public function routeNotificationForSms(): string
         {
-            return (string) $this->getAttribute('phone');
+            $phone = $this->getAttribute('phone');
+
+            return is_string($phone) ? $phone : '';
         }
     };
 }
 
 beforeEach(function (): void {
-    /** @var TestCase $this */
     $schema = Schema::connection('notify');
 
     if (! $schema->hasTable('notification_templates')) {
@@ -80,10 +82,9 @@ beforeEach(function (): void {
 });
 
 test('send notification action throws when template is missing', function (): void {
-    /** @var TestCase $this */
     $recipient = makeDummySendNotificationRecipient(['email' => 'user@example.test']);
 
-    \assertNotifyThrows(
+    XotBasePest::assertThrows(
         fn () => app(SendNotificationAction::class)->handle($recipient, 'missing-template'),
         \Exception::class,
     );
@@ -101,8 +102,7 @@ test('send notification action returns false when template should not send', fun
         'variables' => [],
         'is_active' => true,
         'conditions' => ['send' => true],
-        'type' => 'email',
-    ]);
+        'type' => 'email']);
 
     $recipient = makeDummySendNotificationRecipient(['email' => 'user@example.test']);
 
@@ -123,8 +123,7 @@ test('send notification action dispatches database notification from template ch
         'variables' => [],
         'is_active' => true,
         'conditions' => null,
-        'type' => 'email',
-    ]);
+        'type' => 'email']);
 
     $recipient = makeDummySendNotificationRecipient(['email' => 'user@example.test']);
 

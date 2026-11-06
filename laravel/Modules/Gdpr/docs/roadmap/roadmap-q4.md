@@ -1,3 +1,15 @@
+---
+title: "roadmap q4"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap q4"
+issues: []
+discussions: []
+status: draft
+---
+
 # GDPR Module Roadmap (2025 Q4)
 
 ## Vision & Scope

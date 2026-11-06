@@ -1,3 +1,11 @@
+---
+title: "Bugfix: Carbon Timezone Error in XotServiceProvider"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "bugfix: carbon timezone error in xotserviceprovider xot"
+---
 # Bugfix: Carbon Timezone Error in XotServiceProvider
 
 ## Problema Identificato

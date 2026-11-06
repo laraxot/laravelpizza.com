@@ -1,8 +1,20 @@
+---
+title: "netfun action updates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun action updates"
+issues: []
+discussions: []
+status: draft
+---
+
 # Aggiornamenti a SendNetfunSMSAction
 
 ## Panoramica delle Modifiche
 
-La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto Quaeris e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
+La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto SaluteOra e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
 
 ## 1. Correzioni alla Configurazione
 
@@ -306,7 +318,7 @@ protected function normalizePhoneNumber(string $phoneNumber): string
 
 ## 6. Conclusioni
 
-Le modifiche apportate a `SendNetfunSMSAction` e l'aggiunta del nuovo DTO `SmsMessageData` hanno migliorato significativamente la qualità e la robustezza del codice, allineandolo con le best practice del progetto Quaeris e con i pattern di configurazione standardizzati.
+Le modifiche apportate a `SendNetfunSMSAction` e l'aggiunta del nuovo DTO `SmsMessageData` hanno migliorato significativamente la qualità e la robustezza del codice, allineandolo con le best practice del progetto SaluteOra e con i pattern di configurazione standardizzati.
 
 Questi miglioramenti garantiscono:
 1. Maggiore manutenibilità del codice
@@ -316,6 +328,4 @@ Questi miglioramenti garantiscono:
 5. Configurazione standardizzata e coerente
 
 ---
-
-*Ultimo aggiornamento: 2023-05-12*
 *Ultimo aggiornamento: 2023-05-12*

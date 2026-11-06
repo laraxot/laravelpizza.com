@@ -14,9 +14,10 @@ class UserWidget extends XotBaseWidget
 {
     use InteractsWithPageFilters;
 
-    protected static bool $isLazy = false;
+    protected static ?bool $isLazyLoaded = false;
 
-    protected string $view = 'user::filament.resources.user.widgets.user-widget';
+    /** @var view-string */
+    protected string $view;
 
     public function getFormSchema(): array
     {

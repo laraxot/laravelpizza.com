@@ -1,3 +1,11 @@
+---
+title: "pdf_to_txt"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pdf_to_txt xot"
+---
 # pdf_to_txt
 
 <!-- Contenuto migrato da _docs/pdf_to_txt.txt -->

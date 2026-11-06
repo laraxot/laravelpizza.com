@@ -1,3 +1,15 @@
+---
+title: "product strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product strategy"
+issues: []
+discussions: []
+status: active
+---
+
 # Seo - Product Strategy
 
 > Strategia prodotto. Modulo.
@@ -44,7 +56,7 @@ Portare **Seo** a uno stato in cui il progetto ottiene un vantaggio netto e misu
 
 - [PRD](prd.md)
 - [Product Roadmap](product-roadmap.md)
-- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md) _(target mancante, verificato 2026-10-08)_
 
 ## Regola architetturale
 

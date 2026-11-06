@@ -17,7 +17,7 @@ class NetfunSendAction
 
     public string $token;
 
-    /** @var array<string, mixed> */
+    /** @var array{status_code?: int, status_txt?: string} */
     public array $vars = [];
 
     /**
@@ -38,15 +38,14 @@ class NetfunSendAction
     /**
      * Execute the action.
      *
-     * @return array<string, mixed>
+     * @return array{status_code: int, status_txt: string}
      */
     public function execute(SmsData $smsData): array
     {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
-            'Content-Type' => 'application/json',
-        ];
+            'Content-Type' => 'application/json'];
 
         // dddx([ord($this->body[0]), $this->body]);
 
@@ -83,9 +82,7 @@ class NetfunSendAction
                      * 'code' => '1234',
                      * ],
                      */
-                ],
-            ],
-        ];
+                ]]];
 
         // dddx($body);
 

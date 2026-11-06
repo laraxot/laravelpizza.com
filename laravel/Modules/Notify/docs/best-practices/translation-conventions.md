@@ -1,3 +1,24 @@
+---
+title: "Convenzioni per le Traduzioni del Modulo Notify"
+type: concept
+tags: [notify, docs, best-practices, translation, conventions]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices translation conventions convenzioni per le traduzioni del modulo notify frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: superseded
+superseded_by: ../translation-conventions.md
+---
 # Convenzioni per le Traduzioni del Modulo Notify
 
 ## Regole Fondamentali

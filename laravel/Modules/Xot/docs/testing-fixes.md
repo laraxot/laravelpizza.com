@@ -1,3 +1,13 @@
+---
+title: "🧪 Fix Testing Issues - Laravel 12 Migration"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "🧪 Fix Testing Issues - Laravel 12 Migration"
+---
 # 🧪 Fix Testing Issues - Laravel 12 Migration
 
 ## Panoramica
@@ -220,3 +230,8 @@ Dopo le correzioni:
 - Verificare i test dopo ogni aggiornamento di Laravel
 - Seguire la struttura standard per i TestCase dei moduli
 - Documentare eventuali modifiche alla struttura di testing
+
+## xotbasemodel business logic (2026-10)
+
+`XotBaseModelBusinessLogicTest` usa `Assert` e verifica che `XotBaseModel` sia abstract ed estenda Eloquent, evitando `expect()->toBeSubclassOf()` che fa crashare PHPStan.
+

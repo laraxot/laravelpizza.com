@@ -1,3 +1,13 @@
+---
+title: "Code e Job"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Code e Job"
+---
 # Code e Job
 
 ## Configurazione Base
@@ -239,4 +249,4 @@ class JobFailedNotification extends Notification
             ->action('Vedi Dettagli', url('/jobs/failed'));
     }
 }
-```
+``` 

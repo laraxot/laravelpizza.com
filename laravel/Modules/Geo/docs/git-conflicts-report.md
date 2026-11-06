@@ -1,3 +1,15 @@
+---
+title: "git conflicts report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts report"
+issues: []
+discussions: []
+status: draft
+---
+
 # Global Git Conflict Report
 
 Generated on: Wed Apr 22 14:04:36 CEST 2026
@@ -20,10 +32,10 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Modules/Cms/docs/phpstan-scripts-roadmap.md
 * ./Modules/Cms/docs/roadmap.md
 * ./Modules/Cms/docs/roadmap/legacy/legacy-roadmap-x.md
-* ./Modules/Cms/docs/roadmap/legacy/legacy-roadmap-3.md
-* ./Modules/Cms/docs/quality-status-11.md
+* ./Modules/Cms/docs/roadmap/legacy/legacy-roadmap-content-management.md
+* ./Modules/Cms/docs/quality-status.md
 * ./Modules/Cms/docs/errors/git-conflicts-themes-resolution.md
-* ./Modules/Cms/docs/quality-status-2025-11.md
+* ./Modules/Cms/docs/quality-status-activity-module-november.md
 * ./Modules/Cms/docs/merge-conflicts-list.md
 * ./Modules/Cms/app/Models/Attachment.php
 * ./Modules/Cms/database/seeders/CmsMassSeeder.php
@@ -38,8 +50,8 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Modules/Notify/docs/ai-agents/git-error-path-does-not-have-our-version.md
 * ./Modules/Notify/docs/wiki/index.md
 * ./Modules/Notify/docs/merge-conflicts-list.md
-* ./Modules/Notify/docs/correzioni-phpstan-completate_3.md
-* ./Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
+* ./Modules/Notify/docs/correzioni-phpstan-completate-modulo-notify.md
+* ./Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-obiettivo.md
 * ./Modules/Notify/.planning/debug/knowledge-base.md
 * ./Modules/Notify/.planning/debug/resolved/sqlite-model-contract-fix.md
 * ./Modules/Blog/docs/wiki/README.md
@@ -74,13 +86,13 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Themes/TwentyOne/docs/merge-conflicts-list.md
 * ./Themes/Meetup/docs/merge-conflicts-list.md
 * ./Themes/Sixteen/docs/css-js-parity.md
-* ./Themes/Sixteen/docs/design-comuni/SEGNALAZIONE-FIX-SESSION-2026-04-07.md
-* ./Themes/Sixteen/docs/design-comuni/HTML_PARITY_COMPLETE.md
+* ./Themes/Sixteen/docs/design-comuni/segnalazione-fix-session.md
+* ./Themes/Sixteen/docs/design-comuni/html-parity-complete.md
 * ./Themes/Sixteen/docs/design-comuni/screenshots/comparison/POST-FIX-VERIFICATION.md
 * ./Themes/Sixteen/docs/design-comuni/screenshots/ref-homepage.png
 * ./Themes/Sixteen/docs/design-comuni/screenshots/reference/homepage-desktop.png
 * ./Themes/Sixteen/docs/design-comuni/screenshots/local-homepage-full.png
-* ./Themes/Sixteen/docs/MERGE_CONFLICT_RESOLUTION_LOG.md
+* ./Themes/Sixteen/docs/merge-conflict-resolution-log.md
 * ./Themes/Sixteen/docs/00-INDEX.md
 * ./Themes/Sixteen/docs/merge-conflicts-list.md
 * ./Themes/Sixteen/docs/screenshots/homepage/reference-full-2026-04-07.png

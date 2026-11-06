@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes gennaio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes gennaio"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔧 PHPStan Fixes - Modulo Geo - Gennaio 2025
 
 **Data**: 27 Gennaio 2025  
@@ -131,7 +143,7 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Geo](./readme.md)
+- [README.md Modulo Geo](./README.md)
 - [Architecture Overview](./architecture.md)
 - [Best Practices](./best-practices.md)
 
@@ -141,7 +153,6 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 - [Laravel Best Practices](https://laravel.com/docs/best-practices)
 
 ---
-
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 2.2.0  
 **🐛 PHPStan Level**: 9 ✅  

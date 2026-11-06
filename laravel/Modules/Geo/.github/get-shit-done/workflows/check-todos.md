@@ -1,3 +1,14 @@
+---
+title: "check todos"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "check todos"
+issues: []
+discussions: []
+---
+
 <purpose>
 List all pending todos, allow selection, load full context for the selected todo, and route to appropriate action.
 </purpose>
@@ -25,6 +36,14 @@ Todos are captured during work sessions with /gsd-add-todo.
 
 ---
 
+title: "check todos"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "check todos"
+issues: []
+discussions: []
 Would you like to:
 
 1. Continue with current phase (/gsd-progress)

@@ -1,8 +1,15 @@
-
-# Env
-
+---
+title: "env"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, install]
+qmd: "env"
+---
 ~~~ bash
-DEBUGBAR_ENABLED=false
+DEBUGBAR_ENABLED=true
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1

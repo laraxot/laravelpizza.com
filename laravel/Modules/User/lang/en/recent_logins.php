@@ -3,6 +3,13 @@
 declare(strict_types=1);
 
 return [
+    'heading' => 'Recent Logins',
+    'columns' => [
+        'user' => 'User',
+        'login_at' => 'Login Time',
+        'ip_address' => 'IP Address',
+        'user_agent' => 'User Agent',
+    ],
     'fields' => [
         'authenticatable' => [
             'name' => [
@@ -77,6 +84,5 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
+    'actions' => [],
 ];

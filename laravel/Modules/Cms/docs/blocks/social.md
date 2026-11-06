@@ -1,3 +1,15 @@
+---
+title: "social"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "social"
+issues: []
+discussions: []
+status: draft
+---
+
 # Social Block
 
 Il blocco Social è utilizzato per gestire i link ai social media, con supporto per diverse piattaforme social e personalizzazione del titolo. Può essere utilizzato in qualsiasi contesto, dal footer alla sidebar o in una sezione dedicata della pagina.
@@ -139,10 +151,10 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Social Media Guidelines](../marketing/social-media.md)
-- [Analytics Integration](../marketing/analytics.md)
+- [Analytics Integration](../packages/analytics.md)
 
 ## Collegamenti tra versioni di social.md
-* [social.md](laravel/modules/tenant/docs/it/config/social.md)
+* [social.md](../../../Tenant/docs/it/config/social.md)
 * [social.md](laravel/modules/cms/docs/blocks/social.md)

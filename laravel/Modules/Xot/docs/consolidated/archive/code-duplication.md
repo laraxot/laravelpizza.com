@@ -3,6 +3,8 @@ title: Duplicazione del codice
 description: Duplicazione del codice
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../tools/code-duplication.md
 ---
 
 # Duplicazione del codice, phpcpd.phar {#code-duplication}

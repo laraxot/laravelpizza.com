@@ -1,3 +1,15 @@
+---
+title: "sms actions pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms actions pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern per le Azioni SMS 
 
 ## Struttura e Convenzioni
@@ -250,9 +262,4 @@ Seguire questo pattern garantisce:
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
 
 ---
-
 *Ultimo aggiornamento: [DATE]*
-
-## PHPStan sui test reflection delle azioni SMS
-
-Per i test strutturali delle action SMS non istanziare classi che leggono `config()` nel costruttore: usa `ReflectionClass` sulla class-string. Verifica la firma pubblica `execute(SmsData): array` con `ReflectionNamedType` prima di chiamare `getName()`. Evita `expect()`, `class_uses()` e `file_get_contents()` nei test analizzati da PHPStan: preferisci `PHPUnit\Framework\Assert`, `ReflectionClass::getTraitNames()` e controlli reflection diretti.

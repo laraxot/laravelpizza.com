@@ -1,3 +1,15 @@
+---
+title: "phpstan roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Roadmap - Geo Module
 
 > **Created**: [DATE]  
@@ -73,6 +85,5 @@ return $this->state(
 - Monitor Laravel factory best practices.
 
 ---
-
 **Status**: ✅ Fully Compliant (Level 10)
 **Next**: Monitor for any future regressions

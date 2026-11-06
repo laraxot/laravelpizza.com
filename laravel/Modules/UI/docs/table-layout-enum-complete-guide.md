@@ -1,3 +1,15 @@
+---
+title: "table layout enum complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table layout enum complete guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # TableLayoutEnum - Guida Completa
 
 ## Panoramica

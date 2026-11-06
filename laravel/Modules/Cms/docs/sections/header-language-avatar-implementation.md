@@ -1,3 +1,15 @@
+---
+title: "header language avatar implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header language avatar implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati

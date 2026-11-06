@@ -1,3 +1,11 @@
+---
+title: "Risoluzione dei Loghi"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione dei loghi xot"
+---
 # Risoluzione dei Loghi
 
 Questo documento descrive il meccanismo di risoluzione dei loghi in un'applicazione Laravel 12.x modulare (PHP 8.2+).

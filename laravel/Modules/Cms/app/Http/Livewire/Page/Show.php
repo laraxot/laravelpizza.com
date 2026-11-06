@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Http\Livewire\Page;
 
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
@@ -28,9 +29,11 @@ class Show extends Component
         $this->loadPageContent();
     }
 
-    public function render(): View
+    public function render(): View|Factory
     {
-        return view('cms::livewire.page.show', [
+        $viewName = 'cms::livewire.page.show';
+
+        return view($viewName, [
             'pageContent' => $this->pageContent,
             'theme' => $this->theme ?? app(GetThemeAction::class)->execute(),
         ]);
@@ -54,9 +57,14 @@ class Show extends Component
         $cacheKey = 'page_content_'.$this->slug.'_'.($this->theme ?? app(GetThemeAction::class)->execute());
 
         if ($this->cache) {
-            $this->pageContent = Cache::remember($cacheKey, now()->addHours(24), function (): array {
+            $cached = Cache::remember($cacheKey, now()->addHours(24), function (): array {
                 return $this->fetchPageContent();
             });
+            $content = [];
+            foreach (is_array($cached) ? $cached : [] as $key => $value) {
+                $content[(string) $key] = $value;
+            }
+            $this->pageContent = $content;
 
             return;
         }

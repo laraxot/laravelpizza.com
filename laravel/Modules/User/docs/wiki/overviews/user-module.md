@@ -2,15 +2,16 @@
 type: overview
 module: User
 sources:
-  - ../../../docs/models.md
-  - ../../../docs/permissions.md
-  - ../../../docs/architecture.md
-  - ../../../docs/structure.md
 confidence: high
 updated: 2026-04-15
+related:
+title: "User Module: Overview"
+status: draft
+tags: [docs, user, wiki]
+qmd: "user module   overview user"
 ---
 
-# User Module — Overview
+# User Module: Overview
 
 > **Ruolo**: Gestione utenti, autenticazione, autorizzazione (Spatie Permission), team, multi-tenancy, social auth, OAuth.
 
@@ -51,7 +52,7 @@ if ($user->hasPermissionTo('moderate_doctors')) { ... }
 // Controllo ruolo
 if ($user->hasRole('moderator')) { ... }
 
-// Filament — visibilità condizionale
+// Filament: visibilità condizionale
 Forms\Components\View::make('...')
     ->visible(fn () => Auth::user()->hasPermissionTo('moderate_doctors'))
 ```
@@ -85,7 +86,7 @@ Role::firstOrCreate(['name' => 'moderator', 'guard_name' => 'web'])
 |-----------|----------------|
 | Standard | Filament Auth pages (login/register/reset) |
 | Social | Socialite + `SocialProvider` model |
-| OAuth API | Laravel Passport — cluster di risorse |
+| OAuth API | Laravel Passport: cluster di risorse |
 | 2FA | Disponibile (vedi `docs/2fa.md`) |
 
 ### Socialite governance
@@ -98,7 +99,7 @@ Role::firstOrCreate(['name' => 'moderator', 'guard_name' => 'web'])
 ### Logout
 
 Il logout segue una gestione speciale via Folio + Volt:
-- Route Folio con `volt('logout')` — anti-pattern da evitare: gestione manuale redirect
+- Route Folio con `volt('logout')`: anti-pattern da evitare: gestione manuale redirect
 - Usare `auth()->logout()` + `redirect(LaravelLocalization::localizeUrl('/'))` nel component
 
 ## Multi-Tenancy
@@ -111,23 +112,23 @@ Segue rigorosamente Laraxot:
 - **DRY & KISS**: nessuna duplicazione
 - **PHPStan Level 10**: obbligatorio
 - **XotBase**: sempre estendere `XotBase*`, mai classi Filament direttamente
-- **Lang**: nessun `->label()` esplicito — `LangServiceProvider` gestisce tutto
+- **Lang**: nessun `->label()` esplicito: `LangServiceProvider` gestisce tutto
 
 ## Cross-References
 
-- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotBaseModel base
-- [[../../../../../../laravel/Modules/Lang/docs/wiki/overviews/lang-module|Lang Module]] — LangBase per traduzioni
-- [[../../../../../../laravel/Modules/Fixcity/docs/wiki/index|Fixcity Module]] — usa User per owner_id ticket
-- [[../../../../../../laravel/Modules/Tenant/docs/wiki/index|Tenant Module]] — isolamento multi-tenant
+- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]]: XotBaseModel base
+- [[../../../../../../laravel/Modules/Lang/docs/wiki/overviews/lang-module|Lang Module]]: LangBase per traduzioni
+- [[../../../../../../laravel/Modules/Fixcity/docs/wiki/index|Fixcity Module]]: usa User per owner_id ticket
+- [[../../../../../../laravel/Modules/Tenant/docs/wiki/index|Tenant Module]]: isolamento multi-tenant
 
 ## Raw Sources Prioritari
 
-- `docs/models.md` — analisi modelli, copertura factory, architettura
-- `docs/permissions.md` — Spatie RBAC, permessi, ruoli, seeder
-- `docs/architecture.md` — regole Laraxot nel modulo
-- `docs/structure.md` — struttura directory
-- `docs/2fa.md` — autenticazione due fattori
-- `docs/oauth-cluster-implementation.md` — OAuth/Passport cluster
-- `docs/team-user-permissions.md` — permessi team granulari
-- `docs/wiki/concepts/socialite-provider-governance.md` — governance Socialite/SSO
-- `docs/wiki/concepts/socialite-backoffice-google-setup.md` — setup Google OAuth da backoffice
+- `docs/models.md`: analisi modelli, copertura factory, architettura
+- `docs/permissions.md`: Spatie RBAC, permessi, ruoli, seeder
+- `docs/architecture.md`: regole Laraxot nel modulo
+- `docs/structure.md`: struttura directory
+- `docs/2fa.md`: autenticazione due fattori
+- `docs/oauth-cluster-implementation.md`: OAuth/Passport cluster
+- `docs/team-user-permissions.md`: permessi team granulari
+- `docs/wiki/concepts/socialite-provider-governance.md`: governance Socialite/SSO
+- `docs/wiki/concepts/socialite-backoffice-google-setup.md`: setup Google OAuth da backoffice

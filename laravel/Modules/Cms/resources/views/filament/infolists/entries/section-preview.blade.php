@@ -34,12 +34,12 @@ declare(strict_types=1);
             </div>
         @else
             <div class="text-gray-500 italic">
-                Nessun blocco configurato per questa sezione
+                {{ __('cms::sections.preview.no_blocks') }}
             </div>
         @endif
     @else
         <div class="text-gray-500 italic">
-            Nessuna traduzione disponibile per la lingua corrente
+            {{ __('cms::sections.preview.no_translation') }}
         </div>
     @endif
 </div>

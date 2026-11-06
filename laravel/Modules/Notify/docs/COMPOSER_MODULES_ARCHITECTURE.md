@@ -1,3 +1,17 @@
+---
+qmd: "COMPOSER MODULES ARCHITECTURE"
+issues: []
+discussions: []
+title: "Composer & Laravel-Modules Architecture"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: composer-modules-architecture.md
+---
+
 # Composer & Laravel-Modules Architecture
 
 **Data**: 2026-03-30  

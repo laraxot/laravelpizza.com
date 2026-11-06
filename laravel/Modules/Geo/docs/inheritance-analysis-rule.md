@@ -1,3 +1,15 @@
+---
+title: "inheritance analysis rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "inheritance analysis rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Inheritance Analysis Rule - Critical Requirement
 
 ## Critical Rule

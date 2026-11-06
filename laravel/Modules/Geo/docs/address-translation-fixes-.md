@@ -1,3 +1,15 @@
+---
+title: "address translation fixes "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address translation fixes "
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni Traduzioni Address - Gennaio 2025
 
 ## Problema Identificato
@@ -120,7 +132,6 @@ Il file `laravel/Modules/Geo/lang/it/address.php` conteneva problemi critici:
 - `'cap'` → `'CAP'`
 
 ---
-
 # CORREZIONI CRITICHE - 6 Agosto 2025
 
 ## Errori Gravissimi Identificati e Corretti

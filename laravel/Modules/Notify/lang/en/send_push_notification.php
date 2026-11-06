@@ -66,4 +66,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'Push Notification Sending Test',
+            'description' => 'Use this form to test sending push notifications to mobile devices through different services.',
+        ],
+    ],
 ];

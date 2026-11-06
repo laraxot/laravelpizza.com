@@ -8,15 +8,20 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Collection;
 use Modules\Geo\Datas\LocationData;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
 
 use function Safe\json_decode;
+
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per cercare luoghi usando Nominatim.
  */
 class SearchPlacesAction
 {
-    private const API_URL = 'https://nominatim.openstreetmap.org/search';
+    use QueueableAction;
+
+    private const string API_URL = GeoApiEndpoints::NOMINATIM_SEARCH;
 
     private Client $client;
 

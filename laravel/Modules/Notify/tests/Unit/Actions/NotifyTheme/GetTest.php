@@ -3,24 +3,24 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions\NotifyTheme;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
+
 use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\NotifyThemeData;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('NotifyTheme\Get', function () {
-        it('can be instantiated', function () {
+    it('can be instantiated', function () {
         Assert::assertTrue(class_exists(Get::class));
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses(NotifyThemeData::class);
+        $traits = class_uses(Get::class);
         Assert::assertArrayHasKey(QueueableAction::class, $traits);
     });
 
@@ -37,9 +37,9 @@ describe('NotifyTheme\Get', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        \assertReflectionTypeName($params[0]->getType(), 'string');
-        \assertReflectionTypeName($params[1]->getType(), 'string');
-        \assertReflectionTypeName($params[2]->getType(), 'array');
+        XotBasePest::assertReflectionTypeName($params[0]->getType(), 'string');
+        XotBasePest::assertReflectionTypeName($params[1]->getType(), 'string');
+        XotBasePest::assertReflectionTypeName($params[2]->getType(), 'array');
     });
 
     it('execute returns NotifyThemeData', function () {
@@ -47,12 +47,12 @@ describe('NotifyTheme\Get', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, NotifyThemeData::class);
+        XotBasePest::assertReflectionTypeName($returnType, NotifyThemeData::class);
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(Get::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -63,7 +63,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('has required imports', function () {
-        $content = \notifyReflectionSource(new \ReflectionClass(Get::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(Get::class));
 
         Assert::assertStringContainsString('use Modules\Notify\Datas\NotifyThemeData', $content);
         Assert::assertStringContainsString('use Modules\Notify\Models\NotifyTheme', $content);

@@ -1,3 +1,15 @@
+---
+title: "agents project rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents project rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # AGENTS Project Rules
 
 Regole generali del progetto.
@@ -27,7 +39,6 @@ Regole generali del progetto.
 - Module/theme docs remain local in each `docs/` directory
 
 ---
-
 ## JSON Page File Naming
 
 ### CRITICAL Rule
@@ -37,6 +48,7 @@ All JSON files in `config/local/*/database/content/pages/` MUST follow:
 1. **Filename MUST match slug exactly**:
    - File `about.json` MUST have `"slug": "about"`
    - File `predicts.json` MUST have `"slug": "predicts"`
+   - File `forecasts.json` MUST have `"slug": "forecasts"`
 
 2. **Empty files forbidden**:
    - Never create empty JSON files
@@ -64,6 +76,7 @@ done
 - Module SVG icons live in `Modules/<ModuleName>/resources/svg`
 - The blade icon name must use the module prefix + filename
 - Example: `predict-bottlecap` for `Modules/Predict/resources/svg/bottlecap.svg`
+- Example: `forecast-bottlecap` for `Modules/Forecast/resources/svg/bottlecap.svg`
 
 ---
 
@@ -107,4 +120,7 @@ done
 - [Indice AGENTS](./agents-split-index.md)
 - [regole-critiche.md](./regole-critiche.md) - Regole critiche
 - [AGENTS.md originale](../../AGENTS.md)
+- [agents.md originale](../../agents.md)
+- [AGENTS.md originale](../AGENTS.md)
+- [agents.md originale](../agents.md)
 - [Index principale](./index.md)

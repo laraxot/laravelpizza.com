@@ -1,3 +1,15 @@
+---
+title: "phpstan errors summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors summary"
+issues: []
+discussions: []
+status: draft
+---
+
 ## PHPStan Errors Summary - Modules (Level 10, JSON Report)
 
 Fonte: `./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=2G --error-format=json > /tmp/phpstan-errors.json`  
@@ -58,7 +70,6 @@ Ultimo run: 2026-03-02. Totale errori: **154**.
   - Tipo di ritorno di `ratings()` non allineato con i template `MorphToMany` (problema di covarianza del `TDeclaringModel`).
 
 ---
-
 Per il dettaglio completo (file per file, messaggio per messaggio) usare direttamente `phpstan-errors.json` in `/tmp`.  
 Per ogni modulo, seguire il workflow definito in `phpstan_module.txt` e documentare i fix nelle rispettive `docs/phpstan-*.md`.
 

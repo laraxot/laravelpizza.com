@@ -1,3 +1,28 @@
+---
+title: "Choice of currentTeam() Method in HasTeams Trait"
+type: concept
+tags: [hasteams, currentteam, method, choice]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "hasteams-currentteam-method-choice choice of currentteam() method in hasteams trait"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Choice of currentTeam() Method in HasTeams Trait
 
 ## Analysis and Decision
@@ -56,3 +81,4 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 ## Note on Migration File Path Error
 
 - An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`database/migrations/`), whereas the correct path is within the User module's migrations directory (`Modules/User/database/migrations/`). This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.
+- An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`/var/www/html/saluteora/laravel/database/migrations/`), whereas the correct path is within the User module's migrations directory (`/var/www/html/saluteora/laravel/Modules/User/database/migrations/`). This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.

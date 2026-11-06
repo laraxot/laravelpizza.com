@@ -1,10 +1,19 @@
 ---
+title: "push error prevention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "push error prevention"
+issues: []
+discussions: []
 name: git_push_error_prevention
 description: Prevenzione errori git push — LFS, merge conflicts, branch divergence
 metadata:
   type: operational
   verified_date: 2026-07-08
   version: 1.0
+status: draft
 ---
 
 # Git Push Error Prevention

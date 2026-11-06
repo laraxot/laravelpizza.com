@@ -1,3 +1,15 @@
+---
+title: "module docs template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module docs template"
+issues: []
+discussions: []
+status: draft
+---
+
 # {ModuleName} Module
 
 > **Filament Version**: This module targets **Filament v5** (see `docs/filament-version.md` and the Second Brain memory `docs/wiki/memories/filament-version-policy.md`).

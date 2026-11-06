@@ -1,9 +1,20 @@
+---
+title: "qwen memories"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen memories"
+issues: []
+discussions: []
+status: draft
+---
+
 # QWEN Memories
 
 Memorie e lesson learned accumulate da Qwen.
 
 ---
-
 ## Error Fix Pattern
 
 Quando si lavora con date in blade:
@@ -40,6 +51,7 @@ Errori comuni:
 ---
 
 ## Predict List Page
+## Forecast List Page
 
 Deve essere **BEST IN CLASS** per SEO e WCAG.
 
@@ -118,6 +130,7 @@ Discussion: apre alla community, chiede feedback
 - `config/database.php` allineato a Laravel 13.x
 - Produzione usa MySQL tramite .env
 - Test usano MySQL (predict_test) tramite phpunit.xml
+- Test usano MySQL (forecast_test) tramite phpunit.xml
 - **MAI** cambiare default in config/database.php
 
 ---
@@ -137,6 +150,7 @@ Con default null per prevenire errori.
 
 - Tema agnostico basato su JSON
 - Blocchi configurati in `config/local/predict/database/content/pages/home.json`
+- Blocchi configurati in `config/local/forecast/database/content/pages/home.json`
 - Struttura: `type`, `enabled`, `order`, `data`, `view`
 
 ---
@@ -156,11 +170,11 @@ Con default null per prevenire errori.
 __('<namespace>::<context>.<collection>.<key>.<type>')
 ```
 
-Esempio: `__('predict::home.hero.cta_learn.label')`
+Esempio: `__('forecast::home.hero.cta_learn.label')`
 
 **MAI** usare 4 livelli (manca `.label`)
 
-**Eccezione**: `predict::messages.*` valore diretto
+**Eccezione**: `forecast::messages.*` valore diretto
 
 ---
 
@@ -170,6 +184,7 @@ Esempio: `__('predict::home.hero.cta_learn.label')`
 - **NON** usare `GetFooterData` action (DEPRECATA)
 - **NON** aggiungere blocchi footer in `home.json`
 - Config: `config/local/predict/database/content/sections/footer.json`
+- Config: `config/local/forecast/database/content/sections/footer.json`
 
 ---
 
@@ -190,6 +205,7 @@ Esempio: `__('predict::home.hero.cta_learn.label')`
 ---
 
 ## Multi-Outcome Predictions
+## Multi-Outcome Forecasts
 
 Previsioni **DEVONO** avere **3-5+ esiti** (NON solo SI/NO).
 
@@ -221,4 +237,5 @@ Usare `cinematic-particles` per background hero:
 - [Indice QWEN](./qwen-split-index.md)
 - [memories.md](./memories.md) - Più memorie
 - [QWEN.md originale](../../QWEN.md)
+- [QWEN.md originale](../QWEN.md)
 - [Index principale](./index.md)

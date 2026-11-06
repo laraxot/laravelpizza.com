@@ -1,7 +1,15 @@
 ---
+title: "context compression plugin"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context compression plugin"
+issues: []
+discussions: []
 name: context-compression-plugin
 description: Installazione e configurazione del plugin context-compression con context-mode MCP.
 type: concept
+status: draft
 ---
 
 # Context Compression Plugin (context-mode)

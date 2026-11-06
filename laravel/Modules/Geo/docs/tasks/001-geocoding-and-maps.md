@@ -1,3 +1,15 @@
+---
+title: "001 geocoding and maps"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "001 geocoding and maps"
+issues: []
+discussions: []
+status: draft
+---
+
 # Task 001: Implement Geocoding and Maps Integration
 
 ## Description
@@ -176,6 +188,5 @@ The Geo module needs robust geocoding capabilities, map integration, and locatio
 - Consider offline geocoding for privacy
 
 ---
-
 **Status**: Pending
 **Assignee**: TBD

@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
-            Test Invio Notifiche Push
+            {{ __('notify::send_push_notification.sections.page.title') }}
         </x-slot>
 
         <x-slot name="description">
-            Utilizza questo form per testare l'invio di notifiche push ai dispositivi mobili tramite diversi servizi.
+            {{ __('notify::send_push_notification.sections.page.description') }}
         </x-slot>
 
         {{ $this->notificationForm }}

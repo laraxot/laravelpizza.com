@@ -6,8 +6,9 @@ namespace Modules\Geo\Models;
 
 use Filament\Schemas\Components\Utilities\Get;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
 use Modules\Geo\Database\Factories\LocalityFactory;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Contracts\ProfileContract;
 use Sushi\Sushi;
 
@@ -53,27 +54,64 @@ class Locality extends BaseModel
      */
     public function getRows(): array
     {
-        $rows = Comune::select(
-            'regione->codice as region_id',
-            'provincia->codice as province_id',
-            'nome as name',
-            'codice as id',
-            'cap as postal_code',
-        )
-            ->distinct()
-            ->orderBy('nome')
-            ->get()
-            ->map(static fn (mixed $row): mixed => $row);
+        $path = module_path('Geo', 'resources/json/comuni.json');
+        if (! file_exists($path)) {
+            return [];
+        }
 
-        $rawArray = $rows->toArray();
-        /** @var array<int, array<string, mixed>> $result */
-        $result = $rawArray;
+        $items = File::json($path);
+        if (! is_array($items)) {
+            return [];
+        }
 
-        return $result;
+        /** @var array<string, array{region_id: mixed, province_id: mixed, id: mixed, name: string, postal_code: mixed}> $unique */
+        $unique = [];
+
+        foreach ($items as $item) {
+            if (! is_array($item)) {
+                continue;
+            }
+
+            $regione = $item['regione'] ?? null;
+            $provincia = $item['provincia'] ?? null;
+            if (! is_array($regione) || ! is_array($provincia)) {
+                continue;
+            }
+
+            $regionId = $regione['codice'] ?? null;
+            $provinceId = $provincia['codice'] ?? null;
+            $id = $item['codice'] ?? $item['id'] ?? null;
+            $name = $item['nome'] ?? null;
+            if (null === $regionId || null === $provinceId || null === $id || null === $name) {
+                continue;
+            }
+
+            $key = SafeStringCastAction::cast($id);
+            if (! isset($unique[$key])) {
+                $unique[$key] = [
+                    'region_id' => $regionId,
+                    'province_id' => $provinceId,
+                    'id' => $id,
+                    'name' => SafeStringCastAction::cast($name),
+                    'postal_code' => $item['cap'] ?? null,
+                ];
+            }
+        }
+
+        $rows = array_values($unique);
+        usort(
+            $rows,
+            static fn (array $a, array $b): int => strcmp(
+                SafeStringCastAction::cast($a['name'] ?? ''),
+                SafeStringCastAction::cast($b['name'] ?? ''),
+            ),
+        );
+
+        return $rows;
     }
 
     /**
-     * @return array<mixed>
+     * @return array<string, string>
      */
     public static function getOptions(Get $get): array
     {
@@ -86,14 +124,23 @@ class Locality extends BaseModel
             return [];
         }
 
-        return self::where('region_id', $region)
-            ->where('province_id', $province)
-            ->pluck('name', 'id')
-            ->toArray();
+        $keys = [];
+        $values = [];
+
+        foreach (
+            self::where('region_id', $region)
+                ->where('province_id', $province)
+                ->get() as $item
+        ) {
+            $keys[] = SafeStringCastAction::cast($item->id);
+            $values[] = SafeStringCastAction::cast($item->name ?? '');
+        }
+
+        return array_combine($keys, $values) ?: [];
     }
 
     /**
-     * @return array<mixed>
+     * @return array<string, string>
      */
     public static function getPostalCodeOptions(Get $get): array
     {
@@ -109,25 +156,30 @@ class Locality extends BaseModel
         $city = $get('locality');
         $res = self::where('region_id', $region)
             ->where('province_id', $province)
-            ->when(null !== $city, static fn ($query) => $query->where('id', $city))
+            ->when(null !== $city, static fn (Builder $query) => $query->where('id', $city))
             ->select('postal_code')
             ->distinct()
             ->orderBy('postal_code')
             ->get(); // ->pluck('postal_code', 'postal_code')
         // ->toArray()
-        /** @var array<int, array<string, mixed>> $arr */
-        $arr = $res->toArray();
-        $arr = Arr::mapWithKeys($arr, static function (array $item) {
-            if (! isset($item['postal_code']) || ! \is_array($item['postal_code'])) {
-                return [];
+        /** @var array<string, string> $options */
+        $options = [];
+
+        foreach ($res as $item) {
+            $postalCode = $item->postal_code ?? null;
+            if (! \is_array($postalCode)) {
+                continue;
             }
-            /** @var array<int, string> $postalCodes */
-            $postalCodes = array_values((array) $item['postal_code']);
 
-            return array_combine($postalCodes, $postalCodes);
-        });
+            foreach ($postalCode as $code) {
+                if (\is_string($code) || is_numeric($code)) {
+                    $codeString = SafeStringCastAction::cast($code);
+                    $options[$codeString] = $codeString;
+                }
+            }
+        }
 
-        return $arr;
+        return $options;
     }
 
     /**

@@ -1,3 +1,15 @@
+---
+title: "siti ispirazioni web design"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "siti ispirazioni web design"
+issues: []
+discussions: []
+status: draft
+---
+
 # Ispirazioni di Web Design per il progetto
 
 Questo documento raccoglie analisi e ispirazioni dai migliori esempi di web design che possono guidare lo sviluppo dell'interfaccia utente di il progetto.
@@ -258,5 +270,4 @@ Implementando questi principi, il progetto può distinguersi come un'applicazion
 La vera sfida sarà bilanciare gli elementi innovativi del design moderno con le necessità specifiche di un'applicazione in ambito sanitario, dove chiarezza, affidabilità e accessibilità sono particolarmente cruciali.
 
 ---
-
 *Documento basato su analisi di [Ingigni.com](https://www.ingigni.com/blog/siti-belli/) e integrato con le linee guida di il progetto.* 

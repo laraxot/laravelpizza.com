@@ -1,5 +1,8 @@
 ---
-title: "XotBaseResourceTable Columns Enforcement — Tenant Module"
+qmd: "xotbase table columns enforcement"
+issues: []
+discussions: []
+title: "XotBaseResourceTable Columns Enforcement: Tenant Module"
 type: concept
 sources: []
 confidence: high
@@ -8,6 +11,7 @@ updated: 2026-05-07
 tags: [xotbase, filament, tables, enforcement]
 related:
   - ../../../../../../docs/wiki/concepts/xotbase-table-columns-enforcement.md
+status: draft
 ---
 
 # Tenant Module: XotBaseResourceTable Columns
@@ -16,4 +20,4 @@ related:
 
 Resources: Domain
 
-- **DomainsTable**: id, name (Sushi model — columns defined in `getRows()` or `$fillable`)
+- **DomainsTable**: id, name (Sushi model: columns defined in `getRows()` or `$fillable`)

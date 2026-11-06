@@ -1,3 +1,14 @@
+---
+title: "readme.es"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme.es"
+issues: []
+discussions: []
+---
+
 # 🚀 Kit de Herramientas de Automatización Git
 
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg?style=for-the-badge&logo=php&logoColor=white)](phpstan/ANALISI_MODULI_PHPSTAN.md)

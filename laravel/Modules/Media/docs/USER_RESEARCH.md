@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Media Module - User Research"
+module: "Media"
+type: concept
+tags: [USER, RESEARCH]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user research"
+related:
+  - "./webm.md"
+status: superseded
+superseded_by: user_research.md
+---
 # Media Module - User Research
 
 **Module:** Media  

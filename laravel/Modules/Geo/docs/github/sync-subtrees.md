@@ -1,3 +1,15 @@
+---
+title: "sync subtrees"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync subtrees"
+issues: []
+discussions: []
+status: draft
+---
+
 # GitHub Action: Sync Subtrees
 
 This GitHub Action automatically synchronizes subtrees in the repository.

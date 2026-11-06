@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @extends('adm_theme::layouts.app')
 @section('content')
-PASSO 1
+{{ __('xot::xls_import.steps.step1.title') }}
 {!! $data_html !!}
 <form action="{{ Request::fullUrlWithQuery(['step' => 2]) }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -23,7 +22,7 @@ PASSO 1
     @endforeach
     </div>
     <br/>
-    <button class="btn btn-success">Import!</button>
+    <button class="btn btn-success">{{ __('xot::xls_import.actions.import.label') }}</button>
 </form>
 
 

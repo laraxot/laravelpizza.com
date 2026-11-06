@@ -5,21 +5,20 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\User\Models\OauthAccessToken;
 use Modules\User\Models\OauthClient;
-use Modules\User\Models\OauthToken;
 use Modules\User\Models\User;
 
 /**
- * OauthToken Factory.
+ * OauthAccessToken Factory.
  *
- * Factory for creating OauthToken model instances for testing and seeding.
- */
-/**
- * @extends Factory<OauthToken>
+ * Factory for creating OauthAccessToken model instances for testing and seeding.
+ *
+ * @extends Factory<OauthAccessToken>
  */
 class OauthAccessTokenFactory extends Factory
 {
-    protected $model = OauthToken::class;
+    protected $model = OauthAccessToken::class;
 
     /**
      * Define the model's default state.
@@ -89,7 +88,7 @@ class OauthAccessTokenFactory extends Factory
     /**
      * Create token with specific scopes.
      *
-     * @param array<string> $scopes
+     * @param  list<string>  $scopes
      */
     public function withScopes(array $scopes): static
     {

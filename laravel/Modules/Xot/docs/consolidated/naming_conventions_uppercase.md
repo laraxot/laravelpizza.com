@@ -1,3 +1,11 @@
+---
+title: "Convenzioni di Nomenclatura in <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni di nomenclatura in <nome progetto> xot"
+---
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.

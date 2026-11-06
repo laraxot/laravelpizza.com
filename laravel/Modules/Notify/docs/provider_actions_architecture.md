@@ -1,3 +1,15 @@
+---
+title: "provider actions architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "provider actions architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architettura delle Azioni dei Provider in Notify
 
 ## Struttura e Principi Fondamentali
@@ -20,7 +32,7 @@ Questo assicura che qualsiasi client possa utilizzare qualsiasi provider senza m
 ### 2. Posizione delle Azioni
 
 Le azioni specifiche dei provider SMS si trovano nella directory:
-- `/var/www/html/Quaeris/laravel/Modules/Notify/app/Actions/SMS/`
+- `/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/`
 
 ### 3. Convenzioni di Nomenclatura
 
@@ -74,7 +86,6 @@ Le azioni di provider devono sempre:
        message: $smsData->body,
        sender: $smsData->from,
        reference: null,
-       scheduledDate: null
        scheduledDate: null
    );
    ```

@@ -1,9 +1,13 @@
 ---
+qmd: "llm wiki hardening"
+issues: []
+discussions: []
 title: "LLM Wiki Hardening Coordination"
 type: "agent-chat"
 tags: [llm-wiki, second-brain, rules, skills, github]
 created: 2026-05-19
 updated: 2026-06-03
+status: draft
 ---
 
 ## LLM Wiki Hardening Coordination

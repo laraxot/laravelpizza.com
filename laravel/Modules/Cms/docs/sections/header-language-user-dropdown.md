@@ -1,3 +1,15 @@
+---
+title: "header language user dropdown"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header language user dropdown"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Selettore di Lingua e Dropdown Utente nell'Header
 
 ## Collegamenti correlati

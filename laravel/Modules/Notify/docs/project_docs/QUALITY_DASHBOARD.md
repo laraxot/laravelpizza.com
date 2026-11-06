@@ -1,10 +1,21 @@
-# 📊 Quality Dashboard - FixCity Project
+---
+title: "QUALITY DASHBOARD"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "QUALITY DASHBOARD"
+issues: []
+discussions: []
+status: draft
+---
+
+# 📊 Quality Dashboard - Notify Project
 
 **Last Updated:** 2025-10-01 21:35  
 **Status:** 🟢 Excellent
 
 ---
-
 ## 🎯 Overall Quality Score: **94.5%** (A+)
 
 ```
@@ -46,7 +57,7 @@ Coverage by Module:
 Xot      ████████████████████████████████████████ 90%
 Tenant   ████████████████████████████████████████ 88%
 User     ████████████████████████████████████████ 85%
-Fixcity  ████████████████████████████████████████ 82%
+App  ████████████████████████████████████████ 82%
 Blog     ████████████████████████████████████████ 80%
 Others   ████████████████████████████████████████ 85%
 ```
@@ -87,7 +98,7 @@ Others   ███████████████████████�
 | Module | Score | Complexity | Tests | PHPStan |
 |--------|-------|------------|-------|---------|
 | Tenant | 94% | 🟢 0 | 🟢 88% | 🟢 Pass |
-| Fixcity | 92% | 🟢 0 | 🟢 82% | 🟢 Pass |
+| App | 92% | 🟢 0 | 🟢 82% | 🟢 Pass |
 | UI | 91% | 🟢 0 | 🟢 85% | 🟢 Pass |
 | Cms | 90% | 🟢 0 | 🟢 80% | 🟢 Pass |
 
@@ -264,15 +275,15 @@ Overall Progress: ████████████████████�
 
 ## 📞 Quality Team Contacts
 
-- **Quality Lead**: quality@fixcity.com
-- **Architecture**: architecture@fixcity.com
-- **Testing**: testing@fixcity.com
+- **Quality Lead**: quality@laraxot.com
+- **Architecture**: architecture@laraxot.com
+- **Testing**: testing@laraxot.com
 
 ---
 
 ## 🔗 Related Resources
 
-- [Architecture Documentation](./ARCHITECTURE.md)
+- [Architecture Documentation](./architecture.md)
 - [Contributing Guidelines](../CONTRIBUTING.md)
 - [Testing Strategy](../Modules/Xot/docs/testing/testing-strategy.md)
 - [Refactoring Reports](./FINAL_REFACTORING_REPORT.md)

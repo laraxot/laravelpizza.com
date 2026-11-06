@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Fix: SushiToJsonIntegrationTest - Database Connection Configuration"
+module: "Tenant"
+type: concept
+tags: [testing, sushitojson, integration, fix]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing sushitojson integration fix"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Fix: SushiToJsonIntegrationTest - Database Connection Configuration
 
 **Problema**: Test fallisce con "Database connection [tenant] not configured"
@@ -53,6 +67,7 @@ $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
 - [Testing Rules](testing-rules.md)
 - [User TestCase](../../User/tests/TestCase.php) - Esempio di configurazione corretta
 - [TenantBusinessLogicTest](../Tests/Feature/TenantBusinessLogicTest.php) - Test funzionante
+- [TenantBusinessLogicTest](../tests/Feature/TenantBusinessLogicTest.php) - Test funzionante
 
 ---
 

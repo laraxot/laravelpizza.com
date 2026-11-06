@@ -1,3 +1,14 @@
+---
+title: "readme.it 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme.it 1"
+issues: []
+discussions: []
+---
+
 # Tenant
 
 Il modulo **Tenant** abilita la multi-tenancy nel monolite modulare Laraxot: identifica il tenant (domain / path / contesto), isola configurazioni e dati, e fornisce le fondamenta per gestire più organizzazioni in un’unica installazione.

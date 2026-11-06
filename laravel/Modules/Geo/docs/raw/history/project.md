@@ -1,3 +1,14 @@
+---
+title: "project"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project"
+issues: []
+discussions: []
+---
+
 # Project
 
 > **Nota**: Questo documento è correlato a [Progetto](../../docs/project.md). Per una panoramica completa, consulta entrambi i documenti.

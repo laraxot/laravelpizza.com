@@ -1,3 +1,28 @@
+---
+title: "Compatibilità Filament 4.x - Modulo User"
+type: concept
+tags: [filament, compatibility]
+created: 2026-07-14
+updated: 2026-10-23
+qmd: "filament-4x-compatibility compatibilità filament 4.x - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Compatibilità Filament 4.x - Modulo User
 
 **Data**: 2025-01-27
@@ -121,6 +146,30 @@ if (is_object($notifiable)) {
 - Aggiunti esempi di utilizzo
 - Corretti tipi generici per compatibilità PHPStan
 
+### 4. Correzioni del primo passaggio (Filament 4.0.17)
+
+Le correzioni qui sotto vengono da un passaggio precedente (Filament 4.0.17). Gli snippet di allora sono stati superati: si descrive il problema e come lo risolve il codice attuale.
+
+#### 4.1 `getLabel()` può restituire `Htmlable|string`
+- **File**: `app/Console/Commands/ChangeTypeCommand.php`
+- **Problema**: concatenare `$user->type?->getLabel()` a una stringa è un'operazione binaria non valida, perché in Filament 4 l'etichetta può essere `Htmlable`.
+- **Soluzione attuale**: l'etichetta viene normalizzata prima dell'uso (stringa così com'è, `Htmlable` con `->toHtml()`, scalare o `Stringable` con il cast) e controllata con `Assert::string()` prima di `$this->info(...)`.
+
+#### 4.2 `LoginWidget`: `getContainer()` non esiste
+- **File**: `app/Filament/Widgets/Auth/LoginWidget.php`
+- **Problema**: la catena `getComponent()->getContainer()->getParentComponent()` usata per assegnare gli errori di validazione al campo giusto chiamava un metodo che non esiste più.
+- **Soluzione attuale**: niente risalita nei componenti; gli errori di login e di throttle vengono assegnati direttamente a `data.email` con `$this->addError('data.email', ...)`.
+
+#### 4.3 Componente Livewire `Login`: `makeForm()` non esiste
+- **File**: `app/Http/Livewire/Auth/Login.php`
+- **Problema**: `makeForm()` non fa parte dell'API dei form di Filament 4.
+- **Soluzione attuale**: `public function form(Schema $schema): Schema` che restituisce `$schema->components($this->getFormSchema())->statePath('data')`.
+
+#### 4.4 `BaseUser::getFilamentName()` restituiva `mixed`
+- **File**: `app/Models/BaseUser.php`
+- **Problema**: Filament richiede una stringa; il valore costruito dagli attributi poteva essere `mixed` o vuoto.
+- **Soluzione attuale**: il metodo è tipizzato `string` e unisce `name`, `first_name` e `last_name`; se il risultato è vuoto restituisce l'email e, in mancanza anche di quella, `'User'`. Non restituisce mai una stringa vuota.
+
 ## 📊 Risultati
 
 ### Prima delle Correzioni
@@ -149,6 +198,11 @@ if (is_object($notifiable)) {
 - **Cambio**: Pacchetti esterni devono essere compatibili con Filament 4
 - **Impatto**: Widget da pacchetti terzi
 - **Status**: ✅ Gestito (disabilitazione temporanea)
+
+### 4. Tipi, firme e API dei form
+- **Cambio**: controlli più rigorosi sui tipi di ritorno, firme di alcuni metodi cambiate, etichette che possono essere `Htmlable`, nuova API dei form (`Schema`)
+- **Impatto**: comandi console, widget di login, componenti Livewire, model utente (vedi la sezione 4 delle correzioni)
+- **Status**: ✅ Risolto
 
 ## 🚀 Funzionalità Verificate
 

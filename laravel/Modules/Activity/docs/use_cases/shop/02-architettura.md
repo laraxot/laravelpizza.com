@@ -1,3 +1,12 @@
+---
+title: "Architettura di uno Shop Event Sourced"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "architettura di uno shop event sourced activity"
+status: superseded
+superseded_by: architettura.md
+---
 # Architettura di uno Shop Event Sourced
 
 ## 1. Modularità e Bounded Context

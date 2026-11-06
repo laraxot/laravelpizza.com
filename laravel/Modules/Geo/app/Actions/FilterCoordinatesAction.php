@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Actions;
 
 use Modules\Geo\Traits\HandlesCoordinates;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per filtrare le coordinate in base alla distanza da un punto.
@@ -12,6 +13,7 @@ use Modules\Geo\Traits\HandlesCoordinates;
 class FilterCoordinatesAction
 {
     use HandlesCoordinates;
+    use QueueableAction;
 
     /**
      * Filtra le coordinate che si trovano entro un certo raggio da un punto.

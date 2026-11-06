@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /*
  * Value Objects
  * The part of the model are Value Objects.

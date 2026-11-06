@@ -1,30 +1,29 @@
 <?php
 
+declare(strict_types=1);
 /**
  * ----.
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Config;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\Rules\Password;
-use Livewire\Livewire;
 use Modules\Notify\Emails\SpatieEmail;
+use Modules\User\Actions\Auth\BuildApiLoginLimitAction;
+use Modules\User\Actions\Auth\BuildPasswordResetUrlAction;
+use Modules\User\Actions\Auth\EnsureResetPasswordMailTemplateAction;
+use Modules\User\Actions\Auth\ResolveNotifiableEmailAction;
 use Modules\User\Datas\PasswordData;
-use Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget;
-use Modules\User\Filament\Widgets\Auth\LoginWidget;
-use Modules\User\Filament\Widgets\Auth\PasswordResetConfirmWidget;
-use Modules\User\Filament\Widgets\Auth\PasswordResetWidget;
-use Modules\User\Filament\Widgets\Auth\RegisterWidget;
-use Modules\User\Filament\Widgets\Auth\ResetPasswordWidget;
-use Modules\User\Filament\Widgets\Auth\SocialLoginWidget;
+use Modules\User\Models\BaseUser;
+use Modules\User\Models\Policies\UserPolicy;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Webmozart\Assert\Assert;
@@ -42,34 +41,11 @@ class UserServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
         $this->registerLivewireAuthWidgets();
-        // $this->registerEventListener();
+        $this->registerApiLoginRateLimiter();
         $this->registerPasswordRules();
         $this->registerPulse();
         $this->registerMailsNotification();
         $this->registerPolicies();
-    }
-
-    /**
-     * Registra i widget Livewire auth per le viste Blade/Folio.
-     * In Livewire v4, resolveClassComponentClassName con namespace '::' cerca SOLO in classNamespaces
-     * (non in classComponents), quindi Livewire::component('user::...', class) non funziona.
-     * Usare addComponent($class) che usa hash-based naming, compatibile con @livewire(Class::class).
-     */
-    protected function registerLivewireAuthWidgets(): void
-    {
-        $widgets = [
-            LoginWidget::class,
-            SocialLoginWidget::class,
-            RegisterWidget::class,
-            ResetPasswordWidget::class,
-            PasswordResetWidget::class,
-            ForgotPasswordWidget::class,
-            PasswordResetConfirmWidget::class,
-        ];
-
-        foreach ($widgets as $class) {
-            Livewire::addComponent($class);
-        }
     }
 
     #[\Override]
@@ -81,12 +57,8 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     public function registerMailsNotification(): void
     {
-        $app_name = config('app.name');
-        if (! is_string($app_name)) {
-            $app_name = '';
-        }
-
-        ResetPassword::toMailUsing(function ($notifiable, string $token): SpatieEmail {
+        // Vendor contract: toMailUsing callback receives mixed $notifiable.
+        ResetPassword::toMailUsing(function (mixed $notifiable, string $token): SpatieEmail {
             /*
              * return (new MailMessage)
              * ->template('user::notifications.email')
@@ -98,34 +70,28 @@ class UserServiceProvider extends XotBaseServiceProvider
              * ->salutation(__('user::reset_password.regards'));
              */
             Assert::isInstanceOf($notifiable, Model::class);
-            $email = new SpatieEmail($notifiable, 'reset-password');
+            // Il template `reset-password` non e' seminato: SpatieEmail lo creerebbe con il testo di registrazione (DCP-285, D-05).
+            app(EnsureResetPasswordMailTemplateAction::class)->execute();
+            $email = new SpatieEmail($notifiable, EnsureResetPasswordMailTemplateAction::SLUG);
             $email->mergeData([
                 'token' => $token,
-                'reset_password_url' => url(route('password.reset', ['token' => $token], false)),
+                // Radice da `app.url`, non dall'header Host della richiesta (SEC-007).
+                'reset_password_url' => app(BuildPasswordResetUrlAction::class)->execute($token),
             ]);
 
-            // ✅ FIX CRITICO: Imposta il destinatario dell'email con metodo Laravel standard
-            if (method_exists($notifiable, 'getEmailForPasswordReset')) {
-                $emailAddress = $notifiable->getEmailForPasswordReset();
-                if (is_string($emailAddress)) {
-                    $email->to($emailAddress);
-                } else {
-                    throw new \InvalidArgumentException('Email address must be a string.');
-                }
-            } elseif (isset($notifiable->email)) {
-                $emailAddress = $notifiable->email;
-                if (is_string($emailAddress)) {
-                    $email->to($emailAddress);
-                } else {
-                    throw new \InvalidArgumentException('Email address must be a string.');
-                }
-            } else {
-                // Fallback per debug
+            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
+
+            if ($emailAddress === null) {
+                // Un reset password senza destinatario non arriva a nessuno: va registrato per trovare il modello senza email.
                 Log::error('SpatieEmail: Destinatario email non trovato', [
                     'notifiable_class' => $notifiable::class,
                     'notifiable_id' => $notifiable->id ?? 'unknown',
                 ]);
+
+                return $email;
             }
+
+            $email->to($emailAddress);
 
             return $email;
         });
@@ -143,36 +109,34 @@ class UserServiceProvider extends XotBaseServiceProvider
          * ->salutation($salutation);
          * });
          */
-        VerifyEmail::toMailUsing(function ($notifiable, string $url): SpatieEmail {
+        // Vendor contract: toMailUsing callback receives mixed $notifiable.
+        VerifyEmail::toMailUsing(function (mixed $notifiable, string $url): SpatieEmail {
             Assert::isInstanceOf($notifiable, Model::class);
             $email = new SpatieEmail($notifiable, 'verify-email');
             $email->mergeData([
                 'verification_url' => $url,
             ]);
-            if (method_exists($notifiable, 'getEmailForPasswordReset')) {
-                $emailAddress = $notifiable->getEmailForPasswordReset();
-                if (is_string($emailAddress)) {
-                    $email->to($emailAddress);
-                } else {
-                    throw new \InvalidArgumentException('Email address must be a string.');
-                }
-            } elseif (isset($notifiable->email)) {
-                $emailAddress = $notifiable->email;
-                if (is_string($emailAddress)) {
-                    $email->to($emailAddress);
-                } else {
-                    throw new \InvalidArgumentException('Email address must be a string.');
-                }
+
+            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
+
+            if ($emailAddress !== null) {
+                $email->to($emailAddress);
             }
 
             return $email;
         });
     }
 
+    /**
+     * Accesso a Pulse solo al super-admin (SEC-010). Il percorso si cambia con `PULSE_PATH` (config/pulse.php): una `Config::set`
+     * a runtime arriva dopo la registrazione della route e non ha effetto. La gate predefinita del pacchetto ammette tutti in
+     * ambiente `local`, ospiti compresi, e viene definita in `boot()` di Pulse: si ridefinisce a fine avvio, dopo tutti i provider.
+     */
     public function registerPulse(): void
     {
-        Config::set('pulse.path', 'pulse/admin');
-        Gate::define('viewPulse', fn (UserContract $user): bool => $user->hasRole('super-admin'));
+        $this->app->booted(static function (): void {
+            Gate::define('viewPulse', static fn (?UserContract $user = null): bool => $user instanceof UserContract && $user->hasRole('super-admin'));
+        });
     }
 
     public function registerPasswordRules(): void
@@ -185,11 +149,35 @@ class UserServiceProvider extends XotBaseServiceProvider
     }
 
     /**
+     * Limiter nominato `user-login` per `POST /api/user/login` (D-08, DCP-282): soglie e messaggio in {@see BuildApiLoginLimitAction}.
+     */
+    protected function registerApiLoginRateLimiter(): void
+    {
+        RateLimiter::for('user-login', static fn (Request $request): Limit => app(BuildApiLoginLimitAction::class)->execute($request));
+    }
+
+    /**
+     * Registra i widget Livewire auth per le viste Blade/Folio.
+     * In Livewire v4, i componenti si auto-scoprono dal namespace Livewire.
+     * Se necessario registrare manualmente, usare Livewire::component(name, class).
+     * I widget qui sono usati via @livewire(Class::class) nelle view, che funziona con auto-discovery.
+     */
+    protected function registerLivewireAuthWidgets(): void
+    {
+        // Livewire v4 auto-discovers components from configured namespaces
+        // Manual registration with Livewire::component() would be needed only for non-standard paths
+        // The widgets (LoginWidget, RegisterWidget, etc.) are auto-discovered
+    }
+
+    /**
      * Register policies (excluding OAuth ones which are handled by PassportServiceProvider).
      */
     protected function registerPolicies(): void
     {
-        // OAuth policies are handled by PassportServiceProvider
-        // Register other policies here if needed
+        // OAuth policies are handled by PassportServiceProvider.
+        // La scoperta automatica trova UserPolicy solo per Modules\User\Models\User: la classe di autenticazione reale
+        // (es. Modules\Fixcity\Models\User) non ne aveva nessuna e Filament, senza policy, consente tutto. Gate::policy
+        // vale anche per le sottoclassi (DCP-285, D-06).
+        Gate::policy(BaseUser::class, UserPolicy::class);
     }
 }

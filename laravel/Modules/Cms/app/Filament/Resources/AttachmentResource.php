@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Filament\Resources;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Utilities\Get;
-use Filament\Support\Components\Component as BaseComponent;
-use Modules\Cms\Enums\AttachmentDiskEnum;
 use Modules\Cms\Filament\Resources\AttachmentResource\Pages\CreateAttachment;
 use Modules\Cms\Filament\Resources\AttachmentResource\Pages\EditAttachment;
 use Modules\Cms\Filament\Resources\AttachmentResource\Pages\ListAttachments;
@@ -22,28 +15,6 @@ class AttachmentResource extends LangBaseResource
     protected static ?string $model = Attachment::class;
 
     /**
-     * @return array<string, BaseComponent>
-     */
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'title' => TextInput::make('title')->required(),
-            'slug' => TextInput::make('slug')->required(),
-            'description' => Textarea::make('description'),
-            'disk' => Select::make('disk')->options(AttachmentDiskEnum::class),
-            'attachment' => FileUpload::make('attachment')
-                ->directory('attachments')
-                ->preserveFilenames()
-                ->maxSize(10240)
-                ->multiple(false)
-                ->downloadable()
-                ->openable()
-                ->disk(fn (Get $get) => $get('disk')),
-        ];
-    }
-
-    /**
      * @return array<int, array<string, mixed>>
      */
     public static function getRelations(): array
@@ -52,7 +23,6 @@ class AttachmentResource extends LangBaseResource
         ];
     }
 
-    #[\Override]
     public static function getPages(): array
     {
         return [

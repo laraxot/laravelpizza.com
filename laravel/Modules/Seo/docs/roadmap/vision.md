@@ -1,3 +1,15 @@
+---
+title: "vision"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vision"
+issues: []
+discussions: []
+status: active
+---
+
 # Visione - Seo Module
 
 Garantire la massima visibilità sui motori di ricerca e social media:

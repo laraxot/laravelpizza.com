@@ -1,3 +1,15 @@
+---
+title: "laravel specialist skill installation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel specialist skill installation"
+issues: []
+discussions: []
+status: draft
+---
+
 # laravel-specialist skill installation - 2026-03-02
 
 ## Skill installed

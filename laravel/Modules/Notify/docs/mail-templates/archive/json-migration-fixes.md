@@ -1,3 +1,11 @@
+---
+title: "Correzioni per le Migrazioni JSON in Laravel"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "correzioni per le migrazioni json in laravel notify"
+---
 # Correzioni per le Migrazioni JSON in Laravel
 
 ## Problema Identificato

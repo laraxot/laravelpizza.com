@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{--
     Studio Card Component - Visualizzazione informazioni studio odontoiatrico
@@ -113,7 +112,7 @@ declare(strict_types=1);
                     class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0"
                 />
                 <div class="text-sm text-gray-600">
-                    <div>{{ $address->street ?? 'Indirizzo non disponibile' }}</div>
+                    <div>{{ $address->street ?? __('ui::studio-selector.card.address_unavailable.label') }}</div>
                     <div>{{ $address->postal_code }} {{ $address->city }}</div>
                 </div>
             </div>
@@ -163,7 +162,7 @@ declare(strict_types=1);
                         rel="noopener noreferrer"
                         class="text-sm text-primary-600 hover:text-primary-800"
                     >
-                        Visita sito
+                        {{ __('ui::studio-selector.card.visit_website.label') }}
                     </a>
                 </div>
             @endif
@@ -172,7 +171,7 @@ declare(strict_types=1);
         <!-- Servizi -->
         @if($showServices && $studio->services && count($studio->services) > 0)
             <div class="space-y-2">
-                <h4 class="text-sm font-medium text-gray-900">Servizi offerti</h4>
+                <h4 class="text-sm font-medium text-gray-900">{{ __('ui::studio-selector.card.services_offered.label') }}</h4>
                 <div class="flex flex-wrap gap-1">
                     @foreach(array_slice($studio->services, 0, 3) as $service)
                         <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
@@ -181,7 +180,7 @@ declare(strict_types=1);
                     @endforeach
                     @if(count($studio->services) > 3)
                         <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
-                            +{{ count($studio->services) - 3 }} altri
+                            {{ __('ui::studio-selector.card.more_services.label', ['count' => count($studio->services) - 3]) }}
                         </span>
                     @endif
                 </div>
@@ -200,7 +199,7 @@ declare(strict_types=1);
                         name="heroicon-o-clock"
                         class="w-4 h-4 text-gray-400"
                     />
-                    <span>Oggi: {{ $todayHours['open'] }} - {{ $todayHours['close'] }}</span>
+                    <span>{{ __('ui::studio-selector.card.today_hours.label', ['open' => $todayHours['open'], 'close' => $todayHours['close']]) }}</span>
                 </div>
             @else
                 <div class="flex items-center gap-2 text-sm text-gray-500">
@@ -208,7 +207,7 @@ declare(strict_types=1);
                         name="heroicon-o-clock"
                         class="w-4 h-4 text-gray-400"
                     />
-                    <span>Oggi: Chiuso</span>
+                    <span>{{ __('ui::studio-selector.card.today_closed.label') }}</span>
                 </div>
             @endif
         @endif
@@ -229,7 +228,7 @@ declare(strict_types=1);
                                 name="heroicon-o-calendar-days"
                                 class="w-4 h-4 mr-1"
                             />
-                            Prenota
+                            {{ __('ui::studio-selector.card.actions.book') }}
                         </x-filament::button>
                         @break
 
@@ -243,7 +242,7 @@ declare(strict_types=1);
                                 name="heroicon-o-information-circle"
                                 class="w-4 h-4 mr-1"
                             />
-                            Dettagli
+                            {{ __('ui::studio-selector.card.actions.details') }}
                         </x-filament::button>
                         @break
 
@@ -260,7 +259,7 @@ declare(strict_types=1);
                                     name="heroicon-o-phone"
                                     class="w-4 h-4 mr-1"
                                 />
-                                Chiama
+                                {{ __('ui::studio-selector.card.actions.call') }}
                             </x-filament::button>
                         @endif
                         @break

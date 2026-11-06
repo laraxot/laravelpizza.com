@@ -16,7 +16,7 @@ class TeamInfolist extends XotBaseResourceInfolist
      *
      * Campi basati su Model Team.php -> id, uuid, user_id, owner_id, name, personal_team, code, slug, description, avatar_path, settings
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

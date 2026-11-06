@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Testing Rules Summary"
+module: "Tenant"
+type: rule
+tags: [testing, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing rules"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Testing Rules Summary
 
 ## Regole Fondamentali dei Test

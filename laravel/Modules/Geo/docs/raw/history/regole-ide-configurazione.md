@@ -1,3 +1,14 @@
+---
+title: "regole ide configurazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "regole ide configurazione"
+issues: []
+discussions: []
+---
+
 # Regole per la Configurazione degli IDE
 
 ## Cartelle di Configurazione Critiche

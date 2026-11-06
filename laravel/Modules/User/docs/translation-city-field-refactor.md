@@ -1,8 +1,33 @@
+---
+title: 'Refactor Completo Campi "Città" - Modulo User'
+type: concept
+tags: [translation, city, field, refactor]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: 'translation-city-field-refactor- refactor completo campi "città" - modulo user'
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Refactor Completo Campi "Città" - Modulo User
 
 ## Riepilogo Intervento
 
-Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot SaluteOra.
+Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot <nome progetto>.
 
 ## File Corretti
 
@@ -157,9 +182,9 @@ Tutti i file corretti mantengono:
 
 ## Collegamenti Bidirezionali
 
-- [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
-- [SaluteOra Translation Audit](../../SaluteOra/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
+- [Struttura Completa Campi Traduzione](../../../../docs/translation-field-structure-complete.md)
+- [<nome progetto> Translation Audit](../../<nome progetto>/docs/translation_audit_city_fields.md)
+- [Translation Syntax Fixes](../../../../docs/translation_syntax_fixes.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
 ## Prevenzione Futura
@@ -174,9 +199,28 @@ grep -A 10 -B 2 "label.*City\|label.*Stadt" laravel/Modules/*/lang/
 ```
 
 ### Template di Riferimento
-Utilizzare la documentazione centrale [`translation-field-structure-complete.md`](../../../docs/translation-field-structure-complete.md) come template per tutti i nuovi campi di traduzione.
+Utilizzare la documentazione centrale [`translation-field-structure-complete.md`](../../../../docs/translation-field-structure-complete.md) come template per tutti i nuovi campi di traduzione.
 
 ## Ultimo Aggiornamento
 2025-08-08 - Refactor completo campi "Città" modulo User ✅ COMPLETATO
 
-*Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot SaluteOra*
+*Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot <nome progetto>*
+---
+module: theme
+topic: translation-city-field-refactor
+canonical: ../../../Themes/docs/shared-components/translation-city-field-refactor.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor.md

@@ -1,8 +1,20 @@
 ---
+title: "Architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Architecture"
+issues: []
+discussions: []
 module: Xot
 concept: Architecture
 last_updated: 2026-04-15
+status: superseded
+superseded_by: architecture.md
 ---
+
+> Nota 2026-10-14 (docs-audit): Copia di wiki/architecture.md con le stesse affermazioni non verificate (getFormSchemaImplementation() assente, trait HasXotTable/HasExtra non usati da BaseModel, vincolo * presente in 23 requisiti su 37 di composer.json, nessun test arch()). Contenuto non riscritto, verificare prima di usarlo.
 
 # Xot Module Architecture
 

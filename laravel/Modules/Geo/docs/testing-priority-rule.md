@@ -1,3 +1,15 @@
+---
+title: "testing priority rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing priority rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # REGOLA ASSOLUTA: Priorità dei Test in Laraxot
 
 ## 🎯 REGOLA FONDAMENTALE SUPREMA
@@ -83,9 +95,9 @@ find . -name "*.php" -path "*/tests/*" | grep -E "(Test\.php|test\.php)"
 - **NON** procedere senza aver completato la Fase 1
 
 ## Collegamenti
-- [phpunit.xml](../laravel/phpunit.xml)
-- [Pest.php](../laravel/tests/Pest.php)
-- [Test Case](../laravel/tests/TestCase.php)
+- [phpunit.xml](../../../phpunit.xml)
+- [Pest.php](../../../tests/Pest.php)
+- [Test Case](../../../tests/TestCase.php)
 
 ---
 **Questa regola è CRITICA e va applicata SEMPRE prima di qualsiasi sviluppo di nuovi test.**

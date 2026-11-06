@@ -1,3 +1,15 @@
+---
+title: "header"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sezione Header
 
 ## Panoramica
@@ -119,6 +131,6 @@ Esempio:
 
 ## Collegamenti tra versioni di header.md
 * [header.md](docs/sections/header.md)
-* [header.md](laravel/modules/cms/docs/components/header.md)
+* [header.md](../components/header.md)
 * [header.md](laravel/modules/cms/docs/sections/header.md)
 * [header.md](laravel/themes/one/docs/sections/header.md)

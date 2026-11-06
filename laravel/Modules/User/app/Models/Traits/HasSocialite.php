@@ -10,8 +10,6 @@ use Modules\User\Models\SocialiteUser;
 trait HasSocialite
 {
     /**
-     * Get the socialite users associated with the user.
-     *
      * @return HasMany<SocialiteUser, $this>
      */
     public function socialiteUsers(): HasMany
@@ -22,13 +20,13 @@ trait HasSocialite
     public function getProviderField(string $provider, string $field): string
     {
         $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if (null === $socialiteUser) {
+        if ($socialiteUser === null) {
             throw new \Exception('SocialiteUser not found');
         }
 
         $res = $socialiteUser->{$field};
 
-        return (string) $res;
+        return is_string($res) ? $res : '';
     }
 
     public function canAccessSocialite(): bool

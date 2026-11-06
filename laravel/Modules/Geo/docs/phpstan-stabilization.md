@@ -1,3 +1,15 @@
+---
+title: "phpstan stabilization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan stabilization"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Stabilization - Geo Module
 
 This document tracks the systematic effort to achieve and maintain PHPStan Level 10 compliance for the Geo module, focusing on type narrowing, static data management, and architectural integrity.

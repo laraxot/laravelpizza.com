@@ -4,9 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Forms\Components;
 
+use Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
+
 /**
- * MapPositioner - Map position adjustment field.
+ * MapPositioner - Tool for setting the visual viewport (center/zoom).
+ *
+ * Zen: The ruler of perspective and focus.
+ * Implementation: Separate Blade and Lit JS.
  */
-class MapPositioner extends XotBaseCoordinateField
+class MapPositioner extends XotBaseField
 {
+    use HasCoordinatePicker;
+
+    protected string $view = 'geo::filament.forms.components.map-positioner';
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->setUpCoordinatePicker();
+    }
 }

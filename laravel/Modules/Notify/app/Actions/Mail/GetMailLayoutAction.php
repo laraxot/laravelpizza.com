@@ -30,8 +30,9 @@ class GetMailLayoutAction
      */
     public function execute(string $baseName = 'base'): string
     {
-        $xot = XotData::make();
-        $pub_theme = $xot->pub_theme;
+        $xotResult = XotData::make();
+        $pubThemeValue = $xotResult->pub_theme ?? null;
+        $pub_theme = is_string($pubThemeValue) ? $pubThemeValue : 'theme';
         $themePath = base_path('Themes/'.$pub_theme.'/resources/mail-layouts');
 
         $context = app(GetThemeContextAction::class)->execute();

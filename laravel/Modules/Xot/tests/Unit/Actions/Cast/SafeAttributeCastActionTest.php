@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
+use Mockery;
+use Mockery\MockInterface;
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
 use Modules\Xot\Tests\TestCase;
@@ -13,14 +15,13 @@ uses(TestCase::class);
 
 describe('Safe Attribute Cast Action', function (): void {
     test('manages eloquent attributes safely', function (): void {
-        $model = $this->createUnitMock(Activity::class);
-        $model->method('getAttribute')->willReturnMap([
-            ['name', 'Test User'],
-            ['email', ''],
-            ['id', 123],
-            ['active', 1],
-            ['missing', null],
-        ]);
+        /** @var Activity&MockInterface $model */
+        $model = Mockery::mock(Activity::class);
+        $model->shouldReceive('getAttribute')->with('name')->andReturn('Test User');
+        $model->shouldReceive('getAttribute')->with('email')->andReturn('');
+        $model->shouldReceive('getAttribute')->with('id')->andReturn(123);
+        $model->shouldReceive('getAttribute')->with('active')->andReturn(1);
+        $model->shouldReceive('getAttribute')->with('missing')->andReturn(null);
 
         $action = app(SafeAttributeCastAction::class);
 

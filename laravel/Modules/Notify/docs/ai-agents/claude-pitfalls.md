@@ -1,3 +1,15 @@
+---
+title: "claude pitfalls"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude pitfalls"
+issues: []
+discussions: []
+status: draft
+---
+
 # CLAUDE Common Pitfalls
 
 Errori comuni da evitare.
@@ -8,7 +20,6 @@ Errori comuni da evitare.
 **✅ CORRETTO**: Usare Folio + Volt + JSON pages
 
 ---
-
 ### 2. ❌ Connessioni Per-Modulo in Config
 **✅ CORRETTO**: Seguire Laravel 12 standard - solo driver connections
 
@@ -79,4 +90,5 @@ Errori comuni da evitare.
 - [Indice CLAUDE](./claude-split-index.md)
 - [critical-rules.md](./critical-rules.md)
 - [CLAUDE.md originale](../../CLAUDE.md)
+- [CLAUDE.md originale](../CLAUDE.md)
 - [Index principale](./index.md)

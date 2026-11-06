@@ -1,3 +1,23 @@
+---
+title: "Gestione Utenti"
+type: concept
+tags: [gestione, utenti]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "gestione-utenti gestione utenti"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./audit-logging.md"
+  - "./autenticazione.md"
+  - "./autorizzazione.md"
+  - "./gestione-teams.md"
+  - "./legacy-code-cleanup.md"
+  - "./user-analytics.md"
+  - "./user-traits.md"
+status: draft
+---
+
 # Gestione Utenti
 
 ## Overview

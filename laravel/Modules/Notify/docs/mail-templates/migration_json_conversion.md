@@ -1,3 +1,16 @@
+---
+title: "migration json conversion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migration json conversion"
+issues: []
+discussions: []
+status: superseded
+superseded_by: migration-json-conversion.md
+---
+
 # Gestione Conversioni JSON nelle Migrazioni
 
 ## Problema Comune

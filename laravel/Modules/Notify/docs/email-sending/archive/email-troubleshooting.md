@@ -1,3 +1,11 @@
+---
+title: "Risoluzione dei Problemi nelle Email"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, email-sending]
+qmd: "risoluzione dei problemi nelle email notify"
+---
 # Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.

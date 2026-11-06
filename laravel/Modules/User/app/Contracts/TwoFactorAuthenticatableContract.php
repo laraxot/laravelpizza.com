@@ -24,8 +24,9 @@ interface TwoFactorAuthenticatableContract
 
     /**
      * Get the user's two factor authentication recovery codes.
+     *
+     * @return array<int, string>
      */
-    /** @return array<int, string> */
     public function recoveryCodes(): array;
 
     /**

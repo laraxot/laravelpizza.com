@@ -1,3 +1,16 @@
+---
+title: "address relationships"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address relationships"
+issues: []
+discussions: []
+status: superseded
+superseded_by: address-relationships.md
+---
+
 # Relazioni del Modello Address
 
 ## Casi d'Uso Tipici

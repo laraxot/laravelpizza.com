@@ -1,3 +1,15 @@
+---
+title: "notification templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification templates"
+issues: []
+discussions: []
+status: draft
+---
+
 # Template delle Notifiche
 
 ## Architettura

@@ -1,4 +1,12 @@
 ---
+title: "gsd executor.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd executor.agent"
+issues: []
+discussions: []
 name: gsd-executor
 description: Executes GSD plans with atomic commits, deviation handling, checkpoint protocols, and state management. Spawned by execute-phase orchestrator or execute-plan command.
 tools: ['read', 'edit', 'edit', 'execute', 'search', 'search']

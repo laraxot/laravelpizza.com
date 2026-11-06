@@ -1,3 +1,11 @@
+---
+title: "Regola Generale: Metodo getTableColumns per Filament Table (Xot)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regola generale: metodo gettablecolumns per filament table (xot) xot"
+---
 # Regola Generale: Metodo getTableColumns per Filament Table (Xot)
 
 ## Regola

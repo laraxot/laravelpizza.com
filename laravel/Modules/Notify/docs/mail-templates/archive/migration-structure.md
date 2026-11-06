@@ -1,3 +1,11 @@
+---
+title: "Struttura della Migrazione MailTemplate"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "struttura della migrazione mailtemplate notify"
+---
 # Struttura della Migrazione MailTemplate
 
 ## Informazioni Generali

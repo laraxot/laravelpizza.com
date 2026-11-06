@@ -1,3 +1,14 @@
+---
+title: "storage server"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "storage server"
+issues: []
+discussions: []
+---
+
 Wasabi Hot Cloud Storage
 
 Rabata.io Cloud Storage

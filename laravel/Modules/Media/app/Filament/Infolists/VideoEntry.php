@@ -16,9 +16,6 @@ use Webmozart\Assert\Assert;
 
 class VideoEntry extends Entry
 {
-    /**
-     * @var view-string
-     */
     protected string $view = 'media::filament.infolists.video-entry';
 
     protected string|Closure|null $disk = null;
@@ -92,6 +89,11 @@ class VideoEntry extends Entry
         return $this;
     }
 
+    public function imageSize(int|string|Closure $size): static
+    {
+        return $this->size($size);
+    }
+
     public function visibility(string|Closure $visibility): static
     {
         $this->visibility = $visibility;
@@ -153,7 +155,7 @@ class VideoEntry extends Entry
 
     public function getImageUrl(?string $state = null): ?string
     {
-        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
+        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str_starts_with((string) $state, 'data:')) {
             return $state;
         }
         if ($state === null) {

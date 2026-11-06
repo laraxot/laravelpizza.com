@@ -13,7 +13,7 @@ uses(TestCase::class);
 
 function makeTransCollectionAction(): TransCollectionAction
 {
-    return new TransCollectionAction();
+    return new TransCollectionAction;
 }
 
 describe('TransCollectionAction Business Logic', function () {
@@ -22,7 +22,6 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection([1, 2, 3]);
         $result = makeTransCollectionAction()->execute($input, null);
 
-        Assert::assertInstanceOf(Collection::class, $result);
         Assert::assertSame(['1', '2', '3'], $result->toArray());
     });
 
@@ -31,7 +30,7 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection(['a', 'b', 'c']);
         $result = makeTransCollectionAction()->execute($input, null);
 
-        Assert::assertInstanceOf(Collection::class, $result);
+        Assert::assertSame(['a', 'b', 'c'], $result->toArray());
     });
 
     test('handles empty collection', function () {
@@ -39,7 +38,6 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection([]);
         $result = makeTransCollectionAction()->execute($input, null);
 
-        Assert::assertInstanceOf(Collection::class, $result);
         Assert::assertEmpty($result);
     });
 
@@ -48,7 +46,6 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection(['test_key']);
         $result = makeTransCollectionAction()->execute($input, 'test');
 
-        Assert::assertInstanceOf(Collection::class, $result);
         Assert::assertCount(1, $result);
     });
 
@@ -57,7 +54,7 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection(['nonexistent_key']);
         $result = makeTransCollectionAction()->execute($input, 'nonexistent');
 
-        Assert::assertInstanceOf(Collection::class, $result);
+        Assert::assertSame(['nonexistent_key'], $result->toArray());
     });
 
     test('handles numeric collection elements', function () {
@@ -65,7 +62,7 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection([100, 200, 300]);
         $result = makeTransCollectionAction()->execute($input, null);
 
-        Assert::assertInstanceOf(Collection::class, $result);
+        Assert::assertSame(['100', '200', '300'], $result->toArray());
     });
 
     test('handles associative collection', function () {
@@ -73,6 +70,6 @@ describe('TransCollectionAction Business Logic', function () {
         $input = new Collection(['key1' => 'value1', 'key2' => 'value2']);
         $result = makeTransCollectionAction()->execute($input, null);
 
-        Assert::assertInstanceOf(Collection::class, $result);
+        Assert::assertSame(['value1', 'value2'], $result->values()->all());
     });
 });

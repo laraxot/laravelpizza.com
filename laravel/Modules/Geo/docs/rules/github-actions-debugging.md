@@ -1,3 +1,15 @@
+---
+title: "github actions debugging"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github actions debugging"
+issues: []
+discussions: []
+status: draft
+---
+
 # GitHub Actions Workflow Debugging
 
 > **Guide: Debugging GitHub Actions Workflows**
@@ -6,7 +18,6 @@
 > **Last Updated:** 2026-03-13
 
 ---
-
 ## Common Issues & Solutions
 
 ### Issue 1: Command Not Found

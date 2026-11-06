@@ -64,9 +64,9 @@ class TravelTimeData extends Data
             return self::error($response['status']);
         }
 
-        $element = $response['rows'][0]['elements'][0] ?? null;
-        if (! $element || ($element['status'] ?? null) !== 'OK') {
-            return self::error($element['status'] ?? 'INVALID_RESPONSE');
+        $element = $response['rows'][0]['elements'][0];
+        if (! $element || 'OK' !== $element['status']) {
+            return self::error($element['status']);
         }
 
         return new self(

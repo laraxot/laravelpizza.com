@@ -1,3 +1,14 @@
+---
+title: "DESIGN COMUNI CONVERSION"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN COMUNI CONVERSION"
+issues: []
+discussions: []
+---
+
 # Design Comuni Pages Conversion Project
 
 > **Goal**: Convert all 32 Design Comuni pages from Bootstrap Italia to Tailwind CSS + Alpine.js  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "DESIGN COMUNI CONVERSION"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN COMUNI CONVERSION"
+issues: []
+discussions: []
 ## 📊 Project Overview
 
 ### Pages to Convert: 32
@@ -25,6 +44,7 @@
 - Base URL: http://127.0.0.1:8000/it/tests/
 - Blade template: `laravel/Themes/Sixteen/resources/views/pages/tests/[slug].blade.php`
 - Config system: JSON-driven content in `laravel/config/local/fixcity/database/content/pages/`
+- Config system: JSON-driven content in `laravel/config/local/ptv/database/content/pages/`
 
 ---
 
@@ -73,10 +93,10 @@
 ## 📂 Documentation
 
 ### Main Resources
-- [🗂️ Master Index](./laravel/Themes/Sixteen/docs/DESIGN_COMUNI_REPLICATION_INDEX.md)
-- [📋 Strategy & Phases](./laravel/Themes/Sixteen/docs/implementation/STRATEGY.md)
-- [👥 Team Coordination](./laravel/Themes/Sixteen/docs/implementation/TEAM_COORDINATION.md)
-- [📊 Reference Analysis](./laravel/Themes/Sixteen/docs/analysis/REFERENCE_DESIGN_ANALYSIS.md)
+- [🗂️ Master Index](./laravel/Themes/Sixteen/docs/design-comuni-replication-index.md)
+- [📋 Strategy & Phases](./laravel/Themes/Sixteen/docs/implementation/strategy.md)
+- [👥 Team Coordination](./laravel/Themes/Sixteen/docs/implementation/team-coordination.md)
+- [📊 Reference Analysis](./laravel/Themes/Sixteen/docs/analysis/reference-design-analysis.md)
 
 ### Per-Page Issues
 Each page has a dedicated GitHub issue:
@@ -166,7 +186,7 @@ npm run test
 ### Communication
 - **GitHub Issues**: Per-page coordination
 - **GitHub Discussions**: Real-time team coordination
-- **Docs**: [TEAM_COORDINATION.md](./laravel/Themes/Sixteen/docs/implementation/TEAM_COORDINATION.md)
+- **Docs**: [TEAM_COORDINATION.md](./laravel/Themes/Sixteen/docs/implementation/team-coordination.md)
 
 ### Daily Standup
 Teams post status in issue comments:

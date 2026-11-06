@@ -1,3 +1,15 @@
+---
+title: "service_provider_warning - User"
+module: user
+type: integration
+tags: [integrations, modules, user]
+created: 2026-08-24
+updated: 2026-08-24
+qmd: "service_provider_warning - user user"
+status: superseded
+superseded_by: service-provider-warning-user.md
+---
+
 # service_provider_warning - User
 
 ## Overview

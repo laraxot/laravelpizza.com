@@ -1,26 +1,30 @@
 ---
-title: "Pagina Folio notifiche — centro in-app"
+title: "Pagina Folio notifiche: centro in-app"
 type: concept
 tags: [folio, notifications, user, front-office]
 created: 2026-06-10
 updated: 2026-06-10
 qmd: "notifications folio page route name english header dropdown area-personale forbidden"
 issues:
-  - https://github.com/laraxot/base_fixcity_fila5/issues/289
 related:
-  - notifications-folio-route.md
-  - notifications-runtime-model.md
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md
-  - ../../../Cms/docs/wiki/concepts/folio-filesystem-routing-no-web-php.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
 ---
 
-# Pagina Folio notifiche — centro in-app
+# Pagina Folio notifiche: centro in-app
 
 ## Scopo
 
 Centro notifiche per utenti autenticati nel FO. **Owner UI**: modulo User. **Link header**: tema Sixteen.
 
-La rotta non si definisce in `web.php` — esiste perché esiste il file sotto `pages/`.
+La rotta non si definisce in `web.php`: esiste perché esiste il file sotto `pages/`.
 
 ## Contratto Folio
 
@@ -46,7 +50,7 @@ middleware(['web', 'auth']);
 ```
 
 
-## Imparato — catena completa
+## Imparato: catena completa
 
 ```
 File Folio (User)          name('notifications')
@@ -60,7 +64,7 @@ Header Sixteen             route('notifications')
 Label IT                   pub_theme::header.user.dropdown.notifications.label
 ```
 
-Schema DB notifiche: owner Notify — vedi `Modules/Notify/docs/wiki/concepts/notifications-database-contract.md`.
+Schema DB notifiche: owner Notify: vedi `Modules/Notify/docs/wiki/concepts/notifications-database-contract.md`.
 
 Runtime unread count: `NotificationSchema::isReadable()` in header prima del link.
 
@@ -79,10 +83,12 @@ Runtime unread count: `NotificationSchema::isReadable()` in header prima del lin
 cd laravel && php artisan folio:list | grep notifications
 ```
 
-Troubleshooting cache: [route-not-found-view-cache.md](../../../../Themes/Sixteen/docs/wiki/troubleshooting/route-not-found-view-cache.md)
+Troubleshooting cache: [route-not-found-view-cache.md](../../../../../Themes/Sixteen/docs/wiki/troubleshooting/route-not-found-view-cache.md)
+Troubleshooting cache: [route-not-found-view-cache.md](../../../../../Themes/Sixteen/docs/wiki/troubleshooting/route-not-found-view-cache.md)
 
 ## Collegamenti
 
 - [Route name quick ref](notifications-folio-route.md)
 - [Runtime model](notifications-runtime-model.md)
-- [Folio no web.php](../../../Cms/docs/wiki/concepts/folio-filesystem-routing-no-web-php.md)
+- [Folio no web.php](../../../../Cms/docs/wiki/concepts/folio-filesystem-routing-no-web-php.md)
+- [Folio no web.php](../../../../Cms/docs/wiki/concepts/folio-filesystem-routing-no-web-php.md)

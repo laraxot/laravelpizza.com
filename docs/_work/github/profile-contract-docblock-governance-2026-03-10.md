@@ -22,7 +22,7 @@ Governance/docs updated locally:
 - `docs/memory/profile-contract-docblock-memory.md`
 - `docs/skills/profile-contract-docblock-skill.md`
 - `laravel/Modules/Meetup/docs/profile-contract-docblocks.md`
-- `laravel/Themes/Meetup/docs/ide-helper-models-wave-impact-2026-03-10.md`
+- `laravel/Themes/Meetup/docs/ide-helper-models-wave-impact.md`
 
 Operational consequence:
 

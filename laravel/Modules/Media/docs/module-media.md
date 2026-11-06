@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Modulo Media"
+module: "Media"
+type: concept
+tags: [module, media]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module media"
+related:
+  - "./webm.md"
+status: draft
+---
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -37,7 +51,7 @@ Sono stati risolti importanti conflitti di merge in diversi file critici del mod
 
 La risoluzione ha puntato a mantenere la coerenza del codice, evitando duplicazioni e garantendo il corretto funzionamento delle funzionalità di gestione media e del sistema di registrazione componenti.
 
-Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti_merge_risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
+Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti-merge-risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
 
 ## Dipendenze
 ### Pacchetti Required
@@ -82,6 +96,25 @@ composer format        # Formatta il codice
   - Thumbnails
 - Integrazione con Filament
 - Sistema di cache media
+
+### Contratto upload camera mobile (2026-10-27)
+
+Il modulo Media riceve gli allegati del ticket attraverso il contratto standard
+`TemporaryUploadedFile`/Spatie Media Library. La cattura camera avviene nel
+browser del tema: `getUserMedia` produce un JPEG ridimensionato e lo consegna
+allo stesso upload Livewire del picker. Media non introduce una seconda tabella,
+un endpoint Uppy o persistenza base64.
+
+La sicurezza resta centralizzata nel campo Fixcity: JPEG, PNG e PDF, massimo 5
+file e 10 MB ciascuno. HEIC/HEIF è solo un formato d'ingresso client convertito
+in JPEG; non è una nuova whitelist della collezione. Il web server deve
+consentire almeno `upload_max_filesize=12M`, `post_max_size=16M` e
+`client_max_body_size 16M`, così PHP non respinge il multipart prima della
+validazione applicativa.
+
+Il riferimento progettuale e i criteri sono in
+`Modules/Fixcity/docs/bmad/research/mobile-camera-upload-ecosystem.md` e nella
+story camera del modulo Fixcity.
 
 ## Configurazione
 ### FFmpeg

@@ -1,3 +1,15 @@
+---
+title: "footer links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "footer links"
+issues: []
+discussions: []
+status: draft
+---
+
 # Footer Links Block
 
 ## Type
@@ -45,5 +57,5 @@ Anche se il file risiede in `app/Filament/Blocks`, il namespace è `Modules\Cms\
 
 ## Collegamenti
 - [Linee guida Etichette Filament](/docs/filament-block-labels.md)
-- [Linee guida generali Filament Blocks (Xot)](../../Xot/docs/DOCUMENTATION-GUIDELINES.md#filament-blocks)
+- [Linee guida generali Filament Blocks (Xot)](../../../Xot/docs/documentation-guidelines.md#filament-blocks)
 - [Linee guida Etichette Filament (root)](/docs/filament-block-labels.md)

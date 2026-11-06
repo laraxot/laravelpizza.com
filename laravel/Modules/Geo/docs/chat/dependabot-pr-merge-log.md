@@ -1,3 +1,15 @@
+---
+title: "dependabot pr merge log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dependabot pr merge log"
+issues: []
+discussions: []
+status: draft
+---
+
 # Dependabot PR merge sweep
 
 Updated: 2026-05-26T11:47:43Z

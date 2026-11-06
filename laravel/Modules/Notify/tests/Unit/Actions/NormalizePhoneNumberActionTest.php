@@ -6,13 +6,13 @@ namespace Modules\Notify\Tests\Unit\Actions;
 
 use Modules\Notify\Actions\NormalizePhoneNumberAction;
 use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(TestCase::class);
-
+uses(\Modules\Notify\Tests\TestCase::class);
 describe('NormalizePhoneNumberAction', function () {
     it('can be instantiated', function () {
         Assert::assertTrue(class_exists(NormalizePhoneNumberAction::class));
@@ -44,12 +44,12 @@ describe('NormalizePhoneNumberAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, 'string');
+        XotBasePest::assertReflectionTypeName($returnType, 'string');
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -60,7 +60,7 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('has required imports', function () {
-        $content = \notifyReflectionSource(new \ReflectionClass(NormalizePhoneNumberAction::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(NormalizePhoneNumberAction::class));
 
         Assert::assertStringContainsString('use Modules\Xot\Actions\Cast\SafeStringCastAction', $content);
         Assert::assertStringContainsString('use Spatie\QueueableAction\QueueableAction', $content);

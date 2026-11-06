@@ -1,3 +1,15 @@
+---
+title: "filament custom pages"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament custom pages"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Custom Pages - Documentazione Modulo Notify
 
 ## Overview

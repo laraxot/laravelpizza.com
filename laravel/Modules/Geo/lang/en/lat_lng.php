@@ -33,4 +33,24 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'widget' => [
+        'locating' => [
+            'label' => 'Getting your location...',
+        ],
+        'heading' => [
+            'title' => 'Lat-lng',
+        ],
+        'latitude' => [
+            'label' => 'lat',
+        ],
+        'longitude' => [
+            'label' => 'lng',
+        ],
+        'error_code' => [
+            'label' => 'Error code',
+        ],
+        'error_message' => [
+            'label' => 'Error message',
+        ],
+    ],
 ];

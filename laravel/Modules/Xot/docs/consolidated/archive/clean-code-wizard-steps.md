@@ -1,3 +1,11 @@
+---
+title: "Clean Code: Wizard Steps come Funzioni dedicate"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "clean code: wizard steps come funzioni dedicate xot"
+---
 # Clean Code: Wizard Steps come Funzioni dedicate
 
 ## Regola

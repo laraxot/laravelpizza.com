@@ -1,3 +1,16 @@
+---
+title: "phpstan fixes january"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes january"
+issues: []
+discussions: []
+status: superseded
+superseded_by: phpstan-fixes-gennaio.md
+---
+
 # Correzioni PHPStan - Gennaio 2025
 
 ## Panoramica

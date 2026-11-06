@@ -1,3 +1,15 @@
+---
+title: "level 7"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "level 7"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Livello 7 - Modulo Activity
 
 Data analisi: 08/04/2024

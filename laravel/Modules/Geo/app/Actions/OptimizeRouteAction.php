@@ -7,14 +7,17 @@ namespace Modules\Geo\Actions;
 use Illuminate\Support\Collection;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottimizzare l'ordine di un percorso minimizzando la distanza totale.
  */
-readonly class OptimizeRouteAction
+class OptimizeRouteAction
 {
+    use QueueableAction;
+
     public function __construct(
-        private CalculateDistanceActionContract $calculateDistance,
+        private readonly CalculateDistanceActionContract $calculateDistance,
     ) {
     }
 

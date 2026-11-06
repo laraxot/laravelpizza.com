@@ -1,3 +1,23 @@
+---
+title: "Database Directory Naming Convention"
+type: concept
+tags: [notify, docs, conventions, database, naming]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione conventions database naming database directory naming convention frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # Database Directory Naming Convention
 
 > **Last Updated**: 2026-03-13  
@@ -287,6 +307,9 @@ find laravel/Modules -type d -name "Seeders"
 - [Laravel Seeders](https://laravel.com/docs/seeding)
 - [PSR-4 Autoloading](https://www.php-fig.org/psr/psr-4/)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
+- [agents.md - Database Naming](../../agents.md)
+- [AGENTS.md - Database Naming](../AGENTS.md)
+- [agents.md - Database Naming](../agents.md)
 
 ---
 
@@ -305,3 +328,5 @@ If you find incorrect directory names:
 
 **Maintainer**: FixCity Dev Team  
 **Contact**: dev @fixcity.example.com
+**Maintainer**: Notify Dev Team  
+**Contact**: dev @laraxot.example.com

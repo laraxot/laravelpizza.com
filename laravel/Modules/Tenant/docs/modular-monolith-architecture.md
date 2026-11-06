@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Modular Monolith Architecture for Tenant Module"
+module: "Tenant"
+type: concept
+tags: [modular, monolith, architecture]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "modular monolith architecture"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Modular Monolith Architecture for Tenant Module
 
 ## Overview
@@ -184,8 +198,8 @@ sequenceDiagram
 ## Related Documentation
 
 - [Module Structure](structure.md)
-- [Event System](../xot/docs/event_system.md)
-- [Testing Strategy](../testing/readme.md)
+- [Event System](../Xot/docs/event_system.md)
+- [Testing Strategy](../testing/README.md)
 - [API Documentation](../api.md)
 
 ## References

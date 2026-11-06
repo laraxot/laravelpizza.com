@@ -2,40 +2,42 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Tests\Feature;
-
 use Illuminate\Support\Facades\File;
-use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_decode;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 test('components json is valid and contains expected components', function (): void {
+    // Percorso del file
     $filePath = base_path('Modules/Notify/app/Console/Commands/_components.json');
 
-    Assert::assertTrue(File::exists($filePath));
+    // Verifico che il file esiste
+    expect(File::exists($filePath))->toBeTrue('Il file _components.json non esiste');
 
-    $json = \assertNotifyArray(json_decode(File::get($filePath), true));
+    // Leggo il contenuto del file
+    $content = File::get($filePath);
 
-    Assert::assertCount(2, $json);
+    // Decodifico il JSON (Safe\json_decode lancia se il JSON non e' valido)
+    $json = json_decode($content, true);
 
-    $first = \assertNotifyArray($json[0] ?? null);
-    $second = \assertNotifyArray($json[1] ?? null);
+    // Verifico che il JSON è una lista di componenti
+    Assert::assertIsArray($json, 'Il file _components.json non contiene un array di componenti');
 
-    Assert::assertArrayHasKey('name', $first);
-    Assert::assertArrayHasKey('class', $first);
-    Assert::assertArrayHasKey('ns', $first);
-    Assert::assertArrayHasKey('name', $second);
-    Assert::assertArrayHasKey('class', $second);
-    Assert::assertArrayHasKey('ns', $second);
+    // Verifico che c'e' un componente per ogni comando della cartella
+    $commandFiles = File::glob(dirname($filePath).'/*.php');
+    expect($json)->toHaveCount(count($commandFiles));
 
+    // Verifico che ogni componente ha name, class e ns
+    foreach ($json as $component) {
+        expect($component)->toBeArray()->toHaveKeys(['name', 'class', 'ns']);
+    }
+
+    // Verifico i nomi specifici dei componenti
     $names = array_column($json, 'name');
-    Assert::assertContains('send-mail-command', $names);
-    Assert::assertContains('telegram-webhook', $names);
+    expect($names)->toContain('send-mail-command', 'telegram-webhook');
 
+    // Verifico le classi specifiche dei componenti
     $classes = array_column($json, 'class');
-    Assert::assertContains('SendMailCommand', $classes);
-    Assert::assertContains('TelegramWebhook', $classes);
+    expect($classes)->toContain('SendMailCommand', 'TelegramWebhook');
 });

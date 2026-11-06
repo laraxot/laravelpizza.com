@@ -1,3 +1,11 @@
+---
+title: "Risoluzione Conflitto in ExportXlsByView"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione conflitto in exportxlsbyview xot"
+---
 # Risoluzione Conflitto in ExportXlsByView
 
 ## Problema

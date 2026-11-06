@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Testing Documentation"
+module: "Media"
+type: concept
+tags: [testing]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing"
+related:
+  - "./webm.md"
+status: draft
+---
 # Testing Documentation
 
 ## Overview
@@ -269,7 +283,7 @@ protected function createApplication()
 
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../docs/troubleshooting.md)
+- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
 
 ## Testing Examples
 

@@ -1,3 +1,15 @@
+---
+title: "results"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "results"
+issues: []
+discussions: []
+status: draft
+---
+
 # All Pages Visual Comparison Results
 
 ## Summary

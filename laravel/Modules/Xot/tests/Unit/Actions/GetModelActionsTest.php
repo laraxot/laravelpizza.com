@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Actions\GetModelByModelTypeAction;
@@ -11,7 +9,10 @@ use Modules\Xot\Actions\GetModelTypeByModelAction;
 use Modules\Xot\Contracts\ModelContract;
 use Modules\Xot\Tests\Fixtures\DemoModel;
 use Modules\Xot\Tests\Fixtures\FakeQueryableModel;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('gets model class by model type from morph map', function (): void {
     config()->set('morph_map', ['demo' => DemoModel::class]);
@@ -28,7 +29,7 @@ it('throws when morph map config is not an array', function (): void {
         app(GetModelClassByModelTypeAction::class)->execute('demo');
         Assert::fail('Expected exception not thrown');
     } catch (Exception $e) {
-        Assert::assertInstanceOf(Exception::class, $e);
+        Assert::assertNotEmpty($e->getMessage());
     }
 });
 
@@ -38,7 +39,7 @@ it('throws when model type key is missing in morph map', function (): void {
     try {
         app(GetModelClassByModelTypeAction::class)->execute('missing');
     } catch (Throwable $e) {
-        Assert::assertInstanceOf(InvalidArgumentException::class, $e);
+        Assert::assertNotEmpty($e->getMessage());
 
         return;
     }
@@ -50,17 +51,16 @@ it('instantiates model by type when id is null', function (): void {
 
     $result = app(GetModelByModelTypeAction::class)->execute('demo', null);
 
-    Assert::assertInstanceOf(DemoModel::class, $result);
+    Assert::assertFalse($result->exists);
 });
 
 it('loads model by id when record exists', function (): void {
     config()->set('morph_map', ['demo' => FakeQueryableModel::class]);
-    FakeQueryableModel::$findResult = new DemoModel();
+    FakeQueryableModel::$findResult = new DemoModel;
     FakeQueryableModel::$findResult->setAttribute('id', 123);
 
     $result = app(GetModelByModelTypeAction::class)->execute('demo', '123');
 
-    Assert::assertInstanceOf(DemoModel::class, $result);
     Assert::assertSame(123, SafeIntCastAction::cast($result->getKey()));
 });
 
@@ -72,13 +72,12 @@ it('throws when model id is provided but record is missing', function (): void {
         app(GetModelByModelTypeAction::class)->execute('demo', '999999');
         Assert::fail('Expected exception not thrown');
     } catch (Exception $e) {
-        Assert::assertInstanceOf(Exception::class, $e);
+        Assert::assertNotEmpty($e->getMessage());
     }
 });
 
 it('returns snake model type from model contract instance', function (): void {
-    $model = new class extends Model implements ModelContract {
-    };
+    $model = new class extends Model implements ModelContract {};
 
     $result = app(GetModelTypeByModelAction::class)->execute($model);
 

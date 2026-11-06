@@ -1,9 +1,20 @@
+---
+title: "acceptance criteria"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "acceptance criteria"
+issues: []
+discussions: []
+status: draft
+---
+
 # Criteri di accettazione Modulo Geo
 
 Criteri verificabili per considerare completate le fasi della roadmap Geo.
 
 ---
-
 ## Fase 1 · Core Geo Services (completata)
 
 - [ ] Modelli `Location` e `Address` (o equivalenti) presenti con gestione coordinate e relazioni documentate.

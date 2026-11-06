@@ -1,3 +1,11 @@
+---
+title: "Integrazione Folio, Volt e Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "integrazione folio, volt e filament xot"
+---
 # Integrazione Folio, Volt e Filament
 
 > **NOTA**: Questo documento è stato unificato con la documentazione sull'architettura Folio + Volt + Filament. Consulta il documento aggiornato nel link sottostante.

@@ -1,3 +1,15 @@
+---
+title: "legacy roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # Roadmap Gdpr
 
 Roadmap operativo del module **Gdpr**, suddiviso in file tematici.
@@ -5,11 +17,11 @@ Roadmap operativo del module **Gdpr**, suddiviso in file tematici.
 ## Indice
 
 - [00-index](roadmap/00-index.md)
-- [01-current-state](roadmap/01-current-state.md)
-- [02-goals](roadmap/02-goals.md)
-- [03-workstreams](roadmap/03-workstreams.md)
-- [04-milestones](roadmap/04-milestones.md)
-- [05-risks](roadmap/05-risks.md)
+- [01-current-state](01-current-state.md)
+- [02-goals](02-goals.md)
+- [03-workstreams](03-workstreams.md)
+- [04-milestones](04-milestones.md)
+- [05-risks](05-risks.md)
 
 ## Regola
 

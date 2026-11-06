@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**
  * Provides a widget for user logout functionality within Filament admin panels.
@@ -21,16 +21,16 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * This widget handles the user logout process including session invalidation,
  * event dispatching, and proper redirection with localization support.
  *
- * @method void                     mount()          Initialize the widget and form state.
- * @method array<string, Component> getFormSchema()  Define the form schema for the logout confirmation.
- * @method void                     logout()         Handle the user logout process.
- * @method array<string, Action>    getFormActions() Define the form actions (logout and cancel buttons).
- * @method array<string, string>    getViewData()    Get additional data to pass to the view.
+ * @method void mount() Initialize the widget and form state.
+ * @method array<string, Component> getFormSchema() Define the form schema for the logout confirmation.
+ * @method void logout() Handle the user logout process.
+ * @method array<string, Action> getFormActions() Define the form actions (logout and cancel buttons).
+ * @method array<string, string> getViewData() Get additional data to pass to the view.
  *
- * @property array<string, mixed>|null $data         Widget data array managed by XotBaseWidget.
- * @property bool                      $isLoggingOut Flag indicating if logout is in progress.
+ * @property array<string, mixed>|null $data Widget data array managed by XotBaseWidget.
+ * @property bool $isLoggingOut Flag indicating if logout is in progress.
  */
-class LogoutWidget extends XotBaseWidget
+class LogoutWidget extends XotBaseSchemaWidget
 {
     /**
      * Widget data array.
@@ -48,15 +48,6 @@ class LogoutWidget extends XotBaseWidget
     public bool $isLoggingOut = false;
 
     /**
-     * The view to render the widget.
-     *
-     * IMPORTANT: When using @livewire() directly in Blade templates,
-     * the path should be without the module namespace.
-     */
-    /** @phpstan-ignore-next-line property.defaultValue */
-    protected string $view = 'user::widgets.logout';
-
-    /**
      * Mount the widget and initialize the form.
      */
     public function mount(): void
@@ -72,14 +63,10 @@ class LogoutWidget extends XotBaseWidget
      *
      * @return array<string, Component>
      */
-    #[\Override]
     public function getFormSchema(): array
     {
-        /** @var view-string $view */
-        $view = 'filament.widgets.auth.logout-message';
-
         return [
-            'message' => View::make($view)->columnSpanFull(),
+            'message' => View::make('user::filament.widgets.auth.logout-message')->columnSpanFull(),
         ];
     }
 
@@ -104,7 +91,7 @@ class LogoutWidget extends XotBaseWidget
 
             // Get the authenticated user before logging out
             $user = $this->getAuthenticatedUser();
-            if (null === $user) {
+            if ($user === null) {
                 $this->handleNoUserScenario();
 
                 return;
@@ -125,7 +112,6 @@ class LogoutWidget extends XotBaseWidget
      *
      * @return array<string, Action>
      */
-    #[\Override]
     public function getFormActions(): array
     {
         return [

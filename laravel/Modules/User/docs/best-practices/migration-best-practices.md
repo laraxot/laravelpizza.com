@@ -1,3 +1,24 @@
+---
+title: "MIGRATION_BEST_PRACTICES - Modulo User"
+type: concept
+tags: [migration, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration-best-practices migration_best_practices - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # MIGRATION_BEST_PRACTICES - Modulo User
 
 ## Scopo
@@ -14,6 +35,10 @@ Questo documento specializza gli standard generali di `Modules/Xot/docs/migratio
   - `protected string $table = 'nome_tabella';`
   - `protected ?string $connection = 'user';`
   - `protected ?string $model_class = Model::class;` (es. `Team::class`, `User::class`)
+- **Non dichiarare `$model_class` se il file è `*_create_{modello}_table.php`**
+  - `XotBaseMigration::getModelClass()` ricava modulo e modello dal path e dal nome file.
+  - `create_users_table` nel modulo Fixcity è `Modules\Fixcity\Models\User`.
+  - `$model_class` solo se il nome file non è quel contratto.
 - **Usare i metodi helper di `XotBaseMigration`**
   - `tableCreate()` per creare tabelle
   - `tableUpdate()` per modificarle
@@ -106,6 +131,7 @@ Caratteristiche:
 - Usa `hasColumn('owner_id')` di `XotBaseMigration`
 - Connessione `user` coerente con i modelli del modulo User
 - `model_class` esplicita (evita problemi di auto-risoluzione nome modello)
+- niente `$model_class`: `create_teams_table` risolve già `Team`
 
 ## Connessione `user`
 
@@ -130,6 +156,7 @@ per garantire che:
 
 1. La migration **estende `XotBaseMigration`**?
 2. Sono impostate **`$table`, `$connection`, `$model_class`**?
+2. Il file è `*_create_{modello}_table.php`, senza `$model_class`?
 3. Sto usando **`tableCreate` / `tableUpdate`** (no `Schema::table` diretto)?
 4. Ogni aggiunta di colonna è protetta da **`hasColumn()`**?
 5. I timestamp sono gestiti con **`updateTimestamps($table, true)`** se servono soft delete?

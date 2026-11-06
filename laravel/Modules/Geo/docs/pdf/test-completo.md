@@ -1,3 +1,15 @@
+---
+title: "test completo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test completo"
+issues: []
+discussions: []
+status: draft
+---
+
 # Event Sourcing in Laravel
 *Autore: Brent Roose*
 *Generato il: 2025-05-19 15:27:29*
@@ -20,7 +32,6 @@
 - [Parte 3: Sfide con l'Event Sourcing](#parte-3-sfide-con-levento-sourcing)
 
 ---
-
 ## Contenuto Completo
 
 EVENT SOURCING

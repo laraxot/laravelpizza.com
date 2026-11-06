@@ -1,3 +1,15 @@
+---
+title: "blade components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "blade components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Blade Components Best Practices
 
 ## Gestione degli Attributi
@@ -157,4 +169,4 @@ public function test_section_renders_blocks()
 ## Collegamenti
 - [Documentazione Blade](https://laravel.com/docs/blade)
 - [Section Component](section-component.md)
-- [Documentazione Root](../../../../../docs/components.md)
+- [Documentazione Root](../components.md)

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-widgets::widget>
     <x-filament::section>
@@ -24,7 +23,7 @@ declare(strict_types=1);
                         size="lg"
                         class="w-full justify-center"
                         :disabled="$isLoggingOut">
-                        {{ __('Conferma Logout') }}
+                        {{ __('user::logout_confirm.actions.confirm.label') }}
                     </x-filament::button>
 
                     <x-filament::button 
@@ -33,7 +32,7 @@ declare(strict_types=1);
                         color="gray"
                         size="lg"
                         class="w-full justify-center">
-                        {{ __('Annulla') }}
+                        {{ __('user::common.actions.cancel.label') }}
                     </x-filament::button>
                 </div>
             </form>

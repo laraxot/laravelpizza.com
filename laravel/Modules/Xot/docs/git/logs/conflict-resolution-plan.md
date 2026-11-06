@@ -1,3 +1,13 @@
+---
+title: "Piano di Risoluzione Conflitti Git"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-18
+module: Xot
+tags: [xot, git]
+qmd: "Piano di Risoluzione Conflitti Git"
+---
 # Piano di Risoluzione Conflitti Git
 
 ## Panoramica
@@ -75,4 +85,4 @@ Per ogni file risolto, verrà creata o aggiornata la documentazione seguendo que
 
 ## Monitoraggio e avanzamento
 
-L'avanzamento della risoluzione sarà tracciato in un documento dedicato in `docs/logs/conflict_resolution_progress.md`.
+L'avanzamento della risoluzione sarà tracciato in un documento dedicato in `docs/logs/conflict_resolution_progress.md`. 

@@ -10,7 +10,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei dispositivi degli utenti',
         ],
-        'label' => 'device',
+        'label' => 'Gerät',
         'sort' => '20',
         'icon' => 'user-device',
     ],
@@ -40,7 +40,7 @@ return [
             'description' => '',
         ],
         'device' => [
-            'label' => 'device',
+            'label' => 'Gerät',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

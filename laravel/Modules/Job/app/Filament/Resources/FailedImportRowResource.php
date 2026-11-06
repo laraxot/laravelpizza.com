@@ -15,7 +15,7 @@ class FailedImportRowResource extends XotBaseResource
     protected static ?string $model = FailedImportRow::class;
 
     #[Override]
-    public static function getFormSchema(): array
+    public function getFormSchemaOld(): array
     {
         return [
             'import_class' => TextInput::make('import_class')->required()->maxLength(255),

@@ -1,3 +1,15 @@
+---
+title: "1 database naming"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "1 database naming"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📁 Database Directory Naming Best Practices
 
 **Discussion ID**: #1  
@@ -6,7 +18,6 @@
 **Status**: ✅ Active
 
 ---
-
 Ciao a tutti! 👋
 
 Ho appena creato una nuova convention document per standardizzare il naming delle directory del database in tutti i moduli Laravel.
@@ -34,8 +45,11 @@ database/Seeders/
 Ho creato questi documenti:
 
 1. **[Database Naming Convention](docs/conventions/database-naming.md)** - Guida completa
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
 2. **[AGENTS.md Update](AGENTS.md)** - Rule aggiunta alle regole architetturali
 3. **[GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)** - Tracking delle correzioni
+2. **[agents.md Update](agents.md)** - Rule aggiunta alle regole architetturali
+3. **[GitHub Issue #5](https://github.com/laraxot/platform/issues/5)** - Tracking delle correzioni
 
 ## 🔍 Perché è Importante
 
@@ -55,6 +69,7 @@ Ho creato questi documenti:
 - [ ] Cms
 - [ ] Comment
 - [ ] Fixcity
+- [ ] App
 - [ ] Gdpr
 - [ ] Geo
 - [ ] Job

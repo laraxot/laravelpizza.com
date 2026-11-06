@@ -1,3 +1,15 @@
+---
+title: "update coordinates bulk action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "update coordinates bulk action"
+issues: []
+discussions: []
+status: draft
+---
+
 # `UpdateCoordinatesBulkAction` (Filament Bulk Action)
 
 This document describes the `UpdateCoordinatesBulkAction`, a reusable Filament Bulk Action designed to update the geographic coordinates (latitude/longitude) of multiple Eloquent models simultaneously. It leverages the `UpdateCoordinatesAction` (a Spatie Queueable Action) for its core business logic, adhering to the principle of separating UI concerns from business logic.

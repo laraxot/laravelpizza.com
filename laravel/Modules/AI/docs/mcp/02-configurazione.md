@@ -1,3 +1,16 @@
+---
+title: "02 configurazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "02 configurazione"
+issues: []
+discussions: []
+status: superseded
+superseded_by: configurazione.md
+---
+
 # Configurazione dei Server MCP per Progetti Laravel
 
 ## Panoramica
@@ -501,5 +514,4 @@ sudo chown -R $(whoami) /path/to/your/project
 Hai completato con successo la configurazione dei server MCP per il tuo progetto Laravel. Ora puoi procedere con l'utilizzo seguendo la guida nella sezione successiva.
 
 ---
-
-Continua con la sezione [Utilizzo](./03_UTILIZZO.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.
+Continua con la sezione [Utilizzo](./03_utilizzo.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.

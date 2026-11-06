@@ -1,4 +1,7 @@
 ---
+qmd: "header section component"
+issues: []
+discussions: []
 title: "Header Section Component Architecture"
 type: concept
 sources: ["laravel/Modules/Cms/app/View/Components/Section.php", "laravel/config/local/fixcity/database/content/sections/header.json"]
@@ -7,9 +10,10 @@ created: 2026-05-04
 updated: 2026-05-04
 tags: [header, section-component, cms, blade, json-driven, design-comuni]
 related:
-  - ../../../docs/wiki/concepts/blade-component-extraction-governance.md
+  - ../../../../../../docs/wiki/concepts/blade-component-extraction-governance.md
   - ../../../laravel/Themes/Sixteen/docs/wiki/concepts/sixteen-header-composition-rule.md
-  - ../../../docs/wiki/concepts/design-comuni-header-auth-state.md
+  - ../../../../../../docs/wiki/concepts/design-comuni-header-auth-state.md
+status: draft
 ---
 
 # Header Section Component Architecture

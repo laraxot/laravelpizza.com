@@ -1,3 +1,14 @@
+---
+title: "segnalazione 03 riepilogo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione 03 riepilogo"
+issues: []
+discussions: []
+---
+
 # 🎨 Design Comuni: Segnalazione - Riepilogo
 
 ## Pagina
@@ -28,4 +39,12 @@ Da definire dopo l'analisi strutturale.
 - [ ] Documentazione
 
 ---
+title: "segnalazione 03 riepilogo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione 03 riepilogo"
+issues: []
+discussions: []
 *Generato automaticamente da bashscripts/design-comuni-parity/create-github-issues.sh*

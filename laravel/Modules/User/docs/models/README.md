@@ -1,3 +1,22 @@
+---
+title: "User Module - Model Documentation"
+type: concept
+tags: [readme]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme user module - model documentation"
+issues: ["https://github.com/provtv/<nome repository>/issues/124"]
+discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
+related:
+  - "./base-classes-hierarchy.md"
+  - "./baseuser.md"
+  - "./team.md"
+  - "./teampermission.md"
+  - "./xotbaivot-migration.md"
+  - "./xotbasepivot-migration.md"
+status: draft
+---
+
 # User Module - Model Documentation
 
 **Modulo**: User
@@ -616,7 +635,8 @@ La connection `user` gestisce queste tabelle principali:
 - [DRY-KISS Analysis](../../../xot/docs/models/dry-kiss-analysis.md) - Analisi duplicazioni
 - [XotBaseModel](../../../Xot/app/Models/XotBaseModel.php) - Base class livello 1
 - [BaseModel](../../app/Models/BaseModel.php) - Base class User module
-- [CLAUDE.md](../../../../claude.md) - Convenzioni progetto
+- [CLAUDE.md](../../../../CLAUDE.md) - Convenzioni progetto
+- [CLAUDE.md](../../../../CLAUDE.md) - Convenzioni progetto
 
 ## Changelog
 

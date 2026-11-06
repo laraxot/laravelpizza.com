@@ -1,3 +1,14 @@
+---
+title: "add phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "add phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Add a new integer phase to the end of the current milestone in the roadmap. Automatically calculates next phase number, creates phase directory, and updates roadmap structure.
 </purpose>
@@ -82,6 +93,14 @@ Roadmap updated: .planning/ROADMAP.md
 
 ---
 
+title: "add phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "add phase"
+issues: []
+discussions: []
 ## ▶ Next Up
 
 **Phase {N}: {description}**

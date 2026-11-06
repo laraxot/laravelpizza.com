@@ -1,16 +1,41 @@
-# Gdpr Module — Wiki Schema
+---
+title: "Wiki Schema - Gdpr"
+description: Schema e convenzioni per la manutenzione della wiki
+type: note
+tags: [schema, conventions, llm-instructions]
+created: 2026-04-15
+updated: 2026-10-25
+qmd: "gdpr wiki schema convenzioni ingest llm"
+issues: []
+discussions: []
+status: draft
+---
 
-## Struttura wiki
+# Wiki Schema - Gdpr
+
+Istruzioni per l'LLM su come mantenere questa wiki.
+
+## Struttura
 
 ```
 docs/
-  wiki/
-    index.md       ← indice navigabile (obbligatorio)
-    log.md         ← log operazioni (obbligatorio)
-    schema.md      ← questo file
-    concepts/      ← pattern e regole architetturali
-    entities/      ← consent, treatment, profile
+├── wiki/
+│   ├── index.md           # Catalogo
+│   ├── log.md             # Registro
+│   ├── schema.md          # Questo file
+│   ├── concepts/          # Pattern, architettura
+│   ├── entities/          # Modelli, azioni
+│   ├── sources/           # Doc esterna
+│   └── comparisons/       # Tabelle comparative
+└── raw/                   # Sorgenti immutable
 ```
+
+## Convenzioni
+
+- File: kebab-case (es. `entity-user.md`)
+- Frontmatter: title, description, tags, created
+- Cross-ref: `[Link](../concepts/name.md)`
+- NON modificare mai `docs/raw/`
 
 ## Regole ingest
 

@@ -1,3 +1,11 @@
+---
+title: "PHPStan Configuration"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media]
+qmd: "phpstan configuration media"
+---
 # PHPStan Configuration
 
 This module adheres to PHPStan Level 10.

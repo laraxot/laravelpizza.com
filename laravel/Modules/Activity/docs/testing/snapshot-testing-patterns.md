@@ -1,3 +1,11 @@
+---
+title: "Snapshot Testing Patterns - Best Practices"
+type: note
+status: draft
+updated: 2026-10-23
+tags: [docs, activity, testing]
+qmd: "snapshot testing patterns - best practices activity"
+---
 # Snapshot Testing Patterns - Best Practices
 
 ## Overview
@@ -253,8 +261,8 @@ test('can reconstruct aggregate from snapshots', function () {
 - [Snapshot Model](../models/snapshot-model.md)
 
 ### Test Esempi
-- [SnapshotBusinessLogicTest](../tests/Feature/SnapshotBusinessLogicTest.php)
-- [ActivityBusinessLogicTest](../tests/Feature/ActivityBusinessLogicTest.php)
+- [SnapshotBusinessLogicTest](../../tests/Feature/SnapshotBusinessLogicTest.php)
+- [ActivityBusinessLogicTest](../../tests/Feature/ActivityBusinessLogicTest.php)
 
 ---
 

@@ -1,3 +1,14 @@
+---
+title: "decimal phase calculation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "decimal phase calculation"
+issues: []
+discussions: []
+---
+
 # Decimal Phase Calculation
 
 Calculate the next decimal phase number for urgent insertions.

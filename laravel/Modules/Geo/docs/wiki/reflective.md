@@ -1,7 +1,9 @@
 ---
+qmd: "reflective"
+issues: []
+discussions: []
 title: "Reflective Notes"
 type: reflection-log
-status: active
 created: "2026-06-15"
 updated: "2026-06-16"
 tags: [reflection, phpstan, xot, quality-gate]
@@ -9,7 +11,10 @@ related:
   - "./patterns/xotbase-resource-table-configure.md"
   - "./patterns/phpstan-optional-contracts.md"
   - "./memories/phpstan-modules-inventory.md"
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Note di riflessione su PHPStan di altri moduli (Ptv, UI), non di Geo; i link a patterns/, memories/ e rules/ puntano a file che non esistono nel wiki di Geo. Contenuto non riscritto, verificare prima di usarlo.
 
 # Reflective Notes
 

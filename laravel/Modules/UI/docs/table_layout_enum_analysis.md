@@ -1,3 +1,15 @@
+---
+title: "table layout enum analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table layout enum analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Completa TableLayoutEnum
 
 ## Data: 2025-01-06

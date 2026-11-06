@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 <div class="interactive-map-container" wire:ignore.self>
     <!-- Controlli mappa -->
     @if($showControls)
@@ -5,7 +9,7 @@
             <!-- Ricerca -->
             <div class="controls-section">
                 <h5 class="controls-title">
-                    <i class="fas fa-search"></i> Ricerca
+                    <i class="fas fa-search"></i> {{ __('ui::interactive_map.sections.search.title') }}
                 </h5>
                 <div class="search-container">
                     <div class="input-group">
@@ -13,7 +17,7 @@
                             type="text" 
                             wire:model.debounce.300ms="searchQuery"
                             class="form-control form-control-sm"
-                            placeholder="Cerca indirizzo..."
+                            placeholder="{{ __('ui::interactive_map.fields.search.placeholder') }}"
                         >
                         <button 
                             wire:click="searchAddress"
@@ -29,7 +33,7 @@
             <!-- Filtri tipo -->
             <div class="controls-section">
                 <h5 class="controls-title">
-                    <i class="fas fa-filter"></i> Tipo
+                    <i class="fas fa-filter"></i> {{ __('ui::interactive_map.filters.type.label') }}
                 </h5>
                 <div class="filter-group">
                     <label class="filter-option">
@@ -39,7 +43,7 @@
                             wire:change="loadMarkers"
                         >
                         <span class="filter-icon ticket-icon"></span>
-                        <span class="filter-label">Ticket</span>
+                        <span class="filter-label">{{ __('ui::interactive_map.filters.tickets.label') }}</span>
                         <span class="filter-count">({{ $stats['by_type']['ticket'] ?? 0 }})</span>
                     </label>
                     <label class="filter-option">
@@ -49,7 +53,7 @@
                             wire:change="loadMarkers"
                         >
                         <span class="filter-icon user-icon"></span>
-                        <span class="filter-label">Utenti</span>
+                        <span class="filter-label">{{ __('ui::interactive_map.filters.users.label') }}</span>
                         <span class="filter-count">({{ $stats['by_type']['user'] ?? 0 }})</span>
                     </label>
                     <label class="filter-option">
@@ -59,7 +63,7 @@
                             wire:change="loadMarkers"
                         >
                         <span class="filter-icon location-icon"></span>
-                        <span class="filter-label">Luoghi</span>
+                        <span class="filter-label">{{ __('ui::interactive_map.filters.locations.label') }}</span>
                         <span class="filter-count">({{ $stats['by_type']['location'] ?? 0 }})</span>
                     </label>
                 </div>
@@ -69,7 +73,7 @@
             @if($filters['tickets'])
                 <div class="controls-section">
                     <h5 class="controls-title">
-                        <i class="fas fa-flag"></i> Stato Ticket
+                        <i class="fas fa-flag"></i> {{ __('ui::interactive_map.filters.ticket_status.label') }}
                     </h5>
                     <div class="filter-group">
                         <label class="filter-option">
@@ -80,7 +84,7 @@
                                 wire:change="loadMarkers"
                             >
                             <span class="status-indicator status-pending"></span>
-                            <span class="filter-label">In Attesa</span>
+                            <span class="filter-label">{{ __('ui::interactive_map.status.pending.label') }}</span>
                             <span class="filter-count">({{ $stats['by_status']['pending'] ?? 0 }})</span>
                         </label>
                         <label class="filter-option">
@@ -91,7 +95,7 @@
                                 wire:change="loadMarkers"
                             >
                             <span class="status-indicator status-assigned"></span>
-                            <span class="filter-label">Assegnato</span>
+                            <span class="filter-label">{{ __('ui::interactive_map.status.assigned.label') }}</span>
                             <span class="filter-count">({{ $stats['by_status']['assigned'] ?? 0 }})</span>
                         </label>
                         <label class="filter-option">
@@ -102,7 +106,7 @@
                                 wire:change="loadMarkers"
                             >
                             <span class="status-indicator status-in-progress"></span>
-                            <span class="filter-label">In Corso</span>
+                            <span class="filter-label">{{ __('ui::interactive_map.status.in_progress.label') }}</span>
                             <span class="filter-count">({{ $stats['by_status']['in_progress'] ?? 0 }})</span>
                         </label>
                         <label class="filter-option">
@@ -113,7 +117,7 @@
                                 wire:change="loadMarkers"
                             >
                             <span class="status-indicator status-resolved"></span>
-                            <span class="filter-label">Risolto</span>
+                            <span class="filter-label">{{ __('ui::interactive_map.status.resolved.label') }}</span>
                             <span class="filter-count">({{ $stats['by_status']['resolved'] ?? 0 }})</span>
                         </label>
                     </div>
@@ -123,32 +127,32 @@
             <!-- Azioni -->
             <div class="controls-section">
                 <h5 class="controls-title">
-                    <i class="fas fa-tools"></i> Azioni
+                    <i class="fas fa-tools"></i> {{ __('ui::interactive_map.sections.actions.title') }}
                 </h5>
                 <div class="action-buttons">
                     <button 
                         wire:click="resetView" 
                         class="btn btn-outline-secondary btn-sm"
                     >
-                        <i class="fas fa-home"></i> Reset Vista
+                        <i class="fas fa-home"></i> {{ __('ui::interactive_map.actions.reset_view.label') }}
                     </button>
                     <button 
                         wire:click="exportData('json')" 
                         class="btn btn-outline-primary btn-sm"
                     >
-                        <i class="fas fa-download"></i> Esporta JSON
+                        <i class="fas fa-download"></i> {{ __('ui::interactive_map.actions.export_json.label') }}
                     </button>
                     <button 
                         wire:click="exportData('csv')" 
                         class="btn btn-outline-success btn-sm"
                     >
-                        <i class="fas fa-file-csv"></i> Esporta CSV
+                        <i class="fas fa-file-csv"></i> {{ __('ui::interactive_map.actions.export_csv.label') }}
                     </button>
                     <button 
                         wire:click="clearFilters" 
                         class="btn btn-outline-warning btn-sm"
                     >
-                        <i class="fas fa-times"></i> Pulisci Filtri
+                        <i class="fas fa-times"></i> {{ __('ui::interactive_map.actions.clear_filters.label') }}
                     </button>
                 </div>
             </div>
@@ -156,20 +160,20 @@
             <!-- Statistiche -->
             <div class="controls-section">
                 <h5 class="controls-title">
-                    <i class="fas fa-chart-bar"></i> Statistiche
+                    <i class="fas fa-chart-bar"></i> {{ __('ui::interactive_map.sections.stats.title') }}
                 </h5>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <span class="stat-value">{{ $stats['total_markers'] ?? 0 }}</span>
-                        <span class="stat-label">Totale Marker</span>
+                        <span class="stat-label">{{ __('ui::interactive_map.stats.total_markers.label') }}</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">{{ $visibleMarkersCount }}</span>
-                        <span class="stat-label">Visibili</span>
+                        <span class="stat-label">{{ __('ui::interactive_map.stats.visible.label') }}</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">{{ $filteredMarkersCount }}</span>
-                        <span class="stat-label">Filtrati</span>
+                        <span class="stat-label">{{ __('ui::interactive_map.stats.filtered.label') }}</span>
                     </div>
                 </div>
             </div>
@@ -191,9 +195,9 @@
     @if($isLoading)
         <div class="map-loading-overlay">
             <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Caricamento...</span>
+                <span class="visually-hidden">{{ __('ui::interactive_map.fields.loading.label') }}</span>
             </div>
-            <p>Caricamento marker...</p>
+            <p>{{ __('ui::interactive_map.loading.markers.label') }}</p>
         </div>
     @endif
 
@@ -224,7 +228,7 @@
                         </div>
                         <div class="ticket-details">
                             <small class="text-muted">
-                                <i class="fas fa-user"></i> {{ $selectedMarker['user_name'] ?? 'Sconosciuto' }}
+                                <i class="fas fa-user"></i> {{ $selectedMarker['user_name'] ?? __('ui::interactive_map.marker.unknown_user.message') }}
                             </small>
                             <small class="text-muted">
                                 <i class="fas fa-calendar"></i> {{ $selectedMarker['created_at'] ?? 'N/A' }}
@@ -239,13 +243,13 @@
                     class="btn btn-primary btn-sm"
                     target="_blank"
                 >
-                    <i class="fas fa-eye"></i> Visualizza
+                    <i class="fas fa-eye"></i> {{ __('ui::interactive_map.marker.view.label') }}
                 </a>
                 <button 
                     wire:click="$set('selectedMarker', null)"
                     class="btn btn-outline-secondary btn-sm"
                 >
-                    <i class="fas fa-times"></i> Chiudi
+                    <i class="fas fa-times"></i> {{ __('ui::components.actions.close.label') }}
                 </button>
             </div>
         </div>
@@ -279,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h6>${marker.title}</h6>
                         <p>${marker.description}</p>
                         <button onclick="Livewire.emit('markerSelected', ${marker.id})">
-                            Seleziona
+                            ${@js(__('ui::interactive_map.marker.select.label'))}
                         </button>
                     </div>
                 `);

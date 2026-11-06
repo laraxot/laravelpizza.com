@@ -1,3 +1,14 @@
+---
+title: "translation errors fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation errors fix plan"
+issues: []
+discussions: []
+---
+
 # 🔧 Translation Errors - Fix Plan
 
 > **Stato**: IN PROGRESS  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "translation errors fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation errors fix plan"
+issues: []
+discussions: []
 ## 📊 Panoramica Errori
 
 **Totale file traduzione**: 824 file  

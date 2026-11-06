@@ -1,3 +1,15 @@
+---
+title: "place resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "place resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Place.php Conflict Resolution
 
 ## File: `laravel/Modules/Geo/app/Models/Place.php`

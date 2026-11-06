@@ -1,3 +1,15 @@
+---
+title: "filament usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament usage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo dei Componenti Filament nel Progetto
 
 Questo documento serve come punto di riferimento centrale per l'utilizzo dei componenti Filament in tutto il progetto.

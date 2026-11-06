@@ -453,7 +453,7 @@ return [
         'values' => [
             'label' => 'values',
             'placeholder' => 'values',
-            'helper_text' => 'values',
+            'helper_text' => '',
             'description' => 'values',
             'tooltip' => '',
         ],

@@ -1,3 +1,15 @@
+---
+title: "contactcolumn anti patterns and errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contactcolumn anti patterns and errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # ERRORI CRITICI ContactColumn.php - Anti-Pattern da NON Ripetere MAI
 
 ## 🚨 ERRORI ARCHITETTURALI GRAVISSIMI COMMESSI
@@ -128,7 +140,6 @@ private function formatContacts(Client $record): string
 6. [ ] Validazione conformità alle memorie
 
 ---
-
 **GRAVITÀ**: CRITICA  
 **IMPATTO**: Alto - Pattern sbagliato potrebbe essere copiato  
 **PRIORITÀ**: Immediata - Correggere subito  

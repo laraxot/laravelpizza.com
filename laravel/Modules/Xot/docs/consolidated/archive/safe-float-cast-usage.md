@@ -1,3 +1,11 @@
+---
+title: "Esempi Pratici di Utilizzo di SafeFloatCastAction"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "esempi pratici di utilizzo di safefloatcastaction xot"
+---
 # Esempi Pratici di Utilizzo di SafeFloatCastAction
 
 ## Panoramica

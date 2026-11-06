@@ -1,3 +1,15 @@
+---
+title: "email testing analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email testing analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi delle Pagine di Test Email
 
 ## 🎯 Panoramica
@@ -172,7 +184,7 @@ public function sendEmail(): void
 - [Best Practices Laravel](https://laravel.com/project_docs/best-practices)
 - [Convenzioni Laraxot](../Xot/project_docs/laraxot-conventions.md)
 - [Best Practices Laravel](https://laravel.com/docs/best-practices)
-- [Convenzioni Laraxot](../Xot/docs/laraxot-conventions.md)
+- [Convenzioni Laraxot](../../Xot/docs/laraxot-conventions.md)
 
 ## 📋 Checklist
 

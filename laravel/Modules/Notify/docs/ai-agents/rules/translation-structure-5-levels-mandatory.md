@@ -1,3 +1,15 @@
+---
+title: "translation structure 5 levels mandatory"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure 5 levels mandatory"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔴 TRANSLATION STRUCTURE - 5 LEVELS MANDATORY
 
 **Path**: `.agents/docs/rules/translation-structure-5-levels-mandatory.md`  
@@ -6,7 +18,6 @@
 **Priority**: BLOCKER
 
 ---
-
 ## 🎯 The Rule
 
 > **SEMPRE** usare traduzioni a **5 LIVELLI** con `__()`:
@@ -20,19 +31,19 @@
 
 ```blade
 // ❌ SBAGLIATO: $tx() helper (VIETATO!)
-{{ $tx('predict::labels.outcomes.title', 'Outcomes') }}
-{{ $tx('predict::labels.volume', 'Volume') }}
-{{ $tx('predict::messages.loading', 'Loading...') }}
+{{ $tx('forecast::labels.outcomes.title', 'Outcomes') }}
+{{ $tx('forecast::labels.volume', 'Volume') }}
+{{ $tx('forecast::messages.loading', 'Loading...') }}
 
 // ❌ SBAGLIATO: MENO di 5 livelli
-{{ __('predict::labels.volume') }}              // ❌ SOLO 2 livelli!
-{{ __('predict::messages.loading') }}           // ❌ SOLO 2 livelli!
-{{ __('predict::titles.order.book') }}          // ❌ SOLO 3 livelli!
-{{ __('predict::labels.market.status') }}       // ❌ SOLO 3 livelli!
-{{ __('predict::fields.outcome.title') }}       // ❌ SOLO 3 livelli!
+{{ __('forecast::labels.volume') }}              // ❌ SOLO 2 livelli!
+{{ __('forecast::messages.loading') }}           // ❌ SOLO 2 livelli!
+{{ __('forecast::titles.order.book') }}          // ❌ SOLO 3 livelli!
+{{ __('forecast::labels.market.status') }}       // ❌ SOLO 3 livelli!
+{{ __('forecast::fields.outcome.title') }}       // ❌ SOLO 3 livelli!
 
 // ❌ SBAGLIATO: Fallback inline
-{{ __('predict::labels.volume', 'Volume') }}    // ❌ Fallback VIETATO!
+{{ __('forecast::labels.volume', 'Volume') }}    // ❌ Fallback VIETATO!
 ```
 
 ---
@@ -41,18 +52,18 @@
 
 ```blade
 // ✅ CORRETTO: 5 livelli con __()
-{{ __('predict::labels.market.volume.label') }}
-{{ __('predict::messages.bet.loading.message') }}
-{{ __('predict::titles.order.book.title.label') }}
-{{ __('predict::labels.market.status.label') }}
-{{ __('predict::fields.outcome.title.label') }}
+{{ __('forecast::labels.market.volume.label') }}
+{{ __('forecast::messages.bet.loading.message') }}
+{{ __('forecast::titles.order.book.title.label') }}
+{{ __('forecast::labels.market.status.label') }}
+{{ __('forecast::fields.outcome.title.label') }}
 
 // ✅ CORRETTO: Strutture comuni
-{{ __('predict::labels.{entity}.{attribute}.label') }}
-{{ __('predict::messages.{action}.{type}.message') }}
-{{ __('predict::titles.{section}.{element}.label') }}
-{{ __('predict::fields.{entity}.{attribute}.label') }}
-{{ __('predict::actions.{action}.{target}.label') }}
+{{ __('forecast::labels.{entity}.{attribute}.label') }}
+{{ __('forecast::messages.{action}.{type}.message') }}
+{{ __('forecast::titles.{section}.{element}.label') }}
+{{ __('forecast::fields.{entity}.{attribute}.label') }}
+{{ __('forecast::actions.{action}.{target}.label') }}
 ```
 
 ---
@@ -61,9 +72,9 @@
 
 ### Level 1: Namespace
 ```
-predict::
+forecast::
 ```
-Il modulo (predict, blog, user, etc.)
+Il modulo (forecast, blog, user, etc.)
 
 ### Level 2: Context
 ```
@@ -110,14 +121,14 @@ actions.trade.market.label      → Etichetta azione trade
 
 ```blade
 // 🚩 RED FLAG: $tx() helper
-{{ $tx('predict::labels.volume', 'Volume') }}
+{{ $tx('forecast::labels.volume', 'Volume') }}
 
 // 🚩 RED FLAG: Meno di 5 livelli
-{{ __('predict::labels.volume') }}
-{{ __('predict::messages.loading') }}
+{{ __('forecast::labels.volume') }}
+{{ __('forecast::messages.loading') }}
 
 // 🚩 RED FLAG: Fallback inline
-{{ __('predict::labels.volume', 'Volume') }}
+{{ __('forecast::labels.volume', 'Volume') }}
 ```
 
 **Immediate Fix**:
@@ -125,6 +136,8 @@ actions.trade.market.label      → Etichetta azione trade
 // ✅ CORRETTO: 5 livelli con __()
 {{ __('predict::labels.market.volume.label') }}
 {{ __('predict::messages.bet.loading.message') }}
+{{ __('forecast::labels.market.volume.label') }}
+{{ __('forecast::messages.bet.loading.message') }}
 ```
 
 ---
@@ -146,12 +159,12 @@ actions.trade.market.label      → Etichetta azione trade
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-- **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Translation Structure](translation-structure-5-levels.md)** - Original rule
 
 ### Module Docs
-- **[Translation Files](../../laravel/Modules/Predict/lang/)** - Translation files
-- **[Blade Components](../../laravel/Modules/Predict/resources/views/components/)** - Blade components
+- **[Translation Files](../../laravel/Modules/Forecast/lang/)** - Translation files
+- **[Blade Components](../../laravel/Modules/Forecast/resources/views/components/)** - Blade components
 
 ---
 

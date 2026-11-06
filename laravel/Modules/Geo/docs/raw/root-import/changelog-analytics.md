@@ -1,4 +1,9 @@
 ---
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "changelog analytics"
+issues: []
+discussions: []
 title: changelog analytics report
 type: report
 tags: [changelog, contributors, ci, analytics]

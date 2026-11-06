@@ -1,3 +1,11 @@
+---
+title: "Configurazione in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "configurazione in il progetto xot"
+---
 # Configurazione in il progetto
 
 La configurazione del tema è gestita attraverso file di configurazione che definiscono le impostazioni del tema.

@@ -1,3 +1,9 @@
+---
+title: "Xot - array-keys-rule.md"
+module: Xot
+bmad: true
+status: active
+---
 # Array Keys Rule for Filament Schemas
 
 ## Regola
@@ -79,7 +85,19 @@ public static function getTableColumns(): array
 
 ### Form
 ```php
-public static function getFormSchema(): array
+public function getFormSchema(): array
+public function getFormSchema(): array
+public function getFormSchema(): array
+---
+title: "array keys rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "array keys rule"
+issues: []
+discussions: []
+public function getFormSchema(): array
 {
     return [
         'title' => TextInput::make('title')->required()->maxLength(255),
@@ -91,7 +109,11 @@ public static function getFormSchema(): array
 
 ### Infolist
 ```php
-public static function getInfolistSchema(): array
+public function getInfolistSchema(): array
+public function getInfolistSchema(): array
+public function getInfolistSchema(): array
+---
+public function getInfolistSchema(): array
 {
     return [
         'title' => TextEntry::make('title'),

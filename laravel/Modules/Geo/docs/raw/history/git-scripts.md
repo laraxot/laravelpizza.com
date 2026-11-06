@@ -1,3 +1,14 @@
+---
+title: "git scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git scripts"
+issues: []
+discussions: []
+---
+
 # Git Scripts
 
 > **Nota**: Questo documento è correlato a [Git](../../docs/git.md). Per una panoramica completa, consulta entrambi i documenti.

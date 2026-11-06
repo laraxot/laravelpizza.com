@@ -1,3 +1,15 @@
+---
+title: "INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "INDEX"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module - memories Index
 
 ## Purpose
@@ -7,7 +19,7 @@ Index for Geo module memories.
 
 - [map-popup-bem-block-popup.md](./map-popup-bem-block-popup.md) — STORY-129: block `popup`, `<div class="popup__header">`, loading senza `popup__footer`
 - [js-file-english-naming-standing-rule.md](./js-file-english-naming-standing-rule.md) — STORY-132: mai `segnalazione` nel path JS (`popup-ticket.js`)
-- Ricostruzione mappa: [geo-map-lit-reconstruction-guide.md](../concepts/geo-map-lit-reconstruction-guide.md) · [geo-map-fixes-registry.md](../concepts/geo-map-fixes-registry.md) · hub [map-lit-reconstruction-hub.md](../../../../../docs/wiki/memories/map-lit-reconstruction-hub.md)
+- Ricostruzione mappa: [geo-map-lit-reconstruction-guide.md](../concepts/geo-map-lit-reconstruction-guide.md) · [geo-map-fixes-registry.md](../concepts/geo-map-fixes-registry.md) · hub [map-lit-reconstruction-hub.md](../../../../../../docs/wiki/memories/map-lit-reconstruction-hub.md)
 
 ## On-Demand Loading
 
@@ -16,7 +28,7 @@ qmd search "Geo memories" --limit 5
 ```
 
 ## See Also
-- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Root Wiki](../../../docs/wiki/)
 
 ---

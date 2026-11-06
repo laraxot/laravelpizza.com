@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Riepilogo Correzioni Traduzioni - Gennaio 2025"
+module: "Lang"
+type: concept
+tags: [ottimizzazioni, correzioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ottimizzazioni correzioni"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Riepilogo Correzioni Traduzioni - Gennaio 2025
 
 ## Problemi Risolti

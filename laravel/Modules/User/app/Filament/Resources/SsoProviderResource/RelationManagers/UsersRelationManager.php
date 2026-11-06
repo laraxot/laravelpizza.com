@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Resources\SsoProviderResource\RelationManagers;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 /**
@@ -24,7 +25,7 @@ class UsersRelationManager extends XotBaseRelationManager
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable()->toggleable(),
+            'id' => IDColumn::make('id')->sortable()->toggleable(),
             'name' => TextColumn::make('name')->searchable()->sortable()->toggleable(),
             'email' => TextColumn::make('email')->searchable()->sortable()->toggleable(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable()->toggleable(),

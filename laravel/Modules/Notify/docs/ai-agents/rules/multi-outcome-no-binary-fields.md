@@ -1,3 +1,15 @@
+---
+title: "multi outcome no binary fields"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multi outcome no binary fields"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔴 MULTI-OUTCOME UNIVERSAL - NO BINARY FIELDS
 
 **Path**: `.agents/docs/rules/multi-outcome-no-binary-fields.md`  
@@ -6,10 +18,10 @@
 **Priority**: BLOCKER
 
 ---
-
 ## 🎯 The Rule
 
 > **NON ESISTONO** predict di tipo SÌ/NO!
+> **NON ESISTONO** forecast di tipo SÌ/NO!
 > **TUTTO** è multi-risposta (2-30+ outcomes)!
 > **MAI** usare `sum_credit_yes`, `sum_credit_no`, `count_credit_yes`, `count_credit_no`!
 
@@ -76,11 +88,11 @@ CREATE TABLE rating_morph (
 
 ```php
 // ❌ SBAGLIATO: Usare campi binary
-$predict->ratings->first()->pivot->sum_credit_yes;  // ❌ ERROR!
-$predict->ratings->first()->pivot->count_credit_no; // ❌ ERROR!
+$forecast->ratings->first()->pivot->sum_credit_yes;  // ❌ ERROR!
+$forecast->ratings->first()->pivot->count_credit_no; // ❌ ERROR!
 
 // ✅ CORRETTO: Usare SOLO percentage
-$predict->ratings->first()->pivot->percentage;  // ✅ WORKS!
+$forecast->ratings->first()->pivot->percentage;  // ✅ WORKS!
 ```
 
 **Impact**: Rimuovere riferimenti a campi binary da TUTTO il codice.
@@ -91,6 +103,7 @@ $predict->ratings->first()->pivot->percentage;  // ✅ WORKS!
 
 ```
 TUTTI i predict sono MULTI-RISPOSTA:
+TUTTI i forecast sono MULTI-RISPOSTA:
 
 1. Binary (2 outcomes) - CASO PARTICOLARE
    - SÌ/NO è solo un caso con 2 outcomes
@@ -145,6 +158,8 @@ $probability = $pivot->percentage;
 // Per volume/participants, usare query separate
 $volume = BetHistory::where('predict_id', $predict->id)->sum('value');
 $participants = RatingMorph::where('model_id', $predict->id)
+$volume = BetHistory::where('forecast_id', $forecast->id)->sum('value');
+$participants = RatingMorph::where('model_id', $forecast->id)
     ->distinct('user_id')
     ->count('user_id');
 ```
@@ -190,12 +205,15 @@ $pivot->percentage  // ✅ Unico campo valido
 
 ### AI Agents Docs
 - **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage
 
 ### Module Docs
 - **[MULTI-OUTCOME-FUNDAMENTAL.md](../../laravel/Modules/Predict/docs/MULTI-OUTCOME-FUNDAMENTAL.md)** - Fundamental rule
 - **[ADR-003 Deprecate Binary Fields](../../laravel/Modules/Predict/docs/ADR-003_DEPRECATE_BINARY_CREDIT_FIELDS.md)** - Deprecation plan
+- **[MULTI-OUTCOME-FUNDAMENTAL.md](../../laravel/Modules/Forecast/docs/MULTI-OUTCOME-FUNDAMENTAL.md)** - Fundamental rule
+- **[ADR-003 Deprecate Binary Fields](../../laravel/Modules/Forecast/docs/ADR-003_DEPRECATE_BINARY_CREDIT_FIELDS.md)** - Deprecation plan
 
 ---
 

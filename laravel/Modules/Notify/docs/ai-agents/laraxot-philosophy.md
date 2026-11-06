@@ -1,6 +1,19 @@
+---
+title: "laraxot philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laraxot philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laraxot single source of truth philosophy
 
 > Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md)
+> Source: [IFLOW.md](../../../../../bashscripts/ai/IFLOW.md)
 > Back: [index](index.md) | [critical-rules.md](critical-rules.md)
 
 ## Core principle
@@ -8,7 +21,6 @@
 In Laraxot architecture, every category of file (database files, test files, migrations) must exist in ONE location only. Never both.
 
 ---
-
 ## File structure philosophy
 
 Database-related files (migrations, seeders, factories) must be in the traditional Laravel structure, never duplicated in `app/`.
@@ -102,5 +114,6 @@ See [laraxot-model-rules.md](laraxot-model-rules.md) for implementation details.
 1. **Autoloader clarity**: PHP autoloader cannot resolve duplicate files
 2. **Maintenance simplicity**: one authoritative location per file type
 3. **Predictable behavior**: consistent loading across environments
+3. **Forecastable behavior**: consistent loading across environments
 4. **DRY compliance**: eliminates redundant file locations
 5. **Test discovery**: Pest/PHPUnit rely on consistent directory structures

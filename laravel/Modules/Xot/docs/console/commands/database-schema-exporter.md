@@ -1,3 +1,11 @@
+---
+title: "DatabaseSchemaExporter Command Documentation"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, console]
+qmd: "databaseschemaexporter command documentation xot"
+---
 # DatabaseSchemaExporter Command Documentation
 
 ## Overview
@@ -52,7 +60,5 @@ Tabelle trovate: users, migrations, password_resets
 - Ottimizzata la query di estrazione tabelle
 
 ## Collegamenti tra versioni di database-schema-exporter.md
-* [database-schema-exporter.md](../../../Xot/docs/commands/database-schema-exporter.md)
-* [database-schema-exporter.md](../../../Xot/docs/console/commands/database-schema-exporter.md)
-* [database-schema-exporter.md](../../../xot/docs/commands/database-schema-exporter.md)
-* [database-schema-exporter.md](../../../xot/docs/console/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](../../../xot/project_docs/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](../../../xot/project_docs/console/commands/database-schema-exporter.md)

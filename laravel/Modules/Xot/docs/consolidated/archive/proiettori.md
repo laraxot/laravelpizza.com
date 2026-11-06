@@ -3,6 +3,11 @@ title: Proiettore
 description: Proiettore
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "proiettore {#proiettore} xot"
 ---
 
 # Proiettore {#proiettore}

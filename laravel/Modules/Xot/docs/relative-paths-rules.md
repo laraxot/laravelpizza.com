@@ -1,3 +1,13 @@
+---
+title: "Regole per i Percorsi Relativi nella Documentazione"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Regole per i Percorsi Relativi nella Documentazione"
+---
 # Regole per i Percorsi Relativi nella Documentazione
 
 > **Collegamenti correlati**
@@ -36,7 +46,7 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 
 1. **MAI utilizzare percorsi assoluti** come:
    ```markdown
-   [ERRATO](../Xot/docs/README.md)
+   [ERRATO](/var/www/html/saluteora/laravel/Modules/Xot/docs/README.md)
    ```
 
 2. **MAI utilizzare percorsi che iniziano con /**:
@@ -48,7 +58,7 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 3. **MAI utilizzare percorsi che non tengono conto della posizione relativa del file sorgente**:
    ```markdown
    [ERRATO](Modules/Xot/docs/README.md) <!-- Da un file nella root -->
-   [ERRATO](../Xot/docs/README.md) <!-- Da un file in un modulo, senza contare correttamente i livelli -->
+   [ERRATO](README.md) <!-- Da un file in un modulo, senza contare correttamente i livelli -->
    ```
 
 ## Come Calcolare Correttamente i Percorsi Relativi

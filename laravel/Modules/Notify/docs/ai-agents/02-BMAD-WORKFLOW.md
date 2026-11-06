@@ -1,10 +1,31 @@
+---
+title: "02 BMAD WORKFLOW"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "02 BMAD WORKFLOW"
+issues: []
+discussions: []
+status: superseded
+superseded_by: 02-bmad-workflow.md
+---
+
 # 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
 
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [01-GSD-WORKFLOW.md](01-GSD-WORKFLOW.md) — GSD Method
+**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
+**Related**: [01-GSD-WORKFLOW.md](01-GSD-WORKFLOW.md): GSD Method
 
 ---
 
+title: "02 BMAD WORKFLOW"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "02 BMAD WORKFLOW"
+issues: []
+discussions: []
 ## 📋 Overview
 
 BMAD is an AI-driven agile development framework with 12+ specialized agents.

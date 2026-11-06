@@ -10,40 +10,6 @@ use Modules\UI\View\Components\Render\Blocks;
 
 use function Pest\Laravel\get;
 
-use PHPUnit\Framework\Assert;
-
-use function Safe\file_get_contents;
-use function Safe\json_decode;
-
-use Spatie\LaravelData\DataCollection;
-
-uses(TestCase::class);
-
-/**
- * Carica il JSON dell'homepage usato da questa suite, con narrowing esplicito
- * per evitare di ripetere 7 volte lo stesso json_decode() senza tipizzazione.
- *
- * @return array<string, mixed>
- */
-function loadHomepageJsonForBlocksArchitectureTest(): array
-{
-    $homepageJsonPath = config_path('local/fixcity/database/content/pages/home.json');
-
-    $json = file_get_contents($homepageJsonPath);
-
-    $data = json_decode($json, true);
-
-    Assert::assertIsArray($data);
-
-    $result = [];
-    foreach ($data as $key => $value) {
-        Assert::assertIsString($key);
-        $result[$key] = $value;
-    }
-
-    return $result;
-}
-
 describe('Homepage Filament Builder Blocks - CMS Module', function () {
     beforeEach(function () {
         $this->lang = app()->getLocale();
@@ -62,63 +28,47 @@ describe('Homepage Filament Builder Blocks - CMS Module', function () {
     });
 
     test('json content structure is properly loaded by cms', function () {
-        $homepageJsonPath = config_path('local/fixcity/database/content/pages/home.json');
-        expect(file_exists($homepageJsonPath))->toBeTrue();
-
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
+        // Il loader salta il test se il tenant non ha la homepage e fallisce se la forma non e' valida.
+        $homepageData = TestCase::homepageJsonForBlocksArchitecture();
 
         // Verify CMS-specific JSON structure
         expect($homepageData)->toHaveKeys(['id', 'slug', 'content_blocks']);
         expect($homepageData['slug'])->toBe('home');
-
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        expect($contentBlocks)->toHaveKey($this->lang);
+        expect($homepageData['content_blocks'])->toHaveKey($this->lang);
 
         // Verify blocks structure for CMS processing
-        /** @var array<int, array<string, mixed>> $blocks */
-        $blocks = $contentBlocks[$this->lang];
+        $blocks = cmsHomepageBlocks($this->lang);
         foreach ($blocks as $block) {
             expect($block)->toHaveKeys(['type', 'data']);
-
-            /** @var array<string, mixed> $blockData */
-            $blockData = $block['data'];
-            expect($blockData)->toHaveKey('view');
-            expect($blockData['view'])->toContain('::components.blocks.');
+            expect($block['data'])->toHaveKey('view');
+            expect($block['data']['view'])->toContain('::components.blocks.');
         }
     });
 
     test('cms blocks discovery system works correctly', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
 
-        expect($allBlocks)->toBeInstanceOf(DataCollection::class);
         expect($allBlocks->count())->toBeGreaterThan(0);
 
         // Verify CMS blocks are discovered
-        $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
+        $cmsBlocks = collect($allBlocks)->filter(fn ($block) => 'Cms' === $block->module);
         if ($cmsBlocks->count() > 0) {
-            $cmsBlocks->each(function ($block) {
+            foreach ($cmsBlocks as $block) {
                 expect($block->toArray())->toHaveKeys(['name', 'class', 'module', 'path']);
-                expect(class_exists($block->class))->toBeTrue();
-            });
+                expect(class_exists($block->class))->toBeTrue("CMS block class {$block->class} should exist");
+            }
         }
     });
 
     test('ui blocks render component processes homepage blocks', function () {
         // Verify the UI Blocks render component exists and works
-        $blocksClass = Blocks::class;
-        expect(class_exists($blocksClass))->toBeTrue();
+        expect(class_exists(Blocks::class))->toBeTrue('Blocks render component should exist');
 
         // Load homepage blocks
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
+        $blocks = cmsHomepageBlocks($this->lang);
 
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        /** @var array<int, array<string, mixed>> $blocks */
-        $blocks = $contentBlocks[$this->lang];
-
-        // Test component instantiation with blocks
-        $component = new $blocksClass('cms::components.blocks', $blocks);
+        // Test component instantiation with blocks (stessa vista usata da ThemeComposer)
+        $component = new Blocks('ui::components.render.blocks.v1', $blocks);
         expect($component->blocks)->toEqual($blocks);
     });
 
@@ -129,22 +79,15 @@ describe('Homepage Filament Builder Blocks - CMS Module', function () {
         $content = $response->getContent();
 
         // Load expected content from JSON
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
-
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        /** @var array<int, array<string, mixed>> $blocks */
-        $blocks = $contentBlocks[$this->lang];
+        $blocks = cmsHomepageBlocks($this->lang);
 
         // Verify that CMS-managed content appears on page
         foreach ($blocks as $block) {
-            /** @var array<string, mixed> $blockData */
-            $blockData = $block['data'];
-            if (isset($blockData['title'])) {
-                expect($content)->toContain($blockData['title']);
+            if (isset($block['data']['title'])) {
+                expect($content)->toContain($block['data']['title']);
             }
-            if (isset($blockData['subtitle'])) {
-                expect($content)->toContain($blockData['subtitle']);
+            if (isset($block['data']['subtitle'])) {
+                expect($content)->toContain($block['data']['subtitle']);
             }
         }
     });
@@ -159,44 +102,28 @@ describe('Homepage Filament Builder Blocks - CMS Module', function () {
         expect($content)->toContain('pub_theme::');
 
         // Load blocks to verify theme views
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
-
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        /** @var array<int, array<string, mixed>> $blocks */
-        $blocks = $contentBlocks[$this->lang];
+        $blocks = cmsHomepageBlocks($this->lang);
 
         foreach ($blocks as $block) {
-            /** @var array<string, mixed> $blockData */
-            $blockData = $block['data'];
-            $view = $blockData['view'];
+            $view = $block['data']['view'];
             expect($view)->toStartWith('pub_theme::');
             expect($view)->toContain('components.blocks');
         }
     });
 
     test('cms handles multilingual content correctly', function () {
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
-
-        // Verify CMS multilingual structure
-        expect($homepageData['content_blocks'])->toBeArray();
-        expect($homepageData['title'])->toBeArray();
-
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        /** @var array<string, mixed> $title */
-        $title = $homepageData['title'];
+        $homepageData = TestCase::homepageJsonForBlocksArchitecture();
 
         // Verify current locale has content
-        expect($contentBlocks)->toHaveKey($this->lang);
-        expect($title)->toHaveKey($this->lang);
+        expect($homepageData['content_blocks'])->toHaveKey($this->lang);
+        expect($homepageData['title'])->toHaveKey($this->lang);
 
         // Test rendering with current locale
         $response = get('/'.$this->lang);
         $response->assertOk();
 
         $content = $response->getContent();
-        expect($content)->toContain($title[$this->lang]);
+        expect($content)->toContain($homepageData['title'][$this->lang]);
     });
 
     test('cms page component passes correct data to blocks', function () {
@@ -216,55 +143,29 @@ describe('Homepage Filament Builder Blocks - CMS Module', function () {
     });
 
     test('cms json storage pattern is consistent', function () {
-        $pagesPath = config_path('local/fixcity/database/content/pages/');
-        expect(file_exists($pagesPath))->toBeTrue();
-
-        $homepageJsonPath = $pagesPath.'home.json';
-        expect(file_exists($homepageJsonPath))->toBeTrue();
-
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
+        // Esistenza della cartella e forma di locale, `type` (string) e `data` (object) di ogni blocco:
+        // le verifica il loader (salta senza homepage, fallisce se la forma e' errata).
+        $homepageData = TestCase::homepageJsonForBlocksArchitecture();
 
         // Verify CMS-required fields
         expect($homepageData)->toHaveKeys(['id', 'slug', 'content_blocks']);
         expect($homepageData['slug'])->toBe('home');
 
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-
         // Verify blocks structure
-        foreach ($contentBlocks as $locale => $blocks) {
-            expect($locale)->toBeString();
-            expect($blocks)->toBeArray();
-
-            /** @var array<int, array<string, mixed>> $blocks */
+        foreach ($homepageData['content_blocks'] as $blocks) {
             foreach ($blocks as $block) {
-                expect($block)->toHaveKeys(['type', 'data']);
-                expect($block['type'])->toBeString();
-                expect($block['data'])->toBeArray();
                 expect($block['data'])->toHaveKey('view');
             }
         }
     });
 
     test('cms blade syntax processing works in json', function () {
-        $homepageData = loadHomepageJsonForBlocksArchitectureTest();
-
-        /** @var array<string, mixed> $contentBlocks */
-        $contentBlocks = $homepageData['content_blocks'];
-        /** @var array<int, array<string, mixed>> $blocks */
-        $blocks = $contentBlocks[$this->lang];
+        $blocks = cmsHomepageBlocks($this->lang);
         $landingBlock = collect($blocks)->firstWhere('type', 'landing-page');
 
-        if (null !== $landingBlock) {
-            /** @var array<string, mixed> $landingBlock */
-            $landingBlockData = $landingBlock['data'];
-            Assert::assertIsArray($landingBlockData);
-
-            Assert::assertArrayHasKey('cta_link', $landingBlockData);
-            Assert::assertIsString($landingBlockData['cta_link']);
-
+        if ($landingBlock) {
             // Verify Blade syntax exists in JSON
-            expect($landingBlockData['cta_link'])->toContain("{{ route('register') }}");
+            expect($landingBlock['data']['cta_link'])->toContain("{{ route('register') }}");
 
             // Verify it's processed correctly on the page
             $response = get('/'.$this->lang);
@@ -302,6 +203,6 @@ describe('Homepage Filament Builder Blocks - CMS Module', function () {
         $renderTime = microtime(true) - $startTime;
 
         // CMS should render blocks efficiently
-        expect($renderTime)->toBeLessThan(2.0);
+        expect($renderTime)->toBeLessThan(2.0, 'CMS block rendering should be fast');
     });
 });

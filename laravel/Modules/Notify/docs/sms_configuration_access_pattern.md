@@ -1,10 +1,22 @@
+---
+title: "sms configuration access pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms configuration access pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern di Accesso alla Configurazione SMS
 
 ## Problema Identificato
 
 È stato identificato un errore comune nell'implementazione delle azioni SMS: l'utilizzo di `config('services.*.token')` invece di `config('sms.drivers.*.token')`.
 
-Questo errore viola i principi di modularità e coerenza dell'architettura di Quaeris, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
+Questo errore viola i principi di modularità e coerenza dell'architettura di SaluteOra, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
 
 ## Pattern Corretto
 

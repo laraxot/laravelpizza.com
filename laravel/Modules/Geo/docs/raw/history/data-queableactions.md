@@ -1,3 +1,14 @@
+---
+title: "data queableactions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "data queableactions"
+issues: []
+discussions: []
+---
+
 # Convenzioni per Data Objects e QueueableActions
 
 Questo documento definisce le convenzioni per l'utilizzo dei Data Objects e QueueableActions nel framework Laraxot PTVX, con una chiara preferenza per le librerie Spatie rispetto agli approcci tradizionali.

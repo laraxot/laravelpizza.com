@@ -1,4 +1,30 @@
+---
+title: "Implementazione del Logout"
+type: concept
+tags: [auth, logout, implementation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-logout-implementation implementazione del logout"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Implementazione del Logout
+# Implementazione del Logout 
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -202,6 +228,11 @@ mount(function() {
         // Evento post-logout
         Event::dispatch('auth.logout.successful');
     }
+        
+        // Evento post-logout
+        Event::dispatch('auth.logout.successful');
+    }
+    
 
     $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 });

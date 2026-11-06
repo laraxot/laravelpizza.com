@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Lang\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Modules\Lang\Enums\TranslationStatusEnum;
 use Modules\Lang\Models\Translation;
 use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -24,9 +25,10 @@ describe('Translation Model', function () {
         Assert::assertContains('item', $fillable);
     });
 
-    test('has correct status constants', function () {
-        Assert::assertSame(0, Translation::STATUS_SAVED);
-        Assert::assertSame(1, Translation::STATUS_CHANGED);
+    test('status enum keeps the translation-manager values', function () {
+        Assert::assertSame(0, TranslationStatusEnum::SAVED->value);
+        Assert::assertSame(1, TranslationStatusEnum::CHANGED->value);
+        Assert::assertSame(TranslationStatusEnum::CHANGED, TranslationStatusEnum::from(1));
     });
 
     test('scopeOfTranslatedGroup filters by group', function () {

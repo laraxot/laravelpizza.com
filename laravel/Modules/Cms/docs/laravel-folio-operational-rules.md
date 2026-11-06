@@ -1,3 +1,15 @@
+---
+title: "laravel folio operational rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel folio operational rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Folio Operational Rules
 
 ## Fonte

@@ -8,7 +8,6 @@ use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Modules\Tenant\Actions\GetTenantNameAction;
-use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
 use Spatie\QueueableAction\QueueableAction;
 
 class ResolveTenantConfigValueAction
@@ -47,26 +46,24 @@ class ResolveTenantConfigValueAction
      */
     private function buildMergedGroupConfig(string $group): array
     {
-        /** @var mixed $originalConf */
         $originalConf = config($group);
         $tenantName = app(GetTenantNameAction::class)->execute();
         $configName = str_replace('/', '.', $tenantName).'.'.$group;
-        /** @var mixed $extraConf */
         $extraConf = config($configName);
 
-        $originalConfArray = is_array($originalConf) ? $originalConf : [];
-        $extraConfArray = is_array($extraConf) ? $extraConf : [];
+        $originalConfTyped = is_array($originalConf)
+            ? app(FilterConfigStringKeysAction::class)->execute($originalConf)
+            : [];
 
-        /** @var array<string, mixed> $originalConfArray */
-        /** @var array<string, mixed> $extraConfArray */
+        $extraConfTyped = is_array($extraConf)
+            ? app(FilterConfigStringKeysAction::class)->execute($extraConf)
+            : [];
 
-        $originalConfTyped = ConfigStringKeyFilter::onlyStringKeys($originalConfArray);
-        $extraConfTyped = ConfigStringKeyFilter::onlyStringKeys($extraConfArray);
-
-        return ConfigStringKeyFilter::mergeRecursive($originalConfTyped, $extraConfTyped);
+        return app(MergeRecursiveStringKeyConfigAction::class)->execute($originalConfTyped, $extraConfTyped);
     }
 
     /**
+     * @param  mixed  $res  Raw config() payload; only scalar/array values are accepted
      * @return float|int|string|array<mixed>|null
      */
     private function assertValidConfigValue(mixed $res): float|int|string|array|null

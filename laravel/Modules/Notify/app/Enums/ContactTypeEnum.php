@@ -73,7 +73,6 @@ enum ContactTypeEnum: string implements HasColor, HasIcon, HasLabel
                 $table->string(self::FAX->value)
                     ->nullable()
                     ->comment('Fax number');
-            },
-        ];
+            }];
     }
 }

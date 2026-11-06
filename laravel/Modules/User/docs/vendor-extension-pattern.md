@@ -1,3 +1,28 @@
+---
+title: "🏛️ PATTERN ESTENSIONE CLASSI VENDOR IN LARAXOT"
+type: pattern
+tags: [vendor, extension, pattern]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "vendor-extension-pattern 🏛️ pattern estensione classi vendor in laraxot"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # 🏛️ PATTERN ESTENSIONE CLASSI VENDOR IN LARAXOT
 
 ## 📋 PRINCIPIO FONDAMENTALE
@@ -209,6 +234,9 @@ class CustomModel extends VendorModelAlias
 ## 📚 RIFERIMENTI
 
 - [Spatie Permission Philosophy](spatie-permission-philosophy.md)
+- [BaseModel Philosophy](../Xot/docs/basemodel-philosophy.md)
+- [External Package Integration](../Xot/docs/external-packages.md)
+- [Class Responsibility Separation](../Xot/docs/class-responsibility.md)
 - [BaseModel Philosophy](../xot/docs/basemodel-philosophy.md)
 - [External Package Integration](../xot/docs/external-packages.md)
 - [Class Responsibility Separation](../xot/docs/class-responsibility.md)
@@ -216,4 +244,3 @@ class CustomModel extends VendorModelAlias
 ---
 
 *Questa è la Via Laraxot: Rispettare la natura di ogni cosa, non forzarla in forme innaturali.*
-

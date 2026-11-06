@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
-/** @phpstan-ignore trait.unused */
 trait HasDynamicFillable
 {
     /**
@@ -24,7 +23,7 @@ trait HasDynamicFillable
         $dynamicFillableEnums = $this->getDynamicFillableEnums();
 
         foreach ($dynamicFillableEnums as $enumClass) {
-            if (! is_string($enumClass) || '' === $enumClass) {
+            if (! is_string($enumClass) || $enumClass === '') {
                 continue;
             }
 
@@ -51,5 +50,16 @@ trait HasDynamicFillable
 
         // Ensure unique values and reset keys for cleanliness
         return array_values(array_unique($fillable));
+    }
+
+    /**
+     * Models using this trait may override this to list Enum classes whose
+     * cases should be merged into `$fillable`.
+     *
+     * @return list<class-string<\UnitEnum>>
+     */
+    protected function getDynamicFillableEnums(): array
+    {
+        return [];
     }
 }

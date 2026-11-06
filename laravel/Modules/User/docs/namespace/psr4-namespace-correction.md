@@ -1,3 +1,16 @@
+---
+title: "Correzione Namespace PSR-4"
+type: concept
+tags: [psr4, namespace, correction]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "psr4-namespace-correction correzione namespace psr-4"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+status: draft
+---
+
 # Correzione Namespace PSR-4
 
 ## Problema

@@ -1,3 +1,11 @@
+---
+title: "User Module - Spatie Permission Methods Reference"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - spatie permission methods reference user"
+---
 # User Module - Spatie Permission Methods Reference
 
 ## Overview

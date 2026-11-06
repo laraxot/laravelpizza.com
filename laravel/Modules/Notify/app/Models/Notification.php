@@ -6,46 +6,41 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\Notify\Database\Factories\NotificationFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseModel;
-use Override;
 
 /**
  * Notification model for the Notify module.
  *
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ *
+ * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Notification newModelQuery()
+ * @method static Builder<static>|Notification newQuery()
+ * @method static Builder<static>|Notification query()
+ *
  * @property string $id
- * @property string $type
- * @property string|null $subject
- * @property string|null $content
- * @property string|null $priority
- * @property array<string, mixed>|null $custom_headers
- * @property array<int, mixed>|null $attachments
  * @property string|null $message
+ * @property string $type
  * @property string $notifiable_type
  * @property int $notifiable_id
- * @property array<string, mixed> $data
+ * @property string|int|null $tenant_id
+ * @property string|int|null $user_id
+ * @property string|null $subject_type
+ * @property string|int|null $subject_id
+ * @property array<int, string>|array<string, mixed>|null $channels
+ * @property string|null $status
+ * @property array<array-key, mixed> $data
  * @property Carbon|null $read_at
+ * @property Carbon|null $sent_at
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- * @property int|null $tenant_id
- * @property int|null $user_id
- * @property string|null $subject_type
- * @property int|null $subject_id
- * @property list<string>|null $channels
- * @property string|null $status
- * @property Carbon|null $sent_at
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $updater
  *
- * @method static NotificationFactory factory($count = null, $state = [])
- * @method static Builder<static>|Notification newModelQuery()
- * @method static Builder<static>|Notification newQuery()
- * @method static Builder<static>|Notification query()
  * @method static Builder<static>|Notification whereCreatedAt($value)
  * @method static Builder<static>|Notification whereCreatedBy($value)
  * @method static Builder<static>|Notification whereData($value)
@@ -59,12 +54,13 @@ use Override;
  * @method static Builder<static>|Notification whereUpdatedAt($value)
  * @method static Builder<static>|Notification whereUpdatedBy($value)
  *
- * @property-read ProfileContract|null $deleter
- *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class Notification extends BaseModel
 {
+    /** La chiave e' un UUID char(36): niente auto-increment, altrimenti dopo l'insert l'id diventa '0'. */
+    public $incrementing = false;
+
     /** @var list<string> */
     protected $fillable = [
         'message',
@@ -77,15 +73,13 @@ class Notification extends BaseModel
         'channels',
         'status',
         'sent_at',
-        'data',
-    ];
+        'data'];
 
     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */
-    #[Override]
     protected function casts(): array
     {
         return [
@@ -95,7 +89,6 @@ class Notification extends BaseModel
             'channels' => 'array',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-        ];
+            'deleted_at' => 'datetime'];
     }
 }

@@ -8,7 +8,7 @@ return [
         'group' => [
             'name' => 'Admin',
         ],
-        'label' => 'domain',
+        'label' => 'Dominio',
         'sort' => 6,
         'icon' => 'tenant-domain-animated',
     ],
@@ -60,6 +60,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'rating',
         ],
         'toggleColumns' => [
             'label' => 'toggleColumns',
@@ -72,6 +73,36 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+        ],
+        'title' => [
+            'label' => 'title',
+            'placeholder' => 'title',
+            'helper_text' => 'title',
+            'description' => 'title',
+        ],
+        'brand' => [
+            'label' => 'brand',
+            'placeholder' => 'brand',
+            'helper_text' => 'brand',
+            'description' => 'brand',
+        ],
+        'category' => [
+            'label' => 'category',
+            'placeholder' => 'category',
+            'helper_text' => 'category',
+            'description' => 'category',
+        ],
+        'description' => [
+            'label' => 'description',
+            'placeholder' => 'description',
+            'helper_text' => 'description',
+            'description' => 'description',
+        ],
+        'price' => [
+            'label' => 'price',
+            'placeholder' => 'price',
+            'helper_text' => 'price',
+            'description' => 'price',
         ],
     ],
     'actions' => [

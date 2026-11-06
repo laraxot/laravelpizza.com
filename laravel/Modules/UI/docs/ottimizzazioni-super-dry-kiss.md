@@ -1,3 +1,14 @@
+---
+title: "Ottimizzazioni Super DRY + KISS - Modulo UI"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "ottimizzazioni super dry + kiss - modulo ui ui"
+---
+
 # Ottimizzazioni Super DRY + KISS - Modulo UI
 
 ## 🎯 Panoramica
@@ -291,10 +302,10 @@ class ExampleComponent extends Component
 
 ## 🔗 Collegamenti
 
-- [Documentazione Core](../../../../docs/core/)
-- [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
-- [Convenzioni Sistema](../../../../docs/core/conventions.md)
-- [Template Modulo](../../../../docs/templates/module-template.md)
+- [Documentazione Core](../../../docs/core/)
+- [Best Practices Filament](../../../docs/core/filament-best-practices.md)
+- [Convenzioni Sistema](../../../docs/core/conventions.md)
+- [Template Modulo](../../../docs/templates/module-template.md)
 
 ---
 

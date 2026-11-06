@@ -34,7 +34,6 @@ class NotificationFactory extends Factory
             'notifiable_type' => User::class,
             'notifiable_id' => (string) Str::uuid(),
             'data' => json_encode(['message' => $this->faker->sentence()]),
-            'read_at' => null,
-        ];
+            'read_at' => null];
     }
 }

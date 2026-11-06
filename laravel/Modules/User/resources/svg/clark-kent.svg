@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            .u-ck-lens {
+                transform-box: fill-box;
+                transform-origin: center;
+                animation: u-ck-glint 2.8s ease-in-out infinite;
+            }
+            @keyframes u-ck-glint {
+                0%, 100% { opacity: 1; }
+                45% { opacity: 1; }
+                50% { opacity: .45; }
+                55% { opacity: 1; }
+            }
+        }
+    </style>
+    <path stroke-linecap="round" d="M8.2 8.4C8.2 5.2 15.8 5.2 15.8 8.4"/>
+    <ellipse cx="12" cy="9.15" rx="3.15" ry="3.55"/>
+    <circle class="u-ck-lens" cx="10.35" cy="9.05" r="1.35"/>
+    <circle class="u-ck-lens" cx="13.65" cy="9.05" r="1.35"/>
+    <path stroke-linecap="round" d="M11.7 9.05h.6M9 9.05H8.15M15 9.05h.85"/>
+    <path stroke-linejoin="round" d="M8.4 14.7L12 12.5l3.6 2.2"/>
+    <path class="u-ck-tie" stroke-linejoin="round" d="M12 12.7l1.15 1.9L12 18.4l-1.15-3.8z"/>
+    <path stroke-linecap="round" d="M7.4 15C7.4 19.4 16.6 19.4 16.6 15"/>
+</svg>

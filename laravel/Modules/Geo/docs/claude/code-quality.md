@@ -1,3 +1,15 @@
+---
+title: "code quality"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality"
+issues: []
+discussions: []
+status: draft
+---
+
 # Code Quality
 
 ## 🧪 PHPStan (Level 10 Required)
@@ -210,6 +222,5 @@ Rector performs automated refactoring:
 - [ ] Documentation updated
 
 ---
-
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: code-quality.md - Code quality tools and standards

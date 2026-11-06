@@ -1,3 +1,15 @@
+---
+title: "filament component integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament component integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione dei Componenti Filament nei Blocchi
 
 ## Introduzione

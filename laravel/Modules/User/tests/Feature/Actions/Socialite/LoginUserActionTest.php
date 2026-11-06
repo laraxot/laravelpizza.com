@@ -46,7 +46,7 @@ describe('Login User Action', function (): void {
             'email' => 'not-authenticatable@example.com',
         ]);
 
-        $socialiteUser->setRelation('user', new \stdClass());
+        $socialiteUser->setRelation('user', new \stdClass);
 
         try {
             app(LoginUserAction::class)->execute($socialiteUser);
@@ -147,7 +147,6 @@ describe('Login User Action', function (): void {
             app(LoginUserAction::class)->execute($socialiteUser);
             $this->fail('Expected InvalidArgumentException was not thrown');
         } catch (\InvalidArgumentException $exception) {
-            Assert::assertInstanceOf(\InvalidArgumentException::class, $exception);
         }
     });
 

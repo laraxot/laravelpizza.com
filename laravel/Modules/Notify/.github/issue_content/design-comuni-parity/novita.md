@@ -1,3 +1,14 @@
+---
+title: "novita"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "novita"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Novità (novita.html)
 
 ## Obiettivo

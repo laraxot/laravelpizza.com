@@ -1,3 +1,14 @@
+---
+title: "testing business behavior update summary 4"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing business behavior update summary 4"
+issues: []
+discussions: []
+---
+
 # 🎯 RIEPILOGO AGGIORNAMENTO: Testing Business Behavior Rule
 
 ## REGOLA SUPREMA IMPLEMENTATA
@@ -114,6 +125,14 @@ Ora posso procedere a:
 
 ---
 
+title: "testing business behavior update summary 4"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing business behavior update summary 4"
+issues: []
+discussions: []
 **Questa regola è ora SUPREMA e ha precedenza su qualsiasi altra considerazione di testing.**
 
 **Data implementazione**: Gennaio 2025  

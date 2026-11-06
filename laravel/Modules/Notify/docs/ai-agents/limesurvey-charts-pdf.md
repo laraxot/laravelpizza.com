@@ -1,3 +1,15 @@
+---
+title: "limesurvey charts pdf"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "limesurvey charts pdf"
+issues: []
+discussions: []
+status: draft
+---
+
 # LimeSurvey Integration & Professional Charts
 
 Guida per Claude: integrazione LimeSurvey, Chart.js, JpGraph, PDF.
@@ -62,6 +74,7 @@ Usare `MakePdf2Action` con `AnswersFilterData`.
 - [Professional Charts Guide](../../laravel/Modules/Chart/docs/filament-charts-professional-guide.md)
 - [JpGraph 4.4.3 Reference](../../laravel/Modules/Chart/docs/jpgraph-4-4-3-reference.md)
 - [PDF Generation Guide](../../laravel/Modules/Quaeris/docs/pdf-generation-with-charts.md)
+- [PDF Generation Guide](../../laravel/Modules/App/docs/pdf-generation-with-charts.md)
 
 ## Collegamenti
 

@@ -1,3 +1,12 @@
+---
+title: "Migration Safety Rules - NEVER Destroy Data"
+type: note
+updated: 2026-10-07
+tags: [docs, user, database]
+qmd: "migration safety rules - never destroy data user"
+status: superseded
+superseded_by: migration_safety_rules.md
+---
 # Migration Safety Rules - NEVER Destroy Data
 
 ## Regola ASSOLUTA

@@ -1,3 +1,15 @@
+---
+title: "tailwind layouts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tailwind layouts"
+issues: []
+discussions: []
+status: draft
+---
+
 # Layout con Filament Components
 
 ## Introduzione
@@ -283,4 +295,4 @@ return [
 - [Documentazione Form](tailwind_forms.md)
 - [Documentazione Notifiche](tailwind_notifications.md)
 - [Documentazione Componenti](tailwind_components.md)
-- [Architettura](architecture.md)
+- [Architettura](ARCHITECTURE.md)

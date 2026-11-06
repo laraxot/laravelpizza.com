@@ -3,19 +3,19 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
+
 use Modules\Notify\Actions\EsendexSendAction;
 use Modules\Notify\Datas\SmsData;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('EsendexSendAction', function () {
-        it('can be instantiated', function () {
+    it('can be instantiated', function () {
         Assert::assertTrue(class_exists(EsendexSendAction::class));
     });
 
@@ -37,7 +37,7 @@ describe('EsendexSendAction', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        \assertReflectionTypeName($params[0]->getType(), SmsData::class);
+        XotBasePest::assertReflectionTypeName($params[0]->getType(), SmsData::class);
     });
 
     it('execute returns array', function () {
@@ -45,7 +45,7 @@ describe('EsendexSendAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, 'array');
+        XotBasePest::assertReflectionTypeName($returnType, 'array');
     });
 
     it('has login method', function () {
@@ -63,7 +63,7 @@ describe('EsendexSendAction', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(EsendexSendAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -74,7 +74,7 @@ describe('EsendexSendAction', function () {
     });
 
     it('has required imports', function () {
-        $content = \notifyReflectionSource(new \ReflectionClass(EsendexSendAction::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(EsendexSendAction::class));
 
         Assert::assertStringContainsString('use Modules\Notify\Datas\SmsData', $content);
         Assert::assertStringContainsString('use Spatie\QueueableAction\QueueableAction', $content);

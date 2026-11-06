@@ -1,3 +1,13 @@
+---
+title: "Regole Generali di Comportamento"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, conventions]
+qmd: "Regole Generali di Comportamento"
+---
 # Regole Generali di Comportamento
 
 ## 1. Struttura del Codice
@@ -10,7 +20,7 @@
   ```php
   // -- CREATE --
   $this->tableCreate(...)
-
+  
   // -- UPDATE --
   $this->tableUpdate(...)
   ```
@@ -48,8 +58,10 @@
 - Separare la logica in metodi privati quando necessario
 - Utilizzare `match` per logiche condizionali semplici
 
-### 2.2 Data Transfer Objects
+### 2.2 Data Transfer Objects (Datas/)
 - Utilizzare Spatie Laravel Data
+- Ogni oggetto dati vive in `app/Datas/` (plurale), mai `app/Data/` (singolare), `DTOs/`, `DataObjects/` o `DataTransferObjects/`
+- Nome della classe: `*Data`, estende `Spatie\LaravelData\Data`
 - Definire proprietà pubbliche con tipi
 - Implementare `from()` per la creazione da array
 - Utilizzare `toArray()` per la serializzazione
@@ -156,4 +168,4 @@ app/
 - Mantenere retrocompatibilità
 - Aggiornare documentazione
 - Verificare test
-- Comunicare cambiamenti
+- Comunicare cambiamenti 

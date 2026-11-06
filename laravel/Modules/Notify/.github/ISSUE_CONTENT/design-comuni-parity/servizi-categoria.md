@@ -1,3 +1,14 @@
+---
+title: "servizi categoria"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "servizi categoria"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Servizi per Categoria (servizi-categoria.html)
 
 ## Obiettivo

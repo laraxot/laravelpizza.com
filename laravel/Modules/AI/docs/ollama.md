@@ -1,3 +1,15 @@
+---
+title: "ollama"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama"
+issues: []
+discussions: []
+status: draft
+---
+
 link 
 https://ripeseed.io/blog/fine-tuning-open-source-llm-llama-3-mistral-and-gemma
 

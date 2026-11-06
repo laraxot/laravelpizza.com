@@ -11,23 +11,19 @@ return [
         'email' => 'Zum Senden einer E-Mail klicken',
         'pec' => 'Zum Senden einer PEC klicken',
         'whatsapp' => 'Zum Öffnen von WhatsApp klicken',
-        'fax' => 'Faxnummer',
-    ],
+        'fax' => 'Faxnummer'],
     'aria_labels' => [
         'contact_list' => 'Kontaktliste',
         'contact_link' => 'Kontaktlink',
-        'no_contacts' => 'Keine Kontakte verfügbar',
-    ],
+        'no_contacts' => 'Keine Kontakte verfügbar'],
     'navigation' => [
-        'label' => 'Missing Navigation Label',
+        'label' => 'Kontakte',
         'plural_label' => 'Missing Navigation Plural Label',
         'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
+        'sort' => 100],
     'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
     'actions' => [
-    ],
-];
+    ]];

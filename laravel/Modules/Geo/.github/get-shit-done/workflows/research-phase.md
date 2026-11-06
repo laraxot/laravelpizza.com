@@ -1,3 +1,14 @@
+---
+title: "research phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "research phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Research how to implement a phase. Spawns gsd-phase-researcher with phase context.
 

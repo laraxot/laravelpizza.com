@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Actions;
 
+use Spatie\QueueableAction\QueueableAction;
+
 class FormatCoordinatesAction
 {
+    use QueueableAction;
+
     public function execute(float $latitude, float $longitude, string $format = 'decimal'): string
     {
         return match ($format) {

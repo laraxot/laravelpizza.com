@@ -45,6 +45,7 @@ return [
         'array' => 'La lista :attribute debe contener menos de :max elemnetos.',
     ],
     'mimes' => 'El fichero :attribute debe tener el formato/s :values.',
+    'mimetypes' => 'El fichero :attribute debe ser de tipo: :values.',
     'min' => [
         'numeric' => 'El número :attribute debe ser mayor o igual a :min.',
         'file' => 'El fichero :attribute debe ser mayor o igual a :min kilobytes.',

@@ -14,7 +14,7 @@ class SocialiteUserForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'user_id' => Select::make('user_id')

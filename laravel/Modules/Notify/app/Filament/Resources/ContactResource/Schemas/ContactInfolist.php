@@ -13,7 +13,7 @@ class ContactInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'model_id' => TextEntry::make('model_id'),
@@ -28,7 +28,6 @@ class ContactInfolist extends XotBaseResourceInfolist
                 ->dateTime(),
             'updated_by' => TextEntry::make('updated_by'),
             'created_by' => TextEntry::make('created_by'),
-            'user_id' => TextEntry::make('user_id'),
-        ];
+            'user_id' => TextEntry::make('user_id')];
     }
 }

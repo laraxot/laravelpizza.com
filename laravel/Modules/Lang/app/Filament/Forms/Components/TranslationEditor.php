@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 // app/Filament/Components/TranslationEditor.php
 
 namespace Modules\Lang\Filament\Forms\Components;
@@ -27,21 +26,20 @@ class TranslationEditor extends XotBaseField
     {
         $components = [];
         $state = $this->getState() ?? [];
-        if (! is_iterable($state)) {
+        if (! is_array($state)) {
             return $components;
         }
 
         foreach ($state as $key => $value) {
-            if (! is_string($key) && ! is_int($key)) {
-                continue;
-            }
             $keyStr = (string) $key;
             if (is_array($value)) {
                 $components[] = Section::make($keyStr)->schema([
                     TranslationEditor::make($keyStr)->label('')->state($value),
                 ]);
             } else {
-                $valueStr = is_string($value) ? $value : (string) $value;
+                /** @var string|int|float|bool|null $valueNarrowed */
+                $valueNarrowed = $value;
+                $valueStr = is_string($valueNarrowed) ? $valueNarrowed : (string) $valueNarrowed;
                 $label = str_replace('_', ' ', $keyStr);
                 $components[] = TextInput::make($keyStr)->label($label)->default($valueStr);
             }

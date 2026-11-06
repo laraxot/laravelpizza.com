@@ -1,3 +1,15 @@
+---
+title: "schema conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schema conventions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Schema Conventions in Notify Module
 
 ## Field Definitions
@@ -54,9 +66,9 @@ Here's a complete example of a properly formatted schema:
 ### Versione HEAD
 
 ```
-## Collegamenti tra versioni di schema_conventions.md
-* [schema_conventions.md](docs/schema_conventions.md)
-* [schema_conventions.md](../../../Notify/docs/schema_conventions.md)
+## Collegamenti tra versioni di schema-conventions.md
+* [schema-conventions.md](docs/schema-conventions.md)
+* [schema-conventions.md](../../../Notify/docs/schema-conventions.md)
 
 
 ### Versione Incoming
@@ -65,3 +77,13 @@ Here's a complete example of a properly formatted schema:
 
 ---
 
+
+title: "schema conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schema conventions"
+issues: []
+discussions: []
+```

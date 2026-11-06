@@ -1,3 +1,23 @@
+---
+title: "Architettura del Sistema"
+type: index
+tags: [notify, docs, project_docs, architecture]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione project_docs architecture readme architettura del sistema index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../../README.md
+  - ../../wiki/index.md
+  - ../../notifications/README.md
+  - ../../integrations/README.md
+  - ../../templates/README.md
+status: draft
+---
 # Architettura del Sistema
 
 ## Panoramica

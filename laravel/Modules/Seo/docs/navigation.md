@@ -1,9 +1,19 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "navigation"
+issues: []
+discussions: []
 title: Navigation
 description: Building a navigation menu for your site
 extends: _layouts.documentation
 section: content
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Template Jigsaw (generatore di siti di documentazione) copiato nei docs: non descrive il modulo Seo, che non ha navigation.php ne' config.php di sito. Contenuto non riscritto, verificare prima di usarlo.
 
 # Navigation {#navigation}
 
@@ -32,5 +42,5 @@ return [
 // blade files
 $page->navigation
 ```
-=======
->>>>>>> origin/develop
+---
+---

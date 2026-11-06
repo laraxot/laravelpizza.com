@@ -1,13 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Filament\Widgets\Auth\NotificationsCenterWidget;
 use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\get;
-
-use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -18,7 +16,7 @@ it('redirects guests from notifiche page', function (): void {
 });
 
 it('uses notifications center widget view', function (): void {
-    $widget = new NotificationsCenterWidget();
+    $widget = new NotificationsCenterWidget;
     $reflection = new ReflectionClass($widget);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);

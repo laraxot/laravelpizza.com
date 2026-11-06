@@ -1,4 +1,70 @@
-# Seo Module
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-28
+qmd: "seo module readme metatag social share stato verificato"
+issues: []
+discussions: []
+status: draft
+---
+
+> Nota 2026-10-14: la parte iniziale di questo README (fino alla sezione "Testo storico") e' stata riscritta con fatti verificati sul codice. Il testo storico che segue e' una seconda copia del README, non verificata: cita comandi e classi che non esistono.
+
+# Seo
+
+Modulo Laraxot `Modules\Seo` (alias `seo`, repo `laraxot/module_seo_fila5`). Verificato sul codice il 2026-10-14.
+
+## Cosa fa davvero
+
+Il modulo e' piccolo (circa 2400 righe PHP, test compresi) e fa due cose:
+
+1. **Stato dei metatag di una richiesta.** La facade `Modules\Seo\Facades\Metatag` (accessor `Adapters\MetatagFacadeAdapter`) espone `setTitle`, `setDescription`, `setKeywords`, `setRobots`, `setCanonical`, `setImage`, `setLocale`, `setType`, `setSiteName`, `setUrl`, `setAuthor`, `setPublishedTime`, `setModifiedTime`, `set`, `get`. Ogni setter delega a una Action in `app/Actions/Metatag/` (`GetMetatagDataAction`, `MergeMetatagDataAction`, `ReplaceMetatagDataAction`) che scrive in `Adapters\MetatagState`, singleton valido per la richiesta. Il valore e' un `Datas\MetatagData` (Spatie Data + Livewire `Wireable`) che implementa `Contracts\MetatagDataContract`.
+2. **Link di condivisione social.** `Actions\GenerateSocialShareLinksAction` costruisce gli URL `facebook`, `twitter`, `linkedin`, `whatsapp`, `telegram`, `copy` da un `Datas\SocialShareData`. Li usano il widget Filament `Filament\Widgets\SocialShareWidget` (vista `seo::filament.widgets.social-share`) e il componente Blade `resources/views/components/social-share.blade.php`.
+
+Registrazione: `Providers\SeoServiceProvider` (estende `XotBaseServiceProvider`; singleton `MetatagState`, `MetatagFacadeAdapter`, `MetatagManager`) e `Providers\Filament\AdminPanelProvider`. Il provider e' elencato in `laravel/config/app.php` (riga 188).
+
+## Quick start (provato con tinker il 2026-10-14)
+
+```php
+use Modules\Seo\Facades\Metatag;
+
+Metatag::setTitle('Titolo di prova');
+Metatag::setDescription('Descrizione di prova');
+Metatag::get()->getTitle();        // 'Titolo di prova' (classe Modules\Seo\Datas\MetatagData)
+```
+
+## Cosa NON c'e' (verificato 2026-10-14)
+
+- Nessun Model e nessuna migration: `app/Models` contiene solo `.gitkeep`; esiste solo `database/seeders/SeoDatabaseSeeder.php`.
+- Nessuna rotta: `routes/web.php` e `routes/api.php` sono vuoti.
+- Nessun comando Artisan: `php artisan list` non mostra nulla con `seo` o `sitemap`.
+- Nessuna Resource Filament: solo `Filament/Pages/Dashboard.php` e il widget social.
+- Nessuna sitemap: `spatie/laravel-sitemap` e' in `composer.json` (`require`) ma nessun file di `app/` lo usa. Le rotte `/sitemap.xml` stanno in `Modules/Xot/routes/seo.php` e `web_seo.php`, ma `Modules/Xot/routes/web.php` ha la riga `// @require 'web_seo.php';` commentata. `public_html/robots.txt` dichiara di non pubblicare `Sitemap:` perche' non esiste.
+- Nessuna facade `SEO::` (`SEO::setTitle`, `SEO::addStructuredData`, `Sitemap::addUrl` del testo storico non esistono), nessun JSON-LD, nessuna analisi dei contenuti, nessun tracking delle keyword.
+
+## Chi lo usa
+
+Nessun altro modulo o tema importa `Modules\Seo` (grep su `Modules` e `Themes`, esclusi docs e Seo stesso, 2026-10-14: solo `laravel/config/app.php`). I metatag che il sito rende davvero arrivano da `Modules\Xot\Datas\MetatagData`: li legge il componente `Modules\Cms\View\Components\Metatags` e li stampa `$_theme->metatags()` in `Themes/Sixteen/resources/views/layouts/main.blade.php`. La facade `Metatag` di Seo e' quindi, oggi, un'API parallela non collegata al rendering.
+
+## Debito noto nel codice (non modificato qui)
+
+- ~~Due DTO paralleli (`Modules\Seo\Data` e `Modules\Seo\Datas`)~~ risolto 2026-10-28: il namespace canonico e' `Modules\Seo\Datas` (cartella `app/Datas/`, PSR-4); [stories/phpstan-zero-errors-seo.story.md](./stories/phpstan-zero-errors-seo.story.md). Restano in `tests/Unit/` due cartelle gemelle, `Data/` e `Datas/`, con gli stessi test.
+- `app/Interfaces/MetatagDataInterface.php` e il suo `.bak` convivono con `Contracts/MetatagDataContract.php`, che la wiki indica come canone.
+- `Adapters\MetatagManager` e' registrato nel container ma la facade non lo usa; lo usa solo `tests/Feature/MetatagServiceTest.php`.
+
+## Test
+
+12 file in `tests/Unit` e `tests/Feature` (46 casi). Lanciati il 2026-10-14 dalla root `laravel/` con `bashscripts/tools/pest-scratch-db.sh Modules/Seo/tests`: 24 passati, 22 falliti (`BindingResolutionException` e `Call to undefined method Illuminate\Container\Container::register()`). Il `Pest.php` del modulo (`pest()->extend(TestCase::class)`) non viene caricato da quella radice, quindi l'app non parte: e' un limite del modo di lancio, non una regressione provata del codice. Comando per lanciarli correttamente: non verificato.
+
+## Dove leggere
+
+Indice canonico: [index.md](./index.md) (il `00-INDEX.md` e' marcato superseded). Wiki: [wiki/index.md](./wiki/index.md). Contratto dei metatag: [wiki/concepts/metatag-data-contract.md](./wiki/concepts/metatag-data-contract.md). Story: [stories/](./stories/). Cronologia: [wiki/log.md](./wiki/log.md).
+
+## Testo storico (non verificato)
+
+# 🎯 SEO Module - Search Engine Optimization
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
@@ -87,12 +153,12 @@ SEO::addStructuredData([
 
 ### 🏗️ **Architettura**
 - [Struttura Modulo](structure.md) - Architettura SEO
-- [Best Practices](best-practices.md) - Best practices SEO
+- [Best Practices](best-practices.md) _(target mancante, verificato 2026-10-08)_ - Best practices SEO
 
 ### 🎨 **Components**
-- [Meta Tags](meta-tags.md) - Gestione meta tags
+- [Meta Tags](meta-tags.md) _(target mancante, verificato 2026-10-08)_ - Gestione meta tags
 - [Sitemap](sitemap.md) - Configurazione sitemap
-- [Structured Data](structured-data.md) - Schema.org
+- [Structured Data](structured-data.md) _(target mancante, verificato 2026-10-08)_ - Schema.org
 
 ### 🔧 **Development**
 - [Configuration](configuration.md) - Configurazione modulo
@@ -275,7 +341,8 @@ php artisan seo:validate-schema
 **🌐 Translation**: IT/EN ✅  
 **🚀 SEO Score**: 95/100
 
-Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.
+
+
 
 ## ⚙️ Configuration
 
@@ -309,3 +376,4 @@ For Filament resources, use the provided SEO trait to add configuration fields t
 Please verify all changes with:
 - `phpstan analyse Modules/Seo` (Level 10)
 - `pest` (Test Suite)
+- [Project Structure](project-structure.md) — Directory layout

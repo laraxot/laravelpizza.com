@@ -1,33 +1,39 @@
 ---
-title: "On-Demand Pattern — Module User"
+title: "On-Demand Pattern: Module User"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
-  - ../../docs/wiki/rules/on-demand-pattern.md
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+  - ../../../../docs/wiki/rules/on-demand-pattern.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+  - ../../../../docs/wiki/rules/on-demand-pattern.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+qmd: "on-demand pattern   module **user** user"
+status: superseded
+superseded_by: on-demand-pattern.md
 ---
 
-# On-Demand Pattern — Module **User**
+# On-Demand Pattern: Module **User**
 
-**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
 
 ## Principio
 
 Questo module segue il **pattern on-demand** per rules, skills, commands e memories:
 
-- ✅ **Vivono solo nel wiki** — ../../docs/wiki/
-- ✅ **Caricati on-demand** — via trigger map o `qmd search`
-- ❌ **NON pre-caricati** — mai embeddare nei bootstrap files
-- ❌ **Nessuna duplicazione** — wiki = sorgente di verità unica
+- ✅ **Vivono solo nel wiki**: ../../docs/wiki/
+- ✅ **Caricati on-demand**: via trigger map o `qmd search`
+- ❌ **NON pre-caricati**: mai embeddare nei bootstrap files
+- ❌ **Nessuna duplicazione**: wiki = sorgente di verità unica
 
 ## Perché On-Demand?
 
-1. **Contesto minimo** — Carico solo le regole pertinenti al task corrente
-2. **Token efficient** — Nessun carico inutile all'avvio (~50K → ~2K token)
-3. **Scalabile** — Aggiungere nuove rules non richiede modifiche ai bootstrap
-4. **Manutenibile** — Una sola fonte di verità (wiki)
+1. **Contesto minimo**: Carico solo le regole pertinenti al task corrente
+2. **Token efficient**: Nessun carico inutile all'avvio (~50K → ~2K token)
+3. **Scalabile**: Aggiungere nuove rules non richiede modifiche ai bootstrap
+4. **Manutenibile**: Una sola fonte di verità (wiki)
 
 ## Come Funziona
 
@@ -73,16 +79,19 @@ qmd search "<topic>"
 
 ## Regole Critiche per Module
 
-1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
-2. **Carica only what you need** — Ogni task carica max 3-5 file
-3. **Mantieni la wiki aggiornata** — Dopo ogni task, aggiorna ./laravel/Modules/User/docs/wiki/log.md
-4. **Rispetta la trigger map** — Se esiste, usala; altrimenti usa qmd search
+1. **Nessun bootstrap pesante**: Non elencare rules in AGENTS.md o CLAUDE.md
+2. **Carica only what you need**: Ogni task carica max 3-5 file
+3. **Mantieni la wiki aggiornata**: Dopo ogni task, aggiorna ./laravel/Modules/User/docs/wiki/log.md
+4. **Rispetta la trigger map**: Se esiste, usala; altrimenti usa qmd search
 
 ## Riferimenti
 
-- [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
-- [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Module Wiki Index](./wiki/index.md)
 
 ---

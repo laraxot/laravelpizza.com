@@ -1,3 +1,16 @@
+---
+title: "repos"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "repos"
+issues: []
+discussions: []
+status: superseded
+superseded_by: ../-integration/repos.md
+---
+
 # _repos
 
 <!-- Contenuto migrato da _docs/_repos.txt -->

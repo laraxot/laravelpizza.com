@@ -1,12 +1,25 @@
+---
+title: "llm wiki governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "llm wiki governance"
+issues: []
+discussions: []
+status: draft
+---
+
 # LLM Wiki Governance
 
 > Updated: 2026-04-15
 > Sources: [Karpathy adoption](../../project/karpathy-llm-wiki-adoption.md); [QMD local docs search](../../project/qmd-local-docs-search.md)
-> Raw: [Project docs README](../../README.md); [Modules index](../../../laravel/Modules/docs/README.md); [Themes index](../../../laravel/Themes/docs/README.md)
+> Raw: [Project docs README](../../README.md); [Modules index](../../../laravel/Modules/docs/README.md); [Themes index](../../../../../Themes/docs/README.md)
 
 ## Purpose
 
 This page defines how the Karpathy-style LLM wiki maps onto the FixCity repository.
+This page defines how the Karpathy-style LLM wiki maps onto the Notify repository.
 
 ## Mapping
 

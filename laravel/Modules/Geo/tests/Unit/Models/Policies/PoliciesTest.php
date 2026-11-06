@@ -4,47 +4,32 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Models\Policies;
 
-uses(\Modules\Geo\Tests\TestCase::class);
-
 use Modules\Geo\Models\Policies\CountyPolicy;
 use Modules\Geo\Models\Policies\GeoNamesCapPolicy;
 use Modules\Geo\Models\Policies\LocalityPolicy;
 use Modules\Geo\Models\Policies\PlacePolicy;
 use Modules\Geo\Models\Policies\PlaceTypePolicy;
 use Modules\Geo\Models\Policies\StatePolicy;
+use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use ReflectionClass;
 
-test('StatePolicy can be instantiated', function () {
-    $policy = new StatePolicy();
+uses(TestCase::class);
 
-    expect($policy)->toBeInstanceOf(StatePolicy::class);
-});
+test('geo policy classes are concrete and instantiable', function (): void {
+    $policyClasses = [
+        StatePolicy::class,
+        CountyPolicy::class,
+        LocalityPolicy::class,
+        PlacePolicy::class,
+        PlaceTypePolicy::class,
+        GeoNamesCapPolicy::class,
+    ];
 
-test('CountyPolicy can be instantiated', function () {
-    $policy = new CountyPolicy();
+    foreach ($policyClasses as $policyClass) {
+        $reflection = new ReflectionClass($policyClass);
 
-    expect($policy)->toBeInstanceOf(CountyPolicy::class);
-});
-
-test('LocalityPolicy can be instantiated', function () {
-    $policy = new LocalityPolicy();
-
-    expect($policy)->toBeInstanceOf(LocalityPolicy::class);
-});
-
-test('PlacePolicy can be instantiated', function () {
-    $policy = new PlacePolicy();
-
-    expect($policy)->toBeInstanceOf(PlacePolicy::class);
-});
-
-test('PlaceTypePolicy can be instantiated', function () {
-    $policy = new PlaceTypePolicy();
-
-    expect($policy)->toBeInstanceOf(PlaceTypePolicy::class);
-});
-
-test('GeoNamesCapPolicy can be instantiated', function () {
-    $policy = new GeoNamesCapPolicy();
-
-    expect($policy)->toBeInstanceOf(GeoNamesCapPolicy::class);
+        Assert::assertTrue($reflection->isInstantiable());
+        Assert::assertInstanceOf($policyClass, $reflection->newInstance());
+    }
 });

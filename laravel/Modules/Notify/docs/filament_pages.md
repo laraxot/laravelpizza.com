@@ -1,3 +1,15 @@
+---
+title: "filament pages"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament pages"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pagine Filament del Modulo Notify
 
 ## Panoramica
@@ -68,8 +80,8 @@ class EditNotificationTemplate extends XotBaseEditRecord
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
-- [Architettura Filament](../../../../../docs/project/architecture/filament.md)
-- [Gestione Pagine](../../../../../docs/project/architecture/pages.md)
+- [Architettura Filament](../../../../project_docs/architecture/filament.md)
+- [Gestione Pagine](../../../../project_docs/architecture/pages.md)
 
 ### Collegamenti ai Moduli
 - [XotBaseListRecords](../../Xot/project_docs/filament-pages.md#XotBaseListRecords)

@@ -1,3 +1,14 @@
+---
+title: "progress"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "progress"
+issues: []
+discussions: []
+---
+
 <purpose>
 Check project progress, summarize recent work and what's ahead, then intelligently route to the next action — either executing an existing plan or creating the next one. Provides situational awareness before continuing work.
 </purpose>
@@ -167,6 +178,14 @@ Track:
 
 ---
 
+title: "progress"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "progress"
+issues: []
+discussions: []
 **Route A: Unexecuted plan exists**
 
 Find the first PLAN.md without matching SUMMARY.md.

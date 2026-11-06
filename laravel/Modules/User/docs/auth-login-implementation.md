@@ -1,11 +1,36 @@
+---
+title: "Implementazione Corretta della Pagina di Login"
+type: concept
+tags: [auth, login, implementation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-login-implementation implementazione corretta della pagina di login"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Implementazione Corretta della Pagina di Login
 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/modules/lang/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](/laravel/modules/user/docs/auth_pages_implementation.md)
-- [Volt Folio Auth](/laravel/modules/user/docs/volt_folio_auth_implementation.md)
+- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules.md)
+- [Implementazione Auth Pages](/laravel/modules/user/docs/auth-pages-implementation.md)
+- [Volt Folio Auth](/laravel/modules/user/docs/volt-folio-auth-implementation.md)
 - [Componenti Filament](/docs/rules/filament-components.md)
 
 ## Analisi e Miglioramenti della Pagina di Login
@@ -188,6 +213,15 @@ rules([
 ]);
 ```
 
+## Ritorno alla pagina dopo il login (CMT-022, 2026-10-26)
+
+`LoginWidget::login()` chiude con `redirectIntended()`: torna alla pagina in `url.intended`, altrimenti alla dashboard o alla home della lingua.
+`url.intended` lo scrive Laravel quando un middleware `auth` manda un ospite al login (`redirectGuestsTo` in `bootstrap/app.php`). Un link «Accedi per ...» che non passa da un middleware non lo scrive:
+per questo il login accetta `?redirect=/it/blog/...`. `LoginWidget::mount()` lo passa a `Modules\User\Actions\Auth\StoreIntendedUrlAction`, che lo salva **solo** se e' un percorso interno
+(rifiutati `https://`, `//host`, `\`, caratteri di controllo, percorsi senza `/` iniziale): il parametro arriva dalla barra degli indirizzi, senza il controllo sarebbe un redirect aperto.
+Chi costruisce il link usa `route('login', ['redirect' => request()->getRequestUri()])`, oppure `<x-comment::login-link />` per «Accedi per commentare».
+Test: `Modules/Fixcity/tests/Feature/Auth/AuthReturnsToRequiredPageTest.php` (percorso valido, sette valori ostili) e `Modules/Comment/tests/Feature/Components/LoginLinkTest.php`.
+
 ## Errori Comuni da Evitare
 
 1. **Utilizzo di componenti UI personalizzati**: Utilizzare sempre i componenti Filament.
@@ -204,9 +238,9 @@ Seguendo queste linee guida, è possibile implementare pagine di autenticazione 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/modules/lang/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](/laravel/modules/user/docs/auth_pages_implementation.md)
-- [Volt Folio Auth](/laravel/modules/user/docs/volt_folio_auth_implementation.md)
+- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules.md)
+- [Implementazione Auth Pages](/laravel/modules/user/docs/auth-pages-implementation.md)
+- [Volt Folio Auth](/laravel/modules/user/docs/volt-folio-auth-implementation.md)
 - [Componenti Filament](/docs/rules/filament-components.md)
 
 ## Analisi e Miglioramenti della Pagina di Login
@@ -234,6 +268,7 @@ Secondo le regole di <nome progetto>, si devono utilizzare SEMPRE i componenti B
     required
 >
     <x-filament::input
+    <x-filament::input 
         type="email"
         id="email"
         name="email"

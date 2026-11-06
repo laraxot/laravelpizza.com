@@ -1,0 +1,25 @@
+---
+title: "collision current"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "collision current"
+issues: []
+discussions: []
+status: draft
+---
+
+# Collision Current
+
+dentro il progetto ci sono molti files con dentro <git marker>, per risolverli velocemente potresti fare uno script ,
+  gli script vanno sempre in una sottocartella di bashscripts  potresti
+  studiare quelli che ci sono e crearne uno migliore , devi anche studiare e aggiornare
+  bashscripts/docs   , gli scripts vanno anche controllati che funzionino bene
+  , non si fanno le cose a cazzo , questo script deve trovare tutti i files con dentro <git marker> e prenda la "current
+  change" ok ?
+ci sono ancora molti files con dentro <git marker>, crea uno script che trovi questi files e prenda la current change , 
+questo script di sicuro esiste gia' dentro una sottocartella di bashscripts  , percio' scova quello script lo migliori, 
+lo testi, lo verifichi, aumenti al massimo il tuo livello di confidenza, 
+studi e aggiorni bashscripts/docs  e poi sistemi tutti i files con dentro <<git marker> prendendo la current change
+gli scripts vanno in una sottocartella di bashscripts non direttamente in bashscripts

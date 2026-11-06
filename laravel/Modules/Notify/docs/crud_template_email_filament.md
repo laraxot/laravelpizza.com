@@ -1,10 +1,21 @@
+---
+title: "crud template email filament"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "crud template email filament"
+issues: []
+discussions: []
+status: draft
+---
+
 # Proposta Architetturale: CRUD Template Email in Notify (Filament)
 
 ## Obiettivo
 Consentire la gestione runtime (CRUD) dei template email direttamente dal backend Filament, con fallback su file statici. Garantire robustezza, versioning, localizzazione e coerenza con le regole <nome progetto>.
 
 ---
-
 ## 1. Struttura Database (Esempio Migration)
 ```php
 Schema::create('email_templates', function (Blueprint $table) {
@@ -54,7 +65,7 @@ class EmailTemplateResource extends Resource
 {
     protected static string $model = EmailTemplate::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'mailable_class' => Forms\Components\TextInput::make('mailable_class')->required(),

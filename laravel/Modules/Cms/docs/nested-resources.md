@@ -1,3 +1,15 @@
+---
+title: "nested resources"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "nested resources"
+issues: []
+discussions: []
+status: draft
+---
+
 # Cms Module - Nested Resource Implementation Guide
 
 ## Overview

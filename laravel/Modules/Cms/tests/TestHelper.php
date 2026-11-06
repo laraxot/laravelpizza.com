@@ -5,72 +5,99 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Support\Collection;
 use Modules\Cms\Models\Module;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Tests\CreatesApplication;
+use Spatie\Permission\Contracts\Role;
 
+/**
+ * @method mixed getAttribute(string $key)
+ */
 abstract class TestHelper extends BaseTestCase
 {
-    public ?User $super_admin_user = null;
+    // use CreatesApplication;
 
-    public ?User $no_super_admin_user = null;
-
-    public function getSuperAdminUser(): ?User
+    // in User
+    public function getSuperAdminUser(): ?UserContract
     {
-        /** @var User|null $user */
-        $user = User::role('super-admin')->first();
-
-        return $user;
+        return User::role('super-admin')->first();
     }
 
-    public function getNoSuperAdminUser(): ?User
+    // in User
+    public function getNoSuperAdminUser(): ?UserContract
     {
-        /** @var User|null $user */
+        /** @var UserContract|null $user */
         $user = User::all()
-            ->first(fn (User $item): bool => ! $item->hasRole('super-admin'));
+            ->map(function (UserContract $item): ?UserContract {
+                if (! $item->hasRole('super-admin')) {
+                    return $item;
+                }
+
+                return null;
+            })
+            ->filter(fn ($value): bool => $value !== null)
+            ->first();
 
         return $user;
     }
 
-    /**
-     * @return list<string>
-     */
+    // in Tenant o Cms
+    /** @return array<int, string> */
     public function getModuleNameLists(): array
     {
-        /** @var list<string> $names */
-        $names = collect(app(Module::class)->getRows())->pluck('name')->all();
+        /** @var Module $module */
+        $module = app(Module::class);
+
+        /** @var array<int, array<string, mixed>> $rows */
+        $rows = $module->getRows();
+
+        $names = [];
+        foreach ($rows as $row) {
+            $name = $row['name'] ?? null;
+            if (is_string($name)) {
+                $names[] = $name;
+            }
+        }
 
         return $names;
     }
 
-    /**
-     * @return Collection<int, string|null>
-     */
-    public function getMainAdminNavigationUrlItems(): Collection
+    // in Tenant o Cms
+    /** @return array<int, string> */
+    public function getMainAdminNavigationUrlItems(): array
     {
-        return collect(app(GetModulesNavigationItems::class)->execute())
-            ->map(fn ($item): ?string => $item->getUrl());
-    }
-
-    /**
-     * @return Collection<int, string>
-     */
-    public function getUserNavigationItemUrlRoles(User $user): Collection
-    {
-        /** @var Collection<int, string> $urls */
-        $urls = $user
-            ->getRoleNames()
-            ->map(function (mixed $item): ?string {
-                if (! is_string($item) || 'super-admin' === $item) {
-                    return null;
+        $items = collect(app(GetModulesNavigationItems::class)->execute())
+            ->map(function ($item): ?string {
+                $url = $item->getUrl();
+                if (is_string($url) && $url) {
+                    return $url;
                 }
 
-                return '/'.mb_substr($item, 0, -7).'/admin';
+                return null;
             })
-            ->filter(fn (?string $value): bool => ! is_null($value))
-            ->values();
+            ->filter(fn ($url): bool => $url !== null)
+            ->values()
+            ->all();
 
-        return $urls;
+        /** @var array<int, string> $result */
+        $result = $items;
+
+        return $result;
+    }
+
+    // in Tenant o Cms
+    /** @return array<int, string> */
+    public function getUserNavigationItemUrlRoles(UserContract $user): array
+    {
+        $result = [];
+        foreach ($user->roles()->pluck('name') as $roleName) {
+            if (is_string($roleName) && $roleName !== 'super-admin') {
+                $result[] = '/'.mb_substr($roleName, 0, -7).'/admin';
+            }
+        }
+
+        return $result;
     }
 }

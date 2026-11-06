@@ -1,4 +1,18 @@
-# Metodi duplicati — Lang
+---
+issues: []
+discussions: []
+title: "Metodi duplicati: Lang"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
+# Metodi duplicati: Lang
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.
 

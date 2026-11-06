@@ -1,3 +1,11 @@
+---
+title: "theme"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "theme xot"
+---
 https://fly.io/laravel-bytes/filamentphp-adding-some-style/
 ### Versione HEAD
 

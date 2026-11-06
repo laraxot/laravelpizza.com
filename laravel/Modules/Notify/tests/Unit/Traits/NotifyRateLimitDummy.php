@@ -10,7 +10,7 @@ final class NotifyRateLimitDummy
 {
     use HasNotificationRateLimiting;
 
-    public function key(string $type, mixed $identifier): string
+    public function key(string $type, int|string $identifier): string
     {
         return $this->getNotificationRateLimitKey($type, $identifier);
     }

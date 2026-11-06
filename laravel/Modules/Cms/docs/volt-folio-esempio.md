@@ -1,3 +1,15 @@
+---
+title: "volt folio esempio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt folio esempio"
+issues: []
+discussions: []
+status: draft
+---
+
 # Esempio Pratico: Laravel Volt con Folio
 
 Questa documentazione fornisce un esempio pratico di implementazione di Laravel Volt insieme a Laravel Folio, basato sul repository di esempio ufficiale.

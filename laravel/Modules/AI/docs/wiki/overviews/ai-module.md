@@ -1,3 +1,15 @@
+---
+title: "ai module"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai module"
+issues: []
+discussions: []
+status: draft
+---
+
 # AI Module Overview
 
 > Updated: 2026-06-13
@@ -11,7 +23,7 @@
 | Coverage | [#12](https://github.com/laraxot/module_ai_fila5/issues/12) |
 
 - Testing: [concepts/testing.md](../concepts/testing.md)
-- Hub: [platform-completion-roadmap](../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
+- Hub: [platform-completion-roadmap](../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
 
 ## Summary
 

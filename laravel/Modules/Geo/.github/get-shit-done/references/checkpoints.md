@@ -1,3 +1,14 @@
+---
+title: "checkpoints"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "checkpoints"
+issues: []
+discussions: []
+---
+
 <overview>
 Plans execute autonomously. Checkpoints formalize interaction points where human verification or decisions are needed.
 

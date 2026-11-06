@@ -16,45 +16,45 @@ use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Modules\UI\Filament\Widgets\TestChartWidget;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
 use Modules\UI\Tests\TestCase;
-use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 use PHPUnit\Framework\Assert;
+
+use function Safe\class_parents;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
 function concreteRowWidget(): RowWidget
 {
-    return new class extends RowWidget {
-    };
+    return new class extends RowWidget {};
 }
 
 it('widgets instantiate and extend filament base', function (): void {
     $widgets = [
-        new StatWithIconWidget(),
-        new OverlookWidget(),
-        new HeroWidget(),
-        new TestChartWidget(),
-        new StatsOverviewWidget(),
-        new GroupWidget(),
-        new RedirectWidget(),
-        new UserCalendarWidget(),
+        new StatWithIconWidget,
+        new OverlookWidget,
+        new HeroWidget,
+        new TestChartWidget,
+        new StatsOverviewWidget,
+        new GroupWidget,
+        new RedirectWidget,
+        new UserCalendarWidget,
         concreteRowWidget(),
     ];
 
+    Assert::assertCount(9, $widgets);
     foreach ($widgets as $widget) {
-        Assert::assertInstanceOf(Widget::class, $widget);
+        Assert::assertArrayHasKey(Widget::class, class_parents($widget));
     }
 });
 
 it('schema widgets expose empty form schema by default', function (): void {
     $widgets = [
-        new StatWithIconWidget(),
-        new GroupWidget(),
-        new RedirectWidget(),
+        new StatWithIconWidget,
+        new GroupWidget,
+        new RedirectWidget,
         concreteRowWidget(),
     ];
 
     foreach ($widgets as $widget) {
-        Assert::assertInstanceOf(XotBaseSchemaWidget::class, $widget);
         Assert::assertSame([], $widget->getFormSchema());
     }
 });

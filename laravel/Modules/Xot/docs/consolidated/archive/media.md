@@ -1,3 +1,11 @@
+---
+title: "Analisi e Risoluzione Colli di Bottiglia - Modulo Media"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi e risoluzione colli di bottiglia - modulo media xot"
+---
 # Analisi e Risoluzione Colli di Bottiglia - Modulo Media
 
 ## 1. Upload Performance (Priorità: Alta)

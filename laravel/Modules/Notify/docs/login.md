@@ -1,3 +1,15 @@
+---
+title: "login"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "login"
+issues: []
+discussions: []
+status: draft
+---
+
 -----------------------------------------------------------------------------------------------
 A Blade Component to Quickly Login to Your Local Environment
 https://codebrisk.com/blog/a-blade-component-to-quickly-login-to-your-local-environment

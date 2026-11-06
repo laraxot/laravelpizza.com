@@ -2,57 +2,69 @@
 
 declare(strict_types=1);
 
-namespace Modules\Tenant\Tests\Unit\Actions;
-
 use Modules\Tenant\Actions\GetTenantNameAction;
-use Modules\Tenant\Tests\TestCase;
-use PHPUnit\Framework\Assert;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
-test('get tenant name action returns correct tenant name from server name', function (): void {
+test('get tenant name action returns correct tenant name from server name', function () {
     $_SERVER['SERVER_NAME'] = 'myapp.example.com';
 
     $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    Assert::assertSame('com/example/myapp', $result);
+    expect($result)->toBe('com/example/myapp');
 });
 
-test('get tenant name action handles www prefix correctly', function (): void {
+test('get tenant name action handles www prefix correctly', function () {
     $_SERVER['SERVER_NAME'] = 'www.myapp.example.com';
 
     $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    Assert::assertSame('com/example/myapp', $result);
+    expect($result)->toBe('com/example/myapp');
 });
 
-test('get tenant name action falls back to default when server name is localhost', function (): void {
+test('get tenant name action falls back to default when server name is localhost', function () {
     $_SERVER['SERVER_NAME'] = '127.0.0.1';
 
     $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    Assert::assertSame('localhost', $result);
+    expect($result)->toBe('localhost');
 });
 
-test('get tenant name action uses app url config when server name not set', function (): void {
+test('get tenant name action uses app url config when server name not set', function () {
     unset($_SERVER['SERVER_NAME']);
     config(['app.url' => 'https://myapp.test']);
 
     $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    Assert::assertSame('test/myapp', $result);
+    expect($result)->toBe('test/myapp');
 });
 
-test('get tenant name action handles empty app url config', function (): void {
+test('get tenant name action handles empty app url config', function () {
     unset($_SERVER['SERVER_NAME']);
     config(['app.url' => '']);
 
     $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    Assert::assertSame('localhost', $result);
+    expect($result)->toBe('localhost');
+});
+
+test('host fixcity.eu usa il tenant canonico e non l alias del symlink', function () {
+    $previousServer = $_SERVER['SERVER_NAME'] ?? null;
+    $_SERVER['SERVER_NAME'] = 'fixcity.eu';
+
+    try {
+        expect(app(GetTenantNameAction::class)->execute())->toBe('local/fixcity');
+    } finally {
+        if (is_string($previousServer)) {
+            $_SERVER['SERVER_NAME'] = $previousServer;
+        } else {
+            unset($_SERVER['SERVER_NAME']);
+        }
+    }
 });

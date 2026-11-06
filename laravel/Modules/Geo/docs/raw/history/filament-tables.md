@@ -1,3 +1,14 @@
+---
+title: "filament tables"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament tables"
+issues: []
+discussions: []
+---
+
 # Gestione delle Tabelle in Filament
 
 Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto PTVX, utilizzando il trait `HasXotTable`.

@@ -1,3 +1,15 @@
+---
+title: "checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "checklist"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📋 Checklist Pattern
 
 > **CHECKLIST PATTERN**: Liste di controllo standardizzate per garantire la qualità del codice.

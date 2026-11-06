@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Tenant Module - Nested Resource Implementation Guide"
+module: "Tenant"
+type: concept
+tags: [nested, resources]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "nested resources"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Tenant Module - Nested Resource Implementation Guide
 
 ## Overview

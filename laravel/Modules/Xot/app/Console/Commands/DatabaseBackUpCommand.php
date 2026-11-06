@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://github.com/paulvl/backup/blob/master/src/Console/Commands/MysqlDump.php
  */
@@ -11,10 +10,9 @@ namespace Modules\Xot\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
 
 use function Safe\exec;
-
-use Webmozart\Assert\Assert;
 
 class DatabaseBackUpCommand extends Command
 {

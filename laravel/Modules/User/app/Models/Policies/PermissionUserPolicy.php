@@ -14,7 +14,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('permission-user.view.any');
+        return $user->hasPermissionToOrCreate('permission-user.view.any');
     }
 
     /**
@@ -22,7 +22,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, PermissionUser $_permissionUser): bool
     {
-        return $user->hasPermissionTo('permission-user.view') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('permission-user.view') || $user->hasRole('super-admin');
     }
 
     /**
@@ -30,7 +30,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('permission-user.create');
+        return $user->hasPermissionToOrCreate('permission-user.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, PermissionUser $_permissionUser): bool
     {
-        return $user->hasPermissionTo('permission-user.update') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('permission-user.update') || $user->hasRole('super-admin');
     }
 
     /**
@@ -46,7 +46,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, PermissionUser $_permissionUser): bool
     {
-        return $user->hasPermissionTo('permission-user.delete') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('permission-user.delete') || $user->hasRole('super-admin');
     }
 
     /**
@@ -54,7 +54,7 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, PermissionUser $_permissionUser): bool
     {
-        return $user->hasPermissionTo('permission-user.restore') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('permission-user.restore') || $user->hasRole('super-admin');
     }
 
     /**
@@ -62,6 +62,6 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, PermissionUser $permissionUser): bool
     {
-        return $user->hasPermissionTo('permission-user.force-delete') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('permission-user.force-delete') || $user->hasRole('super-admin');
     }
 }

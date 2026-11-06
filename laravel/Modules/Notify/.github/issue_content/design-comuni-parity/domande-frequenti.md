@@ -1,3 +1,14 @@
+---
+title: "domande frequenti"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "domande frequenti"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Domande Frequenti (domande-frequenti.html)
 
 ## Obiettivo

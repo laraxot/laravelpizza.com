@@ -1,3 +1,11 @@
+---
+title: "Integrazione dei Server MCP con il Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "integrazione dei server mcp con il modulo xot xot"
+---
 # Integrazione dei Server MCP con il Modulo Xot
 
 ## Panoramica

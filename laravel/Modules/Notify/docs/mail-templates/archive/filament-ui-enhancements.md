@@ -1,3 +1,11 @@
+---
+title: "Miglioramenti UI/UX per MailTemplateResource"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "miglioramenti ui/ux per mailtemplateresource notify"
+---
 # Miglioramenti UI/UX per MailTemplateResource
 
 ## Componenti Filament Consigliati

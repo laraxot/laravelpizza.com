@@ -1,3 +1,11 @@
+---
+title: "payment_gateway"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "payment_gateway xot"
+---
 # payment_gateway
 
 <!-- Contenuto migrato da _docs/payment_gateway.txt -->

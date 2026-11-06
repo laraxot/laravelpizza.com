@@ -1,3 +1,15 @@
+---
+title: "filament geo pickers philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament geo pickers philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Filament Pickers - Filosofia, Visione e Regole
 
 ## Il Cuore (Core Philosophy)
@@ -13,7 +25,6 @@ In pratica questo significa:
 - **Tutti condividono il trait HasCoordinatePicker** - DRY ma con mantenimento dell'identità
 
 ---
-
 ## I Componenti e la Loro Essenza
 
 ### 1. CoordinatePicker 

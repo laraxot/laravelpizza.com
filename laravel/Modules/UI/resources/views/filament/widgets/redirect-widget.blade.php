@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @php
     header("Location: $to");
@@ -9,9 +8,9 @@ declare(strict_types=1);
 @endphp
 <meta http-equiv="refresh" content="0; url={{ $to }}">
 <div class="container">
-    <h1>Reindirizzamento in corso...</h1>
-    <p>Se non vieni reindirizzato automaticamente, <a href="{{ $to }}" class="link">clicca qui</a>.</p>
-    <p><small>Destinazione: {{ $to }}</small></p>
+    <h1>{{ __('ui::redirect.widget.redirecting.message') }}</h1>
+    <p>{!! __('ui::redirect.widget.fallback.label', ['link' => '<a href="'.e($to).'" class="link">'.e(__('ui::redirect.widget.link.label')).'</a>']) !!}</p>
+    <p><small>{{ __('ui::redirect.widget.destination.label', ['url' => $to]) }}</small></p>
 </div>
 
 <script>

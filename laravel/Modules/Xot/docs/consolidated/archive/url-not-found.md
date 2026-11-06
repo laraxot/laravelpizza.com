@@ -3,6 +3,11 @@ title: Url Not Found
 description: Url Not Found
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "url not found {#url-not-found} xot"
 ---
 
 # Url Not Found {#url-not-found}

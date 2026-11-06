@@ -1,3 +1,28 @@
+---
+title: "Analisi PHPStan del Modulo User"
+type: concept
+tags: [phpstan]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan analisi phpstan del modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Analisi PHPStan del Modulo User
 
 ## Stato Attuale
@@ -6,22 +31,26 @@ Il modulo User è attualmente in fase di analisi con PHPStan. Questo documento t
 ## Problemi e Soluzioni
 
 ### Team e BaseTeam
-- [Dettagli completi](../../Modules/User/docs/phpstan_fixes.md#team-php-e-baseteam-php)
+- [Dettagli completi](../../Modules/User/docs/phpstan-fixes-8.md#team-php-e-baseteam-php)
+- [Dettagli completi](phpstan-fixes.md#team-php-e-baseteam-php)
 - Stato: ✅ Risolto
 - Commit: N/A
 
 ### TeamInvitation
-- [Dettagli completi](../../Modules/User/docs/phpstan_fixes.md#teaminvitation-php)
+- [Dettagli completi](../../Modules/User/docs/phpstan-fixes-8.md#teaminvitation-php)
+- [Dettagli completi](phpstan-fixes.md#teaminvitation-php)
 - Stato: ✅ Risolto
 - Commit: N/A
 
 ### TeamUser e BasePivot
-- [Dettagli completi](../../Modules/User/docs/phpstan_fixes.md#teamuser-php-e-basepivot-php)
+- [Dettagli completi](../../Modules/User/docs/phpstan-fixes-8.md#teamuser-php-e-basepivot-php)
+- [Dettagli completi](phpstan-fixes.md#teamuser-php-e-basepivot-php)
 - Stato: ✅ Risolto
 - Commit: N/A
 
 ### BaseUser
-- [Dettagli completi](../../Modules/User/docs/phpstan_fixes.md#baseuser-php)
+- [Dettagli completi](../../Modules/User/docs/phpstan-fixes-8.md#baseuser-php)
+- [Dettagli completi](phpstan-fixes.md#baseuser-php)
 - Stato: 🔄 In Corso
 - Problemi rimanenti:
   - Proprietà non definite

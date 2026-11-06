@@ -1,3 +1,15 @@
+---
+title: "send email"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "send email"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida alla Correzione di SendEmail.php
 
 ## 🔍 Analisi del Problema

@@ -1,3 +1,11 @@
+---
+title: "ffmpeg"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "ffmpeg xot"
+---
 # ffmpeg
 
 <!-- Contenuto migrato da _docs/ffmpeg.txt -->

@@ -1,3 +1,11 @@
+---
+title: "Utilizzo Corretto degli Allegati nelle Email Spatie"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, email-sending]
+qmd: "utilizzo corretto degli allegati nelle email spatie notify"
+---
 # Utilizzo Corretto degli Allegati nelle Email Spatie
 
 Questa documentazione descrive come utilizzare correttamente il metodo `addAttachments()` nella classe `SpatieEmail` del modulo Notify.

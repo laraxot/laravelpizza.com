@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Filament nel modulo Lang"
+module: "Lang"
+type: concept
+tags: [ottimizzazioni, correzioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ottimizzazioni correzioni"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 https://github.com/statikbe/laravel-filament-chained-translation-manager
 
 https://filamentphp.com/plugins/34ml-translatable-field
@@ -20,6 +34,21 @@ https://filamentphp.com/plugins/34ml-translatable-field
 * [filament.md](../../../Job/docs/filament.md)
 * [filament.md](../../../Activity/docs/filament.md)
 * [filament.md](../../../Cms/docs/filament.md)
+* [filament.md](../../Gdpr/docs/filament.md)
+* [filament.md](../../../xot/docs/technical/filament.md)
+* [filament.md](../../../xot/docs/roadmap/integration/filament.md)
+* [filament.md](../../../lang/docs/filament.md)
+* [filament.md](../../Job/docs/filament.md)
+* [filament.md](../../Activity/docs/filament.md)
+* [filament.md](../../Cms/docs/filament.md)
+* [filament.md](../../../Chart/docs/filament.md)
+* [filament.md](../../Gdpr/docs/filament.md)
+* [filament.md](../../../Xot/docs/technical/filament.md)
+* [filament.md](../../../Xot/docs/roadmap/integration/filament.md)
+* [filament.md](../../../Lang/docs/filament.md)
+* [filament.md](../../Job/docs/filament.md)
+* [filament.md](../../Activity/docs/filament.md)
+* [filament.md](../../Cms/docs/filament.md)
 
 ## Extra risorse da _docs
 
@@ -118,6 +147,8 @@ Per dettagli completi, vedere: `laravel/docs/composer-merge-plugin.md`
 - [Documentazione UI](../../UI/docs/README.md)
 - [Indice root](../../../docs/index.md)
 - [Composer Merge Plugin](../../../docs/composer-merge-plugin.md)
+- [Indice root](../../../../docs/index.md)
+- [Composer Merge Plugin](composer-merge-plugin.md)
 
 ## Collegamenti tra versioni di filament.md
 - [Filament (Chart)](../../Chart/docs/filament.md)

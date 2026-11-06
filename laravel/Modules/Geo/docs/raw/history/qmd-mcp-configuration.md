@@ -1,3 +1,14 @@
+---
+title: "qmd mcp configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qmd mcp configuration"
+issues: []
+discussions: []
+---
+
 # QMD MCP Server Configuration Guide
 
 > **For:** All AI agents working on PTVX  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "qmd mcp configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qmd mcp configuration"
+issues: []
+discussions: []
 ## Overview
 
 QMD is configured as an MCP server for **local markdown search** across all module wikis. This allows AI agents to query specific module knowledge without loading entire codebases.

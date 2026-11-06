@@ -4,63 +4,48 @@ declare(strict_types=1);
 
 return [
     'resource' => [
-        'name' => 'send_email_parameters',
-    ],
+        'name' => 'send_email_parameters'],
     'navigation' => [
-        'name' => 'send_email_parameters',
-        'plural' => 'send_email_parameters',
+        'name' => 'Email send parameters',
+        'plural' => 'Email send parameters',
         'group' => [
-            'name' => 'Invia',
-        ],
-    ],
+            'name' => 'Invia']],
     'fields' => [
         'name' => [
             'label' => 'Nome Area',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'parent' => [
             'label' => 'Settore di appartenenza',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'parent.name' => [
             'label' => 'Settore di appartenenza',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'parent_name' => [
             'label' => 'Settore di appartenenza',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'assets' => [
             'label' => 'Quantità di asset',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'import' => [
             'name' => 'Importa da file',
             'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
-        ],
+                'import_file' => 'Seleziona un file XLS o CSV da caricare']],
         'export' => [
             'name' => 'Esporta dati',
             'filename_prefix' => 'Aree al',
             'columns' => [
                 'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
-            ],
-        ],
-    ],
+                'parent_name' => 'Nome area livello superiore']]],
     'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-];
+    'plural_label' => 'Missing Plural label'];

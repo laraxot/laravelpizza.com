@@ -1,3 +1,12 @@
+---
+title: "Analisi dei Principali <nome progetto>ion Market (2024-2025)"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "analisi dei principali <nome progetto>ion market (2024-2025) activity"
+status: superseded
+superseded_by: analisi-siti-esistenti.md
+---
 # Analisi dei Principali <nome progetto>ion Market (2024-2025)
 
 ## Polymarket

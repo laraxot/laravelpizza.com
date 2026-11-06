@@ -1,3 +1,11 @@
+---
+title: "Ottimizzazione Cache Traduzioni"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "ottimizzazione cache traduzioni xot"
+---
 # Ottimizzazione Cache Traduzioni
 
 ## Stato

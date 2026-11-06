@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
-            Test Invio WhatsApp
+            {{ __('notify::send_whatsapp.sections.page.title') }}
         </x-slot>
 
         <x-slot name="description">
-            Utilizza questo form per testare l'invio di messaggi WhatsApp tramite diversi provider.
+            {{ __('notify::send_whatsapp.sections.page.description') }}
         </x-slot>
 
         {{ $this->whatsappForm }}
@@ -18,7 +17,7 @@ declare(strict_types=1);
         <x-slot name="footer">
             <div class="flex items-center justify-end gap-x-3">
                 <x-filament::button wire:click="sendWhatsApp" type="submit" color="primary">
-                    Invia WhatsApp
+                    {{ __('notify::whatsapp.actions.send') }}
                 </x-filament::button>
             </div>
         </x-slot>

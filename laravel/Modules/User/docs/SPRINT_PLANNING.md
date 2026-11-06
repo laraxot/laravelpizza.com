@@ -1,3 +1,15 @@
+---
+title: "User Module - Sprint Planning"
+module: user
+type: integration
+tags: [integrations, modules, user]
+created: 2026-08-24
+updated: 2026-08-24
+qmd: "user module - sprint planning user"
+status: superseded
+superseded_by: sprint-planning-user-module.md
+---
+
 # User Module - Sprint Planning
 
 **Module:** User  

@@ -1,3 +1,11 @@
+---
+title: "content_selection_and_highlighting"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "content_selection_and_highlighting xot"
+---
 # content_selection_and_highlighting
 
 <!-- Contenuto migrato da _docs/content_selection_and_highlighting.txt -->

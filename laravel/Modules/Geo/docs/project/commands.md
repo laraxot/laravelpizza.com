@@ -1,3 +1,15 @@
+---
+title: "commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "commands"
+issues: []
+discussions: []
+status: draft
+---
+
 # Automation & commands
 
 Questo documento è uno stub.

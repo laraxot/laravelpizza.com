@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "url not found"
+issues: []
+discussions: []
 title: Url Not Found
 description: Url Not Found
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Url Not Found {#url-not-found}

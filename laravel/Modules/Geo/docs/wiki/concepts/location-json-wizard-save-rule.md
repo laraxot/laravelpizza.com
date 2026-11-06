@@ -1,6 +1,15 @@
 ---
+title: "location json wizard save rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "location json wizard save rule"
+issues: []
+discussions: []
 name: location-json-wizard-save-rule
 description: Ensure location JSON is correctly passed to wizard save; mutateFormData should not drop location if DB expects JSON.
+status: draft
 ---
 
 # Location JSON in Wizard Save — Rule

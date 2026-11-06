@@ -1,3 +1,15 @@
+---
+title: "structure standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure standards"
+issues: []
+discussions: []
+status: draft
+---
+
 # Standard di Struttura nel Modulo Notify
 
 ## Directory Principali e Convenzioni di Denominazione
@@ -16,10 +28,10 @@
 Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas/SmsData.php
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SmsData.php
 ```
 
 ### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
@@ -43,13 +55,13 @@ Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 ### Verificare Sempre le Directory Esistenti
 
 ```bash
-find /var/www/html/Quaeris/laravel/Modules/Notify/app -type d -name "Data*"
+find /var/www/html/saluteora/laravel/Modules/Notify/app -type d -name "Data*"
 ```
 
 Questo restituirà:
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Datas/SMS
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas
+/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SMS
 ```
 
 ## Esempi di Importazioni Corrette
@@ -82,7 +94,6 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
 ---
-
 ## Esempio
 
 - File: `SendNetfunSMS.php` → `SendNetfunSMSPage.php`

@@ -1,3 +1,15 @@
+---
+title: "LOGIN TIMEOUT ISSUE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "LOGIN TIMEOUT ISSUE"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚨 Problema Timeout Pagina Login - Diagnosi e Soluzione
 
 **Data**: 14 Ottobre 2025  
@@ -5,7 +17,6 @@
 **URL Affetto**: http://127.0.0.1:8000/it/auth/login
 
 ---
-
 ## 📋 Sintomi
 
 ### Errore Rilevato
@@ -62,7 +73,7 @@ protected string $view = 'pub_theme::filament.widgets.auth.login';
 
 ```bash
 # Verificare configurazione tema
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
+cd /var/www/_bases/base_ptv_fila5_mono/laravel
 php artisan config:cache
 php artisan view:cache
 ```
@@ -111,7 +122,7 @@ public function mount(): void
 ### Soluzione 5: Cache Viste
 
 ```bash
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
+cd /var/www/_bases/base_ptv_fila5_mono/laravel
 
 # Clear tutti i cache
 php artisan cache:clear
@@ -133,7 +144,7 @@ php artisan view:cache
 
 ```bash
 # Verificare che esista
-ls -la /var/www/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
+ls -la /var/www/_bases/base_ptv_fila5_mono/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
 ```
 
 ✅ **File esiste**: Abbiamo verificato che c'è
@@ -142,7 +153,7 @@ ls -la /var/www/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen/resources/
 
 ```bash
 # Cercare dove è definito pub_theme
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
+cd /var/www/_bases/base_ptv_fila5_mono/laravel
 grep -r "pub_theme" config/ app/Providers/
 ```
 

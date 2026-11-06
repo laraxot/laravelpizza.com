@@ -1,3 +1,13 @@
+---
+title: "Risoluzione Conflitto: XotBaseServiceProvider"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Risoluzione Conflitto: XotBaseServiceProvider"
+---
 # Risoluzione Conflitto: XotBaseServiceProvider
 
 ## Contesto
@@ -26,10 +36,10 @@ Questa scelta garantisce:
 
 ## Collegamenti
 - [Struttura moduli Xot](./MODULE_NAMESPACE_RULES.md)
-- [Best Practices Provider](./BEST-PRACTICES.md)
+- [Best Practices Provider](./best-practices.md)
 - [docs/links.md globale](../../../../docs/links.md)
 
 ## Backlink
 - [docs/links.md](../../../../docs/links.md)
 - [docs/MODULE_NAMESPACE_RULES.md](./MODULE_NAMESPACE_RULES.md)
-- [docs/BEST-PRACTICES.md](./BEST-PRACTICES.md)
+- [docs/BEST-PRACTICES.md](./best-practices.md)

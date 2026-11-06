@@ -1,3 +1,15 @@
+---
+title: "errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errori PHPStan nel Modulo Performance
 
 ## Categorie di Errori

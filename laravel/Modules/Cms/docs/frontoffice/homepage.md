@@ -1,3 +1,15 @@
+---
+title: "homepage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Homepage Architecture & Management
 
 ## Contratto corrente TwentyOne

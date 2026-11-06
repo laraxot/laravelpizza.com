@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class MediaForm extends XotBaseResourceForm
 {
     /**
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'name' => TextInput::make('name'),

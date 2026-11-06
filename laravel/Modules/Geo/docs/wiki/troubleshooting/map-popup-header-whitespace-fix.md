@@ -1,3 +1,15 @@
+---
+title: "map popup header whitespace fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map popup header whitespace fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # popup mappa — vuoto verticale header → Tipologia
 
 ## scopo
@@ -7,7 +19,6 @@ Runbook per l’area bianca segnata in UX tra titolo/badge e la prima riga **TIP
 **Business impact:** l’utente percepisce il popup «rotto» e non legge subito tipologia/indirizzo — perdita fiducia nel servizio segnalazioni.
 
 ---
-
 ## sintomo
 
 - Popup con titolo «Rifiuti abbandonati» e badge «Risolto» in alto.
@@ -93,4 +104,4 @@ In `07-map-clusters-and-leaflet.css` **non** usare `.dc-homepage-parity header` 
 - [geo-map-popup-bem.md](../concepts/geo-map-popup-bem.md)
 - [geo-map-lit-reconstruction-guide.md](../concepts/geo-map-lit-reconstruction-guide.md)
 - [geo-map-popup-leaflet-boundary.md](../../../../../Themes/Sixteen/docs/wiki/concepts/geo-map-popup-leaflet-boundary.md)
-- [STORY-129](../../../../../docs/stories/STORY-129-map-marker-icon-first-popup-ux.md)
+- [STORY-129](../../../../../../docs/stories/STORY-129-map-marker-icon-first-popup-ux.md)

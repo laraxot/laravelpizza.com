@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Gate;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\QueueableAction\QueueableAction;
@@ -16,7 +16,8 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Risolve il contenuto da renderizzare per le rotte Folio [container0]/[slug0].
  * Segue la logica di priorità:
- * 1. Tentativo di caricamento di un modello dinamico (es. Event).
+ * 1. Tentativo di caricamento di un modello dinamico: solo `blog`/`events` (contenuti pubblicati) e i contenitori
+ *    elencati in `cms.config.container0_models` (DCP-283, C-04). Nessun modello arbitrario dall'URL.
  * 2. Verifica se esiste una pagina CMS con slug esatto (container.slug).
  * 3. Fallback a una pagina CMS generica (container.view).
  */
@@ -24,11 +25,23 @@ final class ResolvePageAction
 {
     use QueueableAction;
 
+    private const string BLOG_COMPOSER = 'Modules\\Blog\\View\\Composers\\ThemeComposer';
+
+    private const string BLOG_ARTICLE = 'Modules\\Blog\\Models\\Article';
+
+    /**
+     * Container0 => metodo del ThemeComposer del modulo Blog che restituisce solo i contenuti pubblicati.
+     */
+    private const array BLOG_PUBLISHED_FINDERS = [
+        'blog' => 'findPublishedPostBySlug',
+        'events' => 'findPublishedEventBySlug',
+    ];
+
     public function execute(string $container0, string $slug0): ResolvePageData
     {
         $item = $this->loadDynamicModel($container0, $slug0);
 
-        if (null !== $item) {
+        if ($item !== null) {
             return new ResolvePageData(
                 renderMode: 'model',
                 item: $item,
@@ -63,88 +76,32 @@ final class ResolvePageAction
 
     private function loadDynamicModel(string $container0, string $slug0): ?object
     {
-        if ('profile' === $container0) {
-            return $this->resolvePublicProfileItem($slug0);
+        // /blog/{slug} e /events/{slug}: contenuti pubblicati del solo tipo giusto (mai post per event e viceversa).
+        // Il modulo Blog e' opzionale: dove non c'e' si ripiega sulla mappa dei contenitori qui sotto.
+        $publishedFinder = self::BLOG_PUBLISHED_FINDERS[$container0] ?? null;
+        if ($publishedFinder !== null && class_exists(self::BLOG_COMPOSER) && class_exists(self::BLOG_ARTICLE)) {
+            return $this->findPublishedArticle($publishedFinder, $slug0);
         }
 
-        $knownMappings = [
-            'events' => 'Modules\\Meetup\\Models\\Event',
-        ];
+        $modelClass = $this->allowedModelClass($container0);
 
-        if (isset($knownMappings[$container0])) {
-            $modelClass = $knownMappings[$container0];
-
-            return $this->queryModel($modelClass, $slug0);
-        }
-
-        $modelMap = config('xra.container0_model_map', []);
-        if (is_array($modelMap) && isset($modelMap[$container0])) {
-            $modelClass = $modelMap[$container0];
-            if (is_string($modelClass)) {
-                return $this->queryModel($modelClass, $slug0);
-            }
-        }
-
-        $singular = rtrim($container0, 's');
-        $possibleModels = [
-            'Modules\\'.ucfirst($container0).'\\Models\\'.ucfirst($singular),
-            'App\\Models\\'.ucfirst($singular),
-        ];
-
-        foreach ($possibleModels as $modelClass) {
-            $item = $this->queryModel($modelClass, $slug0);
-            if (null !== $item) {
-                return $item;
-            }
-        }
-
-        return null;
+        return $modelClass === null ? null : $this->findAuthorizedModel($modelClass, $slug0);
     }
 
-    private function queryModel(string $modelClass, string $identifier): ?object
+    /**
+     * Allowlist esplicita contenitore => modello (DCP-283, C-04). Il default e' negato: un contenitore non elencato non
+     * carica nulla. `xra.container0_model_map` e' l'alias storico della stessa mappa.
+     *
+     * @return class-string<Model>|null
+     */
+    private function allowedModelClass(string $container0): ?string
     {
-        if (class_exists($modelClass) && is_subclass_of($modelClass, Model::class)) {
-            /** @var Model $model */
-            $model = app($modelClass);
-            $candidateKeys = array_values(array_unique([
-                $model->getRouteKeyName(),
-                'slug',
-                'id',
-                'uuid',
-                'user_id',
-                'user_name',
-            ]));
+        foreach (['cms.config.container0_models', 'xra.container0_model_map'] as $key) {
+            $map = config($key);
+            $class = \is_array($map) ? ($map[$container0] ?? null) : null;
 
-            foreach ($candidateKeys as $key) {
-                foreach ($this->buildCandidateQueries($model) as $query) {
-                    try {
-                        $item = $query->where($key, $identifier)->first();
-                    } catch (\Throwable) {
-                        continue;
-                    }
-
-                    if (null !== $item) {
-                        return $item;
-                    }
-                }
-            }
-
-            foreach ($candidateKeys as $key) {
-                try {
-                    $row = $model->getConnection()
-                        ->table($model->getTable())
-                        ->where($key, $identifier)
-                        ->first();
-                } catch (\Throwable) {
-                    continue;
-                }
-
-                if (null !== $row) {
-                    /** @var array<string, mixed> $attributes */
-                    $attributes = (array) $row;
-
-                    return $model->newFromBuilder($attributes);
-                }
+            if (\is_string($class) && class_exists($class) && is_subclass_of($class, Model::class)) {
+                return $class;
             }
         }
 
@@ -152,46 +109,33 @@ final class ResolvePageAction
     }
 
     /**
-     * @return array<int, Builder<Model>>
+     * Il modello e' letto con la sua chiave di rotta e i suoi scope globali, e mostrato solo se la policy `view` lo
+     * consente a chi guarda (ospite incluso). Un record non autorizzato e' indistinguibile da uno inesistente: niente
+     * oracolo di esistenza.
+     *
+     * @param  class-string<Model>  $modelClass
      */
-    private function buildCandidateQueries(Model $model): array
+    private function findAuthorizedModel(string $modelClass, string $identifier): ?Model
     {
-        /** @var array<int, Builder<Model>> $queries */
-        $queries = [$model->newQuery()];
+        $model = app($modelClass);
+        if (! $model instanceof Model) {
+            return null;
+        }
 
         try {
-            $queries[] = $model->newQueryWithoutScopes();
-        } catch (\Throwable) {
+            $item = $model->resolveRouteBinding($identifier);
+        } catch (QueryException) {
+            return null;
         }
 
-        if (in_array(SoftDeletes::class, class_uses_recursive($model), true)) {
-            // Soft deleted records are already covered by the fallback DB query branch.
-            return $queries;
-        }
-
-        return $queries;
+        return $item instanceof Model && Gate::allows('view', $item) ? $item : null;
     }
 
-    private function resolvePublicProfileItem(string $identifier): ?object
+    private function findPublishedArticle(string $finder, string $slug): ?object
     {
-        $userClass = 'Modules\\User\\Models\\User';
-        $user = $this->queryModel($userClass, $identifier);
-        if (null !== $user) {
-            return $user;
-        }
+        $composer = app(self::BLOG_COMPOSER);
+        $item = is_callable([$composer, $finder]) ? call_user_func([$composer, $finder], $slug) : null;
 
-        $profileClasses = [
-            'Modules\\Meetup\\Models\\Profile',
-            'Modules\\User\\Models\\Profile',
-        ];
-
-        foreach ($profileClasses as $profileClass) {
-            $profile = $this->queryModel($profileClass, $identifier);
-            if (null !== $profile) {
-                return $profile;
-            }
-        }
-
-        return null;
+        return is_object($item) && is_a($item, self::BLOG_ARTICLE) ? $item : null;
     }
 }

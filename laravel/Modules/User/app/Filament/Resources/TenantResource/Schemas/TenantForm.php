@@ -16,7 +16,7 @@ class TenantForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'main' => Section::make()
@@ -28,7 +28,7 @@ class TenantForm extends XotBaseResourceForm
                             ignoreRecord: true,
                         )
                         ->live(onBlur: true)
-                        ->afterStateUpdated(function (callable $set, $state): void {
+                        ->afterStateUpdated(function (callable $set, ?string $state): void {
                             if (is_string($state)) {
                                 $set('slug', Str::slug($state));
                                 $set('domain', Str::slug($state));
@@ -39,7 +39,7 @@ class TenantForm extends XotBaseResourceForm
                         ->helperText('Inserisci il nome del tenant'),
                     TextInput::make('slug')
                         ->required()
-                        ->disabled(fn ($context) => 'create' !== $context)
+                        ->disabled(fn (string $context) => $context !== 'create')
                         ->unique(
                             table: 'tenants',
                             ignoreRecord: true,
@@ -47,7 +47,7 @@ class TenantForm extends XotBaseResourceForm
                         ->helperText('Lo slug verrà generato automaticamente dal nome'),
                     TextInput::make('domain')
                         ->required()
-                        ->visible(fn ($context) => 'create' === $context)
+                        ->visible(fn (string $context) => $context === 'create')
                         ->unique(
                             table: 'domains',
                             ignoreRecord: true,

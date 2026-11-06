@@ -1,3 +1,11 @@
+---
+title: "Notifiche Telegram"
+type: note
+status: draft
+updated: 2026-10-15
+tags: [docs, notify, notifications]
+qmd: "notifiche telegram notify"
+---
 # Notifiche Telegram 
 
 Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di SaluteOra.
@@ -300,4 +308,4 @@ class TelegramNotificationTest extends TestCase
 
 - [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
-- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
+- [SMS_PROVIDER_CONFIGURATION.md](./sms-provider-configuration.md)

@@ -1,3 +1,15 @@
+---
+title: "context compaction strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context compaction strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Context Compaction Strategy
 
 ## Problem Statement

@@ -1,3 +1,15 @@
+---
+title: "phpstan modules current"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan modules current"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Modules corrente
 
 Data: 2026-07-06

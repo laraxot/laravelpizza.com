@@ -1,3 +1,14 @@
+---
+title: "requirements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "requirements"
+issues: []
+discussions: []
+---
+
 # Requirements Template
 
 Template for `.planning/REQUIREMENTS.md` — checkable requirements that define "done."
@@ -68,6 +79,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 - Unmapped: [Z] ⚠️
 
 ---
+title: "requirements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "requirements"
+issues: []
+discussions: []
 *Requirements defined: [date]*
 *Last updated: [date] after [trigger]*
 ```

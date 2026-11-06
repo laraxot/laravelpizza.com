@@ -1,3 +1,11 @@
+---
+title: "XotBaseWidget"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasewidget xot"
+---
 # XotBaseWidget
 
 La classe astratta `XotBaseWidget` fornisce una base comune per tutti i widget Filament nel modulo Xot.

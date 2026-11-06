@@ -1,3 +1,15 @@
+---
+title: "contact column implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contact column implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # ContactColumn - Implementazione DRY/KISS Centralizzata
 
 ## 🎯 Obiettivo
@@ -49,6 +61,8 @@ Implementare `ContactColumn.php` come colonna Filament riutilizzabile che utiliz
 ```
 
 ### Campi Aggiuntivi
+```
+
 ```php
 // Attributi dinamici
 'attribute_1' to 'attribute_14',  // Attributi personalizzabili

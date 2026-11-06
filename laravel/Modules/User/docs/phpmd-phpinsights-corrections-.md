@@ -1,3 +1,11 @@
+---
+title: "PHPMD e PHP Insights Corrections - 2025-01-22"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "phpmd e php insights corrections - 2025-01-22 user"
+---
 # PHPMD e PHP Insights Corrections - 2025-01-22
 
 ## Obiettivo
@@ -101,3 +109,22 @@ I seguenti warning sono accettabili e non richiedono correzione immediata:
 - [Resources Corrections Summary](./resources-corrections-summary-2025-01-22.md)
 - [Quality Tools Report](./quality-tools-report.md)
 - [PHPStan Complete Success](./phpstan-complete-success.md)
+---
+module: theme
+topic: phpmd-phpinsights-corrections-
+canonical: ../../../Themes/docs/shared-components/phpmd-phpinsights-corrections-.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpmd-phpinsights-corrections-.md

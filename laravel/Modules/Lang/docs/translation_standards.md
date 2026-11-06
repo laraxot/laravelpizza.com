@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Standard per le Traduzioni nel Progetto SaluteOra"
+module: "Lang"
+type: rule
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Standard per le Traduzioni nel Progetto SaluteOra
 
 ## Struttura delle Cartelle

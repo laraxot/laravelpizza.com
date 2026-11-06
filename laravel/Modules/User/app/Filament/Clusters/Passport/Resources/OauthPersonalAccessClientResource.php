@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Forms\Components\Select;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Section;
+use Filament\Resources\Pages\PageRegistration;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\CreateOauthPersonalAccessClient;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\EditOauthPersonalAccessClient;
@@ -32,39 +33,6 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     protected static ?string $model = OauthPersonalAccessClient::class;
 
     /**
-     * @return array<string, Component>
-     */
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'oauth_personal_access_client' => Section::make('OAuth Personal Access Client Information')
-                ->schema([
-                    Select::make('client_id')
-                        ->label('Client')
-                        ->relationship('client', 'name')
-                        ->required()
-                        ->searchable()
-                        ->helperText('Associated OAuth client'),
-                ])
-                ->columns(2),
-        ];
-    }
-
-    /**
-     * Define the table for the resource.
-     */
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns(self::getTableColumns())
-            ->filters(self::getTableFilters())
-            ->actions(self::getTableActions())
-            ->bulkActions(self::getTableBulkActions())
-            ->defaultSort('created_at', 'desc');
-    }
-
-    /**
      * Get the table columns for the resource.
      *
      * @return array<string, Tables\Columns\Column>
@@ -72,9 +40,8 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     public static function getTableColumns(): array
     {
         return [
-            'id' => Tables\Columns\TextColumn::make('id')
+            'id' => IDColumn::make('id')
                 ->label('ID')
-                ->sortable()
                 ->searchable(),
             'client' => Tables\Columns\TextColumn::make('client.name')
                 ->label('Client')
@@ -108,7 +75,7 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     /**
      * Get the table actions for the resource.
      *
-     * @return array<string, \Filament\Actions\Action>
+     * @return array<string, Action>
      */
     public static function getTableActions(): array
     {
@@ -121,7 +88,7 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     /**
      * Get the table bulk actions for the resource.
      *
-     * @return array<string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
+     * @return array<string, Action|ActionGroup>
      */
     public static function getTableBulkActions(): array
     {
@@ -133,7 +100,7 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     }
 
     /**
-     * @return array<string, \Filament\Resources\Pages\PageRegistration>
+     * @return array<string, PageRegistration>
      */
     #[\Override]
     public static function getPages(): array

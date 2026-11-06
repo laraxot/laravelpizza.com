@@ -11,19 +11,23 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../docs/wiki/bmad/architecture.md
-  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
-  - ../../docs/wiki/concepts/ai-harness-module-discipline.md
+  - ../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../docs/wiki/bmad/architecture.md
+  - ../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
+  - ../../../Fixcity/docs/wiki/concepts/ai-harness-module-discipline.md
+status: draft
 ---
 
 # Job Module Wiki
+
+Indice operativo del modulo: [00-INDEX.md](../00-INDEX.md). Registro cronologico di questa wiki: [log.md](./log.md).
+
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
-- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
-- [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
-- [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md)
+- [frontmatter + GitHub](../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
+- [ai-harness-module-discipline](../../../Fixcity/docs/wiki/concepts/ai-harness-module-discipline.md)
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
@@ -45,13 +49,17 @@ qmd search "Job <topic>" --limit 5
 
 ## Shared Second Brain Discipline
 
-- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) — local docs/wiki operating contract aligned with root LLM Wiki discipline.
+- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md): local docs/wiki operating contract aligned with root LLM Wiki discipline.
 
 ## Composer / nwidart
 
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
+- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md): root skeleton nwidart (modello fixcity)
 
 ## Guardrail policy
 
 - [model-policy-laravel-contract](./concepts/model-policy-laravel-contract.md)
 - [policy-restoration-incident](./concepts/policy-restoration-incident.md)
+
+## Model architecture
+
+- [model-trait-inventory](./architecture/model-trait-inventory.md): accessor/helper e relazioni delle classi Job estratti nei trait per modello.

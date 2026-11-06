@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Blocchi di Contenuto
 
 Questo documento contiene la documentazione dettagliata dei blocchi di contenuto.
@@ -292,43 +304,43 @@ class BlockApiTest extends TestCase
 * [README.md](laravel/modules/chart/docs/readme.md)
 * [README.md](laravel/modules/reporting/docs/readme.md)
 * [README.md](laravel/modules/gdpr/docs/phpstan/readme.md)
-* [README.md](laravel/modules/gdpr/docs/readme.md)
-* [README.md](laravel/modules/notify/docs/phpstan/readme.md)
-* [README.md](laravel/modules/notify/docs/readme.md)
-* [README.md](laravel/modules/xot/docs/filament/readme.md)
+* [README.md](../../../Gdpr/docs/README.md)
+* [README.md](../../../Notify/docs/phpstan/README.md)
+* [README.md](../../../Notify/docs/README.md)
+* [README.md](../../../Xot/docs/filament/README.md)
 * [README.md](laravel/modules/xot/docs/phpstan/readme.md)
-* [README.md](laravel/modules/xot/docs/exceptions/readme.md)
-* [README.md](laravel/modules/xot/docs/readme.md)
-* [README.md](laravel/modules/xot/docs/standards/readme.md)
-* [README.md](laravel/modules/xot/docs/conventions/readme.md)
-* [README.md](laravel/modules/xot/docs/development/readme.md)
+* [README.md](../../../Xot/docs/exceptions/readme.md)
+* [README.md](../../../Xot/docs/README.md)
+* [README.md](../../../Xot/docs/standards/README.md)
+* [README.md](../../../Xot/docs/conventions/readme.md)
+* [README.md](../../../Xot/docs/development/readme.md)
 * [README.md](laravel/modules/dental/docs/readme.md)
 * [README.md](laravel/modules/user/docs/phpstan/readme.md)
-* [README.md](laravel/modules/user/docs/readme.md)
-* [README.md](laravel/modules/user/resources/views/docs/readme.md)
+* [README.md](../../../User/docs/README.md)
+* [README.md](../../../User/resources/views/docs/README.md)
 * [README.md](laravel/modules/ui/docs/phpstan/readme.md)
-* [README.md](laravel/modules/ui/docs/readme.md)
+* [README.md](../../../UI/docs/README.md)
 * [README.md](laravel/modules/ui/docs/standards/readme.md)
-* [README.md](laravel/modules/ui/docs/themes/readme.md)
-* [README.md](laravel/modules/ui/docs/components/readme.md)
+* [README.md](../../../UI/docs/themes/README.md)
+* [README.md](../../../UI/docs/components/README.md)
 * [README.md](laravel/modules/lang/docs/phpstan/readme.md)
-* [README.md](laravel/modules/lang/docs/readme.md)
+* [README.md](../../../Lang/docs/README.md)
 * [README.md](laravel/modules/job/docs/phpstan/readme.md)
-* [README.md](laravel/modules/job/docs/readme.md)
+* [README.md](../../../Job/docs/README.md)
 * [README.md](laravel/modules/media/docs/phpstan/readme.md)
-* [README.md](laravel/modules/media/docs/readme.md)
+* [README.md](../../../Media/docs/README.md)
 * [README.md](laravel/modules/tenant/docs/phpstan/readme.md)
-* [README.md](laravel/modules/tenant/docs/readme.md)
+* [README.md](../../../Tenant/docs/README.md)
 * [README.md](laravel/modules/activity/docs/phpstan/readme.md)
-* [README.md](laravel/modules/activity/docs/readme.md)
+* [README.md](../../../Activity/docs/README.md)
 * [README.md](laravel/modules/patient/docs/readme.md)
 * [README.md](laravel/modules/patient/docs/standards/readme.md)
 * [README.md](laravel/modules/patient/docs/value-objects/readme.md)
 * [README.md](laravel/modules/cms/docs/blocks/readme.md)
-* [README.md](laravel/modules/cms/docs/readme.md)
-* [README.md](laravel/modules/cms/docs/standards/readme.md)
-* [README.md](laravel/modules/cms/docs/content/readme.md)
-* [README.md](laravel/modules/cms/docs/frontoffice/readme.md)
-* [README.md](laravel/modules/cms/docs/components/readme.md)
+* [README.md](../README.md)
+* [README.md](../standards/README.md)
+* [README.md](../content/README.md)
+* [README.md](../frontoffice/README.md)
+* [README.md](../components/README.md)
 * [README.md](laravel/themes/two/docs/readme.md)
 * [README.md](laravel/themes/one/docs/readme.md)

@@ -1,17 +1,16 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
     <form wire:submit.prevent="sendSMS">
         <x-filament::section>
             <x-slot name="heading">
-                Test Invio SMS
+                {{ __('notify::send_sms.sections.page.title') }}
             </x-slot>
 
             <x-slot name="description">
-                Utilizza questo form per testare l'invio di messaggi SMS tramite diversi provider.
+                {{ __('notify::send_sms.sections.page.description') }}
             </x-slot>
 
             {{ $this->smsForm }}

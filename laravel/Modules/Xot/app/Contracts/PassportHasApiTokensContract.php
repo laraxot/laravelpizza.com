@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * ---.
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
@@ -48,8 +47,7 @@ interface PassportHasApiTokensContract
     /**
      * Create a new personal access token for the user.
      *
-     * @param array<int, string> $scopes
-     *
+     * @param  array<int, string>  $scopes
      * @return PersonalAccessTokenResult<Token>
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;

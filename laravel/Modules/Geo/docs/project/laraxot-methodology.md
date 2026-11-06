@@ -1,3 +1,15 @@
+---
+title: "laraxot methodology"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laraxot methodology"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laraxot Methodology (Super Mucca)
 
 The Laraxot methodology is the absolute foundation of this project. It prioritizes automation, consistency, and a "forward-only" development path.

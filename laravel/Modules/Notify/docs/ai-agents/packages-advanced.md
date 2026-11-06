@@ -1,9 +1,20 @@
-# Packages advanced — reference
+---
+title: "packages advanced"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "packages advanced"
+issues: []
+discussions: []
+status: draft
+---
+
+# Packages advanced: reference
 
 Packages not covered in `packages-spatie.md`, `packages-laravel-core.md`, `packages-filament-livewire.md`, or `packages-other.md`. All confirmed present in `composer.json` as of February 2026.
 
 ---
-
 ## Eloquent model patterns
 
 ### tightenco/parental 1.5.0
@@ -375,7 +386,7 @@ FIREBASE_CREDENTIALS_FILE=
 
 Elegant CSV reader/writer.
 
-**Where used**: `Modules/Tenant/app/Models/Traits/SushiToCsv.php` — backs Sushi models with CSV files.
+**Where used**: `Modules/Tenant/app/Models/Traits/SushiToCsv.php`: backs Sushi models with CSV files.
 
 ```php
 use League\Csv\Reader;
@@ -503,6 +514,7 @@ Code quality analysis: complexity, style, architecture.
 | google/cloud-storage | 1.49.2 | (infra) | GCS client |
 | spatie/laravel-google-cloud-storage | 2.3.4 | (infra) | GCS filesystem driver |
 | spipu/html2pdf | 5.3.3 | Xot, Quaeris | HTML to PDF |
+| spipu/html2pdf | 5.3.3 | Xot, App | HTML to PDF |
 | tecnickcom/tcpdf | 6.10.1 | Chart | PDF engine (used by html2pdf) |
 | statikbe/laravel-cookie-consent | 1.11.4 | Gdpr | Cookie banner |
 | pragmarx/google2fa | 9.0.0 | User | TOTP 2FA |

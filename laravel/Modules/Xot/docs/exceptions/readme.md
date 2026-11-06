@@ -1,3 +1,13 @@
+---
+title: "Gestione delle Eccezioni"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, exceptions]
+qmd: "Gestione delle Eccezioni"
+---
 # Gestione delle Eccezioni
 
 Questo documento fornisce una panoramica del sistema di gestione delle eccezioni nel modulo Xot.
@@ -32,6 +42,7 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 ## Collegamenti
 - [Exception Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
 - [Logging Best Practices](../LOGGING-BEST-PRACTICES.md)
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -44,7 +55,7 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 * [README.md](docs/moduli/installati/README.md)
 * [README.md](docs/moduli/comandi/README.md)
 * [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
+* [README.md](../README.md)
 * [README.md](docs/module-links/README.md)
 * [README.md](docs/troubleshooting/git-conflicts/README.md)
 * [README.md](docs/tecnico/laraxot/README.md)
@@ -77,8 +88,8 @@ Questo documento fornisce una panoramica del sistema di gestione delle eccezioni
 * [README.md](../../../Xot/docs/exceptions/README.md)
 * [README.md](../../../Xot/docs/README.md)
 * [README.md](../../../Xot/docs/standards/README.md)
-* [README.md](../../../Xot/docs/conventions/README.md)
-* [README.md](../../../Xot/docs/development/README.md)
+* [README.md](../conventions/readme.md)
+* [README.md](../development/readme.md)
 * [README.md](../../../Dental/docs/README.md)
 * [README.md](../../../User/docs/phpstan/README.md)
 * [README.md](../../../User/docs/README.md)

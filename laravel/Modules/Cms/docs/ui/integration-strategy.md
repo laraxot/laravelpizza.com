@@ -1,3 +1,15 @@
+---
+title: "integration strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "integration strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Strategia di Integrazione UI
 
 ## Approccio
@@ -157,5 +169,5 @@ class TailkitAssetManager
 
 ## Collegamenti
 - [Tailkit Components](tailkit-components.md)
-- [Theme System](../themes/readme.md)
+- [Theme System](../../../../Themes/README.md)
 - [Performance Guidelines](../performance.md)

@@ -1,3 +1,15 @@
+---
+title: "PROJECT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PROJECT"
+issues: []
+discussions: []
+status: draft
+---
+
 # PROJECT: FixCity Platform
 
 ## Vision
@@ -11,7 +23,7 @@ Transform FixCity from a functional MVP to a national-scale enterprise-ready pla
 - AI-powered automation for categorization and duplicate detection.
 
 ## Stack
-- Laravel 12
+- Laravel 13
 - Filament v5
 - Folio (Routing)
 - Volt (Livewire Components)

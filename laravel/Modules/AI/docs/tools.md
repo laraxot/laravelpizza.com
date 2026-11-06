@@ -1,3 +1,15 @@
+---
+title: "tools"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tools"
+issues: []
+discussions: []
+status: draft
+---
+
  
 https://blog.codegpt.co/create-your-own-and-custom-copilot-in-vscode-with-ollama-and-codegpt-736277a60298
 

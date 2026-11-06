@@ -1,3 +1,15 @@
+---
+title: "hasaddress implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "hasaddress implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Trait HasAddress
 
 ## Panoramica

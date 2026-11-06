@@ -1,3 +1,14 @@
+---
+title: "assistenza 02 conferma"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "assistenza 02 conferma"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Assistenza - Conferma (assistenza-02-conferma.html)
 
 ## Obiettivo

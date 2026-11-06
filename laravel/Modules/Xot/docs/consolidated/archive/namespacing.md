@@ -1,3 +1,11 @@
+---
+title: "Convenzioni Namespace in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni namespace in il progetto xot"
+---
 # Convenzioni Namespace in il progetto
 
 ## Struttura Namespace Standard

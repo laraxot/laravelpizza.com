@@ -23,7 +23,7 @@ final class VideoSpatie
             ->schema([
                 Hidden::make('img_uuid')
                     ->default(Str::uuid()->toString(...))
-                    ->formatStateUsing(fn ($state) => $state ?? Str::uuid()->toString())
+                    ->formatStateUsing(static fn (?string $state): string => $state ?? Str::uuid()->toString())
                     ->live(),
                 // ->required(),
 
@@ -32,7 +32,7 @@ final class VideoSpatie
                     ->hiddenLabel()
                     // ->imagePreviewHeight('250')
                     // ->panelLayout('integrated')
-                    ->imageResizeMode('cover')
+                    ->automaticallyResizeImagesMode('cover')
                     ->panelAspectRatio('2:1')
                     ->maxSize(502400)
                     ->disk('local')
@@ -41,8 +41,8 @@ final class VideoSpatie
                     ->previewable()
                     ->downloadable()
                     // ->rules(Rule::dimensions()->maxWidth(600)->maxHeight(800))
-                    ->collection(fn (Get $get) => $get('img_uuid'))
-                    ->afterStateUpdated(function (
+                    ->collection(static fn (Get $get) => $get('img_uuid'))
+                    ->afterStateUpdated(static function (
                         HasForms $_livewire,
                         SpatieMediaLibraryFileUpload $_component,
                         TemporaryUploadedFile $state,
@@ -52,10 +52,10 @@ final class VideoSpatie
                         // Call to an undefined method Filament\Forms\Contracts\HasForms::validateOnly().
                         // $livewire->validateOnly($component->getStatePath());
                         Assert::string(
-                            $collection_name = $get('img_uuid'),
+                            $collectionName = $get('img_uuid'),
                             '['.__LINE__.']['.class_basename(self::class).']',
                         );
-                        $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collection_name);
+                        $record->addMedia($state)->withResponsiveImages()->toMediaCollection($collectionName);
                     }),
                 /*
                  * Select::make('ratio')
@@ -72,7 +72,7 @@ final class VideoSpatie
                 // ->customProperties(fn(Forms\Get $get) => ['gallery_id' => $get('gallery_id')]),
                 // Forms\Components\SpatieMediaLibraryFileUpload::make('media_id')
             ])
-            ->columns('form' === $context ? 2 : 1);
+            ->columns($context === 'form' ? 2 : 1);
     }
 
     /**

@@ -1,3 +1,13 @@
+---
+title: "La Via del Brand"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, brand]
+qmd: "La Via del Brand"
+---
 # La Via del Brand
 
 ## L'Essenza del Brand
@@ -152,4 +162,4 @@ Ogni volta che scrivi un getter del brand, chiediti:
 - [Filosofia dei Getter](../philosophy/getter_zen.md)
 - [Filosofia Zen Avanzata](../philosophy/getter_zen_advanced.md)
 - [Convenzioni di Naming](../naming-conventions.md)
-- [Linee Guida Filament](../filament-best-practices.md)
+- [Linee Guida Filament](../filament-best-practices.md) 

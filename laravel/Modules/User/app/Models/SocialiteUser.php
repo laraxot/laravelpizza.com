@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * inspired by  DutchCodingCompany\FilamentSocialite.
  */
@@ -9,28 +8,26 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\User\Models\Traits\SocialiteUserRelationsTrait;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
 
 /**
  * Modules\User\Models\SocialiteUser.
  *
- * @property int               $id
- * @property string            $user_id
- * @property string            $provider
- * @property string            $provider_id
- * @property string|null       $token
- * @property string|null       $name
- * @property string|null       $email
- * @property string|null       $avatar
- * @property Carbon|null       $created_at
- * @property Carbon|null       $updated_at
- * @property string|null       $updated_by
- * @property string|null       $created_by
+ * @property int $id
+ * @property string $user_id
+ * @property string $provider
+ * @property string $provider_id
+ * @property string|null $token
+ * @property string|null $name
+ * @property string|null $email
+ * @property string|null $avatar
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
  * @property UserContract|null $user
  *
  * @method static Builder|SocialiteUser newModelQuery()
@@ -63,6 +60,15 @@ use Modules\Xot\Datas\XotData;
  */
 class SocialiteUser extends BaseModel
 {
+    use SocialiteUserRelationsTrait;
+
+    /**
+     * Il token OAuth non deve finire in `toArray()` ne' nello stato Livewire delle pagine Filament (audit DCP-181, D-3).
+     *
+     * @var list<string>
+     */
+    protected $hidden = ['token'];
+
     /** @var list<string> */
     protected $fillable = [
         // 'id',
@@ -74,13 +80,4 @@ class SocialiteUser extends BaseModel
         'email',
         'avatar',
     ];
-
-    /** @return BelongsTo<Model, $this> */
-    public function user(): BelongsTo
-    {
-        /** @var class-string<Model> */
-        $user_class = XotData::make()->getUserClass();
-
-        return $this->belongsTo($user_class);
-    }
 }

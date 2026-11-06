@@ -1,3 +1,24 @@
+---
+title: "Regole di Ereditarietà dei Modelli - Modulo User"
+type: rule
+tags: [model, inheritance, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "model-inheritance-rules regole di ereditarietà dei modelli - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Regole di Ereditarietà dei Modelli - Modulo User
 
 **Data**: 2025-10-15
@@ -223,8 +244,9 @@ Prima di creare un nuovo modello, verifica:
 
 ## Link Correlati
 
-- [Documentazione Xot BaseModel](../../xot/docs/model-inheritance-rules.md)
-- [Documentazione Geo Model Pattern](../../geo/docs/model-inheritance-pattern.md)
+- [Documentazione Xot BaseModel](../../../Xot/docs/model-inheritance-rules.md)
+- [Documentazione Geo Model Pattern](../../../Geo/docs/model-inheritance-pattern.md)
+- [Documentazione Geo Model Pattern](../../../Geo/docs/model-inheritance-pattern.md)
 - [Laravel Eloquent Documentation](https://laravel.com/docs/eloquent)
 
 ## Note Tecniche

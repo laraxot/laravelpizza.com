@@ -1,3 +1,14 @@
+---
+title: "bottlenecks and solutions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bottlenecks and solutions"
+issues: []
+discussions: []
+---
+
 # Bottleneck e Soluzioni
 
 ## 1. Bottleneck Identificati

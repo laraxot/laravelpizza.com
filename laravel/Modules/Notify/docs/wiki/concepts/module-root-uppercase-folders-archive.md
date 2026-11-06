@@ -1,5 +1,9 @@
 ---
-title: "Archivio Modules.bak — modulo Notify"
+created: 2026-09-26
+qmd: "module root uppercase folders archive"
+issues: []
+discussions: []
+title: "Archivio Modules.bak: modulo Notify"
 type: concept
 module: Notify
 status: active
@@ -10,7 +14,7 @@ related:
   - ../../../../../Xot/docs/wiki/concepts/module-root-uppercase-folders-archive.md
 ---
 
-# Archivio `Modules.bak/` — Notify
+# Archivio `Modules.bak/`: Notify
 
 ## Situazione
 

@@ -1,6 +1,15 @@
 ---
+title: "map picker troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker troubleshooting"
+issues: []
+discussions: []
 name: map-picker-troubleshooting
 description: Guide for diagnosing and fixing MapPicker issues in the Geo module
+status: draft
 ---
 
 # MapPicker Troubleshooting Guide

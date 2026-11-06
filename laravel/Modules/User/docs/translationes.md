@@ -1,3 +1,28 @@
+---
+title: "Correzioni File di Traduzione User Module"
+type: concept
+tags: [translationes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "translationes correzioni file di traduzione user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Correzioni File di Traduzione User Module
 
 ## Problemi Identificati e Risolti
@@ -95,4 +120,3 @@ Il file ora segue la struttura espansa obbligatoria per le regole Laraxot:
 **Status**: Completato
 
 ---
-

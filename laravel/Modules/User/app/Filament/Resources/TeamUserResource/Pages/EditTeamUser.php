@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\TeamUserResource\Pages;
 
+use Modules\User\Filament\Resources\TeamUserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 /**
@@ -11,5 +12,5 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
  */
 class EditTeamUser extends XotBaseEditRecord
 {
-    protected static string $resource = \Modules\User\Filament\Resources\TeamUserResource::class;
+    protected static string $resource = TeamUserResource::class;
 }

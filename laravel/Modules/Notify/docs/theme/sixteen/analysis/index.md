@@ -1,3 +1,23 @@
+---
+title: "Theme Sixteen Analysis Index"
+type: index
+tags: [notify, docs, theme, sixteen, analysis]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione theme sixteen analysis index theme sixteen analysis index index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../../../README.md
+  - ../../../wiki/index.md
+  - ../../../notifications/README.md
+  - ../../../integrations/README.md
+  - ../../../templates/README.md
+status: draft
+---
 # Theme Sixteen Analysis Index
 
 ## Homepage Comparison

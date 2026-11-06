@@ -1,3 +1,15 @@
+---
+title: "state"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "state"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern State in Laravel
 
 Questa documentazione descrive l'implementazione del pattern State in Laravel, basata sulla serie "Laravel Beyond CRUD" e adattata alle esigenze del progetto il progetto.

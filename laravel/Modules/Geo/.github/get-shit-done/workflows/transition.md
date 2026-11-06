@@ -1,3 +1,14 @@
+---
+title: "transition"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "transition"
+issues: []
+discussions: []
+---
+
 <required_reading>
 
 **Read these files NOW:**
@@ -182,6 +193,14 @@ Make the edits inline. Update "Last updated" footer:
 
 ```markdown
 ---
+title: "transition"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "transition"
+issues: []
+discussions: []
 *Last updated: [date] after Phase [X]*
 ```
 

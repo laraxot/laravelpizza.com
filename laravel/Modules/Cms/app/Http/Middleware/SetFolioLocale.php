@@ -6,6 +6,8 @@ namespace Modules\Cms\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * Middleware to set locale from URL for Folio pages.
@@ -17,7 +19,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
  */
 class SetFolioLocale
 {
-    public function handle(Request $request, \Closure $next): mixed
+    public function handle(Request $request, \Closure $next): Response
     {
         // Get the first segment from the URL
         $segments = $request->segments();
@@ -37,12 +39,13 @@ class SetFolioLocale
         // Priority 1: Check if first segment is a supported locale (URL Overrides User Preference)
         if (in_array($firstSegment, $supportedLocales, true)) {
             $locale = $firstSegment;
-        // Priority 2: If user is logged in and has a saved language, use that
-        } elseif ($request->user() && property_exists($request->user(), 'lang') && is_string($request->user()->lang)) {
-            $locale = $request->user()->lang;
-        // Priority 3: Use default locale
+            // Priority 2: If user is logged in and has a saved language, use that
         } else {
-            $locale = $defaultLocale;
+            // data_get legge gli attributi magici Eloquent (users.lang e' una colonna: property_exists e'
+            // sempre false e questo ramo non scattava mai) e le proprieta' di uno stdClass. La lingua
+            // salvata dall'utente e' libera: si applica solo se e' tra quelle supportate.
+            $userLang = data_get($request->user(), 'lang');
+            $locale = is_string($userLang) && in_array($userLang, $supportedLocales, true) ? $userLang : $defaultLocale;
         }
 
         // CRITICAL: Set locale on BOTH app AND LaravelLocalization facade.
@@ -54,6 +57,9 @@ class SetFolioLocale
             LaravelLocalization::setLocale($locale);
         }
 
-        return $next($request);
+        $response = $next($request);
+        Assert::isInstanceOf($response, Response::class);
+
+        return $response;
     }
 }

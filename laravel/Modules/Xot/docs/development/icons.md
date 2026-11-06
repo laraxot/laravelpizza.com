@@ -1,3 +1,13 @@
+---
+title: "Icone e SVG nei Moduli"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, development]
+qmd: "Icone e SVG nei Moduli"
+---
 # Icone e SVG nei Moduli
 
 ## Configurazione delle Icone di Navigazione
@@ -120,7 +130,7 @@ class UserResource extends XotBaseResource
     use NavigationLabelTrait;
 
     protected static ?string $model = User::class;
-
+    
     // L'icona verrà automaticamente recuperata dal file di traduzione
     // o dagli SVG personalizzati nella cartella resources/svg
 }

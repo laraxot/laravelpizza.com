@@ -1,3 +1,11 @@
+---
+title: "Carrello della Spesa con Event Sourcing"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "carrello della spesa con event sourcing activity"
+---
 # Carrello della Spesa con Event Sourcing
 
 ## Introduzione

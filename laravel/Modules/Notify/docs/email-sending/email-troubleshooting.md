@@ -1,3 +1,15 @@
+---
+title: "email troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-23
+qmd: "email troubleshooting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.
@@ -14,9 +26,8 @@ La classe `SpatieEmail` ora utilizza l'API moderna di Laravel per gli allegati t
 // Preparazione degli allegati
 $attachments = [
     [
-        'path' => '/var/www/html/<nome progetto>/public_html/images/avatars/default.svg',
-'path' => '/var/www/html/Quaeris/public_html/images/avatars/default.svg',
-        'path' => '/var/www/html/_bases/base_techplanner_fila5_mono/public_html/images/avatars/default.svg',
+        // public_path() punta a public_html/: mai percorsi assoluti di un'installazione
+        'path' => public_path('images/avatars/default.svg'),
         'as' => 'logo.svg',
         'mime' => 'image/svg+xml',
     ],
@@ -207,3 +218,4 @@ public function test_can_send_email_with_attachments()
 - [ATTACHMENTS_USAGE.md](./attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
+- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie-mail-templates-structure.md)

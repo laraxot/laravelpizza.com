@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="relative overflow-hidden bg-gray-50">
     <div class="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full" aria-hidden="true">
@@ -81,7 +80,7 @@ declare(strict_types=1);
               <div class="-mr-2">
                 <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span class="absolute -inset-0.5"></span>
-                  <span class="sr-only">Close menu</span>
+                  <span class="sr-only">{{ __('ui::blocks_hero.shared.close_menu.label') }}</span>
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -89,12 +88,12 @@ declare(strict_types=1);
               </div>
             </div>
             <div class="px-2 pb-3 pt-2">
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.product.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.features.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.marketplace.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.company.label') }}</a>
             </div>
-            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in</a>
+            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">{{ __('ui::blocks_hero.shared.log_in.label') }}</a>
           </div>
         </div>
       </div>
@@ -102,16 +101,16 @@ declare(strict_types=1);
       <main class="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">Data to enrich your</span>
-            <span class="block text-indigo-600 xl:inline">online business</span>
+            <span class="block xl:inline">{{ __('ui::blocks_hero.shared.data_to_enrich_your.label') }}</span>
+            <span class="block text-indigo-600 xl:inline">{{ __('ui::blocks_hero.shared.online_business.label') }}</span>
           </h1>
-          <p class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+          <p class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">{{ __('ui::blocks_demo_shared.copy.paragraph_3.description') }}</p>
           <div class="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
             <div class="rounded-md shadow">
-              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:px-10 md:py-4 md:text-lg">Get started</a>
+              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:px-10 md:py-4 md:text-lg">{{ __('ui::blocks_demo_shared.labels.get_started.label') }}</a>
             </div>
             <div class="mt-3 rounded-md shadow sm:ml-3 sm:mt-0">
-              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50 md:px-10 md:py-4 md:text-lg">Live demo</a>
+              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50 md:px-10 md:py-4 md:text-lg">{{ __('ui::blocks_hero.shared.live_demo.label') }}</a>
             </div>
           </div>
         </div>

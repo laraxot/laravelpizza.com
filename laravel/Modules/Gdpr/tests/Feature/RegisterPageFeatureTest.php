@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 it('renders the English register page with hero and form texts', function (): void {
     $response = gdprGet('/en/auth/register');
@@ -50,6 +47,6 @@ it('has all required translation keys used by the register page', function (): v
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+        Assert::assertNotSame($key, $translated, "Translation key [{$key}] is missing or returns raw key");
     }
 });

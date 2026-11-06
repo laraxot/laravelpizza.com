@@ -1,4 +1,12 @@
 ---
+title: "gsd plan checker.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd plan checker.agent"
+issues: []
+discussions: []
 name: gsd-plan-checker
 description: Verifies plans will achieve phase goal before execution. Goal-backward analysis of plan quality. Spawned by /gsd-plan-phase orchestrator.
 tools: ['read', 'execute', 'search', 'search']

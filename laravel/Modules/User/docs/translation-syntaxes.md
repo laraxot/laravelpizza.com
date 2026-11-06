@@ -1,3 +1,28 @@
+---
+title: "Correzioni Errori di Sintassi nei File di Traduzione - 2025"
+type: concept
+tags: [translation, syntaxes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "translation-syntaxes correzioni errori di sintassi nei file di traduzione - 2025"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
 
 ## Data

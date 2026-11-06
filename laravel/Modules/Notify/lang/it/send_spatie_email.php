@@ -11,6 +11,7 @@ return [
         'emailFormActions' => [
             'label' => 'emailFormActions',
             'tooltip' => 'emailFormActions',
+            'icon' => 'emailFormActions',
         ],
         'logout' => [
             'tooltip' => 'logout',
@@ -20,6 +21,12 @@ return [
         'profile' => [
             'tooltip' => 'profile',
             'icon' => 'profile',
+            'label' => 'profile',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
         ],
     ],
     'fields' => [

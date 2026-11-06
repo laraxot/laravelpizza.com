@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Modules\Xot\Tests\TestCase;
@@ -16,7 +15,8 @@ it('sets csrf token on mount', function (): void {
     $session->allows(['token' => $token]);
     App::instance('session', $session);
 
-    $class = new class {
+    $class = new class
+    {
         public string $_token = '';
 
         public function mount(): void
@@ -39,7 +39,8 @@ it('sets csrf token on mount', function (): void {
 it('verifies csrf token', function (): void {
     $token = 'secret-token';
 
-    $class = new class {
+    $class = new class
+    {
         public string $_token = '';
 
         public function verifyCsrfToken(): bool

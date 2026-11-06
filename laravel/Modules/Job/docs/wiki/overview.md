@@ -4,6 +4,9 @@ module: "Job"
 type: overview
 created: "2026-04-15T08:28:44Z"
 updated: "2026-04-15T08:28:44Z"
+status: draft
+tags: [docs, job, wiki]
+qmd: "job wiki overview job"
 ---
 
 # Job Wiki Overview

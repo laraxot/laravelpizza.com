@@ -1,3 +1,15 @@
+---
+title: "MCP SERVERS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "MCP SERVERS"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Servers - Master Index
 
 **Project**: FixCity Platform  
@@ -31,7 +43,8 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
 - **Type**: Laravel-specific
 - **Command**: `php artisan boost:mcp`
 - **Use**: Laravel 12, Filament, Livewire documentation and best practices
-- **Module Docs**: [Xot MCP Guide](../Modules/Xot/docs/MCP_SERVERS.md) | [Theme MCP Guide](../Themes/Sixteen/docs/MCP_SERVERS.md)
+- **Module Docs**: [Xot MCP Guide](../Modules/Xot/docs/MCP_SERVERS.md) | [Theme MCP Guide](../Themes/Sixteen/docs/mcp-servers.md)
+- **Module Docs**: [Xot MCP Guide](../Modules/Xot/docs/MCP_SERVERS.md) | [Theme MCP Guide](../../../Themes/Sixteen/docs/mcp-servers.md)
 
 ### fetch
 - **Type**: Web content
@@ -42,7 +55,7 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
 ### filesystem
 - **Type**: File operations
 - **Package**: `@modelcontextprotocol/server-filesystem`
-- **Scope**: `/var/www/_bases/base_fixcity_fila5`
+- **Scope**: `/var/www/_bases/base_ptv_fila5`
 - **Use**: Read/write files, search directories, explore project structure
 
 ### sqlite
@@ -89,7 +102,7 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
 - **Type**: AI Memory Infrastructure
 - **CLI**: `supermemory` (npm global)
 - **API Key**: Configured in `.mcp.json`
-- **Container Tag**: `fixcity`
+- **Container Tag**: `ptv`
 - **Use**: 
   - Persistent project context across conversations
   - Semantic search across project documentation
@@ -107,10 +120,10 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
 - **CLI**: `qmd` (npm global)
 - **Use**: Hybrid search over markdown files (BM25 + vector + reranking)
 - **Collections**:
-  - `fixcity-wiki` → `./docs/wiki`
-  - `fixcity-docs` → `./docs`
-  - `fixcity-modules` → `./Modules`
-  - `fixcity-themes` → `./Themes`
+  - `ptv-wiki` → `./docs/wiki`
+  - `ptv-docs` → `./docs`
+  - `ptv-modules` → `./Modules`
+  - `ptv-themes` → `./Themes`
 - **Commands**:
   - `qmd search "query"` - Full-text search
   - `qmd query "query"` - Hybrid search with reranking
@@ -130,6 +143,7 @@ Main config: `laravel/.mcp.json`
 ### Editor Configuration
 - **Cursor**: Uses `.mcp.json` automatically
 - **Windsurf**: Import from [Xot Windsurf Config](../Modules/Xot/docs/windsurf-mcp-config.json)
+- **Windsurf**: Import from [Xot Windsurf Config](../../Xot/docs/windsurf-mcp-config.json)
 - **Claude Desktop**: Copy config to `claude_desktop_config.json`
 
 ### Environment Variables
@@ -153,17 +167,17 @@ supermemory whoami
 
 ### Add Project Context
 ```bash
-supermemory add --tag fixcity --file .supermemory/fixcity-context.md
+supermemory add --tag ptv --file .supermemory/ptv-context.md
 ```
 
 ### Search Memories
 ```bash
-supermemory search "FixCity architecture" --tag fixcity
+supermemory search "FixCity architecture" --tag ptv
 ```
 
 ### Get Profile
 ```bash
-supermemory profile --tag fixcity --query "project preferences"
+supermemory profile --tag ptv --query "project preferences"
 ```
 
 ## Module-Specific Usage
@@ -179,7 +193,8 @@ Each module has specific MCP usage guidelines. See module-specific docs:
 
 ## Theme-Specific Usage
 
-- **Sixteen**: [Theme MCP Servers](../Themes/Sixteen/docs/MCP_SERVERS.md)
+- **Sixteen**: [Theme MCP Servers](../Themes/Sixteen/docs/mcp-servers.md)
+- **Sixteen**: [Theme MCP Servers](../../../Themes/Sixteen/docs/mcp-servers.md)
   - Frontoffice page testing
   - Visual parity verification
   - CSS/JS build process
@@ -203,5 +218,4 @@ Each module has specific MCP usage guidelines. See module-specific docs:
 - [Theme Index](themes/index.md)
 
 ---
-
 *This document follows DRY+KISS principles. For questions or updates, edit this file and update cross-references.*

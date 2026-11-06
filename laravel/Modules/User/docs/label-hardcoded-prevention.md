@@ -1,3 +1,28 @@
+---
+title: "Prevenzione ->label() Hardcoded - Modulo User"
+type: concept
+tags: [label, hardcoded, prevention]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "label-hardcoded-prevention prevenzione ->label() hardcoded - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Prevenzione ->label() Hardcoded - Modulo User
 
 ## 🚨 **REGOLA ASSOLUTA**
@@ -186,13 +211,17 @@ return [
 
 ## 🔗 **Collegamenti**
 
-- [Translation Standards](../../../docs/translation-standards.md)
-- [PHPStan Fixes](../../../docs/phpstan_level10_fixes.md)
-- [Best Practices](../../../docs/best-practices.md)
+- [Translation Standards](../../../../docs/translation-standards.md)
+- [PHPStan Fixes](../../../../docs/phpstan_level10_fixes.md)
+- [Best Practices](../../../../docs/best-practices.md)
+- [Translation Standards](../../../../docs/translation-standards.md)
+- [PHPStan Fixes](../../../../docs/phpstan_level10_fixes.md)
+- [Best Practices](../../../../docs/best-practices.md)
 
 ---
 
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Zero ->label() hardcoded  
+**✅ Status**: Prevenzione attiva e monitorata
 **✅ Status**: Prevenzione attiva e monitorata

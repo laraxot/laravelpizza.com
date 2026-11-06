@@ -1,3 +1,11 @@
+---
+title: "Notify Module Roadmap 2026"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, roadmap]
+qmd: "notify module roadmap 2026 notify"
+---
 # Notify Module Roadmap 2026
 
 ## 📡 Sacred Philosophy: "One Message, Many Paths"

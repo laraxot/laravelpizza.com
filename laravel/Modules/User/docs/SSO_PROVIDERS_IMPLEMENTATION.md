@@ -1,3 +1,12 @@
+---
+title: "User Module - SSO Providers Implementation"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - sso providers implementation user"
+status: superseded
+superseded_by: SSO-PROVIDERS-IMPLEMENTATION.md
+---
 # User Module - SSO Providers Implementation
 
 ## Overview
@@ -172,7 +181,7 @@ $activeProviders = SsoProvider::where('is_active', true)->get();
 ### Autenticare Utente via SSO
 
 ```php
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\SsoProvider;
 
 $provider = SsoProvider::where('name', 'spid')->firstOrFail();

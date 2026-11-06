@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!--
   This example requires some changes to your config:
@@ -23,15 +22,15 @@ declare(strict_types=1);
         <div class="px-6 pb-12 pt-10 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:px-20 xl:py-20">
           <div class="lg:self-center">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              <span class="block">Ready to dive in?</span>
-              <span class="block">Start your free trial today.</span>
+              <span class="block">{{ __('ui::blocks_cta.archivied_brand_panel_with_app_screenshot.ready_to_dive_in.label') }}</span>
+              <span class="block">{{ __('ui::blocks_cta.shared.message_1.message') }}</span>
             </h2>
-            <p class="mt-4 text-lg leading-6 text-indigo-200">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
-            <a href="#" class="mt-8 inline-flex items-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 shadow hover:bg-indigo-50">Sign up for free</a>
+            <p class="mt-4 text-lg leading-6 text-indigo-200">{{ __('ui::blocks_cta.archivied_brand_panel_with_app_screenshot.paragraph_1.description') }}</p>
+            <a href="#" class="mt-8 inline-flex items-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 shadow hover:bg-indigo-50">{{ __('ui::blocks_cta.archivied_brand_panel_with_app_screenshot.sign_up_for_free.label') }}</a>
           </div>
         </div>
         <div class="aspect-h-3 aspect-w-5 -mt-6 md:aspect-h-1 md:aspect-w-2">
-          <img class="translate-x-6 translate-y-6 transform rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20" src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg" alt="App screenshot">
+          <img class="translate-x-6 translate-y-6 transform rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20" src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg" alt="{{ __('ui::blocks_demo_shared.images.app_screenshot.alt') }}">
         </div>
       </div>
     </div>

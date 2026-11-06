@@ -1,3 +1,13 @@
+---
+title: "Filament Integration in Laraxot"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, laraxot]
+qmd: "Filament Integration in Laraxot"
+---
 # Filament Integration in Laraxot
 
 ## Resource Implementation
@@ -16,11 +26,11 @@ public static function getFormSchema(): array
         TextInput::make('name')
             ->required()
             ->maxLength(255),
-
+            
         // Relazioni
         Select::make('type')
             ->relationship('type', 'name'),
-
+            
         // File e Media
         FileUpload::make('avatar')
             ->image()
@@ -64,14 +74,15 @@ public static function getFormSchema(): array
 - Ottimizzare le query del database
 ### Versione HEAD
 
+
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](../../../Xot/docs/laraxot/filament-integration.md)
 * [filament-integration.md](../../../Cms/docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](../../../Cms/docs/filament-integration.md)
-* [filament-integration.md](../../../xot/docs/laraxot/filament-integration.md)
-* [filament-integration.md](../../../cms/docs/roadmap/features/filament-integration.md)
-* [filament-integration.md](../../../cms/docs/filament-integration.md)
+
 
 ### Versione Incoming
 
+
 ---
+

@@ -1,3 +1,17 @@
+---
+qmd: "OLLAMA OPTIMIZATION GUIDE"
+issues: []
+discussions: []
+title: "Ollama Optimization Guide - Intel i5-8400 (32GB RAM)"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: ollama-optimization-guide.md
+---
+
 # Ollama Optimization Guide - Intel i5-8400 (32GB RAM)
 
 **Date**: 2026-03-13  

@@ -1,3 +1,15 @@
+---
+title: "phpstan error resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan error resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Errori PHPStan - 8 Gennaio 2025
 
 ## Panoramica
@@ -77,7 +89,7 @@ Risolti sistematicamente 9 errori PHPStan critici attraverso l'analisi del codic
 ## Collegamenti Tecnici
 
 - [Correzioni Dettagliate](../laravel/modules/xot/docs/phpstan-fixes-[date].md)
-- [Regole PHPStan Critiche](../laravel/modules/xot/docs/phpstan-critical-rules.md)
+- [Regole PHPStan Critiche](../../Xot/docs/phpstan-critical-rules.md)
 - [Linee Guida Livello 10](../laravel/modules/xot/docs/phpstan-level10-guidelines.md)
 - [Chart Model Fixes](../laravel/modules/chart/docs/phpstan/chart-model-fixes.md)
 

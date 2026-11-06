@@ -1,3 +1,11 @@
+---
+title: "Filament Block Label Guidelines"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filament block label guidelines xot"
+---
 # Filament Block Label Guidelines
 
 > Questo documento è un collegamento alla documentazione principale sulle convenzioni per le etichette nei Filament Blocks.

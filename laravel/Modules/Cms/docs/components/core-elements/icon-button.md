@@ -1,3 +1,15 @@
+---
+title: "icon button"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "icon button"
+issues: []
+discussions: []
+status: draft
+---
+
 # Icon Button
 
 I pulsanti con icona sono componenti compatti che utilizzano simboli grafici per comunicare azioni in modo efficace. Sono particolarmente utili quando lo spazio è limitato o quando si vuole mantenere un'interfaccia pulita e minimalista.

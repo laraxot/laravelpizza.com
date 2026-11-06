@@ -1,11 +1,10 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
  * @see https://laravel-notification-channels.com/telegram/#usage
  */
-
-declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
@@ -24,6 +23,7 @@ use Modules\Notify\Filament\Clusters\Test;
 use Modules\Notify\Notifications\TelegramNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 use NotificationChannels\Telegram\TelegramMessage;
 use Telegram\Bot\Laravel\Facades\Telegram;
 use Webmozart\Assert\Assert;
@@ -33,6 +33,8 @@ use Webmozart\Assert\Assert;
  */
 class SendTelegram extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     // use NavigationLabelTrait;
 
     /** @var array<string, mixed>|null */
@@ -64,15 +66,15 @@ class SendTelegram extends XotBasePage
                     // ->description('Update your account\'s profile information and email address.')
                     ->schema([
                         TextInput::make('recipient')->required(),
-                        RichEditor::make('body')->required(),
-                    ]),
-            ])
+                        RichEditor::make('body')->required()])])
             ->model($this->getUser())
             ->statePath('emailData');
     }
 
     public function sendEmail(): void
     {
+        abort_unless(static::canAccess(), 403);
+
         $data = $this->emailForm->getState();
         Assert::string($token = config('services.telegram-bot-api.token'));
         $url = 'https://api.telegram.org/bot'.$token.'/getMe';
@@ -107,18 +109,16 @@ class SendTelegram extends XotBasePage
     protected function getForms(): array
     {
         return [
-            'emailForm',
-        ];
+            'emailForm'];
     }
 
-    /** @return array<string, \Filament\Actions\Action> */
+    /** @return array<string, Action> */
     protected function getEmailFormActions(): array
     {
         return [
             'submit' => Action::make('emailFormActions')
 
-                ->submit('emailFormActions'),
-        ];
+                ->submit('emailFormActions')];
     }
 
     protected function getUser(): Authenticatable&Model

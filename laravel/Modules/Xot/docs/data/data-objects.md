@@ -1,6 +1,37 @@
+---
+title: "Data Objects in Laraxot"
+type: note
+status: active
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, data]
+qmd: "Data Objects in Laraxot"
+---
 # Data Objects in Laraxot
 
 I Data Objects sono classi che incapsulano dati strutturati utilizzati in tutto il framework Laraxot. Utilizzano la libreria `spatie/laravel-data` e sono progettati per essere immutabili e facilmente trasferibili tra i vari componenti dell'applicazione.
+
+## Cartella canonica
+
+I data object dei moduli vivono in `app/Datas/` e usano il namespace
+`Modules\\<Module>\\Datas`. La forma plurale rappresenta il catalogo di contratti
+dati del modulo, mantiene il mapping PSR-4 leggibile e separa questi oggetti
+riusabili da Action, Model e componenti UI.
+
+`app/Data/` e `app/DTOs/` non sono cartelle canoniche: eventuali residui storici
+non vanno riutilizzati né ricreati. Un DTO legacy va migrato in `Datas/`, con
+namespace e tutti i consumer aggiornati insieme, rinominato `<Nome>Data` ed esteso
+da `Spatie\LaravelData\Data` (`LocationDTO` diventa `LocationData`): il suffisso
+`DTO` e' vietato quanto la cartella ([prompt 04](../../../../../bashscripts/docs/prompts/04-datas-not-dtos.md)).
+
+Perche' il plurale: la cartella si ricava dal suffisso della classe, come
+`*Action` in `Actions/` e `*Enum` in `Enums/`. L'errore ricorrente nasce dal
+default di Spatie (`make:data` genera in `App\Data`); in `laravel/config/data.php`
+ora `commands.make.namespace` vale `Datas`. La guardia e'
+`tests/Unit/Architecture/DatasFolderConventionTest.php`: fallisce se un file `.php`
+sta in `app/` o nei test sotto `Data`, `DTOs`, `DataObjects`, `DataTransferObjects`.
+Story: [datas-folder-convention-guard](../stories/datas-folder-convention-guard.story.md).
 
 ## Struttura Tipica di un Data Object
 

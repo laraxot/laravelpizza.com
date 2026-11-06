@@ -1,3 +1,13 @@
+---
+title: "Fix: ExportXlsByCollection Problemi di Sintassi e Compatibilità"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, fixes]
+qmd: "Fix: ExportXlsByCollection Problemi di Sintassi e Compatibilità"
+---
 # Fix: ExportXlsByCollection Problemi di Sintassi e Compatibilità
 
 ## 🚨 Problemi Identificati
@@ -79,7 +89,7 @@ public function __construct(
 ```php
 class CollectionExport {
     public Collection $collection;  // Proprietà esplicita
-
+    
     public function __construct(
         Collection $collection,
         ?string $transKey = null,
@@ -96,7 +106,7 @@ class CollectionExport {
 
 Ora `ExportXlsByCollection` dovrebbe funzionare correttamente:
 - ✅ Sintassi corretta e compatibile
-- ✅ Tipi consistenti tra DocBlock e implementazione
+- ✅ Tipi consistenti tra DocBlock e implementazione  
 - ✅ Nessun import inutile
 - ✅ Tutte le proprietà definite correttamente
 
@@ -126,7 +136,7 @@ $response = $action->execute(
 
 ---
 
-**Data Fix**: 2025-01-03
-**Autore**: AI Assistant
-**Priorità**: Media
-**Status**: ✅ Risolto
+**Data Fix**: 2025-01-03  
+**Autore**: AI Assistant  
+**Priorità**: Media  
+**Status**: ✅ Risolto 

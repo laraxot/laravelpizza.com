@@ -1,3 +1,15 @@
+---
+title: "database naming fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database naming fix summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📁 Database Naming Convention - Fix Summary
 
 > **Date**: 2026-03-13  
@@ -5,7 +17,6 @@
 > **Modules Affected**: Blog (fixed), Others (to verify)
 
 ---
-
 ## 🎯 Summary
 
 Ho corretto tutti i riferimenti errati alle directory del database nel modulo **Blog** e aggiornato la documentazione di progetto per prevenire errori futuri.
@@ -22,7 +33,7 @@ Ho corretto tutti i riferimenti errati alle directory del database nel modulo **
   - Corretto: `database/Migrations` → `database/migrations`
   - Corretto: `database/Seeders` → `database/seeders`
 
-- ✅ `laravel/Modules/Blog/docs/CHANGELOG_2025-10.md`
+- ✅ `laravel/Modules/Blog/docs/CHANGELOG-blog-module-ottobre.md`
   - Rimossi riferimenti a directory con maiuscole
 
 - ✅ `laravel/Modules/Blog/docs/models/README.md`
@@ -64,6 +75,7 @@ Ho corretto tutti i riferimenti errati alle directory del database nel modulo **
 **Created**:
 - ✅ **Issue #5**: "📁 Fix Database Directory Naming Convention"
   - URL: https://github.com/laraxot/base_fixcity_fila5/issues/5
+  - URL: https://github.com/laraxot/platform/issues/5
   - Labels: documentation, good first issue
   - Checklist per tutti i 18 moduli
 
@@ -139,6 +151,7 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 | Cms | ✅ | ⏳ | ⏳ | 📋 To Verify |
 | Comment | ✅ | ⏳ | ⏳ | 📋 To Verify |
 | Fixcity | ✅ | ⏳ | ⏳ | 📋 To Verify |
+| App | ✅ | ⏳ | ⏳ | 📋 To Verify |
 | Gdpr | ✅ | ⏳ | ⏳ | 📋 To Verify |
 | Geo | ✅ | ⏳ | ⏳ | 📋 To Verify |
 | Job | ✅ | ⏳ | ⏳ | 📋 To Verify |
@@ -161,6 +174,7 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 ### Immediate (Done)
 - ✅ Fix Blog module docs
 - ✅ Update AGENTS.md
+- ✅ Update agents.md
 - ✅ Create convention doc
 - ✅ Create GitHub Issue #5
 - ✅ Setup MCP for GitHub
@@ -183,6 +197,10 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 
 - [Database Naming Convention](conventions/database-naming.md)
 - [AGENTS.md](../../AGENTS.md)
+- [agents.md](../../agents.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../AGENTS.md)
+- [agents.md](../agents.md)
 - [GitHub Issues & Discussions](github/README.md)
 - [MCP Configuration](mcp/README.md)
 - [Laravel Directory Structure](https://laravel.com/docs/structure)

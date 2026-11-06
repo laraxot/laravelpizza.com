@@ -1,3 +1,15 @@
+---
+title: "channel enum"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "channel enum"
+issues: []
+discussions: []
+status: draft
+---
+
 # `ChannelEnum`
 
 This document describes the `ChannelEnum`, an enumeration (Enum) defining the various notification channels supported by the `Notify` module. It is designed to provide a type-safe and standardized way to reference notification channels throughout the application, especially in Filament actions and other notification-related logic.
@@ -39,8 +51,8 @@ Returns the fully qualified class name or string identifier that Laravel's Notif
 
 *   **Example:**
     *   `ChannelEnum::Mail->getNotificationChannel()` returns `'mail'`.
-    *   `ChannelEnum::Sms->getNotificationChannel()` returns `Modules\Notify\Notifications\Channels\SmsChannel::class`.
-    *   `ChannelEnum::WhatsApp->getNotificationChannel()` returns `Modules\Notify\Notifications\Channels\WhatsAppChannel::class`.
+    *   `ChannelEnum::Sms->getNotificationChannel()` returns `Modules\Notify\Channels\SmsChannel::class`.
+    *   `ChannelEnum::WhatsApp->getNotificationChannel()` returns `Modules\Notify\Channels\WhatsAppChannel::class`.
 
 ## Usage Example
 
@@ -90,3 +102,4 @@ foreach ($channels as $channelEnum) {
 *   [`WhatsAppChannel` Documentation](`../notifications/channels/whatsapp-channel.md`)
 ```
 Let's create this file.
+```

@@ -1,3 +1,15 @@
+---
+title: "notification providers"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification providers"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida Completa ai Provider di Notifiche 
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di Quaeris.

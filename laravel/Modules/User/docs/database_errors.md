@@ -1,3 +1,11 @@
+---
+title: "Database Errors in User Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "database errors in user module user"
+---
 # Database Errors in User Module
 
 ## Missing `doctor_team` Table
@@ -29,5 +37,5 @@
 - [BaseUser Model](../app/Models/BaseUser.php)
 - [Teams Relationship](../app/Models/Team.php)
 - [Migration File](../database/migrations/2025_05_17_000001_create_doctor_team_table.php)
-- [Root Documentation](../../../../docs/collegamenti-documentazione.md)
-- [Xot Module Database Guidelines](../../../modules/xot/docs/database_guidelines.md)
+- [Root Documentation](../../../docs/collegamenti-documentazione.md)
+- [Xot Module Database Guidelines](../../Xot/docs/database_guidelines.md)

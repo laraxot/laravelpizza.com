@@ -8,19 +8,11 @@ use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Section;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\Meetup\Filament\TableFilters\EventStartDateFilter;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class EventResource extends XotBaseResource
 {
@@ -28,51 +20,6 @@ class EventResource extends XotBaseResource
 
     // Le proprietà navigationIcon, navigationLabel, modelLabel, pluralModelLabel
     // sono gestite automaticamente da XotBaseResource tramite traduzioni
-
-    /**
-     * Get the form schema for the resource.
-     *
-     * @return array<string, Component>
-     */
-    #[Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'event_details' => Section::make('Event Details')
-                ->schema([
-                    'title' => TextInput::make('title')
-                        ->required()
-                        ->maxLength(255),
-                    'description' => Textarea::make('description')
-                        ->maxLength(65535)
-                        ->columnSpanFull(),
-                    'start_date' => DateTimePicker::make('start_date')
-                        ->required(),
-                    'end_date' => DateTimePicker::make('end_date')
-                        ->required(),
-                    'location' => TextInput::make('location')
-                        ->required()
-                        ->maxLength(255),
-                    'status' => Select::make('status')
-                        ->options([
-                            'draft' => 'Draft',
-                            'published' => 'Published',
-                            'cancelled' => 'Cancelled',
-                        ])
-                        ->default('draft')
-                        ->required(),
-                    'attendees_count' => TextInput::make('attendees_count')
-                        ->numeric()
-                        ->default(0),
-                    'max_attendees' => TextInput::make('max_attendees')
-                        ->numeric()
-                        ->default(100),
-                    'cover_image' => FileUpload::make('cover_image')
-                        ->image(),
-                ])
-                ->columns(2),
-        ];
-    }
 
     public static function table(Table $table): Table
     {

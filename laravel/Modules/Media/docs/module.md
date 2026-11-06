@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Modulo Media - Gestione File Multimediali"
+module: "Media"
+type: concept
+tags: [module]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module"
+related:
+  - "./webm.md"
+status: draft
+---
 # Modulo Media - Gestione File Multimediali
 
 ## Scopo Principale

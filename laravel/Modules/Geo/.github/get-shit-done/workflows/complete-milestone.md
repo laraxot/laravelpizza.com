@@ -1,3 +1,14 @@
+---
+title: "complete milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "complete milestone"
+issues: []
+discussions: []
+---
+
 <purpose>
 
 Mark a shipped version (v1.0, v1.1, v2.0) as complete. Creates historical record in MILESTONES.md, performs full PROJECT.md evolution review, reorganizes ROADMAP.md with milestone groupings, and tags the release in git.
@@ -232,6 +243,14 @@ Update PROJECT.md inline. Update "Last updated" footer:
 
 ```markdown
 ---
+title: "complete milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "complete milestone"
+issues: []
+discussions: []
 *Last updated: [date] after v[X.Y] milestone*
 ```
 

@@ -1,3 +1,11 @@
+---
+title: "Collegamenti al Modulo Cms"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "collegamenti al modulo cms xot"
+---
 # Collegamenti al Modulo Cms
 
 Questo documento fornisce collegamenti bidirezionali tra il modulo Xot e il modulo Cms.

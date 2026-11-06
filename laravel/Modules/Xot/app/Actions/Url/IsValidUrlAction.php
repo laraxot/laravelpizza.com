@@ -15,6 +15,6 @@ class IsValidUrlAction
 
     public function execute(string $url): bool
     {
-        return false !== filter_var($url, FILTER_VALIDATE_URL);
+        return filter_var($url, FILTER_VALIDATE_URL) !== false;
     }
 }

@@ -1,3 +1,11 @@
+---
+title: "Implementare Actions"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "implementare actions xot"
+---
 # Implementare Actions
 
 ## Perché usare le Actions?

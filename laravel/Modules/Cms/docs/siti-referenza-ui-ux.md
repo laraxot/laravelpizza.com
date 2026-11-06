@@ -1,3 +1,15 @@
+---
+title: "siti referenza ui ux"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "siti referenza ui ux"
+issues: []
+discussions: []
+status: draft
+---
+
 # Siti di Riferimento per UI/UX in Ambito Sanitario
 
 Questo documento elenca siti web e applicazioni in ambito sanitario che possono servire come ispirazione per il design UI/UX di il progetto, evidenziando elementi di design particolarmente riusciti.

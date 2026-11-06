@@ -15,6 +15,7 @@ related:
   - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
+status: draft
 ---
 
 # Contratto wiki locale — stub Gdpr

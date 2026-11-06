@@ -1,3 +1,14 @@
+---
+title: "phase argument parsing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase argument parsing"
+issues: []
+discussions: []
+---
+
 # Phase Argument Parsing
 
 Parse and normalize phase arguments for commands that operate on phases.

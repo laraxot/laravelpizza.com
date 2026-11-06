@@ -16,7 +16,7 @@ class OauthRefreshTokenInfolist extends XotBaseResourceInfolist
      *
      * Campi basati sul Model OauthRefreshToken.php -> id, access_token_id, revoked, expires_at
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

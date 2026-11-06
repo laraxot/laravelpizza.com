@@ -1,3 +1,14 @@
+---
+title: "bmad installation report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad installation report"
+issues: []
+discussions: []
+---
+
 # BMAD Method — Installation & Configuration Report
 
 > **Data**: 2026-03-31  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "bmad installation report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad installation report"
+issues: []
+discussions: []
 ## Riepilogo
 
 BMAD Method è **già installato e configurato** in questo progetto. Questa documentazione riassume lo stato attuale e fornisce una guida rapida all'uso.

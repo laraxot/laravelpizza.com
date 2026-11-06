@@ -1,3 +1,16 @@
+---
+title: "address migration guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address migration guide"
+issues: []
+discussions: []
+status: superseded
+superseded_by: address-migration-guide.md
+---
+
 # Guida alla Migrazione del Modello Address
 
 ## Struttura della Tabella Indirizzi

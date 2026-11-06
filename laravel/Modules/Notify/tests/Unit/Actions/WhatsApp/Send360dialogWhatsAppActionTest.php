@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions\WhatsApp;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
+
 use Modules\Notify\Actions\WhatsApp\Send360dialogWhatsAppAction;
 use Modules\Notify\Datas\WhatsAppData;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_uses;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('Send360dialogWhatsAppAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
         $reflection = new \ReflectionClass(Send360dialogWhatsAppAction::class);
@@ -32,7 +32,7 @@ describe('Send360dialogWhatsAppAction', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        \assertReflectionTypeName($params[0]->getType(), WhatsAppData::class);
+        XotBasePest::assertReflectionTypeName($params[0]->getType(), WhatsAppData::class);
     });
 
     it('execute returns array', function () {
@@ -40,12 +40,12 @@ describe('Send360dialogWhatsAppAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, 'array');
+        XotBasePest::assertReflectionTypeName($returnType, 'array');
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(Send360dialogWhatsAppAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
@@ -56,11 +56,13 @@ describe('Send360dialogWhatsAppAction', function () {
     });
 
     it('has required imports', function () {
-        $reflection = new \ReflectionClass(Send360dialogWhatsAppAction::class);
-        $filename = $reflection->getFileName();
-        $content = \notifyReflectionSource(new \ReflectionClass(Send360dialogWhatsAppAction::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(Send360dialogWhatsAppAction::class));
 
-        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
+        Assert::assertStringContainsString('declare(strict_types=1)', $content);
+        Assert::assertStringContainsString('use Modules\\Notify\\Contracts\\WhatsAppProviderActionInterface;', $content);
+        Assert::assertStringContainsString('use Modules\\Notify\\Datas\\WhatsAppData;', $content);
+        Assert::assertStringContainsString('use Spatie\\QueueableAction\\QueueableAction;', $content);
+        Assert::assertStringContainsString('use Modules\\Xot\\Actions\\Cast\\SafeIntCastAction;', $content);
     });
 
     it('uses QueueableAction trait', function () {

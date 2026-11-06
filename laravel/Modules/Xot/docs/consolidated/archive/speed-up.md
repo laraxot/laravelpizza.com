@@ -1,3 +1,11 @@
+---
+title: "speed_up"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "speed_up xot"
+---
 # speed_up
 
 <!-- Contenuto migrato da _docs/speed_up.txt -->

@@ -1,3 +1,15 @@
+---
+title: "geo entities"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo entities"
+issues: []
+discussions: []
+status: draft
+---
+
 # Entità Geografiche
 
 ## Filosofia e Principi

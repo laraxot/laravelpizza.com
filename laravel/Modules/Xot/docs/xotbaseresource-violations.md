@@ -1,3 +1,13 @@
+---
+title: "VIOLAZIONI CRITICHE XotBaseResource - Regole Globali Laraxot PTVX"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "VIOLAZIONI CRITICHE XotBaseResource - Regole Globali Laraxot PTVX"
+---
 # VIOLAZIONI CRITICHE XotBaseResource - Regole Globali Laraxot PTVX
 
 ## 🚨 ERRORI GRAVISSIMI DA EVITARE SEMPRE
@@ -72,7 +82,7 @@ public static function getPages(): array
 ```
 XotBaseResource (Classe Base)
 ├── Gestione automatica form() [FINAL]
-├── Gestione automatica table() [FINAL]
+├── Gestione automatica table() [FINAL]  
 ├── Gestione automatica traduzioni
 ├── Gestione automatica route standard
 └── Configurazione centralizzata
@@ -139,7 +149,7 @@ class {ModelName}Resource extends XotBaseResource
                 ]),
         ];
     }
-
+    
     // NESSUN altro metodo se standard:
     // - NO getTableColumns(), getTableFilters(), getTableActions(), getTableBulkActions()
     // - NO getPages() se contiene solo route standard
@@ -178,14 +188,14 @@ class List{ModelName}s extends XotBaseListRecords
             // Filtri senza ->label()
         ];
     }
-
+    
     public function getTableActions(): array
     {
         return [
             // Azioni senza ->label()
         ];
     }
-
+    
     public function getTableBulkActions(): array
     {
         return [
@@ -298,7 +308,7 @@ return [
 
 ### Documentazione Moduli
 - [Progressioni: XotBaseResource Violations](../laravel/Modules/Progressioni/docs/xotbaseresource-violations-critical.md)
-- [Xot: XotBaseResource Rules](../laravel/Modules/Xot/docs/filament/resources/xot-base-resource.md)
+- [Xot: XotBaseResource Rules](filament/resources/xot-base-resource.md)
 - [Xot: Filament Resource Guidelines](../laravel/Modules/Xot/docs/rules/filament-resource-guidelines.md)
 
 ### Regole Correlate

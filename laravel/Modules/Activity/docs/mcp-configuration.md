@@ -1,3 +1,11 @@
+---
+title: "MCP Server Configuration - Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "mcp server configuration - activity module activity"
+---
 # MCP Server Configuration - Activity Module
 
 
@@ -37,6 +45,7 @@ The Activity module's MCP configuration enables AI assistants to interact with:
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", ". progetto>/laravel"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
       "description": "Access to Activity module files"
     },
     "database": {
@@ -44,6 +53,7 @@ The Activity module's MCP configuration enables AI assistants to interact with:
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
         "DATABASE_URL": "sqlite://. progetto>/laravel/database/database.sqlite"
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
       },
       "description": "SQLite database queries"
     }

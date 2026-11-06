@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://github.com/rappasoft/laravel-authentication-log/blob/main/src/Models/AuthenticationLog.php
  */
@@ -9,29 +8,30 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
+use Modules\User\Models\Traits\AuthenticationLogRelationsTrait;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
- * @property int                       $id
- * @property string                    $authenticatable_type
- * @property int                       $authenticatable_id
- * @property string|null               $ip_address
- * @property string|null               $user_agent
- * @property Carbon|null               $login_at
- * @property bool                      $login_successful
- * @property Carbon|null               $logout_at
- * @property bool                      $cleared_by_user
+ * @property int $id
+ * @property string $authenticatable_type
+ * @property int $authenticatable_id
+ * @property string|null $ip_address
+ * @property string|null $user_agent
+ * @property Carbon|null $login_at
+ * @property bool $login_successful
+ * @property Carbon|null $logout_at
+ * @property bool $cleared_by_user
  * @property array<string, mixed>|null $location
- * @property Carbon|null               $created_at
- * @property Carbon|null               $updated_at
- * @property string|null               $updated_by
- * @property string|null               $created_by
- * @property Model|\Eloquent           $authenticatable
- * @property ProfileContract|null      $creator
- * @property ProfileContract|null      $updater
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Model|\Eloquent $authenticatable
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @method static Builder|AuthenticationLog newModelQuery()
  * @method static Builder|AuthenticationLog newQuery()
@@ -59,6 +59,9 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class AuthenticationLog extends BaseModel
 {
+    use MassPrunable;
+    use AuthenticationLogRelationsTrait;
+
     // public $timestamps = false;
 
     // protected $table = 'authentication_log';
@@ -87,10 +90,14 @@ class AuthenticationLog extends BaseModel
     //    return config('authentication-log.table_name', parent::getTable());
     // }
 
-    /** @return MorphTo<Model, $this> */
-    public function authenticatable(): MorphTo
+    /**
+     * Rows older than the access log retention (privacy notice: 12 months), removed by the scheduled `model:prune`.
+     *
+     * @return Builder<static>
+     */
+    public function prunable(): Builder
     {
-        return $this->morphTo();
+        return static::query()->where('created_at', '<', now()->subDays(config()->integer('gdpr.retention.authentication_log_days', 365)));
     }
 
     /** @return array<string, string> */

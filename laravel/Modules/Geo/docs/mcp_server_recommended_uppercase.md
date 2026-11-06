@@ -1,3 +1,16 @@
+---
+title: "mcp server recommended uppercase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp server recommended uppercase"
+issues: []
+discussions: []
+status: superseded
+superseded_by: mcp_server_recommended.md
+---
+
 # MCP Server Consigliati per il Modulo Geo
 
 ## Scopo del Modulo

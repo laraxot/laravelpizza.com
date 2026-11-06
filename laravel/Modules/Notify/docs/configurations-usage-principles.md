@@ -1,3 +1,15 @@
+---
+title: "configurations usage principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "configurations usage principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # Principi di Utilizzo delle Configurazioni 
 
 ## Regola Fondamentale

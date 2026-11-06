@@ -1,3 +1,15 @@
+---
+title: "LARAVEL DEBUGBAR TROUBLESHOOTING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "LARAVEL DEBUGBAR TROUBLESHOOTING"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Debugbar Troubleshooting Guide
 
 ## Problem: Debugbar Not Showing
@@ -178,7 +190,7 @@ php artisan debugbar:clear
 
 ### 4. Test in Browser
 
-1. Navigate to `http://fixcity.local` (or your local URL)
+1. Navigate to `http://laraxot.local` (or your local URL)
 2. Debugbar should appear at the bottom of the page
 3. Check browser console for any CSP errors
 
@@ -303,7 +315,6 @@ For better performance with many queries:
 4. **Documentation is key**: Always document why certain exclusions exist (future maintainers will thank you)
 
 ---
-
 **Last Updated**: 2026-04-01  
 **Author**: Qwen Code AI Assistant  
 **Status**: ✅ Resolved

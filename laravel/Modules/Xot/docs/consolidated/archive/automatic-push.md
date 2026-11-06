@@ -3,6 +3,8 @@ title: Automatic push
 description: Automatic push
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../automatic-push.md
 ---
 
 # Automatic Push {#automatic-push}

@@ -1,20 +1,26 @@
 ---
-title: "RegisterWidget — create lineare, no Action"
+title: "RegisterWidget: create lineare, no Action"
 type: concept
 confidence: high
 created: 2026-06-04
 updated: 2026-06-04
 tags: [user, filament, register, kiss]
 related:
-  - ../../../../../../docs/wiki/decisions/filament-widget-linear-crud-model-create.md
-  - filament-widget-no-validate-form.md
-  - ../../../app/Filament/Widgets/Auth/RegisterWidget.php
-  - ../../../app/Filament/Resources/UserResource/Schemas/UserForm.php
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-resource-form-delegation.md"
+  - "./folio-pages-owner-pattern.md"
+status: draft
+qmd: "persistenza register   `::create($data)` user"
 ---
 
-# Persistenza register — `::create($data)`
+# Persistenza register: `::create($data)`
 
-`RegisterWidget::submit()` — pattern canonico:
+`RegisterWidget::submit()`: pattern canonico:
 
 ```php
 $userClass = XotData::make()->getUserClass();

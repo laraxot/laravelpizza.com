@@ -1,3 +1,15 @@
+---
+title: "coordinate picker state binding"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker state binding"
+issues: []
+discussions: []
+status: draft
+---
+
 # Binding dello Stato per CoordinatePicker
 
 > **⚠️ SUPERSEDED**: Versione completa con prova dal codice vendor Filament 5:

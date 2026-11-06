@@ -1,3 +1,11 @@
+---
+title: "Assets in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "assets in il progetto xot"
+---
 # Assets in il progetto
 
 Gli assets sono le risorse statiche (CSS, JavaScript, immagini, font) utilizzate dal tema. Ogni tema può definire i propri assets.

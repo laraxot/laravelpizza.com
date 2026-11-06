@@ -1,12 +1,16 @@
 ---
+qmd: "phpstan compliance"
+issues: []
+discussions: []
 title: "Geo Module - PHPStan Type Compliance"
 type: concept
 tags: [geo, phpstan, types, compliance, quality, static-analysis]
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-10-28
 related:
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
+  - ../../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
   - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md
+status: draft
 ---
 
 # Geo Module — PHPStan Type Compliance
@@ -129,3 +133,12 @@ vendor/bin/pest laravel/Modules/Geo/tests --parallel
 **Maintainer**: Dev Agent 3  
 **Last Updated**: 2026-06-10  
 **Status**: GREEN
+
+## Param type coverage (2026-10-28)
+
+La soglia `paramTypeCoverage` 99 % e' full-tree: un run su `Modules/Geo` da solo puo' essere verde mentre `Modules` e' rosso.
+Regole per Geo: closure sempre con parametro tipato col tipo reale (`Builder`, Data object, `string` per chiavi);
+`mixed` solo per state Filament, `pluck()` e input di validazione; se serve solo la chiave di una collection usare
+`->keys()->each(fn (string $k))` invece di un parametro inutilizzato; un `instanceof` dentro una closure e' il sintomo di
+parametro non tipato, non di rischio reale. Storia: [phpstan-cleanup-geo](../../stories/phpstan-cleanup-geo.story.md).
+

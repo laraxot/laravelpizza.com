@@ -1,3 +1,24 @@
+---
+title: "Best Practices per il Routing in Architettura Volt + Folio + Filament"
+type: concept
+tags: [routing, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "routing-best-practices best practices per il routing in architettura volt + folio + filament"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Best Practices per il Routing in Architettura Volt + Folio + Filament
 
 ## Il Principio Fondamentale
@@ -129,6 +150,12 @@ Ogni volta che pensi di aggiungere una rotta in `web.php`, chiediti:
 - [Filosofia Zen Avanzata](../xot/docs/philosophy/getter_zen_advanced.md)
 - [La Via del Brand](../xot/docs/brand/brand_way.md)
 - [Il Tao del Codice](../xot/docs/tao/code_tao.md)
+- [Best Practices Filament](./filament-best-practices.md) 
+- [Filosofia dei Getter](../Xot/docs/philosophy/getter_zen.md)
+- [Filosofia Zen Avanzata](../Xot/docs/philosophy/getter_zen_advanced.md)
+- [La Via del Brand](../Xot/docs/brand/brand_way.md)
+- [Il Tao del Codice](../Xot/docs/tao/code_tao.md)
+- [Best Practices Filament](./filament-best-practices.md) 
 - [Best Practices Filament](./filament_best_practices.md) 
 
 ## Principi Fondamentali
@@ -347,7 +374,7 @@ class UserResource extends Resource
    - Riutilizzo dei componenti
 
 ## Collegamenti
-- [Filament Best Practices](./filament_best_practices.md)
+- [Filament Best Practices](./filament-best-practices.md)
 - [Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Folio Documentation](https://laravel.com/docs/folio)
 - [Filament Documentation](https://filamentphp.com/docs) 
@@ -464,6 +491,10 @@ public function logout()
 
 ## Collegamenti
 
-- [Documentazione Volt](./volt_logout.md)
-- [Struttura Directory](./directory_structure_checklist.md)
-- [Gestione Errori](./error_handling.md) 
+- [Documentazione Volt](./volt-logout.md)
+- [Struttura Directory](./directory-structure-checklist.md)
+- [Gestione Errori](./error-handling.md) 
+- [Documentazione Volt](./volt-logout.md)
+- [Documentazione Volt](../volt-logout.md)
+- [Struttura Directory](./directory-structure-checklist.md)
+- [Gestione Errori](./error-handling.md) 

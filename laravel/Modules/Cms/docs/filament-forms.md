@@ -1,4 +1,18 @@
+---
+title: "filament forms"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament forms"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo dei Widget Filament per i Form
+
+> **Canon 2026-07-24 (Filament 5):** package `filament/schemas` **v5.7.3** verificato. API = `HasSchemas` + metodo schema/`form(Schema)` + `$this->form->getState()` per submit. Non `Form $form` / `->schema()` negli esempi legacy sotto. FO form = `XotBaseSchemaWidget`; FO infolist = `XotBaseInfolistWidget` (`{{ $this->infolist }}`). Blade wrapper = `<form wire:submit>` (non `x-filament-schemas::form`). Gate: `php artisan view:cache`. SSoT: [schema](../../../../docs/wiki/concepts/filament-v5-schema-in-blade.md) · [form](../../../../docs/wiki/concepts/filament-v5-form-in-blade.md) · [Xot pattern](../Xot/docs/xotbase-schemawidget-pattern.md).
 
 ## Indice
 - [Introduzione](#introduzione)

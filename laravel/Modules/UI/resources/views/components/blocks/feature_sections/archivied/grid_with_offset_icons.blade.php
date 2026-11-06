@@ -1,13 +1,12 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="relative bg-white py-24 sm:py-32 lg:py-40">
     <div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-      <h2 class="text-lg font-semibold text-indigo-600">Deploy faster</h2>
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.</p>
+      <h2 class="text-lg font-semibold text-indigo-600">{{ __('ui::blocks_feature_sections.shared.deploy_faster.title') }}</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ __('ui::blocks_feature_sections.shared.paragraph_3.description') }}</p>
+      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.paragraph_1.description') }}</p>
       <div class="mt-20">
         <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div class="pt-6">
@@ -20,8 +19,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Push to Deploy</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.push_to_deploy.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>
@@ -35,8 +34,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">SSL Certificates</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.ssl_certificates.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>
@@ -50,8 +49,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Simple Queues</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.simple_queues.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>
@@ -65,8 +64,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Advanced Security</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.advanced_security.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>
@@ -80,8 +79,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Powerful API</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.powerful_api.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>
@@ -95,8 +94,8 @@ declare(strict_types=1);
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Database Backups</h3>
-                <p class="mt-5 text-base leading-7 text-gray-600">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">{{ __('ui::blocks_feature_sections.archivied_grid_with_offset_icons.database_backups.title') }}</h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
               </div>
             </div>
           </div>

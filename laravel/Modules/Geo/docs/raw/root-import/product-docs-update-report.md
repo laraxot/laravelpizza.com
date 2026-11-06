@@ -1,3 +1,14 @@
+---
+title: "product docs update report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product docs update report"
+issues: []
+discussions: []
+---
+
 # Product Documentation Update Report
 
 > **Report Avanzamento Documentazione Product**
@@ -10,6 +21,14 @@
 
 ---
 
+title: "product docs update report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product docs update report"
+issues: []
+discussions: []
 ## Executive Summary
 
 Questo report documenta il lavoro di creazione/aggiornamento/miglioramento della documentazione product per tutti i moduli e temi del progetto, basato sui 6 template principali di Notion:

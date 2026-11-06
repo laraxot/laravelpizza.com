@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Resources\ClientResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class ClientsTable extends XotBaseResourceTable
@@ -16,7 +17,7 @@ class ClientsTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable(),
+            'id' => IDColumn::make('id')->sortable(),
             'user_id' => TextColumn::make('user_id'),
             'name' => TextColumn::make('name')->searchable(),
             'provider' => TextColumn::make('provider'),

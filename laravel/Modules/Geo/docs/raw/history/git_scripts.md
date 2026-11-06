@@ -1,4 +1,14 @@
 ---
+title: "git scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git scripts"
+issues: []
+discussions: []
+---
+
 # 📝 Documentazione Script Git
 
 > **Revisione manuale:** File rivisto per eliminare duplicazioni, conflitti e marker. Strutturato per massima chiarezza, con esempi pratici e riferimenti architetturali.

@@ -1,3 +1,20 @@
+---
+title: "AssignModuleCommand - Gestione Moduli Utente"
+type: concept
+tags: [assign, module, command]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "assign-module-command assignmodulecommand - gestione moduli utente"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./change-password-command.md"
+  - "./console-commands-philosophy.md"
+  - "./console-commands.md"
+  - "./README.md"
+status: draft
+---
+
 # AssignModuleCommand - Gestione Moduli Utente
 
 ## Descrizione
@@ -154,10 +171,10 @@ Result: No changes made to user modules.
 ```
 
 ## Collegamenti
-- [Console Commands Philosophy](console_commands_philosophy.md)
+- [Console Commands Philosophy](console-commands-philosophy.md)
 - [User Models](models/readme.md)
 - [Role Management](models/role-management.md)
-- [README.md](../readme.md)
+- [README.md](../README.md)
 
 ## Aggiornamenti
 
@@ -167,4 +184,3 @@ Result: No changes made to user modules.
 - ✅ **Feedback Migliorato**: Messaggi chiari per assegnazioni e revoche
 - ✅ **Gestione Errori**: Controlli preventivi per utenti non trovati
 - ✅ **Documentazione**: Documentazione completa con esempi
-

@@ -1,3 +1,24 @@
+---
+title: "Policy Hierarchy in Laraxot"
+type: concept
+tags: [policy, hierarchy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "policy-hierarchy policy hierarchy in laraxot"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+---
+
 # Policy Hierarchy in Laraxot
 
 > Documentation of the policy inheritance architecture and usage guidelines

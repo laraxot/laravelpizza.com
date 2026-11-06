@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'media convert',
-        'group' => 'media convert',
-        'icon' => 'media convert',
+        'label' => 'Media convert',
+        'group' => 'Media convert',
+        'icon' => 'Media convert',
         'sort' => '20',
     ],
     'fields' => [

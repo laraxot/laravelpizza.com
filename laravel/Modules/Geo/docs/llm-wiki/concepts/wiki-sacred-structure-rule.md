@@ -1,4 +1,7 @@
 ---
+qmd: "wiki sacred structure rule"
+issues: []
+discussions: []
 title: "Wiki Sacred Structure Rule"
 type: concept
 sources: ["../../wiki/concepts/wiki-sacred-structure-rule.md"]
@@ -8,6 +11,7 @@ updated: 2026-04-21
 tags: [wiki, governance, structure]
 related:
   - concepts/no-docs-archive-rule.md
+status: draft
 ---
 
 The canonical wiki folders are protected and must be preserved:

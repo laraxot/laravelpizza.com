@@ -1,3 +1,15 @@
+---
+title: "page block data resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page block data resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Page Block Data Resolution
 
 ## Issue Description

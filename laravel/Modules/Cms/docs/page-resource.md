@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page resource"
+issues: []
+discussions: []
 title: PageResource
 description: PageResource
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 ## 🔗 Collegamenti

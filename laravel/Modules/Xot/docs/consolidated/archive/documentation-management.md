@@ -1,3 +1,11 @@
+---
+title: "Gestione della Documentazione e delle Regole"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "gestione della documentazione e delle regole xot"
+---
 # Gestione della Documentazione e delle Regole
 
 ## Struttura della Documentazione

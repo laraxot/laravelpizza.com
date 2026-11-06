@@ -1,11 +1,24 @@
+---
+title: "homepage parity notes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage parity notes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Homepage Parity Notes
 
 ## Produzione locale `/it` (STORY-054)
 
 - **URL:** `http://127.0.0.1:8000/it` — Folio `slug="home"`.
-- **JSON:** [1.json](../../../config/local/fixcity/database/content/pages/1.json) (`slug: home`).
-- **Sandbox parity:** [tests.homepage.json](../../../config/local/fixcity/database/content/pages/tests.homepage.json) — non è la sorgente runtime di `/it`.
-- **CTA segnalazione:** `/it/segnalazione-crea` (mock picsum / `#` su link secondari).
+- **JSON canonico:** [home.json](../../../config/local/fixcity/database/content/pages/home.json) (`slug: home`): elenco pubblico FixCity con mappa e CTA `/it/tickets/create`.
+- [1.json](../../../config/local/fixcity/database/content/pages/1.json) è un record demo `cms-models-test`, non la homepage.
+- **Sandbox parity:** [tests.homepage.json](../../../config/local/fixcity/database/content/pages/tests.homepage.json) — pagina dimostrativa, non sorgente runtime di `/it`.
+- Browser locale (2026-09-27): `/it/` risponde 200 e mostra il titolo `Elenco segnalazioni`; invio CTA guest porta al form login (200). Il completamento della creazione richiede account e non è incluso in questo smoke.
 
 ## Sandbox Design Comuni
 

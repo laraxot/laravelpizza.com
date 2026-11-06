@@ -47,8 +47,16 @@ return [
     'selected_date' => 'Selected date',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
+    'messages' => [
+        'loading_calendar' => [
+            'message' => 'Loading calendar...',
+        ],
     ],
-    'actions' => [
+    'test_page' => [
+        'form_state' => [
+            'label' => 'Form state:',
+        ],
     ],
+    'next_month' => 'Next month',
+    'previous_month' => 'Previous month',
 ];

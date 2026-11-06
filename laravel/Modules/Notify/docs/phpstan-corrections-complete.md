@@ -1,3 +1,15 @@
+---
+title: "phpstan corrections complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan corrections complete"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify
 
 ## Data
@@ -168,11 +180,10 @@ Durante la risoluzione:
 
 - [Git Conflicts Guide](../../geo/docs_project/git-conflicts-resolution-guide.md)
 - [Notify Best Practices](best-practices.md)
-- [PHPStan Configuration](../../phpstan.neon)
+- [PHPStan Configuration](../../../phpstan.neon)
 - [PHPStan User Guide](https://phpstan.org/user-guide/getting-started)
 
 ---
-
 **Status**:  **COMPLETATO**
 **Verificato**:  S� - PHPStan passa senza errori
 **Testato**:  S� - Analisi completa su 3715 file

@@ -25,8 +25,25 @@ return [
         'aggregate_type' => ['label' => 'aggregate_type'],
     ],
     'actions' => [
-        'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
-        'edit' => ['label' => 'edit', 'icon' => 'edit', 'tooltip' => 'edit'],
-        'delete' => ['label' => 'delete', 'icon' => 'delete', 'tooltip' => 'delete'],
+        'view' => [
+            'label' => 'view',
+            'icon' => 'view',
+            'tooltip' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+            'icon' => 'edit',
+            'tooltip' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'delete',
+            'icon' => 'delete',
+            'tooltip' => 'delete',
+        ],
+        'logout' => [
+            'tooltip' => 'logout',
+        ],
     ],
+    'label' => 'Snapshot',
+    'plural_label' => 'Snapshot (Plurale)',
 ];

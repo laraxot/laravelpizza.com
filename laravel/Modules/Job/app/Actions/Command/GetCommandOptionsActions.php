@@ -26,15 +26,17 @@ class GetCommandOptionsActions
             ],
         ];
         foreach ($command->getDefinition()->getOptions() as $option) {
-            if ($option->acceptValue()) {
-                $options['withValue'][] = (object) [
-                    'name' => $option->getName(),
-                    'default' => $option->getDefault(),
-                    'required' => $option->isValueRequired(),
-                ];
-            } else {
+            if (! $option->acceptValue()) {
                 $options['withoutValue'][] = $option->getName();
+
+                continue;
             }
+
+            $options['withValue'][] = (object) [
+                'name' => $option->getName(),
+                'default' => $option->getDefault(),
+                'required' => $option->isValueRequired(),
+            ];
         }
 
         return $options;

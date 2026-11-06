@@ -1,3 +1,14 @@
+---
+title: "refactoring proposal schemaless attributes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "refactoring proposal schemaless attributes"
+issues: []
+discussions: []
+---
+
 The `SchedaTrait`, used by models like `IndennitaResponsabilita`, currently has numerous accessors (`get*Attribute`) that calculate values and then persist them back to the database using `$this->update(['field' => $value])`. This pattern has several drawbacks:
 
 1.  **Write-on-Read Side Effect:** Every time these attributes are accessed and not cached (or `refresh` is requested), a database write operation occurs, which can be inefficient and lead to unexpected behavior.

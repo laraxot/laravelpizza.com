@@ -1,3 +1,15 @@
+---
+title: "info"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "info"
+issues: []
+discussions: []
+status: draft
+---
+
 # Info Block
 
 Il blocco Info è utilizzato per visualizzare informazioni generali e branding, con supporto per logo, descrizione e copyright. Può essere utilizzato in qualsiasi contesto che richieda la presentazione di informazioni istituzionali.
@@ -110,6 +122,6 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Branding Guidelines](../design/branding.md)
 - [Legal Requirements](../legal/requirements.md)

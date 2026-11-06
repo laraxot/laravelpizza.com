@@ -1,3 +1,13 @@
+---
+title: "Risoluzione Conflitto in ModelWithPosContract"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, conflicts]
+qmd: "Risoluzione Conflitto in ModelWithPosContract"
+---
 # Risoluzione Conflitto in ModelWithPosContract
 
 ## Panoramica
@@ -24,6 +34,8 @@ Il file presenta diversi conflitti nei blocchi di annotazioni PHPDoc e nella def
   {
   }
   ```
+
+
 
 ## Approccio alla Risoluzione
 
@@ -115,4 +127,4 @@ Questa risoluzione garantisce:
 
 ## Collegamento con la Documentazione Principale
 
-Per una panoramica di tutti i conflitti risolti, vedere il documento principale sulla [risoluzione dei conflitti nel progetto](../../../../../docs/logs/conflict_resolution_progress.md).
+Per una panoramica di tutti i conflitti risolti, vedere il documento principale sulla [risoluzione dei conflitti nel progetto](../../../../docs/logs/conflict_resolution_progress.md). 

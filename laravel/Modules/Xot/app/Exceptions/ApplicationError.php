@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://dev.to/jackmiras/laravels-exceptions-part-2-custom-exceptions-1367
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions;
 
@@ -21,8 +20,7 @@ readonly class ApplicationError implements \JsonSerializable, Arrayable, Jsonabl
     public function __construct(
         private string $help = '',
         private string $error = '',
-    ) {
-    }
+    ) {}
 
     /** @return array<string, string> */
     public function toArray(): array

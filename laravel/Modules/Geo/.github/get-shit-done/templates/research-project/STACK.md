@@ -1,3 +1,14 @@
+---
+title: "STACK"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "STACK"
+issues: []
+discussions: []
+---
+
 # Stack Research Template
 
 Template for `.planning/research/STACK.md` — recommended technologies for the project domain.
@@ -86,6 +97,14 @@ npm install -D [packages]
 - [Other source] — [confidence level]
 
 ---
+title: "STACK"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "STACK"
+issues: []
+discussions: []
 *Stack research for: [domain]*
 *Researched: [date]*
 ```

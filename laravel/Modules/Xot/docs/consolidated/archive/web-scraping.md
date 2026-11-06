@@ -1,3 +1,11 @@
+---
+title: "web_scraping"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "web_scraping xot"
+---
 # web_scraping
 
 <!-- Contenuto migrato da _docs/web_scraping.txt -->

@@ -1,3 +1,28 @@
+---
+title: "Database Errors in User Module"
+type: concept
+tags: [databases]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "databases database errors in user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Database Errors in User Module
 
 ## Missing `doctor_team` Table
@@ -30,4 +55,4 @@
 - [Teams Relationship](../app/Models/Team.php)
 - [Migration File](../database/migrations/2025_05_17_000001_create_doctor_team_table.php)
 - [Root Documentation](../../../../docs/collegamenti-documentazione.md)
-- [Xot Module Database Guidelines](../../../modules/xot/docs/database_guidelines.md)
+- [Xot Module Database Guidelines](../../Xot/docs/database_guidelines.md)

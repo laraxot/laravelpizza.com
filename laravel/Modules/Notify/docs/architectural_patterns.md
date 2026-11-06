@@ -1,6 +1,18 @@
+---
+title: "architectural patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architectural patterns"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern Architetturali per le Notifiche
 
-Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di Quaeris, con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
+Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di SaluteOra, con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
 
 ## Confronto tra Pattern Architetturali
 

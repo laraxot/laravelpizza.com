@@ -1,3 +1,29 @@
+---
+title: "Regole per la Verifica dei Componenti Blade"
+type: rule
+tags: [component, verification, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "component-verification-rules regole per la verifica dei componenti blade"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: superseded
+superseded_by: component-verification.md
+---
+
 # Regole per la Verifica dei Componenti Blade
 
 ## ERRORE CRITICO DA NON RIPETERE MAI

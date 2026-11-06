@@ -1,16 +1,16 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/DutchCodingCompany/filament-socialite
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 use Filament\Notifications\Notification;
 use Illuminate\Http\RedirectResponse;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -18,25 +18,34 @@ class RedirectToLoginAction
 {
     use QueueableAction;
 
-    public function execute(string $message): RedirectResponse
+    /**
+     * @param  array<string, string>  $replace  segnaposto `:chiave` del testo tradotto
+     */
+    public function execute(string $message, array $replace = []): RedirectResponse
     {
-        // Assert::string($route_name = config('filament-socialite.login_page_route', 'filament.admin.auth.login'));
-        // Route [filament.auth.login] not defined.
-        $routeName = 'login';
+        // Il login FO e' la pagina Folio `/{lang}/auth/login`. Il nome Folio `login` risolve sempre la lingua di
+        // default: chi annulla Google da /en/ tornerebbe su /it/. Si localizza quindi l'URL con la lingua corrente.
+        $loginUrl = LaravelLocalization::localizeURL('/auth/login', app()->getLocale());
+        Assert::string($loginUrl);
         $translated = __('user::'.$message);
         if (is_array($translated)) {
             $translated = $translated['text'] ?? $message;
         }
         Assert::string($translated);
+        $pairs = [];
+        foreach ($replace as $key => $value) {
+            $pairs[':'.$key] = $value;
+        }
+        $translated = trim(strtr($translated, $pairs));
         Notification::make()
             ->title($translated)
             ->danger()
             ->persistent()
             ->send();
 
-        // Redirect back to the login route with an error message attached
+        // Redirect back to the login page with an error message attached
         return redirect()
-            ->route($routeName)
+            ->to($loginUrl)
             ->withErrors([
                 'email' => [$translated],
             ]);

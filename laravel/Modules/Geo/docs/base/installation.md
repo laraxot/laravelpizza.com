@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installation"
+issues: []
+discussions: []
 title: Installazione
 description: Come Installare la Base
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Installazione {#installation}

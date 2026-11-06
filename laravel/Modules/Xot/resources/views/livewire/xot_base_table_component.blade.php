@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div>
     <div class="row justify-content-between">
@@ -10,7 +9,7 @@ declare(strict_types=1);
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-search"></i></span>
                 </div>
-                <input type="search" class="form-control" placeholder="{{ __('Search') }}" wire:model="search">
+                <input type="search" class="form-control" placeholder="{{ __('xot::xot_base_table_component.fields.search.placeholder') }}" wire:model="search">
             </div>
         </div>
         @if ($header_view)
@@ -23,7 +22,7 @@ declare(strict_types=1);
     <div class="card mb-3">
         @if ($models->isEmpty())
             <div class="card-body">
-                {{ __('No results to display.') }}
+                {{ __('xot::xot_base_table_component.messages.no_results.message') }}
             </div>
         @else
             <div class="card-body p-0">

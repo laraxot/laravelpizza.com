@@ -1,3 +1,13 @@
+---
+title: "Componenti Filament Personalizzati in Laraxot"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Componenti Filament Personalizzati in Laraxot"
+---
 # Componenti Filament Personalizzati in Laraxot
 
 Questo documento descrive i componenti personalizzati di Filament disponibili nel framework Laraxot e come utilizzarli correttamente.
@@ -22,14 +32,14 @@ class ClienteResource extends XotBaseResource
     protected static ?string $model = Cliente::class;
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $cluster = ClienteCluster::class;
-
+    
     public static function getFormSchema(): array
     {
         return [
             // Schema del form
         ];
     }
-
+    
     public static function table(Table $table): Table
     {
         return $table
@@ -60,12 +70,12 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 class CreateCliente extends XotBaseCreateRecord
 {
     protected static string $resource = ClienteResource::class;
-
+    
     public function getFormSchema(): array
     {
         return parent::getFormSchema();
     }
-
+    
     // Opzionale
     protected function getFormDefaults(): array
     {
@@ -74,7 +84,7 @@ class CreateCliente extends XotBaseCreateRecord
             // Altri valori predefiniti
         ];
     }
-
+    
     // Necessario anche se vuoto
     public function fillForm(): void
     {
@@ -100,12 +110,12 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 class EditCliente extends XotBaseEditRecord
 {
     protected static string $resource = ClienteResource::class;
-
+    
     public function getFormSchema(): array
     {
         return parent::getFormSchema();
     }
-
+    
     // Necessario per il ciclo di vita
     public function fillForm(): void
     {
@@ -131,7 +141,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 class ListClienti extends XotBaseListRecords
 {
     protected static string $resource = ClienteResource::class;
-
+    
     // Personalizzazioni...
 }
 ```
@@ -150,9 +160,9 @@ use Filament\Clusters\Cluster;
 class ClienteCluster extends Cluster
 {
     protected static ?string $navigationIcon = 'heroicon-o-users';
-
+    
     protected static ?int $navigationSort = 1;
-
+    
     public static function getNavigationLabel(): string
     {
         return trans('broker::cliente.cluster.navigation_label');

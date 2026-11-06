@@ -1,3 +1,28 @@
+---
+title: "Changelog"
+type: concept
+tags: [changelog]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "changelog changelog"
+issues: ["https://github.com/provtv/<nome repository>/issues/124"]
+discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.
@@ -40,3 +65,8 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 - Widget per il login e la registrazione
 - Gestione delle autenticazioni
 - Documentazione base del modulo
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]

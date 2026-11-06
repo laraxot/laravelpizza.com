@@ -25,33 +25,25 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome Studio Medico',
-            'placeholder' => 'Inserisci il nome completo dello studio (es. Studio Dentistico Rossi]',
+            'placeholder' => 'Inserisci il nome completo dello studio (es. Studio Dentistico Rossi)',
             'help' => 'Nome ufficiale dello studio medico come registrato in camera di commercio',
             'validation' => [
                 'required' => 'Il nome dello studio è obbligatorio',
                 'min' => 'Il nome deve contenere almeno 3 caratteri',
                 'max' => 'Il nome non può superare i 100 caratteri',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'phone' => [
-            'label' => 'Numero di Telefono Studio',
-            'placeholder' => 'Inserisci numero telefonico principale (es. +39 06 1234567]',
+            'label' => 'Telefono Studio',
             'help' => 'Numero di telefono principale dello studio per contatti diretti e urgenze',
             'validation' => [
                 'required' => 'Il numero di telefono è obbligatorio',
                 'regex' => 'Inserisci un numero di telefono italiano valido',
                 'min' => 'Il numero deve contenere almeno 10 cifre',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'email' => [
-            'label' => 'Email Ufficiale Studio',
-            'placeholder' => 'Inserisci email istituzionale (es. info@studiodentistico.it]',
+            'label' => 'Email Studio',
             'help' => 'Indirizzo email ufficiale dello studio per comunicazioni istituzionali',
             'validation' => [
                 'required' => 'L\'indirizzo email è obbligatorio',
@@ -59,13 +51,9 @@ return [
                 'unique' => 'Questo indirizzo email è già registrato per un altro studio',
                 'max' => 'L\'indirizzo email non può superare i 255 caratteri',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'address' => [
-            'label' => 'Indirizzo Completo Studio',
-            'placeholder' => 'Via/Piazza Nome Strada, Numero Civico, CAP Città (Provincia]',
+            'label' => 'Indirizzo Studio',
             'help' => 'Indirizzo fisico completo dello studio medico comprensivo di CAP e provincia',
             'validation' => [
                 'required' => 'L\'indirizzo dello studio è obbligatorio',
@@ -98,15 +86,8 @@ return [
                 'numeric' => 'Il numero di iscrizione deve contenere solo cifre',
                 'min' => 'Il numero di iscrizione deve contenere almeno 3 cifre',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'vat_number' => [
-            'label' => 'Partita IVA Studio',
-            'placeholder' => 'Inserisci partita IVA (11 cifre]',
-            'help' => 'Partita IVA dello studio medico registrata presso l\'Agenzia delle Entrate',
-            'validation' => [
+            'help_vat' => 'Partita IVA dello studio medico registrata presso l\'Agenzia delle Entrate',
+            'validation_vat' => [
                 'required' => 'La partita IVA è obbligatoria',
                 'regex' => 'La partita IVA deve essere composta da esattamente 11 cifre',
                 'unique' => 'Questa partita IVA è già registrata per un altro studio',
@@ -135,20 +116,6 @@ return [
                 'ortopedia' => 'Ortopedia',
                 'altro' => 'Altra Specializzazione',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'website' => [
-            'label' => 'Sito Web Studio',
-            'placeholder' => 'https://www.tuostudio.it (opzionale]',
-            'help' => 'Sito web ufficiale dello studio medico (campo facoltativo]',
-            'validation' => [
-                'url' => 'Inserisci un URL valido che inizi con http:// o https://',
-            ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'staff_count' => [
             'label' => 'Numero Operatori',
@@ -210,7 +177,6 @@ return [
             'modal_description' => 'Sei sicuro di voler cancellare tutti i dati inseriti nel modulo?',
             'success' => 'Modulo cancellato',
             'error' => 'Errore durante la cancellazione del modulo',
-            'confirmation' => 'Tutti i dati inseriti verranno persi definitivamente',
         ],
         'upload_documents' => [
             'label' => 'Carica Documenti',
@@ -221,18 +187,18 @@ return [
         ],
         'register' => [
             'label' => 'register',
-            'tooltip' => 'register',
             'icon' => 'register',
-        ],
-        'logout' => [
-            'tooltip' => 'logout',
-            'icon' => 'logout',
-            'label' => 'logout',
+            'tooltip' => 'register',
         ],
         'profile' => [
-            'tooltip' => 'profile',
-            'icon' => 'profile',
             'label' => 'profile',
+            'icon' => 'profile',
+            'tooltip' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+            'icon' => 'logout',
+            'tooltip' => 'logout',
         ],
     ],
     'steps' => [

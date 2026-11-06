@@ -1,3 +1,15 @@
+---
+title: "phpstan critical rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan critical rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regola Critica PHPStan - NON Modificare phpstan.neon
 
 ## ⚠️ ATTENZIONE: REGOLA ASSOLUTA ⚠️
@@ -126,6 +138,5 @@ Questa regola è documentata anche in:
 - Memoria AI permanente
 
 ---
-
 **RICORDA**: Il file `phpstan.neon` è SACRO. Non si tocca MAI. Punto.
 

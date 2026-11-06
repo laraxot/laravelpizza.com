@@ -1,3 +1,15 @@
+---
+title: "no obvious comments"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no obvious comments"
+issues: []
+discussions: []
+status: draft
+---
+
 # REGOLA CRITICA: NO Commenti Ovvi nel Codice
 
 ## Principio Fondamentale

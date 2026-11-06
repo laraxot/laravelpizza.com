@@ -1,3 +1,15 @@
+---
+title: "user dropdown errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user dropdown errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errori nel Componente User Dropdown
 
 ## Indice
@@ -229,5 +241,5 @@ return [
 
 ## Collegamenti
 - [Documentazione User Dropdown](./user-dropdown.md)
-- [Best Practices UI/UX](./guida-implementazione-ux.md)
+- [Best Practices UI/UX](../guida-implementazione-ux.md)
 - [Documentazione Accessibilità](./accessibility.md)

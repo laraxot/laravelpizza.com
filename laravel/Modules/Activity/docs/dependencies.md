@@ -1,3 +1,11 @@
+---
+title: "Dependencies (Module Activity)"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "dependencies (module activity) activity"
+---
 # Dependencies (Module Activity)
 
 Canonical dependency map:

@@ -5,18 +5,14 @@ declare(strict_types=1);
 namespace Modules\Job\Models\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
-/**
- * @template TModel of Model
- */
 trait FrontendSortable
 {
     /**
-     * @param  Builder<TModel>  $query
-     * @param  list<string>  $sortableColumns
-     * @param  array<string, 'asc'|'desc'>  $defaultSort
-     * @return Builder<TModel>
+     * @param  Builder<static>  $query
+     * @param  array<string>  $sortableColumns
+     * @param  array<string, string>  $defaultSort
+     * @return Builder<static>
      */
     public function scopeSortableBy(
         Builder $query,

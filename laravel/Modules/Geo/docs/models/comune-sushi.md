@@ -1,3 +1,15 @@
+---
+title: "comune sushi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune sushi"
+issues: []
+discussions: []
+status: draft
+---
+
 # Modello Comune con Sushi
 
 ## Implementazione raccomandata

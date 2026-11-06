@@ -1,3 +1,11 @@
+---
+title: "Creazione di Nuovi Moduli"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "creazione di nuovi moduli xot"
+---
 # Creazione di Nuovi Moduli
 
 ## Introduzione

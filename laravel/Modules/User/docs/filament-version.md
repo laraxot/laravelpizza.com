@@ -1,4 +1,29 @@
-# Filament Version Declaration — User
+---
+title: "Filament Version Declaration: User"
+type: concept
+tags: [filament, version]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-version filament version declaration: user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
+# Filament Version Declaration: User
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -14,4 +39,4 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
-**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`

@@ -1,3 +1,15 @@
+---
+title: "geographic models consolidation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geographic models consolidation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi del Consolidamento dei Modelli Geografici
 
 ## Panoramica
@@ -264,5 +276,4 @@ L'implementazione esistente:
 In sintesi, il modello `Comune` implementato rappresenta un caso di studio positivo di come il consolidamento di modelli strettamente correlati possa, in determinati contesti, portare a un codice più pulito, performante e facile da utilizzare.
 
 ---
-
 *Documento creato il: 27/05/2025*

@@ -5,7 +5,9 @@ type: source
 created: "2026-04-29T00:00:00Z"
 updated: "2026-04-29T00:00:00Z"
 related:
-  - "[[User Module Operating Focus]]"
+status: draft
+tags: [docs, user, wiki]
+qmd: "user architecture sources user"
 ---
 
 # User Architecture Sources
@@ -15,7 +17,8 @@ related:
 ## Source Cluster
 
 - `README.md`
-- `PRODUCT_STRATEGY.md`
+- `product-strategy.md`
+- `product-strategy-user-module.md`
 - `architecture/architecture-rules.md`
 - `advanced-user-architecture.md`
 

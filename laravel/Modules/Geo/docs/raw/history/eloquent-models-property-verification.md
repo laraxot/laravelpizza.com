@@ -1,3 +1,14 @@
+---
+title: "eloquent models property verification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "eloquent models property verification"
+issues: []
+discussions: []
+---
+
 # Verifica delle Proprietà nei Modelli Eloquent
 
 Questo documento definisce le regole per la tipizzazione e la verifica degli utenti all'interno dei modelli, delle action e delle policy in Laraxot PTVX.

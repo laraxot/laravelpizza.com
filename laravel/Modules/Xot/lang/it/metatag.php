@@ -7,11 +7,14 @@ return [
     'pages' => 'Pagine',
     'widgets' => 'Widgets',
     'navigation' => [
-        'name' => 'metatag',
+        'name' => 'Metatag',
         'plural' => 'metatags',
         'group' => [
             'name' => 'Admin',
         ],
+        'label' => 'Meta Tag',
+        'icon' => 'heroicon-o-document-text',
+        'sort' => 95,
     ],
     'fields' => [
         'name' => [
@@ -221,18 +224,21 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'key',
         ],
         'color' => [
             'label' => 'color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'color',
         ],
         'hex' => [
             'label' => 'hex',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'hex',
         ],
         'timezone' => [
             'label' => 'Fuso orario',
@@ -321,7 +327,13 @@ return [
                 'parent_name' => 'Nome area livello superiore',
             ],
         ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
     ],
     'label' => 'Metatag',
     'plural_label' => 'Metatag (Plurale)',
+    'title' => 'Metatag',
 ];

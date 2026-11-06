@@ -1,3 +1,11 @@
+---
+title: "Struttura dei Temi"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "struttura dei temi xot"
+---
 # Struttura dei Temi
 
 ## Struttura Standard

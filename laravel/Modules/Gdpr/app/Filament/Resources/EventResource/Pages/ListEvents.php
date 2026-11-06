@@ -6,6 +6,7 @@ namespace Modules\Gdpr\Filament\Resources\EventResource\Pages;
 
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\EventResource;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListEvents extends XotBaseListRecords
@@ -15,9 +16,7 @@ class ListEvents extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')
-                ->numeric()
-                ->sortable()
+            'id' => IDColumn::make('id')
                 ->searchable(),
             'treatment_id' => TextColumn::make('treatment_id')
                 ->numeric()

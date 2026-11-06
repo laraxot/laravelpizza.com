@@ -1,3 +1,15 @@
+---
+title: "icon state column business logic"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "icon state column business logic"
+issues: []
+discussions: []
+status: draft
+---
+
 # IconStateColumn business logic
 
  ## Obiettivo

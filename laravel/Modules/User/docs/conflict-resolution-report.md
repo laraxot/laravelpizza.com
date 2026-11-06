@@ -1,3 +1,28 @@
+---
+title: "Risoluzione dei Conflitti Git nel Modulo User"
+type: concept
+tags: [conflict, resolution, report]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict-resolution-report risoluzione dei conflitti git nel modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Risoluzione dei Conflitti Git nel Modulo User
 
 ## Panoramica
@@ -67,8 +92,8 @@ Le modifiche apportate garantiscono:
 - [Best Practices Filament](modules/user/docs/filament_best_practices.md)
 - [Regole di Traduzione](docs/translations_rules.md)
 - [PHPStan Livello 9](docs/phpstan/phpstan_livello9_linee_guida.md)
-- [Implementazione Login](modules/user/docs/auth_login_implementation.md)
-- [Implementazione Logout](modules/user/docs/auth_logout_implementation.md)
+- [Implementazione Login](modules/user/docs/auth-login-implementation.md)
+- [Implementazione Logout](modules/user/docs/auth-logout-implementation.md)
 # Risoluzione dei Conflitti Git nel Modulo User
 
 ## Panoramica
@@ -138,5 +163,5 @@ Le modifiche apportate garantiscono:
 - [Best Practices Filament](modules/user/docs/filament_best_practices.md)
 - [Regole di Traduzione](docs/translations_rules.md)
 - [PHPStan Livello 9](docs/phpstan/phpstan_livello9_linee_guida.md)
-- [Implementazione Login](modules/user/docs/auth_login_implementation.md)
-- [Implementazione Logout](modules/user/docs/auth_logout_implementation.md)
+- [Implementazione Login](modules/user/docs/auth-login-implementation.md)
+- [Implementazione Logout](modules/user/docs/auth-logout-implementation.md)

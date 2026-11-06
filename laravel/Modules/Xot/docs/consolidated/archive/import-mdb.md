@@ -1,3 +1,11 @@
+---
+title: "Comandi di Importazione MDB"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "comandi di importazione mdb xot"
+---
 # Comandi di Importazione MDB
 
 ## Panoramica

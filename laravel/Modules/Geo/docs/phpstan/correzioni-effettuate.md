@@ -1,3 +1,15 @@
+---
+title: "correzioni effettuate"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "correzioni effettuate"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni Effettuate per Errori PHPStan
 
 Questo documento riassume le correzioni applicate per risolvere gli errori PHPStan di livello 9 nel codice.

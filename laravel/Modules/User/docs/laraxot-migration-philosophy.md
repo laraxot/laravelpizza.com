@@ -1,3 +1,28 @@
+---
+title: "Filosofia, Religione e Politica di Laraxot: Regole di Migrazione"
+type: concept
+tags: [laraxot, migration, philosophy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laraxot-migration-philosophy filosofia, religione e politica di laraxot: regole di migrazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Filosofia, Religione e Politica di Laraxot: Regole di Migrazione
 
 ## Regola Fondamentale: Una Tabella = Una Migration per Modulo
@@ -36,6 +61,7 @@ La migration è stata modificata per **estendere** la tabella `roles` esistente 
 4. **Controllo indici**: Verificare l'esistenza degli indici prima di crearli
 5. **Rollback sicuro**: Rimuovere solo le colonne aggiunte, non quelle originali
 6. **Modifiche schema**: Modificare la **stessa** migrazione esistente e aggiornare il **timestamp** nel nome file (NON creare `add_column_to_table.php` separate)
+6. **Modifiche schema**: la colonna entra nella migration owner della tabella (`tableUpdate` / `UserData::updateColumns`, con `hasColumn`). Il nome del file resta quello. Un timestamp nuovo è una migration nuova.
 
 ## Principi Laraxot Rispettati
 
@@ -49,6 +75,7 @@ La migration è stata modificata per **estendere** la tabella `roles` esistente 
 
 1. **Una tabella, una sola migration di creazione per modulo**
 2. **Le migration successive devono estendere, non ricreare**
+2. **Non si crea una migration per aggiungere o cambiare una colonna**
 3. **Usare sempre `hasColumn()`, `hasTable()`, `hasIndex()` per controlli sicuri**
 4. **Nessuna duplicazione intenzionale di logica di creazione**
 5. **Chiarezza evolutiva: la storia della tabella deve essere lineare**
@@ -57,6 +84,7 @@ La migration è stata modificata per **estendere** la tabella `roles` esistente 
 
 Questa regola diventa parte fondamentale della **filosofia, religione e politica di Laraxot**:
 > "In un modulo, per ogni tabella deve esistere una sola migration responsabile della sua creazione. Le migration successive possono estendere la struttura esistente, ma non ricreare la tabella."
+> "Per ogni tabella esiste una sola migration. Una colonna nuova entra lì, solo se manca. Non nasce un file per aggiungere un campo."
 
 ## Conclusione
 

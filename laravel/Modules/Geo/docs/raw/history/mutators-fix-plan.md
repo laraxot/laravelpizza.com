@@ -1,3 +1,14 @@
+---
+title: "mutators fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mutators fix plan"
+issues: []
+discussions: []
+---
+
 # 📋 Mutators Fix Plan - Progetto Completo
 
 > **Piano per correggere TUTTI i mutators con `mixed $value`**  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "mutators fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mutators fix plan"
+issues: []
+discussions: []
 ## 📊 Panoramica
 
 **Totale mutators trovati**: 420  

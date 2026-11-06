@@ -1,3 +1,11 @@
+---
+title: "Struttura dei Moduli Laravel (nwidart/laravel-modules)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "struttura dei moduli laravel (nwidart/laravel-modules) xot"
+---
 # Struttura dei Moduli Laravel (nwidart/laravel-modules)
 
 ## Struttura dei percorsi e namespace

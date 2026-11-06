@@ -1,3 +1,15 @@
+---
+title: "custom charts complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "custom charts complete guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Custom Question Types Implementation - Complete Guide
 
 **Last Updated**: 2026-03-17  
@@ -5,10 +17,10 @@
 **Author**: Development Team
 
 ---
-
 ## Overview
 
 Implementazione completa delle custom question types per Quaeris Fila5, basata sul pattern di Fila4 ma con ottimizzazioni moderne.
+Implementazione completa delle custom question types per App Fila5, basata sul pattern di Fila4 ma con ottimizzazioni moderne.
 
 ---
 
@@ -17,6 +29,34 @@ Implementazione completa delle custom question types per Quaeris Fila5, basata s
 ### 1. RootGroupedBf
 - **Pattern**: `custom:root_grouped_bf`
 - **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/RootGroupedBf.php`
+- **Scopo**: Raggruppa domande per gid, calcola valutazioni 1-5 vs 6-10
+- **Test URL**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/234`
+
+### 2. MailResponseRate
+- **Pattern**: `custom:mail_response_rate`
+- **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/MailResponseRate.php`
+- **Scopo**: Calcola tasso di risposta email
+- **Test URL**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/192`
+
+### 3. SmsResponseRate
+- **Pattern**: `custom:sms_response_rate`
+- **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate.php`
+- **Scopo**: Calcola tasso di risposta SMS
+- **Test URL**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/191`
+
+### 4. ContactsCompleted
+- **Pattern**: `custom:contacts_completed`
+- **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted.php`
+- **Scopo**: Conta contatti completati
+- **Test URL**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/190`
+
+### 5. ContactsCompleted2
+- **Pattern**: `custom:contacts_completed_2`
+- **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted2.php`
+
+### 6. AvgGroup2
+- **Pattern**: `custom:avg_group_2`
+- **File**: `Modules/Quaeris/app/Actions/QuestionChart/Custom/AvgGroup2.php`
 - **Scopo**: Raggruppa domande per gid, calcola valutazioni 1-5 vs 6-10
 - **Test URL**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/234`
 
@@ -184,35 +224,36 @@ return new AnswersChartData(
 ```bash
 cd laravel
 ./vendor/bin/pest Modules/Quaeris/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php
+./vendor/bin/pest Modules/App/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php
 ```
 
 ### Manual Testing URLs
 
-1. **MailResponseRate**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/192`
-2. **SmsResponseRate**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/191`
-3. **ContactsCompleted**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/190`
-4. **RootGroupedBf**: `/quaeris/admin/ats/survey-pdfs/16/question-charts/234`
+1. **MailResponseRate**: `/this-project/admin/ats/survey-pdfs/16/question-charts/192`
+2. **SmsResponseRate**: `/this-project/admin/ats/survey-pdfs/16/question-charts/191`
+3. **ContactsCompleted**: `/this-project/admin/ats/survey-pdfs/16/question-charts/190`
+4. **RootGroupedBf**: `/this-project/admin/ats/survey-pdfs/16/question-charts/234`
 
 ---
 
 ## Files Reference
 
 ### Custom Actions (6 files)
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/RootGroupedBf.php`
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/MailResponseRate.php`
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate.php`
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted.php`
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted2.php`
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/AvgGroup2.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/RootGroupedBf.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/MailResponseRate.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/SmsResponseRate.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/ContactsCompleted.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/ContactsCompleted2.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/AvgGroup2.php`
 
 ### Integration
-- `Modules/Quaeris/app/Actions/QuestionChart/GetAnswersByQuestionChart.php`
+- `Modules/App/app/Actions/QuestionChart/GetAnswersByQuestionChart.php`
 
 ### Tests
-- `Modules/Quaeris/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
+- `Modules/App/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
 
 ### Helper
-- `Modules/Quaeris/app/Actions/QuestionChart/Custom/Custom/MergeInvitedAnswers.php`
+- `Modules/App/app/Actions/QuestionChart/Custom/Custom/MergeInvitedAnswers.php`
 
 ---
 
@@ -232,6 +273,7 @@ cd laravel
 ## GitHub Resources
 
 - **Issue #97**: https://github.com/laraxot/base_quaeris_fila5_mono/issues/97
+- **Issue #97**: https://github.com/laraxot/base_ptvx_fila5_mono/issues/97
 - **Comments**: 7 (all fixes documented)
 - **Status**: ✅ Complete & Ready for Production
 

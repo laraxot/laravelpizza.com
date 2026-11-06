@@ -3,6 +3,8 @@ title: Configurazione Modulo
 description: Configurazione Modulo
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../activity/configurazione.md
 ---
 
 # Configurazione Modulo {#configurazione modulo}

@@ -1,3 +1,24 @@
+---
+title: "Regole per la Verifica dei Componenti Blade"
+type: concept
+tags: [component, verification]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "component-verification regole per la verifica dei componenti blade"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./dependency-rules.md"
+  - "./dependency.md"
+status: draft
+---
+
 # Regole per la Verifica dei Componenti Blade
 
 ## ERRORE CRITICO DA NON RIPETERE MAI
@@ -141,4 +162,5 @@ Prima di usare qualsiasi componente:
 
 - [Documentazione Filament Ufficiale](https://filamentphp.com/docs)
 - [Laravel Blade Components](https://laravel.com/docs/blade#components)
-- [Componenti UI del Progetto](../../../Themes/Sixteen/resources/views/components/ui/)
+- [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
+- [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)

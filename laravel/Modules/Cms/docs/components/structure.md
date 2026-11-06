@@ -1,3 +1,15 @@
+---
+title: "structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura dei Componenti
 
 ## Componenti Base
@@ -102,22 +114,22 @@ I blocchi sono componenti modulari che:
 ## Collegamenti
 - [Glossario Tecnico](../glossary.md)
 - [Guida allo Stile](../style/readme.md)
-- [Documentazione Blocchi](../blocks/readme.md)
+- [Documentazione Blocchi](../blocks/README.md)
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
-* [structure.md](laravel/modules/gdpr/docs/structure.md)
-* [structure.md](laravel/modules/notify/docs/structure.md)
-* [structure.md](laravel/modules/xot/docs/structure.md)
+* [structure.md](../../../Gdpr/docs/structure.md)
+* [structure.md](../../../Notify/docs/structure.md)
+* [structure.md](../../../Xot/docs/structure.md)
 * [structure.md](laravel/modules/xot/docs/base/structure.md)
-* [structure.md](laravel/modules/xot/docs/config/structure.md)
-* [structure.md](laravel/modules/user/docs/structure.md)
-* [structure.md](laravel/modules/ui/docs/structure.md)
-* [structure.md](laravel/modules/lang/docs/structure.md)
-* [structure.md](laravel/modules/job/docs/structure.md)
-* [structure.md](laravel/modules/media/docs/structure.md)
-* [structure.md](laravel/modules/tenant/docs/structure.md)
-* [structure.md](laravel/modules/activity/docs/structure.md)
+* [structure.md](../../../Xot/docs/config/structure.md)
+* [structure.md](../../../User/docs/structure.md)
+* [structure.md](../../../UI/docs/structure.md)
+* [structure.md](../../../Lang/docs/structure.md)
+* [structure.md](../../../Job/docs/structure.md)
+* [structure.md](../../../Media/docs/structure.md)
+* [structure.md](../../../Tenant/docs/structure.md)
+* [structure.md](../../../Activity/docs/structure.md)
 * [structure.md](laravel/modules/cms/docs/structure.md)
-* [structure.md](laravel/modules/cms/docs/themes/structure.md)
+* [structure.md](../themes/structure.md)
 * [structure.md](laravel/modules/cms/docs/components/structure.md)

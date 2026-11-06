@@ -1,95 +1,65 @@
 ---
+qmd: "README"
+issues: []
+discussions: []
 title: "AI Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-10-14
+status: active
+module: AI
 ---
 
-# 🤖 AI Module - Integrazione MCP
+# AI Module
 
-## 📋 Quick Reference
-| Categoria | Guida | File |
-|-----------|-------| ---- |
-| **Setup** | MCP Server Setup | [mcp/01_installazione.md](mcp/01_installazione.md) |
-| **Config** | Configurazione | [mcp/02_configurazione.md](mcp/02_configurazione.md) |
-| **Usage** | Utilizzo pratico | [mcp/03_utilizzo.md](mcp/03_utilizzo.md) |
-| **Integration** | Chat System | [chat.md](chat.md) |
-| **Training** | Fine Tuning | [fine_tuning.md](fine_tuning.md) |
-| **Tools** | Ollama, CLI Tools | [ollama.md](ollama.md), [tools.md](tools.md) |
-| **Troubleshooting** | Errori comuni | [mcp/06_troubleshooting.md](mcp/06_troubleshooting.md) |
+Ingresso della documentazione del modulo. Ogni affermazione e' stata confrontata con il codice il 2026-10-14. Le versioni precedenti di questo README presentavano il modulo come "Integrazione MCP": nel codice del modulo non c'e' nulla di MCP (vedi i limiti).
 
-## 🎯 Core Features
-- **MCP Protocol**: Database integration, external services, custom tools
-- **AI Chat**: Multi-user interface, context management, memory persistence
-- **Model Training**: Fine tuning, data preparation, deployment
+## Identita' e ownership
 
-## 📁 Documentation Structure
-- `/mcp/` - Documentazione completa MCP (00-11)
-- `/tutorials/` - Tutorial pratici Laravel+MCP
-- `/phpstan/` - Configurazioni PHPStan
+- Namespace `Modules\AI`, alias `ai`, repository git separato.
+- Provider in `module.json`: `AIServiceProvider`, `Providers\Filament\AdminPanelProvider`; il primo e' anche in `laravel/config/app.php`. `AI: true` in `laravel/modules_statuses.json` e nello stato del tenant Fixcity.
+- Le Actions di dominio AI vivono in `app/Actions/` di questo modulo. Regola: [wiki/concepts/ollama-actions-ownership.md](wiki/concepts/ollama-actions-ownership.md). Stato reale: copie quasi identiche di `ChatOllamaAction` e `GenerateOllamaAction` esistono ancora in `Modules/Xot/app/Actions/AI/Ollama/` (ultimo commit 2026-10-09), quindi [ollama-actions-moved-from-xot.md](./ollama-actions-moved-from-xot.md) descrive una copia, non uno spostamento.
 
-## Panoramica
+## Cosa contiene davvero
 
-Il modulo AI fornisce funzionalità di integrazione con il Model Context Protocol (MCP) per consentire alle applicazioni Laravel di comunicare efficacemente con modelli di linguaggio (LLM) e implementare agenti AI avanzati.
+| Area | Contenuto verificato | Percorso |
+|---|---|---|
+| Client LLM | Ollama (`ChatOllamaAction`, `GenerateOllamaAction`), DS4 (`ChatDs4Action`, `GenerateDs4Action`), OpenAI (`CompletionAction`, `ContextCompressorAction`), `MakeAIRequestAction` | `app/Actions/` |
+| Dominio ticket | `ClassifyTicketAction`, `SuggestSolutionsAction`, prompt `BuildTicketClassificationPromptAction` e `BuildTicketSolutionsPromptAction`, `SentimentAction` (driver base o Transformers) | `app/Actions/` |
+| Dominio previsioni | `GeneratePredictionsAction`, `Predict/GeneratePredictionDraftsAction`, template di ripiego, `OpenAiPredictionMapper`: dominio di un altro progetto (il modulo `Predict` non esiste qui) | `app/Actions/`, `app/Datas/` |
+| Proposte di azione | `CreateAiActionProposalAction`, `ConfirmAiActionProposalAction`, `CancelAiActionProposalAction`, registro `Adapters\AiActionHandlerRegistry`, contratto `AiActionHandlerContract` | `app/Actions/`, `app/Adapters/`, `app/Contracts/` |
+| Dati | modelli `AiThread`, `AiMessage`, `AiActionProposal`, `AiToolLog` e 4 migrazioni del 2026-07-24 | `app/Models/`, `database/migrations/` |
+| Filament | `AiActionProposalResource`, pagine `Completion`, `FineTuning`, `Dashboard` | `app/Filament/` |
+| Fine tuning | script Python `bin/fine_tuning.py` e `bin/test_fine_tuning.py` | `bin/` |
+| Configurazione | `config/ai.php` (modello, temperatura, token, limiti: legge `services.openai.*`); gli endpoint `services.ollama.url` e `services.ds4.url` hanno default `localhost:11434` e `127.0.0.1:8000` e non sono definiti in `laravel/config/` | `config/` |
+| Test | 11 file, 77 chiamate `it()`/`test()` | `tests/` |
 
-## Documentazione
+## Chi lo usa davvero in questo repository
 
-Questa directory contiene la documentazione completa sull'integrazione MCP in Laravel, con particolare attenzione ai casi d'uso, all'implementazione e alle best practices.
+Nessuno. Un grep di `Modules\AI\` su `Modules/*/app`, `config` e `routes` degli altri moduli e su `Themes/*/resources` non trova alcun consumatore: `Fixcity` non chiama `ClassifyTicketAction` ne' `SuggestSolutionsAction`. Il modulo e' attivo ma non ancora agganciato a nessun flusso.
 
-### Indice della Documentazione
+## Limiti
 
-1. [Guida all'Integrazione MCP](./MCP_INTEGRATION_GUIDE.md)
-   - Panoramica completa del protocollo MCP
-   - Vantaggi dell'integrazione in Laravel
-   - Architettura e componenti principali
-   - Casi d'uso generali e implementazione base
+1. Nessun codice MCP: `grep -ri mcp` su `app/`, `config/`, `routes/` e `composer.json` del modulo non trova nulla. Il progetto ha il pacchetto `laravel/mcp` e `laravel/config/mcp.php`, ma `laravel/routes/ai.php` ha i server MCP solo come commento: nessun server MCP e' definito. Le guide in [mcp/](./mcp/) sono documentazione di riferimento, non descrizione del modulo.
+2. Rotte: `routes/web.php` e `routes/api.php` sono vuoti; le 11 rotte del modulo (`php artisan route:list --json`) sono del pannello Filament `ai/admin`. Non esiste un'interfaccia di chat: ci sono i modelli `AiThread` e `AiMessage` e le Actions Ollama/DS4, ma nessuna pagina di chat.
+3. Quasi tutta la cartella docs e' pianificazione (PRD, strategia, roadmap, sprint, lancio): vedi la sezione "Piani" di [00-INDEX.md](./00-index.md).
+4. Suite Pest: il 2026-10-14 su DB usa-e-getta si ferma con `Cannot redeclare class OpenAI` (un test dichiara la classe `OpenAI`, che collide con il client `openai-php`).
 
-2. [Casi d'Uso di MCP in Laravel](./MCP_CASI_USO.md)
-   - Esempi dettagliati di casi d'uso specifici
-   - Automazione dei processi di business
-   - Assistenza utente e supporto
-   - Analisi e gestione dei dati
-   - Sviluppo e debugging
+## Quick start
 
-3. [Implementazione MCP in Laravel](./MCP_IMPLEMENTAZIONE_LARAVEL.md)
-   - Guida dettagliata all'implementazione
-   - Sviluppo di strumenti MCP
-   - Integrazione con l'architettura esistente
-   - Testing e debugging
-   - Conformità con PHPStan Livello 9
+Da `laravel/`:
 
-## Risorse Esterne
+```bash
+# rotte del modulo (verificato il 2026-10-14: 11, tutte del pannello Filament ai/admin)
+php artisan route:list --name=ai
+# test su database usa-e-getta (la variabile vuota evita `unbound variable` dello script)
+DB_DATABASE_LIMESURVEY= bash ../bashscripts/tools/pest-scratch-db.sh Modules/AI/tests
+```
 
-La documentazione fa riferimento alle seguenti risorse esterne:
+## Mappa della documentazione
 
-- [Documentazione Ufficiale MCP](../../../../docs/project/references/mcp_documentation.md)
-- [Laravel MCP SDK](../../../../docs/project/references/laravel_mcp_sdk.md)
-- [Neuron AI Documentation](../../../../docs/project/references/neuron_ai_docs.md)
-- [AI Agents in PHP with MCP](../../../../docs/project/references/ai_agents_php_mcp.md)
-- [Laravel Helper Tools MCP server](../../../../docs/project/references/laravel_helper_tools.md)
-
-## Implementazioni Open Source
-
-Queste implementazioni open source possono essere utilizzate come riferimento:
-
-- [InnoGE/laravel-mcp](../../../../docs/project/references/innoge_laravel_mcp.md)
-- [OPGG/laravel-mcp-server](../../../../docs/project/references/opgg_laravel_mcp_server.md)
-
-## Contribuire
-
-Se desideri contribuire a questa documentazione o all'implementazione del modulo AI, segui le linee guida del progetto e assicurati che il codice sia conforme agli standard di PHPStan livello 9.
-
----
-
-> ℹ️ **Per l'installazione e la gestione centralizzata degli MCP servers, consulta la guida [INSTALLAZIONE_MCP_SERVERS.md](./INSTALLAZIONE_MCP_SERVERS.md).**
-
-🔗 **Guida installazione MCP servers:** [INSTALLAZIONE_MCP_SERVERS.md](./INSTALLAZIONE_MCP_SERVERS.md)
-
----
-
-*Ultimo aggiornamento: Maggio 2025*
-*Principio DRY: Una funzionalità = Una documentazione. Collegamenti logici e struttura pulita.*
+Indice operativo: [00-INDEX.md](./00-index.md). Indice per argomento: [index.md](./index.md). Guide MCP: [mcp/](./mcp/). Decisioni: [decision-log.md](./decision-log.md). Registro: [wiki/log.md](./wiki/log.md). Story: [stories/](./stories/).
 
 ## AI Workflows
 - [AI Methodologies](./ai-methodologies.md)
@@ -113,7 +83,7 @@ Se desideri contribuire a questa documentazione o all'implementazione del modulo
 
 ## Documentation
 
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
-- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
-- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+- [On-Demand Pattern](on-demand-pattern.md): Pattern per caricamento efficiente
+- [QMD Setup](qmd-setup.md): Configurazione ricerca locale
+- [Performance](performance-optimization.md): Metriche e best practice
+- [Project Structure](project-structure.md): Directory layout

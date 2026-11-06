@@ -1,3 +1,15 @@
+---
+title: "database mail system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database mail system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Gestione Email Basato su Database - il progetto
 
 ## Panoramica
@@ -302,7 +314,6 @@ php artisan notify:mail-template:test
 
 ## Collegamenti
 - [Notify Module](../README.md)
-- [Notify Module](../readme.md)
 - [Email Templates](email-templates.md)
 - [Mail Queue](mail-queue.md)
 

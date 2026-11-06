@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Librerie Bash: Documentazione delle Funzioni
 
 ## Perché questa documentazione è importante
@@ -66,5 +78,4 @@ Per aggiungere nuove funzioni:
 4. Aggiornare i test se presenti
 
 ---
-
 > Questo documento è parte della [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md) del progetto.

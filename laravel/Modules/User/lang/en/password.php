@@ -123,7 +123,13 @@ return [
                 'parent_name' => 'Nome area livello superiore',
             ],
         ],
-        'change_password' => 'Cambio password',
+        'change_password' => [
+            'label' => 'Change Password',
+            'modal' => [
+                'heading' => 'Change Password',
+                'description' => 'Enter the new password to confirm the change.',
+            ],
+        ],
         'updateDataAction' => [
             'label' => 'updateDataAction',
         ],

@@ -1,10 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'Servizi correlati',
+    'title' => __('user::blocks.sections.related_services.title'),
     'services' => []
 ])
 

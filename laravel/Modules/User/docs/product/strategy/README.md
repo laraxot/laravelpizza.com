@@ -1,3 +1,11 @@
+---
+title: "User Module - Product Strategy Document"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, product]
+qmd: "user module - product strategy document user"
+---
 # User Module - Product Strategy Document
 
 ## Document Information

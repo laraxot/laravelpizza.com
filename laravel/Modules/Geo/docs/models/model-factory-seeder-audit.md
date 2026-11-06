@@ -1,0 +1,44 @@
+---
+title: "model factory seeder audit"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model factory seeder audit"
+issues: []
+discussions: []
+status: superseded
+superseded_by: ../model-factory-seeder-audit.md
+---
+
+# Model/Factory/Seeder Audit
+
+Generated: [DATE] 16:28
+
+## Coverage
+| Model | Factory | Seeded |
+|---|---|---|
+| Place | yes | no |
+| County | yes | no |
+| Province | yes | no |
+| Address | yes | no |
+| Location | yes | no |
+| Comune | yes | no |
+| PlaceType | yes | no |
+| Region | yes | no |
+| Locality | yes | no |
+| State | yes | no |
+| GeoJsonModel | n/a | n/a |
+| ComuneJson | n/a | n/a |
+| GeoTrait | n/a | n/a |
+| HasAddress | n/a | n/a |
+| HasPlaceTrait | n/a | n/a |
+
+Seeder: `database/seeders/GeoDatabaseSeeder.php`
+
+## Missing / Actions
+- Add exemplar seeding for: Region, Province, Comune, Address, Location (small curated set).
+- Mark trait/utility/JSON helper classes as non-seed targets (n/a).
+
+## Likely non-business-critical
+- Trait/utility classes listed above; not direct domain entities.

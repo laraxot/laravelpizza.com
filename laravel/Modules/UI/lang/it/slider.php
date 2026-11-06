@@ -7,6 +7,7 @@ return [
         'method' => ['label' => 'method', 'description' => 'method', 'helper_text' => 'method', 'placeholder' => 'method', 'tooltip' => ''],
         '_tpl' => ['label' => '_tpl', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'view' => ['label' => 'view', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'view'],
+        'layout' => ['label' => 'layout', 'placeholder' => 'layout', 'helper_text' => 'layout', 'description' => 'layout'],
     ],
     'label' => 'Slider',
     'plural_label' => 'Slider (Plurale)',
@@ -16,7 +17,7 @@ return [
         'group' => ['name' => 'General', 'description' => 'General Settings'],
         'label' => 'Slider',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => ['label' => 'Crea Slider'],

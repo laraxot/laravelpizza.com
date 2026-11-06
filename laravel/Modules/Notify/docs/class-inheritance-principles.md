@@ -1,3 +1,15 @@
+---
+title: "class inheritance principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "class inheritance principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # Principi di Ereditarietà nelle Classi
 # Principi di Ereditarietà nelle Classi <nome progetto>
 

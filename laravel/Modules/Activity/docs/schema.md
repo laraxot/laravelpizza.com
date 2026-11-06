@@ -2,6 +2,11 @@
 title: "Module Schema"
 module: "Activity"
 created: "2026-04-15T08:28:40Z"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity module schema activity"
 ---
 
 # Activity Module Schema
@@ -18,12 +23,12 @@ created: "2026-04-15T08:28:40Z"
 ## Wiki Rules
 
 ### raw/ Rules
-- ✅ Immutable — AI reads but never modifies or deletes
-- ✅ Drop liberally — articles, code snippets, decisions
+- ✅ Immutable: AI reads but never modifies or deletes
+- ✅ Drop liberally: articles, code snippets, decisions
 - ✅ Subdivide by type: `articles/`, `papers/`, `code-examples/`, `decisions/`
 
 ### wiki/ Rules
-- ✅ AI-owned — synthesizes raw documents into structured knowledge
+- ✅ AI-owned: synthesizes raw documents into structured knowledge
 - ✅ Every page MUST have YAML frontmatter
 - ✅ Link related pages via `related:` in frontmatter
 - ✅ Update `index.md` and `log.md` after each operation

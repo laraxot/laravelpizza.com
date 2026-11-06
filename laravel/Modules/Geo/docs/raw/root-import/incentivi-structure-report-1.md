@@ -1,3 +1,14 @@
+---
+title: "incentivi structure report 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi structure report 1"
+issues: []
+discussions: []
+---
+
 # 📋 STRUTTURA COMPLETA MODULO INCENTIVI - LARAVEL
 
 ## 1️⃣ STRUTTURA DELLE CARTELLE
@@ -92,6 +103,14 @@ laravel/Modules/Incentivi/
 
 ---
 
+title: "incentivi structure report 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi structure report 1"
+issues: []
+discussions: []
 ## 2️⃣ MODELLI (Models)
 
 **Ubicazione:** `/laravel/Modules/Incentivi/app/Models/`

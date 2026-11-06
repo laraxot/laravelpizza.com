@@ -1,411 +1,469 @@
-### Versione HEAD
+---
+title: "Gestione delle Traduzioni"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, translations]
+qmd: "Gestione delle Traduzioni"
+---
+# Gestione delle Traduzioni
 
-# Traduzioni
+## Configurazione Base
 
-## Struttura delle Traduzioni
-
-Le traduzioni sono organizzate in:
-
-```
-Modules/[Nome]/
-└── lang/
-    ├── it/
-    │   └── [nome].php
-    └── en/
-        └── [nome].php
-```
-
-## Regole per le Traduzioni
-
-## Struttura Base
-
-Ogni modulo deve avere:
-1. Una cartella `lang/` con le traduzioni
-2. Un file `translations.md` nella cartella `docs/` con i collegamenti bidirezionali
-
-## Struttura delle Cartelle
-
-```
-Modules/<NomeModulo>/
-├── lang/
-│   ├── it/
-│   │   └── <nome_modulo>.php
-│   └── en/
-│       └── <nome_modulo>.php
-└── docs/
-    └── translations.md
-```
-
-## Regole per i File di Traduzione
-
-1. **Naming**:
-   - Il file di traduzione deve avere lo stesso nome del modulo in minuscolo
-   - Esempio: `patient.php` per il modulo Patient
-
-2. **Struttura**:
-   - Le chiavi devono essere organizzate gerarchicamente
-   - Usare array annidati per raggruppare le traduzioni correlate
-   - Esempio:
-     ```php
-     return [
-         'registration' => [
-             'label' => 'Registrazione',
-             'tooltip' => 'Completa la registrazione'
-         ]
-     ];
-     ```
-
-3. **Collegamenti**:
-   - Ogni file `translations.md` deve contenere:
-     - Link al modulo Lang
-     - Link alle regole generali in Xot
-     - Esempi di implementazione
-
-## Esempio di File translations.md
-
-```markdown
-
-# Traduzioni del Modulo <NomeModulo>
-
-## Collegamenti
-
-- [Modulo Lang](../../Lang/project_docs/module_lang.md) - Documentazione principale
-- [Regole Generali](../../Xot/project_docs/translations.md) - Regole base
-- [Modulo Lang](../../lang/project_docs/module_lang.md) - Documentazione principale
-- [Regole Generali](../../xot/project_docs/translations.md) - Regole base
-
-## Struttura
-
-```
-Modules/<NomeModulo>/
-└── lang/
-    ├── it/
-    │   └── <nome_modulo>.php
-    └── en/
-        └── <nome_modulo>.php
-```
-
-## Contenuto
-
-Il file `<nome_modulo>.php` contiene le traduzioni per:
-- [Lista delle sezioni tradotte]
-
-## Esempi
-
+### Lingue
 ```php
+// config/app.php
 return [
-    'sezione' => [
-        'label' => 'Etichetta',
-        'tooltip' => 'Descrizione'
-    ]
+    'locale' => 'it',
+    'fallback_locale' => 'en',
+    'available_locales' => ['it', 'en', 'fr', 'de', 'es'],
 ];
 ```
 
-## Regole per le Traduzioni
-
-1. **Organizzazione**:
-   - Ogni modulo ha le proprie traduzioni
-   - Le traduzioni vanno in `lang/[lingua]/[nome].php`
-   - Non usare mai `->label()` nei componenti
-   - Usare sempre i file di traduzione
-
-2. **Struttura dei File**:
-   - Chiavi in snake_case
-   - Valori in formato array con label
-   - Supporto per tooltip e placeholder
-   - Esempio:
-     ```php
-     return [
-         'field_name' => [
-             'label' => 'Nome Campo',
-             'tooltip' => 'Descrizione del campo',
-             'placeholder' => 'Inserisci il valore'
-         ]
-     ];
-     ```
-
-3. **Best Practices**:
-   - Mantenere le traduzioni aggiornate
-   - Usare chiavi descrittive
-   - Documentare le traduzioni
-   - Verificare la coerenza
-
-4. **Integrazione con Filament**:
-   - Le traduzioni sono automaticamente caricate
-   - Non usare `->label()` nei componenti
-   - Usare le chiavi di traduzione
-   - Mantenere la coerenza
-
-### Versione Incoming
-
-# Sistema di Traduzioni
-
-## Struttura
-
-### File di Traduzione
-```
-resources/lang/
-├── it/
-│   ├── broker.php
-│   ├── ui.php
-│   └── validation.php
-└── en/
-    ├── broker.php
-    ├── ui.php
-    └── validation.php
-```
-
-### Formato File
+### Traduzioni
 ```php
+// config/translations.php
 return [
-    'resources' => [
-        'polizza_convenzione' => [
-            'label' => 'Polizza in Convenzione',
-            'plural_label' => 'Polizze in Convenzione',
-            'navigation' => [
-                'group' => 'Portafoglio',
-                'icon' => 'heroicon-o-document-text',
-                'sort' => 1,
-            ],
-            'columns' => [
-                'numero_adesione' => 'Numero Adesione',
-                'cliente' => 'Cliente',
-                // ...
-            ],
-            'filters' => [
-                'stato_pratica' => 'Stato Pratica',
-                'convenzione' => 'Convenzione',
-                // ...
-            ],
-            'actions' => [
-                'create' => 'Nuova Polizza',
-                'edit' => 'Modifica',
-                'view' => 'Visualizza',
-                // ...
-            ],
-        ],
+    'default' => 'it',
+    'fallback' => 'en',
+    'paths' => [
+        resource_path('lang'),
+        resource_path('lang/vendor'),
     ],
 ];
 ```
 
----
+## Traduzioni Base
 
-## Utilizzo
-
-### In Filament Resources
+### File di Traduzione
 ```php
-// NON utilizzare ->label()
-TextColumn::make('numero_adesione')
-TextColumn::make('cliente.nominativo')
-SelectFilter::make('stato_pratica_id')
+// resources/lang/it/validation.php
+return [
+    'required' => 'Il campo :attribute è obbligatorio.',
+    'email' => 'Il campo :attribute deve essere un indirizzo email valido.',
+    'min' => [
+        'string' => 'Il campo :attribute deve contenere almeno :min caratteri.',
+    ],
+    'attributes' => [
+        'email' => 'indirizzo email',
+        'password' => 'password',
+    ],
+];
+
+// resources/lang/it/auth.php
+return [
+    'failed' => 'Credenziali non valide.',
+    'password' => 'La password non è corretta.',
+    'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',
+];
 ```
 
-### In Blade Views
-```blade
-@lang('broker.resources.polizza_convenzione.label')
-{{ __('broker.resources.polizza_convenzione.columns.numero_adesione') }}
-```
-
-### In PHP
+### Utilizzo
 ```php
-trans('broker.resources.polizza_convenzione.label')
-__('broker.resources.polizza_convenzione.columns.numero_adesione')
+// Traduzione semplice
+__('auth.failed');
+trans('auth.failed');
+
+// Traduzione con parametri
+__('auth.throttle', ['seconds' => 60]);
+trans('auth.throttle', ['seconds' => 60]);
+
+// Traduzione con pluralizzazione
+trans_choice('messages.apples', 10, ['count' => 10]);
 ```
 
 ## Best Practices
 
-### 1. Struttura Chiavi
-- Utilizzare nomi descrittivi
-- Mantenere una gerarchia logica
-- Evitare duplicazioni
-- Usare snake_case per le chiavi
+### 1. Struttura
+- Organizzare per dominio
+- Utilizzare chiavi descrittive
+- Implementare fallback
+- Documentare le traduzioni
 
-### 2. Organizzazione File
-- Un file per modulo
-- Separare le traduzioni per contesto
-- Mantenere coerenza tra lingue
-- Documentare struttura complessa
+### 2. Performance
+- Ottimizzare le query
+- Utilizzare le cache
+- Implementare il rate limiting
+- Monitorare le traduzioni
 
-### 3. Gestione Traduzioni
-- Non cancellare traduzioni esistenti
-- Aggiungere nuove traduzioni in modo incrementale
-- Mantenere le traduzioni aggiornate
-- Verificare completezza traduzioni
+### 3. Sicurezza
+- Validare le traduzioni
+- Proteggere i dati sensibili
+- Implementare il logging
+- Gestire i fallimenti
 
-### 4. Performance
-- Utilizzare cache delle traduzioni
-- Caricare solo le traduzioni necessarie
-- Evitare traduzioni dinamiche
-- Ottimizzare file di grandi dimensioni
+### 4. Manutenzione
+- Monitorare le traduzioni
+- Gestire le versioni
+- Implementare alerting
+- Documentare le chiavi
 
-## LangService
+## Esempi di Utilizzo
 
-### Caratteristiche
-- Caricamento automatico traduzioni
-- Fallback su lingua predefinita
-- Cache delle traduzioni
-- Supporto per più lingue
-
-### Configurazione
+### Traduzioni in Blade
 ```php
-// config/xot.php
+{{ __('auth.failed') }}
+
+@lang('auth.failed')
+
+{{ trans_choice('messages.apples', 10, ['count' => 10]) }}
+
+@choice('messages.apples', 10, ['count' => 10])
+```
+
+### Traduzioni in JavaScript
+```php
+// resources/js/translations.js
+window.translations = {
+    'auth.failed': '{{ __("auth.failed") }}',
+    'auth.throttle': '{{ __("auth.throttle", ["seconds" => 60]) }}',
+};
+```
+
+## Strumenti Utili
+
+### Comandi Artisan
+```bash
+# Pubblicare le traduzioni
+php artisan vendor:publish --tag=laravel-translations
+
+# Generare le traduzioni
+php artisan make:translation
+
+# Esportare le traduzioni
+php artisan translation:export
+```
+
+### Middleware
+```php
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+
+class SetLocale
+{
+    public function handle(Request $request, Closure $next)
+    {
+        if ($request->has('lang')) {
+            app()->setLocale($request->get('lang'));
+        }
+
+        return $next($request);
+    }
+}
+```
+
+## Gestione degli Errori
+
+### Traduzioni Mancanti
+```php
+use Illuminate\Support\Facades\Log;
+
+try {
+    $translation = __('missing.translation');
+} catch (\Exception $e) {
+    Log::warning('Traduzione mancante', [
+        'key' => 'missing.translation',
+        'locale' => app()->getLocale(),
+    ]);
+}
+```
+
+### Fallback
+```php
+use Illuminate\Support\Facades\Lang;
+
+Lang::get('missing.translation', [], 'en');
+```
+
+## Traduzioni Dinamiche
+
+### Database
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Translation extends Model
+{
+    protected $fillable = [
+        'key',
+        'value',
+        'locale',
+    ];
+
+    public static function getTranslation($key, $locale = null)
+    {
+        $locale = $locale ?? app()->getLocale();
+        
+        return static::where('key', $key)
+            ->where('locale', $locale)
+            ->value('value');
+    }
+}
+```
+
+### Cache
+```php
+use Illuminate\Support\Facades\Cache;
+
+$translation = Cache::remember(
+    "translation.{$key}.{$locale}",
+    now()->addDay(),
+    function () use ($key, $locale) {
+        return Translation::getTranslation($key, $locale);
+    }
+);
+```
+
+# Traduzioni
+
+## Sintassi Array
+
+Per le traduzioni, utilizzare **sempre** la sintassi breve degli array PHP:
+
+```php
+// ✅ CORRETTO - Short array syntax
 return [
-    'translations' => [
-        'default_locale' => 'it',
-        'fallback_locale' => 'en',
-        'cache_translations' => true,
-        'cache_key' => 'translations',
-        'cache_duration' => 3600,
+    'navigation' => [
+        'name' => 'Nome',
+        'group' => [
+            'name' => 'Gruppo',
+            'description' => 'Descrizione'
+        ]
+    ]
+];
+
+// ❌ ERRATO - Long array syntax
+return array(
+    'navigation' => array(
+        'name' => 'Nome',
+        'group' => array(
+            'name' => 'Gruppo',
+            'description' => 'Descrizione'
+        )
+    )
+);
+```
+
+## Gruppi di Menu
+
+### Schede
+Il gruppo "Schede" contiene tutte le schede di valutazione del sistema:
+
+- **Schede Dipendenti** (`individuale_dip.php`)
+  - Gestione delle schede di valutazione dei dipendenti
+  - Icona: `performance-employee-document`
+  - Ordinamento: 31
+
+- **Schede PO** (`individuale_po.php`)
+  - Gestione delle schede di valutazione delle Posizioni Organizzative
+  - Icona: `performance-po-document`
+  - Ordinamento: 32
+
+- **Schede Regionali** (`individuale_regionale.php`)
+  - Gestione delle schede di valutazione regionali
+  - Icona: `performance-region-document`
+  - Ordinamento: 33
+
+## Regole per le Icone SVG
+
+1. **Posizione dei file SVG**:
+   - I file SVG devono essere posizionati nella cartella `resources/svg` del modulo corrispondente
+   - Esempio: `/laravel/Modules/Performance/resources/svg/`
+
+2. **Convenzione di denominazione**:
+   - Nome del file: `nome-icona.svg` (tutto in minuscolo)
+   - Riferimento nel file di traduzione: `modulo-nome-icona`
+   - Esempio: Se il modulo è "Performance" e il file è `region-document.svg`, il riferimento sarà `performance-region-document`
+
+3. **Struttura del file SVG**:
+   - Deve essere un SVG valido con viewBox="0 0 24 24"
+   - Utilizzare `currentColor` per il colore del tracciato
+   - Mantenere una larghezza e altezza di 24px
+   - Includere l'header XML
+
+4. **Best Practices**:
+   - Utilizzare tracciati semplici e chiari
+   - Mantenere la coerenza con lo stile delle altre icone
+   - Testare l'icona in diverse dimensioni
+   - Verificare la leggibilità in chiaro e scuro
+
+### Campi Comuni
+Tutte le schede condividono i seguenti campi comuni:
+
+```php
+'fields' => [
+    'periodo' => [
+        'label' => 'Periodo',
+        'placeholder' => 'Seleziona il periodo',
+        'help' => 'Periodo di valutazione'
     ],
+    'risultati_ottenuti' => [
+        'label' => 'Risultati Ottenuti',
+        'placeholder' => 'Valuta i risultati',
+        'help' => 'Valutazione dei risultati raggiunti'
+    ],
+    'qualita_prestazione' => [
+        'label' => 'Qualità della Prestazione',
+        'placeholder' => 'Valuta la qualità',
+        'help' => 'Valutazione della qualità del lavoro'
+    ],
+    'arricchimento_professionale' => [
+        'label' => 'Arricchimento Professionale',
+        'placeholder' => 'Valuta l\'arricchimento',
+        'help' => 'Valutazione della crescita professionale'
+    ],
+    'impegno' => [
+        'label' => 'Impegno',
+        'placeholder' => 'Valuta l\'impegno',
+        'help' => 'Valutazione dell\'impegno profuso'
+    ],
+    'esperienza_acquisita' => [
+        'label' => 'Esperienza Acquisita',
+        'placeholder' => 'Valuta l\'esperienza',
+        'help' => 'Valutazione dell\'esperienza maturata'
+    ],
+    'ha_diritto' => [
+        'label' => 'Ha Diritto',
+        'placeholder' => 'Indica se ha diritto alla valutazione',
+        'help' => 'Stato del diritto alla valutazione'
+    ],
+    'motivo' => [
+        'label' => 'Motivo',
+        'placeholder' => 'Specifica il motivo',
+        'help' => 'Motivazione della valutazione'
+    ],
+    'mail_sended_at' => [
+        'label' => 'Data Invio Mail',
+        'placeholder' => 'Data di invio della mail',
+        'help' => 'Data in cui è stata inviata la mail di notifica'
+    ]
+]
+```
+
+### Azioni
+Tutte le schede condividono le seguenti azioni:
+
+```php
+'actions' => [
+    'copy_from_organizzativa' => [
+        'label' => 'Copia da Organizzativa',
+        'help' => 'Copia i dati dalla scheda organizzativa'
+    ]
+]
+```
+
+### Messaggi
+Tutte le schede condividono i seguenti messaggi di sistema:
+
+```php
+'messages' => [
+    'success' => [
+        'created' => 'Scheda creata con successo',
+        'updated' => 'Scheda aggiornata con successo',
+        'deleted' => 'Scheda eliminata con successo'
+    ],
+    'error' => [
+        'created' => 'Errore durante la creazione della scheda',
+        'updated' => 'Errore durante l\'aggiornamento della scheda',
+        'deleted' => 'Errore durante l\'eliminazione della scheda'
+    ]
+]
+```
+
+## Modulo User
+
+### Struttura Base
+Il modulo User utilizza la seguente struttura per le traduzioni:
+
+```php
+return [
+    'navigation' => [
+        'name' => 'Utenti',
+        'plural' => 'Utenti',
+        'group' => [
+            'name' => 'Gestione Utenti',
+            'description' => 'Gestione degli utenti e dei loro permessi'
+        ],
+        'label' => 'Utenti',
+        'sort' => 26,
+        'icon' => 'user-main'
+    ],
+    'fields' => [
+        // Campi del modulo
+    ],
+    'actions' => [
+        // Azioni disponibili
+    ],
+    'messages' => [
+        // Messaggi di sistema
+    ],
+    'validation' => [
+        // Messaggi di validazione
+    ],
+    'permissions' => [
+        // Permessi
+    ],
+    'model' => [
+        'label' => 'Utente'
+    ]
 ];
 ```
 
-### Metodi Principali
-```php
-// Carica tutte le traduzioni per una lingua
-LangService::loadTranslations(string $locale): array
+### Campi Principali
+I campi principali del modulo User includono:
 
-// Ottiene una traduzione con fallback
-LangService::get(string $key, array $replace = []): string
+- **Campi di Identità**:
+  - `id`: Identificativo univoco
+  - `name`: Nome utente
+  - `email`: Indirizzo email
+  - `email_verified_at`: Data di verifica email
 
-// Verifica esistenza traduzione
-LangService::has(string $key): bool
+- **Campi di Sicurezza**:
+  - `password`: Password
+  - `password_confirmation`: Conferma password
+  - `current_password`: Password attuale
+  - `password_expires_at`: Scadenza password
 
-// Aggiunge traduzioni runtime
-LangService::add(string $key, string $value): void
-```
+- **Campi di Stato**:
+  - `status`: Stato dell'utente (Attivo/Inattivo/Bloccato)
+  - `verified`: Stato di verifica
+  - `last_login`: Ultimo accesso
 
-## Esempi Comuni
+### Azioni Disponibili
+Le azioni principali includono:
+- Creazione utente
+- Modifica utente
+- Eliminazione utente
+- Impersonificazione
+- Blocco/Sblocco
+- Invio link reset password
+- Verifica email
 
-### Resource
-```php
-// Definizione traduzioni
-'resources' => [
-    'polizza_convenzione' => [
-        'label' => 'Polizza in Convenzione',
-        'columns' => [
-            'numero_adesione' => 'Numero Adesione',
-        ],
-    ],
-],
+### Messaggi di Sistema
+I messaggi di sistema includono notifiche per:
+- Creazione/Modifica/Eliminazione utente
+- Blocco/Sblocco utente
+- Invio link reset password
+- Verifica email
+- Impersonificazione
 
-// Utilizzo in Resource
-TextColumn::make('numero_adesione')
-```
+### Validazione
+Le regole di validazione includono:
+- Unicità email
+- Lunghezza minima password
+- Conferma password
+- Verifica password attuale
 
-### Form
-```php
-// Definizione traduzioni
-'forms' => [
-    'cliente' => [
-        'fields' => [
-            'nome' => 'Nome',
-            'cognome' => 'Cognome',
-        ],
-    ],
-],
-
-// Utilizzo in Form
-TextInput::make('nome')
-TextInput::make('cognome')
-```
-
-### Actions
-```php
-// Definizione traduzioni
-'actions' => [
-    'save' => 'Salva',
-    'cancel' => 'Annulla',
-    'delete' => [
-        'label' => 'Elimina',
-        'confirm' => 'Sei sicuro?',
-    ],
-],
-
-// Utilizzo in Actions
-Action::make('save')
-Action::make('delete')
-
-### Versione HEAD
-
-```
-
-## Nuove Best Practices
-
-### 1. Gestione Errori
-- Traduzioni per messaggi di errore
-- Codici errore standardizzati
-- Messaggi di errore descrittivi
-- Supporto multilingua per errori
-
-### 2. Validazione
-- Traduzioni per regole di validazione
-- Messaggi di validazione personalizzati
-- Supporto per regole custom
-- Coerenza nei messaggi
-
-### 3. SEO
-- Traduzioni per meta tag
-- Descrizioni multilingua
-- Keywords localizzate
-- URL localizzati
-
-### 4. Accessibilità
-- Testi alternativi per immagini
-- Descrizioni per elementi interattivi
-- Messaggi di stato
-- Supporto per screen reader
-
-### 5. Performance
-- Lazy loading traduzioni
-- Bundle per lingua
-- Preload traduzioni critiche
-- Ottimizzazione cache
-
-### 6. Testing
-- Verifica traduzioni mancanti
-- Test di coerenza
-- Validazione formati
-- Test di performance
-
-## Collegamenti tra versioni di translations.md
-* [translations.md](../../../chart/project_docs/translations.md)
-* [translations.md](../../../reporting/project_docs/translations.md)
-* [translations.md](../../../gdpr/project_docs/translations.md)
-* [translations.md](../../../notify/project_docs/translations.md)
-* [translations.md](../../../xot/project_docs/roadmap/lang/translations.md)
-* [translations.md](../../../xot/project_docs/translations.md)
-* [translations.md](../../../dental/project_docs/translations.md)
-* [translations.md](../../../user/project_docs/translations.md)
-* [translations.md](../../../ui/project_docs/translations.md)
-* [translations.md](../../../lang/project_docs/packages/translations.md)
-* [translations.md](../../../lang/project_docs/translations.md)
-* [translations.md](../../../job/project_docs/translations.md)
-* [translations.md](../../../media/project_docs/translations.md)
-* [translations.md](../../../tenant/project_docs/translations.md)
-* [translations.md](../../../activity/project_docs/translations.md)
-* [translations.md](../../../patient/project_docs/translations.md)
-* [translations.md](../../../cms/project_docs/translations.md)
-* [translations.md](../../../Chart/project_docs/translations.md)
-* [translations.md](../../../Reporting/project_docs/translations.md)
-* [translations.md](../../../Gdpr/project_docs/translations.md)
-* [translations.md](../../../Notify/project_docs/translations.md)
-* [translations.md](../../../Xot/project_docs/roadmap/lang/translations.md)
-* [translations.md](../../../Xot/project_docs/translations.md)
-* [translations.md](../../../Dental/project_docs/translations.md)
-* [translations.md](../../../User/project_docs/translations.md)
-* [translations.md](../../../UI/project_docs/translations.md)
-* [translations.md](../../../Lang/project_docs/packages/translations.md)
-* [translations.md](../../../Lang/project_docs/translations.md)
-* [translations.md](../../../Job/project_docs/translations.md)
-* [translations.md](../../../Media/project_docs/translations.md)
-* [translations.md](../../../Tenant/project_docs/translations.md)
-* [translations.md](../../../Activity/project_docs/translations.md)
-* [translations.md](../../../Patient/project_docs/translations.md)
-* [translations.md](../../../Cms/project_docs/translations.md)
-
-### Versione Incoming
-
-```
-
----
+### Permessi
+I permessi principali includono:
+- Visualizzazione utenti
+- Creazione utenti
+- Modifica utenti
+- Eliminazione utenti
+- Impersonificazione utenti
+- Gestione ruoli

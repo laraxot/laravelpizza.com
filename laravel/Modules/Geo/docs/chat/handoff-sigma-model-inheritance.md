@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "handoff sigma model inheritance"
+issues: []
+discussions: []
 title: "Handoff — Sigma Model Inheritance"
 type: handoff
 module: Sigma

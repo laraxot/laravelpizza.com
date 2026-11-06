@@ -47,8 +47,14 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
+    'messages' => [
+        'loading_calendar' => [
+            'message' => 'Kalender wird geladen...',
+        ],
     ],
-    'actions' => [
+    'test_page' => [
+        'form_state' => [
+            'label' => 'Formularstatus:',
+        ],
     ],
 ];

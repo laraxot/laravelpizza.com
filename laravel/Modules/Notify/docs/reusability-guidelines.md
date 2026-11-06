@@ -1,3 +1,15 @@
+---
+title: "reusability guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusability guidelines"
+issues: []
+discussions: []
+status: draft
+---
+
 # Linee Guida per la Riusabilità del Modulo Notify
 
 ## Principio Fondamentale

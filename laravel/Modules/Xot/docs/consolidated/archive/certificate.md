@@ -1,3 +1,11 @@
+---
+title: "_certificate"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_certificate xot"
+---
 # _certificate
 
 <!-- Contenuto migrato da _docs/_certificate.txt -->

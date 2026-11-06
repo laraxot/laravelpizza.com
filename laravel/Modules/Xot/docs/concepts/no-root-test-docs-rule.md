@@ -1,3 +1,9 @@
+---
+title: "Xot - no-root-test-docs-rule.md"
+module: Xot
+bmad: true
+status: active
+---
 # REGOLA CRITICA: Test Docs NEI MODULI/TEMI
 
 ## PROBLEMA

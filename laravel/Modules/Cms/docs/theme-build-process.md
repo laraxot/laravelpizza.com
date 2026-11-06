@@ -1,3 +1,15 @@
+---
+title: "theme build process"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme build process"
+issues: []
+discussions: []
+status: draft
+---
+
 # Processo di Build del Tema in il progetto
 
 Questo documento fornisce una panoramica del processo di build e pubblicazione del tema principale di il progetto. Per una documentazione più dettagliata, consultare il [documento completo nel modulo CMS](../../laravel/modules/cms/project_docs/theme-build-process.md).

@@ -1,3 +1,23 @@
+---
+title: "GitHub Issues & Discussions - Notify Platform"
+type: index
+tags: [notify, docs, github]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione github readme github issues & discussions - laraxot platform index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/readme.md
+  - ../integrations/readme.md
+  - ../templates/readme.md
+status: draft
+---
 # GitHub Issues & Discussions - FixCity Platform
 
 > **Last Updated**: 2026-03-13  
@@ -8,6 +28,7 @@
 ## 📋 Overview
 
 Questo documento traccia tutte le GitHub Issues e Discussions create per il progetto FixCity.
+Questo documento traccia tutte le GitHub Issues e Discussions create per il progetto Notify.
 
 ---
 
@@ -16,6 +37,7 @@ Questo documento traccia tutte le GitHub Issues e Discussions create per il prog
 ### Issue #5: 📁 Fix Database Directory Naming Convention
 
 **URL**: https://github.com/laraxot/base_fixcity_fila5/issues/5  
+**URL**: https://github.com/laraxot/platform/issues/5  
 **Created**: 2026-03-13  
 **Author**: @marco76tv  
 **Labels**: `documentation`, `good first issue`  
@@ -26,7 +48,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 
 #### Files Fixed
 - [x] `laravel/Modules/Blog/docs/structure.md`
-- [x] `laravel/Modules/Blog/docs/CHANGELOG_2025-10.md`
+- [x] `laravel/Modules/Blog/docs/CHANGELOG-blog-module-ottobre.md`
 - [x] `laravel/Modules/Blog/docs/models/README.md`
 - [x] `laravel/Modules/Blog/docs/models/transaction-removal.md`
 - [x] `AGENTS.md` (added naming convention rule)
@@ -39,6 +61,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 - [ ] Cms
 - [ ] Comment
 - [ ] Fixcity
+- [ ] App
 - [ ] Gdpr
 - [ ] Geo
 - [ ] Job
@@ -55,6 +78,10 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 #### References
 - [Database Naming Convention](conventions/database-naming.md)
 - [AGENTS.md](../../AGENTS.md)
+- [agents.md](../../agents.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../AGENTS.md)
+- [agents.md](../agents.md)
 
 ---
 
@@ -63,6 +90,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 ### Discussion #1: 📁 Database Directory Naming Best Practices
 
 **URL**: https://github.com/laraxot/base_fixcity_fila5/discussions/1  
+**URL**: https://github.com/laraxot/platform/discussions/1  
 **Created**: 2026-03-13  
 **Author**: @marco76tv  
 **Category**: General  
@@ -166,6 +194,7 @@ Discussion per standardizzare la convention delle directory del database in tutt
 - `module:blog` - Blog module
 - `module:cms` - Cms module
 - `module:fixcity` - Fixcity module
+- `module:laraxot` - App module
 - `module:user` - User module
 - `module:xot` - Xot module
 - [Add more as needed]
@@ -249,3 +278,4 @@ For questions about GitHub usage:
 
 **Maintainer**: @marco76tv  
 **Contact**: dev @fixcity.example.com
+**Contact**: dev @laraxot.example.com

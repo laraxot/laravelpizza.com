@@ -1,3 +1,14 @@
+---
+title: "development"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "development"
+issues: []
+discussions: []
+---
+
 # Filosofia di Sviluppo
 
 Principi, pratiche e workflow di sviluppo per il progetto PTVX.
@@ -153,6 +164,14 @@ class User extends XotBaseModel
 
 ---
 
+title: "development"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "development"
+issues: []
+discussions: []
 ## 🛠️ Pratiche di Sviluppo
 
 ### Actions over Services

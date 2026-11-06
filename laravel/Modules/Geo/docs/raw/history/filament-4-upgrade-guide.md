@@ -1,3 +1,14 @@
+---
+title: "filament 4 upgrade guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 4 upgrade guide"
+issues: []
+discussions: []
+---
+
 # Guida alla Conversione Filament 3 → Filament 4
 
 ## Panoramica
@@ -257,6 +268,14 @@ La conversione a Filament 4 è un'operazione complessa che richiede:
 Ogni modifica deve essere documentata e tutti gli errori PHPStan devono essere corretti prima di considerare la conversione completata.
 
 ---
+title: "filament 4 upgrade guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 4 upgrade guide"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Dicembre 2024*
 *Autore: Sistema di Conversione Automatizzato*
 *Revisione: In corso*

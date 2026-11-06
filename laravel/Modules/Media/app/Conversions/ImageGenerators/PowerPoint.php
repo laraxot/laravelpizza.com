@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://spatie.be/docs/laravel-medialibrary/v11/converting-other-file-types/creating-a-custom-image-generator
  */
-
-declare(strict_types=1);
 
 namespace Modules\Media\Conversions\ImageGenerators;
 

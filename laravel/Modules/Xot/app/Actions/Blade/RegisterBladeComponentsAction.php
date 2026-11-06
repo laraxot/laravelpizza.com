@@ -17,7 +17,7 @@ class RegisterBladeComponentsAction
     {
         $comps = app(GetComponentsAction::class)->execute($path, $namespace.'\View\Components', $prefix);
 
-        if (0 === $comps->count()) {
+        if ($comps->count() === 0) {
             return;
         }
 

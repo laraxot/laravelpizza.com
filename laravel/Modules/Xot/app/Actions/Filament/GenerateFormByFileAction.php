@@ -1,19 +1,14 @@
 <?php
 
+declare(strict_types=1);
 /**
  * -WIP.
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
-
-use function Safe\file;
-
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Finder\SplFileInfo as File;
 use Webmozart\Assert\Assert;
@@ -25,8 +20,10 @@ class GenerateFormByFileAction
     /**
      * Genera un form Filament basato su un file di risorsa.
      *
-     * @param File $file Il file della risorsa Filament
+     * WIP: la generazione dello schema non e' implementata, oggi si conta soltanto. Per riscrivere il corpo di
+     * form() usare GetMethodBodyAction come fa GenerateTableColumnsByFileAction per table().
      *
+     * @param  File  $file  Il file della risorsa Filament
      * @return int Numero di input aggiunti
      */
     public function execute(File $file): int
@@ -79,20 +76,6 @@ class GenerateFormByFileAction
             return 0;
         }
 
-        $form_method = $reflection_class->getMethod('form');
-        $start_line = $form_method->getStartLine() - 1;
-        // it's actually - 1, otherwise you wont get the function() block
-        $end_line = $form_method->getEndLine();
-        $length = $end_line - $start_line;
-        Assert::string($file_name = $form_method->getFileName(), '['.__LINE__.']['.class_basename($this).']');
-        // $contents= $file->getContents();
-        $source = file($file_name);
-        Assert::isArray($source);
-        $body = '';
-        foreach (\array_slice($source, $start_line, $length) as $line) {
-            $body .= SafeStringCastAction::cast($line);
-        }
-
         // Otteniamo i metodi della classe risorsa
         $resourceMethods = get_class_methods($resourceInstance);
 
@@ -100,7 +83,7 @@ class GenerateFormByFileAction
         $inputCount = 0;
         foreach ($fillable as $field) {
             if (in_array($field, $resourceMethods)) {
-                ++$inputCount;
+                $inputCount++;
             }
         }
 
@@ -110,7 +93,7 @@ class GenerateFormByFileAction
     /**
      * Mostra informazioni di debug su un file.
      *
-     * @param File $file Il file da analizzare
+     * @param  File  $file  Il file da analizzare
      */
     public function ddFile(File $file): void
     {

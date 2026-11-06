@@ -1,3 +1,11 @@
+---
+title: "Regole generali su roles, permissions e guard_name"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole generali su roles, permissions e guard_name xot"
+---
 # Regole generali su roles, permissions e guard_name
 
 ## Regola generale

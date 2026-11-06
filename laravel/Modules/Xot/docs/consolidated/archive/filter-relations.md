@@ -3,6 +3,11 @@ title: Filter Relations Action
 description: Filter Relations Model with Queuable Action
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filter relations action {#filter-relations} xot"
 ---
 
 # Filter Relations Action {#filter-relations}

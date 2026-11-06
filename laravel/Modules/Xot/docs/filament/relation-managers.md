@@ -1,3 +1,13 @@
+---
+title: "XotBaseRelationManager per Laraxot PTVX"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, filament]
+qmd: "XotBaseRelationManager per Laraxot PTVX"
+---
 # XotBaseRelationManager per Laraxot PTVX
 
 ## Panoramica
@@ -30,9 +40,9 @@ use Filament\Tables\Columns\TextColumn;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-
+    
     protected static ?string $recordTitleAttribute = 'nome_attributo';
-
+    
     // Resto dell'implementazione...
 }
 ```
@@ -118,17 +128,13 @@ Il trait `HasXotTable` fornisce funzionalità aggiuntive per la gestione delle t
 - Formattazione uniforme dei dati
 - Gestione avanzata dei filtri e delle ricerche
 
-**⚠️ IMPORTANTE**: `XotBaseRelationManager` **già include** `HasXotTable` (riga 32). **NON aggiungere** `use HasXotTable;` nelle classi che estendono `XotBaseRelationManager` - è **ridondante** e viola il principio DRY!
-
-Vedi [Regole Anti-Ridondanza](./redundancy-rules.md) per maggiori dettagli.
-
 ## Best Practices
 
 1. **Sempre estendere XotBaseRelationManager**:
    ```php
    // ✅ CORRETTO
    class MioRelationManager extends XotBaseRelationManager
-
+   
    // ❌ ERRATO
    class MioRelationManager extends RelationManager
    ```
@@ -142,7 +148,7 @@ Vedi [Regole Anti-Ridondanza](./redundancy-rules.md) per maggiori dettagli.
    ```php
    TextColumn::make('nome')
        ->label(trans('nomemodulo::relation.fields.nome.label'))
-
+       
    // ❌ ERRATO
    TextColumn::make('nome')
        ->label('Nome')
@@ -195,10 +201,6 @@ Per garantire la compatibilità con PHPStan livello 9, assicurarsi di:
 5. Evitare l'uso del tipo `mixed` quando possibile
 
 ## Collegamenti alla Documentazione Correlata
-
-- [Filament Resources](/laravel/modules/xot/docs/filament/resources.md)
-- [HasXotTable Trait](/laravel/modules/xot/docs/filament/xot_table.md)
-- [Regole di Traduzione](/laravel/modules/xot/docs/translation_rules.md)
 
 - [Filament Resources](/laravel/Modules/Xot/docs/filament/resources.md)
 - [HasXotTable Trait](/laravel/Modules/Xot/docs/filament/xot_table.md)

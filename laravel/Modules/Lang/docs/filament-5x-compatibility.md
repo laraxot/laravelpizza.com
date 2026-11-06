@@ -1,3 +1,15 @@
+---
+title: "filament 5x compatibility"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5x compatibility"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament 5.x compatibility - modulo Lang
 
 **Versione Filament:** v5.2.1
@@ -8,7 +20,7 @@ Il modulo Lang è **compatibile** con Filament 5.x. Nessun breaking change funzi
 
 ## Note specifiche modulo
 
-- `LangServiceProvider` gestisce le traduzioni automatiche per tutte le labels Filament — non impattato dall'upgrade
+- `LangServiceProvider` gestisce le traduzioni automatiche per tutte le labels Filament: non impattato dall'upgrade
 - Le traduzioni in `Modules/{ModuleName}/lang/` restano compatibili
 
 ## Regole architetturali

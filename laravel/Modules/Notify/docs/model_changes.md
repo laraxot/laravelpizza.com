@@ -1,3 +1,15 @@
+---
+title: "model changes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model changes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Modifiche al Modello MailTemplate
 
 ## Modifiche Implementate (2024-03-20)

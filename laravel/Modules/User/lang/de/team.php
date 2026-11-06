@@ -10,7 +10,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei team e delle loro autorizzazioni',
         ],
-        'label' => 'team',
+        'label' => 'Team',
         'sort' => '18',
         'icon' => 'user-team',
     ],

@@ -1,4 +1,10 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff contract stacking basescheda"
+issues: []
+discussions: []
 title: "handoff — contract stacking BaseScheda"
 type: handoff
 module: Ptv

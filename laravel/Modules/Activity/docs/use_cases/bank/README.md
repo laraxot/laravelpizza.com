@@ -1,3 +1,11 @@
+---
+title: "Bank Use Case: Approcci Event Sourcing e Tradizionale"
+type: index
+status: draft
+updated: 2026-10-23
+tags: [docs, activity, use_cases]
+qmd: "bank use case: approcci event sourcing e tradizionale activity"
+---
 # Bank Use Case: Approcci Event Sourcing e Tradizionale
 
 ## Introduzione
@@ -46,6 +54,12 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - Projectors aggiornano viste leggibili (es. saldo, storico)
 - Audit trail completo, facile rollback
 - Più complesso, ma molto flessibile
+
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](../..) |
 
 ### 3. Event Sourcing con Eventsauce
 - Simile ai projectors, ma con una libreria dedicata (Eventsauce)

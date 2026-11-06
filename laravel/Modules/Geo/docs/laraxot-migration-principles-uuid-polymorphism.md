@@ -1,3 +1,15 @@
+---
+title: "laraxot migration principles uuid polymorphism"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laraxot migration principles uuid polymorphism"
+issues: []
+discussions: []
+status: draft
+---
+
 # Principi Migrazioni Laraxot: UUID e Polimorfismo Context-Aware
 
 ## Executive Summary
@@ -228,7 +240,7 @@ $table->index(['morphable_id', 'morphable_type']); // Performance
 
 ### **Esempi Pratici**
 - [Activity Migration](../laravel/Modules/Activity/database/migrations/2024_01_15_103351_create_activity_table.php)
-- [User UUID Model](../laravel/Modules/User/app/Models/User.php)
+- [User UUID Model](../../User/app/Models/User.php)
 - [Admin Integer Model](../laravel/Modules/<nome progetto>/app/Models/Admin.php)
 
 ### **Tools e Validazione**

@@ -41,7 +41,6 @@ Before submitting a pull request:
 If the project maintainer has any additional requirements, you will find them listed here.
 
 - **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/psr-2-coding-style-guide.md)** - The standard can be enforced by running the `composer lint` console command.
-
 - **Add tests!** - Your patch won't be accepted if it doesn't have tests.
 
 - **Document any change in behaviour** - Make sure the `README.md` and any other relevant documentation are kept up-to-date.

@@ -1,4 +1,16 @@
-# Filament Schemas Unificati — Regola Canonica
+---
+title: "schemas unified religion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schemas unified religion"
+issues: []
+discussions: []
+status: draft
+---
+
+# Filament Schemas Unificati: Regola Canonica
 
 **Status**: Active  
 **Created**: 2026-04-14  
@@ -7,7 +19,6 @@
 **Audience**: All developers + AI agents
 
 ---
-
 ## Tesi
 
 In Filament 5.x esiste **un solo sistema di schema**: `Filament\Schemas\Schema`.
@@ -139,6 +150,7 @@ use Filament\Schemas\Components\Text;
 use Illuminate\Support\HtmlString;
 
 Text::make(new HtmlString((string) __('fixcity::privacy.notice.html')))
+Text::make(new HtmlString((string) __('ptv::privacy.notice.html')))
 ```
 
 ### Anti-pattern
@@ -172,3 +184,4 @@ TextInput::make('review_title')
 - Filament Infolists Overview: https://filamentphp.com/docs/5.x/infolists/overview
 - Filament Schemas Prime Components: https://filamentphp.com/docs/5.x/schemas/primes
 - Placeholder source locale: [Placeholder.php](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/vendor/filament/forms/src/Components/Placeholder.php)
+- Placeholder source locale: [Placeholder.php](/var/www/_bases/base_ptv_fila5/laravel/Themes/Sixteen/vendor/filament/forms/src/Components/Placeholder.php)

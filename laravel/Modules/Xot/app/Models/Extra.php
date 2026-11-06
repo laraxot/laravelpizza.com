@@ -13,18 +13,18 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
 /**
  * Model Extra.
  *
- * @property string                    $id
- * @property string                    $model_type
- * @property string                    $model_id
+ * @property string $id
+ * @property string $model_type
+ * @property string $model_id
  * @property SchemalessAttributes|null $extra_attributes
- * @property Carbon|null               $created_at
- * @property Carbon|null               $updated_at
- * @property string|null               $updated_by
- * @property string|null               $created_by
- * @property Carbon|null               $deleted_at
- * @property string|null               $deleted_by
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
  *
- * @method static ExtraFactory          factory($count = null, $state = [])
+ * @method static ExtraFactory factory($count = null, $state = [])
  * @method static Builder<static>|Extra newModelQuery()
  * @method static Builder<static>|Extra newQuery()
  * @method static Builder<static>|Extra query()
@@ -46,6 +46,4 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @mixin \Eloquent
  */
-final class Extra extends BaseExtra
-{
-}
+final class Extra extends BaseExtra {}

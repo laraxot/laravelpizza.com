@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/shuvroroy/filament-spatie-laravel-health/tree/main
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
@@ -13,6 +12,7 @@ use Filament\Notifications\Notification;
 use Filament\Widgets\WidgetConfiguration;
 use Illuminate\Support\Facades\Artisan;
 use Laraxot\SmtpHealthCheck\SmtpCheck;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 use Modules\Xot\Filament\Widgets\HealthOverviewWidget;
 use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
 use Spatie\Health\Checks\Check;
@@ -38,6 +38,8 @@ use Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck;
 
 class HealthPage extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     /**
      * @var array<string, string>
      */
@@ -77,14 +79,17 @@ class HealthPage extends XotBasePage
             $checks[] = SmtpCheck::new();
         }
 
-        /*
-         * PHPStan Level 10: CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck
-         * all extend Check, but their types are not recognized due to dynamic loading.
-         * We suppress this specific error as the runtime type is guaranteed to be correct.
-         *
-         * @phpstan-ignore-next-line argument.type
-         */
-        Health::checks($checks);
+        // CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck are optional packages;
+        // filter to only actual Check instances so the array type is guaranteed.
+        /** @var array<int, Check> $filteredChecks */
+        $filteredChecks = [];
+        foreach ($checks as $check) {
+            if ($check instanceof Check) {
+                $filteredChecks[] = $check;
+            }
+        }
+
+        Health::checks($filteredChecks);
         Artisan::call(RunHealthChecksCommand::class);
         $this->dispatch('refresh-component');
         Notification::make()

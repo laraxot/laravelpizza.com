@@ -1,3 +1,15 @@
+---
+title: "FILAMENT VERSION POLICY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FILAMENT VERSION POLICY"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 Filament Version Policy - ALWAYS LATEST
 
 **Data**: 2026-03-30  
@@ -30,7 +42,7 @@ Filament è gestito dai moduli.
 
 ```json
 {
-    "name": "fixcity/module-name",
+    "name": "ptv/module-name",
     "require": {
         "php": "^8.2",
         "filament/filament": "^5.0",
@@ -256,7 +268,6 @@ composer update "filament/*" -W
 - [ ] No old versions
 
 ---
-
 **Stato**: ✅ **POLITICA UFFICIALE - SEMPRE FILAMENT 5**  
 **Versione Attuale**: **Filament 5.x**  
 **Prossimo Aggiornamento**: **Quando esce Filament 6**  

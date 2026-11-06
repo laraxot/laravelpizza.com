@@ -1,7 +1,15 @@
 ---
+title: "coordinate picker fullscreen wizard contract"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker fullscreen wizard contract"
+issues: []
+discussions: []
 name: coordinate-picker-fullscreen-wizard-contract
 description: Geo CoordinatePicker fullscreen contract inside wizard layouts
 type: concept
+status: draft
 ---
 
 # Coordinate Picker Fullscreen Wizard Contract

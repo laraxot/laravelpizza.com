@@ -1,3 +1,24 @@
+---
+title: "Regola: 1 Modello = 1 Migrazione + 1 Seeder"
+type: rule
+tags: [model, migration, seeder, rule]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "model-migration-seeder-rule regola: 1 modello = 1 migrazione + 1 seeder"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+---
+
 # Regola: 1 Modello = 1 Migrazione + 1 Seeder
 
 ## Principio Base

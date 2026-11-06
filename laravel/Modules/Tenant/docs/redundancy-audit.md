@@ -1,11 +1,16 @@
 ---
+updated: 2026-09-26
+qmd: "redundancy audit"
+issues: []
+discussions: []
 title: "Tenant redundancy audit 2026-05-21"
 type: audit
 module: Tenant
 tags: [redundancy, factories, seeders, casing]
 created: 2026-05-21
 related:
-  - https://github.com/laraxot/base_fixcity_fila5/issues/89
+  - https://github.com/laraxot/platform/issues/89
+status: draft
 ---
 
 # Tenant redundancy audit 2026-05-21

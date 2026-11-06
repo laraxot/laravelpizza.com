@@ -13,7 +13,7 @@ class UIDatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('UIDatabaseSeeder: entity seeders…');
         }
 
@@ -23,7 +23,7 @@ class UIDatabaseSeeder extends Seeder
             FieldOptionSeeder::class,
         ]);
 
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('UIDatabaseSeeder: completato.');
         }
     }

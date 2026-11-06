@@ -1,3 +1,15 @@
+---
+title: "filament resources"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament resources"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Resources nel CMS
 
 ## Struttura Directory
@@ -95,7 +107,7 @@ return [
 - Usa sempre i file di traduzione invece dei label hardcoded
 
 ## Collegamenti Bidirezionali
-- [README](readme.md) - Documentazione principale del modulo
+- [README](README.md) - Documentazione principale del modulo
 - [Integrazione Filament](filament-integration.md) - Integrazione con Filament
 - [Componenti](filament-components.md) - Componenti Filament
 - [Form](filament-forms.md) - Sistema di form
@@ -113,7 +125,7 @@ return [
 ## Collegamenti tra versioni di filament-resources.md
 * [filament-resources.md](docs/tecnico/filament/filament-resources.md)
 * [filament-resources.md](docs/regole/filament-resources.md)
-* [filament-resources.md](laravel/modules/gdpr/project_docs/filament-resources.md)
+* [filament-resources.md](../../Gdpr/docs/filament-resources.md)
 * [filament-resources.md](laravel/modules/xot/project_docs/filament-resources.md)
 * [filament-resources.md](laravel/modules/cms/project_docs/filament-resources.md)
 

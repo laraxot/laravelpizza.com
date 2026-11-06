@@ -67,14 +67,14 @@ declare(strict_types=1);
                                 icon="heroicon-m-user"
                                 :href="route('profile.show')"
                             >
-                                {{ __('Profile') }}
+                                {{ __('cms::block_headernav.user_menu.profile.label') }}
                             </x-filament::dropdown.list.item>
 
                             <x-filament::dropdown.list.item
                                 icon="heroicon-m-cog"
                                 :href="route('profile.show')"
                             >
-                                {{ __('Settings') }}
+                                {{ __('cms::block_headernav.user_menu.settings.label') }}
                             </x-filament::dropdown.list.item>
 
                             <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
@@ -85,7 +85,7 @@ declare(strict_types=1);
                                     icon="heroicon-m-arrow-right-on-rectangle"
                                     type="submit"
                                 >
-                                    {{ __('Log Out') }}
+                                    {{ __('cms::block_headernav.user_menu.logout.label') }}
                                 </x-filament::dropdown.list.item>
                             </form>
                         </x-filament::dropdown.list>

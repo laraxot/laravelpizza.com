@@ -1,3 +1,11 @@
+---
+title: "machine_learning"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "machine_learning xot"
+---
 # machine_learning
 
 <!-- Contenuto migrato da _docs/machine_learning.txt -->

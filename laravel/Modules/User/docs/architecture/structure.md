@@ -1,3 +1,24 @@
+---
+title: "Modulo User"
+type: concept
+tags: [structure]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "structure modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./architecture-rules.md"
+  - "./architecture.md"
+  - "./auth-blade-structure.md"
+  - "./component-registration.md"
+  - "./README.md"
+  - "./testing-structure.md"
+  - "./user-gdpr-decoupling.md"
+  - "./user-gdpr-oupling.md"
+status: draft
+---
+
 # Modulo User
 
 Data: 2025-04-23 19:09:56

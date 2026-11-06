@@ -1,3 +1,15 @@
+---
+title: "logging performance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "logging performance"
+issues: []
+discussions: []
+status: draft
+---
+
 # Logging Performance Optimization
 
 ## Rule: NEVER USE Log::info()

@@ -1,12 +1,24 @@
+---
+title: "smart slug generation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "smart slug generation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Generazione Intelligente di Slug in Filament
 
 ## Introduzione
 
-Questo documento analizza un approccio avanzato per la generazione di slug da titoli nei form Filament, con particolare attenzione alla preservazione degli slug per i contenuti già pubblicati. Questa metodologia è particolarmente rilevante per il modulo Notify di Quaeris, in particolare per la gestione dei template email.
+Questo documento analizza un approccio avanzato per la generazione di slug da titoli nei form Filament, con particolare attenzione alla preservazione degli slug per i contenuti già pubblicati. Questa metodologia è particolarmente rilevante per il modulo Notify di <nome progetto>, in particolare per la gestione dei template email.
 
 ## Concetto Base
 
-La generazione automatica di slug a partire da un campo titolo è una pratica comune che migliora l'usabilità dei form. Tuttavia, una volta che un contenuto viene pubblicato, modificare lo slug può causare problemi di accessibilità (errori 404) per gli URL esistenti. 
+La generazione automatica di slug a partire da un campo titolo è una pratica comune che migliora l'usabilità dei form. Tuttavia, una volta che un contenuto viene pubblicato, modificare lo slug può causare problemi di accessibilità (errori 404) per gli URL esistenti.
 
 L'approccio qui documentato implementa una logica più sofisticata che:
 
@@ -51,12 +63,12 @@ TextInput::make('name')
         if ($operation === 'edit' && $record->isPublished()) {
             return;
         }
-        
+
         // Non aggiornare lo slug se è stato modificato manualmente
         if (($get('slug') ?? '') !== Str::slug($old)) {
             return;
         }
-        
+
         // Aggiorna lo slug solo se le condizioni sopra non sono verificate
         $set('slug', Str::slug($state));
     })
@@ -69,7 +81,7 @@ TextInput::make('slug')
     ->required()
     ->maxLength(255)
     ->unique(MailTemplate::class, 'slug', fn ($record) => $record)
-    ->disabled(fn (?string $operation, ?Model $record) => 
+    ->disabled(fn (?string $operation, ?Model $record) =>
         $operation === 'edit' && $record->isPublished())
 ```
 
@@ -98,7 +110,7 @@ public function isPublished(): bool
     if ($this->logs()->count() > 0) {
         return true;
     }
-    
+
     // O basata su un flag specifico
     return (bool) $this->is_published;
 }
@@ -119,23 +131,23 @@ public static function getFormSchema(): array
                 if ($operation === 'edit' && $record && $record->isPublished()) {
                     return;
                 }
-                
+
                 // Non aggiornare lo slug se è stato modificato manualmente
                 if (($get('slug') ?? '') !== Str::slug($old)) {
                     return;
                 }
-                
+
                 // Aggiorna lo slug solo se le condizioni sopra non sono verificate
                 $set('slug', Str::slug($state));
             }),
-            
+
         'slug' => TextInput::make('slug')
             ->required()
             ->unique(MailTemplate::class, 'slug', fn ($record) => $record)
             ->maxLength(255)
-            ->disabled(fn (?string $operation, ?Model $record) => 
+            ->disabled(fn (?string $operation, ?Model $record) =>
                 $operation === 'edit' && $record && $record->isPublished()),
-            
+
         // Altri campi...
     ];
 }
@@ -168,7 +180,7 @@ public static function getFormSchema(): array
 ### 1. Pacchetto TitleWithSlugInput
 
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./TITLE_WITH_SLUG_COMPONENT.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
-Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./TITLE_WITH_SLUG_COMPONENT.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
+Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 
 ### 2. Reindirizzamenti Automatici
 
@@ -182,7 +194,7 @@ In alternativa o in aggiunta, è possibile implementare un sistema di reindirizz
 
 L'implementazione di una generazione intelligente di slug per i template email migliora significativamente la stabilità e l'usabilità del sistema. Preservando gli slug dei template pubblicati, si prevengono problemi di accessibilità e si garantisce un'esperienza utente coerente.
 
-Per il modulo Notify di Quaeris, questa soluzione rappresenta un equilibrio ottimale tra automazione e controllo, con particolare attenzione alla preservazione dei link esistenti.
+Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilibrio ottimale tra automazione e controllo, con particolare attenzione alla preservazione dei link esistenti.
 
 ## Riferimenti
 
@@ -191,6 +203,6 @@ Per il modulo Notify di Quaeris, questa soluzione rappresenta un equilibrio otti
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Componente TitleWithSlug](./TITLE_WITH_SLUG_COMPONENT.md)
 - [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Componente TitleWithSlug](./TITLE_WITH_SLUG_COMPONENT.md)
-- [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
+- [Implementazione Modello con Slug](./model_slug_implementation.md)
+- [Componente TitleWithSlug](./title_with_slug_component.md)
+- [Miglioramenti UI/UX per Slug](./ui_ux_enhancements.md)

@@ -1,3 +1,15 @@
+---
+title: "lit leaflet light dom fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lit leaflet light dom fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Lit + Leaflet: Light DOM Fix
 
 > **PROBLEMA**: I componenti Lit che usano Leaflet non funzionano correttamente perché Leaflet manipola il DOM direttamente e non è compatibile con Shadow DOM.

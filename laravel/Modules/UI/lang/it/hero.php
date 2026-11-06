@@ -15,7 +15,7 @@ return [
         'view' => ['label' => 'view', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
     ],
     'sections' => [
-        'empty' => ['heading' => 'empty'],
+        'empty' => ['heading' => ''],
     ],
     'label' => 'Hero',
     'plural_label' => 'Hero (Plurale)',
@@ -25,7 +25,7 @@ return [
         'group' => ['name' => 'General', 'description' => 'General Settings'],
         'label' => 'Hero',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => ['label' => 'Crea Hero'],

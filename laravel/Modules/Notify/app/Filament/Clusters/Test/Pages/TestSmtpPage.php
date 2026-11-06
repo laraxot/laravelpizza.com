@@ -20,7 +20,7 @@ use Modules\Notify\Datas\SmtpData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Override;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 use Webmozart\Assert\Assert;
 
 /**
@@ -28,6 +28,8 @@ use Webmozart\Assert\Assert;
  */
 class TestSmtpPage extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     /** @var array<string, mixed>|null */
     public ?array $emailData = [];
 
@@ -48,6 +50,7 @@ class TestSmtpPage extends XotBasePage
     {
         Assert::isArray($mail_config = config('mail'));
         $smtpConfig = Arr::get($mail_config, 'mailers.smtp');
+        Assert::isArray($smtpConfig, 'Config mail.mailers.smtp mancante: impossibile precompilare il form SMTP');
 
         $this->emailData['subject'] = 'test';
         $defaultEmail = XotData::make()->super_admin;
@@ -55,42 +58,38 @@ class TestSmtpPage extends XotBasePage
         return $schema->components([
             Section::make('SMTP')
                 ->schema([
-                    TextInput::make('host'),
-                    // ->default($smtpConfig['host'])
-                    TextInput::make('port')->numeric(),
-                    // ->default($smtpConfig['port'])
-                    TextInput::make('username'),
-                    // ->default($smtpConfig['username'])
-                    TextInput::make('password'),
-                    // ->default($smtpConfig['password'])
-                    TextInput::make('encryption'),
-                    // ->default($smtpConfig['encryption'])
+                    TextInput::make('host')->default(Arr::get($smtpConfig, 'host')),
+                    TextInput::make('port')->numeric()->default(Arr::get($smtpConfig, 'port')),
+                    TextInput::make('username')->default(Arr::get($smtpConfig, 'username')),
+                    // Il segreto SMTP non viene mai precompilato nel browser: va digitato per il test.
+                    TextInput::make('password')->password()->revealable(),
+                    // Laravel 11+ usa `scheme`, le config legacy `encryption`.
+                    TextInput::make('encryption')->default(Arr::get($smtpConfig, 'scheme', Arr::get($smtpConfig, 'encryption'))),
                 ])
                 ->columns(3),
             Section::make('MAIL')
                 ->schema([
                     TextInput::make('from_email')
-                        // ->default(config('mail.from.address', $defaultEmail))
+                        ->default(config('mail.from.address', $defaultEmail))
                         ->email()
                         ->required(),
-                    TextInput::make('from'),
-                    // ->default(config('mail.from.name'))
+                    TextInput::make('from')->default(config('mail.from.name')),
                     TextInput::make('recipient')
-                        // ->default($defaultEmail)
+                        ->default($defaultEmail)
                         ->email()
                         ->required(),
                     TextInput::make('subject')->default('test')->required(),
                     RichEditor::make('body_html')
                         ->default('test body')
                         ->required()
-                        ->columnSpanFull(),
-                ])
-                ->columns(3),
-        ])->statePath('emailData');
+                        ->columnSpanFull()])
+                ->columns(3)])->statePath('emailData');
     }
 
     public function sendEmail(): void
     {
+        abort_unless(static::canAccess(), 403);
+
         $data = $this->emailForm->getState();
         $smtp = SmtpData::from($data);
         $emailData = EmailData::from($data);
@@ -111,15 +110,13 @@ class TestSmtpPage extends XotBasePage
         return ['emailForm'];
     }
 
-    /** @return array<string, \Filament\Actions\Action> */
+    /** @return array<string, Action> */
     protected function getEmailFormActions(): array
     {
         return [
-            'submit' => Action::make('emailFormActions')->submit('emailFormActions'),
-        ];
+            'submit' => Action::make('emailFormActions')->submit('emailFormActions')];
     }
 
-    #[Override]
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();

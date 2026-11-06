@@ -1,3 +1,11 @@
+---
+title: "Modulo Xot - Ottimizzazioni per Modularità"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "modulo xot - ottimizzazioni per modularità xot"
+---
 # Modulo Xot - Ottimizzazioni per Modularità
 
 ## Problemi Identificati

@@ -30,7 +30,7 @@ Docs updated:
 
 - `laravel/Modules/Cms/docs/phpstan-syntax-blockers-2026-03-10.md`
 - `laravel/Modules/User/docs/phpstan-syntax-blockers-2026-03-10.md`
-- `laravel/Themes/Meetup/docs/phpstan-module-blockers-impact-2026-03-10.md`
+- `laravel/Themes/Meetup/docs/phpstan-module-blockers-impact.md`
 
 Additional cluster finished after the intermediate update:
 

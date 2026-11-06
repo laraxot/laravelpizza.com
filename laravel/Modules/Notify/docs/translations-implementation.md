@@ -1,3 +1,15 @@
+---
+title: "translations implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translations implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Stato dell'Implementazione delle Traduzioni nel Modulo Notify
 
 ## Panoramica
@@ -126,3 +138,7 @@ Per garantire la coerenza futura, si raccomanda di:
 - [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
 - [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
 - [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
+- [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
+- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation_keys_rules.md)
+- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation_keys_best_practices.md)
+- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation-keys-best-practices.md)

@@ -13,7 +13,7 @@ class ViewSection extends LangBaseViewRecord
 {
     public static string $resource = SectionResource::class;
 
-    #[\Override]
+    /** @return array<string, mixed> */
     protected function getInfolistSchema(): array
     {
         // $view='pub_theme::components.sections.'.$this->record->slug;

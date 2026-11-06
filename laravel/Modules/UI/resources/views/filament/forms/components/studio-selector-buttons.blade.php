@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{-- Componente per la selezione di studi odontoiatrici tramite pulsanti --}}
 <x-dynamic-component
@@ -17,7 +16,7 @@ declare(strict_types=1);
     }" class="space-y-4">
         {{-- Header con titolo --}}
         <div class="text-xl font-medium text-gray-900 dark:text-white">
-            Gli Studi Odontoiatrici più vicini a te
+            {{ __('ui::studio-selector.sections.buttons.title') }}
         </div>
 
         {{-- Lista degli studi come pulsanti/card --}}
@@ -72,7 +71,7 @@ declare(strict_types=1);
                                 type="button"
                                 class="inline-flex items-center justify-center py-1 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                             >
-                                Prenota
+                                {{ __('ui::studio-selector.card.actions.book') }}
                             </button>
                         </div>
                     </div>
@@ -83,7 +82,7 @@ declare(strict_types=1);
         {{-- Messaggio se non ci sono studi --}}
         @if (count($studios) === 0)
             <div class="text-center py-4 text-gray-500 dark:text-gray-400">
-                Nessuno studio trovato con i criteri di ricerca selezionati.
+                {{ __('ui::studio-selector.buttons.empty.message') }}
             </div>
         @endif
     </div>

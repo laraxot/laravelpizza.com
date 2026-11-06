@@ -1,3 +1,14 @@
+---
+title: "FullCalendar Component"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui, components]
+qmd: "fullcalendar component ui"
+---
+
 # FullCalendar Component
 
 ## Introduction
@@ -13,8 +24,8 @@ The FullCalendar component is implemented following these principles:
 
 ## Links to Detailed Documentation
 
-- [UI Component Documentation](../laravel/modules/ui/docs/components/full-calendar.md)
-- [Implementation in Ptv Module](../laravel/modules/ptv/docs/features/full-calendar.md)
+- [UI Component Documentation](../laravel/Modules/UI/docs/components/full-calendar.md)
+- [Implementation in Ptv Module](../laravel/Modules/Ptv/docs/features/full-calendar.md)
 - [Cursor Implementation Rules](../.cursor/rules/full_calendar_rules.mdc)
 - [Windsurf Implementation Rules](../.windsurf/rules/full_calendar_rules.mdc)
 
@@ -24,7 +35,7 @@ The FullCalendar component is implemented following these principles:
 2. **Component Placement**: All Blade UI components must be in `Modules/UI/resources/views/components/ui/`
 3. **Migrations**: Follow standard migration rules (extending `XotBaseMigration`, no `down()`, etc.)
 4. **Translations**: All labels and messages must come from translation files
-5. **PHPStan**: Code must pass PHPStan validation level 10+
+5. **PHPStan**: Code must pass PHPStan validation level 9+
 6. **Naming Convention**: All class names and attributes must be in English following Laravel conventions
 
 ## Technologies Used
@@ -43,4 +54,4 @@ When making changes to the FullCalendar component:
 4. Verify compliance with rules in Cursor and Windsurf .mdc files
 5. Ensure all class names and attributes follow English naming conventions
 
-*
+*Last updated: June 2025*

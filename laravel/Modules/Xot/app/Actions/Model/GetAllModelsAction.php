@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 

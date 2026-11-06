@@ -14,7 +14,7 @@ class TeamInvitationForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'team_id' => Select::make('team_id')

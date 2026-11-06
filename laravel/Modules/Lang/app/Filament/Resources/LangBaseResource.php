@@ -6,6 +6,8 @@ namespace Modules\Lang\Filament\Resources;
 
 use Illuminate\Support\Facades\Config; // Temporaneamente commentato per compatibilità Filament 4.x
 use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
+use Modules\Lang\Actions\ResolveDefaultTranslatableLocaleAction;
+use Modules\Lang\Actions\ResolveTranslatableLocalesAction;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 abstract class LangBaseResource extends XotBaseResource
@@ -15,7 +17,7 @@ abstract class LangBaseResource extends XotBaseResource
     // Temporaneamente commentato per compatibilità Filament 4.x
     public static function getDefaultTranslatableLocale(): string
     {
-        return Config::string('app.locale', 'it');
+        return app(ResolveDefaultTranslatableLocaleAction::class)->execute(Config::string('app.locale', 'it'));
     }
 
     /**
@@ -23,6 +25,6 @@ abstract class LangBaseResource extends XotBaseResource
      */
     public static function getTranslatableLocales(): array
     {
-        return ['it', 'en'];
+        return app(ResolveTranslatableLocalesAction::class)->execute();
     }
 }

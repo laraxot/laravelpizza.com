@@ -1,5 +1,26 @@
-# stats
+---
+module: theme
+topic: stats
+canonical: ../../../Themes/docs/shared-components/stats.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+title: "stats"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "stats user"
+---
 
-<!-- Contenuto migrato da _docs/stats.txt -->
-
-https://github.com/spatie/filament-simple-stats/blob/main/src/SimpleStat.php
+See canonical documentation: ../../../Themes/docs/shared-components/stats.md

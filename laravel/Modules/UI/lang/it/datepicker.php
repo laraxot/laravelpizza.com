@@ -49,7 +49,7 @@ return [
         ],
         'label' => 'Datepicker',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [
@@ -80,6 +80,16 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Datepicker',
+        ],
+    ],
+    'messages' => [
+        'loading_calendar' => [
+            'message' => 'Caricamento calendario...',
+        ],
+    ],
+    'test_page' => [
+        'form_state' => [
+            'label' => 'Stato del form:',
         ],
     ],
 ];

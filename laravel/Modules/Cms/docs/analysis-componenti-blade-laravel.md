@@ -1,3 +1,15 @@
+---
+title: "analysis componenti blade laravel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analysis componenti blade laravel"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Corretta dei Componenti Blade in Laravel
 
 Questo documento definisce le linee guida per l'analisi e l'identificazione corretta dei componenti Blade in Laravel, con particolare attenzione all'ecosistema il progetto.

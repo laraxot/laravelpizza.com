@@ -1,7 +1,15 @@
 ---
+title: "final constructor rule"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "final constructor rule"
+issues: []
+discussions: []
 name: final-constructor-rule
 description: Prevent overriding final __construct() from Filament Field base class.
 type: concept
+status: draft
 ---
 
 # Final Constructor Rule

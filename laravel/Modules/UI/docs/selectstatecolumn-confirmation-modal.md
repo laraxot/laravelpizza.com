@@ -1,3 +1,15 @@
+---
+title: "selectstatecolumn confirmation modal"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "selectstatecolumn confirmation modal"
+issues: []
+discussions: []
+status: draft
+---
+
 # SelectStateColumn - Aggiunta Modal di Conferma
 
 ## Panoramica

@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione dei moduli e delle estensioni',
         ],
-        'label' => 'module',
+        'label' => 'Modul',
         'sort' => '17',
         'icon' => 'xot-module',
     ],

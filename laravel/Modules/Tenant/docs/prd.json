@@ -9,7 +9,7 @@
     "Stabilizzare bootstrap tenant-aware"
   ],
   "nonGoals": [
-    "Gestire contenuti editoriali o prediction logic"
+    "Gestire contenuti editoriali o forecast logic"
   ],
   "dependencies": [
     "User",

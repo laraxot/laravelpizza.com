@@ -1,3 +1,15 @@
+---
+title: "links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "links"
+issues: []
+discussions: []
+status: draft
+---
+
 //---- making documentation
 
 https://github.com/42coders/document-templates
@@ -49,3 +61,14 @@ https://laravel-bootstrap-components.com/themes/liara/features
 
 
 
+
+
+## Contenuto originale (txt)
+
+---
+module: theme
+topic: links
+canonical: ../../../Themes/docs/shared-components/links-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/links-Modules.md

@@ -1,3 +1,28 @@
+---
+title: "Filament 4: Namespace Actions - Filosofia Laraxot"
+type: concept
+tags: [filament, actions, namespace]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-4-actions-namespace filament 4: namespace actions - filosofia laraxot"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Filament 4: Namespace Actions - Filosofia Laraxot
 
 **Data Creazione**: 2025-01-22
@@ -212,7 +237,7 @@ grep -r "Filament\\\\Actions" laravel/Modules/*/app/
 
 ## 📚 Riferimenti
 
-- [Filament 4 Migration Guide](../../xot/docs/filament-4-migration-guide.md)
+- [Filament 4 Migration Guide](../../Xot/docs/filament-4-migration-guide.md)
 - [PHPStan Errors Philosophy](./phpstan-errors-philosophy.md)
 - [Filament 4 Documentation](https://filamentphp.com/docs/4.x)
 

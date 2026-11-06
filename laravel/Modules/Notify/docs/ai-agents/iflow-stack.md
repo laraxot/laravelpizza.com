@@ -1,9 +1,20 @@
+---
+title: "iflow stack"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow stack"
+issues: []
+discussions: []
+status: draft
+---
+
 # IFLOW Tech Stack
 
 Stack tecnologico del progetto.
 
 ---
-
 ## Backend
 
 | Tecnologia | Descrizione |

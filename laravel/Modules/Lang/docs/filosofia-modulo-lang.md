@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Analisi Approfondita del Modulo Lang"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Analisi Approfondita del Modulo Lang
 
 > **Generato**: 2025-12-24
@@ -147,7 +161,7 @@ $post->getTranslation('title', 'it')  // 'Titolo'
 - Form fields salvano JSON multilingua
 
 **Quando usare XotBase:**
-- Modulo NON ha contenuti multilingua (User, TechPlanner, UI)
+- Modulo NON ha contenuti multilingua (User, modulo operativo, UI)
 - Standard Laravel/Filament workflow
 - Traduzioni solo per UI, non per contenuti
 

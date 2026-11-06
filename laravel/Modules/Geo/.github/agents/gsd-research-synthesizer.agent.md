@@ -1,4 +1,12 @@
 ---
+title: "gsd research synthesizer.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd research synthesizer.agent"
+issues: []
+discussions: []
 name: gsd-research-synthesizer
 description: Synthesizes research outputs from parallel researcher agents into SUMMARY.md. Spawned by /gsd-new-project after 4 researcher agents complete.
 tools: ['read', 'edit', 'execute']

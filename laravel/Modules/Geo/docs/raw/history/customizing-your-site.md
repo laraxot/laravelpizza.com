@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "customizing your site"
+issues: []
+discussions: []
 title: Customizing Your Site
 description: Customizing your Jigsaw docs site
 extends: _layouts.documentation

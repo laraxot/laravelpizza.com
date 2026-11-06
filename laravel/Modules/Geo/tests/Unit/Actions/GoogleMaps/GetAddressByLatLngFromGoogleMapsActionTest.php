@@ -5,67 +5,126 @@ declare(strict_types=1);
 namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
 
 use GuzzleHttp\Client;
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\GoogleMaps\GetAddressByLatLngFromGoogleMapsAction;
-use Modules\Geo\Datas\LocationData;
+use Modules\Geo\Tests\LightTestCase;
+use PHPUnit\Framework\Assert;
 
-beforeEach(function () {
-    $mockHandler = new MockHandler();
+use function Safe\json_encode;
+
+uses(LightTestCase::class);
+it('throws exception when api key is not configured', function (): void {
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
-    $action = new GetAddressByLatLngFromGoogleMapsAction($this->client);
-});
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
 
-it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => $action->execute(45.4642, 9.1900))
-        ->toThrow(RuntimeException::class, 'Google Maps API key not configured');
+    try {
+        $action->execute(45.4642, 9.1900);
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Google Maps API key not configured', $exception->getMessage());
+    }
 });
 
 it('throws exception for invalid latitude below -90', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => $action->execute(-91.0, 9.1900))
-        ->toThrow(InvalidArgumentException::class, 'Invalid latitude');
+    try {
+        $action->execute(-91.0, 9.1900);
+        Assert::fail('Expected InvalidArgumentException was not thrown');
+    } catch (\Throwable $exception) {
+        Assert::assertInstanceOf(\InvalidArgumentException::class, $exception);
+        Assert::assertSame('Invalid latitude', $exception->getMessage());
+    }
 });
 
 it('throws exception for invalid latitude above 90', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => $action->execute(91.0, 9.1900))
-        ->toThrow(InvalidArgumentException::class, 'Invalid latitude');
+    try {
+        $action->execute(91.0, 9.1900);
+        Assert::fail('Expected InvalidArgumentException was not thrown');
+    } catch (\Throwable $exception) {
+        Assert::assertInstanceOf(\InvalidArgumentException::class, $exception);
+        Assert::assertSame('Invalid latitude', $exception->getMessage());
+    }
 });
 
 it('throws exception for invalid longitude below -180', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => $action->execute(45.0, -181.0))
-        ->toThrow(InvalidArgumentException::class, 'Invalid longitude');
+    try {
+        $action->execute(45.0, -181.0);
+        Assert::fail('Expected InvalidArgumentException was not thrown');
+    } catch (\Throwable $exception) {
+        Assert::assertInstanceOf(\InvalidArgumentException::class, $exception);
+        Assert::assertSame('Invalid longitude', $exception->getMessage());
+    }
 });
 
 it('throws exception for invalid longitude above 180', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => $action->execute(45.0, 181.0))
-        ->toThrow(InvalidArgumentException::class, 'Invalid longitude');
+    try {
+        $action->execute(45.0, 181.0);
+        Assert::fail('Expected InvalidArgumentException was not thrown');
+    } catch (\Throwable $exception) {
+        Assert::assertInstanceOf(\InvalidArgumentException::class, $exception);
+        Assert::assertSame('Invalid longitude', $exception->getMessage());
+    }
 });
 
 it('throws exception for guzzle exception', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
+    $mockHandler->append(new RequestException('Error', new Request('GET', 'http://test')));
 
-    expect(fn () => $action->execute(45.4642, 9.1900))
-        ->toThrow(RuntimeException::class, 'Failed to get address from coordinates');
+    try {
+        $action->execute(45.4642, 9.1900);
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Failed to get address from coordinates', $exception->getMessage());
+    }
 });
 
 it('throws exception when no results found', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([
@@ -73,11 +132,20 @@ it('throws exception when no results found', function (): void {
         'results' => [],
     ])));
 
-    expect(fn () => $action->execute(45.4642, 9.1900))
-        ->toThrow(RuntimeException::class, 'No address found');
+    try {
+        $action->execute(45.4642, 9.1900);
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('No address found', $exception->getMessage());
+    }
 });
 
 it('throws exception for invalid response status', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([
@@ -85,11 +153,20 @@ it('throws exception for invalid response status', function (): void {
         'results' => [],
     ])));
 
-    expect(fn () => $action->execute(45.4642, 9.1900))
-        ->toThrow(RuntimeException::class, 'No address found');
+    try {
+        $action->execute(45.4642, 9.1900);
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('No address found', $exception->getMessage());
+    }
 });
 
 it('returns location data for valid coordinates', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([
@@ -107,14 +184,17 @@ it('returns location data for valid coordinates', function (): void {
 
     $result = $action->execute(45.4642, 9.1900);
 
-    expect($result)
-        ->toBeInstanceOf(LocationData::class)
-        ->and($result->address)->toBe('Via Roma, Milano, MI, Italia')
-        ->and($result->latitude)->toBe(45.4642)
-        ->and($result->longitude)->toBe(9.1900);
+    Assert::assertSame('Via Roma, Milano, MI, Italia', $result->address);
+    Assert::assertSame(45.4642, $result->latitude);
+    Assert::assertSame(9.1900, $result->longitude);
 });
 
 it('handles boundary latitude values', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([
@@ -132,12 +212,15 @@ it('handles boundary latitude values', function (): void {
 
     $result = $action->execute(90.0, 0.0);
 
-    expect($result)
-        ->toBeInstanceOf(LocationData::class)
-        ->and($result->latitude)->toBe(90.0);
+    Assert::assertSame(90.0, $result->latitude);
 });
 
 it('handles boundary longitude values', function (): void {
+    $mockHandler = new MockHandler;
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressByLatLngFromGoogleMapsAction($client);
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([
@@ -155,7 +238,5 @@ it('handles boundary longitude values', function (): void {
 
     $result = $action->execute(0.0, 180.0);
 
-    expect($result)
-        ->toBeInstanceOf(LocationData::class)
-        ->and($result->longitude)->toBe(180.0);
+    Assert::assertSame(180.0, $result->longitude);
 });

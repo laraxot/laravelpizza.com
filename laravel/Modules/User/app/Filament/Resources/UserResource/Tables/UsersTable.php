@@ -4,31 +4,54 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\Tables;
 
-use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\BulkAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ExportBulkAction;
+use Illuminate\Support\Facades\Gate;
+use Modules\User\Filament\Actions\ChangePasswordAction;
+use Modules\User\Filament\Resources\UserResource;
+use Modules\Xot\Contracts\UserContract;
 
-class UsersTable extends XotBaseResourceTable
+class UsersTable extends BaseUsersTable
 {
+    protected static ?string $resource = UserResource::class;
+
     /**
-     * @return array<string, Column>
+     * Azioni condivise: la verifica email viene dalla base, quelle di gestione
+     * password/disattivazione appartengono alla tabella utenti concreta.
+     *
+     * @return array<int|string, Action|ActionGroup>
      */
-    public function getTableColumns(): array
+    public function getTableActions(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable(),
-            'name' => TextColumn::make('name')->searchable(),
-            'first_name' => TextColumn::make('first_name')->searchable(),
-            'last_name' => TextColumn::make('last_name')->searchable(),
-            'email' => TextColumn::make('email')->searchable(),
-            'email_verified_at' => TextColumn::make('email_verified_at')->dateTime(),
-            'is_active' => TextColumn::make('is_active')->badge(),
-            'is_otp' => TextColumn::make('is_otp')->badge(),
-            'lang' => TextColumn::make('lang'),
-            'current_team_id' => TextColumn::make('current_team_id'),
-            'type' => TextColumn::make('type'),
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
-            'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(),
+            ...parent::getTableActions(),
+            'change_password' => ChangePasswordAction::make()
+                ->iconButton(),
+            'deactivate' => Action::make('deactivate')
+                ->color('danger')
+                ->icon('heroicon-o-trash')
+                ->authorize('delete')
+                ->requiresConfirmation()
+                ->action(static function (UserContract $record): void {
+                    // Cancella (soft delete), non disattiva: BaseUserPolicy::delete vieta se stessi e i super-admin.
+                    Gate::authorize('delete', $record);
+
+                    $record->delete();
+                }),
+        ];
+    }
+
+    /**
+     * @return array<string, BulkAction>
+     */
+    public function getTableBulkActions(): array
+    {
+        return [
+            'delete' => DeleteBulkAction::make(),
+            'export' => ExportBulkAction::make(),
         ];
     }
 }

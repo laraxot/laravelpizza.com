@@ -1,9 +1,20 @@
+---
+title: "start here"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "start here"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 START HERE - PTVX Project Documentation
 
 **Welcome!** This is your entry point to comprehensive PTVX documentation.
 
 ---
-
 ## 🚀 Quick Navigation (Choose Your Path)
 
 ### 👨‍💻 I'm a New Developer
@@ -11,7 +22,7 @@
 **Read This**:
 1. **[📖 Root README](./README.md)** (10 min) - Project overview
 2. **[🏗️ Architecture Rules](./claude/architecture-rules.md)** (15 min) - ⚠️ MUST READ
-3. **[📝 Conventions](./claude/conventions.md)** (10 min) - Coding standards
+3. **[📝 Conventions](./development/conventions.md)** (10 min) - Coding standards
 4. **[🚫 Common Pitfalls](./claude/common-pitfalls.md)** (10 min) - Avoid these
 
 **Time**: 45 minutes → Ready to code!
@@ -21,7 +32,7 @@
 ### 🔍 I Need to Understand the Code Quality Issues
 
 **Start Here**:
-1. **[✅ Analysis Complete](./ANALYSIS-COMPLETE.md)** (5 min) - What was done
+1. **[✅ Analysis Complete](./raw/history/analysis-complete.md)** (5 min) - What was done
 2. **[📊 IndennitaResponsabilita Analysis](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)** (15 min) - Key findings
 3. **[🔧 Rating Module Fix](../laravel/Modules/Rating/docs/schemaless-scope-fix.md)** (10 min) - What was fixed
 
@@ -69,17 +80,17 @@
 | Document | Topic | Time | Priority |
 |----------|-------|------|----------|
 | [Root README](./README.md) | Navigation hub | 10 min | 🔴 |
-| [Master Index](./MASTER-INDEX.md) | Complete map | 5 min | 🔴 |
+| [Master Index](./raw/history/master-index.md) | Complete map | 5 min | 🔴 |
 | [Claude Architecture](./claude/architecture-rules.md) | Core rules | 15 min | 🔴 |
-| [Analysis Complete](./ANALYSIS-COMPLETE.md) | Recent work | 5 min | 🟡 |
+| [Analysis Complete](./raw/history/analysis-complete.md) | Recent work | 5 min | 🟡 |
 
 ### Tier 2: Module Specific
 
 | Module | Entry Point | Analysis | Plan |
 |--------|-------------|----------|------|
 | IndennitaResponsabilita | [README](../laravel/Modules/IndennitaResponsabilita/docs/README.md) | [Summary](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md) | [Refactoring](../laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) |
-| Rating | [README](../laravel/Modules/Rating/docs/README.md) | [Scope Fix](../laravel/Modules/Rating/docs/schemaless-scope-fix.md) | [Consolidation](../laravel/Modules/Rating/docs/trait-consolidation-plan.md) |
-| Xot | [README](../laravel/Modules/Xot/docs/README.md) | N/A | N/A |
+| Rating | [README](../../Rating/docs/README.md) | [Scope Fix](../laravel/Modules/Rating/docs/schemaless-scope-fix.md) | [Consolidation](../laravel/Modules/Rating/docs/trait-consolidation-plan.md) |
+| Xot | [README](../../Xot/docs/README.md) | N/A | N/A |
 
 ### Tier 3: Reference
 
@@ -190,8 +201,8 @@ class MyPage extends Modules\Xot\Filament\Pages\XotBasePage { }
 
 | Category | Link |
 |----------|------|
-| **Master Index** | [Complete Map](./MASTER-INDEX.md) |
-| **Analysis** | [Complete 2025](./ANALYSIS-COMPLETE.md) |
+| **Master Index** | [Complete Map](./raw/history/master-index.md) |
+| **Analysis** | [Complete 2025](./raw/history/analysis-complete.md) |
 | **Claude AI** | [Guidelines](./claude/README.md) |
 | **Architecture** | [Rules](./claude/architecture-rules.md) |
 | **Module Index** | [All Modules](./claude/module-list.md) |
@@ -218,8 +229,8 @@ cat README-ANALYSIS.md
 
 ## 💡 Pro Tips
 
-1. **Use Master Index**: All docs are linked from [MASTER-INDEX.md](./MASTER-INDEX.md)
-2. **Check Analysis First**: [ANALYSIS-COMPLETE.md](./ANALYSIS-COMPLETE.md) has the summary
+1. **Use Master Index**: All docs are linked from [MASTER-INDEX.md](./raw/history/master-index.md)
+2. **Check Analysis First**: [ANALYSIS-COMPLETE.md](./raw/history/analysis-complete.md) has the summary
 3. **Follow Action Plan**: [Refactoring Plan](../laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) has step-by-step tasks
 4. **PHPStan is King**: Always run Level 10 before commit
 5. **Documentation Matters**: Update docs when you change code

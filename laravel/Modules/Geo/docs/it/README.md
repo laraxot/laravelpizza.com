@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚀 Toolkit di Automazione Git
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
@@ -15,15 +27,15 @@ Questo toolkit è una suite completa di script Bash progettata per automatizzare
 > **Nota:** I seguenti link puntano esclusivamente a moduli e documenti tecnici realmente necessari come dipendenza per l'utilizzo e la manutenzione degli script Bash di questo toolkit.
 
 ### Moduli Core e Dipendenze Tecniche
-- [Xot Module](../../laravel/Modules/Xot/docs/README.md)
+- [Xot Module](../../../Xot/docs/README.md)
   > Framework core e utilities condivise: fornisce convenzioni di struttura e helpers usati dagli script Bash.
-- [Lang Module](../../laravel/Modules/Lang/docs/README.md)
+- [Lang Module](../../../Lang/docs/README.md)
   > Gestione multilingua e sincronizzazione file di traduzione, utile per script di validazione e deploy.
-- [Job Module](../../laravel/Modules/Job/docs/README.md)
+- [Job Module](../../../Job/docs/README.md)
   > Esempi di automazione tramite job/queue, utile per script di sincronizzazione e manutenzione.
 
 ### Documentazione Tecnica Generale
-- [Convenzioni di Codice](../../docs/conventions/README.md)
+- [Convenzioni di Codice](../../../../../docs/conventions/README.md)
   > Standard di scrittura e naming per mantenere coerenza tra script e moduli.
 - [Standard di Sviluppo](../../docs/standards/README.md)
   > Linee guida generali per lo sviluppo e la manutenzione del progetto.
@@ -109,7 +121,6 @@ Le contribuzioni sono benvenute! Per favore, leggi le linee guida per i contribu
 Questo progetto è distribuito sotto la licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
 
 ---
-
 <div align="center">
   <sub>Built with ❤️ by the development team</sub>
 </div> 

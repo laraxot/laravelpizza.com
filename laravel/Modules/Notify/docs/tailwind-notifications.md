@@ -1,3 +1,15 @@
+---
+title: "tailwind notifications"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tailwind notifications"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Notifiche con Filament Components
 
 ## Introduzione
@@ -277,4 +289,4 @@ class NotificationListTest extends TestCase
 - [Documentazione Form](tailwind_forms.md)
 - [Documentazione Layout](tailwind_layouts.md)
 - [Documentazione Componenti](tailwind_components.md)
-- [Architettura](architecture.md)
+- [Architettura](ARCHITECTURE.md)

@@ -1,3 +1,13 @@
+---
+title: "DIVIETO ASSOLUTO DI IMPLEMENTARE table()"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, filament]
+qmd: "DIVIETO ASSOLUTO DI IMPLEMENTARE table()"
+---
 # DIVIETO ASSOLUTO DI IMPLEMENTARE table()
 
 ## Regola Fondamentale Inviolabile
@@ -35,7 +45,7 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-
+    
     /**
      * @return array<int, \Filament\Tables\Columns\Column>
      */
@@ -45,7 +55,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle colonne
         ];
     }
-
+    
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -55,7 +65,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle azioni nell'header
         ];
     }
-
+    
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -65,7 +75,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle azioni per riga
         ];
     }
-
+    
     /**
      * @return array<string, \Filament\Tables\Actions\BulkAction>
      */
@@ -93,7 +103,7 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-
+    
     // ❌ GRAVEMENTE ERRATO - MAI IMPLEMENTARE QUESTO METODO
     public function table(Table $table): Table
     {
@@ -133,5 +143,3 @@ Se trovi un `RelationManager` che implementa il metodo `table()`:
 - [Esempio TeamsRelationManager](/laravel/Modules/User/docs/filament/teams_relation_manager.md)
 
 *Ultimo aggiornamento: 3 Giugno 2025*
-- [Divieto di usare label(), placeholder() e helperText()](/laravel/modules/xot/docs/filament/no_labels.md)
-- [Esempio TeamsRelationManager](/laravel/modules/user/docs/filament/teams_relation_manager.md)

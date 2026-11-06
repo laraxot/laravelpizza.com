@@ -52,7 +52,6 @@ abstract class BasePivot extends Pivot
             'deleted_at' => 'datetime',
             'updated_by' => 'string',
             'created_by' => 'string',
-            'deleted_by' => 'string',
-        ];
+            'deleted_by' => 'string'];
     }
 }

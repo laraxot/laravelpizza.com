@@ -10,9 +10,10 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_predict_fila5/discussions/215"
 related:
-  - ../../../../Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
+  - ../../../Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
   - ../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md
-  - ../../composer.json
+  - ../../../composer.json
+status: draft
 ---
 
 # AI e composer root minimale
@@ -28,7 +29,7 @@ Dipendenze del dominio **AI** in `Modules/AI/composer.json`. Il root `laravel/co
 
 `laravel/composer.json` → merge **solo** `Modules/*/composer.json`. **Vietato** `Themes/*/composer.json` (nwidart owner = modulo; tema = vestito Blade/assets).
 
-Perché: [composer-merge-plugin-modules-only](../../../../Xot/docs/wiki/concepts/composer-merge-plugin-modules-only.md).
+Perché: [composer-merge-plugin-modules-only](../../../Xot/docs/wiki/concepts/composer-merge-plugin-modules-only.md).
 
 ## Riferimento
 

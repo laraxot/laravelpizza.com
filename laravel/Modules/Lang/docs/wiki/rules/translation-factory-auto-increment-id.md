@@ -1,5 +1,5 @@
 ---
-title: "Translation factory — auto-increment id"
+title: "Translation factory: auto-increment id"
 type: rule
 module: Lang
 tags: [lang, pest, factory, sqlite, auto-increment]
@@ -7,15 +7,18 @@ created: 2026-06-12
 updated: 2026-06-12
 qmd: "Lang TranslationFactory auto increment id sqlite unique constraint randomNumber factory"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/345"
+  - "https://github.com/laraxot/platform/issues/345"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+  - "https://github.com/laraxot/platform/discussions/273"
 related:
   - ../../../../../docs/wiki/rules/testing-modules-pest.md
   - ../../../../../docs/wiki/bmad/architecture-phpunit-central-config.md
+  - ../../../../../../docs/wiki/rules/testing-modules-pest.md
+  - ../../../../../../docs/wiki/bmad/architecture-phpunit-central-config.md
+status: draft
 ---
 
-# Translation factory — auto-increment id
+# Translation factory: auto-increment id
 
 ## Regola
 
@@ -31,7 +34,7 @@ Corretto: lasciare che sqlite/mysql assegnino l'id auto-increment.
 
 ## Perche'
 
-Durante i run Pest coverage di STORY-345, `TranslationFactory` ha generato un `id` gia' presente nel database condiviso `fixcity_data.sqlite`, causando:
+Durante i run Pest coverage di STORY-345, `TranslationFactory` ha generato un `id` gia' presente nel database condiviso `database.sqlite`, causando:
 
 ```text
 UNIQUE constraint failed: translations.id

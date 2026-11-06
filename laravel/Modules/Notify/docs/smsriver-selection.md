@@ -1,3 +1,15 @@
+---
+title: "smsriver selection"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "smsriver selection"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi: Spostamento Logica Selezione Driver in SmsData
 
 ## Contesto Attuale

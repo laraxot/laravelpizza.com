@@ -1,3 +1,16 @@
+---
+qmd: "dor emails"
+issues: []
+discussions: []
+title: "Email per i Dottori"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Email per i Dottori
 
 ## Introduzione
@@ -169,6 +182,7 @@ try {
 ## Collegamenti Correlati
 
 - [Documentazione Root](../../../../../docs/readme.md)
+- [Documentazione Root](../../../../docs/README.md)
 - [Documentazione Modulo Notify](./readme.md)
 - [Documentazione Template Email](./email_templates.md)
 - [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)

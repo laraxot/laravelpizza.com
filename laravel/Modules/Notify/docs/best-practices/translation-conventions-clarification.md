@@ -1,3 +1,23 @@
+---
+title: "Chiarimento sulle Convenzioni di Traduzione nel Modulo Notify"
+type: concept
+tags: [notify, docs, best-practices, translation, conventions, clarification]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices translation conventions clarification chiarimento sulle convenzioni di traduzione nel modulo notify frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: draft
+---
 # Chiarimento sulle Convenzioni di Traduzione nel Modulo Notify
 
 ## Identificazione di Convenzioni Contrastanti
@@ -90,3 +110,8 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 - [Convenzioni Generali di Traduzione](../../lang/docs/translation_keys_rules.md)
 - [Convenzioni Specifiche del Modulo Notify](./translation_conventions.md)
 - [Regole per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
+- [Regole per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
+- [Convenzioni Generali di Traduzione](../../../Lang/docs/translation_keys_rules.md)
+- [Convenzioni Specifiche del Modulo Notify](../translation_conventions.md)
+- [Regole per le Chiavi di Traduzione](../../../Lang/docs/translation_keys_best_practices.md)
+- [Regole per le Chiavi di Traduzione](../../../Lang/docs/translation-keys-best-practices.md)

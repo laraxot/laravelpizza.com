@@ -1,3 +1,12 @@
+---
+title: "PHPStan Roadmap: User Module"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "phpstan roadmap: user module user"
+status: superseded
+superseded_by: phpstan-roadmap-user-module.md
+---
 # PHPStan Roadmap: User Module
 
 **Date**: 2026-01-12

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://gist.github.com/ivanvermeyen/b72061c5d70c61e86875
  * @see https://gist.github.com/BenCavens/810758e74718a981c4cd2d2cf532407e
@@ -11,6 +10,7 @@ namespace Modules\Job\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
+use Modules\Job\Actions\BuildQueueWorkerCommandAction;
 
 use function Safe\exec;
 
@@ -51,19 +51,15 @@ class WorkerCheck extends Command
      */
     private function isQueueListenerRunning(): bool
     {
-        if (
-            ($pid = $this->getLastQueueListenerPID()) === '' ||
-                ($pid = $this->getLastQueueListenerPID()) === '0' ||
-                ($pid = $this->getLastQueueListenerPID()) === false ||
-                ($pid = $this->getLastQueueListenerPID()) === null
-        ) {
+        $pid = $this->getLastQueueListenerPID();
+        if (! is_string($pid) || ! ctype_digit($pid) || in_array($pid, ['0'], true)) {
             return false;
         }
 
-        $process_cmd = sprintf('ps -p %s -opid=,cmd=', $pid);
-        $this->comment($process_cmd);
+        $processCommand = sprintf('ps -p %s -opid=,cmd=', $pid);
+        $this->comment($processCommand);
         $output = null;
-        $process = exec($process_cmd, $output);
+        $process = exec($processCommand, $output);
         // $processIsQueueListener = str_contains($process, 'queue:listen'); // 5.1
         // if ($process === false) {
         // DISABILITATO PER SBLOCCARE MODULE JOB
@@ -123,16 +119,8 @@ class WorkerCheck extends Command
      */
     private function startQueueListener(): string
     {
-        // $command = 'php-cli ' . base_path() . '/artisan queue:listen --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!'; // 5.1
-        // $command = 'php-cli '.base_path().'/artisan queue:work --timeout=60 --sleep=5 --tries=3 > /dev/null & echo //$!'; // 5.6 - see comments
-
-        $command =
-            ' /usr/local/bin/php '.
-            base_path().
-            '/artisan queue:work --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!';
-        // $this->comment($command);
-
-        $pid = exec($command);
+        // timeout, sleep e tries vengono dalle impostazioni del modulo (JobConfigData, SettingPage).
+        $pid = exec(app(BuildQueueWorkerCommandAction::class)->execute());
         // if ($pid === false) {
         //    throw new Exception('['.__LINE__.']['.class_basename($this).']');
         // }

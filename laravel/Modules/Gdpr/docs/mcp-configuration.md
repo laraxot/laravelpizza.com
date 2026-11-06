@@ -1,3 +1,15 @@
+---
+title: "mcp configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp configuration"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Server Configuration - Gdpr Module
 
 
@@ -5,7 +17,6 @@
 **MCP Servers**: Asana, ClickUp, Filesystem, Database, Redmine (Planned)
 
 ---
-
 ## 📋 Overview
 
 The Gdpr module's MCP configuration enables AI assistants to interact with:

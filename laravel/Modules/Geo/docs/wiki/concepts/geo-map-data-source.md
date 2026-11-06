@@ -1,7 +1,15 @@
 ---
+title: "geo map data source"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map data source"
+issues: []
+discussions: []
 name: geo-map-data-source
 description: Data source configuration for Geo map components
 type: concept
+status: draft
 ---
 
 # Geo Map Data Source

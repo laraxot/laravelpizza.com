@@ -1,3 +1,11 @@
+---
+title: "Analisi Modelli, Factory e Seeder - Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "analisi modelli, factory e seeder - modulo activity activity"
+---
 # Analisi Modelli, Factory e Seeder - Modulo Activity
 
 ## Riepilogo Modelli

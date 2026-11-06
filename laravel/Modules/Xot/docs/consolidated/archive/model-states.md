@@ -1,3 +1,11 @@
+---
+title: "Laravel Model States"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "laravel model states xot"
+---
 # Laravel Model States
 
 ## Panoramica

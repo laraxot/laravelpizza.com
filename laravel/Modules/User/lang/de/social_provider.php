@@ -13,62 +13,11 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei provider social',
         ],
-        'label' => 'social provider',
+        'label' => 'Social-Provider',
         'sort' => '93',
         'icon' => 'user-user-social',
     ],
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'guard_name' => [
-            'label' => 'Guard',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'permissions' => [
-            'label' => 'Permessi',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'updated_at' => [
-            'label' => 'Aggiornato il',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'first_name' => [
-            'label' => 'Nome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'last_name' => [
-            'label' => 'Cognome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'select_all' => [
-            'name' => 'Seleziona Tutti',
-            'message' => '',
-            'label' => '',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+    'fields' => [],
     'actions' => [
         'import' => [
             'fields' => [

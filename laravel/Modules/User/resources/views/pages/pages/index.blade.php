@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-
 use Illuminate\View\View;
 use Modules\Cms\Models\Page;
 
@@ -16,17 +14,20 @@ render(function (View $view) {
     $hasCategory = \Schema::hasColumn('pages', 'category');
 
     // Recupero le pagine con paginazione (12 per pagina)
+    $searchQuery = request()->query('q');
+    $searchTerm = is_string($searchQuery) ? $searchQuery : '';
+
     $pages = Page::when(request()->has('q'), fn($query) => $query->where(
         'title',
         'like',
-        '%' . request()->get('q') . '%',
+        '%' . $searchTerm . '%',
     ));
 
     // Applichiamo il filtro per categoria solo se la colonna esiste
     if ($hasCategory) {
         $pages = $pages->when(request()->has('category'), fn($query) => $query->where(
             'category',
-            request()->get('category'),
+            request()->input('category'),
         ));
     }
 
@@ -52,14 +53,14 @@ render(function (View $view) {
 
 <x-layouts.marketing>
     <div class="max-w-[calc(100%-30px)] sm:max-w-[calc(100%-80px)] lg:max-w-[996px] mx-auto pb-12 font-roboto">
-        <nav class="flex py-3 text-sm text-gray-500" aria-label="Breadcrumb">
+        <nav class="flex py-3 text-sm text-gray-500" aria-label="{{ __('user::pages.fields.breadcrumb.label') }}">
             <ol class="inline-flex items-center space-x-1 md:space-x-3">
                 <li class="inline-flex items-center">
                     <a href="/{{ $locale }}" class="inline-flex items-center hover:text-primary-600 transition-colors">
                         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                         </svg>
-                        Home
+                        {{ __('user::layout.marketing_header.nav.home') }}
                     </a>
                 </li>
                 <li aria-current="page">
@@ -67,7 +68,7 @@ render(function (View $view) {
                         <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
-                        <span class="ml-1 font-medium text-gray-500 md:ml-2">Pagine</span>
+                        <span class="ml-1 font-medium text-gray-500 md:ml-2">{{ __('user::pages.breadcrumb.pages.label') }}</span>
                     </div>
                 </li>
             </ol>
@@ -75,10 +76,10 @@ render(function (View $view) {
 
         <div class="py-6 sm:py-10">
             <h1 class="text-[2rem] mb-4 font-roboto font-semibold text-neutral-5">
-                Archivio Pagine
+                {{ __('user::pages.sections.archive.title') }}
             </h1>
             <p class="text-lg text-gray-600 mb-6">
-                Esplora tutte le pagine informative disponibili in il progetto
+                {{ __('user::pages.sections.archive.description') }}
             </p>
 
             <div class="flex flex-col md:flex-row justify-between gap-4 mb-8">
@@ -90,7 +91,7 @@ render(function (View $view) {
                                 type="search"
                                 name="q"
                                 value="{{ request()->get('q') }}"
-                                placeholder="Cerca pagine..."
+                                placeholder="{{ __('user::pages.archive.search.placeholder') }}"
                                 class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                             >
                             <button type="submit" class="absolute right-3 top-2.5">
@@ -111,7 +112,7 @@ render(function (View $view) {
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                             onchange="document.getElementById('categoryForm').submit();"
                         >
-                            <option value="">Tutte le categorie</option>
+                            <option value="">{{ __('user::pages.archive.all_categories.label') }}</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category }}" @if(request()->get('category') === $category) selected @endif>
                                     {{ ucfirst($category) }}
@@ -127,12 +128,12 @@ render(function (View $view) {
         @if(request()->has('q') || (request()->has('category') && $hasCategory))
         <div class="mb-6 flex items-center gap-2">
             <div class="text-sm text-gray-600">
-                Filtri attivi:
+                {{ __('user::pages.archive.active_filters.label') }}
             </div>
             <div class="flex flex-wrap gap-2">
                 @if(request()->has('q'))
                 <a href="{{ url()->current() }}?{{ http_build_query(request()->except('q')) }}" class="inline-flex items-center text-xs bg-primary-100 text-primary-700 rounded-full px-3 py-1">
-                    Ricerca: {{ request()->get('q') }}
+                    {{ __('user::pages.archive.search_filter.label') }} {{ request()->get('q') }}
                     <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -141,7 +142,7 @@ render(function (View $view) {
 
                 @if(request()->has('category') && $hasCategory)
                 <a href="{{ url()->current() }}?{{ http_build_query(request()->except('category')) }}" class="inline-flex items-center text-xs bg-primary-100 text-primary-700 rounded-full px-3 py-1">
-                    Categoria: {{ ucfirst(request()->get('category')) }}
+                    {{ __('user::pages.archive.category_filter.label') }} {{ ucfirst(request()->get('category')) }}
                     <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -149,7 +150,7 @@ render(function (View $view) {
                 @endif
 
                 <a href="{{ url()->current() }}" class="text-xs text-primary-600 hover:underline">
-                    Rimuovi tutti i filtri
+                    {{ __('user::pages.archive.clear_filters.label') }}
                 </a>
             </div>
         </div>
@@ -158,7 +159,7 @@ render(function (View $view) {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @forelse($pages as $page)
                 <a
-                    href="{{ url('/' . $locale . '/' . $page->slug) }}"
+                    href="{{ url('/' . $locale . '/pages/' . $page->slug) }}"
                     class="group flex flex-col h-full overflow-hidden bg-white rounded-lg shadow hover:shadow-md transition duration-300"
                 >
                     @if(isset($page->featured_image) && $page->featured_image)
@@ -191,7 +192,7 @@ render(function (View $view) {
                                 {{ $page->created_at->format('d/m/Y') }}
                             </span>
                             <span class="inline-flex items-center text-sm text-primary-600 font-medium group-hover:translate-x-1 transition-transform duration-200">
-                                Leggi
+                                {{ __('user::pages.archive.read.label') }}
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -204,15 +205,15 @@ render(function (View $view) {
                     <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
-                    <p class="text-gray-600 mb-4 font-medium text-lg">Nessuna pagina disponibile.</p>
+                    <p class="text-gray-600 mb-4 font-medium text-lg">{{ __('user::pages.archive.empty.message') }}</p>
 
                     @if(request()->has('q') || (request()->has('category') && $hasCategory))
-                        <p class="text-sm text-gray-500 mb-4">Prova a modificare i tuoi filtri di ricerca.</p>
+                        <p class="text-sm text-gray-500 mb-4">{{ __('user::pages.archive.empty_filtered.message') }}</p>
                         <a href="{{ url()->current() }}" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300">
-                            Mostra tutte le pagine
+                            {{ __('user::pages.archive.show_all.label') }}
                         </a>
                     @else
-                        <p class="text-sm text-gray-500">Le pagine verranno aggiunte presto.</p>
+                        <p class="text-sm text-gray-500">{{ __('user::pages.archive.coming_soon.message') }}</p>
                     @endif
                 </div>
             @endforelse
@@ -221,14 +222,14 @@ render(function (View $view) {
         <!-- Paginazione -->
         @if($pages->hasPages())
             <div class="mt-10 flex justify-center">
-                <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center gap-1">
+                <nav role="navigation" aria-label="{{ __('user::pages.fields.pagination.label') }}" class="flex items-center gap-1">
                     @if($pages->onFirstPage())
                         <span class="px-3 py-1 text-sm border rounded opacity-50 cursor-not-allowed">
-                            &laquo; Precedente
+                            &laquo; {{ __('user::pages.pagination.previous.label') }}
                         </span>
                     @else
                         <a href="{{ $pages->previousPageUrl() }}" class="px-3 py-1 text-sm border rounded hover:bg-gray-50 transition">
-                            &laquo; Precedente
+                            &laquo; {{ __('user::pages.pagination.previous.label') }}
                         </a>
                     @endif
 
@@ -248,11 +249,11 @@ render(function (View $view) {
 
                     @if($pages->hasMorePages())
                         <a href="{{ $pages->nextPageUrl() }}" class="px-3 py-1 text-sm border rounded hover:bg-gray-50 transition">
-                            Successiva &raquo;
+                            {{ __('user::pages.pagination.next.label') }} &raquo;
                         </a>
                     @else
                         <span class="px-3 py-1 text-sm border rounded opacity-50 cursor-not-allowed">
-                            Successiva &raquo;
+                            {{ __('user::pages.pagination.next.label') }} &raquo;
                         </span>
                     @endif
                 </nav>

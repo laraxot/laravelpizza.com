@@ -1,11 +1,15 @@
 ---
-title: "QMD Setup — Module User"
+title: "QMD Setup: Module User"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [qmd, search, docs, performance]
 related:
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+qmd: "qmd setup per module **user** user"
+status: superseded
+superseded_by: qmd-setup.md
 ---
 
 # QMD Setup per Module **User**
@@ -33,7 +37,7 @@ qmd search "<topic>"
 ### Cache Location
 
 - **Cache path**: ${HOME}/.cache/qmd-cache/
-- **Fuori dal repo**: ✅ OK — non committata
+- **Fuori dal repo**: ✅ OK: non committata
 - **Pulizia cache**: `rm -rf ~/.cache/qmd-cache/`
 
 ### Performance Tips
@@ -48,7 +52,7 @@ qmd index rebuild --force
 qmd search "form" -c user  # Solo questo modulo
 \`\`\`
 
-3. **Evita query troppo generiche** — più specifico = risultati migliori
+3. **Evita query troppo generiche**: più specifico = risultati migliori
 
 ## Integrazione con l'On-Demand Pattern
 
@@ -63,7 +67,8 @@ qmd search "form" -c user  # Solo questo modulo
 ## Riferimenti
 
 - [Global QMD Config](../qmd.md) (root docs)
-- [Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
 
 ---

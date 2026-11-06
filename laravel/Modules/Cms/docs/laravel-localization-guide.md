@@ -1,9 +1,20 @@
+---
+title: "laravel localization guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel localization guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Localization — Project Integration Guide
 
 > Based on deep study of [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
 
 ---
-
 ## Package Overview
 
 `mcamara/laravel-localization` provides URL-based localization for Laravel. It sets `App::getLocale()` from the URL prefix (e.g., `/de`, `/it`, `/en`) and provides helpers for generating localized URLs.

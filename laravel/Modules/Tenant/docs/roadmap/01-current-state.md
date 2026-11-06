@@ -1,3 +1,19 @@
+---
+issues: []
+discussions: []
+title: "Current State - Tenant"
+module: "Tenant"
+type: concept
+tags: [01, current, state]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "01 current state"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: superseded
+superseded_by: current-state.md
+---
 # Current State - Tenant
 
 ## Baseline

@@ -1,3 +1,15 @@
+---
+title: "phpstan corrections summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan corrections summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 PHPStan Corrections Summary - Gennaio 2025
 
 **Data**: 27 Gennaio 2025  
@@ -174,12 +186,12 @@ class TaskCompleted extends Notification implements ShouldQueue
 ## 📚 **Riferimenti**
 
 ### **Documentazione Moduli**
-- [Modulo Fixcity](../Modules/Fixcity/docs/README.md)
-- [Modulo Geo](../Modules/Geo/docs/README.md)
-- [Modulo Job](../Modules/Job/docs/README.md)
-- [Modulo Notify](../Modules/Notify/docs/README.md)
-- [Modulo User](../Modules/User/docs/README.md)
-- [Modulo Xot](../Modules/Xot/docs/README.md)
+- [Modulo Fixcity](../../Fixcity/docs/README.md)
+- [Modulo Geo](../../Geo/docs/README.md)
+- [Modulo Job](../../Job/docs/README.md)
+- [Modulo Notify](README.md)
+- [Modulo User](../../User/docs/README.md)
+- [Modulo Xot](../../Xot/docs/README.md)
 
 ### **Risorse Esterne**
 - [PHPStan Documentation](https://phpstan.org/)
@@ -187,7 +199,6 @@ class TaskCompleted extends Notification implements ShouldQueue
 - [PHPStan Rules](https://phpstan.org/rules)
 
 ---
-
 ## 🏆 **CONCLUSIONI**
 
 **Missione Completata con Successo!** 🎉

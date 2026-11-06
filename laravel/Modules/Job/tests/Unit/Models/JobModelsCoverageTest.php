@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Models;
-use function Safe\class_uses;
+
 use Modules\Job\Models\BaseModel;
 use Modules\Job\Models\Export;
 use Modules\Job\Models\FailedJob;
@@ -16,15 +16,17 @@ use Modules\Job\Models\Schedule;
 use Modules\Job\Models\Task;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Job Models Coverage', function () {
     describe('Task Model', function () {
         it('can be instantiated', function () {
             $task = new Task;
-            Assert::assertInstanceOf(Task::class, $task);
+            Assert::assertFalse($task->exists);
         });
 
         it('uses HasXotFactory trait', function () {
@@ -83,8 +85,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Task::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -92,7 +94,7 @@ describe('Job Models Coverage', function () {
     describe('Frequency Model', function () {
         it('can be instantiated', function () {
             $model = new Frequency;
-            Assert::assertInstanceOf(Frequency::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -103,8 +105,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Frequency::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -112,7 +114,7 @@ describe('Job Models Coverage', function () {
     describe('Result Model', function () {
         it('can be instantiated', function () {
             $model = new Result;
-            Assert::assertInstanceOf(Result::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -123,8 +125,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Result::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -132,7 +134,7 @@ describe('Job Models Coverage', function () {
     describe('Schedule Model', function () {
         it('can be instantiated', function () {
             $model = new Schedule;
-            Assert::assertInstanceOf(Schedule::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -143,8 +145,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Schedule::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -152,7 +154,7 @@ describe('Job Models Coverage', function () {
     describe('Import Model', function () {
         it('can be instantiated', function () {
             $model = new Import;
-            Assert::assertInstanceOf(Import::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -163,8 +165,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Import::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -172,7 +174,7 @@ describe('Job Models Coverage', function () {
     describe('Export Model', function () {
         it('can be instantiated', function () {
             $model = new Export;
-            Assert::assertInstanceOf(Export::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends Filament Export', function () {
@@ -183,8 +185,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(Export::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -192,7 +194,7 @@ describe('Job Models Coverage', function () {
     describe('JobBatch Model', function () {
         it('can be instantiated', function () {
             $model = new JobBatch;
-            Assert::assertInstanceOf(JobBatch::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -203,8 +205,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(JobBatch::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -212,7 +214,7 @@ describe('Job Models Coverage', function () {
     describe('JobManager Model', function () {
         it('can be instantiated', function () {
             $model = new JobManager;
-            Assert::assertInstanceOf(JobManager::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -223,8 +225,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(JobManager::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -232,7 +234,7 @@ describe('Job Models Coverage', function () {
     describe('FailedJob Model', function () {
         it('can be instantiated', function () {
             $model = new FailedJob;
-            Assert::assertInstanceOf(FailedJob::class, $model);
+            Assert::assertFalse($model->exists);
         });
 
         it('extends BaseModel', function () {
@@ -243,8 +245,8 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(FailedJob::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });

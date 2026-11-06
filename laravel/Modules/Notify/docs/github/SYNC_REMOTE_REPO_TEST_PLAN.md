@@ -1,3 +1,16 @@
+---
+title: "SYNC REMOTE REPO TEST PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SYNC REMOTE REPO TEST PLAN"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sync_remote_repo_test_plan.md
+---
+
 # Sync Remote Repo - Test Plan
 
 > **Purpose**: Verify that sync_remote_repo.sh and GitHub Actions workflow work correctly  
@@ -7,6 +20,14 @@
 
 ---
 
+title: "SYNC REMOTE REPO TEST PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SYNC REMOTE REPO TEST PLAN"
+issues: []
+discussions: []
 ## 🎯 Test Objectives
 
 ### Primary Goal

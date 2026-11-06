@@ -1,3 +1,15 @@
+---
+title: "agents module architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents module architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # AGENTS Module Architecture
 
 Regole di architettura modulare per il progetto.
@@ -5,6 +17,7 @@ Regole di architettura modulare per il progetto.
 ## Modulo Agnosticism - REGOLA FONDAMENTALE
 
 **Il modulo Predict (e tutti i moduli) devono essere AGONISTICI!**
+**Il modulo Forecast (e tutti i moduli) devono essere AGONISTICI!**
 
 Non usare MAI dipendenze hardcoded come `Modules\Blog\Models\User`. Usa sempre `XotData`:
 
@@ -20,7 +33,6 @@ $userClass::query()->count()
 Questo permette al modulo di funzionare in qualsiasi progetto senza dipendere da moduli specifici.
 
 ---
-
 ## Module Directory Structure
 
 Ogni modulo segue questa struttura:
@@ -134,4 +146,7 @@ git rm path/to/submodule
 - [module-dependencies.md](./module-dependencies.md) - Più dettagliato
 - [git-submodules.md](./git-submodules.md) - Dettagli git
 - [AGENTS.md originale](../../AGENTS.md)
+- [agents.md originale](../../agents.md)
+- [AGENTS.md originale](../AGENTS.md)
+- [agents.md originale](../agents.md)
 - [Index principale](./index.md)

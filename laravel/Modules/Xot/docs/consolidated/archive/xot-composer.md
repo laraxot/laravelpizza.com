@@ -1,3 +1,11 @@
+---
+title: "XotComposer"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotcomposer xot"
+---
 # XotComposer
 
 Il `XotComposer` è un view composer che gestisce la composizione delle viste per il modulo Xot. Si occupa di iniettare dati comuni in tutte le viste che lo utilizzano.

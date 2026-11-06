@@ -1,3 +1,14 @@
+---
+title: "segnalazione area personale"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione area personale"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Segnalazione Area Personale (segnalazione-area-personale.html)
 
 ## Obiettivo

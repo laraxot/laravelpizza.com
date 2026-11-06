@@ -13,20 +13,16 @@ return [
             'type' => 'Typ',
             'verified' => 'Verifiziert',
             'sms_sent' => 'SMS gesendet',
-            'email_sent' => 'E-Mails gesendet',
-        ],
-    ],
+            'email_sent' => 'E-Mails gesendet']],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
         'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
+        'sort' => 100],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
     'actions' => [
-    ],
-];
+    ]];

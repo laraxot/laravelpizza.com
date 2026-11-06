@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Riepilogo Correzioni Traduzioni - Gennaio 2025"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: superseded
+superseded_by: translationes.md
+---
 # Riepilogo Correzioni Traduzioni - Gennaio 2025
 
 ## Problemi Risolti

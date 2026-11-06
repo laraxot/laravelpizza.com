@@ -1,3 +1,14 @@
+---
+title: "segnalazione 03 riepilogo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione 03 riepilogo"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Segnalazione - Riepilogo (segnalazione-03-riepilogo.html)
 
 ## Obiettivo

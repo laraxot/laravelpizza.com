@@ -1,3 +1,13 @@
+---
+title: "Gestione Code"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Gestione Code"
+---
 # Gestione Code
 
 ## Configurazione Base
@@ -231,4 +241,4 @@ class JobFailed extends Notification
             ->line('Errore: ' . $this->exception);
     }
 }
-```
+``` 

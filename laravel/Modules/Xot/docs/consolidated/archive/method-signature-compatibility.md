@@ -1,3 +1,11 @@
+---
+title: "errore di compatibilità nelle firme dei metodi"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "errore di compatibilità nelle firme dei metodi xot"
+---
 # errore di compatibilità nelle firme dei metodi
 
 ## problema

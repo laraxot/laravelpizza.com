@@ -1,5 +1,5 @@
 @props([
-    'title' => 'Articoli in Evidenza',
+    'title' => __('cms::blog.sections.featured_grid.title'),
     'subtitle' => '',
     'articles' => [],
 ])
@@ -64,7 +64,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M13.728 1.686a.75.75 0 0 1 1.06 0l8.691 8.691a1 1 0 0 1 0 1.414l-8.69 8.691a.75.75 0 0 1-1.061-1.06l7.47-7.47a.75.75 0 0 0 0-1.06l-7.47 7.47a.75.75 0 0 1-1.06-1.06l8.69-8.691a.75.75 0 0 1 1.06 0z"></path>
                                     </svg>
-                                    Trending
+                                    {{ __('cms::blog.featured_grid.trending.label') }}
                                 </span>
                             @endif
                         </div>
@@ -132,7 +132,7 @@
                             href="{{ $article['url'] ?? '#' }}" 
                             class="inline-flex items-center text-[#1E5A96] hover:text-[#164575] font-semibold group-hover:translate-x-1 transition-all mt-4"
                         >
-                            Leggi l'articolo
+                            {{ __('cms::blog.featured_grid.read_article.label') }}
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>

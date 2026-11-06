@@ -1,3 +1,15 @@
+---
+title: "folder structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "folder structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura delle Cartelle Coinvolte nel CmsServiceProvider
 
 **Obiettivo**: Documentare le directory e i file chiave utilizzati da `CmsServiceProvider` per la gestione della localizzazione e del tema pubblicazione, applicando principi di Clean Code (Single Responsibility, nomi chiari, Feature Folder Pattern).

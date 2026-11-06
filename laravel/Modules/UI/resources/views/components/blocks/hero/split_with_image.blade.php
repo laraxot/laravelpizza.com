@@ -1,19 +1,18 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'title 1',
-    'description' => 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
-    'primaryButtonText' => 'Get started',
+    'title' => __('ui::blocks_hero.shared.title_placeholder.title'),
+    'description' => __('ui::blocks_demo_shared.copy.paragraph_3.description'),
+    'primaryButtonText' => __('ui::blocks_demo_shared.labels.get_started.label'),
     'primaryButtonUrl' => '#',
-    'secondaryButtonText' => 'Learn more',
+    'secondaryButtonText' => __('ui::blocks_demo_shared.labels.learn_more.label'),
     'secondaryButtonUrl' => '#',
-    'announcement' => 'Anim aute id magna aliqua ad ad non deserunt sunt.',
+    'announcement' => __('ui::blocks_hero.shared.announcement.message'),
     'announcementUrl' => '#',
     'logoUrl' => 'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600',
-    'logoAlt' => 'Your Company',
+    'logoAlt' => __('ui::blocks_hero.shared.your_company.alt'),
     'imageUrl' => 'https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80',
     'imageAlt' => ''
 ])
@@ -32,7 +31,7 @@ declare(strict_types=1);
                             {{ $announcement }}
                             <a href="{{ $announcementUrl }}" class="whitespace-nowrap font-semibold text-indigo-600">
                                 <span class="absolute inset-0" aria-hidden="true"></span>
-                                Read more <span aria-hidden="true">&rarr;</span>
+                                {{ __('ui::blocks_hero.shared.read_more.label') }} <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>
                     </div>

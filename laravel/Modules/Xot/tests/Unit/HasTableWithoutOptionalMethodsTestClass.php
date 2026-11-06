@@ -4,7 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
+use Filament\Schemas\Schema;
+use Filament\Support\Contracts\TranslatableContentDriver;
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\ColumnGroup;
+use Filament\Tables\Columns\Layout\Component;
+use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Mockery;
+use Mockery\MockInterface;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 /**
@@ -14,21 +24,19 @@ class HasTableWithoutOptionalMethodsTestClass
 {
     use HasXotTable;
 
-    public function getLayoutView(): mixed
+    public function getLayoutView(): object
     {
-        /** @var \Mockery\MockInterface&\Mockery\LegacyMockInterface $mock */
-        $mock = \Mockery::mock();
-        /** @var \Mockery\Expectation $e1 */
-        $e1 = $mock->shouldReceive('getTableColumns');
-        $e1->andReturn([]);
-        /** @var \Mockery\Expectation $e2 */
-        $e2 = $mock->shouldReceive('getTableContentGrid');
-        $e2->andReturn([]);
+        $mock = Mockery::mock();
+        $mock->shouldReceive('getTableColumns')->andReturn([]);
+        $mock->shouldReceive('getTableContentGrid')->andReturn([]);
 
         return $mock;
     }
 
-    #[\Override]
+    /**
+     * @return array<string, Column|ColumnGroup|Component>
+     */
+    /** @return array<string, Column> */
     public function getTableColumns(): array
     {
         return [];
@@ -36,10 +44,10 @@ class HasTableWithoutOptionalMethodsTestClass
 
     public function getTable(): Table
     {
-        /** @var Table $mock */
-        $mock = \Mockery::mock(Table::class);
+        /** @var Table&MockInterface $table */
+        $table = Mockery::mock(Table::class);
 
-        return $mock;
+        return $table;
     }
 
     public function getTablePage(): ?int
@@ -62,18 +70,22 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    /** @return array<mixed> */
+    /**
+     * @return array<string|int, BaseFilter>
+     */
     public function getTableFilters(): array
     {
         return [];
     }
 
-    public function getTableFiltersForm(): mixed
+    public function getTableFiltersForm(): ?Schema
     {
         return null;
     }
 
-    /** @return array<mixed>|null */
+    /**
+     * @return array<string, mixed>|null
+     */
     public function getTableFilterState(string $_name): ?array
     {
         return [];
@@ -89,34 +101,43 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    /** @return array<mixed> */
+    /**
+     * @return array<int, mixed>
+     */
     public function getTableColumnSearchIndicators(): array
     {
         return [];
     }
 
-    public function getTableColumnToggleForm(): mixed
+    public function getTableColumnToggleForm(): ?Schema
     {
         return null;
     }
 
-    /** @return array<mixed> */
+    /**
+     * @return array<int, mixed>
+     */
     public function getTableRecords(): array
     {
         return [];
     }
 
-    public function getTableRecord(): mixed
+    /**
+     * @return Model|array<string, mixed>|null
+     */
+    public function getTableRecord(): Model|array|null
     {
         return null;
     }
 
-    public function getTableRecordKey(): mixed
+    public function getTableRecordKey(): ?string
     {
         return null;
     }
 
-    /** @return array<mixed> */
+    /**
+     * @return array<int, mixed>
+     */
     public function getSelectedTableRecords(): array
     {
         return [];
@@ -132,33 +153,50 @@ class HasTableWithoutOptionalMethodsTestClass
         return 0;
     }
 
-    /** @return array<mixed> */
+    /**
+     * @return array<int, mixed>
+     */
     public function getAllSelectableTableRecordKeys(): array
     {
         return [];
     }
 
-    public function getTableQueryForExport(): mixed
+    /**
+     * @return Builder<Model>|null
+     */
+    public function getTableQueryForExport(): ?Builder
     {
         return null;
     }
 
-    public function getFilteredTableQuery(): mixed
+    /**
+     * @return Builder<Model>|null
+     */
+    public function getFilteredTableQuery(): ?Builder
     {
         return null;
     }
 
-    public function getFilteredSortedTableQuery(): mixed
+    /**
+     * @return Builder<Model>|null
+     */
+    public function getFilteredSortedTableQuery(): ?Builder
     {
         return null;
     }
 
-    public function getAllTableSummaryQuery(): mixed
+    /**
+     * @return Builder<Model>|null
+     */
+    public function getAllTableSummaryQuery(): ?Builder
     {
         return null;
     }
 
-    public function getPageTableSummaryQuery(): mixed
+    /**
+     * @return Builder<Model>|null
+     */
+    public function getPageTableSummaryQuery(): ?Builder
     {
         return null;
     }
@@ -168,17 +206,17 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    public function getMountedTableActionForm(): mixed
+    public function getMountedTableActionForm(): ?Schema
     {
         return null;
     }
 
-    public function getMountedTableActionRecord(): mixed
+    public function getMountedTableActionRecord(): ?Model
     {
         return null;
     }
 
-    public function getMountedTableActionRecordKey(): mixed
+    public function getMountedTableActionRecordKey(): ?string
     {
         return null;
     }
@@ -188,7 +226,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    public function getMountedTableBulkActionForm(): mixed
+    public function getMountedTableBulkActionForm(): ?Schema
     {
         return null;
     }
@@ -228,49 +266,33 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    public function deselectAllTableRecords(): void
-    {
-    }
+    public function deselectAllTableRecords(): void {}
 
-    public function mountTableAction(): void
-    {
-    }
+    public function mountTableAction(): void {}
 
-    public function mountTableBulkAction(): void
-    {
-    }
+    public function mountTableBulkAction(): void {}
 
-    public function mountedTableActionRecord(): mixed
+    public function mountedTableActionRecord(): ?Model
     {
         return null;
     }
 
-    public function replaceMountedTableAction(): void
-    {
-    }
+    public function replaceMountedTableAction(): void {}
 
-    public function replaceMountedTableBulkAction(): void
-    {
-    }
+    public function replaceMountedTableBulkAction(): void {}
 
-    public function resetTableSearch(): void
-    {
-    }
+    public function resetTableSearch(): void {}
 
-    public function resetTableColumnSearch(): void
-    {
-    }
+    public function resetTableColumnSearch(): void {}
 
-    public function toggleTableReordering(): void
-    {
-    }
+    public function toggleTableReordering(): void {}
 
     public function parseTableFilterName(): string
     {
         return '';
     }
 
-    public function makeFilamentTranslatableContentDriver(): mixed
+    public function makeFilamentTranslatableContentDriver(): ?TranslatableContentDriver
     {
         return null;
     }

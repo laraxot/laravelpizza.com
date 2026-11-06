@@ -1,3 +1,32 @@
+---
+title: "Convenzione Metodo getTableColumns per Filament Table"
+type: concept
+tags: [filament, table, columns]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-table-columns convenzione metodo gettablecolumns per filament table"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./filament-table-columns-1.md"
+  - "./filament-table-columns.md"
+  - "./filament-table-columns.md"
+  - "./teams-relation-manager.md"
+  - "./teams-relation-manager.md"
+  - "./teams-relation-manager-3.md"
+  - "./teams-relation-manager.md"
+  - "./widgets-responsive-layout.md"
+  - "./filament-table-columns-convenzione-metodo.md"
+  - "./filament-table-columns.md"
+  - "./filament-table-columns-convenzione-metodo.md"
+  - "./teams-relation-manager.md"
+  - "./teams-relation-manager-documentation-themes.md"
+  - "./teams-relation-manager.md"
+  - "./teams-relation-manager.md"
+  - "./widgets-responsive-layout.md"
+status: draft
+---
+
 # Convenzione Metodo getTableColumns per Filament Table
 
 ## Motivazione della Modifica
@@ -31,7 +60,7 @@ public function getTableColumns(): array
 - Aggiornare anche override, chiamate e test.
 
 ## Collegamenti
-- [Regola Generale - Modulo Xot](../../../xot/docs/filament_table_columns.md)
+- [Regola Generale - Modulo Xot](../../../Xot/docs/filament-table-columns.md)
 - [Regola Globale - Root Docs](../../../../../docs/filament-table-columns.md)
 
 ---

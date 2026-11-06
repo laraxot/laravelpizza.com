@@ -1,3 +1,28 @@
+---
+title: "Fix: path does not have our version (rebase/merge)"
+type: concept
+tags: [git, path, does, not]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git-path-does-not-have-our-version-fix fix: path does not have our version (rebase/merge)"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Fix: path does not have our version (rebase/merge)
 
 ## Stato: ✅ RISOLTO
@@ -51,10 +76,10 @@ git add app/Filament/Clusters/Passport/Resources/OauthAccessTokenResource/Pages/
 
 ### 3. Risolvere altri conflitti
 
-Se c'è `both added` (es. docs/CODE-QUALITY-ANALYSIS.md):
+Se c'è `both added` (es. docs/code-quality-analysis.md):
 
 ```bash
-git add docs/CODE-QUALITY-ANALYSIS.md
+git add docs/code-quality-analysis.md
 ```
 
 ### 4. Continuare rebase

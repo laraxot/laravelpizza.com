@@ -3,10 +3,13 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Channels;
-use function Safe\file_get_contents;
-use Modules\Notify\Channels\SmsChannel;
 
+use Modules\Notify\Channels\SmsChannel;
+use Modules\Notify\Factories\SmsActionFactory;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 describe('SmsChannel', function () {
     it('can be instantiated', function () {
         // SmsChannel requires SmsActionFactory in constructor
@@ -30,7 +33,7 @@ describe('SmsChannel', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(SmsChannel::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -39,5 +42,16 @@ describe('SmsChannel', function () {
         $property = $reflection->getProperty('factory');
 
         Assert::assertTrue($property->isPrivate());
+    });
+
+    it('resolves the driver from config via SmsActionFactory', function () {
+        $reflection = new \ReflectionClass(SmsChannel::class);
+        $param = $reflection->getConstructor()?->getParameters()[0] ?? null;
+
+        Assert::assertNotNull($param);
+        Assert::assertSame(
+            SmsActionFactory::class,
+            $param->getType() instanceof \ReflectionNamedType ? $param->getType()->getName() : null,
+        );
     });
 });

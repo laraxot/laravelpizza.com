@@ -1,3 +1,11 @@
+---
+title: "Analisi dell'Architettura del Sistema il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi dell'architettura del sistema il progetto xot"
+---
 # Analisi dell'Architettura del Sistema il progetto
 
 ## Panoramica Architetturale

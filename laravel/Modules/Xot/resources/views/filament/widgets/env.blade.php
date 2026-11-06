@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-widgets::widget>
     <x-filament::section>
@@ -15,7 +14,7 @@ declare(strict_types=1);
         {{ $this->form }}
 
         <x-filament::button type="submit" class="mt-4">
-            Save <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="submit"/>
+            {{ __('xot::common.actions.save.label') }} <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="submit"/>
         </x-filament::button>
     </form>
 

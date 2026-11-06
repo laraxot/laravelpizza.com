@@ -1,3 +1,17 @@
+---
+title: "Lo Zen della Separazione dei ServiceProviders: Filosofia della Responsabilità Unica"
+type: concept
+tags: [service, provider, aration, zen]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "service-provider-aration-zen lo zen della separazione dei serviceproviders: filosofia della responsabilità unica"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./service-provider-separation-zen.md"
+status: draft
+---
+
 # Lo Zen della Separazione dei ServiceProviders: Filosofia della Responsabilità Unica
 
 ## La Storia

@@ -92,4 +92,18 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'card' => [
+        'like' => [
+            'label' => 'Gefällt mir',
+        ],
+        'live_music' => [
+            'label' => 'Live-Musik',
+        ],
+        'menu' => [
+            'label' => 'Speisekarte',
+        ],
+        'photo' => [
+            'label' => 'Foto',
+        ],
+    ],
 ];

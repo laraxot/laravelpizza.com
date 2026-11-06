@@ -330,7 +330,7 @@ grep -r "extends Model" laravel/Modules/*/app/Models/*.php | grep -v "BaseModel\
 
 
 ---
-<\!-- merged from: base-classes-corrections-2025-10-15.md -->
+<\!-- merged from: base-classes-corrections.md -->
 
 # Correzione Estensioni Classi Base - Modulo User
 

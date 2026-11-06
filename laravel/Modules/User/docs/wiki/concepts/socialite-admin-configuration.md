@@ -6,12 +6,17 @@ created: 2026-04-20
 updated: 2026-04-20
 tags: [socialite, oauth, admin, configuration, backoffice, google-client-id]
 sources:
-  - laravel/Modules/User/app/Models/SocialProvider.php
-  - laravel/Modules/User/config/socialite.php
-  - https://filamentphp.com/plugins/chrisreedio-socialment
 related:
-  - ./socialite-architecture-analysis.md
-  - ../../../../docs/wiki/concepts/admin-configuration-pattern.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "socialite admin configuration user"
 ---
 
 # Socialite Admin Configuration

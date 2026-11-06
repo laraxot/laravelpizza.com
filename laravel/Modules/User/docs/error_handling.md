@@ -1,3 +1,11 @@
+---
+title: "Gestione degli Errori nelle Blade di Autenticazione"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "gestione degli errori nelle blade di autenticazione user"
+---
 # Gestione degli Errori nelle Blade di Autenticazione
 
 ## Introduzione
@@ -164,6 +172,9 @@ public function register()
 
 ## Collegamenti
 
+- [Documentazione Volt](./volt_logout.md)
+- [Best Practices Routing](./routing_best_practices.md)
+- [Struttura Directory](./directory_structure_checklist.md) 
 - [Documentazione Volt](./volt_logout.md)
 - [Best Practices Routing](./routing_best_practices.md)
 - [Struttura Directory](./directory_structure_checklist.md) 

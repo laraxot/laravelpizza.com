@@ -1,3 +1,15 @@
+---
+title: "laravel folio governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel folio governance"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Folio Governance
 
 ## Contesto

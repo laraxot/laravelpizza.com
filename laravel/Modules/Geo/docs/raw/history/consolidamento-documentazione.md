@@ -1,3 +1,14 @@
+---
+title: "consolidamento documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "consolidamento documentazione"
+issues: []
+discussions: []
+---
+
 # Piano di Consolidamento Documentazione PTVX - 2025
 
 ## Obiettivo
@@ -158,6 +169,14 @@ Consolidare, organizzare e aggiornare sistematicamente la documentazione del pro
 
 ---
 
+title: "consolidamento documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "consolidamento documentazione"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2025-01-29
 **Responsabile**: AI Assistant
 **Stato**: In progressione - Fase 2 avviata

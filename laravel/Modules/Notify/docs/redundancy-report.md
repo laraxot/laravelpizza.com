@@ -1,4 +1,16 @@
-# Redundancy Report — Modulo Notify
+---
+title: "redundancy report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "redundancy report"
+issues: []
+discussions: []
+status: draft
+---
+
+# Redundancy Report: Modulo Notify
 
 > Generato: 2026-05-21 | Analisi automatica deep-scan
 
@@ -17,7 +29,7 @@ abstract class BaseModel extends Model implements HasMedia
     use Updater;
 }
 
-// CORRETTO — richiede verifica su XotBaseModel + HasMedia
+// CORRETTO: richiede verifica su XotBaseModel + HasMedia
 abstract class BaseModel extends XotBaseModel implements HasMedia
 {
     use InteractsWithMedia;
@@ -56,7 +68,7 @@ abstract class BaseMorphPivot extends MorphPivot
 abstract class BaseMorphPivot extends XotBaseMorphPivot {}
 ```
 
-### 4. 🟡 EventServiceProvider — Non usa XotBaseEventServiceProvider
+### 4. 🟡 EventServiceProvider: Non usa XotBaseEventServiceProvider
 
 **File**: `app/Providers/EventServiceProvider.php`
 

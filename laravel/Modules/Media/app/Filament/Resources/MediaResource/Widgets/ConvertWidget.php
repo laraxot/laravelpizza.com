@@ -8,6 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -30,6 +31,13 @@ class ConvertWidget extends XotBaseWidget
     protected string $view = 'media::filament.widgets.convert';
 
     protected static string $resource = MediaResource::class;
+
+    public function __construct()
+    {
+        $this->view = 'media::filament.widgets.convert';
+
+        parent::__construct();
+    }
 
     public function getFormSchema(): array
     {
@@ -64,8 +72,21 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        $exportedMedia->toDisk($disk_mp4);
-        $exportedMedia->inFormat($format);
-        $exportedMedia->save($file_new);
+        $formattedMedia = app(ResolveMediaExporterAction::class)->execute(
+            $exportedMedia->toDisk($disk_mp4)
+        )->inFormat($format);
+        $formattedMedia->save($file_new);
+
+        while ($this->percentage < 100) {
+            // Stream the current count to the browser...
+            $this->stream(
+                to: 'count',
+                content: $this->start,
+                replace: true,
+            );
+
+            $this->start =
+                "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+        }
     }
 }

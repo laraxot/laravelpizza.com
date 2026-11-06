@@ -1,3 +1,11 @@
+---
+title: "Colli di Bottiglia e Soluzioni - Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-23
+tags: [docs, activity]
+qmd: "colli di bottiglia e soluzioni - modulo activity activity"
+---
 # Colli di Bottiglia e Soluzioni - Modulo Activity
 
 ## Panoramica
@@ -333,23 +341,23 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../gdpr/docs/bottlenecks.md)
-* [bottlenecks.md](../../gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
-* [bottlenecks.md](../../user/docs/bottlenecks.md)
-* [bottlenecks.md](../../user/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../lang/docs/bottlenecks.md)
-* [bottlenecks.md](../../lang/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../media/docs/bottlenecks.md)
-* [bottlenecks.md](../../media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../User/docs/bottlenecks.md)
+* [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../UI/docs/bottlenecks.md)
+* [bottlenecks.md](../../UI/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../cms/docs/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" aria-hidden="true">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            .u-sa-strike {
+                stroke-dasharray: 18.5;
+                stroke-dashoffset: 18.5;
+                animation: u-sa-draw 1.8s ease-in-out infinite;
+            }
+            @keyframes u-sa-draw {
+                0% { stroke-dashoffset: 18.5; }
+                35%, 65% { stroke-dashoffset: 0; }
+                100% { stroke-dashoffset: -18.5; }
+            }
+        }
+    </style>
+    <path stroke-linecap="round" stroke-linejoin="round" opacity="0.45" d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+    <line class="u-sa-strike" x1="5.5" y1="5.5" x2="18.5" y2="18.5" stroke-linecap="round"/>
+</svg>

@@ -1,6 +1,18 @@
+---
+title: "filament naming conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament naming conventions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni di Naming per Filament 
 
-Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema Quaeris, con particolare attenzione alle pagine e alle risorse.
+Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema SaluteOra, con particolare attenzione alle pagine e alle risorse.
 
 ## Convenzioni di Naming per Pagine Filament
 

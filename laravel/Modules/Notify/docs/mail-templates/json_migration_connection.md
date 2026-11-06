@@ -1,3 +1,15 @@
+---
+title: "json migration connection"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json migration connection"
+issues: []
+discussions: []
+status: draft
+---
+
 # Connessione Database nelle Migrazioni JSON
 
 ## Importanza della Connessione Corretta
@@ -68,3 +80,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
 - [JSON Migration Fixes](./JSON_MIGRATION_FIXES.md)
 - [Migration Structure](./MIGRATION_STRUCTURE.md)
 - [Mail Template Migration Guide](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
+- [XotBaseMigration Best Practices](./xotbasemigration_best_practices.md)
+- [JSON Migration Fixes](./json_migration_fixes.md)
+- [Migration Structure](./migration_structure.md)
+- [Mail Template Migration Guide](../mail_template_migration_guide.md)

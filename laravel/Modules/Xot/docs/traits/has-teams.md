@@ -1,3 +1,13 @@
+---
+title: "Trait HasTeams"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, traits]
+qmd: "Trait HasTeams"
+---
 # Trait HasTeams
 
 ## Descrizione
@@ -55,7 +65,7 @@ use Modules\User\Models\Traits\HasTeams;
 class User extends Authenticatable
 {
     use HasTeams;
-
+    
     // ... resto del codice
 }
 ```
@@ -63,4 +73,4 @@ class User extends Authenticatable
 ## Note
 - Il trait richiede che il modello utilizzi anche il trait `HasRoles` per la gestione dei ruoli
 - È necessario avere una tabella pivot `team_user` con le colonne `user_id`, `team_id`, `role` e `timestamps`
-- La tabella dei team deve avere le colonne `id`, `name`, `personal_team`, `owner_id` e `timestamps`
+- La tabella dei team deve avere le colonne `id`, `name`, `personal_team`, `owner_id` e `timestamps` 

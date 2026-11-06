@@ -1,3 +1,15 @@
+---
+title: "phpstan errors roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Errors Roadmap - Cms Module
 
 **Modulo**: Cms  
@@ -5,7 +17,6 @@
 **Status**: 🧘 **IN ANALISI**
 
 ---
-
 ## 📊 Errori Identificati
 
 ### Totale Errori: 3

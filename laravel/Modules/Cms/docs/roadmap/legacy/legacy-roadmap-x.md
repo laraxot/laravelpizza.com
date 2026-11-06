@@ -1,3 +1,15 @@
+---
+title: "legacy roadmap x"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap x"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 CMS MODULE - ROADMAP 2025
 
 **Modulo**: Cms ([Description])  
@@ -7,7 +19,6 @@
 **Filament**: 🚧 4.x Compatibile  
 
 ---
-
 ## 🎯 MODULE OVERVIEW
 
 Il modulo **Cms** [descrizione del modulo].
@@ -206,7 +217,7 @@ Cms Module
 
 ---
 
-**
+**Last Updated**: 2025-10-01
 **Next Review**: 2025-11-01
 **Status**: 🚧 PLANNING  
 **Confidence Level**: 70%  

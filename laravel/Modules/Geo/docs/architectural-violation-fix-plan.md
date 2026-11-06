@@ -1,3 +1,15 @@
+---
+title: "architectural violation fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architectural violation fix plan"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚨 PIANO DI CORREZIONE: Violazione Architetturale Critica
 
 ## VIOLAZIONE IDENTIFICATA
@@ -105,6 +117,14 @@ ls -la Modules/<nome progetto>/app/Filament/Widgets/UserTypeRegistrationsChartWi
 
 ---
 
+title: "architectural violation fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architectural violation fix plan"
+issues: []
+discussions: []
 **Questa correzione è CRITICA per mantenere l'integrità architetturale del sistema.**
 
 *Status: DA IMPLEMENTARE IMMEDIATAMENTE*

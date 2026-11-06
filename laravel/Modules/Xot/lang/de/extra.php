@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione delle funzionalità aggiuntive del sistema',
         ],
-        'label' => 'extra',
+        'label' => 'Extra',
         'sort' => '13',
         'icon' => 'xot-extra',
     ],

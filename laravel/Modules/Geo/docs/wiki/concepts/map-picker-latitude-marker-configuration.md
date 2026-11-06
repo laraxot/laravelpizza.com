@@ -1,3 +1,15 @@
+---
+title: "map picker latitude marker configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker latitude marker configuration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Picker Latitude/Longitude Configuration
 
 ## REGOLA: Gestire coordinate null

@@ -10,55 +10,42 @@ return [
             'plural' => 'Template Email',
             'singular' => 'Template Email',
             'icon' => 'heroicon-o-envelope',
-            'sort' => 1,
-        ],
+            'sort' => 1],
         'sections' => [
-            'main' => 'Informazioni Principali',
-        ],
+            'main' => 'Informazioni Principali'],
         'fields' => [
             'name' => [
                 'label' => 'Nome',
                 'placeholder' => 'Inserisci il nome del template',
-                'tooltip' => 'Il nome identificativo del template email',
-            ],
+                'tooltip' => 'Il nome identificativo del template email'],
             'layout' => [
                 'label' => 'Layout',
                 'placeholder' => 'Seleziona il layout del template',
-                'tooltip' => 'Il layout grafico che verrà utilizzato per l\'email',
-            ],
+                'tooltip' => 'Il layout grafico che verrà utilizzato per l\'email'],
             'mailable' => [
                 'label' => 'Classe Mailable',
                 'placeholder' => 'Inserisci il nome della classe Mailable',
-                'tooltip' => 'La classe PHP che gestisce l\'invio dell\'email',
-            ],
+                'tooltip' => 'La classe PHP che gestisce l\'invio dell\'email'],
             'subject' => [
                 'label' => 'Oggetto',
                 'placeholder' => 'Inserisci l\'oggetto dell\'email',
-                'tooltip' => 'L\'oggetto che apparirà nell\'email',
-            ],
+                'tooltip' => 'L\'oggetto che apparirà nell\'email'],
             'body_html' => [
                 'label' => 'Contenuto HTML',
                 'placeholder' => 'Inserisci il contenuto HTML dell\'email',
-                'tooltip' => 'Il contenuto dell\'email in formato HTML',
-            ],
+                'tooltip' => 'Il contenuto dell\'email in formato HTML'],
             'body_text' => [
                 'label' => 'Contenuto Testo',
                 'placeholder' => 'Inserisci il contenuto testuale dell\'email',
-                'tooltip' => 'Versione testuale dell\'email per client che non supportano HTML',
-            ],
-        ],
+                'tooltip' => 'Versione testuale dell\'email per client che non supportano HTML']],
         'actions' => [
             'preview' => [
                 'label' => 'Anteprima',
-                'tooltip' => 'Visualizza un\'anteprima del template',
-            ],
-        ],
+                'tooltip' => 'Visualizza un\'anteprima del template']],
         'messages' => [
             'created' => 'Template email creato con successo',
             'updated' => 'Template email aggiornato con successo',
-            'deleted' => 'Template email eliminato con successo',
-        ],
-    ],
+            'deleted' => 'Template email eliminato con successo']],
     'label' => 'Mail',
     'plural_label' => 'Mail (Plurale)',
     'navigation' => [
@@ -66,41 +53,30 @@ return [
         'plural' => 'Mail',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings',
-        ],
+            'description' => 'General Settings'],
         'label' => 'Mail',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
+        'icon' => 'heroicon-o-collection'],
     'fields' => [
         'id' => [
             'label' => 'Identificativo',
             'tooltip' => 'Identificativo univoco del record',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'created_at' => [
             'label' => 'Data Creazione',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'create' => [
-            'label' => 'Crea Mail',
-        ],
+            'label' => 'Crea Mail'],
         'edit' => [
-            'label' => 'Modifica Mail',
-        ],
+            'label' => 'Modifica Mail'],
         'delete' => [
-            'label' => 'Elimina Mail',
-        ],
-    ],
-];
+            'label' => 'Elimina Mail']]];

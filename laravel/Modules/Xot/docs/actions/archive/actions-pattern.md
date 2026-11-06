@@ -1,3 +1,13 @@
+---
+title: "Pattern Corretto per Actions in Laraxot"
+type: note
+status: unverified
+created: 2026-07-03
+updated: 2026-07-03
+module: Xot
+tags: [xot, actions]
+qmd: "Pattern Corretto per Actions in Laraxot"
+---
 # Pattern Corretto per Actions in Laraxot
 
 ## Principio Fondamentale

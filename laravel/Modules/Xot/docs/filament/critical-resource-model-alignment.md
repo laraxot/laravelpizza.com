@@ -1,3 +1,11 @@
+---
+title: "critical resource model alignment"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, filament]
+qmd: "critical resource model alignment xot"
+---
 - [Modules/Progressioni/project_docs/plan.md](../../Progressioni/project_docs/plan.md) - Piano di verifica sistematica
 - [Modules/Xot/project_docs/filament/resources/architecture/forbidden-methods.md](resources/architecture/forbidden-methods.md) - Metodi vietati in XotBaseResource
 - [Modules/Xot/project_docs/filament_best_practices.md](../filament_best_practices.md) - Best practices Filament

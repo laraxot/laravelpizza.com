@@ -7,6 +7,4 @@ namespace Modules\Xot\Exceptions;
 /**
  * Class RepositoryException.
  */
-class RepositoryException extends \Exception
-{
-}
+class RepositoryException extends \Exception {}

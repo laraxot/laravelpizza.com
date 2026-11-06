@@ -12,7 +12,7 @@ return [
             'name' => 'System',
             'description' => 'Multimedia-Dateiverwaltung',
         ],
-        'label' => 'media',
+        'label' => 'Medien',
         'sort' => '20',
         'icon' => 'media-main-animated',
     ],

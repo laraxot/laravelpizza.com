@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni architecture"
+issues: []
+discussions: []
 title: Design Comuni Italia - Architectural Decisions & Implementation Strategy
 category: General
 labels: ['design-comuni', 'architecture', 'decision-record']
@@ -56,6 +63,7 @@ Replicate **EXACTLY** 38 static pages with:
 **Decision**: Content stored in JSON files, structure in Blade.
 
 **Files**: `laravel/config/local/fixcity/database/content/pages/tests.[slug].json`
+**Files**: `laravel/config/local/ptv/database/content/pages/tests.[slug].json`
 
 **Rationale**:
 - Separation of Concerns: Structure ≠ Content
@@ -365,9 +373,9 @@ npm run copy
 
 ## 📖 Related Documentation
 
-- [MASTER_IMPLEMENTATION_PLAN.md](../../laravel/Themes/Sixteen/docs/design-comuni/MASTER_IMPLEMENTATION_PLAN.md)
-- [ARCHITECTURAL_DECISIONS.md](../../laravel/Themes/Sixteen/docs/design-comuni/ARCHITECTURAL_DECISIONS.md)
-- [HTML_PARITY_VERIFICATION_REPORT.md](../../laravel/Themes/Sixteen/docs/design-comuni/HTML_PARITY_VERIFICATION_REPORT.md)
+- [MASTER_IMPLEMENTATION_PLAN.md](../../laravel/Themes/Sixteen/docs/design-comuni/master-implementation-plan.md)
+- [ARCHITECTURAL_DECISIONS.md](../../laravel/Themes/Sixteen/docs/design-comuni/architectural-decisions.md)
+- [HTML_PARITY_VERIFICATION_REPORT.md](../../laravel/Themes/Sixteen/docs/design-comuni/html-parity-verification-report.md)
 - [QWEN.md](../../QWEN.md)
 
 ---

@@ -1,3 +1,28 @@
+---
+title: "Dependency Intelligence - Module User"
+type: concept
+tags: [dependency, intelligence]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "dependency-intelligence dependency intelligence - module user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Dependency Intelligence - Module User
 
 Aggiornato da `composer show` il 2026-03-02.

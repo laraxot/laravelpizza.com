@@ -21,7 +21,6 @@ final class SendRecordsNotificationBulkActionSpy
         $this->received = [
             'count' => $records->count(),
             'slug' => $templateSlug,
-            'channels' => $channels,
-        ];
+            'channels' => $channels];
     }
 }

@@ -6,21 +6,23 @@ namespace Modules\Notify\Channels;
 
 use Exception;
 use Illuminate\Notifications\Notification;
+use Modules\Notify\Actions\SMS\SendSmsFactorSMSAction;
 use Modules\Notify\Datas\SmsData;
-use Modules\Notify\Factories\SmsActionFactory;
 
 class NetfunChannel
 {
     public function __construct(
-        private readonly SmsActionFactory $factory,
+        private readonly SendSmsFactorSMSAction $action,
     ) {}
 
     /**
-     * @return array<string, mixed>|null
+     * Il ritorno è quello di SendSmsFactorSMSAction::execute(), già tipizzato alla fonte.
+     *
+     * @return array{status_code: int, status_txt: string}|null
      */
-    public function send(mixed $notifiable, Notification $notification): ?array
+    public function send(object $notifiable, Notification $notification): ?array
     {
-        if (! is_object($notifiable) || ! method_exists($notifiable, 'routeNotificationForNetfun')) {
+        if (! method_exists($notifiable, 'routeNotificationForNetfun')) {
             return null;
         }
 
@@ -40,11 +42,8 @@ class NetfunChannel
             'body' => is_string($message)
                 ? $message
                 : (is_object($message) && method_exists($message, 'getContent') ? $message->getContent() : ''),
-            'from' => '',
-        ]);
+            'from' => '']);
 
-        $action = $this->factory->create();
-
-        return $action->execute($smsData);
+        return $this->action->execute($smsData);
     }
 }

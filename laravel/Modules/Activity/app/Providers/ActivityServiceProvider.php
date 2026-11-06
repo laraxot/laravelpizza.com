@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Providers;
 
+use Modules\Activity\Actions\Config\ApplyActivityConfigAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Override;
 
@@ -46,6 +47,9 @@ class ActivityServiceProvider extends XotBaseServiceProvider
 
         // Registra i componenti Blade personalizzati
         $this->registerBladeComponents();
+
+        // Le impostazioni salvate dal tenant (SettingPage) arrivano al pacchetto activitylog.
+        app(ApplyActivityConfigAction::class)->execute();
     }
 
     /**

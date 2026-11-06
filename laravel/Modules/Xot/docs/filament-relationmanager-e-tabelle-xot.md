@@ -1,3 +1,13 @@
+---
+title: "Linee Guida per RelationManager e Tabelle Personalizzate Xot in Filament"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Linee Guida per RelationManager e Tabelle Personalizzate Xot in Filament"
+---
 # Linee Guida per RelationManager e Tabelle Personalizzate Xot in Filament
 
 Questa documentazione descrive come implementare e configurare i `RelationManager` e le loro tabelle all'interno dell'ecosistema PTVX/Laraxot, utilizzando le classi base e i trait forniti dal modulo `Xot`.
@@ -110,10 +120,10 @@ class MioRelatedRelationManager extends XotBaseRelationManager
     protected static string $relationship = 'nomeDellaRelazioneDefinitiaNelModelloPadre';
 
     // Obbligatorio: specifica la classe XotBaseResource a cui questo RelationManager è associato
-    protected static string $resourceClass = MioResource::class;
+    protected static string $resourceClass = MioResource::class; 
 
     // (Opzionale) Titolo del Relation Manager (verrà tradotto)
-    // protected static ?string $title = 'mia_relazione_manager.title';
+    // protected static ?string $title = 'mia_relazione_manager.title'; 
 
     // (Opzionale) Etichetta per il record (verrà tradotto)
     // protected static ?string $recordTitleAttribute = 'nome_attributo_del_related_model';

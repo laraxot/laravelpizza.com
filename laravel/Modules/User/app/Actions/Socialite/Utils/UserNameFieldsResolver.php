@@ -7,16 +7,13 @@ namespace Modules\User\Actions\Socialite\Utils;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
 use Laravel\Socialite\Contracts\User;
+use Modules\User\Enums\NameSearchEnum;
 
 /**
  * Classe che risolve e normalizza i campi del nome utente da dati di provider Socialite.
  */
 final readonly class UserNameFieldsResolver
 {
-    private const NAME_SEARCH = 'before';
-
-    private const SURNAME_SEARCH = 'after';
-
     public ?string $name;
 
     public ?string $firstName;
@@ -37,34 +34,22 @@ final readonly class UserNameFieldsResolver
 
     private function resolveName(User $idpUser): string
     {
-        return $this->resolveNameFields($idpUser, self::NAME_SEARCH);
+        return $this->resolveNameFields($idpUser, NameSearchEnum::Name);
     }
 
     private function resolveSurname(User $idpUser): string
     {
-        return $this->resolveNameFields($idpUser, self::SURNAME_SEARCH);
+        return $this->resolveNameFields($idpUser, NameSearchEnum::Surname);
     }
 
-    /**
-     * @param string $searchMethod use self constants (NAME_SEARCH, SURNAME_SEARCH)
-     */
-    private function resolveNameFields(User $idpUser, string $searchMethod): string
+    private function resolveNameFields(User $idpUser, NameSearchEnum $searchMethod): string
     {
-        $this->validateSearchMethod($searchMethod);
-
         $nameSection = $this->determineNameField($idpUser, $searchMethod);
 
         return $nameSection->toString();
     }
 
-    private function validateSearchMethod(string $searchMethod): void
-    {
-        if (! in_array($searchMethod, [self::NAME_SEARCH, self::SURNAME_SEARCH], strict: true)) {
-            throw new \InvalidArgumentException('Metodo di ricerca non valido');
-        }
-    }
-
-    private function determineNameField(User $idpUser, string $searchMethod): Stringable
+    private function determineNameField(User $idpUser, NameSearchEnum $searchMethod): Stringable
     {
         $name = $idpUser->getName();
         if (is_string($name) && ! empty($name)) {
@@ -91,7 +76,7 @@ final readonly class UserNameFieldsResolver
         return $this->analyzeEmailForNameSection($idpUser, $searchMethod);
     }
 
-    private function analyzeEmailForNameSection(User $idpUser, string $searchMethod): Stringable
+    private function analyzeEmailForNameSection(User $idpUser, NameSearchEnum $searchMethod): Stringable
     {
         $email = $idpUser->getEmail();
         if (! is_string($email) || empty($email)) {
@@ -102,13 +87,7 @@ final readonly class UserNameFieldsResolver
             ->trim()
             ->before('@');
 
-        // Use conditional logic instead of dynamic method call for type safety
-        if (self::NAME_SEARCH === $searchMethod) {
-            return $emailPart->before('.')->trim()->title();
-        }
-
-        // self::SURNAME_SEARCH
-        return $emailPart->after('.')->trim()->title();
+        return $searchMethod->applyTo($emailPart, '.')->trim()->title();
     }
 
     /**
@@ -146,19 +125,12 @@ final readonly class UserNameFieldsResolver
         return $raw;
     }
 
-    private function resolveNameFieldByNameAttributeAnalysis(string $nameField, string $searchMethod): Stringable
+    private function resolveNameFieldByNameAttributeAnalysis(string $nameField, NameSearchEnum $searchMethod): Stringable
     {
         if (empty($nameField)) {
             return Str::of('');
         }
 
-        if (! in_array($searchMethod, [self::NAME_SEARCH, self::SURNAME_SEARCH], strict: true)) {
-            throw new \InvalidArgumentException('Metodo di ricerca non valido');
-        }
-
-        return Str::of($nameField)
-            ->trim()
-            ->$searchMethod(' ')
-            ->trim();
+        return $searchMethod->applyTo(Str::of($nameField)->trim(), ' ')->trim();
     }
 }

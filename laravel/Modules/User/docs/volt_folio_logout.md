@@ -1,9 +1,19 @@
+---
+title: "Implementazione Corretta del Logout con Volt e Folio"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione corretta del logout con volt e folio user"
+---
 # Implementazione Corretta del Logout con Volt e Folio
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Analisi Logout Blade](./logout_blade_analysis.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Analisi Logout Blade](./logout_blade_analysis.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
 
 ## Panoramica
@@ -182,10 +192,3 @@ invece di:
 ## Conclusione
 
 Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . Assicurarsi di includere sempre la localizzazione negli URL e di utilizzare i componenti Filament per la UI.
----
-module: theme
-topic: volt_folio_logout
-canonical: ../../../Themes/docs/shared-components/volt_folio_logout.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/volt_folio_logout.md

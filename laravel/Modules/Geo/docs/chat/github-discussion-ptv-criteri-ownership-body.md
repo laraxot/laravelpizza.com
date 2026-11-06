@@ -1,3 +1,15 @@
+---
+title: "github discussion ptv criteri ownership body"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github discussion ptv criteri ownership body"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Domanda
 
 Per il caricamento criteri esclusione/options per anno (usato da `TrovaEsclusiByModelClassYearAction`), dove deve vivere la **business logic**?

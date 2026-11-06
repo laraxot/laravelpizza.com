@@ -1,3 +1,15 @@
+---
+title: "PROJECT ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-23
+qmd: "PROJECT ROADMAP"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🗺️ FIXCITY - PROJECT ROADMAP COMPLETA
 
 > **Data**: 2025-10-01
@@ -5,7 +17,6 @@
 > **Maintainer**: Development Team
 
 ---
-
 ## 📊 EXECUTIVE SUMMARY
 
 **FixCity** è una piattaforma di civic engagement per la gestione delle segnalazioni urbane. Architettura **modular monolith** basata su Nwidart + Laraxot, con backend Filament 3.x e frontend Folio + Volt + Livewire 3.x.
@@ -300,21 +311,21 @@ Funzionalità:
 **Stato**: 🚧 Service layer presente, automazione mancante
 
 **Tasks**:
-- [ ] Creare `TicketWorkflowService` completo
+- [ ] Completare `Workflow/TransitionTicketStatusAction` (Queueable Action, non Service)
   - `canTransitionTo(TicketStatusEnum $status): bool`
   - `transitionTo(TicketStatusEnum $status): void`
   - Validazione transizioni di stato
 - [ ] Implementare auto-assegnazione basata su carico lavoro
 - [ ] Implementare escalation automatica per urgenze
-- [ ] Creare job per reminder automatici
+- [ ] Creare la Queueable Action per i reminder automatici (ritardata con `ActionJob::dispatch($action, [$ticket])->delay(...)`)
 - [ ] Implementare SLA tracking
 - [ ] Aggiungere metriche performance
 
-**File da creare**:
-- `Modules/Fixcity/app/Services/TicketWorkflowService.php`
-- `Modules/Fixcity/app/Jobs/AutoAssignTicketJob.php`
-- `Modules/Fixcity/app/Jobs/EscalateUrgentTicketJob.php`
-- `Modules/Fixcity/app/Jobs/SendTicketReminderJob.php`
+**File da creare** (niente `app/Jobs/` ne' `app/Services/`: un caso d'uso = una Queueable Action con `execute()`, sync con `app(FooAction::class)->execute(...)`, async con `app(FooAction::class)->onQueue()->execute(...)`; vedi la [regola](../../../../bashscripts/ai/wiki/rules/no-module-jobs-queueable-action.md)):
+- `Modules/Fixcity/app/Actions/Workflow/TransitionTicketStatusAction.php` (esiste gia': transizioni di stato)
+- `Modules/Fixcity/app/Actions/AutoAssignTicketAction.php`
+- `Modules/Fixcity/app/Actions/EscalateUrgentTicketAction.php`
+- `Modules/Fixcity/app/Actions/SendTicketReminderAction.php`
 
 **Transizioni di Stato Valide**:
 ```php
@@ -465,7 +476,7 @@ Funzionalità:
 - [ ] Tracking carico lavoro tecnici
 
 **File da creare**:
-- `Modules/Fixcity/app/Services/AutoAssignmentService.php`
+- `Modules/Fixcity/app/Actions/AutoAssignTicketAction.php` (Queueable Action, non Service)
 - `Modules/Fixcity/app/Policies/AssignmentPolicy.php`
 
 ---
@@ -489,9 +500,9 @@ Funzionalità:
 - [ ] Report performance mensili
 
 **File da creare**:
-- `config/fixcity-sla.php`
-- `Modules/Fixcity/app/Services/SlaTrackingService.php`
-- `Modules/Fixcity/app/Jobs/CheckSlaViolationsJob.php`
+- `config/ptv-sla.php`
+- `Modules/Fixcity/app/Actions/GetTicketSlaMetricsAction.php` (esiste gia': metriche SLA)
+- `Modules/Fixcity/app/Actions/CheckSlaViolationsAction.php` (schedulata, eseguita in coda con `->onQueue()->execute()`; niente Job)
 
 ---
 
@@ -562,9 +573,9 @@ Funzionalità:
 tests/Unit/Fixcity/Models/TicketTest.php
 tests/Unit/Fixcity/Enums/TicketStatusEnumTest.php
 
-# Test services
-tests/Unit/Fixcity/Services/TicketWorkflowServiceTest.php
-tests/Unit/Fixcity/Services/AutoAssignmentServiceTest.php
+# Test Queueable Actions (si chiama execute(), sync)
+Modules/Fixcity/tests/Unit/Actions/Workflow/TransitionTicketStatusActionTest.php
+Modules/Fixcity/tests/Unit/Actions/AutoAssignTicketActionTest.php
 ```
 
 ### Feature Tests
@@ -684,6 +695,7 @@ tests/Browser/AdminManageTicketTest.php
 ### Best Practices
 - [Laravel Boost Guidelines](CLAUDE.md)
 - [Architecture Patterns](docs/architecture/)
+- [Architecture Patterns](architecture)
 
 ---
 

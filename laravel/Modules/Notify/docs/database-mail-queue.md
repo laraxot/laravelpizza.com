@@ -1,3 +1,15 @@
+---
+title: "database mail queue"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database mail queue"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Code per Email - il progetto
 
 ## Panoramica

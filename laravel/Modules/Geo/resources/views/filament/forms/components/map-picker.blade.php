@@ -10,6 +10,7 @@ $labels = [
     'close_fullscreen'=> __('geo::coordinate-picker.close_fullscreen'),
     'use_location' => __('geo::coordinate-picker.use_my_location'),
     'locating' => __('geo::coordinate-picker.locating'),
+    'location_unavailable' => __('geo::coordinate-picker.location_unavailable'),
     'search' => __('geo::coordinate-picker.search'),
     'search_placeholder' => __('geo::coordinate-picker.search_placeholder'),
     'close_search' => __('geo::coordinate-picker.close_search'),
@@ -46,11 +47,8 @@ $labels = [
                 }
                 this.state = next;
 
-                @if($field->hasReverseGeocoding())
-                if (latitude !== null && longitude !== null) {
-                    void this.reverseGeocode(latitude, longitude);
-                }
-                @endif
+                // The Lit map already reverse-geocodes client-side; do not
+                // dispatch a second Livewire schema RPC from the wrapper.
             },
 
             handleAddressSelected(event) {
@@ -72,38 +70,13 @@ $labels = [
                     raw: payload.raw ?? detail.result ?? this.state?.raw ?? null,
                 };
 
-                @if($field->hasReverseGeocoding())
-                if (latitude !== null && longitude !== null) {
-                    void this.reverseGeocode(latitude, longitude);
-                }
-                @endif
+                // Search results already contain their address payload.
             },
 
             handleFullscreenChanged(event) {
                 this.isFullscreen = event.detail.isFullscreen;
             },
 
-            async reverseGeocode(lat, lng) {
-                try {
-                    let result = await this.$wire.callSchemaComponentMethod('{{ $id }}', 'reverseGeocode', { latitude: lat, longitude: lng });
-                    if (typeof result === 'string') {
-                        result = { display_name: result, address: result };
-                    }
-                    if (result && typeof result === 'object') {
-                        this.state = {
-                            ...(this.state ?? {}),
-                            ...result,
-                            latitude: lat,
-                            longitude: lng,
-                            lat,
-                            lng,
-                            address: result.display_name ?? result.address ?? this.state?.address ?? null,
-                            address_details: result.structured ?? result.address_details ?? this.state?.address_details ?? null,
-                            provider: result.provider ?? 'nominatim',
-                        };
-                    }
-                } catch (_e) {}
-            }
         }"
         class="map-picker-field-wrapper space-y-2"
         @coords-changed.stop="handleCoordsChanged($event)"
@@ -116,7 +89,8 @@ $labels = [
                 zoom="{{ $field->getZoom() }}"
                 height="{{ $field->getHeight() }}"
                 x-bind:show-search="@js($field->isSearchVisible())"
-                geolocate-when-empty="{{ $field->getGeolocateWhenEmpty() ? 'true' : 'false' }}"
+                @if($field->getGeolocateWhenEmpty()) geolocate-when-empty @endif
+                default-view='@json($field->getMapDefaultView())'
                 labels='@json($labels)'
             ></coordinate-picker-lit>
         </div>
@@ -127,10 +101,10 @@ $labels = [
             x-transition:leave="transition ease-in duration-150"
         >
             <div class="flex flex-wrap gap-x-4 gap-y-1">
-                <span>Lat: <strong class="text-gray-700" x-text="(state && (state.latitude != null || state.latitude === 0)) ? Number(state.latitude).toFixed(6) : '--'"></strong></span>
-                <span>Lng: <strong class="text-gray-700" x-text="(state && (state.longitude != null || state.longitude === 0)) ? Number(state.longitude).toFixed(6) : '--'"></strong></span>
+                <span>{{ __('geo::coordinate-picker.latitude_abbr') }}: <strong class="text-gray-700" x-text="(state && (state.latitude != null || state.latitude === 0)) ? Number(state.latitude).toFixed(6) : '--'"></strong></span>
+                <span>{{ __('geo::coordinate-picker.longitude_abbr') }}: <strong class="text-gray-700" x-text="(state && (state.longitude != null || state.longitude === 0)) ? Number(state.longitude).toFixed(6) : '--'"></strong></span>
                 <template x-if="state?.address_details?.city">
-                    <span>Città: <strong class="text-gray-700" x-text="state.address_details.city"></strong></span>
+                    <span>{{ __('geo::coordinate-picker.city') }}: <strong class="text-gray-700" x-text="state.address_details.city"></strong></span>
                 </template>
             </div>
             <div class="truncate max-w-full sm:max-w-[400px]" x-show="state?.address" x-bind:title="state?.address || ''">

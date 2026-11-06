@@ -13,28 +13,27 @@ use Webmozart\Assert\Assert;
 
 class ChangePasswordCommand extends Command
 {
-    protected $signature = 'user:change-password';
+    protected $signature = 'user:change-password {--email= : Email dell\'utente}';
 
     protected $description = 'Change user password';
 
     public function handle(): void
     {
-        Assert::string($email = $this->ask('Enter the user email:'));
-        try {
-            $user = XotData::make()->getUserByEmail($email);
-        } catch (\Exception $e) {
-            $this->error($e->getMessage());
+        $emailInput = $this->option('email') ?? $this->ask('Enter the user email:');
+        Assert::string($emailInput);
+
+        $email = strtolower(trim($emailInput));
+
+        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->error('Email non valida: '.$emailInput);
 
             return;
         }
 
-        // Ensure we fetched a persisted user and not a transient instance to avoid accidental insert
-        if (! $user->exists()) {
-            Assert::false(
-                $user->exists(),
-                __FILE__.':'.__LINE__.' - '.class_basename(self::class).' - User model should exist in database before password change'
-            );
-            $this->error('User not found or not persisted. Please create the user first (name, email, type, etc.).');
+        $user = XotData::make()->findUserByEmail($email);
+
+        if ($user === null) {
+            $this->error("Utente non trovato per email: {$email}");
 
             return;
         }
@@ -47,13 +46,10 @@ class ChangePasswordCommand extends Command
 
             return;
         }
-        $pwd_data = PasswordData::make();
-        $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
-        /*
-         * $user->is_otp = false;
-         * $user->password = Hash::make($password);
-         * $user->save();
-         */
+
+        $pwdData = PasswordData::make();
+        $passwordExpiryDateTime = now()->addDays($pwdData->expires_in);
+
         $user = tap($user)->update([
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,

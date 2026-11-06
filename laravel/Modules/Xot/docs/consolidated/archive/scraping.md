@@ -1,3 +1,11 @@
+---
+title: "_scraping"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_scraping xot"
+---
 # _scraping
 
 <!-- Contenuto migrato da _docs/_scraping.txt -->

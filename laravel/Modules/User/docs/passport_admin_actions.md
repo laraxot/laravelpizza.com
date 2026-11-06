@@ -1,3 +1,11 @@
+---
+title: "Passport Administrative Actions in UI"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "passport administrative actions in ui user"
+---
 # Passport Administrative Actions in UI
 
 This document describes the administrative actions for Laravel Passport available directly within the Filament admin panel, reducing the need for terminal access.

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Modules\Job\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Modules\Job\Models\Traits\ResultRelations;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
 
@@ -48,19 +48,13 @@ use Override;
  */
 class Result extends BaseModel
 {
+    use ResultRelations;
+
     protected $fillable = [
         'duration',
         'result',
         'task_id',
     ];
-
-    /**
-     * @return BelongsTo<Task, $this>
-     */
-    public function task(): BelongsTo
-    {
-        return $this->belongsTo(Task::class);
-    }
 
     public function getLastRun(): Builder
     {

@@ -1,3 +1,14 @@
+---
+title: "laravel boost mcp fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel boost mcp fix"
+issues: []
+discussions: []
+---
+
 # ✅ Laravel Boost MCP - Fix Completo
 
 ## 🎯 Problema Risolto
@@ -6,6 +17,14 @@ Il **Laravel Boost MCP server** non funzionava a causa di **errori di tipo** in 
 
 ---
 
+title: "laravel boost mcp fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel boost mcp fix"
+issues: []
+discussions: []
 ## 🔍 Errori Trovati e Corretti
 
 ### Errore #1: `#[Override]` su metodo con visibilità diversa

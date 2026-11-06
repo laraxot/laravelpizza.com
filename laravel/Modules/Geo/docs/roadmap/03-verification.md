@@ -1,3 +1,16 @@
+---
+title: "03 verification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "03 verification"
+issues: []
+discussions: []
+status: superseded
+superseded_by: verification.md
+---
+
 
 
 

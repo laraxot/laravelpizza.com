@@ -1,3 +1,11 @@
+---
+title: "Linee Guida per l'Implementazione di getInfolistSchema"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "linee guida per l'implementazione di getinfolistschema xot"
+---
 # Linee Guida per l'Implementazione di getInfolistSchema
 
 ## Requisiti Fondamentali

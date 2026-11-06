@@ -1,3 +1,14 @@
+---
+title: "semantic versioning analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic versioning analysis"
+issues: []
+discussions: []
+---
+
 # PTVX Semantic Versioning Complete Analysis
 
 ## Executive Summary
@@ -15,6 +26,14 @@
 
 ---
 
+title: "semantic versioning analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic versioning analysis"
+issues: []
+discussions: []
 ## Detailed Analysis
 
 ### ✅ What's Working Perfectly

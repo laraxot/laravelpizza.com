@@ -12,25 +12,20 @@ use Filament\Actions\RestoreAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Models\Schedule;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class SchedulesTable extends XotBaseResourceTable
 {
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'id' => IDColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }
 
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableActions(): array
     {
         return [
@@ -45,13 +40,10 @@ class SchedulesTable extends XotBaseResourceTable
             'history' => ViewAction::make()
                 ->icon('history')
                 ->color('gray')
-                ->tooltip(static::trans('buttons.history')),
+                ->tooltip(__('buttons.history')),
         ];
     }
 
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableBulkActions(): array
     {
         return [

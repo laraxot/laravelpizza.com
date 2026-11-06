@@ -1,3 +1,15 @@
+---
+title: "phpstan patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-28
+qmd: "phpstan patterns"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 - Pattern Riutilizzabili
 
 > **Modulo**: UI
@@ -5,7 +17,6 @@
 > **Filosofia**: DRY + KISS - Pattern semplici, riutilizzabili, focalizzati sul PERCHÉ
 
 ---
-
 ## 🎯 Perché Questi Pattern
 
 ### Business Logic
@@ -1094,3 +1105,9 @@ protected string $property = 'custom-value';
 **PHPStan Level**: 10 Ready
 
 **Prossimo**: InteractiveMap.php (ultimo con @phpstan-ignore rilevanti)
+
+---
+
+## Callback nei test: tipo il parametro (2026-10-28)
+
+`array_map(static fn (Column $column): string => $column->getName(), $column->getFields())` (`EventColumnTest`, `OrganizationColumnTest`): il tipo e' quello del `@return array<Column>` di `GroupColumn::getFields()`. Un parametro senza tipo conta contro la soglia `typeCoverage` del 99 %, che e' **del progetto intero**: `phpstan analyse Modules/UI` da solo non la vede, serve `phpstan analyse` full-tree. Storia: `stories/phpstan-zero-errors-ui.story.md`.

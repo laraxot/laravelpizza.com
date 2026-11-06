@@ -1,3 +1,14 @@
+---
+title: "map picker filament v5 lit livewire"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker filament v5 lit livewire"
+issues: []
+discussions: []
+---
+
 # Story: MapPicker Filament v5 con Leaflet + Lit + Livewire su colonne latitude/longitude
 
 ## Status
@@ -17,6 +28,14 @@ Geo
 
 ---
 
+title: "map picker filament v5 lit livewire"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker filament v5 lit livewire"
+issues: []
+discussions: []
 ## As A
 sviluppatore che costruisce Resource Filament nel progetto
 

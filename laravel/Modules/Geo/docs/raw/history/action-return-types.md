@@ -1,3 +1,14 @@
+---
+title: "action return types"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "action return types"
+issues: []
+discussions: []
+---
+
 # Regola: Tipo Ritorno Action per File/Stream
 
 ## ⚠️ REGOLA CRITICA
@@ -223,6 +234,14 @@ action(function (): StreamedResponse {
 - [PHPStan Level 10](./PHPSTAN-LEVEL10.md)
 
 ---
+title: "action return types"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "action return types"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2025-02-17  
 **Priorità**: Alta  
 **Violazione**: Critica - Errori PHPStan + Funzionalità rotta

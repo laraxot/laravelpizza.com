@@ -1,3 +1,15 @@
+---
+title: "switch"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "switch"
+issues: []
+discussions: []
+status: draft
+---
+
 # Switch
 
 Il componente Switch è un'alternativa elegante ai checkbox tradizionali, ideale per attivare/disattivare funzionalità o impostazioni.

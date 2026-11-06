@@ -1,0 +1,47 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Schema\Blueprint;
+use Modules\User\Models\ModelHasRole;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+use Modules\Xot\Datas\XotData;
+
+/*
+ * spatie/laravel-permission pivot table for HasRoles::roles() (morphToMany).
+ *
+ * Il nome tabella NON è mai scritto qui: XotBaseMigration lo ricava dal model
+ * (`$model_class`), il cui `getTable()` legge
+ * `config('permission.table_names.model_has_roles')` a ogni chiamata — l'utente
+ * può cambiare quel valore in config in qualsiasi momento senza toccare questa
+ * migrazione. Consolida 3 file precedentemente concorrenti
+ * (2024_12_05_000034, 2024_12_05_000035, 2026_01_01_000035) in un solo owner.
+ */
+return new class extends XotBaseMigration {
+    protected ?string $model_class = ModelHasRole::class;
+
+    public function up(): void
+    {
+        $this->tableCreate(static function (Blueprint $table): void {
+            $teamClass = XotData::make()->getTeamClass();
+            $table->id();
+            $table->integer('role_id')->index()->nullable();
+            $table->uuidMorphs('model');
+            $table->foreignIdFor($teamClass, 'team_id')->nullable();
+        });
+
+        $this->tableUpdate(function (Blueprint $table): void {
+            $teamClass = XotData::make()->getTeamClass();
+            if (! $this->hasColumn('team_id')) {
+                $table->foreignIdFor($teamClass, 'team_id')->nullable();
+            }
+            if ('uuid' === $this->getColumnType('model_id')) {
+                $table->string('model_id', 36)->index()->change();
+            }
+            if ('uuid' === $this->getColumnType('role_id')) {
+                $table->integer('role_id')->index()->change();
+            }
+            $this->updateTimestamps($table);
+        });
+    }
+};

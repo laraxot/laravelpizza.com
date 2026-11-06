@@ -1,3 +1,11 @@
+---
+title: "Esempi di Contenuto per Template Email"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "esempi di contenuto per template email notify"
+---
 # Esempi di Contenuto per Template Email
 
 Questo documento contiene esempi di contenuto HTML per i vari template email da memorizzare nel database, seguendo l'architettura corretta di `spatie/laravel-database-mail-templates`.

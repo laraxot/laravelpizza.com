@@ -1,4 +1,17 @@
+---
+title: "quick reference"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick reference"
+issues: []
+discussions: []
+status: draft
+---
+
 # bmad method: quick reference (fixcity)
+# bmad method: quick reference (laraxot)
 
 ## comandi rapidi
 

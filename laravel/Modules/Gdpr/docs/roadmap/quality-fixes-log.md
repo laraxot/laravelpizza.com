@@ -1,3 +1,15 @@
+---
+title: "quality fixes log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quality fixes log"
+issues: []
+discussions: []
+status: draft
+---
+
 # Quality Fixes Log - Gdpr Module
 
 Storico correzioni PHPMD e PHPStan.

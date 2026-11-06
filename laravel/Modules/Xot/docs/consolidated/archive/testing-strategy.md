@@ -1,3 +1,11 @@
+---
+title: "Testing Strategy: MySQL-Based Testing Without RefreshDatabase"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "testing strategy: mysql-based testing without refreshdatabase xot"
+---
 # Testing Strategy: MySQL-Based Testing Without RefreshDatabase
 
 ## Overview

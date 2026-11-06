@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -12,14 +11,15 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function pestHasTeamsCreateTestUser(array $attributes = []): User
 {
@@ -49,7 +49,7 @@ function pestHasTeamsBootstrapFixture(): array
 }
 
 /**
- * @param array<string, mixed> $pivot
+ * @param  array<string, mixed>  $pivot
  */
 function pestHasTeamsAttachMember(Team $team, User $user, array $pivot = []): void
 {
@@ -232,7 +232,7 @@ test('it correctly manages team permissions', function (): void {
 
 test('it handles edge cases', function (): void {
     ['user' => $user] = pestHasTeamsBootstrapFixture();
-    $newUser = new User();
+    $newUser = new User;
 
     Assert::assertFalse($newUser->belongsToTeams());
 

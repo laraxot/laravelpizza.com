@@ -1,3 +1,15 @@
+---
+title: "FARMSHOPS INTEGRATION COMPLETE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FARMSHOPS INTEGRATION COMPLETE"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🗺️ FARMSHOPS.EU INTEGRATION - COMPLETE
 
 **Data**: 2025-10-02  
@@ -5,7 +17,6 @@
 **Status**: ✅ INTEGRATION COMPLETE  
 
 ---
-
 ## 🎯 OBIETTIVO RAGGIUNTO
 
 Analizzato il progetto farmshops.eu e integrato le sue migliori pratiche e tecnologie in FixCity per creare una mappa interattiva di livello mondiale per la visualizzazione delle segnalazioni.
@@ -180,13 +191,13 @@ Map Render → User Feedback
 #### 1. Visualizzazione Segnalazioni
 ```php
 // Homepage con mappa
-<livewire:fixcity::ticket-map />
+<livewire:ptv::ticket-map />
 ```
 
 #### 2. Ricerca Geografica
 ```php
 // Trova segnalazioni vicine
-<livewire:fixcity::ticket-map 
+<livewire:ptv::ticket-map 
     :center="[$userLat, $userLng]" 
     :zoom="15" 
 />
@@ -195,7 +206,7 @@ Map Render → User Feedback
 #### 3. Dashboard Operatori
 ```php
 // Mappa con filtri per operatori
-<livewire:fixcity::ticket-map 
+<livewire:ptv::ticket-map 
     :filters="['status' => 'open']" 
 />
 ```
@@ -203,7 +214,7 @@ Map Render → User Feedback
 #### 4. Reporting
 ```php
 // Mappa per report geografici
-<livewire:fixcity::ticket-map 
+<livewire:ptv::ticket-map 
     :filters="['priority' => 'urgent']" 
 />
 ```

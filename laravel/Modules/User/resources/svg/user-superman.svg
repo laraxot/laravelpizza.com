@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">
+  <defs>
+    <filter id="super-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#super-glow)" class="animate-pulse-fast">
+    <!-- Capo / S sulla fronte -->
+    <path d="M14 14 Q24 4 34 14 L36 18 L28 36 L20 36 L12 18 Z" stroke-width="1.5"/>
+    <path d="M24 10 L24 18 M20 14 L28 14" stroke-width="1"/>
+    <!-- Corpo / V della sotto-tuta -->
+    <path d="M16 28 L24 18 L32 28 L28 42 L20 42 Z" stroke-width="1.5"/>
+    <path d="M24 30 L24 42" stroke-width="1"/>
+    <!-- Braccia stilizzate -->
+    <path d="M16 30 L10 28 M32 30 L38 28" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <style>
+    @keyframes pulse-fast { 0%, 100% { opacity: 1; } 30% { opacity: 0.7; } 70% { opacity: 0.9; } }
+    .animate-pulse-fast { animation: pulse-fast 2.2s ease-in-out infinite; }
+  </style>
+</svg>

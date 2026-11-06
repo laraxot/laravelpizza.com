@@ -1,3 +1,15 @@
+---
+title: "schema org web pages"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schema org web pages"
+issues: []
+discussions: []
+status: draft
+---
+
 # schema.org web page types
 
 Reference: https://schema.org/WebPage and subtypes.

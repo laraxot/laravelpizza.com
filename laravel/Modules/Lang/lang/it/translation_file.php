@@ -99,7 +99,7 @@ return [
         'label' => 'File Traduzione',
         'group' => 'Lang',
         'icon' => 'heroicon-o-language',
-        'sort' => 73,
+        'sort' => '73',
     ],
     'model' => [
         'label' => 'File Traduzione',

@@ -13,6 +13,7 @@ related:
   - ./phpstan-pest-test-doubles.md
   - ../../phpstan-compliance-status.md
   - ../../../Xot/docs/wiki/concepts/phpstan-pest-bridge-discipline.md
+status: draft
 ---
 
 # Testing in Notify
@@ -30,7 +31,7 @@ Pest only. `uses(\Modules\Notify\Tests\TestCase::class)` dopo gli `import use`.
 ## PHPStan (2026-06-13)
 
 - Trait coverage: classi in `NotifyTraitTestDoubles.php`
-- Mock action: `createStub` / `createUnitMock` + `expectsOnce()` — vedi [phpstan-pest-test-doubles.md](./phpstan-pest-test-doubles.md)
+- Mock action: `createStub` / `createUnitMock` + `expectsOnce()`: vedi [phpstan-pest-test-doubles.md](./phpstan-pest-test-doubles.md)
 
 ## Quality gate
 

@@ -1,3 +1,15 @@
+---
+title: "ponytail audit over engineering"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ponytail audit over engineering"
+issues: []
+discussions: []
+status: draft
+---
+
 # Ponytail audit — Geo (over-engineering)
 
 **Ultimo run:** 2026-06-30  
@@ -32,6 +44,6 @@ Un indirizzo in ingresso → coordinate e dati strutturati. In produzione serve 
 
 ## Collegamenti
 
-- [00-INDEX.md](./00-INDEX.md)
+- [00-INDEX.md](./00-index.md)
 - [module-philosophy.md](./module-philosophy.md)
 - [Notify audit](../../Notify/docs/ponytail-audit-over-engineering.md) (stesso pattern multi-provider)

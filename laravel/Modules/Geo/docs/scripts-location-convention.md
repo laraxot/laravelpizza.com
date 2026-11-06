@@ -1,3 +1,15 @@
+---
+title: "scripts location convention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts location convention"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzione Posizione Script
 
 ## Regola Fondamentale
@@ -153,6 +165,5 @@ find ./bashscripts ./Modules/*/bashscripts ./docker -name "*.sh" -type f
 - **Sempre**: Documentare script importanti
 
 ---
-
 **Questa convenzione è OBBLIGATORIA per tutti gli script del progetto.**
 

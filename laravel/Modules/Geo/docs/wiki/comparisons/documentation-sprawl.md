@@ -1,9 +1,13 @@
 ---
+qmd: "documentation sprawl"
+issues: []
+discussions: []
 title: "Documentation Sprawl Analysis — Geo Module"
 type: comparison
 tags: [geo, documentation, redundancy, sprawl, dry]
 created: "2026-05-25"
 updated: "2026-05-25"
+status: draft
 ---
 
 # Documentation Sprawl Analysis — Geo Module
@@ -24,12 +28,12 @@ Many files exist with both naming conventions and nearly identical content:
 
 ### 2. Fragmentation by Detail
 Topics are split into too many small files that should be consolidated:
-- **Address Resource**: `address-resource.md`, `address-resource-1.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
+- **Address Resource**: `address-resource.md`, `address-resource-risorsa-filament.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
 - **Comune Model**: `comune_model.md`, `comune-model.md`, `comune_sushi_analisi.md`, `comune_sushi_conversion.md`, `comune_sushi_implementation.md`, `comune-sushi-analysis.md`, etc.
 
 ### 3. Duplicate Analysis and Summaries
 Multiple files exist for "Implementation Summary" and "Consolidated Business Logic":
-- `implementation_summary.md`, `implementation-summary.md`, `implementation-summary-1.md`, `implementation-sumy.md`
+- `implementation_summary.md`, `implementation-summary.md`, `implementation-summary.md`, `implementation-sumy.md`
 - `business-logic-analysis.md`, `business-logic-consolidated.md`, `business-logic-overview.md`
 
 ### 4. Placeholder and Empty Files

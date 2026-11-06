@@ -16,7 +16,7 @@ class OauthAccessTokenInfolist extends XotBaseResourceInfolist
      *
      * Campi basati sul Model OauthAccessToken.php -> id, user_id, client_id, name, scopes, revoked, expires_at
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

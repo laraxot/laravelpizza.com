@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+// Cms translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
+// Canon: Modules/Cms/docs/wiki/concepts/claude-audit-static.md
+// File: lang/it/section_navigation.php
+return [
+    'navigation' => [
+        'label' => 'Sezioni',
+        'group' => 'Gestione Contenuti',
+        'icon' => 'heroicon-o-rectangle-stack',
+        'sort' => 85,
+    ],
+];

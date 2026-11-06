@@ -92,7 +92,7 @@ return [
         ],
         'label' => 'Sections',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [
@@ -104,5 +104,10 @@ return [
         'delete' => [
             'label' => 'Elimina Sections',
         ],
+    ],
+    'preview' => [
+        'empty' => 'Nessun contenuto disponibile per questa sezione',
+        'no_blocks' => 'Nessun blocco configurato per questa sezione',
+        'no_translation' => 'Nessuna traduzione disponibile per la lingua corrente',
     ],
 ];

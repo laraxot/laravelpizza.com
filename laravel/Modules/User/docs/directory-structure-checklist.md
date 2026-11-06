@@ -1,3 +1,28 @@
+---
+title: "Checklist per la Struttura delle Directory nei Moduli Windsurf/Xot"
+type: concept
+tags: [directory, structure, checklist]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "directory-structure-checklist checklist per la struttura delle directory nei moduli windsurf/xot"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Checklist per la Struttura delle Directory nei Moduli Windsurf/Xot
 
 ## Panoramica
@@ -47,7 +72,7 @@ Questo documento fornisce una checklist per verificare la corretta struttura del
 - ❌ `Modules/User/Resources/views/auth/login.blade.php` (case errata!)
 - ❌ `Modules/User/Actions/DeleteUserAction.php` (manca app/)
 - ❌ `Modules/User/Application/UseCases/...` (manca app/)
-- ❌ `Modules/User/Database/Migrations/...` (PascalCase — usare `database/migrations/`)
+- ❌ `Modules/User/Database/Migrations/...` (PascalCase: usare `database/migrations/`)
 - ❌ `Modules/User/Events/UserRegistered.php` (manca app/)
 - ❌ `Modules/User/Listeners/AssignFreeCreditsListener.php` (manca app/)
 - ❌ `Modules/User/Http/Controllers/UserController.php` (manca app/)
@@ -73,6 +98,6 @@ find Modules/User -type d -name "Resources" -o -name "Lang" -o -name "Config" -o
 ```
 
 ## Per saperne di più
-- [module-root-folder-violations.md](./wiki/concepts/module-root-folder-violations.md) — violazioni attuali nel modulo User
-- [module-root-php-folders-forbidden.md](../../../../docs/wiki/rules/module-root-php-folders-forbidden.md) — regola wiki canonica
+- [module-root-folder-violations.md](./wiki/concepts/module-root-folder-violations.md): violazioni attuali nel modulo User
+- [module-root-php-folders-forbidden.md](../../../../docs/wiki/rules/module-root-php-folders-forbidden.md): regola wiki canonica
 - Consultare: `laravel/Modules/Xot/docs/module-directory-structure-rule.md`

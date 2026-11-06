@@ -1,3 +1,15 @@
+---
+title: "eloquent integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "eloquent integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # __eloquent
 
 <!-- Contenuto migrato da _docs/__eloquent.txt -->

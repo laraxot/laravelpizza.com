@@ -1,3 +1,14 @@
+---
+title: "bmad quick start"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad quick start"
+issues: []
+discussions: []
+---
+
 # BMAD Method — Quick Start Guide
 
 > **Versione Installata**: 6.2.0  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "bmad quick start"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad quick start"
+issues: []
+discussions: []
 ## Cos'è BMAD?
 
 **BMAD Method** (Build More Architect Dreams) è un framework di sviluppo AI-driven con:

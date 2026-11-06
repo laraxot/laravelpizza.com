@@ -1,3 +1,11 @@
+---
+title: "Regole generali per aggiornamento colonne e gestione errori schema"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole generali per aggiornamento colonne e gestione errori schema xot"
+---
 # Regole generali per aggiornamento colonne e gestione errori schema
 
 ## Collegamento bidirezionale

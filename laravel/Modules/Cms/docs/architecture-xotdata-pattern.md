@@ -1,3 +1,15 @@
+---
+title: "architecture xotdata pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture xotdata pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architettura XotData Pattern - Errore Critico Risolto e Analisi Approfondita
 
 ## 🚨 **Errore Grave Identificato e Risolto**
@@ -150,7 +162,7 @@ function createTestUser(array $attributes = []): UserContract
 
 ### **Pattern XotData**
 - [docs/xotdata-architecture-critical-error-fix.md](../../../../docs/project/xotdata-architecture-critical-error-fix.md)
-- [laravel/Modules/Xot/project_docs/architecture-violations-and-fixes.md](../../xot/project_docs/architecture-violations-and-fixes.md)
+- [laravel/Modules/Xot/project_docs/architecture-violations-and-fixes.md](../../Xot/docs/architecture-violations-and-fixes.md)
 
 ### **Struttura Testing**
 - [laravel/Modules/User/tests/Feature/Filament/Widgets/LoginWidgetTest.php](../../User/tests/Feature/Filament/Widgets/LoginWidgetTest.php)

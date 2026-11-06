@@ -12,8 +12,6 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-// use Modules\SaluteOra\Models\Appointment;
-
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
@@ -52,7 +50,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
         };
 
         $appointmentId = is_object($appointment) && isset($appointment->id) ? $appointment->id : null;
-        if ($appointmentId !== null && $appointmentId !== '') {
+        if ($appointmentId !== null && $appointmentId !== '' && is_scalar($appointmentId)) {
             $subject .= ' #'.(string) $appointmentId;
         }
 
@@ -61,8 +59,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             tags: ['appointment', $type],
             metadata: [
                 'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
-                'type' => $type,
-            ],
+                'type' => $type],
         );
     }
 
@@ -88,8 +85,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
                 'appointment' => $this->notificationData['appointment'],
                 'patient' => $this->notificationData['patient'],
                 'type' => $type,
-                'additionalData' => $this->notificationData['additionalData'] ?? [],
-            ],
+                'additionalData' => $this->notificationData['additionalData'] ?? []],
         );
     }
 

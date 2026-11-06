@@ -33,4 +33,24 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'widget' => [
+        'locating' => [
+            'label' => 'Standort wird ermittelt...',
+        ],
+        'heading' => [
+            'title' => 'Breiten-/Längengrad',
+        ],
+        'latitude' => [
+            'label' => 'Breite',
+        ],
+        'longitude' => [
+            'label' => 'Länge',
+        ],
+        'error_code' => [
+            'label' => 'Fehlercode',
+        ],
+        'error_message' => [
+            'label' => 'Fehlermeldung',
+        ],
+    ],
 ];

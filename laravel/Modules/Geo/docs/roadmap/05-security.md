@@ -1,3 +1,16 @@
+---
+title: "05 security"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "05 security"
+issues: []
+discussions: []
+status: superseded
+superseded_by: security.md
+---
+
 
 
 # 🛡️ Fase 5: Sicurezza

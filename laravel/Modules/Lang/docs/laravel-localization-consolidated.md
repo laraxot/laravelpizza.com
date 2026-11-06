@@ -1,4 +1,18 @@
-# Laravel Localization (mcamara) — Consolidated Reference
+---
+issues: []
+discussions: []
+title: "Laravel Localization (mcamara): Consolidated Reference"
+module: "Lang"
+type: concept
+tags: [filament4, migration]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament4 migration"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
+# Laravel Localization (mcamara): Consolidated Reference
 
 ## Overview
 
@@ -119,9 +133,9 @@ php artisan route:trans:list it # List routes for locale
 
 ## Laraxot Rules
 
-1. **Module `Lang` owns localization** — other modules must not duplicate this logic
-2. **Always use redirect middleware** — prevents SEO duplicate content
-3. **Never hardcode locale strings** — use `LaravelLocalization::getCurrentLocale()`
+1. **Module `Lang` owns localization**: other modules must not duplicate this logic
+2. **Always use redirect middleware**: prevents SEO duplicate content
+3. **Never hardcode locale strings**: use `LaravelLocalization::getCurrentLocale()`
 4. **Short array syntax `[]`** only in all PHP code
 5. **Filament panels** integrate via `XotBasePanelProvider`
 

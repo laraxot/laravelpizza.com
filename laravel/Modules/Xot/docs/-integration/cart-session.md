@@ -1,3 +1,11 @@
+---
+title: "cart_session"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "cart_session xot"
+---
 # cart_session
 
 <!-- Contenuto migrato da _docs/cart_session.txt -->

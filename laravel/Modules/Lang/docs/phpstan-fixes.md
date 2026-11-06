@@ -1,6 +1,27 @@
-# Lang Module — PHPStan
+---
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
+status: draft
+---
 
-## 2026-06-10 — STORY-305 · Level 10 · 0 errori
+# Lang Module: PHPStan
+
+## 2026-10-20: wave r3 · gate modulo
+
+```bash
+cd laravel && php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules/Lang
+# [OK] No errors
+```
+
+Test: reflection parent con `assertInstanceOf(ReflectionClass::class, $parent)` prima di `getName()`; provider senza `method_exists`/`assertInstanceOf` tautologici.
+
+## 2026-06-10: STORY-305 · Level 10 · 0 errori
 
 ```bash
 cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
@@ -14,30 +35,7 @@ cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
 - Issue [#332](https://github.com/laraxot/base_fixcity_fila5/issues/332) · base D[#333](https://github.com/laraxot/base_fixcity_fila5/discussions/333)
 
 ---
-
-## Storico — Level 7 (Gennaio 2025)
-
-Il modulo Lang era a 0 errori Level 7.
-# Lang Module - PHPStan Level 7 Fixes - Gennaio 2025
-# Lang Module — PHPStan
-
-## 2026-06-10 — STORY-305 · Level 10 · 0 errori
-
-Il modulo Lang è stato completamente risolto per PHPStan Level 7 con 0 errori rimanenti.
-```bash
-cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
-# [OK] No errors
-```
-
-- Test: `Assert::assert*()`, `uses(TestCase::class)`, helper al posto di `$this` in closure
-- `tests/Pest.php` minimal (no `pest()->extend`)
-- `TestCase::assertDatabaseHasRow()` per DB in Pest
-- Tooling: `laravel/scripts/phpstan/fix-pest-tests.php`
-- Issue [#332](https://github.com/laraxot/base_fixcity_fila5/issues/332) · base D[#333](https://github.com/laraxot/base_fixcity_fila5/discussions/333)
-
----
-
-## Storico — Level 7 (Gennaio 2025)
+## Storico: Level 7 (Gennaio 2025)
 
 Il modulo Lang era a 0 errori Level 7.
 
@@ -126,10 +124,5 @@ private function castWithAction(mixed $value): string
 
 ---
 *Ultimo aggiornamento: Gennaio 2025*
-*Ultimo aggiornamento: Gennaio 2025*
-*Stato: ✅ Completato - 0 errori PHPStan*
-*Stato: ✅ Completato - 0 errori PHPStan*
-*Stato: ✅ Completato - 0 errori PHPStan*
-*Stato: ✅ Completato - 0 errori PHPStan*
 *Ultimo aggiornamento: Gennaio 2025*
 *Stato: ✅ Completato - 0 errori PHPStan*

@@ -1,7 +1,19 @@
+---
+title: "claude boost snapshot"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude boost snapshot"
+issues: []
+discussions: []
+---
+
 # claudeMd
 Codebase and user instructions are shown below. Be sure to adhere to these instructions. IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow them exactly as written.
 
 Contents of /var/www/html/_bases/base_fixcity_fila5_mono/laravel/CLAUDE.md (project instructions, checked into the codebase):
+Contents of /var/www/html/_bases/base_ptvx_fila5_mono/laravel/CLAUDE.md (project instructions, checked into the codebase):
 
 <laravel-boost-guidelines>
 === foundation rules ===
@@ -677,6 +689,7 @@ it('has emails', function (string $email) {
 ### Required Commands (ALWAYS):
 ```bash
 cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
+cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
 npm run build
 npm run copy
 ```
@@ -734,6 +747,7 @@ Modules/
 ### Module Status Management
 - `modules_statuses.json` - Controls which modules are active
 - All 22 modules currently active (Activity, Geo, Blog, Cms, Gdpr, Job, Media, Notify, Rating, Tenant, UI, User, Xot, Lang, Chart, Fixcity, Ticket, AI, Comment, Seo)
+- All 22 modules currently active (Activity, Geo, Blog, Cms, Gdpr, Job, Media, Notify, Rating, Tenant, UI, User, Xot, Lang, Chart, App, Ticket, AI, Comment, Seo)
 - Automatic discovery via composer merge-plugin
 
 ### Theme System
@@ -752,6 +766,7 @@ Themes/Sixteen/
 ### Critical Modules
 - **Xot**: Framework base (XotBaseModel, XotBaseServiceProvider, core patterns)
 - **Fixcity**: Core ticket system (main business logic)
+- **App**: Core ticket system (main business logic)
 - **User**: Authentication, profiles, permissions
 - **Cms**: Content management, pages (JSON storage)
 - **Geo**: Geographic data (addresses, coordinates)
@@ -815,6 +830,7 @@ Ticket (core entity):
 
 ### Business Logic
 FixCity enables:
+Notify enables:
 - Citizens to report urban issues (potholes, broken lights, etc.)
 - Automatic geolocation and photo attachments
 - Administrative workflow with assignments and status tracking

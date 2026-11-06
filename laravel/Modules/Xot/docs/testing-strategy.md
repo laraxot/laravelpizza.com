@@ -1,3 +1,13 @@
+---
+title: "Testing Strategy: MySQL-Based Testing Without RefreshDatabase"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Testing Strategy: MySQL-Based Testing Without RefreshDatabase"
+---
 # Testing Strategy: MySQL-Based Testing Without RefreshDatabase
 
 ## Overview
@@ -88,13 +98,13 @@ protected function setUp(): void
 test('user can login', function () {
     // Arrange
     $user = User::factory()->create();
-
+    
     // Act & Assert
     $this->post('/login', [
         'email' => $user->email,
         'password' => 'password'
     ])->assertRedirect('/dashboard');
-
+    
     // Cleanup (if needed)
     $user->forceDelete();
 });

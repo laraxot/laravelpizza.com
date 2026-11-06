@@ -11,5 +11,5 @@ use Modules\User\Models\User;
  */
 trait HasUserTestCase
 {
-    public ?User $user = null;
+    protected User $user;
 }

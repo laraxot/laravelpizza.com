@@ -21,13 +21,15 @@ use Modules\Notify\Emails\EmailDataEmail;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Override;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
 /**
  * @property Schema $emailForm
  */
 class SendEmailPage extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     // use NavigationLabelTrait;
 
     /** @var array<string, mixed>|null */
@@ -66,13 +68,13 @@ class SendEmailPage extends XotBasePage
                         ->email()
                         ->required(),
                     'subject' => TextInput::make('subject')->required(),
-                    'body_html' => RichEditor::make('body_html')->required(),
-                ]),
-        ];
+                    'body_html' => RichEditor::make('body_html')->required()])];
     }
 
     public function sendEmail(): void
     {
+        abort_unless(static::canAccess(), 403);
+
         $data = $this->emailForm->getState();
         $email_data = EmailData::from($data);
 
@@ -88,21 +90,18 @@ class SendEmailPage extends XotBasePage
     protected function getForms(): array
     {
         return [
-            'emailForm',
-        ];
+            'emailForm'];
     }
 
-    /** @return array<string, \Filament\Actions\Action> */
+    /** @return array<string, Action> */
     protected function getEmailFormActions(): array
     {
         return [
             'submit' => Action::make('emailFormActions')
 
-                ->submit('emailFormActions'),
-        ];
+                ->submit('emailFormActions')];
     }
 
-    #[Override]
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();

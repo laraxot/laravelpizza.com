@@ -1,3 +1,15 @@
+---
+title: "implementation status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementation status"
+issues: []
+discussions: []
+status: draft
+---
+
 # Stato Implementazione SpatieEmail
 
 Questo documento tiene traccia dello stato di implementazione delle email utilizzando il pacchetto Spatie per le email multilingua nel modulo Notify.
@@ -65,6 +77,14 @@ Potrebbero esserci altri modelli nel modulo Notify che utilizzano ancora la sint
 2. [Gestione Traduzioni Mancanti](modules/lang/docs/translatable/gestione-traduzioni-mancanti.md)
 3. [Implementazione nel Progetto](modules/lang/docs/translatable/implementazione-nel-progetto.md)
 4. [Best Practices](modules/lang/docs/translatable/best-practices.md)
+1. [Documentazione Laravel Translatable](../../../Lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](../../../Lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](../../../Lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](../../../Lang/docs/translatable/best-practices.md)
+1. [Documentazione Laravel Translatable](modules/lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](modules/lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](modules/lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](../best-practices.md)
 
 ## Timeline
 

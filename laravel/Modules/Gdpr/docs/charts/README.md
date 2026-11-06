@@ -1,10 +1,21 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📊 GDPR Charts - Privacy & Compliance Reporting
 
 **Modulo**: GDPR
 **Status**: ✅ Production Ready
 
 ---
-
 ## 📋 Overview
 
 Chart widgets per monitoraggio conformità GDPR, richieste privacy e metriche compliance.

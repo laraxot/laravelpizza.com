@@ -1,3 +1,15 @@
+---
+title: "claude theme dev"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude theme dev"
+issues: []
+discussions: []
+status: draft
+---
+
 # CLAUDE Theme Development
 
 Guida allo sviluppo del tema Meetup.
@@ -17,7 +29,6 @@ Il Meetup theme è una **VERSIONE MIGLIORATA** di laravelpizza.com usando Tailwi
 Il tema deve far dire "WOW!" ai visitatori.
 
 ---
-
 ## Setup & Build
 
 ```bash
@@ -67,6 +78,7 @@ Folio (routing)
 ```
 Themes/*/Http/Livewire/  ← FORBIDDEN!
 PredictController@index   ← FORBIDDEN!
+ForecastController@index   ← FORBIDDEN!
 ```
 
 ---
@@ -75,4 +87,5 @@ PredictController@index   ← FORBIDDEN!
 
 - [Indice CLAUDE](./claude-split-index.md)
 - [CLAUDE.md originale](../../CLAUDE.md)
+- [CLAUDE.md originale](../CLAUDE.md)
 - [Index principale](./index.md)

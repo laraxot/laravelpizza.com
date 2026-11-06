@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-widgets::widget class="fi-wi-infolist">
     @if ($this->getInfolistRecord())

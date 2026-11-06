@@ -1,3 +1,15 @@
+---
+title: "page component migration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page component migration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Migrazione Componenti di Pagina - Modulo UI
 
 ## Panoramica

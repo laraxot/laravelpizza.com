@@ -1,3 +1,15 @@
+---
+title: "icon design"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "icon design"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module - Icon Design
 
 ## Concetto Design
@@ -42,6 +54,6 @@ FilamentIcon::register([
 
 ## Collegamenti
 - [Design System Globale](../../../../../docs/module-icons-design-system.md)
-- [Geo Module Documentation](./readme.md)
+- [Geo Module Documentation](./README.md)
 
 *Creato: Agosto 2025*

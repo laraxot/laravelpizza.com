@@ -1,3 +1,15 @@
+---
+title: "legal pages json rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legal pages json rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Legal Pages JSON Rule
 
 ## Regola

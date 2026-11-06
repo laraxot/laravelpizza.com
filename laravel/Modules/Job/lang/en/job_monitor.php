@@ -108,7 +108,7 @@ return [
         'job_resumed' => 'Monitoraggio del job ripreso',
         'job_stopped' => 'Monitoraggio del job fermato',
     ],
-    'title' => 'job monitor',
+    'title' => 'Job monitor',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
 ];

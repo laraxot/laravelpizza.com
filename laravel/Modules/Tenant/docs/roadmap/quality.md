@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Checklist qualità - Tenant Module"
+module: "Tenant"
+type: concept
+tags: [quality]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Checklist qualità - Tenant Module
 
 - [x] PHPStan Level 10

@@ -1,3 +1,14 @@
+---
+title: "Filament 4 Components Development Guide"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui, filament]
+qmd: "filament 4 components development guide ui"
+---
+
 # Filament 4 Components Development Guide
 
 ## Overview
@@ -20,11 +31,11 @@ use Filament\Schemas\Schema;
 class CustomField extends Field
 {
     protected string $view = 'filament.forms.components.custom-field';
-
+    
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         // Component initialization logic
     }
 }
@@ -45,10 +56,10 @@ class LocationSelector extends Group
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->schema($this->getChildComponentsSchema());
     }
-
+    
     protected function getChildComponentsSchema(): array
     {
         return [
@@ -56,19 +67,19 @@ class LocationSelector extends Group
                 ->options($this->getRegionOptions())
                 ->live()
                 ->afterStateUpdated(fn($set) => $set('province', null)),
-
+                
             Select::make('province')
                 ->options(fn($get) => $this->getProvinceOptions($get('region')))
                 ->disabled(fn($get) => !$get('region')),
         ];
     }
-
+    
     protected function getRegionOptions(): array
     {
         // Implementation
         return [];
     }
-
+    
     protected function getProvinceOptions(?string $region): array
     {
         // Implementation
@@ -91,26 +102,26 @@ use Filament\Tables\Table;
 class CustomColumn extends Column
 {
     protected string $view = 'filament.tables.columns.custom-column';
-
+    
     protected array $schema = [];
-
+    
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         // Column initialization
     }
-
+    
     public function schema(array $schema): static
     {
         $this->schema = $schema;
         return $this;
     }
-
+    
     public function table(?Table $table): static
     {
         parent::table($table);
-
+        
         // Handle child components table assignment
         if ($table !== null) {
             foreach ($this->schema as $child) {
@@ -119,10 +130,10 @@ class CustomColumn extends Column
                 }
             }
         }
-
+        
         return $this;
     }
-
+    
     public function getChildColumns(): array
     {
         return $this->schema;
@@ -142,56 +153,56 @@ use Filament\Support\Enums\IconPosition;
 class IconStateColumn extends Column
 {
     protected string $view = 'filament.tables.columns.icon-state-column';
-
+    
     protected array $stateIcons = [];
     protected array $stateColors = [];
     protected array $stateLabels = [];
     protected IconPosition $iconPosition = IconPosition::Before;
-
+    
     protected function setUp(): void
     {
         parent::setUp();
     }
-
+    
     public function stateIcon(string $state, string $icon): static
     {
         $this->stateIcons[$state] = $icon;
         return $this;
     }
-
+    
     public function stateColor(string $state, string $color): static
     {
         $this->stateColors[$state] = $color;
         return $this;
     }
-
+    
     public function stateLabel(string $state, string $label): static
     {
         $this->stateLabels[$state] = $label;
         return $this;
     }
-
+    
     public function iconPosition(IconPosition $position): static
     {
         $this->iconPosition = $position;
         return $this;
     }
-
+    
     public function getStateIcon($state): ?string
     {
         return $this->stateIcons[$state] ?? null;
     }
-
+    
     public function getStateColor($state): ?string
     {
         return $this->stateColors[$state] ?? null;
     }
-
+    
     public function getStateLabel($state): ?string
     {
         return $this->stateLabels[$state] ?? $state;
     }
-
+    
     public function getIconPosition(): IconPosition
     {
         return $this->iconPosition;
@@ -212,16 +223,16 @@ use Filament\Widgets\Widget;
 class CustomWidget extends Widget
 {
     protected static string $view = 'filament.widgets.custom-widget';
-
+    
     protected int | string | array $columnSpan = 'full';
-
+    
     protected function getViewData(): array
     {
         return [
             'data' => $this->getData(),
         ];
     }
-
+    
     protected function getData(): array
     {
         // Widget data logic
@@ -246,14 +257,14 @@ use Livewire\Component;
 class CustomForm extends Component implements HasSchemas
 {
     use InteractsWithSchemas;
-
+    
     public ?array $data = [];
-
+    
     public function mount(): void
     {
         $this->form->fill();
     }
-
+    
     public function form(Schema $schema): Schema
     {
         return $schema
@@ -262,13 +273,13 @@ class CustomForm extends Component implements HasSchemas
             ])
             ->statePath('data');
     }
-
+    
     public function submit(): void
     {
         $data = $this->form->getState();
         // Handle form submission
     }
-
+    
     public function render()
     {
         return view('livewire.custom-form');
@@ -293,7 +304,7 @@ class CustomTable extends Component implements HasTable, HasSchemas
 {
     use InteractsWithTable;
     use InteractsWithSchemas;
-
+    
     public function table(Table $table): Table
     {
         return $table
@@ -308,7 +319,7 @@ class CustomTable extends Component implements HasTable, HasSchemas
                 // Row actions
             ]);
     }
-
+    
     public function render()
     {
         return view('livewire.custom-table');
@@ -367,7 +378,7 @@ it('handles form submission', function () {
 ```php
 it('displays table data', function () {
     $records = Model::factory()->count(3)->create();
-
+    
     Livewire::test(CustomTable::class)
         ->assertCanSeeTableRecords($records);
 });
@@ -380,7 +391,7 @@ it('displays table data', function () {
 protected function setUp(): void
 {
     parent::setUp();
-
+    
     $this->visible(fn() => auth()->user()->can('view-component'));
 }
 ```

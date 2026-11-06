@@ -1,3 +1,15 @@
+---
+title: "custom charts troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "custom charts troubleshooting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Custom Charts Troubleshooting Guide
 
 **Version**: 1.0.0  
@@ -6,7 +18,6 @@
 **Complexity**: All Levels
 
 ---
-
 ## Quick Reference
 
 | Error | Severity | Quick Fix |
@@ -40,6 +51,7 @@ CRITICAL ❗
 #0 vendor/spatie/laravel-data/src/DataPipes/CastPropertiesDataPipe.php:113
 #1 vendor/spatie/laravel-data/src/Resolvers/DataFromArrayResolver.php:97
 #2 Modules/Quaeris/app/Actions/QuestionChart/Custom/MailResponseRate.php:50
+#2 Modules/App/app/Actions/QuestionChart/Custom/MailResponseRate.php:50
 ```
 
 ### Root Cause
@@ -66,6 +78,7 @@ return new AnswersChartData(
 ```bash
 # Check for ChartData objects
 grep -r "new ChartData" Modules/Quaeris/app/Actions/QuestionChart/Custom/
+grep -r "new ChartData" Modules/App/app/Actions/QuestionChart/Custom/
 
 # Should return: (empty)
 ```
@@ -82,6 +95,7 @@ grep -r "new ChartData" Modules/Quaeris/app/Actions/QuestionChart/Custom/
 ```
 SQLSTATE[42S02]: Base table or view not found: 1146
 Table 'quaeris_survey.contacts' doesn't exist
+Table 'app_survey.contacts' doesn't exist
 ```
 
 ### Severity
@@ -94,6 +108,7 @@ CRITICAL ❗
 ### Database Map
 ```
 quaeris_data (Connection: 'quaeris')
+app_data (Connection: 'this-project')
 ├── contacts          ← This table
 ├── survey_pdfs
 └── customers
@@ -106,6 +121,7 @@ limesurvey (Connection: 'limesurvey')
 
 ### Root Cause
 Query uses `limesurvey` connection, but `contacts` table is in `quaeris_data`
+Query uses `limesurvey` connection, but `contacts` table is in `app_data`
 
 ### Solution
 ```php
@@ -130,6 +146,7 @@ public function getSmsAnswers(...) {
 ```bash
 # Check for cross-database joins
 grep -r "getConnection()->getDatabaseName()" Modules/Quaeris/app/Actions/QuestionChart/Custom/
+grep -r "getConnection()->getDatabaseName()" Modules/App/app/Actions/QuestionChart/Custom/
 
 # Should return: (empty)
 ```
@@ -148,6 +165,7 @@ grep -r "getConnection()->getDatabaseName()" Modules/Quaeris/app/Actions/Questio
 SQLSTATE[42000]: Syntax error or access violation: 1055
 Expression #2 of SELECT list is not in GROUP BY clause
 and contains nonaggregated column 'quaeris_data.contacts.sms_sent_at'
+and contains nonaggregated column 'app_data.contacts.sms_sent_at'
 which is not functionally dependent on columns in GROUP BY clause;
 this is incompatible with sql_mode=only_full_group_by
 ```
@@ -196,6 +214,7 @@ GROUP BY
 ```bash
 # Check groupByRaw usage
 grep -n "groupByRaw" Modules/Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate.php
+grep -n "groupByRaw" Modules/App/app/Actions/QuestionChart/Custom/SmsResponseRate.php
 
 # Should show both expressions included
 ```
@@ -243,6 +262,7 @@ return new AnswersChartData(answers: $answersArray);
 ```bash
 # Check for DataCollection usage
 grep -n "AnswersChartData::from" Modules/Quaeris/app/Actions/QuestionChart/Custom/*.php
+grep -n "AnswersChartData::from" Modules/App/app/Actions/QuestionChart/Custom/*.php
 
 # All should use ->toArray()
 ```
@@ -461,6 +481,7 @@ Contact::query()->chunk(100, function ($contacts) {
 ```bash
 cd laravel
 ./vendor/bin/pest Modules/Quaeris/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php
+./vendor/bin/pest Modules/App/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php
 ```
 
 ### Run Single Test
@@ -472,6 +493,12 @@ cd laravel
 ```bash
 # PHPStan
 ./vendor/bin/phpstan analyse Modules/Quaeris/app/Actions/QuestionChart/Custom/
+
+# Pint (formatting)
+./vendor/bin/pint Modules/Quaeris/app/Actions/QuestionChart/Custom/
+
+# Tests with coverage
+XDEBUG_MODE=off ./vendor/bin/pest --coverage Modules/Quaeris/tests/
 
 # Pint (formatting)
 ./vendor/bin/pint Modules/Quaeris/app/Actions/QuestionChart/Custom/
@@ -507,6 +534,7 @@ echo "✅ All caches cleared"
 ```bash
 #!/bin/bash
 for file in Modules/Quaeris/app/Actions/QuestionChart/Custom/*.php; do
+for file in Modules/App/app/Actions/QuestionChart/Custom/*.php; do
     lines=$(wc -l < "$file")
     if [ $lines -gt 200 ]; then
         echo "⚠️  $file has $lines lines (max 200)"
@@ -520,6 +548,7 @@ done
 ```bash
 #!/bin/bash
 grep -r "new ChartData" Modules/Quaeris/app/Actions/QuestionChart/Custom/
+grep -r "new ChartData" Modules/App/app/Actions/QuestionChart/Custom/
 if [ $? -eq 0 ]; then
     echo "❌ Found ChartData objects - replace with arrays!"
 else
@@ -538,6 +567,7 @@ fi
 
 ### GitHub
 - Issue #97: https://github.com/laraxot/base_quaeris_fila5_mono/issues/97
+- Issue #97: https://github.com/laraxot/base_ptvx_fila5_mono/issues/97
 - All 8 comments with fixes
 
 ### Team Contacts

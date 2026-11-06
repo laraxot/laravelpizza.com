@@ -1,3 +1,11 @@
+---
+title: "Note di Implementazione Email"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "note di implementazione email notify"
+---
 # Note di Implementazione Email
 
 ## Errori Comuni e Soluzioni

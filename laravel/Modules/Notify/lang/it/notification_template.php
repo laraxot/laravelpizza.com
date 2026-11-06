@@ -13,13 +13,17 @@ return [
         'preview_data' => ['label' => 'Dati di Anteprima', 'helper' => 'Dati JSON per l\'anteprima', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'preview_data'],
         'resetFilters' => ['label' => 'resetFilters', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'applyFilters' => ['label' => 'applyFilters', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
-        'attachments' => ['label' => 'attachments', 'placeholder' => 'attachments', 'helper_text' => 'attachments', 'description' => 'attachments'],
-    ],
+        'attachments' => ['label' => 'attachments', 'placeholder' => 'attachments', 'helper_text' => 'attachments', 'description' => 'attachments']],
     'columns' => ['name' => 'Nome', 'subject' => 'Oggetto', 'type' => 'Tipo', 'created_at' => 'Creato il', 'updated_at' => 'Aggiornato il'],
-    'actions' => ['preview' => 'Anteprima'],
+    'actions' => [
+        'preview' => 'Anteprima',
+        'create' => ['label' => 'create', 'icon' => 'create', 'tooltip' => 'create'],
+        'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
+        'delete' => ['label' => 'delete', 'icon' => 'delete', 'tooltip' => 'delete'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+        'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
+        'edit' => ['label' => 'edit', 'icon' => 'edit', 'tooltip' => 'edit']],
     'enums' => [
-        'notification_type' => ['email' => 'Email', 'sms' => 'SMS', 'push' => 'Notifica Push'],
-    ],
+        'notification_type' => ['email' => 'Email', 'sms' => 'SMS', 'push' => 'Notifica Push']],
     'label' => 'Notification Template',
-    'plural_label' => 'Notification Template (Plurale)',
-];
+    'plural_label' => 'Notification Template (Plurale)'];

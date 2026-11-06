@@ -1,3 +1,14 @@
+---
+title: "infolist vs form pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "infolist vs form pattern"
+issues: []
+discussions: []
+---
+
 # Pattern DRY+KISS: Infolist vs Form
 
 ## Regola Fondamentale

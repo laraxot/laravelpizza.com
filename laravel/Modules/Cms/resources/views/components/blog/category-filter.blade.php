@@ -1,6 +1,6 @@
 @props([
-    'title' => 'Esplora per Categoria',
-    'subtitle' => 'Filtra gli articoli per area di interesse',
+    'title' => __('cms::blog.sections.category_filter.title'),
+    'subtitle' => __('cms::blog.sections.category_filter.description'),
     'style' => 'pills',
     'show_descriptions' => true,
     'categories' => [],
@@ -62,8 +62,8 @@
                     href="{{ request()->path() }}" 
                     class="inline-flex flex-col items-center px-6 py-4 bg-gray-50 border-2 border-gray-200 rounded-2xl hover:border-[#1E5A96] hover:bg-[#1E5A96]/5 transition-all group"
                 >
-                    <span class="text-lg font-semibold text-gray-700 group-hover:text-[#1E5A96]">Tutti</span>
-                    <span class="text-xs text-gray-500">Tutti gli articoli</span>
+                    <span class="text-lg font-semibold text-gray-700 group-hover:text-[#1E5A96]">{{ __('cms::blog.category_filter.all.label') }}</span>
+                    <span class="text-xs text-gray-500">{{ __('cms::blog.category_filter.all_articles.label') }}</span>
                 </a>
                 
                 @foreach($categories as $category)
@@ -75,7 +75,7 @@
                         class="inline-flex flex-col items-center px-6 py-4 {{ $color['bg'] }} border-2 {{ $color['border'] }} rounded-2xl {{ $color['hover-bg'] }} transition-all group"
                     >
                         <span class="text-lg font-semibold {{ $color['text'] }} group-hover:text-gray-900">{{ $category['name'] }}</span>
-                        <span class="text-xs text-gray-500">{{ $category['count'] }} articoli</span>
+                        <span class="text-xs text-gray-500">{{ __('cms::blog.category_filter.articles_count.label', ['count' => $category['count']]) }}</span>
                     </a>
                 @endforeach
             </div>
@@ -86,8 +86,8 @@
                     class="flex items-center justify-between p-4 bg-gray-50 border-2 border-gray-200 rounded-xl hover:border-[#1E5A96] hover:bg-[#1E5A96]/5 transition-all group"
                 >
                     <div>
-                        <span class="text-lg font-semibold text-gray-700 group-hover:text-[#1E5A96]">Tutti</span>
-                        <span class="text-sm text-gray-500">Tutti gli articoli</span>
+                        <span class="text-lg font-semibold text-gray-700 group-hover:text-[#1E5A96]">{{ __('cms::blog.category_filter.all.label') }}</span>
+                        <span class="text-sm text-gray-500">{{ __('cms::blog.category_filter.all_articles.label') }}</span>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-[#1E5A96]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path d="M9 5l7 7-7 7"></path>

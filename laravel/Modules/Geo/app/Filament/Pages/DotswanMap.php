@@ -7,6 +7,7 @@ namespace Modules\Geo\Filament\Pages;
 // use Dotswan\MapPicker\Fields\Map; // Pacchetto non installato
 use Illuminate\Support\Collection;
 use Modules\Geo\Models\Place;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 /**
@@ -14,11 +15,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  */
 class DotswanMap extends XotBasePage
 {
-    /**
-     * @var array{lat: float, lng: float}
-     *
-     * @phpstan-var array{lat: float, lng: float}
-     */
+    /** @var array{lat: float, lng: float} */
     public array $location;
 
     /**
@@ -32,7 +29,7 @@ class DotswanMap extends XotBasePage
         return $places->map(fn (Place $place): array => [
             'lat' => (float) $place->latitude,
             'lng' => (float) $place->longitude,
-            'title' => (string) ($place->getAttribute('name') ?? 'Unnamed Place'),
+            'title' => SafeStringCastAction::cast($place->getAttribute('name') ?? 'Unnamed Place'),
         ]);
     }
 
@@ -41,9 +38,6 @@ class DotswanMap extends XotBasePage
         return 1;
     }
 
-    /**
-     * @return array<string, \Filament\Schemas\Components\Component>
-     */
     public function getFormSchema(): array
     {
         return [
@@ -75,9 +69,6 @@ class DotswanMap extends XotBasePage
         ];
     }
 
-    /**
-     * @return array<int, class-string<\Filament\Widgets\Widget>>
-     */
     protected function getHeaderWidgets(): array
     {
         return [];

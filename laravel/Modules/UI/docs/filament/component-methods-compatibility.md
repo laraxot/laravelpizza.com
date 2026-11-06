@@ -1,3 +1,15 @@
+---
+title: "component methods compatibility"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "component methods compatibility"
+issues: []
+discussions: []
+status: draft
+---
+
 # Compatibilità dei Metodi nei Componenti Filament
 
 ## Panoramica

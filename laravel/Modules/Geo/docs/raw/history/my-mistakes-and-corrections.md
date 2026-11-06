@@ -1,3 +1,14 @@
+---
+title: "my mistakes and corrections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "my mistakes and corrections"
+issues: []
+discussions: []
+---
+
 # 🙏 I Miei Errori e Correzioni - 2025-01-02
 
 **Author**: AI Assistant  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "my mistakes and corrections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "my mistakes and corrections"
+issues: []
+discussions: []
 ## ❌ ERRORE GRAVE: Schemaless Attributes
 
 ### Cosa Ho Sbagliato

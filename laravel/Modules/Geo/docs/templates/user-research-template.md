@@ -1,3 +1,15 @@
+---
+title: "user research template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user research template"
+issues: []
+discussions: []
+status: draft
+---
+
 # User Research Template
 
 > **Template Standardizzato** - Basato su [Notion User Research Templates](https://www.notion.com/templates/category/user-research)
@@ -10,7 +22,6 @@
 > **Stato:** {Planning\|In Progress\|Analysis\|Complete}
 
 ---
-
 ## Panoramica Research
 
 ### Obiettivo della Ricerca

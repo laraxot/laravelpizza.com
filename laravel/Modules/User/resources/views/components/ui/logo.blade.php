@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <svg {{ $attributes }} viewBox="0 0 978 615" fill="none" xmlns="http://www.w3.org/2000/svg">
     <title>{{ config('app.name') }}</title>

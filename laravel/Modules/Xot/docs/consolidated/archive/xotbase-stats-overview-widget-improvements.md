@@ -1,3 +1,11 @@
+---
+title: "XotBaseStatsOverviewWidget - Miglioramenti Implementati"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasestatsoverviewwidget - miglioramenti implementati xot"
+---
 # XotBaseStatsOverviewWidget - Miglioramenti Implementati
 
 ## Panoramica

@@ -1,3 +1,17 @@
+---
+title: "gdpr compliance roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gdpr compliance roadmap"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-14 (docs-audit): La sezione 'Existing Structure' elenca come esistenti ConsentRecord, DataProcessing, DataSubject, GdprService, ConsentService e job di anonimizzazione; nel modulo esistono invece Consent, Treatment, Event, Profile e nessun Service (verificato 2026-10-14). E' una proposta, non lo stato. Contenuto non riscritto, verificare prima di usarlo.
+
 # GDPR Module - Comprehensive Data Protection & Compliance System
 
 ## Overview
@@ -424,5 +438,13 @@ class GdprComplianceValidator
 ---
 
 
+title: "gdpr compliance roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gdpr compliance roadmap"
+issues: []
+discussions: []
 **Priority**: Critical Legal Requirement  
 **Estimated Completion**: 18-22 weeks with full team

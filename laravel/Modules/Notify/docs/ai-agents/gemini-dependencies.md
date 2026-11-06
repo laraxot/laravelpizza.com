@@ -1,9 +1,20 @@
+---
+title: "gemini dependencies"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gemini dependencies"
+issues: []
+discussions: []
+status: draft
+---
+
 # GEMINI Dependencies
 
 Gestione dipendenze Composer e moduli.
 
 ---
-
 ## Regola Critica
 
 Il `composer.json` nella **root** (`laravel/composer.json`) **NON DEVE ESSERE MODIFICATO** per aggiungere dipendenze specifiche di un modulo.
@@ -60,4 +71,5 @@ composer run go
 - [Indice GEMINI](./gemini-split-index.md)
 - [packages-spatie.md](./packages-spatie.md)
 - [GEMINI.md originale](../../GEMINI.md)
+- [GEMINI.md originale](../GEMINI.md)
 - [Index principale](./index.md)

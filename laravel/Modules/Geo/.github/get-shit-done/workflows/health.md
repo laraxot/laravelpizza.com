@@ -1,3 +1,14 @@
+---
+title: "health"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "health"
+issues: []
+discussions: []
+---
+
 <purpose>
 Validate `.planning/` directory integrity and report actionable issues. Checks for missing files, invalid configurations, inconsistent state, and orphaned plans. Optionally repairs auto-fixable issues.
 </purpose>
@@ -90,6 +101,14 @@ Errors: N | Warnings: N | Info: N
 **Footer (if repairable issues exist and --repair was NOT used):**
 ```
 ---
+title: "health"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "health"
+issues: []
+discussions: []
 N issues can be auto-repaired. Run: /gsd-health --repair
 ```
 </step>

@@ -7,8 +7,8 @@ return [
     'pages' => 'Pagine',
     'widgets' => 'Widgets',
     'navigation' => [
-        'name' => 'dashboard',
-        'plural' => 'dashboard',
+        'name' => 'Dashboard',
+        'plural' => 'Dashboard',
         'group' => [
             'name' => '',
         ],

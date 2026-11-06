@@ -1,3 +1,24 @@
+---
+title: "Coverage Full"
+type: concept
+tags: [coverage, full]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "coverage-full coverage full"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 
    FAIL  Modules\User\tests\Feature\AuthComponentsTest
   ⨯ Auth Components Tests → auth components exist and work correctly     0.41s  
@@ -877,367 +898,367 @@ Failed asserting that 500 is identical to 200.
 
 The following exception occurred during the last request:
 
-Illuminate\Foundation\ViteManifestNotFoundException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Illuminate\Foundation\ViteManifestNotFoundException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(384): Illuminate\Foundation\Vite->manifest()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/53c107abd3aaca46e6fb3de49c65857b.php(22): Illuminate\Foundation\Vite->__invoke()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(384): Illuminate\Foundation\Vite->manifest()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/53c107abd3aaca46e6fb3de49c65857b.php(22): Illuminate\Foundation\Vite->__invoke()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #96 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #103 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#108 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#109 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
-#110 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#111 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#112 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#113 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#114 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#115 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#116 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#117 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#118 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#119 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#120 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#108 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#109 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
+#110 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#111 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#112 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#113 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#114 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#115 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#116 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#117 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#118 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#119 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#120 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #121 {main}
 
-Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #93 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #100 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#108 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#109 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#110 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#111 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#112 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#113 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#114 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#115 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#116 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#117 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#108 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#109 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#110 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#111 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#112 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#113 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#114 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#115 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#116 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#117 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #118 {main}
 
-Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #82 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(29): Pest\Laravel\get()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #89 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(35): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_login_page_loads_correctly()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #107 {main}
 
 ----------------------------------------------------------------------------------
 
-Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php)
+Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php)
 
   at Modules/User/tests/Feature/AuthComponentsTest.php:31
      27▕     test('login page loads correctly', function (): void {
@@ -1257,252 +1278,252 @@ Failed asserting that 500 is identical to 200.
 
 The following exception occurred during the last request:
 
-Illuminate\Contracts\Container\BindingResolutionException: Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:198
+Illuminate\Contracts\Container\BindingResolutionException: Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:198
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/ImplicitlyBoundMethod.php(21): Illuminate\Container\BoundMethod::addDependencyForCallParameter()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Livewire\ImplicitlyBoundMethod::getMethodDependencies()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Wrapped.php(23): Illuminate\Container\BoundMethod::call()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportLifecycleHooks/SupportLifecycleHooks.php(134): Livewire\Wrapped->__call()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportLifecycleHooks/SupportLifecycleHooks.php(20): Livewire\Features\SupportLifecycleHooks\SupportLifecycleHooks->callHook()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/ComponentHook.php(19): Livewire\Features\SupportLifecycleHooks\SupportLifecycleHooks->mount()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/ComponentHookRegistry.php(45): Livewire\ComponentHook->callMount()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/EventBus.php(60): Livewire\ComponentHookRegistry::Livewire\{closure}()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/helpers.php(98): Livewire\EventBus->trigger()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(50): Livewire\trigger()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/LivewireManager.php(73): Livewire\Mechanisms\HandleComponents\HandleComponents->mount()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/volt/src/LivewireManager.php(23): Livewire\LivewireManager->mount()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/56605d057c4da24e39d52b2735540345.php(86): Livewire\Volt\LivewireManager->mount()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\RedirectIfAuthenticated->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/ImplicitlyBoundMethod.php(21): Illuminate\Container\BoundMethod::addDependencyForCallParameter()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Livewire\ImplicitlyBoundMethod::getMethodDependencies()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Wrapped.php(23): Illuminate\Container\BoundMethod::call()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportLifecycleHooks/SupportLifecycleHooks.php(134): Livewire\Wrapped->__call()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportLifecycleHooks/SupportLifecycleHooks.php(20): Livewire\Features\SupportLifecycleHooks\SupportLifecycleHooks->callHook()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/ComponentHook.php(19): Livewire\Features\SupportLifecycleHooks\SupportLifecycleHooks->mount()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/ComponentHookRegistry.php(45): Livewire\ComponentHook->callMount()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/EventBus.php(60): Livewire\ComponentHookRegistry::Livewire\{closure}()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/helpers.php(98): Livewire\EventBus->trigger()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(50): Livewire\trigger()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/LivewireManager.php(73): Livewire\Mechanisms\HandleComponents\HandleComponents->mount()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/volt/src/LivewireManager.php(23): Livewire\LivewireManager->mount()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/56605d057c4da24e39d52b2735540345.php(86): Livewire\Volt\LivewireManager->mount()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\RedirectIfAuthenticated->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #101 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(36): Pest\Laravel\get()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(36): Pest\Laravel\get()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #108 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#109 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#110 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#111 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#112 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#113 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(44): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#114 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_register_page_loads_correctly()
-#115 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#116 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#117 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#118 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#119 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#120 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#121 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#122 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#123 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#124 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#125 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#109 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#110 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#111 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#112 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#113 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(44): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#114 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_register_page_loads_correctly()
+#115 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#116 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#117 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#118 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#119 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#120 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#121 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#122 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#123 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#124 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#125 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #126 {main}
 
-Next Illuminate\View\ViewException: Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/resources/views/pages/auth/register.blade.php) in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:198
+Next Illuminate\View\ViewException: Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/resources/views/pages/auth/register.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:198
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\RedirectIfAuthenticated->handle()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\RedirectIfAuthenticated->handle()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #84 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(36): Pest\Laravel\get()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(36): Pest\Laravel\get()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #91 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(44): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_register_page_loads_correctly()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#108 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(44): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Auth_Components_Tests__→_register_page_loads_correctly()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#108 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #109 {main}
 
 ----------------------------------------------------------------------------------
 
-Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/resources/views/pages/auth/register.blade.php)
+Unable to resolve dependency [Parameter #0 [ <required> string $type ]] in class Modules\User\Filament\Widgets\RegistrationWidget (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/resources/views/pages/auth/register.blade.php)
 
   at Modules/User/tests/Feature/AuthComponentsTest.php:38
      34▕     test('register page loads correctly', function (): void {
@@ -1557,367 +1578,367 @@ Failed asserting that 500 is identical to 200.
 
 The following exception occurred during the last request:
 
-Illuminate\Foundation\ViteManifestNotFoundException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Illuminate\Foundation\ViteManifestNotFoundException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(384): Illuminate\Foundation\Vite->manifest()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/53c107abd3aaca46e6fb3de49c65857b.php(22): Illuminate\Foundation\Vite->__invoke()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(384): Illuminate\Foundation\Vite->manifest()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/53c107abd3aaca46e6fb3de49c65857b.php(22): Illuminate\Foundation\Vite->__invoke()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #96 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #103 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#108 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#109 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
-#110 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#111 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#112 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#113 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#114 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#115 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#116 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#117 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#118 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#119 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#120 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#108 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#109 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
+#110 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#111 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#112 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#113 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#114 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#115 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#116 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#117 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#118 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#119 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#120 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #121 {main}
 
-Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(103): Illuminate\View\View->render()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/storage/framework/views/bbae9269c8cc48f8eeeb47ad9dbd4f6e.php(101): Illuminate\View\Factory->renderComponent()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #93 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #100 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
-#107 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#108 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#109 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#110 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#111 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#112 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#113 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#114 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#115 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#116 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#117 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
+#107 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#108 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#109 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#110 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#111 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#112 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#113 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#114 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#115 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#116 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#117 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #118 {main}
 
-Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\View\Engines\PhpEngine->evaluatePath()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->evaluatePath()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\View\Engines\CompilerEngine->get()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(208): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->get()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate\Http\Response->__construct()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\Router::toResponse()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(102): Illuminate\Support\Facades\Facade::__callStatic()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(62): Laravel\Folio\RequestHandler->toResponse()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Laravel\Folio\RequestHandler->Laravel\Folio\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php(97): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(201): Modules\Cms\Providers\FolioVoltServiceProvider->Modules\Cms\Providers\{closure}()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php(45): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter->handle()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php(32): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect->handle()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(13): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
 #82 [internal function]: Illuminate\Foundation\Testing\TestCase->get()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/Reflection.php(37): ReflectionMethod->invoke()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderMessage.php(58): Pest\Support\Reflection::call()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/HigherOrderTapProxy.php(66): Pest\Support\HigherOrderMessage->call()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest-plugin-laravel/src/Http.php(189): Pest\Support\HigherOrderTapProxy->__call()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(66): Pest\Laravel\get()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #89 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#104 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#105 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#106 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(71): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_login_form_components_work_after_reorganization()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#104 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#105 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#106 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #107 {main}
 
 ----------------------------------------------------------------------------------
 
-Vite manifest not found at: /var/www/_bases/base_Quaeris_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php)
+Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php)
 
   at Modules/User/tests/Feature/AuthComponentsTest.php:69
      65▕         // Visit login page and ensure all reorganized components render
@@ -1937,115 +1958,115 @@ Failed asserting that 500 is identical to 200.
 
 The following exception occurred during the last request:
 
-InvalidArgumentException: Database connection [Quaeris] not configured. in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
+InvalidArgumentException: Database connection [<nome progetto>] not configured. in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(187): Illuminate\Database\DatabaseManager->configuration()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(102): Illuminate\Database\DatabaseManager->makeConnection()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1980): Illuminate\Database\DatabaseManager->connection()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(261): Illuminate\Database\Eloquent\Model->__call()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(301): Modules\Xot\Datas\XotData->getProfileModelByUserId()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/View/Composers/XotComposer.php(81): Modules\Xot\Datas\XotData->getProfileModel()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(124): Modules\Xot\View\Composers\XotComposer->compose()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(485): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(315): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(295): Illuminate\Events\Dispatcher->invokeListeners()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(178): Illuminate\Events\Dispatcher->dispatch()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(189): Illuminate\View\Factory->callComposer()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(43): Illuminate\View\View->render()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(27): Statikbe\CookieConsent\CookieConsentMiddleware->addCookieConsentScriptToResponse()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(79): Illuminate\Foundation\Testing\TestCase->get()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(187): Illuminate\Database\DatabaseManager->configuration()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(102): Illuminate\Database\DatabaseManager->makeConnection()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1980): Illuminate\Database\DatabaseManager->connection()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(261): Illuminate\Database\Eloquent\Model->__call()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(301): Modules\Xot\Datas\XotData->getProfileModelByUserId()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/View/Composers/XotComposer.php(81): Modules\Xot\Datas\XotData->getProfileModel()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(124): Modules\Xot\View\Composers\XotComposer->compose()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(485): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(315): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(295): Illuminate\Events\Dispatcher->invokeListeners()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(178): Illuminate\Events\Dispatcher->dispatch()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(189): Illuminate\View\Factory->callComposer()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(43): Illuminate\View\View->render()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(27): Statikbe\CookieConsent\CookieConsentMiddleware->addCookieConsentScriptToResponse()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(79): Illuminate\Foundation\Testing\TestCase->get()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #84 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#86 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(80): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_password_confirmation_uses_reorganized_components()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#86 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(80): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__Authentication_Flow_with_Reorganized_Components__→_password_confirmation_uses_reorganized_components()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #102 {main}
 
 ----------------------------------------------------------------------------------
 
-Database connection [Quaeris] not configured.
+Database connection [ptvx] not configured.
 
   at Modules/User/tests/Feature/AuthComponentsTest.php:80
      76▕         $user = User/* @phpstan-ignore-line */ ::factory()->create();
@@ -2065,117 +2086,117 @@ Failed asserting that 500 is identical to 200.
 
 The following exception occurred during the last request:
 
-InvalidArgumentException: Database connection [Quaeris] not configured. in /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
+InvalidArgumentException: Database connection [<nome progetto>] not configured. in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
 Stack trace:
-#0 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(187): Illuminate\Database\DatabaseManager->configuration()
-#1 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(102): Illuminate\Database\DatabaseManager->makeConnection()
-#2 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1980): Illuminate\Database\DatabaseManager->connection()
-#3 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection()
-#4 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
-#5 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
-#6 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
-#7 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
-#8 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
-#9 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(261): Illuminate\Database\Eloquent\Model->__call()
-#10 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(301): Modules\Xot\Datas\XotData->getProfileModelByUserId()
-#11 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/View/Composers/XotComposer.php(81): Modules\Xot\Datas\XotData->getProfileModel()
-#12 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(124): Modules\Xot\View\Composers\XotComposer->compose()
-#13 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
-#14 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(485): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
-#15 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(315): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}()
-#16 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(295): Illuminate\Events\Dispatcher->invokeListeners()
-#17 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(178): Illuminate\Events\Dispatcher->dispatch()
-#18 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(189): Illuminate\View\Factory->callComposer()
-#19 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
-#20 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(43): Illuminate\View\View->render()
-#21 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(27): Statikbe\CookieConsent\CookieConsentMiddleware->addCookieConsentScriptToResponse()
-#22 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
-#23 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#24 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#25 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#26 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
-#27 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(63): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#28 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\Authenticate->handle()
-#29 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#30 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
-#31 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#32 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
-#33 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#34 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
-#35 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
-#36 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#37 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
-#38 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#39 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
-#40 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#41 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
-#42 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#43 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
-#44 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
-#45 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
-#46 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
-#47 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
-#48 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
-#49 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
-#50 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#51 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
-#52 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
-#53 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
-#54 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
-#55 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
-#56 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
-#57 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#58 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
-#59 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#60 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
-#61 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#62 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#63 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
-#64 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#65 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
-#66 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
-#67 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#68 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
-#69 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#70 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
-#71 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#72 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
-#73 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#74 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
-#75 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#76 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
-#77 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#78 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
-#79 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
-#80 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
-#81 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
-#82 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
-#83 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
-#84 /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(89): Illuminate\Foundation\Testing\TestCase->get()
-#85 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
+#0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(187): Illuminate\Database\DatabaseManager->configuration()
+#1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(102): Illuminate\Database\DatabaseManager->makeConnection()
+#2 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1980): Illuminate\Database\DatabaseManager->connection()
+#3 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection()
+#4 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
+#5 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#6 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
+#7 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#8 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
+#9 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(261): Illuminate\Database\Eloquent\Model->__call()
+#10 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Datas/XotData.php(301): Modules\Xot\Datas\XotData->getProfileModelByUserId()
+#11 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/View/Composers/XotComposer.php(81): Modules\Xot\Datas\XotData->getProfileModel()
+#12 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(124): Modules\Xot\View\Composers\XotComposer->compose()
+#13 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(162): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
+#14 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(485): Illuminate\View\Factory->Illuminate\View\Concerns\{closure}()
+#15 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(315): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}()
+#16 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(295): Illuminate\Events\Dispatcher->invokeListeners()
+#17 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php(178): Illuminate\Events\Dispatcher->dispatch()
+#18 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(189): Illuminate\View\Factory->callComposer()
+#19 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#20 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(43): Illuminate\View\View->render()
+#21 /var/www/_bases/base_app_fila5_mono/laravel/vendor/statikbe/laravel-cookie-consent/src/CookieConsentMiddleware.php(27): Statikbe\CookieConsent\CookieConsentMiddleware->addCookieConsentScriptToResponse()
+#22 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Statikbe\CookieConsent\CookieConsentMiddleware->handle()
+#23 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#24 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#25 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#26 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Routing\Middleware\SubstituteBindings->handle()
+#27 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(63): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#28 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Auth\Middleware\Authenticate->handle()
+#29 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#30 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle()
+#31 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#32 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\View\Middleware\ShareErrorsFromSession->handle()
+#33 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#34 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\Session\Middleware\StartSession->handleStatefulRequest()
+#35 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Session\Middleware\StartSession->handle()
+#36 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#37 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle()
+#38 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#39 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Cookie\Middleware\EncryptCookies->handle()
+#40 /var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware.php(35): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#41 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware->handle()
+#42 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#43 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/RequestHandler.php(55): Illuminate\Pipeline\Pipeline->then()
+#44 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/folio/src/FolioManager.php(93): Laravel\Folio\RequestHandler->__invoke()
+#45 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Laravel\Folio\FolioManager->Laravel\Folio\{closure}()
+#46 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\Routing\CallableDispatcher->dispatch()
+#47 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\Routing\Route->runCallable()
+#48 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\Routing\Route->run()
+#49 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#50 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#51 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\Pipeline\Pipeline->then()
+#52 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\Routing\Router->runRouteWithinStack()
+#53 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\Routing\Router->runRoute()
+#54 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\Routing\Router->dispatchToRoute()
+#55 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\Routing\Router->dispatch()
+#56 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}()
+#57 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#58 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware->handle()
+#59 /var/www/_bases/base_app_fila5_mono/laravel/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#60 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle()
+#61 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#62 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#63 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle()
+#64 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#65 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle()
+#66 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\TrimStrings->handle()
+#67 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#68 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePostSize->handle()
+#69 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#70 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle()
+#71 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(48): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#72 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\HandleCors->handle()
+#73 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#74 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\TrustProxies->handle()
+#75 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#76 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle()
+#77 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#78 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\Http\Middleware\ValidatePathEncoding->handle()
+#79 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}()
+#80 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\Pipeline\Pipeline->then()
+#81 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#82 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle()
+#83 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(368): Illuminate\Foundation\Testing\TestCase->call()
+#84 /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Feature/AuthComponentsTest.php(89): Illuminate\Foundation\Testing\TestCase->get()
+#85 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseMethodFactory.php(168): P\Modules\User\tests\Feature\AuthComponentsTest->{closure}()
 #86 [internal function]: P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Factories\{closure}()
-#87 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
-#88 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
-#89 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
-#90 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
-#91 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(89): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
-#92 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__User_Profile_Components_Tests__→_profile_pages_use_reorganized_components_correctly()
-#93 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
-#94 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
-#95 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
-#96 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
-#97 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
-#98 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
-#99 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
-#100 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
-#101 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
-#102 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
-#103 /var/www/_bases/base_Quaeris_fila5_mono/laravel/vendor/bin/pest(119): include('...')
+#87 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): call_user_func_array()
+#88 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Support/ExceptionTrace.php(26): P\Modules\User\tests\Feature\AuthComponentsTest->Pest\Concerns\{closure}()
+#89 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(419): Pest\Support\ExceptionTrace::ensure()
+#90 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Concerns/Testable.php(321): P\Modules\User\tests\Feature\AuthComponentsTest->__callClosure()
+#91 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(169) : eval()'d code(89): P\Modules\User\tests\Feature\AuthComponentsTest->__runTest()
+#92 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(1656): P\Modules\User\tests\Feature\AuthComponentsTest->__pest_evaluable__User_Profile_Components_Tests__→_profile_pages_use_reorganized_components_correctly()
+#93 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#94 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#95 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\Framework\TestRunner->run()
+#96 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#97 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#98 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#99 /var/www/_bases/base_app_fila5_mono/laravel/vendor/phpunit/phpunit/src/TextUI/Application.php(211): PHPUnit\TextUI\TestRunner->run()
+#100 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/src/Kernel.php(103): PHPUnit\TextUI\Application->run()
+#101 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(184): Pest\Kernel->handle()
+#102 /var/www/_bases/base_app_fila5_mono/laravel/vendor/pestphp/pest/bin/pest(192): {closure}()
+#103 /var/www/_bases/base_app_fila5_mono/laravel/vendor/bin/pest(119): include('...')
 #104 {main}
 
 ----------------------------------------------------------------------------------
 
-Database connection [Quaeris] not configured.
+Database connection [ptvx] not configured.
 
   at Modules/User/tests/Feature/AuthComponentsTest.php:92
      88▕ 
@@ -2189,7 +2210,7 @@ Database connection [Quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:02, [DATE] 17:58:02))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:02, [DATE] 17:58:02))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2207,7 +2228,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit post
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2225,7 +2246,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit post
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2243,7 +2264,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit post
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2261,7 +2282,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit post
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\ChangeProfil…  InvalidArgumentException   
-Database connection [Quaeris] not configured.
+  Database connection [ptvx] not configured.
 
   at vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
     217▕ 
@@ -2280,7 +2301,7 @@ Database connection [Quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\ChangeProfil…  InvalidArgumentException   
-Database connection [Quaeris] not configured.
+  Database connection [ptvx] not configured.
 
   at vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php:221
     217▕ 
@@ -2461,7 +2482,7 @@ Database connection [Quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Fi…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test4300@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `type`, `id`, `updated_at`, `created_at`) values (1, Antonio, Russo, Giuseppe Bianchi, test4300@mail.com, [DATE] 17:58:18, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, UHHUcJpAfX, de, 0, [DATE] 17:58:18, master_admin, 019bcce4-b04c-7166-a8a4-a96175a7258d, [DATE] 17:58:18, [DATE] 17:58:18))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test4300@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `type`, `id`, `updated_at`, `created_at`) values (1, Antonio, Russo, Giuseppe Bianchi, test4300@mail.com, [DATE] 17:58:18, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, UHHUcJpAfX, de, 0, [DATE] 17:58:18, master_admin, 019bcce4-b04c-7166-a8a4-a96175a7258d, [DATE] 17:58:18, [DATE] 17:58:18))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -3179,7 +3200,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test4300@
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\PasswordDataLabelsTest…   ViewException   
-Route [social.redirect] not defined. (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/resources/views/livewire/auth/login.blade.php) (View: /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/resources/views/livewire/auth/login.blade.php)
+  Route [social.redirect] not defined. (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/resources/views/livewire/auth/login.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/resources/views/livewire/auth/login.blade.php)
 
   at vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:526
     522▕             ! is_null($url = call_user_func($this->missingNamedRouteResolver, $name, $parameters, $absolute))) {
@@ -3318,7 +3339,7 @@ Route [social.redirect] not defined. (View: /var/www/_bases/base_Quaeris_fila5_m
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TeamManagementBusiness…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.teams' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `teams` where (`id` = 1583)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.teams' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `teams` where (`id` = 1583)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -3436,7 +3457,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.tea
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Bianchi, Tenant 1 User, test3265@mail.com, [DATE] 17:58:49, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 1PnJXVEEXb, it, 0, [DATE] 17:58:49, f155f975-d42e-380a-9585-db9a377cdf64, 019bcce5-2cb9-724b-aea3-38e8064d0b55, [DATE] 17:58:49, [DATE] 17:58:49))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Bianchi, Tenant 1 User, test3265@mail.com, [DATE] 17:58:49, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 1PnJXVEEXb, it, 0, [DATE] 17:58:49, f155f975-d42e-380a-9585-db9a377cdf64, 019bcce5-2cb9-724b-aea3-38e8064d0b55, [DATE] 17:58:49, [DATE] 17:58:49))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -3454,7 +3475,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field lis
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Antonio, Verdi, Tenant 1 User Only, tenant1-only@example.com, [DATE] 17:58:50, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Lf1zQzoOS9, it, 0, [DATE] 17:58:50, 1c1b4150-dbf4-3c1d-9501-94d513d1661e, 019bcce5-2f22-736d-92cd-e4bca2c7ae52, [DATE] 17:58:50, [DATE] 17:58:50))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Antonio, Verdi, Tenant 1 User Only, tenant1-only@example.com, [DATE] 17:58:50, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Lf1zQzoOS9, it, 0, [DATE] 17:58:50, 1c1b4150-dbf4-3c1d-9501-94d513d1661e, 019bcce5-2f22-736d-92cd-e4bca2c7ae52, [DATE] 17:58:50, [DATE] 17:58:50))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -3489,7 +3510,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field lis
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Marco, Ferrari, Antonio Russo, test9838@mail.com, [DATE] 17:58:51, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, SLhugy5yyz, de, 0, ?, a8354996-2df0-3272-9403-7ccec040e6c9, 019bcce5-341e-731a-8e7b-bffbb6d51790, [DATE] 17:58:51, [DATE] 17:58:51))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Marco, Ferrari, Antonio Russo, test9838@mail.com, [DATE] 17:58:51, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, SLhugy5yyz, de, 0, ?, a8354996-2df0-3272-9403-7ccec040e6c9, 019bcce5-341e-731a-8e7b-bffbb6d51790, [DATE] 17:58:51, [DATE] 17:58:51))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -5309,7 +5330,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field lis
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Esposito, Test User, test@example.com, [DATE] 17:59:19, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, tHO8AKhFZ2, en, 0, [DATE] 17:59:19, 019bcce5-a145-7045-8605-8842a49f8843, [DATE] 17:59:19, [DATE] 17:59:19))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Esposito, Test User, test@example.com, [DATE] 17:59:19, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, tHO8AKhFZ2, en, 0, [DATE] 17:59:19, 019bcce5-a145-7045-8605-8842a49f8843, [DATE] 17:59:19, [DATE] 17:59:19))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5327,7 +5348,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `current_team_id`, `id`, `updated_at`, `created_at`) values (1, Francesco, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, sDIEheCJak, en, 0, [DATE] 17:59:20, ?, 019bcce5-a2eb-71b0-9f98-263293ad011a, [DATE] 17:59:20, [DATE] 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `current_team_id`, `id`, `updated_at`, `created_at`) values (1, Francesco, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, sDIEheCJak, en, 0, [DATE] 17:59:20, ?, 019bcce5-a2eb-71b0-9f98-263293ad011a, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5345,7 +5366,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Marco, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, lK9eSR9rRi, en, 0, [DATE] 17:59:20, 019bcce5-a3e9-70f8-a476-6b489a1d3b70, [DATE] 17:59:20, [DATE] 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Marco, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, lK9eSR9rRi, en, 0, [DATE] 17:59:20, 019bcce5-a3e9-70f8-a476-6b489a1d3b70, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5363,7 +5384,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 197iwHzcQ0, en, 0, ?, 019bcce5-a4d7-7282-a045-a3166c5d5b84, [DATE] 17:59:20, [DATE] 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 197iwHzcQ0, en, 0, ?, 019bcce5-a4d7-7282-a045-a3166c5d5b84, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5381,7 +5402,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Luigi, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, eG0coFuldH, de, 0, [DATE] 17:59:20, 019bcce5-a5c1-71fd-bbff-b034a72026bf, [DATE] 17:59:20, [DATE] 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Luigi, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, eG0coFuldH, de, 0, [DATE] 17:59:20, 019bcce5-a5c1-71fd-bbff-b034a72026bf, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5399,7 +5420,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Verdi, Test User, test@example.com, [DATE] 17:59:21, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EjRr2WlkUu, it, 0, ?, 019bcce5-a6be-717d-98f3-63faa77b28d9, [DATE] 17:59:21, [DATE] 17:59:21))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Verdi, Test User, test@example.com, [DATE] 17:59:21, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EjRr2WlkUu, it, 0, ?, 019bcce5-a6be-717d-98f3-63faa77b28d9, [DATE] 17:59:21, [DATE] 17:59:21))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5540,7 +5561,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@exam
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user5628@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Ferrari, Giuseppe Bianchi, user5628@example.com, [DATE] 17:59:25, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 27dKGLooLd, de, 0, [DATE] 17:59:25, 019bcce5-b5e2-73cd-aacb-430670e5d517, [DATE] 17:59:25, [DATE] 17:59:25))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user5628@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Ferrari, Giuseppe Bianchi, user5628@example.com, [DATE] 17:59:25, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 27dKGLooLd, de, 0, [DATE] 17:59:25, 019bcce5-b5e2-73cd-aacb-430670e5d517, [DATE] 17:59:25, [DATE] 17:59:25))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5575,7 +5596,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user5628@
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTeamsTraitTest > it correct…  TypeError   
-Modules\User\Models\BaseUser::switchTeam(): Argument #1 ($team) must be of type Modules\User\Contracts\TeamContract, null given, called in /var/www/_bases/base_Quaeris_fila5_mono/laravel/Modules/User/tests/Unit/HasTeamsTraitTest.php on line 95
+  Modules\User\Models\BaseUser::switchTeam(): Argument #1 ($team) must be of type Modules\User\Contracts\TeamContract, null given, called in /var/www/_bases/base_app_fila5_mono/laravel/Modules/User/tests/Unit/HasTeamsTraitTest.php on line 95
 
   at Modules/User/app/Models/Traits/HasTeams.php:420
     416▕ 
@@ -5627,7 +5648,7 @@ Modules\User\Models\BaseUser::switchTeam(): Argument #1 ($team) must be of type 
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test6586@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Antonio, Bianchi, Luigi Verdi, test6586@mail.com, [DATE] 17:59:28, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, LZdItmpkhS, en, 0, [DATE] 17:59:28, 019bcce5-c2ed-7191-9238-df255da041e4, [DATE] 17:59:28, [DATE] 17:59:28))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test6586@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Antonio, Bianchi, Luigi Verdi, test6586@mail.com, [DATE] 17:59:28, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, LZdItmpkhS, en, 0, [DATE] 17:59:28, 019bcce5-c2ed-7191-9238-df255da041e4, [DATE] 17:59:28, [DATE] 17:59:28))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5715,7 +5736,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test6586@
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\DeviceTest > can c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `devices` where (`id` = 481 and `device` = iPhone and `platform` = iOS)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `devices` where (`id` = 481 and `device` = iPhone and `platform` = iOS)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -5733,7 +5754,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.dev
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\DeviceTest > can c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `devices` where (`id` = 482 and `uuid` = 550e8400-e29b-41d4-a716-446655440000 and `mobile_id` = mobile123 and `device` = iPhone 13 and `platform` = iOS and `browser` = Safari and `version` = 15.0 and `is_robot` = 0 and `is_desktop` = 0 and `is_mobile` = 1 and `is_tablet` = 0 and `is_phone` = 1)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `devices` where (`id` = 482 and `uuid` = 550e8400-e29b-41d4-a716-446655440000 and `mobile_id` = mobile123 and `device` = iPhone 13 and `platform` = iOS and `browser` = Safari and `version` = 15.0 and `is_robot` = 0 and `is_desktop` = 0 and `is_mobile` = 1 and `is_tablet` = 0 and `is_phone` = 1)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -5751,7 +5772,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.dev
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\DeviceTest > devic…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `devices` where (`id` = 483) and `deleted_at` is not null) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `devices` where (`id` = 483) and `deleted_at` is not null) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -5786,7 +5807,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.dev
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\DeviceTest > can u…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `devices` where (`id` = 515 and `device` = New Device)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `devices` where (`id` = 515 and `device` = New Device)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -5804,7 +5825,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.dev
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\DeviceTest > can h…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `devices` where (`id` = 516 and `mobile_id` is null and `browser` is null and `version` is null and `robot` is null)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.devices' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `devices` where (`id` = 516 and `mobile_id` is null and `browser` is null and `version` is null and `robot` is null)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -5822,7 +5843,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.dev
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5840,7 +5861,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5926,7 +5947,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5944,7 +5965,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5962,7 +5983,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5980,7 +6001,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -5998,7 +6019,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6016,7 +6037,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6034,7 +6055,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6052,7 +6073,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > c…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6070,7 +6091,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > p…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6088,7 +6109,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > p…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6106,7 +6127,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > p…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6124,7 +6145,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > p…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6142,7 +6163,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\PermissionTest > p…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6160,7 +6181,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\ProfileTest > can…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-083e-7111-8d71-69c9baaab179 and `first_name` = John and `last_name` = Doe and `user_name` = johndoe and `email` = john@example.com)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-083e-7111-8d71-69c9baaab179 and `first_name` = John and `last_name` = Doe and `user_name` = johndoe and `email` = john@example.com)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6178,7 +6199,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.pro
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\ProfileTest > can…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-092e-717b-954e-153a94327246 and `first_name` = Jane and `last_name` = Smith and `user_name` = janesmith and `email` = jane@example.com and `phone` = +1234567890 and `bio` = Software Developer and `avatar` = avatar.jpg and `timezone` = UTC and `locale` = en and `status` = active)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-092e-717b-954e-153a94327246 and `first_name` = Jane and `last_name` = Smith and `user_name` = janesmith and `email` = jane@example.com and `phone` = +1234567890 and `bio` = Software Developer and `avatar` = avatar.jpg and `timezone` = UTC and `locale` = en and `status` = active)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6196,7 +6217,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.pro
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\ProfileTest > can…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-15be-738e-9399-ca158d96a12b and `first_name` = New Name)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-15be-738e-9399-ca158d96a12b and `first_name` = New Name)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6214,7 +6235,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.pro
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\ProfileTest > can…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-16cb-72c8-a28e-9f3dbc351c67 and `phone` is null and `bio` is null and `avatar` is null and `timezone` is null and `locale` is null)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.profiles' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `profiles` where (`id` = 019bcce6-16cb-72c8-a28e-9f3dbc351c67 and `phone` is null and `bio` is null and `avatar` is null and `timezone` is null and `locale` is null)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6232,7 +6253,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.pro
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can cre…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6250,7 +6271,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can cre…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Full Role, web, 1692, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:52, [DATE] 17:59:52))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Full Role, web, 1692, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:52, [DATE] 17:59:52))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6302,7 +6323,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (C
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6320,7 +6341,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6338,7 +6359,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6356,7 +6377,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `uuid`, `updated_at`, `created_at`) values (contributor, web, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:54, [DATE] 17:59:54))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `roles` (`name`, `guard_name`, `uuid`, `updated_at`, `created_at`) values (contributor, web, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:54, [DATE] 17:59:54))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6374,7 +6395,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (C
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6392,7 +6413,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can upd…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6410,7 +6431,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can han…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Test Role, web, ?, ?, [DATE] 17:59:55, [DATE] 17:59:55))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Test Role, web, ?, ?, [DATE] 17:59:55, [DATE] 17:59:55))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6428,7 +6449,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (C
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6446,7 +6467,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > role ha…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6464,7 +6485,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > role ha…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6482,7 +6503,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > role ha…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6500,7 +6521,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > role ca…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6518,7 +6539,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > role ca…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -6585,7 +6606,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `tenants` where (`id` = 077820da-868e-3a65-92ce-2a372f370d46 and `name` = Test Tenant)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `tenants` where (`id` = 077820da-868e-3a65-92ce-2a372f370d46 and `name` = Test Tenant)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6603,7 +6624,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.ten
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `slug`, `settings`, `trial_ends_at`, `updated_at`, `created_at`) values (e636089a-9a19-38b2-b3e9-6d316cb60920, Full Tenant, fulltenant.com, fulltenant_db, 1, full-tenant, ?, [DATE] 18:00:00, [DATE] 18:00:00, [DATE] 18:00:00))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `slug`, `settings`, `trial_ends_at`, `updated_at`, `created_at`) values (e636089a-9a19-38b2-b3e9-6d316cb60920, Full Tenant, fulltenant.com, fulltenant_db, 1, full-tenant, ?, [DATE] 18:00:00, [DATE] 18:00:00, [DATE] 18:00:00))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6621,7 +6642,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it te…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: select * from `media` where `media`.`model_type` = Modules\User\Models\Tenant and `media`.`model_id` = 644ffd11-3103-39a5-ad70-59b9f890c869 and `media`.`model_id` is not null)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: select * from `media` where `media`.`model_type` = Modules\User\Models\Tenant and `media`.`model_id` = 644ffd11-3103-39a5-ad70-59b9f890c869 and `media`.`model_id` is not null)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:483
     479▕             // First we will create a statement for the query. Then, we will set the fetch
@@ -6770,7 +6791,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_user_test.med
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `tenants` where (`id` = f26f2687-0d18-3e07-bdeb-67be1941b6fd and `name` = New Name)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `tenants` where (`id` = f26f2687-0d18-3e07-bdeb-67be1941b6fd and `name` = New Name)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6788,7 +6809,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.ten
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: select exists(select * from `tenants` where (`id` = 1405478d-d29f-3e98-8a34-9c24629bcc94 and `slug` is null and `domain` is null and `database` is null)) as `exists`)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.tenants' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: select exists(select * from `tenants` where (`id` = 1405478d-d29f-3e98-8a34-9c24629bcc94 and `slug` is null and `domain` is null and `database` is null)) as `exists`)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -6823,7 +6844,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.ten
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trial_ends_at' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `trial_ends_at`, `slug`, `updated_at`, `created_at`) values (a1c99ef4-046d-3122-b725-fed77e663d53, Vitali SPA, longo.it, in, 1, [DATE] 18:00:04, vitali-spa, [DATE] 18:00:04, [DATE] 18:00:04))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trial_ends_at' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `trial_ends_at`, `slug`, `updated_at`, `created_at`) values (a1c99ef4-046d-3122-b725-fed77e663d53, Vitali SPA, longo.it, in, 1, [DATE] 18:00:04, vitali-spa, [DATE] 18:00:04, [DATE] 18:00:04))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6841,7 +6862,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trial_ends_at' in 'field
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `settings`, `slug`, `updated_at`, `created_at`) values (ff4d2720-9c20-3347-bb1e-ec2d28f97bb1, Fabbri, Amato e Romano Group, neri.net, atque, 0, ?, fabbri-amato-e-romano-group, [DATE] 18:00:04, [DATE] 18:00:04))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `settings`, `slug`, `updated_at`, `created_at`) values (ff4d2720-9c20-3347-bb1e-ec2d28f97bb1, Fabbri, Amato e Romano Group, neri.net, atque, 0, ?, fabbri-amato-e-romano-group, [DATE] 18:00:04, [DATE] 18:00:04))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -7068,7 +7089,7 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7086,7 +7107,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7104,7 +7125,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7122,7 +7143,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7140,7 +7161,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7158,7 +7179,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7176,7 +7197,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7194,7 +7215,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7212,7 +7233,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7230,7 +7251,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7248,7 +7269,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7266,7 +7287,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7284,7 +7305,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7302,7 +7323,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7320,7 +7341,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7338,7 +7359,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7356,7 +7377,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7374,7 +7395,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7392,7 +7413,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7410,7 +7431,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7428,7 +7449,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\PermissionTest > permissi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7446,7 +7467,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be cr…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7464,7 +7485,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role has corre…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7482,7 +7503,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role has corre…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7500,7 +7521,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role has corre…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7518,7 +7539,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be up…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7536,7 +7557,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be de…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7554,7 +7575,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can have…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7572,7 +7593,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can have…   QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7590,7 +7611,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can revok…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7608,7 +7629,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be fo…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7626,7 +7647,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be fo…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7644,7 +7665,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role has times…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7662,7 +7683,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be cr…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7680,7 +7701,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be cr…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7698,7 +7719,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can check…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7716,7 +7737,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can check…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7734,7 +7755,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role can be fi…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7752,7 +7773,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\RoleTest > role handles n…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: Quaeris_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_data_test.cache' doesn't exist (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: app_data_test, SQL: delete from `cache` where `key` in (laravel_cache_spatie.permission.cache, laravel_cache_illuminate:cache:flexible:created:spatie.permission.cache))
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:605
     601▕ 
@@ -7770,7 +7791,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_data_test.cac
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\TenantTest > tenant has f…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: select * from `media` where `media`.`model_id` in (ce551e05-712f-4234-a3c1-45acae098386) and `media`.`model_type` = Modules\User\Models\Tenant)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: select * from `media` where `media`.`model_id` in (ce551e05-712f-4234-a3c1-45acae098386) and `media`.`model_type` = Modules\User\Models\Tenant)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:420
     416▕             // For select statements, we'll simply execute the query and return an array
@@ -7789,7 +7810,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_user_test.med
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\TenantTest > tenant can b…  QueryException   
-SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Quaeris_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: Quaeris_user_test, SQL: select * from `media` where `media`.`model_type` = Modules\User\Models\Tenant and `media`.`model_id` = 5f58b2a4-e769-4b49-a43d-22170079b6de and `media`.`model_id` is not null)
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'app_user_test.media' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: app_user_test, SQL: select * from `media` where `media`.`model_type` = Modules\User\Models\Tenant and `media`.`model_id` = 5f58b2a4-e769-4b49-a43d-22170079b6de and `media`.`model_id` is not null)
 
   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:483
     479▕             // First we will create a statement for the query. Then, we will set the fetch

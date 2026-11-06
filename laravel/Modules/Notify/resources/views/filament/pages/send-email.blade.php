@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
-            Test Invio Email
+            {{ __('notify::send_email.sections.page.title') }}
         </x-slot>
 
         <x-slot name="description">
-            Utilizza questo form per testare l'invio di email tramite diversi provider e configurazioni.
+            {{ __('notify::send_email.sections.page.description') }}
         </x-slot>
 
         <form wire:submit="sendEmail">

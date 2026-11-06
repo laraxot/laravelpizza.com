@@ -1,3 +1,20 @@
+---
+title: "TenantFactory Fix - Reasoning"
+type: concept
+tags: [tenantfactory, fix]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "tenantfactory-fix tenantfactory fix - reasoning"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./remaining-tenant-failures.md"
+  - "./tenant-test-fixes.md"
+  - "./tenantfactory.md"
+  - "./tenanttest-fixes.md"
+status: draft
+---
+
 # TenantFactory Fix - Reasoning
 
 ## Problem

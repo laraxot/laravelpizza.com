@@ -1,3 +1,14 @@
+---
+title: "add tests"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "add tests"
+issues: []
+discussions: []
+---
+
 <purpose>
 Generate unit and E2E tests for a completed phase based on its SUMMARY.md, CONTEXT.md, and implementation. Classifies each changed file into TDD (unit), E2E (browser), or Skip categories, presents a test plan for user approval, then generates tests following RED-GREEN conventions.
 
@@ -311,6 +322,14 @@ Present next steps:
 ```
 ---
 
+title: "add tests"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "add tests"
+issues: []
+discussions: []
 ## ▶ Next Up
 
 {if bugs discovered:}

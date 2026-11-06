@@ -1,4 +1,7 @@
 ---
+qmd: "coordinate picker best practices"
+issues: []
+discussions: []
 title: "CoordinatePicker Best Practices"
 type: concept
 sources: ["../../Modules/Geo/app/Filament/Forms/Components/CoordinatePicker.php"]
@@ -10,6 +13,7 @@ related:
   - concepts/coordinate-picker-state-binding-rule.md
   - concepts/coordinate-picker-field.md
   - concepts/filament5-custom-field-entangle-contract.md
+status: draft
 ---
 
 # CoordinatePicker Best Practices

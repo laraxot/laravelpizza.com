@@ -1,3 +1,15 @@
+---
+title: "class extension rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "class extension rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Class Extension Rules
 
 ## Base Class Extension Rules

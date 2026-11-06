@@ -1,3 +1,15 @@
+---
+title: "header section"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header section"
+issues: []
+discussions: []
+status: draft
+---
+
 # Header Section
 
 ## Struttura
@@ -84,5 +96,5 @@ L'header è una sezione che contiene vari blocchi di navigazione e contenuto.
 
 ## Collegamenti
 - [Documentazione Blocchi](./blocks.md)
-- [Best Practices UI/UX](./guida-implementazione-ux.md)
+- [Best Practices UI/UX](../guida-implementazione-ux.md)
 - [Documentazione Accessibilità](./accessibility.md)

@@ -1,3 +1,28 @@
+---
+title: "Quality Improvements Summary - PHPStan, PHPMD, PHP Insights"
+type: concept
+tags: [quality, improvements]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality-improvements quality improvements summary - phpstan, phpmd, php insights"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Quality Improvements Summary - PHPStan, PHPMD, PHP Insights
 
 ## Data: [DATE]

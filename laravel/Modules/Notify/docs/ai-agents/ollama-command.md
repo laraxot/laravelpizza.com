@@ -1,6 +1,15 @@
 ---
+title: "ollama command"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama command"
+issues: []
+discussions: []
 name: ollama-command
 description: Executes tasks locally via Ollama to save tokens and costs.
+status: draft
 ---
 
 # Ollama Slash Command (/ollama)

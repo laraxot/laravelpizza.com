@@ -1,9 +1,20 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "customizing your site"
+issues: []
+discussions: []
 title: Customizing Your Site
 description: Customizing your Jigsaw docs site
 extends: _layouts.documentation
 section: content
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Template Jigsaw (generatore di siti di documentazione) copiato nei docs: non descrive il modulo Seo, che non ha navigation.php ne' config.php di sito. Contenuto non riscritto, verificare prima di usarlo.
+
 # Customizing Your Site {#customizing}
 
 ## Styles

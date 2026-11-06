@@ -1,3 +1,15 @@
+---
+title: "COMPOSER STRATEGY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "COMPOSER STRATEGY"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 Laravel-Modules Composer Strategy
 
 **Data**: 2026-03-30  
@@ -43,7 +55,7 @@ Ogni modulo gestisce le proprie dipendenze:
 
 ```json
 {
-    "name": "fixcity/module-name",
+    "name": "ptv/module-name",
     "require": {
         "php": "^8.2",
         "filament/filament": "^5.0",
@@ -211,7 +223,7 @@ composer update
 
 ```json
 {
-    "name": "fixcity/cms-module",
+    "name": "ptv/cms-module",
     "require": {
         "php": "^8.2",
         "filament/filament": "^5.0",
@@ -265,7 +277,6 @@ Composer vede:
 - [MODULES_ARCHITECTURE.md](MODULES_ARCHITECTURE.md) - Architettura moduli
 
 ---
-
 **Stato**: ✅ **CONFIGURATO - Composer minimale con merge-plugin**  
 **Principio**: **Root minimale, moduli specifici**  
 **Merge Plugin**: **wikimedia/composer-merge-plugin**

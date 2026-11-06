@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Schema\Blueprint;
 use Modules\User\Models\Profile;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -19,7 +18,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * The `id` is NEVER exposed in APIs or URLs; `uuid` is used for all external
  * references. XotBaseModel::casts() already handles both.
  */
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = Profile::class;
 
     public function up(): void
@@ -69,6 +69,33 @@ return new class extends XotBaseMigration {
             }
             if (! $this->hasColumn('type')) {
                 $table->string('type')->index()->nullable();
+            }
+            // Era dichiarata solo nel blocco CREATE, che su questa tabella non gira mai:
+            // `profiles` viene creata da `Modules/Ptv/.../2024_01_01_000004_create_profiles_table.php`,
+            // che parte prima e non conosce questa colonna. Il model `Profile` invece la
+            // dichiara (`@property string $user_name`) e la usa per costruire l'URL del
+            // profilo, quindi senza questa riga la colonna non esiste in nessun database
+            // già migrato.
+            if (! $this->hasColumn('user_name')) {
+                $table->string('user_name')->nullable();
+            }
+            if (! $this->hasColumn('first_name')) {
+                $table->string('first_name')->nullable();
+            }
+            if (! $this->hasColumn('last_name')) {
+                $table->string('last_name')->nullable();
+            }
+            if (! $this->hasColumn('bio')) {
+                $table->text('bio')->nullable();
+            }
+            if (! $this->hasColumn('address')) {
+                $table->string('address')->nullable();
+            }
+            if (! $this->hasColumn('birth_date')) {
+                $table->date('birth_date')->nullable();
+            }
+            if (! $this->hasColumn('gender')) {
+                $table->string('gender', 1)->nullable();
             }
             if (! $this->hasColumn('email')) {
                 $table->string('email')->nullable();

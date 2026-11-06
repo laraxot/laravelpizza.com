@@ -1,3 +1,11 @@
+---
+title: "Best Practices per Template Email"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "best practices per template email notify"
+---
 # Best Practices per Template Email
 
 ## 1. Struttura Base

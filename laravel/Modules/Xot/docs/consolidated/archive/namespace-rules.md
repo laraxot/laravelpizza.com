@@ -1,3 +1,11 @@
+---
+title: "Regole per i Namespace nei Moduli Laraxot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per i namespace nei moduli laraxot xot"
+---
 # Regole per i Namespace nei Moduli Laraxot
 
 Questo documento definisce le regole ufficiali per l'utilizzo dei namespace all'interno dei moduli Laraxot.

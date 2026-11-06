@@ -1,3 +1,16 @@
+---
+title: "summary of all fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "summary of all fixes"
+issues: []
+discussions: []
+status: superseded
+superseded_by: ../summary-of-all-fixes.md
+---
+
 # Riepilogo Fix PHPStan per Filament/Laraxot
 
 ## Contesto Architetturale

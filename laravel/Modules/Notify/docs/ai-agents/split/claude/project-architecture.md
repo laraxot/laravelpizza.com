@@ -1,3 +1,15 @@
+---
+title: "project architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 === project architecture rules ===
 
 ## FIXCITY PROJECT ARCHITECTURE
@@ -31,6 +43,7 @@ Modules/
 ### Module Status Management
 - `modules_statuses.json` - Controls which modules are active
 - All 22 modules currently active (Activity, Geo, Blog, Cms, Gdpr, Job, Media, Notify, Rating, Tenant, UI, User, Xot, Lang, Chart, Fixcity, Ticket, AI, Comment, Seo)
+- All 22 modules currently active (Activity, Geo, Blog, Cms, Gdpr, Job, Media, Notify, Rating, Tenant, UI, User, Xot, Lang, Chart, App, Ticket, AI, Comment, Seo)
 - Automatic discovery via composer merge-plugin
 
 ### Theme System
@@ -49,6 +62,7 @@ Themes/Sixteen/
 ### Critical Modules
 - **Xot**: Framework base (XotBaseModel, XotBaseServiceProvider, core patterns)
 - **Fixcity**: Core ticket system (main business logic)
+- **App**: Core ticket system (main business logic)
 - **User**: Authentication, profiles, permissions
 - **Cms**: Content management, pages (JSON storage)
 - **Geo**: Geographic data (addresses, coordinates)
@@ -112,6 +126,7 @@ Ticket (core entity):
 
 ### Business Logic
 FixCity enables:
+Notify enables:
 - Citizens to report urban issues (potholes, broken lights, etc.)
 - Automatic geolocation and photo attachments
 - Administrative workflow with assignments and status tracking
@@ -130,10 +145,11 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 ---
-
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md) — All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md) — Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
+- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../INDEX.md): Master index
+- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md): Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
 

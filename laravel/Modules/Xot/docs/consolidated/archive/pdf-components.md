@@ -1,3 +1,11 @@
+---
+title: "Componenti PDF Riutilizzabili"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "componenti pdf riutilizzabili xot"
+---
 # Componenti PDF Riutilizzabili
 
 ## Panoramica

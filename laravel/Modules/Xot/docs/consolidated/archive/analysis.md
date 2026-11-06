@@ -1,3 +1,11 @@
+---
+title: "Xot Module Analysis"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xot module analysis xot"
+---
 # Xot Module Analysis
 
 ## Overview

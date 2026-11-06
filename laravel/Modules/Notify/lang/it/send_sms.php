@@ -68,12 +68,18 @@ return [
             'tooltip' => 'Invia un messaggio SMS al destinatario',
             'success_message' => 'SMS inviato con successo',
             'error_message' => 'Errore nell\'invio dell\'SMS',
+            'icon' => 'send',
         ],
         'test' => [
             'label' => 'Test connessione',
             'tooltip' => 'Verifica la connessione con il provider',
             'success_message' => 'Connessione verificata con successo',
             'error_message' => 'Errore nella verifica della connessione',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
         ],
     ],
     'messages' => [
@@ -83,4 +89,10 @@ return [
     ],
     'label' => 'Send Sms',
     'plural_label' => 'Send Sms (Plurale)',
+    'sections' => [
+        'page' => [
+            'title' => 'Test Invio SMS',
+            'description' => 'Utilizza questo form per testare l\'invio di messaggi SMS tramite diversi provider.',
+        ],
+    ],
 ];

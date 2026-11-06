@@ -1,103 +1,127 @@
 ---
-title: documentazione modulo Tenant
-module: Tenant
-type: index
-status: approved
-tags: [documentation, readme, modulo, second-brain]
-updated: "2026-05-27"
-related:
-  - ../README.md
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-14
+qmd: "tenant module readme host config directory sushi json resolve"
+issues: []
+discussions: []
+title: "Tenant: Multi-Tenancy"
+description: "Modulo per il multi-tenancy, isolamento dati per tenant"
+module: "Tenant"
+alias: "tenant"
+version: "1.0.0"
+priority: 2
+active: true
+status: active
+author: "Team Laraxot"
+license: "MIT"
+php_version: "^8.1"
+core_version: "10.0"
+dependencies: ["Xot", "User"]
+extends: []
+extended_by: 0
+documentation_date: "2026-05-27"
 ---
 
-# Documentazione — modulo Tenant
-
-> **Mappa knowledge base locale.** Il [README in root](../README.md) è la vetrina (valore, release, onboarding); questo file indica **dove** trovare regole, wiki e audit per chi sviluppa o per gli agenti AI.
+# Tenant: Multi-Tenancy
 
 ## Scopo
 
-Multi-tenancy module for the Laraxot ecosystem: single application instance serving multiple tenants with data isolation.
+Il "tenant" di questo progetto e' una **cartella di configurazione scelta dal nome host**, non una riga di database. `Actions\GetTenantNameAction` legge `SERVER_NAME` (o l'host di `APP_URL` se manca o e' `127.0.0.1`), toglie `www.`, ne fa slug e inverte le parti: `fixcity.local` diventa `local/fixcity`. Se `laravel/config/local/fixcity/` esiste, quello e' il tenant; se l'host ha piu' di due parti prova senza la parte piu' a sinistra; altrimenti ripiega sull'host di `APP_URL` e infine su `localhost`. Verificato il 2026-10-14: `php artisan tenant:test` stampa `tenant name :local/fixcity`.
 
-## Dove iniziare
+Da quel nome derivano tutte le configurazioni per tenant (verificato 2026-10-14):
 
-- [Wiki locale](./wiki/index.md)
-- [code redundancy audit](./code-redundancy-audit.md)
-- [architecture rules](./architecture-rules.md)
-- [agent edit discipline](./agent-edit-discipline.md)
-- [agent confidence protocol](./agent-confidence-protocol.md)
-- [second brain](./second-brain.md)
+- `Actions\Config\ResolveTenantConfigValueAction`: fonde `config('<gruppo>')` con `config('<tenant con punti>.<gruppo>')` (fusione ricorsiva) e ripubblica il gruppo. `TenantServiceProvider::boot()` la applica a ogni file `.php` presente nella cartella del tenant (`GetTenantConfigNamesAction`).
+- `Actions\Config\SaveTenantConfigAction`: unico punto di scrittura, fonde i dati in `config/<tenant>/<nome>.php`.
+- `Actions\Config\GetTenantFilePathAction`: percorso `config/<tenant>/<file>`; rifiuta percorsi assoluti, `..` e byte nulli.
+- Trait `Models\Traits\SushiToJson`, `SushiToJsons`, `SushiToPhpArray`, `SushiToCsv`: modelli Sushi con righe lette da `config/<tenant>/database/content/<tabella>/<id>.json` (create/update/delete riscrivono il file). E' il meccanismo con cui il modulo Cms serve le pagine (`Modules\Cms\Models\Page` usa `SushiToJsons`; 99 JSON in `config/local/fixcity/database/content/pages/` al 2026-10-14).
+- `TenantServiceProvider`: registra anche il morph map (chiave `morph_map` della config del tenant), le connessioni database (fusione di `config/<tenant>/database.php` con quelle dei moduli; connessione `tenant` presente a runtime) e `Schema::defaultStringLength(191)`.
 
+Tenant esistenti oggi in `laravel/config/`: `local/fixcity`, `eu/fixcity`, `net/futurely`, `localhost`.
 
-## Struttura tipica
+## Quick start
 
-```text
-Tenant/
-├── README.md          ← vetrina (root package)
-├── docs/
-│   ├── README.md      ← questo indice
-│   └── wiki/          ← second brain (se presente)
-├── app/ o resources/
-└── composer.json
+```bash
+cd laravel
+php artisan tenant:test            # nome del tenant per l'host corrente
+php artisan tinker --execute="echo config_path(app(Modules\\Tenant\\Actions\\GetTenantNameAction::class)->execute());"
 ```
 
-## Namespace / confini
+## Cosa NON c'e' (verificato 2026-10-14)
 
-- Namespace: `Modules\Tenant`
-- Non duplicare qui la filosofia marketing: resta nel README root.
+- Nessun isolamento per riga: niente `BelongsToTenant`, niente global scope, niente `TenantService`, `TenantSwitcher` o `SetTenant` (grep su `app/`, `routes/`, `config/`, `database/` del modulo). Il testo "Tenant scoping automatico" dei docs descrive un'architettura non implementata.
+- `BaseTenant`, `HasTenants` e la tabella pivot `tenant_user` non stanno qui: sono nel modulo User (`Modules/User/app/Models/BaseTenant.php`, `Models/Traits/HasTenants.php`).
+- `Models\Tenant::users()` e' una `hasMany` verso la classe utente di `XotData`, non un pivot.
+- Nessuna rotta (`routes/web.php` e `api.php` sono commenti) e nessun controller attivo (restano file `.no`).
+- Nessuna impersonation, fatturazione per tenant, backup isolato o analytics.
+- Un solo comando Artisan: `tenant:test`.
 
-## Indice file in docs/ (root)
+## Chi lo usa
 
-| Argomento | File |
-| :--- | :--- |
-| 00-INDEX | [00-INDEX.md](./00-INDEX.md) |
-| 00-index | [00-index.md](./00-index.md) |
-| METODI_DUPLICATI_ANALISI | [METODI_DUPLICATI_ANALISI.md](./METODI_DUPLICATI_ANALISI.md) |
-| ON-DEMAND-PATTERN | [ON-DEMAND-PATTERN.md](./ON-DEMAND-PATTERN.md) |
-| PERFORMANCE-OPTIMIZATION | [PERFORMANCE-OPTIMIZATION.md](./PERFORMANCE-OPTIMIZATION.md) |
-| PRD | [PRD.md](./PRD.md) |
-| PRODUCT_LAUNCH_PLAN | [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) |
-| PRODUCT_ROADMAP | [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) |
-| PRODUCT_STRATEGY | [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) |
-| PROJECT-STRUCTURE | [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md) |
-| QMD-SETUP | [QMD-SETUP.md](./QMD-SETUP.md) |
-| REDUNDANCY_ANALYSIS | [REDUNDANCY_ANALYSIS.md](./REDUNDANCY_ANALYSIS.md) |
-| SPRINT_PLANNING | [SPRINT_PLANNING.md](./SPRINT_PLANNING.md) |
-| SUSHI_TO_JSON_FIX_PLAN | [SUSHI_TO_JSON_FIX_PLAN.md](./SUSHI_TO_JSON_FIX_PLAN.md) |
-| TODO | [TODO.md](./TODO.md) |
-| USER_RESEARCH | [USER_RESEARCH.md](./USER_RESEARCH.md) |
-| about | [about.md](./about.md) |
-| activitylog | [activitylog.md](./activitylog.md) |
-| agent-confidence-discipline | [agent-confidence-discipline.md](./agent-confidence-discipline.md) |
-| agent-confidence-protocol | [agent-confidence-protocol.md](./agent-confidence-protocol.md) |
-| agent-edit-discipline | [agent-edit-discipline.md](./agent-edit-discipline.md) |
-| ai-methodologies | [ai-methodologies.md](./ai-methodologies.md) |
-| alternatives | [alternatives.md](./alternatives.md) |
-| api-integration | [api-integration.md](./api-integration.md) |
-| app | [app.md](./app.md) |
-| architecture-rules | [architecture-rules.md](./architecture-rules.md) |
-| arr-first-vs-collect-first-decision | [arr-first-vs-collect-first-decision.md](./arr-first-vs-collect-first-decision.md) |
-| arr-first-vs-collect-first-ision | [arr-first-vs-collect-first-ision.md](./arr-first-vs-collect-first-ision.md) |
-| auth | [auth.md](./auth.md) |
-| best-practices | [best-practices.md](./best-practices.md) |
-| business-logic-deep-dive | [business-logic-deep-dive.md](./business-logic-deep-dive.md) |
-| case-sensitivity-rules | [case-sensitivity-rules.md](./case-sensitivity-rules.md) |
-| chaos-monkey-tenant-isolation-checklist | [chaos-monkey-tenant-isolation-checklist.md](./chaos-monkey-tenant-isolation-checklist.md) |
-| code-redundancy-audit | [code-redundancy-audit.md](./code-redundancy-audit.md) |
-| codex-error-fix | [codex-error-fix.md](./codex-error-fix.md) |
-| confidence_guidelines | [confidence_guidelines.md](./confidence_guidelines.md) |
-| configuration-logic-analysis | [configuration-logic-analysis.md](./configuration-logic-analysis.md) |
-| configuration | [configuration.md](./configuration.md) |
-| conflict-resolution-fixes | [conflict-resolution-fixes.md](./conflict-resolution-fixes.md) |
-| conflict-resolution | [conflict-resolution.md](./conflict-resolution.md) |
+Importano `Modules\Tenant` (grep, esclusi i docs): Cms (16 file), Xot (6), User (4), Geo (3), Notify, Gdpr, Fixcity, Blog (1 ciascuno).
 
-## Collegamenti
+## Filament e dati
 
-- [README root (vetrina)](../README.md)
-- [Xot (framework base)](../Xot/docs/README.md)
-- [Wiki progetto](../../../../docs/wiki/README.md)
-- [Standard README doppio](../../../../docs/wiki/standards/module-theme-readme-dual.md)
+`Filament\Resources\DomainResource` elenca i tenant con il modello Sushi `Models\Domain` (`GetDomainsArrayAction` percorre le sottocartelle di `config/`, escludendo `lang`). Le migration (`2026_07_24_*`) creano `tenant_settings`, `tenant_subscriptions`, `database_configs`.
 
-## Per agenti
+## Test
 
-1. Leggere scopo in questo file.
-2. Aprire `docs/wiki/index.md` se esiste.
-3. Seguire [disciplina issue GitHub](../../../../docs/wiki/how-to/github-issue-agent-discipline.md) prima di modifiche sostanziali.
+Cartelle `tests/Unit` (Actions/Config, Models, Fixtures Sushi), `tests/Feature` (`TenantConfigIsolationTest`, `TenantBusinessLogicTest`), `tests/Integration`, `tests/Performance`. Esecuzione non provata in questa verifica.
+
+## Religione
+
+- **"Un database per tenant o row-level security"**: due politiche accettate, ma **mai mixate**
+- **"Tenant è una primitiva, non un dettaglio"**: ogni modulo deve essere tenant-aware
+- **"HasTenants trait su BaseUser"**: dottrina valida per il modulo User (il trait sta in `Modules/User`)
+- **"Salvataggio config con Action"**: `SaveTenantConfigAction` è il punto unico
+- **"XotBase come fondamento"**: ogni risorsa tenant estende `XotBaseResource`
+
+## Filosofia
+
+Tenant crede che **l'isolamento dei dati sia un diritto, non un optional**. Ogni tenant ha la sua configurazione, le sue risorse, la sua sicurezza. Il sistema è progettato per **scalare orizzontalmente** aggiungendo tenant senza modificare il codice.
+
+## Politica
+
+Riga di principio, non verificabile nel codice di questo modulo: le regole sul pivot `tenant_user`, su `HasTenants` e su `BaseTenant::$connection` riguardano il modulo User. La politica verificata e' quella descritta in "Scopo": un tenant e' una cartella `config/<host invertito>/`, `SaveTenantConfigAction` e' il punto unico di scrittura e il nome dell'host decide il tenant.
+
+## Zen
+
+> **"Il tenant è un confine. Il confine è una promessa. La promessa è la privacy."**
+
+Lo Zen di Tenant è l'**isolamento**. I dati di un tenant non possono mai essere visti, modificati o cancellati da un altro tenant. È una promessa architetturale, non una feature.
+
+## Perché esiste
+
+Le applicazioni SaaS moderne hanno bisogno di multi-tenancy per servire più clienti con un'unica installazione. Tenant esiste per **gestire questa complessità** in modo standardizzato.
+
+## Cosa Mancherebbe (Gap Analysis)
+
+| Gap | Severità | Suggerimento |
+|-----|----------|--------------|
+| Manca tenant impersonation | Alta | Aggiungere `ImpersonateTenantAction` |
+| Nessun sistema di tenant billing | Alta | Integrare con `Billing` per fatturazione per tenant |
+| Manca tenant backup isolato | Media | Aggiungere `TenantBackup` con restore selettivo |
+| Nessun sistema di tenant analytics | Media | Aggiungere `TenantAnalytics` per usage tracking |
+| Manca cross-tenant reporting | Bassa | Aggiungere `CrossTenantReport` per admin globali |
+
+---
+
+*Documento generato secondo le convenzioni del progetto: modulo `Tenant`: data 2026-05-27*
+---
+# Documentation
+
+This directory contains documentation for the module.
+
+## Structure
+
+- **bmad/architecture-tenant.md** - Module architecture and design patterns
+- **README.md** - This file
+
+## Guidelines
+
+Documentation should be:
+- Clear and concise
+- Example-driven
+- Updated with code changes
+- Use Markdown format (.md)

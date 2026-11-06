@@ -1,3 +1,15 @@
+---
+title: "filament error fileupload icon"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament error fileupload icon"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errore: Metodo `icon()` su FileUpload di Filament
 
 ## Descrizione

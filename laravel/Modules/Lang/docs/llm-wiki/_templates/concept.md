@@ -1,4 +1,7 @@
 ---
+qmd: "concept"
+issues: []
+discussions: []
 title: "Untitled Concept"
 type: concept
 sources: ["raw/articles/source-filename.md"]
@@ -7,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [tag1, tag2]
 related: []
+status: draft
 ---
 
 # {{title}}

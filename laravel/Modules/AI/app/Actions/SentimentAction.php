@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\AI\Actions;
 
 use Exception;
-use Modules\AI\Actions\Sentiment\BasicSentimentAnalyzer;
-use Modules\AI\Actions\Sentiment\TransformersSentimentAnalyzer;
+use Modules\AI\Actions\Sentiment\AnalyzeBasicSentimentAction;
+use Modules\AI\Actions\Sentiment\AnalyzeTransformersSentimentAction;
 use Modules\AI\Datas\SentimentData;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -22,11 +22,11 @@ class SentimentAction
     public function execute(string $prompt): SentimentData
     {
         $analyzer = class_exists('Codewithkyrian\Transformers\Transformers')
-            ? new TransformersSentimentAnalyzer
-            : new BasicSentimentAnalyzer;
+            ? app(AnalyzeTransformersSentimentAction::class)
+            : app(AnalyzeBasicSentimentAction::class);
 
         try {
-            $result = $analyzer->analyze($prompt);
+            $result = $analyzer->execute($prompt);
 
             return SentimentData::from($result);
         } catch (Exception $e) {

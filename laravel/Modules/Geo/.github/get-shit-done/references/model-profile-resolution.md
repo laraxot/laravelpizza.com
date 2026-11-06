@@ -1,3 +1,14 @@
+---
+title: "model profile resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model profile resolution"
+issues: []
+discussions: []
+---
+
 # Model Profile Resolution
 
 Resolve model profile once at the start of orchestration, then use it for all Task spawns.

@@ -11,6 +11,4 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
  *
  * @see XotBaseCluster
  */
-class Socialite extends XotBaseCluster
-{
-}
+class Socialite extends XotBaseCluster {}

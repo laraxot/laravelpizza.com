@@ -26,6 +26,9 @@ final class FirebaseCloudMessagingChannel
 {
     private static LoggerInterface $logger;
 
+    /**
+     * @return void
+     */
     public function __construct(
         private readonly Messaging $firebaseCloudMessaging,
     ) {

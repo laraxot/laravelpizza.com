@@ -1,3 +1,15 @@
+---
+title: "file management architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "file management architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview

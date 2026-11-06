@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Lang Module Wiki Index"
+module: "Lang"
+type: concept
+tags: [migration, filament]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament"
+related:
+  - "./italian-text-refined-audit-report.md"
+  - "../italian-text-refined-audit-report.md"
+status: draft
+---
 # Lang Module Wiki Index
 
 > **Module**: Lang
@@ -44,6 +59,7 @@ _No troubleshooting pages created yet_
 
 - [Laraxot Architecture](../../docs/wiki/concepts/laraxot-architecture.md)
 - [Actions Over Services](../../docs/wiki/concepts/actions-over-services.md)
+- [Actions Over Services](../../../../../docs/wiki/concepts/actions-over-services.md)
 - [PHPStan Level 10](../../docs/wiki/concepts/phpstan-level10.md)
 
 ## Module's Role in Project

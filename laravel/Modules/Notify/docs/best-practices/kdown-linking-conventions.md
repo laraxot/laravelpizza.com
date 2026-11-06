@@ -1,3 +1,23 @@
+---
+title: "Convenzioni per i Collegamenti nei File Markdown"
+type: concept
+tags: [notify, docs, best-practices, kdown, linking, conventions]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices kdown linking conventions convenzioni per i collegamenti nei file markdown frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: draft
+---
 # Convenzioni per i Collegamenti nei File Markdown
 
 ## Regola Fondamentale
@@ -33,6 +53,7 @@ Per collegamenti a documenti in altre directory:
 ```markdown
 [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
 [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
+[Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
 ```
 
 ## Motivazione

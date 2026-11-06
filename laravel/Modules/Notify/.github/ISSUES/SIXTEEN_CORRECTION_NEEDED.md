@@ -1,3 +1,14 @@
+---
+title: "SIXTEEN CORRECTION NEEDED"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SIXTEEN CORRECTION NEEDED"
+issues: []
+discussions: []
+---
+
 # 🚨 CRITICAL: Sixteen Theme - Namespace & Asset System Correction
 
 **Priority**: 🔴 **CRITICAL**  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "SIXTEEN CORRECTION NEEDED"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SIXTEEN CORRECTION NEEDED"
+issues: []
+discussions: []
 ## Issues Summary
 
 ### Issue 1: Wrong Component Namespace
@@ -108,8 +127,8 @@ public function boot(): void
 
 After fixes:
 
-- [ ] `http://fixcity.local/it/tests/argomenti` loads correctly
-- [ ] `http://fixcity.local/it/tests/appuntamento-06-conferma` loads correctly
+- [ ] `http://ptv.local/it/tests/argomenti` loads correctly
+- [ ] `http://ptv.local/it/tests/appuntamento-06-conferma` loads correctly
 - [ ] All Tailwind classes render correctly
 - [ ] No Bootstrap Italia errors in console
 - [ ] Components render with correct styling

@@ -1,3 +1,15 @@
+---
+title: "database and models"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database and models"
+issues: []
+discussions: []
+status: draft
+---
+
 # 5. Database & Models
 
 ### Database Config (Laravel 12 Standard)
@@ -47,11 +59,11 @@ APP_URL=http://127.0.0.1  # WRONG! Must match .env
 # ❌ WRONG - Inventing new variables that don't exist in .env
 NOTIFY_DB_DATABASE=laravelpizza_data_test
 NOTIFY_DB_USERNAME=marco
-NOTIFY_DB_PASSWORD=marco
+NOTIFY_DB_PASSWORD=[segreto locale, non nel repo]
 
 GEO_DB_DATABASE=laravelpizza_data_test
 GEO_DB_USERNAME=marco
-GEO_DB_PASSWORD=marco
+GEO_DB_PASSWORD=[segreto locale, non nel repo]
 
 # ... etc for all modules
 ```
@@ -64,7 +76,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravelpizza_data_test  # ← Only add _test here
 DB_USERNAME=marco
-DB_PASSWORD=marco
+DB_PASSWORD=[segreto locale, non nel repo]
 
 # If DB_DATABASE_USER exists in .env, also add _test
 DB_DATABASE_USER=laravelpizza_user_test  # ← Only if it exists in .env
@@ -84,4 +96,3 @@ This ensures APP_URL and all other variables remain identical to .env.
 **CRITICAL RULE FOR TestCase:** NEVER duplicate database connection configuration in setUp() because CreatesApplication already handles it automatically.
 
 ---
-

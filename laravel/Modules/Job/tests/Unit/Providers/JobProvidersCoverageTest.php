@@ -3,21 +3,23 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Providers;
+
 use Modules\Job\Providers\EventServiceProvider;
 use Modules\Job\Providers\Filament\AdminPanelProvider;
 use Modules\Job\Providers\JobServiceProvider;
 use Modules\Job\Providers\RouteServiceProvider;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Job Providers Coverage', function () {
     describe('JobServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new JobServiceProvider(app());
-            Assert::assertInstanceOf(JobServiceProvider::class, $provider);
+            Assert::assertSame('Job', $provider->name);
         });
 
         it('has correct name', function () {
@@ -44,8 +46,8 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(JobServiceProvider::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -53,7 +55,7 @@ describe('Job Providers Coverage', function () {
     describe('EventServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new EventServiceProvider(app());
-            Assert::assertInstanceOf(EventServiceProvider::class, $provider);
+            Assert::assertFalse((new \ReflectionClass($provider))->isAbstract());
         });
 
         it('extends BaseEventServiceProvider', function () {
@@ -79,8 +81,8 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(EventServiceProvider::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
@@ -88,7 +90,7 @@ describe('Job Providers Coverage', function () {
     describe('RouteServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new RouteServiceProvider(app());
-            Assert::assertInstanceOf(RouteServiceProvider::class, $provider);
+            Assert::assertSame('Job', $provider->name);
         });
 
         it('has correct name', function () {
@@ -111,23 +113,20 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(RouteServiceProvider::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('AdminPanelProvider', function () {
-        it('can be instantiated', function () {
-            $provider = new AdminPanelProvider(app());
-            Assert::assertInstanceOf(AdminPanelProvider::class, $provider);
-        });
 
         it('has module property', function () {
             $provider = new AdminPanelProvider(app());
             $reflection = new \ReflectionProperty(AdminPanelProvider::class, 'module');
             Assert::assertTrue($reflection->isProtected());
             Assert::assertSame('Job', $reflection->getDefaultValue());
+            Assert::assertSame('Job', $reflection->getValue($provider));
         });
 
         it('has panel method', function () {
@@ -138,8 +137,8 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new \ReflectionClass(AdminPanelProvider::class);
             $filename = $reflection->getFileName();
-        Assert::assertNotFalse($filename);
-        $content = file_get_contents($filename);
+            Assert::assertNotFalse($filename);
+            $content = file_get_contents($filename);
             Assert::assertStringContainsString('', $content);
         });
     });

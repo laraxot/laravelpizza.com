@@ -1,3 +1,15 @@
+---
+title: "testatabase elimination strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testatabase elimination strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Strategia di Eliminazione Database dai Test - <nome progetto>
 
 ## PROBLEMA IDENTIFICATO

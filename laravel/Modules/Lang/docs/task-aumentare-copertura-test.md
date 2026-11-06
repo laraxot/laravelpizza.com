@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Task: Aumentare Copertura Test - Lang"
+module: "Lang"
+type: concept
+tags: [test]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "test"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Task: Aumentare Copertura Test - Lang
 
 **Modulo**: Lang

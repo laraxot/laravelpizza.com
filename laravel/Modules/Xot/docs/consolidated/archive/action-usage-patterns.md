@@ -1,3 +1,11 @@
+---
+title: "Action Usage Patterns - Regole Fondamentali"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "action usage patterns - regole fondamentali xot"
+---
 # Action Usage Patterns - Regole Fondamentali
 
 ## 🎯 **REGOLA CRITICA: Pattern di Uso delle Action**

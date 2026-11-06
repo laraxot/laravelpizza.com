@@ -1,3 +1,15 @@
+---
+title: "sintassi array correzione "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sintassi array correzione "
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzione Sintassi Obsoleta Array() - Modulo Geo
 
 **Data**: 6 Gennaio 2025  
@@ -113,7 +125,7 @@ php -l laravel/Modules/Geo/lang/it/address.php
 
 ## 📚 Collegamenti
 
-- [Address Translation Fixes](address-translation-fixes-2025-01-27.md) - Correzioni traduzioni address
+- [Address Translation Fixes](address-translation-fixes-correzioni-traduzioni-gennaio.md) - Correzioni traduzioni address
 - [README Modulo Geo](README.md) - Documentazione principale
 - [Translation Standards](../../Lang/docs/translation-helper-text-standards.md) - Standard traduzioni
 
@@ -131,6 +143,5 @@ php -l laravel/Modules/Geo/lang/it/address.php
 - Mantenere standard di codice uniformi
 
 ---
-
 **
 **Autore**: AI Assistant  

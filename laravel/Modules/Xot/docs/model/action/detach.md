@@ -3,6 +3,8 @@ title: Detach Action
 description: Detach Model with Queuable Action
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../consolidated/archive/detach.md
 ---
 # Detach Action {#detach-action}
 

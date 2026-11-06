@@ -7,7 +7,7 @@ namespace Modules\Cms\Datas;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Arr;
 use Livewire\Wireable;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 
@@ -37,7 +37,7 @@ class HeadernavData extends Data implements Wireable
     public static function make(): self
     {
         if (! self::$instance instanceof self) {
-            $data = TenantService::getConfig('appearance');
+            $data = app(GetTenantConfigArrayAction::class)->execute('appearance');
             $data = Arr::get($data, 'headernav', []);
             self::$instance = self::from($data);
         }

@@ -14,7 +14,6 @@ use Modules\Activity\Traits\HasSnapshots;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\User\Models\User;
-use Modules\Meetup\Database\Factories\EventFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
@@ -137,7 +136,6 @@ class Event extends BaseModel
     use HasEvents;
     use HasSnapshots;
 
-    /** @use HasXotFactory<EventFactory> */
     use HasXotFactory;
 
     /**
@@ -531,9 +529,9 @@ class Event extends BaseModel
     /**
      * Get social share data for this event.
      */
-    public function getSocialShareData(): \Modules\Seo\Data\SocialShareData
+    public function getSocialShareData(): \Modules\Seo\Datas\SocialShareData
     {
-        return \Modules\Seo\Data\SocialShareData::from([
+        return \Modules\Seo\Datas\SocialShareData::from([
             'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
             'title' => $this->title,
             'text' => \Illuminate\Support\Str::limit($this->description ?? '', 160),

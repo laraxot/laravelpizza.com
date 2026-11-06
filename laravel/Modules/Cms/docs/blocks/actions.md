@@ -1,3 +1,15 @@
+---
+title: "actions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "actions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Actions Block
 
 Il blocco Actions è utilizzato per creare gruppi di pulsanti o link di azione, con supporto per diversi stili e tipi di pulsanti.
@@ -83,6 +95,6 @@ Builder::make('content')
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Best Practices UX](../ui/ux-guidelines.md)
 - [Accessibilità](../ui/accessibility.md)

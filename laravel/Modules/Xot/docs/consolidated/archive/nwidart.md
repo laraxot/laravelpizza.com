@@ -1,3 +1,11 @@
+---
+title: "nwidart"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "nwidart xot"
+---
 # nwidart
 
 <!-- Contenuto migrato da _docs/nwidart.txt -->

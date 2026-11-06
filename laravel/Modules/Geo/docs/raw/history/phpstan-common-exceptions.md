@@ -1,3 +1,14 @@
+---
+title: "phpstan common exceptions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan common exceptions"
+issues: []
+discussions: []
+---
+
 # Eccezioni Comuni in PHPStan Livello 10 e Come Risolverle
 
 ## Introduzione

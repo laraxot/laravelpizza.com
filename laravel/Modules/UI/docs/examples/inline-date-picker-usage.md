@@ -1,3 +1,15 @@
+---
+title: "inline date picker usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "inline date picker usage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Esempi di Utilizzo di InlineDatePicker
 
 ## Esempio 1: Prenotazione Appuntamenti Medici
@@ -424,6 +436,5 @@ class InlineDatePickerTest extends TestCase
 - Implementare test di regressione per fix di bug
 
 ---
-
 *Ultima modifica: Gennaio 2025*
 *Versione: 1.0.0*

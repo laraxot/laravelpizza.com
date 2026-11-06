@@ -1,3 +1,11 @@
+---
+title: "Guida allo Sviluppo del Modulo <nome progetto>ion Market"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "guida allo sviluppo del modulo <nome progetto>ion market activity"
+---
 # 🛠️ Guida allo Sviluppo del Modulo <nome progetto>ion Market
 
 ## 📋 Prerequisiti

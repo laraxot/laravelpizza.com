@@ -1,3 +1,12 @@
+---
+title: "Migrazione al Nuovo Sistema Brand"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, migration]
+qmd: "migrazione al nuovo sistema brand xot"
+---
+
 # Migrazione al Nuovo Sistema Brand
 
 ## Panoramica

@@ -1,3 +1,16 @@
+---
+title: "tips and links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tips and links"
+issues: []
+discussions: []
+status: superseded
+superseded_by: tips-and-links.md
+---
+
 # tips_and_links
 
 <!-- Contenuto migrato da _docs/tips_and_links.txt -->

@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+use Illuminate\Support\Carbon;
 use Laravel\Passport\AuthCode as PassportAuthCode;
 
 /**
- * @property string                          $id
- * @property string                          $user_id    (DC2Type:guid)
- * @property string                          $client_id
- * @property string|null                     $scopes
- * @property bool                            $revoked
- * @property \Illuminate\Support\Carbon|null $expires_at
- * @property OauthClient|null                $client
+ * @property string $id
+ * @property string $user_id (DC2Type:guid)
+ * @property string $client_id
+ * @property string|null $scopes
+ * @property bool $revoked
+ * @property Carbon|null $expires_at
+ * @property OauthClient|null $client
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAuthCode newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAuthCode newQuery()
@@ -29,6 +30,5 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  */
 class OauthAuthCode extends PassportAuthCode
 {
-    /** @var string */
     protected $connection = 'user';
 }

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <header class="w-full">
     <div class="relative z-20 flex items-center justify-between w-full h-20 max-w-6xl px-6 mx-auto">
@@ -28,12 +27,12 @@ declare(strict_types=1);
             >
                 
                 <nav class="flex flex-col w-full p-6 space-y-2 bg-white md:p-0 md:flex-row md:space-x-2 md:space-y-0 md:w-auto md:bg-transparent md:flex">
-                    <x-ui.nav-link href="/">Home</x-ui.nav-link>
-                    <x-ui.nav-link href="/genesis/about">About</x-ui.nav-link>
+                    <x-ui.nav-link href="/">{{ __('ui::auth.navigation.home') }}</x-ui.nav-link>
+                    <x-ui.nav-link href="/genesis/about">{{ __('ui::components.header.about.label') }}</x-ui.nav-link>
                     @if(view()->exists('pages.blog.index'))
-                        <x-ui.nav-link href="/blog">Blog</x-ui.nav-link>
+                        <x-ui.nav-link href="/blog">{{ __('ui::components.header.blog.label') }}</x-ui.nav-link>
                     @endif
-                    <x-ui.nav-link href="/genesis/power-ups">Power-ups</x-ui.nav-link>
+                    <x-ui.nav-link href="/genesis/power-ups">{{ __('ui::components.header.power_ups.label') }}</x-ui.nav-link>
                 </nav>
             </div>
         </div>
@@ -43,14 +42,14 @@ declare(strict_types=1);
             </div>
             @auth
                 <div class="flex items-center w-auto">
-                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('dashboard') }}">View Dashboard</x-ui.button>
+                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('dashboard') }}">{{ __('ui::components.header.view_dashboard.label') }}</x-ui.button>
                 </div>
             @else
                 <div class="flex items-center w-auto">
-                    <x-ui.button type="secondary" submit="true" tag="a" href="{{ route('login') }}">Login</x-ui.button>
+                    <x-ui.button type="secondary" submit="true" tag="a" href="{{ route('login') }}">{{ __('ui::auth.login.link') }}</x-ui.button>
                 </div>
                 <div class="flex items-center w-auto">
-                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('register') }}">Sign Up</x-ui.button>
+                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('register') }}">{{ __('ui::auth.register.link') }}</x-ui.button>
                 </div>
             @endauth
             

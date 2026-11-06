@@ -1,3 +1,14 @@
+---
+title: "verify work"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "verify work"
+issues: []
+discussions: []
+---
+
 <purpose>
 Validate built features through conversational testing with persistent state. Creates UAT.md that tracks test progress, survives /clear, and feeds gaps into /gsd-plan-phase --gaps.
 
@@ -123,6 +134,13 @@ Create file:
 
 ```markdown
 ---
+title: "verify work"
+type: note
+tags: [documentation]
+created: 2026-09-26
+qmd: "verify work"
+issues: []
+discussions: []
 status: testing
 phase: XX-name
 source: [list of SUMMARY.md files]

@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Massimizzare il livello di confidenza"
+module: "Media"
+type: how-to
+tags: [confidence, guidelines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "confidence guidelines"
+related:
+  - "./webm.md"
+status: superseded
+superseded_by: confidence-guidelines.md
+---
 # Massimizzare il livello di confidenza
 
 1. **Test automatizzati**: copertura >90%, includi test unitari, integrazione, e fine‑to‑end.

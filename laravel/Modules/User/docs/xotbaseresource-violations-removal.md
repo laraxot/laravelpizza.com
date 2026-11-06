@@ -1,3 +1,28 @@
+---
+title: "Rimozione Proprietà/Metodi Vietati da XotBaseResource - [DATE]"
+type: concept
+tags: [xotbaseresource, violations, removal]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "xotbaseresource-violations-removal rimozione proprietà/metodi vietati da xotbaseresource - [date]"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Rimozione Proprietà/Metodi Vietati da XotBaseResource - [DATE]
 
 **Status**: ✅ Completato  
@@ -36,7 +61,7 @@
 5. **PersonalAccessTokenResource**
    - ❌ Rimosso: `protected static ?string $recordTitleAttribute = 'name'`
 
-### Modulo Quaeris
+### Modulo ExternalProject
 
 6. **ContactResource**
    - ❌ Rimosso: `protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-user-circle'`

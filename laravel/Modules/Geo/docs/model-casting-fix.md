@@ -1,3 +1,15 @@
+---
+title: "model casting fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model casting fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzione Model Casting - Modulo Geo
 
 ## 🚨 Problema Risolto
@@ -147,7 +159,7 @@ protected function casts(): array
 
 ### Documentazione Correlata
 - [Regola: Proprietà $casts Deprecata](../../.cursor/rules/deprecated-casts-property.md)
-- [Memoria: Errore Proprietà $casts Deprecata](../../.cursor/memories/deprecated-casts-error.md)
+- [Memoria: Errore Proprietà $casts Deprecata](../../../../.cursor/memories/deprecated-casts-error.md)
 - [Model Casting Best Practices](./model-casting-best-practices.md)
 
 ### File Correlati

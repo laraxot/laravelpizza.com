@@ -1,3 +1,11 @@
+---
+title: "XotBaseResource: Regole fondamentali"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbaseresource: regole fondamentali xot"
+---
 # XotBaseResource: Regole fondamentali
 
 ## Principio di progettazione

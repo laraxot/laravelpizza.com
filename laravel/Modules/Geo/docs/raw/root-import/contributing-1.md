@@ -1,3 +1,14 @@
+---
+title: "contributing 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contributing 1"
+issues: []
+discussions: []
+---
+
 Contributing: policy issue-linking
 
 Per evitare che modifiche non siano tracciate con issue GitHub, seguire queste regole locali e remote:

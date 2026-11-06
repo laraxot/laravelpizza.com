@@ -1,3 +1,15 @@
+---
+title: "context compression kilocode"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context compression kilocode"
+issues: []
+discussions: []
+status: draft
+---
+
 # Context Compression Plugin per Kilo Code
 
 ## Panoramica

@@ -1,3 +1,11 @@
+---
+title: "xotbasepage: implementazione e best practices"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasepage: implementazione e best practices xot"
+---
 # xotbasepage: implementazione e best practices
 
 ## descrizione

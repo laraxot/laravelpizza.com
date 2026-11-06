@@ -1,3 +1,15 @@
+---
+title: "github discussion table layout toggle body"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github discussion table layout toggle body"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Contesto
 
 Il bottone **Cambia layout** è UX-only: stessi record, presentazione lista o griglia. È iniettato da `HasXotTable` su tutte le `XotBaseListRecords` (Progressioni, Xot, ecc.).

@@ -27,9 +27,11 @@ class ListFilamentPanels extends Command
                 continue;
             }
 
-            $providers = collect(scandir($providersPath))
-                ->filter(function ($file): bool {
-                    return is_string($file) && str_ends_with($file, 'ServiceProvider.php');
+            /** @var list<string> $entries */
+            $entries = scandir($providersPath);
+            $providers = collect($entries)
+                ->filter(static function (string $file): bool {
+                    return str_ends_with($file, 'ServiceProvider.php');
                 });
 
             foreach ($providers as $provider) {

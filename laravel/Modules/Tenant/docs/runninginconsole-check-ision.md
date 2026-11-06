@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction"
+module: "Tenant"
+type: concept
+tags: [runninginconsole, check, ision]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "runninginconsole check ision"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
 
 **Metodologia**: Super Mucca - La Litigata Interna

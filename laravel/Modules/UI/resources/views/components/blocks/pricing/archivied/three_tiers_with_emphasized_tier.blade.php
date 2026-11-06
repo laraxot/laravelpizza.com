@@ -1,14 +1,13 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-gray-900">
     <div class="px-6 pt-12 lg:px-8 lg:pt-20">
       <div class="text-center">
-        <h2 class="text-xl font-semibold leading-6 text-gray-300">Pricing</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">The right price for you, whoever you are</p>
-        <p class="mx-auto mt-3 max-w-4xl text-xl text-gray-300 sm:mt-5 sm:text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum.</p>
+        <h2 class="text-xl font-semibold leading-6 text-gray-300">{{ __('ui::blocks_pricing.section.pricing.label') }}</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">{{ __('ui::blocks_pricing.section.right_price.title') }}</p>
+        <p class="mx-auto mt-3 max-w-4xl text-xl text-gray-300 sm:mt-5 sm:text-2xl">{{ __('ui::blocks_pricing.taglines.municipal_transparent.help') }}</p>
       </div>
     </div>
 
@@ -22,13 +21,13 @@ declare(strict_types=1);
                 <div class="flex flex-1 flex-col">
                   <div class="bg-white px-6 py-10">
                     <div>
-                      <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-hobby">Hobby</h3>
+                      <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-hobby">{{ __('ui::blocks_pricing.tiers.hobby.label') }}</h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
                           <span class="mr-2 mt-2 text-4xl font-medium tracking-tight">$</span>
                           <span class="font-bold">79</span>
                         </span>
-                        <span class="text-xl font-medium text-gray-500">/month</span>
+                        <span class="text-xl font-medium text-gray-500">{{ __('ui::blocks_pricing.units.per_month_short.text') }}</span>
                       </div>
                     </div>
                   </div>
@@ -61,7 +60,7 @@ declare(strict_types=1);
                     </ul>
                     <div class="mt-8">
                       <div class="rounded-lg shadow-md">
-                        <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-hobby">Start your trial</a>
+                        <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-hobby">{{ __('ui::blocks_pricing.actions.start_trial.label') }}</a>
                       </div>
                     </div>
                   </div>
@@ -73,18 +72,18 @@ declare(strict_types=1);
                 <div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600" aria-hidden="true"></div>
                 <div class="absolute inset-x-0 top-0 translate-y-px transform">
                   <div class="flex -translate-y-1/2 transform justify-center">
-                    <span class="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-base font-semibold text-white">Most popular</span>
+                    <span class="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-base font-semibold text-white">{{ __('ui::blocks_pricing.badges.most_popular.label') }}</span>
                   </div>
                 </div>
                 <div class="rounded-t-lg bg-white px-6 pb-10 pt-12">
                   <div>
-                    <h3 class="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6" id="tier-growth">Growth</h3>
+                    <h3 class="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6" id="tier-growth">{{ __('ui::blocks_pricing.tiers.growth.label') }}</h3>
                     <div class="mt-4 flex items-center justify-center">
                       <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
                         <span class="mr-2 mt-2 text-4xl font-medium tracking-tight">$</span>
                         <span class="font-bold">149</span>
                       </span>
-                      <span class="text-2xl font-medium text-gray-500">/month</span>
+                      <span class="text-2xl font-medium text-gray-500">{{ __('ui::blocks_pricing.units.per_month_short.text') }}</span>
                     </div>
                   </div>
                 </div>
@@ -133,7 +132,7 @@ declare(strict_types=1);
                   </ul>
                   <div class="mt-10">
                     <div class="rounded-lg shadow-md">
-                      <a href="#" class="block w-full rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-center text-xl font-medium leading-6 text-white hover:bg-indigo-700" aria-describedby="tier-growth">Start your trial</a>
+                      <a href="#" class="block w-full rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-center text-xl font-medium leading-6 text-white hover:bg-indigo-700" aria-describedby="tier-growth">{{ __('ui::blocks_pricing.actions.start_trial.label') }}</a>
                     </div>
                   </div>
                 </div>
@@ -144,13 +143,13 @@ declare(strict_types=1);
                 <div class="flex flex-1 flex-col">
                   <div class="bg-white px-6 py-10">
                     <div>
-                      <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-scale">Scale</h3>
+                      <h3 class="text-center text-2xl font-medium text-gray-900" id="tier-scale">{{ __('ui::blocks_pricing.tiers.scale.label') }}</h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
                           <span class="mr-2 mt-2 text-4xl font-medium tracking-tight">$</span>
                           <span class="font-bold">349</span>
                         </span>
-                        <span class="text-xl font-medium text-gray-500">/month</span>
+                        <span class="text-xl font-medium text-gray-500">{{ __('ui::blocks_pricing.units.per_month_short.text') }}</span>
                       </div>
                     </div>
                   </div>
@@ -183,7 +182,7 @@ declare(strict_types=1);
                     </ul>
                     <div class="mt-8">
                       <div class="rounded-lg shadow-md">
-                        <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-scale">Start your trial</a>
+                        <a href="#" class="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50" aria-describedby="tier-scale">{{ __('ui::blocks_pricing.actions.start_trial.label') }}</a>
                       </div>
                     </div>
                   </div>

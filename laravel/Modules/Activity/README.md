@@ -123,6 +123,13 @@ class ActivityEvent
 ## Perché esiste
 
 Tracciabilità azioni su entità sensibili del sistema.
+```
+Activity <── User      (login/logout events, user actions)
+Activity <── Quaeris   (survey CRUD, dashboard actions)
+Activity <── Cms       (page/content modifications)
+Activity <── Media     (file upload/delete tracking)
+Activity <── Tenant    (multi-tenant audit isolation)
+Activity <── Lang      (traduzioni IT/EN/DE)
 
 ## Superpoteri
 

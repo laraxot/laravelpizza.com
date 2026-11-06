@@ -1,3 +1,15 @@
+---
+title: "vscode php setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vscode php setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Configurazione VSCode per PHP e Filament
 
 ## Estensioni Essenziali

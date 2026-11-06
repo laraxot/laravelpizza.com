@@ -1,3 +1,15 @@
+---
+title: "geo map marker status background"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map marker status background"
+issues: []
+discussions: []
+status: draft
+---
+
 # geo-map-marker — sfondo stato (farmshops parity)
 
 ## scopo
@@ -50,7 +62,7 @@ Vedi [geo-map-lit-reconstruction-guide.md](./geo-map-lit-reconstruction-guide.md
 
 ## story
 
-- [STORY-130](../../../../../docs/stories/STORY-130-map-marker-status-colored-fill.md)
+- [STORY-130](../../../../../../docs/stories/STORY-130-map-marker-status-colored-fill.md)
 
 ## collegamenti
 

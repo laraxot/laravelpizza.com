@@ -1,3 +1,17 @@
+---
+title: "configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "configuration"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-14 (docs-audit): Descrive Models, redirect, slug e analisi dei contenuti che non esistono: app/Models contiene solo .gitkeep, app/Http e app/Console solo .gitkeep o _components.json, nessuna migration (verificato 2026-10-14). Il modulo ha solo Adapters, Actions Metatag, Datas e il widget SocialShare. Contenuto non riscritto, verificare prima di usarlo.
+
 # Configurazione Modulo SEO
 
 ## Overview
@@ -63,9 +77,9 @@ Seo/
 
 ## Collegamenti
 
-- [Configurazione Moduli](../../../../docs/project/module-configuration.md)
-- [Relazioni tra Moduli](../../../../docs/project/module-relationships.md)
-- [Regole dei Namespace](../../../../docs/project/module-namespace-rules.md)
+- [Configurazione Moduli](../../../../docs/project/module-configuration.md) _(target mancante, verificato 2026-10-08)_
+- [Relazioni tra Moduli](../../../../docs/project/module-relationships.md) _(target mancante, verificato 2026-10-08)_
+- [Regole dei Namespace](../../../../docs/project/module-namespace-rules.md) _(target mancante, verificato 2026-10-08)_
 
 ## Checklist Implementazione
 

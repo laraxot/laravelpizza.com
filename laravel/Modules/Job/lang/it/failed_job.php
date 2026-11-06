@@ -213,13 +213,11 @@ return [
         'system' => 'Errore di Sistema',
     ],
     'plural' => [
-        'model' => [
-            'label' => 'failed job.plural.model',
-        ],
+        'model' => ['label' => 'Jobs Falliti'],
         'label' => 'Jobs Falliti',
         'sort' => 93,
         'icon' => 'job-failed-job',
     ],
-    'label' => 'failed job',
-    'plural_label' => 'Failed Job (Plurale)',
+    'label' => 'Job fallito',
+    'plural_label' => 'Jobs Falliti',
 ];

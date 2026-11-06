@@ -5,8 +5,16 @@ tags: [documentation, redundancy, user-module]
 created: "2026-05-21"
 updated: "2026-05-21"
 related:
-  - ../../../../Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md
-  - ../../../legacy/historical/redundancy-fixes-january.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "ridondanza documentazione `modules/user/docs` user"
 ---
 
 # Ridondanza documentazione `Modules/User/docs`
@@ -18,9 +26,9 @@ Il modulo User accumula anni di note agent/PHPStan; molte sono **near-duplicate*
 ## Volume (audit 2026-05-22)
 
 - **`docs/` totale:** ~3077 file `.md`
-- **`docs/legacy/`** e **`docs/archive/`:** ~**723** file ciascuno (~**6.1M** — contenuto quasi speculare)
-- **`docs/legacy/`:** ~**723** file (~24% del modulo) — snapshot agent multi-sessione
-- **`phpstan` nel path nome:** ~293 file — log fix ripetuti, non regole viventi
+- **`docs/legacy/`** e **`docs/archive/`:** ~**723** file ciascuno (~**6.1M**: contenuto quasi speculare)
+- **`docs/legacy/`:** ~**723** file (~24% del modulo): snapshot agent multi-sessione
+- **`phpstan` nel path nome:** ~293 file: log fix ripetuti, non regole viventi
 
 ## Cluster logout / Volt / auth UI
 
@@ -32,14 +40,14 @@ Stesso flusso documentato con varianti `logout-*`, `volt-folio-logout`, `volt_fo
 
 Esempio `testing.md` (contenuti diversi, nome ambiguo):
 
-- `docs/bugs/testing.md` — bug `make:filament-user`, **non** guida test
+- `docs/bugs/testing.md`: bug `make:filament-user`, **non** guida test
 - `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/TESTING.md`
 
 Rinominare il bug in `bugs/make-filament-user-testing.md` ed eliminare stub `testing.md` in `bugs/*`.
 
 ## Performance auth (4 naming stesso topic)
 
-`docs/performance/legacy/authentication-performance-optimization.md` e varianti `-1`, `AUTHENTICATION_*`, `authentication_performance_optimization.md` → un solo file canonico in `docs/performance/`.
+`docs/performance/legacy/authentication-performance-optimization.md` e varianti `-1`, `AUTHENTICATION_*`, `authentication-performance-optimization.md` → un solo file canonico in `docs/performance/`.
 
 ## File “redundancy / dry-kiss phpstan” noti ridondanti
 
@@ -47,7 +55,8 @@ Stesso scaffolding editoriale ripetuto in più percorsi (testo quasi uguale, lin
 
 - `docs/redundancy-fixes.md`
 - `docs/redundancy-fixes-january.md`
-- `docs/redundancy-fixes-january-1.md`
+- `docs/redundancy-fixes-january.md`
+- `docs/redundancy-fixes-january-documentation-themes.md`
 - `docs/redundancy-fixes-january-2026.md`
 - `docs/redundancyes.md` (nome con typo storico da evitare in nuovi file)
 - `docs/legacy/historical/redundancy-fixes.md`
@@ -65,4 +74,4 @@ Cluster **phpstan dry kiss improvements** quasi identici nel corpo (`docs/legacy
 
 ## Modulo tecnico locale
 
-Specifiche comportamento dominio Utente continuano nei path non duplicati (policies Filament Login, Volt, ecc.); non sono candidate merge solo perché tema simile nei titoli — valutare diff reale prima di fondere.
+Specifiche comportamento dominio Utente continuano nei path non duplicati (policies Filament Login, Volt, ecc.); non sono candidate merge solo perché tema simile nei titoli: valutare diff reale prima di fondere.

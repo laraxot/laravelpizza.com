@@ -1,3 +1,15 @@
+---
+title: "standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "standards"
+issues: []
+discussions: []
+status: draft
+---
+
 # Standard di Sviluppo
 
 ## Best Practices Laravel

@@ -1,6 +1,21 @@
 ---
 name: user-auth-visibility
 description: User list visibility rules for admin sections
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+title: "Admin – User List Visibility"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "admin   user list visibility user"
 ---
 
 # Admin – User List Visibility

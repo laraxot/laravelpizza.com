@@ -1,3 +1,16 @@
+---
+qmd: "TOKEN OPTIMIZATION STRATEGY"
+issues: []
+discussions: []
+title: "Token Optimization Strategy (2026)"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Token Optimization Strategy (2026)
 
 This document outlines the mandatory rules for token efficiency in this workspace, based on advanced 2026 research and project-specific constraints.

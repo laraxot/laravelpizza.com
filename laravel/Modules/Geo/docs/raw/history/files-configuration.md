@@ -1,3 +1,14 @@
+---
+title: "files configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "files configuration"
+issues: []
+discussions: []
+---
+
 # File di Configurazione
 
 Questa documentazione descrive i file di configurazione utilizzati nel progetto.

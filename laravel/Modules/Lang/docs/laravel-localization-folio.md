@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Integrazione tra mcamara/laravel-localization e Laravel Folio"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Integrazione tra mcamara/laravel-localization e Laravel Folio
 
 ## Obiettivo
@@ -144,6 +158,11 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 - [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
 - [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
+- [FAQ e problemi comuni](translations-faq.md)
+- [Guida language switcher](Modules/Lang/project_docs/README.md)
+- [FAQ e problemi comuni](translations-faq.md)
+- [Guida language switcher](Modules/Lang/project_docs/README.md)
+- [FAQ e problemi comuni](translations-faq.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
 
 ---
@@ -293,6 +312,9 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 - [FAQ e problemi comuni](Modules/Lang/docs/translations-faq.md)
 - [Guida language switcher](Modules/Lang/docs/README.md)
 - [FAQ e problemi comuni](Modules/Lang/docs/translations-faq.md)
+- [FAQ e problemi comuni](translations-faq.md)
+- [Guida language switcher](Modules/Lang/docs/README.md)
+- [FAQ e problemi comuni](translations-faq.md)
 - [Guida language switcher](Modules/Lang/docs/README.md)
 
 ---
@@ -303,6 +325,7 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 
 **Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!**
 - [FAQ e problemi comuni](Modules/Lang/docs/translations-faq.md)
+- [FAQ e problemi comuni](translations-faq.md)
 - [Guida language switcher](Modules/Lang/docs/README.md)
 
 ---

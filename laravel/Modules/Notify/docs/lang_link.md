@@ -1,11 +1,20 @@
+---
+title: "lang link"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lang link"
+issues: []
+discussions: []
+status: draft
+---
+
 # Collegamento alle Traduzioni del Modulo Notify
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
 
 Consulta la documentazione delle traduzioni:
-- [Introduzione alle Traduzioni](../../Lang/project_docs/introduction.md)
-- [Struttura delle Traduzioni](../../Lang/project_docs/structure.md)
-- [Gestione dei File di Lingua](../../Lang/project_docs/module_lang.md)
 - [Introduzione alle Traduzioni](../../Lang/project_docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/project_docs/structure.md)
 - [Gestione dei File di Lingua](../../Lang/project_docs/module_lang.md)
@@ -31,3 +40,4 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Activity/project_docs/lang-link.md)
 * [lang-link.md](../../../Patient/project_docs/lang-link.md)
 * [lang-link.md](../../../Cms/project_docs/lang-link.md)
+

@@ -1,3 +1,15 @@
+---
+title: "claude split index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude split index"
+issues: []
+discussions: []
+status: draft
+---
+
 # CLAUDE.md Split Index
 
 > Documentazione CLAUDE.md originale spezzata in file più piccoli.
@@ -15,6 +27,7 @@
 ## 🔗 Collegamento all'Originale
 
 - [CLAUDE.md originale](../../CLAUDE.md) - File completo (deprecated)
+- [CLAUDE.md originale](../CLAUDE.md) - File completo (deprecated)
 - [Index principale](./index.md)
 
 ## Modifiche Migliorative

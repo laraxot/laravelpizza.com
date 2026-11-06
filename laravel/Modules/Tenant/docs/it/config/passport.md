@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Laravel Passport Configuration (Version 13.4.x)"
+module: "Tenant"
+type: concept
+tags: [passport]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "passport"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../../phpstan-corrections-january.md"
+status: draft
+---
 # Laravel Passport Configuration (Version 13.4.x)
 
 ## Overview

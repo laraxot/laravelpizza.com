@@ -1,3 +1,15 @@
+---
+title: "mcp autonomous agents"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp autonomous agents"
+issues: []
+discussions: []
+status: draft
+---
+
 # 12. MCP (Model Context Protocol) for Autonomous AI Agents
 
 LaravelPizza project includes complete MCP configuration for autonomous AI agent capabilities across multiple development environments (Claude Desktop, Cursor, Windsurf, Antigravity).
@@ -64,7 +76,7 @@ MySQL MCP server uses:
 - Host: `127.0.0.1`
 - Port: `3306`
 - User: `marco`
-- Password: `marco`
+- Password: [segreto locale, non nel repo]
 - Database: `laravelpizza_data` (production) or `laravelpizza_data_test` (testing)
 
 ### MCP Security Rules
@@ -89,4 +101,3 @@ With MCP, AI agents can:
 - **Integrate with GitHub** for issue/PR management
 
 ---
-

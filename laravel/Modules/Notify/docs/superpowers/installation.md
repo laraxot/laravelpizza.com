@@ -1,3 +1,15 @@
+---
+title: "installation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installation"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🦸 Superpowers Installation Guide
 
 > **Last Updated**: 2026-03-31  
@@ -6,7 +18,6 @@
 > **Version**: v5.0.6
 
 ---
-
 ## 📋 Prerequisites
 
 ### Required
@@ -32,6 +43,7 @@ Launch Cursor IDE and open your project:
 
 ```bash
 cursor /var/www/_bases/base_fixcity_fila5
+cursor /var/www/_bases/base_ptvx_fila5
 ```
 
 Or use the GUI:
@@ -184,6 +196,7 @@ Create `.cursor/superpowers-config.json`:
 
 ```bash
 cd /var/www/_bases/base_fixcity_fila5/laravel
+cd /var/www/_bases/base_ptvx_fila5/laravel
 php artisan test --version
 ```
 

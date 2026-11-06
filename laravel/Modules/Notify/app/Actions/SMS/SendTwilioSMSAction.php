@@ -8,10 +8,9 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\TwilioData;
 use Modules\Notify\Datas\SmsData;
-use Override;
+use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendTwilioSMSAction implements SmsActionContract
@@ -24,11 +23,13 @@ final class SendTwilioSMSAction implements SmsActionContract
 
     private TwilioData $twilioData;
 
-    /** @var array<string, mixed> */
+    /** @var array{status_code?: int, status_txt?: string} */
     private array $vars = [];
 
     /**
      * Create a new action instance.
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -52,11 +53,10 @@ final class SendTwilioSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     * @return array<string, mixed> Risultato dell'operazione
+     * @return array{status_code: int, status_txt: string} Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
      */
-    #[Override]
     public function execute(SmsData $smsData): array
     {
         // Normalizza il numero di telefono
@@ -74,8 +74,7 @@ final class SendTwilioSMSAction implements SmsActionContract
         // Twilio richiede l'autenticazione Basic
         $client = new Client([
             'timeout' => $this->twilioData->getTimeout(),
-            'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token],
-        ]);
+            'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token]]);
 
         $endpoint =
             $this->twilioData->getBaseUrl().
@@ -88,9 +87,7 @@ final class SendTwilioSMSAction implements SmsActionContract
                 'form_params' => [
                     'To' => $to,
                     'From' => $from,
-                    'Body' => $smsData->body,
-                ],
-            ]);
+                    'Body' => $smsData->body]]);
 
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();

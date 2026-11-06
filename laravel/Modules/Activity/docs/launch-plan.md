@@ -1,3 +1,11 @@
+---
+title: "Product Launch Plan: Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "product launch plan: activity module activity"
+---
 # Product Launch Plan: Activity Module
 
 ## 🚀 Launch Overview

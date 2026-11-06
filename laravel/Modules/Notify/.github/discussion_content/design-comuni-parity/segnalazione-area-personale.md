@@ -1,3 +1,14 @@
+---
+title: "segnalazione area personale"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione area personale"
+issues: []
+discussions: []
+---
+
 # 🎨 Design Comuni: Segnalazione Area Personale
 
 ## Pagina
@@ -28,4 +39,12 @@ Da definire dopo l'analisi strutturale.
 - [ ] Documentazione
 
 ---
+title: "segnalazione area personale"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione area personale"
+issues: []
+discussions: []
 *Generato automaticamente da bashscripts/design-comuni-parity/create-github-issues.sh*

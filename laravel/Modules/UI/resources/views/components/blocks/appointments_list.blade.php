@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Appuntamenti'])
+@props(['title' => __('ui::blocks_appointments.list.heading.title')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -11,16 +10,16 @@ declare(strict_types=1);
     <!-- Filtri -->
     <div class="mb-6 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200">
-            Tutti
+            {{ __('ui::blocks_demo_shared.labels.tutti.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Prossimi
+            {{ __('ui::blocks_appointments.list.prossimi.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Passati
+            {{ __('ui::blocks_appointments.list.passati.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Cancellati
+            {{ __('ui::blocks_appointments.list.cancellati.label') }}
         </button>
     </div>
     
@@ -59,15 +58,15 @@ declare(strict_types=1);
                     
                     <div class="mt-2 space-y-1">
                         <p class="text-sm text-gray-600">
-                            <span class="font-medium">Data:</span> 
+                            <span class="font-medium">{{ __('ui::blocks_appointments.list.data.label') }}</span> 
                             {{ $appointment->starts_at->format('d/m/Y') }}
                         </p>
                         <p class="text-sm text-gray-600">
-                            <span class="font-medium">Orario:</span> 
+                            <span class="font-medium">{{ __('ui::blocks_appointments.list.orario.label') }}</span> 
                             {{ $appointment->time }}
                         </p>
                         <p class="text-sm text-gray-600">
-                            <span class="font-medium">Dottore:</span> 
+                            <span class="font-medium">{{ __('ui::blocks_appointments.list.dottore.label') }}</span> 
                             {{ $appointment->doctor_name }}
                         </p>
                     </div>
@@ -75,14 +74,14 @@ declare(strict_types=1);
                     <div class="mt-4 flex items-center space-x-4">
                         <a href="{{ route('appointments.show', $appointment->id) }}" 
                            class="text-sm font-medium text-blue-600 hover:text-blue-800">
-                            Dettagli →
+                            {{ __('ui::blocks_appointments.list.dettagli.label') }}
                         </a>
                         
                         @if($appointment->status === 'confirmed')
                             <button type="button" 
                                     class="text-sm font-medium text-red-600 hover:text-red-800"
                                     onclick="confirmCancel({{ $appointment->id }})">
-                                Cancella →
+                                {{ __('ui::blocks_appointments.list.cancella.label') }}
                             </button>
                         @endif
                     </div>
@@ -93,14 +92,14 @@ declare(strict_types=1);
                 <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                 </svg>
-                <h3 class="mt-2 text-sm font-medium text-gray-900">Nessun appuntamento</h3>
+                <h3 class="mt-2 text-sm font-medium text-gray-900">{{ __('ui::blocks_appointments.list.nessun_appuntamento.title') }}</h3>
                 <p class="mt-1 text-sm text-gray-500">
-                    Non hai ancora nessun appuntamento programmato.
+                    {{ __('ui::blocks_appointments.list.message_1.message') }}
                 </p>
                 <div class="mt-4">
                     <a href="{{ route('appointments.create') }}" 
                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
-                        Prenota un appuntamento
+                        {{ __('ui::blocks_demo_shared.labels.prenota_un_appuntamento.label') }}
                     </a>
                 </div>
             </div>

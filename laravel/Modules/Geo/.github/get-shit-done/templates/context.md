@@ -1,3 +1,14 @@
+---
+title: "context"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context"
+issues: []
+discussions: []
+---
+
 # Phase Context Template
 
 Template for `.planning/phases/XX-name/{phase_num}-CONTEXT.md` - captures implementation decisions for a phase.
@@ -12,6 +23,14 @@ Template for `.planning/phases/XX-name/{phase_num}-CONTEXT.md` - captures implem
 
 ---
 
+title: "context"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

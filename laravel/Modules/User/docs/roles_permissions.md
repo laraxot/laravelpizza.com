@@ -1,3 +1,11 @@
+---
+title: "Gestione coerente di roles, permissions e guard_name"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "gestione coerente di roles, permissions e guard_name user"
+---
 # Gestione coerente di roles, permissions e guard_name
 
 ## Regola fondamentale

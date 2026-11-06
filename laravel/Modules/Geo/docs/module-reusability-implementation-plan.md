@@ -1,3 +1,15 @@
+---
+title: "module reusability implementation plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module reusability implementation plan"
+issues: []
+discussions: []
+status: draft
+---
+
 # Piano di Implementazione Riusabilità Moduli
 
 ## Stato Attuale
@@ -133,6 +145,6 @@ find Modules/*/lang/ -name "*.php" -exec sed -i 's/<nome progetto>\.com/{{app_do
 ## Collegamenti
 
 - [module_reusability_guidelines.md](module_reusability_guidelines.md)
-- [Modules/Notify/docs/reusability_guidelines.md](../laravel/modules/notify/docs/reusability_guidelines.md)
+- [Modules/Notify/docs/reusability_guidelines.md](../../Notify/docs/reusability_guidelines.md)
 - [.cursor/rules/module_reusability_critical.md](../.cursor/rules/module_reusability_critical.md)
 

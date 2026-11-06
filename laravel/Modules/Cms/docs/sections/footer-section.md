@@ -1,3 +1,15 @@
+---
+title: "footer section"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "footer section"
+issues: []
+discussions: []
+status: draft
+---
+
 # Footer Section
 
 ## Struttura
@@ -115,6 +127,6 @@ Il footer è una sezione **generica** che consente di inserire e ordinare **qual
 Per dettagli su configurazione e template, consulta: [Documentazione Sezione Footer](../sections/footer-section.md)
 
 ## Collegamenti
-- [Gestione Blocchi](../blocks/readme.md)
-- [Componenti UI](../components/readme.md)
-- [Documentazione Root](../../../../../docs/sections.md)
+- [Gestione Blocchi](../blocks/README.md)
+- [Componenti UI](../components/README.md)
+- [Documentazione Root](../sections.md)

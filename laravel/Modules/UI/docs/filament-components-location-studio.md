@@ -1,3 +1,15 @@
+---
+title: "filament components location studio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament components location studio"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti Filament per Location e Studio Selection
 
 ## Overview
@@ -8,7 +20,7 @@ Questi componenti Filament sono stati creati per supportare la selezione geograf
 
 ### 1. LocationSelector Component
 
-**Percorso**: `app/Filament/Forms/Components/LocationSelector.php`
+**Percorso**: `Modules/Geo/app/Filament/Forms/Components/LocationSelector.php` (modulo Geo, non UI)
 
 #### Descrizione
 Componente Filament per la selezione gerarchica di Regione → Provincia → CAP con aggiornamenti live e integrazione con il modulo Geo.
@@ -23,7 +35,7 @@ Componente Filament per la selezione gerarchica di Regione → Provincia → CAP
 #### Utilizzo Base
 
 ```php
-use Modules\UI\Filament\Forms\Components\LocationSelector;
+use Modules\Geo\Filament\Forms\Components\LocationSelector;
 
 // Utilizzo semplice
 LocationSelector::make()
@@ -239,7 +251,6 @@ class FindDoctorWidgetStep2Test extends TestCase
 - Touch targets ottimizzati
 
 ---
-
 **Creato**: 26 Giugno 2025
 **Versione**: 2.0 - Semplificato
 **Stato**: Implementation Ready
@@ -256,7 +267,7 @@ Questi componenti Filament sono stati creati per supportare la selezione geograf
 
 ### 1. LocationSelector Component
 
-**Percorso**: `app/Filament/Forms/Components/LocationSelector.php`
+**Percorso**: `Modules/Geo/app/Filament/Forms/Components/LocationSelector.php` (modulo Geo, non UI)
 
 #### Descrizione
 Componente Filament per la selezione gerarchica di Regione → Provincia → CAP con aggiornamenti live e integrazione con il modulo Geo.
@@ -271,7 +282,7 @@ Componente Filament per la selezione gerarchica di Regione → Provincia → CAP
 #### Utilizzo Base
 
 ```php
-use Modules\UI\Filament\Forms\Components\LocationSelector;
+use Modules\Geo\Filament\Forms\Components\LocationSelector;
 
 // Utilizzo semplice
 LocationSelector::make()

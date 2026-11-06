@@ -1,3 +1,14 @@
+---
+title: "quick"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick"
+issues: []
+discussions: []
+---
+
 <purpose>
 Execute small, ad-hoc tasks with GSD guarantees (atomic commits, STATE.md tracking). Quick mode spawns gsd-planner (quick mode) + gsd-executor(s), tracks tasks in `.planning/quick/`, and updates STATE.md's "Quick Tasks Completed" table.
 
@@ -40,6 +51,14 @@ If `$FULL_MODE`:
 
 ---
 
+title: "quick"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick"
+issues: []
+discussions: []
 **Step 2: Initialize**
 
 ```bash

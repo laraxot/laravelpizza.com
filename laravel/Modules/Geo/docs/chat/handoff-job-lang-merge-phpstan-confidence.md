@@ -1,4 +1,8 @@
 ---
+created: 2026-09-26
+qmd: "handoff job lang merge phpstan confidence"
+issues: []
+discussions: []
 title: handoff sessione Job Lang merge PHPStan
 type: chat
 tags: [handoff, job, lang, phpstan, merge-conflicts, confidence]
@@ -7,7 +11,8 @@ related:
   - ../wiki/how-to/git-merge-marker-sweep.md
   - ../wiki/memories/phpstan-modules-inventory.md
   - phpstan-modules-coordination.md
-  - ../../laravel/Modules/Job/docs/wiki/memories/session-confidence-checkpoint.md
+  - ../../../Job/docs/wiki/memories/session-confidence-checkpoint.md
+status: draft
 ---
 
 # Handoff — ripartenza agente (livello confidenza 2026-05-26)
@@ -15,9 +20,9 @@ related:
 ## Leggere per primo (ordine)
 
 1. Questo file
-2. [`laravel/Modules/Job/docs/wiki/memories/session-confidence-checkpoint.md`](../../laravel/Modules/Job/docs/wiki/memories/session-confidence-checkpoint.md)
+2. [`laravel/Modules/Job/docs/wiki/memories/session-confidence-checkpoint.md`](../../../Job/docs/wiki/memories/session-confidence-checkpoint.md)
 3. [`docs/wiki/memories/module-github-remote-discipline.md`](../wiki/memories/module-github-remote-discipline.md)
-4. [`laravel/Modules/Job/docs/merge-conflicts-list.md`](../../laravel/Modules/Job/docs/merge-conflicts-list.md)
+4. [`laravel/Modules/Job/docs/merge-conflicts-list.md`](../../../Job/docs/merge-conflicts-list.md)
 
 ## Cosa è provato (non ri-fare da zero)
 

@@ -1,0 +1,15 @@
+---
+title: "test"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test"
+issues: []
+discussions: []
+status: draft
+---
+
+# Test
+
+_File vuoto, nessun contenuto._

@@ -1,9 +1,28 @@
+---
+title: "debug subagent prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "debug subagent prompt"
+issues: []
+discussions: []
+---
+
 # Debug Subagent Prompt Template
 
 Template for spawning gsd-debugger agent. The agent contains all debugging expertise - this template provides problem context only.
 
 ---
 
+title: "debug subagent prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "debug subagent prompt"
+issues: []
+discussions: []
 ## Template
 
 ```markdown

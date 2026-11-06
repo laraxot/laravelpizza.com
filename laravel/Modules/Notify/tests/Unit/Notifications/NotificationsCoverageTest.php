@@ -6,12 +6,11 @@ namespace Modules\Notify\Tests\Unit\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+use Modules\Notify\Channels\SmsChannel;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Datas\NotificationData;
-use Modules\Notify\Datas\SmsData;
-use Modules\Notify\Datas\WhatsAppData;
 use Modules\Notify\Notifications\EmailDataNotification;
 use Modules\Notify\Notifications\GenericNotification;
 use Modules\Notify\Notifications\RecordNotification;
@@ -23,11 +22,24 @@ use Modules\Notify\Notifications\TicketStatusChangedNotification;
 use Modules\Notify\Notifications\WhatsAppNotification;
 use Modules\Notify\Tests\TestCase;
 use Modules\User\Models\User;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_uses;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
+function notificationsCoverageTicketModel(int $id = 10): Model
+{
+    $ticket = new class extends Model
+    {
+        protected $guarded = [];
+
+        public $timestamps = false;
+    };
+    $ticket->setAttribute('id', $id);
+
+    return $ticket;
+}
 
 function makeThemeNotifiableDummy(): CanThemeNotificationContract
 {
@@ -45,8 +57,7 @@ function makeThemeNotifiableDummy(): CanThemeNotificationContract
                 'from' => 'System',
                 'recipient' => 'user@example.test',
                 'body' => 'Body',
-                'channels' => ['mail', 'sms'],
-            ]);
+                'channels' => ['mail', 'sms']]);
         }
 
         public function getModel(): Model
@@ -79,7 +90,7 @@ function makeGenericNotifiableDummy(): Model
             return 'Mario Rossi';
         }
 
-        public function routeNotificationForTwilio(mixed $notification): string
+        public function routeNotificationForTwilio(Notification $notification): string
         {
             return '+39000111222';
         }
@@ -87,15 +98,13 @@ function makeGenericNotifiableDummy(): Model
 }
 
 test('email data notification exposes mail channel and array payload', function () {
-        /** @var \Modules\Notify\Tests\TestCase $this */
     $emailData = EmailData::from([
         'recipient' => 'recipient@example.test',
         'from' => 'Sender Name',
         'from_email' => 'from@example.test',
         'subject' => 'Subject',
         'body_html' => '<p>Body</p>',
-        'body' => 'Body',
-    ]);
+        'body' => 'Body']);
 
     $notification = new EmailDataNotification($emailData);
 
@@ -105,21 +114,18 @@ test('email data notification exposes mail channel and array payload', function 
         'subject' => 'Subject',
         'from' => 'Sender Name',
         'from_email' => 'from@example.test',
-        'body' => 'Body',
-    ], \assertNotifyArray($notification->toArray(new \stdClass)));
+        'body' => 'Body'], XotBasePest::assertArray($notification->toArray(new \stdClass)));
 });
 
 test('sms notification builds sms payload and provider config', function () {
     $notification = new SmsNotification('Test SMS', [
         'recipient' => '+39123',
         'from' => 'Xot',
-        'provider' => 'netfun',
-    ]);
+        'provider' => 'netfun']);
 
     $sms = $notification->toSms(new \stdClass);
 
-    Assert::assertInstanceOf(SmsData::class, $sms);
-    Assert::assertSame(['sms'], $notification->via(new \stdClass));
+    Assert::assertSame([SmsChannel::class], $notification->via(new \stdClass));
     Assert::assertSame('+39123', $sms->recipient);
     Assert::assertSame('netfun', $notification->getProvider());
     Assert::assertArrayHasKey('provider', $notification->getConfig());
@@ -128,7 +134,7 @@ test('sms notification builds sms payload and provider config', function () {
 test('telegram notification uses telegram channel class and returns message', function () {
     $notification = new TelegramNotification('Hello telegram');
 
-    $channels = \assertNotifyArray($notification->via(new \stdClass));
+    $channels = XotBasePest::assertArray($notification->via(new \stdClass));
     Assert::assertCount(1, $channels);
     Assert::assertNotEmpty($channels[0] ?? null);
     Assert::assertNotEmpty($notification->toTelegram(new \stdClass));
@@ -137,12 +143,10 @@ test('telegram notification uses telegram channel class and returns message', fu
 test('whatsapp notification exposes whatsapp channel and provider', function () {
     $notification = new WhatsAppNotification('Hello WA', [
         'recipient' => '+39999',
-        'provider' => 'twilio',
-    ]);
+        'provider' => 'twilio']);
 
     $wa = $notification->toWhatsApp(new \stdClass);
 
-    Assert::assertInstanceOf(WhatsAppData::class, $wa);
     Assert::assertSame(['whatsapp'], $notification->via(new \stdClass));
     Assert::assertSame('+39999', $wa->recipient);
     Assert::assertSame('twilio', $notification->getProvider());
@@ -155,8 +159,7 @@ test('theme notification returns channels and array payload', function () {
     Assert::assertSame(['mail', 'sms'], $notification->via($notifiable));
     Assert::assertSame([
         'foo' => 'bar',
-        '_name' => 'welcome-email',
-    ], $notification->toArray($notifiable));
+        '_name' => 'welcome-email'], $notification->toArray($notifiable));
     Assert::assertTrue(in_array(Queueable::class, class_uses($notification), true));
 });
 
@@ -171,10 +174,10 @@ test('generic notification supports channels mail twilio and database payload', 
     $notifiable = makeGenericNotifiableDummy();
 
     $mail = $notification->toMail($notifiable);
+    Assert::assertNotEmpty($mail->subject);
     $twilio = $notification->toTwilio($notifiable);
     $database = $notification->toDatabase($notifiable);
 
-    Assert::assertInstanceOf(MailMessage::class, $mail);
     Assert::assertArrayHasKey('content', $twilio);
     Assert::assertArrayHasKey('to', $twilio);
     Assert::assertSame('+39000111222', $twilio['to']);
@@ -210,7 +213,7 @@ test('record notification manages channels and merged payloads', function () {
     Assert::assertCount(2, $channels);
     Assert::assertContains('mail', $channels);
 
-    $notification->mergeData(['a' => 'b'])->addAttachments([['name' => 'file.pdf', 'path' => base_path('storage/app/f.pdf')]]);
+    $notification->mergeData(['a' => 'b'])->addAttachments([['as' => 'file.pdf', 'path' => base_path('storage/app/f.pdf')]]);
 
     Assert::assertArrayHasKey('a', $notification->data);
     Assert::assertSame('b', $notification->data['a']);
@@ -223,7 +226,7 @@ test('ticket notifications expose channels and array payload', function () {
     $user->name = 'Assigner User';
 
     $assigned = new TicketAssignedNotification((object) ['id' => 10], $user);
-    $changed = new TicketStatusChangedNotification((object) ['id' => 10], 'open', 'closed');
+    $changed = new TicketStatusChangedNotification(notificationsCoverageTicketModel(), 'open', 'closed');
 
     Assert::assertSame(['mail', 'database'], $assigned->via(new \stdClass));
     Assert::assertArrayHasKey('assigned_by', $assigned->toArray(new \stdClass));

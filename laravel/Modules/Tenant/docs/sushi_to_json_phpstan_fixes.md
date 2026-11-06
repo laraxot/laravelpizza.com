@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "SushiToJson/SushiToJsons PHPStan Level 10 Fixes"
+module: "Tenant"
+type: concept
+tags: [sushi, json, phpstan, fixes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "sushi to json phpstan fixes"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # SushiToJson/SushiToJsons PHPStan Level 10 Fixes
 
 ## Problem Overview
@@ -71,7 +85,7 @@ class Page extends BaseModel
 - saveToJson: return type bool (non void) per compatibilità contratto
 
 ## Best Practices
-1. **DRY — mai duplicare metodi del trait nei modelli**: `getJsonFile()` è definito in `SushiToJsons`; Attachment, Menu, PageContent, Section **non** lo ridefiniscono. Override solo se path diverso (es. InformationSchemaTable, Comune). Vedi `.cursor/rules/trait-methods-no-duplication.mdc`
+1. **DRY: mai duplicare metodi del trait nei modelli**: `getJsonFile()` è definito in `SushiToJsons`; Attachment, Menu, PageContent, Section **non** lo ridefiniscono. Override solo se path diverso (es. InformationSchemaTable, Comune). Vedi `.cursor/rules/trait-methods-no-duplication.mdc`
 2. Always add @method annotations when using traits with public methods
 3. Include complete method signatures with parameter types and return types
 4. Document what each method does in the annotation

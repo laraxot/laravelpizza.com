@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TimePicker;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
 use Modules\UI\Actions\Datetime\GetDaysMappingAction;
 use Modules\UI\Rules\OpeningHoursRule;
@@ -34,7 +34,7 @@ final class OpeningHoursField extends XotBaseField
         $this->schema($form)->columns(5);
 
         $this->rules([
-            new OpeningHoursRule(),
+            new OpeningHoursRule,
         ]);
     }
 
@@ -44,8 +44,8 @@ final class OpeningHoursField extends XotBaseField
     private function getDaySchema(string $dayKey, string $dayLabel): array
     {
         return [
-            Placeholder::make($dayKey.'_label')
-                ->content($dayLabel)
+            TextEntry::make($dayKey.'_label')
+                ->state($dayLabel)
                 ->extraAttributes([
                     'class' => 'font-medium text-gray-900 dark:text-gray-100 text-center py-2',
                 ])

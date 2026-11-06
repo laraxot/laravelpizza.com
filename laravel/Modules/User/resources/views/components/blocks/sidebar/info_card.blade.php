@@ -1,10 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'Informazioni',
+    'title' => __('user::blocks.sections.info_card.title'),
     'content' => null,
     'icon' => null,
     'button_text' => null,

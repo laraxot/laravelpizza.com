@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Lang Module - Testing Guidelines"
+module: "Lang"
+type: concept
+tags: [readme.es, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme.es 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Lang Module - Testing Guidelines
 
 ## Testing Framework Requirements

@@ -1,3 +1,28 @@
+---
+title: "Passport vs Socialite - Distinzione Critica"
+type: concept
+tags: [passport, socialite, clarification]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "passport-vs-socialite-clarification passport vs socialite - distinzione critica"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Passport vs Socialite - Distinzione Critica
 
 **Data**: 2025-01-22
@@ -88,7 +113,7 @@ find Modules/User/app/Filament/Resources -name "SocialProviderResource.php"
 ## 📚 Riferimenti
 
 - [Passport Cluster Resources Only Rule](./passport-cluster-resources-only-rule.md)
-- [Filosofia Modulo User](./filosofia_modulo_user.md)
+- [Filosofia Modulo User](./filosofia-modulo-user.md)
 - [Laravel Passport Documentation](https://laravel.com/docs/passport)
 - [Laravel Socialite Documentation](https://laravel.com/docs/socialite)
 

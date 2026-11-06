@@ -1,3 +1,11 @@
+---
+title: "MainDashboard"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "maindashboard xot"
+---
 # MainDashboard
 
 La classe `MainDashboard` è una pagina Filament che estende la dashboard predefinita per fornire funzionalità di reindirizzamento basate sui ruoli dell'utente.

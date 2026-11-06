@@ -21,7 +21,7 @@ class CreateGenericClientAction
         ?UserContract $user = null,
         ?string $provider = null,
     ): OauthClient {
-        $client = new OauthClient();
+        $client = new OauthClient;
         $client->name = $name;
         $client->redirect = $redirect;
         $client->personal_access_client = $personalAccess;
@@ -29,7 +29,7 @@ class CreateGenericClientAction
         $client->provider = $provider ?? 'users';
         $client->revoked = false;
 
-        if (null !== $user) {
+        if ($user !== null) {
             $client->user_id = $user->id;
         }
 

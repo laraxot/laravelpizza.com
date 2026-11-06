@@ -1,3 +1,11 @@
+---
+title: "Linee Guida per le Risorse Filament nel Progetto <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "linee guida per le risorse filament nel progetto <nome progetto> xot"
+---
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 
 ## Regole Generali

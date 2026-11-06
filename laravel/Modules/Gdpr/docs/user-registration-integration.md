@@ -1,3 +1,17 @@
+---
+title: "user registration integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user registration integration"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-14 (docs-audit): Descrive il RegisterWidget di Modules/User che dispatcha UserRegistered e un GdprRegistrationListener registrato in User; nel codice la registrazione e' gestita da Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php, che chiama direttamente le Actions; nessun codice dispatcha UserRegistered e GdprRegistrationListener non esiste (verificato 2026-10-14). Contenuto non riscritto, verificare prima di usarlo.
+
 # Integrazione con Registrazione Utenti (User Module)
 
 ## Panoramica
@@ -566,18 +580,17 @@ test('user registration saves gdpr consents', function () {
 ## Collegamenti
 
 ### Documentazione Intera
-- [README Modulo Gdpr](./readme.md)
+- [README Modulo Gdpr](./README.md)
 - [Consent Management System](./consents.md)
 - [GDPR Compliance Guide](./gdpr-compliance.md)
 - [Testing Guidelines](./testing-guidelines.md)
 
 ### Documentazione Moduli Correlati
-- [User Module - GDPR Compliance](../../user/docs/gdpr-compliance-complete.md)
+- [User Module - GDPR Compliance](../../User/docs/gdpr-compliance-complete.md)
 - [User Module - Events](../../user/docs/events.md)
 - [Xot Module - Traits](../../xot/docs/traits.md)
 
 ---
-
 **Document Version**: 1.0.0  
 
 **Responsible**: GDPR Compliance Team  

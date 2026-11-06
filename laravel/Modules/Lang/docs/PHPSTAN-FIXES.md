@@ -1,9 +1,13 @@
 ---
+qmd: "PHPSTAN FIXES"
+issues: []
+discussions: []
 title: "PHPStan Compliance Fixes"
 type: documentation
 tags: [phpstan, fixes, compliance]
 created: 2026-06-09
 updated: 2026-06-09
+status: draft
 ---
 
 # PHPStan Compliance Documentation

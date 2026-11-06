@@ -1,3 +1,14 @@
+---
+title: "filament 4 upgrade"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 4 upgrade"
+issues: []
+discussions: []
+---
+
 # Guida Upgrade Filament 4.x - Laraxot/PTVX
 
 > **Version**: 1.0 - Filament 4.x Upgrade Guide
@@ -243,6 +254,14 @@ Durante l'upgrade sono state **STRICTLY** mantenute tutte le regole critiche Lar
 
 ---
 
+title: "filament 4 upgrade"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 4 upgrade"
+issues: []
+discussions: []
 **Upgrade Status**: ✅ COMPLETED
 **Breaking Changes**: Handled automatically by script
 **Manual Changes**: Applied and documented

@@ -1,3 +1,11 @@
+---
+title: "Trait Method Signature Rules"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "trait method signature rules xot"
+---
 # Trait Method Signature Rules
 
 ## 🚨 Critical Rule: Static vs Non-Static Methods

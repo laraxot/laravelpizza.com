@@ -1,3 +1,11 @@
+---
+title: "Testing Strategy Implementation - Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "testing strategy implementation - activity module activity"
+---
 # Testing Strategy Implementation - Activity Module
 
 ## Status
@@ -184,7 +192,7 @@ Applicare pattern NO RefreshDatabase a tutti i test Activity:
 - [No RefreshDatabase Policy](./testing/no-refresh-database-policy.md) - **Policy ufficiale**
 - [Snapshot Testing Patterns](./testing/snapshot-testing-patterns.md) - **Best practices**
 - [Xot Testing Strategy](../../Xot/docs/testing-strategy.md) - **Strategia globale**
-- [Xot Testing Strategy](../../xot/docs/testing-strategy.md) - **Strategia globale**
+- [Xot Testing Strategy](../../Xot/docs/testing-strategy.md) - **Strategia globale**
 
 ### Codice
 - [SnapshotBusinessLogicTest](../tests/Feature/SnapshotBusinessLogicTest.php) - **Implementazione**

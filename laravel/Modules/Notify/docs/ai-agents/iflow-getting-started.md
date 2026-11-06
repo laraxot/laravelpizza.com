@@ -1,9 +1,20 @@
+---
+title: "iflow getting started"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow getting started"
+issues: []
+discussions: []
+status: draft
+---
+
 # IFLOW Getting Started
 
 Come iniziare a lavorare sul progetto.
 
 ---
-
 ## 🚀 In 3 Passi
 
 > Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
@@ -53,6 +64,7 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 
 - **MAI** creare file .md in posizioni sbagliate
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e changelog.md)
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights
 - **MAI** usare `property_exists()` su modelli Eloquent

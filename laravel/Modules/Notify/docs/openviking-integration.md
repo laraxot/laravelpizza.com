@@ -1,3 +1,15 @@
+---
+title: "openviking integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "openviking integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # OpenViking Integration Guide
 
 ## Overview
@@ -25,6 +37,7 @@ OpenViking is an AI-powered context management and documentation system that hel
 
 ```bash
 cd /var/www/_bases/base_fixcity_fila5
+cd /var/www/_bases/base_ptv_fila5
 openviking init
 ```
 
@@ -421,7 +434,6 @@ openviking status
 6. ⏳ Establish context maintenance routine
 
 ---
-
 **Last Updated**: 2026-03-30  
 **Version**: 1.0.0  
 **Status**: Initial Implementation

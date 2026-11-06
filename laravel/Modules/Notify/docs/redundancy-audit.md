@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "redundancy audit"
+issues: []
+discussions: []
 title: "Notify redundancy audit 2026-05-21"
 type: audit
 module: Notify
@@ -6,6 +10,8 @@ tags: [redundancy, email, config, casing]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
+  - https://github.com/laraxot/base_ptv_fila5/issues/89
+status: draft
 ---
 
 # Notify redundancy audit 2026-05-21

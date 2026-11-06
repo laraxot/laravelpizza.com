@@ -1,3 +1,15 @@
+---
+title: "phpstan sushitojson contract"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan sushitojson contract"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan: SushiToJsonContract per Comune
 
 ## Contesto

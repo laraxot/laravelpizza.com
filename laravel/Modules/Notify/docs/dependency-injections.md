@@ -1,3 +1,16 @@
+---
+qmd: "dependency injections"
+issues: []
+discussions: []
+title: "Dependency Injection Pattern in QueueableActions"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Dependency Injection Pattern in QueueableActions
 
 **Date**: 18 Dicembre 2025  

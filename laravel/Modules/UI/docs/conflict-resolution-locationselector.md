@@ -1,4 +1,14 @@
-> **[2026-07-08] SUPERATO** — `LocationSelector.php` è stato rimosso definitivamente (0 consumer in blade/route/test, importava `Modules\Geo\Models\Comune` in violazione della regola di decoupling documentata in [block-rendering-and-optional-services](wiki/concepts/block-rendering-and-optional-services.md)). I conflitti Git ricorrenti documentati sotto erano il sintomo: agent diversi continuavano ad aggiungere/rimuovere lo stesso file morto. Vedi [wiki/log.md](wiki/log.md) del 2026-07-08 per i dettagli. Il contenuto storico sotto resta come riferimento del perché il file esisteva.
+---
+title: "conflict resolution locationselector"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution locationselector"
+issues: []
+discussions: []
+status: draft
+---
 
 # Risoluzione Conflitto LocationSelector.php
 
@@ -161,3 +171,4 @@ Il conflitto riguarda la logica di recupero e gestione dei dati geografici.
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
+

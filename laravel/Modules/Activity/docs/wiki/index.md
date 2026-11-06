@@ -11,18 +11,21 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../docs/wiki/bmad/architecture.md
-  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
+  - ../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../docs/wiki/bmad/architecture.md
+  - ../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../docs/wiki/concepts/ai-harness-module-discipline.md
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Copia identica di wiki/INDEX.md (varianti di sola maiuscola); l'indice della wiki e' INDEX.md. Contenuto non riscritto, verificare prima di usarlo.
 
 # Wiki Index — Activity
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
-- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
-- [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md)
+- [frontmatter + GitHub](../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
 - [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
@@ -33,7 +36,7 @@ related:
 ## Completamento
 
 - [overviews/completion-status.md](./overviews/completion-status.md) — stato modulo post gate chef
-- [PROJECT-ROADMAP.md](./PROJECT-ROADMAP.md) — milestone Activity
+- [PROJECT-ROADMAP.md](./project-roadmap.md) — milestone Activity
 - [platform-completion-roadmap (Xot)](../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
 
 ## Concepts
@@ -54,8 +57,8 @@ _No entities tracked yet._
 
 ## On-Demand References
 
-- [rules-index](./rules/INDEX.md) — entrypoint locale per regole ricorrenti del modulo
-- [skills-index](./skills/INDEX.md) — skill on-demand, incluse skill condivise Xot
+- [rules-index](./rules/index.md) — entrypoint locale per regole ricorrenti del modulo
+- [skills-index](./skills/index.md) — skill on-demand, incluse skill condivise Xot
 
 ## Comparisons
 

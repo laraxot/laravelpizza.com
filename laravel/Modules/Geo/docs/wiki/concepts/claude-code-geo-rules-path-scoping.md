@@ -1,3 +1,15 @@
+---
+title: "claude code geo rules path scoping"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude code geo rules path scoping"
+issues: []
+discussions: []
+status: draft
+---
+
 # Claude Code Geo Rules Path Scoping
 
 ## Decisione
@@ -28,6 +40,14 @@ Per nuove regole Claude Code che riguardano Geo:
 
 ```md
 ---
+title: "claude code geo rules path scoping"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude code geo rules path scoping"
+issues: []
+discussions: []
 paths:
   - "laravel/Modules/Geo/resources/js/**/*.js"
   - "laravel/Modules/Geo/resources/svg/**/*.svg"

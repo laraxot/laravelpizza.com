@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Pages;
 
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
 class EnvPage extends XotBasePage
 {
     use NavigationLabelTrait;
+    use SuperAdminOnlyTrait;
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-home';
 

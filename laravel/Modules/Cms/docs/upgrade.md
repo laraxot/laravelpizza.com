@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "upgrade"
+issues: []
+discussions: []
 title: Aggiornamenti
 description: Aggiornamenti
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Aggiornamenti {#aggiornamenti}
@@ -29,5 +37,5 @@ Infine, se si sono pubblicati il file di configurazione o i modelli Blade, assic
 php artisan module_cms:show-versions
 ```
 ## Collegamenti tra versioni di upgrade.md
-* [upgrade.md](laravel/modules/lang/docs/upgrade.md)
+* [upgrade.md](../../Lang/docs/upgrade.md)
 * [upgrade.md](laravel/modules/cms/docs/upgrade.md)

@@ -1,3 +1,11 @@
+---
+title: "La Filosofia Zen Avanzata dei Getter Semantici"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "la filosofia zen avanzata dei getter semantici xot"
+---
 # La Filosofia Zen Avanzata dei Getter Semantici
 
 ## Il Tao del Codice Pulito

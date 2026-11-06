@@ -1,3 +1,15 @@
+---
+title: "testing individual folio routes fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing individual folio routes fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Fix: IndividualFolioRoutesTest - Path Corrections
 
 **Problema**: Test fallisce con path errati per file JSON
@@ -61,6 +73,5 @@ Nei test sotto `Modules/Cms/tests/Feature/Frontoffice/FolioRoutes/*` quindi adot
 - [Folio Routing System](folio-routing-system.md)
 
 ---
-
 **Status**: In Progress
 **Prossimo step**: Correggere tutti i test che usano `<nome progetto>` placeholder

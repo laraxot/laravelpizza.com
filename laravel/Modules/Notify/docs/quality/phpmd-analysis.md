@@ -1,3 +1,15 @@
+---
+title: "phpmd analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpmd analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPMD Analysis - Modulo Notify
 
 ## 📊 Analisi Filosofica Errori PHPMD
@@ -5,7 +17,6 @@
 ### 🧘 Principio Zen: "Il nome giusto illumina il codice"
 
 ---
-
 ## Errori Rilevati e Filosofia
 
 ### 1. ShortVariable: $to, $as
@@ -215,7 +226,7 @@ Avoid unused parameters such as '$cid'.
 
 - [PHPMD Rules](https://phpmd.org/rules/index.html)
 - [PSR-12 Coding Standard](https://www.php-fig.org/psr/psr-12/)
-- [Xot - Code Quality Standards](../../../xot/docs/code_quality_standards.md)
+- [Xot - Code Quality Standards](../../../Xot/docs/CODE_QUALITY_STANDARDS.md)
 
 ---
 

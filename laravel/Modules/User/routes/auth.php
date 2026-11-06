@@ -1,8 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 /*
+ * Scaffold Breeze/Volt non attivo: nessun provider carica questo file e le pagine `pages.auth.*`
+ * non esistono. Login, registrazione e reset password sono widget Filament (`Widgets\Auth\*`,
+ * rotte in `web_tall.php`). Il blocco resta commentato come riferimento.
+ *
 Route::prefix('{lang}')->group(function () {
     Route::middleware('guest')->group(function () {
         Volt::route('register', 'pages.auth.register')->name('register');

@@ -1,3 +1,14 @@
+---
+title: "appuntamento 05 riepilogo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 05 riepilogo"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Riepilogo (appuntamento-05-riepilogo.html)
 
 ## Obiettivo

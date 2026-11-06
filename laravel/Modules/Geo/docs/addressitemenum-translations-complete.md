@@ -1,3 +1,15 @@
+---
+title: "addressitemenum translations complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "addressitemenum translations complete"
+issues: []
+discussions: []
+status: draft
+---
+
 # AddressItemEnum Translations - Complete Implementation
 
 **Date**: [DATE]

@@ -1,3 +1,13 @@
+---
+title: "database"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, install]
+qmd: "database"
+---
 ~~~ php
 <?php
 
@@ -84,13 +94,15 @@ return $def1;
 ~~~
 ### Versione HEAD
 
+
 ## Collegamenti tra versioni di database.md
 * [database.md](docs/tecnico/database/database.md)
 * [database.md](../../../Xot/docs/install/database.md)
 * [database.md](../../../Tenant/docs/it/config/database.md)
-* [database.md](../../../xot/docs/install/database.md)
-* [database.md](../../../tenant/docs/it/config/database.md)
+
 
 ### Versione Incoming
 
+
 ---
+

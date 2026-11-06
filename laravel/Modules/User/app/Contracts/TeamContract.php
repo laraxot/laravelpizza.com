@@ -9,35 +9,38 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Modules\User\Models\TeamInvitation;
+use Modules\User\Models\TeamUser;
 use Modules\Xot\Contracts\ModelContract;
 use Modules\Xot\Contracts\UserContract;
 
 /**
  * Modules\User\Contracts\TeamContract.
  *
- * @property int               $id
- * @property int               $user_id
- * @property string            $name
- * @property int               $personal_team
- * @property Carbon|null       $created_at
- * @property Carbon|null       $updated_at
- * @property string            $role
+ * @property int $id
+ * @property int $user_id
+ * @property string $name
+ * @property bool $personal_team
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string $role
  * @property UserContract|null $owner
- * @property int|null          $team_invitations_count
- * @property int|null          $users_count
+ * @property int|null $team_invitations_count
+ * @property int|null $users_count
+ * @property Collection<int, Model&UserContract> $users
  *
- * @method static Builder<Model>|TeamContract newModelQuery()
- * @method static Builder<Model>|TeamContract newQuery()
- * @method static Builder<Model>|TeamContract query()
- * @method static Builder<Model>|TeamContract whereCreatedAt($value)
- * @method static Builder<Model>|TeamContract whereId($value)
- * @method static Builder<Model>|TeamContract whereName($value)
- * @method static Builder<Model>|TeamContract wherePersonalTeam($value)
- * @method static Builder<Model>|TeamContract whereUpdatedAt($value)
- * @method static Builder<Model>|TeamContract whereUserId($value)
+ * @method static Builder<Model> newModelQuery()
+ * @method static Builder<Model> newQuery()
+ * @method static Builder<Model> query()
+ * @method static Builder<Model> whereCreatedAt($value)
+ * @method static Builder<Model> whereId($value)
+ * @method static Builder<Model> whereName($value)
+ * @method static Builder<Model> wherePersonalTeam($value)
+ * @method static Builder<Model> whereUpdatedAt($value)
+ * @method static Builder<Model> whereUserId($value)
  *
  * @phpstan-require-extends Model
  *
@@ -48,9 +51,7 @@ interface TeamContract extends ModelContract
     /**
      * Get the owner of the team.
      *
-     * @return BelongsTo<Model&UserContract, $this>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return BelongsTo<Model&UserContract, Model>
      */
     public function owner(): BelongsTo;
 
@@ -64,9 +65,7 @@ interface TeamContract extends ModelContract
     /**
      * Get all of the users that belong to the team.
      *
-     * @return BelongsToMany<Model&UserContract, $this, \Modules\User\Models\TeamUser, 'pivot'>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return BelongsToMany<Model&UserContract, Model, TeamUser, 'pivot'>
      */
     public function users(): BelongsToMany;
 
@@ -88,9 +87,7 @@ interface TeamContract extends ModelContract
     /**
      * Get all of the pending user invitations for the team.
      *
-     * @return HasMany<TeamInvitation, $this>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return HasMany<TeamInvitation, Model>
      */
     public function teamInvitations(): HasMany;
 
@@ -104,16 +101,8 @@ interface TeamContract extends ModelContract
      */
     public function purge(): void;
 
-    /* --non qui
-     * Get the disk that profile photos should be stored on.
-     *
-     * public function profilePhotoDisk(): string;
-     */
-
     /**
-     * @return BelongsToMany<Model&UserContract, $this, \Modules\User\Models\TeamUser, 'pivot'>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return BelongsToMany<Model&UserContract, Model, TeamUser, 'pivot'>
      */
     public function members(): BelongsToMany;
 }

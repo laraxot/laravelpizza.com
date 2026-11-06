@@ -1,3 +1,15 @@
+---
+title: "volt livewire component boundaries"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt livewire component boundaries"
+issues: []
+discussions: []
+status: draft
+---
+
 # Volt And Livewire Component Boundaries
 
 ## Fonte

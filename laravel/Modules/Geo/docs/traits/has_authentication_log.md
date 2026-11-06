@@ -1,3 +1,15 @@
+---
+title: "has authentication log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "has authentication log"
+issues: []
+discussions: []
+status: draft
+---
+
 # Trait HasAuthenticationLogTrait
 
 ## Descrizione

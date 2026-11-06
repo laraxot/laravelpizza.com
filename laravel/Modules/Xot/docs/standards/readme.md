@@ -1,3 +1,9 @@
+---
+title: "Xot - readme.md"
+module: Xot
+bmad: true
+status: active
+---
 # Standard di Codice
 
 Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel progetto.
@@ -125,4 +131,3 @@ class Doctor extends User
 
 ## Moduli che applicano questa regola
 // Aggiungere qui altri moduli se necessario
-

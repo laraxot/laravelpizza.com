@@ -18,13 +18,12 @@ use Modules\Notify\Models\MailTemplateVersion;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Models\NotificationType;
-use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('Notification Management Business Logic', function () {
     it('can create notification with core fields', function () {
         $notification = NotificationFactory::new()->createOne([
@@ -32,20 +31,17 @@ describe('Notification Management Business Logic', function () {
             'status' => 'pending',
             'data' => [
                 'subject' => 'Test subject',
-                'message' => 'Test body',
-            ],
-            'channels' => ['mail'],
-        ]);
+                'message' => 'Test body'],
+            'channels' => ['mail']]);
 
         Assert::assertInstanceOf(Notification::class, $notification);
         Assert::assertSame('email', $notification->type);
         Assert::assertSame('pending', $notification->status);
 
-        \assertNotifyTableHas('notifications', [
+        XotBasePest::assertTableHas('notify', 'notifications', [
             'id' => $notification->id,
             'type' => 'email',
-            'status' => 'pending',
-        ]);
+            'status' => 'pending']);
     });
 
     it('can create notification template with valid schema', function () {
@@ -56,19 +52,17 @@ describe('Notification Management Business Logic', function () {
             'body_html' => '<p>Benvenuto {{user_name}}</p>',
             'channels' => ['mail'],
             'variables' => ['user_name'],
-            'is_active' => true,
-        ]);
+            'is_active' => true]);
 
         Assert::assertInstanceOf(NotificationTemplate::class, $template);
         Assert::assertSame('Welcome Email Template', $template->name);
         Assert::assertTrue($template->is_active);
 
-        \assertNotifyTableHas('notification_templates', [
+        XotBasePest::assertTableHas('notify', 'notification_templates', [
             'id' => $template->id,
             'name' => 'Welcome Email Template',
             'code' => 'welcome-email',
-            'is_active' => true,
-        ]);
+            'is_active' => true]);
     });
 
     it('can create notification type with valid schema', function () {
@@ -77,19 +71,17 @@ describe('Notification Management Business Logic', function () {
             'slug' => 'welcome-email',
             'description' => 'Email inviata ai nuovi utenti registrati',
             'category' => 'onboarding',
-            'is_active' => true,
-        ]);
+            'is_active' => true]);
 
         Assert::assertInstanceOf(NotificationType::class, $type);
         Assert::assertSame('welcome_email', $type->name);
         Assert::assertTrue($type->is_active);
 
-        \assertNotifyTableHas('notification_types', [
+        XotBasePest::assertTableHas('notify', 'notification_types', [
             'id' => $type->id,
             'name' => 'welcome_email',
             'slug' => 'welcome-email',
-            'is_active' => true,
-        ]);
+            'is_active' => true]);
     });
 
     it('can create contact for notification delivery', function () {
@@ -100,17 +92,14 @@ describe('Notification Management Business Logic', function () {
             'value' => 'mario.rossi@example.com',
             'first_name' => 'Mario',
             'last_name' => 'Rossi',
-            'email' => 'mario.rossi@example.com',
-        ]);
-
+            'email' => 'mario.rossi@example.com']);
         Assert::assertInstanceOf(Contact::class, $contact);
         Assert::assertSame('mario.rossi@example.com', $contact->value);
 
-        \assertNotifyTableHas('contacts', [
+        XotBasePest::assertTableHas('notify', 'contacts', [
             'id' => $contact->id,
             'contact_type' => 'email',
-            'value' => 'mario.rossi@example.com',
-        ]);
+            'value' => 'mario.rossi@example.com']);
     });
 
     it('can track mail template log lifecycle', function () {
@@ -120,25 +109,23 @@ describe('Notification Management Business Logic', function () {
             'status' => 'sent',
             'data' => ['recipient' => 'patient@example.com'],
             'metadata' => ['campaign_id' => 'welcome_001'],
-            'sent_at' => now(),
-        ]);
+            'sent_at' => now()]);
 
         Assert::assertInstanceOf(MailTemplateLog::class, $log);
         Assert::assertSame('sent', $log->status);
-        Assert::assertSame('patient@example.com', \assertNotifyArray($log->data)['recipient']);
-        Assert::assertSame('welcome_001', \assertNotifyArray($log->metadata)['campaign_id']);
+        Assert::assertSame('patient@example.com', XotBasePest::assertArray($log->data)['recipient']);
+        Assert::assertSame('welcome_001', XotBasePest::assertArray($log->metadata)['campaign_id']);
     });
 
     it('can create mail template version snapshot', function () {
         $template = MailTemplateFactory::new()->createOne();
         $version = MailTemplateVersionFactory::new()->createOne([
-            'template_id' => $template->id,
+            'mail_template_id' => $template->id,
             'subject' => 'Versione precedente',
             'html_template' => '<p>Snapshot</p>',
             'text_template' => 'Snapshot',
             'version' => 2,
-            'change_notes' => 'Aggiornamento copy',
-        ]);
+            'change_notes' => 'Aggiornamento copy']);
 
         Assert::assertInstanceOf(MailTemplateVersion::class, $version);
         Assert::assertSame('Versione precedente', $version->subject);
@@ -150,40 +137,36 @@ describe('Notification Management Business Logic', function () {
         $notification = NotificationFactory::new()->createOne([
             'type' => 'sms',
             'status' => 'pending',
-            'data' => ['message' => 'Old message'],
-        ]);
+            'data' => ['message' => 'Old message']]);
 
         $payload = ['message' => 'Updated message', 'locale' => 'it'];
         $notification->update(['data' => $payload, 'status' => 'sent', 'sent_at' => now()]);
 
-        $fresh = \assertFreshModel($notification, Notification::class);
-        $data = \assertNotifyArray(is_array($fresh->data) ? $fresh->data : null);
+        $fresh = XotBasePest::assertFreshModel($notification, Notification::class);
+        $data = XotBasePest::assertArray(is_array($fresh->data) ? $fresh->data : null);
 
         Assert::assertSame('Updated message', $data['message']);
         Assert::assertSame('sent', $fresh->status);
         Assert::assertNotNull($fresh->sent_at);
 
-        \assertNotifyTableHas('notifications', [
+        XotBasePest::assertTableHas('notify', 'notifications', [
             'id' => $notification->id,
-            'status' => 'sent',
-        ]);
+            'status' => 'sent']);
     });
 
     it('can store notification type channel configuration', function () {
         $channels = [
             'email' => ['enabled' => true],
-            'sms' => ['enabled' => false],
-        ];
+            'sms' => ['enabled' => false]];
 
         $type = NotificationTypeFactory::new()->createOne(['channels' => $channels]);
 
-        \assertNotifyTableHas('notification_types', [
+        XotBasePest::assertTableHas('notify', 'notification_types', [
             'id' => $type->id,
-            'channels' => json_encode($channels),
-        ]);
+            'channels' => json_encode($channels)]);
 
-        $stored = \assertNotifyArray(\assertFreshModel($type, NotificationType::class)->channels);
-        Assert::assertTrue(\assertNotifyArray($stored['email'] ?? null)['enabled']);
-        Assert::assertFalse(\assertNotifyArray($stored['sms'] ?? null)['enabled']);
+        $stored = XotBasePest::assertArray(XotBasePest::assertFreshModel($type, NotificationType::class)->channels);
+        Assert::assertTrue(XotBasePest::assertArray($stored['email'] ?? null)['enabled']);
+        Assert::assertFalse(XotBasePest::assertArray($stored['sms'] ?? null)['enabled']);
     });
 });

@@ -1,3 +1,11 @@
+---
+title: "Xot - architecture-complete.md"
+module: Xot
+bmad: true
+status: active
+---
+# Xot Module - Complete Architecture Guide (2025)
+
 > **Last Updated:** 2025-11-19
 > **PHPStan Level:** 10
 > **Status:** Core Foundation Module
@@ -12,7 +20,6 @@
 6. [Best Practices](#best-practices)
 
 ---
-
 ## Module Overview
 
 ### Primary Purpose
@@ -140,7 +147,12 @@ All Filament resources extend this base class:
 
 **Required Methods:**
 ```php
-abstract public static function getFormSchema(): array;
+abstract public function getFormSchema(): array;
+abstract public function getFormSchema(): array;
+---
+abstract public function getFormSchema(): array;
+---
+abstract public function getFormSchema(): array;
 abstract public static function getTableColumns(): array;
 // Optional: getInfolistSchema(), getRelations(), getPages()
 ```
@@ -577,7 +589,12 @@ class MyResource extends XotBaseResource
 {
     protected static ?string $model = MyModel::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
+    public function getFormSchema(): array
+---
+    public function getFormSchema(): array
+---
+    public function getFormSchema(): array
     {
         return [
             TextInput::make('field1')->required(),
@@ -654,7 +671,12 @@ class ArticleResource extends XotBaseResource
 {
     protected static ?string $model = Article::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
+    public function getFormSchema(): array
+---
+    public function getFormSchema(): array
+---
+    public function getFormSchema(): array
     {
         return [
             TextInput::make('title')
@@ -860,10 +882,3 @@ The Xot module is a comprehensive foundation providing:
 **Document Version:** 1.0
 **Generated:** 2025-11-19
 **Author:** Claude Code Analysis
----
-module: theme
-topic: architecture-complete
-canonical: ../../../../Themes/docs/shared-components/architecture-complete.md
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/architecture-complete.md

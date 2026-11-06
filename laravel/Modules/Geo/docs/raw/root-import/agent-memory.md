@@ -1,3 +1,14 @@
+---
+title: "agent memory"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent memory"
+issues: []
+discussions: []
+---
+
 # AGENT_MEMORY.md
 
 > Index: [.agents/docs/agents-guide/00-index.md](.agents/docs/agents-guide/00-index.md)
@@ -89,5 +100,13 @@ bmad-document-project
 
 ---
 
+title: "agent memory"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent memory"
+issues: []
+discussions: []
 *Full documentation: [.agents/docs/agents-guide/00-index.md](.agents/docs/agents-guide/00-index.md)*  
 *BMAD Documentation: [docs/bmad/README.md](docs/bmad/README.md)*

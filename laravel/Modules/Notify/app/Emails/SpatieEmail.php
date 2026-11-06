@@ -52,24 +52,21 @@ class SpatieEmail extends TemplateMailable
         $tpl = MailTemplate::firstOrCreate(
             [
                 'mailable' => self::class,
-                'slug' => $this->slug,
-            ],
+                'slug' => $this->slug],
             [
                 'subject' => 'Benvenuto, {{ first_name }}',
-                'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione  è in attesa di approvazione. Ti contatteremo presto.</p>['.
-                        $this->slug.
-                        ']',
-                'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.
-                        $this->slug.
-                        ']',
-                'sms_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.
-                        $this->slug.
-                        ']',
-            ],
+                // Difetto 16: senza layout getHtmlLayout() non ha un file da leggere
+                'html_layout_path' => 'base.html',
+                'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione è in attesa di approvazione. Ti contatteremo presto.</p>',
+                'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione è in attesa di approvazione. Ti contatteremo presto.',
+                'sms_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione è in attesa di approvazione. Ti contatteremo presto.'],
         );
 
         if ($tpl !== null) {
             $tpl->update(['counter' => $tpl->counter + 1]);
+        }
+        if ($this->slug === 'verify-email') {
+            $this->syncVerifyEmailTemplate($tpl, app()->getLocale());
         }
         $lang = app()->getLocale();
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
@@ -145,14 +142,41 @@ class SpatieEmail extends TemplateMailable
         return $envelope;
     }
 
+    /**
+     * Il template `verify-email` creato di default era un testo generico senza link: lo sostituisce
+     * (solo se non e' stato personalizzato) con il testo di user::verification_email e il link firmato.
+     */
+    private function syncVerifyEmailTemplate(MailTemplate $tpl, string $lang): void
+    {
+        $current = SafeStringCastAction::cast($tpl->getTranslation('html_template', $lang, false));
+        if ($current !== '' && str_contains($current, '{{ verification_url }}')) {
+            return;
+        }
+        if ($current !== '' && ! str_contains($current, 'in attesa di approvazione')) {
+            return; // personalizzato dall'admin
+        }
+
+        $t = static fn (string $key): string => (string) __('user::verification_email.'.$key, [], $lang);
+        $button = 'display:inline-block;padding:12px 24px;background:#007a52;color:#ffffff;text-decoration:none;font-weight:600;border-radius:6px';
+        $tpl->setTranslation('subject', $lang, $t('subject'));
+        $tpl->setTranslation('html_template', $lang, '<p>'.$t('greeting').'</p><p>'.$t('intro').'</p>'
+            .'<p><a href="{{ verification_url }}" style="'.$button.'">'.$t('action').'</a></p>'
+            .'<p style="font-size:13px;color:#4b5563">'.$t('fallback').'<br>{{ verification_url }}</p>'
+            .'<p style="font-size:13px;color:#4b5563">'.$t('ignore').'</p>');
+        $tpl->setTranslation('text_template', $lang, $t('greeting').' '.$t('intro')."\n\n{{ verification_url }}\n\n".$t('ignore'));
+        $tpl->save();
+    }
+
     public function getHtmlLayout(): string
     {
         /** @var MailTemplate $mailTemplate */
         $mailTemplate = $this->getMailTemplate();
 
-        // Assicurarsi che html_layout_path sia una stringa prima di passarlo a base_path
-        Assert::string($mailTemplate->html_layout_path);
-        $html_layout_path = XotData::make()->getMailHtmlLayoutPath($mailTemplate->html_layout_path);
+        // Template senza layout scelto (es. verify-email appena creato): layout base del tema
+        $layout = is_string($mailTemplate->html_layout_path) && $mailTemplate->html_layout_path !== ''
+            ? $mailTemplate->html_layout_path
+            : 'base.html';
+        $html_layout_path = XotData::make()->getMailHtmlLayoutPath($layout);
 
         return file_get_contents($html_layout_path);
     }
@@ -191,7 +215,6 @@ class SpatieEmail extends TemplateMailable
         $res = Attachment::fromData(static fn () => $attachment['data']);
         /** @var string|null $asRaw */
         $asRaw = $attachment['as'] ?? null;
-        $as = \is_string($asRaw) ? $asRaw : '';
 
         $mime = Arr::get($attachment, 'mime', null); // ?? File::mimeType($as);   file vuole un file esistente
         /** @var string $asForPathinfo */
@@ -215,7 +238,7 @@ class SpatieEmail extends TemplateMailable
     /**
      * Add attachments to the email.
      *
-     * @param  array<int, array<string, string>>  $attachments  Array of attachment data
+     * @param  array<int, array{path?: string, data?: mixed, as?: string|null, mime?: string|null}>  $attachments
      */
     public function addAttachments(array $attachments): self
     {
@@ -229,8 +252,7 @@ class SpatieEmail extends TemplateMailable
                 $pathAttachment = [
                     'path' => $path,
                     'as' => $item['as'] ?? null,
-                    'mime' => $item['mime'] ?? null,
-                ];
+                    'mime' => $item['mime'] ?? null];
                 $attachment = $this->getAttachmentFromPath($pathAttachment);
             }
 
@@ -268,5 +290,28 @@ class SpatieEmail extends TemplateMailable
         $mustache = app(Mustache_Engine::class);
 
         return $mustache->render($smsTemplateString, $this->data);
+    }
+
+    /**
+     * Mittente dell'SMS per questo template.
+     *
+     * Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 9:
+     * prima `RecordNotification::toSms()` scriveva il letterale 'Xot'. Catena:
+     * `MailTemplate.sms_from` (per-survey, es. "VIVASERVIZI") → `config('sms.from')`
+     * (globale) → `null` (il gateway usa il default del suo account).
+     */
+    public function buildSmsFrom(): ?string
+    {
+        /** @var MailTemplate $mailTemplate */
+        $mailTemplate = $this->getMailTemplate();
+
+        $smsFrom = $mailTemplate->sms_from;
+        if (\is_string($smsFrom) && $smsFrom !== '') {
+            return $smsFrom;
+        }
+
+        $configFrom = config('sms.from');
+
+        return \is_string($configFrom) && $configFrom !== '' ? $configFrom : null;
     }
 }

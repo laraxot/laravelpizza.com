@@ -1,3 +1,15 @@
+---
+title: "git subtree conflicts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git subtree conflicts"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione dei Conflitti negli Script Git Subtree
 
 > **Nota**: Per informazioni aggiuntive sulla risoluzione dei conflitti, consulta anche [Risoluzione Conflitti Git](../../docs/risoluzione_conflitti_git.md)
@@ -152,7 +164,7 @@ Il valore principale di questa risoluzione è documentativo, mantenendo la leggi
 
 - [Documentazione Git Subtree](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging)
 
-- [Documentazione sulla Risoluzione dei Conflitti Bash](CONFLICT_RESOLUTION_BASH.md)
+- [Documentazione sulla Risoluzione dei Conflitti Bash](../utils/conflict_resolution_bash.md)
 - [Documentazione degli Script Git](git_scripts.md)
 - [Documentazione Generale sulla Risoluzione dei Conflitti](../../docs/bashscripts_conflict_resolution.md)
 - [Archivio degli Script con Conflitti Risolti](../.old_scripts/README.md)

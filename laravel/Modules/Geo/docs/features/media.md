@@ -1,3 +1,15 @@
+---
+title: "media"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "media"
+issues: []
+discussions: []
+status: draft
+---
+
 # Media Management
 
 ## Video Player

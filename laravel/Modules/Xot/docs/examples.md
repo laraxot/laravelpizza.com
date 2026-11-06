@@ -1,3 +1,15 @@
+---
+title: "examples"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "examples"
+issues: []
+discussions: []
+status: draft
+---
+
 # 💡 **Esempi Modulo Xot**
 
 ## 📋 **Panoramica**
@@ -238,7 +250,17 @@ class ExampleResource extends XotBaseResource
      *
      * @return array<int, \Filament\Forms\Components\Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
+---
+title: "examples"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "examples"
+issues: []
+discussions: []
+    public function getFormSchema(): array
     {
         return [
             Forms\Components\Section::make('Informazioni Base')
@@ -513,7 +535,9 @@ class ExampleWithCustomActionsResource extends XotBaseResource
 {
     protected static ?string $model = \Modules\Example\app\Models\Example::class;
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
+---
+    public function getFormSchema(): array
     {
         return [
             Forms\Components\TextInput::make('nome')

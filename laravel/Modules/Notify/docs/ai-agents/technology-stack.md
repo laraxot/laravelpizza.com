@@ -1,3 +1,15 @@
+---
+title: "technology stack"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "technology stack"
+issues: []
+discussions: []
+status: draft
+---
+
 # Technology Stack
 
 Vedi [index](index.md) per navigazione completa.

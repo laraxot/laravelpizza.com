@@ -1,3 +1,16 @@
+---
+qmd: "actions calling actions"
+issues: []
+discussions: []
+title: "Pattern: Actions che chiamano altre Actions"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Pattern: Actions che chiamano altre Actions
 
 **Modulo**: Notify  
@@ -210,6 +223,7 @@ Prima di aggiungere dependency injection nel costruttore per chiamare altre Acti
 ## Documentazione Correlata
 
 - [Queueable Actions Pattern](../Geo/docs/architectural-philosophy.md#action-architecture-pattern)
+- [Queueable Actions Pattern](../../Geo/docs/architectural-philosophy.md#action-architecture-pattern)
 - [Action Execution Pattern](../../xot/docs/action-execution-pattern.md)
 - [Spatie QueueableAction Documentation](../../../../docs/patterns/queueable-actions.md)
 

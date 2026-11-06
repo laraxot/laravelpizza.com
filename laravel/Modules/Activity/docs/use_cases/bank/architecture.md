@@ -1,3 +1,11 @@
+---
+title: "Architettura di Larabank con Event Sourcing"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "architettura di larabank con event sourcing activity"
+---
 # Architettura di Larabank con Event Sourcing
 
 ## Introduzione

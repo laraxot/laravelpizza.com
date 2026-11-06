@@ -1,5 +1,7 @@
 ---
-title: Directory database lowercase — factories
+issues: []
+discussions: []
+title: Directory database lowercase: factories
 type: concept
 module: Tenant
 tags: [tenant, database, factories, structure, laravel-modules]
@@ -10,10 +12,13 @@ related:
   - ./lowercase-tests-directory.md
   - ../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md
   - ../../../../../docs/wiki/concepts/module-structure-organization-rule.md
+  - ../../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md
+  - ../../../../../../docs/wiki/concepts/module-structure-organization-rule.md
   - ../log.md
+status: draft
 ---
 
-# Directory database lowercase — factories
+# Directory database lowercase: factories
 
 Il modulo Tenant usa **solo** cartelle `database/` in minuscolo, allineate a Laravel e `composer.json` PSR-4.
 
@@ -26,6 +31,7 @@ Il modulo Tenant usa **solo** cartelle `database/` in minuscolo, allineate a Lar
 | `database/migrations/` | `database/Migrations/` |
 
 Regola progetto: [database-folder-lowercase-rule.md](../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md).
+Regola progetto: [database-folder-lowercase-rule.md](../../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md).
 
 ## Perché `Factories_/` non deve esistere
 

@@ -1,3 +1,15 @@
+---
+title: "link2 integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "link2 integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # link2
 
 <!-- Contenuto migrato da _docs/link2.txt -->

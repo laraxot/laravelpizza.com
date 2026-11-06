@@ -1,3 +1,14 @@
+---
+title: "composer minimum stability update"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "composer minimum stability update"
+issues: []
+discussions: []
+---
+
 # Aggiornamento Minimum-Stability a Dev - Riepilogo
 
 ## Panoramica
@@ -290,6 +301,14 @@ La configurazione mantiene `"prefer-stable": true` per garantire stabilità quan
 
 ---
 
+title: "composer minimum stability update"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "composer minimum stability update"
+issues: []
+discussions: []
 *Aggiornamento completato il: $(date)*
 *File modificati: 4*
 *File già configurati: 18*

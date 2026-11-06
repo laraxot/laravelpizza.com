@@ -1,3 +1,15 @@
+---
+title: "SYNC REMOTE REPO TEST PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SYNC REMOTE REPO TEST PLAN"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sync Remote Repo - Test Plan
 
 **Date**: 2026-03-13  
@@ -6,7 +18,6 @@
 **Workflow**: `.github/workflows/sync-remote-repo.yml`
 
 ---
-
 ## 🎯 Test Objective
 
 Verify that `sync_remote_repo.sh` works correctly for **bidirectional sync**:
@@ -236,8 +247,8 @@ Test is considered successful when:
 
 - [Script Documentation](../../../bashscripts/docs/git/subtrees/sync-remote-repo-guide.md)
 - [Workflow Configuration](../../../.github/workflows/sync-remote-repo.yml)
-- [GitHub Issue #11](https://github.com/laraxot/base_fixcity_fila5/issues/11)
-- [GitHub Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)
+- [GitHub Issue #11](https://github.com/laraxot/base_ptv_fila5/issues/11)
+- [GitHub Issue #12](https://github.com/laraxot/base_ptv_fila5/issues/12)
 
 ---
 

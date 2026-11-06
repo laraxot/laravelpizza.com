@@ -1,8 +1,19 @@
+---
+title: "FullCalendar Scheduler Documentation - README"
+module: user
+type: integration
+tags: [integrations, modules, user]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+qmd: "fullcalendar scheduler documentation - readme user"
+---
+
 # FullCalendar Scheduler Documentation - README
 
 ## 🎯 Obiettivo
 
-Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto Quaeris, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
+Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto SaluteOra, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
 
 ## 📚 Documenti Creati
 
@@ -11,7 +22,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
-- Best practices per ambiente sanitario Quaeris
+- Best practices per ambiente sanitario SaluteOra
 
 ### 2. **Riferimento Rapido**
 📄 `fullcalendar-scheduler-quick-reference.md`
@@ -69,7 +80,7 @@ private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
             'dayGrid', 'timeGrid', 'list', 'interaction',
             'resourceTimeline', 'resourceDayGrid', // Premium
         ],
-// Configurazioni Quaeris specifiche...
+        // Configurazioni SaluteOra specifiche...
     ]);
 }
 ```
@@ -96,7 +107,7 @@ FULLCALENDAR_CACHE_TTL=300
 FULLCALENDAR_MAX_EVENTS=100
 ```
 
-## 🏥 Specifiche Quaeris
+## 🏥 Specifiche SaluteOra
 
 ### Business Hours Sanitarie
 ```javascript
@@ -183,7 +194,7 @@ Log::info('FullCalendar configured', [
 ✅ **Configurazione incompleta** - Setup completo fornito
 ✅ **Bug versioning** - Soluzioni per v5.x e v6.x
 ✅ **Ambiente-specific** - Gestione produzione/sviluppo
-✅ **Quaeris integration** - Configurazioni sanitarie specifiche
+✅ **SaluteOra integration** - Configurazioni sanitarie specifiche
 
 ### Benefici
 - **Riduzione troubleshooting time** - Soluzioni immediate disponibili
@@ -209,12 +220,12 @@ Log::info('FullCalendar configured', [
 ### Quando Aggiornare
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
-- Modifiche architettura Quaeris
+- Modifiche architettura SaluteOra
 - Nuovi requisiti sanitari/legali
 
 ### Come Aggiornare
 1. Verificare issue GitHub FullCalendar
-2. Testare soluzioni in ambiente Quaeris
+2. Testare soluzioni in ambiente SaluteOra
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo README
 
@@ -224,6 +235,4 @@ Log::info('FullCalendar configured', [
 **Ultima modifica**: Gennaio 2025  
 **Versione FullCalendar**: v6.1.17  
 **Versione Filament**: v3.x  
-**Progetto**: Quaeris Multi-Tenant Healthcare Platform
-
-See canonical documentation: ../../../Themes/docs/shared-components/readme_fullcalendar_scheduler.md
+**Progetto**: SaluteOra Multi-Tenant Healthcare Platform 

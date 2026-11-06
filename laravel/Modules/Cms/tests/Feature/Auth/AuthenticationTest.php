@@ -2,30 +2,33 @@
 
 declare(strict_types=1);
 
-use Modules\Cms\Tests\TestCase;
-use PHPUnit\Framework\Assert;
+namespace Modules\Cms\Tests\Feature\Auth;
 
-uses(TestCase::class);
+use Livewire\Volt\Volt as LivewireVolt;
+
+use function Pest\Laravel\get;
+
 test('login screen can be rendered', function (): void {
     $lang = app()->getLocale();
-    $response = cmsGet('/'.$lang.'/auth/login');
-    $status = (int) $response->getStatusCode();
-
-    if ($status >= 500) {
-        cmsSkipTest("Route /{$lang}/auth/login returned server error ({$status}).");
-    }
-
-    $response->assertStatus(200);
+    get('/'.$lang.'/auth/login')->assertStatus(200);
 });
 
 test('users can authenticate using the login screen', function (): void {
-    cmsSkipTest('Volt auth.login requires full theme + Comment module wiring in this install.');
+    $user = $this->createTestUser();
+
+    $response = LivewireVolt::test('auth.login')
+        ->set('email', $user->email)
+        ->set('password', 'password')
+        ->call('authenticate');
+
+    $response->assertHasNoErrors(); // ->assertRedirect(route('dashboard', absolute: false))
+
+    // expect(Auth::user())->not->toBeNull();
 });
 
 /*
- * test('users cannot authenticate with invalid password', function(): void {
- * $userClass = XotData::make()->getUserClass();
- * $user = $userClass::factory()->createOne();
+ * test('users cannot authenticate with invalid password', function (): void {
+ * $user = $this->createTestUser();
  *
  * $response = LivewireVolt::test('auth.login')
  * ->set('email', $user->email)
@@ -37,13 +40,12 @@ test('users can authenticate using the login screen', function (): void {
  * expect(Auth::guest())->toBeTrue();
  * });
  *
- * test('users can logout', function(): void {
- * $userClass = XotData::make()->getUserClass();
- * $user = $userClass::factory()->createOne();
+ * test('users can logout', function (): void {
+ * $user = $this->createTestUser();
  *
  * $response = actingAs($user)->post('/logout');
  *
- * Assert::assertSame('/', $response->headers->get('Location'));
+ * $response->assertRedirect('/');
  *
  * expect(Auth::guest())->toBeTrue();
  * });

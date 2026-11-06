@@ -1,3 +1,15 @@
+---
+title: "CONFERMA CLASSI BOOTSTRAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "CONFERMA CLASSI BOOTSTRAP"
+issues: []
+discussions: []
+status: draft
+---
+
 # ✅ Conferma: Classi Bootstrap Italia Corrette
 
 ## Architettura CSS Sixteen Theme
@@ -83,7 +95,7 @@ Tailwind @apply è usato SOLO per:
 
 ```bash
 # Verifica che le classi siano presenti
-curl http://fixcity.local/it/tests/homepage | grep -o 'class="[^"]*"' | sort | uniq
+curl http://ptv.local/it/tests/homepage | grep -o 'class="[^"]*"' | sort | uniq
 
 # Output atteso:
 class="card card-teaser"

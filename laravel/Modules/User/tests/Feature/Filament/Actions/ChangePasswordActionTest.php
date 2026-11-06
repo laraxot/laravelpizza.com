@@ -2,97 +2,54 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\Tests\Feature\Filament\Actions;
-
-use Filament\Actions\Action;
 use Modules\User\Filament\Actions\ChangePasswordAction;
-use Modules\User\Tests\TestCase;
-use PHPUnit\Framework\Assert;
+use Tests\TestCase;
 
 use function Safe\file_get_contents;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    /* @var TestCase $this */
-    $this->setupFilamentAdminPanel();
+/**
+ * L'action e' `final` e la sua logica (schema, handler) vive in closure che servono un componente
+ * Livewire montato: la configurazione statica si legge dall'istanza, il resto dal sorgente.
+ */
+function changePasswordActionSource(): string
+{
+    $file = (new ReflectionClass(ChangePasswordAction::class))->getFileName();
 
-    $this->action = ChangePasswordAction::make();
+    return $file === false ? '' : file_get_contents($file);
+}
+
+test('change password action has correct default name', function (): void {
+    expect(ChangePasswordAction::getDefaultName())->toBe('changePassword');
 });
 
-describe('Change Password Action', function (): void {
-    test('change password action has correct default name', function (): void {
-        Assert::assertSame('changePassword', ChangePasswordAction::getDefaultName());
-    });
+test('change password action has the key icon', function (): void {
+    expect(ChangePasswordAction::make()->getIcon())->toBe('heroicon-o-key');
+});
 
-    test('change password action extends correct base class', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-    });
+test('change password action asks for confirmation', function (): void {
+    expect(ChangePasswordAction::make()->isConfirmationRequired())->toBeTrue();
+});
 
-    test('change password action has correct icon', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-        Assert::assertSame('heroicon-o-key', $action->getIcon());
-    });
+test('change password action uses translation keys for tooltip and modal', function (): void {
+    $action = ChangePasswordAction::make();
 
-    test('change password action form has required fields', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-        $reflection = new \ReflectionClass(ChangePasswordAction::class);
-        Assert::assertTrue($reflection->hasMethod('setUp'));
-    });
+    expect($action->getTooltip())->toBe(__('user::user.actions.change_password'))
+        ->and($action->getModalHeading())->toBe(__('user::password.actions.change_password.modal.heading'))
+        ->and($action->getModalDescription())->toBe(__('user::password.actions.change_password.modal.description'));
+});
 
-    test('change password action can be executed', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-        Assert::assertSame('changePassword', $action->getName());
-    });
+test('change password action form uses password data and a matching confirmation field', function (): void {
+    expect(changePasswordActionSource())
+        ->toContain("PasswordData::make()->getPasswordFormComponent('new_password')")
+        ->toContain("TextInput::make('new_password_confirmation')")
+        ->toContain("->same('new_password')");
+});
 
-    test('change password action uses password data component', function (): void {
-        $source = (new \ReflectionClass(ChangePasswordAction::class))->getFileName();
-        $content = is_string($source) ? file_get_contents($source) : '';
-
-        Assert::assertStringContainsString((string) 'PasswordData', (string) $content);
-        Assert::assertStringContainsString((string) 'new_password', (string) $content);
-    });
-
-    test('change password action has confirmation field', function (): void {
-        $source = (new \ReflectionClass(ChangePasswordAction::class))->getFileName();
-        $content = is_string($source) ? file_get_contents($source) : '';
-
-        Assert::assertStringContainsString((string) 'new_password_confirmation', (string) $content);
-    });
-
-    test('change password action shows success notification', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-        Assert::assertSame('changePassword', $action->getName());
-    });
-
-    test('change password action validates password confirmation', function (): void {
-        $source = (new \ReflectionClass(ChangePasswordAction::class))->getFileName();
-        $content = is_string($source) ? file_get_contents($source) : '';
-
-        Assert::assertStringContainsString((string) "->same('new_password')", (string) $content);
-    });
-
-    test('change password action uses translation keys', function (): void {
-        /** @var TestCase $this */
-        $action = $this->requireAction();
-        Assert::assertInstanceOf(Action::class, $action);
-        Assert::assertNotEmpty($action->getLabel());
-    });
-
-    test('change password action has correct setup method', function (): void {
-        $reflection = new \ReflectionClass(ChangePasswordAction::class);
-
-        Assert::assertTrue($reflection->hasMethod('setUp'));
-        Assert::assertTrue($reflection->getMethod('setUp')->isProtected());
-    });
+test('change password action hashes the new password and notifies success', function (): void {
+    expect(changePasswordActionSource())
+        ->toContain("'password' => Hash::make(\$newPassword)")
+        ->toContain('Notification::make()')
+        ->toContain('->success()');
 });

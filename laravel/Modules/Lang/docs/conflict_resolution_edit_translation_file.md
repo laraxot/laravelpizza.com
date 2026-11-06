@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione Conflitto edit_translation_file.php"
+module: "Lang"
+type: concept
+tags: [guida, migrazione, step, by]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "guida migrazione step by step"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Risoluzione Conflitto edit_translation_file.php
 
 ## Problema Identificato

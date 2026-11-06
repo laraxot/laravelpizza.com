@@ -1,3 +1,15 @@
+---
+title: "migration rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migration rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole per le Migrazioni nel Modulo Notify
 
 ## Principi Fondamentali
@@ -182,6 +194,7 @@ return new class () extends XotBaseMigration {
 ## Collegamenti Correlati
 
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/LARAXOT-RULES.md)
+- [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
 - [Standard Migrazioni](../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../docs/best-practices/database.md)
 - [Gestione Errori](./ERROR_HANDLING.md)

@@ -1,3 +1,11 @@
+---
+title: "Comandi Console in Moduli Laraxot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "comandi console in moduli laraxot xot"
+---
 https://fly.io/laravel-bytes/console-applications-with-laravel-zero/
 
 # Comandi Console in Moduli Laraxot

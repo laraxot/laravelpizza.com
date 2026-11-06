@@ -1,7 +1,19 @@
+---
+title: "redundancy report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "redundancy report"
+issues: []
+discussions: []
+status: draft
+---
+
 - Inventario [ridondanze cross-modulo](../docs/redundancy-report.md)
 - Concetti [ridondanze cross-cutting](../Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md)
 
-# Redundancy Report — Modulo Job
+# Redundancy Report: Modulo Job
 
 > Generato: 2026-05-21 | Analisi automatica deep-scan
 
@@ -40,7 +52,7 @@ abstract class BaseMorphPivot extends MorphPivot
 abstract class BaseMorphPivot extends XotBaseMorphPivot {}
 ```
 
-### 3. 🟡 EventServiceProvider — Non usa XotBaseEventServiceProvider
+### 3. 🟡 EventServiceProvider: Non usa XotBaseEventServiceProvider
 
 **File**: `app/Providers/EventServiceProvider.php`
 

@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "context api 131072 overflow"
+issues: []
+discussions: []
 title: "Inter-agent — errore API 131072 vs richiesta ~796k token"
 type: chat-trace
 status: open

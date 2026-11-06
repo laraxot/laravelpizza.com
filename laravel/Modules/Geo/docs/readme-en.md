@@ -1,3 +1,15 @@
+---
+title: "readme en"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme en"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🗺️ Geo — English presentation
 
 [![Domain-Geo](https://img.shields.io/badge/Domain-Maps%20%26%20Geo-2E7D32.svg)](#)
@@ -13,7 +25,6 @@
 > **Every address has coordinates. Every ticket has a map pin.** Multi-provider geocoding and Lit `map-lit` — production-grade.
 
 ---
-
 ## Why it exists
 
 Single owner of geo concerns: Italian ANPR data, geocoders, markers, ticket popups, Leaflet clusters.
@@ -39,7 +50,7 @@ Single owner of geo concerns: Italian ANPR data, geocoders, markers, ticket popu
 
 Love **maps, coordinates, and fast JS**? This is the most visible module on the platform.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

@@ -1,10 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'Contattaci',
+    'title' => __('user::blocks.sections.contact_info.title'),
     'description' => null,
     'phone' => null,
     'email' => null,
@@ -27,7 +26,7 @@ declare(strict_types=1);
                     </svg>
                 </div>
                 <div>
-                    <p class="font-medium mb-1">Telefono</p>
+                    <p class="font-medium mb-1">{{ __('user::blocks.contact_info.phone.label') }}</p>
                     <a href="tel:{{ preg_replace('/\s+/', '', $phone) }}" class="text-primary-600 hover:underline">{{ $phone }}</a>
                 </div>
             </div>
@@ -41,7 +40,7 @@ declare(strict_types=1);
                     </svg>
                 </div>
                 <div>
-                    <p class="font-medium mb-1">Email</p>
+                    <p class="font-medium mb-1">{{ __('user::blocks.contact_info.email.label') }}</p>
                     <a href="mailto:{{ $email }}" class="text-primary-600 hover:underline">{{ $email }}</a>
                 </div>
             </div>
@@ -55,7 +54,7 @@ declare(strict_types=1);
                     </svg>
                 </div>
                 <div>
-                    <p class="font-medium mb-2">Orari</p>
+                    <p class="font-medium mb-2">{{ __('user::blocks.contact_info.hours.label') }}</p>
                     <div class="space-y-1">
                         @foreach($hours as $hour)
                             <div class="flex justify-between">

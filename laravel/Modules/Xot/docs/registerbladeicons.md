@@ -1,3 +1,13 @@
+---
+title: "Documentazione del Metodo registerBladeIcons"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Documentazione del Metodo registerBladeIcons"
+---
 # Documentazione del Metodo registerBladeIcons
 
 ## Panoramica
@@ -105,15 +115,15 @@ Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
 
 ## Nota sulla gestione centralizzata dei path
 
-La stessa filosofia di gestione centralizzata dei path tramite action (es. GetModulePathByGeneratorAction) si applica anche alle traduzioni. Vedi la sezione aggiornata in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md#gestione-dei-path-delle-traduzioni).
+La stessa filosofia di gestione centralizzata dei path tramite action (es. GetModulePathByGeneratorAction) si applica anche alle traduzioni. Vedi la sezione aggiornata in [XotBaseServiceProvider.md](./xotbaseserviceprovider.md#gestione-dei-path-delle-traduzioni).
 
 ## Nota sulla correzione e centralizzazione (2025-05-13)
 
-- Seguire i pattern e le regole documentate in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md) per la registrazione delle icone Blade.
+- Seguire i pattern e le regole documentate in [XotBaseServiceProvider.md](./xotbaseserviceprovider.md) per la registrazione delle icone Blade.
 - Centralizzare la logica di fallback e logging per i path SVG e la configurazione delle icone.
 - Documentare ogni estensione o personalizzazione.
 
-**Collegamento:** Vedi anche [XotBaseServiceProvider.md](./XotBaseServiceProvider.md)
+**Collegamento:** Vedi anche [XotBaseServiceProvider.md](./xotbaseserviceprovider.md)
 
 ## Conclusione
-Il metodo `registerBladeIcons` rappresenta un esempio di come la filosofia zen e i principi di design software possano convergere in una soluzione elegante ed efficace. La sua implementazione bilancia perfettamente la necessità di flessibilità con la robustezza del sistema, creando un ponte tra la modularità del codice e l'espressività dell'interfaccia utente.
+Il metodo `registerBladeIcons` rappresenta un esempio di come la filosofia zen e i principi di design software possano convergere in una soluzione elegante ed efficace. La sua implementazione bilancia perfettamente la necessità di flessibilità con la robustezza del sistema, creando un ponte tra la modularità del codice e l'espressività dell'interfaccia utente. 

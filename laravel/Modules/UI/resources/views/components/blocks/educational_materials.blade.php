@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Materiale Educativo'])
+@props(['title' => __('ui::blocks_educational_materials.list.heading.title')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -11,19 +10,19 @@ declare(strict_types=1);
     <!-- Filtri -->
     <div class="mb-6 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200">
-            Tutti
+            {{ __('ui::blocks_demo_shared.labels.tutti.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Articoli
+            {{ __('ui::blocks_educational_materials.list.articoli.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Video
+            {{ __('ui::blocks_demo_shared.labels.video.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Infografiche
+            {{ __('ui::blocks_educational_materials.list.infografiche.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Checklist
+            {{ __('ui::blocks_educational_materials.list.checklist.label') }}
         </button>
     </div>
     
@@ -67,7 +66,7 @@ declare(strict_types=1);
                         
                         <a href="{{ route('materials.show', $material->id) }}" 
                            class="text-blue-600 hover:text-blue-800">
-                            Leggi di più →
+                            {{ __('ui::blocks_educational_materials.list.leggi_di_piu.label') }}
                         </a>
                     </div>
                 </div>

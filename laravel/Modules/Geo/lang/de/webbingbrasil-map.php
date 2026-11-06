@@ -29,8 +29,17 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
+    'sections' => [
+        'unavailable' => [
+            'title' => 'Karte vorübergehend nicht verfügbar',
+        ],
     ],
-    'actions' => [
+    'unavailable' => [
+        'disabled_notice' => [
+            'description' => 'Das Karten-Widget wurde während der Migration auf Filament v4 vorübergehend deaktiviert.',
+        ],
+        'restore_notice' => [
+            'description' => 'Es wird wiederhergestellt, sobald kompatible Pakete verfügbar sind.',
+        ],
     ],
 ];

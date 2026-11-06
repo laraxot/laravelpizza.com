@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see Jeffgreco13\FilamentBreezy\Pages
  * @see https://www.filamentcomponents.com/blog/how-to-create-a-custom-profile-page-with-filamentphp
@@ -136,7 +135,7 @@ class MyProfilePage extends XotBasePage implements HasSchemas
 
     public function getSubheading(): ?string
     {
-        return __('user::profile.subheading') ?? null;
+        return __('user::profile.subheading');
     }
 
     // public static function shouldRegisterNavigation(): bool
@@ -153,7 +152,6 @@ class MyProfilePage extends XotBasePage implements HasSchemas
     // {
     //     return filament('filament-breezy')->getRegisteredMyProfileComponents();
     // }
-    /** @return array<int, TextInput> */
     public function getFormSchema(): array
     {
         return [
@@ -211,7 +209,6 @@ class MyProfilePage extends XotBasePage implements HasSchemas
         $this->sendSuccessNotification();
     }
 
-    /** @return array<int, string> */
     protected function getForms(): array
     {
         return [
@@ -229,7 +226,6 @@ class MyProfilePage extends XotBasePage implements HasSchemas
         $this->editPasswordForm->fill();
     }
 
-    /** @return array<int, Action> */
     protected function getFormActions(): array
     {
         return [
@@ -251,7 +247,9 @@ class MyProfilePage extends XotBasePage implements HasSchemas
      * }
      */
 
-    /** @return array<int, Action> */
+    /**
+     * @return array<Action>
+     */
     protected function getUpdateProfileFormActions(): array
     {
         return [
@@ -259,7 +257,9 @@ class MyProfilePage extends XotBasePage implements HasSchemas
         ];
     }
 
-    /** @return array<int, Action> */
+    /**
+     * @return array<Action>
+     */
     protected function getUpdatePasswordFormActions(): array
     {
         return [
@@ -270,7 +270,7 @@ class MyProfilePage extends XotBasePage implements HasSchemas
     // ...
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     protected function handleRecordUpdate(Model $record, array $data): Model
     {

@@ -1,3 +1,14 @@
+---
+title: "1 1 map picker field"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "1 1 map picker field"
+issues: []
+discussions: []
+---
+
 # Story 1-1: MapPicker Field per Filament
 
 **Status**: `done`
@@ -6,6 +17,14 @@
 
 ---
 
+title: "1 1 map picker field"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "1 1 map picker field"
+issues: []
+discussions: []
 ## Descrizione
 
 Campo Filament v5 personalizzato `MapPicker` che gestisce una mappa interattiva basata su Leaflet, incapsulata in un Web Component Lit. Integrato con Livewire 3 e Alpine.js. Lavora con due colonne reali del database `latitude` e `longitude` senza JSON.

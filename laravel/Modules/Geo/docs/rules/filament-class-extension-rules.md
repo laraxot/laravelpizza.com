@@ -1,9 +1,20 @@
+---
+title: "filament class extension rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament class extension rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Class Extension Rules - Laraxot Framework
 
 **Principio Fondamentale**: Mai estendere classi Filament direttamente - sempre usare classi XotBase
 
 ---
-
 ## 🚨 Regola Assoluta
 
 **NON estendere MAI classi Filament direttamente**
@@ -393,14 +404,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Pages;
 
-use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
-class DashboardPage extends XotBasePage
+class Dashboard extends XotBaseDashboard
 {
     // $navigationIcon NON necessario
     // $title NON necessario
     // $navigationLabel NON necessario
-    // Gestiti automaticamente da XotBasePage
+    // Gestiti dalla base XotBaseDashboard
 }
 ```
 
@@ -569,8 +580,8 @@ Prima di creare una nuova classe Filament:
 
 ## 🔗 Collegamenti Utili
 
-- [XotBaseResource Documentation](../../laravel/Modules/Xot/docs/consolidated/filament/resources/xot-base-resource.md)
-- [Base Classes Documentation](../../laravel/Modules/Xot/docs/consolidated/base-classes.md)
+- [XotBaseResource Documentation](../../../Xot/docs/consolidated/filament/resources/xot-base-resource.md)
+- [Base Classes Documentation](../../../Xot/docs/consolidated/base-classes.md)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)
 - [Filament v4 Documentation](https://filamentphp.com/docs/4.x)
 

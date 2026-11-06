@@ -1,3 +1,14 @@
+---
+title: "cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cleanup"
+issues: []
+discussions: []
+---
+
 <purpose>
 
 Archive accumulated phase directories from completed milestones into `.planning/milestones/v{X.Y}-phases/`. Identifies which phases belong to each completed milestone, shows a dry-run summary, and moves directories on confirmation.

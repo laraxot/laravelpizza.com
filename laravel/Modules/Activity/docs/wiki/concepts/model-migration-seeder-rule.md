@@ -3,9 +3,15 @@ name: model-migration-seeder-rule
 description: Implementation of 1 model = 1 migration + 1 seeder rule for Activity module
 metadata:
   type: reference
+title: "Regola: 1 Modello = 1 Migration + 1 Seeder: Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, wiki]
+qmd: "regola: 1 modello = 1 migration + 1 seeder   modulo activity activity"
 ---
 
-# Regola: 1 Modello = 1 Migration + 1 Seeder — Modulo Activity
+# Regola: 1 Modello = 1 Migration + 1 Seeder: Modulo Activity
 
 ## Stato Attuale (2026-06-30)
 

@@ -1,3 +1,15 @@
+---
+title: "level10 linee guida"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "level10 linee guida"
+issues: []
+discussions: []
+status: draft
+---
+
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 
 Questo documento contiene le linee guida generali e le regole comuni per risolvere gli errori PHPStan di livello 10 in tutti i moduli del progetto.
@@ -65,7 +77,7 @@ protected function getInfolistSchema(): array
 }
 ```
 
-Per linee guida più dettagliate sul metodo `getInfolistSchema`, consultare il documento [INFOLIST_SCHEMA_GUIDELINES.md](../filament/INFOLIST_SCHEMA_GUIDELINES.md).
+Per linee guida più dettagliate sul metodo `getInfolistSchema`, consultare il documento [INFOLIST_SCHEMA_GUIDELINES.md](../filament/infolist_schema_guidelines.md).
 
 ## Gestione degli Errori Comuni
 

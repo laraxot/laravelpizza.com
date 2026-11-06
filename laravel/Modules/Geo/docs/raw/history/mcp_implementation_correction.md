@@ -1,3 +1,14 @@
+---
+title: "mcp implementation correction"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp implementation correction"
+issues: []
+discussions: []
+---
+
 # MCP Implementation Correction
 
 ## Understanding My Error

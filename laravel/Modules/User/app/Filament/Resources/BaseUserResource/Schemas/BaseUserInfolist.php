@@ -13,7 +13,7 @@ class BaseUserInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, TextEntry|IconEntry>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

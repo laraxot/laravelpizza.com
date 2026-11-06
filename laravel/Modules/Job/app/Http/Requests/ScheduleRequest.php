@@ -33,7 +33,10 @@ class ScheduleRequest extends FormRequest
         ];
     }
 
-    public function attributes()
+    /**
+     * @return array<string, string>
+     */
+    public function attributes(): array
     {
         return [
             'command' => mb_strtolower(trans('schedule::schedule.fields.command')),
@@ -43,7 +46,10 @@ class ScheduleRequest extends FormRequest
         ];
     }
 
-    public function messages()
+    /**
+     * @return array<string, string>
+     */
+    public function messages(): array
     {
         return [
             'groups.regex' => trans('schedule::schedule.validation.regex'),

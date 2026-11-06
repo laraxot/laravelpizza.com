@@ -1,3 +1,8 @@
+<?php
+
+declare(strict_types=1);
+
+?>
 {{--
     SocialLoginWidget: pulsanti OAuth riutilizzabili (Google, Microsoft, GitHub).
     CRITICO: Livewire richiede SEMPRE un root tag HTML con contenuto.
@@ -20,41 +25,41 @@
             </div>
             <div class="relative flex justify-center text-sm">
                 <span class="bg-white px-4 text-slate-400 italic">
-                    {{ __('user::auth.login.or_continue_with') }}
+                    {{ __('user::auth.login.or_continue_with.text') }}
                 </span>
             </div>
         </div>
 
         <div class="social-login-buttons grid grid-cols-1 sm:grid-cols-3 gap-4">
             @if ($hasGoogle)
-                <a href="{{ route('socialite.oauth.fo.redirect', ['provider' => 'google']) }}"
+                <a href="{{ $this->getRedirectUrl('google') }}"
                     class="flex items-center justify-center gap-3 py-2.5 px-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 hover:shadow-sm transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-[#1E5A96]/30"
                 >
                     <x-filament::icon icon="ui-google" class="w-5 h-5 flex-shrink-0" />
                     <span class="font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
-                        {{ __('user::auth.login.google') }}
+                        {{ __('user::auth.login.google.text') }}
                     </span>
                 </a>
             @endif
 
             @if ($hasMicrosoft)
-                <a href="{{ route('socialite.oauth.fo.redirect', ['provider' => 'microsoft']) }}"
+                <a href="{{ $this->getRedirectUrl('microsoft') }}"
                     class="flex items-center justify-center gap-3 py-2.5 px-4 bg-[#00A4EF] border border-[#00A4EF] rounded-xl hover:bg-[#0088cc] hover:border-[#0088cc] hover:shadow-sm transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-[#00A4EF]/30"
                 >
                     <x-filament::icon icon="ui-brands.microsoft" class="w-5 h-5 flex-shrink-0 text-white" />
                     <span class="font-medium text-white transition-colors">
-                        {{ __('user::auth.login.microsoft') }}
+                        {{ __('user::auth.login.microsoft.text') }}
                     </span>
                 </a>
             @endif
 
             @if ($hasGithub)
-                <a href="{{ route('socialite.oauth.fo.redirect', ['provider' => 'github']) }}"
+                <a href="{{ $this->getRedirectUrl('github') }}"
                     class="flex items-center justify-center gap-3 py-2.5 px-4 bg-[#24292F] border border-[#24292F] rounded-xl hover:bg-[#1c2126] hover:shadow-sm transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-gray-500/20"
                 >
                     <x-filament::icon icon="ui-brands.github" class="w-5 h-5 flex-shrink-0 text-white" />
                     <span class="font-medium text-white transition-colors">
-                        {{ __('user::auth.login.github') }}
+                        {{ __('user::auth.login.github.text') }}
                     </span>
                 </a>
             @endif

@@ -10,7 +10,6 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class QuickLinksBlock extends XotBaseBlock
 {
-    #[\Override]
     public static function getBlockSchema(): array
     {
         return [
@@ -33,6 +32,6 @@ final class QuickLinksBlock extends XotBaseBlock
 
     public static function getBlockLabel(): string
     {
-        return \trans_string('cms::blocks.quick_links.label');
+        return \trans_string('cms::blocks.quick_links.label') ?: 'Quick Links Block';
     }
 }

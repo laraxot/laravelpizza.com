@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Traits;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 
-/** @phpstan-ignore trait.unused */
+/**
+ * @phpstan-require-extends Model
+ */
 trait HasEvents
 {
     /**

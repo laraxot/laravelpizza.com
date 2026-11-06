@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
+module: "Media"
+type: concept
+tags: [conflict, resolution, convertvideobymediaconvertaction]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution convertvideobymediaconvertaction"
+related:
+  - "./webm.md"
+status: draft
+---
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -69,7 +83,7 @@ FFMpeg::fromDisk($data->disk)
 **Anti-pattern**: Uso di annotazioni generiche quando sono disponibili annotazioni specifiche
 
 ## Collegamenti
-- [Media Module Documentation](module_media.md)
+- [Media Module Documentation](module-media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)

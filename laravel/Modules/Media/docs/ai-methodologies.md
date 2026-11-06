@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "AI Methodologies Handbook"
+module: "Media"
+type: concept
+tags: [ai, methodologies]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ai methodologies"
+related:
+  - "./webm.md"
+status: draft
+---
 # AI Methodologies Handbook
 
 This file is a DRY local index for AI workflows in this module or theme.

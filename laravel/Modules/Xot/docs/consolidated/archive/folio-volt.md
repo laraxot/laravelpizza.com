@@ -1,3 +1,11 @@
+---
+title: "Ottimizzazione Re-render Folio + Volt"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "ottimizzazione re-render folio + volt xot"
+---
 # Ottimizzazione Re-render Folio + Volt
 
 ## Stato

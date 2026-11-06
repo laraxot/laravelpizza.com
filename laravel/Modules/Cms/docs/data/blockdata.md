@@ -1,3 +1,15 @@
+---
+title: "blockdata"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "blockdata"
+issues: []
+discussions: []
+status: draft
+---
+
 # BlockData - Cuore del Sistema di Gestione Blocchi
 
 ## Introduzione

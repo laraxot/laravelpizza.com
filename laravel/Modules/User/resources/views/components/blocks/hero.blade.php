@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title', 'subtitle', 'image', 'cta-text', 'cta-link', 'background-color' => 'bg-gradient-to-br from-primary/5 via-base-100 to-primary/10', 'text-color' => 'text-base-content', 'cta-color' => 'btn-primary'])
+@props(['title', 'subtitle', 'image', 'ctaText', 'ctaLink', 'backgroundColor' => 'bg-gradient-to-br from-primary/5 via-base-100 to-primary/10', 'textColor' => 'text-base-content', 'ctaColor' => 'btn-primary'])
 
-<div class="relative overflow-hidden {{ $background-color }}">
+<div class="relative overflow-hidden {{ $backgroundColor }}">
     @if(isset($image))
         <div class="absolute inset-0 z-0">
             <img src="{{ $image }}" alt="" class="w-full h-full object-cover opacity-10">
@@ -23,27 +22,27 @@ declare(strict_types=1);
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
                     </svg>
-                    <span class="text-sm font-semibold tracking-wide">Innovazione nella </span>
+                    <span class="text-sm font-semibold tracking-wide">{{ __('user::blocks.hero.badge.label') }} </span>
                 </div>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight {{ $text-color }} font-inter leading-[1.1] mb-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight {{ $textColor }} font-inter leading-[1.1] mb-8">
                     {!! nl2br(e($title)) !!}
                 </h1>
 
-                <p class="text-xl {{ $text-color }} opacity-90 font-inter max-w-2xl lg:max-w-none mb-12">
+                <p class="text-xl {{ $textColor }} opacity-90 font-inter max-w-2xl lg:max-w-none mb-12">
                     {{ $subtitle }}
                 </p>
 
-                @if(isset($cta-text) && isset($cta-link))
+                @if(isset($ctaText) && isset($ctaLink))
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="{{ $cta-link }}" class="btn {{ $cta-color }} btn-lg gap-3 min-w-[200px]">
-                            {{ $cta-text }}
+                        <a href="{{ $ctaLink }}" class="btn {{ $ctaColor }} btn-lg gap-3 min-w-[200px]">
+                            {{ $ctaText }}
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </a>
                         <a href="#come-funziona" class="btn btn-outline gap-3 btn-lg">
-                            Scopri di più
+                            {{ __('user::layout.common.learn_more.label') }}
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
@@ -64,8 +63,8 @@ declare(strict_types=1);
                             </svg>
                         </div>
                         <div>
-                            <p class="font-semibold">Assistenza Garantita</p>
-                            <p class="text-sm opacity-70">Supporto Specialistico</p>
+                            <p class="font-semibold">{{ __('user::blocks.hero.guarantee.title') }}</p>
+                            <p class="text-sm opacity-70">{{ __('user::blocks.hero.guarantee.description') }}</p>
                         </div>
                     </div>
 
@@ -77,8 +76,8 @@ declare(strict_types=1);
                                 </svg>
                             </div>
                             <div>
-                                <p class="font-semibold">Community</p>
-                                <p class="text-sm opacity-70">Sempre al tuo fianco</p>
+                                <p class="font-semibold">{{ __('user::blocks.hero.community.title') }}</p>
+                                <p class="text-sm opacity-70">{{ __('user::blocks.hero.community.description') }}</p>
                             </div>
                         </div>
                     </div>
@@ -90,19 +89,19 @@ declare(strict_types=1);
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-t border-base-200">
             <div class="text-center">
                 <p class="text-3xl font-bold text-primary">500+</p>
-                <p class="text-sm opacity-70">Pazienti Assistite</p>
+                <p class="text-sm opacity-70">{{ __('user::blocks.hero.stat_patients.label') }}</p>
             </div>
             <div class="text-center">
                 <p class="text-3xl font-bold text-primary">15+</p>
-                <p class="text-sm opacity-70">Specialisti</p>
+                <p class="text-sm opacity-70">{{ __('user::blocks.hero.stat_specialists.label') }}</p>
             </div>
             <div class="text-center">
                 <p class="text-3xl font-bold text-primary">98%</p>
-                <p class="text-sm opacity-70">Soddisfazione</p>
+                <p class="text-sm opacity-70">{{ __('user::blocks.hero.stat_satisfaction.label') }}</p>
             </div>
             <div class="text-center">
                 <p class="text-3xl font-bold text-primary">24/7</p>
-                <p class="text-sm opacity-70">Supporto Online</p>
+                <p class="text-sm opacity-70">{{ __('user::blocks.hero.stat_support.label') }}</p>
             </div>
         </div>
     </div>

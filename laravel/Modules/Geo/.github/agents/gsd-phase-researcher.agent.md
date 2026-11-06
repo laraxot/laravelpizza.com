@@ -1,4 +1,12 @@
 ---
+title: "gsd phase researcher.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd phase researcher.agent"
+issues: []
+discussions: []
 name: gsd-phase-researcher
 description: Researches how to implement a phase before planning. Produces RESEARCH.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.
 tools: ['read', 'edit', 'execute', 'search', 'search', 'websearch', 'webfetch', 'mcp__context7__*']

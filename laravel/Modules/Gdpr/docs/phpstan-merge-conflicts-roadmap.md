@@ -1,3 +1,15 @@
+---
+title: "phpstan merge conflicts roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan merge conflicts roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # Roadmap: Risoluzione Merge Conflicts e PHPStan Errors - Modulo GDPR
 
 **Status**: 🔴 Bloccante - Merge Conflicts da Risolvere
@@ -5,5 +17,4 @@
 **Metodologia**: Super Mucca - La Litigata Interna
 
 ---
-
 ## 🔴 Problema Critico Identificato

@@ -64,6 +64,23 @@ abstract class XotBaseWizardWidget extends XotBaseSchemaWidget
     protected int|string|array $columnSpan = 'full';
 
     /**
+     * Redeclared on purpose, but NOT a fix: `callSchemaComponentMethod` is
+     * already public in Filament's `InteractsWithSchemas`
+     * (vendor/filament/schemas/src/Concerns/InteractsWithSchemas.php) and
+     * Livewire exposes it without this override. The `MethodNotFoundException`
+     * of 2026-10-13 came from the CMS page's Volt component taking the
+     * `wire:id` of the wizard (Themes/Sixteen/docs/decision-log/
+     * D15-volt-fragment-explicit-root.md). `CreateTicketWizardWidgetViewTest`
+     * pins the declaring class, so the override stays until its owner decides.
+     *
+     * @param  array<string, mixed>  $arguments
+     */
+    public function callSchemaComponentMethod(string $componentKey, string $method, array $arguments = []): mixed
+    {
+        return parent::callSchemaComponentMethod($componentKey, $method, $arguments);
+    }
+
+    /**
      * @return array<int, Wizard>
      */
     public function getFormSchema(): array

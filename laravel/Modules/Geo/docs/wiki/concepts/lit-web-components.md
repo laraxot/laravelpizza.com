@@ -1,3 +1,15 @@
+---
+title: "lit web components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lit web components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Lit Web Components in Geo Module
 
 **Data creazione:** 2026-04-15  
@@ -5,7 +17,6 @@
 **Argomento:** Architettura componenti Lit, integrazione con Vite, bundle strategy
 
 ---
-
 ## Cosa è Lit?
 
 **Lit** (https://lit.dev) è una libreria leggera per creare Web Components riusabili basati su standard web. Specificatamente:

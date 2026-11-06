@@ -1,3 +1,14 @@
+---
+title: "PITFALLS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PITFALLS"
+issues: []
+discussions: []
+---
+
 # Pitfalls Research Template
 
 Template for `.planning/research/PITFALLS.md` — common mistakes to avoid in the project domain.
@@ -32,6 +43,14 @@ Template for `.planning/research/PITFALLS.md` — common mistakes to avoid in th
 
 ---
 
+title: "PITFALLS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PITFALLS"
+issues: []
+discussions: []
 ### Pitfall 2: [Name]
 
 **What goes wrong:**

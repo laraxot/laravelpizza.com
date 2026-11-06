@@ -1,3 +1,14 @@
+---
+title: "segnalazione dettaglio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "segnalazione dettaglio"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Segnalazione Dettaglio (segnalazione-dettaglio.html)
 
 ## Obiettivo

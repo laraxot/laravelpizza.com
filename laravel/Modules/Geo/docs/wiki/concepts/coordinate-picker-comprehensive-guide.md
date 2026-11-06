@@ -1,7 +1,15 @@
 ---
+title: "coordinate picker comprehensive guide"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker comprehensive guide"
+issues: []
+discussions: []
 name: Coordinate Picker Comprehensive Guide
 description: Complete guide for Geo module coordinate pickers with best practices, bad practices, and false friends.
 type: concept
+status: draft
 ---
 
 # Coordinate Picker Comprehensive Guide

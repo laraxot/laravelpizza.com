@@ -1,3 +1,13 @@
+---
+title: "Middleware"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Middleware"
+---
 # Middleware
 
 ## Configurazione Base
@@ -192,7 +202,7 @@ try {
         'middleware' => get_class($this),
         'error' => $e->getMessage(),
     ]);
-
+    
     return response()->json([
         'message' => 'Errore interno del server',
     ], 500);
@@ -276,4 +286,4 @@ class Cors
         return $response;
     }
 }
-```
+``` 

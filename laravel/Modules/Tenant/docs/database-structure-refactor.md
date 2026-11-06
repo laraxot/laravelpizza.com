@@ -1,5 +1,9 @@
 ---
-title: "Database Structure Refactor — Lowercase Folder Compliance"
+created: 2026-09-26
+qmd: "database structure refactor"
+issues: []
+discussions: []
+title: "Database Structure Refactor: Lowercase Folder Compliance"
 type: refactor-log
 date: 2026-07-01
 updated: 2026-07-01
@@ -7,7 +11,7 @@ status: completed
 tags: [database, folder-structure, naming-convention, cleanup]
 ---
 
-# Database Structure Refactor — Tenant Module
+# Database Structure Refactor: Tenant Module
 
 **Date**: 2026-07-01  
 **Status**: ✅ COMPLETED
@@ -26,9 +30,9 @@ tags: [database, folder-structure, naming-convention, cleanup]
 
 ### Canonical Folders (Kept)
 
-✅ **database/factories/** — Lowercase, contains 9 files (authoritative)  
-✅ **database/seeders/** — Lowercase, contains 8 files (authoritative)  
-✅ **database/migrations/** — Lowercase (unchanged)
+✅ **database/factories/**: Lowercase, contains 9 files (authoritative)  
+✅ **database/seeders/**: Lowercase, contains 8 files (authoritative)  
+✅ **database/migrations/**: Lowercase (unchanged)
 
 ---
 

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "MediaRelationManager"
+module: "Media"
+type: concept
+tags: [media, relation, manager]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media relation manager"
+related:
+  - "./webm.md"
+status: draft
+---
 # MediaRelationManager
 
 ## Descrizione
@@ -22,8 +36,8 @@ Le azioni sono implementate seguendo le convenzioni documentate in `filament_tab
 - Documentazione PHPDoc completa
 
 ## Collegamenti
-- [Convenzioni Table Actions](../filament_table_actions.md)
-- [Documentazione Media Module](../module_media.md)
+- [Convenzioni Table Actions](../filament-table-actions.md)
+- [Documentazione Media Module](../module-media.md)
 
 ## Note di Manutenzione
 - Mantenere la coerenza con le convenzioni di naming

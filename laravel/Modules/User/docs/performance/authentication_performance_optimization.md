@@ -1,3 +1,11 @@
+---
+title: "Authentication Performance Optimization - User Module"
+type: note
+status: draft
+updated: 2026-10-26
+tags: [docs, user, performance]
+qmd: "authentication performance optimization - user module user"
+---
 # Authentication Performance Optimization - User Module
 
 ## 🚨 Critical Issues Identified
@@ -155,7 +163,8 @@ CREATE INDEX idx_sessions_last_activity ON sessions(last_activity);
 
 ## 📚 Related Documentation
 
-- [authentication.md](./authentication.md)
+- [authentication.md](../authentication.md)
+- [authentication.md](../authentication.md)
 - [session-management.md](./session-management.md)
 - [roles-permissions.md](./roles-permissions.md)
 - [optimization-analysis.md](./optimization-analysis.md)
@@ -217,3 +226,12 @@ CREATE INDEX idx_sessions_last_activity ON sessions(last_activity);
 - Validate security compliance
 
 This document provides the roadmap for resolving the performance issues in the User module while maintaining security and functionality.
+
+
+---
+
+## Contenuto assorbito da `AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md`
+
+# Documento unificato
+
+Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [authentication_performance_optimization.md](./authentication_performance_optimization.md).

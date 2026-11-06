@@ -1,5 +1,11 @@
 ---
 description: Regole di posizionamento dei test per il core Xot
+title: "Test Placement Guidelines (Xot)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "test placement guidelines (xot) xot"
 ---
 
 # Test Placement Guidelines (Xot)

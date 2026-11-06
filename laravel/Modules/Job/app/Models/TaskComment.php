@@ -7,6 +7,7 @@ namespace Modules\Job\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Job\Database\Factories\TaskCommentFactory;
+use Modules\Job\Models\Traits\TaskCommentRelations;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -33,6 +34,8 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class TaskComment extends BaseModel
 {
+    use TaskCommentRelations;
+
     protected $table = 'task_comments';
 
     protected $fillable = [
@@ -44,18 +47,10 @@ class TaskComment extends BaseModel
     /**
      * @return BelongsTo<Task, $this>
      */
-    public function task(): BelongsTo
-    {
-        return $this->belongsTo(Task::class);
-    }
 
     /**
      * @return BelongsTo<User, $this>
      */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
 
     /**
      * Get the attributes that should be cast.

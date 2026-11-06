@@ -1,8 +1,20 @@
+---
+title: "testing renamed"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing renamed"
+issues: []
+discussions: []
+status: draft
+---
+
 # Cms Module Testing Guide
 
 ## Overview
 
-This module follows the project's [testing guidelines](../../docs/testing.md) and uses Pest PHP as the testing framework.
+This module follows the project's [testing guidelines](testing.md) and uses Pest PHP as the testing framework.
 
 ## Test Structure
 

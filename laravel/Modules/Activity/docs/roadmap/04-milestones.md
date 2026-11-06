@@ -1,3 +1,12 @@
+---
+title: "Milestones - Activity"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, roadmap]
+qmd: "milestones - activity activity"
+status: superseded
+superseded_by: milestones.md
+---
 # Milestones - Activity
 
 ## M1 Documentation Baseline

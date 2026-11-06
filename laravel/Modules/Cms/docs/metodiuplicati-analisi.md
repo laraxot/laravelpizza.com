@@ -1,7 +1,16 @@
 ---
+title: "metodiuplicati analisi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "metodiuplicati analisi"
+issues: []
+discussions: []
 module: theme
 topic: metodiuplicati-analisi
 canonical: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-Modules.md
+status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-Modules.md

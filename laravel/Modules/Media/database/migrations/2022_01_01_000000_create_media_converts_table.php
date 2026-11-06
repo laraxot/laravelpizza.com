@@ -1,11 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/spatie/laravel-medialibrary/blob/main/database/migrations/create_media_table.php.stub
  */
-
-declare(strict_types=1);
-
 use Illuminate\Database\Schema\Blueprint;
 // ----- models -----
 use Modules\Media\Models\Media;

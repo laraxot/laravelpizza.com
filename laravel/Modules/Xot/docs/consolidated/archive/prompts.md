@@ -1,3 +1,11 @@
+---
+title: "Struttura dei Prompt"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "struttura dei prompt xot"
+---
 # Struttura dei Prompt
 
 I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire queste regole:

@@ -1,3 +1,14 @@
+---
+title: "claude 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude 1"
+issues: []
+discussions: []
+---
+
 # Claude — On-Demand Stub
 
 **Risposte:** sempre **italiano**, **sintetico**, **conciso** → [response-style](docs/wiki/memories/response-style-sintetico-conciso-italiano.md)

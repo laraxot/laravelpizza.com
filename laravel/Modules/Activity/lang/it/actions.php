@@ -22,11 +22,11 @@ return [
     'label' => 'Actions',
     'plural_label' => 'Actions (Plurale)',
     'navigation' => [
-        'name' => 'Actions',
-        'plural' => 'Actions',
+        'name' => 'Azioni',
+        'plural' => 'Azioni',
         'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
+            'name' => 'Generale',
+            'description' => 'Impostazioni generali',
         ],
         'label' => 'Actions',
         'sort' => 1,

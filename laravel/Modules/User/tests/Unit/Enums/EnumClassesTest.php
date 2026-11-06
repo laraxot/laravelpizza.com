@@ -1,21 +1,19 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Enums\SocialProviderEnum;
 use Modules\User\Enums\SystemRole;
 use Modules\User\Enums\UserType;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('UserType enum has all cases', function (): void {
     $cases = UserType::cases();
 
     Assert::assertCount(5, $cases);
-    foreach ($cases as $case) {
-        Assert::assertInstanceOf(UserType::class, $case);
-    }
+    Assert::assertNotEmpty($cases);
 });
 
 test('UserType enum cases have correct values', function (): void {
@@ -56,13 +54,9 @@ test('UserType getIcon method returns translation keys', function (): void {
 });
 
 test('SystemRole enum can be instantiated', function (): void {
-    foreach (SystemRole::cases() as $case) {
-        Assert::assertInstanceOf(SystemRole::class, $case);
-    }
+    Assert::assertSame('super_admin', SystemRole::SuperAdmin->value);
 });
 
 test('SocialProviderEnum can be instantiated', function (): void {
-    foreach (SocialProviderEnum::cases() as $case) {
-        Assert::assertInstanceOf(SocialProviderEnum::class, $case);
-    }
+    Assert::assertCount(2, SocialProviderEnum::cases());
 });

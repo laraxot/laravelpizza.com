@@ -1,6 +1,13 @@
-# _todo
+---
+title: "todo"
+type: alias
+status: superseded
+canonical: "-integration/-todo.md"
+qmd: "_todo alias superseded"
+---
 
-<!-- Contenuto migrato da _docs/_todo.txt -->
+# todo
 
-http://laradevsbd.com/story/laravel-notifications-with-database
+Documento identico al canonico: [-todo.md](../-integration/-todo.md).
 
+Canonico: `laravel/Modules/Notify/docs/-integration/-todo.md`. Qui non ci sono istruzioni: seguire il file collegato.

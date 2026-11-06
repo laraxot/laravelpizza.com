@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "merge collision notify lessons"
+issues: []
+discussions: []
 title: lezioni merge collision Notify
 type: memory
 module: Notify
@@ -6,9 +11,10 @@ updated: 2026-05-26
 related:
   - ../../merge-conflicts-list.md
   - ../../../../../../docs/wiki/how-to/git-merge-marker-sweep.md
+status: draft
 ---
 
-# Lezioni merge — modulo Notify
+# Lezioni merge: modulo Notify
 
 ## SVG (`resources/svg/`)
 
@@ -19,7 +25,7 @@ related:
 
 ## Filament `*Table.php`
 
-**Canon (sempre):** `public function getTableColumns(): array` — filosofia Filament + `XotBaseResourceTable`.
+**Canon (sempre):** `public function getTableColumns(): array`: filosofia Filament + `XotBaseResourceTable`.
 
 | Lato merge | Firma | Azione |
 |------------|-------|--------|
@@ -30,7 +36,7 @@ Corpo colonne (chiavi stringa): di solito da HEAD.
 
 ## File da eliminare, non risolvere
 
-- `*.php.up` — backup merge; rimuovere se compaiono marker.
+- `*.php.up`: backup merge; rimuovere se compaiono marker.
 
 ## Post-fix obbligatorio
 

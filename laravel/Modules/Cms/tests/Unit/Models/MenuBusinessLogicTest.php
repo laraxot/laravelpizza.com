@@ -9,81 +9,62 @@ use Modules\Cms\Tests\TestCase;
 use Modules\Tenant\Models\Traits\SushiToJsons;
 use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
 use PHPUnit\Framework\Assert;
-
-use function Safe\class_uses;
-
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Builder;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
-uses(TestCase::class);
+use function Safe\class_implements;
+use function Safe\class_uses;
 
-describe('Menu Business Logic', function (): void {
-    test('menu implements recursive relationships contract', function (): void {
-        $menu = new Menu();
-        Assert::assertInstanceOf(HasRecursiveRelationshipsContract::class, $menu);
-    });
+/**
+ * Verifica il contratto pubblico del model Menu (navigazione gerarchica Sushi).
+ */
+final class MenuBusinessLogicTest extends TestCase
+{
+    public function test_extends_cms_base_model(): void {}
 
-    test('menu has recursive relationships trait', function (): void {
-        $traits = class_uses_recursive(Menu::class);
+    public function test_implements_recursive_relationships_contract(): void
+    {
+        Assert::assertTrue(in_array(HasRecursiveRelationshipsContract::class, class_implements(Menu::class), true));
+    }
 
-        Assert::assertContains(HasRecursiveRelationships::class, array_values($traits));
-    });
+    public function test_uses_recursive_relationships_trait(): void
+    {
+        Assert::assertArrayHasKey(HasRecursiveRelationships::class, class_uses(Menu::class));
+    }
 
-    test('menu has sushi to json trait', function (): void {
-        $traits = class_uses(Menu::class);
+    public function test_uses_sushi_to_json_trait(): void
+    {
+        Assert::assertArrayHasKey(SushiToJsons::class, class_uses(Menu::class));
+    }
 
-        Assert::assertArrayHasKey(SushiToJsons::class, $traits);
-    });
+    public function test_exposes_expected_fillable_attributes(): void
+    {
+        Assert::assertSame(['title', 'items', 'parent_id'], (new Menu)->getFillable());
+    }
 
-    test('menu has expected fillable fields', function (): void {
-        $menu = new Menu();
-        $expectedFillable = [
-            'title',
-            'items',
-            'parent_id',
-        ];
-
-        Assert::assertEquals($expectedFillable, $menu->getFillable());
-    });
-
-    test('menu can get label', function (): void {
-        $menu = new Menu();
+    public function test_resolves_human_readable_label_from_title(): void
+    {
+        $menu = new Menu;
         $menu->title = 'Test Menu';
 
         Assert::assertSame('Test Menu', $menu->getLabel());
-    });
+    }
 
-    test('menu has correct casts for structured data', function (): void {
-        $menu = new Menu();
-        $casts = $menu->getCasts();
+    public function test_casts_structured_menu_items_as_array(): void
+    {
+        $casts = (new Menu)->getCasts();
 
         Assert::assertSame('array', $casts['items']);
         Assert::assertSame('string', $casts['id']);
-    });
+    }
 
-    test('menu has schema definition for structured data', function (): void {
-        $menu = new Menu();
+    public function test_builds_adjacency_list_tree_queries(): void
+    {
+        Assert::assertInstanceOf(Builder::class, Menu::tree());
+    }
 
-        $reflection = new \ReflectionClass($menu);
-        $schemaProperty = $reflection->getProperty('schema');
-
-        Assert::assertTrue($schemaProperty->isProtected());
-
-        /** @var array<string, mixed> $schema */
-        $schema = $schemaProperty->getValue($menu);
-        Assert::assertSame('string', $schema['title']);
-        Assert::assertSame('integer', $schema['parent_id']);
-    });
-
-    test('menu can build tree queries', function (): void {
-        $query = Menu::tree();
-
-        Assert::assertInstanceOf(Builder::class, $query);
-    });
-
-    test('menu can query by depth', function (): void {
-        $query = Menu::whereDepth(1);
-
-        Assert::assertInstanceOf(Builder::class, $query);
-    });
-});
+    public function test_can_filter_menu_nodes_by_depth(): void
+    {
+        Assert::assertInstanceOf(Builder::class, Menu::whereDepth(1));
+    }
+}

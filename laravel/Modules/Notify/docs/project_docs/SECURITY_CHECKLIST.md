@@ -1,9 +1,20 @@
-# 🔒 FixCity Security Checklist
+---
+title: "SECURITY CHECKLIST"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SECURITY CHECKLIST"
+issues: []
+discussions: []
+status: draft
+---
+
+# 🔒 Notify Security Checklist
 
 **Status**: Production Ready
 
 ---
-
 ## 🎯 Security Compliance Overview
 
 - ✅ OWASP Top 10 2023 Compliance
@@ -396,9 +407,9 @@ Overall Security Score: 92/100
 
 ## 📞 Security Contacts
 
-**Security Team Lead**: security@fixcity.it  
+**Security Team Lead**: security@laraxot.it  
 **Emergency Contact**: +39 06 1234 5678  
-**Incident Reporting**: incidents@fixcity.it
+**Incident Reporting**: incidents@laraxot.it
 
 ---
 

@@ -30,7 +30,7 @@ class PageFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         Assert::string($title = preg_replace('/\./', '', fake()->sentence(3)));
 

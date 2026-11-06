@@ -1,12 +1,17 @@
 ---
-title: "Project Structure — Module Media"
+qmd: "PROJECT STRUCTURE"
+issues: []
+discussions: []
+title: "Project Structure: Module Media"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
+status: superseded
+superseded_by: project-structure.md
 ---
 
-# Project Structure — Module **Media**
+# Project Structure: Module **Media**
 
 ## Directory Structure
 
@@ -32,7 +37,7 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE: Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
@@ -47,7 +52,7 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+| `ON-DEMAND-PATTERN.md` | **Leggi prima**: pattern da seguire |
 
 ## Convenzioni
 
@@ -94,11 +99,11 @@ graph TD
 
 ## Riferimenti Globali
 
-- [Project Wiki Root](../../docs/wiki/)
-- [Global Rules](../../docs/wiki/rules/)
-- [Global Skills](../../docs/wiki/skills/)
-- [Global Commands](../../docs/wiki/commands/)
-- [Global Memories](../../docs/wiki/memories/)
+- [Project Wiki Root](../../../../docs/wiki/)
+- [Global Rules](../../../../bashscripts/ai/wiki/rules/)
+- [Global Skills](../../../../bashscripts/ai/wiki/skills/)
+- [Global Commands](../../../../bashscripts/ai/wiki/commands/)
+- [Global Memories](../../../../bashscripts/ai/wiki/memories/)
 
 ## Setup Iniziale (per nuovi moduli)
 

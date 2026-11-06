@@ -1,3 +1,11 @@
+---
+title: "PdfData"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pdfdata xot"
+---
 # PdfData
 
 La classe PdfData è un Data Object che gestisce la configurazione e i dati per la generazione di PDF nel modulo Xot.

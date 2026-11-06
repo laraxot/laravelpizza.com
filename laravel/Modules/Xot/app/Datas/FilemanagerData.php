@@ -15,8 +15,8 @@ use Spatie\LaravelData\Data;
 final class FilemanagerData extends Data
 {
     /**
-     * @param array<int, string> $disks
-     * @param array<int, string> $allowedExt
+     * @param  array<int, string>  $disks
+     * @param  array<int, string>  $allowedExt
      */
     public function __construct(
         public readonly string $disk = 'public',
@@ -28,14 +28,13 @@ final class FilemanagerData extends Data
         public readonly int $maxSize = 10,
         public readonly string $routePrefix = 'filemanager',
         public readonly bool $enableCrop = true,
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of FilemanagerData with default values.
      */
     public static function make(): self
     {
-        return new self();
+        return new self;
     }
 }

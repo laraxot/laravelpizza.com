@@ -1,3 +1,14 @@
+---
+title: "modules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules"
+issues: []
+discussions: []
+---
+
 # Moduli PTVX
 
 Il sistema PTVX è composto da **35 moduli indipendenti** organizzati per area funzionale.
@@ -33,6 +44,14 @@ Il sistema PTVX è composto da **35 moduli indipendenti** organizzati per area f
 
 ---
 
+title: "modules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules"
+issues: []
+discussions: []
 ## 👥 Gestione Risorse Umane
 
 ### User - Sistema Autenticazione e Autorizzazione

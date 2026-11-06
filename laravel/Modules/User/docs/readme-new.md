@@ -1,3 +1,24 @@
+---
+title: "User Module - Authentication & Authorization"
+type: concept
+tags: [readme, new]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme-new user module - authentication & authorization"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # User Module - Authentication & Authorization
 
 **Last Update**: 2025-12-05
@@ -923,7 +944,7 @@ test('user can switch teams', function () {
 - [User Model Architecture](./architecture/user-model.md) - User model design
 - [Permission System](./architecture/permission-system.md) - RBAC architecture
 - [Multi-Tenancy](./architecture/multi-tenancy.md) - Tenant isolation
-- [Team System](./architecture/teams.md) - Team collaboration
+- [Team System](./teams.md) - Team collaboration
 
 ### Authentication
 - [Authentication Flow](./auth/authentication-flow.md) - Login/logout process
@@ -942,7 +963,7 @@ test('user can switch teams', function () {
 - [API Integration](./development/api.md) - API usage guide
 
 ### Security
-- [Security Best Practices](./security/best-practices.md) - Security guidelines
+- [Security Best Practices](./best-practices.md) - Security guidelines
 - [Password Policies](./security/passwords.md) - Password requirements
 - [Audit Logging](./security/audit-log.md) - Security audit trail
 
@@ -992,13 +1013,13 @@ See [ROADMAP.md](./roadmap.md) for details.
 ## 📖 Related Documentation
 
 ### Internal Modules
-- [Xot Module](../xot/docs/readme.md) - Core foundation
-- [Activity Module](../activity/docs/readme.md) - Activity tracking
-- [Lang Module](../lang/docs/readme.md) - Translations
-- [Tenant Module](../tenant/docs/readme.md) - Enhanced tenancy
+- [Xot Module](../../Xot/docs/README.md) - Core foundation
+- [Activity Module](../../Activity/docs/README.md) - Activity tracking
+- [Lang Module](../../Lang/docs/README.md) - Translations
+- [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../claude.md) - Project architecture
+- [CLAUDE.md](../../../CLAUDE.md) - Project architecture
 - [Security Guidelines](../../../../docs/security.md)
 
 ### External Resources

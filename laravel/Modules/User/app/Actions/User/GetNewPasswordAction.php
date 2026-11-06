@@ -12,23 +12,11 @@ class GetNewPasswordAction
 {
     use QueueableAction;
 
+    /**
+     * Genera una nuova password temporanea pronunciabile per l'utente.
+     */
     public function execute(UserContract $record): string
     {
-        $user = $record;
-
-        $password = once(function () use ($user) {
-            $generator = new GetPronounceablePasswordAction();
-            $plainPassword = $generator->execute();
-            $hasher = app(\Illuminate\Contracts\Hashing\Hasher::class);
-            $hashedPassword = $hasher->make($plainPassword);
-
-            $user->forceFill([
-                'password' => $hashedPassword,
-            ])->save();
-
-            return $plainPassword;
-        });
-
-        return $password;
+        return app(GetPronounceablePasswordAction::class)->execute(12);
     }
 }

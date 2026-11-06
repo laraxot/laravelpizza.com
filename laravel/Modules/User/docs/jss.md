@@ -1,3 +1,28 @@
+---
+title: "Risoluzione dei Conflitti nei File JavaScript del Modulo User"
+type: concept
+tags: [jss]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "jss risoluzione dei conflitti nei file javascript del modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Risoluzione dei Conflitti nei File JavaScript del Modulo User
 
 ## Problema
@@ -97,6 +122,6 @@ Dopo la risoluzione, sono state eseguite le seguenti verifiche:
 
 ## Collegamenti
 
-- [Documentazione Modulo User](module_user.md)
+- [Documentazione Modulo User](module-user.md)
 - [Best Practices per la Gestione dei Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
-- [Alpine.js](https://alpinejs.dev/) 
+- [Alpine.js](https://alpinejs.dev/)

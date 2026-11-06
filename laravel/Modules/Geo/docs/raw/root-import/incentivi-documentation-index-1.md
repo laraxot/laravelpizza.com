@@ -1,3 +1,14 @@
+---
+title: "incentivi documentation index 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi documentation index 1"
+issues: []
+discussions: []
+---
+
 # 📑 INDICE DOCUMENTAZIONE MODULO INCENTIVI
 
 **Data:** 10 Marzo 2025  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "incentivi documentation index 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi documentation index 1"
+issues: []
+discussions: []
 ## 🎯 GUIDA RAPIDA AI DOCUMENTI
 
 ### Per utenti **Nuovi al Modulo**

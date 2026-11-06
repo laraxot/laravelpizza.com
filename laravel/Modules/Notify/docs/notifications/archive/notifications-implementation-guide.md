@@ -1,3 +1,11 @@
+---
+title: "Guida all'Implementazione delle Notifiche"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, notifications]
+qmd: "guida all'implementazione delle notifiche notify"
+---
 # Guida all'Implementazione delle Notifiche 
 
 Questa documentazione descrive come implementare correttamente le notifiche utilizzando Laravel Notifications nel modulo Notify.

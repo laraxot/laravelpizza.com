@@ -1,3 +1,16 @@
+---
+qmd: "case sensitivity"
+issues: []
+discussions: []
+title: "Case Sensitivity Rules - Notify Module"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Case Sensitivity Rules - Notify Module
 
 ## Problema / Problem

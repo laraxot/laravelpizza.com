@@ -7,6 +7,7 @@ namespace Modules\Job\Filament\Resources\JobManagerResource\Tables;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class JobManagersTable extends XotBaseResourceTable
@@ -17,7 +18,7 @@ class JobManagersTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable(),
+            'id' => IDColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];

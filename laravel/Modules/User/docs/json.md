@@ -1,5 +1,26 @@
-# json
+---
+module: theme
+topic: json
+canonical: ../../../Themes/docs/shared-components/json.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+title: "json"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "json user"
+---
 
-<!-- Contenuto migrato da _docs/json.txt -->
-
-https://medium.com/@prevailexcellent/how-to-handle-json-data-in-laravel-with-eloquent-and-json-columns-complete-guide-2023-480741120059
+See canonical documentation: ../../../Themes/docs/shared-components/json.md

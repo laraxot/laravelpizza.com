@@ -1,3 +1,15 @@
+---
+title: "checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "checklist"
+issues: []
+discussions: []
+status: draft
+---
+
 # DRY + KISS Refactoring Checklist
 
 ## DRY (Don't Repeat Yourself) Violations
@@ -160,7 +172,6 @@
 - [ ] **Incomplete feature docs** → Document all features
 
 ---
-
 ## Implementation Priority
 
 ### 🚨 Critical (Fix Immediately)

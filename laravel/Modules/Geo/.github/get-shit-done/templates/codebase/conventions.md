@@ -1,3 +1,14 @@
+---
+title: "conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conventions"
+issues: []
+discussions: []
+---
+
 # Coding Conventions Template
 
 Template for `.planning/codebase/CONVENTIONS.md` - captures coding style and patterns.
@@ -6,6 +17,14 @@ Template for `.planning/codebase/CONVENTIONS.md` - captures coding style and pat
 
 ---
 
+title: "conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conventions"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

@@ -1,10 +1,21 @@
+---
+title: "installazione mcp servers"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installazione mcp servers"
+issues: []
+discussions: []
+status: draft
+---
+
 # Installazione e Gestione Centralizzata MCP Servers
 
 ## Obiettivo
 Centralizzare l'installazione dei server MCP in `/var/www/html/_bases/mcp-servers` per consentire l'uso condiviso tra più progetti Laravel/PHP, evitando duplicazioni e facilitando aggiornamenti e manutenzione.
 
 ---
-
 ## 1. Struttura consigliata
 
 ```

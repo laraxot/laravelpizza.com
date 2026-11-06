@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-mail::layout>
     {{-- Header --}}
@@ -26,7 +25,7 @@ declare(strict_types=1);
     {{-- Footer --}}
     <x-slot:footer>
         <x-mail::footer>
-            © {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
+            © {{ date('Y') }} {{ config('app.name') }}. @lang('user::mail_message.footer.rights.text')
         </x-mail::footer>
     </x-slot:footer>
 </x-mail::layout>

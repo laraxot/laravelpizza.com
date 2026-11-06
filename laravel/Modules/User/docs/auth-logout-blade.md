@@ -1,11 +1,55 @@
+---
+title: "Implementazione Corretta di logout.blade.php"
+type: concept
+tags: [auth, logout, blade]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-logout-blade implementazione corretta di logout.blade.php"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Implementazione Corretta di logout.blade.php
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../../docs/readme.md)
+- [Documentazione centrale](../../../../docs/README.md)
+- [Documentazione centrale](../../../../docs/README.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./README.md)
+- [Convenzioni Path](./path-conventions.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
+- [Logout Page Fix](./logout-page-fix.md)
+- [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
-- [README modulo User](./readme.md)
-- [Convenzioni Path](./path_conventions.md)
+- [README modulo User](./README.md)
+- [Convenzioni Path](./path-conventions.md)
 - [Struttura moduli](../../../../docs/architecture/modules-structure.md)
+- [Logout Page Fix](./logout-page-fix.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
+- [Logout Page Fix](./logout_page_fix.md)
+- [Documentazione centrale](../../../../docs/README.md)
+- [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./README.md)
+- [Convenzioni Path](./path-conventions-user.md)
+- [Struttura moduli](../../../../docs/architecture/modules-structure.md)
+- [Logout Page Fix](./logout-page-fix.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
 - [Logout Page Fix](./logout_page_fix.md)
 
 ## Posizione Corretta
@@ -100,4 +144,5 @@ laravel/Themes/One/resources/views/pages/auth/logout.blade.php
 
 - Il file `logout.blade.php` è una pagina Folio e non richiede configurazioni aggiuntive in `routes/web.php`.
 - La pagina è accessibile all'URL `/{locale}/auth/logout`.
+- Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.
 - Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.

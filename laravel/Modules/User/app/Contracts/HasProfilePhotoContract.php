@@ -31,6 +31,11 @@ interface HasProfilePhotoContract
     public function getProfilePhotoUrlAttribute(): string;
 
     /**
+     * Calcolo puro dell'URL della foto profilo, usato dall'accessor.
+     */
+    public function getProfilePhotoUrl(): string;
+
+    /**
      * Determine if the image file exists.
      */
     public function photoExists(): bool;

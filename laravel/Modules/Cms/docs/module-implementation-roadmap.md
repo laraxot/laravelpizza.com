@@ -1,3 +1,15 @@
+---
+title: "module implementation roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module implementation roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # CMS Module - Content Management System
 
 ## Overview
@@ -454,5 +466,13 @@ class ContentPermission
 ---
 
 
+title: "module implementation roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module implementation roadmap"
+issues: []
+discussions: []
 **Priority**: High Development Need  
 **Estimated Completion**: 20-24 weeks with full team

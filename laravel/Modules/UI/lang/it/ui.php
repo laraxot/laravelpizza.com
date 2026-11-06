@@ -7,7 +7,7 @@ return [
         'name' => 'Interfaccia',
         'plural' => 'Interfacce',
         'group' => 'Sistema',
-        'label' => 'ui',
+        'label' => 'Interfaccia',
         'sort' => 70,
         'icon' => 'heroicon-o-squares-2x2',
     ],

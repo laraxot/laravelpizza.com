@@ -1,4 +1,18 @@
+---
+title: "json database"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json database"
+issues: []
+discussions: []
+status: draft
+---
+
 # JSON come Database per Dati Geografici
+
+> **Stato del codice.** `GeoService`, `GeoDataService`, `GeoDataValidator`, `GoogleMapsService` e `BaseGeoService` sono stati ritirati e la cartella `app/Services` non esiste piu'. Gli esempi che le citano descrivono codice storico. Sostituti vivi e prove di equivalenza: [services-to-actions-geo.story.md](./stories/services-to-actions-geo.story.md).
 
 ## Contesto
 Il file `resources/json/comuni.json` contiene i dati geografici italiani in formato JSON. Data la sua dimensione ridotta e la natura statica dei dati, è più efficiente utilizzarlo direttamente come fonte dati invece di creare tabelle nel database.

@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Utilizzo Base e Layout"
+module: "Tenant"
+type: concept
+tags: [usage]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "usage"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Utilizzo Base e Layout
 
 Questa sezione descrive l'utilizzo di base della libreria, come istanziare la classe `Html2Pdf` e come gestire il layout delle pagine con i tag speciali.

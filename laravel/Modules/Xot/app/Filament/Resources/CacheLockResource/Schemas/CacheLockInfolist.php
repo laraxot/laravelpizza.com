@@ -12,7 +12,7 @@ class CacheLockInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, TextEntry>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'key' => TextEntry::make('key'),

@@ -1,3 +1,15 @@
+---
+title: "laravel sushi analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel sushi analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Sushi: Analisi Approfondita
 
 ## Cos'è Laravel Sushi
@@ -499,6 +511,5 @@ Per procedere, si consiglia di:
 4. Predisporre un piano di migrazione graduale per il codice client
 
 ---
-
 *Documento creato il: 28/05/2025*  
 *Autore: Team <main module>*

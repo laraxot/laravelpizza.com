@@ -1,3 +1,11 @@
+---
+title: "Risoluzione Conflitti"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "risoluzione conflitti xot"
+---
 # Risoluzione Conflitti
 
 ## Best Practices
@@ -6,7 +14,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 ## Casi Risolti Recentemente
 
 ### 1. Namespace e Convenzioni
-- [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
+- [Convenzioni Namespace](namespace-conventions.md)
 - Risoluzione conflitti nelle convenzioni di namespace
 - Mantenimento della compatibilità con PHPStan
 

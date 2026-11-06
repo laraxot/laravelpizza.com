@@ -1,3 +1,16 @@
+---
+title: "comune implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune implementation"
+issues: []
+discussions: []
+status: superseded
+superseded_by: comune-implementation.md
+---
+
 # Implementazione del Modello Comune
 
 ## Scelta Architetturale

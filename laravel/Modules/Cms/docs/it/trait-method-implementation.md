@@ -1,3 +1,15 @@
+---
+title: "trait method implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "trait method implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Trait Method Implementation Rules
 
 ## Critical: DRY Principle for Trait Methods

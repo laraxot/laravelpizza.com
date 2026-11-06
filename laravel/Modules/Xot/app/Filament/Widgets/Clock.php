@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-// use Symfony\Component\Console\Output\BufferedOutput;
-
-use Filament\Widgets\Widget;
-
-class Clock extends Widget
+class Clock extends XotBaseWidget
 {
     public string $start = '';
 
+    /** @var view-string */
     protected string $view = 'xot::filament.widgets.clock';
 
     public function begin(): void
@@ -32,7 +29,7 @@ class Clock extends Widget
             // Decrement the counter...
             // $this->start = $this->start - 1;
             $this->start = (string) now();
-            if ('impossible' === $this->start) {
+            if ($this->start === 'impossible') {
                 $cond = false;
             }
         }

@@ -1,3 +1,15 @@
+---
+title: "roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # Roadmap (Module Cms)
 
 ## Current roadmap
@@ -26,12 +38,12 @@
 - [roadmap/04-milestones.md](roadmap/04-milestones.md)
 - [roadmap/04-risks.md](roadmap/04-risks.md)
 - [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/2025-q4-roadmap.md](roadmap/2025-q4-roadmap.md)
+- [roadmap/roadmap.md](roadmap/roadmap-q4.md)
 - [roadmap/README.md](roadmap/README.md)
 - [roadmap/features/documentation.md](roadmap/features/documentation.md)
 - [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/legacy/legacy-roadmap-2.md](roadmap/legacy/legacy-roadmap-2.md)
-- [roadmap/legacy/legacy-roadmap-3.md](roadmap/legacy/legacy-roadmap-3.md)
+- [roadmap/legacy/legacy-roadmap-2.md](roadmap/legacy/legacy-roadmap-modulo-cms.md)
+- [roadmap/legacy/legacy-roadmap-content-management.md](roadmap/legacy/legacy-roadmap-content-management.md)
 - [roadmap/legacy/legacy-roadmap-and-issues.md](roadmap/legacy/legacy-roadmap-and-issues.md)
 - [roadmap/legacy/legacy-roadmap-complete.md](roadmap/legacy/legacy-roadmap-complete.md)
 - [roadmap/legacy/legacy-roadmap-x.md](roadmap/legacy/legacy-roadmap-x.md)
@@ -54,7 +66,6 @@ Il modulo Cms fornisce:
 - **Integrazione Filament** per admin content management
 
 ---
-
 ## Tasks
 
 | # | Task | File | Priorita' | % |

@@ -1,3 +1,15 @@
+---
+title: "phpstan findings"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan findings"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Findings - AI Module
 
 **Data**: 2025-10-10  
@@ -115,4 +127,3 @@ $string = $mixed;
 5. ⏳ Validare con PHPStan
 
 ---
-

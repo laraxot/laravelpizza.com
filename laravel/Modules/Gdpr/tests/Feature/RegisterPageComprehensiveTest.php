@@ -6,11 +6,8 @@ namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 /*
  * Comprehensive Registration Page Tests.
@@ -297,7 +294,7 @@ it('has all required English translation keys', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Translation key [{$key}] is missing", $translated);
+        Assert::assertNotSame($key, $translated, "Translation key [{$key}] is missing");
     }
 });
 
@@ -325,7 +322,7 @@ it('has all required Italian translation keys', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Italian translation key [{$key}] is missing", $translated);
+        Assert::assertNotSame($key, $translated, "Italian translation key [{$key}] is missing");
     }
 });
 
@@ -337,11 +334,11 @@ it('widget is not visible to authenticated users', function (): void {
     $user = UserFactory::new()->createOne(['type' => 'customer_user']);
 
     gdprActingAs($user);
-    $widget = new RegisterWidget();
+    $widget = new RegisterWidget;
     Assert::assertFalse($widget->canView());
 });
 
 it('widget is visible to guest users', function (): void {
-    $widget = new RegisterWidget();
+    $widget = new RegisterWidget;
     Assert::assertTrue($widget->canView());
 });

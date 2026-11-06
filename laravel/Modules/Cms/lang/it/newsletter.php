@@ -58,7 +58,7 @@ return [
         ],
         'label' => 'Newsletter',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [

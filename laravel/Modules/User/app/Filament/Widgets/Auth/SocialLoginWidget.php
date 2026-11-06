@@ -5,35 +5,34 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Schemas\Components\Component;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**
- * SocialLoginWidget: Widget riutilizzabile per pulsanti login OAuth (Google, Microsoft).
+ * Pulsanti OAuth (Google, Microsoft, GitHub).
  *
- * Mostra i pulsanti solo per i provider configurati in config/services.
- * Usabile in login, register e altre pagine auth.
- *
- * Regole Laraxot:
- * - Estende XotBaseWidget
- * - Traduzioni da user::auth.social
- * - Route: socialite.oauth.redirect
+ * Panel: route `socialite.oauth.redirect`.
+ * FO: `$redirectRoute = 'socialite.oauth.fo.redirect'`.
  */
-class SocialLoginWidget extends XotBaseWidget
+class SocialLoginWidget extends XotBaseSchemaWidget
 {
+    protected static bool $isDiscovered = false;
+
     protected string $view = 'user::filament.widgets.auth.social-login';
 
+    public string $redirectRoute = 'oauth.redirect';
+
     /**
-     * Widget senza form: schema vuoto.
-     *
      * @return array<string, Component>
      */
-    #[\Override]
     public function getFormSchema(): array
     {
         return [];
     }
 
-    /** @return array<int, array{driver: string, label: mixed, icon: string, color: string}> */
+    /**
+     * @return list<array{driver: string, label: string, icon: string, color: string}>
+     */
     public function getProviders(): array
     {
         $providers = [];
@@ -41,7 +40,7 @@ class SocialLoginWidget extends XotBaseWidget
         if (config('services.google.client_id')) {
             $providers[] = [
                 'driver' => 'google',
-                'label' => __('user::auth.login.google'),
+                'label' => __('user::auth.login.google.text'),
                 'icon' => 'google',
                 'color' => '#4285F4',
             ];
@@ -50,7 +49,7 @@ class SocialLoginWidget extends XotBaseWidget
         if (config('services.microsoft.client_id')) {
             $providers[] = [
                 'driver' => 'microsoft',
-                'label' => __('user::auth.login.microsoft'),
+                'label' => __('user::auth.login.microsoft.text'),
                 'icon' => 'microsoft',
                 'color' => '#00A4EF',
             ];
@@ -59,7 +58,7 @@ class SocialLoginWidget extends XotBaseWidget
         if (config('services.github.client_id')) {
             $providers[] = [
                 'driver' => 'github',
-                'label' => __('user::auth.login.github'),
+                'label' => __('user::auth.login.github.text'),
                 'icon' => 'github',
                 'color' => '#24292F',
             ];
@@ -68,14 +67,39 @@ class SocialLoginWidget extends XotBaseWidget
         return $providers;
     }
 
+    public function getRedirectUrl(string $driver): string
+    {
+        $locale = app()->getLocale();
+        if (! is_string($locale)) {
+            $locale = config('app.locale', 'it');
+        }
+        if (! is_string($locale)) {
+            $locale = 'it';
+        }
+        $locale = trim($locale, '/');
+        $supported = LaravelLocalization::getSupportedLanguagesKeys();
+        if (! in_array($locale, $supported, true)) {
+            $fallback = config('app.locale', 'it');
+            $locale = is_string($fallback) ? $fallback : 'it';
+        }
+
+        return route($this->normalizeRedirectRoute(), ['provider' => $driver, 'lang' => $locale]);
+    }
+
     public function redirectToProvider(string $driver): void
     {
-        $driver = match ($driver) {
-            'google' => 'google',
-            'microsoft' => 'microsoft',
-            default => $driver,
-        };
+        if (! in_array($driver, ['google', 'microsoft', 'github'], true)) {
+            return;
+        }
 
-        redirect()->to(route('socialite.oauth.redirect', ['provider' => $driver]));
+        redirect()->to($this->getRedirectUrl($driver));
+    }
+
+    private function normalizeRedirectRoute(): string
+    {
+        return match ($this->redirectRoute) {
+            'socialite.oauth.redirect', 'socialite.oauth.fo.redirect', 'oauth.redirect', 'auth.google.index', 'oauth.callback' => $this->redirectRoute,
+            default => 'oauth.callback',
+        };
     }
 }

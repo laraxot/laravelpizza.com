@@ -1,3 +1,14 @@
+---
+title: "documentation normalization guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation normalization guide"
+issues: []
+discussions: []
+---
+
 # Guida alla Normalizzazione della Documentazione Laraxot PTVX
 
 ## Obiettivo
@@ -245,5 +256,13 @@ Riferimento a [testing.md](testing.md)
 
 ---
 
+title: "documentation normalization guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation normalization guide"
+issues: []
+discussions: []
 *Documento creato: 2025-01-29*
 *Ultima revisione: 2025-01-29*

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
     <div class="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
@@ -18,11 +17,11 @@ declare(strict_types=1);
               <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
             </svg>
             <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-              <p>Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.</p>
+              <p>{{ __('ui::blocks_testimonials.quotes.quote_12.description') }}</p>
             </blockquote>
             <figcaption class="mt-8 text-base">
               <div class="font-semibold text-white">Judith Black</div>
-              <div class="mt-1 text-gray-400">CEO of Workcation</div>
+              <div class="mt-1 text-gray-400">{{ __('ui::blocks_testimonials.roles.ceo_of.label', ['company' => 'Workcation']) }}</div>
             </figcaption>
           </figure>
         </div>

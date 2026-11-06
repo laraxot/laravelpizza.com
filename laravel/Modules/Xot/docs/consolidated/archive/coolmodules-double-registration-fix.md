@@ -1,3 +1,11 @@
+---
+title: "CoolModules Double Registration Fix"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "coolmodules double registration fix xot"
+---
 # CoolModules Double Registration Fix
 
 ## 🚨 Problema Identificato

@@ -39,7 +39,6 @@ class ContactFactory extends Factory
             'updated_by' => fake()->word,
             'created_by' => fake()->word,
             // 'user_id' => $this->faker->randomNumber(5, false),
-            'token' => fake()->word,
-        ];
+            'token' => fake()->word];
     }
 }

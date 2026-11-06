@@ -7,7 +7,7 @@ return [
         'label' => 'Navigazione',
         'plural_label' => 'Navigazioni',
         'group' => 'Gestione Contenuti',
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
         'sort' => 1,
     ],
     'label' => 'Navigazione',
@@ -34,6 +34,12 @@ return [
             'description' => 'Destinazione del link',
             'tooltip' => 'URL completo o nome route',
         ],
+        'text' => [
+            'label' => 'text',
+            'placeholder' => 'text',
+            'helper_text' => 'text',
+            'description' => 'text',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -53,4 +59,10 @@ return [
             'confirm' => 'Sei sicuro di voler eliminare questa navigazione?',
         ],
     ],
+    'login' => 'Accedi',
+    'logout' => 'Esci',
+    'profile' => 'Profilo',
+    'password' => 'Password',
+    'two_factor' => 'Autenticazione a due fattori',
+    'register' => 'Registrati',
 ];

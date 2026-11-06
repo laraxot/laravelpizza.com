@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props(['title', 'text', 'background'])
 
@@ -40,7 +39,11 @@ declare(strict_types=1);
                     -- --}}
                 </div>
                 @php
-                    $text = str_replace('<p>', '<p class="mt-6 leading-normal text-white">', $text);
+                    $text = str_replace(
+                        '<p>',
+                        '<p class="mt-6 leading-normal text-white">',
+                        str($text)->sanitizeHtml()->toString(),
+                    );
                 @endphp
                 {!! $text !!}
             </div>

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Support\Facades\Route;
 
 // use Modules\User\Http\Controllers\Api\UserController;
@@ -30,7 +29,8 @@ Route::prefix('/user')
          * Route::post('/login', [UserController::class, 'login'])
          * ->name('api.login');
          */
-        Route::post('/login', 'LoginController')->name('api.login');
+        // D-08 (DCP-282): freno 5 richieste/60 s per email e IP, limiter `user-login` (UserServiceProvider)
+        Route::post('/login', 'LoginController')->middleware('throttle:user-login')->name('api.login');
 
         /*
          * Route::get('/login', [UserController::class, 'loginTest'])

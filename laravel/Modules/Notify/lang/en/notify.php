@@ -285,4 +285,9 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'alert' => [
+        'sent' => [
+            'message' => 'Alert Sent',
+        ],
+    ],
 ];

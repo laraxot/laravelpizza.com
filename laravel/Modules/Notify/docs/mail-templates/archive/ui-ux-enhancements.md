@@ -1,3 +1,11 @@
+---
+title: "UI/UX Enhancements per i Campi `name` e `slug` in MailTemplateResource"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "ui/ux enhancements per i campi `name` e `slug` in mailtemplateresource notify"
+---
 # UI/UX Enhancements per i Campi `name` e `slug` in MailTemplateResource
 
 ## Introduzione

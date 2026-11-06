@@ -1,3 +1,17 @@
+---
+title: "structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-08 (docs-audit): dump di struttura del 2025-04-23 (dichiara 9 file PHP e 4 classi); il modulo oggi ha molte piu' cartelle in app/. Vedi project-structure.md. Contenuto non riscritto, verificare prima di usarlo.
+
 # Modulo Seo
 
 Data: 2025-04-23 19:09:56
@@ -172,9 +186,16 @@ tests/Unit
     },
     "require_comment": {
         "openai-php/laravel": "*"
->>>>>>> 1c344a1 (.)
-=======
->>>>>>> origin/develop
+---
+title: "structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure"
+issues: []
+discussions: []
+---
     },
 ```
 
@@ -187,4 +208,3 @@ tests/Unit
 
 - [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/project_docs/phpstan/)
-

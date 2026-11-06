@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "epic 1 foundation homepage"
+issues: []
+discussions: []
 name: Epic 1 - Foundation & Homepage
 about: Epic issue for tracking Foundation & Homepage phase
 title: 'Epic #1: Foundation & Homepage - Design Comuni Replication'
@@ -11,7 +18,7 @@ milestone: 'v1.0 - Design Comuni Replication'
 Replicate the Design Comuni homepage achieving 100% HTML and visual parity with the original template.
 
 **Source**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html  
-**Target**: http://fixcity.local/it/tests/homepage  
+**Target**: http://ptv.local/it/tests/homepage  
 **Timeline**: Weeks 1-2 (April 1-14, 2026)  
 **Status**: 🟡 IN PROGRESS
 
@@ -22,7 +29,7 @@ Replicate the Design Comuni homepage achieving 100% HTML and visual parity with 
 ### Primary Goal
 Achieve 100% HTML parity (inside `<body>` tag, excluding scripts) between:
 - ✅ Source: `view-source:https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html`
-- ✅ Target: `view-source:http://fixcity.local/it/tests/homepage`
+- ✅ Target: `view-source:http://ptv.local/it/tests/homepage`
 
 ### Secondary Goals
 1. Header matches exactly (colors, spacing, logo, navigation)

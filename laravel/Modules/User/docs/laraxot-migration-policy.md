@@ -1,39 +1,114 @@
-# Laraxot Migration Policy
+---
+title: "Laraxot Migration Policy - User Module"
+module: "User"
+type: "rule"
+tags: [migrations, database, xotbase, policy]
+created: 2026-07-15
+updated: 2026-07-15
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+qmd: "laraxot migration policy   user module user"
+---
 
-## Objective
+# Laraxot Migration Policy: User Module
 
-To ensure all database migrations within the project, especially those in modules like `User`, adhere to the "Laraxot" principles of robustness, maintainability, and consistency, and align with best practices for a modular Laravel application.
+## Legge fondamentale
 
-## Problem Description
+**Ogni modello ha ESATTAMENTE UN file di migrazione.** Non uno di più. Mai.
 
-The migration file `Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php` has been flagged as not respecting the "Laraxot policy, philosophy, religion." This indicates a violation of established project conventions or best practices for database schema management.
+Questa è la filosofia, la politica, la religione e lo zen del progetto.
 
-## Laraxot Principles (Deducted)
+## Convenzione nome file
 
-Based on the user's emphasis on "DRY, KISS, SOLID, Robust" and the context of the Xot module, "Laraxot" principles for migrations likely encompass:
+```
+Modules/User/database/migrations/YYYY_MM_DD_HHMMSS_create_{tabella}_table.php
+```
 
-1.  **Robustness & Idempotency:** Migrations should be able to run multiple times without issues (e.g., checking if columns exist before adding them). They should handle potential failures gracefully.
-2.  **Reversibility:** The `down()` method should perfectly reverse the `up()` method, ensuring clean rollbacks.
-3.  **Clarity & Readability:** Migrations should be easy to understand, with clear column definitions and foreign key constraints.
-4.  **Consistency:** Adherence to project-wide naming conventions for tables, columns, and foreign keys.
-5.  **Modularity:** Migrations should belong to their respective modules, and avoid assumptions about the main application database structure unless explicitly designed for it.
+- Data/ora obbligatoria.
+- Solo prefisso `create_`. Vietato `add_`, `update_`, `fix_`, `alter_`, `patch_`.
+- Nome tabella in `snake_case` e plurale del modello.
+- Sempre suffisso `_table.php`.
 
-## Analysis & Hypothesis
+## Pattern XotBaseMigration
 
-The specific migration `add_owner_id_to_teams_table.php` suggests adding an `owner_id` column to a `teams` table. A common violation in such migrations includes:
+Una singola migrazione per modello gestisce sia installazioni fresche che database esistenti:
 
-*   **Missing `ifNotExists` / `hasColumn` checks:** Attempting to add a column that might already exist.
-*   **Improper `down()` method:** Not correctly reversing the `up()` operation (e.g., not dropping the column).
-*   **Missing Foreign Key Constraint:** Not adding a foreign key constraint where one might be expected (e.g., `owner_id` referencing a `users` table).
-*   **Non-standard Naming:** Using names that deviate from project conventions.
+```php
+<?php
 
-**Hypothesis:** The `add_owner_id_to_teams_table.php` migration likely adds the `owner_id` column without proper checks, might be missing a foreign key, or has an incomplete `down()` method, violating one or more Laraxot principles.
+declare(strict_types=1);
 
-## Planned Next Steps
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-1.  Read the content of `Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php`.
-2.  Analyze the `up()` and `down()` methods for violations of the deduced Laraxot principles.
-3.  Propose specific changes to rectify the migration.
-4.  Implement the corrected migration file.
-5.  Verify the fix (e.g., by running `php artisan migrate` and `php artisan migrate:rollback`).
-6.  Inform the user of the resolution and update this documentation accordingly.
+return new class() extends XotBaseMigration {
+    public function up(): void
+    {
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->id();
+            $table->uuid('owner_id')->nullable()->index()->after('id');
+            $table->string('name');
+            $table->boolean('personal_team')->default(false);
+        });
+
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('owner_id')) {
+                $table->uuid('owner_id')->nullable()->index()->after('id');
+            }
+            $this->updateTimestamps($table, true);
+        });
+    }
+};
+```
+
+### Regole del pattern
+
+- **No `protected string $connection`**: `XotBaseMigration` calcola la connessione dal modello (`$model->getConnectionName()`). Non hardcodare mai `protected string $connection = 'user';` o altro. È duplicazione, rompe DRY e riduce portabilità.
+- **No `protected ?string $model_class` se inferibile**: `create_teams_table.php` produce `Modules\User\Models\Team`.
+- **Usa `tableCreate` + `tableUpdate`**: ogni modifica entra nella stessa migrazione.
+- **Guards `hasColumn`**: ogni operazione è idempotente.
+- **No `down()` custom**: `XotBaseMigration::down()` droppa la tabella.
+
+## Workflow per modificare lo schema
+
+1. Identifica il modello proprietario della tabella.
+2. Modifica l'unica migrazione del modello.
+3. Rinomina il prefisso timestamp con la data corrente per forzare la riesecuzione.
+4. Esegui solo `php artisan migrate`.
+
+## Comandi proibiti
+
+```bash
+php artisan migrate:refresh
+php artisan migrate:fresh
+php artisan migrate --force
+php artisan db:wipe
+```
+
+I dati di produzione sono sacri. L'unico comando sicuro è `php artisan migrate`.
+
+## Esempio corretto nel modulo User
+
+- **Modello**: `Modules\User\Models\Team`
+- **Tabella**: `teams`
+- **File unico**: `Modules/User/database/migrations/2026_07_15_120000_create_teams_table.php`
+
+Storicamente esistevano anche `add_owner_id_to_teams_table.php` e duplicati `create_teams_table.php`: consolidati nel file unico sopra.
+
+## Collegamenti
+
+- [Migration Philosophy: progetto](../../../../docs/database/migrations-philosophy.md)
+- [Migration Conventions: Xot](../Xot/docs/migration-conventions.md)
+- [XotBaseMigration source](../../Xot/app/Database/Migrations/XotBaseMigration.php)

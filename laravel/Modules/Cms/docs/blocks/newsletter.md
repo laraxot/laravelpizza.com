@@ -1,3 +1,15 @@
+---
+title: "newsletter"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "newsletter"
+issues: []
+discussions: []
+status: draft
+---
+
 # Newsletter Block
 
 Il blocco Newsletter è utilizzato per creare form di iscrizione alla newsletter, con supporto per messaggi personalizzati e feedback utente. Può essere utilizzato in qualsiasi contesto, dal footer a sezioni dedicate della pagina.
@@ -114,6 +126,6 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Marketing Guidelines](../marketing/email-guidelines.md)
 - [GDPR Compliance](../legal/gdpr.md)

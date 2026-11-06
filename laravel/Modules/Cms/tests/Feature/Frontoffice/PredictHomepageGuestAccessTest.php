@@ -5,13 +5,10 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Feature\Frontoffice;
 
 use Illuminate\Support\Facades\Auth;
-use Modules\Cms\Tests\TestCase;
 
 use function Pest\Laravel\get;
 
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */

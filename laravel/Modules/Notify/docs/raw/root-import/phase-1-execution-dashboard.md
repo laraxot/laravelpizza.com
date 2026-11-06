@@ -1,3 +1,14 @@
+---
+title: "phase 1 execution dashboard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase 1 execution dashboard"
+issues: []
+discussions: []
+---
+
 # 🎯 PHASE 1 EXECUTION DASHBOARD
 ## Multi-Agent Coordination Board
 
@@ -8,6 +19,14 @@
 
 ---
 
+title: "phase 1 execution dashboard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase 1 execution dashboard"
+issues: []
+discussions: []
 ## 🚨 CURRENT STATUS
 
 | Component | Status | Progress | ETA |
@@ -100,6 +119,7 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 **Subtask 4 - Verify JSON Content** (parallel with Subtask 3):
 - Input: PHASE-1-FINDINGS.md
 - File: `laravel/config/local/fixcity/database/content/pages/tests.segnalazioni-elenco.json`
+- File: `laravel/config/local/laraxot/database/content/pages/tests.segnalazioni-elenco.json`
 - Tasks:
   - Verify all required sections present
   - Check translation keys are correct
@@ -113,6 +133,7 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 - [ ] Read GSD-PHASE-1-EXECUTION.md
 - [ ] Read EXECUTOR-2-SUBTASKS-3-4.md
 - [ ] Understand translation pattern: `fixcity::segnalazione.fields.title.label`
+- [ ] Understand translation pattern: `laraxot::segnalazione.fields.title.label`
 - [ ] Know NOT to create separate segnalazioni-elenco.blade.php
 - [ ] Have reference page ready: https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazioni-elenco.html
 
@@ -301,6 +322,7 @@ Phase 2 planning can begin
 - [ ] Metrics documented
 - [ ] Lessons learned captured
 - [ ] 00-INDEX.md updated
+- [ ] 00-index.md updated
 - [ ] Phase 2 strategy outlined
 
 ---
@@ -317,6 +339,7 @@ Phase 2 planning can begin
 
 **WILL VERIFY (Subtask 4):**
 - `laravel/config/local/fixcity/database/content/pages/tests.segnalazioni-elenco.json`
+- `laravel/config/local/laraxot/database/content/pages/tests.segnalazioni-elenco.json`
 
 **WILL CREATE:**
 - `laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/PHASE-1-FINDINGS.md`
@@ -340,6 +363,7 @@ Phase 2 planning can begin
 
 **Tools** (5-10 min read):
 - bashscripts/docs/html/INDEX.md (comparison tools)
+- bashscripts/docs/html/index.md (comparison tools)
 
 ---
 

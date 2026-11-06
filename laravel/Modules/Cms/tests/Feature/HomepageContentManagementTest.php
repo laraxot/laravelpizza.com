@@ -2,37 +2,24 @@
 
 declare(strict_types=1);
 
+namespace Modules\Cms\Tests\Feature;
+
+
 use function Pest\Laravel\get;
 
-use PHPUnit\Framework\Assert;
-
-uses(Modules\Cms\Tests\TestCase::class);
-
-beforeEach(function (): void {
-    /* @var \Modules\Cms\Tests\TestCase $this */
-    cmsSkipTest('Homepage content tests target legacy predict/laravelpizza fixtures, not fixcity.');
-});
-
 describe('Homepage Content Management', function () {
-    // The site works, so tests must reflect real behavior
-    // Route / redirects to /{locale}, so we test the localized route
-
     it('loads homepage content from JSON correctly', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica che il contenuto JSON sia caricato correttamente
         $response->assertSee('<nome progetto> - Promozione della <slogan> per le gestanti');
     });
 
     it('displays content blocks with correct structure', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica struttura blocchi
         $response->assertSee('landing-page');
         $response->assertSee('Benvenuta su <nome progetto>');
@@ -40,11 +27,9 @@ describe('Homepage Content Management', function () {
     });
 
     it('renders hero block with all required elements', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica elementi hero block
         $response->assertSee('INIZIA ORA');
         $response->assertSee('Sorriso-Denti-bianchi-donna-apparecchio-denti-e-salute-1.jpg');
@@ -54,42 +39,35 @@ describe('Homepage Content Management', function () {
     });
 
     it('handles missing content gracefully', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
         // Questo test può essere espanso per verificare gestione errori
-        $response = get('/'.$locale);
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response = get('/');
+        $response->assertStatus(200);
 
         // Verifica che la pagina si carichi anche con contenuto mancante
     });
 
     it('displays localized content correctly', function () {
-        // Test italiano
-        $response = get('/it');
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        // Test italiano (default)
+        $response = get('/');
+        $response->assertStatus(200);
         $response->assertSee('Benvenuta su <nome progetto>');
 
         // Test inglese
         $response = get('/en');
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica contenuto inglese
 
         // Test tedesco
         $response = get('/de');
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
 
         // Verifica contenuto tedesco
     });
 
     it('renders CTA button with correct functionality', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica CTA button
         $response->assertSee('INIZIA ORA');
         $response->assertSee('href="'.route('register').'"');
@@ -97,11 +75,9 @@ describe('Homepage Content Management', function () {
     });
 
     it('displays hero image with proper attributes', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica immagine hero
         $response->assertSee('Sorriso-Denti-bianchi-donna-apparecchio-denti-e-salute-1.jpg');
 
@@ -109,11 +85,9 @@ describe('Homepage Content Management', function () {
     });
 
     it('applies correct CSS classes for styling', function () {
-        $locale = (string) (app()->getLocale() ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /* @var \Illuminate\Testing\TestResponse<\Illuminate\Http\Response> $response */
-        Assert::assertSame(200, $response->status());
+        $response->assertStatus(200);
         // Verifica classi CSS
         $response->assertSee('bg-white');
         $response->assertSee('text-gray-900');
@@ -122,48 +96,40 @@ describe('Homepage Content Management', function () {
     });
 
     it('handles content updates without breaking', function () {
-        $locale = (string) (config('app.locale') ?? 'it');
-        $response = get('/'.$locale);
+        // Questo test verifica che la pagina si carichi correttamente
+        // anche quando il contenuto JSON viene aggiornato
+        $response = get('/');
+        $response->assertStatus(200);
 
-        /** @var Illuminate\Testing\TestResponse<Illuminate\Http\Response> $response */
-        // For test environment, we accept 200 or 404 as valid responses
-        // depending on whether content exists in test environment
-        $status = $response->status();
-        Assert::assertTrue(in_array($status, [200, 301, 302, 303, 307, 308, 404], true));
+        // Verifica che la struttura base sia sempre presente
     });
 
     it('displays content in correct order', function () {
-        $locale = (string) (config('app.locale') ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /** @var Illuminate\Testing\TestResponse<Illuminate\Http\Response> $response */
-        $status = $response->getStatusCode();
-        if (200 !== $status) {
-            Assert::assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
-
-            return;
+        $response->assertStatus(200);
+        // Verifica ordine contenuti
+        // Il titolo deve apparire prima del sottotitolo
+        $content = $response->getContent();
+        if (! is_string($content)) {
+            throw new \RuntimeException('Homepage response has no content.');
+        }
+        $titlePos = strpos($content, '<nome progetto> - Promozione della <slogan> per le gestanti');
+        $subtitlePos = strpos($content, 'il portale che vuole garantire alle pazienti vulnerabili');
+        if (false === $titlePos || false === $subtitlePos) {
+            throw new \RuntimeException('Homepage content order markers are missing.');
         }
 
-        Assert::assertSame(200, $response->status());
-        // Avoid brittle copy-order assertions; just ensure HTML is present.
-        $content = (string) $response->getContent();
-        Assert::assertNotSame('', trim($content));
+        expect($titlePos)->toBeLessThan($subtitlePos);
     });
 
     it('renders responsive design elements', function () {
-        $locale = (string) (config('app.locale') ?? 'it');
-        $response = get('/'.$locale);
+        $response = get('/');
 
-        /** @var Illuminate\Testing\TestResponse<Illuminate\Http\Response> $response */
-        $status = $response->getStatusCode();
-        if (200 !== $status) {
-            Assert::assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
+        $response->assertStatus(200);
+        // Verifica elementi responsive
+        $response->assertSee('class="');
 
-            return;
-        }
-
-        Assert::assertSame(200, $response->status());
-        $content = (string) $response->getContent();
-        Assert::assertStringContainsString('class="', $content);
+        // Verifica che il layout sia responsive
     });
 });

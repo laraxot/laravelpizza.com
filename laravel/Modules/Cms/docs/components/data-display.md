@@ -1,3 +1,15 @@
+---
+title: "data display"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "data display"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti di Visualizzazione Dati
 
 ## Introduzione

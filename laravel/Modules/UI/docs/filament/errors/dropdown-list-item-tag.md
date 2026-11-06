@@ -1,3 +1,15 @@
+---
+title: "dropdown list item tag"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dropdown list item tag"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errore: Tag Mancante nei Dropdown List Items
 
 ## Problema

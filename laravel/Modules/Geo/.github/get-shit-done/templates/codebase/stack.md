@@ -1,3 +1,14 @@
+---
+title: "stack"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "stack"
+issues: []
+discussions: []
+---
+
 # Technology Stack Template
 
 Template for `.planning/codebase/STACK.md` - captures the technology foundation.
@@ -6,6 +17,14 @@ Template for `.planning/codebase/STACK.md` - captures the technology foundation.
 
 ---
 
+title: "stack"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "stack"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

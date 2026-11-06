@@ -1,3 +1,16 @@
+---
+title: "07 best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "07 best practices"
+issues: []
+discussions: []
+status: superseded
+superseded_by: best-practices.md
+---
+
 # Best Practices per l'Utilizzo dei Server MCP
 
 ## Panoramica
@@ -34,7 +47,6 @@ Se hai eseguito accidentalmente un comando di migrazione pericoloso:
 Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del progetto.
 
 ---
-
 ## Principi Generali
 
 ### 1. Struttura Modulare

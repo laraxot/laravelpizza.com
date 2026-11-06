@@ -1,3 +1,16 @@
+---
+title: "sms channel action resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms channel action resolution"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sms-channel-action-resolution.md
+---
+
 # Dove posizionare la logica di risoluzione dell'action SMS?
 
 ## Contesto
@@ -21,6 +34,14 @@ $action = match ($driver) {
 
 ---
 
+title: "sms channel action resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms channel action resolution"
+issues: []
+discussions: []
 ## Analisi delle due soluzioni
 
 ### 1. Logica nel Canale (`SmsChannel`)

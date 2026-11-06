@@ -1,3 +1,15 @@
+---
+title: "factory coverage report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "factory coverage report"
+issues: []
+discussions: []
+status: draft
+---
+
 # Factory Coverage Report - CMS Module
 
 ## 📊 Status Report

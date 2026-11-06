@@ -10,7 +10,7 @@ class CommandData extends Data
 {
     /**
      * @param  array<int, array<string, mixed>>  $arguments
-     * @param  array<string, array<mixed>>  $options
+     * @param  array<string, mixed>  $options
      */
     public function __construct(
         public string $name,

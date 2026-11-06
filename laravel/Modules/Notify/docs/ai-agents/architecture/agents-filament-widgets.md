@@ -1,3 +1,15 @@
+---
+title: "agents filament widgets"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents filament widgets"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🏛 Filament Widgets Architecture
 
 **File**: `.agents/docs/architecture/agents-filament-widgets.md`  
@@ -5,7 +17,6 @@
 **Stato**: ✅ CRITICAL RULE
 
 ---
-
 ## 🔴 REGOLA FONDAMENTALE
 
 > **SEMPRE usare Filament Table Widgets per le liste**  
@@ -17,12 +28,12 @@
 
 ### Blade Custom con foreach
 ```blade
-{{-- ❌ VIETATO - Themes/TwentyOne/resources/views/pages/predicts/index.blade.php --}}
+{{-- ❌ VIETATO - Themes/TwentyOne/resources/views/pages/forecasts/index.blade.php --}}
 <div class="grid grid-cols-3">
-    @foreach($predicts as $predict)
+    @foreach($forecasts as $forecast)
         <div class="card">
-            <h3>{{ $predict->title }}</h3>
-            <p>{{ $predict->volume }} CR</p>
+            <h3>{{ $forecast->title }}</h3>
+            <p>{{ $forecast->volume }} CR</p>
         </div>
     @endforeach
 </div>
@@ -41,6 +52,7 @@
 ```
 ❌ VIETATO:
 Themes/TwentyOne/Http/Livewire/PredictComponent.php
+Themes/TwentyOne/Http/Livewire/ForecastComponent.php
 ```
 
 ---
@@ -51,17 +63,21 @@ Themes/TwentyOne/Http/Livewire/PredictComponent.php
 ```php
 // ✅ CORRETTO - Modules/Predict/Filament/Widgets/PredictTableWidget.php
 namespace Modules\Predict\Filament\Widgets;
+// ✅ CORRETTO - Modules/Forecast/Filament/Widgets/ForecastTableWidget.php
+namespace Modules\Forecast\Filament\Widgets;
 
 use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 
 class PredictTableWidget extends BaseWidget
+class ForecastTableWidget extends BaseWidget
 {
     public function table(Table $table): Table
     {
         return $table
             ->query(Predict::query()->where('status', 'active'))
+            ->query(Forecast::query()->where('status', 'active'))
             ->searchable()              // ✅ Search automatica
             ->filters([                 // ✅ Filters automatici
                 Tables\Filters\SelectFilter::make('category')
@@ -89,12 +105,15 @@ class PredictTableWidget extends BaseWidget
 ```blade
 {{-- ✅ CORRETTO - Themes/TwentyOne/resources/views/filament/widgets/predict-table.blade.php --}}
 @livewire(\Modules\Predict\Filament\Widgets\PredictTableWidget::class)
+{{-- ✅ CORRETTO - Themes/TwentyOne/resources/views/filament/widgets/forecast-table.blade.php --}}
+@livewire(\Modules\Forecast\Filament\Widgets\ForecastTableWidget::class)
 ```
 
 ### JSON CMS
 ```json
 {
     "slug": "predicts.index",
+    "slug": "forecasts.index",
     "content_blocks": {
         "it": [
             {
@@ -102,6 +121,8 @@ class PredictTableWidget extends BaseWidget
                 "data": {
                     "view": "pub_theme::filament.widgets.predict-table",
                     "widget": "Modules\\Predict\\Filament\\Widgets\\PredictTableWidget"
+                    "view": "pub_theme::filament.widgets.forecast-table",
+                    "widget": "Modules\\Forecast\\Filament\\Widgets\\ForecastTableWidget"
                 }
             }
         ]
@@ -133,12 +154,12 @@ class PredictTableWidget extends BaseWidget
 ```
 laravel/
 ├── Modules/
-│   └── Predict/
+│   └── Forecast/
 │       ├── Filament/
 │       │   └── Widgets/
-│       │       └── PredictTableWidget.php  ✅ LOGICA
+│       │       └── ForecastTableWidget.php  ✅ LOGICA
 │       └── Models/
-│           └── Predict.php                  ✅ DATI
+│           └── Forecast.php                  ✅ DATI
 │
 └── Themes/
     └── TwentyOne/
@@ -146,22 +167,24 @@ laravel/
             └── filament/
                 └── widgets/
                     └── predict-table.blade.php  ✅ VISTA
+                    └── forecast-table.blade.php  ✅ VISTA
 ```
 
 ### Flusso Dati
 
 ```
 1. HTTP Request → predicts.index
+1. HTTP Request → forecasts.index
    ↓
 2. Folio Route → [container0]/index.blade.php
    ↓
 3. CMS Action → ResolvePageAction
    ↓
-4. JSON Config → predicts.index.json
+4. JSON Config → forecasts.index.json
    ↓
-5. Widget Render → Modules/Predict/Filament/Widgets/PredictTableWidget.php
+5. Widget Render → Modules/Forecast/Filament/Widgets/ForecastTableWidget.php
    ↓
-6. View Render → Themes/TwentyOne/resources/views/filament/widgets/predict-table.blade.php
+6. View Render → Themes/TwentyOne/resources/views/filament/widgets/forecast-table.blade.php
    ↓
 7. HTML Response → Browser
 ```
@@ -217,6 +240,9 @@ Prima di commitare una pagina list/grid:
 - `Modules/Predict/Filament/Widgets/PredictTableWidget.php`
 - `Themes/TwentyOne/resources/views/filament/widgets/predict-table.blade.php`
 - `config/local/predict/database/content/pages/predicts.index.json`
+- `Modules/Forecast/Filament/Widgets/ForecastTableWidget.php`
+- `Themes/TwentyOne/resources/views/filament/widgets/forecast-table.blade.php`
+- `config/local/forecast/database/content/pages/forecasts.index.json`
 
 ---
 

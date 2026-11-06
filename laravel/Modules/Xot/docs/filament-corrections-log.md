@@ -1,3 +1,11 @@
+---
+title: "Log delle Correzioni Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "log delle correzioni filament xot"
+---
 # Log delle Correzioni Filament
 
 ## Data: 2024-12-19

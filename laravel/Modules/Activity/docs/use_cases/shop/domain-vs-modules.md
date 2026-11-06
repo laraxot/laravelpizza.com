@@ -1,3 +1,11 @@
+---
+title: "Confronto tra Struttura a Domain e Struttura a Moduli"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "confronto tra struttura a domain e struttura a moduli activity"
+---
 # Confronto tra Struttura a Domain e Struttura a Moduli
 
 ## Introduzione

@@ -1,3 +1,15 @@
+---
+title: "specialized rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "specialized rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Specialized Rules & Configurations
 
 This document contains niche but critical rules for specific domains of the project.

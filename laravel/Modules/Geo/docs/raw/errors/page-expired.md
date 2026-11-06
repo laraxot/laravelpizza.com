@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page expired"
+issues: []
+discussions: []
 title: Page Expired 419
 description: Page Expired 419
 extends: _layouts.documentation

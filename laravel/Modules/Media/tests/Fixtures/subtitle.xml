@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fixture per ParseSubtitleXmlAction: due sentence, tre item.
+  Gli attributi start/end sono in millisecondi, come nei file reali.
+-->
+<transcript>
+    <annotation>
+        <type>
+            <sentence>
+                <item start="1500" end="2250">Buongiorno</item>
+                <item start="2250" end="3000">a tutti</item>
+            </sentence>
+            <sentence>
+                <item start="3723456" end="3724000">Arrivederci</item>
+            </sentence>
+        </type>
+    </annotation>
+</transcript>

@@ -15,7 +15,7 @@ test('it uses correct model', function () {
 });
 
 test('it has form schema', function () {
-    $schema = EventResource::getFormSchema();
+    $schema = app(EventResource::getFormClass())->getFormSchema();
     expect($schema)->toBeArray()
         ->and(isset($schema['event_details']))->toBeTrue();
 });

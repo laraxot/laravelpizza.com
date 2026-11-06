@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Lang\View\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Illuminate\View\View;
 use Modules\Lang\Filament\Widgets\LanguageSwitcherWidget;
 
 /**
@@ -34,10 +34,7 @@ class LanguageSwitcher extends Component
     public function render(): View
     {
         if (! LanguageSwitcherWidget::canView()) {
-            /** @var view-string $view */
-            $view = 'lang::components.empty';
-
-            return view($view);
+            return view('lang::components.empty');
         }
 
         // Ottiene i dati pubblici dal widget
@@ -47,6 +44,6 @@ class LanguageSwitcher extends Component
             'widget_id' => 'language-switcher-'.uniqid(),
         ];
 
-        return \view('lang::components.language-switcher', $viewData);
+        return view('lang::components.language-switcher', $viewData);
     }
 }

@@ -1,3 +1,11 @@
+---
+title: "XotBaseStatsOverviewWidget - Esempi Pratici"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasestatsoverviewwidget - esempi pratici xot"
+---
 # XotBaseStatsOverviewWidget - Esempi Pratici
 
 ## Panoramica

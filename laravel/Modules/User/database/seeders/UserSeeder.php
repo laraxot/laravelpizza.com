@@ -7,6 +7,7 @@ namespace Modules\User\Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Modules\User\Database\Factories\TeamFactory;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
@@ -27,10 +28,12 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('👤 Inizializzazione seeding User...');
+        if ($this->command !== null) {
+            $this->command->info('👤 Inizializzazione seeding User...');
+        }
 
         // Disabilita i controlli di foreign key (solo per MySQL)
-        if ('sqlite' !== DB::getDriverName()) {
+        if (DB::getDriverName() !== 'sqlite') {
             DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         }
 
@@ -38,10 +41,12 @@ class UserSeeder extends Seeder
             $this->seedSystemRolesAndPermissions();
             $this->seedSystemTeams();
 
-            $this->command->info('✅ Seeding User completato con successo!');
+            if ($this->command !== null) {
+                $this->command->info('✅ Seeding User completato con successo!');
+            }
         } finally {
             // Riabilita i controlli di foreign key (solo per MySQL)
-            if ('sqlite' !== DB::getDriverName()) {
+            if (DB::getDriverName() !== 'sqlite') {
                 DB::statement('SET FOREIGN_KEY_CHECKS=1;');
             }
         }
@@ -52,7 +57,9 @@ class UserSeeder extends Seeder
      */
     private function seedSystemRolesAndPermissions(): void
     {
-        $this->command->info('🔐 Creazione ruoli e permessi di sistema...');
+        if ($this->command !== null) {
+            $this->command->info('🔐 Creazione ruoli e permessi di sistema...');
+        }
 
         // Permessi di sistema
         $systemPermissions = [
@@ -157,8 +164,12 @@ class UserSeeder extends Seeder
             'leave teams',
         ]);
 
-        $this->command->info('   ✓ Creati '.count($systemPermissions));
-        $this->command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)');
+        if ($this->command !== null) {
+            $this->command->info('   ✓ Creati '.count($systemPermissions));
+        }
+        if ($this->command !== null) {
+            $this->command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)');
+        }
     }
 
     /**
@@ -166,20 +177,26 @@ class UserSeeder extends Seeder
      */
     private function seedSystemTeams(): void
     {
-        $this->command->info('👥 Creazione team di sistema...');
+        if ($this->command !== null) {
+            $this->command->info('👥 Creazione team di sistema...');
+        }
 
-        $adminTeam = $this->createTeam('Amministratori');
-        $devTeam = $this->createTeam('Sviluppatori');
-        $supportTeam = $this->createTeam('Supporto Clienti');
-        $marketingTeam = $this->createTeam('Marketing');
-        $generalTeam = $this->createTeam('Team Generale');
+        $teams = array_map($this->createTeam(...), [
+            'Amministratori',
+            'Sviluppatori',
+            'Supporto Clienti',
+            'Marketing',
+            'Team Generale',
+        ]);
 
-        $this->command->info('   ✓ Creati 5 team di sistema');
+        if ($this->command !== null) {
+            $this->command->info('   ✓ Creati '.count($teams).' team di sistema');
+        }
     }
 
     private function createTeam(string $name): Team
     {
-        $factory = \Modules\User\Database\Factories\TeamFactory::new();
+        $factory = TeamFactory::new();
         /** @var Team $team */
         $team = $factory->create([
             'name' => $name,

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Audit 'Obbligatorio' in Non-Italian Translation Files"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Audit "Obbligatorio" in Non-Italian Translation Files
 
 **Data**: 2025-08-08 12:29:30

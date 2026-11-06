@@ -49,9 +49,7 @@ abstract class BaseModelLang extends XotBaseModel
     protected $keyType = 'string';
 
     /** @var list<string> */
-    protected $hidden = [
-        // 'password'
-    ];
+    protected $hidden = [];
 
     // -----------
     /*
@@ -61,7 +59,10 @@ abstract class BaseModelLang extends XotBaseModel
      */
 
     /**
-     * @return array<string, string> */
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [

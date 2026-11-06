@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogActivityAction;
 use Modules\Activity\Tests\TestCase;
@@ -28,7 +27,8 @@ test('LogActivityAction can be instantiated', function () {
         description: 'Test Description'
     );
 
-    Assert::assertInstanceOf(LogActivityAction::class, $action);
+    Assert::assertSame('test_type', $action->type);
+    Assert::assertSame('Test Description', $action->description);
 });
 
 test('LogActivityAction can execute', function () {
@@ -50,5 +50,5 @@ test('LogActivityAction can execute', function () {
         description: 'Test Description'
     );
 
-    Assert::assertInstanceOf(LogActivityAction::class, $action);
+    Assert::assertSame(['key' => 'value'], $action->properties);
 });

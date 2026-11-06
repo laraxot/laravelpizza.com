@@ -11,7 +11,7 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Filament\Support\Exceptions\Halt;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\User\Datas\PasswordData;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
@@ -45,8 +45,7 @@ class Password extends XotBasePage
     /**
      * Definisce la struttura dello schema.
      *
-     * @param Schema $schema Lo schema da configurare
-     *
+     * @param  Schema  $schema  Lo schema da configurare
      * @return Schema Lo schema configurato
      */
     public function schema(Schema $schema): Schema
@@ -86,16 +85,15 @@ class Password extends XotBasePage
         try {
             /** @var array<string, mixed> $data */
             $data = $this->form->getState();
-            TenantService::saveConfig('password', $data);
+            app(SaveTenantConfigAction::class)->execute('password', $data);
 
             // $this->handleRecordUpdate($this->getUser(), $data);
-        } catch (Halt $exception) {
-            dddx($exception->getMessage());
-
+        } catch (Halt) {
+            // Halt e' il segnale Filament di stop volontario: chi lo lancia ha gia' avvisato l'utente.
             return;
         }
         Notification::make()
-            ->title('Saved successfully')
+            ->title(__('user::notifications.settings_saved.title'))
             ->success()
             ->send();
     }
@@ -126,9 +124,8 @@ class Password extends XotBasePage
     /**
      * Gestisce l'aggiornamento del record.
      *
-     * @param Model                $record Il record da aggiornare
-     * @param array<string, mixed> $data   I dati per l'aggiornamento
-     *
+     * @param  Model  $record  Il record da aggiornare
+     * @param  array<string, mixed>  $data  I dati per l'aggiornamento
      * @return Model Il record aggiornato
      */
     protected function handleRecordUpdate(Model $record, array $data): Model

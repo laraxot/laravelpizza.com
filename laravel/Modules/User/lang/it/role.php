@@ -295,11 +295,23 @@ return [
         ],
         'createAnother' => [
             'tooltip' => 'createAnother',
+            'label' => 'createAnother',
+            'icon' => 'createAnother',
         ],
         'submit' => [
             'tooltip' => 'submit',
             'icon' => 'submit',
             'label' => 'submit',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'tooltip' => 'resetColumnManager',
         ],
     ],
     'sections' => [
@@ -397,6 +409,6 @@ return [
         'editor' => 'Editor',
         'user' => 'Utente',
     ],
-    'label' => 'role',
+    'label' => 'Ruolo',
     'plural_label' => 'Role (Plurale)',
 ];

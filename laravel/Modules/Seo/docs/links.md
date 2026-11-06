@@ -1,3 +1,15 @@
+---
+title: "links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "links"
+issues: []
+discussions: []
+status: active
+---
+
 
 
 https://splade.dev/docs/title-meta
@@ -65,3 +77,23 @@ https://www.coine.it/web-developing/laravel-localization-seo-friendly/
 
 
 
+---
+
+
+title: "links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "links"
+issues: []
+discussions: []
+## Contenuto originale (txt)
+
+---
+module: theme
+topic: links
+canonical: ../../../Themes/docs/shared-components/links-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/links-Modules.md

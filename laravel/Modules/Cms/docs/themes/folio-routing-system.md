@@ -1,3 +1,15 @@
+---
+title: "folio routing system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "folio routing system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Folio Routing System
 
 ## Overview

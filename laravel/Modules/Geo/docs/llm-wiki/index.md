@@ -1,3 +1,15 @@
+---
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module Wiki Index
 
 > **Module**: Geo
@@ -5,11 +17,10 @@
 > **Created**: 2026-04-15
 
 ---
-
 ## Concepts
 
-- [Litelement in JS only rule](concepts/litelement-in-js-only-rule.md)
-- [No docs archive rule](concepts/no-docs-archive-rule.md)
+- [Litelement in JS only rule](../wiki/concepts/litelement-in-js-only-rule.md)
+- [No docs archive rule](../wiki/concepts/no-docs-archive-rule.md)
 - [Wiki sacred structure rule](concepts/wiki-sacred-structure-rule.md)
 - [CoordinatePicker Architecture](concepts/coordinate-picker-architecture.md)
 
@@ -46,7 +57,7 @@ _No troubleshooting pages created yet_
 ### Related Project Concepts
 
 - [Laraxot Architecture](../../docs/wiki/concepts/laraxot-architecture.md)
-- [Actions Over Services](../../docs/wiki/concepts/actions-over-services.md)
+- [Actions Over Services](../../../../../docs/wiki/concepts/actions-over-services.md)
 - [PHPStan Level 10](../../docs/wiki/concepts/phpstan-level10.md)
 
 ## Module's Role in Project

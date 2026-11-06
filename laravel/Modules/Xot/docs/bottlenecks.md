@@ -1,3 +1,11 @@
+---
+title: "Colli di Bottiglia e Soluzioni - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "colli di bottiglia e soluzioni - modulo xot xot"
+---
 # Colli di Bottiglia e Soluzioni - Modulo Xot
 
 ## Panoramica
@@ -683,7 +691,7 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 
 ## Collegamenti
 - [Roadmap Principale](./roadmap.md)
-- [Best Practices Performance](./BEST-PRACTICES.md#performance)
+- [Best Practices Performance](best-practices.md#performance)
 - [Struttura Moduli](./MODULE_STRUCTURE.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md

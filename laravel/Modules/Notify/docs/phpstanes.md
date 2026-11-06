@@ -1,3 +1,15 @@
+---
+title: "phpstanes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstanes"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔧 PHPStan Fixes - Modulo Notify - Gennaio 2025
 
 **Status**: ✅ COMPLETATO CON SUCCESSO
@@ -228,7 +240,7 @@ public function toMail(object $notifiable): MailMessage
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Notify](./readme.md)
+- [README.md Modulo Notify](./README.md)
 - [Template Management](./template-management.md)
 - [Best Practices](./best-practices.md)
 
@@ -238,7 +250,6 @@ public function toMail(object $notifiable): MailMessage
 - [Laravel Mail Best Practices](https://laravel.com/docs/mail)
 
 ---
-
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025
 **📦 Versione**: 1.0
 **🐛 PHPStan Level**: 9 ✅

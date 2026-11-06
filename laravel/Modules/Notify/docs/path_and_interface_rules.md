@@ -1,3 +1,15 @@
+---
+title: "path and interface rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "path and interface rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole di Percorso e Interfacce nel Modulo Notify
 
 ## Principi Fondamentali
@@ -16,7 +28,7 @@
 
 ### Directory Fisiche (path su disco)
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/
+/var/www/html/saluteora/laravel/Modules/Notify/
 ├── app/                           # Directory fisica con app minuscolo
 │   ├── Actions/                  
 │   │   ├── Email/                # Azioni per email

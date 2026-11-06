@@ -1,3 +1,11 @@
+---
+title: "Analisi e Risoluzione Colli di Bottiglia - Modulo UI"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi e risoluzione colli di bottiglia - modulo ui xot"
+---
 # Analisi e Risoluzione Colli di Bottiglia - Modulo UI
 
 ## 1. Performance Re-render (Priorità: Alta)

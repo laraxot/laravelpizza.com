@@ -1,3 +1,15 @@
+---
+title: "ollama mcp rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama mcp rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📜 Ollama MCP Rules - Regole Condivise per Agenti AI
 
 **Data Creazione**: 2026-03-11  
@@ -6,7 +18,6 @@
 **Status**: Active
 
 ---
-
 ## 🚨 Regole Critiche
 
 ### 1. MCP-First Approach
@@ -44,6 +55,7 @@ Task complexity?
 ```json
 {
   "num_predict": 128-256,
+  "num_forecast": 128-256,
   "temperature": 0.1-0.3,
   "top_k": 10-20,
   "top_p": 0.5-0.7

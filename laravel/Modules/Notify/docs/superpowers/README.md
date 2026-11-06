@@ -1,3 +1,23 @@
+---
+title: "🦸 Superpowers - Agentic Skills Framework"
+type: index
+tags: [notify, docs, superpowers]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione superpowers readme 🦸 superpowers - agentic skills framework index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
+status: draft
+---
 # 🦸 Superpowers - Agentic Skills Framework
 
 > **Last Updated**: 2026-03-31  
@@ -287,6 +307,7 @@ class User extends Model {
 
 ```
 base_fixcity_fila5/
+base_ptvx_fila5/
 ├── .cursor/
 │   ├── superpowers-config.json    ← Optional configuration
 │   └── skills/                     ← Custom skills (if any)

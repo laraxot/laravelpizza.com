@@ -26,8 +26,7 @@ class FirebaseNotificationData extends Data
             'type' => $type,
             'title' => trans($main_module.'::notifications.'.mb_strtoupper($type).'.title'),
             'body' => trans($main_module.'::notifications.'.mb_strtoupper($type).'.body'),
-            'data' => [],
-        ];
+            'data' => []];
 
         return self::from($data);
     }

@@ -1,4 +1,7 @@
 ---
+qmd: "source"
+issues: []
+discussions: []
 title: "Source Title"
 type: source
 sources: ["raw/articles/source-filename.md"]
@@ -7,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [article, paper, documentation]
 related: []
+status: draft
 ---
 
 # {{title}}

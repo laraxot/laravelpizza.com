@@ -8,8 +8,7 @@ use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
-
+uses(TestCase::class);
 it('has correct cases', function (): void {
     Assert::assertCount(3, NotificationTypeEnum::cases());
 
@@ -37,19 +36,14 @@ it('color returns non empty string', function (): void {
 });
 
 it('each case has unique value', function (): void {
-    $values = array_map(static fn ($case) => $case->value, NotificationTypeEnum::cases());
+    $values = array_map(static fn (NotificationTypeEnum $case): string => $case->value, NotificationTypeEnum::cases());
     $uniqueValues = array_unique($values);
 
     Assert::assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
 });
 
 it('cases returns all enum instances', function (): void {
-    $cases = NotificationTypeEnum::cases();
-    Assert::assertCount(3, $cases);
-
-    foreach ($cases as $case) {
-        Assert::assertInstanceOf(NotificationTypeEnum::class, $case);
-    }
+    Assert::assertCount(3, NotificationTypeEnum::cases());
 });
 
 it('all cases have required methods', function (): void {

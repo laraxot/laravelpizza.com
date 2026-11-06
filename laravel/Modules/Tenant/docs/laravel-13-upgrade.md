@@ -1,3 +1,15 @@
+---
+title: "laravel 13 upgrade"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel 13 upgrade"
+issues: []
+discussions: []
+status: draft
+---
+
 # Upgrade Laravel 13 - Tenant 🐄✨
 
 ## 🎯 Visione Architetturale

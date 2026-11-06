@@ -1,7 +1,0 @@
----
-module: theme
-topic: nwidart-to-study
-canonical: ../../../Themes/docs/shared-components/nwidart-to-study.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/nwidart-to-study.md

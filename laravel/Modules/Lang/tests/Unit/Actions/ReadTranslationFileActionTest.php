@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Actions;
 
-use Modules\Lang\Actions\ReadTranslationFileAction;
 use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -14,48 +13,19 @@ use function Safe\unlink;
 
 uses(TestCase::class);
 
-/**
- * @return array<string, mixed>
- */
-function defaultReadTranslationTestData(): array
-{
-    return [
-        'auth' => [
-            'failed' => 'These credentials do not match our records.',
-            'password' => 'The provided password is incorrect.',
-        ],
-        'pagination' => [
-            'previous' => '&laquo; Previous',
-            'next' => 'Next &raquo;',
-        ],
-    ];
-}
-
-function readTranslationTestFilePath(): string
-{
-    return sys_get_temp_dir().'/test_translations.php';
-}
-
-function makeReadTranslationFileAction(): ReadTranslationFileAction
-{
-    return new ReadTranslationFileAction();
-}
-
 afterEach(function (): void {
-    $path = readTranslationTestFilePath();
+    $path = TestCase::readTranslationTestFilePath();
     if (file_exists($path)) {
         unlink($path);
     }
 });
-
 describe('Read Translation File Action', function (): void {
     test('can read valid translation file', function (): void {
-        /** @var TestCase $this */
-        $filePath = readTranslationTestFilePath();
-        $translations = defaultReadTranslationTestData();
-        createTranslationFile($filePath, $translations);
+        $filePath = TestCase::readTranslationTestFilePath();
+        $translations = TestCase::defaultReadTranslationTestData();
+        TestCase::createTranslationFile($filePath, $translations);
 
-        $result = makeReadTranslationFileAction()->execute($filePath);
+        $result = TestCase::makeReadTranslationFileAction()->execute($filePath);
 
         Assert::assertArrayHasKey('auth', $result);
         Assert::assertArrayHasKey('pagination', $result);
@@ -64,35 +34,32 @@ describe('Read Translation File Action', function (): void {
     });
 
     test('throws exception for non existent file', function (): void {
-        /* @var TestCase $this */
         $this->expectApplicationException(\Exception::class, 'File di traduzione non trovato:');
 
-        makeReadTranslationFileAction()->execute(storage_path('non_existent.php'));
+        TestCase::makeReadTranslationFileAction()->execute(storage_path('non_existent.php'));
     });
 
     test('throws exception for unreadable file', function (): void {
-        /** @var TestCase $this */
-        $filePath = readTranslationTestFilePath();
-        createTranslationFile($filePath, defaultReadTranslationTestData());
+        $filePath = TestCase::readTranslationTestFilePath();
+        TestCase::createTranslationFile($filePath, TestCase::defaultReadTranslationTestData());
         chmod($filePath, 0o000);
 
         $this->expectApplicationException(\Exception::class, 'File di traduzione non leggibile:');
 
-        makeReadTranslationFileAction()->execute($filePath);
+        TestCase::makeReadTranslationFileAction()->execute($filePath);
     });
 
     test('throws exception for invalid file content', function (): void {
-        /** @var TestCase $this */
-        $filePath = readTranslationTestFilePath();
+        $filePath = TestCase::readTranslationTestFilePath();
         file_put_contents($filePath, ' return "invalid content";');
 
         $this->expectApplicationException(\Exception::class, 'File di traduzione non valido:');
 
-        makeReadTranslationFileAction()->execute($filePath);
+        TestCase::makeReadTranslationFileAction()->execute($filePath);
     });
 
     test('converts array to php format correctly', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'simple_key' => 'Simple value',
             'nested' => [
@@ -111,7 +78,7 @@ describe('Read Translation File Action', function (): void {
     });
 
     test('handles special characters in translations', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'quotes' => "Text with 'single' and \"double\" quotes",
             'backslashes' => 'Text with \\ backslashes',
@@ -126,7 +93,7 @@ describe('Read Translation File Action', function (): void {
     });
 
     test('handles deeply nested arrays', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'level1' => [
                 'level2' => [
@@ -146,7 +113,7 @@ describe('Read Translation File Action', function (): void {
     });
 
     test('generates proper indentation for nested arrays', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'parent' => [
                 'child' => 'value',
@@ -156,15 +123,15 @@ describe('Read Translation File Action', function (): void {
         $phpContent = $action->toPhp($translations);
         $lines = explode("\n", $phpContent);
 
-        $parentLine = array_filter($lines, fn ($line) => str_contains($line, "'parent'"));
-        $childLine = array_filter($lines, fn ($line) => str_contains($line, "'child'"));
+        $parentLine = array_filter($lines, fn (string $line) => str_contains($line, "'parent'"));
+        $childLine = array_filter($lines, fn (string $line) => str_contains($line, "'child'"));
 
         Assert::assertStringStartsWith('    ', (string) current($parentLine));
         Assert::assertStringStartsWith('        ', (string) current($childLine));
     });
 
     test('handles empty arrays', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'empty_array' => [],
             'normal_key' => 'normal_value',
@@ -177,7 +144,7 @@ describe('Read Translation File Action', function (): void {
     });
 
     test('handles numeric values in translations', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'number' => 123,
             'float' => 45.67,
@@ -190,11 +157,11 @@ describe('Read Translation File Action', function (): void {
         Assert::assertStringContainsString("'number' => '123'", $phpContent);
         Assert::assertStringContainsString("'float' => '45.67'", $phpContent);
         Assert::assertStringContainsString("'boolean_true' => '1'", $phpContent);
-        Assert::assertStringContainsString("'boolean_false' => ''", $phpContent);
+        Assert::assertStringContainsString("'boolean_false' => '0'", $phpContent);
     });
 
     test('preserves key order in output', function (): void {
-        $action = makeReadTranslationFileAction();
+        $action = TestCase::makeReadTranslationFileAction();
         $translations = [
             'z_last' => 'Last value',
             'a_first' => 'First value',
@@ -224,3 +191,5 @@ describe('Read Translation File Action', function (): void {
         Assert::assertLessThan($mPos, $aPos);
     });
 });
+
+

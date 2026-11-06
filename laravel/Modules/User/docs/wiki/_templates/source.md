@@ -6,7 +6,11 @@ confidence: high
 created: {{date}}
 updated: {{date}}
 tags: [article, paper, documentation]
-related: []
+related:
+  - "./concept.md"
+  - "./entity.md"
+status: draft
+qmd: "{{title}} user"
 ---
 
 # {{title}}

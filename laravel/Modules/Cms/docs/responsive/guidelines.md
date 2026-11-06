@@ -1,3 +1,15 @@
+---
+title: "guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "guidelines"
+issues: []
+discussions: []
+status: draft
+---
+
 # Linee Guida Responsive Design
 
 ## Introduzione
@@ -134,7 +146,7 @@ Il design responsive è fondamentale per il successo di un sito web moderno, con
   - Esperienza utente
 
 ## Collegamenti
-- [Anatomia Sito Web](../structure/layout.md)
+- [Anatomia Sito Web](../architecture/structure/layout.md)
 - [Componenti Responsive](../components/responsive.md)
 - [Performance Guidelines](../performance/guidelines.md)
 

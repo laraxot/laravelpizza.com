@@ -4,110 +4,140 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-use Modules\Cms\Tests\TestCase;
-use Modules\User\Filament\Widgets\Auth\LoginWidget;
+use Modules\User\Filament\Widgets\LoginWidget;
+use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-use PHPUnit\Framework\Assert;
 
+use function Pest\Laravel\assertAuthenticated;
+use function Pest\Laravel\assertGuest;
 use function Safe\class_implements;
 
-uses(TestCase::class);
+// LOGIN WIDGET TESTS - Filament Component
+// ✅ Test del WIDGET Filament, non della pagina
+// ✅ Focus su: rendering, form interaction, authentication logic
+// ✅ Architettura: Filament Widget + XotData + dynamic resolution
+
+// WIDGET STRUCTURE TESTS
+
 test('widget can be rendered', function (): void {
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
+
     $component->assertStatus(200);
+});
+
+test('widget has correct view', function (): void {
+    expect(app(GetViewByClassAction::class)->execute(LoginWidget::class))->toContain('filament.widgets.login');
 });
 
 test('widget initializes correctly', function (): void {
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
-    $component
-        ->assertSet('data.remember', false)
-        ->assertSet('data.email', null)
-        ->assertSet('data.password', null);
+
+    // Widget dovrebbe inizializzare la proprietà data
+    $component->assertSet('data', []);
 });
+
+// WIDGET DATA BINDING TESTS
 
 test('can set form data', function (): void {
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
+
+    // Set form data
     $component->set('data.email', 'test@example.com')->set('data.password', 'password123');
+
+    // Verifica che i dati siano stati impostati
     $component->assertSet('data.email', 'test@example.com')->assertSet('data.password', 'password123');
 });
 
+// WIDGET AUTHENTICATION LOGIC TESTS
+
 test('authenticates user with valid credentials', function (): void {
-    $email = TestCase::pestGenerateUniqueEmail();
-    TestCase::pestCreateTestUser([
+    // ✅ Utilizzo funzione centralizzata dal TestCase
+    $email = $this->generateUniqueEmail();
+    $this->createTestUser([
         'email' => $email,
         'password' => Hash::make('password123'),
     ]);
-    cmsAssertGuest();
+
+    assertGuest();
 
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
-    $component->set('data.email', $email)->set('data.password', 'password123')->call('save');
 
-    cmsAssertAuthenticated();
+    $component->set('data.email', $email)->set('data.password', 'password123')->call('login');
 
+    // Verifica che l'utente sia autenticato
+    assertAuthenticated();
+
+    // Verifica che sia l'utente corretto
     $authenticatedUser = Auth::user();
-    Assert::assertNotNull($authenticatedUser);
-    Assert::assertSame($email, $authenticatedUser->email);
+    expect($authenticatedUser)->not->toBeNull();
+    expect($authenticatedUser?->email)->toBe($email);
 });
 
 test('handles invalid credentials gracefully', function (): void {
-    $email = TestCase::pestGenerateUniqueEmail();
-    TestCase::pestCreateTestUser([
+    // ✅ Utilizzo funzioni centralizzate dal TestCase
+    $email = $this->generateUniqueEmail();
+    $this->createTestUser([
         'email' => $email,
         'password' => Hash::make('correct_password'),
     ]);
-    cmsAssertGuest();
+
+    assertGuest();
 
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
-    $component->set('data.email', $email)->set('data.password', 'wrong_password')->call('save');
 
-    cmsAssertGuest();
+    // Tenta login con password sbagliata
+    $component->set('data.email', $email)->set('data.password', 'wrong_password')->call('login');
+
+    // L'utente dovrebbe rimanere guest
+    assertGuest();
 });
 
+// WIDGET XOTDATA INTEGRATION TESTS
+
 test('authentication works regardless of user type', function (): void {
-    $email = TestCase::pestGenerateUniqueEmail();
-    TestCase::pestCreateTestUser([
+    // ✅ Utilizzo funzioni centralizzate dal TestCase
+    $email = $this->generateUniqueEmail();
+    $this->createTestUser([
         'email' => $email,
         'password' => Hash::make('password123'),
     ]);
-    cmsAssertGuest();
+
+    assertGuest();
 
     $component = Livewire::test(LoginWidget::class);
-    /* @var Testable<\Livewire\Component> $component */
-    $component->set('data.email', $email)->set('data.password', 'password123')->call('save');
 
-    cmsAssertAuthenticated();
+    $component->set('data.email', $email)->set('data.password', 'password123')->call('login');
 
+    assertAuthenticated();
+
+    // Verifica che l'utente autenticato sia del tipo corretto
     $authenticatedUser = Auth::user();
-    /** @var class-string<object> $userClass */
-    $userClass = XotData::make()->getUserClass();
-    Assert::assertInstanceOf($userClass, $authenticatedUser);
-    Assert::assertSame($email, $authenticatedUser->email);
+    expect($authenticatedUser)->toBeInstanceOf($this->getUserClass());
+    expect($authenticatedUser?->email)->toBe($email);
 });
 
 test('getUserClass returns valid class', function (): void {
-    /** @var class-string<object> $userClass */
-    $userClass = XotData::make()->getUserClass();
+    // ✅ Utilizzo funzione centralizzata dal TestCase
+    $userClass = $this->getUserClass();
 
-    Assert::assertTrue(class_exists($userClass));
+    expect(class_exists($userClass))->toBeTrue();
 
+    // Verifica che il class implementi UserContract
     $interfaces = class_implements($userClass);
-    Assert::assertNotFalse($interfaces);
-    Assert::assertContains(UserContract::class, $interfaces);
+    expect($interfaces)->toContain(UserContract::class);
 });
 
 test('createTestUser creates valid instances', function (): void {
-    $user = TestCase::pestCreateTestUser();
-    /** @var class-string<Illuminate\Database\Eloquent\Model&UserContract> $userClass */
-    $userClass = XotData::make()->getUserClass();
-    $foundUser = $userClass::query()->where('email', $user->email)->first();
-    Assert::assertInstanceOf(UserContract::class, $foundUser);
-    Assert::assertSame($user->email, $foundUser->email);
+    // ✅ Utilizzo funzione centralizzata dal TestCase
+    $user = $this->createTestUser();
+
+    // Verifica proprietà richieste per autenticazione
+    expect($user->email)->toBeString();
+    expect($user->getAuthPassword())->not->toBeEmpty();
+
+    // Verifica che l'utente sia nel database
+    $userClass = $this->getUserClass();
+    $foundUser = $userClass::where('email', $user->email)->first();
+    expect($foundUser?->getAttribute('email'))->toBe($user->email);
 });

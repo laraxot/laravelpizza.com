@@ -1,3 +1,15 @@
+---
+title: "ui ai tooling on demand"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui ai tooling on demand"
+issues: []
+discussions: []
+status: draft
+---
+
 # Tooling UI/AI on demand per il modulo Geo
 
 ## Scopo

@@ -1,3 +1,15 @@
+---
+title: "reusable components philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusable components philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🧩 Componenti Riutilizzabili - Filosofia Zen
 
 **Version**: 1.0.0  
@@ -5,7 +17,6 @@
 **Status**: ✅ PHILOSOPHY DEFINED
 
 ---
-
 ## 🎯 The Zen of Reusable Components
 
 > "Un componente, infiniti usi. Scrivi una volta, usa ovunque."
@@ -39,20 +50,21 @@
 ### Principle 1: Single Responsibility
 
 ```blade
-{{-- ✅ CORRETTO: Un componente = una responsabilità —}}
-<x-predict-view.outcomes-grid :outcomes="$outcomes" />
-<x-predict-view.stats-bar :stats="$stats" />
-<x-predict-view.order-book :orderBook="$orderBook" />
+{{-- ✅ CORRETTO: Un componente = una responsabilità -}}
+<x-forecast-view.outcomes-grid :outcomes="$outcomes" />
+<x-forecast-view.stats-bar :stats="$stats" />
+<x-forecast-view.order-book :orderBook="$orderBook" />
 
-{{-- ❌ SBAGLIATO: Componente "god" che fa tutto —}}
-<x-predict-view.everything :data="$everything" />
+{{-- ❌ SBAGLIATO: Componente "god" che fa tutto -}}
+<x-forecast-view.everything :data="$everything" />
 ```
 
 ### Principle 2: Composability
 
 ```blade
-{{-- Componenti piccoli si combinano —}}
+{{-- Componenti piccoli si combinano -}}
 @livewire('view-predict-widget')
+@livewire('view-forecast-widget')
     ├── header.blade.php
     ├── stats-bar.blade.php
     ├── outcomes-grid.blade.php
@@ -83,20 +95,20 @@ if ($isBinary) {
     $stats = $stats ?? [];
 @endphp
 
-{{-- ❌ SBAGLIATO: Variabili globali implicite —}}
+{{-- ❌ SBAGLIATO: Variabili globali implicite -}}
 {{ $outcomes[0]['title'] }} {{-- Da dove viene? --}}
 ```
 
 ### Principle 5: Minimal Logic
 
 ```blade
-{{-- ✅ CORRETTO: Logica nelle Action classes —}}
+{{-- ✅ CORRETTO: Logica nelle Action classes -}}
 @php
-    $orderBook = BuildOrderBookAction::make()->execute($predict);
+    $orderBook = BuildOrderBookAction::make()->execute($forecast);
 @endphp
-<x-predict-view.order-book :orderBook="$orderBook" />
+<x-forecast-view.order-book :orderBook="$orderBook" />
 
-{{-- ❌ SBAGLIATO: Logica complessa nel blade —}}
+{{-- ❌ SBAGLIATO: Logica complessa nel blade -}}
 @php
     // 100 righe di logica...
 @endphp
@@ -135,6 +147,7 @@ if ($isBinary) {
 | Component | File | Reusability |
 |-----------|------|-------------|
 | Header | `header.blade.php` | All predict pages |
+| Header | `header.blade.php` | All forecast pages |
 | Sidebar | `sidebar-enhanced.blade.php` | All detail pages |
 | Tabs | `tabs.blade.php` | All content types |
 
@@ -149,11 +162,13 @@ if ($isBinary) {
      * 
      * @var array $data Input data
      * @var \Modules\Predict\Models\Predict $predict Model
+     * @var \Modules\Forecast\Models\Forecast $forecast Model
      */
     
     // Initialize with defaults
     $data = $data ?? [];
     $predict = $predict ?? null;
+    $forecast = $forecast ?? null;
     
     // Helper function for translations
     $tx = static function (string $key, string $fallback): string {
@@ -166,6 +181,7 @@ if ($isBinary) {
     {{-- Header --}}
     <div class="header">
         <h3>{{ $tx('predict::titles.component', 'Title') }}</h3>
+        <h3>{{ $tx('forecast::titles.component', 'Title') }}</h3>
     </div>
     
     {{-- Content --}}
@@ -191,21 +207,23 @@ if ($isBinary) {
 ### 1. Lazy Loading
 
 ```blade
-{{-- Load heavy components last —}}
+{{-- Load heavy components last -}}
 <x-predict-view.outcomes-grid :outcomes="$outcomes" />
 <x-predict-view.order-book :orderBook="$orderBook" />
-@livewire('comments-widget') {{-- Lazy via Livewire —}}
+<x-forecast-view.outcomes-grid :outcomes="$outcomes" />
+<x-forecast-view.order-book :orderBook="$orderBook" />
+@livewire('comments-widget') {{-- Lazy via Livewire -}}
 ```
 
 ### 2. Minimize Queries
 
 ```php
 // ✅ CORRETTO: Single query with eager loading
-$predict = Predict::with(['ratings', 'transactions'])->find($id);
+$forecast = Forecast::with(['ratings', 'transactions'])->find($id);
 
 // ❌ SBAGLIATO: N+1 queries
-$predict = Predict::find($id);
-foreach ($predict->ratings as $rating) {
+$forecast = Forecast::find($id);
+foreach ($forecast->ratings as $rating) {
     $rating->transactions; // Query per outcome!
 }
 ```
@@ -216,9 +234,9 @@ foreach ($predict->ratings as $rating) {
 @php
     // Cache order book calculation
     $orderBook = Cache::remember(
-        "order_book_{$predict->id}",
+        "order_book_{$forecast->id}",
         300, // 5 minutes
-        fn() => BuildOrderBookAction::make()->execute($predict)
+        fn() => BuildOrderBookAction::make()->execute($forecast)
     );
 @endphp
 ```
@@ -237,6 +255,7 @@ it('renders outcomes grid with 6 outcomes', function () {
     ];
     
     $html = Blade::render('<x-predict-view.outcomes-grid :outcomes="$outcomes" />', [
+    $html = Blade::render('<x-forecast-view.outcomes-grid :outcomes="$outcomes" />', [
         'outcomes' => $outcomes
     ]);
     
@@ -248,10 +267,10 @@ it('renders outcomes grid with 6 outcomes', function () {
 ### Integration Tests
 
 ```php
-it('displays F1 predict detail page', function () {
-    $predict = Predict::factory()->create(['slug' => 'f1-world-champion-2026']);
+it('displays F1 forecast detail page', function () {
+    $forecast = Forecast::factory()->create(['slug' => 'f1-world-champion-2026']);
     
-    $response = $this->get('/it/predicts/f1-world-champion-2026');
+    $response = $this->get('/it/forecasts/f1-world-champion-2026');
     
     $response->assertStatus(200)
         ->assertSee('Verstappen')
@@ -264,18 +283,18 @@ it('displays F1 predict detail page', function () {
 ## 🔗 Related Documentation
 
 ### Module Docs
-- **[Components Index](laravel/Modules/Predict/resources/views/components/predict-view/00-INDEX.md)** - All components
-- **[Reusable Architecture](laravel/Modules/Predict/docs/components/reusable-architecture.md)** - Design principles
-- **[Multi-Outcome Fundamental](laravel/Modules/Predict/docs/MULTI-OUTCOME-FUNDAMENTAL.md)** - Core principle
+- **[Components Index](laravel/Modules/Forecast/resources/views/components/forecast-view/00-index.md)** - All components
+- **[Reusable Architecture](laravel/Modules/Forecast/docs/components/reusable-architecture.md)** - Design principles
+- **[Multi-Outcome Fundamental](laravel/Modules/Forecast/docs/MULTI-OUTCOME-FUNDAMENTAL.md)** - Core principle
 
 ### Theme Docs
-- **[Theme Zero Components](laravel/Themes/Zero/docs/components/00-INDEX.md)** - Theme components
-- **[TwentyOne Integration](laravel/Themes/TwentyOne/docs/predict-integration.md)** - Theme integration
+- **[Theme Zero Components](laravel/Themes/Zero/docs/components/00-index.md)** - Theme components
+- **[TwentyOne Integration](laravel/Themes/TwentyOne/docs/forecast-integration.md)** - Theme integration
 
 ### AI Agents Docs
-- **[Rules Index](.agents/docs/rules/00-INDEX.md)** - Filament Tables rule
-- **[Skills Index](.agents/docs/skills/00-INDEX.md)** - Component skills
-- **[Guidelines Index](.agents/docs/guidelines/00-INDEX.md)** - Best practices
+- **[Rules Index](.agents/docs/rules/00-index.md)** - Filament Tables rule
+- **[Skills Index](.agents/docs/skills/00-index.md)** - Component skills
+- **[Guidelines Index](.agents/docs/guidelines/00-index.md)** - Best practices
 
 ---
 

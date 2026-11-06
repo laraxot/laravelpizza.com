@@ -2,73 +2,90 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\Tests\Feature\Filament\Widgets;
-
 use Illuminate\Support\Facades\Hash;
-use Modules\User\Database\Factories\UserFactory;
+use Illuminate\Support\MessageBag;
+use Illuminate\Validation\ValidationException;
+use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
 use Modules\User\Filament\Widgets\LoginWidget;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use PHPUnit\Framework\Assert;
 
+// Modulo User: DatabaseTransactions su DB di test (mai RefreshDatabase del TestCase root —
+// quello riesegue tutte le migration e rompe gli schema gia' allineati).
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    /* @var TestCase $this */
-    $this->widget = new LoginWidget();
+/**
+ * `Widgets\LoginWidget` e' l'alias di `Widgets\Auth\LoginWidget` (SSoT, coperto da
+ * `Widgets/Auth/LoginWidgetTest`): qui si verifica il contratto dell'alias usato dal tema.
+ * I campi del form non stanno nel widget ma in `UserForm::getLoginFormSchema()`.
+ */
+test('it can render widget', function (): void {
+    $view = (new ReflectionProperty($widget = new LoginWidget(), 'view'))->getValue($widget);
+
+    expect($view)->toBe('user::filament.widgets.login');
 });
 
-describe('Login Widget', function (): void {
-    test('it can render widget', function (): void {
-        $widget = new LoginWidget();
+test('it has correct form schema', function (): void {
+    expect(array_keys(UserForm::getLoginFormSchema()))->toBe(['email', 'password', 'remember']);
+});
 
-        $reflection = new \ReflectionClass($widget);
-        $property = $reflection->getProperty('view');
-        $property->setAccessible(true);
-        $view = $property->getValue($widget);
+test('it can authenticate user', function (): void {
+    skipUnlessUsersTableReady();
 
-        Assert::assertStringContainsString((string) 'pub_theme::filament.widgets.auth.login', (string) $view);
-    });
+    $user = User::factory()->create([
+        'email' => 'test@example.com',
+        'password' => Hash::make('password123'),
+    ]);
 
-    test('it has correct form schema', function (): void {
-        /** @var TestCase $this */
-        $widget = $this->requireLoginWidget();
-        $form = $widget->getFormSchema();
+    $widget = new LoginWidget();
+    $widget->form->fill([
+        'email' => 'test@example.com',
+        'password' => 'password123',
+        'remember' => true,
+    ]);
 
-        Assert::assertCount(3, $form);
-        $names = [];
-        foreach ($form as $component) {
-            if (method_exists($component, 'getName')) {
-                $names[] = $component->getName();
-            }
-        }
+    $widget->save();
 
-        Assert::assertContains('email', $names);
-        Assert::assertContains('password', $names);
-        Assert::assertContains('remember', $names);
-    });
+    // FixCity usa Modules\Fixcity\Models\User via XotData: l'istanza auth puo'
+    // essere la sottoclasse del progetto anche se la factory e' Modules\User\Models\User.
+    expect(auth()->check())->toBeTrue();
+    expect(SafeStringCastAction::cast(auth()->id()))->toBe(SafeStringCastAction::cast($user->getKey()));
+});
 
-    test('it can authenticate user', function (): void {
-        /** @var TestCase $this */
-        $widget = $this->requireLoginWidget();
-        if (! class_exists('CreateUsersTable')) {
-            $this->skipTest('Database not available for testing');
-        }
+test('it validates credentials', function (): void {
+    skipUnlessUsersTableReady();
 
-        /** @var User $user */
-        $user = UserFactory::new()->createOne([
-            'email' => 'test@example.com',
-            'password' => Hash::make('password123'),
-        ]);
+    $widget = new LoginWidget();
+    $widget->form->fill([
+        'email' => 'nonexistent@example.com',
+        'password' => 'wrongpassword',
+    ]);
 
-        $widget->form->fill([
-            'email' => 'test@example.com',
-            'password' => 'password123',
-            'remember' => true,
-        ]);
+    // Credenziali errate non lanciano: il widget aggiunge l'errore sul campo email.
+    $widget->save();
 
+    $errors = $widget->getErrorBag();
+    Assert::assertInstanceOf(MessageBag::class, $errors);
+    expect($errors->has('data.email'))->toBeTrue();
+});
+
+test('it requires email and password', function (): void {
+    $widget = new LoginWidget();
+    $widget->form->fill([
+        'email' => '',
+        'password' => '',
+    ]);
+
+    // Campi obbligatori vuoti: la validazione dello schema lancia prima di `Auth::attempt`.
+    try {
         $widget->save();
+    } catch (ValidationException $exception) {
+        expect(array_keys($exception->errors()))->toBe(['data.email', 'data.password']);
 
-        $this->assertAuthenticatedAs($user);
-    });
+        return;
+    }
+
+    Assert::fail('Expected a ValidationException for empty email and password.');
 });

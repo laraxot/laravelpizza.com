@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
+use Illuminate\Support\Collection;
 use Modules\Cms\Database\Factories\PageContentFactory;
 use Modules\Cms\Database\Factories\PageFactory;
 use Modules\Cms\Database\Factories\SectionFactory;
 use Modules\Cms\Models\Page;
 use Modules\Cms\Models\PageContent;
 use Modules\Cms\Models\Section;
-use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */
-    cmsSkipTest('Requires full Cms DB schema + container wiring; not available in minimal sqlite test bootstrap.');
+    cmsSkipTest('Requires full Cms DB schema + container wiring; the MySQL test database is not available in this workspace.');
 });
 
 test('cms module models work together in content management', function () {
@@ -50,6 +49,9 @@ test('cms module models work together in content management', function () {
     Assert::assertCount(1, $pages);
     Assert::assertCount(1, $pageContents);
     Assert::assertCount(1, $sections);
+    Assert::assertTrue($pages->first()?->is($page));
+    Assert::assertTrue($pageContents->first()?->is($pageContent));
+    Assert::assertTrue($sections->first()?->is($section));
 });
 
 test('cms module handles multilingual content correctly', function () {
@@ -107,7 +109,7 @@ test('cms module handles complex block structures', function () {
                 'mobile' => 1,
             ],
             'items' => array_map(
-                fn ($i) => [
+                fn (mixed $i) => [
                     'id' => $i,
                     'type' => 'content_card',
                     'title' => "Card {$i}",
@@ -125,7 +127,7 @@ test('cms module handles complex block structures', function () {
                         'author' => "Author {$i}",
                         'published_at' => now()->subDays($i)->toISOString(),
                         'categories' => ['Category '.(($i % 3) + 1), 'Category '.((($i + 1) % 3) + 1)],
-                        'tags' => array_map(fn ($t) => "tag{$t}", range(1, 5)),
+                        'tags' => array_map(fn (int $t): string => "tag{$t}", range(1, 5)),
                         'reading_time' => rand(2, 10),
                     ],
                     'actions' => [
@@ -373,21 +375,25 @@ test('cms module handles bulk operations efficiently', function () {
 test('cms module supports complex query patterns', function () {
     $pages = PageFactory::new()
         ->count(10)
-        ->createOne([
+        ->create([
             'content_blocks' => [['type' => 'hero', 'title' => 'Hero Section']],
         ]);
 
     $pageContents = PageContentFactory::new()
         ->count(8)
-        ->createOne([
+        ->create([
             'blocks' => [['type' => 'features', 'title' => 'Features']],
         ]);
 
     $sections = SectionFactory::new()
         ->count(6)
-        ->createOne([
+        ->create([
             'blocks' => [['type' => 'testimonial', 'title' => 'Testimonials']],
         ]);
+
+    Assert::assertCount(10, Collection::wrap($pages));
+    Assert::assertCount(8, Collection::wrap($pageContents));
+    Assert::assertCount(6, Collection::wrap($sections));
 
     $complexQuery = Page::query()->whereJsonContains('content_blocks', [['type' => 'hero']])->orderBy(
         'created_at',
@@ -398,7 +404,7 @@ test('cms module supports complex query patterns', function () {
 
     Assert::assertCount(10, $results);
 
-    $heroPages = $results->filter(fn ($page) => collect($page->content_blocks)->contains('type', 'hero'));
+    $heroPages = $results->filter(fn (mixed $page) => collect($page->content_blocks)->contains('type', 'hero'));
 
     Assert::assertCount(10, $heroPages);
 });

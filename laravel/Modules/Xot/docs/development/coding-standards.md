@@ -1,3 +1,13 @@
+---
+title: "Standard di Sviluppo"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, development]
+qmd: "Standard di Sviluppo"
+---
 # Standard di Sviluppo
 
 ## 1. Principi Generali
@@ -79,11 +89,11 @@ final class UserData extends Data
         #[Validation\Required]
         #[Validation\StringType]
         public readonly string $name,
-
+        
         #[Validation\Required]
         #[Validation\Email]
         public readonly string $email,
-
+        
         #[Validation\Nullable]
         #[Validation\StringType]
         public readonly ?string $phone = null,
@@ -116,7 +126,7 @@ use App\Models\User;
 class CreateUserAction
 {
     use QueueableAction;
-
+    
     public function execute(UserData $data): User
     {
         return User::create([
@@ -153,9 +163,9 @@ class CreateUserActionTest extends TestCase
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
-
+        
         $user = CreateUserAction::execute($userData);
-
+        
         $this->assertInstanceOf(User::class, $user);
         $this->assertEquals('John Doe', $user->name);
         $this->assertEquals('john@example.com', $user->email);
@@ -180,7 +190,7 @@ class UserManagementTest extends TestCase
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
-
+        
         $response->assertCreated();
         $this->assertDatabaseHas('users', [
             'name' => 'John Doe',
@@ -322,4 +332,4 @@ Log::error('User creation failed', [
 - Documentare solo codice complesso
 - Mantenere commenti aggiornati
 - Evitare commenti ovvi
-- Utilizzare PHPDoc per API pubbliche
+- Utilizzare PHPDoc per API pubbliche 

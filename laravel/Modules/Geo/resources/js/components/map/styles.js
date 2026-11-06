@@ -86,7 +86,38 @@ export const mapStyles = css`
         gap: 0.75rem;
         opacity: 1 !important;
         visibility: visible !important;
+        /* Contenitore trasparente: se catturasse i tocchi (larghezza = la riga di stato, 15rem) su un telefono lascerebbe
+           il 13% della mappa utilizzabile e il trascinamento farebbe scorrere la pagina. Solo i controlli sono interattivi. */
+        pointer-events: none !important;
+    }
+
+    .layer-controls-overlay .ctrl-btn,
+    .layer-controls-overlay .search-box,
+    .layer-controls-overlay button,
+    .layer-controls-overlay input,
+    .layer-controls-overlay a,
+    .layer-controls-overlay [role="listbox"] {
         pointer-events: auto !important;
+    }
+
+    .map-control-status {
+        pointer-events: none;
+        max-width: 15rem;
+        margin: 0;
+        padding: .5rem .65rem;
+        border-radius: .5rem;
+        background: #fff;
+        color: #17324d;
+        font-size: .8rem;
+        line-height: 1.25;
+        box-shadow: 0 4px 14px rgba(23, 50, 77, .16);
+    }
+
+    /* Area aria-live sempre nel DOM (gli screen reader annunciano solo il testo che cambia in un'area gia' presente): vuota non si vede. */
+    .map-control-status:empty {
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
     }
 
     .ctrl-btn {
@@ -107,6 +138,15 @@ export const mapStyles = css`
         visibility: visible !important;
         position: relative;
         z-index: 3002;
+    }
+
+    /* Pagine ospiti con un reset su button (es. body:has(.page-content[data-dc]) button, specificita' 0,2,2: sfondo trasparente,
+       bordo 0, raggio 0) lasciavano i pulsanti senza sfondo sopra la mappa. Il picker e' in light DOM e le regole del tema li' sono
+       spente dal plugin PostCSS: lo sfondo lo garantisce il componente, con specificita' 0,3,0 e senza !important. */
+    .map-container .ctrl-btn.ctrl-btn {
+        background: #ffffff;
+        border: 1px solid #94a3b8;
+        border-radius: 0.5rem;
     }
 
     .ctrl-btn:hover {

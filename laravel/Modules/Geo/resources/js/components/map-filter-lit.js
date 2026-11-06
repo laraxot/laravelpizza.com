@@ -6,12 +6,18 @@ import { customElement, property } from 'lit/decorators.js';
  * Web component per filtrare i marker del map-lit per tipo.
  * Usato insieme a <map-lit> nella pagina ticket-list.
  *
+ * Aggiorna anche l'elemento puntato dall'attributo `results-target`
+ * con il numero di risultati correnti (template ":count" nel
+ * `data-count-template`).
+ *
  * @example
  * <map-filter-lit map-id="ticket-map"></map-filter-lit>
  */
 class MapFilterLit extends LitElement {
     static properties = {
         mapId: { type: String, attribute: 'map-id' },
+        filters: { type: String },
+        total: { type: Number },
         types: { type: Array, state: true },
         counts: { type: Object, state: true },
     };
@@ -21,13 +27,32 @@ class MapFilterLit extends LitElement {
     constructor() {
         super();
         this.mapId = 'ticket-map';
+        this.filters = '[]';
+        this.total = 0;
         this.types = [];
         this.counts = {};
     }
 
     connectedCallback() {
         super.connectedCallback();
+        this._readFilters();
         this._initFromMap();
+    }
+
+    _readFilters() {
+        try {
+            const parsed = JSON.parse(this.filters || '[]');
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                this.types = parsed.map(item => ({
+                    value: String(item.value || item.id || ''),
+                    label: String(item.display_label || item.label || item.value || item.id || ''),
+                    count: Number(item.count || 0),
+                })).filter(item => item.value !== '');
+                this.counts = Object.fromEntries(this.types.map(item => [item.value, item.count]));
+            }
+        } catch (_) {
+            this.types = [];
+        }
     }
 
     _initFromMap() {
@@ -40,45 +65,76 @@ class MapFilterLit extends LitElement {
                 const typeVal = (typeof t === 'object' ? t.value : t) || 'other';
                 typeCounts[typeVal] = (typeCounts[typeVal] || 0) + 1;
             });
-            this.types = Object.keys(typeCounts);
-            this.counts = typeCounts;
-            this.requestUpdate();
+            if (Object.keys(typeCounts).length > 0) {
+                this.types = Object.keys(typeCounts).map(value => ({ value, label: value, count: typeCounts[value] }));
+                this.counts = typeCounts;
+                this.requestUpdate();
+            }
         }
     }
 
-    _handleTypeChange(e) {
-        const target = e.target;
-        const type = target.dataset.type;
+    _checkedTypes() {
+        return [...this.querySelectorAll('input[data-type]:checked')]
+            .map(inp => inp.dataset.type);
+    }
+
+    _handleTypeChange() {
         const mapEl = document.getElementById(this.mapId);
+        const checkedTypes = this._checkedTypes();
 
         if (mapEl && typeof mapEl.filterByTypes === 'function') {
-            // Get all checked types
-            const checkedTypes = [...this.renderRoot.querySelectorAll('input[data-type]:checked')]
-                .map(inp => inp.dataset.type);
             mapEl.filterByTypes(checkedTypes.length > 0 ? checkedTypes : null);
         }
+        this._updateResultsCount(checkedTypes);
+    }
+
+    _updateResultsCount(checkedTypes) {
+        const targetSelector = this.getAttribute('results-target');
+        if (!targetSelector) return;
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+
+        let count = 0;
+        const mapEl = document.getElementById(this.mapId);
+        if (mapEl && Array.isArray(mapEl._allFeatures)) {
+            if (!checkedTypes || checkedTypes.length === 0) {
+                count = mapEl._allFeatures.length;
+            } else {
+                count = mapEl._allFeatures.filter(f => {
+                    const t = f.properties?.type;
+                    const typeVal = (typeof t === 'object' ? t.value : t) || 'other';
+                    return checkedTypes.includes(typeVal);
+                }).length;
+            }
+        }
+        const template = target.getAttribute('data-count-template') || '';
+        target.textContent = template ? template.replace(':count', String(count)) : String(count);
     }
 
     render() {
         if (this.types.length === 0) return '';
 
+        const title = this.getAttribute('title') || '';
         return html`
-            <style>
-                .map-filter-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
-                .map-filter-item { display: flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.5rem; border-radius: 0.5rem; background: #f3f4f6; cursor: pointer; }
-                .map-filter-item:hover { background: #e5e7eb; }
-                .map-filter-item input { cursor: pointer; }
-            </style>
-            <div class="map-filter-container">
-                ${this.types.map(type => html`
-                    <label class="map-filter-item">
-                        <input type="checkbox" data-type="${type}" @change="${this._handleTypeChange}" checked>
-                        <span>${type}</span>
-                        <small>(${this.counts[type] || 0})</small>
-                    </label>
+            ${title ? html`<div class="map-filter-title">${title}</div>` : ''}
+            <ul class="categoy-list pb-4">
+                ${this.types.map((type, index) => html`
+                    <li>
+                        <div class="form-check">
+                            <div class="checkbox-body border-light py-1">
+                                <input
+                                    type="checkbox"
+                                    id="${this.mapId}-filter-${index}"
+                                    name="category"
+                                    data-type="${type.value}"
+                                    @change="${this._handleTypeChange}"
+                                >
+                                <label for="${this.mapId}-filter-${index}" class="subtitle-small_semi-bold mb-0 category-list__list">${type.label} (${type.count || 0})</label>
+                            </div>
+                        </div>
+                    </li>
                 `)}
-            </div>
-        `;
+            </ul>`;
     }
 }
 

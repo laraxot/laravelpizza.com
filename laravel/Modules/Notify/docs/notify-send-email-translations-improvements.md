@@ -1,3 +1,15 @@
+---
+title: "notify send email translations improvements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notify send email translations improvements"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistemazione e Miglioramenti File Traduzione send_email.php - Modulo Notify
 
 ## Introduzione
@@ -5,7 +17,7 @@
 Documento che descrive la sistemazione completa dei file di traduzione per la funzionalità `send_email.php` del modulo Notify, con risoluzione di problemi critici e implementazione di best practices.
 
 ## Collegamenti correlati
-- [Documentazione Modulo Notify](/laravel/Modules/Notify/docs/INDEX.md)
+- [Documentazione Modulo Notify](/laravel/Modules/Notify/docs/index.md)
 - [Best Practices Traduzioni](/docs/translation-system-rules.md)
 - [Convenzioni PHP](/docs/php-best-practices.md)
 - [Regole Qualità Codice](/docs/code-quality-rules.md)

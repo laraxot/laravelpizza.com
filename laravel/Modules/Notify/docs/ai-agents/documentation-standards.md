@@ -1,6 +1,19 @@
+---
+title: "documentation standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation standards"
+issues: []
+discussions: []
+status: draft
+---
+
 # Documentation standards
 
 > Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../CLAUDE.md)
+> Source: [IFLOW.md](../../../../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../CLAUDE.md)
 > Back: [index](index.md)
 
 ## File naming conventions (CRITICAL)
@@ -21,7 +34,8 @@ WRONG:   ModelArchitecture.md
 Never include dates in filenames:
 ```
 CORRECT: dry-kiss-analysis.md
-WRONG:   dry-kiss-analysis-2025-10-15.md
+WRONG:   dry-kiss-analysis-modulo-job.md
+WRONG:   dry-kiss-analysis.md
 WRONG:   phpstan-fixes-january-2026.md
 ```
 

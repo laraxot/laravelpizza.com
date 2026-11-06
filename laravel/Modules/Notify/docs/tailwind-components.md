@@ -1,3 +1,15 @@
+---
+title: "tailwind components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tailwind components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti UI con Filament
 
 ## Introduzione
@@ -289,7 +301,7 @@ return [
 - [Documentazione Form](tailwind_forms.md)
 - [Documentazione Layout](tailwind_layouts.md)
 - [Documentazione Notifiche](tailwind_notifications.md)
-- [Architettura](architecture.md)
+- [Architettura](ARCHITECTURE.md)
 
 ## Note
 - Tutti i collegamenti sono relativi

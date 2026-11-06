@@ -1,3 +1,15 @@
+---
+title: "cast actions centralized"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cast actions centralized"
+issues: []
+discussions: []
+status: draft
+---
+
 # Azioni Cast Centralizzate - Regola di Progetto
 
 ## Principio Fondamentale

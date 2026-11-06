@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "configurazione"
+issues: []
+discussions: []
 title: Configurazione Modulo
 description: Configurazione Modulo
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Configurazione Modulo {#configurazione modulo}

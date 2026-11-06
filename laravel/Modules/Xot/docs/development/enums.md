@@ -1,3 +1,13 @@
+---
+title: "Enums Naming Convention"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, development]
+qmd: "Enums Naming Convention"
+---
 # Enums Naming Convention
 
 ## Naming Rules

@@ -1,3 +1,11 @@
+---
+title: "Convenzioni di Nomenclatura in Laravel Modules"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni di nomenclatura in laravel modules xot"
+---
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.

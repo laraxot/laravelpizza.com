@@ -1,9 +1,28 @@
+---
+title: "continue here"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "continue here"
+issues: []
+discussions: []
+---
+
 # Continue-Here Template
 
 Copy and fill this structure for `.planning/phases/XX-name/.continue-here.md`:
 
 ```yaml
 ---
+title: "continue here"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "continue here"
+issues: []
+discussions: []
 phase: XX-name
 task: 3
 total_tasks: 7

@@ -8,9 +8,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
 
 use function Safe\json_decode;
 
+use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
@@ -19,19 +21,22 @@ use Webmozart\Assert\Assert;
  * Questa classe utilizza l'API Google Maps Geocoding per convertire
  * un indirizzo testuale in coordinate geografiche.
  */
-readonly class GetCoordinatesFromGoogleMapsAction
+class GetCoordinatesFromGoogleMapsAction
 {
-    private const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
+    use QueueableAction;
+
+    private const string API_URL = GeoApiEndpoints::GOOGLE_GEOCODING;
 
     public function __construct(
-        private Client $client,
+        private readonly Client $client,
     ) {
     }
 
     /**
      * Ottiene le coordinate da un indirizzo.
      *
-     * @throws \RuntimeException Se la chiave API non è configurata o la richiesta fallisce
+     * @throws \InvalidArgumentException Se i dati di input non sono validi
+     * @throws \RuntimeException         Se la chiave API non è configurata o la richiesta fallisce
      */
     public function execute(string $address): LocationData
     {
@@ -54,7 +59,7 @@ readonly class GetCoordinatesFromGoogleMapsAction
     /**
      * Valida i dati di input.
      *
-     * @throws \RuntimeException Se la chiave API non è configurata
+     * @throws \InvalidArgumentException Se i dati non sono validi
      */
     private function validateInput(string $address): void
     {

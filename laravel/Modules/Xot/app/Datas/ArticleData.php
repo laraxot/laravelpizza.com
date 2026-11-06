@@ -15,10 +15,10 @@ use Spatie\LaravelData\Data;
 final class ArticleData extends Data
 {
     /**
-     * @param array<int, string>    $types
-     * @param array<int, string>    $categories
-     * @param array<string, string> $defaultMeta
-     * @param array<string, bool>   $features
+     * @param  array<int, string>  $types
+     * @param  array<int, string>  $categories
+     * @param  array<string, string>  $defaultMeta
+     * @param  array<string, bool>  $features
      */
     public function __construct(
         public readonly array $types = ['post', 'page', 'news'],
@@ -37,14 +37,13 @@ final class ArticleData extends Data
             'show_date' => true,
             'show_reading_time' => true,
         ],
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of ArticleData with default values.
      */
     public static function make(): self
     {
-        return new self();
+        return new self;
     }
 }

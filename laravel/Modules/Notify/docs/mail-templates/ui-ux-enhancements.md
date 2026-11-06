@@ -1,8 +1,21 @@
+---
+title: "ui ux enhancements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui ux enhancements"
+issues: []
+discussions: []
+status: draft
+---
+
 # UI/UX Enhancements per i Campi `name` e `slug` in MailTemplateResource
 
 ## Introduzione
 
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto Quaeris, mantenendo la coerenza visiva e migliorando l'usabilità.
+Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto App, mantenendo la coerenza visiva e migliorando l'usabilità.
 
 ## Componenti per il Campo `name`
 
@@ -214,6 +227,7 @@ return [
 ```
 
 ## Conformità con gli Standard Quaeris
+## Conformità con gli Standard App
 
 Tutti i componenti proposti:
 1. Non utilizzano il metodo `->label()` sui componenti Filament
@@ -230,6 +244,7 @@ I miglioramenti UI/UX proposti per i campi `name` e `slug` si concentrano su:
 4. **Relazioni intuitive** tra campi correlati
 
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto Quaeris mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
+L'implementazione di questi miglioramenti rispetta le convenzioni del progetto App mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
 
 ## Riferimenti
 

@@ -1,3 +1,28 @@
+---
+title: "UserFactory Integration - Modulo User e <nome progetto>"
+type: concept
+tags: [user, factory, integration]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user-factory-integration userfactory integration - modulo user e <nome progetto>"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # UserFactory Integration - Modulo User e <nome progetto>
 
 ## Overview
@@ -346,8 +371,10 @@ public function test_bulk_sti_creation()
 
 ### User Module
 - [BaseUser Documentation](../user/docs/baseuser_conflicts.md)
-- [Traits Complete Guide](../user/docs/traits_complete_guide.md)
-- [Authentication Framework](../user/docs/authentication.md)
+- [Traits Complete Guide](traits-complete-guide-aggiornato-post.md)
+- [Authentication Framework](authentication.md)
+- [Traits Complete Guide](traits-complete-guide-aggiornato-post.md)
+- [Authentication Framework](authentication.md)
 
 ---
 
@@ -703,8 +730,10 @@ public function test_bulk_sti_creation()
 
 ### User Module
 - [BaseUser Documentation](../user/docs/baseuser_conflicts.md)
-- [Traits Complete Guide](../user/docs/traits_complete_guide.md)
-- [Authentication Framework](../user/docs/authentication.md)
+- [Traits Complete Guide](traits-complete-guide-aggiornato-post.md)
+- [Authentication Framework](authentication.md)
+- [Traits Complete Guide](traits-complete-guide-aggiornato-post.md)
+- [Authentication Framework](authentication.md)
 
 ---
 

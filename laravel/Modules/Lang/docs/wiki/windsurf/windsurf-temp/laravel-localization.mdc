@@ -1,0 +1,38 @@
+# Laravel Localization Metadata for Windsurf
+
+## Context
+
+This document provides metadata for Windsurf about the integration of `mcamara/laravel-localization` into the `<nome progetto>` project.
+# Laravel Localization Metadata for Windsurf
+
+## Context
+
+This document provides metadata for Windsurf about the integration of `mcamara/laravel-localization` into the `<nome progetto>` project.
+
+## Key Points
+
+- **Package**: `mcamara/laravel-localization`
+- **Purpose**: Facilitate multi-language support in Laravel applications.
+- **Suggested Actions**: 
+  - Install package via Composer.
+  - Update configuration files for language support.
+  - Use middleware for automatic language detection and redirection.
+  - Generate localized URLs using provided helpers.
+- **Benefits**: Seamless language switching and improved accessibility for users.
+
+# Regola: Vietato usare chiavi che terminano con `.navigation` nei file di traduzione
+
+- Usa sempre la struttura array per navigation:
+  ```php
+  'navigation' => [
+      'label' => 'Gestione Pazienti',
+      'group' => 'Pazienti',
+      'icon' => 'heroicon-o-user-group',
+      'color' => 'primary',
+  ],
+  ```
+- Consulta anche:
+  - [translation_keys_best_practices.md](../translation_keys_best_practices.md)
+  - [translation_keys_rules.md](../translation_keys_rules.md)
+  - [filament-translations.md](../filament-translations.md)
+  - [docs <nome progetto>](../../../<nome progetto>/docs/translations.md)

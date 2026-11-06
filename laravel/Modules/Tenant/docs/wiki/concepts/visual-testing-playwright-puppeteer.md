@@ -1,5 +1,8 @@
 ---
-title: Visual Testing con Playwright e Puppeteer — Modulo Tenant
+qmd: "visual testing playwright puppeteer"
+issues: []
+discussions: []
+title: Visual Testing con Playwright e Puppeteer: Modulo Tenant
 type: concept
 sources:
   - https://playwright.dev/docs/test-snapshots
@@ -11,15 +14,17 @@ updated: 2026-05-04
 tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, Tenant]
 related:
   - playwright-testing-policy
+status: draft
 ---
 
-# Visual Testing con Playwright e Puppeteer — Modulo Tenant
+# Visual Testing con Playwright e Puppeteer: Modulo Tenant
 
 ## Panoramica
 
 Il testing visivo (visual regression testing) permette di rilevare cambiamenti UI non intenzionali confrontando screenshot di riferimento con screenshot attuali.
 
 Per la policy di collocazione dei test: vedi [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md).
+Per la policy di collocazione dei test: vedi [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md).
 
 ## Collocazione Test
 
@@ -67,3 +72,5 @@ test('Tenant UI renders correctly', async ({ page }) => {
 - [Playwright Docs](https://playwright.dev/)
 - [Visual Control Mastery](../../../../docs/wiki/concepts/visual-control-mastery.md)
 - [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md)
+- [Visual Control Mastery](../../../../../../docs/wiki/concepts/visual-control-mastery.md)
+- [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md)

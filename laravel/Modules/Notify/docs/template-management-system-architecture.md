@@ -1,3 +1,15 @@
+---
+title: "template management system architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "template management system architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Notification Template Management System
 
 ## System Architecture

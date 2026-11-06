@@ -1,3 +1,15 @@
+---
+title: "modules factory seeder"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules factory seeder"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Completa Modelli, Factory e Seeder - Sistema <nome progetto>
 
 ## Riepilogo Generale

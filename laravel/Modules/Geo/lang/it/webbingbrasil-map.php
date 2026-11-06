@@ -60,4 +60,17 @@ return [
             'label' => 'Elimina Webbingbrasil Map',
         ],
     ],
+    'sections' => [
+        'unavailable' => [
+            'title' => 'Mappa temporaneamente non disponibile',
+        ],
+    ],
+    'unavailable' => [
+        'disabled_notice' => [
+            'description' => 'Il widget mappa è stato temporaneamente disabilitato durante la migrazione a Filament v4.',
+        ],
+        'restore_notice' => [
+            'description' => 'Sarà ripristinato non appena saranno disponibili pacchetti compatibili.',
+        ],
+    ],
 ];

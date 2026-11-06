@@ -1,11 +1,23 @@
+---
+issues: []
+discussions: []
+title: "Case Sensitivity Rules - Lang Module"
+module: "Lang"
+type: rule
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Case Sensitivity Rules - Lang Module
 
 ## Problema / Problem
 
 **NON possono esistere file con lo stesso nome che differiscono solo per maiuscole/minuscole nella stessa directory.**
 
-Riferimento completo: [Xot Module Case Sensitivity Rules](../../Xot/docs/case-sensitivity-rules.md)
-Riferimento completo: [Xot Module Case Sensitivity Rules](../../xot/docs/case-sensitivity-rules.md)
 Riferimento completo: [Xot Module Case Sensitivity Rules](../../xot/docs/case-sensitivity-rules.md)
 
 ## File/Directory Rimossi da Lang Module
@@ -14,7 +26,7 @@ I seguenti file/directory sono stati eliminati perché violavano le regole:
 
 ```
 ✗ Removed: database/Migrations/ (entire directory)
-✗ Removed: database/migrations/Migrations/ (nested anti-pattern — 2026-07-01)
+✗ Removed: database/migrations/Migrations/ (nested anti-pattern: 2026-07-01)
 ✓ Kept:    database/migrations/ (flat, solo file .php)
 ```
 
@@ -36,10 +48,5 @@ Laravel usa la convenzione `database/migrations/` (lowercase) per:
 
 ## Update Log
 
-- **2025-11-04**: Removed `database/Migrations/` uppercase directory
-- **[DATE]**: Removed `database/Migrations/` uppercase directory
-- **[DATE]**: Removed `database/Migrations/` uppercase directory
-- **[DATE]**: Removed `database/Migrations/` uppercase directory
-- **[DATE]**: Removed `database/Migrations/` uppercase directory
 - **2025-11-04**: Removed `database/Migrations/` uppercase directory
 - **2026-07-01**: Removed nested `database/migrations/Migrations/` (reintroduced per errore automazione in `f840e0cc0`; fix `247054abb`)

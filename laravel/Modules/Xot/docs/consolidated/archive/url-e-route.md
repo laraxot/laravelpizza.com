@@ -1,3 +1,11 @@
+---
+title: "Regole per URL e Route in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per url e route in il progetto xot"
+---
 # Regole per URL e Route in il progetto
 
 ## Introduzione

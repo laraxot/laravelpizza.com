@@ -13,7 +13,7 @@ class NotificationTemplateInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'name' => TextEntry::make('name'),
@@ -33,7 +33,6 @@ class NotificationTemplateInfolist extends XotBaseResourceInfolist
             'version' => TextEntry::make('version'),
             'tenant_id' => TextEntry::make('tenant_id'),
             'grapesjs_data' => TextEntry::make('grapesjs_data'),
-            'type' => TextEntry::make('type'),
-        ];
+            'type' => TextEntry::make('type')];
     }
 }

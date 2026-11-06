@@ -1,3 +1,11 @@
+---
+title: "Convenzioni dei Namespace"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni dei namespace xot"
+---
 # Convenzioni dei Namespace
 
 ## Struttura Base dei Namespace

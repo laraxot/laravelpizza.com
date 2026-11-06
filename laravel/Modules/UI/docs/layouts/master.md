@@ -1,3 +1,15 @@
+---
+title: "master"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "master"
+issues: []
+discussions: []
+status: draft
+---
+
 # Master Layout Documentation
 
 ## Overview

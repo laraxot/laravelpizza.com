@@ -1,3 +1,14 @@
+---
+title: "ai tools"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai tools"
+issues: []
+discussions: []
+---
+
 # Approfondimenti per Strumenti AI
 
 Questa sezione contiene guide specifiche per l'utilizzo ottimale di diversi strumenti di intelligenza artificiale con il progetto PTVX.

@@ -1,3 +1,11 @@
+---
+title: "Architettura del Sistema il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "architettura del sistema il progetto xot"
+---
 # Architettura del Sistema il progetto
 
 ## Panoramica dell'Architettura

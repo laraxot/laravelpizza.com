@@ -3,6 +3,20 @@
 declare(strict_types=1);
 
 return [
+    'values' => [
+        'f' => [
+            'label' => 'Femmina',
+            'icon' => 'heroicon-o-user',
+            'color' => 'pink',
+            'description' => 'Genere femminile',
+        ],
+        'm' => [
+            'label' => 'Maschio',
+            'icon' => 'heroicon-o-user',
+            'color' => 'info',
+            'description' => 'Genere maschile',
+        ],
+    ],
     'label' => 'Genere',
     'options' => [
         'f' => 'Femmina',
@@ -16,7 +30,7 @@ return [
             'name' => 'General',
             'description' => 'General Settings',
         ],
-        'label' => 'Gender Enum',
+        'label' => 'Genere',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],

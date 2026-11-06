@@ -1,3 +1,15 @@
+---
+title: "testing business behavior supreme rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing business behavior supreme rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 REGOLA SUPREMA: TESTING BUSINESS BEHAVIOR ONLY
 
 ## LA REGOLA PIÙ IMPORTANTE DA RICORDARE SEMPRE
@@ -153,7 +165,6 @@ Quando sistemo un test esistente che non funziona:
 - [Testing Fundamental Rule](../laravel/.ai/guidelines/testing-fundamental-rule.md)
 
 ---
-
 **Questa regola è SUPREMA e ha precedenza su qualsiasi altra considerazione di testing.**
 
 **Status**: REGOLA ASSOLUTA E NON NEGOZIABILE

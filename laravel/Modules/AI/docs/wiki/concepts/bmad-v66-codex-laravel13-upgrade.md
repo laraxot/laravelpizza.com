@@ -1,4 +1,7 @@
 ---
+tags: [documentation]
+issues: []
+discussions: []
 title: "BMAD v6.6 Codex Setup for Laravel 13 Upgrade"
 module: "AI"
 type: concept
@@ -8,6 +11,7 @@ qmd: "BMAD 6.6, Codex skills, Laravel 13 upgrade, create story, second brain"
 related:
   - "../bmad-method.md"
   - "../../../../../../docs/llm-wiki-qmd.md"
+status: draft
 ---
 
 # BMAD v6.6 Codex Setup for Laravel 13 Upgrade

@@ -18,7 +18,6 @@ class EditNotifyTheme extends XotBaseEditRecord
     protected function getHeaderActions(): array
     {
         return [
-            'delete' => DeleteAction::make(),
-        ];
+            'delete' => DeleteAction::make()];
     }
 }

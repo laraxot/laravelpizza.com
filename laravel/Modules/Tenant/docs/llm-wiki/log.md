@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Tenant Activity Log"
+module: "Tenant"
+type: concept
+tags: [log]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "log"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Tenant Activity Log
 
 > **Module**: Tenant

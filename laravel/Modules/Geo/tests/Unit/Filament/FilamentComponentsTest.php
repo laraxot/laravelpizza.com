@@ -4,46 +4,46 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Filament;
 
-uses(\Modules\Geo\Tests\TestCase::class);
-
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 use Modules\Geo\Filament\Forms\Components\AddressField;
 use Modules\Geo\Filament\Forms\Components\MapPicker;
 use Modules\Geo\Filament\Widgets\GeoMapWidget;
 use Modules\Geo\Filament\Widgets\LatLngWidget;
 use Modules\Geo\Filament\Widgets\LocationWidget;
-use Modules\Geo\Tests\LightTestCase;
+use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(LightTestCase::class);
-
+uses(TestCase::class);
 test('AddressField can be instantiated', function () {
     $field = AddressField::make('address');
 
-    expect($field)->toBeObject();
+    Assert::assertSame(AddressField::class, (new \ReflectionClass($field))->getName());
 });
 
 test('MapPicker can be instantiated', function () {
     $field = MapPicker::make('map_picker')
-        ->latitude('latitude')
-        ->longitude('longitude');
+        ->latitudeColumn('latitude')
+        ->longitudeColumn('longitude');
 
-    expect($field)->toBeObject();
+    Assert::assertSame('map_picker', $field->getName());
+    Assert::assertSame('latitude', $field->getLatitudeColumn());
+    Assert::assertSame('longitude', $field->getLongitudeColumn());
 });
 
 test('LocationWidget can be instantiated', function () {
-    expect(class_exists(LocationWidget::class))->toBeTrue();
+    Assert::assertTrue(class_exists(LocationWidget::class));
 });
 
 test('LatLngWidget can be instantiated', function () {
-    expect(class_exists(LatLngWidget::class))->toBeTrue();
+    Assert::assertTrue(class_exists(LatLngWidget::class));
 });
 
 test('GeoMapWidget can be instantiated', function () {
-    expect(class_exists(GeoMapWidget::class))->toBeTrue();
+    Assert::assertTrue(class_exists(GeoMapWidget::class));
 });
 
 test('UpdateCoordinatesBulkAction can be instantiated', function () {
     $action = UpdateCoordinatesBulkAction::make('update_coordinates');
 
-    expect($action)->toBeObject();
+    Assert::assertSame('update_coordinates', $action->getName());
 });

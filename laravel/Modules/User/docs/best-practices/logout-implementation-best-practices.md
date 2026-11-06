@@ -1,8 +1,32 @@
+---
+title: "Best Practices per l'Implementazione del Logout"
+type: concept
+tags: [logout, implementation, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "logout-implementation-best-practices best practices per l'implementazione del logout"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Best Practices per l'Implementazione del Logout
 
 ## Collegamenti correlati
+- [README modulo User](./README.md)
+- [Best Practices Componenti di Autenticazione](./auth-components-best-practices.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
 - [README modulo User](./readme.md)
-- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
+- [Best Practices Componenti di Autenticazione](./auth-components-best-practices.md)
 - [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
@@ -238,4 +262,5 @@ $this->redirect(LaravelLocalization::getLocalizedURL($locale, route('home')));
 - [Documentazione Laravel Authentication](https://laravel.com/docs/10.x/authentication)
 - [Documentazione Livewire Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Laravel Folio](https://laravel.com/docs/10.x/folio)
+- [Documentazione Laravel Localization](https://github.com/mcamara/laravel-localization)
 - [Documentazione Laravel Localization](https://github.com/mcamara/laravel-localization)

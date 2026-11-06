@@ -1,27 +1,26 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'Data to enrich your online business',
-    'description' => 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
-    'primaryButtonText' => 'Get started',
+    'title' => __('ui::blocks_hero.shared.default_title.title'),
+    'description' => __('ui::blocks_demo_shared.copy.paragraph_3.description'),
+    'primaryButtonText' => __('ui::blocks_demo_shared.labels.get_started.label'),
     'primaryButtonUrl' => '#',
-    'secondaryButtonText' => 'Learn more',
+    'secondaryButtonText' => __('ui::blocks_demo_shared.labels.learn_more.label'),
     'secondaryButtonUrl' => '#',
-    'announcement' => 'Anim aute id magna aliqua ad ad non deserunt sunt.',
+    'announcement' => __('ui::blocks_hero.shared.announcement.message'),
     'announcementUrl' => '#',
     'logoUrl' => 'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600',
-    'logoAlt' => 'Your Company',
+    'logoAlt' => __('ui::blocks_hero.shared.your_company.alt'),
     'imageUrl' => 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80',
     'imageAlt' => '',
     'navigation' => [
-        ['text' => 'Product', 'url' => '#'],
-        ['text' => 'Features', 'url' => '#'],
-        ['text' => 'Marketplace', 'url' => '#'],
-        ['text' => 'Company', 'url' => '#'],
-        ['text' => 'Log in', 'url' => '#']
+        ['text' => __('ui::blocks_hero.shared.product.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.features.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.marketplace.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.company.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.log_in.label'), 'url' => '#']
     ]
 ])
 
@@ -29,7 +28,7 @@ declare(strict_types=1);
     <header class="absolute inset-x-0 top-0 z-50">
         <div class="mx-auto max-w-7xl">
             <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
-                <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
+                <nav class="flex items-center justify-between lg:justify-start" aria-label="{{ __('ui::blocks_hero.shared.global.label') }}">
                     @if($logoUrl)
                         <a href="#" class="-m-1.5 p-1.5">
                             <span class="sr-only">{{ $logoAlt }}</span>
@@ -37,7 +36,7 @@ declare(strict_types=1);
                         </a>
                     @endif
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden">
-                        <span class="sr-only">Open main menu</span>
+                        <span class="sr-only">{{ __('ui::blocks_hero.shared.open_main_menu.label') }}</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
@@ -63,7 +62,7 @@ declare(strict_types=1);
                         </a>
                     @endif
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Close menu</span>
+                        <span class="sr-only">{{ __('ui::blocks_hero.shared.close_menu.label') }}</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -77,7 +76,7 @@ declare(strict_types=1);
                             @endforeach
                         </div>
                         <div class="py-6">
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.log_in.label') }}</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +99,7 @@ declare(strict_types=1);
                                     {{ $announcement }}
                                     <a href="{{ $announcementUrl }}" class="whitespace-nowrap font-semibold text-indigo-600">
                                         <span class="absolute inset-0" aria-hidden="true"></span>
-                                        Read more <span aria-hidden="true">&rarr;</span>
+                                        {{ __('ui::blocks_hero.shared.read_more.label') }} <span aria-hidden="true">&rarr;</span>
                                     </a>
                                 </div>
                             </div>

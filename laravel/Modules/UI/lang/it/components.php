@@ -17,7 +17,7 @@ return [
         ],
         'label' => 'Components',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [
@@ -38,6 +38,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'logo' => [
+            'alt' => 'Logo',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -48,6 +51,52 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Components',
+        ],
+        'close' => [
+            'label' => 'Chiudi',
+        ],
+    ],
+    'header' => [
+        'toggle_menu' => [
+            'label' => 'Apri o chiudi il menu',
+        ],
+        'about' => [
+            'label' => 'Chi siamo',
+        ],
+        'blog' => [
+            'label' => 'Blog',
+        ],
+        'power_ups' => [
+            'label' => 'Power-ups',
+        ],
+        'view_dashboard' => [
+            'label' => 'Vai alla dashboard',
+        ],
+    ],
+    'post_footer' => [
+        'see_also' => [
+            'label' => 'Vedi anche',
+        ],
+    ],
+    'nav_item' => [
+        'toggle_children' => [
+            'label' => 'Mostra o nascondi le sottovoci',
+        ],
+    ],
+    'order_column' => [
+        'move_up' => [
+            'label' => 'Sposta su',
+        ],
+        'move_down' => [
+            'label' => 'Sposta giù',
+        ],
+    ],
+    'qr_reader' => [
+        'scan' => [
+            'label' => 'Scansiona',
+        ],
+        'search' => [
+            'label' => 'Cerca',
         ],
     ],
 ];

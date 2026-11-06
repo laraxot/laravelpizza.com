@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\UI\Filament\Widgets;
 
 use Filament\Support\RawJs;
-use Filament\Widgets\ChartWidget;
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 
-final class TestChartWidget extends ChartWidget
+final class TestChartWidget extends XotBaseChartWidget
 {
     public int $qid = 0;
 

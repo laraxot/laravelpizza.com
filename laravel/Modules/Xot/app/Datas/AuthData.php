@@ -15,10 +15,10 @@ use Spatie\LaravelData\Data;
 final class AuthData extends Data
 {
     /**
-     * @param array<string>                        $guards
-     * @param array<string, array<string, string>> $providers
-     * @param array<string, bool|int|string>       $throttle
-     * @param array<string, bool>                  $social
+     * @param  array<string>  $guards
+     * @param  array<string, array<string, string>>  $providers
+     * @param  array<string, bool|int|string>  $throttle
+     * @param  array<string, bool>  $social
      */
     public function __construct(
         public readonly string $guard = 'web',
@@ -39,14 +39,13 @@ final class AuthData extends Data
             'twitter' => false,
             'github' => false,
         ],
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of AuthData with default values.
      */
     public static function make(): self
     {
-        return new self();
+        return new self;
     }
 }

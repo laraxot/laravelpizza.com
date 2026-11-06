@@ -1,3 +1,11 @@
+---
+title: "_soketi"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_soketi xot"
+---
 # _soketi
 
 <!-- Contenuto migrato da _docs/_soketi.txt -->

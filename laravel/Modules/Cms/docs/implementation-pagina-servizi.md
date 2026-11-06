@@ -1,3 +1,15 @@
+---
+title: "implementation pagina servizi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementation pagina servizi"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Pagina Servizi - <main module>
 
 *Documentazione completa dell'implementazione della pagina servizi seguendo la filosofia e architettura <main module>*
@@ -177,7 +189,7 @@ L'implementazione riflette una comprensione profonda delle implicazioni:
 ### Filosofici
 - [Architettura Sistema](../../../../docs/architettura_sistema.md)
 - [Rules](../../../../docs/rules.md)
-- [README Principale](../../../../docs/readme.md)
+- [README Principale](../../../../docs/README.md)
 
 ## ✅ Checklist Completamento
 
@@ -251,7 +263,6 @@ L'implementazione riflette una comprensione profonda delle implicazioni:
 - **Emergency Ready**: Supporto 24/7 multilingue
 
 ---
-
 **Data Implementazione**: 15 Gennaio 2025
 **Versione Documentazione**: 1.0.0
 **Maintainer**: Team <main module>

@@ -1,3 +1,15 @@
+---
+title: "phases"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phases"
+issues: []
+discussions: []
+status: active
+---
+
 # Fasi di sviluppo - Seo Module
 
 ## Fase 1: Funzionalità Core (In Corso)

@@ -1,3 +1,15 @@
+---
+title: "project overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project overview"
+issues: []
+discussions: []
+status: draft
+---
+
 # Panoramica del Progetto (Claude Context)
 
 **Nome Progetto**: PTVX - Sistema Gestione Personale PA  

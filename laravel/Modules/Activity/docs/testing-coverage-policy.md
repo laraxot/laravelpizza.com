@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Testing Coverage Policy"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "activity module - testing coverage policy activity"
+---
 # Activity Module - Testing Coverage Policy
 
 ## Obiettivo
@@ -24,7 +32,7 @@ Raggiungere e mantenere **100% coverage** con Pest sul modulo Activity.
 - Il TestCase usa `DatabaseTransactions` per rollback automatico tra test
 - `$connectionsToTransact = ['mysql', 'activity', 'user']` per coprire tutte le connessioni
 - **CRITICO**: La connessione `activity` DEVE essere inclusa. Senza di essa, ActivityLoggerTest getRecent fallisce per inquinamento dati.
-- Nessuna migrazione nel setUp: le migrazioni vanno eseguite una volta: `php artisan migrate --env=testing`
+- Nessuna migrazione nel setUp: le migrazioni vanno eseguite nel base testcase (`Modules/Xot/tests/XotBaseTestCase::createApplication()`) oppure una volta a mano con `php artisan migrate --env=testing` (vedi commento in `Modules/Xot/tests/TestCase.php`)
 
 ### 4. Connessioni Database
 
@@ -32,21 +40,31 @@ Raggiungere e mantenere **100% coverage** con Pest sul modulo Activity.
 - **activity**: modelli Activity, Snapshot, StoredEvent (creata da TenantServiceProvider a runtime)
 - **user**: modelli User
 
-**Regola**: database.php NON deve contenere 'activity'. I modelli Activity DEVONO avere `$connection = 'activity'`. Vedi [fix01](prompts/fix01.txt).
+**Regola**: database.php NON deve contenere 'activity'. I modelli Activity DEVONO avere `$connection = 'activity'`. Vedi [fix01](prompts/fix01.md).
 
 **Setup minimo .env.testing:**
 ```env
 DB_DATABASE=techplanner_data_test
 DB_DATABASE_USER=techplanner_data_test
 ```
-NON aggiungere DB_DATABASE_ACTIVITY: TenantServiceProvider usa il fallback dal default (stesso DB). Vedi [fix03](prompts/fix03.txt).
+NON aggiungere DB_DATABASE_ACTIVITY: TenantServiceProvider usa il fallback dal default (stesso DB). Vedi [fix03](prompts/fix03.md).
 
-**Migrazioni pre-test:**
+**Migrazioni pre-test (regola corrente):**
 ```bash
-php artisan migrate --env=testing --force
-php artisan migrate --database=activity --env=testing --force
-php artisan config:clear
+# automatizzate nel base testcase, senza --force e senza migrate:fresh
+php artisan migrate --env=testing --path=Modules/Xot/database/migrations
+php artisan migrate --env=testing --path=Modules/User/database/migrations
+php artisan migrate --env=testing --path=Modules/Activity/database/migrations
 ```
+
+### 5. Coverage Scope (CRITICO)
+
+- Con comando root `./vendor/bin/pest --testsuite=Activity --coverage`, il filtro coverage deve essere modulare.
+- Se `source` include `Modules/*/app`, il report può includere moduli non target e produrre un totale fuorviante.
+- Per sprint Activity, usare filtro source mirato almeno a:
+  - `Modules/Activity/app`
+  - `Modules/Xot/app`
+  - `Modules/User/app`
 
 ## Workflow Coverage
 

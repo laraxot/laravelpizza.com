@@ -1,3 +1,23 @@
+---
+title: "📦 Moduli del Sistema"
+type: index
+tags: [notify, docs, modules]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione modules index 📦 moduli del sistema index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/readme.md
+  - ../integrations/readme.md
+  - ../templates/readme.md
+status: draft
+---
 # 📦 Moduli del Sistema
 
 > **Architettura**: Nwidart + Laraxot - Modular Monolith
@@ -9,6 +29,7 @@
 **Responsabilità**: Pattern base, service providers, trait condivisi  
 **Status**: ✅ Attivo - Base del sistema  
 **Docs**: [📖 Xot Docs](../../Modules/Xot/docs/README.md)
+**Docs**: [📖 Xot Docs](../../../Xot/docs/README.md)
 
 - `XotBaseModel` - Modello base per tutti i moduli
 - `XotBaseServiceProvider` - Provider base estendibile  
@@ -20,6 +41,7 @@
 **Responsabilità**: Core della piattaforma di segnalazioni  
 **Status**: ✅ Attivo - Modulo principale  
 **Docs**: [📖 Fixcity Docs](../../Modules/Fixcity/docs/links.md)
+**Docs**: [📖 Fixcity Docs](../../../Fixcity/docs/links.md)
 
 - Gestione segnalazioni cittadini
 - Workflow amministrativo
@@ -31,6 +53,7 @@
 **Responsabilità**: Autenticazione, profili, permessi  
 **Status**: ✅ Attivo - Sistema utenti  
 **Docs**: [📖 User Docs](../../Modules/User/docs/README.md)
+**Docs**: [📖 User Docs](../../../User/docs/README.md)
 
 - Autenticazione Laravel
 - Profili utente cittadini/staff
@@ -44,6 +67,7 @@
 **Responsabilità**: Componenti UI riutilizzabili  
 **Status**: ✅ Attivo - Componenti base  
 **Docs**: [📖 UI Docs](../../Modules/UI/docs/README.md)
+**Docs**: [📖 UI Docs](../../../UI/docs/README.md)
 
 - Componenti Livewire condivisi
 - [DarkModeSwitcher](../../Modules/UI/docs/components.md#darkmodeswitcher) - Toggle modalità scuro
@@ -55,6 +79,7 @@
 **Responsabilità**: Sistema CMS, pagine statiche  
 **Status**: ✅ Attivo - Content management  
 **Docs**: [📖 CMS Docs](../../Modules/Cms/docs/README.md)
+**Docs**: [📖 CMS Docs](../../../Cms/docs/README.md)
 
 - Gestione pagine JSON
 - Homepage builder
@@ -89,6 +114,7 @@
 **Responsabilità**: Log attività, cronologia  
 **Status**: ✅ Attivo - Audit system  
 **Docs**: [📖 Activity Docs](../../Modules/Activity/docs/README.md)
+**Docs**: [📖 Activity Docs](../../../Activity/docs/README.md)
 
 - Event sourcing pattern
 - Log attività utenti
@@ -112,6 +138,7 @@
 **Responsabilità**: Integrazione AI/ML  
 **Status**: ✅ Attivo - AI services  
 **Docs**: [📖 AI Docs](../../Modules/AI/docs/README.md)
+**Docs**: [📖 AI Docs](../../../AI/docs/README.md)
 
 - Classificazione automatica segnalazioni
 - Chatbot assistenza
@@ -155,6 +182,7 @@
 **Responsabilità**: Valutazioni e feedback  
 **Status**: ✅ Attivo - Rating system  
 **Docs**: [📖 Rating Docs](../../Modules/Rating/docs/README.md)
+**Docs**: [📖 Rating Docs](../../../Rating/docs/README.md)
 
 - User ratings
 - Feedback collection
@@ -190,6 +218,7 @@
 **Responsabilità**: Pubblicazione contenuti blog  
 **Status**: ✅ Attivo - Content publishing  
 **Docs**: [📖 Blog Docs](../../Modules/Blog/docs/README.md)
+**Docs**: [📖 Blog Docs](../../../Blog/docs/README.md)
 
 - Post management
 - Categories/tags
@@ -224,6 +253,7 @@
 |--------|---------|---------|-------|------|
 | Xot | ✅ Active | Level 9 | ✅ 80% | ✅ Complete |  
 | Fixcity | ✅ Active | Level 7 | ⚠️ 60% | 📝 Updating |
+| App | ✅ Active | Level 7 | ⚠️ 60% | 📝 Updating |
 | User | ✅ Active | Level 8 | ✅ 75% | ✅ Complete |
 | UI | ✅ Active | Level 8 | ✅ 70% | ✅ Complete |
 | Cms | ✅ Active | Level 7 | ⚠️ 65% | ✅ Complete |

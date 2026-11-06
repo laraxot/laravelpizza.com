@@ -1,3 +1,15 @@
+---
+title: "quick links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick links"
+issues: []
+discussions: []
+status: draft
+---
+
 # Quick Links Block
 
 Il blocco Quick Links è utilizzato per creare gruppi di link rapidi, con supporto per target personalizzati. Può essere utilizzato in qualsiasi contesto, come footer, sidebar, o sezioni di navigazione.
@@ -116,6 +128,6 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Best Practices Navigation](../ui/navigation-guidelines.md)
 - [Accessibilità](../ui/accessibility.md)

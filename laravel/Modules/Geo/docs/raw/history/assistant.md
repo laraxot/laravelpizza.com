@@ -1,3 +1,14 @@
+---
+title: "assistant"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "assistant"
+issues: []
+discussions: []
+---
+
 # PTVX – Assistant Guide (DRY + KISS)
 
 This document is the **entrypoint for AI coding assistants** (Cascade, Claude Code, ecc.) che lavorano su PTVX.
@@ -11,6 +22,14 @@ Le regole dettagliate sono già documentate in `docs/` e nei singoli moduli.
 
 ---
 
+title: "assistant"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "assistant"
+issues: []
+discussions: []
 ## 1. Dove iniziare
 
 - **Indice generale**: [PTVX – Documentazione completa](./index.md)

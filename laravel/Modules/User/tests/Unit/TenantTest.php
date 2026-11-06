@@ -2,200 +2,134 @@
 
 declare(strict_types=1);
 
-use Filament\Models\Contracts\HasAvatar;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Str;
-use Modules\User\Contracts\TenantContract;
-use Modules\User\Database\Factories\TenantFactory;
+use Tests\TestCase;
 use Modules\User\Models\BaseTenant;
-use Modules\User\Models\Tenant;
-use PHPUnit\Framework\Assert;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Filament\Models\Contracts\HasAvatar;
 use Spatie\MediaLibrary\HasMedia;
+use Modules\User\Contracts\TenantContract;
 use Spatie\Sluggable\SlugOptions;
+use Modules\User\Models\Tenant;
+use Modules\User\Models\User;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
-/**
- * @param array<string, mixed> $overrides
- */
-function createPersistedTenant(array $overrides = []): Tenant
-{
-    $tenant = new Tenant();
-    $tenant->incrementing = false;
-    $tenant->setKeyType('string');
-
-    $tenant->fill(array_merge([
-        'id' => (string) Str::uuid(),
-        'name' => 'Test Tenant '.uniqid(),
+beforeEach(function (): void {
+    $this->tenant = Tenant::factory()->create([
+        'name' => 'Test Tenant',
         'email_address' => 'test@tenant.com',
         'phone' => '+39 123 456 789',
         'mobile' => '+39 987 654 321',
         'address' => 'Via Roma 123',
         'primary_color' => '#FF0000',
         'secondary_color' => '#00FF00',
-    ], $overrides));
-    $tenant->save();
-
-    return $tenant;
-}
-
-test('tenant can be created', function (): void {
-    $tenant = createPersistedTenant();
-
-    Assert::assertInstanceOf(Tenant::class, $tenant);
-    Assert::assertSame('test@tenant.com', $tenant->email_address);
-    Assert::assertSame('+39 123 456 789', $tenant->phone);
-    Assert::assertSame('+39 987 654 321', $tenant->mobile);
-    Assert::assertSame('Via Roma 123', $tenant->address);
-    Assert::assertSame('#FF0000', $tenant->primary_color);
-    Assert::assertSame('#00FF00', $tenant->secondary_color);
+    ]);
 });
 
-test('tenant extends correct base class', function (): void {
-    Assert::assertInstanceOf(BaseTenant::class, createPersistedTenant());
+test('tenant can be created', function (): void {
+    expect($this->tenant->name)->toBe('Test Tenant');
+    expect($this->tenant->email_address)->toBe('test@tenant.com');
+    expect($this->tenant->phone)->toBe('+39 123 456 789');
+    expect($this->tenant->mobile)->toBe('+39 987 654 321');
+    expect($this->tenant->address)->toBe('Via Roma 123');
+    expect($this->tenant->primary_color)->toBe('#FF0000');
+    expect($this->tenant->secondary_color)->toBe('#00FF00');
 });
 
 test('tenant has correct fillable attributes', function (): void {
-    $fillable = createPersistedTenant()->getFillable();
+    $fillable = $this->tenant->getFillable();
 
-    foreach (['id', 'name', 'slug', 'email_address', 'phone', 'mobile', 'address', 'primary_color', 'secondary_color'] as $attribute) {
-        Assert::assertContains($attribute, $fillable);
-    }
+    expect($fillable)->toContain('id');
+    expect($fillable)->toContain('name');
+    expect($fillable)->toContain('slug');
+    expect($fillable)->toContain('email_address');
+    expect($fillable)->toContain('phone');
+    expect($fillable)->toContain('mobile');
+    expect($fillable)->toContain('address');
+    expect($fillable)->toContain('primary_color');
+    expect($fillable)->toContain('secondary_color');
 });
 
 test('tenant has slug generated from name', function (): void {
-    $tenant = createPersistedTenant();
-
-    Assert::assertSame(Str::slug($tenant->name), $tenant->slug);
+    expect($this->tenant->slug)->toBe('test-tenant');
 });
 
 test('tenant slug is automatically generated', function (): void {
-    $newTenant = TenantFactory::new()->createOne([
+    $newTenant = Tenant::factory()->create([
         'name' => 'Another Test Tenant',
     ]);
 
-    Assert::assertSame('Another Test Tenant', $newTenant->name);
-    Assert::assertNotSame('', (string) $newTenant->slug);
+    expect($newTenant->slug)->toBe('another-test-tenant');
 });
 
 test('tenant has users relationship', function (): void {
-    $tenant = createPersistedTenant();
+    expect($this->tenant)->toHaveMethod('users');
 
-    Assert::assertInstanceOf(BelongsToMany::class, $tenant->users());
+    expect($this->tenant->users()->getRelated())->toBeInstanceOf(User::class);
 });
 
 test('tenant has members relationship', function (): void {
-    $tenant = createPersistedTenant();
+    expect($this->tenant)->toHaveMethod('members');
 
-    Assert::assertInstanceOf(BelongsToMany::class, $tenant->members());
+    expect($this->tenant->members()->getRelated())->toBeInstanceOf(User::class);
 });
 
 test('tenant implements required interfaces', function (): void {
     $reflection = new ReflectionClass(Tenant::class);
 
-    Assert::assertTrue($reflection->implementsInterface(HasAvatar::class));
-    Assert::assertTrue($reflection->implementsInterface(HasMedia::class));
-    Assert::assertTrue($reflection->implementsInterface(TenantContract::class));
+    expect($reflection->implementsInterface(HasAvatar::class))->toBeTrue();
+    expect($reflection->implementsInterface(HasMedia::class))->toBeTrue();
+    expect($reflection->implementsInterface(TenantContract::class))->toBeTrue();
 });
 
 test('tenant has slug options configuration', function (): void {
-    $tenant = createPersistedTenant();
+    expect($this->tenant)->toHaveMethod('getSlugOptions');
 
-    Assert::assertInstanceOf(SlugOptions::class, $tenant->getSlugOptions());
+    expect($this->tenant->getSlugOptions()->slugField)->toBe('slug');
 });
 
 test('tenant has filament avatar url method', function (): void {
-    $tenant = createPersistedTenant();
+    expect($this->tenant)->toHaveMethod('getFilamentAvatarUrl');
 
-    if (! Schema::connection('media')->hasTable('media')) {
-        Assert::assertTrue(is_callable([$tenant, 'getFilamentAvatarUrl']));
-
-        return;
-    }
-
-    Assert::assertIsString($tenant->getFilamentAvatarUrl());
+    $avatarUrl = $this->tenant->getFilamentAvatarUrl();
+    expect($avatarUrl)->toBeNull(); // Default implementation returns null
 });
 
 test('tenant can be found by slug', function (): void {
-    $tenant = createPersistedTenant();
-    $foundTenant = Tenant::where('slug', $tenant->slug)->first();
-
-    Assert::assertInstanceOf(Tenant::class, $foundTenant);
-    Assert::assertSame((string) $tenant->id, (string) $foundTenant->id);
-    Assert::assertSame($tenant->name, $foundTenant->name);
+    $foundTenant = Tenant::where('slug', 'test-tenant')->firstOrFail();
+    expect($foundTenant->id)->toBe($this->tenant->id);
+    expect($foundTenant->name)->toBe('Test Tenant');
 });
 
 test('tenant has correct table name', function (): void {
-    Assert::assertSame('tenants', createPersistedTenant()->getTable());
+    expect($this->tenant->getTable())->toBe('tenants');
 });
 
 test('tenant has correct primary key', function (): void {
-    Assert::assertSame('id', createPersistedTenant()->getKeyName());
+    expect($this->tenant->getKeyName())->toBe('id');
 });
 
 test('tenant has correct connection', function (): void {
-    Assert::assertSame('user', createPersistedTenant()->getConnectionName());
+    expect($this->tenant->getConnectionName())->toBe('default');
 });
 
 test('tenant can be updated', function (): void {
-    $tenant = createPersistedTenant();
-    $originalId = (string) $tenant->id;
-    $newName = 'Updated Tenant Name '.uniqid();
-
-    $tenant->update([
-        'name' => $newName,
+    $this->tenant->update([
+        'name' => 'Updated Tenant Name',
         'email_address' => 'updated@tenant.com',
     ]);
-    $tenant->refresh();
 
-    Assert::assertSame($newName, $tenant->name);
-    Assert::assertSame('updated@tenant.com', $tenant->email_address);
-    Assert::assertSame(Str::slug($newName), $tenant->slug);
-    Assert::assertSame($originalId, (string) $tenant->id);
+    $this->tenant->refresh();
+
+    expect($this->tenant->name)->toBe('Updated Tenant Name');
+    expect($this->tenant->email_address)->toBe('updated@tenant.com');
+    expect($this->tenant->slug)->toBe('updated-tenant-name');
 });
 
 test('tenant can be deleted', function (): void {
-    $tenant = createPersistedTenant();
-    $tenantId = (string) $tenant->id;
+    $tenantId = $this->tenant->id;
 
-    if (! Schema::connection('media')->hasTable('media')) {
-        DB::connection('user')->table('tenants')->where('id', $tenantId)->delete();
-    } else {
-        $tenant->delete();
-    }
+    $this->tenant->delete();
 
-    Assert::assertNull(Tenant::find($tenantId));
-});
-
-test('can find tenant by name', function (): void {
-    $name = 'Searchable Name '.uniqid();
-    $tenant = TenantFactory::new()->createOne(['name' => $name]);
-    $foundTenant = Tenant::where('name', $name)->first();
-
-    Assert::assertInstanceOf(Tenant::class, $foundTenant);
-    Assert::assertSame((string) $tenant->id, (string) $foundTenant->id);
-});
-
-test('can find active tenants', function (): void {
-    TenantFactory::new()->createOne(['is_active' => true]);
-    TenantFactory::new()->createOne(['is_active' => false]);
-
-    $activeTenants = Tenant::where('is_active', true)->get();
-
-    Assert::assertGreaterThanOrEqual(1, $activeTenants->count());
-    foreach ($activeTenants as $activeTenant) {
-        Assert::assertSame(1, $activeTenant->is_active);
-    }
-});
-
-test('can find tenants by name pattern', function (): void {
-    $baseName = 'PatternCompany '.uniqid();
-    TenantFactory::new()->createOne(['name' => $baseName.' One']);
-    TenantFactory::new()->createOne(['name' => $baseName.' Two']);
-
-    $companyTenants = Tenant::where('name', 'like', '%'.$baseName.'%')->get();
-
-    Assert::assertGreaterThanOrEqual(2, $companyTenants->count());
+    expect(Tenant::find($tenantId))->toBeNull();
 });

@@ -1,3 +1,15 @@
+---
+title: "translation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Translation Audit Report - [DATE]
 
 ## Executive Summary
@@ -78,9 +90,9 @@ Translation files include extra messages beyond immediate needs to:
 ## Integration Points
 
 ### Module Documentation
-- **Primary**: [User Module Login Widget Audit](../laravel/modules/user/docs/login-widget-translation-audit.md)
-- **Supporting**: [Widget Translation Rules](../laravel/modules/user/docs/widget-translation-rules.md)
-- **Architecture**: [User Authentication Documentation](../laravel/modules/user/docs/authentication.md)
+- **Primary**: [User Module Login Widget Audit](../../User/docs/login-widget-translation-audit.md)
+- **Supporting**: [Widget Translation Rules](../../User/docs/widget-translation-rules.md)
+- **Architecture**: [User Authentication Documentation](../../User/docs/authentication.md)
 
 ### Development Standards
 This audit reinforces the following project standards:
@@ -138,9 +150,9 @@ The comprehensive approach taken demonstrates:
 ## Related Documentation
 
 ### Module Level
-- [User Module Translation Guidelines](../laravel/modules/user/docs/widget-translation-rules.md)
-- [User Module Authentication](../laravel/modules/user/docs/authentication.md)
-- [Widget Development Standards](../laravel/Modules/User/docs/widgets/)
+- [User Module Translation Guidelines](../../User/docs/widget-translation-rules.md)
+- [User Module Authentication](../../User/docs/authentication.md)
+- [Widget Development Standards](../../User/docs/widgets)
 
 ### Project Level
 - [Translation Standards](translation-standards.md)

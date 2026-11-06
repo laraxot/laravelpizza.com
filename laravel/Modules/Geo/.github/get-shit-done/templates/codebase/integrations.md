@@ -1,3 +1,14 @@
+---
+title: "integrations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "integrations"
+issues: []
+discussions: []
+---
+
 # External Integrations Template
 
 Template for `.planning/codebase/INTEGRATIONS.md` - captures external service dependencies.
@@ -6,6 +17,14 @@ Template for `.planning/codebase/INTEGRATIONS.md` - captures external service de
 
 ---
 
+title: "integrations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "integrations"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

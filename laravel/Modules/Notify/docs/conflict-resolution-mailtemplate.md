@@ -1,3 +1,15 @@
+---
+title: "conflict resolution mailtemplate"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution mailtemplate"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti MailTemplate.php
 
 ## Contesto del Conflitto

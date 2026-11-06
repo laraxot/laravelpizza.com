@@ -45,6 +45,66 @@ return [
             ],
             'tooltip' => '',
         ],
+        'text' => [
+            'label' => 'text',
+            'placeholder' => 'text',
+            'helper_text' => 'text',
+            'description' => 'text',
+        ],
+        'driver' => [
+            'label' => 'driver',
+            'placeholder' => 'driver',
+            'helper_text' => 'driver',
+            'description' => 'driver',
+        ],
+        'disable_web_page_preview' => [
+            'label' => 'disable_web_page_preview',
+            'placeholder' => 'disable_web_page_preview',
+            'helper_text' => 'disable_web_page_preview',
+            'description' => 'disable_web_page_preview',
+        ],
+        'disable_notification' => [
+            'label' => 'disable_notification',
+            'placeholder' => 'disable_notification',
+            'helper_text' => 'disable_notification',
+            'description' => 'disable_notification',
+        ],
+        'reply_to_message_id' => [
+            'label' => 'reply_to_message_id',
+            'placeholder' => 'reply_to_message_id',
+            'helper_text' => 'reply_to_message_id',
+            'description' => 'reply_to_message_id',
+        ],
+        'media_url' => [
+            'label' => 'media_url',
+            'placeholder' => 'media_url',
+            'helper_text' => 'media_url',
+            'description' => 'media_url',
+        ],
+        'media_type' => [
+            'label' => 'media_type',
+            'placeholder' => 'media_type',
+            'helper_text' => 'media_type',
+            'description' => 'media_type',
+        ],
+        'caption' => [
+            'label' => 'caption',
+            'placeholder' => 'caption',
+            'helper_text' => 'caption',
+            'description' => 'caption',
+        ],
+        'recipient' => [
+            'label' => 'recipient',
+            'placeholder' => 'recipient',
+            'helper_text' => 'recipient',
+            'description' => 'recipient',
+        ],
+        'body' => [
+            'label' => 'body',
+            'placeholder' => 'body',
+            'helper_text' => 'body',
+            'description' => 'body',
+        ],
     ],
     'actions' => [
         'send' => [
@@ -61,6 +121,21 @@ return [
             'success_message' => 'Anteprima generata',
             'error_message' => 'Errore nella generazione dell\'anteprima',
         ],
+        'emailFormActions' => [
+            'label' => 'emailFormActions',
+            'icon' => 'emailFormActions',
+            'tooltip' => 'emailFormActions',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'telegramFormActions' => [
+            'label' => 'telegramFormActions',
+            'icon' => 'telegramFormActions',
+            'tooltip' => 'telegramFormActions',
+        ],
     ],
     'messages' => [
         'success' => 'Messaggio Telegram inviato con successo',
@@ -69,4 +144,14 @@ return [
     ],
     'label' => 'Send Telegram',
     'plural_label' => 'Send Telegram (Plurale)',
+    'sections' => [
+        'empty' => [
+            'label' => 'empty',
+            'heading' => 'empty',
+        ],
+        'page' => [
+            'title' => 'Test Invio Telegram',
+            'description' => 'Utilizza questo form per testare l\'invio di messaggi Telegram tramite diversi provider.',
+        ],
+    ],
 ];

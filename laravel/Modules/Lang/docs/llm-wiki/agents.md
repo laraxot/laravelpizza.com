@@ -9,6 +9,7 @@ issues: []
 discussions: []
 related:
   - ./coding-agent-manifests.md
+status: draft
 ---
 
 # Lang {{TYPE^}} LLM Wiki Agent Instructions

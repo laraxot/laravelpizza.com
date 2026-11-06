@@ -1,10 +1,22 @@
+---
+title: "translation cleanup plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-23
+qmd: "translation cleanup plan"
+issues: []
+discussions: []
+status: draft
+---
+
 # Piano di Pulizia e Standardizzazione delle Traduzioni
 
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Quaeris.
 
 ## Analisi della Situazione Attuale
 
-Dall'analisi dei file di traduzione nella cartella `/var/www/html/Quaeris/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
+Dall'analisi dei file di traduzione nella cartella `Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
 
 ### 1. File con Nomi Errati
 - `send_s_m_s.php` invece di `send_sms.php`

@@ -1,4 +1,7 @@
 ---
+qmd: "map current position bug fix"
+issues: []
+discussions: []
 title: "Map Current Position Bug Fix"
 type: troubleshooting
 confidence: high
@@ -8,6 +11,7 @@ tags: [map-lit, geolocation, fullscreen, search-control, coordinate-picker]
 related:
   - concepts/ticket-list-map-visibility-issue.md
   - concepts/ticket-location-json-architecture.md
+status: draft
 ---
 
 # Map Current Position Bug Fix

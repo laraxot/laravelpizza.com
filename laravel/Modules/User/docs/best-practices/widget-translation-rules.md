@@ -1,3 +1,24 @@
+---
+title: "Widget Translation Rules - FixCity Project"
+type: rule
+tags: [widget, translation, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "widget-translation-rules widget translation rules - fixcity project"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Widget Translation Rules - FixCity Project
 
 ## Core Principles
@@ -133,11 +154,16 @@ protected static string $view = 'user::widgets.edit-user';
 - Check responsive design and accessibility
 - Validate form submission and error handling
 ## Related Documentation
-- [User Module Widget Structure](../modules/user/project_docs/widgets_structure.md)
+- [User Module Widget Structure](../modules/user/project_docs/widgets-structure.md)
 - [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
-- [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure.md)
+- [User Module Widget Structure](../modules/user/project_docs/widgets-structure-user.md)
+- [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
+- [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure-user.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)

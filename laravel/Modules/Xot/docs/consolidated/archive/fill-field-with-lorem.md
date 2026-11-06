@@ -1,3 +1,11 @@
+---
+title: "fill_field_with_lorem"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "fill_field_with_lorem xot"
+---
 # fill_field_with_lorem
 
 <!-- Contenuto migrato da _docs/fill_field_with_lorem.txt -->

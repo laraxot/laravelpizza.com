@@ -17,5 +17,6 @@ return [
         'create' => ['label' => 'Crea Test'],
         'edit' => ['label' => 'Modifica Test'],
         'delete' => ['label' => 'Elimina Test'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
     ],
 ];

@@ -1,3 +1,14 @@
+---
+title: "percorsi relativi documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "percorsi relativi documentazione"
+issues: []
+discussions: []
+---
+
 # Percorsi Relativi nella Documentazione
 
 ## Errore Comune da Evitare

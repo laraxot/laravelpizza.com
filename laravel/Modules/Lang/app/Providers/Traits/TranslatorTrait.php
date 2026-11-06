@@ -6,16 +6,15 @@ namespace Modules\Lang\Providers\Traits;
 
 // --- services ---
 use Illuminate\Translation\Translator;
-use Modules\Lang\Services\TranslatorService;
+use Modules\Lang\Adapters\TranslatorAdapter;
 
-/** @phpstan-ignore trait.unused */
 trait TranslatorTrait
 {
     public function registerTranslator(): void
     {
         // Override the JSON Translator
-        $this->app->extend('translator', static function (Translator $translator): TranslatorService {
-            $translatorService = new TranslatorService($translator->getLoader(), $translator->getLocale());
+        $this->app->extend('translator', static function (Translator $translator): TranslatorAdapter {
+            $translatorService = new TranslatorAdapter($translator->getLoader(), $translator->getLocale());
             $translatorService->setFallback($translator->getFallback());
 
             return $translatorService;

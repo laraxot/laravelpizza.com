@@ -1,3 +1,14 @@
+---
+title: "remove phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "remove phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Remove an unstarted future phase from the project roadmap, delete its directory, renumber all subsequent phases to maintain a clean linear sequence, and commit the change. The git commit serves as the historical record of removal.
 </purpose>
@@ -122,6 +133,14 @@ Changes:
 
 ---
 
+title: "remove phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "remove phase"
+issues: []
+discussions: []
 ## What's Next
 
 Would you like to:

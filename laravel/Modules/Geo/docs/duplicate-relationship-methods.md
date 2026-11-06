@@ -1,10 +1,21 @@
+---
+title: "duplicate relationship methods"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate relationship methods"
+issues: []
+discussions: []
+status: draft
+---
+
 # Censimento Metodi Relazione Duplicati
 
 **Data**: 2026-06-15
 **Scope**: Tutti i moduli (`Modules/`) e temi (`Themes/`)
 
 ---
-
 ## Modulo Sigma (12 metodi duplicati)
 
 ### codici (×4) — HasOne

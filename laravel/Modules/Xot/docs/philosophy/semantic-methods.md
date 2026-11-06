@@ -1,3 +1,13 @@
+---
+title: "Filosofia dei Metodi Semantici"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, philosophy]
+qmd: "Filosofia dei Metodi Semantici"
+---
 # Filosofia dei Metodi Semantici
 
 ## Principio Fondamentale
@@ -110,4 +120,4 @@ class MetatagData
 ## Collegamenti
 - [MetatagData](../datas/metatag-data.md)
 - [ApplyMetatagToPanelAction](../actions/applymetatagtopanelaction.md)
-- [Best Practices](../best-practices.md)
+- [Best Practices](../best-practices.md) 

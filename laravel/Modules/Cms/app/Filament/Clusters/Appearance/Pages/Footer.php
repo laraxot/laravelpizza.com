@@ -15,7 +15,7 @@ use Illuminate\Support\Arr;
 use Modules\Cms\Actions\SaveFooterConfigAction;
 use Modules\Cms\Datas\FooterData;
 use Modules\Cms\Filament\Clusters\Appearance;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
@@ -104,7 +104,7 @@ class Footer extends XotBasePage
      */
     protected function fillForms(): void
     {
-        $appearanceConfig = TenantService::config('appearance');
+        $appearanceConfig = app(ResolveTenantConfigValueAction::class)->execute('appearance');
         Assert::isArray($appearanceConfig);
 
         $footerConfig = Arr::get($appearanceConfig, 'footer', []);

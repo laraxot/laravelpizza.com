@@ -1,3 +1,11 @@
+---
+title: "Pagine Dashboard Filament - Best Practices"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pagine dashboard filament - best practices xot"
+---
 # Pagine Dashboard Filament - Best Practices
 
 ## Panoramica

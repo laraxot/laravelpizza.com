@@ -1,3 +1,11 @@
+---
+title: "Filament Best Practices (Moduli Riutilizzabili)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filament best practices (moduli riutilizzabili) xot"
+---
 # Filament Best Practices (Moduli Riutilizzabili)
 
 ## Descrizione

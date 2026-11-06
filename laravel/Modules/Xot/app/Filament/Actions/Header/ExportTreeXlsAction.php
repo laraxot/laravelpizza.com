@@ -1,16 +1,14 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://coderflex.com/blog/create-advanced-filters-with-filament
  */
-
-declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Actions\Header;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
-use Filament\Actions\Action;
 use Filament\Resources\Pages\Page;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +16,7 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Export\ExportXlsByCollection;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
 /**
@@ -25,17 +24,17 @@ use Webmozart\Assert\Assert;
  *
  * @property Model $record
  */
-class ExportTreeXlsAction extends Action
+class ExportTreeXlsAction extends XotBaseAction
 {
     protected function setUp(): void
     {
         parent::setUp();
         $this->translateLabel()
-            ->tooltip(__('xot::actions.export_xls'))
+            // ->tooltip(__('xot::actions.export_xls'))
             // ->icon('heroicon-o-cloud-arrow-down')
             // ->icon('fas-file-excel')
-            ->icon('heroicon-o-arrow-down-tray')
-            ->action(static function (Page $livewire, Model $record, $_data) {
+            ->icon('xot-files.xls')
+            ->action(static function (Page $livewire, Model $record, array $_data) {
                 $tableFilters = [
                     'id' => $record->getKey(),
                 ];
@@ -45,7 +44,7 @@ class ExportTreeXlsAction extends Action
                 // $query = $livewire->getFilteredTableQuery(); // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 // $rows = $query->get();
                 Assert::implementsInterface($record, HasRecursiveRelationshipsContract::class);
-                /** @var Model&HasRecursiveRelationshipsContract $treeRecord */
+                /** @var Model&HasRecursiveRelationshipsContract<Model> $treeRecord */
                 $treeRecord = $record;
                 $rows = $treeRecord->descendantsAndSelf;
                 Assert::isInstanceOf($rows, Collection::class);

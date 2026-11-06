@@ -14,9 +14,13 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Psr\Http\Message\StreamInterface;
 
 use function Safe\json_encode;
 
@@ -29,9 +33,9 @@ class AwsTest extends XotBasePage
 
     public string $activeTab = 's3';
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
-    private const KEY_PREVIEW_LENGTH = 8;
+    private const int KEY_PREVIEW_LENGTH = 8;
 
     /** @var array<string, string> */
     public array $connectionTests = [
@@ -42,7 +46,7 @@ class AwsTest extends XotBasePage
     ];
 
     /**
-     * @return array<int, \Filament\Schemas\Components\Component>
+     * @return array<int, Component>
      */
     protected function getS3TestSchema(): array
     {
@@ -52,14 +56,14 @@ class AwsTest extends XotBasePage
                 ->schema([
                     Actions::make([
                         Action::make('test_s3_connection')
-                            ->label(__('ui::aws_test.test_s3_connection'))
+                            ->label(Lang::string('ui::aws_test.test_s3_connection'))
                             ->action('testS3Connection'),
                         Action::make('test_s3_permissions')
-                            ->label(__('ui::aws_test.test_s3_permissions'))
+                            ->label(Lang::string('ui::aws_test.test_s3_permissions'))
                             ->color('warning')
                             ->action('testS3Permissions'),
                         Action::make('test_file_operations')
-                            ->label(__('ui::aws_test.test_file_operations'))
+                            ->label(Lang::string('ui::aws_test.test_file_operations'))
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
@@ -73,7 +77,7 @@ class AwsTest extends XotBasePage
     }
 
     /**
-     * @return array<int, \Filament\Schemas\Components\Component>
+     * @return array<int, Component>
      */
     protected function getCloudFrontTestSchema(): array
     {
@@ -94,7 +98,7 @@ class AwsTest extends XotBasePage
     }
 
     /**
-     * @return array<int, \Filament\Schemas\Components\Component>
+     * @return array<int, Component>
      */
     protected function getIamTestSchema(): array
     {
@@ -115,7 +119,7 @@ class AwsTest extends XotBasePage
     }
 
     /**
-     * @return array<int, \Filament\Schemas\Components\Component>
+     * @return array<int, Component>
      */
     protected function getDiagnosticsSchema(): array
     {
@@ -150,21 +154,22 @@ class AwsTest extends XotBasePage
                 ],
             ]);
 
-            $result = $s3->headBucket([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+            // headBucket() lancia AwsException se il bucket non e' raggiungibile: l'esito sta nell'eccezione.
+            $s3->headBucket([
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
             ]);
 
             $this->testResults['s3'] = [
                 'status' => 'success',
                 'message' => 'Successfully connected to S3 bucket',
                 'details' => [
-                    'Bucket' => config('filesystems.disks.s3.bucket'),
+                    'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                     'Region' => config('filesystems.disks.s3.region'),
                 ],
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_successful'))
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_successful'))
                 ->success()
                 ->send();
         } catch (AwsException $e) {
@@ -178,7 +183,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_failed'))
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_failed'))
                 ->danger()
                 ->body($e->getAwsErrorCode() ?? 'UnknownError')
                 ->send();
@@ -199,7 +204,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_valid'))
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_valid'))
                 ->success()
                 ->send();
         } catch (Exception $e) {
@@ -213,7 +218,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_error'))
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_error'))
                 ->danger()
                 ->send();
         }
@@ -236,7 +241,7 @@ class AwsTest extends XotBasePage
         ];
 
         Notification::make()
-            ->title(__('ui::awstest.notifications.full_diagnostic_completed'))
+            ->title(Lang::string('ui::awstest.notifications.full_diagnostic_completed'))
             ->success()
             ->send();
     }
@@ -248,9 +253,9 @@ class AwsTest extends XotBasePage
     protected function getAwsConfig(): array
     {
         return [
-            'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
+            'AWS_ACCESS_KEY_ID' => substr(Config::string('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
-            'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
+            'AWS_BUCKET' => Config::string('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),
             'CLOUDFRONT_KEY_PAIR_ID' => config('filesystems.cloudfront.key_pair_id'),
         ];
@@ -285,8 +290,8 @@ class AwsTest extends XotBasePage
             ]);
 
             // Test list objects permission
-            $result = $s3->listObjectsV2([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+            $s3->listObjectsV2([
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'MaxKeys' => 1,
             ]);
 
@@ -295,7 +300,7 @@ class AwsTest extends XotBasePage
                 'message' => 'S3 permissions verified successfully',
                 'details' => [
                     'ListObjects' => 'OK',
-                    'Bucket' => config('filesystems.disks.s3.bucket'),
+                    'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 ],
             ];
 
@@ -338,23 +343,45 @@ class AwsTest extends XotBasePage
 
             // Test put operation
             $s3->putObject([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
                 'Body' => $testContent,
                 'ContentType' => 'text/plain',
             ]);
 
-            // Test get operation
-            $result = $s3->getObject([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+            // Test get operation: il contenuto scaricato deve coincidere con quello caricato
+            $body = $s3->getObject([
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
-            ]);
+            ])->get('Body');
+            $downloadMatches = $body instanceof StreamInterface && (string) $body === $testContent;
 
             // Clean up - delete test file
             $s3->deleteObject([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
             ]);
+
+            if (! $downloadMatches) {
+                $this->testResults['s3_operations'] = [
+                    'status' => 'error',
+                    'message' => 'S3 download returned content different from the uploaded file',
+                    'details' => [
+                        'Upload' => 'OK',
+                        'Download' => 'Content mismatch',
+                        'Delete' => 'OK',
+                        'Test File' => $testFileName,
+                    ],
+                ];
+
+                Notification::make()
+                    ->title('S3 File Operations Failed')
+                    ->danger()
+                    ->body('Downloaded content does not match the uploaded content')
+                    ->send();
+
+                return;
+            }
 
             $this->testResults['s3_operations'] = [
                 'status' => 'success',
@@ -493,12 +520,12 @@ class AwsTest extends XotBasePage
 
             // Test bucket access
             $s3->headBucket([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
             ]);
 
             // Test list objects
             $s3->listObjectsV2([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'MaxKeys' => 1,
             ]);
 

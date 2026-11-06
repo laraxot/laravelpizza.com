@@ -38,9 +38,6 @@ class VideoPlayer extends Component
      */
     public function render(): View
     {
-        /**
-         * @phpstan-var view-string
-         */
         $view = app(GetViewAction::class)->execute($this->driver);
 
         $view_params = [

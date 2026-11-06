@@ -1,26 +1,26 @@
-use Illuminate\Validation\Rules\Password;
-
- Password::defaults(function () {
-            return Password::min(8)
-                           ->mixedCase()
-                           ->uncompromised();
-        });
-
-$request->validate([
-    'password' => ['required', Password::defaults()],
-]);
-
+---
+module: theme
+topic: password
+canonical: ../../../Themes/docs/shared-components/password.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+title: "password"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "password user"
 ---
 
-ZxcvbnPhp\Zxcvbn
-
-ZxcvbnRule
-
-https://github.com/bjeavons/zxcvbn-php
-
-https://github.com/DivineOmega/laravel-password-exposed-validation-rule
-
-NoOldPasswords
-https://laracasts.com/discuss/channels/laravel/complex-password-rules-for-password-reset
-
-https://njoguamos.me.ke/posts/create-and-test-a-custom-laravel-validation-rule !!!!
+See canonical documentation: ../../../Themes/docs/shared-components/password.md

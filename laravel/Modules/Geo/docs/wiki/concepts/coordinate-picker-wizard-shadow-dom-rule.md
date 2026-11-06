@@ -1,3 +1,15 @@
+---
+title: "coordinate picker wizard shadow dom rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker wizard shadow dom rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Coordinate Picker Wizard Shadow DOM Rule
 
 ## Regola

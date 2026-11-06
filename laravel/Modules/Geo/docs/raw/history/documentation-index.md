@@ -1,3 +1,14 @@
+---
+title: "documentation index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation index"
+issues: []
+discussions: []
+---
+
 # PTVX Documentation Index
 
 ## Executive Summary
@@ -12,6 +23,14 @@
 
 ---
 
+title: "documentation index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation index"
+issues: []
+discussions: []
 ## Module Status Matrix
 
 | Module | PHPStan Status | Error Count | Critical Issues | Priority |

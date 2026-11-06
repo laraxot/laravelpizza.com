@@ -1,3 +1,15 @@
+---
+title: "cms themes link"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cms themes link"
+issues: []
+discussions: []
+status: draft
+---
+
 # Collegamenti ai Temi nel Modulo Cms
 
 Questo documento fornisce collegamenti bidirezionali tra il modulo UI e il modulo Cms per quanto riguarda i temi.

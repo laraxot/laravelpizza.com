@@ -1,3 +1,11 @@
+---
+title: "XotBaseResource"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbaseresource xot"
+---
 # XotBaseResource
 
 ## Overview

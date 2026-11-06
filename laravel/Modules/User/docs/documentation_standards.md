@@ -1,3 +1,12 @@
+---
+title: "Standard di Documentazione"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "standard di documentazione user"
+status: superseded
+superseded_by: documentation-standards.md
+---
 # Standard di Documentazione
 
 ## Convenzioni di Naming

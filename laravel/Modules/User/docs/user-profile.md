@@ -1,3 +1,28 @@
+---
+title: "User vs Profile: Guida Completa alla Progettazione"
+type: concept
+tags: [user, profile]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user-profile user vs profile: guida completa alla progettazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # User vs Profile: Guida Completa alla Progettazione
 
 ## Sommario
@@ -327,17 +352,5 @@ Per **<nome progetto>** la separazione attuale ha senso perché:
 
 ---
 
-
-*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
-*Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
-
-*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
-
-*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
-
-*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
-
-*Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
 *Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
 *Data: [DATE]*
-

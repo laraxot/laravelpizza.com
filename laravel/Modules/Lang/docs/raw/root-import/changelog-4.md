@@ -1,3 +1,14 @@
+---
+title: "changelog 4"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "changelog 4"
+issues: []
+discussions: []
+---
+
 # Changelog
 
 All notable changes to `:package_name` will be documented in this file.

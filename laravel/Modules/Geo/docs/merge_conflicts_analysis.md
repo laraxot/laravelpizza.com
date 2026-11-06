@@ -1,3 +1,16 @@
+---
+title: "merge conflicts analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "merge conflicts analysis"
+issues: []
+discussions: []
+status: superseded
+superseded_by: merge-conflicts-analysis.md
+---
+
 # Analisi Conflitti di Merge - Modulo Geo
 
 ## Panoramica
@@ -109,5 +122,4 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 - [Regole PHPStan](phpstan_fixes.md)
 
 ---
-
 **Stato**: In corso di analisi 

@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Illuminate\Support\Facades\Auth;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
-class UserDropdown extends XotBaseWidget
+class UserDropdown extends XotBaseSchemaWidget
 {
     /**
      * The view for this widget.
@@ -63,13 +63,13 @@ class UserDropdown extends XotBaseWidget
 
         if (method_exists($profile, 'getAvatarUrl')) {
             $url = $profile->getAvatarUrl();
-            if (\is_string($url) && '' !== $url) {
+            if (\is_string($url) && $url !== '') {
                 return $url;
             }
         }
 
         $avatarUrl = $profile->avatar_url ?? null;
 
-        return \is_string($avatarUrl) && '' !== $avatarUrl ? $avatarUrl : $fallback;
+        return \is_string($avatarUrl) && $avatarUrl !== '' ? $avatarUrl : $fallback;
     }
 }

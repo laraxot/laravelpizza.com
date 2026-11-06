@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Decisione: Arr::first() vs collect()->first()"
+module: "Tenant"
+type: concept
+tags: [arr, first, vs, collect]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "arr first vs collect first ision"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Decisione: Arr::first() vs collect()->first()
 
 **Metodologia**: Super Mucca - La Litigata Interna

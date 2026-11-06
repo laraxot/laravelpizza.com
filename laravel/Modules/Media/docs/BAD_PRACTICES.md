@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Bad Practices – Media Module"
+module: "Media"
+type: concept
+tags: [BAD, PRACTICES]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "bad practices"
+related:
+  - "./webm.md"
+status: draft
+---
 # Bad Practices – Media Module
 
 - ❌ **VIOLATE** SVG asset location rule (see `svg-asset-location.md`) using invalid paths
@@ -13,4 +27,5 @@
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
+---
 ```

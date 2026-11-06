@@ -1,3 +1,14 @@
+---
+title: "ui brand"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui brand"
+issues: []
+discussions: []
+---
+
 <ui_patterns>
 
 Visual patterns for user-facing GSD output. Orchestrators @-reference this file.
@@ -25,6 +36,14 @@ Use for major workflow transitions.
 
 ---
 
+title: "ui brand"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui brand"
+issues: []
+discussions: []
 ## Checkpoint Boxes
 
 User action required. 62-character width.

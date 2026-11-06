@@ -1,3 +1,15 @@
+---
+title: "code quality"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laraxot Code Quality Standards
 
 ## Overview
@@ -127,7 +139,17 @@ return [
 
 ```php
 // ✅ CORRECT
-public static function getFormSchema(): array
+public function getFormSchema(): array
+---
+title: "code quality"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality"
+issues: []
+discussions: []
+public function getFormSchema(): array
 {
     return [
         'name' => TextInput::make('name'),
@@ -136,7 +158,9 @@ public static function getFormSchema(): array
 }
 
 // ❌ WRONG
-public static function getFormSchema(): array
+public function getFormSchema(): array
+---
+public function getFormSchema(): array
 {
     return [
         TextInput::make('name')->label('Nome'),
@@ -342,8 +366,8 @@ This document outlines the best practices for maintaining high code quality with
 - [Filament Extension Pattern Analysis](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
 - [Patient Module - Namespace Conventions](../../Patient/project_docs/NAMESPACE_CONVENTIONS.md)
 - [Patient Module - Validation Errors](../../Patient/project_docs/VALIDATION_ERRORS.md)
-- [PHP Strict Types](./PHP-STRICT-TYPES.md)
-- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
-- [Naming Conventions](./NAMING-CONVENTIONS.md)
-- [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+- [PHP Strict Types](php-strict-types.md)
+- [PHPStan Implementation Guide](phpstan-implementation-guide.md)
+- [Naming Conventions](naming-conventions.md)
+- [Service Provider Best Practices](service-provider-best-practices.md)
+- [Filament Best Practices](filament-best-practices.md)

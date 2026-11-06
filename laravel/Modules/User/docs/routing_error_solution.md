@@ -1,3 +1,12 @@
+---
+title: "Soluzione Errori di Routing nel Frontoffice"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "soluzione errori di routing nel frontoffice user"
+status: superseded
+superseded_by: routing-solution.md
+---
 # Soluzione Errori di Routing nel Frontoffice
 
 In un modulo User che usa Volt + Folio + Filament, **non** definire mai rotte in `routes/web.php`. Se incappi in un errore di tipo “Route not found” o conflitti di middleware dovuti a rotte imperative, ecco come risolvere:
@@ -65,5 +74,3 @@ Route::get('/settings', [SettingsComponent::class, 'render']);
 
 ---
 Questa procedura mantiene fede ai principi di **modularità**, **dichiaratività** e **manutenibilità** della nostra architettura.
-
-See canonical documentation: ../../../Themes/docs/shared-components/routing-error-solution.md

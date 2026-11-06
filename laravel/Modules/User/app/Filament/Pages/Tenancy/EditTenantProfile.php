@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Pages\Tenancy;
 
-use Filament\Pages\Tenancy\EditTenantProfile as BaseEditTenantProfile;
 use Filament\Schemas\Schema;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Pages\Tenancy\XotBaseEditTenantProfile;
 use Webmozart\Assert\Assert;
 
-class EditTenantProfile extends BaseEditTenantProfile
+class EditTenantProfile extends XotBaseEditTenantProfile
 {
     public static function getLabel(): string
     {

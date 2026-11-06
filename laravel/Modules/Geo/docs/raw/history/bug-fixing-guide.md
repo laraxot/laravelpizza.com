@@ -1,3 +1,14 @@
+---
+title: "bug fixing guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bug fixing guide"
+issues: []
+discussions: []
+---
+
 # Guida Completa per Bug Fixing - Laraxot
 
 ## Principi Fondamentali
@@ -213,6 +224,14 @@ class Example {
 
 ---
 
+title: "bug fixing guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bug fixing guide"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2025-08-04*
 *Versione: 2.0*
 *Compatibilità: Laraxot <nome progetto>, PHP 8.2+, Laravel 12+, Filament 3.4+*

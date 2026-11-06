@@ -1,32 +1,17 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/DutchCodingCompany/filament-socialite/blob/main/routes/web.php
  */
-
-declare(strict_types=1);
-
 use Illuminate\Support\Facades\Route;
-use Modules\User\Http\Controllers\Auth\LogoutController;
-use Modules\Xot\Datas\XotData;
+use Modules\User\Http\Volt\LogoutAction;
 
-require 'socialite.php';
+// POST + auth: un logout via GET sarebbe esposto a CSRF; gli header usano un form con @csrf.
+Route::post('logout', [LogoutAction::class, '__invoke'])->middleware('auth')->name('logout');
 
-try {
-    if (class_exists(XotData::class)) {
-        $xotData = XotData::make();
-        if ($xotData->register_pub_theme) {
-            // require 'web_tall.php';
-        } else {
-            Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
-        }
-    } else {
-        Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
-    }
-} catch (Throwable $e) {
-    Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
-}
-
-Route::post('/logout', LogoutController::class)->name('logout');
+// OAuth Socialite routes live in their own file and must be loaded by the
+// module web route entrypoint so the front-office route names are available.
+require __DIR__.'/socialite.php';
 
 // Route::get('/upgrade', 'UpgradeController');

@@ -1,3 +1,15 @@
+---
+title: "phpstan return type errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan return type errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Return Type Mismatch Errors
 
 ## Problema

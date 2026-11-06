@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Riepilogo Correzioni S3Test.php - Modulo Media"
+module: "Media"
+type: concept
+tags: [corrections, summary]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "corrections summary"
+related:
+  - "./webm.md"
+status: superseded
+superseded_by: corrections.md
+---
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
 ## 🎯 **Obiettivo Completato**
@@ -137,7 +152,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 - [Correzioni Dettagliate](s3test_corrections.md)
 - [Linee Guida Prevenzione](prevention_guidelines.md)
-- [PHPStan Fixes](phpstan_level10_fixes.md)
+- [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
 
 ---
@@ -285,7 +300,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 - [Correzioni Dettagliate](s3test_corrections.md)
 - [Linee Guida Prevenzione](prevention_guidelines.md)
-- [PHPStan Fixes](phpstan_level10_fixes.md)
+- [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
 
 ---

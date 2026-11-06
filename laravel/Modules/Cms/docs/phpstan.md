@@ -1,12 +1,37 @@
+---
+title: "phpstan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-20
+qmd: "phpstan cms legacy neon dist non gate solo laravel phpstan.neon"
+issues: []
+discussions: []
+status: draft
+related:
+  - ./00-index.md
+  - ../../Xot/docs/wiki/memories/phpstan-single-neon-config.md
+---
+
+<!--
+GateGuard facts:
+1. Supersedes stale "use phpstan.neon.dist as config" in this same file; canon is Xot phpstan-single-neon-config.md.
+2. Linked from 00-INDEX quality section; indexed as Cms docs/phpstan.md.
+3. Edit existing file — not a new topic doc.
+4. User: "devi utilizzare laravel/phpstan.neon e solo io posso modificarlo, non puoi creare altri .neon"
+-->
+
 # Configurazione PHPStan per i moduli
+
+> **Avviso (2026-10-20):** questo file e' **legacy/archivio**. Il gate operativo e' **solo** `laravel/phpstan.neon` (solo l'umano lo modifica). Agenti: `cd laravel && ./vendor/bin/phpstan analyse …` senza `-c`, `--level`, neon di modulo o temp. `Modules/*/phpstan.neon.dist` e gli esempi sotto **non** sono il gate. Canon: [phpstan-single-neon-config](../../Xot/docs/wiki/memories/phpstan-single-neon-config.md). Indice Cms: [00-INDEX.md](./00-index.md).
 
 ## Introduzione
 
 Per analizzare il codice nei nostri moduli, utilizziamo PHPStan con l'estensione Larastan. Inoltre, consideriamo l'utilizzo di Safe per gestire meglio gli errori nelle funzioni PHP.
 
-## Configurazione base
+## Configurazione base (storico — non usare come gate)
 
-Il file `phpstan.neon.dist` dovrebbe essere configurato come segue:
+Il file `phpstan.neon.dist` di modulo e' **legacy**: non crearlo, non citarlo come gate. Esempio storico (non operativo):
 
 ```neon
 includes:
@@ -106,12 +131,7 @@ Per verificare che tutte le funzioni PHP siano utilizzate in modo sicuro, instal
 composer require --dev thecodingmachine/phpstan-safe-rule
 ```
 
-E aggiungere al file `phpstan.neon.dist`:
-
-```neon
-includes:
-    - vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
-```
+Se serve l'include Safe, **solo l'umano** lo aggiunge a `laravel/phpstan.neon`. Non aggiungere a `phpstan.neon.dist` di modulo (legacy).
 
 ## Correzione automatica
 

@@ -152,6 +152,14 @@ export function selectSearchResult(ctx, result) {
         ctx._map.setView([lat, lng], Math.max(ctx._map.getZoom(), 16));
     }
 
+    // Il wrapper Blade (Alpine) riceve l'indirizzo solo da questo evento: `coords-changed` della ricerca porta le sole
+    // coordinate, e senza questo il riepilogo restava "Indirizzo: --" dopo una ricerca riuscita.
+    ctx.dispatchEvent(new CustomEvent('address-selected', {
+        detail: { result, address, lat, lng, latitude: lat, longitude: lng, payload },
+        bubbles: true,
+        composed: true,
+    }));
+
     ctx.requestUpdate?.();
 }
 

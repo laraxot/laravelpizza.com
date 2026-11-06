@@ -1,3 +1,24 @@
+---
+title: "No Filament Labels Rule"
+type: concept
+tags: [filament, labels]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "no-filament-labels no filament labels rule"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./agent-confidence-protocol.md"
+  - "./can-comment-retired-wrong-placement.md"
+  - "./frontend-stack-canonical.md"
+  - "./header-auth-flow.md"
+  - "./header-design-colors.md"
+  - "./module-commit-push-after-change.md"
+  - "./navigation-properties.md"
+  - "./no-notifications-migration-in-user-module.md"
+status: draft
+---
+
 # No Filament Labels Rule
 
 **REGOLA PERMANENTE**: Nessun utilizzo di `->label()`, `->placeholder()`, o `->helperText()` nei widget Filament.

@@ -1,10 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @php
-$title = 'Registrazione - ';
+$title = __('user::auth_pages.register.page.title').' - ';
 @endphp
 
 <x-layouts.marketing :title="$title">
@@ -25,7 +24,7 @@ $title = 'Registrazione - ';
                 <span class="inline-block transform transition-transform duration-300 hover:scale-110">O</span>RA
                 <span class="orale-text text-3xl sm:text-4xl">le</span>
             </h1>
-            <p class="text-blue-200 text-lg animate-fade-in">Crea il tuo account</p>
+            <p class="text-blue-200 text-lg animate-fade-in">{{ __('user::auth.register_page.title') }}</p>
         </div>
 
         {{-- Form di Registrazione con animazione --}}
@@ -42,21 +41,21 @@ $title = 'Registrazione - ';
 
                 {{-- Nome con animazione --}}
                 <div class="transform transition-all duration-300 hover:scale-[1.02]">
-                    <x-input-label for="name" :value="__('Nome')" class="text-white" />
+                    <x-input-label for="name" :value="__('user::common.fields.name.label')" class="text-white" />
                     <x-text-input id="name" class="block mt-1 w-full bg-white/20 text-white placeholder-blue-200 transition-all duration-300 focus:bg-white/30" type="text" name="name" :value="old('name')" required autofocus />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
 
                 {{-- Email con animazione --}}
                 <div class="transform transition-all duration-300 hover:scale-[1.02]">
-                    <x-input-label for="email" :value="__('Email')" class="text-white" />
+                    <x-input-label for="email" :value="__('user::common.fields.email.label')" class="text-white" />
                     <x-text-input id="email" class="block mt-1 w-full bg-white/20 text-white placeholder-blue-200 transition-all duration-300 focus:bg-white/30" type="email" name="email" :value="old('email')" required />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
                 {{-- Password con toggle --}}
                 <div class="transform transition-all duration-300 hover:scale-[1.02]">
-                    <x-input-label for="password" :value="__('Password')" class="text-white" />
+                    <x-input-label for="password" :value="__('user::common.fields.password.label')" class="text-white" />
                     <div class="relative">
                         <x-text-input id="password" class="block mt-1 w-full bg-white/20 text-white placeholder-blue-200 transition-all duration-300 focus:bg-white/30"
                             :type="showPassword ? 'text' : 'password'"
@@ -73,9 +72,9 @@ $title = 'Registrazione - ';
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
-                {{-- Conferma Password con toggle --}}
+{{-- Conferma Password con toggle --}}
                 <div class="transform transition-all duration-300 hover:scale-[1.02]">
-                    <x-input-label for="password_confirmation" :value="__('Conferma Password')" class="text-white" />
+                    <x-input-label for="password_confirmation" :value="__('user::common.fields.password_confirmation.label')" class="text-white" />
                     <div class="relative">
                         <x-text-input id="password_confirmation" class="block mt-1 w-full bg-white/20 text-white placeholder-blue-200 transition-all duration-300 focus:bg-white/30"
                             :type="showConfirmPassword ? 'text' : 'password'"
@@ -85,18 +84,55 @@ $title = 'Registrazione - ';
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path x-show="!showConfirmPassword" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 <path x-show="!showConfirmPassword" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                <path x-show="showConfirmPassword" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                <path x-show="showConfirmPassword" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543 7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
                             </svg>
                         </button>
                     </div>
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
 
+                {{-- Consenso privacy e termini (obbligatori per la PA, DCP-164) --}}
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="privacy_accepted" name="privacy_accepted" type="checkbox" required
+                                   class="w-4 h-4 text-blue-600 bg-white/20 border-white/30 rounded focus:ring-blue-500" />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="privacy_accepted" class="text-blue-100">
+                                {!! __('user::register_page.consent.privacy.text', ['link' => '<a href="/it/informativa-privacy" target="_blank" class="text-white underline hover:text-blue-200">'.e(__('user::register_page.consent.privacy_link.label')).'</a>']) !!}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="terms_accepted" name="terms_accepted" type="checkbox" required
+                                   class="w-4 h-4 text-blue-600 bg-white/20 border-white/30 rounded focus:ring-blue-500" />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="terms_accepted" class="text-blue-100">
+                                {!! __('user::register_page.consent.terms.text', ['cookie_link' => '<a href="/it/cookie-policy" target="_blank" class="text-white underline hover:text-blue-200">'.e(__('user::register_page.consent.cookie_link.label')).'</a>', 'terms_link' => '<a href="/it/note-legali" target="_blank" class="text-white underline hover:text-blue-200">'.e(__('user::register_page.consent.terms_link.label')).'</a>']) !!}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="marketing_consent" name="marketing_consent" type="checkbox"
+                                   class="w-4 h-4 text-blue-600 bg-white/20 border-white/30 rounded focus:ring-blue-500" />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="marketing_consent" class="text-blue-100">
+                                {{ __('user::register_page.consent.marketing.label') }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
                 {{-- Pulsante Registrazione con animazione --}}
                 <div class="flex items-center justify-end">
                     <x-primary-button class="bg-blue-600 hover:bg-blue-700 text-white transform transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                         :disabled="!formValid">
-                        {{ __('Registrati') }}
+                        {{ __('user::common.actions.register.label') }}
                     </x-primary-button>
                 </div>
             </form>
@@ -104,9 +140,9 @@ $title = 'Registrazione - ';
             {{-- Link Login con animazione --}}
             <div class="mt-6 text-center">
                 <p class="text-blue-200">
-                    {{ __('Hai già un account?') }}
+                    {{ __('user::register_page.login.prompt.text') }}
                     <a href="{{ route('login') }}" class="text-white hover:text-blue-300 underline transform transition-all duration-300 hover:scale-105">
-                        {{ __('Accedi') }}
+                        {{ __('user::common.actions.login.label') }}
                     </a>
                 </p>
             </div>

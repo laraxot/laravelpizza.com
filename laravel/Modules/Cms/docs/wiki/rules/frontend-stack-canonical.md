@@ -1,8 +1,14 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "frontend stack canonical"
+issues: []
+discussions: []
 title: frontend stack canonico — cms module stub
 type: rule
 module: Cms
 updated: 2026-06-03
+status: draft
 ---
 
 # Stack frontend — modulo Cms
@@ -22,4 +28,4 @@ Blocchi CMS e pagine Folio: classi Tailwind/DaisyUI nel tema; naming blocchi da 
 
 ## Story
 
-[STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md)
+[STORY-133](../../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md)

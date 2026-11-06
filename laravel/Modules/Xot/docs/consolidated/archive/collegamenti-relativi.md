@@ -1,3 +1,11 @@
+---
+title: "Regole per i Collegamenti nella Documentazione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per i collegamenti nella documentazione xot"
+---
 # Regole per i Collegamenti nella Documentazione
 
 ## Utilizzo Esclusivo di Collegamenti Relativi

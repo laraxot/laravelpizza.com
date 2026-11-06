@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /**
  * Pest Laravel helper stubs for PHPStan.
  *
@@ -11,13 +12,16 @@
  * - This file is only for static analysis and test helper convenience.
  */
 
-declare(strict_types=1);
-
 namespace Pest\Laravel;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Response;
 use Illuminate\Testing\TestResponse;
+use Pest\PendingCalls\AfterEachCall;
+use Pest\PendingCalls\BeforeEachCall;
+use Pest\PendingCalls\DescribeCall;
+use Pest\PendingCalls\TestCall;
+use Pest\PendingCalls\UsesCall;
 
 /**
  * Authenticate as a given model or ID.
@@ -26,165 +30,153 @@ use Illuminate\Testing\TestResponse;
  */
 function actingAs(Authenticatable|int|string|null $user = null, ?string $driver = null): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('actingAs', $user, $driver);
 }
 
 /**
  * Perform a GET request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $options
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $options
  * @return TestResponse<Response>
  */
 function get(string|array $uri = '', array $options = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('get', $uri, $options);
 }
 
 /**
  * Perform a POST request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- * @param array<string, mixed>            $options
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
+ * @param  array<string, mixed>  $options
  * @return TestResponse<Response>
  */
 function post(string|array $uri, array $data = [], array $options = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('post', $uri, $data, $options);
 }
 
 /**
  * Perform a PUT request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
  * @return TestResponse<Response>
  */
 function put(string|array $uri, array $data = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('put', $uri, $data);
 }
 
 /**
  * Perform a PATCH request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
  * @return TestResponse<Response>
  */
 function patch(string|array $uri, array $data = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('patch', $uri, $data);
 }
 
 /**
  * Perform a DELETE request.
  *
- * @param string|array<int|string, mixed> $uri
- *
+ * @param  string|array<int|string, mixed>  $uri
  * @return TestResponse<Response>
  */
 function delete(string|array $uri): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('delete', $uri);
 }
 
 /**
  * Perform a HEAD request.
  *
- * @param string|array<int|string, mixed> $uri
- *
+ * @param  string|array<int|string, mixed>  $uri
  * @return TestResponse<Response>
  */
 function head(string|array $uri): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('head', $uri);
 }
 
 /**
  * Perform an OPTIONS request.
  *
- * @param string|array<int|string, mixed> $uri
- *
+ * @param  string|array<int|string, mixed>  $uri
  * @return TestResponse<Response>
  */
 function options(string|array $uri): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('options', $uri);
 }
 
 /**
  * Perform a JSON GET request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $headers
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $headers
  * @return TestResponse<Response>
  */
 function getJson(string|array $uri, array $headers = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('getJson', $uri, $headers);
 }
 
 /**
  * Perform a JSON POST request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- * @param array<string, mixed>            $headers
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
+ * @param  array<string, mixed>  $headers
  * @return TestResponse<Response>
  */
 function postJson(string|array $uri, array $data = [], array $headers = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('postJson', $uri, $data, $headers);
 }
 
 /**
  * Perform a JSON PUT request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- * @param array<string, mixed>            $headers
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
+ * @param  array<string, mixed>  $headers
  * @return TestResponse<Response>
  */
 function putJson(string|array $uri, array $data = [], array $headers = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('putJson', $uri, $data, $headers);
 }
 
 /**
  * Perform a JSON PATCH request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- * @param array<string, mixed>            $headers
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
+ * @param  array<string, mixed>  $headers
  * @return TestResponse<Response>
  */
 function patchJson(string|array $uri, array $data = [], array $headers = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('patchJson', $uri, $data, $headers);
 }
 
 /**
  * Perform a JSON DELETE request.
  *
- * @param string|array<int|string, mixed> $uri
- * @param array<string, mixed>            $data
- * @param array<string, mixed>            $headers
- *
+ * @param  string|array<int|string, mixed>  $uri
+ * @param  array<string, mixed>  $data
+ * @param  array<string, mixed>  $headers
  * @return TestResponse<Response>
  */
 function deleteJson(string|array $uri, array $data = [], array $headers = []): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('deleteJson', $uri, $data, $headers);
 }
 
 /**
@@ -194,55 +186,55 @@ function deleteJson(string|array $uri, array $data = [], array $headers = []): T
  */
 function followingRedirects(int $number = 5): TestResponse
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('followingRedirects', $number);
 }
 
 /**
  * Define a test case.
  */
-function test(string $description, ?\Closure $closure = null): mixed
+function test(string $description, ?\Closure $closure = null): TestCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('test', $description, $closure);
 }
 
 /**
  * Define a test case.
  */
-function it(string $description, ?\Closure $closure = null): mixed
+function it(string $description, ?\Closure $closure = null): TestCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('it', $description, $closure);
 }
 
 /**
  * Define a test group.
  */
-function describe(string $description, \Closure $closure): mixed
+function describe(string $description, \Closure $closure): DescribeCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('describe', $description, $closure);
 }
 
 /**
  * Define a before each hook.
  */
-function beforeEach(\Closure $closure): mixed
+function beforeEach(\Closure $closure): BeforeEachCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('beforeEach', $closure);
 }
 
 /**
  * Define an after each hook.
  */
-function afterEach(\Closure $closure): mixed
+function afterEach(\Closure $closure): AfterEachCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('afterEach', $closure);
 }
 
 /**
  * Define a test class.
  *
- * @param class-string ...$classes
+ * @param  class-string  ...$classes
  */
-function uses(string ...$classes): mixed
+function uses(string ...$classes): UsesCall
 {
-    throw new \RuntimeException('Stub: This function is meant for static analysis only.');
+    \xotPestStubFailure('uses', ...$classes);
 }

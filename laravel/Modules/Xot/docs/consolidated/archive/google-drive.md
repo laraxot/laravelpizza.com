@@ -1,3 +1,11 @@
+---
+title: "google_drive"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "google_drive xot"
+---
 # google_drive
 
 <!-- Contenuto migrato da _docs/google_drive.txt -->

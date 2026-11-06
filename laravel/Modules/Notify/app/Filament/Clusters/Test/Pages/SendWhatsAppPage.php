@@ -21,13 +21,15 @@ use Modules\Notify\Enums\WhatsAppDriverEnum;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Notify\Notifications\WhatsAppNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Override;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
 /**
  * @property Schema $whatsappForm
  */
 class SendWhatsAppPage extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     /** @var array<string, mixed>|null */
     public ?array $whatsappData = [];
 
@@ -55,8 +57,7 @@ class SendWhatsAppPage extends XotBasePage
     protected function getForms(): array
     {
         return [
-            'whatsappForm',
-        ];
+            'whatsappForm'];
     }
 
     protected function fillForms(): void
@@ -96,18 +97,16 @@ class SendWhatsAppPage extends XotBasePage
                     'image' => 'Immagine',
                     'video' => 'Video',
                     'document' => 'Documento',
-                    'audio' => 'Audio',
-                ])
-                ->helperText('Tipo di media (opzionale)'),
-        ];
+                    'audio' => 'Audio'])
+                ->helperText('Tipo di media (opzionale)')];
     }
 
     public function sendWhatsApp(): void
     {
+        abort_unless(static::canAccess(), 403);
+
         try {
             $data = $this->whatsappForm->getState();
-            $user = $this->getUser();
-
             $message = is_string($data['message']) ? $data['message'] : '';
 
             Notification::route('whatsapp', $data['recipient'])->notify(
@@ -116,8 +115,7 @@ class SendWhatsAppPage extends XotBasePage
                     'template' => $data['template'] ?? null,
                     'parameters' => $data['parameters'] ?? null,
                     'media_url' => $data['media_url'] ?? null,
-                    'media_type' => $data['media_type'] ?? null,
-                ]),
+                    'media_type' => $data['media_type'] ?? null]),
             );
 
             FilamentNotification::make()
@@ -135,15 +133,13 @@ class SendWhatsAppPage extends XotBasePage
         }
     }
 
-    /** @return array<string, \Filament\Actions\Action> */
+    /** @return array<string, Action> */
     protected function getWhatsAppFormActions(): array
     {
         return [
-            'submit' => Action::make('whatsappFormActions')->submit('whatsappFormActions'),
-        ];
+            'submit' => Action::make('whatsappFormActions')->submit('whatsappFormActions')];
     }
 
-    #[Override]
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();

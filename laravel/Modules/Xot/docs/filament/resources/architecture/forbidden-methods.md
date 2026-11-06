@@ -1,3 +1,15 @@
+---
+title: "forbidden methods"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "forbidden methods"
+issues: []
+discussions: []
+status: draft
+---
+
 # Metodi da NON implementare in classi che estendono XotBaseResource
 
 ## Regola fondamentale
@@ -14,25 +26,8 @@ Le classi che estendono `XotBaseResource` **NON DEVONO MAI** implementare i segu
 ### Metodi di form e navigazione
 - ❌ `form(Form $form): Form`
 - ❌ `table(Table $table): Table`
-- ❌ `getPages()` (se contiene **solo** `index`, `create`, `edit` e le Page rispettano la convenzione naming — vedi sotto)
+- ❌ `getPages()` (se contiene solo route standard)
 - ❌ `getRelations()` (se restituisce un array vuoto)
-
-### `getPages()` — prerequisito naming
-
-`XotBaseResource::getPages()` risolve automaticamente:
-
-- `List{Str::plural($name)}`, `Create{$name}`, `Edit{$name}` nel namespace `{Resource}\Pages\`
-- `View{$name}` solo se la classe esiste
-
-Rimuovere l'override **solo** se le classi Page reali hanno **esattamente** quei nomi. Se la Resource è `AssenzeResource` ma le Page sono `ListAssenza`, l'override resta obbligatorio.
-
-Guida completa: [getpages-redundancy-rule.md](../../getpages-redundancy-rule.md)
-
-Verifica:
-
-```bash
-cd laravel && php ../bashscripts/filament/analyze-redundant-getpages.php
-```
 
 ## Motivazione architetturale
 
@@ -51,7 +46,17 @@ class ProductResource extends XotBaseResource
     protected static ?string $model = Product::class;
 
     // UNICI metodi che dovrebbero essere implementati
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
+---
+title: "forbidden methods"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "forbidden methods"
+issues: []
+discussions: []
+    public function getFormSchema(): array
     {
         return [
             'name' => Forms\Components\TextInput::make('name')

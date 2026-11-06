@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 return [
     'mail' => [
-        'label' => 'Mail',
-    ],
+        'label' => 'Mail'],
     'sms' => [
-        'label' => 'SMS',
-    ],
+        'label' => 'SMS'],
     'whatsapp' => [
-        'label' => 'WhatsApp',
-    ],
+        'label' => 'WhatsApp'],
     'label' => 'Channel Enum',
     'plural_label' => 'Channel Enum (Plurale)',
     'navigation' => [
@@ -19,41 +16,30 @@ return [
         'plural' => 'Channel Enum',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings',
-        ],
+            'description' => 'General Settings'],
         'label' => 'Channel Enum',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
+        'icon' => 'heroicon-o-collection'],
     'fields' => [
         'id' => [
             'label' => 'Identificativo',
             'tooltip' => 'Identificativo univoco del record',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'created_at' => [
             'label' => 'Data Creazione',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'create' => [
-            'label' => 'Crea Channel Enum',
-        ],
+            'label' => 'Crea Channel Enum'],
         'edit' => [
-            'label' => 'Modifica Channel Enum',
-        ],
+            'label' => 'Modifica Channel Enum'],
         'delete' => [
-            'label' => 'Elimina Channel Enum',
-        ],
-    ],
-];
+            'label' => 'Elimina Channel Enum']]];

@@ -1,3 +1,11 @@
+---
+title: "Choice of currentTeam() Method in HasTeams Trait"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "choice of currentteam() method in hasteams trait user"
+---
 # Choice of currentTeam() Method in HasTeams Trait
 
 ## Analysis and Decision
@@ -26,4 +34,4 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 
 ## Note on Migration File Path Error
 
-- An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`/var/www/html/{project}/laravel/database/migrations/`), whereas the correct path is within the User module's migrations directory (`/var/www/html/{project}/laravel/Modules/User/database/migrations/`), where `{project}` is `Quaeris` or `healthcare_app` depending on the deployment. This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.
+- An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`/var/www/html/saluteora/laravel/database/migrations/`), whereas the correct path is within the User module's migrations directory (`/var/www/html/saluteora/laravel/Modules/User/database/migrations/`). This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.

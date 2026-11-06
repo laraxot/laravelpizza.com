@@ -1,3 +1,14 @@
+---
+title: "execute plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "execute plan"
+issues: []
+discussions: []
+---
+
 <purpose>
 Execute a phase prompt (PLAN.md) and create the outcome summary (SUMMARY.md).
 </purpose>

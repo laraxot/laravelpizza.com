@@ -1,2 +1,0 @@
-providers:
-  - Modules\Notify\Providers\NotifyServiceProvider

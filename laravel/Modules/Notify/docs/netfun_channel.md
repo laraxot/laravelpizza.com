@@ -1,3 +1,15 @@
+---
+title: "netfun channel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun channel"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Canale Netfun
 
 ## 1. Struttura Base
@@ -373,7 +385,7 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 # Global SMS configuration
 SMS_FROM_NAME=<nome progetto>
-SMS_FROM_NAME=Quaeris
+SMS_FROM_NAME=SaluteOra
 SMS_FROM_NUMBER=+393331234567
 SMS_DEBUG=false
 

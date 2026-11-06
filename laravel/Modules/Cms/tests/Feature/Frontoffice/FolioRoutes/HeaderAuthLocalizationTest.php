@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-use Modules\Cms\Tests\TestCase;
-
-uses(TestCase::class);
 it('GET /de localizes guest auth labels in header', function (): void {
     $response = cmsGet('/de');
     $status = (int) $response->getStatusCode();

@@ -1,3 +1,24 @@
+---
+title: "Decoupling User-GDPR via Event/Listener Pattern"
+type: concept
+tags: [user, gdpr, decoupling]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user-gdpr-decoupling decoupling user-gdpr via event/listener pattern"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./architecture-rules.md"
+  - "./architecture.md"
+  - "./auth-blade-structure.md"
+  - "./component-registration.md"
+  - "./README.md"
+  - "./structure.md"
+  - "./testing-structure.md"
+  - "./user-gdpr-oupling.md"
+status: draft
+---
+
 # Decoupling User-GDPR via Event/Listener Pattern
 
 ## Overview
@@ -89,7 +110,8 @@ The same pattern can be used for:
 ## Related Documentation
 
 - [RegisterWidget Documentation](register-widget.md)
-- [GDPR Compliance Guide](compliance.md)
+- [GDPR Compliance Guide](../gdpr/compliance.md)
+- [GDPR Compliance Guide](../gdpr/compliance.md)
 - [Event System Best Practices](../architecture/events.md)
 
 ---

@@ -3,9 +3,15 @@ title: Creazione di una Resource
 description: Creazione di una Resource
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, filament]
+qmd: "creazione di una resource {#creazione-resource} xot"
 ---
 
 # Creazione di una Resource {#creazione-resource}
+
 
 - vedi doc savanna e crea le resource con:
 
@@ -38,12 +44,14 @@ class UserResource extends \Modules\Xot\Filament\Resources\XotBaseResource
 ```
 ### Versione HEAD
 
+
 ## Collegamenti tra versioni di resource.md
 * [resource.md](../../../Xot/docs/filament/resource.md)
 * [resource.md](../../../Xot/docs/resource.md)
-* [resource.md](../../../xot/docs/filament/resource.md)
-* [resource.md](../../../xot/docs/resource.md)
+
 
 ### Versione Incoming
 
+
 ---
+

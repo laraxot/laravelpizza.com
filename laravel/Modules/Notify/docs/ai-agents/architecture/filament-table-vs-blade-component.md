@@ -1,3 +1,15 @@
+---
+title: "filament table vs blade component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament table vs blade component"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 Filament Table vs Blade Component - Decision Guide
 
 **Data**: 2026-03-26  
@@ -5,7 +17,6 @@
 **Priority**: 🔴 CRITICAL
 
 ---
-
 ## 🚨 REGOLA FONDAMENTALE
 
 > **LIST-like public surface** = Filament Table Widget  
@@ -19,16 +30,18 @@
 |----------|---------------|--------------|----------|
 | **Lista di Mercati** (`/it/predicts`) | ✅ Filament Table Widget | `Themes/*/resources/views/filament/widgets/predict-table.blade.php` | Search, Filter, Sorting, Pagination |
 | **Dettaglio Mercato** (`/it/predicts/{slug}`) | ✅ Mixed shell | `ViewPredictWidget` + Blade shell + widget Filament per sezioni list-like | Trading, charts, hero, list-like outcomes |
+| **Lista di Mercati** (`/it/forecasts`) | ✅ Filament Table Widget | `Themes/*/resources/views/filament/widgets/forecast-table.blade.php` | Search, Filter, Sorting, Pagination |
+| **Dettaglio Mercato** (`/it/forecasts/{slug}`) | ✅ Mixed shell | `ViewForecastWidget` + Blade shell + widget Filament per sezioni list-like | Trading, charts, hero, list-like outcomes |
 | **Lista Articoli** (`/it/articles`) | ✅ Filament Table Widget | `Themes/*/resources/views/filament/widgets/article-table.blade.php` | Search, Filter, Sorting |
 | **Dettaglio Articolo** (`/it/articles/{slug}`) | ✅ Mixed shell | Blade narrativa + widget Filament dove la sezione e list-like | Reading, comments, related content |
 
 ---
 
-## 🎯 PREDICT LIST PAGE (Filament Table)
+## 🎯 FORECAST LIST PAGE (Filament Table)
 
-### URL: `/it/predicts`
+### URL: `/it/forecasts`
 
-**Componente**: `PredictTableWidget` (Filament)
+**Componente**: `ForecastTableWidget` (Filament)
 
 **Perché Filament**:
 - Lista di mercati
@@ -40,12 +53,16 @@
 ## 🎯 PREDICT DETAIL PAGE (Mixed Shell)
 
 ### URL: `/it/predicts/f1-world-champion-2026`
+## 🎯 FORECAST DETAIL PAGE (Mixed Shell)
+
+### URL: `/it/forecasts/f1-world-champion-2026`
 
 **Componente**: Blade shell + widget Filament dove la sezione e list-like
 
 **Struttura corretta**:
 ```text
 Modules/Predict/resources/views/filament/widgets/view-predict.blade.php
+Modules/Forecast/resources/views/filament/widgets/view-forecast.blade.php
 ├── header / hero / stats / trading-form / order-book / chart = Blade shell
 └── OutcomesTableWidget = Filament table per outcomes list-like
 ```
@@ -60,6 +77,8 @@ Modules/Predict/resources/views/filament/widgets/view-predict.blade.php
 @livewire(
     \Modules\Predict\Filament\Widgets\OutcomesTableWidget::class,
     ['predict' => $predict]
+    \Modules\Forecast\Filament\Widgets\OutcomesTableWidget::class,
+    ['forecast' => $forecast]
 )
 ```
 
@@ -85,6 +104,8 @@ Perché è sbagliato:
 ```blade
 @foreach($predicts as $predict)
     <div>{{ $predict->title }}</div>
+@foreach($forecasts as $forecast)
+    <div>{{ $forecast->title }}</div>
 @endforeach
 ```
 
@@ -97,13 +118,13 @@ Perché è sbagliato:
 
 ## ✅ CORRETTO: Architettura Attuale
 
-### Predict Detail Page
+### Forecast Detail Page
 ```text
-URL: /it/predicts/f1-world-champion-2026
+URL: /it/forecasts/f1-world-champion-2026
 ↓
 Folio Route -> [container0]/[slug0]/index.blade.php
 ↓
-Filament Widget: ViewPredictWidget
+Filament Widget: ViewForecastWidget
 ↓
 Blade shell:
   - header

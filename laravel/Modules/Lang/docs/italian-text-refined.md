@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Refined Italian Text Audit Report"
+module: "Lang"
+type: concept
+tags: [ottimizzazioni, correzioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ottimizzazioni correzioni"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Refined Italian Text Audit Report
 
 **Scope**: Identificazione di VERI testi italiani in file non italiani (escludendo falsi positivi)

@@ -1,3 +1,15 @@
+---
+title: "local first ollama strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "local first ollama strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Local-First Ollama Strategy
 
 > Updated: 2026-04-15

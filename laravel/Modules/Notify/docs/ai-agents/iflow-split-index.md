@@ -1,3 +1,15 @@
+---
+title: "iflow split index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow split index"
+issues: []
+discussions: []
+status: draft
+---
+
 # IFLOW.md Split Index
 
 > Documentazione IFLOW.md spezzata in file più piccoli.

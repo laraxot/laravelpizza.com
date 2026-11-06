@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "method name homonym census"
+issues: []
+discussions: []
 title: "censimento omonimi metodi — indice progetto"
 type: analysis
 updated: 2026-06-15
@@ -6,7 +11,10 @@ related:
   - ../../bashscripts/docs/method-homonym-census.json
   - ../../laravel/Modules/Sigma/docs/wiki/concepts/method-name-homonyms.md
   - ../../laravel/Modules/Xot/docs/wiki/concepts/redundancy-catalog.md
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Censimento degli omonimi di metodo a livello di progetto, copiato dalla radice docs/wiki: i 33 link (bashscripts/docs/method-homonym-census.json, Modules/*/docs/wiki/...) sono relativi a quella radice e il JSON citato non esiste. Contenuto non riscritto, verificare prima di usarlo.
 
 # Censimento omonimi metodi — PTVX
 
@@ -80,25 +88,25 @@ Scan PHP nei temi: **0 omonimi cross-class**. I temi sono strato presentazione (
 
 ## Schede per modulo
 
-- [Activity](../../laravel/Modules/Activity/docs/wiki/concepts/method-name-homonyms.md)
+- [Activity](../../../Activity/docs/wiki/concepts/method-name-homonyms.md)
 - [Badge](../../laravel/Modules/Badge/docs/wiki/concepts/method-name-homonyms.md)
 - [CertFisc](../../laravel/Modules/CertFisc/docs/wiki/concepts/method-name-homonyms.md)
 - [ContoAnnuale](../../laravel/Modules/ContoAnnuale/docs/wiki/concepts/method-name-homonyms.md)
 - [DbForge](../../laravel/Modules/DbForge/docs/wiki/concepts/method-name-homonyms.md)
 - [Europa](../../laravel/Modules/Europa/docs/wiki/concepts/method-name-homonyms.md)
-- [Gdpr](../../laravel/Modules/Gdpr/docs/wiki/concepts/method-name-homonyms.md)
+- [Gdpr](../../../Gdpr/docs/wiki/concepts/method-name-homonyms.md)
 - [Inail](../../laravel/Modules/Inail/docs/wiki/concepts/method-name-homonyms.md)
 - [Incentivi](../../laravel/Modules/Incentivi/docs/wiki/concepts/method-name-homonyms.md)
 - [IndennitaCondizioniLavoro](../../laravel/Modules/IndennitaCondizioniLavoro/docs/wiki/concepts/method-name-homonyms.md)
 - [IndennitaResponsabilita](../../laravel/Modules/IndennitaResponsabilita/docs/wiki/concepts/method-name-homonyms.md)
-- [Job](../../laravel/Modules/Job/docs/wiki/concepts/method-name-homonyms.md)
-- [Lang](../../laravel/Modules/Lang/docs/wiki/concepts/method-name-homonyms.md)
+- [Job](../../../Job/docs/wiki/concepts/method-name-homonyms.md)
+- [Lang](../../../Lang/docs/wiki/concepts/method-name-homonyms.md)
 - [Legge104](../../laravel/Modules/Legge104/docs/wiki/concepts/method-name-homonyms.md)
 - [Legge109](../../laravel/Modules/Legge109/docs/wiki/concepts/method-name-homonyms.md)
-- [Media](../../laravel/Modules/Media/docs/wiki/concepts/method-name-homonyms.md)
+- [Media](../../../Media/docs/wiki/concepts/method-name-homonyms.md)
 - [Mensa](../../laravel/Modules/Mensa/docs/wiki/concepts/method-name-homonyms.md)
 - [MobilitaVolontaria](../../laravel/Modules/MobilitaVolontaria/docs/wiki/concepts/method-name-homonyms.md)
-- [Notify](../../laravel/Modules/Notify/docs/wiki/concepts/method-name-homonyms.md)
+- [Notify](../../../Notify/docs/wiki/concepts/method-name-homonyms.md)
 - [Pdnd](../../laravel/Modules/Pdnd/docs/wiki/concepts/method-name-homonyms.md)
 - [Performance](../../laravel/Modules/Performance/docs/wiki/concepts/method-name-homonyms.md)
 - [Prenotazioni](../../laravel/Modules/Prenotazioni/docs/wiki/concepts/method-name-homonyms.md)
@@ -106,14 +114,14 @@ Scan PHP nei temi: **0 omonimi cross-class**. I temi sono strato presentazione (
 - [Progressioni](../../laravel/Modules/Progressioni/docs/wiki/concepts/method-name-homonyms.md)
 - [Ptv](../../laravel/Modules/Ptv/docs/wiki/concepts/method-name-homonyms.md)
 - [Questionari](../../laravel/Modules/Questionari/docs/wiki/concepts/method-name-homonyms.md)
-- [Rating](../../laravel/Modules/Rating/docs/wiki/concepts/method-name-homonyms.md)
+- [Rating](../../../Rating/docs/wiki/concepts/method-name-homonyms.md)
 - [Seo](../../laravel/Modules/Seo/docs/wiki/concepts/method-name-homonyms.md)
 - [Setting](../../laravel/Modules/Setting/docs/wiki/concepts/method-name-homonyms.md)
 - [Sigma](../../laravel/Modules/Sigma/docs/wiki/concepts/method-name-homonyms.md)
 - [Sindacati](../../laravel/Modules/Sindacati/docs/wiki/concepts/method-name-homonyms.md)
-- [Tenant](../../laravel/Modules/Tenant/docs/wiki/concepts/method-name-homonyms.md)
+- [Tenant](../../../Tenant/docs/wiki/concepts/method-name-homonyms.md)
 - [UI](../../laravel/Modules/UI/docs/wiki/concepts/method-name-homonyms.md)
-- [User](../../laravel/Modules/User/docs/wiki/concepts/method-name-homonyms.md)
+- [User](../../../User/docs/wiki/concepts/method-name-homonyms.md)
 - [Xot](../../laravel/Modules/Xot/docs/wiki/concepts/method-name-homonyms.md)
 
 ## Schede per tema

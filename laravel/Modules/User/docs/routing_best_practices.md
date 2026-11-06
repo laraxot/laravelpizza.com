@@ -1,3 +1,14 @@
+---
+title: "Best Practices per il Routing in Architettura Volt + Folio + Filament"
+module: user
+type: integration
+tags: [integrations, modules, user]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+qmd: "best practices per il routing in architettura volt + folio + filament user"
+---
+
 # Best Practices per il Routing in Architettura Volt + Folio + Filament
 
 ## Il Principio Fondamentale
@@ -125,11 +136,11 @@ Ogni volta che pensi di aggiungere una rotta in `web.php`, chiediti:
 
 ## Collegamenti
 
-- [Filosofia dei Getter](../xot/docs/philosophy/getter_zen.md)
-- [Filosofia Zen Avanzata](../xot/docs/philosophy/getter_zen_advanced.md)
-- [La Via del Brand](../xot/docs/brand/brand_way.md)
-- [Il Tao del Codice](../xot/docs/tao/code_tao.md)
-- [Best Practices Filament](./filament_best_practices.md) 
+- [Filosofia dei Getter](../Xot/docs/philosophy/getter_zen.md)
+- [Filosofia Zen Avanzata](../Xot/docs/philosophy/getter_zen_advanced.md)
+- [La Via del Brand](../Xot/docs/brand/brand_way.md)
+- [Il Tao del Codice](../Xot/docs/tao/code_tao.md)
+- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md) 
 
 ## Principi Fondamentali
 
@@ -464,6 +475,9 @@ public function logout()
 
 ## Collegamenti
 
+- [Documentazione Volt](./volt_logout.md)
+- [Struttura Directory](./directory_structure_checklist.md)
+- [Gestione Errori](./error_handling.md) 
 - [Documentazione Volt](./volt_logout.md)
 - [Struttura Directory](./directory_structure_checklist.md)
 - [Gestione Errori](./error_handling.md) 

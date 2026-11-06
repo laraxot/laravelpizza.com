@@ -114,7 +114,7 @@ return [
             'description' => 'General Settings',
         ],
         'label' => 'Individuale Tot Stabi',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'sort' => '1',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
 ];

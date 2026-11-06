@@ -1,3 +1,15 @@
+---
+title: "PHPSTAN FIXES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PHPSTAN FIXES"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Error Fixes - Notify Module
 
 ## Error: Method Name Mismatch in Actions

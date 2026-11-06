@@ -1,3 +1,15 @@
+---
+title: "optimization recommendations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "optimization recommendations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Raccomandazioni di Ottimizzazione - Modulo UI
 
 ## 🎯 Stato Attuale e Analisi

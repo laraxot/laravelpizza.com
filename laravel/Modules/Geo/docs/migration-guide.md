@@ -1,3 +1,15 @@
+---
+title: "migration guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migration guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Migration Guide: Moving from <main module> to Geo Module
 
 ## Overview
@@ -224,7 +236,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Geo\Models\Traits\SushiToJsons;
+use Modules\Tenant\Models\Traits\SushiToJsons;
 
 class Comune extends Model
 {

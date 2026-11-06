@@ -60,4 +60,15 @@ return [
             'label' => 'Elimina Widgets',
         ],
     ],
+    'base' => [
+        'title' => 'Widget base',
+        'description' => 'Widget di base da cui derivano gli altri widget.',
+        'warning' => 'Attenzione',
+        'abstract_widget_message' => 'Questo è un widget astratto e non deve essere usato direttamente.',
+    ],
+    'schema' => [
+        'submit' => [
+            'label' => 'Invia',
+        ],
+    ],
 ];

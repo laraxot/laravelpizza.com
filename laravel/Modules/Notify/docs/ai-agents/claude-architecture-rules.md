@@ -1,3 +1,15 @@
+---
+title: "claude architecture rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude architecture rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # CLAUDE Architecture Rules
 
 Regole architetturali critiche del progetto.
@@ -24,7 +36,6 @@ npm run copy  # OBbligatorio per vedere modifiche CSS/JS
 ```
 
 ---
-
 ## 2. BelongsToMany - CRITICAL
 
 **NEVER use `$this->belongsToMany()` for many-to-many. ALWAYS use `$this->belongsToManyX()`.**
@@ -156,4 +167,5 @@ class MeetupServiceProvider extends XotBaseServiceProvider
 - [Indice CLAUDE](./claude-split-index.md)
 - [critical-rules.md](./critical-rules.md)
 - [CLAUDE.md originale](../../CLAUDE.md)
+- [CLAUDE.md originale](../CLAUDE.md)
 - [Index principale](./index.md)

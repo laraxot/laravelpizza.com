@@ -1,3 +1,28 @@
+---
+title: "OauthClient - Authorizable e HasRoles"
+type: concept
+tags: [oauth, client, authorizable]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "oauth-client-authorizable oauthclient - authorizable e hasroles"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # OauthClient - Authorizable e HasRoles
 
 **Riferimento**: [aurmich/sample_passport Client.php](https://github.com/aurmich/sample_passport/blob/develop/app/Models/Client.php)

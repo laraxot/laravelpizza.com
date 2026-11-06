@@ -1,25 +1,29 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://dev.to/hasanmn/automatically-update-createdby-and-updatedby-in-laravel-using-bootable-traits-28g9.
  */
 
-declare(strict_types=1);
-
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
-use Modules\Tenant\Services\TenantService;
+use Illuminate\Support\Str;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use ReflectionObject;
+use Sushi\Sushi;
+use Symfony\Component\Finder\SplFileInfo;
+use Webmozart\Assert\Assert;
+
 use function Safe\json_encode;
 use function Safe\unlink;
-use Sushi\Sushi;
-use Webmozart\Assert\Assert;
 
 trait SushiToJsons
 {
     use Sushi;
+    use SushiConnectionByName;
 
     /**
      * @return array<int, array<string, mixed>>
@@ -38,12 +42,7 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-        $tbl = $this->getTable();
-        if (! is_string($tbl)) {
-            return [];
-        }
-
-        return $this->collectRowsFromJsonFiles($tbl);
+        return $this->collectRowsFromJsonFiles($this->getTable());
     }
 
     public function getJsonFile(): string
@@ -54,22 +53,22 @@ trait SushiToJsons
         $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
         $stringTbl = is_string($tbl) ? $tbl : 'unknown';
 
-        return TenantService::filePath('database/content/'.$stringTbl.'/'.$stringId.'.json');
+        return app(GetTenantFilePathAction::class)->execute('database/content/'.$stringTbl.'/'.$stringId.'.json');
     }
 
     protected static function bootSushiToJsons(): void
     {
-        static::creating(static function ($model): void {
+        static::creating(static function (Model $model): void {
             Assert::isInstanceOf($model, static::class);
             self::handleJsonCreating($model);
         });
 
-        static::updating(static function ($model): void {
+        static::updating(static function (Model $model): void {
             Assert::isInstanceOf($model, static::class);
             self::handleJsonUpdating($model);
         });
 
-        static::deleting(static function ($model): void {
+        static::deleting(static function (Model $model): void {
             Assert::isInstanceOf($model, static::class);
             self::handleJsonDeleting($model);
         });
@@ -100,30 +99,72 @@ trait SushiToJsons
     }
 
     /**
+     * Legge ogni `database/content/<tabella>/**.json` come una riga.
+     *
      * @return array<int, array<string, mixed>>
      */
     private function collectRowsFromJsonFiles(string $tbl): array
     {
-        $files = File::glob(TenantService::filePath('database/content/'.$tbl).'/*.json');
-        if ($files === false) {
-            return [];
+        $rows = [];
+        $relativePath = 'database/content/'.$tbl;
+        $path = app(GetTenantFilePathAction::class)->execute($relativePath);
+        if (! File::isDirectory($path)) {
+            return $rows;
         }
 
-        /** @var array<int, array<string, mixed>> $rows */
-        $rows = [];
+        $slugOwners = [];
 
-        foreach ($files as $file) {
-            if (! is_string($file)) {
+        foreach (File::allFiles($path) as $file) {
+            $row = $this->getRowFromJsonFile($file);
+            if ($row === null) {
                 continue;
             }
 
-            $row = $this->mapJsonFileToRow($file);
-            if ($row !== null) {
-                $rows[] = $row;
+            $relativePathname = $file->getRelativePathname();
+            if (Str::contains($relativePathname, '/')) {
+                $row = $this->prefixRowKeys($row, Str::of($relativePathname)->beforeLast('/')->replace('/', '.')->toString());
             }
+
+            // Due file con lo stesso slug nella STESSA cartella restano due righe: e' un errore vero e `findUniqueBySlug` lo segnala.
+            $slug = $row['slug'] ?? null;
+            if (is_string($slug) && $slug !== '' && ($slugOwners[$slug] ??= $path) !== $path) {
+                continue;
+            }
+
+            $rows[] = $row;
         }
 
         return $rows;
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    private function getRowFromJsonFile(SplFileInfo $file): ?array
+    {
+        if ($file->getExtension() !== 'json') {
+            return null;
+        }
+
+        return $this->mapJsonFileToRow($file->getPathname());
+    }
+
+    /**
+     * Una riga in sottocartella (`a/b/1.json`) espone id e slug come `a.b.<valore>`.
+     *
+     * @param  array<string, mixed>  $row
+     * @return array<string, mixed>
+     */
+    private function prefixRowKeys(array $row, string $prefix): array
+    {
+        foreach (['id', 'slug'] as $key) {
+            $value = $row[$key] ?? null;
+            if (is_string($value) || is_int($value)) {
+                $row[$key] = $prefix.'.'.$value;
+            }
+        }
+
+        return $row;
     }
 
     /**
@@ -148,7 +189,6 @@ trait SushiToJsons
     /**
      * @param  array<string, mixed>  $schema
      * @param  array<string, mixed>  $json
-     *
      * @return array<string, mixed>
      */
     private function buildRowFromSchema(array $schema, array $json): array

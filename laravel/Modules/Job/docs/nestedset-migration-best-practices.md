@@ -1,3 +1,15 @@
+---
+title: "nestedset migration best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "nestedset migration best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # NestedSet Migration Best Practices - Job Module
 
 ## Overview
@@ -454,7 +466,7 @@ return new class extends XotBaseMigration
 - [Documentazione principale](/docs/migration/nestedset-best-practices.md)
 - [Job Module Architecture](/docs/architecture/job-module.md)
 - [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
-# NestedSet Migration Best Practices — DOCUMENTO LEGACY
+# NestedSet Migration Best Practices: DOCUMENTO LEGACY
 
 > **ATTENZIONE**: Questo documento è **legacy**. Il progetto ha completato la migrazione
 > da `kalnoy/nestedset` a `staudenmeir/laravel-adjacency-list` (marzo 2026).
@@ -465,7 +477,7 @@ return new class extends XotBaseMigration
 
 Per le best practices attuali sulle strutture ad albero, consultare:
 
-- **[Adjacency List Migration — Filosofia Completa](../../Xot/docs/adjacency-list-migration.md)**
+- **[Adjacency List Migration: Filosofia Completa](../../Xot/docs/adjacency-list-migration.md)**
 - **[Adjacency List Best Practices](../../Xot/docs/best-practices/adjacency-list-best-practices.md)**
 - **[BaseTreeModel Documentation](../../Xot/docs/models/base-tree-model.md)**
 

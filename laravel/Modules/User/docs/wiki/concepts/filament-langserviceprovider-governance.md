@@ -4,9 +4,19 @@ module: User
 confidence: high
 updated: 2026-04-20
 sources:
-  - ../../../app/Filament/Pages/SocialiteProviderSettingsPage.php
-  - ../../../app/Filament/Resources/SocialProviderResource.php
-  - ../../../lang/it/auth.php
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+  - "./folio-pages-owner-pattern.md"
+title: "filament langserviceprovider governance"
+status: draft
+tags: [docs, user, wiki]
+qmd: "filament langserviceprovider governance user"
 ---
 
 # filament langserviceprovider governance

@@ -1,3 +1,11 @@
+---
+title: "lamp"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "lamp xot"
+---
 ext-sqlite3
 ext-zip
 ext-intl

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Directory Structure Rules"
+module: "Media"
+type: rule
+tags: [directory, structure, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "directory structure rules"
+related:
+  - "./webm.md"
+status: draft
+---
 # Directory Structure Rules
 
 Per il modulo Media valgono queste regole:

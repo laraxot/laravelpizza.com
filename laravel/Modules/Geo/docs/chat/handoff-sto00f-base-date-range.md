@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+updated: 2026-09-26
+qmd: "handoff sto00f base date range"
+issues: []
+discussions: []
 title: "Handoff — Sto00f BaseDateRangeModel"
 type: chat-handoff
 module: Sigma
@@ -6,6 +11,7 @@ created: 2026-06-15
 related:
   - ../../laravel/Modules/Sigma/docs/wiki/concepts/sto00f-date-range.md
   - ../wiki/rules/eloquent-basemodel-hierarchy.md
+status: draft
 ---
 
 # Sto00f → BaseDateRangeModel

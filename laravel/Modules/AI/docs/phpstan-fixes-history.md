@@ -1,3 +1,11 @@
+---
+title: "AI Module - PHPStan Fixes History"
+type: note
+status: draft
+updated: 2026-10-20
+tags: [docs, ai]
+qmd: "ai module - phpstan fixes history ai"
+---
 # AI Module - PHPStan Fixes History
 
 ## ✅ Stato Attuale: BASELINE CREATED - PHPStan Level MAX

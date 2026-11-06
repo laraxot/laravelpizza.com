@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Complete Roadmap 2026"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, roadmap]
+qmd: "activity module - complete roadmap 2026 activity"
+---
 # Activity Module - Complete Roadmap 2026
 
 **Status**: Event Sourcing & Audit Foundation

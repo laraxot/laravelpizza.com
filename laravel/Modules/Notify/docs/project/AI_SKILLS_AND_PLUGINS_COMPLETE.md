@@ -1,3 +1,15 @@
+---
+title: "AI SKILLS AND PLUGINS COMPLETE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "AI SKILLS AND PLUGINS COMPLETE"
+issues: []
+discussions: []
+status: draft
+---
+
 # ✅ AI Skills & Plugins - COMPLETE
 
 **Date**: 2026-03-30  
@@ -5,7 +17,6 @@
 **Documentation**: Complete & DRY + KISS compliant
 
 ---
-
 ## 📊 Riepilogo Generale
 
 Tutti gli AI skill e plugins sono stati **studiati, installati, configurati e documentati**.
@@ -42,14 +53,14 @@ ls -la ~/.claude/skills/notebooklm/
 "Set up NotebookLM authentication"
 
 # 2. Crea notebook su notebooklm.google.com
-#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+#    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
 #    - Share → Copy link
 
 # 3. Aggiungi a library
 "Add [LINK] to my NotebookLM library"
 
 # 4. Query
-"Ask my FixCity docs about theme configuration"
+"Ask my Notify docs about theme configuration"
 ```
 
 ### Documentazione
@@ -338,14 +349,14 @@ claude
 
 # 3. Create notebook
 #    - Go to notebooklm.google.com
-#    - Upload: AGENTS.md, docs/, .planning/
+#    - Upload: agents.md, docs/, .planning/
 #    - Share → Copy link
 
 # 4. Add to library
 "Add [LINK] to my NotebookLM library"
 
 # 5. Query
-"What does FixCity documentation say?"
+"What does Notify documentation say?"
 ```
 
 ### Kilo
@@ -410,7 +421,7 @@ openviking search "theme"
 1. **.planning/PROJECT.md** - Project overview
 2. **.planning/config.json** - 16-week roadmap
 3. **.planning/THEME_CONTEXT.md** - Theme configuration
-4. **FIXCITY_IMPROVEMENT_PLAN.md** - Improvement plan
+4. **NOTIFY_IMPROVEMENT_PLAN.md** - Improvement plan
 
 ### Module & Theme Docs
 
@@ -483,7 +494,7 @@ openviking search "theme"
 
 ### This Week
 
-1. [ ] Index all FixCity docs in NotebookLM
+1. [ ] Index all Notify docs in NotebookLM
 2. [ ] Test BMAD + GSD + Ralph workflow
 3. [ ] Create custom Kilo plugins
 4. [ ] Document best practices from usage

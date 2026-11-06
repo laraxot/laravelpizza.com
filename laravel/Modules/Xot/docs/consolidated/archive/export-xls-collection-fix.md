@@ -1,3 +1,11 @@
+---
+title: "Fix: ExportXlsByCollection Problemi di Sintassi e Compatibilità"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "fix: exportxlsbycollection problemi di sintassi e compatibilità xot"
+---
 # Fix: ExportXlsByCollection Problemi di Sintassi e Compatibilità
 
 ## 🚨 Problemi Identificati

@@ -1,3 +1,11 @@
+---
+title: "Real Data vs Mock Testing Strategy - Xot Module"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "real data vs mock testing strategy - xot module xot"
+---
 # Real Data vs Mock Testing Strategy - Xot Module
 
 ## 🎯 Strategic Testing Approaches

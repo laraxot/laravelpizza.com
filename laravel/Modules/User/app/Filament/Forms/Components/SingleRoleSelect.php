@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Forms\Components;
 
-use Filament\Forms\Components\Select;
-use Modules\User\Models\Role;
+use Modules\User\Filament\Tables\Columns\SingleRoleSelectColumn;
+use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
 
-class SingleRoleSelect extends Select
+class SingleRoleSelect extends XotBaseSelect
 {
     protected string $optionValueProperty = 'id';
 
@@ -19,10 +19,8 @@ class SingleRoleSelect extends Select
         $viewString = 'user::filament.forms.components.single-role-select';
         $this->view($viewString);
 
-        /** @var array<int|string, string> $options */
-        $options = Role::query()->pluck('name', 'id')->toArray();
-
-        $this->options(fn (): array => $options)
+        // Stessa lista della colonna gemella: senza `super-admin` per chi non lo e'.
+        $this->options(static fn (): array => SingleRoleSelectColumn::roleOptions())
             ->placeholder('Select a role');
     }
 

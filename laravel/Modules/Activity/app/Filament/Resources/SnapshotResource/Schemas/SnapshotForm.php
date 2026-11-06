@@ -14,7 +14,7 @@ class SnapshotForm extends XotBaseResourceForm
     /**
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'aggregate_uuid' => TextInput::make('aggregate_uuid')

@@ -17,17 +17,17 @@ beforeEach(function (): void {
     /* @var TestCase $this */
     $this->setupFilamentAdminPanel();
 
-    $this->admin = UserFactory::new()->createOne([
+    TestCase::$admin = UserFactory::new()->createOne([
         'type' => UserType::MasterAdmin,
         'name' => 'Admin Test',
         'email' => 'admin-'.uniqid('', true).'@example.com',
     ]);
-    $this->user = UserFactory::new()->createOne([
+    TestCase::$user = UserFactory::new()->createOne([
         'name' => 'User Test',
         'email' => 'user-'.uniqid('', true).'@example.com',
     ]);
 
-    $this->actingAs($this->requireAdmin());
+    $this->actingAs(TestCase::requireAdmin());
 });
 
 describe('User Resource', function (): void {

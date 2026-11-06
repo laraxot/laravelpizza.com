@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Documenti'])
+@props(['title' => __('ui::blocks_documents_list.list.heading.title')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -11,16 +10,16 @@ declare(strict_types=1);
     <!-- Filtri -->
     <div class="mb-6 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200">
-            Tutti
+            {{ __('ui::blocks_demo_shared.labels.tutti.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Referti
+            {{ __('ui::blocks_documents_list.list.referti.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Prescrizioni
+            {{ __('ui::blocks_documents_list.list.prescrizioni.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Consensi
+            {{ __('ui::blocks_documents_list.list.consensi.label') }}
         </button>
     </div>
     
@@ -61,13 +60,13 @@ declare(strict_types=1);
                     <div class="mt-2 flex items-center space-x-4">
                         <a href="{{ $document->download_url }}" 
                            class="text-sm font-medium text-blue-600 hover:text-blue-800">
-                            Scarica →
+                            {{ __('ui::blocks_documents_list.list.scarica.label') }}
                         </a>
                         
                         @if($document->preview_url)
                             <a href="{{ $document->preview_url }}" 
                                class="text-sm font-medium text-gray-600 hover:text-gray-800">
-                                Anteprima →
+                                {{ __('ui::blocks_documents_list.list.anteprima.label') }}
                             </a>
                         @endif
                     </div>
@@ -76,7 +75,7 @@ declare(strict_types=1);
                 @if($document->is_confidential)
                     <div class="ml-4">
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                            Riservato
+                            {{ __('ui::blocks_documents_list.list.riservato.label') }}
                         </span>
                     </div>
                 @endif
@@ -86,9 +85,9 @@ declare(strict_types=1);
                 <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
-                <h3 class="mt-2 text-sm font-medium text-gray-900">Nessun documento</h3>
+                <h3 class="mt-2 text-sm font-medium text-gray-900">{{ __('ui::blocks_documents_list.list.nessun_documento.title') }}</h3>
                 <p class="mt-1 text-sm text-gray-500">
-                    Non hai ancora nessun documento disponibile.
+                    {{ __('ui::blocks_documents_list.list.message_1.message') }}
                 </p>
             </div>
         @endforelse

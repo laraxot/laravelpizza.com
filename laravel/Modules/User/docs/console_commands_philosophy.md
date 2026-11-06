@@ -1,3 +1,11 @@
+---
+title: "Filosofia dei Console Commands in Laraxot (Standard Supremo)"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "filosofia dei console commands in laraxot (standard supremo) user"
+---
 # Filosofia dei Console Commands in Laraxot (Standard Supremo)
 
 ## Filosofia Fondamentale
@@ -198,7 +206,8 @@ foreach ($types as $key => $type) {
 
 ## Collegamenti
 - [ChangeTypeCommand.php](../app/Console/Commands/ChangeTypeCommand.php) - Il comando supremo di riferimento
-- [README.md](readme.md)
+- [README.md](README.md)
 - [.cursor/rules/console_commands_philosophy.mdc](../../../.cursor/rules/console_commands_philosophy.mdc)
 - [.windsurf/rules/console_commands_philosophy.mdc](../../../.windsurf/rules/console_commands_philosophy.mdc)
 
+*Ultimo aggiornamento: giugno 2025 - Standard estratto dal capolavoro ChangeTypeCommand.php*

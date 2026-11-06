@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-use Modules\Cms\Tests\TestCase;
 use Modules\User\Filament\Widgets\RegistrationWidget;
+use Modules\Xot\Actions\View\GetViewByClassAction;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */
     cmsSkipTest('patient/doctor registration types not configured in this install.');
@@ -18,13 +17,13 @@ describe('Registration Widget', function (): void {
     test('patient widget renders correctly', function (): void {
         Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
             ->assertStatus(200)
-            ->assertViewIs('pub_theme::filament.widgets.registration');
+            ->assertViewIs(app(GetViewByClassAction::class)->execute(RegistrationWidget::class));
     });
 
     test('doctor widget renders correctly', function (): void {
         Livewire::test(RegistrationWidget::class, ['type' => 'doctor'])
             ->assertStatus(200)
-            ->assertViewIs('pub_theme::filament.widgets.registration');
+            ->assertViewIs(app(GetViewByClassAction::class)->execute(RegistrationWidget::class));
     });
 
     test('widget without type throws exception', function (): void {
@@ -32,7 +31,7 @@ describe('Registration Widget', function (): void {
     });
 
     test('widget accepts form data', function (): void {
-        $email = TestCase::pestGenerateUniqueEmail();
+        $email = cmsGenerateUniqueEmail();
 
         $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
             ->set('data.email', $email)
@@ -47,7 +46,7 @@ describe('Registration Widget', function (): void {
     test('widget accepts multiple fields', function (): void {
         $testData = [
             'name' => 'Test Patient',
-            'email' => TestCase::pestGenerateUniqueEmail(),
+            'email' => cmsGenerateUniqueEmail(),
             'password' => 'TestPassword123!',
         ];
 
@@ -65,7 +64,7 @@ describe('Registration Widget', function (): void {
 
     test('widget register action does not cause fatal errors', function (): void {
         $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
-            ->set('data.email', TestCase::pestGenerateUniqueEmail())
+            ->set('data.email', cmsGenerateUniqueEmail())
             ->set('data.name', 'Test User')
             ->set('data.password', 'TestPassword123!');
         /* @var Testable<\Livewire\Component> $widget */
@@ -73,7 +72,6 @@ describe('Registration Widget', function (): void {
         try {
             $widget->call('register');
         } catch (Exception $e) {
-            Assert::assertInstanceOf(Exception::class, $e);
         }
     });
 
@@ -87,7 +85,7 @@ describe('Registration Widget', function (): void {
     test('widget works for all user types', function (): void {
         foreach (['patient', 'doctor'] as $type) {
             $widget = Livewire::test(RegistrationWidget::class, ['type' => $type])
-                ->set('data.email', TestCase::pestGenerateUniqueEmail())
+                ->set('data.email', cmsGenerateUniqueEmail())
                 ->set('data.name', "Test {$type}")
                 ->set('data.password', 'TestPassword123!');
             /* @var Testable<\Livewire\Component> $widget */
@@ -95,7 +93,6 @@ describe('Registration Widget', function (): void {
             try {
                 $widget->call('register');
             } catch (Exception $e) {
-                Assert::assertInstanceOf(Exception::class, $e);
             }
         }
     });

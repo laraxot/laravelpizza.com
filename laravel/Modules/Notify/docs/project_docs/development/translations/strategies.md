@@ -1,3 +1,15 @@
+---
+title: "strategies"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "strategies"
+issues: []
+discussions: []
+status: draft
+---
+
 # Strategie di Gestione delle Traduzioni
 
 ## Indice
@@ -250,10 +262,11 @@ php artisan translation:extract
 
 - [Best Practices](./best-practices.md)
 - [Filament Translations](../filament/translations.md)
+- [Best Practices](../../../best-practices.md)
+- [Filament Translations](../../../translations.md)
 - [Troubleshooting Translations](../../troubleshooting/errors/translation-errors.md)
 - [Module Translations](../../modules/lang/)
 
 ---
-
 *Ultimo aggiornamento: Agosto 2025*
 *Fonte: laravel/Modules/Lang/docs/TRANSLATION_STRATEGIES.md* 

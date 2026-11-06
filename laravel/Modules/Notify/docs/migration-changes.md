@@ -1,3 +1,15 @@
+---
+title: "migration changes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migration changes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Modifiche alla Migrazione Mail Templates
 
 ## Modifiche Effettuate

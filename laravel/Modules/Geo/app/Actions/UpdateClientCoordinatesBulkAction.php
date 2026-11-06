@@ -17,11 +17,6 @@ class UpdateClientCoordinatesBulkAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly GetAddressDataFromFullAddressAction $getAddressDataFromFullAddressAction,
-    ) {
-    }
-
     /**
      * Execute the action to update coordinates for a collection of addresses.
      *
@@ -37,7 +32,7 @@ class UpdateClientCoordinatesBulkAction
         DB::transaction(function () use ($addresses, &$successCount, &$errorMessages) {
             foreach ($addresses as $address) {
                 $fullAddress = is_string($address->full_address) ? $address->full_address : '';
-                $addressData = $this->getAddressDataFromFullAddressAction->execute($fullAddress);
+                $addressData = app(GetAddressDataFromFullAddressAction::class)->execute($fullAddress);
 
                 if (null !== $addressData) {
                     $toArray = $addressData->toArray();
@@ -52,7 +47,7 @@ class UpdateClientCoordinatesBulkAction
 
                 // PHPStan L10: $address->name è già string|null, non serve is_string()
                 $addressName = $address->name ?? 'Unknown';
-                $errors = $this->getAddressDataFromFullAddressAction->getErrors();
+                $errors = app(GetAddressDataFromFullAddressAction::class)->getErrors();
                 // PHPStan L10: Collection::implode() restituisce string, non serve ?:
                 $errorMsg = $errors->implode(', ');
                 if ('' === $errorMsg) {

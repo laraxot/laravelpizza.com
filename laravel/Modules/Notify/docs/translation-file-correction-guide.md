@@ -1,3 +1,15 @@
+---
+title: "translation file correction guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation file correction guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida alla Correzione dei File di Traduzione
 
 ## Procedura Sistematica per la Standardizzazione
@@ -162,6 +174,9 @@ return [
 - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
+- [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
+- [Progresso della Standardizzazione](./translation_standards_progress.md)
 # Guida alla Correzione dei File di Traduzione
 
 ## Procedura Sistematica per la Standardizzazione
@@ -314,3 +329,6 @@ declare(strict_types=1);
 - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
+- [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
+- [Progresso della Standardizzazione](./translation_standards_progress.md)

@@ -1,4 +1,18 @@
-# Filament Version Declaration — Lang
+---
+issues: []
+discussions: []
+title: "Filament Version Declaration: Lang"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text fix"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
+# Filament Version Declaration: Lang
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -14,4 +28,4 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
-**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`

@@ -1,3 +1,15 @@
+---
+title: "email template slug proposal"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email template slug proposal"
+issues: []
+discussions: []
+status: draft
+---
+
 # Proposta: Aggiunta del Parametro Slug per Email Template
 
 ## Introduzione
@@ -237,4 +249,6 @@ MailTemplate::all()->each(function ($template) {
 
 - [Documentazione Email Template](./EMAIL_TEMPLATES.md)
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Documentazione Email Template](./email_templates.md)
+- [Gestione Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
 - [Configurazione Email](../../../docs/email-configuration.md) 

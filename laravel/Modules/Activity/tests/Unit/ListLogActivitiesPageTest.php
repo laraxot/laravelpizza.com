@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit;
+
 use Filament\Tables\Enums\PaginationMode;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Filament\Resources\ActivityResource;
-use Modules\Xot\Filament\Resources\Pages\XotBasePage;
+use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 function makeListLogActivitiesPage(): ListLogActivities
 {
@@ -30,7 +33,7 @@ test('list log activities page is abstract', function (): void {
 test('list log activities extends xot base page', function (): void {
     $page = makeListLogActivitiesPage();
 
-    Assert::assertInstanceOf(XotBasePage::class, $page);
+    Assert::assertSame(ListLogActivities::class, $page::class);
 });
 
 test('list log activities uses can paginate trait', function (): void {

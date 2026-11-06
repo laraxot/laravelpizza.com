@@ -1,10 +1,14 @@
+<?php
+
+declare(strict_types=1);
+?>
 @props([
     'showCookieBar' => true,
     'policyUrl' => '#',
     'privacyPolicyUrl' => '#',
-    'acceptText' => __('Accetta tutti i cookie'),
-    'rejectText' => __('Rifiuta tutti i cookie'),
-    'customizeText' => __('Personalizza'),
+    'acceptText' => __('ui::components_ui.cookiebar.accept_all.label'),
+    'rejectText' => __('ui::components_ui.cookiebar.reject_all.label'),
+    'customizeText' => __('ui::components_ui.cookiebar.customize.label'),
 ])
 
 @if($showCookieBar)
@@ -14,12 +18,12 @@
             <!-- Cookie Message -->
             <div class="flex-1">
                 <p class="text-sm text-gray-700 mb-2">
-                    <strong>{{ __('Utilizziamo i cookie') }}</strong>
+                    <strong>{{ __('ui::components_ui.cookiebar.notice.title') }}</strong>
                 </p>
                 <p class="text-sm text-gray-600">
-                    {{ __('Utilizziamo i cookie per migliorare la tua esperienza e analizzare il traffico del sito.') }}
+                    {{ __('ui::components_ui.cookiebar.notice.description') }}
                     <a href="{{ $privacyPolicyUrl }}" class="text-primary-600 hover:text-primary-700 font-medium ml-1">
-                        {{ __('Scopri di più') }}
+                        {{ __('ui::components_common.actions.learn_more.label') }}
                     </a>
                 </p>
             </div>

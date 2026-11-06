@@ -1,3 +1,15 @@
+---
+title: "email notifications"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email notifications"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema Notifiche Email - il progetto
 
 ## Panoramica

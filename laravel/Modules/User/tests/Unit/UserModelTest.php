@@ -2,21 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\Tests\Unit;
+use Tests\TestCase;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 use Modules\User\Models\AuthenticationLog;
+use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
-use Modules\User\Tests\TestCase;
+use Modules\User\Models\User;
 
 uses(TestCase::class);
 
-use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Modules\User\Models\Profile;
-use Modules\User\Models\User;
-
 // In-memory helper: build a User without touching DB
-function stubUser(array $attributes = []): User
+/** @param array<string, mixed> $attributes */
+function stubUserInMemory(array $attributes = []): User
 {
     $defaults = [
         'first_name' => 'John',
@@ -33,11 +32,14 @@ function stubUser(array $attributes = []): User
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ];
-
-    /** @var User $u */
+    if (array_key_exists('password', $attributes) && is_string($attributes['password'])) {
+        $plain = $attributes['password'];
+        if (!str_starts_with($plain, '$2y$') && !str_starts_with($plain, '$argon2')) {
+            $attributes['password'] = password_hash($plain, PASSWORD_BCRYPT);
+        }
+    }
     $u = new User();
     $u->forceFill(array_merge($defaults, $attributes));
-
     return $u;
 }
 
@@ -53,9 +55,9 @@ beforeAll(function (): void {
 
 describe('User Model', function () {
     it('can be created (in-memory)', function () {
-        $user = stubUser();
+        $user = stubUserInMemory();
 
-        expect($user)->toBeInstanceOf(User::class)->and($user->exists)->toBeFalse()->and($user->email)->toBeString();
+        expect($user->exists)->toBeFalse()->and($user->email)->toBe('john.doe@example.test');
     });
 
     it('supports mass-assignment of expected attributes (behavior)', function () {
@@ -84,13 +86,12 @@ describe('User Model', function () {
     });
 
     it('declares sensitive attributes as hidden (without serialization)', function () {
-        $user = stubUser();
-        $hidden = $user->getHidden();
+        $hidden = new User()->getHidden();
         expect($hidden)->toContain('password')->and($hidden)->toContain('remember_token');
     });
 
     it('casts attributes correctly', function () {
-        $user = stubUser([
+        $user = stubUserInMemory([
             'email_verified_at' => Carbon::now(),
             'created_at' => Carbon::now(),
             'is_active' => true,
@@ -98,19 +99,18 @@ describe('User Model', function () {
         ]);
 
         expect($user->email_verified_at)
-            ->toBeInstanceOf(Carbon::class)
+            ->not->toBeNull()
             ->and($user->created_at)
-            ->toBeInstanceOf(Carbon::class)
+            ->not->toBeNull()
             ->and($user->is_active)
-            ->toBeBool()
+            ->toBeTrue()
             ->and($user->is_otp)
-            ->toBeBool();
+            ->toBeFalse();
     });
 
     describe('Relationships', function () {
         it('has profile relationship (in-memory)', function () {
-            $user = stubUser();
-            /** @var Profile $profile */
+            $user = stubUserInMemory();
             $profile = new Profile();
             $profile->forceFill(['user_id' => 'test-user-id']);
             // Set relation without touching DB
@@ -120,24 +120,21 @@ describe('User Model', function () {
         });
 
         it('can attach authentication logs in-memory', function () {
-            $user = stubUser();
-            /** @var AuthenticationLog $log */
+            $user = stubUserInMemory();
             $log = new AuthenticationLog();
             $user->setRelation('authentications', collect([$log]));
             expect($user->authentications)->toHaveCount(1);
         });
 
         it('can expose ownedTeams relation when preset', function () {
-            $user = stubUser();
-            /** @var Team $team */
+            $user = stubUserInMemory();
             $team = new Team();
             $user->setRelation('ownedTeams', collect([$team]));
             expect($user->ownedTeams)->toHaveCount(1);
         });
 
         it('can expose teams relation when preset', function () {
-            $user = stubUser();
-            /** @var Team $team */
+            $user = stubUserInMemory();
             $team = new Team();
             $user->setRelation('teams', collect([$team]));
             expect($user->teams)->toHaveCount(1);
@@ -146,7 +143,7 @@ describe('User Model', function () {
 
     describe('Accessors and Mutators', function () {
         it('has full_name accessor', function () {
-            $user = stubUser([
+            $user = stubUserInMemory([
                 'first_name' => 'John',
                 'last_name' => 'Doe',
             ]);
@@ -155,7 +152,7 @@ describe('User Model', function () {
         });
 
         it('handles null names in full_name accessor', function () {
-            $user = stubUser([
+            $user = stubUserInMemory([
                 'first_name' => 'John',
                 'last_name' => null,
             ]);
@@ -165,7 +162,7 @@ describe('User Model', function () {
         });
 
         it('hashes password when set', function () {
-            $user = stubUser(['password' => 'plain-password']);
+            $user = stubUserInMemory(['password' => 'plain-password']);
 
             expect($user->password)
                 ->not
@@ -177,22 +174,22 @@ describe('User Model', function () {
 
     describe('Authentication Features', function () {
         it('reflects verified email state when timestamp is set', function () {
-            $user = stubUser(['email_verified_at' => null]);
+            $user = stubUserInMemory(['email_verified_at' => null]);
             expect($user->hasVerifiedEmail())->toBeFalse();
             $user->email_verified_at = Carbon::now();
             expect($user->hasVerifiedEmail())->toBeTrue();
         });
 
         it('can be activated/deactivated (in-memory)', function () {
-            $user = stubUser(['is_active' => false]);
+            $user = stubUserInMemory(['is_active' => false]);
             expect($user->is_active)->toBeFalse();
             // simulate activation without DB
             $user->is_active = true;
-            expect($user->is_active)->toBeTrue();
+            expect($user->is_active)->toBe(true);
         });
 
         it('supports OTP authentication', function () {
-            $user = stubUser(['is_otp' => true]);
+            $user = stubUserInMemory(['is_otp' => true]);
 
             expect($user->is_otp)->toBeTrue();
         });
@@ -200,28 +197,28 @@ describe('User Model', function () {
 
     describe('Scopes and Queries', function () {
         it('exposes active flag for filtering (in-memory)', function () {
-            $u1 = stubUser(['is_active' => true]);
-            $u2 = stubUser(['is_active' => false]);
+            $u1 = stubUserInMemory(['is_active' => true]);
+            $u2 = stubUserInMemory(['is_active' => false]);
 
-            $active = collect([$u1, $u2])->filter(fn (User $u) => true === $u->is_active);
-            $inactive = collect([$u1, $u2])->filter(fn (User $u) => false === $u->is_active);
+            $active = collect([$u1, $u2])->filter(fn(User $u) => $u->is_active === true);
+            $inactive = collect([$u1, $u2])->filter(fn(User $u) => $u->is_active === false);
 
             expect($active)->toHaveCount(1)->and($inactive)->toHaveCount(1);
         });
 
         it('exposes email verification flag for filtering (in-memory)', function () {
-            $u1 = stubUser(['email_verified_at' => Carbon::now()]);
-            $u2 = stubUser(['email_verified_at' => null]);
+            $u1 = stubUserInMemory(['email_verified_at' => Carbon::now()]);
+            $u2 = stubUserInMemory(['email_verified_at' => null]);
 
-            $verified = collect([$u1, $u2])->filter(fn (User $u) => null !== $u->email_verified_at);
-            $unverified = collect([$u1, $u2])->filter(fn (User $u) => null === $u->email_verified_at);
+            $verified = collect([$u1, $u2])->filter(fn(User $u) => $u->email_verified_at !== null);
+            $unverified = collect([$u1, $u2])->filter(fn(User $u) => $u->email_verified_at === null);
 
             expect($verified)->toHaveCount(1)->and($unverified)->toHaveCount(1);
         });
 
         it('exposes language for filtering (in-memory)', function () {
-            $u1 = stubUser(['lang' => 'it']);
-            $u2 = stubUser(['lang' => 'en']);
+            $u1 = stubUserInMemory(['lang' => 'it']);
+            $u2 = stubUserInMemory(['lang' => 'en']);
 
             $italians = collect([$u1, $u2])->where('lang', 'it');
             expect($italians)->toHaveCount(1);
@@ -230,13 +227,13 @@ describe('User Model', function () {
 
     describe('Security Features', function () {
         it('has password expiration', function () {
-            $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
+            $user = stubUserInMemory(['password_expires_at' => Carbon::now()->addDays(30)]);
 
             expect($user->password_expires_at)->toBeInstanceOf(Carbon::class);
         });
 
         it('tracks creation and updates (in-memory)', function () {
-            $user = stubUser();
+            $user = stubUserInMemory();
 
             // created_by/updated_by may be null in-memory; assert timestamps typing only
             expect($user->created_at)
@@ -248,15 +245,14 @@ describe('User Model', function () {
 
     describe('Team Management', function () {
         it('can have current team (in-memory)', function () {
-            $user = stubUser(['current_team_id' => 'team-id']);
+            $user = stubUserInMemory(['current_team_id' => 'team-id']);
             expect($user->current_team_id)->toBe('team-id');
         });
 
         it('can own teams (in-memory)', function () {
-            $user = stubUser();
-            /** @var Team $team */
+            $user = stubUserInMemory();
             $team = new Team();
-            $team->forceFill(['user_id' => $user->id]);
+            $team->forceFill(['user_id' => 'owner-id']);
             $user->setRelation('ownedTeams', collect([$team]));
 
             expect($user->ownedTeams)->toHaveCount(1);

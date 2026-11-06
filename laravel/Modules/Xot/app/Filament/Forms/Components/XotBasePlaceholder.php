@@ -4,17 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Forms\Components;
 
-use Filament\Forms\Components\Placeholder;
+use Filament\Infolists\Components\TextEntry;
 
 /**
- * Base class for placeholder form components.
+ * Base class for read-only form display components.
  *
- * Extends Filament Placeholder to provide a standardized base class
- * following Laraxot architecture rules.
+ * Filament v5: {@see Placeholder} è deprecato — usiamo {@see TextEntry} con `state()`.
  *
  * @method static static make(string $name)
  */
-class XotBasePlaceholder extends Placeholder
+class XotBasePlaceholder extends TextEntry
 {
     // Logica comune futura per i placeholder Xot
 }

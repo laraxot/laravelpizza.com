@@ -1,3 +1,14 @@
+---
+title: "Gestione delle Risorse Pubbliche"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "gestione delle risorse pubbliche ui"
+---
+
 # Gestione delle Risorse Pubbliche 
 
 ## Indice
@@ -16,7 +27,7 @@ Questo documento descrive la corretta gestione delle risorse pubbliche (immagini
 La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
-/var/www/html/<nome progetto>/
+/var/www/html/saluteora/
 ├── public_html/           # Directory pubblica principale
 │   ├── images/            # Immagini pubbliche
 │   ├── css/               # File CSS
@@ -26,13 +37,13 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 └── laravel/               # Applicazione Laravel (NON contiene file pubblici)
 ```
 
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/<nome progetto>/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
 
 ## Tipi di Risorse
 
 ### Immagini
 
-Le immagini devono essere posizionate in `/var/www/html/<nome progetto>/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
 
 - `/images/avatars/` - Avatar utenti
 - `/images/logos/` - Loghi
@@ -111,8 +122,8 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 ```blade
 <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}">
     <img 
-        src="{{ asset('images/logos/<nome progetto>-logo.svg') }}" 
-        alt="<nome progetto>" 
+        src="{{ asset('images/logos/saluteora-logo.svg') }}" 
+        alt="SaluteOra" 
         class="h-8"
     >
 </a>
@@ -127,4 +138,4 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 
 ## Conclusione
 
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto <nome progetto>.
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.

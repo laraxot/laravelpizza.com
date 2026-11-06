@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Guida all'Implementazione di mcamara/laravel-localization"
+module: "Lang"
+type: how-to
+tags: [git, conflicts, resolution, summary]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git conflicts resolution summary"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: superseded
+superseded_by: wiki/integrations/_da-riconciliare/mcamara-implementation-guide.md
+---
 # Guida all'Implementazione di mcamara/laravel-localization
 
 ## Indice

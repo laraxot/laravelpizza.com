@@ -1,6 +1,13 @@
+---
+title: "Fix: Activity TestCase - Database Connection Configuration"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "fix: activity testcase - database connection configuration activity"
+---
 # Fix: Activity TestCase - Database Connection Configuration
 
-**Data**: 2025-01-22
 **Problema**: Test Activity falliscono con "Database connection [activity] not configured"
 **Principio**: Il sito funziona, quindi il test deve riflettere il comportamento reale
 
@@ -68,7 +75,7 @@ protected function setUp(): void
 
 ## 🔗 Collegamenti
 
-- [Testing Rules](../testing-rules.md)
+- [Testing Rules](testing-rules.md)
 - [TestCase SQLite to MySQL Fix](testcase-sqlite-to-mysql-fix.md)
 - [User TestCase](../../User/tests/TestCase.php)
 

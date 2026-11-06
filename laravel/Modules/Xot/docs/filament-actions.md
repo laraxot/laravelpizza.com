@@ -1,3 +1,13 @@
+---
+title: "Azioni Filament"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Azioni Filament"
+---
 # Azioni Filament
 
 ## Best Practices per le Azioni
@@ -20,7 +30,7 @@ class CustomAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->translateLabel()
             ->tooltip('Descrizione azione')
             ->icon('heroicon-o-icon-name')
@@ -60,7 +70,7 @@ class MakePdfAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->translateLabel()
             ->tooltip('Genera PDF')
             ->icon('heroicon-o-document-arrow-down')
@@ -104,4 +114,4 @@ Le traduzioni per le azioni devono essere definite nel file di traduzione del mo
 4. Utilizzare le traduzioni
 5. Mantenere le azioni semplici e focalizzate
 6. Utilizzare azioni in coda per operazioni pesanti
-7. Fornire feedback appropriati all'utente
+7. Fornire feedback appropriati all'utente 

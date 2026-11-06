@@ -21,7 +21,7 @@ Governance/files updated in this pass:
 - `docs/memory/ide-helper-models-wave-memory.md`
 - `docs/skills/ide-helper-models-wave-skill.md`
 - `laravel/Modules/Xot/docs/ide-helper-models-wave-2026-03-10.md`
-- `laravel/Themes/Meetup/docs/ide-helper-models-wave-impact-2026-03-10.md`
+- `laravel/Themes/Meetup/docs/ide-helper-models-wave-impact.md`
 
 Key lesson:
 

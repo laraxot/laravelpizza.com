@@ -1,3 +1,15 @@
+---
+title: "business logic report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "business logic report"
+issues: []
+discussions: []
+status: draft
+---
+
 # Business Logic Analysis Report - SaluteOra Project
 
 ## Executive Summary

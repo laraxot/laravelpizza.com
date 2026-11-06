@@ -1,3 +1,16 @@
+---
+qmd: "rules"
+issues: []
+discussions: []
+title: "Regole per lo Sviluppo"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Regole per lo Sviluppo
 
 ## Notifiche e Email

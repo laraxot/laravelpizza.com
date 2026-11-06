@@ -32,6 +32,7 @@ class StateOverviewWidget extends XotBaseSchemaWidget
     /**
      * Vista del widget.
      */
+    /** @var view-string */
     protected string $view = 'xot::filament.widgets.state-overview';
 
     /**
@@ -76,7 +77,7 @@ class StateOverviewWidget extends XotBaseSchemaWidget
 
             return $cacheKey;
         } catch (\Error $e) {
-            if ('' === $this->cacheKey) {
+            if ($this->cacheKey === '') {
                 $this->cacheKey = Str::uuid()->toString();
             }
 

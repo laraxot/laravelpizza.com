@@ -5,9 +5,24 @@ metadata:
   type: rule
   enforced: on-demand per task User
   updated: 2026-05-26
+related:
+  - "./can-comment-retired-wrong-placement.md"
+  - "./frontend-stack-canonical.md"
+  - "./header-auth-flow.md"
+  - "./header-design-colors.md"
+  - "./module-commit-push-after-change.md"
+  - "./navigation-properties.md"
+  - "./no-filament-labels.md"
+  - "./no-notifications-migration-in-user-module.md"
+title: "Agent Confidence Protocol: User Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "agent confidence protocol   user module user"
 ---
 
-# Agent Confidence Protocol — User Module
+# Agent Confidence Protocol: User Module
 
 > **Obiettivo:** Eliminare assunzioni, massimizzare verifiche, documentare il dubbio.
 
@@ -18,7 +33,7 @@ metadata:
 **Regola:** Non carico files senza trigger specifico. Prima di modificare User code:
 - Leggo `docs/wiki/rules/00-TRIGGER_MAP.md` (riga user-specifica)
 - Uso `qmd search "User module pattern"` se non conosco il contesto
-- Evito: "So che User ha X" — verifico con `Read` o git
+- Evito: "So che User ha X": verifico con `Read` o git
 
 **Quando applico:**
 - Nuovo modulo User task
@@ -73,9 +88,9 @@ metadata:
 **Autorità (in ordine):**
 
 1. **Git (source of truth del codice)**
-   - `git log laravel/Modules/User --oneline | head -10` — ultimi cambi
-   - `git diff HEAD~1 laravel/Modules/User/Models/User.php` — che è cambiato
-   - `git blame laravel/Modules/User/Models/User.php | grep "line number"` — chi e quando
+   - `git log laravel/Modules/User --oneline | head -10`: ultimi cambi
+   - `git diff HEAD~1 laravel/Modules/User/Models/User.php`: che è cambiato
+   - `git blame laravel/Modules/User/Models/User.php | grep "line number"`: chi e quando
 
 2. **QMD (search wiki + docs)**
    ```bash
@@ -88,7 +103,7 @@ metadata:
    - Policy pattern: `ls laravel/Modules/User/Policies/`
    - Factory: `grep -l "UserFactory" laravel/Modules/User/`
 
-4. **Memory (ultime sessioni — transient)**
+4. **Memory (ultime sessioni: transient)**
    - Consulta solo se git + wiki non hanno risposta
    - Se conflitto memory vs git: **aggiorna memoria**, cita commit
 
@@ -99,7 +114,7 @@ metadata:
 
 **Documento dubio:**
 ```markdown
-❓ **Non verificato — User->roles() relationship**
+❓ **Non verificato: User->roles() relationship**
 - Memory dice: "lazy-loaded via Role model"
 - Git (HEAD): [inserisci commit ID]
 - Code: `/Models/User.php:XX`
@@ -199,12 +214,12 @@ User ha roles (probabilmente, penso).
   - Duplication User traits
 
 - [ ] **Markdown validate:**
-  - `ls laravel/Modules/User/docs/*.md` — syntax check
+  - `ls laravel/Modules/User/docs/*.md`: syntax check
   - Links interni: `grep -r "\.md" docs/wiki/` → valida `[[wiki-slug]]`
 
 - [ ] **Git log update:**
   - Aggiungi riga a `docs/wiki/log.md` con timestamp + operazione
-  - Formato: `2026-05-26 — User accessor pattern updated, [[user-model-structure]]`
+  - Formato: `2026-05-26: User accessor pattern updated, [[user-model-structure]]`
 
 - [ ] **QMD reindex (se nuovi `.md`):**
   ```bash
@@ -220,11 +235,11 @@ User ha roles (probabilmente, penso).
 
 ## Cross-Links
 
-- [[user-model-structure]] — Struttura canonica User model
-- [[user-filament-resource-pattern]] — Extend User Filament resource
-- [[00-TRIGGER_MAP]] — Routing automatico per task User
-- [[llm-wiki-operational-discipline]] — Disciplina wiki globale
-- [[agent-confidence-system]] — Strategia globale confidenza agentiva
+- [[user-model-structure]]: Struttura canonica User model
+- [[user-filament-resource-pattern]]: Extend User Filament resource
+- [[00-TRIGGER_MAP]]: Routing automatico per task User
+- [[llm-wiki-operational-discipline]]: Disciplina wiki globale
+- [[agent-confidence-system]]: Strategia globale confidenza agentiva
 
 ---
 

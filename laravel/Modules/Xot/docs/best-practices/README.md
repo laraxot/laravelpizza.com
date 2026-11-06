@@ -1,3 +1,11 @@
+---
+title: "Best Practices"
+type: index
+status: draft
+updated: 2026-10-20
+tags: [docs, xot, best-practices]
+qmd: "best practices xot"
+---
 # Best Practices
 
 ## Laraxot Framework Standards
@@ -27,29 +35,6 @@
 - Use snake_case for all keys
 
 ## Code Quality
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
-- PHPStan level 9+ for all new code
 - PHPStan level 9+ for all new code
 - Complete PHPDoc annotations
 - Use Safe library for unsafe functions

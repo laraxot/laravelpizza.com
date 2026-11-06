@@ -1,3 +1,15 @@
+---
+title: "svg placement"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "svg placement"
+issues: []
+discussions: []
+status: draft
+---
+
 # SVG File Placement Convention
 
 ## Regola: Posizionamento degli file SVG

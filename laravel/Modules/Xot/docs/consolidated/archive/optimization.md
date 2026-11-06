@@ -1,3 +1,11 @@
+---
+title: "Ottimizzazione Performance"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "ottimizzazione performance xot"
+---
 # Ottimizzazione Performance
 
 ## Stato

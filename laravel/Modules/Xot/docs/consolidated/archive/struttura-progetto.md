@@ -1,3 +1,11 @@
+---
+title: "Struttura del Progetto il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "struttura del progetto il progetto xot"
+---
 # Struttura del Progetto il progetto
 
 ## Panoramica

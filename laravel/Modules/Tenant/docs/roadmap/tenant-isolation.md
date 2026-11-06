@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Isolamento tenant e configurazioni"
+module: "Tenant"
+type: concept
+tags: [tenant, isolation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "tenant isolation"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Isolamento tenant e configurazioni
 
 ## Obiettivo

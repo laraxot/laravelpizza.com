@@ -34,7 +34,7 @@ class ActivityResource extends XotBaseResource
      * @return array<string, Component>
      */
     #[Override]
-    public static function getFormSchema(): array
+    public function getFormSchemaOld(): array
     {
         return [
             'log_name' => TextInput::make('log_name')->required()->maxLength(255),

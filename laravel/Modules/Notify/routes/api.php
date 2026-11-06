@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /*--work in progress
  * use Modules\Notify\Http\Controllers\TelegramNotificationController;
  *

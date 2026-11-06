@@ -7,13 +7,14 @@ namespace Modules\User\Filament\Resources\UserResource\Schemas;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component as SchemaComponent;
 use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
+use Livewire\Component as LivewireComponent;
 use Modules\User\Filament\Forms\Components\UserSection;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
@@ -28,7 +29,7 @@ class UserForm extends XotBaseResourceForm
      *
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'worker' => UserSection::make('worker'),
@@ -37,19 +38,19 @@ class UserForm extends XotBaseResourceForm
                     TextInput::make('name')->required(),
                     TextInput::make('password')
                         ->password()
-                        ->dehydrateStateUsing(function ($state): ?string {
+                        ->dehydrateStateUsing(function (?string $state): ?string {
                             if (! is_string($state) || empty($state)) {
                                 return null;
                             }
 
                             return Hash::make($state);
                         })
-                        ->required(fn ($livewire) => $livewire instanceof CreateUser),
+                        ->required(fn (LivewireComponent $livewire) => $livewire instanceof CreateUser),
                 ])
                 ->columnSpan(8),
             'section02' => Section::make()
                 ->schema([
-                    Placeholder::make('created_at')->content(static function ($record) {
+                    TextEntry::make('created_at')->state(static function (?Model $record) {
                         if (! $record instanceof Model) {
                             return new HtmlString('&mdash;');
                         }
@@ -61,7 +62,7 @@ class UserForm extends XotBaseResourceForm
                         /** @var Carbon|null $createdAt */
                         $createdAt = $record->getAttribute('created_at');
 
-                        if (null === $createdAt) {
+                        if ($createdAt === null) {
                             return new HtmlString('&mdash;');
                         }
                         if ($createdAt instanceof CarbonInterface) {

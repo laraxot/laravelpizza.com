@@ -1,3 +1,11 @@
+---
+title: "XotBaseStatsOverviewWidget"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, filament]
+qmd: "xotbasestatsoverviewwidget xot"
+---
 # XotBaseStatsOverviewWidget
 
 ## Panoramica
@@ -18,7 +26,7 @@ class MyStatsWidget extends XotBaseStatsOverviewWidget
 
 ### Proprietà Predefinite
 - `$pollingInterval = '5m'` - Aggiornamento automatico ogni 5 minuti
-- `$isLazy = true` - Caricamento lazy per ottimizzare le performance
+- Caricamento lazy: e' il default di Filament, la base non lo dichiara. Per disattivarlo in un figlio: `protected static ?bool $isLazyLoaded = false;` (Filament 5.11; `$isLazy` e' deprecata)
 - `$sort = 1` - Ordinamento nella dashboard
 - `$defaultCacheTtl = 300` - TTL predefinito per la cache (5 minuti)
 

@@ -1,3 +1,11 @@
+---
+title: "Email Templates Update Guide"
+type: note
+status: draft
+updated: 2026-10-15
+tags: [docs, notify, mail-templates]
+qmd: "email templates update guide notify"
+---
 # Email Templates Update Guide
 
 ## Struttura Corretta per i Layout Email
@@ -84,6 +92,6 @@ I modelli base si trovano in:
 ## Documentazione Correlata
 
 - [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](./responsive_email_templates.md)
+- [Responsive Email Design](./responsive-email-templates.md)
 - [Email HTML Best Practices](../email_html_best_practices.md)
 - [Email Templates Implementation](../email_templates.md)

@@ -1,3 +1,16 @@
+---
+title: "notification errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification errors"
+issues: []
+discussions: []
+status: superseded
+superseded_by: notification-errors.md
+---
+
 # Errori Comuni nelle Notifiche
 
 ## 1. Errore Destinatario Mancante

@@ -1,7 +1,18 @@
+---
+title: "code customization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code customization"
+issues: []
+discussions: []
+status: draft
+---
+
 # Code Customization - Gemini Code Assist (Enterprise)
 
 ---
-
 ## Panoramica
 
 Code Customization (solo Enterprise) permette a Gemini Code Assist di fornire suggerimenti basati sul tuo codebase privato, librerie interne e stile di codice dell'organizzazione.

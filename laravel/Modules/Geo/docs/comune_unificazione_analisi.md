@@ -1,3 +1,16 @@
+---
+title: "comune unificazione analisi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune unificazione analisi"
+issues: []
+discussions: []
+status: superseded
+superseded_by: comune-unificazione-analisi.md
+---
+
 # Analisi: Unificazione dei modelli geografici in Comune.php
 
 ## 1. Contesto attuale
@@ -10,7 +23,6 @@
 - Tutte le query (regioni, province, città, cap) diventano metodi statici di `Comune`.
 
 ---
-
 ## 3. Vantaggi dell'unificazione
 - ✅ **DRY**: nessuna duplicazione di logica tra modelli.
 - ✅ **KISS**: un solo punto di accesso, più semplice da mantenere.

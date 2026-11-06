@@ -1,3 +1,24 @@
+---
+title: "Best Practices per i Componenti di Autenticazione"
+type: concept
+tags: [auth, components, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-components-best-practices best practices per i componenti di autenticazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+  - "./dependency.md"
+status: draft
+---
+
 # Best Practices per i Componenti di Autenticazione 
 
 ## Collegamenti correlati

@@ -5,23 +5,20 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Feature;
 
 use Filament\Facades\Filament;
+use Filament\Panel;
 use Illuminate\Contracts\Auth\Authenticatable;
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Livewire\Livewire;
 use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates;
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\actingAs;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 beforeEach(function (): void {
-    /** @var \Modules\Notify\Tests\TestCase $this */
     $user = UserFactory::new()->createOne();
     Assert::assertInstanceOf(Authenticatable::class, $user);
     $user->assignRole('notify::admin');
@@ -35,12 +32,13 @@ beforeEach(function (): void {
 
 test('spatie-translatable plugin is registered in notify::admin panel', function (): void {
     $panel = Filament::getPanel('notify::admin');
+    Assert::assertInstanceOf(Panel::class, $panel);
 
     $plugin = $panel->getPlugin('spatie-translatable');
 
     Assert::assertInstanceOf(SpatieTranslatablePlugin::class, $plugin);
 
-    $locales = \assertNotifyArray($plugin->getDefaultLocales());
+    $locales = XotBasePest::assertArray($plugin->getDefaultLocales());
     Assert::assertContains('it', $locales);
     Assert::assertContains('en', $locales);
 });

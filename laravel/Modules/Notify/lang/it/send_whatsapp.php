@@ -49,4 +49,10 @@ return [
     ],
     'label' => 'Send Whatsapp',
     'plural_label' => 'Send Whatsapp (Plurale)',
+    'sections' => [
+        'page' => [
+            'title' => 'Test Invio WhatsApp',
+            'description' => 'Utilizza questo form per testare l\'invio di messaggi WhatsApp tramite diversi provider.',
+        ],
+    ],
 ];

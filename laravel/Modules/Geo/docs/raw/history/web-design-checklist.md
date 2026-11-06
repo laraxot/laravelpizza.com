@@ -1,9 +1,28 @@
+---
+title: "web design checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design checklist"
+issues: []
+discussions: []
+---
+
 # Checklist per Sito Web Moderno e Performante
 
 ##Studio completo basato su analisi di 20+ articoli italiani sul web design moderno (2024-2026)
 
 ---
 
+title: "web design checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design checklist"
+issues: []
+discussions: []
 ## 1. UX/UI Design
 
 ### 1.1 Web Design Immersivo

@@ -68,8 +68,7 @@ class SendRecordsNotificationAction
                     $errors->push([
                         'record' => $recordName,
                         'channel' => $channelItem,
-                        'error' => $e->getMessage(),
-                    ]);
+                        'error' => $e->getMessage()]);
                 }
                 /*
                 logger()->error('Errore invio notifica bulk', [
@@ -77,8 +76,7 @@ class SendRecordsNotificationAction
                     'record_id' => $record->getKey(),
                     'channels' => array_map(fn (ChannelEnum $ce) => $ce->value, $channels),
                     'template_slug' => $templateSlug,
-                    'error' => $e->getMessage(),
-                ]);
+                    'error' => $e->getMessage()]);
                 */
             }
         }
@@ -106,6 +104,8 @@ class SendRecordsNotificationAction
             }
         }
 
-        return (string) $record->getKey();
+        $key = $record->getKey();
+
+        return is_scalar($key) ? (string) $key : '';
     }
 }

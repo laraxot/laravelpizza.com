@@ -1,3 +1,11 @@
+---
+title: "Connessione Database nelle Migrazioni JSON"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "connessione database nelle migrazioni json notify"
+---
 # Connessione Database nelle Migrazioni JSON
 
 ## Importanza della Connessione Corretta

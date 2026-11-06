@@ -1,3 +1,14 @@
+---
+title: "scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts"
+issues: []
+discussions: []
+---
+
 # 🚀 Script Bash di <nome progetto>: La Tua Guida Definitiva
 
 ## 📋 Indice
@@ -480,6 +491,14 @@ bashscripts/
 
 ---
 
+title: "scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts"
+issues: []
+discussions: []
 ## 🗄️ Database Scripts
 
 ### backup.sh

@@ -1,3 +1,15 @@
+---
+title: "register action refactoring"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register action refactoring"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architectural Refactoring: Implementing Spatie Queueable Actions
 
 This document outlines the strategy and implementation plan for refactoring various methods into Spatie Queueable Actions across the application, with an initial focus on the `Gdpr` module, particularly the `RegisterWidget`. This refactoring adheres to the Laraxot principle of preferring Queueable Actions over traditional service classes or complex methods within Livewire components or controllers.

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Collegamenti al Modulo User"
+module: "Lang"
+type: concept
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Collegamenti al Modulo User
 
 Questo documento fornisce collegamenti bidirezionali tra il modulo Lang e il modulo User.
@@ -34,4 +48,6 @@ Questo documento è collegato bidirezionalmente con [lang-link.md](../../User/do
 ## Collegamenti tra versioni di user-link.md
 * [user-link.md](../../../Lang/docs/user-link.md)
 * [user-link.md](../../../Cms/docs/user-link.md)
+* [user-link.md](user-link.md)
+* [user-link.md](../../Cms/docs/user-link.md)
 

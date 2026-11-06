@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Integrazione con Laravel e Best Practices"
+module: "Media"
+type: concept
+tags: [laravel]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel"
+related:
+  - "./webm.md"
+status: draft
+---
 # Integrazione con Laravel e Best Practices
 
 Questa guida si concentra su come integrare e utilizzare `Html2Pdf` in un'applicazione Laravel, seguendo le best practice specifiche del progetto Laraxot.

@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+use Modules\Notify\Actions\SMS\SendSmsFactorSMSAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
-use Modules\Notify\Factories\SmsActionFactory;
 use Modules\Notify\Notifications\ThemeNotification;
-use Webmozart\Assert\Assert;
 
 class NetfunChannel
 {
@@ -19,8 +17,7 @@ class NetfunChannel
     {
         $smsData = $themeNotification->toSms($notifiable);
 
-        $action = app(SmsActionFactory::class)->create();
-        Assert::isInstanceOf($action, SmsActionContract::class);
+        $action = app(SendSmsFactorSMSAction::class);
 
         /** @var array<string, mixed> $data */
         $data = $action->execute($smsData);

@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'fields' => [
         'pdf' => [
-            'label' => 'pdf',
+            'label' => 'PDF',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -22,7 +22,7 @@ return [
         ],
         'label' => 'Pdf',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'xot-files.pdf',
     ],
     'actions' => [
         'create' => [

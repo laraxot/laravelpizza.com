@@ -1,3 +1,15 @@
+---
+title: "tips and links integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tips and links integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # tips_and_links
 
 <!-- Contenuto migrato da _docs/tips_and_links.txt -->

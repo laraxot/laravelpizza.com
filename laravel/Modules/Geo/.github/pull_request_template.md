@@ -1,3 +1,14 @@
+---
+title: "pull request template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pull request template"
+issues: []
+discussions: []
+---
+
 ## Description
 <!-- Describe your changes in detail -->
 

@@ -1,3 +1,11 @@
+---
+title: "Enum Standards in <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "enum standards in <nome progetto> xot"
+---
 # Enum Standards in <nome progetto>
 
 This document defines the standards and best practices for working with Enums in the <nome progetto> project.

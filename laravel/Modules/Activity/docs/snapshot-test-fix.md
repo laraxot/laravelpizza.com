@@ -1,3 +1,11 @@
+---
+title: "Snapshot Business Logic Test Fix"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "snapshot business logic test fix activity"
+---
 # Snapshot Business Logic Test Fix
 
 ## Problema Identificato

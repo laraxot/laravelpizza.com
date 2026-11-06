@@ -1,3 +1,11 @@
+---
+title: "FullCalendar Scheduler - Riferimento Rapido"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "fullcalendar scheduler - riferimento rapido user"
+---
 # FullCalendar Scheduler - Riferimento Rapido
 
 ## 🚨 Problemi Comuni e Soluzioni Immediate
@@ -181,7 +189,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 
-## 🚀 Quaeris Specifico
+## 🚀 SaluteOra Specifico
 
 ### Business Hours Sanitarie
 ```javascript

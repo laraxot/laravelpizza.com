@@ -6,8 +6,8 @@ namespace Modules\Seo\Facades;
 
 use DateTimeInterface;
 use Illuminate\Support\Facades\Facade;
-use Modules\Seo\Data\MetatagData;
-use Modules\Seo\Services\MetatagService;
+use Modules\Seo\Adapters\MetatagFacadeAdapter;
+use Modules\Seo\Datas\MetatagData;
 
 /**
  * @method static MetatagData get()
@@ -27,17 +27,15 @@ use Modules\Seo\Services\MetatagService;
  * @method static void setPublishedTime(DateTimeInterface $time)
  * @method static void setModifiedTime(DateTimeInterface $time)
  *
- * @see \Modules\Seo\Services\MetatagService
+ * @see MetatagFacadeAdapter
  */
 class Metatag extends Facade
 {
     /**
      * Get the registered name of the component.
-     *
-     * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return MetatagService::class;
+        return MetatagFacadeAdapter::class;
     }
 }

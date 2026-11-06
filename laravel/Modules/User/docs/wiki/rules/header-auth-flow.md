@@ -2,6 +2,20 @@
 name: header-auth-flow-rule
 description: Header authentication flow rule for User module
 type: project
+related:
+  - "./agent-confidence-protocol.md"
+  - "./can-comment-retired-wrong-placement.md"
+  - "./frontend-stack-canonical.md"
+  - "./header-design-colors.md"
+  - "./module-commit-push-after-change.md"
+  - "./navigation-properties.md"
+  - "./no-filament-labels.md"
+  - "./no-notifications-migration-in-user-module.md"
+title: "header auth flow"
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "header auth flow user"
 ---
 
 ## Rule Overview

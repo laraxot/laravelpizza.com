@@ -1,3 +1,14 @@
+---
+title: "git subtree push org"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git subtree push org"
+issues: []
+discussions: []
+---
+
 # Script Push Subtree per Organizzazioni
 
 ## Panoramica

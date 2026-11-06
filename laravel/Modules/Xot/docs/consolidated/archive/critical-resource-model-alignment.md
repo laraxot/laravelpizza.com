@@ -1,3 +1,11 @@
+---
+title: "CRITICAL: Filament Resource-Model Alignment Rules"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "critical: filament resource-model alignment rules xot"
+---
 # CRITICAL: Filament Resource-Model Alignment Rules
 
 ## 🚨 ERRORE CRITICO IDENTIFICATO E RISOLTO

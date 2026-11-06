@@ -1,3 +1,16 @@
+---
+title: "sms provider architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms provider architecture"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sms-provider-architecture.md
+---
+
 # Architettura dei Provider SMS 
 
 ## Convenzioni delle Interfacce

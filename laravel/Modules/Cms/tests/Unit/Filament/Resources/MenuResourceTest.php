@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+use Filament\Forms\Components\Field;
 use Modules\Cms\Filament\Resources\MenuResource;
+use Modules\Cms\Filament\Resources\MenuResource\Schemas\MenuForm;
 use Modules\Cms\Models\Menu;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 describe('MenuResource', function (): void {
     test('menu resource has correct model', function (): void {
         $resource = new MenuResource();
@@ -15,20 +16,20 @@ describe('MenuResource', function (): void {
     });
 
     test('menu resource has form schema', function (): void {
-        $schema = MenuResource::getFormSchema();
+        $schema = app(MenuForm::class)->getFormSchema();
         /* @var array<string, mixed> $schema */
         Assert::assertGreaterThan(0, count($schema));
     });
 
     test('menu resource has form fields', function (): void {
-        $schema = MenuResource::getFormSchema();
+        $schema = app(MenuForm::class)->getFormSchema();
 
         // Check that form has required components
         $hasTitle = false;
         $hasItems = false;
 
         foreach ($schema as $item) {
-            if (! $item instanceof Filament\Forms\Components\Field) {
+            if (! $item instanceof Field) {
                 continue;
             }
             $name = $item->getName();

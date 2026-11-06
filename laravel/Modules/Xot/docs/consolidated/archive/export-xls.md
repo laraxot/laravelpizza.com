@@ -1,3 +1,11 @@
+---
+title: "Export XLS - File di traduzione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "export xls - file di traduzione xot"
+---
 # Export XLS - File di traduzione
 
 Il file `export_xls.php` contiene tutte le etichette e i testi utilizzati per l'esportazione in formato XLS nel modulo Xot.

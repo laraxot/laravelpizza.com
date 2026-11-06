@@ -1,3 +1,15 @@
+---
+title: "register widget fix "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register widget fix "
+issues: []
+discussions: []
+status: draft
+---
+
 # RegisterWidget Fix - 13 Febbraio 2026
 
 ## Problema Risolto

@@ -1,3 +1,28 @@
+---
+title: "BaseUser Refactoring - Completato"
+type: concept
+tags: [baseuser, refactoringd]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "baseuser-refactoringd baseuser refactoring - completato"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # BaseUser Refactoring - Completato
 
 **File**: `Modules/User/app/Models/BaseUser.php`  
@@ -237,10 +262,11 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 ### Modulo User
 - [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
-- [User Module README](./readme.md)
+- [User Module README](./README.md)
 
 ### Root Progetto
-- [Code Quality](../../../docs/code-quality-analysis.md)
+- [Code Quality](code-quality-analysis.md)
+- [Code Quality](code-quality-analysis.md)
 - [DRY Violations](../../../docs/dry-violations-analysis.md)
 
 ### Spatie Documentation

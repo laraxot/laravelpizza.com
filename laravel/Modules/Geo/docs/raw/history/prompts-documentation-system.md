@@ -1,3 +1,14 @@
+---
+title: "prompts documentation system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prompts documentation system"
+issues: []
+discussions: []
+---
+
 # Sistema di Prompt per la Documentazione
 
 ## Panoramica

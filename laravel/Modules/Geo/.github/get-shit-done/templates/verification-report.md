@@ -1,9 +1,28 @@
+---
+title: "verification report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "verification report"
+issues: []
+discussions: []
+---
+
 # Verification Report Template
 
 Template for `.planning/phases/XX-name/{phase_num}-VERIFICATION.md` — phase goal verification results.
 
 ---
 
+title: "verification report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "verification report"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

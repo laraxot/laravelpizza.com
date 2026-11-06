@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Media Module Analysis"
+module: "Media"
+type: concept
+tags: [analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "analysis"
+related:
+  - "./webm.md"
+status: draft
+---
 # Media Module Analysis
 
 ## Overview
@@ -61,15 +75,15 @@ Modules/Media/
 ### Versione HEAD
 
 ## Collegamenti tra versioni di analysis.md
-* [analysis.md](../../../notify/docs/analysis.md)
+* [analysis.md](../../Notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)
 * [analysis.md](../../../xot/docs/analysis.md)
 * [analysis.md](../../../xot/docs/phpstan/analysis.md)
-* [analysis.md](../../../user/docs/analysis.md)
+* [analysis.md](../../User/docs/analysis.md)
 * [analysis.md](../../../user/docs/phpstan/analysis.md)
 * [analysis.md](../../../ui/docs/analysis.md)
 * [analysis.md](../../../ui/docs/phpstan/analysis.md)
-* [analysis.md](../../../job/docs/analysis.md)
+* [analysis.md](../../Job/docs/analysis.md)
 * [analysis.md](../../../job/docs/phpstan/analysis.md)
 * [analysis.md](../../../media/docs/analysis.md)
 * [analysis.md](../../../media/docs/phpstan/analysis.md)

@@ -7,6 +7,7 @@ namespace Modules\Lang\Filament\Resources\TranslationFileResource\Pages;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Illuminate\Contracts\Support\Htmlable;
+use Modules\Lang\Actions\ResolveTranslatableLocalesAction;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Lang\Filament\Actions\LocaleSwitcherRefresh;
 use Modules\Lang\Filament\Resources\TranslationFileResource;
@@ -21,30 +22,50 @@ class EditTranslationFile extends XotBaseEditRecord
      */
     public function getTranslatableLocales(): array
     {
-        return ['it', 'en'];
+        return app(ResolveTranslatableLocalesAction::class)->execute();
     }
 
-    #[\Override]
+    /**
+     * Schema della pagina.
+     *
+     * Niente `#[\Override]`: il metodo del genitore si chiama `getFormSchemaOld()`
+     * ed e' `protected`. Con l'attributo, PHP emetteva un fatal error
+     * («has #[\Override] attribute, but no matching parent method exists») che
+     * impediva perfino a PHPStan di analizzare il modulo.
+     *
+     * @return array<int, Section>
+     */
     public function getFormSchema(): array
     {
         return [
-            Section::make('content')->schema(function ($record): array {
-                if (is_object($record) && isset($record->content) && is_array($record->content)) {
-                    /** @var array<string, mixed> $content */
-                    $content = $record->content;
-                } else {
-                    /** @var array<string, mixed> $content */
-                    $content = [];
-                }
-
-                return $this->makeFromArray($content, 'content');
-            }),
+            Section::make('content')->schema(fn (?object $record): array => $this->schemaFromRecord($record)),
         ];
     }
 
     /**
-     * @param array<string, mixed> $array
+     * Costruisce i campi della sezione `content` a partire dal record.
      *
+     * Estratto dalla closure di {@see getFormSchemaOld()} per renderlo verificabile:
+     * dentro una closure passata a `Section::schema()` la logica e' raggiungibile solo
+     * montando l'intera pagina Filament, e i tre casi che contano — record valido,
+     * record assente, `content` non array — non si distinguono nell'output.
+     *
+     * @return array<int, Section|TextInput>
+     */
+    public function schemaFromRecord(?object $record): array
+    {
+        if ($record === null || ! isset($record->content) || ! \is_array($record->content)) {
+            return [];
+        }
+
+        /** @var array<string, mixed> $content */
+        $content = $record->content;
+
+        return $this->makeFromArray($content, 'content');
+    }
+
+    /**
+     * @param  array<string, mixed>  $array
      * @return array<int, Section|TextInput>
      */
     public function makeFromArray(array $array, string $prefix = ''): array
@@ -53,7 +74,7 @@ class EditTranslationFile extends XotBaseEditRecord
 
         foreach ($array as $key => $value) {
             $keyStr = (string) $key;
-            $fullKey = '' === $prefix ? $keyStr : ($prefix.'.'.$keyStr);
+            $fullKey = $prefix === '' ? $keyStr : ($prefix.'.'.$keyStr);
 
             if (is_array($value)) {
                 /** @var array<string, mixed> $childArray */
@@ -108,10 +129,12 @@ class EditTranslationFile extends XotBaseEditRecord
          */
         $record = $this->record;
         if (is_object($record) && isset($record->key)) {
-            $key = is_string($record->key) ? $record->key : (string) $record->key;
-            /** @var array<string, mixed>|Htmlable|int|string|null $content */
-            $content = $data['content'] ?? null;
-            app(SaveTransAction::class)->execute($key, $content);
+            /** @var string|int|float|bool|null $recordKeyNarrowed */
+            $recordKeyNarrowed = $record->key;
+            $key = is_string($recordKeyNarrowed) ? $recordKeyNarrowed : (string) $recordKeyNarrowed;
+            /** @var array<string, mixed>|string|int|Htmlable|null $contentNarrowed */
+            $contentNarrowed = $data['content'] ?? null;
+            app(SaveTransAction::class)->execute($key, $contentNarrowed);
         }
 
         // dddx(['record'=>$this->record,'data'=>$data]);

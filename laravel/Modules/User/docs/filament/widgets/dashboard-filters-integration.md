@@ -1,3 +1,20 @@
+---
+title: "Dashboard Filters Integration per Widget Filament"
+type: concept
+tags: [dashboard, filters, integration]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "dashboard-filters-integration dashboard filters integration per widget filament"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./edit-user-widget.md"
+  - "./registration-widget-fileupload-fix.md"
+  - "./registration-widget-fileupload.md"
+  - "./registration-widget.md"
+status: draft
+---
+
 # Dashboard Filters Integration per Widget Filament
 
 ## Problema Risolto
@@ -127,10 +144,14 @@ protected function getFooterWidgets(): array
 - [ ] Fallback appropriati attivati
 ## Riferimenti e Collegamenti
 ### Documentazione Correlata
-- [Modules/User/docs/best-practices/filament-widgets.md](../best-practices/filament-widgets.md)
+- [Modules/User/docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
 - [Modules/Xot/docs/filament/widgets/base-chart-widget.md](../../../xot/docs/filament/widgets/base-chart-widget.md)
 - [Modules/<nome progetto>/docs/dashboard-implementation.md](../../../<nome progetto>/docs/dashboard-implementation.md)
-- [Modules/User/project_docs/best-practices/filament-widgets.md](../best-practices/filament-widgets.md)
+- [Modules/User/project_docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
+- [Modules/User/docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
+- [Modules/Xot/docs/filament/widgets/base-chart-widget.md](../../../xot/docs/filament/widgets/base-chart-widget.md)
+- [Modules/<nome progetto>/docs/dashboard-implementation.md](../../../<nome progetto>/docs/dashboard-implementation.md)
+- [Modules/User/project_docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
 - [Modules/Xot/project_docs/filament/widgets/base-chart-widget.md](../../../xot/project_docs/filament/widgets/base-chart-widget.md)
 - [Modules/<nome progetto>/project_docs/dashboard-implementation.md](../../../<nome progetto>/project_docs/dashboard-implementation.md)
 ### Widget Correlati

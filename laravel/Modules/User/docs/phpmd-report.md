@@ -1,3 +1,28 @@
+---
+title: "Phpmd Report"
+type: concept
+tags: [phpmd, report]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpmd-report phpmd report"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 Modules/User/app/Actions/GetCurrentDeviceAction.php:23                                         CyclomaticComplexity      The method execute() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 Modules/User/app/Actions/GetCurrentDeviceAction.php:23                                         NPathComplexity           The method execute() has an NPath complexity of 320. The configured NPath complexity threshold is 200.
 Modules/User/app/Actions/GetCurrentDeviceAction.php:42                                         ShortVariable             Avoid variables with short names like $up. Configured minimum length is 3.

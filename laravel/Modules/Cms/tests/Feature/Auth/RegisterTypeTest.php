@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */
     cmsSkipTest('patient/doctor registration types not configured in this install.');

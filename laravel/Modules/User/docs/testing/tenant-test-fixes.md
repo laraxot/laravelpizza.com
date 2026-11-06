@@ -1,3 +1,20 @@
+---
+title: "TenantTest Fixes - Reasoning"
+type: concept
+tags: [tenant, test, fixes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "tenant-test-fixes tenanttest fixes - reasoning"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./remaining-tenant-failures.md"
+  - "./tenantfactory-fix.md"
+  - "./tenantfactory.md"
+  - "./tenanttest-fixes.md"
+status: draft
+---
+
 # TenantTest Fixes - Reasoning
 
 ## Problem Analysis

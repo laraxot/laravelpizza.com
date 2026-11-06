@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <meta charset="utf-8">
 <meta name="application-name" content="{{ $_theme->metatag('sitename') }}">
@@ -9,7 +8,7 @@ declare(strict_types=1);
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ $_theme->metatag('description') }}">
 <meta name="robots" content="index,follow">
-<meta nome="googlebot" content="index,follow">
+<meta name="googlebot" content="index,follow">
 <link rel="icon" type="image/x-icon" href="{{ $_theme->asset(config('metatag.logo_square')) }}">
 <title>{{ $_theme->metatag('title') }}</title>
 

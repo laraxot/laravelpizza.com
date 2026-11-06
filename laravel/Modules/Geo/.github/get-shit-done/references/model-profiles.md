@@ -1,3 +1,14 @@
+---
+title: "model profiles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model profiles"
+issues: []
+discussions: []
+---
+
 # Model Profiles
 
 Model profiles control which Claude model each GSD agent uses. This allows balancing quality vs token spend.

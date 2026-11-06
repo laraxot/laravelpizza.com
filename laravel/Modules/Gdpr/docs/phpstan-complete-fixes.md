@@ -1,3 +1,15 @@
+---
+title: "phpstan complete fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan complete fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Complete Fixes 2025 - Gdpr Module
 
 **Status**: ✅ **COMPLETATO CON SUCCESSO**

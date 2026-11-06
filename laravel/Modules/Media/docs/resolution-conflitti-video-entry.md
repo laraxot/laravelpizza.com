@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione Conflitto in VideoEntry"
+module: "Media"
+type: concept
+tags: [resolution, conflitti, video, entry]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "resolution conflitti video entry"
+related:
+  - "./webm.md"
+status: superseded
+superseded_by: conflict-resolution-video-entry.md
+---
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica

@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent coordination"
+issues: []
+discussions: []
 name: "Agent Teams Coordination"
 about: "Coordinate work across multiple AI agents"
 title: "Agent Coordination: {Topic}"

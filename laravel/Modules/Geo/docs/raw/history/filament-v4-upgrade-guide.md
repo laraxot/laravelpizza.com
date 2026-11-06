@@ -1,3 +1,14 @@
+---
+title: "filament v4 upgrade guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 upgrade guide"
+issues: []
+discussions: []
+---
+
 # Filament v3 to v4 Upgrade Guide
 
 ## Overview
@@ -185,4 +196,12 @@ After successful upgrade:
 
 ---
 
+title: "filament v4 upgrade guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 upgrade guide"
+issues: []
+discussions: []
 **Note**: This upgrade is critical for maintaining compatibility and accessing new features. All team members should review this guide before implementation.

@@ -1,3 +1,15 @@
+---
+title: "map picker family architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker family architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Picker Family Architecture
 
 ## Obiettivo

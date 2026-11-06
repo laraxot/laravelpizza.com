@@ -1,3 +1,9 @@
+---
+title: "Xot - claude-code-laraxot-rules-path-scoping.md"
+module: Xot
+bmad: true
+status: active
+---
 # Claude Code Laraxot Rules Path Scoping
 
 ## Decisione

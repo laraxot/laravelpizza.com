@@ -13,7 +13,7 @@ class XotDatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('XotDatabaseSeeder: entity seeders…');
         }
 
@@ -32,7 +32,7 @@ class XotDatabaseSeeder extends Seeder
             SessionSeeder::class,
         ]);
 
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('XotDatabaseSeeder: completato.');
         }
     }

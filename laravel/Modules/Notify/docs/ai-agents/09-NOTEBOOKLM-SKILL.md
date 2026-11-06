@@ -1,3 +1,16 @@
+---
+title: "09 NOTEBOOKLM SKILL"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "09 NOTEBOOKLM SKILL"
+issues: []
+discussions: []
+status: superseded
+superseded_by: 09-notebooklm-skill.md
+---
+
 # NotebookLM Skill - Guida Installazione e Utilizzo
 
 **Skill**: `notebooklm`
@@ -7,6 +20,14 @@
 
 ---
 
+title: "09 NOTEBOOKLM SKILL"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "09 NOTEBOOKLM SKILL"
+issues: []
+discussions: []
 ## Cosa fa
 
 Permette di interrogare notebook Google NotebookLM direttamente da Claude Code / Kilo Code tramite browser automation (Patchright/Chrome). Le risposte provengono **esclusivamente** dai documenti caricati sul notebook, riducendo drasticamente le allucinazioni.

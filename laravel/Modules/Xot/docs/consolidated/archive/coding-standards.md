@@ -1,3 +1,11 @@
+---
+title: "Standard di Codice per il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "standard di codice per il progetto xot"
+---
 # Standard di Codice per il progetto
 
 > **Nota**: Questo documento è correlato a [Convenzioni](../../../project_docs/conventions.md) e [Naming Conventions](../../../project_docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.

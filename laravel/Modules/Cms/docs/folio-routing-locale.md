@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Folio routing e locale"
 type: concept
 tags: [cms, folio, locale, laravel-localization, routing]
@@ -8,7 +10,8 @@ qmd: "folio routing locale FolioVoltServiceProvider uri locale mcamara link stra
 related:
   - wiki/concepts/folio-filesystem-routing-no-web-php.md
   - wiki/troubleshooting/folio-route-not-found.md
-  - ../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md
+  - ../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md
+status: draft
 ---
 
 # Folio routing e locale (mcamara/laravel-localization)
@@ -59,13 +62,13 @@ Tre superfici — non mescolarle:
 
 `route()` **non** definisce la rotta — punta al file Folio esistente. **Mai** definire rotte FO in `web.php`.
 
-Vedi [folio-filesystem-routing-no-web-php.md](wiki/concepts/folio-filesystem-routing-no-web-php.md) · header: [fo-folio-named-routes-header.md](../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md).
+Vedi [folio-filesystem-routing-no-web-php.md](wiki/concepts/folio-filesystem-routing-no-web-php.md) · header: [fo-folio-named-routes-header.md](../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md).
 
 ## Riferimenti
 
 - [Regola laravel-localization-mcamara](../../../../.cursor/rules/laravel-localization-mcamara.mdc)
-- [Lang: laravel-localization reference](../lang/docs/laravel-localization-mcamara-reference.md)
-- [fo-folio-links-multilingua](../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md)
+- [Lang: laravel-localization reference](../../Lang/docs/laravel-localization-mcamara-reference.md)
+- [fo-folio-links-multilingua](../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md)
 - [mcamara/laravel-localization README](https://github.com/mcamara/laravel-localization)
 
 ## Canon approfondito

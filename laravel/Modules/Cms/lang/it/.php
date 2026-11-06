@@ -450,7 +450,7 @@ return array (
     'empty' => 
     array (
       'heading' => '',
-      'label' => 'empty2',
+     'label' => 'empty2',
     ),
   ),
   'navigation' => 

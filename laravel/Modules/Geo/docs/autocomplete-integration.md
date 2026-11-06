@@ -1,3 +1,15 @@
+---
+title: "autocomplete integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "autocomplete integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # autocomplete
 
 <!-- Contenuto migrato da _docs/autocomplete.txt -->

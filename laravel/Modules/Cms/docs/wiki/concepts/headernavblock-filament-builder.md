@@ -1,3 +1,15 @@
+---
+title: "headernavblock filament builder"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "headernavblock filament builder"
+issues: []
+discussions: []
+status: draft
+---
+
 # HeaderNavBlock - Filament Builder Documentation
 
 ## Overview
@@ -92,10 +104,16 @@ php -d memory_limit=512M vendor/bin/phpstan analyse Modules/Cms/app/Filament/Blo
 
 The header.json is the **Single Source of Truth**. No hardcoded links. No duplication. Filament Builder is the interface. Blade is the presentation layer. Clean separation of concerns.
 
+## See also
+
+- [../../00-INDEX.md](../../00-index.md) · [../../scopo.md](../../scopo.md)
+- [header-nav-block-architecture.md](./header-nav-block-architecture.md)
+- [../../content-blocks-architecture.md](../../content-blocks-architecture.md)
+
 ## Next Steps
 
 1. ✅ Dynamic navigation from header.json (already working)
 2. ✅ PHPStan validation passed
 3. ⏳ Test with Pest (visual regression)
-4. ⏳ Document in module docs (`laravel/Modules/Cms/docs/wiki/`)
+4. ✅ Documented in module docs (questo file + scopo/index)
 5. ⏳ Ingest into QMD (when database issue resolved)

@@ -1,5 +1,20 @@
+---
+title: "agents consolidation cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents consolidation cleanup"
+issues: []
+discussions: []
+status: draft
+---
+
 
 ---
+qmd: "agents consolidation cleanup"
+issues: []
+discussions: []
 title: "Agents Directory Consolidation & Cleanup"
 type: cleanup
 created: 2026-04-30
@@ -140,9 +155,9 @@ find . -type f | wc -l  # Should show ~4,531 files
 
 ## References
 
-- [Root CLAUDE.md](../../../../CLAUDE.md) — Canonical rules location
+- [Root CLAUDE.md](../../../../../CLAUDE.md) — Canonical rules location
 - [Context Compression Discipline](../../../../bashscripts/ai/.claude/rules/context-compression-discipline.md)
-- [Geo Module LLM Wiki](../wiki/index.md)
+- [Geo Module LLM Wiki](../index.md)
 - [Map Controls Shared Implementation](./geo-map-controls-shared-implementation.md)
 
 ## Related Stories

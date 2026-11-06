@@ -12,7 +12,8 @@ discussions:
 related:
   - ../../../Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
   - ../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md
-  - ../../composer.json
+  - ../../../composer.json
+status: draft
 ---
 
 # Gdpr e composer root minimale

@@ -6,7 +6,7 @@ namespace Modules\Geo\Filament\Widgets;
 
 use Filament\Schemas\Components\Component;
 use Modules\Geo\Filament\Forms\LocationForm;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**
  * Widget per la selezione della località.
@@ -16,12 +16,10 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  *
  * @see \Modules\Geo\docs\json-database.md
  */
-class LocationWidget extends XotBaseWidget
+class LocationWidget extends XotBaseSchemaWidget
 {
     /**
      * Dati del widget.
-     *
-     * @var array<string, mixed>|null
      */
     public ?array $data = [];
 
@@ -45,10 +43,8 @@ class LocationWidget extends XotBaseWidget
      */
     protected int|string|array $columnSpan = 'full';
 
-    /**
-     * Vista del widget.
-     */
-    protected string $view = 'geo::filament.widgets.location';
+    /** @var view-string */
+    protected string $view;
 
     /**
      * Form per la selezione della località.
@@ -60,7 +56,13 @@ class LocationWidget extends XotBaseWidget
      */
     public function __construct()
     {
+        /** @var view-string $view */
+        $view = 'geo::filament.widgets.location';
+        $this->view = $view;
+
         $this->locationForm = new LocationForm();
+
+        parent::__construct();
     }
 
     /**
@@ -76,7 +78,6 @@ class LocationWidget extends XotBaseWidget
      *
      * @return array<int, Component>
      */
-    #[\Override]
     public function getFormSchema(): array
     {
         return $this->locationForm->getSchema();

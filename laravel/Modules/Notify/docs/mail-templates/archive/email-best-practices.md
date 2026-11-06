@@ -1,3 +1,11 @@
+---
+title: "Best Practices per Email Transazionali"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "best practices per email transazionali notify"
+---
 # Best Practices per Email Transazionali
 
 ## Introduzione

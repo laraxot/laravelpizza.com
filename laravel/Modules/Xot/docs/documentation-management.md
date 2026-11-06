@@ -1,3 +1,13 @@
+---
+title: "Gestione della Documentazione e delle Regole"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Gestione della Documentazione e delle Regole"
+---
 # Gestione della Documentazione e delle Regole
 
 ## Struttura della Documentazione
@@ -143,4 +153,4 @@ Quando si identifica una nuova regola o pattern importante:
 4. **Windsurf**
    - [ ] Aggiornare .windsurfrules
    - [ ] Verificare coerenza
-   - [ ] Testare applicabilità
+   - [ ] Testare applicabilità 

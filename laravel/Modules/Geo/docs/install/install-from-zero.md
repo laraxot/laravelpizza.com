@@ -1,3 +1,15 @@
+---
+title: "install from zero"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "install from zero"
+issues: []
+discussions: []
+status: draft
+---
+
 #Install from zero
 
 ~~~ bash
@@ -111,6 +123,7 @@ edit file composer.json
         },
         "files": [
             "Modules/Xot/helpers/Helper.php"
+            "Modules/Xot/Helpers/Helper.php"
         ]
     },
     "autoload-dev": {

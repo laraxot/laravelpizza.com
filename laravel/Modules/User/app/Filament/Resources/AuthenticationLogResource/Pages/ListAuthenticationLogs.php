@@ -6,11 +6,11 @@ namespace Modules\User\Filament\Resources\AuthenticationLogResource\Pages;
 
 use Filament\Actions\Action;
 use Modules\User\Filament\Resources\AuthenticationLogResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-
 /**
  * Class ListAuthenticationLogs.
  */
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+
 class ListAuthenticationLogs extends XotBaseListRecords
 {
     protected static string $resource = AuthenticationLogResource::class;

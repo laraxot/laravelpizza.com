@@ -1,3 +1,11 @@
+---
+title: "Risoluzione Conflitti Git - 6 Gennaio 2025"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione conflitti git - 6 gennaio 2025 xot"
+---
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
 ## Data: 2025-01-06

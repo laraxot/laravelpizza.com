@@ -1,3 +1,15 @@
+---
+title: "redundancy report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "redundancy report"
+issues: []
+discussions: []
+status: draft
+---
+
 # Redundancy Report – Geo Module
 
 ## 1. Duplicate Alpine Global Function `geoMapPickerField`

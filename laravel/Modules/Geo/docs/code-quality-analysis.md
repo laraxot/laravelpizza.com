@@ -1,3 +1,15 @@
+---
+title: "code quality analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🌍 Geo Module - Code Quality Analysis Report
 
 **Date**: 2025-11-11
@@ -102,7 +114,16 @@ PHPStan analysis was blocked by a syntax error in the Cms module, but PHPMD anal
 4. **Update Documentation**: Document the improvements and patterns
 
 ---
-
 **Report Generated**: 2025-11-11
 **Next Review**: After fixing Cms module syntax error
 **Target Completion**: 2025-11-20
+
+## 2026-07-12 PHPMD/PHPInsights sweep
+
+Repo-wide PHPStan is clean; this pass focused on PHPMD/PHPInsights findings. Fixed genuine dead code only:
+
+- [x] `app/Actions/GoogleMaps/OptimizeRouteAction.php:176-177`: removed unused `$typedWaypoints` local variable (assigned, never read).
+- [x] `app/Models/Policies/GeoBasePolicy.php:17`: removed unused `$xotData = XotData::make()` local variable in `before()`.
+- [x] `app/Models/Traits/GeoTrait.php` (`getFullAddressAttribute`): removed a dead `$value = str_ireplace(...)` reassignment whose result was never used (the branches below build their own `$before`/`$after` from `$geo->value` directly).
+- Noted but left alone: `Actions/Bing/GetAddressFromBingMapsAction.php` (reverse geocode by lat/lng) and `Actions/BingMaps/GetAddressFromBingMapsAction.php` (forward geocode by address string) look similar by class name but are NOT duplicates — different signatures/purposes. Only `BingMaps\GetAddressFromBingMapsAction` is wired into production (`GetAddressDataFromFullAddressAction`). Renaming/consolidating is a bigger refactor, out of scope here.
+- Given the module's size (~40 Action files), this was a representative pass (PHPMD full output + PHPInsights unused/duplicate findings), not an exhaustive line-by-line review. Remaining flags are StaticAccess (idiomatic Facades), naming-length nags, and complexity/architecture noise per project convention — left as-is.

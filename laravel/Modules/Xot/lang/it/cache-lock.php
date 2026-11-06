@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione dei lock di cache',
         ],
-        'label' => 'cache-lock',
+        'label' => 'Blocco cache',
         'sort' => 20,
         'icon' => 'xot-lock',
     ],

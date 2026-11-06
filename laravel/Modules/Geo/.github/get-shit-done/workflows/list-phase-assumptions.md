@@ -1,3 +1,14 @@
+---
+title: "list phase assumptions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "list phase assumptions"
+issues: []
+discussions: []
+---
+
 <purpose>
 Surface Claude's assumptions about a phase before planning, enabling users to correct misconceptions early.
 
@@ -115,6 +126,14 @@ Present assumptions in a clear, scannable format:
 
 ---
 
+title: "list phase assumptions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "list phase assumptions"
+issues: []
+discussions: []
 **What do you think?**
 
 Are these assumptions accurate? Let me know:

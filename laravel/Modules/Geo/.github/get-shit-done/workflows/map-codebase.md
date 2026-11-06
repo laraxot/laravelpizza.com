@@ -1,3 +1,14 @@
+---
+title: "map codebase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map codebase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Orchestrate parallel codebase mapper agents to analyze codebase and produce structured documents in .planning/codebase/
 
@@ -281,6 +292,14 @@ Created .planning/codebase/:
 
 ---
 
+title: "map codebase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map codebase"
+issues: []
+discussions: []
 ## ▶ Next Up
 
 **Initialize project** — use codebase context for planning

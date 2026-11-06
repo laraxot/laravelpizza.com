@@ -5,60 +5,72 @@ declare(strict_types=1);
 namespace Modules\AI\Actions;
 
 use Illuminate\Support\Facades\Cache;
-use Modules\AI\Actions\Support\MakeAIRequestAction;
+use Modules\AI\Actions\Prompt\BuildAIPromptAction;
+use Modules\AI\Actions\MakeAIRequestAction;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
-class SuggestSolutionsAction
+/**
+ * Suggerimento delle soluzioni per un ticket (azione queueable).
+ *
+ * Sostituisce `AIService::suggestSolutions()` mantenendo invariata la logica di business:
+ * - cache `ai:solutions:<md5(title+description+category)>` con TTL 1800 secondi;
+ * - prompt di soluzione (template `solutions`);
+ * - richiesta all'API AI con retry (see `MakeAIRequestAction`);
+ * - decodifica difensiva della risposta JSON con fallback sui valori di default.
+ *
+ * Essendo un'azione queueable puo' essere eseguita in modo sincrono
+ * (`app(SuggestSolutionsAction::class)->execute($title, $description, $category)`)
+ * oppure dispatchata su coda (`SuggestSolutionsAction::dispatch($title, $description, $category)`).
+ */
+final class SuggestSolutionsAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly string $title,
-        private readonly string $description,
-        private readonly string $category,
-    ) {}
+    /**
+     * TTL (secondi) della cache dei suggerimenti.
+     */
+    private const int CACHE_TTL = 1800;
 
     /**
+     * Valori di default usati quando il modello non risponde in JSON valido.
+     *
      * @return array<string, mixed>
      */
-    public function handle(): array
-    {
-        $cacheKey = 'ai:solutions:'.md5($this->title.$this->description.$this->category);
+    private const array DEFAULTS = [
+        'solutions' => [],
+        'preventive_measures' => [],
+        'follow_up_actions' => [],
+    ];
 
-        $result = Cache::remember($cacheKey, 1800, function (): string {
-            $prompt = $this->buildSolutionPrompt();
-            return (new MakeAIRequestAction($prompt, 'solutions'))->handle();
+    /**
+     * Suggerisce le soluzioni per il ticket e restituisce i dati strutturati.
+     *
+     * @return array<string, mixed>
+     */
+    public function execute(string $title, string $description, string $category): array
+    {
+        $cacheKey = 'ai:solutions:'.md5($title.$description.$category);
+
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($title, $description, $category): string {
+            $prompt = app(BuildAIPromptAction::class)->execute('solutions', [
+                'title' => $title,
+                'description' => $description,
+                'category' => $category,
+            ]);
+
+            return app(MakeAIRequestAction::class)->execute($prompt, 'solutions', [
+                'title' => $title,
+                'description' => $description,
+                'category' => $category,
+            ]);
         });
 
-        Assert::isArray($result, 'Solutions result must be an array');
+        if (! is_string($result)) {
+            return self::DEFAULTS;
+        }
 
-        return $result;
-    }
+        $decoded = AiJsonResponseDecoderAction::decodeObject($result);
 
-    private function buildSolutionPrompt(): string
-    {
-        return "Suggerisci soluzioni per questo ticket di {$this->category}:
-
-Titolo: {$this->title}
-Descrizione: {$this->description}
-
-Fornisci 3-5 soluzioni pratiche e concrete, specifiche per il contesto italiano e le amministrazioni pubbliche.
-
-Rispondi in formato JSON:
-{
-  \"solutions\": [
-    {
-      \"title\": \"Titolo soluzione\",
-      \"description\": \"Descrizione dettagliata\",
-      \"steps\": [\"passo1\", \"passo2\"],
-      \"estimated_time\": \"2-3 giorni\",
-      \"required_resources\": [\"risorsa1\", \"risorsa2\"],
-      \"priority\": \"high|medium|low\"
-    }
-  ],
-  \"preventive_measures\": [\"misura1\", \"misura2\"],
-  \"follow_up_actions\": [\"azione1\", \"azione2\"]
-}";
+        return $decoded === [] ? self::DEFAULTS : $decoded;
     }
 }

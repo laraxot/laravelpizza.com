@@ -1,3 +1,24 @@
+---
+title: "Regole per le Chiavi di Traduzione"
+type: concept
+tags: [translation, keys]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "translation-keys regole per le chiavi di traduzione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Regole per le Chiavi di Traduzione
 
 ## Principi Fondamentali
@@ -112,6 +133,9 @@ return [
 
 ## Collegamenti Correlati
 
-- [Best Practices per le Traduzioni](translation_best_practices.md)
-- [Struttura del Modulo](module_structure.md)
-- [Convenzioni di Codice](code_conventions.md)
+- [Best Practices per le Traduzioni](translation-best-practices.md)
+- [Struttura del Modulo](module-structure.md)
+- [Convenzioni di Codice](code-conventions.md)
+- [Best Practices per le Traduzioni](../translation-best-practices-traduzioni.md)
+- [Struttura del Modulo](../module-structure-user.md)
+- [Convenzioni di Codice](../code-conventions.md)

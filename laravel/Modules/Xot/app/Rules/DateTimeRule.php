@@ -4,44 +4,40 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Carbon;
+use Illuminate\Translation\PotentiallyTranslatedString;
 
 use function Safe\preg_replace;
 
 /**
  * Class DateTimeRule.
  */
-class DateTimeRule implements Rule
+class DateTimeRule implements ValidationRule
 {
     /**
-     * Determine if the validation rule passes.
+     * Run the validation rule.
      *
-     * @param string $attribute The attribute name being validated
-     * @param mixed  $value     The value being validated
+     * @param  mixed  $value  Valore sotto validazione (atteso stringa nel formato 'd/m/Y H:i')
+     * @param  \Closure(string, string|null=): PotentiallyTranslatedString  $fail
      */
-    public function passes(mixed $attribute, mixed $value): bool
+    public function validate(string $attribute, mixed $value, \Closure $fail): void
     {
         // dddx($attribute); //published_at
         // dddx($value); //10/10/2019 13:43
-        // return 5 === strlen($value);
 
         if (! is_string($value)) {
-            return false;
+            $fail($this->message());
+
+            return;
         }
 
         $format = 'd/m/Y H:i';
         try {
-            $value_new = Carbon::createFromFormat($format, $value);
+            Carbon::createFromFormat($format, $value);
         } catch (\Exception) {
-            return false;
+            $fail($this->message());
         }
-
-        /* -- non fa il suo dovere --
-         * request()->replace([$attribute=>$value_new]);
-         */
-
-        return true;
     }
 
     public function message(): string

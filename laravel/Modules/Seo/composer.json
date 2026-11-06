@@ -13,8 +13,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Seo\\Providers\\SeoServiceProvider",
-                "Modules\\Seo\\Providers\\Filament\\AdminPanelProvider"
+                "Modules\\Seo\\Providers\\SeoServiceProvider"
             ],
             "aliases": {
 
@@ -28,9 +27,13 @@
             "Modules\\Seo\\Database\\Seeders\\": "database/seeders/"
         }
     },
-    "require_comment": {
-        "openai-php/laravel": "*",
-        "thecodingmachine/safe": "^2.5"
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Seo\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "spatie/laravel-sitemap": "^8.2"
     },
     "require-dev_comment": {
         "laravel/pint": "^1.13",

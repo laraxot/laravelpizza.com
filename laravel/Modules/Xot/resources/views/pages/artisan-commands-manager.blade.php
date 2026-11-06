@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament::page>
     <div class="space-y-6">
@@ -10,7 +9,7 @@ declare(strict_types=1);
                 <div class="flex items-center justify-between">
                     <h2 class="text-lg font-medium">
                         @if($isRunning)
-                            {{ __('xot::artisan-commands-manager.running', ['command' => $currentCommand]) }}
+                            {{ __('xot::artisan-commands-manager.messages.running_command.message', ['command' => $currentCommand]) }}
                         @else
                             {{ __('xot::artisan-commands-manager.select_command') }}
                         @endif
@@ -20,7 +19,7 @@ declare(strict_types=1);
                         <div class="flex items-center space-x-2">
                             <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-500"></div>
                             <span class="text-sm text-gray-500 dark:text-gray-400">
-                                {{ __('xot::artisan-commands-manager.executing') }}
+                                {{ __('xot::artisan-commands-manager.status.running') }}
                             </span>
                         </div>
                     @endif

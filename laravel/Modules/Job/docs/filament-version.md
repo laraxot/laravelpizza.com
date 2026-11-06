@@ -1,4 +1,16 @@
-# Filament Version Declaration — Job
+---
+title: "filament version"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament version"
+issues: []
+discussions: []
+status: draft
+---
+
+# Filament Version Declaration: Job
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -14,4 +26,4 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
-**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`

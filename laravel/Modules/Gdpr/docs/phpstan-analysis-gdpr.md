@@ -1,3 +1,15 @@
+---
+title: "phpstan analysis gdpr"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan analysis gdpr"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Analysis - Gdpr Module
 
 ## 📊 Status
@@ -151,7 +163,6 @@ function createConsent(array $attributes = []): Consent
 - [ ] Document GDPR best practices for other modules
 
 ---
-
 **Analysis Date**: [DATE]
 **PHPStan Version**: 2.1.2
 **Laravel Version**: 12.31.1

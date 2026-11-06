@@ -1,3 +1,15 @@
+---
+title: "legacy roadmap x"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap x"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 TENANT MODULE - ROADMAP 2025
 
 **Modulo**: Tenant ([Description])  
@@ -7,7 +19,6 @@
 **Filament**: 🚧 4.x Compatibile  
 
 ---
-
 ## 🎯 MODULE OVERVIEW
 
 Il modulo **Tenant** [descrizione del modulo].

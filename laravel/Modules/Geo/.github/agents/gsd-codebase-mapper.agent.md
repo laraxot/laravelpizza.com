@@ -1,4 +1,12 @@
 ---
+title: "gsd codebase mapper.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd codebase mapper.agent"
+issues: []
+discussions: []
 name: gsd-codebase-mapper
 description: Explores codebase and writes structured analysis documents. Spawned by map-codebase with a focus area (tech, arch, quality, concerns). Writes documents directly to reduce orchestrator context load.
 tools: ['read', 'execute', 'search', 'search', 'edit']

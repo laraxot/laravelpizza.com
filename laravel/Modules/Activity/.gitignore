@@ -1,37 +1,22 @@
-# ==============================================
-# LARAXOT MODULE ACTIVITY - .GITIGNORE
-# ==============================================
-# Modulo Activity Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# ==============================================
+# .gitignore del modulo Activity (Laraxot).
+# Igiene della root di modulo: docs/wiki/rules/module-theme-root-cleanup.md
+# Cartelle scaffold dei tool AI: docs/no-ai-tool-scaffold-dirs.md (in questo modulo)
+#
+# Un solo pattern per percorso: la forma senza `/` finale vale per file e cartelle.
+# Un pattern senza `/` iniziale vale a QUALUNQUE profondita' (non solo alla root del modulo):
+# prima di aggiungerne uno controllare che non ignori sorgenti o docs
+# (vedi bashscripts/ai/wiki/memories/gitignore-phpstan-star-swallows-bmad-story-docs.md).
 
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-/vendor/
+# --- Dipendenze e artefatti di build ---
 /vendor
-/node_modules/
 /node_modules
 /docs/vendor/
 package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
 build/
 dist/
-docs/cache/
 cache/
 
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
+# --- File temporanei, cache, lock (anche i lock multi-agente `<file>.lock`) ---
 *.cache
 *.lock
 *.phar
@@ -42,21 +27,15 @@ cache/
 *.stackdump
 *:Zone.Identifier
 v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
 
-# ==============================================
-# LOG FILES
-# ==============================================
+# --- Log ---
 *.log
 error_log
 npm-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
+# --- Laravel ---
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -68,26 +47,25 @@ storage/*.key
 .env.*
 !.env.example
 
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
+# --- Ambiente e IDE ---
 Homestead.yaml
 Homestead.json
 /.vagrant
 /.idea
 .phpintel
-.vscode/
+.phpstorm.meta.php
+.vscode
+.cursor
+.windsurf
+.cursor~*
+.windsurf~*
+.devcontainer
+.circleci
+.kilocode
+.kiro
+.ralph
 
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
-.git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
+# --- Sistema operativo ---
 .DS_Store
 .DS_Store?
 ._*
@@ -97,9 +75,7 @@ ehthumbs.db
 Thumbs.db
 *~
 
-# ==============================================
-# BACKUP FILES
-# ==============================================
+# --- Backup e residui di merge/rebase (mai committare, es. `x~HEAD`, `x.orig`) ---
 *.old
 *.old1
 *.old2
@@ -110,82 +86,77 @@ Thumbs.db
 *.bak
 *.bakcup
 *.new
+*.orig
+*.rej
+*~HEAD
+*~head
+*~BASE
+*~LOCAL
+*~REMOTE
 
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
+# --- Git ---
+.git-rewrite
+.git-blame-ignore-revs
 
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
+# --- Docs: archivi, cache e output di tool (la conoscenza vive in docs/) ---
+_docs
+_bmad-output
+docs/archive
+docs/archived
+docs/legacy
 docs/phpstan/
-docs/cache/
-docs/legacy/
-docs/legacy/**
+docs/workbench
+docs/graphify
 
-# ==============================================
-# LANGUAGE FILES
-# ==============================================
+# --- Lingue: le traduzioni vivono in lang/<locale>/ ---
 lang/lang/
-resources/lang/
+resources/lang
 
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
+# --- Cartelle legacy ---
 resources/views/Components_old/
 database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
 
-# ==============================================
-# MODULE SPECIFIC - ACTIVITY
-# ==============================================
-# File di configurazione locale
+# --- Scaffold e tool AI/CI: non devono esistere nell'albero del modulo ---
+.agents
+.claude*
+.codex*
+.opencode
+.gitmodules
+.claude-audit
+tests/.claude-audit
+graphify-out/
+agentdb.rvf
+audit-coverage/
+tests/AuditCoverage
+bashscripts
+scripts
+tools
+workbench
+test-results
+/.github/skills/
+
+# --- Config di qualita' vietate nella root di modulo (usare laravel/phpinsights.php e laravel/rector.php) ---
+phpinsights.php
+rector.php
+
+# --- Specifici del modulo Activity ---
 config/local.php
 config/development.php
-
-# Cache activity log
 storage/activity/
 storage/logs/
-
-# File di test activity
 activity_test_data.json
 test_activity_logs.sql
-
-# ==============================================
-# END OF ACTIVITY .GITIGNORE
-# ==============================================
-
-# File specifici del progetto
+activity_coverage.xml
+tests/coverage
+tests/coverage.xml
 *.fila2
+
+# --- Residui del progetto: clone annidati e cartelle del monorepo ---
+# `Activity/` e' una cartella tracciata nella root del modulo (residuo di clone):
+# non ricrearla, da pulire in una story dedicata.
+Activity
 laravel
 public_html
-tests/coverage
-lang/lang/
-_docs/
-_docs/
-tests/coverage/
-tests/coverage.xml/
-activity_coverage.xml
-
-# -----------------------------------------------------------------------------
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-# -----------------------------------------------------------------------------
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
-tests/coverage/
-tests/coverage.xml/
-activity_coverage.xml
-*~head
-agentdb.rvf
-build/
-docs/legacy

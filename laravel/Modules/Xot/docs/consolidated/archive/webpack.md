@@ -1,3 +1,11 @@
+---
+title: "webpack"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "webpack xot"
+---
 # webpack
 
 <!-- Contenuto migrato da _docs/webpack.txt -->

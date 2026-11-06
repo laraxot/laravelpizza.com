@@ -1,3 +1,11 @@
+---
+title: "Struttura Traduzioni Espansa - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, architecture]
+qmd: "struttura traduzioni espansa - modulo xot xot"
+---
 # Struttura Traduzioni Espansa - Modulo Xot
 
 ## Scopo
@@ -165,8 +173,6 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 ### Documentazione Moduli Correlati
 - [Geo Module Translations](/Modules/Geo/project_docs/translation-structure-expanded.md)
 - [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
-- [Geo Module Translations](/modules/geo/project_docs/translation-structure-expanded.md)
-- [User Module Translations](/modules/user/project_docs/translation-guidelines.md)
 
 ### File di Implementazione
 - `lang/es/labels.php` - Etichette generali spagnole

@@ -1,3 +1,11 @@
+---
+title: "Contratti del Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "contratti del modulo xot xot"
+---
 # Contratti del Modulo Xot
 
 ## Descrizione

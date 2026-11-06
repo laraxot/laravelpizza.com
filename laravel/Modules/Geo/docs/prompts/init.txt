@@ -1,5 +1,0 @@
-il Modulo fondamentale per tutte le funzionalità di base è il modulo Xot https://github.com/laraxot/module_xot_fila5, percio' devi studiare e analizzare a fondo il codice e aggiornare e studiare la cartella docs aggiornare le tue rules e le tue memories. devi stare ai moduli esistenti in https://github.com/laraxot, percio' devi studiare e analizzare a fondo quella organizzazione e aggiornare e studiare la cartella docs aggiornare le tue rules e le tue memories.
-
-non esiste
-# Base - Modulo base per funzionalità comuni
-git subtree add -P laravel/Modules/Base https://github.com/laraxot/module_base_fila5.git dev --squash

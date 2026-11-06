@@ -1,3 +1,11 @@
+---
+title: "Base Classes - 100% Completato"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "base classes - 100% completato xot"
+---
 # Base Classes - 100% Completato
 
 ## Descrizione

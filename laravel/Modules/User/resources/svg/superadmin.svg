@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path
-    d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"
-    stroke="currentColor"
-    stroke-width="1.75"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-  <path d="M5 21h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" aria-hidden="true">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            .u-sa-spark {
+                transform-box: fill-box;
+                transform-origin: center;
+                animation: u-sa-pulse 1.8s ease-in-out infinite;
+            }
+            @keyframes u-sa-pulse {
+                0%, 100% { opacity: .55; transform: scale(.82); }
+                50% { opacity: 1; transform: scale(1.18); }
+            }
+        }
+    </style>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+    <path class="u-sa-spark" fill="currentColor" stroke-width="0.6" stroke-linejoin="round" d="M12 7.4l1 2.3 2.3 1-2.3 1-1 2.3-1-2.3-2.3-1 2.3-1 1-2.3z"/>
 </svg>

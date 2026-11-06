@@ -1,3 +1,14 @@
+---
+title: "questioning"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "questioning"
+issues: []
+discussions: []
+---
+
 <questioning_guide>
 
 Project initialization is dream extraction, not requirements gathering. You're helping the user discover and articulate what they want to build. This isn't a contract negotiation — it's collaborative thinking.

@@ -1,3 +1,15 @@
+---
+title: "blade logic separation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "blade logic separation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Blade Logic Separation: Content Resolution
 
 ## The Problem

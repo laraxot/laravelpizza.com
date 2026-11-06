@@ -1,3 +1,11 @@
+---
+title: "Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "guida completa ai trait del modulo user - aggiornato post-implementazione user"
+---
 # Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
 
 ## Stato Implementazione ✅ COMPLETATO
@@ -106,308 +114,22 @@ trait HasTeams
 {
     use RelationX;
 
-    // ==================== JETSTREAM CORE METHODS ====================
+---
+module: theme
+topic: traits-complete-guide
+canonical: ../../../Themes/docs/shared-components/traits-complete-guide.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
 
-    /**
-     * Determine if the given team is the current team.
-     */
-    public function isCurrentTeam(TeamContract $team): bool
-    {
-        return $team->id === $this->currentTeam?->id;
-    }
-
-    /**
-     * Get the current team of the user's context.
-     */
-    public function currentTeam(): BelongsTo
-    {
-        if (is_null($this->current_team_id) && $this->id) {
-            $this->switchTeam($this->personalTeam());
-        }
-
-        $teamClass = XotData::make()->getTeamClass();
-        return $this->belongsTo($teamClass, 'current_team_id');
-    }
-
-    /**
-     * Switch the user's context to the given team.
-     */
-    public function switchTeam(?TeamContract $team): bool
-    {
-        if ($team !== null && !$this->belongsToTeam($team)) {
-            return false;
-        }
-
-        $this->forceFill([
-            'current_team_id' => $team?->id,
-        ])->save();
-
-        if ($team) {
-            $this->setRelation('currentTeam', $team);
-        }
-
-        return true;
-    }
-
-    /**
-     * Get all of the teams the user owns or belongs to.
-     */
-    public function allTeams(): Collection
-    {
-        return $this->ownedTeams->merge($this->teams)->sortBy('name');
-    }
-
-    /**
-     * Get all of the teams the user owns.
-     */
-    public function ownedTeams(): HasMany
-    {
-        $teamClass = XotData::make()->getTeamClass();
-        return $this->hasMany($teamClass);
-    }
-
-    /**
-     * Get all of the teams the user belongs to (LARAXOT EVOLUTION).
-     *
-     * Uses belongsToManyX for intelligent auto-discovery:
-     * - Automatically finds TeamUser as pivot model
-     * - Configures team_user as table
-     * - Includes all $fillable fields from pivot
-     * - Handles cross-database scenarios
-     * - Adds timestamps automatically
-     */
-    public function teams(): BelongsToMany
-    {
-        $teamClass = XotData::make()->getTeamClass();
-        return $this->belongsToManyX($teamClass); // LARAXOT MAGIC!
-    }
-
-    /**
-     * Determine if the user belongs to the given team.
-     */
-    public function belongsToTeam(?TeamContract $team): bool
-    {
-        if ($team === null) {
-            return false;
-        }
-
-        return $this->teams->contains($team) || $this->ownsTeam($team);
-    }
-
-    /**
-     * Determine if the user owns the given team.
-     */
-    public function ownsTeam(TeamContract $team): bool
-    {
-        Assert::notNull($team, 'Team cannot be null');
-        
-        return $this->id && $team->user_id && $this->id === $team->user_id;
-    }
-
-    /**
-     * Get the user's personal team.
-     */
-    public function personalTeam(): ?TeamContract
-    {
-        return $this->ownedTeams->where('personal_team', true)->first();
-    }
-
-    // ==================== LARAXOT EXTENSIONS ====================
-
-    /**
-     * Check if the user belongs to any teams (LARAXOT ADDITION).
-     */
-    public function belongsToTeams(): bool
-    {
-        return $this->teams()->exists() || $this->ownedTeams()->exists();
-    }
-
-    /**
-     * Get the user's role on the given team (ENHANCED JETSTREAM).
-     */
-    public function teamRole(TeamContract $team): ?Role
-    {
-        if ($this->ownsTeam($team)) {
-            return Role::owner();
-        }
-
-        $membership = $this->teams()
-            ->where('teams.id', $team->id)
-            ->first()
-            ?->pivot;
-
-        return $membership?->role;
-    }
-
-    /**
-     * Determine if the user has the given role on the given team.
-     */
-    public function hasTeamRole(TeamContract $team, string $role): bool
-    {
-        if ($this->ownsTeam($team)) {
-            return true;
-        }
-
-        return $this->belongsToTeam($team) && $this->teamRole($team)?->name === $role;
-    }
-
-    /**
-     * Get the user's permissions for the given team.
-     */
-    public function teamPermissions(TeamContract $team): array
-    {
-        if ($this->ownsTeam($team)) {
-            return ['*'];
-        }
-
-        if (!$this->belongsToTeam($team)) {
-            return [];
-        }
-
-        $role = $this->teamRole($team);
-        // Implementare logica permessi basata su ruolo
-        return $role ? [$role->name] : [];
-    }
-
-    /**
-     * Determine if the user has the given permission on the given team.
-     */
-    public function hasTeamPermission(TeamContract $team, string $permission): bool
-    {
-        if ($this->ownsTeam($team)) {
-            return true;
-        }
-
-        if (!$this->belongsToTeam($team)) {
-            return false;
-        }
-
-        $permissions = $this->teamPermissions($team);
-
-        return in_array($permission, $permissions) || in_array('*', $permissions);
-    }
-
-    // ==================== UTILITY METHODS ====================
-
-    /**
-     * Check if the user has teams (alias for belongsToTeams).
-     */
-    public function hasTeams(): bool
-    {
-        return $this->belongsToTeams();
-    }
-
-    /**
-     * Determine if the user owns or belongs to the given team.
-     */
-    public function isOwnerOrMember(TeamContract $team): bool
-    {
-        return $this->ownsTeam($team) || $this->belongsToTeam($team);
-    }
-}
-
-## Prossimi Passi
-
-### 1. Testing e Validazione
-- [ ] Creare test unitari per tutti i metodi corretti
-- [ ] Testare integrazione con TeamUser pivot model
-- [ ] Validare funzionamento con belongsToManyX
-- [ ] Test cross-database scenarios
-
-### 2. Aggiornamento RelationManager
-- [ ] Verificare TeamsRelationManager in User module
-- [ ] Assicurarsi che usi traduzioni corrette
-- [ ] Testare funzionalità CRUD
-
-### 3. PHPStan Compliance
-- [ ] Eseguire PHPStan livello 9+ su User module
-- [ ] Verificare assenza errori di tipizzazione
-- [ ] Controllare compatibilità con contratti
-
-### 4. Estensione ad Altri Trait
-- [ ] Applicare stessa filosofia a HasTenants
-- [ ] Correggere HasAuthenticationLogTrait se necessario
-- [ ] Documentare pattern per futuri trait
-
-## Filosofia Implementata
-
-### Jetstream Core
-- **Team ownership**: Chiaro concetto di proprietario
-- **Current team context**: Switching tra team
-- **Personal team**: Team personale per ogni utente
-- **Role-based permissions**: Ruoli e permessi
-
-### Laraxot Evolution
-- **belongsToManyX**: Auto-discovery intelligente
-- **Strict typing**: PHPStan Level 9+ compliance
-- **Cross-database**: Supporto multi-database
-- **Runtime validation**: Assert per controlli runtime
-- **Explicit pivot models**: TeamUser come modello esplicito
-
-## Backlink e Riferimenti
-
-- [jetstream_vs_laraxot_philosophy.md](jetstream_vs_laraxot_philosophy.md)
-- [/.cursor/rules/hasteams_jetstream_philosophy.mdc](../../.cursor/rules/hasteams_jetstream_philosophy.mdc)
-- [/.windsurf/rules/hasteams_jetstream_philosophy.mdc](../../.windsurf/rules/hasteams_jetstream_philosophy.mdc)
-- [Modules/Xot/docs/RELATION_X_USAGE.md](../xot/docs/relation_x_usage.md)
-- [docs/USER_TRAITS_GUIDELINES.md](../../../docs/user_traits_guidelines.md)
-
-
-## Analisi del Conflitto con HasTeamsContract
-
-Il contratto `HasTeamsContract` definisce:
-```php
-public function teamRole(TeamContract $teamContract): ?Role;
-```
-
-Ma la nostra implementazione restituisce:
-```php
-public function teamRole(TeamContract $team): ?string;
-```
-
-Per risolvere questo conflitto, abbiamo aggiunto un nuovo metodo `teamRole()` che restituisce un oggetto `Role` e mantenuto il metodo `teamRoleName()` per ottenere la stringa del ruolo.
-
-```php
-public function teamRole(TeamContract $team): ?Role
-{
-    if ($this->ownsTeam($team)) {
-        return Role::owner();
-    }
-
-    $membership = $this->teams()
-        ->where('teams.id', $team->id)
-        ->first()
-        ?->pivot;
-
-    return $membership?->role;
-}
-
-public function teamRoleName(TeamContract $team): ?string
-{
-    return $this->teamRole($team)?->name;
-}
-```
-
-## HasTeams ⚠️ **CONFLITTO CONTRATTO RISOLTO - PROBLEMA TEST DATABASE**
-**Status:** Trait corretto, problema con test database
-**Filosofia:** Jetstream + Laraxot Evolution
-**Ultima modifica:** 10 giugno 2025
-
-#### Problema Database Test ⚠️
-I test falliscono con errore di chiave primaria duplicata nella tabella `team_user`:
-```
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
-```
-
-**Causa identificata:** La tabella `team_user` ha una chiave primaria vuota che causa conflitti durante i test.
-
-**Soluzioni possibili:**
-1. Verificare la struttura della tabella `team_user` 
-2. Assicurarsi che la chiave primaria sia auto-incrementale
-3. Utilizzare database in-memory per i test
-4. Implementare factory per TeamUser con ID corretti
-
-#### Conflitto HasTeamsContract ✅ **RISOLTO**
-- **teamRole() contratto**: CORRETTO - ora restituisce `?Role` invece di `?string`
-- **teamRoleName() helper**: AGGIUNTO - per ottenere stringa del ruolo
-- **Compatibilità**: MANTENUTA - sia oggetti Role che stringhe supportati
+See canonical documentation: ../../../Themes/docs/shared-components/traits-complete-guide.md

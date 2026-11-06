@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Product Documentation Templates
 
 > **Standardizzati basati su Notion Product Templates**
@@ -5,7 +17,6 @@
 > Questa cartella contiene i template standardizzati per la documentazione product, basati sulle best practices di Notion.
 
 ---
-
 ## Template Disponibili
 
 | Template | File | Categoria Notion | Templates Available |
@@ -122,9 +133,9 @@ Prima di pubblicare/aggiornare:
 | Template | Esempio Reale |
 |----------|---------------|
 | [prd-template.md](./prd-template.md) | [Xot PRD](../Modules/Xot/docs/prd.md) |
-| [product-roadmap-template.md](./product-roadmap-template.md) | [Zero Roadmap](../Themes/Zero/docs/product-roadmap.md) |
-| [product-strategy-template.md](./product-strategy-template.md) | [Xot Strategy](../Modules/Xot/docs/product-strategy.md) |
-| [product-launch-plan-template.md](./product-launch-plan-template.md) | [One Launch](../Themes/One/docs/product-launch-plan.md) |
+| [product-roadmap-template.md](./product-roadmap-template.md) | [Zero Roadmap](../product-roadmap.md) |
+| [product-strategy-template.md](./product-strategy-template.md) | [Xot Strategy](../product-strategy.md) |
+| [product-launch-plan-template.md](./product-launch-plan-template.md) | [One Launch](../product-launch-plan.md) |
 | [user-research-template.md](./user-research-template.md) | [Xot Research](../Modules/Xot/docs/user-research.md) |
 | [sprint-planning-template.md](./sprint-planning-template.md) | [Xot Sprint](../Modules/Xot/docs/sprint-planning-meeting.md) |
 

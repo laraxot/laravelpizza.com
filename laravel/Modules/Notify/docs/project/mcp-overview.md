@@ -1,11 +1,22 @@
+---
+title: "mcp overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp overview"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Servers - Project Overview
 
-**Project**: FixCity Platform  
+**Project**: Notify Platform  
 **Last Updated**: 2026-04-09  
 **Status**: Active - Memory and Development Workflow MCP Servers Configured
 
 ---
-
 ## 🎯 Purpose
 
 MCP (Model Context Protocol) servers enhance AI agent capabilities for:
@@ -21,9 +32,10 @@ MCP (Model Context Protocol) servers enhance AI agent capabilities for:
 ### 1. SuperMemory (✅ Active - Memory)
 - **Location**: `laravel/Themes/Sixteen/.supermemory/`
 - **Purpose**: Long-term project memory for AI agents
-- **Container Tag**: `fixcity-sixteen`
+- **Container Tag**: `laraxot-sixteen`
 - **API Key**: Configured in `.env`
 - **Documentation**: [Sixteen Theme SuperMemory Docs](../../laravel/Themes/Sixteen/docs/supermemory.md)
+- **Documentation**: [Sixteen Theme SuperMemory Docs](../../../../Themes/Sixteen/docs/supermemory.md)
 
 ### 2. Context7 (✅ Installed - Context)
 - **Package**: `@upstash/context7-mcp`
@@ -72,6 +84,7 @@ docs/
 **Cross-References**:
 - [MCP Servers Detailed Docs](../../.qwen/mcp-servers/README.md)
 - [Sixteen Theme SuperMemory](../../laravel/Themes/Sixteen/docs/supermemory.md)
+- [Sixteen Theme SuperMemory](../../../../Themes/Sixteen/docs/supermemory.md)
 - [AI Workflow](ai-workflow/)
 - [Project Configuration](configuration.md)
 
@@ -84,12 +97,12 @@ docs/
 // 1. Search existing memories
 const context = await client.search.memories({
   q: 'css parity workflow',
-  containerTag: 'fixcity-sixteen'
+  containerTag: 'laraxot-sixteen'
 });
 
 // 2. Get project profile
 const profile = await client.profile({
-  containerTag: 'fixcity-sixteen',
+  containerTag: 'laraxot-sixteen',
   q: 'tech stack laravel'
 });
 ```
@@ -99,7 +112,7 @@ const profile = await client.profile({
 // Store results
 await client.add({
   content: 'Fixed CSS parity for segnalazione pages',
-  containerTag: 'fixcity-sixteen',
+  containerTag: 'laraxot-sixteen',
   metadata: { type: 'css-fix', date: '2026-04-09' }
 });
 ```
@@ -116,7 +129,7 @@ npm run build && npm run copy
 
 ## 📊 Memory Statistics
 
-**SuperMemory Container**: `fixcity-sixteen`
+**SuperMemory Container**: `laraxot-sixteen`
 
 | Memory Type | Count | Description |
 |-------------|-------|-------------|
@@ -135,6 +148,7 @@ npm run build && npm run copy
 - [Master Index](../README.md)
 - [MCP Servers Full Documentation](../../.qwen/mcp-servers/README.md)
 - [Sixteen Theme SuperMemory](../../laravel/Themes/Sixteen/docs/supermemory.md)
+- [Sixteen Theme SuperMemory](../../../../Themes/Sixteen/docs/supermemory.md)
 - [AI Workflow](ai-workflow/)
 - [Conventions](conventions/)
 

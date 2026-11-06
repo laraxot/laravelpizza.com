@@ -1,3 +1,11 @@
+---
+title: "Service Providers"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "service providers xot"
+---
 # Service Providers
 
 ## Struttura Base

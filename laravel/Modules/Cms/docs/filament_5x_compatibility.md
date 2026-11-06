@@ -1,3 +1,15 @@
+---
+title: "filament 5x compatibility"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5x compatibility"
+issues: []
+discussions: []
+status: draft
+---
+
 # Compatibilità Filament 4.x - Modulo Cms
 
 **Data**: 2025-01-27  

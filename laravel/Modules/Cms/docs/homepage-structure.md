@@ -1,3 +1,15 @@
+---
+title: "homepage structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura della Homepage
 
 ## Introduzione

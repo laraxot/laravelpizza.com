@@ -1,3 +1,16 @@
+---
+title: "notification behavior"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification behavior"
+issues: []
+discussions: []
+status: superseded
+superseded_by: notification-behavior.md
+---
+
 # Notification System Behavior
 
 ## Notification Channels Behavior

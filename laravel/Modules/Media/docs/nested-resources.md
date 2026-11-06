@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Media Module - Nested Resource Implementation Guide"
+module: "Media"
+type: concept
+tags: [nested, resources]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "nested resources"
+related:
+  - "./webm.md"
+status: draft
+---
 # Media Module - Nested Resource Implementation Guide
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+title: "Testing Guidelines - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "testing guidelines - modulo xot xot"
+---
 # Testing Guidelines - Modulo Xot
 
 ## Framework di Testing: Pest

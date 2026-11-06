@@ -1,3 +1,15 @@
+---
+title: "componenti footer"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "componenti footer"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componente Footer
 
 Questo documento fornisce un collegamento alla documentazione dettagliata del componente Footer nel modulo CMS.

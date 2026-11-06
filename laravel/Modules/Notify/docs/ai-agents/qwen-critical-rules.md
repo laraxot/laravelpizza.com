@@ -1,9 +1,21 @@
+---
+title: "qwen critical rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen critical rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # QWEN Critical Rules
 
 Regole critiche del progetto Base Predict.
+Regole critiche del progetto Base Forecast.
 
 ---
-
 ## 🔴 REGOLA 1: FILAMENT WIDGETS FOR LISTS
 
 ### Principio Core
@@ -23,6 +35,7 @@ Themes/TwentyOne/Http/Livewire/*.php  ← FORBIDDEN!
 
 {{-- NO Controllers for lists --}}
 PredictController@index  ← FORBIDDEN!
+ForecastController@index  ← FORBIDDEN!
 ```
 
 ### ✅ SEMPRE Fare
@@ -30,6 +43,7 @@ PredictController@index  ← FORBIDDEN!
 ```blade
 {{-- Filament Table Widget --}}
 @livewire(\Modules\Predict\Filament\Widgets\PredictTableWidget::class)
+@livewire(\Modules\Forecast\Filament\Widgets\ForecastTableWidget::class)
 
 {{-- Or via CMS JSON --}}
 {
@@ -37,6 +51,8 @@ PredictController@index  ← FORBIDDEN!
     "data": {
         "view": "pub_theme::filament.widgets.predict-table",
         "widget": "Modules\\Predict\\Filament\\Widgets\\PredictTableWidget"
+        "view": "pub_theme::filament.widgets.forecast-table",
+        "widget": "Modules\\Forecast\\Filament\\Widgets\\ForecastTableWidget"
     }
 }
 ```
@@ -97,10 +113,10 @@ PredictController@index  ← FORBIDDEN!
 
 ```blade
 {{-- ✅ CORRETTO --}}
-<a href="{{ url(app()->getLocale().'/predicts') }}">Mercati</a>
+<a href="{{ url(app()->getLocale().'/forecasts') }}">Mercati</a>
 
 {{-- ❌ SBAGLIATO --}}
-<a href="/predicts">Mercati</a>
+<a href="/forecasts">Mercati</a>
 ```
 
 ---
@@ -124,6 +140,9 @@ La logica specifica va in:
 1. **Filament Widgets**: `Modules/Predict/Filament/Widgets/`
 2. **Actions**: `Modules/Predict/Actions/`
 3. **CMS Blocks**: `Modules/Predict/resources/views/components/blocks/`
+1. **Filament Widgets**: `Modules/Forecast/Filament/Widgets/`
+2. **Actions**: `Modules/Forecast/Actions/`
+3. **CMS Blocks**: `Modules/Forecast/resources/views/components/blocks/`
 
 ---
 
@@ -138,6 +157,8 @@ namespace::context.collection.element.type
 ```blade
 ✅ __('predict::user.fields.first_name.label')
 ❌ __('predict::fields.key')  // Missing type!
+✅ __('forecast::user.fields.first_name.label')
+❌ __('forecast::fields.key')  // Missing type!
 ```
 
 ---
@@ -147,4 +168,5 @@ namespace::context.collection.element.type
 - [Indice QWEN](./qwen-split-index.md)
 - [critical-rules.md](./critical-rules.md)
 - [QWEN.md originale](../../QWEN.md)
+- [QWEN.md originale](../QWEN.md)
 - [Index principale](./index.md)

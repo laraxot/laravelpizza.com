@@ -1,3 +1,15 @@
+---
+title: "content storage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "content storage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Archiviazione dei Contenuti JSON
 
 ## Introduzione

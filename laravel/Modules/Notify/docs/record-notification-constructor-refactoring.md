@@ -1,3 +1,15 @@
+---
+title: "record notification constructor refactoring"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "record notification constructor refactoring"
+issues: []
+discussions: []
+status: draft
+---
+
 # RecordNotification Constructor Refactoring
 
 **Date**: December 19, 2025  

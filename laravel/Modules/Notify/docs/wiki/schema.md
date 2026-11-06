@@ -1,32 +1,46 @@
-# LLM Wiki Schema — FixCity
-
-Questo file è il "AGENTS.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
-
+---
+title: "schema"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schema"
+issues: []
+discussions: []
+status: draft
 ---
 
+# LLM Wiki Schema: FixCity
+
+Questo file è il "AGENTS.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+# LLM Wiki Schema: Notify
+
+Questo file è il "agents.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+
+---
 ## Regole Fondamentali
 
-### R1 — Raw è Immutabile
+### R1: Raw è Immutabile
 I file in `docs/` (il "raw") **non vengono mai modificati** durante operazioni wiki.
 Si leggono, si sintetizzano, si linkano. Mai editare direttamente.
 
-### R2 — Wiki è Proprietà dell'LLM
+### R2: Wiki è Proprietà dell'LLM
 I file in `docs/wiki/` vengono **creati e aggiornati** dall'LLM.
 L'umano li può leggere e correggere, ma la manutenzione è delegata all'LLM.
 
-### R3 — Log è Append-Only
+### R3: Log è Append-Only
 `log.md` si aggiunge soltanto. Non si modificano voci precedenti.
-Formato entry: `## [YYYY-MM-DD] Operazione — Descrizione`
+Formato entry: `## [YYYY-MM-DD] Operazione: Descrizione`
 
-### R4 — Index è la Porta d'Ingresso
+### R4: Index è la Porta d'Ingresso
 `index.md` viene letto **per primo** in ogni sessione.
 Ogni nuova pagina wiki **deve essere registrata** in `index.md`.
 
-### R5 — Wikilink per Cross-Reference
+### R5: Wikilink per Cross-Reference
 Usare sintassi `[[PageName]]` o link markdown `[text](./path.md)`.
 Ogni pagina deve avere almeno un link in entrata (niente pagine orfane).
 
-### R6 — Una Pagina per Entità
+### R6: Una Pagina per Entità
 No duplicati. Se esiste già una pagina per un concetto, aggiornarla.
 Prima di creare una nuova pagina, cercare in `index.md`.
 
@@ -50,16 +64,16 @@ Prima di creare una nuova pagina, cercare in `index.md`.
 
 ## Dettagli
 
-[contenuto compilato — non copiare verbatim dal raw, sintetizzare]
+[contenuto compilato: non copiare verbatim dal raw, sintetizzare]
 
 ## Decisioni Chiave
 
-[se è una pagina architetturale — le decisioni prese e perché]
+[se è una pagina architetturale: le decisioni prese e perché]
 
 ## Cross-Reference
 
-- [[PageName]] — relazione
-- [[OtherPage]] — relazione
+- [[PageName]]: relazione
+- [[OtherPage]]: relazione
 
 ## Domande Aperte
 
@@ -79,7 +93,7 @@ Quando arriva un nuovo file in `docs/`:
 3b. Se non esiste → crea nuova pagina in docs/wiki/<category>/
 4. Aggiorna index.md con il nuovo entry (o aggiorna quello esistente)
 5. Aggiorna i cross-link nelle pagine wiki correlate
-6. Appendi a log.md: "## [date] INGEST — <filename> → <wiki-page>"
+6. Appendi a log.md: "## [date] INGEST: <filename> → <wiki-page>"
 ```
 
 ---
@@ -92,7 +106,7 @@ Quando arriva un nuovo file in `docs/`:
 3. Leggi quelle pagine
 4. Formula risposta con citazioni
 5. Se la risposta è riutilizzabile → salva come nuova pagina wiki
-6. Appendi a log.md: "## [date] QUERY — <topic> → <risposta-salvata o no>"
+6. Appendi a log.md: "## [date] QUERY: <topic> → <risposta-salvata o no>"
 ```
 
 ---
@@ -100,14 +114,14 @@ Quando arriva un nuovo file in `docs/`:
 ## Workflow Lint
 
 ```
-1. Leggi index.md — lista tutte le pagine
+1. Leggi index.md: lista tutte le pagine
 2. Per ogni pagina:
    a. Verifica che i raw sources esistano ancora
    b. Verifica che i cross-link siano validi
    c. Cerca claim che contraddicono altri claim
 3. Cerca pagine in wiki/ non registrate in index.md
 4. Genera report in docs/wiki/lint-YYYY-MM-DD.md
-5. Appendi a log.md: "## [date] LINT — <n> issues found"
+5. Appendi a log.md: "## [date] LINT: <n> issues found"
 ```
 
 ---
@@ -138,7 +152,8 @@ Per wiki di **modulo** (`Modules/<Name>/docs/wiki/`):
 
 ---
 
-## Stack FixCity — Vocabolario Wiki
+## Stack FixCity: Vocabolario Wiki
+## Stack Notify: Vocabolario Wiki
 
 Termini specifici del progetto da usare consistentemente:
 
@@ -151,16 +166,17 @@ Termini specifici del progetto da usare consistentemente:
 | `Volt`           | Componenti Livewire single-file                           |
 | `Module`         | Unità funzionale in `laravel/Modules/`                    |
 | `Theme`          | Presentazione in `laravel/Themes/`                        |
-| `SSOT`           | Single Source of Truth — documento master per un topic    |
-| `raw`            | File in `docs/` — sorgenti immutabili                     |
-| `wiki`           | File in `docs/wiki/` — conoscenza compilata               |
+| `SSOT`           | Single Source of Truth: documento master per un topic    |
+| `raw`            | File in `docs/`: sorgenti immutabili                     |
+| `wiki`           | File in `docs/wiki/`: conoscenza compilata               |
 
 ---
 
 ## Note sul Contesto FixCity
+## Note sul Contesto Notify
 
-- **13.174+ file raw** nei moduli — non si leggono tutti in una sessione
-- **Molti archivi obsoleti** (Xot/archive/, Cms/archive/, etc.) — ignorarli nel lint
-- **DRY**: niente duplicati — aggiornare SSOT esistente
-- **Lingua**: documentazione mista italiano/inglese — accettabile
+- **13.174+ file raw** nei moduli: non si leggono tutti in una sessione
+- **Molti archivi obsoleti** (Xot/archive/, Cms/archive/, etc.): ignorarli nel lint
+- **DRY**: niente duplicati: aggiornare SSOT esistente
+- **Lingua**: documentazione mista italiano/inglese: accettabile
 - **Modulo Xot** = base di tutto, compilare la sua wiki per prima

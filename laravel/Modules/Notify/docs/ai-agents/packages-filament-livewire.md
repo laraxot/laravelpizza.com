@@ -1,4 +1,16 @@
-# Filament 5 + Livewire 4 — API Reference
+---
+title: "packages filament livewire"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "packages filament livewire"
+issues: []
+discussions: []
+status: draft
+---
+
+# Filament 5 + Livewire 4: API Reference
 
 Riferimento completo per Filament 5.2.2, Livewire 4.1.4 e pacchetti correlati nel progetto Laraxot.
 
@@ -19,7 +31,6 @@ Riferimento completo per Filament 5.2.2, Livewire 4.1.4 e pacchetti correlati ne
 | livewire/volt | 1.10.3 |
 
 ---
-
 ## Regole critiche Filament 5 in Laraxot
 
 ### Regola 1: sempre XotBase (MAI Filament diretto)
@@ -50,7 +61,7 @@ return array_values($columns); // ← Fatal: Filament cerca colonne per chiave s
 
 // SBAGLIATO: chiavi numeriche
 return [
-    TextColumn::make('id'),  // chiave 0 (int) — sbagliato
+    TextColumn::make('id'),  // chiave 0 (int): sbagliato
 ];
 ```
 
@@ -116,7 +127,7 @@ public function getFormSchema(): array { return [...]; }
 protected function getFormSchema(): array { return [...]; }
 ```
 
-### Regola 6: getTableHeading() — return type corretto Filament 5
+### Regola 6: getTableHeading(): return type corretto Filament 5
 
 ```php
 use Illuminate\Contracts\Support\Htmlable;
@@ -130,7 +141,7 @@ public function getTableHeading(): ?string { ... }
 
 ---
 
-## Filament 5 — Novita rispetto a Filament 4
+## Filament 5: Novita rispetto a Filament 4
 
 ### 1. Pacchetto Schemas (nuovo)
 
@@ -151,7 +162,7 @@ RuleBuilder::make('rules')
     ])
 ```
 
-### 3. getOptions() — firma ufficiale
+### 3. getOptions(): firma ufficiale
 
 ```php
 // Firma ufficiale Filament 5 ChartWidget
@@ -164,7 +175,7 @@ In Filament 4 erano accettate anche chiavi numeriche. In Filament 5 le chiavi st
 
 ---
 
-## ChartWidget — Firma completa
+## ChartWidget: Firma completa
 
 ```php
 abstract class XotBaseChartWidget extends FilamentChartWidget
@@ -181,7 +192,7 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
     protected function getMaxHeight(): ?string { } // 'px-300'
 
     // NON toccare
-    protected static bool $isLazy = true;
+    protected static ?bool $isLazyLoaded = true;
     protected ?string $pollingInterval = null;
 }
 ```
@@ -225,7 +236,7 @@ class SalesChartWidget extends XotBaseChartWidget
 
 ---
 
-## ListRecords — Pattern tabella
+## ListRecords: Pattern tabella
 
 ```php
 class ListSurveys extends XotBaseListRecords
@@ -269,7 +280,7 @@ class ListSurveys extends XotBaseListRecords
 
 ---
 
-## Infolist — Display read-only
+## Infolist: Display read-only
 
 ```php
 use Filament\Infolists\Infolist;
@@ -295,7 +306,7 @@ public function infolist(Infolist $infolist): Infolist
 
 ---
 
-## Actions — Pattern header e table
+## Actions: Pattern header e table
 
 ```php
 // Header actions (string keys obbligatorie)
@@ -328,7 +339,7 @@ protected function getTableActions(): array
 
 ---
 
-## Form Schema — Campi comuni
+## Form Schema: Campi comuni
 
 ```php
 public function getFormSchema(): array
@@ -367,7 +378,7 @@ public function getFormSchema(): array
 
 ---
 
-## Livewire 4 — Attributi principali
+## Livewire 4: Attributi principali
 
 ```php
 #[Reactive]
@@ -417,7 +428,7 @@ Libreria UI per Livewire (sidebar, navbar, breadcrumb, card, badge, button, dial
 
 ---
 
-## Volt — Componenti single-file
+## Volt: Componenti single-file
 
 ```php
 // resources/views/livewire/survey-form.php
@@ -448,6 +459,7 @@ new class extends Component {
 ```php
 use Livewire\Livewire;
 use Modules\Quaeris\Filament\Widgets\SalesChartWidget;
+use Modules\App\Filament\Widgets\SalesChartWidget;
 
 it('renders chart widget', function (): void {
     Livewire::test(SalesChartWidget::class)

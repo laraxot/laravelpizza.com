@@ -1,3 +1,15 @@
+---
+title: "boy scout rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "boy scout rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regola del Buon Boy Scout - Progetto <nome progetto>
 
 ## Principio Fondamentale
@@ -98,5 +110,4 @@ Questa regola è **SACRA** e **IMMUTABILE** nel progetto <nome progetto>. Ogni m
 - [Best Practices](best-practices.md)
 
 ---
-
 **⚠️ RICORDA SEMPRE: Questa regola è SACRA e non può essere violata. Ogni modifica deve migliorare la codebase.**

@@ -1,3 +1,11 @@
+---
+title: "ListLogActivities UI/UX Improvements - 2025-12-04"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "listlogactivities ui/ux improvements - 2025-12-04 activity"
+---
 # ListLogActivities UI/UX Improvements - 2025-12-04
 
 ## Data Intervento: 2025-12-04
@@ -291,13 +299,12 @@ PASS: 2 files formattati correttamente
 
 - [Activity Module README](./README.md)
 - [Laraxot UI/UX Guidelines](../../Xot/docs/ui-ux-best-practices.md)
-- [Activity Module README](./readme.md)
+- [Activity Module README](./README.md)
 - [Laraxot UI/UX Guidelines](../../xot/docs/ui-ux-best-practices.md)
 - [Heroicon Reference](https://heroicons.com/)
 
 ---
 
 **Autore**: iFlow CLI
-**Data**: 2025-12-04
 **Versione**: 1.0
 **Status**: ✅ Production Ready

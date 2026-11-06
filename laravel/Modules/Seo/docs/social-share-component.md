@@ -1,3 +1,15 @@
+---
+title: "social share component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "social share component"
+issues: []
+discussions: []
+status: active
+---
+
 # Social Share Component
 
 ## Ricerca e Riferimenti
@@ -6,6 +18,8 @@
 - [kudashevs/laravel-share-buttons](https://github.com/kudashevs/laravel-share-buttons) - 42 stelle, 1.1M installi
 - [jorenvanhocht/laravel-share](https://packagist.org/packages/jorenvanhocht/laravel-share) - 535 stelle
 - [Laravel News: Social Media Sharing](https://laravel-news.com/socialmedia-sharing)
+- [codeshotcut: Laravel 13 Social Share](https://codeshotcut.com/blog/laravel-12-social-share-integration-facebook-twitter-linkedin-whatsapp)
+---
 - [codeshotcut: Laravel 12 Social Share](https://codeshotcut.com/blog/laravel-12-social-share-integration-facebook-twitter-linkedin-whatsapp)
 
 ### Argomenti Comuni Identificati
@@ -146,6 +160,9 @@ Open Graph NON richiede pacchetti. Si aggiungono direttamente nel layout:
 ## Anti-pattern vietato
 
 ```bash
+# ❌ MAI fare questo per logica semplice (scope: componente social-share di Seo)
+composer require kudashevs/laravel-share-buttons
+---
 # ❌ MAI fare questo per logica semplice
 composer require kudashevs/laravel-share-buttons
 composer require spatie/laravel-feed
@@ -155,6 +172,9 @@ composer require spatie/laravel-feed
 
 I link social sono stringhe URL con `urlencode()`. Non serve libreria.
 
+Nota: `spatie/laravel-feed` NON è anti-pattern in generale — è dipendenza reale del modulo **Blog** (RSS/Atom su `Article`, vedi `Modules/Blog/docs/dependencies.md`), non di Seo. Se serve un feed RSS altrove, riusa quello, non installarlo di nuovo qui.
+
+---
 ## Chiavi di traduzione
 
 Struttura corretta in `Themes/Meetup/lang/{locale}/event.php`:
@@ -174,9 +194,9 @@ Struttura corretta in `Themes/Meetup/lang/{locale}/event.php`:
 
 ## Riferimenti
 
-- [LaravelLocalization](../../../modules/lang/docs/laravel-localization-mcamara.md)
-- [XotBaseWidget](../../../modules/xot/docs/xotbase-extension-rules.md)
-- [SVG Icons](../../../modules/meetup/docs/svg-icons-no-hardcoded-blade.md)
+- [LaravelLocalization](../../../modules/lang/docs/laravel-localization-mcamara.md) _(target mancante, verificato 2026-10-08)_
+- [XotBaseWidget](../../Xot/docs/xotbase-extension-rules.md)
+- [SVG Icons](../../../modules/meetup/docs/svg-icons-no-hardcoded-blade.md) _(target mancante, verificato 2026-10-08)_
 
 ---
 

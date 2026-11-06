@@ -1,5 +1,13 @@
+---
+title: "google_translate"
+type: alias
+status: superseded
+canonical: "_integration/archive/google-translate.md"
+qmd: "google_translate alias superseded"
+---
+
 # google_translate
 
-<!-- Contenuto migrato da _docs/google_translate.txt -->
+Documento identico al canonico: [google-translate.md](google-translate.md).
 
-https://medium.com/@mwaqasiu/translating-text-in-laravel-made-easy-with-translatetexthelper-and-google-translate-library-214c7c76d655
+Canonico: `laravel/Modules/Lang/docs/_integration/archive/google-translate.md`. Qui non ci sono istruzioni: seguire il file collegato.

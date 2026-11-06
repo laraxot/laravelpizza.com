@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\AI\Tests;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Support\ServiceProvider;
 use Modules\AI\Providers\AIServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 
@@ -17,7 +18,7 @@ use Modules\Xot\Tests\XotBaseTestCase;
 abstract class TestCase extends XotBaseTestCase
 {
     /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
+     * @return array<int, class-string<ServiceProvider>>
      */
     protected function getPackageProviders(Application $app): array
     {
@@ -34,9 +35,6 @@ abstract class TestCase extends XotBaseTestCase
         config([
             'services.openai.api_key' => 'test-openai-key',
             'services.openai.model' => 'gpt-3.5-turbo-instruct',
-            'ai.model' => 'gpt-3.5-turbo-instruct',
-            'ai.temperature' => 0.7,
-            'ai.max_tokens' => 1500,
         ]);
     }
 }

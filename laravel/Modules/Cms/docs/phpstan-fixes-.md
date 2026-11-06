@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes "
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Fixes for Cms Module (2025-12-30)
 
 This document outlines the errors found by PHPStan in the `Cms` module and the plan to resolve them.

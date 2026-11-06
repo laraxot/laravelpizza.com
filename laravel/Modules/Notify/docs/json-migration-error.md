@@ -1,3 +1,15 @@
+---
+title: "json migration error"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json migration error"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errore di Migrazione JSON e Soluzione
 
 ## Errore Riscontrato
@@ -146,6 +158,8 @@ if ($validRecords !== $totalRecords) {
 
 - [Documentazione Migrazioni](./MIGRATION_RULES.md)
 - [Best Practices JSON](./JSON_BEST_PRACTICES.md)
+- [Documentazione Migrazioni](./migration_rules.md)
+- [Best Practices JSON](./json_best_practices.md)
 - [Gestione Errori](./ERROR_HANDLING.md)
 
 ## Note Importanti

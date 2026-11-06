@@ -1,3 +1,11 @@
+---
+title: "phpunit"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "phpunit xot"
+---
 # phpunit
 
 <!-- Contenuto migrato da _docs/phpunit.txt -->

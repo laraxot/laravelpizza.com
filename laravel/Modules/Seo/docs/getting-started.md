@@ -1,9 +1,19 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "getting started"
+issues: []
+discussions: []
 title: Getting Started
 description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
 extends: _layouts.documentation
 section: content
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Template Jigsaw (generatore di siti di documentazione) copiato nei docs: non descrive il modulo Seo, che non ha navigation.php ne' config.php di sito. Contenuto non riscritto, verificare prima di usarlo.
 
 # Getting Started {#getting-started}
 
@@ -75,5 +85,5 @@ Now that you’ve edited your configuration variables and know how to customize 
 # options: dev, prod
 npm run dev
 ```
-=======
->>>>>>> origin/develop
+---
+---

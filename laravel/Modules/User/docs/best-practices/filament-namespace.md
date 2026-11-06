@@ -1,45 +1,22 @@
-# Regole per i Namespace Filament
+---
+module: theme
+topic: filament-namespace
+canonical: ../../../../Themes/docs/shared-components/filament-namespace-rules.md
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+title: "filament namespace"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, user, best-practices]
+qmd: "filament namespace user"
+---
 
-## Regola 1: Namespace Modulare
-- Il namespace dei componenti Filament deve sempre essere `Modules\{ModuleName}\Filament`
-- NON includere mai `App` nel namespace, anche se i file sono fisicamente in `app/Filament`
-- Esempio corretto: `namespace Modules\User\Filament\Widgets\Auth;`
-- Esempio errato: `namespace Modules\User\App\Filament\Widgets\Auth;`
-## Regola 2: Struttura Directory
-- I file possono essere fisicamente in `app/Filament`
-- Ma il namespace deve sempre essere `Modules\{ModuleName}\Filament`
-- Questo mantiene la coerenza con l'architettura modulare
-## Regola 3: Convenzioni di Naming
-- I namespace devono seguire la struttura delle directory
-- Ma devono sempre iniziare con `Modules\{ModuleName}\Filament`
-- Non devono mai includere `App` nel percorso
-## Regola 4: Best Practices
-- Consultare sempre la documentazione del modulo per le convenzioni specifiche
-- Verificare i namespace esistenti nel modulo
-- Mantenere la coerenza con gli altri moduli
-## Regola 5: Autoloading
-- I namespace devono corrispondere alla struttura PSR-4
-- Ma devono sempre seguire la convenzione modulare
-## Esempi Pratici
-### Widget di Autenticazione
-```php
-// ✅ CORRETTO
-namespace Modules\User\Filament\Widgets\Auth;
-class LoginWidget extends Widget
-{
-    // ...
-}
-```
-### Resource Utente
-namespace Modules\User\Filament\Resources;
-class UserResource extends Resource
-### Page Filament
-namespace Modules\User\Filament\Pages;
-class Dashboard extends Page
-## Collegamenti
-- [Convenzioni Namespace Filament](../../cms/project_docs/convenzioni-namespace-filament.md)
-- [Regole Generali Xot](../../xot/project_docs/readme.md)
-- [Best Practices Filament](../../cms/project_docs/best-practices/filament.md) 
-- [Convenzioni Namespace Filament](../../cms/docs/convenzioni-namespace-filament.md)
-- [Regole Generali Xot](../../xot/docs/readme.md)
-- [Best Practices Filament](../../cms/docs/best-practices/filament.md) 
+See canonical documentation: ../../../../Themes/docs/shared-components/filament-namespace-rules.md

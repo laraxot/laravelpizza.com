@@ -1,3 +1,11 @@
+---
+title: "cashier"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "cashier xot"
+---
 # cashier
 
 <!-- Contenuto migrato da _docs/cashier.txt -->
@@ -85,7 +93,7 @@ single page application(SPA). Laravel Cashier(stripe) is used as the payment gat
 //----------- TUTORIALS -------------
 How to configure Laravel Cashier with multiple models - January 2, 2021
 https://swapnil.dev/blog/how-to-configure-laravel-cashier-with-multiple-models/
-Laravel 7 — Create a subscription system using Cashier & Stripe
+Laravel 7: Create a subscription system using Cashier & Stripe
 https://medium.com/fabcoding/laravel-7-create-a-subscription-system-using-cashier-stripe-77cdf5c8ea5d
 Laravel: Implementing a Shopping Cart for Your Website
 https://meritocracy.is/blog/2021/06/08/laravel-implementing-a-shopping-cart-for-your-website/    !!!!!!!!!!!!!!!

@@ -17,7 +17,7 @@ class NotificationTemplateForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'name' => TextInput::make('name')
@@ -65,8 +65,6 @@ class NotificationTemplateForm extends XotBaseResourceForm
                 ->maxSize(5120)
                 ->acceptedFileTypes(['application/pdf', 'image/*'])
                 ->columnSpan(['lg' => 3])
-                ->helperText(__('notify::template.form.attachments.helper')),
-        ];
-
+                ->helperText(__('notify::template.form.attachments.helper'))];
     }
 }

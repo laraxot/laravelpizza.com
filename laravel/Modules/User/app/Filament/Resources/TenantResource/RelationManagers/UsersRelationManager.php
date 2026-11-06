@@ -9,6 +9,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class UsersRelationManager extends XotBaseRelationManager
@@ -33,14 +34,14 @@ class UsersRelationManager extends XotBaseRelationManager
             DateTimePicker::make('email_verified_at')->nullable(),
             TextInput::make('password')
                 ->password()
-                ->required(fn ($context) => 'create' === $context)
+                ->required(fn (string $context) => $context === 'create')
                 ->minLength(8)
                 ->same('password_confirmation')
                 ->dehydrated(filled(...))
                 ->dehydrateStateUsing(bcrypt(...)),
             TextInput::make('password_confirmation')
                 ->password()
-                ->required(fn ($context) => 'create' === $context)
+                ->required(fn (string $context) => $context === 'create')
                 ->minLength(8),
         ];
     }
@@ -52,7 +53,7 @@ class UsersRelationManager extends XotBaseRelationManager
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable()->toggleable(),
+            'id' => IDColumn::make('id')->sortable()->toggleable(),
             'name' => TextColumn::make('name')
                 ->searchable()
                 ->sortable()

@@ -1,3 +1,15 @@
+---
+title: "notify translation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notify translation guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida alle Traduzioni nel Modulo Notify
 
 ## Introduzione
@@ -176,3 +188,8 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 - [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
+- [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
+- [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
+- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation_keys_rules.md)
+- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation_keys_best_practices.md)
+- [Standard per le Traduzioni ](./translation_standards.md)

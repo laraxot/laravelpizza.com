@@ -23,7 +23,7 @@ describe('BaseModelLang', function () {
         $reflection = new \ReflectionClass(BaseModelLang::class);
         $traits = $reflection->getTraitNames();
 
-        $hasLinked = count(array_filter($traits, fn ($t) => str_contains($t, 'Linked'))) > 0;
+        $hasLinked = count(array_filter($traits, fn (string $t) => str_contains($t, 'Linked'))) > 0;
         Assert::assertTrue($hasLinked);
     });
 

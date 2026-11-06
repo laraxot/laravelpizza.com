@@ -1,3 +1,15 @@
+---
+title: "template theme cms reference"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "template theme cms reference"
+issues: []
+discussions: []
+status: draft
+---
+
 # Template, Theme, CMS - Runtime Reference
 
 Consolidated reference for real runtime behavior of the frontoffice rendering system.

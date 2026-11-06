@@ -1,3 +1,15 @@
+---
+title: "paths and assets"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "paths and assets"
+issues: []
+discussions: []
+status: draft
+---
+
 # AVVISO IMPORTANTE ([DATE])
 
 > **ATTENZIONE:** Tutti i componenti UI condivisi (come `logo.blade.php`) devono essere SEMPRE posizionati in `Modules/UI/resources/views/components/ui/` e MAI in `resources/views/components/`. Qualsiasi violazione di questa regola causa errori di rendering, override errati, problemi di modularità e manutenzione.

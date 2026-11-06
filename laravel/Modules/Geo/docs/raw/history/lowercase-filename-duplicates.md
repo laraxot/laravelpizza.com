@@ -1,3 +1,14 @@
+---
+title: "lowercase filename duplicates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lowercase filename duplicates"
+issues: []
+discussions: []
+---
+
 # Lowercase Filename Duplicates — Lista File da Rimuovere
 
 > **Regola**: I file PHP devono usare PascalCase (PSR-4). Quando esiste sia la versione PascalCase
@@ -7,6 +18,14 @@
 
 ---
 
+title: "lowercase filename duplicates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "lowercase filename duplicates"
+issues: []
+discussions: []
 ## Priorità ALTA — File PHP (classi, test)
 
 ### Gdpr Module

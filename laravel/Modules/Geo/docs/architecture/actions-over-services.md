@@ -1,3 +1,15 @@
+---
+title: "actions over services"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-20
+qmd: "actions over services geo no services directory queueable"
+issues: []
+discussions: []
+status: active
+---
+
 # Migrazione da Services ad Actions
 
 ## Architettura Precedente: Services
@@ -27,7 +39,7 @@ Quando si migra da un Service a una o più Actions:
 2. Creare una Action separata per ciascuna operazione
 3. Utilizzare Data Objects (Spatie Laravel Data) per il passaggio dei parametri
 4. Aggiornare i chiamanti per utilizzare le nuove Actions
-5. Rimuovere il Service obsoleto solo dopo aver migrato tutte le funzionalità
+5. Rimuovere il Service obsoleto e la directory `app/Services/` dopo aver migrato tutte le funzionalità (gate: path assente; se merge riesuma → delete-again, vedi [services-zombie-delete-wave3](../stories/services-zombie-delete-wave3.story.md))
 
 ## Struttura delle Directories
 
@@ -41,7 +53,7 @@ Modules/
     │   │   └── Domain2/
     │   │       └── ...
     │   ├── Datas/               # Data Objects
-    │   └── Services/            # Contiene solo Services legacy non ancora migrati
+    │   └── Support/             # Configurazione e tipi condivisi, non logica applicativa
     └── ...
 ```
 

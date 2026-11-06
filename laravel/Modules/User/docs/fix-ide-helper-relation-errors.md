@@ -1,42 +1,80 @@
+---
+title: "Fix IDE Helper Relation Errors"
+type: concept
+tags: [fix, ide, helper, relation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "fix-ide-helper-relation-errors fix ide helper relation errors"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Fix IDE Helper Relation Errors
 
-## Problem Statement
+## Scopo
 
-The `php artisan ide-helper:models -W` command was reporting errors in the `User` module:
+Allineare i wrapper Passport del modulo User a `php artisan ide-helper:models` **senza** introdurre relazioni synthetic o violare il model canonico `OauthToken`.
 
-- `Error resolving relation model of Modules\User\Models\OauthAccessToken:user() : Attempt to read property "provider" on null`.
-- `Error resolving relation model of Modules\User\Models\OauthToken:user() : Attempt to read property "provider" on null`.
+## Problem Statement (wave 2026-07-15)
 
-This happened because Passport's default `user()` relation attempts to access guard configuration that may not be available during static analysis.
+```bash
+cd laravel && php artisan ide-helper:models --no-interaction
+```
 
-## Solution
+Segnalazioni:
 
-### 1. Canonical token model alignment
+- `Error resolving relation model of Modules\User\Models\OauthAccessToken:user() : Attempt to read property "provider" on null`
+- `Error resolving relation model of Modules\User\Models\OauthToken:user() : Attempt to read property "provider" on null`
 
-The stable model for Passport Eloquent token consumers is `Modules\User\Models\OauthToken`, which extends `Laravel\Passport\Token` directly.
+### Perché accade (scopo Passport)
 
-`Modules\User\Models\OauthAccessToken` must not be treated as the primary Passport Eloquent token source when that would force the codebase toward non-Eloquent vendor classes.
+La relazione `user()` deve collegare il token al model utente corretto in base al **provider** registrato sul client OAuth (`users`, `admins`, …). Passport legge `$this->client->provider` per risolvere `config('auth.providers.{provider}.model')`.
 
-### 2. No ad-hoc fallback relations
+In analisi statica il client non è loaded: il codice fa ciò per cui è nato (risolvere guard a runtime), non per essere invocato a model vuoto.
 
-The previous workaround based on custom fallback logic inside `user()` relations is no longer the preferred pattern.
+## Regola architetturale (invariata)
 
-The current preferred rule is:
+1. **Model canonico:** `Modules\User\Models\OauthToken` estende `Laravel\Passport\Token`.
+2. **No fallback ad hoc** in `user()` con logiche inventate: fix via wrapper null-safe o PHPDoc esplicito.
+3. **Delega vendor** quando il parent è corretto; correggere drift su PHPDoc e consumer.
 
-- keep `OauthToken` aligned with the real Passport Eloquent model;
-- delegate to Passport where the parent model is correct;
-- fix ide-helper/PHPStan drift by aligning wrappers, PHPDoc generics, and consumer code instead of inventing synthetic fallback relations.
+### Fix documentati: stato 2026-07-15
 
-## Verification
+| Opzione | Stato |
+|---------|-------|
+| Trait `ResolvesPassportTokenUserRelation` | ✅ Implementato |
+| Guard `TranslationFile::getRows()` | ✅ Implementato (Lang) |
+| `merge_translation_files()` in Helper.php | ✅ Implementato (Xot) |
 
-- Re-run `php artisan ide-helper:models -W` from `laravel/` after docs-first preparation.
-- Then validate the generated model PHPDoc against:
-  - `./vendor/bin/phpstan analyse Modules/User --error-format=raw`
-  - `./vendor/bin/phpstan analyse Modules`
+## Verifica post-fix
 
-## Operational Note (2026-03-10)
+```bash
+cd laravel && php artisan ide-helper:models --no-interaction -v 2>&1 | rg "Oauth(Token|AccessToken)"
+./vendor/bin/phpstan analyse Modules/User --error-format=raw
+```
 
-- Future `ide-helper:models -W` runs must be handled as a tracked wave:
-  - update docs first (global + module/theme),
-  - update GitHub issue/discussion progress,
-  - then execute command and close all findings with forward-only patches.
+## Note operative
+
+- Wave 2026-03-10: distinzione errori sandbox DB vs model: vedi [ide-helper-models-wave](./ide-helper-models-wave.md)
+- Wave 2026-07-15: errori OAuth **reproducibili** con DB reale: non ambientali
+- Filosofia globale: [ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md)
+
+## Collegamenti
+
+- [oauth-token-relations-ide-helper](./oauth-token-relations-ide-helper.md)
+- [passport-model-wrappers](./passport-model-wrappers.md)
+- [ide-helper-models-wave](./ide-helper-models-wave.md)

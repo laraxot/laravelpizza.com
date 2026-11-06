@@ -1,3 +1,16 @@
+---
+title: "readme.es"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme.es"
+issues: []
+discussions: []
+status: superseded
+superseded_by: README.es.md
+---
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup.png" alt="Laraxot PTVX" width="350"/>
   
@@ -12,7 +25,6 @@
 </div>
 
 ---
-
 # 🚀 Bienvenido a Laraxot PTVX
 
 > **La plataforma Laravel de nueva generación: modular, multi-tenant y type-safe para proyectos SaaS y empresariales ambiciosos.**
@@ -43,10 +55,10 @@
 
 ## 📚 Estructura del Proyecto
 
-- `laravel/Modules/` — Toda la lógica de negocio, agrupada por módulo
-- `laravel/Themes/` — Assets frontend tematizables
-- `laravel/project_docs/` — Documentación core y de los módulos
-- `docs/` — Documentación de proyecto, workflows y traducciones
+- `laravel/Modules/`: Toda la lógica de negocio, agrupada por módulo
+- `laravel/Themes/`: Assets frontend tematizables
+- `laravel/project_docs/`: Documentación core y de los módulos
+- `docs/`: Documentación de proyecto, workflows y traducciones
 
 ---
 
@@ -64,10 +76,10 @@
 
 ## 📚 Documentación
 
-- [Índice del Proyecto](../index.md)
+- [Índice del Proyecto](../../index.md)
 - [Workflow PHPStan](../phpstan_workflow.md)
 - [Panorama de los Módulos](../modules.md)
-- [Arquitectura](../architecture.md)
+- [Arquitectura](../../architecture.md)
 
 ---
 

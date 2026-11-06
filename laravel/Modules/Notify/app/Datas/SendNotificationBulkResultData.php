@@ -14,6 +14,7 @@ class SendNotificationBulkResultData extends Data
 {
     /**
      * @param  Collection<int, array{record: string, channel: string, error: string}>  $errors
+     * @return void
      */
     public function __construct(
         public readonly int $successCount,

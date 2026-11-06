@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Operazioni Docker 🐳
 
 Questa directory contiene gli script per la gestione e automazione delle operazioni Docker, con focus su deployment, monitoraggio e manutenzione dei container.

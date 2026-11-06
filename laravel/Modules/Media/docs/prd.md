@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "PRD: Media Module"
+module: "Media"
+type: concept
+tags: [prd]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "prd"
+related:
+  - "./webm.md"
+status: draft
+---
 # PRD: Media Module
 
 ## 📋 Overview

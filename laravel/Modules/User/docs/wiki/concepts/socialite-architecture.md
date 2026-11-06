@@ -1,8 +1,20 @@
 ---
-title: Socialite Architecture — No google_id Column Rule
+title: Socialite Architecture: No google_id Column Rule
 type: concept
 module: User
-updated: 2026-04-20
+updated: 2026-10-27
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+tags: [docs, user, wiki]
+qmd: "socialite architecture user"
 ---
 
 # Socialite Architecture
@@ -31,7 +43,7 @@ name, email, avatar → dati profilo dal provider
 
 Un utente può avere **N** righe in `socialite_users` (uno per provider collegato).
 
-### `SocialProvider` (Sushi — da `config/social-providers.php`)
+### `SocialProvider` (Sushi: da `config/social-providers.php`)
 
 Modello **senza tabella DB** (usa Sushi/`SushiToPhpArray`). Legge la configurazione da `config/social-providers.php`.
 
@@ -46,8 +58,8 @@ I `client_id`/`client_secret` vengono da variabili env (`GOOGLE_CLIENT_ID`, `GOO
 ```
 1. Utente clicca "Login con Google"
 2. RedirectToProviderController → Socialite::driver('google')->redirect()
-3. Google autentica → callback URL
-4. ProcessCallbackController → Socialite::driver('google')->user()
+3. Google autentica → callback URL Folio+Volt
+4. `ProcessCallbackAction` → `Socialite::driver('google')->user()`
 5. RetrieveOauthUserAction → cerca SocialiteUser per (provider, provider_id)
 6. Se esiste → LoginUserAction (login diretto)
 7. Se non esiste → RegisterSocialiteUserAction → CreateUserAction + CreateSocialiteUserAction
@@ -104,14 +116,14 @@ Per attivare il provider: impostare `active: true` in `social-providers.php` opp
 
 ---
 
-## Backoffice Admin — Cluster Socialite
+## Backoffice Admin: Cluster Socialite
 
 Il backoffice Filament ha un **Cluster** dedicato:
 `Modules/User/app/Filament/Clusters/Socialite/`
 
 Contiene:
-- `SocialProviderResource` — gestione provider (client_id, client_secret, active)
-- `SocialiteUserResource` — lista utenti OAuth connessi
+- `SocialProviderResource`: gestione provider (client_id, client_secret, active)
+- `SocialiteUserResource`: lista utenti OAuth connessi
 
 **→ Vedi tutorial**: `docs/wiki/concepts/socialite-admin-tutorial.md`
 

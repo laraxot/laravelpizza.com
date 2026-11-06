@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "getting started"
+issues: []
+discussions: []
 title: Modulo Tenant
 description: Modulo Tenant
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Modulo Tenant {#modulo-tenant}

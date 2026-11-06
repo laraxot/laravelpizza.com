@@ -1,3 +1,15 @@
+---
+title: "PROJECT STATUS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PROJECT STATUS"
+issues: []
+discussions: []
+status: draft
+---
+
 # FixCity Platform - Project Status Report
 
 **Data**: 2025-01-01  
@@ -172,8 +184,7 @@
 - [ ] ISO 27001 (planned)
 
 ---
-
 **Report Generated**: 2025-01-01  
 **Next Update**: 2025-01-15  
-**Contact**: development@fixcity.io
+**Contact**: development@ptv.io
 

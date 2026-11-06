@@ -1,12 +1,11 @@
 <?php
 
+declare(strict_types=1);
 /**
  * Class Modules\Job\Providers\JobServiceProvider.
  *
  * @see https://github.com/mooxphp/jobs/blob/main/src/JobManagerProvider.php
  */
-
-declare(strict_types=1);
 
 namespace Modules\Job\Providers;
 

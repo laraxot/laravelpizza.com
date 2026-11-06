@@ -1,3 +1,15 @@
+---
+title: "address item enum"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address item enum"
+issues: []
+discussions: []
+status: draft
+---
+
 # AddressItemEnum - The Universal Address Field Schema
 
 ## Scopo (Purpose)
@@ -466,6 +478,5 @@ return [
 - **2025-01**: Implementazione `getFormSchema()` per auto-generazione form
 
 ---
-
 > **Nota**: Questo documento segue la filosofia del progetto: Scopo, Logica, Filosofia, Politica, Religione, Zen.
 > Ogni modifica all'enum DEVE essere documentata e tradotta.

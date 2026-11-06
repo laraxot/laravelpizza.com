@@ -1,5 +1,5 @@
 ---
-title: "XotBaseResourceTable Columns Enforcement — User Module"
+title: "XotBaseResourceTable Columns Enforcement: User Module"
 type: concept
 sources: []
 confidence: high
@@ -7,7 +7,16 @@ created: 2026-05-07
 updated: 2026-05-07
 tags: [xotbase, filament, tables, enforcement]
 related:
-  - ../../../../../../docs/wiki/concepts/xotbase-table-columns-enforcement.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "user module: xotbaseresourcetable columns user"
 ---
 
 # User Module: XotBaseResourceTable Columns

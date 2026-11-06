@@ -1,3 +1,15 @@
+---
+title: "no docs archive rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no docs archive rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # no docs archive rule
 
 ## Regola modulo Geo

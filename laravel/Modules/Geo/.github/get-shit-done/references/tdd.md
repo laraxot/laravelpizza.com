@@ -1,3 +1,14 @@
+---
+title: "tdd"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd"
+issues: []
+discussions: []
+---
+
 <overview>
 TDD is about design quality, not coverage metrics. The red-green-refactor cycle forces you to think about behavior before implementation, producing cleaner interfaces and more testable code.
 
@@ -38,6 +49,13 @@ Each TDD plan implements **one feature** through the full RED-GREEN-REFACTOR cyc
 
 ```markdown
 ---
+title: "tdd"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd"
+issues: []
+discussions: []
 phase: XX-name
 plan: NN
 type: tdd

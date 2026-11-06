@@ -1,3 +1,15 @@
+---
+title: "case conflicts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "case conflicts"
+issues: []
+discussions: []
+status: draft
+---
+
 # Case-Insensitive File Conflicts
 
 Questa verifica elenca i file del modulo `Cms` che differiscono solo per maiuscole/minuscole all'interno dello stesso percorso. Tutti vanno uniformati scegliendo un'unica versione coerente con gli standard Laraxot.

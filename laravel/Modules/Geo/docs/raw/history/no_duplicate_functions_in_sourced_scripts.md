@@ -1,3 +1,14 @@
+---
+title: "no duplicate functions in sourced scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no duplicate functions in sourced scripts"
+issues: []
+discussions: []
+---
+
 # Principio DRY negli Script Bash: NO alla duplicazione di funzioni
 
 ## PERCHÉ È FONDAMENTALE
@@ -78,4 +89,12 @@ function validate_input() {
 
 ---
 
+title: "no duplicate functions in sourced scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no duplicate functions in sourced scripts"
+issues: []
+discussions: []
 > **NOTA IMPORTANTE**: Questa regola è stata aggiornata a seguito di errori gravi di duplicazione riscontrati in diversi script .sh. Il suo rispetto è considerato **CRITICO** per la manutenibilità del progetto.

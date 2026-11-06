@@ -1,3 +1,11 @@
+---
+title: "Regola generale: Label e traduzioni in Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regola generale: label e traduzioni in filament xot"
+---
 # Regola generale: Label e traduzioni in Filament
 
 ## Regola

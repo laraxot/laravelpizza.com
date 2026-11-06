@@ -1,12 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-indigo-700">
     <div class="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:max-w-7xl lg:px-8 lg:py-40">
-      <h2 class="text-4xl font-bold tracking-tight text-white">Inbox support built for efficiency.</h2>
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis in.</p>
+      <h2 class="text-4xl font-bold tracking-tight text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.heading_1.title') }}</h2>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-indigo-200">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.paragraph_1.description') }}</p>
       <div class="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
         <div>
           <div>
@@ -17,8 +16,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Unlimited Inboxes</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.unlimited_inboxes.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -30,8 +29,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Manage Team Members</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.manage_team_members.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -43,8 +42,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Spam Report</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.spam_report.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -56,8 +55,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Compose in Markdown</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.compose_in_markdown.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -69,8 +68,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Team Reporting</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.team_reporting.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -82,8 +81,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Saved Replies</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.saved_replies.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -95,8 +94,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Email Commenting</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.email_commenting.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
         <div>
@@ -108,8 +107,8 @@ declare(strict_types=1);
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Connect with Customers</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">{{ __('ui::blocks_feature_sections.archivied_4x2_grid_on_brand.connect_with_customers.title') }}</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">{{ __('ui::blocks_feature_sections.shared.paragraph_1.description') }}</p>
           </div>
         </div>
       </div>

@@ -1,3 +1,11 @@
+---
+title: "Metodi dei Componenti Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "metodi dei componenti filament xot"
+---
 # Metodi dei Componenti Filament
 
 ## Tabs e Tab Components

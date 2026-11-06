@@ -1,3 +1,15 @@
+---
+title: "ai methodologies"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai methodologies"
+issues: []
+discussions: []
+status: draft
+---
+
 # AI Methodologies Handbook
 
 This file is a DRY local index for AI workflows in this module or theme.

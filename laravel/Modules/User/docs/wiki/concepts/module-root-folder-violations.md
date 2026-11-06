@@ -1,25 +1,30 @@
 ---
-title: "Violazioni struttura root — modulo User (risolto)"
+title: "Violazioni struttura root: modulo User (risolto)"
 type: concept
 module: User
 status: deprecated
 tags: [module-structure, psr-4, cleanup, resolved]
 created: "2026-06-18"
 updated: "2026-06-18"
-related:
-  - ../../../../../../docs/wiki/bmad/architecture-module-directory-structure.md
-  - ../../../../../../docs/wiki/rules/module-root-php-folders-forbidden.md
-  - ../../directory-structure-checklist.md
 qmd: "user module root folder violations resolved Actions Application Database Events Listeners"
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
 ---
 
-# Violazioni struttura root — modulo User (risolto)
+# Violazioni struttura root: modulo User (risolto)
 
 > **Stato:** ✅ Bonifica completata 2026-06-18. Cartelle root `Actions/`, `Application/`, `Database/`, `Events/`, `Listeners/` rimosse.
 
 ## Regola (canon)
 
-[architecture-module-directory-structure.md](../../../../../../docs/wiki/bmad/architecture-module-directory-structure.md) — tutto il PHP sotto `app/`, DB sotto `database/` minuscolo.
+[architecture-module-directory-structure.md](../../../../../../docs/wiki/bmad/architecture-module-directory-structure.md): tutto il PHP sotto `app/`, DB sotto `database/` minuscolo.
 
 ## Storico
 

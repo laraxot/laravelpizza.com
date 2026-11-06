@@ -3,6 +3,20 @@
 declare(strict_types=1);
 
 return [
+    'values' => [
+        'f' => [
+            'label' => 'Female',
+            'icon' => 'heroicon-o-user',
+            'color' => 'pink',
+            'description' => 'Female gender',
+        ],
+        'm' => [
+            'label' => 'Male',
+            'icon' => 'heroicon-o-user',
+            'color' => 'info',
+            'description' => 'Male gender',
+        ],
+    ],
     'label' => 'Gender',
     'options' => [
         'f' => 'Female',

@@ -10,19 +10,19 @@ declare(strict_types=1);
                 <img width="370" height="245" class="b-pop-place__img__img" src="{{ $row->img }}"
                     alt="{{ $row->title }}">
             </a>
-            <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like">
+            <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="{{ __('geo::place.card.like.label') }}">
                 <i class="fa fa-heart" aria-hidden="true"></i>
             </a>
             <div class="b-pop-place__links">
                 <div class="press--left">
                     <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right"
-                        title="Live music"><i class="fa fa-music" aria-hidden="true"></i>
+                        title="{{ __('geo::place.card.live_music.label') }}"><i class="fa fa-music" aria-hidden="true"></i>
                     </a>
                     <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right"
-                        title="Menu"><i class="fa fa-book" aria-hidden="true"></i>
+                        title="{{ __('geo::place.card.menu.label') }}"><i class="fa fa-book" aria-hidden="true"></i>
                     </a>
                     <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right"
-                        title="Photo">
+                        title="{{ __('geo::place.card.photo.label') }}">
                         <i class="fa fa-camera" aria-hidden="true"></i>
                     </a>
                 </div>

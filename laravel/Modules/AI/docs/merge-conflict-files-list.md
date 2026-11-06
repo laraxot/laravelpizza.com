@@ -1,3 +1,15 @@
+---
+title: "merge conflict files list"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "merge conflict files list"
+issues: []
+discussions: []
+status: draft
+---
+
 # Merge Conflict Files List
 
 This file contains a comprehensive list of files with merge conflict markers (`<<<< HEAD` or `<<<< .merge_file`) that need to be resolved.
@@ -46,7 +58,7 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ### Notify Module (3 files)
 - ./laravel/Modules/Notify/docs/wiki/index.md
 - ./laravel/Modules/Notify/docs/wiki/log.md
-- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
+- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-obiettivo.md
 
 ### Other Files (62 files)
 - Various agent session files, todo files, and system files

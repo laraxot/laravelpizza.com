@@ -1,3 +1,16 @@
+---
+title: "00 index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 index"
+issues: []
+discussions: []
+status: superseded
+superseded_by: index.md
+---
+
 # 📚 Project Rules Index
 
 > **Indice centrale per tutte le regole del progetto**
@@ -5,7 +18,6 @@
 > **Versione**: 1.0
 
 ---
-
 ## 🎯 Panoramica
 
 Questo documento fornisce un **indice centrale** per tutte le regole del progetto, organizzato per categoria.

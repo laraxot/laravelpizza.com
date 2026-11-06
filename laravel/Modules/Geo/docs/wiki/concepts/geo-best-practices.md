@@ -1,4 +1,7 @@
 ---
+qmd: "geo best practices"
+issues: []
+discussions: []
 title: "Geo Module Best Practices"
 type: concept
 sources: ["../../Modules/Geo/app/Filament/Forms/Components/"]
@@ -10,6 +13,7 @@ related:
   - concepts/coordinate-picker-best-practices.md
   - concepts/svg-asset-architecture.md
   - concepts/leaflet-class-selector-governance.md
+status: draft
 ---
 
 # Geo Module Best Practices

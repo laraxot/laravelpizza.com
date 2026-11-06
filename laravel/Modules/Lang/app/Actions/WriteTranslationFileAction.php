@@ -6,6 +6,7 @@ namespace Modules\Lang\Actions;
 
 use Illuminate\Support\Facades\File;
 
+use function Safe\date;
 use function Safe\exec;
 use function Safe\file_put_contents;
 use function Safe\tempnam;
@@ -113,11 +114,16 @@ class WriteTranslationFileAction
     {
         // Pulisce la cache di Laravel
         if (app()->bound('cache')) {
-            app('cache')->flush();
+            /** @var object $cache */
+            $cache = app('cache');
+            if (method_exists($cache, 'flush')) {
+                $cache->flush();
+            }
         }
 
         // Pulisce la cache delle traduzioni
         if (app()->bound('translation.loader')) {
+            /** @var object $loader */
             $loader = app('translation.loader');
             if (method_exists($loader, 'flush')) {
                 $loader->flush();

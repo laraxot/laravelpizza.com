@@ -1,3 +1,14 @@
+---
+title: "resource page separation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "resource page separation"
+issues: []
+discussions: []
+---
+
 # Resource vs Page Classes - Critical Architectural Separation
 
 ## Business Logic: Why This Separation Exists
@@ -228,6 +239,14 @@ When fixing violations:
 
 ---
 
+title: "resource page separation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "resource page separation"
+issues: []
+discussions: []
 **Last Updated**: 2025-01-02  
 **Critical Rule**: Resource = Data Definition, Page = Display Logic  
 **Violation Impact**: Architecture inconsistency, maintenance issues

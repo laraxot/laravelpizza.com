@@ -1,3 +1,14 @@
+---
+title: "analisi miglioramento prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analisi miglioramento prompt"
+issues: []
+discussions: []
+---
+
 # Analisi e Miglioramento del Sistema di Prompt
 
 ## Analisi dell'Attuale File di Prompt

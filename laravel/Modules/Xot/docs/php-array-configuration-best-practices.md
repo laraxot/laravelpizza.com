@@ -1,3 +1,13 @@
+---
+title: "Gestione Best Practice per File di Configurazione PHP basati su Array"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Gestione Best Practice per File di Configurazione PHP basati su Array"
+---
 # Gestione Best Practice per File di Configurazione PHP basati su Array
 
 I file di configurazione e traduzione in PHP che restituiscono array sono comuni in Laravel e nei moduli PTVX. Per garantire stabilità e manutenibilità, è cruciale seguire alcune best practice.

@@ -1,3 +1,11 @@
+---
+title: "convenzioni per namespace e percorsi dei moduli"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni per namespace e percorsi dei moduli xot"
+---
 # convenzioni per namespace e percorsi dei moduli
 
 ## struttura corretta del percorso

@@ -40,31 +40,82 @@ return [
     ],
     'actions' => [
         'queue_restart' => [
-            'label' => 'queue_restart',
+            'label' => 'Riavvia code',
+            'icon' => 'queue_restart',
+            'tooltip' => 'Riavvia i processi delle code',
         ],
         'event_cache' => [
-            'label' => 'event_cache',
+            'label' => 'Cache degli eventi',
+            'icon' => 'event_cache',
+            'tooltip' => 'Genera la cache degli eventi',
         ],
         'route_cache' => [
-            'label' => 'route_cache',
+            'label' => 'Cache delle rotte',
+            'icon' => 'route_cache',
+            'tooltip' => 'Genera la cache delle rotte',
         ],
         'config_cache' => [
-            'label' => 'config_cache',
+            'label' => 'Cache della configurazione',
+            'icon' => 'config_cache',
+            'tooltip' => 'Genera la cache della configurazione',
         ],
         'view_cache' => [
-            'label' => 'view_cache',
+            'label' => 'Cache delle viste',
+            'icon' => 'view_cache',
+            'tooltip' => 'Genera la cache delle viste',
         ],
         'filament_optimize' => [
-            'label' => 'filament_optimize',
+            'label' => 'Ottimizza Filament',
+            'icon' => 'filament_optimize',
+            'tooltip' => 'Ottimizza Filament',
         ],
         'filament_upgrade' => [
-            'label' => 'filament_upgrade',
+            'label' => 'Aggiorna Filament',
+            'icon' => 'filament_upgrade',
+            'tooltip' => 'Aggiorna Filament',
         ],
         'migrate' => [
-            'label' => 'migrate',
+            'label' => 'Esegui migrazioni',
+            'icon' => 'migrate',
+            'tooltip' => 'Esegue le migrazioni del database',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'profile' => [
+            'label' => 'profile',
+            'icon' => 'profile',
+            'tooltip' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+            'icon' => 'logout',
+            'tooltip' => 'logout',
+        ],
+        'composer_dump_autoload' => [
+            'label' => 'composer_dump_autoload',
+            'icon' => 'composer_dump_autoload',
+            'tooltip' => 'composer_dump_autoload',
+        ],
+        'notify_migrate_themes_to_mail_templates' => [
+            'label' => 'notify_migrate_themes_to_mail_templates',
+            'icon' => 'notify_migrate_themes_to_mail_templates',
+            'tooltip' => 'notify_migrate_themes_to_mail_templates',
+        ],
+        'submit' => [
+            'label' => 'submit',
+            'icon' => 'submit',
+            'tooltip' => 'submit',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+            'icon' => 'cancel',
+            'tooltip' => 'cancel',
         ],
     ],
-    'title' => 'artisan commands manager',
+    'title' => 'Gestore comandi Artisan',
     'label' => 'Artisan Commands Manager',
     'plural_label' => 'Artisan Commands Manager (Plurale)',
     'fields' => [

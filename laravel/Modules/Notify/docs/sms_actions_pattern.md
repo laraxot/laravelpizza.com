@@ -1,3 +1,15 @@
+---
+title: "sms actions pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms actions pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern per le Azioni SMS 
 
 ## Struttura e Convenzioni
@@ -250,6 +262,4 @@ Seguire questo pattern garantisce:
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
 
 ---
-
-*Ultimo aggiornamento: 2023-05-12*
 *Ultimo aggiornamento: 2023-05-12*

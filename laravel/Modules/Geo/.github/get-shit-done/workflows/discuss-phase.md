@@ -1,3 +1,14 @@
+---
+title: "discuss phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "discuss phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Extract implementation decisions that downstream agents need. Analyze the phase to identify gray areas, let the user choose what to discuss, then deep-dive each selected area until satisfied.
 
@@ -366,6 +377,14 @@ mkdir -p ".planning/phases/${padded_phase}-${phase_slug}"
 
 ---
 
+title: "discuss phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "discuss phase"
+issues: []
+discussions: []
 *Phase: XX-name*
 *Context gathered: [date]*
 ```

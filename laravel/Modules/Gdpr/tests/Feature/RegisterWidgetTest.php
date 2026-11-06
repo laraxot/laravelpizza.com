@@ -19,8 +19,6 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
-
 // ---------------------------------------------------------------------------
 // ValidateGdprConsentAction
 // ---------------------------------------------------------------------------
@@ -107,7 +105,7 @@ it('validates and transforms user data correctly', function (): void {
     Assert::assertSame($email, $result['email']);
     Assert::assertSame('customer_user', $result['type']);
     Assert::assertNotNull($result['email_verified_at']);
-    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    $hashed = is_string($result['password']) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
 });
 
@@ -125,7 +123,7 @@ it('validates user data hashes the password', function (): void {
 
     // Password should be hashed, not plain text
     Assert::assertNotSame('MyP@ssword123!', $result['password']);
-    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    $hashed = is_string($result['password']) ? $result['password'] : '';
     Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
 });
 
@@ -190,6 +188,12 @@ it('saves gdpr consents for a user when treatments exist', function (): void {
         Assert::assertNotNull($privacyConsent->accepted_at);
         Assert::assertSame('127.0.0.1', $privacyConsent->ip_address);
         Assert::assertSame('PestTest/1.0', $privacyConsent->user_agent);
+    }
+
+    // Terms consent should be accepted (terms_accepted => terms_conditions)
+    $termsConsent = $savedConsents->where('treatment_id', $termsTreatment->id)->first();
+    if ($termsConsent) {
+        Assert::assertNotNull($termsConsent->accepted_at);
     }
 
     // Marketing consent should NOT be accepted
@@ -362,6 +366,6 @@ it('has all required translation keys for register page', function (): void {
     foreach ($requiredKeys as $key) {
         $translated = __($key);
         // Translation should not return the raw key
-        Assert::assertNotSame($key, "Translation key [{$key}] is missing or returns raw key", $translated);
+        Assert::assertNotSame($key, $translated, "Translation key [{$key}] is missing or returns raw key");
     }
 });

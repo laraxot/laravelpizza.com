@@ -12,34 +12,32 @@ use Modules\Notify\Factories\SmsActionFactory;
 /**
  * Canale di notifica per l'invio di messaggi SMS.
  *
- * Questo canale utilizza il driver SMS configurato in config/sms.php
- * per inviare messaggi SMS attraverso il provider selezionato.
+ * Il driver effettivo è scelto da `SmsActionFactory` in base a
+ * `config('sms.default')` (env `SMS_DRIVER`), oppure a un override
+ * per-notifica se la notifica espone `getProvider(): ?string`
+ * (es. `SmsNotification`). Così `SMS_DRIVER=netfun` con
+ * `config('sms.drivers.netfun')` valorizzato fa passare gli SMS da Netfun,
+ * senza toccare codice — vedi
+ * `Modules/Notify/docs/wiki/concepts/sms-channel-driver-selection.md`.
  */
 class SmsChannel
 {
     /**
-     * Factory per la creazione di azioni SMS.
-     */
-    private SmsActionFactory $factory;
-
-    /**
      * Crea una nuova istanza del canale.
      */
-    public function __construct(SmsActionFactory $factory)
-    {
-        $this->factory = $factory;
-    }
+    public function __construct(private readonly SmsActionFactory $factory) {}
 
     /**
      * Invia la notifica attraverso il canale SMS.
      *
-     * @param  mixed  $notifiable  Entità che riceve la notifica
      * @param  Notification  $notification  Notifica da inviare
-     * @return array<string, mixed>|null Risultato dell'operazione o null in caso di errore
+     * @return array<string, mixed>|null Risultato dell'invio restituito dall'azione del driver
+     *                                   (`SmsActionContract::execute()`); di norma
+     *                                   `array{status_code: int, status_txt: string}`
      *
      * @throws Exception Se la notifica non ha il metodo toSms o il driver non è supportato
      */
-    public function send(mixed $notifiable, Notification $notification): ?array
+    public function send(object $notifiable, Notification $notification): ?array
     {
         if (! method_exists($notification, 'toSms')) {
             throw new Exception('Notification does not have toSms method');
@@ -47,15 +45,28 @@ class SmsChannel
 
         $smsData = $notification->toSms($notifiable);
 
+        // Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 17
+        // (2026-09-15): toSms() e' tipizzato ?SmsData proprio per poter dire "niente
+        // da inviare" (nessun destinatario, o corpo vuoto) senza che sia un errore
+        // di programmazione — ma questo metodo trattava `null` come qualunque altro
+        // valore non valido, lanciando un'eccezione invece di saltare in modo pulito.
+        if ($smsData === null) {
+            return null;
+        }
+
         if (! ($smsData instanceof SmsData)) {
             throw new Exception('toSms method must return an instance of SmsData');
         }
 
-        $action = $this->factory->create();
+        // Override del driver per-notifica se la notifica lo espone (es.
+        // SmsNotification::getProvider()); altrimenti null e SmsActionFactory
+        // usa config('sms.default').
+        $driver = null;
+        if (method_exists($notification, 'getProvider')) {
+            $provider = $notification->getProvider();
+            $driver = \is_string($provider) && $provider !== '' ? $provider : null;
+        }
 
-        /** @var array<string, mixed> $result */
-        $result = $action->execute($smsData);
-
-        return $result;
+        return $this->factory->create($driver)->execute($smsData);
     }
 }

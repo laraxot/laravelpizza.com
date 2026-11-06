@@ -1,3 +1,11 @@
+---
+title: "XotBaseComponent"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasecomponent xot"
+---
 # XotBaseComponent
 
 XotBaseComponent è la classe base astratta per tutti i componenti view nel modulo Xot. Fornisce funzionalità comuni e struttura di base per i componenti personalizzati.

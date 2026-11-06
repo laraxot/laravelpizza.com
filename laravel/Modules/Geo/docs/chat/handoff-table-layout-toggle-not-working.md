@@ -1,3 +1,15 @@
+---
+title: "handoff table layout toggle not working"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff table layout toggle not working"
+issues: []
+discussions: []
+status: draft
+---
+
 # Handoff: Cambia layout non funziona
 
 **Stato**: fix in corso nel monorepo · issue GitHub da aprire (gh non disponibile su host agente)

@@ -1,3 +1,15 @@
+---
+title: "address input implementation summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address input implementation summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # AddressInput Component Implementation Summary
 
 **Date**: 2026-04-13
@@ -108,4 +120,4 @@ All documentation has been updated to reflect:
 - [AddressInput Component Docs](../../../Modules/Geo/docs/address-input-component.md)
 - [Address Components Overview](../../../Modules/Geo/docs/address-field-component.md)
 - [Module Boundary Philosophy](../../../Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md)
-- [Geo Components Index](../../../Modules/Geo/docs/components/INDEX.md)
+- [Geo Components Index](components/index.md)

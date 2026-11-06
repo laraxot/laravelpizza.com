@@ -1,4 +1,10 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff lettf qua00f date range"
+issues: []
+discussions: []
 title: "Handoff — LettF qua00f relazione filtrata"
 type: handoff
 module: IndennitaResponsabilita

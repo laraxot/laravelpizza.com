@@ -3,6 +3,19 @@ type: concept
 module: User
 confidence: high
 updated: 2026-06-05
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+title: "Profile Migration UUID Contract"
+status: draft
+tags: [docs, user, wiki]
+qmd: "profile migration uuid contract user"
 ---
 
 # Profile Migration UUID Contract
@@ -11,20 +24,25 @@ updated: 2026-06-05
 
 `BaseProfile` genera `uuid` in `creating`. Il contratto richiede colonna `uuid` nella tabella `profiles` del DB usato dal modello concreto.
 
-## Owner schema in Fixcity (questo progetto)
+## Owner schema (workorder: connessione `user`)
 
-Per connessione `fixcity`, **owner migrazione = modulo Fixcity** (non User):
+**Owner migrazione = modulo WorkOrder** (`main_module`):
 
-- `laravel/Modules/Fixcity/database/migrations/2026_06_10_123000_create_profiles_table.php`
+- [profile-schema-ownership](../../../WorkOrder/docs/profile-schema-ownership.md)
+- `laravel/Modules/WorkOrder/database/migrations/2026_07_27_111500_create_profiles_table.php`
 
-Le migrazioni `create_profiles_table` in User/Blog sono state archiviate in `_bak/*.merged` per rispettare 1 modello = 1 migrazione owner.
+Duplicati User in `database/migrations/_bak/*.merged` (violazione 1 modello = 1 migrazione owner).
 
-Vedi [profiles-ownership-boundary-rule](./profiles-ownership-boundary-rule.md) e [Fixcity profiles-uuid-contract](../../../Fixcity/docs/wiki/concepts/profiles-uuid-contract.md).
+Vedi [profile-id-bigint-uuid-fix](./profile-id-bigint-uuid-fix.md) per errore 1364 `id` senza default.
 
-## One table = one migration
+## Regola id + uuid
 
-- niente `add_*` / `repair_*` su `profiles`
-- evoluzione: edit file owner Fixcity + **bump timestamp** nel nome file
+| Colonna | Tipo | Note |
+|---------|------|------|
+| `id` | bigint unsigned AI | PK interna |
+| `uuid` | char(36) unique | API, `byUuid()` |
+
+`tableUpdate()` chiama `convertIdFromUuidToBigintIfNeeded()` per DB legacy con `id` char(36).
 
 ## Fix 2026-04-20
 
@@ -57,6 +75,8 @@ La prima domanda corretta e':
 ## Riferimenti
 
 - `laravel/Modules/User/app/Models/BaseProfile.php`
-- `laravel/Modules/Fixcity/database/migrations/2026_06_10_123000_create_profiles_table.php`
-- [architecture-one-migration-per-model](../../../../../docs/wiki/bmad/architecture-one-migration-per-model.md)
+- `laravel/Modules/WorkOrder/database/migrations/2026_07_27_111500_create_profiles_table.php`
+- [profile-id-bigint-uuid-fix](./profile-id-bigint-uuid-fix.md)
+- [architecture-one-migration-per-model](../../../../../../docs/wiki/bmad/architecture-one-migration-per-model.md)
+- [architecture-one-migration-per-model](../../../../../../docs/wiki/bmad/architecture-one-migration-per-model.md)
 - `laravel/Modules/Xot/docs/database/migration-base-rules.md`

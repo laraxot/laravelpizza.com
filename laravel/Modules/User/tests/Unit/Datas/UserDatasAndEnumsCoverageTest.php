@@ -7,7 +7,6 @@ namespace Modules\User\Tests\Unit\Datas;
 use Modules\User\Datas\FilamentShieldData;
 use Modules\User\Datas\PermissionData;
 use Modules\User\Datas\SocialiteUserAttributesData;
-use Modules\User\Enums\Enums\LanguageEnum as NestedLanguageEnum;
 use Modules\User\Enums\LanguageEnum;
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -66,7 +65,6 @@ describe('User Datas And Enums Coverage', function (): void {
 
         $data = PermissionData::make();
 
-        Assert::assertInstanceOf(PermissionData::class, $data);
         Assert::assertStringContainsString('Role', (string) $data->models->role);
         Assert::assertSame('permissions', $data->table_names->permissions);
         Assert::assertSame('spatie.permission.cache', $data->cache->key);
@@ -97,7 +95,6 @@ describe('User Datas And Enums Coverage', function (): void {
 
         $data = FilamentShieldData::make();
 
-        Assert::assertInstanceOf(FilamentShieldData::class, $data);
         Assert::assertSame(-1, $data->shield_resource->navigation_sort);
         Assert::assertSame('super_admin', $data->super_admin->name);
         Assert::assertTrue($data->filament_user->enabled);
@@ -115,7 +112,5 @@ describe('User Datas And Enums Coverage', function (): void {
 
         Assert::assertSame('Italiano', $italianLabel);
         Assert::assertSame('English', LanguageEnum::ENGLISH->getLabel());
-        Assert::assertSame('Deutsch', NestedLanguageEnum::GERMAN->getLabel());
-        Assert::assertSame('es', NestedLanguageEnum::SPANISH->value);
     });
 });

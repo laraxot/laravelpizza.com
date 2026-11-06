@@ -1,3 +1,8 @@
+<?php
+
+declare(strict_types=1);
+
+?>
 <div x-data="{ open: false }" class="relative inline-block text-left" @click.away="open = false">
     <div>
         <button @click="open = !open" type="button" class="flex items-center space-x-3 focus:outline-none group" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -21,34 +26,34 @@
         
         @if($user)
         <div class="px-4 py-3 border-b border-slate-700/50">
-            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('Account') }}</p>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('user::common.nav.account.label') }}</p>
             <p class="text-sm font-medium text-white truncate">{{ $user->email }}</p>
         </div>
         @endif
 
         <div class="py-1" role="none">
-            <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+            <a href="{{ route('dashboard') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
-                <span>{{ __('Dashboard') }}</span>
+                <span>{{ __('user::common.nav.dashboard.label') }}</span>
             </a>
-            <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+            <a href="{{ route('events.index') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-calendar class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
-                <span>{{ __('I miei eventi') }}</span>
+                <span>{{ __('user::common.nav.my_events.label') }}</span>
             </a>
-            <a href="{{ LaravelLocalization::localizeUrl('/events-near-me') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+            <a href="{{ route('events.index') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
-                <span>{{ __('Eventi vicini') }}</span>
+                <span>{{ __('user::common.nav.nearby_events.label') }}</span>
             </a>
-            <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+            <a href="{{ route('profile.edit') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-user class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
-                <span>{{ __('Profilo') }}</span>
+                <span>{{ __('user::common.nav.profile.label') }}</span>
             </a>
         </div>
 
         <div class="py-1 border-t border-slate-700/50" role="none">
             <button wire:click="logout" class="flex w-full items-center space-x-3 px-4 py-2 text-sm text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors group" role="menuitem">
                 <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5 text-red-500/70 group-hover:text-red-400" />
-                <span>{{ __('Esci') }}</span>
+                <span>{{ __('user::common.actions.logout.label') }}</span>
             </button>
         </div>
     </div>

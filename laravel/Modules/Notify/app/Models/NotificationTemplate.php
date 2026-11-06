@@ -4,55 +4,43 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Blade;
 use Modules\Media\Models\Media;
-use Modules\Notify\Database\Factories\NotificationTemplateFactory;
+use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
 use Modules\Notify\Enums\NotificationTypeEnum;
-use Modules\Xot\Models\Traits\HasCommonScopes;
+use Modules\Notify\Models\Traits\NotificationTemplateMutators;
 use Modules\Xot\Contracts\ProfileContract;
-use Override;
 use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\Translatable\HasTranslations;
 
 /**
  * Class NotificationTemplate.
  *
- * @property int $id
- * @property string $name
- * @property string $code
+ * @property string|null $name
+ * @property string|null $code
  * @property string|null $description
- * @property string $subject
+ * @property string|null $category
+ * @property array<string, mixed>|null $metadata
+ * @property string|null $subject
+ * @property bool $is_active
+ * @property array<string, mixed>|null $variables
  * @property string|null $body_html
  * @property string|null $body_text
- * @property array<int, string> $channels
- * @property array<string, mixed> $variables
+ * @property array<int, string>|null $channels
  * @property array<string, mixed>|null $conditions
  * @property array<string, mixed>|null $preview_data
- * @property array<string, mixed>|null $metadata
- * @property string|null $category
- * @property bool $is_active
- * @property int $version
- * @property int|null $tenant_id
  * @property array<string, mixed>|null $grapesjs_data
- * @property Carbon $created_at
- * @property Carbon $updated_at
- * @property Carbon|null $deleted_at
- * @property-read string $channels_label
  * @property NotificationTypeEnum $type
  * @property-read ProfileContract|null $creator
- * @property-read int|null $logs_count
+ * @property-read string $channels_label
+ * @property-read list<string> $translatable_columns_from
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
- * @property-read mixed $translations
+ * @property-read array<string, array<string, mixed>> $translations
  * @property-read ProfileContract|null $updater
- * @property-read int|null $versions_count
  *
  * @method static Builder<static>|NotificationTemplate active()
- * @method static NotificationTemplateFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationTemplate forCategory(string $category)
  * @method static Builder<static>|NotificationTemplate forChannel(string $channel)
  * @method static Builder<static>|NotificationTemplate newModelQuery()
@@ -63,50 +51,21 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array<int, string> $locales)
  *
- * @property-read ProfileContract|null $deleter
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_by
- *
- * @method static Builder<static>|NotificationTemplate whereBodyHtml($value)
- * @method static Builder<static>|NotificationTemplate whereBodyText($value)
- * @method static Builder<static>|NotificationTemplate whereCategory($value)
- * @method static Builder<static>|NotificationTemplate whereChannels($value)
- * @method static Builder<static>|NotificationTemplate whereCode($value)
- * @method static Builder<static>|NotificationTemplate whereConditions($value)
- * @method static Builder<static>|NotificationTemplate whereCreatedAt($value)
- * @method static Builder<static>|NotificationTemplate whereCreatedBy($value)
- * @method static Builder<static>|NotificationTemplate whereDeletedAt($value)
- * @method static Builder<static>|NotificationTemplate whereDeletedBy($value)
- * @method static Builder<static>|NotificationTemplate whereDescription($value)
- * @method static Builder<static>|NotificationTemplate whereGrapesjsData($value)
- * @method static Builder<static>|NotificationTemplate whereId($value)
- * @method static Builder<static>|NotificationTemplate whereIsActive($value)
- * @method static Builder<static>|NotificationTemplate whereMetadata($value)
- * @method static Builder<static>|NotificationTemplate whereName($value)
- * @method static Builder<static>|NotificationTemplate wherePreviewData($value)
- * @method static Builder<static>|NotificationTemplate whereSubject($value)
- * @method static Builder<static>|NotificationTemplate whereTenantId($value)
- * @method static Builder<static>|NotificationTemplate whereType($value)
- * @method static Builder<static>|NotificationTemplate whereUpdatedAt($value)
- * @method static Builder<static>|NotificationTemplate whereUpdatedBy($value)
- * @method static Builder<static>|NotificationTemplate whereVariables($value)
- * @method static Builder<static>|NotificationTemplate whereVersion($value)
- *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
-    use HasCommonScopes;
     use HasTranslations;
-    use InteractsWithMedia;
+    use NotificationTemplateMutators;
+
+    /** La chiave e' un UUID char(36): niente auto-increment, altrimenti dopo l'insert l'id diventa '0'. */
+    public $incrementing = false;
 
     /** @var list<string> */
     public array $translatable = [
         'subject',
         'body_text',
-        'body_html',
-    ];
+        'body_html'];
 
     protected $fillable = [
         'name',
@@ -125,8 +84,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
         'version',
         'tenant_id',
         'grapesjs_data',
-        'type',
-    ];
+        'type'];
 
     public function registerMediaCollections(): void
     {
@@ -185,8 +143,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
         return [
             'subject' => $subject ?? '',
             'body_html' => $bodyHtml,
-            'body_text' => $bodyText,
-        ];
+            'body_text' => $bodyText];
     }
 
     /**
@@ -227,6 +184,18 @@ class NotificationTemplate extends BaseModel implements HasMedia
     }
 
     /**
+     * Scope a query to only include active templates.
+     */
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('is_active', true);
+    }
+
+    /**
      * Scope a query to only include templates for a specific channel.
      */
     /**
@@ -253,15 +222,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Get the channels label attribute.
      */
-    public function getChannelsLabelAttribute(): string
-    {
-        /** @var array<int, string> $channels */
-        $channels = $this->channels;
-
-        return collect($channels)
-            ->map(fn (string $channel): string => (string) __('notify::template.fields.channel.options.'.$channel.'.label'))
-            ->implode(', ');
-    }
 
     /**
      * Get the GrapesJS data.
@@ -330,7 +290,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      *
      * @return array<string, string>
      */
-    #[Override]
     protected function casts(): array
     {
         return [
@@ -343,12 +302,13 @@ class NotificationTemplate extends BaseModel implements HasMedia
             'conditions' => 'array',
             'metadata' => 'array',
             'is_active' => 'boolean',
-            'grapesjs_data' => 'array',
-        ];
+            'grapesjs_data' => 'array'];
     }
 
     /**
      * Compile a string template with the given data.
+     *
+     * I template sono letti dal database: si sostituiscono solo i segnaposto, mai Blade/PHP (DCP-283, C-08).
      *
      * @param  string|null  $template  The template to compile
      * @param  array<string, mixed>  $data  The data to compile with
@@ -359,6 +319,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
             return null;
         }
 
-        return Blade::render($template, $data);
+        return app(RenderNotificationTemplateStringAction::class)->execute($template, $data);
     }
 }

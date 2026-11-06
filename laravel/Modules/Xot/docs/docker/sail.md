@@ -1,3 +1,13 @@
+---
+title: "sail"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docker]
+qmd: "sail"
+---
 Bind for 0.0.0.0:3306 failed: port is already allocated
 ------------------
 Error starting userland proxy: listen tcp4 0.0.0.0:80: bind: address already in use

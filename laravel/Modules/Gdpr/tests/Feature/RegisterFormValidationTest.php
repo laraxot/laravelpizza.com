@@ -8,11 +8,8 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
-use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 /*
  * Form Validation Tests for Registration.

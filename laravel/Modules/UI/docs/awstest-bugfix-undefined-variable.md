@@ -1,3 +1,15 @@
+---
+title: "awstest bugfix undefined variable"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "awstest bugfix undefined variable"
+issues: []
+discussions: []
+status: draft
+---
+
 # AwsTest Bugfix: Undefined Variable e Problemi Strutturali
 
 ## Problemi Risolti
@@ -170,7 +182,6 @@ Per tutti i widget che utilizzano AWS SDK:
 - Monitorare performance dei test AWS
 
 ---
-
 **Data correzione**: 6 Gennaio 2025
 **PHPStan Level**: 9 ✅
 **Status**: Completamente Risolto

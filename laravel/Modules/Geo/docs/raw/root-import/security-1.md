@@ -1,3 +1,14 @@
+---
+title: "security 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "security 1"
+issues: []
+discussions: []
+---
+
 # Security Policy
 
 ## Reporting Security Vulnerabilities
@@ -17,6 +28,14 @@ Risponderemo entro **48 ore**.
 
 ---
 
+title: "security 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "security 1"
+issues: []
+discussions: []
 ## Dependabot & Automated Updates
 
 - ✅ Monitoraggio continuo via Dependabot

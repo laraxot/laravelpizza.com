@@ -17,24 +17,13 @@ class SvgExistsAction
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
-     * @param string $svgName Il nome dell'SVG da verificare (es: 'heroicon-o-user')
-     *
+     * @param  string  $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
      * @return bool true se l'SVG esiste, false altrimenti
      */
     public function execute(string $svgName): bool
     {
         if (empty($svgName)) {
             return false;
-        }
-
-        // BladeUI Kit icon check: only for standard sets (heroicon-*, etc.)
-        // Geo SVGs use "geo-" prefix (e.g., "geo-magnifying-glass") — served via <img> or Lit JS, not BladeUI Kit
-        if (str_starts_with($svgName, 'geo-')) {
-            // Geo SVGs are in Modules/Geo/resources/svg/ — check file existence directly
-            $relativePath = str_replace('geo-', '', $svgName);
-            $svgPath = base_path('Modules/Geo/resources/svg/'.$relativePath.'.svg');
-
-            return file_exists($svgPath);
         }
 
         /** @var IconFactory $iconsFactory */

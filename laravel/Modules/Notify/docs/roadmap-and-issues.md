@@ -1,3 +1,15 @@
+---
+title: "roadmap and issues"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap and issues"
+issues: []
+discussions: []
+status: draft
+---
+
 # Notify Module - Roadmap, Issues & Optimization
 
 **Modulo**: Notify (Multi-Channel Notifications)  
@@ -5,7 +17,6 @@
 **Status PHPStan**: ✅ 0 errori (Level 9)
 
 ---
-
 ## 📊 STATO ATTUALE
 
 ### Completezza Funzionale: 70%
@@ -244,6 +255,7 @@ class TicketDigest extends Notification implements ShouldQueue
 - [← Notify Module README](../README.md)
 - [← Fixcity Integration](../../Fixcity/docs/roadmap-and-issues.md)
 - [← Root Documentation](../../../docs/index.md)
+- [← Root Documentation](../../../../docs/index.md)
 
 ---
 

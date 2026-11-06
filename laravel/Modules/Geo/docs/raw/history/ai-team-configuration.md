@@ -1,3 +1,14 @@
+---
+title: "ai team configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai team configuration"
+issues: []
+discussions: []
+---
+
 # AI Agent Team Configuration Guide
 
 This document outlines how to configure various AI agent tools to work collaboratively within a development team, with a specific focus on maintaining and improving documentation standards.

@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 /*
  * Localization Tests for Registration Page.
@@ -54,7 +51,7 @@ it('has all required keys in Italian locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Italian translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "Italian translation [{$key}] missing");
     }
 });
 
@@ -88,7 +85,7 @@ it('has all required keys in English locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "English translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "English translation [{$key}] missing");
     }
 });
 
@@ -109,7 +106,7 @@ it('has all required keys in Spanish locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Spanish translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "Spanish translation [{$key}] missing");
     }
 });
 
@@ -130,7 +127,7 @@ it('has all required keys in German locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "German translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "German translation [{$key}] missing");
     }
 });
 
@@ -151,7 +148,7 @@ it('has all required keys in French locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "French translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "French translation [{$key}] missing");
     }
 });
 
@@ -172,7 +169,7 @@ it('has all required keys in Russian locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        Assert::assertNotSame($key, "Russian translation [{$key}] missing", $translated);
+        Assert::assertNotSame($key, $translated, "Russian translation [{$key}] missing");
     }
 });
 

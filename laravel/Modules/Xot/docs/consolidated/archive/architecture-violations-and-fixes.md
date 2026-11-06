@@ -1,3 +1,11 @@
+---
+title: "Violazioni Architetturali e Correzioni - Pattern XotData"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "violazioni architetturali e correzioni - pattern xotdata xot"
+---
 # Violazioni Architetturali e Correzioni - Pattern XotData
 
 ## 🚨 **Violazioni Architetturali Critiche**

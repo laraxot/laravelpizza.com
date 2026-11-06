@@ -60,7 +60,7 @@ return [
         'password' => [
             'label' => 'Mot de passe sécurisé',
             'placeholder' => '••••••••••••',
-            'helper_text' => 'Doit contenir au moins 12 caractères, majuscule, minuscule, chiffre et symbole',
+            'helper_text' => 'Doit contenir au moins 8 caractères, majuscule, minuscule, chiffre et symbole',
             'tooltip' => '',
             'description' => '',
         ],

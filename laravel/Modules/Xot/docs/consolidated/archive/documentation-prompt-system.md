@@ -1,3 +1,11 @@
+---
+title: "Sistema di Prompt per la Documentazione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "sistema di prompt per la documentazione xot"
+---
 # Sistema di Prompt per la Documentazione
 
 ## Panoramica

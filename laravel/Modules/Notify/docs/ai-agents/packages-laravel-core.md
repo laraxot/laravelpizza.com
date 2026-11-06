@@ -1,4 +1,16 @@
-# Laravel 12 + Qualita Codice — Pacchetti Core
+---
+title: "packages laravel core"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "packages laravel core"
+issues: []
+discussions: []
+status: draft
+---
+
+# Laravel 12 + Qualita Codice: Pacchetti Core
 
 Riferimento per Laravel 12, Pest 4, PHPStan 2, Pint, Rector, Pulse, Pennant, MCP.
 
@@ -22,8 +34,7 @@ Riferimento per Laravel 12, Pest 4, PHPStan 2, Pint, Rector, Pulse, Pennant, MCP
 | laravel/mcp | 0.5.9 |
 
 ---
-
-## Laravel 12 — Principali novita
+## Laravel 12: Principali novita
 
 - PHP 8.2+ minimo, pieno supporto PHP 8.4
 - `Concurrency` namespace per pattern lottery/feature-flag
@@ -53,7 +64,7 @@ class Task extends BaseModel
 
 ---
 
-## Pest 4.4.1 — Testing
+## Pest 4.4.1: Testing
 
 ### Regola CRITICA: mai RefreshDatabase
 
@@ -141,12 +152,13 @@ XDEBUG_MODE=off ./vendor/bin/pest --coverage --min=80
 
 # Modulo specifico
 XDEBUG_MODE=off ./vendor/bin/pest Modules/Quaeris/tests
+XDEBUG_MODE=off ./vendor/bin/pest Modules/App/tests
 
 # Via composer
 composer coverage
 ```
 
-### PCOV — driver coverage
+### PCOV: driver coverage
 
 `pcov.enabled` e `xdebug.mode` sono `PHP_INI_SYSTEM`: NON modificabili con `ini_set()`.
 Usare sempre `XDEBUG_MODE=off` come variabile d'ambiente.
@@ -225,14 +237,14 @@ cd laravel
 ```
 
 **Configurazione in** `laravel/rector.php`:
-- `InlineConstructorDefaultToPropertyRector` — constructor promotion
-- `TypedPropertyFromStrictConstructorRector` — typed properties
-- `LevelSetList::UP_TO_PHP_81` — PHP 8.1 compat
-- `SetList::TYPE_DECLARATION` — aggiunge type declarations
+- `InlineConstructorDefaultToPropertyRector`: constructor promotion
+- `TypedPropertyFromStrictConstructorRector`: typed properties
+- `LevelSetList::UP_TO_PHP_81`: PHP 8.1 compat
+- `SetList::TYPE_DECLARATION`: aggiunge type declarations
 
 ---
 
-## Laravel Pennant 1.20.0 — Feature Flags
+## Laravel Pennant 1.20.0: Feature Flags
 
 ```php
 // Definizione flag
@@ -258,7 +270,7 @@ Feature::for($tenant)->toggle('premium-features');
 
 ---
 
-## Laravel Pulse 1.6.0 — Monitoring
+## Laravel Pulse 1.6.0: Monitoring
 
 Dashboard real-time su `/pulse`. Monitora:
 - Slow queries (> 1000ms)
@@ -280,7 +292,7 @@ Pulse::measure('survey.pdf.generation', function () {
 
 ---
 
-## Laravel MCP 0.5.9 — Model Context Protocol
+## Laravel MCP 0.5.9: Model Context Protocol
 
 Espone l'applicazione all'AI (Claude, ecc.) tramite MCP protocol.
 
@@ -288,6 +300,7 @@ Espone l'applicazione all'AI (Claude, ecc.) tramite MCP protocol.
 use Laravel\Mcp\Server;
 
 $server = new Server('quaeris-surveys');
+$server = new Server('this-project-surveys');
 
 // Resources (dati che l'AI puo leggere)
 $server->resource('surveys', new Resource(

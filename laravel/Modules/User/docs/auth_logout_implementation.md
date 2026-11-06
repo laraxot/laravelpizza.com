@@ -1,3 +1,11 @@
+---
+title: "Implementazione del Logout"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "implementazione del logout user"
+---
 # Implementazione del Logout 
 
 ## Indice
@@ -63,7 +71,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 ```
 
-Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di Quaeris per la gestione della localizzazione.
+Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di SaluteOra per la gestione della localizzazione.
 
 ## Componenti Filament
 
@@ -91,7 +99,7 @@ Il template Blade per il logout deve utilizzare i componenti Filament per garant
 
 ## Chiavi di Traduzione
 
-Le chiavi di traduzione per il logout devono seguire la struttura gerarchica definita nelle best practices di Quaeris:
+Le chiavi di traduzione per il logout devono seguire la struttura gerarchica definita nelle best practices di SaluteOra:
 
 ```php
 'logout' => [

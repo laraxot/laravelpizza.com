@@ -1,3 +1,11 @@
+---
+title: "Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, notifications]
+qmd: "errori comuni da evitare nelle implementazioni di moduli saluteora notify"
+---
 # Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra
 
 ## Errori di Struttura Directory e Namespace

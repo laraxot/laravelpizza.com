@@ -1,3 +1,14 @@
+---
+title: "service provider framework"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "service provider framework"
+issues: []
+discussions: []
+---
+
 # Service Provider nel Framework PTVX
 
 ## Panoramica

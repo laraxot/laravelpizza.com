@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
+use Filament\Forms\Components\Builder;
 use Modules\Cms\Filament\Fields\LeftSidebarContent;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 test('LeftSidebarContent creates builder with empty blocks', function () {
     $result = LeftSidebarContent::make('test_field', 'form');
 
-    // Note: getBlocks() may fail due to container initialization, so we test differently
-    // We just verify the builder was created
+    // getBlocks() puo' fallire per l'inizializzazione del container: si verifica solo la creazione del builder.
+    Assert::assertSame('test_field', $result->getName());
 });
 
 test('LeftSidebarContent has correct field name', function () {

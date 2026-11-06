@@ -14,4 +14,9 @@ return [
             'label' => 'summary',
         ],
     ],
+    'actions' => [
+        'submit' => [
+            'label' => 'Invia',
+        ],
+    ],
 ];

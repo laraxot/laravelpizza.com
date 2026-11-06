@@ -1,3 +1,11 @@
+---
+title: "Analisi del Pacchetto Filament Title With Slug"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "analisi del pacchetto filament title with slug notify"
+---
 # Analisi del Pacchetto Filament Title With Slug
 
 ## Panoramica

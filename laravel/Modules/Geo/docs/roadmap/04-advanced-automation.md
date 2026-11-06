@@ -1,3 +1,16 @@
+---
+title: "04 advanced automation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "04 advanced automation"
+issues: []
+discussions: []
+status: superseded
+superseded_by: advanced-automation.md
+---
+
 
 
 

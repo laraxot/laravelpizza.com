@@ -1,3 +1,15 @@
+---
+title: "AGENTS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "AGENTS"
+issues: []
+discussions: []
+status: draft
+---
+
 # Project Agents (Modular)
 
 This file provides guidance and memory for Codex CLI. The content has been split into modular files for better efficiency.
@@ -75,18 +87,10 @@ docs/
 - [Task: nfr-assess](./.agents/docs/main-rules/task-nfr-assess.md)
 
 ---
+
 **See also:**
 - [CLAUDE.md](./CLAUDE.md)
 - [QWEN.md](./QWEN.md)
 - [GEMINI.md](./GEMINI.md)
 
 *Ultimo aggiornamento: Aprile 2026*
-
-
-<claude-mem-context>
-# Memory Context
-
-# [base_fixcity_fila5] recent context, 2026-04-15 10:19pm GMT+2
-
-No previous sessions found.
-</claude-mem-context>

@@ -1,3 +1,15 @@
+---
+title: "phpstans"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstans"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Errors Roadmap - Notify Module
 
 **Modulo**: Notify  
@@ -5,7 +17,6 @@
 **Status**: 🧘 **IN ANALISI**
 
 ---
-
 ## 📊 Errori Identificati
 
 ### Totale Errori: 4

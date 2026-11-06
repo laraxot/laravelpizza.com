@@ -1,3 +1,11 @@
+---
+title: "PHPStan: FFMpeg Export save()"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media]
+qmd: "phpstan: ffmpeg export save() media"
+---
 # PHPStan: FFMpeg Export save()
 
 ## Contesto

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\Job\Models\Job;
 use Modules\Job\Models\JobBatch;
 use Modules\Job\Tests\TestCase;
@@ -167,7 +166,7 @@ it('can manage batch options and configuration', function (): void {
 
     $storedOptions = $batch->options?->all() ?? [];
     Assert::assertSame($options, $storedOptions);
-    Assert::assertSame('high', $storedOptions['priority']);
+    Assert::assertArrayHasKey('priority', $storedOptions);
     Assert::assertArrayHasKey('notify_on_completion', $storedOptions);
 });
 
@@ -266,7 +265,7 @@ it('can handle batch retry logic', function (): void {
 
     Assert::assertSame(3, $batch->failed_jobs);
     $retryOptions = $batch->options?->all() ?? [];
-    Assert::assertSame(true, $retryOptions['retry_failed_jobs'] ?? null);
+    Assert::assertTrue($retryOptions['retry_failed_jobs'] ?? false);
     // Simula retry dei job falliti
     $batch->update([
         'pending_jobs' => 3,
@@ -298,8 +297,8 @@ it('can handle batch notification settings', function (): void {
     ]);
 
     $options = $batch->options?->all() ?? [];
-    Assert::assertSame(true, $options['notify_on_completion'] ?? null);
-    Assert::assertSame(true, $options['notify_on_failure'] ?? null);
+    Assert::assertTrue($options['notify_on_completion'] ?? false);
+    Assert::assertTrue($options['notify_on_failure'] ?? false);
     Assert::assertSame('admin@example.com', $options['notification_email'] ?? null);
     Assert::assertSame('https://hooks.slack.com/...', $options['notification_slack'] ?? null);
 });

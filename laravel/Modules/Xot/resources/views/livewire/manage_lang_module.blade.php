@@ -1,14 +1,13 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div>
     <table class="table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Size</th>
+                <th>{{ __('xot::manage_lang_module.fields.name.label') }}</th>
+                <th>{{ __('xot::manage_lang_module.fields.size.label') }}</th>
                 <th></th>
             </tr>
         </thead>
@@ -18,7 +17,7 @@ declare(strict_types=1);
                     <td>{{ $file->getFilenameWithoutExtension() }}</td>
                     <td>{{ $file->getSize() }}</td>
                     <td><button wire:click="edit('{{ $file->getFilenameWithoutExtension() }}')"
-                            class="btn btn-primary">Modifica</button></td>
+                            class="btn btn-primary">{{ __('xot::manage_lang_module.actions.edit.label') }}</button></td>
                 </tr>
             @endforeach
         <tbody>

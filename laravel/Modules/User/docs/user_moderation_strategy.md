@@ -1,7 +1,18 @@
+---
+title: "User Moderation Strategy"
+module: user
+type: product
+tags: [product, modules, user]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+qmd: "user moderation strategy user"
+---
+
 # User Moderation Strategy
 
 ## Overview
-In the Quaeris system, and across various projects utilizing the `User` module, users can have different roles or types, each potentially requiring specific verification or moderation processes before full access to platform functionalities is granted. This document analyzes the integration of a unified moderation strategy within the `User` module, ensuring it remains generic and applicable to all user types, mirroring the approach of a unified registration wizard.
+In the SaluteOra system, and across various projects utilizing the `User` module, users can have different roles or types, each potentially requiring specific verification or moderation processes before full access to platform functionalities is granted. This document analyzes the integration of a unified moderation strategy within the `User` module, ensuring it remains generic and applicable to all user types, mirroring the approach of a unified registration wizard.
 
 ## Rationale for Moderation within User Module
 Given that the `User` module serves as the central hub for user management across multiple projects, it is logical to embed moderation functionalities within this module. This approach ensures:
@@ -163,5 +174,3 @@ As noted, moderation for certain user types might be more labor-intensive. To ha
 Integrating a unified moderation strategy within the `User` module aligns with the principle of a centralized user management system applicable across various projects. By leveraging configurable workflows, Filament for admin interfaces, an event-driven approach, and proper state management with `spatie/laravel-model-states`, we can manage the moderation of all user types efficiently while accommodating varying levels of complexity. This approach ensures consistency with the unified registration wizard, maintains project-agnostic code, and supports scalability with an estimated effort distribution as outlined above.
 
 **Documented on**: 2025-05-16
-
-See canonical documentation: ../../../Themes/docs/shared-components/user_moderation_strategy.md

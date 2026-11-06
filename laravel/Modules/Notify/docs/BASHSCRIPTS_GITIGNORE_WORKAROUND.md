@@ -1,3 +1,15 @@
+---
+title: "BASHSCRIPTS GITIGNORE WORKAROUND"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "BASHSCRIPTS GITIGNORE WORKAROUND"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚨 CRITICAL: bashscripts/ in .gitignore
 
 > **Last Updated**: 2026-03-13  
@@ -5,7 +17,6 @@
 > **Priority**: CRITICAL
 
 ---
-
 ## 🎯 Problem
 
 **bashscripts/ è nel .gitignore del repository principale**
@@ -22,7 +33,7 @@ Questo significa che:
 ### Opzione 1: Commit Forzato
 
 ```bash
-cd /var/www/_bases/base_fixcity_fila5
+cd /var/www/_bases/base_ptv_fila5
 
 # Aggiungi forzatamente bashscripts
 git add -f bashscripts/git/subtrees/sync_remote_repo.sh
@@ -136,7 +147,7 @@ git commit -m "fix: Description of fix"
 git push origin dev
 
 # 6. Monitora
-gh run list --repo laraxot/base_fixcity_fila5
+gh run list --repo laraxot/base_ptv_fila5
 ```
 
 ---
@@ -146,6 +157,7 @@ gh run list --repo laraxot/base_fixcity_fila5
 - [Multi-Agent Collaboration Guide](MULTI_AGENT_COLLABORATION_GUIDE.md)
 - [GitHub Sync Rule](GITHUB_SYNC_RULE.md)
 - [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
+- [AI Rules](../../../../.qwen/AI_RULES_CRITICAL.md)
 
 ---
 

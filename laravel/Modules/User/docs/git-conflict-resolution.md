@@ -1,3 +1,29 @@
+---
+title: "Gestione Avanzata dei Conflitti Git"
+type: concept
+tags: [git, conflict, resolution]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git-conflict-resolution gestione avanzata dei conflitti git"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: superseded
+superseded_by: git-resolution.md
+---
+
 # Gestione Avanzata dei Conflitti Git
 
 ## Approccio Sicuro alla Risoluzione dei Conflitti

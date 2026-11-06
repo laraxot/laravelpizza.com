@@ -1,3 +1,11 @@
+---
+title: "Da Proprietà a Metodi in Laravel 12"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "da proprietà a metodi in laravel 12 xot"
+---
 # Da Proprietà a Metodi in Laravel 12
 
 ## Evoluzione del Pattern nei Modelli Eloquent

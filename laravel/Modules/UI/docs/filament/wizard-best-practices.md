@@ -1,3 +1,15 @@
+---
+title: "wizard best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "wizard best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices per i Wizard in Filament
 
 ## Regola Fondamentale: Estrazione dei Metodi per gli Step

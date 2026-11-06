@@ -1,3 +1,28 @@
+---
+title: "Quality Tools Usage (User)"
+type: concept
+tags: [quality, tools]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality-tools quality tools usage (user)"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Quality Tools Usage (User)
 
 Module-specific guidance for PHPMD, PHP-CS-Fixer, Laravel Pint, Psalm, PHPQA, actionlint. Canonical reference: `Modules/Xot/docs/QUALITY_TOOLS.md`.

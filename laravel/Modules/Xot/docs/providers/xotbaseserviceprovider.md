@@ -1,7 +1,10 @@
 ---
-description:
-globs:
-alwaysApply: false
+title: "XotBaseServiceProvider"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, providers]
+qmd: "xotbaseserviceprovider xot"
 ---
 # XotBaseServiceProvider
 

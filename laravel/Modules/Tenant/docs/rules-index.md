@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Rules Index"
+module: "Tenant"
+type: rule
+tags: [rules, index]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "rules index"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Rules Index
 
 This module follows the global Laraxot coding standards.

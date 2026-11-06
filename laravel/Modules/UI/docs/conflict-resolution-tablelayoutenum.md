@@ -1,3 +1,15 @@
+---
+title: "conflict resolution tablelayoutenum"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution tablelayoutenum"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitto TableLayoutEnum
 
 ## Problema Identificato

@@ -1,3 +1,15 @@
+---
+title: "ottimizzazioni gdpr"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ottimizzazioni gdpr"
+issues: []
+discussions: []
+status: draft
+---
+
 # Ottimizzazioni Modulo Gdpr
 
 ## Principi DRY + KISS Applicati

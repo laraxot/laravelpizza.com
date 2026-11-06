@@ -1,3 +1,11 @@
+---
+title: "Migrazione da Services ad Actions"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "migrazione da services ad actions xot"
+---
 # Migrazione da Services ad Actions
 
 ## Architettura Precedente: Services

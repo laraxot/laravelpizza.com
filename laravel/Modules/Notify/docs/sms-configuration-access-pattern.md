@@ -1,3 +1,15 @@
+---
+title: "sms configuration access pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms configuration access pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern di Accesso alla Configurazione SMS
 
 ## Problema Identificato
@@ -41,6 +53,7 @@ $timeout = (int) config('sms.timeout', 30);
 2. **Modularità**: Ogni modulo gestisce le proprie configurazioni
 3. **Manutenibilità**: Facilita la manutenzione avendo un'unica fonte di verità per le configurazioni
 4. **Standardizzazione**: Segue la struttura standardizzata documentata in [SMS_CONFIG_STRUCTURE.md](./SMS_CONFIG_STRUCTURE.md)
+4. **Standardizzazione**: Segue la struttura standardizzata documentata in [SMS_CONFIG_STRUCTURE.md](./sms_config_structure.md)
 
 ## Checklist di Verifica
 
@@ -57,3 +70,6 @@ Per ogni azione SMS, verificare che:
 - [Struttura della Configurazione SMS](./SMS_CONFIG_STRUCTURE.md)
 - [Requisiti di Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
 - [Pattern Factory per SMS](./SMS_ACTION_FACTORY_ANALYSIS.md)
+- [Struttura della Configurazione SMS](./sms_config_structure.md)
+- [Requisiti di Configurazione Netfun](./netfun_config_requirements.md)
+- [Pattern Factory per SMS](./sms_action_factory_analysis.md)

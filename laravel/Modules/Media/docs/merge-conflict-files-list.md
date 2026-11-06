@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Merge Conflict Files List"
+module: "Media"
+type: concept
+tags: [merge, conflict, files, list]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "merge conflict files list"
+related:
+  - "./webm.md"
+status: draft
+---
 # Merge Conflict Files List
 
 This file contains a comprehensive list of files with merge conflict markers (`<<<< HEAD` or `<<<< .merge_file`) that need to be resolved.
@@ -79,4 +93,5 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ---
 *Generated on: $(date)
 *Total files: 96
+---
 *Status: Pending resolution*

@@ -60,6 +60,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Venue extends BaseModel
 {
     use GeoTrait;
+    /** @use HasAddress<Venue> */
     use HasAddress {
         GeoTrait::getFullAddressAttribute insteadof HasAddress;
     }

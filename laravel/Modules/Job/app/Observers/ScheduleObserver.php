@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see HusamTariq\FilamentDatabaseSchedule
  */
 
 namespace Modules\Job\Observers;
 
+use Modules\Job\Actions\ClearScheduleCacheAction;
 use Modules\Job\Enums\Status;
 use Modules\Job\Models\Schedule;
-use Modules\Job\Services\ScheduleService;
 
 class ScheduleObserver
 {
@@ -63,10 +62,7 @@ class ScheduleObserver
     protected function clearCache(): void
     {
         if (config('job::cache.enabled')) {
-            $scheduleService = app(ScheduleService::class);
-            if ($scheduleService !== null) {
-                $scheduleService->clearCache();
-            }
+            app(ClearScheduleCacheAction::class)->execute();
         }
     }
 }

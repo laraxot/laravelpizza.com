@@ -1,3 +1,14 @@
+---
+title: "pause work"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pause work"
+issues: []
+discussions: []
+---
+
 <purpose>
 Create `.continue-here.md` handoff file to preserve complete work state across sessions. Enables seamless resumption with full context restoration.
 </purpose>
@@ -38,6 +49,14 @@ Ask user for clarifications if needed via conversational questions.
 
 ```markdown
 ---
+title: "pause work"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pause work"
+issues: []
+discussions: []
 phase: XX-name
 task: 3
 total_tasks: 7

@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
+use Modules\Xot\Tests\TestCase;
 use Modules\Xot\ValueObjects\PhoneValueObject;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('accepts valid phone', function (): void {
     $phone = '+11234567890';
@@ -12,5 +13,4 @@ it('accepts valid phone', function (): void {
     Assert::assertSame($phone, $vo->toString());
 });
 
-it('throws on invalid phone', function (): void {
-});
+it('throws on invalid phone')->todo();

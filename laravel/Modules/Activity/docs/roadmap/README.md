@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Roadmap"
+type: index
+status: draft
+updated: 2026-10-23
+tags: [docs, activity, roadmap]
+qmd: "activity module - roadmap activity"
+---
 # Activity Module - Roadmap
 
 ## 🎯 Module Purpose
@@ -34,6 +42,12 @@ The Activity module provides comprehensive audit trail and event sourcing capabi
 - [ ] Custom event types and handlers
 - [ ] Activity retention policies
 - [ ] Audit report generation
+
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](../readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](..) |
 
 ### Phase 4: Advanced Analytics (Q4 2026)
 - [ ] Machine learning insights

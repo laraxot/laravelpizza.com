@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Package Dependency Chaos Map (Tenant)"
+module: "Tenant"
+type: concept
+tags: [package, dependency, chaos, map]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "package dependency chaos map"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Package Dependency Chaos Map (Tenant)
 
 ## Catalogo completo

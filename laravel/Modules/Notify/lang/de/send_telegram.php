@@ -69,4 +69,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'Telegram-Versand testen',
+            'description' => 'Verwenden Sie dieses Formular, um den Versand von Telegram-Nachrichten über verschiedene Anbieter zu testen.',
+        ],
+    ],
 ];

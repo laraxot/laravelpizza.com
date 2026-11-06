@@ -1,3 +1,15 @@
+---
+title: "interface structure clarification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "interface structure clarification"
+issues: []
+discussions: []
+status: draft
+---
+
 # Chiarimento sulla Struttura delle Interfacce
 
 ## Struttura Corretta per le Interfacce SMS

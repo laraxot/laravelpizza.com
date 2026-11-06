@@ -1,3 +1,14 @@
+---
+title: "Register Type Test Implementation - Modulo Cms"
+type: note
+status: draft
+created: 2026-01-27
+updated: 2026-10-18
+module: Cms
+tags: [docs, cms, tests]
+qmd: "register type test implementation - modulo cms cms"
+---
+
 # Register Type Test Implementation - Modulo Cms
 
 ## 🎯 Overview
@@ -184,7 +195,7 @@ test('register type page renders correctly')
     ->with('userTypes')
     ->covers(function (string $type, bool $isDoctor, string $heading): void {
         $response = get("/it/auth/{$type}/register");
-
+        
         expect($response)
             ->toBeSuccessful()
             ->and($response->getContent())
@@ -209,7 +220,7 @@ test('sets correct isDoctor flag')
 ```php
 test('handles invalid user type gracefully', function (): void {
     $response = get('/it/auth/invalid-type/register');
-
+    
     expect($response->status())->toBe(404);
 });
 ```
@@ -247,10 +258,10 @@ expect()->extend('toHaveDynamicHeading', function (string $type) {
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [RegistrationWidget Documentation](../../../user/docs/filament/widgets/registration-widget.md)
+- [RegistrationWidget Documentation](../../../User/docs/filament/widgets/registration-widget.md)
 - [Folio Pages Implementation](../folio-pages.md)
 - [Login Test Implementation](./login-test-implementation.md)
-- [Test Organization Rules](../../../../docs/test-organization-rules.md)
+- [Test Organization Rules](../../../docs/test-organization-rules.md)
 
 ### File Correlati
 - **Page**: `/Themes/One/resources/views/pages/auth/[type]/register.blade.php`
@@ -271,5 +282,6 @@ expect()->extend('toHaveDynamicHeading', function (string $type) {
 3. **Database Seeding**: Seed data per test realistici
 4. **Monitoring**: Metriche test in CI/CD
 
+*Ultimo aggiornamento: Gennaio 2025*
 *Versione PestPHP: 2.x*
-*Compatibilità Laravel: 11.x*
+*Compatibilità Laravel: 11.x* 

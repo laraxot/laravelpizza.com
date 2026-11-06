@@ -1,3 +1,15 @@
+---
+title: "optimization recommendations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "optimization recommendations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Raccomandazioni di Ottimizzazione - Modulo Notify
 
 ## 🎯 Stato Attuale e Problemi Critici
@@ -12,7 +24,8 @@
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a appunti-filters.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -241,7 +254,8 @@ php artisan notify:benchmark
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a appunti-filters.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 

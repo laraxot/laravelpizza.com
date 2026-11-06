@@ -8,8 +8,9 @@ qmd: "Seo PHPStan MetatagData SuppressWarnings phpDoc parseError"
 issues: []
 discussions: []
 related:
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
-  - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md
+  - ../../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
+  - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md  # target mancante, verificato 2026-10-08
+status: active
 ---
 
 # Seo Module — PHPStan Type Compliance

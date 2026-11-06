@@ -1,3 +1,15 @@
+---
+title: "model classification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "model classification"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module - Model Classification
 
 ## Business-Relevant Models (Require Factories/Seeders)
@@ -20,7 +32,8 @@
 - **GeoTrait** - Geographical functionality trait
 - **HasAddress** - Address relationship trait
 - **HasPlaceTrait** - Place functionality trait
-- **GeographicalScopes** - Geographical query scopes
+
+`GeographicalScopes` non esiste piu' (zero chiamanti, sostituito da `GeoTrait::scopeWithDistance`, vedi [decision-log](./decision-log.md)).
 
 ### 📊 Static Data Models
 - **GeoJsonModel** - JSON-based geographical data

@@ -1,3 +1,15 @@
+---
+title: "svg asset location"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "svg asset location"
+issues: []
+discussions: []
+status: draft
+---
+
 # SVG Asset Location Rule
 
 ## Enforced Policy

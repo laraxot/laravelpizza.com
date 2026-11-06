@@ -1,20 +1,20 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\RegisterOauthUserAction;
 use Modules\User\Events\Registered;
 use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('RegisterOauthUserAction', function (): void {
     /**
-     * @param array<string, mixed> $attributes
+     * @param  array<string, mixed>  $attributes
      */
     $getMockUser = function (array $attributes = []): SocialiteUserContract {
         /** @var array<string, mixed> $normalizedAttributes */

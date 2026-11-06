@@ -16,4 +16,12 @@ use Modules\Xot\Filament\Traits\TransTrait;
 abstract class XotBaseStatsOverviewWidget extends FilamentStatsOverviewWidget
 {
     use TransTrait;
+
+    /*
+     * Filament aggiorna gli StatsOverview ogni 5 secondi di default: ogni scheda aperta riesegue i conteggi
+     * del widget a ogni giro (per `Quaeris\StatsOverviewWidget`: 4 aggregati sulla tabella Lime piu' un
+     * caricamento di SurveyPdf). Come in XotBaseChartWidget il polling e' spento; chi vuole un contatore
+     * "live" lo dichiara nella propria classe.
+     */
+    protected ?string $pollingInterval = null;
 }

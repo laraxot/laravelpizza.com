@@ -1,3 +1,15 @@
+---
+title: "naming conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "naming conventions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni di Naming
 
 ## Regole Generali
@@ -56,7 +68,7 @@ public function handleHTTPRequest(): void
 
 # Convenzioni di Naming per le Azioni di Notifica
 
-Questo documento definisce le convenzioni di naming standardizzate per le azioni di notifica nel sistema Quaeris, supportando la risoluzione dinamica delle classi implementata nei factory.
+Questo documento definisce le convenzioni di naming standardizzate per le azioni di notifica nel sistema SaluteOra, supportando la risoluzione dinamica delle classi implementata nei factory.
 
 ## Pattern di Naming
 

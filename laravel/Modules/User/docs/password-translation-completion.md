@@ -1,3 +1,11 @@
+---
+title: "Completamento Traduzioni Password - 2025"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "completamento traduzioni password - 2025 user"
+---
 # Completamento Traduzioni Password - 2025
 
 ## Problema Identificato
@@ -103,8 +111,10 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 
 ## Collegamenti
 
-- [Documentazione Modulo User](../readme.md)
-- [Best Practices Traduzioni](../../lang/docs/translation_standards.md)
+- [Documentazione Modulo User](../README.md)
+- [Best Practices Traduzioni](../../Lang/docs/translation_standards.md)
+- [Documentazione Modulo User](../README.md)
+- [Best Practices Traduzioni](../../Lang/docs/translation_standards.md)
 - [Sicurezza Password](../security/password_policies.md)
 
 ## Note per il Futuro
@@ -115,4 +125,21 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 4. **Usare icone e colori appropriati** per l'UX
 
 ---
+*Ultimo aggiornamento: 2025-01-06*
 *Autore: Sistema di Audit Traduzioni*
+---
+module: theme
+topic: password-translation-completion-2025
+canonical: ../../../Themes/docs/shared-components/password-translation-completion-2025.md
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/password-translation-completion-2025.md

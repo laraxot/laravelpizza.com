@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Pages;
 
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Artisan;
+use InvalidArgumentException;
+use Modules\Job\Actions\Console\AssertAllowedArtisanCommandAction;
 use Modules\Job\Filament\Widgets\ClockWidget;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
 class JobStatus extends XotBasePage
 {
+    use SuperAdminOnlyTrait;
+
     public string $out = '';
 
     protected string $view = 'job::filament.pages.job-status';
@@ -21,11 +27,38 @@ class JobStatus extends XotBasePage
         ];
     }
 
+    /**
+     * Esegue solo i comandi esposti dai pulsanti (match esatto, nessun argomento libero).
+     *
+     * canAccess() protegge l'apertura della pagina, non le chiamate Livewire gia' montate:
+     * l'autorizzazione va quindi ripetuta qui.
+     *
+     * @throws AuthorizationException se l'utente non e' super-admin
+     */
     public function artisan(string $cmd): void
     {
+        if (! static::canAccess()) {
+            throw new AuthorizationException();
+        }
+
         $this->out = '';
+
+        try {
+            app(AssertAllowedArtisanCommandAction::class)->execute($cmd, $this->getAllowedCommands());
+        } catch (InvalidArgumentException) {
+            return;
+        }
+
         Artisan::call($cmd);
         $this->out .= Artisan::output();
+    }
+
+    /**
+     * @return list<string>
+     */
+    public function getAllowedCommands(): array
+    {
+        return array_values(array_map(static fn (object $act): string => $act->name, $this->getActs()));
     }
 
     public function getViewData(): array
@@ -36,7 +69,7 @@ class JobStatus extends XotBasePage
     }
 
     /**
-     * @return array<int, object>
+     * @return array<int, object{name: string, label: string}>
      */
     public function getActs(): array
     {

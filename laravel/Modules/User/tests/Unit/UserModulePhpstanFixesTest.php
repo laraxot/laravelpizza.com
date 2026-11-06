@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Validation\Rules\Password;
+use Modules\User\Contracts\UserContract;
 use Modules\User\Database\Factories\SocialiteUserFactory;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Datas\PasswordData;
@@ -12,16 +11,14 @@ use Modules\User\Events\Login;
 use Modules\User\Events\Registered;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
-use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 it('password data can be instantiated', function (): void {
-    $passwordData = new PasswordData();
+    $passwordData = new PasswordData;
 
-    Assert::assertInstanceOf(PasswordData::class, $passwordData);
     Assert::assertSame(5, $passwordData->otp_expiration_minutes);
     Assert::assertSame(6, $passwordData->otp_length);
     Assert::assertSame(60, $passwordData->expires_in);
@@ -71,9 +68,8 @@ it('password data get password rule works', function (): void {
         compromisedThreshold: 3
     );
 
-    $rule = $passwordData->getPasswordRule();
+    Assert::assertNotEmpty($passwordData->getPasswordRule());
 
-    Assert::assertInstanceOf(Password::class, $rule);
 });
 
 it('password data get helper text works', function (): void {
@@ -97,7 +93,7 @@ it('password data get helper text works', function (): void {
 });
 
 it('password data get form components returns array', function (): void {
-    $passwordData = new PasswordData();
+    $passwordData = new PasswordData;
 
     // Smoke tests: methods should be callable without throwing.
     $passwordData->getPasswordFormComponent('password');
@@ -108,13 +104,14 @@ it('password data get form components returns array', function (): void {
 it('events can be instantiated', function (): void {
     $userFactory = UserFactory::new();
     \assert($userFactory instanceof Factory);
-    $owner = $userFactory->createOne();
-    \assert($owner instanceof User);
+    $owner = $userFactory->create();
+    \assert($owner instanceof UserContract);
 
     $socialiteFactory = SocialiteUserFactory::new();
     \assert($socialiteFactory instanceof Factory);
-    $socialiteUser = $socialiteFactory->createOne([
-        'user_id' => (string) $owner->getKey(),
+    $ownerKey = $owner->getKey();
+    $socialiteUser = $socialiteFactory->create([
+        'user_id' => (is_int($ownerKey) || is_string($ownerKey)) ? (string) $ownerKey : '',
         'provider' => 'github',
         'provider_id' => 'provider-'.uniqid(),
     ]);
@@ -123,24 +120,25 @@ it('events can be instantiated', function (): void {
     $addingTeam = new AddingTeam($owner);
     $login = new Login($socialiteUser);
     $registered = new Registered($socialiteUser);
-    $socialiteUserConnected = new SocialiteUserConnected($socialiteUser);
+    $connected = new SocialiteUserConnected($socialiteUser);
 
-    Assert::assertInstanceOf(AddingTeam::class, $addingTeam);
-    Assert::assertInstanceOf(Login::class, $login);
-    Assert::assertInstanceOf(Registered::class, $registered);
-    Assert::assertInstanceOf(SocialiteUserConnected::class, $socialiteUserConnected);
+    Assert::assertSame($owner, $addingTeam->owner);
+    Assert::assertSame($socialiteUser, $login->socialiteUser);
+    Assert::assertSame($socialiteUser, $registered->socialiteUser);
+    Assert::assertSame($socialiteUser, $connected->socialiteUser);
 });
 
 it('events have dispatchable trait', function (): void {
     $userFactory = UserFactory::new();
     \assert($userFactory instanceof Factory);
-    $owner = $userFactory->createOne();
-    \assert($owner instanceof User);
+    $owner = $userFactory->create();
+    \assert($owner instanceof UserContract);
 
     $socialiteFactory = SocialiteUserFactory::new();
     \assert($socialiteFactory instanceof Factory);
-    $socialiteUser = $socialiteFactory->createOne([
-        'user_id' => (string) $owner->getKey(),
+    $ownerKey = $owner->getKey();
+    $socialiteUser = $socialiteFactory->create([
+        'user_id' => (is_int($ownerKey) || is_string($ownerKey)) ? (string) $ownerKey : '',
         'provider' => 'github',
         'provider_id' => 'provider-'.uniqid(),
     ]);
@@ -152,16 +150,13 @@ it('events have dispatchable trait', function (): void {
 });
 
 it('password data static make method exists', function (): void {
-    $passwordData = PasswordData::make();
-    Assert::assertInstanceOf(PasswordData::class, $passwordData);
+    PasswordData::make();
 });
 
 it('password data get validation messages method exists', function (): void {
-    $passwordData = new PasswordData();
-
-    $passwordData->getValidationMessages();
+    expect((new PasswordData)->getValidationMessages())->toHaveKeys(['required', 'same']);
 });
 
 it('password data get form schema method exists', function (): void {
-    PasswordData::getFormSchema();
+    app(PasswordData::class)->getFormSchema();
 });

@@ -1,3 +1,14 @@
+---
+title: "links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "links"
+issues: []
+discussions: []
+---
+
 If you need to translate just the text and want to build your own UI - Spatie package is a good choice.
 If you need to translate the routes - Mcamara package
 If you need to translate just the text but don't want to build your UI - You can use Nikaia package or MohmmedAshraf package

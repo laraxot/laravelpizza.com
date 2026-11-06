@@ -1,3 +1,14 @@
+---
+title: "plan phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "plan phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Create executable phase prompts (PLAN.md files) for a roadmap phase with integrated research and verification. Default flow: Research (if needed) -> Plan -> Verify -> Done. Orchestrates gsd-phase-researcher, gsd-planner, and gsd-plan-checker agents with a revision loop (max 3 iterations).
 </purpose>
@@ -122,6 +133,14 @@ Generating CONTEXT.md from requirements...
 
 ---
 
+title: "plan phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "plan phase"
+issues: []
+discussions: []
 *Phase: XX-name*
 *Context gathered: [date] via PRD Express Path*
 ```

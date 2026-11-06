@@ -11,10 +11,11 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../docs/wiki/bmad/architecture.md
-  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
+  - ../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../docs/wiki/bmad/architecture.md
+  - ../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../docs/wiki/concepts/ai-harness-module-discipline.md
+status: draft
 ---
 
 # Gdpr Module LLM Wiki
@@ -24,7 +25,7 @@ related:
 - [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
 - [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md)
 - [frontmatter + GitHub](../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
-- [ai-harness-module-discipline](../../../docs/wiki/concepts/ai-harness-module-discipline.md)
+- ai-harness-module-discipline _(riferimento non presente nel repository, verificato 2026-10-14)_
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
@@ -34,18 +35,18 @@ Indice operativo del wiki Gdpr.
 
 - [concepts/](./concepts/): Pattern architetturali e metodologie GDPR.
 - [entities/](./entities/): Modelli e componenti chiave.
-- [sources/](./sources/): Dati di ricerca e link esterni.
+- sources/ _(riferimento non presente nel repository, verificato 2026-10-14)_: Dati di ricerca e link esterni.
 - [comparisons/](./comparisons/): Implementazioni alternative.
 - [decisions/](./decisions/): ADL (Architectural Decision Log).
 - [troubleshooting/](./troubleshooting/): Problemi noti e soluzioni.
-- [_archive/](./_archive/): Documentazione legacy.
+- _archive/ _(riferimento non presente nel repository, verificato 2026-10-14)_: Documentazione legacy.
 - [_templates/](./_templates/): Template standard.
 
 ## Regole collegate
 
 - [forbidden-folders-rule](../../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
-- [laravel-security-audit](../../../../docs/wiki/concepts/laravel-security-audit.md): Audit sicurezza Laravel.
+- laravel-security-audit _(riferimento non presente nel repository, verificato 2026-10-14)_: Audit sicurezza Laravel.
 
 ## Scopo Gdpr Module
 
@@ -56,18 +57,19 @@ Gestione conformità GDPR, privacy policy, consensi utente e cookie.
 | Pagina | Tipo | Argomento | Data |
 |--------|------|-----------|------|
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
+| [registration-account-lifecycle](./concepts/registration-account-lifecycle.md) | Concept | Confine Gdpr/User/tema per registrazione, revoche e disiscrizione | 2026-10-14 |
 
 ## Best Practices
 
-- Usare Actions per privacy logic (vedi [actions-over-services-governance](../../../../docs/wiki/concepts/actions-over-services-governance.md))
-- Implementare `casts()` method non `$casts` property (vedi [model-casts-phpstan](../../../../docs/wiki/concepts/model-casts-phpstan.md))
-- Usare Enums per stati consenso (vedi [laravel-enums](../../../../docs/wiki/concepts/laravel-enums.md))
+- Usare Actions per privacy logic (vedi actions-over-services-governance _(riferimento non presente nel repository, verificato 2026-10-14)_)
+- Implementare `casts()` method non `$casts` property (vedi model-casts-phpstan _(riferimento non presente nel repository, verificato 2026-10-14)_)
+- Usare Enums per stati consenso (vedi laravel-enums _(riferimento non presente nel repository, verificato 2026-10-14)_)
 
 ## Bad Practices
 
-- NON creare Service classes - usare Actions (vedi [actions-over-services-governance](../../../../docs/wiki/concepts/actions-over-services-governance.md))
+- NON creare Service classes - usare Actions (vedi actions-over-services-governance _(riferimento non presente nel repository, verificato 2026-10-14)_)
 - NON usare `dehydrated(false)` nei trait - blocca salvataggio (vedi Geo CoordinatePicker fix)
-- NON hardcodare privacy text - usare translation files (vedi [laravel-localization](../../../../docs/wiki/concepts/laravel-localization.md))
+- NON hardcodare privacy text - usare translation files (vedi laravel-localization _(riferimento non presente nel repository, verificato 2026-10-14)_)
 
 ## False Friends
 

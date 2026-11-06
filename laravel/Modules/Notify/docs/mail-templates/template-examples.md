@@ -1,3 +1,15 @@
+---
+title: "template examples"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "template examples"
+issues: []
+discussions: []
+status: draft
+---
+
 # Esempi di Template Email
 
 ## 1. Email di Benvenuto

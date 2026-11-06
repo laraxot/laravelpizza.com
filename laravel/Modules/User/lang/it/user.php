@@ -219,6 +219,7 @@ return [
             'tooltip' => 'Data verifica email',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'email_verified_at',
         ],
         'provider' => [
             'label' => 'Provider',
@@ -340,6 +341,30 @@ return [
             'helper_text' => 'ente',
             'description' => 'ente',
         ],
+        'state' => [
+            'label' => 'state',
+        ],
+        'user' => [
+            'label' => 'Utente',
+        ],
+        'device' => [
+            'label' => 'device',
+            'placeholder' => 'device',
+            'helper_text' => 'device',
+            'description' => 'device',
+        ],
+        'created_from' => [
+            'label' => 'created_from',
+            'placeholder' => 'created_from',
+            'helper_text' => 'created_from',
+            'description' => 'created_from',
+        ],
+        'created_until' => [
+            'label' => 'created_until',
+            'placeholder' => 'created_until',
+            'helper_text' => 'created_until',
+            'description' => 'created_until',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -396,6 +421,11 @@ return [
             'label' => 'Collega',
             'icon' => 'heroicon-o-link',
             'tooltip' => 'Collega record',
+        ],
+        'attach_role' => [
+            'label' => 'Assegna Ruolo',
+            'icon' => 'heroicon-o-link',
+            'tooltip' => 'Assegna un ruolo all\'utente',
         ],
         'detach' => [
             'label' => 'Scollega',
@@ -490,6 +520,16 @@ return [
             'icon' => 'createAnother',
             'label' => 'createAnother',
         ],
+        'resetColumnManager' => [
+            'tooltip' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
+        ],
+        'removeAllFilters' => [
+            'label' => 'removeAllFilters',
+            'icon' => 'removeAllFilters',
+            'tooltip' => 'removeAllFilters',
+        ],
     ],
     'messages' => [
         'created' => 'Utente creato con successo',
@@ -571,9 +611,41 @@ return [
             ],
         ],
         'register' => [
-            'title' => 'Registrati',
-            'subtitle' => 'Crea un nuovo account',
-            'button' => 'Registrati',
+            'title' => [
+                'text' => 'Registrati',
+            ],
+            'subtitle' => [
+                'text' => 'Crea un nuovo account',
+            ],
+            'description' => [
+                'text' => 'Inserisci i tuoi dati per completare la registrazione',
+            ],
+            'button' => [
+                'text' => 'Registrati',
+            ],
+            'login' => [
+                'text' => 'Accedi',
+            ],
+            'already_have_account' => [
+                'text' => 'Hai già un account?',
+            ],
+            'submit' => [
+                'text' => 'Registrati',
+            ],
+            'sidebar' => [
+                'support_title' => [
+                    'text' => 'Hai bisogno di aiuto?',
+                ],
+                'help_email' => [
+                    'text' => 'Contatta il supporto via email',
+                ],
+                'help_password' => [
+                    'text' => 'Password dimenticata? Recupera l\'accesso',
+                ],
+                'help_support' => [
+                    'text' => 'Guida e assistenza',
+                ],
+            ],
             'fields' => [
                 'first_name' => 'Nome',
                 'last_name' => 'Cognome',
@@ -733,7 +805,35 @@ return [
         'error' => 'Si è verificato un errore',
     ],
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
-    'label' => 'user',
+    'relation_groups' => [
+        'security' => [
+            'label' => 'Sicurezza',
+        ],
+        'organization' => [
+            'label' => 'Organizzazione',
+        ],
+    ],
+    'widgets' => [
+        'overview' => [
+            'total' => [
+                'label' => 'Utenti totali',
+                'description' => 'Numero complessivo di utenti registrati',
+            ],
+            'active' => [
+                'label' => 'Utenti attivi',
+                'description' => 'Utenti con account attivo',
+            ],
+            'verified' => [
+                'label' => 'Email verificate',
+                'description' => 'Percentuale di utenti con email verificata',
+            ],
+            'recent_logins' => [
+                'label' => 'Accessi ultime 24h',
+                'description' => 'Login riusciti nelle ultime 24 ore',
+            ],
+        ],
+    ],
+    'label' => 'Utente',
     'sections' => [
         'empty' => [
             'heading' => 'empty',

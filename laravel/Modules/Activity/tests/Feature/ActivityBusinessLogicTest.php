@@ -8,13 +8,14 @@ use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\json_decode;
 use function Safe\json_encode;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
-test('Activity Business Logic', function () {
-    test('can create activity with basic information', function () {
+describe('Activity Business Logic', function () {
+    it('can create activity with basic information', function () {
         $activityData = [
             'log_name' => 'default',
             'description' => 'User logged in',
@@ -41,7 +42,7 @@ test('Activity Business Logic', function () {
         Assert::assertSame('created', $activity->event);
     });
 
-    test('can track user authentication activities', function () {
+    it('can track user authentication activities', function () {
         $loginActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'User logged in successfully',
@@ -78,7 +79,7 @@ test('Activity Business Logic', function () {
         Assert::assertSame('auth', $logoutActivity->log_name);
     });
 
-    test('can track model crud activities', function () {
+    it('can track model crud activities', function () {
         $createActivity = Activity::create([
             'log_name' => 'models',
             'description' => 'User created',
@@ -122,7 +123,7 @@ test('Activity Business Logic', function () {
         Assert::assertSame(789, $updateActivity->subject_id);
     });
 
-    test('can use batch uuid for grouping activities', function () {
+    it('can use batch uuid for grouping activities', function () {
         $batchUuid = Str::uuid()->toString();
 
         $activity1 = Activity::create([
@@ -164,7 +165,7 @@ test('Activity Business Logic', function () {
         Assert::assertCount(2, $batchActivities);
     });
 
-    test('can filter activities by log name', function () {
+    it('can filter activities by log name', function () {
         $authActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'Login activity',
@@ -212,7 +213,7 @@ test('Activity Business Logic', function () {
         Assert::assertSame('models', $firstModelActivity->log_name);
     });
 
-    test('can handle activity with complex properties', function () {
+    it('can handle activity with complex properties', function () {
         /** @var Activity $complexActivity */
         $complexActivity = Activity::create([
             'log_name' => 'complex',
@@ -262,5 +263,9 @@ test('Activity Business Logic', function () {
 
         Assert::assertIsArray($orderDetails);
         Assert::assertSame(67.48, $orderDetails['total_amount']);
+
+        Assert::assertIsArray($customerInfo);
+        Assert::assertSame('Jane Smith', $customerInfo['name']);
+        Assert::assertSame('jane@example.com', $customerInfo['email']);
     });
 });

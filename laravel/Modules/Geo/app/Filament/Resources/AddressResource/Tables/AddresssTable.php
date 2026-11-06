@@ -6,6 +6,7 @@ namespace Modules\Geo\Filament\Resources\AddressResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class AddresssTable extends XotBaseResourceTable
@@ -19,7 +20,7 @@ class AddresssTable extends XotBaseResourceTable
          * @return array<int|string, \Filament\Tables\Columns\Column>
          */
         return [
-            'id' => TextColumn::make('id')->sortable(),
+            'id' => IDColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];

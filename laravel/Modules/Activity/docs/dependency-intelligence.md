@@ -1,3 +1,11 @@
+---
+title: "Dependency Intelligence - Module Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "dependency intelligence - module activity activity"
+---
 # Dependency Intelligence - Module Activity
 
 Aggiornato da `composer show` il 2026-03-02.

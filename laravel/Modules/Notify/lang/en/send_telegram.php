@@ -69,4 +69,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'Telegram Sending Test',
+            'description' => 'Use this form to test sending Telegram messages through different providers.',
+        ],
+    ],
 ];

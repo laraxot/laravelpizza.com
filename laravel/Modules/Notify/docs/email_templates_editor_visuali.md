@@ -1,3 +1,16 @@
+---
+title: "email templates editor visuali"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates editor visuali"
+issues: []
+discussions: []
+status: superseded
+superseded_by: email-templates-editor-visuali.md
+---
+
 # Approfondimento: Editor Visuali ed Esterni (Mailgun, MJML, BeeFree, Stripo, ecc.)
 
 ## Strumenti Analizzati

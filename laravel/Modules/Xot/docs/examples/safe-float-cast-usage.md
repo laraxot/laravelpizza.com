@@ -1,3 +1,11 @@
+---
+title: "Esempi Pratici di Utilizzo di SafeFloatCastAction"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, examples]
+qmd: "esempi pratici di utilizzo di safefloatcastaction xot"
+---
 # Esempi Pratici di Utilizzo di SafeFloatCastAction
 
 ## Panoramica
@@ -444,8 +452,3 @@ class Product extends BaseModel
 
 ---
 
-- [Xot Actions Documentation](../actions/README.md)
-
----
-
-*Ultimo aggiornamento: 2025-01-06*

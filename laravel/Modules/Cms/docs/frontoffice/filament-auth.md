@@ -1,3 +1,15 @@
+---
+title: "filament auth"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament auth"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione Filament con Form di Autenticazione
 
 ## Introduzione
@@ -37,7 +49,7 @@ namespace Modules\User\Filament\Widgets\Auth;
 use Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Illuminate\Support\Facades\Auth;
 use Filament\Notifications\Notification;
 

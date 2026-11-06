@@ -1,3 +1,16 @@
+---
+title: "sushi implementation analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sushi implementation analysis"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sushi-implementation-analysis.md
+---
+
 # Analisi Implementazione Comune con Laravel Sushi
 
 ## Indice

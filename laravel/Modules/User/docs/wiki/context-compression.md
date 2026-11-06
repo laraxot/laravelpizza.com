@@ -1,3 +1,24 @@
+---
+title: "Context Compression - User Module"
+type: concept
+tags: [context, compression]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "context-compression context compression - user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./agents.md"
+  - "./Architecture.md"
+  - "./auth-patterns.md"
+  - "./bmad-method.md"
+  - "./index.md"
+  - "./log.md"
+  - "./overview.md"
+  - "./socialite-architecture.md"
+status: draft
+---
+
 # Context Compression - User Module
 
 ## Overview

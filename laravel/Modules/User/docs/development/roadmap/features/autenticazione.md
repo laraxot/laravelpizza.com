@@ -1,3 +1,23 @@
+---
+title: "Autenticazione"
+type: concept
+tags: [autenticazione]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "autenticazione autenticazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./audit-logging.md"
+  - "./autorizzazione.md"
+  - "./gestione-teams.md"
+  - "./gestione-utenti.md"
+  - "./legacy-code-cleanup.md"
+  - "./user-analytics.md"
+  - "./user-traits.md"
+status: draft
+---
+
 # Autenticazione
 
 ## Overview

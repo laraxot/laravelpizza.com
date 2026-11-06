@@ -1,3 +1,11 @@
+---
+title: "Correzione e miglioramento: GetYearFilter.php (2025-04-16)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "correzione e miglioramento: getyearfilter.php (2025-04-16) xot"
+---
 # Correzione e miglioramento: GetYearFilter.php (2025-04-16)
 
 ## Contesto

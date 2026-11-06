@@ -1,4 +1,18 @@
-# Filament Version Declaration — Tenant
+---
+issues: []
+discussions: []
+title: "Filament Version Declaration: Tenant"
+module: "Tenant"
+type: concept
+tags: [filament, version]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament version"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
+# Filament Version Declaration: Tenant
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -14,4 +28,4 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
-**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`

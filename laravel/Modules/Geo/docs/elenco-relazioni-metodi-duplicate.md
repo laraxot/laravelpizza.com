@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "elenco relazioni metodi duplicate"
+issues: []
+discussions: []
 title: "elenco metodi relazioni duplicate"
 type: analysis
 updated: 2026-06-15
@@ -6,6 +11,7 @@ related:
   - ./wiki/method-name-homonym-census.md
   - ./wiki/rules/laraxot-relationship-integrity.md
   - ../laravel/Modules/Sigma/docs/wiki/concepts/ente-matr-field-ownership.md
+status: draft
 ---
 
 # Elenco metodi che restituiscono relazioni duplicate

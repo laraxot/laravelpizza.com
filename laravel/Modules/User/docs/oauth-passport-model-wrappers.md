@@ -1,3 +1,28 @@
+---
+title: "OAuth Passport Model Wrappers"
+type: concept
+tags: [oauth, passport, model, wrappers]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "oauth-passport-model-wrappers oauth passport model wrappers"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # OAuth Passport Model Wrappers
 
 ## Pattern
@@ -12,7 +37,7 @@ Every Laravel Passport model that extends `Model` must have a corresponding wrap
 | `Laravel\Passport\Client` | `Modules\User\Models\OauthClient` |
 | `Laravel\Passport\DeviceCode` | `Modules\User\Models\OauthDeviceCode` |
 | `Laravel\Passport\RefreshToken` | `Modules\User\Models\OauthRefreshToken` |
-| `Laravel\Passport\Token` | `Modules\User\Models\OauthToken` |
+| `Laravel\Passport\Token` | `Modules\User\Models\OauthToken` (+ `OauthAccessToken`) |
 
 Additionally, `OauthPersonalAccessClient` extends `BaseModel` because no Passport vendor class exists for `oauth_personal_access_clients`.
 
@@ -21,7 +46,7 @@ Additionally, `OauthPersonalAccessClient` extends `BaseModel` because no Passpor
 - Centralize `$connection = 'user'` in one place per model
 - Allow adding project-specific scopes, relations, casts without touching vendor code
 - Enable PHPStan docblock annotations for all properties
-- Register custom models in `PassportServiceProvider` via `Passport::useTokenModel(OauthToken::class)` etc.
+- Register custom models in `PassportServiceProvider` via `Passport::useTokenModel(OauthAccessToken::class)` etc.
 - Allow custom policies: each `Oauth*` model has a corresponding `Oauth*Policy`
 
 ## Wrapper template
@@ -60,7 +85,7 @@ class OauthToken extends PassportToken
 
 ## Files
 
-- `Modules/User/app/Models/OauthToken.php`
+- `Modules/User/app/Models/OauthAccessToken.php`
 - `Modules/User/app/Models/OauthAuthCode.php`
 - `Modules/User/app/Models/OauthClient.php`
 - `Modules/User/app/Models/OauthDeviceCode.php`

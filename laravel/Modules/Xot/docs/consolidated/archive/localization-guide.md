@@ -1,3 +1,11 @@
+---
+title: "Guida alla Localizzazione nel Framework Laraxot <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "guida alla localizzazione nel framework laraxot <nome progetto> xot"
+---
 # Guida alla Localizzazione nel Framework Laraxot <nome progetto>
 
 ## Introduzione

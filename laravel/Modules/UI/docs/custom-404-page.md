@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "custom 404 page"
+issues: []
+discussions: []
 title: Custom 404 Page
 description: Custom 404 pages with Jigsaw docs starter template
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Custom 404 Page {#custom-404-page}
@@ -41,7 +49,6 @@ Depending on where your site is hosted, you may need to configure your server to
 
 ---
 ---
-title: Custom 404 Page
 description: Custom 404 pages with Jigsaw docs starter template
 extends: _layouts.documentation
 section: content

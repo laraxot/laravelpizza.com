@@ -127,7 +127,6 @@ class Get
             'from' => $theme->from,
             'subject' => $subject,
             'body_html' => $body_html,
-            'view_params' => $view_params,
-        ]);
+            'view_params' => $view_params]);
     }
 }

@@ -3,6 +3,11 @@ title: links ci
 description: links ci
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, ci]
+qmd: "alcuni links xot"
 ---
 
 # alcuni links

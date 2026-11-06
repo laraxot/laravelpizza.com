@@ -6,6 +6,11 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
+type: note
+updated: 2026-10-07
+qmd: "wiki schema - user user"
+status: superseded
+superseded_by: schema.md
 ---
 
 # Wiki Schema - User

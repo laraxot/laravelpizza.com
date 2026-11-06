@@ -1,3 +1,15 @@
+---
+title: "multi step forms"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multi step forms"
+issues: []
+discussions: []
+status: draft
+---
+
 # Form Multi-Step con Laravel Volt e Folio
 
 Questa guida spiega come implementare form multi-step utilizzando Laravel Volt e Folio, con particolare attenzione alla gestione dei dati e alla user experience.
@@ -403,5 +415,5 @@ class PersonalInfoTest extends TestCase
 
 ## Collegamenti tra versioni di multi-step-forms.md
 * [multi-step-forms.md](laravel/modules/cms/project_docs/multi-step-forms.md)
-* [multi-step-forms.md](laravel/modules/cms/project_docs/components/multi-step-forms.md)
+* [multi-step-forms.md](components/multi-step-forms.md)
 

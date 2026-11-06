@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Struttura corretta per i file di traduzione nel modulo Lang"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Struttura corretta per i file di traduzione nel modulo Lang
 
 ## Percorsi standard per i file di traduzione

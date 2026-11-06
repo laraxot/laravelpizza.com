@@ -1,3 +1,13 @@
+---
+title: "Laraxot Architecture Rules - Xot Module"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Laraxot Architecture Rules - Xot Module"
+---
 # Laraxot Architecture Rules - Xot Module
 
 ## 🎯 Regole Fondamentali Laraxot
@@ -150,12 +160,12 @@ class MyAction
 
 declare(strict_types=1);
 
-namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+namespace Modules\Quaeris\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+use Modules\Quaeris\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
 
 class ViewQuestionChart extends XotBaseViewRecord
 {
@@ -197,7 +207,7 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
-namespace Modules\healthcare_app\Filament\Widgets;
+namespace Modules\Quaeris\Filament\Widgets;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -253,10 +263,10 @@ class QuestionChartFilterWidget extends XotBaseWidget
 
 declare(strict_types=1);
 
-namespace Modules\healthcare_app\Filament\Resources;
+namespace Modules\Quaeris\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\healthcare_app\Models\QuestionChart;
+use Modules\Quaeris\Models\QuestionChart;
 
 class QuestionChartResource extends XotBaseResource
 {

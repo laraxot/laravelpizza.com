@@ -1,3 +1,11 @@
+---
+title: "Case Sensitivity e Struttura Corretta delle Directory nei Moduli Laravel"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "case sensitivity e struttura corretta delle directory nei moduli laravel xot"
+---
 # Case Sensitivity e Struttura Corretta delle Directory nei Moduli Laravel
 
 ## Problemi Identificati
@@ -135,3 +143,7 @@ Rispettare la struttura corretta delle directory è fondamentale per garantire l
 - [NAMESPACE-RULES.md](./NAMESPACE-RULES.md) - Regole per i namespace nei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](./FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [filament/widgets/xot-base-widget.md](./filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
+
+## PHPStan e cartella Tests/
+
+PSR-4 punta a `tests/`. Non creare `Tests/` parallelo: PHPStan scansiona entrambi e riporta stub morti.

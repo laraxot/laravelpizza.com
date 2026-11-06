@@ -1,3 +1,15 @@
+---
+title: "monitoring"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "monitoring"
+issues: []
+discussions: []
+status: draft
+---
+
 # Monitoraggio
 
 ## Pacchetti Utilizzati
@@ -92,7 +104,6 @@ Artisan::call('queue:forget', ['id' => 'all']);
 ### Versione Incoming
 
 ---
-
 ### Versione Incoming
 
 ---

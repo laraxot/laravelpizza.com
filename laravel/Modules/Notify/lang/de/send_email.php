@@ -150,4 +150,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'E-Mail-Versand testen',
+            'description' => 'Verwenden Sie dieses Formular, um den E-Mail-Versand über verschiedene Anbieter und Konfigurationen zu testen.',
+        ],
+    ],
 ];

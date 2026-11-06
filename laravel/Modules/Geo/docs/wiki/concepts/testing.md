@@ -1,3 +1,15 @@
+---
+title: "testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-18
+qmd: "testing"
+issues: []
+discussions: []
+status: draft
+---
+
 # Testing in Geo
 
 Questo componente segue lo standard globale di progetto per il testing.
@@ -17,3 +29,11 @@ Prima di ogni commit, i test devono passare i seguenti controlli:
 1. Pest: `cd laravel && ./vendor/bin/pest laravel/Modules/Geo/tests`
 2. PHPStan: `cd laravel && ./vendor/bin/phpstan analyse laravel/Modules/Geo/tests --level=5`
 3. PHPMD: `phpmd laravel/Modules/Geo/tests text phpmd.xml`
+
+### PHPStan e Pest higher-order
+
+Nei `*BusinessLogicTest.php` (solo API pubblica del modello, senza DB) usare
+`PHPUnit\Framework\Assert` al posto di `expect()->…` per evitare
+`Internal error` di `pest-plugin-phpstan`. Mai escludere i test da PHPStan.
+Dettaglio: [testing.md](../../testing.md), campagna
+[Notify](../../../../Notify/docs/wiki/memories/phpstan-pest-patterns-modulo-notify.md).

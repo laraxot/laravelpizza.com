@@ -1,3 +1,14 @@
+---
+title: "ai agent coordination"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai agent coordination"
+issues: []
+discussions: []
+---
+
 # AI Agent Coordination Hub with BMAD-METHOD
 
 > **Central Coordination Document for Multiple AI Agents**
@@ -10,6 +21,14 @@
 
 ---
 
+title: "ai agent coordination"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai agent coordination"
+issues: []
+discussions: []
 ## 🎯 Panoramica
 
 Questo progetto utilizza **BMAD-METHOD v6.2.0** per lo sviluppo agile guidato da AI, integrato con AI agents esistenti (Qwen, Gemini, Claude).

@@ -1,3 +1,11 @@
+---
+title: "Linee Guida per PHPStan Livello 10 - Regole Comuni"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "linee guida per phpstan livello 10 - regole comuni xot"
+---
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 
 Questo documento contiene le linee guida generali e le regole comuni per risolvere gli errori PHPStan di livello 10 in tutti i moduli del progetto.

@@ -39,7 +39,7 @@ class NotificationTemplateResource extends XotBaseResource
         return __('notify::template.navigation.label');
     }
 
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Forms\Components\Card::make()

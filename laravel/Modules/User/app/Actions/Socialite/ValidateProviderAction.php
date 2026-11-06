@@ -11,12 +11,14 @@ class ValidateProviderAction
 {
     use QueueableAction;
 
+    /**
+     * @throws ProviderNotConfigured se mancano client_id, client_secret o redirect (o sono segnaposto)
+     */
     public function execute(string $provider): void
     {
-        $hasConfig = config()->has('services.'.$provider);
-        if (! $hasConfig) {
-            $ex = new ProviderNotConfigured();
-            throw $ex->make($provider);
+        $missing = app(GetMissingProviderSettingsAction::class)->execute($provider);
+        if ($missing !== []) {
+            throw ProviderNotConfigured::make($provider, $missing);
         }
     }
 }

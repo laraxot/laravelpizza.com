@@ -4,21 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
 
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
-
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GoogleMaps\OptimizeRouteAction;
 use Modules\Geo\Datas\LocationData;
-use Modules\Geo\Datas\RouteData;
+use Modules\Geo\Datas\Routing\RouteData;
+use Modules\Geo\Tests\LightTestCase;
+use PHPUnit\Framework\Assert;
 
-function subject(): OptimizeRouteAction
-{
-    return new OptimizeRouteAction();
-}
-
+uses(LightTestCase::class);
 it('throws exception when api key is not configured', function (): void {
+    $action = new OptimizeRouteAction();
+
     config(['services.google.maps.key' => null]);
 
     $locations = [
@@ -27,22 +23,30 @@ it('throws exception when api key is not configured', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    expect(fn () => subject()->execute($locations, $origin, $destination))
-        ->toThrow(RuntimeException::class, 'API key not found');
+    try {
+        $action->execute($locations, $origin, $destination);
+
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('API key not found', $exception->getMessage());
+    }
 });
 
 it('returns empty array for empty locations', function (): void {
+    $action = new OptimizeRouteAction();
+
     config(['services.google.maps.key' => 'test_key']);
 
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = subject()->execute([], $origin, $destination);
-
-    expect($result)->toBeArray()->toBeEmpty();
+    $result = $action->execute([], $origin, $destination);
+    Assert::assertEmpty($result);
 });
 
 it('returns empty array when api returns no routes', function (): void {
+    $action = new OptimizeRouteAction();
+
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([
@@ -55,12 +59,13 @@ it('returns empty array when api returns no routes', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = subject()->execute($locations, $origin, $destination);
-
-    expect($result)->toBeArray()->toBeEmpty();
+    $result = $action->execute($locations, $origin, $destination);
+    Assert::assertEmpty($result);
 });
 
 it('returns route data for valid request', function (): void {
+    $action = new OptimizeRouteAction();
+
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([
@@ -105,17 +110,19 @@ it('returns route data for valid request', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = subject()->execute($locations, $origin, $destination);
+    $result = $action->execute($locations, $origin, $destination);
+    Assert::assertCount(1, $result);
 
-    expect($result)
-        ->toBeArray()
-        ->toHaveCount(1)
-        ->and($result[0])->toBeInstanceOf(RouteData::class)
-        ->and($result[0]->totalDistance)->toBe(1044000)
-        ->and($result[0]->totalDuration)->toBe(36000);
+    Assert::assertInstanceOf(RouteData::class, $result[0]);
+
+    Assert::assertSame(1044000, $result[0]->totalDistance);
+
+    Assert::assertSame(36000, $result[0]->totalDuration);
 });
 
 it('throws exception when api request fails', function (): void {
+    $action = new OptimizeRouteAction();
+
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([
@@ -128,6 +135,11 @@ it('throws exception when api request fails', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    expect(fn () => subject()->execute($locations, $origin, $destination))
-        ->toThrow(RuntimeException::class, 'Failed to get directions');
+    try {
+        $action->execute($locations, $origin, $destination);
+
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Failed to get directions', $exception->getMessage());
+    }
 });

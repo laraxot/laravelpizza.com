@@ -1,1 +1,0 @@
-https://laravel-news.com/working-with-laravel-model-events

@@ -1,3 +1,15 @@
+---
+title: "analisi modelli doppi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analisi modelli doppi"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Modelli Doppi nel Geo Module
 
 ## Introduzione

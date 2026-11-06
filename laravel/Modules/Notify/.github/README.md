@@ -1,3 +1,14 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+---
+
 # GitHub Issues & Discussions - Design Comuni Replication
 
 Benvenuto nel sistema di tracking delle issue per il progetto **Design Comuni Replication**.
@@ -5,19 +16,28 @@ Benvenuto nel sistema di tracking delle issue per il progetto **Design Comuni Re
 ## 📋 Quick Links
 
 - **🗺️ Roadmap**: [View 12-week plan](../.planning/ROADMAP.md)
-- **📊 Project Summary**: [View status](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
-- **📚 Team Guide**: [Read guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
+- **📊 Project Summary**: [View status](../laravel/Themes/Sixteen/docs/design-comuni-project-summary.md)
+- **📚 Team Guide**: [Read guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md)
 - **🏗️ Architecture**: [View decisions](../_bmad-output/design-comuni-architecture.md)
 - **🔍 Research**: [View analysis](../.planning/research/design-comuni-pages.md)
 
 ---
 
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 🎯 What We're Building
 
 Replicating **38 Design Comuni static pages** using **Tailwind CSS + Alpine.js** with **JSON-driven content blocks**.
 
 **Source**: https://italia.github.io/design-comuni-pagine-statiche/  
 **Target**: http://fixcity.local/it/tests/[page-slug]  
+**Target**: http://ptv.local/it/tests/[page-slug]  
 **Timeline**: 12 weeks (April 1 - June 30, 2026)
 
 ---
@@ -247,7 +267,7 @@ We use GitHub Projects to track progress:
 **A**: Update the component catalog (`Themes/Sixteen/docs/COMPONENT_CATALOG.md`) and add bidirectional links to the [Master Index](../docs/MODULE_DOCS_INDEX.md).
 
 ### Q: How do I run tests?
-**A**: See the [Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md#testing) for test commands and examples.
+**A**: See the [Team Guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md#testing) for test commands and examples.
 
 ---
 
@@ -329,7 +349,7 @@ Maintain professional communication at all times.
 
 ## 🔗 Quick Navigation
 
-- [Back to Project Summary](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
-- [Back to Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
+- [Back to Project Summary](../laravel/Themes/Sixteen/docs/design-comuni-project-summary.md)
+- [Back to Team Guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md)
 - [Back to Master Index](../docs/MODULE_DOCS_INDEX.md)
 - [View Roadmap](../.planning/ROADMAP.md)

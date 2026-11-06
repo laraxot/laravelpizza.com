@@ -3,12 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'temporary upload',
-        'group' => 'temporary upload',
-        'icon' => 'temporary upload',
-        'sort' => 96,
-    ],
+    'navigation' => ['label' => 'Caricamento temporaneo', 'group' => 'Caricamento temporaneo', 'icon' => 'Caricamento temporaneo', 'sort' => 96],
     'label' => 'Temporary Upload',
     'plural_label' => 'Temporary Upload (Plurale)',
     'fields' => [

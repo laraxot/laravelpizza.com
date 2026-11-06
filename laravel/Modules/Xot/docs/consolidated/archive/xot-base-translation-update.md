@@ -1,3 +1,11 @@
+---
+title: "Aggiornamento File di Traduzione xot_base.php"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "aggiornamento file di traduzione xot_base.php xot"
+---
 # Aggiornamento File di Traduzione xot_base.php
 
 ## Data Aggiornamento

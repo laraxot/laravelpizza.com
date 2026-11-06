@@ -13,7 +13,7 @@ class PageInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'title' => TextEntry::make('title'),

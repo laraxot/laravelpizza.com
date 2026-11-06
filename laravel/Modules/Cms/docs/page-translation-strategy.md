@@ -1,3 +1,15 @@
+---
+title: "page translation strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page translation strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Page Translation Strategy
 
 ## Overview
@@ -218,4 +230,12 @@ echo "View exists: " . (view()->exists($view) ? 'Yes' : 'No');
 ---
 
 
+title: "page translation strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page translation strategy"
+issues: []
+discussions: []
 **Status**: Active - Critical issues identified requiring immediate attention

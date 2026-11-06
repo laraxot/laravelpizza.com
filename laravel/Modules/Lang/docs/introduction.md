@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "introduction"
+issues: []
+discussions: []
 title: Introducendo Lang
 description: Introduzione a Module Lang
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Introducendo Lang {#introducendo-lang}
@@ -28,6 +36,9 @@ quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in fra
 * [introduction.md](../../../Cms/docs/introduction.md)
 * [introduction.md](../../../Lang/docs/introduction.md)
 * [introduction.md](../../../Cms/docs/introduction.md)
+* [introduction.md](../../Cms/docs/introduction.md)
+* [introduction.md](../../../Lang/docs/introduction.md)
+* [introduction.md](../../Cms/docs/introduction.md)
 
 ### Versione Incoming
 
@@ -38,6 +49,7 @@ quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in fra
 ---
 * [introduction.md](../../../Lang/docs/introduction.md)
 * [introduction.md](../../../Cms/docs/introduction.md)
+* [introduction.md](../../Cms/docs/introduction.md)
 
 ### Versione Incoming
 

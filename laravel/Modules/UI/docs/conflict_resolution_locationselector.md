@@ -1,3 +1,15 @@
+---
+title: "conflict resolution locationselector"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution locationselector"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitto LocationSelector.php
 
 ## Problema Identificato

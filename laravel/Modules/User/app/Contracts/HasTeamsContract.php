@@ -1,31 +1,21 @@
 <?php
 
+declare(strict_types=1);
 /**
  * --- Artmin.
  */
 
-declare(strict_types=1);
-
 namespace Modules\User\Contracts;
 
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Modules\User\Models\Role;
 
 /**
  * Modules\User\Contracts\HasTeamsContract.
- *
- * @property int                                      $id
- * @property string                                   $name
- * @property string                                   $two_factor_secret
- * @property TeamContract|null                        $currentTeam
- * @property Collection<int, \Laravel\Passport\Token> $tokens
- * @property Carbon|null                              $two_factor_confirmed_at
- * @property int                                      $current_team_id
  *
  * @phpstan-require-extends Model
  *
@@ -33,13 +23,6 @@ use Modules\User\Models\Role;
  */
 interface HasTeamsContract
 {
-    // extends
-    // HasApiTokens, //no sanctum ma passport
-    // HasProfilePhotoContract,
-    // TwoFactorAuthenticatableContract,
-    // MustVerifyEmail,
-    // CanResetPassword,
-    // ModelContract
     /**
      * Determine if the given team is the current team.
      */
@@ -48,7 +31,7 @@ interface HasTeamsContract
     /**
      * Get the current team of the user's context.
      *
-     * @return BelongsTo<Model&TeamContract, Model>
+     * @return BelongsTo<Model, Model>
      */
     public function currentTeam(): BelongsTo;
 
@@ -60,21 +43,21 @@ interface HasTeamsContract
     /**
      * Get all of the teams the user owns or belongs to.
      *
-     * @return \Illuminate\Support\Collection<int, Model&TeamContract>
+     * @return Collection<int, Model>
      */
-    public function allTeams(): \Illuminate\Support\Collection;
+    public function allTeams(): Collection;
 
     /**
      * Get all of the teams the user owns.
      *
-     * @return HasMany<Model&TeamContract, Model>
+     * @return HasMany<Model, Model>
      */
     public function ownedTeams(): HasMany;
 
     /**
      * Get all of the teams the user belongs to.
      *
-     * @return BelongsToMany<Model&TeamContract, Model>
+     * @return BelongsToMany<Model, Model>
      */
     public function teams(): BelongsToMany;
 
@@ -106,7 +89,7 @@ interface HasTeamsContract
     /**
      * Get the user's permissions for the given team.
      *
-     * @return array<int, string>
+     * @return array<string>
      */
     public function teamPermissions(TeamContract $teamContract): array;
 

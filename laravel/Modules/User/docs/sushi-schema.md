@@ -1,3 +1,28 @@
+---
+title: "User Module - Sushi Schema Fix (`SocialProvider` Model)"
+type: concept
+tags: [sushi, schema]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "sushi-schema user module - sushi schema fix (`socialprovider` model)"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # User Module - Sushi Schema Fix (`SocialProvider` Model)
 
 This document details the resolution of an SQL syntax error encountered during the analysis of the `SocialProvider` model, which utilizes the `calebporzio/sushi` package.

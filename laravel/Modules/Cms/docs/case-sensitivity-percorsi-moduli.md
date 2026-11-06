@@ -1,3 +1,15 @@
+---
+title: "case sensitivity percorsi moduli"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "case sensitivity percorsi moduli"
+issues: []
+discussions: []
+status: draft
+---
+
 # Case Sensitivity nei Percorsi dei Moduli Laravel in il progetto
 
 ## Introduzione

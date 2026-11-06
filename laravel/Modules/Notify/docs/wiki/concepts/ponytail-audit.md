@@ -1,4 +1,16 @@
-# Ponytail audit — Notify
+---
+title: "ponytail audit"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ponytail audit"
+issues: []
+discussions: []
+status: draft
+---
+
+# Ponytail audit: Notify
 
 **Delta modulo only here.** Ranked list, gate e remediation globale negli hub progetto.
 

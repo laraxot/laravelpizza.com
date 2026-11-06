@@ -1,3 +1,11 @@
+---
+title: "Upgrade Laravel 13 - Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "upgrade laravel 13 - activity activity"
+---
 # Upgrade Laravel 13 - Activity 🐄✨
 
 ## 🎯 Visione Architetturale

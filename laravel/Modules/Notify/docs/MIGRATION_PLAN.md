@@ -1,3 +1,15 @@
+---
+title: "MIGRATION PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "MIGRATION PLAN"
+issues: []
+discussions: []
+status: draft
+---
+
 # Documentation Agnostic Migration Plan
 
 ## Executive Summary
@@ -7,7 +19,6 @@
 **Solution**: Implement governance rules, rename files, and replace content with generic placeholders.
 
 ---
-
 ## Impact Analysis
 
 ### Scope
@@ -21,10 +32,10 @@
 |---------|-------------|----------|
 | `Fixcity` (in content) | 1,050 | 🔴 HIGH |
 | `FixCity` (in content) | 259 | 🔴 HIGH |
-| `fixcity` (in content) | 220 | 🔴 HIGH |
-| `fixcity-` (in filenames) | TBD | 🟡 MEDIUM |
-| `fixcity.local` | 3 | 🟢 LOW |
-| `base_fixcity_fila5` | 11 | 🟢 LOW |
+| `ptv` (in content) | 220 | 🔴 HIGH |
+| `ptv-` (in filenames) | TBD | 🟡 MEDIUM |
+| `ptv.local` | 3 | 🟢 LOW |
+| `base_ptv_fila5` | 11 | 🟢 LOW |
 
 ---
 
@@ -43,12 +54,12 @@ Defines:
 ### ✅ 2. Example Conversions
 
 #### File Renamed
-- **Before**: `laravel/Modules/Cms/docs/fixcity-pages-content-blocks.md`
+- **Before**: `laravel/Modules/Cms/docs/ptv-pages-content-blocks.md`
 - **After**: `laravel/Modules/Cms/docs/pages-content-blocks.md`
 
 #### Content Updated
 - Replaced `FixCity` → `[PROJECT_NAME]`
-- Replaced `fixcity` → `[project_name]`
+- Replaced `ptv` → `[project_name]`
 - Added contextual notes for users
 - Made examples generic with placeholders
 
@@ -57,8 +68,8 @@ Defines:
 
 Changes:
 - Removed "FixCity PTVX ecosystem" → "PTVX ecosystem"
-- Replaced `base_fixcity_fila5/` → `<project_root>/`
-- Replaced `fixcity.local` → `[YOUR_DOMAIN]`
+- Replaced `base_ptv_fila5/` → `<project_root>/`
+- Replaced `ptv.local` → `[YOUR_DOMAIN]`
 - Replaced GitHub repo reference → `your-org/your-repo`
 - Added placeholder guidance notes
 
@@ -164,7 +175,7 @@ git commit -m "docs(Cms): make documentation agnostic"
 ### Pre-Commit Checklist
 
 For each module/theme:
-- [ ] No `FixCity`, `Fixcity`, `fixcity` in content
+- [ ] No `FixCity`, `Fixcity`, `ptv` in content
 - [ ] No project-specific filenames
 - [ ] Placeholders used consistently:
   - `[PROJECT_NAME]` for platform name
@@ -213,7 +224,7 @@ fi
 # FixCity Blog Module
 
 This module provides blog functionality for FixCity platform.
-Access at: fixcity.local/blog
+Access at: ptv.local/blog
 ```
 
 **After**:
@@ -234,10 +245,10 @@ Access at: `[YOUR_DOMAIN]/blog`
 
 1. Add to Fixcity config:
    ```php
-   config('fixcity.blog.settings')
+   config('ptv.blog.settings')
    ```
 
-2. Routes available at fixcity.local/admin/blog
+2. Routes available at ptv.local/admin/blog
 ```
 
 **After**:
@@ -278,14 +289,7 @@ Access at: `[YOUR_DOMAIN]/blog`
 
 ### Rollback Plan
 
-If issues are found:
-```bash
-# Git makes rollback easy
-git checkout HEAD -- laravel/Modules/Cms/docs/
-
-# Or revert specific commits
-git revert <commit-hash>
-```
+If issues are found, git is forward-only: fix the affected files in `laravel/Modules/Cms/docs/` and record the correction with a new commit. Never use `git checkout`, `git restore`, `git reset`, `git revert`, `git stash` or `git rebase` to roll back.
 
 ---
 
@@ -293,7 +297,7 @@ git revert <commit-hash>
 
 ### Quantitative
 - ✅ 0 occurrences of "FixCity" in module/theme docs
-- ✅ 0 occurrences of "fixcity" in module/theme docs
+- ✅ 0 occurrences of "ptv" in module/theme docs
 - ✅ 100% of filenames are project-agnostic
 - ✅ 100% of cross-references use relative paths
 
@@ -368,7 +372,7 @@ A: Consider keeping it in the project root, not in the reusable Modules director
 A: Use generic names: "Blog Module" instead of "FixCity Blog Module".
 
 **Q: Can I still mention FixCity in examples?**  
-A: Yes, but clearly mark them as examples: "e.g., 'fixcity' for a civic platform".
+A: Yes, but clearly mark them as examples: "e.g., 'ptv' for a civic platform".
 
 ---
 

@@ -1,3 +1,15 @@
+---
+title: "theme docs template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme docs template"
+issues: []
+discussions: []
+status: draft
+---
+
 # {ThemeName} Theme
 
 > **Filament Version**: Admin panels and Filament resources in this theme target **Filament v5** (see Second Brain `docs/wiki/memories/filament-version-policy.md` and `docs/filament-version.md`).
@@ -59,7 +71,7 @@ After every change:
 ## Documentation
 
 - [GSD Methodology](../../docs/project/gsd-methodology.md)
-- [UI Components](../../laravel/Modules/UI/docs/components.md)
+- [UI Components](../../../UI/docs/components.md)
 - [AGENTS.md](../../AGENTS.md)
 
 ## Roadmap

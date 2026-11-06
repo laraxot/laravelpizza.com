@@ -1,9 +1,28 @@
+---
+title: "DEBUG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DEBUG"
+issues: []
+discussions: []
+---
+
 # Debug Template
 
 Template for `.planning/debug/[slug].md` — active debug session tracking.
 
 ---
 
+title: "DEBUG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DEBUG"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

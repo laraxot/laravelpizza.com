@@ -33,13 +33,12 @@ class TelegramChannel
     /**
      * Invia la notifica attraverso il canale Telegram.
      *
-     * @param  mixed  $notifiable  Entità che riceve la notifica
      * @param  Notification  $notification  Notifica da inviare
      * @return array<string, mixed>|null Risultato dell'operazione o null in caso di errore
      *
      * @throws Exception Se la notifica non ha il metodo toTelegram o il driver non è supportato
      */
-    public function send(mixed $notifiable, Notification $notification): ?array
+    public function send(object $notifiable, Notification $notification): ?array
     {
         if (! method_exists($notification, 'toTelegram')) {
             throw new Exception('Notification does not have toTelegram method');
@@ -53,9 +52,6 @@ class TelegramChannel
 
         $action = $this->factory->create();
 
-        /** @var array<string, mixed> $result */
-        $result = $action->execute($telegramData);
-
-        return $result;
+        return $action->execute($telegramData);
     }
 }

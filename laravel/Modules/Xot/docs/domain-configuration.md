@@ -1,3 +1,13 @@
+---
+title: "Gestione Domini e Configurazioni"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Gestione Domini e Configurazioni"
+---
 # Gestione Domini e Configurazioni
 
 ## Prerequisiti
@@ -81,8 +91,8 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
 - [Linee Guida per i Loghi](../../../docs/standards/logo_guidelines.md)
-- [Documentazione Principale](../../../docs/README.md)
-- [Standard di Progetto](../../../docs/standards/README.md)
+- [Documentazione Principale](../../../../docs/README.md)
+- [Standard di Progetto](standards/README.md)
 - [Gestione Media](../../Media/docs/README.md)
 - [Gestione UI](../../UI/docs/README.md)
 - [Gestione Temi](../../Cms/docs/themes.md)
@@ -91,7 +101,7 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 - [Configurazione Moduli](MODULE_CONFIGURATION.md)
 - [Gestione Risorse](ASSETS.md)
 - [Linee Guida Sviluppo](DEVELOPMENT_GUIDELINES.md)
-- [Troubleshooting](TROUBLESHOOTING.md)
+- [Troubleshooting](troubleshooting.md)
 
 ## Vedi Anche
 - [Documentazione UI](../../UI/docs/configuration.md)
@@ -171,4 +181,4 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 ## Collegamenti
 - [Configurazione Generale](CONFIGURATION.md)
 - [Gestione Asset](assets.md)
-- [Struttura Temi](themes.md)
+- [Struttura Temi](themes.md) 

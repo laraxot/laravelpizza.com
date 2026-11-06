@@ -9,9 +9,7 @@ return [
             'placeholder' => 'channels',
             'helper_text' => 'channels',
             'description' => 'channels',
-            'tooltip' => '',
-        ],
-    ],
+            'tooltip' => '']],
     'label' => 'Channel Checkbox List',
     'plural_label' => 'Channel Checkbox List (Plurale)',
     'navigation' => [
@@ -19,21 +17,14 @@ return [
         'plural' => 'Channel Checkbox List',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings',
-        ],
+            'description' => 'General Settings'],
         'label' => 'Channel Checkbox List',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
+        'icon' => 'heroicon-o-collection'],
     'actions' => [
         'create' => [
-            'label' => 'Crea Channel Checkbox List',
-        ],
+            'label' => 'Crea Channel Checkbox List'],
         'edit' => [
-            'label' => 'Modifica Channel Checkbox List',
-        ],
+            'label' => 'Modifica Channel Checkbox List'],
         'delete' => [
-            'label' => 'Elimina Channel Checkbox List',
-        ],
-    ],
-];
+            'label' => 'Elimina Channel Checkbox List']]];

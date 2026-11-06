@@ -1,3 +1,14 @@
+---
+title: "git subtree error resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git subtree error resolution"
+issues: []
+discussions: []
+---
+
 # 🚀 Gestione Errori Git Subtree
 
 ## 📋 Struttura del Sistema

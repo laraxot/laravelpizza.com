@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test"
+issues: []
+discussions: []
 title: Modulo Test
 description: Modulo Test
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Modulo Test {#modulo-Test}

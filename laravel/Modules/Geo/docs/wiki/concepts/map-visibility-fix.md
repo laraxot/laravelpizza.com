@@ -1,7 +1,15 @@
 ---
+title: "map visibility fix"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map visibility fix"
+issues: []
+discussions: []
 name: Map Visibility Fix
 description: Fixes for map not appearing in wizard steps (FixCreateTicketWizard)
 type: concept
+status: draft
 ---
 
 # Map Visibility Fix Guide
@@ -124,7 +132,7 @@ _initMap() {
 ## References
 
 - ✅ [Leaflet Wizard Step Invalidate Size](laravel/Modules/Geo/docs/wiki/concepts/leafet-wizard-step-invalidate-size.md)
-- ✅ [Coordinate Picker Fullscreen Handling](laravel/Modules/Geo/docs/wiki/concepts/coordinate-picker-fullscreen-wizard-contract.md)
+- ✅ [Coordinate Picker Fullscreen Handling](coordinate-picker-fullscreen-wizard-contract.md)
 - ✅ [Fixcity Wizard Map Visibility](laravel/Modules/Fixcity/docs/wiki/concepts/wizard-map-visibility-fix.md)
 - ✅ [Design Comuni – Map Controls](https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazione-02-dati.html)
 

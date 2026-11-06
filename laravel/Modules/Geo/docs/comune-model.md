@@ -1,3 +1,15 @@
+---
+title: "comune model"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune model"
+issues: []
+discussions: []
+status: draft
+---
+
 # Modello Comune
 
 ## Introduzione

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "AI Methodologies Handbook"
+module: "Tenant"
+type: concept
+tags: [ai, methodologies]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ai methodologies"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # AI Methodologies Handbook
 
 This file is a DRY local index for AI workflows in this module or theme.

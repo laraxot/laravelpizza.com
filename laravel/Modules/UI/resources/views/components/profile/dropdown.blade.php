@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props(['user' => auth()->user()])
 
@@ -21,7 +20,7 @@ declare(strict_types=1);
                     </div>
                 @endif
                 <div class="ml-2">
-                    {{ $user?->name ?? __('Guest') }}
+                    {{ $user?->name ?? __('ui::components_shell.user_menu.guest.label') }}
                 </div>
                 <div class="ml-1">
                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -50,8 +49,6 @@ declare(strict_types=1);
                 </x-filament::dropdown.list.item>
             </form>
         @else
-            <x-filament::dropdown.list.item tag="a" :href="route('login')" >
-                {{-- icon="heroicon-o-login" --}}
             <x-filament::dropdown.list.item tag="a" :href="route('login')" icon="ui-login">
                 {{ __('ui::navigation.login') }}
             </x-filament::dropdown.list.item>

@@ -6,9 +6,9 @@ return [
     'field' => [
         'label' => 'Indirizzi',
         'help' => [
-            'title' => 'Gestione Indirizzi',
-            'description' => 'Puoi aggiungere più indirizzi. Con più indirizzi potrai specificare un nome identificativo e designare uno come principale.',
-            'primary_note' => 'Solo un indirizzo può essere impostato come principale alla volta.',
+            'title' => 'Address management',
+            'description' => 'You can add multiple addresses. With multiple addresses you can specify an identifying name and designate one as the primary address.',
+            'primary_note' => 'Only one address can be set as primary at a time.',
         ],
         'actions' => [
             'add' => 'Aggiungi Indirizzo',

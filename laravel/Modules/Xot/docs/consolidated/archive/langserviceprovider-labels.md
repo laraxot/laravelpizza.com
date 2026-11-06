@@ -1,3 +1,11 @@
+---
+title: "LangServiceProvider: Gestione automatica delle label nei Filament Forms"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "langserviceprovider: gestione automatica delle label nei filament forms xot"
+---
 # LangServiceProvider: Gestione automatica delle label nei Filament Forms
 
 ## Regola

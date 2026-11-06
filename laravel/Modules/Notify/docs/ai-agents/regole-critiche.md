@@ -1,3 +1,15 @@
+---
+title: "regole critiche"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "regole critiche"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole Critiche Laraxot
 
 ## 1. Estensioni Classi
@@ -33,6 +45,7 @@ Quando un errore arriva da una pagina Filament/Livewire:
 - solo dopo passare a test applicativi, query, container o permessi.
 
 Per i chart Quaeris la catena minima da controllare e`:
+Per i chart App la catena minima da controllare e`:
 - `QuestionChartChartData`
 - `BuildQuestionChartDatasetAction`
 - `BuildQuestionChartOptionsAction`

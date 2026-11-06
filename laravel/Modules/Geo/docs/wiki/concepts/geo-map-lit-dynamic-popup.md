@@ -1,3 +1,15 @@
+---
+title: "geo map lit dynamic popup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map lit dynamic popup"
+issues: []
+discussions: []
+status: draft
+---
+
 # GeoMapLit Dynamic Popup Pattern
 
 ## Overview

@@ -1,3 +1,15 @@
+---
+title: "handoff scheda peso homonym"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff scheda peso homonym"
+issues: []
+discussions: []
+status: draft
+---
+
 # Handoff: fix `Scheda::peso()` ArgumentCountError su CompilaScheda
 
 **Stato:** risolto in codice (2026-06-15)  

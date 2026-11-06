@@ -26,13 +26,13 @@ class XotComposer
     /**
      * Undocumented function.
      *
-     * @param array<mixed|void> $arguments
+     * @param  array<int, mixed>  $arguments
      */
     public function __call(string $name, array $arguments): mixed
     {
         $modules = Module::getOrdered();
 
-        $module = Arr::first($modules, static function ($module) use ($name): bool {
+        $module = Arr::first($modules, static function (mixed $module) use ($name): bool {
             // Ensure the module is an instance of LaravelModule
             if (! $module instanceof LaravelModule) {
                 return false;
@@ -68,7 +68,7 @@ class XotComposer
         $view->with('_theme', $this);
 
         if (class_exists('\Jenssegers\Agent\Agent')) {
-            $agent = new Agent();
+            $agent = new Agent;
             $view->with('isMobile', $agent->isMobile());
             $view->with('isTablet', $agent->isTablet());
             $view->with('isDesktop', $agent->isDesktop());

@@ -1,3 +1,15 @@
+---
+title: "cleanup log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cleanup log"
+issues: []
+discussions: []
+status: draft
+---
+
 # Cms Module Cleanup - 2025-12-18
 
 ## Removed Files

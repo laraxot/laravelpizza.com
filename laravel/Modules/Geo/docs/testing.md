@@ -1,3 +1,15 @@
+---
+title: "testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-18
+qmd: "testing"
+issues: []
+discussions: []
+status: draft
+---
+
 # Testing in the Geo Module
 
 ## Overview
@@ -17,9 +29,23 @@ The Geo module contains the following types of tests:
 
 ## PestPHP Format
 All tests in the Geo module follow PestPHP format:
-- Use `it()` for test descriptions
-- Use `expect()` for assertions
+- Use `it()` or `test()` for test descriptions
+- Use `PHPUnit\Framework\Assert` in unit business-logic tests analysed by PHPStan (no Pest `expect()` higher-order there: crashes `pest-plugin-phpstan`)
 - Use `beforeEach()` for setup
+- Sushi models: assert column types via public `getSchema()` (Comune via `SushiToJson::getSchema()`, Region/Province via Sushi)
+
+## PHPStan + Pest (campagna Internal error)
+
+Durante `phpstan analyse Modules/Geo`, chain Pest `expect()->…` possono far
+crashare `HigherOrderExpectationTypeExtension` (`Internal error` → modulo
+intero non analizzato).
+
+**Fix:** nei test unitari di sola business logic del modello
+(`tests/Unit/Models/*BusinessLogicTest.php`) usare **solo**
+`PHPUnit\Framework\Assert`, senza higher-order `expect()`.
+
+**Vietato:** escludere `tests/` in `phpstan.neon` o `@phpstan-ignore-file` sui
+test. SSoT campagna: [Notify — pattern Pest](../../Notify/docs/wiki/memories/phpstan-pest-patterns-modulo-notify.md).
 
 ## Database Handling
 - Use `DatabaseTransactions` instead of `RefreshDatabase` for proper isolation

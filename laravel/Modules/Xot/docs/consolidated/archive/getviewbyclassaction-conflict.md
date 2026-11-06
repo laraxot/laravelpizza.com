@@ -1,3 +1,11 @@
+---
+title: "Risoluzione Conflitto in GetViewByClassAction"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione conflitto in getviewbyclassaction xot"
+---
 # Risoluzione Conflitto in GetViewByClassAction
 
 ## Problema

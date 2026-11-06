@@ -7,15 +7,13 @@ namespace Modules\Notify\Tests\Feature;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Database\Factories\NotificationTemplateVersionFactory;
 use Modules\Notify\Models\NotificationTemplate;
-use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use RuntimeException;
 
-uses(TestCase::class);
-
+uses(\Modules\Notify\Tests\TestCase::class);
 describe('Notification Template Version Business Logic', function (): void {
     test('_can_create_template_version_with_basic_information', function (): void {
-        /** @var TestCase $this */
         $template = NotificationTemplateFactory::new()->createOne();
 
         $version = NotificationTemplateVersionFactory::new()->createOne([
@@ -27,14 +25,12 @@ describe('Notification Template Version Business Logic', function (): void {
             'variables' => ['patient_name', 'appointment_date'],
             'conditions' => ['is_confirmed' => true],
             'version' => 2,
-            'change_notes' => 'Aggiornamento copy',
-        ]);
-        \assertNotifyTableHas('notification_template_versions', [
+            'change_notes' => 'Aggiornamento copy']);
+        XotBasePest::assertTableHas('notify', 'notification_template_versions', [
             'id' => $version->id,
             'template_id' => $template->id,
             'subject' => 'Versione 2 - Conferma Appuntamento',
-            'version' => 2,
-        ]);
+            'version' => 2]);
 
         Assert::assertSame(2, $version->version);
         Assert::assertSame(['mail'], $version->channels);
@@ -45,8 +41,7 @@ describe('Notification Template Version Business Logic', function (): void {
     test('_can_manage_template_version_relationships', function (): void {
         $template = NotificationTemplateFactory::new()->createOne();
         $version = NotificationTemplateVersionFactory::new()->createOne([
-            'template_id' => $template->id,
-        ]);
+            'template_id' => $template->id]);
 
         Assert::assertInstanceOf(NotificationTemplate::class, $version->template);
         Assert::assertSame($template->id, $version->template->id);
@@ -55,8 +50,7 @@ describe('Notification Template Version Business Logic', function (): void {
     test('_can_restore_template_from_version', function (): void {
         $template = NotificationTemplateFactory::new()->createOne([
             'subject' => 'Versione Originale',
-            'body_html' => '<p>Contenuto originale</p>',
-        ]);
+            'body_html' => '<p>Contenuto originale</p>']);
 
         $version = NotificationTemplateVersionFactory::new()->createOne([
             'template_id' => $template->id,
@@ -66,13 +60,11 @@ describe('Notification Template Version Business Logic', function (): void {
             'channels' => ['mail'],
             'variables' => ['patient_name'],
             'conditions' => ['is_active' => true],
-            'version' => 1,
-        ]);
+            'version' => 1]);
 
         $template->update([
             'subject' => 'Versione Corrente',
-            'body_html' => '<p>Contenuto corrente</p>',
-        ]);
+            'body_html' => '<p>Contenuto corrente</p>']);
 
         $restoredTemplate = $version->restoreTemplate();
 
@@ -85,11 +77,8 @@ describe('Notification Template Version Business Logic', function (): void {
     });
 
     test('_throws_exception_when_restoring_without_template', function (): void {
-        /** @var TestCase $this */
         $version = NotificationTemplateVersionFactory::new()->createOne([
-            'template_id' => 999999,
-        ]);
-        $this->expectApplicationException(RuntimeException::class);
-        $version->restoreTemplate();
+            'template_id' => 999999]);
+        expect(fn () => $version->restoreTemplate())->toThrow(RuntimeException::class);
     });
 });

@@ -2,63 +2,63 @@
 
 declare(strict_types=1);
 
-namespace Modules\Geo\Tests\Unit\Models;
-
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Province;
+use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Sushi\Sushi;
 
+uses(TestCase::class);
+
+/**
+ * Contratto di dominio Province (Sushi da comuni.json, gerarchia regione → province).
+ * Assert PHPUnit: evita crash pest-plugin-phpstan HigherOrderExpectationTypeExtension.
+ */
 describe('Province Business Logic', function () {
     test('province extends base model', function () {
-        expect(Province::class)->toBeSubclassOf(BaseModel::class);
+        Assert::assertSame(BaseModel::class, get_parent_class(Province::class));
     });
 
     test('province has factory trait for testing', function () {
-        $traits = class_uses(Province::class);
-
-        expect($traits)->toHaveKey(HasFactory::class);
+        Assert::assertContains(HasFactory::class, class_uses_recursive(Province::class));
     });
 
     test('province uses sushi trait for in-memory data', function () {
-        $traits = class_uses(Province::class);
-
-        expect($traits)->toHaveKey(Sushi::class);
+        Assert::assertContains(Sushi::class, class_uses_recursive(Province::class));
     });
 
     test('province has schema definition for geographic hierarchy', function () {
-        $province = new Province();
+        $schema = (new Province)->getSchema();
 
-        expect($province)->toHaveProperty('schema');
-        expect($province->schema['region_id'])->toBe('integer');
-        expect($province->schema['id'])->toBe('integer');
-        expect($province->schema['name'])->toBe('string');
+        Assert::assertIsArray($schema);
+        Assert::assertSame('integer', $schema['region_id'] ?? null);
+        Assert::assertSame('integer', $schema['id'] ?? null);
+        Assert::assertSame('string', $schema['name'] ?? null);
     });
 
     test('province can get rows from comune data', function () {
-        $province = new Province();
+        $rows = (new Province)->getRows();
 
-        expect(method_exists($province, 'getRows'))->toBeTrue();
-        expect($province->getRows())->toBeArray();
+        Assert::assertGreaterThanOrEqual(0, count($rows));
     });
 
     test('province model can be instantiated without errors', function () {
-        $province = new Province();
+        $province = new Province;
 
-        expect($province)->toBeInstanceOf(Province::class);
-        expect($province)->toBeInstanceOf(BaseModel::class);
+        Assert::assertFalse($province->exists);
     });
 
     test('province can be queried by name', function () {
         $query = Province::whereName('Milano');
 
-        expect($query)->toBeInstanceOf(Builder::class);
+        Assert::assertInstanceOf(Builder::class, $query);
     });
 
     test('province can be queried by region id', function () {
         $query = Province::whereRegionId(1);
 
-        expect($query)->toBeInstanceOf(Builder::class);
+        Assert::assertInstanceOf(Builder::class, $query);
     });
 });

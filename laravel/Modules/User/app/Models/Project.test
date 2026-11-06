@@ -32,5 +32,3 @@ class Project extends Model
     }
 
 }
-
-

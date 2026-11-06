@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Template Traduzione"
+module: "Lang"
+type: concept
+tags: [migration, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+  - "../italian-text-refined-audit-report.md"
+status: draft
+---
 # Template Traduzione
 
 ## Metadati

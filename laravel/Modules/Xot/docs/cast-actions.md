@@ -1,3 +1,11 @@
+---
+title: "Azioni di Cast Sicure - Sostituzione di property_exists"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "azioni di cast sicure - sostituzione di property_exists xot"
+---
 # Azioni di Cast Sicure - Sostituzione di property_exists
 
 ## Panoramica

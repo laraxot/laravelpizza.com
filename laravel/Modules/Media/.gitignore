@@ -1,3 +1,4 @@
+
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -68,10 +69,6 @@ storage/*.key
 .env
 .env.*
 !.env.example
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -172,3 +169,59 @@ lang/lang/
 _docs/
 _docs/
 agentdb.rvf
+tests/AuditCoverage/
+audit-coverage/
+.devcontainer/
+
+# Root quality tool configs forbidden in module root
+phpmd*
+
+/.ai*
+/_bmad
+/bashscripts
+/_docs
+/docs/archive
+/docs/legacy
+.agents
+.claude
+.codex
+.cursor
+.opencode
+phpstan*-*
+phpmd*.*
+
+# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
+/rector.php
+/phpinsights.php
+/.cursor
+/.cursor/
+/.windsurf
+/.windsurf/
+/.vscode
+/.vscode/
+.cursor~*
+.windsurf~*
+graphify-out/
+/bashscripts/
+/tools/
+/scripts/
+/.agents/
+/.claude-audit/
+/.claude/
+/.codex/
+/.opencode/
+/tests/graphify-out/
+tools
+.vscode
+build
+/.github/skills/
+.github/skills
+docs/graphify
+resources/lang
+
+# docs/chat — coordination notes replaced by BMAD stories in docs/bmad/
+docs/chat
+
+# Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
+app/Application
+/.docs-archive/

@@ -1,3 +1,11 @@
+---
+title: "Model Fields Validation - Critical Memory"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "model fields validation - critical memory xot"
+---
 # Model Fields Validation - Critical Memory
 
 ## ERRORE CRITICO IDENTIFICATO

@@ -1,6 +1,22 @@
+---
+title: "cyclomatic complexity report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cyclomatic complexity report"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-08 (docs-audit): report generato il 2025-10-01 e mai rigenerato; i valori non descrivono il codice attuale. Contenuto non riscritto, verificare prima di usarlo.
+
 # Cyclomatic Complexity Report - Module: Seo
 
-**Generated:** 2025-10-01 19:44:11
+**Generated:** 2025-10-01 19:44:11  
+---
+**Generated:** 2025-10-01 19:44:11  
 **Analyzer:** Super Mucca 🐮
 
 ---

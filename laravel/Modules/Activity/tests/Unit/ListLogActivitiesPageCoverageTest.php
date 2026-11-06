@@ -11,7 +11,7 @@ use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 beforeEach(function (): void {
     /** @var \Modules\Activity\Tests\TestCase $this */
@@ -43,7 +43,7 @@ $result = $this->requirePage()->getBreadcrumb();
     });
 
     test('get breadcrumb uses static breadcrumb when set', function (): void {
-$page = new class extends ListLogActivities
+        $page = new class extends ListLogActivities
         {
             protected static ?string $breadcrumb = 'Custom Breadcrumb';
 
@@ -62,7 +62,7 @@ Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
     });
 
     test('can restore activity returns false when resource lacks can restore method', function (): void {
-$page = new class extends ListLogActivities
+        $page = new class extends ListLogActivities
         {
             public static function getResource(): string
             {
@@ -89,7 +89,7 @@ try {
     });
 
     test('send restore success notification returns notification', function (): void {
-$page = new class extends ListLogActivities
+        $page = new class extends ListLogActivities
         {
             /** @return class-string */
             public static function getResource(): string
@@ -104,12 +104,11 @@ $page = new class extends ListLogActivities
         };
 
         $notification = $page->exposeRestoreSuccess();
-
-        Assert::assertInstanceOf(Notification::class, $notification);
+        Assert::assertNotEmpty($notification->getTitle());
     });
 
     test('send restore failure notification without message returns notification', function (): void {
-$page = new class extends ListLogActivities
+        $page = new class extends ListLogActivities
         {
             /** @return class-string */
             public static function getResource(): string
@@ -124,12 +123,11 @@ $page = new class extends ListLogActivities
         };
 
         $notification = $page->exposeRestoreFailure();
-
-        Assert::assertInstanceOf(Notification::class, $notification);
+        Assert::assertNotEmpty($notification->getTitle());
     });
 
     test('send restore failure notification with message includes body', function (): void {
-$page = new class extends ListLogActivities
+        $page = new class extends ListLogActivities
         {
             /** @return class-string */
             public static function getResource(): string
@@ -144,8 +142,7 @@ $page = new class extends ListLogActivities
         };
 
         $notification = $page->exposeRestoreFailure('test message');
-
-        Assert::assertInstanceOf(Notification::class, $notification);
+        Assert::assertSame('test message', $notification->getBody());
     });
 
     test('can restore activity with record executes resource check', function (): void {

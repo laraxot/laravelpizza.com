@@ -1,3 +1,15 @@
+---
+title: "bmad method"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad method"
+issues: []
+discussions: []
+status: draft
+---
+
 # BMAD Method v6.3 operativo nel progetto
 
 ## Regola pratica

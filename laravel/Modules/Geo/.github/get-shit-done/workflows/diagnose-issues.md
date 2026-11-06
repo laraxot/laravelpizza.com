@@ -1,3 +1,14 @@
+---
+title: "diagnose issues"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "diagnose issues"
+issues: []
+discussions: []
+---
+
 <purpose>
 Orchestrate parallel debug agents to investigate UAT gaps and find root causes.
 

@@ -1,8 +1,29 @@
+---
+title: "MCP (Model Context Protocol) Configuration"
+type: index
+tags: [notify, docs, mcp]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione mcp readme mcp (model context protocol) configuration index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
+status: draft
+---
 # MCP (Model Context Protocol) Configuration
 
 > **Last Updated**: 2026-03-13  
 > **Status**: 🔄 In Progress  
 > **Repository**: FixCity Platform
+> **Repository**: Notify Platform
 
 ---
 
@@ -306,4 +327,5 @@ To contribute to MCP configuration:
 
 **Maintainer**: @marco76tv  
 **Contact**: dev @fixcity.example.com  
+**Contact**: dev @laraxot.example.com  
 **Last Tested**: 2026-03-13

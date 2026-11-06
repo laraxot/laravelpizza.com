@@ -16,7 +16,7 @@ class JobForm extends XotBaseResourceForm
     /**
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'job_id' => TextInput::make('job_id')->required()->maxLength(255),

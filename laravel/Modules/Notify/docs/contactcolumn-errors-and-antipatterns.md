@@ -1,3 +1,15 @@
+---
+title: "contactcolumn errors and antipatterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contactcolumn errors and antipatterns"
+issues: []
+discussions: []
+status: draft
+---
+
 # ContactColumn.php - Errori Critici e Anti-Pattern (Modulo Notify)
 
 ## 🚨 **AUDIT CRITICO - ERRORI GRAVI IDENTIFICATI**
@@ -216,7 +228,6 @@ Implementare ContactColumn che:
 - [Accessibilità WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ---
-
 *Audit completato: 2025-08-01*  
 *Gravità: CRITICA*  
 *Stato: REFACTOR RICHIESTO*  

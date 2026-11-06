@@ -13,7 +13,7 @@ class NotificationInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),
@@ -50,7 +50,6 @@ class NotificationInfolist extends XotBaseResourceInfolist
             'error_message' => TextEntry::make('error_message')
                 ->limit(120),
             'metadata' => TextEntry::make('metadata')
-                ->limit(120),
-        ];
+                ->limit(120)];
     }
 }

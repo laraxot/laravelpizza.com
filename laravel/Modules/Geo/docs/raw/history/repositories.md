@@ -1,3 +1,14 @@
+---
+title: "repositories"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "repositories"
+issues: []
+discussions: []
+---
+
 
 Tracker gathers a lot of information from your requests to identify and store:
 - Sessions
@@ -20,3 +31,11 @@ Tracker gathers a lot of information from your requests to identify and store:
 https://github.com/antonioribeiro/tracker
 
 ---
+title: "repositories"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "repositories"
+issues: []
+discussions: []

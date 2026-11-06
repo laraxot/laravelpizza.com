@@ -1,3 +1,11 @@
+---
+title: "StoredEvent Business Logic Test Fix"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "storedevent business logic test fix activity"
+---
 # StoredEvent Business Logic Test Fix
 
 ## Problema Identificato

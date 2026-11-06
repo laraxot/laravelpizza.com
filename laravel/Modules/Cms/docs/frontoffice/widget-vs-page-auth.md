@@ -1,3 +1,15 @@
+---
+title: "widget vs page auth"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "widget vs page auth"
+issues: []
+discussions: []
+status: draft
+---
+
 # Widget vs Page per l'Autenticazione
 
 ## Introduzione
@@ -62,7 +74,7 @@ namespace Modules\User\Filament\Widgets\Auth;
 use Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Illuminate\Support\Facades\Auth;
 use Filament\Notifications\Notification;
 

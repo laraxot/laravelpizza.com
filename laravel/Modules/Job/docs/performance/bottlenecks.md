@@ -1,3 +1,15 @@
+---
+title: "bottlenecks"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bottlenecks"
+issues: []
+discussions: []
+status: draft
+---
+
 # Job Module Performance Bottlenecks
 
 ## Queue Management
@@ -189,21 +201,20 @@ Implementare:
 ### Versione HEAD
 
 ## Collegamenti tra versioni di bottlenecks.md
-* [bottlenecks.md](../../../gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../../User/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming
 
 ---
-
 ### Versione Incoming
 
 ---

@@ -1,7 +1,12 @@
+---
+title: "Xot - coding-standards.md"
+module: Xot
+bmad: true
+status: active
+---
 # Standard di Codice per il progetto
 
-Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../CODE-STANDARDS.md).
-> **Nota**: Questo documento è correlato a [Convenzioni](../../../../docs/conventions.md) e [Naming Conventions](../../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
+> **Nota**: Questo documento è correlato a [Convenzioni](../../../project_docs/conventions.md) e [Naming Conventions](../../../project_docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
 
 Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../code-standards.md).
 
@@ -77,8 +82,7 @@ Il codice del progetto il progetto **deve** aderire ai seguenti principi fondame
 
 # Standard di Codice per il progetto
 
-Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../CODE-STANDARDS.md).
-> **Nota**: Questo documento è correlato a [Convenzioni](../../../../docs/conventions.md) e [Naming Conventions](../../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
+> **Nota**: Questo documento è correlato a [Convenzioni](../../../project_docs/conventions.md) e [Naming Conventions](../../../project_docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
 
 Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../code-standards.md).
 
@@ -347,12 +351,10 @@ class StorePatientRequest extends FormRequest
 
 ## Collegamenti Correlati
 
-- [Documentazione Xot](../CODE-STANDARDS.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
-- [Convenzioni](../../../../docs/conventions.md)
-- [Naming Conventions](../../../../docs/naming-conventions.md)
+- [Convenzioni](../../../project_docs/conventions.md)
+- [Naming Conventions](../../../project_docs/naming-conventions.md)
 - [Documentazione Xot](../code-standards.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
+- [Collegamenti Documentazione](../../../../project_docs/collegamenti-documentazione.md)## Documentazione del Codice
 
 ### PHPDoc
 
@@ -606,21 +608,12 @@ git commit -m "fix: correzione calcolo età paziente"
 - Alert su errori
 
 ## Collegamenti tra versioni di coding-standards.md
-* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
-* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
+* [coding-standards.md](../../../xot/project_docs/standards/coding-standards.md)
+* [coding-standards.md](../../../xot/project_docs/conventions/coding-standards.md)
 
 ## Collegamenti Correlati
 
-- [Convenzioni](../../../docs/conventions.md)
-- [Naming Conventions](../../../docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-* [coding-standards.md](../../../xot/docs/standards/coding-standards.md)
-* [coding-standards.md](../../../xot/docs/conventions/coding-standards.md)
-
-## Collegamenti Correlati
-
-- [Convenzioni](../../../../docs/conventions.md)
-- [Naming Conventions](../../../../docs/naming-conventions.md)
+- [Convenzioni](../../../project_docs/conventions.md)
+- [Naming Conventions](../../../project_docs/naming-conventions.md)
 - [Documentazione Xot](../code-standards.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Collegamenti Documentazione](../../../../project_docs/collegamenti-documentazione.md)

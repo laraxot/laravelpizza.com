@@ -1,3 +1,15 @@
+---
+title: "anti patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "anti patterns"
+issues: []
+discussions: []
+status: draft
+---
+
 # Anti-Pattern Comuni in Laraxot
 
 ## Panoramica
@@ -49,9 +61,9 @@ if (app(SafeObjectCastAction::class)->hasProperty($object, 'value')) {
 
 ### Collegamenti
 
-- [Documentazione Azioni Cast](../../laravel/modules/xot/docs/cast-actions.md)
-- [SafeEloquentCastAction](../../laravel/Modules/Xot/app/Actions/Cast/SafeEloquentCastAction.php)
-- [SafeObjectCastAction](../../laravel/Modules/Xot/app/Actions/Cast/SafeObjectCastAction.php)
+- [Documentazione Azioni Cast](../../Xot/docs/cast-actions.md)
+- [SafeEloquentCastAction](../../Xot/app/Actions/Cast/SafeEloquentCastAction.php)
+- [SafeObjectCastAction](../../Xot/app/Actions/Cast/SafeObjectCastAction.php)
 
 ## 2. Estensione Diretta di Classi Filament
 
@@ -252,7 +264,7 @@ php artisan test
 
 ## Collegamenti
 
-- [Regole Cursor](../../.cursor/rules)
+- [Regole Cursor](../../../../.cursor/rules)
 - [Regole Windsurf](../../.windsurf/rules)
-- [Documentazione Moduli](../../laravel/Modules/)
-- [PHPStan Configuration](../../laravel/phpstan.neon)
+- [Documentazione Moduli](../..)
+- [PHPStan Configuration](../../../phpstan.neon)

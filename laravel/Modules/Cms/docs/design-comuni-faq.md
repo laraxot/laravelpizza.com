@@ -1,3 +1,15 @@
+---
+title: "design comuni faq"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni faq"
+issues: []
+discussions: []
+status: draft
+---
+
 # Design Comuni - Domande Frequenti (FAQ)
 
 ## Panoramica
@@ -169,8 +181,8 @@ Output: `Themes/Sixteen/docs/design-comuni/screenshots/`
 - [Documentazione Script](../../../bashscripts/docs/DESIGN_COMUNI_SCREENSHOT_SCRIPT.md)
 
 ### Moduli Correlati
-- [UI Module - Blocks System](../UI/docs/blocks-system.md)
-- [UI Module - Design System](../UI/docs/design-system.md)
+- [UI Module - Blocks System](../../UI/docs/blocks-system.md)
+- [UI Module - Design System](../../UI/docs/design-system.md)
 
 ## Prossimi Passi
 
@@ -207,7 +219,6 @@ Icone utilizzate:
 - `#it-search` - Icona search input
 
 ---
-
 **Ultimo Aggiornamento**: 2026-04-03  
 **Stato**: ✅ 90% Completato  
 **Responsabile**: AI Agent Team
@@ -215,7 +226,7 @@ Icone utilizzate:
 ## Verifica corrente 2026-04-03
 
 Verifica rilanciata sui render attuali:
-- [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity-2026-04-03.md)
+- [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity.md)
 - [Structure diff](../../../Themes/Sixteen/docs/pages/domande-frequenti/STRUCTURE-DIFF.md)
 
 Esito aggiornato:

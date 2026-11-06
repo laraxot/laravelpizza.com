@@ -1,3 +1,16 @@
+---
+title: "ERROR ANALYSIS REPORT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ERROR ANALYSIS REPORT"
+issues: []
+discussions: []
+status: superseded
+superseded_by: error_analysis_report.md
+---
+
 # 🐛 ERROR ANALYSIS REPORT - FIXCITY
 
 **Data**: 2025-10-02 20:50  
@@ -6,6 +19,14 @@
 
 ---
 
+title: "ERROR ANALYSIS REPORT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ERROR ANALYSIS REPORT"
+issues: []
+discussions: []
 ## 🔴 ERRORE PRINCIPALE
 
 ```

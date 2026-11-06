@@ -1,3 +1,15 @@
+---
+title: "github discussion sigma gg calcoli refactor body"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github discussion sigma gg calcoli refactor body"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Domanda
 
 Dopo i fix puntuali su `FunctionExtra` / `GgFilterData` (Trova esclusi 2026), quale percorso architetturale conviene per il **medio termine**?

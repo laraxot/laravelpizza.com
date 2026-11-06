@@ -6,18 +6,17 @@ namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
 use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+use function Safe\class_parents;
 
 test('consent_resource_extends_xot_base_resource', function (): void {
-    Assert::assertInstanceOf(XotBaseResource::class, new ConsentResource());
+    Assert::assertArrayHasKey(XotBaseResource::class, class_parents(ConsentResource::class));
 });
 
 test('consent_resource_model_is_consent', function (): void {
-    $resource = new ConsentResource();
+    $resource = new ConsentResource;
 
     Assert::assertSame(Consent::class, $resource->getModel());
 });

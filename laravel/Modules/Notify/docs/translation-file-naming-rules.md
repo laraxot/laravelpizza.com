@@ -1,3 +1,15 @@
+---
+title: "translation file naming rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation file naming rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole di Naming per i File di Traduzione
 
 ## Principi Fondamentali per il Naming dei File
@@ -37,3 +49,6 @@ Se si identifica un file con naming non conforme:
 - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+- [Best Practices per le Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
+- [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)

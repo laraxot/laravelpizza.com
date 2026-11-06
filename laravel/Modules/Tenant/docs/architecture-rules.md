@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Architectural Rules & Guidelines"
+module: "Tenant"
+type: rule
+tags: [architecture, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "architecture rules"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Architectural Rules & Guidelines
 
 This module adheres to the **Laraxot Architecture** and **Super Cow Methodology**.

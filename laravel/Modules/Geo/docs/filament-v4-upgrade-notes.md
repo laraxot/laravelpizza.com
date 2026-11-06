@@ -1,3 +1,15 @@
+---
+title: "filament v4 upgrade notes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 upgrade notes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Module - Filament v4 Upgrade Notes
 
 This document outlines specific considerations and changes for the `Geo` module during the Filament v4 upgrade. For a comprehensive overview of the Filament v4 upgrade process, refer to the main project documentation: [`docs/filament_v4_upgrade.md`](../../../docs/filament_upgrade_v4.md).
@@ -59,7 +71,6 @@ This document outlines specific considerations and changes for the `Geo` module 
 *   **Status:** No changes were required for these translations as they were already correct.
 
 ---
-
 **DRY (Don't Repeat Yourself) / KISS (Keep It Simple, Stupid) Principles:**
 
 *   **Centralized Enums:** The `AddressItemEnum` exemplifies DRY by centralizing address field definitions and their form schema generation. This ensures consistency across the application wherever address fields are used.

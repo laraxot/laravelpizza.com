@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Audit Traduzioni Inglesi - <nome progetto>"
+module: "Lang"
+type: concept
+tags: [migration, filament]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Audit Traduzioni Inglesi - <nome progetto>
 
 ## Panoramica
@@ -293,6 +307,7 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Regole Traduzioni](../../../../docs/translation-standards.md)
 - [Best Practices Filament](../../../docs/filament-best-practices.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
@@ -595,6 +610,7 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Regole Traduzioni](../../../../docs/translation-standards.md)
 - [Best Practices Filament](../../../docs/filament-best-practices.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 

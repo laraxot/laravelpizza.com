@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "introduzione"
+issues: []
+discussions: []
 title: Introducendo Cms
 description: Introduzione a Module Cms
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Introducendo Cms {#introducendo-cms}

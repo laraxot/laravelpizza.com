@@ -1,3 +1,16 @@
+---
+qmd: "docs health"
+issues: []
+discussions: []
+title: "Docs Health - Notify"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Docs Health - Notify
 
 ## Snapshot

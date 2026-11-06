@@ -1,3 +1,15 @@
+---
+title: "git subtree error resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git subtree error resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚀 Gestione Errori Git Subtree
 
 ## 📋 Struttura del Sistema
@@ -233,7 +245,6 @@ fi
 - [Git Subtree vs Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 ---
-
 <div align="center">
   <sub>Built with ❤️ by the development team</sub>
 </div>

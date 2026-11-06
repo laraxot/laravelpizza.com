@@ -1,3 +1,15 @@
+---
+title: "tailwind email system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tailwind email system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema Email con Tailwind CSS nel Modulo Notify
 
 ## 1. Configurazione Base

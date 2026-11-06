@@ -1,3 +1,11 @@
+---
+title: "Eccezioni alla Regola della Directory app in Laraxot <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "eccezioni alla regola della directory app in laraxot <nome progetto> xot"
+---
 # Eccezioni alla Regola della Directory app in Laraxot <nome progetto>
 
 ## Panoramica

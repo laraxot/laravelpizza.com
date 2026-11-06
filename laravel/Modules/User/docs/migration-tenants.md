@@ -1,3 +1,28 @@
+---
+title: "🔧 Migration Fix: create_tenants_table"
+type: concept
+tags: [migration, tenants]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration-tenants 🔧 migration fix: create_tenants_table"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # 🔧 Migration Fix: create_tenants_table
 
 **File**: `database/migrations/2023_01_01_000008_create_tenants_table.php`
@@ -210,7 +235,7 @@ done
 ### This Analysis
 
 - [Migration Violations](./migration-violations-tenants.md) - Detailed analysis
-- [User Module README](./readme.md)
+- [User Module README](./README.md)
 
 ---
 

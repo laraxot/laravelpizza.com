@@ -1,3 +1,13 @@
+---
+title: "Risoluzione Conflitti in XotBaseServiceProvider"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Risoluzione Conflitti in XotBaseServiceProvider"
+---
 # Risoluzione Conflitti in XotBaseServiceProvider
 
 ## File Coinvolto
@@ -32,13 +42,13 @@ Due approcci in conflitto:
 2. **Approccio con action** (HEAD):
    ```php
    $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
-
+   
    /*
    $this->publishes([
        $configPath => config_path($this->nameLower.'.php'),
    ], 'config');
    */
-
+   
    $this->mergeConfigFrom($configPath, $this->nameLower);
    ```
 
@@ -46,7 +56,7 @@ Due approcci in conflitto:
 Due approcci in conflitto:
 1. **Approccio diretto** (version aurmich/dev):
    Non utilizza `GetModulePathByGeneratorAction` per componenti view
-
+   
 2. **Approccio con action** (version HEAD):
    ```php
    $componentsViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
@@ -93,13 +103,13 @@ protected function registerConfig(): void
 {
     try {
         $configPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'config');
-
+        
         /*
         $this->publishes([
             $configPath => config_path($this->nameLower.'.php'),
         ], 'config');
         */
-
+        
         $this->mergeConfigFrom($configPath, $this->nameLower);
     } catch (\Exception $e) {
         // Ignore missing configuration
@@ -138,9 +148,9 @@ public function execute(string $moduleName, string $generatorPath): string
 
     $res = module_path($moduleName, $relativePath);
     Assert::string($res);
-
+    
     Assert::directory($res, 'The path '.$res.' is not a directory ['.$moduleName.']['.$generatorPath.']');
-
+    
     return $res;
 }
 ```
@@ -157,4 +167,4 @@ Per maggiori dettagli sui vantaggi di questo approccio, consultare la documentaz
 
 ---
 
-*Collegamento bidirezionale: vedi anche `/docs/providers/service_provider_best_practices.md`*
+*Collegamento bidirezionale: vedi anche `/docs/providers/service_provider_best_practices.md`* 

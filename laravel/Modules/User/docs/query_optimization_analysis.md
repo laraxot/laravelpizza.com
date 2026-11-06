@@ -1,3 +1,11 @@
+---
+title: "User Module - Query Optimization Analysis"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - query optimization analysis user"
+---
 # User Module - Query Optimization Analysis
 
 ## Overview
@@ -475,3 +483,12 @@ class UserServiceProvider extends ServiceProvider
 4. **Low** (Week 3): Implement background cleanup and monitoring
 
 This optimization plan will transform the User module from a performance bottleneck into a highly efficient authentication and authorization system.
+
+
+---
+
+## Contenuto assorbito da `QUERY_OPTIMIZATION_ANALYSIS.md`
+
+# Documento unificato
+
+Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [query_optimization_analysis.md](./query_optimization_analysis.md).

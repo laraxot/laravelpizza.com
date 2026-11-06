@@ -1,4 +1,12 @@
 ---
+title: "gsd debugger.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd debugger.agent"
+issues: []
+discussions: []
 name: gsd-debugger
 description: Investigates bugs using scientific method, manages debug sessions, handles checkpoints. Spawned by /gsd-debug orchestrator.
 tools: ['read', 'edit', 'edit', 'execute', 'search', 'search', 'websearch']

@@ -1,3 +1,11 @@
+---
+title: "_repos"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, _integration]
+qmd: "_repos notify"
+---
 # _repos
 
 <!-- Contenuto migrato da _docs/_repos.txt -->

@@ -1,3 +1,15 @@
+---
+title: "map picker"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker"
+issues: []
+discussions: []
+status: draft
+---
+
 MapPicker: custom Filament field
 
 Overview

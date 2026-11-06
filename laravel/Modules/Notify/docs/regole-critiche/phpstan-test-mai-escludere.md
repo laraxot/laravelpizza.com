@@ -1,3 +1,15 @@
+---
+title: "phpstan test mai escludere"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan test mai escludere"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚨 REGOLA CRITICA PROGETTO: PHPStan e Test
 
 ## ⚠️ REGOLA ASSOLUTA - NON DEROGABILE
@@ -115,7 +127,7 @@ Ogni developer deve:
 ## 📖 Riferimenti Progetto
 
 - [Regola Critica Activity Module](../laravel/Modules/Activity/docs/phpstan/regola-critica-test-phpstan.md)
-- [PHPStan Compliance](../laravel/Modules/*/docs/phpstan-compliance.md)
+- [PHPStan Compliance](../phpstan-compliance.md)
 - [Testing Guidelines](./testing-guidelines.md)
 
 ## 🔄 Processo di Review
@@ -150,7 +162,6 @@ Ogni developer deve:
 I test devono sempre essere analizzati da PHPStan.
 
 ---
-
 **Data:** 10 Ottobre 2025  
 **Priorità:** 🚨 MASSIMA  
 **Categoria:** Regola Critica Non Derogabile  

@@ -1,3 +1,14 @@
+---
+title: "phpstan errors corrections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors corrections"
+issues: []
+discussions: []
+---
+
 # Correzioni Errori PHPStan - Laraxot <nome progetto>
 
 ## Contesto

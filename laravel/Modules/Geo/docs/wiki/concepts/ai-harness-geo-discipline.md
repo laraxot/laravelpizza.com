@@ -13,9 +13,10 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
   - ./geo-map-lit-reconstruction-guide.md
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/geo-map-marker-civic-pin-theme-boundary.md
+  - ../../../../../Themes/Sixteen/docs/wiki/concepts/geo-map-marker-civic-pin-theme-boundary.md
   - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+status: draft
 ---
 
 # AI harness — Geo

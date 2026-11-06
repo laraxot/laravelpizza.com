@@ -1,3 +1,27 @@
+---
+title: "Correzioni Traduzioni Navigation - Gennaio 2026"
+type: concept
+tags: [navigation, translations, fixes, january]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "navigation-translations-fixes-january-2026 correzioni traduzioni navigation - gennaio 2026"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Correzioni Traduzioni Navigation - Gennaio 2026
 
 ## Data Intervento
@@ -164,6 +188,9 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 ## Regole Applicate
 
 ### DRY (Don't Repeat Yourself)
+- [Regole Traduzioni Laraxot](../../Xot/docs/translation-rules.md)
+- [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
+- [Documentazione Modulo User](README.md)
 - Eliminata duplicazione di chiavi placeholder
 - Raggruppamento logico coerente
 - Icone standard Heroicons per consistenza
@@ -183,9 +210,12 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 
 ## Collegamenti
 
+- [Filosofia Traduzioni Laraxot](../../Xot/docs/translation-philosophy.md)
+- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
+- [Documentazione Modulo User](./README.md)
 - [Filosofia Traduzioni Laraxot](../../xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../xot/docs/translation-standards.md)
-- [Documentazione Modulo User](./readme.md)
+- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
+- [Documentazione Modulo User](./README.md)
 
 ## Note Tecniche
 
@@ -196,4 +226,5 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 - Sort order allineato con i Resource corrispondenti
 
 *Intervento completato il: 2026-01-22*
+*Conforme alle regole DRY + KISS*
 *Conforme alle regole DRY + KISS*

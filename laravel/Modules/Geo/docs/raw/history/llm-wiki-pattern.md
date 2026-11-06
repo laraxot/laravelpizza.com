@@ -1,3 +1,14 @@
+---
+title: "llm wiki pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "llm wiki pattern"
+issues: []
+discussions: []
+---
+
 # LLM Wiki - Karpathy Pattern
 
 ## Filosofia

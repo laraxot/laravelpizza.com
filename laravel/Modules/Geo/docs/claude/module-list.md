@@ -1,3 +1,15 @@
+---
+title: "module list"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module list"
+issues: []
+discussions: []
+status: draft
+---
+
 # Module List
 
 ## 🏗️ Complete Module Overview
@@ -189,6 +201,5 @@ Modules/{ModuleName}/
 4. **Documentation**: Each module should have documentation in its `docs/` directory
 
 ---
-
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: module-list.md - Complete module overview

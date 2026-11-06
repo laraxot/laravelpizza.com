@@ -19,7 +19,7 @@ class JobForm extends XotBaseResourceForm
      *
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'queue' => TextInput::make('queue')->required()->maxLength(255),

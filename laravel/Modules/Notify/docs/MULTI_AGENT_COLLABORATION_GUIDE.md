@@ -1,3 +1,17 @@
+---
+qmd: "MULTI AGENT COLLABORATION GUIDE"
+issues: []
+discussions: []
+title: "Multi-Agent Collaboration Rules & Guidelines"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: multi_agent_collaboration_guide.md
+---
+
 # Multi-Agent Collaboration Rules & Guidelines
 
 > **Purpose**: Establish rules, memories, and skills for effective multi-agent AI collaboration  

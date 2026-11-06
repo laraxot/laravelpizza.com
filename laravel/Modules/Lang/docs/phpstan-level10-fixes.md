@@ -1,3 +1,16 @@
+---
+title: "phpstan level10 fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level10 fixes"
+issues: []
+discussions: []
+status: superseded
+superseded_by: phpstan-level10es.md
+---
+
 # Correzioni PHPStan Livello 10 - Modulo Lang
 
 Questo documento traccia gli errori PHPStan di livello 10 identificati nel modulo Lang e le relative soluzioni implementate.

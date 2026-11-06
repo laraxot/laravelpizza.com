@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Tenant Module - Product Strategy"
+module: "Tenant"
+type: concept
+tags: [PRODUCT, STRATEGY]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product strategy"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Tenant Module - Product Strategy
 
 **Module:** Tenant  

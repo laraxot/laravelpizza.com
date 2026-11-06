@@ -1,4 +1,7 @@
 ---
+qmd: "filament5 custom field entangle contract"
+issues: []
+discussions: []
 title: "Filament 5 Custom Field: contratto entangle e state binding modifiers"
 type: concept
 confidence: verified
@@ -7,6 +10,7 @@ updated: 2026-04-28
 tags: [filament5, custom-field, entangle, state-binding, livewire, alpine, blade]
 source: "https://filamentphp.com/docs/5.x/forms/custom-fields"
 verified_against: "vendor/filament/forms/resources/views/components/*.blade.php"
+status: draft
 ---
 
 # Filament 5 Custom Field: contratto entangle e state binding modifiers

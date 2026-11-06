@@ -1,3 +1,14 @@
+---
+title: "phpstan user module fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan user module fixes"
+issues: []
+discussions: []
+---
+
 # PHPStan User Module - COMPLETE ✅
 
 **Status**: ✅ COMPLETE  
@@ -32,4 +43,12 @@ Il `user()` relationship in OauthClient usa `XotData::getUserClass()` per determ
 
 ---
 
+title: "phpstan user module fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan user module fixes"
+issues: []
+discussions: []
 **Related**: GitHub Issue #102

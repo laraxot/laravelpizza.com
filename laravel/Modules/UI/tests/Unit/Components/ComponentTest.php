@@ -13,14 +13,15 @@ uses(TestCase::class);
 
 describe('Component', function (): void {
     test('ui components can be rendered', function (): void {
-        $component = new class extends Component {
+        $component = new class extends Component
+        {
             public function render(): View
             {
                 return view('ui::components.ui.button');
             }
         };
 
-        Assert::assertInstanceOf(Component::class, $component);
+        Assert::assertStringContainsString('button', (string) $component->render()->render());
     });
 
     test('ui button component has correct attributes', function (): void {

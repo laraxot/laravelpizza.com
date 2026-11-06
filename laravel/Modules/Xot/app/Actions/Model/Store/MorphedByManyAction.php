@@ -15,6 +15,6 @@ class MorphedByManyAction
     public function execute(Model $_model, RelationDTO $_relationDTO): void
     {
         // Assert::isInstanceOf($rows = $relationDTO->rows, HasOne::class);
-        dddx('wip');
+        throw new \LogicException('Store\MorphedByManyAction not implemented');
     }
 }

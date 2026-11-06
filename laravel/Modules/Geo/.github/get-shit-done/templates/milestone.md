@@ -1,3 +1,14 @@
+---
+title: "milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "milestone"
+issues: []
+discussions: []
+---
+
 # Milestone Entry Template
 
 Add this entry to `.planning/MILESTONES.md` when completing a milestone:
@@ -26,6 +37,14 @@ Add this entry to `.planning/MILESTONES.md` when completing a milestone:
 **What's next:** [Brief description of next milestone goals, or "Project complete"]
 
 ---
+title: "milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "milestone"
+issues: []
+discussions: []
 ```
 
 <structure>

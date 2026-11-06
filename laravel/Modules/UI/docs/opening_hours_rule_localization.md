@@ -1,3 +1,15 @@
+---
+title: "opening hours rule localization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "opening hours rule localization"
+issues: []
+discussions: []
+status: draft
+---
+
 # Localizzazione OpeningHoursRule - Modulo UI
 
 ## Problema Identificato

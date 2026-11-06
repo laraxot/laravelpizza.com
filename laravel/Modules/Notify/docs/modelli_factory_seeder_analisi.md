@@ -1,3 +1,15 @@
+---
+title: "modelli factory seeder analisi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modelli factory seeder analisi"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Modelli, Factory e Seeder - Modulo Notify
 
 ## Panoramica
@@ -272,7 +284,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Twilio](https://www.twilio.com/) - SMS service
 - [Firebase](https://firebase.google.com/) - Push notifications
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 10 modelli attivi, 4 file backup da rimuovere*
 *Sistema notifiche multi-canale completo*

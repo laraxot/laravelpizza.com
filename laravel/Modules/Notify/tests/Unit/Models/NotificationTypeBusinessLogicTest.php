@@ -2,34 +2,54 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Tests\Unit\Models;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Notify\Models\NotificationType;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
+describe('NotificationType Business Logic', function (): void {
+    test('notification type extends eloquent model', function (): void {
+        $notificationType = new NotificationType;
 
-describe('NotificationType Business Logic', function () {
-    test('notification type extends eloquent model', function () {
-            });
+        Assert::assertContains('slug', $notificationType->getFillable());
+        Assert::assertFalse($notificationType->exists);
+    });
 
-    test('notification type has expected fillable fields', function () {
-        $reflection = new \ReflectionClass(NotificationType::class);
-        $property = $reflection->getProperty('fillable');
-        $property->setAccessible(true);
-
+    test('notification type has expected fillable fields', function (): void {
+        $notificationType = new NotificationType;
         $expectedFillable = [
             'name',
+            'slug',
             'description',
+            'category',
+            'is_active',
+            'channels',
+            'settings',
             'template',
         ];
 
-        Assert::assertEquals($expectedFillable, $property->getValue($reflection->newInstanceWithoutConstructor()));
+        Assert::assertSame($expectedFillable, $notificationType->getFillable());
     });
 
-    test('notification type model structure is correct', function () {
-        // Verify class exists and extends Model
-        Assert::assertTrue(class_exists(NotificationType::class));
-            });
+    test('notification type can store basic information', function (): void {
+        $notificationType = new NotificationType;
+        $notificationType->name = 'Email Verification';
+        $notificationType->description = 'Email verification notification type';
+        $notificationType->template = 'email-verification-template';
+
+        Assert::assertSame('Email Verification', $notificationType->name);
+        Assert::assertSame('Email verification notification type', $notificationType->description);
+        Assert::assertSame('email-verification-template', $notificationType->template);
+    });
+
+    test('notification type model can be instantiated without errors', function (): void {
+        $notificationType = new NotificationType;
+        Assert::assertFalse($notificationType->exists);
+    });
+
+    test('notification type can be queried', function (): void {
+        $query = NotificationType::query();
+        Assert::assertInstanceOf(Builder::class, $query);
+    });
 });

@@ -1,3 +1,15 @@
+---
+title: "ci semantic release"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ci semantic release"
+issues: []
+discussions: []
+status: draft
+---
+
 # ci — semantic release modulo geo
 
 ## scopo
@@ -13,16 +25,16 @@ Il modulo Geo partecipa al release monorepo con tag dedicati `geo-v*`.
 
 ## workflow (eseguito dalla root)
 
-[`semantic-release-monorepo.yml`](../../../../../.github/workflows/semantic-release-monorepo.yml) → `working-directory: laravel/Modules/Geo`
+[`semantic-release-monorepo.yml`](../../../../../../.github/workflows/semantic-release-monorepo.yml) → `working-directory: laravel/Modules/Geo`
 
 ## contributor report
 
-Scope `geo` in [`contributor-analytics.yml`](../../../../../.github/workflows/contributor-analytics.yml) → `docs/outputs/contributor-analytics/geo-by-extension.md`
+Scope `geo` in [`contributor-analytics.yml`](../../../../../../.github/workflows/contributor-analytics.yml) → `docs/outputs/contributor-analytics/geo-by-extension.md`
 
 ## collegamenti
 
-- [semantic-release-monorepo.md](../../../../../docs/wiki/ci/semantic-release-monorepo.md)
-- [STORY-130](../../../../../docs/stories/STORY-130-semantic-release-contributor-analytics-ci.md)
+- [semantic-release-monorepo.md](../../../../../../docs/wiki/ci/semantic-release-monorepo.md)
+- [STORY-130](../../../../../../docs/stories/STORY-130-semantic-release-contributor-analytics-ci.md)
 
 ## github (module_geo_fila5)
 

@@ -41,13 +41,13 @@ declare(strict_types=1);
               </div>
               --}}
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">{{ __('cms::block_footer.sections.legal.title') }}</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
+                          <a href="#" class="hover:underline">{{ __('cms::block_footer.links.privacy.label') }}</a>
                       </li>
                       <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                          <a href="#" class="hover:underline">{{ __('cms::block_footer.links.terms.label') }}</a>
                       </li>
                   </ul>
               </div>

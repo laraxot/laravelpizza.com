@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione conflitto git su Filament Table ConvertAction"
+module: "Media"
+type: concept
+tags: [filament, table, actions, conflict]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament table actions conflict resolution"
+related:
+  - "./webm.md"
+status: draft
+---
 # Risoluzione conflitto git su Filament Table ConvertAction
 
 ## Problema

@@ -1,3 +1,15 @@
+---
+title: "database mail queue"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database mail queue"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Code per Email - il progetto
 
 ## Panoramica
@@ -404,7 +416,7 @@ php artisan queue:restart
 ## Collegamenti
 - [Database Mail System](database-mail-system.md)
 - [Mail Templates](database-mail-templates.md)
-- [Queue Configuration](../../../../docs/queue-configuration.md)
+- [Queue Configuration](../../../docs/queue-configuration.md)
 
 ## Vedi Anche
 - [Laravel Queues](https://laravel.com/docs/queues)

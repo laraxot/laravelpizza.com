@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://iftikhar-ahmed.medium.com/send-push-notifications-in-laravel-using-firebase-on-your-android-device-f585621db900
  * @see https://github.com/laravel-notification-channels/telegram
@@ -41,10 +40,10 @@ class TelegramNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $_notifiable  The entity to be notified (l'entità da notificare)
+     * @param  object  $_notifiable  The entity to be notified (l'entità da notificare)
      * @return array<int, class-string>
      */
-    public function via(mixed $_notifiable): array
+    public function via(object $_notifiable): array
     {
         return [TelegramChannel::class];
     }
@@ -64,7 +63,7 @@ class TelegramNotification extends Notification implements ShouldQueue
     /**
      * Get the Telegram representation of the notification.
      */
-    public function toTelegram(mixed $notifiable): string
+    public function toTelegram(object $notifiable): string
     {
         return $this->message;
     }

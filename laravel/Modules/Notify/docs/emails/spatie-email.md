@@ -1,3 +1,15 @@
+---
+title: "spatie email"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie email"
+issues: []
+discussions: []
+status: draft
+---
+
 # SpatieEmail Documentation
 
 ## Overview

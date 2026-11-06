@@ -1,3 +1,15 @@
+---
+title: "solutions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "solutions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Soluzioni Tecniche - Modulo Job
 
 ## Problemi Identificati e Soluzioni
@@ -349,7 +361,7 @@ class RetryTest extends TestCase {
 
    - Aggiornamento strategie retry
 ## Collegamenti tra versioni di solutions.md
-* [solutions.md](../../../gdpr/docs/solutions.md)
+* [solutions.md](../../Gdpr/docs/solutions.md)
 * [solutions.md](../../../xot/docs/solutions.md)
 * [solutions.md](../../../job/docs/solutions.md)
 
@@ -358,7 +370,6 @@ class RetryTest extends TestCase {
    - Aggiornamento strategie retry
 
 ---
-
 ### Versione Incoming
 
    - Aggiornamento strategie retry

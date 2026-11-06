@@ -1,3 +1,15 @@
+---
+title: "italian language corrections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "italian language corrections"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni Lingua Italiana - Opening Hours
 
 ## Problema Identificato

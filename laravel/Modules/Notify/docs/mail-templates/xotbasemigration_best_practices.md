@@ -1,3 +1,15 @@
+---
+title: "xotbasemigration best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xotbasemigration best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # XotBaseMigration: Best Practices
 
 ## Introduzione
@@ -113,7 +125,6 @@ Quando si utilizza `Schema::hasColumn()` direttamente, si bypassa tutta questa l
 
 ## Riferimenti
 
-- [Xot Module Documentation](/var/www/html/saluteora/laravel/Modules/Xot/docs/MIGRATIONS.md)
-- [JSON Migration Best Practices](/var/www/html/saluteora/laravel/Modules/Notify/docs/mail-templates/JSON_MIGRATION_FIXES.md)
-- [Xot Module Documentation](/var/www/html/saluteora/laravel/Modules/Xot/docs/MIGRATIONS.md)
-- [JSON Migration Best Practices](/var/www/html/saluteora/laravel/Modules/Notify/docs/mail-templates/JSON_MIGRATION_FIXES.md)
+- [Xot Module Documentation]([project-root]/laravel/Modules/Xot/docs/MIGRATIONS.md)
+- [JSON Migration Best Practices]([project-root]/laravel/Modules/Notify/docs/mail-templates/JSON_MIGRATION_FIXES.md)
+- [JSON Migration Best Practices](json_migration_fixes.md)

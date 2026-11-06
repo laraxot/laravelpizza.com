@@ -1,3 +1,13 @@
+---
+title: "permission"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, install]
+qmd: "permission"
+---
 ~~~ php
 <?php
 
@@ -167,12 +177,14 @@ return [
 ~~~
 ### Versione HEAD
 
+
 ## Collegamenti tra versioni di permission.md
 * [permission.md](../../../Xot/docs/install/permission.md)
 * [permission.md](../../../Tenant/docs/it/config/permission.md)
-* [permission.md](../../../xot/docs/install/permission.md)
-* [permission.md](../../../tenant/docs/it/config/permission.md)
+
 
 ### Versione Incoming
 
+
 ---
+

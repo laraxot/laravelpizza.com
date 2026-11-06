@@ -1,3 +1,24 @@
+---
+title: "Inventario migration User"
+type: concept
+tags: [migrations, users, inventory]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrations-users-inventory inventario migration user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+---
+
 # Inventario migration User
 
 Percorso attivo: `database/migrations/`. ~~Copia legacy `Database/Migrations/`~~ rimossa 2026-06-18.
@@ -12,7 +33,7 @@ Pattern dominante: `XotBaseMigration` con blocco **create** (`tableCreate`) + **
 | create | Solo creazione tabella |
 | update | Solo alter (es. colonna `lang` su `users`) |
 | altro | Schema builder diretto o file non standard |
-| non attivo | Suffisso `.fortify`, `.wip`, `.old` — Laravel non li carica |
+| non attivo | Suffisso `.fortify`, `.wip`, `.old`: Laravel non li carica |
 
 ## Duplicati noti (non archiviati)
 

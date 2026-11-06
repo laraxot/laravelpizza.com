@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Integrazione Livewire Volt + mcamara/laravel-localization"
+module: "Lang"
+type: concept
+tags: [guida, migrazione, step, by]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "guida migrazione step by step"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Integrazione Livewire Volt + mcamara/laravel-localization
 
 ## 1. Obiettivo

@@ -1,3 +1,11 @@
+---
+title: "Analisi Violazioni Critiche XotBaseResource"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi violazioni critiche xotbaseresource xot"
+---
 # Analisi Violazioni Critiche XotBaseResource
 
 ## 🚨 Violazioni Identificate

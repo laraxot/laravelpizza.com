@@ -1,3 +1,15 @@
+---
+title: "setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Setup Codex locale
 
 1. Eseguire `./bashscripts/ai/ai_init.sh` per creare i symlink dot-folder.

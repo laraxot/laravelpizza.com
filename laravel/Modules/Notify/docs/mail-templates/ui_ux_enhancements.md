@@ -1,8 +1,20 @@
+---
+title: "ui ux enhancements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui ux enhancements"
+issues: []
+discussions: []
+status: draft
+---
+
 # UI/UX Enhancements per i Campi `name` e `slug` in MailTemplateResource
 
 ## Introduzione
 
-Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto Quaeris, mantenendo la coerenza visiva e migliorando l'usabilità.
+Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto <nome progetto>, mantenendo la coerenza visiva e migliorando l'usabilità.
 
 ## Componenti per il Campo `name`
 
@@ -68,7 +80,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
     ->required()
     ->unique(ignoreRecord: true)
     ->maxLength(255)
-    ->afterStateUpdated(fn (string $context, $state, callable $set) => 
+    ->afterStateUpdated(fn (string $context, $state, callable $set) =>
         $context === 'create' ? $set('slug', Str::slug($state)) : null)
     ->helperText('Identificatore unico utilizzato nel codice')
     ->prefixIcon('heroicon-o-link')
@@ -106,7 +118,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
         Forms\Components\Actions\Action::make('regenerateSlug')
             ->icon('heroicon-o-arrow-path')
             ->tooltip('Rigenera dallo slug dal nome')
-            ->action(fn (Forms\Get $get, Forms\Set $set) => 
+            ->action(fn (Forms\Get $get, Forms\Set $set) =>
                 $set('slug', Str::slug($get('name'))))
     ),
 ```
@@ -130,7 +142,7 @@ Forms\Components\Group::make([
                 $set('slug', Str::slug($state));
             }
         }),
-        
+
     Forms\Components\Grid::make(2)
         ->schema([
             'generateSlug' => Forms\Components\Toggle::make('generateSlug')
@@ -142,7 +154,7 @@ Forms\Components\Group::make([
                         $set('slug', Str::slug($get('name')));
                     }
                 }),
-                
+
             'slug' => Forms\Components\TextInput::make('slug')
                 ->required()
                 ->unique(ignoreRecord: true)
@@ -213,7 +225,7 @@ return [
 ];
 ```
 
-## Conformità con gli Standard Quaeris
+## Conformità con gli Standard <nome progetto>
 
 Tutti i componenti proposti:
 1. Non utilizzano il metodo `->label()` sui componenti Filament
@@ -229,12 +241,12 @@ I miglioramenti UI/UX proposti per i campi `name` e `slug` si concentrano su:
 3. **Azioni contestuali** che facilitano operazioni comuni
 4. **Relazioni intuitive** tra campi correlati
 
-L'implementazione di questi miglioramenti rispetta le convenzioni del progetto Quaeris mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
+L'implementazione di questi miglioramenti rispetta le convenzioni del progetto <nome progetto> mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
 
 ## Riferimenti
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/forms/fields/text-input)
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
+- [Implementazione Modello con Slug](./model_slug_implementation.md)
+- [Implementazione Risorsa con Slug](./resource_slug_implementation.md)

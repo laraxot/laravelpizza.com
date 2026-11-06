@@ -1,3 +1,11 @@
+---
+title: "factory"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "factory xot"
+---
 # factory
 
 <!-- Contenuto migrato da _docs/factory.txt -->

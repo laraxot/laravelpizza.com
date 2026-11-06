@@ -1,3 +1,11 @@
+---
+title: "Database Issues in User Module"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "database issues in user module user"
+---
 # Database Issues in User Module
 
 ## Missing `doctor_team` Table
@@ -18,7 +26,10 @@
 
 **Related Documentation**:
 - [User Module Overview](../index.md)
-- [Team Management](./team_management.md)
+
+- [User Module Overview](../INDEX.md)
+- [Team Management](./TEAM_MANAGEMENT.md)
 - [BaseUser Model](./baseuser.md)
-- [Database Structure](../database_structure.md)
-- [Migration Guidelines](../../../../../docs/collegamenti-documentazione.md)
+- [BaseUser Model](./baseuser.md)
+- [Database Structure](../DATABASE_STRUCTURE.md)
+- [Migration Guidelines](../../../../docs/collegamenti-documentazione.md)

@@ -1,3 +1,15 @@
+---
+title: "geo fields zen"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo fields zen"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Fields Zen: Philosophy, Religion, and Methodology
 
 ## The Zen of Geographic Selection

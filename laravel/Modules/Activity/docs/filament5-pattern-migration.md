@@ -1,3 +1,11 @@
+---
+title: "Filament 5 Pattern Migration - Activity Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "filament 5 pattern migration - activity module activity"
+---
 # Filament 5 Pattern Migration - Activity Module
 
 ## Data Migration

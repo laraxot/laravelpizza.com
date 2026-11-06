@@ -19,11 +19,17 @@ return [
         'group' => ['name' => 'General', 'description' => 'General Settings'],
         'label' => 'Page Content Builder',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => ['label' => 'Crea Page Content Builder'],
         'edit' => ['label' => 'Modifica Page Content Builder'],
         'delete' => ['label' => 'Elimina Page Content Builder'],
+    ],
+    'messages' => [
+        'block_unavailable' => [
+            'title' => 'Blocco non disponibile',
+            'body' => 'Il blocco ":block" non puo essere caricato e non e mostrato nell\'editor. Controllare il log prima di salvare.',
+        ],
     ],
 ];

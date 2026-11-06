@@ -1,3 +1,15 @@
+---
+title: "pre commit checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pre commit checklist"
+issues: []
+discussions: []
+status: draft
+---
+
 # 13. Pre-Commit Checklist
 
 Before committing or pushing:

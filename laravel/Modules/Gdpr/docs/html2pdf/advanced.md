@@ -1,3 +1,15 @@
+---
+title: "advanced"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "advanced"
+issues: []
+discussions: []
+status: draft
+---
+
 # Funzionalità Avanzate
 
 Questa sezione copre funzionalità avanzate come la generazione di codici a barre, QR code, la creazione di segnalibri (bookmark), indici e altri metodi utili della libreria.
@@ -10,7 +22,6 @@ Questa sezione copre funzionalità avanzate come la generazione di codici a barr
 *   [Configurazione della Sicurezza](./security.md)
 
 ---
-
 ## 📋 Codici a Barre e QR Code
 
 ### Barcode

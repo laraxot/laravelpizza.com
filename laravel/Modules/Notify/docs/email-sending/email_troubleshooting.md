@@ -1,3 +1,15 @@
+---
+title: "email troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email troubleshooting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.
@@ -15,8 +27,8 @@ La classe `SpatieEmail` ora utilizza l'API moderna di Laravel per gli allegati t
 $attachments = [
     [
         'path' => '/var/www/html/<nome progetto>/public_html/images/avatars/default.svg',
-'path' => '/var/www/html/Quaeris/public_html/images/avatars/default.svg',
-        'path' => '/var/www/html/_bases/base_techplanner_fila5_mono/public_html/images/avatars/default.svg',
+        'path' => '[project-root]/public_html/images/avatars/default.svg',
+        'path' => '/var/www/_bases/base_ptvx_fila5/public_html/images/avatars/default.svg',
         'as' => 'logo.svg',
         'mime' => 'image/svg+xml',
     ],
@@ -46,7 +58,7 @@ L'implementazione attuale include:
 4. **Documentazione PHPDoc completa**: Miglior supporto IDE e type hints
 
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md).
-Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md).
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
 
 ### 2. Errore: "View [notify::emails.template-name] not found"
 
@@ -208,6 +220,6 @@ public function test_can_send_email_with_attachments()
 - [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
-- [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
+- [ATTACHMENTS_USAGE.md](./attachments_usage.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
+- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)

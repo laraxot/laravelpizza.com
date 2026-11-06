@@ -1,3 +1,14 @@
+---
+title: "translation fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation fix summary"
+issues: []
+discussions: []
+---
+
 # 📋 Translation Fix - Summary Completo
 
 ## ✅ Cosa è Stato Fatto
@@ -14,6 +25,14 @@ Tre documenti fondamentali per le traduzioni:
 
 ---
 
+title: "translation fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation fix summary"
+issues: []
+discussions: []
 ### 2. **AGENTS.md Aggiornato** 🔴
 
 Aggiunta sezione **CRITICAL** con regole obbligatorie per traduzioni:

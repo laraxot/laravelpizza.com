@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * ---.
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Datas;
 
@@ -46,16 +45,21 @@ class DeviceData extends Data
 
     public static function make(): self
     {
-        $headers = collect(request()->header())->mapWithKeys(static function ($item, $key): array {
-            if (Str::startsWith($key, 'X-')) {
-                // $key = Str::afterFirst($key, 'X-');
-                $key = Str::after($key, 'X-');
+        $headers = collect(request()->header())->mapWithKeys(
+            /**
+             * @param  array<int, string|null>  $item
+             */
+            static function (array $item, string $key): array {
+                if (Str::startsWith($key, 'X-')) {
+                    // $key = Str::afterFirst($key, 'X-');
+                    $key = Str::after($key, 'X-');
+                }
+
+                $key = Str::camel($key);
+
+                return [$key => $item];
             }
-
-            $key = Str::camel($key);
-
-            return [$key => $item];
-        })->all();
+        )->all();
 
         return self::from($headers);
     }
@@ -67,12 +71,12 @@ class DeviceData extends Data
 
     public function getSynchronizationId(string $apiName): string
     {
-        if (null !== $this->synchronizationId) {
+        if ($this->synchronizationId !== null) {
             return $this->synchronizationId;
         }
 
         $synchronizationClass = config('morph_map.synchronization');
-        if (null === $synchronizationClass) {
+        if ($synchronizationClass === null) {
             $synchronizationClass = '\Modules\Egea\Models\Synchronization';
         }
 

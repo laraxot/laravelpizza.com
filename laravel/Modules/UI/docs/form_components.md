@@ -1,3 +1,15 @@
+---
+title: "form components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "form components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti Form
 
 ## Introduzione

@@ -1,3 +1,16 @@
+---
+title: "06 optimization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "06 optimization"
+issues: []
+discussions: []
+status: superseded
+superseded_by: optimization.md
+---
+
 
 
 

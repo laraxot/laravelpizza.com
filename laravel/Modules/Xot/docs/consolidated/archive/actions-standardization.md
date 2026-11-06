@@ -1,3 +1,11 @@
+---
+title: "Standardizzazione Actions - Rimozione Duplicazioni"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "standardizzazione actions - rimozione duplicazioni xot"
+---
 # Standardizzazione Actions - Rimozione Duplicazioni
 
 ## Problema Identificato (2025-01-06)

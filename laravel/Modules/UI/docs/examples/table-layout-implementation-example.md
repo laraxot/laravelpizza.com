@@ -1,3 +1,15 @@
+---
+title: "table layout implementation example"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table layout implementation example"
+issues: []
+discussions: []
+status: draft
+---
+
 # Esempio Pratico: Implementazione TableLayoutEnum
 
 ## Panoramica

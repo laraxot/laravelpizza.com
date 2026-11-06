@@ -1,6 +1,20 @@
+---
+title: "phpstan compliance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-20
+qmd: "phpstan compliance"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Compliance - CMS Module
 
 ## Status: ✅ FULLY COMPLIANT
+
+**Verifica 2026-10-20:** `./vendor/bin/phpstan analyse Modules/Cms` → **0 errori** (PestHelpers allineato a Gdpr, test senza `assertInstanceOf` ridondanti, asserzioni su DTO/Volt/comportamento).
 
 **PHPStan Level:** 9 (Maximum)
 **Files Analyzed:** 292
@@ -30,6 +44,10 @@ This module provides Content Management System functionality including:
 ### Safe Function Usage
 - Fixed unsafe `file_put_contents` usage in business data generation script
 - Now uses `use function Safe\file_put_contents;` for exception-based error handling
+
+### PestHelpers ricaduta (ROOT-17.10)
+- Helper globali senza namespace; homepage JSON su `TestCase::homepageJsonForBlocksArchitecture()` (loader tipizzato e tenant-aware, salta senza homepage)
+- Dettaglio: [testing.md](testing.md#pesthelpers-phpstan--merge)
 
 ## Filament 4.x Compatibility
 

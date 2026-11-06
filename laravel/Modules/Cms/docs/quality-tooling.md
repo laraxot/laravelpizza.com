@@ -1,3 +1,15 @@
+---
+title: "quality tooling"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quality tooling"
+issues: []
+discussions: []
+status: draft
+---
+
 # Code Quality Tooling (CMS Module)
 
 ## Goals
@@ -15,7 +27,6 @@
 - CodeRabbit: PHPMD/Actionlint
 
 ---
-
 ## Safe Execution (READ-ONLY prima)
 - Scope modulo: `laravel/Modules/Cms/`
 - Escludere: `vendor,node_modules,storage,bootstrap`

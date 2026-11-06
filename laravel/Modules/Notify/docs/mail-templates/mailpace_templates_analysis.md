@@ -1,3 +1,16 @@
+---
+title: "mailpace templates analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mailpace templates analysis"
+issues: []
+discussions: []
+status: superseded
+superseded_by: mailpace-templates-analysis.md
+---
+
 # Analisi Mailpace Templates
 
 ## Introduzione
@@ -208,5 +221,6 @@ return [
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
 - [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
-- [Email Best Practices](./email_best_practices.md)
 - [Template Management](./template-management.md) 
+- [Email Best Practices](./email_best_practices.md)
+- [Template Management](../template-management.md) 

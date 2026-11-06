@@ -1,3 +1,16 @@
+---
+title: "ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ROADMAP"
+issues: []
+discussions: []
+status: superseded
+superseded_by: roadmap.md
+---
+
 # Project Roadmap
 
 ## Goals

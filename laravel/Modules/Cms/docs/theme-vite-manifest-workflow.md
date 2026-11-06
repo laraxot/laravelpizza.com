@@ -1,3 +1,15 @@
+---
+title: "theme vite manifest workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme vite manifest workflow"
+issues: []
+discussions: []
+status: draft
+---
+
 # Theme Vite Manifest Workflow
 
 Quando una Blade usa:

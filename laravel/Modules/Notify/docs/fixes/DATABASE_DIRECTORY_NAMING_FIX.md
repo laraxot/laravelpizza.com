@@ -1,3 +1,15 @@
+---
+title: "DATABASE DIRECTORY NAMING FIX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DATABASE DIRECTORY NAMING FIX"
+issues: []
+discussions: []
+status: draft
+---
+
 # Database Directory Naming Convention Fix
 
 **Date**: 2026-03-13  
@@ -119,7 +131,7 @@ php artisan test
 
 ## Related
 
-- **GitHub Issue**: https://github.com/laraxot/base_fixcity_fila5/issues/4
+- **GitHub Issue**: https://github.com/laraxot/platform/issues/4
 - **Laravel Directory Structure**: https://laravel.com/docs/structure
 
 ## Checklist

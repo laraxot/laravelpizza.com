@@ -1,3 +1,11 @@
+---
+title: "Quality Tools Final Report - 2025-01-22"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "quality tools final report - 2025-01-22 user"
+---
 # Quality Tools Final Report - 2025-01-22
 
 ## Obiettivo
@@ -161,3 +169,22 @@ $user_class = XotData::make()->getUserClass();
 ---
 
 **Status**: ✅ **COMPLETATO** - Modulo User: 0 errori PHPStan, 0 errori critici PHPMD, warning PHP Insights accettabili.
+---
+module: theme
+topic: quality-tools-final-report-
+canonical: ../../../Themes/docs/shared-components/quality-tools-final-report-.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/quality-tools-final-report-.md

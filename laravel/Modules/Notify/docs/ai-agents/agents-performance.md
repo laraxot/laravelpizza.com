@@ -1,3 +1,15 @@
+---
+title: "agents performance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents performance"
+issues: []
+discussions: []
+status: draft
+---
+
 # AGENTS Performance Optimization
 
 Best practices per l'ottimizzazione delle performance.
@@ -10,7 +22,6 @@ Best practices per l'ottimizzazione delle performance.
 - Use Laravel's query builder for complex operations
 
 ---
-
 ## Frontend Optimization
 
 - **Minify** CSS/JS assets
@@ -44,4 +55,7 @@ Best practices per l'ottimizzazione delle performance.
 - [Indice AGENTS](./agents-split-index.md)
 - [website-checklist.md](./website-checklist.md) - Checklist completa
 - [AGENTS.md originale](../../AGENTS.md)
+- [agents.md originale](../../agents.md)
+- [AGENTS.md originale](../AGENTS.md)
+- [agents.md originale](../agents.md)
 - [Index principale](./index.md)

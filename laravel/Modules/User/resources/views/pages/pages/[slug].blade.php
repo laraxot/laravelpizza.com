@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
 use Modules\Cms\Models\Page;
@@ -72,7 +70,7 @@ render(function (View $view, string $slug) {
                     <img class="max-w-lg" src="https://error404.fun/img/full-preview/1x/3.png" alt="">
                 </div>
                 <div class="space-y-2 text-center">
-                    <h2 class="text-2xl font-bold md:text-4xl lg:text-6xl">Whooops!</h2>
+                    <h2 class="text-2xl font-bold md:text-4xl lg:text-6xl">{{ __('user::pages.sections.not_found.title') }}</h2>
                     <p class="text-gray-400">{{ __('pub_theme::404.no_article') }}</p>
                 </div>
             </div>

@@ -1,3 +1,15 @@
+---
+title: "gemini split index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gemini split index"
+issues: []
+discussions: []
+status: draft
+---
+
 # GEMINI.md Split Index
 
 > Documentazione GEMINI.md spezzata in file più piccoli.
@@ -15,4 +27,5 @@
 ## 🔗 Collegamento
 
 - [GEMINI.md originale](../../GEMINI.md)
+- [GEMINI.md originale](../GEMINI.md)
 - [Index principale](./index.md)

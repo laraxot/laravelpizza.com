@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Html2Pdf - Panoramica e Installazione
 
 Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novità dell'ultima versione, le istruzioni per l'installazione e l'architettura di integrazione nel progetto.
@@ -10,7 +22,6 @@ Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novi
 *   [Configurazione della Sicurezza](./security.md)
 
 ---
-
 ## 📋 Panoramica
 
 **Html2Pdf** è una libreria PHP per convertire HTML in PDF, utilizzata in Laraxot/PTVX per generare documenti PDF da template Blade. Basata su TCPDF, supporta PHP 7.2-8.4.

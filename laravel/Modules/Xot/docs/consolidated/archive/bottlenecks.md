@@ -1,3 +1,11 @@
+---
+title: "Colli di Bottiglia e Soluzioni - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "colli di bottiglia e soluzioni - modulo xot xot"
+---
 # Colli di Bottiglia e Soluzioni - Modulo Xot
 
 ## Panoramica

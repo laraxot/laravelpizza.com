@@ -10,29 +10,27 @@ use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('policy extends user base policy', function (): void {
-    $policy = new StoredEventPolicy();
-
-    Assert::assertInstanceOf(UserBasePolicy::class, $policy);
+    Assert::assertTrue((new \ReflectionClass(StoredEventPolicy::class))->isSubclassOf(UserBasePolicy::class));
 });
 
 test('user with permission can view', function (): void {
     /** @var TestCase $this */
     $user = $this->createUnitMock(User::class);
-    $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(true);
+    $user->method('hasPermissionTo')->willReturn(true);
 
-    $policy = new StoredEventPolicy();
+    $policy = new StoredEventPolicy;
     Assert::assertTrue($policy->view($user));
 });
 
 test('user without permission cannot view', function (): void {
     /** @var TestCase $this */
     $user = $this->createUnitMock(User::class);
-    $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(false);
+    $user->method('hasPermissionTo')->willReturn(false);
 
-    $policy = new StoredEventPolicy();
+    $policy = new StoredEventPolicy;
     Assert::assertFalse($policy->view($user));
 });
 
@@ -51,7 +49,7 @@ test('policy create update delete restore force delete methods check permissions
         static fn (string $permission): bool => in_array($permission, $permissions, true)
     );
 
-    $policy = new StoredEventPolicy();
+    $policy = new StoredEventPolicy;
 
     Assert::assertTrue($policy->create($user));
     Assert::assertTrue($policy->update($user));

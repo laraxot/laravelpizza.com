@@ -8,7 +8,6 @@ use Modules\Cms\Models\Page;
 use Modules\Cms\Models\Section;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 it('can create a cms page via factory', function (): void {
     $page = PageFactory::new()->createOne([
         'title' => 'Home Page',
@@ -22,16 +21,14 @@ it('can create a cms page via factory', function (): void {
 });
 
 it('can instantiate cms menu model', function (): void {
-    $menu = new Menu();
+    $menu = new Menu;
 
-    Assert::assertInstanceOf(Menu::class, $menu);
     Assert::assertContains('title', $menu->getFillable());
 });
 
 it('can instantiate cms section model', function (): void {
-    $section = new Section();
+    $section = new Section;
 
-    Assert::assertInstanceOf(Section::class, $section);
     Assert::assertContains('name', $section->getFillable());
 });
 

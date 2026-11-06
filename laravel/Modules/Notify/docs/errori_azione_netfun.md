@@ -1,3 +1,16 @@
+---
+title: "errori azione netfun"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errori azione netfun"
+issues: []
+discussions: []
+status: superseded
+superseded_by: errori-azione-netfun.md
+---
+
 # Analisi degli Errori in SendNetfunSMSAction
 
 ## Errori di Configurazione

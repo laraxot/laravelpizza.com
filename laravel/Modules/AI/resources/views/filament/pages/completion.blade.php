@@ -4,7 +4,7 @@
 
         {{-- Filament v4: replaced deprecated component with a simple submit button --}}
         <x-filament::button type="submit">
-            {{ __('Run completion') }}
+            {{ __('ai::completion_page.actions.run.label') }}
         </x-filament::button>
 
      </form>

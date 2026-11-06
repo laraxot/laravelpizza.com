@@ -1,3 +1,15 @@
+---
+title: "x page data bag only"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "x page data bag only"
+issues: []
+discussions: []
+status: draft
+---
+
 # `<x-page>` — solo `side`, `slug`, `data`
 
 ## religione

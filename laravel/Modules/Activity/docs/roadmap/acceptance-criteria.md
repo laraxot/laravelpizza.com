@@ -1,3 +1,11 @@
+---
+title: "Criteri di accettazione Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, roadmap]
+qmd: "criteri di accettazione modulo activity activity"
+---
 # Criteri di accettazione Modulo Activity
 
 Criteri verificabili per le fasi della roadmap Activity (audit trail e observability).
@@ -10,7 +18,7 @@ Criteri verificabili per le fasi della roadmap Activity (audit trail e observabi
 - [ ] Inventario file obsoleti/duplicati completato; rimozione pianificata o eseguita secondo documento di cleanup.
 - [ ] GitHub Actions (o CI) eseguono analisi PHPStan sul modulo Activity e falliscono in caso di errori.
 - [ ] Guida agli eventi di dominio (quali eventi si loggano, convenzioni di naming) documentata in `docs/`.
-- [ ] Migrazioni `activity_log` (o equivalenti) allineate a XotBaseMigration; riferimento a [Xot migrations-consolidated](../Xot/docs/migrations-consolidated.md) verificato.
+- [ ] Migrazioni `activity_log` (o equivalenti) allineate a XotBaseMigration; riferimento a [Xot migrations-consolidated](../../../Xot/docs/migrations-consolidated.md) verificato.
 
 ## Fase 2 · Enterprise UI (pianificata)
 

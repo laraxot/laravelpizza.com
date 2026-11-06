@@ -1,3 +1,11 @@
+---
+title: "Gestione dei File Upload in Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "gestione dei file upload in filament xot"
+---
 # Gestione dei File Upload in Filament
 
 ## Panoramica

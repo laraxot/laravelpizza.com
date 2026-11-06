@@ -1,3 +1,23 @@
+---
+title: "Audit Logging"
+type: concept
+tags: [audit, logging]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "audit-logging audit logging"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./autenticazione.md"
+  - "./autorizzazione.md"
+  - "./gestione-teams.md"
+  - "./gestione-utenti.md"
+  - "./legacy-code-cleanup.md"
+  - "./user-analytics.md"
+  - "./user-traits.md"
+status: draft
+---
+
 # Audit Logging
 
 ## Overview

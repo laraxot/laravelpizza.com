@@ -1,3 +1,11 @@
+---
+title: "User Module - User Research"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, product]
+qmd: "user module - user research user"
+---
 # User Module - User Research
 
 ## Research Overview

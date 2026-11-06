@@ -1,3 +1,11 @@
+---
+title: "Filosofia dei Getter Semantici in MetatagData"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filosofia dei getter semantici in metatagdata xot"
+---
 # Filosofia dei Getter Semantici in MetatagData
 
 ## Premessa

@@ -1,3 +1,11 @@
+---
+title: "Gestione delle Eccezioni"
+type: index
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "gestione delle eccezioni xot"
+---
 # Gestione delle Eccezioni
 
 Questo documento fornisce una panoramica del sistema di gestione delle eccezioni nel modulo Xot.

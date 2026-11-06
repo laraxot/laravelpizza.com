@@ -1,3 +1,15 @@
+---
+title: "tipografia"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tipografia"
+issues: []
+discussions: []
+status: draft
+---
+
 # Tipografia: L'Arte della Comunicazione Visiva
 
 ## Aspetti Tecnici

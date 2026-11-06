@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "NestedSet Migration Best Practices - Media Module"
+module: "Media"
+type: concept
+tags: [nestedset, migration, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "nestedset migration best practices"
+related:
+  - "./webm.md"
+status: draft
+---
 # NestedSet Migration Best Practices - Media Module
 
 ## Overview

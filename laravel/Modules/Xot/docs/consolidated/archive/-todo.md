@@ -1,3 +1,11 @@
+---
+title: "_todo"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_todo xot"
+---
 # _todo
 
 <!-- Contenuto migrato da _docs/_todo.txt -->

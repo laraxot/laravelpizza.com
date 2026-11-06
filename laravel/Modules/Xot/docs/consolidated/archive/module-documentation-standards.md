@@ -1,3 +1,11 @@
+---
+title: "Standard di Documentazione dei Moduli"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "standard di documentazione dei moduli xot"
+---
 # Standard di Documentazione dei Moduli
 
 ## Regola: Nessun Riferimento al Progetto Specifico

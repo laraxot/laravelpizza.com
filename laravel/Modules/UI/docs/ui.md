@@ -1,3 +1,15 @@
+---
+title: "ui"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui"
+issues: []
+discussions: []
+status: draft
+---
+
 # Documentazione UI
 
 > **NOTA**: La documentazione UI è stata spostata nella documentazione del modulo UI.

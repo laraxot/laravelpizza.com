@@ -171,21 +171,12 @@ return [
             'confirm' => 'Are you sure you want to sign out?',
         ],
     ],
-    'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
-    'users_chart' => [
-        'heading' => 'Authentication Log',
-        'label' => 'Number of logins executed',
+    'user_widget' => [
+        'start_date' => [
+            'label' => 'Start date:',
+        ],
+        'end_date' => [
+            'label' => 'End date:',
+        ],
     ],
 ];

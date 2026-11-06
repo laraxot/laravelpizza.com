@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 @props([
     'title' => '',
     'subtitle' => '',
@@ -80,7 +84,7 @@
                                 href="{{ $primaryButton['url'] ?? '#' }}"
                                 class="px-8 py-3 bg-white text-primary-600 rounded-lg font-medium hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
                             >
-                                {{ $primaryButton['label'] ?? __('Scopri di più') }}
+                                {{ $primaryButton['label'] ?? __('ui::components_common.actions.learn_more.label') }}
                             </a>
                         @endif
                         
@@ -89,7 +93,7 @@
                                 href="{{ $secondaryButton['url'] ?? '#' }}"
                                 class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
                             >
-                                {{ $secondaryButton['label'] ?? __('Contattaci') }}
+                                {{ $secondaryButton['label'] ?? __('ui::components_ui.hero.contact_us.label') }}
                             </a>
                         @endif
                     </div>

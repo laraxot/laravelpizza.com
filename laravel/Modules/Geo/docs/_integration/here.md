@@ -1,3 +1,15 @@
+---
+title: "here"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "here"
+issues: []
+discussions: []
+status: draft
+---
+
 # here
 
 <!-- Contenuto migrato da _docs/here.txt -->

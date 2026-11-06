@@ -1,3 +1,11 @@
+---
+title: "Implementazione del Campo `slug` in MailTemplateResource"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "implementazione del campo `slug` in mailtemplateresource notify"
+---
 # Implementazione del Campo `slug` in MailTemplateResource
 
 ## Panoramica

@@ -1,4 +1,7 @@
 ---
+qmd: "concept"
+issues: []
+discussions: []
 title: "Untitled Concept"
 type: concept
 sources: ["raw/articles/source-filename.md"]
@@ -7,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [tag1, tag2]
 related: []
+status: active
 ---
 
 # {{title}}
@@ -36,4 +40,4 @@ _How this concept is implemented in our codebase (with file references)._
 
 - [[related-concept-1]]
 - [[related-concept-2]]
-- [docs/wiki/concepts/project-concept](../../wiki/concepts/project-concept.md)
+- [docs/wiki/concepts/project-concept](../../wiki/concepts/project-concept.md) _(target mancante, verificato 2026-10-08)_

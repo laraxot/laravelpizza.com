@@ -6,7 +6,11 @@ confidence: high
 created: {{date}}
 updated: {{date}}
 tags: [person, organization, module]
-related: []
+related:
+  - "./concept.md"
+  - "./source.md"
+status: draft
+qmd: "{{title}} user"
 ---
 
 # {{title}}

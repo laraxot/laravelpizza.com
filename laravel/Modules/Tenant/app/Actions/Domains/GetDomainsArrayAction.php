@@ -39,11 +39,10 @@ class GetDomainsArrayAction
      */
     public function recurse(string $path): array
     {
-        $filesystem = new Filesystem();
+        $filesystem = new Filesystem;
         $directories = $filesystem->directories($path);
         $res = [];
         foreach ($directories as $dir) {
-            // Type narrowing: directories() returns array but items are mixed
             if (! is_string($dir)) {
                 continue;
             }
@@ -58,8 +57,7 @@ class GetDomainsArrayAction
     }
 
     /**
-     * @param array<string, mixed> $data
-     *
+     * @param  array<string, mixed>  $data
      * @return array<int, string>
      */
     public function collapse(array $data, string $keyPrefix = ''): array

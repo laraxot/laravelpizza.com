@@ -18,7 +18,7 @@ class LogModelCreatedAction
     use QueueableAction;
 
     public function __construct(
-        public Model $model,
+        public ?Model $model = null,
         public ?Model $user = null,
     ) {
         if ($user !== null) {
@@ -26,17 +26,21 @@ class LogModelCreatedAction
         }
     }
 
-    public function execute(): Activity
+    public function execute(?Model $model = null): Activity
     {
+        $model = $model ?? $this->model;
+        if (! $model instanceof Model) {
+            throw new \InvalidArgumentException('A model is required');
+        }
         // PHPStan Level 10: Explicit type guard for nullable Model
         $user = $this->user instanceof Model ? $this->user : null;
 
         $action = new LogActivityAction(
             type: 'created',
             user: $user,
-            subject: $this->model,
-            properties: ['attributes' => $this->model->getAttributes()],
-            description: sprintf('%s created', class_basename($this->model))
+            subject: $model,
+            properties: ['attributes' => $model->getAttributes()],
+            description: sprintf('%s created', class_basename($model))
         );
 
         return $action->execute();

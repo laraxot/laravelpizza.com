@@ -1,3 +1,11 @@
+---
+title: "PHPStan S3 Actions Critical Errors Analysis"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media]
+qmd: "phpstan s3 actions critical errors analysis media"
+---
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media

@@ -1,3 +1,11 @@
+---
+title: "PHPStan Report - Livello 10"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "phpstan report - livello 10 xot"
+---
 # PHPStan Report - Livello 10
 
 ## Errori rilevati

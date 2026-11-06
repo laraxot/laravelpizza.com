@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Lang Module Roadmap
 
 > "Language and translation system for the Laraxot ecosystem with multi-language support and translation management."
@@ -57,4 +69,3 @@ Provide a **comprehensive language** system that includes:
 - Translation collaboration
 
 ---
-

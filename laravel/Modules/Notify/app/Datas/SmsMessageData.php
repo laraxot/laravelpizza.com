@@ -6,6 +6,9 @@ namespace Modules\Notify\Datas;
 
 readonly class SmsMessageData
 {
+    /**
+     * @return void
+     */
     public function __construct(
         public string $recipient,
         public string $message,

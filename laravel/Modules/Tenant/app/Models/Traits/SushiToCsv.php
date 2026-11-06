@@ -4,36 +4,32 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Models\Traits;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use League\Csv\Reader;
 use League\Csv\Writer;
-use Modules\Tenant\Services\TenantService;
-use RuntimeException;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Stringable;
 use Sushi\Sushi;
 use Webmozart\Assert\Assert;
 
-/** @phpstan-ignore trait.unused */
 trait SushiToCsv
 {
     use Sushi;
+    use SushiConnectionByName;
 
     /**
      * @return array<int, array<string, mixed>>
      */
     public function getSushiRows(): array
     {
-        $csv = Reader::createFromPath($this->getCsvPath(), 'r');
+        $csv = Reader::from($this->getCsvPath(), 'r');
         $csv->setHeaderOffset(0);
         $records = $csv->getRecords();
         $rows = iterator_to_array($records);
 
         $normalized = [];
         foreach (array_values($rows) as $row) {
-            if (! is_array($row)) {
-                continue;
-            }
-
             $typedRow = [];
             foreach ($row as $key => $value) {
                 $typedRow[(string) $key] = $value;
@@ -47,12 +43,7 @@ trait SushiToCsv
 
     public function getCsvPath(): string
     {
-        $tbl = $this->getTable();
-        if (! is_string($tbl)) {
-            throw new RuntimeException('Table name must be a string');
-        }
-
-        return TenantService::filePath($tbl.'.csv');
+        return app(GetTenantFilePathAction::class)->execute($this->getTable().'.csv');
     }
 
     /**
@@ -60,7 +51,7 @@ trait SushiToCsv
      */
     public function getCsvHeader(): array
     {
-        $reader = Reader::createFromPath($this->getCsvPath(), 'r');
+        $reader = Reader::from($this->getCsvPath(), 'r');
         $reader->setHeaderOffset(0);
 
         return array_values($reader->getHeader());
@@ -68,55 +59,52 @@ trait SushiToCsv
 
     protected static function bootSushiToCsv(): void
     {
-        static::creating(static function ($model): void {
+        static::creating(static function (Model $model): void {
             Assert::isInstanceOf($model, self::class);
             self::handleCsvCreating($model);
         });
 
-        static::updating(static function ($model): void {
+        static::updating(static function (Model $model): void {
             Assert::isInstanceOf($model, self::class);
             self::handleCsvUpdating($model);
         });
 
-        static::deleting(static function ($model): void {
+        static::deleting(static function (Model $model): void {
             Assert::isInstanceOf($model, self::class);
             self::handleCsvDeleting($model);
         });
     }
 
-    /**
-     * @param  self  $model
-     */
     private static function handleCsvCreating(self $model): void
     {
-        /** @var int $maxId */
-        $maxId = $model->max('id') ?? 0;
-        $model->id = $maxId + 1;
-        $model->updated_at = now();
+        $maxId = $model->max('id');
+        $maxIdInt = filter_var($maxId, FILTER_VALIDATE_INT);
+        if ($maxIdInt === false) {
+            $maxIdInt = 0;
+        }
+        $model->setAttribute('id', $maxIdInt + 1);
+        $model->setAttribute('updated_at', now());
         $authIdInt = self::resolveAuthIdInt();
-        $model->updated_by = $authIdInt;
-        $model->created_at = now();
-        $model->created_by = $authIdInt;
+        $model->setAttribute('updated_by', $authIdInt);
+        $model->setAttribute('created_at', now());
+        $model->setAttribute('created_by', $authIdInt);
 
-        $writer = Writer::createFromPath($model->getCsvPath(), 'a+');
+        $writer = Writer::from($model->getCsvPath(), 'a+');
         /** @var array<string, mixed> $modelData */
         $modelData = $model->toArray();
         $writer->insertOne(self::buildCsvItemFromData($modelData, $model->getCsvHeader()));
     }
 
-    /**
-     * @param  self  $model
-     */
     private static function handleCsvUpdating(self $model): void
     {
         $rowsByKey = self::keyRowsById($model->getSushiRows());
         $idKey = self::resolveRowIdKey($model->getKey());
-        $model->updated_at = now();
-        $model->updated_by = self::resolveAuthIdInt();
+        $model->setAttribute('updated_at', now());
+        $model->setAttribute('updated_by', self::resolveAuthIdInt());
 
         Assert::keyExists($rowsByKey, $idKey);
         /** @var array<string, mixed> $existingRow */
-        $existingRow = $rowsByKey[$idKey] ?? [];
+        $existingRow = $rowsByKey[$idKey];
         /** @var array<string, mixed> $mergedRow */
         $mergedRow = array_merge($existingRow, $model->toArray());
         $rowsByKey[$idKey] = $mergedRow;
@@ -127,9 +115,6 @@ trait SushiToCsv
         self::writeCsvFromRows($model, $typedRowsByKey, array_keys($mergedRow));
     }
 
-    /**
-     * @param  self  $model
-     */
     private static function handleCsvDeleting(self $model): void
     {
         $rowsByKey = self::keyRowsById($model->getSushiRows());
@@ -142,7 +127,6 @@ trait SushiToCsv
 
     /**
      * @param  array<int, array<string, mixed>>  $rows
-     *
      * @return array<int|string, array<string, mixed>>
      */
     private static function keyRowsById(array $rows): array
@@ -170,6 +154,9 @@ trait SushiToCsv
         return $authId !== null ? (int) $authId : null;
     }
 
+    /**
+     * @param  mixed  $id  Raw model key from Model::getKey() (int|string expected)
+     */
     private static function resolveRowIdKey(mixed $id): int|string
     {
         Assert::notNull($id);
@@ -187,7 +174,6 @@ trait SushiToCsv
     /**
      * @param  array<string, mixed>  $data
      * @param  list<string>  $header
-     *
      * @return array<string, float|int|string|null>
      */
     private static function buildCsvItemFromData(array $data, array $header): array
@@ -198,11 +184,7 @@ trait SushiToCsv
             if (! is_string($name)) {
                 continue;
             }
-            $value = $data[$name] ?? null;
-            if (is_bool($value)) {
-                $value = $value ? '1' : '0';
-            }
-            $item[$name] = is_scalar($value) || $value === null ? $value : (string) $value;
+            $item[$name] = self::csvValue($data[$name] ?? null);
         }
 
         return $item;
@@ -214,35 +196,52 @@ trait SushiToCsv
      */
     private static function writeCsvFromRows(self $model, array $rowsByKey, array $header): void
     {
-        $writer = Writer::createFromPath($model->getCsvPath(), 'w+');
+        $writer = Writer::from($model->getCsvPath(), 'w+');
         $writer->insertOne($header);
         $writer->insertAll(self::normalizeRowsForCsv($rowsByKey));
     }
 
     /**
      * @param  array<int|string, array<string, mixed>>  $rowsByKey
-     *
-     * @return list<array<string, float|int|string|Stringable|null>>
+     * @return list<array<string, float|int|string|null>>
      */
     private static function normalizeRowsForCsv(array $rowsByKey): array
     {
-        /** @var list<array<string, float|int|string|Stringable|null>> $dataArray */
+        /** @var list<array<string, float|int|string|null>> $dataArray */
         $dataArray = [];
         foreach ($rowsByKey as $row) {
-            /** @var array<string, float|int|string|Stringable|null> $cleanRow */
+            /** @var array<string, float|int|string|null> $cleanRow */
             $cleanRow = [];
             foreach ($row as $key => $value) {
-                if (! is_string($key) && ! is_int($key)) {
-                    continue;
-                }
-                $normalizedValue = is_bool($value) ? ($value ? '1' : '0') : $value;
-                $cleanRow[(string) $key] = is_scalar($normalizedValue) || $normalizedValue === null
-                    ? $normalizedValue
-                    : (string) $normalizedValue;
+                $cleanRow[(string) $key] = self::csvValue($value);
             }
             $dataArray[] = $cleanRow;
         }
 
         return $dataArray;
+    }
+
+    /**
+     * @param  mixed  $value  Arbitrary model attribute (scalar|Stringable|null expected)
+     */
+    private static function csvValue(mixed $value): float|int|string|null
+    {
+        if ($value === null) {
+            return null;
+        }
+
+        if (is_bool($value)) {
+            return $value ? '1' : '0';
+        }
+
+        if (is_int($value) || is_float($value) || is_string($value)) {
+            return $value;
+        }
+
+        if ($value instanceof Stringable) {
+            return $value->__toString();
+        }
+
+        return null;
     }
 }

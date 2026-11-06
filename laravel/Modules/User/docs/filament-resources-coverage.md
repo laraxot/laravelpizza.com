@@ -1,3 +1,24 @@
+---
+title: "Filament Resources Coverage Analysis - Modulo User"
+type: concept
+tags: [filament, resources, coverage]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-resources-coverage filament resources coverage analysis - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Filament Resources Coverage Analysis - Modulo User
 
 ## Data: [DATE]
@@ -207,4 +228,4 @@ Questi modelli sono pivot tables e NON devono avere Resources standalone:
 
 - [Filament Resources Organization](./filament-resources-organization.md)
 - [Filament Best Practices](./filament-best-practices.md)
-- [Filosofia Modulo User](./filosofia_modulo_user.md)
+- [Filosofia Modulo User](./filosofia-modulo-user.md)

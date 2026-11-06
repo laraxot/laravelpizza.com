@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "upgrade"
+issues: []
+discussions: []
 title: Aggiornamenti
 description: Aggiornamenti
 extends: _layouts.documentation

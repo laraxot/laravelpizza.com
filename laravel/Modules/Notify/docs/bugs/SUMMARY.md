@@ -1,3 +1,16 @@
+---
+title: "SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SUMMARY"
+issues: []
+discussions: []
+status: superseded
+superseded_by: summary.md
+---
+
 # Bug Fixes Summary
 
 ## 2025-01-14: User Creation Infinite Loop Fix
@@ -41,6 +54,14 @@ php artisan tinker --execute="
 
 ---
 
+title: "SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SUMMARY"
+issues: []
+discussions: []
 ## Prossimi Bug da Analizzare
 
 Nessuno al momento.

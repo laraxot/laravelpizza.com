@@ -1,3 +1,23 @@
+---
+title: "Notify Module Roadmap"
+type: index
+tags: [notify, docs, roadmap]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione roadmap readme notify module roadmap index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
+status: draft
+---
 # Notify Module Roadmap
 
 > "Notification system for the Laraxot ecosystem with support for email, SMS, push notifications, and in-app alerts."

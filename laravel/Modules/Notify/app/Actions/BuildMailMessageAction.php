@@ -9,7 +9,6 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\AttachmentData;
 use Modules\Notify\Datas\NotifyThemeData;
-use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\mb_convert_encoding;
@@ -20,13 +19,13 @@ class BuildMailMessageAction
 
     /**
      * @param  array<string, mixed>  $view_params
-     * @param  DataCollection<int, AttachmentData>|null  $dataCollection
+     * @param  array<int, AttachmentData>|null  $attachments
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
-        ?DataCollection $dataCollection = null,
+        ?array $attachments = null,
     ): MailMessage {
         /** @var array<string, mixed> $view_params */
         $view_params = array_merge($model->toArray(), $view_params);
@@ -37,23 +36,12 @@ class BuildMailMessageAction
         $theme = app(Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
+        /** @var string $fromAddress */
         $fromAddress = $theme->view_params['from_email'] ?? $theme->from_email;
+        /** @var string|null $fromName */
         $fromName = $theme->view_params['from'] ?? $theme->from;
+        /** @var string $subject */
         $subject = $view_params['subject'] ?? $theme->subject;
-
-        // Utilizziamo asserzioni per verificare che i valori siano stringhe
-        if (! is_string($fromAddress)) {
-            $fromAddress = '';
-        }
-
-        // Il nome del mittente può essere null
-        if ($fromName !== null && ! is_string($fromName)) {
-            $fromName = '';
-        }
-
-        if (! is_string($subject)) {
-            $subject = 'Notifica';
-        }
 
         $bodyHtml = $this->decodeRichText($theme->body_html);
         $subject = $this->decodeRichText($subject);
@@ -66,8 +54,8 @@ class BuildMailMessageAction
             ->subject($subject)
             ->view($view_html, $viewParams);
 
-        if ($dataCollection instanceof DataCollection) {
-            foreach ($dataCollection as $attachment) {
+        if (is_array($attachments)) {
+            foreach ($attachments as $attachment) {
                 $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
             }
         }

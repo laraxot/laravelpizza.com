@@ -1,0 +1,7 @@
+stories:
+  "Tenant/7.5-create-json-max-oneliner":
+    status: done
+    epic: "Ponytail: $max via one-liner max(Arr::pluck())"
+    story: "CreateJsonFileByRecordAction: one-liner con guardia vuoti gia in tree,
+      verificato php -r + php -l. Import Assert orfano rimosso? No, pending.
+      Readability espansa SaveArrayAction: pending lock. docs/stories/7.5-create-json-max-oneliner.story.md"

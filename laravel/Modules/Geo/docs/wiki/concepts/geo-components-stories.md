@@ -1,3 +1,15 @@
+---
+title: "geo components stories"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo components stories"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Components: The Stories
 
 Each geographic component in the Geo module tells a different story. While they share the same technical foundation (Trait `HasCoordinatePicker`), their implementation details are distinct to support unique UX journeys. They are sibling components: no picker should extend another picker just to reuse behavior.

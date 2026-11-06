@@ -1,3 +1,11 @@
+---
+title: "Implementazione di Notifiche Multi-Canale"
+type: note
+status: draft
+updated: 2026-10-15
+tags: [docs, notify, notifications]
+qmd: "implementazione di notifiche multi-canale notify"
+---
 # Implementazione di Notifiche Multi-Canale 
 
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di <nome progetto>.
@@ -791,5 +799,5 @@ TELEGRAM_BOT_TOKEN=12345:ABC...
 ## Collegamenti alla Documentazione Correlata
 
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
-- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
+- [SMS_PROVIDER_CONFIGURATION.md](./sms-provider-configuration.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)

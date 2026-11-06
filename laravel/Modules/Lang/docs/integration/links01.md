@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "links01"
+module: "Lang"
+type: concept
+tags: [phpstan, level10, fixes, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan level10 fixes 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+  - "../italian-text-refined-audit-report.md"
+status: draft
+---
 # links01
 
 <!-- Contenuto migrato da _docs/links01.txt -->

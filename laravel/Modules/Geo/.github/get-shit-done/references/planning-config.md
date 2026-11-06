@@ -1,3 +1,14 @@
+---
+title: "planning config"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "planning config"
+issues: []
+discussions: []
+---
+
 <planning_config>
 
 Configuration options for `.planning/` directory behavior.

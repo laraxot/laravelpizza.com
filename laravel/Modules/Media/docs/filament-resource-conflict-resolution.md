@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione conflitto git su Filament MediaConvertResource"
+module: "Media"
+type: concept
+tags: [filament, resource, conflict, resolution]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament resource conflict resolution"
+related:
+  - "./webm.md"
+status: draft
+---
 # Risoluzione conflitto git su Filament MediaConvertResource
 
 ## Problema

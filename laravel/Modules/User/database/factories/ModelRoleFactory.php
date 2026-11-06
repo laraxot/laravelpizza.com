@@ -5,16 +5,17 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\User\Models\ModelRole;
 
 /**
- * @extends Factory<\Modules\User\Models\ModelRole>
+ * @extends Factory<ModelRole>
  */
 class ModelRoleFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      */
-    protected $model = \Modules\User\Models\ModelRole::class;
+    protected $model = ModelRole::class;
 
     /**
      * Define the model's default state.

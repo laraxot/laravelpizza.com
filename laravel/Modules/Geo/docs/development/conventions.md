@@ -1,3 +1,15 @@
+---
+title: "conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conventions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Code Conventions and Standards
 
 ## 🎯 Coding Standards
@@ -347,5 +359,4 @@ class UserData extends Data
 ```
 
 ---
-
 **Related**: [Common Pitfalls](../pitfalls.md) | [SOLID Principles](solid.md) | [DRY + KISS Patterns](../dry-kiss.md)

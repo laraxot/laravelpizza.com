@@ -1,7 +1,18 @@
+---
+title: "mcp setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Setup MCP per iFlow CLI - PTVX
 
 ---
-
 ## Panoramica MCP
 
 iFlow CLI supporta MCP tramite configurazione in `~/.iflow/settings.json` o `./.iflow/settings.json` (project-scoped).

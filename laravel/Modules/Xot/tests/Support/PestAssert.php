@@ -81,7 +81,7 @@ final class PestAssert
     }
 
     /**
-     * @param class-string $expectedClass
+     * @param  class-string  $expectedClass
      */
     public static function instanceOf(string $expectedClass, mixed $actual): void
     {
@@ -193,7 +193,7 @@ final class PestAssert
     }
 
     /**
-     * @param iterable<array-key> $keys
+     * @param  iterable<array-key>  $keys
      */
     public static function hasKeys(iterable $keys, mixed $actual): void
     {
@@ -210,7 +210,7 @@ final class PestAssert
     }
 
     /**
-     * @param iterable<string> $properties
+     * @param  iterable<string>  $properties
      */
     public static function hasProperties(iterable $properties, mixed $actual): void
     {
@@ -270,7 +270,7 @@ final class PestAssert
     {
         Assert::assertIsString($prefix);
 
-        if ('' === $prefix) {
+        if ($prefix === '') {
             Assert::fail('Expected a non-empty prefix.');
         }
 
@@ -281,7 +281,7 @@ final class PestAssert
     {
         Assert::assertIsString($suffix);
 
-        if ('' === $suffix) {
+        if ($suffix === '') {
             Assert::fail('Expected a non-empty suffix.');
         }
 
@@ -324,7 +324,7 @@ final class PestAssert
     }
 
     /**
-     * @param array<array-key, mixed> $constraints
+     * @param  array<array-key, mixed>  $constraints
      */
     private static function assertThrownExceptionMatches(\Throwable $exception, array $constraints): void
     {
@@ -335,7 +335,7 @@ final class PestAssert
                 continue;
             }
 
-            if (is_string($constraint) && '' !== $constraint) {
+            if (is_string($constraint) && $constraint !== '') {
                 Assert::assertStringContainsString($constraint, $exception->getMessage());
             }
         }

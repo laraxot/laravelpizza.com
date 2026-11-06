@@ -1,3 +1,15 @@
+---
+title: "agents security guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents security guidelines"
+issues: []
+discussions: []
+status: draft
+---
+
 # AGENTS Security Guidelines
 
 Linee guida per la sicurezza.
@@ -10,7 +22,6 @@ Linee guida per la sicurezza.
 - Validate all input through Form Requests
 
 ---
-
 ## Data Protection
 
 - Never commit credentials (use .env)
@@ -43,4 +54,7 @@ Linee guida per la sicurezza.
 - [Indice AGENTS](./agents-split-index.md)
 - [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
 - [AGENTS.md originale](../../AGENTS.md)
+- [agents.md originale](../../agents.md)
+- [AGENTS.md originale](../AGENTS.md)
+- [agents.md originale](../agents.md)
 - [Index principale](./index.md)

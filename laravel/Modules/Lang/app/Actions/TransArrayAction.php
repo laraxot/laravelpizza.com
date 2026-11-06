@@ -69,7 +69,7 @@ class TransArrayAction
             $item = SafeStringCastAction::cast($item);
         }
 
-        if (empty($item) || null === $this->transKey) {
+        if ('' === $item || '0' === $item || null === $this->transKey) {
             return $item;
         }
 

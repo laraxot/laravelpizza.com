@@ -1,3 +1,14 @@
+---
+title: "docs consolidation plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs consolidation plan"
+issues: []
+discussions: []
+---
+
 # Documentation Consolidation Plan - DRY + KISS Approach
 
 ## Executive Summary
@@ -13,6 +24,14 @@
 
 ---
 
+title: "docs consolidation plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs consolidation plan"
+issues: []
+discussions: []
 ## Phase 1: File Naming Standardization
 
 ### Problematic Patterns Identified

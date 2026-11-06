@@ -20,7 +20,7 @@ class RecordNotification extends Notification implements ShouldQueue
     /** @var array<string, mixed> */
     public array $data = [];
 
-    /** @var array<int, array<string, string>> */
+    /** @var array<int, array{path?: string, data?: mixed, as?: string|null, mime?: string|null}> */
     public array $attachments = [];
 
     protected Model $record;
@@ -31,6 +31,19 @@ class RecordNotification extends Notification implements ShouldQueue
     {
         $this->record = $record;
         $this->slug = Str::slug($slug);
+    }
+
+    /**
+     * Modello per cui è stata costruita la notifica.
+     *
+     * `SendRecordNotificationAction` invia sempre con
+     * `Notification::route($channel, $to)->notify(...)`: il notifiable in
+     * `NotificationSent` è un `AnonymousNotifiable`, mai `$record`. I listener
+     * (es. `UpdateContactInviteCountersListener`) leggono il modello da qui.
+     */
+    public function getRecord(): Model
+    {
+        return $this->record;
     }
 
     /**
@@ -104,9 +117,9 @@ class RecordNotification extends Notification implements ShouldQueue
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
         }
-        $fallback_to = config('sms.fallback_to');
-        if (is_string($fallback_to)) {
-            $to = $fallback_to;
+        $fallbackTo = config('sms.fallback_to');
+        if (is_string($fallbackTo)) {
+            $to = $fallbackTo;
         }
         if ($to === null) {
             return null;
@@ -115,13 +128,30 @@ class RecordNotification extends Notification implements ShouldQueue
         // Build SMS content using SpatieEmail (which handles template resolution and placeholder replacement)
         $smsBody = $email->buildSms();
 
+        // Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 17
+        // (AC7, 2026-09-15): un survey senza sms_template configurato non lancia
+        // nessuna eccezione qui — buildSms() ritorna semplicemente stringa vuota
+        // (Mustache::render('', ...)). Senza questo controllo, un SMS reale con
+        // corpo vuoto veniva spedito per davvero al gateway. `trim()` per non far
+        // passare un corpo fatto di soli spazi.
+        if (trim($smsBody) === '') {
+            return null;
+        }
+
+        // Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 9:
+        // il mittente era il letterale 'Xot'. Ora SpatieEmail lo risolve dal
+        // MailTemplate (colonna sms_from), con fallback a config('sms.from').
+        $smsFrom = $email->buildSmsFrom();
+
         // Wrap in SmsData for the SmsChannel (ensure all values are strings for type safety)
         /** @var array<string, string> $smsDataArray */
         $smsDataArray = [
-            'from' => 'Xot',
             'recipient' => $to,
-            'body' => $smsBody,
-        ];
+            'body' => $smsBody];
+
+        if ($smsFrom !== null) {
+            $smsDataArray['from'] = $smsFrom;
+        }
 
         return SmsData::from($smsDataArray);
     }
@@ -142,7 +172,7 @@ class RecordNotification extends Notification implements ShouldQueue
     /**
      * Add attachments to the notification.
      *
-     * @param  array<int, array<string, string>>  $attachments  Array of attachment data
+     * @param  array<int, array{path?: string, data?: mixed, as?: string|null, mime?: string|null}>  $attachments
      * @return $this
      */
     public function addAttachments(array $attachments): self

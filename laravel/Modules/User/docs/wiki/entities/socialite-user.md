@@ -1,8 +1,12 @@
 ---
-title: SocialiteUser — Entità OAuth utente
+title: SocialiteUser: Entità OAuth utente
 type: entity
 module: User
 updated: 2026-04-20
+related:
+status: draft
+tags: [docs, user, wiki]
+qmd: "socialiteuser user"
 ---
 
 # SocialiteUser
@@ -45,4 +49,5 @@ CreateSocialiteUserAction->execute($provider, $oauthUser, $user);
 ## Link
 
 - [Architettura Socialite](../concepts/socialite-architecture.md)
-- [Migration](../../../../../../database/migrations/2023_01_01_000003_create_socialite_user_table.php)
+- [Migration](../../../database/migrations/2023_01_01_000003_create_socialite_user_table.php)
+- [Migration](../../../database/migrations/2023_01_01_000003_create_socialite_user_table.php)

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 test('headernav auth ctas use theme localization keys and not legacy auth keys', function (): void {
     $paths = [
         base_path('Modules/Cms/resources/views/components/headernav/simple.blade.php'),

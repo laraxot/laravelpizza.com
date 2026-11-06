@@ -1,3 +1,11 @@
+---
+title: "Risoluzione del Conflitto in ModelWithPosContract.php"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "risoluzione del conflitto in modelwithposcontract.php xot"
+---
 # Risoluzione del Conflitto in ModelWithPosContract.php
 
 ## Problema

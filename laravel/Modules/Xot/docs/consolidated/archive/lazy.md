@@ -1,3 +1,11 @@
+---
+title: "_lazy"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_lazy xot"
+---
 # _lazy
 
 <!-- Contenuto migrato da _docs/_lazy.txt -->

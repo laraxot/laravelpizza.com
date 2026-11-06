@@ -1,3 +1,11 @@
+---
+title: "Convenzioni di Naming dei Campi in Base"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni di naming dei campi in base xot"
+---
 # Convenzioni di Naming dei Campi in Base
 
 ## Regola Fondamentale

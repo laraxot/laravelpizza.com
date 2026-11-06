@@ -8,45 +8,67 @@
     $platforms = $data->platforms;
 @endphp
 
-<div {{ $attributes->merge(['class' => 'social-share-container flex flex-wrap gap-4']) }}>
+<div
+    {{ $attributes->merge(['class' => 'social-share-container flex flex-wrap gap-4']) }}
+    role="group"
+    aria-label="{{ __('seo::social_share.widget_title') }}"
+>
     @foreach($platforms as $platform)
         @if(isset($links[$platform]))
             @if($platform === 'copy')
-                <div x-data="{ copied: false }" class="relative inline-block">
+                <div x-data="{ copied: false, copyUrl: @js($links[$platform]), copiedMessage: @js(__('seo::social_share.messages.link_copied.message')) }" class="relative inline-block">
                     <button 
                         @click="
-                            navigator.clipboard.writeText('{{ $links[$platform] }}');
-                            copied = true;
-                            setTimeout(() => copied = false, 2000)
+                            const copy = navigator.clipboard
+                                ? navigator.clipboard.writeText(copyUrl)
+                                : Promise.reject();
+                            copy.catch(() => {
+                                const input = document.createElement('textarea');
+                                input.value = copyUrl;
+                                input.setAttribute('readonly', '');
+                                input.style.position = 'fixed';
+                                input.style.opacity = '0';
+                                document.body.appendChild(input);
+                                input.select();
+                                document.execCommand('copy');
+                                input.remove();
+                            }).finally(() => {
+                                copied = true;
+                                setTimeout(() => copied = false, 2000);
+                            });
                         "
-                        class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all active:scale-95"
-                        title="{{ __('pub_theme::event.actions.copy_link.label') }}"
+                        class="rounded-full bg-gray-100 p-2.5 text-gray-700 transition-all hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current active:scale-95"
+                        title="{{ __('seo::social_share.actions.copy_link.title') }}"
+                        aria-label="{{ __('seo::social_share.actions.copy_link.title') }}"
                         type="button"
                     >
-                        <span x-show="!copied">
+                        <span x-show="!copied" aria-hidden="true">
                             <x-seo::icons.link class="w-6 h-6" />
                         </span>
-                        <span x-show="copied" x-cloak>
+                        <span x-show="copied" x-cloak aria-hidden="true">
                             <x-seo::icons.check class="w-6 h-6 text-green-500" />
                         </span>
                     </button>
-                    <div 
+                    <div
                         x-show="copied" 
                         x-transition 
                         x-cloak
                         class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded shadow-lg pointer-events-none whitespace-nowrap"
                     >
-                        {{ __('pub_theme::event.messages.link_copied.label') }}
+                        {{ __('seo::social_share.messages.link_copied.message') }}
                     </div>
+                    <span class="sr-only" aria-live="polite" x-text="copied ? copiedMessage : ''"></span>
                 </div>
             @else
                 <a 
                     href="{{ $links[$platform] }}" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="p-2 rounded-full transition-all hover:scale-110 active:scale-95 platform-{{ $platform }}"
-                    title="Share on {{ ucfirst($platform) }}"
+                    class="rounded-full p-2.5 transition-all hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current active:scale-95 platform-{{ $platform }}"
+                    title="{{ __('seo::social_share.actions.share.title', ['platform' => ucfirst($platform)]) }}"
+                    aria-label="{{ __('seo::social_share.actions.share.title', ['platform' => ucfirst($platform)]) }}"
                 >
+                    <span aria-hidden="true">
                     @switch($platform)
                         @case('facebook')
                             <x-seo::icons.facebook class="w-6 h-6 text-[#1877F2]" />
@@ -64,6 +86,7 @@
                             <x-seo::icons.telegram class="w-6 h-6 text-[#229ED9]" />
                             @break
                     @endswitch
+                    </span>
                 </a>
             @endif
         @endif

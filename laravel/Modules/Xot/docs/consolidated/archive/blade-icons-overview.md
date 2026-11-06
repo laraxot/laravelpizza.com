@@ -1,3 +1,11 @@
+---
+title: "Panoramica delle Blade Icons in Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "panoramica delle blade icons in xot xot"
+---
 # Panoramica delle Blade Icons in Xot
 
 ## Introduzione

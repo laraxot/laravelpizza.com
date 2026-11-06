@@ -1,8 +1,17 @@
-# Implementazione del Logout con LaravelLocalization
+---
+title: "Implementazione del Logout con LaravelLocalization"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione del logout con laravellocalization user"
+---
+# Implementazione del Logout con LaravelLocalization 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Best Practices Componenti di Autenticazione](./AUTH_COMPONENTS_BEST_PRACTICES.md)
+- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
+- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
@@ -156,11 +165,3 @@ Queste chiavi devono essere definite nel file di traduzione `auth.php` per ogni 
 ## Conclusione
 
 Seguendo queste best practices, è possibile implementare un processo di logout robusto e user-friendly , che rispetta le convenzioni del progetto per la localizzazione e l'utilizzo dei componenti Filament.
-
----
-module: theme
-topic: logout_implementation_with_laravel_localization
-canonical: ../../../Themes/docs/shared-components/logout_implementation_with_laravel_localization.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/logout_implementation_with_laravel_localization.md

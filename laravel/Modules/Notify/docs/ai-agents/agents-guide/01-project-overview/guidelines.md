@@ -1,3 +1,15 @@
+---
+title: "guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "guidelines"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guidelines for Claude/Gemini
 
 - **ALWAYS use short array syntax `[]`** - NEVER use `array()` in PHP files.
@@ -16,3 +28,4 @@
 
 ---
 [Back to index](../index.md) | [Overview](project-overview.md) | [Links](links.md)
+[Back to index](../../../index.md) | [Overview](project-overview.md) | [Links](links.md)

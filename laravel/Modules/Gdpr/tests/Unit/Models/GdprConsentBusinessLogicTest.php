@@ -9,75 +9,93 @@ use Modules\Gdpr\Database\Factories\TreatmentFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Database\Factories\UserFactory;
+use Modules\Xot\Datas\XotData;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+/**
+ * Business logic del model Consent (tracciamento consensi GDPR).
+ */
+final class GdprConsentBusinessLogicTest extends TestCase
+{
+    public function test_declares_audit_and_lifecycle_fields_as_fillable(): void
+    {
+        $consent = new Consent;
 
-describe('GDPR Consent Business Logic', function () {
-    beforeEach(function (): void {
-        /* @var \Modules\Gdpr\Tests\TestCase $this */
-        gdprAssertDatabaseAvailable();
-    });
-
-    it('records consent with required metadata', function () {
-        $user = UserFactory::new()->createOne();
-        $treatment = TreatmentFactory::new()->createOne([
-            'name' => 'marketing_emails',
-            'description' => 'Marketing emails',
-            'weight' => 1,
-            'active' => true,
-            'required' => false,
-        ]);
-
-        $consent = ConsentFactory::new()->createOne([
-            'subject_id' => $user->id,
-            'treatment_id' => $treatment->id,
-            'user_id' => $user->id,
-            'user_type' => $user::class,
-            'type' => 'marketing_emails',
-            'accepted_at' => now()->toDateTimeString(),
-            'ip_address' => '192.168.1.1',
-            'user_agent' => 'Mozilla/5.0',
-        ]);
-
-        Assert::assertInstanceOf(Consent::class, $consent);
-        Assert::assertSame($user->id, $consent->subject_id);
-        Assert::assertSame('marketing_emails', $consent->type);
-        Assert::assertSame('192.168.1.1', $consent->ip_address);
-    });
-
-    it('links consent to treatment', function () {
-        $treatment = TreatmentFactory::new()->createOne([
-            'name' => 'analytics',
-            'description' => 'Analytics processing',
-            'weight' => 5,
-            'active' => true,
-            'required' => true,
-        ]);
-
-        $consent = ConsentFactory::new()->createOne([
-            'treatment_id' => $treatment->id,
-            'type' => 'analytics',
-        ]);
-
-        Assert::assertSame($treatment->id, $consent->treatment_id);
-        Assert::assertInstanceOf(Treatment::class, $consent->treatment);
-    });
-
-    it('validates fillable consent fields', function () {
-        $consent = new Consent();
-        $fillable = $consent->getFillable();
-
-        assertFillableContains([
-            'subject_id',
-            'treatment_id',
+        foreach ([
             'user_id',
             'user_type',
             'type',
             'accepted_at',
             'ip_address',
             'user_agent',
-        ], $fillable);
-    });
-});
+            'metadata',
+            'revoked_at',
+            'revoked_ip_address',
+            'treatment_id',
+        ] as $field) {
+            Assert::assertContains($field, $consent->getFillable());
+        }
+    }
+
+    public function test_casts_consent_metadata_and_timestamps(): void
+    {
+        $casts = (new Consent)->getCasts();
+
+        Assert::assertSame('array', $casts['metadata'] ?? null);
+        Assert::assertSame('datetime', $casts['accepted_at'] ?? null);
+        Assert::assertSame('datetime', $casts['revoked_at'] ?? null);
+    }
+
+    public function test_associates_consent_with_a_treatment_definition(): void
+    {
+        $consent = new Consent;
+
+        Assert::assertSame('treatment_id', $consent->treatment()->getForeignKeyName());
+    }
+
+    public function test_defaults_user_type_to_configured_user_class_when_missing(): void
+    {
+        $consent = (new ConsentFactory)->createOne([
+            'user_type' => '',
+        ]);
+
+        Assert::assertSame(XotData::make()->getUserClass(), $consent->user_type);
+    }
+
+    public function test_persists_acceptance_metadata_from_factory_defaults(): void
+    {
+        $consent = (new ConsentFactory)->createOne([
+            'type' => 'marketing_emails',
+            'ip_address' => '192.168.1.1',
+        ]);
+
+        Assert::assertInstanceOf(Consent::class, $consent);
+        Assert::assertSame('marketing_emails', $consent->type);
+        Assert::assertSame('192.168.1.1', $consent->ip_address);
+        Assert::assertNotNull($consent->accepted_at);
+    }
+
+    public function test_supports_revocation_via_revoked_at(): void
+    {
+        $consent = (new ConsentFactory)->createOne([
+            'revoked_at' => null,
+        ]);
+
+        $consent->update(['revoked_at' => now()]);
+
+        $fresh = $consent->fresh();
+        Assert::assertInstanceOf(Consent::class, $fresh);
+        Assert::assertNotNull($fresh->getAttributes()['revoked_at'] ?? null);
+    }
+
+    public function test_links_consent_rows_to_treatment_records(): void
+    {
+        $treatment = (new TreatmentFactory)->createOne();
+        $consent = (new ConsentFactory)->createOne([
+            'treatment_id' => $treatment->id,
+        ]);
+
+        Assert::assertInstanceOf(Treatment::class, $consent->treatment);
+        Assert::assertSame($treatment->id, $consent->treatment_id);
+    }
+}

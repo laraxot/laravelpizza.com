@@ -6,20 +6,19 @@ namespace Modules\Notify\Tests\Unit\Notifications\Channels;
 
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
+use Modules\Notify\Actions\SMS\SendSmsFactorSMSAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
-use Modules\Notify\Factories\SmsActionFactory;
+use Modules\Notify\Models\Contracts\SmsActionContract;
 use Modules\Notify\Notifications\Channels\NetfunChannel;
 use Modules\Notify\Notifications\Channels\TelegramChannel;
 use Modules\Notify\Notifications\ThemeNotification;
 use Modules\Notify\Tests\Fixtures\NetfunChannelNotifiableDummy;
 use Modules\Notify\Tests\TestCase;
-use Mockery;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-
 function makeThemeNotificationDummy(): ThemeNotification
 {
     return new class('name', []) extends ThemeNotification
@@ -29,8 +28,7 @@ function makeThemeNotificationDummy(): ThemeNotification
             return SmsData::from([
                 'from' => 'Xot',
                 'recipient' => '+391234567890',
-                'body' => 'Body',
-            ]);
+                'body' => 'Body']);
         }
     };
 }
@@ -62,18 +60,12 @@ test('netfun notifications channel sends and increases counter', function () {
     config()->set('sms.default', 'smsfactor');
     config()->set('sms.drivers.smsfactor.token', 'token-123');
 
-    app()->instance(SmsActionFactory::class, new class extends SmsActionFactory
+    app()->instance(SendSmsFactorSMSAction::class, new class implements SmsActionContract
     {
-        public function create(?string $driver = null): SmsActionContract
+        /** @return array{status_code: int, status_txt: string} */
+        public function execute(SmsData $smsData): array
         {
-            return new class implements SmsActionContract
-            {
-                /** @return array{status_code: int, status_txt: string} */
-                public function execute(SmsData $smsData): array
-                {
-                    return ['status_code' => 200, 'status_txt' => 'ok'];
-                }
-            };
+            return ['status_code' => 200, 'status_txt' => 'ok'];
         }
     });
 
@@ -84,11 +76,14 @@ test('netfun notifications channel sends and increases counter', function () {
     $channel->send($notifiable, $notification);
 
     Assert::assertArrayHasKey('sms', $notifiable->increased);
-    Assert::assertSame(200, \notifyArrayGet($notifiable->increased, 'sms', 'status_code'));
+    Assert::assertSame(200, TestCase::notifyArrayGet($notifiable->increased, 'sms', 'status_code'));
 });
 
 test('telegram notifications channel logs when recipient and method are valid', function () {
-    Log::shouldReceive('info')->once();
+    Log::shouldReceive('debug')->once()->withArgs(function (string $message, array $context): bool {
+        return str_contains($message, 'Telegram') && isset($context['chat_id']);
+    });
+    Log::shouldReceive('info')->zeroOrMoreTimes();
 
     $channel = new TelegramChannel;
     $channel->send(makeTelegramNotifiableDummy(), makeTelegramNotificationDummy());
@@ -97,7 +92,7 @@ test('telegram notifications channel logs when recipient and method are valid', 
 test('telegram notifications channel throws when notification has no toTelegram method', function () {
     $channel = new TelegramChannel;
 
-    \assertNotifyThrows(
+    XotBasePest::assertThrows(
         fn () => $channel->send(makeTelegramNotifiableDummy(), new class extends Notification {}),
         \Exception::class,
     );

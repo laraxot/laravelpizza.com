@@ -1,3 +1,15 @@
+---
+title: "filament extension pattern analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament extension pattern analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi del Pattern di Estensione per Componenti Filament
 
 ## Comprensione dell'Errore
@@ -16,7 +28,7 @@ L'errore si manifesta in due forme principali:
 
 ### 1. Architettura a Strati
 
-Il progetto Quaeris utilizza un'architettura a strati per i componenti Filament:
+Il progetto SaluteOra utilizza un'architettura a strati per i componenti Filament:
 
 ```
 Filament Core Classes (vendor)
@@ -30,7 +42,7 @@ Saltare il livello intermedio (XotBase) rompe questa architettura e crea inconsi
 
 ### 2. Personalizzazioni Centralizzate
 
-Le classi XotBase contengono personalizzazioni specifiche per il progetto Quaeris:
+Le classi XotBase contengono personalizzazioni specifiche per il progetto SaluteOra:
 - Gestione multilingua
 - Integrazione con il sistema di permessi
 - Logging e auditing
@@ -92,4 +104,4 @@ L'adozione coerente del pattern di estensione XotBase offre vantaggi significati
 
 ## Conclusione
 
-Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di Quaeris. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.
+Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di SaluteOra. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.

@@ -28,7 +28,7 @@ class EditLocation extends XotBaseEditRecord
     {
         Assert::string($url = $this->getResource()::getUrl('index'));
 
-        return $url;
+        return $this->getRecordReturnUrl($url);
     }
 
     protected function getHeaderWidgets(): array

@@ -9,15 +9,14 @@ use Filament\Actions\ViewAction;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Modules\User\Actions\Shield\GetPermissionModelAction;
 use Modules\User\Filament\Resources\RoleResource;
 use Modules\User\Models\Role;
-use Modules\User\Support\Utils;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use Webmozart\Assert\Assert;
 
 class EditRole extends XotBaseEditRecord
 {
-    // //
     /** @var Collection<int, string> */
     public Collection $permissions;
 
@@ -31,8 +30,8 @@ class EditRole extends XotBaseEditRecord
     {
         $permissionModels = collect();
         Assert::isArray($data = $this->data);
-        $this->permissions->each(static function ($permission) use ($permissionModels, $data): void {
-            $permissionModels->push(Utils::getPermissionModel()::firstOrCreate([
+        $this->permissions->each(static function (string $permission) use ($permissionModels, $data): void {
+            $permissionModels->push(app(GetPermissionModelAction::class)->execute()::firstOrCreate([
                 'name' => $permission,
                 'guard_name' => $data['guard_name'] ?? 'web',
             ]));
@@ -52,10 +51,11 @@ class EditRole extends XotBaseEditRecord
     protected function mutateFormDataBeforeSave(array $data): array
     {
         $this->permissions = collect($data)
+            ->keys()
             ->filter(
-                static fn ($_permission, $key): bool => ! \in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'),
+                static fn (string $key): bool => ! \in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'),
             )
-            ->keys();
+            ->values();
 
         /** @var array<string, mixed> $result */
         $result = Arr::only($data, ['name', 'guard_name']);

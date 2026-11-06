@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Passport\Passport;
 use Modules\User\Models\OauthAuthCode;
@@ -9,17 +8,18 @@ use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthDeviceCode;
 use Modules\User\Models\OauthRefreshToken;
 use Modules\User\Models\OauthToken;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\glob;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('every eloquent passport model has a local oauth wrapper', function (): void {
     /** @var list<string> $files */
     $files = glob(base_path('vendor/laravel/passport/src').'/*.php');
 
-    if ([] === $files) {
+    if ($files === []) {
         Assert::fail('Unable to read Passport source directory.');
     }
 

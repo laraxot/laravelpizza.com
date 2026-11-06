@@ -1,3 +1,15 @@
+---
+title: "interface structure clarification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "interface structure clarification"
+issues: []
+discussions: []
+status: draft
+---
+
 # Chiarimento sulla Struttura delle Interfacce 
 
 ## Struttura Corretta per le Interfacce SMS
@@ -5,7 +17,7 @@
 , le interfacce per le azioni SMS seguono questa struttura:
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 ```
 
 Con il namespace corrispondente:

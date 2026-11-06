@@ -1,3 +1,11 @@
+---
+title: "Actions Structure"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "actions structure user"
+---
 # Actions Structure 
 
 ## Directory Structure
@@ -39,7 +47,7 @@ Questa differenza è definita nel file `composer.json` di ogni modulo, che mappa
 
 ## Pattern di Implementazione
 
-Quaeris utilizza il package `spatie/laravel-queueable-action` per le Actions, NON il pattern Service:
+SaluteOra utilizza il package `spatie/laravel-queueable-action` per le Actions, NON il pattern Service:
 
 ```php
 <?php
@@ -47,7 +55,7 @@ Quaeris utilizza il package `spatie/laravel-queueable-action` per le Actions, NO
 namespace Modules\User\Actions\User;
 
 use Spatie\QueueableAction\QueueableAction;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 
 class DeleteUserAction
 {
@@ -71,9 +79,9 @@ class DeleteUserAction
 
 ## Documentazione Correlata
 
-- [Path Conventions](./PATH_CONVENTIONS.md)
-- [Directory Structure Checklist](./DIRECTORY_STRUCTURE_CHECKLIST.md)
-- [Module Structure](./MODULE_STRUCTURE.md)
+- [Path Conventions](./path_conventions.md)
+- [Directory Structure Checklist](./directory_structure_checklist.md)
+- [Module Structure](./module_structure.md)
 - [Path Conventions](./path_conventions.md)
 - [Directory Structure Checklist](./directory_structure_checklist.md)
 - [Module Structure](./module_structure.md)

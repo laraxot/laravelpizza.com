@@ -40,7 +40,27 @@ parameters:
         - ./*/packages/*
         # Trait analizzati solo via modelli host (evita doppia analisi trait+consumer)
         - ./Modules/Geo/app/Models/Traits/HasAddress.php
-        - ./Modules/Geo/app/Traits/HasAddresses.php
+        - ./Modules/Gdpr/app/Models/Traits/HasGdpr.php
+        - ./Modules/Geo/app/Models/Traits/HasPlaceTrait.php
+        - ./Modules/Lang/app/Models/Traits/HasStrictTranslations.php
+        - ./Modules/Notify/app/Models/Traits/HasContact.php
+        - ./Modules/Notify/app/Traits/HasNotificationRateLimiting.php
+        - ./Modules/Notify/app/Traits/HasNotificationTracking.php
+        - ./Modules/Notify/app/Traits/HasTenantNotifications.php
+        - ./Modules/Tenant/app/Models/Traits/SushiToCsv.php
+        - ./Modules/UI/app/Traits/TableLayoutTrait.php
+        - ./Modules/User/app/Models/Traits/BaseUserUniqueNameAttribute.php
+        - ./Modules/User/app/Models/Traits/HasPasswordExpiry.php
+        - ./Modules/User/app/Models/Traits/HasRoles.php
+        - ./Modules/User/app/Providers/Traits/HasPassportConfiguration.php
+        - ./Modules/Xot/app/Datas/Concerns/HasYearsConfig.php
+        - ./Modules/Xot/app/Models/Traits/HasCommonScopes.php
+        - ./Modules/Xot/app/Models/Traits/HasDynamicFillable.php
+        - ./Modules/Xot/app/Traits/Filament/HasCustomModelLabel.php
+        - ./Modules/Xot/app/Traits/HasCsrfToken.php
+        - ./Modules/Xot/app/Traits/HasCustomRelations.php
+        - ./Modules/Xot/app/Traits/HasSchemalessAttributes.php
+        - ./Modules/Xot/app/Traits/HasTableFunctionsTrait.php
 
     bootstrapFiles:
         # - ./phpstan_bootstrap.php

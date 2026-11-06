@@ -1,3 +1,15 @@
+---
+title: "leggi ux"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "leggi ux"
+issues: []
+discussions: []
+status: draft
+---
+
 # Leggi di User Experience (UX)
 
 Questo documento riassume le principali leggi di UX basate sul sito [Laws of UX](https://lawsofux.com/) e spiega come applicarle al progetto il progetto. L'obiettivo è migliorare l'esperienza utente dell'applicazione seguendo principi consolidati di design e psicologia cognitiva.

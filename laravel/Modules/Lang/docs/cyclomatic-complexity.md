@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Cyclomatic Complexity Report - Module: Lang"
+module: "Lang"
+type: concept
+tags: [cyclomatic, complexity]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "cyclomatic complexity"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Cyclomatic Complexity Report - Module: Lang
 
 **Analyzer:** Super Mucca 🐮

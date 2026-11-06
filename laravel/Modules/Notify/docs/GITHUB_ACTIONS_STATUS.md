@@ -1,3 +1,15 @@
+---
+title: "GITHUB ACTIONS STATUS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GITHUB ACTIONS STATUS"
+issues: []
+discussions: []
+status: draft
+---
+
 # GitHub Actions Status & Fixes
 
 **Date**: 2026-03-13  
@@ -5,10 +17,9 @@
 **Author**: AI Agent
 
 ---
-
 ## Summary
 
-Analisi e fix delle GitHub Actions del repository base_fixcity_fila5.
+Analisi e fix delle GitHub Actions del repository base_ptv_fila5.
 
 ---
 

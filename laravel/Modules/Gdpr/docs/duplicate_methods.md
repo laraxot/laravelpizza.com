@@ -1,3 +1,16 @@
+---
+title: "duplicate methods"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods"
+issues: []
+discussions: []
+status: superseded
+superseded_by: analysis/duplicate-methods.md
+---
+
 # Metodi duplicati — Gdpr
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.

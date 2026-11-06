@@ -1,4 +1,18 @@
+---
+title: "code quality"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🌍 Geo Module - Code Quality Analysis Report
+
+> **Nota stato 2026-10-20**: Questo report cita file storici (`BaseGeoService.php`, `GoogleMapsService.php`) che non esistono più (No-Services, vedi `decision-log.md`). Non rappresenta lo stato attuale del codice (`app/Services/` assente, Actions sostitutive attive).
 
 **Date**: [DATE]
 **Tools Used**: PHPStan Level 10, PHPMD
@@ -102,6 +116,5 @@ PHPStan analysis was blocked by a syntax error in the Cms module, but PHPMD anal
 4. **Update Documentation**: Document the improvements and patterns
 
 ---
-
 **Report Generated**: [DATE]
 **Target Completion**: [DATE]

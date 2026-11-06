@@ -1,8 +1,7 @@
 <?php
 
 declare(strict_types=1);
-
-use Mockery;
+use Mockery\MockInterface;
 use Modules\User\Actions\Team\GetUserTeamsOptionAction;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Database\Factories\TeamFactory;
@@ -12,10 +11,9 @@ use Modules\User\Facades\FilamentShield;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use Modules\User\Tests\Unit\QuickWins\Fixtures\FilamentShieldStubFixture;
+use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\actingAs;
-
-use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -23,17 +21,16 @@ describe('User quick wins coverage', function (): void {
     it('builds provider not configured exception message', function (): void {
         $exception = ProviderNotConfigured::make('github');
 
-        Assert::assertInstanceOf(ProviderNotConfigured::class, $exception);
         Assert::assertStringContainsString('Provider "github" is not configured', $exception->getMessage());
     });
 
     it('resolves filament shield facade accessor', function (): void {
-        $service = new FilamentShieldStubFixture();
+        $service = new FilamentShieldStubFixture;
 
         app()->instance('filament-shield', $service);
 
         Assert::assertSame($service, FilamentShield::getFacadeRoot());
-        Assert::assertSame(['w1', 'w2'], (new FilamentShieldStubFixture())->getWidgets());
+        Assert::assertSame(['w1', 'w2'], (new FilamentShieldStubFixture)->getWidgets());
     });
 
     it('returns default option plus team options', function (): void {
@@ -57,11 +54,11 @@ describe('User quick wins coverage', function (): void {
             'name' => 'Quick Win',
         ];
 
-        $createdUser = new User();
+        $createdUser = new User;
         $createdUser->email = $payload['email'];
         $createdUser->name = $payload['name'];
 
-        $userModel = configureMock(User::class, function (Mockery\MockInterface $mock) use ($createdUser): void {
+        $userModel = configureMock(User::class, function (MockInterface $mock) use ($createdUser): void {
             $mock->allows(['create' => $createdUser]);
         });
 

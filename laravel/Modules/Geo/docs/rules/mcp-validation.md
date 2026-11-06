@@ -1,3 +1,15 @@
+---
+title: "mcp validation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp validation"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Validation Rule
 
 **All changes must be verified using all available tools, including MCP.**

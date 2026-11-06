@@ -1,3 +1,15 @@
+---
+title: "map component purpose architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map component purpose architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Component Purpose — Architecture & Business Outcome
 
 ## Business Purpose and Outcome

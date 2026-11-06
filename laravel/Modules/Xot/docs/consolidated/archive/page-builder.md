@@ -1,3 +1,11 @@
+---
+title: "page_builder"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "page_builder xot"
+---
 # page_builder
 
 <!-- Contenuto migrato da _docs/page_builder.txt -->

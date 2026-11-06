@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace Modules\Activity\Filament\Pages;
 
 use Exception;
-use Filament\Forms\Components\Field;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Resources\Pages\Concerns\InteractsWithRecord;
-use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Enums\PaginationMode;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -25,7 +23,9 @@ use Modules\Activity\Actions\RestoreActivityAction;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
-use Webmozart\Assert\Assert;
+use Stringable;
+
+use function Safe\json_encode;
 
 /**
  * Classe base per visualizzare lo storico delle attività di un record.
@@ -65,7 +65,10 @@ abstract class ListLogActivities extends XotBasePage
 
         // Convert to string (__() returns string|array|null)
         if (is_array($breadcrumb)) {
-            return implode(' ', array_map(fn (mixed $v): string => (string) $v, $breadcrumb));
+            return implode(' ', array_map(
+                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
+                $breadcrumb,
+            ));
         }
 
         if (is_string($breadcrumb)) {
@@ -89,7 +92,10 @@ abstract class ListLogActivities extends XotBasePage
 
         // __() returns string|array|null
         if (is_array($title)) {
-            return implode(' ', array_map(fn (mixed $v): string => (string) $v, $title));
+            return implode(' ', array_map(
+                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
+                $title,
+            ));
         }
 
         if (is_string($title)) {
@@ -183,8 +189,7 @@ abstract class ListLogActivities extends XotBasePage
             $activity = $this->resolveActivity($key);
             $oldProperties = $this->getOldProperties($activity);
 
-            Assert::isInstanceOf($this->record, Model::class);
-            app(RestoreActivityAction::class)->execute($this->record, $oldProperties);
+            app(RestoreActivityAction::class)->execute($this->getRecord(), $oldProperties);
 
             $this->sendRestoreSuccessNotification();
         } catch (Exception $e) {
@@ -206,71 +211,22 @@ abstract class ListLogActivities extends XotBasePage
             throw new InvalidArgumentException('Form must return a Schema instance');
         }
 
-        /** @var array<int|string, Component> $componentsArray */
-        $componentsArray = $schema->getComponents();
-
-        /** @var Collection<int, Component> $components */
-        $components = collect($componentsArray);
-
-        /** @var Collection<int, Component> $extracted */
-        $extracted = collect();
-
-        while (true) {
-            /** @var Component|null $component */
-            $component = $components->shift();
-
-            if ($component === null) {
-                break;
-            }
-
-            if ($component instanceof Field) {
-                $extracted->push($component);
-
-                continue;
-            }
-
-            // PHPStan Level 10: Type-safe child components
-            if (method_exists($component, 'getChildComponents')) {
-                $children = $component->getDefaultChildComponents();
-
-                if (\is_array($children) && $children !== []) {
-                    /** @var array<int|string, Component> $safeChildren */
-                    $safeChildren = $children;
-                    /** @var array<int, Component> $normalizedChildren */
-                    $normalizedChildren = array_values($safeChildren);
-                    $components = $components->merge($normalizedChildren);
-
-                    continue;
-                }
-            }
-
-            $extracted->push($component);
+        $labelMap = [];
+        foreach ($schema->getFlatFields(withHidden: true) as $field) {
+            $labelMap[$field->getName()] = self::stringifyTranslationValue($field->getLabel());
         }
 
-        /** @var Collection<string, string> $labelMap */
-        $labelMap = $extracted
-            ->filter(static fn ($field): bool => $field instanceof Field)
-            ->mapWithKeys(
-                /** @param Field $field
-                 * @return array<string, string>
-                 */
-                static function (Component $field): array {
-                    $name = $field->getName();
-                    $label = $field->getLabel();
-                    $labelString = $label instanceof Htmlable ? $label->toHtml() : (string) $label;
-
-                    return [$name => $labelString];
-                }
-            );
-
-        return $labelMap;
+        return new Collection($labelMap);
     }
 
     protected function sendRestoreSuccessNotification(): Notification
     {
         $title = __('activity::activities.events.restore_successful');
         $titleString = is_array($title)
-            ? implode(' ', array_map(fn (mixed $v): string => (string) $v, $title))
+            ? implode(' ', array_map(
+                static fn (mixed $value): string => self::stringifyTranslationValue($value),
+                $title,
+            ))
             : (is_string($title) ? $title : '');
 
         return Notification::make()
@@ -283,7 +239,10 @@ abstract class ListLogActivities extends XotBasePage
     {
         $title = __('activity::activities.events.restore_failed');
         $titleString = is_array($title)
-            ? implode(' ', array_map(fn (mixed $v): string => (string) $v, $title))
+            ? implode(' ', array_map(
+                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
+                $title,
+            ))
             : (is_string($title) ? $title : '');
 
         $notification = Notification::make()
@@ -295,6 +254,34 @@ abstract class ListLogActivities extends XotBasePage
         }
 
         return $notification->send();
+    }
+
+    private static function stringifyTranslationValue(mixed $value): string
+    {
+        if (is_string($value)) {
+            return $value;
+        }
+
+        if (is_scalar($value)) {
+            return (string) $value;
+        }
+
+        if ($value instanceof Htmlable) {
+            return $value->toHtml();
+        }
+
+        if ($value instanceof Stringable) {
+            return (string) $value;
+        }
+
+        if (is_array($value)) {
+            return implode(' ', array_map(
+                static fn (mixed $item): string => self::stringifyTranslationValue($item),
+                $value,
+            ));
+        }
+
+        return '';
     }
 
     private function resolveActivity(int|string $key): Activity
@@ -334,7 +321,15 @@ abstract class ListLogActivities extends XotBasePage
             throw new Exception('Invalid properties format in activity log');
         }
 
-        /** @var array<string, mixed> $old */
-        return $old;
+        $oldProperties = [];
+        foreach ($old as $field => $value) {
+            if (! \is_string($field)) {
+                throw new Exception('Invalid field name in activity log properties');
+            }
+
+            $oldProperties[$field] = $value;
+        }
+
+        return $oldProperties;
     }
 }

@@ -1,3 +1,15 @@
+---
+title: "automatic translations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "automatic translations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Traduzioni Automatiche nei Componenti Filament
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo UI. La documentazione completa sulle traduzioni automatiche si trova nel [modulo Lang](../../lang/docs/automatic-translations.md).

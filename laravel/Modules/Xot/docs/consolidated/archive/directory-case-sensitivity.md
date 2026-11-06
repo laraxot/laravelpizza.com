@@ -1,3 +1,11 @@
+---
+title: "Case Sensitivity e Struttura Corretta delle Directory nei Moduli Laravel"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "case sensitivity e struttura corretta delle directory nei moduli laravel xot"
+---
 # Case Sensitivity e Struttura Corretta delle Directory nei Moduli Laravel
 
 ## Problemi Identificati

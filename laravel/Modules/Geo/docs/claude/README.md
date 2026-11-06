@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # PTVX Laraxot Development Guide
 
 **PTVX** is a production-grade Laravel 12 + Filament 4 + Livewire 3 modular monolith application for public administration management in Italy. Built using the **Laraxot architecture**, it emphasizes strict typing, modularity, and PHPStan Level 10 compliance.
@@ -261,7 +273,6 @@ php artisan docs:generate
 | 2.0 | Aug 2025 | Laraxot framework introduction |
 
 ---
-
 **Version**: 4.0
 **Last Updated**: December 2025
 **Architecture**: Laraxot Modular Monolith

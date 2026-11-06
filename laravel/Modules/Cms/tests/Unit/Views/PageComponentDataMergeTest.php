@@ -5,13 +5,13 @@ declare(strict_types=1);
 use Modules\Cms\View\Components\Page;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 test('page component merges route context into block data', function (): void {
     $block = (object) [
         'view' => 'cms::tests.fixtures.slug-probe',
         'data' => [
             'name' => 'probe',
         ],
+        'active' => true,
     ];
 
     $html = view('cms::components.page', [
@@ -27,16 +27,36 @@ test('page component merges route context into block data', function (): void {
     ])->render();
 
     Assert::assertStringContainsString('slug0=event-slug-123', $html);
-
     Assert::assertStringContainsString('container0=events', $html);
-
     Assert::assertStringContainsString('slug1=speaker-slug-456', $html);
-
     Assert::assertStringContainsString('container1=speakers', $html);
-
     Assert::assertStringContainsString('name=probe', $html);
-
     Assert::assertStringContainsString('data_name=probe', $html);
+});
+
+test('page component lets page data bag override block defaults', function (): void {
+    $block = (object) [
+        'view' => 'cms::tests.fixtures.slug-probe',
+        'data' => [
+            'name' => 'from-block',
+            'email' => '',
+        ],
+        'active' => true,
+    ];
+
+    $html = view('cms::components.page', [
+        'blocks' => [$block],
+        'side' => 'content',
+        'slug' => 'tickets.confirmation',
+        'data' => [
+            'name' => 'from-page',
+            'email' => 'cittadino@example.test',
+        ],
+    ])->render();
+
+    Assert::assertStringContainsString('name=from-page', $html);
+    Assert::assertStringContainsString('email=cittadino@example.test', $html);
+    Assert::assertStringNotContainsString('name=from-block', $html);
 });
 
 test('page render exposes nested context', function (): void {
@@ -52,38 +72,24 @@ test('page render exposes nested context', function (): void {
     );
 
     Assert::assertArrayHasKey('container0', $component->data);
-
     Assert::assertSame('events', $component->data['container0']);
-
     Assert::assertArrayHasKey('slug0', $component->data);
-
     Assert::assertSame('event-slug-123', $component->data['slug0']);
-
     Assert::assertArrayHasKey('container1', $component->data);
-
     Assert::assertSame('speakers', $component->data['container1']);
-
     Assert::assertArrayHasKey('slug1', $component->data);
-
     Assert::assertSame('speaker-slug-456', $component->data['slug1']);
 
     $view = $component->render();
     $viewData = $view->getData();
 
     Assert::assertArrayHasKey('container0', $viewData);
-
     Assert::assertSame('events', $viewData['container0']);
-
     Assert::assertArrayHasKey('slug0', $viewData);
-
     Assert::assertSame('event-slug-123', $viewData['slug0']);
-
     Assert::assertArrayHasKey('container1', $viewData);
-
     Assert::assertSame('speakers', $viewData['container1']);
-
     Assert::assertArrayHasKey('slug1', $viewData);
-
     Assert::assertSame('speaker-slug-456', $viewData['slug1']);
 });
 
@@ -102,18 +108,11 @@ test('page component internal view keys override conflicting data keys', functio
     $viewData = $component->render()->getData();
 
     Assert::assertArrayHasKey('side', $viewData);
-
     Assert::assertSame('content', $viewData['side']);
-
     Assert::assertArrayHasKey('slug', $viewData);
-
     Assert::assertSame('events.view', $viewData['slug']);
-
     Assert::assertArrayHasKey('container0', $viewData);
-
     Assert::assertSame('events', $viewData['container0']);
-
     Assert::assertArrayHasKey('slug0', $viewData);
-
     Assert::assertSame('event-slug-123', $viewData['slug0']);
 });

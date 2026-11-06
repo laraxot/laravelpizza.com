@@ -1,3 +1,15 @@
+---
+title: "qualita codice"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qualita codice"
+issues: []
+discussions: []
+status: draft
+---
+
 # Qualità del Codice
 
 ## PHPStan Level 10

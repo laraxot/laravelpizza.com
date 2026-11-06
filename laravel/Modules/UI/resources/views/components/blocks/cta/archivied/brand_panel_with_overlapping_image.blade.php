@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!--
   This example requires some changes to your config:
@@ -50,9 +49,9 @@ declare(strict_types=1);
             </svg>
           </div>
           <div class="relative mx-auto max-w-md space-y-6 px-6 py-12 sm:max-w-3xl sm:py-16 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
-            <h2 class="text-3xl font-bold tracking-tight text-white" id="join-heading">Join our team</h2>
-            <p class="text-lg text-white">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
-            <a class="block w-full rounded-md border border-transparent bg-white px-5 py-3 text-center text-base font-medium text-indigo-700 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto" href="#">Explore open positions</a>
+            <h2 class="text-3xl font-bold tracking-tight text-white" id="join-heading">{{ __('ui::blocks_cta.shared.join_our_team.title') }}</h2>
+            <p class="text-lg text-white">{{ __('ui::blocks_demo_shared.copy.paragraph_1.description') }}</p>
+            <a class="block w-full rounded-md border border-transparent bg-white px-5 py-3 text-center text-base font-medium text-indigo-700 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto" href="#">{{ __('ui::blocks_cta.archivied_brand_panel_with_overlapping_image.explore_open_positions.label') }}</a>
           </div>
         </div>
       </div>

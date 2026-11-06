@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * inspired by  DutchCodingCompany\FilamentSocialite.
  */
@@ -13,18 +12,18 @@ use Modules\Tenant\Models\Traits\SushiToPhpArray;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
- * @property int|null                  $id
- * @property string|null               $name
- * @property array<string, mixed>|null $scopes
+ * @property int|null $id
+ * @property string|null $name
+ * @property array<int, string>|null $scopes
  * @property array<string, mixed>|null $parameters
- * @property bool|null                 $stateless
- * @property bool|null                 $active
- * @property bool|null                 $socialite
- * @property string|null               $svg
- * @property string|null               $client_id
- * @property string|null               $client_secret
- * @property ProfileContract|null      $creator
- * @property ProfileContract|null      $updater
+ * @property bool|null $stateless
+ * @property bool|null $active
+ * @property bool|null $socialite
+ * @property string|null $svg
+ * @property string|null $client_id
+ * @property string|null $client_secret
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @method static Builder|SocialProvider newModelQuery()
  * @method static Builder|SocialProvider newQuery()
@@ -60,7 +59,6 @@ class SocialProvider extends BaseModel
 {
     use SushiToPhpArray;
 
-    /** @var bool */
     public $incrementing = false;
 
     /** @var list<string> */
@@ -113,10 +111,15 @@ class SocialProvider extends BaseModel
         'updated_by' => 'string',
     ];
 
-    /** @return array<int, array<string, mixed>> */
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        /** @var array<int, array<string, mixed>> $rows */
+        $rows = $this->getSushiRows();
+
+        return $rows;
     }
 
     /** @return array<string, string> */

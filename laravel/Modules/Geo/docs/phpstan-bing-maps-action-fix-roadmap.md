@@ -1,3 +1,15 @@
+---
+title: "phpstan bing maps action fix roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan bing maps action fix roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Fix Roadmap - GetAddressFromBingMapsAction - Gennaio 2026
 
 **File**: `Modules/Geo/app/Actions/Bing/GetAddressFromBingMapsAction.php`  

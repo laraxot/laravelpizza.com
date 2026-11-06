@@ -8,30 +8,27 @@ use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Datas\SmsData;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
-use ReflectionNamedType;
-use Spatie\QueueableAction\QueueableAction;
 
-test('netfun send action has the expected public contract', function (): void {
-    $reflection = new ReflectionClass(NetfunSendAction::class);
-    $method = $reflection->getMethod('execute');
-    $parameters = $method->getParameters();
-    $parameterType = $parameters[0]->getType();
-    $returnType = $method->getReturnType();
+use function Safe\class_uses;
+use function Safe\file_get_contents;
 
-    Assert::assertTrue($reflection->isInstantiable());
-    Assert::assertContains(QueueableAction::class, $reflection->getTraitNames());
-    Assert::assertTrue($method->isPublic());
-    Assert::assertCount(1, $parameters);
-    Assert::assertInstanceOf(ReflectionNamedType::class, $parameterType);
-    Assert::assertSame(SmsData::class, $parameterType->getName());
-    Assert::assertInstanceOf(ReflectionNamedType::class, $returnType);
-    Assert::assertSame('array', $returnType->getName());
-});
+uses(\Modules\Notify\Tests\TestCase::class);
+describe('NetfunSendAction', function () {
+    it('has execute method returning array', function () {
+        $reflection = new ReflectionClass(NetfunSendAction::class);
+        $method = $reflection->getMethod('execute');
 
-test('netfun send action exposes state used by execute', function (): void {
-    $reflection = new ReflectionClass(NetfunSendAction::class);
+        Assert::assertSame('array', (string) $method->getReturnType());
+        Assert::assertSame(SmsData::class, (string) $method->getParameters()[0]->getType());
+    });
 
-    Assert::assertSame('Modules\\Notify\\Actions', $reflection->getNamespaceName());
-    Assert::assertTrue($reflection->hasProperty('token'));
-    Assert::assertTrue($reflection->hasProperty('vars'));
+    it('uses strict types', function () {
+        $filename = (new ReflectionClass(NetfunSendAction::class))->getFileName();
+        Assert::assertNotFalse($filename);
+        Assert::assertStringContainsString('declare(strict_types=1);', file_get_contents($filename));
+    });
+
+    it('uses QueueableAction trait', function () {
+        Assert::assertContains('Spatie\QueueableAction\QueueableAction', class_uses(NetfunSendAction::class));
+    });
 });

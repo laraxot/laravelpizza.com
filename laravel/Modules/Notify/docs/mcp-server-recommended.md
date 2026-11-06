@@ -1,3 +1,15 @@
+---
+title: "mcp server recommended"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp server recommended"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Server Consigliati per il Modulo Notify
 
 ## Scopo del Modulo

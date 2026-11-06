@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Models\User;
 
 // config for DutchCodingCompany/FilamentSocialite
@@ -32,12 +31,6 @@ return [
             'icon' => 'heroicon-o-star',
         ],
     ],
-
-    'user_model' => User::class,
-
-    // Specify the default redirect route for successful logins
-    'login_redirect_route' => 'filament.pages.dashboard',
-
     // Specify the route name for the socialite login page
     'login_page_route' => 'filament.auth.login',
     // Should the user stay logged in?

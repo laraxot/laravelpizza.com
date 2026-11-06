@@ -16,7 +16,7 @@ class SocialProviderInfolist extends XotBaseResourceInfolist
      *
      * Campi basati sul Model SocialProvider.php -> id, name, scopes, parameters, stateless, active, socialite, svg
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

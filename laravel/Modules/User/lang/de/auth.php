@@ -3,6 +3,13 @@
 declare(strict_types=1);
 
 return [
+    'actions' => [
+        'login' => [
+            'success' => 'Anmeldung erfolgreich.',
+            'error' => 'E-Mail oder Passwort sind nicht korrekt.',
+            'throttle' => 'Zu viele Versuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
+        ],
+    ],
     'failed' => 'Diese Anmeldedaten stimmen nicht mit unseren Aufzeichnungen überein.',
     'password' => 'Das eingegebene Passwort ist nicht korrekt.',
     'throttle' => 'Zu viele Anmeldeversuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
@@ -12,6 +19,10 @@ return [
     'login-failed' => 'Anmeldung fehlgeschlagen, versuchen Sie es erneut.',
     'user-not-allowed' => 'Ihre E-Mail ist nicht autorisiert.',
     'registration-not-enabled' => 'Neue Benutzerregistrierung ist nicht möglich.',
+    // OAuth-Anbieter ohne Zugangsdaten (DCP-271). Die Anleitung erscheint nur mit APP_DEBUG; die Öffentlichkeit sieht die freundliche Meldung.
+    'provider-not-configured' => 'Die Anmeldung mit :provider ist derzeit nicht verfügbar. Sie können sich mit E-Mail und Passwort anmelden.',
+    'provider-setup-guide' => 'Die Anmeldung mit :provider ist nicht konfiguriert: Es fehlen :missing. Wo erstellen: Öffnen Sie :console und erstellen Sie OAuth-Zugangsdaten für eine Webanwendung; tragen Sie :redirect als autorisierte Weiterleitungs-URI ein. Wo eintragen: Schreiben Sie die Werte (:missing) in die Datei .env und führen Sie "php artisan config:clear" aus, oder nutzen Sie die Backoffice-Seite :admin. :hint',
+    'provider-setup-lan-hint' => 'Hinweis: :provider lehnt IP-Adressen und einfaches http als Weiterleitungs-URI ab (Ausnahme: localhost). Öffnen Sie die Seite über :localhost, zum Beispiel per SSH-Tunnel, oder verwenden Sie eine Domain mit HTTPS.',
     'Sign in to your account' => 'Anmelden bei Ihrem Konto',
     'create a new account' => 'Neues Konto erstellen',
     'Or' => 'Oder',
@@ -79,8 +90,11 @@ return [
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
     'login' => [
-        'title' => 'Anmelden bei Ihrem Konto',
-        'subtitle' => 'Geben Sie Ihre Anmeldedaten ein',
+        'title' => ['label' => 'Anmelden bei Ihrem Konto', 'text' => 'Anmelden bei Ihrem Konto'],
+        'subtitle' => ['text' => 'Geben Sie Ihre Anmeldedaten ein'],
+        'welcome_back' => ['text' => 'Willkommen zurück'],
+        'welcome_message' => ['text' => 'Geben Sie Ihre Zugangsdaten ein, um sich anzumelden.'],
+        'intro' => ['text' => 'Melden Sie sich an, um ein Problem zu melden und Ihre Anfragen zu verfolgen.'],
         'email' => 'E-Mail-Adresse',
         'email_placeholder' => 'beispiel@email.com',
         'password' => 'Passwort',
@@ -97,10 +111,16 @@ return [
         'remember_structured' => [
             'label' => 'Angemeldet bleiben',
         ],
-        'submit' => 'Anmelden',
-        'forgot_password' => 'Passwort vergessen?',
-        'no_account' => 'Haben Sie kein Konto?',
-        'register' => 'Registrieren',
+        'submit' => ['text' => 'Anmelden'],
+        'forgot_password' => ['text' => 'Passwort vergessen?'],
+        'no_account' => ['text' => 'Haben Sie kein Konto?'],
+        'create_account' => ['text' => 'Konto erstellen'],
+        'logging_in' => ['text' => 'Anmeldung läuft…'],
+        'or_continue_with' => ['text' => 'oder'],
+        'google' => ['text' => 'Google', 'button' => ['text' => 'Mit Google anmelden']],
+        'microsoft' => ['text' => 'Microsoft'],
+        'github' => ['text' => 'GitHub'],
+        'register' => ['text' => 'Registrieren'],
         'success' => 'Anmeldung erfolgreich.',
         'failed' => 'Ungültige Anmeldedaten.',
         'logout_success' => 'Abmeldung erfolgreich.',
@@ -118,6 +138,18 @@ return [
         'Remember me' => 'Angemeldet bleiben',
         'Remember' => 'Angemeldet bleiben',
         'Forgot your password?' => 'Passwort vergessen?',
+        'actions' => [
+            'login' => [
+                'label' => 'Anmelden',
+                'error' => 'Ungültige Anmeldedaten.',
+            ],
+        ],
+        'invalid_provider' => 'Ungültiger Anmeldeanbieter.',
+        'redirecting' => 'Weiterleitung läuft…',
+        'redirect_to_provider' => 'Sie werden zu :provider weitergeleitet.',
+        'callback' => 'Anmeldung mit :provider',
+        'callback_text' => 'Bei der Anmeldung mit :provider ist ein Problem aufgetreten.',
+        'back' => 'Zurück zur Anmeldung',
     ],
     'register' => [
         'title' => 'Neues Konto erstellen',
@@ -277,17 +309,37 @@ return [
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
     ],
-    'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
+    'login_page' => [
+        'meta_title' => 'Anmelden | FixCity',
+        'kicker' => 'Persönlicher Bereich',
+        'title' => 'Melden Sie sich bei Ihrem Konto an',
+        'description' => 'Melden Sie sich an, um ein Problem zu melden, Ihre Vorgänge zu verfolgen und Updates zu erhalten.',
+        'support_title' => 'Brauchen Sie Hilfe?',
+        'support_item_email' => 'Verwenden Sie die E-Mail-Adresse, mit der Sie sich registriert haben.',
+        'support_item_password' => 'Passwort vergessen? Sie können es in wenigen Sekunden zurücksetzen.',
+        'support_item_help' => 'Wenn das Problem weiterhin besteht, wenden Sie sich an den Support Ihrer Gemeinde.',
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-    'fields' => [
+    'register_page' => [
+        'title' => 'Konto erstellen',
+        'subtitle' => 'Persönlicher Bereich',
+        'description' => 'Füllen Sie das Formular aus, um Ihr Konto zu erstellen und alle Funktionen zu nutzen.',
+        'support_title' => 'Hilfe bei der Registrierung',
+        'help_email' => 'Verwenden Sie die E-Mail-Adresse, mit der Sie sich anmelden werden.',
+        'help_password' => 'Das Passwort muss mindestens 12 Zeichen lang sein und einen Großbuchstaben, einen Kleinbuchstaben, eine Zahl und ein Sonderzeichen enthalten.',
+        'help_support' => 'Bei Fragen wenden Sie sich an die zuständige Stelle.',
     ],
-    'actions' => [
+    'forgot-password' => [
+        'title' => 'Passwort vergessen?',
+        'subtitle' => 'Geben Sie Ihre E-Mail-Adresse ein, um Anweisungen zu erhalten',
+        'back_to_login' => 'Zurück zur Anmeldung',
+        'submit' => 'Anweisungen senden',
     ],
+    'auth_button' => [
+        'profile' => 'Mein Profil',
+        'dashboard' => 'Dashboard',
+        'logout' => 'Abmelden',
+        'personal_area' => 'Zum persönlichen Bereich',
+    ],
+    'back_to_home' => 'Zurück zur Startseite',
+    'logout' => 'Abmelden',
 ];

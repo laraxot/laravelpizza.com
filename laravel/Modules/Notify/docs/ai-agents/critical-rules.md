@@ -1,3 +1,15 @@
+---
+title: "critical rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole Critiche
 
 Summary obbligatorio per tutti gli agenti. Vedi [index](index.md) per navigazione completa.
@@ -7,13 +19,13 @@ Summary obbligatorio per tutti gli agenti. Vedi [index](index.md) per navigazion
 3. **Strict Typing**: `declare(strict_types=1)` in all files
 4. **No Mixed Types**: Forbidden in any form
 5. **Module Base Classes**: Must extend XotBase* classes
-6. **Filament array keys**: MAI `array_values()` su getHeaderActions/getTableActions/getTableColumns/getFormSchema — le chiavi string sono obbligatorie. **getTableColumns() DEVE SEMPRE** restituire `array<string, Column>` con chiavi string. Vedi `.cursor/rules/gettablecolumns-string-keys.mdc`
+6. **Filament array keys**: MAI `array_values()` su getHeaderActions/getTableActions/getTableColumns/getFormSchema: le chiavi string sono obbligatorie. **getTableColumns() DEVE SEMPRE** restituire `array<string, Column>` con chiavi string. Vedi `.cursor/rules/gettablecolumns-string-keys.mdc`
 7. **NO table() override**: In Filament 5 il metodo `table()` è `final`. NON overridare `table()` in nessuna classe (RelationManager, ManageRelatedRecords, TableWidget, Page). Usare `getTableColumns()`, `getTableHeaderActions()`, `getTableActions()`, `getTableBulkActions()`, `getTableFilters()`. Questa è una regola CRITICA - genera errore PHP "Cannot override final method".
 8. **Chart Widget Pattern**: getOptions() può restituire array o RawJs (Filament accetta entrambi); RawJs obbligatorio quando options via @js() con formatter
 9. **No Widget Constructors**: Livewire factory pattern - NO __construct() methods
 10. **form() DEVE essere final**: Il metodo `form()` in `HasXotForm` e `XotBaseRelationManager` DEVE restare `final`. Sono le classi figlie che si adattano implementando `getFormSchema()`, mai facendo override di `form()`.
 11. **table() DEVE essere final**: Il metodo `table()` in `HasXotTable` trait DEVE restare `final`. Sono le classi figlie che si adattano implementando `getTableColumns()`, `getTableHeaderActions()`, `getTableActions()`, `getTableBulkActions()`, `getTableFilters()`, mai facendo override di `table()`.
-12. **No HasFactory ridondante**: Modelli che estendono `BaseModel` del modulo hanno già la factory via `XotBaseModel → HasXotFactory`. NON aggiungere `use HasFactory` o `use HasXotFactory` — è ridondante. Es: `Team extends BaseTeam → BaseModel → XotBaseModel`.
+12. **No HasFactory ridondante**: Modelli che estendono `BaseModel` del modulo hanno già la factory via `XotBaseModel → HasXotFactory`. NON aggiungere `use HasFactory` o `use HasXotFactory`: è ridondante. Es: `Team extends BaseTeam → BaseModel → XotBaseModel`.
 13. **Italian Localization**: Use `toLocaleString("it-IT")` for display
 14. **Test Coverage**: Every feature must have tests
 15. **Documentation First**: Write docs before code

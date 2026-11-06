@@ -1,3 +1,16 @@
+---
+qmd: "rules index"
+issues: []
+discussions: []
+title: "Notify Module Rules Index"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Notify Module Rules Index
 
 ## Overview
@@ -27,7 +40,7 @@ This file documents the rules and standards specific to the Notify module.
 - Test each notification channel separately
 - Mock external services in unit tests
 
-## Architectural Violations — Do Not Repeat
+## Architectural Violations: Do Not Repeat
 
 ### No HTTP controllers
 Controllers are forbidden in all modules. Architecture = Folio + Volt + Filament only.
@@ -36,6 +49,6 @@ as a Folio page + Action, not a controller.
 See: [no-http-controllers.md](./no-http-controllers.md)
 
 ## Related Documentation
-- [README](./readme.md)
+- [README](./README.md)
 - [phpstan](./phpstan.md)
 - [No HTTP controllers](./no-http-controllers.md)

@@ -1,9 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
-use Filament\Schemas\Components\Wizard\Step;
 use Illuminate\Support\HtmlString;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Xot\Actions\GetTransKeyAction;
@@ -13,10 +10,13 @@ use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
 use Modules\Xot\Tests\Fixtures\Models\Probe;
 use Modules\Xot\Tests\Fixtures\Models\ProbeBadAttachments;
 use Modules\Xot\Tests\Fixtures\Models\ProbeGoodAttachments;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\mkdir;
+
+uses(TestCase::class);
 
 it('covers model resolution and model cache', function (): void {
     ProbeResource::resetModelCache();
@@ -38,7 +38,8 @@ it('covers default page discovery including optional view page', function (): vo
 });
 
 it('covers translation helper key normalization', function (): void {
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'probe.cluster.pages.item_widget';
@@ -49,7 +50,8 @@ it('covers translation helper key normalization', function (): void {
 });
 
 it('covers translation helper edit and widget normalization branches', function (): void {
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'edit_';
@@ -57,7 +59,8 @@ it('covers translation helper edit and widget normalization branches', function 
     });
 
     Assert::assertSame('.name', ProbeResource::callGetKeyTrans('name'));
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'probe';
@@ -68,7 +71,8 @@ it('covers translation helper edit and widget normalization branches', function 
 });
 
 it('covers translation helper string path and missing key fallback', function (): void {
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'probe.messages';
@@ -82,7 +86,8 @@ it('covers translation helper string path and missing key fallback', function ()
 });
 
 it('covers translation helper array and fix fallback branches', function (): void {
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'probe.arr';
@@ -99,7 +104,8 @@ it('covers translation helper array and fix fallback branches', function (): voi
 });
 
 it('covers translation helper exception branch', function (): void {
-    app()->instance(GetTransKeyAction::class, new class {
+    app()->instance(GetTransKeyAction::class, new class
+    {
         public function execute(string $class): string
         {
             return 'probe.exceptions';
@@ -116,7 +122,8 @@ it('covers translation helper exception branch', function (): void {
 });
 
 it('covers navigation badge success and fallback', function (): void {
-    app()->instance(CountAction::class, new class {
+    app()->instance(CountAction::class, new class
+    {
         public function execute(string $class): int
         {
             return 42;
@@ -124,7 +131,8 @@ it('covers navigation badge success and fallback', function (): void {
     });
 
     Assert::assertSame('42', ProbeResource::getNavigationBadge());
-    app()->instance(CountAction::class, new class {
+    app()->instance(CountAction::class, new class
+    {
         public function execute(string $class): int
         {
             throw new Exception('boom');
@@ -135,13 +143,9 @@ it('covers navigation badge success and fallback', function (): void {
 });
 
 it('covers get attachments schema branches', function (): void {
-    $resourceNoAttachments = new class extends XotBaseResource {
+    $resourceNoAttachments = new class extends XotBaseResource
+    {
         protected static ?string $model = Probe::class;
-
-        public static function getFormSchema(): array
-        {
-            return [];
-        }
     };
 
     Assert::assertSame([], $resourceNoAttachments::getAttachmentsSchema());
@@ -149,13 +153,9 @@ it('covers get attachments schema branches', function (): void {
         eval(' class ProbeBadAttachments extends \\Illuminate\\Database\\Eloquent\\Model { public static function getAttachments(): string { return "invalid"; } }');
     }
 
-    $resourceBadAttachments = new class extends XotBaseResource {
+    $resourceBadAttachments = new class extends XotBaseResource
+    {
         protected static ?string $model = ProbeBadAttachments::class;
-
-        public static function getFormSchema(): array
-        {
-            return [];
-        }
     };
 
     Assert::assertSame([], $resourceBadAttachments::getAttachmentsSchema());
@@ -163,15 +163,15 @@ it('covers get attachments schema branches', function (): void {
         eval(' class ProbeGoodAttachments extends \\Illuminate\\Database\\Eloquent\\Model { public static function getAttachments(): array { return ["one", 7, "two"]; } }');
     }
 
-    app()->instance(GetAttachmentsSchemaAction::class, new class {
+    app()->instance(GetAttachmentsSchemaAction::class, new class
+    {
         /**
-         * @param string[] $attachments
-         *
+         * @param  string[]  $attachments
          * @return string[]
          */
         public function execute(array $attachments, string $disk): array
         {
-            if ($attachments !== ['one', 'two'] || 'attachments' !== $disk) {
+            if ($attachments !== ['one', 'two'] || $disk !== 'attachments') {
                 throw new RuntimeException('unexpected attachments payload');
             }
 
@@ -179,13 +179,9 @@ it('covers get attachments schema branches', function (): void {
         }
     });
 
-    $resourceGoodAttachments = new class extends XotBaseResource {
+    $resourceGoodAttachments = new class extends XotBaseResource
+    {
         protected static ?string $model = ProbeGoodAttachments::class;
-
-        public static function getFormSchema(): array
-        {
-            return [];
-        }
     };
 
     Assert::assertSame(['schema'], $resourceGoodAttachments::getAttachmentsSchema());
@@ -205,17 +201,18 @@ it('covers wizard submit action success and failure paths', function (): void {
 });
 
 it('covers step builder branches', function (): void {
-    Assert::assertInstanceOf(Step::class, ProbeResource::callGetStepByName('missing_step'));
-    Assert::assertInstanceOf(Step::class, ProbeResource::callGetStepByName('custom_step'));
+    $step = ProbeResource::callGetStepByName('details');
+
+    Assert::assertSame('details', $step->getLabel());
 });
 
 it('covers simple base helpers', function (): void {
-    $resource = new ProbeResource();
+    $resource = new ProbeResource;
 
-    Assert::assertSame([], ProbeResource::getInfolistSchema());
+    Assert::assertSame([], $resource->getInfolistSchema());
     Assert::assertSame([], ProbeResource::extendTableCallback());
     Assert::assertSame([], ProbeResource::extendFormCallback());
     Assert::assertStringStartsWith('Xot', ProbeResource::getModuleName());
     Assert::assertTrue($resource->hasCombinedRelationManagerTabsWithContent());
-    Assert::assertGreaterThan(0, ProbeResource::getFormSchemaColumns());
+    Assert::assertGreaterThan(0, ProbeResource::getFormColumns());
 });

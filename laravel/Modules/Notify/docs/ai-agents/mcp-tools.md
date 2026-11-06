@@ -1,3 +1,15 @@
+---
+title: "mcp tools"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp tools"
+issues: []
+discussions: []
+status: draft
+---
+
 # MCP Tools
 
 > Strumenti MCP (Model Context Protocol) per Laravel Boost.
@@ -20,5 +32,6 @@ La configurazione MCP si trova in:
 
 **Di ritorno:**
 - → [CLAUDE.md - MCP Tools Section](../../CLAUDE.md)
+- → [CLAUDE.md - MCP Tools Section](../CLAUDE.md)
 - → [mcp.md](mcp.md)
 - → [INDEX](index.md)

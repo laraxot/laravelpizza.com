@@ -1,3 +1,14 @@
+---
+title: "docs update complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs update complete"
+issues: []
+discussions: []
+---
+
 # 📚 Aggiornamento Documentazione Completo - 2 Dicembre 2025
 
 ## ✅ MISSIONE COMPLETATA
@@ -6,6 +17,14 @@
 
 ---
 
+title: "docs update complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs update complete"
+issues: []
+discussions: []
 ## 📊 Statistiche Globali
 
 ### Documentazione
@@ -168,6 +187,7 @@
 **Perché**: Convenience + Type Safety + DRY
 
 **Dove**: `Xot/helpers/Helper.php` (10 funzioni)
+**Dove**: `Xot/Helpers/Helper.php` (10 funzioni)
 
 **Docs**:
 - `helper-functions-complete-list.md` - Lista completa

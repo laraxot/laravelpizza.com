@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Audit Traduzioni Inglesi - <main module>"
+module: "Lang"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Audit Traduzioni Inglesi - <main module>
 
 ## Panoramica
@@ -293,6 +307,7 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../docs/translation-standards.md)
+- [Regole Traduzioni](translation-standards.md)
 - [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 

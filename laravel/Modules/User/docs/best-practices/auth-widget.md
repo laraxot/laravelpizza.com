@@ -1,3 +1,24 @@
+---
+title: "Regole per Widget di Autenticazione"
+type: concept
+tags: [auth, widget]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-widget regole per widget di autenticazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+  - "./dependency.md"
+status: draft
+---
+
 # Regole per Widget di Autenticazione
 
 ## ERRORE CRITICO DA NON RIPETERE MAI
@@ -142,7 +163,10 @@ tests/Feature/Filament/Widgets/
 
 ## Collegamenti
 
-- [Widget Structure](widgets_structure.md)
+- [Widget Structure](widgets-structure.md)
 - [Filament Best Practices](filament_best_practices.md)
-- [Authentication Architecture](authentication.md)
+- [Authentication Architecture](../authentication.md)
+- [Widget Structure](../widgets-structure-user.md)
+- [Filament Best Practices](filament_best_practices.md)
+- [Authentication Architecture](../authentication.md)
 - [Security Guidelines](security_guidelines.md)

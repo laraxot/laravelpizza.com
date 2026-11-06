@@ -1,3 +1,15 @@
+---
+title: "dynamic data"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dynamic data"
+issues: []
+discussions: []
+status: draft
+---
+
 # Dynamic Data Resolution in CMS Blocks
 
 CMS blocks support dynamic data resolution from Eloquent models. This allows templates to display live data from the database instead of relying on static JSON files.

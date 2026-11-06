@@ -1,3 +1,11 @@
+---
+title: "Struttura del Logout Blade nel Theme One"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "struttura del logout blade nel theme one user"
+---
 # Struttura del Logout Blade nel Theme One
 
 ## Posizione Corretta
@@ -113,6 +121,9 @@ class LogoutPage
 
 ## Collegamenti
 
+- [Documentazione Volt](./volt_logout.md)
+- [Best Practices Routing](./routing_best_practices.md)
+- [Struttura Directory](./directory_structure_checklist.md) 
 - [Documentazione Volt](./volt_logout.md)
 - [Best Practices Routing](./routing_best_practices.md)
 - [Struttura Directory](./directory_structure_checklist.md) 

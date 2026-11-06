@@ -6,8 +6,8 @@ namespace Modules\Tenant\Tests\Integration\Traits;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\File;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Models\TestSushiModel;
-use Modules\Tenant\Services\TenantService;
 use Modules\Tenant\Tests\TestCase;
 
 use function Safe\json_encode;
@@ -25,7 +25,12 @@ function writeTraitIntegrationJson(string $path, array $data): void
 }
 
 beforeEach(function (): void {
-    $this->tenant = createTenant([
+    /** @var TestCase $this */
+    if (TestCase::tenantDbUnavailable()) {
+        $this->skipTest('DB `tenant` non raggiungibile: blocco di ambiente.');
+    }
+
+    TestCase::$tenant = TestCase::createTenant([
         'name' => 'test-tenant',
         'domain' => 'test.example.com',
     ]);
@@ -33,30 +38,32 @@ beforeEach(function (): void {
     $this->setCurrentTenant($this->tenantModel());
 
     $this->model = new TestSushiModel;
-    $this->testJsonPath = TenantService::filePath('database/content/test_sushi.json');
+    TestCase::$testJsonPath = app(GetTenantFilePathAction::class)->execute('database/content/test_sushi.json');
 
-    if (File::exists($this->testJsonPath)) {
-        File::delete($this->testJsonPath);
+    if (File::exists(TestCase::$testJsonPath)) {
+        File::delete(TestCase::$testJsonPath);
     }
 
-    $directory = dirname($this->testJsonPath);
+    $directory = dirname(TestCase::$testJsonPath);
     if (File::exists($directory)) {
         File::deleteDirectory($directory);
     }
 });
 
 afterEach(function (): void {
-    if (File::exists($this->testJsonPath)) {
-        File::delete($this->testJsonPath);
+    /** @var TestCase $this */
+    if (File::exists(TestCase::$testJsonPath)) {
+        File::delete(TestCase::$testJsonPath);
     }
 
-    $directory = dirname($this->testJsonPath);
+    $directory = dirname(TestCase::$testJsonPath);
     if (File::exists($directory)) {
         File::deleteDirectory($directory);
     }
 });
 
 it('creates json file with tenant isolation', function (): void {
+    /** @var TestCase $this */
     $testData = [
         '1' => [
             'id' => 1,
@@ -67,7 +74,7 @@ it('creates json file with tenant isolation', function (): void {
 
     expect($this->sushiModel()->saveToJson($testData))->toBeTrue();
     expect(File::exists($this->sushiJsonPath()))->toBeTrue();
-    expect($this->sushiJsonPath())->toBe(TenantService::filePath('database/content/test_sushi.json'));
+    expect($this->sushiJsonPath())->toBe(app(GetTenantFilePathAction::class)->execute('database/content/test_sushi.json'));
 
     $savedData = $this->readJsonFileAsArray($this->sushiJsonPath());
     expect($savedData)->toBe($testData);
@@ -75,6 +82,7 @@ it('creates json file with tenant isolation', function (): void {
 });
 
 it('loads data with tenant isolation', function (): void {
+    /** @var TestCase $this */
     $tenantId = $this->tenantId();
     $testData = [
         '1' => ['id' => 1, 'name' => 'Item 1', 'tenant_id' => $tenantId],
@@ -96,6 +104,7 @@ it('loads data with tenant isolation', function (): void {
 });
 
 it('handles large datasets efficiently', function (): void {
+    /** @var TestCase $this */
     $largeDataset = [];
     for ($i = 1; $i <= 1000; $i++) {
         $largeDataset[$i] = [
@@ -114,7 +123,8 @@ it('handles large datasets efficiently', function (): void {
 });
 
 it('works with different tenant configurations', function (): void {
-    $secondTenant = createTenant([
+    /** @var TestCase $this */
+    $secondTenant = TestCase::createTenant([
         'name' => 'second-tenant',
         'domain' => 'second.example.com',
     ]);
@@ -122,7 +132,7 @@ it('works with different tenant configurations', function (): void {
     $this->setCurrentTenant($secondTenant);
 
     $secondModel = new TestSushiModel;
-    $secondJsonPath = TenantService::filePath('database/content/test_sushi.json');
+    $secondJsonPath = app(GetTenantFilePathAction::class)->execute('database/content/test_sushi.json');
 
     expect($secondModel->saveToJson([
         '1' => ['id' => 1, 'name' => 'Second Tenant Item', 'tenant_id' => $secondTenant->id],

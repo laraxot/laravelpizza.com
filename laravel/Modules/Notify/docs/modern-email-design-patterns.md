@@ -1,3 +1,15 @@
+---
+title: "modern email design patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modern email design patterns"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern di Design per Email Moderne
 
 ## Introduzione
@@ -350,3 +362,7 @@ return [
 - [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
 - [HTML Email Compatibility](./mail-templates/HTML_EMAIL_COMPATIBILITY.md)
 - [Spatie Email Integration](./SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Responsive Email Templates](./responsive_email_templates.md)
+- [Email Best Practices](./mail-templates/email_best_practices.md)
+- [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
+- [Spatie Email Integration](./spatie_email_usage_guide.md)

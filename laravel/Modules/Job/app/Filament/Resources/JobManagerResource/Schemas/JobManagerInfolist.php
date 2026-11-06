@@ -13,7 +13,7 @@ class JobManagerInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'job_id' => TextEntry::make('job_id'),

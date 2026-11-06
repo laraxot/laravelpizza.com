@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div>
     @if (count($providers))
@@ -9,7 +8,7 @@ declare(strict_types=1);
             <div class="absolute border-t border-gray-200 w-full h-px"></div>
             <p
                 class="inline-block relative bg-white text-sm p-2 rounded-full font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-100">
-                {{ __('user::auth.login-via') }}
+                {{ __('user::auth.login-via.text') }}
             </p>
         </div>
 

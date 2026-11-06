@@ -8,13 +8,9 @@ return [
     'icon' => 'heroicon-o-bell',
     'navigation' => [
         'enabled' => true,
-        'sort' => 70,
-    ],
+        'sort' => 70],
     'routes' => [
         'enabled' => true,
-        'middleware' => ['web', 'auth'],
-    ],
+        'middleware' => ['web', 'auth']],
     'providers' => [
-        'Modules\\Notify\\Providers\\NotifyServiceProvider',
-    ],
-];
+        'Modules\\Notify\\Providers\\NotifyServiceProvider']];

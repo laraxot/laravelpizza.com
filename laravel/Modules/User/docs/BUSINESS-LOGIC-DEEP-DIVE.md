@@ -1,3 +1,11 @@
+---
+title: "User Module - Business Logic Deep Dive"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - business logic deep dive user"
+---
 # User Module - Business Logic Deep Dive
 
 ## 🎯 Module Overview

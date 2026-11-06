@@ -1,3 +1,15 @@
+---
+title: "factory creation geo module"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "factory creation geo module"
+issues: []
+discussions: []
+status: draft
+---
+
 # Factory Creation - Geo Module
 
 ## ERRORE GRAVISSIMO RISOLTO NEL MODULO GEO
@@ -102,7 +114,7 @@ public function milano(): static
 ## 🔗 COLLEGAMENTI
 
 - [Factory Lessons Learned CRITICAL](../../../../docs/factory-lessons-learned-critical.md)
-- [Geo Module README](./readme.md)
+- [Geo Module README](./README.md)
 - [Geographic Data Documentation](./geographic-data.md)
 
 ## ⚠️ REGOLE GEO SPECIFICHE

@@ -84,9 +84,15 @@ class SearchTextInDbCommand extends Command
                     continue;
                 }
 
+                // SECURITY NOTE: $tableName comes from SHOW TABLES metadata (not raw user input)
+                // and is validated by Schema::hasTable() at line 57. $column comes from Schema::getColumnListing()
+                // which returns actual column names — never interpolated. The search string is bound as a
+                // parameter by Laravel's Query Builder, so there is NO interpolation into the SQL string.
+                // addslashes() above would be redundant (and breaks LIKE % wildcard matching) because the
+                // value is escaped server-side via parameter binding.
                 $results = DB::table($tableName)
                     ->select('*')
-                    ->where($column, 'LIKE', '%'.addslashes($searchString).'%')
+                    ->where($column, 'LIKE', '%'.$searchString.'%')
                     ->get();
 
                 if ($results->isNotEmpty()) {
@@ -95,7 +101,7 @@ class SearchTextInDbCommand extends Command
                         $this->table(
                             ['Column', 'Value'],
                             collect((array) $result)
-                                ->map(fn ($value, $key) => [
+                                ->map(fn (mixed $value, int|string $key) => [
                                     (string) $key,
                                     is_scalar($value) ? (string) $value : json_encode($value),
                                 ])

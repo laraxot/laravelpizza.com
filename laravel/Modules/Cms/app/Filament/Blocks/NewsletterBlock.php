@@ -10,7 +10,6 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class NewsletterBlock extends XotBaseBlock
 {
-    #[\Override]
     public static function getBlockSchema(): array
     {
         return [
@@ -25,6 +24,6 @@ final class NewsletterBlock extends XotBaseBlock
 
     public static function getBlockLabel(): string
     {
-        return \trans_string('cms::blocks.newsletter.label');
+        return \trans_string('cms::blocks.newsletter.label') ?: 'Newsletter Block';
     }
 }

@@ -1,3 +1,28 @@
+---
+title: "Fix: team_user Composite Primary Key Implementation"
+type: concept
+tags: [team, user, composite, priy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "team-user-composite-priy-key fix: team_user composite primary key implementation"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Fix: team_user Composite Primary Key Implementation
 
 ## Data Intervento
@@ -234,10 +259,14 @@ $membership = Membership::where('team_id', $team->id)
 
 ## Collegamenti
 
-- [Migration team_user](../../database/migrations/2023_01_01_000004_create_team_user_table.php)
-- [Membership Model](../../app/Models/Membership.php)
-- [HasTeams Trait](../../app/Models/Traits/HasTeams.php)
-- [TeamsRelationManager](../../app/Filament/Resources/UserResource/RelationManagers/TeamsRelationManager.php)
+- [Migration team_user](../database/migrations/2023_01_01_000004_create_team_user_table.php)
+- [Membership Model](../app/Models/Membership.php)
+- [HasTeams Trait](../app/Models/Traits/HasTeams.php)
+- [TeamsRelationManager](../app/Filament/Resources/UserResource/RelationManagers/TeamsRelationManager.php)
+- [Migration team_user](../database/migrations/2023_01_01_000004_create_team_user_table.php)
+- [Membership Model](../app/Models/Membership.php)
+- [HasTeams Trait](../app/Models/Traits/HasTeams.php)
+- [TeamsRelationManager](../app/Filament/Resources/UserResource/RelationManagers/TeamsRelationManager.php)
 - [Documentazione Pivot Tables](../../../../docs/pivot-tables-best-practices.md)
 
 ## Note Tecniche

@@ -1,3 +1,15 @@
+---
+title: "geo map lit marker clusters"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map lit marker clusters"
+issues: []
+discussions: []
+status: draft
+---
+
 # Marker Clusters in geo-map-lit
 
 ## REGOLA PERMANENTE: Marker clusters ispirati a farmshops.eu (direktvermarkter.js)

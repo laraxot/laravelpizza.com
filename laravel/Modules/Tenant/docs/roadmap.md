@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "🎯 TENANT MODULE - ROADMAP 2025"
+module: "Tenant"
+type: concept
+tags: [roadmap]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "roadmap"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # 🎯 TENANT MODULE - ROADMAP 2025
 
 **Modulo**: Tenant ([Description])  

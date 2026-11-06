@@ -1,3 +1,15 @@
+---
+title: "studio selection component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "studio selection component"
+issues: []
+discussions: []
+status: draft
+---
+
 # Studio Selection Component con Pulsanti
 
 ## Descrizione

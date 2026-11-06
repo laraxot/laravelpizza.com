@@ -1,3 +1,30 @@
+---
+title: "Correzione Estensioni Classi Base - Modulo User"
+type: concept
+tags: [base, classes, corrections]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "base-classes-corrections- correzione estensioni classi base - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./base-classes-corrections.md"
+  - "./base-classes-corrections.md"
+  - "./base-classes-corrections.md"
+  - "./base-classes-corrections.md"
+  - "./phpstan-fixes.md"
+  - "./phpstan-fixes.md"
+  - "./phpstanes.md"
+  - "./base-classes-corrections.md"
+  - "./base-classes-corrections.md"
+  - "./base-classes-corrections-stato-rinominato.md"
+  - "./base-classes-corrections.md"
+  - "./phpstan-fixes-correzioni-modulo-user.md"
+  - "./phpstan-fixes.md"
+  - "./phpstanes.md"
+status: draft
+---
+
 # Correzione Estensioni Classi Base - Modulo User
 
 **Data:** 15 Ottobre 2025
@@ -224,7 +251,7 @@ php artisan test --filter=ModelTest
    - Esempi pratici
    - Checklist per nuovi modelli
 
-2. **`docs/fixes/base-classes-corrections-2025-10-15.md`** (QUESTO FILE)
+2. **`docs/fixes/base-classes-corrections-.md.md`** (QUESTO FILE)
    - Riepilogo correzioni
    - Motivazioni tecniche
    - Before/After comparisons
@@ -293,7 +320,7 @@ e
 ## Applicazione ad Altri Moduli
 
 Questo pattern di correzione può essere applicato a:
-- **Modulo Quaeris**: Verificare QuestionChart, SurveyPdf, Contact
+- **Modulo ExternalProject**: Verificare QuestionChart, SurveyPdf, Contact
 - **Modulo Blog**: Verificare Post, Category, Tag
 - **Modulo Dental**: Verificare Visit, Treatment, Patient
 - **Tutti gli altri moduli**: Audit sistematico

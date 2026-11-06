@@ -1,20 +1,40 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "log"
+issues: []
+discussions: []
 title: "Activity Log"
 module: "Tenant"
+status: draft
 ---
 
-# Activity Log — Tenant
+# Activity Log: Tenant
 
 > **Purpose:** Append-only chronological activity record tracking ingests, queries, and lint passes.
 
 ## Log Entries
 
-## [2026-07-01] [INGEST] Database factories — rimossa `Factories_/`
+## [2026-10-14] [DOCS] Studio del codice e correzione degli ingressi
+
+- Verificato: il tenant e' la cartella `config/<host invertito>/` scelta da `GetTenantNameAction` (`tenant:test` -> `local/fixcity`); nessun isolamento per riga, nessun `TenantService`. README e `00-INDEX.md` corretti; 6 pagine wiki marcate `stale`.
+- Story: [2026-10-14-docs-tenant-studio](../stories/docs-tenant-studio.story.md). Memoria: [nota di memoria](../../../../../bashscripts/ai/wiki/memories/docs-cms-lang-tenant-seo-studio.md)
+
+## [2026-07-27] [GRAVE] Remote GitHub: collisione entrambe false
+
+- `code-quality-improvement-report.md`: HEAD=`base_project` vs other=`base_workorder`: **entrambi sbagliati**
+- Correzione: `cd laravel/Modules/Tenant && git remote -v` → `laraxot/module_tenant_fila5`
+- Memory: [github-remote-collision-wrong-base.md](./memories/github-remote-collision-wrong-base.md)
+- Canon: [module-github-remote-discipline](../../../../../docs/wiki/memories/module-github-remote-discipline.md) · skill [module-theme-git-remote-resolve](../../../../../docs/wiki/skills/module-theme-git-remote-resolve.md)
+
+## [2026-07-01] [INGEST] Database factories: rimossa `Factories_/`
 
 - Regola generica: [database-folder-lowercase-rule.md](../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md)
 - Wiki modulo: [lowercase-database-factories-directory.md](./concepts/lowercase-database-factories-directory.md)
 - `database/Factories_/` era copia stale (gitignore); canonico = `database/factories/`
-- Aggiornati: `method-name-homonyms.md` (path solo minuscolo), `concepts/INDEX.md`, `index.md`
+- Aggiornati: `method-name-homonyms.md` (path solo minuscolo), `concepts/index.md`, `index.md`
 - Audit: `bash bashscripts/tools/audit-database-folder-lowercase.sh Tenant`
 
 ## [2026-06-30] [LINT] Removed duplicate uppercase Tests directory
@@ -30,10 +50,10 @@ module: "Tenant"
 ```
 
 **Operations:**
-- `INGEST` — Added raw document to wiki
-- `QUERY` — Answered question from wiki
-- `LINT` — Maintained wiki quality
-- `UPDATE` — Modified existing wiki page
+- `INGEST`: Added raw document to wiki
+- `QUERY`: Answered question from wiki
+- `LINT`: Maintained wiki quality
+- `UPDATE`: Modified existing wiki page
 
 ---
 

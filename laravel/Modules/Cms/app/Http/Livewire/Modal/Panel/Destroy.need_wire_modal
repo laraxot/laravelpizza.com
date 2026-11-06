@@ -12,7 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use Modules\Xot\Actions\GetViewAction;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
 use Modules\Wire\View\Components\Modal\Modal;
 
 class Destroy extends Modal
@@ -51,7 +51,7 @@ class Destroy extends Modal
      */
     public function delete()
     {
-        TenantService::model($this->model_type)->find($this->model_id)?->delete();
+        app(ResolveTenantModelInstanceAction::class)->execute($this->model_type)->find($this->model_id)?->delete();
 
         $this->close();
 

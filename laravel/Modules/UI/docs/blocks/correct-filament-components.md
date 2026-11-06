@@ -1,3 +1,15 @@
+---
+title: "correct filament components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "correct filament components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Uso Corretto dei Componenti Filament nei Blocchi
 
 ## Componenti Disponibili e Limitazioni
@@ -121,5 +133,4 @@ Per il componente `user-dropdown.blade.php`, l'implementazione corretta è:
 - [Documentazione Filament Ufficiale](https://filamentphp.com/docs/3.x/support/blade-components)
 
 ---
-
 > **Nota Importante**: Questo documento segue la regola di documentazione UI per il progetto. Riferimenti a questo documento devono essere creati in tutti i moduli che utilizzano componenti Filament nei blocchi.

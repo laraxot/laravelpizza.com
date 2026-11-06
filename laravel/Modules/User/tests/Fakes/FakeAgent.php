@@ -33,41 +33,35 @@ final class FakeAgent extends Agent
     public string|bool|null $fakeRobot = null;
 
     /**
-     * @param string|null $userAgent
-     *
-     * @return string|bool
+     * @param  string|null  $userAgent
      */
     #[\Override]
-    public function device($userAgent = null)
+    public function device($userAgent = null): string|bool
     {
         return $this->fakeDevice ?? false;
     }
 
     /**
-     * @param string|null $userAgent
-     *
-     * @return string|bool
+     * @param  string|null  $userAgent
      */
     #[\Override]
-    public function platform($userAgent = null)
+    public function platform($userAgent = null): string|bool
     {
         return $this->fakePlatform ?? false;
     }
 
     /**
-     * @param string|null $userAgent
-     *
-     * @return string|bool
+     * @param  string|null  $userAgent
      */
     #[\Override]
-    public function browser($userAgent = null)
+    public function browser($userAgent = null): string|bool
     {
         return $this->fakeBrowser ?? false;
     }
 
     /**
-     * @param string|null               $userAgent
-     * @param array<string, mixed>|null $httpHeaders
+     * @param  string|null  $userAgent
+     * @param  array<string, mixed>|null  $httpHeaders
      */
     #[\Override]
     public function isDesktop($userAgent = null, $httpHeaders = null): bool
@@ -76,8 +70,8 @@ final class FakeAgent extends Agent
     }
 
     /**
-     * @param string|null               $userAgent
-     * @param array<string, mixed>|null $httpHeaders
+     * @param  string|null  $userAgent
+     * @param  array<string, mixed>|null  $httpHeaders
      */
     #[\Override]
     public function isMobile($userAgent = null, $httpHeaders = null): bool
@@ -86,8 +80,8 @@ final class FakeAgent extends Agent
     }
 
     /**
-     * @param string|null               $userAgent
-     * @param array<string, mixed>|null $httpHeaders
+     * @param  string|null  $userAgent
+     * @param  array<string, mixed>|null  $httpHeaders
      */
     #[\Override]
     public function isTablet($userAgent = null, $httpHeaders = null): bool
@@ -96,8 +90,8 @@ final class FakeAgent extends Agent
     }
 
     /**
-     * @param string|null               $userAgent
-     * @param array<string, mixed>|null $httpHeaders
+     * @param  string|null  $userAgent
+     * @param  array<string, mixed>|null  $httpHeaders
      */
     #[\Override]
     public function isPhone($userAgent = null, $httpHeaders = null): bool
@@ -106,7 +100,7 @@ final class FakeAgent extends Agent
     }
 
     /**
-     * @param string|null $userAgent
+     * @param  string|null  $userAgent
      */
     #[\Override]
     public function isRobot($userAgent = null): bool
@@ -115,24 +109,25 @@ final class FakeAgent extends Agent
     }
 
     /**
-     * @param string $propertyName
-     * @param string $type
-     *
-     * @return string|bool
+     * @param  string  $propertyName
+     * @param  string  $type
      */
     #[\Override]
-    public function version($propertyName, $type = self::VERSION_TYPE_STRING)
+    public function version($propertyName, $type = self::VERSION_TYPE_STRING): string|false
     {
-        return $this->fakeVersions[$propertyName] ?? false;
+        $version = $this->fakeVersions[$propertyName] ?? false;
+        if ($version === false) {
+            return false;
+        }
+
+        return is_string($version) ? $version : false;
     }
 
     /**
-     * @param string|null $userAgent
-     *
-     * @return string|bool
+     * @param  string|null  $userAgent
      */
     #[\Override]
-    public function robot($userAgent = null)
+    public function robot($userAgent = null): string|bool
     {
         return $this->fakeRobot ?? false;
     }

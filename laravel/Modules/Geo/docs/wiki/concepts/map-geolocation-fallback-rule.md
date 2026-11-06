@@ -1,3 +1,15 @@
+---
+title: "map geolocation fallback rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map geolocation fallback rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Geolocation Fallback Rule (Golden Rule)
 
 **Status**: active | **Applies to**: all map picker components in Geo module

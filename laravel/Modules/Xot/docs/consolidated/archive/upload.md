@@ -1,3 +1,11 @@
+---
+title: "upload"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "upload xot"
+---
 # upload
 
 <!-- Contenuto migrato da _docs/upload.txt -->

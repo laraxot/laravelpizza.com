@@ -1,3 +1,15 @@
+---
+title: "filament extension pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament extension pattern"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern di Estensione per Componenti Filament 
 
 Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema , con particolare attenzione al principio di non estendere mai direttamente le classi Filament.

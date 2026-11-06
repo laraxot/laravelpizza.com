@@ -1,3 +1,15 @@
+---
+title: "coordinate picker"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coordinate picker"
+issues: []
+discussions: []
+status: draft
+---
+
 # CoordinatePicker: Architectural Core
 
 The `CoordinatePicker` is a senior-grade Filament component designed for geographic data entry. It follows the principles of DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid), and Clean Code.

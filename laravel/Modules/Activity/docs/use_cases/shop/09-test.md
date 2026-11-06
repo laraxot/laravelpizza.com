@@ -1,3 +1,12 @@
+---
+title: "Testing di uno Shop Event Sourced"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "testing di uno shop event sourced activity"
+status: superseded
+superseded_by: test.md
+---
 # Testing di uno Shop Event Sourced
 
 ## 1. Unit Test

@@ -1,3 +1,14 @@
+---
+title: "ollama optimization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama optimization"
+issues: []
+discussions: []
+---
+
 # Ollama Optimization Guide
 
 ## Hardware Analysis
@@ -22,6 +33,14 @@
 
 ---
 
+title: "ollama optimization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama optimization"
+issues: []
+discussions: []
 ## Optimizations Applied
 
 ### 1. Service Configuration (`/etc/systemd/system/ollama.service`)

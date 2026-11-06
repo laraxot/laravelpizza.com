@@ -1,3 +1,11 @@
+---
+title: "Convenzioni per i Campi dei Nomi Personali"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni per i campi dei nomi personali xot"
+---
 # Convenzioni per i Campi dei Nomi Personali
 
 ## Regola Fondamentale

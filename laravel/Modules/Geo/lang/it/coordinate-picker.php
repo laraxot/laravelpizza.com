@@ -9,6 +9,7 @@ return [
     'use_my_location' => 'Usa la mia posizione',
     'locating' => 'Localizzando...',
     'no_position' => 'Clicca sulla mappa per indicare la posizione',
+    'location_unavailable' => 'Non riesco a leggere la tua posizione da questo dispositivo. Cerca un indirizzo o tocca la mappa.',
     'latitude' => 'Latitudine',
     'longitude' => 'Longitudine',
     'address' => 'Indirizzo',
@@ -28,4 +29,6 @@ return [
         'satellite' => 'Satellitare (Esri)',
         'topographic' => 'Topografica (Esri)',
     ],
+    'latitude_abbr' => 'Lat',
+    'longitude_abbr' => 'Lng',
 ];

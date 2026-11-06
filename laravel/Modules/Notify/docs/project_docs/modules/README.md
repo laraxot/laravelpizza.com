@@ -1,3 +1,23 @@
+---
+title: "Documentazione Moduli"
+type: index
+tags: [notify, docs, project_docs, modules]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione project_docs modules readme documentazione moduli index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../../README.md
+  - ../../wiki/index.md
+  - ../../notifications/README.md
+  - ../../integrations/README.md
+  - ../../templates/README.md
+status: draft
+---
 # Documentazione Moduli
 
 ## Panoramica
@@ -187,6 +207,8 @@ Modulo per l'intelligenza artificiale.
 
 ### fixcity/
 Modulo specifico per FixCity.
+### laraxot/
+Modulo specifico per Notify.
 
 **Contenuti:**
 - Business logic

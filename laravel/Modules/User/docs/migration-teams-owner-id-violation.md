@@ -1,3 +1,28 @@
+---
+title: "Analisi Violazione Filosofia Laraxot - Migration Teams"
+type: concept
+tags: [migration, teams, owner, violation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration-teams-owner-id-violation analisi violazione filosofia laraxot - migration teams"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Analisi Violazione Filosofia Laraxot - Migration Teams
 
 ## Data
@@ -76,7 +101,7 @@ Rimuovere il file `2025_05_16_221811_add_owner_id_to_teams_table.php` dopo aver 
 
 - [Filosofia Migrazioni Laraxot](./laraxot-migration-philosophy.md)
 - [Principi Migrazioni UUID e Polimorfismo](../../geo/docs_project/archive/principi_migrazioni_laraxot_uuid_polimorfismo.md)
-- [Regole Aggiornamento Migrazioni](../../xot/docs/migration-update-rules.md)
+- [Regole Aggiornamento Migrazioni](../../Xot/docs/migration-update-rules.md)
 
 ## Checklist Correzione
 

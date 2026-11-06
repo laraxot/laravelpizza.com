@@ -1,4 +1,7 @@
 ---
+qmd: "segnalazioni elenco map visibility issue"
+issues: []
+discussions: []
 title: "Segnalazioni Elenco — Mappa e Cluster: Diagnosi e Fix"
 type: troubleshooting
 confidence: high
@@ -9,6 +12,7 @@ related:
   - concepts/geo-map-controls-unification-rule.md
   - concepts/static-geo-map-widget-pattern.md
   - entities/geo-map-lit.md
+status: draft
 ---
 
 # Segnalazioni Elenco — Mappa e Cluster: Diagnosi e Fix

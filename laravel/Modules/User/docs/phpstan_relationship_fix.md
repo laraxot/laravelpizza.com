@@ -1,3 +1,12 @@
+---
+title: "Correzione PHPStan - Relationship Type Hints"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "correzione phpstan - relationship type hints user"
+status: superseded
+superseded_by: phpstan-relationship-fix-correzione-type-hints.md
+---
 # Correzione PHPStan - Relationship Type Hints
 
 ## 🚨 Errore PHPStan Risolto
@@ -77,3 +86,4 @@ Per **tutte le relazioni Eloquent** in trait e modelli:
 - [PHPStan Template Covariance](https://phpstan.org/blog/whats-up-with-template-covariant)
 - [Eloquent Relationships](https://laravel.com/docs/12.x/eloquent-relationships)
 
+*Ultimo aggiornamento: gennaio 2025*

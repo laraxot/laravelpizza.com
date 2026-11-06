@@ -1,3 +1,17 @@
+---
+qmd: "TAILWIND CSS MIGRATION COMPLETE"
+issues: []
+discussions: []
+title: "Design Comuni con Tailwind CSS Puro - Completato"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: tailwind_css_migration_complete.md
+---
+
 # ✅ Design Comuni con Tailwind CSS Puro - Completato
 
 ## Data: 2026-03-31

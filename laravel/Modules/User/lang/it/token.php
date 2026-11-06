@@ -10,7 +10,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei token di accesso',
         ],
-        'label' => 'token',
+        'label' => 'Token',
         'sort' => 29,
         'icon' => 'user-user-token',
     ],

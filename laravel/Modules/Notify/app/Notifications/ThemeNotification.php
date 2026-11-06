@@ -21,6 +21,7 @@ class ThemeNotification extends Notification implements ShouldQueue
 
     /**
      * @param  array<string, mixed>  $view_params
+     * @return void
      */
     public function __construct(
         public string $name,
@@ -45,7 +46,12 @@ class ThemeNotification extends Notification implements ShouldQueue
         $attachments = $notifiable->getNotificationData($this->name, $this->view_params)->attachments;
 
         $mail_message = app(BuildMailMessageAction::class)
-            ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
+            ->execute(
+                $this->name,
+                $notifiable->getModel(),
+                $this->view_params,
+                $attachments?->toCollection()->all(),
+            );
 
         $notifiable->sendEmailCallback();
 

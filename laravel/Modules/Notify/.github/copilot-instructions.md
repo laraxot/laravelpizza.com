@@ -1,9 +1,28 @@
+---
+title: "copilot instructions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "copilot instructions"
+issues: []
+discussions: []
+---
+
 # Copilot Instructions for FixCity
 
 This file helps Copilot sessions work effectively in this repository. It captures essential commands, architecture, conventions, and critical patterns to maintain code quality and consistency.
 
 ---
 
+title: "copilot instructions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "copilot instructions"
+issues: []
+discussions: []
 ## 🚀 Quick Commands
 
 ### Development
@@ -58,10 +77,10 @@ npm run quality:eslint       # JavaScript/TypeScript only
 
 ### Active Theme Configuration
 The theme detection algorithm reads `.env` to determine the active theme:
-1. `APP_URL` from `laravel/.env` → `http://fixcity.local`
-2. Extract domain → `fixcity.local`
-3. Build config path → `local/fixcity`
-4. Read config → `laravel/config/local/fixcity/xra.php`
+1. `APP_URL` from `laravel/.env` → `http://ptv.local`
+2. Extract domain → `ptv.local`
+3. Build config path → `local/ptv`
+4. Read config → `laravel/config/local/ptv/xra.php`
 5. Get theme → `pub_theme` key → `'Sixteen'`
 
 **Current**: Theme "Sixteen" at `laravel/Themes/Sixteen/`
@@ -367,6 +386,8 @@ GSD directories:
 ### Module & Theme Documentation
 - **All Modules**: `laravel/Modules/{ModuleName}/docs/00-INDEX.md`
 - **All Themes**: `laravel/Themes/{ThemeName}/docs/00-INDEX.md`
+- **All Modules**: `laravel/Modules/{ModuleName}/docs/00-index.md`
+- **All Themes**: `laravel/Themes/{ThemeName}/docs/00-index.md`
 - **Component Catalog**: `laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md` (47 components, 38 pages)
 
 ---

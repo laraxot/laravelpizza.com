@@ -1,3 +1,17 @@
+---
+qmd: "LOGGING BEST PRACTICES"
+issues: []
+discussions: []
+title: "Logging Best Practices - Performance & Quality"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: bmad/architecture/logging-best-practices.md
+---
+
 # Logging Best Practices - Performance & Quality
 
 ## 🚫 CRITICAL RULE: NEVER USE Log::info()

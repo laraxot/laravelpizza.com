@@ -1,3 +1,11 @@
+---
+title: "Code Quality Guidelines for Laravel Modules"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "code quality guidelines for laravel modules xot"
+---
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview

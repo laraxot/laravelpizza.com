@@ -1,3 +1,28 @@
+---
+title: "Studio: Laravel Socialite + Filament Integration"
+type: concept
+tags: [socialite, study]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "socialite-study studio: laravel socialite + filament integration"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Studio: Laravel Socialite + Filament Integration
 
 ## Riferimenti Documentazione

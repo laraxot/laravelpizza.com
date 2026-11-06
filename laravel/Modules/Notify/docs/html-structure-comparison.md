@@ -1,3 +1,15 @@
+---
+title: "html structure comparison"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "html structure comparison"
+issues: []
+discussions: []
+status: draft
+---
+
 # HTML Structure Comparison Tools
 
 Bridge document tra tooling agnostico in `bashscripts` e output di progetto nel tema Sixteen.
@@ -35,6 +47,7 @@ bashscripts/html/html-structure-compare.sh \
 - Le blade di test usano `laravel/Themes/Sixteen/resources/views/pages/tests/[slug].blade.php`.
 - La layout corretta e `<x-layouts.app>`.
 - Le stringhe nelle blade devono passare da traduzioni a 5 livelli: `fixcity::contesto.collezione.chiave.tipo`.
+- Le stringhe nelle blade devono passare da traduzioni a 5 livelli: `ptv::contesto.collezione.chiave.tipo`.
 - Nel markup possiamo mantenere le classi Bootstrap Italia per parity HTML, ma senza caricare Bootstrap CSS/JS.
 - Comportamenti interattivi: TailwindCSS + Alpine.js.
 - Il report canonico deve distinguere `identical`, `different`, `missing`, `extra` e produrre un parity score realistico.

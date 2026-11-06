@@ -1,3 +1,16 @@
+---
+title: "architectural patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architectural patterns"
+issues: []
+discussions: []
+status: superseded
+superseded_by: architecturals.md
+---
+
 # Pattern Architetturali per le Notifiche
 
 Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di , con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.

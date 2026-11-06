@@ -1,3 +1,15 @@
+---
+title: "ai agents in php with mcp"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai agents in php with mcp"
+issues: []
+discussions: []
+status: draft
+---
+
 # AI Agents in PHP with MCP
 
 ## Introduzione
@@ -249,5 +261,4 @@ Alcuni casi d'uso pratici per gli agenti AI con MCP in Laravel:
 Per ulteriori informazioni sui casi d'uso di MCP in Laravel, consulta il documento [MCP_CASI_USO.md](../MCP_CASI_USO.md).
 
 ---
-
 *Ultimo aggiornamento: Maggio 2025*

@@ -1,3 +1,15 @@
+---
+title: "readme en"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme en"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📄 Cms — English presentation
 
 [![Domain-CMS](https://img.shields.io/badge/Domain-CMS%20Folio-00838F.svg)](#)
@@ -13,7 +25,6 @@
 > **Pages that breathe Design Comuni.** Folio, CMS blocks, JSON content — frontoffice is first-class.
 
 ---
-
 ## Why it exists
 
 Manages `/it` page composition without monolithic Blade hardcoding.
@@ -39,7 +50,7 @@ Manages `/it` page composition without monolithic Blade hardcoding.
 
 Build **civic pages** modularly — one block at a time.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

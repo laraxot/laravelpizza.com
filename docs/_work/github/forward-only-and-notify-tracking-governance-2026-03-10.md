@@ -29,6 +29,6 @@ Local governance/docs updated in this pass:
 - `docs/skills/notify-controller-removal-skill.md`
 - `laravel/Modules/Notify/docs/no-notification-tracking-controller.md`
 - `laravel/Modules/Notify/docs/00-index.md`
-- `laravel/Themes/Meetup/docs/phpstan-module-blockers-impact-2026-03-10.md`
+- `laravel/Themes/Meetup/docs/phpstan-module-blockers-impact.md`
 - `AGENTS.md`
 - `/home/zorin/.codex/memories/base_quaeris_global_rules.md`

@@ -1,3 +1,15 @@
+---
+title: "namespace componenti blocchi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "namespace componenti blocchi"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gestione dei Namespace nei Componenti a Blocchi
 
 Questo documento spiega come gestire correttamente i namespace nei componenti a blocchi in il progetto, con un focus particolare sulla risoluzione di problemi comuni.

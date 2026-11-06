@@ -13,7 +13,6 @@ test('StoredEvent model can be instantiated', function () {
     $reflection = new ReflectionClass(StoredEvent::class);
     $storedEvent = $reflection->newInstanceWithoutConstructor();
 
-    Assert::assertIsObject($storedEvent);
     // Verifichiamo che estenda il modello corretto da Spatie
     Assert::assertInstanceOf(EloquentStoredEvent::class, $storedEvent);
 });

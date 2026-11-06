@@ -1,13 +1,24 @@
+---
+title: "GITHUB ISSUES WORKFLOW"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GITHUB ISSUES WORKFLOW"
+issues: []
+discussions: []
+status: draft
+---
+
 # GitHub Issues - CORRECT WORKFLOW
 
 **CRITICAL RULE**: GitHub Issues e Discussions si creano **ONLINE** su GitHub, NON come file locali!
 
 ---
-
 ## Repository
 
-- **URL**: https://github.com/laraxot/base_predict_fila5
-- **Remote**: `origin` (git@github.com:laraxot/base_predict_fila5.git)
+- **URL**: https://github.com/laraxot/base_ptvx_fila5
+- **Remote**: `origin` (git@github.com:laraxot/base_ptvx_fila5.git)
 
 ---
 
@@ -16,7 +27,7 @@
 ### Method 1: GitHub Web Interface
 
 ```
-1. Vai su: https://github.com/laraxot/base_predict_fila5/issues
+1. Vai su: https://github.com/laraxot/base_ptvx_fila5/issues
 2. Clicca "New issue"
 3. Scegli template
 4. Compili e invii
@@ -101,7 +112,7 @@ gh pr create --title "Fix: ..." --body "Fixes #123"
 3. 💬 **Comments Section** - HIGH priority
 4. 📤 **Share Buttons** - MEDIUM priority
 
-**Create issues on GitHub**: https://github.com/laraxot/base_predict_fila5/issues
+**Create issues on GitHub**: https://github.com/laraxot/base_ptvx_fila5/issues
 
 ---
 

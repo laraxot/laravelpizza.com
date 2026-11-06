@@ -1,13 +1,22 @@
+---
+title: "Analisi dell'Errore di Implementazione Volt/Blade"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "analisi dell'errore di implementazione volt/blade user"
+---
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Convenzioni Path](./path_conventions.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
 
 ## Identificazione dell'Errore
 
-Durante l'analisi del file `/var/www/html/Quaeris/laravel/Themes/One/resources/views/pages/auth/logout.blade.php`, è stato commesso un errore fondamentale di interpretazione. Il file è stato erroneamente analizzato come se utilizzasse la direttiva `@volt`, mentre in realtà utilizza correttamente la sintassi PHP standard con `<?php` all'inizio del file.
+Durante l'analisi del file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php`, è stato commesso un errore fondamentale di interpretazione. Il file è stato erroneamente analizzato come se utilizzasse la direttiva `@volt`, mentre in realtà utilizza correttamente la sintassi PHP standard con `<?php` all'inizio del file.
 
 ### File Attuale (Corretto)
 
@@ -91,11 +100,3 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
 Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
-
----
-module: theme
-topic: volt_blade_implementation_error
-canonical: ../../../Themes/docs/shared-components/volt_blade_implementation_error.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/volt_blade_implementation_error.md

@@ -1,3 +1,14 @@
+---
+title: "sync test file 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync test file 1"
+issues: []
+discussions: []
+---
+
 # Test Sync File
 
 Questo file è stato creato il 2026-03-13 per testare la sincronizzazione bidirezionale.
@@ -10,6 +21,14 @@ Se stai leggendo questo file su GitHub (laraxot/module_seo_fila5), allora il syn
 
 ---
 
+title: "sync test file 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync test file 1"
+issues: []
+discussions: []
 ## Istruzioni per Verifica
 
 1. ✅ Questo file è stato creato in: `laravel/Modules/Seo/SYNC_TEST_FILE.md`

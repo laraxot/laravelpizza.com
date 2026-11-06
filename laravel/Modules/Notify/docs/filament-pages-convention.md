@@ -1,3 +1,15 @@
+---
+title: "filament pages convention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament pages convention"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni per le Pagine Filament
 
 ## Regola del Suffisso "Page"

@@ -1,3 +1,15 @@
+---
+title: "design comuni batch parity"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni batch parity"
+issues: []
+discussions: []
+status: draft
+---
+
 # Design Comuni Batch Parity
 
 ## Scopo
@@ -8,7 +20,7 @@ Il report dettagliato vive nel tema, perche' e' il tema il punto dove convergono
 
 ## Report attivo
 
-- [../../../Themes/Sixteen/docs/design-comuni/batch-body-parity-2026-04-03.md](../../../Themes/Sixteen/docs/design-comuni/batch-body-parity-2026-04-03.md)
+- [../../../Themes/Sixteen/docs/design-comuni/batch-body-parity.md](../../../Themes/Sixteen/docs/design-comuni/batch-body-parity.md)
 - [../../../Themes/Sixteen/docs/design-comuni/batch-body-parity](../../../Themes/Sixteen/docs/design-comuni/batch-body-parity)
 
 ## Script correlato

@@ -1,3 +1,14 @@
+---
+title: "folder structure cleanup report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "folder structure cleanup report"
+issues: []
+discussions: []
+---
+
 # Module Folder Structure Cleanup Report
 
 > **Report: Pulizia e Documentazione Struttura Cartelle Moduli**
@@ -8,6 +19,14 @@
 
 ---
 
+title: "folder structure cleanup report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "folder structure cleanup report"
+issues: []
+discussions: []
 ## Problema Identificato
 
 È stata rilevata la presenza di cartelle di classi PHP nella root di alcuni moduli, invece che sotto la cartella `app/` come previsto dalla convenzione Laravel.

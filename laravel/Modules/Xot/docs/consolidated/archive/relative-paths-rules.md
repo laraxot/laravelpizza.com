@@ -1,3 +1,11 @@
+---
+title: "Regole per i Percorsi Relativi nella Documentazione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per i percorsi relativi nella documentazione xot"
+---
 # Regole per i Percorsi Relativi nella Documentazione
 
 > **Collegamenti correlati**

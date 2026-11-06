@@ -132,7 +132,7 @@ test('getSocialShareData returns seo share data', function () {
     
     $socialData = $event->getSocialShareData();
 
-    expect($socialData)->toBeInstanceOf(\Modules\Seo\Data\SocialShareData::class)
+    expect($socialData)->toBeInstanceOf(\Modules\Seo\Datas\SocialShareData::class)
         ->and($socialData->title)->toBe('Social Share Test');
 });
 

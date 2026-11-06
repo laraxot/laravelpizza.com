@@ -1,3 +1,15 @@
+---
+title: "filament resources"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament resources"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risorse Filament del Modulo Notify
 
 ### Versione HEAD
@@ -17,6 +29,14 @@ MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBa
 ---
 
 
+title: "filament resources"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament resources"
+issues: []
+discussions: []
 ### Schema del Form
 
 ```php
@@ -250,7 +270,7 @@ public static function getTableActions(): array
 - [Gestione Notifiche](../../../../../docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
-- [XotBaseResource](../../Xot/docs/XotBaseResource.md)
+- [XotBaseResource](../../Xot/docs/xotbaseresource.md)
 - [Gestione Template](../template-management.md)
 
 ## Note Importanti

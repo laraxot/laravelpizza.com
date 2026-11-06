@@ -1,3 +1,11 @@
+---
+title: "Moduli Laraxot per il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "moduli laraxot per il progetto xot"
+---
 # Moduli Laraxot per il progetto
 
 ## Panoramica

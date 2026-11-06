@@ -1,3 +1,15 @@
+---
+title: "standardized geo architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "standardized geo architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # ADR: Standardized Geo Architecture (2026.1)
 
 ## Status

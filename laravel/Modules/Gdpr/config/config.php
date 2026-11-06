@@ -29,24 +29,11 @@ return [
      * |
      */
     'cookie' => [
-        'consent_lifetime' => 365, // giorni
-        'categories' => [
-            'necessary' => [
-                'name' => 'Necessari',
-                'description' => 'Cookie tecnici essenziali per il funzionamento del sito',
-                'required' => true,
-            ],
-            'analytics' => [
-                'name' => 'Analitici',
-                'description' => 'Cookie per analisi statistiche anonime',
-                'required' => false,
-            ],
-            'marketing' => [
-                'name' => 'Marketing',
-                'description' => 'Cookie per marketing e profilazione',
-                'required' => false,
-            ],
-        ],
+        // `consent_lifetime` (giorni di validita' della scelta) e `policy_path` (pagina della cookie policy) non sono piu' qui:
+        // hanno un'unica definizione in GdprConfigData e si modificano dalla SettingPage del modulo.
+        // Cookie NON tecnici (analitici, marketing) impostati da un modulo: [name, category (analytics|marketing), purpose, duration]
+        // purpose e duration sono chiavi di traduzione o testi. Vuoto = solo cookie tecnici: il banner informa e non chiede consenso.
+        'extra' => [],
     ],
     /*
      * |--------------------------------------------------------------------------

@@ -1,3 +1,15 @@
+---
+title: "netfun sms implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun sms implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Netfun SMS 
 
 ## Introduzione

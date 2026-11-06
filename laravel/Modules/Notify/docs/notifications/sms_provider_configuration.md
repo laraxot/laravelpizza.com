@@ -1,7 +1,19 @@
-# Configurazione Provider SMS per le Notifiche 
+---
+title: "sms provider configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms provider configuration"
+issues: []
+discussions: []
+status: draft
+---
+
+# Configurazione Provider SMS per le Notifiche
 
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di <nome progetto>, con focus sui diversi provider e sulla loro configurazione.
-Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di Quaeris, con focus sui diversi provider e sulla loro configurazione.
+Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di <nome progetto>, con focus sui diversi provider e sulla loro configurazione.
 
 ## Indice
 
@@ -63,7 +75,7 @@ class AppointmentNotification extends Notification
     {
         return ['mail', TwilioChannel::class];
     }
-    
+
     public function toTwilio($notifiable)
     {
         return (new TwilioSmsMessage())
@@ -108,7 +120,7 @@ composer require laravel-notification-channels/vonage
 VONAGE_KEY=abcd1234
 VONAGE_SECRET=xyz789...
 VONAGE_SMS_FROM=<nome progetto>
-VONAGE_SMS_FROM=Quaeris
+VONAGE_SMS_FROM=<nome progetto>
 ```
 
 ### Implementazione Notifica
@@ -123,7 +135,7 @@ class AppointmentNotification extends Notification
     {
         return ['mail', VonageChannel::class];
     }
-    
+
     public function toVonage($notifiable)
     {
         return (new VonageMessage())
@@ -419,7 +431,7 @@ $this->app->bind(CustomSMSChannel::class, function ($app) {
     if ($app->environment('testing')) {
         return new TestSMSChannel();
     }
-    
+
     return new CustomSMSChannel(
         new HttpClient(),
         config('services.sms.base_url'),
@@ -470,6 +482,6 @@ Log::info('SMS sent', [
 - [MULTI_CHANNEL_NOTIFICATIONS.md](./MULTI_CHANNEL_NOTIFICATIONS.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./MULTI_CHANNEL_NOTIFICATIONS.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
+- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
+- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
+- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)

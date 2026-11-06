@@ -1,3 +1,11 @@
+---
+title: "Filament - Guida Completa Consolidata"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filament - guida completa consolidata xot"
+---
 # Filament - Guida Completa Consolidata
 
 **Ultimo aggiornamento**: 2025-01-06

@@ -16,15 +16,14 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 interface ModelProfileContract extends ModelContract
 {
     /**
      * Grant the given permission(s) to a role.
      *
-     * @param string|int|array<int, string|int|Permission>|Permission|Collection<int, Permission> $permissions
-     *
+     * @param  string|int|array<int, string|int|Permission>|Permission|Collection<int, Permission>  $permissions
      * @return $this
      */
     public function givePermissionTo(string|int|array|Permission|Collection $permissions = []);
@@ -32,8 +31,7 @@ interface ModelProfileContract extends ModelContract
     /**
      * Assign the given role to the model.
      *
-     * @param array<int, string|int|Role>|string|int|Role|Collection<int, Role> $roles
-     *
+     * @param  array<int, string|int|Role>|string|int|Role|Collection<int, Role>  $roles
      * @return $this
      */
     public function assignRole(array|string|int|Role|Collection $roles = [
@@ -42,7 +40,7 @@ interface ModelProfileContract extends ModelContract
     /**
      * Determine if the model has (one of) the given role(s).
      *
-     * @param string|int|array<int, string|int|Role>|Role|Collection<int, Role> $roles
+     * @param  string|int|array<int, string|int|Role>|Role|Collection<int, Role>  $roles
      */
     public function hasRole(
         string|int|array|Role|Collection $roles,
@@ -54,7 +52,7 @@ interface ModelProfileContract extends ModelContract
      *
      * Alias to hasRole() but without Guard controls
      *
-     * @param string|int|array<int, string|int|Role>|Role|Collection<int, Role> $roles
+     * @param  string|int|array<int, string|int|Role>|Role|Collection<int, Role>  $roles
      */
     public function hasAnyRole(string|int|array|Role|Collection $roles = [
     ]): bool;
@@ -69,8 +67,7 @@ interface ModelProfileContract extends ModelContract
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param Builder<Model> $query
-     *
+     * @param  Builder<Model>  $query
      * @return Builder<Model>
      */
     public function newEloquentBuilder(Builder $query): Builder;

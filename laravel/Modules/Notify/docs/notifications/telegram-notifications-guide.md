@@ -1,6 +1,19 @@
+---
+title: "telegram notifications guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "telegram notifications guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Notifiche Telegram 
 
 Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di Quaeris.
+Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di App.
 
 ## Indice
 
@@ -16,6 +29,7 @@ Questa documentazione descrive come implementare notifiche Telegram nel modulo N
 ## Introduzione
 
 Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua API per bot. Quaeris integra Telegram per inviare notifiche relative ad appuntamenti, promemoria e altre comunicazioni importanti.
+Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua API per bot. App integra Telegram per inviare notifiche relative ad appuntamenti, promemoria e altre comunicazioni importanti.
 
 ## Setup del Bot Telegram
 
@@ -39,6 +53,7 @@ Configura i seguenti comandi per il tuo bot:
 ```
 start - Inizia l'interazione con il bot
 register - Collega il tuo account Telegram a Quaeris
+register - Collega il tuo account Telegram a App
 unregister - Scollega il tuo account Telegram
 settings - Gestisci le tue preferenze di notifica
 help - Ottieni assistenza
@@ -176,6 +191,7 @@ class RegisterCommand extends Command
 {
     protected $name = 'register';
 protected $description = 'Collega il tuo account Telegram a Quaeris';
+protected $description = 'Collega il tuo account Telegram a App';
     
     public function handle()
     {
@@ -191,6 +207,7 @@ protected $description = 'Collega il tuo account Telegram a Quaeris';
         
         $this->replyWithMessage([
 'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo Quaeris per completare il collegamento."
+'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo App per completare il collegamento."
         ]);
     }
 }

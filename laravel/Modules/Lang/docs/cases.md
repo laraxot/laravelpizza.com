@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Case-Insensitive File Conflicts"
+module: "Lang"
+type: concept
+tags: [phpstan, level10, fixes, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan level10 fixes 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Case-Insensitive File Conflicts
 
 Nel modulo `Lang` sono presenti i seguenti duplicati con differenze solo di maiuscole/minuscole:

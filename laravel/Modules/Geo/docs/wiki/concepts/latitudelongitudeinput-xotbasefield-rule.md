@@ -1,3 +1,15 @@
+---
+title: "latitudelongitudeinput xotbasefield rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "latitudelongitudeinput xotbasefield rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # LatitudeLongitudeInput XotBaseField Rule
 
 ## Regola

@@ -1,0 +1,8 @@
+{
+  "include_dirs": ["app/", "config/", "database/", "routes/"],
+  "exclude_dirs": ["vendor/", ".git/", "tests/", "node_modules/"],
+  "file_extensions": [".php", ".blade.php"],
+  "semantic": false,
+  "confidence_filter": "EXTRACTED",
+  "max_depth": 4
+}

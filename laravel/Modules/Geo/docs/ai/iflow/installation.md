@@ -1,7 +1,18 @@
+---
+title: "installation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Installazione iFlow CLI per PTVX
 
 ---
-
 ## Prerequisiti
 
 - **Node.js**: 22+ (richiesto)

@@ -1,3 +1,14 @@
+---
+title: "localization guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "localization guide"
+issues: []
+discussions: []
+---
+
 # Guida alla Localizzazione nel Framework Laraxot PTVX
 
 ## Introduzione

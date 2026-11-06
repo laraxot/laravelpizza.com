@@ -5,16 +5,18 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Pages\Tenancy;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Pages\Tenancy\EditTenantProfile;
+use Modules\Xot\Filament\Pages\Tenancy\XotBaseEditTenantProfile;
 
-class EditTeamProfile extends EditTenantProfile
+class EditTeamProfile extends XotBaseEditTenantProfile
 {
     public static function getLabel(): string
     {
         return 'Team profile';
     }
 
-    /** @return array<int|string, mixed> */
+    /**
+     * @return array<int, TextInput>
+     */
     public function getFormSchema(): array
     {
         return [

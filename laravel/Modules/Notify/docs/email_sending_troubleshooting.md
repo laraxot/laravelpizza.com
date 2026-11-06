@@ -1,3 +1,15 @@
+---
+title: "email sending troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email sending troubleshooting"
+issues: []
+discussions: []
+status: draft
+---
+
 # Troubleshooting: Sistema di Invio Email in Notify
 
 ## Problema: `SendEmail.php` vs `TestSmtpPage.php`
@@ -189,5 +201,4 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 - [Documentazione Laravel Mail](https://laravel.com/docs/10.x/mail)
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Modulo Xot - XotBasePage](mdc:../../Xot/docs/pages.md)
 - [Modulo Xot - XotBasePage](mdc:../../Xot/docs/pages.md)

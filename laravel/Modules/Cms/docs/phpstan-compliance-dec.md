@@ -1,3 +1,15 @@
+---
+title: "phpstan compliance dec"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan compliance dec"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Compliance - Dicembre 2025
 
 ## 🎯 Status: COMPLIANCE COMPLETA

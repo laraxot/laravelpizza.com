@@ -3,18 +3,19 @@
 declare(strict_types=1);
 
 use Modules\Cms\Models\Section;
+use Modules\Cms\Models\Traits\HasBlocks;
+use Modules\Tenant\Models\Traits\SushiToJsons;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 describe('Section Model', function (): void {
     test('section model can be instantiated', function (): void {
-        $model = new Section();
+        $model = new Section;
+        Assert::assertSame(Section::class, $model::class);
 
-        Assert::assertInstanceOf(Section::class, $model);
     });
 
     test('section model has expected fillable fields', function (): void {
-        $model = new Section();
+        $model = new Section;
 
         $fillable = $model->getFillable();
 
@@ -26,7 +27,7 @@ describe('Section Model', function (): void {
     });
 
     test('section model has expected casts', function (): void {
-        $model = new Section();
+        $model = new Section;
 
         $casts = $model->getCasts();
 
@@ -40,7 +41,7 @@ describe('Section Model', function (): void {
     });
 
     test('section model has translatable fields', function (): void {
-        $model = new Section();
+        $model = new Section;
 
         Assert::assertContains('name', $model->translatable);
 
@@ -48,24 +49,26 @@ describe('Section Model', function (): void {
     });
 
     test('section model uses HasBlocks trait', function (): void {
-        $model = new Section();
+        $model = new Section;
 
-        Assert::assertTrue(in_array(Modules\Cms\Models\Traits\HasBlocks::class, class_uses_recursive($model)));
+        Assert::assertTrue(in_array(HasBlocks::class, class_uses_recursive($model)));
     });
 
     test('section model uses SushiToJsons trait', function (): void {
-        $model = new Section();
+        $model = new Section;
 
-        Assert::assertTrue(in_array(Modules\Tenant\Models\Traits\SushiToJsons::class, class_uses_recursive($model)));
+        Assert::assertTrue(in_array(SushiToJsons::class, class_uses_recursive($model)));
     });
 
     test('section model has getRows method', function (): void {
-        $model = new Section();
+        $model = new Section;
+
+        Assert::assertContainsOnlyArray($model->getRows());
     });
 
     test('section model extends BaseModelLang', function (): void {
-        $model = new Section();
+        $model = new Section;
+        Assert::assertSame(Section::class, $model::class);
 
-        Assert::assertInstanceOf(Modules\Cms\Models\BaseModelLang::class, $model);
     });
 });

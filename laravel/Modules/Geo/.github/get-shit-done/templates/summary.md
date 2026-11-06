@@ -1,9 +1,28 @@
+---
+title: "summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "summary"
+issues: []
+discussions: []
+---
+
 # Summary Template
 
 Template for `.planning/phases/XX-name/{phase}-{plan}-SUMMARY.md` - phase completion documentation.
 
 ---
 
+title: "summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "summary"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

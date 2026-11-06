@@ -13,7 +13,6 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Livewire\\LivewireServiceProvider",
                 "Modules\\Geo\\Providers\\GeoServiceProvider",
                 "Modules\\Geo\\Providers\\Filament\\AdminPanelProvider"
             ],

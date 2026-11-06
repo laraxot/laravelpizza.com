@@ -1,12 +1,24 @@
+---
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+status: draft
+---
+
 # Indice della Documentazione - Sezioni CMS
 
 ## Collegamenti Correlati
 - [Indice CMS](../index.md)
-- [README CMS](../readme.md)
+- [README CMS](../README.md)
 - [Sezioni](../sections.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Generale](../../../../../../docs/readme.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/readme.md)
+- [Documentazione Generale](../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 - [Implementazione nell'UI](../../../ui/docs/sections/index.md)
 - [Implementazione nel Tema One](../../../../themes/one/docs/sections/index.md)

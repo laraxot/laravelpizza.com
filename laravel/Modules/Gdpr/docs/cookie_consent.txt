@@ -1,7 +1,0 @@
----
-module: theme
-topic: cookie_consent
-canonical: ../../../Themes/docs/shared-components/cookie-consent.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/cookie-consent.md

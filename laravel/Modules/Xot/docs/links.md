@@ -1,3 +1,11 @@
+---
+title: "Links"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "links xot"
+---
 # Links
 
 ## Documentazione Generale
@@ -48,7 +56,7 @@
 
 ### Sicurezza e Performance
 - [Security Guidelines](security-guidelines.md) - Linee guida per la sicurezza
-- [Performance Optimization](performance-optimization.md) - Ottimizzazione delle performance
+- [Performance Optimization](PERFORMANCE-OPTIMIZATION.md) - Ottimizzazione delle performance
 - [Caching Strategy](caching-strategy.md) - Strategia di caching
 - [Monitoring](monitoring.md) - Monitoraggio e logging
 

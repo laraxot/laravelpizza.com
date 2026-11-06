@@ -1,3 +1,15 @@
+---
+title: "git conflicts list"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts list"
+issues: []
+discussions: []
+status: draft
+---
+
 # Git Conflicts Resolution Log
 
 ## Files with Git Conflicts (28 total)

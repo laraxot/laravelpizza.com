@@ -1,3 +1,15 @@
+---
+title: "serializable closure error resolution "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "serializable closure error resolution "
+issues: []
+discussions: []
+status: draft
+---
+
 # Serializable Closure Error Resolution - Complete Guide
 
 > 
@@ -172,5 +184,4 @@ curl -I http://localhost:8000/en/contacts
 - Add logging for locale detection debugging
 
 ---
-
 **Resolution Summary**: Successfully eliminated Serializable Closure TypeError by removing problematic inline closures from Folio middleware configuration and implementing direct locale setting in page templates. All routes now function correctly without serialization conflicts.

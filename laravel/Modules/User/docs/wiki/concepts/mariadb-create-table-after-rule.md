@@ -4,6 +4,18 @@ module: User
 confidence: high
 updated: 2026-04-28
 tags: [migration, mariadb, mysql, schema-builder, dry, kiss, clean-code]
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+title: "MariaDB create table `after()` rule"
+status: draft
+qmd: "mariadb create table `after()` rule user"
 ---
 
 # MariaDB create table `after()` rule

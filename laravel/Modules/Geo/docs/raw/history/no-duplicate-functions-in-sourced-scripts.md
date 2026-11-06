@@ -1,3 +1,14 @@
+---
+title: "no duplicate functions in sourced scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no duplicate functions in sourced scripts"
+issues: []
+discussions: []
+---
+
 
 
 # ERRORE GRAVE: Duplicazione di funzioni in presenza di 'source'
@@ -23,6 +34,14 @@ Quando in uno script .sh si incorporano altre librerie tramite `source ./bashscr
 
 ---
 
+title: "no duplicate functions in sourced scripts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no duplicate functions in sourced scripts"
+issues: []
+discussions: []
 > Questa regola è stata aggiornata a seguito di un errore grave di duplicazione in uno script .sh. Va rispettata e diffusa in tutto il progetto.
 
 aurmich/dev

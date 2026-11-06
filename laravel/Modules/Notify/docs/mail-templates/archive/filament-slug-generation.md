@@ -1,3 +1,11 @@
+---
+title: "Generazione di Slug in Filament"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "generazione di slug in filament notify"
+---
 # Generazione di Slug in Filament
 
 ## Panoramica

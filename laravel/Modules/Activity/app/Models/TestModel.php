@@ -25,7 +25,6 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereUpdatedAt($value)
  *
- * @mixin \Eloquent
  */
 final class TestModel extends Model
 {

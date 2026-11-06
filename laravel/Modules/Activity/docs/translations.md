@@ -1,3 +1,11 @@
+---
+title: "Traduzioni del Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "traduzioni del modulo activity activity"
+---
 # Traduzioni del Modulo Activity
 
 ## Collegamenti
@@ -5,7 +13,7 @@
 - [Modulo Lang](../../Lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
 - [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
-- [Regole Generali Traduzioni](../../xot/docs/translations.md)
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 - [Activity Module Fixes](../../.cursor/rules/activity-module-fixes.mdc) - Correzioni applicate dicembre 2024
 
 ## Struttura

@@ -3,16 +3,17 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
-use function Safe\class_uses;
+
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\BuildMailMessageAction;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+use function Safe\class_uses;
 
+uses(\Modules\Notify\Tests\TestCase::class);
 describe('BuildMailMessageAction', function () {
     // Test strutturali - non richiede container per la classe
     it('has correct class definition', function () {
@@ -39,7 +40,7 @@ describe('BuildMailMessageAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, MailMessage::class);
+        XotBasePest::assertReflectionTypeName($returnType, MailMessage::class);
     });
 
     it('has private decodeRichText method', function () {
@@ -51,7 +52,7 @@ describe('BuildMailMessageAction', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(BuildMailMessageAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -63,11 +64,11 @@ describe('BuildMailMessageAction', function () {
 
     it('has required imports', function () {
         $reflection = new \ReflectionClass(BuildMailMessageAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
 
         Assert::assertStringContainsString('use Modules\Notify\Actions\NotifyTheme\Get;', $content);
         Assert::assertStringContainsString('use Modules\Notify\Datas\AttachmentData;', $content);
-        Assert::assertStringContainsString('use Spatie\LaravelData\DataCollection;', $content);
+        Assert::assertStringContainsString('use Modules\Notify\Datas\NotifyThemeData;', $content);
     });
 
     it('has QueueableAction trait applied correctly', function () {

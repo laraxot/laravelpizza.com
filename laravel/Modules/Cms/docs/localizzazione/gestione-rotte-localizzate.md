@@ -1,3 +1,15 @@
+---
+title: "gestione rotte localizzate"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gestione rotte localizzate"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gestione delle Rotte Localizzate in Laravel Folio
 
 ## Introduzione
@@ -156,4 +168,4 @@ Se la lingua non viene impostata correttamente, verificare:
 
 - [Documentazione Laravel Folio](https://laravel.com/docs/folio)
 - [Documentazione Laravel Localization](https://github.com/mcamara/laravel-localization)
-- [Modulo Lang - Documentazione](../../../lang/docs/working-with-locales.md)
+- [Modulo Lang - Documentazione](../../../Lang/docs/working-with-locales.md)

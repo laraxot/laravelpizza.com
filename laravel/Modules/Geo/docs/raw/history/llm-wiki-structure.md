@@ -1,3 +1,14 @@
+---
+title: "llm wiki structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "llm wiki structure"
+issues: []
+discussions: []
+---
+
 # LLM Wiki Karpathy - Struttura Documentazione
 
 ## Introduzione

@@ -1,3 +1,11 @@
+---
+title: "command_bus"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "command_bus xot"
+---
 # command_bus
 
 <!-- Contenuto migrato da _docs/command_bus.txt -->

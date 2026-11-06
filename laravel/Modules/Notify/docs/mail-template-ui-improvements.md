@@ -1,3 +1,15 @@
+---
+title: "mail template ui improvements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mail template ui improvements"
+issues: []
+discussions: []
+status: draft
+---
+
 # Miglioramenti UI/UX per MailTemplateResource
 
 ## Introduzione

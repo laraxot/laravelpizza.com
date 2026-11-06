@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Modules\Geo\Actions\FilterCoordinatesInRadiusAction;
 
 /**
  * Regola di validazione per filtrare le coordinate all'interno di un raggio.
  */
-class FilterCoordinatesInRadius implements Rule
+class FilterCoordinatesInRadius implements ValidationRule
 {
     private string $message = '';
 
@@ -22,6 +22,13 @@ class FilterCoordinatesInRadius implements Rule
     ) {
     }
 
+    public function validate(string $attribute, mixed $value, \Closure $fail): void
+    {
+        if (! $this->passes($attribute, $value)) {
+            $fail($this->message());
+        }
+    }
+
     /**
      * Determina se le coordinate passate sono all'interno del raggio specificato.
      *
@@ -30,9 +37,6 @@ class FilterCoordinatesInRadius implements Rule
      */
     public function passes(mixed $_attribute, mixed $value): bool
     {
-        // Convert to string for internal use
-        $_attribute = (string) $_attribute;
-
         if (! \is_array($value)) {
             $this->message = 'Il valore deve essere un array di coordinate';
 
@@ -40,7 +44,7 @@ class FilterCoordinatesInRadius implements Rule
         }
 
         /** @var array<array{latitude: string, longitude: string}> $coordinates */
-        $coordinates = array_map(static function ($coordinate): array {
+        $coordinates = array_map(static function (mixed $coordinate): array {
             if (! \is_array($coordinate)) {
                 return ['latitude' => '', 'longitude' => ''];
             }

@@ -3,18 +3,18 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
+
 use Modules\Notify\Actions\DetermineSeasonalContentViewPathAction;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('DetermineSeasonalContentViewPathAction', function () {
-        it('can be instantiated', function () {
+    it('can be instantiated', function () {
         Assert::assertTrue(class_exists(DetermineSeasonalContentViewPathAction::class));
     });
 
@@ -36,7 +36,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, 'string');
+        XotBasePest::assertReflectionTypeName($returnType, 'string');
     });
 
     it('has private determineViewFileName method', function () {
@@ -62,7 +62,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(DetermineSeasonalContentViewPathAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
@@ -73,7 +73,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('has required imports', function () {
-        $content = \notifyReflectionSource(new \ReflectionClass(DetermineSeasonalContentViewPathAction::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(DetermineSeasonalContentViewPathAction::class));
 
         Assert::assertStringContainsString('use Carbon\Carbon', $content);
         Assert::assertStringContainsString('use Spatie\QueueableAction\QueueableAction', $content);

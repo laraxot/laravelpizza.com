@@ -1,3 +1,11 @@
+---
+title: "Determinazione del Logo Basata sul Dominio"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "determinazione del logo basata sul dominio xot"
+---
 # Determinazione del Logo Basata sul Dominio
 
 ## Introduzione

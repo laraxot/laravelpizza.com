@@ -1,3 +1,15 @@
+---
+title: "legacy roadmap complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap complete"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🗺️ ROADMAP COMPLETA - Modulo CMS
 
 ## 📊 Business Logic
@@ -12,7 +24,6 @@ Il modulo **CMS** (Content Management System) gestisce tutti i contenuti dinamic
 - **Storage**: JSON-based per flessibilità e performance
 
 ---
-
 ## 🎯 Funzionalità Implementate
 
 ### ✅ Core Content Management
@@ -376,10 +387,10 @@ La cartella `docs/` è ben organizzata con:
 ## 🔗 Collegamenti Utili
 
 ### Documentazione Correlata
-- [Roadmap Progetto](../../../../docs/roadmap_project.md)
+- [Roadmap Progetto](../../../../../../docs/roadmap_project.md)
 - [Modulo User](../../user/docs/roadmap_complete.md)
-- [Modulo Media](../../media/docs/readme.md)
-- [Theme Sixteen](../../../themes/sixteen/docs/readme.md)
+- [Modulo Media](../../../../Media/docs/README.md)
+- [Theme Sixteen](../../../../../Themes/Sixteen/docs/README.md)
 
 ### Resources
 - [Filament Documentation](https://filamentphp.com/docs)

@@ -1,3 +1,15 @@
+---
+title: "test v2"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v2"
+issues: []
+discussions: []
+status: draft
+---
+
 # 
 
 *Autore: *  
@@ -8,6 +20,14 @@
 
 
 
+title: "test v2"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v2"
+issues: []
+discussions: []
 # EVENT SOURCING IN LARAVEL A Beyond CRUD strategy By Brent Roose EVENT-SOURCING-LARAVEL.COM
 
 

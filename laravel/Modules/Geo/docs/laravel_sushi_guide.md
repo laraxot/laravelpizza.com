@@ -1,3 +1,16 @@
+---
+title: "laravel sushi guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel sushi guide"
+issues: []
+discussions: []
+status: superseded
+superseded_by: laravel-sushi-guide.md
+---
+
 # Laravel Sushi: Guida Completa
 
 ## Cos'è Laravel Sushi?

@@ -1,3 +1,11 @@
+---
+title: "custom_errors"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "custom_errors xot"
+---
 # custom_errors
 
 <!-- Contenuto migrato da _docs/custom_errors.txt -->

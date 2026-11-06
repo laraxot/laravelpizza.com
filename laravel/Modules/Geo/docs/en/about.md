@@ -1,3 +1,15 @@
+---
+title: "about"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "about"
+issues: []
+discussions: []
+status: draft
+---
+
 
 The Laravel module_tenant is a package that allows developers to easily set up multi-tenancy in their Laravel applications.
 

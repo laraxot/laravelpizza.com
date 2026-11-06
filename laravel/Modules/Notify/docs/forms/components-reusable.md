@@ -1,3 +1,15 @@
+---
+title: "components reusable"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "components reusable"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti Form Riutilizzabili - Notify Module
 
 **Stato**: ✅ Implementato  
@@ -289,6 +301,7 @@ Lo schema deve sempre avere chiavi string per conformità Filament:
 - [Filament Form Components](https://filamentphp.com/docs/forms/fields) - Documentazione ufficiale Filament
 - [SendRecordsNotificationBulkAction](./../refactoring/send-notification-bulk-action.md) - Refactoring completo
 - [ChannelEnum](./enums/channel-enum.md) - Smart Enum per canali notifica
+- [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 - [MailTemplate Model](./../models.md) - Modello template email
 
 ## 🎯 Best Practice per Futuri Componenti
@@ -301,6 +314,5 @@ Lo schema deve sempre avere chiavi string per conformità Filament:
 6. **Type Safety** PHPStan Level 10 compliant
 
 ---
-
 **Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Define once, reuse everywhere - DRY over duplication, simplicity over complexity"*

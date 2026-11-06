@@ -1,3 +1,15 @@
+---
+title: "story map component analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "story map component analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi del Componente Mappa per Ticket Wizard
 
 ## Filosofia di farmshops.eu

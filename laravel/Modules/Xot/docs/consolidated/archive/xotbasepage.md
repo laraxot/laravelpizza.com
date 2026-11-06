@@ -1,3 +1,11 @@
+---
+title: "XotBasePage - Classe Base per le Pagine Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbasepage - classe base per le pagine filament xot"
+---
 # XotBasePage - Classe Base per le Pagine Filament
 
 ## Descrizione

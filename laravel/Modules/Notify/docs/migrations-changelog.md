@@ -1,3 +1,15 @@
+---
+title: "migrations changelog"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migrations changelog"
+issues: []
+discussions: []
+status: draft
+---
+
 # Changelog Migrazioni Notify Module
 
 ## [DATE]: Aggiunta Campo Slug a Mail Templates

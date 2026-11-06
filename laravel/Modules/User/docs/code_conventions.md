@@ -1,7 +1,9 @@
 ---
-module: theme
-topic: code_conventions
-canonical: ../../../Themes/docs/shared-components/sushi-command.md
+title: "code conventions"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "code conventions user"
 ---
-
-See canonical documentation: ../../../Themes/docs/shared-components/sushi-command.md
+ 

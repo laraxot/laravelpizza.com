@@ -1,3 +1,11 @@
+---
+title: "Regola PSR-4 Namespace per Moduli Laravel"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regola psr-4 namespace per moduli laravel xot"
+---
 # Regola PSR-4 Namespace per Moduli Laravel
 
 ## Quando

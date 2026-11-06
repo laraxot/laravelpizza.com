@@ -15,7 +15,7 @@ use Modules\Xot\Contracts\UserContract;
 interface UpdatesTeamNames
 {
     /**
-     * @param array<string, mixed> $input
+     * @param  array<string, mixed>  $input
      */
     public function update(UserContract $userContract, TeamContract $teamContract, array $input): void;
 }

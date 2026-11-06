@@ -13,14 +13,14 @@ use Nwidart\Modules\Module as NwidartModule;
 use Webmozart\Assert\Assert;
 
 /**
- * @method string               getId()
- * @method string               getName()
- * @method NwidartModule        getModule()
+ * @method string getId()
+ * @method string getName()
+ * @method NwidartModule getModule()
  * @method array<string, mixed> getConfig()
  * @method array<string, mixed> getModuleConfig()
- * @method string               getNavigationLabel()
- * @method string               getNavigationIcon()
- * @method int                  getNavigationSort()
+ * @method string getNavigationLabel()
+ * @method string getNavigationIcon()
+ * @method int getNavigationSort()
  */
 class PanelMixin
 {

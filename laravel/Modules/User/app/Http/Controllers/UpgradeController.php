@@ -1,23 +1,19 @@
 <?php
 
+declare(strict_types=1);
 /**
  * --.
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Xot\Datas\XotData;
 
 class UpgradeController extends Controller
 {
     public function __invoke(Request $_request): void
     {
-        $user_class = XotData::make()->getUserClass();
-        $users = $user_class::get();
         /* da id a uuid
          * foreach ($users as $user) {
          * if (strlen(is_string($user) ? $user : (string) $user->) >= 32) { // gia' convertito

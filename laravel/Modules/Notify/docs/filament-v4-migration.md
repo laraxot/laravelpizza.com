@@ -1,3 +1,15 @@
+---
+title: "filament v4 migration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 migration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament v4 Migration - Notify Module
 
 ## Scopo (Purpose)
@@ -206,7 +218,6 @@ view:cache compila
 - [Filament v4 Forms Documentation](https://filamentphp.com/docs/4.x/forms/getting-started)
 
 ---
-
 **Data migrazione**: [DATE]
 **Versione Filament**: v4.x
 **Files modificati**: 4

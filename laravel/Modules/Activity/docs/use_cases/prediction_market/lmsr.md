@@ -1,3 +1,11 @@
+---
+title: "LMSR – Logarithmic Market Scoring Rule nei <nome progetto>ion Market"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "lmsr   logarithmic market scoring rule nei <nome progetto>ion market activity"
+---
 # LMSR – Logarithmic Market Scoring Rule nei <nome progetto>ion Market
 
 ## Cos'è LMSR?

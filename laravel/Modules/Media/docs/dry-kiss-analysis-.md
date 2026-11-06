@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "DRY & KISS Analysis - Modulo Media"
+module: "Media"
+type: concept
+tags: [dry, kiss, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "dry kiss analysis "
+related:
+  - "./webm.md"
+status: draft
+---
 # DRY & KISS Analysis - Modulo Media
 
 **Data:** 15 Ottobre 2025

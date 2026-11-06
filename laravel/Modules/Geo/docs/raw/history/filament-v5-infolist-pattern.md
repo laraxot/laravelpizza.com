@@ -1,3 +1,14 @@
+---
+title: "filament v5 infolist pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v5 infolist pattern"
+issues: []
+discussions: []
+---
+
 # Pattern Filament v5: Infolist vs Form
 
 ## Cambiamenti in Filament v5

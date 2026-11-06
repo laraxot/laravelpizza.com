@@ -2,20 +2,30 @@
 
 declare(strict_types=1);
 
-namespace Modules\Job\Tests\Feature;
-
+use Illuminate\Support\Facades\DB;
 use Modules\Job\Tests\TestCase;
-use PHPUnit\Framework\Assert;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
-test('default database connection is configured', function () {
-    Assert::assertNotEmpty(config('database.default'));
+test('database connection works', function () {
+    // Simple test to verify database connection
+    expect(DB::connection())->not->toBeNull();
+    expect(DB::connection()->getPdo())->not->toBeNull();
 });
 
-test('database configuration has required connections', function () {
-    $connections = config('database.connections');
+test('can create a simple database record without model', function () {
+    // Test direct database insert without using Eloquent models
+    $result = DB::table('users')->insert([
+        'name' => 'Test User',
+        'email' => 'test@example.com',
+        'password' => 'password123',
+        'created_at' => now(),
+        'updated_at' => now(),
+    ]);
 
-    Assert::assertIsArray($connections);
-    Assert::assertArrayHasKey('mysql', $connections);
+    expect($result)->toBeTrue();
+
+    $user = DB::table('users')->where('email', 'test@example.com')->first();
+    expect($user)->not->toBeNull();
+    expect($user?->name)->toBe('Test User');
 });

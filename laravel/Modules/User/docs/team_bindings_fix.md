@@ -1,3 +1,11 @@
+---
+title: "Fix Binding Team Models nel Modulo User"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "fix binding team models nel modulo user user"
+---
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica
@@ -165,8 +173,7 @@ $this->assertTrue($user->belongsToTeam($team));
 - [TeamUser Model](../app/Models/TeamUser.php)
 - [TeamInvitation Model](../app/Models/TeamInvitation.php)
 - [UserServiceProvider](../app/Providers/UserServiceProvider.php)
-- [Critical Errors Documentation](../../Quaeris/docs/critical-errors-resolved.md)
-- [Critical Errors Documentation (SaluteOra)](../../SaluteOra/docs/critical-errors-resolved.md)
+- [Critical Errors Documentation](../../saluteora/docs/critical-errors-resolved.md)
 
 ---
 

@@ -8,23 +8,21 @@ use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
-
 uses(TestCase::class);
 
 test('logout listener is registered for logout event', function () {
     $reflection = new ReflectionClass(EventServiceProvider::class);
-    /** @var array<class-string, list<class-string>> $listen */
-    $listen = $reflection->getDefaultProperties()['listen'] ?? [];
-    /** @var list<class-string> $handlers */
+    $properties = $reflection->getDefaultProperties();
+    $listen = $properties['listen'] ?? null;
+    Assert::assertIsArray($listen);
     $handlers = $listen[Logout::class] ?? [];
+    Assert::assertIsArray($handlers);
 
     Assert::assertContains(LogoutListener::class, $handlers);
 });
 
 test('logout listener can be instantiated', function () {
-    $listener = new LogoutListener;
-
-    Assert::assertInstanceOf(LogoutListener::class, $listener);
+    Assert::assertTrue((new ReflectionClass(LogoutListener::class))->isInstantiable());
 });
 
 test('logout listener has handle method', function () {

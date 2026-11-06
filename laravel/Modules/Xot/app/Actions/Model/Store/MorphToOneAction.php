@@ -6,8 +6,8 @@ namespace Modules\Xot\Actions\Model\Store;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
+use Modules\Xot\Actions\Model\CreateMorphToOneRelatedModelAction;
 use Modules\Xot\Datas\RelationData as RelationDTO;
-use Modules\Xot\Support\MorphToOneRelationSupport;
 use Spatie\QueueableAction\QueueableAction;
 
 class MorphToOneAction
@@ -26,7 +26,7 @@ class MorphToOneAction
             $relationDTO->data['lang'] = App::getLocale();
         }
 
-        MorphToOneRelationSupport::create($rows, $relationDTO->data);
+        app(CreateMorphToOneRelatedModelAction::class)->execute($rows, $relationDTO->data);
 
         // }
         // } else {

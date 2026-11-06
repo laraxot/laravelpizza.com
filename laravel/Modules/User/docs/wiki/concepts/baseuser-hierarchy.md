@@ -6,8 +6,15 @@ created: 2026-06-18
 updated: 2026-06-18
 qmd: "baseuser hierarchy extension pattern user model inheritance"
 related:
-  - laravel/Modules/Fixcity/docs/wiki/concepts/user-model-architecture.md
-  - laravel/Modules/Comment/docs/wiki/concepts/can-comment-contract-owner.md
+  - "./ai-harness-user-discipline.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+  - "./folio-pages-owner-pattern.md"
+status: draft
 ---
 
 # BaseUser Hierarchy and Extension Pattern

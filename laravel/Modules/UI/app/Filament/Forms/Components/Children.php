@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\ViewField;
+use Modules\Xot\Filament\Forms\Components\XotBaseViewField;
 
 // use Filament\Support\Components\ViewComponent;
 
-final class Children extends ViewField
+final class Children extends XotBaseViewField
 {
     protected string $view = 'ui::filament.forms.components.navigation-builder';
 

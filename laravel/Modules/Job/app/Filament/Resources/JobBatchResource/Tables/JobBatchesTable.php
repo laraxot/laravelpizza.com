@@ -10,6 +10,7 @@ use Filament\Notifications\Notification;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Facades\Artisan;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 /**
@@ -23,7 +24,7 @@ class JobBatchesTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            TextColumn::make('id')->sortable(),
+            IDColumn::make('id')->sortable(),
             TextColumn::make('name')->searchable()->sortable(),
             TextColumn::make('total_jobs')->sortable(),
             TextColumn::make('pending_jobs')->sortable(),

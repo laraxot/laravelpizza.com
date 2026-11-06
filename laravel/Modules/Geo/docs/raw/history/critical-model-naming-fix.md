@@ -1,3 +1,14 @@
+---
+title: "critical model naming fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical model naming fix"
+issues: []
+discussions: []
+---
+
 # Correzione Critica: Naming Modelli in Inglese
 
 ## ⚠️ ERRORE CRITICO IDENTIFICATO E CORRETTO

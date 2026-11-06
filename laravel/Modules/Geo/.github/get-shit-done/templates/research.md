@@ -1,3 +1,14 @@
+---
+title: "research"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "research"
+issues: []
+discussions: []
+---
+
 # Research Template
 
 Template for `.planning/phases/XX-name/{phase_num}-RESEARCH.md` - comprehensive ecosystem research before planning.
@@ -6,6 +17,14 @@ Template for `.planning/phases/XX-name/{phase_num}-RESEARCH.md` - comprehensive 
 
 ---
 
+title: "research"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "research"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

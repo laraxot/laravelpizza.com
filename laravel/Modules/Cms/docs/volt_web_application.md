@@ -1,3 +1,15 @@
+---
+title: "volt web application"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt web application"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sviluppo Applicazioni Web con Laravel Volt
 
 Questa guida spiega come sviluppare applicazioni web moderne utilizzando Laravel Volt, concentrandosi sulla creazione di componenti reattivi e sulla gestione dello stato dell'applicazione.

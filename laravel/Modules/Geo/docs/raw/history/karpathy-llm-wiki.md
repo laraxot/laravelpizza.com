@@ -1,3 +1,14 @@
+---
+title: "karpathy llm wiki"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "karpathy llm wiki"
+issues: []
+discussions: []
+---
+
 # Karpathy LLM-Wiki Pattern in PTVX
 
 This document outlines the implementation of the **LLM Wiki** pattern (as proposed by Andrej Karpathy in early 2026) within the PTVX modular architecture.

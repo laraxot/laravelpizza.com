@@ -1,3 +1,14 @@
+---
+title: "accessor mutator fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "accessor mutator fix summary"
+issues: []
+discussions: []
+---
+
 # 🔧 Accessor/Mutator Fix - Summary
 
 ## ✅ Cosa è Stato Fatto
@@ -24,6 +35,14 @@ protected function getPercPTimeDaterangeAttribute(mixed $_value): int|float
 
 ---
 
+title: "accessor mutator fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "accessor mutator fix summary"
+issues: []
+discussions: []
 ### 2. **Corretto con Pattern SACRO** ✅
 
 ```php

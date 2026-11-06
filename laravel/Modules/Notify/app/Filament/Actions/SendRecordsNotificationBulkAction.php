@@ -29,15 +29,15 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
             ->action(function (Collection $records, array $data): void {
                 /** @var Collection<int, Model> $records */
                 /** @var array<string, mixed> $data */
-                $mailTemplateSlug = (string) $data['mail_template_slug'];
+                $mailTemplateSlugRaw = $data['mail_template_slug'] ?? '';
+                $mailTemplateSlug = is_scalar($mailTemplateSlugRaw) ? (string) $mailTemplateSlugRaw : '';
                 /** @var array<int, string> $channels */
                 $channels = (array) $data['channels'];
                 app(SendRecordsNotificationAction::class)->execute($records, $mailTemplateSlug, $channels);
             })
             ->schema([
                 'mail_template_slug' => MailTemplateSelect::make('mail_template_slug'),
-                'channels' => ChannelCheckboxList::make('channels'),
-            ])
+                'channels' => ChannelCheckboxList::make('channels')])
             ->deselectRecordsAfterCompletion();
     }
 }

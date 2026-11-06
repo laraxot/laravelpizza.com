@@ -1,3 +1,22 @@
+---
+title: "log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "log"
+issues: []
+discussions: []
+status: draft
+---
+
+## [2026-07-24] architecture | Ollama Actions ownership in AI
+
+- Canon locale: [ollama-actions-ownership.md](concepts/ollama-actions-ownership.md)
+- Path: `Modules\AI\Actions\Ollama\{Chat,Generate}OllamaAction` + `ContextCompressorAction`
+- Root: `domain-actions-belong-to-domain-module` · skill `xot-is-framework-base`
+- Second brain max: healthcheck + QMD + write-back modulo
+
 ## [2026-06-11] test | pest AI suite green (36 test)
 
 - `Modules/AI/tests/TestCase` → `XotBaseTestCase` (no `RefreshDatabase`)
@@ -57,3 +76,21 @@
 - summary:
   - compiled the first durable AI module syntheses from MCP and local-first runtime docs
   - aligned the module wiki with the project-level LLM wiki model
+
+## [2026-07-12] quality | claude-audit Actions QueueableAction contract
+
+- Scope swarm: `Modules/AI`.
+- Decisione riusabile: ogni classe sotto `app/Actions` deve usare `Spatie\QueueableAction\QueueableAction` ed esporre `execute(...)`; eventuale `handle()` resta solo wrapper legacy.
+- Verifica locale aggiunta: `tests/Unit/Actions/QueueableActionContractTest.php`.
+- Nota audit: `claude-audit --static` usa euristiche di test coverage non sempre allineate ai test Pest presenti.
+
+## [2026-07-12] phpstan | prediction fallback typed actions
+
+- `GetPredictionFallbackTemplatesAction` espone template con ` list<array{...}>`, non `array<string,mixed>`.
+- `CastScalarToStringListAction::execute()` usa return nativo `array` con PHPDoc `list<string>`: `list<string>` non e un return type PHP valido.
+
+## [2026-10-14] docs | verifica degli ingressi contro il codice
+
+- Riscritti `README.md` (non e' un modulo MCP) e `00-INDEX.md` (indice canonico, con sezione Piani). `index.md` aggiornato; `ollama-actions-moved-from-xot.md` e `00-index.md` segnati `stale`, `INDEX.md` `stub`.
+- Verificato: nessun codice MCP nel modulo, `laravel/routes/ai.php` solo commenti; nessun consumatore fuori da `config/app.php`; copie Ollama ancora in Xot; 11 rotte Filament `ai/admin`; Pest si ferma con `Cannot redeclare class OpenAI`.
+- Link rotti negli indici (criterio audit): 21 -> 0; blocchi spuri: 168 righe rimosse in 35 file. Story: `stories/docs-ai-verifica-ingressi.story.md`.

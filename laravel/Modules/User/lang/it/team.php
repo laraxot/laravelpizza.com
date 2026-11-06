@@ -10,7 +10,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei team e delle loro autorizzazioni',
         ],
-        'label' => 'team',
+        'label' => 'Team',
         'sort' => 18,
         'icon' => 'ui-user-team',
     ],
@@ -166,6 +166,8 @@ return [
         ],
         'create' => [
             'label' => 'create',
+            'icon' => 'create',
+            'tooltip' => 'create',
         ],
         'logout' => [
             'icon' => 'logout',
@@ -237,6 +239,26 @@ return [
             'icon' => 'delete',
             'label' => 'delete',
         ],
+        'view' => [
+            'label' => 'view',
+            'icon' => 'view',
+            'tooltip' => 'view',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+            'icon' => 'createAnother',
+            'tooltip' => 'createAnother',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'tooltip' => 'resetColumnManager',
+        ],
     ],
     'plural' => [
         'model' => [
@@ -246,6 +268,6 @@ return [
     'model' => [
         'label' => 'team.model',
     ],
-    'label' => 'team',
+    'label' => 'Team',
     'plural_label' => 'Team (Plurale)',
 ];

@@ -6,14 +6,15 @@ namespace Modules\Gdpr\Filament\Resources\ConsentResource\Schemas;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class ConsentForm extends XotBaseResourceForm
 {
     /**
-     * @return array<int|string, \Filament\Schemas\Components\Component>
+     * @return array<int|string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'treatment_id' => Select::make('treatment_id')

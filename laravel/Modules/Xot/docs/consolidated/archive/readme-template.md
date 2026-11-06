@@ -1,3 +1,11 @@
+---
+title: "Modulo [Nome Modulo]"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "modulo [nome modulo] xot"
+---
 # Modulo [Nome Modulo]
 
 ## Panoramica

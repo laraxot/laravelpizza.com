@@ -1,8 +1,20 @@
-# FixCity - Filosofia, Logica, Visione e Zen del Progetto
+---
+title: "philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
+# Notify - Filosofia, Logica, Visione e Zen del Progetto
 
 ## La Visione
 
-**FixCity** non è solo una piattaforma per la segnalazione di problemi urbani. È un sistema che connette i cittadini con la loro città, creando un circolo virtuoso di miglioramento continuo.
+**Notify** non è solo una piattaforma per la segnalazione di problemi urbani. È un sistema che connette i cittadini con la loro città, creando un circolo virtuoso di miglioramento continuo.
 
 ### Principi Fondamentali
 
@@ -36,7 +48,7 @@ La struttura del progetto segue una logica precisa:
 
 ## La Religione (Regole Inderogabili)
 
-### Le 10 Leggi di FixCity
+### Le 10 Leggi di Notify
 
 1. **Legge DRY**: Non ripetere mai il codice
 2. **Legge KISS**: Semplicità prima di tutto
@@ -117,14 +129,14 @@ Gestione della conoscenza con AI
 
 ## Conclusione
 
-FixCity è più di un progetto software. È un esperimento sociale tecnologico che dimostra come la tecnologia possa migliorare la vita dei cittadini. Ogni segnalazione risolta è una piccola vittoria per la comunità.
+Notify è più di un progetto software. È un esperimento sociale tecnologico che dimostra come la tecnologia possa migliorare la vita dei cittadini. Ogni segnalazione risolta è una piccola vittoria per la comunità.
 
 > *"La città perfetta non esiste, ma il viaggio verso di essa sì."*
 
 ---
-
 ## Riferimenti
 
-- [PROJECT.md](./PROJECT.md) - Visione e obiettivi
-- [AGENTS.md](./AGENTS.md) - Regole per agenti AI
+- [PROJECT.md](./project.md) - Visione e obiettivi
+- [agents.md](./AGENTS.md) - Regole per agenti AI
 - [docs/](../docs/) - Documentazione completa
+- [docs/](..) - Documentazione completa

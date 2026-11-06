@@ -1,3 +1,15 @@
+---
+title: "THEME SYSTEM DYNAMIC"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "THEME SYSTEM DYNAMIC"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎨 Theme System - Dynamic Theme Registration
 
 **Date**: 2026-03-30  
@@ -5,7 +17,6 @@
 **Principle**: Theme is a "vestito" (outfit) - configurable and swappable!
 
 ---
-
 ## 🎯 How It Works
 
 ### 1. Theme Configuration
@@ -15,7 +26,7 @@ The active theme is configured in:
 config/{environment}/{domain}/xra.php
 ```
 
-**Example** (`config/localhost/fixcity/xra.php`):
+**Example** (`config/localhost/ptv/xra.php`):
 ```php
 <?php
 return [
@@ -120,7 +131,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 
 1. Edit config file:
 ```php
-// config/localhost/fixcity/xra.php
+// config/localhost/ptv/xra.php
 return [
     'pub_theme' => 'TwentyOne',  // Change theme
     'register_pub_theme' => true,
@@ -143,7 +154,7 @@ THEME_REGISTER_PUB=true
 
 2. Update config to read env:
 ```php
-// config/localhost/fixcity/xra.php
+// config/localhost/ptv/xra.php
 return [
     'pub_theme' => env('THEME_PUB', 'Sixteen'),
     'register_pub_theme' => env('THEME_REGISTER_PUB', true),
@@ -197,7 +208,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 
 ### Step 3: Register Theme
 ```php
-// config/localhost/fixcity/xra.php
+// config/localhost/ptv/xra.php
 return [
     'pub_theme' => 'MyTheme',
     'register_pub_theme' => true,

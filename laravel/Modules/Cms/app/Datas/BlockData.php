@@ -125,6 +125,12 @@ class BlockData extends Data implements Wireable
             $name = (string) Str::after($name, '::');
         }
 
+        // Se il nome contiene un punto (variante come design-comuni), estrai il nome base
+        // Esempio: 'ticket-list.design-comuni' -> 'ticket_list'
+        if (str_contains($name, '.')) {
+            $name = Str::beforeLast($name, '.');
+        }
+
         return $name;
     }
 }

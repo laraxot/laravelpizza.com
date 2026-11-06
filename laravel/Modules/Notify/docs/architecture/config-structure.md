@@ -1,3 +1,23 @@
+---
+title: "Struttura di Configurazione nei Moduli"
+type: concept
+tags: [notify, docs, architecture, config, structure]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione architecture config structure struttura di configurazione nei moduli frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # Struttura di Configurazione nei Moduli
 # Struttura di Configurazione nei Moduli <nome progetto>
 

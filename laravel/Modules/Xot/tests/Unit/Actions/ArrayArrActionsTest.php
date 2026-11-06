@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\Xot\Actions\Arr\DiffAssocRecursiveAction;
 use Modules\Xot\Actions\Arr\RangeIntersectAction;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
@@ -15,18 +14,28 @@ use function Safe\mkdir;
 
 uses(TestCase::class);
 
-it('normalizes nested numeric strings in diff fixType', function (): void {
-    $input = ['items' => [
-        ['a' => '1', 'b' => 'x'],
-        ['c' => '2.5'],
-    ]];
+it('normalizes numeric strings in diff rows through fixType', function (): void {
+    $input = [
+        'a' => [
+            'id' => '1',
+            'name' => 'x',
+        ],
+        'c' => [
+            'value' => '2.5',
+        ],
+    ];
 
     $normalized = DiffAssocRecursiveAction::fixType($input);
 
     Assert::assertSame([
-        ['a' => 1, 'b' => 'x'],
-        ['c' => 2.5],
-    ], $normalized['items']);
+        'a' => [
+            'id' => 1,
+            'name' => 'x',
+        ],
+        'c' => [
+            'value' => 2.5,
+        ],
+    ], $normalized);
 });
 
 it('throws when fixType receives a non-array item', function (): void {
@@ -38,23 +47,35 @@ it('throws when fixType receives a non-array item', function (): void {
     }
 });
 
-it('returns recursive diff', function (): void {
-    $action = new DiffAssocRecursiveAction();
-    $left = ['items' => [
-        ['id' => '1', 'name' => 'a'],
-        ['id' => '2', 'name' => 'b'],
-    ]];
-    $right = ['items' => [
-        ['id' => 2, 'name' => 'b'],
-    ]];
+it('returns rows of left that are missing in right', function (): void {
+    $action = new DiffAssocRecursiveAction;
+    $left = [
+        0 => [
+            'id' => '1',
+            'name' => 'a',
+        ],
+        1 => [
+            'id' => '2',
+            'name' => 'b',
+        ],
+    ];
+    $right = [
+        0 => [
+            'id' => 2,
+            'name' => 'b',
+        ],
+    ];
 
     Assert::assertSame([
-        ['id' => 1, 'name' => 'a'],
-    ], $action->execute($left, $right)['items']);
+        0 => [
+            'id' => 1,
+            'name' => 'a',
+        ],
+    ], $action->execute($left, $right));
 });
 
 it('covers all branches of range intersect', function (): void {
-    $action = new RangeIntersectAction();
+    $action = new RangeIntersectAction;
 
     Assert::assertSame([2, 5], $action->execute(2, 5, 1, 7));
     Assert::assertSame([2, 5], $action->execute(1, 7, 2, 5));
@@ -62,7 +83,7 @@ it('covers all branches of range intersect', function (): void {
     Assert::assertFalse($action->execute(10, 11, 1, 5));
     Assert::assertFalse($action->execute(7, 6, 5, 8));
     Assert::assertSame([4, 4], $action->execute(4, 10, 2, 4));
-    Assert::assertFalse($action->execute(1, 5, 2, 7));
+    Assert::assertSame([2, 5], $action->execute(1, 5, 2, 7));
 });
 
 it('writes JSON and PHP arrays', function (): void {
@@ -72,8 +93,8 @@ it('writes JSON and PHP arrays', function (): void {
     $jsonFile = $tmpDir.'/data.json';
     $phpFile = $tmpDir.'/data.php';
 
-    $jsonAction = new SaveJsonArrayAction();
-    $phpAction = new SavePhpArrayAction();
+    $jsonAction = new SaveJsonArrayAction;
+    $phpAction = new SavePhpArrayAction;
 
     Assert::assertTrue($phpAction->execute(['b' => 2], $phpFile));
     Assert::assertFileExists($phpFile);
@@ -87,7 +108,7 @@ it('dispatches save strategy by format in SaveArrayAction', function (): void {
     $tmpDir = sys_get_temp_dir().'/xot-save-array-action-'.uniqid('', true);
     mkdir($tmpDir, 0777, true);
 
-    $action = new SaveArrayAction();
+    $action = new SaveArrayAction;
     $jsonFile = $tmpDir.'/one.json';
     $phpFile = $tmpDir.'/one.php';
 
@@ -97,7 +118,7 @@ it('dispatches save strategy by format in SaveArrayAction', function (): void {
 
 it('throws on unsupported save format in SaveArrayAction', function (): void {
     try {
-        $action = new SaveArrayAction();
+        $action = new SaveArrayAction;
         $action->execute(['x' => 1], '/tmp/unused', 'xml');
         Assert::fail('Expected exception not thrown');
     } catch (InvalidArgumentException) {

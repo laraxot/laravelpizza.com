@@ -1,3 +1,14 @@
+---
+title: "project"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project"
+issues: []
+discussions: []
+---
+
 # PROJECT.md Template
 
 Template for `.planning/PROJECT.md` — the living project context document.
@@ -64,6 +75,14 @@ Common types: Tech stack, Timeline, Budget, Dependencies, Compatibility, Perform
 | [Choice] | [Why] | [✓ Good / ⚠️ Revisit / — Pending] |
 
 ---
+title: "project"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project"
+issues: []
+discussions: []
 *Last updated: [date] after [trigger]*
 ```
 

@@ -1,3 +1,11 @@
+---
+title: "elastic_search"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "elastic_search xot"
+---
 # elastic_search
 
 <!-- Contenuto migrato da _docs/elastic_search.txt -->

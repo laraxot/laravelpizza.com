@@ -4,57 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-use Modules\Xot\Contracts\UserContract as Post;
+use Modules\Xot\Contracts\UserContract;
 
-class UserPolicy extends UserBasePolicy
+/**
+ * Policy della classe utente (e delle sue sottoclassi, registrata in `UserServiceProvider::registerPolicies()`).
+ * Le regole stanno in {@see BaseUserPolicy}: qui resta solo l'abilita' `superadmin`.
+ */
+class UserPolicy extends BaseUserPolicy
 {
     /**
-     * Determine whether the user can view any models.
+     * Nessuno e' super-admin per policy: lo e' per ruolo, e `before()` lo concede prima di arrivare qui.
      */
-    public function viewAny(Post $user): bool
+    public function superadmin(UserContract $_user, UserContract $_post): bool
     {
-        return false;
-    }
-
-    /**
-     * Determine whether the user can view the model.
-     */
-    public function view(Post $_user, Post $_post): bool
-    {
-        return true;
-    }
-
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(Post $_user): bool
-    {
-        return true;
-    }
-
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(Post $_user, Post $_post): bool
-    {
-        return true;
-    }
-
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function delete(Post $_user, Post $_post): bool
-    {
-        // return $user->ownsTeam($team);
-        return true;
-    }
-
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function superadmin(Post $_user, Post $_post): bool
-    {
-        // return $user->ownsTeam($team);
         return false;
     }
 }

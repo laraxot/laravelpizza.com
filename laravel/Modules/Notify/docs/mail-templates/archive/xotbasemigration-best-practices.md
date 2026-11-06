@@ -1,3 +1,11 @@
+---
+title: "XotBaseMigration: Best Practices"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "xotbasemigration: best practices notify"
+---
 # XotBaseMigration: Best Practices
 
 ## Introduzione

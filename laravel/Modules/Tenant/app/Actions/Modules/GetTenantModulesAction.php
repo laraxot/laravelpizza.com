@@ -7,9 +7,10 @@ namespace Modules\Tenant\Actions\Modules;
 use Exception;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
-use function Safe\json_decode;
 use Spatie\QueueableAction\QueueableAction;
 use Throwable;
+
+use function Safe\json_decode;
 
 class GetTenantModulesAction
 {
@@ -24,7 +25,6 @@ class GetTenantModulesAction
         $contents = File::get($filePath);
 
         try {
-            /** @var mixed $json */
             $json = json_decode($contents, true);
         } catch (Throwable $e) {
             throw new Exception($e->getMessage().'['.$filePath.']['.__LINE__.']['.basename(__FILE__).']');
@@ -40,7 +40,6 @@ class GetTenantModulesAction
 
     /**
      * @param  array<string, bool>  $json
-     *
      * @return array<int, string>
      */
     private function collectEnabledModules(array $json): array

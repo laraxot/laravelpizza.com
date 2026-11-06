@@ -1,3 +1,15 @@
+---
+title: "theme translation sync"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme translation sync"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sincronizzazione Traduzioni Temi
 
 ## Panoramica
@@ -231,7 +243,6 @@ return [
 - [Modules/<nome progetto>/docs/translation_quality_standards.md](../laravel/modules/<nome progetto>/docs/translation_quality_standards.md)
 
 ---
-
 **Ultimo aggiornamento**: [DATE]
 **Versione**: 2.2
 **Autore**: AI Assistant

@@ -1,3 +1,15 @@
+---
+title: "mixed type solutions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mixed type solutions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gestione del tipo `mixed` in PHP e Soluzioni per PHPStan
 
 ## Cos'è il tipo `mixed`?

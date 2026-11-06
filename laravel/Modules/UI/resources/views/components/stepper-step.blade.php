@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 @props([
     'number' => 1,
     'title' => '',

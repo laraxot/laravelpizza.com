@@ -6,8 +6,8 @@ namespace Modules\Xot\Actions\Model\Update;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
+use Modules\Xot\Actions\Model\CreateMorphToOneRelatedModelAction;
 use Modules\Xot\Datas\RelationData as RelationDTO;
-use Modules\Xot\Support\MorphToOneRelationSupport;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -24,8 +24,8 @@ class MorphToOneAction
     /**
      * Execute the action to create a MorphToOne relationship.
      *
-     * @param Model       $model       The parent model
-     * @param RelationDTO $relationDTO Data transfer object containing relationship information
+     * @param  Model  $model  The parent model
+     * @param  RelationDTO  $relationDTO  Data transfer object containing relationship information
      *
      * @throws \InvalidArgumentException When relation type is invalid
      */
@@ -38,14 +38,13 @@ class MorphToOneAction
 
         $data = $this->prepareData($relationDTO->data);
 
-        MorphToOneRelationSupport::create($relation, $data);
+        app(CreateMorphToOneRelatedModelAction::class)->execute($relation, $data);
     }
 
     /**
      * Prepare the data array for creation.
      *
-     * @param array<string, mixed> $data The input data array
-     *
+     * @param  array<string, mixed>  $data  The input data array
      * @return array<string, mixed> The prepared data array
      */
     private function prepareData(array $data): array
@@ -56,6 +55,6 @@ class MorphToOneAction
         }
 
         // Return the prepared data
-        return array_filter($data, static fn ($value) => null !== $value);
+        return array_filter($data, static fn (mixed $value) => $value !== null);
     }
 }

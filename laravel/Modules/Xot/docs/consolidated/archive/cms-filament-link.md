@@ -1,3 +1,11 @@
+---
+title: "Collegamento Bidirezionale: Regole Filament e Namespace (Cms)"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "collegamento bidirezionale: regole filament e namespace (cms) xot"
+---
 # Collegamento Bidirezionale: Regole Filament e Namespace (Cms)
 
 Le regole generali per Filament, namespace e traduzioni sono definite in:

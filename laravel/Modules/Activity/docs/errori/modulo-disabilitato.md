@@ -1,3 +1,11 @@
+---
+title: "Errore: Modulo Activity Disabilitato"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity, errori]
+qmd: "errore: modulo activity disabilitato activity"
+---
 # Errore: Modulo Activity Disabilitato
 
 ## Descrizione del Problema
@@ -313,7 +321,7 @@ Se `module:enable Activity` non funziona:
 
 ### Documentazione Correlata
 - [No Hint Path Defined - Guida Completa](./no-hint-path-defined.md)
-- [Activity Module - README](../readme.md)
+- [Activity Module - README](../README.md)
 - [Service Provider Architecture](../../xot/docs/service-provider-architecture.md)
 
 ### Issue Simili
@@ -328,6 +336,7 @@ Se `module:enable Activity` non funziona:
 
 ---
 
+**=======
 **Ultimo aggiornamento**: 27 Ottobre 2025
 **Caso Reale**: personale2022.prov.tv.local
 **Soluzione Verificata**: ✅ Testata e funzionante

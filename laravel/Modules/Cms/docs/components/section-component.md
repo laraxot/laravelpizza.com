@@ -1,3 +1,15 @@
+---
+title: "section component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "section component"
+issues: []
+discussions: []
+status: draft
+---
+
 # Section Component
 
 ## Panoramica
@@ -141,6 +153,6 @@ Questo permette:
 - Stili specifici per sezione via slug
 
 ## Collegamenti
-- [Documentazione Blocchi](../blocks/readme.md)
+- [Documentazione Blocchi](../blocks/README.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Root](../../../../../docs/components.md)
+- [Documentazione Root](../components.md)

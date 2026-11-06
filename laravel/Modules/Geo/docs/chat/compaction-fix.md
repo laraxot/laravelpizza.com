@@ -1,3 +1,15 @@
+---
+title: "compaction fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "compaction fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Fix per "Compaction exhausted: context still exceeds model limits after 3 attempts"
 
 ## Azioni eseguite

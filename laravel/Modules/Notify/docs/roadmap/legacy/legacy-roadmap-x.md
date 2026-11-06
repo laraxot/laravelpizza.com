@@ -1,3 +1,11 @@
+---
+title: "NOTIFY MODULE - ROADMAP 2025"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, roadmap]
+qmd: "notify module - roadmap 2025 notify"
+---
 # 🔔 NOTIFY MODULE - ROADMAP 2025
 
 **Modulo**: Notify (Notification System & Communication)  

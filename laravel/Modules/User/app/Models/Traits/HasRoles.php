@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Modules\User\Models\Role;
 use Spatie\Permission\Traits\HasRoles as SpatieHasRoles;
+use Webmozart\Assert\Assert;
 
-/** @phpstan-ignore trait.unused */
 trait HasRoles
 {
     use SpatieHasRoles;
@@ -21,7 +21,9 @@ trait HasRoles
      */
     public function roles(): BelongsToMany
     {
-        return $this->belongsToManyX(Role::class, 'model_has_roles', 'model_id', 'role_id')->where(
+        Assert::string($pivotTable = config('permission.table_names.model_has_roles'));
+
+        return $this->belongsToManyX(Role::class, $pivotTable, 'model_id', 'role_id')->where(
             'model_type',
             self::class,
         );

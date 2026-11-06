@@ -194,4 +194,33 @@ return [
     'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
+
+    // Coordinate Picker - Map Controls
+    'coordinate-picker' => [
+        'search_placeholder' => 'Search for a place...',
+        'use_my_location' => 'Use my location',
+        'locating' => 'Locating...',
+        'no_position' => 'Click on the map to indicate the position',
+        'latitude' => 'Latitude',
+        'longitude' => 'Longitude',
+        'city' => 'City',
+        'fullscreen' => 'Fullscreen',
+        'close_fullscreen' => 'Exit fullscreen',
+        'zoom_in' => 'Zoom in',
+        'zoom_out' => 'Zoom out',
+        'layers' => [
+            'street' => 'Street (OSM)',
+            'humanitarian' => 'Humanitarian (OSM)',
+            'satellite' => 'Satellite (Esri)',
+            'terrain' => 'Terrain (Topo)',
+            'topographic' => 'Topographic (Esri)',
+        ],
+        'address_found' => 'Address found',
+        'location_error' => 'Unable to get location',
+        'location_denied' => 'Location permission denied',
+        'geocode_error' => 'Address not found',
+        'search_results' => 'Search results',
+        'no_results' => 'No results',
+        'coordinates_set' => 'Coordinates set',
+    ],
 ];

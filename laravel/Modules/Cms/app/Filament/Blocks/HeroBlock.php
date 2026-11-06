@@ -11,7 +11,6 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 class HeroBlock extends XotBaseBlock
 {
-    #[\Override]
     public static function getBlockSchema(): array
     {
         return [

@@ -1,3 +1,12 @@
+---
+title: "Completamento Traduzioni Password - 2025"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "completamento traduzioni password - 2025 user"
+status: superseded
+superseded_by: password_translation_completion.md
+---
 # Completamento Traduzioni Password - 2025
 
 ## Problema Identificato
@@ -103,8 +112,8 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 
 ## Collegamenti
 
-- [Documentazione Modulo User](../readme.md)
-- [Best Practices Traduzioni](../../lang/docs/translation_standards.md)
+- [Documentazione Modulo User](../README.md)
+- [Best Practices Traduzioni](../../Lang/docs/translation_standards.md)
 - [Sicurezza Password](../security/password_policies.md)
 
 ## Note per il Futuro
@@ -115,4 +124,5 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 4. **Usare icone e colori appropriati** per l'UX
 
 ---
+*Ultimo aggiornamento: 2025-01-06*
 *Autore: Sistema di Audit Traduzioni*

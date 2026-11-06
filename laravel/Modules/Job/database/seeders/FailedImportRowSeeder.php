@@ -9,7 +9,5 @@ use Illuminate\Database\Seeder;
 /** Stub parità entità — regola 1 modello = 1 seeder. Dati da factory/test/runtime. */
 class FailedImportRowSeeder extends Seeder
 {
-    public function run(): void
-    {
-    }
+    public function run(): void {}
 }

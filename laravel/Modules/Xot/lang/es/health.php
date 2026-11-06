@@ -31,4 +31,9 @@ return [
     ],
     'actions' => [
     ],
+    'page' => [
+        'last_check' => [
+            'label' => 'Última comprobación',
+        ],
+    ],
 ];

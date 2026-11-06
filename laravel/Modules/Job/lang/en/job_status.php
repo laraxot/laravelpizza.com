@@ -131,7 +131,12 @@ return [
         'job_stopped' => 'Monitoraggio del job fermato',
         'job_exported' => 'Dati esportati correttamente',
     ],
-    'title' => 'job status',
+    'title' => 'Job status',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'widget' => [
+        'heading' => 'Job status',
+        'queue_connection' => 'Queue connection',
+        'dummy_action' => '1000 Dummy Action',
+    ],
 ];

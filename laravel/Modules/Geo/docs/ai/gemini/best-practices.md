@@ -1,7 +1,18 @@
+---
+title: "best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices Gemini Code Assist per PTVX
 
 ---
-
 ## Principi Fondamentali
 
 Stessi principi di Claude Code. Vedi [Best Practices Claude](../claude/best-practices.md) per dettagli.

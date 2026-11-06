@@ -1,3 +1,15 @@
+---
+title: "design comuni argomenti"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni argomenti"
+issues: []
+discussions: []
+status: draft
+---
+
 # Design Comuni Argomenti
 
 ## Source Of Truth
@@ -29,4 +41,4 @@ Nel JSON sono stati allineati i blocchi a questa sequenza:
 
 ## Linked Theme Report
 
-- [argomenti-parity-2026-04-02.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/argomenti-parity-2026-04-02.md)
+- [argomenti-parity-2026-04-02.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/argomenti-parity.md)

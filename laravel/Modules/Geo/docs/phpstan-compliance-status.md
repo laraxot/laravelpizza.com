@@ -1,7 +1,22 @@
+---
+title: "phpstan compliance status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan compliance status"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Compliance Status
 
 
-**Status**: 🚧 REGRESSION DETECTED (8 errors found)
+**Last Updated**: 2026-06-09 (STORY-289)
+**Status**: ✅ FULLY COMPLIANT (0 errors, level max)
+
+Baseline STORY-289: 50 → 0. Generics Collection, rimossi phpstan-ignore in app/.
 
 ## Summary
 The Geo module was previously compliant with PHPStan Level 10 (as of [DATE]), but recent code additions have introduced **8 return type errors**. All errors are related to type narrowing and can be resolved with Assert statements and proper PHPDoc annotations.
@@ -55,10 +70,3 @@ To maintain PHPStan compliance:
 - [Location Services](location-services.md)
 - [Address Handling](address-handling.md)
 - [Map Integration](map-integration.md)
-
-## Aggiornamento 2026-07-06
-
-Rimossa la cartella duplicata non-PSR-4 `tests/fixtures/` (minuscola,
-duplicato byte-identico di `tests/Fixtures/` — il namespace dichiarato nei
-file richiede PascalCase). Rimossi anche i probe PHPStan morti in
-`tests/Fixtures/Traits/`. Ri-verificato a zero errori.

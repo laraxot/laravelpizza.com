@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione dei Conflitti Git nel Modulo Media"
+module: "Media"
+type: concept
+tags: [conflitti, merge, risolti]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflitti merge risolti"
+related:
+  - "./webm.md"
+status: draft
+---
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -14,7 +28,7 @@ Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, co
 
 ## Collegamenti alle Risoluzioni Specifiche
 
-- [Risoluzione conflitto VideoEntry](./risoluzione_conflitti_video_entry.md)
+- [Risoluzione conflitto VideoEntry](./risoluzione-conflitti-video-entry.md)
 - [Risoluzione conflitto MediaConvertResource](../../../../../docs/media_convert_resource_conflict.md)
 
 ## File Risolti
@@ -330,7 +344,7 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 
 **Problema**: Conflitto nell'implementazione del componente VideoEntry, con differenze nella gestione dei tipi e nella formattazione.
 
-**Soluzione**: È stata adottata l'implementazione più robusta con controlli di tipo completi e documentazione dettagliata, mantenendo la coerenza stilistica senza linee vuote superflue. Per dettagli completi, vedere [documentazione dedicata](./risoluzione_conflitti_video_entry.md).
+**Soluzione**: È stata adottata l'implementazione più robusta con controlli di tipo completi e documentazione dettagliata, mantenendo la coerenza stilistica senza linee vuote superflue. Per dettagli completi, vedere [documentazione dedicata](./risoluzione-conflitti-video-entry.md).
 
 ## Principi di Risoluzione Applicati
 
@@ -389,4 +403,4 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 
 ### Documentazione
 
-Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
+Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione-conflitti-ffmpeg.md).

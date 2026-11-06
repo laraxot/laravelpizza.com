@@ -1,3 +1,15 @@
+---
+title: "table columns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table columns"
+issues: []
+discussions: []
+status: draft
+---
+
 # Table Columns Components
 
 ## Overview
@@ -168,6 +180,14 @@ use Modules\UI\Filament\Tables\Columns\SelectStateColumn;
 - [Accessibility Guidelines](../accessibility.md)
 ---
 
+title: "table columns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table columns"
+issues: []
+discussions: []
 **Compatibility**: Filament 4.x, Laravel 11.x
 **Compatibility**: Filament 4.x, Laravel 11.x
 **Compatibility**: Filament 3.x, Laravel 10.x

@@ -1,3 +1,15 @@
+---
+title: "filament components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo dei Componenti Filament in il progetto
 > **Collegamenti correlati**
 > - [FILAMENT_COMPONENTS.md tema One](../../../../themes/one/project_docs/filament_components.md)
@@ -130,7 +142,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 - [Demo dei componenti](https://demo.filamentphp.com/)
 
 ## Collegamenti Bidirezionali
-- [README](readme.md) - Documentazione principale del modulo
+- [README](README.md) - Documentazione principale del modulo
 - [Integrazione Filament](filament-integration.md) - Integrazione con Filament
 - [Form Filament](filament-forms.md) - Sistema di form Filament
 - [Widget](filament-widgets-in-blade.md) - Utilizzo dei widget in Blade
@@ -145,8 +157,8 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 - [Convenzioni Namespace](convenzioni-namespace-filament.md) - Convenzioni di namespace
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 ## Collegamenti tra versioni di filament-components.md
-* [filament-components.md](laravel/modules/user/project_docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/modules/cms/project_docs/best-practices/filament-components.md)
+* [filament-components.md](../../User/docs/best-practices/filament-components.md)
+* [filament-components.md](best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/project_docs/filament-components.md)
 * [filament-components.md](laravel/project_docs/rules/filament-components.md)
 

@@ -1,3 +1,15 @@
+---
+title: "homepage struttura corretta"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage struttura corretta"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura e Contenuto Corretto dell'Homepage di il progetto
 
 ## Introduzione

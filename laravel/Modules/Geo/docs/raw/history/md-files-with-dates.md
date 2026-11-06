@@ -1,3 +1,14 @@
+---
+title: "md files with dates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "md files with dates"
+issues: []
+discussions: []
+---
+
 # File .md con Date nel Nome — Lista da Correggere
 
 > **Regola**: I nomi dei file `.md` NON devono contenere date.
@@ -10,6 +21,14 @@
 
 ---
 
+title: "md files with dates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "md files with dates"
+issues: []
+discussions: []
 ## Activity Module (5 file)
 
 | File con data (DA RINOMINARE) | Nome corretto suggerito |

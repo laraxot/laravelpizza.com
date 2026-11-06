@@ -1,3 +1,15 @@
+---
+title: "interfaces implementation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "interfaces implementation guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida all'Implementazione delle Interfacce nel Modulo Notify
 
 ## Struttura delle Interfacce
@@ -10,12 +22,12 @@ Le interfacce sono organizzate in due livelli:
 
 1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
    ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
+   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
    ```
 
 2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
    ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
    ```
 
 ### Convenzioni di Naming

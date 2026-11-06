@@ -1,3 +1,13 @@
+---
+title: "XotBaseServiceProvider: Architettura, Ruolo e Best Practice"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "XotBaseServiceProvider: Architettura, Ruolo e Best Practice"
+---
 # XotBaseServiceProvider: Architettura, Ruolo e Best Practice
 
 ## Ruolo della Classe
@@ -58,7 +68,7 @@ public function registerTranslations(): void
 - L’uso diretto di `module_path` può portare a divergenze, bug e difficoltà di manutenzione
 - Questa regola va rispettata anche da tutte le classi che estendono il provider
 
-**Backlink:** Vedi anche [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md)
+**Backlink:** Vedi anche [CONFLITTI_MERGE_RISOLTI.md](./conflitti_merge_risolti.md)
 
 ## Esempio di Override Sicuro
 ```php
@@ -79,9 +89,9 @@ class CustomModuleServiceProvider extends XotBaseServiceProvider
 - Evitare collisioni di prefissi tra moduli diversi.
 
 ## Collegamenti e Backlink
-- [COMPONENTI_PERSONALIZZATI.md](./COMPONENTI_PERSONALIZZATI.md) — Regole e path per Blade components modulari
-- [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md) — Tracciamento conflitti risolti su ServiceProvider
-- [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md) — Standardizzazione metodi colonne Filament
+- [COMPONENTI_PERSONALIZZATI.md](./COMPONENTI_PERSONALIZZATI.md): Regole e path per Blade components modulari
+- [CONFLITTI_MERGE_RISOLTI.md](./conflitti_merge_risolti.md): Tracciamento conflitti risolti su ServiceProvider
+- [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md): Standardizzazione metodi colonne Filament
 
 ---
 

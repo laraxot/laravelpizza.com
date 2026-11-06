@@ -29,7 +29,7 @@ class FormSearchAddressCategories extends Component
 
     public bool $showActivityTypes = false;
 
-    /** @var Collection<int, string> */
+    /** @var Collection<int, mixed> */
     public Collection $enabledTypes;
 
     public bool $warningSuggestedAddresses = false;
@@ -97,9 +97,7 @@ class FormSearchAddressCategories extends Component
         }
 
         // $this->enabledTypes = ActionService::getShopsCatsByCityLatLng($city, $lat, $lng);
-        /** @var Collection<int, string> $enabledTypes */
-        $enabledTypes = new Collection();
-        $this->enabledTypes = $enabledTypes;
+        $this->enabledTypes = collect([]);
 
         if ($this->enabledTypes->isEmpty()) {
             $this->dispatch('openModalNotServed');
@@ -146,13 +144,15 @@ class FormSearchAddressCategories extends Component
         $this->showActivityTypes = false;
 
         $decoded = json_decode($val0, true, 512, JSON_THROW_ON_ERROR);
+        $merged = $this->form_data;
         if (\is_array($decoded)) {
             foreach ($decoded as $key => $value) {
                 if (\is_string($key)) {
-                    $this->form_data[$key] = $value;
+                    $merged[$key] = $value;
                 }
             }
         }
+        $this->form_data = $merged;
         $this->form_data[$this->name] = $val0;
         $this->form_data[$this->name.'_value'] = $val1;
 

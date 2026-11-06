@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 return [
     'resource' => [
-        'name' => 'Canale di Notifica',
-    ],
+        'name' => 'Canale di Notifica'],
     'navigation' => [
         'group' => 'Sistema',
         'label' => 'Canali di Notifica',
         'icon' => 'notify-channel-animated',
         'sort' => '47',
-        'description' => 'Gestione dei canali di comunicazione per le notifiche',
-    ],
+        'description' => 'Gestione dei canali di comunicazione per le notifiche'],
     'fields' => [
         'name' => [
             'label' => 'Nome',
@@ -20,8 +18,7 @@ return [
             'placeholder' => 'es: Email Marketing',
             'help' => 'Inserisci un nome univoco per identificare il canale',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'driver' => [
             'label' => 'Driver',
             'tooltip' => 'Tipo di servizio utilizzato per l\'invio',
@@ -29,32 +26,24 @@ return [
             'options' => [
                 'mail' => [
                     'label' => 'Email',
-                    'tooltip' => 'Invio tramite server SMTP',
-                ],
+                    'tooltip' => 'Invio tramite server SMTP'],
                 'database' => [
                     'label' => 'Database',
-                    'tooltip' => 'Salvataggio nel database',
-                ],
+                    'tooltip' => 'Salvataggio nel database'],
                 'broadcast' => [
                     'label' => 'Broadcast',
-                    'tooltip' => 'Invio tramite websocket',
-                ],
+                    'tooltip' => 'Invio tramite websocket'],
                 'sms' => [
                     'label' => 'SMS',
-                    'tooltip' => 'Invio tramite gateway SMS',
-                ],
+                    'tooltip' => 'Invio tramite gateway SMS'],
                 'telegram' => [
                     'label' => 'Telegram',
-                    'tooltip' => 'Invio tramite bot Telegram',
-                ],
+                    'tooltip' => 'Invio tramite bot Telegram'],
                 'slack' => [
                     'label' => 'Slack',
-                    'tooltip' => 'Invio tramite webhook Slack',
-                ],
-            ],
+                    'tooltip' => 'Invio tramite webhook Slack']],
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'configuration' => [
             'label' => 'Configurazione',
             'tooltip' => 'Parametri di configurazione del canale',
@@ -63,98 +52,77 @@ return [
                 'host' => [
                     'label' => 'Host',
                     'tooltip' => 'Indirizzo del server',
-                    'placeholder' => 'es: smtp.gmail.com',
-                ],
+                    'placeholder' => 'es: smtp.gmail.com'],
                 'port' => [
                     'label' => 'Porta',
                     'tooltip' => 'Porta di connessione',
-                    'placeholder' => 'es: 587',
-                ],
+                    'placeholder' => 'es: 587'],
                 'username' => [
                     'label' => 'Username',
                     'tooltip' => 'Nome utente per l\'autenticazione',
-                    'placeholder' => 'es: user@example.com',
-                ],
+                    'placeholder' => 'es: user@example.com'],
                 'password' => [
                     'label' => 'Password',
                     'tooltip' => 'Password per l\'autenticazione',
-                    'help' => 'La password verrà criptata prima del salvataggio',
-                ],
+                    'help' => 'La password verrà criptata prima del salvataggio'],
                 'encryption' => [
                     'label' => 'Crittografia',
                     'tooltip' => 'Metodo di crittografia',
                     'options' => [
                         'tls' => [
                             'label' => 'TLS',
-                            'tooltip' => 'Transport Layer Security',
-                        ],
+                            'tooltip' => 'Transport Layer Security'],
                         'ssl' => [
                             'label' => 'SSL',
-                            'tooltip' => 'Secure Sockets Layer',
-                        ],
-                    ],
-                ],
+                            'tooltip' => 'Secure Sockets Layer']]],
                 'from_address' => [
                     'label' => 'Indirizzo mittente',
                     'tooltip' => 'Indirizzo email del mittente',
-                    'placeholder' => 'es: noreply@example.com',
-                ],
+                    'placeholder' => 'es: noreply@example.com'],
                 'from_name' => [
                     'label' => 'Nome mittente',
                     'tooltip' => 'Nome visualizzato del mittente',
-                    'placeholder' => 'es: Sistema Notifiche',
-                ],
+                    'placeholder' => 'es: Sistema Notifiche'],
                 'api_key' => [
                     'label' => 'API Key',
                     'tooltip' => 'Chiave API per l\'autenticazione',
-                    'help' => 'Chiave fornita dal servizio per l\'autenticazione',
-                ],
+                    'help' => 'Chiave fornita dal servizio per l\'autenticazione'],
                 'api_secret' => [
                     'label' => 'API Secret',
                     'tooltip' => 'Chiave segreta API',
-                    'help' => 'Non condividere mai questa chiave',
-                ],
+                    'help' => 'Non condividere mai questa chiave'],
                 'bot_token' => [
                     'label' => 'Token Bot',
                     'tooltip' => 'Token del bot Telegram',
-                    'help' => 'Ottieni il token da @BotFather su Telegram',
-                ],
+                    'help' => 'Ottieni il token da @BotFather su Telegram'],
                 'chat_id' => [
                     'label' => 'ID Chat',
                     'tooltip' => 'ID della chat Telegram',
-                    'help' => 'ID del gruppo o canale Telegram',
-                ],
+                    'help' => 'ID del gruppo o canale Telegram'],
                 'webhook_url' => [
                     'label' => 'URL Webhook',
                     'tooltip' => 'URL per le chiamate webhook',
-                    'placeholder' => 'es: https://hooks.slack.com/services/...',
-                ],
-            ],
+                    'placeholder' => 'es: https://hooks.slack.com/services/...']],
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'is_default' => [
             'label' => 'Predefinito',
             'tooltip' => 'Imposta come canale predefinito',
             'help' => 'Il canale predefinito verrà utilizzato quando non specificato diversamente',
             'helper_text' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'is_enabled' => [
             'label' => 'Abilitato',
             'tooltip' => 'Stato di attivazione del canale',
             'help' => 'Disabilita temporaneamente il canale senza eliminarlo',
             'helper_text' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'test_connection' => [
             'label' => 'Testa connessione',
             'tooltip' => 'Verifica la configurazione del canale',
             'icon' => 'heroicon-o-signal',
-            'color' => 'info',
-        ],
+            'color' => 'info'],
         'send_test' => [
             'label' => 'Invia test',
             'tooltip' => 'Invia un messaggio di test',
@@ -164,28 +132,19 @@ return [
                 'title' => 'Conferma test',
                 'message' => 'Vuoi inviare un messaggio di test?',
                 'confirm' => 'Sì, invia',
-                'cancel' => 'No, annulla',
-            ],
-        ],
-    ],
+                'cancel' => 'No, annulla']]],
     'messages' => [
         'connection_success' => [
             'title' => 'Connessione Riuscita',
-            'message' => 'La connessione al canale è stata stabilita con successo',
-        ],
+            'message' => 'La connessione al canale è stata stabilita con successo'],
         'connection_failed' => [
             'title' => 'Errore di Connessione',
-            'message' => 'Impossibile connettersi al canale: :error',
-        ],
+            'message' => 'Impossibile connettersi al canale: :error'],
         'test_sent' => [
             'title' => 'Test Inviato',
-            'message' => 'Il messaggio di test è stato inviato con successo',
-        ],
+            'message' => 'Il messaggio di test è stato inviato con successo'],
         'test_failed' => [
             'title' => 'Errore Test',
-            'message' => 'Impossibile inviare il messaggio di test: :error',
-        ],
-    ],
+            'message' => 'Impossibile inviare il messaggio di test: :error']],
     'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-];
+    'plural_label' => 'Missing Plural label'];

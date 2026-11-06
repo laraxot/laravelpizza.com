@@ -1,3 +1,28 @@
+---
+title: "Lezioni Apprese dall'Errore Gravissimo delle Factory"
+type: concept
+tags: [factory, lessons, learned]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "factory-lessons-learned lezioni apprese dall'errore gravissimo delle factory"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Lezioni Apprese dall'Errore Gravissimo delle Factory
 
 ## L'Errore Gravissimo
@@ -155,4 +180,3 @@ done
 **🚨 ERRORE GRAVISSIMO DA NON RIPETERE MAI PIÙ**
 
 Ogni model DEVE avere la sua factory. È obbligatorio per il corretto funzionamento del sistema.
-

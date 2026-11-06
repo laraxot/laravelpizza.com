@@ -171,52 +171,12 @@ return [
             'confirm' => 'Sei sicuro di voler uscire?',
         ],
     ],
-    'navigation' => [
-        'name' => 'Widgets',
-        'plural' => 'Widgets',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
+    'user_widget' => [
+        'start_date' => [
+            'label' => 'Data di inizio:',
         ],
-        'label' => 'Widgets',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'label' => 'Widgets',
-    'plural_label' => 'Widgets (Plurale)',
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-            'helper_text' => '',
-            'description' => '',
+        'end_date' => [
+            'label' => 'Data di fine:',
         ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Widgets',
-        ],
-        'edit' => [
-            'label' => 'Modifica Widgets',
-        ],
-        'delete' => [
-            'label' => 'Elimina Widgets',
-        ],
-    ],
-    'users_chart' => [
-        'heading' => 'Log Accessi',
-        'label' => 'Numero di accessi eseguiti',
     ],
 ];

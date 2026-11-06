@@ -1,3 +1,23 @@
+---
+title: "Schema Conventions in Notify Module"
+type: concept
+tags: [notify, docs, best-practices, schema, conventions]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices schema conventions schema conventions in notify module frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: draft
+---
 # Schema Conventions in Notify Module
 
 ## Field Definitions
@@ -54,9 +74,10 @@ Here's a complete example of a properly formatted schema:
 ### Versione HEAD
 
 ```
-## Collegamenti tra versioni di schema_conventions.md
-* [schema_conventions.md](docs/schema_conventions.md)
-* [schema_conventions.md](../../../Notify/docs/schema_conventions.md)
+## Collegamenti tra versioni di schema-conventions.md
+* [schema-conventions.md](docs/schema-conventions.md)
+* [schema-conventions.md](../schema-conventions.md)
+* [schema-conventions.md](../../../Notify/docs/schema-conventions.md)
 
 
 ### Versione Incoming
@@ -65,3 +86,5 @@ Here's a complete example of a properly formatted schema:
 
 ---
 
+
+```

@@ -21,6 +21,7 @@ use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasRelationshipModelClass;
 use Modules\Xot\Filament\Traits\HasXotTable;
@@ -38,11 +39,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     }
 
     /**
-     * @param array<string, bool|float|int|string|null> $params
+     * @param  array<string, bool|float|int|string|null>  $params
      */
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
-        return static::$resource::trans($key, $exceptionIfNotExist, $params);
+        return static::getResourceClass()::trans($key, $exceptionIfNotExist, $params);
     }
 
     protected static string $relationship = '';
@@ -57,7 +58,23 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      */
     public function getResource(): string
     {
-        if (isset(static::$resource) && \is_string(static::$resource) && '' !== static::$resource) {
+        return static::getResourceClass();
+    }
+
+    /**
+     * La classe Resource genitrice, derivata dal namespace del RelationManager e
+     * memoizzata in `static::$resource`.
+     *
+     * Statica e non `getResource()` (di istanza) perché serve anche a `trans()`,
+     * chiamato durante la build delle azioni tabella in un ciclo Livewire in cui
+     * `static::$resource` non è ancora inizializzata — la proprietà tipata senza
+     * default lanciava «must not be accessed before initialization».
+     *
+     * @return class-string<XotBaseResource>
+     */
+    protected static function getResourceClass(): string
+    {
+        if (isset(static::$resource) && static::$resource !== '') {
             return static::$resource;
         }
 
@@ -76,7 +93,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         Assert::true(class_exists($resource), 'Resource class does not exist: '.$resource);
         Assert::true(is_subclass_of($resource, XotBaseResource::class), 'Resource must extend XotBaseResource: '.$resource);
 
-        /* @var class-string<XotBaseResource> $resource */
+        /** @var class-string<XotBaseResource> $resource */
         static::$resource = $resource;
 
         return static::$resource;
@@ -106,11 +123,18 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     /** @return array<int|string, Component> */
     public function getFormSchema(): array
     {
-        return $this->getResource()::getFormSchema();
+        $class = $this->getResource()::getFormClass();
+        $instance = app($class);
+        Assert::isInstanceOf($instance, XotBaseResourceForm::class);
+
+        /** @var XotBaseResourceForm $instance */
+        return $instance->getFormSchema();
     }
 
     /**
      * @return array<int|string, Column|LayoutComponent>
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */
     #[\Override]
     protected function getTableColumns(): array
@@ -179,6 +203,8 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      * richiede che questo metodo sia pubblico.
      *
      * @return array<string, Action>
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */
     public function getTableActions(): array
     {
@@ -187,7 +213,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['edit'] = EditAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-                if (null === $record) {
+                if ($record === null) {
                     return false;
                 }
 
@@ -197,7 +223,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['detach'] = DetachAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-                if (null === $record) {
+                if ($record === null) {
                     return false;
                 }
 
@@ -213,6 +239,8 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      * CRITICO: Deve essere PUBLIC per Filament InteractsWithTable.
      *
      * @return array<string, BulkAction>
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */
     public function getTableBulkActions(): array
     {
@@ -235,6 +263,8 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      * CRITICO: Deve essere PUBLIC per Filament InteractsWithTable.
      *
      * @return array<string, Action>
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */
     public function getTableHeaderActions(): array
     {
@@ -254,6 +284,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $actions;
     }
 
+    /**
+     * @return array<string|int, \Filament\Tables\Filters\BaseFilter>
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
+     */
     public function getTableFilters(): array
     {
         return [];
@@ -267,9 +302,9 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     /**
      * Determine if the bulk delete action can be performed on the given record.
      */
-    public function canDeleteBulk(Model|\stdClass|null $record): bool
+    public function canDeleteBulk(Model|stdClass|null $record): bool
     {
-        if ($record instanceof \stdClass) {
+        if ($record instanceof stdClass) {
             // For stdClass records (lightweight bulk operations), allow by default
             return true;
         }
@@ -280,9 +315,9 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     /**
      * Determine if the bulk detach action can be performed on the given record.
      */
-    public function canDetachBulk(Model|\stdClass|null $record): bool
+    public function canDetachBulk(Model|stdClass|null $record): bool
     {
-        if ($record instanceof \stdClass) {
+        if ($record instanceof stdClass) {
             // For stdClass records (lightweight bulk operations), allow by default
             return true;
         }

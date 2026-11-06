@@ -13,7 +13,7 @@ class MailTemplateInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'mailable' => TextEntry::make('mailable'),
@@ -26,7 +26,6 @@ class MailTemplateInfolist extends XotBaseResourceInfolist
             'sms_template' => TextEntry::make('sms_template'),
             'whatsapp_template' => TextEntry::make('whatsapp_template'),
             'params' => TextEntry::make('params'),
-            'counter' => TextEntry::make('counter'),
-        ];
+            'counter' => TextEntry::make('counter')];
     }
 }

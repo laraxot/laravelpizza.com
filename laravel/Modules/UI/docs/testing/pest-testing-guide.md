@@ -1,3 +1,15 @@
+---
+title: "pest testing guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pest testing guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pest Testing Guide - UI Module
 
 ## 🎯 Overview
@@ -349,6 +361,5 @@ Based on existing UI module tests:
 - [CategoryTabsComponentTest.php](../../tests/Feature/CategoryTabsComponentTest.php)
 
 ---
-
 **Status**: ✅ PRODUCTION READY
 **Coverage**: UI Components + Business Logic + Service Integration

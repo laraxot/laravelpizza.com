@@ -1,3 +1,15 @@
+---
+title: "feature sections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "feature sections"
+issues: []
+discussions: []
+status: draft
+---
+
 # Feature Sections Block
 
 Il blocco Feature Sections è utilizzato per presentare le caratteristiche principali di un servizio o prodotto in una griglia di sezioni con icone.
@@ -79,5 +91,5 @@ Builder::make('content')
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Heroicons](https://heroicons.com/)

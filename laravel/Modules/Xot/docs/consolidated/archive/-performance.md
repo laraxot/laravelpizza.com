@@ -1,3 +1,11 @@
+---
+title: "_performance"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_performance xot"
+---
 # _performance
 
 <!-- Contenuto migrato da _docs/_performance.txt -->

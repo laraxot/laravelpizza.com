@@ -1,3 +1,14 @@
+---
+title: "set profile"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "set profile"
+issues: []
+discussions: []
+---
+
 <purpose>
 Switch the model profile used by GSD agents. Controls which Claude model each agent uses, balancing quality vs token spend.
 </purpose>

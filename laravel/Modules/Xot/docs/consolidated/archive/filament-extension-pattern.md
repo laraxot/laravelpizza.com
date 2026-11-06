@@ -1,3 +1,11 @@
+---
+title: "pattern di estensione filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pattern di estensione filament xot"
+---
 # pattern di estensione filament
 
 ## regola fondamentale

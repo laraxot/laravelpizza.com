@@ -7,7 +7,8 @@ namespace Modules\Gdpr\Filament\Widgets\Auth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Validation\Rules\Password;
 use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
 use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
@@ -27,31 +28,75 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class RegisterWidget extends XotBaseWidget
 {
-    #[Validate('accepted', message: '')]
+    /** Tentativi per indirizzo IP in `DECAY_SECONDS`: il login ha 5 in 60 s per email+IP (G-07); qui il modulo e' lungo e un IP condiviso (un ufficio) non deve restare bloccato. */
+    private const int MAX_ATTEMPTS = 10;
+
+    private const int DECAY_SECONDS = 600;
+
     public bool $privacy_accepted = false;
 
-    #[Validate('accepted', message: '')]
     public bool $terms_accepted = false;
 
     public bool $marketing_consent = false;
 
     // Form fields for custom Blade view
-    #[Validate('required|string|min:2|max:255')]
     public string $first_name = '';
 
-    #[Validate('required|string|min:2|max:255')]
     public string $last_name = '';
 
-    #[Validate('required|email|max:255|unique:user.users,email')]
     public string $email = '';
 
-    #[Validate('required|string')]
     public string $password = '';
 
-    #[Validate('required|string|same:password')]
     public string $password_confirmation = '';
 
     public bool $show_password = false;
+
+    /**
+     * Regole in un solo punto. La password segue `Password::defaults()` (lunghezza, maiuscole, numeri, simboli: `PasswordData`);
+     * le due caselle obbligatorie hanno il messaggio tradotto, non quello generico con il nome del campo.
+     *
+     * @return array<string, array<int, mixed>|string>
+     */
+    protected function rules(): array
+    {
+        return [
+            'first_name' => 'required|string|min:2|max:255',
+            'last_name' => 'required|string|min:2|max:255',
+            'email' => 'required|email|max:255|unique:user.users,email',
+            'password' => ['required', 'string', Password::defaults()],
+            'password_confirmation' => 'required|string|same:password',
+            'privacy_accepted' => 'accepted',
+            'terms_accepted' => 'accepted',
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    protected function messages(): array
+    {
+        return [
+            'privacy_accepted.accepted' => __('gdpr::register.consents.privacy_policy_required'),
+            'terms_accepted.accepted' => __('gdpr::register.consents.terms_required'),
+        ];
+    }
+
+    /**
+     * Nome del campo nei messaggi di errore: la stessa etichetta che si vede sopra il campo, nella lingua della pagina
+     * ("Il campo Nome e' obbligatorio"), non l'attributo tecnico ("first name"), DCP-290 (FO-5-11).
+     *
+     * @return array<string, string>
+     */
+    protected function validationAttributes(): array
+    {
+        $attributes = [];
+        foreach (['first_name', 'last_name', 'email', 'password', 'password_confirmation'] as $field) {
+            $attributes[$field] = __('gdpr::register.fields.'.$field.'.label');
+        }
+
+        return $attributes;
+    }
 
     public static function canView(): bool
     {
@@ -63,6 +108,9 @@ class RegisterWidget extends XotBaseWidget
         return 'filament.widgets.auth.register';
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getFormSchema(): array
     {
         // Not used - custom Blade view handles form rendering
@@ -71,6 +119,15 @@ class RegisterWidget extends XotBaseWidget
 
     public function submit(): void
     {
+        // Ogni invio conta, valido o no: serve a frenare chi riempie il modulo in serie
+        $throttleKey = 'register|'.request()->ip();
+        if (RateLimiter::tooManyAttempts($throttleKey, self::MAX_ATTEMPTS)) {
+            $this->addError('email', __('gdpr::register.throttle', ['seconds' => RateLimiter::availableIn($throttleKey)]));
+
+            return;
+        }
+        RateLimiter::hit($throttleKey, self::DECAY_SECONDS);
+
         // Validate form data using Livewire attributes
         $this->validate();
 
@@ -106,7 +163,7 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
-     * @param array<string, mixed> $formData
+     * @param  array<string, mixed>  $formData
      */
     protected function logRegistrationAttempt(array $formData): void
     {

@@ -1,3 +1,15 @@
+---
+title: "sms config structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms config structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura della Configurazione SMS 
 
 ## Introduzione
@@ -56,7 +68,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
         // Credenziali e parametri di connessione
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-'sender' => env('NETFUN_SENDER', 'Quaeris'),
+        'sender' => env('NETFUN_SENDER', 'SaluteOra'),
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
         
         // Configurazioni avanzate specifiche per Netfun
@@ -113,7 +125,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
     'netfun' => [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-'sender' => env('NETFUN_SENDER', 'Quaeris'),
+        'sender' => env('NETFUN_SENDER', 'SaluteOra'),
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
         
         // Solo configurazioni veramente specifiche per Netfun
@@ -149,15 +161,10 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ## Collegamenti
 
+- [Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
+- [Provider SMS Supportati](./notifications/SMS_PROVIDER_CONFIGURATION.md)
 - [Configurazione Netfun](./netfun_config_requirements.md)
 - [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
 
 ---
-
-- [Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
-- [Provider SMS Supportati](./notifications/SMS_PROVIDER_CONFIGURATION.md)
-
----
-
-*Ultimo aggiornamento: 2025-05-12*
 *Ultimo aggiornamento: 2025-05-12*

@@ -20,6 +20,7 @@ enum NotificationLogStatusEnum: string implements HasColor, HasIcon, HasLabel
     use EnumTrait;
 
     case PENDING = 'pending';
+    case PROCESSING = 'processing';
     case SENT = 'sent';
     case DELIVERED = 'delivered';
     case FAILED = 'failed';

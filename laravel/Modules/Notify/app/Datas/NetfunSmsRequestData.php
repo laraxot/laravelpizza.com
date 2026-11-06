@@ -10,6 +10,7 @@ class NetfunSmsRequestData extends Data
 {
     /**
      * @param  array<int, array<string, mixed>>  $messages
+     * @return void
      */
     public function __construct(
         public string $token,

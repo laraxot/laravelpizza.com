@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class MediasTable extends XotBaseResourceTable
@@ -16,7 +17,7 @@ class MediasTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'id' => IDColumn::make('id')->searchable()->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
             'file_name' => TextColumn::make('file_name')->searchable(),
             'mime_type' => TextColumn::make('mime_type')->searchable(),

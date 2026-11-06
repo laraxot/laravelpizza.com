@@ -1,3 +1,15 @@
+---
+title: "project docs curated"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project docs curated"
+issues: []
+discussions: []
+status: draft
+---
+
 # Project Docs Curated Map (Codex)
 
 Questa mappa e una vista operativa "figlia" della documentazione ufficiale del progetto.

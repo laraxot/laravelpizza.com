@@ -1,3 +1,24 @@
+---
+title: "Convenzioni di Namespace nel Modulo User"
+type: concept
+tags: [namespace, conventions]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "namespace-conventions convenzioni di namespace nel modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Convenzioni di Namespace nel Modulo User
 
 ## Principi Fondamentali

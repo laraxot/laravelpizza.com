@@ -1,6 +1,13 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "openrouter context compression"
+issues: []
+discussions: []
 title: OpenRouter Context Compression Plugin
 type: concept
+status: draft
 ---
 
 # OpenRouter — Context Compression Plugin

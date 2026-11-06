@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Spatie Laravel Translatable"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+  - "../italian-text-refined-audit-report.md"
+status: draft
+---
 # Spatie Laravel Translatable
 
 Questa documentazione descrive l'implementazione e l'utilizzo del pacchetto `spatie/laravel-translatable` nel progetto, un potente strumento per la gestione di contenuti multilingua nei modelli Eloquent.

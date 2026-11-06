@@ -16,7 +16,7 @@ class AuthenticationLogInfolist extends XotBaseResourceInfolist
      *
      * Campi basati sul Model AuthenticationLog.php -> id, authenticatable_type, authenticatable_id, ip_address, user_agent, login_at, login_successful, logout_at, cleared_by_user, location
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

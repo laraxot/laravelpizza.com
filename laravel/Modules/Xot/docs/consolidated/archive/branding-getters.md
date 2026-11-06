@@ -1,3 +1,11 @@
+---
+title: "Regole per Getter di Branding in Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per getter di branding in xot xot"
+---
 # Regole per Getter di Branding in Xot
 
 ## Regola Fondamentale

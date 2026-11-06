@@ -1,3 +1,11 @@
+---
+title: "_stats"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_stats xot"
+---
 # _stats
 
 <!-- Contenuto migrato da _docs/_stats.txt -->

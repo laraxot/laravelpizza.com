@@ -1,4 +1,16 @@
-# Struttura di Configurazione nei Moduli Quaeris
+---
+title: "config structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "config structure"
+issues: []
+discussions: []
+status: draft
+---
+
+# Struttura di Configurazione nei Moduli SaluteOra
 
 ## Principi di Configurazione
 

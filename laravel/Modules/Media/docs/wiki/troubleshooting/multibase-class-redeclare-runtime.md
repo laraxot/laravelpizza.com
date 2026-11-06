@@ -1,4 +1,7 @@
 ---
+qmd: "multibase class redeclare runtime"
+issues: []
+discussions: []
 title: "Ri-dichiarazione classe PHP con due basi _bases contemporanee"
 type: troubleshooting
 confidence: high
@@ -9,6 +12,7 @@ related:
   - ../concepts/second-brain-local-discipline.md
   - ../concepts/context-overflow-prevention.md
   - ../../README.md
+status: draft
 ---
 
 # FatalError: Cannot redeclare class (path mix `base_*_fila5`)

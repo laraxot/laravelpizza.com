@@ -1,3 +1,15 @@
+---
+title: "workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workflow"
+issues: []
+discussions: []
+status: draft
+---
+
 # Workflow (Claude)
 
 ## Operating mode
@@ -40,3 +52,4 @@ When file access is restricted:
 - [Claude docs index](./context.md)
 - [PHPStan workflow prompt](../../../tools/prompts/05-phpstan-patterns.md)
 - [General docs](../../../../docs/index.md)
+- [General docs](../../../../../docs/index.md)

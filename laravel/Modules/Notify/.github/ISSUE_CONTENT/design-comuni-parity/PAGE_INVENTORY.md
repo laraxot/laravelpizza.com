@@ -1,3 +1,14 @@
+---
+title: "PAGE INVENTORY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PAGE INVENTORY"
+issues: []
+discussions: []
+---
+
 # Design Comuni Pages - Conversion Inventory
 
 **Reference:** https://italia.github.io/design-comuni-pagine-statiche/sito/

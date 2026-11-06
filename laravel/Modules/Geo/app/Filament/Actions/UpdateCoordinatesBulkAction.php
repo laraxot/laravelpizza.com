@@ -8,6 +8,7 @@ use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Geo\Actions\UpdateCoordinatesAction;
 use Modules\Geo\Models\Place;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
 
 /**
@@ -132,7 +133,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
                 $action->execute($record);
                 ++$successCount;
             } catch (\Throwable $e) {
-                $errors->push(sprintf('Place #%s: %s', (string) $record->getKey(), $e->getMessage()));
+                $errors->push(sprintf('Place #%s: %s', SafeStringCastAction::cast($record->getKey()), $e->getMessage()));
             }
         }
 

@@ -1,3 +1,15 @@
+---
+title: "geocoding advanced"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geocoding advanced"
+issues: []
+discussions: []
+status: draft
+---
+
 # Task: Geocoding and Mapping Advanced - Geo
 
 **Modulo**: Geo  

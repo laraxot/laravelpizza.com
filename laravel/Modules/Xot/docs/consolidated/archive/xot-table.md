@@ -1,3 +1,11 @@
+---
+title: "HasXotTable Trait per Filament in Laraxot PTVX"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "hasxottable trait per filament in laraxot ptvx xot"
+---
 # HasXotTable Trait per Filament in Laraxot PTVX
 
 ## Panoramica

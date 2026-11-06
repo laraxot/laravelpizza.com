@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Current State - Media"
+module: "Media"
+type: concept
+tags: [01, current, state]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "01 current state"
+related:
+  - "./webm.md"
+status: superseded
+superseded_by: current-state.md
+---
 # Current State - Media
 
 ## Baseline

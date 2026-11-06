@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules"
+issues: []
+discussions: []
 title: Configurazione modules.php
 description: Configurazione modules.php
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Configurazione modules.php {#configurazione-modules-php}

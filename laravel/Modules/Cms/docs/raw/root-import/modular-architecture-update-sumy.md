@@ -1,3 +1,14 @@
+---
+title: "modular architecture update sumy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modular architecture update sumy"
+issues: []
+discussions: []
+---
+
 # 🏗️ RIEPILOGO AGGIORNAMENTO: Regole Architetturali Modulari
 
 ## PRINCIPIO FONDAMENTALE CRISTALLIZZATO
@@ -223,6 +234,14 @@ Questa correzione è **CRITICA** per l'integrità architettuale del sistema.
 
 ---
 
+title: "modular architecture update sumy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modular architecture update sumy"
+issues: []
+discussions: []
 **Questa regola è ora SUPREMA e ha precedenza su qualsiasi altra considerazione architettuale.**
 
 **Data implementazione**: Gennaio 2025  

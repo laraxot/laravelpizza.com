@@ -1,3 +1,15 @@
+---
+title: "roadmap q1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap q1"
+issues: []
+discussions: []
+status: draft
+---
+
 # Cms Module - Content Management Roadmap
 
 **Data**: 2026-01-31
@@ -6,7 +18,6 @@
 **Obiettivo**: 100% completamento con advanced blocks, SEO e versioning
 
 ---
-
 ## 📊 Stato Attuale
 
 ### Completamento Globale: **75%**

@@ -1,23 +1,28 @@
+---
+title: "Implementazione del Selettore di Lingua con Bandiere SVG"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione del selettore di lingua con bandiere svg user"
+---
 # Implementazione del Selettore di Lingua con Bandiere SVG
 
 ## Collegamenti correlati
-- [README modulo User](./readme.md)
-- [Convenzioni Path](./path_conventions.md)
-- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
-- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar_implementation.md)
 - [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Convenzioni Path](./path_conventions.md)
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
 
-Questo documento descrive come migliorare il selettore di lingua nell'header di Quaeris utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
+Questo documento descrive come migliorare il selettore di lingua nell'header di SaluteOra utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
 
 ## Utilizzo delle Bandiere SVG
 
-Le bandiere SVG sono disponibili in `/var/www/html/Quaeris/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+Le bandiere SVG sono disponibili in `/var/www/html/saluteora/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
 
 ### Come Funziona la Registrazione
 

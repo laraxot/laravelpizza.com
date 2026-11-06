@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
-            Test Invio Telegram
+            {{ __('notify::send_telegram.sections.page.title') }}
         </x-slot>
 
         <x-slot name="description">
-            Utilizza questo form per testare l'invio di messaggi Telegram tramite diversi provider.
+            {{ __('notify::send_telegram.sections.page.description') }}
         </x-slot>
 
         {{ $this->telegramForm }}
@@ -18,7 +17,7 @@ declare(strict_types=1);
         <x-slot name="footer">
             <div class="flex items-center justify-end gap-x-3">
                 <x-filament::button wire:click="sendTelegram" type="submit" color="primary">
-                    Invia Telegram
+                    {{ __('notify::telegram.actions.send') }}
                 </x-filament::button>
             </div>
         </x-slot>

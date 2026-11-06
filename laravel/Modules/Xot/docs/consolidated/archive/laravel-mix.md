@@ -1,3 +1,11 @@
+---
+title: "laravel_mix"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "laravel_mix xot"
+---
 # laravel_mix
 
 <!-- Contenuto migrato da _docs/laravel_mix.txt -->

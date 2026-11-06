@@ -1,3 +1,15 @@
+---
+title: "filament integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione con Filament V3
 
 ## Componenti Filament nel CMS
@@ -125,14 +137,14 @@ public function test_filament_components_rendering()
 
 ## Collegamenti
 
-- [Documentazione CMS](../readme.md)
+- [Documentazione CMS](../README.md)
 - [Best Practices](../best_practices/theme-reusability.md)
 - [Configurazione](../config.md)
 - [Testing](../testing.md)
 
 ## Collegamenti Bidirezionali
-- [README](readme.md) - Documentazione principale del modulo
-- [Architettura](architecture.md) - Architettura del sistema CMS
+- [README](README.md) - Documentazione principale del modulo
+- [Architettura](frontoffice/architecture.md) - Architettura del sistema CMS
 - [Componenti](filament-components.md) - Componenti Filament
 - [Form](filament-forms.md) - Sistema di form
 - [Resources](filament-resources.md) - Gestione risorse
@@ -149,7 +161,7 @@ public function test_filament_components_rendering()
 - [Testing](../testing.md) 
 
 ## Collegamenti tra versioni di filament-integration.md
-* [filament-integration.md](laravel/modules/xot/project_docs/laraxot/filament-integration.md)
+* [filament-integration.md](../../Xot/docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/modules/cms/project_docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](laravel/modules/cms/project_docs/filament-integration.md)
 

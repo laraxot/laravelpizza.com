@@ -1,8 +1,20 @@
-# Convenzioni dei Path in Laravel e Quaeris
+---
+title: "laravel path conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel path conventions"
+issues: []
+discussions: []
+status: draft
+---
+
+# Convenzioni dei Path in Laravel e SaluteOra
 
 ## Regole Fondamentali per i Path di Cartelle
 
-In Laravel e Quaeris, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
+In Laravel e SaluteOra, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
 
 ## Cartelle Standard di Laravel e loro Casing Corretto
 
@@ -24,13 +36,13 @@ In Laravel e Quaeris, i nomi delle cartelle principali (come definite nella stru
 Le viste in Laravel devono essere collocate nella cartella `resources/views` (lowercase):
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/resources/views/
+/var/www/html/saluteora/laravel/Modules/Notify/resources/views/
 ```
 
 **NON** in:
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/Resources/views/
+/var/www/html/saluteora/laravel/Modules/Notify/Resources/views/
 ```
 
 ## Perché è Importante
@@ -49,7 +61,7 @@ Quando si fa riferimento a viste nei file PHP:
 protected static string $view = 'notify::filament.pages.send-sms';
 
 // Il path fisico corrispondente sarà:
-// /var/www/html/Quaeris/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php
+// /var/www/html/saluteora/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php
 ```
 
 ## Verifica e Correzione

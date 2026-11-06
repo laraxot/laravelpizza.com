@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Notifications\Notification;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Modules\Activity\Support\ActivityLogSchema;
+use Illuminate\Support\Facades\Route;
+use Modules\Activity\Actions\Schema\IsActivityLogSchemaWritableAction;
+use Modules\User\Actions\Auth\ConsumeAuthSubmissionSlotAction;
+use Modules\User\Enums\AuthThrottleScope;
 use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 use Webmozart\Assert\Assert;
@@ -64,23 +66,33 @@ class RegisterWidget extends XotBaseSchemaWidget
 
     public function submit(): void
     {
+        // Freno per IP e per email PRIMA di validare (SEC-012): senza, la registrazione crea utenti all'infinito e la regola
+        // `unique` sull'email diventa una query per ogni invio.
+        $typed = is_array($this->data) && is_string($this->data['email'] ?? null) ? $this->data['email'] : '';
+        $secondsToWait = app(ConsumeAuthSubmissionSlotAction::class)->execute(AuthThrottleScope::Register, $typed, request()->ip());
+        if ($secondsToWait > 0) {
+            $this->addError('data.email', __('user::throttle.auth_form.retry.message', ['seconds' => $secondsToWait]));
+
+            return;
+        }
+
         /** @var array<string, mixed> $data */
         $data = $this->form->getState();
 
         $userClass = XotData::make()->getUserClass();
 
-        $user = DB::transaction(function () use ($data, $userClass): Authenticatable {
+        $user = DB::transaction(function () use ($data, $userClass): UserContract {
             $firstName = is_string($data['first_name'] ?? null) ? trim($data['first_name']) : '';
             $lastName = is_string($data['last_name'] ?? null) ? trim($data['last_name']) : '';
             $name = trim($firstName.' '.$lastName);
             $email = is_string($data['email'] ?? null) ? trim($data['email']) : '';
 
             $user = $userClass::create(array_merge($data, [
-                'name' => '' !== $name ? $name : $email,
+                'name' => $name !== '' ? $name : $email,
                 'email_verified_at' => null,
             ]));
 
-            if (ActivityLogSchema::isWritable()) {
+            if (app(IsActivityLogSchemaWritableAction::class)->execute()) {
                 activity()
                     ->causedBy($user)
                     ->performedOn($user)
@@ -88,10 +100,10 @@ class RegisterWidget extends XotBaseSchemaWidget
                         'ip_address' => request()->ip(),
                         'user_agent' => request()->userAgent(),
                     ])
-                    ->log('User registered via RegisterWidget');
+                    ->log(__('user::activity.log_registered'));
             }
 
-            Assert::isInstanceOf($user, Authenticatable::class);
+            Assert::isInstanceOf($user, UserContract::class);
 
             return $user;
         });
@@ -99,9 +111,9 @@ class RegisterWidget extends XotBaseSchemaWidget
         $this->handleSuccessfulRegistration($user);
     }
 
-    protected function handleSuccessfulRegistration(Authenticatable $user): void
+    protected function handleSuccessfulRegistration(UserContract $user): void
     {
-        if (config('auth.must_verify_email') && $user instanceof MustVerifyEmail) {
+        if (config('auth.must_verify_email')) {
             $user->sendEmailVerificationNotification();
         }
 
@@ -112,7 +124,7 @@ class RegisterWidget extends XotBaseSchemaWidget
             ->success()
             ->send();
 
-        $redirectUrl = \Illuminate\Support\Facades\Route::has('dashboard')
+        $redirectUrl = Route::has('dashboard')
             ? route('dashboard')
             : url('/'.app()->getLocale());
 

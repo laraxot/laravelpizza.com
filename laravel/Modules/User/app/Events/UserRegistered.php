@@ -21,16 +21,15 @@ class UserRegistered
     /**
      * Create a new event instance.
      *
-     * @param User                 $user      The newly created user
-     * @param array<string, mixed> $formData  Raw form data from registration
-     * @param string|null          $ipAddress IP address of the registrant
-     * @param string|null          $userAgent User agent of the registrant
+     * @param  User  $user  The newly created user
+     * @param  array<string, mixed>  $formData  Raw form data from registration
+     * @param  string|null  $ipAddress  IP address of the registrant
+     * @param  string|null  $userAgent  User agent of the registrant
      */
     public function __construct(
         public User $user,
         public array $formData,
         public ?string $ipAddress = null,
         public ?string $userAgent = null,
-    ) {
-    }
+    ) {}
 }

@@ -47,17 +47,12 @@ class LocationForm
                 ->label('geo::fields.province.label')
                 ->placeholder('geo::fields.province.placeholder')
                 ->options(function (Get $get): array {
-                    if (! filled($get('region'))) {
+                    $region = $get('region');
+                    if (! is_string($region) || ! filled($region)) {
                         return [];
                     }
 
-                    $options = [];
-                    foreach (ComuneJson::byRegion((string) $get('region')) as $row) {
-                        /* @var array{provincia: array{codice: string, nome: string}} $row */
-                        $options[$row['provincia']['codice']] = $row['provincia']['nome'];
-                    }
-
-                    return $options;
+                    return ComuneJson::getProvincesByRegion($region)->toArray();
                 })
                 ->searchable()
                 ->required()
@@ -68,12 +63,13 @@ class LocationForm
                 ->label('geo::fields.city.label')
                 ->placeholder('geo::fields.city.placeholder')
                 ->options(function (Get $get): array {
-                    if (! filled($get('province'))) {
+                    $province = $get('province');
+                    if (! is_string($province) || ! filled($province)) {
                         return [];
                     }
 
                     /** @var Collection<int, array{cap: array<int, string>, nome: string}> $cities */
-                    $cities = ComuneJson::byProvince((string) $get('province'));
+                    $cities = ComuneJson::byProvince($province);
 
                     return $cities->pluck('nome', 'nome')->toArray();
                 })
@@ -86,12 +82,14 @@ class LocationForm
                 ->label('geo::fields.cap.label')
                 ->placeholder('geo::fields.cap.placeholder')
                 ->options(function (Get $get): array {
-                    if (! filled($get('province')) || ! filled($get('city'))) {
+                    $province = $get('province');
+                    $city = $get('city');
+                    if (! is_string($province) || ! filled($province) || ! is_string($city) || ! filled($city)) {
                         return [];
                     }
 
                     /** @var Collection<int, array{cap: array<int, string>, nome: string}> $cities */
-                    $cities = ComuneJson::byProvince((string) $get('province'))->where('nome', (string) $get('city'));
+                    $cities = ComuneJson::byProvince($province)->where('nome', $city);
 
                     if ($cities->isEmpty()) {
                         return [];

@@ -1,3 +1,14 @@
+---
+title: "plan milestone gaps"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "plan milestone gaps"
+issues: []
+discussions: []
+---
+
 <purpose>
 Create all phases necessary to close gaps identified by `/gsd-audit-milestone`. Reads MILESTONE-AUDIT.md, groups gaps into logical phases, creates phase entries in ROADMAP.md, and offers to plan each phase. One command creates all fix phases — no manual `/gsd-add-phase` per gap.
 </purpose>
@@ -104,6 +115,14 @@ These gaps are optional. Include them?
 
 ---
 
+title: "plan milestone gaps"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "plan milestone gaps"
+issues: []
+discussions: []
 Create these {X} phases? (yes / adjust / defer all optional)
 ```
 

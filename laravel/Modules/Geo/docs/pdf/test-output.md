@@ -1,6 +1,18 @@
-
+---
+title: "test output"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test output"
+issues: []
+discussions: []
+status: superseded
+superseded_by: test-v1.md
 ---
 
+
+---
 # Pagina 1
 
 EVENT SOURCING

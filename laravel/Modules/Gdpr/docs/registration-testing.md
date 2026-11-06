@@ -1,3 +1,15 @@
+---
+title: "registration testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "registration testing"
+issues: []
+discussions: []
+status: draft
+---
+
 # Feature Testing: User Registration
 
 This document outlines the approach and rationale behind the feature tests implemented for the user registration process within the `Gdpr` module. These tests ensure the robustness and correctness of the registration flow, especially concerning user data validation, password security, and GDPR consent handling.

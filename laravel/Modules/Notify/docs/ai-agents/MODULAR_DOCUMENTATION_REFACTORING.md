@@ -1,3 +1,15 @@
+---
+title: "MODULAR DOCUMENTATION REFACTORING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "MODULAR DOCUMENTATION REFACTORING"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📚 MODULAR DOCUMENTATION REFACTORING REPORT
 
 **Data**: 2026-03-20  
@@ -5,7 +17,6 @@
 **Principio**: "Boy Scout Rule - Lascia i file migliori di come li hai trovati"
 
 ---
-
 ## 🎯 OBIETTIVO
 
 Organizzare la documentazione AI agents in file modulari più piccoli e gestibili, con collegamenti bidirezionali.
@@ -93,7 +104,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 
 ### Da File Originali a Moduli
 ```markdown
-# AGENTS.md (compatto)
+# agents.md (compatto)
 ## Contenuto Diviso
 | Sezione | File |
 |---------|------|
@@ -106,7 +117,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ```markdown
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
-- [AGENTS.md](../../AGENTS.md) - File originale compatto
+- [agents.md](../../agents.md) - File originale compatto
 - [QWEN.md](../../QWEN.md) - Contesto Qwen Code
 ```
 

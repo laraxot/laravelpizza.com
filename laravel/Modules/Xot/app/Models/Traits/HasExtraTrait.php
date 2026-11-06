@@ -8,19 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\ExtraContract;
-
-use function Safe\json_encode;
-
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_encode;
 
 /**
  * Modules\Xot\Models\HasExtraTrait.
  *
- * @property string             $currency
- * @property float              $price
- * @property string             $price_complete
- * @property int                $qty
+ * @property string $currency
+ * @property float $price
+ * @property string $price_complete
+ * @property int $qty
  * @property ExtraContract|null $extra
  */
 trait HasExtraTrait
@@ -49,7 +48,7 @@ trait HasExtraTrait
         return $this->morphOne($extraClass, 'model');
     }
 
-    /** @return array<string, mixed>|bool|float|int|string|null */
+    /** @return array<array-key, mixed>|bool|float|int|string|null */
     public function getExtra(string $name): array|bool|float|int|string|null
     {
         $extra = $this->extra;
@@ -65,16 +64,8 @@ trait HasExtraTrait
         $value = $attributes->get($name);
 
         if (\is_array($value)) {
-            $result = [];
-            foreach ($value as $key => $item) {
-                if (! \is_string($key)) {
-                    continue;
-                }
-
-                $result[$key] = $item;
-            }
-
-            return $result;
+            // Liste e mappe restano com'erano: il round-trip di setExtra non deve perdere elementi.
+            return $value;
         }
 
         if (\is_bool($value) || \is_float($value) || \is_int($value) || \is_string($value)) {
@@ -85,9 +76,11 @@ trait HasExtraTrait
     }
 
     /**
-     * @param int|float|string|array<string, mixed>|bool|null $value
+     * Persist a schemaless attribute on the related Extra model.
+     *
+     * @param  array<string, mixed>|bool|float|int|string|null  $value
      */
-    public function setExtra(string $name, int|float|string|array|bool|null $value): void
+    public function setExtra(string $name, array|bool|float|int|string|null $value): void
     {
         $extra = $this->extra;
         if (! $extra instanceof ExtraContract || ! $extra instanceof Model) {

@@ -1,3 +1,15 @@
+---
+title: "chaos monkey checklist"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "chaos monkey checklist"
+issues: []
+discussions: []
+status: draft
+---
+
 # Chaos monkey checklist (cms)
 
 ## Scopo

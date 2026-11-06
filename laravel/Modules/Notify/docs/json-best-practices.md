@@ -1,3 +1,16 @@
+---
+qmd: "json best practices"
+issues: []
+discussions: []
+title: "Best Practices per Migrazioni JSON"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Best Practices per Migrazioni JSON
 
 ## Introduzione
@@ -207,6 +220,7 @@ protected function rollback(): void
 ## Collegamenti Correlati
 
 - [Documentazione Migrazioni](./migration_rules.md)
+- [Documentazione Migrazioni](./migration-rules.md)
 - [Gestione Errori](./error_handling.md)
 - [Best Practices Database](./database_best_practices.md)
 

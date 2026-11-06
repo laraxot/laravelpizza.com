@@ -1,8 +1,14 @@
 <?php
 
 declare(strict_types=1);
+use Modules\User\Models\OauthAuthCode;
+use Modules\User\Models\OauthClient;
+use Modules\User\Models\OauthDeviceCode;
+use Modules\User\Models\OauthPersonalAccessClient;
+use Modules\User\Models\OauthRefreshToken;
+use Modules\User\Models\OauthToken;
 
-/**
+/*
  * Configurazione Laravel Passport per il modulo User.
  *
  * Questa configurazione centralizza tutte le impostazioni di Passport,
@@ -68,7 +74,7 @@ return [
     | Configurazione del modello Client personalizzato.
     |
     */
-    'client_model' => Modules\User\Models\OauthClient::class,
+    'client_model' => OauthClient::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -79,10 +85,10 @@ return [
     |
     */
     'models' => [
-        'token' => Modules\User\Models\OauthToken::class,
-        'refresh_token' => Modules\User\Models\OauthRefreshToken::class,
-        'auth_code' => Modules\User\Models\OauthAuthCode::class,
-        'personal_access_client' => Modules\User\Models\OauthPersonalAccessClient::class,
-        'device_code' => Modules\User\Models\OauthDeviceCode::class,
+        'token' => OauthToken::class,
+        'refresh_token' => OauthRefreshToken::class,
+        'auth_code' => OauthAuthCode::class,
+        'personal_access_client' => OauthPersonalAccessClient::class,
+        'device_code' => OauthDeviceCode::class,
     ],
 ];

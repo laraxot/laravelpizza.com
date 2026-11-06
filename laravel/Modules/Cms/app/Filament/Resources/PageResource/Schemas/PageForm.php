@@ -18,12 +18,12 @@ class PageForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'title' => TextInput::make('title')
                 ->required()
-                ->lazy()
+                ->live(onBlur: true)
                 ->afterStateUpdated(static function (Set $set, Get $get, string $state): void {
                     if ($get('slug')) {
                         return;

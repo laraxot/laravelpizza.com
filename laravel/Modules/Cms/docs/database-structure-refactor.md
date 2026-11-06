@@ -1,4 +1,8 @@
 ---
+created: 2026-09-26
+qmd: "database structure refactor"
+issues: []
+discussions: []
 title: "Database Structure Refactor — Lowercase Folder Compliance"
 type: refactor-log
 date: 2026-07-01

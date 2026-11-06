@@ -1,3 +1,15 @@
+---
+title: "ui components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui components"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti UI - Modulo UI
 
 ## Panoramica
@@ -182,4 +194,3 @@ return [
 - [**Personalizzazioni Filament**](../filament/filament-customizations.md)
 
 ---
-

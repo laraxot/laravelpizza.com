@@ -1,3 +1,13 @@
+---
+title: "Test del Modulo Performance"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, testing]
+qmd: "Test del Modulo Performance"
+---
 # Test del Modulo Performance
 
 ## Struttura dei Test
@@ -241,11 +251,11 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class TestCase extends BaseTestCase
 {
     use RefreshDatabase;
-
+    
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         // Setup comune per tutti i test
         $this->seed(PerformanceSeeder::class);
     }
@@ -271,18 +281,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
-
+      
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-
+          
       - name: Install Dependencies
         run: composer install --prefer-dist --no-progress
-
+        
       - name: Execute tests
         run: vendor/bin/phpunit --testsuite=Performance
 ```
@@ -295,4 +305,4 @@ php artisan test --coverage --min=80
 
 # Generare report HTML dettagliato
 XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html coverage
-```
+``` 

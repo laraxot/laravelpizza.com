@@ -42,10 +42,7 @@
   "autoload-dev": {
     "psr-4": {
       "Modules\\Notify\\Tests\\": "tests/"
-    },
-    "files": [
-      "tests/Support/helpers.php"
-    ]
+    }
   },
   "require": {
     "aws/aws-sdk-php": "*",
@@ -58,6 +55,7 @@
     "laravel-notification-channels/telegram": "*",
     "phpdocumentor/type-resolver": "*",
     "spatie/laravel-database-mail-templates": "*",
+    "spatie/laravel-queueable-action": "*",
     "symfony/http-client": "*",
     "symfony/postmark-mailer": "*"
   },

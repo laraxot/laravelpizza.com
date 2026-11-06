@@ -1,3 +1,11 @@
+---
+title: "Analisi e Risoluzione Colli di Bottiglia - Modulo Dental"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi e risoluzione colli di bottiglia - modulo dental xot"
+---
 # Analisi e Risoluzione Colli di Bottiglia - Modulo Dental
 
 ## 1. Odontogramma Performance (Priorità: Alta)

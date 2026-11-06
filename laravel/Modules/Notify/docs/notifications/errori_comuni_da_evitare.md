@@ -1,17 +1,29 @@
-# Errori Comuni da Evitare nelle Implementazioni di Moduli Quaeris
+---
+title: "errori comuni da evitare"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errori comuni da evitare"
+issues: []
+discussions: []
+status: draft
+---
+
+# Errori Comuni da Evitare nelle Implementazioni di Moduli <nome progetto>
 
 ## Errori di Struttura Directory e Namespace
 
 1. **Errore di Case nelle Directory**
-- ❌ ERRATO: `/var/www/html/Quaeris/laravel/Modules/Notify/App/Actions/`
-   - ✅ CORRETTO: `/var/www/html/Quaeris/laravel/Modules/Notify/app/Actions/`
-   
+   - ❌ ERRATO: `[project-root]/laravel/Modules/Notify/App/Actions/`
+   - ✅ CORRETTO: `[project-root]/laravel/Modules/Notify/app/Actions/`
+
    > Le directory standard di Laravel sono sempre in lowercase (`app`, `config`, `resources`, ecc.)
 
 2. **Errore di Namespace nei File**
    - ❌ ERRATO: `namespace Modules\Notify\App\Actions;`
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`
-   
+
    > Il namespace dipende dalla configurazione PSR-4 nel composer.json del modulo
 
 ## Errori di Configurazione
@@ -28,7 +40,7 @@
            'retry_attempts' => 3,  // ERRORE: Duplicazione
        ],
    ],
-   
+
    // CORRETTO
    'drivers' => [
        'provider' => [
@@ -55,7 +67,7 @@
    public function execute() {
        $timeout = 30; // Hardcoded
    }
-   
+
    // CORRETTO
    public function execute() {
        $timeout = config('sms.timeout');

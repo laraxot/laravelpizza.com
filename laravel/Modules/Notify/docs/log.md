@@ -1,3 +1,16 @@
+---
+qmd: "log"
+issues: []
+discussions: []
+title: "Wiki Log"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Wiki Log
 
 Registro cronologico delle operazioni sulla wiki.
@@ -23,6 +36,7 @@ Quando esegui un'operazione:
 ## [2026-04-15] bootstrap | Initial Wiki Setup
 
 - Creato schema [[.schema/WIKI_SCHEMA.md]]
+- Creato schema [[.schema/wiki-schema.md]]
 - Creato [[wiki/index.md]] con struttura
 - Create cartelle `wiki/` e `raw/` per:
   - Root `docs/`

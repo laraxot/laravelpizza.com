@@ -1,3 +1,11 @@
+---
+title: "Laravel XOT Architecture Documentation"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "laravel xot architecture documentation xot"
+---
 # Laravel XOT Architecture Documentation
 
 ## Overview

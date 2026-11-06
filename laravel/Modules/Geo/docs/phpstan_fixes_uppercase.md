@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes uppercase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes uppercase"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Fixes for Geo Module
 
 This document outlines the PHPStan-related fixes and improvements made to the Geo module to ensure type safety and code quality at PHPStan level 9.

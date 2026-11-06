@@ -1,4 +1,17 @@
-# Base Fixcity Fila5 — PROJECT.md
+---
+title: "PROJECT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PROJECT"
+issues: []
+discussions: []
+status: superseded
+superseded_by: project.md
+---
+
+# Base Fixcity Fila5: PROJECT.md
 
 ## Context
 Laravel + Filament v5 modular monolith (Laraxot architecture).
@@ -6,7 +19,7 @@ Theme: Sixteen (Bootstrap Italia → Tailwind parity).
 Frontend wizard: Ticket creation wizard via `CreateTicketWizardWidget` (Filament v5 Schemas).
 
 ## Current Milestone
-**M0: Fixcity Ticket Wizard — Visual & HTML Parity** ✅ DONE
+**M0: Fixcity Ticket Wizard: Visual & HTML Parity** ✅ DONE
 
 Target: `segnalazione-crea` wizard page → 90%+ parity with Design Comuni `segnalazione-02-dati.html`
 
@@ -23,8 +36,8 @@ Target: `segnalazione-crea` wizard page → 90%+ parity with Design Comuni `segn
   - 3 sections: Luogo, Disservizio, Autore
   - Grid 3-col for author data (name, fiscal code, phone)
   - TextEntry with icons for read-only author info
-- **Phase 4**: Responsive parity — pending
-- **Phase 5**: Multilingual verification — IT/EN translations verified
+- **Phase 4**: Responsive parity: pending
+- **Phase 5**: Multilingual verification: IT/EN translations verified
 
 ## Rules
 - Filament Schemas = unified system (v5). Forms + Infolists coexist.

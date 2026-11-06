@@ -8,8 +8,7 @@ use Modules\Notify\Enums\TelegramDriverEnum;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
-
+uses(TestCase::class);
 it('has correct cases', function (): void {
     Assert::assertCount(3, TelegramDriverEnum::cases());
 
@@ -52,12 +51,11 @@ it('get default returns default driver', function (): void {
 
     $default = TelegramDriverEnum::getDefault();
 
-    Assert::assertInstanceOf(TelegramDriverEnum::class, $default);
     Assert::assertContains($default, TelegramDriverEnum::cases());
 });
 
 it('each case has unique value', function (): void {
-    $values = array_map(static fn ($case) => $case->value, TelegramDriverEnum::cases());
+    $values = array_map(static fn (TelegramDriverEnum $case): string => $case->value, TelegramDriverEnum::cases());
     $uniqueValues = array_unique($values);
 
     Assert::assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
@@ -68,7 +66,7 @@ it('cases returns all enum instances', function (): void {
     Assert::assertCount(3, $cases);
 
     foreach ($cases as $case) {
-        Assert::assertInstanceOf(TelegramDriverEnum::class, $case);
+        Assert::assertNotSame('', $case->value);
     }
 });
 

@@ -1,3 +1,15 @@
+---
+title: "notification behavior"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification behavior"
+issues: []
+discussions: []
+status: draft
+---
+
 # Notification System Behavior
 
 ## Notification Channels Behavior

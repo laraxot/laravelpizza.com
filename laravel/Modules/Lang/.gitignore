@@ -1,171 +1,178 @@
-# ==============================================
-# LARAXOT MODULE LANG - .GITIGNORE
-# Modulo Lang Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# ==============================================
 
+._*
 # ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-vendor/
-node_modules/
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-bootstrap/compiled.php
+*~BASE
+*~HEAD
+*~headagentdb.rvf
+*~LOCAL
+*~REMOTE
+/.ai*
+app/Phpstan/
 app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
+archive/
+audit-coverage/
+*.backup
+*.backup_*
+*.backup-*
+*.backup.*
+# BACKUP FILES
+*.bak
+*.bakcup
+/bashscripts
+/_bmad
+bootstrap/compiled.php
+build/
+# BUILD & COMPILED FILES
+*.cache
+cache/
+# CACHE & TEMPORARY FILES
+# Cache traduzioni
+.claude-audit
+composer.lock
+config/development.php
+config/local.php
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+.cursor/
+/.cursor
+/.cursor/
+.cursor~*
+database/Factories_old/
+database/Migrations/
+database/migrations/Migrations/
+database/Migrations_old/
+database_old/
+database/Seeders_old/
+# DEPENDENCIES & PACKAGES
+.devcontainer/
+# DEVELOPMENT TOOLS
+dist/
+_docs
+_docs/
+/_docs
+docs/**/*-[0-9].md
+/docs/archive
+docs/_archive
+docs/_archive/
+docs/archive
+docs/archive/
+docs/archive/**
+docs/cache/
+/docs/legacy
+docs/legacy
+docs/phpstan/
+# DOCUMENTATION CACHE
+.DS_Store
+.DS_Store?
+ehthumbs.db
+# END OF LANG .GITIGNORE
 .env
 .env.*
 !.env.example
-
-# ==============================================
 # ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-.vagrant/
-.idea/
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
+error_log
+*.fila2
+# File configurazione locale
+# FILE SPECIFICI DEL PROGETTO
+# File temporanei di traduzione
+# File test traduzioni
 .git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
+.git-rewrite/
+# GIT SPECIFIC
+Homestead.json
+Homestead.yaml
+.idea/
+*.jar
+lang/drafts/
+lang/exports/
+lang/lang/
+lang/temp/
+lang_test_data.json
+laravel
+# LARAVEL SPECIFIC
+# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+# LARAXOT MODULE LANG - .GITIGNORE
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+legacy/
+lerna-debug.log*
+# Local vector DB (agent tooling)
+*.lock
+*.log
+# LOG FILES
+# MODULE ROOT FORBIDDEN DIRS
+# MODULE SPECIFIC - LANG
+# Modulo Lang Laraxot - Template standardizzato
+*.new
+node_modules/
+npm-debug.log
+npm-debug.log*
 *.old
 *.old1
 *.old2
-*.backup
-*.backup.*
-*.backup-*
-*.backup_*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-docs/archive/
-docs/archive/**
-
-# ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
+*.orig
+package-lock.json
+packages/lara-zeus/
+*.phar
+.php-cs-fixer.cache
+/phpinsights.php
+phpinsights.php
+.phpintel
+phpmd*
+phpmd.ruleset.xml
+phpstan*
+phpstan-baseline.neon
+.phpstorm.meta.php
+.phpunit.result.cache
+public/hot
+public_html
+public_html/hot
+public_html/storage
+public/storage
+/rector.php
+rector.php
+*.rej
 resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-
-# ==============================================
-# MODULE SPECIFIC - LANG
-# ==============================================
-# File configurazione locale
-config/local.php
-config/development.php
-
-# Cache traduzioni
+# Root quality tool configs forbidden in module root
+ruvector.db
+.Spotlight-V100
+*.stackdump
+storage/*.key
 storage/lang/
 storage/translations/
-
-# File temporanei di traduzione
-lang/temp/
-lang/drafts/
-lang/exports/
-
-# File test traduzioni
-lang_test_data.json
+*.swo
+*.swp
+# SYSTEM FILES
+tests/AuditCoverage/
 test_translations.sql
+Thumbs.db
+*.tmp
+.Trashes
+# Ultimo aggiornamento: 2025-01-31
+v8-compile-cache-*
+.vagrant/
+vendor/
+.vscode/
+/.vscode
+/.vscode/
+.windsurf/
+/.windsurf
+/.windsurf/
+.windsurf~*
+workbench
+yarn-error.log
+yarn-error.log*
+yarn.lock
+*:Zone.Identifier
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+.claude/
+.claude-audit/
+test-results/
+lang.code-workspace
 
-# ==============================================
-# FILE SPECIFICI DEL PROGETTO
-# ==============================================
-*.fila2
-laravel
-public_html
-
-# ==============================================
-# END OF LANG .GITIGNORE
-# ==============================================
-lang/lang/
-_docs/
-_docs/
-packages/lara-zeus/
-
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~headagentdb.rvf
+# module-root-hygiene (story module-root-hygiene)
+/.github/skills/
+docs/graphify
+resources/lang
+.merge_file_*

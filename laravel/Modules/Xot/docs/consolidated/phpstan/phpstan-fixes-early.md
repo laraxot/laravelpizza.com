@@ -1,3 +1,11 @@
+---
+title: "Correzioni PHPStan - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "correzioni phpstan - modulo xot xot"
+---
 # Correzioni PHPStan - Modulo Xot
 
 Questo documento traccia gli errori PHPStan identificati nel modulo Xot e le relative soluzioni implementate.

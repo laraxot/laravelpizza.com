@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use InvalidArgumentException;
+use Modules\AI\Datas\AIConfigData;
 use Modules\AI\Datas\PredictionData;
 use RuntimeException;
 use Safe\DateTime;
@@ -167,14 +168,10 @@ PROMPT;
         $rawApiKey = config('services.openai.api_key');
         $apiKey = is_string($rawApiKey) ? $rawApiKey : '';
 
-        $rawModel = config('ai.model', 'gpt-3.5-turbo-instruct');
-        $model = is_string($rawModel) ? $rawModel : 'gpt-3.5-turbo-instruct';
-
-        $rawTemperature = config('ai.temperature', 0.7);
-        $temperature = is_numeric($rawTemperature) ? (float) $rawTemperature : 0.7;
-
-        $rawMaxTokens = config('ai.max_tokens', 1500);
-        $maxTokens = is_numeric($rawMaxTokens) ? (int) $rawMaxTokens : 1500;
+        $settings = AIConfigData::make();
+        $model = $settings->model;
+        $temperature = $settings->temperature;
+        $maxTokens = $settings->max_tokens;
 
         return [
             'apiKey' => $apiKey,

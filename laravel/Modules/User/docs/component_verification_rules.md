@@ -1,3 +1,12 @@
+---
+title: "Regole per la Verifica dei Componenti Blade"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "regole per la verifica dei componenti blade user"
+status: superseded
+superseded_by: component-verification.md
+---
 # Regole per la Verifica dei Componenti Blade
 
 ## ERRORE CRITICO DA NON RIPETERE MAI

@@ -1,3 +1,11 @@
+---
+title: "Regole per i Prompt"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per i prompt xot"
+---
 # Regole per i Prompt
 
 ## Regola Universale

@@ -7,7 +7,6 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Modules\Geo\Database\Factories\ComuneFactory;
-use Modules\Geo\Models\Traits\HasPlaceTrait;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -82,7 +81,6 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Comune extends BaseModel
 {
-    use HasPlaceTrait;
     use SushiToJson;
 
     public string $jsonDirectory = '';
@@ -129,7 +127,9 @@ class Comune extends BaseModel
         return module_path('Geo', 'resources/json/comuni.json');
     }
 
-    /** @return array<int, array<string, mixed>> */
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public function getRows(): array
     {
         return $this->getSushiRows();
@@ -138,31 +138,55 @@ class Comune extends BaseModel
     /**
      * Get all regions.
      *
-     * @return Collection<int, string>
+     * @return Collection<int, array<array-key, mixed>>
      */
     public static function getRegioni(): Collection
     {
-        /* @phpstan-ignore return.type */
-        return static::all()
-            ->pluck('regione')
+        $regioni = [];
+
+        foreach (static::all() as $comune) {
+            $regione = $comune->regione;
+            if (! is_array($regione)) {
+                continue;
+            }
+
+            $regioni[] = $regione;
+        }
+
+        /** @var Collection<int, array<array-key, mixed>> $result */
+        $result = collect($regioni)
             ->unique()
             ->sort()
             ->values();
+
+        return $result;
     }
 
     /**
      * Get all provinces for a region.
      *
-     * @return Collection<int, string>
+     * @return Collection<int, array<array-key, mixed>>
      */
     public static function getProvinceByRegione(string $regione): Collection
     {
-        /* @phpstan-ignore return.type */
-        return static::where('regione', $regione)
-            ->pluck('provincia')
+        $province = [];
+
+        foreach (static::where('regione', $regione)->get() as $comune) {
+            $provincia = $comune->provincia;
+            if (! is_array($provincia)) {
+                continue;
+            }
+
+            $province[] = $provincia;
+        }
+
+        /** @var Collection<int, array<array-key, mixed>> $result */
+        $result = collect($province)
             ->unique()
             ->sort()
             ->values();
+
+        return $result;
     }
 
     /**
@@ -172,8 +196,10 @@ class Comune extends BaseModel
      */
     public static function getComuniByProvincia(string $provincia): Collection
     {
-        /* @phpstan-ignore return.type */
-        return static::where('provincia', $provincia)->orderBy('nome')->get();
+        /** @var Collection<int, static> $comuni */
+        $comuni = static::where('provincia', $provincia)->orderBy('nome')->get();
+
+        return $comuni;
     }
 
     /**
@@ -183,11 +209,13 @@ class Comune extends BaseModel
      *
      * @return static|null The found comune or null if not found
      */
-    public static function findByNome(string $nome): ?self
+    public static function findByNome(string $nome): ?static
     {
-        /* @phpstan-ignore return.type */
-        return static::all()
-            ->first(fn ($comune) => strtolower($comune->nome ?? '') === strtolower($nome));
+        /** @var static|null $comune */
+        $comune = static::all()
+            ->first(fn (self $item): bool => strtolower($item->nome ?? '') === strtolower($nome));
+
+        return $comune;
     }
 
     /**
@@ -199,21 +227,36 @@ class Comune extends BaseModel
      */
     public static function findByCap(string $cap): Collection
     {
-        /* @phpstan-ignore return.type */
-        return static::where('cap', 'like', "%{$cap}%")->get();
+        /** @var Collection<int, static> $comuni */
+        $comuni = static::where('cap', 'like', "%{$cap}%")->get();
+
+        return $comuni;
     }
 
     /**
      * Find a city by ID.
      *
-     * @return array{id: int, nome: string, provincia: string, regione: string, cap: string, codice_catastale: string, popolazione: int, altitudine: int, superficie: float, lat: float, lng: float, zona_altimetrica: string}|null
+     * @return array<string, mixed>|null
      */
     public static function findComune(int $id): ?array
     {
         $comune = static::query()->where('id', $id)->first();
 
-        /* @phpstan-ignore return.type */
-        return $comune ? $comune->toArray() : null;
+        if (! $comune instanceof self) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $data */
+        $data = [];
+        foreach ($comune->toArray() as $key => $value) {
+            if (! is_string($key)) {
+                continue;
+            }
+
+            $data[$key] = $value;
+        }
+
+        return $data;
     }
 
     /**

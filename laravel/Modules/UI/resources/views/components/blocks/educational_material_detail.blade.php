@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props(['material'])
 
@@ -57,7 +56,7 @@ declare(strict_types=1);
     <!-- Risorse Aggiuntive -->
     @if($material->attachments->count() > 0)
         <div class="mt-8 border-t pt-6">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">Risorse Aggiuntive</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('ui::blocks_educational_materials.detail.risorse_aggiuntive.title') }}</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 @foreach($material->attachments as $attachment)
                     <a href="{{ $attachment->url }}" 
@@ -74,7 +73,7 @@ declare(strict_types=1);
     
     <!-- Condivisione -->
     <div class="mt-8 border-t pt-6">
-        <h3 class="text-lg font-medium text-gray-900 mb-4">Condividi</h3>
+        <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('ui::blocks_educational_materials.detail.condividi.title') }}</h3>
         <div class="flex space-x-4">
             <a href="#" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Facebook</span>

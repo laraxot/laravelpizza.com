@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'name' => 'Xot',
     'description' => 'Modulo base con funzionalità core e utilities',
-    'icon' => 'heroicon-o-cube',
+    'icon' => 'xot-icon',
     'navigation' => [
         'enabled' => true,
         'sort' => 110,

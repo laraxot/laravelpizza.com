@@ -8,8 +8,8 @@ declare(strict_types=1);
         {{ $pageContent['error'] }}
         @if(isset($pageContent['file']) && isset($pageContent['line']))
             <div class="mt-2">
-                <strong>File:</strong> {{ $pageContent['file'] }}
-                <strong>Line:</strong> {{ $pageContent['line'] }}
+                <strong>{{ __('cms::page_blocks.error.file.label') }}</strong> {{ $pageContent['file'] }}
+                <strong>{{ __('cms::page_blocks.error.line.label') }}</strong> {{ $pageContent['line'] }}
             </div>
         @endif
     </div>

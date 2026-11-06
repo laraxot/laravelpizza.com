@@ -6,6 +6,7 @@ namespace Modules\Cms\Filament\Fields;
 
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Notifications\Notification;
 use Modules\UI\Actions\Block\GetAllBlocksAction;
 use Modules\Xot\Datas\ComponentFileData;
 use Spatie\LaravelData\DataCollection;
@@ -38,7 +39,6 @@ class PageContentBuilder
         foreach ($blocks as $block) {
             Assert::isInstanceOf($block, ComponentFileData::class, '['.__LINE__.']['.__FILE__.']');
             $class = $block->class;
-            $blockInstance = null;
 
             try {
                 $blockInstance = $class::make(
@@ -46,15 +46,16 @@ class PageContentBuilder
                     context: $context,
                 );
             } catch (\Error $e) {
-                if (app()->environment('testing')) {
-                    continue;
+                if (! app()->environment('testing')) {
+                    report($e);
+                    Notification::make()
+                        ->danger()
+                        ->title(__('cms::page_content_builder.messages.block_unavailable.title'))
+                        ->body(__('cms::page_content_builder.messages.block_unavailable.body', ['block' => $block->name]))
+                        ->send();
                 }
 
-                dddx([
-                    'e' => $e->getMessage(),
-                    'block' => $block,
-                    'class' => $class,
-                ]);
+                continue;
             }
 
             Assert::isInstanceOf(

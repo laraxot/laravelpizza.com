@@ -1,3 +1,13 @@
+---
+title: "Panoramica del Progetto <nome progetto>"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, introduction]
+qmd: "Panoramica del Progetto <nome progetto>"
+---
 # Panoramica del Progetto <nome progetto>
 
 ## Cos'è <nome progetto>
@@ -128,4 +138,4 @@ Per contribuire al progetto:
 
 ## Licenza
 
-<nome progetto> è un software proprietario. Tutti i diritti riservati.
+<nome progetto> è un software proprietario. Tutti i diritti riservati. 

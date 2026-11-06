@@ -1,3 +1,14 @@
+---
+title: "agent teams workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent teams workflow"
+issues: []
+discussions: []
+---
+
 # Agent Teams Workflow - PTVX Project
 
 ## Overview
@@ -26,6 +37,14 @@ Sistema di agent teams per la gestione collaborativa del progetto **PTVX (Fila5 
 
 ---
 
+title: "agent teams workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent teams workflow"
+issues: []
+discussions: []
 ### Team 2: Custom Pages Agent
 
 **Responsabilità**:

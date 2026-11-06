@@ -1,3 +1,15 @@
+---
+title: "strict types implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "strict types implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione di strict_types nel Modulo UI
 
 ## Importanza di declare(strict_types=1)

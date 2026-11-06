@@ -1,3 +1,15 @@
+---
+title: "webpage schema governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "webpage schema governance"
+issues: []
+discussions: []
+status: draft
+---
+
 # WebPage Schema Governance
 
 ## Principio

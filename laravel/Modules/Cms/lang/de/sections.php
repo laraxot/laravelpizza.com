@@ -92,4 +92,9 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+    'preview' => [
+        'empty' => 'Für diesen Abschnitt ist kein Inhalt verfügbar',
+        'no_blocks' => 'Für diesen Abschnitt sind keine Blöcke konfiguriert',
+        'no_translation' => 'Für die aktuelle Sprache ist keine Übersetzung verfügbar',
+    ],
 ];

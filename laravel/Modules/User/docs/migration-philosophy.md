@@ -1,3 +1,28 @@
+---
+title: "Laraxot Migration Philosophy"
+type: concept
+tags: [migration, philosophy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration-philosophy laraxot migration philosophy"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Laraxot Migration Philosophy
 
 ## Core Principle: One Migration Per Table Per Module
@@ -86,4 +111,5 @@ Modules/User/database/migrations/
 
 ---
 
+**Remember**: In Laraxot philosophy, simplicity and clarity trump flexibility. One table, one migration, no exceptions.
 **Remember**: In Laraxot philosophy, simplicity and clarity trump flexibility. One table, one migration, no exceptions.

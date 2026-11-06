@@ -1,4 +1,17 @@
+---
+title: "roadmap documentation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap documentation"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📚 ROADMAP DOCUMENTAZIONE - FIXCITY PLATFORM
+# 📚 ROADMAP DOCUMENTAZIONE - NOTIFY PLATFORM
 
 **Versione**: 1.0  
 **Data Creazione**: Gennaio 2025  
@@ -7,6 +20,7 @@
 
 ## 🎯 Obiettivo
 Creare un ecosistema di documentazione completo, accessibile e mantenibile per tutti gli stakeholder del progetto FixCity.
+Creare un ecosistema di documentazione completo, accessibile e mantenibile per tutti gli stakeholder del progetto Notify.
 
 ## 📊 Stato Attuale
 - **Documentazione Moduli**: 60% completata
@@ -70,6 +84,7 @@ docs/
 - [x] **Xot**: Framework base (completato)
 - [x] **User**: Gestione utenti (completato)
 - [x] **Fixcity**: Core business (completato)
+- [x] **App**: Core business (completato)
 - [ ] **UI**: Componenti interfaccia
 - [ ] **Geo**: Gestione geografica
 - [ ] **Media**: Gestione file
@@ -168,6 +183,7 @@ docs/
 openapi: 3.0.0
 info:
   title: FixCity API
+  title: Notify API
   version: 1.0.0
   description: API per la gestione segnalazioni urbane
 paths:
@@ -372,6 +388,7 @@ paths:
 - [ ] **Roles.md**: Gestione ruoli e permessi
 
 ### Modulo Fixcity (Core Business)
+### Modulo App (Core Business)
 - [x] **README.md**: Panoramica sistema ticket
 - [x] **API.md**: API per gestione ticket
 - [x] **Workflow.md**: Flusso di lavoro ticket
@@ -611,12 +628,13 @@ paths:
 - [ ] Budget e risorse
 
 ---
-
 **📞 Contatti Documentazione**
 - **Tech Writer**: Documentation Team
 - **Email**: docs@laraxot.com
 - **Slack**: #fixcity-docs
 - **GitHub**: [FixCity Docs](https://github.com/laraxot/fixcity-docs)
+- **Slack**: #laraxot-docs
+- **GitHub**: [Notify Docs](https://github.com/laraxot/laraxot-docs)
 
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 40% → 100% (Target Dicembre 2025)  

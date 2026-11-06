@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Traits;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Modules\Notify\Models\NotificationLog;
@@ -17,11 +18,13 @@ final class NotifyTenantDummyModel extends Model
 
     public ?string $tenant_id = null;
 
-    public ?string $currentTenantId = null;
-
-    protected function getTenantId(): ?string
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function applyForTenantScope(Builder $query, ?string $tenantId = null): Builder
     {
-        return $this->currentTenantId;
+        return $this->scopeForTenant($query, $tenantId);
     }
 
     /**

@@ -12,20 +12,20 @@ declare(strict_types=1);
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    <a href="#" class="hover:underline me-4 md:me-6">{{ __('cms::block_footer.links.about.label') }}</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="#" class="hover:underline me-4 md:me-6">{{ __('cms::block_footer.links.privacy.label') }}</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    <a href="#" class="hover:underline me-4 md:me-6">{{ __('cms::block_footer.links.licensing.label') }}</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="#" class="hover:underline">{{ __('cms::block_footer.links.contact.label') }}</a>
                 </li>
             </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. {{ __('cms::block_footer.copyright.rights_reserved.message') }}</span>
     </div>
 </footer>

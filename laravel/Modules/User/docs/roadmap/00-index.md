@@ -1,3 +1,11 @@
+---
+title: "Roadmap Index - User"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, roadmap]
+qmd: "roadmap index - user user"
+---
 # Roadmap Index - User
 
 ## Scope

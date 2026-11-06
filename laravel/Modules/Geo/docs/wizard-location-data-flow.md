@@ -1,3 +1,15 @@
+---
+title: "wizard location data flow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "wizard location data flow"
+issues: []
+discussions: []
+status: draft
+---
+
 # Wizard Location Data Flow - Fix Documentation
 
 ## 🔴 Problema Identificato
@@ -13,7 +25,6 @@ Il problema può avere **due root-cause diversi**, spesso confusi:
 In questo repository, la famiglia `CoordinatePicker` (Geo) **è dehydrated** e invia lo state; il bug “in amministrazione non si salva la location” è tipicamente legato al punto (2).
 
 ---
-
 ## 📊 Data Flow Attuale (Rottura)
 
 ```

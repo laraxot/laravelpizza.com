@@ -1,3 +1,11 @@
+---
+title: "Errori Comuni e Soluzioni"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "errori comuni e soluzioni xot"
+---
 # Errori Comuni e Soluzioni
 
 ## Introduzione

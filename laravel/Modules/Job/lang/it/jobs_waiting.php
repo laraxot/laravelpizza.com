@@ -3,55 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Navigation Label',
-        'group' => 'Job',
-        'icon' => 'heroicon-o-cog',
-        'sort' => 50,
-    ],
+    'navigation' => ['label' => 'Jobs in attesa', 'group' => 'Job', 'icon' => 'heroicon-o-cog', 'sort' => 50],
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-            'description' => 'Unique identifier for the job',
-            'helper_text' => 'Auto-generated job identifier',
-            'tooltip' => '',
-        ],
-        'queue' => [
-            'label' => 'Queue',
-            'description' => 'Queue name where the job is waiting',
-            'helper_text' => 'Name of the queue this job belongs to',
-            'tooltip' => '',
-        ],
-        'payload' => [
-            'label' => 'Payload',
-            'description' => 'Job data and parameters',
-            'helper_text' => 'Serialized job data and parameters',
-            'tooltip' => '',
-        ],
-        'attempts' => [
-            'label' => 'Attempts',
-            'description' => 'Number of execution attempts',
-            'helper_text' => 'How many times this job has been attempted',
-            'tooltip' => '',
-        ],
-        'reserved_at' => [
-            'label' => 'Reserved At',
-            'description' => 'When the job was reserved for processing',
-            'helper_text' => 'Timestamp when job was picked up for processing',
-            'tooltip' => '',
-        ],
-        'available_at' => [
-            'label' => 'Available At',
-            'description' => 'When the job becomes available for processing',
-            'helper_text' => 'Timestamp when job becomes available for execution',
-            'tooltip' => '',
-        ],
-        'created_at' => [
-            'label' => 'Created At',
-            'description' => 'When the job was created',
-            'helper_text' => 'Timestamp when job was added to queue',
-            'tooltip' => '',
-        ],
+        'id' => ['label' => 'ID', 'description' => 'Identificativo univoco del job', 'helper_text' => 'Identificativo del job generato automaticamente', 'tooltip' => ''],
+        'queue' => ['label' => 'Coda', 'description' => 'Nome della coda in cui il job è in attesa', 'helper_text' => 'Nome della coda a cui appartiene il job', 'tooltip' => ''],
+        'payload' => ['label' => 'Payload', 'description' => 'Dati e parametri del job', 'helper_text' => 'Dati e parametri del job serializzati', 'tooltip' => ''],
+        'attempts' => ['label' => 'Tentativi', 'description' => 'Numero di tentativi di esecuzione', 'helper_text' => 'Quante volte è stata tentata l\'esecuzione del job', 'tooltip' => ''],
+        'reserved_at' => ['label' => 'Riservato il', 'description' => 'Quando il job è stato riservato per l\'elaborazione', 'helper_text' => 'Timestamp in cui il job è stato preso in carico', 'tooltip' => ''],
+        'available_at' => ['label' => 'Disponibile dal', 'description' => 'Quando il job diventa disponibile per l\'elaborazione', 'helper_text' => 'Timestamp in cui il job diventa eseguibile', 'tooltip' => ''],
+        'created_at' => ['label' => 'Creato il', 'description' => 'Quando il job è stato creato', 'helper_text' => 'Timestamp in cui il job è stato accodato', 'tooltip' => ''],
+        'display_name' => ['label' => 'Nome'],
+        'updated_at' => ['label' => 'Aggiornato il'],
     ],
     'actions' => [
         'export' => [
@@ -111,30 +73,10 @@ return [
             ],
         ],
     ],
-    'messages' => [
-        'no_jobs' => 'Nessun job in attesa',
-        'job_processed' => 'Job processato',
-        'job_cancelled' => 'Job cancellato',
-        'job_retried' => 'Job riprovato',
-    ],
-    'statuses' => [
-        'waiting' => 'In Attesa',
-        'reserved' => 'Riservato',
-        'delayed' => 'Ritardato',
-        'ready' => 'Pronto',
-    ],
-    'priorities' => [
-        'low' => 'Bassa',
-        'normal' => 'Normale',
-        'high' => 'Alta',
-        'urgent' => 'Urgente',
-    ],
-    'types' => [
-        'default' => 'Default',
-        'scheduled' => 'Schedulato',
-        'recurring' => 'Ricorrente',
-        'batch' => 'Batch',
-    ],
-    'label' => 'Jobs Waiting',
-    'plural_label' => 'Jobs Waiting (Plurale)',
+    'messages' => ['no_jobs' => 'Nessun job in attesa', 'job_processed' => 'Job processato', 'job_cancelled' => 'Job cancellato', 'job_retried' => 'Job riprovato'],
+    'statuses' => ['waiting' => 'In Attesa', 'reserved' => 'Riservato', 'delayed' => 'Ritardato', 'ready' => 'Pronto'],
+    'priorities' => ['low' => 'Bassa', 'normal' => 'Normale', 'high' => 'Alta', 'urgent' => 'Urgente'],
+    'types' => ['default' => 'Default', 'scheduled' => 'Schedulato', 'recurring' => 'Ricorrente', 'batch' => 'Batch'],
+    'label' => 'Job in attesa',
+    'plural_label' => 'Jobs in attesa',
 ];

@@ -1,3 +1,15 @@
+---
+title: "map loading fix in wizard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map loading fix in wizard"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Loading Fix for Wizard Interface
 
 ## Problem Description

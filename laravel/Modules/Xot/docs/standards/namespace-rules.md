@@ -1,3 +1,9 @@
+---
+title: "Xot - namespace-rules.md"
+module: Xot
+bmad: true
+status: active
+---
 # Regole di Namespace
 
 ## Struttura dei Namespace
@@ -18,6 +24,57 @@ Nonostante le classi possano risiedere fisicamente nella sottodirectory `app/` d
 // File in: Modules/Patient/app/Models/Patient.php
 namespace Modules\Patient\Models;
 
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
 // File in: Modules/Dental/app/Services/AppointmentService.php
 namespace Modules\Dental\Services;
 ```
@@ -82,10 +139,8 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 
 ## Collegamenti Correlati
 
-- [Documentazione Xot](../CODE-STANDARDS.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Convenzioni](../../../../docs/conventions.md)
-- [Naming Conventions](../../../../docs/naming-conventions.md)
+- [Convenzioni](../conventions.md)
+- [Naming Conventions](../naming-conventions.md)
 - [Documentazione Xot](../code-standards.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 

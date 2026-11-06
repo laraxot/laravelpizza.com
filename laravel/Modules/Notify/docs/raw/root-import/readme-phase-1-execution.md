@@ -1,3 +1,14 @@
+---
+title: "readme phase 1 execution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme phase 1 execution"
+issues: []
+discussions: []
+---
+
 # 📖 README - PHASE 1 EXECUTION
 ## Entry Point for All Team Members
 
@@ -8,6 +19,14 @@
 
 ---
 
+title: "readme phase 1 execution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme phase 1 execution"
+issues: []
+discussions: []
 ## 🎯 QUICK ORIENTATION
 
 **WHERE AM I?**
@@ -44,6 +63,7 @@
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
 | **bashscripts/docs/html/INDEX.md** | HTML comparison tools docs | 10 min |
+| **bashscripts/docs/html/index.md** | HTML comparison tools docs | 10 min |
 
 ### 👥 TASK-SPECIFIC WORKFLOWS
 | Document | For | Purpose | Read Time |
@@ -58,6 +78,7 @@ laravel/Themes/Sixteen/docs/
 ├─ PHASE-1-STRATEGY.md                    (strategy)
 ├─ GSD-PHASE-1-EXECUTION.md               (execution plan)
 ├─ 00-INDEX.md                            (master index)
+├─ 00-index.md                            (master index)
 ├─ PHASE-1-EXECUTION-STATUS.md            (progress tracking)
 ├─ body-structure-comparison/
 │  └─ segnalazioni-elenco/
@@ -111,6 +132,7 @@ laravel/Themes/Sixteen/docs/
 - ⏳ Input: Final comparison results from Subtask 5
 - 📝 Create: PHASE-1-COMPLETION-REPORT.md
 - 🔄 Update: 00-INDEX.md with Phase 1 status
+- 🔄 Update: 00-index.md with Phase 1 status
 
 **Read First**:
 1. PHASE-1-EXECUTION-STATUS.md (overview)
@@ -132,6 +154,7 @@ laravel/Themes/Sixteen/docs/
 **Subtask 4** (PARALLEL with Subtask 3):
 - 📝 Input: PHASE-1-FINDINGS.md from Researcher
 - 🔧 File: `laravel/config/local/fixcity/database/content/pages/tests.segnalazioni-elenco.json`
+- 🔧 File: `laravel/config/local/laraxot/database/content/pages/tests.segnalazioni-elenco.json`
 - ✅ Tasks: Verify all sections, check translation keys
 - 📤 Output: Verified JSON file
 
@@ -205,12 +228,14 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 
 **Translation Pattern** (CRITICAL):
 - ✅ Correct: `fixcity::segnalazione.fields.title.label`
+- ✅ Correct: `laraxot::segnalazione.fields.title.label`
 - ❌ Wrong: `SEGNALAZIONE::SEGNALAZIONE.ELENCO.TITLE`
 - See: PHASE-1-STRATEGY.md § Translation Patterns
 
 **File Locations**:
 - ✅ Blade: `laravel/Themes/Sixteen/resources/views/pages/tests/[slug].blade.php`
 - ✅ JSON: `laravel/config/local/fixcity/database/content/pages/tests.segnalazioni-elenco.json`
+- ✅ JSON: `laravel/config/local/laraxot/database/content/pages/tests.segnalazioni-elenco.json`
 - ✅ Script: `./bashscripts/body/html-structure-compare.sh`
 - ❌ DON'T CREATE: `segnalazioni-elenco.blade.php` (use [slug].blade.php)
 
@@ -273,6 +298,7 @@ Before starting your subtask:
 - **Strategy**: PHASE-1-STRATEGY.md
 - **Execution**: GSD-PHASE-1-EXECUTION.md
 - **Tools**: bashscripts/docs/html/INDEX.md
+- **Tools**: bashscripts/docs/html/index.md
 - **Blade fixes**: EXECUTOR-2-SUBTASKS-3-4.md
 - **Analysis**: SUBTASK-2-ANALYSIS-WORKFLOW.md
 - **Status**: PHASE-1-EXECUTION-STATUS.md

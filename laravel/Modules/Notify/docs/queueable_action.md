@@ -1,3 +1,16 @@
+---
+title: "queueable action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "queueable action"
+issues: []
+discussions: []
+status: superseded
+superseded_by: queueable-action.md
+---
+
 # Spatie Laravel Queueable Action
 
 In <nome progetto>, **NON si utilizza il pattern Service**. Per la business logic asincrona e la gestione di azioni riutilizzabili si adotta SEMPRE il package [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action).
@@ -39,4 +52,3 @@ $action->dispatch($user);
 ## Collegamenti
 - [Documentazione ufficiale](https://github.com/spatie/laravel-queueable-action)
 - [README Notify](README.md)
-- [README Notify](readme.md)

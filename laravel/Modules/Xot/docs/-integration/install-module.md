@@ -1,3 +1,11 @@
+---
+title: "install_module"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "install_module xot"
+---
 # install_module
 
 <!-- Contenuto migrato da _docs/install_module.txt -->

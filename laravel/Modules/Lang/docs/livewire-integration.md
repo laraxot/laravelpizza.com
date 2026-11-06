@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Integrazione di mcamara/laravel-localization con Livewire"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text fix"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Integrazione di mcamara/laravel-localization con Livewire
 
 ## Indice

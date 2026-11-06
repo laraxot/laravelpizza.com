@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione Conflitto translation-file-syntax.md"
+module: "Lang"
+type: concept
+tags: [migrazione, filament]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Risoluzione Conflitto translation-file-syntax.md
 
 ## Problema Identificato

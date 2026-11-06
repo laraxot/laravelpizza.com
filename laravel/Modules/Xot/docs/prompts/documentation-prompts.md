@@ -1,3 +1,11 @@
+---
+title: "Prompt di Documentazione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, prompts]
+qmd: "prompt di documentazione xot"
+---
 # Prompt di Documentazione
 
 ## Panoramica

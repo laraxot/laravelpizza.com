@@ -1,3 +1,15 @@
+---
+title: "farmshops analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "farmshops analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🗺️ ANALISI PROGETTO FARMSHOPS.EU
 
 **Fonte**: https://github.com/CodeforKarlsruhe/farmshops.eu
@@ -5,7 +17,6 @@
 **Obiettivo**: Integrazione funzionalità mappa interattiva nel progetto FixCity
 
 ---
-
 ## 📋 PANORAMICA PROGETTO
 
 ### 🎯 Scopo

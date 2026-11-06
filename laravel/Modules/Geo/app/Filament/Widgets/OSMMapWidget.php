@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Widgets;
 
-use Filament\Widgets\Widget;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Geo\Models\Place;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 // use Webbingbrasil\FilamentMaps\Widgets\MapWidget; // Disabilitato per compatibilità Filament 4
 
@@ -16,7 +16,7 @@ use Modules\Geo\Models\Place;
  *
  * DISABILITATO per compatibilità con Filament 4
  */
-class OSMMapWidget extends Widget
+class OSMMapWidget extends XotBaseWidget
 {
     protected int|string|array $columnSpan = 'full';
 
@@ -65,12 +65,7 @@ class OSMMapWidget extends Widget
     }
 
     /**
-     * @return array{markers: array<int, array{
-     *     position: array{lat: float, lng: float},
-     *     title: string,
-     *     content: string,
-     *     icon?: array{url: string, scaledSize: array{width: int, height: int}}
-     * }>, center: array{lat: float, lng: float}, zoom: int}
+     * @return array<string, mixed>
      */
     protected function getData(): array
     {
@@ -95,8 +90,8 @@ class OSMMapWidget extends Widget
             return ['lat' => 41.9028, 'lng' => 12.4964]; // Rome, Italy
         }
 
-        $latitudes = $places->pluck('latitude')->filter(fn ($lat) => is_float($lat));
-        $longitudes = $places->pluck('longitude')->filter(fn ($lng) => is_float($lng));
+        $latitudes = $places->pluck('latitude')->filter(fn (mixed $lat): bool => is_float($lat));
+        $longitudes = $places->pluck('longitude')->filter(fn (mixed $lng): bool => is_float($lng));
 
         return [
             'lat' => $latitudes->average() ?? 0.0,

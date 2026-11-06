@@ -1,8 +1,21 @@
+---
+title: "resource slug implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "resource slug implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Campo `slug` in MailTemplateResource
 
 ## Panoramica
 
 Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto Quaeris.
+Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto App.
 
 ## Implementazione nel Form Schema
 
@@ -43,6 +56,7 @@ public static function getFormSchema(): array
 4. **Generazione Automatica**: La callback `afterStateUpdated()` genera automaticamente lo slug dal nome quando si crea un nuovo record.
 
 ## Conformità con gli Standard Quaeris
+## Conformità con gli Standard App
 
 Questa implementazione aderisce a diversi standard chiave del progetto:
 

@@ -1,4 +1,17 @@
+---
+title: "php quality tools"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "php quality tools"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔧 STRUMENTI QUALITÀ CODICE PHP - FIXCITY PLATFORM
+# 🔧 STRUMENTI QUALITÀ CODICE PHP - NOTIFY PLATFORM
 
 **Versione**: 1.0  
 **Data Creazione**: Gennaio 2025  
@@ -7,6 +20,7 @@
 
 ## 🎯 OBIETTIVO
 Implementare un ecosistema completo di strumenti per la qualità del codice PHP nel progetto FixCity, garantendo standard enterprise e manutenibilità del codice.
+Implementare un ecosistema completo di strumenti per la qualità del codice PHP nel progetto Notify, garantendo standard enterprise e manutenibilità del codice.
 
 ## 🛠️ STRUMENTI QUALITÀ CODICE
 
@@ -228,11 +242,13 @@ jobs:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="FixCity PHP Mess Detector Rules"
+<ruleset name="Notify PHP Mess Detector Rules"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd">
 
     <description>Regole personalizzate per FixCity Platform</description>
+    <description>Regole personalizzate per Notify Platform</description>
 
     <!-- Clean Code Rules -->
     <rule ref="rulesets/cleancode.xml">
@@ -454,7 +470,6 @@ return (new PhpCsFixer\Config())
 - [ ] Documentation update
 
 ---
-
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Status**: Sistema in sviluppo  
 **🎯 Prossimo Milestone**: Setup Base (Settimana 1)  
@@ -463,6 +478,7 @@ return (new PhpCsFixer\Config())
 ---
 
 *Questo sistema garantisce la massima qualità del codice nel progetto FixCity Platform.*
+*Questo sistema garantisce la massima qualità del codice nel progetto Notify Platform.*
 
 
 

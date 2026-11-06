@@ -1,3 +1,11 @@
+---
+title: "form"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "form xot"
+---
 # form
 
 <!-- Contenuto migrato da _docs/form.txt -->

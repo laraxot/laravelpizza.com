@@ -1,3 +1,11 @@
+---
+title: "Confronto tra le Implementazioni di Larabank"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "confronto tra le implementazioni di larabank activity"
+---
 # Confronto tra le Implementazioni di Larabank
 
 ## Introduzione

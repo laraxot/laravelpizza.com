@@ -60,6 +60,7 @@ trait CanPaginate
         session()->remove($this->getPerPageSessionKey());
 
         $firstOption = $pageOptions[0] ?? 10;
+
         return is_numeric($firstOption) ? (int) $firstOption : 10;
     }
 
@@ -114,7 +115,7 @@ trait CanPaginate
     }
 
     /**
-     * @return array<int|string>
+     * @return list<int|string>
      */
     protected function getRecordsPerPageSelectOptions(): array
     {

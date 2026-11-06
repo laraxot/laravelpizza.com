@@ -1,3 +1,15 @@
+---
+title: "netfun action errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun action errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errori in SendNetfunSMSAction e Correzioni
 
 ## Errori Identificati
@@ -190,6 +202,4 @@ Le correzioni apportate allineano la classe `SendNetfunSMSAction` con:
 Queste correzioni garantiscono che l'azione funzioni correttamente con la configurazione standardizzata e sia più robusta, manutenibile ed estensibile.
 
 ---
-
-*Ultimo aggiornamento: 2025-05-12*
 *Ultimo aggiornamento: 2025-05-12*

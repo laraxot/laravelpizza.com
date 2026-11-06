@@ -1,3 +1,15 @@
+---
+title: "filament 4 migration fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 4 migration fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament 3 to 4 Migration - Component Fixes
 
 **Date**: 2025-12-04

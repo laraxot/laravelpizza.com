@@ -1,3 +1,11 @@
+---
+title: "Implementazione di un Sistema Bancario con Event Sourcing"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "implementazione di un sistema bancario con event sourcing activity"
+---
 # Implementazione di un Sistema Bancario con Event Sourcing
 
 ## Introduzione

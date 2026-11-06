@@ -8,10 +8,9 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\SmsFactorData;
 use Modules\Notify\Datas\SmsData;
-use Override;
+use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendSmsFactorSMSAction implements SmsActionContract
@@ -24,11 +23,13 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
     private SmsFactorData $smsFactorData;
 
-    /** @var array<string, mixed> */
+    /** @var array{status_code?: int, status_txt?: string} */
     private array $vars = [];
 
     /**
      * Create a new action instance.
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -48,11 +49,10 @@ final class SendSmsFactorSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     * @return array<string, mixed> Risultato dell'operazione
+     * @return array{status_code: int, status_txt: string} Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
      */
-    #[Override]
     public function execute(SmsData $smsData): array
     {
         $headers = $this->smsFactorData->getAuthHeaders();
@@ -69,19 +69,15 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
         $body = [
             'text' => $smsData->body,
-            'sender' => $smsData->from ?? $this->defaultSender,
+            'sender' => $smsData->from ?: $this->defaultSender,
             'recipients' => [
                 [
-                    'phone' => $to,
-                ],
-            ],
-            'type' => 'sms',
-        ];
+                    'phone' => $to]],
+            'type' => 'sms'];
 
         $client = new Client([
             'timeout' => $this->smsFactorData->getTimeout(),
-            'headers' => $headers,
-        ]);
+            'headers' => $headers]);
 
         try {
             $response = $client->post($this->smsFactorData->getBaseUrl().'/messages', ['json' => $body]);

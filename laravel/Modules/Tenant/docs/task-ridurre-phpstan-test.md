@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Task: Ridurre Suppressioni PHPStan nei Test - Tenant"
+module: "Tenant"
+type: concept
+tags: [task, ridurre, phpstan, test]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "task ridurre phpstan test"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Task: Ridurre Suppressioni PHPStan nei Test - Tenant
 
 **Modulo**: Tenant

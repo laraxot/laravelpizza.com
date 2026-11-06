@@ -1,30 +1,52 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://coderflex.com/blog/create-advanced-filters-with-filament
  */
 
-declare(strict_types=1);
-
 namespace Modules\Xot\Filament\Actions\Header;
 
-// Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
-// use Filament\Actions\Action;
-use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
+use Illuminate\Contracts\Support\Htmlable;
+use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\Pdf\DownloadPdfByViewAction;
 use Modules\Xot\Actions\View\GetViewByModelClassAction;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
-class ExportPdfAction extends Action
+/**
+ * Export PDF da lista: bottone con icona `xot-files.pdf` ed etichetta sr-only (tooltip), view
+ * `{modulo}::{model}.index.pdf` con RichEditor via `{!! $rating->getTxtHtml() !!}`.
+ */
+class ExportPdfAction extends XotBaseAction
 {
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
-            ->label('')
-            ->tooltip(__('xot::actions.export_pdf.tooltip'))
-            ->icon('ui-files.pdf')
+        $this
+            // Bottone (vista di default) con etichetta solo per screen reader, come le altre
+            // azioni dell'header (Trova esclusi, ...). Prima `iconButton()`: un glifo grigio senza
+            // area cliccabile, che non sembrava un comando.
+            ->label(fn (): Htmlable|string|null => $this->getTooltip())
+            ->hiddenLabel()
+            // ->color('danger'): non usato, il rosso segnala un'azione distruttiva; resta il
+            // primario come i bottoni accanto.
+            ->icon('xot-files.pdf')
+            ->tooltip(function (): string {
+                $livewire = $this->getLivewire();
+                if (! $livewire instanceof ListRecords) {
+                    return (string) __('xot::export_pdf.tooltip');
+                }
+                $key = app(GetTransKeyAction::class)->execute($livewire::class).'.actions.export_pdf.tooltip';
+                $translated = __($key);
+
+                if (\is_string($translated) && $translated !== $key && $translated !== 'export_pdf') {
+                    return $translated;
+                }
+
+                return (string) __('xot::export_pdf.tooltip');
+            })
             ->action(static function (ListRecords $livewire) {
                 $filename =
                     class_basename($livewire).
@@ -32,7 +54,7 @@ class ExportPdfAction extends Action
                     collect($livewire->tableFilters)->flatten()->implode('-').
                     '.pdf';
                 $query = $livewire->getFilteredTableQuery();
-                if (null === $query) {
+                if ($query === null) {
                     throw new \Exception('Query is null');
                 }
                 $rows = $query->get();

@@ -1,3 +1,14 @@
+---
+title: "employee timbrature implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "employee timbrature implementation"
+issues: []
+discussions: []
+---
+
 # Implementazione Sistema Timbrature - Modulo Employee
 
 ## Contesto

@@ -9,9 +9,16 @@ import { buildMapLayers } from './layers.js';
 import { requestGeolocation } from './controls/geolocation.js';
 import { refreshMapSize } from './resize.js';
 import { normalizeCoordinatePair } from './utils.js';
+import { approximateCenterFromTimezone } from './approximate-location.js';
+import { resolveInitialView } from './default-view.js';
 import { fetchNominatimReverse } from './reverse-geocode.js';
 
 const REVERSE_DEBOUNCE_MS = 420;
+
+/** Sotto questo zoom (paese, regione) un clic non indica un luogo: senza punto scelto, avvicina soltanto. */
+export const PICK_MIN_ZOOM = 10;
+/** Quanti livelli di zoom avanza un clic "di avvicinamento" (da 3 a 7 a 10: due clic dal mondo). */
+const PICK_ZOOM_STEP = 4;
 
 /**
  * Debounced Nominatim reverse — aggiorna indirizzo dopo click/drag/geoloc senza duplicare il round-trip su “search”.
@@ -72,6 +79,9 @@ export function scheduleClientReverseGeocode(ctx, lat, lng, source) {
  * @param {Object} ctx - CoordinatePickerField instance (this)
  */
 export function handleMapInteraction(ctx, lat, lng, source = 'manual') {
+    // Sola lettura: unico punto di scrittura dello stato (click, drag, ricerca, geolocalizzazione passano da qui).
+    if (ctx.readonly) return;
+
     ctx._isProgrammaticUpdate = true;
     const normalized = normalizeCoordinatePair(lat, lng);
     if (!normalized) {
@@ -80,6 +90,8 @@ export function handleMapInteraction(ctx, lat, lng, source = 'manual') {
     }
 
     const skipAddressReset = source === 'search';
+    // L'invito "cerca un indirizzo o tocca la mappa" non serve piu' una volta indicato il punto.
+    ctx._locationError = '';
 
     ctx.state = {
         ...(ctx.state || {}),
@@ -95,6 +107,7 @@ export function handleMapInteraction(ctx, lat, lng, source = 'manual') {
             }),
     };
     ctx._shouldRecenterAfterResize = true;
+    ctx._locationError = '';
     ctx._updateMarker(normalized.lat, normalized.lng);
 
     ctx.dispatchEvent(new CustomEvent('coords-changed', {
@@ -128,9 +141,12 @@ export function handleMapInteraction(ctx, lat, lng, source = 'manual') {
 export function updateMarker(ctx, lat, lng) {
     if (!ctx._map) return;
     if (!ctx._marker) {
+        // Sola lettura: marker fisso, non interattivo e senza tab stop (Leaflet gli darebbe role=button + tabindex).
         ctx._marker = L.marker([lat, lng], {
-            draggable: true,
-            icon: createGeoMapLeafletIcon(L)
+            draggable: !ctx.readonly,
+            interactive: !ctx.readonly,
+            keyboard: !ctx.readonly,
+            icon: createGeoMapLeafletIcon(L, ctx.markerColor, ctx.markerIconUrl, ctx.markerLabel)
         }).addTo(ctx._map);
         ctx._marker.on('dragend', (e) => {
             const pos = e.target.getLatLng();
@@ -165,27 +181,47 @@ export function initMap(ctx) {
     ctx._currentLayer = ctx._currentLayer ?? 'street';
 
     const hasStateCoordinates = ctx._lat != null && ctx._lng != null;
-    const centerLat = hasStateCoordinates ? ctx._lat : 41.9028;
-    const centerLng = hasStateCoordinates ? ctx._lng : 12.4964;
+    const hasExplicitCenter = ctx.centerLatitude != null && ctx.centerLongitude != null;
+    // Nessun Comune inventato (D19), mai il mondo intero: punto salvato > centro esplicito > zona dal fuso orario >
+    // vista di default dell'ente (`geo.config.map.default_view`) > panoramica d'Italia. Il GPS, se c'e', arriva dopo e ricentra.
+    const view = resolveInitialView({
+        point: hasStateCoordinates ? { lat: ctx._lat, lng: ctx._lng } : null,
+        center: hasExplicitCenter ? { lat: ctx.centerLatitude, lng: ctx.centerLongitude } : null,
+        approximate: hasStateCoordinates || hasExplicitCenter ? null : approximateCenterFromTimezone(),
+        defaultView: ctx.defaultView,
+        zoom: ctx.zoom,
+    });
+    ctx._initialView = view;
 
     ctx._map = L.map(el, {
-        center: [centerLat, centerLng],
-        zoom: ctx.zoom,
+        center: [view.lat, view.lng],
+        zoom: view.zoom,
         zoomControl: false,
-        attributionControl: false
+        attributionControl: false,
+        // Sola lettura: niente tab stop sulla mappa e niente zoom con la rotella (non deve catturare lo scroll della pagina).
+        ...(ctx.readonly ? { keyboard: false, scrollWheelZoom: false } : {})
     });
 
     ctx._layers = buildMapLayers(L);
     ctx._layers.street.addTo(ctx._map);
 
-    ctx._map.on('click', (e) => handleMapInteraction(ctx, e.latlng.lat, e.latlng.lng, 'click'));
+    if (!ctx.readonly) {
+        ctx._map.on('click', (e) => {
+            if (ctx._lat == null && ctx._map.getZoom() < PICK_MIN_ZOOM) {
+                // Vista vasta (mondo, regione) e nessun punto: un clic qui sarebbe a risoluzione di paese. Solo zoom sul punto.
+                ctx._map.setView(e.latlng, Math.min(ctx._map.getZoom() + PICK_ZOOM_STEP, PICK_MIN_ZOOM));
+                return;
+            }
+            handleMapInteraction(ctx, e.latlng.lat, e.latlng.lng, 'click');
+        });
+    }
 
     if (hasStateCoordinates) {
         syncMarkerToProperties(ctx);
-    } else {
+    } else if (!ctx.readonly && ctx.geolocateWhenEmpty) {
         window.setTimeout(() => {
             if (ctx._lat == null && ctx._lng == null) {
-                void requestGeolocation(ctx, { showLoading: true });
+                void requestGeolocation(ctx, { showLoading: true, auto: true });
             }
         }, 300);
     }

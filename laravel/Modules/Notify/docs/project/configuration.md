@@ -1,15 +1,27 @@
-# FixCity Project Configuration
+---
+title: "configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "configuration"
+issues: []
+discussions: []
+status: draft
+---
+
+# Notify Project Configuration
 
 **Last Updated**: 2026-03-30  
-**Source**: `laravel/.env` + `laravel/config/local/fixcity/xra.php`
+**Source**: `laravel/.env` + `laravel/config/local/laraxot/xra.php`
 
 ## Quick Reference
 
 | Setting | Value | Source |
 |---------|-------|--------|
-| **APP_URL** | `http://fixcity.local` | `.env` |
-| **Domain** | `fixcity.local` | Derived |
-| **Config Path** | `config/local/fixcity/xra.php` | Derived |
+| **APP_URL** | `http://laraxot.local` | `.env` |
+| **Domain** | `laraxot.local` | Derived |
+| **Config Path** | `config/local/laraxot/xra.php` | Derived |
 | **Active Theme** | `Sixteen` | Config |
 | **Document Root** | `public_html/` | Structure |
 | **Primary Lang** | `it` | Config |
@@ -27,8 +39,8 @@ The active theme is determined by this algorithm:
 function detectTheme(): string
 {
     // 1. Read APP_URL
-    $appUrl = env('APP_URL', 'http://fixcity.local');
-    // Result: "http://fixcity.local"
+    $appUrl = env('APP_URL', 'http://laraxot.local');
+    // Result: "http://laraxot.local"
     
     // 2. Remove protocol and www
     $domain = str_replace(
@@ -36,15 +48,15 @@ function detectTheme(): string
         '', 
         $appUrl
     );
-    // Result: "fixcity.local"
+    // Result: "laraxot.local"
     
     // 3. Explode by dot and reverse
     $parts = array_reverse(explode('.', $domain));
-    // Result: ["local", "fixcity"]
+    // Result: ["local", "laraxot"]
     
     // 4. Join with slash
     $configPath = implode('/', $parts);
-    // Result: "local/fixcity"
+    // Result: "local/laraxot"
     
     // 5. Read config file
     $config = include base_path("config/{$configPath}/xra.php");
@@ -57,7 +69,7 @@ function detectTheme(): string
 
 ## Configuration File
 
-**Path**: `laravel/config/local/fixcity/xra.php`
+**Path**: `laravel/config/local/laraxot/xra.php`
 
 ```php
 <?php
@@ -67,7 +79,7 @@ declare(strict_types=1);
 return [
     'adm_home' => '01',
     'enable_ads' => '1',
-    'main_module' => 'Fixcity',
+    'main_module' => 'App',
     'primary_lang' => 'it',
     'pub_theme' => 'Sixteen',              // ← ACTIVE THEME
     'search_action' => 'it/videos',
@@ -82,7 +94,7 @@ return [
 ## Project Structure
 
 ```
-base_fixcity_fila5/
+base_ptvx_fila5/
 ├── public_html/                    # 📁 DOCUMENT ROOT
 │   ├── assets/                    # Theme assets (CSS, JS, images)
 │   ├── index.php                  # Entry point
@@ -91,7 +103,7 @@ base_fixcity_fila5/
 ├── laravel/                       # 🎂 LARAVEL APPLICATION
 │   ├── .env                       # Environment config (APP_URL)
 │   ├── config/
-│   │   └── local/fixcity/xra.php # Theme config
+│   │   └── local/laraxot/xra.php # Theme config
 │   ├── Modules/                   # Feature modules
 │   │   ├── AI/
 │   │   ├── Activity/
@@ -123,7 +135,7 @@ base_fixcity_fila5/
 
 | Path | Description | Example |
 |------|-------------|---------|
-| `base_path()` | Project root | `/var/www/_bases/base_fixcity_fila5/` |
+| `base_path()` | Project root | `/var/www/_bases/base_ptvx_fila5/` |
 | `base_path('public_html')` | Document root | `.../public_html/` |
 | `base_path('laravel')` | Laravel app | `.../laravel/` |
 | `base_path('laravel/Themes/Sixteen')` | Active theme | `.../laravel/Themes/Sixteen/` |
@@ -150,10 +162,10 @@ base_fixcity_fila5/
 APP_NAME=Laravel
 APP_ENV=local
 APP_DEBUG=true
-APP_URL=http://fixcity.local          # ← Used for theme detection
+APP_URL=http://laraxot.local          # ← Used for theme detection
 
 DB_CONNECTION=sqlite
-DB_DATABASE=fixcity_data
+DB_DATABASE=app_data
 
 # Theme-specific
 CACHE_DRIVER=file
@@ -195,5 +207,4 @@ QUEUE_CONNECTION=sync
 - [Find Duplicates Script](bashscripts/docs/find-doc-duplicates.sh)
 
 ---
-
 **Maintenance**: Update this file when APP_URL or theme configuration changes

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Analisi Metodi Duplicati - Modulo Tenant"
+module: "Tenant"
+type: concept
+tags: [duplicate, methods, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "duplicate methods analysis"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Analisi Metodi Duplicati - Modulo Tenant
 
 **Totale Gruppi di Duplicati**:
@@ -206,15 +220,15 @@ public function getRows(): array
 - `BaseModel::casts` - [Modules/Comment/app/Models/BaseModel.php:44](Modules/Comment/app/Models/BaseModel.php) (Modulo: Comment)
 - `BaseMorphPivot::casts` - [Modules/Comment/app/Models/BaseMorphPivot.php:54](Modules/Comment/app/Models/BaseMorphPivot.php) (Modulo: Comment)
 - `BasePivot::casts` - [Modules/Comment/app/Models/BasePivot.php:41](Modules/Comment/app/Models/BasePivot.php) (Modulo: Comment)
-- `Activity::casts` - [Modules/Fixcity/app/Models/Activity.php:50](Modules/Fixcity/app/Models/Activity.php) (Modulo: Fixcity)
-- `BaseModel::casts` - [Modules/Fixcity/app/Models/BaseModel.php:47](Modules/Fixcity/app/Models/BaseModel.php) (Modulo: Fixcity)
-- `BasePivot::casts` - [Modules/Fixcity/app/Models/BasePivot.php:49](Modules/Fixcity/app/Models/BasePivot.php) (Modulo: Fixcity)
-- `Category::casts` - [Modules/Fixcity/app/Models/Category.php:117](Modules/Fixcity/app/Models/Category.php) (Modulo: Fixcity)
-- `Faq::casts` - [Modules/Fixcity/app/Models/Faq.php:63](Modules/Fixcity/app/Models/Faq.php) (Modulo: Fixcity)
-- `FaqCategory::casts` - [Modules/Fixcity/app/Models/FaqCategory.php:67](Modules/Fixcity/app/Models/FaqCategory.php) (Modulo: Fixcity)
-- `PushSubscription::casts` - [Modules/Fixcity/app/Models/PushSubscription.php:58](Modules/Fixcity/app/Models/PushSubscription.php) (Modulo: Fixcity)
-- `Ticket::casts` - [Modules/Fixcity/app/Models/Ticket.php:188](Modules/Fixcity/app/Models/Ticket.php) (Modulo: Fixcity)
-- `TicketCategory::casts` - [Modules/Fixcity/app/Models/TicketCategory.php:51](Modules/Fixcity/app/Models/TicketCategory.php) (Modulo: Fixcity)
+- `Activity::casts` - [Modules/Project/app/Models/Activity.php:50](Modules/Project/app/Models/Activity.php) (Modulo: progetto corrente)
+- `BaseModel::casts` - [Modules/Project/app/Models/BaseModel.php:47](Modules/Project/app/Models/BaseModel.php) (Modulo: progetto corrente)
+- `BasePivot::casts` - [Modules/Project/app/Models/BasePivot.php:49](Modules/Project/app/Models/BasePivot.php) (Modulo: progetto corrente)
+- `Category::casts` - [Modules/Project/app/Models/Category.php:117](Modules/Project/app/Models/Category.php) (Modulo: progetto corrente)
+- `Faq::casts` - [Modules/Project/app/Models/Faq.php:63](Modules/Project/app/Models/Faq.php) (Modulo: progetto corrente)
+- `FaqCategory::casts` - [Modules/Project/app/Models/FaqCategory.php:67](Modules/Project/app/Models/FaqCategory.php) (Modulo: progetto corrente)
+- `PushSubscription::casts` - [Modules/Project/app/Models/PushSubscription.php:58](Modules/Project/app/Models/PushSubscription.php) (Modulo: progetto corrente)
+- `Ticket::casts` - [Modules/Project/app/Models/Ticket.php:188](Modules/Project/app/Models/Ticket.php) (Modulo: progetto corrente)
+- `TicketCategory::casts` - [Modules/Project/app/Models/TicketCategory.php:51](Modules/Project/app/Models/TicketCategory.php) (Modulo: progetto corrente)
 - `BaseModel::casts` - [Modules/Gdpr/app/Models/BaseModel.php:58](Modules/Gdpr/app/Models/BaseModel.php) (Modulo: Gdpr)
 - `BaseMorphPivot::casts` - [Modules/Gdpr/app/Models/BaseMorphPivot.php:67](Modules/Gdpr/app/Models/BaseMorphPivot.php) (Modulo: Gdpr)
 - `BasePivot::casts` - [Modules/Gdpr/app/Models/BasePivot.php:47](Modules/Gdpr/app/Models/BasePivot.php) (Modulo: Gdpr)
@@ -412,8 +426,8 @@ public function users(): HasMany
 - `GetViewThemeByViewAction::execute` - [Modules/Cms/app/Actions/GetViewThemeByViewAction.php:13](Modules/Cms/app/Actions/GetViewThemeByViewAction.php) (Modulo: Cms)
 - `SaveFooterConfigAction::execute` - [Modules/Cms/app/Actions/SaveFooterConfigAction.php:14](Modules/Cms/app/Actions/SaveFooterConfigAction.php) (Modulo: Cms)
 - `SaveHeadernavConfigAction::execute` - [Modules/Cms/app/Actions/SaveHeadernavConfigAction.php:12](Modules/Cms/app/Actions/SaveHeadernavConfigAction.php) (Modulo: Cms)
-- `ChangeStatus::execute` - [Modules/Fixcity/app/Actions/ChangeStatus.php:12](Modules/Fixcity/app/Actions/ChangeStatus.php) (Modulo: Fixcity)
-- `GenerateTicketsAction::execute` - [Modules/Fixcity/app/Actions/GenerateTicketsAction.php:24](Modules/Fixcity/app/Actions/GenerateTicketsAction.php) (Modulo: Fixcity)
+- `ChangeStatus::execute` - [Modules/Project/app/Actions/ChangeStatus.php:12](Modules/Project/app/Actions/ChangeStatus.php) (Modulo: progetto corrente)
+- `GenerateTicketsAction::execute` - [Modules/Project/app/Actions/GenerateTicketsAction.php:24](Modules/Project/app/Actions/GenerateTicketsAction.php) (Modulo: progetto corrente)
 - `CalculateDistanceAction::execute` - [Modules/Geo/app/Actions/CalculateDistanceAction.php:47](Modules/Geo/app/Actions/CalculateDistanceAction.php) (Modulo: Geo)
 - `ClusterLocationsAction::execute` - [Modules/Geo/app/Actions/ClusterLocationsAction.php:25](Modules/Geo/app/Actions/ClusterLocationsAction.php) (Modulo: Geo)
 - `FilterCoordinatesAction::execute` - [Modules/Geo/app/Actions/FilterCoordinatesAction.php:29](Modules/Geo/app/Actions/FilterCoordinatesAction.php) (Modulo: Geo)

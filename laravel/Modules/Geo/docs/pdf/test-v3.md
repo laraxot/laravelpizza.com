@@ -1,3 +1,15 @@
+---
+title: "test v3"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v3"
+issues: []
+discussions: []
+status: draft
+---
+
 # Event Sourcing in Laravel
 *Autore: Brent Roose*
 *Generato il: 2025-05-19 15:24:41*
@@ -22,6 +34,14 @@
 ---
 
 
+title: "test v3"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v3"
+issues: []
+discussions: []
 ---
 
 *Documento convertito da PDF a Markdown con pdftotext*

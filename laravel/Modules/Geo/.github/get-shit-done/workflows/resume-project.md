@@ -1,3 +1,14 @@
+---
+title: "resume project"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "resume project"
+issues: []
+discussions: []
+---
+
 <trigger>
 Use this workflow when:
 - Starting a new session on an existing project

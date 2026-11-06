@@ -1,6 +1,19 @@
+---
+title: "tech stack"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tech stack"
+issues: []
+discussions: []
+status: draft
+---
+
 # Technology Stack
 
 Stack tecnologico completo di Quaeris Fila5 Mono - Laravel 12 + Filament 5 + PHP 8.3
+Stack tecnologico completo di App Fila5 Mono - Laravel 12 + Filament 5 + PHP 8.3
 
 ## Core Technologies
 

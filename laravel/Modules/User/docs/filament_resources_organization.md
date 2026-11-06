@@ -1,3 +1,11 @@
+---
+title: "Organization of Filament Resources"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "organization of filament resources user"
+---
 # Organization of Filament Resources
 
 ## Namespace Structure
@@ -39,11 +47,12 @@
 ```
 Modules/
   User/
-    Filament/
-      Resources/
-        UserResource.php
-        UserResource/
-          Pages/
-            BaseViewUser.php
-            ViewUser.php
+    app/
+      Filament/
+        Resources/
+          UserResource.php
+          UserResource/
+            Pages/
+              BaseViewUser.php
+              ViewUser.php
 ```

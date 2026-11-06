@@ -29,8 +29,17 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
+    'sections' => [
+        'unavailable' => [
+            'title' => 'Map temporarily unavailable',
+        ],
     ],
-    'actions' => [
+    'unavailable' => [
+        'disabled_notice' => [
+            'description' => 'The map widget has been temporarily disabled during the migration to Filament v4.',
+        ],
+        'restore_notice' => [
+            'description' => 'It will be restored as soon as compatible packages become available.',
+        ],
     ],
 ];

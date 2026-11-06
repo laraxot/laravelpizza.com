@@ -3,13 +3,15 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Events;
+
 use Modules\Job\Events\BroadcastingEvent;
 use Modules\Job\Events\Executed;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Executed', function () {
     it('extends BroadcastingEvent', function () {

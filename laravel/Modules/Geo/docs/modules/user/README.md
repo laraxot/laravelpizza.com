@@ -1,9 +1,20 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📦 Modulo User - Documentazione DRY + KISS
 
 > **MODULO USER**: Sistema completo di autenticazione, autorizzazione e gestione utenti per PTVX.
 
 ---
-
 ## 🎯 **Scopo e Responsabilità**
 
 ### Business Logic
@@ -95,7 +106,7 @@ Modules/User/
 ### 📖 **Guide Principali**
 - **[2FA Implementation](./2fa-guide.md)** - Autenticazione a due fattori
 - **[Traits Guide](./traits/traits-complete-guide.md)** - HasTeams, HasTenants
-- **[Filament Integration](./filament/filament-best-practices.md)** - Best practices UI
+- **[Filament Integration](../../raw/history/filament-best-practices.md)** - Best practices UI
 
 ### 🛠️ **Troubleshooting**
 - **[Login Issues](./troubleshooting-login-component.md)** - Problemi autenticazione
@@ -213,14 +224,14 @@ php artisan user:performance-audit
 ## 🔗 **Ecosistema Integrazioni**
 
 ### Moduli Core
-- **[Xot](../Xot/docs/)** - Framework base e utilities
-- **[Lang](../Lang/docs/)** - Sistema traduzioni
-- **[Activity](../Activity/docs/)** - Audit trail
+- **[Xot](../../../../Xot/docs)** - Framework base e utilities
+- **[Lang](../../../../Lang/docs)** - Sistema traduzioni
+- **[Activity](../../../../Activity/docs)** - Audit trail
 
 ### Moduli Business
 - **[Performance](../Performance/docs/)** - Valutazioni performance
 - **[Ptv](../Ptv/docs/)** - Sistema PTV
-- **[Gdpr](../Gdpr/docs/)** - Compliance privacy
+- **[Gdpr](../../../../Gdpr/docs)** - Compliance privacy
 
 ### Packages Esterni
 - **Spatie Laravel Permission** - Gestione ruoli/permessi
@@ -288,7 +299,7 @@ $userQuery = User::where('tenant_id', $tenant->id);
 
 **🎉 Modulo User: Architettura solida, codice pulito, documentazione completa!**
 
-**🚀 Pronto a sviluppare? Inizia da [Getting Started](../../docs/navigation/getting-started.md)!**
+**🚀 Pronto a sviluppare? Inizia da [Getting Started](../../navigation/getting-started.md)!**
 
 ---
 

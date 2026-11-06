@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Modules\Notify\Traits;
 
 use Illuminate\Cache\RateLimiter;
+use Webmozart\Assert\Assert;
 
-/** @phpstan-ignore trait.unused */
+/**
+ * Fornisce funzionalità per la gestione del rate limiting delle notifiche.
+ */
 trait HasNotificationRateLimiting
 {
     /**
@@ -20,10 +23,13 @@ trait HasNotificationRateLimiting
             return true;
         }
 
-        $maxAttempts = (int) config('notify.rate_limiting.max_attempts', 5);
-        $decayMinutes = (int) config('notify.rate_limiting.decay_minutes', 1);
+        $maxAttempts = config('notify.rate_limiting.max_attempts', 5);
+        $decayMinutes = config('notify.rate_limiting.decay_minutes', 1);
+        Assert::integerish($maxAttempts);
+        Assert::integerish($decayMinutes);
+        $maxAttempts = (int) $maxAttempts;
+        $decayMinutes = (int) $decayMinutes;
 
-        /** @var RateLimiter */
         $limiter = app(RateLimiter::class);
 
         if ($limiter->tooManyAttempts($key, $maxAttempts)) {
@@ -43,7 +49,6 @@ trait HasNotificationRateLimiting
      */
     protected function getNotificationRateLimitRetryAfter(string $key): int
     {
-        /** @var RateLimiter */
         $limiter = app(RateLimiter::class);
 
         return $limiter->availableIn($key);
@@ -57,12 +62,18 @@ trait HasNotificationRateLimiting
      */
     protected function getNotificationRateLimitRemainingAttempts(string $key): int
     {
-        $maxAttempts = (int) config('notify.rate_limiting.max_attempts', 5);
+        $maxAttempts = config('notify.rate_limiting.max_attempts', 5);
+        Assert::integerish($maxAttempts);
+        $maxAttempts = (int) $maxAttempts;
 
-        /** @var RateLimiter */
         $limiter = app(RateLimiter::class);
 
-        return $maxAttempts - (int) $limiter->attempts($key);
+        // RateLimiter::attempts() legge dalla cache e non dichiara un tipo di ritorno:
+        // il valore va ristretto qui, non castato dentro l'espressione aritmetica.
+        $attempts = $limiter->attempts($key);
+        Assert::integerish($attempts);
+
+        return $maxAttempts - (int) $attempts;
     }
 
     /**
@@ -72,7 +83,6 @@ trait HasNotificationRateLimiting
      */
     protected function resetNotificationRateLimit(string $key): void
     {
-        /** @var RateLimiter */
         $limiter = app(RateLimiter::class);
         $limiter->clear($key);
     }
@@ -81,9 +91,9 @@ trait HasNotificationRateLimiting
      * Genera una chiave univoca per il rate limiting.
      *
      * @param  string  $type  Tipo di notifica
-     * @param  mixed  $identifier  Identificatore univoco (es. ID utente)
+     * @param  int|string  $identifier  Identificatore univoco (es. ID utente)
      */
-    protected function getNotificationRateLimitKey(string $type, mixed $identifier): string
+    protected function getNotificationRateLimitKey(string $type, int|string $identifier): string
     {
         return 'notify:'.$type.':'.(string) $identifier;
     }

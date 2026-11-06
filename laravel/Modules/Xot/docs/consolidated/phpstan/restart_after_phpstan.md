@@ -1,3 +1,11 @@
+---
+title: "Guida al Riavvio del Sistema Dopo Validazione PHPStan"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "guida al riavvio del sistema dopo validazione phpstan xot"
+---
 # Guida al Riavvio del Sistema Dopo Validazione PHPStan
 
 ## Introduzione

@@ -1,3 +1,15 @@
+---
+title: "validate links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "validate links"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema di Validazione Link Relativi
 
 ## 🔍 **Controlli Automatici**
@@ -155,7 +167,6 @@ jobs:
 - Linter personalizzato per documentazione
 
 ---
-
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 1.0
 **Integrazione**: Sistema CI/CD e pre-commit hooks

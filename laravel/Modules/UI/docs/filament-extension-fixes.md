@@ -1,3 +1,15 @@
+---
+title: "filament extension fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament extension fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzione Estensione Filament - S3Test.php
 
 ## Problema Identificato

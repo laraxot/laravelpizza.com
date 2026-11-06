@@ -1,3 +1,15 @@
+---
+title: "html"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "html"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componenti HTML
 
 ## Introduzione
@@ -158,5 +170,5 @@ I componenti HTML del modulo CMS seguono le best practices HTML5 e utilizzano ta
 
 ## Collegamenti
 - [Elementi Semantici](../html/semantic.md)
-- [Struttura Layout](../structure/layout.md)
+- [Struttura Layout](../architecture/structure/layout.md)
 - [Accessibilità](../accessibility/readme.md)

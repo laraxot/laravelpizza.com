@@ -1,3 +1,16 @@
+---
+title: "fix implementation plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "fix implementation plan"
+issues: []
+discussions: []
+status: superseded
+superseded_by: ../fix-implementation-plan.md
+---
+
 # PHPStan Level 10 Fix Implementation Plan
 
 ## Overview

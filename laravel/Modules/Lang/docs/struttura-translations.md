@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Struttura corretta per i file di traduzione nel modulo Lang"
+module: "Lang"
+type: concept
+tags: [links01]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links01"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Struttura corretta per i file di traduzione nel modulo Lang
 
 ## Percorsi standard per i file di traduzione
@@ -78,8 +92,8 @@ I file di traduzione nel modulo Lang devono seguire una struttura precisa dei pe
 
 ## Collegamenti alla documentazione correlata
 
-- [Regole generali per i file di traduzione](/laravel/Modules/Xot/docs/translation_rules.md)
-- [Errori comuni nei file di traduzione](/laravel/Modules/Lang/docs/errori_comuni_traduzione.md)
+- [Regole generali per i file di traduzione](/laravel/modules/xot/docs/translation_rules.md)
+- [Errori comuni nei file di traduzione](/laravel/modules/lang/docs/errori_comuni_traduzione.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
 - [Regole generali per i file di traduzione](/laravel/Modules/Xot/docs/translation_rules.md)

@@ -1,3 +1,15 @@
+---
+title: "KILO CONFIGURATION COMPLETE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "KILO CONFIGURATION COMPLETE"
+issues: []
+discussions: []
+status: draft
+---
+
 # ✅ Kilo (OpenCode) Configuration - COMPLETE
 
 **Date**: 2026-03-30  
@@ -6,7 +18,6 @@
 **Schema**: https://app.kilo.ai/config.json
 
 ---
-
 ## Cos'è Kilo Code
 
 **Kilo Code** (ora **OpenCode**) è un AI coding assistant open source che:
@@ -25,7 +36,7 @@
 
 ---
 
-## Configurazione FixCity
+## Configurazione Notify
 
 ### File di Configurazione
 
@@ -50,8 +61,8 @@
   
   // Documentazione per contesto AI
   "instructions": [
-    "AGENTS.md",
-    "laravel/AGENTS.md"
+    "agents.md",
+    "laravel/agents.md"
   ],
   
   // Tool abilitati
@@ -85,7 +96,7 @@
 
 ### ✅ Chiavi Supportate
 
-| Chiave | Tipo | Descrizione | Valore FixCity |
+| Chiave | Tipo | Descrizione | Valore Notify |
 |--------|------|-------------|----------------|
 | `$schema` | string | URL schema JSON | `https://app.kilo.ai/config.json` |
 | `model` | string | Modello primario | `anthropic/claude-sonnet-4-6` |
@@ -93,7 +104,7 @@
 | `autoupdate` | boolean | Auto-update | `true` |
 | `snapshot` | boolean | Snapshot | `true` |
 | `mcp` | object | MCP servers | `{}` |
-| `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
+| `instructions` | array | Docs contesto | `["agents.md", ...]` |
 | `tools` | object | Tool abilitati | `{write, edit, bash...}` |
 | `permission` | object | Permessi | `{bash: "ask", ...}` |
 | `experimental` | object | Feature sperimentali | `{}` |
@@ -146,7 +157,7 @@ export GOOGLE_API_KEY="your-key-here"
 ### 3. Avvia Kilo
 
 ```bash
-cd /var/www/_bases/base_fixcity_fila5
+cd /var/www/_bases/base_ptvx_fila5
 
 # Avvia TUI
 opencode
@@ -177,7 +188,7 @@ Ctrl+Q         - Esci
 Kilo legge automaticamente:
 
 1. **AGENTS.md** - Contesto principale
-2. **laravel/AGENTS.md** - Contesto Laravel
+2. **laravel/agents.md** - Contesto Laravel
 
 ### Per Aggiungere Altra Docs
 
@@ -186,8 +197,8 @@ Modifica `.kilo/kilo.jsonc`:
 ```jsonc
 {
   "instructions": [
-    "AGENTS.md",
-    "laravel/AGENTS.md",
+    "agents.md",
+    "laravel/agents.md",
     "docs/**/*.md",                    // Tutta la docs
     "laravel/Modules/docs/README.md",  // Index moduli
     "laravel/Themes/docs/README.md",   // Index temi
@@ -203,7 +214,7 @@ Modifica `.kilo/kilo.jsonc`:
 ### Tema Attivo
 
 - **Tema**: Sixteen ✅
-- **Domain**: fixcity.local
+- **Domain**: laraxot.local
 - **Config**: `laravel/config/localhost/xra.php` → `pub_theme`
 
 ### Document Root

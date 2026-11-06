@@ -132,3 +132,4 @@ laravel/Modules/agentdb.rvf
 laravel/Modules/*/agentdb.rvf
 laravel/Modules/*/.codeclimate.yml
 laravel/Modules/*/phpi*.*
+laravel/phpunit.coverage*.*

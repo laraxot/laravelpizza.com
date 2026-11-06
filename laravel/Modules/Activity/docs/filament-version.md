@@ -1,4 +1,12 @@
-# Filament Version Declaration — Activity
+---
+title: "Filament Version Declaration: Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "filament version declaration   activity activity"
+---
+# Filament Version Declaration: Activity
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -14,4 +22,4 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
-**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`

@@ -1,3 +1,11 @@
+---
+title: "Regole per le Risorse Filament in <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole per le risorse filament in <nome progetto> xot"
+---
 # Regole per le Risorse Filament in <nome progetto>
 
 ## Panoramica

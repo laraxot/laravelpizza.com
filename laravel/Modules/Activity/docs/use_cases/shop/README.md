@@ -1,3 +1,11 @@
+---
+title: "Use Case Shop – Event Sourcing e Console Commands"
+type: index
+status: draft
+updated: 2026-10-23
+tags: [docs, activity, use_cases]
+qmd: "use case shop   event sourcing e console commands activity"
+---
 # Use Case Shop – Event Sourcing e Console Commands
 
 ## Introduzione
@@ -60,18 +68,22 @@ php artisan activity:shop:checkout cart_12345_xxx
 
 ## Collegamenti correlati
 - [Console Commands Shop](./console_commands.md)
-- [Best Practice Shop](./04_best_practice.md)
-- [Architettura Shop](./architecture.md)
+- [Best Practice Shop](./04-best-practice.md)
+- [Architettura Shop](./architettura.md)
 - [Eventi Shop](./events.md)
 - [Implementazione Shop](./implementation.md)
-- [Test Shop](./09_test.md)
-- [Glossario Shop](./10_glossario.md)
-- [Confronto Approcci](./07_confronto_approcci.md)
-- [Build from Scratch](./build_from_scratch.md)
+- [Test Shop](./09-test.md)
+- [Glossario Shop](./10-glossario.md)
+- [Confronto Approcci](./07-confronto-approcci.md)
+- [Build from Scratch](./build-from-scratch.md)
 - [README Prediction Market](../prediction_market/README.md)
 - [README Bank](../bank/README.md)
-- [README <nome progetto>ion Market](../<nome progetto>ion_market/readme.md)
-- [README Bank](../bank/readme.md)
+
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](../..) |
 
 ---
 **Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.**

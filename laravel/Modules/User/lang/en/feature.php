@@ -13,7 +13,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione delle feature e delle funzionalità',
         ],
-        'label' => 'feature',
+        'label' => 'Feature',
         'sort' => '75',
         'icon' => 'user-user-feature',
     ],

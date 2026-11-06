@@ -1,3 +1,15 @@
+---
+title: "phpstan contract interface fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan contract interface fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Contract Interface Fix
 
 ## Problem

@@ -1,7 +1,20 @@
+---
+title: "foundation rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "foundation rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # claudeMd
 Codebase and user instructions are shown below. Be sure to adhere to these instructions. IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow them exactly as written.
 
 Contents of /var/www/html/_bases/base_fixcity_fila5_mono/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
+Contents of /var/www/html/_bases/base_ptvx_fila5_mono/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
 
 <laravel-boost-guidelines>
 === foundation rules ===
@@ -52,10 +65,11 @@ This application is a Laravel application and its main Laravel ecosystems packag
 
 
 ---
-
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md) — All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md) — Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
+- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../INDEX.md): Master index
+- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md): Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
 

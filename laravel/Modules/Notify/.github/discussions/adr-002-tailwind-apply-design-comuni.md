@@ -1,3 +1,14 @@
+---
+title: "adr 002 tailwind apply design comuni"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "adr 002 tailwind apply design comuni"
+issues: []
+discussions: []
+---
+
 # ADR 001: Tailwind @apply per Bootstrap Italia
 
 **Data:** 2026-04-01  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "adr 002 tailwind apply design comuni"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "adr 002 tailwind apply design comuni"
+issues: []
+discussions: []
 ## Contesto
 
 Dobbiamo replicare le pagine statiche di [Design Comuni](https://github.com/italia/design-comuni-pagine-statiche) che utilizzano Bootstrap Italia come framework CSS.

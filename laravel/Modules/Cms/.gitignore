@@ -1,180 +1,145 @@
-# ==============================================
-# LARAXOT MODULE CMS - .GITIGNORE
-# ==============================================
-# Modulo CMS Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# ==============================================
 
+._*
 # ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-/vendor/
-/vendor
-/node_modules/
-/node_modules
-/docs/vendor/
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-bootstrap/compiled.php
+*~BASE
+*~head
+*~HEAD
+*~LOCAL
+*~REMOTE
+agentdb.rvf
+# AI / TOOL SCAFFOLD — must never exist in the module tree
 app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
+audit-coverage/
+# Auto-generated forbidden paths — do not edit manually
+*.backup
+*.backup.*
+# BACKUP / MERGE RESIDUE (never commit)
+*.bak
+*.bakcup
+bashscripts
+_bmad-output
+bootstrap/compiled.php
+/build/
+# BUILD & COMPILED FILES
+*.cache
+cache/
+# CACHE & TEMPORARY FILES
+.circleci
+.claude-audit
+cms_test_data.sql
+composer.lock
+config/development.php
+config/local.php
+content/drafts/
+content/temp/
+content/uploads/temp/
+.cursor/
+database/Factories_old/
+database/Migrations_old/
+database_old/
+database/Seeders_old/
+# DEPENDENCIES & PACKAGES
+.devcontainer
+.devcontainer/
+dist/
+_docs
+docs/archive
+docs/archived
+docs/cache/
+docs/legacy
+docs/archive/
+docs/phpstan/
+/docs/vendor/
+#  docs/wiki/rules/module-theme-root-cleanup.md)
+docs/workbench
+.DS_Store
+.DS_Store?
+ehthumbs.db
 .env
 .env.*
 !.env.example
-
-# ==============================================
 # ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
+error_log
+*.fila2
 .git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
+.git-rewrite/
+# GIT SPECIFIC
+Homestead.json
+Homestead.yaml
+/.idea
+# IDE / DEV TOOLS (personal, never commit)
+*.jar
+.kilocode
+.kiro
+lang/lang/
+laravel
+# LARAVEL SPECIFIC
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+# LARAXOT MODULE CMS — .gitignore
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+# LEGACY / OLD DIRECTORIES
+lerna-debug.log*
+*.lock
+*.log
+# LOG FILES
+# MODULE SPECIFIC — CMS
+*.new
+/node_modules/
+npm-debug.log*
 *.old
 *.old1
 *.old2
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
+*.orig
+package-lock.json
+*.phar
+.php-cs-fixer.cache
+phpinsights.php
+.phpintel
+# PHPSTAN / DOCS CACHE
 .phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-
-# ==============================================
-# LANGUAGE FILES
-# ==============================================
+.phpunit.result.cache
+# PROJECT SCRATCH
+public/hot
+public_html
+public_html/hot
+public_html/storage
+public/storage
+.ralph
+# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+rector.php
+*.rej
 resources/lang/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
 resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-
-# ==============================================
-# MODULE SPECIFIC - CMS
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
-
-# Contenuti temporanei
-content/temp/
-content/drafts/
-content/uploads/temp/
-
-# Cache contenuti
+scripts
+# (see docs/module-root-hygiene.md and
+.Spotlight-V100
+*.stackdump
 storage/cms/
 storage/content/
-
-# File di test
+storage/*.key
+*.swo
+*.swp
+# SYSTEM FILES
 test_content.json
-cms_test_data.sql
-
-# ==============================================
-# END OF CMS .GITIGNORE
-# ==============================================
-
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-public_html
-lang/lang/
-_docs/
-_docs/
-
-# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
-**/docs/archive/
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
-
-agentdb.rvf
+test-results
+tests/AuditCoverage/
+tests/.claude-audit
+Thumbs.db
+*.tmp
+.Trashes
+v8-compile-cache-*
+/.vagrant
+/vendor/
+.vscode/
+.windsurf/
+yarn-error.log*
+yarn.lock
+*:Zone.Identifier
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+.claude/
+.claude-audit/
+test-results/
+cms.code-workspace
+ruvector.db
+.windsurfrules

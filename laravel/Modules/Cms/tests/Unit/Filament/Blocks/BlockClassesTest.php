@@ -13,7 +13,6 @@ use Modules\Cms\Filament\Blocks\NewsletterBlock;
 use Modules\Cms\Filament\Blocks\ParagraphBlock;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 test('ActionsBlock can be instantiated', function (): void {
     Assert::assertTrue(class_exists(ActionsBlock::class));
 });

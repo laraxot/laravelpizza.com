@@ -1,4 +1,18 @@
-# Conflict Resolution — Module Media
+---
+issues: []
+discussions: []
+title: "Conflict Resolution: Module Media"
+module: "Media"
+type: concept
+tags: [conflict, resolution]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution"
+related:
+  - "./webm.md"
+status: draft
+---
+# Conflict Resolution: Module Media
 
 ## Summary
 - **Files resolved**: 9

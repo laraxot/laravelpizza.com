@@ -1,3 +1,13 @@
+---
+title: "CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, filament]
+qmd: "CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource"
+---
 # CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource
 
 ## 🚨 **PROBLEMA CRITICO RISOLTO**
@@ -41,7 +51,7 @@ return Forms\Components\Wizard\Step::make($name)
 ```php
 $schema = Str::of($name)
     ->snake()      // 'studio_step' → 'studio_step'
-    ->studly()     // 'studio_step' → 'StudioStep'
+    ->studly()     // 'studio_step' → 'StudioStep'  
     ->prepend('get') // 'StudioStep' → 'getStudioStep'
     ->append('Schema') // 'getStudioStep' → 'getStudioStepSchema'
     ->toString();
@@ -82,7 +92,7 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 
 ### **Verifica Wizard Steps**
 - [ ] studio_step → Chiama `getStudioStepSchema()` ✅
-- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅
+- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅  
 - [ ] personal_info_step → Chiama `getPersonalInfoStepSchema()` ✅
 
 ### **Verifica No Loop**
@@ -104,28 +114,27 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 $methodName = 'getMethodName';
 static::{$methodName}();
 
-// ✅ Property existence check
+// ✅ Property existence check  
 $prop = property_exists($class, 'property') ? $class::$property : [];
 ```
 
 ## 🔗 **Collegamenti**
 
 ### **File Modificati**
-- [XotBaseResource.php](../../../Modules/Xot/app/Filament/Resources/XotBaseResource.php) - Fix principale
-- [DoctorResource.php](../../../Modules/<main module>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
+- [XotBaseResource.php](../../app/Filament/Resources/XotBaseResource.php) - Fix principale
+- [DoctorResource.php](../../../Modules/SaluteOra/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
 ### **Documentazione Correlata**
-- [Wizard Step Implementation](../../../Modules/<main module>/docs/wizard-step-implementation.md)
-- [Wizard Step Implementation](../../../modules/<main module>/docs/wizard-step-implementation.md)
+- [Wizard Step Implementation](../../../Modules/SaluteOra/docs/wizard-step-implementation.md)
 - [Infinite Loop Prevention](../critical-fixes/infinite-loop-prevention.md)
 
 ---
 
-**Priorità**: 🚨 **P0 - CRITICA**
-**Creato**: Gennaio 2025
-**Risolto**: Gennaio 2025
-**Impatto**: Blocco completo sistema registrazione dottori
-**Tempo risoluzione**: < 10 minuti dalla diagnosi
+**Priorità**: 🚨 **P0 - CRITICA**  
+**Creato**: Gennaio 2025  
+**Risolto**: Gennaio 2025  
+**Impatto**: Blocco completo sistema registrazione dottori  
+**Tempo risoluzione**: < 10 minuti dalla diagnosi  
 
 ## 💡 **Lesson Learned**
 
@@ -135,4 +144,4 @@ Questo fix dimostra l'importanza di:
 3. **Property existence checking** per codice robusto
 4. **Xdebug monitoring** per rilevazione loop infiniti
 
-*Il sistema <main module> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 

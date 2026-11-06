@@ -1,3 +1,14 @@
+---
+title: "workspace discussion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workspace discussion"
+issues: []
+discussions: []
+---
+
 # Workspace File Naming Convention - Coordination
 
 ## Overview
@@ -64,4 +75,12 @@ The following documentation has been updated:
 
 ---
 
+title: "workspace discussion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workspace discussion"
+issues: []
+discussions: []
 **Labels:** `documentation` `convention` `cleanup` `coordination`

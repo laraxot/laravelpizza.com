@@ -2,18 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Tests\Unit\Models;
-
+use Illuminate\Support\Carbon;
+use Modules\Notify\Models\BaseModel;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
+describe('Contact Business Logic', function (): void {
+    test('contact extends base model', function (): void {
+        Assert::assertSame(BaseModel::class, get_parent_class(Contact::class));
+    });
 
-describe('Contact Business Logic', function () {
-    test('contact extends base model', function () {});
-
-    test('contact can store polymorphic model relationships', function () {
+    test('contact can store polymorphic model relationships', function (): void {
         $contact = new Contact;
         $contact->model_type = 'App\\Models\\User';
         $contact->model_id = '1';
@@ -22,7 +23,7 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('1', $contact->model_id);
     });
 
-    test('contact can store contact information with type', function () {
+    test('contact can store contact information with type', function (): void {
         $contact = new Contact;
         $contact->contact_type = 'email';
         $contact->value = 'test@example.com';
@@ -31,7 +32,7 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('test@example.com', $contact->value);
     });
 
-    test('contact can track sms communication', function () {
+    test('contact can track sms communication', function (): void {
         $contact = new Contact;
         $contact->sms_count = 5;
         $contact->sms_status_code = '200';
@@ -42,16 +43,17 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('Success', $contact->sms_status_txt);
     });
 
-    test('contact can track email communication', function () {
+    test('contact can track email communication', function (): void {
         $contact = new Contact;
         $contact->mail_count = 3;
-        $contact->mail_sent_at = '2023-01-01 10:00:00';
+        $mailSentAt = Carbon::parse('2023-01-01 10:00:00');
+        $contact->mail_sent_at = $mailSentAt;
 
         Assert::assertSame(3, $contact->mail_count);
-        Assert::assertSame('2023-01-01 10:00:00', $contact->mail_sent_at);
+        Assert::assertTrue($mailSentAt->equalTo($contact->mail_sent_at));
     });
 
-    test('contact can store personal information', function () {
+    test('contact can store personal information', function (): void {
         $contact = new Contact;
         $contact->first_name = 'Mario';
         $contact->last_name = 'Rossi';
@@ -60,7 +62,7 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('Rossi', $contact->last_name);
     });
 
-    test('contact has verification tracking', function () {
+    test('contact has verification tracking', function (): void {
         $contact = new Contact;
         $contact->token = 'abc123';
         $contact->verified_at = '2023-01-01 12:00:00';
@@ -69,7 +71,7 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('2023-01-01 12:00:00', $contact->verified_at);
     });
 
-    test('contact has flexible attribute storage', function () {
+    test('contact has flexible attribute storage', function (): void {
         $contact = new Contact;
         $contact->attribute_1 = 'value1';
         $contact->attribute_2 = 'value2';
@@ -78,14 +80,14 @@ describe('Contact Business Logic', function () {
         Assert::assertSame('value2', $contact->attribute_2);
     });
 
-    test('contact can track duplicate count', function () {
+    test('contact can track duplicate count', function (): void {
         $contact = new Contact;
         $contact->duplicate_count = 2;
 
         Assert::assertSame(2, $contact->duplicate_count);
     });
 
-    test('contact has order column for sorting', function () {
+    test('contact has order column for sorting', function (): void {
         $contact = new Contact;
         $contact->order_column = 1;
 

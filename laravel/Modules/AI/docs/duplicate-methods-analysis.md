@@ -1,3 +1,15 @@
+---
+title: "duplicate methods analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Metodi Duplicati - Modulo AI
 
 **Data Generazione**: 2025-10-15 06:41:17
@@ -52,7 +64,6 @@ public function analyze(string $text): array
 **Valutare attentamente** - Analizzare le implementazioni specifiche prima di procedere.
 
 ---
-
 ### 2. Metodo: `execute`
 
 **Tipo Refactoring**: `Interface` | **Complessità**: 🟢 Low | **Confidenza**: ❌ 9%

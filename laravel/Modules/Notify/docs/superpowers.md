@@ -1,3 +1,15 @@
+---
+title: "superpowers"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "superpowers"
+issues: []
+discussions: []
+status: draft
+---
+
 # Superpowers - Agentic Skills Framework
 
 **Source**: https://github.com/obra/superpowers  
@@ -7,7 +19,6 @@
 **Status**: ✅ Installed
 
 ---
-
 ## Cosa è
 
 Superpowers è un framework di skill componibili per coding agent (OpenCode, Claude Code, Cursor, Gemini CLI). Fornisce un workflow completo di sviluppo software autonomo basato su:
@@ -134,3 +145,4 @@ skill tool → list skills → cerca superpowers/*
 - [OpenCode Install Docs](https://github.com/obra/superpowers/blob/main/docs/README.opencode.md)
 - [Discord Community](https://discord.gg/Jd8Vphy9jq)
 - [PLUGINS_AND_SKILLS.md](../../.opencode/PLUGINS_AND_SKILLS.md)
+- [PLUGINS_AND_SKILLS.md](../../../../.opencode/PLUGINS_AND_SKILLS.md)

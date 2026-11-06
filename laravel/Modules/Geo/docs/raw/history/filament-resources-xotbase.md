@@ -1,3 +1,14 @@
+---
+title: "filament resources xotbase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament resources xotbase"
+issues: []
+discussions: []
+---
+
 # Filament Resources e XotBase nel Framework PTVX
 
 ## Panoramica

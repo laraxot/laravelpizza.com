@@ -1,4 +1,18 @@
+---
+title: "json usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json usage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo del file JSON dei comuni
+
+> **Stato del codice.** `GeoService`, `GeoDataService`, `GeoDataValidator`, `GoogleMapsService` e `BaseGeoService` sono stati ritirati e la cartella `app/Services` non esiste piu'. Gli esempi che le citano descrivono codice storico. Sostituti vivi e prove di equivalenza: [services-to-actions-geo.story.md](./stories/services-to-actions-geo.story.md).
 
 ## Contesto
 Il file `resources/json/comuni.json` contiene i dati geografici italiani in formato JSON. Questo file può essere utilizzato come alternativa a Squire o come fonte di dati aggiuntiva.

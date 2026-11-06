@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Advanced Language Switching Strategies"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Advanced Language Switching Strategies
 
 ## Overview

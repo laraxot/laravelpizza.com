@@ -1,3 +1,13 @@
+---
+title: "Struttura dei Moduli Laravel (nwidart/laravel-modules)"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, modules]
+qmd: "Struttura dei Moduli Laravel (nwidart/laravel-modules)"
+---
 # Struttura dei Moduli Laravel (nwidart/laravel-modules)
 
 ## Struttura dei percorsi e namespace
@@ -9,7 +19,7 @@ Quando si lavora con il pacchetto nwidart/laravel-modules, è essenziale compren
 ```
 Modules/
   ├── NomeModulo/
-  │   ├── app/                      <- Directory che contiene le classi PHP
+  │   ├── app/                      <- Directory che contiene le classi PHP 
   │   │   ├── Models/               <- Modelli
   │   │   ├── Http/                 <- Controller, Middleware, Requests
   │   │   │   ├── Controllers/
@@ -22,7 +32,7 @@ Modules/
   │   │   ├── views/
   │   │   ├── lang/
   │   │   └── assets/
-  │   ├── routes/                   <- File delle rotte
+  │   ├── routes/                   <- File delle rotte 
   │   ├── config/                   <- Configurazioni
   │   ├── database/                 <- Migrazioni e seeders
   │   │   ├── migrations/

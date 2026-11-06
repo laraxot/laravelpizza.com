@@ -3,6 +3,11 @@ title: Errori Comuni
 description: Come Risolvere gli Errori più Comuni
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "come risolvere gli errori più comuni {#issues} xot"
 ---
 
 # Come Risolvere gli Errori più Comuni {#issues}

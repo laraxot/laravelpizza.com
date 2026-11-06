@@ -23,8 +23,14 @@ return [
             'placeholder' => 'Enter client secret',
             'help' => 'Secret for OAuth authentication',
         ],
+        'client_name' => [
+            'label' => 'Client name',
+        ],
     ],
     'actions' => [
+        'new_credentials' => [
+            'label' => 'New credentials',
+        ],
         'create' => [
             'label' => 'Create Client',
             'tooltip' => 'Create a new OAuth client',
@@ -36,38 +42,17 @@ return [
         'install' => [
             'label' => 'Install Passport',
             'modal_description' => 'This command will install Passport and create the necessary encryption keys.',
-            'force_label' => 'Force overwrite keys',
-            'force_help' => 'Overwrites existing keys if present.',
-        ],
-        'keys' => [
-            'label' => 'Generate keys',
-            'force_label' => 'Force overwrite',
-            'force_help' => 'Overwrites existing keys (required if keys already exist).',
-        ],
-        'purge' => [
-            'label' => 'Purge tokens',
-            'revoked_label' => 'Remove revoked tokens',
-            'revoked_help' => 'Deletes revoked tokens and codes.',
-            'expired_label' => 'Remove expired tokens',
-            'expired_help' => 'Deletes tokens expired for more than N hours.',
-            'hours_label' => 'Retention hours',
-            'hours_help' => 'Tokens expired for more than N hours will be deleted (default 168 = 7 days).',
-        ],
-        'purge_tokens' => [
-            'label' => 'Purge Tokens',
-            'modal_description' => 'Revoked and/or expired tokens and codes will be removed according to selected options.',
-        ],
-        'hash' => [
-            'label' => 'Hash secrets',
-            'force_label' => 'Force without confirmation',
-            'force_help' => 'Runs without confirmation prompt.',
-        ],
-        'hash_secrets' => [
-            'label' => 'Hash Secrets',
-            'modal_description' => 'Apply hashing to all existing client secrets. Irreversible operation.',
         ],
         'generate_keys' => [
             'label' => 'Generate Keys',
+        ],
+        'purge_tokens' => [
+            'label' => 'Purge Tokens',
+            'modal_description' => 'Delete all expired or revoked tokens.',
+        ],
+        'hash_secrets' => [
+            'label' => 'Hash Secrets',
+            'modal_description' => 'Apply hashing to all existing client secrets.',
         ],
     ],
     'status' => [
@@ -75,6 +60,15 @@ return [
         'private_key' => 'Private Key',
         'present' => 'Present',
         'missing' => 'Missing',
+        'completed' => [
+            'message' => 'Completed',
+        ],
+        'failed' => [
+            'message' => 'Failed',
+        ],
+        'running' => [
+            'message' => 'Running...',
+        ],
     ],
     'messages' => [
         'client_created' => 'Client created successfully',
@@ -83,5 +77,26 @@ return [
         'command_completed' => 'Command completed successfully',
         'command_failed' => 'Command execution failed',
         'command_error' => 'Error during command execution',
+        'credentials_created' => 'Credentials created successfully',
+    ],
+    'view' => [
+        'running_notice' => [
+            'message' => 'The command is running. Please do not close this window.',
+        ],
+        'actions_disabled' => [
+            'description' => 'Other actions are disabled until the command completes.',
+        ],
+        'running_command' => [
+            'message' => 'Running command: php artisan',
+        ],
+        'waiting_output' => [
+            'message' => 'Waiting for output...',
+        ],
+        'select_command' => [
+            'label' => 'Select a command from the header to begin.',
+        ],
+        'scroll' => [
+            'helper_text' => 'Use mouse wheel to scroll output.',
+        ],
     ],
 ];

@@ -1,3 +1,11 @@
+---
+title: "Ottimizzazioni DRY + KISS - Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "ottimizzazioni dry + kiss - modulo activity activity"
+---
 # Ottimizzazioni DRY + KISS - Modulo Activity
 
 ## Panoramica del Modulo

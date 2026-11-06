@@ -1,4 +1,8 @@
 ---
+created: 2026-09-26
+qmd: "handoff phpstan modules zero"
+issues: []
+discussions: []
 title: handoff PHPStan zero moduli
 type: chat
 tags: [handoff, phpstan, bootstrap, quality-gate]
@@ -7,6 +11,7 @@ related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/reflective.md
   - ../../laravel/Modules/Ptv/docs/wiki/log.md
+status: draft
 ---
 
 # Handoff — PHPStan 0 su `Modules/*` (2026-06-15)

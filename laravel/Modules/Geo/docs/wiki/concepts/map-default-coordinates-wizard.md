@@ -1,3 +1,15 @@
+---
+title: "map default coordinates wizard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map default coordinates wizard"
+issues: []
+discussions: []
+status: draft
+---
+
 # Map Default Coordinates in Wizard Steps
 
 ## Problem

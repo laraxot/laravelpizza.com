@@ -1,4 +1,12 @@
-# Widget Translation Rules - Quaeris Project
+---
+title: "Widget Translation Rules - SaluteOra Project"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "widget translation rules - saluteora project user"
+---
+# Widget Translation Rules - SaluteOra Project
 
 ## Core Principles
 
@@ -183,10 +191,21 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-- [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
-- [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
+- [User Module Widget Structure](widgets_structure.md)
+- [EditUserWidget Documentation](widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+- [User Module Widget Structure](widgets_structure.md)
+- [EditUserWidget Documentation](widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](widgets/translation-guidelines.md)
+- [User Module Widget Structure](widgets_structure.md)
+- [EditUserWidget Documentation](widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](widgets/translation-guidelines.md)
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+- [User Module Widget Structure](widgets_structure.md)
+- [EditUserWidget Documentation](widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](widgets/translation-guidelines.md)
+- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
 
 ## Memory Integration
 
@@ -196,4 +215,4 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 
-All widget development should follow these rules to maintain consistency and quality across the Quaeris and SaluteOra projects.
+All widget development should follow these rules to maintain consistency and quality across the SaluteOra project.

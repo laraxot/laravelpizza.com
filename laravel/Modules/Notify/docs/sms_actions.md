@@ -1,3 +1,15 @@
+---
+title: "sms actions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms actions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Azioni SMS
 
 ## Interfaccia
@@ -43,7 +55,7 @@ Le azioni SMS sono organizzate secondo questa struttura:
 $smsData = new SmsData(
     to: '+393331234567',
     body: 'Il tuo codice OTP è: 123456',
-from: 'Quaeris'
+    from: 'SaluteOra'
 );
 
 $action = new SendNetfunSMSAction();

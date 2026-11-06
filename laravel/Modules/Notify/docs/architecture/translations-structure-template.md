@@ -1,3 +1,24 @@
+---
+title: "Template di Struttura per le Traduzioni"
+type: concept
+tags: [notify, docs, architecture, translations, structure, template]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione architecture translations structure template template di struttura per le traduzioni frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: superseded
+superseded_by: ../translations-structure-template.md
+---
 # Template di Struttura per le Traduzioni
 
 ## Struttura Generale per i File di Traduzione

@@ -86,6 +86,10 @@ class Completion extends XotBasePage implements HasForms
             throw new RuntimeException('Nessun utente autenticato trovato.');
         }
 
+        if (! $user instanceof Model) {
+            throw new RuntimeException('L\'utente autenticato deve essere un modello Eloquent.');
+        }
+
         return $user;
     }
 

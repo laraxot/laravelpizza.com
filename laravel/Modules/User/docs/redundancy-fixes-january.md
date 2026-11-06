@@ -1,3 +1,24 @@
+---
+title: "Correzioni Ridondanze - Gennaio 2026"
+type: concept
+tags: [redundancy, fixes, january]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy-fixes-january correzioni ridondanze - gennaio 2026"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Correzioni Ridondanze - Gennaio 2026
 
 ## Problema Identificato
@@ -106,6 +127,15 @@ Prima di committare, verifica:
 ## Collegamenti
 
 - [Redundancy Rules](../../xot/docs/filament/redundancy-rules.md)
-- [Service Provider Architecture](./service_provider_architecture.md)
-- [XotBaseRelationManager Documentation](../../xot/docs/filament/relation-managers.md)
+- [Service Provider Architecture](./service-provider-architecture.md)
+- [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
+- [Redundancy Rules](../../Xot/docs/filament/redundancy-rules.md)
+- [Service Provider Architecture](./service-provider-architecture.md)
+- [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
+
+*Ultimo aggiornamento: Gennaio 2026*
+- [Service Provider Architecture](./service_provider_architecture.md)
+- [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
+
+*Ultimo aggiornamento: Gennaio 2026*

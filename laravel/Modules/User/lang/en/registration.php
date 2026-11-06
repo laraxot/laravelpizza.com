@@ -430,6 +430,7 @@ return [
             'error' => 'Error while saving the draft',
         ],
     ],
+    'already_registered' => 'Already have an account?',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
 ];

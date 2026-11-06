@@ -1,3 +1,14 @@
+---
+title: "password"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "password"
+issues: []
+discussions: []
+---
+
 use Illuminate\Validation\Rules\Password; 
  
  Password::defaults(function () {
@@ -13,6 +24,14 @@ $request->validate([
 
 ---
 
+title: "password"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "password"
+issues: []
+discussions: []
 ZxcvbnPhp\Zxcvbn
 
 ZxcvbnRule

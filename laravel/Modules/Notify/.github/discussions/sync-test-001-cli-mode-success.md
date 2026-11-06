@@ -1,4 +1,28 @@
 ---
+title: "sync test 001 cli mode success"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync test 001 cli mode success"
+issues: []
+discussions: []
+title: "sync test 001 cli mode success"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync test 001 cli mode success"
+issues: []
+discussions: []
+title: "sync test 001 cli mode success"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sync test 001 cli mode success"
+issues: []
+discussions: []
 title: "✅ [TEST COMPLETATO] Sync Remote Repo - CLI Mode Test Success"
 labels: ["testing", "sync-script", "completed"]
 body:
@@ -29,6 +53,7 @@ body:
         ✅ [2026-03-13 13:58:45] Configurazione git completata con successo
         ℹ️ [2026-03-13 13:58:45] CI environment detected, skipping backup
         ✅ Found gitmodules.ini at: /var/www/_bases/base_fixcity_fila5/gitmodules.ini
+        ✅ Found gitmodules.ini at: /var/www/_bases/base_ptv_fila5/gitmodules.ini
         🔄 Inizio sincronizzazione di 1 submodules...
         ---------------------------------------------------
         📦 Submodule 0: laravel/Modules/Seo

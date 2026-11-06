@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Modules\User\Models\User;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 use function Safe\strtotime;
 
@@ -97,11 +98,11 @@ class FilterBuilder
                 return $query
                     ->when(
                         $data['from'] ?? null,
-                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '>=', is_string($date) ? $date : (string) $date),
+                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '>=', SafeStringCastAction::cast($date)),
                     )
                     ->when(
                         $data['until'] ?? null,
-                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '<=', is_string($date) ? $date : (string) $date),
+                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '<=', SafeStringCastAction::cast($date)),
                     );
             })
             ->indicateUsing(function (array $data) use ($label): ?string {
@@ -113,20 +114,20 @@ class FilterBuilder
                 }
 
                 if ($from && $until) {
-                    $fromStr = is_string($from) ? $from : (string) $from;
-                    $untilStr = is_string($until) ? $until : (string) $until;
+                    $fromStr = SafeStringCastAction::cast($from);
+                    $untilStr = SafeStringCastAction::cast($until);
 
                     return $label.': '.date('d/m/Y', strtotime($fromStr)).' - '.date('d/m/Y', strtotime($untilStr));
                 }
 
                 if ($from) {
-                    $fromStr = is_string($from) ? $from : (string) $from;
+                    $fromStr = SafeStringCastAction::cast($from);
 
                     return $label.' from: '.date('d/m/Y', strtotime($fromStr));
                 }
 
                 if ($until) {
-                    $untilStr = is_string($until) ? $until : (string) $until;
+                    $untilStr = SafeStringCastAction::cast($until);
 
                     return $label.' until: '.date('d/m/Y', strtotime($untilStr));
                 }
@@ -162,7 +163,7 @@ class FilterBuilder
     /**
      * Select filter from model.
      *
-     * @param class-string<Model> $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     public static function selectFromModel(
         string $name,
@@ -177,7 +178,7 @@ class FilterBuilder
         $filter = SelectFilter::make($name)
             ->options($options);
 
-        if (null !== $relationshipName) {
+        if ($relationshipName !== null) {
             $filter->relationship($relationshipName, $labelColumn);
         }
 
@@ -187,7 +188,7 @@ class FilterBuilder
     /**
      * Status select filter with common statuses.
      *
-     * @param array<string, string> $customStatuses
+     * @param  array<string, string>  $customStatuses
      */
     public static function statusSelect(array $customStatuses = []): SelectFilter
     {
@@ -205,7 +206,7 @@ class FilterBuilder
     /**
      * Priority select filter.
      *
-     * @param array<string, string> $customPriorities
+     * @param  array<string, string>  $customPriorities
      */
     public static function prioritySelect(array $customPriorities = []): SelectFilter
     {
@@ -223,7 +224,7 @@ class FilterBuilder
     /**
      * Type select filter.
      *
-     * @param array<string, string> $types
+     * @param  array<string, string>  $types
      */
     public static function typeSelect(array $types): SelectFilter
     {
@@ -234,7 +235,7 @@ class FilterBuilder
     /**
      * Category select filter.
      *
-     * @param class-string<Model> $categoryModel
+     * @param  class-string<Model>  $categoryModel
      */
     public static function categorySelect(string $categoryModel, string $labelColumn = 'name'): SelectFilter
     {
@@ -244,7 +245,7 @@ class FilterBuilder
     /**
      * User/Author select filter.
      *
-     * @param class-string<Model> $userModel
+     * @param  class-string<Model>  $userModel
      */
     public static function userSelect(
         string $name = 'user',
@@ -272,7 +273,7 @@ class FilterBuilder
     }
 
     /**
-     * @param Builder<Model> $query
+     * @param  Builder<Model>  $query
      */
     private static function modelUsesSoftDeletes(Builder $query): bool
     {
@@ -280,8 +281,7 @@ class FilterBuilder
     }
 
     /**
-     * @param Builder<Model> $query
-     *
+     * @param  Builder<Model>  $query
      * @return Builder<Model>
      */
     private static function applyTrashedQuery(Builder $query, string $mode): Builder

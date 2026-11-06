@@ -20,21 +20,17 @@ class GetViewByClassAction
      * Converte un nome di classe in un nome di vista.
      * Esempio: "Modules\UI\Filament\Widgets\GroupWidget" => "ui::filament.widgets.group".
      *
-     * @param string $class  Il nome della classe da convertire
-     * @param string $suffix Suffisso opzionale da aggiungere al nome della vista
+     * @param  string  $class  Il nome della classe da convertire
+     * @param  string  $suffix  Suffisso opzionale da aggiungere al nome della vista
+     * @return view-string
      *
      * @throws \Exception Se la vista non esiste
-     *
-     * @return view-string
      */
     public function execute(string $class, string $suffix = ''): string
     {
         $module = Str::of($class)->betweenFirst('Modules\\', '\\')->toString();
         $module_low = Str::of($module)->lower()->toString();
-        $after = Str::of($class)
-            ->after('Modules\\'.$module.'\\')
-            ->explode('\\')
-            ->toArray();
+        $after = explode('\\', Str::of($class)->after('Modules\\'.$module.'\\')->toString());
 
         $mapped = Arr::map($after, function (string $value, int $key) use ($after) {
             if ($key > 0 && isset($after[$key - 1])) {
@@ -59,7 +55,7 @@ class GetViewByClassAction
             $module_low.'::'.$implode.$suffix,
         ];
         $view = Arr::first($views, view()->exists(...));
-        if (null === $view) {
+        if ($view === null) {
             throw new \Exception('View not found: '.implode(', ', $views));
         }
 

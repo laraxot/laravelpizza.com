@@ -1,3 +1,15 @@
+---
+title: "backup dati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "backup dati"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Backup Dati
 
 ## Stato

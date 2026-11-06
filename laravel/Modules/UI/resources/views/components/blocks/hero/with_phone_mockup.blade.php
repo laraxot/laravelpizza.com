@@ -1,33 +1,32 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="{{ __('ui::blocks_hero.shared.global.label') }}">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">{{ __('ui::blocks_hero.shared.your_company_2.label') }}</span>
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
           </a>
         </div>
         <div class="flex lg:hidden">
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Open main menu</span>
+            <span class="sr-only">{{ __('ui::blocks_hero.shared.open_main_menu.label') }}</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_hero.shared.product.label') }}</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_hero.shared.features.label') }}</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_hero.shared.marketplace.label') }}</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_hero.shared.company.label') }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_hero.shared.log_in.label') }} <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -37,11 +36,11 @@ declare(strict_types=1);
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+              <span class="sr-only">{{ __('ui::blocks_hero.shared.your_company_2.label') }}</span>
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Close menu</span>
+              <span class="sr-only">{{ __('ui::blocks_hero.shared.close_menu.label') }}</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -50,13 +49,13 @@ declare(strict_types=1);
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.product.label') }}</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.features.label') }}</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.marketplace.label') }}</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.company.label') }}</a>
               </div>
               <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ __('ui::blocks_hero.shared.log_in.label') }}</a>
               </div>
             </div>
           </div>
@@ -80,27 +79,27 @@ declare(strict_types=1);
         <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div class="flex">
             <div class="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              <span class="font-semibold text-indigo-600">We’re hiring</span>
+              <span class="font-semibold text-indigo-600">{{ __('ui::blocks_hero.with_phone_mockup.were_hiring.label') }}</span>
               <span class="h-4 w-px bg-gray-900/10" aria-hidden="true"></span>
               <a href="#" class="flex items-center gap-x-1">
                 <span class="absolute inset-0" aria-hidden="true"></span>
-                See open positions
+                {{ __('ui::blocks_hero.with_phone_mockup.see_open_positions.label') }}
                 <svg class="-mr-2 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                 </svg>
               </a>
             </div>
           </div>
-          <h1 class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">A better way to ship your projects</h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Esse id magna consectetur fugiat non dolor in ad laboris magna laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id. In veniam incididunt ex veniam adipisicing sit.</p>
+          <h1 class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{{ __('ui::blocks_hero.with_phone_mockup.heading_1.title') }}</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">{{ __('ui::blocks_hero.with_phone_mockup.paragraph_1.description') }}</p>
           <div class="mt-10 flex items-center gap-x-6">
-            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ __('ui::blocks_demo_shared.labels.get_started.label') }}</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">{{ __('ui::blocks_demo_shared.labels.learn_more.label') }} <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           <svg viewBox="0 0 366 729" role="img" class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
-            <title>App screenshot</title>
+            <title>{{ __('ui::blocks_hero.with_phone_mockup.app_screenshot.title') }}</title>
             <defs>
               <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
                 <rect width="316" height="684" rx="36" />

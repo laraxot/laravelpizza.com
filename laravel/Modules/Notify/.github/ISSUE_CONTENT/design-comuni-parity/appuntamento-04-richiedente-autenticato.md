@@ -1,3 +1,14 @@
+---
+title: "appuntamento 04 richiedente autenticato"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 04 richiedente autenticato"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Auth (appuntamento-04-richiedente-autenticato.html)
 
 ## Obiettivo

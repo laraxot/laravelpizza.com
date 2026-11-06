@@ -1,3 +1,11 @@
+---
+title: "api_urls"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "api_urls xot"
+---
 # api_urls
 
 <!-- Contenuto migrato da _docs/api_urls.txt -->

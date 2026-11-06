@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
 use Modules\Xot\Datas\XotData;
+use Spatie\LaravelData\DataCollection;
 use Webmozart\Assert\Assert;
 
 class PageContent extends Component
@@ -24,9 +26,17 @@ class PageContent extends Component
             '['.__LINE__.']['.__FILE__.']',
         );
         $blocks = $page->content_blocks;
-        if (! is_array($blocks)) {
-            $primary_lang = XotData::make()->primary_lang;
-            $blocks = $page->getTranslation('content_blocks', $primary_lang);
+        if (is_array($blocks)) {
+            $locale = app()->getLocale();
+            $localeKeys = ['it', 'en', 'fr', 'de', 'es', XotData::make()->primary_lang];
+            if (count(array_intersect(array_keys($blocks), $localeKeys)) > 0) {
+                $blocks = $page->getTranslation('content_blocks', $locale, false);
+                if (! is_array($blocks)) {
+                    $blocks = $page->getTranslation('content_blocks', XotData::make()->primary_lang, false);
+                }
+            }
+        } else {
+            $blocks = $page->getTranslation('content_blocks', XotData::make()->primary_lang, false);
         }
 
         if (! is_array($blocks)) {
@@ -34,26 +44,15 @@ class PageContent extends Component
         }
         $collected = BlockData::collect($blocks);
         /** @var array<int, BlockData> $indexedBlocks */
-        $indexedBlocks = array_values($collected instanceof \Spatie\LaravelData\DataCollection ? $collected->all() : (array) $collected);
+        $indexedBlocks = array_values($collected instanceof DataCollection ? $collected->all() : (array) $collected);
         $this->blocks = $indexedBlocks;
     }
 
     /**
      * Get the view / contents that represents the component.
      */
-    public function render(): ViewContract
+    public function render(): Factory|ViewContract
     {
-        /*
-         * $comps=Blade::getClassComponentAliases();
-         * $paths = Blade::getAnonymousComponentPaths();
-         * $filtered=Arr::where($comps,function ($value,$key){
-         * return Str::startsWith($key,'blocks.');
-         * });
-         * dddx([
-         * 'filtered'=>$filtered
-         * ,'paths'=>$paths
-         * ]);
-         */
         $view = 'cms::components.page-content';
         $view_params = [];
 

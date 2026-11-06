@@ -1,17 +1,16 @@
 <?php
 
+declare(strict_types=1);
 /**
  * ---.
  */
-
-declare(strict_types=1);
-
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
-     * Run the migrations.
+     * Esegue la migrazione.
      */
     public function up(): void
     {
@@ -28,7 +27,7 @@ return new class extends XotBaseMigration {
         $this->tableUpdate(function (Blueprint $table): void {
             // MySqlConnection::getDoctrineSchemaManager does not exist.
             // MySqlConnection::getSchemaGrammar() ?
-            // if ($hasIndexName('team_invitations_team_id_foreign'))
+            // if ($this->hasIndexName('team_invitations_team_id_foreign')) {
             //    $table->dropForeign('team_invitations_team_id_foreign');
             // }
             if ($this->hasColumn('uuid')) {
@@ -37,13 +36,6 @@ return new class extends XotBaseMigration {
             if ($this->hasColumn('personal_team')) {
                 $table->boolean('personal_team')->default(false)->change();
             }
-
-            if (! $this->hasColumn('code')) {
-                $table->string('code', 36)->nullable()->index();
-            }
-            $this->updateTimestamps($table, true);
-
-            // $this->updateUser($table);
         });
     }
 };

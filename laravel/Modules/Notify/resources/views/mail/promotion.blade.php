@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @extends('notify::mail-layouts.base.default')
 
@@ -13,7 +12,7 @@ declare(strict_types=1);
     </div>
 
     <h1 style="color: #2D3748; font-size: 28px; text-align: center; margin-bottom: 20px;">
-        {{ $title ?? __('notify::mail.promotion.title') }}
+        {{ $title ?? __('notify::mail_promotion.sections.header.title') }}
     </h1>
 
     @if(isset($subtitle))
@@ -24,7 +23,7 @@ declare(strict_types=1);
 
     <div style="background-color: #EBF8FF; border-radius: 8px; padding: 20px; margin: 20px 0;">
         <h2 style="color: #2B6CB0; font-size: 24px; margin-bottom: 15px;">
-            {{ $highlight_title ?? __('notify::mail.promotion.highlight') }}
+            {{ $highlight_title ?? __('notify::mail_promotion.sections.highlight.title') }}
         </h2>
         <p style="color: #4A5568; font-size: 16px; line-height: 1.6;">
             {{ $highlight_text }}
@@ -47,7 +46,7 @@ declare(strict_types=1);
     @if(isset($action_url))
         <div style="text-align: center; margin: 30px 0;">
             <a href="{{ $action_url }}" class="button" style="background-color: #4299E1; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">
-                {{ $action_text ?? __('notify::mail.promotion.action') }}
+                {{ $action_text ?? __('notify::mail_promotion.actions.discover.label') }}
             </a>
         </div>
     @endif
@@ -60,7 +59,7 @@ declare(strict_types=1);
 
     <div style="border-top: 1px solid #E2E8F0; margin-top: 30px; padding-top: 20px;">
         <p style="color: #718096; font-size: 14px; text-align: center;">
-            {{ __('notify::mail.promotion.terms') }}
+            {{ __('notify::mail_promotion.messages.terms.message') }}
         </p>
     </div>
 @endsection

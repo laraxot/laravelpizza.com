@@ -1,3 +1,11 @@
+---
+title: "ExportXlsByCollection"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "exportxlsbycollection xot"
+---
 # ExportXlsByCollection
 
 Questa action è responsabile dell'esportazione di collezioni di dati in formato Excel (XLSX). Supporta sia l'utilizzo di Maatwebsite/Excel che PhpSpreadsheet direttamente.

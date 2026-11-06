@@ -1,3 +1,15 @@
+---
+title: "section"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "section"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componente Section
 
 ## Descrizione
@@ -48,6 +60,6 @@ Il componente Section è un elemento strutturale che permette di organizzare il 
 5. Organizzare le sezioni in modo logico e semantico
 
 ## Collegamenti
-- [Documentazione Componenti](./readme.md)
-- [Documentazione Blocchi](../blocks/readme.md)
+- [Documentazione Componenti](./README.md)
+- [Documentazione Blocchi](../blocks/README.md)
 - [Convenzioni Layout](../../../../docs/laravel-conventions.md)

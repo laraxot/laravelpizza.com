@@ -1,3 +1,14 @@
+---
+title: "phpstan level9 guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level9 guide"
+issues: []
+discussions: []
+---
+
 # Guida alla Risoluzione degli Errori PHPStan Livello 9
 
 Questa guida documenta i pattern di errore più comuni trovati durante l'analisi di livello 9 con PHPStan e le strategie per risolverli.

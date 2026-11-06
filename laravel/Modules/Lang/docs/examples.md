@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "💡 **Esempi Pratici Modulo Lang - Laraxot**"
+module: "Lang"
+type: concept
+tags: [git, conflicts, resolution, summary]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git conflicts resolution summary"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # 💡 **Esempi Pratici Modulo Lang - Laraxot**
 
 ## 🎯 **Panoramica**
@@ -558,7 +572,7 @@ class UserResource extends XotBaseResource
     /**
      * @return array<int, \Filament\Forms\Components\Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Forms\Components\Section::make()
@@ -911,17 +925,14 @@ class UserResourceTest extends TestCase
 ## 🔗 **Riferimenti e Collegamenti**
 
 ### **1. Documentazione**
-<<<<<<< HEAD
-=======
-- [README.md](readme.md) - Documentazione principale
+- [README.md](README.md) - Documentazione principale
 - [BEST_PRACTICES.md](best_practices.md) - Best practices
 - [API_REFERENCE.md](api_reference.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
->>>>>>> bebd548 (.)
 - [README.md](README.md) - Documentazione principale
 - [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices
 - [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Troubleshooting
+- [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 
 ### **2. Configurazione**
 - [config/lang.php](../config/lang.php) - Configurazione centralizzata

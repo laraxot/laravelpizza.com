@@ -1,3 +1,23 @@
+---
+title: "Convenzioni di Naming per Acronimi"
+type: concept
+tags: [notify, docs, best-practices, acronym, naming, conventions]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices acronym naming conventions convenzioni di naming per acronimi frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: draft
+---
 # Convenzioni di Naming per Acronimi 
 
 ## Regola Fondamentale

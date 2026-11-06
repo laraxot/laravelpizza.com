@@ -1,3 +1,14 @@
+---
+title: "appuntamento 01 ufficio luogo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 01 ufficio luogo"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Luogo (appuntamento-01-ufficio-luogo.html)
 
 ## Obiettivo

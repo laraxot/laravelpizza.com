@@ -1,3 +1,14 @@
+---
+title: "error correction workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "error correction workflow"
+issues: []
+discussions: []
+---
+
 # 🚨 ERROR CORRECTION WORKFLOW - Regola Sacra
 
 > **QUANDO RICEVI UN ERRORE DA CORREGGERE**  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "error correction workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "error correction workflow"
+issues: []
+discussions: []
 ## 📋 I 12 Passi Sacri
 
 ### 1️⃣ **STUDIARE** 📚

@@ -1,3 +1,15 @@
+---
+title: "test info2"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test info2"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📚 Analisi Completa del Documento
 
 ## 📋 Informazioni Generali

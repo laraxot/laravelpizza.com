@@ -43,6 +43,12 @@ return [
         'updated_at' => [
             'label' => 'updated_at',
         ],
+        'state' => [
+            'label' => 'state',
+        ],
+        'password_expires_at' => [
+            'label' => 'password_expires_at',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -69,6 +75,26 @@ return [
             'label' => 'deactivate',
             'icon' => 'deactivate',
             'tooltip' => 'deactivate',
+        ],
+        'edit' => [
+            'tooltip' => 'edit',
+            'icon' => 'edit',
+            'label' => 'edit',
+        ],
+        'view' => [
+            'tooltip' => 'view',
+            'icon' => 'view',
+            'label' => 'view',
+        ],
+        'verify_email' => [
+            'tooltip' => 'verify_email',
+            'icon' => 'verify_email',
+            'label' => 'verify_email',
+        ],
+        'export' => [
+            'label' => 'export',
+            'icon' => 'export',
+            'tooltip' => 'export',
         ],
     ],
 ];

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "File Duplicati da Eliminare - Modulo Media"
+module: "Media"
+type: concept
+tags: [duplicate, files, remove]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "duplicate files to remove"
+related:
+  - "./webm.md"
+status: draft
+---
 # File Duplicati da Eliminare - Modulo Media
 
 ## 🗑️ File da Eliminare (Case Sensitivity)

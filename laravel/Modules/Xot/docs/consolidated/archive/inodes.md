@@ -1,3 +1,11 @@
+---
+title: "_inodes"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "_inodes xot"
+---
 # _inodes
 
 <!-- Contenuto migrato da _docs/_inodes.txt -->

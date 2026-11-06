@@ -1,3 +1,14 @@
+---
+title: "workspace cleanup report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workspace cleanup report"
+issues: []
+discussions: []
+---
+
 # Workspace Cleanup Report
 
 > **Report: Pulizia e Documentazione Workspace Naming Convention**
@@ -8,6 +19,14 @@
 
 ---
 
+title: "workspace cleanup report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workspace cleanup report"
+issues: []
+discussions: []
 ## Problema Identificato
 
 È stata rilevata la presenza di file `.code-workspace` errati in alcune cartelle di moduli. Secondo la convenzione di naming, ogni modulo deve avere **SOLO** il proprio file workspace con il nome del modulo.

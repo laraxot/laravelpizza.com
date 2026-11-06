@@ -1,3 +1,15 @@
+---
+title: "guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🧭 Navigation Guide - Trova Quello Che Ti Serve
 
 > **GUIDA ALLA NAVIGAZIONE** - Dove trovare ogni argomento nella documentazione PTVX.
@@ -68,20 +80,20 @@ docs/
 ### Per Task
 - **Nuovo Modulo** → [Module Structure](../claude/module-structure.md#new-module)
 - **Fix Bug** → [Common Pitfalls](../claude/common-pitfalls.md), [Troubleshooting](../troubleshooting/)
-- **Code Review** → [Code Quality](../claude/code-quality.md), [Conventions](../claude/conventions.md)
+- **Code Review** → [Code Quality](../claude/code-quality.md), [Conventions](../development/conventions.md)
 - **Deploy** → [Development Tasks](../claude/development-tasks.md#deployment)
 
 ## 🔍 Ricerca Avanzata
 
 ### Per Parola Chiave
-- **PDF** → Cerca "html2pdf" in [Xot Module](../../Modules/Xot/docs/)
-- **Email** → [Notify Module](../../Modules/Notify/docs/)
+- **PDF** → Cerca "html2pdf" in [Xot Module](../../../Xot/docs)
+- **Email** → [Notify Module](../../../Notify/docs)
 - **Database** → [Migration Rules](../../Modules/Xot/docs/migrations/)
 - **Testing** → [Pest Guide](../claude/code-quality.md#testing)
 
 ### Per Modulo Specifico
-- **Xot** → [Core Framework](../../Modules/Xot/docs/)
-- **User** → [Authentication](../../Modules/User/docs/)
+- **Xot** → [Core Framework](../../../Xot/docs)
+- **User** → [Authentication](../../../User/docs)
 - **Performance** → [HR Management](../../Modules/Performance/docs/)
 - **Ptv** → [Business Logic](../../Modules/Ptv/docs/)
 
@@ -108,7 +120,6 @@ docs/
 3. **Esempi** → [Patterns](../patterns/) o [Best Practices](../best-practices/)
 
 ---
-
 **💡 Suggerimento**: Usa [Quick Reference](../quick-reference/errors.md) per problemi urgenti!
 
 *Ultimo aggiornamento: Dicembre 2025*

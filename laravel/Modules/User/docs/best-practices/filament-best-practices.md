@@ -1,3 +1,24 @@
+---
+title: "Best Practices per Risorse Filament nel Modulo User"
+type: concept
+tags: [filament, best, practices]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-best-practices best practices per risorse filament nel modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Best Practices per Risorse Filament nel Modulo User
 
 Questo documento descrive le best practices da seguire quando si creano o modificano risorse Filament nel modulo User.

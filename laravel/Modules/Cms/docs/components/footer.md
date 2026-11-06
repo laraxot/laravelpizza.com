@@ -1,3 +1,15 @@
+---
+title: "footer"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "footer"
+issues: []
+discussions: []
+status: draft
+---
+
 # Componente Footer
 
 ## Descrizione
@@ -52,16 +64,16 @@ Il componente Footer è un elemento fondamentale dell'interfaccia utente che for
 5. Seguire le convenzioni di accessibilità WCAG
 
 ## Collegamenti
-- [Documentazione Componenti](./readme.md)
-- [Documentazione Blocchi](../blocks/readme.md)
+- [Documentazione Componenti](./README.md)
+- [Documentazione Blocchi](../blocks/README.md)
 - [Convenzioni Layout](../../../../docs/laravel-conventions.md)
 
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)
 * [footer.md](docs/sections/footer.md)
-* [footer.md](laravel/modules/ui/docs/components/footer.md)
-* [footer.md](laravel/modules/cms/docs/blocks/footer.md)
-* [footer.md](laravel/modules/cms/docs/themes/one/footer.md)
+* [footer.md](../../../UI/docs/components/footer.md)
+* [footer.md](../blocks/footer.md)
+* [footer.md](../themes/one/footer.md)
 * [footer.md](laravel/modules/cms/docs/components/footer.md)
 * [footer.md](laravel/themes/one/docs/components/layouts/footer.md)
 * [footer.md](laravel/themes/one/docs/sections/footer.md)

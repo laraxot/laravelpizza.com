@@ -1,3 +1,11 @@
+---
+title: "Installazione Iniziale il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "installazione iniziale il progetto xot"
+---
 # Installazione Iniziale il progetto
 
 ## Prerequisiti

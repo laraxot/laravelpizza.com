@@ -1,3 +1,16 @@
+---
+title: "email tests"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email tests"
+issues: []
+discussions: []
+status: superseded
+superseded_by: bmad/architecture/email-tests.md
+---
+
 # Test Sistema Email - il progetto
 
 ## Panoramica

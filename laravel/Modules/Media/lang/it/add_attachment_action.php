@@ -39,7 +39,7 @@ return [
             'name' => 'General',
             'description' => 'General Settings',
         ],
-        'label' => 'Add Attachment Action',
+        'label' => 'Carica allegato',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],

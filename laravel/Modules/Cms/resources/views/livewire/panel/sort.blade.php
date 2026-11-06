@@ -11,13 +11,13 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
-    <a href="{{ $this->panel->url('index') }}" class="btn btn-info">&laquo; Back</a>
+    <a href="{{ $this->panel->url('index') }}" class="btn btn-info">&laquo; {{ __('cms::panel_sort.actions.back.label') }}</a>
     <ul wire:sortable="updateTaskOrder">
         {{-- dddx($this->panel->rows($data)->get()) --}}
         @foreach ($this->rows->sortBy('pos') as $row)
             <li wire:sortable.item="{{ $row->id }}" wire:key="task-{{ $row->id }}">
                 <h4 wire:sortable.handle>[{{ $row->pos }}] {!! $this->panel->optionLabel($row) !!}</h4>
-                <button wire:click="removeTask({{ $row->id }})">Remove</button>
+                <button wire:click="removeTask({{ $row->id }})">{{ __('cms::panel_sort.sections.remove.label') }}</button>
             </li>
         @endforeach
     </ul>

@@ -1,0 +1,13 @@
+---
+title: "User Module - Business Logic Deep Dive"
+type: alias
+status: superseded
+canonical: "wiki/integrations/BUSINESS-LOGIC-DEEP-DIVE.md"
+qmd: "business-logic-deep-dive alias superseded"
+---
+
+# User Module - Business Logic Deep Dive
+
+Documento identico al canonico: [BUSINESS-LOGIC-DEEP-DIVE.md](BUSINESS-LOGIC-DEEP-DIVE.md).
+
+Canonico: `laravel/Modules/User/docs/wiki/integrations/BUSINESS-LOGIC-DEEP-DIVE.md`. Qui non ci sono istruzioni: seguire il file collegato.

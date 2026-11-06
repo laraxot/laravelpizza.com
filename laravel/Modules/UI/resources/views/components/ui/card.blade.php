@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 @props([
     'title' => null,
     'content' => null,

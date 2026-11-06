@@ -1,3 +1,15 @@
+---
+title: "footer"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "footer"
+issues: []
+discussions: []
+status: draft
+---
+
 # Footer Component
 
 Questo documento serve come punto di riferimento centrale per la documentazione del componente Footer.

@@ -1,3 +1,15 @@
+---
+title: "ollama strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama strategy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Ollama & Local-First AI Strategy: The "Super Mucca" Philosophy
 
 ## 1. Vision & Philosophy (Il Perché)

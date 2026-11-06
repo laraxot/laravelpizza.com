@@ -1,3 +1,15 @@
+---
+title: "chart widgets"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "chart widgets"
+issues: []
+discussions: []
+status: draft
+---
+
 # Chart widgets (Chart.js + Filament v5)
 
 ## Centralized plugin registration

@@ -1,3 +1,15 @@
+---
+title: "scripts conflict resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts conflict resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti negli Script Bash
 
 ## Problema
@@ -141,7 +153,7 @@ Dopo la risoluzione dei conflitti, verranno eseguite le seguenti verifiche:
 
 - [Documentazione Generale sulla Risoluzione dei Conflitti](scripts-conflict-resolution.md)
 - [Linee Guida per la Scrittura di Script Bash](git-scripts.md)
-- [Principio DRY negli Script Bash](no-duplicate-functions-in-sourced-scripts.md)
+- [Principio DRY negli Script Bash](../raw/history/no-duplicate-functions-in-sourced-scripts.md)
 - [Risoluzione dei Conflitti Bash](conflict-resolution-bash.md)
 
 ## Risoluzioni recenti (Aprile 2025)

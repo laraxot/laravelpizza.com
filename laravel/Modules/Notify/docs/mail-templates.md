@@ -1,3 +1,15 @@
+---
+title: "mail templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mail templates"
+issues: []
+discussions: []
+status: draft
+---
+
 # Mail Templates in Notify Module
 
 ## Panoramica

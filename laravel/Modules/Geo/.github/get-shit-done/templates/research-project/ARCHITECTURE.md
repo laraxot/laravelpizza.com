@@ -1,3 +1,14 @@
+---
+title: "ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
+---
+
 # Architecture Research Template
 
 Template for `.planning/research/ARCHITECTURE.md` — system structure patterns for the project domain.
@@ -168,6 +179,14 @@ src/
 - [Case studies]
 
 ---
+title: "ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
 *Architecture research for: [domain]*
 *Researched: [date]*
 ```

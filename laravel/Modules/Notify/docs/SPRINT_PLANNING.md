@@ -1,3 +1,17 @@
+---
+qmd: "SPRINT PLANNING"
+issues: []
+discussions: []
+title: "Notify Module - Sprint Planning"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: bmad/architecture/sprint-planning.md
+---
+
 # Notify Module - Sprint Planning
 
 **Module:** Notify  

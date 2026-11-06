@@ -1,3 +1,13 @@
+---
+title: "Struttura delle Configurazioni"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, config]
+qmd: "Struttura delle Configurazioni"
+---
 # Struttura delle Configurazioni
 
 Questo documento definisce la struttura standard delle configurazioni per tutti i moduli.
@@ -26,7 +36,7 @@ return [
     // Configurazioni di base
     'name' => env('MODULE_NAME', 'default'),
     'enabled' => env('MODULE_ENABLED', true),
-
+    
     // Cache
     'cache' => [
         'enabled' => env('MODULE_CACHE_ENABLED', true),
@@ -34,7 +44,7 @@ return [
         'driver' => env('MODULE_CACHE_DRIVER', 'redis'),
         'prefix' => env('MODULE_CACHE_PREFIX', 'module_'),
     ],
-
+    
     // Storage
     'storage' => [
         'disk' => env('MODULE_STORAGE_DISK', 'local'),
@@ -44,7 +54,7 @@ return [
         ],
         'max_size' => env('MODULE_STORAGE_MAX_SIZE', 10240),
     ],
-
+    
     // API
     'api' => [
         'prefix' => env('MODULE_API_PREFIX', 'api/module'),
@@ -58,14 +68,14 @@ return [
             'minutes' => 1,
         ],
     ],
-
+    
     // Database
     'database' => [
         'prefix' => env('MODULE_DB_PREFIX', 'module_'),
         'connection' => env('MODULE_DB_CONNECTION', null),
         'soft_deletes' => true,
     ],
-
+    
     // Views
     'views' => [
         'namespace' => 'module',
@@ -88,7 +98,7 @@ class ConfigValidator
     public function validate(): ValidationResult
     {
         $config = config('module');
-
+        
         $rules = [
             'name' => 'required|string',
             'enabled' => 'required|boolean',
@@ -96,9 +106,9 @@ class ConfigValidator
             'cache.ttl' => 'required|integer|min:0',
             // ... altre regole
         ];
-
+        
         $validator = Validator::make($config, $rules);
-
+        
         return new ValidationResult($validator);
     }
 }
@@ -145,29 +155,8 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 
 - [Architettura](../architecture/module-structure.md)
 - [Best Practices](../best-practices.md)
-- [Sicurezza](../security/readme.md)
-- [Performance](../performance/readme.md)
-
-## Collegamenti tra versioni di structure.md
-* [structure.md](bashscripts/docs/structure.md)
-* [structure.md](../../../gdpr/docs/structure.md)
-* [structure.md](../../../notify/docs/structure.md)
-* [structure.md](../../../xot/docs/structure.md)
-* [structure.md](../../../xot/docs/base/structure.md)
-* [structure.md](../../../xot/docs/config/structure.md)
-* [structure.md](../../../user/docs/structure.md)
-* [structure.md](../../../ui/docs/structure.md)
-* [structure.md](../../../lang/docs/structure.md)
-* [structure.md](../../../job/docs/structure.md)
-* [structure.md](../../../media/docs/structure.md)
-* [structure.md](../../../tenant/docs/structure.md)
-* [structure.md](../../../activity/docs/structure.md)
-* [structure.md](../../../cms/docs/structure.md)
-* [structure.md](../../../cms/docs/themes/structure.md)
-* [structure.md](../../../cms/docs/components/structure.md)
-- [Best Practices](../BEST-PRACTICES.md)
 - [Sicurezza](../security/README.md)
-- [Performance](../performance/README.md)
+- [Performance](../performance/README.md) 
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -186,3 +175,4 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
+

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Testing Rules Summary"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text fix"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Testing Rules Summary
 
 ## Regole Fondamentali dei Test
@@ -11,6 +25,7 @@
 - **MAI** usare `use RefreshDatabase` nei test
 - **MAI** usare `RefreshDatabase` trait
 - Utilizzare `.env.testing` con SQLite in-memory
+- Utilizzare `.env.testing` con MySQL (suffisso `_test`, mai SQLite: regola `bashscripts/ai/wiki/rules/workflow/mysql-testing-only.mdc`)
 - Usare `DatabaseTransactions` se necessario (raro)
 
 ### 3. **Configurazione Testing**
@@ -87,6 +102,7 @@ php bashscripts/test_conversion/convert_phpunit_to_pest.php
 
 ### ✅ Best Practices
 1. Usare `.env.testing` con SQLite in-memory
+1. Usare `.env.testing` con MySQL (suffisso `_test`, mai SQLite: regola `bashscripts/ai/wiki/rules/workflow/mysql-testing-only.mdc`)
 2. Scrivere test in formato Pest functional
 3. Usare `DatabaseTransactions` invece di `RefreshDatabase`
 4. Seguire la struttura esistente dei test
@@ -278,7 +294,7 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
-        'database.connections.lang.database' => 'quaeris_data_test',
+        'database.connections.lang.database' => 'modulo questionari_data_test',
     ]);
     
     return $app;
@@ -358,7 +374,7 @@ protected function createApplication()
 
 ### External Resources
 
-- [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 - [Pest Installation Guide](https://pestphp.com/docs/installation)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 
@@ -367,6 +383,7 @@ protected function createApplication()
 - [Testing Setup Guide](../../docs/testing-setup.md)
 - [Testing Best Practices](../../docs/testing-best-practices.md)
 - [Troubleshooting Guide](../../docs/troubleshooting.md)
+- [Troubleshooting Guide](troubleshooting.md)
 
 ## Testing Examples
 

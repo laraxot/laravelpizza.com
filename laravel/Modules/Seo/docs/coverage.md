@@ -1,3 +1,15 @@
+---
+title: "coverage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coverage"
+issues: []
+discussions: []
+status: active
+---
+
 # Code Coverage: Seo
 
 **Lines Coverage:** N/A (Search engine optimization module)

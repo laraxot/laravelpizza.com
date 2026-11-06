@@ -1,3 +1,15 @@
+---
+title: "locations standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "locations standards"
+issues: []
+discussions: []
+status: draft
+---
+
 # Standard di Posizionamento dei File in Notify
 
 ## Organizzazione Directory Principali
@@ -17,7 +29,7 @@ Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, 
 ### Corretta Organizzazione delle Interfacce
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Contracts/
+/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/
 ├── SmsProviderActionInterface.php   ✅ CORRETTO
 ├── NotificationChannelInterface.php ✅ CORRETTO
 └── ...
@@ -26,7 +38,7 @@ Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, 
 ### Errori da Evitare
 
 ```
-/var/www/html/Quaeris/laravel/Modules/Notify/app/Actions/SMS/
+/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/
 ├── SmsActionInterface.php           ❌ ERRATO
 └── ...
 ```

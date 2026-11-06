@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Ottimizzazioni e Correzioni"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity module - ottimizzazioni e correzioni activity"
+---
 # Activity Module - Ottimizzazioni e Correzioni
 
 ## Panoramica

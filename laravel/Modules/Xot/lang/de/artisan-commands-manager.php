@@ -36,10 +36,10 @@ return [
         ],
     ],
     'status' => [
-        'completed' => 'Completato',
-        'failed' => 'Fallito',
-        'waiting' => 'In attesa dell\'output...',
-        'running' => 'In esecuzione...',
+        'completed' => 'Abgeschlossen',
+        'failed' => 'Fehlgeschlagen',
+        'waiting' => 'Warten auf Ausgabe...',
+        'running' => 'Wird ausgeführt...',
     ],
     'messages' => [
         'command_started' => 'Comando Avviato',
@@ -48,11 +48,14 @@ return [
         'command_completed_desc' => 'Il comando :command è stato completato con successo',
         'command_failed' => 'Comando Fallito',
         'command_failed_desc' => 'Il comando :command è fallito. Controlla l\'output per i dettagli.',
+        'running_command' => [
+            'message' => 'Laufender Befehl: :command',
+        ],
     ],
     'hints' => [
-        'running' => 'Il comando è in esecuzione. L\'output apparirà in tempo reale.',
-        'disabled' => 'Non è possibile eseguire altri comandi mentre un comando è in esecuzione.',
-        'scroll' => 'L\'output si aggiorna automaticamente e scorre verso il basso.',
+        'running' => 'Der Befehl wird ausgeführt. Die Ausgabe erscheint in Echtzeit.',
+        'disabled' => 'Solange ein Befehl ausgeführt wird, können keine weiteren Befehle gestartet werden.',
+        'scroll' => 'Die Ausgabe wird automatisch aktualisiert und scrollt nach unten.',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
@@ -60,4 +63,5 @@ return [
     ],
     'actions' => [
     ],
+    'select_command' => 'Wählen Sie im Header einen Befehl aus, um zu beginnen.',
 ];

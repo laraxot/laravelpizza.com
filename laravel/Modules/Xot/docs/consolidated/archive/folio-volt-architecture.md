@@ -1,3 +1,11 @@
+---
+title: "Architettura Folio + Volt + Filament in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "architettura folio + volt + filament in il progetto xot"
+---
 # Architettura Folio + Volt + Filament in il progetto
 
 ## Panoramica

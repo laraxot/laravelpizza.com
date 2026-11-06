@@ -1,3 +1,14 @@
+---
+title: "documenti dati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documenti dati"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Documenti e Dati (documenti-dati.html)
 
 ## Obiettivo

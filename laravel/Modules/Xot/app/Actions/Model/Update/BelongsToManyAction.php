@@ -38,7 +38,6 @@ class BelongsToManyAction
             return;
         }
 
-        $models = [];
         $ids = [];
         $related = $relationDTO->related;
         $keyName = $relationDTO->related->getKeyName();
@@ -55,7 +54,6 @@ class BelongsToManyAction
                 Assert::isInstanceOf($res, Model::class, 'UpdateAction must return an instance of Model.');
 
                 $ids[] = $res->getKey();
-                $models[] = $res;
             } else {
                 throw new \RuntimeException(sprintf('Key "%s" not found in relation data.', $keyName));
             }

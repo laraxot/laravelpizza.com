@@ -1,3 +1,15 @@
+---
+title: "geojson vs sushi comparison"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geojson vs sushi comparison"
+issues: []
+discussions: []
+status: draft
+---
+
 # GeoJsonModel vs Laravel Sushi: Analisi e Confronto
 
 ## Panoramica

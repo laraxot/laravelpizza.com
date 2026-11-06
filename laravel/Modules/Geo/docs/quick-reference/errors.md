@@ -1,3 +1,15 @@
+---
+title: "errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # 📋 Quick Reference - Errori Critici e Soluzioni
 
 > **RIFERIMENTO RAPIDO** per sviluppatori PTVX - soluzioni immediate ai problemi più comuni.
@@ -141,7 +153,6 @@ PTVX/
 - **[Best Practices](../best-practices/)** - Guide approfondite
 
 ---
-
 **💡 Ricorda**: La maggior parte dei problemi ha già una soluzione documentata!
 
 *Ultimo aggiornamento: Dicembre 2025*

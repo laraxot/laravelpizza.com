@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!--
   This example requires some changes to your config:
@@ -18,21 +17,21 @@ declare(strict_types=1);
   ```
 -->
 @props([
-    'title' => 'Data to enrich your online business',
-    'description' => 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.',
+    'title' => __('ui::blocks_hero.shared.default_title.title'),
+    'description' => __('ui::blocks_hero.with_sign_up_and_media_content.paragraph_1.description'),
     'logoUrl' => 'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500',
-    'logoAlt' => 'Your Company',
+    'logoAlt' => __('ui::blocks_hero.shared.your_company.alt'),
     'navigation' => [
-        ['text' => 'Product', 'url' => '#'],
-        ['text' => 'Features', 'url' => '#'],
-        ['text' => 'Marketplace', 'url' => '#'],
-        ['text' => 'Company', 'url' => '#']
+        ['text' => __('ui::blocks_hero.shared.product.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.features.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.marketplace.label'), 'url' => '#'],
+        ['text' => __('ui::blocks_hero.shared.company.label'), 'url' => '#']
     ],
     'loginUrl' => '#',
     'announcement' => [
-        'text' => "We're hiring",
+        'text' => __('ui::blocks_hero.dark_with_illustration.were_hiring.label'),
         'link' => '#',
-        'linkText' => 'Visit our careers page'
+        'linkText' => __('ui::blocks_hero.dark_with_illustration.visit_our_careers_page.label')
     ],
     'usedBy' => [
         ['name' => 'Tuple', 'logo' => 'https://tailwindui.com/img/logos/tuple-logo-gray-400.svg'],
@@ -64,7 +63,7 @@ declare(strict_types=1);
     </div>
     <div class="relative pb-16 pt-6 sm:pb-24">
       <div>
-        <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6" aria-label="Global">
+        <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6" aria-label="{{ __('ui::blocks_hero.shared.global.label') }}">
           <div class="flex flex-1 items-center">
             <div class="flex w-full items-center justify-between md:w-auto">
               @if($logoUrl)
@@ -76,7 +75,7 @@ declare(strict_types=1);
               <div class="-mr-2 flex items-center md:hidden">
                 <button type="button" class="focus-ring-inset relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white" aria-expanded="false">
                   <span class="absolute -inset-0.5"></span>
-                  <span class="sr-only">Open main menu</span>
+                  <span class="sr-only">{{ __('ui::blocks_hero.shared.open_main_menu.label') }}</span>
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
@@ -90,7 +89,7 @@ declare(strict_types=1);
             </div>
           </div>
           <div class="hidden md:flex">
-            <a href="{{ $loginUrl }}" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700">Log in</a>
+            <a href="{{ $loginUrl }}" class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700">{{ __('ui::blocks_hero.shared.log_in.label') }}</a>
           </div>
         </nav>
 
@@ -113,7 +112,7 @@ declare(strict_types=1);
               <div class="-mr-2">
                 <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span class="absolute -inset-0.5"></span>
-                  <span class="sr-only">Close menu</span>
+                  <span class="sr-only">{{ __('ui::blocks_hero.shared.close_menu.label') }}</span>
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -121,12 +120,12 @@ declare(strict_types=1);
               </div>
             </div>
             <div class="space-y-1 px-2 pb-3 pt-2">
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.product.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.features.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.marketplace.label') }}</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">{{ __('ui::blocks_hero.shared.company.label') }}</a>
             </div>
-            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in</a>
+            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">{{ __('ui::blocks_hero.shared.log_in.label') }}</a>
           </div>
         </div>
       </div>
@@ -150,7 +149,7 @@ declare(strict_types=1);
                 <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">{{ $title }}</h1>
                 <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">{{ $description }}</p>
                 @if($usedBy)
-                  <p class="mt-8 text-base font-semibold text-white sm:mt-10">Used by</p>
+                  <p class="mt-8 text-base font-semibold text-white sm:mt-10">{{ __('ui::blocks_hero.with_sign_in_form.used_by.label') }}</p>
                   <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                     <div class="flex flex-wrap items-start justify-between">
                       @foreach($usedBy as $company)
@@ -167,13 +166,13 @@ declare(strict_types=1);
               <div class="bg-white sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg">
                 <div class="px-6 py-8 sm:px-10">
                   <div>
-                    <p class="text-sm font-medium text-gray-700">Sign in with</p>
+                    <p class="text-sm font-medium text-gray-700">{{ __('ui::blocks_hero.with_sign_in_form.sign_in_with.label') }}</p>
 
                     <div class="mt-1 grid grid-cols-3 gap-3">
                       @foreach($socialProviders as $provider)
                         <div>
                           <a href="{{ $provider['url'] }}" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                            <span class="sr-only">Sign in with {{ $provider['name'] }}</span>
+                            <span class="sr-only">{{ __('ui::blocks_hero.with_sign_in_form.sign_in_with_provider.label', ['provider' => $provider['name']]) }}</span>
                             @if($provider['icon'] === 'facebook')
                               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd" />
@@ -205,31 +204,31 @@ declare(strict_types=1);
                   <div class="mt-6">
                     <form action="{{ $formAction }}" method="{{ $formMethod }}" class="space-y-6">
                       <div>
-                        <label for="name" class="sr-only">Full name</label>
-                        <input type="text" name="name" id="name" autocomplete="name" placeholder="Full name" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <label for="name" class="sr-only">{{ __('ui::blocks_hero.with_sign_in_form.full_name.label') }}</label>
+                        <input type="text" name="name" id="name" autocomplete="name" placeholder="{{ __('ui::blocks_hero.with_sign_in_form.full_name_2.placeholder') }}" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                       </div>
 
                       <div>
-                        <label for="mobile-or-email" class="sr-only">Mobile number or email</label>
-                        <input type="text" name="mobile-or-email" id="mobile-or-email" autocomplete="email" placeholder="Mobile number or email" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <label for="mobile-or-email" class="sr-only">{{ __('ui::blocks_hero.with_sign_in_form.mobile_number_or_email.label') }}</label>
+                        <input type="text" name="mobile-or-email" id="mobile-or-email" autocomplete="email" placeholder="{{ __('ui::blocks_hero.with_sign_in_form.mobile_number_or_email_2.placeholder') }}" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                       </div>
 
                       <div>
-                        <label for="password" class="sr-only">Password</label>
-                        <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <label for="password" class="sr-only">{{ __('ui::blocks_hero.with_sign_in_form.password.label') }}</label>
+                        <input id="password" name="password" type="password" placeholder="{{ __('ui::blocks_hero.with_sign_in_form.password_2.placeholder') }}" autocomplete="current-password" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                       </div>
 
                       <div>
-                        <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create your account</button>
+                        <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">{{ __('ui::blocks_hero.with_sign_in_form.create_your_account.label') }}</button>
                       </div>
                     </form>
                   </div>
                 </div>
                 <div class="border-t-2 border-gray-200 bg-gray-50 px-6 py-6 sm:px-10">
-                  <p class="text-xs leading-5 text-gray-500">By signing up, you agree to our 
-                    <a href="{{ $termsUrl }}" class="font-medium text-gray-900 hover:underline">Terms</a>, 
-                    <a href="{{ $dataPolicyUrl }}" class="font-medium text-gray-900 hover:underline">Data Policy</a> and 
-                    <a href="{{ $cookiesPolicyUrl }}" class="font-medium text-gray-900 hover:underline">Cookies Policy</a>.
+                  <p class="text-xs leading-5 text-gray-500">{{ __('ui::blocks_hero.with_sign_in_form.paragraph_1.description') }} 
+                    <a href="{{ $termsUrl }}" class="font-medium text-gray-900 hover:underline">{{ __('ui::blocks_hero.with_sign_in_form.terms.label') }}</a>, 
+                    <a href="{{ $dataPolicyUrl }}" class="font-medium text-gray-900 hover:underline">{{ __('ui::blocks_hero.with_sign_in_form.data_policy.label') }}</a> {{ __('ui::blocks_hero.with_sign_in_form.and.label') }} 
+                    <a href="{{ $cookiesPolicyUrl }}" class="font-medium text-gray-900 hover:underline">{{ __('ui::blocks_hero.with_sign_in_form.cookies_policy.label') }}</a>.
                   </p>
                 </div>
               </div>

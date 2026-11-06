@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 ?>
-@section('title', __('user::auth.login.title'))
+@section('title', __('user::auth.login.title.text'))
 
 <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
@@ -13,14 +13,14 @@ declare(strict_types=1);
             @endif
             
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-                {{ __('user::auth.login.title') }}
+                {{ __('user::auth.login.title.text') }}
             </h2>
             
             @if (Route::has('register'))
                 <p class="mt-2 text-sm text-center text-gray-600 dark:text-gray-400">
-                    {{ __('user::auth.login.no_account') }}
+                    {{ __('user::auth.login.no_account.text') }}
                     <a href="{{ route('register') }}" class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                        {{ __('user::auth.login.register') }}
+                        {{ __('user::auth.login.register.text') }}
                     </a>
                 </p>
             @endif
@@ -56,7 +56,7 @@ declare(strict_types=1);
 
                     @if (Route::has('password.request'))
                         <div class="text-sm">
-                            <a href="{{ route('password.request') }}" class="font-medium text-blue-600 hover:text-blue-500">
+                            <a href="{{ route('password.request') }}" class="font-medium text-green-600 hover:text-green-500">
                                 {{ __('pub_theme::auth.login.forgot_password') }}
                             </a>
                         </div>

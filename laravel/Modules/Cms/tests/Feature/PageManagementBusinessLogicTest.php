@@ -7,7 +7,6 @@ use Modules\Cms\Models\PageContent;
 use Modules\Cms\Models\Section;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 it('can work with pages using SushiToJsons system', function (): void {
     Page::all();
 

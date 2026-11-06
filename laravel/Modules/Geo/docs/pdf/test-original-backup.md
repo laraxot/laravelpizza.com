@@ -1,3 +1,16 @@
+---
+title: "test original backup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test original backup"
+issues: []
+discussions: []
+status: superseded
+superseded_by: test.md
+---
+
 # Event Sourcing in Laravel
 
 **Una strategia oltre il CRUD**
@@ -7,7 +20,6 @@ Di Brent Roose
 **EVENT-SOURCING-LARAVEL.COM | SPATIE**
 
 ---
-
 ## Introduzione all'Event Sourcing in Laravel
 
 **Un corso pratico per iniziare a utilizzare l'event sourcing in applicazioni di grandi dimensioni.**

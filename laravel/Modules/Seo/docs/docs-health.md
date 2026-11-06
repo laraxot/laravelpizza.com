@@ -1,3 +1,17 @@
+---
+title: "docs health"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs health"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-14 (docs-audit): Contatori non piu' veri (42 file in radice): il 2026-10-14 sono 112 .md in radice e 205 in totale; inoltre 00-index.md e' superseded da index.md. Contenuto non riscritto, verificare prima di usarlo.
+
 # Docs Health - Seo
 
 ## Snapshot

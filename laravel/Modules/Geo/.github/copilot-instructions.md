@@ -1,3 +1,14 @@
+---
+title: "copilot instructions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "copilot instructions"
+issues: []
+discussions: []
+---
+
 # Instructions for GSD
 
 - Use the get-shit-done skill when the user asks for GSD or uses a `gsd-*` command.

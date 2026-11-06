@@ -1,8 +1,17 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project configurations"
+issues: []
+discussions: []
 title: Configurazione progetti
 description: Configurazione progetti
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: project-configurations.md
 ---
 
 # Configurazione progetti {#configurazione-progetti}

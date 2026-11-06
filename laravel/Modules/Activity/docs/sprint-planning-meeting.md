@@ -1,3 +1,11 @@
+---
+title: "Activity - Sprint Planning Meeting"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity - sprint planning meeting activity"
+---
 # Activity - Sprint Planning Meeting
 
 > Documento operativo per sprint planning. Modulo.

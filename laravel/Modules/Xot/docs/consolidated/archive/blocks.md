@@ -1,3 +1,11 @@
+---
+title: "Blocchi UI in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "blocchi ui in il progetto xot"
+---
 # Blocchi UI in il progetto
 
 I blocchi UI sono componenti riutilizzabili per la costruzione delle pagine. Ogni blocco è un componente Blade che può essere utilizzato in qualsiasi vista del tema.

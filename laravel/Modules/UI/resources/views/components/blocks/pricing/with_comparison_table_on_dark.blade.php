@@ -1,25 +1,24 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
-        <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Plans for teams of&nbsp;all&nbsp;sizes</p>
+        <h2 class="text-base font-semibold leading-7 text-indigo-400">{{ __('ui::blocks_pricing_plans.header.pricing.label') }}</h2>
+        <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{!! __('ui::blocks_pricing_plans.header.plans_all_sizes_short.title') !!}</p>
       </div>
-      <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
+      <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">{{ __('ui::blocks_pricing_plans.header.intro.description') }}</p>
 
       <!-- xs to lg -->
       <div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
         <section class="p-8">
-          <h3 id="tier-basic" class="text-sm font-semibold leading-6 text-white">Basic</h3>
+          <h3 id="tier-basic" class="text-sm font-semibold leading-6 text-white">{{ __('ui::blocks_pricing_plans.tiers.basic.label') }}</h3>
           <p class="mt-2 flex items-baseline gap-x-1">
             <span class="text-4xl font-bold text-white">$9</span>
-            <span class="text-sm font-semibold text-gray-300">/month</span>
+            <span class="text-sm font-semibold text-gray-300">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
           </p>
-          <a href="#" aria-describedby="tier-basic" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">Buy plan</a>
+          <a href="#" aria-describedby="tier-basic" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
           <ul role="list" class="mt-10 space-y-4 text-sm leading-6 text-white">
             <li>
               <ul role="list" class="space-y-4">
@@ -27,23 +26,13 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Integrations </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.integrations.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Shared links </span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul role="list" class="space-y-4">
-                <li class="flex gap-x-3">
-                  <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  <span> Advanced analytics </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.shared_links.label') }} </span>
                 </li>
               </ul>
             </li>
@@ -53,19 +42,29 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> 24/7 online support </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.advanced_analytics.label') }} </span>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul role="list" class="space-y-4">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  <span> {{ __('ui::blocks_pricing_plans.features.online_support_24_7.label') }} </span>
                 </li>
               </ul>
             </li>
           </ul>
         </section>
         <section class="p-8 rounded-xl bg-white/5 ring-1 ring-inset ring-white/10">
-          <h3 id="tier-essential" class="text-sm font-semibold leading-6 text-white">Essential</h3>
+          <h3 id="tier-essential" class="text-sm font-semibold leading-6 text-white">{{ __('ui::blocks_pricing_plans.tiers.essential.label') }}</h3>
           <p class="mt-2 flex items-baseline gap-x-1">
             <span class="text-4xl font-bold text-white">$29</span>
-            <span class="text-sm font-semibold text-gray-300">/month</span>
+            <span class="text-sm font-semibold text-gray-300">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
           </p>
-          <a href="#" aria-describedby="tier-essential" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 text-white hover:bg-indigo-400 focus-visible:outline-indigo-500">Buy plan</a>
+          <a href="#" aria-describedby="tier-essential" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 text-white hover:bg-indigo-400 focus-visible:outline-indigo-500">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
           <ul role="list" class="mt-10 space-y-4 text-sm leading-6 text-white">
             <li>
               <ul role="list" class="space-y-4">
@@ -73,27 +72,27 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Integrations </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.integrations.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Shared links </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.shared_links.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Importing and exporting </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.import_export.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
                   <span>
-                    Team members
-                    <span class="text-sm leading-6 text-gray-400">(Up to 20 users)</span>
+                    {{ __('ui::blocks_pricing_plans.features.team_members.label') }}
+                    <span class="text-sm leading-6 text-gray-400">{{ __('ui::blocks_pricing_plans.table.up_to_users_paren.label', ['count' => 20]) }}</span>
                   </span>
                 </li>
               </ul>
@@ -104,13 +103,13 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Advanced analytics </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.advanced_analytics.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Basic reports </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.basic_reports.label') }} </span>
                 </li>
               </ul>
             </li>
@@ -120,31 +119,31 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> 24/7 online support </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.online_support_24_7.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Quarterly product workshops </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.quarterly_workshops.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Priority phone support </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.priority_phone_support.label') }} </span>
                 </li>
               </ul>
             </li>
           </ul>
         </section>
         <section class="p-8">
-          <h3 id="tier-premium" class="text-sm font-semibold leading-6 text-white">Premium</h3>
+          <h3 id="tier-premium" class="text-sm font-semibold leading-6 text-white">{{ __('ui::blocks_pricing_plans.tiers.premium.label') }}</h3>
           <p class="mt-2 flex items-baseline gap-x-1">
             <span class="text-4xl font-bold text-white">$59</span>
-            <span class="text-sm font-semibold text-gray-300">/month</span>
+            <span class="text-sm font-semibold text-gray-300">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
           </p>
-          <a href="#" aria-describedby="tier-premium" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">Buy plan</a>
+          <a href="#" aria-describedby="tier-premium" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
           <ul role="list" class="mt-10 space-y-4 text-sm leading-6 text-white">
             <li>
               <ul role="list" class="space-y-4">
@@ -152,27 +151,27 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Integrations </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.integrations.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Shared links </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.shared_links.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Importing and exporting </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.import_export.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
                   <span>
-                    Team members
-                    <span class="text-sm leading-6 text-gray-400">(Up to 50 users)</span>
+                    {{ __('ui::blocks_pricing_plans.features.team_members.label') }}
+                    <span class="text-sm leading-6 text-gray-400">{{ __('ui::blocks_pricing_plans.table.up_to_users_paren.label', ['count' => 50]) }}</span>
                   </span>
                 </li>
               </ul>
@@ -183,25 +182,25 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Advanced analytics </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.advanced_analytics.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Basic reports </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.basic_reports.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Professional reports </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.professional_reports.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Custom report builder </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.custom_report_builder.label') }} </span>
                 </li>
               </ul>
             </li>
@@ -211,25 +210,25 @@ declare(strict_types=1);
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> 24/7 online support </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.online_support_24_7.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Quarterly product workshops </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.quarterly_workshops.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> Priority phone support </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.priority_phone_support.label') }} </span>
                 </li>
                 <li class="flex gap-x-3">
                   <svg class="h-6 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span> 1:1 onboarding tour </span>
+                  <span> {{ __('ui::blocks_pricing_plans.features.onboarding_tour.label') }} </span>
                 </li>
               </ul>
             </li>
@@ -247,7 +246,7 @@ declare(strict_types=1);
           </div>
           <table class="w-full table-fixed border-separate border-spacing-x-8 text-left">
             <caption class="sr-only">
-              Pricing plan comparison
+              {{ __('ui::blocks_pricing_plans.table.caption.label') }}
             </caption>
             <colgroup>
               <col class="w-1/4">
@@ -259,341 +258,341 @@ declare(strict_types=1);
               <tr>
                 <td></td>
                 <th scope="col" class="px-6 pt-6 xl:px-8 xl:pt-8">
-                  <div class="text-sm font-semibold leading-7 text-white">Basic</div>
+                  <div class="text-sm font-semibold leading-7 text-white">{{ __('ui::blocks_pricing_plans.tiers.basic.label') }}</div>
                 </th>
                 <th scope="col" class="px-6 pt-6 xl:px-8 xl:pt-8">
-                  <div class="text-sm font-semibold leading-7 text-white">Essential</div>
+                  <div class="text-sm font-semibold leading-7 text-white">{{ __('ui::blocks_pricing_plans.tiers.essential.label') }}</div>
                 </th>
                 <th scope="col" class="px-6 pt-6 xl:px-8 xl:pt-8">
-                  <div class="text-sm font-semibold leading-7 text-white">Premium</div>
+                  <div class="text-sm font-semibold leading-7 text-white">{{ __('ui::blocks_pricing_plans.tiers.premium.label') }}</div>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row"><span class="sr-only">Price</span></th>
+                <th scope="row"><span class="sr-only">{{ __('ui::blocks_pricing_plans.table.price.label') }}</span></th>
                 <td class="px-6 pt-2 xl:px-8">
                   <div class="flex items-baseline gap-x-1 text-white">
                     <span class="text-4xl font-bold">$9</span>
-                    <span class="text-sm font-semibold leading-6">/month</span>
+                    <span class="text-sm font-semibold leading-6">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
                   </div>
-                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">Buy plan</a>
+                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
                 </td>
                 <td class="px-6 pt-2 xl:px-8">
                   <div class="flex items-baseline gap-x-1 text-white">
                     <span class="text-4xl font-bold">$29</span>
-                    <span class="text-sm font-semibold leading-6">/month</span>
+                    <span class="text-sm font-semibold leading-6">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
                   </div>
-                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 hover:bg-indigo-400 focus-visible:outline-indigo-600">Buy plan</a>
+                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 hover:bg-indigo-400 focus-visible:outline-indigo-600">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
                 </td>
                 <td class="px-6 pt-2 xl:px-8">
                   <div class="flex items-baseline gap-x-1 text-white">
                     <span class="text-4xl font-bold">$59</span>
-                    <span class="text-sm font-semibold leading-6">/month</span>
+                    <span class="text-sm font-semibold leading-6">{{ __('ui::blocks_pricing_plans.billing.per_month.label') }}</span>
                   </div>
-                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">Buy plan</a>
+                  <a href="#" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 hover:bg-white/20 focus-visible:outline-white">{{ __('ui::blocks_pricing_plans.actions.buy_plan.label') }}</a>
                 </td>
               </tr>
               <tr>
                 <th scope="colgroup" colspan="4" class="pb-4 text-sm font-semibold leading-6 text-white pt-8">
-                  Features
+                  {{ __('ui::blocks_pricing_plans.table.features.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/10"></div>
                 </th>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Integrations
+                  {{ __('ui::blocks_pricing_plans.features.integrations.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Shared links
+                  {{ __('ui::blocks_pricing_plans.features.shared_links.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Importing and exporting
+                  {{ __('ui::blocks_pricing_plans.features.import_export.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Team members
+                  {{ __('ui::blocks_pricing_plans.features.team_members.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
-                  <div class="text-center text-sm leading-6 text-gray-300">Up to 20 users</div>
+                  <div class="text-center text-sm leading-6 text-gray-300">{{ __('ui::blocks_pricing_plans.table.up_to_users.label', ['count' => 20]) }}</div>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
-                  <div class="text-center text-sm leading-6 text-gray-300">Up to 50 users</div>
+                  <div class="text-center text-sm leading-6 text-gray-300">{{ __('ui::blocks_pricing_plans.table.up_to_users.label', ['count' => 50]) }}</div>
                 </td>
               </tr>
 
               <tr>
                 <th scope="colgroup" colspan="4" class="pb-4 text-sm font-semibold leading-6 text-white pt-16">
-                  Reporting
+                  {{ __('ui::blocks_pricing_plans.table.reporting.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/10"></div>
                 </th>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Advanced analytics
+                  {{ __('ui::blocks_pricing_plans.features.advanced_analytics.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Basic reports
+                  {{ __('ui::blocks_pricing_plans.features.basic_reports.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Professional reports
+                  {{ __('ui::blocks_pricing_plans.features.professional_reports.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Custom report builder
+                  {{ __('ui::blocks_pricing_plans.features.custom_report_builder.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
 
               <tr>
                 <th scope="colgroup" colspan="4" class="pb-4 text-sm font-semibold leading-6 text-white pt-16">
-                  Support
+                  {{ __('ui::blocks_pricing_plans.table.support.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/10"></div>
                 </th>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  24/7 online support
+                  {{ __('ui::blocks_pricing_plans.features.online_support_24_7.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Quarterly product workshops
+                  {{ __('ui::blocks_pricing_plans.features.quarterly_workshops.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  Priority phone support
+                  {{ __('ui::blocks_pricing_plans.features.priority_phone_support.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="py-4 text-sm font-normal leading-6 text-white">
-                  1:1 onboarding tour
+                  {{ __('ui::blocks_pricing_plans.features.onboarding_tour.label') }}
                   <div class="absolute inset-x-8 mt-4 h-px bg-white/5"></div>
                 </th>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Basic</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Basic']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Not included in Essential</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.not_included_in.label', ['plan' => 'Essential']) }}</span>
                 </td>
                 <td class="px-6 py-4 xl:px-8">
                   <svg class="mx-auto h-5 w-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                   </svg>
-                  <span class="sr-only">Included in Premium</span>
+                  <span class="sr-only">{{ __('ui::blocks_pricing_plans.table.included_in.label', ['plan' => 'Premium']) }}</span>
                 </td>
               </tr>
             </tbody>

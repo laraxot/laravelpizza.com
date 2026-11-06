@@ -1,3 +1,15 @@
+---
+title: "no http controllers"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no http controllers"
+issues: []
+discussions: []
+status: draft
+---
+
 # No HTTP controllers in any module
 
 ## Rule
@@ -32,7 +44,7 @@ There is no slot for a traditional controller.
 - They create implicit routing that bypasses the Folio/Localization middleware stack
 - They cannot use `LaravelLocalization::localizeUrl()` for redirects correctly
 - They bypass the `pub_theme::` namespace resolution
-- They undermine the CMS-driven page model — the page has no JSON definition
+- They undermine the CMS-driven page model: the page has no JSON definition
 - They introduce a parallel routing system that conflicts with Folio's file-based routing
 
 ### The Notify module specifically
@@ -75,5 +87,5 @@ This keeps the HTTP surface in Folio (the correct location) while the business l
 ## Related
 
 - CLAUDE.md rule 1: "NEVER use traditional controllers or routes in web.php/api.php for front office"
-- `laravel/CLAUDE.md` rule 2: Architecture frontend — NO Controller, NO Routes in web.php
+- `laravel/CLAUDE.md` rule 2: Architecture frontend: NO Controller, NO Routes in web.php
 - Folio routing docs: `Themes/Meetup/docs/folio-pages-json-only-rule.md`

@@ -1,3 +1,11 @@
+---
+title: "sortable_livewire"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "sortable_livewire xot"
+---
 # sortable_livewire
 
 <!-- Contenuto migrato da _docs/sortable_livewire.txt -->

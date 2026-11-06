@@ -1,3 +1,14 @@
+---
+title: "readme.it"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme.it"
+issues: []
+discussions: []
+---
+
 # 🚀 Toolkit di Automazione Git
 
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg?style=for-the-badge&logo=php&logoColor=white)](phpstan/ANALISI_MODULI_PHPSTAN.md)

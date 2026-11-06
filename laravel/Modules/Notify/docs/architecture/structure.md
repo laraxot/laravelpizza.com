@@ -1,3 +1,23 @@
+---
+title: "Modulo Notify"
+type: concept
+tags: [notify, docs, architecture, structure]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione architecture structure modulo notify frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # Modulo Notify
 
 Data: 2025-04-23 19:09:56
@@ -39,6 +59,8 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 **Collegamenti:**
 - [database-mail.md](database-mail.md#regola-sulle-rotte)
 - [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [database-mail.md](../database-mail.md#regola-sulle-rotte)
+- [grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 
 ## Struttura delle directory
 
@@ -429,6 +451,8 @@ tests/Unit
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in database-mail.md](database-mail.md#regola-sulle-rotte)
 - [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in database-mail.md](../database-mail.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 ### Versione HEAD
 
 
@@ -452,6 +476,21 @@ tests/Unit
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
 * [structure.md](../../../cms/docs/components/structure.md)
+* [structure.md](../../../Gdpr/docs/structure.md)
+* [structure.md](../structure.md)
+* [structure.md](../../../xot/docs/structure.md)
+* [structure.md](../../../xot/docs/base/structure.md)
+* [structure.md](../../../xot/docs/config/structure.md)
+* [structure.md](../../../User/docs/structure.md)
+* [structure.md](../../../ui/docs/structure.md)
+* [structure.md](../../../Lang/docs/structure.md)
+* [structure.md](../../../Job/docs/structure.md)
+* [structure.md](../../../Media/docs/structure.md)
+* [structure.md](../../../Tenant/docs/structure.md)
+* [structure.md](../../../Activity/docs/structure.md)
+* [structure.md](../../../cms/docs/structure.md)
+* [structure.md](../../../Cms/docs/themes/structure.md)
+* [structure.md](../../../Cms/docs/components/structure.md)
 
 
 ---

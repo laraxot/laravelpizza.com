@@ -1,3 +1,11 @@
+---
+title: "Roadmap Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "roadmap modulo xot xot"
+---
 ### Versione HEAD
 
 # Roadmap Modulo Xot

@@ -18,8 +18,8 @@ return [
             'description' => 'General Settings',
         ],
         'label' => 'Lang Base Create Record',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'sort' => '1',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

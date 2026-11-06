@@ -1,3 +1,11 @@
+---
+title: "coverage clean"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "coverage clean activity"
+---
   Activity/app/Actions/ActivityLogger ................................... 0.0%  
   Activity/app/Actions/LogActivityAction ................................ 0.0%  
   Activity/app/Actions/LogModelCreatedAction ............................ 0.0%  

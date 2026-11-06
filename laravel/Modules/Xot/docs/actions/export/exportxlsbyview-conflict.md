@@ -1,3 +1,14 @@
+---
+title: "Risoluzione Conflitto in ExportXlsByView"
+type: note
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, actions]
+qmd: "Risoluzione Conflitto in ExportXlsByView"
+status: superseded
+superseded_by: ../../consolidated/archive/exportxlsbyview-conflict.md
+---
 # Risoluzione Conflitto in ExportXlsByView
 
 ## Problema
@@ -28,13 +39,13 @@ public function execute(string $view, array $data, string $filename): BinaryFile
 {
     $html = view($view, $data)->render();
     $tempFile = tempnam(sys_get_temp_dir(), 'xls_');
-
+    
     if ($tempFile === false) {
         throw new \RuntimeException('Could not create temporary file');
     }
-
+    
     file_put_contents($tempFile, $html);
-
+    
     return response()->download($tempFile, $filename, [
         'Content-Type' => 'application/vnd.ms-excel',
     ])->deleteFileAfterSend(true);

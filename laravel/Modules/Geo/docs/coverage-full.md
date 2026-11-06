@@ -1,3 +1,15 @@
+---
+title: "coverage full"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coverage full"
+issues: []
+discussions: []
+status: draft
+---
+
 
    PASS  Modules\Geo\tests\Feature\AddressIntegrationTest
   ✓ Address Integration → it can attach address to patient via polymorphic relationship

@@ -1,3 +1,14 @@
+---
+title: "concerns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "concerns"
+issues: []
+discussions: []
+---
+
 # Codebase Concerns Template
 
 Template for `.planning/codebase/CONCERNS.md` - captures known issues and areas requiring care.
@@ -6,6 +17,14 @@ Template for `.planning/codebase/CONCERNS.md` - captures known issues and areas 
 
 ---
 
+title: "concerns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "concerns"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

@@ -1,3 +1,15 @@
+---
+title: "installazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installazione"
+issues: []
+discussions: []
+status: draft
+---
+
 # Superpowers - Installazione e Configurazione
 
 ## Panoramica
@@ -81,5 +93,4 @@ Per pinning versione specifica:
 - Discord: https://discord.gg/Jd8Vphy9jq
 
 ---
-
 *Documento creato: 2026-03-31*

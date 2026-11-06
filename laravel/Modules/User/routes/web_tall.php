@@ -1,19 +1,15 @@
 <?php
 
+declare(strict_types=1);
 /**
  * routes from laravel preset Tall.
  */
-
-declare(strict_types=1);
-
 use Illuminate\Support\Facades\Route;
+use Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget;
+use Modules\User\Filament\Widgets\Auth\RegisterWidget;
+use Modules\User\Filament\Widgets\Auth\ResetPasswordWidget;
 use Modules\User\Http\Controllers\Auth\EmailVerificationController;
-use Modules\User\Http\Controllers\Auth\LogoutController;
-use Modules\User\Http\Livewire\Auth\Passwords\Confirm;
-use Modules\User\Http\Livewire\Auth\Passwords\Email;
-use Modules\User\Http\Livewire\Auth\Passwords\Reset;
-use Modules\User\Http\Livewire\Auth\Register;
-use Modules\User\Http\Livewire\Auth\Verify;
+use Modules\User\Http\Volt\LogoutAction;
 use Webmozart\Assert\Assert;
 
 /*
@@ -29,34 +25,25 @@ use Webmozart\Assert\Assert;
 
 // Route::view('/', 'welcome')->name('home');
 Route::prefix('{lang}')->group(function (): void {
-    Route::middleware('guest')
-        ->namespace('\Modules\User\Http\Livewire\Auth')
-        ->group(static function (): void {
-            Route::get('login', 'Login')->name('login');
-
-            Route::get('register', Register::class)->name('register');
-        });
-
-    Route::middleware([])->namespace('\Modules\User\Http\Livewire\Auth')->group(static function (): void {
-        Route::get('password/reset', Email::class)->name('password.request');
-
-        Route::get('password/reset/{token}', Reset::class)->name(
-            'password.reset',
-        );
+    Route::middleware('guest')->group(static function (): void {
+        Route::get('register', RegisterWidget::class)->name('register');
     });
 
-    Route::middleware('auth')
-        ->namespace('\Modules\User\Http\Livewire\Auth')
-        ->group(static function (): void {
-            $route = Route::get('email/verify', Verify::class);
-            Assert::isInstanceOf($route, Illuminate\Routing\Route::class);
-            $route->middleware('throttle:6,1');
-            $route->name('verification.notice');
+    Route::middleware([])->group(static function (): void {
+        Route::get('password/reset', ForgotPasswordWidget::class)->name('password.request');
+        Route::get('password/reset/{token}', ResetPasswordWidget::class)->name('password.reset');
+    });
 
-            $route = Route::get('password/confirm', Confirm::class);
-            Assert::isInstanceOf($route, Illuminate\Routing\Route::class);
-            $route->name('password.confirm');
-        });
+    Route::middleware('auth')->group(static function (): void {
+        $notice = Route::get('email/verify', static fn () => redirect()->intended('/admin'));
+        Assert::isInstanceOf($notice, Illuminate\Routing\Route::class);
+        $notice->middleware('throttle:6,1');
+        $notice->name('verification.notice');
+
+        $confirm = Route::get('password/confirm', static fn () => redirect()->intended('/admin'));
+        Assert::isInstanceOf($confirm, Illuminate\Routing\Route::class);
+        $confirm->name('password.confirm');
+    });
 
     Route::middleware('auth')
         // ->namespace('\Modules\User\Http\Livewire\Auth')
@@ -66,7 +53,7 @@ Route::prefix('{lang}')->group(function (): void {
             $route->middleware('signed');
             $route->name('verification.verify');
 
-            Route::match(['get', 'post'], 'logout', LogoutController::class)->name('logout');
+            Route::match(['get', 'post'], 'logout', LogoutAction::class)->name('logout');
         });
 })->whereIn('lang', ['it', 'en']);
 
@@ -80,7 +67,5 @@ Route::namespace('Socialite')
         );
         // ->name('oauth.redirect')
 
-        Route::get('/sso/{provider}/callback', 'ProcessCallbackController');
-
-        // ->name('oauth.callback');
+        // OAuth callback is the Sixteen Folio page; this legacy route file must not reintroduce a controller callback.
     });

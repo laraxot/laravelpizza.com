@@ -1,3 +1,15 @@
+---
+title: "github issue ptv criteri year load refactor body"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github issue ptv criteri year load refactor body"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Contesto
 
 Refactor proposto su `TrovaEsclusiByModelClassYearAction`: estrarre caricamento `criteri_esclusione` e `criteri_options` per anno.

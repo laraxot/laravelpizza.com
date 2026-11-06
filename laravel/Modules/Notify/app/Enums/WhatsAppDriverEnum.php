@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Enums;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Traits\EnumTrait;
 
 /**
@@ -32,8 +33,7 @@ enum WhatsAppDriverEnum: string
             self::TWILIO->value => 'Twilio',
             self::MESSAGEBIRD->value => 'MessageBird',
             self::VONAGE->value => 'Vonage',
-            self::INFOBIP->value => 'Infobip',
-        ];
+            self::INFOBIP->value => 'Infobip'];
     }
 
     /**
@@ -44,11 +44,10 @@ enum WhatsAppDriverEnum: string
     public static function labels(): array
     {
         return [
-            self::TWILIO->value => __('notify::whatsapp.drivers.twilio'),
-            self::MESSAGEBIRD->value => __('notify::whatsapp.drivers.messagebird'),
-            self::VONAGE->value => __('notify::whatsapp.drivers.vonage'),
-            self::INFOBIP->value => __('notify::whatsapp.drivers.infobip'),
-        ];
+            self::TWILIO->value => SafeStringCastAction::cast(__('notify::whatsapp.drivers.twilio')),
+            self::MESSAGEBIRD->value => SafeStringCastAction::cast(__('notify::whatsapp.drivers.messagebird')),
+            self::VONAGE->value => SafeStringCastAction::cast(__('notify::whatsapp.drivers.vonage')),
+            self::INFOBIP->value => SafeStringCastAction::cast(__('notify::whatsapp.drivers.infobip'))];
     }
 
     /**

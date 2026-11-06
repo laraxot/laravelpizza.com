@@ -6,23 +6,16 @@ namespace Modules\Geo\Filament\Forms\Components;
 
 use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
+/*
+ * GateGuard: callers Geo forms address fields; unique AddressInput XotBaseField;
+ * reads/writes string address state; user: "migliora qualità codice , fa tutto con bmad + second brain + filament blueprint"
+ */
+
 /**
- * Address input field with geolocation button.
+ * Address input with geolocation — extends {@see XotBaseField} (mai Field diretto).
  *
- * **Filament Component** (not Blade render) — extends Field so it integrates
- * natively with Filament's form/schema system, Livewire state, and validation.
- *
- * **Why in Geo**: Geolocation and reverse geocoding are geo-spatial concerns.
- * Any module (Fixcity, Municipal, UI, User, etc.) can consume this component.
- *
- * **Usage**:
- * ```php
- * use Modules\Geo\Filament\Forms\Components\AddressInput;
- *
- * AddressInput::make('address')
- *     ->label('Indirizzo')
- *     ->required()
- * ```
+ * Why Geo: geocoding / reverse geocoding. Usage: `AddressInput::make('address')`
+ * senza `->label()` hardcoded (traduzioni modulo).
  *
  * @see Modules/Geo/resources/views/filament/forms/components/address-input.blade.php
  */

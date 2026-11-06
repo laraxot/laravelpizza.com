@@ -1,3 +1,11 @@
+---
+title: "Convenzione Naming Campi Utente: `first_name` e `last_name`"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzione naming campi utente: `first_name` e `last_name` xot"
+---
 # Convenzione Naming Campi Utente: `first_name` e `last_name`
 
 ## Regola Fondamentale

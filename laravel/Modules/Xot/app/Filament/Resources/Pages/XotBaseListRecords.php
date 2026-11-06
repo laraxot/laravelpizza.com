@@ -8,30 +8,31 @@ use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords as FilamentListRecords;
-use Illuminate\Contracts\Pagination\Paginator;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Modules\UI\Enums\TableLayoutEnum;
-use Modules\Xot\Actions\ModelClass\UpdateCountAction;
+use Modules\Xot\Filament\Links\RecordAnchor;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\Xot\Filament\Traits\HasXotTable;
 use Webmozart\Assert\Assert;
 
 /**
  * Base class for list records pages.
  *
- * @property ?string         $model
- * @property ?string         $resource
- * @property ?string         $slug
- * @property TableLayoutEnum $layoutView
+ * La tabella NON si configura qui: la costruisce `XotBaseResource::table()` attraverso
+ * `getTableClass()`, cioe' la `*Table` class della Resource. Per questo la pagina non usa
+ * `HasXotTable` — un hook `getTableColumns()` scritto su una list page risolverebbe allo
+ * stub deprecato di Filament e la tabella resterebbe vuota, senza errori ne' log.
+ *
+ * Guardie: `tests/Unit/ListPageHasTableClassTest.php` (ogni list page risolve la sua Table
+ * class) e `tests/Unit/Filament/TableHooksDeclaredByUsTest.php` (nessun hook risolve allo
+ * stub Filament). Regola: `laravel/docs/wiki/rules/xot-table-method-names.md`.
+ *
+ * @property ?string $model
+ * @property ?string $resource
+ * @property ?string $slug
  */
 abstract class XotBaseListRecords extends FilamentListRecords
 {
-    use HasXotTable;
-
     /**
-     * @param array<string, bool|float|int|string|null> $params
+     * @param  array<string, bool|float|int|string|null>  $params
      */
     public static function trans(string $key, array $params = []): string
     {
@@ -54,22 +55,17 @@ abstract class XotBaseListRecords extends FilamentListRecords
         return $resource;
     }
 
-    /*
-     * Get the table columns.
-     *
-     * @return array<string, Tables\Columns\Column>
-     *
-     * abstract public function getTableColumns(): array;
-     */
-
-    /**
-     * Get the default sort column and direction.
-     *
-     * @return array{id: 'desc'|'asc'}
-     */
-    protected function getDefaultSort(): array
+    public static function getModelClass(): string
     {
-        return ['id' => 'desc'];
+        $resource = static::getResource();
+        $model = $resource::getModel();
+
+        return $model;
+    }
+
+    public static function getModuleName(): string
+    {
+        return Str::of(static::class)->between('Modules\\', '\Filament\\')->toString();
     }
 
     /**
@@ -80,36 +76,52 @@ abstract class XotBaseListRecords extends FilamentListRecords
     protected function getHeaderActions(): array
     {
         return [
-            'create' => CreateAction::make()->icon('heroicon-o-plus'),
+            'create' => CreateAction::make()
+                ->icon('heroicon-o-plus')
+                ->url(fn (): string => RecordAnchor::appendReturnTo(
+                    static::getResource()::getUrl('create'),
+                    RecordAnchor::currentUrl(),
+                )),
         ];
     }
 
     /**
-     * Paginate the table query.
+     * DEVE ESSERE FINAL
      *
-     * @param Builder<Model> $query
-     *
-     * @return Paginator<int, Model>
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */
-    protected function paginateTableQueryOLD(Builder $query): Paginator
+    public function getTableColumns(): array
     {
-        $perPage = $this->getTableRecordsPerPage();
-        $perPageValue = 'all' === $perPage ? $query->count() : (is_numeric($perPage) ? (int) $perPage : null);
+        return [];
+    }
 
-        $paginator = $query->paginate($perPageValue);
+    /**
+     * DEVE ESSERE FINAL
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
+     */
+    public function getTableActions(): array
+    {
+        return [];
+    }
 
-        Assert::isInstanceOf($paginator, Paginator::class);
+    /**
+     * DEVE ESSERE FINAL
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
+     */
+    public function getTableFilters(): array
+    {
+        return [];
+    }
 
-        if (! method_exists($paginator, 'total')) {
-            return $paginator;
-        }
-
-        $totalResult = $paginator->total();
-        $count = is_int($totalResult) ? $totalResult : (is_numeric($totalResult) ? (int) $totalResult : 0);
-        $modelClass = $this->getModel();
-        // dddx($modelClass);
-        app(UpdateCountAction::class)->execute($modelClass, $count);
-
-        return $paginator;
+    /**
+     * DEVE ESSERE FINAL
+     *
+     * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
+     */
+    public function getTableBulkActions(): array
+    {
+        return [];
     }
 }

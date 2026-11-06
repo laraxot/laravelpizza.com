@@ -7,17 +7,14 @@ namespace Modules\User\Filament\Resources;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Grid;
-use Filament\Schemas\Components\Section;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\User\Filament\Resources\OauthAccessTokenResource\Pages\ListOauthAccessTokens;
 use Modules\User\Filament\Resources\OauthAccessTokenResource\Pages\ViewOauthAccessToken;
 use Modules\User\Models\OauthAccessToken;
@@ -52,7 +49,7 @@ class OauthAccessTokenResource extends XotBaseResource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
+                IDColumn::make('id')
                     ->searchable()
                     ->sortable()
                     ->copyable(),
@@ -60,12 +57,12 @@ class OauthAccessTokenResource extends XotBaseResource
                 TextColumn::make('user.name')
                     ->searchable()
                     ->sortable()
-                    ->url(function (mixed $record): ?string {
+                    ->url(function (Model|array|null $record): ?string {
                         if (! $record instanceof OauthAccessToken) {
                             return null;
                         }
                         $user = $record->user;
-                        if (null !== $user && method_exists($user, 'exists') && $user->exists) {
+                        if ($user !== null && method_exists($user, 'exists') && $user->exists) {
                             return UserResource::getUrl('view', ['record' => $user]);
                         }
 
@@ -83,17 +80,12 @@ class OauthAccessTokenResource extends XotBaseResource
 
                 TextColumn::make('scopes')
                     ->limit(30)
-                    ->tooltip(function (mixed $state): ?string {
-                        if (null === $state) {
-                            return null;
+                    ->tooltip(
+                        /** @param list<string>|string|null $state 'scopes' column state: the JSON-cast list, or one of its items. */
+                        function (array|string|null $state): ?string {
+                            return is_array($state) ? json_encode($state) : $state;
                         }
-                        if (is_array($state)) {
-                            /* @var array<string, mixed> $state */
-                            return json_encode($state);
-                        }
-
-                        return is_string($state) ? $state : null;
-                    }),
+                    ),
 
                 IconColumn::make('revoked')
                     ->boolean()
@@ -106,7 +98,7 @@ class OauthAccessTokenResource extends XotBaseResource
                 TextColumn::make('expires_at')
                     ->dateTime()
                     ->sortable()
-                    ->formatStateUsing(function (mixed $state): string {
+                    ->formatStateUsing(function (Carbon|string|null $state): string {
                         if ($state instanceof Carbon) {
                             $now = Carbon::now();
                             if ($state->lt($now)) {
@@ -145,35 +137,6 @@ class OauthAccessTokenResource extends XotBaseResource
         return [
             'index' => ListOauthAccessTokens::route('/'),
             'view' => ViewOauthAccessToken::route('/{record}'),
-        ];
-    }
-
-    /**
-     * @return array<string, Component>
-     */
-    public static function getFormSchema(): array
-    {
-        return [
-            'oauth_access_token_info' => Section::make('OAuth Access Token Information')
-                ->schema([
-                    'grid_1' => Grid::make(2)
-                        ->schema([
-                            'user_id' => Select::make('user_id')
-                                ->relationship('user', 'name')
-                                ->searchable(),
-                            'client_id' => Select::make('client_id')
-                                ->relationship('client', 'name')
-                                ->searchable()
-                                ->required(),
-                        ]),
-
-                    'grid_2' => Grid::make(2)
-                        ->schema([
-                            'name' => TextInput::make('name')
-                                ->maxLength(255),
-                            'scopes' => TextInput::make('scopes'),
-                        ]),
-                ]),
         ];
     }
 

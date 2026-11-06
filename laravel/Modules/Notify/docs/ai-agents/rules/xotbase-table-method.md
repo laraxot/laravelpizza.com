@@ -1,3 +1,15 @@
+---
+title: "xotbase table method"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xotbase table method"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔴 XotBaseTableWidget - NO table() Method Rule
 
 **Path**: `.agents/docs/rules/xotbase-table-method.md`  
@@ -6,7 +18,6 @@
 **Priority**: BLOCKER
 
 ---
-
 ## 🎯 The Rule
 
 > **MAI** definire il metodo `table()` in classi che estendono `XotBaseTableWidget`.
@@ -268,12 +279,14 @@ class MyWidget extends XotBaseTableWidget
 
 ### AI Agents Docs
 - **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - Why extend XotBase
 - **[Bash Commands Auto-Allow](bash-commands-auto-allow.md)** - Bash permissions
 
 ### Module Docs
 - **[XotBaseTableWidget](../../laravel/Modules/Xot/app/Filament/Widgets/XotBaseTableWidget.php)** - Base class source
 - **[OutcomesTableWidget](../../laravel/Modules/Predict/Filament/Widgets/OutcomesTableWidget.php)** - Example implementation
+- **[OutcomesTableWidget](../../laravel/Modules/Forecast/Filament/Widgets/OutcomesTableWidget.php)** - Example implementation
 
 ---
 

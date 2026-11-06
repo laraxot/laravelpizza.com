@@ -1,3 +1,15 @@
+---
+title: "quick reference"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick reference"
+issues: []
+discussions: []
+status: draft
+---
+
 # Quick Reference & Super Mucca
 
 Guida per Claude: quick reference, workflow, risorse.
@@ -57,6 +69,7 @@ class ListPosts extends XotBaseListRecords
 - [Professional Charts Guide](../../laravel/Modules/Chart/docs/filament-charts-professional-guide.md)
 - [JpGraph Reference](../../laravel/Modules/Chart/docs/jpgraph-4-4-3-reference.md)
 - [PDF Generation](../../laravel/Modules/Quaeris/docs/pdf-generation-with-charts.md)
+- [PDF Generation](../../laravel/Modules/App/docs/pdf-generation-with-charts.md)
 
 ## Collegamenti
 

@@ -1,4 +1,11 @@
 ---
+title: "agents"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity, llm-wiki]
+qmd: "agents activity"
+---
 title: "Agent instructions"
 type: reference
 tags: [agents, coding-agent, llm-wiki]
@@ -11,7 +18,6 @@ related:
   - ./coding-agent-manifests.md
 ---
 
-# Activity Module LLM Wiki Agent Instructions
 
 > **Module/Theme:** Activity
 > **Scope:** Activity-specific knowledge only
@@ -67,4 +73,5 @@ related:
 
 ### Rule 3: Link Heavily
 - Every page MUST have 3+ incoming links
+- Every page MUST have 3+ outgoing links=======
 - Every page MUST have 3+ outgoing links

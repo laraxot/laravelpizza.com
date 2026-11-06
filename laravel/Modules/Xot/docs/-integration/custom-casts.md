@@ -1,3 +1,11 @@
+---
+title: "custom_casts"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "custom_casts xot"
+---
 # custom_casts
 
 <!-- Contenuto migrato da _docs/custom_casts.txt -->

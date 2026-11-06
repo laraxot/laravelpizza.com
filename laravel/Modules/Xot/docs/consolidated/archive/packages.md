@@ -1,3 +1,11 @@
+---
+title: "Pacchetti del Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pacchetti del modulo xot xot"
+---
 # Pacchetti del Modulo Xot
 
 ## Pacchetti Utilizzati

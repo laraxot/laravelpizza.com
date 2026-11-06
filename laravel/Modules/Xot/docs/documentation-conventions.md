@@ -1,3 +1,13 @@
+---
+title: "Convenzioni per la documentazione in Laraxot PTVX"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Convenzioni per la documentazione in Laraxot PTVX"
+---
 # Convenzioni per la documentazione in Laraxot PTVX
 
 ## Convenzioni di naming
@@ -23,13 +33,13 @@
 2. **Struttura dei contenuti**: Utilizzare titoli e sottotitoli organizzati in modo gerarchico:
    ```markdown
    # Titolo principale
-
+   
    ## Sezione 1
-
+   
    ### Sottosezione 1.1
-
+   
    ### Sottosezione 1.2
-
+   
    ## Sezione 2
    ```
 
@@ -43,7 +53,7 @@
 4. **Note e avvertimenti**: Utilizzare un formato standard per note e avvertimenti:
    ```markdown
    > **Nota**: Informazione importante.
-
+   
    > **Attenzione**: Avvertimento critico.
    ```
 
@@ -100,8 +110,8 @@ Utilizzare script nella cartella `bashscripts` per automatizzare le verifiche e 
 
 ## Collegamenti a documentazione correlata
 
-- [Documentazione generale](../../../docs/documentation_rules.md)
-- [Convenzioni di naming in generale](../../../docs/naming_conventions.md)
+- [Documentazione generale](documentation_rules.md)
+- [Convenzioni di naming in generale](../../../../docs/naming_conventions.md)
 - [Regole per ServiceProvider](../../IndennitaCondizioniLavoro/docs/service_provider.md)
 - [Regole per file di traduzione](../../../.cursor/rules/translation_files_rules.mdc)
 

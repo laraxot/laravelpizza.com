@@ -47,4 +47,51 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'card' => [
+        'address_unavailable' => [
+            'label' => 'Adresse nicht verfügbar',
+        ],
+        'visit_website' => [
+            'label' => 'Website besuchen',
+        ],
+        'services_offered' => [
+            'label' => 'Angebotene Leistungen',
+        ],
+        'more_services' => [
+            'label' => '+:count weitere',
+        ],
+        'today_hours' => [
+            'label' => 'Heute: :open - :close',
+        ],
+        'today_closed' => [
+            'label' => 'Heute: Geschlossen',
+        ],
+        'actions' => [
+            'book' => 'Buchen',
+            'details' => 'Details',
+            'call' => 'Anrufen',
+        ],
+    ],
+    'list' => [
+        'services_count' => [
+            'label' => ':count Leistungen',
+        ],
+        'empty' => [
+            'title' => 'Keine Praxis gefunden',
+            'description' => 'Im ausgewählten Gebiet sind keine Praxen verfügbar.',
+        ],
+        'selected' => [
+            'label' => 'Ausgewählte Praxis: :name',
+        ],
+    ],
+    'sections' => [
+        'buttons' => [
+            'title' => 'Die Zahnarztpraxen in Ihrer Nähe',
+        ],
+    ],
+    'buttons' => [
+        'empty' => [
+            'message' => 'Keine Praxis gefunden, die den ausgewählten Suchkriterien entspricht.',
+        ],
+    ],
 ];

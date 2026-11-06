@@ -1,3 +1,14 @@
+---
+title: "Sistema Icone UI"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "sistema icone ui ui"
+---
+
 # 🎨 Sistema Icone UI
 
 ## Panoramica
@@ -163,7 +174,7 @@ MenuItem::make()
 class StatsWidget extends Widget
 {
     protected static string $view = 'ui::widgets.stats';
-
+    
     public function getViewData(): array
     {
         return [
@@ -182,11 +193,6 @@ class StatsWidget extends Widget
 1. **Crea il file SVG** in `Modules/UI/resources/svg/`
 2. **Usa un nome descrittivo** (es. `user-profile.svg`)
 3. **L'icona sarà disponibile** come `ui-user-profile`
-
-### Sottocartelle (es. brands)
-
-- `brands/github.svg` → `ui-brands.github` (punto = separatore path)
-- **Vietato** SVG inline nelle Blade: vedi [no-svg-hardcoded-in-blade.md](no-svg-hardcoded-in-blade.md)
 
 ### Esempio di Icona SVG
 
@@ -331,21 +337,13 @@ Tutte le icone sono compatibili con Filament 4.x e versioni successive.
 
 ## 📝 Changelog
 
-### v1.1.0 - [DATE]
+### v1.1.0 - 2025-01-27
 - **🔧 Icone Aggiuntive**: Aggiunte icone mancanti (cancel, save, logout, showPassword, user-main, user-team, user-user-tenant)
 - **🐛 Bug Fix**: Risolto errore "SvgNotFound" per icona "cancel"
 - **📝 Traduzioni**: Aggiornati file di traduzione per utilizzare prefisso "ui-" corretto
 
-### v1.0.0 - [DATE]
+### v1.0.0 - 2025-01-27
 - **🎨 Sistema Icone**: Implementato sistema completo di icone SVG
 - **🔧 Registrazione Automatica**: Icone registrate automaticamente
 - **📚 Documentazione**: Documentazione completa del sistema
 - **🎯 Integrazione Filament**: Compatibilità completa con Filament 4.x
-
-## ♻️ Manutenzione 2025-11
-
-- Refactor `Modules\UI\app\Actions\Icon\GetAllIconsAction` per garantire array `array<string, array<string, mixed>>` in tutta la catena.
-- Validazione sicura dei percorsi: uso di `Symfony\Component\Finder\SplFileInfo` prima di costruire i nomi delle icone.
-- Prefisso garantito stringa: cast esplicito e fallback `''` per i set personalizzati.
-- Verifiche qualità: PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (nota: soglia complessità legacy ancora 20).
-- Documentare nuove icone o prefissi aggiuntivi in questa sezione prima del rilascio.

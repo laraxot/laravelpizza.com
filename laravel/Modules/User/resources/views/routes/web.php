@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /*
  * use Illuminate\Support\Facades\Route;
  * use Themes\One\Http\Controllers\PagesController;

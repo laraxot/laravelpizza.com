@@ -1,3 +1,15 @@
+---
+title: "geo map widget"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map widget"
+issues: []
+discussions: []
+status: draft
+---
+
 # GeoMapWidget (Filament v5)
 
 ## Overview

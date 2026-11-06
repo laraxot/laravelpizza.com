@@ -1,9 +1,28 @@
+---
+title: "milestone archive"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "milestone archive"
+issues: []
+discussions: []
+---
+
 # Milestone Archive Template
 
 This template is used by the complete-milestone workflow to create archive files in `.planning/milestones/`.
 
 ---
 
+title: "milestone archive"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "milestone archive"
+issues: []
+discussions: []
 ## File Template
 
 # Milestone v2.0.4: {{MILESTONE_NAME}}

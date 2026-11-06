@@ -253,4 +253,8 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'stream_widget' => [
+        'start_stop' => 'Start/Stopp',
+        'time' => 'Zeit',
+    ],
 ];

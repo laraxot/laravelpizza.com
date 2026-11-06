@@ -1,3 +1,15 @@
+---
+title: "map rendering in wizards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map rendering in wizards"
+issues: []
+discussions: []
+status: draft
+---
+
 # Troubleshooting: Map Rendering in Wizards & Tabs
 
 ## Problem: Blank Maps
@@ -8,7 +20,6 @@ When a geographic component (e.g., `MapPicker`, `GeopointPicker`) is placed insi
 2. **Framework DOM Diffing**: Standard Shadow DOM components can be "cleared" or disconnected by Alpine.js or Livewire's diffing engine during parent state updates, causing the Leaflet instance to be lost.
 
 ---
-
 ## Solution 1: Resize Recovery
 All standardized components now use a `ResizeObserver` to detect when they gain physical dimensions.
 

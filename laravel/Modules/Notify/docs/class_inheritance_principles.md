@@ -1,5 +1,17 @@
+---
+title: "class inheritance principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "class inheritance principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # Principi di Ereditarietà nelle Classi <nome progetto>
-# Principi di Ereditarietà nelle Classi Quaeris
+# Principi di Ereditarietà nelle Classi SaluteOra
 
 ## Regola Fondamentale: No Duplicate Declarations
 
@@ -76,8 +88,8 @@ Per identificare dichiarazioni duplicate, usare:
 
 # Trova classi che estendono XotBasePage e implementano HasForms
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/<nome progetto>/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/Quaeris/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
 ```
 
 ## Riferimenti

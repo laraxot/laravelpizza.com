@@ -1,3 +1,15 @@
+---
+title: "code style"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code style"
+issues: []
+discussions: []
+status: draft
+---
+
 # Code Style Guidelines
 
 Vedi [index](index.md) per navigazione completa.

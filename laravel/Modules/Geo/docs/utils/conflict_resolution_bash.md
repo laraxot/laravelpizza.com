@@ -1,3 +1,15 @@
+---
+title: "conflict resolution bash"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution bash"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Manuale dei Conflitti negli Script Bash
 
 ## PERCHÉ È CRUCIALE
@@ -224,5 +236,4 @@ BRANCH="${3:-main}"  # Usa il terzo parametro se fornito, altrimenti "main"
 - [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md) - Principi fondamentali di documentazione
 
 ---
-
 > **NOTA IMPORTANTE**: La risoluzione dei conflitti negli script bash deve sempre privilegiare la robustezza, la gestione degli errori e il rispetto del principio DRY. Ogni conflitto risolto deve essere accompagnato da un aggiornamento della documentazione.

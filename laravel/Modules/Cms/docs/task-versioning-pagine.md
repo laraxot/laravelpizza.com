@@ -1,3 +1,15 @@
+---
+title: "task versioning pagine"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task versioning pagine"
+issues: []
+discussions: []
+status: draft
+---
+
 # Task: Implementare Versioning Pagine - Cms
 
 **Modulo**: Cms
@@ -5,7 +17,6 @@
 **Completamento**: 0%
 
 ---
-
 ## Descrizione
 
 Le pagine CMS non hanno versioning. Aggiungere revisioni per permettere rollback e audit trail dei contenuti.

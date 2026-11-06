@@ -1,3 +1,11 @@
+---
+title: "Convenzioni Naming Campi Database"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzioni naming campi database xot"
+---
 # Convenzioni Naming Campi Database
 
 ## Regole Fondamentali

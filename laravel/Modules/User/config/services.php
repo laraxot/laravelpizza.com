@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * Service Providers Configuration
  * This file defines Socialite OAuth2 credentials for authentication

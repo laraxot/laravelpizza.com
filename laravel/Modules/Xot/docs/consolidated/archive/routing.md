@@ -1,3 +1,11 @@
+---
+title: "Routing nel Progetto il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "routing nel progetto il progetto xot"
+---
 # Routing nel Progetto il progetto
 
 ## Indice

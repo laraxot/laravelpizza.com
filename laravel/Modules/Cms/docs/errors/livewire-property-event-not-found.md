@@ -1,3 +1,15 @@
+---
+title: "livewire property event not found"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "livewire property event not found"
+issues: []
+discussions: []
+status: draft
+---
+
 # Livewire Property `$event` Not Found (container0.view)
 
 ## Sintomo

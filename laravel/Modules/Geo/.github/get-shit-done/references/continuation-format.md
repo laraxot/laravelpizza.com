@@ -1,3 +1,14 @@
+---
+title: "continuation format"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "continuation format"
+issues: []
+discussions: []
+---
+
 # Continuation Format
 
 Standard format for presenting next steps after completing a command or workflow.
@@ -7,6 +18,14 @@ Standard format for presenting next steps after completing a command or workflow
 ```
 ---
 
+title: "continuation format"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "continuation format"
+issues: []
+discussions: []
 ## ▶ Next Up
 
 **{identifier}: {name}** — {one-line description}

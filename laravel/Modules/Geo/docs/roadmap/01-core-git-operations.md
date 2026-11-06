@@ -1,3 +1,16 @@
+---
+title: "01 core git operations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "01 core git operations"
+issues: []
+discussions: []
+status: superseded
+superseded_by: core-git-operations.md
+---
+
 
 
 
@@ -7375,7 +7388,6 @@ Questa fase si concentra sulle operazioni fondamentali di Git necessarie per la 
 - Risoluzione conflitti
 
 ---
-
 **Esempio pratico di sincronizzazione tra organizzazioni:**
 
 ```bash

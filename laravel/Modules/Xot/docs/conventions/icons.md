@@ -1,3 +1,13 @@
+---
+title: "Convenzioni per le Icone SVG"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, conventions]
+qmd: "Convenzioni per le Icone SVG"
+---
 # Convenzioni per le Icone SVG
 
 ## Struttura Directory

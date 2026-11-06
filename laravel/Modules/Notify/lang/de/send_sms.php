@@ -69,4 +69,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'SMS-Versand testen',
+            'description' => 'Verwenden Sie dieses Formular, um den SMS-Versand über verschiedene Anbieter zu testen.',
+        ],
+    ],
 ];

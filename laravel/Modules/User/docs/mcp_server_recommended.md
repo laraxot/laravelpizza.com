@@ -1,3 +1,12 @@
+---
+title: "MCP Server Consigliati per il Modulo User"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "mcp server consigliati per il modulo user user"
+status: superseded
+superseded_by: mcp-server-recommended.md
+---
 # MCP Server Consigliati per il Modulo User
 
 ## Scopo del Modulo
@@ -21,5 +30,3 @@ Gestione utenti, autenticazione, profili e permessi.
 
 ## Note
 - Estendi la configurazione per esigenze di autenticazione avanzata o integrazione esterna.
-
-See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md

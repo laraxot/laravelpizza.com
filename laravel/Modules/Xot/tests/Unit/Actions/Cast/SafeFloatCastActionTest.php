@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Cast\SafeFloatCastAction;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('casts float values', function (): void {
     $result = app(SafeFloatCastAction::class)->execute(123.45);
@@ -70,7 +71,7 @@ it('casts arrays', function (): void {
 });
 
 it('casts objects', function (): void {
-    $result = app(SafeFloatCastAction::class)->execute(new stdClass());
+    $result = app(SafeFloatCastAction::class)->execute(new stdClass);
     Assert::assertSame(0.0, $result);
 });
 

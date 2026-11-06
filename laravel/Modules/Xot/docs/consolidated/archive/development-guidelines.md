@@ -1,3 +1,11 @@
+---
+title: "Development Guidelines - Xot Module"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "development guidelines - xot module xot"
+---
 # Development Guidelines - Xot Module
 
 ## Panoramica

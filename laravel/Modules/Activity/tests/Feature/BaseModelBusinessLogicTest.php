@@ -6,20 +6,17 @@ namespace Modules\Activity\Tests\Feature;
 
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Modules\Activity\Models\BaseModel;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Traits\Updater;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('it can create base model instance', function (): void {
     $model = new TestActivityModel;
 
-    Assert::assertInstanceOf(BaseModel::class, $model);
-    Assert::assertInstanceOf(Model::class, $model);
+    Assert::assertSame('test_models', $model->getTable());
 });
 
 test('it has correct connection setting', function (): void {

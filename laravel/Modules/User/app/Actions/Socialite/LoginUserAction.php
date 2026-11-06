@@ -1,22 +1,19 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/DutchCodingCompany/filament-socialite
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 use Filament\Facades\Filament;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Http\RedirectResponse;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
+use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class LoginUserAction
 {
@@ -27,19 +24,19 @@ class LoginUserAction
      */
     public function execute(SocialiteUser $socialiteUser): RedirectResponse
     {
-        Assert::notNull($user = $socialiteUser->user, '['.__FILE__.']['.__LINE__.']');
-
-        if (! $user instanceof Authenticatable) {
-            throw new \LogicException('User instance must implement Authenticatable.');
+        /** @var UserContract $user */
+        $user = $socialiteUser->user()->firstOrFail();
+        // Un account eliminato dal titolare (Gdpr DeleteAccountAction, `deleted_at`) resta chiuso anche con Google:
+        // l'informativa dice che l'account e' disattivato subito, come per il login con password (LoginWidget).
+        if ($user->getAttribute('deleted_at') !== null) {
+            return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
         }
 
-        // PHPStan: assicuriamoci che l'utente sia Authenticatable per il login
-        /** @var Authenticatable $authenticatableUser */
-        $authenticatableUser = $user;
-        Filament::auth()->login($authenticatableUser);
-        session()->regenerate();
-        app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
 
-        return redirect()->intended('/'.app()->getLocale());
+        event(new SocialiteUserConnected($socialiteUser));
+
+        Filament::auth()->login($user);
+
+        return redirect()->intended('/');
     }
 }

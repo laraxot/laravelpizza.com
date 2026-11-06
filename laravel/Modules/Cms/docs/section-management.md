@@ -1,3 +1,15 @@
+---
+title: "section management"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "section management"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gestione Sezioni
 
 ## Introduzione
@@ -118,8 +130,8 @@ Ogni sezione può contenere diversi tipi di blocchi:
 - Monitoraggio utilizzo
 
 ## Collegamenti
-- [Documentazione Blocchi](blocks/readme.md)
-- [Documentazione UI](../../ui/project_docs/readme.md)
-- [Documentazione Root](../../../../../docs/project/readme.md)
+- [Documentazione Blocchi](blocks/README.md)
+- [Documentazione UI](../../UI/docs/README.md)
+- [Documentazione Root](../../../../docs/project/README.md)
 - [Documentazione Root – Sezioni](../../../../../docs/project/sections.md)
 - [Panoramica Gestione Pagine (Root)](../../../../../docs/project/page-content-management.md)

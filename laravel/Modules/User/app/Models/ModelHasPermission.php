@@ -7,12 +7,13 @@ namespace Modules\User\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
+use Webmozart\Assert\Assert;
 
 /**
  * Modules\User\Models\ModelHasPermission.
  *
- * @property int    $id
- * @property int    $permission_id
+ * @property int $id
+ * @property int $permission_id
  * @property string $model_type
  * @property string $model_id
  *
@@ -36,7 +37,7 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string|null          $team_id
+ * @property string|null $team_id
  *
  * @method static Builder|ModelHasPermission whereTeamId($value)
  *
@@ -54,4 +55,16 @@ class ModelHasPermission extends BaseMorphPivot
      * @psalm-var list{'permission_id', 'model_type', 'model_id'}
      */
     protected $fillable = ['permission_id', 'model_type', 'model_id'];
+
+    /**
+     * Read from config on every call — never hardcode, the value can change
+     * at any time via `config('permission.table_names.model_has_permissions')`.
+     */
+    #[\Override]
+    public function getTable(): string
+    {
+        Assert::string($table = config('permission.table_names.model_has_permissions'));
+
+        return $table;
+    }
 }

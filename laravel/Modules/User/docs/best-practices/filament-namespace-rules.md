@@ -1,3 +1,24 @@
+---
+title: "Regole per i Namespace Filament"
+type: rule
+tags: [filament, namespace, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-namespace-rules regole per i namespace filament"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Regole per i Namespace Filament
 
 ## Regola 1: Namespace Modulare
@@ -40,6 +61,8 @@ class Dashboard extends Page
 - [Convenzioni Namespace Filament](../../cms/project_docs/convenzioni-namespace-filament.md)
 - [Regole Generali Xot](../../xot/project_docs/readme.md)
 - [Best Practices Filament](../../cms/project_docs/best-practices/filament.md) 
-- [Convenzioni Namespace Filament](../../cms/docs/convenzioni-namespace-filament.md)
-- [Regole Generali Xot](../../xot/docs/readme.md)
+- [Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md)
+- [Regole Generali Xot](../../../Xot/docs/README.md)
+- [Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md)
+- [Regole Generali Xot](../../../Xot/docs/README.md)
 - [Best Practices Filament](../../cms/docs/best-practices/filament.md) 

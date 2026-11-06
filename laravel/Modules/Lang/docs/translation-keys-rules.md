@@ -1,20 +1,41 @@
+---
+issues: []
+discussions: []
+title: "Regole per le Chiavi di Traduzione"
+module: "Lang"
+type: rule
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-- [Documentazione centrale](./readme.md)
+- [Documentazione centrale](README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Documentazione Lang](./readme.md)
+- [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Documentazione Lang](./readme.md)
+- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
+- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
+- [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/AUTH_PAGES_IMPLEMENTATION.md)
-- [Regole Traduzioni User](../../User/docs/TRANSLATION_KEYS_RULES.md)
+- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
+- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
+- [Documentazione Lang](README.md)
+- [Documentazione centrale](./README.md)
+- [Collegamenti documentazione](./collegamenti-documentazione.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Regole Traduzioni User](translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -233,19 +254,31 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+## [2024-07-07] Nota storica: correzione massiva Notify
+
+- Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+## [2024-07-07] Nota storica: correzione massiva Notify
+
+- Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-- [Documentazione centrale](./readme.md)
+- [Documentazione centrale](README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Documentazione Lang](./readme.md)
+- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
+- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
+- [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/AUTH_PAGES_IMPLEMENTATION.md)
-- [Regole Traduzioni User](../../User/docs/TRANSLATION_KEYS_RULES.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Regole Traduzioni User](translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -455,19 +488,22 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-- [Documentazione centrale](./readme.md)
+- [Documentazione centrale](README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Documentazione Lang](./readme.md)
+- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
+- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
+- [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/AUTH_PAGES_IMPLEMENTATION.md)
-- [Regole Traduzioni User](../../User/docs/TRANSLATION_KEYS_RULES.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Regole Traduzioni User](translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -677,14 +713,15 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/AUTH_PAGES_IMPLEMENTATION.md)
-- [Regole Traduzioni User](../../User/docs/TRANSLATION_KEYS_RULES.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Regole Traduzioni User](translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -894,6 +931,7 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 ## [[DATE]] Nota storica: correzione massiva Notify
 
@@ -903,5 +941,10 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+- Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
+- Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
+- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.

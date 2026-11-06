@@ -1,3 +1,12 @@
+---
+title: "Logging Performance Optimization"
+type: note
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "logging performance optimization user"
+status: superseded
+superseded_by: logging-performance.md
+---
 # Logging Performance Optimization
 
 ## Rule: NEVER USE Log::info()

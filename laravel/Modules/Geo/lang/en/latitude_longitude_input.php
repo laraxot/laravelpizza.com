@@ -6,7 +6,6 @@ return [
     'actions' => [
         'fullscreen_enter' => 'View fullscreen',
         'fullscreen_exit' => 'Exit fullscreen',
-        'use_current_position' => 'Use current position',
     ],
     'layers' => [
         'osm' => 'Map',

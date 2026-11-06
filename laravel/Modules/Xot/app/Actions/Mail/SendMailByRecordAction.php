@@ -18,8 +18,8 @@ class SendMailByRecordAction
     /**
      * Invia una mail utilizzando un record come dati.
      *
-     * @param Model  $record    Il record da utilizzare come dati per la mail
-     * @param string $mailClass La classe Mailable da utilizzare
+     * @param  Model  $record  Il record da utilizzare come dati per la mail
+     * @param  string  $mailClass  La classe Mailable da utilizzare
      */
     public function execute(Model $record, string $mailClass): void
     {
@@ -40,18 +40,24 @@ class SendMailByRecordAction
             throw new \InvalidArgumentException('Model must have email property');
         }
 
-        if (! method_exists($record, 'option')) {
-            throw new \InvalidArgumentException('Model must implement option method');
-        }
-
         if (! method_exists($record, 'myLogs')) {
             throw new \InvalidArgumentException('Model ['.$record::class.'] must implement myLogs method');
         }
 
         $to = $record->email;
         // $to = 'marco.sottana@gmail.com'; //4 debug non cancellare
-        $subject = $record->option('mail_oggetto');
-        $bodyHtml = $record->option('mail_testo');
+        // Le schede (SchedaContract) espongono i testi con msg(); option() esiste solo in
+        // Performance. Prima si chiedeva sempre option(): l'invio mail falliva per ogni scheda
+        // di Progressioni/Ptv/IR ("Model must implement option method").
+        if (method_exists($record, 'msg')) {
+            $subject = $record->msg('mail_oggetto');
+            $bodyHtml = $record->msg('mail_testo');
+        } elseif (method_exists($record, 'option')) {
+            $subject = $record->option('mail_oggetto');
+            $bodyHtml = $record->option('mail_testo');
+        } else {
+            throw new \InvalidArgumentException('Model must implement msg or option method');
+        }
 
         if (! is_string($to)) {
             throw new \InvalidArgumentException('Email must be a string');

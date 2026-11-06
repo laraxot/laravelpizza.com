@@ -1,3 +1,11 @@
+---
+title: "Convenzione per il Campo Nome Completo"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "convenzione per il campo nome completo xot"
+---
 # Convenzione per il Campo Nome Completo
 
 ## Regola Fondamentale

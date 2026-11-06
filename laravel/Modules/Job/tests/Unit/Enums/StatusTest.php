@@ -3,22 +3,20 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Enums;
+
 use Modules\Job\Enums\Status;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Status', function () {
     it('is an enum', function () {
         $reflection = new \ReflectionClass(Status::class);
 
         Assert::assertTrue($reflection->isEnum());
-    });
-
-    it('is a backed enum', function () {
-        Assert::assertInstanceOf(\BackedEnum::class, Status::Active);
     });
 
     it('has correct cases', function () {
@@ -81,6 +79,13 @@ describe('Status', function () {
     });
 
     it('can be used in match expressions', function () {
+        $expected = [
+            Status::Active->name => 'active',
+            Status::Inactive->name => 'inactive',
+            Status::Trashed->name => 'trashed',
+            Status::One->name => 'one',
+        ];
+
         foreach (Status::cases() as $status) {
             $result = match ($status) {
                 Status::Active => 'active',
@@ -89,7 +94,7 @@ describe('Status', function () {
                 Status::One => 'one',
             };
 
-            Assert::assertNotEmpty($result);
+            Assert::assertSame($expected[$status->name], $result);
         }
     });
 });

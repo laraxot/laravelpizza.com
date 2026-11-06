@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Architectural Rules & Guidelines"
+module: "Lang"
+type: rule
+tags: [migration, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Architectural Rules & Guidelines
 
 This module adheres to the **Laraxot Architecture** and **Super Cow Methodology**.

@@ -1,3 +1,15 @@
+---
+title: "missing features analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "missing features analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Funzionalità Mancanti - Modulo Cms
 
 **Data Analisi**: [DATE]  
@@ -158,8 +170,7 @@ Nessuna funzionalità critica mancante - il modulo Cms è ben implementato
 
 - [Modulo Quaeris](../quaeris/docs/readme.md)
 - [Modulo Limesurvey](../limesurvey/docs/readme.md)
-- [Cms README](./readme.md)
+- [Cms README](./README.md)
 
 ---
-
 **Prossima Revisione**: [DATE]

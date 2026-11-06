@@ -1,7 +1,9 @@
 ---
-module: theme
-topic: xot-base-resource
-canonical: ../../../../../Themes/docs/shared-components/xot-base-resource.md
+title: "xot base resource"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, filament]
+qmd: "xot base resource xot"
 ---
 
-See canonical documentation: ../../../../../Themes/docs/shared-components/xot-base-resource.md

@@ -1,3 +1,11 @@
+---
+title: "contracts"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "contracts xot"
+---
 # contracts
 
 <!-- Contenuto migrato da _docs/contracts.txt -->

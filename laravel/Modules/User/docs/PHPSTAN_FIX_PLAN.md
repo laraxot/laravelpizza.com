@@ -1,3 +1,11 @@
+---
+title: "User Module - PHPStan Level 10 Fix Plan"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "user module - phpstan level 10 fix plan user"
+---
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date
@@ -324,7 +332,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 
 class UserPolicy
@@ -374,7 +382,7 @@ declare(strict_types=1);
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 
 class ExampleCommand extends Command
@@ -421,7 +429,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Passport;
 
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 
 class CreateTokenAction

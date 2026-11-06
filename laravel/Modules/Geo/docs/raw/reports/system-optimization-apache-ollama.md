@@ -1,3 +1,14 @@
+---
+title: "system optimization apache ollama"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "system optimization apache ollama"
+issues: []
+discussions: []
+---
+
 # System Optimization Report - Apache & Ollama
 
 > **Data:** 2026-03-13
@@ -6,6 +17,14 @@
 
 ---
 
+title: "system optimization apache ollama"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "system optimization apache ollama"
+issues: []
+discussions: []
 ## Executive Summary
 
 ✅ **Apache2** - Fixed e riavviato con successo

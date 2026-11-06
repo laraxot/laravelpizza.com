@@ -1,3 +1,15 @@
+---
+title: "table layout enum implementation example"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "table layout enum implementation example"
+issues: []
+discussions: []
+status: draft
+---
+
 # Esempio Implementazione TableLayoutEnum
 
 ## Data: [DATE]

@@ -1,3 +1,15 @@
+---
+title: "json migration fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json migration fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni per le Migrazioni JSON in Laravel
 
 ## Problema Identificato

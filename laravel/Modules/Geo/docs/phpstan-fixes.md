@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni PHPStan Modulo Geo - 2025-01-27
 
 **Data**: 2025-01-27  
@@ -89,4 +101,93 @@ Il widget fa parte del piano di migrazione a Filament 4.x documentato in:
 - [Documentazione Widget Disabilitati](./widgets/disabled_widgets.md)
 - [Piano Migrazione Filament](../../../docs/filament_4x_migration_plan.md)
 
-*Ultimo aggiornamento: 2025-01-27*
+---
+# PHPStan Zero Errors Achievement - 2026-06-13
+
+**Data**: 2026-06-13  
+**PHPStan Level**: max  
+**Status**: ✅ ZERO ERRORS  
+
+## 🎯 Correzioni PHPStan Modules Analysis
+
+### 1. Dead Catch Block Resolution
+
+**Problema**:
+```
+Dead catch - InvalidArgumentException is never thrown in the try block
+```
+
+**File**: `tests/Unit/Actions/GoogleMaps/GetCoordinatesFromGoogleMapsActionTest.pest.php`
+
+**Causa**: La funzione `GetCoordinatesFromGoogleMapsAction` usa `Webmozart\Assert\Assert` che lancia `InvalidArgumentException`, ma i docstring non lo documentavano.
+
+**Soluzione**:
+1. Aggiunto `@throws \InvalidArgumentException` ai docstring di:
+   - `validateInput()` — valida input
+   - `execute()` — metodo pubblico
+
+**File Modificato**:
+- `app/Actions/GoogleMaps/GetCoordinatesFromGoogleMapsAction.php`
+
+```php
+/**
+ * Valida i dati di input.
+ * @throws \InvalidArgumentException Se i dati non sono validi
+ */
+private function validateInput(string $address): void
+
+/**
+ * Ottiene le coordinate da un indirizzo.
+ * @throws \InvalidArgumentException Se i dati non sono validi
+ * @throws \RuntimeException Se la chiave API non è configurata o la richiesta fallisce
+ */
+public function execute(string $address): LocationData
+```
+
+### 2. Pest Class Resolution Fix
+
+**Problema**:
+```
+The class `Modules\Geo\Tests\Unit\Actions\GoogleMaps\LightTestCase` was not found
+```
+
+**Causa**: Pest risolve i class name relative al namespace del file test
+
+**Soluzione**: Usare fully qualified class name in `uses()`:
+
+```php
+// Prima (errato)
+uses(LightTestCase::class);
+
+// Dopo (corretto)
+uses(\Modules\Geo\Tests\LightTestCase::class);
+```
+
+**File Modificati**:
+- `tests/Unit/Actions/GoogleMaps/CalculateTravelTimeActionTest.pest.php`
+- `tests/Unit/Actions/GoogleMaps/GetCoordinatesFromGoogleMapsActionTest.pest.php`
+
+## 📚 Key Learning: Webmozart Assert
+
+La libreria `Webmozart\Assert\Assert` lancia `InvalidArgumentException` per validazioni:
+
+```php
+Assert::notEmpty($apiKey, '...');     // → InvalidArgumentException
+Assert::maxLength($address, 1000, '...'); // → InvalidArgumentException
+```
+
+Sempre documentare in docstring: `@throws \InvalidArgumentException`
+
+## ✅ Validazione
+
+```bash
+./vendor/bin/phpstan analyse Modules/Geo
+# Result: [OK] No errors
+```
+
+## 🔗 Related Rules
+
+- [Webmozart Assert Exception Types](../../../docs/wiki/rules/webmozart-assert-exceptions.md)
+- [Pest Fully Qualified Class Names](../../../docs/wiki/skills/pest-fqn-resolution.md)
+
+*Ultimo aggiornamento: 2026-06-13*

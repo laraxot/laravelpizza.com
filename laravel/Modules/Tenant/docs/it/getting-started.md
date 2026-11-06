@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "getting started"
+issues: []
+discussions: []
 title: Modulo Tenant
 description: Modulo Tenant
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # Modulo Tenant {#modulo-tenant}
@@ -26,6 +34,11 @@ Per utilizzare il modulo, è necessario prima configurare l'applicazione per sup
 * [getting-started.md](../../../ui/docs/getting-started.md)
 * [getting-started.md](../../../tenant/docs/it/getting-started.md)
 * [getting-started.md](../../../cms/docs/getting-started.md)
+* [getting-started.md](../../../Gdpr/docs/getting-started.md)
+* [getting-started.md](../../../xot/docs/getting-started.md)
+* [getting-started.md](../../../ui/docs/getting-started.md)
+* [getting-started.md](../../../tenant/docs/it/getting-started.md)
+* [getting-started.md](../../../Cms/docs/getting-started.md)
 
 ### Versione Incoming
 

@@ -1,3 +1,11 @@
+---
+title: "Documentazione del Metodo registerBladeIcons"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "documentazione del metodo registerbladeicons xot"
+---
 # Documentazione del Metodo registerBladeIcons
 
 ## Panoramica

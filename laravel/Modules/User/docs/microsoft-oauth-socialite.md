@@ -1,3 +1,28 @@
+---
+title: "Microsoft OAuth/Socialite - Analisi e Implementazione"
+type: concept
+tags: [microsoft, oauth, socialite]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "microsoft-oauth-socialite microsoft oauth/socialite - analisi e implementazione"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Microsoft OAuth/Socialite - Analisi e Implementazione
 
 ## Riferimenti Studiati
@@ -280,7 +305,7 @@ $roles = Socialite::driver('microsoft')->user()->getRoles();
 ],
 ```
 
-## Regole per Quaeris Fila5
+## Regole per ExternalProject Fila5
 
 ### 1. Usare Filament Socialite Plugin
 - Installare `dutchcodingcompany/filament-socialite`

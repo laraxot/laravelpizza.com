@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Correzioni Traduzioni Navigation - Modulo Lang"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text fix"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Correzioni Traduzioni Navigation - Modulo Lang
 
 ## Data Intervento
@@ -85,16 +99,22 @@ Il modulo Lang risulta **CONFORME** agli standard di traduzione:
 - [Sistema Localizzazione](comprehensive_guide.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
 - [Audit Generale Traduzioni Navigation](../../../docs/navigation-translations-audit.md)
-- [Documentazione Modulo Lang](readme.md)
+- [Documentazione Modulo Lang](README.md)
 - [Sistema Localizzazione](comprehensive_guide.md)
 - [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
 - [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
+- [Audit Generale Traduzioni Navigation](navigation-translations-audit.md)
+- [Documentazione Modulo Lang](README.md)
+- [Sistema Localizzazione](comprehensive_guide.md)
+- [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
+- [Audit Generale Traduzioni Navigation](navigation-translations-audit.md)
 - [Documentazione Modulo Lang](README.md)
 - [Documentazione Modulo Lang](README.md)
 - [Sistema Localizzazione](comprehensive_guide.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
 - [Audit Generale Traduzioni Navigation](../../../docs/navigation-translations-audit.md)
-- [Documentazione Modulo Lang](readme.md)
+- [Audit Generale Traduzioni Navigation](navigation-translations-audit.md)
+- [Documentazione Modulo Lang](README.md)
 - [Sistema Localizzazione](comprehensive_guide.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
 

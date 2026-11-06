@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Configuration - Progetto Base FixCity Fila3 Mono
 
 ## Panoramica
@@ -165,6 +177,5 @@ public function getConfig(): array {
 - [Architettura Moduli](../../architecture/modules/README.md)
 
 ---
-
 *Ultimo aggiornamento: Gennaio 2025*
 *Responsabile: AI Assistant con poteri supermucca*

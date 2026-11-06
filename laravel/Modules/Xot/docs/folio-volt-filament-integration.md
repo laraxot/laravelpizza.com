@@ -1,3 +1,13 @@
+---
+title: "Integrazione Folio, Volt e Filament"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Integrazione Folio, Volt e Filament"
+---
 # Integrazione Folio, Volt e Filament
 
 > **NOTA**: Questo documento è stato unificato con la documentazione sull'architettura Folio + Volt + Filament. Consulta il documento aggiornato nel link sottostante.
@@ -10,9 +20,9 @@
 - [Convenzioni di naming](../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
 
 ### Moduli Collegati
-- [UI](../UI/docs/README.md) - Componenti di interfaccia
-- [Cms](../Cms/docs/README.md) - Gestione contenuti
-- [Lang](../Lang/docs/README.md) - Traduzioni
+- [UI](../../UI/docs/README.md) - Componenti di interfaccia
+- [Cms](../../Cms/docs/README.md) - Gestione contenuti
+- [Lang](../../Lang/docs/README.md) - Traduzioni
 
 ## Struttura
 
@@ -119,26 +129,26 @@ $submit = function() {
 ## Collegamenti Moduli
 
 ### Modulo UI
-- [Componenti Volt](../UI/docs/components/volt.md)
+- [Componenti Volt](../../UI/docs/components/volt.md)
 - [Layout](../UI/docs/layouts.md)
 - [Temi](../UI/docs/themes.md)
-- [Best Practices](../UI/docs/best-practices.md)
+- [Best Practices](../../UI/docs/best-practices.md)
 
 ### Modulo Cms
 - [Frontend](../Cms/docs/frontend.md)
 - [Temi](../Cms/docs/themes.md)
-- [Contenuti](../Cms/docs/content.md)
-- [Convenzioni Filament](../Cms/docs/convenzioni-namespace-filament.md)
+- [Contenuti](../../Cms/docs/content.md)
+- [Convenzioni Filament](../../Cms/docs/convenzioni-namespace-filament.md)
 
 ### Modulo Lang
-- [Traduzioni](../Lang/docs/translations.md)
+- [Traduzioni](../../Lang/docs/translations.md)
 - [Localizzazione](../Lang/docs/localization.md)
 - [API Traduzioni](../Lang/docs/api.md)
 
 ### Modulo User
 - [Autenticazione](../User/docs/auth.md)
-- [Permessi](../User/docs/permissions.md)
-- [Profilo](../User/docs/profile.md)
+- [Permessi](../../User/docs/permissions.md)
+- [Profilo](../../User/docs/profile.md)
 
 ### Modulo Patient
 - [Gestione Pazienti](../Patient/docs/patients.md)
@@ -152,7 +162,7 @@ $submit = function() {
 
 ### Modulo Tenant
 - [Multi-tenant](../Tenant/docs/multi-tenant.md)
-- [Configurazione](../Tenant/docs/configuration.md)
+- [Configurazione](../../Tenant/docs/configuration.md)
 - [Migrazione](../Tenant/docs/migration.md)
 
 ### Modulo Media
@@ -161,9 +171,9 @@ $submit = function() {
 - [Storage](../Media/docs/storage.md)
 
 ### Modulo Notify
-- [Notifiche](../Notify/docs/notifications.md)
+- [Notifiche](../../Notify/docs/notifications.md)
 - [Email](../Notify/docs/email.md)
-- [SMS](../Notify/docs/sms.md)
+- [SMS](../../Notify/docs/sms.md)
 
 ### Modulo Reporting
 - [Report](../Reporting/docs/reports.md)
@@ -172,8 +182,8 @@ $submit = function() {
 
 ### Modulo Gdpr
 - [Privacy](../Gdpr/docs/privacy.md)
-- [Consensi](../Gdpr/docs/consents.md)
-- [Sicurezza](../Gdpr/docs/security.md)
+- [Consensi](../../Gdpr/docs/consents.md)
+- [Sicurezza](../../Gdpr/docs/security.md)
 
 ### Modulo Job
 - [Jobs](../Job/docs/jobs.md)

@@ -1,3 +1,11 @@
+---
+title: "Filament Relation Managers nel Modulo User"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "filament relation managers nel modulo user user"
+---
 # Filament Relation Managers nel Modulo User
 
 ## Struttura dei Relation Managers
@@ -171,9 +179,6 @@ class TeamsRelationManager extends XotBaseRelationManager
 ## Riferimenti
 
 - [Documentazione Filament RelationManager](https://filamentphp.com/docs/tables#relation-managers)
-- [XotBaseRelationManager](../Xot/docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../Xot/docs/translation-system.md)
-- [Best Practices Filament](../Xot/docs/filament-best-practices.md) 
 - [XotBaseRelationManager](../xot/docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../xot/docs/translation-system.md)
-- [Best Practices Filament](../xot/docs/filament-best-practices.md) 
+- [Sistema di Traduzione](../../Xot/docs/translation-system.md)
+- [Best Practices Filament](../../Xot/docs/filament-best-practices.md) 

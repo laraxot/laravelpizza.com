@@ -1,3 +1,15 @@
+---
+title: "ux wizard registrazione paziente"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ux wizard registrazione paziente"
+issues: []
+discussions: []
+status: draft
+---
+
 # Applicazione delle Leggi UX al Wizard di Registrazione Paziente
 
 Questo documento illustra come le leggi di UX del sito [Laws of UX](https://lawsofux.com/) sono state applicate specificamente al wizard di registrazione paziente nel progetto il progetto.

@@ -11,7 +11,7 @@ use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('can create snapshot with basic information', function (): void {
     $snapshot = SnapshotFactory::new()->createOne([
@@ -258,19 +258,8 @@ test('can restore state from snapshot', function (): void {
 
     $restoredState = $snapshot->state;
     Assert::assertIsArray($restoredState);
-    Assert::assertSame($restoredState, $originalState);
-    Assert::assertSame(456, $restoredState['user_id']);
-
-    /** @var array<array-key, mixed> $settings */
-    $settings = $restoredState['settings'];
-    Assert::assertIsArray($settings);
-    Assert::assertSame('light', $settings['theme']);
-
-    /** @var array<array-key, mixed> $preferences */
-    $preferences = $restoredState['preferences'];
-    Assert::assertIsArray($preferences);
-    Assert::assertSame('Europe/Rome', $preferences['timezone']);
-    Assert::assertSame('EUR', $preferences['currency']);
+    // Parità strutturale col payload originale: prova lo scopo dello snapshot (round-trip state).
+    Assert::assertSame($originalState, $restoredState);
 });
 
 test('can compare snapshot versions', function (): void {

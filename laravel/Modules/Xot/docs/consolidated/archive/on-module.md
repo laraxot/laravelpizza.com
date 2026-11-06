@@ -3,6 +3,8 @@ title: Comandi per il singolo modulo
 description: Comandi per il singolo modulo
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../no-console/on-module.md
 ---
 
 # Comandi per il singolo modulo {#comandi-per-il-singolo-modulo}

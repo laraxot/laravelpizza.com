@@ -1,3 +1,15 @@
+---
+title: "ARCHITECTURE ANALYSIS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ARCHITECTURE ANALYSIS"
+issues: []
+discussions: []
+status: draft
+---
+
 # FIXCITY ARCHITECTURE DEEP DIVE ANALYSIS
 **Generated**: 2025-10-01
 **Project**: FixCity Civic Engagement Platform
@@ -5,7 +17,6 @@
 **Status**: Production-Ready Foundation with Active Development
 
 ---
-
 ## 📋 EXECUTIVE SUMMARY
 
 ### Project Overview
@@ -1096,7 +1107,7 @@ The frontend follows Italian Public Administration design guidelines:
 <x-ui.marketing.breadcrumbs :crumbs="[...]" />
 
 // Ticket List (AGID-compliant)
-<x-fixcity::blocks.ticket_list.agid />
+<x-ptv::blocks.ticket_list.agid />
 
 // Forms (Filament + Custom CSS)
 - Titillium Web font family
@@ -1620,7 +1631,7 @@ Tasks:
 
 ### Recommended New Documentation
 ```
-1. ARCHITECTURE.md
+1. architecture.md
    - System architecture diagrams
    - Module dependency graph
    - Database schema diagrams

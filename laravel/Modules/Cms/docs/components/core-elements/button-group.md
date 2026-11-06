@@ -1,3 +1,15 @@
+---
+title: "button group"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "button group"
+issues: []
+discussions: []
+status: draft
+---
+
 # Button Group
 
 I button group sono componenti essenziali per organizzare azioni correlate in modo efficiente. Questo componente, costruito con Tailwind CSS, supporta vari layout, dimensioni e stili, rendendolo perfetto per barre degli strumenti o controlli segmentati.

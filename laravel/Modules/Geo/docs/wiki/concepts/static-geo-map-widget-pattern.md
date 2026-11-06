@@ -1,4 +1,10 @@
 ---
+title: "static geo map widget pattern"
+tags: [documentation]
+created: 2026-09-26
+qmd: "static geo map widget pattern"
+issues: []
+discussions: []
 type: concept
 module: Geo
 sources:
@@ -6,6 +12,7 @@ sources:
   - ../../../../../../docs/quality-tools-setup.md
 confidence: high
 updated: 2026-04-16
+status: draft
 ---
 
 # Static Geo Map Widget Pattern

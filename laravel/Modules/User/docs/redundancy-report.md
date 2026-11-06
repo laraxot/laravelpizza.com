@@ -1,10 +1,35 @@
-# Redundancy Report — Modulo User
+---
+title: "Redundancy Report: Modulo User"
+type: concept
+tags: [redundancy, report]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy-report redundancy report: modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
+# Redundancy Report: Modulo User
 
 > Generato: 2026-05-21 | Analisi automatica deep-scan
 
 ## Problemi Trovati
 
-### 1. 🔴 Oauth Resources — 5 risorse duplicate (Cluster vs Standalone)
+### 1. 🔴 Oauth Resources: 5 risorse duplicate (Cluster vs Standalone)
 
 Il modulo User contiene **due copie complete** delle risorse Oauth: una nel Cluster `Passport` e una standalone in `Resources/`.
 

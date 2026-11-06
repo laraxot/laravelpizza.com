@@ -41,6 +41,10 @@ return [
             'heading' => '',
             'label' => 'empty12',
         ],
+        'page' => [
+            'title' => 'Test Invio Email',
+            'description' => 'Utilizza questo form per testare l\'invio di email tramite diversi provider e configurazioni.',
+        ],
     ],
     'fields' => [
         'subject' => [
@@ -175,6 +179,12 @@ return [
             'tooltip' => 'Il tracking permette di monitorare l\'apertura e i click',
             'helper_text' => '',
         ],
+        'recipient' => [
+            'label' => 'recipient',
+            'placeholder' => 'recipient',
+            'helper_text' => 'recipient',
+            'description' => 'recipient',
+        ],
     ],
     'actions' => [
         'send' => [
@@ -241,9 +251,23 @@ return [
         ],
         'emailFormActions' => [
             'label' => 'emailFormActions',
+            'icon' => 'emailFormActions',
+            'tooltip' => 'emailFormActions',
         ],
         'logout' => [
             'tooltip' => 'logout',
+            'label' => 'logout',
+            'icon' => 'logout',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'profile' => [
+            'label' => 'profile',
+            'icon' => 'profile',
+            'tooltip' => 'profile',
         ],
     ],
     'messages' => [

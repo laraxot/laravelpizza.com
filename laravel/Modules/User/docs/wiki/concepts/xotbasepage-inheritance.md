@@ -1,3 +1,24 @@
+---
+title: "XotBasePage Inheritance Architecture"
+type: concept
+tags: [xotbasepage, inheritance]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "xotbasepage-inheritance xotbasepage inheritance architecture"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+---
+
 # XotBasePage Inheritance Architecture
 
 ## Overview

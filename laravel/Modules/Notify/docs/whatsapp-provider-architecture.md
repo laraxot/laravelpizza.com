@@ -1,3 +1,15 @@
+---
+title: "whatsapp provider architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "whatsapp provider architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # Architettura WhatsApp Provider per
 
 Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di , mantenendo coerenza con le architetture esistenti per SMS ed email.

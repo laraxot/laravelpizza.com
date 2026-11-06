@@ -1,3 +1,15 @@
+---
+title: "coverage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coverage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Media Module Test Coverage
 
 ## Coverage Results

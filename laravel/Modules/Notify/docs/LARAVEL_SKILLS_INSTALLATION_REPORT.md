@@ -1,3 +1,15 @@
+---
+title: "LARAVEL SKILLS INSTALLATION REPORT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "LARAVEL SKILLS INSTALLATION REPORT"
+issues: []
+discussions: []
+status: draft
+---
+
 # Laravel Skills Installation Report
 
 **Date**: 2026-03-02  
@@ -45,14 +57,14 @@ Laravel Boost v2.2.1 includes 14 built-in skills in the package:
 
 ### Built-in Skills Location
 ```
-/var/www/_bases/base_fixcity_fila5/laravel/vendor/laravel/boost/.ai/
+/var/www/_bases/base_ptv_fila5/laravel/vendor/laravel/boost/.ai/
 ```
 
 ## Successfully Installed Skills
 
 ### laravel-specialist
 - **Package**: jeffallan/claude-skills
-- **Location**: `/var/www/_bases/base_fixcity_fila5/laravel/.ai/skills/laravel-specialist/`
+- **Location**: `/var/www/_bases/base_ptv_fila5/laravel/.ai/skills/laravel-specialist/`
 - **Files**:
   - SKILL.md
   - references/routing.md
@@ -130,7 +142,6 @@ To use installed skills, they must be activated in the AI guidelines. Check the 
 4. Consider creating custom skills if needed
 
 ---
-
 **Report Generated**: 2026-03-02  
 **Installation Attempts**: 13 repositories  
 **Successful Installations**: 1 skill  

@@ -1,8 +1,29 @@
-# Architettura Content Blocks - <main module>
+---
+title: "content blocks architecture"
+type: note
+tags: [documentation, blocks, filament-builder]
+created: 2026-09-26
+updated: 2026-10-20
+qmd: "content blocks architecture filament builder json cms"
+issues: []
+discussions: []
+status: active
+related:
+  - ./00-index.md
+  - ./scopo.md
+  - ./wiki/concepts/header-nav-block-architecture.md
+  - ./wiki/concepts/headernavblock-filament-builder.md
+---
+
+# Architettura Content Blocks — Cms
+
+Indice: [00-INDEX.md](./00-index.md) · scopo: [scopo.md](./scopo.md).
+
+**Perché:** l'admin modifica struttura e copy senza deploy; il tema solo renderizza. Filament Builder è l'editor dello schema, non un form generico.
 
 ## Panoramica Architetturale
 
-Il sistema Content Blocks di <main module> implementa un'architettura modulare basata su:
+Il sistema Content Blocks implementa un'architettura modulare basata su:
 
 1. **Filament Builder** - Per la gestione dinamica dei blocchi nell'admin
 2. **JSON Configuration** - Per la persistenza della struttura delle pagine
@@ -139,9 +160,9 @@ Builder::make('content_blocks')
 4. **Real-time Collaboration**: Editing collaborativo delle pagine
 
 ## Collegamenti
-- [Documentazione Sistema Content Blocks](./content_blocks_system.md)
-- [Implementazione Register Disabled](./register_disabled_implementation.md)
-- [Implementazione BlockData](../app/Datas/BlockData.php)
-- [Configurazione Builder](../app/Filament/Resources/PageResource.php)
-- [Theme Components](../../../Themes/One/resources/views/components/blocks/)
+- [00-INDEX.md](./00-index.md) · [scopo.md](./scopo.md)
+- [actions/page-resolution-pipeline.md](./actions/page-resolution-pipeline.md)
+- [wiki/concepts/header-nav-block-architecture.md](./wiki/concepts/header-nav-block-architecture.md)
+- [wiki/concepts/headernavblock-filament-builder.md](./wiki/concepts/headernavblock-filament-builder.md)
+- [safe.md](./safe.md)
 

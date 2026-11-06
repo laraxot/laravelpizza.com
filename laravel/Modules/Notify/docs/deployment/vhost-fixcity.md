@@ -1,3 +1,15 @@
+---
+title: "vhost fixcity"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vhost fixcity"
+issues: []
+discussions: []
+status: draft
+---
+
 # Apache VirtualHost - fixcity.local
 
 **Status**: ✅ Active  
@@ -5,7 +17,6 @@
 **Server**: Apache 2.4.64 (Ubuntu)
 
 ---
-
 ## Configuration Summary
 
 | Parametro | Valore |

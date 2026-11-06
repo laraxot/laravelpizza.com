@@ -1,3 +1,13 @@
+---
+title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot"
+---
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot
 
 ## Panoramica
@@ -142,15 +152,15 @@ final class XotCacheService
     private function determineTags(string $key): array
     {
         $tags = ['xot'];
-
+        
         if (str_contains($key, 'config')) {
             $tags[] = 'config';
         }
-
+        
         if (str_contains($key, 'menu')) {
             $tags[] = 'menu';
         }
-
+        
         return $tags;
     }
 }
@@ -184,7 +194,7 @@ private function setupPerformanceMonitoring(): void
     // Monitoring memoria
     $this->app->terminating(function () {
         $memoryUsage = memory_get_peak_usage(true) / 1024 / 1024;
-
+        
         if ($memoryUsage > 100) {
             Log::channel('xot_performance')
                 ->warning('Alto utilizzo memoria', [
@@ -281,14 +291,16 @@ trait HasXotOptimizations
 }
 ### Versione HEAD
 
-```
+``` 
 ## Collegamenti tra versioni di bottlenecks_detailed.md
 * [bottlenecks_detailed.md](../../../Xot/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Job/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Media/docs/bottlenecks_detailed.md)
 
+
 ### Versione Incoming
 
-```
+``` 
 
 ---
+

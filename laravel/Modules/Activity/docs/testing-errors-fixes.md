@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Errori di Test e Correzioni"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity module - errori di test e correzioni activity"
+---
 # Activity Module - Errori di Test e Correzioni
 
 ## Obiettivo

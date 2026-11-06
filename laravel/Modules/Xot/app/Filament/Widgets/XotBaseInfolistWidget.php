@@ -4,24 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Concerns\InteractsWithSchemas;
 use Filament\Schemas\Contracts\HasSchemas;
 use Filament\Schemas\Schema;
-use Filament\Widgets\Widget as FilamentWidget;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\View\GetViewByClassAction;
-use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
  * Base per widget FO/pannello che rendono un Infolist Filament v5 (schema unificato).
  *
  * Le sottoclassi forniscono record + componenti; la vista default espone {{ $this->infolist }}.
+ * Estende XotBaseWidget per coerenza con il pattern di widget XotBase*.
  */
-abstract class XotBaseInfolistWidget extends FilamentWidget implements HasSchemas
+abstract class XotBaseInfolistWidget extends XotBaseWidget implements HasSchemas
 {
     use InteractsWithSchemas;
-    use TransTrait;
 
+    /** @var view-string */
     protected string $view = 'xot::filament.widgets.infolist';
 
     protected int|string|array $columnSpan = 'full';
@@ -32,7 +33,7 @@ abstract class XotBaseInfolistWidget extends FilamentWidget implements HasSchema
     }
 
     /**
-     * @return array<int|string, \Filament\Schemas\Components\Component|\Illuminate\Contracts\Support\Htmlable|string>
+     * @return array<int|string, Component|Htmlable|string>
      */
     abstract protected function getInfolistSchema(): array;
 
@@ -41,7 +42,7 @@ abstract class XotBaseInfolistWidget extends FilamentWidget implements HasSchema
     public function infolist(Schema $schema): Schema
     {
         $record = $this->getInfolistRecord();
-        if (null !== $record) {
+        if ($record !== null) {
             $schema->record($record);
         }
 

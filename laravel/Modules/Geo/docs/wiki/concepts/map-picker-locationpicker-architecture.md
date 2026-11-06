@@ -1,3 +1,15 @@
+---
+title: "map picker locationpicker architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map picker locationpicker architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # MapPicker/LocationPicker Architecture (Unified State)
 
 **Data aggiornamento:** 2026-04-20  
@@ -6,7 +18,6 @@
 **Story:** [1-7-mappicker-locationpicker-consolidation](../../../.planning/stories/1-7-mappicker-locationpicker-consolidation.story.md)
 
 ---
-
 ## Obiettivo Architetturale
 
 Eliminare la fragilità della sincronizzazione bidirezionale e il coupling tra Blade view e schema database, consolidando MapPicker/LocationPicker come componente **"Unified State"** robusto, testabile e documentato.

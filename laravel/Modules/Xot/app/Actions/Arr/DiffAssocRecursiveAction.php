@@ -14,18 +14,17 @@ class DiffAssocRecursiveAction
     use QueueableAction;
 
     /**
-     * @param array<int|string, mixed> $data
-     *
+     * @param  array<int|string, mixed>  $data
      * @return array<int|string, array<int|string, mixed>>
      */
     public static function fixType(array $data): array
     {
-        $collection = collect($data)->map(static function ($item) {
+        $collection = collect($data)->map(static function (mixed $item) {
             if (! is_array($item)) {
                 throw new \Exception('['.__LINE__.']['.self::class.']');
             }
 
-            return collect($item)->map(static function ($item0) {
+            return collect($item)->map(static function (mixed $item0) {
                 if (is_numeric($item0)) {
                     $item0 *= 1;
                 }
@@ -38,9 +37,8 @@ class DiffAssocRecursiveAction
     }
 
     /**
-     * @param array<int|string, mixed> $arr_1
-     * @param array<int|string, mixed> $arr_2
-     *
+     * @param  array<int|string, mixed>  $arr_1
+     * @param  array<int|string, mixed>  $arr_2
      * @return array<int|string, array<int|string, mixed>>
      */
     public function execute(array $arr_1, array $arr_2): array
@@ -48,7 +46,7 @@ class DiffAssocRecursiveAction
         $coll_1 = collect(self::fixType($arr_1));
         $arr_2 = self::fixType($arr_2);
 
-        $ris = $coll_1->filter(static function ($value, $key) use ($arr_2) {
+        $ris = $coll_1->filter(static function (array $value, int|string $key) use ($arr_2) {
             try {
                 return ! \in_array($value, $arr_2, false);
             } catch (\Exception $exception) {

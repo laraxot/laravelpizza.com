@@ -11,6 +11,7 @@ use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Support\Str;
+use Modules\Media\Datas\MediaConfigData;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
@@ -46,18 +47,19 @@ class AddAttachmentAction extends XotBaseAction
      */
     public static function getFormSchema(bool $asset = true): array
     {
-        Assert::integer($max_size = config('media-library.max_file_size'));
+        // Kilobytes: Filament maxSize() wants KB, while media-library.max_file_size is in bytes.
+        $max_size = MediaConfigData::make()->attachment_max_size_kb;
 
         return [
             FileUpload::make('file')
-                ->hint(static::trans('fields.file_hint'))
+                ->hint(static::trans('fields.file_hint.label'))
                 ->storeFileNamesIn('original_file_name')
                 ->visibility('private')
                 ->maxSize($max_size)
                 ->required()
                 ->columnSpanFull(),
             TextInput::make('name')
-                ->hint(static::trans('fields.name_hint'))
+                ->hint(static::trans('fields.name_hint.label'))
                 ->autocomplete(false)
                 ->maxLength(255)
                 ->columnSpanFull(),
@@ -65,7 +67,7 @@ class AddAttachmentAction extends XotBaseAction
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
@@ -86,7 +88,9 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
-        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast((string) ($data['original_file_name'] ?? ''), '.'));
+        $originalFileName = $data['original_file_name'] ?? '';
+        Assert::string($originalFileName);
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }

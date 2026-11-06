@@ -1,3 +1,14 @@
+---
+title: "MODULES INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "MODULES INDEX"
+issues: []
+discussions: []
+---
+
 # Indice Documentazione Moduli
 
 ## Moduli Core

@@ -1,14 +1,39 @@
+---
+title: "Implementazione Corretta di logout.blade.php"
+type: note
+status: draft
+updated: 2026-10-26
+tags: [docs, user]
+qmd: "implementazione corretta di logout.blade.php user"
+---
 # Implementazione Corretta di logout.blade.php
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../docs/README.md)
+- [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Volt Errors](./VOLT_ERRORS.md)
-- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md)
-- [Volt Logout Action](./VOLT_LOGOUT_ACTION.md)
-- [Auth Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Volt Errors](./volt_errors.md)
+- [Volt Folio Logout](./volt_folio_logout.md)
+- [Volt Logout Action](./volt_logout_action.md)
+- [Auth Pages Implementation](./auth_pages_implementation.md)
+---
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione corretta di logout.blade.php user"
+---
+# Implementazione Corretta di logout.blade.php
+
+## Collegamenti correlati
+- [Documentazione centrale](../../../../docs/README.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./README.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Volt Errors](./volt_errors.md)
+- [Volt Folio Logout](./volt_folio_logout.md)
+- [Volt Logout Action](./volt_logout_action.md)
+- [Auth Pages Implementation](./auth_pages_implementation.md)
 
 ## Posizione Corretta
 Il file `logout.blade.php` deve essere posizionato in:
@@ -149,9 +174,9 @@ Questo approccio utilizza Volt all'interno di una pagina Folio per gestire il lo
 - Permette di mostrare un messaggio di conferma durante il reindirizzamento
 - Utilizza il pattern mount per eseguire azioni all'inizializzazione del componente
 
-## Implementazione Raccomandata per Quaeris
+## Implementazione Raccomandata per SaluteOra
 
-Per Quaeris, **l'approccio 1 (Folio con PHP puro)** è raccomandato per il logout per i seguenti motivi:
+Per SaluteOra, **l'approccio 1 (Folio con PHP puro)** è raccomandato per il logout per i seguenti motivi:
 
 1. Il logout è un'operazione semplice che non richiede gestione dello stato
 2. Non è necessaria interazione con l'utente durante il processo
@@ -211,12 +236,4 @@ return redirect()->to('/' . $locale);
 ?>
 ```
 
-Questa implementazione è semplice, sicura e segue tutte le best practices del progetto Quaeris.
-
----
-module: theme
-topic: logout_blade_implementation
-canonical: ../../../Themes/docs/shared-components/logout_blade_implementation.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/logout_blade_implementation.md
+Questa implementazione è semplice, sicura e segue tutte le best practices del progetto SaluteOra.

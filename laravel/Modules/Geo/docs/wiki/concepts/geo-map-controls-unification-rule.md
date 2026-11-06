@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "geo map controls unification rule"
+issues: []
+discussions: []
 title: "Geo Map Controls Unification Rule"
 type: concept
 module: Geo
@@ -13,6 +17,7 @@ related:
   - map-js-module-naming-rule.md
 sources:
   - story 8-79
+status: draft
 ---
 
 # Regola: Unificazione Controlli Mappa

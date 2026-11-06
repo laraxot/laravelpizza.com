@@ -1,7 +1,11 @@
 ---
-module: theme
-topic: php-codesniffer
-canonical: ../../../../Themes/docs/shared-components/php-codesniffer-2.md
+title: "php codesniffer"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, ci]
+qmd: "php codesniffer"
 ---
-
-See canonical documentation: ../../../../Themes/docs/shared-components/php-codesniffer-2.md
+[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)

@@ -1,3 +1,14 @@
+---
+title: "Widget Test Patterns - Gold Standard"
+type: note
+status: draft
+created: 2026-01-27
+updated: 2026-10-18
+module: Cms
+tags: [docs, cms, tests]
+qmd: "widget test patterns - gold standard cms"
+---
+
 # Widget Test Patterns - Gold Standard
 
 ## 🏆 **Pattern Vincente Confermato**
@@ -43,13 +54,13 @@ test('widget can be rendered for patient type', function () {
 function mockXotData(): void
 {
     $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
-
+    
     $mockXotData->shouldReceive('getUserClass')
         ->andReturn(\Modules\<nome progetto>\Models\User::class);
-
+        
     $mockXotData->shouldReceive('make')
         ->andReturn($mockXotData);
-
+    
     // Bind nel container
     app()->instance(\Modules\Xot\Datas\XotData::class, $mockXotData);
 }
@@ -148,13 +159,13 @@ beforeEach(function (): void {
 function mockXotData(): void
 {
     $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
-
+    
     $mockXotData->shouldReceive('getUserClass')
         ->andReturn(\Modules\<nome progetto>\Models\User::class);
-
+        
     $mockXotData->shouldReceive('make')
         ->andReturn($mockXotData);
-
+    
     app()->instance(\Modules\Xot\Datas\XotData::class, $mockXotData);
 }
 
@@ -199,7 +210,7 @@ test('widget can be rendered', function () {
 ## 🎯 **Successi Misurabili**
 
 ### Prima (Errori)
-- ❌ "Undefined property: $__latestDescription"
+- ❌ "Undefined property: $__latestDescription" 
 - ❌ "Class not found" errori
 - ❌ Mock failures e timeout
 
@@ -211,6 +222,7 @@ test('widget can be rendered', function () {
 
 ---
 
-**Status**: ✅ Gold Standard Stabilito
-**Autore**: AI Assistant con validazione utente
-**Versione**: 1.0 - Pattern Definitivo
+**Status**: ✅ Gold Standard Stabilito  
+**Autore**: AI Assistant con validazione utente  
+**Data**: Dicembre 2024  
+**Versione**: 1.0 - Pattern Definitivo 

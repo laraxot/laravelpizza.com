@@ -1,3 +1,28 @@
+---
+title: "Git Conflict Resolution - Modulo User"
+type: concept
+tags: [conflict, resolution]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict-resolution git conflict resolution - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Git Conflict Resolution - Modulo User
 
 ## Data
@@ -24,4 +49,3 @@
 - Le migrazioni seguono la regola Laraxot: `return new class() extends XotBaseMigration { ... };`
 - Factory utilizza `@var OauthClient` per evitare `mixed`.
 - PHPStan blocca per seeder legacy; verrà affrontato in step successivi.
-

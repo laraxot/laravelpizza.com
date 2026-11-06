@@ -1,3 +1,15 @@
+---
+title: "wizard step naming"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "wizard step naming"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni di Naming per i Wizard Step in Filament
 
 ## Regola Fondamentale

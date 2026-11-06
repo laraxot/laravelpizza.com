@@ -3,6 +3,8 @@ title: Store Action
 description: Store Model with Queuable Action
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../../consolidated/archive/store.md
 ---
 # Store Action {#store}
 

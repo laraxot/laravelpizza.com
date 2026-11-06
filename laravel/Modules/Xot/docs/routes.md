@@ -1,3 +1,13 @@
+---
+title: "Route"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Route"
+---
 # Route
 
 ## Configurazione Base
@@ -36,9 +46,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+    
     Route::resource('users', UserController::class);
-
+    
     Route::prefix('admin')->middleware(['role:admin'])->group(function () {
         Route::get('/settings', [SettingController::class, 'index'])->name('settings');
     });
@@ -52,7 +62,7 @@ use App\Http\Controllers\Api\UserController;
 
 Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
-
+    
     Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('/user', [UserController::class, 'show']);
         Route::apiResource('users', UserController::class);
@@ -183,4 +193,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::pattern('id', '[0-9]+');
 Route::pattern('slug', '[a-z0-9-]+');
-```
+``` 

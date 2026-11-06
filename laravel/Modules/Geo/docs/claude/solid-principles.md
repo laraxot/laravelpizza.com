@@ -1,3 +1,15 @@
+---
+title: "solid principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "solid principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # SOLID Principles in Laraxot
 
 ## Single Responsibility Principle (SRP)
@@ -187,6 +199,5 @@ public function scopeForStabi(Builder $query, int $stabi, int $repar): Builder
 - [ ] Dependencies injected, not fetched
 
 ---
-
 **Version**: 1.0  
 **File**: solid-principles.md - SOLID principles and common violations

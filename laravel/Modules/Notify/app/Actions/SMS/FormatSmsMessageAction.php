@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\SMS;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use function Safe\preg_split;
 
 /**
@@ -11,6 +13,8 @@ use function Safe\preg_split;
  */
 class FormatSmsMessageAction
 {
+    use QueueableAction;
+
     /**
      * @return array{0: string, 1: int, 2: int}
      */
@@ -29,10 +33,8 @@ class FormatSmsMessageAction
         $specialCharsEscaped = ['\^', '{', '}', '\[', '\]', '~', '\\\\', '\|'];
 
         foreach ($specialChars as $index => $specialChar) {
+            /** @var list<string> $messageParts */
             $messageParts = preg_split("/{$specialCharsEscaped[$index]}/", $formattedMessage, -1, PREG_SPLIT_NO_EMPTY);
-
-            // preg_split restituisce sempre un array, quindi controlliamo se è valido
-
             $specialCharCount = count($messageParts) - 1;
 
             if (str_starts_with($formattedMessage, $specialChar)) {
@@ -46,12 +48,14 @@ class FormatSmsMessageAction
             $characterCount += $specialCharCount;
         }
 
+        $characterCount = (int) $characterCount;
+
         // Calcola il numero di SMS
         if ($characterCount <= 160) {
             $smsCount = 1;
         } else {
             // Per messaggi concatenati, ogni SMS è di 153 caratteri
-            $smsCount = intval($characterCount / 153);
+            $smsCount = intdiv($characterCount, 153);
             if ($characterCount % 153 > 0) {
                 $smsCount++;
             }

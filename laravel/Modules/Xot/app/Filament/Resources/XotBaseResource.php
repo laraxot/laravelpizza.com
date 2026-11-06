@@ -21,16 +21,19 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Xot\Actions\Filament\GetResourceClassNameByModelClassAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
+use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
+use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
+use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Webmozart\Assert\Assert;
 
 use function Safe\glob;
 
-use Webmozart\Assert\Assert;
-
 /**
- * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
+ * @method static string getUrl(?string $name = null, array<string, mixed> $parameters = [], bool $isAbsolute = true, ?string $panel = null, ?\Illuminate\Database\Eloquent\Model $tenant = null, bool $shouldGuessMissingParameters = false, ?string $configuration = null)
  */
 abstract class XotBaseResource extends FilamentResource
 {
@@ -41,7 +44,7 @@ abstract class XotBaseResource extends FilamentResource
     protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**
-     * @param array<string, bool|float|int|string|null> $params
+     * @param  array<string, bool|float|int|string|null>  $params
      */
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
@@ -68,7 +71,7 @@ abstract class XotBaseResource extends FilamentResource
 
     public static function getModuleName(): string
     {
-        return Str::between(static::class, 'Modules\\', '\Filament');
+        return Str::before(Str::after(static::class, 'Modules\\'), '\\');
     }
 
     public function hasCombinedRelationManagerTabsWithContent(): bool
@@ -77,11 +80,23 @@ abstract class XotBaseResource extends FilamentResource
     }
 
     /**
+     * Modelli derivati dal nome della Resource, memoizzati per classe.
+     *
+     * La property `$model` di Filament e' dichiarata sul parent: una Resource che non la
+     * ridichiara scrive nello slot condiviso da tutte le altre nella stessa condizione
+     * (457 su 571 in questo progetto), e la prima risolta detta il modello a tutte.
+     * La mappa indicizzata per `static::class` memoizza senza contaminare.
+     *
+     * @var array<class-string, class-string<Model>>
+     */
+    private static array $resolvedModels = [];
+
+    /**
      * @return class-string<Model>
      */
     public static function getModel(): string
     {
-        if (null !== static::$model) {
+        if (static::$model !== null) {
             $res = static::$model;
             Assert::subclassOf(
                 $res,
@@ -91,6 +106,10 @@ abstract class XotBaseResource extends FilamentResource
 
             return $res;
         }
+        if (isset(self::$resolvedModels[static::class])) {
+            return self::$resolvedModels[static::class];
+        }
+
         $moduleName = static::getModuleName();
         $modelName = Str::before(class_basename(static::class), 'Resource');
         $res = 'Modules\\'.$moduleName.'\Models\\'.$modelName;
@@ -100,52 +119,91 @@ abstract class XotBaseResource extends FilamentResource
             Model::class,
             \sprintf('Class %s must extend Eloquent Model', $res),
         );
-        static::$model = $res;
+        self::$resolvedModels[static::class] = $res;
 
         return $res;
     }
 
     /**
      * @return array<int|string, \Filament\Schemas\Components\Component>
+     *                                                                   DEVE ESSERE FINAL !!
      */
-    abstract public static function getFormSchema(): array;
+    final public function getFormSchema(): array
+    {
+        return [];
+    }
+
+    /**
+     * Bridge di migrazione — schema form ancora sulla Resource.
+     * La classe `{Model}Form` è **obbligatoria** ({@see static::getFormClass()}):
+     * se manca si solleva errore. Old serve solo a spostare il contenuto dentro
+     * `Schemas\{Model}Form::getFormSchema()`; a migrazione chiusa si rimuove.
+     *
+     * ATTENZIONE: NON rendere `getFormSchema()` astratto senza prima migrare i
+     * ~100 consumer che ancora implementano solo `getFormSchemaOld()` (grep
+     * `getFormSchemaOld` su `Modules/*`) — vedi docs/chat/STOP-*-getformschema-*.md.
+     *
+     * NON final: ~55 Resource in Modules/* sovrascrivono questo metodo durante
+     * la migrazione. Con `final` ogni override fallisce al bootstrap
+     * ("Cannot override final method") e blocca anche PHPStan.
+     *
+     * @return array<int|string, \Filament\Schemas\Components\Component>
+     */
+    public function getFormSchemaOld(): array
+    {
+        return [];
+    }
+
+    /**
+     * @return class-string<XotBaseResourceForm>
+     */
+    public static function getFormClass(): string
+    {
+        // return AuthorForm::configure($schema); -- esempio della doc Filament, tenuto come riferimento.
+        $resource = static::getResourceBaseName();
+
+        return static::resolveResourcePartClass(
+            folder: 'Schemas',
+            byModel: class_basename(static::getModel()).'Form',
+            byResource: $resource.'Form',
+            baseClass: XotBaseResourceForm::class,
+        );
+    }
 
     final public static function form(Schema $schema): Schema
     {
-        // return AuthorForm::configure($schema);
-        $name = class_basename(static::getModel());
-        $form_class = static::class.'\Schemas\\'.$name.'Form';
-        if (class_exists($form_class)) {
-            $configured = $form_class::configure($schema);
-            Assert::isInstanceOf($configured, Schema::class);
+        $class = static::getFormClass();
+        $configured = $class::configure($schema);
+        Assert::isInstanceOf($configured, Schema::class);
 
-            return $configured;
-        }
+        return $configured;
+    }
 
-        /** @var array<Htmlable|string> $components */
-        $components = static::getFormSchema();
+    /**
+     * @return class-string<XotBaseResourceTable>
+     */
+    public static function getTableClass(): string
+    {
+        $resource = static::getResourceBaseName();
 
-        return $schema
-            ->components($components)
-            ->columns(static::getFormSchemaColumns());
+        return static::resolveResourcePartClass(
+            folder: 'Tables',
+            byModel: Str::plural(class_basename(static::getModel())).'Table',
+            byResource: Str::plural($resource).'Table',
+            baseClass: XotBaseResourceTable::class,
+        );
     }
 
     public static function table(Table $table): Table
     {
-        $name = class_basename(static::getModel());
-        $name_plural = Str::plural($name);
-        $class = static::class.'\Tables\\'.$name_plural.'Table';
-        if (class_exists($class)) {
-            $configured = $class::configure($table);
-            Assert::isInstanceOf($configured, Table::class);
+        $class = static::getTableClass();
+        $configured = $class::configure($table);
+        Assert::isInstanceOf($configured, Table::class);
 
-            return $configured;
-        }
-
-        return $table;
+        return $configured;
     }
 
-    public static function getFormSchemaColumns(): int
+    public static function getFormColumns(): int
     {
         return 1;
     }
@@ -155,9 +213,73 @@ abstract class XotBaseResource extends FilamentResource
      *
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [];
+    }
+
+    /**
+     * @return class-string<XotBaseResourceInfolist>
+     */
+    public static function getInfolistClass(): string
+    {
+        // return AuthorForm::configure($schema); -- esempio della doc Filament, tenuto come riferimento.
+        $resource = static::getResourceBaseName();
+
+        return static::resolveResourcePartClass(
+            folder: 'Schemas',
+            byModel: class_basename(static::getModel()).'Infolist',
+            byResource: $resource.'Infolist',
+            baseClass: XotBaseResourceInfolist::class,
+        );
+    }
+
+    /**
+     * Unico punto di risoluzione di Form, Table e Infolist di una Resource. Tre tentativi:
+     *
+     * 1. nome dal modello: `{Resource}\Tables\{ModelPlurale}Table` (regola storica);
+     * 2. nome dalla Resource: `SchedaPoResource` => `SchedaPoForm`, `SchedaPosTable`. Serve quando
+     *    piu' Resource condividono un modello (le varianti Progressioni di `Scheda`): il nome dal
+     *    modello sarebbe uguale per tutte;
+     * 3. la Resource registrata per il modello (`Filament::getModelResource()`), cioe' la prima
+     *    in ordine di discovery.
+     *
+     * Prima mancava il passo 2: le varianti finivano al passo 3, che restituiva `SchedaDipResource`
+     * anche per `SchedaPoResource`, e la pagina si fermava su un Assert.
+     *
+     * @see Modules/Xot/docs/stories/resource-part-class-by-resource-name.story.md
+     *
+     * @template TPart of object
+     *
+     * @param  class-string<TPart>  $baseClass
+     * @return class-string<TPart>
+     */
+    protected static function resolveResourcePartClass(string $folder, string $byModel, string $byResource, string $baseClass): string
+    {
+        foreach ([$byModel, $byResource] as $name) {
+            $class = static::class.'\\'.$folder.'\\'.$name;
+            if (class_exists($class)) {
+                Assert::subclassOf($class, $baseClass);
+
+                /** @var class-string<TPart> $class */
+                return $class;
+            }
+        }
+
+        $resource = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class = $resource.'\\'.$folder.'\\'.$byModel;
+        Assert::subclassOf($class, $baseClass);
+
+        /** @var class-string<TPart> $class */
+        return $class;
+    }
+
+    /**
+     * `SchedaPoResource` => `SchedaPo`.
+     */
+    protected static function getResourceBaseName(): string
+    {
+        return Str::beforeLast(class_basename(static::class), 'Resource');
     }
 
     /**
@@ -165,15 +287,11 @@ abstract class XotBaseResource extends FilamentResource
      */
     final public static function infolist(Schema $schema): Schema
     {
-        $class = static::class.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
-        if (class_exists($class)) {
-            $configured = $class::configure($schema);
-            Assert::isInstanceOf($configured, Schema::class);
+        $class = static::getInfolistClass();
+        $configured = $class::configure($schema);
+        Assert::isInstanceOf($configured, Schema::class);
 
-            return $configured;
-        }
-
-        return $schema->components(static::getInfolistSchema());
+        return $configured;
     }
 
     /**
@@ -200,7 +318,9 @@ abstract class XotBaseResource extends FilamentResource
             $count = app(CountAction::class)->execute(static::getModel());
 
             return number_format($count, 0).'';
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
+            report($e);
+
             return '--';
         }
     }
@@ -257,7 +377,7 @@ abstract class XotBaseResource extends FilamentResource
         $filesResult = glob($path.\DIRECTORY_SEPARATOR.'*RelationManager.php');
 
         // PHPStan: glob() with valid pattern returns array
-        if ([] === $filesResult) {
+        if ($filesResult === []) {
             return [];
         }
 
@@ -284,6 +404,7 @@ abstract class XotBaseResource extends FilamentResource
 
     public static function getWizardSubmitAction(): Htmlable
     {
+        /** @var view-string $submit_view */
         $submit_view = 'pub_theme::filament.wizard.submit-button';
         if (! View::exists($submit_view)) {
             throw new \Exception("View {$submit_view} does not exist");

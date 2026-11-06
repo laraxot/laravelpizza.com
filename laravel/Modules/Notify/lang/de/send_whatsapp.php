@@ -49,4 +49,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'WhatsApp-Versand testen',
+            'description' => 'Verwenden Sie dieses Formular, um den Versand von WhatsApp-Nachrichten über verschiedene Anbieter zu testen.',
+        ],
+    ],
 ];

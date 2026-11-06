@@ -1,3 +1,24 @@
+---
+title: "Convenzioni di Ereditarietà"
+type: concept
+tags: [notify, docs, best-practices, inheritance, conventions]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione best practices inheritance conventions convenzioni di ereditarietà frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - naming-conventions.md
+status: superseded
+superseded_by: ../inheritance-conventions.md
+---
 # Convenzioni di Ereditarietà
 
 ## Regole Generali

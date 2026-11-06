@@ -1,4 +1,7 @@
 ---
+qmd: "notifications migration owner"
+issues: []
+discussions: []
 title: "Notifications Migration Ownership"
 type: concept
 sources: []
@@ -8,6 +11,7 @@ updated: 2026-06-10
 tags: [migration, notifications, module-owner, notify, user]
 related:
   - ../../../../wiki/rules/one-migration-per-model.md
+status: draft
 ---
 
 # Notifications Migration Ownership

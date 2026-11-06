@@ -10,7 +10,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei tenant e delle loro configurazioni',
         ],
-        'label' => 'tenant',
+        'label' => 'Mandant',
         'sort' => '30',
         'icon' => 'user-user-tenant',
     ],

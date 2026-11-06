@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: Ripristino config tenant dopo delete accidentale
 type: troubleshooting
 confidence: high
@@ -11,16 +13,17 @@ related:
   - ../../../../../../docs/wiki/concepts/sacred-artifacts-never-delete.md
   - ../../../../../../docs/project/incidents/tenant-config-accidental-delete.md
   - ../../../../../../docs/project/incidents/config-directory-mismatch.md
-  - ../ConfigurationDistribution.md
+  - ../configurationdistribution.md
   - ../../../app/Actions/GetTenantNameAction.php
+status: draft
 ---
 
-# Ripristino config tenant — incidente 2026-07-01
+# Ripristino config tenant: incidente 2026-07-01
 
 ## Cosa è successo
 
 Commit `8a3fdd530` ha rimosso gli alberi config per dominio in `laravel/config/`:
-`com/geekpiu`, `eu/fixcity`, `net/futurely`, `localhost`, file in `local/predict/`.
+`com/geekpiu`, `eu/progetto corrente`, `net/futurely`, `localhost`, file in `local/forecast/`.
 
 Classificazione errata: «obsolete» durante cleanup ponytail.
 
@@ -33,7 +36,7 @@ Senza questi file il tenant non ha override DB, moduli, metatag, contenuti Orbit
 
 ## Ripristino
 
-Commit `6b83dfdb2` — contenuto identico a pre-delete (`git diff 8a3fdd530^..HEAD` su `laravel/config/` = 0 righe di contenuto).
+Commit `6b83dfdb2`: contenuto identico a pre-delete (`git diff 8a3fdd530^..HEAD` su `laravel/config/` = 0 righe di contenuto).
 
 ## Prevenzione
 

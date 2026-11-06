@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
     'item',
@@ -39,7 +38,7 @@ declare(strict_types=1);
             </button>
 
             @if (count($item['children']) > 0)
-                <button type="button" x-on:click="open = !open" title="Toggle children"
+                <button type="button" x-on:click="open = !open" title="{{ __('ui::components.nav_item.toggle_children.label') }}"
                     class="appearance-none text-gray-500">
                     <svg class="w-3.5 h-3.5 transition ease-in-out duration-200"
                         x-bind:class="{

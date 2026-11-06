@@ -1,3 +1,15 @@
+---
+title: "database mail system tests"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database mail system tests"
+issues: []
+discussions: []
+status: draft
+---
+
 # Test del Sistema di Gestione Email - il progetto
 
 ## Panoramica
@@ -374,8 +386,8 @@ php artisan test --coverage --filter=MailTemplate
 
 ## Collegamenti
 - [Database Mail System](database-mail-system.md)
-- [Testing Guide](../../../../docs/testing-guide.md)
-- [CI/CD Pipeline](../../../../docs/ci-cd.md)
+- [Testing Guide](../../../docs/testing-guide.md)
+- [CI/CD Pipeline](../../../docs/ci-cd.md)
 
 ## Vedi Anche
 - [Laravel Testing](https://laravel.com/docs/testing)

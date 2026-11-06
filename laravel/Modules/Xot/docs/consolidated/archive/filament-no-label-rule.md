@@ -1,3 +1,11 @@
+---
+title: "REGOLA CRITICA: MAI ->label() nei Componenti Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regola critica: mai ->label() nei componenti filament xot"
+---
 # REGOLA CRITICA: MAI ->label() nei Componenti Filament
 
 ## Principio Fondamentale

@@ -8,18 +8,23 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\Geocoding\GeocodingData;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
 
 use function Safe\json_decode;
+
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottenere i dati di geocodifica da Google Maps.
  */
-readonly class GetGeocodingDataAction
+class GetGeocodingDataAction
 {
-    private const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
+    use QueueableAction;
+
+    private const string API_URL = GeoApiEndpoints::GOOGLE_GEOCODING;
 
     public function __construct(
-        private Client $client,
+        private readonly Client $client,
     ) {
     }
 
@@ -117,6 +122,9 @@ readonly class GetGeocodingDataAction
             return GeocodingData::error($data['status']);
         }
 
-        return GeocodingData::fromGoogleResponse($data);
+        return GeocodingData::fromGoogleResponse([
+            'status' => $data['status'],
+            'results' => $data['results'],
+        ]);
     }
 }

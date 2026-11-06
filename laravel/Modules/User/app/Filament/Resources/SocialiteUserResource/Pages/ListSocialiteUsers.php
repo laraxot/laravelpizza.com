@@ -6,11 +6,11 @@ namespace Modules\User\Filament\Resources\SocialiteUserResource\Pages;
 
 use Filament\Actions\Action;
 use Modules\User\Filament\Resources\SocialiteUserResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-
 /**
  * Class ListSocialiteUsers.
  */
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+
 class ListSocialiteUsers extends XotBaseListRecords
 {
     protected static string $resource = SocialiteUserResource::class;

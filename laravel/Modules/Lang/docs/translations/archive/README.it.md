@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "🚀 Benvenuto in Laraxot PTVX"
+module: "Lang"
+type: concept
+tags: [git, conflicts, resolution, summary]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "git conflicts resolution summary"
+related:
+  - "../../italian-text-refined-audit-report.md"
+status: draft
+---
 <div align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup.png" alt="Laraxot PTVX" width="350"/>
   
@@ -43,10 +57,10 @@
 
 ## 📚 Struttura del Progetto
 
-- `laravel/Modules/` — Tutta la logica di business, raggruppata per modulo
-- `laravel/Themes/` — Asset frontend tematizzabili
-- `laravel/project_docs/` — Documentazione core e dei moduli
-- `docs/` — Documentazione di progetto, workflow e traduzioni
+- `laravel/Modules/`: Tutta la logica di business, raggruppata per modulo
+- `laravel/Themes/`: Asset frontend tematizzabili
+- `laravel/project_docs/`: Documentazione core e dei moduli
+- `docs/`: Documentazione di progetto, workflow e traduzioni
 
 ---
 
@@ -64,10 +78,10 @@
 
 ## 📚 Documentazione
 
-- [Indice del Progetto](../INDEX.md)
+- [Indice del Progetto](../../INDEX.md)
 - [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
 - [Panoramica dei Moduli](../MODULES.md)
-- [Architettura](../ARCHITECTURE.md)
+- [Architettura](../../ARCHITECTURE.md)
 
 ---
 

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Analisi Modelli, Factory e Seeder - Modulo Lang"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Analisi Modelli, Factory e Seeder - Modulo Lang
 
 ## Riepilogo Modelli

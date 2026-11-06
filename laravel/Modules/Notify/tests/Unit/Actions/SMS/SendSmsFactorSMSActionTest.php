@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions\SMS;
-use Modules\Notify\Tests\TestCase;
-use function Safe\file_get_contents;
+
 use Modules\Notify\Actions\SMS\SendSmsFactorSMSAction;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+use Modules\Notify\Models\Contracts\SmsActionContract;
+use Modules\Notify\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_uses;
 
 uses(\Modules\Notify\Tests\TestCase::class);
-
 describe('SendSmsFactorSMSAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
@@ -40,7 +40,7 @@ describe('SendSmsFactorSMSAction', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        \assertReflectionTypeName($params[0]->getType(), SmsData::class);
+        XotBasePest::assertReflectionTypeName($params[0]->getType(), SmsData::class);
     });
 
     it('execute returns array', function () {
@@ -48,12 +48,12 @@ describe('SendSmsFactorSMSAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        \assertReflectionTypeName($returnType, 'array');
+        XotBasePest::assertReflectionTypeName($returnType, 'array');
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
-        $content = \notifyReflectionSource($reflection);
+        $content = TestCase::notifyReflectionSource($reflection);
         Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
@@ -67,7 +67,7 @@ describe('SendSmsFactorSMSAction', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $filename = $reflection->getFileName();
         Assert::assertNotFalse($filename);
-        $content = \notifyReflectionSource(new \ReflectionClass(SendSmsFactorSMSAction::class));
+        $content = TestCase::notifyReflectionSource(new \ReflectionClass(SendSmsFactorSMSAction::class));
         Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 

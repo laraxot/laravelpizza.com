@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Observers;
 
 use Illuminate\Support\Facades\Log;
+use Modules\User\Datas\UserConfigData;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
@@ -25,14 +26,12 @@ class UserObserver
     public function created(User $user): void
     {
         // Verifica se la creazione automatica del personal team è abilitata
-        $createPersonalTeam = config('user.create_personal_team', false);
-
-        if (! $createPersonalTeam) {
+        if (! UserConfigData::make()->create_personal_team) {
             return;
         }
 
         // Evita di creare team duplicati
-        if (null !== $user->personalTeam()) {
+        if ($user->personalTeam() !== null) {
             return;
         }
 

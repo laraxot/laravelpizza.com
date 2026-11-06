@@ -1,3 +1,15 @@
+---
+title: "phases"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phases"
+issues: []
+discussions: []
+status: draft
+---
+
 # Fasi di sviluppo - Gdpr Module
 
 ## Fase 1: Stabilizzazione (In Progress)

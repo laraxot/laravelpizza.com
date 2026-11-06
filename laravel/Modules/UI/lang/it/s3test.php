@@ -39,7 +39,7 @@ return [
         ],
         'testPermissions' => [
             'label' => '🔒 Test Permessi',
-            'tooltip' => 'Testa i permessi S3 (ListBucket, PutObject, GetObject, DeleteObject]',
+            'tooltip' => 'Testa i permessi S3 (ListBucket, PutObject, GetObject, DeleteObject)',
             'success' => 'Permessi S3 testati con successo',
             'error' => 'Errore nel test dei permessi S3',
         ],
@@ -130,6 +130,6 @@ return [
         ],
         'label' => 'S3test',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
 ];

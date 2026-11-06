@@ -22,13 +22,17 @@ const OVERLAY_PARTS = [
     renderZoomGroup,
 ];
 
+/** Sola lettura: solo lo zoom (niente ricerca, geolocalizzazione, fullscreen, cambio livello). */
+const READONLY_PARTS = [renderZoomGroup];
+
 /**
  * Composizione pura della toolbar — tutta la UI dei singoli pulsanti vive nei file dedicati.
  */
 export function renderControls(ctx) {
     return html`
         <div class="layer-controls-overlay">
-            ${OVERLAY_PARTS.map((renderPart) => renderPart(ctx))}
+            ${(ctx.readonly ? READONLY_PARTS : OVERLAY_PARTS).map((renderPart) => renderPart(ctx))}
+            <p class="map-control-status" role="status" aria-live="polite">${ctx._locationError || ''}</p>
         </div>
     `;
 }

@@ -1,3 +1,23 @@
+---
+title: "Guida alla Struttura dei File di Traduzione"
+type: concept
+tags: [notify, docs, architecture, translation, file, structure]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione architecture translation file structure guide guida alla struttura dei file di traduzione frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # Guida alla Struttura dei File di Traduzione
 
 ## Struttura Standard Obbligatoria
@@ -152,3 +172,7 @@ return [
 - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
 - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
 - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Regole di Naming per i File di Traduzione](../translation_file_naming_rules.md)
+- [Regole Generali per le Traduzioni](../../../Lang/docs/translation_keys_rules.md)
+- [Regole di Naming per i File di Traduzione](../translation_file_naming_rules.md)
+- [Regole Generali per le Traduzioni](../../../Lang/docs/translation_keys_rules.md)

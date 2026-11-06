@@ -1,3 +1,15 @@
+---
+title: "sms best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices per l'Invio SMS
 
 ## 1. Gestione dei Template

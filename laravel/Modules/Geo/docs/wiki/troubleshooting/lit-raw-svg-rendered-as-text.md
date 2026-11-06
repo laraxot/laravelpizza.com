@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "lit raw svg rendered as text"
+issues: []
+discussions: []
 title: Lit Raw SVG Rendered As Text
 type: troubleshooting
 updated: 2026-04-28

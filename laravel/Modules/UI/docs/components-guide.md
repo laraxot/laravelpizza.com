@@ -1,3 +1,15 @@
+---
+title: "components guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "components guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida ai Componenti UI
 
 ## Layout

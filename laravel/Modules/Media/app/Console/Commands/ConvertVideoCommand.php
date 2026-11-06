@@ -8,6 +8,8 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
+use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 
@@ -42,10 +44,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
 
-        $export->toDisk($disk);
-        $export->inFormat($format);
-        $export->save($file_new);
+        // Una sola transcodifica: toDisk() e inFormat() configurano lo stesso exporter, save() scrive $file_new.
+        app(ResolveMediaExporterAction::class)->execute($export->toDisk($disk))->inFormat($format)->save($file_new);
 
-        return Storage::disk($disk)->url($file_new);
+        return app(GetFilesystemAdapterAction::class)->execute($disk)->url($file_new);
     }
 }

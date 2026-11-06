@@ -1,3 +1,11 @@
+---
+title: "DIVIETO ASSOLUTO DI USARE ->label(), ->placeholder() e ->helperText()"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "divieto assoluto di usare ->label(), ->placeholder() e ->helpertext() xot"
+---
 # DIVIETO ASSOLUTO DI USARE ->label(), ->placeholder() e ->helperText()
 
 ## Regola Fondamentale Inviolabile

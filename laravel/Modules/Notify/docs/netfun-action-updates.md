@@ -1,3 +1,15 @@
+---
+title: "netfun action updates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun action updates"
+issues: []
+discussions: []
+status: draft
+---
+
 # Aggiornamenti a SendNetfunSMSAction
 
 ## Panoramica delle Modifiche
@@ -318,5 +330,4 @@ Questi miglioramenti garantiscono:
 5. Configurazione standardizzata e coerente
 
 ---
-
 *Ultimo aggiornamento: [DATE]*

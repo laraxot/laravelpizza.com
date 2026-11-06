@@ -4,23 +4,23 @@ declare(strict_types=1);
 
 return [
     'edit_user' => [
-        'title' => 'Modifica Profilo Utente',
-        'description' => 'Aggiorna le informazioni del profilo utente',
+        'title' => 'Benutzerprofil bearbeiten',
+        'description' => 'Profilinformationen des Benutzers aktualisieren',
         'sections' => [
             'personal_info' => [
-                'title' => 'Informazioni Personali',
+                'title' => 'Persönliche Informationen',
                 'description' => 'Dati anagrafici e contatti',
             ],
             'preferences' => [
-                'title' => 'Preferenze',
+                'title' => 'Einstellungen',
                 'description' => 'Impostazioni personali e lingua',
             ],
             'security' => [
-                'title' => 'Sicurezza',
+                'title' => 'Sicherheit',
                 'description' => 'Password e impostazioni di sicurezza',
             ],
             'admin_settings' => [
-                'title' => 'Impostazioni Amministratore',
+                'title' => 'Administratoreinstellungen',
                 'description' => 'Configurazioni riservate agli amministratori',
             ],
         ],
@@ -171,17 +171,12 @@ return [
             'confirm' => 'Sei sicuro di voler uscire?',
         ],
     ],
-    'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
+    'user_widget' => [
+        'start_date' => [
+            'label' => 'Startdatum:',
+        ],
+        'end_date' => [
+            'label' => 'Enddatum:',
+        ],
     ],
 ];

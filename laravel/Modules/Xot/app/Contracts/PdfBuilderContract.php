@@ -13,7 +13,7 @@ interface PdfBuilderContract
     public function download(): self;
 
     /**
-     * @param \Closure(object): void $callback
+     * @param  \Closure(object): void  $callback
      */
     public function withBrowsershot(\Closure $callback): self;
 

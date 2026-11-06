@@ -1,3 +1,23 @@
+---
+title: "🌐 VHost Governance Rules"
+type: rule
+tags: [notify, docs, rules, vhost, governance]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione rules vhost governance 🌐 vhost governance rules frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../architecture/README.md
+  - ../conventions/README.md
+  - README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # 🌐 VHost Governance Rules
 
 > **Last Updated**: 2026-03-31  
@@ -9,6 +29,7 @@
 ## 📋 Overview
 
 This document defines the **mandatory rules** for Apache VirtualHost configuration in the FixCity platform.
+This document defines the **mandatory rules** for Apache VirtualHost configuration in the Notify platform.
 
 ---
 
@@ -45,6 +66,11 @@ laravel/config/vhost/fixcity.local.conf
 - /etc/apache2/sites-available/fixcity.local.conf (not versioned)
 - docs/vhost.conf (wrong location)
 - config/fixcity.local.conf (wrong directory)
+
+❌ WRONG:
+- /etc/apache2/sites-available/fixcity.local.conf (not versioned)
+- docs/vhost.conf (wrong location)
+- config/fixcity.local.conf (wrong directory)
 ```
 
 **Rationale**:
@@ -60,13 +86,13 @@ laravel/config/vhost/fixcity.local.conf
 
 ```apache
 # ✅ CORRECT
-ServerName fixcity.local
-ServerAlias www.fixcity.local
+ServerName laraxot.local
+ServerAlias www.laraxot.local
 
 # ❌ WRONG
-ServerName fixcity.dev
-ServerName fixcity.test
-ServerName localhost/fixcity
+ServerName laraxot.dev
+ServerName laraxot.test
+ServerName localhost/laraxot
 ```
 
 **Rationale**:
@@ -84,6 +110,8 @@ ServerName localhost/fixcity
 # ✅ CORRECT
 ErrorLog ${APACHE_LOG_DIR}/fixcity_local_error.log
 CustomLog ${APACHE_LOG_DIR}/fixcity_local_access.log combined
+ErrorLog ${APACHE_LOG_DIR}/app_local_error.log
+CustomLog ${APACHE_LOG_DIR}/app_local_access.log combined
 
 # ❌ WRONG - Don't use default Apache logs
 # (No logging configuration)
@@ -103,6 +131,7 @@ CustomLog ${APACHE_LOG_DIR}/fixcity_local_access.log combined
 ```apache
 # ✅ CORRECT
 <Directory /var/www/_bases/base_fixcity_fila5/public_html>
+<Directory /var/www/_bases/base_ptvx_fila5/public_html>
     Options -Indexes +FollowSymLinks +MultiViews
     AllowOverride All
     Require all granted
@@ -131,11 +160,13 @@ CustomLog ${APACHE_LOG_DIR}/fixcity_local_access.log combined
 ```
 ✅ CORRECT:
 - fixcity.local.conf
+- laraxot.local.conf
 - staging.local.conf
 
 ❌ WRONG:
 - vhost.conf (too generic)
 - fixcity.conf (missing .local)
+- laraxot.conf (missing .local)
 - 000-default.conf (Apache default)
 ```
 
@@ -162,11 +193,11 @@ CustomLog ${APACHE_LOG_DIR}/fixcity_local_access.log combined
 
 ```bash
 # ✅ CORRECT
-127.0.0.1    fixcity.local
-127.0.0.1    www.fixcity.local
+127.0.0.1    laraxot.local
+127.0.0.1    www.laraxot.local
 
 # ❌ WRONG
-127.0.0.1    fixcity
+127.0.0.1    laraxot
 # (missing .local TLD)
 ```
 
@@ -193,6 +224,9 @@ apache2ctl -M | grep rewrite
 1. Edit: laravel/config/vhost/fixcity.local.conf
 2. Copy: sudo cp laravel/config/vhost/fixcity.local.conf /etc/apache2/sites-available/
 3. Enable: sudo a2ensite fixcity.local.conf
+1. Edit: laravel/config/vhost/laraxot.local.conf
+2. Copy: sudo cp laravel/config/vhost/laraxot.local.conf /etc/apache2/sites-available/
+3. Enable: sudo a2ensite laraxot.local.conf
 4. Reload: sudo systemctl reload apache2
 
 # ❌ WRONG
@@ -225,6 +259,7 @@ php artisan migrate:rollback
 ```apache
 # ❌ CRITICAL SECURITY ISSUE
 DocumentRoot /var/www/_bases/base_fixcity_fila5/laravel
+DocumentRoot /var/www/_bases/base_ptvx_fila5/laravel
 
 # This exposes:
 # - .env file
@@ -286,6 +321,7 @@ AllowOverride None
 # ✅ DEVELOPMENT
 DB_CONNECTION=sqlite
 DB_DATABASE=/var/www/_bases/base_fixcity_fila5/laravel/database/fixcity_data.sqlite
+DB_DATABASE=/var/www/_bases/base_ptvx_fila5/laravel/database/notify_data.sqlite
 
 # ❌ WRONG
 DB_HOST=production-db.example.com
@@ -314,6 +350,9 @@ Before committing vhost changes:
 - [ ] Domain resolves: `ping fixcity.local`
 - [ ] Application accessible: `curl -I http://fixcity.local`
 - [ ] Logs created: `ls -la /var/log/apache2/fixcity_*`
+- [ ] Domain resolves: `ping laraxot.local`
+- [ ] Application accessible: `curl -I http://laraxot.local`
+- [ ] Logs created: `ls -la /var/log/apache2/app_*`
 
 ---
 

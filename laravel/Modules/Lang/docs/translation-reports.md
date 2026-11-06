@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Translation Module PDF Reports"
+module: "Lang"
+type: concept
+tags: [readme.es, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme.es 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Translation Module PDF Reports
 
 ## 📋 Overview
@@ -817,12 +831,8 @@ public function generateWithErrorHandling(array $options = []): string
 
 ---
 
-<<<<<<< HEAD
-**
-=======
 **Last Updated:** 2025-12-09
 **Last Updated:** 2025-12-09
->>>>>>> bebd548 (.)
 **Version:** 1.0.0
 **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

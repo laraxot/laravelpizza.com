@@ -1,3 +1,14 @@
+---
+title: "organization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "organization"
+issues: []
+discussions: []
+---
+
 # Organizzazione Script Bash
 
 ## Struttura Organizzata
@@ -218,5 +229,13 @@ Gli script bash sono stati organizzati in sottocartelle tematiche per migliorare
 
 ---
 
+title: "organization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "organization"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Giugno 2025*
 *Organizzazione completata: 24 Giugno 2025* 

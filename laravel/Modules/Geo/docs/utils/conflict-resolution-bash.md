@@ -1,3 +1,15 @@
+---
+title: "conflict resolution bash"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution bash"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Manuale dei Conflitti negli Script Bash
 
 > **Nota**: Per informazioni aggiuntive sui conflitti nei moduli, consulta anche [Conflitti Git nei Moduli](../../docs/conflitti_git_moduli.md)
@@ -134,10 +146,9 @@ BRANCH="${3:-main}"  # Usa il terzo parametro se fornito, altrimenti "main"
 
 ## Collegamenti utili
 
-- [Risoluzione Manuale dei Conflitti](../../docs/CONFLICT_RESOLUTION.md) - Principi generali per la risoluzione dei conflitti
-- [Principio DRY negli Script Bash](NO_DUPLICATE_FUNCTIONS_IN_SOURCED_SCRIPTS.md) - Linee guida per evitare la duplicazione di codice
+- [Risoluzione Manuale dei Conflitti](../conflict_resolution.md) - Principi generali per la risoluzione dei conflitti
+- [Principio DRY negli Script Bash](../raw/history/no_duplicate_functions_in_sourced_scripts.md) - Linee guida per evitare la duplicazione di codice
 - [Filosofia della Documentazione](../../docs/DOCUMENTATION_PHILOSOPHY.md) - Principi fondamentali di documentazione
 
 ---
-
 > **NOTA IMPORTANTE**: La risoluzione dei conflitti negli script bash deve sempre privilegiare la robustezza, la gestione degli errori e il rispetto del principio DRY. Ogni conflitto risolto deve essere accompagnato da un aggiornamento della documentazione.

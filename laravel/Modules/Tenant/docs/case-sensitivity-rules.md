@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Case Sensitivity Rules - Tenant Module"
+module: "Tenant"
+type: rule
+tags: [case, sensitivity, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "case sensitivity rules"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Case Sensitivity Rules - Tenant Module
 
 ## Problema / Problem

@@ -1,3 +1,15 @@
+---
+title: "filament field wrapper error message missing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament field wrapper error message missing"
+issues: []
+discussions: []
+status: draft
+---
+
 # filament field-wrapper error-message missing
 
 ## Sintomo

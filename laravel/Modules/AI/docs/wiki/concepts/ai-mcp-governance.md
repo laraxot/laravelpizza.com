@@ -1,3 +1,15 @@
+---
+title: "ai mcp governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai mcp governance"
+issues: []
+discussions: []
+status: draft
+---
+
 # AI MCP Governance
 
 > Updated: 2026-04-15

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * Vista default per widget che estendono XotBaseSchemaWidget.
  *

@@ -3,6 +3,8 @@ title: Custom Relation
 description: Custom Relation
 extends: _layouts.documentation
 section: content
+status: superseded
+superseded_by: ../custom-relation.md
 ---
 # Come funzionano le custom relations? {#custom-relation}
 

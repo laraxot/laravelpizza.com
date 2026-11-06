@@ -4,15 +4,53 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-        'email' => ['label' => 'email', 'placeholder' => 'email', 'helper_text' => 'email', 'description' => 'email'],
-        'password' => ['label' => 'password', 'placeholder' => 'password', 'helper_text' => 'password', 'description' => 'password'],
-        'remember' => ['label' => 'remember', 'placeholder' => 'remember', 'helper_text' => 'remember', 'description' => 'remember'],
-        'first_name' => ['label' => 'first_name', 'placeholder' => 'first_name', 'helper_text' => 'first_name', 'description' => 'first_name'],
-        'last_name' => ['label' => 'last_name', 'placeholder' => 'last_name', 'helper_text' => 'last_name', 'description' => 'last_name'],
-        'password_confirmation' => ['label' => 'password_confirmation', 'placeholder' => 'password_confirmation', 'helper_text' => 'password_confirmation', 'description' => 'password_confirmation'],
+        'email' => [
+            'label' => 'Email address',
+            'placeholder' => 'name@example.com',
+            'helper_text' => 'Use the email address you will use to sign in.',
+            'description' => 'Email',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Enter a strong password',
+            'helper_text' => 'At least 12 characters, with an uppercase letter, a number and a symbol.',
+            'description' => 'Account password',
+        ],
+        'remember' => [
+            'label' => 'Remember me',
+            'placeholder' => '',
+            'helper_text' => 'Prolonged session on a trusted device',
+            'description' => 'Keep the session active on this device',
+        ],
+        'first_name' => [
+            'label' => 'First name',
+            'placeholder' => 'John',
+            'helper_text' => 'Your given name',
+            'description' => 'First name',
+        ],
+        'last_name' => [
+            'label' => 'Last name',
+            'placeholder' => 'Smith',
+            'helper_text' => 'Your family name',
+            'description' => 'Last name',
+        ],
+        'password_confirmation' => [
+            'label' => 'Confirm password',
+            'placeholder' => 'Repeat your password',
+            'helper_text' => 'Must match the password entered above.',
+            'description' => 'Confirm password',
+        ],
     ],
     'actions' => [
-        'showPassword' => ['label' => 'showPassword', 'icon' => 'showPassword', 'tooltip' => 'showPassword'],
-        'hidePassword' => ['label' => 'hidePassword', 'icon' => 'hidePassword', 'tooltip' => 'hidePassword'],
+        'showPassword' => [
+            'label' => 'Show password',
+            'icon' => 'heroicon-o-eye',
+            'tooltip' => 'Show password',
+        ],
+        'hidePassword' => [
+            'label' => 'Hide password',
+            'icon' => 'heroicon-o-eye-slash',
+            'tooltip' => 'Hide password',
+        ],
     ],
 ];

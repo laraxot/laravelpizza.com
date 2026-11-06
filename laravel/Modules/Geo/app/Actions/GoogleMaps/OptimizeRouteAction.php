@@ -10,6 +10,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\Routing\RouteData;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottimizzare un percorso utilizzando l'API di Google Maps.
@@ -20,7 +22,9 @@ use Modules\Geo\Datas\Routing\RouteData;
  */
 class OptimizeRouteAction
 {
-    private const BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json';
+    use QueueableAction;
+
+    private const string BASE_URL = GeoApiEndpoints::GOOGLE_DIRECTIONS;
 
     /**
      * Ottimizza il percorso tra i punti specificati.
@@ -169,9 +173,6 @@ class OptimizeRouteAction
                         address: null,
                     ));
                 }
-
-                /** @var Collection<int, LocationData> $typedWaypoints */
-                $typedWaypoints = $waypoints;
 
                 return new RouteData(
                     waypoints: $waypoints,

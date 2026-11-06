@@ -1,3 +1,12 @@
+---
+title: "Linee Guida API <nome progetto>ion Market"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "linee guida api <nome progetto>ion market activity"
+status: superseded
+superseded_by: api.md
+---
 # Linee Guida API <nome progetto>ion Market
 
 ## Endpoints Principali

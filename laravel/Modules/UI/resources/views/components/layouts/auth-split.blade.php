@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-layouts.main>
     <div class="min-h-screen flex text-slate-800 dark:text-gray-200 font-sans">
@@ -35,7 +34,7 @@ declare(strict_types=1);
             </div>
 
             <div class="relative z-10 text-sm text-indigo-200 font-medium tracking-wide">
-                &copy; {{ date('Y') }} <nome progetto>. Made with ❤️ and 🍕.
+                &copy; {{ date('Y') }} <nome progetto>. {{ __('ui::components_shell.footer.made_with.message') }}
             </div>
         </div>
 

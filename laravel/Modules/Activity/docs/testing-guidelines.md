@@ -1,3 +1,11 @@
+---
+title: "Activity Module - Testing Guidelines"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity module - testing guidelines activity"
+---
 # Activity Module - Testing Guidelines
 
 ## Testing Framework Requirements
@@ -8,11 +16,9 @@ All tests MUST use `.env.testing` configuration:
 APP_ENV=testing
 DB_CONNECTION=mysql
 DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE=<nome progetto>_data_test
 DB_DATABASE_USER=<nome progetto>_user_test
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE_USER=<nome progetto>_user_test
+DB_DATABASE=laravelpizza_data_test
+DB_DATABASE_USER=laravelpizza_user_test
 ```
 
 ### Pest Framework Usage

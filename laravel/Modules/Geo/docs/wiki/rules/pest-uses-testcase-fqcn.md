@@ -10,9 +10,10 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/355"
 related:
-  - ../../../../docs/wiki/rules/testing-modules-pest.md
-  - ../../../../docs/wiki/PHPSTAN-INDEX.md
+  - ../../../../../../docs/wiki/rules/testing-modules-pest.md
+  - ../../../../../../docs/wiki/PHPSTAN-INDEX.md
   - ../../../Xot/docs/wiki/rules/module-testcase-xotbase-hierarchy.md
+status: draft
 ---
 
 # Pest `uses()` — FQCN obbligatorio

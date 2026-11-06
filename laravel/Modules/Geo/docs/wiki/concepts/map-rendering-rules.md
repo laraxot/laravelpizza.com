@@ -1,7 +1,15 @@
 ---
+title: "map rendering rules"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "map rendering rules"
+issues: []
+discussions: []
 name: map-rendering-rules
 description: Best practices, bad practices and false friends for rendering maps in Filament wizard components.
 type: concept
+status: draft
 ---
 
 # Map Rendering Rules for Filament Wizard

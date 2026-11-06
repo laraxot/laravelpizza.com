@@ -9,8 +9,8 @@ use Spatie\LaravelData\Data;
 class UserData extends Data
 {
     /**
-     * @param array<int, string>   $permissions
-     * @param array<string, mixed> $settings
+     * @param  array<int, string>  $permissions
+     * @param  array<string, mixed>  $settings
      */
     public function __construct(
         public int $id,
@@ -20,6 +20,5 @@ class UserData extends Data
         public ?string $role,
         public array $permissions,
         public array $settings,
-    ) {
-    }
+    ) {}
 }

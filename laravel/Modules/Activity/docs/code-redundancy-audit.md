@@ -1,5 +1,5 @@
 ---
-title: "Code redundancy audit — Activity"
+title: "Code redundancy audit: Activity"
 type: source
 status: draft
 tags: [code-audit, redundancy, dry, second-brain, module]
@@ -7,9 +7,10 @@ created: "2026-05-26"
 updated: "2026-05-26"
 owner: "Activity"
 issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/150"
+qmd: "code redundancy audit   activity activity"
 ---
 
-# Code redundancy audit — Activity
+# Code redundancy audit: Activity
 
 ## Scopo
 
@@ -69,7 +70,7 @@ Ridurre rumore, duplicazione e ambiguita' nel codice di questo module, senza per
 - Religione: DRY e KISS sono dogmi utili solo se servono lo scopo.
 - Filosofia: il codice e' memoria operativa; la documentazione spiega perche' esiste.
 
-## Second Brain 2026 — note operative
+## Second Brain 2026: note operative
 
 - Markdown locale + Git restano la base piu' portabile: gli agenti leggono/scrivono file senza database esterni.
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.

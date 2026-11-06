@@ -1,3 +1,16 @@
+---
+title: "modelli factory seeder analisi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modelli factory seeder analisi"
+issues: []
+discussions: []
+status: superseded
+superseded_by: modelli-factory-seeder-analisi.md
+---
+
 # Analisi Modelli, Factory e Seeder - Modulo Geo
 
 ## Panoramica
@@ -180,8 +193,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - [<main module> Module](../../<main module>/docs/modelli_factory_seeder_analisi.md)
-- [User Module](../../user/docs/modelli_factory_seeder_analisi.md)
-- [Cms Module](../../cms/docs/modelli_factory_seeder_analisi.md)
+- [User Module](../../User/docs/modelli_factory_seeder_analisi.md)
+- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md)
 
 ### Risorse Esterne
 - [ISTAT Comuni](https://www.istat.it/it/archivio/6789)

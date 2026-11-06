@@ -1,8 +1,14 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "bashscripts agents codex skill mirror"
+issues: []
+discussions: []
 title: "Mirror skill .agents vs .codex (bashscripts)"
 module: "AI"
 type: "comparison"
 updated: "2026-05-04"
+status: draft
 ---
 
 # Mirror skill: `.agents` e `.codex` nel repo FixCity

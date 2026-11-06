@@ -1,3 +1,15 @@
+---
+title: "merge conflicts resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "merge conflicts resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti di Merge - Modulo Geo
 
 ## Panoramica
@@ -42,9 +54,10 @@ Strategia: DRY, KISS, analisi contestuale
 - `app/Datas/CoordinatesData.php`
 - `app/Datas/RouteData.php`
 
-### Services (2 file)
-- `app/Services/BaseGeoService.php`
-- `app/Services/GoogleMapsService.php`
+### Services (2 file) — ELIMINATI — No-Services
+- `app/Services/BaseGeoService.php` ❌ (rimosso, sostituito da Actions: `GetCoordinatesByAddressAction`, `GetAddressFromNominatimAction`, `CalculateDistanceAction` etc.)
+- `app/Services/GoogleMapsService.php` ❌ (rimosso, sostituito da `Actions/GoogleMaps/*`)
+- **Nota**: `app/Services/` non esiste più in Geo. Zero chiamanti in produzione (verificato con `grep -rn`).
 
 ### Configurazione e Risorse (6 file)
 - `README.md`
@@ -72,7 +85,7 @@ Strategia: DRY, KISS, analisi contestuale
 - [ ] Actions (0/12) 
 - [ ] Filament (0/5)
 - [ ] Data Objects (0/2)
-- [ ] Services (0/2)
+- [x] Services (2/2) — ELIMINATI (No-Services, non ricreati)
 - [ ] Configurazione (0/5)
 
 ## Risoluzioni Completate
@@ -87,14 +100,9 @@ Strategia: DRY, KISS, analisi contestuale
   - Implementazione Schema.org PostalAddress
 - **Motivazione**: Versione avanzata segue best practice Laraxot
 
-### GeographicalScopes.php ✅
-- **Conflitto**: Già risolto correttamente
-- **Stato**: Utilizza correttamente `GetDistanceExpressionAction` centralizzata
-- **Implementazione**: 
-  - Scope `scopeWithDistance` per calcolo distanza
-  - Scope `scopeOrderByDistance` per ordinamento geografico
-  - Metodo `getDistanceExpression` che delega all'action
-- **Motivazione**: Segue principi DRY e KISS, action centralizzata
+### GeographicalScopes.php ✅ (ELIMINATO — No-Services)
+- **Conflitto**: Non applicabile; il file `app/Models/Traits/GeographicalScopes.php` è stato rimosso (zero chiamanti in produzione, sostituito da `GeoTrait::scopeWithDistance`).
+- **Stato attuale**: Il trait non esiste. Le scope di distanza vivono in `GeoTrait.php`. Vedi [decision-log](./decision-log.md) 2026-10-20.
 
 ## Note Tecniche
 - Tutti i conflitti sembrano essere nel modulo Geo

@@ -1,3 +1,14 @@
+---
+title: "geo map widget farmshops inspired"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map widget farmshops inspired"
+issues: []
+discussions: []
+---
+
 # Story: GeoMapWidget farmshops-inspired per modulo Geo
 
 ## Status

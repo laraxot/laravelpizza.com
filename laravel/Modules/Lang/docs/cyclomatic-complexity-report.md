@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Cyclomatic Complexity Report - Module: Lang"
+module: "Lang"
+type: concept
+tags: [migration, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Cyclomatic Complexity Report - Module: Lang
 
 **Generated:** 2025-10-01 19:44:11

@@ -1,16 +1,15 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props([
-    'title' => 'Prenota un appuntamento',
+    'title' => __('user::blocks.sections.booking_form.title'),
     'id' => 'booking-form',
-    'form_intro' => 'Compila il form per prenotare',
+    'form_intro' => __('user::blocks.sections.booking_form.description'),
     'steps' => [],
-    'submit_text' => 'Conferma',
-    'privacy_text' => 'Acconsento al trattamento dei dati personali',
-    'success_message' => 'Prenotazione effettuata con successo'
+    'submit_text' => __('user::blocks.booking_form.submit.label'),
+    'privacy_text' => __('user::blocks.booking_form.privacy.label'),
+    'success_message' => __('user::blocks.booking_form.success.message')
 ])
 
 <section class="py-16 bg-white" id="{{ $id }}">
@@ -123,7 +122,7 @@ declare(strict_types=1);
                                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                                                 {{ isset($field['required']) && $field['required'] ? 'required' : '' }}
                                             >
-                                                <option value="">Seleziona...</option>
+                                                <option value="">{{ __('user::blocks.booking_form.select.label') }}</option>
                                                 @foreach($field['options'] as $option)
                                                     <option value="{{ $option['value'] }}">{{ $option['label'] }}</option>
                                                 @endforeach
@@ -167,7 +166,7 @@ declare(strict_types=1);
                                 x-show="currentStep > 0"
                                 class="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                             >
-                                Indietro
+                                {{ __('user::blocks.booking_form.back.label') }}
                             </button>
 
                             <div class="ml-auto">
@@ -177,7 +176,7 @@ declare(strict_types=1);
                                     x-show="currentStep < totalSteps - 1"
                                     class="px-6 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors"
                                 >
-                                    Continua
+                                    {{ __('user::blocks.booking_form.next.label') }}
                                 </button>
 
                                 <div x-show="currentStep === totalSteps - 1">
@@ -211,7 +210,7 @@ declare(strict_types=1);
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-green-800 mb-2">Prenotazione completata!</h3>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">{{ __('user::blocks.booking_form.completed.message') }}</h3>
                     <p class="text-green-700">{{ $success_message }}</p>
                 </div>
             </div>

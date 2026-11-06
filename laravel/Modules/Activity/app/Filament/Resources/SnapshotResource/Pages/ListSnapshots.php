@@ -16,9 +16,12 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Activity\Filament\Resources\SnapshotResource;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 /**
+ * Colonne, filtri e azioni stanno in `SnapshotsTable`: la List page non li dichiara.
+ *
  * @see SnapshotResource
  */
 class ListSnapshots extends XotBaseListRecords
@@ -33,7 +36,7 @@ class ListSnapshots extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable()->searchable(),
+            'id' => IDColumn::make('id')->sortable()->searchable(),
             'aggregate_uuid' => TextColumn::make('aggregate_uuid')->searchable(),
             'aggregate_version' => TextColumn::make('aggregate_version')->sortable(),
             'state' => TextColumn::make('state')->searchable(),

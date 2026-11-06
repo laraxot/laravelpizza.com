@@ -1,7 +1,14 @@
 ---
+type: note
+tags: [documentation]
+updated: 2026-09-26
+qmd: "schema"
+issues: []
+discussions: []
 title: "Module Schema"
 module: "Media"
 created: "2026-04-15T08:28:44Z"
+status: draft
 ---
 
 # Media Module Schema
@@ -18,12 +25,12 @@ created: "2026-04-15T08:28:44Z"
 ## Wiki Rules
 
 ### raw/ Rules
-- ✅ Immutable — AI reads but never modifies or deletes
-- ✅ Drop liberally — articles, code snippets, decisions
+- ✅ Immutable: AI reads but never modifies or deletes
+- ✅ Drop liberally: articles, code snippets, decisions
 - ✅ Subdivide by type: `articles/`, `papers/`, `code-examples/`, `decisions/`
 
 ### wiki/ Rules
-- ✅ AI-owned — synthesizes raw documents into structured knowledge
+- ✅ AI-owned: synthesizes raw documents into structured knowledge
 - ✅ Every page MUST have YAML frontmatter
 - ✅ Link related pages via `related:` in frontmatter
 - ✅ Update `index.md` and `log.md` after each operation

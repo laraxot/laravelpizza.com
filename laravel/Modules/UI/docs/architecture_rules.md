@@ -1,3 +1,14 @@
+---
+title: "Regole Architetturali"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "regole architetturali ui"
+---
+
 # Regole Architetturali
 
 ## Principi Fondamentali
@@ -145,7 +156,7 @@ class CustomMiddleware
 }
 
 // Non hardcodare percorsi delle risorse
-<img src="/var/www/html/<nome progetto>/laravel/public/images/avatar.png">
+<img src="/var/www/html/saluteora/laravel/public/images/avatar.png">
 
 // Non duplicare la registrazione dei componenti
 Blade::component('ui::components.icon', 'ui.icon');

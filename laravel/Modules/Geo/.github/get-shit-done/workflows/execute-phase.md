@@ -1,3 +1,14 @@
+---
+title: "execute phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "execute phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Execute all plans in a phase using wave-based parallel execution. Orchestrator stays lean — delegates plan execution to subagents.
 </purpose>
@@ -341,6 +352,14 @@ All automated checks passed. {N} items need human testing:
 {Gap summaries from VERIFICATION.md}
 
 ---
+title: "execute phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "execute phase"
+issues: []
+discussions: []
 ## ▶ Next Up
 
 `/gsd-plan-phase {X} --gaps`

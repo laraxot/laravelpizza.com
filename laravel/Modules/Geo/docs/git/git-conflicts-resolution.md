@@ -1,3 +1,15 @@
+---
+title: "git conflicts resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti Git
 
 ## Panoramica
@@ -33,7 +45,7 @@ Particolarmente comuni nel progetto, riguardano l'implementazione corretta dei n
 - Tutti i file sono stati mantenuti nella versione<!-- REVISIONE MANUALE: File aggiornato per chiarezza e tracciabilità. Vedi anche [README globale](/docs/README.md) e gli altri file di risoluzione conflitti. -->
 
 [Backlink: Documentazione Globale](/docs/README.md)
-[Backlink: scripts_conflict_resolution.md](scripts_conflict_resolution.md)
+[Backlink: scripts_conflict_resolution.md](../utils/scripts_conflict_resolution.md)
 [Backlink: fix_all_git_conflicts.md](fix_all_git_conflicts.md)
  (corrente)
 - I namespace sono stati mantenuti corretti secondo la struttura del modulo

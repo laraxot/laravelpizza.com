@@ -1,10 +1,31 @@
+---
+title: "03 ARCHITECTURE ZEN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "03 ARCHITECTURE ZEN"
+issues: []
+discussions: []
+status: superseded
+superseded_by: 03-architecture-zen.md
+---
+
 # 🏛️ Architecture Zen Philosophy
 
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md) — Filament Widgets
+**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
+**Related**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md): Filament Widgets
 
 ---
 
+title: "03 ARCHITECTURE ZEN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "03 ARCHITECTURE ZEN"
+issues: []
+discussions: []
 ## 🔴 Fundamental Rules
 
 ### 1. **NO Themes/*/Http/Livewire/**

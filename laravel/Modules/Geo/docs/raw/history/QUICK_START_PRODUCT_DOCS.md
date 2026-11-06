@@ -1,3 +1,14 @@
+---
+title: "QUICK START PRODUCT DOCS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "QUICK START PRODUCT DOCS"
+issues: []
+discussions: []
+---
+
 # Guida Rapida: Creare Documentazione Product per Moduli
 
 > **Quick Start Guide** - Come creare documentazione product per il tuo modulo
@@ -9,6 +20,14 @@
 
 ---
 
+title: "QUICK START PRODUCT DOCS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "QUICK START PRODUCT DOCS"
+issues: []
+discussions: []
 ## Prerequisiti
 
 Prima di iniziare, assicurati di avere:

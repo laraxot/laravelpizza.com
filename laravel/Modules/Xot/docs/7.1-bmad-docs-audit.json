@@ -1,0 +1,206 @@
+{
+  "audit_date": "2026-10-06",
+  "summary": {
+    "total_modules": 18,
+    "total_themes": 3,
+    "modules_with_stories": 10,
+    "modules_without_stories": 8,
+    "themes_with_stories": 2
+  },
+  "best_practice_modules": [
+    {
+      "name": "IndennitaResponsabilita",
+      "status": "exemplary",
+      "stories": 92,
+      "bmad_files": 91,
+      "wiki_files": "structured",
+      "reason": "Complete BMAD structure with extensive backlog and decision logs"
+    },
+    {
+      "name": "Rating",
+      "status": "exemplary",
+      "stories": 61,
+      "bmad_files": 104,
+      "wiki_files": "structured",
+      "reason": "Well-organized stories, comprehensive BMAD documentation"
+    },
+    {
+      "name": "Sigma",
+      "status": "exemplary",
+      "stories": 32,
+      "bmad_files": 52,
+      "wiki_files": "structured",
+      "reason": "Clear decision-log and architecture documentation"
+    },
+    {
+      "name": "Ptv",
+      "status": "exemplary",
+      "stories": 34,
+      "bmad_files": 81,
+      "wiki_files": "structured",
+      "reason": "Large backlog with well-defined stories"
+    }
+  ],
+  "modules_with_stories": [
+    "Incentivi",
+    "IndennitaCondizioniLavoro",
+    "IndennitaResponsabilita",
+    "Pdnd",
+    "Performance",
+    "Progressioni",
+    "Ptv",
+    "Rating",
+    "Sigma",
+    "Tenant"
+  ],
+  "modules_without_stories": [
+    {
+      "name": "Activity",
+      "type": "infrastructure",
+      "docs_files": 126,
+      "orphaned_root_md": 41,
+      "status": "needs_organization",
+      "recommendations": [
+        "Create docs/stories/ for backlog items and historical decisions",
+        "Consolidate root-level .md files into appropriate subdirs",
+        "Add decision-log.md in bmad/",
+        "Structure as: docs/stories/ (backlog), docs/wiki/ (knowledge), docs/bmad/ (architecture)"
+      ]
+    },
+    {
+      "name": "Job",
+      "type": "infrastructure",
+      "docs_files": 100,
+      "orphaned_root_md": 29,
+      "status": "needs_organization",
+      "recommendations": [
+        "Create docs/stories/ structure",
+        "Organize ACTIONS.md, ARCHITECTURE.md into bmad/",
+        "Add decision-log.md for future work tracking"
+      ]
+    },
+    {
+      "name": "Lang",
+      "type": "infrastructure",
+      "docs_files": 100,
+      "orphaned_root_md": 43,
+      "status": "needs_organization",
+      "recommendations": [
+        "Create docs/stories/ for language feature backlog",
+        "Consolidate advanced-language-switching.md variants",
+        "Remove duplicate naming (file.md vs file_underscore.md)"
+      ]
+    },
+    {
+      "name": "Media",
+      "type": "infrastructure",
+      "docs_files": 100,
+      "orphaned_root_md": 8,
+      "status": "relatively_organized",
+      "recommendations": [
+        "Add docs/stories/ when media features need backlog tracking"
+      ]
+    },
+    {
+      "name": "Notify",
+      "type": "infrastructure",
+      "docs_files": 108,
+      "orphaned_root_md": 6,
+      "status": "relatively_organized",
+      "recommendations": [
+        "Create docs/stories/ for notification feature tracking"
+      ]
+    },
+    {
+      "name": "UI",
+      "type": "infrastructure",
+      "docs_files": 100,
+      "orphaned_root_md": 14,
+      "status": "needs_organization",
+      "recommendations": [
+        "Create docs/stories/ for component feature backlog",
+        "Consolidate advanced-form-components.md variants",
+        "Remove duplicate .md files with underscore variants"
+      ]
+    },
+    {
+      "name": "Xot",
+      "type": "foundation",
+      "docs_files": 171,
+      "orphaned_root_md": 18,
+      "status": "needs_organization",
+      "recommendations": [
+        "Create docs/stories/ for framework features and refactoring tasks",
+        "Archive or consolidate _AUDIT_REPORT*.json files",
+        "Add decision-log.md in bmad/",
+        "Organize _integration/ and architecture/ into bmad/"
+      ]
+    }
+  ],
+  "themes_analysis": [
+    {
+      "name": "One",
+      "stories": 3,
+      "status": "has_stories",
+      "recommendation": "Continue BMAD pattern"
+    },
+    {
+      "name": "Three",
+      "stories": 0,
+      "status": "no_stories",
+      "recommendation": "Create docs/stories/ when feature work begins"
+    },
+    {
+      "name": "Zero",
+      "stories": 4,
+      "status": "has_stories",
+      "recommendation": "Continue BMAD pattern"
+    }
+  ],
+  "consolidation_opportunities": [
+    {
+      "issue": "Duplicate/variant .md filenames",
+      "examples": [
+        "Lang: advanced-language-switching.md vs advanced_language_switching.md",
+        "UI: advanced-form-components.md vs advanced_form_components.md"
+      ],
+      "action": "Consolidate to single filename, update references"
+    },
+    {
+      "issue": "Root-level .md files in modules without stories",
+      "affected": ["Activity", "Job", "Lang", "UI"],
+      "action": "Migrate to docs/stories/ or docs/wiki/ as appropriate"
+    },
+    {
+      "issue": "Missing decision-log.md in some bmad/ dirs",
+      "affected": ["Activity", "Job", "Lang", "Media", "Notify", "UI"],
+      "action": "Add decision-log.md template to track major architectural decisions"
+    },
+    {
+      "issue": "Orphaned .json audit files in Xot/docs/",
+      "action": "Archive or consolidate _AUDIT_REPORT* files"
+    }
+  ],
+  "pattern_models": {
+    "exemplary_full_bmad": "IndennitaResponsabilita, Rating, Sigma, Ptv",
+    "good_medium_bmad": "Progressioni, Tenant, Performance, Pdnd",
+    "good_lite_bmad": "Incentivi, IndennitaCondizioniLavoro",
+    "infra_no_stories": "Activity, Job, Lang, Media, Notify, UI, Xot"
+  },
+  "recommendations_summary": {
+    "priority_high": [
+      "Activity: Create docs/stories/ and organize 41 orphaned root .md files",
+      "Xot: Create docs/stories/ and archive audit report files",
+      "Lang: Consolidate duplicate .md files (underscore variants)"
+    ],
+    "priority_medium": [
+      "Job: Create docs/stories/ and migrate ACTIONS.md to bmad/",
+      "UI: Create docs/stories/ and consolidate form components docs",
+      "All modules: Add decision-log.md in docs/bmad/ if missing"
+    ],
+    "priority_low": [
+      "Theme Three: Create docs/stories/ structure when needed",
+      "Media, Notify: Create docs/stories/ structure when backlog items emerge"
+    ]
+  }
+}

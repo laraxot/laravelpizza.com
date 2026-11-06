@@ -1,3 +1,11 @@
+---
+title: "metatag"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "metatag xot"
+---
 ~~~ php
 <?php
 declare(strict_types=1);

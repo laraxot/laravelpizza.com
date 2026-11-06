@@ -1,22 +1,21 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @extends('pub_theme::layouts.app')
-@section('title', 'Web Routes List')
+@section('title', __('xot::route_list.sections.title.title'))
 @section('content')
 <div class="text-center">
-    <h3>Web Routes List</h3>
+    <h3>{{ __('xot::route_list.sections.title.title') }}</h3>
 </div>
 
 <table id="routetable" class="table table-striped table-bordered nowrap" style="width:100%">
     <thead>
         <tr>
-            <th scope="col">HTTP Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Name</th>
-            <th scope="col">Corresponding Action</th>
+            <th scope="col">{{ __('xot::route_list.sections.http_method.label') }}</th>
+            <th scope="col">{{ __('xot::route_list.sections.route.label') }}</th>
+            <th scope="col">{{ __('xot::route_list.sections.name.label') }}</th>
+            <th scope="col">{{ __('xot::route_list.sections.action.label') }}</th>
         </tr>
     </thead>
     <tbody>

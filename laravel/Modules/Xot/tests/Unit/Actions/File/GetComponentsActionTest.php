@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use Spatie\LaravelData\DataCollection;
 
 uses(TestCase::class);
 
@@ -28,15 +27,14 @@ class TestComp {}";
     $action = app(GetComponentsAction::class);
     $result = $action->execute($tempDir, 'My/Test/Comps', 'prefix-');
 
-    Assert::assertInstanceOf(DataCollection::class, $result);
-    Assert::assertSame(1, $result->count());
-    $first = $result->first();
+    Assert::assertCount(1, $result);
+    $first = $result->toCollection()->first();
     Assert::assertNotNull($first);
     Assert::assertSame('prefix-test-comp', $first->name);
     $jsonCache = $tempDir.'/_components.json';
     Assert::assertTrue(File::exists($jsonCache));
     $result2 = $action->execute($tempDir, 'My/Test/Comps', 'prefix-');
-    Assert::assertSame(1, $result2->count());
+    Assert::assertCount(1, $result2);
     File::deleteDirectory($tempDir);
 });
 
@@ -54,6 +52,6 @@ it('skips abstract classes', function (): void {
     $action = app(GetComponentsAction::class);
     $result = $action->execute($tempDir, 'My/Test/Comps', 'prefix-');
 
-    Assert::assertSame(0, $result->count());
+    Assert::assertCount(0, $result);
     File::deleteDirectory($tempDir);
 });

@@ -1,3 +1,15 @@
+---
+title: "vision"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vision"
+issues: []
+discussions: []
+status: draft
+---
+
 # Visione - Gdpr Module
 
 Modulo per la gestione della compliance GDPR:

@@ -1,3 +1,14 @@
+---
+title: "phase prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase prompt"
+issues: []
+discussions: []
+---
+
 # Phase Prompt Template
 
 > **Note:** Planning methodology is in `agents/gsd-planner.md`.
@@ -9,6 +20,14 @@ Template for `.planning/phases/XX-name/{phase}-{plan}-PLAN.md` - executable phas
 
 ---
 
+title: "phase prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase prompt"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

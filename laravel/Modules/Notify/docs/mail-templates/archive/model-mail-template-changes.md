@@ -1,3 +1,11 @@
+---
+title: "Modifiche Tecniche al Modello MailTemplate"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "modifiche tecniche al modello mailtemplate notify"
+---
 # Modifiche Tecniche al Modello MailTemplate
 
 ## Panoramica delle Modifiche

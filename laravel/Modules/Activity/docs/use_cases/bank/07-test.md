@@ -1,3 +1,12 @@
+---
+title: "Testing Bank (Event Sourcing)"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "testing bank (event sourcing) activity"
+status: superseded
+superseded_by: test.md
+---
 # Testing Bank (Event Sourcing)
 
 ## Unit Test

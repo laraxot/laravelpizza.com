@@ -1,7 +1,18 @@
+---
+title: "agent mode"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agent mode"
+issues: []
+discussions: []
+status: draft
+---
+
 # Agent Mode - Gemini Code Assist
 
 ---
-
 ## Panoramica
 
 Agent Mode trasforma Gemini Code Assist in un pair programmer che propone piani dettagliati prima di implementare modifiche.

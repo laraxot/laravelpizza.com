@@ -1,3 +1,24 @@
+---
+title: "gdpr"
+type: concept
+tags: [gdpr]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "gdpr gdpr"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./eav.md"
+  - "./filament.md"
+  - "./json.md"
+  - "./links.md"
+  - "./passport.md"
+  - "./payment.md"
+  - "./phpstan.md"
+  - "./profile.md"
+status: draft
+---
+
 # gdpr
 
 <!-- Contenuto migrato da _docs/gdpr.txt -->
@@ -8,16 +29,13 @@ https://github.com/scify/laravel-cookies-consent
 https://codebrisk.com/blog/make-your-laravel-app-compliant-with-the-eu-gdpr-cookie-law
 
 
-
 pagine di esempio
 https://forge.laravel.com/data-processing-agreement
-
 
 
 //------------ COOKIE LAW   
 https://github.com/spatie/laravel-cookie-consent
 https://github.com/statikbe/laravel-cookie-consent
-
 
 
 ///-------------------- pagina esempio privacy-policy
@@ -31,9 +49,6 @@ https://procontent.renewedvision.com/privacy
 
 //-------------- pagina esempio data-processing-agreement
 https://forge.laravel.com/data-processing-agreement
-
-
-
 
 
 //------------- tutorial 
@@ -64,9 +79,5 @@ https://github.com/statikbe/laravel-cookie-consent
 https://github.com/OwenMelbz/forget-db
 https://github.com/the42coders/eu-cookie-consent
  
-
-
-
-
 
 

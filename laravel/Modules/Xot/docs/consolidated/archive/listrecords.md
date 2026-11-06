@@ -1,3 +1,11 @@
+---
+title: "List Records in Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "list records in filament xot"
+---
 # List Records in Filament
 
 > **AGGIORNAMENTO 2025-05-28:**

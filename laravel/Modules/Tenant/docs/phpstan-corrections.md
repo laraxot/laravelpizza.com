@@ -1,3 +1,15 @@
+---
+title: "phpstan corrections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan corrections"
+issues: []
+discussions: []
+status: draft
+---
+
 # Correzioni PHPStan - Modulo Tenant
 
 ## Panoramica
@@ -64,6 +76,6 @@ foreach ($schema as $name => $type) {
 4. **Type Narrowing**: Uso di cast espliciti per restringere tipi
 
 ## Collegamenti Correlati
-- [Architettura Modulo Tenant](../architecture.md)
+- [Architettura Modulo Tenant](bmad/architecture-tenant.md)
 - [Guida PHPStan](../../../../docs/phpstan-guide.md)
 - [Best Practices Laraxot](../../../../docs/laraxot-best-practices.md)

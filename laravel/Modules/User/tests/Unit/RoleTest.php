@@ -1,18 +1,19 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Database\Factories\PermissionFactory;
 use Modules\User\Database\Factories\RoleFactory;
 use Modules\User\Database\Factories\TeamFactory;
+use Modules\User\Enums\DefaultRoleId;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function createTestRole(array $attributes = []): Role
 {
@@ -23,7 +24,7 @@ function createTestRole(array $attributes = []): Role
 }
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function createTestPermissionForRole(array $attributes = []): Permission
 {
@@ -37,15 +38,14 @@ test('role can be created', function (): void {
     $name = 'test-role-'.uniqid();
     $role = createTestRole(['name' => $name]);
 
-    Assert::assertInstanceOf(Role::class, $role);
     Assert::assertSame($name, $role->name);
     Assert::assertSame('web', $role->guard_name);
 });
 
-test('role has correct constants', function (): void {
-    Assert::assertSame(1, Role::ROLE_ADMINISTRATOR);
-    Assert::assertSame(2, Role::ROLE_OWNER);
-    Assert::assertSame(3, Role::ROLE_USER);
+test('default role ids are exposed by DefaultRoleId enum', function (): void {
+    Assert::assertSame(1, DefaultRoleId::Administrator->value);
+    Assert::assertSame(2, DefaultRoleId::Owner->value);
+    Assert::assertSame(3, DefaultRoleId::User->value);
 });
 
 test('role has correct table configuration', function (): void {

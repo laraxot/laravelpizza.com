@@ -1,3 +1,15 @@
+---
+title: "has ratings trait"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "has ratings trait"
+issues: []
+discussions: []
+status: draft
+---
+
 # HasRatingsTrait – Best Practice Cross-Modulo
 
 ## Regola
@@ -49,5 +61,4 @@ trait FunctionTrait
 - `docs/claude/dry-kiss-patterns.md`
 
 ---
-
 *Ultimo aggiornamento: Gennaio 2026*

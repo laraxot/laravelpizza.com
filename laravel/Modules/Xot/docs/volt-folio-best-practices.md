@@ -1,11 +1,21 @@
+---
+title: "Best Practices per Volt e Folio"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Best Practices per Volt e Folio"
+---
 # Best Practices per Volt e Folio
 
 ## Collegamenti correlati
 - [README modulo Xot](./README.md)
 - [Struttura dei moduli](./MODULE_STRUCTURE.md)
-- [Convenzioni di Path](../User/docs/PATH_CONVENTIONS.md)
-- [Implementazione Auth con Volt e Folio](../User/docs/VOLT_FOLIO_AUTH_IMPLEMENTATION.md)
-- [Analisi Logout Blade](../User/docs/LOGOUT_BLADE_ANALYSIS.md)
+- [Convenzioni di Path](../../User/docs/path_conventions.md)
+- [Implementazione Auth con Volt e Folio](../../User/docs/volt_folio_auth_implementation.md)
+- [Analisi Logout Blade](../../User/docs/logout_blade_analysis.md)
 
 ## Introduzione
 
@@ -104,7 +114,7 @@ mount(function() {
         session()->invalidate();
         session()->regenerateToken();
     }
-
+    
     // Reindirizza alla home page localizzata
     $this->redirect('/' . app()->getLocale());
 });
@@ -257,7 +267,7 @@ return redirect()->to('/' . $locale);
 
 ## Conclusione
 
-Seguendo queste best practices per l'utilizzo di Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di <nome progetto>, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
+Seguendo queste best practices per l'utilizzo di Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di SaluteOra, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 
 ## Riferimenti
 

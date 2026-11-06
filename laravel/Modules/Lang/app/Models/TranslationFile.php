@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://github.com/barryvdh/laravel-translation-manager/blob/master/src/Models/Translation.php
  */
@@ -9,26 +8,23 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\File;
-use Modules\Lang\Actions\GetAllTranslationAction;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use Modules\Lang\Database\Factories\TranslationFileFactory;
+use Modules\Lang\Models\Traits\TranslationFileRowLoader;
 use Modules\Xot\Contracts\ProfileContract;
-
-use function Safe\json_encode;
-
 use Sushi\Sushi;
 
 /**
- * @property string|null                  $key
- * @property string|null                  $path
- * @property string|null                  $id
- * @property string|null                  $name
+ * @property string|null $key
+ * @property string|null $path
+ * @property string|null $id
+ * @property string|null $name
  * @property array<array-key, mixed>|null $content
- * @property ProfileContract|null         $creator
- * @property ProfileContract|null         $updater
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
- * @method static TranslationFileFactory          factory($count = null, $state = [])
+ * @method static TranslationFileFactory factory($count = null, $state = [])
  * @method static Builder<static>|TranslationFile newModelQuery()
  * @method static Builder<static>|TranslationFile newQuery()
  * @method static Builder<static>|TranslationFile query()
@@ -40,11 +36,12 @@ use Sushi\Sushi;
  *
  * @property ProfileContract|null $deleter
  *
- * @mixin \Eloquent
+ * @mixin Model
  */
 class TranslationFile extends BaseModel
 {
     use Sushi;
+    use TranslationFileRowLoader;
 
     protected $fillable = [
         'id',
@@ -67,52 +64,21 @@ class TranslationFile extends BaseModel
      */
     public function getRows(): array
     {
-        $files = app(GetAllTranslationAction::class)->execute();
+        if ($this->isRunningIdeHelper()) {
+            return [];
+        }
 
-        /** @var array<int, array<string, mixed>> $result */
-        $result = Arr::map($files, function ($item) {
-            if (! is_array($item)) {
-                return [];
-            }
+        try {
+            return $this->loadTranslationDataWithErrorHandling();
+        } catch (\Throwable $e) {
+            Log::warning('TranslationFile::getRows failed', [
+                'error' => $e->getMessage(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+            ]);
 
-            $key = $item['key'] ?? null;
-            $keyStr = is_string($key) ? $key : (string) $key;
-            $item['id'] = isset($item['key']) ? $keyStr : '';
-
-            $pathValue = $item['path'] ?? null;
-            $pathStr = is_string($pathValue) ? $pathValue : (string) $pathValue;
-            $item['name'] = isset($item['path']) ? basename($pathStr, '.php') : '';
-
-            if (isset($item['path'])) {
-                $path = $pathStr;
-                if (File::exists($path)) {
-                    try {
-                        $content = File::getRequire($path);
-                        $item['content'] = json_encode($content);
-                    } catch (\Exception $e) {
-                        $item['content'] = '';
-                    }
-                } else {
-                    $item['content'] = '';
-                }
-            } else {
-                $item['content'] = '';
-            }
-
-            /*
-             * // Carica il contenuto del file
-             * try {
-             * $readAction = app(ReadTranslationFileAction::class);
-             * $item['content'] = $readAction->execute($item['path']);
-             * } catch (\Exception $e) {
-             * $item['content'] = [];
-             * }
-             */
-            // dddx($item);
-            return $item;
-        });
-
-        return $result;
+            return [];
+        }
     }
 
     /**

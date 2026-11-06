@@ -5,27 +5,27 @@ declare(strict_types=1);
 namespace Modules\Xot\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use Modules\Tenant\Models\Traits\SushiToJson;
+use Modules\Tenant\Models\BaseModelJson;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
+use Modules\Xot\Models\Traits\InformationSchemaTableCounters;
 
 /**
- * @property int|null             $table_rows
- * @property string               $table_schema
- * @property string               $table_name
- * @property string|null          $model_class
- * @property Carbon|null          $created_at
- * @property string|null          $created_by
- * @property int                  $id
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
+ * @property int|null $table_rows
+ * @property string $table_schema
+ * @property string $table_name
+ * @property string|null $model_class
+ * @property Carbon|null $created_at
+ * @property string|null $created_by
+ * @property int $id
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @method static InformationSchemaTableFactory          factory($count = null, $state = [])
+ * @method static InformationSchemaTableFactory factory($count = null, $state = [])
  * @method static Builder<static>|InformationSchemaTable newModelQuery()
  * @method static Builder<static>|InformationSchemaTable newQuery()
  * @method static Builder<static>|InformationSchemaTable query()
@@ -41,9 +41,9 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  *
  * @mixin \Eloquent
  */
-class InformationSchemaTable extends BaseModel
+class InformationSchemaTable extends BaseModelJson
 {
-    use SushiToJson;
+    use InformationSchemaTableCounters;
 
     /**
      * @var list<string>
@@ -93,70 +93,9 @@ class InformationSchemaTable extends BaseModel
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
-    }
+        /** @var array<int, array<string, mixed>> $rows */
+        $rows = $this->getSushiRows();
 
-    /**
-     * Aggiorna il numero di record memorizzato per un modello.
-     *
-     * @param class-string<Model> $modelClass
-     */
-    public static function updateModelCount(string $modelClass, int $total): void
-    {
-        if (! class_exists($modelClass)) {
-            throw new \InvalidArgumentException("Model class [{$modelClass}] does not exist");
-        }
-
-        /** @var Model $model */
-        $model = app($modelClass);
-        if (! $model instanceof Model) {
-            throw new \InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
-        }
-
-        $connection = $model->getConnection();
-        $database = $connection->getDatabaseName();
-        $table = $model->getTable();
-
-        static::updateOrCreate([
-            'table_schema' => $database,
-            'model_class' => $modelClass,
-            'table_name' => $table,
-        ], [
-            'table_rows' => $total,
-        ]);
-    }
-
-    /**
-     * Restituisce il numero di record per un modello.
-     *
-     * @param class-string<Model> $modelClass
-     */
-    public static function getModelCount(string $modelClass): int
-    {
-        if (! class_exists($modelClass)) {
-            throw new \InvalidArgumentException("Model class [{$modelClass}] does not exist");
-        }
-
-        /** @var Model $model */
-        $model = app($modelClass);
-        if (! $model instanceof Model) {
-            throw new \InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
-        }
-
-        $connection = $model->getConnection();
-        $database = $connection->getDatabaseName();
-        $table = $model->getTable();
-
-        $record = static::firstOrCreate([
-            'table_schema' => $database,
-            'model_class' => $modelClass,
-            'table_name' => $table,
-        ]);
-
-        if (null === $record->table_rows) {
-            $record->update(['table_rows' => $model->count()]);
-        }
-
-        return (int) $record->table_rows;
+        return $rows;
     }
 }

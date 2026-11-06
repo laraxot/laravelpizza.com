@@ -1,16 +1,16 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Support\Facades\Config;
 use Laravel\Socialite\Contracts\User as SocialiteUser;
 use Mockery\MockInterface;
 use Modules\User\Actions\Socialite\Utils\EmailDomainAnalyzer;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
-function createMockSocialiteUser(?string $email): SocialiteUser
+function createMockSocialiteUserForEmailAnalyzer(?string $email): SocialiteUser
 {
     return configureMock(SocialiteUser::class, function (MockInterface $mock) use ($email): void {
         $mock->allows(['getEmail' => $email]);
@@ -24,13 +24,12 @@ describe('EmailDomainAnalyzer', function () {
         Config::set('services.google.email_domains.client.tld', null);
     });
 
-    it('throws for empty provider', function () {
-    });
+    it('throws for empty provider')->todo();
 
     it('detects first party domain', function () {
         Config::set('services.google.email_domains.first_party.tld', '@company.com');
 
-        $ssoUser = createMockSocialiteUser('user@company.com');
+        $ssoUser = createMockSocialiteUserForEmailAnalyzer('user@company.com');
         $analyzer = new EmailDomainAnalyzer('google');
         $analyzer->setUser($ssoUser);
 
@@ -41,7 +40,7 @@ describe('EmailDomainAnalyzer', function () {
     it('detects client domain', function () {
         Config::set('services.google.email_domains.client.tld', '@client.org');
 
-        $ssoUser = createMockSocialiteUser('user@client.org');
+        $ssoUser = createMockSocialiteUserForEmailAnalyzer('user@client.org');
         $analyzer = new EmailDomainAnalyzer('google');
         $analyzer->setUser($ssoUser);
 
@@ -49,7 +48,7 @@ describe('EmailDomainAnalyzer', function () {
     });
 
     it('marks unknown domain as unrecognized', function () {
-        $ssoUser = createMockSocialiteUser('user@random.com');
+        $ssoUser = createMockSocialiteUserForEmailAnalyzer('user@random.com');
         $analyzer = new EmailDomainAnalyzer('google');
         $analyzer->setUser($ssoUser);
 
@@ -61,7 +60,7 @@ describe('EmailDomainAnalyzer', function () {
     it('handles null email gracefully', function () {
         Config::set('services.google.email_domains.first_party.tld', '@company.com');
 
-        $ssoUser = createMockSocialiteUser(null);
+        $ssoUser = createMockSocialiteUserForEmailAnalyzer(null);
         $analyzer = new EmailDomainAnalyzer('google');
         $analyzer->setUser($ssoUser);
 
@@ -72,7 +71,7 @@ describe('EmailDomainAnalyzer', function () {
     it('handles empty email gracefully', function () {
         Config::set('services.google.email_domains.first_party.tld', '@company.com');
 
-        $ssoUser = createMockSocialiteUser('');
+        $ssoUser = createMockSocialiteUserForEmailAnalyzer('');
         $analyzer = new EmailDomainAnalyzer('google');
         $analyzer->setUser($ssoUser);
 

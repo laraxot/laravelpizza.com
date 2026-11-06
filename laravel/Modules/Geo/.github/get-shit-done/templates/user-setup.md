@@ -1,3 +1,14 @@
+---
+title: "user setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user setup"
+issues: []
+discussions: []
+---
+
 # User Setup Template
 
 Template for `.planning/phases/XX-name/{phase}-USER-SETUP.md` - human-required configuration that Claude cannot automate.
@@ -6,6 +17,14 @@ Template for `.planning/phases/XX-name/{phase}-USER-SETUP.md` - human-required c
 
 ---
 
+title: "user setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user setup"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

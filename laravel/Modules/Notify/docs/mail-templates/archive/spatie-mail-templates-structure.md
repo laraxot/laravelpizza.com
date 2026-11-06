@@ -1,3 +1,11 @@
+---
+title: "Spatie Mail Templates: Struttura Corretta"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "spatie mail templates: struttura corretta notify"
+---
 # Spatie Mail Templates: Struttura Corretta
 
 Questa documentazione spiega la struttura corretta dell'implementazione di `spatie/laravel-database-mail-templates` nel modulo Notify.

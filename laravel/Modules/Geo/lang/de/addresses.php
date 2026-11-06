@@ -6,9 +6,9 @@ return [
     'field' => [
         'label' => 'Indirizzi',
         'help' => [
-            'title' => 'Gestione Indirizzi',
-            'description' => 'Puoi aggiungere più indirizzi. Con più indirizzi potrai specificare un nome identificativo e designare uno come principale.',
-            'primary_note' => 'Solo un indirizzo può essere impostato come principale alla volta.',
+            'title' => 'Adressverwaltung',
+            'description' => 'Sie können mehrere Adressen hinzufügen. Bei mehreren Adressen können Sie einen Namen zur Identifizierung angeben und eine davon als Hauptadresse festlegen.',
+            'primary_note' => 'Es kann immer nur eine Adresse als Hauptadresse festgelegt werden.',
         ],
         'actions' => [
             'add' => 'Aggiungi Indirizzo',

@@ -1,3 +1,15 @@
+---
+title: "ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
+status: draft
+---
+
 # FixCity - Architecture Documentation
 
 **Version:** 4.0  
@@ -5,7 +17,6 @@
 **Status:** Production Ready
 
 ---
-
 ## 📐 System Architecture
 
 ### High-Level Overview

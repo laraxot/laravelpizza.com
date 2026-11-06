@@ -1,14 +1,13 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!DOCTYPE html>
-<html lang="it">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promemoria Appuntamento</title>
+    <title>{{ __('notify::appointment_email.sections.reminder.title') }}</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -67,50 +66,50 @@ declare(strict_types=1);
 </head>
 <body>
     <div class="header">
-        <h1>Promemoria Appuntamento</h1>
+        <h1>{{ __('notify::appointment_email.sections.reminder.title') }}</h1>
     </div>
     
     <div class="content">
-        <p>Gentile {{ $patient->full_name }},</p>
+        <p>{{ __('notify::appointment_email.common.greeting.label', ['name' => $patient->full_name]) }}</p>
         
-        <p>Le ricordiamo che il Suo appuntamento presso la nostra struttura è previsto per <strong>domani</strong>.</p>
+        <p>{!! __('notify::appointment_email.sections.reminder.description', ['when' => '<strong>'.e(__('notify::appointment_email.reminder.tomorrow.label')).'</strong>']) !!}</p>
         
         <div class="countdown">
-            Manca solo 1 giorno al Suo appuntamento!
+            {{ __('notify::appointment_email.reminder.countdown.description') }}
         </div>
         
         <div class="appointment-details">
-            <h3>Dettagli dell'appuntamento:</h3>
-            <p><strong>Data:</strong> {{ $appointment->starts_at->format('d/m/Y') }}</p>
-            <p><strong>Orario:</strong> {{ $appointment->starts_at->format('H:i') }} - {{ $appointment->ends_at->format('H:i') }}</p>
-            <p><strong>Tipo:</strong> {{ $appointment->getTypeText() }}</p>
+            <h3>{{ __('notify::appointment_email.common.details.title') }}:</h3>
+            <p><strong>{{ __('notify::appointment_email.fields.date.label') }}:</strong> {{ $appointment->starts_at->format('d/m/Y') }}</p>
+            <p><strong>{{ __('notify::appointment_email.fields.time.label') }}:</strong> {{ $appointment->starts_at->format('H:i') }} - {{ $appointment->ends_at->format('H:i') }}</p>
+            <p><strong>{{ __('notify::appointment_email.fields.type.label') }}:</strong> {{ $appointment->getTypeText() }}</p>
             @if ($appointment->dentist)
-                <p><strong>Medico:</strong> {{ $appointment->dentist->title }} {{ $appointment->dentist->first_name }} {{ $appointment->dentist->last_name }}</p>
+                <p><strong>{{ __('notify::appointment_email.fields.doctor.label') }}:</strong> {{ $appointment->dentist->title }} {{ $appointment->dentist->first_name }} {{ $appointment->dentist->last_name }}</p>
             @endif
             @if ($appointment->location)
-                <p><strong>Sede:</strong> {{ $appointment->location }}</p>
+                <p><strong>{{ __('notify::appointment_email.fields.location.label') }}:</strong> {{ $appointment->location }}</p>
             @endif
         </div>
         
-        <p>Si prega di presentarsi 15 minuti prima dell'orario fissato e di portare con sé:</p>
+        <p>{{ __('notify::appointment_email.reminder.arrive_early.description') }}</p>
         <ul>
-            <li>Documento d'identità valido</li>
-            <li>Tessera sanitaria</li>
-            <li>Eventuali referti o esami precedenti</li>
-            <li>Lista dei farmaci che sta assumendo</li>
+            <li>{{ __('notify::appointment_email.reminder.bring.id') }}</li>
+            <li>{{ __('notify::appointment_email.reminder.bring.health_card') }}</li>
+            <li>{{ __('notify::appointment_email.reminder.bring.reports') }}</li>
+            <li>{{ __('notify::appointment_email.reminder.bring.medications') }}</li>
         </ul>
         
-        <p class="important">Se non dovesse essere in grado di partecipare all'appuntamento, La preghiamo di contattarci il prima possibile per riprogrammarlo.</p>
+        <p class="important">{{ __('notify::appointment_email.reminder.cancel_notice.description') }}</p>
         
-        <a href="{{ url('/appointments/' . $appointment->id) }}" class="button">Gestisci Appuntamento</a>
+        <a href="{{ url('/appointments/' . $appointment->id) }}" class="button">{{ __('notify::appointment_email.reminder.manage_button.label') }}</a>
         
-        <p>Cordiali saluti,<br>
-        Il Team di il progetto</p>
+        <p>{{ __('notify::appointment_email.common.regards.label') }}<br>
+        {{ __('notify::appointment_email.common.team.label') }}</p>
     </div>
     
     <div class="footer">
-        <p>Questa email è stata inviata automaticamente. Si prega di non rispondere a questo messaggio.</p>
-        <p>© {{ date('Y') }} - Tutti i diritti riservati</p>
+        <p>{{ __('notify::appointment_email.common.auto_generated.description') }}</p>
+        <p>© {{ date('Y') }} - {{ __('notify::appointment_email.common.rights_reserved.label') }}</p>
     </div>
 </body>
 </html>

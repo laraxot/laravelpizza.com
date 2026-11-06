@@ -1,3 +1,14 @@
+---
+title: "appuntamento 04 richiedente"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 04 richiedente"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Richiedente (appuntamento-04-richiedente.html)
 
 ## Obiettivo

@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Cambia Password'])
+@props(['title' => __('ui::auth.profile.update_password')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -14,7 +13,7 @@ declare(strict_types=1);
         
         <div class="space-y-4">
             <div>
-                <label for="current_password" class="block text-sm font-medium text-gray-700">Password Attuale</label>
+                <label for="current_password" class="block text-sm font-medium text-gray-700">{{ __('ui::auth.profile.current_password') }}</label>
                 <input type="password" 
                        name="current_password" 
                        id="current_password"
@@ -26,7 +25,7 @@ declare(strict_types=1);
             </div>
             
             <div>
-                <label for="password" class="block text-sm font-medium text-gray-700">Nuova Password</label>
+                <label for="password" class="block text-sm font-medium text-gray-700">{{ __('ui::auth.profile.new_password') }}</label>
                 <input type="password" 
                        name="password" 
                        id="password"
@@ -38,7 +37,7 @@ declare(strict_types=1);
             </div>
             
             <div>
-                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Conferma Nuova Password</label>
+                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">{{ __('ui::auth.profile.confirm_password') }}</label>
                 <input type="password" 
                        name="password_confirmation" 
                        id="password_confirmation"
@@ -52,31 +51,31 @@ declare(strict_types=1);
         
         <!-- Requisiti Password -->
         <div class="bg-gray-50 p-4 rounded-lg">
-            <h3 class="text-sm font-medium text-gray-900 mb-2">Requisiti Password</h3>
+            <h3 class="text-sm font-medium text-gray-900 mb-2">{{ __('ui::auth.profile.password_requirements.title') }}</h3>
             <ul class="text-sm text-gray-600 space-y-1">
                 <li class="flex items-center">
                     <svg class="h-4 w-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Almeno 8 caratteri
+                    {{ __('ui::auth.profile.password_requirements.min_length') }}
                 </li>
                 <li class="flex items-center">
                     <svg class="h-4 w-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Almeno una lettera maiuscola
+                    {{ __('ui::auth.profile.password_requirements.uppercase') }}
                 </li>
                 <li class="flex items-center">
                     <svg class="h-4 w-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Almeno un numero
+                    {{ __('ui::auth.profile.password_requirements.number') }}
                 </li>
                 <li class="flex items-center">
                     <svg class="h-4 w-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Almeno un carattere speciale
+                    {{ __('ui::auth.profile.password_requirements.special') }}
                 </li>
             </ul>
         </div>
@@ -85,12 +84,12 @@ declare(strict_types=1);
         <div class="flex justify-end space-x-4">
             <a href="{{ route('profile.show') }}" 
                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                Annulla
+                {{ __('ui::auth.logout.cancel_button') }}
             </a>
             
             <button type="submit" 
                     class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
-                Cambia Password
+                {{ __('ui::auth.profile.update_password') }}
             </button>
         </div>
     </form>

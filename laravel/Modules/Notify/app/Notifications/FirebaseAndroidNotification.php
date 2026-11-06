@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * @see https://iftikhar-ahmed.medium.com/send-push-notifications-in-laravel-using-firebase-on-your-android-device-f585621db900
  */
@@ -18,7 +17,6 @@ use Kreait\Firebase\Messaging\Notification as FirebaseNotification;
 use Modules\Notify\Contracts\MobilePushNotification;
 use Modules\Notify\Datas\FirebaseNotificationData;
 use NotificationChannels\Fcm\FcmChannel;
-use Override;
 
 /**
  * Class for sending notifications via Firebase Cloud Messaging to Android devices.
@@ -32,6 +30,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
      * Create a new notification instance.
      *
      * @param  FirebaseNotificationData  $data  The Firebase notification data (I dati della notifica Firebase)
+     * @return void
      */
     public function __construct(
         public FirebaseNotificationData $data,
@@ -46,8 +45,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
     public function via(object $_notifiable): array
     {
         return [
-            FcmChannel::class,
-        ];
+            FcmChannel::class];
     }
 
     /**
@@ -61,8 +59,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
         // Create a valid Android configuration (Creiamo una configurazione Android valida)
         $androidConfig = [
             'ttl' => '3600s',
-            'priority' => 'high',
-        ];
+            'priority' => 'high'];
 
         // Add notification only if data is in a valid format (Aggiungiamo la notifica solo se i dati sono in un formato valido)
         // Verify that $this->data->data is accessible (Verifichiamo che $this->data->data sia accessibile)
@@ -97,7 +94,6 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
      * @param  object|null  $notifiable  The entity to be notified
      * @return array<string, mixed>
      */
-    #[Override]
     public function toArray(?object $notifiable): array
     {
         // return $this->data->toArray();
@@ -107,7 +103,6 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
     /**
      * Convert to a Firebase Cloud message (Converti in un messaggio Cloud Firebase).
      */
-    #[Override]
     public function toCloudMessage(): Message
     {
         $notificationData = $this->data->data;

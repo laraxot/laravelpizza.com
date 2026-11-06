@@ -1,3 +1,15 @@
+---
+title: "prd template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prd template"
+issues: []
+discussions: []
+status: draft
+---
+
 # PRD Template (Product Requirements Document)
 
 > **Template Standardizzato** - Basato su [Notion PRD Templates](https://www.notion.com/templates/category/prd)
@@ -10,7 +22,6 @@
 > **Owner:** {Product Manager/Team}
 
 ---
-
 ## Executive Summary
 
 ### Panoramica Prodotto
@@ -374,11 +385,11 @@
 
 ### Related Documents
 
-- [Product Roadmap](./product-roadmap.md)
-- [Product Strategy](./product-strategy.md)
+- [Product Roadmap](../product-roadmap.md)
+- [Product Strategy](../product-strategy.md)
 - [User Research](./user-research.md)
 - [Sprint Planning](./sprint-planning-meeting.md)
-- [Product Launch Plan](./product-launch-plan.md)
+- [Product Launch Plan](../product-launch-plan.md)
 - {Additional relevant documents}
 
 ### Glossary

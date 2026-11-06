@@ -1,4 +1,18 @@
+---
+title: "has addresses"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "has addresses"
+issues: []
+discussions: []
+status: draft
+---
+
 # Trait HasAddresses
+
+> **Superseded.** Il trait `Modules\Geo\Traits\HasAddresses` non esiste piu': era un doppione morto di `Modules\Geo\Models\Traits\HasAddress` (nessun modello lo usava) ed e' stato tolto il 2026-09-24 e il 2026-10-08 (vedi [decision-log](../decision-log.md)). Il pull del 2026-10-20 lo aveva riportato da `laraxot/dev`, e' stato tolto di nuovo per la story [phpstan-test-wave-geo](../stories/phpstan-test-wave-geo.story.md). Il trait canonico e' `HasAddress` (`app/Models/Traits/HasAddress.php`), con relazione `addresses()` e `address()`. Il resto di questa pagina descrive l'API del trait rimosso e resta solo per cronologia.
 
 ## Overview
 Il trait `HasAddresses` fornisce funzionalità per gestire indirizzi in qualsiasi modello dell'applicazione. Questo trait è progettato per essere facile da integrare e permettere una gestione completa degli indirizzi, incluse le specificità degli indirizzi italiani.

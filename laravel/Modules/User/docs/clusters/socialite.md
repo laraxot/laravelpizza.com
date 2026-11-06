@@ -1,3 +1,17 @@
+---
+title: "Socialite Cluster Structure"
+type: concept
+tags: [socialite]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "socialite socialite cluster structure"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./passport-actions.md"
+status: draft
+---
+
 # Socialite Cluster Structure
 
 This document outlines the structure and organization of the **Socialite** cluster within the **User** module.

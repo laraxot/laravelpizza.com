@@ -1,3 +1,14 @@
+---
+title: "structure index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure index"
+issues: []
+discussions: []
+---
+
 # 📂 Struttura Documentale PTVX - Indice Completo
 
 > **INDICE COMPLETO** della documentazione PTVX organizzata per categorie e sottocartelle.
@@ -52,6 +63,14 @@ docs/
 
 ---
 
+title: "structure index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "structure index"
+issues: []
+discussions: []
 ## 📊 Statistiche Documentazione
 
 ### File per Categoria

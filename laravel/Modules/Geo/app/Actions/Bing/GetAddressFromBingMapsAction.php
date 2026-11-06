@@ -10,13 +10,18 @@ use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\Geocoding\AddressData;
 use Modules\Geo\Datas\MapPlatforms\BingMapData;
 use Modules\Geo\Exceptions\InvalidLocationException;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Modules\Xot\Actions\Cast\SafeFloatCastAction;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per ottenere l'indirizzo da Bing Maps.
  */
 class GetAddressFromBingMapsAction
 {
-    private const BASE_URL = 'http://dev.virtualearth.net/REST/v1/Locations';
+    use QueueableAction;
+
+    private const string BASE_URL = GeoApiEndpoints::BING_LOCATIONS;
 
     /**
      * Ottiene l'indirizzo da coordinate geografiche.
@@ -57,7 +62,7 @@ class GetAddressFromBingMapsAction
     /**
      * @throws InvalidLocationException
      *
-     * @return array<string, mixed>
+     * @return array<mixed>
      */
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
@@ -83,7 +88,7 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Risposta JSON non valida da Bing Maps');
         }
 
-        /** @var array<string, mixed> $jsonResponse */
+        /* @var array<string, mixed> $jsonResponse */
         return $jsonResponse;
     }
 
@@ -133,16 +138,16 @@ class GetAddressFromBingMapsAction
         return new AddressData(
             latitude: (float) ($res['point']['coordinates'][0] ?? 0),
             longitude: (float) ($res['point']['coordinates'][1] ?? 0),
-            country: $res['address']['countryRegion'] ?? null,
-            city: $res['address']['locality'] ?? null,
+            country: $res['address']['countryRegion'],
+            city: $res['address']['locality'],
             country_code: strtoupper($res['address']['countryRegionIso2'] ?? 'IT'),
             postal_code: (int) ($res['address']['postalCode'] ?? 0),
-            locality: $res['address']['locality'] ?? null,
-            county: $res['address']['adminDistrict2'] ?? null,
-            street: $res['address']['addressLine'] ?? null,
-            street_number: $res['address']['houseNumber'] ?? null,
-            district: $res['address']['neighborhood'] ?? null,
-            state: $res['address']['adminDistrict'] ?? null,
+            locality: $res['address']['locality'],
+            county: $res['address']['adminDistrict2'],
+            street: $res['address']['addressLine'],
+            street_number: $res['address']['houseNumber'],
+            district: $res['address']['neighborhood'],
+            state: $res['address']['adminDistrict'],
         );
     }
 
@@ -217,8 +222,8 @@ class GetAddressFromBingMapsAction
         }
 
         return [
-            0 => (float) $coordinates[0],
-            1 => (float) $coordinates[1],
+            0 => SafeFloatCastAction::cast($coordinates[0]),
+            1 => SafeFloatCastAction::cast($coordinates[1]),
         ];
     }
 

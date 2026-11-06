@@ -28,6 +28,7 @@ import { renderControls, toggleFullscreen, switchLayer, zoomIn, zoomOut, request
 import { renderSearch, searchUiHandlers } from './map/controls/search.js';
 import { buildMapLayers } from './map/layers.js';
 import { mapStylesText } from './map/styles.js';
+import { getMapLabels } from './map/labels.js';
 import { createGeoMapLeafletIcon, markerCardStylesText } from './map/config.js';
 import { buildClusterTypeTileHtml } from './map/icon-glyph.js';
 import { resolveFeatureTicketType } from './map/feature-type.js';
@@ -109,17 +110,7 @@ class MapLit extends LitElement {
         this._previousBodyOverflow = '';
         this._previousHtmlOverflow = '';
         this._geolocRequested = false;
-        this.labels = {
-            fullscreen: 'Schermo intero',
-            close_fullscreen: 'Esci da schermo intero',
-            use_location: 'Usa la mia posizione',
-            switch_layer: 'Cambia layer',
-            zoom_in: 'Aumenta zoom',
-            zoom_out: 'Diminuisci zoom',
-            search: 'Cerca',
-            search_placeholder: 'Cerca indirizzo...',
-            legend_title: 'Stati segnalazione',
-        };
+        this.labels = getMapLabels();
         this.height = DEFAULT_MAP_HEIGHT;
         this.dataUrl = DEFAULT_TICKETS_JSON_URL;
         this.lat = null;
@@ -712,6 +703,7 @@ class MapLit extends LitElement {
                 maxWidth: 420,
                 minWidth: 300,
                 autoPanPaddingTopLeft: L.point(72, 16),
+                autoPanPaddingBottomRight: L.point(24, 96),
             });
             layer.bindPopup(popup);
         }
@@ -759,6 +751,7 @@ class MapLit extends LitElement {
             maxWidth: 380,
             minWidth: 300,
             autoPanPaddingTopLeft: L.point(72, 16),
+            autoPanPaddingBottomRight: L.point(24, 96),
         });
 
         layer.on('click', (event) => {

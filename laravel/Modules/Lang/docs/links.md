@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Gestione delle Traduzioni in Laravel"
+module: "Lang"
+type: concept
+tags: [migration, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Gestione delle Traduzioni in Laravel
 
 ## Pacchetti Raccomandati
@@ -88,6 +102,17 @@ public function handle(Request $request, Closure $next): Response
   > Sistema di notifiche multilingua.
 
 - [Modulo CMS](../../../Cms/docs/links.md)
+- [Modulo GDPR](../../Gdpr/docs/links.md)
+  > Documentazione sulla gestione delle traduzioni per il modulo GDPR.
+
+- [Modulo User](../../User/docs/links.md)
+  > Gestione delle traduzioni per l'interfaccia utente e le notifiche.
+
+### Moduli di Supporto
+- [Modulo Notify](../../Notify/docs/links.md)
+  > Sistema di notifiche multilingua.
+
+- [Modulo CMS](../../Cms/docs/links.md)
   > Gestione dei contenuti multilingua.
 
 ### Moduli Tematici
@@ -130,7 +155,7 @@ php artisan translations:clean     # Pulisce le traduzioni non utilizzate
 ```
 
 - [Gestione console commands: filosofia e tecnica](./lang-service-provider.md)
-- [Filosofia Xot: zen e automazione](./PHILOSOPHY.md)
+- [Filosofia Xot: zen e automazione](philosophy.md)
 https://gist.github.com/milon/5173255b58564a0e50548cfbe879181e
 
 https://gist.github.com/milon/5173255b58564a0e50548cfbe879181e
@@ -225,6 +250,17 @@ public function handle(Request $request, Closure $next): Response
   > Sistema di notifiche multilingua.
 
 - [Modulo CMS](../../../Cms/docs/links.md)
+- [Modulo GDPR](../../Gdpr/docs/links.md)
+  > Documentazione sulla gestione delle traduzioni per il modulo GDPR.
+
+- [Modulo User](../../User/docs/links.md)
+  > Gestione delle traduzioni per l'interfaccia utente e le notifiche.
+
+### Moduli di Supporto
+- [Modulo Notify](../../Notify/docs/links.md)
+  > Sistema di notifiche multilingua.
+
+- [Modulo CMS](../../Cms/docs/links.md)
   > Gestione dei contenuti multilingua.
 
 ### Moduli Tematici
@@ -267,4 +303,4 @@ php artisan translations:clean     # Pulisce le traduzioni non utilizzate
 ```
 
 - [Gestione console commands: filosofia e tecnica](./lang-service-provider.md)
-- [Filosofia Xot: zen e automazione](./PHILOSOPHY.md)
+- [Filosofia Xot: zen e automazione](philosophy.md)

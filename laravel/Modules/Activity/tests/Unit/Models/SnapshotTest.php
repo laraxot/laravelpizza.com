@@ -13,7 +13,6 @@ test('Snapshot model can be instantiated', function () {
     $reflection = new ReflectionClass(Snapshot::class);
     $snapshot = $reflection->newInstanceWithoutConstructor();
 
-    Assert::assertIsObject($snapshot);
     // Verifichiamo che estenda il modello corretto da Spatie
     Assert::assertInstanceOf(EloquentSnapshot::class, $snapshot);
 });

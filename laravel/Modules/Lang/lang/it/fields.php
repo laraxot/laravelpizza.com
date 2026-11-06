@@ -155,8 +155,8 @@ return [
             'description' => 'General Settings',
         ],
         'label' => 'Fields',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'sort' => '1',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [

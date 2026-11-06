@@ -12,10 +12,11 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/265"
 related:
   - ../../../docs/architecture-ai-assisted-coding-2026-06-05.md
-  - ../../../docs/chat/register-flow-religions-r1-r6.md
+  - ../../../../docs/chat/register-flow-religions-r1-r6.md
   - ../../User/docs/r1-form-fields-self-validate.md
-  - ../../Themes/Sixteen/docs/r2-ux-register-form-stacked-password.md
+  - ../../../Themes/Sixteen/docs/r2-ux-register-form-stacked-password.md
   - ../../../docs/wiki/memories/form-fields-self-validate-religion.md
+status: draft
 ---
 
 # R8 religion applied — Gdpr RegisterWidget wins (Gdpr module)

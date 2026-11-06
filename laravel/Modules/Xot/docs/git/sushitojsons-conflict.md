@@ -1,3 +1,13 @@
+---
+title: "Risoluzione Conflitto in SushiToJsons"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, git]
+qmd: "Risoluzione Conflitto in SushiToJsons"
+---
 # Risoluzione Conflitto in SushiToJsons
 
 ## Panoramica
@@ -24,7 +34,7 @@ Sono state identificate tre principali versioni in conflitto:
 - Validazione standard senza eccezioni personalizzate
 
 ### Versione 2 (Intermedia)
-- Implementazione con controlli aggiuntivi
+- Implementazione con controlli aggiuntivi 
 - Eccezioni personalizzate per la validazione
 
 ### Versione 3 (Più recente)
@@ -133,7 +143,7 @@ trait SushiToJsons
                 File::put($file, $content);
             }
         );
-
+        
         /*
          * Aggiornamento del modello.
          */
@@ -146,7 +156,7 @@ trait SushiToJsons
                 File::put($file, $content);
             }
         );
-
+        
         /*
          * Eliminazione del modello.
          */
@@ -173,5 +183,4 @@ trait SushiToJsons
 ## Collegamenti Bidirezionali
 
 - [Documento principale risoluzione conflitti](risoluzione_conflitti.md)
-- [Documentazione modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md)
-- [Documentazione modulo Tenant](../../tenant/docs/risoluzione_conflitti.md)
+- [Documentazione modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md) 

@@ -1,3 +1,16 @@
+---
+title: "GDPR Compliance"
+type: concept
+tags: [compliance]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "compliance gdpr compliance"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+status: draft
+---
+
 # GDPR Compliance
 
 ## Cookie Consent Plugins

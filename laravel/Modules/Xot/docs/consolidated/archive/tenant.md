@@ -1,3 +1,11 @@
+---
+title: "Analisi e Risoluzione Colli di Bottiglia - Modulo Tenant"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi e risoluzione colli di bottiglia - modulo tenant xot"
+---
 # Analisi e Risoluzione Colli di Bottiglia - Modulo Tenant
 
 ## 1. Database Switching (Priorità: Alta)

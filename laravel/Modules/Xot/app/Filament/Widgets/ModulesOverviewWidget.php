@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
@@ -13,8 +12,9 @@ use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
  * Widget per mostrare una panoramica dei moduli disponibili.
  * Utilizza l'action GetModulesNavigationItems per caricare dinamicamente i moduli.
  */
-class ModulesOverviewWidget extends Widget
+class ModulesOverviewWidget extends XotBaseWidget
 {
+    /** @var view-string */
     protected string $view = 'xot::filament.widgets.modules-overview';
 
     protected int|string|array $columnSpan = 'full';
@@ -34,7 +34,7 @@ class ModulesOverviewWidget extends Widget
             $configs = app(GetModulesNavigationItems::class)->getCachedModuleConfigs();
 
             // Ordina per sort
-            usort($configs, static fn ($a, $b) => ($a['sort'] <=> $b['sort']));
+            usort($configs, static fn (array $a, array $b) => ($a['sort'] <=> $b['sort']));
 
             $user = Auth::user();
             $hasRoleFn = static function (string $role) use ($user): bool {
@@ -113,8 +113,7 @@ class ModulesOverviewWidget extends Widget
     /**
      * Ottiene la descrizione per un modulo.
      *
-     * @param string $module Nome del modulo
-     *
+     * @param  string  $module  Nome del modulo
      * @return string Descrizione del modulo
      */
     private function getModuleDescription(string $module): string

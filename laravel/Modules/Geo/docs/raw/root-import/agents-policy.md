@@ -1,3 +1,14 @@
+---
+title: "agents policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents policy"
+issues: []
+discussions: []
+---
+
 AGENTS POLICY: gestione issue per agenti AI
 
 Scopo: prevenire omissioni nel tracciamento del lavoro — ogni modifica significativa deve essere collegata a una issue GitHub.

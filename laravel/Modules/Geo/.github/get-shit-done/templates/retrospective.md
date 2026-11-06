@@ -1,3 +1,14 @@
+---
+title: "retrospective"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "retrospective"
+issues: []
+discussions: []
+---
+
 # Project Retrospective
 
 *A living document updated after each milestone. Lessons feed forward into future planning.*
@@ -34,6 +45,14 @@
 
 ---
 
+title: "retrospective"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "retrospective"
+issues: []
+discussions: []
 ## Cross-Milestone Trends
 
 ### Process Evolution

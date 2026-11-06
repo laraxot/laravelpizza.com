@@ -1,3 +1,15 @@
+---
+title: "schemaless attributes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schemaless attributes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Spatie Laravel Schemaless Attributes - Guida Completa PTVX
 
 > **📘 DOCUMENTAZIONE CORRETTA E VERIFICATA**: Pattern corretti per l'uso di schemaless attributes in PTVX
@@ -6,7 +18,6 @@
 **Status**: ✅ VERIFICATO - Pattern corretti confermati dal codice sorgente
 
 ---
-
 ## 🎯 Panoramica
 
 Questo progetto utilizza il package `spatie/laravel-schemaless-attributes` per gestire attributi dinamici JSON su modelli Eloquent, principalmente per:
@@ -252,7 +263,7 @@ $ratings = Rating::withExtraAttributes('anno', $anno)->get();
 ### Documentazione Correlata
 
 - **[Xot Schemaless Guide](../../laravel/Modules/Xot/docs/schemaless-attributes.md)** - Guida generale Xot
-- **[Rating README](../../laravel/Modules/Rating/docs/README.md)** - Documentazione Rating module
+- **[Rating README](../../../Rating/docs/README.md)** - Documentazione Rating module
 - **[HasRatingsTrait](../../laravel/Modules/Rating/docs/has-ratings-trait.md)** - Uso del trait
 
 ### Package Documentation

@@ -1,3 +1,15 @@
+---
+title: "codex error fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "codex error fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Codex Configuration Error Fixes
 
 Questo documento descrive le correzioni applicate agli errori riscontrati durante l'avvio di `codex`.
@@ -16,6 +28,14 @@ Racchiudere sempre i valori di `name` e `description` tra virgolette doppie nel 
 **Esempio Errato:**
 ```yaml
 ---
+title: "codex error fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "codex error fix"
+issues: []
+discussions: []
 name: { my-skill-name }
 description: Rule: always do X.
 ---

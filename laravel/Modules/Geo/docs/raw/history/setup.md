@@ -1,3 +1,14 @@
+---
+title: "setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "setup"
+issues: []
+discussions: []
+---
+
 # Setup e Configurazione PTVX
 
 Guida completa per installazione e configurazione del sistema PTVX.
@@ -49,6 +60,14 @@ Estensioni necessarie:
 
 ---
 
+title: "setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "setup"
+issues: []
+discussions: []
 ## 🚀 Installazione
 
 ### 1. Clone Repository

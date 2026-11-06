@@ -1,8 +1,20 @@
+---
+title: "mail layouts guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mail layouts guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida ai Layout Email nel Modulo Notify
 
 ## Introduzione
 
-Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di Quaeris. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
+Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di SaluteOra. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
 
 ## Struttura dei Layout
 

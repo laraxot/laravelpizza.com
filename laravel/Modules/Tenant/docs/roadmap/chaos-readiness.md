@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Tenant Chaos Readiness - 2026-03-02"
+module: "Tenant"
+type: concept
+tags: [chaos, readiness]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "chaos readiness"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Tenant Chaos Readiness - 2026-03-02
 
 ## Scope

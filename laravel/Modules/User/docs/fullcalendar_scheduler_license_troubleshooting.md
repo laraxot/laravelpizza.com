@@ -1,3 +1,11 @@
+---
+title: "FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "fullcalendar scheduler license - troubleshooting e configurazione avanzata user"
+---
 # FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata
 
 ## Panoramica
@@ -187,7 +195,7 @@ return [
 ```php
 <?php
 
-namespace Modules\Quaeris\app\Providers\Filament;
+namespace Modules\SaluteOra\app\Providers\Filament;
 
 use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
@@ -234,7 +242,7 @@ class AdminPanelProvider extends XotBasePanelProvider
                 'resourceTimeGrid',
             ],
             
-// Configurazioni specifiche per Quaeris
+            // Configurazioni specifiche per SaluteOra
             'locale' => 'it',
             'timezone' => 'Europe/Rome',
             'firstDay' => 1,
@@ -316,7 +324,7 @@ class FullCalendarDebug extends Command
 }
 ```
 
-## Best Practices per Quaeris
+## Best Practices per SaluteOra
 
 ### 1. Sicurezza Licenza
 ```php
@@ -409,7 +417,7 @@ const calendarOptions = {
 
 ## Conclusioni
 
-La gestione delle licenze FullCalendar Scheduler richiede attenzione particolare, specialmente in ambienti di produzione sanitari come Quaeris. Seguire questa guida garantisce una configurazione corretta e la risoluzione dei problemi più comuni.
+La gestione delle licenze FullCalendar Scheduler richiede attenzione particolare, specialmente in ambienti di produzione sanitari come SaluteOra. Seguire questa guida garantisce una configurazione corretta e la risoluzione dei problemi più comuni.
 
 **Punti Chiave:**
 1. **Licenza obbligatoria** per uso commerciale in produzione

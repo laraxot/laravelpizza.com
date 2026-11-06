@@ -1,41 +1,28 @@
+# Text and source files
 * text=auto
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
-CHANGELOG.md export-ignore
 
-
-# CSS, SCSS, JS files are vendored
-*.css linguist-vendored
-*.scss linguist-vendored
-*.js linguist-vendored
-
-# Binary files
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.ai filter=lfs diff=lfs merge=lfs -text
-*.eps filter=lfs diff=lfs merge=lfs -text
-*.pdf filter=lfs diff=lfs merge=lfs -text
-*.zip filter=lfs diff=lfs merge=lfs -text
-*.tar filter=lfs diff=lfs merge=lfs -text
-*.gz filter=lfs diff=lfs merge=lfs -text
-*.rar filter=lfs diff=lfs merge=lfs -text
-*.7z filter=lfs diff=lfs merge=lfs -text
-
-# Media files
-*.png filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
-*.webp filter=lfs diff=lfs merge=lfs -text
-*.ico filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
-
-# Font files
-*.woff filter=lfs diff=lfs merge=lfs -text
-*.woff2 filter=lfs diff=lfs merge=lfs -text
-*.ttf filter=lfs diff=lfs merge=lfs -text
-*.eot filter=lfs diff=lfs merge=lfs -text
-*.otf filter=lfs diff=lfs merge=lfs -text
+# Binary files are regular Git blobs; Git LFS is forbidden.
+*.png binary !filter
+*.jpg binary !filter
+*.jpeg binary !filter
+*.gif binary !filter
+*.webp binary !filter
+*.ico binary !filter
+*.svg binary !filter
+*.psd binary !filter
+*.pdf binary !filter
+*.zip binary !filter
+*.woff binary !filter
+*.woff2 binary !filter
+*.ttf binary !filter
+*.eot binary !filter
+*.otf binary !filter
+*.phar binary !filter
+*.db binary !filter
+*.sqlite binary !filter
 
 # Export ignore files
 CHANGELOG.md export-ignore

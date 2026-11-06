@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Correzione Errori Traduzioni - 2025"
+module: "Lang"
+type: concept
+tags: [guida, migrazione, step, by]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "guida migrazione step by step"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Correzione Errori Traduzioni - 2025
 
 ## Problema Identificato
@@ -184,6 +198,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
+- [Root Docs: Translation Standards](translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
 - [<main module> Module: Translation Guidelines](../<main module>/docs/translation_guidelines.md)
 

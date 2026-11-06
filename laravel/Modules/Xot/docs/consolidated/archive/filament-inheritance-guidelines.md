@@ -1,3 +1,11 @@
+---
+title: "Linee Guida per l'Ereditarietà da Classi Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "linee guida per l'ereditarietà da classi filament xot"
+---
 # Linee Guida per l'Ereditarietà da Classi Filament
 
 ## Problema di Compatibilità con Metodi Statici/Non Statici

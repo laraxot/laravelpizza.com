@@ -1,3 +1,14 @@
+---
+title: "linked issue"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "linked issue"
+issues: []
+discussions: []
+---
+
 name: Linked issue
 about: Use this template when creating an issue that PRs should reference
 title: '[<component>] Short summary'
@@ -5,6 +16,14 @@ labels: ['needs-triage']
 
 ---
 
+title: "linked issue"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "linked issue"
+issues: []
+discussions: []
 ## Summary
 A short, one-line summary of the problem or feature.
 

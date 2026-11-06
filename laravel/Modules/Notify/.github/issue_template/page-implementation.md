@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page implementation"
+issues: []
+discussions: []
 name: Page Implementation
 about: Implement a Design Comuni page replication
 title: 'Page: [Page Name] - /it/tests/[slug]'
@@ -25,6 +32,8 @@ assignees: ''
 ### Target Page
 **FixCity**: http://fixcity.local/it/tests/[slug]  
 **View Source**: `view-source:http://fixcity.local/it/tests/[slug]`
+**FixCity**: http://ptv.local/it/tests/[slug]  
+**View Source**: `view-source:http://ptv.local/it/tests/[slug]`
 
 ### Screenshots
 <!-- Add side-by-side screenshots -->
@@ -38,6 +47,7 @@ assignees: ''
 
 ### 1. Create JSON Content File
 **File**: `laravel/config/local/fixcity/database/content/pages/tests.[slug].json`
+**File**: `laravel/config/local/ptv/database/content/pages/tests.[slug].json`
 
 ```json
 {
@@ -68,6 +78,7 @@ assignees: ''
         "address": "Via Roma 1, FixCity",
         "phone": "+39 0123 456789",
         "email": "info@comune.fixcity.it"
+        "email": "info@comune.ptv.it"
       }
     }
   ]

@@ -1,4 +1,7 @@
 ---
+qmd: "phpstan analysis"
+issues: []
+discussions: []
 title: analisi phpstan modulo gdpr
 type: memory
 tags: [phpstan, gdpr, fixes]

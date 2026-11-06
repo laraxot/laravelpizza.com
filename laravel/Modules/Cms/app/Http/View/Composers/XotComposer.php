@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Modules\Cms\Http\View\Composers;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
-use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\User;
 
 /**
  * Class XotComposer.
@@ -26,13 +25,11 @@ final class XotComposer
             return;
         }
 
-        if (! $user instanceof UserContract) {
+        if (! $user instanceof User) {
             return;
         }
 
-        /** @var HasOne<\Modules\User\Models\Profile, \Modules\User\Models\User> $profileRelation */
-        $profileRelation = $user->profile();
-        $profile = $profileRelation->first();
+        $profile = $user->profile;
         $lang = app()->getLocale();
         $params = [];
         $routeCurrent = Route::current();

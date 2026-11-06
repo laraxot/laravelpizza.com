@@ -1,25 +1,41 @@
-# Lang Module — Wiki Schema
+---
+type: note
+updated: 2026-09-26
+qmd: "schema"
+issues: []
+discussions: []
+title: Wiki Schema
+description: Schema e convenzioni per la manutenzione della wiki
+tags:
+  - schema
+  - conventions
+  - llm-instructions
+created: 2026-04-15
+status: draft
+---
 
-## Struttura wiki
+# Wiki Schema - Lang
+
+Istruzioni per l'LLM su come mantenere questa wiki.
+
+## Struttura
 
 ```
 docs/
-  wiki/
-    index.md       ← indice navigabile (obbligatorio)
-    log.md         ← log operazioni (obbligatorio)
-    schema.md      ← questo file
-    concepts/      ← pattern e regole architetturali
-    entities/      ← translation files, locales
+├── wiki/
+│   ├── index.md           # Catalogo
+│   ├── log.md             # Registro
+│   ├── schema.md          # Questo file
+│   ├── concepts/          # Pattern, architettura
+│   ├── entities/          # Modelli, azioni
+│   ├── sources/           # Doc esterna
+│   └── comparisons/       # Tabelle comparative
+└── raw/                   # Sorgenti immutable
 ```
 
-## Regole ingest
+## Convenzioni
 
-- `docs/` = raw source layer (immutabile)
-- `docs/wiki/` = compiled wiki layer (LLM aggiorna)
-- Nuovi concetti → `concepts/<kebab-case>.md`
-
-## QMD collection
-
-```bash
-qmd search "translation locale" -c mod-lang
-```
+- File: kebab-case (es. `entity-user.md`)
+- Frontmatter: title, description, tags, created
+- Cross-ref: `[Link](../concepts/name.md)`
+- NON modificare mai `docs/raw/`

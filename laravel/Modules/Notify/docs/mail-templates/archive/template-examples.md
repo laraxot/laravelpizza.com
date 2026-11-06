@@ -1,3 +1,11 @@
+---
+title: "Esempi di Template Email"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "esempi di template email notify"
+---
 # Esempi di Template Email
 
 ## 1. Email di Benvenuto

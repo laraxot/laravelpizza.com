@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Collegamento alle Traduzioni del Modulo Chart"
+module: "Lang"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Collegamento alle Traduzioni del Modulo Chart
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
@@ -28,4 +42,18 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
+* [lang-link.md](lang-link.md)
 

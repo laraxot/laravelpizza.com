@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /**
  * Handles the registration of a new user.
  *
@@ -12,11 +13,9 @@
  * If the validation passes, a new user is created and a success response is returned with the user's name and an access token.
  * If the validation fails, an error response is returned with the validation errors.
  *
- * @param Request $request The incoming request
- *
+ * @param  Request  $request  The incoming request
  * @return JsonResponse The JSON response
  */
-declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Api;
 
@@ -49,12 +48,11 @@ class RegisterController extends XotBaseController
             $messages,
         );
         if ($validator->fails()) {
-            return $this->sendError('Validation Error.', ['errors' => $validator->errors()->all()]);
+            return $this->sendError('Validation Error.', $validator->errors()->toArray());
         }
 
         /** @var array<string, mixed> $input */
         $input = $request->all();
-        $input['password'] = bcrypt((string) $input['password']);
         $user_class = XotData::make()->getUserClass();
         /** @var UserContract */
         $user = $user_class::create($input);

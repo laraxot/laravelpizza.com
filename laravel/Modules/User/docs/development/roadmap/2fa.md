@@ -1,3 +1,18 @@
+---
+title: "Two-Factor Authentication - 70% Completato"
+type: concept
+tags: [2fa]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "2fa two-factor authentication - 70% completato"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./bottlenecks.md"
+status: superseded
+superseded_by: ../../roadmap/2fa.md
+---
+
 # Two-Factor Authentication - 70% Completato
 
 ## Descrizione

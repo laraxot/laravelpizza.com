@@ -29,6 +29,14 @@ return [
         'confirm_password' => 'Conferma Password',
         'save' => 'Salva',
         'update' => 'Aggiorna',
+        'logout' => 'Abmelden',
+        'password_requirements' => [
+            'title' => 'Passwortanforderungen',
+            'min_length' => 'Mindestens 8 Zeichen',
+            'uppercase' => 'Mindestens ein Großbuchstabe',
+            'number' => 'Mindestens eine Zahl',
+            'special' => 'Mindestens ein Sonderzeichen',
+        ],
     ],
     'user_dropdown' => [
         'manage_account' => 'Gestione Account',
@@ -57,6 +65,8 @@ return [
         'dashboard' => 'Dashboard',
         'profile' => 'Profilo',
         'settings' => 'Impostazioni',
+        'learn_more' => 'Mehr erfahren',
+        'primary' => 'Hauptnavigation',
     ],
     'failed' => 'Le credenziali non corrispondono ai nostri record.',
     'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',

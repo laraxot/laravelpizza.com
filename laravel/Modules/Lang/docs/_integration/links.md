@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "links"
+module: "Lang"
+type: concept
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "../italian-text-refined-audit-report.md"
+status: superseded
+superseded_by: ../integration/links.md
+---
 # links
 
 <!-- Contenuto migrato da _docs/links.txt -->

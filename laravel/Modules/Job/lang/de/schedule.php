@@ -271,4 +271,20 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+    'crud_widget' => [
+        'heading' => 'Geplante Aufgaben',
+        'new_task' => 'Neue Aufgabe',
+        'columns' => [
+            'description' => 'Beschreibung',
+            'average_runtime' => 'Durchschnittliche Laufzeit',
+            'last_run' => 'Letzte Ausführung',
+            'next_run' => 'Nächste Ausführung',
+        ],
+        'average_runtime_value' => ':seconds Sekunden',
+        'run_now' => 'Jetzt ausführen',
+        'empty' => 'Keine Aufgaben gefunden.',
+    ],
+    'status_widget' => [
+        'heading' => 'Status der Zeitplanung',
+    ],
 ];

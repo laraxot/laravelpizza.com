@@ -1,3 +1,11 @@
+---
+title: "Correzione Struttura Cartelle Docs - Riepilogo Completo"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "correzione struttura cartelle docs - riepilogo completo xot"
+---
 # Correzione Struttura Cartelle Docs - Riepilogo Completo
 
 ## Contesto e Problema Identificato
@@ -200,7 +208,7 @@ find laravel/Themes -name "docs" -type d
 
 ### **Documentazione Correlata**:
 - [Regole Modularità](modularity-hardcoded-names.md)
-- [Struttura Progetto](project-structure.md)
+- [Struttura Progetto](PROJECT-STRUCTURE.md)
 - [Best Practices Documentazione](documentation-standards.md)
 
 ---

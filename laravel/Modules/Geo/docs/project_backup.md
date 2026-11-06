@@ -1,3 +1,15 @@
+---
+title: "project backup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project backup"
+issues: []
+discussions: []
+status: draft
+---
+
 ## Modifiche Recenti
 
 ### Uso di Spatie Queable Actions

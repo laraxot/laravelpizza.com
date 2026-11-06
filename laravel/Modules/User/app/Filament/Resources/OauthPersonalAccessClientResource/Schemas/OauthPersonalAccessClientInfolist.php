@@ -16,7 +16,7 @@ class OauthPersonalAccessClientInfolist extends XotBaseResourceInfolist
      *
      * Campi basati sul Model OauthPersonalAccessClient.php -> id, client_id
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

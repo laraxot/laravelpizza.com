@@ -5,23 +5,20 @@ declare(strict_types=1);
 return [
     'navigation' => [
         'label' => 'Invia SMS',
-        'group' => 'Test',
-    ],
+        'group' => 'Test'],
     'fields' => [
         'to' => [
             'label' => 'Destinatario',
             'placeholder' => 'Inserisci numero di telefono',
             'helper_text' => 'Inserisci il numero con prefisso internazionale (es. +39)',
             'tooltip' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'message' => [
             'label' => 'Messaggio',
             'placeholder' => 'Inserisci testo del messaggio',
             'helper_text' => 'Il messaggio non può superare i 160 caratteri',
             'tooltip' => '',
-            'description' => '',
-        ],
+            'description' => ''],
         'driver' => [
             'label' => 'Provider',
             'placeholder' => 'Seleziona provider SMS',
@@ -32,22 +29,15 @@ return [
                 'nexmo' => 'Nexmo',
                 'plivo' => 'Plivo',
                 'gammu' => 'Gammu',
-                'netfun' => 'Netfun',
-            ],
+                'netfun' => 'Netfun'],
             'tooltip' => '',
-            'description' => '',
-        ],
-    ],
+            'description' => '']],
     'actions' => [
         'send' => [
             'label' => 'Invia SMS',
-            'tooltip' => 'Invia un messaggio SMS al destinatario',
-        ],
-    ],
+            'tooltip' => 'Invia un messaggio SMS al destinatario']],
     'messages' => [
         'success' => 'SMS inviato con successo',
-        'error' => 'Errore nell\'invio dell\'SMS: :error',
-    ],
+        'error' => 'Errore nell\'invio dell\'SMS: :error'],
     'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-];
+    'plural_label' => 'Missing Plural label'];

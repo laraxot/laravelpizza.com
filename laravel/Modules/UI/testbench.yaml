@@ -1,4 +1,0 @@
-providers:
-  - Modules\UI\Providers\UIServiceProvider
-  - Nwidart\Modules\LaravelModulesServiceProvider
-

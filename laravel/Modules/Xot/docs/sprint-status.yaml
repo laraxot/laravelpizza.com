@@ -1,0 +1,51 @@
+stories:
+  "Xot/docs-100-fleet-merge-20261005":
+    status: wip
+    epic: "Docs-100 fleet merge: limite ricorsivo, merge+sintesi, niente solo-spostamenti"
+    story: "Epic docs/bmad/stories/docs-100-fleet-merge.story.md. 7 agenti
+      x 2 aree, lock/story-per-modulo/no-commit/docs-only. Swarm da lanciare."
+  "quality/phpstan-modules-level10-20261006":
+    status: wip
+    epic: "Quality — PHPStan Level 10 su tutti i moduli"
+    story: "bmad/stories/phpstan-modules-level10.story.md"
+    notes: "Swarm parallelo; sblocco bootstrap da marker committati, poi fix per causa e verifica funzionale."
+  "quality/phpstan-docs-prompts-campaign-20261021":
+    status: done
+    epic: "Campaign — PHPStan max-level + docs reorg + prompts + second brain (swarm parallelo random, BMAD)"
+    story: "bmad/stories/phpstan-docs-prompts-campaign-20261021.story.md"
+    notes: "12 subagent in parallelo (phpstan-A..F + docs-reorg + prompts-improve + filament-blueprint + scout-blueprint + scout-qmd + quality-gate). Risultati consolidati: Ptv/Sigma/UI completati (phpstan-E); User/Xot completati (phpstan-F); docs-reorg con 18 moduli + 3 temi; prompts-improve su 88-89 file; filament-blueprint audit su 12 moduli; QMD/blueprint reports scritti. PHPStan max-level full-tree bloccato ambientale (timeout >300s, tmpDir condiviso); nessuna zero fittizia dichiarata. Fix applicati alla sorgente su moduli toccati: Xot zero-verifica, Ptv 2 fix, Sigma 289 modelli, User 82 fix, Pdnd C003 modelli ripristinati. Blocker ambientali: full-tree phpstan timeout, Pest skip host 10.100.200.15, subagent non conclusi su Activity/Rating/IndennitaCondizioniLavoro/Incentivi/Job/Tenant/Lang/Media/Notify. Aggiornata docs reorg, INDEX.md, canonical layout. Sprint chiuso con risultati documentati, non con zero-errori su tutti i moduli (pending su host dedicato)."
+  "quality/user-comment-decoupling-20261021":
+    status: done
+    epic: "User module independent of Comment — architecture clarification"
+    story: "bmad/stories/user-module-independent-of-comment.story.md"
+    notes: "User/app grep=0 references; composer repositories ../Comment removed; rule can-comment-retired resolved; docs/INDEX.md + theme docs consolidated (0 .lock); Progressioni trait fixed (19 errors resolved at source)."
+  "Xot/idcolumn-row-anchor-return-to-20261030":
+    status: review
+    epic: "Filament tables — IDColumn e ritorno alla riga di partenza"
+    story: "stories/idcolumn-row-anchor-return-to.story.md"
+    notes: "Implementato; PHPStan Modules exit 0. Pest e verifica a video non eseguiti. Puntatore in UI: ../../UI/docs/stories/idcolumn-row-anchor-return-to.story.md."
+  "Lang/translation-key-shape-rekey-20261030":
+    status: review
+    epic: "i18n — forma delle chiavi, namespace + 4 segmenti"
+    story: "../../Lang/docs/stories/translation-key-shape-rekey.story.md"
+    notes: "368 chiavi nei moduli e 135 nei temi spostate con lang-rekey.php; residui nella story di Sixteen."
+  "Sixteen/pub-theme-keys-and-route-names-residuals-20261030":
+    status: ready-for-dev
+    epic: "i18n — forma delle chiavi, namespace + 4 segmenti"
+    story: "../../../Themes/Sixteen/docs/stories/pub-theme-keys-and-route-names-residuals.story.md"
+    notes: "Decisione dell'utente richiesta sul test di contratto dell'header (services.categories)."
+  "Two/public-pages-500-faq-cookie-profile-register-20261030":
+    status: review
+    epic: "Salute delle pagine pubbliche"
+    story: "../../../Themes/Two/docs/stories/public-pages-500-faq-cookie-profile-register.story.md"
+    notes: "Sei pagine da 500 a 200/302 (sei blocchi nuovi, guardia auth, wrapper layouts.base); resta /auth/verify-email, decisione sul flusso di verifica email."
+  "User/blade-templates-that-do-not-compile-20261030":
+    status: review
+    epic: "Salute delle Blade"
+    story: "../../User/docs/stories/blade-templates-that-do-not-compile.story.md"
+    notes: "Corrette hero (User) e contact-column (Notify); le due partials di Cms sono copie troncate non richiamate, lasciate. Controllo: bashscripts/tools/blade-compile-check.php."
+\n  "Sixteen/blade-i18n-no-hardcoded-text-pass-2-20261030":
+    status: review
+    epic: "Salute delle Blade"
+    story: "../../../Themes/Sixteen/docs/stories/blade-i18n-no-hardcoded-text.story.md"
+    notes: "Passata 2 testi fissi: scanner 2840 -> 2228 occorrenze (555 -> 506 file), chiavi mancanti 332 -> 274, Blade rotte 18 -> 2. Sezione 'Passata 2026-10-30' nelle story di Sixteen, TwentyOne, Two, Meetup, Zero (nuova), Geo, UI, User, Cms, Notify (nuova), Xot, Gdpr, Lang (nuova), Tenant (nuova) e altri moduli piccoli. Residui: pages_old* di Sixteen (545, codice morto), chiavi fixcity:: inesistenti, Notify/Employee it da rileggere."

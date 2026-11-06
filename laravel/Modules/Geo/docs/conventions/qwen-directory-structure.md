@@ -1,3 +1,15 @@
+---
+title: "qwen directory structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen directory structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # .qwen Directory Structure & Junction Rules
 
 > **Regola di Organizzazione per directory `.qwen`**
@@ -7,7 +19,6 @@
 > **Owner:** AI Development Team
 
 ---
-
 ## Regola Generale
 
 La directory `.qwen` contiene la configurazione centrale per tutti gli agenti AI. Per garantire coerenza e evitare duplicazioni, tutte le sottodirectory devono puntare alla configurazione centrale tramite symlink.
@@ -238,8 +249,8 @@ chown -R zorin:zorin .qwen/
 ### Documenti Correlati
 
 - [AGENTS.md](../../AGENTS.md)
-- [AI Agent Coordination](../../docs/ai-agent-coordination.md)
-- [Skills Configuration Report](../../docs/reports/skills-configuration-report.md)
+- [AI Agent Coordination](../raw/history/ai-agent-coordination.md)
+- [Skills Configuration Report](../raw/reports/skills-configuration-report.md)
 
 ### Comandi Utili
 

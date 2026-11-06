@@ -271,4 +271,20 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+    'crud_widget' => [
+        'heading' => 'Schedule tasks',
+        'new_task' => 'New task',
+        'columns' => [
+            'description' => 'Description',
+            'average_runtime' => 'Average runtime',
+            'last_run' => 'Last run',
+            'next_run' => 'Next run',
+        ],
+        'average_runtime_value' => ':seconds seconds',
+        'run_now' => 'Run now',
+        'empty' => 'No tasks found.',
+    ],
+    'status_widget' => [
+        'heading' => 'Schedule status',
+    ],
 ];

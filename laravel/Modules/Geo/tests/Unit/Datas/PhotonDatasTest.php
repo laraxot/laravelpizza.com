@@ -4,86 +4,63 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Datas;
 
-uses(\Modules\Geo\Tests\TestCase::class);
-
 use Modules\Geo\Datas\Photon\PhotonAddressData;
 use Modules\Geo\Datas\Photon\PhotonFeatureData;
 use Modules\Geo\Datas\Photon\PhotonPropertiesData;
 use Modules\Geo\Datas\Photon\PhotonResponseData;
+use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-test('PhotonAddressData can be instantiated', function () {
-    expect(class_exists(PhotonAddressData::class))->toBeTrue();
+uses(TestCase::class);
+test('PhotonAddressData can be instantiated', function (): void {
+    $address = PhotonAddressData::from([
+        'city' => 'Rome',
+        'country' => 'Italy',
+    ]);
 
-    try {
-        $address = PhotonAddressData::from([
+    Assert::assertSame('Rome', $address->city);
+});
+
+test('PhotonFeatureData can be instantiated', function (): void {
+    $feature = PhotonFeatureData::from([
+        'geometry' => [
+            'lat' => 41.9028,
+            'lng' => 12.4964,
+        ],
+        'properties' => [
             'city' => 'Rome',
             'country' => 'Italy',
-        ]);
-        expect($address)->toBeInstanceOf(PhotonAddressData::class);
-    } catch (Exception $e) {
-        expect(true)->toBeTrue(); // Pass if class exists
-    }
+        ],
+    ]);
+
+    Assert::assertSame('Rome', $feature->properties->city);
 });
 
-test('PhotonFeatureData can be instantiated', function () {
-    expect(class_exists(PhotonFeatureData::class))->toBeTrue();
+test('PhotonPropertiesData can be instantiated', function (): void {
+    $properties = PhotonPropertiesData::from([
+        'city' => 'Rome',
+        'country' => 'Italy',
+    ]);
 
-    try {
-        $feature = PhotonFeatureData::from([
-            'type' => 'Feature',
-            'geometry' => [
-                'type' => 'Point',
-                'coordinates' => [12.4964, 41.9028],
-            ],
-            'properties' => [
-                'name' => 'Rome',
-                'city' => 'Rome',
-                'country' => 'Italy',
-            ],
-        ]);
-        expect($feature)->toBeInstanceOf(PhotonFeatureData::class);
-    } catch (Exception $e) {
-        expect(true)->toBeTrue(); // Pass if class exists
-    }
+    Assert::assertSame('Rome', $properties->city);
 });
 
-test('PhotonPropertiesData can be instantiated', function () {
-    expect(class_exists(PhotonPropertiesData::class))->toBeTrue();
-
-    try {
-        $properties = PhotonPropertiesData::from([
-            'name' => 'Rome',
-            'city' => 'Rome',
-            'country' => 'Italy',
-        ]);
-        expect($properties)->toBeInstanceOf(PhotonPropertiesData::class);
-    } catch (Exception $e) {
-        expect(true)->toBeTrue(); // Pass if class exists
-    }
-});
-
-test('PhotonResponseData can be instantiated', function () {
-    expect(class_exists(PhotonResponseData::class))->toBeTrue();
-
-    try {
-        $response = PhotonResponseData::from([
-            'features' => [
-                [
-                    'type' => 'Feature',
-                    'geometry' => [
-                        'type' => 'Point',
-                        'coordinates' => [12.4964, 41.9028],
-                    ],
-                    'properties' => [
-                        'name' => 'Rome',
-                        'city' => 'Rome',
-                        'country' => 'Italy',
-                    ],
+test('PhotonResponseData can be instantiated', function (): void {
+    $response = PhotonResponseData::from([
+        'features' => [
+            [
+                'geometry' => [
+                    'lat' => 41.9028,
+                    'lng' => 12.4964,
+                ],
+                'properties' => [
+                    'city' => 'Rome',
+                    'country' => 'Italy',
                 ],
             ],
-        ]);
-        expect($response)->toBeInstanceOf(PhotonResponseData::class);
-    } catch (Exception $e) {
-        expect(true)->toBeTrue(); // Pass if class exists
-    }
+        ],
+    ]);
+
+    Assert::assertNotNull($response->features);
+    Assert::assertCount(1, $response->features);
 });

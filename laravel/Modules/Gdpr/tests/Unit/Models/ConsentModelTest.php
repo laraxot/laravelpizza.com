@@ -6,10 +6,7 @@ namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 test('consent_fillable_attributes', function (): void {
     $consent = new Consent();

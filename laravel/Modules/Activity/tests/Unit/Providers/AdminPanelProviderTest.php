@@ -9,12 +9,12 @@ use Modules\Activity\Providers\Filament\AdminPanelProvider;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('admin panel provider returns a panel instance', function () {
     $provider = new AdminPanelProvider(app());
 
     $panel = $provider->panel(Panel::make());
 
-    Assert::assertInstanceOf(Panel::class, $panel);
+    Assert::assertNotSame('', $panel->getId());
 });

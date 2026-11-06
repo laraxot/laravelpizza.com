@@ -7,15 +7,17 @@ namespace Modules\Cms\Filament\Forms\Components;
 use Illuminate\Support\HtmlString;
 use Modules\Cms\Models\Attachment;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Modules\Xot\Filament\Forms\Components\XotBasePlaceholder;
+use Modules\Xot\Filament\Forms\Components\XotBaseTextEntry;
 use Webmozart\Assert\Assert;
 
-class DownloadAttachmentPlaceHolder extends XotBasePlaceholder
+class DownloadAttachmentPlaceHolder extends XotBaseTextEntry
 {
     protected function setUp(): void
     {
         parent::setUp();
-        $this->label('')->content($this->generateContent(...))->columnSpanFull();
+        // `Placeholder::content()` accettava un HtmlString e lo rendeva come HTML;
+        // `TextEntry::state()` no, serve `html()` esplicito.
+        $this->label('')->html()->state($this->generateContent(...))->columnSpanFull();
     }
 
     protected function generateContent(): HtmlString

@@ -1,3 +1,11 @@
+---
+title: "ModelWithPosContract"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "modelwithposcontract xot"
+---
 # ModelWithPosContract
 
 Il `ModelWithPosContract` è un'interfaccia che definisce il contratto per i modelli che necessitano di gestire una posizione ordinale.

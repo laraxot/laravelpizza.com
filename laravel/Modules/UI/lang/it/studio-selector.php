@@ -49,6 +49,53 @@ return [
         ],
         'label' => 'Studio Selector',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
+    ],
+    'card' => [
+        'address_unavailable' => [
+            'label' => 'Indirizzo non disponibile',
+        ],
+        'visit_website' => [
+            'label' => 'Visita sito',
+        ],
+        'services_offered' => [
+            'label' => 'Servizi offerti',
+        ],
+        'more_services' => [
+            'label' => '+:count altri',
+        ],
+        'today_hours' => [
+            'label' => 'Oggi: :open - :close',
+        ],
+        'today_closed' => [
+            'label' => 'Oggi: Chiuso',
+        ],
+        'actions' => [
+            'book' => 'Prenota',
+            'details' => 'Dettagli',
+            'call' => 'Chiama',
+        ],
+    ],
+    'list' => [
+        'services_count' => [
+            'label' => ':count servizi',
+        ],
+        'empty' => [
+            'title' => 'Nessuno studio trovato',
+            'description' => 'Non ci sono studi disponibili nell\'area selezionata.',
+        ],
+        'selected' => [
+            'label' => 'Studio selezionato: :name',
+        ],
+    ],
+    'sections' => [
+        'buttons' => [
+            'title' => 'Gli Studi Odontoiatrici più vicini a te',
+        ],
+    ],
+    'buttons' => [
+        'empty' => [
+            'message' => 'Nessuno studio trovato con i criteri di ricerca selezionati.',
+        ],
     ],
 ];

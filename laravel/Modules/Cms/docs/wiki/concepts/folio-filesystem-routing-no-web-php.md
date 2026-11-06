@@ -1,4 +1,5 @@
 ---
+discussions: []
 title: "Folio — routing filesystem, mai web.php FO"
 type: concept
 tags: [cms, folio, routing, frontoffice, religion]
@@ -14,7 +15,10 @@ related:
   - ../troubleshooting/folio-route-not-found.md
   - ../../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md
   - ../../../../../../docs/wiki/memories/folio-no-web-routes-religion.md
+status: draft
 ---
+
+> **Correzione 2026-10-30.** Gli esempi `route('notifications')` e `pages/notifications/` di questo documento sono superati: le pagine CMS (area personale, ticket, FAQ) si linkano con `route('container0.view', ['container0' => 'area-personale', 'slug0' => 'notifiche'])` e `route('container0.index', ['container0' => '...'])` (nome generico, valori nei parametri). Vedi `docs/wiki/memories/translation-protocol-memory-aid.md` §2 e `docs/wiki/rules/folio-named-routes-route-helper.md` nel repo root.
 
 # Folio — routing filesystem, mai web.php FO
 

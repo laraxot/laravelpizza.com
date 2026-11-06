@@ -1,3 +1,14 @@
+---
+title: "module icons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module icons"
+issues: []
+discussions: []
+---
+
 # Icone dei Moduli Laravel
 
 ## Struttura e Convenzioni

@@ -1,3 +1,11 @@
+---
+title: "REGOLA FONDAMENTALE: HasTranslations"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regola fondamentale: hastranslations xot"
+---
 # 🚨 REGOLA FONDAMENTALE: HasTranslations
 
 ## Regola Critica

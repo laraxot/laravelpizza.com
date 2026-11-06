@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Sistema di Traduzione in il progetto"
+module: "Lang"
+type: concept
+tags: [guida, migrazione, step, by]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "guida migrazione step by step"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Sistema di Traduzione in il progetto
 
 ## LangServiceProvider
@@ -67,7 +81,7 @@ return [
 ## Collegamenti
 - [Form Components](../Patient/docs/filament-form-components.md)
 - [Wizard Structure](../Patient/docs/filament-wizard-structure.md)
-- [Best Practices](../Xot/docs/filament-best-practices.md)
+- [Best Practices](../../Xot/docs/filament-best-practices.md)
 
 ## Vedi Anche
 - [Laravel Translations](https://laravel.com/docs/localization)

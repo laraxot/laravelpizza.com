@@ -52,18 +52,16 @@ it('handles empty attachments', function (): void {
     $action = new SaveAttachmentsAction;
 
     $record = $this->makeTestMock(HasMedia::class);
-    $record->method('update')->with([])->willReturn(true);
+    $record->expects($this->never())->method('update');
 
     $action->execute($record, [], [], 'attachments');
-
-    expect(true)->toBeTrue();
 });
 
 it('skips nonexistent files', function (): void {
     $action = new SaveAttachmentsAction;
 
     $record = $this->makeTestMock(HasMedia::class);
-    $record->method('update')->with([])->willReturn(true);
+    $record->expects($this->never())->method('update');
 
     $attachments = ['invoice'];
     $data = [
@@ -71,8 +69,6 @@ it('skips nonexistent files', function (): void {
     ];
 
     $action->execute($record, $attachments, $data, 'attachments');
-
-    expect(true)->toBeTrue();
 });
 
 it('handles storage errors gracefully', function (): void {
@@ -144,7 +140,7 @@ it('cleans up temp files', function (): void {
 
     $action->execute($record, $attachments, $data, 'attachments');
 
-    expect(true)->toBeTrue();
+    expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
 });
 
 it('handles multiple attachments', function (): void {

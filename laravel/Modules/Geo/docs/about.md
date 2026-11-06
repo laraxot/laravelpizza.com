@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "about"
+issues: []
+discussions: []
 title: About BashScripts Fila3
 description: Toolkit di automazione Git per progetti Laravel
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # BashScripts Fila3
@@ -66,6 +74,6 @@ BashScripts Fila3 è ideale per:
 ## Supporto
 
 Per supporto e domande:
-- Documentazione: [docs/](docs/)
+- Documentazione: [docs/](.)
 - Issues: [GitHub Issues](https://github.com/laraxot/bashscripts_fila5/issues)
 - Contatto: marco76tv@gmail.com

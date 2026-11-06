@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Resources\PersonalAccessTokenResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class PersonalAccessTokensTable extends XotBaseResourceTable
@@ -16,7 +17,7 @@ class PersonalAccessTokensTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable(),
+            'id' => IDColumn::make('id')->sortable(),
             'uuid' => TextColumn::make('uuid'),
             'tokenable_type' => TextColumn::make('tokenable_type'),
             'tokenable_id' => TextColumn::make('tokenable_id'),

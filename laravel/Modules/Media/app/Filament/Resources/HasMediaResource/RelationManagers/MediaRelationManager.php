@@ -8,6 +8,7 @@ use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentActio
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Actions\XotBaseActionGroup;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
 
 class MediaRelationManager extends XotBaseRelationManager

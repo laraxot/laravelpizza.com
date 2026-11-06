@@ -1,3 +1,11 @@
+---
+title: "ModelInputContract"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "modelinputcontract xot"
+---
 # ModelInputContract
 
 ## Descrizione

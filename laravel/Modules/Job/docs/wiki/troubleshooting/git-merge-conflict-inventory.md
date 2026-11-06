@@ -1,3 +1,15 @@
+---
+title: "git merge conflict inventory"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git merge conflict inventory"
+issues: []
+discussions: []
+status: draft
+---
+
 # Git Conflict Inventory
 
 - Date: 2026-04-28

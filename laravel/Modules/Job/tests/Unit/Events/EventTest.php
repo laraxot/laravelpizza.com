@@ -3,19 +3,17 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Events;
-use function Safe\class_uses;
+
 use Modules\Job\Events\Event;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Event', function () {
-    it('can be instantiated', function () {
-        $event = new class extends Event {};
-        Assert::assertInstanceOf(Event::class, $event);
-    });
 
     it('uses Dispatchable trait', function () {
         $traits = class_uses(Event::class);

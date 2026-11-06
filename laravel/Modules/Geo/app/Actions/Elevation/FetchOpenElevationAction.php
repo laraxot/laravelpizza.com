@@ -10,15 +10,19 @@ use Modules\Geo\Datas\Elevation\ElevationData;
 
 use function Safe\json_decode;
 
+use Spatie\QueueableAction\QueueableAction;
+
 /**
  * Action per ottenere l'elevazione di un punto usando OpenElevation API.
  */
-readonly class FetchOpenElevationAction
+class FetchOpenElevationAction
 {
-    private const API_URL = 'https://api.open-elevation.com/api/v1/lookup';
+    use QueueableAction;
+
+    private const string API_URL = 'https://api.open-elevation.com/api/v1/lookup';
 
     public function __construct(
-        private Client $client,
+        private readonly Client $client,
     ) {
     }
 

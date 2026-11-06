@@ -1,42 +1,38 @@
 <?php
 
 declare(strict_types=1);
-
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends Migration
+return new class extends XotBaseMigration
 {
-    /**
-     * Esegue la migrazione.
-     */
     public function up(): void
     {
-        Schema::create('notification_logs', function (Blueprint $table) {
+        $this->tableCreate(function (Blueprint $table): void {
             $table->id();
+            $table->string('template_id')->nullable()->index();
             $table->string('notifiable_type');
-            $table->unsignedBigInteger('notifiable_id');
-            $table->string('title');
-            $table->text('content');
-            $table->json('channels');
+            $table->string('notifiable_id');
+            $table->string('channel');
+            $table->string('status')->default('pending');
+            $table->string('status_message')->nullable();
             $table->json('data')->nullable();
-            $table->timestamp('sent_at');
-            $table->string('status'); // sent, failed, pending
-            $table->text('error')->nullable();
-            $table->timestamps();
+            $table->json('metadata')->nullable();
+            $table->string('tenant_id')->nullable();
+            $table->timestamp('sent_at')->nullable();
+            $table->timestamp('delivered_at')->nullable();
+            $table->timestamp('failed_at')->nullable();
+            $table->timestamp('opened_at')->nullable();
+            $table->timestamp('clicked_at')->nullable();
 
             $table->index(['notifiable_type', 'notifiable_id']);
+            $table->index('channel');
             $table->index('status');
             $table->index('sent_at');
         });
-    }
 
-    /**
-     * Annulla la migrazione.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('notification_logs');
+        $this->tableUpdate(function (Blueprint $table): void {
+            $this->updateTimestamps($table, false);
+        });
     }
 };

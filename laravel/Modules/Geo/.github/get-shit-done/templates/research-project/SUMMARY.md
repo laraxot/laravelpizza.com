@@ -1,3 +1,14 @@
+---
+title: "SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SUMMARY"
+issues: []
+discussions: []
+---
+
 # Research Summary Template
 
 Template for `.planning/research/SUMMARY.md` — executive summary of project research with roadmap implications.
@@ -131,6 +142,14 @@ Phases with standard patterns (skip research-phase):
 - [Source] — [finding, needs validation]
 
 ---
+title: "SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SUMMARY"
+issues: []
+discussions: []
 *Research completed: [date]*
 *Ready for roadmap: yes*
 ```

@@ -1,5 +1,14 @@
 ---
+title: "testing registration widget"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing registration widget"
+issues: []
+discussions: []
 description: Testing strategy for RegistrationWidget
+status: draft
 ---
 
 # Testing the RegistrationWidget (Filament / Livewire)

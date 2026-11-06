@@ -1,3 +1,15 @@
+---
+title: "errori comuni da evitare"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errori comuni da evitare"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errori Comuni da Evitare nelle Implementazioni di Moduli
 # Errori Comuni da Evitare nelle Implementazioni di Moduli <nome progetto>
 

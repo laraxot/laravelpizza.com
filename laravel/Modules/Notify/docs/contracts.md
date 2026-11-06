@@ -1,3 +1,16 @@
+---
+qmd: "contracts"
+issues: []
+discussions: []
+title: "Contracts"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Contracts
 
 Questo documento contiene i collegamenti a tutte le interfacce principali del sistema.

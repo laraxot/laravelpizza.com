@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Audit 'Obbligatorio' in Non-Italian Translation Files"
+module: "Lang"
+type: concept
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Audit "Obbligatorio" in Non-Italian Translation Files
 
 **Scope**: Identificazione della parola "obbligatorio" e varianti in file di traduzione non italiani

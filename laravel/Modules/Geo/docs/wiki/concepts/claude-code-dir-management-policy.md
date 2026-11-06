@@ -1,4 +1,9 @@
 ---
+title: "claude code dir management policy"
+tags: [documentation]
+qmd: "claude code dir management policy"
+issues: []
+discussions: []
 type: concept
 module: Geo
 component: claude-code
@@ -6,6 +11,7 @@ created: 2026-04-30
 updated: 2026-04-30
 stories:
   - 8-99-cleanup-bmad-dir
+status: draft
 ---
 
 # Claude Code `.claude` Directory Management Policy

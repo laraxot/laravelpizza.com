@@ -1,3 +1,15 @@
+---
+title: "phpstan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan (Claude)
 
 ## Rules
@@ -185,5 +197,5 @@ When PHPStan access is limited:
 ## Links
 
 - [Claude docs index](./context.md)
-- [General PHPStan guide](../../bashscripts/tools/prompts/phpstan.txt)
+- [General PHPStan guide](../../../../../bashscripts/tools/prompts/phpstan.txt)
 - [General docs](../../docs/README.md)

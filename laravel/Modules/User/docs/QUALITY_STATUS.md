@@ -3,9 +3,14 @@ title: "User Module Quality Status"
 type: "quality-report"
 date: 2026-07-08
 version: 1.2
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "modulo user   stato qualità user"
+status: superseded
+superseded_by: quality-status-user-module.md
 ---
 
-# Modulo User — Stato Qualità
+# Modulo User: Stato Qualità
 
 ## Status Summary
 

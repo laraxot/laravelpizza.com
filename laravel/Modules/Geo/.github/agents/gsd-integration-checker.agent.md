@@ -1,4 +1,12 @@
 ---
+title: "gsd integration checker.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd integration checker.agent"
+issues: []
+discussions: []
 name: gsd-integration-checker
 description: Verifies cross-phase integration and E2E flows. Checks that phases connect properly and user workflows complete end-to-end.
 tools: ['read', 'execute', 'search', 'search']

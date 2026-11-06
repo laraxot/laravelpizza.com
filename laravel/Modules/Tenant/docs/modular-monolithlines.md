@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Modular Monolith Guidelines for Laravel"
+module: "Tenant"
+type: concept
+tags: [modular, monolithlines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "modular monolithlines"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Modular Monolith Guidelines for Laravel
 
 ## Overview

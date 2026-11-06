@@ -1,11 +1,17 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff daterange fields contract naming"
+issues: []
+discussions: []
 title: "handoff — DateRangeFieldsContract naming"
 type: handoff
 module: Sigma
 status: completed
 completed: 2026-06-15
 related:
-  - ../../../../docs/wiki/rules/contract-naming-suffix.md
+  - ../../../../../docs/wiki/rules/contract-naming-suffix.md
   - ../wiki/rules/model-contracts-placement.md
 ---
 

@@ -11,9 +11,10 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
   - ../../../../../../docs/wiki/bmad/architecture-folio-page-shell.md
-  - ../../../folio_routing_system.md
+  - ../../folio_routing_system.md
   - ../../../../../../docs/wiki/memories/volt-route-params-mount-contract.md
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/folio-route-params-mount.md
+  - ../../../../../Themes/Sixteen/docs/wiki/concepts/folio-route-params-mount.md
+status: draft
 ---
 
 # Folio page shell — `mount()`, `<x-page>`, `@volt` statico
@@ -49,7 +50,10 @@ new class extends Component {
 };
 ```
 
-**Vietato:** `container0.list`, `match` locale→`home`, `CmsPage`/`pageTitle` nel mount. Canon Sixteen: [folio-container0-index-filament-way.md](../../../../../../docs/wiki/memories/folio-container0-index-filament-way.md).
+**Vietato:** `container0.list`, `match` locale→`home`, `CmsPage`/`pageTitle` nel mount,
+`nativePage`/`utilityPage`, `@include` pages, `x-dynamic-component` layout.
+Canon Sixteen: [folio-container0-index-filament-way.md](../../../../../../docs/wiki/memories/folio-container0-index-filament-way.md) ·
+[container0-index-shell-contract.md](../../../../../Themes/Sixteen/docs/bmad/container0-index-shell-contract.md) (D20).
 
 ## Esempio `[container1]`
 
@@ -93,3 +97,8 @@ Shell canon: [folio-page-shell-no-props-extends.md](../../../../../../docs/wiki/
 
 - [page-component-context-data.md](../../page-component-context-data.md)
 - [x-page-data-bag-only.md](./x-page-data-bag-only.md)
+
+
+## Radice del componente Volt (2026-10-13)
+
+`cms::components.page` (`<x-page>`) non ha un elemento radice. Se lo si avvolge in `@volt`, Livewire stampa il `wire:id` del Volt sul primo tag a inizio riga (`vendor/livewire/livewire/src/Drawer/Utils.php:16`), che con un widget Livewire come blocco cade DENTRO il widget: `wire:model` e `callSchemaComponentMethod` colpiscono il Volt (`MethodNotFoundException`). Regola: il Volt ha una radice propria (`div.page-content`). Dettagli e prova: `Themes/Sixteen/docs/decision-log/D15-volt-fragment-explicit-root.md`.

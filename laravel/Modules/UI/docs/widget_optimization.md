@@ -1,3 +1,14 @@
+---
+title: "Ottimizzazioni Widget - Modulo UI"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui]
+qmd: "ottimizzazioni widget - modulo ui ui"
+---
+
 # Ottimizzazioni Widget - Modulo UI
 
 ## Panoramica
@@ -109,7 +120,7 @@ abstract class UIBaseStatsWidget extends XotBaseStatsOverviewWidget
 {
     protected static ?int $sort = 0;
     protected static ?string $pollingInterval = null;
-    protected static bool $isLazy = true;
+    protected static ?bool $isLazyLoaded = true;
     
     // Configurazioni comuni per tutti i widget di statistiche UI
     protected static function getDefaultStats(): array
@@ -149,7 +160,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 abstract class UIBaseTestWidget extends XotBaseWidget
 {
     protected static string $view = 'ui::filament.widgets.base-test';
-    protected static bool $isLazy = true;
+    protected static ?bool $isLazyLoaded = true;
     protected static ?string $pollingInterval = null;
     
     // Configurazioni comuni per tutti i widget di test UI

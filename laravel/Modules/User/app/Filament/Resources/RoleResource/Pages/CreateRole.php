@@ -12,7 +12,6 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 class CreateRole extends XotBaseCreateRecord
 {
-    // //
     /** @var Collection<int, string> */
     public Collection $permissions;
 
@@ -21,10 +20,11 @@ class CreateRole extends XotBaseCreateRecord
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         $this->permissions = collect($data)
+            ->keys()
             ->filter(
-                static fn ($_permission, $key): bool => ! in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'),
+                static fn (string $key): bool => ! in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'),
             )
-            ->keys();
+            ->values();
 
         /** @var array<string, mixed> $res */
         $res = Arr::only($data, ['name', 'guard_name', 'team_id']);

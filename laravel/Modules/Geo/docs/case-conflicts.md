@@ -1,9 +1,21 @@
+---
+title: "case conflicts"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-10-25
+qmd: "case conflicts"
+issues: []
+discussions: []
+status: draft
+---
+
 # Case-Insensitive File Conflicts
 
 Elenco dei file nel modulo `Geo` che presentano duplicati differenziati solo dalla capitalizzazione. Va mantenuta una singola variante conforme agli standard Laraxot, aggiornando successivamente i riferimenti.
 
-- `Modules/Geo`: `CHANGELOG.md`, `changelog.md`
-- `Modules/Geo`: `LICENSE.md`, `license.md`
+- `Modules/Geo`: risolto — resta `CHANGELOG.md`, variante `changelog.md` archiviata come `.old`
+- `Modules/Geo`: risolto — resta `LICENSE.md`, variante `license.md` archiviata come `.old`
 - `Modules/Geo/.github`: `CONTRIBUTING.md`, `contributing.md`
 - `Modules/Geo/.github`: `FUNDING.yml`, `funding.yml`
 - `Modules/Geo/.github`: `SECURITY.md`, `security.md`
@@ -12,12 +24,9 @@ Elenco dei file nel modulo `Geo` che presentano duplicati differenziati solo dal
 - `Modules/Geo/app/Filament/Widgets`: `ImprovedLocationMapWidget.wip`, `improvedlocationmapwidget.wip`
 - `Modules/Geo/app/Http/Livewire`: `Test.test`, `test.test`
 - `Modules/Geo/app/View/Components/Card`: `Place.json`, `place.json`
-- `Modules/Geo/docs`: `PHPSTAN_FIXES.md`, `phpstan_fixes.md`
-- `Modules/Geo/docs`: `PROJECT.md`, `project.md`
-- `Modules/Geo/docs`: `ADVANCED_FEATURES.md`, `advanced_features.md`
-- `Modules/Geo/docs`: `MCP_SERVER_RECOMMENDED.md`, `mcp_server_recommended.md`
-- `Modules/Geo/docs`: `COMPREHENSIVE_GUIDE.md`, `comprehensive_guide.md`
-- `Modules/Geo/docs`: `TECHNICAL.md`, `technical.md`
+- `Modules/Geo/docs` (radice): **0 gruppi** al 2026-10-25 — nessuna coppia case-twin residua: resta il canonico minuscolo, il gemello e archiviato come `*.old` (eccezione ammessa: `LICENSE` senza estensione)
+- `Modules/Geo/docs/raw` (archivio storico, non indicizzato): **16 gruppi** invariati — `raw/history` 15, `raw/errors` 1
+- `Modules/Geo/docs/wiki`, `Modules/Geo/docs/schema`, `Modules/Geo/docs/llm-wiki`: `AGENTS.md`/`agents.md` (3 gruppi, aperti)
 - `Modules/Geo/resources/css`: `MarkerCluster.Default.css`, `markercluster.default.css`
 - `Modules/Geo/resources/css`: `MarkerCluster.css`, `markercluster.css`
 - `Modules/Geo/resources/css`: `L.Control.Locate.mapbox.min.css`, `l.control.locate.mapbox.min.css`

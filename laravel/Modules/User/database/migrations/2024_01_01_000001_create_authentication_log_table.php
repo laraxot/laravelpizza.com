@@ -3,9 +3,17 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+use Modules\User\Models\AuthenticationLog;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+/**
+ * Owner migration for authentication_logs on connection `user`
+ * (DB_DATABASE_USER / fixcity_user). Never create this table on fixcity_data.
+ */
+return new class extends XotBaseMigration
+{
+    protected ?string $model_class = AuthenticationLog::class;
+
     /**
      * Run the migrations.
      */
@@ -14,7 +22,6 @@ return new class extends XotBaseMigration {
         // -- CREATE --
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            // $table->morphs('authenticatable');
             $table->uuidMorphs('authenticatable', 'k_auth_log_morph');
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
@@ -27,9 +34,6 @@ return new class extends XotBaseMigration {
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-            // if (! $this->hasColumn('email'))
-            //    $table->string('email')->nullable();
-            // }
             $this->updateTimestamps($table);
         });
     }

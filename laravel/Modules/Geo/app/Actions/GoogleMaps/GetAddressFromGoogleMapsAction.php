@@ -12,14 +12,18 @@ use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResponseData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResultData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
+use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
 use Spatie\LaravelData\DataCollection;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Gestisce le richieste e l'elaborazione delle risposte dell'API di geocodifica di Google Maps.
  */
 final class GetAddressFromGoogleMapsAction
 {
-    private const BASE_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
+    use QueueableAction;
+
+    private const string BASE_URL = GeoApiEndpoints::GOOGLE_GEOCODING;
 
     /**
      * @throws GoogleMapsApiException Se la richiesta fallisce o i dati non sono validi
@@ -83,7 +87,7 @@ final class GetAddressFromGoogleMapsAction
      */
     private function getFirstResult(GoogleMapResponseData $responseData): GoogleMapResultData
     {
-        $firstResult = $responseData->results->first();
+        $firstResult = $responseData->results->toCollection()->first();
 
         if (! $firstResult instanceof GoogleMapResultData) {
             throw GoogleMapsApiException::noResultsFound();
@@ -119,13 +123,8 @@ final class GetAddressFromGoogleMapsAction
         /** @var GoogleMapAddressComponentData|null $component */
         $component = $components
             ->toCollection()
-            ->first(function ($component) use ($types) {
-                if (! $component instanceof GoogleMapAddressComponentData) {
-                    return false;
-                }
-
-                return ! empty($component->types) && count(array_intersect($component->types, $types)) > 0;
-            });
+            ->first(static fn (GoogleMapAddressComponentData $component): bool => ! empty($component->types)
+                && count(array_intersect($component->types, $types)) > 0);
 
         if (! $component instanceof GoogleMapAddressComponentData) {
             return null;

@@ -14,7 +14,6 @@
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="{{ $meta->getType() }}">
-    <meta property="og:site_name" content="{{ $meta->getSitename() }}">
     <meta property="og:title" content="{{ $meta->getTitle() }}">
     <meta property="og:description" content="{{ $meta->getDescription(limit: 160) }}">
     <meta property="og:url" content="{{ $meta->getCanonical() }}">
@@ -48,7 +47,7 @@
     --}}
 
     @if(isset($pageSchema) && is_array($pageSchema) && $pageSchema !== [])
-        <script type="application/ld+json">{!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+        <script type="application/ld+json">{!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_THROW_ON_ERROR) !!}</script>
     @endif
 
     {{ $slot }}

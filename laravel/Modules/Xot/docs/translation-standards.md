@@ -1,3 +1,13 @@
+---
+title: "Standard di Traduzione - Documentazione Root"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Standard di Traduzione - Documentazione Root"
+---
 # Standard di Traduzione - Documentazione Root
 
 ## Panoramica
@@ -107,7 +117,7 @@ declare(strict_types=1);
 
 /**
  * Traduzioni per [descrizione]
- *
+ * 
  * @package Modules\{ModuleName}\Resources
  */
 
@@ -272,4 +282,4 @@ return [
 3. **Organizzazione**: Struttura gerarchica coerente
 4. **Naming**: Convenzioni standardizzate
 
-*Ultimo aggiornamento: Giugno 2025*
+*Ultimo aggiornamento: Giugno 2025* 

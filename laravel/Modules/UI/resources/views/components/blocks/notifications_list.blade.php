@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Notifiche'])
+@props(['title' => __('ui::blocks_notifications_list.header.title.title')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -11,16 +10,16 @@ declare(strict_types=1);
     <!-- Filtri -->
     <div class="mb-6 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200">
-            Tutte
+            {{ __('ui::blocks_notifications_list.filters.all.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Non lette
+            {{ __('ui::blocks_notifications_list.filters.unread.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Appuntamenti
+            {{ __('ui::blocks_notifications_list.filters.appointments.label') }}
         </button>
         <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-            Documenti
+            {{ __('ui::blocks_notifications_list.filters.documents.label') }}
         </button>
     </div>
     
@@ -62,7 +61,7 @@ declare(strict_types=1);
                         <div class="mt-2">
                             <a href="{{ $notification->action_url }}" 
                                class="text-sm font-medium text-blue-600 hover:text-blue-800">
-                                {{ $notification->action_text ?? 'Leggi di più' }} →
+                                {{ $notification->action_text ?? __('ui::blocks_notifications_list.actions.read_more.label') }} →
                             </a>
                         </div>
                     @endif
@@ -71,7 +70,7 @@ declare(strict_types=1);
                 @if(!$notification->read_at)
                     <div class="ml-4">
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                            Nuova
+                            {{ __('ui::blocks_notifications_list.badges.new.label') }}
                         </span>
                     </div>
                 @endif
@@ -81,9 +80,9 @@ declare(strict_types=1);
                 <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                 </svg>
-                <h3 class="mt-2 text-sm font-medium text-gray-900">Nessuna notifica</h3>
+                <h3 class="mt-2 text-sm font-medium text-gray-900">{{ __('ui::blocks_notifications_list.empty.no_notifications.title') }}</h3>
                 <p class="mt-1 text-sm text-gray-500">
-                    Non hai ricevuto ancora nessuna notifica.
+                    {{ __('ui::blocks_notifications_list.empty.no_notifications.message') }}
                 </p>
             </div>
         @endforelse

@@ -1,3 +1,15 @@
+---
+title: "phpstan errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Errors - Geo Module
 
 **Date**: [DATE]
@@ -180,7 +192,6 @@ public static function getColumnDefinitions(): array
 5. Document the chosen solution
 
 ---
-
 **Status**: 🔴 CRITICAL - Needs immediate attention
 **Module Owner**: Geo Module Team
 

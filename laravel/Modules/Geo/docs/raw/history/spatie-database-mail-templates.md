@@ -1,3 +1,14 @@
+---
+title: "spatie database mail templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie database mail templates"
+issues: []
+discussions: []
+---
+
 # Spatie Laravel Database Mail Templates - Guida Completa
 
 ## Introduzione
@@ -674,4 +685,12 @@ Event::listen('Spatie\MailTemplates\Events\MailTemplateSent', function ($event) 
 
 ---
 
+title: "spatie database mail templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie database mail templates"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Sistema di documentazione automatica*

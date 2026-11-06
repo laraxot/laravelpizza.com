@@ -7,11 +7,11 @@ namespace Modules\User\Filament\Resources\TeamInvitationResource\Pages;
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
 use Modules\User\Filament\Resources\TeamInvitationResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-
 /**
  * Class ListTeamInvitations.
  */
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+
 class ListTeamInvitations extends XotBaseListRecords
 {
     protected static string $resource = TeamInvitationResource::class;

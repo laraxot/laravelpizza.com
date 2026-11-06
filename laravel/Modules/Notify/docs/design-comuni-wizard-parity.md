@@ -1,3 +1,15 @@
+---
+title: "design comuni wizard parity"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni wizard parity"
+issues: []
+discussions: []
+status: draft
+---
+
 # Design Comuni Wizard Parity
 
 **Status**: Active  
@@ -8,7 +20,6 @@
 **Theme**: Sixteen
 
 ---
-
 ## Obiettivo
 
 Wizard step 2 deve avere **alto HTML parity** e **altissimo visual parity** con:
@@ -71,18 +82,23 @@ public function getDataSchema(): array
         // Sezione LUOGO
         Section::make(__('fixcity::segnalazione.sections.place.label'))
             ->description(__('fixcity::segnalazione.sections.place.description'))
+        Section::make(__('ptv::segnalazione.sections.place.label'))
+            ->description(__('ptv::segnalazione.sections.place.description'))
             ->aside()       // Sidebar heading style
             ->compact()     // Compact card style
             ->schema([...]),
 
         // Sezione DISSERVIZIO
         Section::make(__('fixcity::segnalazione.sections.inefficiency.label'))
+        Section::make(__('ptv::segnalazione.sections.inefficiency.label'))
             ->compact()
             ->schema([...]),
 
         // Sezione AUTORE
         Section::make(__('fixcity::segnalazione.sections.author.label'))
             ->description(__('fixcity::segnalazione.sections.author.description'))
+        Section::make(__('ptv::segnalazione.sections.author.label'))
+            ->description(__('ptv::segnalazione.sections.author.description'))
             ->aside()
             ->compact()
             ->schema([...]),

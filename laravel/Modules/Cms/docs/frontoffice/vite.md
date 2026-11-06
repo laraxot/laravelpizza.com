@@ -1,3 +1,15 @@
+---
+title: "vite"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vite"
+issues: []
+discussions: []
+status: draft
+---
+
 # Asset Bundling con Vite
 
 ## Introduzione

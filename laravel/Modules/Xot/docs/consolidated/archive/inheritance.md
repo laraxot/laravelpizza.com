@@ -1,3 +1,11 @@
+---
+title: "Regole di Ereditarietà"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole di ereditarietà xot"
+---
 # Regole di Ereditarietà
 
 ## Principi Fondamentali

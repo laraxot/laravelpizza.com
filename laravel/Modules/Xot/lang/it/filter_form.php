@@ -48,5 +48,6 @@ return [
         'delete' => [
             'label' => 'Elimina Filter Form',
         ],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
     ],
 ];

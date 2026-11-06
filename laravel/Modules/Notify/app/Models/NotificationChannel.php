@@ -12,20 +12,18 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property string|null $name
  * @property string|null $driver
  * @property array<string, mixed>|null $config
- * @property bool|null $is_enabled
+ * @property bool $is_enabled
  * @property int|null $priority
  * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $deleter
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read ProfileContract|null $updater
  *
- * @method static \Modules\Notify\Database\Factories\NotificationChannelFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel query()
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class NotificationChannel extends BaseModel
 {
@@ -36,15 +34,13 @@ class NotificationChannel extends BaseModel
         'driver',
         'config',
         'is_enabled',
-        'priority',
-    ];
+        'priority'];
 
     protected function casts(): array
     {
         return array_merge(parent::casts(), [
             'config' => 'array',
             'is_enabled' => 'boolean',
-            'priority' => 'integer',
-        ]);
+            'priority' => 'integer']);
     }
 }

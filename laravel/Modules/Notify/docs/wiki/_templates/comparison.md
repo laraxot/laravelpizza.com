@@ -1,4 +1,7 @@
 ---
+qmd: "comparison"
+issues: []
+discussions: []
 title: "Comparison Title"
 type: comparison
 sources: ["raw/articles/source-1.md", "raw/articles/source-2.md"]
@@ -7,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [comparison, analysis]
 related: []
+status: draft
 ---
 
 # {{title}}

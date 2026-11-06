@@ -1,3 +1,24 @@
+---
+title: "User Module - Quality Status (November 2025)"
+type: concept
+tags: [quality, status, 2025]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality-status-2025-11 user module - quality status (november 2025)"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # User Module - Quality Status (November 2025)
 
 ## 🎯 Overview
@@ -37,6 +58,8 @@ if ($user->type !== null && is_object($user->type) && method_exists($user->type,
 
 ### 2. EditUserWidget.php
 **Issues**:
+### 2. EditUserWidget.php  
+**Issues**: 
 - Property type mismatch (mixed assigned to string)
 - Parameter type errors (mixed to Str::of())
 - Return type error (array<null> instead of array<string, mixed>)
@@ -49,7 +72,7 @@ if ($user->type !== null && is_object($user->type) && method_exists($user->type,
 // Before
 $this->model = $this->resource::getModel();
 
-// After
+// After  
 $modelClass = $this->resource::getModel();
 Assert::string($modelClass, 'Resource getModel() must return string');
 $this->model = $modelClass;
@@ -71,7 +94,7 @@ return $result;
 // Before
 /** @var array<int|string, Component> $schema */
 
-// After
+// After  
 /** @var array<int|string, \Filament\Forms\Components\Component> $schema */
 ```
 
@@ -103,7 +126,7 @@ Estimated ~5 errors remaining (need full PHPStan run to confirm exact count and 
 
 **Module Criticality**: HIGHEST
 - Core authentication
-- User management
+- User management  
 - Authorization
 - Multi-tenant access control
 
@@ -160,3 +183,19 @@ After fixes:
 *PHPStan: IMPROVED (13 → ~5 errors)*
 *Status: IN PROGRESS*
 *Priority: CRITICAL*
+---
+module: theme
+topic: quality-status
+canonical: ../../../Themes/docs/shared-components/quality-status.md
+related:
+  - "./00-index.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/quality-status.md

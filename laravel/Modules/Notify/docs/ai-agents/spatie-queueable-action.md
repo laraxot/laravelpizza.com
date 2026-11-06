@@ -1,3 +1,15 @@
+---
+title: "spatie queueable action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie queueable action"
+issues: []
+discussions: []
+status: draft
+---
+
 # Spatie Queueable Action
 
 **REGOLA ASSOLUTA**: MAI creare Service classes. Tutta la business logic va in QueueableAction.

@@ -1,3 +1,15 @@
+---
+title: "reusability"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusability"
+issues: []
+discussions: []
+status: draft
+---
+
 # Riutilizzabilità dei Temi
 
 ## Tema One (`laraxot/theme_one_fila5`)

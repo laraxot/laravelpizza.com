@@ -1,3 +1,15 @@
+---
+title: "quick commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick commands"
+issues: []
+discussions: []
+status: draft
+---
+
 # Quick Commands
 
 ## Testing
@@ -41,3 +53,4 @@ composer go
 
 ---
 [Back to index](../index.md)
+[Back to index](../../../index.md)

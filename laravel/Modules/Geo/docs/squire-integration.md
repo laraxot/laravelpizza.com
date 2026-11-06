@@ -1,3 +1,15 @@
+---
+title: "squire integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "squire integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione con Squire per dati geografici
 
 ## Contesto

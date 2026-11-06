@@ -1,353 +1,91 @@
 ---
-title: "Cms Module Documentation"
+qmd: "README"
+issues: []
+discussions: []
+title: "Cms: README"
 type: documentation
-tags: [module, documentation]
-created: 2026-06-05
-updated: 2026-06-05
+tags: [module, documentation, cms, content-management]
+created: 2026-07-14
+updated: 2026-10-14
+status: active
 ---
 
-# Modulo CMS - Content Management System
+# Modulo Cms
 
-## 🎯 Panoramica
-Sistema completo di gestione contenuti basato su Filament Builder Blocks per <main module>.
+Modulo Laraxot `Modules\Cms` (alias `cms`, priorita' 3 in `module.json`, provider `CmsServiceProvider`, `Filament\AdminPanelProvider`, `FolioVoltServiceProvider`). Verificato sul codice il 2026-10-14. Il testo precedente di questo README (Services `PageService`/`BlockService`/`ContentService`, modello `Block`, `PublishPageAction`, `CreatePageAction`, `Page::addBlock()`, config `config/local/cms/blocks.php`, test `PageCreationTest.php`) descriveva classi e file che non esistono ed e' stato sostituito; i suoi riferimenti a `block-system.md`, `frontend-rendering.md` e `folio-integration.md` puntavano a file mai esistiti.
 
-## 🏗️ Componenti Principali
-- **PageResource**: Interfaccia amministrativa Filament
-- **BlockSystem**: Sistema modulare blocchi contenuto  
-- **ContentBuilder**: Composizione dinamica pagine
-- **Storage JSON**: Persistenza contenuti ottimizzata
+## Come il sito serve le pagine (verificato)
 
-## 📁 Struttura
-```
-Modules/Cms/
-├── app/Filament/Resources/PageResource.php
-├── app/Filament/Fields/PageContentBuilder.php
-├── docs/                    # Documentazione completa
-└── resources/views/components/
-```
+1. **Il contenuto sono file JSON per tenant.** `Models\Page` estende `BaseModelLang`, usa `HasBlocks` e il trait `SushiToJsons` del modulo Tenant: ogni riga e' un file `laravel/config/<tenant>/database/content/pages/<slug>.json` (per il tenant `local/fixcity`: 99 file al 2026-10-14; `sections/` ne ha 8). Colonne dello schema: `id`, `title` (json per lingua), `slug`, `middleware` (json), `content`, `description`, `layout`, `blocks`, `content_blocks`, `sidebar_blocks`, `footer_blocks` (json per lingua), `created_at/by`, `updated_at/by`. Come si sceglie il tenant: [Tenant](../../Tenant/docs/README.md).
+2. **Le rotte sono Folio, non route Laravel.** `Providers\FolioVoltServiceProvider` monta con `Folio::path()` la cartella `resources/views/pages` del tema pubblico (`XotData::getPubThemeViewPath('pages')`, oggi Sixteen) sotto `/{locale}` per ogni lingua di `laravellocalization.supportedLocales` (a runtime `de,en,es,it`), e lo stesso per `resources/views/pages` di ogni modulo; poi `Volt::mount()` su `livewire/` e `components/blocks/` del tema. `routes/web.php` del Cms contiene solo `/` che reindirizza a `/{locale}`.
+3. **Lo slug e' l'URL.** Pagina generica `pages/[container0]/[slug0]`: `Actions\ResolvePageAction` prova, in ordine, un modello dinamico (`profile`; `blog` e `events` dal modulo Blog, solo se installato; `xra.container0_model_map`; `Modules\<Container>\Models\<Singolare>`), poi la pagina `<container0>.<slug0>`, poi `<container0>.view`. Il middleware dichiarato nel JSON (`"middleware": ["auth"]`) lo applica `Http\Middleware\PageSlugMiddleware`, agganciato nelle pagine del tema `[container0]/[slug0]/index.blade.php` e `tests/[slug].blade.php`. Da URL a JSON: [DCP-41](./stories/dcp-41-url-to-json-resolver.story.md) e `bashscripts/tools/cms/page-json-for-url.sh <url>`.
+4. **I blocchi sono voci JSON con un `type`.** Esempio da `home.json` (lingue `it`, `en`, `de`, `es`, 4 blocchi per lingua): `home.hero`, `ticket.map-preview`, `how-it-works`, `quick-actions`. `Models\Traits\HasBlocks::getBlocks($side)` legge `blocks` o `<side>_blocks` per la lingua primaria e produce `Datas\BlockData`; `Actions\ResolveLocalizedBlockDataAction` risolve i valori per lingua, `Actions\ResolveBlockQueryAction` esegue la query dichiarata nel blocco (`model`, `scope`/`scopes`, `orderBy`, `limit`, `wrap_in`). Il rendering sono componenti Blade in `Themes/Sixteen/resources/views/components/blocks/` (166 voci) e `Modules/Cms/resources/views/components/blocks/`.
+5. **Metatag e JSON-LD.** `View\Components\Metatags` legge `Modules\Xot\Datas\MetatagData` e `Actions\BuildPageSchemaAction` costruisce lo schema della pagina. Il modulo Seo non e' coinvolto.
 
-## 🔗 Collegamenti Documentazione
+## Amministrazione Filament
 
-### Documentazione Interna
-- [Sistema Filament Blocks](./filament-blocks-system.md)
-- [Strategia Contenuti](./content-management-strategy.md)
-- [Regole Link Relativi](./link-relativi-regole.md) ⭐ **CRITICO**
-- [Componenti Header](./componenti-header.md)
-- [Processo Build Tema](./theme-build-process.md)
-- [Architettura Frontend](./frontend-architecture/struttura-homepage.md)
-- [Testing Guidelines](./tests/architecture-separation-rules.md)
-- [Page Directory Structure](./page-directory-structure.md) ⭐
-- [Merge Conflict Marker Cleanup](./merge-conflict-marker-cleanup.md)
+Risorse: `PageResource`, `SectionResource`, `MenuResource`, `PageContentResource`, `AttachmentResource`. Blocchi per il Builder in `app/Filament/Blocks/` (17 classi: `HeroBlock`, `CtaBlock`, `ParagraphBlock`, `NavigationBlock`, ...). Cluster `Appearance` con pagine `Breadcrumb`, `Footer`, `Headernav` (salvano con `SaveFooterConfigAction`, `SaveHeadernavConfigAction` nella config del tenant), pagina `Themes`. Componenti Volt di autenticazione in `app/Http/Volt/` (Login, Register, Verify, Password).
 
-### Moduli Correlati
-- [Modulo UI - Blocchi](../../UI/docs/blocks-system.md)
-- [Modulo <main module> - Homepage](../../<main module>/docs/homepage-architecture.md)
-
-### Documentazione Root
-- [Architettura Generale](../../../../docs/architecture.md)
-- [Best Practices UX](../../../../docs/ux-design-principles.md)
-
-## 🚨 Regole Critiche
-
-### Link Relativi Obbligatori
-**TUTTI i link .md DEVONO essere relativi**
-- ✅ `./file.md` (stesso modulo)
-- ✅ `../../Modulo/docs/file.md` (altro modulo)  
-- ✅ `../../../../docs/file.md` (root docs)
-- ❌ `/var/www/html/...` (VIETATO)
-
-### Convenzioni
-- File docs: minuscolo (eccetto README.md)
-- Link: sempre relativi alla posizione file
-- Filosofia: "Non avrai altro path all'infuori del relativo"
-
----
-**
-# 🗂️ CMS Module - Content Management System
-
-## 📋 Quick Reference
-| Categoria | Guida | File |
-|-----------|-------| ---- |
-| **Content** | Management | [content-management.md](content-management.md) |
-| **Components** | Blade | [components.md](components.md) |
-| **Filament** | Integration | [filament-integration.md](filament-integration.md) |
-| **Folio** | Pages | [folio-pages.md](folio-pages.md) |
-| **Homepage** | Structure | [homepage-management.md](homepage-management.md) |
-| **Architecture** | XotData | [architecture-xotdata-pattern.md](architecture-xotdata-pattern.md) |
-| **Troubleshooting** | Git Issues | [git-conflicts-resolution-impact.md](git-conflicts-resolution-impact.md) |
-
-## 🎯 Core Features
-- **Content Management**: Flexible content creation and editing
-- **Folio Integration**: File-based routing system
-- **Filament Resources**: Admin panel for content management
-- **Blade Components**: Reusable UI components
-- **Homepage Builder**: Dynamic homepage construction
-- **Multi-language**: Full i18n support
-
-## 📁 Documentation Structure
-- Core files in root level
-- `/blocks/` - Content blocks documentation
-- `/components/` - Component guides
-- `/content/` - Content management
-- `/frontoffice/` - Public facing features
-- `/standards/` - Development standards
-
----
-*Principio DRY: Sistema CMS flessibile, documentazione organizzata per funzionalità.*
-
-# Modulo CMS
-> **Collegamenti correlati**
-> - [README.md documentazione generale <main module>](../../../../../docs/README.md)
-> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
-> - [README.md modulo CMS](../../../../laravel/Modules/Cms/docs/README.md)
-> - [README.md modulo Dental](../../../../laravel/Modules/Dental/docs/README.md)
-> - [README.md modulo GDPR](../../../../laravel/Modules/Gdpr/docs/README.md)
-> - [README.md modulo User](../../../../laravel/Modules/User/docs/README.md)
-> - [README.md modulo Lang](../../../../laravel/Modules/Lang/docs/README.md)
-> - [README.md modulo Patient](../../../../laravel/Modules/Patient/docs/README.md)
-> - [README.md modulo Activity](../../../../laravel/Modules/Activity/docs/README.md)
-> - [README.md modulo Media](../../../../laravel/Modules/Media/docs/README.md)
-> - [README.md modulo Notify](../../../../laravel/Modules/Notify/docs/README.md)
-> - [README.md modulo Reporting](../../../../laravel/Modules/Reporting/docs/README.md)
-> - [README.md modulo Tenant](../../../../laravel/Modules/Tenant/docs/README.md)
-> - [README.md modulo UI](../../../../laravel/Modules/UI/docs/README.md)
-> - [README.md modulo Xot](../../../../laravel/Modules/Xot/docs/README.md)
-> - [README.md modulo Chart](../../../../laravel/Modules/Chart/docs/README.md)
-> - [README.md tema One](../../../../laravel/Themes/One/docs/README.md)
-> - [README.md tema Two](../../../../laravel/Themes/Two/docs/README.md)
-> - [Collegamenti documentazione centrale](../../../../../docs/collegamenti-documentazione.md)
-
-> - [README.md documentazione generale <main module>](../../../../../docs/README.md)
-> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
-> - [README.md modulo CMS](../../../../laravel/Modules/Cms/docs/README.md)
-> - [README.md modulo Dental](../../../../laravel/Modules/Dental/docs/README.md)
-> - [README.md modulo GDPR](../../../../laravel/Modules/Gdpr/docs/README.md)
-> - [README.md modulo User](../../../../laravel/Modules/User/docs/README.md)
-> - [README.md modulo Lang](../../../../laravel/Modules/Lang/docs/README.md)
-> - [README.md modulo Media](../../../../laravel/Modules/Media/docs/README.md)
-> - [README.md modulo Notify](../../../../laravel/Modules/Notify/docs/README.md)
-> - [README.md modulo Reporting](../../../../laravel/Modules/Reporting/docs/README.md)
-> - [README.md modulo Tenant](../../../../laravel/Modules/Tenant/docs/README.md)
-> - [README.md modulo UI](../../../../laravel/Modules/UI/docs/README.md)
-> - [README.md modulo Xot](../../../../laravel/Modules/Xot/docs/README.md)
-> - [README.md modulo Chart](../../../../laravel/Modules/Chart/docs/README.md)
-> - [README.md tema One](../../../../laravel/Themes/One/docs/README.md)
-> - [Collegamenti documentazione centrale](../../../../../docs/collegamenti-documentazione.md)
-
-# Jigsaw Docs Starter Template
-
-## Introduzione
-Il modulo CMS gestisce i contenuti e i widget del sistema, fornendo un sistema flessibile per la gestione dinamica dei contenuti e l'ottimizzazione per i motori di ricerca.
-
-## Indice
-1. [Architettura](#architettura)
-   - [Struttura del Modulo](structure.md)
-   - [Architettura Generale](architecture.md)
-   - [Convenzioni e Standard](module-guidelines.md)
-
-2. [Frontend](#frontend)
-   - [Frontoffice](frontoffice.md)
-   - [Homepage](homepage.md)
-   - [Componenti UI](components.md)
-   - [Volt & Folio](volt-web-application.md)
-
-3. [Backend](#backend)
-   - [Filament Integration](filament-integration.md)
-   - [Content Management](content-management.md)
-   - [Filament Components](filament-components.md)
-   - [Resources](filament-resources.md)
-
-4. [Contenuti](#contenuti)
-   - [Gestione Pagine](page-management.md)
-   - [Gestione Sezioni](section-management.md)
-   - [Storage dei Contenuti](content-storage.md)
-   - [Traduzioni](translations.md)
-
-5. [Sviluppo](#sviluppo)
-   - [Getting Started](getting-started.md)
-   - [Configurazione](configuration.md)
-   - [Testing](testing.md)
-   - [PHPStan](phpstan.md)
-   - [Correzioni PHPStan](phpstan-fixes.md)
-
-6. [UX/UI](#ux-ui)
-   - [Web Design](webdesign.md)
-   - [Componenti Standard](standard_ui_components.md)
-   - [Multi-step Forms](multi-step-forms.md)
-   - [Wizard](ux-wizard-registrazione-paziente.md)
-
-## Dipendenze Principali
-- Laravel Framework ^12.0
-- Filament ^5.0
-- Livewire ^4.0
-- Laravel Folio ^1.0
-- Laravel Volt ^1.0
-- Tailwind CSS ^3.4
-- Alpine.js ^3.0
-
-## Best Practices
-1. **Estensione Classi**
-   - Estendere sempre le classi base di Xot
-   - Non estendere direttamente le classi di Filament
-   - Utilizzare i trait forniti dal modulo
-
-2. **Convenzioni**
-   - Seguire le [convenzioni di naming](../../../../docs/standards/file_naming_conventions.md)
-   - Documentare tutto il codice con PHPDoc
-   - Mantenere la struttura dei file coerente
-
-3. **Performance**
-   - Utilizzare il caching dove possibile
-   - Ottimizzare le query al database
-   - Seguire le [best practices di Laravel](https://laravel.com/docs/11.x/best-practices)
-
-## Collegamenti Bidirezionali
-- [Modulo User](../User/docs/README.md) - Gestione utenti e permessi
-- [Modulo Lang](../Lang/docs/README.md) - Gestione traduzioni
-- [Modulo UI](../UI/docs/README.md) - Componenti di interfaccia
-- [Modulo Xot](../Xot/docs/README.md) - Modulo base e linee guida
-- [Documentazione Principale](../../../../docs/README.md) - Documentazione generale
-
-## Roadmap e Sviluppo
-- [Roadmap](roadmap.md) - Piano di sviluppo futuro
-- [Issues](phpstan_issues.md) - Problemi noti e soluzioni
-- [Upgrade Guide](upgrade.md) - Guida all'aggiornamento
-
-## Supporto
-Per domande o problemi, consultare:
-1. La [documentazione ufficiale](https://<nome progetto>.com/docs)
-2. Il [forum di supporto](https://<nome progetto>.com/forum)
-3. Il team di sviluppo via [email](mailto:support@<nome progetto>.com)
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-
----
-
-### Adding Content
-
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in `navigation.php`.
-
-The first section of each content page contains a YAML header that specifies how it should be rendered. The `title` attribute is used to dynamically generate HTML `title` and OpenGraph tags for each page. The `extends` attribute defines which parent Blade layout this content file will render with (e.g. `_layouts.documentation` will render with `source/_layouts/documentation.blade.php`), and the `section` attribute defines the Blade "section" that expects this content to be placed into it.
-
-```yaml
----
-title: Navigation
-description: Building a navigation menu for your site
-extends: _layouts.documentation
-section: content
----
-```
-
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-
----
-
-### Adding Assets
-
-Any assets that need to be compiled (such as JavaScript, Less, or Sass files) can be added to the `source/_assets/` directory, and Laravel Mix will process them when running `npm run dev` or `npm run prod`. The processed assets will be stored in `/source/assets/build/` (note there is no underscore on this second `assets` directory).
-
-Then, when Jigsaw builds your site, the entire `/source/assets/` directory containing your built files (and any other directories containing static assets, such as images or fonts, that you choose to store there) will be copied to the destination build folders (`build_local`, on your local machine).
-
-Files that don't require processing (such as images and fonts) can be added directly to `/source/assets/`.
-
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-
----
-
-## Building Your Site
-
-Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
+## Quick start
 
 ```bash
-# build static files with Jigsaw
-./vendor/bin/jigsaw build
-
-# compile assets with Laravel Mix
-# options: dev, prod
-npm run dev
+cd laravel
+ls config/local/fixcity/database/content/pages | head          # le pagine del tenant corrente
+bash ../bashscripts/tools/cms/page-json-for-url.sh http://127.0.0.1:8081/it/tests   # provato: stampa 'slug: tests.index' e i due JSON (richiede il server attivo; su /it/ non trova data-slug)
 ```
 
-## Collegamenti tra versioni di README.md
-* [README.md](bashscripts/docs/README.md)
-* [README.md](bashscripts/docs/it/README.md)
-* [README.md](docs/laravel-app/phpstan/README.md)
-* [README.md](docs/laravel-app/README.md)
-* [README.md](docs/moduli/struttura/README.md)
-* [README.md](docs/moduli/README.md)
-* [README.md](docs/moduli/manutenzione/README.md)
-* [README.md](docs/moduli/core/README.md)
-* [README.md](docs/moduli/installati/README.md)
-* [README.md](docs/moduli/comandi/README.md)
-* [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
-* [README.md](docs/module-links/README.md)
-* [README.md](docs/troubleshooting/git-conflicts/README.md)
-* [README.md](docs/tecnico/laraxot/README.md)
-* [README.md](docs/modules/README.md)
-* [README.md](docs/conventions/README.md)
-* [README.md](docs/amministrazione/backup/README.md)
-* [README.md](docs/amministrazione/monitoraggio/README.md)
-* [README.md](docs/amministrazione/deployment/README.md)
-* [README.md](docs/translations/README.md)
-* [README.md](docs/roadmap/README.md)
-* [README.md](docs/ide/cursor/README.md)
-* [README.md](docs/implementazione/api/README.md)
-* [README.md](docs/implementazione/testing/README.md)
-* [README.md](docs/implementazione/pazienti/README.md)
-* [README.md](docs/implementazione/ui/README.md)
-* [README.md](docs/implementazione/dental/README.md)
-* [README.md](docs/implementazione/core/README.md)
-* [README.md](docs/implementazione/reporting/README.md)
-* [README.md](docs/implementazione/isee/README.md)
-* [README.md](docs/it/README.md)
-* [README.md](laravel/vendor/mockery/mockery/docs/README.md)
-* [README.md](laravel/Modules/Chart/docs/README.md)
-* [README.md](laravel/Modules/Reporting/docs/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Gdpr/docs/README.md)
-* [README.md](laravel/Modules/Notify/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Notify/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/filament/README.md)
-* [README.md](laravel/Modules/Xot/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Xot/docs/exceptions/README.md)
-* [README.md](laravel/Modules/Xot/docs/README.md)
-* [README.md](laravel/Modules/Xot/docs/standards/README.md)
-* [README.md](laravel/Modules/Xot/docs/conventions/README.md)
-* [README.md](laravel/Modules/Xot/docs/development/README.md)
-* [README.md](laravel/Modules/Dental/docs/README.md)
-* [README.md](laravel/Modules/User/docs/phpstan/README.md)
-* [README.md](laravel/Modules/User/docs/README.md)
-* [README.md](laravel/Modules/User/resources/views/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/phpstan/README.md)
-* [README.md](laravel/Modules/UI/docs/README.md)
-* [README.md](laravel/Modules/UI/docs/standards/README.md)
-* [README.md](laravel/Modules/UI/docs/themes/README.md)
-* [README.md](laravel/Modules/UI/docs/components/README.md)
-* [README.md](laravel/Modules/Lang/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Lang/docs/README.md)
-* [README.md](laravel/Modules/Job/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Job/docs/README.md)
-* [README.md](laravel/Modules/Media/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Media/docs/README.md)
-* [README.md](laravel/Modules/Tenant/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Tenant/docs/README.md)
-* [README.md](laravel/Modules/Activity/docs/phpstan/README.md)
-* [README.md](laravel/Modules/Activity/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/README.md)
-* [README.md](laravel/Modules/Patient/docs/standards/README.md)
-* [README.md](laravel/Modules/Patient/docs/value-objects/README.md)
-* [README.md](laravel/Modules/Cms/docs/blocks/README.md)
-* [README.md](laravel/Modules/Cms/docs/README.md)
-* [README.md](laravel/Modules/Cms/docs/standards/README.md)
-* [README.md](laravel/Modules/Cms/docs/content/README.md)
-* [README.md](laravel/Modules/Cms/docs/frontoffice/README.md)
-* [README.md](laravel/Modules/Cms/docs/components/README.md)
-* [README.md](laravel/Themes/Two/docs/README.md)
-* [README.md](laravel/Themes/One/docs/README.md)
+## Debito noto (verificato 2026-10-14, non modificato qui)
 
+- Directory estranee dentro `app/`: `app/docs/` (INDEX, wiki, raw, package.json), `app/Config/` e `app/config/` (due `xra.php`), `app/bashscripts/`, `app/App/` vuota.
+- Cartelle di viste duplicate: `resources/views/Components_old3`, `components_old3`, `Composers` e `composers`.
+- 576 file .md nella radice di `docs/` (`find -maxdepth 1`, 2026-10-14); consolidamento DOC-004/006 ancora aperto.
 
-## AI Workflows
-- [AI Methodologies](./ai-methodologies.md)
+## Test
 
+151 file PHP in `tests/` (Unit: Actions, Datas, Filament, Http, Middleware, Models, Providers, Support, View; Feature: `HomepageConfigurationGovernanceTest`, `HomepageFilamentBlocksArchitectureTest`, `HeaderNavJsonTest`, `IndividualFolioRoutesTest`, ...). Non eseguiti in questa verifica. Il `Pest.php` di un modulo non viene caricato se si lancia Pest dalla root `laravel/` (Seo: 22 falliti su 46 per questo, vedi [Seo](../../Seo/docs/README.md)); Tenant e' stato lanciato con `bash bashscripts/tools/pest-scratch-db.sh Modules/Tenant/tests/Unit/Actions` (27 passati, 5 falliti per `expectMockery`).
+
+## Mappa dei docs
+
+Contratto corrente per le pagine pubbliche di primo livello: [container0 index
+JSON-driven pages](./wiki/concepts/container0-index-json-driven-pages.md).
+
+Il contratto comune per la documentazione è
+[DOCUMENTATION_GOVERNANCE.md](../../../../docs/DOCUMENTATION_GOVERNANCE.md).
+Questo `README.md` è l'ingresso canonico del modulo; gli indici esistenti sono
+mappe di navigazione e non fonti concorrenti.
+
+### Regola operativa per le pagine di primo livello
+
+Prima di creare una Blade sotto `resources/views/pages/`, verificare se l'URL è
+già coperto da `[container0]/index.blade.php` o da `[container0]/[slug0]`. Per
+`domande-frequenti.index` la risposta è sì: la view speciale
+`Themes/Sixteen/resources/views/pages/domande-frequenti/index.blade.php` è vietata
+perché duplica il match Folio e bypassa il JSON tenant. Se il problema è nel
+markup, correggere il blocco condiviso; se è nei dati, correggere JSON/Filament;
+se è nel catalogo, correggere il modulo owner.
+
+Indice operativo: [00-INDEX.md](./00-index.md). Wiki: [wiki/index.md](./wiki/index.md); middleware e JSON: [wiki/concepts/cms-page-middleware-json-ssot.md](./wiki/concepts/cms-page-middleware-json-ssot.md); guscio Folio: [wiki/concepts/folio-page-shell-pattern.md](./wiki/concepts/folio-page-shell-pattern.md); homepage: [architecture/homepage-structure.md](./architecture/homepage-structure.md); blocchi: [blocks/README.md](./blocks/README.md); front office: [frontoffice/architecture.md](./frontoffice/architecture.md). Story: [stories/](./stories/); PHPStan: [stories/phpstan-cms-zero.story.md](./stories/phpstan-cms-zero.story.md).
+
+## Dipendenze / Moduli Correlati
+
+- [Xot - Framework Base](../../Xot/docs/README.md) — Always dependency
+- [UI - Components](../../UI/docs/README.md) — For UI components library
+- [Lang - Translations](../../Lang/docs/README.md) — For i18n support
+- [Media - File Management](../../Media/docs/README.md) — For image/file handling
+
+## Documenti Correlati
+
+- [PHPStan Configuration](../../../phpstan.neon)
+
+## Regole Critiche
+
+1. **Always extend Xot base classes** — Never extend Laravel/Filament directly
+2. **Use namespace `Modules\Cms`** — Never `app\Cms`
+3. **Strict typing** — `declare(strict_types=1);` in all files
+4. **Relative links only** — All doc links must be relative paths
+5. **No placeholder text** — Remove PROJECT_NAME, [CHANGE_ME], etc
+6. **JSON validation** — Validate block data structure before storage
+7. **No merge conflict markers** — Ensure clean commits
 
 ## Standard Rules & Workflow
 
@@ -355,9 +93,10 @@ npm run dev
 - [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
 - [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
 
-## Documentation
+---
 
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
-- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
-- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+**Ultima verifica**: 2026-10-14 (Laravel 13.35.0, PHP 8.4.26). Livello PHPStan e copertura non rimisurati in questa verifica.
+
+**Sostenibilità (discovery):** [project-sustainability-content.md](./project-sustainability-content.md) — outline `/sostieni` e footer partner. Il dossier locale del modulo è la fonte mantenuta; eventuali riferimenti a `bmad-output/` sono storici.
+
+**Note**: Documentation previously had duplications and merge conflicts. This version consolidates to single source of truth.

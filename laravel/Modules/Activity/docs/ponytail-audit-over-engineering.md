@@ -1,4 +1,12 @@
-# Ponytail audit — Activity (over-engineering)
+---
+title: "Ponytail audit: Activity (over-engineering)"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "ponytail audit   activity (over-engineering) activity"
+---
+# Ponytail audit: Activity (over-engineering)
 
 **Ultimo run:** 2026-06-30  
 **Hub:** [../../../../docs/audit/ponytail-audit.md](../../../../docs/audit/ponytail-audit.md)

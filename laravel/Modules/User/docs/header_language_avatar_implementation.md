@@ -1,30 +1,33 @@
+---
+title: "Implementazione del Selettore di Lingua e Avatar Utente nell'Header"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione del selettore di lingua e avatar utente nell'header user"
+---
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati
-- [README modulo User](./readme.md)
+- [README modulo User](./README.md)
 - [Convenzioni Path](./path_conventions.md)
 - [Volt Folio Logout](./volt_folio_logout.md)
 - [Implementazione Logout](./logout_blade_implementation.md)
-- [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md)
-- [Implementazione Logout](./LOGOUT_BLADE_IMPLEMENTATION.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Volt Folio Logout](./volt_folio_logout.md)
+- [Implementazione Logout](./logout_blade_implementation.md)
 
 ## Panoramica
 
 Questo documento descrive come implementare nell'header di SaluteOra:
-
-## Panoramica
-
-Questo documento descrive come implementare nell'header di Quaeris:
 1. Un selettore di lingua
 2. Un dropdown con l'avatar dell'utente contenente il link di logout
 
 ## Struttura Attuale dell'Header
 
-L'header di Quaeris è gestito tramite:
+L'header di SaluteOra è gestito tramite:
 - **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
-- **Configurazione JSON**: `/config/local/Quaeris/database/content/sections/1.json`
+- **Configurazione JSON**: `/config/local/saluteora/database/content/sections/1.json`
 
 Il componente header legge i blocchi dal file JSON e li renderizza in base alla lingua corrente. Attualmente l'header contiene:
 - Un logo
@@ -214,7 +217,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-"alt": "Logo Quaeris",
+                    "alt": "Logo SaluteOra",
                     "width": 150,
                     "height": 32
                 }
@@ -288,7 +291,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-"alt": "Quaeris Logo",
+                    "alt": "SaluteOra Logo",
                     "width": 150,
                     "height": 32
                 }

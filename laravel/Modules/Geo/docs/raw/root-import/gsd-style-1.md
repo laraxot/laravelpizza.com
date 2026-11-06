@@ -1,3 +1,14 @@
+---
+title: "gsd style 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd style 1"
+issues: []
+discussions: []
+---
+
 # GSD-STYLE.md
 
 ## 🚀 Get Shit Done (GSD) System Style Guide
@@ -43,4 +54,12 @@ All task plans MUST use the following XML structure for clarity and machine-read
 - **Translations**: Always provide `it` and `en` keys.
 
 ---
+title: "gsd style 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd style 1"
+issues: []
+discussions: []
 *Last updated: 2026-03-18*

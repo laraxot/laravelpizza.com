@@ -1,3 +1,11 @@
+---
+title: "User Module - Product Roadmap"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, product]
+qmd: "user module - product roadmap user"
+---
 # User Module - Product Roadmap
 
 ## Overview

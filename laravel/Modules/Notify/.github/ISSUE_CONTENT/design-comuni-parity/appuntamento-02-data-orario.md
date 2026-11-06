@@ -1,3 +1,14 @@
+---
+title: "appuntamento 02 data orario"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 02 data orario"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Data/Ora (appuntamento-02-data-orario.html)
 
 ## Obiettivo

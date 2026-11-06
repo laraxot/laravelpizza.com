@@ -47,9 +47,25 @@ return [
             'label' => 'Disconnetti',
             'tooltip' => 'Disconnetti account social',
         ],
+        'save' => 'Salva configurazione',
     ],
     'messages' => [
         'connected' => 'Account social connesso con successo',
         'disconnected' => 'Account social disconnesso con successo',
+    ],
+    'help' => [
+        'title' => 'Guida alla configurazione',
+        'description' => 'Configura le credenziali OAuth dei provider per consentire agli utenti di accedere con i loro account social.',
+        'google_title' => 'Google OAuth',
+        'google_step1' => 'Vai su <a href=":url" target="_blank" rel="noopener" class="underline">Google Cloud Console</a> e crea un progetto (o selezionane uno esistente).',
+        'google_step2' => 'Abilita le API necessarie e configura la schermata di consenso OAuth.',
+        'google_step3' => 'Crea le credenziali "ID client OAuth" di tipo applicazione web.',
+        'google_step4' => 'Copia l\'ID client e il segreto client e incollali nel modulo qui sopra.',
+        'redirect_url_note' => 'URL di reindirizzamento',
+        'redirect_url_description' => 'Imposta come URI di reindirizzamento autorizzato l\'URL di callback mostrato nel modulo.',
+    ],
+    'security' => [
+        'title' => 'Nota di sicurezza',
+        'description' => 'Le credenziali sono salvate in modo sicuro. Non condividerle e non inserirle mai in repository pubblici.',
     ],
 ];

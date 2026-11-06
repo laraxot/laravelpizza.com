@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Sistema di Traduzioni"
+module: "Lang"
+type: concept
+tags: [guida, migrazione, step, by]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "guida migrazione step by step"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Sistema di Traduzioni
 
 ## Collegamenti Bidirezionali
@@ -201,13 +215,13 @@ return [
 *Ultimo aggiornamento: Gennaio 2025*
 *Ultimo aggiornamento: Gennaio 2025*
 *Versione: 2.0*
-*Compatibilità: Laravel 12.x, Filament 4.x*
+*Compatibilità: Laravel 13.x, Filament 4.x*
 *Versione: 2.0*
-*Compatibilità: Laravel 12.x, Filament 4.x*
+*Compatibilità: Laravel 13.x, Filament 4.x*
 *Versione: 2.0*
-*Compatibilità: Laravel 12.x, Filament 4.x*
+*Compatibilità: Laravel 13.x, Filament 4.x*
 *Versione: 2.0*
-*Compatibilità: Laravel 12.x, Filament 4.x*
+*Compatibilità: Laravel 13.x, Filament 4.x*
 *Ultimo aggiornamento: Gennaio 2025*
 *Versione: 2.0*
-*Compatibilità: Laravel 12.x, Filament 4.x*
+*Compatibilità: Laravel 13.x, Filament 4.x*

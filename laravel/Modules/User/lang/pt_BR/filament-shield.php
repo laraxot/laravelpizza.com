@@ -23,18 +23,4 @@ return [
     'widgets' => 'Widgets',
     'pages' => 'Páginas',
     'custom' => 'Permissões customizadas',
-    'forbidden' => 'Você não tem permissão para acessar',
-    'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

@@ -1,3 +1,16 @@
+---
+qmd: "code fixes "
+issues: []
+discussions: []
+title: "Notify Module - Code Fixes & Improvements (2025)"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Notify Module - Code Fixes & Improvements (2025)
 
 > **Last Updated:** 2025-11-23

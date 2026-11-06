@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN COMUNI REPLICATION"
+issues: []
+discussions: []
 title: "Design Comuni HTML Replication - Master Epic"
 labels: ["epic", "design-comuni", "priority-high"]
 assignees: []
@@ -12,6 +19,7 @@ projects: ["Design Comuni Replication"]
 **Riferimenti:**
 - Source: https://italia.github.io/design-comuni-pagine-statiche/
 - Target: http://fixcity.local/it/tests/*
+- Target: http://ptv.local/it/tests/*
 - Master Plan: `.planning/DESIGN_COMUNI_MASTER_PLAN.md`
 
 ---
@@ -75,6 +83,7 @@ projects: ["Design Comuni Replication"]
 ## ✅ Definition of Done (Per Pagina)
 
 - [ ] JSON content block creato in `laravel/config/local/fixcity/database/content/pages/`
+- [ ] JSON content block creato in `laravel/config/local/ptv/database/content/pages/`
 - [ ] HTML dentro `<body>` (esclusi scripts) IDENTICO al source
 - [ ] Screenshot comparison salvato in docs
 - [ ] Analisi differenze documentata

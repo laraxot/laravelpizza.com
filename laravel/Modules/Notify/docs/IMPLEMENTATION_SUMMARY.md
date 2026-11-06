@@ -1,3 +1,15 @@
+---
+title: "IMPLEMENTATION SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "IMPLEMENTATION SUMMARY"
+issues: []
+discussions: []
+status: draft
+---
+
 # Riepilogo Implementazione Design Comuni
 
 ## Panoramica
@@ -135,9 +147,9 @@ COMUNE_COLORE_ACCENTO="#ff6600"
 /comune/eventi             # Eventi
 
 // API Fixcity
-/api/fixcity/tickets       # Gestione ticket
-/api/fixcity/map/tickets   # Mappa ticket
-/api/fixcity/statistics    # Statistiche
+/api/ptv/tickets       # Gestione ticket
+/api/ptv/map/tickets   # Mappa ticket
+/api/ptv/statistics    # Statistiche
 ```
 
 ## Benefici dell'Implementazione

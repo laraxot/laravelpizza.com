@@ -1,3 +1,11 @@
+---
+title: "Regole per le Chiavi di Traduzione"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "regole per le chiavi di traduzione user"
+---
 # Regole per le Chiavi di Traduzione
 
 ## Principi Fondamentali
@@ -112,6 +120,9 @@ return [
 
 ## Collegamenti Correlati
 
+- [Best Practices per le Traduzioni](translation_best_practices.md)
+- [Struttura del Modulo](module_structure.md)
+- [Convenzioni di Codice](code_conventions.md)
 - [Best Practices per le Traduzioni](translation_best_practices.md)
 - [Struttura del Modulo](module_structure.md)
 - [Convenzioni di Codice](code_conventions.md)

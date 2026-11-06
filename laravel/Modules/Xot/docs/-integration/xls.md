@@ -1,3 +1,11 @@
+---
+title: "xls"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, -integration]
+qmd: "xls xot"
+---
 # xls
 
 <!-- Contenuto migrato da _docs/xls.txt -->

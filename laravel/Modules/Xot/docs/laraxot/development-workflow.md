@@ -1,3 +1,13 @@
+---
+title: "Development Workflow in Laraxot"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, laraxot]
+qmd: "Development Workflow in Laraxot"
+---
 # Development Workflow in Laraxot
 
 ## Creating New Resources
@@ -14,7 +24,7 @@ class MyModel extends BaseModel
         'name',
         'description',
     ];
-
+    
     // Relazioni e metodi del modello
 }
 ```

@@ -58,10 +58,10 @@ class GenericNotification extends Notification implements ShouldQueue
     /**
      * Ottiene i canali di consegna della notifica.
      *
-     * @param  mixed  $_notifiable  L'entità da notificare (oggetto che riceverà la notifica)
+     * @param  object  $_notifiable  L'entità da notificare (oggetto che riceverà la notifica)
      * @return array<int, string>
      */
-    public function via(mixed $_notifiable): array
+    public function via(object $_notifiable): array
     {
         return $this->channels;
     }
@@ -69,7 +69,7 @@ class GenericNotification extends Notification implements ShouldQueue
     /**
      * Ottiene la rappresentazione mail della notifica.
      */
-    public function toMail(mixed $notifiable): MailMessage
+    public function toMail(object $notifiable): MailMessage
     {
         $mail = (new MailMessage)
             ->subject($this->title)
@@ -78,7 +78,12 @@ class GenericNotification extends Notification implements ShouldQueue
 
         // Aggiungi eventuali azioni se specificate nei dati
         if (isset($this->data['action_text'], $this->data['action_url'])) {
-            $mail->action((string) $this->data['action_text'], (string) $this->data['action_url']);
+            $actionText = $this->data['action_text'];
+            $actionUrl = $this->data['action_url'];
+            $mail->action(
+                is_scalar($actionText) ? (string) $actionText : '',
+                is_scalar($actionUrl) ? (string) $actionUrl : ''
+            );
         }
 
         // Aggiungi eventuali linee aggiuntive
@@ -94,9 +99,9 @@ class GenericNotification extends Notification implements ShouldQueue
     /**
      * Ottiene la rappresentazione SMS della notifica.
      *
-     * @return array<string, mixed>
+     * @return array{content: string, to: string}
      */
-    public function toTwilio(mixed $notifiable): array
+    public function toTwilio(object $notifiable): array
     {
         $content = "il progetto: {$this->title}\n{$this->message}";
 
@@ -107,39 +112,37 @@ class GenericNotification extends Notification implements ShouldQueue
 
         // TODO: Implementare TwilioSmsMessage quando disponibile
         $to = '';
-        if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForTwilio')) {
+        if (method_exists($notifiable, 'routeNotificationForTwilio')) {
             $routeResult = $notifiable->routeNotificationForTwilio($this);
-            $to = (string) ($routeResult ?? '');
+            $to = is_scalar($routeResult) ? (string) $routeResult : '';
         }
 
         return [
             'content' => $content,
-            'to' => $to,
-        ];
+            'to' => $to];
     }
 
     /**
      * Ottiene la rappresentazione database della notifica.
      *
-     * @return array<string, mixed>
+     * @return array{title: string, message: string, data: array<string, mixed>, created_at: string}
      */
-    public function toDatabase(mixed $notifiable): array
+    public function toDatabase(object $notifiable): array
     {
         return [
             'title' => $this->title,
             'message' => $this->message,
             'data' => $this->data,
-            'created_at' => now()->toIso8601String(),
-        ];
+            'created_at' => now()->toIso8601String()];
     }
 
     /**
      * Ottiene il nome del destinatario per il saluto personalizzato.
      */
-    protected function getRecipientName(mixed $notifiable): string
+    protected function getRecipientName(object $notifiable): string
     {
         // Tenta di ottenere il nome dal destinatario in vari modi
-        if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
+        if (method_exists($notifiable, 'getFullName')) {
             $fullName = $notifiable->getFullName();
             if (is_string($fullName)) {
                 return $fullName;
@@ -148,7 +151,7 @@ class GenericNotification extends Notification implements ShouldQueue
             return 'Utente';
         }
 
-        if (is_object($notifiable) && $notifiable instanceof Model) {
+        if ($notifiable instanceof Model) {
             if (app(SafeEloquentCastAction::class)->hasNonEmptyAttribute($notifiable, 'full_name')) {
                 return app(SafeEloquentCastAction::class)->getStringAttribute($notifiable, 'full_name', 'Utente');
             }

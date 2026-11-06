@@ -1,3 +1,15 @@
+---
+title: "sms configuration access"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms configuration access"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pattern di Accesso alla Configurazione SMS
 
 ## Problema Identificato
@@ -57,3 +69,4 @@ Per ogni azione SMS, verificare che:
 - [Struttura della Configurazione SMS](./sms_config_structure.md)
 - [Requisiti di Configurazione Netfun](./netfun_config_requirements.md)
 - [Pattern Factory per SMS](./sms_action_factory_analysis.md)
+- [Pattern Factory per SMS](./sms-action-factory-analysis.md)

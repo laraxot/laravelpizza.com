@@ -1,3 +1,15 @@
+---
+title: "stats"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "stats"
+issues: []
+discussions: []
+status: draft
+---
+
 # Stats Block
 
 Il blocco Stats è utilizzato per visualizzare statistiche e metriche chiave in una griglia di numeri con etichette.
@@ -73,5 +85,5 @@ Builder::make('content')
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Data Visualization](../ui/data-visualization.md)

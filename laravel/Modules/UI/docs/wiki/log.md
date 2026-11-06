@@ -1,53 +1,29 @@
-## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
+---
+title: "UI wiki log"
+type: log
+status: active
+created: 2026-10-14
+updated: 2026-10-14
+module: UI
+tags: [ui, log, docs]
+qmd: "ui wiki log docs studio ingressi"
+---
 
-- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
-- GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
+# UI wiki log
 
-# UI Wiki Log
+Registro cronologico inverso. Esisteva solo come riferimento (`./log.md`) da `INDEX.md`, `overview.md` e `readme.md` di questa cartella,
+senza il file. Le decisioni stanno in [decision-log](../decision-log.md).
 
-## [2026-07-08] phpstan | InteractiveMap/LocationSelector — riapplicato pattern contratti opzionali, rimosso LocationSelector morto
-- Un agent concorrente aveva reintrodotto import diretti `Modules\Geo\Services\MapService` / `GeocodingService` in `InteractiveMap.php` e rimosso il binding `register()` da `UIServiceProvider`, contraddicendo la regola documentata in [block-rendering-and-optional-services](concepts/block-rendering-and-optional-services.md) ("non importare `Modules\Geo\*` nel consumer UI").
-- Ripristinato: `InteractiveMap.php` usa `MapServiceContract`/`GeocodingServiceContract`; `UIServiceProvider::register()` lega i contratti a `NullMapService`/`NullGeocodingService` di default.
-- `LocationSelector.php` (0 consumer in blade/route/test, importava `Modules\Geo\Models\Comune` direttamente, chiavi lang `ui::location_selector.*` inesistenti) rimosso definitivamente — stessa decisione già presa in un commit precedente (`66f7fc1`) e più volte annullata/ripristinata da agent diversi (vedi `docs/conflict-resolution-locationselector.md`). Nessuna evidenza che i tre simboli mancanti (`MapService`, `GeocodingService`, `Comune` in Geo) fossero un requisito reale per questo componente: erano riferimenti a codice mai esistito.
-- Verifica: PHPStan pulito su entrambi i file; container resolve corretto (`app(MapServiceContract::class)` → `NullMapService`); `mount()`/`loadMarkers()`/`searchAddress()` verificati via `php artisan tinker` (DB non raggiungibile in sandbox per Livewire::test()).
+## 2026-10-14
 
-## [2026-05-21] bugfix | auth register focus perso per overlay header mobile
-- Nuova pagina: `concepts/auth-register-focus-loss-overlay.md`.
-- Root cause identificata in `x-ui.marketing.header`: container mobile fullscreen `fixed` che intercettava i click anche a menu chiuso.
-- Fix: `x-show="mobileMenuOpen"` + `style="display:none"` + `pointer-events-none` da chiuso / `pointer-events-auto` da aperto.
-- Verifica manuale: su `/it/auth/register` focus input stabile e digitazione ripristinata.
+Studio del modulo contro i docs (story [2026-10-14-docs-ui-studio-e-ingressi](../stories/docs-ui-studio-e-ingressi.story.md)).
 
-## [2026-05-06] phpstan | Dynamic array normalization
-- Nuova pagina: `concepts/phpstan-dynamic-array-normalization.md`.
-- Documentato pattern per convertire output dinamici action/Livewire in array tipizzati senza `@var` inline, ignore o baseline.
-- Applicato a `UserCalendarWidget`, `InteractiveMap` e `LocationSelector`.
-
-## [2026-04-28] governance | Model States ownership e compatibilita' Laravel 13
-- Nuova pagina: `concepts/model-states-module-ownership.md`.
-- Distinto ownership tecnico (`UI` + `Xot`) da compatibilita' runtime.
-- Verificato che `spatie/laravel-model-states` latest stable richiede `PHP ^8.4`, mentre `2.12.1` si ferma a `Laravel 12`.
-
-## [2026-04-23] governance | EnumSelect API collisions (Filament v5)
-- Nuova pagina: `concepts/enumselect-filament-api-collisions.md`.
-- Documentati i fatal tipici: collisione firme `make()/enum()` e collisione visibilita' `getLabel()` quando si estende `Select`.
-
-## [2026-04-23] hardening | EnumSelect phpstan/runtime guardrails
-- Aggiornata `concepts/enum-select-contract-and-false-friends.md` con regole aggiuntive emerse dal fix runtime e dal check PHPStan.
-- Inserite best practices su firma `enum(string|Closure|null)` e narrowing `int|string` prima di `tryFrom()`.
-- Esplicitato false friend: `Class ... not found` puo' essere sintomo secondario di fatal in fase di caricamento della classe.
-
-## [2026-04-23] governance | Filament component autoload nel modulo UI
-- documentata la regola `module-filament-component-autoload-rule`
-- componenti PHP del modulo UI sotto `app/`; fatal recente `EnumSelect` ricondotto a path autoload errato, non al widget consumer
-
-## [2026-04-23] governance | EnumSelect contract, best practices, bad practices, false friends
-- Documentato il contratto minimo di `Modules\UI\Filament\Forms\Components\EnumSelect`.
-- Fissate le regole su firma compatibile di `make(?string $name = null)`, validazione backed enum, fallback label/icon e rischi di autoload/visibilita'.
-- Nuova pagina: `concepts/enum-select-contract-and-false-friends.md`.
-
-## [2026-04-15] init | wiki bootstrap
-- Struttura wiki/log.md inizializzata.
-- Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
-- Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
+- `README.md` e `00-INDEX.md` riscritti con percorsi e conteggi verificati sul codice; il link a `schema/` (cartella inesistente alla
+  radice di `docs/`) e' stato tolto.
+- Codice: 17 colonne, 19 campi form, 14 blocchi, 12 widget, 6 Actions, 3 modelli piu' `BaseModel`; nessuna Resource CRUD; rotte vuote.
+- PHPStan `Modules/UI` exit 0. Pest `Modules/UI/tests`: 218 passati, 16 falliti, 1 risky, 109 saltati (sqlite in memoria, 99 s).
+- Link non risolti nel perimetro: 1522 eventi in 159 file (misura con `--busy-minutes 0`); 891 vengono da `_archive/INDEX.md`, un elenco
+  generato che punta a sottocartelle che non esistono piu'.
+- `bmad/architecture.md` e `wiki/purpose.md`: aggiunta in coda una verifica datata (la mappa del codice conteneva numeri e percorsi superati).
+- `bmad/purpose.md` e `wiki/purpose.md` hanno lo stesso corpo (diff vuoto): il canonico e' quello in `wiki/`.
+- Segnalato fuori perimetro: `laravel/Modules/UI/README.md` contiene marker di merge non risolti.

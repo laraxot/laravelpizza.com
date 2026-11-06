@@ -1,13 +1,20 @@
 ---
+title: "seo module"
+tags: [documentation]
+created: 2026-09-26
+qmd: "seo module"
+issues: []
+discussions: []
 type: overview
 module: Seo
 sources:
   - ../../../README.md
-  - ../../../configuration.md
-  - ../../../sitemap.md
-  - ../../../structure.md
+  - ../../configuration.md
+  - ../../sitemap.md
+  - ../../structure.md
 confidence: high
 updated: 2026-04-15
+status: active
 ---
 
 # Seo Module — Overview

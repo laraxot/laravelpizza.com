@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="dark-mode-switcher-widget">
     <button 
@@ -13,7 +12,7 @@ declare(strict_types=1);
         "
         class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
         :class="{ 'bg-emerald-600': darkMode, 'bg-gray-200': !darkMode }"
-        aria-label="Toggle dark mode"
+        aria-label="{{ __('ui::widgets.dark_mode_switcher.toggle_aria_label') }}"
     >
         <template x-if="darkMode">
             <x-heroicon-o-moon class="w-5 h-5 text-white" />

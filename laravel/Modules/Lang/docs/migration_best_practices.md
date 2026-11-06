@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Best Practices per le Migrazioni - Modulo Lang"
+module: "Lang"
+type: concept
+tags: [links]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "links"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Best Practices per le Migrazioni - Modulo Lang
 
 ## Panoramica

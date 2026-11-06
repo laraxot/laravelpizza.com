@@ -1,3 +1,14 @@
+---
+title: "audit milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "audit milestone"
+issues: []
+discussions: []
+---
+
 <purpose>
 Verify milestone achieved its definition of done by aggregating phase verifications, checking cross-phase integration, and assessing requirements coverage. Reads existing VERIFICATION.md files (phases already verified during execute-phase), aggregates tech debt and deferred gaps, then spawns integration checker for cross-phase wiring.
 </purpose>
@@ -133,6 +144,14 @@ Create `.planning/v{version}-v{version}-MILESTONE-AUDIT.md` with:
 
 ```yaml
 ---
+title: "audit milestone"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "audit milestone"
+issues: []
+discussions: []
 milestone: {version}
 audited: {timestamp}
 status: passed | gaps_found | tech_debt

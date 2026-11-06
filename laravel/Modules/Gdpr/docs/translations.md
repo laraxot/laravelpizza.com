@@ -1,9 +1,21 @@
+---
+title: "translations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Traduzioni del Modulo Gdpr
 
 ## Collegamenti
 
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
-- [Regole Generali Traduzioni](../../xot/docs/translations.md)
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 
 ## Struttura
 

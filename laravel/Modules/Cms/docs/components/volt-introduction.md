@@ -1,3 +1,15 @@
+---
+title: "volt introduction"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt introduction"
+issues: []
+discussions: []
+status: draft
+---
+
 # Introduzione a Laravel Volt
 
 ## Panoramica
@@ -246,5 +258,5 @@ $emit = function ($event) {
 - [Esempi di Componenti Volt](https://github.com/livewire/volt/tree/main/examples)
 
 ## Collegamenti tra versioni di volt-introduction.md
-* [volt-introduction.md](laravel/modules/cms/docs/volt-introduction.md)
+* [volt-introduction.md](../volt-introduction.md)
 * [volt-introduction.md](laravel/modules/cms/docs/components/volt-introduction.md)

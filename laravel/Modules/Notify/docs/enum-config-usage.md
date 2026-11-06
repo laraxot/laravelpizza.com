@@ -1,3 +1,15 @@
+---
+title: "enum config usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "enum config usage"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo di Enum e Config
 
 Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema , con particolare attenzione alla gestione delle opzioni nei componenti Filament.

@@ -1,3 +1,11 @@
+---
+title: "Implementazione delle Icone Personalizzate"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "implementazione delle icone personalizzate xot"
+---
 # Implementazione delle Icone Personalizzate
 
 ## Introduzione

@@ -1,3 +1,16 @@
+---
+title: "layout structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "layout structure"
+issues: []
+discussions: []
+status: superseded
+superseded_by: layout-structure.md
+---
+
 # Struttura Layout Email
 
 ## 1. Separazione dei File

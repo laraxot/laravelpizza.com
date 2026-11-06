@@ -1,3 +1,15 @@
+---
+title: "status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "status"
+issues: []
+discussions: []
+status: draft
+---
+
 # Stato attuale - Cms Module
 
 ## Funzionalità

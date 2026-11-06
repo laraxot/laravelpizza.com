@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Modular Monolith Architecture for Tenant Module"
+module: "Tenant"
+type: concept
+tags: [modular, monolith, architecture]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "modular monolith architecture"
+related:
+  - "./phpstan-corrections-january.md"
+status: superseded
+superseded_by: modular-monolith-architecture.md
+---
 # Modular Monolith Architecture for Tenant Module
 
 ## Overview

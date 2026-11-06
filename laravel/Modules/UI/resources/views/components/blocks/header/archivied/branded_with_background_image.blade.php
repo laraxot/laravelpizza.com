@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="relative bg-indigo-800">
     <div class="absolute inset-0">
@@ -9,7 +8,7 @@ declare(strict_types=1);
       <div class="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true"></div>
     </div>
     <div class="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>
-      <p class="mt-6 max-w-3xl text-xl text-indigo-100">Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.</p>
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ __('ui::blocks_header.archivied_branded_with_background_image.get_in_touch.title') }}</h1>
+      <p class="mt-6 max-w-3xl text-xl text-indigo-100">{{ __('ui::blocks_header.archivied_branded_with_background_image.paragraph_1.description') }}</p>
     </div>
   </div>

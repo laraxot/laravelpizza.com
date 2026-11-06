@@ -1,3 +1,23 @@
+---
+title: "Struttura della Configurazione SMS"
+type: concept
+tags: [notify, docs, architecture, sms, config, structure]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione architecture sms config structure struttura della configurazione sms frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - README.md
+  - ../conventions/README.md
+  - ../rules/README.md
+  - ../best-practices/naming-conventions.md
+status: draft
+---
 # Struttura della Configurazione SMS 
 
 ## Introduzione
@@ -152,6 +172,7 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 ## Collegamenti
 
 - [Configurazione Netfun](./netfun_config_requirements.md)
+- [Configurazione Netfun](../netfun_config_requirements.md)
 - [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
 
 ---

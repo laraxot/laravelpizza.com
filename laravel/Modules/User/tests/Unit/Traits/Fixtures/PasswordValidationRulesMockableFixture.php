@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Traits\Fixtures;
 
+use Illuminate\Validation\Rules\Password;
 use Modules\User\Traits\PasswordValidationRules;
 
 /**
@@ -14,7 +15,7 @@ final class PasswordValidationRulesMockableFixture
     use PasswordValidationRules;
 
     /**
-     * @return array<int, \Illuminate\Validation\Rules\Password|array|string>
+     * @return array<int, Password|string>
      */
     public function getPasswordRules(): array
     {

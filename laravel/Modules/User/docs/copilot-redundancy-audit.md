@@ -1,4 +1,29 @@
-Copilot Redundancy Audit — 2026-05-25
+---
+title: "Copilot Redundancy Audit"
+type: concept
+tags: [copilot, redundancy, audit]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "copilot-redundancy-audit copilot redundancy audit"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
+Copilot Redundancy Audit: 2026-05-25
 
 Sintesi
 - Scansione preliminare mostra ridondanze documentali e duplicatione di traduzioni e config (es.: README.md, index.md, validation.php).

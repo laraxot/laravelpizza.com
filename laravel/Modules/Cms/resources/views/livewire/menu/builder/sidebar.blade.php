@@ -12,8 +12,8 @@ declare(strict_types=1);
     <div id="side-sortables" class="accordion-container">
         <ul class="outer-border">
             <li class="control-section accordion-section  open add-page" id="add-page">
-                <h3 class="accordion-section-title hndle" tabindex="0"> Custom Link <span
-                        class="screen-reader-text">Press return or enter to expand</span></h3>
+                <h3 class="accordion-section-title hndle" tabindex="0"> {{ __('cms::menu_builder.sections.custom_link.label') }} <span
+                        class="screen-reader-text">{{ __('cms::menu_builder.sections.press_to_expand.label') }}</span></h3>
                 <div class="accordion-section-content ">
                     <div class="inside">
                         <div class="customlinkdiv" id="customlinkdiv">
@@ -25,18 +25,18 @@ declare(strict_types=1);
                             </p>
 
                             <p id="menu-item-name-wrap">
-                                <label class="howto" for="custom-menu-item-name"> <span>Label</span>&nbsp;
+                                <label class="howto" for="custom-menu-item-name"> <span>{{ __('cms::menu_builder.fields.label.label') }}</span>&nbsp;
                                     <input id="custom-menu-item-name" name="label" type="text"
                                         class="regular-text menu-item-textbox input-with-default-title"
-                                        title="Label menu" wire:model="item.label">
+                                        title="{{ __('cms::menu_builder.sections.label_menu.label') }}" wire:model="item.label">
                                 </label>
                             </p>
 
                             @if (!empty($roles))
                                 <p id="menu-item-role_id-wrap">
-                                    <label class="howto" for="custom-menu-item-name"> <span>Role</span>&nbsp;
+                                    <label class="howto" for="custom-menu-item-name"> <span>{{ __('cms::menu_builder.sections.role.label') }}</span>&nbsp;
                                         <select id="custom-menu-item-role" name="role">
-                                            <option value="0">Select Role</option>
+                                            <option value="0">{{ __('cms::menu_builder.actions.select_role.label') }}</option>
                                             @foreach ($roles as $role)
                                                 <option value="{{ $role->$role_pk }}">
                                                     {{ ucfirst($role->$role_title_field) }}</option>
@@ -48,7 +48,7 @@ declare(strict_types=1);
 
                             <p class="button-controls">
                                 <button href="#" wire:click="addMenuItem()"
-                                    class="button-secondary submit-add-to-menu right">Add menu item</button>
+                                    class="button-secondary submit-add-to-menu right">{{ __('cms::menu_builder.sections.add_item.label') }}</button>
                                 <span class="spinner" id="spincustomu"></span>
                             </p>
 

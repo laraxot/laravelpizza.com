@@ -1,3 +1,12 @@
+---
+title: "Analisi Approfondita: laravel-shop-command-bus"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "analisi approfondita: laravel-shop-command-bus activity"
+status: superseded
+superseded_by: analisi-laravel-shop-command-bus.md
+---
 # Analisi Approfondita: laravel-shop-command-bus
 
 ## 1. Struttura delle Cartelle e Naming

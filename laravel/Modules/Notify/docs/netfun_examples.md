@@ -1,3 +1,257 @@
+---
+title: "netfun examples"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun examples"
+issues: []
+discussions: []
+status: draft
+---
+
+# Esempi Pratici Netfun
+
+## 1. Invio SMS OTP
+
+### 1.1 Notification Class
+```php
+<?php
+
+namespace Modules\Notify\Notifications;
+
+use Illuminate\Support\Carbon;
+use Modules\Notify\App\Data\NetfunSmsRequestData;
+
+class OtpSmsNotification extends NetfunSmsNotification
+{
+    /**
+     * @var string
+     */
+    protected string $otp;
+
+    /**
+     * @var Carbon
+     */
+    protected Carbon $expiresAt;
+
+    /**
+     * @param string $otp
+     * @param int $minutes
+     */
+    public function __construct(string $otp, int $minutes = 5)
+    {
+        $this->otp = $otp;
+        $this->expiresAt = now()->addMinutes($minutes);
+
+        parent::__construct(
+            message: "Il tuo codice OTP è: {$otp}. Valido fino alle {$this->expiresAt->format('H:i')}.",
+            sender: 'SALUTEORA'
+        );
+    }
+
+    /**
+     * Get the OTP
+     *
+     * @return string
+     */
+    public function getOtp(): string
+    {
+        return $this->otp;
+    }
+
+    /**
+     * Get the expiration time
+     *
+     * @return Carbon
+     */
+    public function getExpiresAt(): Carbon
+    {
+        return $this->expiresAt;
+    }
+
+    /**
+     * Get the Netfun representation of the notification.
+     *
+     * @param mixed $notifiable
+     * @return NetfunSmsRequestData
+     */
+    public function toNetfun($notifiable): NetfunSmsRequestData
+    {
+        return new NetfunSmsRequestData(
+            to: $notifiable->phone_number,
+            text: $this->message,
+            from: $this->sender
+        );
+    }
+}
+```
+
+### 1.2 Utilizzo
+```php
+// Nel controller
+public function sendOtp(User $user)
+{
+    try {
+        // Genera OTP
+        $otp = str_pad(random_int(0, 999999), 6, '0', STR_PAD_LEFT);
+        
+        // Salva OTP nel database con scadenza
+        $user->update([
+            'otp' => $otp,
+            'otp_expires_at' => now()->addMinutes(5)
+        ]);
+        
+        // Invia SMS
+        $user->notify(new OtpSmsNotification($otp));
+
+        return response()->json([
+            'message' => 'OTP inviato con successo',
+            'expires_at' => now()->addMinutes(5)
+        ]);
+
+    } catch (\Exception $e) {
+        Log::error('Errore invio OTP', [
+            'user_id' => $user->id,
+            'error' => $e->getMessage()
+        ]);
+
+        return response()->json([
+            'message' => 'Errore nell\'invio dell\'OTP'
+        ], 500);
+    }
+}
+
+// Verifica OTP
+public function verifyOtp(Request $request, User $user)
+{
+    $request->validate([
+        'otp' => 'required|string|size:6'
+    ]);
+
+    if ($user->otp !== $request->otp) {
+        return response()->json([
+            'message' => 'OTP non valido'
+        ], 400);
+    }
+
+    if ($user->otp_expires_at->isPast()) {
+        return response()->json([
+            'message' => 'OTP scaduto'
+        ], 400);
+    }
+
+    // OTP valido, resetta i campi
+    $user->update([
+        'otp' => null,
+        'otp_expires_at' => null
+    ]);
+
+    return response()->json([
+        'message' => 'OTP verificato con successo'
+    ]);
+}
+```
+
+## 2. Invio SMS Promemoria
+
+### 2.1 Notification Class
+```php
+<?php
+
+namespace Modules\Notify\Notifications;
+
+use Illuminate\Support\Carbon;
+use Modules\Notify\App\Data\NetfunSmsRequestData;
+
+class AppointmentReminderNotification extends NetfunSmsNotification
+{
+    /**
+     * @var Carbon
+     */
+    protected Carbon $appointmentDate;
+
+    /**
+     * @var string
+     */
+    protected string $doctorName;
+
+    /**
+     * @var string
+     */
+    protected string $location;
+
+    /**
+     * @var string|null
+     */
+    protected ?string $notes;
+
+    /**
+     * @param Carbon $appointmentDate
+     * @param string $doctorName
+     * @param string $location
+     * @param string|null $notes
+     */
+    public function __construct(
+        Carbon $appointmentDate,
+        string $doctorName,
+        string $location,
+        ?string $notes = null
+    ) {
+        $this->appointmentDate = $appointmentDate;
+        $this->doctorName = $doctorName;
+        $this->location = $location;
+        $this->notes = $notes;
+
+        $message = "Promemoria: Hai un appuntamento con {$doctorName} il {$appointmentDate->format('d/m/Y H:i')}";
+        $message .= " presso {$location}.";
+        
+        if ($notes) {
+            $message .= " Note: {$notes}";
+        }
+
+        parent::__construct(
+            message: $message,
+            sender: 'SALUTEORA'
+        );
+    }
+
+    /**
+     * Get the Netfun representation of the notification.
+     *
+     * @param mixed $notifiable
+     * @return NetfunSmsRequestData
+     */
+    public function toNetfun($notifiable): NetfunSmsRequestData
+    {
+        return new NetfunSmsRequestData(
+            to: $notifiable->phone_number,
+            text: $this->message,
+            from: $this->sender
+        );
+    }
+}
+```
+
+### 2.2 Utilizzo
+```php
+// Nel controller
+public function sendReminder(Appointment $appointment)
+{
+    try {
+        // Verifica se l'appuntamento è nel futuro
+        if ($appointment->date->isPast()) {
+            throw new \Exception('Impossibile inviare promemoria per un appuntamento passato');
+        }
+
+        // Verifica se il promemoria è già stato inviato
+        if ($appointment->reminder_sent_at) {
+            throw new \Exception('Promemoria già inviato');
+        }
+
+        // Invia il promemoria
+        $appointment->patient->notify(
+            new AppointmentReminderNotification(
                 appointmentDate: $appointment->date,
                 doctorName: $appointment->doctor->name,
                 location: $appointment->location,
@@ -682,6 +936,3 @@ class NetfunNotificationIntegrationTest extends TestCase
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache)
 - [Prometheus PHP Client](https://github.com/promphp/prometheus_client_php) 
-# Netfun Examples
-
-This document provides examples for Netfun integration.

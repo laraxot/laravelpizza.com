@@ -1,2 +1,0 @@
-providers:
-  - Modules\Geo\Providers\GeoServiceProvider

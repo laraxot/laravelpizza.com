@@ -1,3 +1,11 @@
+---
+title: "Xot Module - Model Classification"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot]
+qmd: "xot module - model classification xot"
+---
 # Xot Module - Model Classification
 
 ## Business-Relevant Models (Require Factories/Seeders)

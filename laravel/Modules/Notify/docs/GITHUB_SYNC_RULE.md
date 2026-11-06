@@ -1,3 +1,15 @@
+---
+title: "GITHUB SYNC RULE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GITHUB SYNC RULE"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔄 Sync .github with bashscripts/ai/.github
 
 > **Last Updated**: 2026-03-13  
@@ -5,7 +17,6 @@
 > **Rule**: CRITICAL
 
 ---
-
 ## 🎯 Rule Statement
 
 **QUANDO aggiorni `.github/` → DEVI sincronizzare `bashscripts/ai/.github/`**
@@ -37,7 +48,7 @@
 
 ```bash
 # After updating .github/workflows/
-cd /var/www/_bases/base_fixcity_fila5
+cd /var/www/_bases/base_ptv_fila5
 
 # Create directory if needed
 mkdir -p bashscripts/ai/.github/workflows

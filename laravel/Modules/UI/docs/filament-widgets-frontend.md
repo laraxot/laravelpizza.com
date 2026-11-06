@@ -1,3 +1,15 @@
+---
+title: "filament widgets frontend"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament widgets frontend"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Widgets for Frontend Components
 
 ## Overview

@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Modules\Cms\Filament\Resources\SectionResource;
+use Modules\Cms\Filament\Resources\SectionResource\Schemas\SectionForm;
 use Modules\Cms\Models\Section;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 describe('SectionResource', function (): void {
     test('section resource has correct model', function (): void {
         $resource = new SectionResource();
@@ -15,13 +15,13 @@ describe('SectionResource', function (): void {
     });
 
     test('section resource has form schema', function (): void {
-        $schema = SectionResource::getFormSchema();
+        $schema = app(SectionForm::class)->getFormSchema();
         /* @var array<string, mixed> $schema */
         Assert::assertGreaterThan(0, count($schema));
     });
 
     test('section resource has form fields', function (): void {
-        $schema = SectionResource::getFormSchema();
+        $schema = app(SectionForm::class)->getFormSchema();
 
         // Check that form has required components (check array keys)
         Assert::assertContains('info', array_keys($schema));

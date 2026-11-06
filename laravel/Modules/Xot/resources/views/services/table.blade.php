@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <table border="1" class="table table-bordered">
 @foreach ($rows as $row)

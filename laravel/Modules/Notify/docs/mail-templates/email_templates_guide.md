@@ -1,3 +1,15 @@
+---
+title: "email templates guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida ai Template Email Responsive
 
 Questa guida descrive i template email responsive disponibili nel modulo Notify, la loro struttura e come utilizzarli nelle comunicazioni con gli utenti.
@@ -14,7 +26,7 @@ Questa guida descrive i template email responsive disponibili nel modulo Notify,
 
 ## Introduzione
 
-I template email responsive di Quaeris sono progettati per offrire una comunicazione professionale e coinvolgente con gli utenti. Tutti i template sono:
+I template email responsive di <nome progetto> sono progettati per offrire una comunicazione professionale e coinvolgente con gli utenti. Tutti i template sono:
 
 - **Responsive**: ottimizzati per qualsiasi dispositivo (desktop, tablet, mobile)
 - **Accessibili**: strutturati per garantire accessibilità secondo gli standard WCAG
@@ -89,17 +101,17 @@ Tutti i template condividono elementi strutturali comuni:
     <div class="header">
         <!-- Logo e titoli -->
     </div>
-    
+
     <div class="content">
         <!-- Contenuto principale -->
-        
+
         <div class="main-box">
             <!-- Box principale specifico del template -->
         </div>
-        
+
         <!-- Altre sezioni -->
     </div>
-    
+
     <div class="footer">
         <!-- Contatti, social, etc. -->
     </div>
@@ -121,7 +133,7 @@ Tutti i template utilizzano il motore di templating Blade di Laravel. Le variabi
 | `$name` | Nome destinatario | "Utente" |
 | `$intro_text` | Testo introduttivo | Varia per template |
 | `$outro_text` | Testo conclusivo | Varia per template |
-| `$contact_email` | Email di contatto | "supporto@Quaeris.it" |
+| `$contact_email` | Email di contatto | "supporto@<nome progetto>.it" |
 | `$contact_phone` | Telefono di contatto | "+39 06 1234567" |
 | `$office_hours` | Orari ufficio | "Lun-Ven: 9:00-19:00, Sab: 9:00-13:00" |
 
@@ -151,7 +163,7 @@ class SendAppointmentConfirmationAction
     public function execute(array $data)
     {
         $template = MailTemplate::where('mailable', 'appointment_confirmation')->first();
-        
+
         // Prepara i dati per il template
         $templateData = [
             'name' => $data['patient_name'],
@@ -162,11 +174,11 @@ class SendAppointmentConfirmationAction
             'service' => $data['service_name'],
             // Altri dati specifici
         ];
-        
+
         // Invia l'email
         Mail::to($data['patient_email'])
             ->send(new \Modules\Notify\Mail\AppointmentMail($template, $templateData));
-            
+
         return true;
     }
 }
@@ -200,3 +212,7 @@ class SendAppointmentConfirmationAction
 - [EMAIL_BEST_PRACTICES.md](./EMAIL_BEST_PRACTICES.md) - Best practices per email transazionali
 - [RESPONSIVE_EMAIL_TEMPLATES.md](../RESPONSIVE_EMAIL_TEMPLATES.md) - Guide dettagliate sul design responsive
 - [MAILPACE_TEMPLATES_INTEGRATION.md](./MAILPACE_TEMPLATES_INTEGRATION.md) - Integrazione con template esterni
+- [HTML_EMAIL_COMPATIBILITY.md](./html_email_compatibility.md) - Guide sulla compatibilità cross-client
+- [EMAIL_BEST_PRACTICES.md](./email_best_practices.md) - Best practices per email transazionali
+- [RESPONSIVE_EMAIL_TEMPLATES.md](../responsive_email_templates.md) - Guide dettagliate sul design responsive
+- [MAILPACE_TEMPLATES_INTEGRATION.md](./mailpace_templates_integration.md) - Integrazione con template esterni

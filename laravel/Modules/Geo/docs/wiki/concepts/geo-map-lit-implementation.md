@@ -1,10 +1,18 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map lit implementation"
+issues: []
+discussions: []
 title: GeoMapLit Implementation Guide
 description: Complete implementation guide for GeoMapLit component with farmshops.eu parity
 category: geo-patterns
 deprecated: true
 deprecated_in: 2026-05-08
 deprecated_reason: "Element name <geo-map-lit> superseded by canonical <map-lit>. See concepts/map-lit-canonical-name.md."
+status: draft
 ---
 
 > ⚠️ **DEPRECATED — Custom element naming**

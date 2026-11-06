@@ -110,6 +110,11 @@ return [
             'label' => 'Ripristina',
             'tooltip' => 'Ripristina stato precedente',
         ],
+        'delete' => [
+            'label' => 'delete',
+            'icon' => 'delete',
+            'tooltip' => 'delete',
+        ],
     ],
     'messages' => [
         'no_activities' => 'Nessuna attività trovata',

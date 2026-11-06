@@ -1,3 +1,14 @@
+---
+title: "scripts categorization plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts categorization plan"
+issues: []
+discussions: []
+---
+
 # Script Categorization Plan - Super Mucca Analysis
 
 **Data**: Gennaio 2025  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "scripts categorization plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts categorization plan"
+issues: []
+discussions: []
 ## 📊 Situazione Attuale
 
 **Script nella root di bashscripts/**: ~103 file .sh/.py non categorizzati

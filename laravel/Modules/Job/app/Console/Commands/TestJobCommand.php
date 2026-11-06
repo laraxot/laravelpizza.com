@@ -1,15 +1,14 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://github.com/husam-tariq/filament-database-schedule/blob/v2.0.0/src/Console/Commands/TestJobCommand.php
  */
 
-declare(strict_types=1);
-
 namespace Modules\Job\Console\Commands;
 
 use Illuminate\Console\Command;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class TestJobCommand extends Command
 {

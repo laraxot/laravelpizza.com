@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Monitoraggio e diagnostica del sistema',
         ],
-        'label' => 'health',
+        'label' => 'Zustand',
         'sort' => '14',
         'icon' => 'xot-health',
     ],
@@ -177,7 +177,12 @@ return [
             'security_breach' => 'Rilevata potenziale violazione sicurezza',
         ],
     ],
-    'title' => 'health',
+    'title' => 'Zustand',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'page' => [
+        'last_check' => [
+            'label' => 'Letzte Prüfung',
+        ],
+    ],
 ];

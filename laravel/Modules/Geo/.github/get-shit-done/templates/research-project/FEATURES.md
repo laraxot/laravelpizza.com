@@ -1,3 +1,14 @@
+---
+title: "FEATURES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FEATURES"
+issues: []
+discussions: []
+---
+
 # Features Research Template
 
 Template for `.planning/research/FEATURES.md` — feature landscape for the project domain.
@@ -111,6 +122,14 @@ Features to defer until product-market fit is established.
 - [Industry standards referenced]
 
 ---
+title: "FEATURES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FEATURES"
+issues: []
+discussions: []
 *Feature research for: [domain]*
 *Researched: [date]*
 ```

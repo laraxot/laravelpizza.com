@@ -12,7 +12,8 @@ discussions:
 related:
   - phpstan-pest-discipline.md
   - ../overviews/completion-status.md
-  - ../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
+  - ../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
+status: draft
 ---
 
 # Testing in Activity
@@ -20,7 +21,7 @@ related:
 ## Pest + PHPStan L10
 
 - `uses(Modules\Activity\Tests\TestCase::class)`
-- Assertion: `PHPUnit\Framework\Assert::assert*` — **no** `expect()` ([phpstan-pest-discipline](phpstan-pest-discipline.md))
+- Assertion: `PHPUnit\Framework\Assert::assert*`: **no** `expect()` ([phpstan-pest-discipline](phpstan-pest-discipline.md))
 - `UserFactory::new()->createOne()` per tipi non-null
 
 ## Quality gate
@@ -39,4 +40,4 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules/Activity
 | Pest runtime | 🔄 DB test |
 | Roadmap | [completion-status](../overviews/completion-status.md) |
 
-Hub: [platform-completion-roadmap](../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
+Hub: [platform-completion-roadmap](../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)

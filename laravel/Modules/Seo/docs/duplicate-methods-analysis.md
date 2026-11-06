@@ -1,7 +1,21 @@
+---
+title: "duplicate methods analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods analysis"
+issues: []
+discussions: []
+status: active
+---
+
 # Analisi Metodi Duplicati - Modulo Seo
 
-**Data Generazione**: 2025-10-15 06:41:17
+---
 **Totale Gruppi di Duplicati**:
+**Data Generazione**: 2025-10-15 06:41:17
+**Totale Gruppi di Duplicati**: 
 
 ## Sommario Esecutivo
 
@@ -24,9 +38,9 @@ Questo documento identifica i metodi duplicati nel modulo **Seo** che potrebbero
 
 **Trovato in  file3 file**:
 
-- `TranslatorService::get` - [Modules/Lang/app/Services/TranslatorService.php:28](Modules/Lang/app/Services/TranslatorService.php) (Modulo: Lang)
-- `SubtitleService::get` - [Modules/Media/app/Services/SubtitleService.php:105](Modules/Media/app/Services/SubtitleService.php) (Modulo: Media)
-- `MetatagService::get` - [Modules/Seo/app/Services/MetatagService.php:30](Modules/Seo/app/Services/MetatagService.php)
+- `TranslatorService::get` - [Modules/Lang/app/Services/TranslatorService.php:28](Modules/Lang/app/Services/TranslatorService.php) _(target mancante, verificato 2026-10-08)_ (Modulo: Lang)
+- `SubtitleService::get` - [Modules/Media/app/Services/SubtitleService.php:105](Modules/Media/app/Services/SubtitleService.php) _(target mancante, verificato 2026-10-08)_ (Modulo: Media)
+- `MetatagService::get` - [Modules/Seo/app/Services/MetatagService.php:30](Modules/Seo/app/Services/MetatagService.php) _(target mancante, verificato 2026-10-08)_
 
 **Signature**:
 ```php

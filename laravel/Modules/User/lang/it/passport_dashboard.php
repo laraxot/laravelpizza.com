@@ -29,8 +29,25 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'client_name' => [
+            'label' => 'Nome cliente',
+        ],
+        'force' => [
+            'description' => 'force',
+        ],
+        'name' => [
+            'label' => 'name',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
     ],
     'actions' => [
+        'new_credentials' => [
+            'label' => 'Nuove credenziali',
+            'icon' => 'new_credentials',
+            'tooltip' => 'new_credentials',
+        ],
         'create' => [
             'label' => 'Crea Client',
             'tooltip' => 'Crea un nuovo client OAuth',
@@ -42,42 +59,62 @@ return [
         'install' => [
             'label' => 'Installa Passport',
             'modal_description' => 'Questo comando installerà Passport e creerà le chiavi di crittografia necessarie.',
-            'force_label' => 'Forza sovrascrittura chiavi',
-            'force_help' => 'Sovrascrive le chiavi esistenti se presenti.',
-        ],
-        'keys' => [
-            'label' => 'Genera chiavi',
-            'force_label' => 'Forza sovrascrittura',
-            'force_help' => 'Sovrascrive le chiavi esistenti (necessario se già presenti).',
-        ],
-        'purge' => [
-            'label' => 'Pulisci token',
-            'revoked_label' => 'Rimuovi token revocati',
-            'revoked_help' => 'Elimina i token e codici revocati.',
-            'expired_label' => 'Rimuovi token scaduti',
-            'expired_help' => 'Elimina i token scaduti da più di N ore.',
-            'hours_label' => 'Ore di retention',
-            'hours_help' => 'Token scaduti da più di N ore verranno eliminati (default 168 = 7 giorni).',
-        ],
-        'purge_tokens' => [
-            'label' => 'Pulisci Token',
-            'modal_description' => 'Verranno rimossi i token e codici revocati e/o scaduti secondo le opzioni selezionate.',
-        ],
-        'hash' => [
-            'label' => 'Hash secret',
-            'force_label' => 'Forza senza conferma',
-            'force_help' => 'Esegue senza prompt di conferma.',
-        ],
-        'hash_secrets' => [
-            'label' => 'Hash Secret',
-            'modal_description' => 'Applica l\'hashing a tutti i client secret esistenti. Operazione irreversibile.',
         ],
         'generate_keys' => [
             'label' => 'Genera Chiavi',
         ],
+        'purge_tokens' => [
+            'label' => 'Pulisci Token',
+            'modal_description' => 'Elimina tutti i token scaduti o revocati.',
+        ],
+        'hash_secrets' => [
+            'label' => 'Hash Secret',
+            'modal_description' => 'Applica l\'hashing a tutti i client secret esistenti.',
+        ],
+        'passport_install' => [
+            'label' => 'passport_install',
+            'icon' => 'passport_install',
+            'tooltip' => 'passport_install',
+        ],
+        'passport_keys' => [
+            'label' => 'passport_keys',
+            'icon' => 'passport_keys',
+            'tooltip' => 'passport_keys',
+        ],
+        'passport_purge' => [
+            'label' => 'passport_purge',
+            'icon' => 'passport_purge',
+            'tooltip' => 'passport_purge',
+        ],
+        'passport_hash' => [
+            'label' => 'passport_hash',
+            'icon' => 'passport_hash',
+            'tooltip' => 'passport_hash',
+        ],
+        'save' => [
+            'label' => 'save',
+            'icon' => 'save',
+            'tooltip' => 'save',
+        ],
+        'profile' => [
+            'label' => 'profile',
+            'icon' => 'profile',
+            'tooltip' => 'profile',
+        ],
         'logout' => [
-            'tooltip' => 'logout',
+            'label' => 'logout',
             'icon' => 'logout',
+            'tooltip' => 'logout',
+        ],
+        'submit' => [
+            'label' => 'submit',
+            'icon' => 'submit',
+            'tooltip' => 'submit',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+            'icon' => 'cancel',
+            'tooltip' => 'cancel',
         ],
     ],
     'status' => [
@@ -85,6 +122,15 @@ return [
         'private_key' => 'Chiave Privata',
         'present' => 'Presente',
         'missing' => 'Mancante',
+        'completed' => [
+            'message' => 'Completato',
+        ],
+        'failed' => [
+            'message' => 'Fallito',
+        ],
+        'running' => [
+            'message' => 'In esecuzione...',
+        ],
     ],
     'messages' => [
         'client_created' => 'Client creato con successo',
@@ -93,5 +139,26 @@ return [
         'command_completed' => 'Comando completato con successo',
         'command_failed' => 'Esecuzione comando fallita',
         'command_error' => 'Errore durante l\'esecuzione del comando',
+        'credentials_created' => 'Credenziali create con successo',
+    ],
+    'view' => [
+        'running_notice' => [
+            'message' => 'Il comando è in esecuzione. Non chiudere questa finestra.',
+        ],
+        'actions_disabled' => [
+            'description' => 'Le altre azioni sono disabilitate fino al termine del comando.',
+        ],
+        'running_command' => [
+            'message' => 'Comando in esecuzione: php artisan',
+        ],
+        'waiting_output' => [
+            'message' => 'In attesa dell\'output...',
+        ],
+        'select_command' => [
+            'label' => 'Seleziona un comando dall\'intestazione per iniziare.',
+        ],
+        'scroll' => [
+            'helper_text' => 'Usa la rotellina del mouse per scorrere l\'output.',
+        ],
     ],
 ];

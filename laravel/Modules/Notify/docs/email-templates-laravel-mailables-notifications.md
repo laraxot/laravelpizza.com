@@ -1,3 +1,15 @@
+---
+title: "email templates laravel mailables notifications"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates laravel mailables notifications"
+issues: []
+discussions: []
+status: draft
+---
+
 # Approfondimento: Mailables & Notifications Laravel
 
 ## Funzionalità principali

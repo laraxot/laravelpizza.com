@@ -1,3 +1,11 @@
+---
+title: "Best Practices per Laraxot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "best practices per laraxot xot"
+---
 # Best Practices per Laraxot
 
 ## Riferimenti al modello User

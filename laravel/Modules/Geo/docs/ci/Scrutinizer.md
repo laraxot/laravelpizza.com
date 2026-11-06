@@ -1,2 +1,0 @@
-https://scrutinizer-ci.com/
-

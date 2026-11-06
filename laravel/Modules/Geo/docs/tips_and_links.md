@@ -1,3 +1,15 @@
+---
+title: "tips and links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tips and links"
+issues: []
+discussions: []
+status: draft
+---
+
 mappa piu' carina con tanto di repository github
 https://farmshops.eu/
 https://github.com/CodeforKarlsruhe/direktvermarkter

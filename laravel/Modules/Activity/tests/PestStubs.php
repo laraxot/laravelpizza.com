@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Response;
 use Illuminate\Testing\TestResponse;
@@ -19,7 +18,7 @@ if (! function_exists('actingAs')) { // Changed from Pest\Laravel\actingAs
      */
     function actingAs(Authenticatable $user, ?string $driver = null): TestResponse
     {
-        throw new RuntimeException('Stub not intended for runtime use');
+        throw new RuntimeException(sprintf('Stub actingAs(%s, %s) not intended for runtime use', $user::class, $driver ?? 'default'));
     }
 }
 
@@ -32,7 +31,7 @@ if (! function_exists('livewire')) { // Changed from Pest\Laravel\livewire
      */
     function livewire(string $component, array $params = []): Testable
     {
-        throw new RuntimeException('Stub not intended for runtime use');
+        throw new RuntimeException(sprintf('Stub livewire(%s) with %d params not intended for runtime use', $component, count($params)));
     }
 }
 

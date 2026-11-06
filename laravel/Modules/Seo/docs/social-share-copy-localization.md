@@ -1,3 +1,15 @@
+---
+title: "social share copy localization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "social share copy localization"
+issues: []
+discussions: []
+status: active
+---
+
 # Social share copy localization
 
 ## Contesto

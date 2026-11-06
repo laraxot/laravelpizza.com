@@ -8,6 +8,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ProfileResource;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\User\Filament\Resources\BaseProfileResource\Pages\ListProfiles as UserListProfiles;
 
 class ListProfiles extends UserListProfiles
@@ -21,7 +22,7 @@ class ListProfiles extends UserListProfiles
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->searchable(),
+            'id' => IDColumn::make('id')->searchable(),
             'type' => TextColumn::make('type')->searchable(),
             'first_name' => TextColumn::make('first_name')->searchable(),
             'last_name' => TextColumn::make('last_name')->searchable(),

@@ -3,6 +3,11 @@ title: Modulo Xot
 description: Modulo Xot
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "modulo xot {#modulo-x-markot} xot"
 ---
 
 # Modulo Xot {#modulo-x-markot}

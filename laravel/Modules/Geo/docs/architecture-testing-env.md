@@ -1,27 +1,20 @@
+---
+title: "architecture testing env"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture testing env"
+issues: []
+discussions: []
+status: draft
+---
+
 # Testing Environment
 
-## Regola
-
-Il file `.env.testing` deve sempre esistere nel progetto Laravel.
-
-## Principio
-
-- È identico a `.env`
-- Cambiano solo le variabili `DB_DATABASE*`
-- Ogni valore DB viene concatenato con `_test`
-
-## Perché
-
-- Isola i test dal database di sviluppo
-- Evita contaminazione dei dati
-- Permette test ripetibili e sicuri
-
-## Esempio
-
-- `DB_DATABASE=fixcity_data` → `DB_DATABASE=fixcity_data_test`
-- `DB_DATABASE_USER=fixcity_user` → `DB_DATABASE_USER=fixcity_user_test`
-- `DB_PASSWORD_USER=marco` → `DB_PASSWORD_USER=marco_test`
-
-## Filosofia
-
-La separazione degli ambienti è una forma di disciplina: il test deve essere utile senza essere invasivo.
+Geo tests follow the owning Xot module's canonical database policy:
+[`../../Xot/docs/testing-database-strategy.md`](../../Xot/docs/testing-database-strategy.md).
+Use the tracked secret-free `.env.testing` template, MySQL/MariaDB `_test` databases, and
+credentials injected through dedicated `FIXCITY_TEST_DB_*` environment variables. Never
+copy `.env` or reuse development credentials. Do not run migrations until an authorized DBA
+has provisioned and granted access to the isolated test databases.

@@ -14,7 +14,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('extra.view.any');
+        return $user->hasPermissionToOrCreate('extra.view.any');
     }
 
     /**
@@ -22,7 +22,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Extra $_extra): bool
     {
-        return $user->hasPermissionTo('extra.view') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('extra.view') || $user->hasRole('super-admin');
     }
 
     /**
@@ -30,7 +30,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('extra.create');
+        return $user->hasPermissionToOrCreate('extra.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Extra $_extra): bool
     {
-        return $user->hasPermissionTo('extra.update') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('extra.update') || $user->hasRole('super-admin');
     }
 
     /**
@@ -46,7 +46,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Extra $_extra): bool
     {
-        return $user->hasPermissionTo('extra.delete') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('extra.delete') || $user->hasRole('super-admin');
     }
 
     /**
@@ -54,7 +54,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Extra $_extra): bool
     {
-        return $user->hasPermissionTo('extra.restore') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('extra.restore') || $user->hasRole('super-admin');
     }
 
     /**
@@ -62,6 +62,6 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Extra $extra): bool
     {
-        return $user->hasPermissionTo('extra.force-delete') || $user->hasRole('super-admin');
+        return $user->hasPermissionToOrCreate('extra.force-delete') || $user->hasRole('super-admin');
     }
 }

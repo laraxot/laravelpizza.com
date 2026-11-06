@@ -59,7 +59,7 @@ return [
         ],
         'label' => 'Pages',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

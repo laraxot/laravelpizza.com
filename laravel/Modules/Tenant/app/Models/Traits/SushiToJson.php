@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
-use InvalidArgumentException;
-use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
+use Modules\Tenant\Actions\Json\CreateJsonFileByRecordAction;
+use Modules\Tenant\Actions\Json\DeleteJsonFileByRecordAction;
+use Modules\Tenant\Actions\Json\UpdateJsonFileByRecordAction;
+use Modules\Tenant\Models\Contracts\HasSushiToJson;
+use Modules\Xot\Actions\Arr\EnsureKeysAction;
 use Sushi\Sushi;
-use Throwable;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_get_contents;
@@ -29,7 +31,53 @@ use function Safe\json_encode;
  */
 trait SushiToJson
 {
-    use Sushi;
+    use Sushi {
+        getSchema as protected sushiGetSchema;
+    }
+    use SushiConnectionByName;
+
+    /**
+     * @return array<string, string>
+     */
+    public function getSchema(): array
+    {
+        $schema = $this->sushiGetSchema();
+        Assert::isArray($schema);
+
+        /** @var array<string, string> $schema */
+        return $schema;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function loadExistingData(): array
+    {
+        $path = $this->getJsonFile();
+
+        if (! File::exists($path)) {
+            return [];
+        }
+
+        $content = File::get($path);
+        $data = json_decode($content, true);
+        Assert::isArray($data);
+
+        /** @var array<string, mixed> $data */
+        return $data;
+    }
+
+    /**
+     * @param  array<int|string, array<string, mixed>>  $data
+     */
+    public function saveToJson(array $data): bool
+    {
+        $path = $this->getJsonFile();
+
+        File::put($path, json_encode($data, JSON_PRETTY_PRINT));
+
+        return true;
+    }
 
     /**
      * Ottiene il percorso del file JSON per il modello corrente.
@@ -40,18 +88,15 @@ trait SushiToJson
     public function getJsonFile(): string
     {
         $tbl = $this->getTable();
-        if (! is_string($tbl)) {
-            throw new InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
-        }
 
-        return TenantService::filePath('database/content/'.$tbl.'.json');
+        return app(GetTenantFilePathAction::class)->execute('database/content/'.$tbl.'.json');
     }
 
     /**
      * Metodo richiesto da Sushi per popolare la tabella in-memory.
      * Delegato a getSushiRows() per mantenere separazione semantica.
      *
-     * @return array<int, array<string, mixed>>
+     * @return array<array-key, array<string, mixed>>
      */
     public function getRows(): array
     {
@@ -59,398 +104,74 @@ trait SushiToJson
     }
 
     /**
-     * Ottiene i dati dal file JSON per il modello Sushi.
-     * I dati vengono normalizzati per garantire compatibilità con Eloquent.
-     *
-     * @return array<int, array<string, mixed>> Array di record per Sushi
-     *
-     * @throws Exception Se i dati non sono in formato array valido
+     * @return array<int, array<string, mixed>>
      */
     public function getSushiRows(): array
     {
         $path = $this->getJsonFile();
-        if (! File::exists($path)) {
-            return [];
-        }
-
-        $data = json_decode(file_get_contents($path), true);
-        if (! \is_array($data)) {
-            throw new Exception('Data is not array ['.$path.']');
-        }
-
-        /** @var array<int, array<string, mixed>> $typedData */
-        $typedData = [];
-        foreach (array_values($data) as $item) {
-            if (! is_array($item)) {
-                continue;
-            }
-
-            /** @var array<string, mixed> $item */
-            $typedData[] = ConfigStringKeyFilter::onlyStringKeys($item);
-        }
-
-        $normalizedData = $this->normalizeJsonItems($typedData);
-        $schema = $this->getSchema();
-        /** @var array<string, mixed> $schemaArray */
-        $schemaArray = $schema;
-        $form = $this->normalizeSchemaFields($schemaArray);
-
-        return $this->completeSchemaFields($normalizedData, $form);
-    }
-
-    /**
-     * Carica i dati esistenti dal file JSON.
-     * Preserva la struttura originale dei dati senza normalizzazione.
-     *
-     * @return array<int, array<string, mixed>> Dati esistenti
-     */
-    public function loadExistingData(): array
-    {
-        $path = $this->getJsonFile();
-
+        // Tabella vuota, non errore, finche' il file JSON del tenant non esiste: e' il caso del
+        // primo avvio e dei test (`SushiToJsonTraitPestTest` "returns empty rows when json file is missing").
         if (! File::exists($path)) {
             return [];
         }
 
         $content = file_get_contents($path);
         $data = json_decode($content, true);
-
-        if (! is_array($data)) {
-            return [];
+        if (! \is_array($data)) {
+            throw new Exception('Data is not array ['.$path.']');
         }
 
-        // Assicura che i dati abbiano la struttura corretta
-        $result = [];
-        foreach ($data as $item) {
-            if (is_array($item)) {
-                $safeItem = [];
-                foreach ($item as $key => $value) {
-                    $safeItem[(string) $key] = $value;
-                }
+        /** @var array<int|string, array<string, mixed>> $data */
+        $schema = $this->getSchema();
 
-                $result[] = $safeItem;
-            }
-        }
+        $res = app(EnsureKeysAction::class)->execute($data, array_keys($schema));
 
-        return $result;
+        // La tabella in-memory di Sushi non salva array: i valori annidati diventano stringhe JSON.
+        return array_map(
+            static fn (array $row): array => array_map(
+                static fn (mixed $value): mixed => \is_array($value) || \is_object($value) ? json_encode($value) : $value,
+                $row,
+            ),
+            array_values($res),
+        );
     }
 
-    /**
-     * Salva i dati del modello nel file JSON.
-     * Crea la directory se non esiste e salva con formattazione JSON.
-     * Utilizza JSON_PRETTY_PRINT e JSON_UNESCAPED_UNICODE per leggibilità.
-     *
-     * @param  array<int, array<string, mixed>>  $data  Array di record da salvare
-     * @return bool True se il salvataggio è riuscito, false in caso di errore
-     */
-    public function saveToJson(array $data): bool
+    protected function sushiShouldCache(): bool
     {
-        try {
-            $file = $this->getJsonFile();
-            $this->ensureDirectoryExists(dirname($file));
-            File::put($file, json_encode($this->normalizeJsonRecords($data), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-            return true;
-        } catch (Exception $e) {
-            report($e);
-
-            return false;
-        }
-    }
-
-    /**
-     * Ottiene l'ID successivo disponibile per un nuovo record.
-     *
-     * @return int ID successivo disponibile
-     */
-    protected function getNextId(): int
-    {
-        $existingData = $this->loadExistingData();
-
-        if ($existingData === []) {
-            return 1;
-        }
-
-        $maxId = 0;
-
-        foreach ($existingData as $row) {
-            if (! \is_array($row)) {
-                continue;
-            }
-
-            $rawId = $row['id'] ?? 0;
-            $id = \is_numeric($rawId) ? (int) $rawId : 0;
-            $maxId = max($maxId, $id);
-        }
-
-        return $maxId + 1;
+        return false;
     }
 
     /**
      * Boot method per il trait SushiToJson.
      * Gestisce gli eventi di creazione, aggiornamento e cancellazione
      * per sincronizzare automaticamente i dati con i file JSON.
+     *
+     * I modelli Sushi read-only (che usano il trait solo per leggere il JSON)
+     * non implementano HasSushiToJson: su di loro la sincronizzazione non deve
+     * essere registrata, altrimenti le callback riceverebbero un tipo non
+     * conforme al contratto e il listener fallirebbe con TypeError.
      */
     protected static function bootSushiToJson(): void
     {
-        static::creating(static function ($model): void {
-            Assert::isInstanceOf($model, static::class);
-            self::handleSingleJsonCreating($model);
+        static::creating(static function (Model $record): void {
+            if (! $record instanceof HasSushiToJson) {
+                return;
+            }
+            app(CreateJsonFileByRecordAction::class)->execute($record);
         });
 
-        static::updating(static function ($model): void {
-            Assert::isInstanceOf($model, static::class);
-            self::handleSingleJsonUpdating($model);
+        static::updating(static function (Model $record): void {
+            if (! $record instanceof HasSushiToJson) {
+                return;
+            }
+            app(UpdateJsonFileByRecordAction::class)->execute($record);
         });
 
-        static::deleting(static function ($model): void {
-            Assert::isInstanceOf($model, static::class);
-            self::handleSingleJsonDeleting($model);
+        static::deleting(static function (Model $record): void {
+            if (! $record instanceof HasSushiToJson) {
+                return;
+            }
+            app(DeleteJsonFileByRecordAction::class)->execute($record);
         });
-    }
-
-    /**
-     * Trova l'indice del record nell'array dato un id.
-     *
-     * @param  array<int, array<string, mixed>>  $rows
-     * @return int|null Indice se trovato, altrimenti null
-     */
-    protected function findRowIndexById(array $rows, int $id): ?int
-    {
-        foreach ($rows as $index => $row) {
-            if (is_array($row) && ((int) ($row['id'] ?? 0)) === $id) {
-                return (int) $index;
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Ottiene l'ID dell'utente autenticato per i campi di audit.
-     */
-    protected function authId(): int|string|null
-    {
-        if (\function_exists('authId')) {
-            return authId();
-        }
-
-        if (class_exists('\Illuminate\Support\Facades\Auth')) {
-            return Auth::id();
-        }
-
-        return null;
-    }
-
-    /**
-     * Assicura che la directory per il file JSON esista.
-     */
-    protected function ensureDirectoryExists(string $filePath): void
-    {
-        $directory = dirname($filePath);
-
-        if (! File::exists($directory)) {
-            File::makeDirectory($directory, 0o755, true, true);
-        }
-    }
-
-    /**
-     * @param  array<int, array<string, mixed>>  $data
-     * @return array<int, array<string, mixed>>
-     */
-    private function normalizeJsonRecords(array $data): array
-    {
-        $validatedData = [];
-
-        foreach ($data as $item) {
-            if (! is_array($item)) {
-                continue;
-            }
-
-            $validatedItem = [];
-            foreach ($item as $key => $value) {
-                $validatedItem[is_string($key) ? $key : (string) $key] = $value;
-            }
-            $validatedData[] = $validatedItem;
-        }
-
-        return $validatedData;
-    }
-
-    private static function handleSingleJsonCreating(self $model): void
-    {
-        $file = $model->getJsonFile();
-        $existingData = $model->loadExistingData();
-        $nextId = self::resolveNextRecordId($existingData);
-
-        $model->setAttribute('id', $nextId);
-        $model->setAttribute('updated_at', now());
-        $model->setAttribute('created_at', now());
-        self::applyAuditFields($model);
-
-        $existingData[] = $model->getAttributes();
-        $model->ensureDirectoryExists($file);
-        $model->saveToJson($existingData);
-    }
-
-    /**
-     * @param  array<int, array<string, mixed>>  $existingData
-     */
-    private static function resolveNextRecordId(array $existingData): int
-    {
-        return max(self::maxIdFromRows($existingData), self::maxIdFromDatabase()) + 1;
-    }
-
-    /**
-     * @param  array<int, array<string, mixed>>  $rows
-     */
-    private static function maxIdFromRows(array $rows): int
-    {
-        $maxId = 0;
-
-        foreach ($rows as $row) {
-            if (! \is_array($row)) {
-                continue;
-            }
-
-            $rawId = $row['id'] ?? 0;
-            $id = \is_numeric($rawId) ? (int) $rawId : 0;
-            $maxId = max($maxId, $id);
-        }
-
-        return $maxId;
-    }
-
-    private static function maxIdFromDatabase(): int
-    {
-        try {
-            /** @var int|null $dbMax */
-            $dbMax = static::query()->max('id');
-
-            return \is_int($dbMax) ? $dbMax : 0;
-        } catch (Throwable) {
-            return 0;
-        }
-    }
-
-    private static function applyAuditFields(self $model): void
-    {
-        $authId = $model->authId();
-        if ($authId === null) {
-            return;
-        }
-
-        $model->setAttribute('updated_by', $authId);
-        $model->setAttribute('created_by', $authId);
-    }
-
-    private static function handleSingleJsonUpdating(self $model): void
-    {
-        $model->setAttribute('updated_at', now());
-        self::applyUpdatingAuditField($model);
-
-        $existingData = $model->loadExistingData();
-        $id = (int) ($model->getAttribute('id') ?? 0);
-        if ($id <= 0) {
-            return;
-        }
-
-        $index = $model->findRowIndexById($existingData, $id);
-        if ($index === null) {
-            return;
-        }
-
-        /** @var array<string, mixed> $modelArray */
-        $modelArray = $model->toArray();
-        $existingData[$index] = $modelArray;
-        $model->saveToJson($existingData);
-    }
-
-    private static function applyUpdatingAuditField(self $model): void
-    {
-        $authId = $model->authId();
-        if ($authId !== null) {
-            $model->setAttribute('updated_by', $authId);
-        }
-    }
-
-    private static function handleSingleJsonDeleting(self $model): void
-    {
-        $id = (int) ($model->getAttribute('id') ?? 0);
-        if ($id <= 0) {
-            return;
-        }
-
-        $existingData = $model->loadExistingData();
-        $index = $model->findRowIndexById($existingData, $id);
-        if ($index === null) {
-            return;
-        }
-
-        unset($existingData[$index]);
-        $model->saveToJson(array_values($existingData));
-    }
-
-    /**
-     * @param  array<int, array<string, mixed>>  $data
-     * @return array<int, array<string, mixed>>
-     */
-    protected function normalizeJsonItems(array $data): array
-    {
-        /** @var array<int, array<string, mixed>> $normalizedData */
-        $normalizedData = [];
-
-        foreach ($data as $item) {
-            if (! \is_array($item)) {
-                continue;
-            }
-
-            /** @var array<string, mixed> $normalizedItem */
-            $normalizedItem = [];
-            foreach ($item as $key => $value) {
-                $stringKey = is_string($key) ? $key : (string) $key;
-                if (\is_array($value) || \is_object($value)) {
-                    $value = json_encode($value);
-                }
-                $normalizedItem[$stringKey] = $value;
-            }
-
-            $normalizedData[] = ConfigStringKeyFilter::onlyStringKeys($normalizedItem);
-        }
-
-        return $normalizedData;
-    }
-
-    /**
-     * @param  array<string, mixed> $schema
-     * @return array<string, mixed>
-     */
-    protected function normalizeSchemaFields(array $schema): array
-    {
-        return ConfigStringKeyFilter::onlyStringKeys($schema);
-    }
-
-    /**
-     * @param  array<int, array<string, mixed>>  $normalizedData
-     * @param  array<string, mixed> $form
-     * @return array<int, array<string, mixed>>
-     */
-    protected function completeSchemaFields(array $normalizedData, array $form): array
-    {
-        /** @var array<int, array<string, mixed>> $completedData */
-        $completedData = [];
-
-        foreach ($normalizedData as $item) {
-            foreach (array_keys($form) as $safeKey) {
-                if (! array_key_exists($safeKey, $item)) {
-                    $item[$safeKey] = null;
-                }
-            }
-
-            ksort($item);
-            $completedData[] = $item;
-        }
-
-        return array_values($completedData);
     }
 }

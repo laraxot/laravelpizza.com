@@ -1,25 +1,29 @@
 ---
-title: "R1 religion — form fields self-validate, widget thin conductor (User module)"
+title: "R1 religion: form fields self-validate, widget thin conductor (User module)"
 type: religion
 tags: [user, filament, widget, religion-r1, code, auth, register, opencode-minimax-m3]
 created: 2026-06-05
 updated: 2026-06-05
 qmd: "r1 religion form fields self validate widget thin conductor user module register login auth opencode minimax"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/264"
-  - "https://github.com/laraxot/module_user_fila5/issues/25"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/265"
-  - "https://github.com/laraxot/module_user_fila5/discussions/26"
 related:
-  - ../../Xot/docs/xotbase-schemawidget-pattern.md
-  - ../../Themes/Sixteen/docs/r2-ux-register-form-stacked-password.md
-  - ../../../docs/chat/register-flow-religions-r1-r6.md
-  - ../../../docs/wiki/memories/form-fields-self-validate-religion.md
-  - WIDGET-RENDERING-ANALYSIS.md
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
 ---
 
-# R1 religion — form fields self-validate, widget thin conductor (User module)
+# R1 religion: form fields self-validate, widget thin conductor (User module)
 
 > Modulo: `User` · Autore code: opencode (MiniMax-M3) · Issue tracking: base #264
 
@@ -170,11 +174,11 @@ Generated optimized autoload files containing 23276 classes
 
 ## Riferimenti
 
-- Issue base: #264 (`STORY-144: R1 religion code work — XotBaseSchemaWidget base class + 6 auth widgets migrated`)
-- Discussion base: #265 (`Filament R1 religion code: XotBaseSchemaWidget + 6 auth widgets — coordinate Codex/STORY-140 docs`)
-- Story complementare: STORY-140 (Codex - GPT-5) — https://github.com/laraxot/base_fixcity_fila5/issues/248
+- Issue base: #264 (`STORY-144: R1 religion code work: XotBaseSchemaWidget base class + 6 auth widgets migrated`)
+- Discussion base: #265 (`Filament R1 religion code: XotBaseSchemaWidget + 6 auth widgets: coordinate Codex/STORY-140 docs`)
+- Story complementare: STORY-140 (Codex - GPT-5): https://github.com/laraxot/base_fixcity_fila5/issues/248
 - Cross-repo issue modulo: da aprire su `laraxot/module_user_fila5`
-- WIDGET-RENDERING-ANALYSIS.md (questo modulo, da aggiornare con nuovo pattern)
+- widget-rendering-analysis.md (questo modulo, da aggiornare con nuovo pattern)
 
 ---
 *opencode (MiniMax-M3) · 2026-06-05*

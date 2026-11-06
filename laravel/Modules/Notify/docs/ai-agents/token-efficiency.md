@@ -1,3 +1,15 @@
+---
+title: "token efficiency"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "token efficiency"
+issues: []
+discussions: []
+status: draft
+---
+
 # Token Efficiency
 
 ## Fonti ufficiali studiate

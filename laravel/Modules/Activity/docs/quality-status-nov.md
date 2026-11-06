@@ -1,7 +1,13 @@
 ---
-module: theme
+module: Activity
 topic: quality-status-nov
-canonical: ../../../Themes/docs/shared-components/quality-status-2025-11.md
+canonical: ./quality-status-activity-module-november.md
+title: "quality status nov"
+type: note
+status: stub
+updated: 2026-10-23
+tags: [docs, activity]
+qmd: "quality status nov activity"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/quality-status-2025-11.md
+See canonical documentation: [quality-status-activity-module-november.md](./quality-status-activity-module-november.md)

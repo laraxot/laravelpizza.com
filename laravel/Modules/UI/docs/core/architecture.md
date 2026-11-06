@@ -1,3 +1,14 @@
+---
+title: "Architettura Modulo UI"
+type: note
+status: draft
+created: 2026-01-20
+updated: 2026-10-18
+module: UI
+tags: [docs, ui, core]
+qmd: "architettura modulo ui ui"
+---
+
 # Architettura Modulo UI
 
 ## 🏗️ Panoramica Architetturale
@@ -169,7 +180,7 @@ class StatsOverview extends BaseWidget
 public function boot(): void
 {
     parent::boot();
-
+    
     // Registrazione componenti UI
     Blade::componentNamespace('Modules\\UI\\Components', 'ui');
 }
@@ -191,7 +202,7 @@ return [
 public function boot(): void
 {
     parent::boot();
-
+    
     // Registrazione asset
     $this->publishes([
         __DIR__.'/../resources/assets' => public_path('modules/ui'),
@@ -214,11 +225,12 @@ public function boot(): void
 
 ## 🔗 Collegamenti
 
-- [Best Practices Sistema](../../../../docs/core/best-practices.md)
-- [Convenzioni Sistema](../../../../docs/core/conventions.md)
-- [Template Modulo](../../../../docs/templates/module-template.md)
+- [Best Practices Sistema](../../../docs/core/best-practices.md)
+- [Convenzioni Sistema](../../../docs/core/conventions.md)
+- [Template Modulo](../../../docs/templates/module-template.md)
 - [PHPStan Guide](../development/phpstan-guide.md)
 
 ---
 
+**Ultimo aggiornamento:** Gennaio 2025  
 **Versione:** 2.0 - Consolidata DRY + KISS

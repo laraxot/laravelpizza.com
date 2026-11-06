@@ -1,3 +1,28 @@
+---
+title: "Updated Migration Violations Analysis - User Module"
+type: concept
+tags: [migration, violations, current]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration-violations-current updated migration violations analysis - user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Updated Migration Violations Analysis - User Module
 
 ## Current State vs. Initial Analysis

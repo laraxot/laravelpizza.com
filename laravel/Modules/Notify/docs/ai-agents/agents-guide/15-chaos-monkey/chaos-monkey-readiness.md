@@ -1,3 +1,15 @@
+---
+title: "chaos monkey readiness"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "chaos monkey readiness"
+issues: []
+discussions: []
+status: draft
+---
+
 # Chaos Monkey Readiness
 
 ## Overview

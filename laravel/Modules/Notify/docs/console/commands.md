@@ -1,4 +1,17 @@
+---
+title: "commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "commands"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔧 Console Commands FixCity
+# 🔧 Console Commands Notify
 
 > **Laravel 11**: Comandi auto-registrati da `app/Console/Commands/`
 
@@ -181,11 +194,13 @@ php artisan queue:restart
 ```
 
 ## 🔧 Comandi Personalizzati FixCity
+## 🔧 Comandi Personalizzati Notify
 
 ### Template Base
 ```php
 <?php
 // app/Console/Commands/FixCityCommand.php
+// app/Console/Commands/NotifyCommand.php
 
 namespace App\Console\Commands;
 
@@ -251,6 +266,7 @@ php artisan health:check
 ```
 app/Console/Commands/
 ├── FixCity/           # Comandi business logic
+├── Notify/           # Comandi business logic
 │   ├── ProcessTickets.php
 │   └── GenerateReports.php
 ├── Maintenance/       # Comandi manutenzione  
@@ -266,6 +282,8 @@ app/Console/Commands/
 # Gruppo comando con namespace
 fixcity:process-tickets
 fixcity:generate-reports
+laraxot:process-tickets
+laraxot:generate-reports
 
 # Manutenzione sistema
 maintenance:cleanup-files
@@ -277,7 +295,6 @@ dev:reset-demo
 ```
 
 ---
-
 ## 🚨 REGOLA CRITICA - Frontend
 
 **MAI dimenticare dopo modifiche CSS/JS**:

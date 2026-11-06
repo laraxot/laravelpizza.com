@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione delle variabili d\'ambiente e configurazione del sistema',
         ],
-        'label' => 'env',
+        'label' => 'Environment',
         'sort' => '12',
         'icon' => 'xot-env',
     ],
@@ -162,7 +162,7 @@ return [
             'changes_saved' => 'Modifiche salvate nel file .env',
         ],
     ],
-    'title' => 'env',
+    'title' => 'Environment',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
 ];

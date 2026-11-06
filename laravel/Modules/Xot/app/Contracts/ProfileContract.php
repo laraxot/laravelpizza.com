@@ -17,26 +17,25 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 /**
  * Modules\Xot\Contracts\ProfileContract.
  *
- * @property string                $id
- * @property string                $email
- * @property string                $slug
- * @property string                $user_id
- * @property int|null              $matr
+ * @property string $id
+ * @property string $email
+ * @property string $slug
+ * @property string $user_id
+ * @property int|null $matr
  * @property Collection<int, Role> $roles
- * @property int|null              $roles_count
- * @property UserContract          $user
+ * @property int|null $roles_count
+ * @property UserContract $user
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 interface ProfileContract extends HasMedia
 {
     /**
      * Grant the given permission(s) to a role.
      *
-     * @param string|int|array<int|string>|Permission|SupportCollection<int, Permission> $permissions
-     *
+     * @param  string|int|array<int|string>|Permission|SupportCollection<int, Permission>  $permissions
      * @return $this
      */
     public function givePermissionTo(string|int|array|Permission|SupportCollection $permissions = []): static;
@@ -44,8 +43,7 @@ interface ProfileContract extends HasMedia
     /**
      * Assign the given role to the model.
      *
-     * @param array<int|string>|string|int|RoleContract|SupportCollection<int, RoleContract> $roles
-     *
+     * @param  array<int|string>|string|int|RoleContract|SupportCollection<int, RoleContract>  $roles
      * @return $this
      */
     public function assignRole(array|string|int|RoleContract|SupportCollection $roles = []): static;
@@ -53,7 +51,7 @@ interface ProfileContract extends HasMedia
     /**
      * Determine if the model has (one of) the given role(s).
      *
-     * @param string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract> $roles
+     * @param  string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract>  $roles
      */
     public function hasRole(
         string|int|array|RoleContract|SupportCollection $roles,
@@ -65,7 +63,7 @@ interface ProfileContract extends HasMedia
      *
      * Alias to hasRole() but without Guard controls
      *
-     * @param string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract> $roles
+     * @param  string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract>  $roles
      */
     public function hasAnyRole(string|int|array|RoleContract|SupportCollection $roles = []): bool;
 

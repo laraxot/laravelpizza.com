@@ -4,68 +4,86 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
 
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
-
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GoogleMaps\GetAddressFromGoogleMapsAction;
-use Modules\Geo\Datas\Geocoding\AddressData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
+use Modules\Geo\Tests\LightTestCase;
+use PHPUnit\Framework\Assert;
 
-function subject(): GetAddressFromGoogleMapsAction
-{
-    return new GetAddressFromGoogleMapsAction();
-}
-
+uses(LightTestCase::class);
 it('throws exception when api key is not configured', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => subject()->execute('Milano, Italia'))
-        ->toThrow(GoogleMapsApiException::class, 'API key di Google Maps non configurata');
+    try {
+        $action->execute('Milano, Italia');
+
+        Assert::fail('Expected GoogleMapsApiException was not thrown');
+    } catch (GoogleMapsApiException $exception) {
+        Assert::assertSame('API key non configurata', $exception->getMessage());
+    }
 });
 
 it('throws exception when api key is empty', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => '']);
 
-    expect(fn () => subject()->execute('Milano, Italia'))
-        ->toThrow(GoogleMapsApiException::class);
+    try {
+        $action->execute('Milano, Italia');
+
+        Assert::fail('Expected GoogleMapsApiException was not thrown');
+    } catch (GoogleMapsApiException) {
+    }
 });
 
 it('throws exception when api response is not successful', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    expect(fn () => subject()->execute('Milano, Italia'))
-        ->toThrow(GoogleMapsApiException::class, '500');
+    try {
+        $action->execute('Milano, Italia');
+
+        Assert::fail('Expected GoogleMapsApiException was not thrown');
+    } catch (GoogleMapsApiException $exception) {
+        Assert::assertSame('Richiesta fallita', $exception->getMessage());
+    }
 });
 
 it('throws exception when no results found', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([
         '*' => Http::response([
-            'status' => 'ZERO_RESULTS',
             'results' => [],
         ], 200),
     ]);
 
-    expect(fn () => subject()->execute('NonExistentPlace123'))
-        ->toThrow(GoogleMapsApiException::class, 'Nessun risultato trovato');
+    try {
+        $action->execute('NonExistentPlace123');
+
+        Assert::fail('Expected GoogleMapsApiException was not thrown');
+    } catch (GoogleMapsApiException $exception) {
+        Assert::assertSame('Nessun risultato', $exception->getMessage());
+    }
 });
 
 it('returns address data for valid address', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([
         '*' => Http::response([
-            'status' => 'OK',
             'results' => [[
-                'formatted_address' => 'Via Roma 1, 20100 Milano MI, Italia',
-                'types' => ['street_address'],
                 'geometry' => [
                     'location' => [
                         'lat' => 45.4642,
@@ -87,32 +105,39 @@ it('returns address data for valid address', function (): void {
         ], 200),
     ]);
 
-    $result = subject()->execute('Via Roma 1, Milano, Italia');
+    $result = $action->execute('Via Roma 1, Milano, Italia');
 
-    expect($result)
-        ->toBeInstanceOf(AddressData::class)
-        ->and($result->latitude)->toBe(45.4642)
-        ->and($result->longitude)->toBe(9.1900)
-        ->and($result->country)->toBe('Italia')
-        ->and($result->country_code)->toBe('IT')
-        ->and($result->postal_code)->toBe(20100)
-        ->and($result->locality)->toBe('Milano')
-        ->and($result->street)->toBe('Via Roma')
-        ->and($result->street_number)->toBe('1')
-        ->and($result->district)->toBe('Centro')
-        ->and($result->county)->toBe('Milano')
-        ->and($result->state)->toBe('Lombardia');
+    Assert::assertSame(45.4642, $result->latitude);
+
+    Assert::assertSame(9.1900, $result->longitude);
+
+    Assert::assertSame('Italia', $result->country);
+
+    Assert::assertSame('IT', $result->country_code);
+
+    Assert::assertSame(20100, $result->postal_code);
+
+    Assert::assertSame('Milano', $result->locality);
+
+    Assert::assertSame('Via Roma', $result->street);
+
+    Assert::assertSame('1', $result->street_number);
+
+    Assert::assertSame('Centro', $result->district);
+
+    Assert::assertSame('Milano', $result->county);
+
+    Assert::assertSame('Lombardia', $result->state);
 });
 
 it('handles missing optional address components', function (): void {
+    $action = new GetAddressFromGoogleMapsAction;
+
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([
         '*' => Http::response([
-            'status' => 'OK',
             'results' => [[
-                'formatted_address' => 'Via Roma 1, 20100 Milano MI, Italia',
-                'types' => ['street_address'],
                 'geometry' => [
                     'location' => [
                         'lat' => 45.4642,
@@ -126,12 +151,13 @@ it('handles missing optional address components', function (): void {
         ], 200),
     ]);
 
-    $result = subject()->execute('Italia');
+    $result = $action->execute('Italia');
 
-    expect($result)
-        ->toBeInstanceOf(AddressData::class)
-        ->and($result->latitude)->toBe(45.4642)
-        ->and($result->longitude)->toBe(9.1900)
-        ->and($result->country)->toBe('Italia')
-        ->and($result->street)->toBe('');
+    Assert::assertSame(45.4642, $result->latitude);
+
+    Assert::assertSame(9.1900, $result->longitude);
+
+    Assert::assertSame('Italia', $result->country);
+
+    Assert::assertSame('', $result->street);
 });

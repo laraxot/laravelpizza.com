@@ -1,3 +1,11 @@
+---
+title: "Report PHPStan - Modulo Media"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media]
+qmd: "report phpstan - modulo media media"
+---
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale

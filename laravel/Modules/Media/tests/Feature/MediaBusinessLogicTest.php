@@ -14,7 +14,9 @@ use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Tests\XotBasePest;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -86,21 +88,19 @@ describe('Media Business Logic', function () {
             $mediaPayload['size'] = (int) $temporaryUpload->file_size;
         }
 
-        if ($user instanceof User && in_array('user_id', $mediaColumns, true)) {
+        if ($user instanceof UserContract && in_array('user_id', $mediaColumns, true)) {
             $mediaPayload['user_id'] = $user->id;
         }
 
         $media = MediaFactory::new()->createOne($mediaPayload);
 
-        expect($media)
-            ->toBeInstanceOf(Media::class)
-            ->and($media->file_name)
+        expect($media->file_name)
             ->toBe($mediaPayload['file_name'])
             ->and($media->mime_type)
             ->toBe($mediaPayload['mime_type']);
 
-        assertMediaTableHas('media', [
-            'id' => (int) $media->getKey(),
+        $this->assertMediaTableHas('media', [
+            'id' => $media->id,
             'file_name' => $mediaPayload['file_name'],
             'mime_type' => $mediaPayload['mime_type'],
         ]);
@@ -135,18 +135,16 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
-        expect($mediaConvert)
-            ->toBeInstanceOf(MediaConvert::class)
-            ->and($mediaConvert->media_id)
+        expect($mediaConvert->media_id)
             ->toBe($media->id)
             ->and($mediaConvert->getAttribute('original_format'))
             ->toBe('jpeg')
             ->and($mediaConvert->getAttribute('target_format'))
             ->toBe('png');
 
-        assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
-            'media_id' => (int) $media->getKey(),
+        $this->assertMediaTableHas('media_converts', [
+            'id' => $mediaConvert->id,
+            'media_id' => $media->id,
             'original_format' => 'jpeg',
             'target_format' => 'png',
             'status' => 'pending',
@@ -194,15 +192,15 @@ describe('Media Business Logic', function () {
 
         /** @var array<string, mixed> $expected */
         $expected = [
-            'id' => (int) $temporaryUpload->getKey(),
+            'id' => $temporaryUpload->id,
             'status' => 'completed',
         ];
 
-        if ($user instanceof User && in_array('user_id', $columns, true)) {
+        if ($user instanceof UserContract && in_array('user_id', $columns, true)) {
             $expected['user_id'] = $user->id;
         }
 
-        assertMediaTableHas('temporary_uploads', $expected);
+        $this->assertMediaTableHas('temporary_uploads', $expected);
     });
 
     it('can manage media collections', function (): void {
@@ -235,13 +233,19 @@ describe('Media Business Logic', function () {
             ->and($documentMedia->collection_name)
             ->toBe('documents');
 
-        assertMediaTableHas('media', [
-            'id' => (int) $profileMedia->getKey(),
+        $profileMediaId = $profileMedia->getKey();
+        Assert::assertIsInt($profileMediaId);
+
+        $this->assertMediaTableHas('media', [
+            'id' => $profileMediaId,
             'collection_name' => 'profile',
         ]);
 
-        assertMediaTableHas('media', [
-            'id' => (int) $documentMedia->getKey(),
+        $documentMediaId = $documentMedia->getKey();
+        Assert::assertIsInt($documentMediaId);
+
+        $this->assertMediaTableHas('media', [
+            'id' => $documentMediaId,
             'collection_name' => 'documents',
         ]);
     });
@@ -273,7 +277,7 @@ describe('Media Business Logic', function () {
             'file_name' => 'valid-document.pdf',
         ];
 
-        if ($user instanceof User && in_array('user_id', $columns, true)) {
+        if ($user instanceof UserContract && in_array('user_id', $columns, true)) {
             $documentPayload['user_id'] = $user->id;
         }
 
@@ -313,8 +317,8 @@ describe('Media Business Logic', function () {
 
         expect($mediaConvert->fresh()?->getAttribute('status'))->toBe('completed');
 
-        assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
+        $this->assertMediaTableHas('media_converts', [
+            'id' => $mediaConvert->id,
             'status' => 'completed',
         ]);
     });
@@ -349,11 +353,11 @@ describe('Media Business Logic', function () {
         }
 
         $media = MediaFactory::new()->createOne();
-        $mediaId = (int) $media->getKey();
+        $mediaId = $media->id;
 
         $media->delete();
 
-        assertMediaTableMissing('media', [
+        $this->assertMediaTableMissing('media', [
             'id' => $mediaId,
         ]);
     });
@@ -372,18 +376,25 @@ describe('Media Business Logic', function () {
     it('can validate file size limits', function (): void {
         $user = UserFactory::new()->createOne();
 
-        $columns = mediaTableColumns();
+        $columns = TestCase::mediaTableColumns();
 
         $makePayload = function (int $size) use ($user, $columns): array {
-            $payload = mediaPayloadSet([], $columns, 'user_id', $user->id);
-            $payload = mediaPayloadSet($payload, $columns, 'file_size', $size);
-            $payload = mediaPayloadSet($payload, $columns, 'size', $size);
-            $payload = mediaPayloadSet($payload, $columns, 'file_name', 'test-file.pdf');
-            $payload = mediaPayloadSet($payload, $columns, 'disk', 'public');
-            $payload = mediaPayloadSet($payload, $columns, 'collection_name', 'default');
-            $payload = mediaPayloadSet($payload, $columns, 'mime_type', 'application/pdf');
-            $payload = mediaPayloadSet($payload, $columns, 'created_at', now());
-            $payload = mediaPayloadSet($payload, $columns, 'updated_at', now());
+            $payload = TestCase::mediaPayloadSet([], $columns, 'user_id', $user->id);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'model_type', $user->getMorphClass());
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'model_id', $user->id);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_size', $size);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'size', $size);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_name', 'test-file.pdf');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'name', 'test-file');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'disk', 'public');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'collection_name', 'default');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'mime_type', 'application/pdf');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'manipulations', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'custom_properties', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'generated_conversions', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'responsive_images', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'created_at', now());
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'updated_at', now());
 
             return $payload;
         };
@@ -394,29 +405,36 @@ describe('Media Business Logic', function () {
         }
 
         $validMedia = Media::query()->create($validPayload);
-        $sizeValue = (int) ($validMedia->getAttribute('file_size') ?? $validMedia->getAttribute('size') ?? 0);
+        $sizeValue = $validMedia->size;
         expect($sizeValue)->toBeLessThanOrEqual(10 * 1024 * 1024);
 
         $largeMedia = Media::query()->create($makePayload(15 * 1024 * 1024));
-        $largeSizeValue = (int) ($largeMedia->getAttribute('file_size') ?? $largeMedia->getAttribute('size') ?? 0);
+        $largeSizeValue = $largeMedia->size;
         expect($largeSizeValue)->toBeGreaterThan(10 * 1024 * 1024);
     });
 
     it('can track media usage statistics', function (): void {
         $user = UserFactory::new()->createOne();
 
-        $columns = mediaTableColumns();
+        $columns = TestCase::mediaTableColumns();
 
         $makePayload = function (string $mime, string $fileName) use ($user, $columns): array {
-            $payload = mediaPayloadSet([], $columns, 'user_id', $user->id);
-            $payload = mediaPayloadSet($payload, $columns, 'mime_type', $mime);
-            $payload = mediaPayloadSet($payload, $columns, 'file_name', $fileName);
-            $payload = mediaPayloadSet($payload, $columns, 'disk', 'public');
-            $payload = mediaPayloadSet($payload, $columns, 'collection_name', 'default');
-            $payload = mediaPayloadSet($payload, $columns, 'file_size', 123);
-            $payload = mediaPayloadSet($payload, $columns, 'size', 123);
-            $payload = mediaPayloadSet($payload, $columns, 'created_at', now());
-            $payload = mediaPayloadSet($payload, $columns, 'updated_at', now());
+            $payload = TestCase::mediaPayloadSet([], $columns, 'user_id', $user->id);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'model_type', $user->getMorphClass());
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'model_id', $user->id);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'mime_type', $mime);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_name', $fileName);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'name', pathinfo($fileName, PATHINFO_FILENAME));
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'disk', 'public');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'collection_name', 'default');
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_size', 123);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'size', 123);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'manipulations', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'custom_properties', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'generated_conversions', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'responsive_images', []);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'created_at', now());
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'updated_at', now());
 
             return $payload;
         };

@@ -6,6 +6,7 @@ namespace Modules\Xot\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Application;
+use Modules\Xot\Tests\Support\TestDatabaseGuard;
 
 use function Safe\realpath;
 
@@ -30,13 +31,13 @@ trait CreatesApplication
         $_ENV['APP_BASE_PATH'] = $basePath;
 
         $appEnv = $_ENV['APP_ENV'] ?? getenv('APP_ENV') ?: 'local';
-        if ('testing' === $appEnv && ! is_readable($testingEnvPath)) {
+        if ($appEnv === 'testing' && ! is_readable($testingEnvPath)) {
             throw new \RuntimeException('laravel/.env.testing mancante. Rigenerare da .env: ./bashscripts/tools/sync-env-testing.sh');
         }
 
         $app = $this->loadLaravelApplication($basePath.'/bootstrap/app.php');
 
-        if ('testing' === $appEnv && is_readable($testingEnvPath)) {
+        if ($appEnv === 'testing' && is_readable($testingEnvPath)) {
             $app->loadEnvironmentFrom('.env.testing');
         }
 
@@ -58,6 +59,9 @@ trait CreatesApplication
         // TenantServiceProvider automatically configures module connections
         // by reading DB_DATABASE from .env.testing
         // Forcing connections here destroys the dynamic configuration system
+
+        // Guardia: aborta prima di qualunque test se l'ambiente non e' testing o un DB non finisce per _test.
+        TestDatabaseGuard::assertApplication($app);
 
         return $app;
     }

@@ -1,3 +1,15 @@
+---
+title: "composer update fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "composer update fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Composer Update Fixes - 24 Novembre 2025
 
 ## Panoramica
@@ -32,7 +44,6 @@ $related_model = (new ReflectionClass($related))->getName();
 **File Modificato**: `Modules/Xot/helpers/Helper.php:727-728`
 
 ---
-
 ### 2. Errore di Sintassi in SendSmsPage.php
 
 **File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php:108`

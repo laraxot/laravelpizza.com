@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Guida Completa alla Validazione delle Traduzioni - <nome progetto>"
+module: "Lang"
+type: how-to
+tags: [readme.es, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme.es 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Guida Completa alla Validazione delle Traduzioni - <nome progetto>
 
 ## Panoramica
@@ -258,6 +272,30 @@ php docs/obbligatorio-audit-script.php
 - [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
 - [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
 - [Geo Module - Helper Text Fix](../modules/geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../../User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
+- [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../../User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
+- [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
+- [Geo Module - Helper Text Fix](../../Geo/docs/helper-text-normalization-fix.md)
 
 ### Script e Tool
 - [Helper Text Audit Script](helper-text-audit-script.php)

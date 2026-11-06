@@ -1,3 +1,15 @@
+---
+title: "contact"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contact"
+issues: []
+discussions: []
+status: draft
+---
+
 # Contact Block
 
 Il blocco Contact è utilizzato per visualizzare informazioni di contatto, con supporto per mappa e vari canali di comunicazione. Può essere utilizzato in qualsiasi contesto che richieda la presentazione di dettagli di contatto.
@@ -123,6 +135,6 @@ Non usare `<x-pub_theme::components.blocks.contact.info />`, perche' `view:cache
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Maps Integration](../integrations/maps.md)
 - [Schema.org Guidelines](../seo/schema-org.md)

@@ -1,3 +1,15 @@
+---
+title: " eloquent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: " eloquent"
+issues: []
+discussions: []
+status: draft
+---
+
 ---------------------------------------------------------------------------------------------
 Easily Work with Spatial Data Types and Functions in Laravel
 https://codebrisk.com/blog/easily-work-with-spatial-data-types-and-functions-in-laravel

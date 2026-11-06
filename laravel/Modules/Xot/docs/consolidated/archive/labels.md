@@ -1,3 +1,11 @@
+---
+title: "Labels - File di traduzione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "labels - file di traduzione xot"
+---
 # Labels - File di traduzione
 
 Il file `labels.php` contiene tutte le etichette e i testi utilizzati nel modulo Xot.

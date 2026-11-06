@@ -1,3 +1,14 @@
+---
+title: "qwen"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen"
+issues: []
+discussions: []
+---
+
 # Qwen — On-Demand Stub
 
 Rules, skills, memories live only in wiki. Load on-demand.

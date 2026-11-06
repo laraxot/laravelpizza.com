@@ -1,9 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
-@props(['title' => 'Verifica Idoneità'])
+@props(['title' => __('ui::blocks_eligibility_checker.form.verifica_idoneita.label')])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -13,7 +12,7 @@ declare(strict_types=1);
         
         <!-- ISEE -->
         <div>
-            <label for="isee" class="block text-sm font-medium text-gray-700">ISEE (€)</label>
+            <label for="isee" class="block text-sm font-medium text-gray-700">{{ __('ui::blocks_eligibility_checker.form.isee.label') }}</label>
             <div class="mt-1 relative rounded-md shadow-sm">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">€</span>
@@ -34,7 +33,7 @@ declare(strict_types=1);
         
         <!-- Stato Gravidanza -->
         <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Stato Gravidanza</label>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('ui::blocks_eligibility_checker.form.stato_gravidanza.label') }}</label>
             <div class="space-y-4">
                 <div class="flex items-center">
                     <input type="radio" 
@@ -44,7 +43,7 @@ declare(strict_types=1);
                            {{ old('pregnancy_status') === 'pregnant' ? 'checked' : '' }}
                            class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
                     <label for="pregnant" class="ml-3 block text-sm font-medium text-gray-700">
-                        Sono in gravidanza
+                        {{ __('ui::blocks_eligibility_checker.form.sono_in_gravidanza.label') }}
                     </label>
                 </div>
                 
@@ -56,7 +55,7 @@ declare(strict_types=1);
                            {{ old('pregnancy_status') === 'not_pregnant' ? 'checked' : '' }}
                            class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300">
                     <label for="not_pregnant" class="ml-3 block text-sm font-medium text-gray-700">
-                        Non sono in gravidanza
+                        {{ __('ui::blocks_eligibility_checker.form.non_sono_in_gravidanza.label') }}
                     </label>
                 </div>
             </div>
@@ -67,12 +66,12 @@ declare(strict_types=1);
         
         <!-- Residenza -->
         <div>
-            <label for="residence" class="block text-sm font-medium text-gray-700">Comune di Residenza</label>
+            <label for="residence" class="block text-sm font-medium text-gray-700">{{ __('ui::blocks_eligibility_checker.form.comune_di_residenza.label') }}</label>
             <select name="residence" 
                     id="residence"
                     required
                     class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                <option value="">Seleziona comune</option>
+                <option value="">{{ __('ui::blocks_eligibility_checker.form.seleziona_comune.label') }}</option>
                 @foreach($municipalities as $municipality)
                     <option value="{{ $municipality->id }}" 
                             {{ old('residence') == $municipality->id ? 'selected' : '' }}>
@@ -87,12 +86,12 @@ declare(strict_types=1);
         
         <!-- Informazioni -->
         <div class="bg-blue-50 p-4 rounded-lg">
-            <h3 class="text-sm font-medium text-blue-800 mb-2">Informazioni Importanti</h3>
+            <h3 class="text-sm font-medium text-blue-800 mb-2">{{ __('ui::blocks_eligibility_checker.form.informazioni_importanti.title') }}</h3>
             <ul class="text-sm text-blue-700 space-y-1">
-                <li>• Il programma è rivolto a donne in gravidanza</li>
-                <li>• L'ISEE deve essere inferiore a € 20.000</li>
-                <li>• È necessario essere residenti in uno dei comuni aderenti</li>
-                <li>• Il servizio è gratuito per le persone idonee</li>
+                <li>{{ __('ui::blocks_eligibility_checker.form.text_1.label') }}</li>
+                <li>{{ __('ui::blocks_eligibility_checker.form.text_2.label') }}</li>
+                <li>{{ __('ui::blocks_eligibility_checker.form.text_3.label') }}</li>
+                <li>{{ __('ui::blocks_eligibility_checker.form.text_4.label') }}</li>
             </ul>
         </div>
         
@@ -100,7 +99,7 @@ declare(strict_types=1);
         <div class="flex justify-end">
             <button type="submit" 
                     class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
-                Verifica Idoneità
+                {{ __('ui::blocks_eligibility_checker.form.verifica_idoneita.label') }}
             </button>
         </div>
     </form>
@@ -118,7 +117,7 @@ declare(strict_types=1);
                     </div>
                     <div class="ml-3">
                         <h3 class="text-sm font-medium text-green-800">
-                            Congratulazioni! Sei idonea al programma.
+                            {{ __('ui::blocks_eligibility_checker.form.heading_1.title') }}
                         </h3>
                         <div class="mt-2 text-sm text-green-700">
                             <p>{{ session('eligibility_result')['message'] }}</p>
@@ -126,7 +125,7 @@ declare(strict_types=1);
                         <div class="mt-4">
                             <a href="{{ route('appointments.create') }}" 
                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
-                                Prenota un appuntamento
+                                {{ __('ui::blocks_demo_shared.labels.prenota_un_appuntamento.label') }}
                             </a>
                         </div>
                     </div>
@@ -142,7 +141,7 @@ declare(strict_types=1);
                     </div>
                     <div class="ml-3">
                         <h3 class="text-sm font-medium text-red-800">
-                            Mi dispiace, non sei idonea al programma.
+                            {{ __('ui::blocks_eligibility_checker.form.heading_2.title') }}
                         </h3>
                         <div class="mt-2 text-sm text-red-700">
                             <p>{{ session('eligibility_result')['message'] }}</p>
@@ -150,7 +149,7 @@ declare(strict_types=1);
                         <div class="mt-4">
                             <a href="{{ route('contact') }}" 
                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700">
-                                Contatta il supporto
+                                {{ __('ui::blocks_eligibility_checker.form.contatta_il_supporto.label') }}
                             </a>
                         </div>
                     </div>

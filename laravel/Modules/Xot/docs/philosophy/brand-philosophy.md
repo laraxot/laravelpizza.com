@@ -1,3 +1,13 @@
+---
+title: "Filosofia del Brand nel Sistema"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, philosophy]
+qmd: "Filosofia del Brand nel Sistema"
+---
 # Filosofia del Brand nel Sistema
 
 ## Principi Fondamentali
@@ -121,7 +131,7 @@ class ThemeManager
     {
         $colors = $metatag->getThemeColors();
         $settings = $metatag->getThemeSettings();
-
+        
         $this->applyColors($colors);
         $this->applySettings($settings);
     }
@@ -169,4 +179,4 @@ class BrandValidator
 - [MetatagData](../datas/metatag-data.md)
 - [ApplyMetatagToPanelAction](../actions/applymetatagtopanelaction.md)
 - [Best Practices](../best-practices.md)
-- [Theme Management](../theme/theme_management.md)
+- [Theme Management](../theme/theme_management.md) 

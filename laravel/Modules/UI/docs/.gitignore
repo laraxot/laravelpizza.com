@@ -1,8 +1,220 @@
----
-module: theme
-topic: .gitignore
-canonical: ../../../Themes/docs/shared-components/.gitignore-Modules
----
+# =============================================================================
+# LARAXOT MODULE: UI - .gitignore
+#
+# Canonical documentation:
+# ../../../Themes/docs/shared-components/.gitignore-Modules
 
-See canonical documentation: ../../../Themes/docs/shared-components/.gitignore-Modules
+
+# -----------------------------------------------------------------------------
+# Forbidden directories (root cleanup policy)
+bashscripts/
+_bmad/
+_bmad-output/
+_docs/
+.circleci/
+.claude-audit/
+.devcontainer/
+.kilocode/
+.kiro/
+.ralph/
+scripts/
+test-results/
+tests/.claude-audit/
+tests/AuditCoverage/
+
+
+# Documentation archives / generated content
+docs/archive/
+docs/archived/
+docs/legacy/
+docs/workbench/
+docs/scripts/
+docs/bashscripts/
+
+docs/**/archive/
+docs/**/archived/
+docs/**/legacy/
+docs/**/workbench/
+docs/**/scripts/
+docs/**/bashscripts/
+
+docs/cache/
+docs/phpstan/
+
+
+# Documentation files
 agentdb.rvf
+
+phpstan-corrections-gennaio-2025.md
+translations-update-january-2026.md
+git-push-recovery-2026-07-28.md
+phpstan-fixes-november-2025.md
+bugfix-icons-missing-2025-01-27.md
+notify-quality-gate-resolution-2026-07-28.md
+copilot-redundancy-audit-2026-05-25.md
+phpstan-fixes-2025.md
+dry-kiss-analysis-2025-10-15.md
+architecture-2025.md
+roadmap-2025.md
+phpstan-fixes-january-2025.md
+notify-user-git-push-resolution-2026-07-28.md
+phpstan-fixes-gennaio-2025.md
+redundancy-audit-2026-05-21.md
+
+# No numbered Markdown duplicates
+*-[0-9].md
+*-[0-9][0-9].md
+*_[0-9].md
+*_[0-9][0-9].md
+
+
+# Dependencies
+/vendor/
+/node_modules/
+/docs/vendor/
+
+composer.lock
+package-lock.json
+yarn.lock
+
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+
+# Build artifacts
+/build/
+/dist/
+
+cache/
+
+public/css/compiled/
+public/js/compiled/
+public/mix-manifest.json
+
+
+# Laravel
+/storage/*.key
+/public/storage
+/public/hot
+
+/public_html/storage
+/public_html/hot
+
+
+# Environment
+.env
+.env.*
+!.env.example
+
+config/local.php
+config/development.php
+
+
+# IDE / editors
+.idea/
+.vscode/
+.cursor/
+.windsurf/
+
+.phpintel
+.phpstorm.meta.php
+/.vagrant
+
+
+# Cache / temporary files
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+*.cache
+*.lock
+*.tmp
+*.phar
+*.jar
+*.swp
+*.swo
+*.stackdump
+
+v8-compile-cache-*
+
+
+# Logs
+*.log
+error_log
+
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+
+# Git / merge leftovers
+.git-rewrite/
+.git-blame-ignore-revs
+
+.merge_file_*
+
+*.orig
+*.rej
+
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*~head
+# Backup files
+*.old
+*.old1
+*.old2
+
+*.backup
+*.backup.*
+*.backup-*
+*.backup_*
+*.bak
+*.new
+# Legacy
+resources/views/Components_old/
+resources/lang/
+lang/lang/
+
+database_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+
+# UI module
+*.fila2
+*.psd
+*.fig
+*.sketch
+
+design_notes.txt
+
+laravel/
+public_html/
+
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+Thumbs.db
+ehthumbs.db
+
+*:Zone.Identifier
+
+
+# Root quality tools
+phpstan*
+# Le story di lane PHPStan stanno in stories/ e vanno versionate
+!stories/phpstan-*.story.md
+# Anche le story PHPStan fuori da stories/ (radice di docs/) vanno versionate
+!phpstan-*.story.md
+phpmd*
+rector.php

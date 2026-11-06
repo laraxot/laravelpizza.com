@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione delle sessioni utente e sicurezza',
         ],
-        'label' => 'session',
+        'label' => 'Session',
         'sort' => '18',
         'icon' => 'xot-session',
     ],

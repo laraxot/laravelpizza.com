@@ -1,4 +1,11 @@
 ---
+title: "context mode guide"
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context mode guide"
+issues: []
+discussions: []
 name: Context-Mode Compression Plugin Guide
 description: Setup, configuration, and usage of context-mode for Claude Code context management
 type: guide

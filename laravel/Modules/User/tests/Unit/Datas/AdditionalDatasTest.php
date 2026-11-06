@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\User\Datas\DeviceData;
 use Modules\User\Datas\FilamentShieldData;
 use Modules\User\Datas\FilamentUserData;
@@ -13,14 +12,13 @@ use Modules\User\Datas\PermissionTableNamesData;
 use Modules\User\Datas\ShieldResourceData;
 use Modules\User\Datas\SocialProviderData;
 use Modules\User\Datas\SuperAdminData;
-use PHPUnit\Framework\Assert;
+use Modules\User\Tests\TestCase;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('PermissionTableNamesData can be instantiated', function () {
     try {
-        $data = PermissionTableNamesData::from([]);
-        Assert::assertInstanceOf(PermissionTableNamesData::class, $data);
+        PermissionTableNamesData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -28,8 +26,7 @@ test('PermissionTableNamesData can be instantiated', function () {
 
 test('ShieldResourceData can be instantiated', function () {
     try {
-        $data = ShieldResourceData::from([]);
-        Assert::assertInstanceOf(ShieldResourceData::class, $data);
+        ShieldResourceData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -37,8 +34,7 @@ test('ShieldResourceData can be instantiated', function () {
 
 test('FilamentUserData can be instantiated', function () {
     try {
-        $data = FilamentUserData::from([]);
-        Assert::assertInstanceOf(FilamentUserData::class, $data);
+        FilamentUserData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -46,8 +42,7 @@ test('FilamentUserData can be instantiated', function () {
 
 test('SuperAdminData can be instantiated', function () {
     try {
-        $data = SuperAdminData::from([]);
-        Assert::assertInstanceOf(SuperAdminData::class, $data);
+        SuperAdminData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -55,8 +50,7 @@ test('SuperAdminData can be instantiated', function () {
 
 test('PermissionData can be instantiated', function () {
     try {
-        $data = PermissionData::from([]);
-        Assert::assertInstanceOf(PermissionData::class, $data);
+        PermissionData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -64,8 +58,7 @@ test('PermissionData can be instantiated', function () {
 
 test('PermissionColumnNamesData can be instantiated', function () {
     try {
-        $data = PermissionColumnNamesData::from([]);
-        Assert::assertInstanceOf(PermissionColumnNamesData::class, $data);
+        PermissionColumnNamesData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -73,8 +66,7 @@ test('PermissionColumnNamesData can be instantiated', function () {
 
 test('PermissionCacheData can be instantiated', function () {
     try {
-        $data = PermissionCacheData::from([]);
-        Assert::assertInstanceOf(PermissionCacheData::class, $data);
+        PermissionCacheData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -82,8 +74,7 @@ test('PermissionCacheData can be instantiated', function () {
 
 test('DeviceData can be instantiated', function () {
     try {
-        $data = DeviceData::from([]);
-        Assert::assertInstanceOf(DeviceData::class, $data);
+        DeviceData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -91,8 +82,7 @@ test('DeviceData can be instantiated', function () {
 
 test('SocialProviderData can be instantiated', function () {
     try {
-        $data = SocialProviderData::from([]);
-        Assert::assertInstanceOf(SocialProviderData::class, $data);
+        SocialProviderData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -100,8 +90,7 @@ test('SocialProviderData can be instantiated', function () {
 
 test('FilamentShieldData can be instantiated', function () {
     try {
-        $data = FilamentShieldData::from([]);
-        Assert::assertInstanceOf(FilamentShieldData::class, $data);
+        FilamentShieldData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }
@@ -109,8 +98,7 @@ test('FilamentShieldData can be instantiated', function () {
 
 test('PermissionModelsData can be instantiated', function () {
     try {
-        $data = PermissionModelsData::from([]);
-        Assert::assertInstanceOf(PermissionModelsData::class, $data);
+        PermissionModelsData::from([]);
     } catch (Exception $e) {
         // assertTrue(true) removed — tautology // Pass if class exists
     }

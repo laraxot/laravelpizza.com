@@ -1,3 +1,13 @@
+---
+title: "Ottimizzazioni Approfondite Modulo Xot - DRY + KISS"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Ottimizzazioni Approfondite Modulo Xot - DRY + KISS"
+---
 # Ottimizzazioni Approfondite Modulo Xot - DRY + KISS
 
 ## Panoramica
@@ -227,11 +237,11 @@ grep -r "extends.*Resource" app/Filament/Resources/
 
 ## 🔗 Collegamenti Sistema
 
-- [**Documentazione Core Sistema**](../../docs/core/)
+- [**Documentazione Core Sistema**](core)
 - [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
 - [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
 - [**Convenzioni Sistema**](../../docs/core/conventions.md)
-- [**Template Moduli**](../../docs/templates/)
+- [**Template Moduli**](templates)
 
 ---
 

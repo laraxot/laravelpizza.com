@@ -8,11 +8,12 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
-use Override;
+use Modules\Notify\Models\Contracts\SmsActionContract;
+use Safe\Exceptions\JsonException;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\json_decode;
 use function Safe\mb_convert_encoding;
 
 final class SendNetfunSMSAction implements SmsActionContract
@@ -29,11 +30,13 @@ final class SendNetfunSMSAction implements SmsActionContract
 
     private string $endpoint;
 
-    /** @var array<string, mixed> */
+    /** @var array{status_code?: int, status_txt?: string} */
     private array $vars = [];
 
     /**
      * Create a new action instance.
+     *
+     * @return void
      *
      * @throws Exception Se il token API non è configurato
      */
@@ -58,11 +61,10 @@ final class SendNetfunSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     * @return array<string, mixed> Risultato dell'operazione
+     * @return array{status_code: int, status_txt: string} Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
      */
-    #[Override]
     public function execute(SmsData $smsData): array
     {
         $headers = [
@@ -91,7 +93,9 @@ final class SendNetfunSMSAction implements SmsActionContract
 
         $client = new Client($headers);
         try {
-            $response = $client->post($this->endpoint, ['json' => $body]);
+            $response = $client->post($this->endpoint, [
+                'json' => $body,
+            ]);
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
@@ -103,12 +107,43 @@ final class SendNetfunSMSAction implements SmsActionContract
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
 
-        Log::channel('daily')->error('Netfun SMS response', [
-            'request' => $body,
-            'status_code' => $this->vars['status_code'],
-            'status_txt' => $this->vars['status_txt'],
-        ]);
+        if (! $this->isSuccessfulResponse($this->vars['status_code'], $this->vars['status_txt'])) {
+            $redactedRequest = $body;
+            $redactedRequest['api_token'] = '***redacted***';
+
+            Log::channel('daily')->error('Netfun SMS response', [
+                'request' => $redactedRequest,
+                'status_code' => $this->vars['status_code'],
+                'status_txt' => $this->vars['status_txt'],
+            ]);
+        }
 
         return $this->vars;
+    }
+
+    /**
+     * Netfun risponde sempre con HTTP 200 su richiesta accettata: l'esito reale
+     * dell'invio è nel campo `error` del body JSON (`0`/assente = ok, valorizzato
+     * = errore), non nello status HTTP.
+     */
+    private function isSuccessfulResponse(int $statusCode, string $statusTxt): bool
+    {
+        if ($statusCode < 200 || $statusCode >= 300) {
+            return false;
+        }
+
+        try {
+            $decoded = json_decode($statusTxt, true);
+        } catch (JsonException) {
+            return false;
+        }
+
+        if (! is_array($decoded)) {
+            return false;
+        }
+
+        $error = $decoded['error'] ?? null;
+
+        return in_array($error, [null, 0, '0', false], true);
     }
 }

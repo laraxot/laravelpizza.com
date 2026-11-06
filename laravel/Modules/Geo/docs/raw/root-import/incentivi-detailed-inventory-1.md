@@ -1,3 +1,14 @@
+---
+title: "incentivi detailed inventory 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi detailed inventory 1"
+issues: []
+discussions: []
+---
+
 # 📋 INVENTARIO COMPLETO DETTAGLIATO - MODULO INCENTIVI
 
 **Generato:** 10 Marzo 2025  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "incentivi detailed inventory 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi detailed inventory 1"
+issues: []
+discussions: []
 ## 📊 INVENTARIO PER CATEGORIA
 
 ### 1️⃣ MODELLI ELOQUENT (13 totali)

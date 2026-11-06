@@ -1,3 +1,15 @@
+---
+title: "template system"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "template system"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sistema Template Email
 
 ## Architettura

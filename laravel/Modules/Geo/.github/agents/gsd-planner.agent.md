@@ -1,4 +1,12 @@
 ---
+title: "gsd planner.agent"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd planner.agent"
+issues: []
+discussions: []
 name: gsd-planner
 description: Creates executable phase plans with task breakdown, dependency analysis, and goal-backward verification. Spawned by /gsd-plan-phase orchestrator.
 tools: ['read', 'edit', 'execute', 'search', 'search', 'webfetch', 'mcp__context7__*']

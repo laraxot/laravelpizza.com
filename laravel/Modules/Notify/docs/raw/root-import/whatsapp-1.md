@@ -1,3 +1,14 @@
+---
+title: "whatsapp 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "whatsapp 1"
+issues: []
+discussions: []
+---
+
 https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96
 
 tutorial

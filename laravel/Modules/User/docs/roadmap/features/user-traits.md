@@ -1,3 +1,23 @@
+---
+title: "User Traits Implementation"
+type: concept
+tags: [user, traits]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user-traits user traits implementation"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./audit-logging.md"
+  - "./autenticazione.md"
+  - "./autorizzazione.md"
+  - "./gestione-teams.md"
+  - "./gestione-utenti.md"
+  - "./legacy-code-cleanup.md"
+  - "./user-analytics.md"
+status: draft
+---
+
 # User Traits Implementation
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+title: "Laraxot Best Practices"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "laraxot best practices xot"
+---
 # Laraxot Best Practices
 
 ## Form Schema Best Practices

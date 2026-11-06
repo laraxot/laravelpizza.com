@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace Modules\Notify\Traits;
 
 use Illuminate\Support\Str;
+use Webmozart\Assert\Assert;
 
 use function Safe\preg_replace_callback;
 
-/** @phpstan-ignore trait.unused */
+/**
+ * Trait HasNotificationTracking.
+ *
+ * Fornisce funzionalità per la gestione del tracking delle notifiche.
+ */
 trait HasNotificationTracking
 {
     /**
@@ -23,7 +28,9 @@ trait HasNotificationTracking
             return $html;
         }
 
-        $route = route((string) config('notify.tracking.pixel.route'), ['id' => $trackingId]);
+        $routeName = config('notify.tracking.pixel.route');
+        Assert::string($routeName);
+        $route = route($routeName, ['id' => $trackingId]);
         $pixel = '<img src="'.$route.'" alt="" width="1" height="1" style="display:none">';
 
         return $html.$pixel;
@@ -44,22 +51,32 @@ trait HasNotificationTracking
         $result = preg_replace_callback(
             '/<a\s+(?:[^>]*?\s+)?href=(["\'])(.*?)\1/i',
             function (array $matches) use ($trackingId): string {
-                $url = (string) $matches[2];
+                Assert::keyExists($matches, 2);
+                Assert::string($matches[2]);
+                $url = $matches[2];
 
                 // Ignora link di unsubscribe, anchor e link relativi
                 if (
                     Str::contains($url, ['unsubscribe', 'mailto:', 'tel:', '#']) ||
                         ! Str::startsWith($url, ['http://', 'https://'])
                 ) {
-                    return (string) $matches[0];
+                    Assert::keyExists($matches, 0);
+                    Assert::string($matches[0]);
+
+                    return $matches[0];
                 }
 
-                $trackingUrl = route((string) config('notify.tracking.links.route'), [
+                $routeName = config('notify.tracking.links.route');
+                Assert::string($routeName);
+                $trackingUrl = route($routeName, [
                     'id' => $trackingId,
                     'url' => $url,
                 ]);
 
-                return str_replace($url, $trackingUrl, (string) $matches[0]);
+                Assert::keyExists($matches, 0);
+                Assert::string($matches[0]);
+
+                return str_replace($url, $trackingUrl, $matches[0]);
             },
             $html,
         );

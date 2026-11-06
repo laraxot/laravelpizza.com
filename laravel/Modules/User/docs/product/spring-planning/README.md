@@ -1,3 +1,11 @@
+---
+title: "User Module - Spring Planning Meeting"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, product]
+qmd: "user module - spring planning meeting user"
+---
 # User Module - Spring Planning Meeting
 
 ## Meeting Overview

@@ -3,6 +3,11 @@ title: Installazione Filament
 description: Installazione Filament
 extends: _layouts.documentation
 section: content
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, filament]
+qmd: "installazione filament {#installazione-filament} xot"
 ---
 
 # Installazione Filament {#installazione-filament}
@@ -25,7 +30,7 @@ section: content
 
 - php artisan vendor:publish --tag="filament-jet-views"
 
-- mettere in composer
+- mettere in composer 
 
 ```bash
 "repositories": [
@@ -52,20 +57,13 @@ section: content
 - composer require savannabits/filament-modules versione 1.1
 
 - php artisan module:use Modulo
--
+- 
 - php artisan module:make-filament-context Filament
 
 ### Versione HEAD
 
 - php artisan make:filament-user per creare utente
 ## Collegamenti tra versioni di installation.md
-* [installation.md](../../../xot/docs/filament/installation.md)
-* [installation.md](../../../xot/docs/installation.md)
-* [installation.md](../../../xot/docs/base/installation.md)
-* [installation.md](../../../user/docs/installation.md)
-* [installation.md](../../../lang/docs/installation.md)
-* [installation.md](../../../cms/docs/installation.md)
-* [installation.md](../../../../themes/one/docs/installation.md)
 * [installation.md](../../../Xot/docs/filament/installation.md)
 * [installation.md](../../../Xot/docs/installation.md)
 * [installation.md](../../../Xot/docs/base/installation.md)
@@ -74,8 +72,10 @@ section: content
 * [installation.md](../../../Cms/docs/installation.md)
 * [installation.md](../../../../Themes/One/docs/installation.md)
 
+
 ### Versione Incoming
 
 - php artisan make:filament-user per creare utente
 
 ---
+

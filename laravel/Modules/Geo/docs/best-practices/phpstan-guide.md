@@ -1,0 +1,11 @@
+---
+title: "phpstan guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan guide"
+issues: []
+discussions: []
+status: draft
+---

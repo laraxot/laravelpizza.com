@@ -1,3 +1,15 @@
+---
+title: "seasonal email zen"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "seasonal email zen"
+issues: []
+discussions: []
+status: draft
+---
+
 # The Zen of Seasonal Emails
 
 **Date**: 2025-12-19
@@ -39,7 +51,7 @@ Data must flow transparently to the view.
 ### The "Elegant" Variant
 
 We introduced `christmas-elegant.html` to serve a specific need: **Professional Festivity**.
-Not all brands want red/green and cartoons. Some want "Silent Night" — deep blues, gold, serif fonts.
+Not all brands want red/green and cartoons. Some want "Silent Night": deep blues, gold, serif fonts.
 This demonstrates the flexibility of the system: multiple "skins" for the same context.
 
 ## Reflections & Future

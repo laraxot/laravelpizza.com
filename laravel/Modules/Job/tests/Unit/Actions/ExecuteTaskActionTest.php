@@ -3,19 +3,17 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Actions;
-use function Safe\class_uses;
+
 use Modules\Job\Actions\ExecuteTaskAction;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
 use function Safe\file_get_contents;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('ExecuteTaskAction', function (): void {
-    test('can be instantiated', function (): void {
-        $action = new ExecuteTaskAction;
-        Assert::assertInstanceOf(ExecuteTaskAction::class, $action);
-    });
 
     test('has correct method signature', function (): void {
         $reflection = new \ReflectionClass(ExecuteTaskAction::class);

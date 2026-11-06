@@ -55,7 +55,6 @@ class NotificationData extends Data
         return SmsData::from([
             'from' => $this->from,
             'recipient' => $this->recipient,
-            'body' => $this->body,
-        ]);
+            'body' => $this->body]);
     }
 }

@@ -1,6 +1,8 @@
 ---
 title: SushiToJsons/Orbit
 description: Salvataggio su File invece che in tabella
+status: superseded
+superseded_by: ../../orbit-sushi-to-json.md
 ---
 
 # Invece di usare Orbit {#invece-di-usare-orbit}

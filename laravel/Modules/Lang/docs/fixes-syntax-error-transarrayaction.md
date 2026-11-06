@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Fix Errore Sintassi TransArrayAction"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Fix Errore Sintassi TransArrayAction
 
 ## Data: 2025-01-27
@@ -61,6 +75,7 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
+- [TransArrayAction.php](../app/Actions/TransArrayAction.php)
 - [PHPStan Fixes](./phpstan-fixes.md)
 - [Translation Actions](./translation-actions.md)
 

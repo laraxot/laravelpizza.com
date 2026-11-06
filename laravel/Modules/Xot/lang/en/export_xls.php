@@ -3,10 +3,14 @@
 declare(strict_types=1);
 
 return [
+    'label' => 'Export Xls',
+    'plural_label' => 'Export Xls',
+    'icon' => 'xot-files.xls',
+    'tooltip' => 'Export Excel (XLS)',
     'actions' => [
         'export_xls' => [
             'label' => 'Export Excel',
-            'icon' => 'heroicon-o-arrow-down-tray',
+            'icon' => 'xot-files.xls',
             'tooltip' => 'Export data in Excel format (.xlsx)',
             'placeholder' => 'Export to Excel',
             'help' => 'Download current data in Excel format for offline analysis',
@@ -27,14 +31,12 @@ return [
         ],
     ],
     'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
+        'label' => 'Export Xls',
+        'plural_label' => 'Export Xls',
+        'group' => 'General',
+        'icon' => 'xot-files.xls',
         'sort' => 100,
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
 ];

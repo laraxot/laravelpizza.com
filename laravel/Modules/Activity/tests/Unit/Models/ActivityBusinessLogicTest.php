@@ -2,27 +2,28 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit\Models;
+
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-test('Activity Business Logic', function () {
-    test('activity has correct connection configured', function () {
-        $reflection = new ReflectionClass(Activity::class);
-        $property = $reflection->getProperty('connection');
-        $property->setAccessible(true);
+/**
+ * Verifica il contratto pubblico del model Activity (connessione, mass assignment, query scopes).
+ */
+final class ActivityBusinessLogicTest extends TestCase
+{
+    public function test_uses_dedicated_activity_database_connection(): void
+    {
+        Assert::assertSame('activity', (new Activity)->getConnectionName());
+    }
 
-        Assert::assertSame('activity', $property->getValue($reflection->newInstanceWithoutConstructor()));
-    });
-
-    test('activity has expected fillable fields', function () {
-        $reflection = new ReflectionClass(Activity::class);
-        $property = $reflection->getProperty('fillable');
-        $property->setAccessible(true);
-
-        $expectedFillable = [
+    public function test_exposes_expected_fillable_attributes_for_audit_log(): void
+    {
+        $expected = [
             'id',
             'log_name',
             'description',
@@ -32,15 +33,25 @@ test('Activity Business Logic', function () {
             'causer_type',
             'causer_id',
             'properties',
+            'attribute_changes',
+            'batch_uuid',
         ];
 
-        Assert::assertEquals($expectedFillable, $property->getValue($reflection->newInstanceWithoutConstructor()));
-    });
+        Assert::assertSame($expected, (new Activity)->getFillable());
+    }
 
-    test('activity has scope methods documented', function () {
-        $reflection = new ReflectionClass(Activity::class);
-        $docComment = $reflection->getDocComment();
+    public function test_can_filter_activities_by_log_name(): void
+    {
+        Assert::assertInstanceOf(Builder::class, Activity::inLog('default'));
+    }
 
-        Assert::assertStringContainsString('@method', (string) $docComment);
-    });
-});
+    public function test_can_filter_activities_by_event_name(): void
+    {
+        Assert::assertInstanceOf(Builder::class, Activity::forEvent('created'));
+    }
+
+    public function test_can_filter_activities_with_batch_uuid(): void
+    {
+        Assert::assertInstanceOf(Builder::class, Activity::hasBatch());
+    }
+}

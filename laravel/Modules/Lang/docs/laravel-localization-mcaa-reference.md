@@ -1,4 +1,18 @@
-# mcamara/laravel-localization — Riferimento per moduli e temi
+---
+issues: []
+discussions: []
+title: "mcamara/laravel-localization: Riferimento per moduli e temi"
+module: "Lang"
+type: concept
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
+# mcamara/laravel-localization: Riferimento per moduli e temi
 
 ## Scopo
 

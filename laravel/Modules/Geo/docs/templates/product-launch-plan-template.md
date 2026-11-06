@@ -1,3 +1,15 @@
+---
+title: "product launch plan template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product launch plan template"
+issues: []
+discussions: []
+status: draft
+---
+
 # Product Launch Plan Template
 
 > **Template Standardizzato** - Basato su [Notion Product Launch Plan Templates](https://www.notion.com/templates/category/product-launch-plan)
@@ -11,7 +23,6 @@
 > **Launch Manager:** {Name}
 
 ---
-
 ## Obiettivo del Lancio
 
 ### Panoramica

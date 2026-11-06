@@ -1,3 +1,14 @@
+---
+title: "discovery"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "discovery"
+issues: []
+discussions: []
+---
+
 # Discovery Template
 
 Template for `.planning/phases/XX-name/DISCOVERY.md` - shallow research for library/option decisions.
@@ -8,6 +19,14 @@ For deep ecosystem research ("how do experts build this"), use `/gsd-research-ph
 
 ---
 
+title: "discovery"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "discovery"
+issues: []
+discussions: []
 ## File Template
 
 ```markdown

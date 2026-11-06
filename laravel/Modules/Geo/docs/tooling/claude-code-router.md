@@ -1,3 +1,15 @@
+---
+title: "claude code router"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude code router"
+issues: []
+discussions: []
+status: draft
+---
+
 # Claude Code Router – DeepSeek Reasoning Fix
 
 ## 1. Context

@@ -1,19 +1,33 @@
-# Path-based git attributes
-# https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
+# Git LFS vietato: tutti i binari restano blob Git normali.
+# Canon: bashscripts/ai/wiki/rules/no-git-lfs.md
+#
+# Sui binari usare solo `binary !filter`. Non aggiungere !merge, !diff o !text:
+# !merge riattiva il merge testuale e Git scrive i marker di conflitto dentro gli SVG.
 
-# Ignore all test and documentation with "export-ignore".
-/.github            export-ignore
-/.gitattributes     export-ignore
-/.gitignore         export-ignore
-/phpunit.xml.dist   export-ignore
-/art                export-ignore
-/docs               export-ignore
-/tests              export-ignore
-/.editorconfig      export-ignore
-/.php_cs.dist.php   export-ignore
-/psalm.xml          export-ignore
-/psalm.xml.dist     export-ignore
-/testbench.yaml     export-ignore
-/UPGRADING.md       export-ignore
-/phpstan.neon.dist  export-ignore
-/phpstan-baseline.neon  export-ignore
+# Git LFS is forbidden. Binary files remain normal Git blobs.
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
+
+# Binary files are regular Git blobs; !filter disables inherited Git LFS.
+*.png binary !filter
+*.jpg binary !filter
+*.jpeg binary !filter
+*.gif binary !filter
+*.webp binary !filter
+*.ico binary !filter
+*.svg binary !filter
+*.psd binary !filter
+*.pdf binary !filter
+*.zip binary !filter
+*.woff binary !filter
+*.woff2 binary !filter
+*.ttf binary !filter
+*.eot binary !filter
+*.otf binary !filter
+*.phar binary !filter
+*.db binary !filter
+*.sqlite binary !filter
+

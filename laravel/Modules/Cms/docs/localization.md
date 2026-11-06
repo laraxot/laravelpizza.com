@@ -1,3 +1,15 @@
+---
+title: "localization"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "localization"
+issues: []
+discussions: []
+status: draft
+---
+
 # Localization Standards (mcamara/laravel-localization)
 
 ## Overview

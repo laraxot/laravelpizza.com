@@ -1,3 +1,11 @@
+---
+title: "sentiment-analyzer"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "sentiment-analyzer xot"
+---
 # sentiment-analyzer
 
 <!-- Contenuto migrato da _docs/sentiment-analyzer.txt -->

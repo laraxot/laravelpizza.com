@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
-uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\String\GetStrBetweenStartsWithAction;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('extracts string between markers correctly', function (): void {
     $action = app(GetStrBetweenStartsWithAction::class);
@@ -17,4 +18,7 @@ it('extracts string between markers correctly', function (): void {
 
 it('throws exception when start marker is missing', function (): void {
     $action = app(GetStrBetweenStartsWithAction::class);
+
+    expect(fn (): string => $action->execute('prefix { content } suffix', 'missing', '{', '}'))
+        ->toThrow(\Exception::class, 'Cannot find missing');
 });

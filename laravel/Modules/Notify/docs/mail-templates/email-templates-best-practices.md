@@ -1,3 +1,15 @@
+---
+title: "email templates best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates best practices"
+issues: []
+discussions: []
+status: draft
+---
+
 # Best Practices per Template Email
 
 ## 1. Struttura Base

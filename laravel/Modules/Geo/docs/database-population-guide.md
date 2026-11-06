@@ -1,3 +1,15 @@
+---
+title: "database population guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database population guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida al Popolamento Database - Laraxot <nome progetto>
 
 ## Panoramica
@@ -17,7 +29,7 @@ Questa guida descrive come popolare il database del progetto Laraxot <nome proge
 
 ### 1. Modulo User
 **Path**: `Modules/User/database/`
-**Documentazione**: [User Database Population](../laravel/modules/user/docs/database-population.md)
+**Documentazione**: [User Database Population](../../User/docs/database-population.md)
 
 **Factories Disponibili**:
 - `UserFactory` - Generazione utenti base
@@ -54,7 +66,7 @@ Questa guida descrive come popolare il database del progetto Laraxot <nome proge
 
 ### 3. Modulo Tenant
 **Path**: `Modules/Tenant/database/`
-**Documentazione**: [Tenant Database Population](../laravel/modules/tenant/docs/database-population.md)
+**Documentazione**: [Tenant Database Population](../../Tenant/docs/database-population.md)
 
 **Factories Disponibili**:
 - `TenantFactory` - Generazione tenant
@@ -319,16 +331,15 @@ php artisan tinker
 
 ## Collegamenti
 
-- [User Module Database Population](../laravel/modules/user/docs/database-population.md)
+- [User Module Database Population](../../User/docs/database-population.md)
 - [<nome progetto> Module Database Population](../laravel/modules/<nome progetto>/docs/database-population.md)
-- [Tenant Module Database Population](../laravel/modules/tenant/docs/database-population.md)
+- [Tenant Module Database Population](../../Tenant/docs/database-population.md)
 - [Factory Best Practices](../laravel/modules/<nome progetto>/docs/factory-best-practices.md)
 - [<nome progetto> Module Database Population](../laravel/modules/<nome progetto>/docs/database-population.md)
-- [Tenant Module Database Population](../laravel/modules/tenant/docs/database-population.md)
+- [Tenant Module Database Population](../../Tenant/docs/database-population.md)
 - [Factory Best Practices](../laravel/modules/<nome progetto>/docs/factory-best-practices.md)
-- [Testing Guidelines](../laravel/modules/user/docs/testing.md)
+- [Testing Guidelines](../../User/docs/testing.md)
 
 ---
-
 **Versione**: 1.0
 **Autore**: Sistema Laraxot

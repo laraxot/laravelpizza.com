@@ -13,7 +13,6 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
-use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Nwidart\Modules\Traits\PathNamespace;
 use Webmozart\Assert\Assert;
@@ -41,9 +40,9 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom($this->module_dir.'/../../database/migrations');
-        $this->registerLivewireComponents();
         $this->registerBladeComponents();
         $this->registerCommands();
+        $this->registerPublicAssets();
     }
 
     public function register(): void
@@ -57,7 +56,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerBladeIcons(): void
     {
-        if ('' === $this->name) {
+        if ($this->name === '') {
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
@@ -85,17 +84,22 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
     public function registerViews(): void
     {
-        if ('' === $this->name) {
+        if ($this->name === '') {
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
         $viewPath = module_path($this->name, 'resources/views');
+
+        if (! is_dir($viewPath)) {
+            return;
+        }
+
         $this->loadViewsFrom($viewPath, $this->nameLower);
     }
 
     public function registerTranslations(): void
     {
-        if ('' === $this->name) {
+        if ($this->name === '') {
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
@@ -115,10 +119,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     {
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
 
-        try {
-            Blade::anonymousComponentPath($componentViewPath);
-        } catch (\Exception $e) {
-            // Ignore invalid or unavailable anonymous component paths.
+        if (is_dir($componentViewPath)) {
+            try {
+                Blade::anonymousComponentPath($componentViewPath);
+            } catch (\Exception $e) {
+                // Ignore invalid or unavailable anonymous component paths.
+            }
         }
 
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
@@ -127,13 +133,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         Blade::componentNamespace($namespace, $this->nameLower);
 
         app(RegisterBladeComponentsAction::class)->execute($componentClassPath, $this->module_ns);
-    }
-
-    public function registerLivewireComponents(): void
-    {
-        $prefix = '';
-        app(RegisterLivewireComponentsAction::class)
-            ->execute($this->module_dir.'/../Http/Livewire', Str::before($this->module_ns, '\Providers'), $prefix);
     }
 
     public function registerCommands(): void
@@ -146,13 +145,13 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 'Modules\\'.$this->name.'\\Console\\Commands',
                 $prefix,
             );
-        if (0 === $comps->count()) {
+        if ($comps->count() === 0) {
             return;
         }
+        /** @var array<int, array<string, mixed>> $commands */
         $commands = $comps->toArray();
-        /** @var array<int, array{ns: string}> $commands */
-        $commands = array_map(static function (mixed $item): string {
-            Assert::isArray($item);
+        /** @var array<int, string> $commands */
+        $commands = array_map(static function (array $item): string {
             Assert::keyExists($item, 'ns');
             Assert::string($item['ns'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
@@ -193,5 +192,32 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         } catch (\Throwable $e) {
             // Ignore config registration failures for optional module config.
         }
+    }
+
+    protected function registerPublicAssets(): void
+    {
+        if ($this->name === '') {
+            throw new \Exception('name is empty on ['.static::class.']');
+        }
+
+        $sourcePath = module_path($this->name, 'public');
+
+        if (! File::isDirectory($sourcePath)) {
+            return;
+        }
+
+        $destinationPath = public_path(
+            'assets/'.$this->nameLower
+        );
+
+        $this->publishes(
+            [
+                $sourcePath => $destinationPath,
+            ],
+            [
+                'module-assets',
+                $this->nameLower.'-assets',
+            ],
+        );
     }
 }

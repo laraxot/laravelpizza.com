@@ -23,21 +23,21 @@ declare(strict_types=1);
                     </button>
                 </div>
                 <button class="home-address-button home-search-address-button" type="submit" wire:click="search()">
-                    Cerca
+                    {{ __('geo::form_search_address_categories.actions.search_button.label') }}
                 </button>
                 <div style="clear:both;"></div>
             </form>
             <br />
             @if ($warningCivicNumber)
                 <div class="only-desktop home-error-popup home-address-messages home-error-popup-civic">
-                    Per favore inserisci anche il numero civico
+                    {{ __('geo::form_search_address_categories.warnings.civic_number.description') }}
                 </div>
             @endif
 
 
             @if ($warningSuggestedAddresses)
                 <div class="only-desktop home-error-popup home-address-messages">
-                    Per favore inserisci la via e il comune, poi scegli tra gli indirizzi suggeriti
+                    {{ __('geo::form_search_address_categories.warnings.suggested_addresses.description') }}
                 </div>
             @endif
 
@@ -61,7 +61,7 @@ declare(strict_types=1);
             <div class="modal-content text-center">
                 <div class="row" style="margin-left: -10px; margin-top: 10px; margin-right: -10px">
                     <div class="col-sm-12">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('geo::form_search_address_categories.modal.close.label') }}">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px"
                                 viewBox="0 0 512 512" xml:space="preserve" width="16px" height="16px">
                                 <g>
@@ -77,11 +77,9 @@ declare(strict_types=1);
                             </svg>
                         </button>
 
-                        <h3>Ci dispiace, non siamo ancora presenti nella tua zona!</h3>
+                        <h3>{{ __('geo::form_search_address_categories.sections.modal.title') }}</h3>
                         <p>
-                            Inserisci il tuo indirizzo email e il CAP, ti
-                            informeremo non appena la tua zona sarà coperta dal nostro
-                            servizio.
+                            {{ __('geo::form_search_address_categories.sections.modal.description') }}
                         </p>
                         <img src="{{ Theme::asset('pub_theme::assets/img/svg/missing_cap.svg') }}" width="100" />
                         <br /><br />
@@ -95,7 +93,7 @@ declare(strict_types=1);
                                             <img src="{{ Theme::asset('pub_theme::assets/img/svg/email.svg') }}"
                                                 width="24" /></span>
                                         <input type="text" class="form-control @error('email') is-invalid @enderror"
-                                            id="email" name="email" placeholder="Your Email" wire:model.lazy="email">
+                                            id="email" name="email" placeholder="{{ __('geo::form_search_address_categories.modal.email.placeholder') }}" wire:model.lazy="email">
                                         @error('email')
                                             <div id="invalidEmailFeedback" class="invalid-feedback">
                                                 {{ $message }}
@@ -109,7 +107,7 @@ declare(strict_types=1);
                                             <img src="{{ Theme::asset('pub_theme::assets/img/svg/cap.svg') }}"
                                                 width="24" /></span>
                                         <input type="text" class="form-control @error('cap') is-invalid @enderror"
-                                            id="cap" name="cap" placeholder="Your cap" wire:model.lazy="cap">
+                                            id="cap" name="cap" placeholder="{{ __('geo::form_search_address_categories.modal.cap.placeholder') }}" wire:model.lazy="cap">
                                         @error('cap')
                                             <div id="invalidEmailFeedback" class="invalid-feedback">
                                                 {{ $message }}
@@ -119,7 +117,7 @@ declare(strict_types=1);
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-default">Conferma</button>
+                            <button type="submit" class="btn btn-default">{{ __('geo::form_search_address_categories.modal.confirm.label') }}</button>
 
                         </form>
                     </div>

@@ -47,7 +47,7 @@ declare(strict_types=1);
 
             <div class="text-sm">
                 <a href="{{ route('password.request') }}" class="font-medium text-primary-600 hover:text-primary-500">
-                    {{ __('user::auth.login.forgot_password') }}
+                    {{ __('user::auth.login.forgot_password.text') }}
                 </a>
             </div>
         </div>
@@ -56,16 +56,16 @@ declare(strict_types=1);
         <div>
             <button type="submit"
                 class="flex w-full justify-center rounded-md border border-transparent bg-primary-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-                {{ __('user::auth.login.submit') }}
+                {{ __('user::auth.login.submit.text') }}
             </button>
         </div>
 
         <!-- Register Link -->
         <div class="text-center">
             <p class="text-sm text-gray-600">
-                {{ __('user::auth.login.no_account') }}
+                {{ __('user::auth.login.no_account.text') }}
                 <a href="{{ route('register') }}" class="font-medium text-primary-600 hover:text-primary-500">
-                    {{ __('user::auth.login.register') }}
+                    {{ __('user::auth.login.register.text') }}
                 </a>
             </p>
         </div>

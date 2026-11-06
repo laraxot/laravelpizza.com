@@ -1,6 +1,19 @@
+---
+title: "reusable components and indexes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusable components and indexes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Reusable Components And Indexes
 
 > Indice: [./00-INDEX.md](./00-INDEX.md)
+> Indice: [./00-index.md](./00-index.md)
 > Policy correlata: [../policies/filament-widget-tables-policy.md](../policies/filament-widget-tables-policy.md)
 
 ## Visione
@@ -13,6 +26,7 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 - ogni cartella documentale significativa deve avere `00-INDEX.md`
 - ogni documento deve linkare il proprio `00-INDEX.md` con percorso relativo
 - modulo e tema aggiornano i rispettivi `docs/00-INDEX.md` quando si tocca il loro perimetro
+- modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
 - `AGENTS.md`, `CLAUDE.md`, `QWEN.md` devono puntare a documenti canonici, non duplicarne il contenuto
 
 ## Anti pattern

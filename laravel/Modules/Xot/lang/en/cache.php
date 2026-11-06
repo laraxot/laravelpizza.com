@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione della cache del sistema',
         ],
-        'label' => 'cache',
+        'label' => 'Cache',
         'sort' => '29',
         'icon' => 'xot-cache',
     ],

@@ -1,3 +1,14 @@
+---
+title: "agents"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents"
+issues: []
+discussions: []
+---
+
 # Project Agents (Modular)
 
 This file provides guidance and memory for Codex CLI. The content has been split into modular files for better efficiency.
@@ -39,6 +50,7 @@ docs/
 │   └── notes/     # Note e appunti
 ├── .schema/       # Schema per l'LLM
 │   └── WIKI_SCHEMA.md
+│   └── wiki-schema.md
 ├── wiki/index.md  # Indice principale
 └── log.md         # Log cronologico
 ```
@@ -52,6 +64,7 @@ docs/
 ### Riferimenti
 
 - [Schema Wiki](./docs/.schema/WIKI_SCHEMA.md) - Istruzioni per l'LLM
+- [Schema Wiki](./docs/.schema/wiki-schema.md) - Istruzioni per l'LLM
 - [Index Globale](./docs/wiki/index.md) - Catalogo di tutte le wiki
 - [Log](./docs/log.md) - Cronologia delle operazioni
 
@@ -63,6 +76,14 @@ docs/
 
 ---
 
+title: "agents"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents"
+issues: []
+discussions: []
 ## Reusable Tasks
 
 - [Task: validate-next-story](./.agents/docs/main-rules/task-validate-next-story.md)
@@ -87,6 +108,7 @@ docs/
 # Memory Context
 
 # [base_fixcity_fila5] recent context, 2026-04-15 10:19pm GMT+2
+# [base_ptvx_fila5] recent context, 2026-04-15 10:19pm GMT+2
 
 No previous sessions found.
 </claude-mem-context>

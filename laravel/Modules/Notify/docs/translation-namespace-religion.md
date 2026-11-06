@@ -1,4 +1,16 @@
-# Translation Namespace Philosophy — La Religione del Dominio
+---
+title: "translation namespace religion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation namespace religion"
+issues: []
+discussions: []
+status: draft
+---
+
+# Translation Namespace Philosophy: La Religione del Dominio
 
 **Status**: Active  
 **Created**: 2026-04-14  
@@ -7,7 +19,6 @@
 **Audience**: All developers + AI agents
 
 ---
-
 ## LA REGOLA AUREA
 
 **Le traduzioni sono organizzate per DOMINIO, non per componente UI.**
@@ -24,6 +35,7 @@
 ```php
 // ❌ SBAGLIATO: namespace basato su COMPONENTE UI
 __('fixcity::create_ticket_wizard.summary.images.limit_message')
+__('ptv::create_ticket_wizard.summary.images.limit_message')
 ```
 
 **Perche e sbagliato**:
@@ -50,6 +62,7 @@ __('fixcity::create_ticket_wizard.summary.images.limit_message')
 ```php
 // ✅ CORRETTO: namespace basato su DOMINIO BUSINESS
 __('fixcity::ticket.rules.image.limit_message')
+__('ptv::ticket.rules.image.limit_message')
 ```
 
 **Perche e meglio**:
@@ -210,6 +223,8 @@ grep "limit_message" Modules/Fixcity/lang/it/ticket.php
 ```php
 Section::make(__('fixcity::create_ticket_wizard.summary.images.label'))
     ->limitMessage(__('fixcity::create_ticket_wizard.summary.images.limit_message'))
+Section::make(__('ptv::create_ticket_wizard.summary.images.label'))
+    ->limitMessage(__('ptv::create_ticket_wizard.summary.images.limit_message'))
 ```
 
 **Problemi**:
@@ -224,6 +239,8 @@ Section::make(__('fixcity::create_ticket_wizard.summary.images.label'))
 ```php
 Section::make(__('fixcity::ticket.sections.images.label'))
     ->limitMessage(__('fixcity::ticket.rules.image.limit_message'))
+Section::make(__('ptv::ticket.sections.images.label'))
+    ->limitMessage(__('ptv::ticket.rules.image.limit_message'))
 ```
 
 **Vantaggi**:
@@ -304,6 +321,9 @@ Amen.
 - [ticket.php (dominio corretto)](../../Modules/Fixcity/lang/it/ticket.php)
 - [Laravel Localization](https://laravel.com/docs/localization)
 - [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
+- [ticket.php (dominio corretto)](../../Fixcity/lang/it/ticket.php)
+- [Laravel Localization](https://laravel.com/docs/localization)
+- [No Hardcoded Language Religion](no-hardcoded-language-religion.md)
 
 ---
 

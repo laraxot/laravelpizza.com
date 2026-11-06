@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Upgrade Laravel 13 - Media 🐄✨"
+module: "Media"
+type: concept
+tags: [laravel, 13, upgrade]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel 13 upgrade"
+related:
+  - "./webm.md"
+status: draft
+---
 # Upgrade Laravel 13 - Media 🐄✨
 
 ## 🎯 Visione Architetturale

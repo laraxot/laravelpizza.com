@@ -18,7 +18,7 @@ class AttachmentForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'title' => TextInput::make('title')->required(),
@@ -27,7 +27,7 @@ class AttachmentForm extends XotBaseResourceForm
             'disk' => Select::make('disk')->options(AttachmentDiskEnum::class),
             'attachment' => FileUpload::make('attachment')
                 ->directory('attachments')
-                ->preserveFilenames()
+                // niente ->preserveFilenames(): il nome scelto dal client su un disco servito dal web permette di caricare un .php eseguibile (audit DCP-181, B-1)
                 ->maxSize(10240)
                 ->multiple(false)
                 ->downloadable()

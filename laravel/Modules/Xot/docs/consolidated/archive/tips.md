@@ -1,3 +1,11 @@
+---
+title: "__tips"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, xot, consolidated]
+qmd: "__tips xot"
+---
 # __tips
 
 <!-- Contenuto migrato da _docs/__tips.txt -->

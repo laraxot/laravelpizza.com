@@ -16,7 +16,7 @@ abstract class XotBaseComponent extends IlluminateComponent
     /**
      * Undocumented variable.
      *
-     * @var array<mixed>
+     * @var array<string, mixed>
      */
     public array $attrs = [];
 
@@ -56,7 +56,7 @@ abstract class XotBaseComponent extends IlluminateComponent
         }
 
         $module_name = Str::between($class, 'Modules\\', '\\Views\\');
-        if ('' === $module_name) {
+        if ($module_name === '') {
             throw new \InvalidArgumentException("Unable to determine module name from class [{$class}].");
         }
 

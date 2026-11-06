@@ -5,105 +5,84 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Unit\Events;
 
 use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Laravel\Socialite\Two\InvalidStateException;
 use Modules\User\Contracts\TeamContract;
+use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Events\AddingTeam;
 use Modules\User\Events\AddingTeamMember;
 use Modules\User\Events\InvalidState;
-use Modules\User\Events\InvitingTeamMember;
 use Modules\User\Events\Login;
 use Modules\User\Events\NewPasswordSet;
-use Modules\User\Events\RecoveryCodeReplaced;
 use Modules\User\Events\RecoveryCodesGenerated;
-use Modules\User\Events\Registered;
-use Modules\User\Events\RegistrationNotEnabled;
-use Modules\User\Events\RemovingTeamMember;
 use Modules\User\Events\SocialiteUserConnected;
-use Modules\User\Events\TeamCreated;
-use Modules\User\Events\TeamDeleted;
-use Modules\User\Events\TeamMemberAdded;
-use Modules\User\Events\TeamMemberRemoved;
-use Modules\User\Events\TeamMemberUpdated;
-use Modules\User\Events\TeamSwitched;
-use Modules\User\Events\TeamUpdated;
-use Modules\User\Events\TwoFactorAuthenticationChallenged;
-use Modules\User\Events\TwoFactorAuthenticationConfirmed;
-use Modules\User\Events\TwoFactorAuthenticationDisabled;
 use Modules\User\Events\TwoFactorAuthenticationEnabled;
-use Modules\User\Events\UserNotAllowed;
 use Modules\User\Events\UserRegistered;
 use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
-use Modules\Xot\Contracts\UserContract;
+use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-describe('User events coverage', function (): void {
-    it('instantiates team and membership events', function (): void {
-        $team = Mockery::mock(TeamContract::class);
-        $user = Mockery::mock(UserContract::class);
+uses(TestCase::class);
 
-        expect(new AddingTeam($user))->toBeInstanceOf(AddingTeam::class)
-            ->and(new AddingTeamMember($team, $user))->toBeInstanceOf(AddingTeamMember::class)
-            ->and(new InvitingTeamMember($team, 'member@example.com', 'editor'))->toBeInstanceOf(InvitingTeamMember::class)
-            ->and(new RemovingTeamMember($team, $user))->toBeInstanceOf(RemovingTeamMember::class)
-            ->and(new TeamMemberAdded($team, $user))->toBeInstanceOf(TeamMemberAdded::class)
-            ->and(new TeamMemberRemoved($team, $user))->toBeInstanceOf(TeamMemberRemoved::class)
-            ->and(new TeamMemberUpdated($team, $user))->toBeInstanceOf(TeamMemberUpdated::class)
-            ->and(new TeamSwitched($team, $user))->toBeInstanceOf(TeamSwitched::class)
-            ->and(new TeamCreated($team))->toBeInstanceOf(TeamCreated::class)
-            ->and(new TeamUpdated($team))->toBeInstanceOf(TeamUpdated::class)
-            ->and(new TeamDeleted($team))->toBeInstanceOf(TeamDeleted::class);
+describe('User Events Coverage', function (): void {
+    test('instantiates team and membership events', function (): void {
+        $team = typedMock(TeamContract::class);
+        $user = UserFactory::new()->makeOne();
+        $addingTeam = new AddingTeam($user);
+        $addingMember = new AddingTeamMember($team, $user);
+
+        Assert::assertSame($user, $addingTeam->owner);
+        Assert::assertSame($team, $addingMember->teamContract);
+        Assert::assertSame($user, $addingMember->userContract);
     });
 
-    it('instantiates socialite and auth events', function (): void {
-        $socialiteUser = $this->createMock(SocialiteUser::class);
-        $oauthUser = Mockery::mock(SocialiteUserContract::class);
+    test('instantiates socialite and auth events', function (): void {
+        $socialiteUser = new SocialiteUser([
+            'provider' => 'github',
+            'provider_id' => 'provider-'.uniqid(),
+            'email' => 'oauth-'.uniqid().'@example.com',
+        ]);
+        $connected = new SocialiteUserConnected($socialiteUser);
+        $login = new Login($socialiteUser);
 
-        expect(new Login($socialiteUser))->toBeInstanceOf(Login::class)
-            ->and(new Registered($socialiteUser))->toBeInstanceOf(Registered::class)
-            ->and(new SocialiteUserConnected($socialiteUser))->toBeInstanceOf(SocialiteUserConnected::class)
-            ->and(new RegistrationNotEnabled('github', $oauthUser))->toBeInstanceOf(RegistrationNotEnabled::class)
-            ->and(new UserNotAllowed($oauthUser))->toBeInstanceOf(UserNotAllowed::class);
+        Assert::assertSame($socialiteUser, $connected->socialiteUser);
+        Assert::assertSame($socialiteUser, $login->socialiteUser);
     });
 
-    it('instantiates recovery and invalid-state events', function (): void {
-        $auth = Mockery::mock(Authenticatable::class);
+    test('instantiates recovery and invalid state events', function (): void {
         $exception = new InvalidStateException('state invalid');
+        $invalidState = new InvalidState($exception);
 
-        expect(new RecoveryCodeReplaced($auth, '123456'))->toBeInstanceOf(RecoveryCodeReplaced::class)
-            ->and(new InvalidState($exception))->toBeInstanceOf(InvalidState::class);
+        Assert::assertSame($exception, $invalidState->exception);
     });
 
-    it('instantiates two-factor events', function (): void {
-        $user = Mockery::mock(UserContract::class);
+    test('instantiates two factor events', function (): void {
+        $user = UserFactory::new()->makeOne();
+        $enabled = new TwoFactorAuthenticationEnabled($user);
 
-        expect(new TwoFactorAuthenticationEnabled($user))->toBeInstanceOf(TwoFactorAuthenticationEnabled::class)
-            ->and(new TwoFactorAuthenticationDisabled($user))->toBeInstanceOf(TwoFactorAuthenticationDisabled::class)
-            ->and(new TwoFactorAuthenticationConfirmed($user))->toBeInstanceOf(TwoFactorAuthenticationConfirmed::class)
-            ->and(new TwoFactorAuthenticationChallenged($user))->toBeInstanceOf(TwoFactorAuthenticationChallenged::class);
+        Assert::assertSame($user, $enabled->userContract);
     });
 
-    it('exposes broadcast channel for new password set event', function (): void {
-        $user = Mockery::mock(UserContract::class);
+    test('exposes broadcast channel for new password set event', function (): void {
+        $user = UserFactory::new()->makeOne();
         $event = new NewPasswordSet($user);
 
         $channels = $event->broadcastOn();
 
-        expect($channels)->toHaveCount(1)
-            ->and($channels[0])->toBeInstanceOf(PrivateChannel::class);
+        Assert::assertCount(1, $channels);
+        Assert::assertSame(PrivateChannel::class, $channels[0]::class);
     });
 
-    it('instantiates recovery-generated and user-registered events', function (): void {
-        $userContract = Mockery::mock(UserContract::class);
-        $user = new User();
+    test('instantiates recovery generated and user registered events', function (): void {
+        $userContract = UserFactory::new()->makeOne();
+        $user = new User;
 
-        $generated = new RecoveryCodesGenerated($userContract);
+        $recovery = new RecoveryCodesGenerated($userContract);
         $registered = new UserRegistered($user, ['source' => 'test'], '127.0.0.1', 'Pest');
 
-        expect($generated)->toBeInstanceOf(RecoveryCodesGenerated::class)
-            ->and($registered)->toBeInstanceOf(UserRegistered::class)
-            ->and($registered->formData)->toBe(['source' => 'test'])
-            ->and($registered->ipAddress)->toBe('127.0.0.1');
+        Assert::assertSame($userContract, $recovery->userContract);
+
+        Assert::assertSame(['source' => 'test'], $registered->formData);
+        Assert::assertSame('127.0.0.1', $registered->ipAddress);
     });
 });

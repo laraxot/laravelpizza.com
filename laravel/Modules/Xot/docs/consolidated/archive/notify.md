@@ -1,3 +1,11 @@
+---
+title: "Analisi e Risoluzione Colli di Bottiglia - Modulo Notify"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi e risoluzione colli di bottiglia - modulo notify xot"
+---
 # Analisi e Risoluzione Colli di Bottiglia - Modulo Notify
 
 ## 1. Queue Processing (Priorità: Alta)

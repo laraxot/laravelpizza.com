@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 {{--
   Scroll reveal: anima il contenuto quando entra in viewport.
   Rispetta prefers-reduced-motion (nessuna animazione se ridotta).

@@ -9,14 +9,11 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
-use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Hero
 {
     public static function make(string $name = 'hero', string $context = 'form'): Block
     {
-        $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('hero', true);
-
         // ---------------
         return Block::make($name)->schema([
             TextInput::make('title'),
@@ -24,8 +21,8 @@ final class Hero
             FileUpload::make('background')
                 // ->acceptedFileTypes(['application/pdf'])
                 // ->image()
-                ->directory('blocks')
-                ->preserveFilenames(),
+                // niente ->preserveFilenames(): conservare il nome scelto dal client su un disco servito dal web permette di caricare un .php eseguibile (audit DCP-181, B-1)
+                ->directory('blocks'),
             /*
              * RadioImage::make('view')
              * ->options($options),

@@ -2,6 +2,20 @@
 name: navigation-properties-rule-user-module
 description: User module navigation static properties usage rule
 type: project
+related:
+  - "./agent-confidence-protocol.md"
+  - "./can-comment-retired-wrong-placement.md"
+  - "./frontend-stack-canonical.md"
+  - "./header-auth-flow.md"
+  - "./header-design-colors.md"
+  - "./module-commit-push-after-change.md"
+  - "./no-filament-labels.md"
+  - "./no-notifications-migration-in-user-module.md"
+title: "navigation properties"
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "navigation properties user"
 ---
 
 ## Rule Overview

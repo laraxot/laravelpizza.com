@@ -1,3 +1,15 @@
+---
+title: "boost skill fix summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "boost skill fix summary"
+issues: []
+discussions: []
+status: active
+---
+
 # Boost Skill Fix Summary - Seo Module
 
 **Date**: 2026-03-02  

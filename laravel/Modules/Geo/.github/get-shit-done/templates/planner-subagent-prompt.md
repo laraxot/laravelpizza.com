@@ -1,9 +1,28 @@
+---
+title: "planner subagent prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "planner subagent prompt"
+issues: []
+discussions: []
+---
+
 # Planner Subagent Prompt Template
 
 Template for spawning gsd-planner agent. The agent contains all planning expertise - this template provides planning context only.
 
 ---
 
+title: "planner subagent prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "planner subagent prompt"
+issues: []
+discussions: []
 ## Template
 
 ```markdown

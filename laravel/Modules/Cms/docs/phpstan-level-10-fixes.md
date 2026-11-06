@@ -1,3 +1,15 @@
+---
+title: "phpstan level 10 fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level 10 fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Compliance - Cms Module
 
 **Date**: [DATE]
@@ -37,7 +49,6 @@ $container_last_key_name = $modelInstance->getRouteKeyName();
 - Removed redundant assertions on already-typed variables
 
 ---
-
 ### 2. app/Filament/Front/Pages/Welcome.php (3 errors → 0)
 
 **Issues Fixed:**

@@ -1,3 +1,15 @@
+---
+title: "overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "overview"
+issues: []
+discussions: []
+status: draft
+---
+
 # Wiki Overview
 
 > **Purpose**: High-level synthesis of the entire wiki's knowledge
@@ -5,10 +17,9 @@
 > **Updated**: 2026-04-15
 
 ---
-
 ## What is This Wiki?
 
-This is a **Karpathy-style LLM Wiki** — a persistent, LLM-maintained knowledge base where knowledge compounds over time. Instead of re-deriving answers from raw documents per query, the LLM incrementally builds structured, interlinked markdown files.
+This is a **Karpathy-style LLM Wiki**: a persistent, LLM-maintained knowledge base where knowledge compounds over time. Instead of re-deriving answers from raw documents per query, the LLM incrementally builds structured, interlinked markdown files.
 
 **Key Principles**:
 - **Persistent**: Knowledge doesn't vanish after a query session
@@ -20,9 +31,9 @@ This is a **Karpathy-style LLM Wiki** — a persistent, LLM-maintained knowledge
 
 ### Three-Layer Model
 
-1. **`raw/`** (Immutable) — Curated source documents, never modified by LLM
-2. **`wiki/`** (LLM-Owned) — Dynamically maintained knowledge pages
-3. **`AGENTS.md`** (Schema) — Instructions that enforce structure and workflows
+1. **`raw/`** (Immutable): Curated source documents, never modified by LLM
+2. **`wiki/`** (LLM-Owned): Dynamically maintained knowledge pages
+3. **`AGENTS.md`** (Schema): Instructions that enforce structure and workflows
 
 ### Directory Structure
 
@@ -51,7 +62,20 @@ docs/
 
 **Stack**: Laravel 11 + Filament 5 + Laraxot pattern  
 **Moduli**: 18 (Xot, Cms, UI, Lang, User, Fixcity, Blog, Geo, Media, Notify, Activity, Comment, Rating, Seo, Tenant, Job, Gdpr, AI)  
-**Temi**: 2 (Sixteen — Design Comuni/Bootstrap Italia, TwentyOne — cinematic/prediction market)  
+**Temi**: 2 (Sixteen: Design Comuni/Bootstrap Italia, TwentyOne: cinematic/prediction market)  
+**Raw docs totali**: ~14.000 file  
+
+### Mapping Karpathy → FixCity
+
+| Karpathy | FixCity | Note |
+|----------|---------|------|
+| `raw/` | `./docs/` + ogni `Modules/*/docs/` | Documenti sorgente (immutabili) |
+| `wiki/` | `./docs/wiki/` + ogni `Modules/*/docs/wiki/` | Conoscenza compilata dall'LLM |
+| `AGENTS.md` | `./docs/wiki/AGENTS.md` | Schema multi-agent |
+
+**Stack**: Laravel 11 + Filament 5 + Laraxot pattern  
+**Moduli**: 18 (Xot, Cms, UI, Lang, User, Fixcity, Blog, Geo, Media, Notify, Activity, Comment, Rating, Seo, Tenant, Job, Gdpr, AI)  
+**Temi**: 2 (Sixteen: Design Comuni/Bootstrap Italia, TwentyOne: cinematic/prediction market)  
 **Raw docs totali**: ~14.000 file  
 
 ### Mapping Karpathy → FixCity
@@ -66,7 +90,7 @@ docs/
 
 ## Current State
 
-**Status**: In progressione — 9 pagine compilate su 20 moduli/temi (2026-04-15)
+**Status**: In progressione: 9 pagine compilate su 20 moduli/temi (2026-04-15)
 
 | Livello | Wiki dirs | Pagine compilate | Raw docs |
 |---------|-----------|------------------|----------|
@@ -75,17 +99,17 @@ docs/
 | Theme wikis (2) | ✅ tutti | 2 (Sixteen, TwentyOne) | ~745 |
 
 **Pagine compilate:**
-- `docs/wiki/concepts/llm-wiki-governance.md` — project wiki mapping
-- `docs/wiki/modules/ai-module.md` — project-level AI module routing
-- `laravel/Modules/Xot/docs/wiki/overviews/xot-module.md` — Xot foundation, XotBase* classes
-- `laravel/Modules/Cms/docs/wiki/overviews/cms-module.md` — content blocks, Folio routing, multilingua
-- `laravel/Modules/UI/docs/wiki/overviews/ui-module.md` — design system, componenti Blade/Filament
-- `laravel/Modules/Lang/docs/wiki/overviews/lang-module.md` — auto-discovery i18n, mcamara routing
-- `laravel/Modules/AI/docs/wiki/overviews/ai-module.md` — AI module overview
-- `laravel/Modules/AI/docs/wiki/concepts/ai-mcp-governance.md` — AI MCP synthesis
-- `laravel/Modules/AI/docs/wiki/concepts/local-first-ollama-strategy.md` — local-first runtime policy
-- `laravel/Themes/Sixteen/docs/wiki/overviews/sixteen-theme.md` — Bootstrap Italia, AGID, Design Comuni
-- `laravel/Themes/TwentyOne/docs/wiki/overviews/twentyone-theme.md` — Zen agnostic, Kinetic, GSAP
+- `docs/wiki/concepts/llm-wiki-governance.md`: project wiki mapping
+- `docs/wiki/modules/ai-module.md`: project-level AI module routing
+- `laravel/Modules/Xot/docs/wiki/overviews/xot-module.md`: Xot foundation, XotBase* classes
+- `laravel/Modules/Cms/docs/wiki/overviews/cms-module.md`: content blocks, Folio routing, multilingua
+- `laravel/Modules/UI/docs/wiki/overviews/ui-module.md`: design system, componenti Blade/Filament
+- `laravel/Modules/Lang/docs/wiki/overviews/lang-module.md`: auto-discovery i18n, mcamara routing
+- `laravel/Modules/AI/docs/wiki/overviews/ai-module.md`: AI module overview
+- `laravel/Modules/AI/docs/wiki/concepts/ai-mcp-governance.md`: AI MCP synthesis
+- `laravel/Modules/AI/docs/wiki/concepts/local-first-ollama-strategy.md`: local-first runtime policy
+- `laravel/Themes/Sixteen/docs/wiki/overviews/sixteen-theme.md`: Bootstrap Italia, AGID, Design Comuni
+- `laravel/Themes/TwentyOne/docs/wiki/overviews/twentyone-theme.md`: Zen agnostic, Kinetic, GSAP
 
 **Last Ingestion**: 2026-04-15 (Cms, UI, Lang, Sixteen, TwentyOne)  
 **Last Lint**: Mai  
@@ -95,11 +119,12 @@ docs/
 
 ### Priorità 1: Moduli rimanenti
 
-1. **User** — autenticazione, profilo, GDPR compliance
-2. **Fixcity** — ticket system, segnalazioni civiche, workflow
-3. **Geo** — geolocalizzazione, mappe, OpenStreetMap
-4. **Media** — gestione file, upload, storage S3
-5. **Seo** — meta tags, structured data, sitemap
+1. **User**: autenticazione, profilo, GDPR compliance
+2. **Fixcity**: ticket system, segnalazioni civiche, workflow
+2. **App**: ticket system, segnalazioni civiche, workflow
+3. **Geo**: geolocalizzazione, mappe, OpenStreetMap
+4. **Media**: gestione file, upload, storage S3
+5. **Seo**: meta tags, structured data, sitemap
 
 ### Priorità 2: Moduli secondari
 

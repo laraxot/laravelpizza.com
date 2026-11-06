@@ -1,3 +1,15 @@
+---
+title: "ux ui design"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ux ui design"
+issues: []
+discussions: []
+status: draft
+---
+
 # UX/UI Design: Un Approccio Olistico
 
 ## Aspetti Tecnici

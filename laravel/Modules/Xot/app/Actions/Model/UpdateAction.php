@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 /**
  * --- usata ricorsivamente.
  */
@@ -18,8 +17,8 @@ class UpdateAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $data
-     * @param array<string, mixed> $rules
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $rules
      */
     public function execute(Model $model, array $data, array $rules): Model
     {
@@ -28,7 +27,7 @@ class UpdateAction
 
         $keyName = $model->getKeyName();
         // $data['updated_by'] = authId();
-        if (null === $model->getKey()) {
+        if ($model->getKey() === null) {
             $key = $data[$keyName];
             /** @var array<string, mixed> $data */
             $data = collect($data)->except($keyName)->toArray();

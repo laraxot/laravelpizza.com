@@ -12,7 +12,7 @@ class DomainInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, TextEntry>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use Filament\Facades\Filament;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
@@ -12,6 +11,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Modules\User\Http\Controllers\Controller;
 
 class VerifyEmailController extends Controller
 {
@@ -21,13 +21,13 @@ class VerifyEmailController extends Controller
     public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
         $user = Auth::user();
-        if (null === $user) {
+        if ($user === null) {
             return redirect()->route('filament.user.auth.login');
         }
 
         // Ottieni il valore hash in modo sicuro
         $routeHash = $request->route('hash');
-        if (null === $routeHash) {
+        if ($routeHash === null) {
             throw new \InvalidArgumentException('Hash di verifica mancante');
         }
 
@@ -39,7 +39,7 @@ class VerifyEmailController extends Controller
             : ($user->email ?? '');
 
         if (! hash_equals(sha1($userEmail), $stringRouteHash)) {
-            throw new AuthorizationException();
+            throw new AuthorizationException;
         }
 
         // Verifichiamo l'email solo se il metodo esiste

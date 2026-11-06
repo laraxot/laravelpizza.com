@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Rimozione runningInConsole Check - Riepilogo"
+module: "Tenant"
+type: concept
+tags: [runninginconsole, check, removal, sumy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "runninginconsole check removal sumy"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Rimozione runningInConsole Check - Riepilogo
 
 **File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`

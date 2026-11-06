@@ -1,51 +1,16 @@
-# Model Architecture
-
-## Base Models
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_models.txt}
-```
-
-## Relationships
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/relationship.txt}
-```
-
-## Pivot Tables
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_pivot.txt}
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/pivot.txt}
-```
-
-## Custom Casts
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/custom_casts.txt}
-```
-
-## View Models
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/view_models.txt}
-```
-
-## Type Hinting
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/type_hinting.txt}
-```
-
-## Scopes
-```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
-```
-### Versione HEAD
-
-## Collegamenti tra versioni di models.md
-* [models.md](../../../Notify/project_docs/models.md)
-
-### Versione Incoming
-
 ---
-# _models
+title: "Models: risorse esterne"
+type: reference
+module: Xot
+tags: [archive, models, eloquent, migrato-da-txt]
+created: 2026-10-23
+updated: 2026-10-23
+status: draft
+qmd: "models   risorse esterne xot"
+---
+
+# Models: risorse esterne
 
 <!-- Contenuto migrato da _docs/_models.txt -->
 
-multi key, fixing lazy loading
-https://github.com/topclaudy/compoships
+- [awobaz/compoships](https://github.com/topclaudy/compoships): relazioni Eloquent con chiavi multiple (multi key) che restano compatibili con l'eager loading, evitando il lazy loading. Il pacchetto è richiesto in `Modules/Xot/composer.json` (`"awobaz/compoships": "^3.0"`); al 2026-10-23 nessuna classe in `Modules/*/app` usa `Compoships`.

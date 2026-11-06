@@ -1,3 +1,15 @@
+---
+title: "reusable search ui component rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusable search ui component rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Reusable search ui component rule
 
 ## Regola

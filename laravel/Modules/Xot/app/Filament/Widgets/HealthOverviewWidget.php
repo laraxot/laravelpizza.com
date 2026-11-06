@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Spatie\Health\Enums\Status;
 use Spatie\Health\ResultStores\ResultStore;
 
-class HealthOverviewWidget extends BaseWidget
+class HealthOverviewWidget extends XotBaseStatsOverviewWidget
 {
     public function iconColor(string $status): string
     {
@@ -27,7 +26,7 @@ class HealthOverviewWidget extends BaseWidget
         $stats = [];
 
         $checkResults = app(ResultStore::class)->latestResults();
-        if (null === $checkResults) {
+        if ($checkResults === null) {
             return $stats;
         }
         foreach ($checkResults->storedCheckResults as $result) {

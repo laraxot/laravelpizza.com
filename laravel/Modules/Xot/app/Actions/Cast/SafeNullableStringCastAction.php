@@ -10,7 +10,7 @@ final class SafeNullableStringCastAction
     {
         $stringValue = SafeStringCastAction::cast($value);
 
-        return '' !== $stringValue ? $stringValue : null;
+        return $stringValue !== '' ? $stringValue : null;
     }
 
     public static function cast(mixed $value): ?string

@@ -12,9 +12,10 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
   - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
-  - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
+  - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md  # target mancante, verificato 2026-10-08
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
+  - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt  # target mancante, verificato 2026-10-08
+status: active
 ---
 
 # Contratto wiki locale — stub Seo
@@ -22,8 +23,8 @@ related:
 | Risorsa | Link |
 |---------|------|
 | **Canon** | [Xot second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md) |
-| **Harness moduli** | [ai-harness-module-discipline.md](../../../../docs/wiki/concepts/ai-harness-module-discipline.md) |
+| **Harness moduli** | [ai-harness-module-discipline.md](../../../../docs/wiki/concepts/ai-harness-module-discipline.md) _(target mancante, verificato 2026-10-08)_ |
 | **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) |
-| **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) |
+| **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) _(target mancante, verificato 2026-10-08)_ |
 
 Solo decisioni specifiche di **Seo** in `docs/wiki/`; contratto generico in Xot.

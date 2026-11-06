@@ -1,3 +1,11 @@
+---
+title: "Implementazione del Logout con Volt"
+type: note
+status: draft
+updated: 2026-10-13
+tags: [docs, user]
+qmd: "implementazione del logout con volt user"
+---
 # Implementazione del Logout con Volt
 
 ## Il Problema
@@ -216,5 +224,25 @@ public function test_logout_clears_session()
 ## Collegamenti
 
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](./filament_best_practices.md)
+- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
 - [Routing Best Practices](./routing_best_practices.md) 
+- [Routing Best Practices](./routing_best_practices.md) 
+---
+module: theme
+topic: volt-logout
+canonical: ../../../Themes/docs/shared-components/volt-logout.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/volt-logout.md

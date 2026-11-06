@@ -1,3 +1,14 @@
+---
+title: "docs directory violation reminder 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs directory violation reminder 1"
+issues: []
+discussions: []
+---
+
 # CRITICAL: DOCS DIRECTORY ARCHITECTURAL VIOLATION
 
 ## VIOLATION DETAILS

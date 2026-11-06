@@ -1,3 +1,15 @@
+---
+title: "form filament widgets"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "form filament widgets"
+issues: []
+discussions: []
+status: draft
+---
+
 # Utilizzo dei Widget Filament per i Form in il progetto
 
 ## Indice

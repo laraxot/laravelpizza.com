@@ -1,3 +1,15 @@
+---
+title: "summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # Riepilogo Analisi PHPStan - Modulo Activity
 
 Data ultima analisi: 08/04/2024

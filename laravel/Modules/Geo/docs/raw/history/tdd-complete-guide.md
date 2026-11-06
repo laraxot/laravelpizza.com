@@ -1,3 +1,14 @@
+---
+title: "tdd complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd complete guide"
+issues: []
+discussions: []
+---
+
 # TDD - Test-Driven Development Complete Guide
 
 ## Cos'è TDD?
@@ -14,6 +25,14 @@ Test-Driven Development (TDD) è una metodologia di sviluppo software che enfati
 
 ---
 
+title: "tdd complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tdd complete guide"
+issues: []
+discussions: []
 ## Perché TDD?
 
 ### Vantaggi

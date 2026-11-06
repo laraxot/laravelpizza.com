@@ -1,3 +1,14 @@
+---
+title: "git planning commit"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git planning commit"
+issues: []
+discussions: []
+---
+
 # Git Planning Commit
 
 Commit planning artifacts using the gsd-tools CLI, which automatically checks `commit_docs` config and gitignore status.

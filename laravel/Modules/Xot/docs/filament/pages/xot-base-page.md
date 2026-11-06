@@ -1,3 +1,13 @@
+---
+title: "XotBasePage"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, filament]
+qmd: "XotBasePage"
+---
 # XotBasePage
 
 ## Panoramica
@@ -35,7 +45,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class YourPage extends XotBasePage
 {
     protected static string $view = 'your-module::pages.your-page';
-
+    
     protected function getFormSchema(): array
     {
         return [
@@ -101,6 +111,6 @@ Verifica se l'utente ha l'accesso alla pagina.
 
 ## Link Correlati
 
-- [Documentazione Filament](../../../../docs/filament/index.md)
-- [Best Practices](../../../../docs/best-practices.md)
-- [Guida Traduzioni](../../../../docs/translations.md)
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Best Practices](../../../docs/best-practices.md)
+- [Guida Traduzioni](../../../docs/translations.md) 

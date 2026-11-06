@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" aria-hidden="true">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            .u-sa-spark {
+                transform-box: fill-box;
+                transform-origin: center;
+                animation: u-sa-pulse 1.8s ease-in-out infinite;
+            }
+            @keyframes u-sa-pulse {
+                0%, 100% { opacity: .55; transform: scale(.82); }
+                50% { opacity: 1; transform: scale(1.18); }
+            }
+        }
+    </style>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+    <path class="u-sa-spark" fill="currentColor" stroke-width="0.6" stroke-linejoin="round" d="M12 7.4l1 2.3 2.3 1-2.3 1-1 2.3-1-2.3-2.3-1 2.3-1 1-2.3z"/>
+</svg>

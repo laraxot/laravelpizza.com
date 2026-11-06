@@ -1,14 +1,13 @@
 ---
-title: "Agent instructions"
-type: reference
-tags: [agents, coding-agent, llm-wiki]
-created: 2026-07-01
-updated: 2026-07-01
-qmd: "istruzioni agenti LLM wiki modulo"
+title: "agents"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents"
 issues: []
 discussions: []
-related:
-  - ./coding-agent-manifests.md
+status: draft
 ---
 
 # Notify {{TYPE^}} LLM Wiki Agent Instructions
@@ -35,6 +34,9 @@ You are the **Notify Wiki Maintainer**. Your job is to:
 
 ```yaml
 ---
+qmd: "agents"
+issues: []
+discussions: []
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
 sources: ["raw/articles/filename.md"]

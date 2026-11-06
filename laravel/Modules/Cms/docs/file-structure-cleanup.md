@@ -1,3 +1,15 @@
+---
+title: "file structure cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "file structure cleanup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Cms Module File Structure Cleanup
 
 ## Problem Identified
@@ -165,7 +177,6 @@ After cleanup:
 - [ ] Follows Laravel conventions
 
 ---
-
 **Cleanup Status**: Ready for implementation
 **Impact**: Low risk, improves code quality
 **Time Estimate**: 5 minutes

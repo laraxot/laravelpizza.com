@@ -16,10 +16,11 @@ trait HasModules
      */
     public function getModules(): array
     {
+        /** @var array<string, Module> $modules */
         $modules = ModuleFacade::getOrdered();
 
         /** @var array<string, Module> $filteredModules */
-        $filteredModules = Arr::where($modules, function ($module, $key) {
+        $filteredModules = Arr::where($modules, function (Module $module, int|string $key): bool {
             // $name = $module->getName();
             $name = is_string($key) ? $key : (string) $key;
             $role_name = Str::of($name)->lower()->append('::admin')->toString();
@@ -35,7 +36,7 @@ trait HasModules
             }
         }
 
-        /* @var array<string, Module> $result */
+        /** @var array<string, Module> $result */
         return $result;
     }
 }

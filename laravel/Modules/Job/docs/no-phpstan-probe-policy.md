@@ -1,5 +1,14 @@
 ---
+title: "no phpstan probe policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no phpstan probe policy"
+issues: []
+discussions: []
 description: Divieto di creare cartelle o file probe per PHPStan in questo modulo.
+status: draft
 ---
 
 # No PHPStan probe files in Job

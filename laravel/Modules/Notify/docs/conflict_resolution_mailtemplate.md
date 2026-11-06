@@ -1,3 +1,15 @@
+---
+title: "conflict resolution mailtemplate"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution mailtemplate"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti MailTemplate.php
 
 ## Contesto del Conflitto
@@ -70,12 +82,5 @@ Verificare che:
 - [Mail Templates Structure](mail_templates_structure.md)
 - [Translation Standards](translation_standards.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
-
-*Ultimo aggiornamento: giugno 2025*
-- [Notify Module Documentation](readme.md)
-- [SMS Implementation Guide](sms_implementation.md)
-- [Mail Templates Structure](mail_templates_structure.md)
-- [Translation Standards](translation_standards.md)
-- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*

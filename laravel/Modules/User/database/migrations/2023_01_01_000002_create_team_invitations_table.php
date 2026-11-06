@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
@@ -27,17 +27,6 @@ return new class extends XotBaseMigration {
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('accepted_at')) {
-                $table->timestamp('accepted_at')->nullable();
-            }
-            if (! $this->hasColumn('declined_at')) {
-                $table->timestamp('declined_at')->nullable();
-            }
-            if (! $this->hasColumn('user_id')) {
-                $table->string('user_id')->nullable()->index();
-            }
-
-            // if ($hasIndexName('team_invitations_team_id_foreign'))
             //    $table->dropForeign('team_invitations_team_id_foreign');
             // }
 

@@ -1,3 +1,15 @@
+---
+title: "conflict resolution recordnotification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution recordnotification"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Conflitti RecordNotification.php
 
 ## Contesto del Conflitto
@@ -77,13 +89,7 @@ Verificare che:
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie_email_usage_guide.md)
+- [SpatieEmail Integration](spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
-
-*Ultimo aggiornamento: giugno 2025*
-- [Notify Module Documentation](readme.md)
-- [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie_email_usage_guide.md)
-- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*

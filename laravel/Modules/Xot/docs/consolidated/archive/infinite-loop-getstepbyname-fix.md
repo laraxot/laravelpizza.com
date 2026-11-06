@@ -1,3 +1,11 @@
+---
+title: "CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "critical fix: loop infinito in getstepbyname() - xotbaseresource xot"
+---
 # CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource
 
 ## 🚨 **PROBLEMA CRITICO RISOLTO**

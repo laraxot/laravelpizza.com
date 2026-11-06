@@ -1,3 +1,15 @@
+---
+title: "migrations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migrations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Migrazioni Modulo GDPR
 
 ## Panoramica
@@ -250,15 +262,15 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Migrazioni User](../user/docs/migrations.md)
-- [Migrazioni Activity](../activity/docs/migrations.md)
-- [Migrazioni Xot](../xot/docs/migrations.md)
+- [Migrazioni User](../../User/docs/migrations.md)
+- [Migrazioni Activity](../../Activity/docs/migrations.md)
+- [Migrazioni Xot](../../Xot/docs/migrations.md)
 
 ### Collegamenti Interni
-- [README Principale](./readme.md)
+- [README Principale](./README.md)
 - [Implementazione](./implementation.md)
 - [Configurazione](./configuration.md)
 - [Testing](./testing.md)
 ## Collegamenti tra versioni di migrations.md
-* [migrations.md](../../notify/docs/migrations.md)
-* [migrations.md](../../activity/docs/database/migrations.md)
+* [migrations.md](../../Notify/docs/migrations.md)
+* [migrations.md](../../Activity/docs/database/migrations.md)

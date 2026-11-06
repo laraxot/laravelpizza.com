@@ -1,3 +1,11 @@
+---
+title: "Struttura Layout Email"
+type: note
+status: draft
+updated: 2026-09-16
+tags: [docs, notify, mail-templates]
+qmd: "struttura layout email notify"
+---
 # Struttura Layout Email
 
 ## 1. Separazione dei File

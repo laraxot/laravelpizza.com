@@ -1,3 +1,28 @@
+---
+title: "Upgrade Laravel 13 - User 🐄✨"
+type: concept
+tags: [laravel, upgrade]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel-13-upgrade upgrade laravel 13 - user 🐄✨"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Upgrade Laravel 13 - User 🐄✨
 
 ## 🎯 Visione Architetturale

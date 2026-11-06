@@ -1,3 +1,12 @@
+---
+title: "ACTIVITY MODULE - ROADMAP 2025"
+type: note
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity module - roadmap 2025 activity"
+status: superseded
+superseded_by: roadmap.md
+---
 # 🎯 ACTIVITY MODULE - ROADMAP 2025
 
 **Modulo**: Activity ([Description])  

@@ -1,3 +1,15 @@
+---
+title: "dynamic class resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dynamic class resolution"
+issues: []
+discussions: []
+status: draft
+---
+
 # Risoluzione Dinamica delle Classi nei Factory Pattern
 
 Questo documento analizza l'approccio di risoluzione dinamica delle classi nei factory pattern, confrontandolo con l'approccio basato su match esplicito.

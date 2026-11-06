@@ -1,3 +1,11 @@
+---
+title: "DIVIETO ASSOLUTO DI IMPLEMENTARE table()"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "divieto assoluto di implementare table() xot"
+---
 # DIVIETO ASSOLUTO DI IMPLEMENTARE table()
 
 ## Regola Fondamentale Inviolabile

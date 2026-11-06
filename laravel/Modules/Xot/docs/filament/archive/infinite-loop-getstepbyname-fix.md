@@ -1,3 +1,13 @@
+---
+title: "CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource"
+type: note
+status: unverified
+created: 2026-07-03
+updated: 2026-07-03
+module: Xot
+tags: [xot, filament]
+qmd: "CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource"
+---
 # CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource
 
 ## 🚨 **PROBLEMA CRITICO RISOLTO**
@@ -113,7 +123,7 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 ## 🔗 **Collegamenti**
 
 ### **File Modificati**
-- [XotBaseResource.php](../../../Modules/Xot/app/Filament/Resources/XotBaseResource.php) - Fix principale
+- [XotBaseResource.php](../../../app/Filament/Resources/XotBaseResource.php) - Fix principale
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
 ### **Documentazione Correlata**

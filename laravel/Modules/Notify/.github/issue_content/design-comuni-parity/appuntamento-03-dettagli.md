@@ -1,3 +1,14 @@
+---
+title: "appuntamento 03 dettagli"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "appuntamento 03 dettagli"
+issues: []
+discussions: []
+---
+
 # Converti pagina: Appuntamento - Dettagli (appuntamento-03-dettagli.html)
 
 ## Obiettivo

@@ -1,3 +1,15 @@
+---
+title: "filament extension rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament extension rules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Regole di Estensione delle Classi Filament
 
 ## Regola Fondamentale
@@ -57,7 +69,7 @@ class SendSMSPage extends XotBasePage
 Per verificare che tutte le classi seguano questa regola:
 
 ```bash
-find /var/www/html/Quaeris/laravel/Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament" {} \;
+find /var/www/html/saluteora/laravel/Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament" {} \;
 ```
 
 Le pagine che violano questa regola devono essere immediatamente corrette per mantenere l'integrità dell'architettura.

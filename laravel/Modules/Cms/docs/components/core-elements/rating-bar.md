@@ -1,3 +1,15 @@
+---
+title: "rating bar"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "rating bar"
+issues: []
+discussions: []
+status: draft
+---
+
 # Rating Bar
 
 Il componente Rating Bar permette agli utenti di assegnare e visualizzare valutazioni attraverso un'interfaccia intuitiva basata su stelle o altri simboli.

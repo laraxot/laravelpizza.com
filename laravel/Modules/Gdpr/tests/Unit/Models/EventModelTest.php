@@ -6,10 +6,7 @@ namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Event;
-use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 test('event_fillable_attributes', function (): void {
     $event = new Event();

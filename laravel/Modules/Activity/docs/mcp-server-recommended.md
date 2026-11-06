@@ -1,4 +1,16 @@
+---
+module: theme
+topic: MCP_SERVER_RECOMMENDED
+canonical: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
+title: "MCP Server Consigliati per il Modulo Activity"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "mcp server consigliati per il modulo activity activity"
+---
 
+See canonical documentation: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
 
 # MCP Server Consigliati per il Modulo Activity
 

@@ -47,6 +47,13 @@ return [
         'practices' => 'My Practices',
         'notifications' => 'Notifications',
         'logout' => 'Log Out',
+        'password_requirements' => [
+            'title' => 'Password requirements',
+            'min_length' => 'At least 8 characters',
+            'uppercase' => 'At least one uppercase letter',
+            'number' => 'At least one number',
+            'special' => 'At least one special character',
+        ],
     ],
     'user_dropdown' => [
         'manage_account' => 'Account Management',
@@ -61,6 +68,8 @@ return [
         'close_menu' => 'Close main menu',
         'home' => 'Home',
         'dashboard' => 'Dashboard',
+        'primary' => 'Primary navigation',
+        'learn_more' => 'Learn more',
         'profile' => 'Profile',
         'settings' => 'Settings',
     ],

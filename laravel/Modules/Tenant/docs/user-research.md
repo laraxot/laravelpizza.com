@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Tenant Module - User Research"
+module: "Tenant"
+type: concept
+tags: [USER, RESEARCH]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "user research"
+related:
+  - "./phpstan-corrections-january.md"
+status: draft
+---
 # Tenant Module - User Research
 
 **Module:** Tenant  

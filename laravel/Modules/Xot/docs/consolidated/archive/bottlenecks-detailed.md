@@ -1,3 +1,11 @@
+---
+title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "analisi dettagliata dei colli di bottiglia - modulo xot xot"
+---
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot
 
 ## Panoramica

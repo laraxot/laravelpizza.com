@@ -159,17 +159,4 @@ return [
             ],
         ],
     ],
-    'navigation' => [
-        'name' => 'User Resource',
-        'plural' => 'User Resource',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'User Resource',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'label' => 'User Resource',
-    'plural_label' => 'User Resource (Plurale)',
 ];

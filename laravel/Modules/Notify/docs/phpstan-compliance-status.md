@@ -1,3 +1,15 @@
+---
+title: "phpstan compliance status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan compliance status"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Level 10 Compliance Status
 
 **Last Updated**: 2026-07-06
@@ -89,7 +101,7 @@ Fix applicati in questa sessione:
   rotto `getType()?->getName()` (solo `ReflectionNamedType` ha `getName()`),
   import `Safe\*` mancanti, sintassi corrotta da un refactor automatico
   precedente.
-- Rimossi i probe PHPStan morti (`*PhpstanProbe*`) — vedi
+- Rimossi i probe PHPStan morti (`*PhpstanProbe*`): vedi
   `Modules/Xot/docs/wiki/concepts/phpstan-trait-probes.md`.
 
-Dettagli completi: `docs/chat/phpstan-notify-module-zero-2026-07-06.md` (root repo).
+Dettagli completi: `docs/chat/phpstan-notify-module-zero.md` (root repo).

@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Html2Pdf - Panoramica e Installazione"
+module: "Tenant"
+type: concept
+tags: [index]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "index"
+related:
+  - "./phpstan-corrections-january.md"
+  - "../phpstan-corrections-january.md"
+status: draft
+---
 # Html2Pdf - Panoramica e Installazione
 
 Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novità dell'ultima versione, le istruzioni per l'installazione e l'architettura di integrazione nel progetto.

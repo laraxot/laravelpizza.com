@@ -1,3 +1,15 @@
+---
+title: "slug field implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "slug field implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Campo `slug` in MailTemplate
 
 ## Introduzione
@@ -169,6 +181,6 @@ L'implementazione del campo `slug` nella tabella `mail_templates` segue le migli
 - [Migration Structure](./MIGRATION_STRUCTURE.md)
 - [Email Templates](../EMAIL_TEMPLATES.md)
 - [Spatie Email Usage Guide](../SPATIE_EMAIL_USAGE_GUIDE.md)
-- [Migration Structure](./MIGRATION_STRUCTURE.md)
-- [Email Templates](../EMAIL_TEMPLATES.md)
-- [Spatie Email Usage Guide](../SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Migration Structure](./migration_structure.md)
+- [Email Templates](../email_templates.md)
+- [Spatie Email Usage Guide](../spatie_email_usage_guide.md)

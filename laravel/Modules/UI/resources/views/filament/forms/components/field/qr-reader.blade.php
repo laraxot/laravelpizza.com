@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <x-filament-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()"
     :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
@@ -11,11 +10,11 @@ declare(strict_types=1);
 
         <button
             class="text-center w-fit flex items-center justify-center border bg-blue-400 p-2 uppercase text-white font-normal rounded-xl min-w-[150px]"
-            onclick="startScan()">Scansiona</button>
+            onclick="startScan()">{{ __('ui::components.qr_reader.scan.label') }}</button>
 
         <div class="flex flex-col gap-4 w-full">
-            <h2 class="font-bold text-slate-500 text-xl">Cerca</h2>
-            <input id="card-filter" type="text" placeholder="Cerca"
+            <h2 class="font-bold text-slate-500 text-xl">{{ __('ui::components.qr_reader.search.label') }}</h2>
+            <input id="card-filter" type="text" placeholder="{{ __('ui::components.qr_reader.search.label') }}"
                 class="w-full px-4 py-2 border border-black rounded-xl text-sm text-slate-500 min-h-[50px] bg-white active:border-orange-500 focus:border-orange-500"
                 x-model="state">
         </div>

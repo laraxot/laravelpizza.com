@@ -1,4 +1,18 @@
+---
+title: "address model italian"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address model italian"
+issues: []
+discussions: []
+status: draft
+---
+
 # Modello Address per Indirizzi Italiani
+
+> Nota (docs-audit): verificato sul codice, i campi `$fillable` di `Address` sono quelli elencati sotto (contengono nomi, non codici). Le relazioni `region()`, `province()`, `comune()` e i metodi `GeoJsonModel::get*CodeByName()` sono una proposta: in `app/Models/Address.php` le relazioni sono commentate, esistono solo `getRegione()` e `getProvincia()` (array), e `GeoJsonModel` non ha quei metodi. Le regole `exists:regions,code` non hanno una tabella migrata (resta solo `2024_03_21_000001_create_regions_table.php,bak`).
 
 ## Struttura Amministrativa Italiana
 L'Italia ha una struttura amministrativa specifica che richiede un'attenzione particolare nella modellazione degli indirizzi:

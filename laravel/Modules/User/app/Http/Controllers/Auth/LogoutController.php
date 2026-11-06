@@ -7,13 +7,12 @@ declare(strict_types=1);
  *
  * @return RedirectResponse
  */
-
 namespace Modules\User\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Modules\User\Http\Controllers\Controller;
 
 class LogoutController extends Controller
 {

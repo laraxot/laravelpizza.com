@@ -6,28 +6,27 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
+use Modules\User\Models\Traits\AuthenticationRelationsTrait;
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Authentication Model.
  *
  * Tracks user authentication attempts and sessions.
  *
- * @property int         $id
- * @property string      $type                 Type of authentication (e.g., 'login', 'logout')
- * @property string|null $ip_address           IP address used for authentication
- * @property string|null $user_agent           User agent string from the request
- * @property string|null $location             Geographic location derived from IP
- * @property bool        $login_successful     Whether the login attempt was successful
- * @property Carbon|null $login_at             When the login attempt occurred
- * @property Carbon|null $logout_at            When the logout occurred
- * @property string      $authenticatable_type The class name of the authenticatable model
- * @property string      $authenticatable_id   The ID of the authenticatable model
- * @property Carbon|null $created_at           When the record was created
- * @property Carbon|null $updated_at           When the record was last updated
+ * @property int $id
+ * @property string $type Type of authentication (e.g., 'login', 'logout')
+ * @property string|null $ip_address IP address used for authentication
+ * @property string|null $user_agent User agent string from the request
+ * @property string|null $location Geographic location derived from IP
+ * @property bool $login_successful Whether the login attempt was successful
+ * @property Carbon|null $login_at When the login attempt occurred
+ * @property Carbon|null $logout_at When the logout occurred
+ * @property string $authenticatable_type The class name of the authenticatable model
+ * @property string $authenticatable_id The ID of the authenticatable model
+ * @property Carbon|null $created_at When the record was created
+ * @property Carbon|null $updated_at When the record was last updated
  *
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
@@ -45,28 +44,26 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
  *
- * @property Model|\Eloquent      $authenticatable
+ * @property Model|\Eloquent $authenticatable
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property string|null          $deleted_at
- * @property string|null          $deleted_by
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_at
+ * @property string|null $deleted_by
  *
  * @method static \Modules\User\Database\Factories\AuthenticationFactory factory($count = null, $state = [])
- * @method static Builder<static>|Authentication                         whereCreatedBy($value)
- * @method static Builder<static>|Authentication                         whereDeletedAt($value)
- * @method static Builder<static>|Authentication                         whereDeletedBy($value)
- * @method static Builder<static>|Authentication                         whereUpdatedBy($value)
+ * @method static Builder<static>|Authentication whereCreatedBy($value)
+ * @method static Builder<static>|Authentication whereDeletedAt($value)
+ * @method static Builder<static>|Authentication whereDeletedBy($value)
+ * @method static Builder<static>|Authentication whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */
 class Authentication extends BaseModel
 {
-    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
-    use HasXotFactory;
-
+    use AuthenticationRelationsTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -83,12 +80,6 @@ class Authentication extends BaseModel
         'authenticatable_type',
         'authenticatable_id',
     ];
-
-    /** @return MorphTo<Model, $this> */
-    public function authenticatable(): MorphTo
-    {
-        return $this->morphTo();
-    }
 
     /**
      * The attributes that should be cast.

@@ -1,3 +1,15 @@
+---
+title: "interface naming convention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "interface naming convention"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzione di Naming per le Interfacce
 
 ## Regola Fondamentale
@@ -63,6 +75,11 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 # Convenzione di Naming per le Interfacce
 
@@ -142,3 +159,21 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)

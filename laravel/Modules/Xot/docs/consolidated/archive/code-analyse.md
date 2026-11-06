@@ -1,3 +1,11 @@
+---
+title: "code_analyse"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "code_analyse xot"
+---
 # code_analyse
 
 <!-- Contenuto migrato da _docs/code_analyse.txt -->

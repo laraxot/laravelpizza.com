@@ -1,3 +1,11 @@
+---
+title: "RouteDynService"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "routedynservice xot"
+---
 # RouteDynService
 
 Il RouteDynService è un servizio fondamentale per la gestione dinamica delle rotte in Laraxot. Fornisce un'interfaccia flessibile per la generazione e configurazione delle rotte basata su array di configurazione.

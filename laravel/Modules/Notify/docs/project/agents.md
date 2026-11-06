@@ -9,6 +9,7 @@ issues: []
 discussions: []
 related:
   - ./coding-agent-manifests.md
+status: draft
 ---
 
 # FixCity Platform - AGENTS.md
@@ -27,12 +28,12 @@ This file contains comprehensive guidelines and commands for AI agents working o
 - **NEVER** create Controllers
 - **ALWAYS** use: Volt, Folio, Filament, Laraxot
 
-### VIEW PATTERN — view-string + viewParams
+### VIEW PATTERN: view-string + viewParams
 - Per view(): variabile con @phpstan-var view-string, $viewParams = [] esplicito
 - return view($viewName, $viewParams)
 - Logica: type safety, estensibilità, consistenza. Vedi docs/view-pattern.md
 
-### PHPMD e PHPInsights — SOLO .phar
+### PHPMD e PHPInsights: SOLO .phar
 - **NON** installare con Composer
 - Usare .phar: `php phpmd.phar`, `php phpinsights.phar`
 - Logica: indipendenza, portabilità, leggerezza. Vedi docs/quality-tools-setup.md
@@ -1695,6 +1696,9 @@ gh run list --limit 10
 - **[docs/MULTI_AGENT_COLLABORATION.md](docs/MULTI_AGENT_COLLABORATION.md)** - Complete guide
 - **[Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)** - AI Agent Collaboration
 - **[docs/AI_AGENT_TEAMS.md](docs/AI_AGENT_TEAMS.md)** - Team organization
+- **[docs/MULTI_AGENT_COLLABORATION.md](../MULTI_AGENT_COLLABORATION.md)** - Complete guide
+- **[Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)** - AI Agent Collaboration
+- **[docs/AI_AGENT_TEAMS.md](../AI_AGENT_TEAMS.md)** - Team organization
 
 ### Success Story: 2026-03-13 Sync Fix
 
@@ -1791,6 +1795,13 @@ git push origin dev
 - [Master Documentation Index](docs/MASTER_DOCUMENTATION_INDEX.md)
 - [Documentation Governance](docs/DOCUMENTATION_GOVERNANCE.md)
 - [Documentation Improvement Plan](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
+**REFERENCE**: [Git Commit & Push Rule](../GIT_COMMIT_PUSH_RULE.md)
+
+### Documentation Resources
+
+- [Master Documentation Index](../MASTER_DOCUMENTATION_INDEX.md)
+- [Documentation Governance](../DOCUMENTATION_GOVERNANCE.md)
+- [Documentation Improvement Plan](../DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
 
 ---
 

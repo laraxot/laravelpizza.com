@@ -1,11 +1,17 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff ann field relationships"
+issues: []
+discussions: []
 title: "handoff — ann field relazioni"
 type: handoff
 module: Sigma
 status: completed
 completed: 2026-06-15
 related:
-  - ../../../../docs/wiki/rules/model-owned-ann-field-relationships.md
+  - ../../../../../docs/wiki/rules/model-owned-ann-field-relationships.md
   - ../wiki/concepts/ente-matr-field-ownership.md
 ---
 
@@ -18,7 +24,7 @@ Proposta errata in audit: `relatedByAnno(Qua00f::class, 'quaann')`.
 
 ## Fatto
 
-- Regola wiki: [model-owned-ann-field-relationships](../../../../docs/wiki/rules/model-owned-ann-field-relationships.md)
+- Regola wiki: [model-owned-ann-field-relationships](../../../../../docs/wiki/rules/model-owned-ann-field-relationships.md)
 - `EnteMatrRelationship`: rimossi `whereRaw('quaann=""')` ecc. ridondanti dopo `hasManyByEnteMatr`
 - Rimossi `getQuaRelationAnnValue` / `getRepRelationAnnValue` (dead code)
 

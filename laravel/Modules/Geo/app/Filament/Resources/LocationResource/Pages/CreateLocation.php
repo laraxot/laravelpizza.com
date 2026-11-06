@@ -19,6 +19,6 @@ class CreateLocation extends XotBaseCreateRecord
     {
         Assert::string($url = $this->getResource()::getUrl('index'));
 
-        return $url;
+        return $this->getRecordReturnUrl($url);
     }
 }

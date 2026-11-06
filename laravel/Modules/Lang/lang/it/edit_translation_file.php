@@ -436,7 +436,7 @@ return [
             'description' => 'General Settings',
         ],
         'label' => 'Edit Translation File',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'sort' => '1',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
 ];

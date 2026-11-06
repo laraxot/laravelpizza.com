@@ -1,3 +1,16 @@
+---
+title: "09 scalability"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "09 scalability"
+issues: []
+discussions: []
+status: superseded
+superseded_by: scalability.md
+---
+
 
 
 

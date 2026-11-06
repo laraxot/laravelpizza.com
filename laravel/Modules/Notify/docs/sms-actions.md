@@ -1,3 +1,15 @@
+---
+title: "sms actions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms actions"
+issues: []
+discussions: []
+status: draft
+---
+
 # Azioni SMS
 
 ## Interfaccia

@@ -1,3 +1,14 @@
+---
+title: "contributing ai"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "contributing ai"
+issues: []
+discussions: []
+---
+
 # Contribuire al Progetto PTVX con Strumenti AI
 
 ## Linee Guida per i Contributori

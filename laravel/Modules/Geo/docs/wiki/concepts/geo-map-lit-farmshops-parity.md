@@ -1,3 +1,15 @@
+---
+title: "geo map lit farmshops parity"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map lit farmshops parity"
+issues: []
+discussions: []
+status: draft
+---
+
 # GeoMapLit — Farmshops.eu Parity Implementation
 
 **Last updated**: 2026-06-03  
@@ -180,7 +192,6 @@ Popup on click → AJAX fetch /api/ticket-details/{id}
 4. Document any remaining issues in Known Issues section
 
 ---
-
 ## Aggiornamento 2026-06 — implementazione corrente
 
 > **Nota:** la sezione `L.geoJson` con `pointToLayer` sopra è il pattern farmshops originale.
@@ -234,9 +245,9 @@ Build tema: `laravel/Themes/Sixteen` → `npm run build` → `map-lit-*.js` in `
 
 ### Story
 
-- [STORY-293](../../../../docs/stories/STORY-293-map-farmshops-popup-parity.md) — A1–A5 ancora da chiudere; marker/popup base sopra.
+- [STORY-293](../../../../../../docs/stories/STORY-293-map-farmshops-popup-parity.md) — A1–A5 ancora da chiudere; marker/popup base sopra.
 
 ### Collegamenti
 
 - [farmshops-cluster-type-icons-study.md](./farmshops-cluster-type-icons-study.md)
-- [architecture-map-farmshops-parity](../../../../docs/wiki/architecture/map-farmshops-parity.md)
+- [architecture-map-farmshops-parity](../../../../../../docs/wiki/architecture/map-farmshops-parity.md)

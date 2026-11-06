@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-
+use Mockery\Expectation;
 use Mockery\MockInterface;
 
 if (! function_exists('typedMock')) {
@@ -14,8 +14,7 @@ if (! function_exists('typedMock')) {
      *
      * @template T of object
      *
-     * @param class-string<T> $class
-     *
+     * @param  class-string<T>  $class
      * @return T&MockInterface
      */
     function typedMock(string $class): MockInterface
@@ -38,10 +37,19 @@ if (! function_exists('mockExpectation')) {
      * Questo helper incapsula quella certezza runtime in un punto solo, cosi'
      * `->with()`, `->andReturn()`, `->once()`, `->times()` restano disponibili
      * senza `method.notFound`/`method.nonObject` sparsi in ogni test.
+     *
+     * Nota: chiamato con un singolo nome di metodo, `Mock::shouldReceive()`
+     * restituisce a runtime una `Mockery\Expectation` concreta (vedi
+     * vendor/mockery/mockery/library/Mockery/Mock.php::shouldReceive()), che
+     * espone nativamente `with()`, `andReturn()`, `once()`, `times()`. La firma
+     * nativa dichiara pero' l'unione `ExpectationInterface|Expectation|
+     * HigherOrderMessage`: questo helper la restringe in un punto solo cosi'
+     * quei metodi restano disponibili senza `method.notFound`/`method.nonObject`
+     * sparsi in ogni test.
      */
-    function mockExpectation(MockInterface $mock, string $method): \Mockery\Expectation
+    function mockExpectation(MockInterface $mock, string $method): Expectation
     {
-        /** @var \Mockery\Expectation $expectation */
+        /** @var Expectation $expectation */
         $expectation = $mock->shouldReceive($method);
 
         return $expectation;

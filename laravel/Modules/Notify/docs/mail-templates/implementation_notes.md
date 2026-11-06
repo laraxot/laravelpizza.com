@@ -1,3 +1,15 @@
+---
+title: "implementation notes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementation notes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Note di Implementazione Email
 
 ## Errori Comuni e Soluzioni
@@ -29,12 +41,12 @@ L'implementazione corretta degli allegati richiede una struttura specifica. Ecco
    ```php
    $attachments = [
        [
-'path' => '/var/www/html/Quaeris/public_html/images/avatars/default-3.svg',
+           'path' => '[project-root]/public_html/images/avatars/default-3.svg',
            'as' => 'logo.png',
            'mime' => 'image/png'
        ],
        [
-'path' => '/var/www/html/Quaeris/public_html/images/avatars/default-3.svg',
+           'path' => '[project-root]/public_html/images/avatars/default-3.svg',
            'as' => 'logo.png',
            'mime' => 'image/png'
        ]

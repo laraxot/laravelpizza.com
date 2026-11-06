@@ -1,3 +1,16 @@
+---
+title: "firebase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "firebase"
+issues: []
+discussions: []
+status: superseded
+superseded_by: ../-integration/firebase.md
+---
+
 # firebase
 
 <!-- Contenuto migrato da _docs/firebase.txt -->

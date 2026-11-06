@@ -8,12 +8,5 @@ use Modules\Notify\Filament\Resources\NotificationResource\Pages\ViewNotificatio
 
 final class ViewNotificationTestProxy extends ViewNotification
 {
-    /** @return array<int, mixed> */
-    public function exposedInfolistSchema(): array
-    {
-        /** @var array<int, mixed> $schema */
-        $schema = $this->getInfolistSchema();
-
-        return $schema;
-    }
+    // ...
 }

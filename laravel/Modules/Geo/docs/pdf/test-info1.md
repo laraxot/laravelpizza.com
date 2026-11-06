@@ -1,3 +1,15 @@
+---
+title: "test info1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test info1"
+issues: []
+discussions: []
+status: draft
+---
+
 # Informazioni sul Libro: Event Sourcing in Laravel
 
 Questo documento contiene una documentazione dettagliata del libro **Event Sourcing in Laravel** scritto da Brent Roose, pubblicato nel 2021 da Spatie. Di seguito sono riportate tutte le informazioni estratte dal PDF convertito in Markdown tramite OCR, organizzate per sezioni e capitoli.

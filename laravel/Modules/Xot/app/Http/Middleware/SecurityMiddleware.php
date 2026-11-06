@@ -6,12 +6,13 @@ namespace Modules\Xot\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 use function Safe\preg_match;
-
-use Symfony\Component\HttpFoundation\Response;
-use Webmozart\Assert\Assert;
 
 /**
  * Middleware di sicurezza avanzato.
@@ -32,12 +33,7 @@ class SecurityMiddleware
         // 2. Headers di sicurezza
         $response = $next($request);
         Assert::isInstanceOf($response, Response::class);
-
-        // Skip security headers for Debugbar routes in local environment
-        // to allow Debugbar to function properly
-        if (! $this->isDebugbarRoute($request) || ! app()->environment('local')) {
-            $this->addSecurityHeaders($response);
-        }
+        $this->addSecurityHeaders($response);
 
         // 3. Logging sicurezza
         $this->logSecurityEvents($request, $response);
@@ -49,18 +45,6 @@ class SecurityMiddleware
         $this->enhanceCSRFProtection($request);
 
         return $response;
-    }
-
-    /**
-     * Check if the request is for Debugbar routes.
-     */
-    private function isDebugbarRoute(Request $request): bool
-    {
-        $debugbarPrefix = (string) config('debugbar.route_prefix', '_debugbar');
-
-        return str_starts_with($request->path(), $debugbarPrefix)
-            || str_starts_with($request->path(), 'vendor/debugbar')
-            || str_contains($request->path(), '_debugbar');
     }
 
     /**
@@ -90,7 +74,7 @@ class SecurityMiddleware
         $key = "rate_limit:ip:{$ip}";
         $limit = $this->getRateLimitForEndpoint($endpoint);
 
-        $current = (int) cache()->get($key, 0);
+        $current = SafeIntCastAction::cast(cache()->get($key, 0));
 
         if ($current >= $limit) {
             Log::warning('Rate limit exceeded for IP', [
@@ -114,7 +98,7 @@ class SecurityMiddleware
         $key = 'rate_limit:ua:'.md5($userAgent);
         $limit = $this->getRateLimitForEndpoint($endpoint);
 
-        $current = (int) cache()->get($key, 0);
+        $current = SafeIntCastAction::cast(cache()->get($key, 0));
 
         if ($current >= $limit) {
             Log::warning('Rate limit exceeded for User Agent', [
@@ -138,7 +122,7 @@ class SecurityMiddleware
         $key = "rate_limit:endpoint:{$endpoint}";
         $limit = $this->getRateLimitForEndpoint($endpoint);
 
-        $current = (int) cache()->get($key, 0);
+        $current = SafeIntCastAction::cast(cache()->get($key, 0));
 
         if ($current >= $limit) {
             Log::warning('Rate limit exceeded for endpoint', [
@@ -290,12 +274,12 @@ class SecurityMiddleware
         ];
 
         // Log solo eventi sospetti
-        if ($this->isSuspiciousRequest($request, $response)) {
+        if ($this->isSuspiciousRequest($request)) {
             Log::warning('Suspicious request detected', $securityData);
         }
 
         // Log tentativi di accesso falliti
-        if (401 === $response->getStatusCode() || 403 === $response->getStatusCode()) {
+        if ($response->getStatusCode() === 401 || $response->getStatusCode() === 403) {
             Log::warning('Failed access attempt', $securityData);
         }
 
@@ -308,7 +292,7 @@ class SecurityMiddleware
     /**
      * Verifica se la richiesta è sospetta.
      */
-    private function isSuspiciousRequest(Request $request, Response $response): bool
+    private function isSuspiciousRequest(Request $request): bool
     {
         // Pattern sospetti negli URL
         $suspiciousPatterns = [
@@ -348,7 +332,7 @@ class SecurityMiddleware
         ];
 
         foreach ($suspiciousUserAgents as $suspicious) {
-            if (null !== $userAgent && false !== stripos($userAgent, $suspicious)) {
+            if ($userAgent !== null && stripos($userAgent, $suspicious) !== false) {
                 return true;
             }
         }
@@ -364,7 +348,7 @@ class SecurityMiddleware
         $inputs = $request->all();
 
         foreach ($inputs as $key => $value) {
-            if (null !== $value && is_string($value)) {
+            if ($value !== null && is_string($value)) {
                 $this->validateStringInput($key, $value);
             } elseif (is_array($value)) {
                 $this->validateArrayInput($key, $value);
@@ -405,7 +389,7 @@ class SecurityMiddleware
     /**
      * Valida input array.
      *
-     * @param array<mixed> $value
+     * @param  array<array-key, mixed>  $value
      */
     private function validateArrayInput(string $key, array $value): void
     {
@@ -431,7 +415,7 @@ class SecurityMiddleware
     /**
      * Ottieni profondità array.
      *
-     * @param array<mixed> $array
+     * @param  array<array-key, mixed>  $array
      */
     private function getArrayDepth(array $array): int
     {
@@ -458,7 +442,7 @@ class SecurityMiddleware
         if (in_array($request->method(), ['POST', 'PUT', 'DELETE', 'PATCH'])) {
             $token = $request->header('X-CSRF-TOKEN') ?: $request->input('_token');
 
-            if (! $token || ! hash_equals(session()->token(), (string) $token)) {
+            if (! $token || ! hash_equals(session()->token(), SafeStringCastAction::cast($token))) {
                 Log::warning('CSRF token mismatch', [
                     'ip' => $request->ip(),
                     'method' => $request->method(),

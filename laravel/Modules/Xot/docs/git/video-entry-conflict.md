@@ -1,3 +1,13 @@
+---
+title: "Risoluzione Conflitto in VideoEntry"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, git]
+qmd: "Risoluzione Conflitto in VideoEntry"
+---
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica
@@ -94,5 +104,4 @@ public function getHeight(): ?string
 ## Collegamenti Bidirezionali
 
 - [Documento principale risoluzione conflitti](risoluzione_conflitti.md)
-- [Documentazione modulo Media](../../Media/docs/CONFLITTI_MERGE_RISOLTI.md)
-- [Documentazione modulo Media](../../media/docs/conflitti_merge_risolti.md)
+- [Documentazione modulo Media](../../Media/docs/CONFLITTI_MERGE_RISOLTI.md) 

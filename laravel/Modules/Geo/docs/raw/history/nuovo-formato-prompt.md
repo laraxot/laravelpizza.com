@@ -1,3 +1,14 @@
+---
+title: "nuovo formato prompt"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "nuovo formato prompt"
+issues: []
+discussions: []
+---
+
 # Nuovo Formato Proposto per il File di Prompt
 
 Il seguente formato propone una ristrutturazione completa del file di prompt `docs.txt` per migliorarne la leggibilità, l'organizzazione e l'efficacia:

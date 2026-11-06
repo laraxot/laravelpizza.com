@@ -1,3 +1,15 @@
+---
+title: "MASTER PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "MASTER PLAN"
+issues: []
+discussions: []
+status: draft
+---
+
 # FixCity Platform - Master Plan 🚀
 
 **Livello di Confidenza: 🟢 MASSIMO**  
@@ -5,7 +17,6 @@
 **Analista**: AI Development Assistant  
 
 ---
-
 ## 🎯 EXECUTIVE SUMMARY
 
 **FixCity** è una **piattaforma SaaS di civic engagement** che rivoluziona il modo in cui cittadini e amministrazioni locali collaborano per migliorare la qualità della vita urbana. Il sistema trasforma i cittadini in "sensori urbani attivi", permettendo segnalazioni georeferenziate, gestione intelligente dei workflow e analytics avanzate.
@@ -423,11 +434,11 @@ docs/
 ├── README.md (✅ Project Overview)
 ├── MASTER_PLAN.md (✅ This document)
 ├── PROJECT_STATUS.md (✅ Status Report)
-├── ARCHITECTURE.md (📋 Technical Architecture)
+├── architecture.md (📋 Technical Architecture)
 ├── API_REFERENCE.md (📋 API Documentation)
 ├── DEPLOYMENT.md (📋 Deployment Guide)
 └── modules/
-    ├── fixcity/ (✅ Business Logic + Roadmap)
+    ├── ptv/ (✅ Business Logic + Roadmap)
     ├── user/ (✅ IAM + Roadmap)
     ├── notify/ (✅ Notifications + Roadmap)
     ├── geo/ (✅ Geolocation + Roadmap)
@@ -482,5 +493,5 @@ FixCity è posizionata per diventare la **piattaforma leader europea** per il ci
 - *Technical capabilities e constraints*
 - *Team composition e roadmap feasibility*
 
-**Per domande o approfondimenti**: development@fixcity.io
+**Per domande o approfondimenti**: development@ptv.io
 

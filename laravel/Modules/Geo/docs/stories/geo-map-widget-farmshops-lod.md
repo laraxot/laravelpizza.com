@@ -1,3 +1,14 @@
+---
+title: "geo map widget farmshops lod"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map widget farmshops lod"
+issues: []
+discussions: []
+---
+
 # Story: GeoMapWidget Filament v5 con pattern farmshops e LOD client-side
 
 ## Status
@@ -17,6 +28,14 @@ Geo
 
 ---
 
+title: "geo map widget farmshops lod"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map widget farmshops lod"
+issues: []
+discussions: []
 ## As A
 utente backoffice o operatore che deve esplorare punti geografici del dominio Geo
 

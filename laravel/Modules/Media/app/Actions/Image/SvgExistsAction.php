@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
 
@@ -14,6 +16,8 @@ use Webmozart\Assert\Assert;
  */
 class SvgExistsAction
 {
+    use QueueableAction;
+
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *

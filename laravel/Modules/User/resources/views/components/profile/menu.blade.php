@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @auth
     <x-filament::dropdown>
@@ -17,14 +16,14 @@ declare(strict_types=1);
                 icon="heroicon-m-user"
                 :href="route('profile.show')"
             >
-                {{ __('Profile') }}
+                {{ __('user::common.nav.profile.label') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
                 icon="heroicon-m-cog-6-tooth"
                 :href="route('profile.settings')"
             >
-                {{ __('Settings') }}
+                {{ __('user::common.nav.settings.label') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
@@ -56,13 +55,12 @@ declare(strict_types=1);
             <x-filament::dropdown.list.item
                 icon="heroicon-m-arrow-right-on-rectangle"
                 :href="route('logout')"
-                x-on:click.prevent="$el.closest('form').submit()"
             >
-                {{ __('Log Out') }}
+                {{ __('user::common.actions.logout.label') }}
             </x-filament::dropdown.list.item>
         </x-filament::dropdown.list>
     </x-filament::dropdown>
 @else
-    <a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('Log in') }}</a>
-    <a href="{{ route('register') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('Register') }}</a>
+    <a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('user::common.actions.login.label') }}</a>
+    <a href="{{ route('register') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('user::common.actions.register.label') }}</a>
 @endauth

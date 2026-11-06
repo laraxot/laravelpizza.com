@@ -1,3 +1,15 @@
+---
+title: "mcp integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione dei Server MCP con il Modulo UI
 
 ## Panoramica

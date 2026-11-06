@@ -1,3 +1,15 @@
+---
+title: "s3test bugfix null errorcode"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "s3test bugfix null errorcode"
+issues: []
+discussions: []
+status: draft
+---
+
 # S3Test Bugfix: Null ErrorCode Handling
 
 ## Problema Risolto

@@ -1,3 +1,15 @@
+---
+title: "convenzioni namespace filament"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "convenzioni namespace filament"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni Namespace per Filament
 
 > **Regola fondamentale:** Il namespace dei componenti Filament è sempre `Modules\<NomeModulo>\Filament`, anche se i file si trovano fisicamente in `app/Filament`. **Non va mai aggiunto `App` nel namespace.**
@@ -44,7 +56,7 @@ namespace Modules\User\App\Filament\Widgets;
   }
   ```
 
-- Per le regole generali e best practice consulta la doc del modulo [Xot](../../xot/project_docs/readme.md).
+- Per le regole generali e best practice consulta la doc del modulo [Xot](../../Xot/docs/README.md).
 
 ## Regole Tailwind CSS con Filament
 - **IMPORTANTE:** Con Filament 3.x, usare solo `tailwindcss@3.x` (NO 4.x). Riferimento: [Filament Docs](https://filamentphp.com/project_docs/3.x/notifications/installation#installing-tailwind-css).
@@ -80,10 +92,10 @@ Section::make('Anteprima')
 ## Collegamenti Bidirezionali
 
 ### Modulo Xot (Core)
-- [README.md](../../xot/project_docs/readme.md) - Indice principale della documentazione
+- [README.md](../../Xot/docs/README.md) - Indice principale della documentazione
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
-- [Case Sensitivity delle Directory](../../xot/project_docs/directory-case-sensitivity.md) - Regole per la case sensitivity
-- [Regole per i Namespace](../../xot/project_docs/namespace-rules.md) - Convenzioni per i namespace
+- [Case Sensitivity delle Directory](../../Xot/docs/directory-case-sensitivity.md) - Regole per la case sensitivity
+- [Regole per i Namespace](../../Xot/docs/namespace-rules.md) - Convenzioni per i namespace
 
 ### Filament
 - [Widget Filament](../../xot/project_docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
@@ -91,15 +103,14 @@ Section::make('Anteprima')
 - [Risorse Filament](../../xot/project_docs/filament-resources.md) - Struttura delle risorse Filament
 
 ### Moduli Correlati
-- [Lang - Filament Translations](../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
+- [Lang - Filament Translations](../../Lang/docs/filament-translations.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
 - [User - Filament Best Practices](../../user/project_docs/filament_best_practices.md) - Best practices per Filament
 
 ### Documentazione Interna
-- [README del modulo Cms](./readme.md) - Indice principale del modulo Cms
+- [README del modulo Cms](./README.md) - Indice principale del modulo Cms
 - [Filament Widget Registrazione](./filament-widget-registrazione.md) - Widget di registrazione
 - [Filament Widgets in Blade](./filament-widgets-in-blade.md) - Uso dei widget in Blade
 
 ---
-
 > **Nota**: Questo documento è linkato anche dal README di Xot per garantire coerenza tra i moduli.

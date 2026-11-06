@@ -1,3 +1,11 @@
+---
+title: "Testing del Tema"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "testing del tema xot"
+---
 # Testing del Tema
 
 ## Principi di Testing

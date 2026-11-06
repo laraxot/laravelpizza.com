@@ -1,3 +1,23 @@
+# Auto-generated forbidden paths — do not edit manually
+# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+
+bashscripts
+_bmad-output
+.circleci
+.claude-audit
+.devcontainer
+_docs
+docs/archive
+docs/archived
+docs/legacy
+docs/archive/
+docs/workbench
+.kilocode
+.kiro
+.ralph
+scripts
+test-results
+tests/.claude-audit
 # ==============================================
 # LARAXOT MODULE JOB - .GITIGNORE
 # ==============================================
@@ -177,3 +197,62 @@ _docs/
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 docs/archive/agentdb.rvf
 lang/lang
+.vscode/
+tests/AuditCoverage
+# AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+.devcontainer/
+tests/AuditCoverage/
+
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+phpinsights.php
+rector.php
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+
+# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
+/rector.php
+/phpinsights.php
+/.cursor
+/.cursor/
+/.windsurf
+/.windsurf/
+/.vscode
+/.vscode/
+.cursor~*
+.windsurf~*
+
+# Runtime PID files (never track process ids)
+*.pid
+tools
+.agents
+.vscode
+build
+.claude
+tests/graphify-out
+/bashscripts/
+/tools/
+/scripts/
+/.agents/
+/.claude-audit/
+/build/
+/.claude/
+/.codex/
+/.opencode/
+/tests/graphify-out/
+/.github/skills/
+.github/skills
+resources/lang
+
+# docs/chat — coordination notes replaced by BMAD stories in docs/bmad/
+docs/chat
+
+# Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
+app/Application
+/.docs-archive/
+.cursor/
+.windsurf/
+
+# module-root-hygiene (story module-root-hygiene)
+docs/graphify

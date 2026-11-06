@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Correzioni PHPStan - Modulo Notify
 
 ## 🎯 Errori Risolti

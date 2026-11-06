@@ -66,4 +66,10 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'sections' => [
+        'page' => [
+            'title' => 'Versand von Push-Benachrichtigungen testen',
+            'description' => 'Verwenden Sie dieses Formular, um den Versand von Push-Benachrichtigungen an Mobilgeräte über verschiedene Dienste zu testen.',
+        ],
+    ],
 ];

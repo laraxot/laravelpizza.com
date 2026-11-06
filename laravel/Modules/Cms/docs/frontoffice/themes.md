@@ -1,3 +1,15 @@
+---
+title: "themes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "themes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gestione Temi - Linee Guida e Riflessioni
 
 ## Introduzione
@@ -154,5 +166,5 @@ npm run copy
 
 ## Collegamenti tra versioni di themes.md
 * [themes.md](docs/rules/themes.md)
-* [themes.md](laravel/modules/xot/docs/themes.md)
+* [themes.md](../../../Xot/docs/themes.md)
 * [themes.md](laravel/modules/cms/docs/frontoffice/themes.md)

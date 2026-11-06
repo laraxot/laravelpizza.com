@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # Git Conflict Resolution Scripts
 
 Questa cartella contiene script specializzati per la risoluzione automatica dei conflitti Git.

@@ -1,3 +1,16 @@
+---
+title: "template content examples"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "template content examples"
+issues: []
+discussions: []
+status: superseded
+superseded_by: template-content-examples.md
+---
+
 # Esempi di Contenuto per Template Email
 
 Questo documento contiene esempi di contenuto HTML per i vari template email da memorizzare nel database, seguendo l'architettura corretta di `spatie/laravel-database-mail-templates`.

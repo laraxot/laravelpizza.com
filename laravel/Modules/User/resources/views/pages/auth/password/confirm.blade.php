@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
@@ -35,10 +33,10 @@ new class extends Component {
             </x-ui.link>
 
             <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">
-                Confirm your password
+                {{ __('user::auth_pages.sections.password_confirm.title') }}
             </h2>
             <p class="text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
-                Please confirm your password before continuing
+                {{ __('user::auth_pages.sections.password_confirm.description') }}
             </p>
         </div>
 
@@ -46,11 +44,11 @@ new class extends Component {
             <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
                 @volt('auth.password.confirm')
                 <form wire:submit="confirm" class="space-y-6">
-                    <x-ui.input label="Password" type="password" id="password" name="password" wire:model="password" />
+                    <x-ui.input :label="__('user::login.fields.password.label')" type="password" id="password" name="password" wire:model="password" />
                     <div class="flex items-center justify-end text-sm">
-                        <x-ui.text-link href="{{ route('password.request') }}">Forgot your password?</x-ui.text-link>
+                        <x-ui.text-link href="{{ route('password.request') }}">{{ __('user::auth.login.forgot_password.text') }}</x-ui.text-link>
                     </div>
-                    <x-ui.button type="primary" rounded="md" submit="true">Confirm password</x-ui.button>
+                    <x-ui.button type="primary" rounded="md" submit="true">{{ __('user::auth_pages.password_confirm.submit.label') }}</x-ui.button>
                 </form>
                 @endvolt
             </div>

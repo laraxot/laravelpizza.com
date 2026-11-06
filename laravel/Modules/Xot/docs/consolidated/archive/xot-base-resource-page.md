@@ -1,3 +1,11 @@
+---
+title: "XotBaseResourcePage"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbaseresourcepage xot"
+---
 # XotBaseResourcePage
 
 La classe astratta `XotBaseResourcePage` fornisce una base comune per tutte le pagine di risorse Filament nel modulo Xot.

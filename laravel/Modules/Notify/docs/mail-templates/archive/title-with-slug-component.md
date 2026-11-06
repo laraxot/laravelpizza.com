@@ -1,3 +1,11 @@
+---
+title: "Analisi del Componente TitleWithSlugInput per Filament"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "analisi del componente titlewithsluginput per filament notify"
+---
 # Analisi del Componente TitleWithSlugInput per Filament
 
 ## Introduzione

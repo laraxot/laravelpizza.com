@@ -1,3 +1,15 @@
+---
+title: "supermemory setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "supermemory setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Supermemory Configuration
 
 ## Setup Complete
@@ -16,9 +28,9 @@
 ### Active Container Tags
 | Tag | Docs | Memories | Last Activity |
 |---|---|---|---|
-| `fixcity_fila5_project` | 6 | 15 | 2026-04-09 |
-| `fixcity-sixteen` | 11 | 22 | 2026-04-09 |
-| `fixcity-project` | 9 | 22 | 2026-04-09 |
+| `app_fila5_project` | 6 | 15 | 2026-04-09 |
+| `laraxot-sixteen` | 11 | 22 | 2026-04-09 |
+| `laraxot-project` | 9 | 22 | 2026-04-09 |
 
 ### How It Works
 1. **Context Injection**: On first message, agent receives user profile + project memories + semantic search results (invisible to user)
@@ -29,25 +41,25 @@
 ### CLI Commands
 ```bash
 # Search memories
-supermemory search "widget naming" --tag fixcity_fila5_project --mode hybrid
+supermemory search "widget naming" --tag app_fila5_project --mode hybrid
 
 # Add memory
-supermemory add "Rule: use Ticket not Segnalazione" --tag fixcity_fila5_project
+supermemory add "Rule: use Ticket not Segnalazione" --tag app_fila5_project
 
 # Add file
-supermemory add /path/to/file.md --tag fixcity_fila5_project
+supermemory add /path/to/file.md --tag app_fila5_project
 
 # View profile
-supermemory profile --tag fixcity_fila5_project
+supermemory profile --tag app_fila5_project
 
 # List tags
 supermemory tags
 ```
 
 ### OpenCode Commands
-- `/supermemory-init` — Explore and memorize codebase
-- `/supermemory-login` — Authenticate with Supermemory
-- `/supermemory-logout` — Clear credentials
+- `/supermemory-init`: Explore and memorize codebase
+- `/supermemory-login`: Authenticate with Supermemory
+- `/supermemory-logout`: Clear credentials
 
 ### Config File
 `~/.config/opencode/supermemory.jsonc`:
@@ -59,7 +71,7 @@ supermemory tags
   "maxProjectMemories": 10,
   "maxProfileItems": 10,
   "injectProfile": true,
-  "containerTagPrefix": "fixcity_fila5",
+  "containerTagPrefix": "app_fila5",
   "keywordPatterns": ["ricorda", "memorizza", "salva questa", "non dimenticare"],
   "compactionThreshold": 0.8
 }

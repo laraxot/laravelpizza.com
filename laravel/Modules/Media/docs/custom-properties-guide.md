@@ -1,7 +1,21 @@
-# Custom Properties — spatie/laravel-medialibrary
+---
+issues: []
+discussions: []
+title: "Custom Properties: spatie/laravel-medialibrary"
+module: "Media"
+type: how-to
+tags: [custom, properties, guide]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "custom properties guide"
+related:
+  - "./webm.md"
+status: draft
+---
+# Custom Properties: spatie/laravel-medialibrary
 
 **Package**: [`spatie/laravel-medialibrary`](https://spatie.be/docs/laravel-medialibrary/v11/advanced-usage/using-custom-properties)
-**Relation**: Conceptually similar to `spatie/laravel-schemaless-attributes` — both store JSON metadata
+**Relation**: Conceptually similar to `spatie/laravel-schemaless-attributes`: both store JSON metadata
 
 ---
 

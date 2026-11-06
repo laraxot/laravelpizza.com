@@ -25,7 +25,7 @@ abstract class BaseRatingForm extends XotBaseResourceForm
     /**
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'extra_attributes.type' => TextInput::make('extra_attributes.type'),

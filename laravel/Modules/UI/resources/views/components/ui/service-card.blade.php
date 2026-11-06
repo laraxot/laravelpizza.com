@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{--
     Service Card Component - Card servizio riutilizzabile per servizi comunali/aziendali
@@ -137,10 +136,10 @@ declare(strict_types=1);
                 @if($requiresAuth)
                     <span 
                         class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-600"
-                        title="Richiede autenticazione SPID/CIE"
+                        title="{{ __('ui::services.card.auth.title') }}"
                     >
                         <x-heroicon-m-lock-closed class="w-3 h-3 mr-1" />
-                        Auth
+                        {{ __('ui::services.card.auth_badge.label') }}
                     </span>
                 @endif
                 
@@ -149,7 +148,7 @@ declare(strict_types=1);
                         'inline-flex items-center px-2 py-1 rounded-full text-xs font-medium',
                         $statusColors,
                     ])>
-                        {{ $status === 'maintenance' ? 'Manutenzione' : 'Non attivo' }}
+                        {{ $status === 'maintenance' ? __('ui::services.card.status.maintenance') : __('ui::services.card.status.inactive') }}
                     </span>
                 @endif
             </div>
@@ -179,7 +178,7 @@ declare(strict_types=1);
             
             @if($isActive)
                 <span class="text-sm text-primary-600 font-medium flex items-center group-hover:translate-x-1 transition-transform">
-                    Vai al servizio
+                    {{ __('ui::services.card.go_to_service.label') }}
                     <x-heroicon-m-arrow-right class="w-4 h-4 ml-1" />
                 </span>
             @endif

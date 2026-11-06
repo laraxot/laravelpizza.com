@@ -13,6 +13,7 @@ related:
   - "./ponytail-audit-report.md"
   - "./wiki/how-to/github-issue-agent-discipline.md"
   - "../laravel/Modules/Xot/docs/post-edit-quality-verification.md"
+status: draft
 ---
 
 # Ponytail audit — planning

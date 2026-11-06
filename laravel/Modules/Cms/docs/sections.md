@@ -1,3 +1,15 @@
+---
+title: "sections"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sections"
+issues: []
+discussions: []
+status: draft
+---
+
 # Sezioni
 
 ## Indice

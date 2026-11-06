@@ -1,3 +1,15 @@
+---
+title: "logo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "logo"
+issues: []
+discussions: []
+status: draft
+---
+
 # Logo Component
 
 This document describes the Logo component used in section headers and its proper implementation.

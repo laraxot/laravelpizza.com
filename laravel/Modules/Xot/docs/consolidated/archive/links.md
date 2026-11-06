@@ -1,3 +1,11 @@
+---
+title: "links"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "links xot"
+---
 https://github.com/pterodactyl/panel/tree/develop
 
 https://github.com/serversideup/financial-freedom

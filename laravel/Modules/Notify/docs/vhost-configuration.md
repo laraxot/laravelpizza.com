@@ -1,3 +1,15 @@
+---
+title: "vhost configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vhost configuration"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🌐 VHost Configuration Guide
 
 > **Last Updated**: 2026-03-31  
@@ -5,7 +17,6 @@
 > **Environment**: Local Development
 
 ---
-
 ## 📋 Overview
 
 This guide covers the Apache VirtualHost configuration for FixCity local development environments.
@@ -14,6 +25,8 @@ This guide covers the Apache VirtualHost configuration for FixCity local develop
 
 - **Domain**: `fixcity.local`
 - **Alias**: `www.fixcity.local`
+- **Domain**: `ptv.local`
+- **Alias**: `www.ptv.local`
 - **Document Root**: `public_html/`
 - **Port**: 80 (HTTP)
 
@@ -24,6 +37,7 @@ This guide covers the Apache VirtualHost configuration for FixCity local develop
 ### Master Configuration
 
 **Location**: `laravel/config/vhost/fixcity.local.conf`
+**Location**: `laravel/config/vhost/ptv.local.conf`
 
 This is the **Single Source of Truth (SSOT)** for vhost configuration.
 
@@ -56,6 +70,8 @@ Edit `/etc/hosts`:
 ```bash
 127.0.0.1    fixcity.local
 127.0.0.1    www.fixcity.local
+127.0.0.1    ptv.local
+127.0.0.1    www.ptv.local
 ```
 
 ### 3. Verify
@@ -66,6 +82,7 @@ sudo apache2ctl configtest
 
 # Check vhost is enabled
 apache2ctl -S | grep fixcity
+apache2ctl -S | grep ptv
 ```
 
 ---
@@ -76,6 +93,7 @@ apache2ctl -S | grep fixcity
 
 ```
 base_fixcity_fila5/
+base_ptv_fila5/
 ├── public_html/              ← Document Root
 │   ├── index.php            ← Entry point
 │   └── .htaccess            ← URL rewriting
@@ -83,6 +101,7 @@ base_fixcity_fila5/
 │   ├── config/
 │   │   └── vhost/
 │   │       └── fixcity.local.conf  ← VHost config
+│   │       └── ptv.local.conf  ← VHost config
 │   ├── Modules/             ← All modules
 │   └── Themes/              ← All themes
 └── docs/
@@ -94,6 +113,7 @@ base_fixcity_fila5/
 
 ```
 Browser → Apache vhost (fixcity.local:80)
+Browser → Apache vhost (ptv.local:80)
     ↓
 DocumentRoot (public_html/)
     ↓
@@ -114,11 +134,11 @@ Modules/ + Themes/
 
 ```apache
 <VirtualHost *:80>
-    ServerName fixcity.local
-    ServerAlias www.fixcity.local
-    DocumentRoot /var/www/_bases/base_fixcity_fila5/public_html
+    ServerName ptv.local
+    ServerAlias www.ptv.local
+    DocumentRoot /var/www/_bases/base_ptv_fila5/public_html
     
-    <Directory /var/www/_bases/base_fixcity_fila5/public_html>
+    <Directory /var/www/_bases/base_ptv_fila5/public_html>
         Options -Indexes +FollowSymLinks +MultiViews
         AllowOverride All
         Require all granted
@@ -134,6 +154,8 @@ Modules/ + Themes/
     
     ErrorLog ${APACHE_LOG_DIR}/fixcity_local_error.log
     CustomLog ${APACHE_LOG_DIR}/fixcity_local_access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/ptv_local_error.log
+    CustomLog ${APACHE_LOG_DIR}/ptv_local_access.log combined
 </VirtualHost>
 ```
 
@@ -162,6 +184,7 @@ Modules/ + Themes/
 ```bash
 # Apache error log
 tail -f /var/log/apache2/fixcity_local_error.log
+tail -f /var/log/apache2/ptv_local_error.log
 
 # Laravel log
 tail -f laravel/storage/logs/laravel.log
@@ -175,11 +198,11 @@ tail -f laravel/storage/logs/laravel.log
 
 Every module in `laravel/Modules/` is accessible through the same vhost:
 
-- **Xot**: `fixcity.local/admin` (Filament)
-- **User**: `fixcity.local/login`, `fixcity.local/register`
-- **Cms**: `fixcity.local/pages/*` (CMS pages)
-- **Blog**: `fixcity.local/blog/*`
-- **Fixcity**: `fixcity.local/tickets/*`
+- **Xot**: `ptv.local/admin` (Filament)
+- **User**: `ptv.local/login`, `ptv.local/register`
+- **Cms**: `ptv.local/pages/*` (CMS pages)
+- **Blog**: `ptv.local/blog/*`
+- **Fixcity**: `ptv.local/tickets/*`
 - **All others**: Via their respective routes
 
 ### Theme Selection
@@ -225,6 +248,8 @@ For production:
 
 1. Edit `laravel/config/vhost/fixcity.local.conf`
 2. Copy to Apache: `sudo cp laravel/config/vhost/fixcity.local.conf /etc/apache2/sites-available/`
+1. Edit `laravel/config/vhost/ptv.local.conf`
+2. Copy to Apache: `sudo cp laravel/config/vhost/ptv.local.conf /etc/apache2/sites-available/`
 3. Reload: `sudo systemctl reload apache2`
 
 ### Backup
@@ -232,6 +257,8 @@ For production:
 ```bash
 sudo cp /etc/apache2/sites-available/fixcity.local.conf \
         /etc/apache2/sites-available/fixcity.local.conf.backup.$(date +%Y%m%d)
+sudo cp /etc/apache2/sites-available/ptv.local.conf \
+        /etc/apache2/sites-available/ptv.local.conf.backup.$(date +%Y%m%d)
 ```
 
 ---
@@ -249,6 +276,7 @@ apache2ctl configtest
 
 # Check enabled sites
 ls -la /etc/apache2/sites-enabled/ | grep fixcity
+ls -la /etc/apache2/sites-enabled/ | grep ptv
 ```
 
 ### Test Domain

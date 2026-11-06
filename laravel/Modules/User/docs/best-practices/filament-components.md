@@ -1,3 +1,24 @@
+---
+title: "Best Practices per Componenti Filament"
+type: concept
+tags: [filament, components]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-components best practices per componenti filament"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
+status: draft
+---
+
 # Best Practices per Componenti Filament
 
 ## Verifica delle Dipendenze
@@ -91,6 +112,8 @@ composer show filament/spatie-laravel-media-library-plugin
 
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](../../../user/docs/best-practices/filament-components.md)
-* [filament-components.md](../../../cms/docs/best-practices/filament-components.md)
-* [filament-components.md](../../../cms/docs/filament-components.md)
+* [filament-components.md](../../../Cms/docs/best-practices/filament-components.md)
+* [filament-components.md](../../../Cms/docs/filament-components.md)
+* [filament-components.md](../../../Cms/docs/best-practices/filament-components.md)
+* [filament-components.md](../../../Cms/docs/filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)

@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Modules\Cms\Enums\AttachmentDiskEnum;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\Cms\Tests\TestCase::class);
 test('AttachmentDiskEnum has all cases', function () {
     $cases = AttachmentDiskEnum::cases();
 
@@ -18,18 +17,30 @@ test('AttachmentDiskEnum cases have correct values', function () {
     Assert::assertSame('local', AttachmentDiskEnum::local->value);
 });
 
-test('AttachmentDiskEnum getLabel method exists', function () {
-    $enum = AttachmentDiskEnum::public_html;
+test('AttachmentDiskEnum getLabel returns a translated label for every case', function () {
+    foreach (AttachmentDiskEnum::cases() as $enum) {
+        Assert::assertNotSame('', $enum->getLabel());
+        Assert::assertStringStartsNotWith('fix:', $enum->getLabel());
+    }
 });
 
-test('AttachmentDiskEnum getColor method exists', function () {
-    $enum = AttachmentDiskEnum::public_html;
+test('AttachmentDiskEnum getColor returns a translated color for every case', function () {
+    foreach (AttachmentDiskEnum::cases() as $enum) {
+        Assert::assertNotSame('', $enum->getColor());
+        Assert::assertStringStartsNotWith('fix:', $enum->getColor());
+    }
 });
 
-test('AttachmentDiskEnum getIcon method exists', function () {
-    $enum = AttachmentDiskEnum::public_html;
+test('AttachmentDiskEnum getIcon returns a translated icon for every case', function () {
+    foreach (AttachmentDiskEnum::cases() as $enum) {
+        Assert::assertNotSame('', $enum->getIcon());
+        Assert::assertStringStartsNotWith('fix:', $enum->getIcon());
+    }
 });
 
-test('AttachmentDiskEnum getDescription method exists', function () {
-    $enum = AttachmentDiskEnum::public_html;
+test('AttachmentDiskEnum getDescription returns a translated description for every case', function () {
+    foreach (AttachmentDiskEnum::cases() as $enum) {
+        Assert::assertNotSame('', $enum->getDescription());
+        Assert::assertStringStartsNotWith('fix:', $enum->getDescription());
+    }
 });

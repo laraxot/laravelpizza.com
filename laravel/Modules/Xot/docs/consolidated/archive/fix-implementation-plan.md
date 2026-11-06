@@ -1,3 +1,11 @@
+---
+title: "PHPStan Level 10 Fix Implementation Plan"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "phpstan level 10 fix implementation plan xot"
+---
 # PHPStan Level 10 Fix Implementation Plan
 
 ## Overview

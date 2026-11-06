@@ -1,10 +1,21 @@
+---
+title: "vscode filament extension"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vscode filament extension"
+issues: []
+discussions: []
+status: draft
+---
+
 # VSCode Filament Extension (doonfrs.vscode-filament)
 
 ## Cos'è
 Estensione per Visual Studio Code che fornisce **syntax highlighting** e **autocompletamento intelligente** per i componenti UI di Laravel Filament nei file Blade.
 
 ---
-
 ## Funzionalità principali
 - **Autocompletamento dei componenti**: suggerisce tutti i componenti Filament disponibili (UI, Action, Form, Table) mentre si scrive nei file Blade.
 - **Autocompletamento degli attributi**: mostra gli attributi disponibili per ciascun componente.

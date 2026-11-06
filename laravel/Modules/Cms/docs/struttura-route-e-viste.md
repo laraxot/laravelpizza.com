@@ -1,3 +1,15 @@
+---
+title: "struttura route e viste"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "struttura route e viste"
+issues: []
+discussions: []
+status: draft
+---
+
 # Struttura delle Route e Viste in il progetto
 
 ## Indice

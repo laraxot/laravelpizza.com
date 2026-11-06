@@ -1,3 +1,11 @@
+---
+title: "_macro"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "_macro xot"
+---
 # _macro
 
 <!-- Contenuto migrato da _docs/_macro.txt -->

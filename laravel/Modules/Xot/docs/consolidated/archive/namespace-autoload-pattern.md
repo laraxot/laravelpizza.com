@@ -1,3 +1,11 @@
+---
+title: "Pattern di Autoload nei Moduli Laravel"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "pattern di autoload nei moduli laravel xot"
+---
 # Pattern di Autoload nei Moduli Laravel
 
 ## Il Pattern Corretto

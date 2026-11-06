@@ -1,3 +1,15 @@
+---
+title: "scripts location"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scripts location"
+issues: []
+discussions: []
+status: draft
+---
+
 # REGOLA CRITICA: Posizione Scripts
 
 **Priority**: 🔴 MANDATORY  
@@ -5,7 +17,6 @@
 **Updated**: 2025-01-02
 
 ---
-
 ## 📜 LA REGOLA
 
 **TUTTI gli script** (.sh, .php, .py, .js, etc.) DEVONO essere posizionati in:
@@ -122,7 +133,7 @@ check-scripts-location:
 
 ## 📚 Riferimenti
 
-- [bashscripts/README.md](../../bashscripts/README.md) - Complete guide
+- [bashscripts/README.md](../../../../../bashscripts/README.md) - Complete guide
 - [.cursor/rules/scripts-location-mandatory.mdc](../../.cursor/rules/scripts-location-mandatory.mdc)
 - [docs/BASHSCRIPTS_ORGANIZATION_RULE.md](../BASHSCRIPTS_ORGANIZATION_RULE.md)
 

@@ -1,3 +1,15 @@
+---
+title: "testing strategy modules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing strategy modules"
+issues: []
+discussions: []
+status: draft
+---
+
 # Strategia di Testing per i Moduli <nome progetto>
 
 ## Introduzione
@@ -361,12 +373,11 @@ class DatabaseHelper
 
 ## Collegamenti
 
-- [Test Autenticazione Esistenti](../tests/Feature/Auth/) - Pattern di riferimento
+- [Test Autenticazione Esistenti](../../../tests/Feature/Auth) - Pattern di riferimento
 - [Documentazione Modulo <nome progetto>](../modules/<nome progetto>/docs/readme.md)
-- [Documentazione Modulo User](../modules/user/docs/readme.md)
+- [Documentazione Modulo User](../../User/docs/README.md)
 - [Configurazione Pest](../tests/Pest.php)
 
 ---
-
 **Stato**: 🚧 In implementazione
 **Responsabile**: Team Development

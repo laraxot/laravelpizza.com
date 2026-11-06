@@ -1,3 +1,14 @@
+---
+title: "insert phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "insert phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Insert a decimal phase for urgent work discovered mid-milestone between existing integer phases. Uses decimal numbering (72.1, 72.2, etc.) to preserve the logical sequence of planned phases while accommodating urgent insertions without renumbering the entire roadmap.
 </purpose>
@@ -88,6 +99,14 @@ Project state updated: .planning/STATE.md
 
 ---
 
+title: "insert phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "insert phase"
+issues: []
+discussions: []
 ## Next Up
 
 **Phase {decimal_phase}: {description}** -- urgent insertion

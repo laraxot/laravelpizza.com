@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * ---.
  */
-
-declare(strict_types=1);
 
 namespace Modules\User\Contracts;
 
@@ -22,43 +21,32 @@ interface PassportHasApiTokensContract
     /**
      * Get all of the user's registered OAuth clients.
      *
-     * @return HasMany<\Laravel\Passport\Client, $this>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return HasMany<Model, Model>
      */
-    public function clients();
+    public function clients(): HasMany;
 
     /**
      * Get all of the access tokens for the user.
      *
-     * @return HasMany<Token, $this>
-     *
-     * @phpstan-ignore generics.notSubtype
+     * @return HasMany<Model, Model>
      */
-    public function tokens();
+    public function tokens(): HasMany;
 
     /**
      * Get the current access token being used by the user.
-     *
-     * @return Token|TransientToken|null
      */
-    public function token();
+    public function token(): Token|TransientToken|null;
 
     /**
      * Determine if the current API token has a given scope.
-     *
-     * @param string $scope
-     *
-     * @return bool
      */
-    public function tokenCan($scope);
+    public function tokenCan(string $scope): bool;
 
     /**
      * Create a new personal access token for the user.
      *
-     * @param array<int, string> $scopes
-     *
-     * @return PersonalAccessTokenResult<mixed>
+     * @param  array<int, string>  $scopes
+     * @return PersonalAccessTokenResult<Token>
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
 

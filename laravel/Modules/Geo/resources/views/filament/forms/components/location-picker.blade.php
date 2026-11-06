@@ -96,10 +96,10 @@ $initLng = is_array($state) ? ($state['longitude'] ?? null) : null;
             x-transition:leave="transition ease-in duration-150"
         >
             <div class="flex flex-wrap gap-x-4 gap-y-1">
-                <span>Lat: <strong class="text-gray-700" x-text="_lat !== null ? Number(_lat).toFixed(6) : '--'"></strong></span>
-                <span>Lng: <strong class="text-gray-700" x-text="_lng !== null ? Number(_lng).toFixed(6) : '--'"></strong></span>
+                <span>{{ __('geo::coordinate-picker.latitude_abbr') }}: <strong class="text-gray-700" x-text="_lat !== null ? Number(_lat).toFixed(6) : '--'"></strong></span>
+                <span>{{ __('geo::coordinate-picker.longitude_abbr') }}: <strong class="text-gray-700" x-text="_lng !== null ? Number(_lng).toFixed(6) : '--'"></strong></span>
                 <template x-if="structured?.city">
-                    <span>Città: <strong class="text-gray-700" x-text="structured.city"></strong></span>
+                    <span>{{ __('geo::coordinate-picker.city') }}: <strong class="text-gray-700" x-text="structured.city"></strong></span>
                 </template>
             </div>
             <div class="truncate max-w-full sm:max-w-[400px]" x-show="address" :title="address">

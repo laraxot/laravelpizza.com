@@ -1,3 +1,15 @@
+---
+title: "module analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Notify Module - Comprehensive Analysis
 
 ## Module Overview

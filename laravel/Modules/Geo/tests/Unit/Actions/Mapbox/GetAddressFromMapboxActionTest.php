@@ -11,67 +11,107 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Mapbox\GetAddressFromMapboxAction;
-use Modules\Geo\Datas\AddressData;
+use Modules\Geo\Datas\Geocoding\AddressData;
 use Modules\Geo\Tests\LightTestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\json_encode;
 
 uses(LightTestCase::class);
-
-beforeEach(function () {
-    $this->mockHandler = new MockHandler();
-    $handlerStack = HandlerStack::create($this->mockHandler);
-    $client = new Client(['handler' => $handlerStack]);
-    $this->action = new GetAddressFromMapboxAction($client);
-});
-
 it('throws exception when api key is not configured', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => null]);
 
-    expect(fn () => $this->action->execute('Milano, Italia'))
-        ->toThrow(RuntimeException::class, 'Mapbox access token not configured');
+    try {
+        $action->execute('Milano, Italia');
+
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Mapbox access token not configured', $exception->getMessage());
+    }
 });
 
 it('throws exception for empty address', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
-    expect(fn () => $this->action->execute(''))
-        ->toThrow(RuntimeException::class, 'Address cannot be empty');
+    try {
+        $action->execute('');
+
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Address cannot be empty', $exception->getMessage());
+    }
 });
 
 it('throws exception for too long address', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
     $longAddress = str_repeat('a', 1001);
 
-    expect(fn () => $this->action->execute($longAddress))
-        ->toThrow(RuntimeException::class, 'Address is too long');
+    try {
+        $action->execute($longAddress);
+
+        Assert::fail('Expected RuntimeException was not thrown');
+    } catch (\RuntimeException $exception) {
+        Assert::assertSame('Address is too long', $exception->getMessage());
+    }
 });
 
 it('throws exception for guzzle exception', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $this->mockHandler->append(new RequestException('Error', new Request('GET', 'http://test')));
+    $mockHandler->append(new RequestException('Error', new Request('GET', 'http://test')));
 
-    $result = $this->action->execute('Milano, Italia');
+    $result = $action->execute('Milano, Italia');
 
-    expect($result)->toBeNull();
+    Assert::assertNull($result);
 });
 
 it('returns null when no features in response', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $this->mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [],
     ])));
 
-    $result = $this->action->execute('NonExistentPlace');
+    $result = $action->execute('NonExistentPlace');
 
-    expect($result)->toBeNull();
+    Assert::assertNull($result);
 });
 
 it('returns address data for valid response', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $this->mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [
@@ -85,24 +125,36 @@ it('returns address data for valid response', function (): void {
         ]],
     ])));
 
-    $result = $this->action->execute('Via Roma 1, Milano, Italia');
+    $result = $action->execute('Via Roma 1, Milano, Italia');
 
-    expect($result)
-        ->toBeInstanceOf(AddressData::class)
-        ->and($result->latitude)->toBe(45.4642)
-        ->and($result->longitude)->toBe(9.1900)
-        ->and($result->country)->toBe('Italia')
-        ->and($result->city)->toBe('Milano')
-        ->and($result->postal_code)->toBe(20100)
-        ->and($result->street)->toBe('Via Roma')
-        ->and($result->street_number)->toBe('1')
-        ->and($result->province)->toBe('MI');
+    Assert::assertInstanceOf(AddressData::class, $result);
+
+    Assert::assertSame(45.4642, $result->latitude);
+
+    Assert::assertSame(9.1900, $result->longitude);
+
+    Assert::assertSame('Italia', $result->country);
+
+    Assert::assertSame('Milano', $result->city);
+
+    Assert::assertSame(20100, $result->postal_code);
+
+    Assert::assertSame('Via Roma', $result->street);
+
+    Assert::assertSame('1', $result->street_number);
+
+    Assert::assertSame('MI', $result->state);
 });
 
 it('handles address without house number', function (): void {
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($client);
+
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $this->mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [
@@ -113,10 +165,11 @@ it('handles address without house number', function (): void {
         ]],
     ])));
 
-    $result = $this->action->execute('Via Roma, Milano');
+    $result = $action->execute('Via Roma, Milano');
 
-    expect($result)
-        ->toBeInstanceOf(AddressData::class)
-        ->and($result->street)->toBe('Via Roma')
-        ->and($result->street_number)->toBe('');
+    Assert::assertInstanceOf(AddressData::class, $result);
+
+    Assert::assertSame('Via Roma', $result->street);
+
+    Assert::assertSame('', $result->street_number);
 });

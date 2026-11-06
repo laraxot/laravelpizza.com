@@ -1,3 +1,11 @@
+---
+title: "documentation"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "documentation xot"
+---
 # documentation
 
 <!-- Contenuto migrato da _docs/documentation.txt -->

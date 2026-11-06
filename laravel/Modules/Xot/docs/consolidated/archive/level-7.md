@@ -1,3 +1,11 @@
+---
+title: "Rapporto PHPStan Livello 7 per il modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "rapporto phpstan livello 7 per il modulo xot xot"
+---
 # Rapporto PHPStan Livello 7 per il modulo Xot
 
 Data analisi: 2025-04-15 21:55:11

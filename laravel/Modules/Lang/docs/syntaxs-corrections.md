@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Correzioni Errori Sintassi File Traduzione - Gennaio 2025"
+module: "Lang"
+type: concept
+tags: [ottimizzazioni, correzioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ottimizzazioni correzioni"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: superseded
+superseded_by: fixes-syntaxs.md
+---
 # Correzioni Errori Sintassi File Traduzione - Gennaio 2025
 
 ## Riepilogo Problemi Risolti

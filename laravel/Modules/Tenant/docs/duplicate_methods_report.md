@@ -1,3 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Report: Metodi con nome duplicato nei moduli e nei temi"
+module: "Tenant"
+type: concept
+tags: [duplicate, methods, report]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "duplicate methods report"
+related:
+  - "./phpstan-corrections-january.md"
+status: superseded
+superseded_by: duplicate-methods-report.md
+---
 # Report: Metodi con nome duplicato nei moduli e nei temi
 
 ## Introduzione

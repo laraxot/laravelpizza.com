@@ -1,3 +1,15 @@
+---
+title: "radio card selector component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "radio card selector component"
+issues: []
+discussions: []
+status: draft
+---
+
 # RadioCardSelector Component - Modulo UI
 
 ## 🎯 **Panoramica**
@@ -276,7 +288,6 @@ RadioCardSelector::make('item')
 - [Best Practices Filament](../../../../../docs/filament-best-practices.md)
 
 ---
-
 **Autore**: Implementazione completata per <nome progetto> widget
 **Ultima modifica**: Gennaio 2025
 **Versione**: 1.0.0

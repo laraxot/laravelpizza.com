@@ -1,3 +1,15 @@
+---
+title: "test info3"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test info3"
+issues: []
+discussions: []
+status: draft
+---
+
 # Event Sourcing in Laravel — Sintesi e Mappa dei Contenuti
 
 ## Indice Analitico
@@ -30,7 +42,6 @@
   - Details Worth Mentioning
 
 ---
-
 ## Preface (Prefazione)
 - L'autore riflette su come, guardando il proprio vecchio codice, si provi spesso il desiderio di poter tornare indietro con le conoscenze acquisite successivamente.
 - Ogni nuovo progetto è costruito sulle lezioni imparate dai precedenti, in un ciclo continuo di apprendimento e miglioramento.

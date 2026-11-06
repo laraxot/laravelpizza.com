@@ -4,26 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Models\Traits\HasExtraTrait;
+use Modules\Xot\Tests\Fixtures\Models\Extra;
 use Modules\Xot\Tests\Fixtures\Models\ExtraModelTest;
 use Modules\Xot\Tests\Fixtures\Models\TestModelHasExtra;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 use function Safe\class_uses;
-
-use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 uses(TestCase::class);
 
 /**
- * @param array<string, mixed> $values
+ * @param  array<string, mixed>  $values
  */
 function makeExtraWithValues(array $values): ExtraModelTest
 {
-    $extra = new ExtraModelTest();
+    $extra = new ExtraModelTest;
     $attributes = SchemalessAttributes::createForModel($extra, 'extra_attributes');
 
     foreach ($values as $key => $value) {
@@ -36,8 +35,8 @@ function makeExtraWithValues(array $values): ExtraModelTest
 }
 
 describe('HasExtraTrait', function (): void {
-    $testModel = new TestModelHasExtra();
-    $extraClass = new ExtraModelTest();
+    $testModel = new TestModelHasExtra;
+    $extraClass = new ExtraModelTest;
 
     it('uses the trait correctly', function () use ($testModel): void {
         $traits = class_uses($testModel);
@@ -48,7 +47,7 @@ describe('HasExtraTrait', function (): void {
     it('has extra relationship method', function () use ($testModel): void {
         $relation = $testModel->extra();
 
-        Assert::assertInstanceOf(MorphOne::class, $relation);
+        Assert::assertSame(Extra::class, $relation->getRelated()::class);
     });
 
     it('returns null for non-existent extra', function () use ($testModel): void {
@@ -58,7 +57,7 @@ describe('HasExtraTrait', function (): void {
     });
 
     it('can set and get extra attributes', function () use ($testModel): void {
-        $testModel->extra = makeExtraWithValues(['test_key' => 'test_value']);
+        $testModel->setRelation('extra', makeExtraWithValues(['test_key' => 'test_value']));
 
         $result = $testModel->getExtra('test_key');
 
@@ -66,25 +65,25 @@ describe('HasExtraTrait', function (): void {
     });
 
     it('handles different data types correctly', function () use ($testModel): void {
-        $testModel->extra = makeExtraWithValues([
+        $testModel->setRelation('extra', makeExtraWithValues([
             'string_value' => 'test_string',
             'int_value' => 123,
             'bool_value' => true,
             'array_value' => ['nested', 'array'],
             'null_value' => null,
-        ]);
+        ]));
 
         Assert::assertSame('test_string', $testModel->getExtra('string_value'));
         Assert::assertSame(123, $testModel->getExtra('int_value'));
-        Assert::assertSame(true, $testModel->getExtra('bool_value'));
+        Assert::assertTrue($testModel->getExtra('bool_value'));
         Assert::assertSame(['nested', 'array'], $testModel->getExtra('array_value'));
         Assert::assertNull($testModel->getExtra('null_value'));
     });
 
     it('returns null for unsupported stored types', function () use ($testModel): void {
-        $testModel->extra = makeExtraWithValues([
-            'invalid_value' => new \stdClass(),
-        ]);
+        $testModel->setRelation('extra', makeExtraWithValues([
+            'invalid_value' => new \stdClass,
+        ]));
 
         Assert::assertNull($testModel->getExtra('invalid_value'));
     });
@@ -127,7 +126,7 @@ describe('HasExtraTrait', function (): void {
     });
 
     it('handles empty extra attributes', function () use ($testModel): void {
-        $testModel->extra = makeExtraWithValues([]);
+        $testModel->setRelation('extra', makeExtraWithValues([]));
 
         $result = $testModel->getExtra('non_existent');
         Assert::assertNull($result);

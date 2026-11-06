@@ -1,3 +1,17 @@
+---
+title: "testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing"
+issues: []
+discussions: []
+status: stale
+---
+
+> Nota 2026-10-14 (docs-audit): Cita \Modules\Seo\Models\SeoMetadata, classe che non esiste in app/Models. I test reali sono in tests/Unit e tests/Feature (MetatagData, MetatagFacadeAdapter, SocialShare). Contenuto non riscritto, verificare prima di usarlo.
+
 # Testing Documentation
 
 ## Overview
@@ -259,15 +273,17 @@ protected function createApplication()
 
 ### External Resources
 
+- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+---
 - [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 - [Pest Installation Guide](https://pestphp.com/docs/installation)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 
 ### Internal Resources
 
-- [Testing Setup Guide](../../../docs/testing-setup.md)
-- [Testing Best Practices](../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../docs/troubleshooting.md)
+- [Testing Setup Guide](../../../docs/testing-setup.md) _(target mancante, verificato 2026-10-08)_
+- [Testing Best Practices](../../../docs/testing-best-practices.md) _(target mancante, verificato 2026-10-08)_
+- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
 
 ## Testing Examples
 

@@ -1,3 +1,15 @@
+---
+title: "david ui integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "david ui integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione David UI
 
 ## Introduzione

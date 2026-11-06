@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "BMAD Method v6.3 operativo nel progetto"
+module: "Media"
+type: concept
+tags: [bmad, method]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "bmad method"
+related:
+  - "./webm.md"
+status: draft
+---
 # BMAD Method v6.3 operativo nel progetto
 
 ## Regola pratica

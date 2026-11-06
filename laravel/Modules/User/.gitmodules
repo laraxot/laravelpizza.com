@@ -1,4 +1,0 @@
-#[submodule "docs"]
-#	path = docs
-#	url = https://github.com/laraxot/doc_user.git
-#   url = git@github.com:laraxot/doc_user.git

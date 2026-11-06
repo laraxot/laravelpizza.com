@@ -1,3 +1,14 @@
+---
+title: "verify phase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "verify phase"
+issues: []
+discussions: []
+---
+
 <purpose>
 Verify phase goal achievement through goal-backward analysis. Check that the codebase delivers what the phase promised, not just that tasks completed.
 

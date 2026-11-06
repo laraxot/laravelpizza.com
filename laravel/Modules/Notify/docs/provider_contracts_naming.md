@@ -1,8 +1,20 @@
+---
+title: "provider contracts naming"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "provider contracts naming"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni di Naming per i Contracts 
 
 ## Regola Fondamentale
 
-Nel sistema Quaeris, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
+Nel sistema SaluteOra, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
 
 1. **Suffisso `Contract` e non `Interface`**:
    - ✅ CORRETTO: `SmsProviderContract`

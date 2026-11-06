@@ -1,4 +1,10 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "handoff matr ente field abstraction"
+issues: []
+discussions: []
 title: "Handoff — matrField / enteField"
 type: handoff
 module: Sigma

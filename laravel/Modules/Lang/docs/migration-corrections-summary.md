@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Correzioni Migrazione - Modulo Lang"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Correzioni Migrazione - Modulo Lang
 
 ## Problema Identificato

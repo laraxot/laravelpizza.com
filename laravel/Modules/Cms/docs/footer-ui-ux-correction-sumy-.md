@@ -1,3 +1,15 @@
+---
+title: "footer ui ux correction sumy "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "footer ui ux correction sumy "
+issues: []
+discussions: []
+status: draft
+---
+
 # Footer UI/UX Correction Summary - [DATE]
 
 ## 🎯 Obiettivo Completato

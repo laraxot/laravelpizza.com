@@ -1,3 +1,11 @@
+---
+title: "Regole Generali di Sviluppo del Progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "regole generali di sviluppo del progetto xot"
+---
 # Regole Generali di Sviluppo del Progetto
 
 ## Collegamenti

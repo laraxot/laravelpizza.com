@@ -1,0 +1,22 @@
+/*
+ * Riga di elenco raggiunta da un link di ritorno con ancora (`...#record-123`, vedi RecordAnchor
+ * e IDColumn): resta sotto la barra superiore sticky e si distingue dalle altre.
+ *
+ * Perche' CSS nativo: il pannello admin non ha una build Tailwind propria, quindi una classe come
+ * `scroll-mt-24` messa nel markup della colonna non esiste nel CSS servito e non farebbe nulla.
+ * `:target` e `:has()` sono selettori nativi, nessuna dipendenza e nessun JavaScript.
+ *
+ * Accessibilita': contorno + sfondo, non il solo colore (WCAG 1.4.1); il contorno resta anche in
+ * modalita' contrasto forzato (`forced-colors`); nessuna animazione (WCAG 2.3.3).
+ */
+.fi-ta-row :target,
+.fi-ta-record :target {
+    scroll-margin-top: 6rem;
+}
+
+.fi-ta-row:has(:target),
+.fi-ta-record:has(:target) {
+    outline: 2px solid var(--primary-600, Highlight);
+    outline-offset: -2px;
+    background-color: color-mix(in srgb, var(--primary-500, Highlight) 12%, transparent);
+}

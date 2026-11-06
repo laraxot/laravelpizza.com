@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <tr>
 	<td class="w40" width="40"></td>

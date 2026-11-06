@@ -1,3 +1,15 @@
+---
+title: "translation structure 5 levels"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure 5 levels"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🔴 TRANSLATION STRUCTURE - 5 LEVELS REQUIRED
 
 **Path**: `.agents/docs/rules/translation-structure-5-levels.md`  
@@ -6,7 +18,6 @@
 **Priority**: BLOCKER
 
 ---
-
 ## 🎯 The Rule
 
 > **SEMPRE** usare traduzioni a **5 LIVELLI**:
@@ -15,14 +26,14 @@
 **Example**:
 ```php
 // ✅ CORRETTO - 5 livelli
-__('predict::user.fields.first_name.label')
-__('predict::fields.outcome.title.label')
-__('predict::labels.market.status.label')
+__('forecast::user.fields.first_name.label')
+__('forecast::fields.outcome.title.label')
+__('forecast::labels.market.status.label')
 
 // ❌ SBAGLIATO - MENO di 5 livelli
-__('predict::titles.outcomes')           // ❌ SOLO 2 livelli!
-__('predict::labels.volume')             // ❌ SOLO 2 livelli!
-__('predict::messages.success')          // ❌ SOLO 2 livelli!
+__('forecast::titles.outcomes')           // ❌ SOLO 2 livelli!
+__('forecast::labels.volume')             // ❌ SOLO 2 livelli!
+__('forecast::messages.success')          // ❌ SOLO 2 livelli!
 ```
 
 ---
@@ -31,28 +42,28 @@ __('predict::messages.success')          // ❌ SOLO 2 livelli!
 
 ### Level 1: Namespace
 ```
-predict::
+forecast::
 ```
-Il namespace del modulo (predict, blog, user, etc.)
+Il namespace del modulo (forecast, blog, user, etc.)
 
 ### Level 2: Context
 ```
-predict::user.
-predict::fields.
-predict::labels.
-predict::messages.
-predict::titles.
-predict::actions.
-predict::validation.
+forecast::user.
+forecast::fields.
+forecast::labels.
+forecast::messages.
+forecast::titles.
+forecast::actions.
+forecast::validation.
 ```
 Il **CONTESTO** della traduzione.
 
 ### Level 3: Collection
 ```
-predict::user.fields.
-predict::fields.outcome.
-predict::labels.market.
-predict::messages.bet.
+forecast::user.fields.
+forecast::fields.outcome.
+forecast::labels.market.
+forecast::messages.bet.
 ```
 La **COLLEZIONE** di elementi.
 
@@ -61,15 +72,18 @@ La **COLLEZIONE** di elementi.
 predict::user.fields.first_name.
 predict::fields.outcome.title.
 predict::labels.market.status.
+forecast::user.fields.first_name.
+forecast::fields.outcome.title.
+forecast::labels.market.status.
 ```
 L'**ELEMENTO** specifico.
 
 ### Level 5: Type
 ```
-predict::user.fields.first_name.label
-predict::fields.outcome.title.label
-predict::labels.market.status.label
-predict::messages.bet.success.message
+forecast::user.fields.first_name.label
+forecast::fields.outcome.title.label
+forecast::labels.market.status.label
+forecast::messages.bet.success.message
 ```
 Il **TIPO** (label, placeholder, helper, message, etc.)
 
@@ -81,56 +95,56 @@ Il **TIPO** (label, placeholder, helper, message, etc.)
 
 ```php
 // User fields
-__('predict::user.fields.first_name.label')
-__('predict::user.fields.last_name.label')
-__('predict::user.fields.email.placeholder')
-__('predict::user.fields.email.helper')
+__('forecast::user.fields.first_name.label')
+__('forecast::user.fields.last_name.label')
+__('forecast::user.fields.email.placeholder')
+__('forecast::user.fields.email.helper')
 
 // Fields
-__('predict::fields.outcome.title.label')
-__('predict::fields.outcome.probability.label')
-__('predict::fields.predict.ends_at.label')
+__('forecast::fields.outcome.title.label')
+__('forecast::fields.outcome.probability.label')
+__('forecast::fields.forecast.ends_at.label')
 
 // Labels
-__('predict::labels.market.status.label')
-__('predict::labels.market.volume.label')
-__('predict::labels.outcome.probability.label')
+__('forecast::labels.market.status.label')
+__('forecast::labels.market.volume.label')
+__('forecast::labels.outcome.probability.label')
 
 // Messages
-__('predict::messages.bet.success.message')
-__('predict::messages.bet.error.message')
+__('forecast::messages.bet.success.message')
+__('forecast::messages.bet.error.message')
 
 // Titles
-__('predict::titles.outcome.title.label')
-__('predict::titles.market.title.label')
+__('forecast::titles.outcome.title.label')
+__('forecast::titles.market.title.label')
 
 // Actions
-__('predict::actions.bet.submit.label')
-__('predict::actions.bet.cancel.label')
+__('forecast::actions.bet.submit.label')
+__('forecast::actions.bet.cancel.label')
 
 // Validation
-__('predict::validation.outcome.required')
-__('predict::validation.predict.ends_at.after')
+__('forecast::validation.outcome.required')
+__('forecast::validation.forecast.ends_at.after')
 ```
 
 ### Wrong Examples ❌
 
 ```php
 // ❌ MENO di 5 livelli
-__('predict::titles.outcomes')           // ❌ SOLO 2!
-__('predict::labels.volume')             // ❌ SOLO 2!
-__('predict::messages.success')          // ❌ SOLO 2!
-__('predict::fields.title')              // ❌ SOLO 2!
-__('predict::user.first_name')           // ❌ SOLO 2!
+__('forecast::titles.outcomes')           // ❌ SOLO 2!
+__('forecast::labels.volume')             // ❌ SOLO 2!
+__('forecast::messages.success')          // ❌ SOLO 2!
+__('forecast::fields.title')              // ❌ SOLO 2!
+__('forecast::user.first_name')           // ❌ SOLO 2!
 
 // ❌ SOLO 3 livelli
-__('predict::fields.outcome.title')      // ❌ SOLO 3!
-__('predict::labels.market.status')      // ❌ SOLO 3!
-__('predict::messages.bet.success')      // ❌ SOLO 3!
+__('forecast::fields.outcome.title')      // ❌ SOLO 3!
+__('forecast::labels.market.status')      // ❌ SOLO 3!
+__('forecast::messages.bet.success')      // ❌ SOLO 3!
 
 // ❌ SOLO 4 livelli
-__('predict::fields.outcome.title')      // ❌ SOLO 4! (manca .label)
-__('predict::labels.market.status')      // ❌ SOLO 4! (manca .label)
+__('forecast::fields.outcome.title')      // ❌ SOLO 4! (manca .label)
+__('forecast::labels.market.status')      // ❌ SOLO 4! (manca .label)
 ```
 
 ---
@@ -140,6 +154,7 @@ __('predict::labels.market.status')      // ❌ SOLO 4! (manca .label)
 ### Level 1: Organization
 ```
 predict::  → Modulo Predict
+forecast::  → Modulo Forecast
 blog::     → Modulo Blog
 user::     → Modulo User
 ```
@@ -158,6 +173,7 @@ titles::   → Titoli
 ```
 outcome::  → Collezione outcome
 predict::  → Collezione predict
+forecast::  → Collezione forecast
 market::   → Collezione market
 ```
 **Why**: Raggruppare elementi correlati.
@@ -205,6 +221,9 @@ status::     → Elemento status
 __('predict::titles.outcomes')      // 🚩 SOLO 2!
 __('predict::labels.volume')        // 🚩 SOLO 2!
 __('predict::fields.title')         // 🚩 SOLO 2!
+__('forecast::titles.outcomes')      // 🚩 SOLO 2!
+__('forecast::labels.volume')        // 🚩 SOLO 2!
+__('forecast::fields.title')         // 🚩 SOLO 2!
 ```
 
 **Immediate Fix**:
@@ -213,6 +232,9 @@ __('predict::fields.title')         // 🚩 SOLO 2!
 __('predict::titles.outcome.title.label')
 __('predict::labels.market.volume.label')
 __('predict::fields.predict.title.label')
+__('forecast::titles.outcome.title.label')
+__('forecast::labels.market.volume.label')
+__('forecast::fields.forecast.title.label')
 ```
 
 ---
@@ -223,32 +245,32 @@ __('predict::fields.predict.title.label')
 
 ```php
 // ❌ 2 livelli
-__('predict::titles.outcomes')
-__('predict::labels.volume')
-__('predict::messages.success')
+__('forecast::titles.outcomes')
+__('forecast::labels.volume')
+__('forecast::messages.success')
 
 // ❌ 3 livelli
-__('predict::fields.outcome.title')
-__('predict::labels.market.volume')
+__('forecast::fields.outcome.title')
+__('forecast::labels.market.volume')
 
 // ❌ 4 livelli
-__('predict::fields.outcome.title')  // manca .label
+__('forecast::fields.outcome.title')  // manca .label
 ```
 
 ### After (Correct) ✅
 
 ```php
 // ✅ 5 livelli
-__('predict::titles.outcome.title.label')
-__('predict::labels.market.volume.label')
-__('predict::messages.bet.success.message')
+__('forecast::titles.outcome.title.label')
+__('forecast::labels.market.volume.label')
+__('forecast::messages.bet.success.message')
 
 // ✅ 5 livelli
-__('predict::fields.outcome.title.label')
-__('predict::labels.market.volume.label')
+__('forecast::fields.outcome.title.label')
+__('forecast::labels.market.volume.label')
 
 // ✅ 5 livelli
-__('predict::fields.outcome.title.label')  // aggiunto .label
+__('forecast::fields.outcome.title.label')  // aggiunto .label
 ```
 
 ---
@@ -257,12 +279,15 @@ __('predict::fields.outcome.title.label')  // aggiunto .label
 
 ### AI Agents Docs
 - **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage
 
 ### Module Docs
 - **[Translation Structure](../../laravel/Modules/Predict/docs/translation-structure.md)** - Translation guide
 - **[ADR-003 Deprecate Binary Fields](../../laravel/Modules/Predict/docs/ADR-003_DEPRECATE_BINARY_CREDIT_FIELDS.md)** - Deprecation plan
+- **[Translation Structure](../../laravel/Modules/Forecast/docs/translation-structure.md)** - Translation guide
+- **[ADR-003 Deprecate Binary Fields](../../laravel/Modules/Forecast/docs/ADR-003_DEPRECATE_BINARY_CREDIT_FIELDS.md)** - Deprecation plan
 
 ---
 

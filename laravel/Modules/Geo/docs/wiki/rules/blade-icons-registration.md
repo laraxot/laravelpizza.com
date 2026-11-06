@@ -1,6 +1,15 @@
 ---
+title: "blade icons registration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "blade icons registration"
+issues: []
+discussions: []
 name: Blade Icons Registration Rule
 description: Ensure that Blade UI Icons are only registered in XotBaseServiceProvider to avoid duplicate registrations.
+status: draft
 ---
 
 # Blade Icons Registration Rule

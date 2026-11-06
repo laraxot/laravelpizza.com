@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
@@ -11,9 +10,10 @@ use Modules\User\Actions\Otp\SendOtpByUserAction;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Notifications\Auth\Otp;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('SendOtpByUserAction', function () {
     it('generates and sends an OTP to the user', function () {
@@ -55,7 +55,7 @@ describe('SendOtpByUserAction', function () {
 
                 return ($routes['mail'] ?? null) === $user->email
                     && $notification->user->id === $user->id
-                    && 'random-otp-12' === $notification->code;
+                    && $notification->code === 'random-otp-12';
             }
         );
 

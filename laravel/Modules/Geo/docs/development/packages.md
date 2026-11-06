@@ -1,3 +1,15 @@
+---
+title: "packages"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "packages"
+issues: []
+discussions: []
+status: draft
+---
+
 # Pacchetti e Risorse Consigliate
 
 ## Frontend

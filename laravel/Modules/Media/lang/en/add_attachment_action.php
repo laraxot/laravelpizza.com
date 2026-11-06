@@ -32,7 +32,7 @@ return [
         ],
     ],
     'navigation' => [
-        'label' => 'Missing Navigation Label',
+        'label' => 'Upload attachment',
         'plural_label' => 'Missing Navigation Plural Label',
         'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',

@@ -1,3 +1,11 @@
+---
+title: "Documentazione"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "documentazione xot"
+---
 # Documentazione
 
 Questo documento serve come indice centrale per tutta la documentazione del progetto.

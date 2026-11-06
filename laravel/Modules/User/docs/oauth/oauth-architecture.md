@@ -1,3 +1,17 @@
+---
+title: "OAuth Architecture - User Module"
+type: concept
+tags: [oauth, architecture]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "oauth-architecture oauth architecture - user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./github.md"
+status: draft
+---
+
 # OAuth Architecture - User Module
 
 > **Last Updated**: 2026-03-18  
@@ -194,7 +208,7 @@ test('client can have permissions', function () {
 
 - [Laravel Passport Docs](https://laravel.com/docs/passport)
 - [Spatie Permission](https://spatie.be/docs/laravel-permission)
-- [User Module Architecture](../architecture.md)
+- [User Module Architecture](../ARCHITECTURE.md)
 - [OAuth Actions](../actions/oauth-actions.md)
 
 ---

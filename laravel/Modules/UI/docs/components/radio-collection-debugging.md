@@ -1,3 +1,15 @@
+---
+title: "radio collection debugging"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "radio collection debugging"
+issues: []
+discussions: []
+status: draft
+---
+
 # RadioCollection: Debugging & Risoluzione Problemi di Selezione
 
 ## 🔍 Diagnosi del Problema
@@ -319,7 +331,6 @@ class RadioCollection extends Field
 - **Mobile Usability**: Eccellente
 
 ---
-
 **Diagnosi completata**: Dicembre 2024
 **Correzione implementata**: v2.0.0
 **Status**: Risolto ✅

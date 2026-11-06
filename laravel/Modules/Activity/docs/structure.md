@@ -1,6 +1,14 @@
+---
+title: "Modulo Activity"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "modulo activity activity"
+---
 # Modulo Activity
 
-Data: 2025-04-23 19:09:55
+Data: [DATE] 19:09:55Data: 2025-04-23 19:09:55
 Data: [DATE] 19:09:55
 
 ## Informazioni generali
@@ -283,7 +291,7 @@ workbench/routes
 ## Collegamenti
 
 - [Torna a README](./README.md)
-- [Torna a README](./readme.md)
+- [Torna a README](./README.md)
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 

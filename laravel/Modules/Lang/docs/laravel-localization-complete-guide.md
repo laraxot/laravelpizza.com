@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "laravel-localization complete guide"
+module: "Lang"
+type: how-to
+tags: [google, translate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "google translate"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # laravel-localization complete guide
 
 Package: `mcamara/laravel-localization`

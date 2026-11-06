@@ -1,3 +1,15 @@
+---
+title: "page component data context scaling"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "page component data context scaling"
+issues: []
+discussions: []
+status: draft
+---
+
 # Page Component Data-Context Scaling
 
 ## Problema

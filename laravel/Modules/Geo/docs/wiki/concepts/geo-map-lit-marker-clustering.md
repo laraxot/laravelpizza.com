@@ -1,3 +1,15 @@
+---
+title: "geo map lit marker clustering"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo map lit marker clustering"
+issues: []
+discussions: []
+status: draft
+---
+
 # GeoMapLit Marker Clustering — Corrected Implementation
 
 ## Overview

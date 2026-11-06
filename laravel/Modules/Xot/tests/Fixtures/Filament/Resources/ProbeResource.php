@@ -11,12 +11,7 @@ class ProbeResource extends XotBaseResource
 {
     protected static string $module = 'Xot';
 
-    protected static ?string $model = null;
-
-    public static function getFormSchema(): array
-    {
-        return [];
-    }
+    protected static ?string $model = \Modules\Xot\Tests\Fixtures\Models\Probe::class;
 
     /**
      * @return array<int, string>
@@ -38,6 +33,6 @@ class ProbeResource extends XotBaseResource
 
     public static function resetModelCache(): void
     {
-        static::$model = null;
+        static::$model = \Modules\Xot\Tests\Fixtures\Models\Probe::class;
     }
 }

@@ -1,14 +1,59 @@
-# ==============================================
-# LARAXOT MODULE UI - .GITIGNORE
-# ==============================================
-# Modulo UI Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# ==============================================
+# =============================================================================
+# LARAXOT MODULE: UI - .gitignore
+#
+# Canonical rules:
+# - docs/wiki/rules/root-cleanup-policy.md
+# - docs/wiki/rules/module-theme-root-cleanup.md
 
 
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
+# -----------------------------------------------------------------------------
+# Forbidden root directories / AI tooling
+/bashscripts/
+/_bmad/
+/_bmad-output/
+/_docs/
+/.circleci/
+/.claude-audit/
+/.devcontainer/
+/.kilocode/
+/.kiro/
+/.ralph/
+/scripts/
+/test-results/
+/workbench/
+/legacy/
+
+/.ai*
+tests/.claude-audit/
+tests/AuditCoverage/
+
+
+# Documentation cleanup
+docs/archive/
+docs/archived/
+docs/legacy/
+docs/workbench/
+docs/scripts/
+docs/bashscripts/
+
+docs/**/archive/
+docs/**/archived/
+docs/**/legacy/
+docs/**/workbench/
+docs/**/scripts/
+docs/**/bashscripts/
+
+docs/cache/
+docs/phpstan/
+
+# Numbered markdown duplicates
+docs/**/*-[0-9].md
+docs/**/*-[0-9][0-9].md
+docs/**/*_[0-9].md
+docs/**/*_[0-9][0-9].md
+
+
+# Dependencies
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -16,179 +61,197 @@
 composer.lock
 package-lock.json
 yarn.lock
-yarn-error.log
-npm-debug.log
 
 
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
+# Python / virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+
+# Build / compiled artifacts
 /build/
 /dist/
-docs/cache/
+
 cache/
 
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*:Zone.Identifier
-v8-compile-cache-*
-
-.php-cs-fixer.cache
-.phpunit.result.cache
+public/css/compiled/
+public/js/compiled/
+public/mix-manifest.json
 
 
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
+# Laravel runtime
 /storage/*.key
 /public/storage
 /public/hot
 /public_html/storage
 /public_html/hot
 
+
+# Environment / local configuration
 .env
 .env.*
 !.env.example
 
+config/local.php
+config/development.php
 
-# ==============================================
-# ENVIRONMENT & IDE
-# ==============================================
 Homestead.yaml
 Homestead.json
-/.vagrant
-/.idea
+
+
+# IDE / editor
+/.idea/
+/.vscode/
+/.cursor/
+/.windsurf/
+/.vagrant/
+
 .phpintel
 .phpstorm.meta.php
 
 
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
+# Cache / temporary files
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+*.cache
+*.lock
+*.tmp
+*.phar
+*.jar
+*.swp
+*.swo
+*.stackdump
+
+v8-compile-cache-*
+
+
+# Logs
+*.log
+error_log
+
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+
+# Git / merge / rebase leftovers
 .git-rewrite/
 .git-blame-ignore-revs
 
+.merge_file_*
 
-# ==============================================
-# SYSTEM FILES
-# ==============================================
+*.orig
+*.rej
+
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*~head
+
+
+# Backup / old files
+*.old
+*.old1
+*.old2
+
+*.backup
+*.backup.*
+*.backup-*
+*.backup_*
+
+*.bak
+*.new
+
+
+# Legacy directories
+resources/views/Components_old/
+resources/lang/
+lang/lang/
+
+database_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+
+
+# UI module specific
+*.fila2
+
+*.psd
+*.fig
+*.sketch
+
+design_notes.txt
+
+/laravel/
+/public_html/
+
+
+# System files
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+
 Thumbs.db
+ehthumbs.db
 
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
-*.old
-*.old1
-*.old2
-*.backup
-*.backup.*
-*.backup-*
-*.backup_*
-*.bak
-*.new
-
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-
-
-# ==============================================
-# DOCUMENTATION & ANALYSIS CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-
-
-# ==============================================
-# LANGUAGE FILES (generated / duplicated)
-# ==============================================
-resources/lang/
-
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-
-
-# ==============================================
-# MODULE SPECIFIC - UI
-# ==============================================
-# Config locale
-config/local.php
-config/development.php
-
-# Asset UI compilati
-public/css/compiled/
-public/js/compiled/
-public/mix-manifest.json
-
-# Design / UI tools
-*.psd
-*.sketch
-*.fig
-design_notes.txt
-
-
-# ==============================================
-# PROJECT-SPECIFIC
-# ==============================================
-*.fila2
-laravel
-public_html
-
-
-# ==============================================
-# END OF UI .GITIGNORE
-# ==============================================
-lang/lang/
-_docs/
-docs/legacy/
-docs/legacy/**
-
-# -----------------------------------------------------------------------------
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-# -----------------------------------------------------------------------------
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
+*:Zone.Identifier
 
 agentdb.rvf
+
+
+# Root quality tools
+phpstan*
+phpmd*
+rector.php
+phpmd.ruleset.xml
+phpmd.ruleset.xml.bak
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+docs/_archive
+
+phpinsights.php
+
+# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
+/rector.php
+/phpinsights.php
+/.cursor
+/.windsurf
+/.vscode
+.cursor~*
+.windsurf~*
+
+# Cartelle vietate nella root del modulo (direttiva root-cleanup)
+/tools/
+/.agents/
+/.claude/
+/.codex/
+/.opencode/
+/tests/graphify-out/
+bashscripts
+tools
+scripts
+.agents
+.claude-audit
+.vscode
+build
+.claude
+/.github/skills/
+.github/skills
+docs/graphify
+resources/lang
+
+# docs/chat — coordination notes replaced by BMAD stories in docs/bmad/
+docs/chat
+
+# Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
+app/Application
+/.docs-archive/
+# Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
+audit-coverage/

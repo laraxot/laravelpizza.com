@@ -1,3 +1,11 @@
+---
+title: "Media Module - PHPStan Level 10 Errors Resolution Roadmap"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, media]
+qmd: "media module - phpstan level 10 errors resolution roadmap media"
+---
 # Media Module - PHPStan Level 10 Errors Resolution Roadmap
 
 ## 📊 Stato Attuale

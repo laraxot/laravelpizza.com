@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Build Publish.Yml"
+module: "Lang"
+type: concept
+tags: [build, publish.yml]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "build publish.yml"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 name: Build & Publish
 
 on:

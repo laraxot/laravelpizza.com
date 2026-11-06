@@ -7,11 +7,11 @@ namespace Modules\User\Filament\Resources\OauthAccessTokenResource\Pages;
 use Filament\Actions\Action;
 // Added
 use Modules\User\Filament\Resources\OauthAccessTokenResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-
 /**
  * Class ListOauthAccessTokens.
  */
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+
 class ListOauthAccessTokens extends XotBaseListRecords
 {
     protected static string $resource = OauthAccessTokenResource::class;

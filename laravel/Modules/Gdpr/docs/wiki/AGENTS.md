@@ -1,3 +1,15 @@
+---
+title: "AGENTS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "AGENTS"
+issues: []
+discussions: []
+status: draft
+---
+
 # Gdpr {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Gdpr
@@ -22,6 +34,9 @@ You are the **Gdpr Wiki Maintainer**. Your job is to:
 
 ```yaml
 ---
+qmd: "AGENTS"
+issues: []
+discussions: []
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
 sources: ["raw/articles/filename.md"]

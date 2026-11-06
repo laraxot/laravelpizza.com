@@ -111,7 +111,10 @@ class ThemeComposer
 
         $blocks = $page->blocks;
         if (! is_array($blocks)) {
-            return view('ui::empty');
+            /** @phpstan-var view-string */
+            $emptyView = 'ui::empty';
+
+            return view($emptyView);
         }
 
         $blocksComponent = new Blocks(

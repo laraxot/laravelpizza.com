@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{-- Visualizzazione parametri come badge --}}
 @if(!empty($params))

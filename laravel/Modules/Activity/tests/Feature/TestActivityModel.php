@@ -6,6 +6,9 @@ namespace Modules\Activity\Tests\Feature;
 
 use Illuminate\Support\Carbon;
 use Modules\Activity\Models\BaseModel;
+use Modules\Xot\Models\Traits\HasXotFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * Classe concreta di test per BaseModel.
@@ -26,6 +29,18 @@ use Modules\Activity\Models\BaseModel;
  */
 class TestActivityModel extends BaseModel
 {
+    /**
+     * @use HasFactory<Factory<self>>
+     *
+     * I test asseriscono che il modello usi HasFactory; factory() resta quello di HasXotFactory
+     * (risolve la factory a runtime via GetFactoryAction), perche' quello di HasFactory cerca
+     * `Database\Factories\<Modello>Factory` e qui non esiste. HasXotFactory non espone piu'
+     * newFactory(): una regola insteadof su di esso e' un fatal error PHP, che PHPStan non vede.
+     */
+    use HasFactory, HasXotFactory {
+        HasXotFactory::factory insteadof HasFactory;
+    }
+
     /** @var string */
     protected $table = 'test_models';
 

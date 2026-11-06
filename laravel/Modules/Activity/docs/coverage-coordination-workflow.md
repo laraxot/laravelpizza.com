@@ -1,3 +1,11 @@
+---
+title: "Activity Coverage Coordination Workflow"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity]
+qmd: "activity coverage coordination workflow activity"
+---
 # Activity Coverage Coordination Workflow
 
 ## Scopo

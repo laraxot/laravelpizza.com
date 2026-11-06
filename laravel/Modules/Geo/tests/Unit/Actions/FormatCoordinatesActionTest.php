@@ -6,75 +6,90 @@ namespace Modules\Geo\Tests\Unit\Actions;
 
 use Modules\Geo\Actions\FormatCoordinatesAction;
 use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-
-beforeEach(function () {
-    $this->action = new FormatCoordinatesAction();
-});
-
 it('formats coordinates in decimal format', function (): void {
-    $result = $this->action->execute(45.4642, 9.1900, 'decimal');
-    expect($result)->toBe('45.464200, 9.190000');
+    $action = new FormatCoordinatesAction();
 
-    $result = $this->action->execute(-45.4642, -9.1900, 'decimal');
-    expect($result)->toBe('-45.464200, -9.190000');
+    $result = $action->execute(45.4642, 9.1900, 'decimal');
+    Assert::assertSame('45.464200, 9.190000', $result);
 
-    $result = $this->action->execute(0, 0, 'decimal');
-    expect($result)->toBe('0.000000, 0.000000');
+    $result = $action->execute(-45.4642, -9.1900, 'decimal');
+    Assert::assertSame('-45.464200, -9.190000', $result);
+
+    $result = $action->execute(0, 0, 'decimal');
+    Assert::assertSame('0.000000, 0.000000', $result);
 });
 
 it('formats coordinates in DMS format', function (): void {
-    $result = $this->action->execute(45.4642, 9.1900, 'dms');
-    expect($result)->toBe('45°27\'51"N 9°11\'24"E');
+    $action = new FormatCoordinatesAction();
 
-    $result = $this->action->execute(-45.4642, -9.1900, 'dms');
-    expect($result)->toBe('45°27\'51"S 9°11\'24"W');
+    $result = $action->execute(45.4642, 9.1900, 'dms');
+    Assert::assertSame('45°27\'51"N 9°11\'24"E', $result);
 
-    $result = $this->action->execute(0, 0, 'dms');
-    expect($result)->toBe('0°0\'0"N 0°0\'0"E');
+    $result = $action->execute(-45.4642, -9.1900, 'dms');
+    Assert::assertSame('45°27\'51"S 9°11\'24"W', $result);
+
+    $result = $action->execute(0, 0, 'dms');
+    Assert::assertSame('0°0\'0"N 0°0\'0"E', $result);
 });
 
 it('formats coordinates in Google Maps URL format', function (): void {
-    $result = $this->action->execute(45.4642, 9.1900, 'google');
-    expect($result)->toBe('https://www.google.com/maps?q=45.4642,9.19');
+    $action = new FormatCoordinatesAction();
 
-    $result = $this->action->execute(-45.4642, -9.1900, 'google');
-    expect($result)->toBe('https://www.google.com/maps?q=-45.4642,-9.19');
+    $result = $action->execute(45.4642, 9.1900, 'google');
+    Assert::assertSame('https://www.google.com/maps?q=45.4642,9.19', $result);
 
-    $result = $this->action->execute(0, 0, 'google');
-    expect($result)->toBe('https://www.google.com/maps?q=0,0');
+    $result = $action->execute(-45.4642, -9.1900, 'google');
+    Assert::assertSame('https://www.google.com/maps?q=-45.4642,-9.19', $result);
+
+    $result = $action->execute(0, 0, 'google');
+    Assert::assertSame('https://www.google.com/maps?q=0,0', $result);
 });
 
 it('uses decimal format as default', function (): void {
-    $result = $this->action->execute(45.4642, 9.1900);
-    expect($result)->toBe('45.464200, 9.190000');
+    $action = new FormatCoordinatesAction();
+
+    $result = $action->execute(45.4642, 9.1900);
+    Assert::assertSame('45.464200, 9.190000', $result);
 });
 
 it('throws exception for unsupported format', function (): void {
-    expect(fn () => $this->action->execute(45.4642, 9.1900, 'invalid'))->toThrow(InvalidArgumentException::class, 'Formato non supportato');
+    $action = new FormatCoordinatesAction();
+
+    try {
+        $action->execute(45.4642, 9.1900, 'unsupported');
+        Assert::fail('Expected InvalidArgumentException was not thrown');
+    } catch (\InvalidArgumentException $exception) {
+        Assert::assertSame('Formato non supportato', $exception->getMessage());
+    }
 });
 
 it('handles edge case coordinates', function (): void {
-    // Test extreme valid coordinates
-    $result = $this->action->execute(90, 180, 'decimal');
-    expect($result)->toBe('90.000000, 180.000000');
+    $action = new FormatCoordinatesAction();
 
-    $result = $this->action->execute(-90, -180, 'decimal');
-    expect($result)->toBe('-90.000000, -180.000000');
+    // Test extreme valid coordinates
+    $result = $action->execute(90, 180, 'decimal');
+    Assert::assertSame('90.000000, 180.000000', $result);
+
+    $result = $action->execute(-90, -180, 'decimal');
+    Assert::assertSame('-90.000000, -180.000000', $result);
 
     // Test DMS for extreme coordinates
-    $result = $this->action->execute(90, 180, 'dms');
-    expect($result)->toBe('90°0\'0"N 180°0\'0"E');
+    $result = $action->execute(90, 180, 'dms');
+    Assert::assertSame('90°0\'0"N 180°0\'0"E', $result);
 
-    $result = $this->action->execute(-90, -180, 'dms');
-    expect($result)->toBe('90°0\'0"S 180°0\'0"W');
+    $result = $action->execute(-90, -180, 'dms');
+    Assert::assertSame('90°0\'0"S 180°0\'0"W', $result);
 });
 
 it('handles high precision coordinates', function (): void {
-    $result = $this->action->execute(45.123456, 9.654321, 'decimal');
-    expect($result)->toBe('45.123456, 9.654321');
+    $action = new FormatCoordinatesAction();
 
-    $result = $this->action->execute(45.123456, 9.654321, 'dms');
-    expect($result)->toBe('45°7\'24"N 9°39\'16"E');
+    $result = $action->execute(45.123456, 9.654321, 'decimal');
+    Assert::assertSame('45.123456, 9.654321', $result);
+
+    $result = $action->execute(45.123456, 9.654321, 'dms');
+    Assert::assertSame('45°7\'24"N 9°39\'16"E', $result);
 });

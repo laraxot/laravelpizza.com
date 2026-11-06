@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { guard } from 'lit/directives/guard.js';
 import { mapStylesText } from './map/styles.js';
+import { markerCardStylesText } from './map/config.js';
 import { renderControls, toggleFullscreen, syncFullscreenState, switchLayer,
     zoomIn, zoomOut, requestGeolocation } from './map/controls.js';
 import { renderSearch, searchUiHandlers, closeSearch } from './map/controls/search.js';
@@ -18,12 +19,22 @@ export class CoordinatePickerField extends LitElement {
         state:          { type: Object },
         zoom:           { type: Number },
         height:         { type: String },
+        centerLatitude: { type: Number, attribute: 'center-latitude' },
+        centerLongitude: { type: Number, attribute: 'center-longitude' },
         isLocating:     { type: Boolean, state: true },
         isFullscreen:   { type: Boolean, state: true },
         geolocateWhenEmpty: { type: Boolean, attribute: 'geolocate-when-empty' },
+        /** Vista di partenza del territorio `{lat, lng, zoom}` (config `geo.config.map.default_view`), usata quando non c'e' un punto. */
+        defaultView:    { type: Object, attribute: 'default-view' },
         labels:         { type: Object },
         provider:       { type: String },
         showSearch:     { type: Boolean, attribute: 'show-search' },
+        /** Sola lettura: marker fisso, nessun click/drag che scrive lo stato, niente ricerca/geolocalizzazione/fullscreen. */
+        readonly:       { type: Boolean },
+        /** Marker del tipo di segnalazione (solo se noto, es. dettaglio ticket): icona fixcity::svg, colore stato, nome tipo. */
+        markerIconUrl:  { type: String, attribute: 'marker-icon-url' },
+        markerColor:    { type: String, attribute: 'marker-color' },
+        markerLabel:    { type: String, attribute: 'marker-label' },
         searchQuery:    { type: String, state: true },
         searchResults:  { type: Array, state: true },
         showSearchResults: { type: Boolean, state: true },
@@ -42,13 +53,20 @@ export class CoordinatePickerField extends LitElement {
         this.state = null;
         this.zoom = 13;
         this.height = '400px';
+        this.centerLatitude = null;
+        this.centerLongitude = null;
         this.isLocating = false;
         this.isFullscreen = false;
         this.geolocateWhenEmpty = false;
         this.geolocated = false;
+        this.defaultView = null;
         this.labels = {};
         this.provider = 'osm';
         this.showSearch = true;
+        this.readonly = false;
+        this.markerIconUrl = null;
+        this.markerColor = undefined;
+        this.markerLabel = '';
         this.searchQuery = '';
         this.searchResults = [];
         this.showSearchResults = false;
@@ -74,6 +92,7 @@ export class CoordinatePickerField extends LitElement {
             <style>
                 coordinate-picker-lit { display: block; width: 100%; height: 100%; min-height: 200px; }
                 ${mapStylesText}
+                ${markerCardStylesText}
                 .map-container { min-height: 200px; }
                 .map-container.is-fullscreen,
                 .map-container:fullscreen { position: fixed !important; inset: 0 !important; width: 100vw !important; height: 100vh !important; border: none !important; border-radius: 0 !important; z-index: 999999 !important; }
@@ -85,7 +104,7 @@ export class CoordinatePickerField extends LitElement {
                 <div class="map-picker-viewport">
                     ${guard([], () => html`<div class="map-picker-leaflet-pane" style="height: 100%;"></div>`)}
                 </div>
-                ${this.showSearch !== false && this._searchOpen ? renderSearch(this, searchUiHandlers) : ''}
+                ${this.showSearch !== false && !this.readonly && this._searchOpen ? renderSearch(this, searchUiHandlers) : ''}
                 ${renderControls(this)}
                 <div class="loading-overlay ${this.isLocating ? 'active' : ''}">
                     <div class="spinner"></div>
@@ -100,7 +119,6 @@ export class CoordinatePickerField extends LitElement {
         bindRefreshHandler(this);
 
         this._handleFullscreenChange = () => {
-            console.log('[coordinate-picker] Fullscreen change event detected');
             syncFullscreenState(this);
         };
         document.addEventListener('fullscreenchange', this._handleFullscreenChange);
@@ -151,7 +169,8 @@ export class CoordinatePickerField extends LitElement {
     _toggleFullscreen() { toggleFullscreen(this); }
     _zoomIn() { zoomIn(this); }
     _zoomOut() { zoomOut(this); }
-    _requestGeolocation() { requestGeolocation(this); }
+    /** @returns {Promise<void>} si risolve a ricerca conclusa (GPS, IP o niente): chi chiama non deve mai gestire errori. */
+    _requestGeolocation() { return requestGeolocation(this); }
     _handleMapInteraction(lat, lng, source) { handleMapInteraction(this, lat, lng, source); }
     _updateMarker(lat, lng) { updateMarker(this, lat, lng); }
     _syncMarkerToProperties() { syncMarkerToProperties(this); }

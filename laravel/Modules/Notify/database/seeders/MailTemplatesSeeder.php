@@ -26,8 +26,7 @@ class MailTemplatesSeeder extends Seeder
                 {{/if}}
                 <p style="color: #718096; font-size: 14px; margin: 0;">If you have any questions, feel free to contact our support team.</p>
             ',
-            'text_template' => 'Welcome to {{ app_name }}! Hello {{ name }}, Thank you for joining us. We\'re excited to have you on board!',
-        ]);
+            'text_template' => 'Welcome to {{ app_name }}! Hello {{ name }}, Thank you for joining us. We\'re excited to have you on board!']);
 
         // Template Order Confirmation
         MailTemplate::create([
@@ -69,7 +68,6 @@ class MailTemplatesSeeder extends Seeder
 
                 <p style="color: #718096; font-size: 14px; margin: 0;">Have questions about your order? <a href="{{ support_url }}" style="color: #4299E1; text-decoration: none;">Contact Support</a></p>
             ',
-            'text_template' => 'Order #{{ order_id }} Confirmed. Thank you for your order. We\'re preparing it for shipment. Total: {{ total_amount }}',
-        ]);
+            'text_template' => 'Order #{{ order_id }} Confirmed. Thank you for your order. We\'re preparing it for shipment. Total: {{ total_amount }}']);
     }
 }

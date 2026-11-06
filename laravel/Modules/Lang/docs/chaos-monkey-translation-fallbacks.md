@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Chaos Monkey Translation Fallbacks (Lang)"
+module: "Lang"
+type: concept
+tags: [migrazione, filament, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migrazione filament 4"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Chaos Monkey Translation Fallbacks (Lang)
 
 ## Obiettivo

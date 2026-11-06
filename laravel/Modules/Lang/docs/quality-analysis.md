@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Quality Analysis Report - Lang Module"
+module: "Lang"
+type: concept
+tags: [phpstan, level10, fixes, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan level10 fixes 1"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Quality Analysis Report - Lang Module
 **Date**: 2025-11-11
 **Date**: 2025-11-11
@@ -8,16 +22,6 @@
 **Date**: 2025-11-11
 **Analyst**: Claude Code
 **Tools**: PHPStan Level 10, PHPInsights, PHPMD
-
----
-
-## Aggiornamento verifica 2026-07-01
-
-- **PHPStan** (`level: max`): **0 errori** confermati.
-- **PHPMD**: nessuna violazione critica nuova; restano `StaticAccess` (idiomatico Laravel) e complessità di `AutoLabelAction::execute()`/`LangServiceProvider::registerFilamentLabel()` — non toccati (refactoring architetturale fuori scope).
-- **PHPInsights**: Style 96.4% → 97.6% dopo fix mirati (import ordinati, yoda comparison, spacing use-statement). Nessun `--fix` automatico blanket: nel test iniziale ha causato regressioni PHPStan (return type narrowing perso, native type hint su property che sovrascrivono property non tipizzate della classe padre), poi corrette a mano.
-- **Fix**: `Services/TranslatorService.php::get()` — tipo di ritorno allineato a `string|array<array-key, mixed>` (provabile da PHPStan dopo `is_array()`); aggiunto test `tests/Unit/Services/TranslatorServiceTest.php`.
-- **Test**: esecuzione `pest` bloccata in questo sandbox da un problema di infrastruttura pre-esistente (manca `database/database.sqlite`), non imputabile al codice.
 
 ---
 
@@ -315,11 +319,11 @@ public function view(User $user, Post $_post): bool
 ## Comparison with Other Modules
 
 Based on `PHPSTAN_JOURNEY.md`, the following modules have achieved Level 10:
-- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, Quaeris
+- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, modulo questionari
 - Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, <nome progetto>
 - Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, <nome progetto>
 - Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, <nome progetto>
-- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, Quaeris
+- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, modulo questionari
 
 **Lang Module Status**:
 - ✅ PHPStan Level 10: **ACHIEVED**

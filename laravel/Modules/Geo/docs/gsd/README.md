@@ -1,3 +1,15 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+status: draft
+---
+
 # GSD (Get Shit Done) Integration Guide
 
 **Version**: 1.0.0  
@@ -6,7 +18,6 @@
 **GSD Version**: v1.25.1
 
 ---
-
 ## 🎯 Overview
 
 **GSD (Get Shit Done)** è un framework di **meta-prompting, context engineering, e spec-driven development** per AI coding assistants.

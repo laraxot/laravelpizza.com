@@ -5,11 +5,15 @@ owner: Modules/User
 severity: high
 created: 2026-05-22
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/89"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/90"
 related:
-  - ./duplicated-profile-form.md
-  - ../../../../Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md
+  - "./duplicated-profile-form.md"
+  - "./duplicated-ratings-relation-manager.md"
+  - "./duplicated-users-relation-manager.md"
+  - "./oauth-dual-resource-trees.md"
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "loginwidget e logoutwidget duplicati user"
 ---
 
 # LoginWidget e LogoutWidget duplicati
@@ -23,7 +27,7 @@ Due path per lo stesso widget nel modulo User:
 | Login | `app/Filament/Widgets/LoginWidget.php` | `app/Filament/Widgets/Auth/LoginWidget.php` |
 | Logout | `app/Filament/Widgets/LogoutWidget.php` | `app/Filament/Widgets/Auth/LogoutWidget.php` |
 
-`RegisterWidget` compare anche in **Gdpr** (`Modules/Gdpr/.../Auth/RegisterWidget.php`) — dominio GDPR vs User da chiarire.
+`RegisterWidget` compare anche in **Gdpr** (`Modules/Gdpr/.../Auth/RegisterWidget.php`): dominio GDPR vs User da chiarire.
 
 ## Impatto
 

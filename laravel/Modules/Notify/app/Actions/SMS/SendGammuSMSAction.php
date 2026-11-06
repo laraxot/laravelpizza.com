@@ -6,10 +6,9 @@ namespace Modules\Notify\Actions\SMS;
 
 use Exception;
 use Illuminate\Support\Str;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\GammuData;
 use Modules\Notify\Datas\SmsData;
-use Override;
+use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Process\Process;
 
@@ -27,11 +26,13 @@ final class SendGammuSMSAction implements SmsActionContract
 
     private GammuData $gammuData;
 
-    /** @var array<string, mixed> */
+    /** @var array{status_code?: int|null, status_txt?: string} */
     private array $vars = [];
 
     /**
      * Create a new action instance.
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -55,11 +56,10 @@ final class SendGammuSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     * @return array<string, mixed> Risultato dell'operazione
+     * @return array{status_code: int|null, status_txt: string} Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
      */
-    #[Override]
     public function execute(SmsData $smsData): array
     {
         // Normalizza il numero di telefono
@@ -85,8 +85,7 @@ final class SendGammuSMSAction implements SmsActionContract
             'TEXT',
             $to,
             '-text',
-            $tempFile,
-        ]);
+            $tempFile]);
 
         $process->setTimeout($this->gammuData->getTimeout());
 

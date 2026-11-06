@@ -1,13 +1,26 @@
-# CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
+---
+module: theme
+topic: rules-testing-no-migrate-fresh
+canonical: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+title: "rules testing no migrate fresh"
+type: note
+status: stub
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "rules testing no migrate fresh user"
+---
 
-## Rule
-**NEVER** use `migrate:fresh` or the `RefreshDatabase` trait in any test or setup script within this modular architecture (Laraxot).
-
-## Why?
-1. **Destructive**: It destroys all tables across the default database connection.
-2. **Tenant/Module Coupling**: In a modular application, tables are meant to be isolated. Wiping the entire database crashes other concurrently running tests or removes shared look-up tables that are not seeded correctly per-module.
-3. **Data Loss**: Running tests with `RefreshDatabase` against a shared testing database will indiscriminately destroy other modules' data.
-
-## Correct Approach
-- Only use `DatabaseTransactions` to rollback state after tests.
-- Maintain strict database boundaries.
+See canonical documentation: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md

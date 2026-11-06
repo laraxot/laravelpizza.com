@@ -6,12 +6,17 @@ created: 2026-04-27
 updated: 2026-04-27
 tags: [login, i18n, translations, auth]
 sources:
-  - ../../../../app/Filament/Widgets/Auth/LoginWidget.php
-  - ../../../../resources/views/pages/auth/login.blade.php
-  - ../../../../lang/it/login.php
 related:
-  - ./translation-5-level-structure.md
-  - ./login-page-design-comuni.md
+  - "./ai-harness-user-discipline.md"
+  - "./baseuser-hierarchy.md"
+  - "./code-redundancy-user.md"
+  - "./context-mode-user-discipline.md"
+  - "./context-overflow-prevention.md"
+  - "./filament-langserviceprovider-governance.md"
+  - "./filament-widget-linear-crud-model-create.md"
+  - "./filament-widget-resource-form-delegation.md"
+status: draft
+qmd: "login invalid credentials copy rule user"
 ---
 
 # Login invalid credentials copy rule

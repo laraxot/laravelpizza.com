@@ -1,3 +1,15 @@
+---
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # PHPStan Compliance — AI Module
 
 **Last Updated**: 2026-06-13  

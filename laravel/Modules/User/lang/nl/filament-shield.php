@@ -18,12 +18,6 @@ return [
     'nav.role.icon' => 'heroicon-o-shield-check',
     'resource.label.role' => 'Rol',
     'resource.label.roles' => 'Rollen',
-    'section' => 'Entiteiten',
-    'resources' => 'Resources',
-    'widgets' => 'Widgets',
-    'pages' => 'Pagina\'s',
-    'custom' => 'Andere permissies',
-    'forbidden' => 'Je hebt geen toegang',
     'resource_permission_prefixes_labels' => [
         'view' => 'Bekijken',
         'view_any' => 'Bekijk elke',
@@ -36,18 +30,5 @@ return [
         'restore' => 'Herstellen',
         'restore_any' => 'Herstel elke',
         'replicate' => 'Repliceren',
-    ],
-    'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
-        'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
-    ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
     ],
 ];

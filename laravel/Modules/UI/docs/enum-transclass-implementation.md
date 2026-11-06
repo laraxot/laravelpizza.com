@@ -1,3 +1,15 @@
+---
+title: "enum transclass implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "enum transclass implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione transClass() negli Enum del Modulo UI
 
 ## Principio Fondamentale per il Modulo UI

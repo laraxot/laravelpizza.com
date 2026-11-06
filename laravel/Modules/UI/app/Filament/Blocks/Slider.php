@@ -8,6 +8,7 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 final class Slider
@@ -34,7 +35,7 @@ final class Slider
     }
 
     /**
-     * @return array<int|string, \Filament\Schemas\Components\Component>
+     * @return array<int|string, Component>
      */
     public static function getFormSchema(): array
     {

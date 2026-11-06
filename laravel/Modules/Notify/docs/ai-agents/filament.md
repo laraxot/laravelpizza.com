@@ -1,3 +1,15 @@
+---
+title: "filament"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament (Claude)
 
 ## Absolute rule
@@ -48,5 +60,5 @@ When working with protected Filament files:
 ## Links
 
 - [Claude docs index](./context.md)
-- [Filament rules prompt](../../bashscripts/tools/prompts/filament-rules.md)
+- [Filament rules prompt](../../../../../bashscripts/tools/prompts/filament-rules.md)
 - [General docs](../../docs/README.md)

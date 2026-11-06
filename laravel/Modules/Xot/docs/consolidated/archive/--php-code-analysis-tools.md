@@ -1,3 +1,11 @@
+---
+title: "__php-code-analysis-tools"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "__php-code-analysis-tools xot"
+---
 # __php-code-analysis-tools
 
 <!-- Contenuto migrato da _docs/__php-code-analysis-tools.txt -->

@@ -19,6 +19,6 @@ declare(strict_types=1);
         @if (property_exists($block, 'active') && !$block->active)
             @continue
         @endif
-        @include($block->view, array_merge($data, $block->data, ['data' => $block->data]))
+        @include($block->view, array_merge($block->data, $data, ['data' => array_merge($block->data, $data)]))
     @endforeach
 @endif

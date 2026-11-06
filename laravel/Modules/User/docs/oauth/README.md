@@ -1,3 +1,11 @@
+---
+title: "OAuth Documentation Index"
+type: index
+status: draft
+updated: 2026-10-07
+tags: [docs, user, oauth]
+qmd: "oauth documentation index user"
+---
 # OAuth Documentation Index
 
 > **Module**: User  

@@ -1,3 +1,11 @@
+---
+title: "MetatagPage"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "metatagpage xot"
+---
 # MetatagPage
 
 La classe `MetatagPage` è una pagina Filament che gestisce la configurazione dei metatag del sito.

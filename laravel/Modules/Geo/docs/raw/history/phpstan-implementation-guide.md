@@ -1,3 +1,14 @@
+---
+title: "phpstan implementation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan implementation guide"
+issues: []
+discussions: []
+---
+
 # Guida Pratica all'Implementazione delle Soluzioni PHPStan
 
 Questo documento fornisce una guida pratica su come implementare le soluzioni ai problemi più comuni rilevati da PHPStan a livello 9 nel framework Laraxot PTVX.
@@ -292,4 +303,12 @@ Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `
 
 ---
 
+title: "phpstan implementation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan implementation guide"
+issues: []
+discussions: []
 Seguendo questa guida pratica, potrai affrontare e risolvere in modo metodico i problemi rilevati da PHPStan nel tuo codebase Laraxot PTVX, migliorando la qualità complessiva del codice e riducendo gli errori a runtime. 

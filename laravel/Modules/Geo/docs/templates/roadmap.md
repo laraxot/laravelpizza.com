@@ -1,3 +1,15 @@
+---
+title: "roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap"
+issues: []
+discussions: []
+status: draft
+---
+
 # [Module/Theme Name] - Roadmap
 
 **Status PHPStan**: ✅ 0 errori (Level 10)

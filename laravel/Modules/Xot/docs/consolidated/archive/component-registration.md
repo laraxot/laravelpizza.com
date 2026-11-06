@@ -1,3 +1,11 @@
+---
+title: "Registrazione Automatica dei Componenti Blade"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "registrazione automatica dei componenti blade xot"
+---
 # Registrazione Automatica dei Componenti Blade
 
 ## Architettura di XotBaseServiceProvider

@@ -1,7 +1,21 @@
+---
+issues: []
+discussions: []
+title: "Best Practices per le Chiavi di Traduzione"
+module: "Lang"
+type: concept
+tags: [ottimizzazioni, correzioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ottimizzazioni correzioni"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: draft
+---
 # Best Practices per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-- [README modulo Lang](./readme.md)
+- [README modulo Lang](README.md)
 - [Convenzioni Path](./path_conventions.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Header](/laravel/modules/user/docs/header_language_avatar_implementation.md)
@@ -9,8 +23,6 @@
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
-<<<<<<< HEAD
-=======
 
 ## Panoramica
 
@@ -320,7 +332,6 @@ Seguire queste best practices per le chiavi di traduzione garantirà un'applicaz
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
->>>>>>> bebd548 (.)
 
 ## Panoramica
 

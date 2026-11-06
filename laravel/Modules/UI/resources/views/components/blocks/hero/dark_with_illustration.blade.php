@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <!--
   This example requires some changes to your config:
@@ -104,30 +103,30 @@ declare(strict_types=1);
               <div class="lg:py-24">
                 <div class="hidden sm:mb-5 sm:flex sm:justify-center lg:justify-start">
                   <a href="#" class="flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base">
-                    <span class="rounded-full bg-indigo-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">We're hiring</span>
-                    <span class="ml-4 text-sm">Visit our careers page</span>
+                    <span class="rounded-full bg-indigo-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">{{ __('ui::blocks_hero.dark_with_illustration.were_hiring.label') }}</span>
+                    <span class="ml-4 text-sm">{{ __('ui::blocks_hero.dark_with_illustration.visit_our_careers_page.label') }}</span>
                     <svg class="ml-2 h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                     </svg>
                   </a>
                 </div>
                 <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
-                  <span class="block">A better way to</span>
-                  <span class="block text-indigo-400">ship web apps</span>
+                  <span class="block">{{ __('ui::blocks_hero.dark_with_illustration.a_better_way_to.label') }}</span>
+                  <span class="block text-indigo-400">{{ __('ui::blocks_hero.dark_with_illustration.ship_web_apps.label') }}</span>
                 </h1>
-                <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.</p>
+                <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">{{ __('ui::blocks_hero.dark_with_illustration.paragraph_1.description') }}</p>
                 <div class="mt-10 sm:mt-12">
                   <form action="#" class="sm:mx-auto sm:max-w-xl lg:mx-0">
                     <div class="sm:flex">
                       <div class="min-w-0 flex-1">
-                        <label for="email" class="sr-only">Email address</label>
-                        <input id="email" type="email" placeholder="Enter your email" class="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900">
+                        <label for="email" class="sr-only">{{ __('ui::blocks_demo_shared.labels.email_address.label') }}</label>
+                        <input id="email" type="email" placeholder="{{ __('ui::blocks_demo_shared.fields.enter_your_email.placeholder') }}" class="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900">
                       </div>
                       <div class="mt-3 sm:ml-3 sm:mt-0">
-                        <button type="submit" class="block w-full rounded-md bg-indigo-500 px-4 py-3 font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900">Start free trial</button>
+                        <button type="submit" class="block w-full rounded-md bg-indigo-500 px-4 py-3 font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900">{{ __('ui::blocks_hero.dark_with_illustration.start_free_trial.label') }}</button>
                       </div>
                     </div>
-                    <p class="mt-3 text-sm text-gray-300 sm:mt-4">Start your free 14-day trial, no credit card necessary. By providing your email, you agree to our <a href="#" class="font-medium text-white">terms of service</a>.</p>
+                    <p class="mt-3 text-sm text-gray-300 sm:mt-4">{{ __('ui::blocks_hero.dark_with_illustration.paragraph_2.description') }} <a href="#" class="font-medium text-white">{{ __('ui::blocks_hero.dark_with_illustration.terms_of_service.label') }}</a>.</p>
                   </form>
                 </div>
               </div>

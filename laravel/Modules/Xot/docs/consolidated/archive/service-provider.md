@@ -1,3 +1,11 @@
+---
+title: "XotBaseServiceProvider: Architettura, Ruolo e Best Practice"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "xotbaseserviceprovider: architettura, ruolo e best practice xot"
+---
 # XotBaseServiceProvider: Architettura, Ruolo e Best Practice
 
 ## Ruolo della Classe
@@ -79,9 +87,9 @@ class CustomModuleServiceProvider extends XotBaseServiceProvider
 - Evitare collisioni di prefissi tra moduli diversi.
 
 ## Collegamenti e Backlink
-- [COMPONENTI_PERSONALIZZATI.md](./COMPONENTI_PERSONALIZZATI.md) — Regole e path per Blade components modulari
-- [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md) — Tracciamento conflitti risolti su ServiceProvider
-- [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md) — Standardizzazione metodi colonne Filament
+- [COMPONENTI_PERSONALIZZATI.md](./COMPONENTI_PERSONALIZZATI.md): Regole e path per Blade components modulari
+- [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md): Tracciamento conflitti risolti su ServiceProvider
+- [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md): Standardizzazione metodi colonne Filament
 
 ---
 

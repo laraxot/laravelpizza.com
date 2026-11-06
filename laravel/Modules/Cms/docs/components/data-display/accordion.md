@@ -1,3 +1,15 @@
+---
+title: "accordion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "accordion"
+issues: []
+discussions: []
+status: draft
+---
+
 # Accordion
 
 Il componente Accordion permette di organizzare contenuti in sezioni collassabili, ottimizzando lo spazio e migliorando la leggibilità dell'interfaccia.

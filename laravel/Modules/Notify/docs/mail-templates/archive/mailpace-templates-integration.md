@@ -1,3 +1,11 @@
+---
+title: "Integrazione MailPace Templates"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "integrazione mailpace templates notify"
+---
 # Integrazione MailPace Templates
 
 ## Panoramica

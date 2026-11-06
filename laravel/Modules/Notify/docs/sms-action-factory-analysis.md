@@ -1,3 +1,15 @@
+---
+title: "sms action factory analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms action factory analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi: Sostituzione Match con Formula nel SmsActionFactory
 
 ## Contesto Attuale

@@ -34,12 +34,19 @@ return [
         'queue_restart' => [
             'label' => 'Riavvia Code',
         ],
+        'composer_dump_autoload' => [
+            'label' => 'Composer Dump Autoload',
+        ],
+        'notify_migrate_themes_to_mail_templates' => [
+            'label' => 'Import Legacy Email/SMS Templates',
+            'modal_description' => 'Copies email/SMS content from the legacy notify_themes table into mail_templates (the new invite sending system). Idempotent: re-running it updates already-migrated templates instead of duplicating them, overwriting any manual edits made after the last run.',
+        ],
     ],
     'status' => [
-        'completed' => 'Completato',
-        'failed' => 'Fallito',
-        'waiting' => 'In attesa dell\'output...',
-        'running' => 'In esecuzione...',
+        'completed' => 'Completed',
+        'failed' => 'Failed',
+        'waiting' => 'Waiting for output...',
+        'running' => 'Running...',
     ],
     'messages' => [
         'command_started' => 'Comando Avviato',
@@ -48,11 +55,14 @@ return [
         'command_completed_desc' => 'Il comando :command è stato completato con successo',
         'command_failed' => 'Comando Fallito',
         'command_failed_desc' => 'Il comando :command è fallito. Controlla l\'output per i dettagli.',
+        'running_command' => [
+            'message' => 'Running command: :command',
+        ],
     ],
     'hints' => [
-        'running' => 'Il comando è in esecuzione. L\'output apparirà in tempo reale.',
-        'disabled' => 'Non è possibile eseguire altri comandi mentre un comando è in esecuzione.',
-        'scroll' => 'L\'output si aggiorna automaticamente e scorre verso il basso.',
+        'running' => 'The command is running. The output will appear in real time.',
+        'disabled' => 'Other commands cannot be run while a command is running.',
+        'scroll' => 'The output updates automatically and scrolls down.',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
@@ -60,4 +70,5 @@ return [
     ],
     'actions' => [
     ],
+    'select_command' => 'Select a command from the header to begin.',
 ];

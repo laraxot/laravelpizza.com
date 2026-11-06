@@ -1,3 +1,28 @@
+---
+title: "User Module - Third-Party Model Patterns"
+type: pattern
+tags: [third, party, model, patterns]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "third-party-model-patterns user module - third-party model patterns"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # User Module - Third-Party Model Patterns
 
 ## Spatie Permission Package Integration
@@ -225,6 +250,8 @@ $this->tableCreate(function (Blueprint $table) {
 - [Package Configuration](https://spatie.be/docs/laravel-permission/v5/installation-setup)
 
 ### Laraxot Philosophy
+- [Third-Party Model Inheritance](../Xot/docs/third-party-model-inheritance-philosophy.md)
+- [Model Architecture](../Xot/docs/models/MODEL_ARCHITECTURE.md)
 - [Third-Party Model Inheritance](../xot/docs/third-party-model-inheritance-philosophy.md)
 - [Model Architecture](../xot/docs/models/model_architecture.md)
 
@@ -232,4 +259,5 @@ $this->tableCreate(function (Blueprint $table) {
 
 **Integration Status**: ✅ Fully compatible with Spatie package architecture
 **Maintenance**: Low - leverages package maintenance
+**Security**: High - benefits from package security updates
 **Security**: High - benefits from package security updates

@@ -1,3 +1,15 @@
+---
+title: "factory phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "factory phpstan fixes"
+issues: []
+discussions: []
+status: draft
+---
+
 # Factory PHPStan Fixes - Geo Module
 
 ## Problemi Identificati
@@ -63,11 +75,7 @@ return [
 
 ## Collegamenti
 
-- [Geo Module Documentation](../readme.md)
+- [Geo Module Documentation](../README.md)
 - [Factory Pattern Guidelines](../../../../docs/factory-pattern.md)
 - [PHPStan Compliance Guide](../phpstan-fixes.md)
-
-## Aggiornamento verificato (2026-07-06)
-
-Ri-verificato con `phpstan analyse Modules/Geo --memory-limit=-1`: **0 errori** (era 22, in parte errori fantasma da cache PHPStan stantia su file `*PhpstanProbe.php` già cancellati da altri agenti — pulita con `rm -rf /tmp/phpstan/cache`). Errori reali residui corretti in questa sessione: due trait mai usati in nessuna classe di produzione, `Modules/Geo/app/Models/Traits/HasPlaceTrait.php` e `Modules/Geo/app/Traits/HasAddresses.php`, rinominati `.old` (convenzione già in uso nel repo). **Attenzione**: `Modules/Geo/app/Models/Traits/GeoTrait.php` era stato inizialmente rinominato `.old` per lo stesso motivo ma per errore — è in realtà usato da `Modules\TechPlanner\Models\Worker`, quindi ripristinato. Verificare sempre l'uso di un trait con grep su tutto `Modules/`, non solo sulla cartella del modulo che lo dichiara, prima di considerarlo morto. Dettagli: `docs/chat/phpstan-modules-progress-2026-07-06-pm.md` (root del repo) e `docs/wiki/second-brain/phpstan-journey.md`.
 

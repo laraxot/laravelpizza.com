@@ -77,6 +77,26 @@ return [
     ],
     /*
      * |--------------------------------------------------------------------------
+     * | Mappa: vista di partenza del territorio
+     * |--------------------------------------------------------------------------
+     * |
+     * | `default_view` (DCP-146): vista di partenza del territorio dell'ente, usata quando non c'e'
+     * | un punto salvato, un centro del campo e nemmeno il fuso orario del browser. Non e' la
+     * | posizione dell'utente (D19): e' il territorio che l'ente ha configurato, cosi' la mappa non
+     * | si apre mai sul mondo intero, anche senza GPS e senza HTTPS. Default: panoramica d'Italia.
+     * | Env: GEO_MAP_DEFAULT_LAT, GEO_MAP_DEFAULT_LNG, GEO_MAP_DEFAULT_ZOOM (1-19; valori non
+     * | validi ricadono sul default). Chiave completa: `geo.config.map.default_view`.
+     * |
+     */
+    'map' => [
+        'default_view' => [
+            'lat' => Illuminate\Support\Env::get('GEO_MAP_DEFAULT_LAT', 42.5),
+            'lng' => Illuminate\Support\Env::get('GEO_MAP_DEFAULT_LNG', 12.5),
+            'zoom' => Illuminate\Support\Env::get('GEO_MAP_DEFAULT_ZOOM', 6),
+        ],
+    ],
+    /*
+     * |--------------------------------------------------------------------------
      * | Timeout & Retry
      * |--------------------------------------------------------------------------
      * |

@@ -1,3 +1,11 @@
+---
+title: "Code Quality Analysis - User Module"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, user]
+qmd: "code quality analysis - user module user"
+---
 # Code Quality Analysis - User Module
 
 ## 🚨 Critical Issues Identified
@@ -304,7 +312,7 @@ public function getTableColumns(): array
 
 ## 📚 Related Documentation
 
-- [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/authentication_performance_optimization.md)
+- [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md)
 - [optimization-analysis.md](./optimization-analysis.md)
 - [phpstan-compliance.md](./phpstan-compliance.md)
 

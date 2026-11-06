@@ -1,27 +1,22 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://www.freshleafmedia.co.uk/blog/streaming-laravel-command-output-to-the-browser
  */
 
-declare(strict_types=1);
-
 namespace Modules\Job\Filament\Widgets;
 
-use Exception;
-use Filament\Widgets\Widget;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Process;
-use Symfony\Component\Console\Output\StreamOutput;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-use function Safe\fopen;
-
-class QueueListenWidget extends Widget
+class QueueListenWidget extends XotBaseWidget
 {
     public string $time = '---';
 
     public bool $run = false;
 
+    /** @var view-string */
     protected string $view = 'job::filament.widgets.queue-listen';
 
     protected int|string|array $columnSpan = 'full';
@@ -52,61 +47,12 @@ class QueueListenWidget extends Widget
         $process->wait();
     }
 
+    /**
+     * Esperimento di streaming (blog freshleafmedia) mai completato: lo streaming reale e' beginProcess().
+     * Nessun chiamante: la vista usa begin().
+     */
     public function beginStream(): void
     {
-        $this->run = ! $this->run;
-        // $output = new BufferedOutput();
-        /*
-         * $output = new class() extends StreamOutput {
-         * public function __construct()
-         * {
-         * parent::__construct(fopen('php://output', 'w'));
-         * }
-         *
-         * protected function doWrite(string $message, bool $newline): void
-         * {
-         * if ('' != $message) {
-         * dddx($message);
-         * }
-         *
-         * $message = str_replace("\n", '<br>', $message);
-         *
-         * if ($newline) {
-         * $message .= '<br>';
-         * }
-         *
-         * parent::doWrite($message, false);
-         * }
-         * };
-         */
-        $resource = fopen('php://stdout', 'w');
-        if ($resource === false) {
-            throw new Exception('['.__LINE__.']['.class_basename($this).']');
-        }
-        $output = new StreamOutput($resource);
-        // $output = new StreamOutput(fopen('/path/to/output.log', 'a', false));
-
-        Artisan::call('route:list', [], $output);
-        dddx($output);
-
-        // dddx($output);
-        // dddx($output->fetch());
-        /*
-         * while ($this->run) {
-         * // Stream the current count to the browser...
-         * $this->stream(
-         * to: 'count',
-         * content: $this->time,
-         * replace: true,
-         * );
-         *
-         * // Pause for 1 second between numbers...
-         * sleep(1);
-         *
-         * // Decrement the counter...
-         * // $this->time = (string) Carbon::now()->format('H:i:s');
-         * $this->time = $output->fetch().PHP_EOL;
-         * }
-         */
+        throw new \LogicException('QueueListenWidget::beginStream() non implementato');
     }
 }

@@ -1,3 +1,15 @@
+---
+title: "todo application"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "todo application"
+issues: []
+discussions: []
+status: draft
+---
+
 # Applicazione Todo con Laravel Folio e Volt
 
 Questa guida spiega come implementare un'applicazione Todo utilizzando Laravel Folio per il routing basato su file e Volt per la gestione dello stato e della reattività.

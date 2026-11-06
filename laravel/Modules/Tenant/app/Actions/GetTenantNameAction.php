@@ -6,7 +6,10 @@ namespace Modules\Tenant\Actions;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Safe\Exceptions\FilesystemException;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\realpath;
 
 /**
  * Action per ottenere il nome del tenant basato sul server name.
@@ -61,8 +64,9 @@ class GetTenantNameAction
      */
     private function resolveFromParts(Collection $parts): ?string
     {
-        if (file_exists($this->buildConfigPath($parts))) {
-            return $parts->implode('/');
+        $path = $this->buildConfigPath($parts);
+        if (file_exists($path)) {
+            return $this->tenantNameFromPath($path);
         }
 
         if ($parts->count() <= 2) {
@@ -71,9 +75,10 @@ class GetTenantNameAction
 
         /** @var Collection<int, string> $shortenedParts */
         $shortenedParts = $parts->slice(0, -1);
+        $shortenedPath = $this->buildConfigPath($shortenedParts);
 
-        if (file_exists($this->buildConfigPath($shortenedParts))) {
-            return $shortenedParts->implode('/');
+        if (file_exists($shortenedPath)) {
+            return $this->tenantNameFromPath($shortenedPath);
         }
 
         return null;
@@ -82,12 +87,41 @@ class GetTenantNameAction
     private function resolveFromDefaultHost(string $default): ?string
     {
         $defaultPath = implode('/', array_reverse(explode('.', $default)));
+        $path = base_path('config/'.$defaultPath);
 
-        if ($defaultPath === '' || ! file_exists(base_path('config/'.$defaultPath))) {
+        if ($defaultPath === '' || ! file_exists($path)) {
             return null;
         }
 
-        return $defaultPath;
+        return $this->tenantNameFromPath($path);
+    }
+
+    /**
+     * Un host può essere un symlink verso la config già caricata da Laravel.
+     * La chiave di config usa il path reale (`local.fixcity`), non l'alias (`eu.fixcity`).
+     */
+    private function tenantNameFromPath(string $path): string
+    {
+        try {
+            $real = realpath($path);
+            $configRoot = realpath(config_path());
+        } catch (FilesystemException) {
+            return $this->logicalTenantName($path);
+        }
+
+        $prefix = $configRoot.DIRECTORY_SEPARATOR;
+        if (! str_starts_with($real, $prefix)) {
+            return $this->logicalTenantName($path);
+        }
+
+        return str_replace(DIRECTORY_SEPARATOR, '/', substr($real, strlen($prefix)));
+    }
+
+    private function logicalTenantName(string $path): string
+    {
+        $relative = ltrim(substr($path, strlen(config_path())), DIRECTORY_SEPARATOR);
+
+        return str_replace(DIRECTORY_SEPARATOR, '/', $relative);
     }
 
     /**
@@ -98,6 +132,10 @@ class GetTenantNameAction
     private function getServerName(string $default): string
     {
         $serverName = getenv('SERVER_NAME');
+        if ((! is_string($serverName) || $serverName === '') && isset($_SERVER['SERVER_NAME']) && is_string($_SERVER['SERVER_NAME'])) {
+            $serverName = $_SERVER['SERVER_NAME'];
+        }
+
         if (is_string($serverName) && $serverName !== '' && $serverName !== '127.0.0.1') {
             return $serverName;
         }
@@ -109,7 +147,6 @@ class GetTenantNameAction
      * Costruisce il percorso di configurazione.
      *
      * @param  Collection<int, string>  $parts  Le parti del percorso
-     *
      * @return string Il percorso completo
      */
     private function buildConfigPath(Collection $parts): string

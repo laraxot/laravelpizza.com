@@ -2,196 +2,108 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\Tests\Unit;
-
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Tests\TestCase;
 use Illuminate\Support\Facades\Hash;
-use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
-use Modules\User\Tests\TestCase;
-use PHPUnit\Framework\Assert;
+
+/**
+ * @property User $user
+ */
 
 uses(TestCase::class);
 
-describe('User', function (): void {
-    test('user can be created', function (): void {
-        /* @var \Modules\User\Tests\TestCase $this */
-        /* @var TestCase $this */
-        try {
-            $user = UserFactory::new()->createOne([
-                'type' => UserType::MasterAdmin,
-                'email' => fake()->unique()->safeEmail(),
-                'password' => Hash::make('password123'),
-            ]);
-            \assert($user instanceof User);
+beforeEach(function (): void {
+    $this->user = User::factory()->create([
+        'type' => UserType::MasterAdmin,
+        'email' => fake()->unique()->safeEmail(),
+        'password' => Hash::make('password123'),
+    ]);
+});
 
-            Assert::assertInstanceOf(User::class, $user);
-            Assert::assertIsString($user->email);
-            $this->assertNotSame('', $user->email);
-            Assert::assertSame(UserType::MasterAdmin, $user->type);
-        } catch (\Throwable) {
-            $this->skipTest('User type aliases (e.g. master_admin) are not configured in this install.');
-        }
-    });
+test('user can be created', function (): void {
+    expect($this->user->email)->not->toBeEmpty();
+    expect($this->user->type)->toBe(UserType::MasterAdmin);
+});
 
-    test('user has correct type casting', function (): void {
-        /* @var TestCase $this */
-        try {
-            $user = UserFactory::new()->createOne(['type' => UserType::MasterAdmin]);
-            \assert($user instanceof User);
+test('user has correct type casting', function (): void {
+    expect($this->user->type)->toBe(UserType::MasterAdmin);
+});
 
-            $type = $user->type;
-            \assert($type instanceof UserType);
+test('user password is hashed', function (): void {
+    expect(Hash::check('password123', $this->user->password))->toBeTrue();
+    expect(Hash::check('wrongpassword', $this->user->password))->toBeFalse();
+});
 
-            Assert::assertInstanceOf(UserType::class, $type);
-            Assert::assertSame('master_admin', $type->value);
-        } catch (\Throwable) {
-            $this->skipTest('User type aliases (e.g. master_admin) are not configured in this install.');
-        }
-    });
+test('user can change password', function (): void {
+    $this->user->update(['password' => Hash::make('newpassword123')]);
 
-    test('user password is hashed', function (): void {
-        $user = UserFactory::new()->createOne(['password' => Hash::make('password123')]);
-        \assert($user instanceof User);
+    $user = User::findOrFail($this->user->id);
+    expect(Hash::check('newpassword123', $user->password))->toBeTrue();
+    expect(Hash::check('password123', $user->password))->toBeFalse();
+});
 
-        Assert::assertTrue(Hash::check('password123', $user->password));
-        Assert::assertFalse(Hash::check('wrongpassword', $user->password));
-    });
+test('user can be updated', function (): void {
+    $this->user->update([
+        'email' => 'updated@example.com',
+        'type' => UserType::BoUser,
+    ]);
 
-    test('user can change password', function (): void {
-        $user = UserFactory::new()->createOne(['password' => Hash::make('password123')]);
-        \assert($user instanceof User);
+    $this->user->refresh();
 
-        $user->update(['password' => Hash::make('newpassword123')]);
+    expect($this->user->email)->toBe('updated@example.com');
+    expect($this->user->type)->toBe(UserType::BoUser);
+});
 
-        $freshUser = $user->fresh();
-        \assert($freshUser instanceof User);
-        Assert::assertTrue(Hash::check('newpassword123', $freshUser->password));
-        Assert::assertFalse(Hash::check('password123', $freshUser->password));
-    });
+test('user can be deleted', function (): void {
+    $userId = $this->user->id;
 
-    test('user can be updated', function (): void {
-        /* @var TestCase $this */
-        try {
-            $user = UserFactory::new()->createOne([
-                'type' => UserType::MasterAdmin,
-                'email' => fake()->unique()->safeEmail(),
-            ]);
-            \assert($user instanceof User);
+    $this->user->delete();
 
-            $updatedEmail = 'updated-'.uniqid('', true).'@example.com';
+    expect(User::find($userId))->toBeNull();
+});
 
-            $user->update([
-                'email' => $updatedEmail,
-            ]);
+test('user has fillable attributes', function (): void {
+    $fillable = $this->user->getFillable();
 
-            $user->refresh();
+    expect($fillable)->toContain('email');
+    expect($fillable)->toContain('password');
+    expect($fillable)->toContain('type');
+});
 
-            Assert::assertSame($updatedEmail, $user->email);
-        } catch (\Throwable) {
-            $this->skipTest('User type aliases (e.g. master_admin) are not configured in this install.');
-        }
-    });
+test('user has hidden attributes', function (): void {
+    $hidden = $this->user->getHidden();
 
-    test('user can be deleted', function (): void {
-        /* @var TestCase $this */
-        $this->skipUnlessDirectPermissionSupported();
+    expect($hidden)->toContain('password');
+    expect($hidden)->toContain('remember_token');
+});
 
-        $user = UserFactory::new()->createOne();
-        \assert($user instanceof User);
+test('user can be found by email', function (): void {
+    $foundUser = User::where('email', $this->user->email)->firstOrFail();
+    expect($foundUser->id)->toBe($this->user->id);
+});
 
-        $userId = $user->id;
+test('user can be found by type', function (): void {
+    $admins = User::where('type', UserType::MasterAdmin)->get();
 
-        $user->delete();
+    expect($admins)->toHaveCount(1);
+    expect($admins->firstOrFail()->id)->toBe($this->user->id);
+});
 
-        Assert::assertNull(User::find($userId));
-    });
+test('user can be created with different types', function (): void {
+    $boUser = User::factory()->create(['type' => UserType::BoUser]);
+    $customerUser = User::factory()->create(['type' => UserType::CustomerUser]);
 
-    test('user has fillable attributes', function (): void {
-        $factory = UserFactory::new();
-        \assert($factory instanceof Factory);
-        $user = $factory->make();
-        \assert($user instanceof User);
+    expect($boUser->type)->toBe(UserType::BoUser);
+    expect($customerUser->type)->toBe(UserType::CustomerUser);
+});
 
-        $fillable = $user->getFillable();
+test('user has timestamps', function (): void {
+    expect($this->user->created_at)->not->toBeNull();
+    expect($this->user->updated_at)->not->toBeNull();
+});
 
-        Assert::assertContains('email', $fillable);
-        Assert::assertContains('password', $fillable);
-        Assert::assertContains('type', $fillable);
-    });
-
-    test('user has hidden attributes', function (): void {
-        $factory = UserFactory::new();
-        \assert($factory instanceof Factory);
-        $user = $factory->make();
-        \assert($user instanceof User);
-
-        $hidden = $user->getHidden();
-
-        Assert::assertContains('password', $hidden);
-        Assert::assertContains('remember_token', $hidden);
-    });
-
-    test('user can be found by email', function (): void {
-        $user = UserFactory::new()->createOne();
-        \assert($user instanceof User);
-
-        $foundUser = User::where('email', $user->email)->first();
-
-        \assert($foundUser instanceof User);
-        Assert::assertInstanceOf(User::class, $foundUser);
-        Assert::assertSame($user->id, $foundUser->id);
-    });
-
-    test('user can be found by type', function (): void {
-        /* @var TestCase $this */
-        try {
-            $user = UserFactory::new()->createOne(['type' => UserType::MasterAdmin]);
-            \assert($user instanceof User);
-
-            $admins = User::query()
-                ->where('type', UserType::MasterAdmin)
-                ->where('id', $user->id)
-                ->get();
-
-            Assert::assertCount(1, $admins);
-            $firstAdmin = $admins->first();
-            \assert($firstAdmin instanceof User);
-            Assert::assertSame($user->id, $firstAdmin->id);
-        } catch (\Throwable) {
-            $this->skipTest('User type aliases (e.g. master_admin) are not configured in this install.');
-        }
-    });
-
-    test('user can be created with different types', function (): void {
-        /* @var TestCase $this */
-        try {
-            $factory = UserFactory::new();
-            \assert($factory instanceof Factory);
-
-            $boUser = $factory->createOne(['type' => UserType::BoUser]);
-            $customerUser = $factory->createOne(['type' => UserType::CustomerUser]);
-            \assert($boUser instanceof User);
-            \assert($customerUser instanceof User);
-
-            Assert::assertSame(UserType::BoUser, $boUser->type);
-            Assert::assertSame(UserType::CustomerUser, $customerUser->type);
-        } catch (\Throwable) {
-            $this->skipTest('User type aliases are not configured in this install.');
-        }
-    });
-
-    test('user has timestamps', function (): void {
-        $user = UserFactory::new()->createOne();
-        \assert($user instanceof User);
-
-        Assert::assertNotNull($user->created_at);
-        Assert::assertNotNull($user->updated_at);
-    });
-
-    test('user soft delete functionality', function (): void {
-        /* @var TestCase $this */
-        $this->skipTest('User model does not implement SoftDeletes trait');
-    });
+test('user soft delete functionality', function (): void {
+    // Skip this test as User model does not implement SoftDeletes trait
+    $this->markTestSkipped('User model does not implement SoftDeletes trait');
 });

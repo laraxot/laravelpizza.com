@@ -1,3 +1,15 @@
+---
+title: "kilo large projects"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kilo large projects"
+issues: []
+discussions: []
+status: draft
+---
+
 # Kilo Code for Large Projects
 
 This project uses Kilo Code in a large monorepo context, so context control matters as much as model quality.

@@ -1,0 +1,58 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'isActive' => ['label' => 'isActive', 'placeholder' => 'isActive', 'helper_text' => 'isActive', 'description' => 'isActive'],
+        'value' => ['label' => 'value', 'placeholder' => 'value', 'helper_text' => '', 'description' => 'value'],
+        'user' => [
+            'name' => ['label' => 'user.name', 'placeholder' => 'user.name', 'helper_text' => 'user.name', 'description' => 'user.name'],
+        ],
+        'email' => ['label' => 'email', 'placeholder' => 'email', 'helper_text' => 'email', 'description' => 'email'],
+        'first_name' => ['label' => 'first_name', 'placeholder' => 'first_name', 'helper_text' => 'first_name', 'description' => 'first_name'],
+        'last_name' => ['label' => 'last_name', 'placeholder' => 'last_name', 'helper_text' => 'last_name', 'description' => 'last_name'],
+        'photo_profile' => ['label' => 'photo_profile', 'placeholder' => 'photo_profile', 'helper_text' => 'photo_profile', 'description' => 'photo_profile'],
+        'recordId' => ['label' => 'recordId', 'placeholder' => 'recordId', 'helper_text' => 'recordId', 'description' => 'recordId'],
+        'values' => ['label' => 'values', 'placeholder' => 'values', 'helper_text' => '', 'description' => 'values'],
+        'preset' => ['label' => 'preset', 'placeholder' => 'preset', 'helper_text' => 'preset', 'description' => 'preset'],
+        'fromBreakpoint' => ['label' => 'fromBreakpoint', 'placeholder' => 'fromBreakpoint', 'helper_text' => 'fromBreakpoint', 'description' => 'fromBreakpoint'],
+        'isAsymmetric' => ['label' => 'isAsymmetric', 'placeholder' => 'isAsymmetric', 'helper_text' => 'isAsymmetric', 'description' => 'isAsymmetric'],
+        'columns' => ['label' => 'columns', 'placeholder' => 'columns', 'helper_text' => 'columns', 'description' => 'columns'],
+        'startSpan' => ['label' => 'startSpan', 'placeholder' => 'startSpan', 'helper_text' => 'startSpan', 'description' => 'startSpan'],
+        'endSpan' => ['label' => 'endSpan', 'placeholder' => 'endSpan', 'helper_text' => 'endSpan', 'description' => 'endSpan'],
+        'url' => ['label' => 'url', 'placeholder' => 'url', 'helper_text' => 'url', 'description' => 'url'],
+        'shouldOpenInNewTab' => ['label' => 'shouldOpenInNewTab', 'placeholder' => 'shouldOpenInNewTab', 'helper_text' => 'shouldOpenInNewTab', 'description' => 'shouldOpenInNewTab'],
+        'anno_valutatore' => ['label' => 'anno_valutatore'],
+        'stabi_repar_anno' => ['label' => 'stabi_repar_anno'],
+        'type' => ['label' => 'type'],
+    ],
+    'actions' => [
+        'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
+        'add' => ['label' => 'add', 'icon' => 'add', 'tooltip' => 'add'],
+        'delete' => ['label' => 'delete', 'icon' => 'delete', 'tooltip' => 'delete'],
+        'reorder' => ['label' => 'reorder', 'icon' => 'reorder', 'tooltip' => 'reorder'],
+        'associateAnother' => ['label' => 'associateAnother', 'icon' => 'associateAnother', 'tooltip' => 'associateAnother'],
+        'attachFiles' => ['label' => 'attachFiles', 'icon' => 'attachFiles', 'tooltip' => 'attachFiles'],
+        'customBlock' => ['label' => 'customBlock', 'icon' => 'customBlock', 'tooltip' => 'customBlock'],
+        'grid' => ['label' => 'grid', 'icon' => 'grid', 'tooltip' => 'grid'],
+        'link' => ['label' => 'link', 'icon' => 'link', 'tooltip' => 'link'],
+        'textColor' => ['label' => 'textColor', 'icon' => 'textColor', 'tooltip' => 'textColor'],
+        'attachAnother' => ['label' => 'attachAnother', 'icon' => 'attachAnother', 'tooltip' => 'attachAnother'],
+        'CheckCriterioEsclusioneBulkAction' => ['label' => 'CheckCriterioEsclusioneBulkAction', 'icon' => 'CheckCriterioEsclusioneBulkAction', 'tooltip' => 'CheckCriterioEsclusioneBulkAction'],
+        'send_schede' => ['label' => 'send_schede', 'icon' => 'send_schede', 'tooltip' => 'send_schede'],
+        'zip_scheda' => ['label' => 'zip_scheda', 'icon' => 'zip_scheda', 'tooltip' => 'zip_scheda'],
+        'copy_from_last_year_' => ['label' => "Copia dall'anno precedente", 'icon' => 'copy_from_last_year_', 'tooltip' => "Copia dall'anno precedente"],
+        'import_valutatori_' => ['label' => 'import_valutatori_', 'icon' => 'import_valutatori_', 'tooltip' => 'import_valutatori_'],
+        'merge_double_row_cateco_year' => ['label' => 'merge_double_row_cateco_year', 'icon' => 'merge_double_row_cateco_year', 'tooltip' => 'merge_double_row_cateco_year'],
+        'populate_year' => ['label' => 'populate_year', 'icon' => 'populate_year', 'tooltip' => 'populate_year'],
+        'trova_esclusi' => ['label' => 'trova_esclusi', 'icon' => 'trova_esclusi', 'tooltip' => 'trova_esclusi'],
+        'compila' => ['label' => 'compila', 'icon' => 'compila', 'tooltip' => 'compila'],
+        'fill_out_the_form' => ['label' => 'fill_out_the_form', 'icon' => 'fill_out_the_form', 'tooltip' => 'fill_out_the_form'],
+        'record_pdf' => ['label' => 'record_pdf', 'icon' => 'record_pdf', 'tooltip' => 'record_pdf'],
+        'MakePdfAction' => ['label' => 'MakePdfAction', 'icon' => 'MakePdfAction', 'tooltip' => 'MakePdfAction'],
+    ],
+    'sections' => [
+        'empty' => ['label' => '', 'heading' => ''],
+    ],
+];

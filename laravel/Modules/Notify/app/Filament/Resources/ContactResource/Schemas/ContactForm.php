@@ -13,7 +13,7 @@ class ContactForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'name' => TextInput::make('name')
@@ -25,8 +25,6 @@ class ContactForm extends XotBaseResourceForm
                 ->maxLength(255),
             'phone' => TextInput::make('phone')
                 ->tel()
-                ->maxLength(255),
-        ];
-
+                ->maxLength(255)];
     }
 }

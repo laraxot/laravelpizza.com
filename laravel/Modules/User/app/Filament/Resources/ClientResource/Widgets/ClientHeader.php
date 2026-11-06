@@ -9,9 +9,9 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class ClientHeader extends XotBaseWidget
 {
-    protected string $view = 'user::filament.resources.client-resource.widgets.client-header';
-
     public Client $client;
+
+    protected string $view = 'user::filament.resources.client-resource.widgets.client-header';
 
     protected int|string|array $columnSpan = 'full';
 

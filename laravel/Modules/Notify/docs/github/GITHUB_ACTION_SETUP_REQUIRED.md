@@ -1,3 +1,15 @@
+---
+title: "GITHUB ACTION SETUP REQUIRED"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GITHUB ACTION SETUP REQUIRED"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🚨 IMPORTANT: GitHub Action Setup Required
 
 > **Date**: 2026-03-13  
@@ -5,7 +17,6 @@
 > **Priority**: HIGH
 
 ---
-
 ## ❗ Action Status
 
 **Workflow**: 🔄 Sync Subtrees  
@@ -45,7 +56,7 @@ ssh-keygen -t ed25519 -C "actions@github.com" -f ~/.ssh/subtree_sync
 
 ### Step 3: Add Private Key to Repo Secrets
 
-1. Go to: **https://github.com/laraxot/base_fixcity_fila5/settings/secrets/actions**
+1. Go to: **https://github.com/laraxot/platform/settings/secrets/actions**
 2. Click **"New repository secret"**
 3. Fill in:
    - **Name**: `SUBTREE_SSH_KEY`
@@ -61,7 +72,7 @@ ssh-keygen -t ed25519 -C "actions@github.com" -f ~/.ssh/subtree_sync
 
 ```bash
 # Go to project root
-cd /var/www/_bases/base_fixcity_fila5
+cd /var/www/_bases/base_ptvx_fila5
 
 # Create empty commit to trigger workflow
 git commit --allow-empty -m "Test subtree sync workflow"
@@ -70,7 +81,7 @@ git commit --allow-empty -m "Test subtree sync workflow"
 git push origin dev
 
 # Wait 1-2 minutes, then check:
-# https://github.com/laraxot/base_fixcity_fila5/actions
+# https://github.com/laraxot/platform/actions
 ```
 
 ---
@@ -116,11 +127,11 @@ Full documentation is available at:
 
 ```bash
 # Using GitHub CLI
-gh run list --repo laraxot/base_fixcity_fila5
+gh run list --repo laraxot/base_ptvx_fila5
 gh run view <run-id> --log
 ```
 
-Or visit: **https://github.com/laraxot/base_fixcity_fila5/actions**
+Or visit: **https://github.com/laraxot/platform/actions**
 
 ---
 
@@ -130,7 +141,7 @@ If you have questions about the setup:
 
 1. Check documentation in `bashscripts/docs/github/actions/`
 2. Review error logs on GitHub Actions
-3. Contact: dev @fixcity.example.com
+3. Contact: dev @laraxot.example.com
 
 ---
 

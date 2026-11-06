@@ -2,6 +2,12 @@
 module: User
 concept: Architecture
 last_updated: 2026-04-15
+title: "User Module Architecture"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user, wiki]
+qmd: "user module architecture user"
 ---
 
 # User Module Architecture

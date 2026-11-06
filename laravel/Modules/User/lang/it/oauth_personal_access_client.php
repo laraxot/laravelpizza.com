@@ -72,10 +72,6 @@ return [
             'description' => 'Azione di logout',
             'icon' => 'heroicon-o-arrow-right-on-rectangle',
         ],
-        'profile' => [
-            'tooltip' => 'profile',
-            'icon' => 'profile',
-        ],
     ],
     'messages' => [
         'created' => 'Personal Access Client creato con successo',

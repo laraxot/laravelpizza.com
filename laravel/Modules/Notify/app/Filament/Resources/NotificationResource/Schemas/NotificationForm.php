@@ -15,7 +15,7 @@ class NotificationForm extends XotBaseResourceForm
     /**
      * @return array<int|string, SchemaComponent>
      */
-    public static function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             'type' => TextInput::make('type')->required()->label('Notification Type'),
@@ -27,8 +27,6 @@ class NotificationForm extends XotBaseResourceForm
             'data' => Textarea::make('data')->label('Notification Data')->columnSpanFull(),
             'read_at' => DateTimePicker::make('read_at')->label('Read At')->nullable(),
             'created_by' => TextInput::make('created_by')->label('Created By')->disabled(),
-            'updated_by' => TextInput::make('updated_by')->label('Updated By')->disabled(),
-        ];
-
+            'updated_by' => TextInput::make('updated_by')->label('Updated By')->disabled()];
     }
 }

@@ -1,3 +1,13 @@
+---
+title: "Filament Forms"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, development]
+qmd: "Filament Forms"
+---
 # Filament Forms
 
 ## Best Practices
@@ -34,7 +44,7 @@ class PerformanceResource extends XotBaseResource
                 ->required()
                 ->string()
                 ->maxLength(255),
-
+                
             Forms\Components\TextInput::make('punteggio')
                 ->required()
                 ->numeric()
@@ -49,7 +59,7 @@ class PerformanceResource extends XotBaseResource
             Forms\Components\DatePicker::make('data_valutazione')
                 ->nullable()
                 ->displayFormat('d/m/Y'),
-
+                
             Forms\Components\Select::make('stato')
                 ->options([
                     'bozza' => 'Bozza',
@@ -241,7 +251,7 @@ public static function getFormSchema(): array
             ->afterStateUpdated(function (Forms\Components\TextInput $component, $state) {
                 $component->state(strtoupper($state));
             }),
-
+            
         Forms\Components\Select::make('tipo')
             ->options([
                 'A' => 'Tipo A',

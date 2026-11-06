@@ -1,3 +1,13 @@
+---
+title: "Convenzioni"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, conventions]
+qmd: "Convenzioni"
+---
 # Convenzioni
 
 Questa cartella contiene le convenzioni di nomenclatura e le regole di stile utilizzate nel progetto.
@@ -23,7 +33,7 @@ Queste convenzioni devono essere seguite per mantenere la coerenza del codice in
 * [README.md](docs/moduli/installati/README.md)
 * [README.md](docs/moduli/comandi/README.md)
 * [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
+* [README.md](../README.md)
 * [README.md](docs/module-links/README.md)
 * [README.md](docs/troubleshooting/git-conflicts/README.md)
 * [README.md](docs/tecnico/laraxot/README.md)
@@ -53,11 +63,11 @@ Queste convenzioni devono essere seguite per mantenere la coerenza del codice in
 * [README.md](../../../Notify/docs/README.md)
 * [README.md](../../../Xot/docs/filament/README.md)
 * [README.md](../../../Xot/docs/phpstan/README.md)
-* [README.md](../../../Xot/docs/exceptions/README.md)
+* [README.md](../exceptions/readme.md)
 * [README.md](../../../Xot/docs/README.md)
 * [README.md](../../../Xot/docs/standards/README.md)
 * [README.md](../../../Xot/docs/conventions/README.md)
-* [README.md](../../../Xot/docs/development/README.md)
+* [README.md](../development/readme.md)
 * [README.md](../../../Dental/docs/README.md)
 * [README.md](../../../User/docs/phpstan/README.md)
 * [README.md](../../../User/docs/README.md)

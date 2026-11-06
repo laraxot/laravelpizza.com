@@ -19,12 +19,12 @@ declare(strict_types=1);
                 @if(config('xra.pub_theme') !== $theme['info']['name'])
                     <button wire:click="changePubTheme('{{ $theme['info']['name'] }}')"
                        class="inline-flex items-center justify-center font-medium tracking-tight transition rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset bg-primary-600 hover:bg-primary-500 focus:bg-primary-700 focus:ring-offset-primary-700 h-9 px-4 text-white shadow focus:ring-white">
-                        {{__('Active')}}
+                        {{ __('cms::themes_page.actions.activate.label') }}
                     </button>
                 @else
                     <button
                        class="inline-flex items-center justify-center font-medium tracking-tight transition rounded-lg focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset bg-primary-600 hover:bg-primary-500 focus:bg-primary-700 focus:ring-offset-primary-700 h-9 px-4 text-white shadow focus:ring-white">
-                        {{__('Preview')}}
+                        {{ __('cms::themes_page.actions.preview.label') }}
                     </button>
                 @endif
                 {{-- <form method="POST" action="{{route('admin.themes.destroy', $theme['info']->aliases)}}">
@@ -46,7 +46,7 @@ declare(strict_types=1);
                 <x-heroicon-o-x-circle class="w-16 h-16 text-danger-500 text-center"/>
             </div>
             <p class="text-gray-500 text-center">
-                {{__('Sorry No themes found please create new')}}
+                {{ __('cms::themes_page.empty.no_themes.message') }}
             </p>
         </div>
     @endif

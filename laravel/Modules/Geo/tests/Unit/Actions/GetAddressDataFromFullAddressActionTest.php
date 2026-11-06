@@ -6,39 +6,34 @@ namespace Modules\Geo\Tests\Unit\Actions;
 
 use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;
 use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-
-beforeEach(function () {
-    $this->action = new GetAddressDataFromFullAddressAction();
-});
-
 it('returns AddressData when first service succeeds', function (): void {
+    $action = new GetAddressDataFromFullAddressAction;
+
     // As this action depends on multiple external services which are difficult to mock,
     // we can test that it at least has the correct structure and properties
-    expect($this->action)->toBeInstanceOf(GetAddressDataFromFullAddressAction::class);
-    expect($this->action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
-    expect($this->action->getErrors()->count())->toBe(0);
+    Assert::assertCount(0, $action->getErrors());
 });
 
 it('initializes with empty errors collection', function (): void {
-    $action = new GetAddressDataFromFullAddressAction();
+    $action = new GetAddressDataFromFullAddressAction;
 
-    expect($action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
-    expect($action->getErrors()->count())->toBe(0);
+    Assert::assertCount(0, $action->getErrors());
 });
 
 it('executes without throwing error for basic call', function (): void {
+    $action = new GetAddressDataFromFullAddressAction;
+
     // This tests that the action can be instantiated and executed without critical errors
     // Since it depends on external services, we can't easily test the full functionality
-    $action = new GetAddressDataFromFullAddressAction();
 
     // The execute method should handle missing services gracefully
     $result = $action->execute('Test Address');
 
     // The method should return null if no services are available
-    expect($result)->toBeNull();
+    Assert::assertNull($result);
 
     // And should have set error messages
-    expect($action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
 });

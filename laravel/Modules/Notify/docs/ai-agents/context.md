@@ -1,3 +1,15 @@
+---
+title: "context"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "context"
+issues: []
+discussions: []
+status: draft
+---
+
 # Claude - Docs index
 
 ## Context
@@ -12,8 +24,13 @@ LaravelPizza is a modular meetup/community platform built on Laravel + Filament 
 - [Filament](./filament.md)
 - [MCP](./mcp.md)
 - [Chaos Monkey Readiness](./chaos-monkey-readiness.md)
-- [Package Risk Matrix 2026-03-02](./package-risk-matrix-2026-03-02.md)
+- [Package Risk Matrix](./package-risk-matrix.md)
 
 ## Project docs
 
 - [General docs index](../../../../docs/index.md)
+- [Package Risk Matrix 2026-03-02](./package-risk-matrix.md)
+
+## Project docs
+
+- [General docs index](../../../../../docs/index.md)

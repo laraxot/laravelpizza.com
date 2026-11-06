@@ -8,11 +8,8 @@ return [
     'navigation' => [
         'name' => 'Media',
         'plural' => 'Media',
-        'group' => [
-            'name' => 'Sistema',
-            'description' => 'Gestione dei file multimediali',
-        ],
-        'label' => 'media',
+        'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
+        'label' => 'Media',
         'sort' => 20,
         'icon' => 'media-main-animated',
     ],

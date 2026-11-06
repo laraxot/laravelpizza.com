@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Schema;
+use Modules\Tenant\Actions\Config\FilterConfigStringKeysAction;
 use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
-use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
@@ -49,13 +50,12 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
     public function registerMorphMap(): void
     {
-        $map = TenantService::config('morph_map');
+        $map = app(ResolveTenantConfigValueAction::class)->execute('morph_map');
         if (! \is_array($map)) {
             $map = [];
         }
 
-        /** @var array<string, mixed> $map */
-        Relation::morphMap($this->buildMorphMap(ConfigStringKeyFilter::onlyStringKeys($map)));
+        Relation::morphMap($this->buildMorphMap(app(FilterConfigStringKeysAction::class)->execute($map)));
     }
 
     public function registerDB(): void
@@ -67,10 +67,42 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
         /** @var array<string, mixed> $data */
         $data = $this->loadTenantDatabaseConfig($preMergeDefaultConn);
+        /** @var array<string, mixed> $explicitConnections */
+        $explicitConnections = Arr::get($data, 'connections', []);
         $data = Arr::set($data, 'connections', $this->mergeModuleConnections($data, $preMergeDefaultConn));
 
         Config::set('database', $data);
+        $this->aliasModuleConnectionsToDefault(array_keys(\is_array($explicitConnections) ? $explicitConnections : []), $preMergeDefaultConn);
         $this->reconnectDatabaseUnlessTesting();
+    }
+
+    /**
+     * Le connessioni di modulo create copiando la default puntano allo stesso database:
+     * le risolve sulla stessa istanza `Connection` della default.
+     *
+     * Senza alias ogni modulo apre una propria sessione sul database, e una transazione
+     * che scrive su piu' moduli (es. registro rifiuti + magazzino) non e' atomica: il
+     * commit avviene connessione per connessione. Con l'alias c'e' una sola sessione e
+     * una sola transazione, come gia' avviene nei test. Le connessioni dichiarate
+     * esplicitamente nella config del tenant (database diverso) restano separate.
+     *
+     * @param  list<int|string>  $explicitNames
+     */
+    private function aliasModuleConnectionsToDefault(array $explicitNames, string $defaultConnection): void
+    {
+        foreach (Module::getOrdered() as $module) {
+            if (! $module instanceof LaravelModule) {
+                continue;
+            }
+
+            $name = $module->getSnakeName();
+            if ($name === $defaultConnection || \in_array($name, $explicitNames, true)) {
+                continue;
+            }
+
+            DB::purge($name);
+            DB::extend($name, static fn (): \Illuminate\Database\ConnectionInterface => DB::connection($defaultConnection));
+        }
     }
 
     #[Override]
@@ -91,7 +123,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
             $configName = $config['name'];
             if (is_string($configName)) {
-                TenantService::config($configName);
+                app(ResolveTenantConfigValueAction::class)->execute($configName);
             }
         }
     }
@@ -116,7 +148,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
      */
     private function loadTenantDatabaseConfig(string $preMergeDefaultConn): array
     {
-        $raw = TenantService::config('database');
+        $raw = app(ResolveTenantConfigValueAction::class)->execute('database');
         /** @var array<string, mixed> $data */
         $data = is_array($raw) ? $raw : [];
 
@@ -128,13 +160,11 @@ class TenantServiceProvider extends XotBaseServiceProvider
             Arr::set($data, 'connections.user', Arr::get($data, 'connections.user_'.$default));
         }
 
-        /** @var array<string, mixed> $data */
-        return ConfigStringKeyFilter::onlyStringKeys($data);
+        return app(FilterConfigStringKeysAction::class)->execute($data);
     }
 
     /**
      * @param  array<string, mixed>  $data
-     *
      * @return array<string, mixed>
      */
     private function mergeModuleConnections(array $data, string $defaultConnection): array
@@ -174,8 +204,9 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
     /**
      * @param  array<string, mixed>  $map
-     *
      * @return array<string, class-string<Model>>
+     *
+     * @SuppressWarnings("PHPMD.ErrorControlOperator")
      */
     private function buildMorphMap(array $map): array
     {
@@ -183,13 +214,24 @@ class TenantServiceProvider extends XotBaseServiceProvider
         $typedMap = [];
 
         foreach ($map as $alias => $class) {
-            if (! is_string($alias) || ! is_string($class) || ! class_exists($class)) {
+            // ponytail: @ suppresses autoload ErrorException for missing modules
+            if (! is_string($alias) || ! is_string($class) || ! @class_exists($class)) {
                 continue;
             }
 
             /** @var class-string<Model> $modelClass */
             $modelClass = $class;
             $typedMap[$alias] = $modelClass;
+        }
+
+        // The 'user' morph alias must always resolve to the canonical user class
+        // (XotData::getUserClass()), never to a stale per-domain config entry:
+        // polymorphic pivot rows (e.g. model_has_role.model_type) are written
+        // through it, and a wrong class here makes roles invisible.
+        $userClass = XotData::make()->getUserClass();
+        if (is_subclass_of($userClass, Model::class)) {
+            /** @var class-string<Model> $userClass */
+            $typedMap['user'] = $userClass;
         }
 
         return $typedMap;

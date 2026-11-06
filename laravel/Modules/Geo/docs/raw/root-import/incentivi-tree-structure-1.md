@@ -1,3 +1,14 @@
+---
+title: "incentivi tree structure 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi tree structure 1"
+issues: []
+discussions: []
+---
+
 # 🌳 ALBERO DETTAGLIATO MODULO INCENTIVI
 
 ## 📂 STRUTTURA COMPLETA A PROFONDITÀ 4
@@ -346,6 +357,14 @@ laravel/Modules/Incentivi/
 
 ---
 
+title: "incentivi tree structure 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "incentivi tree structure 1"
+issues: []
+discussions: []
 ## 📊 CONTEGGIO FILE PER CATEGORIA
 
 | Categoria | Quantità | Tipo |

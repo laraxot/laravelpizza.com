@@ -1,3 +1,11 @@
+---
+title: "Sistema Traduzioni - Documentazione Consolidata DRY + KISS"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "sistema traduzioni - documentazione consolidata dry + kiss xot"
+---
 # Sistema Traduzioni - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le regole di traduzione del progetto

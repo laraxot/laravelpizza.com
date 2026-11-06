@@ -4,14 +4,26 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-        'id' => [
-            'label' => 'id',
+        'id' => ['label' => 'id'],
+        'created_at' => ['label' => 'created_at'],
+        'updated_at' => ['label' => 'updated_at'],
+        'model_type' => ['label' => 'model_type'],
+        'model_id' => ['label' => 'model_id'],
+        'extra_attributes' => ['label' => 'extra_attributes'],
+    ],
+    'actions' => [
+        'create' => ['label' => 'create', 'icon' => 'create', 'tooltip' => 'create'],
+        'layout' => ['label' => 'layout', 'icon' => 'layout', 'tooltip' => 'layout'],
+        'delete' => ['label' => 'delete', 'icon' => 'delete', 'tooltip' => 'delete'],
+        'view' => [
+            'label' => 'view',
+            'icon' => 'view',
+            'tooltip' => 'view',
         ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-        'updated_at' => [
-            'label' => 'updated_at',
+        'edit' => [
+            'label' => 'edit',
+            'icon' => 'edit',
+            'tooltip' => 'edit',
         ],
     ],
 ];

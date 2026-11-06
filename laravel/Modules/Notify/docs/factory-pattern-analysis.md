@@ -1,3 +1,15 @@
+---
+title: "factory pattern analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "factory pattern analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi del Pattern Factory per le Notifiche
 
 Questo documento analizza l'implementazione del pattern Factory per la gestione delle notifiche , confrontando l'approccio originale con quello basato su Factory.

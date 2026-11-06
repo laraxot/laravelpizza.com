@@ -29,6 +29,7 @@ return [
         'unblock' => 'Sblocca',
         'send_reset_link' => 'Invia Link Reset Password',
         'verify_email' => 'Verifica Email',
+        'attach_role' => 'Assign Role',
     ],
     'fields' => [
         'name' => [
@@ -43,37 +44,6 @@ return [
             'placeholder' => 'Inserisci l\'email',
             'description' => 'email',
             'helper_text' => '',
-            'tooltip' => '',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'role' => [
-            'label' => 'Ruolo',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'active' => [
-            'label' => 'Active',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'id' => [
-            'label' => 'ID',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'password' => [
             'label' => 'Password',
@@ -85,34 +55,10 @@ return [
         'password_confirmation' => [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la password',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'email_verified_at' => [
-            'label' => 'Email Verificata il',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'current_password' => [
             'label' => 'Password Attuale',
             'placeholder' => 'Inserisci la password attuale',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'roles' => [
-            'label' => 'Ruoli',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'permissions' => [
-            'label' => 'Permessi',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'status' => [
             'label' => 'Stato',
@@ -121,135 +67,6 @@ return [
                 'inactive' => 'Inattivo',
                 'blocked' => 'Bloccato',
             ],
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'last_login' => [
-            'label' => 'Ultimo Accesso',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'avatar' => [
-            'label' => 'Avatar',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'language' => [
-            'label' => 'Lingua',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'timezone' => [
-            'label' => 'Fuso Orario',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'password_expires_at' => [
-            'label' => 'Scadenza Password',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'verified' => [
-            'label' => 'Verificato',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'unverified' => [
-            'label' => 'Non Verificato',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'reorderRecords' => [
-            'label' => 'reorderRecords',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'resetFilters' => [
-            'label' => 'resetFilters',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'openFilters' => [
-            'label' => 'openFilters',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'isActive' => [
-            'label' => 'isActive',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'deactivate' => [
-            'label' => 'deactivate',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'delete' => [
-            'label' => 'delete',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'edit' => [
-            'label' => 'edit',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'view' => [
-            'label' => 'view',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'create' => [
-            'label' => 'create',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'detach' => [
-            'label' => 'detach',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'attach' => [
-            'label' => 'attach',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'changePassword' => [
-            'label' => 'changePassword',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
     ],
     'filters' => [
@@ -360,9 +177,32 @@ return [
         'impersonate_users' => 'Impersona utenti',
         'manage_roles' => 'Gestisci ruoli',
     ],
-    'model' => [
-        'label' => 'Utente',
+    'relation_groups' => [
+        'security' => [
+            'label' => 'Security',
+        ],
+        'organization' => [
+            'label' => 'Organization',
+        ],
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
+    'widgets' => [
+        'overview' => [
+            'total' => [
+                'label' => 'Total users',
+                'description' => 'Overall number of registered users',
+            ],
+            'active' => [
+                'label' => 'Active users',
+                'description' => 'Users with an active account',
+            ],
+            'verified' => [
+                'label' => 'Verified emails',
+                'description' => 'Percentage of users with a verified email',
+            ],
+            'recent_logins' => [
+                'label' => 'Logins (24h)',
+                'description' => 'Successful logins in the last 24 hours',
+            ],
+        ],
+    ],
 ];

@@ -1,3 +1,15 @@
+---
+title: "user traits"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user traits"
+issues: []
+discussions: []
+status: draft
+---
+
 # User Traits Implementation
 
 ## Overview
@@ -96,6 +108,6 @@ trait PasswordValidationRules
    - Test database operations
 
 ## Links
-- [Back to Roadmap](../../docs/roadmap.md)
+- [Back to Roadmap](../../roadmap.md)
 - Related: [PHPStan Level 7 Compliance](./phpstan-level7-compliance.md)
 - Related: [Authentication Log Enhancement](./auth-log-enhancement.md)

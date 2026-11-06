@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{--
 /**
@@ -30,11 +29,11 @@ declare(strict_types=1);
 @endphp
 
 @if(empty($contacts))
-    <span class="text-gray-400 text-sm italic" role="status" aria-label="Nessun contatto">
-        Nessun contatto
+    <span class="text-gray-400 text-sm italic" role="status" aria-label="{{ __('notify::columns.contact.empty_state') }}">
+        {{ __('notify::columns.contact.empty_state') }}
     </span>
 @else
-    <div class="flex flex-wrap gap-2 items-center" role="list" aria-label="Lista contatti">
+    <div class="flex flex-wrap gap-2 items-center" role="list" aria-label="{{ __('notify::contact-column.aria_labels.contact_list') }}">
         @foreach($contacts as $contact)
             @php
                 try {
@@ -89,31 +88,3 @@ declare(strict_types=1);
         @endforeach
     </div>
 @endif
-                    
-                    <span class="ml-1 text-xs font-medium group-hover:underline">
-                        {{ $contact['display_value'] ?? $contact['value'] }}
-                    </span>
-                </a>
-            @else
-                {{-- Contatto non cliccabile (es. fax) --}}
-                <div class="inline-flex items-center {{ $enumCase->getColor() }}"
-                     role="listitem"
-                     aria-label="{{ $enumCase->getLabel() }}: {{ $contact['value'] }}"
-                     title="{{ $contact['value'] }}">
-                    
-                    @svg($enumCase->getIcon(), 'w-4 h-4 flex-shrink-0', ['aria-hidden' => 'true'])
-                    
-                    <span class="ml-1 text-xs font-medium">
-                        {{ $contact['display_value'] ?? $contact['value'] }}
-                    </span>
-                </div>
-            @endif
-        @endif
-    @empty
-        <span class="text-gray-400 text-sm italic" 
-              role="status" 
-              aria-label="{{ __('notify::contact-column.aria_labels.no_contacts') }}">
-            {{ __('notify::contact-column.no_contacts') }}
-        </span>
-    @endforelse
-</div>

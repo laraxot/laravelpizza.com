@@ -1,3 +1,15 @@
+---
+title: "component page alias rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "component page alias rule"
+issues: []
+discussions: []
+status: draft
+---
+
 # Page Component Alias Rule
 
 ## Sintesi
@@ -26,4 +38,4 @@ Quindi la blade deve restare indipendente dal nome del tema attivo.
 ## Collegamenti
 
 - [layout-runtime-contract.md](./layout-runtime-contract.md)
-- [../../Themes/Sixteen/docs/component-page-alias-rule.md](../../Themes/Sixteen/docs/component-page-alias-rule.md)
+- [../../Themes/Sixteen/docs/component-page-alias-rule.md](../../../Themes/Sixteen/docs/component-page-alias-rule.md)

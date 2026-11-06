@@ -1,3 +1,11 @@
+---
+title: "Gestione dei Conflitti Git"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "gestione dei conflitti git xot"
+---
 # Gestione dei Conflitti Git
 
 ## Principi Fondamentali

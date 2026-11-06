@@ -1,3 +1,15 @@
+---
+title: "project overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project overview"
+issues: []
+discussions: []
+status: draft
+---
+
 # Project Overview
 
 PTVX is a modular HR & Performance evaluation system built on Laravel + Filament + Laraxot.
@@ -55,3 +67,4 @@ Modules/{ModuleName}/
 
 ---
 [Back to index](../index.md) | [Guidelines](guidelines.md) | [Links](links.md)
+[Back to index](../../../index.md) | [Guidelines](guidelines.md) | [Links](links.md)

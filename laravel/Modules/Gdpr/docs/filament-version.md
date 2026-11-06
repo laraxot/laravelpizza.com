@@ -1,3 +1,15 @@
+---
+title: "filament version"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament version"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Version Declaration — Gdpr
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)

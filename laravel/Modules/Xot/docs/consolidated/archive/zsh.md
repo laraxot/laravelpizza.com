@@ -1,3 +1,11 @@
+---
+title: "zsh"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "zsh xot"
+---
 link: https://www.reddit.com/r/bash/comments/12lz3kb/is_it_possible_to_make_zsh_look_like_gitbash/
 
 touch ~/.zshrc

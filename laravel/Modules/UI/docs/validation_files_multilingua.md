@@ -1,3 +1,15 @@
+---
+title: "validation files multilingua"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "validation files multilingua"
+issues: []
+discussions: []
+status: draft
+---
+
 # File Validation Multilingua - Modulo UI
 
 ## Panoramica

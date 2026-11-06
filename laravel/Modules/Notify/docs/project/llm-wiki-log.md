@@ -1,3 +1,15 @@
+---
+title: "llm wiki log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "llm wiki log"
+issues: []
+discussions: []
+status: stub
+---
+
 # LLM Wiki Log
 
 Deprecated compatibility entrypoint.

@@ -10,7 +10,7 @@ return [
             'name' => 'Sistema',
             'description' => 'Gestione dei meta tag e SEO del sito',
         ],
-        'label' => 'metatag',
+        'label' => 'Metatag',
         'sort' => '16',
         'icon' => 'xot-metatag',
     ],

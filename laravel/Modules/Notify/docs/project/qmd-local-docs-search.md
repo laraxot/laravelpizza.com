@@ -1,6 +1,18 @@
-# QMD — ricerca locale su documentazione e note
+---
+title: "qmd local docs search"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qmd local docs search"
+issues: []
+discussions: []
+status: draft
+---
 
-**Riferimento upstream**: [github.com/tobi/qmd](https://github.com/tobi/qmd) (MIT). Documentazione dettagliata: [README](https://github.com/tobi/qmd/blob/main/README.md), [CHANGELOG](https://github.com/tobi/qmd/blob/main/CHANGELOG.md), sintassi query: [docs/SYNTAX.md](https://github.com/tobi/qmd/blob/main/docs/SYNTAX.md) (se presente nel tag che usi).
+# QMD: ricerca locale su documentazione e note
+
+**Riferimento upstream**: [github.com/tobi/qmd](https://github.com/tobi/qmd) (MIT). Documentazione dettagliata: [README](https://github.com/tobi/qmd/blob/main/README.md), [CHANGELOG](https://github.com/tobi/qmd/blob/main/changelog.md), sintassi query: [docs/SYNTAX.md](https://github.com/tobi/qmd/blob/main/docs/SYNTAX.md) (se presente nel tag che usi).
 
 ## Scopo (business logic)
 
@@ -10,14 +22,14 @@ Pipeline tipica (da upstream):
 
 - **BM25** full-text (SQLite FTS5);
 - **ricerca vettoriale** (embedding locali);
-- **fusione** dei risultati (es. RRF — Reciprocal Rank Fusion);
+- **fusione** dei risultati (es. RRF: Reciprocal Rank Fusion);
 - opzionale **reranking** via LLM locale (**node-llama-cpp** + modelli **GGUF**).
 
 Output pensati per **flussi agentici** (CLI con `--json` / `--files`, **SDK** `@tobilu/qmd`, server **MCP**).
 
 ## Relazione con il pattern LLM Wiki (Karpathy)
 
-| Layer | Ruolo | Dove sta in FixCity |
+| Layer | Ruolo | Dove sta in Notify |
 |-------|--------|---------------------|
 | **Wiki compilato** | Sintesi persistente, link, contraddizioni segnalate | [`karpathy-llm-wiki-adoption.md`](./karpathy-llm-wiki-adoption.md), [`../wiki/index.md`](../wiki/index.md), topic pages in `docs/wiki/` |
 | **Ricerca (QMD)** | Trovare *rapidamente* file e passaggi rilevanti nel corpus `.md` | Questo documento + indice locale |
@@ -25,11 +37,11 @@ Output pensati per **flussi agentici** (CLI con `--json` / `--files`, **SDK** `@
 
 QMD risolve il problema “**in quale file era scritto X?**” a scala grande. Il wiki risolve “**cosa abbiamo deciso e come si collega?**”. L’agente può: query QMD → leggere i file → aggiornare `docs/wiki/` e il log.
 
-## Perché nel progetto FixCity
+## Perché nel progetto Notify
 
 - Indicizzare `docs/`, `laravel/Modules/*/docs/`, `laravel/Themes/*/docs/` senza inviare il corpus a servizi esterni.
 - Dare agli agenti **query** e **retrieve** allineati alla policy “docs come memoria”.
-- Opzionale: server **MCP** (`qmd mcp`) con strumenti orientati al retrieval (vedi [README upstream — MCP](https://github.com/tobi/qmd#mcp-server)).
+- Opzionale: server **MCP** (`qmd mcp`) con strumenti orientati al retrieval (vedi [README upstream: MCP](https://github.com/tobi/qmd#mcp-server)).
 
 ## Requisiti e versioni
 
@@ -57,9 +69,9 @@ Esecuzione senza install globale: `npx @tobilu/qmd` / `bunx @tobilu/qmd`.
 In ambienti con `~/.config` in sola lettura, usa percorsi locali scrivibili:
 
 ```bash
-export XDG_CONFIG_HOME=/var/www/_bases/base_fixcity_fila5/.cache/qmd-config
-export XDG_CACHE_HOME=/var/www/_bases/base_fixcity_fila5/.cache/qmd-cache
-export HOME=/var/www/_bases/base_fixcity_fila5/.cache/qmd-home
+export XDG_CONFIG_HOME=/var/www/_bases/base_ptvx_fila5/.cache/qmd-config
+export XDG_CACHE_HOME=/var/www/_bases/base_ptvx_fila5/.cache/qmd-cache
+export HOME=/var/www/_bases/base_ptvx_fila5/.cache/qmd-home
 ```
 
 Con questa configurazione, l'indice attivo vive sotto `.cache/qmd-cache/qmd/index.sqlite` invece che nella home utente.
@@ -70,12 +82,12 @@ Dalla root del clone (adattare i path):
 
 ```bash
 # Collezioni: una o più directory di .md
-qmd collection add ./docs --name fixcity-root-docs
-qmd collection add ./laravel/Modules --name fixcity-modules --mask "**/docs/**/*.md"
+qmd collection add ./docs --name laraxot-root-docs
+qmd collection add ./laravel/Modules --name laraxot-modules --mask "**/docs/**/*.md"
 
 # Contesto testuale (migliora rilevanza nelle spiegazioni lato tool)
-qmd context add qmd://fixcity-root-docs "Documentazione progetto FixCity (root docs/)"
-qmd context add qmd://fixcity-modules "Documentazione moduli Laravel (path Modules/*/docs/)"
+qmd context add qmd://laraxot-root-docs "Documentazione progetto Notify (root docs/)"
+qmd context add qmd://laraxot-modules "Documentazione moduli Laravel (path Modules/*/docs/)"
 
 # Indicizzazione e embedding (embedding = modelli locali, vedi upstream)
 qmd update
@@ -83,7 +95,7 @@ qmd embed
 
 # Ricerca: preferire il comando unificato hybrid dove disponibile (nomi esatti dipendono dalla versione)
 qmd query "filament wizard ticket"
-# Alcune versioni espongono anche ricerca lessicale / vettoriale separata — consultare `qmd --help`
+# Alcune versioni espongono anche ricerca lessicale / vettoriale separata: consultare `qmd --help`
 
 # Recupero documento per path
 qmd get "docs/project/karpathy-llm-wiki-adoption.md" --full
@@ -102,7 +114,7 @@ Avvio server **stdio** (default integrazione Cursor/Claude):
 qmd mcp
 ```
 
-**HTTP** (porta default **8181**; mantiene modelli caldi tra le richieste — utile per latenza):
+**HTTP** (porta default **8181**; mantiene modelli caldi tra le richieste: utile per latenza):
 
 ```bash
 qmd mcp --http
@@ -111,13 +123,13 @@ qmd mcp --http
 
 Strumenti tipici esposti (naming esatto dipende dalla versione; in v2.x il tool unificato è spesso **`query`** per ricerca hybrid + **`get`** / **`multi_get`** per retrieval):
 
-- **`query`** — ricerca con sotto-query tipizzate e combinazione risultati;
-- **`get`** — contenuto per path o docid;
-- **`status`** — stato indice.
+- **`query`**: ricerca con sotto-query tipizzate e combinazione risultati;
+- **`get`**: contenuto per path o docid;
+- **`status`**: stato indice.
 
 Configurazione client: [sezione MCP del README QMD](https://github.com/tobi/qmd#mcp-server). Indice MCP del progetto: [docs/mcp/index.md](../mcp/index.md).
 
-**Plugin Claude Code** (opzionale): upstream menziona marketplace `tobi/qmd` — utile se lavori in quell’ecosistema.
+**Plugin Claude Code** (opzionale): upstream menziona marketplace `tobi/qmd`: utile se lavori in quell’ecosistema.
 
 ## SDK (Node/Bun)
 
@@ -133,7 +145,7 @@ Da **v1.1.6+** / **v2.0+**: `import { createStore } from '@tobilu/qmd'` con `dbP
 
 1. **Aggiornare** `@tobilu/qmd` periodicamente e rieseguire `qmd update && qmd embed` dopo grandi merge su `docs/`.
 2. **Una collezione per area** (root `docs/`, `Modules`, `Themes`) per filtrare le query e ridurre rumore.
-3. **Dopo ingest importante** nel senso Karpathy, aggiornare [`../wiki/log.md`](../wiki/log.md) e, se serve, [`../wiki/index.md`](../wiki/index.md) — QMD non sostituisce il catalogo manuale.
+3. **Dopo ingest importante** nel senso Karpathy, aggiornare [`../wiki/log.md`](../wiki/log.md) e, se serve, [`../wiki/index.md`](../wiki/index.md): QMD non sostituisce il catalogo manuale.
 4. **Lint wiki** (periodicità definita in adozione Karpathy): QMD può aiutare a trovare file correlati, ma la coerenza semantica resta un compito guidato.
 
 ## Collegamenti

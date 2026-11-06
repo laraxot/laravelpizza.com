@@ -13,6 +13,7 @@ related:
   - "./ponytail-audit-plan.md"
   - "./wiki/how-to/module-docs-audit.md"
   - "./wiki/sources/code-redundancy-audit.md"
+status: draft
 ---
 
 # Ponytail audit — report

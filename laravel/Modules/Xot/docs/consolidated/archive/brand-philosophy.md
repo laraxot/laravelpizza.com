@@ -1,3 +1,11 @@
+---
+title: "Filosofia del Brand nel Sistema"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "filosofia del brand nel sistema xot"
+---
 # Filosofia del Brand nel Sistema
 
 ## Principi Fondamentali

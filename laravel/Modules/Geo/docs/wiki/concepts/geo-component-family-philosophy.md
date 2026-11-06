@@ -1,3 +1,15 @@
+---
+title: "geo component family philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geo component family philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Geo Component Family — Philosophy, Religion & Zen
 
 ## The Zen of Geographic Selection
@@ -21,7 +33,6 @@ While a `CoordinatePicker` and a `MapPicker` ultimately produce the same `{ lati
 **Rule**: If use-cases differ by even a single pixel of UX intent → separate component. A change in `MapPicker`'s marker style must NEVER accidentally break `CoordinatePicker`'s technical look.
 
 ---
-
 ## The Religion of XotBaseField — Divine Lineage
 
 Every geographic field **must** extend `XotBaseField`. This is the **Divine Lineage**:

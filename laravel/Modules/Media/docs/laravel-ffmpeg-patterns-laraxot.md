@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Laravel-FFMpeg – Pattern Laraxot nel Modulo Media"
+module: "Media"
+type: pattern
+tags: [laravel, ffmpeg, patterns, laraxot]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel ffmpeg patterns laraxot"
+related:
+  - "./webm.md"
+status: draft
+---
 # Laravel-FFMpeg – Pattern Laraxot nel Modulo Media
 
 Questa guida descrive come usare `protonemedia/laravel-ffmpeg` seguendo i pattern architetturali

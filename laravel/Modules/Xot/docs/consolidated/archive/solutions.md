@@ -1,3 +1,11 @@
+---
+title: "Soluzioni Tecniche - Modulo Xot"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "soluzioni tecniche - modulo xot xot"
+---
 # Soluzioni Tecniche - Modulo Xot
 
 ## Problemi Identificati e Soluzioni

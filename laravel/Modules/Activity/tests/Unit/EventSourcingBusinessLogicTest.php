@@ -5,127 +5,90 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Carbon\Carbon;
-use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Tests\TestCase;
+use RuntimeException;
+
 use function Safe\json_decode;
 use function Safe\json_encode;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 
-/**
- * @return array{
- *     id: int,
- *     log_name: string,
- *     description: string,
- *     subject_type: string,
- *     subject_id: int,
- *     causer_type: string,
- *     causer_id: int,
- *     properties: array{ip_address: string, user_agent: string, session_id: string, old_values: array<string, mixed>, new_values: array{last_login: string}},
- *     event: string,
- *     batch_uuid: string,
- *     created_at: Carbon
- * }
- */
-function activityEventSourcingActivityData(): array
-{
-    return [
-        'id' => 1001,
-        'log_name' => 'user_activity',
-        'description' => 'User login attempt',
-        'subject_type' => 'App\\Models\\User',
-        'subject_id' => 123,
-        'causer_type' => 'App\\Models\\User',
-        'causer_id' => 123,
-        'properties' => [
-            'ip_address' => '192.168.1.1',
-            'user_agent' => 'Mozilla/5.0 Chrome',
-            'session_id' => 'sess_abc123',
-            'old_values' => [],
-            'new_values' => ['last_login' => '2024-12-01 10:00:00'],
-        ],
-        'event' => 'updated',
-        'batch_uuid' => 'batch-uuid-123',
-        'created_at' => Carbon::now()->subMinutes(10),
-    ];
-}
+describe('Event Sourcing Business Logic', function () {
+    beforeEach(function () {
+        // In-memory test objects following CLAUDE.md guidelines - no database
+        $this->activityData = [
+            'id' => 1001,
+            'log_name' => 'user_activity',
+            'description' => 'User login attempt',
+            'subject_type' => 'App\\Models\\User',
+            'subject_id' => 123,
+            'causer_type' => 'App\\Models\\User',
+            'causer_id' => 123,
+            'properties' => [
+                'ip_address' => '192.168.1.1',
+                'user_agent' => 'Mozilla/5.0 Chrome',
+                'session_id' => 'sess_abc123',
+                'old_values' => [],
+                'new_values' => ['last_login' => '2024-12-01 10:00:00'],
+            ],
+            'event' => 'updated',
+            'batch_uuid' => 'batch-uuid-123',
+            'created_at' => Carbon::now()->subMinutes(10),
+        ];
 
-/**
- * @return array{
- *     id: int,
- *     aggregate_uuid: string,
- *     aggregate_version: int,
- *     event_version: int,
- *     event_class: string,
- *     event_properties: array{user_id: int, timestamp: string, ip_address: string, browser: string},
- *     meta_data: array{source: string, correlation_id: string, causation_id: string},
- *     created_at: Carbon
- * }
- */
-function activityEventSourcingStoredEventData(): array
-{
-    return [
-        'id' => 2001,
-        'aggregate_uuid' => 'user-uuid-456',
-        'aggregate_version' => 1,
-        'event_version' => 1,
-        'event_class' => 'App\\Events\\UserLoggedIn',
-        'event_properties' => [
-            'user_id' => 123,
-            'timestamp' => '2024-12-01 10:00:00',
-            'ip_address' => '192.168.1.1',
-            'browser' => 'Chrome',
-        ],
-        'meta_data' => [
-            'source' => 'web_interface',
-            'correlation_id' => 'corr-123',
-            'causation_id' => 'cause-456',
-        ],
-        'created_at' => Carbon::now()->subMinutes(5),
-    ];
-}
+        $this->storedEventData = [
+            'id' => 2001,
+            'aggregate_uuid' => 'user-uuid-456',
+            'aggregate_version' => 1,
+            'event_version' => 1,
+            'event_class' => 'App\\Events\\UserLoggedIn',
+            'event_properties' => [
+                'user_id' => 123,
+                'timestamp' => '2024-12-01 10:00:00',
+                'ip_address' => '192.168.1.1',
+                'browser' => 'Chrome',
+            ],
+            'meta_data' => [
+                'source' => 'web_interface',
+                'correlation_id' => 'corr-123',
+                'causation_id' => 'cause-456',
+            ],
+            'created_at' => Carbon::now()->subMinutes(5),
+        ];
 
-/**
- * @return array{
- *     id: int,
- *     aggregate_uuid: string,
- *     aggregate_version: int,
- *     state: array{user_id: int, login_count: int, last_login: string, preferences: array{theme: string, lang: string}, profile_complete: bool},
- *     created_at: Carbon
- * }
- */
-function activityEventSourcingSnapshotData(): array
-{
-    return [
-        'id' => 3001,
-        'aggregate_uuid' => 'user-uuid-456',
-        'aggregate_version' => 10,
-        'state' => [
-            'user_id' => 123,
-            'login_count' => 45,
-            'last_login' => '2024-12-01 10:00:00',
-            'preferences' => ['theme' => 'dark', 'lang' => 'en'],
-            'profile_complete' => true,
-        ],
-        'created_at' => Carbon::now()->subHour(),
-    ];
-}
+        $this->snapshotData = [
+            'id' => 3001,
+            'aggregate_uuid' => 'user-uuid-456',
+            'aggregate_version' => 10,
+            'state' => [
+                'user_id' => 123,
+                'login_count' => 45,
+                'last_login' => '2024-12-01 10:00:00',
+                'preferences' => ['theme' => 'dark', 'lang' => 'en'],
+                'profile_complete' => true,
+            ],
+            'created_at' => Carbon::now()->subHour(),
+        ];
+    });
 
-describe('Event Sourcing Business Logic', function (): void {
-    describe('Activity Logging Business Logic', function (): void {
-        test('records activity with proper causer and subject relationship', function () {
-            $activity = activityEventSourcingActivityData();
+    describe('Activity Logging Business Logic', function () {
+        it('records activity with proper causer and subject relationship', function () {
+            $activity = (object) $this->activityData;
 
             // Business Logic: Activity must have both causer and subject
-            Assert::assertSame(123, $activity['causer_id']);
-            Assert::assertSame(123, $activity['subject_id']);
-            Assert::assertSame('App\\Models\\User', $activity['causer_type']);
-            Assert::assertSame('App\\Models\\User', $activity['subject_type']);
+            Assert::assertSame(123, $activity->causer_id);
+            Assert::assertSame(123, $activity->subject_id);
+            Assert::assertSame('App\\Models\\User', $activity->causer_type);
+            Assert::assertSame('App\\Models\\User', $activity->subject_type);
         });
 
-        test('validates activity properties structure', function () {
-            $activity = activityEventSourcingActivityData();
-            $properties = $activity['properties'];
+        it('validates activity properties structure', function () {
+            $activity = (object) $this->activityData;
+            $properties = $activity->properties;
+            if (! is_array($properties)) {
+                throw new \RuntimeException('Activity properties must be an array');
+            }
 
             // Business Logic: Properties must contain tracking data
             Assert::assertArrayHasKey('ip_address', $properties);
@@ -135,55 +98,64 @@ describe('Event Sourcing Business Logic', function (): void {
             Assert::assertArrayHasKey('new_values', $properties);
 
             // IP validation business logic
-            Assert::assertMatchesRegularExpression('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', (string) $properties['ip_address']);
+            if (! is_string($properties['ip_address'])) {
+                throw new \RuntimeException('Activity IP address must be a string');
+            }
+            Assert::assertMatchesRegularExpression('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', $properties['ip_address']);
         });
 
-        test('handles batch activity grouping', function () {
-            $activity = activityEventSourcingActivityData();
+        it('handles batch activity grouping', function () {
+            $activity = (object) $this->activityData;
 
             // Business Logic: Batch activities must have same UUID
-            Assert::assertSame('batch-uuid-123', $activity['batch_uuid']);
-            Assert::assertStringStartsWith('batch-', (string) $activity['batch_uuid']);
+            Assert::assertIsString($activity->batch_uuid);
+            Assert::assertSame('batch-uuid-123', $activity->batch_uuid);
+            Assert::assertStringStartsWith('batch-', $activity->batch_uuid);
         });
 
-        test('validates activity event types', function () {
-            $activity = activityEventSourcingActivityData();
+        it('validates activity event types', function () {
             $validEvents = ['created', 'updated', 'deleted', 'restored', 'viewed', 'logged_in', 'logged_out'];
+            $activity = (object) $this->activityData;
 
-            Assert::assertContains($activity['event'], $validEvents);
+            Assert::assertContains($activity->event, $validEvents);
         });
 
-        test('ensures proper activity description format', function () {
-            $activity = activityEventSourcingActivityData();
+        it('ensures proper activity description format', function () {
+            $activity = (object) $this->activityData;
 
             // Business Logic: Description should be human readable
-            Assert::assertIsString($activity['description']);
-            Assert::assertNotEmpty($activity['description']);
-            Assert::assertGreaterThan(5, strlen($activity['description']));
+            Assert::assertIsString($activity->description);
+            Assert::assertNotSame('', $activity->description);
+            Assert::assertGreaterThan(5, strlen($activity->description));
         });
     });
 
-    describe('Event Sourcing Business Logic', function (): void {
-        test('maintains event ordering with versions', function () {
-            $event = activityEventSourcingStoredEventData();
-
+    describe('Event Sourcing Business Logic', function () {
+        it('maintains event ordering with versions', function () {
+            $event = (object) $this->storedEventData;
             // Business Logic: Event versions must be sequential
-            Assert::assertSame(1, $event['aggregate_version']);
-            Assert::assertSame(1, $event['event_version']);
-            Assert::assertGreaterThan(0, $event['aggregate_version']);
+            Assert::assertSame(1, $event->aggregate_version);
+            Assert::assertSame(1, $event->event_version);
+            Assert::assertGreaterThan(0, $event->aggregate_version);
         });
 
-        test('validates event class structure', function () {
-            $event = activityEventSourcingStoredEventData();
+        it('validates event class structure', function () {
+            $event = (object) $this->storedEventData;
 
             // Business Logic: Event class must be valid PHP class name
-            Assert::assertMatchesRegularExpression('/^[A-Z][a-zA-Z0-9\\\\]*$/', (string) $event['event_class']);
-            Assert::assertStringContainsString((string) '\\', (string) $event['event_class']);
+            if (! is_string($event->event_class)) {
+                throw new \RuntimeException('Event class must be a string');
+            }
+            Assert::assertMatchesRegularExpression('/^[A-Z][a-zA-Z0-9\\\\]*$/', $event->event_class);
+            Assert::assertStringContainsString('\\', $event->event_class);
         });
 
-        test('ensures event properties contain business data', function () {
-            $event = activityEventSourcingStoredEventData();
-            $properties = $event['event_properties'];
+        it('ensures event properties contain business data', function () {
+            $event = (object) $this->storedEventData;
+            $properties = $event->event_properties;
+            if (! is_array($properties)) {
+                throw new \RuntimeException('Event properties must be an array');
+            }
 
             // Business Logic: Event properties must have identifiers
             Assert::assertArrayHasKey('user_id', $properties);
@@ -192,40 +164,52 @@ describe('Event Sourcing Business Logic', function (): void {
             Assert::assertIsString($properties['timestamp']);
         });
 
-        test('validates metadata structure for tracing', function () {
-            $event = activityEventSourcingStoredEventData();
-            $metadata = $event['meta_data'];
+        it('validates metadata structure for tracing', function () {
+            $event = (object) $this->storedEventData;
+            $metadata = $event->meta_data;
+            if (! is_array($metadata)) {
+                throw new \RuntimeException('Event metadata must be an array');
+            }
 
             // Business Logic: Metadata must support distributed tracing
             Assert::assertArrayHasKey('source', $metadata);
             Assert::assertArrayHasKey('correlation_id', $metadata);
             Assert::assertArrayHasKey('causation_id', $metadata);
 
-            Assert::assertStringStartsWith('corr-', (string) $metadata['correlation_id']);
-            Assert::assertStringStartsWith('cause-', (string) $metadata['causation_id']);
+            if (! is_string($metadata['correlation_id']) || ! is_string($metadata['causation_id'])) {
+                throw new \RuntimeException('Event tracing identifiers must be strings');
+            }
+            Assert::assertStringStartsWith('corr-', $metadata['correlation_id']);
+            Assert::assertStringStartsWith('cause-', $metadata['causation_id']);
         });
 
-        test('maintains aggregate UUID consistency', function () {
-            $event = activityEventSourcingStoredEventData();
+        it('maintains aggregate UUID consistency', function () {
+            $event = (object) $this->storedEventData;
+            if (! is_string($event->aggregate_uuid)) {
+                throw new \RuntimeException('Aggregate UUID must be a string');
+            }
 
             // Business Logic: Aggregate UUID must be consistent across events
-            Assert::assertSame('user-uuid-456', $event['aggregate_uuid']);
-            Assert::assertMatchesRegularExpression('/^[a-z]+-uuid-\d+$/', (string) $event['aggregate_uuid']);
+            Assert::assertSame('user-uuid-456', $event->aggregate_uuid);
+            Assert::assertMatchesRegularExpression('/^[a-z]+-uuid-\d+$/', $event->aggregate_uuid);
         });
     });
 
-    describe('Snapshot Business Logic', function (): void {
-        test('creates snapshots at version intervals', function () {
-            $snapshot = activityEventSourcingSnapshotData();
+    describe('Snapshot Business Logic', function () {
+        it('creates snapshots at version intervals', function () {
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: Snapshots created every 10 versions
-            Assert::assertSame(10, $snapshot['aggregate_version']);
-            Assert::assertSame(0, $snapshot['aggregate_version'] % 10);
+            Assert::assertSame(10, $snapshot->aggregate_version);
+            Assert::assertSame(0, $snapshot->aggregate_version % 10);
         });
 
-        test('preserves complete aggregate state', function () {
-            $snapshot = activityEventSourcingSnapshotData();
-            $state = $snapshot['state'];
+        it('preserves complete aggregate state', function () {
+            $snapshot = (object) $this->snapshotData;
+            $state = $snapshot->state;
+            if (! is_array($state)) {
+                throw new \RuntimeException('Snapshot state must be an array');
+            }
 
             // Business Logic: Snapshot must contain complete state
             Assert::assertArrayHasKey('user_id', $state);
@@ -241,43 +225,44 @@ describe('Event Sourcing Business Logic', function (): void {
             Assert::assertIsArray($state['preferences']);
         });
 
-        test('validates snapshot performance requirements', function () {
-            $snapshot = activityEventSourcingSnapshotData();
+        it('validates snapshot performance requirements', function () {
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: Snapshots must be relatively recent
-            $createdAt = $snapshot['created_at'];
-            $ageInHours = Carbon::now()->diffInHours($createdAt);
+            Assert::assertInstanceOf(Carbon::class, $snapshot->created_at);
+            $ageInHours = Carbon::now()->diffInHours($snapshot->created_at);
             Assert::assertLessThan(24, $ageInHours); // Snapshots should be recent
         });
 
-        test('ensures snapshot state serialization', function () {
-            $snapshot = activityEventSourcingSnapshotData();
+        it('ensures snapshot state serialization', function () {
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: State must be serializable
-            $serialized = json_encode($snapshot['state']);
-            $deserialized = json_decode($serialized, true);
+            $serialized = json_encode($snapshot->state);
+            Assert::assertNotSame('false', $serialized);
 
+            $deserialized = json_decode($serialized, true);
             Assert::assertIsArray($deserialized);
-            Assert::assertSame($snapshot['state'], $deserialized);
+            Assert::assertSame($snapshot->state, $deserialized);
         });
     });
 
-    describe('Event Replay Business Logic', function (): void {
-        test('handles event chronological ordering', function () {
+    describe('Event Replay Business Logic', function () {
+        it('handles event chronological ordering', function () {
             $events = [
-                ['created_at' => Carbon::now()->subMinutes(30), 'aggregate_version' => 1],
-                ['created_at' => Carbon::now()->subMinutes(20), 'aggregate_version' => 2],
-                ['created_at' => Carbon::now()->subMinutes(10), 'aggregate_version' => 3],
+                (object) ['created_at' => Carbon::now()->subMinutes(30), 'aggregate_version' => 1],
+                (object) ['created_at' => Carbon::now()->subMinutes(20), 'aggregate_version' => 2],
+                (object) ['created_at' => Carbon::now()->subMinutes(10), 'aggregate_version' => 3],
             ];
 
             // Business Logic: Events must be in chronological order for replay
             for ($i = 1; $i < count($events); $i++) {
-                Assert::assertTrue($events[$i]['created_at']->isAfter($events[$i - 1]['created_at']));
-                Assert::assertSame($events[$i - 1]['aggregate_version'] + 1, $events[$i]['aggregate_version']);
+                Assert::assertTrue($events[$i]->created_at->isAfter($events[$i - 1]->created_at));
+                Assert::assertSame($events[$i - 1]->aggregate_version + 1, $events[$i]->aggregate_version);
             }
         });
 
-        test('validates aggregate reconstruction logic', function () {
+        it('validates aggregate reconstruction logic', function () {
             $baseState = ['user_id' => 123, 'login_count' => 0];
             $events = [
                 ['type' => 'login', 'data' => ['timestamp' => '2024-12-01 09:00:00']],
@@ -294,11 +279,15 @@ describe('Event Sourcing Business Logic', function (): void {
                 }
             }
 
-            Assert::assertSame(2, $finalState['login_count']);
+            $loginEvents = array_filter(
+                $events,
+                static fn (array $event): bool => $event['type'] === 'login',
+            );
+            Assert::assertSame(count($loginEvents), $finalState['login_count']);
             Assert::assertSame('2024-12-01 10:00:00', $finalState['last_login']);
         });
 
-        test('handles event versioning conflicts', function () {
+        it('handles event versioning conflicts', function () {
             $currentVersion = 5;
             $incomingEvents = [
                 ['aggregate_version' => 6, 'event' => 'valid_next_event'],
@@ -319,17 +308,17 @@ describe('Event Sourcing Business Logic', function (): void {
         });
     });
 
-    describe('Performance and Scalability Logic', function (): void {
-        test('validates batch processing efficiency', function () {
+    describe('Performance and Scalability Logic', function () {
+        it('validates batch processing efficiency', function () {
             $batchSize = 100;
-            $events = array_fill(0, $batchSize, activityEventSourcingStoredEventData());
+            $events = array_fill(0, $batchSize, $this->storedEventData);
 
             // Business Logic: Batch processing should handle reasonable loads
-            Assert::assertSame($batchSize, count($events));
+            Assert::assertCount($batchSize, $events);
             Assert::assertLessThanOrEqual(1000, $batchSize); // Reasonable batch limit
         });
 
-        test('ensures event stream partitioning logic', function () {
+        it('ensures event stream partitioning logic', function () {
             $aggregateTypes = ['user', 'order', 'product', 'payment'];
             $aggregateUuid = 'user-uuid-456';
 
@@ -338,7 +327,7 @@ describe('Event Sourcing Business Logic', function (): void {
             Assert::assertContains($partitionKey, $aggregateTypes);
         });
 
-        test('validates event retention policies', function () {
+        it('validates event retention policies', function () {
             $oldEvent = Carbon::now()->subYears(2);
             $recentEvent = Carbon::now()->subDays(30);
             $maxRetentionYears = 5;

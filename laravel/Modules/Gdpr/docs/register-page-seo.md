@@ -1,3 +1,15 @@
+---
+title: "register page seo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "register page seo"
+issues: []
+discussions: []
+status: draft
+---
+
 # Register Page SEO
 
 ## Overview

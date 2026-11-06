@@ -1,3 +1,11 @@
+---
+title: "Generazione Intelligente di Slug in Filament"
+type: note
+status: draft
+updated: 2026-09-21
+tags: [docs, notify, mail-templates]
+qmd: "generazione intelligente di slug in filament notify"
+---
 # Generazione Intelligente di Slug in Filament
 
 ## Introduzione

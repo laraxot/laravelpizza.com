@@ -6,10 +6,15 @@ namespace Modules\Cms\Models\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\MultipleRecordsFoundException;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Cms\Datas\BlockData;
 use Modules\Xot\Datas\XotData;
+
+use function Safe\preg_match;
+use function Safe\preg_replace_callback;
 
 /**
  * Trait for Models that have blocks.
@@ -40,7 +45,11 @@ trait HasBlocks
             $localeKeys = ['it', 'en', 'fr', 'de', 'es', $primary_lang];
             $hasLocaleKeys = count(array_intersect(array_keys($blocks), $localeKeys)) > 0;
             if ($hasLocaleKeys) {
-                $blocks = $this->getTranslation($field, $primary_lang);
+                $locale = app()->getLocale();
+                $blocks = $this->getTranslation($field, $locale, false);
+                if (! is_array($blocks) && $locale !== $primary_lang) {
+                    $blocks = $this->getTranslation($field, $primary_lang, false);
+                }
             }
         }
 
@@ -63,10 +72,12 @@ trait HasBlocks
             if (! is_array($block)) {
                 continue;
             }
-            $type = (string) ($block['type'] ?? 'unknown');
+            $rawType = $block['type'] ?? 'unknown';
+            $type = is_string($rawType) ? $rawType : 'unknown';
             /** @var array<string, mixed> $data */
             $data = (array) ($block['data'] ?? []);
-            $slug = isset($block['slug']) ? (string) $block['slug'] : null;
+            $rawSlug = $block['slug'] ?? null;
+            $slug = is_string($rawSlug) ? $rawSlug : null;
             $active = (bool) ($block['active'] ?? true);
 
             $blockDataInstances[(string) $key] = new BlockData($type, $data, $slug, $active);
@@ -93,7 +104,7 @@ trait HasBlocks
             }
 
             if (is_string($value) && Str::containsAll($value, ['{{', '}}'])) {
-                $result[$key] = Blade::render($value);
+                $result[$key] = $this->renderAllowedExpressions($value);
             } else {
                 $result[$key] = $value;
             }
@@ -103,6 +114,32 @@ trait HasBlocks
         }
 
         return $result;
+    }
+
+    /**
+     * Unico PHP ammesso nei blocchi: `route(...)` Folio (es. container0.view).
+     * Vietato `LaravelLocalization::localizeURL` (religione FO — Fixcity
+     * frontoffice-link-conventions). Ogni altra espressione resta testo
+     * (Filament Blueprint C-3).
+     */
+    private const string SAFE_EXPRESSION = '/^route\((?:\s*(?:\'[^\'\\\\$@{}]*\'|"[^"\\\\$@{}]*"|\[|\]|,|=>))*\s*\)$/';
+
+    private function renderAllowedExpressions(string $value): string
+    {
+        return (string) preg_replace_callback(
+            '/\{\{\s*(.+?)\s*\}\}/s',
+            function (array $match): string {
+                /** @var array<int, string> $match */
+                if (1 === preg_match(self::SAFE_EXPRESSION, $match[1])) {
+                    return Blade::render($match[0]);
+                }
+
+                Log::warning('Espressione non ammessa in un blocco CMS, lasciata come testo.', ['expression' => $match[1]]);
+
+                return $match[0];
+            },
+            $value,
+        );
     }
 
     /**
@@ -118,8 +155,29 @@ trait HasBlocks
      */
     public static function getBlocksBySlug(string $slug, ?string $side = null): array
     {
+        $query = static::query()->where('slug', $slug);
+
+
         try {
-            $record = static::query()->where('slug', $slug)->sole();
+            $record = $query->sole();
+        } catch (MultipleRecordsFoundException $e) {
+            $duplicates = $query->clone()->limit(10)->get(['id', 'slug']);
+            $formatValue = static fn (mixed $value): string => match (true) {
+                is_string($value) => $value,
+                is_int($value), is_float($value), is_bool($value) => (string) $value,
+                default => get_debug_type($value),
+            };
+            $records = $duplicates
+                ->map(static function (Model $model) use ($formatValue): string {
+                    return sprintf(
+                        'id=%s slug=%s',
+                        $formatValue($model->getAttribute('id')),
+                        $formatValue($model->getAttribute('slug')),
+                    );
+                })
+                ->implode(', ');
+
+            throw new \RuntimeException(sprintf('CMS content collision: %s matched %d records for slug [%s], side [%s]. Records: %s. Expected one JSON content record per slug.', static::class, $e->getCount(), $slug, $side ?? 'content', $records), previous: $e);
         } catch (ModelNotFoundException) {
             return [];
         }

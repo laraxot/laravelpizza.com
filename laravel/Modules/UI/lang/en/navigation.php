@@ -37,4 +37,10 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+    'login' => 'Sign in',
+    'logout' => 'Log out',
+    'profile' => 'Profile',
+    'password' => 'Password',
+    'two_factor' => 'Two-factor authentication',
+    'register' => 'Register',
 ];

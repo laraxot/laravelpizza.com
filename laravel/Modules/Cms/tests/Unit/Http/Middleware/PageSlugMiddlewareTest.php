@@ -5,11 +5,12 @@ declare(strict_types=1);
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
+use Mockery\MockInterface;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
 
-uses(Modules\Cms\Tests\TestCase::class);
 /**
  * @param array<int, mixed> $args
  */
@@ -45,7 +46,7 @@ test('resolveCmsPageSlug prefers folio route name when it matches a cms page', f
     $middleware = new PageSlugMiddleware();
     $request = Request::create('/it/tickets/create', 'GET');
     $request->setRouteResolver(static function () use ($request) {
-        return new Illuminate\Routing\Route(['GET'], '/it/tickets/create', static fn (): string => 'ok')
+        return new Route(['GET'], '/it/tickets/create', static fn (): string => 'ok')
             ->name('tickets.create')
             ->bind($request);
     });
@@ -59,7 +60,7 @@ test('resolveCmsPageSlug builds container0.slug0 for nested folio pages', functi
     $middleware = new PageSlugMiddleware();
     $request = Request::create('/it/tickets/foo', 'GET');
     $request->setRouteResolver(static function () use ($request) {
-        $route = new Illuminate\Routing\Route(['GET'], '/it/{container0}/{slug0}', static fn (): string => 'ok');
+        $route = new Route(['GET'], '/it/{container0}/{slug0}', static fn (): string => 'ok');
         $route->name('container0.view');
         $route->bind($request);
         $route->setParameter('container0', 'tickets');
@@ -97,10 +98,10 @@ test('parseMiddleware splits name and parameters', function (): void {
 
 test('resolveMiddlewareClass returns mapped class for alias', function (): void {
     $middleware = new PageSlugMiddleware();
-    /** @var Kernel&Mockery\MockInterface $kernel */
+    /** @var Kernel&MockInterface $kernel */
     $kernel = Mockery::mock(Kernel::class);
     $kernel->allows([
-        'getRouteMiddleware' => ['auth' => Authenticate::class],
+        'getMiddlewareAliases' => ['auth' => Authenticate::class],
     ]);
 
     setProtected($middleware, 'kernel', $kernel);
@@ -124,4 +125,33 @@ test('executeMiddlewareChain returns 500 when final closure does not return resp
     Assert::assertSame(500, $response->getStatusCode());
 
     Assert::assertSame('Internal Server Error', $response->getContent());
+});
+
+test('executeMiddlewareChain treats the web group as already applied by the folio stack', function (): void {
+    $middleware = new PageSlugMiddleware();
+
+    /** @var Response $response */
+    $response = invokeProtected($middleware, 'executeMiddlewareChain', [
+        Request::create('/test', 'GET'),
+        ['web'],
+        fn (Request $req): Response => new Response('reached', 200),
+    ]);
+
+    Assert::assertSame(200, $response->getStatusCode());
+    Assert::assertSame('reached', $response->getContent());
+});
+
+test('executeMiddlewareChain refuses an unresolvable middleware name with a clear message', function (): void {
+    $middleware = new PageSlugMiddleware();
+    /** @var Kernel&MockInterface $kernel */
+    $kernel = Mockery::mock(Kernel::class);
+    $kernel->allows(['getMiddlewareAliases' => ['auth' => Authenticate::class]]);
+    setProtected($middleware, 'kernel', $kernel);
+
+    // Un refuso come "auht" non deve mai rendere pubblica la pagina in silenzio: blocca, ma dicendo perche'.
+    expect(fn () => invokeProtected($middleware, 'executeMiddlewareChain', [
+        Request::create('/test', 'GET'),
+        ['auht'],
+        fn (Request $req): Response => new Response('must not be reached', 200),
+    ]))->toThrow(InvalidArgumentException::class, "'auht'");
 });

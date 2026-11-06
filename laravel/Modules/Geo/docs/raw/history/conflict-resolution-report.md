@@ -1,3 +1,14 @@
+---
+title: "conflict resolution report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution report"
+issues: []
+discussions: []
+---
+
 # Git Merge Conflict Resolution Report
 
 ## Summary

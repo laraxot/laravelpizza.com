@@ -1,3 +1,15 @@
+---
+title: "namespaces"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "namespaces"
+issues: []
+discussions: []
+status: draft
+---
+
 # Convenzioni Namespace
 
 ## Struttura Base

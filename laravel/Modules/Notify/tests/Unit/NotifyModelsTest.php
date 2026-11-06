@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit;
 
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Modules\Notify\Database\Factories\NotificationChannelFactory;
 use Modules\Notify\Database\Factories\NotificationFactory;
 use Modules\Notify\Database\Factories\NotificationLogFactory;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
+use Modules\Notify\Enums\NotificationLogStatusEnum;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationChannel;
 use Modules\Notify\Models\NotificationLog;
@@ -18,15 +20,13 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
 
-uses(\Modules\Notify\Tests\TestCase::class);
-
+uses(TestCase::class);
 it('can create a notification', function () {
     $notification = NotificationFactory::new()->createOne([
         'type' => 'App\Notifications\UserRegistered',
         'notifiable_type' => 'Modules\User\Models\User',
         'notifiable_id' => 1,
-        'data' => json_encode(['message' => 'User registered']),
-    ]);
+        'data' => json_encode(['message' => 'User registered'])]);
 
     Assert::assertInstanceOf(Notification::class, $notification);
     Assert::assertSame('App\Notifications\UserRegistered', $notification->type);
@@ -39,8 +39,7 @@ it('can create a notification with read status', function () {
         'type' => 'App\Notifications\Welcome',
         'notifiable_type' => 'Modules\User\Models\User',
         'notifiable_id' => 1,
-        'read_at' => now(),
-    ]);
+        'read_at' => now()]);
 
     Assert::assertInstanceOf(Carbon::class, $notification->read_at);
 });
@@ -50,8 +49,7 @@ it('can create a notification template', function () {
         'name' => 'Welcome Email',
         'type' => 'email',
         'subject' => json_encode(['en' => 'Welcome to our platform']),
-        'body_html' => json_encode(['en' => 'Welcome {{user.name}}!']),
-    ]);
+        'body_html' => json_encode(['en' => 'Welcome {{user.name}}!'])]);
 
     Assert::assertInstanceOf(NotificationTemplate::class, $template);
     Assert::assertSame('Welcome Email', $template->name);
@@ -62,8 +60,7 @@ it('can make a notification channel without persisting', function () {
     $channel = NotificationChannelFactory::new()->makeOne([
         'name' => 'SMS',
         'driver' => 'sms',
-        'is_enabled' => true,
-    ]);
+        'is_enabled' => true]);
 
     Assert::assertInstanceOf(NotificationChannel::class, $channel);
     Assert::assertSame('SMS', $channel->name);
@@ -73,26 +70,24 @@ it('can make a notification channel without persisting', function () {
 it('can create a notification log', function () {
     $log = NotificationLogFactory::new()->createOne([
         'status' => 'sent',
-        'content' => 'Notification sent successfully',
-    ]);
+        'status_message' => 'Notification sent successfully']);
 
     Assert::assertInstanceOf(NotificationLog::class, $log);
-    Assert::assertSame('sent', $log->status);
+    Assert::assertSame(NotificationLogStatusEnum::SENT, $log->status);
+    Assert::assertSame('Notification sent successfully', $log->status_message);
 });
 
 it('can create a notification with custom data', function () {
     $payload = [
         'user_id' => 1,
         'action' => 'profile_updated',
-        'details' => ['field' => 'email', 'old_value' => 'old@example.com'],
-    ];
+        'details' => ['field' => 'email', 'old_value' => 'old@example.com']];
 
     $notification = NotificationFactory::new()->createOne([
         'type' => 'App\Notifications\Custom',
         'notifiable_type' => 'Modules\User\Models\User',
-        'notifiable_id' => (string) \Illuminate\Support\Str::uuid(),
-        'data' => $payload,
-    ]);
+        'notifiable_id' => (string) Str::uuid(),
+        'data' => $payload]);
 
     Assert::assertSame($payload, $notification->data);
 });

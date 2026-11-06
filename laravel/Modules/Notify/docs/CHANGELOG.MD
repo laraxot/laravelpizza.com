@@ -1,3 +1,11 @@
+---
+title: "Changelog - Modulo Notify"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, notify]
+qmd: "changelog - modulo notify notify"
+---
 # Changelog - Modulo Notify
 
 Tutte le modifiche significative al modulo Notify saranno documentate in questo file.

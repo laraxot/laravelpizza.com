@@ -1,3 +1,14 @@
+---
+title: "namespace verification critical error"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "namespace verification critical error"
+issues: []
+discussions: []
+---
+
 # Analisi Errore Critico - Namespace Sbagliato
 
 ## ERRORE CRITICO COMMESSO
@@ -176,6 +187,14 @@ L'errore è stato causato da:
 
 ---
 
+title: "namespace verification critical error"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "namespace verification critical error"
+issues: []
+discussions: []
 *Analisi completata il: $(date)*
 *Stato: Errore critico identificato*
 *Priorità: CRITICA* 

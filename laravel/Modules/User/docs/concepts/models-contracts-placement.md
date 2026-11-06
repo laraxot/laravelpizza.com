@@ -1,5 +1,5 @@
 ---
-title: "Models/Contracts — capacità Eloquent nel modulo User"
+title: "Models/Contracts: capacità Eloquent nel modulo User"
 type: concept
 module: User
 tags: [contract, models, eloquent, can-comment, placement]
@@ -7,7 +7,7 @@ created: 2026-06-10
 updated: 2026-06-10
 qmd: "User Models Contracts placement CanComment app Contracts deprecated"
 related:
-  - ../../../../docs/wiki/bmad/architecture-models-contracts-placement.md
+status: draft
 ---
 
 # Models/Contracts (User)

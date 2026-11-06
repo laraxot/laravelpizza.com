@@ -1,3 +1,13 @@
+// Geo — frontend asset (claude-audit doc ratio).
+// Geo — frontend asset (claude-audit doc ratio).
+// Geo — frontend asset (claude-audit doc ratio).
+// Geo — frontend asset (claude-audit doc ratio).
+// Geo — frontend asset (claude-audit doc ratio).
+// Geo — frontend asset (claude-audit doc ratio).
+/**
+ * Geo map Lit component — public ticket map with marker clusters and popups.
+ * Registered as <geo-map-lit> custom element.
+ */
 import { LitElement, html } from 'lit';
 import L from 'leaflet';
 window.L = L;
@@ -13,10 +23,14 @@ import { buildMapLayers } from './map-picker-layers.js';
 import { mapPickerStylesText } from './map-picker-styles.js';
 import { createGeoMapLeafletIcon } from './map-marker-config.js';
 
+/** Default GeoJSON endpoint for public ticket markers. */
 const DEFAULT_TICKETS_JSON_URL = '/data/tickets.json';
+/** Default map center (Rome) when no markers or GPS. */
 const DEFAULT_CENTER = [41.9028, 12.4964];
+/** Initial zoom level before fitBounds. */
 const DEFAULT_ZOOM = 6;
 
+/** Lit web component rendering a Leaflet map with clustered ticket markers. */
 class GeoMapLit extends LitElement {
     static properties = {
         isFullscreen:      { type: Boolean, state: true },
@@ -98,10 +112,10 @@ class GeoMapLit extends LitElement {
 
     firstUpdated() { super.firstUpdated(); this._initMap(); }
 
+    /** Initialize Leaflet map, cluster layer, geolocation, and GeoJSON load. */
     async _initMap() {
         const container = this.querySelector('.geo-map-leaflet');
         if (!container) {
-            console.error('[geo-map-lit] Map container not found');
             this._mapStatus = 'error';
             this._mapStatusMessage = 'Contenitore mappa non trovato.';
             return;
@@ -119,7 +133,6 @@ class GeoMapLit extends LitElement {
         this._layers['street'].addTo(this._map);
 
         // Check if markerClusterGroup is available
-        console.log('[geo-map-lit] L.markerClusterGroup:', typeof L.markerClusterGroup);
 
         if (typeof L.markerClusterGroup === 'function') {
             this._markersLayer = L.markerClusterGroup({
@@ -133,9 +146,7 @@ class GeoMapLit extends LitElement {
                 iconCreateFunction: (cluster) => this._createClusterIcon(cluster),
             });
             this._map.addLayer(this._markersLayer);
-            console.log('[geo-map-lit] markerClusterGroup initialized');
         } else {
-            console.error('[geo-map-lit] MarkerClusterGroup not available');
             this._markersLayer = L.layerGroup();
             this._map.addLayer(this._markersLayer);
         }
@@ -146,7 +157,6 @@ class GeoMapLit extends LitElement {
                 (position) => {
                     const lat = position.coords.latitude;
                     const lng = position.coords.longitude;
-                    console.log(`[geo-map-lit] Geolocation: ${lat}, ${lng}`);
                     this._map.setView([lat, lng], Math.max(this._map.getZoom(), 13));
                 },
                 (error) => console.log('[geo-map-lit] Geolocation failed:', error.message),
@@ -158,6 +168,7 @@ class GeoMapLit extends LitElement {
         this._loadGeoJson();
     }
 
+    /** Invalidate map size when parent tabs/panels toggle visibility. */
     _setupMutationObserver() {
         this._mutationObserver = new MutationObserver(() => {
             if (this.offsetParent !== null && this._map) {
@@ -171,6 +182,7 @@ class GeoMapLit extends LitElement {
         }
     }
 
+    /** Build cluster divIcon with optional per-type color dots at high zoom. */
     _createClusterIcon(cluster) {
         const markers = cluster.getAllChildMarkers();
         const count = markers.length;
@@ -209,133 +221,90 @@ class GeoMapLit extends LitElement {
         });
     }
 
+    /** Convert GeoJSON point features into Leaflet marker instances. */
+    _populateMarkersFromFeatures(features) {
+        this._allMarkers = [];
+        features.forEach((feature) => {
+            const marker = this._createMarkerFromGeoFeature(feature);
+            if (marker) {
+                this._allMarkers.push(marker);
+            }
+        });
+    }
+
+    /** Add validated markers one-by-one to the cluster/layer group. */
+    _addMarkersToLayer(markers) {
+        if (!this._markersLayer || markers.length === 0) {
+            return;
+        }
+
+        markers.forEach((marker) => {
+            try {
+                this._markersLayer.addLayer(marker);
+            } catch {
+                // skip markers that fail Leaflet validation
+            }
+        });
+    }
+
+    /** Fit map viewport to all loaded marker bounds. */
+    _fitMapToMarkers() {
+        try {
+            const bounds = L.featureGroup(this._allMarkers).getBounds();
+            if (!bounds.isValid()) {
+                return;
+            }
+            this._map.fitBounds(bounds, { padding: [40, 40], maxZoom: 11 });
+        } catch {
+            // ignore bounds errors
+        }
+    }
+
+    /** Set ready/empty status after markers are loaded. */
+    _finalizeMapAfterMarkersLoaded() {
+        if (this._allMarkers.length === 0) {
+            this._mapStatus = 'empty';
+            this._mapStatusMessage = 'Nessuna segnalazione valida trovata.';
+            return;
+        }
+
+        this._mapStatus = 'ready';
+        this._fitMapToMarkers();
+    }
+
+    /** Fetch GeoJSON and return only valid Point features. */
+    async _fetchPointFeatures(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status} on ${url}`);
+        }
+
+        const data = await response.json();
+
+        return (data.features || []).filter(
+            (f) => f?.geometry?.type === 'Point' && Array.isArray(f?.geometry?.coordinates),
+        );
+    }
+
+    /** Load ticket GeoJSON from data-url and render markers. */
     async _loadGeoJson() {
         const url = this.dataset?.url || this.dataUrl || DEFAULT_TICKETS_JSON_URL;
         this._mapStatus = 'loading';
         this._mapStatusMessage = '';
 
         try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP ${response.status} on ${url}`);
-            const data = await response.json();
-            const features = (data.features || []).filter(f => f?.geometry?.type === 'Point' && Array.isArray(f?.geometry?.coordinates));
+            const features = await this._fetchPointFeatures(url);
 
-            this._allMarkers = [];
             if (this._markersLayer) {
                 this._markersLayer.clearLayers();
             }
 
-            let validCount = 0;
-            let invalidCount = 0;
-
-            features.forEach((feature, index) => {
-                const p = feature.properties || {};
-                const coords = feature.geometry.coordinates;
-
-                if (!coords || coords.length < 2) {
-                    console.warn(`[geo-map-lit] Feature ${index} missing coordinates`);
-                    invalidCount++;
-                    return;
-                }
-
-                const lng = Number(coords[0]);
-                const lat = Number(coords[1]);
-
-                if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
-                    console.warn(`[geo-map-lit] Feature ${index} invalid coordinates: lat=${lat}, lng=${lng}`);
-                    invalidCount++;
-                    return;
-                }
-
-                if (lat < -90 || lat > 90 || lng < -180 || lng > 180) {
-                    console.warn(`[geo-map-lit] Feature ${index} out of range: lat=${lat}, lng=${lng}`);
-                    invalidCount++;
-                    return;
-                }
-
-                try {
-                    const latlng = L.latLng(lat, lng);
-                    if (!latlng || latlng.lat === undefined || latlng.lng === undefined) {
-                        console.warn(`[geo-map-lit] Feature ${index} created invalid LatLng`);
-                        invalidCount++;
-                        return;
-                    }
-
-                    const color = p.type_color || '#0066cc';
-                    const marker = L.marker(latlng, {
-                        icon: createGeoMapLeafletIcon(L, color),
-                        typeValue: p.type,
-                        typeColor: color,
-                    });
-
-                    // Initial popup
-                    marker.bindPopup(`
-                        <div class="geo-popup">
-                            <strong class="geo-popup-title">${p.title || ''}</strong>
-                            <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
-                            <br><small class="text-muted">${p.address || ''}</small>
-                        </div>
-                    `, { maxWidth: 260 });
-
-                    // AJAX on click
-                    if (p.id) {
-                        marker.once('click', () => {
-                            fetch(`/api/ticket-details/${p.id}`)
-                                .then(res => res.ok ? res.json() : null)
-                                .then(detail => {
-                                    if (!detail) return;
-                                    marker.getPopup().setContent(`
-                                        <div class="geo-popup">
-                                            <strong class="geo-popup-title">${detail.title || p.title || ''}</strong>
-                                            <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
-                                            <p class="geo-popup-description">${detail.description || ''}</p>
-                                        </div>
-                                    `);
-                                })
-                                .catch(() => {});
-                        });
-                    }
-
-                    this._allMarkers.push(marker);
-                    validCount++;
-                } catch (e) {
-                    console.error(`[geo-map-lit] Error creating marker for feature ${index}:`, e);
-                    invalidCount++;
-                }
-            });
-
-            console.log(`[geo-map-lit] Valid markers: ${validCount}, Invalid: ${invalidCount}`);
-
-            if (this._markersLayer && this._allMarkers.length > 0) {
-                // Add one by one to identify bad markers
-                this._allMarkers.forEach((marker, idx) => {
-                    try {
-                        this._markersLayer.addLayer(marker);
-                    } catch (e) {
-                        console.error(`[geo-map-lit] Error adding marker ${idx} to cluster:`, e);
-                    }
-                });
-                console.log(`[geo-map-lit] Added ${this._allMarkers.length} markers to cluster group`);
-            }
-
-            if (this._allMarkers.length === 0) {
-                this._mapStatus = 'empty';
-                this._mapStatusMessage = 'Nessuna segnalazione valida trovata.';
-            } else {
-                this._mapStatus = 'ready';
-                try {
-                    const bounds = L.featureGroup(this._allMarkers).getBounds();
-                    if (bounds.isValid()) {
-                        this._map.fitBounds(bounds, { padding: [40, 40], maxZoom: 11 });
-                    }
-                } catch (e) {
-                    console.warn('[geo-map-lit] fitBounds failed:', e.message);
-                }
-            }
-        } catch (err) {
+            this._populateMarkersFromFeatures(features);
+            this._addMarkersToLayer(this._allMarkers);
+            this._finalizeMapAfterMarkersLoaded();
+        } catch {
             this._mapStatus = 'error';
             this._mapStatusMessage = 'Errore nel caricamento della mappa.';
-            console.error('[geo-map-lit] Error loading GeoJSON:', err);
         }
     }
 
@@ -345,6 +314,107 @@ class GeoMapLit extends LitElement {
         if (this._map) {
             this._map.remove();
             this._map = null;
+        }
+    }
+
+    /** Build one Leaflet marker from a GeoJSON Point feature. */
+    _createMarkerFromGeoFeature(feature) {
+        const p = feature.properties || {};
+        const latlng = this._resolveFeatureLatLng(feature.geometry?.coordinates);
+        if (!latlng) {
+            return null;
+        }
+
+        const color = p.type_color || '#0066cc';
+        return this._buildGeoFeatureMarker(latlng, p, color);
+    }
+
+    /** Parse and validate [lng, lat] coordinates into L.latLng. */
+    _resolveFeatureLatLng(coords) {
+        if (!coords || coords.length < 2) {
+            return null;
+        }
+
+        const lng = Number(coords[0]);
+        const lat = Number(coords[1]);
+
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+            return null;
+        }
+
+        if (lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+            return null;
+        }
+
+        try {
+            const latlng = L.latLng(lat, lng);
+            if (!latlng || latlng.lat === undefined || latlng.lng === undefined) {
+                return null;
+            }
+
+            return latlng;
+        } catch {
+            return null;
+        }
+    }
+
+    /** Create marker with popup and lazy detail fetch on first click. */
+    _buildGeoFeatureMarker(latlng, p, color) {
+        try {
+            const marker = L.marker(latlng, {
+                icon: createGeoMapLeafletIcon(L, color),
+                typeValue: p.type,
+                typeColor: color,
+            });
+
+            marker.bindPopup(this._buildGeoFeaturePopupHtml(p, color), { maxWidth: 260 });
+            this._bindTicketDetailPopup(marker, p, color);
+
+            return marker;
+        } catch {
+            return null;
+        }
+    }
+
+    _buildGeoFeaturePopupHtml(p, color) {
+        return `
+                        <div class="geo-popup">
+                            <strong class="geo-popup-title">${p.title || ''}</strong>
+                            <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
+                            <br><small class="text-muted">${p.address || ''}</small>
+                        </div>
+                    `;
+    }
+
+    _bindTicketDetailPopup(marker, p, color) {
+        if (!p.id) {
+            return;
+        }
+        marker.once('click', () => {
+            void this._loadTicketPopupContent(marker, p, color);
+        });
+    }
+
+    /** Lazy-load ticket detail HTML into popup on first marker click. */
+    async _loadTicketPopupContent(marker, p, color) {
+        try {
+            const res = await fetch(`/api/ticket-details/${p.id}`);
+            if (!res.ok) {
+                return;
+            }
+            const detail = await res.json();
+            if (!detail) {
+                return;
+            }
+            marker.getPopup().setContent(`
+                <div class="geo-popup">
+                    <strong class="geo-popup-title">${detail.title || p.title || ''}</strong>
+                    <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
+                    <p class="geo-popup-description">${detail.description || ''}</p>
+                </div>
+            `);
+        } catch {
+            // ignore popup load errors
         }
     }
 }

@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
@@ -18,7 +17,7 @@ declare(strict_types=1);
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('user::common.nav.dashboard.label') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -40,17 +39,15 @@ declare(strict_types=1);
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('user::common.nav.profile.label') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                {{ __('user::common.actions.logout.label') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -73,7 +70,7 @@ declare(strict_types=1);
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('user::common.nav.dashboard.label') }}
             </x-responsive-nav-link>
         </div>
 
@@ -86,17 +83,15 @@ declare(strict_types=1);
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('user::common.nav.profile.label') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                            onclick="event.preventDefault(); this.closest('form').submit();">
+                        {{ __('user::common.actions.logout.label') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

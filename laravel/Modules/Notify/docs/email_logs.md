@@ -1,3 +1,16 @@
+---
+title: "email logs"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email logs"
+issues: []
+discussions: []
+status: superseded
+superseded_by: bmad/email-logs.md
+---
+
 # Sistema Log Email 
 
 ## Panoramica

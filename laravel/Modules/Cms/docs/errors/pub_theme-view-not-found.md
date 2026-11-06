@@ -1,3 +1,15 @@
+---
+title: "pub theme view not found"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "pub theme view not found"
+issues: []
+discussions: []
+status: draft
+---
+
 # Errore: View pub_theme::components.sections.footer not found
 
 ## 🚨 Problema
@@ -84,6 +96,5 @@ Il componente `Section` del modulo CMS:
 - [ServiceProvider Tema Sixteen](../../../../Themes/Sixteen/app/Providers/ThemeServiceProvider.php)
 
 ---
-
 *Ultimo aggiornamento: Settembre 2025*
 

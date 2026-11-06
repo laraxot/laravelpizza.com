@@ -1,8 +1,13 @@
+---
+title: "Xot - development-rules.md"
+module: Xot
+bmad: true
+status: active
+---
 # Regole Generali di Sviluppo del Progetto
 
 ## Collegamenti
 - [Documentazione generale progetto](/project_docs/README.md)
-- [Documentazione generale progetto](/project_docs/readme.md)
 - [Regole Filament](filament-best-practices.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 - [Standard di Codice](code-standards.md)
@@ -425,4 +430,12 @@ TextInput::make('name')
 
 ---
 
+title: "development rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "development rules"
+issues: []
+discussions: []
 **Nota**: Queste regole sono fondamentali per mantenere la qualità e la consistenza del progetto. Devono essere sempre seguite e aggiornate quando necessario.

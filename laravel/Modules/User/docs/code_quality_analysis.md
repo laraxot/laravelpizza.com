@@ -1,3 +1,11 @@
+---
+title: "Code Quality Analysis - User Module"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, user]
+qmd: "code quality analysis - user module user"
+---
 # Code Quality Analysis - User Module
 
 ## 🚨 Critical Issues Identified
@@ -304,8 +312,19 @@ public function getTableColumns(): array
 
 ## 📚 Related Documentation
 
+- [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/authentication_performance_optimization.md)
+
 - [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md)
 - [optimization-analysis.md](./optimization-analysis.md)
 - [phpstan-compliance.md](./phpstan-compliance.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the User module while maintaining security and functionality.
+
+
+---
+
+## Contenuto assorbito da `CODE_QUALITY_ANALYSIS.md`
+
+# Documento unificato
+
+Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [code_quality_analysis.md](./code_quality_analysis.md).

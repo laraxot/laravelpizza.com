@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "redundancy audit"
+issues: []
+discussions: []
 title: "Job redundancy audit 2026-05-21"
 type: audit
 module: Job
@@ -6,6 +10,7 @@ tags: [redundancy, duplicate-code, docs]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
+status: draft
 ---
 
 # Job redundancy audit 2026-05-21

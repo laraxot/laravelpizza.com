@@ -1,3 +1,11 @@
+---
+title: "Stack Tecnologico Standard"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "stack tecnologico standard xot"
+---
 # Stack Tecnologico Standard
 
 Questo documento definisce lo stack tecnologico standard utilizzato in tutti i moduli.

@@ -37,11 +37,11 @@ trait HasXotFormAction
     }
 
     /**
-     * @param array<string, mixed> $parameters
+     * @param  array<string, mixed>  $parameters
      */
     public function getResourceUrl(?string $name = null, array $parameters = [], bool $isAbsolute = true, ?string $panel = null, ?Model $tenant = null, bool $shouldGuessMissingParameters = true): string
     {
-        if (filled($name) && ('index' !== $name) && method_exists($this, 'getRecord')) {
+        if (filled($name) && ($name !== 'index') && method_exists($this, 'getRecord')) {
             $parameters['record'] ??= $this->getRecord();
         }
 

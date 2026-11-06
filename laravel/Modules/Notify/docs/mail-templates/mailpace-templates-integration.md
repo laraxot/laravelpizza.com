@@ -1,8 +1,21 @@
+---
+title: "mailpace templates integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mailpace templates integration"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione MailPace Templates
 
 ## Panoramica
 
 Questo documento descrive l'integrazione dei template email [mailpace/templates](https://github.com/mailpace/templates) nel modulo Notify di Quaeris. Questi template offrono un design moderno basato su TailwindCSS con supporto nativo per la modalità scura.
+Questo documento descrive l'integrazione dei template email [mailpace/templates](https://github.com/mailpace/templates) nel modulo Notify di App. Questi template offrono un design moderno basato su TailwindCSS con supporto nativo per la modalità scura.
 
 ## Template Disponibili
 
@@ -29,6 +42,7 @@ MailPace offre i seguenti template transazionali:
 
 ```
 /var/www/html/Quaeris/laravel/Modules/Notify/resources/mail-layouts/
+/var/www/_bases/base_ptvx_fila5/laravel/Modules/Notify/resources/mail-layouts/
 ├── default.html       # Layout base per la maggior parte delle email
 ├── main.html          # Alternativa semplificata
 ├── marketing.html     # Layout ottimizzato per email marketing
@@ -90,10 +104,12 @@ $mailTemplate->send($user->email, [
 2. **Usa Variabili** - Utilizza variabili Blade per contenuti dinamici
 3. **Test Cross-Client** - Testa i template su diversi client email
 4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per Quaeris
+4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per App
 
 ## Riferimenti
 
 - [Documentazione Maizzle](https://maizzle.com/docs/)
 - [Repository MailPace Templates](https://github.com/mailpace/templates)
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
+- [Guida Spatie Email](../spatie-email-usage-guide.md)
 - [Implementazione Slug Field](./slug_field_implementation.md)

@@ -68,7 +68,7 @@ class TaskCompleted extends Notification implements ShouldQueue
     /*
      * Get the Nexmo / SMS representation of the notification.
      *
-     * public function toNexmo(mixed $notifiable): NexmoMessage
+     * public function toNexmo(Task $notifiable): NexmoMessage
      * {
      * return (new NexmoMessage())
      * ->content($notifiable->description.' just finished running.');
@@ -77,7 +77,7 @@ class TaskCompleted extends Notification implements ShouldQueue
     /*
      * Get the Slack representation of the notification.
      *
-     * public function toSlack(mixed $notifiable): SlackMessage
+     * public function toSlack(Task $notifiable): SlackMessage
      * {
      * return (new SlackMessage())
      * ->content(config('app.name'))

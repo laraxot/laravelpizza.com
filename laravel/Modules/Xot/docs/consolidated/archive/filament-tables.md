@@ -1,3 +1,11 @@
+---
+title: "Gestione delle Tabelle in Filament"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "gestione delle tabelle in filament xot"
+---
 # Gestione delle Tabelle in Filament
 
 Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto <nome progetto>, utilizzando il trait `HasXotTable`.

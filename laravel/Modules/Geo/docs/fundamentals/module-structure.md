@@ -1,3 +1,15 @@
+---
+title: "module structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module structure"
+issues: []
+discussions: []
+status: draft
+---
+
 # Module Structure and Organization
 
 ## 🏗️ Project Architecture
@@ -157,5 +169,4 @@ When creating a new module, update:
 - **Integration Tests**: Cross-module interactions
 
 ---
-
 **Related**: [Architecture Rules](architecture-rules.md) | [Code Conventions](../development/conventions.md) | [Module List](module-list.md)

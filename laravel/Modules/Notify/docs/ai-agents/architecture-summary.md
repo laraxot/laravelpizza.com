@@ -1,3 +1,15 @@
+---
+title: "architecture summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # PTVX Architecture Summary
 
 > **Status**: Consolidated from Deep Study (2026-03-10)
@@ -41,3 +53,6 @@ Themes are decoupled from business logic.
 
 ---
 [Return to Documentation Index](../../AGENTS.md)
+[Return to Documentation Index](../../agents.md)
+[Return to Documentation Index](../AGENTS.md)
+[Return to Documentation Index](../agents.md)

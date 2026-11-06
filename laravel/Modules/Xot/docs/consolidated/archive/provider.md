@@ -1,3 +1,11 @@
+---
+title: "Service Provider in il progetto"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "service provider in il progetto xot"
+---
 # Service Provider in il progetto
 
 Il service provider è responsabile della registrazione e configurazione del tema. Ogni tema deve avere il proprio service provider.

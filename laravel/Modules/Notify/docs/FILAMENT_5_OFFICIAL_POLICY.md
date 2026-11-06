@@ -1,3 +1,17 @@
+---
+qmd: "FILAMENT 5 OFFICIAL POLICY"
+issues: []
+discussions: []
+title: "FILAMENT 5 - OFFICIAL POLICY"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: superseded
+superseded_by: filament_5_official_policy.md
+---
+
 # 🚨 FILAMENT 5 - OFFICIAL POLICY
 
 **Data**: 2026-03-30  

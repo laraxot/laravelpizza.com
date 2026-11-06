@@ -1,3 +1,14 @@
+---
+title: "filament v4 migration playbook"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 migration playbook"
+issues: []
+discussions: []
+---
+
 # 🚀 Filament v4 Migration Playbook - PTVX Complete Guide
 **Data**: 10 Dicembre 2025  
 **Target**: Tutti i moduli PTVX  
@@ -283,6 +294,14 @@ echo "Rollback completed"
 
 ---
 
+title: "filament v4 migration playbook"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 migration playbook"
+issues: []
+discussions: []
 ## 🎯 FINAL DELIVERABLES
 
 ### Technical Deliverables

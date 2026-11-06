@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
-
-uses(TestCase::class);
 
 it('renders the registration page successfully', function () {
     gdprGet('/en/auth/register')
@@ -291,7 +288,7 @@ it('stores user data correctly after successful registration', function () {
 });
 
 it('hashes the password after registration', function () {
-    $plainPassword = Str::password(16, symbols: true);
+    $plainPassword = config('app.test_password', 'test-password-123');
 
     gdprPost('/en/auth/register', [
         'first_name' => 'Bob',

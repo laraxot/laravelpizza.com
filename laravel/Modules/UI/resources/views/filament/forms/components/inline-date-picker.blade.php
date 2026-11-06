@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 {{--
 /**
@@ -127,7 +126,7 @@ declare(strict_types=1);
                             @endforeach
                         @endforeach
                     @else
-                        <div class="col-span-7 p-4 text-center text-gray-500">Caricamento calendario...</div>
+                        <div class="col-span-7 p-4 text-center text-gray-500">{{ __('ui::datepicker.messages.loading_calendar.message') }}</div>
                     @endif
                 </div>
 

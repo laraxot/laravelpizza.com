@@ -6,6 +6,9 @@ date: "2026-06-13"
 qmd: "user-auth-patterns"
 github_issue: ""
 github_discussion: ""
+updated: 2026-10-13
+status: superseded
+superseded_by: auth-patterns.md
 ---
 
 # User Module - Authentication Patterns
@@ -141,5 +144,6 @@ POST /api/auth/logout
 
 ## Collegamenti
 
-- [Project Roadmap](../../Activity/docs/wiki/PROJECT-ROADMAP.md)
+- [Project Roadmap](../../../Activity/docs/wiki/project-roadmap.md)
+- [Project Roadmap](../../../Activity/docs/wiki/project-roadmap.md)
 - [Tenant Module](../../../Tenant/docs/wiki/)

@@ -1,4 +1,7 @@
 ---
+qmd: "release marketing standard"
+issues: []
+discussions: []
 title: "Release e README marketing — Gdpr"
 type: reference
 status: approved

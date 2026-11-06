@@ -1,3 +1,15 @@
+---
+title: "DESIGN COMUNI PROGRESS 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN COMUNI PROGRESS 1"
+issues: []
+discussions: []
+status: draft
+---
+
 # ✅ Design Comuni Replication - PROGRESS REPORT #1
 
 **Date**: 2026-03-30  
@@ -5,7 +17,6 @@
 **Phase**: Phase 1 Complete (44%)
 
 ---
-
 ## 🎯 Objective
 
 Replicate all 38 static pages from [Design Comuni Pagine Statiche](https://github.com/italia/design-comuni-pagine-statiche) as reusable Blade components.
@@ -218,7 +229,7 @@ Docs       [██████████] 100% (3/3)
 
 ### Created
 
-1. **DESIGN_COMUNI_REPLICATION_PLAN.md** (15KB)
+1. **design-comuni-replication-plan.md** (15KB)
    - Complete page inventory (38 pages)
    - Component architecture
    - DRY + KISS guidelines

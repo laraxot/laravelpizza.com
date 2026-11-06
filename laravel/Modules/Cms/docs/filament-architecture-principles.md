@@ -1,3 +1,15 @@
+---
+title: "filament architecture principles"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament architecture principles"
+issues: []
+discussions: []
+status: draft
+---
+
 # Applicazione dei Principi di Architettura Filament ai Moduli
 
 ## Introduzione

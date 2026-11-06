@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
@@ -10,7 +9,7 @@ declare(strict_types=1);
       <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
       <figure class="mt-10">
         <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-          <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
+          <p>{{ __('ui::blocks_testimonials.quotes.quote_03.description') }}</p>
         </blockquote>
         <figcaption class="mt-10">
           <img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
@@ -19,7 +18,7 @@ declare(strict_types=1);
             <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
               <circle cx="1" cy="1" r="1" />
             </svg>
-            <div class="text-gray-600">CEO of Workcation</div>
+            <div class="text-gray-600">{{ __('ui::blocks_testimonials.roles.ceo_of.label', ['company' => 'Workcation']) }}</div>
           </div>
         </figcaption>
       </figure>

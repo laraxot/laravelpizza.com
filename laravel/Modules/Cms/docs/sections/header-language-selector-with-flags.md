@@ -1,7 +1,19 @@
+---
+title: "header language selector with flags"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header language selector with flags"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione del Selettore di Lingua con Bandiere SVG
 
 ## Collegamenti correlati
-- [README modulo Cms](../readme.md)
+- [README modulo Cms](../README.md)
 - [Documentazione User](/laravel/modules/user/project_docs/header_language_selector_with_flags.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Best Practices Chiavi di Traduzione](/laravel/modules/lang/project_docs/translation_keys_best_practices.md)

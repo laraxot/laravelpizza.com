@@ -6,12 +6,13 @@ namespace Modules\UI\Filament\Blocks;
 
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class Contact extends XotBaseBlock
 {
     /**
-     * @return array<int, \Filament\Schemas\Components\Component>
+     * @return array<int, Component>
      */
     public static function getFormSchema(): array
     {

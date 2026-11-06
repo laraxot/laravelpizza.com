@@ -1,3 +1,15 @@
+---
+title: "predict generation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "predict generation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Predict Generation
 
 ## Scopo

@@ -1,5 +1,15 @@
 ---
 
+title: "translation keys rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation keys rules"
+issues: []
+discussions: []
+---
+
 ## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -46,5 +56,5 @@ return [
 ```
 
 ### Riferimenti
-- [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_RULES.md](../../Lang/docs/translation-keys-rules.md)
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/translation-keys-best-practices.md)

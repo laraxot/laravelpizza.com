@@ -1,3 +1,13 @@
+---
+title: "lamp"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, ubuntu]
+qmd: "lamp"
+---
 ext-sqlite3
 ext-zip
 ext-intl

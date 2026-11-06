@@ -1,3 +1,14 @@
+---
+title: "directory structure guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "directory structure guide"
+issues: []
+discussions: []
+---
+
 # Guida alla Struttura Corretta delle Directory nei Moduli Laraxot PTVX
 
 ## Panoramica

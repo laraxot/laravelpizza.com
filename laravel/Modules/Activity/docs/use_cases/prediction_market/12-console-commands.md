@@ -1,3 +1,11 @@
+---
+title: "Console Commands per <nome progetto>ion Market"
+type: note
+status: draft
+updated: 2026-10-07
+tags: [docs, activity, use_cases]
+qmd: "console commands per <nome progetto>ion market activity"
+---
 # Console Commands per <nome progetto>ion Market
 
 ## Introduzione

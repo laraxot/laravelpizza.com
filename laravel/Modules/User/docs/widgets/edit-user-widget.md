@@ -1,3 +1,20 @@
+---
+title: "EditUserWidget Documentation"
+type: concept
+tags: [edit, user, widget]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "edit-user-widget edituserwidget documentation"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./implementation-summary.md"
+  - "./implementation.md"
+  - "./translation-guidelines.md"
+  - "./translationlines.md"
+status: draft
+---
+
 # EditUserWidget Documentation
 
 ## Overview
@@ -125,7 +142,8 @@ All widget text follows the expanded translation structure:
 * Translation system integration
 * File upload and image processing capabilities
 ## Related Documentation
-* [User Module Widget Structure](../widgets_structure.md)
+* [User Module Widget Structure](../widgets-structure.md)
+* [User Module Widget Structure](../widgets-structure-user.md)
 * [Widget Translation Guidelines](./translation-guidelines.md)
 * [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)

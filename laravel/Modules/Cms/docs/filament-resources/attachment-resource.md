@@ -1,3 +1,15 @@
+---
+title: "attachment resource"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "attachment resource"
+issues: []
+discussions: []
+status: draft
+---
+
 # Attachment Resource
 
 This document outlines the Filament resource implementation for the `Attachment` model in the CMS module.

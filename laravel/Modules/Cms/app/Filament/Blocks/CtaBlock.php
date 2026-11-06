@@ -10,7 +10,6 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 class CtaBlock extends XotBaseBlock
 {
-    #[\Override]
     public static function getBlockSchema(): array
     {
         return [

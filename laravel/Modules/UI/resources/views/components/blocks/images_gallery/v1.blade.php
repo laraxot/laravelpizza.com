@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 @props(['data'])
 
@@ -22,24 +21,24 @@ declare(strict_types=1);
           ]) }} --}}
         <div class="flex flex-wrap w-1/2">
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
           </div>
           <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
           </div>
         </div>
         <div class="flex flex-wrap w-1/2">
           <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+            <img alt="{{ __('ui::blocks_gallery.v1.gallery.alt') }}" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
           </div>
         </div>
       </div>

@@ -1,8 +1,16 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel adjacency list"
+issues: []
+discussions: []
 title: staudenmeir/laravel-adjacency-list
 description: staudenmeir/laravel-adjacency-list package
 extends: _layouts.documentation
 section: content
+status: draft
 ---
 
 # staudenmeir/laravel-adjacency-list {#staudenmeir/laravel-adjacency-list}

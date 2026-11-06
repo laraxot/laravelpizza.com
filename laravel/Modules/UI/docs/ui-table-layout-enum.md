@@ -1,3 +1,15 @@
+---
+title: "ui table layout enum"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ui table layout enum"
+issues: []
+discussions: []
+status: draft
+---
+
 # TableLayoutEnum - Sistema di Layout per Tabelle Filament
 
 ## Panoramica

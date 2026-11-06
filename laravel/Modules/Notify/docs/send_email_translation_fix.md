@@ -1,3 +1,15 @@
+---
+title: "send email translation fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "send email translation fix"
+issues: []
+discussions: []
+status: draft
+---
+
 # Fix Traduzioni File send_email.php - Modulo Notify
 
 ## Problemi Identificati
@@ -125,11 +137,11 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
-- [Regole Helper Text](../../docs/translation-helper-text-standards.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)
+- [Documentazione Root](../docs/translation_standards_links.md)
+- [Regole Helper Text](../docs/translation-helper-text-standards.md)
+- [Best Practices Filament](../docs/filament_translation_best_practices.md)
 - [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Best Practices Filament](../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 
@@ -154,5 +166,4 @@ Ogni campo ora ha la struttura espansa completa:
 ],
 ```
 
-*Ultimo aggiornamento: 2025-01-06* 
 *Ultimo aggiornamento: 2025-01-06* 

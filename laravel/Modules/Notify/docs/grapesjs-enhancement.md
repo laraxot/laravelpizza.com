@@ -1,9 +1,20 @@
+---
+title: "grapesjs enhancement"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "grapesjs enhancement"
+issues: []
+discussions: []
+status: draft
+---
+
 # Integrazione GrapesJS Editor (Dotswan)
 
 Questo documento analizza il plugin [Dotswan GrapesJS](https://filamentphp.com/plugins/dotswan-grapesjs) per Filament e propone una versione in-house open source migliorata.
 
 ---
-
 ## 1. Plugin di riferimento
 
 - **Dotswan GrapesJS**: editor drag’n’drop per contenuti HTML via GrapesJS

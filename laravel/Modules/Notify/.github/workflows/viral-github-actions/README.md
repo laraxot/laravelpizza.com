@@ -1,3 +1,14 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+---
+
 # 🚀 GitHub Actions per la Viralità del Progetto healthcare_app Fila5 Mono
 
 ## 📋 Sommario delle Azioni Virali
@@ -6,6 +17,14 @@ Questo documento descrive le GitHub Actions complete per promuovere il progetto 
 
 ---
 
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 🎯 **Obiettivi Principali**
 
 1. **Automatizzare la promozione** di ogni rilascio e milestone

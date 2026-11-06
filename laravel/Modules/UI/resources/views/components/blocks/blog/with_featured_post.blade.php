@@ -1,17 +1,16 @@
 <?php
 
 declare(strict_types=1);
-
 ?>
 <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
       <article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
-        <time datetime="2020-03-16" class="block text-sm leading-6 text-gray-600">Mar 16, 2020</time>
+        <time datetime="2020-03-16" class="block text-sm leading-6 text-gray-600">{{ __('ui::blocks_blog.shared.date_1.label') }}</time>
         <h2 id="featured-post" class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">We’re incredibly proud to announce we have secured $75m in Series B</h2>
-        <p class="mt-4 text-lg leading-8 text-gray-600">Libero neque aenean tincidunt nec consequat tempor. Viverra odio id velit adipiscing id. Nisi vestibulum orci eget bibendum dictum. Velit viverra posuere vulputate volutpat nunc. Nunc netus sit faucibus.</p>
+        <p class="mt-4 text-lg leading-8 text-gray-600">{{ __('ui::blocks_blog.with_featured_post.paragraph_1.description') }}</p>
         <div class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
           <div class="flex">
-            <a href="#" class="text-sm font-semibold leading-6 text-indigo-600" aria-describedby="featured-post">Continue reading <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm font-semibold leading-6 text-indigo-600" aria-describedby="featured-post">{{ __('ui::blocks_blog.with_featured_post.continue_reading.label') }} <span aria-hidden="true">&rarr;</span></a>
           </div>
           <div class="flex lg:border-t lg:border-gray-900/10 lg:pt-8">
             <a href="#" class="flex gap-x-2.5 text-sm font-semibold leading-6 text-gray-900">
@@ -25,14 +24,14 @@ declare(strict_types=1);
         <div class="-my-12 divide-y divide-gray-900/10">
           <article class="py-12">
             <div class="group relative max-w-xl">
-              <time datetime="2020-03-16" class="block text-sm leading-6 text-gray-600">Mar 10, 2020</time>
+              <time datetime="2020-03-16" class="block text-sm leading-6 text-gray-600">{{ __('ui::blocks_blog.shared.date_2.label') }}</time>
               <h2 class="mt-2 text-lg font-semibold text-gray-900 group-hover:text-gray-600">
                 <a href="#">
                   <span class="absolute inset-0"></span>
-                  Boost your conversion rate
+                  {{ __('ui::blocks_demo_shared.labels.boost_your_conversion_rate.label') }}
                 </a>
               </h2>
-              <p class="mt-4 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.</p>
+              <p class="mt-4 text-sm leading-6 text-gray-600">{{ __('ui::blocks_blog.shared.paragraph_4.description') }}</p>
             </div>
             <div class="mt-4 flex">
               <a href="#" class="relative flex gap-x-2.5 text-sm font-semibold leading-6 text-gray-900">

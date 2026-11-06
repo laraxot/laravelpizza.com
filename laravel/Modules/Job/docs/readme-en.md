@@ -1,4 +1,16 @@
-# ⚙️ Job — English presentation
+---
+title: "readme en"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme en"
+issues: []
+discussions: []
+status: draft
+---
+
+# ⚙️ Job: English presentation
 
 [![Domain-Queue](https://img.shields.io/badge/Domain-Queues%20%26%20Jobs-5D4037.svg)](#)
 [![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
@@ -10,10 +22,9 @@
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
 [![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
-> **Heavy work off the request.** Queues, batches, retries — fast UX under load.
+> **Heavy work off the request.** Queues, batches, retries: fast UX under load.
 
 ---
-
 ## Why it exists
 
 Geocoding, exports, bulk notifications must not block users.
@@ -37,9 +48,9 @@ Geocoding, exports, bulk notifications must not block users.
 
 ## Join the team
 
-Scale **without fear** — async done right.
+Scale **without fear**: async done right.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5**: see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

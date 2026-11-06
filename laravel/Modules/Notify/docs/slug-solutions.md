@@ -1,3 +1,16 @@
+---
+qmd: "slug solutions"
+issues: []
+discussions: []
+title: "Analisi Soluzioni per Slug in Filament"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
+---
+
 # Analisi Soluzioni per Slug in Filament
 
 ## Introduzione

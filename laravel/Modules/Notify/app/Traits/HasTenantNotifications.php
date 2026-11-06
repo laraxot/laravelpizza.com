@@ -9,13 +9,16 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Modules\Notify\Models\NotificationLog;
+use Webmozart\Assert\Assert;
 
-/** @phpstan-ignore trait.unused */
+/**
+ * Trait HasTenantNotifications.
+ *
+ * Fornisce funzionalità per la gestione delle notifiche per tenant.
+ */
 trait HasTenantNotifications
 {
     /**
-     * Ottiene tutte le notifiche per il tenant corrente.
-     *
      * @return MorphMany<NotificationLog, $this>
      */
     public function notifications(): MorphMany
@@ -24,8 +27,6 @@ trait HasTenantNotifications
     }
 
     /**
-     * Ottiene le notifiche non lette per il tenant corrente.
-     *
      * @return MorphMany<NotificationLog, $this>
      */
     public function unreadNotifications(): MorphMany
@@ -34,8 +35,6 @@ trait HasTenantNotifications
     }
 
     /**
-     * Ottiene le notifiche lette per il tenant corrente.
-     *
      * @return MorphMany<NotificationLog, $this>
      */
     public function readNotifications(): MorphMany
@@ -44,8 +43,6 @@ trait HasTenantNotifications
     }
 
     /**
-     * Scope per filtrare le notifiche per tenant.
-     *
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
@@ -107,7 +104,7 @@ trait HasTenantNotifications
     /**
      * Relazione morph verso NotificationLog filtrata per tenant corrente.
      *
-     * @return MorphMany<NotificationLog, $this>
+     * @return MorphMany<NotificationLog, static>
      */
     protected function tenantNotificationLogs(): MorphMany
     {
@@ -131,6 +128,12 @@ trait HasTenantNotifications
 
         $key = $tenant->getKey();
 
-        return $key === null ? null : (string) $key;
+        if ($key === null) {
+            return null;
+        }
+
+        Assert::scalar($key);
+
+        return (string) $key;
     }
 }

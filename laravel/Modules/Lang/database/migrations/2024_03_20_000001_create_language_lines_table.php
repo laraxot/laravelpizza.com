@@ -1,33 +1,26 @@
 <?php
 
 declare(strict_types=1);
-
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Modules\Lang\Models\LanguageLine;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
+return new class extends XotBaseMigration {
+    protected ?string $model_class = LanguageLine::class;
+
     public function up(): void
     {
-        Schema::create('language_lines', function (Blueprint $table): void {
+        $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->string('group')->index();
             $table->string('key');
             $table->json('text');
             $table->string('locale')->index();
-            $table->timestamps();
             $table->unique(['group', 'key', 'locale']);
         });
-    }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('language_lines');
+        $this->tableUpdate(function (Blueprint $table): void {
+            $this->updateTimestamps($table, false);
+        });
     }
 };

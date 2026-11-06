@@ -1,3 +1,13 @@
+---
+title: "Service Provider"
+type: note
+status: unverified
+created: 2026-09-24
+updated: 2026-10-20
+module: Xot
+tags: [xot, docs]
+qmd: "Service Provider"
+---
 # Service Provider
 
 ## Configurazione Base
@@ -149,7 +159,7 @@ class CommandServiceProvider extends ServiceProvider
     {
         $this->app->booted(function () {
             $schedule = $this->app->make(Schedule::class);
-
+            
             $schedule->command('emails:send')
                     ->daily()
                     ->at('13:00');
@@ -191,7 +201,7 @@ try {
         'provider' => get_class($this),
         'error' => $e->getMessage(),
     ]);
-
+    
     throw $e;
 }
 ```
@@ -254,87 +264,4 @@ class ValidationServiceProvider extends ServiceProvider
         });
     }
 }
-```
-
-## 🔧 Merge Conflicts Resolution - 2025-11-04
-
-### Problema Risolto
-Il `RouteServiceProvider` e `XotBaseRouteServiceProvider` nel modulo Xot contenevano **merge conflicts massivi non risolti** che impedivano l'avvio del server Laravel.
-
-### File Corretti
-
-#### RouteServiceProvider.php (Xot)
-- **Problema**: Metodo `registerRoutePattern()` con TRE `if` statements duplicati e solo UNA chiusura `}`
-- **Soluzione**: Rimosso duplicazioni, mantenuta versione con spacing coerente
-
-#### XotBaseRouteServiceProvider.php
-- **Problema**: Route middleware 'web' registrato 3 volte (linee 60-62)
-- **Soluzione**: Mantenuta solo UNA registrazione
-
-#### Pattern Identificati
-```php
-// ❌ MERGE CONFLICT NON RISOLTO
-if (! is_array($langs)) {
-if (! is_array($langs)) {
-if (!is_array($langs)) {
-    $langs = ['it' => 'it', 'en' => 'en'];
-}
-
-// ✅ CORRETTO
-if (! is_array($langs)) {
-    $langs = ['it' => 'it', 'en' => 'en'];
-}
-```
-
-### Regole PSR-4 Applicate
-
-**FONDAMENTALE**: I namespace Laraxot NON includono il segmento `app/`!
-
-```php
-// File location: Modules/Xot/app/Providers/RouteServiceProvider.php
-// ✅ CORRECT namespace:
-namespace Modules\Xot\Providers;
-
-// ❌ WRONG:
-namespace Modules\Xot\App\Providers;
-```
-
-### File Locking Pattern Implementato
-
-Prima di ogni modifica di file, creare un file `.lock`:
-
-```bash
-# Prima della modifica
-touch file.php.lock
-
-# Se .lock esiste, SKIPPA e vai oltre
-
-# Dopo la modifica
-rm file.php.lock
-```
-
-**Benefici:**
-- Prevenzione race conditions
-- Tracciabilità modifiche in corso
-- Coordinamento team/processi multipli
-
-### Verifica Finale
-```bash
-# Test server
-php artisan serve --host=0.0.0.0 --port=8000
-# ✅ Server running on http://0.0.0.0:8000
-
-# PHPStan analysis
-./vendor/bin/phpstan analyse Modules/Xot/app/Providers
-# ✅ Completato (alcuni type safety warnings non bloccanti)
-
-# Code formatting
-vendor/bin/pint --dirty Modules/Xot/app
-# ✅ Formattazione applicata
-```
-
-### References
-- [Merge Conflict Resolution 2025-11-04](./merge-conflict-resolution-2025-11-04.md) - Report completo
-- [File Locking Pattern](./file-locking-pattern.md) - Nuova regola fondamentale
-- [RouteServiceProvider Documentation](./consolidated/route-service-provider.md) - Linee guida esistenti
-- [Laraxot Architecture Rules](./laraxot-architecture-rules.md) - Convenzioni namespace
+``` 

@@ -1,4 +1,18 @@
+---
+title: "geocoding"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "geocoding"
+issues: []
+discussions: []
+status: draft
+---
+
 # Servizio di Geocoding
+
+> **Stato del codice.** `GeoService`, `GeoDataService`, `GeoDataValidator`, `GoogleMapsService` e `BaseGeoService` sono stati ritirati e la cartella `app/Services` non esiste piu'. Gli esempi che le citano descrivono codice storico. Sostituti vivi e prove di equivalenza: [services-to-actions-geo.story.md](../stories/services-to-actions-geo.story.md).
 
 ## Overview
 Il servizio di geocoding è responsabile della conversione di indirizzi testuali in coordinate geografiche (latitudine e longitudine). Questo servizio è essenziale per funzionalità come la visualizzazione di mappe, il calcolo di distanze e l'analisi territoriale.

@@ -1,3 +1,11 @@
+---
+title: "Guida alla Struttura Corretta delle Directory nei Moduli Laraxot <nome progetto>"
+type: note
+status: draft
+updated: 2026-10-18
+tags: [docs, xot, consolidated]
+qmd: "guida alla struttura corretta delle directory nei moduli laraxot <nome progetto> xot"
+---
 # Guida alla Struttura Corretta delle Directory nei Moduli Laraxot <nome progetto>
 
 ## Panoramica

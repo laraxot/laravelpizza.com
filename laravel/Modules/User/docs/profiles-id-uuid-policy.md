@@ -1,3 +1,28 @@
+---
+title: "Profiles Id/Uuid Policy"
+type: concept
+tags: [profiles, uuid, policy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "profiles-id-uuid-policy profiles id/uuid policy"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+status: draft
+---
+
 # Profiles Id/Uuid Policy
 
 ## Contract

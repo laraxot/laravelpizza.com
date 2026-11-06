@@ -1,3 +1,15 @@
+---
+title: "optimization recommendations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "optimization recommendations"
+issues: []
+discussions: []
+status: draft
+---
+
 # Raccomandazioni di Ottimizzazione - Modulo Notify
 
 ## 🎯 Stato Attuale e Problemi Critici
@@ -6,14 +18,15 @@
 
 #### 1. Riusabilità Compromessa
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "Quaeris" in test e documentazione
+- **336+ occorrenze hardcoded** di "saluteora" in test e documentazione
 - **Import diretti** da moduli project-specific
 - **Configurazioni database** hardcoded nei test
 - **Email domains** hardcoded nei test
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a appunti-filters.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -21,13 +34,13 @@
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
 - Riferimenti diretti a modelli <nome progetto>
-- Riferimenti diretti a modelli Quaeris
+- Riferimenti diretti a modelli SaluteOra
 
 ## ✅ OTTIMIZZAZIONI IMPLEMENTATE
 
 ### Riusabilità
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "<nome progetto>"
-1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "Quaeris"
+1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "SaluteOra"
 2. **NotifyThemeableFactory.php**: Implementato `getProjectNamespace()` dinamico
 3. **File di traduzione**: Aggiornati placeholder con `{{app_name}}`
 4. **Documentazione base**: Creata guida riusabilità
@@ -42,7 +55,7 @@
 // ❌ PRIMA
 $user = User::factory()->create();
 'database' => '<nome progetto>_test'
-'database' => 'Quaeris_test'
+'database' => 'saluteora_test'
 
 // ✅ DOPO
 $userClass = XotData::make()->getUserClass();
@@ -226,8 +239,7 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-*Ultimo aggiornamento: gennaio 2025*
-- [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
+- [Piano Implementazione](../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
 *Ultimo aggiornamento: gennaio 2025*

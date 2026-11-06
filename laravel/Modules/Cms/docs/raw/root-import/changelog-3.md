@@ -1,3 +1,14 @@
+---
+title: "changelog 3"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "changelog 3"
+issues: []
+discussions: []
+---
+
 # Changelog - Modulo Cms
 
 All notable changes to this module will be documented in this file.

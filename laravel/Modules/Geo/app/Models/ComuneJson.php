@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 
@@ -20,12 +21,15 @@ use Illuminate\Support\Facades\Cache;
  * @see docs/comune-unificazione-analisi.md Analisi dell'unificazione dei modelli
  * @see docs/geo-json-model.md Documentazione tecnica del modello base
  */
+/**
+ * @mixin Builder<*>
+ */
 class ComuneJson extends GeoJsonModel
 {
     /**
      * Cache duration in seconds (1 week).
      */
-    protected const CACHE_TTL = 604800;
+    protected const int CACHE_TTL = 604800;
 
     /**
      * Get all comuni with their complete data.
@@ -43,8 +47,6 @@ class ComuneJson extends GeoJsonModel
     #[\Override]
     public static function all(): Collection
     {
-        $raw = static::loadData();
-
         /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
@@ -54,7 +56,7 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $all */
-        $all = $raw;
+        $all = static::loadData();
 
         return $all;
     }
@@ -149,7 +151,7 @@ class ComuneJson extends GeoJsonModel
      */
     public static function searchByName(string $name, int $limit = 0): Collection
     {
-        $name = mb_strtolower($name);
+        $name = mb_strtolower((string) $name);
         $cacheKey = 'geo_search_'.md5($name).'_'.$limit;
 
         /** @var Collection<int, array{
@@ -163,7 +165,7 @@ class ComuneJson extends GeoJsonModel
          * }> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit) {
             $results = static::all()
-                ->filter(static fn (array $item): bool => str_contains(mb_strtolower($item['nome']), $name))
+                ->filter(static fn (array $item): bool => str_contains(mb_strtolower(self::getComuneName($item)), $name))
                 ->sortBy('nome');
 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
@@ -197,11 +199,37 @@ class ComuneJson extends GeoJsonModel
          *     popolazione: int
          * }> $filtered */
         $filtered = static::all()
-            ->filter(static fn (array $item): bool => \in_array($cap, $item['cap'], true))
+            ->filter(static fn (array $item): bool => \in_array($cap, self::getCapList($item), true))
             ->sortBy('nome')
             ->values();
 
         return $filtered;
+    }
+
+    /**
+     * @param array<string, mixed> $item
+     */
+    private static function getComuneName(array $item): string
+    {
+        $name = $item['nome'] ?? null;
+
+        return \is_string($name) ? $name : '';
+    }
+
+    /**
+     * @param array<string, mixed> $item
+     *
+     * @return array<int, string>
+     */
+    private static function getCapList(array $item): array
+    {
+        $capList = $item['cap'] ?? null;
+
+        if (! \is_array($capList)) {
+            return [];
+        }
+
+        return array_values(array_filter($capList, 'is_string'));
     }
 
     /**
@@ -293,8 +321,8 @@ class ComuneJson extends GeoJsonModel
         }
 
         // Chiavi specifiche per regione
-        static::allRegions()
-            ->each(static function ($_nome, $code) use (&$clearedKeys): void {
+        static::allRegions()->keys()
+            ->each(static function (string $code) use (&$clearedKeys): void {
                 $keys = ["geo_region_{$code}", "geo_region_{$code}_provinces"];
                 foreach ($keys as $key) {
                     Cache::forget($key);
@@ -303,8 +331,8 @@ class ComuneJson extends GeoJsonModel
             });
 
         // Chiavi specifiche per provincia
-        static::allProvinces()
-            ->each(static function ($_nome, $code) use (&$clearedKeys): void {
+        static::allProvinces()->keys()
+            ->each(static function (string $code) use (&$clearedKeys): void {
                 $key = "geo_province_{$code}";
                 Cache::forget($key);
                 $clearedKeys[] = $key;
@@ -395,13 +423,13 @@ class ComuneJson extends GeoJsonModel
             }
 
             return [
-                'regione' => $comune['regione'] ?? null,
-                'provincia' => $comune['provincia'] ?? null,
+                'regione' => $comune['regione'],
+                'provincia' => $comune['provincia'],
                 'comune' => [
                     'nome' => $comune['nome'],
-                    'codice' => $comune['codice'] ?? null,
-                    'codiceCatastale' => $comune['codiceCatastale'] ?? null,
-                    'popolazione' => $comune['popolazione'] ?? null,
+                    'codice' => $comune['codice'],
+                    'codiceCatastale' => $comune['codiceCatastale'],
+                    'popolazione' => $comune['popolazione'],
                 ],
                 'cap' => $comune['cap'] ?? [],
             ];

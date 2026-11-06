@@ -92,4 +92,18 @@ return [
     ],
     'label' => 'Place',
     'plural_label' => 'Place (Plurale)',
+    'card' => [
+        'like' => [
+            'label' => 'Mi piace',
+        ],
+        'live_music' => [
+            'label' => 'Musica dal vivo',
+        ],
+        'menu' => [
+            'label' => 'Menu',
+        ],
+        'photo' => [
+            'label' => 'Foto',
+        ],
+    ],
 ];

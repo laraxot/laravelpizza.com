@@ -13,7 +13,7 @@ class NotifyThemeInfolist extends XotBaseResourceInfolist
     /**
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'id' => TextEntry::make('id'),
@@ -31,7 +31,6 @@ class NotifyThemeInfolist extends XotBaseResourceInfolist
             'logo_src' => TextEntry::make('logo_src'),
             'logo_width' => TextEntry::make('logo_width'),
             'logo_height' => TextEntry::make('logo_height'),
-            'view_params' => TextEntry::make('view_params'),
-        ];
+            'view_params' => TextEntry::make('view_params')];
     }
 }

@@ -1,3 +1,15 @@
+---
+title: "original"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "original"
+issues: []
+discussions: []
+status: draft
+---
+
 # Frontend e Sistema di Componenti
 
 ## Struttura della Homepage
@@ -62,5 +74,5 @@ La homepage del sito è costruita utilizzando un sistema di componenti modulare 
 3. Verificare la struttura JSON
 
 ## Collegamenti
-- [Componenti UI](../ui/docs/components.md)
+- [Componenti UI](../components.md)
 - [Documentazione Core](../xot/docs/documentation.md)

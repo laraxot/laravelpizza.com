@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "design comuni page replication"
+issues: []
+discussions: []
 name: Design Comuni Page Replication
 about: Replicate a static page from Design Comuni Italia
 title: '[DESIGN COMUNI] Replicate [pagina-name].html'
@@ -12,6 +19,7 @@ Replicare la pagina **[pagina-name].html** da Design Comuni Italia.
 
 **Source**: https://italia.github.io/design-comuni-pagine-statiche/sito/[pagina-name].html  
 **Target**: http://fixcity.local/it/tests/[pagina-name]  
+**Target**: http://ptv.local/it/tests/[pagina-name]  
 **HTML Parity**: 100% match dentro `<body>` (esclusi scripts)
 
 ---
@@ -20,6 +28,7 @@ Replicare la pagina **[pagina-name].html** da Design Comuni Italia.
 
 ### 1. JSON Content
 - [ ] Creare `laravel/config/local/fixcity/database/content/pages/tests.[pagina-name].json`
+- [ ] Creare `laravel/config/local/ptv/database/content/pages/tests.[pagina-name].json`
 - [ ] Definire blocchi con type generici (hero, card, navigation, etc.)
 - [ ] Set weight per ordinamento
 - [ ] Verificare nodo `"slug": "tests.[pagina-name]"`
@@ -31,6 +40,7 @@ Replicare la pagina **[pagina-name].html** da Design Comuni Italia.
 
 ### 3. Test Pagina
 - [ ] Visitare `http://fixcity.local/it/tests/[pagina-name]`
+- [ ] Visitare `http://ptv.local/it/tests/[pagina-name]`
 - [ ] Verificare rendering corretto
 - [ ] Controllare header e footer
 
@@ -121,5 +131,5 @@ Replicare la pagina **[pagina-name].html** da Design Comuni Italia.
 
 - **Design Comuni**: https://italia.github.io/design-comuni-pagine-statiche/sito/[pagina-name].html
 - **Block Analysis**: `_bmad-output/design-comuni-block-analysis.md`
-- **Master Plan**: `Themes/Sixteen/docs/design-comuni/MASTER_IMPLEMENTATION_PLAN.md`
-- **Architecture**: `Themes/Sixteen/docs/design-comuni/ARCHITECTURAL_DECISIONS.md`
+- **Master Plan**: `Themes/Sixteen/docs/design-comuni/master-implementation-plan.md`
+- **Architecture**: `Themes/Sixteen/docs/design-comuni/architectural-decisions.md`

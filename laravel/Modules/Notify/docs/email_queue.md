@@ -1,3 +1,16 @@
+---
+title: "email queue"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email queue"
+issues: []
+discussions: []
+status: superseded
+superseded_by: bmad/architecture/email-queue.md
+---
+
 # Sistema Code Email - il progetto
 
 ## Panoramica

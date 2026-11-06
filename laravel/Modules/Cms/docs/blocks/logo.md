@@ -1,3 +1,15 @@
+---
+title: "logo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "logo"
+issues: []
+discussions: []
+status: draft
+---
+
 # Logo Block
 
 Il blocco Logo è utilizzato per gestire il logo del sito, con supporto per il caricamento dell'immagine e la configurazione delle dimensioni.
@@ -146,7 +158,7 @@ Le Blade dei blocchi devono includere un wrapper con le classi del tema per sfon
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../ui/components.md)
+- [UI Components](../components.md)
 - [Best Practices Immagini](../ui/image-guidelines.md)
 - [Accessibilità](../ui/accessibility.md)
 - [Filament Icons](https://filamentphp.com/docs/3.x/support/icons)

@@ -1,3 +1,15 @@
+---
+title: "notification providers guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification providers guide"
+issues: []
+discussions: []
+status: draft
+---
+
 # Guida Completa ai Provider di Notifiche 
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di .
@@ -135,3 +147,6 @@ Per implementazioni specifiche, vedere i documenti:
 - [PROVIDER_ACTIONS_ARCHITECTURE.md](./PROVIDER_ACTIONS_ARCHITECTURE.md)
 - [SMS_ACTIONS_PATTERN.md](./SMS_ACTIONS_PATTERN.md)
 - [WHATSAPP_PROVIDER_ARCHITECTURE.md](./WHATSAPP_PROVIDER_ARCHITECTURE.md)
+- [PROVIDER_ACTIONS_ARCHITECTURE.md](./provider_actions_architecture.md)
+- [SMS_ACTIONS_PATTERN.md](./sms_actions_pattern.md)
+- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./whatsapp_provider_architecture.md)
