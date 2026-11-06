@@ -122,3 +122,4 @@ laravel/.continue
 laravel/.grok
 laravel/.opencode
 laravel/coverage_*.*
+laravel/.php-cs-fixer
