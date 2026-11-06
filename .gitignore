@@ -108,3 +108,4 @@ laravel/database/laravelpizza_data.sqlite
 .agents
 .qwen
 .claude-audit/
+.devin
