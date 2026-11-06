@@ -110,3 +110,4 @@ laravel/database/laravelpizza_data.sqlite
 .claude-audit/
 .devin
 .kilo
+laravel/.claude-audit*
