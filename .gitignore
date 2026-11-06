@@ -129,3 +129,4 @@ laravel/Modules/.claude-audit/
 laravel/Modules/ruvector.db
 laravel/Modules/*/ruvector.db
 laravel/Modules/agentdb.rvf
+laravel/Modules/*/agentdb.rvf
