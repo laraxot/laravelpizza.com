@@ -113,3 +113,4 @@ laravel/database/laravelpizza_data.sqlite
 laravel/.claude-audit*
 laravel/.agent
 laravel/.agent*
+laravel/.anti*
