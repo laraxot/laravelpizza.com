@@ -126,3 +126,4 @@ laravel/.php-cs-fixer
 
 _base_laravelpizza_1.code-workspace
 laravel/Modules/.claude-audit/
+laravel/Modules/ruvector.db
