@@ -112,3 +112,4 @@ laravel/database/laravelpizza_data.sqlite
 .kilo
 laravel/.claude-audit*
 laravel/.agent
+laravel/.agent*
