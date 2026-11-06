@@ -32,6 +32,7 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseTextColumn;
  */
 class OpeningHoursColumn extends XotBaseTextColumn
 {
+    /** @var non-empty-string */
     protected const string DEFAULT_NAME = 'opening_hours';
 
     public static function make(?string $name = null): static

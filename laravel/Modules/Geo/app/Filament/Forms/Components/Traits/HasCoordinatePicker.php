@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Forms\Components\Traits;
 
-use Filament\Support\Components\Attributes\ExposedLivewireMethod;
+use Filament\Support\Components\Attributes\Exposed;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\Renderless;
@@ -232,7 +232,7 @@ trait HasCoordinatePicker
      *
      * @return list<array<string, mixed>>
      */
-    #[ExposedLivewireMethod]
+    #[Exposed]
     #[Renderless]
     public function searchAddress(string $query): array
     {
@@ -290,7 +290,7 @@ trait HasCoordinatePicker
      *
      * @return array<string, mixed>|null
      */
-    #[ExposedLivewireMethod]
+    #[Exposed]
     #[Renderless]
     public function reverseGeocode(float $latitude, float $longitude): ?array
     {

@@ -91,7 +91,7 @@ class EventFactory extends Factory
 
         $locations = ['Milano', 'Roma', 'Torino', 'Bologna', 'Firenze', 'Napoli'];
         
-        return (string) $this->faker->randomElement($topics).' - '.(string) $this->faker->randomElement($locations);
+        return $topics[array_rand($topics)].' - '.$locations[array_rand($locations)];
     }
 
     /**
@@ -108,7 +108,7 @@ class EventFactory extends Factory
             'Stazione Leopolda Firenze',
         ];
 
-        return (string) $this->faker->randomElement($venues);
+        return $venues[array_rand($venues)];
     }
 
     /**

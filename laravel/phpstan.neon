@@ -1,10 +1,10 @@
 includes:
-    #- ./phpstan-baseline.neon
-    - ./vendor/larastan/larastan/extension.neon  
-    - ./vendor/nesbot/carbon/extension.neon
+    # - ./phpstan-baseline.neon   #gli errori vanno corretti non nascosti o ignorati !
+    # - ./vendor/larastan/larastan/extension.neon
+    # - ./vendor/nesbot/carbon/extension.neon
     - ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
-    - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
-    - ./vendor/pestphp/pest/extension.neon
+    # - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    # - ./vendor/pestphp/pest/extension.neon
 
 parameters:
     level: max
@@ -23,7 +23,7 @@ parameters:
         # - '#is used zero times and is not analysed#'
         # - "#^Unsafe usage of new static#"
         # - '#Method .+::.+ should return .+<.+, (.+)> but returns .+<.+, \$this\(\1\)>#' # Ignora errori di covarianza nei tipi generici delle relazioni Eloquent
-        - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#' # Ignora errori di cast da mixed a tipi specifici
+        # - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#' # Ignora errori di cast da mixed a tipi specifici
         # - identifier: missingType.generics
         # - identifier: missingType.iterableValue
         # - identifier: larastan.noEnvCallsOutsideOfConfig
@@ -34,34 +34,9 @@ parameters:
         - ./*/build/*
         - ./*/docs/*
         - ./*/tests/*
-        - ./*/phpinsights.php
-        - ./*/rector.php
         - ./*/*.blade.php
         - ./*/packages/*
-        # Trait analizzati solo via modelli host (evita doppia analisi trait+consumer)
-        - ./Modules/Geo/app/Models/Traits/HasAddress.php
-        - ./Modules/Gdpr/app/Models/Traits/HasGdpr.php
-        - ./Modules/Geo/app/Models/Traits/HasPlaceTrait.php
-        - ./Modules/Lang/app/Models/Traits/HasStrictTranslations.php
-        - ./Modules/Notify/app/Models/Traits/HasContact.php
-        - ./Modules/Notify/app/Traits/HasNotificationRateLimiting.php
-        - ./Modules/Notify/app/Traits/HasNotificationTracking.php
-        - ./Modules/Notify/app/Traits/HasTenantNotifications.php
-        - ./Modules/Tenant/app/Models/Traits/SushiToCsv.php
-        - ./Modules/UI/app/Traits/TableLayoutTrait.php
-        - ./Modules/User/app/Models/Traits/BaseUserUniqueNameAttribute.php
-        - ./Modules/User/app/Models/Traits/HasPasswordExpiry.php
-        - ./Modules/User/app/Models/Traits/HasRoles.php
-        - ./Modules/User/app/Providers/Traits/HasPassportConfiguration.php
-        - ./Modules/Xot/app/Datas/Concerns/HasYearsConfig.php
-        - ./Modules/Xot/app/Models/Traits/HasCommonScopes.php
-        - ./Modules/Xot/app/Models/Traits/HasDynamicFillable.php
-        - ./Modules/Xot/app/Traits/Filament/HasCustomModelLabel.php
-        - ./Modules/Xot/app/Traits/HasCsrfToken.php
-        - ./Modules/Xot/app/Traits/HasCustomRelations.php
-        - ./Modules/Xot/app/Traits/HasSchemalessAttributes.php
-        - ./Modules/Xot/app/Traits/HasTableFunctionsTrait.php
-
+        
     bootstrapFiles:
         # - ./phpstan_bootstrap.php
         - ./phpstan_constants.php
@@ -69,6 +44,7 @@ parameters:
 
     scanFiles:
         - ./Modules/Xot/helpers/Helper.php
+        
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'
     tmpDir: ./storage/app/phpstan

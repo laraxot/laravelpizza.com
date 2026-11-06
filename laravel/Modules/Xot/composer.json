@@ -110,9 +110,11 @@
             "Modules\\Xot\\": "app/",
             "Modules\\Xot\\Database\\Factories\\": "database/factories/",
             "Modules\\Xot\\Database\\Seeders\\": "database/seeders/",
-            "Modules\\Xot\\Tests\\": "tests/",
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
+  "autoload-dev": {
+    "classmap": ["tests/"]
+  },
         "files": [
             "helpers/Helper.php"
         ]

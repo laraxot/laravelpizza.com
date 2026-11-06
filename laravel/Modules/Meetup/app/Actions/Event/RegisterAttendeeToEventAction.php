@@ -24,8 +24,13 @@ class RegisterAttendeeToEventAction
                 throw new \DomainException('User already registered for this event');
             }
 
+            $eventId = $event->getKey();
+            if (! is_int($eventId)) {
+                throw new \UnexpectedValueException('Event key must be an integer.');
+            }
+
             $registration = EventUser::query()->create([
-                'event_id' => (int) $event->getKey(),
+                'event_id' => $eventId,
                 'user_id' => $userId,
             ]);
 

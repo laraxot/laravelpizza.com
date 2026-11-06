@@ -15,8 +15,9 @@ use Modules\Notify\Enums\ContactTypeEnum;
  * e offre metodi di utilità per la gestione degli indirizzi.
  *
  * @property Collection<int, Address> $addresses
+ * @phpstan-ignore trait.unused
  */
-trait HasContact
+trait HasContact // @phpstan-ignore trait.unused
 {
     /**
      * Initialize the trait

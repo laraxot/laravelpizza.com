@@ -12,7 +12,10 @@ use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthRefreshToken;
 use Webmozart\Assert\Assert;
 
-trait HasPassportConfiguration
+/**
+ * @phpstan-ignore trait.unused
+ */
+trait HasPassportConfiguration // @phpstan-ignore trait.unused
 {
     /**
      * Configurazione completa di Passport.

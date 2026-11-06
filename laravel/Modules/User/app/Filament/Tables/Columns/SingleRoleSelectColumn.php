@@ -23,6 +23,7 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseSelectColumn;
  */
 class SingleRoleSelectColumn extends XotBaseSelectColumn
 {
+    /** @var non-empty-string */
     protected const string DEFAULT_NAME = 'role_id';
 
     public static function make(?string $name = null): static

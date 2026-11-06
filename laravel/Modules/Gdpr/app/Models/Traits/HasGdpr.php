@@ -22,8 +22,9 @@ use Stringable;
  * @property Collection<int, Consent> $activeConsents
  *
  * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+ * @phpstan-ignore trait.unused
  */
-trait HasGdpr
+trait HasGdpr // @phpstan-ignore trait.unused
 {
     /**
      * Get all consents for the model (polymorphic).

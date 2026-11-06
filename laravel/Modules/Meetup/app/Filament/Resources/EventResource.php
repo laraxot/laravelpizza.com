@@ -67,11 +67,11 @@ class EventResource extends XotBaseResource
                         'MixedEventAttendanceMode' => 'Mixed',
                     ]),
             ])
-            ->actions([
+            ->recordActions([
                 'edit' => EditAction::make(),
                 'delete' => DeleteAction::make(),
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 'bulk_delete' => ActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),

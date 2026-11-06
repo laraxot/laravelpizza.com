@@ -32,7 +32,7 @@ class EventCalendarWidget extends XotBaseWidget
         $actionSuffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
-        $modelString = is_string($model) ? $model : (string) $model;
+        $modelString = is_string($model) ? $model : (is_object($model) ? $model::class : '');
 
         return Str::of($modelString)
             ->replace('\Models\\', '\Actions\\')

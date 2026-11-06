@@ -13,8 +13,9 @@ namespace Modules\Xot\Datas\Concerns;
  *
  * La Data che usa il trait chiama `static::prepareAnni($properties)` dal proprio
  * `prepareForPipeline()`.
+ * @phpstan-ignore trait.unused
  */
-trait HasYearsConfig
+trait HasYearsConfig // @phpstan-ignore trait.unused
 {
     /**
      * @var list<int>

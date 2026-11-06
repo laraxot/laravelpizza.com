@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
-trait HasDynamicFillable
+/**
+ * @phpstan-ignore trait.unused
+ */
+trait HasDynamicFillable // @phpstan-ignore trait.unused
 {
     /**
      * Overrides the default getFillable method to include fields from specified Enums.

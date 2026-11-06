@@ -12,7 +12,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Modules\UI\Filament\Tables\Columns\IDColumn;
 
-trait HasTableFunctionsTrait
+/**
+ * @phpstan-ignore trait.unused
+ */
+trait HasTableFunctionsTrait // @phpstan-ignore trait.unused
 {
     /**
      * Get the table columns for the list view.

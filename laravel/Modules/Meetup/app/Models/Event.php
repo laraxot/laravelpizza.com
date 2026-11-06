@@ -448,7 +448,10 @@ class Event extends BaseModel
             ];
             
             // Add profile URL if available (Schema.org recommends URL for organizers)
-            $organizerRouteKey = (string) $this->organizer->getRouteKey();
+            $organizerRouteKeyValue = $this->organizer->getRouteKey();
+            $organizerRouteKey = is_string($organizerRouteKeyValue)
+                ? $organizerRouteKeyValue
+                : (is_int($organizerRouteKeyValue) ? (string) $organizerRouteKeyValue : '');
             $organizerProfileUrl = LaravelLocalization::localizeUrl('/profile/'.$organizerRouteKey);
             $organizerData['url'] = $organizerProfileUrl;
             

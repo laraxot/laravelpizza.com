@@ -9,8 +9,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Fornisce funzionalità per la gestione del rate limiting delle notifiche.
+ * @phpstan-ignore trait.unused
  */
-trait HasNotificationRateLimiting
+trait HasNotificationRateLimiting // @phpstan-ignore trait.unused
 {
     /**
      * Verifica se l'invio della notifica è consentito dal rate limiting.

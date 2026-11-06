@@ -31,11 +31,7 @@ APP_URL=http://localhost
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< .merge_file_N748rE
-DB_DATABASE=healthcare_app_data_test
-=======
 DB_DATABASE=ptvx_data_test
->>>>>>> .merge_file_u4Ych8
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 

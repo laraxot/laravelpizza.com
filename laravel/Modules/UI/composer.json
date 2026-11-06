@@ -36,9 +36,7 @@
     }
   },
   "autoload-dev": {
-    "psr-4": {
-      "Modules\\UI\\Tests\\": "tests/"
-    }
+    "classmap": ["tests/"]
   },
   "require": {
     "owenvoke/blade-fontawesome": "*",

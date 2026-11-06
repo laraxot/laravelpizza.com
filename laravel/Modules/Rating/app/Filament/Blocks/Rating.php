@@ -19,7 +19,7 @@ use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
 
 class Rating extends Block
 {
-    public const BLOCK_TYPE = 'rating';
+    public const string BLOCK_TYPE = 'rating';
 
     /**
      * Create a new rating block.

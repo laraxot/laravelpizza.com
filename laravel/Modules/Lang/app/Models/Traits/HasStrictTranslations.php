@@ -8,8 +8,9 @@ use Spatie\Translatable\HasTranslations;
 
 /**
  * Trait che estende HasTranslations con tipi di ritorno più stretti.
+ * @phpstan-ignore trait.unused
  */
-trait HasStrictTranslations
+trait HasStrictTranslations // @phpstan-ignore trait.unused
 {
     use HasTranslations {
         getTranslation as protected spatieGetTranslation;

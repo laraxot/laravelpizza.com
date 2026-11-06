@@ -138,19 +138,10 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 
 ### **Documentazione Correlata**
 - [Wizard Step Implementation](../../../modules/<nome progetto>/docs/wizard-step-implementation.md)
-========
-=======
-=======
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
 ### **Documentazione Correlata**
 - [Wizard Step Implementation](../../../modules/<nome progetto>/docs/wizard-step-implementation.md)
-=======
-=======
-=======
-=======
-=======
-=======
 - [Infinite Loop Prevention](../critical-fixes/infinite-loop-prevention.md)
 
 ---
@@ -196,26 +187,12 @@ Questo fix dimostra l'importanza di:
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
-========
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-=======
-=======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 

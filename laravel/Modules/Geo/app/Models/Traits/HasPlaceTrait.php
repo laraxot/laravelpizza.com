@@ -13,8 +13,9 @@ use Modules\Geo\Models\Place;
  * Modules\Geo\Models\Traits\HasPlaceTrait.
  *
  * @phpstan-require-extends Model
+ * @phpstan-ignore trait.unused
  */
-trait HasPlaceTrait
+trait HasPlaceTrait // @phpstan-ignore trait.unused
 {
     // ----- relationship -----
 

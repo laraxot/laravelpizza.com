@@ -134,7 +134,8 @@ class ImportEventsFromJsonAction
         $start = $this->parseStart($item);
         $end = $this->parseEnd($item, $start);
 
-        $status = strtolower((string) ($item['status'] ?? 'upcoming'));
+        $statusValue = $item['status'] ?? 'upcoming';
+        $status = is_string($statusValue) ? strtolower($statusValue) : 'upcoming';
         $eventStatus = match ($status) {
             'completed' => EventStatus::COMPLETED,
             'cancelled' => EventStatus::CANCELLED,
@@ -167,11 +168,11 @@ class ImportEventsFromJsonAction
                 'status' => $status,
                 'event_status' => $eventStatus,
                 'event_attendance_mode' => $this->parseAttendanceMode(is_string($item['event_attendance_mode'] ?? null) ? $item['event_attendance_mode'] : null),
-                'attendees_count' => (int) ($item['attendees_count'] ?? $item['attendees_current'] ?? 0),
-                'max_attendees' => (int) ($item['max_attendees'] ?? $item['attendees_max'] ?? 0) ?: 30,
+                'attendees_count' => $this->integerValue($item['attendees_count'] ?? $item['attendees_current'] ?? 0),
+                'max_attendees' => $this->integerValue($item['max_attendees'] ?? $item['attendees_max'] ?? 0) ?: 30,
                 'url' => $item['url'] ?? null,
                 'cover_image' => $item['image'] ?? null,
-                'slug' => $this->generateSlug((string) ($item['title'] ?? 'event')),
+                'slug' => $this->generateSlug($this->stringValue($item['title'] ?? null, 'event')),
                 'offers' => $this->parseOffers($this->normalizeOffers($item['offers'] ?? null)),
                 'meta_data' => [
                     'organizer' => $item['organizer'] ?? null,
@@ -195,8 +196,8 @@ class ImportEventsFromJsonAction
         }
 
         // Legacy format: separate date and time
-        $date = (string) ($item['date'] ?? date('Y-m-d'));
-        $timeRange = (string) ($item['time'] ?? '00:00');
+        $date = $this->stringValue($item['date'] ?? null, date('Y-m-d'));
+        $timeRange = $this->stringValue($item['time'] ?? null, '00:00');
         $splitParts = preg_split('/\s*-\s*/', $timeRange);
         [$startTime] = array_pad($splitParts, 1, '00:00');
         $startTime = is_string($startTime) ? $startTime : '00:00';
@@ -218,8 +219,8 @@ class ImportEventsFromJsonAction
         }
 
         // Legacy format: separate date and time
-        $date = (string) ($item['date'] ?? date('Y-m-d'));
-        $timeRange = (string) ($item['time'] ?? '');
+        $date = $this->stringValue($item['date'] ?? null, date('Y-m-d'));
+        $timeRange = $this->stringValue($item['time'] ?? null, '');
         $parts = preg_split('/\s*-\s*/', $timeRange);
         $endTime = $parts[1] ?? null;
         $endTime = is_string($endTime) ? $endTime : null;
@@ -237,6 +238,20 @@ class ImportEventsFromJsonAction
         } catch (\Exception $e) {
             return Carbon::now();
         }
+    }
+
+    private function stringValue(mixed $value, string $default): string
+    {
+        return is_string($value) ? $value : $default;
+    }
+
+    private function integerValue(mixed $value): int
+    {
+        if (is_int($value)) {
+            return $value;
+        }
+
+        return is_string($value) && is_numeric($value) ? (int) $value : 0;
     }
 
     /**

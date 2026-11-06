@@ -107,4 +107,3 @@ public static function getTableActions(): array
 - [Regole Filament Resources](../../../.cursor/rules/filament-relation-managers.mdc)
 - [Regole No Labels](../../../.cursor/rules/no-filament-labels.mdc)
 - [PHPStan Fixes User Module - 2026-01-05](./phpstan-fix-plan-2026-01-05.md)
->>>>>>> fa4b6559 (.)

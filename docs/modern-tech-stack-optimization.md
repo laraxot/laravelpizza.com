@@ -1808,20 +1808,6 @@ class ContactDashboard extends Dashboard
         return [
             'overview' => [
                 'label' => 'Overview',
-<<<<<<< .merge_file_NnFbsa
-                'url' => route('filament.healthcare_app.dashboard'),
-                'isActive' => request()->routeIs('filament.healthcare_app.dashboard'),
-            ],
-            'analytics' => [
-                'label' => 'Analytics',
-                'url' => route('filament.healthcare_app.analytics'),
-                'isActive' => request()->routeIs('filament.healthcare_app.analytics'),
-            ],
-            'reports' => [
-                'label' => 'Reports',
-                'url' => route('filament.healthcare_app.reports'),
-                'isActive' => request()->routeIs('filament.healthcare_app.reports'),
-=======
                 'url' => route('filament.ptvx.dashboard'),
                 'isActive' => request()->routeIs('filament.ptvx.dashboard'),
             ],
@@ -1834,7 +1820,6 @@ class ContactDashboard extends Dashboard
                 'label' => 'Reports',
                 'url' => route('filament.ptvx.reports'),
                 'isActive' => request()->routeIs('filament.ptvx.reports'),
->>>>>>> .merge_file_eIEqAe
             ],
         ];
     }

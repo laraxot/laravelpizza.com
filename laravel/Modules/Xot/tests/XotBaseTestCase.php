@@ -26,7 +26,6 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Providers\XotServiceProvider;
 use PHPUnit\Framework\MockObject\MockObject;
-use Safe\Exceptions\FilesystemException;
 
 /**
  * Class XotBaseTestCase.
@@ -286,24 +285,7 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     public static function sharedSqlitePath(): string
     {
-        $configured = config('xot.testing.sqlite_file');
-
-        if (is_string($configured) && $configured !== '') {
-            return database_path($configured);
-        }
-
-        try {
-            /** @var list<string> $found */
-            $found = \Safe\glob(database_path('*.sqlite'));
-        } catch (FilesystemException) {
-            $found = [];
-        }
-
-        if (count($found) === 1) {
-            return $found[0];
-        }
-
-        return database_path('test_data.sqlite');
+        return app(\Modules\Xot\Actions\Testing\ResolveSharedSqlitePathAction::class)->execute();
     }
 
     /**

@@ -6,7 +6,10 @@ namespace Modules\User\Models\Traits;
 
 use Illuminate\Support\Str;
 
-trait BaseUserUniqueNameAttribute
+/**
+ * @phpstan-ignore trait.unused
+ */
+trait BaseUserUniqueNameAttribute // @phpstan-ignore trait.unused
 {
     public function getNameAttribute(?string $value): string
     {

@@ -46,9 +46,7 @@
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Modules\\Job\\Tests\\": "tests/"
-        }
+        "classmap": ["tests/"]
     },
     "scripts": {
         "post-autoload-dump1": "@php ./vendor/bin/testbench package:discover --ansi",
