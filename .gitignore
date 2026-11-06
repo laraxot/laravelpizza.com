@@ -116,3 +116,4 @@ laravel/.agent*
 laravel/.anti*
 laravel/.cline
 laravel/.clinerules
+laravel/.codebuddy
