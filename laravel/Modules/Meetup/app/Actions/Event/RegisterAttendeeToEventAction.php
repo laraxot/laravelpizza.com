@@ -50,7 +50,7 @@ class RegisterAttendeeToEventAction
             }
 
             $registration = EventUser::query()->create([
-                'event_id' => (int) $locked->getKey(),
+                'event_id' => $locked->id,
                 'user_id' => $userId,
             ]);
 

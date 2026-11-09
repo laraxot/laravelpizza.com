@@ -30,7 +30,7 @@ class EventRegistration extends Component
 
     public function mount(Event $event): void
     {
-        $this->eventId = (int) $event->getKey();
+        $this->eventId = $event->id;
     }
 
     public function register(JoinEventAction $joinEvent): void
@@ -60,7 +60,7 @@ class EventRegistration extends Component
         }
 
         try {
-            $unregister->execute($this->event(), (string) $user->getKey());
+            $unregister->execute($this->event(), $user->id);
             $this->flash('success', 'unregistered');
         } catch (\DomainException $exception) {
             $this->flash('error', $this->messageKeyFor($exception));
@@ -74,7 +74,7 @@ class EventRegistration extends Component
 
         return view('meetup::livewire.event-registration', [
             'isGuest' => $user === null,
-            'isRegistered' => $user !== null && $event->isUserRegistered((string) $user->getKey()),
+            'isRegistered' => $user !== null && $event->isUserRegistered($user->id),
             'isFull' => $event->isFull(),
             'availableSpots' => max(0, (int) $event->max_attendees - (int) $event->attendees_count),
         ]);

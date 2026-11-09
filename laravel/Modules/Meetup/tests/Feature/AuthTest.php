@@ -12,7 +12,7 @@ test('login route is accessible and has correct UI', function () {
     $response = $this->get('/it/auth/login');
     $response->assertStatus(200)
         ->assertSee('Accedi')
-        ->assertSee('Email')
+        ->assertSee('Indirizzo email')
         ->assertSee('Password');
 });
 

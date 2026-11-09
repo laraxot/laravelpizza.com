@@ -23,8 +23,8 @@ test('header renders avatar dropdown for authenticated users', function (): void
 
     $response = $this->actingAs($user)->get('/it');
 
+    // La "Dashboard" pubblica non esiste più: l'area personale è "I miei eventi".
     $response->assertStatus(200)
-        ->assertSee('Dashboard')
         ->assertSee('I miei eventi')
         ->assertSee('Eventi vicini')
         ->assertSee('Profilo')
