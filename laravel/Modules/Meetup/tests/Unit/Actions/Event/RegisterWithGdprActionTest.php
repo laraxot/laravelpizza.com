@@ -19,6 +19,7 @@ test('it registers user with valid gdpr consents', function () {
         'slug' => 'pizzata-'.uniqid(),
         'max_attendees' => 10,
         'attendees_count' => 0,
+        'status' => 'published',
         'start_date' => now()->addDays(30),
         'end_date' => now()->addDays(30)->addHours(3),
     ]);
@@ -42,6 +43,7 @@ test('it throws when privacy_accepted is missing', function () {
         'slug' => 'pizzata-'.uniqid(),
         'max_attendees' => 10,
         'attendees_count' => 0,
+        'status' => 'published',
         'start_date' => now()->addDays(30),
         'end_date' => now()->addDays(30)->addHours(3),
     ]);
@@ -60,6 +62,7 @@ test('it throws when terms_accepted is missing', function () {
         'slug' => 'pizzata-'.uniqid(),
         'max_attendees' => 10,
         'attendees_count' => 0,
+        'status' => 'published',
         'start_date' => now()->addDays(30),
         'end_date' => now()->addDays(30)->addHours(3),
     ]);
@@ -78,6 +81,7 @@ test('it propagates full event exception when event is full', function () {
         'slug' => 'full-'.uniqid(),
         'max_attendees' => 0,
         'attendees_count' => 0,
+        'status' => 'published',
         'start_date' => now()->addDays(30),
         'end_date' => now()->addDays(30)->addHours(3),
     ]);

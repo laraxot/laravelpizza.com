@@ -1,26 +1,38 @@
 <?php
 
-use Modules\User\Models\User;
-use Illuminate\Auth\Events\Login;
-use function Laravel\Folio\{middleware, name};
-use Livewire\Attributes\Validate;
+declare(strict_types=1);
+
+use App\Livewire\Actions\Logout;
 use Livewire\Volt\Component;
 
+use function Laravel\Folio\name;
 
-name('logout');
-
+/*
+ * Pagina GET di logout (es. link da email o bookmark).
+ * Il nome di rotta è "auth.logout" e non "logout": quest'ultimo appartiene alla rotta POST
+ * di Modules/User/routes/web.php usata dai form di navigazione; due rotte con lo stesso nome
+ * renderebbero route('logout') dipendente dall'ordine di registrazione.
+ */
+name('auth.logout');
 
 new class extends Component
 {
-
-
-    public function logout(): never
+    public function logout(Logout $logout): void
     {
-        dd('a');
-        app(LogoutUserAction::class)->execute(auth()->user());
+        if (auth()->check()) {
+            $logout();
+        }
+
+        $this->redirect(\Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/'));
     }
-}
+};
 
 ?>
 
-<h1 wire:init="logout">goodbye</h1>
+<x-layouts.main>
+    @volt('auth.logout')
+        <div wire:init="logout" class="flex min-h-screen items-center justify-center">
+            <p class="text-lg">{{ __('pub_theme::auth.logout.in_progress') }}</p>
+        </div>
+    @endvolt
+</x-layouts.main>

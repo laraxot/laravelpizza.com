@@ -18,7 +18,7 @@ class CreateEventAction
     {
         $userId = app('auth')->id();
 
-        return app('db')->transaction(function () use ($data, $userId): Event {
+        return (new Event)->getConnection()->transaction(function () use ($data, $userId): Event {
             $event = new Event;
             $event->fill($data);
             if ($userId !== null) {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Pages;
 
-use Modules\Meetup\Filament\Widgets\EventCalendarWidget;
 use Modules\Meetup\Filament\Widgets\MeetupStatsOverviewWidget;
 use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -21,7 +20,8 @@ class MeetupDashboard extends XotBasePage
     {
         return [
             MeetupStatsOverviewWidget::class,
-            EventCalendarWidget::class,
+            // EventCalendarWidget è ancora un segnaposto ("Event calendar will be displayed here"):
+            // si riattiva quando il calendario sarà implementato.
             RecentEventsWidget::class,
         ];
     }

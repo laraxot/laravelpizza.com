@@ -7,6 +7,7 @@ namespace Modules\Meetup\Actions\Event;
 use DomainException;
 use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 class ApproveMeetupAction
 {
@@ -22,13 +23,13 @@ class ApproveMeetupAction
             throw new DomainException('Only pending events can be approved.');
         }
 
-        return app('db')->transaction(function () use ($event, $approvedBy): Event {
+        return $event->getConnection()->transaction(function () use ($event, $approvedBy): Event {
             $event->status = 'published';
             $event->updated_by = $approvedBy;
             $event->save();
 
             $fresh = $event->fresh();
-            \Webmozart\Assert\Assert::isInstanceOf($fresh, Event::class);
+            Assert::isInstanceOf($fresh, Event::class);
 
             return $fresh;
         });

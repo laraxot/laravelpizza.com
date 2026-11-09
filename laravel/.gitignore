@@ -29,3 +29,9 @@ yarn-error.log
 .gemini/
 CLAUDE.md
 IFLOW.md
+
+# File generati da laravel-ide-helper e script di debug: non vanno in app/ (la discovery di event-sourcing carica ogni file di app/ al boot)
+/_ide_helper.php
+/_ide_helper_models.php
+/.phpstorm.meta.php
+/app/Helpers/_ide_helper*.php

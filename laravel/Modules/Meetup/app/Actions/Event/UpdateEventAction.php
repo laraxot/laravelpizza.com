@@ -19,7 +19,7 @@ class UpdateEventAction
         $userId = app('auth')->id();
 
         /** @var Event $event */
-        return app('db')->transaction(function () use ($event, $data, $userId) {
+        return $event->getConnection()->transaction(function () use ($event, $data, $userId) {
             $event->fill($data);
             if ($userId !== null) {
                 $event->updated_by = (string) $userId;

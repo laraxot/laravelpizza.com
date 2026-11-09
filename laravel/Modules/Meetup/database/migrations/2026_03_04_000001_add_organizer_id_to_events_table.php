@@ -15,18 +15,21 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
+        // user_id va creato (o convertito) prima di organizer_id, che viene posizionato dopo user_id:
+        // su un database nuovo la tabella events non ha ancora user_id.
+        $this->tableUpdate(function (Blueprint $table) {
+            if ($this->hasColumn('user_id')) {
+                if ($this->getColumnType('user_id') === 'bigint') {
+                    $table->string('user_id', 36)->index()->nullable()->change();
+                }
+            } else {
+                $table->string('user_id', 36)->index()->nullable()->after('id');
+            }
+        });
+
         $this->tableUpdate(function (Blueprint $table) {
             if (! $this->hasColumn('organizer_id')) {
                 $table->string('organizer_id', 36)->nullable()->index()->after('user_id');
-            }
-            
-            // Ensure user_id is also present as a string (matching the profiles/users convention in this project)
-            if ($this->hasColumn('user_id')) {
-                 if ($this->getColumnType('user_id') === 'bigint') {
-                     $table->string('user_id', 36)->index()->nullable()->change();
-                 }
-            } else {
-                 $table->string('user_id', 36)->index()->nullable()->after('id');
             }
         });
     }

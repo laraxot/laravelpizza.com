@@ -25,7 +25,7 @@
                     @guest
                         <li><a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.auth.register') }}</a></li>
                     @else
-                        <li><a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.user_menu.my_profile') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/profile/'.auth()->id()) }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.user_menu.my_profile') }}</a></li>
                     @endguest
                 </ul>
             </nav>

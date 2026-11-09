@@ -104,6 +104,7 @@ test('toBlockArray returns correct data structure', function () {
         'end_date' => Carbon::parse('2026-06-01 14:00:00'),
     ]);
 
+    app()->setLocale('en');
     $block = $event->toBlockArray();
 
     expect($block['title'])->toBe('Block Test')
@@ -220,7 +221,7 @@ test('toBlockArray includes correct status for upcoming event', function () {
 
     $block = $event->toBlockArray();
 
-    expect($block['status'])->toBe('upcoming');
+    expect($block['timing_status'])->toBe('upcoming');
 });
 
 test('toBlockArray includes correct status for past event', function () {
@@ -228,7 +229,7 @@ test('toBlockArray includes correct status for past event', function () {
 
     $block = $event->toBlockArray();
 
-    expect($block['status'])->toBe('past');
+    expect($block['timing_status'])->toBe('past');
 });
 
 test('toBlockArray includes attendee counts', function () {
@@ -469,6 +470,7 @@ test('toBlockArray uses start_date when end_date is null', function () {
         'end_date' => null,
     ]);
 
+    app()->setLocale('en');
     $block = $event->toBlockArray();
 
     expect($block['date'])->toBe($date->format('F j, Y'))
@@ -499,4 +501,18 @@ test('toSchemaOrg includes offers when provided', function () {
 
 test('getBySlug returns null for non-existent slug', function () {
     expect(Event::getBySlug('non-existent-slug'))->toBeNull();
+});
+
+test('toBlockArray formats date and time in the current locale', function () {
+    $event = new Event([
+        'title' => 'Localized Event',
+        'start_date' => Carbon::parse('2026-11-17 19:00:00'),
+        'end_date' => Carbon::parse('2026-11-17 22:00:00'),
+    ]);
+
+    app()->setLocale('it');
+    $block = $event->toBlockArray();
+
+    expect($block['date'])->toBe('17 novembre 2026')
+        ->and($block['time'])->toBe('19:00 - 22:00');
 });

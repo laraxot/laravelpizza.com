@@ -42,6 +42,6 @@ class RecentEventsWidget extends BaseWidget
                     ->sortable(),
             ])
             ->paginated(false)
-            ->heading('Recent Events');
+            ->heading(__('meetup::recent_events.label'));
     }
 }

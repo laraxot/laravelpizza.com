@@ -16,7 +16,9 @@ return new class extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(static function (Blueprint $table): void {
-            $table->uuid('id')->primary();
+            // id autoincrement + colonna uuid: è lo schema atteso da BaseProfile (incrementing, uuid in creating())
+            // e dalle migrazioni successive. Con uuid('id') ogni insert falliva su un database nuovo.
+            $table->id();
             $table->string('uuid', 36)->index()->nullable();
             $table->string('user_id', 36)->index()->nullable();
             $table->string('type')->index()->nullable();

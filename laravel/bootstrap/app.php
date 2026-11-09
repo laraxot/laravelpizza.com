@@ -12,6 +12,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Le pagine Folio sono registrate una volta per lingua con lo stesso nome: route('login') punterebbe
+        // all'ultima lingua registrata (es. /ru/auth/login). Gli ospiti vanno al login nella lingua corrente.
+        $middleware->redirectGuestsTo(static fn (): string => \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/auth/login'));
+
         // Laravel Localization middleware aliases for Laravel 11+
         // These are used in FolioVoltServiceProvider for route localization
         $middleware->alias([

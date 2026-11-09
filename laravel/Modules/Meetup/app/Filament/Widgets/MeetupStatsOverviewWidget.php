@@ -17,16 +17,16 @@ class MeetupStatsOverviewWidget extends BaseWidget
         $publishedEvents = Event::where('status', 'published')->count();
 
         return [
-            Stat::make('Total Events', $totalEvents)
-                ->description('All time events')
+            Stat::make(__('meetup::meetup_stats_overview.stats.total.label'), $totalEvents)
+                ->description(__('meetup::meetup_stats_overview.stats.total.description'))
                 ->descriptionIcon('heroicon-m-calendar-days')
                 ->color('primary'),
-            Stat::make('Upcoming Events', $upcomingEvents)
-                ->description('Future scheduled events')
+            Stat::make(__('meetup::meetup_stats_overview.stats.upcoming.label'), $upcomingEvents)
+                ->description(__('meetup::meetup_stats_overview.stats.upcoming.description'))
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->color('success'),
-            Stat::make('Published Events', $publishedEvents)
-                ->description('Currently visible')
+            Stat::make(__('meetup::meetup_stats_overview.stats.published.label'), $publishedEvents)
+                ->description(__('meetup::meetup_stats_overview.stats.published.description'))
                 ->descriptionIcon('heroicon-m-check-circle')
                 ->color('info'),
         ];

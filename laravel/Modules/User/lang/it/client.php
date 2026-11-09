@@ -61,7 +61,7 @@ return [
         'dissociateClient' => ['label' => 'dissociateClient', 'icon' => 'dissociateClient', 'tooltip' => 'dissociateClient'],
     ],
     'sections' => [
-        'empty' => ['heading' => 'empty'],
+        'empty' => ['heading' => ''],
     ],
     'label' => 'Client',
     'plural_label' => 'Client (Plurale)',

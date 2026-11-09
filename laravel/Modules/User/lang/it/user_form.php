@@ -82,8 +82,8 @@ return [
     ],
     'sections' => [
         'empty' => [
-            'heading' => 'empty',
-            'label' => 'empty',
+            'heading' => '',
+            'label' => '',
         ],
         'worker' => [
             'label' => 'worker',

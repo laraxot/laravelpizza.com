@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'title' => 'Laravel Pizza Meetups - Home',
+    'title' => 'Laravel Developers. Pizza. Community.',
     'hero' => [
         'subtitle' => 'Join our Laravel developer community',
         'description' => 'Participate in regular meetups, learn new technologies, and connect with other developers in your area.',

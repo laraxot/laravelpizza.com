@@ -97,10 +97,7 @@
                                 <p class="text-xs text-slate-400 font-medium">{{ Auth::user()->email }}</p>
                             </div>
                         </div>
-                        <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
-                            <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('pub_theme::navigation.user_menu.dashboard') }}</span>
-                        </a>
+                        {{-- "Dashboard" rimossa: la dashboard pubblica non esiste (pagina vuota, ora 404). L'area personale è "I miei eventi". --}}
                         <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_events') }}</span>
@@ -109,7 +106,7 @@
                             <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.nearby_events') }}</span>
                         </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                        <a href="{{ LaravelLocalization::localizeUrl('/profile/'.auth()->id()) }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>
                         </a>

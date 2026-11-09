@@ -20,7 +20,7 @@ name('login');
 
 <x-layouts.app>
     <x-slot name="title">
-        {{ __('user::login.page.title') }}
+        {{ __('pub_theme::auth.login.title') }}
     </x-slot>
 
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-red-900 relative overflow-hidden py-12 px-4">
@@ -42,11 +42,11 @@ name('login');
                     </a>
                     
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                        {{ __('user::login.page.title') }}
+                        {{ __('pub_theme::auth.login.title') }}
                     </h1>
                     
                     <p class="text-base text-slate-300">
-                        {{ __('user::login.page.subtitle') }}
+                        {{ __('pub_theme::auth.login.subtitle') }}
                     </p>
                 </div>
 

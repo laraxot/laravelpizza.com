@@ -20,7 +20,11 @@
                         "orderBy": "start_date",
                         "direction": "asc",
                         "limit": 50,
-                        "wrap_in": "events"
+                        "wrap_in": "events",
+                        "scopes": [
+                            "published",
+                            "upcoming"
+                        ]
                     }
                 }
             }

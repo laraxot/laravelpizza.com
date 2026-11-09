@@ -1,7 +1,8 @@
 {
     "id": "1",
     "title": {
-        "it": "Upcoming Events - Laravel Pizza Meetups"
+        "it": "Prossimi eventi - Laravel Pizza Meetups",
+        "en": "Upcoming events - Laravel Pizza Meetups"
     },
     "slug": "events",
     "middleware": null,
@@ -13,24 +14,54 @@
                 "slug": "events-list",
                 "data": {
                     "view": "pub_theme::components.blocks.events.list",
-                    "title": "Upcoming Events",
-                    "description": "Join us for pizza and Laravel discussions",
+                    "title": "Prossimi eventi",
+                    "description": "Pizza, Laravel e buona compagnia: scegli il prossimo meetup e prenota il tuo posto.",
                     "query": {
                         "model": "Modules\\Meetup\\Models\\Event",
                         "orderBy": "start_date",
                         "direction": "asc",
                         "limit": 50,
-                        "wrap_in": "events"
-                    }
+                        "wrap_in": "events",
+                        "scopes": [
+                            "published",
+                            "upcoming"
+                        ]
+                    },
+                    "show_filters": false
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Upcoming events",
+                    "description": "Pizza, Laravel and good company: pick your next meetup and save your seat.",
+                    "query": {
+                        "model": "Modules\\Meetup\\Models\\Event",
+                        "orderBy": "start_date",
+                        "direction": "asc",
+                        "limit": 50,
+                        "wrap_in": "events",
+                        "scopes": [
+                            "published",
+                            "upcoming"
+                        ]
+                    },
+                    "show_filters": false
                 }
             }
         ]
     },
     "sidebar_blocks": {
-        "it": []
+        "it": [],
+        "en": []
     },
     "footer_blocks": {
-        "it": []
+        "it": [],
+        "en": []
     },
     "created_at": "2025-01-06T15:30:00.000000Z",
     "updated_at": "2025-01-06T15:30:00.000000Z",

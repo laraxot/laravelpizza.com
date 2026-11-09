@@ -14,7 +14,13 @@ class UnregisterAttendeeFromEventAction
 
     public function execute(Event $event, string $userId): bool
     {
-        return app('db')->transaction(function () use ($event, $userId): bool {
+        $result = $event->getConnection()->transaction(function () use ($event, $userId): bool {
+            /** @var Event $locked */
+            $locked = Event::query()
+                ->whereKey($event->getKey())
+                ->lockForUpdate()
+                ->firstOrFail();
+
             $registration = EventUser::query()
                 ->where('event_id', $event->getKey())
                 ->where('user_id', $userId)
@@ -26,12 +32,15 @@ class UnregisterAttendeeFromEventAction
 
             $registration->delete();
 
-            if ($event->attendees_count > 0) {
-                $event->decrement('attendees_count');
+            if ($locked->attendees_count > 0) {
+                $locked->decrement('attendees_count');
             }
-            $event->refresh();
 
             return true;
         });
+
+        $event->refresh();
+
+        return $result;
     }
 }

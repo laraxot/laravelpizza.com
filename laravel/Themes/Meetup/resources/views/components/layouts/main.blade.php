@@ -16,5 +16,7 @@
         {{ $slot }}
 
         @livewireScripts
+        {{-- JS dei componenti Filament (schemi, form, azioni) usati dai widget pubblici di login e registrazione --}}
+        @filamentScripts
     </body>
 </html>
