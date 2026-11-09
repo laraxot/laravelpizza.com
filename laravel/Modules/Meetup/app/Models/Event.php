@@ -15,11 +15,11 @@ use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
-use Modules\Meetup\Database\Factories\EventFactory;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
-use Modules\Seo\Data\SocialShareData;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection;
 
@@ -149,7 +149,6 @@ class Event extends BaseModel
 {
     use HasEvents;
     use HasSnapshots;
-
     use HasXotFactory;
 
     /**

@@ -27,7 +27,7 @@ class JoinEventAction
 
     public function execute(Event $event, User $user, ?string $locale = null): EventUser
     {
-        $registration = $this->registerAttendee->execute($event, (string) $user->getKey());
+        $registration = $this->registerAttendee->execute($event, $user->id);
 
         $user->notify(new EventRegistrationConfirmedNotification(
             $event,

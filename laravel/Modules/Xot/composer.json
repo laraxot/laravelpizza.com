@@ -112,14 +112,18 @@
             "Modules\\Xot\\Database\\Seeders\\": "database/seeders/",
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
-  "autoload-dev": {
-    "classmap": ["tests/"]
-  },
         "files": [
             "helpers/Helper.php"
         ]
     },
-    "autoload-dev": {},
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Xot\\Tests\\": "tests/"
+        },
+        "files": [
+            "tests/Support/helpers.php"
+        ]
+    },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",

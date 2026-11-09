@@ -150,7 +150,7 @@ class PageSlugMiddleware
         // quella protetta. Propaga e `handle()` risponde 503 (DCP-283, C-03).
         // Con Folio la rotta è il fallback "{fallbackPlaceholder}" (nome "laravel-folio", nessun parametro slug):
         // senza ricavare lo slug dal percorso nessun middleware dichiarato nei JSON (es. "auth") veniva applicato.
-        $segments = array_values(array_map(static fn (mixed $s): string => (string) $s, $request->segments()));
+        $segments = array_values(array_filter($request->segments(), is_string(...)));
         if ($segments !== [] && \in_array($segments[0], array_keys((array) config('laravellocalization.supportedLocales', [])), true)) {
             array_shift($segments);
         }
