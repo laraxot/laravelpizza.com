@@ -21,8 +21,9 @@ test('it has correct widgets', function () {
     $page = new MeetupDashboard();
     $widgets = $page->getWidgets();
     
+    // Il calendario è stato tolto dalla dashboard: mandava la pagina in errore (vedi docs/audit).
     expect($widgets)->toContain(MeetupStatsOverviewWidget::class)
-        ->and($widgets)->toContain(EventCalendarWidget::class)
+        ->and($widgets)->not->toContain(EventCalendarWidget::class)
         ->and($widgets)->toContain(RecentEventsWidget::class);
 });
 

@@ -61,9 +61,7 @@ class Venue extends BaseModel
 {
     use GeoTrait;
     /** @use HasAddress<Venue> */
-    use HasAddress {
-        GeoTrait::getFullAddressAttribute insteadof HasAddress;
-    }
+    use HasAddress;
 
     /** @var list<string> */
     protected $fillable = [
