@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\User\Models\BaseProfile;
 
 /**
- * @property int $id
+ * @property string $id
  * @property string|null $user_id
  * @property string|null $first_name
  * @property string|null $last_name
@@ -76,6 +77,26 @@ use Modules\User\Models\BaseProfile;
  */
 class Profile extends BaseProfile
 {
+    // La tabella profiles del modulo ha id varchar(36) (migrazione 2026_02_13_163329): la chiave
+    // va generata dall'applicazione, altrimenti ogni insert fallisce e il pannello Meetup va in 500.
+    use HasUuids;
+
+    /** @var bool */
+    public $incrementing = false;
+
+    /** @var string */
+    protected $keyType = 'string';
+
     /** @var string */
     protected $connection = 'meetup';
+
+    /**
+     * Solo la chiave primaria: la colonna uuid è valorizzata da BaseProfile::booted().
+     *
+     * @return list<string>
+     */
+    public function uniqueIds(): array
+    {
+        return ['id'];
+    }
 }

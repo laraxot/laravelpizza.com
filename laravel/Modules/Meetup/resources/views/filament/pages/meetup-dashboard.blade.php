@@ -1,11 +1,10 @@
 <x-filament-panels::page>
-    {{ $this->calendar }}
-    {{ \Filament\Support\Facades\FilamentView::renderHook('panels::dashboard.widgets.start', scopes: [null, $this->getPanel()->getId()]) }}
+    {{ \Filament\Support\Facades\FilamentView::renderHook('panels::dashboard.widgets.start', scopes: [null, \Filament\Facades\Filament::getCurrentPanel()?->getId()]) }}
     
     <x-filament-widgets::widgets
         :widgets="$this->getWidgets()"
         :columns="$this->getColumns()"
     />
     
-    {{ \Filament\Support\Facades\FilamentView::renderHook('panels::dashboard.widgets.end', scopes: [null, $this->getPanel()->getId()]) }}
+    {{ \Filament\Support\Facades\FilamentView::renderHook('panels::dashboard.widgets.end', scopes: [null, \Filament\Facades\Filament::getCurrentPanel()?->getId()]) }}
 </x-filament-panels::page>

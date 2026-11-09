@@ -5,16 +5,23 @@ declare(strict_types=1);
 namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Activity\Models\Snapshot;
+use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
+use Modules\Meetup\Database\Factories\EventFactory;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
+use Modules\Seo\Data\SocialShareData;
 use Modules\User\Models\User;
 use Modules\Xot\Models\Traits\HasXotFactory;
+use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection;
 
 /**
  * Modules\Meetup\Models\Event.
@@ -46,10 +53,11 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string|null $updated_by
  * @property int|null $user_id
  * @property int|null $organizer_id
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
- * @property-read \Modules\Xot\Contracts\UserContract|null $owner
- * @property-read \Modules\Xot\Contracts\UserContract|null $organizer
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ * @property-read UserContract|null $owner
+ * @property-read UserContract|null $organizer
+ *
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -57,7 +65,9 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<Event> past()
  * @method static Builder<Event> bySlug(string $slug)
  * @method static Builder<Event> dateRange(Carbon $startDate, Carbon $endDate)
+ *
  * @see https://schema.org/Event
+ *
  * @property string|null $alternate_name
  * @property string|null $door_time
  * @property int $is_accessible_for_free
@@ -74,11 +84,12 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string|null $except_dates
  * @property string $schedule_timezone
  * @property int|null $super_event_id
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Activity\Models\Snapshot> $snapshots
+ * @property-read ProfileContract|null $deleter
+ * @property-read Collection<int, Snapshot> $snapshots
  * @property-read int|null $snapshots_count
- * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents
+ * @property-read EloquentStoredEventCollection<StoredEvent> $storedEvents
  * @property-read int|null $stored_events_count
+ *
  * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event whereAlternateName($value)
  * @method static Builder<static>|Event whereAttendeesCount($value)
@@ -120,15 +131,18 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Event whereUpdatedBy($value)
  * @method static Builder<static>|Event whereUrl($value)
  * @method static Builder<static>|Event whereUserId($value)
- * @property-read \Modules\Meetup\Models\EventSponsor|\Modules\Meetup\Models\EventPerformer|\Modules\Meetup\Models\EventUser|null $pivot
- * @property-read \Illuminate\Database\Eloquent\Collection<int, User> $attendees
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Performer> $performers
+ *
+ * @property-read EventSponsor|EventPerformer|EventUser|null $pivot
+ * @property-read Collection<int, User> $attendees
+ * @property-read Collection<int, Performer> $performers
  * @property-read int|null $performers_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Sponsor> $sponsors
+ * @property-read Collection<int, Sponsor> $sponsors
  * @property-read int|null $sponsors_count
- * @property-read \Modules\Meetup\Models\Venue|null $venue
+ * @property-read Venue|null $venue
+ *
  * @method static Builder<static>|Event visibleTo(?\Modules\User\Models\User $user = null)
  * @method static Builder<static>|Event whereOrganizerId($value)
+ *
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -145,7 +159,7 @@ class Event extends BaseModel
     {
         static::creating(static function (self $model): void {
             if (empty($model->slug)) {
-                $model->slug = \Illuminate\Support\Str::slug($model->title);
+                $model->slug = Str::slug($model->title);
             }
         });
     }
@@ -238,7 +252,12 @@ class Event extends BaseModel
 
     public function isUserRegistered(string|int $userId): bool
     {
-        return $this->attendees()->where('user_id', $userId)->exists();
+        // Interroga direttamente la pivot: la relazione attendees() fa join con la tabella users,
+        // che vive su un'altra connessione/database (user) e falliva in silenzio, restituendo false.
+        return EventUser::query()
+            ->where('event_id', $this->getKey())
+            ->where('user_id', (string) $userId)
+            ->exists();
     }
 
     /**
@@ -340,6 +359,10 @@ class Event extends BaseModel
         $startDate = $this->start_date ?? Carbon::now();
         $endDate = $this->end_date ?? $startDate;
         $timingStatus = $startDate->isFuture() ? 'upcoming' : 'past';
+        $localStart = $startDate->copy();
+        $localStart->locale(app()->getLocale());
+        $localEnd = $endDate->copy();
+        $localEnd->locale(app()->getLocale());
 
         return [
             'id' => $this->id,
@@ -349,9 +372,10 @@ class Event extends BaseModel
             'status_label' => ucfirst($this->status),
             'title' => $this->title,
             'description' => $this->description,
-            'date' => $startDate->format('F j, Y'),
-            'date_string' => $startDate->format('F j, Y'),
-            'time' => $startDate->format('g:i A').' - '.$endDate->format('g:i A'),
+            // Formati ISO dipendenti dalla lingua corrente: "17 novembre 2026" / "November 17, 2026", "19:00" / "7:00 PM"
+            'date' => $localStart->isoFormat('LL'),
+            'date_string' => $localStart->isoFormat('LL'),
+            'time' => $localStart->isoFormat('LT').' - '.$localEnd->isoFormat('LT'),
             'location' => $this->location,
             'attendees_current' => $this->attendees_count,
             'attendees_max' => $this->max_attendees,
@@ -381,9 +405,9 @@ class Event extends BaseModel
     /**
      * Get performers for this event.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<Performer, $this>
+     * @return BelongsToMany<Performer, $this>
      */
-    public function performers(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function performers(): BelongsToMany
     {
         return $this->belongsToManyX(Performer::class);
     }
@@ -391,9 +415,9 @@ class Event extends BaseModel
     /**
      * Get sponsors for this event.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<Sponsor, $this>
+     * @return BelongsToMany<Sponsor, $this>
      */
-    public function sponsors(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function sponsors(): BelongsToMany
     {
         return $this->belongsToManyX(Sponsor::class);
     }
@@ -446,7 +470,7 @@ class Event extends BaseModel
                 '@type' => 'Person',
                 'name' => $this->organizer->name,
             ];
-            
+
             // Add profile URL if available (Schema.org recommends URL for organizers)
             $organizerRouteKeyValue = $this->organizer->getRouteKey();
             $organizerRouteKey = is_string($organizerRouteKeyValue)
@@ -454,10 +478,10 @@ class Event extends BaseModel
                 : (is_int($organizerRouteKeyValue) ? (string) $organizerRouteKeyValue : '');
             $organizerProfileUrl = LaravelLocalization::localizeUrl('/profile/'.$organizerRouteKey);
             $organizerData['url'] = $organizerProfileUrl;
-            
+
             // Add email only if appropriate ( Schema.org recommends being careful with PII)
             $organizerData['email'] = $this->organizer->email;
-            
+
             $data['organizer'] = $organizerData;
         }
 
@@ -537,7 +561,7 @@ class Event extends BaseModel
         return \Modules\Seo\Datas\SocialShareData::from([
             'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
             'title' => $this->title,
-            'text' => \Illuminate\Support\Str::limit($this->description ?? '', 160),
+            'text' => Str::limit($this->description ?? '', 160),
             'image' => $this->cover_image ? asset($this->cover_image) : null,
         ]);
     }

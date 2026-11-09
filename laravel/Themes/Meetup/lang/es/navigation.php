@@ -24,6 +24,7 @@ return [
         'register' => 'Registrarse',
     ],
     'footer' => [
+        'events' => 'Eventos',
         'community' => 'Comunidad',
         'community_chat' => 'Chat de la comunidad',
         'code_of_conduct' => 'Código de conducta',

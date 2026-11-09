@@ -34,7 +34,7 @@ return [
         'label' => 'Label',
         'plural_label' => 'Plural Label',
     ],
-    'title' => 'Laravel Pizza Meetups - Home',
+    'title' => 'Sviluppatori Laravel. Pizza. Comunità.',
     'hero' => [
         'subtitle' => 'Unisciti alla nostra community di sviluppatori Laravel',
         'description' => 'Partecipa a meetup regolari, impara nuove tecnologie e connettiti con altri sviluppatori nella tua area.',

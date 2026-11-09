@@ -36,8 +36,10 @@ class EventForm extends XotBaseResourceForm
                         ])
                         ->default('draft')
                         ->required(),
-                    'attendees_count' => TextInput::make('attendees_count')->numeric()->default(0),
-                    'max_attendees' => TextInput::make('max_attendees')->numeric()->default(100),
+                    // Contatore denormalizzato gestito solo dalle Action di iscrizione: mai modificabile a mano.
+                    'attendees_count' => TextInput::make('attendees_count')->numeric()->default(0)->disabled()->dehydrated(false),
+                    // PRD FR-1: un evento non si salva senza una capienza valida.
+                    'max_attendees' => TextInput::make('max_attendees')->numeric()->integer()->minValue(1)->required()->default(100),
                     'cover_image' => FileUpload::make('cover_image')->image(),
                 ])
                 ->columns(2),

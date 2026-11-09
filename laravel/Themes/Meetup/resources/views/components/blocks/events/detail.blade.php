@@ -8,7 +8,11 @@
 
     // Fallback estremo: prova a caricare dallo slug0 se siamo in una rotta Folio
     if (! $eventModel && isset($slug0)) {
-        $eventModel = \Modules\Meetup\Models\Event::where('slug', $slug0)->first();
+        $currentUser = auth()->user();
+        $eventModel = \Modules\Meetup\Models\Event::query()
+            ->visibleTo($currentUser instanceof \Modules\User\Models\User ? $currentUser : null)
+            ->where('slug', $slug0)
+            ->first();
     }
 
     $eventsIndexUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/events');
@@ -331,6 +335,9 @@
                                     >
                                         {{ __('pub_theme::event.actions.rsvp_now.label') }}
                                     </a>
+                                @elseif($eventModel !== null && $eventModel->status === 'published')
+                                    {{-- Iscrizione sulla piattaforma (PRD FR-9/FR-10/FR-11) --}}
+                                    @livewire(\Modules\Meetup\Http\Livewire\EventRegistration::class, ['event' => $eventModel], key('event-registration-'.$eventModel->getKey()))
                                 @elseif($bookingInfoOnly)
                                     <div class="rounded-lg bg-amber-50 px-4 py-3 text-sm font-medium text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
                                         @if($availableSpots > 0)
@@ -394,7 +401,7 @@
 @push('meta')
     @if($schemaOrg)
         <script type="application/ld+json">
-{!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+{!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}
         </script>
     @endif
 @endpush

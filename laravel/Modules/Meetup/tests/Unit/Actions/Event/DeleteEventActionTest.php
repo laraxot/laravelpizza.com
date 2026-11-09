@@ -6,6 +6,7 @@ namespace Modules\Meetup\Tests\Unit\Actions\Event;
 
 use Modules\Meetup\Actions\Event\DeleteEventAction;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Models\EventUser;
 use Modules\Meetup\Tests\TestCase;
 
 uses(TestCase::class);
@@ -152,4 +153,29 @@ test('it handles sequential deletes', function () {
         ->and($result2)->toBeTrue();
     $this->assertDatabaseMissing('events', ['id' => $event1->id], 'meetup');
     $this->assertDatabaseMissing('events', ['id' => $event2->id], 'meetup');
+});
+
+test('it removes registrations of the deleted event without touching other events', function () {
+    fakeDeleteAuth(null);
+
+    $doomed = Event::query()->create([
+        'title' => 'doomed-'.uniqid(),
+        'slug' => 'doomed-'.uniqid(),
+        'start_date' => now()->addDays(10),
+        'end_date' => now()->addDays(10)->addHours(2),
+    ]);
+    $kept = Event::query()->create([
+        'title' => 'kept-'.uniqid(),
+        'slug' => 'kept-'.uniqid(),
+        'start_date' => now()->addDays(11),
+        'end_date' => now()->addDays(11)->addHours(2),
+    ]);
+
+    EventUser::query()->create(['event_id' => $doomed->getKey(), 'user_id' => 'u-del-1']);
+    EventUser::query()->create(['event_id' => $kept->getKey(), 'user_id' => 'u-del-2']);
+
+    app(DeleteEventAction::class)->execute($doomed);
+
+    expect(EventUser::query()->where('event_id', $doomed->getKey())->count())->toBe(0)
+        ->and(EventUser::query()->where('event_id', $kept->getKey())->count())->toBe(1);
 });

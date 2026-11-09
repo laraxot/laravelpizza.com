@@ -24,6 +24,9 @@
 /* Required by widgets */
 @import '../../vendor/filament/widgets/resources/css/index.css';
 
+/* Viste Blade/Livewire del modulo Meetup usate nelle pagine pubbliche (es. CTA di iscrizione): Tailwind 4 rileva da solo solo i file del tema */
+@source '../../../../Modules/Meetup/resources/views';
+
 @variant dark (&:where(.dark, .dark *));
 
 [x-cloak] { display: none !important; }

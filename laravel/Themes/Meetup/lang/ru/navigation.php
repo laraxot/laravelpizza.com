@@ -24,6 +24,7 @@ return [
         'register' => 'Регистрация',
     ],
     'footer' => [
+        'events' => 'События',
         'community' => 'Сообщество',
         'community_chat' => 'Чат сообщества',
         'code_of_conduct' => 'Кодекс поведения',

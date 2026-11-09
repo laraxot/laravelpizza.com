@@ -12,6 +12,12 @@ new class extends Component {
     public string $container0;
     public string $slug0 = '';
     public array $data = [];
+
+    public function mount(): void
+    {
+        // Pagina CMS inesistente: 404 invece di una pagina vuota con solo header e footer (es. /it/dashboard)
+        abort_if(\Modules\Cms\Models\Page::findUniqueBySlug($this->container0) === null, 404);
+    }
 };
 ?>
 

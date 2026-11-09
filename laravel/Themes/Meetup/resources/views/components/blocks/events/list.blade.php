@@ -11,6 +11,17 @@
     // If events are passed directly from CMS (resolved query), use them
     $eventsData = $events ?? ($data['events'] ?? []);
 
+    // "I miei eventi": eventi a cui l'utente autenticato è iscritto (events/my.json)
+    if (($data['events_source'] ?? null) === 'user_subscribed') {
+        $currentUser = auth()->user();
+        $eventsData = $currentUser === null
+            ? []
+            : app(\Modules\Meetup\Actions\Event\GetUserRegisteredEventsAction::class)
+                ->execute((string) $currentUser->getAuthIdentifier())
+                ->map(fn ($item) => $item->toBlockArray())
+                ->all();
+    }
+
     // If not passed, load from query config (fallback)
     if (empty($eventsData) && isset($data['query'])) {
         $queryConfig = $data['query'];
@@ -19,8 +30,15 @@
         if ($modelClass && class_exists($modelClass)) {
             $model = $modelClass::query();
 
-            $scope = $queryConfig['scope'] ?? null;
-            if ($scope && is_string($scope)) {
+            // Stessa semantica di Modules\Cms\Actions\ResolveBlockQueryAction: 'scope' singolo e/o 'scopes' multipli
+            $scopes = (array) ($queryConfig['scopes'] ?? []);
+            if (isset($queryConfig['scope']) && is_string($queryConfig['scope'])) {
+                array_unshift($scopes, $queryConfig['scope']);
+            }
+            foreach ($scopes as $scope) {
+                if (! is_string($scope) || $scope === '') {
+                    continue;
+                }
                 try {
                     $model->{$scope}();
                 } catch (\BadMethodCallException $e) {
@@ -47,7 +65,7 @@
 @endphp
 
 <section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors" 
-         x-data="{ filter: 'all', events: {{ $eventsJson }}, get filteredEvents() { if (this.filter === 'all') return this.events; return this.events.filter(event => event.status === this.filter); } }">
+         x-data="{ filter: 'all', events: {{ $eventsJson }}, get filteredEvents() { if (this.filter === 'all') return this.events; return this.events.filter(event => event.timing_status === this.filter); } }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Header --}}
         @if($title)
@@ -61,7 +79,8 @@
         </p>
         @endif
 
-        {{-- Filter Buttons --}}
+        {{-- Filter Buttons: nascosti quando la query mostra già un solo periodo (es. solo eventi futuri) --}}
+        @if((bool) ($data['show_filters'] ?? true))
         <div class="flex flex-wrap gap-4 pb-8">
             <button type="button"
                 @click="filter = 'all'"
@@ -82,6 +101,7 @@
                 {{ __('pub_theme::events.status.past.label') }}
             </button>
         </div>
+        @endif
 
         {{-- Events Grid --}}
         <div class="grid md:grid-cols-3 gap-8">
@@ -96,11 +116,11 @@
                                 </svg>
                             </div>
                         </div>
-                        <template x-if="event.status === 'upcoming'">
-                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        <template x-if="event.timing_status === 'upcoming'">
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.upcoming.label') }}</span>
                         </template>
-                        <template x-if="event.status !== 'upcoming'">
-                            <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Past</span>
+                        <template x-if="event.timing_status !== 'upcoming'">
+                            <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.past.label') }}</span>
                         </template>
                     </div>
                     <div class="p-6">

@@ -11,6 +11,11 @@
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
         </testsuite>
+        <!-- I test dei moduli: senza questa suite `php artisan test` eseguiva solo gli 8 test della root -->
+        <testsuite name="Modules">
+            <directory>Modules/*/tests/Unit</directory>
+            <directory>Modules/*/tests/Feature</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>

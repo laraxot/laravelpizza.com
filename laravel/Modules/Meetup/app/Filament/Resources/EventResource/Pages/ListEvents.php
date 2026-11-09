@@ -12,10 +12,7 @@ use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Filament\Actions\ImportEventsAction;
 use Modules\Meetup\Filament\Resources\EventResource;
-use Modules\Meetup\Filament\Widgets\EventsStats;
 use Modules\Meetup\Filament\Widgets\EventStatsOverviewWidget;
-use Modules\Meetup\Filament\Widgets\EventsTimelineChart;
-use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
 
@@ -139,11 +136,10 @@ class ListEvents extends XotBaseListRecords
     #[Override]
     protected function getHeaderWidgets(): array
     {
+        // Un solo riepilogo: EventsStats duplicava i contatori (in inglese e con un totale iscritti diverso),
+        // RecentEventsWidget ripeteva la tabella sottostante. Grafico e ultimi eventi restano nella Meetup Dashboard.
         return [
             EventStatsOverviewWidget::class,
-            EventsStats::class,
-            EventsTimelineChart::class,
-            RecentEventsWidget::class,
         ];
     }
 

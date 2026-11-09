@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
-            'label' => 'empty',
-            'heading' => 'empty',
+            'label' => '',
+            'heading' => '',
         ],
     ],
     'label' => 'Meetup Stats Overview',
@@ -52,5 +52,10 @@ return [
         'delete' => [
             'label' => 'Elimina Meetup Stats Overview',
         ],
+    ],
+    'stats' => [
+        'total' => ['label' => 'Eventi totali', 'description' => 'Da sempre'],
+        'upcoming' => ['label' => 'Eventi in arrivo', 'description' => 'Programmati nel futuro'],
+        'published' => ['label' => 'Eventi pubblicati', 'description' => 'Visibili sul sito'],
     ],
 ];

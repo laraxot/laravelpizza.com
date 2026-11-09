@@ -5,26 +5,26 @@ declare(strict_types=1);
 return [
     'fields' => [
         'title' => [
-            'label' => 'title',
+            'label' => 'Titolo',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'start_date' => [
-            'label' => 'start_date',
+            'label' => 'Inizio',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'status' => [
-            'label' => 'status',
+            'label' => 'Pubblicazione',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'organizer' => [
             'name' => [
-                'label' => 'organizer.name',
+                'label' => 'Organizzatore',
             ],
             'label' => '',
             'tooltip' => '',
@@ -64,7 +64,7 @@ return [
             'tooltip' => 'reorderRecords',
         ],
     ],
-    'label' => 'Recent Events',
+    'label' => 'Ultimi eventi',
     'plural_label' => 'Recent Events (Plurale)',
     'navigation' => [
         'name' => 'Recent Events',

@@ -19,7 +19,7 @@ class ProposeMeetupAction
      */
     public function execute(array $data, string $proposerId): Event
     {
-        return app('db')->transaction(function () use ($data, $proposerId): Event {
+        return (new Event)->getConnection()->transaction(function () use ($data, $proposerId): Event {
             $event = new Event;
             $event->fill($data);
             $event->status = 'pending';
