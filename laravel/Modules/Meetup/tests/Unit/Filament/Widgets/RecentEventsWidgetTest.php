@@ -20,5 +20,6 @@ test('it has correct heading', function () {
     // Using reflection to check internal state if needed, 
     // but just checking it doesn't crash on table() call is good too.
     $table = $widget->table(new Table($widget));
-    expect($table->getHeading())->toBe('Recent Events');
+    expect($table->getHeading())->toBe(__('meetup::recent_events.label'))
+        ->not->toBe('meetup::recent_events.label');
 });

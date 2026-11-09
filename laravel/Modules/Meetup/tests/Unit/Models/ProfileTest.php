@@ -17,8 +17,9 @@ test('profile model uses meetup connection', function () {
 
 test('profile model has correct key configuration', function () {
     $profile = new Profile();
-    expect($profile->getIncrementing())->toBeTrue()
-        ->and($profile->getKeyType())->toBe('int');
+    // La migrazione 2026_02_13_163329 porta profiles.id a varchar(36): la chiave è un UUID generato dall'app.
+    expect($profile->getIncrementing())->toBeFalse()
+        ->and($profile->getKeyType())->toBe('string');
 });
 
 test('profile has expected fillable fields', function () {
