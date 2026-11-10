@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Activity\Models\Snapshot;
@@ -17,6 +19,7 @@ use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
+use Modules\Seo\Datas\SocialShareData;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
@@ -51,8 +54,8 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection;
  * @property Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- * @property int|null $user_id
- * @property int|null $organizer_id
+ * @property string|null $user_id
+ * @property string|null $organizer_id
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  * @property-read UserContract|null $owner
@@ -134,6 +137,8 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection;
  *
  * @property-read EventSponsor|EventPerformer|EventUser|null $pivot
  * @property-read Collection<int, User> $attendees
+ * @property-read Collection<int, EventUser> $registrations
+ * @property-read int|null $registrations_count
  * @property-read Collection<int, Performer> $performers
  * @property-read int|null $performers_count
  * @property-read Collection<int, Sponsor> $sponsors
@@ -157,10 +162,26 @@ class Event extends BaseModel
     protected static function booted(): void
     {
         static::creating(static function (self $model): void {
-            if (empty($model->slug)) {
-                $model->slug = Str::slug($model->title);
-            }
+            $model->slug = self::uniqueSlug(Str::slug(empty($model->slug) ? $model->title : $model->slug));
         });
+    }
+
+    /**
+     * Slug libero per un nuovo evento: due meetup con lo stesso titolo (es. "Laravel Pizza Milano")
+     * non devono condividere l'URL /events/{slug}. Il secondo diventa "...-2", poi "-3" e cosi' via.
+     */
+    public static function uniqueSlug(string $base): string
+    {
+        $base = $base === '' ? 'evento' : $base;
+        $slug = $base;
+        $suffix = 2;
+
+        while (self::query()->where('slug', $slug)->exists()) {
+            $slug = $base.'-'.$suffix;
+            $suffix++;
+        }
+
+        return $slug;
     }
 
     protected $fillable = [
@@ -227,6 +248,17 @@ class Event extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
+    }
+
+    /**
+     * Iscrizioni come righe della pivot: a differenza di attendees() non fa join con `users`,
+     * che vive su un altro database, quindi funziona per conteggi, tabelle ed export.
+     *
+     * @return HasMany<EventUser, $this>
+     */
+    public function registrations(): HasMany
+    {
+        return $this->hasMany(EventUser::class, 'event_id', 'id');
     }
 
     /**
@@ -368,7 +400,7 @@ class Event extends BaseModel
             'slug' => $this->slug,
             'timing_status' => $timingStatus,
             'status' => $this->status, // draft, pending, published
-            'status_label' => ucfirst($this->status),
+            'status_label' => __('meetup::event_form.fields.status.options.'.$this->status),
             'title' => $this->title,
             'description' => $this->description,
             // Formati ISO dipendenti dalla lingua corrente: "17 novembre 2026" / "November 17, 2026", "19:00" / "7:00 PM"
@@ -378,9 +410,27 @@ class Event extends BaseModel
             'location' => $this->location,
             'attendees_current' => $this->attendees_count,
             'attendees_max' => $this->max_attendees,
-            'image' => $this->cover_image ? asset($this->cover_image) : null,
+            'image' => $this->coverImageUrl(),
             'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
         ];
+    }
+
+    /**
+     * URL pubblico della copertina: le immagini caricate dal pannello stanno sul disco `public`
+     * (servono `php artisan storage:link`); URL assoluti e percorsi gia' pubblici restano com'erano.
+     */
+    public function coverImageUrl(): ?string
+    {
+        $path = $this->cover_image;
+        if ($path === null || $path === '') {
+            return null;
+        }
+
+        if (Str::startsWith($path, ['http://', 'https://', '/'])) {
+            return $path;
+        }
+
+        return Storage::disk('public')->url($path);
     }
 
     /**
@@ -460,8 +510,9 @@ class Event extends BaseModel
             $data['description'] = $this->description;
         }
 
-        if ($this->cover_image !== null) {
-            $data['image'] = [asset($this->cover_image)];
+        $image = $this->coverImageUrl();
+        if ($image !== null) {
+            $data['image'] = [$image];
         }
 
         if ($this->organizer !== null) {
@@ -478,8 +529,7 @@ class Event extends BaseModel
             $organizerProfileUrl = LaravelLocalization::localizeUrl('/profile/'.$organizerRouteKey);
             $organizerData['url'] = $organizerProfileUrl;
 
-            // Add email only if appropriate ( Schema.org recommends being careful with PII)
-            $organizerData['email'] = $this->organizer->email;
+            // Niente email nel JSON-LD: la pagina e' pubblica e indicizzata, l'indirizzo finirebbe agli spammer (S-10).
 
             $data['organizer'] = $organizerData;
         }
@@ -555,13 +605,13 @@ class Event extends BaseModel
     /**
      * Get social share data for this event.
      */
-    public function getSocialShareData(): \Modules\Seo\Datas\SocialShareData
+    public function getSocialShareData(): SocialShareData
     {
-        return \Modules\Seo\Datas\SocialShareData::from([
+        return SocialShareData::from([
             'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
             'title' => $this->title,
             'text' => Str::limit($this->description ?? '', 160),
-            'image' => $this->cover_image ? asset($this->cover_image) : null,
+            'image' => $this->coverImageUrl(),
         ]);
     }
 }

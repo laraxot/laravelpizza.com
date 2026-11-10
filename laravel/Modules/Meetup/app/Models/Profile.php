@@ -5,8 +5,22 @@ declare(strict_types=1);
 namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
+use Illuminate\Support\Carbon;
+use Modules\Media\Models\Media;
 use Modules\User\Models\BaseProfile;
+use Modules\User\Models\Device;
+use Modules\User\Models\DeviceProfile;
+use Modules\User\Models\DeviceUser;
+use Modules\User\Models\Permission;
+use Modules\User\Models\Role;
+use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 /**
  * @property string $id
@@ -17,37 +31,38 @@ use Modules\User\Models\BaseProfile;
  * @property string|null $phone
  * @property string|null $email
  * @property string|null $notes
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
+ * @property SchemalessAttributes $extra
  * @property-read string $avatar
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $deviceUsers
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read Collection<int, DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
- * @property-read \Modules\User\Models\DeviceProfile|null $pivot
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Device> $devices
+ * @property-read DeviceProfile|null $pivot
+ * @property-read Collection<int, Device> $devices
  * @property-read int|null $devices_count
  * @property-read string|null $full_name
- * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
+ * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $mobileDeviceUsers
+ * @property-read Collection<int, DeviceUser> $mobileDeviceUsers
  * @property-read int|null $mobile_device_users_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Device> $mobileDevices
+ * @property-read Collection<int, Device> $mobileDevices
  * @property-read int|null $mobile_devices_count
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
+ * @property-read DatabaseNotificationCollection<int, DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Permission> $permissions
+ * @property-read Collection<int, Permission> $permissions
  * @property-read int|null $permissions_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
+ * @property-read Collection<int, Role> $roles
  * @property-read int|null $roles_count
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
- * @property-read \Modules\User\Models\User|null $user
+ * @property-read ProfileContract|null $updater
+ * @property-read User|null $user
  * @property-read string|null $user_name
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array<string, mixed> $relations)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array<string, mixed> $relations)
  * @method static \Modules\Meetup\Database\Factories\ProfileFactory factory($count = null, $state = [])
@@ -73,6 +88,7 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
  * @method static Builder<static>|Profile byUuid(string $uuid)
+ *
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

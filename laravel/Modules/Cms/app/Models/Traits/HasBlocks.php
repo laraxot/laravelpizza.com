@@ -139,7 +139,7 @@ trait HasBlocks
                     return Blade::render($match[0]);
                 }
 
-                if (preg_match(self::TRANS_EXPRESSION, $match[1], $trans) === 1) {
+                if (preg_match(self::TRANS_EXPRESSION, $match[1], $trans) === 1 && isset($trans[2])) {
                     $translated = trans($trans[2]);
 
                     return is_string($translated) ? e($translated) : $match[0];

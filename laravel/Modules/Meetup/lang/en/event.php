@@ -12,6 +12,11 @@ return [
     'label' => 'Event',
     'plural_label' => 'Events',
     'fields' => [
+        'venue' => [
+            'name' => [
+                'label' => 'Venue',
+            ],
+        ],
         'title' => [
             'label' => 'Title',
             'placeholder' => 'E.g. Laravel 13 and Filament 5: what changes',
@@ -114,6 +119,29 @@ return [
         'Event Details' => [
             'label' => 'Event details',
             'heading' => 'Event details',
+        ],
+    ],
+    'event' => [
+        'filters' => [
+            'status' => [
+                'label' => 'Status',
+            ],
+            'timing' => [
+                'label' => 'When',
+                'upcoming' => 'Upcoming',
+                'past' => 'Past',
+            ],
+            'event_status' => [
+                'label' => 'Event status',
+            ],
+            'attendance_mode' => [
+                'label' => 'Attendance mode',
+            ],
+            'has_capacity' => [
+                'label' => 'Seats available',
+                'yes' => 'Seats left',
+                'no' => 'Full',
+            ],
         ],
     ],
 ];

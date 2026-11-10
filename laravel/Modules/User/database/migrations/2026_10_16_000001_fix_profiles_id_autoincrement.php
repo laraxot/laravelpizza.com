@@ -19,6 +19,11 @@ return new class extends Migration {
     {
         $schema = Schema::connection('user');
 
+        // `MODIFY ... AUTO_INCREMENT` esiste solo in MySQL/MariaDB (SQLite dei test: niente da convertire).
+        if (! in_array(DB::connection('user')->getDriverName(), ['mysql', 'mariadb'], true)) {
+            return;
+        }
+
         if (! $schema->hasTable('profiles')) {
             return;
         }

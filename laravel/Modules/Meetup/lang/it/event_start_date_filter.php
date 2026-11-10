@@ -5,18 +5,18 @@ declare(strict_types=1);
 return [
     'fields' => [
         'start_date' => [
-            'label' => 'start_date',
+            'label' => 'Data',
         ],
         'from' => [
-            'label' => 'from',
-            'placeholder' => 'from',
-            'helper_text' => 'from',
+            'label' => 'Dal',
+            'placeholder' => '',
+            'helper_text' => '',
             'description' => 'from',
         ],
         'until' => [
-            'label' => 'until',
-            'placeholder' => 'until',
-            'helper_text' => 'until',
+            'label' => 'Al',
+            'placeholder' => '',
+            'helper_text' => '',
             'description' => 'until',
         ],
     ],

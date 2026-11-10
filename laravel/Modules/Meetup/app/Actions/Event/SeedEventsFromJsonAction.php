@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Modules\User\Models\User;
+use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -61,7 +63,7 @@ class SeedEventsFromJsonAction
      *
      * @param  array<string, mixed>  $data
      */
-    private function createEvent(array $data, \Psr\Log\LoggerInterface $log): void
+    private function createEvent(array $data, LoggerInterface $log): void
     {
         Assert::keyExists($data, 'title');
         Assert::keyExists($data, 'date');
@@ -108,7 +110,7 @@ class SeedEventsFromJsonAction
                 'max_attendees' => $data['attendees_max'] ?? 30,
                 'url' => $data['url'] ?? null,
                 'in_language' => app()->getLocale(),
-                'user_id' => \Modules\User\Models\User::first()?->id,
+                'user_id' => User::first()?->id,
             ]
         );
     }

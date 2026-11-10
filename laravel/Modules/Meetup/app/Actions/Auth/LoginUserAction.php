@@ -13,7 +13,7 @@ class LoginUserAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function execute(array $data): bool
     {
@@ -26,6 +26,7 @@ class LoginUserAction
 
         if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
             session()->regenerate();
+
             return true;
         }
 

@@ -102,6 +102,8 @@ laravel/coverage-xot/
 .opencode
 .ralph
 laravel/database/laravelpizza_data.sqlite
+# Database SQLite dei test, ricostruito con `php artisan xot:build-test-sqlite`
+laravel/database/test_data.sqlite
 .qwen/
 .kiro
 .planning

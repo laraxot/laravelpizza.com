@@ -23,7 +23,7 @@ class RegisterWithGdprAction
     use QueueableAction;
 
     /**
-     * @param array<string, bool> $consents  e.g. ['privacy_accepted'=>true,'terms_accepted'=>true,'marketing_consent'=>false]
+     * @param  array<string, bool>  $consents  e.g. ['privacy_accepted'=>true,'terms_accepted'=>true,'marketing_consent'=>false]
      */
     public function execute(Event $event, User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): EventUser
     {
