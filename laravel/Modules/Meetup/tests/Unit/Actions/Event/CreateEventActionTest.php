@@ -64,12 +64,13 @@ test('it sets user_id and created_by from auth id', function () {
         'end_date' => now()->addDay()->addHour(),
     ]);
 
-    expect($event->user_id)->toBe((int) $user->id)
+    // users.id e' un UUID: il vecchio cast (int) salvava 0.
+    expect($event->user_id)->toBe((string) $user->id)
         ->and($event->created_by)->toBe((string) $user->id);
 
     $this->assertDatabaseHas('events', [
         'id' => $event->id,
-        'user_id' => (int) $user->id,
+        'user_id' => (string) $user->id,
         'created_by' => (string) $user->id,
     ], 'meetup');
 });

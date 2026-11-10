@@ -9,8 +9,33 @@ return [
             'label' => 'Dettagli dell\'evento',
             'heading' => 'Dettagli dell\'evento',
         ],
+        'Speakers and sponsors' => [
+            'label' => 'Relatori e sponsor',
+            'heading' => 'Relatori e sponsor',
+        ],
     ],
     'fields' => [
+        'location_id' => [
+            'label' => 'Sede',
+            'placeholder' => '',
+            'helper_text' => 'Facoltativa: scegli una sede salvata o creane una nuova.',
+            'description' => '',
+            'tooltip' => '',
+        ],
+        'performers' => [
+            'label' => 'Relatori',
+            'placeholder' => '',
+            'helper_text' => 'Chi parla all\'evento.',
+            'description' => '',
+            'tooltip' => '',
+        ],
+        'sponsors' => [
+            'label' => 'Sponsor',
+            'placeholder' => '',
+            'helper_text' => 'Chi sostiene l\'evento.',
+            'description' => '',
+            'tooltip' => '',
+        ],
         'title' => [
             'label' => 'Titolo',
             'placeholder' => 'Es. Laravel 13 e Filament 5: cosa cambia',
@@ -56,6 +81,7 @@ return [
                 'draft' => 'Bozza',
                 'published' => 'Pubblicato',
                 'cancelled' => 'Annullato',
+                'pending' => 'In attesa di approvazione',
             ],
         ],
         'attendees_count' => [

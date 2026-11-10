@@ -77,6 +77,14 @@ jobs:
   tests:
     name: Tests
     runs-on: ubuntu-latest
+    # Cache, sessioni e code non devono dipendere da tabelle che esistono solo dopo `migrate`
+    env:
+      # Stesso tenant dei test locali: config/local/laravelpizza
+      APP_URL: http://laravelpizza.local
+      CACHE_STORE: array
+      SESSION_DRIVER: array
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
     services:
       mysql:
         image: mysql:8.0
@@ -139,6 +147,8 @@ jobs:
         run: |
           mysql -h 127.0.0.1 -P 3306 -uroot -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
           php artisan migrate --force --no-interaction
+          # Le suite dei moduli che estendono XotBaseTestCase usano un SQLite condiviso
+          php artisan xot:build-test-sqlite --path="$PWD/database/test_data.sqlite" --fresh
 
       # Niente `|| true`: un job di test che non può fallire non verifica nulla (docs/audit/risk-register.md R-02)
       - name: Run Tests
@@ -161,10 +171,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Il CSS del tema importa gli stili di Filament da laravel/vendor
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: laravel/vendor
+          key: composer-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: laravel/Themes/Meetup/package-lock.json
 

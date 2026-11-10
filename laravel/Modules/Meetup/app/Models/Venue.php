@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
-use Modules\Geo\Models\Traits\HasAddress;
-use Modules\Geo\Models\Traits\GeoTrait;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
+use Modules\Geo\Models\Traits\GeoTrait;
+use Modules\Geo\Models\Traits\HasAddress;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modules\Meetup\Models\Venue.
@@ -24,19 +27,22 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string|null $phone
  * @property string|null $description
  * @property array<string, mixed>|null $meta_data
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
+ *
  * @method static Builder<Venue> newModelQuery()
  * @method static Builder<Venue> newQuery()
  * @method static Builder<Venue> query()
+ *
  * @property string|null $user_id
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read Collection<int, Event> $events
  * @property-read int|null $events_count
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read ProfileContract|null $updater
+ *
  * @method static \Modules\Meetup\Database\Factories\VenueFactory factory($count = null, $state = [])
  * @method static Builder<static>|Venue whereAddress($value)
  * @method static Builder<static>|Venue whereCapacity($value)
@@ -55,13 +61,23 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static Builder<static>|Venue whereUpdatedBy($value)
  * @method static Builder<static>|Venue whereUserId($value)
  * @method static Builder<static>|Venue whereWebsite($value)
+ *
  * @mixin \Eloquent
  */
 class Venue extends BaseModel
 {
     use GeoTrait;
+
     /** @use HasAddress<Venue> */
     use HasAddress;
+
+    protected static function booted(): void
+    {
+        // Gli eventi che la usavano restano, con la sola citta' testuale: niente location_id orfani.
+        static::deleting(static function (self $venue): void {
+            Event::query()->where('location_id', $venue->getKey())->update(['location_id' => null]);
+        });
+    }
 
     /** @var list<string> */
     protected $fillable = [

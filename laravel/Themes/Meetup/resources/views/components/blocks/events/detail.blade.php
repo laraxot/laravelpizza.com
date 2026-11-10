@@ -116,8 +116,8 @@
 
     @if($eventModel)
         <div class="relative z-0 h-[400px] bg-slate-900 md:h-[500px]">
-            @if($eventModel->cover_image)
-                <img src="{{ $eventModel->cover_image }}" alt="{{ $eventModel->title }}" class="h-full w-full object-cover opacity-70">
+            @if($eventModel->coverImageUrl())
+                <img src="{{ $eventModel->coverImageUrl() }}" alt="{{ $eventModel->title }}" class="h-full w-full object-cover opacity-70">
             @else
                 <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-red-600 via-red-700 to-slate-900">
                     <svg class="h-32 w-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">

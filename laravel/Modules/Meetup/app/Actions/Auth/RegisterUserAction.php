@@ -15,7 +15,7 @@ class RegisterUserAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function execute(array $data): User
     {

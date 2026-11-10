@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Modules\Meetup\Actions\Event;
 
 use Carbon\Carbon;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_split;
@@ -57,7 +59,7 @@ class ImportEventsFromJsonAction
     /**
      * Import from single events.json file.
      */
-    protected function importFromSingleFile(string $path, string $locale, \Illuminate\Filesystem\Filesystem $files): int
+    protected function importFromSingleFile(string $path, string $locale, Filesystem $files): int
     {
         /** @var array<string, mixed> $payload */
         $payload = json_decode($files->get($path), true, 512, JSON_THROW_ON_ERROR);
@@ -79,7 +81,7 @@ class ImportEventsFromJsonAction
     /**
      * Import from individual JSON files in events directory.
      */
-    protected function importFromDirectory(string $directory, string $locale, \Illuminate\Filesystem\Filesystem $files, \Psr\Log\LoggerInterface $log): int
+    protected function importFromDirectory(string $directory, string $locale, Filesystem $files, LoggerInterface $log): int
     {
         $filesList = $files->files($directory);
         $count = 0;

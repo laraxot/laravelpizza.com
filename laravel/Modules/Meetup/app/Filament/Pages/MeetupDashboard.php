@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Pages;
 
+use Filament\Schemas\Components\Component;
 use Modules\Meetup\Filament\Widgets\MeetupStatsOverviewWidget;
 use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -32,7 +33,7 @@ class MeetupDashboard extends XotBasePage
     }
 
     /**
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     #[Override]
     public function getFormSchema(): array

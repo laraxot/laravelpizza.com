@@ -25,10 +25,11 @@ return [
         'filters' => [
             'status' => [
                 'label' => 'Stato',
+            ],
+            'timing' => [
+                'label' => 'Quando',
                 'upcoming' => 'In arrivo',
-                'completed' => 'Completato',
-                'cancelled' => 'Cancellato',
-                'draft' => 'Bozza',
+                'past' => 'Passati',
             ],
             'event_status' => [
                 'label' => 'Stato Evento',
@@ -51,14 +52,84 @@ return [
         ],
     ],
     'navigation' => [
-        'sort' => 49,
+        'label' => 'Eventi',
+        'group' => 'Meetups',
+        'icon' => 'heroicon-o-calendar',
+        'sort' => 11,
     ],
     'actions' => [
         'logout' => [
             'tooltip' => 'logout',
+            'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'delete' => [
+            'tooltip' => 'delete',
+        ],
+        'cancel' => [
+            'tooltip' => 'cancel',
+            'icon' => 'cancel',
+            'label' => 'cancel',
+        ],
+        'profile' => [
+            'tooltip' => 'profile',
+            'label' => 'profile',
+            'icon' => 'profile',
+        ],
+        'createAnother' => [
+            'tooltip' => 'createAnother',
+        ],
+        'save' => [
+            'tooltip' => 'save',
+            'icon' => 'save',
+        ],
+        'create' => [
+            'label' => 'create',
+            'icon' => 'create',
+            'tooltip' => 'create',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+            'icon' => 'applyFilters',
+            'tooltip' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+            'icon' => 'resetFilters',
+            'tooltip' => 'resetFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+            'icon' => 'openFilters',
+            'tooltip' => 'openFilters',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+            'icon' => 'applyTableColumnManager',
+            'tooltip' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+            'icon' => 'openColumnManager',
+            'tooltip' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'tooltip' => 'resetColumnManager',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+            'icon' => 'reorderRecords',
+            'tooltip' => 'reorderRecords',
         ],
     ],
     'fields' => [
+        'venue' => [
+            'name' => [
+                'label' => 'Sede',
+            ],
+        ],
         'title' => [
             'label' => 'Titolo',
             'placeholder' => 'Es. Laravel 13 e Filament 5: cosa cambia',
@@ -149,6 +220,18 @@ return [
             'helper_text' => '',
             'description' => '',
             'tooltip' => '',
+        ],
+        'values' => [
+            'label' => 'values',
+            'placeholder' => 'values',
+            'helper_text' => 'values',
+            'description' => 'values',
+        ],
+        'value' => [
+            'label' => 'value',
+            'placeholder' => 'value',
+            'helper_text' => 'value',
+            'description' => 'value',
         ],
     ],
     'label' => 'Evento',

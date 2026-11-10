@@ -4,16 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
+use Illuminate\Support\Carbon;
+use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\XotBasePivot;
 
 /**
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read ProfileContract|null $updater
+ *
  * @method static \Modules\Meetup\Database\Factories\EventPerformerFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer query()
+ *
  * @property string $id
  * @property string $event_id
  * @property int $performer_id
@@ -22,12 +26,13 @@ use Modules\Xot\Models\XotBasePivot;
  * @property string $name
  * @property string|null $type
  * @property string|null $bio
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereBio($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereCreatedBy($value)
@@ -42,6 +47,7 @@ use Modules\Xot\Models\XotBasePivot;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class EventPerformer extends XotBasePivot
