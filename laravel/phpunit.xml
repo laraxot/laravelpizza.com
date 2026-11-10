@@ -36,6 +36,8 @@
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>
+        <!-- SQLite condiviso dalle suite dei moduli: php artisan xot:build-test-sqlite -->
+        <env name="DB_SQLITE_FILE" value="test_data.sqlite"/>
         <!-- DB_CONNECTION and DB_DATABASE removed to use .env.testing config -->
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>

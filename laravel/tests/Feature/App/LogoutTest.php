@@ -3,36 +3,28 @@
 declare(strict_types=1);
 
 use App\Livewire\Actions\Logout;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
+use Modules\User\Models\User;
 
-uses(\Tests\TestCase::class, \Modules\Xot\Tests\CreatesApplication::class);
+uses(Tests\TestCase::class, Modules\Xot\Tests\CreatesApplication::class);
 
-test('logout action logs out user and regenerates session', function (): void {
-    // Arrange
-    Auth::shouldReceive('guard')->with('web')->andReturnSelf();
-    Auth::shouldReceive('logout')->once();
+/*
+ * Logout reale invece dei mock di Auth e Session: il mock della facade Session rompeva redirect(),
+ * che legge la sessione per il "flash" della richiesta precedente.
+ */
+test('logout action logs out the user, renews the session and goes home', function (): void {
+    $user = User::factory()->create(['email' => 'logout-'.uniqid().'@example.test']);
+    $this->actingAs($user);
+    Session::start();
+    $tokenBefore = Session::token();
 
-    Session::shouldReceive('invalidate')->once();
-    Session::shouldReceive('regenerateToken')->once();
+    $result = (new Logout)();
 
-    $logout = new Logout();
+    $this->assertGuest();
+    expect($result)->toBeInstanceOf(RedirectResponse::class)
+        ->and(rtrim($result->getTargetUrl(), '/'))->toBe(rtrim(url('/'), '/'))
+        ->and(Session::token())->not->toBe($tokenBefore);
 
-    // Act
-    $result = $logout();
-
-    // Assert
-    expect($result)->toBeInstanceOf(\Illuminate\Http\RedirectResponse::class);
-    expect($result->getTargetUrl())->toContain('/');
-});
-
-test('logout action can be invoked', function (): void {
-    Auth::shouldReceive('guard')->with('web')->andReturnSelf();
-    Auth::shouldReceive('logout')->once();
-
-    Session::shouldReceive('invalidate')->once();
-    Session::shouldReceive('regenerateToken')->once();
-
-    $logout = new Logout();
-    $logout();
+    $user->delete();
 });

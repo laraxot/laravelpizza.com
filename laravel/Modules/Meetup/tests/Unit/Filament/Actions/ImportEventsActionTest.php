@@ -32,7 +32,8 @@ test('it has a badge showing event count', function () {
     
     $action = ImportEventsAction::make();
     
-    expect($action->getBadge())->toBe($initialCount + 3);
+    // Filament restituisce il badge come stringa: conta il valore.
+    expect((int) $action->getBadge())->toBe($initialCount + 3);
 });
 
 test('it executes the import action and sends notification', function () {

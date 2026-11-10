@@ -271,9 +271,13 @@ class Event extends BaseModel
             ->using(EventUser::class);
     }
 
+    /**
+     * Proposta in attesa di approvazione (ProposeMeetupAction). Una bozza dell'organizzatore non lo e':
+     * non si approva ne' si rifiuta, si pubblica dal pannello.
+     */
     public function isPending(): bool
     {
-        return in_array($this->status, ['pending', 'draft']);
+        return $this->status === 'pending';
     }
 
     public function isFull(): bool

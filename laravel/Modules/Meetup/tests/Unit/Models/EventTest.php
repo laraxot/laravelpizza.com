@@ -318,7 +318,8 @@ test('toSchemaOrg includes organizer when available', function () {
 
     expect($schema['organizer']['@type'])->toBe('Person')
         ->and($schema['organizer']['name'])->toContain('John Organizer')
-        ->and($schema['organizer']['email'])->toContain('@example.com');
+        // S-10: la pagina e' pubblica, l'email dell'organizzatore non deve finire nel JSON-LD.
+        ->and($schema['organizer'])->not->toHaveKey('email');
 });
 
 test('toSchemaOrg excludes organizer when null', function () {

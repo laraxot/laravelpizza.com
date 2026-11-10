@@ -118,7 +118,8 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
-            'database' => database_path(env('DB_DATABASE', 'db_data').'.sqlite'),
+            // DB_SQLITE_FILE: nei test (phpunit.xml) il file condiviso costruito da `xot:build-test-sqlite`.
+            'database' => database_path(env('DB_SQLITE_FILE', env('DB_DATABASE', 'db_data').'.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],

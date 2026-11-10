@@ -7,6 +7,7 @@ namespace Modules\Meetup\Tests\Unit\Models;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
 
 uses(TestCase::class);
 
@@ -25,16 +26,18 @@ describe('Event Relationships', function (): void {
         $event = Event::factory()->create();
         $relation = $event->creator();
 
+        // Le colonne di audit puntano al profilo (ProfileContract), non all'utente.
         expect($relation->getForeignKeyName())->toBe('created_by')
-            ->and($relation->getRelated())->toBeInstanceOf(User::class);
+            ->and($relation->getRelated())->toBeInstanceOf(ProfileContract::class);
     });
 
     test('event belongs to updater user', function (): void {
         $event = Event::factory()->create();
         $relation = $event->updater();
 
+        // Le colonne di audit puntano al profilo (ProfileContract), non all'utente.
         expect($relation->getForeignKeyName())->toBe('updated_by')
-            ->and($relation->getRelated())->toBeInstanceOf(User::class);
+            ->and($relation->getRelated())->toBeInstanceOf(ProfileContract::class);
     });
 
     test('event belongs to organizer user', function (): void {
