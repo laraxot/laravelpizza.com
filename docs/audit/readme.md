@@ -14,7 +14,7 @@
 | [test-coverage.md](test-coverage.md) | Test eseguiti, risultati, test aggiunti, lacune |
 | [risk-register.md](risk-register.md) | Rischi R-01…R-10 |
 | [completion-roadmap.md](completion-roadmap.md) | Backlog P0–P3, roadmap in 6 fasi, percorso critico |
-| Manuale d'uso | [`laravel/Themes/Meetup/docs/manuale-utente/`](../../laravel/Themes/Meetup/docs/manuale-utente/readme.md) |
+| Manuale d'uso | [`laravel/Themes/Meetup/docs/manuale-utente/`](../../laravel/Themes/Meetup/docs/manuale-utente/readme.md) — anche in [PDF](../../laravel/Themes/Meetup/docs/manuale-utente/pdf/manuale-completo.pdf) |
 
 ## Punteggi (0–100, motivati nei documenti)
 

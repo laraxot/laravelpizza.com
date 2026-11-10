@@ -4,6 +4,11 @@ Benvenuto! Questo manuale spiega, passo per passo e senza dare nulla per scontat
 
 Non serve essere esperti di computer. Ogni capitolo ha delle **immagini prese dal sito vero**: i riquadri gialli con il numero indicano esattamente dove cliccare, e i passi del testo usano gli stessi numeri.
 
+## Versione PDF da stampare o inviare
+
+- [Manuale completo (PDF)](pdf/manuale-completo.pdf)
+- Solo il capitolo che ti serve: [Visitatore](pdf/01-visitatore.pdf) · [Partecipante](pdf/02-partecipante.pdf) · [Organizzatore](pdf/03-organizzatore.pdf)
+
 ## Chi sei? Scegli il tuo capitolo
 
 Il sito ha tre tipi di utente. Ognuno vede cose diverse e può fare cose diverse.
@@ -39,4 +44,5 @@ Se non sai quale sei: se non hai mai creato un account sei un **Visitatore**. Se
 ## Note per chi mantiene il manuale
 
 - Le immagini sono in [`img/`](img/) e vanno rifatte quando l'interfaccia cambia. Sono state catturate su un'installazione locale con dati dimostrativi (persone ed eventi inventati), non dal sito in produzione.
+- I PDF in [`pdf/`](pdf/) si generano dai `.md` con `node build-pdf.mjs` (richiede pandoc e Playwright). Dopo ogni modifica al testo o agli screenshot rigenera i PDF e committa `.md` e `.pdf` insieme.
 - Nomi file: `v` = visitatore, `p` = partecipante, `o` = organizzatore, seguiti dal numero d'ordine.
