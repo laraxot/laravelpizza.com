@@ -42,7 +42,13 @@ beforeEach(function (): void {
 });
 
 test('the post-login url is the localized personal area', function (): void {
+    config(['xra.post_login_path' => null]);
     expect(app(GetPostLoginUrlAction::class)->execute())->toBe(url('/it/area-personale'));
+});
+
+test('a tenant can choose its own post-login page', function (): void {
+    config(['xra.post_login_path' => 'events-my']);
+    expect(app(GetPostLoginUrlAction::class)->execute())->toBe(url('/it/events-my'));
 });
 
 test('the old dashboard url answers 404 and the personal area redirects', function (): void {
@@ -62,7 +68,7 @@ test('login without an intended url goes to the personal area', function (): voi
         ->call('login');
 
     $component->assertHasNoErrors();
-    $component->assertRedirect(url('/it/area-personale'));
+    $component->assertRedirect(app(GetPostLoginUrlAction::class)->execute());
 });
 
 test('login goes back to the intended url', function (): void {

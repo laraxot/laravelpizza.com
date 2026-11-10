@@ -21,7 +21,7 @@ use function Safe\preg_replace_callback;
  *
  * @phpstan-require-extends Model
  *
- * @method        mixed                                         getTranslation(string $key, string $locale, bool $useFallbackLocale = true)
+ * @method mixed getTranslation(string $key, string $locale, bool $useFallbackLocale = true)
  * @method static \Illuminate\Database\Eloquent\Builder<static> query()
  */
 trait HasBlocks
@@ -90,8 +90,7 @@ trait HasBlocks
     }
 
     /**
-     * @param array<int|string, mixed> $blocks
-     *
+     * @param  array<int|string, mixed>  $blocks
      * @return array<string, mixed>
      */
     public function compile(array $blocks): array
@@ -124,14 +123,26 @@ trait HasBlocks
      */
     private const string SAFE_EXPRESSION = '/^route\((?:\s*(?:\'[^\'\\\\$@{}]*\'|"[^"\\\\$@{}]*"|\[|\]|,|=>))*\s*\)$/';
 
+    /**
+     * Traduzione con chiave letterale: `trans('ns::file.key')` o `__('ns::file.key')`.
+     * Nessun codice eseguito: la chiave è passata a `trans()` così com'è (es. home.json LaravelPizza).
+     */
+    private const string TRANS_EXPRESSION = '/^(?:trans|__)\(\s*([\'"])([A-Za-z0-9_.:\-]+)\1\s*\)$/';
+
     private function renderAllowedExpressions(string $value): string
     {
         return (string) preg_replace_callback(
             '/\{\{\s*(.+?)\s*\}\}/s',
             function (array $match): string {
                 /** @var array<int, string> $match */
-                if (1 === preg_match(self::SAFE_EXPRESSION, $match[1])) {
+                if (preg_match(self::SAFE_EXPRESSION, $match[1]) === 1) {
                     return Blade::render($match[0]);
+                }
+
+                if (preg_match(self::TRANS_EXPRESSION, $match[1], $trans) === 1) {
+                    $translated = trans($trans[2]);
+
+                    return is_string($translated) ? e($translated) : $match[0];
                 }
 
                 Log::warning('Espressione non ammessa in un blocco CMS, lasciata come testo.', ['expression' => $match[1]]);
@@ -148,15 +159,13 @@ trait HasBlocks
      * Cercato il record per slug, itera sui blocchi e filtra per side quando fornito.
      * Struttura attesa: blocks = [{type, data, slug?, side?}, ...]
      *
-     * @param string      $slug The section/page slug
-     * @param string|null $side The side to get blocks for (null for all blocks)
-     *
+     * @param  string  $slug  The section/page slug
+     * @param  string|null  $side  The side to get blocks for (null for all blocks)
      * @return array<string, BlockData>
      */
     public static function getBlocksBySlug(string $slug, ?string $side = null): array
     {
         $query = static::query()->where('slug', $slug);
-
 
         try {
             $record = $query->sole();

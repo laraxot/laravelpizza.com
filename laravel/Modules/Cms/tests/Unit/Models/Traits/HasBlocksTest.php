@@ -58,6 +58,28 @@ test('compile leaves arbitrary expressions and directives as text', function (st
     'backslash escape in a string' => "{{ route('a\\') . system('id') }}",
 ]);
 
+// Under test: HasBlocks::compile, ramo trans()/__() con chiave letterale (home.json LaravelPizza).
+test('compile translates literal trans and __ keys', function (): void {
+    app('translator')->addLines(['home.hero_title' => 'Ciao <Laravel>'], 'it', 'cmstest');
+    app()->setLocale('it');
+
+    $compiled = (new Page)->compile([
+        'a' => "{{ trans('cmstest::home.hero_title') }}",
+        'b' => '{{ __("cmstest::home.hero_title") }}',
+    ]);
+
+    Assert::assertSame('Ciao &lt;Laravel&gt;', $compiled['a']);
+    Assert::assertSame('Ciao &lt;Laravel&gt;', $compiled['b']);
+});
+
+test('compile leaves trans with non literal arguments as text', function (string $payload): void {
+    Assert::assertSame(['v' => $payload], (new Page)->compile(['v' => $payload]));
+})->with([
+    'variable key' => '{{ trans($key) }}',
+    'concatenation' => "{{ trans('a') . system('id') }}",
+    'replace array' => "{{ trans('a', ['x' => system('id')]) }}",
+]);
+
 test('HasBlocks trait has static method getBlocksBySlug', function (): void {
     $reflection = new ReflectionMethod(Section::class, 'getBlocksBySlug');
 

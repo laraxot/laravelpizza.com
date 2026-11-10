@@ -8,6 +8,8 @@ return [
     'main_module' => 'Meetup',
     'primary_lang' => 'it',
     'pub_theme' => 'Meetup',
+    // Pagina dopo login e registrazione: l'area personale di LaravelPizza è "I miei eventi".
+    'post_login_path' => '/events-my',
     'search_action' => 'it/videos',
     'show_trans_key' => false,
     'disable_admin_dynamic_route' => true,
