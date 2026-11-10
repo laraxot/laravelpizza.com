@@ -15,6 +15,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property bool $is_enabled
  * @property int|null $priority
  * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read ProfileContract|null $updater

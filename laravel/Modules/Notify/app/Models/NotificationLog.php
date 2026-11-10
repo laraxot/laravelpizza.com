@@ -17,6 +17,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
  * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read Model $notifiable

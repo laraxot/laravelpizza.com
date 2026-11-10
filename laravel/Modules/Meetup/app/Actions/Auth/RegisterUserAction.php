@@ -30,6 +30,8 @@ class RegisterUserAction
         Assert::string($password);
 
         $user = User::create([
+            // users.name e' obbligatorio: senza, l'insert falliva ("Field 'name' doesn't have a default value").
+            'name' => trim($firstName.' '.$lastName),
             'first_name' => $firstName,
             'last_name' => $lastName,
             'email' => $email,

@@ -14,13 +14,18 @@ it('uses ProfileContract for audit relation phpdoc in shared model metadata', fu
     ];
 
     foreach ($files as $file) {
-        $contents = file_get_contents($file);
+        $contents = (string) file_get_contents($file);
 
-        expect(str_contains($contents, '\\Modules\\Meetup\\Models\\Profile|null $creator'))->toBeFalse();
-        expect(str_contains($contents, '\\Modules\\Meetup\\Models\\Profile|null $updater'))->toBeFalse();
-        expect(str_contains($contents, '\\Modules\\Meetup\\Models\\Profile|null $deleter'))->toBeFalse();
-        expect(str_contains($contents, '\\Modules\\Xot\\Contracts\\ProfileContract|null $creator'))->toBeTrue();
-        expect(str_contains($contents, '\\Modules\\Xot\\Contracts\\ProfileContract|null $updater'))->toBeTrue();
-        expect(str_contains($contents, '\\Modules\\Xot\\Contracts\\ProfileContract|null $deleter'))->toBeTrue();
+        // Il nome puo' essere qualificato o importato con `use` (dopo Pint): conta il tipo, non la forma.
+        $usesContract = str_contains($contents, 'use Modules\\Xot\\Contracts\\ProfileContract;');
+
+        foreach (['creator', 'updater', 'deleter'] as $relation) {
+            expect($contents)->not->toContain('\\Modules\\Meetup\\Models\\Profile|null $'.$relation);
+
+            $qualified = str_contains($contents, '\\Modules\\Xot\\Contracts\\ProfileContract|null $'.$relation);
+            $imported = $usesContract && 1 === preg_match('/[\s(]ProfileContract\|null \$'.$relation.'\b/', $contents);
+
+            expect($qualified || $imported)->toBeTrue($file.' $'.$relation);
+        }
     }
 });

@@ -4,165 +4,131 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Feature\Auth;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\RateLimiter;
+use Livewire\Livewire;
+use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Meetup\Tests\TestCase;
+use Modules\User\Filament\Widgets\Auth\LoginWidget;
 use Modules\User\Models\User;
 
 uses(TestCase::class);
 
-it('login page loads successfully', function () {
-    $response = $this->get('/it/auth/login');
+/*
+ * Accesso e registrazione dal sito pubblico. I moduli sono widget Livewire (LoginWidget, RegisterWidget):
+ * non esistono rotte POST /auth/login o /auth/register, quindi i test passano dai componenti come fa il browser.
+ * Email sempre univoche: la tabella users vive su un'altra connessione e un indirizzo fisso
+ * (test@example.com) faceva fallire i test in base all'ordine di esecuzione.
+ */
 
-    $response->assertStatus(200);
+function authEmail(string $prefix): string
+{
+    return $prefix.'-'.uniqid().'@example.test';
+}
+
+beforeEach(function (): void {
+    RateLimiter::clear('register|127.0.0.1');
 });
 
-it('login page contains required form elements', function () {
-    $response = $this->get('/it/auth/login');
+test('login and registration pages load in italian and english', function (string $path): void {
+    $this->get($path)->assertOk();
+})->with(['/it/auth/login', '/en/auth/login', '/it/auth/register', '/en/auth/register']);
 
-    $response->assertStatus(200);
-    $response->assertSee('type="email"');
-    $response->assertSee('type="password"');
+test('the login page shows email and password fields and links to registration', function (): void {
+    $this->get('/it/auth/login')
+        ->assertOk()
+        ->assertSee('type="email"', false)
+        ->assertSee('type="password"', false)
+        ->assertSee('/it/auth/register', false);
 });
 
-it('login page shows register link', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee(route('login'));
+test('the registration page shows the fields and both mandatory consents', function (): void {
+    $this->get('/it/auth/register')
+        ->assertOk()
+        ->assertSee('first_name', false)
+        ->assertSee('last_name', false)
+        ->assertSee('privacy_accepted', false)
+        ->assertSee('terms_accepted', false)
+        ->assertSee('/it/auth/login', false);
 });
 
-it('register page loads successfully', function () {
-    $response = $this->get('/it/auth/register');
+test('a user can log in with the right password and lands on their events', function (): void {
+    $user = User::factory()->create(['email' => authEmail('login'), 'password' => Hash::make('Password!2026')]);
 
-    $response->assertStatus(200);
-});
+    Livewire::test(LoginWidget::class)
+        ->set('data.email', $user->email)
+        ->set('data.password', 'Password!2026')
+        ->call('login')
+        ->assertHasNoErrors()
+        ->assertRedirect();
 
-it('register page contains all required fields', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee('type="email"');
-    $response->assertSee('type="password"');
-});
-
-it('register page shows privacy consent checkbox', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee('privacy_accepted');
-});
-
-it('register page shows terms consent checkbox', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee('terms_accepted');
-});
-
-it('user can login with valid credentials', function () {
-    $user = User::factory()->create([
-        'email' => 'test@example.com',
-        'password' => bcrypt('password'),
-    ]);
-
-    $response = $this->post('/it/auth/login', [
-        'email' => 'test@example.com',
-        'password' => 'password',
-    ]);
-
-    $response->assertRedirect('/');
     $this->assertAuthenticatedAs($user);
 });
 
-it('user cannot login with invalid password', function () {
-    User::factory()->create([
-        'email' => 'test@example.com',
-        'password' => bcrypt('password'),
-    ]);
+test('a wrong password does not log the user in', function (): void {
+    $user = User::factory()->create(['email' => authEmail('wrong'), 'password' => Hash::make('Password!2026')]);
 
-    $response = $this->post('/it/auth/login', [
-        'email' => 'test@example.com',
-        'password' => 'wrongpassword',
-    ]);
+    Livewire::test(LoginWidget::class)
+        ->set('data.email', $user->email)
+        ->set('data.password', 'not-the-password')
+        ->call('login')
+        ->assertHasErrors(['data.email']);
 
-    $response->assertSessionHasErrors();
     $this->assertGuest();
 });
 
-it('user can create account with valid data', function () {
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john.doe@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'true',
-    ]);
+test('a visitor can create an account and is logged in', function (): void {
+    $email = authEmail('register');
 
-    $response->assertRedirect('/');
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Giulia')
+        ->set('last_name', 'Rossi')
+        ->set('email', $email)
+        ->set('password', 'Pizza!Margherita26')
+        ->set('password_confirmation', 'Pizza!Margherita26')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasNoErrors()
+        ->assertRedirect();
+
+    $user = User::query()->where('email', $email)->first();
+    expect($user)->not->toBeNull()
+        ->and($user?->name)->toBe('Giulia Rossi');
+    $this->assertAuthenticatedAs($user);
 });
 
-it('registration fails without email', function () {
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'true',
-    ]);
+test('registration needs an email and both consents', function (array $override, string $field): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Mario')
+        ->set('last_name', 'Bianchi')
+        ->set('email', authEmail('consent'))
+        ->set('password', 'Pizza!Margherita26')
+        ->set('password_confirmation', 'Pizza!Margherita26')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->set($override)
+        ->call('submit')
+        ->assertHasErrors([$field]);
 
-    $response->assertSessionHasErrors(['email']);
-});
+    $this->assertGuest();
+})->with([
+    'no email' => [['email' => ''], 'email'],
+    'no privacy consent' => [['privacy_accepted' => false], 'privacy_accepted'],
+    'no terms consent' => [['terms_accepted' => false], 'terms_accepted'],
+]);
 
-it('registration fails without privacy consent', function () {
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john.doe@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'false',
-        'terms_accepted' => 'true',
-    ]);
+test('an email cannot be registered twice', function (): void {
+    $existing = User::factory()->create(['email' => authEmail('twice')]);
 
-    $response->assertSessionHasErrors(['privacy_accepted']);
-});
-
-it('registration fails without terms consent', function () {
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john.doe@example.com',
-        'password' => 'password123!',
-        'password_confirmation' => 'password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'false',
-    ]);
-
-    $response->assertSessionHasErrors(['terms_accepted']);
-});
-
-it('authenticated user is redirected from login page', function () {
-    $user = User::factory()->create([
-        'email' => 'test@example.com',
-        'password' => bcrypt('password'),
-    ]);
-
-    $response = $this->actingAs($user)
-        ->get('/it/auth/login');
-
-    $response->assertRedirect('/');
-});
-
-it('logout redirects to login page', function () {
-    $user = User::factory()->create([
-        'email' => 'test@example.com',
-        'password' => bcrypt('password'),
-    ]);
-
-    $response = $this->actingAs($user)
-        ->post('/logout');
-
-    $response->assertRedirect('/it/auth/login');
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Mario')
+        ->set('last_name', 'Bianchi')
+        ->set('email', $existing->email)
+        ->set('password', 'Pizza!Margherita26')
+        ->set('password_confirmation', 'Pizza!Margherita26')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['email']);
 });

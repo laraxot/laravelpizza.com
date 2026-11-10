@@ -31,7 +31,8 @@ test('localized public profile page shows profile bio when related user profile 
     ]);
 
     DB::connection('user')->table('profiles')->insert([
-        'id' => (string) Str::uuid(),
+        // profiles.id del database utenti e' auto-increment (migrazione 2026_10_16): l'id lo assegna MySQL.
+        'uuid' => (string) Str::uuid(),
         'user_id' => $user->id,
         'type' => null,
         'first_name' => 'Ada',
