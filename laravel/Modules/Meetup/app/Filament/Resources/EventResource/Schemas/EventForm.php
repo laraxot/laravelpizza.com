@@ -30,9 +30,9 @@ class EventForm extends XotBaseResourceForm
                     'location' => TextInput::make('location')->required()->maxLength(255),
                     'status' => Select::make('status')
                         ->options([
-                            'draft' => 'Draft',
-                            'published' => 'Published',
-                            'cancelled' => 'Cancelled',
+                            'draft' => __('meetup::event_form.fields.status.options.draft'),
+                            'published' => __('meetup::event_form.fields.status.options.published'),
+                            'cancelled' => __('meetup::event_form.fields.status.options.cancelled'),
                         ])
                         ->default('draft')
                         ->required(),

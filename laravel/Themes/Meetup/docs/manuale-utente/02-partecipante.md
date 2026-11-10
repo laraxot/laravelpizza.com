@@ -20,9 +20,9 @@ Scorri un po' più in basso:
 2. Spunta **Termini e Condizioni** (obbligatoria).
 3. Clicca **Crea il mio account**.
 
-Fatto! Sei già dentro, con il tuo nome in alto a destra.
+Fatto! Sei già dentro: il sito ti porta alla pagina **I tuoi eventi** e in alto a destra compare il tuo nome. La pagina è vuota perché non ti sei ancora iscritto a niente.
 
-![Il sito dopo la registrazione, con l'utente collegato](img/p03-registrazione-fatta.jpg)
+![Il sito dopo la registrazione: la pagina I tuoi eventi, ancora vuota](img/p03-registrazione-fatta.jpg)
 
 ## 2.2 Accedere le volte successive
 
@@ -37,6 +37,8 @@ Le volte successive non serve registrarsi di nuovo: clicca **Accedi** in alto a 
 Se arrivi qui dal pulsante "Accedi per iscriverti" di un evento, dopo l'accesso torni direttamente a quell'evento.
 
 > Se sbagli la password 5 volte di fila il sito ti blocca per un minuto: è una protezione contro chi prova a indovinarla. Aspetta e riprova, oppure usa "Password dimenticata?".
+
+Dopo l'accesso arrivi alla pagina **I tuoi eventi**, con il tuo nome in alto a destra:
 
 ![Il sito dopo l'accesso](img/p05-dopo-login.jpg)
 

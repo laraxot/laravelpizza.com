@@ -44,9 +44,9 @@ Compila i campi principali:
 - **Descrizione**: di cosa si parla, a chi è rivolto, cosa portare.
 - **Inizio** e **Fine**: data e ora. La fine deve venire dopo l'inizio.
 - **Città o luogo**.
-- 1. **Posti disponibili**: quante persone possono iscriversi. È **obbligatorio** e deve essere almeno 1.
+- **Posti disponibili** (riquadro 1): quante persone possono iscriversi. È **obbligatorio** e deve essere almeno 1.
 
-Se dimentichi i posti disponibili, il sito non salva e te lo segnala in rosso:
+Se dimentichi i posti disponibili, il sito non salva: il campo resta evidenziato e compare un avviso che chiede di compilarlo.
 
 ![Errore: posti disponibili mancanti](img/o06-errore-capienza.jpg)
 
@@ -58,6 +58,8 @@ Un evento nuovo nasce come **bozza**: lo vedi solo tu. Per mostrarlo a tutti:
 
 1. In **Pubblicazione** scegli **Pubblicato**.
 2. Clicca **Salva**.
+
+Il sito conferma con il messaggio **Salvato** in alto a destra e ti riporta all'elenco, dove il nuovo evento è già in tabella:
 
 ![Evento salvato](img/o08-evento-salvato.jpg)
 
