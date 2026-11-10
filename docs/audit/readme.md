@@ -60,6 +60,21 @@ Ogni correzione è coperta da test, oppure verificata nel browser durante la cat
 - Voce "Dashboard" del menu utente rimossa (pagina inesistente); "Profilo" punta al profilo dell'utente.
 - 404 per le pagine CMS inesistenti.
 
+## Ciclo 2 — allineamento al dev aggiornato e manuale d'uso
+
+Dopo il rebase sul `dev` aggiornato (nuovo `composer.lock`, PHPStan 2.3.5) sono emersi e sono stati corretti:
+
+- `Modules/Xot/composer.json`: `autoload-dev` annidato dentro `autoload` e vuoto → nessuna suite di modulo partiva (`Modules\Xot\Tests\CreatesApplication` non trovato).
+- `Venue`: regola `insteadof` su un metodo rimosso da `GeoTrait` → fatal error al caricamento.
+- Login: chiavi `user::auth.login.*` diventate array → errore 500 nella vista del tema.
+- Home: i blocchi CMS mostravano `{{ trans(...) }}` come testo dopo l'irrigidimento di `HasBlocks` (solo `route()`); ora sono ammesse anche `trans()`/`__()` con chiave letterale.
+- Dopo login/registrazione: redirect a `/area-personale` (pagina che in LaravelPizza non esiste, 404); ora configurabile con `xra.post_login_path` (`/events-my`).
+- Form eventi admin: etichette grezze dopo lo spostamento in `EventResource/Schemas/EventForm`.
+
+Ancora aperti: test di modulo che lasciano dati sul DB `user` di test (es. `test@example.com`), 3 test `AuthFlowRedirectsTest` e il test `route('container0.index')` di Cms che presuppongono rotte di Fixcity.
+
+Manuale d'uso per visitatore, partecipante e organizzatore, con screenshot: [`laravel/Themes/Meetup/docs/manuale-utente/`](../../laravel/Themes/Meetup/docs/manuale-utente/readme.md).
+
 ## Limiti dell'audit
 
 - La CI non è stata portata a verde: richiede di rigenerare `composer.lock` (R-01), un'operazione che il maintainer deve decidere.
