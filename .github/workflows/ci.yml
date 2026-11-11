@@ -5,6 +5,12 @@ on:
     branches: [main, dev]
   pull_request:
     branches: [main, dev]
+  workflow_dispatch:
+
+# Un push nuovo annulla la CI ancora in corso sullo stesso ramo: conta solo l'ultimo commit.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   phpstan:
@@ -165,10 +171,86 @@ jobs:
           DB_PASSWORD_USER: password
         run: vendor/bin/pest --testsuite=Project
 
+  shared-modules:
+    name: Shared module suites (informativo)
+    timeout-minutes: 90
+    runs-on: ubuntu-latest
+    # Cache, sessioni e code non devono dipendere da tabelle che esistono solo dopo `migrate`
+    env:
+      # Stesso tenant dei test locali: config/local/laravelpizza
+      APP_URL: http://laravelpizza.local
+      CACHE_STORE: array
+      SESSION_DRIVER: array
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, xml, pdo, pdo_mysql, sqlite3
+          coverage: xdebug
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: laravel/vendor
+          key: composer-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Setup Environment
+        working-directory: laravel
+        run: |
+          cp .env.example .env || true
+          php artisan key:generate --force || true
+
+      - name: Prepare databases
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_test
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: |
+          mysql -h 127.0.0.1 -P 3306 -uroot -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+          php artisan migrate --force --no-interaction
+          # Le suite dei moduli che estendono XotBaseTestCase usano un SQLite condiviso
+          php artisan xot:build-test-sqlite --path="$PWD/database/test_data.sqlite" --fresh
+
       # Le suite dei moduli Laraxot condivisi (Xot, User, Cms, ...) contengono test scritti per altri progetti:
       # qui si misurano e si pubblicano nel riepilogo del job, senza bloccare. Elenco e piano: docs/audit/test-coverage.md
       - name: Shared module suites (informativo)
-        if: always()
         working-directory: laravel
         env:
           DB_CONNECTION: mysql
@@ -186,7 +268,7 @@ jobs:
           for dir in Modules/*/tests; do
             module=$(basename "$(dirname "$dir")")
             [ "$module" = "Meetup" ] && continue
-            result=$(timeout 900 vendor/bin/pest "$dir" 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E '^\s*Tests:' | tail -1 | sed 's/^ *Tests: *//')
+            result=$(timeout 300 vendor/bin/pest "$dir" 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E '^\s*Tests:' | tail -1 | sed 's/^ *Tests: *//')
             echo "| $module | ${result:-non completata} |" >> "$GITHUB_STEP_SUMMARY"
           done
 
