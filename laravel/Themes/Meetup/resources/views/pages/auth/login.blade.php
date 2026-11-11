@@ -34,7 +34,7 @@ name('login');
             <div class="bg-slate-800/80 backdrop-blur-xl shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-700/50">
                 {{-- Header --}}
                 <div class="text-center mb-10">
-                    <a href="{{ \LaravelLocalization::localizeUrl('/') }}" class="inline-block mb-6">
+                    <a href="{{ \LaravelLocalization::localizeUrl('/') }}" class="inline-block mb-6" aria-label="{{ __('pub_theme::navigation.home') }}">
                         <x-filament::icon
                             icon="meetup-logo"
                             class="h-16 w-auto text-red-500"

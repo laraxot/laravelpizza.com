@@ -150,7 +150,7 @@
                             </template>
                         </div>
                         <template x-if="event.timing_status === 'upcoming'">
-                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.upcoming.label') }}</span>
+                            <span class="absolute top-4 right-4 bg-green-700 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.upcoming.label') }}</span>
                         </template>
                         <template x-if="event.timing_status !== 'upcoming'">
                             <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.past.label') }}</span>

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+    'select_language' => 'Sprache ändern',
     'main' => 'Hauptnavigation',
     'site_title' => 'Laravel Pizza Meetups',
     'home' => 'Startseite',
