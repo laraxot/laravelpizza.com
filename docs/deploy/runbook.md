@@ -134,6 +134,7 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] `/meetup/admin`: elenco eventi, modifica di un evento, scheda Iscritti con "Scarica CSV"
 - [ ] `php artisan health:list` tutto OK; `php artisan schedule:list` mostra i tre comandi
 - [ ] DevTools → Rete: nessuna richiesta a domini terzi al primo caricamento (niente Google Fonts)
+- [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
 
 ## 10. Test e CI
 

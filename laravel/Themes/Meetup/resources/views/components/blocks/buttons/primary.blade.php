@@ -55,7 +55,7 @@ $colorClasses = [
         'link' => 'text-gray-600 hover:text-gray-800 underline focus:ring-gray-500'
     ],
     'success' => [
-        'solid' => 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
+        'solid' => 'bg-green-700 text-white hover:bg-green-700 focus:ring-green-500',
         'outline' => 'border-2 border-green-600 text-green-600 hover:bg-green-50 focus:ring-green-500',
         'ghost' => 'text-green-600 hover:bg-green-50 focus:ring-green-500',
         'link' => 'text-green-600 hover:text-green-800 underline focus:ring-green-500'

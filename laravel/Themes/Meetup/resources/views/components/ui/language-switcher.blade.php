@@ -33,7 +33,8 @@
             @click="open = !open" 
             aria-haspopup="true"
             :aria-expanded="open"
-            aria-label="{{ __('Select Language') }}"
+            {{-- WCAG 2.5.3: il nome accessibile contiene il testo visibile (la lingua corrente) --}}
+            aria-label="{{ ($locales[$currentLocale]['native'] ?? strtoupper($currentLocale)).' – '.__('pub_theme::navigation.select_language') }}"
             class="{{ $isMobile ? 'p-2' : 'hidden sm:flex items-center gap-2 px-3 py-2' }} rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-red-50 dark:hover:bg-red-950/20 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all duration-200 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900">
         
         @if($isMobile)

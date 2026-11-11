@@ -52,7 +52,7 @@
                             @if(isset($contact['url']) && $contact['url'])
                                 <a 
                                     href="{{ $contact['url'] }}" 
-                                    class="text-red-500 hover:text-red-400 font-medium transition-colors block mb-2"
+                                    class="text-red-400 hover:text-red-300 font-medium transition-colors block mb-2"
                                 >
                                     {{ $contact['value'] }}
                                 </a>

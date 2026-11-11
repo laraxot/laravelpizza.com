@@ -10,7 +10,7 @@ return [
         'message' => 'Messaggio',
         'privacy' => 'consenso privacy',
     ],
-    'privacy_html' => 'Ho letto l\'<a href=":url" class="underline text-red-600" target="_blank" rel="noopener">informativa privacy</a> e accetto che i miei dati siano usati solo per rispondermi.',
+    'privacy_html' => 'Ho letto l\'<a href=":url" class="underline text-red-700 dark:text-red-400" target="_blank" rel="noopener">informativa privacy</a> e accetto che i miei dati siano usati solo per rispondermi.',
     'submit' => 'Invia il messaggio',
     'throttle' => 'Troppi invii ravvicinati: riprova tra :minutes minuti.',
     'sent' => [

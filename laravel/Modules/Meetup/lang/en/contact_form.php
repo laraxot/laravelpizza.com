@@ -10,7 +10,7 @@ return [
         'message' => 'Message',
         'privacy' => 'privacy consent',
     ],
-    'privacy_html' => 'I have read the <a href=":url" class="underline text-red-600" target="_blank" rel="noopener">privacy notice</a> and agree that my data is used only to reply to me.',
+    'privacy_html' => 'I have read the <a href=":url" class="underline text-red-700 dark:text-red-400" target="_blank" rel="noopener">privacy notice</a> and agree that my data is used only to reply to me.',
     'submit' => 'Send message',
     'throttle' => 'Too many messages in a row: try again in :minutes minutes.',
     'sent' => [

@@ -136,7 +136,7 @@
                     </a>
 
                     <div class="mb-4 flex flex-wrap gap-3">
-                        <span class="{{ $isUpcoming ? 'bg-green-600' : 'bg-slate-500' }} inline-flex rounded-full px-4 py-1 text-sm font-semibold text-white">
+                        <span class="{{ $isUpcoming ? 'bg-green-700' : 'bg-slate-500' }} inline-flex rounded-full px-4 py-1 text-sm font-semibold text-white">
                             {{ $isUpcoming ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
                         </span>
 

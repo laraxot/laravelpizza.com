@@ -40,7 +40,7 @@
                     {{ __('user::login.no_account') }}
                     <a 
                         href="{{ \LaravelLocalization::localizeUrl('/auth/register') }}" 
-                        class="font-medium text-primary-600 hover:text-primary-500 underline"
+                        class="font-medium text-red-700 hover:text-red-600 underline dark:text-red-400 dark:hover:text-red-300"
                     >
                         {{ __('user::login.register_now') }}
                     </a>
@@ -50,7 +50,7 @@
                     {{ __('user::login.forgot_password_text') }}
                     <a 
                         href="{{ \LaravelLocalization::localizeUrl('/auth/password/reset') }}" 
-                        class="font-medium text-primary-600 hover:text-primary-500 underline"
+                        class="font-medium text-red-700 hover:text-red-600 underline dark:text-red-400 dark:hover:text-red-300"
                     >
                         {{ __('user::login.reset_it') }}
                     </a>
