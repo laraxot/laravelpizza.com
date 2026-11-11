@@ -1,8 +1,8 @@
 <?php
 
-use Spatie\Health\Models\HealthCheckResultHistoryItem;
 use Spatie\Health\Notifications\CheckFailedNotification;
 use Spatie\Health\Notifications\Notifiable;
+use Spatie\Health\ResultStores\CacheHealthResultStore;
 use Spatie\Health\ResultStores\EloquentHealthResultStore;
 
 return [
@@ -12,10 +12,9 @@ return [
      * can use multiple stores at the same time.
      */
     'result_stores' => [
-        EloquentHealthResultStore::class => [
-            'connection' => env('HEALTH_DB_CONNECTION', env('DB_CONNECTION')),
-            'model' => HealthCheckResultHistoryItem::class,
-            'keep_history_for_days' => 5,
+        // Risultati in cache: nessuna tabella dedicata da migrare. L'ultimo esito si legge con `php artisan health:list`.
+        CacheHealthResultStore::class => [
+            'store' => env('HEALTH_CACHE_STORE', env('CACHE_STORE', 'file')),
         ],
 
         /*
@@ -40,7 +39,7 @@ return [
         /*
          * Notifications will only get sent if this option is set to `true`.
          */
-        'enabled' => true,
+        'enabled' => env('HEALTH_NOTIFICATIONS_ENABLED', true),
 
         'notifications' => [
             CheckFailedNotification::class => ['mail'],
@@ -63,7 +62,7 @@ return [
         'throttle_notifications_key' => 'health:latestNotificationSentAt:',
 
         'mail' => [
-            'to' => 'your@example.com',
+            'to' => env('HEALTH_NOTIFY_EMAIL', env('MAIL_FROM_ADDRESS', 'hello@example.com')),
 
             'from' => [
                 'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),

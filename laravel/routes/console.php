@@ -11,3 +11,7 @@ Artisan::command('inspire', function () {
 // Promemoria agli iscritti degli eventi del giorno dopo (Modules/Meetup SendEventRemindersAction): richiede
 // il cron `* * * * * php artisan schedule:run` sul server (docs/deploy/runbook.md).
 Schedule::command('meetup:send-reminders')->hourly()->withoutOverlapping()->onOneServer();
+
+// Controlli di salute (AppServiceProvider::registerHealthChecks) e battito dello scheduler per ScheduleCheck.
+Schedule::command('health:check')->everyMinute()->withoutOverlapping();
+Schedule::command('health:schedule-check-heartbeat')->everyMinute();
