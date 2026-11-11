@@ -68,7 +68,7 @@ import 'leaflet/dist/leaflet.css';
 
 - `laravel/Modules/Geo/resources/js/components/coordinate-picker-lit.js` — fix MutationObserver + import CSS
 - `laravel/Themes/Sixteen/resources/js/app.js` — entry point che include coordinate-picker-lit
-- Build: `cd laravel/Themes/Sixteen && npm run build && npm run copy`
+- Build: `cd laravel/Themes/Sixteen && npm run build`
 
 ### Regole collegate
 

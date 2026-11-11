@@ -32,7 +32,7 @@ cd laravel/Themes/Meetup
 composer update -W
 npm install
 npm run build
-npm run copy  # OBbligatorio per vedere modifiche CSS/JS
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ---

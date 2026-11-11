@@ -23,6 +23,6 @@ cd laravel/Themes/<nome tem>
 composer update -W 
 npm install
 npm run build
-npm run copy 
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 capisci te i perche' 
 utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm

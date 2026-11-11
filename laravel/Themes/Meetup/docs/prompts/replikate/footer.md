@@ -90,5 +90,5 @@ The current `footer.json` already has correct LaravelPizza content with 3 link g
 After CSS/JS changes in Meetup theme:
 1. `cd laravel/Themes/Meetup/`
 2. `npm run build`
-3. `npm run copy`
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 4. Hard refresh browser

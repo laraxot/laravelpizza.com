@@ -46,12 +46,12 @@ return Application::configure(basePath: dirname(__DIR__))
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 **Why**: Changes are not visible until:
 1. Vite compiles the assets (`npm run build`)
-2. Assets are copied to public directory (`npm run copy`)
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### 4. NPM Commands Directory
 
@@ -258,7 +258,7 @@ npm install
 npm run build
 
 # 4. Copy to public directory
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Development Cycle
@@ -267,7 +267,7 @@ npm run copy
 # 1. Make changes to resources/css/app.css or resources/js/app.js
 
 # 2. Rebuild and copy
-npm run build && npm run copy
+npm run build
 
 # 3. Clear Laravel cache (if needed)
 cd /var/www/_bases/base_laravelpizza/laravel
@@ -284,7 +284,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run dev
 ```
 
-**Note**: Watch mode runs Vite dev server but still requires `npm run copy` after changes.
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Troubleshooting
 
@@ -293,14 +293,14 @@ npm run dev
 **Symptom**: Styles or JavaScript not working
 
 **Check**:
-1. Did you run `npm run build && npm run copy`?
+1. Did you run `npm run build`?
 2. Is the `@vite()` second parameter correct? (`'themes/Meetup'`)
 3. Are assets in `public_html/themes/Meetup/assets/`?
 
 **Fix**:
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 ### View Not Found
@@ -352,8 +352,8 @@ npm run build && npm run copy
 |------|---------|----------|
 | Install dependencies | `npm install` | Theme directory |
 | Build assets | `npm run build` | Theme directory |
-| Copy to public | `npm run copy` | Theme directory |
-| Build + Copy | `npm run build && npm run copy` | Theme directory |
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+| Build + Copy | `npm run build` | Theme directory |
 | Watch mode | `npm run dev` | Theme directory |
 | Clear cache | `php artisan view:clear && php artisan cache:clear` | Laravel root |
 | Test homepage | Browse to `http://127.0.0.1:8000/it` | - |

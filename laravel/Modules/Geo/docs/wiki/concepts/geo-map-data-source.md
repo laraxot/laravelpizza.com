@@ -26,7 +26,7 @@ status: draft
 1. Generare il file di test (già fatto) con lo script `GenerateClusterTestJsonAction` o, se necessario, via script inline.
 2. Copiare `cluster-test.json` in `public/data/tickets_big.json`.
 3. Aggiornare il markup del componente nei template (es. `ticket-list.blade.php`) impostando `data-url="/data/tickets_big.json"`.
-4. Ricostruire gli assets con `npm run build && npm run copy`.
+4. Ricostruire gli assets con `npm run build`.
 5. Verificare con Playwright o manualmente che i marker e i cluster siano visibili.
 
 ## LOGICHE DI VALIDAZIONE

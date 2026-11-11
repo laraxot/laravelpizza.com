@@ -152,7 +152,7 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
   - dal tema Meetup:
     - `cd laravel/Themes/Meetup`
     - `npm install`
-    - `npm run build && npm run copy` (OBBLIGATORIO dopo ogni cambio CSS/JS)
+    - `npm run build` (OBBLIGATORIO dopo ogni cambio CSS/JS)
 - **3. Visita il frontoffice**
   - `http://127.0.0.1:8000/it`
   - `http://127.0.0.1:8000/it/events`

@@ -38,7 +38,7 @@ qmd: "homepage visual comparison - results notify"
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # ✓
-npm run copy     # ✓
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Remaining Differences (Acceptable):

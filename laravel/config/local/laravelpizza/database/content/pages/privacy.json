@@ -1,9 +1,8 @@
 {
     "id": "privacy",
     "title": {
-        "it": "Informativa sulla Privacy",
-        "en": "Privacy Policy",
-        "de": "Datenschutzerklärung"
+        "it": "Informativa sulla privacy - Laravel Pizza Meetups",
+        "en": "Privacy notice - Laravel Pizza Meetups"
     },
     "slug": "privacy",
     "middleware": null,
@@ -12,30 +11,168 @@
         "it": [
             {
                 "type": "text",
+                "slug": "legal",
                 "data": {
                     "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Informativa sulla Privacy",
-                    "content": "Contenuto dell'informativa sulla privacy in italiano..."
+                    "title": "Informativa sulla privacy",
+                    "subtitle": "Come trattiamo i tuoi dati quando usi Laravel Pizza Meetups (art. 13 GDPR).",
+                    "last_updated": "Ultimo aggiornamento: 11 novembre 2026",
+                    "sections": [
+                        {
+                            "title": "Chi tratta i dati",
+                            "paragraphs": [
+                                "Titolare del trattamento è Laravel Pizza Meetups, la community che organizza gli eventi pubblicati su questo sito. Per qualsiasi richiesta sulla privacy scrivi a hello@laravelpizza.com."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Quali dati raccogliamo",
+                            "paragraphs": [],
+                            "items": [
+                                "Account: nome, cognome, indirizzo email e password (salvata solo in forma cifrata, non leggibile da nessuno).",
+                                "Consensi: l'accettazione di questa informativa e dei termini, con data e ora, ed eventuale consenso alle comunicazioni facoltative.",
+                                "Iscrizioni agli eventi: a quali eventi ti sei iscritto e quando.",
+                                "Messaggi dal modulo Contatti: nome, email e testo, inoltrati per email agli organizzatori.",
+                                "Dati tecnici: indirizzo IP e informazioni del browser nei registri del server, per sicurezza e per limitare gli abusi (per esempio i tentativi di accesso)."
+                            ]
+                        },
+                        {
+                            "title": "Perché li usiamo e su quale base",
+                            "paragraphs": [],
+                            "items": [
+                                "Gestire il tuo account e le iscrizioni agli eventi, inviarti la conferma e il promemoria del giorno prima: esecuzione del servizio che hai richiesto (art. 6.1.b GDPR).",
+                                "Rispondere ai messaggi che ci scrivi: esecuzione di una tua richiesta (art. 6.1.b).",
+                                "Sicurezza del sito e prevenzione degli abusi: legittimo interesse (art. 6.1.f).",
+                                "Comunicazioni facoltative su nuovi eventi, solo se le hai accettate: consenso (art. 6.1.a), revocabile in ogni momento."
+                            ]
+                        },
+                        {
+                            "title": "Chi può vedere i dati",
+                            "paragraphs": [
+                                "Gli organizzatori vedono nome ed email degli iscritti ai propri eventi, per gestire l'ingresso. Il tuo nome può comparire nel tuo profilo pubblico. I dati sono conservati presso il fornitore di hosting e le email passano dal fornitore del servizio di posta, nominati responsabili del trattamento. Non vendiamo né cediamo i dati a terzi per pubblicità."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Per quanto tempo",
+                            "paragraphs": [],
+                            "items": [
+                                "Account e iscrizioni: finché l'account resta attivo; dopo la cancellazione vengono eliminati, salvo obblighi di legge.",
+                                "Messaggi dal modulo Contatti: il tempo necessario a rispondere.",
+                                "Registri tecnici del server: al massimo 90 giorni."
+                            ]
+                        },
+                        {
+                            "title": "I tuoi diritti",
+                            "paragraphs": [
+                                "Puoi chiedere in ogni momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne l'uso, riceverli in un formato leggibile (portabilità) e opporti al trattamento, scrivendo a hello@laravelpizza.com. Se ritieni che il trattamento violi la normativa puoi presentare reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it)."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Cookie",
+                            "paragraphs": [
+                                "Il sito usa solo cookie tecnici necessari al funzionamento: i dettagli sono nella pagina Cookie policy."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contatti",
+                            "value": "Modulo contatti",
+                            "url": "/it/contact"
+                        }
+                    ]
                 }
             }
         ],
         "en": [
             {
                 "type": "text",
+                "slug": "legal",
                 "data": {
                     "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Privacy Policy",
-                    "content": "Privacy policy content in English..."
-                }
-            }
-        ],
-        "de": [
-            {
-                "type": "text",
-                "data": {
-                    "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Datenschutzerklärung",
-                    "content": "Inhalt der Datenschutzerklärung auf Deutsch..."
+                    "title": "Privacy notice",
+                    "subtitle": "How we process your data when you use Laravel Pizza Meetups (art. 13 GDPR).",
+                    "last_updated": "Last updated: 11 November 2026",
+                    "sections": [
+                        {
+                            "title": "Who processes the data",
+                            "paragraphs": [
+                                "The data controller is Laravel Pizza Meetups, the community that organises the events published on this website. For any privacy request write to hello@laravelpizza.com."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "What data we collect",
+                            "paragraphs": [],
+                            "items": [
+                                "Account: first name, last name, email address and password (stored only in hashed form, readable by no one).",
+                                "Consents: acceptance of this notice and of the terms, with date and time, and any consent to optional communications.",
+                                "Event registrations: which events you signed up for and when.",
+                                "Messages from the contact form: name, email and text, forwarded by email to the organisers.",
+                                "Technical data: IP address and browser information in server logs, for security and to limit abuse (for example login attempts)."
+                            ]
+                        },
+                        {
+                            "title": "Why we use it and on what legal basis",
+                            "paragraphs": [],
+                            "items": [
+                                "Managing your account and event registrations, sending the confirmation and the day-before reminder: performance of the service you requested (art. 6.1.b GDPR).",
+                                "Replying to your messages: performance of your request (art. 6.1.b).",
+                                "Website security and abuse prevention: legitimate interest (art. 6.1.f).",
+                                "Optional communications about new events, only if you accepted them: consent (art. 6.1.a), which you can withdraw at any time."
+                            ]
+                        },
+                        {
+                            "title": "Who can see the data",
+                            "paragraphs": [
+                                "Organisers see the name and email of the attendees of their own events, to manage entry. Your name may appear on your public profile. Data is stored with the hosting provider and emails go through the email service provider, both appointed as processors. We do not sell or share data with third parties for advertising."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "How long we keep it",
+                            "paragraphs": [],
+                            "items": [
+                                "Account and registrations: while the account is active; deleted after the account is closed, unless the law requires otherwise.",
+                                "Contact form messages: as long as needed to reply.",
+                                "Server logs: 90 days at most."
+                            ]
+                        },
+                        {
+                            "title": "Your rights",
+                            "paragraphs": [
+                                "You can ask at any time to access, correct or delete your data, restrict its use, receive it in a readable format (portability) and object to processing by writing to hello@laravelpizza.com. If you believe the processing breaks the law you can lodge a complaint with the Italian data protection authority (www.garanteprivacy.it) or the authority of your country."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Cookies",
+                            "paragraphs": [
+                                "The website uses only technical cookies needed for it to work: details are on the Cookie policy page."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contact",
+                            "value": "Contact form",
+                            "url": "/en/contact"
+                        }
+                    ]
                 }
             }
         ]

@@ -53,7 +53,7 @@ NON aggiungere `<script type="module" src="{{ Vite::asset('...,'assets/geo') }}"
 
 ### Cosa fare se `<map-lit>` non si registra
 1. Verifica `import '@modules/Geo/resources/js/components/map-lit.js';` in `Themes/Sixteen/resources/js/app.js`
-2. `cd laravel/Themes/Sixteen && npm run build && npm run copy`
+2. `cd laravel/Themes/Sixteen && npm run build`
 3. `cd laravel && php artisan optimize:clear`
 4. Hard reload browser (Ctrl+Shift+R)
 5. Verifica console: `customElements.get('map-lit')` deve tornare la classe, non `undefined`

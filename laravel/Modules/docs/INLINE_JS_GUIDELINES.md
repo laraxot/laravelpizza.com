@@ -10,7 +10,7 @@ Regole raccomandate
 4. Per compatibilità legacy, usare uno shim no-op nei file early-boot che verrà sovrascritto dal bundle.
 
 Procedure
-- Sviluppo: modifica in `resources/js`, poi `npm run build && npm run copy`.
+- Sviluppo: modifica in `resources/js`, poi `npm run build`.
 - Verifica: eseguire grep per pattern `<script>` su `resources/views` e generare task per ogni occorrenza.
 
 Task consigliati

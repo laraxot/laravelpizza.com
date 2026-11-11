@@ -143,7 +143,7 @@ if (str_contains($titleClean, 'Pizza.')) {
 
 **Cosa ho fatto**:
 1. Eseguito `npm run build` per compilare CSS/JS
-2. Eseguito `npm run copy` per copiare asset in `public_html/themes/Meetup/`
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 3. Verificato che gli asset siano stati copiati correttamente
 
 **Comandi**:

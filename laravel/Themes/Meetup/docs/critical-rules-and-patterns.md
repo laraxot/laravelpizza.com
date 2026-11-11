@@ -58,7 +58,7 @@ npm run build    # BOTH needed to see changes!
 
 # Breakdown:
 # 1. npm run build  → Compiles resources/* to public/
-# 2. npm run copy   → Deploys public/* to ../../../public_html/themes/Meetup
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 # For static HTML prototypes (DESIGN ONLY)
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup

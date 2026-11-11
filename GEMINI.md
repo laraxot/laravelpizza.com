@@ -368,3 +368,9 @@ Nelle annotazioni `@property` dei modelli Eloquent, per le proprietà gestite da
 **Last Updated**:
 **Version**: 4.0
 **Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen
+## Regole operative aggiornate (novembre 2026)
+
+- **Tema pubblico**: `public_html/themes/<Tema>` è sempre `ln -s ../../laravel/Themes/<Tema>/public` (relativo, tracciato da git). Dopo `npm run build` non si copia nulla: `npm run copy` non si usa più. Motivi: una sola fonte degli asset, nessun sorgente nella document root, percorso valido su ogni server.
+- **`public_html/` è la document root**: non si cancella e non ci si scrivono file a mano; solo il symlink del tema e gli asset pubblicati da `php artisan filament:assets`.
+- **Test**: ogni modulo ha la sua cartella `laravel/Modules/<Modulo>/tests/{Unit,Feature}`. Non aggiungere test in `laravel/tests/`. I test di `app/` e del tema stanno in `Modules/Meetup/tests` (suite `Project`, bloccante in CI).
+- **Commit**: si committa e si pusha su `dev` appena un lavoro è verificato (test, PHPStan, Pint), senza aspettare conferme.

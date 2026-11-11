@@ -38,8 +38,8 @@ status: draft
 
 **Fix definitivo (decisione 2026-05-07)**:
 1. Aggiunto `import '@modules/Geo/resources/js/components/map-lit.js';` in `Themes/Sixteen/resources/js/app.js` (subito dopo l'import di `geo-map-lit.js`)
-2. `cd laravel/Themes/Sixteen && npm run build && npm run copy`
-3. Atomic swap dei bundle hashati in `public_html/themes/Sixteen/assets/` (368 → 8 file prima, poi npm run copy ricostituisce solo i nuovi)
+2. `cd laravel/Themes/Sixteen && npm run build`
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Decisione architetturale**: il nome canonico per la pagina `ticket-list` è `<map-lit>` (NON `<geo-map-lit>` né `<ticket-map-lit>`). Migrazioni di pagine esistenti devono essere additive (mantenere `<map-lit>`), non sostitutive.
 

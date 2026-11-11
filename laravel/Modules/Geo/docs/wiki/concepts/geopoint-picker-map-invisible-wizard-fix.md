@@ -75,7 +75,7 @@ Il component JS non importava `leaflet/dist/leaflet.css` via Vite → Leaflet in
    - `_refreshMapSize()` che controlla `offsetParent !== null` e `getBoundingClientRect()`
 
 3. **OGNI build tema deve essere seguito da:**
-   - `npm run build` → `npm run copy` (se configurato)
+   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### BAD Practices rimosse
 

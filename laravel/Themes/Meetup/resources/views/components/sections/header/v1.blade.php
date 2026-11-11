@@ -107,10 +107,6 @@
                             <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_events') }}</span>
                         </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/events-near-me') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
-                            <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('pub_theme::navigation.user_menu.nearby_events') }}</span>
-                        </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/profile/'.auth()->id()) }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>

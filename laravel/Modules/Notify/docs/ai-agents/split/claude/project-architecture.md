@@ -109,7 +109,7 @@ Ticket (core entity):
 
 ### Development Workflow
 1. **Frontend changes**: Always work in `Themes/Sixteen/`
-2. **CSS/JS changes**: Always run `npm run build && npm run copy`
+2. **CSS/JS changes**: Always run `npm run build`
 3. **New pages**: Use `php artisan folio:page` (in Theme or Module)
 4. **Admin features**: Create Filament Resources
 5. **Interactivity**: Use Livewire Volt components (@volt directive)

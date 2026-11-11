@@ -1,9 +1,8 @@
 {
     "id": "terms",
     "title": {
-        "it": "Termini e Condizioni",
-        "en": "Terms and Conditions",
-        "de": "Allgemeine Geschäftsbedingungen"
+        "it": "Termini e condizioni - Laravel Pizza Meetups",
+        "en": "Terms and conditions - Laravel Pizza Meetups"
     },
     "slug": "terms",
     "middleware": null,
@@ -12,30 +11,132 @@
         "it": [
             {
                 "type": "text",
+                "slug": "legal",
                 "data": {
                     "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Termini e Condizioni",
-                    "content": "Contenuto dei termini e condizioni in italiano..."
+                    "title": "Termini e condizioni",
+                    "subtitle": "Le regole per usare Laravel Pizza Meetups.",
+                    "last_updated": "Ultimo aggiornamento: 11 novembre 2026",
+                    "sections": [
+                        {
+                            "title": "Il servizio",
+                            "paragraphs": [
+                                "Laravel Pizza Meetups permette di consultare gli eventi della community, creare un account gratuito e prenotare un posto agli eventi. L'iscrizione al sito e agli eventi è gratuita."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Account",
+                            "paragraphs": [],
+                            "items": [
+                                "Devi indicare dati veri e un indirizzo email che usi.",
+                                "Sei responsabile della password: non condividerla. Se pensi che qualcuno la conosca, cambiala con \"Password dimenticata?\".",
+                                "Puoi chiedere la cancellazione dell'account in qualsiasi momento scrivendo agli organizzatori."
+                            ]
+                        },
+                        {
+                            "title": "Iscrizione agli eventi",
+                            "paragraphs": [],
+                            "items": [
+                                "Un'iscrizione vale per una persona. I posti sono limitati: quando finiscono le iscrizioni si chiudono.",
+                                "Se non puoi più partecipare, annulla l'iscrizione dalla pagina dell'evento: il posto andrà a qualcun altro.",
+                                "Gli organizzatori possono modificare data, luogo o programma, o annullare un evento, avvisando gli iscritti.",
+                                "Durante gli eventi valgono le regole di rispetto reciproco della community: chi le viola può essere allontanato."
+                            ]
+                        },
+                        {
+                            "title": "Contenuti e responsabilità",
+                            "paragraphs": [
+                                "Le informazioni sugli eventi sono pubblicate dagli organizzatori, che ne curano l'esattezza. Il sito è offerto così com'è: facciamo il possibile perché funzioni sempre, ma non possiamo garantire l'assenza di interruzioni."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Modifiche",
+                            "paragraphs": [
+                                "Possiamo aggiornare questi termini; la data dell'ultima modifica è indicata in alto. Le modifiche importanti verranno comunicate agli iscritti."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contatti",
+                            "value": "Modulo contatti",
+                            "url": "/it/contact"
+                        }
+                    ]
                 }
             }
         ],
         "en": [
             {
                 "type": "text",
+                "slug": "legal",
                 "data": {
                     "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Terms and Conditions",
-                    "content": "Terms and conditions content in English..."
-                }
-            }
-        ],
-        "de": [
-            {
-                "type": "text",
-                "data": {
-                    "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Allgemeine Geschäftsbedingungen",
-                    "content": "Inhalt der allgemeinen Geschäftsbedingungen auf Deutsch..."
+                    "title": "Terms and conditions",
+                    "subtitle": "The rules for using Laravel Pizza Meetups.",
+                    "last_updated": "Last updated: 11 November 2026",
+                    "sections": [
+                        {
+                            "title": "The service",
+                            "paragraphs": [
+                                "Laravel Pizza Meetups lets you browse the community's events, create a free account and save a seat at events. Signing up to the website and to events is free."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Account",
+                            "paragraphs": [],
+                            "items": [
+                                "You must provide truthful data and an email address you use.",
+                                "You are responsible for your password: do not share it. If you think someone knows it, change it with \"Forgot password?\".",
+                                "You can ask for your account to be deleted at any time by writing to the organisers."
+                            ]
+                        },
+                        {
+                            "title": "Event registration",
+                            "paragraphs": [],
+                            "items": [
+                                "A registration is valid for one person. Seats are limited: when they run out, registrations close.",
+                                "If you can no longer attend, cancel your registration from the event page so someone else can take your seat.",
+                                "Organisers may change the date, venue or programme, or cancel an event, informing the attendees.",
+                                "During events the community's rules of mutual respect apply: anyone breaking them may be asked to leave."
+                            ]
+                        },
+                        {
+                            "title": "Content and liability",
+                            "paragraphs": [
+                                "Event information is published by the organisers, who are responsible for its accuracy. The website is provided as is: we do our best to keep it working, but we cannot guarantee it will never be interrupted."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Changes",
+                            "paragraphs": [
+                                "We may update these terms; the date of the last change is shown at the top. Important changes will be communicated to registered users."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contact",
+                            "value": "Contact form",
+                            "url": "/en/contact"
+                        }
+                    ]
                 }
             }
         ]

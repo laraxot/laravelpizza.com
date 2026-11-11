@@ -56,7 +56,7 @@ Themes/Meetup/
 
 public_html/
 └── themes/
-    └── Meetup/              # ✅ Output copy (npm run copy)
+    niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
         ├── assets/
         │   ├── app-[hash].css
         │   └── app-[hash].js
@@ -77,7 +77,7 @@ npm run build
 - `assets/app-[hash].js` - JavaScript compilato e minificato
 - `manifest.json` - Manifest Vite con mapping asset
 
-### 2. Copy (`npm run copy`)
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ```bash
 # niente copy: public_html/themes/Meetup è un symlink a public/
@@ -167,7 +167,7 @@ curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
 
 ## Troubleshooting
 
-### Problema: `npm run copy` fallisce con "No such file or directory"
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Causa**: Directory `public_html/themes/Meetup/` non esiste
 

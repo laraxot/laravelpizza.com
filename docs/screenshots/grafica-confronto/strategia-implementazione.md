@@ -878,7 +878,7 @@ echo "Building assets..."
 npm run build
 
 echo "Copying assets..."
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 echo "Optimizing images..."
 find resources/img -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -exec optipng -o7 {} \;

@@ -62,7 +62,7 @@ npm install
 npm run build
 
 # 4. Copy assets to public_html
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # Verify manifest exists
 ls -la public_html/themes/Sixteen/manifest.json
@@ -72,7 +72,7 @@ ls -la public_html/themes/Sixteen/manifest.json
 - `composer update -W`: Updates PHP dependencies with wide dependencies
 - `npm install`: Installs correct Node packages from package.json
 - `npm run build`: Vite builds assets → generates manifest.json
-- `npm run copy`: Copies built assets to public_html/themes/<theme>/
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **AI Tool Assignment**:
 - **Ralph Loop**: Autonomous execution for both themes
@@ -86,8 +86,8 @@ cat > .ralph/vite-fix.json << 'EOF'
 {
   "task": "Fix Vite manifest for all themes",
   "steps": [
-    "cd laravel/Themes/Sixteen && composer update -W && npm install && npm run build && npm run copy",
-    "cd laravel/Themes/TwentyOne && composer update -W && npm install && npm run build && npm run copy",
+    "cd laravel/Themes/Sixteen && composer update -W && npm install && npm run build",
+    "cd laravel/Themes/TwentyOne && composer update -W && npm install && npm run build",
     "Verify manifests exist",
     "Test site loading"
   ],
@@ -139,7 +139,7 @@ cd laravel/Themes/Sixteen
 composer update -W    # ~5min
 npm install           # ~2min
 npm run build         # ~3min
-npm run copy          # ~1min
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # Verify
 ls -la public_html/themes/Sixteen/manifest.json
@@ -150,7 +150,7 @@ cd ../TwentyOne
 composer update -W
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # Verify
 ls -la public_html/themes/TwentyOne/manifest.json
@@ -284,7 +284,7 @@ EOF
 ### Vite Fix
 ```bash
 cd laravel/Themes/<theme>
-composer update -W && npm install && npm run build && npm run copy
+composer update -W && npm install && npm run build
 ```
 
 ### Ralph Loop

@@ -137,7 +137,7 @@ php artisan module:list
 
 # Verifica tema Meetup
 cd ../Themes/Meetup
-npm run build && npm run copy
+npm run build
 cd ../..
 
 # Avvia server sviluppo
@@ -244,7 +244,7 @@ new class extends Component {
 ```bash
 # OBBLIGATORIO dopo ogni modifica CSS/JS
 cd laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 ---
@@ -449,7 +449,7 @@ php artisan view:clear
 
 # Build assets tema
 cd laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 ---
@@ -469,7 +469,7 @@ cat laravel/Modules/Xot/docs/phpstan-code-quality-guide.md
 ```bash
 # Rebuild assets tema
 cd laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 
 # Clear cache
 cd ../..

@@ -56,7 +56,7 @@ Themes/Meetup/
 
 public_html/
 └── themes/
-    └── Meetup/              # ✅ Output copy (npm run copy)
+    niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
         ├── assets/
         │   ├── app-[hash].css
         │   └── app-[hash].js
@@ -77,10 +77,10 @@ npm run build
 - `assets/app-[hash].js` - JavaScript compilato e minificato
 - `manifest.json` - Manifest Vite con mapping asset
 
-### 2. Copy (`npm run copy`)
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ```bash
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Comando**: `cp -r ./public/* ../../../public_html/themes/Meetup`
@@ -167,14 +167,14 @@ curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
 
 ## Troubleshooting
 
-### Problema: `npm run copy` fallisce con "No such file or directory"
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Causa**: Directory `public_html/themes/Meetup/` non esiste
 
 **Soluzione**:
 ```bash
 mkdir -p /var/www/_bases/base_laravelpizza/public_html/themes/Meetup
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Problema: Asset non trovati dopo copy
@@ -205,7 +205,7 @@ ls -la public/manifest.json
 ## Best Practices
 
 1. ✅ **Sempre eseguire dalla directory del tema**: `cd Themes/Meetup`
-2. ✅ **Build prima di copy**: `npm run build && npm run copy`
+2. ✅ **Build prima di copy**: `npm run build`
 3. ✅ **Verificare output**: Controllare che `public/` contenga gli asset dopo build
 4. ✅ **Verificare copy**: Controllare che `public_html/themes/Meetup/` contenga gli asset dopo copy
 5. ✅ **Non modificare manualmente**: Non modificare manualmente gli asset in `public/`, sempre ricompilare

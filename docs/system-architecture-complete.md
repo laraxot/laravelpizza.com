@@ -274,7 +274,7 @@ Themes/Meetup/
 │       └── manifest.json  ← Manifest Vite
 └── public_html/
     └── themes/Meetup/
-        └── assets/       ← Copiato da npm run copy
+        niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
             ├── app-[hash].css
             ├── app-[hash].js
             └── manifest.json
@@ -297,7 +297,7 @@ npm install
 
 # Dopo modifiche CSS/JS (OBBLIGATORIO)
 npm run build      # Compila CSS/JS (Vite + Tailwind)
-npm run copy       # Copia asset in public_html/themes/Meetup/
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Quando Eseguire**:
@@ -427,7 +427,7 @@ npm run dev  # Hot reload automatico (NON serve copy)
 ### 2. Frontend Assets
 - ❌ NON modificare direttamente file in `public_html/`
 - ✅ Modificare `resources/css/app.css` e `resources/js/app.js`
-- ✅ Eseguire `npm run build && npm run copy` dopo modifiche
+- ✅ Eseguire `npm run build` dopo modifiche
 - ✅ Verificare nel browser dopo build
 
 ### 3. Layout Hierarchy

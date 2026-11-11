@@ -217,7 +217,7 @@ npm install
 
 # Dopo modifiche CSS/JS (OBBLIGATORIO)
 npm run build      # Compila CSS/JS (Vite + Tailwind)
-npm run copy       # Copia asset in public_html/themes/Meetup/
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Perché**:

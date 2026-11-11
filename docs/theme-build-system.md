@@ -17,12 +17,12 @@ Without it, Laravel looks in `laravel/public/build/` instead of `Themes/Meetup/p
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 **Why?** Changes to `resources/css/app.css` and `resources/js/app.js` are not immediately visible. Vite must:
 1. Compile the assets (`npm run build`)
-2. Copy them to the public directory (`npm run copy`)
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 Then refresh your browser to see changes at http://127.0.0.1:8000/it
 
@@ -35,7 +35,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm install    # First time only
 npm run dev    # Development (watch)
 npm run build  # Production (vite build)
-npm run copy   # Copy assets to public_html
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Build Configuration
@@ -44,7 +44,7 @@ The theme uses `laravel-vite-plugin` and outputs built assets to `./public` (rel
 
 ### Copy Command Path Logic
 
-The `npm run copy` command is:
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 ```bash
 cp -r ./public/* ../../../public_html/themes/Meetup
 ```

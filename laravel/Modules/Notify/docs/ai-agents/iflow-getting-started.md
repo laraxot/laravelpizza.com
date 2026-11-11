@@ -44,7 +44,7 @@ Dal tema Meetup:
 ```bash
 cd Themes/Meetup
 npm install
-npm run build && npm run copy  # OBBLIGATORIO dopo ogni cambio CSS/JS
+npm run build  # OBBLIGATORIO dopo ogni cambio CSS/JS
 ```
 
 ---

@@ -48,7 +48,7 @@ resources/css/app.css    →    npm run build    →    public/assets/app-[hash]
 resources/js/app.js                                 public/assets/app-[hash].js
                                                     public/manifest.json
 
-                         →    npm run copy     →    public_html/themes/Meetup/
+                         niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 ```
 
 ### 3. Standard Convention

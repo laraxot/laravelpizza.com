@@ -48,7 +48,7 @@ laravel/Themes/One/
 npm run build
 
 # Pubblicazione
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Riflessioni e Linee Guida
@@ -129,7 +129,7 @@ npm run copy
    ls -la public/themes/One
 
    # Forza copia
-   npm run copy -- --force
+   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
    ```
 
 3. **Problemi di Cache**

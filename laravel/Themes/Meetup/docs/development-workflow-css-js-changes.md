@@ -65,7 +65,7 @@ npm run build
    - Genera `public/assets/app-[hash].js`
    - Genera `public/manifest.json`
 
-2. `npm run copy`:
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - Copia `public/*` → `public_html/themes/Meetup/`
    - Rende gli asset accessibili via web
 
@@ -79,7 +79,7 @@ npm run dev
 **Cosa fa**:
 - Avvia Vite dev server con hot reload
 - Le modifiche CSS/JS sono visibili automaticamente
-- **NON serve** `npm run copy` in dev mode
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Nota**: In dev mode, Vite serve gli asset direttamente, non dalla directory pubblica.
 

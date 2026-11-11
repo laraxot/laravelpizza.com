@@ -438,7 +438,7 @@ Vite Build Process:
 2. Compiles resources/css/app.css
 3. Compiles resources/js/app.js
 4. Outputs to public/
-5. npm run copy (copies to public_html/themes/Meetup)
+5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 ```
 
 ## Common Integration Patterns

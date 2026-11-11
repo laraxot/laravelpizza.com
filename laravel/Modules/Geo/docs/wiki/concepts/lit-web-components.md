@@ -174,7 +174,7 @@ Il problema non era uno solo:
 
 - alias Vite nel tema per `lit`, `leaflet`, `leaflet.css`
 - import del componente Geo dentro `Sixteen/resources/js/app.js`
-- pipeline obbligatoria `npm run build` + `npm run copy` da `laravel/Themes/Sixteen`
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - `my-map` reso in **light DOM** per consentire a Leaflet di usare i suoi CSS globali
 
 ## Uso in Filament Fields

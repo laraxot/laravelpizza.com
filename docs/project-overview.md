@@ -405,7 +405,7 @@ Request → Folio (/resources/views/pages/*.blade.php)
 - ✅ Folio per tutte le route frontend
 - ✅ Volt per tutti i componenti reattivi
 - ✅ Filament solo per pannello admin
-- ✅ `npm run build && npm run copy` dopo cambiamenti CSS/JS
+- ✅ `npm run build` dopo cambiamenti CSS/JS
 
 **Stato**: ⚠️ Implementazione in corso
 **Documentazione**: Buona (100+ docs)

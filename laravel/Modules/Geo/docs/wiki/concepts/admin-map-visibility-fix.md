@@ -101,7 +101,7 @@ After any JS/CSS changes in the Geo module:
 ```bash
 cd /var/www/_bases/base_fixcity_fila5/laravel/Modules/Geo
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Documentation Links

@@ -105,7 +105,7 @@ import { resolveStateCoordinates } from './map/utils.js';
 ```bash
 cd laravel/Themes/Sixteen
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 `app.js` importa `coordinate-picker-field` da `@modules/Geo/...` (usa il modulo Geo, non il mirror).

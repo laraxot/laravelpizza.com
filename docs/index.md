@@ -296,7 +296,7 @@ Totale: 0 errori su 3,983 file analizzati
 ✅ **USARE** TransTrait per traduzioni
 ✅ **USARE** PHPStan Level 10
 ✅ **USARE** DRY + KISS principles
-✅ **USARE** `npm run build && npm run copy` dopo modifiche CSS/JS
+✅ **USARE** `npm run build` dopo modifiche CSS/JS
 
 ---
 
@@ -343,7 +343,7 @@ Meetup Theme (Folio/Volt) → Meetup Module (Actions) → Meetup Module (Service
 
 # Theme build
 cd laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 
 # Clear cache
 php artisan config:clear

@@ -163,7 +163,7 @@ protected function register(): void
 # Modifica SVG (design autonomo)
 cd Modules/Meetup/resources/svg/
 # Edit con editor SVG (Illustrator, Figma, Inkscape)
-npm run copy     # Aggiorna assets
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### **Per Developer**

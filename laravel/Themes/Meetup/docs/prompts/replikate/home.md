@@ -84,7 +84,7 @@ If you find any of the following, report immediately:
 **DOPO ogni modifica CSS/JS nel tema Meetup:**
 1. cd laravel/Themes/Meetup/
 2. npm run build
-3. npm run copy
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 4. Verifica nel browser con hard refresh
 
 ## URL Mapping Reference

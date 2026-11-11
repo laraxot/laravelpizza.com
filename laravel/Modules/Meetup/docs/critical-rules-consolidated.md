@@ -7,12 +7,12 @@
 
 ### 1. Frontend Asset Management (CSS/JS)
 
-**REGOLA**: Ogni modifica a `resources/css/app.css` o `resources/js/app.js` richiede `npm run build && npm run copy`.
+**REGOLA**: Ogni modifica a `resources/css/app.css` o `resources/js/app.js` richiede `npm run build`.
 
 **Comando**:
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 **Perché**:

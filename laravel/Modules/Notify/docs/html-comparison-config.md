@@ -40,4 +40,4 @@ bash bashscripts/html/html-structure-compare.sh segnalazioni-elenco \
 
 - **Theme**: Sixteen
 - **Theme Path**: `laravel/Themes/Sixteen/`
-- **Build Command**: `cd laravel/Themes/Sixteen && npm run build && npm run copy`
+- **Build Command**: `cd laravel/Themes/Sixteen && npm run build`

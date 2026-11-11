@@ -86,7 +86,7 @@ index.html + js/direktvermarkter.js
 1. Dopo modifica ticket/location: esportare `tickets.json`.
 2. Verificare `total` e `features.length` > 0 su `/data/tickets.json`.
 3. `/it` tab Mappa: `map-lit` carica JSON; filtri allineati (STORY-053).
-4. Build tema: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.
+4. Build tema: `cd laravel/Themes/Sixteen && npm run build`.
 
 ## GitHub
 

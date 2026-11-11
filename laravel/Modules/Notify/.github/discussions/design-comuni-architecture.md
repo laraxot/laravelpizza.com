@@ -251,7 +251,7 @@ x-layouts.main (base HTML: DOCTYPE, head, body, scripts)
 
 ---
 
-### 9. Vite Build: outDir: './public' + npm run copy ✅
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Decision**: Build theme independently, copy to public_html.
 
@@ -279,7 +279,7 @@ cd laravel/Themes/Sixteen
 composer update -W
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Alternatives Rejected**:

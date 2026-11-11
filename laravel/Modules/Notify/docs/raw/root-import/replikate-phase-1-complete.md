@@ -97,7 +97,7 @@ discussions: []
 3. ✅ DIFF HTML - Document differences
 4. ⏳ FIX HTML - Modify blade/blocks
 5. ⏳ FIX CSS/JS - Tailwind + Alpine
-6. ⏳ BUILD - npm run build && npm run copy
+6. ⏳ BUILD - npm run build
 7. ⏳ VALIDATE - Check ≥90% match
 8. ⏳ DOCUMENT - Save analysis + screenshots
 
@@ -238,7 +238,7 @@ bashscripts ←→ Theme Docs ←→ Component Catalog
 - [ ] Update col-lg-4 → col-lg-6 in grid layouts
 - [ ] Add missing CSS classes
 - [ ] Remove Bootstrap classes
-- [ ] Run `npm run build && npm run copy`
+- [ ] Run `npm run build`
 - [ ] Verify HTML match ≥90%
 - [ ] Test responsive behavior
 - [ ] Update documentation with results

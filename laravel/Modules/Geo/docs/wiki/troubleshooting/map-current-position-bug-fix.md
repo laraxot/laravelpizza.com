@@ -97,7 +97,7 @@ status: draft
 # Build Geo module assets
 cd laravel/Modules/Geo
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # This copies assets to public_html/assets/geo/
 ```

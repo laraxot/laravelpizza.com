@@ -21,7 +21,7 @@ related: [dcp-33]
 `GeoServiceProvider` non ridefinisce `$module_ns`: `XotBaseServiceProvider` registrava il namespace `geo` su `Modules\Xot\View\Components`. Corretto in Geo con `Blade::componentNamespace('Modules\\Geo\\View\\Components', 'geo')` in `boot()`. **Lo stesso difetto e' latente in AI, Activity e Mobile** (lo ha rilevato l'agente, non verificato dal vivo): `<x-ai::...>` ecc. non troverebbero le classi. La correzione giusta e' a monte (`XotBaseServiceProvider` che deriva `$module_ns` dal nome del modulo) con test sul comportamento di tutti i provider, non quattro righe copiate.
 
 ## Follow-up
-1. Build del modulo Geo (`npm run build && npm run copy` in `Modules/Geo`; oggi non eseguibile: manca `node_modules`) per il back office Filament.
+1. Build del modulo Geo (`npm run build` in `Modules/Geo`; oggi non eseguibile: manca `node_modules`) per il back office Filament.
 2. Rimontaggio della mappa quando cambia il punto dentro Livewire reale e `readonly` reattivo dopo il primo render: non provati.
 3. Contratto di centro iniziale per picker/mappa editabile: se il record/stato contiene coordinate, centrare su quelle; altrimenti provare la posizione browser/utente quando disponibile; altrimenti usare fallback Comune/default Geo, lasciando sempre selezione manuale. Non introdurre un requisito HTTPS per completare la segnalazione: la geolocalizzazione automatica e' progressiva e non bloccante (vedi DCP-35/DCP-43 Fixcity).
 4. Mobile: il pan a un dito cattura lo scroll dentro la mappa (`dragging: !L.Browser.mobile` descritto nella nota `docs/wiki/concepts/point-map-readonly.md`, non applicato).

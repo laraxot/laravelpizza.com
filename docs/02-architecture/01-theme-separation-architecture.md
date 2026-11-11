@@ -83,7 +83,7 @@ npm install
 npm run build
 
 # Copiare asset in public_html
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### **3. Verifica nel Browser**
@@ -103,7 +103,7 @@ npm run copy
 ### **✅ Obbligatorio**
 - **SEMPRE** usare `laravel/Themes/Meetup/docs/` per documentazione
 - **SEMPRE** eseguire `npm run build` dopo modifiche CSS/JS
-- **SEMPRE** eseguire `npm run copy` per pubblicare asset
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - **SEMPRE** verificare con PHPStan livello 10
 - **SEMPRE** seguire pattern DRY + KISS
 
@@ -112,7 +112,7 @@ npm run copy
 ## 📊 **Workflow Completo**
 
 ```
-Modifica File → PHPStan L10 → npm run build → npm run copy → Test Browser
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
      ↓           ↓              ↓              ↓              ↓
    Codice      Qualità        Compilazione    Pubblicazione    Visibilità
    Corretto    ✅             ✅             ✅             ✅
@@ -132,7 +132,7 @@ Le modifiche non sono visibili
 # ✅ CORRETTO
 cd laravel/Themes/Meetup/
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 Vado su http://127.0.0.1:8000/it
 Le modifiche sono visibili
 ```
@@ -148,7 +148,7 @@ Vado direttamente a testare
 composer update -W
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ---

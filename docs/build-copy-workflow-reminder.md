@@ -5,7 +5,7 @@
 
 ## Correzione Importante dall'Utente
 
-> "e ti ricordo che per vedere le modifiche in http://127.0.0.1:8000/it devi fare npm run build && npm run copy .. aggiorna le tue rules e le tue memories"
+> "e ti ricordo che per vedere le modifiche in http://127.0.0.1:8000/it devi fare npm run build .. aggiorna le tue rules e le tue memories"
 
 ## La Regola
 
@@ -13,7 +13,7 @@
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 ## Perché Entrambi i Comandi
@@ -23,7 +23,7 @@ npm run build && npm run copy
 - Output: `./public/assets/` con file hashati
 - Genera: `./public/manifest.json`
 
-### 2. `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Copia da: `./public/*`
 - Copia a: `../../../public_html/themes/Meetup`
 - Include tutti gli asset compilati
@@ -36,7 +36,7 @@ vim resources/css/app.css
 vim resources/js/app.js
 
 # 2. Compila E copia (SEMPRE entrambi!)
-npm run build && npm run copy
+npm run build
 
 # 3. Verifica nel browser
 # Apri: http://127.0.0.1:8000/it
@@ -68,16 +68,16 @@ npm run build  # Build fatto ma NON copiato!
 **Problema**: Le modifiche sono compilate ma non deployate
 **Risultato**: http://127.0.0.1:8000/it mostra ancora la vecchia versione
 
-### ❌ Errore: Solo `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 ```bash
-npm run copy  # Copia fatta ma con vecchi file!
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 **Problema**: Copia i vecchi file compilati
 **Risultato**: http://127.0.0.1:8000/it mostra la versione non aggiornata
 
 ### ✅ Corretto: Entrambi i comandi
 ```bash
-npm run build && npm run copy
+npm run build
 ```
 **Risultato**: http://127.0.0.1:8000/it mostra le nuove modifiche
 
@@ -123,13 +123,13 @@ Modifiche a CSS/JS del tema
     ↓
 cd Themes/Meetup
     ↓
-npm run build && npm run copy
+npm run build
     ↓
 Refresh http://127.0.0.1:8000/it
 ```
 
 **NON è sufficiente solo `npm run build`!**
-**NON è sufficiente solo `npm run copy`!**
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **ENTRAMBI sono necessari per vedere le modifiche!**
 
@@ -140,7 +140,7 @@ Dopo ogni modifica a `resources/css/app.css` o `resources/js/app.js`:
 - [ ] Eseguito `cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup`
 - [ ] Eseguito `npm run build`
 - [ ] Verificato output in `./public/assets/`
-- [ ] Eseguito `npm run copy`
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - [ ] Verificato copia in `../../../public_html/themes/Meetup/`
 - [ ] Refresh browser su http://127.0.0.1:8000/it
 - [ ] Hard refresh (Ctrl+Shift+R) se necessario
@@ -149,5 +149,5 @@ Dopo ogni modifica a `resources/css/app.css` o `resources/js/app.js`:
 
 **Importanza**: Critica
 **Frequenza**: Ogni modifica agli asset del tema
-**Comando**: `npm run build && npm run copy`
+**Comando**: `npm run build`
 **Location**: `/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup`

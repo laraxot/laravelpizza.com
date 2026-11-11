@@ -54,7 +54,7 @@ After modifying JS in Geo module:
 
 ```bash
 cd laravel/Themes/Sixteen
-npm run build   # esegue gia anche `npm run copy` e `php artisan view:clear` (Themes/Sixteen/package.json)
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 ```
 
 ## Golden Rule (2026-05-08)

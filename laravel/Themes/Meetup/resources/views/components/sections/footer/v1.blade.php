@@ -37,7 +37,6 @@
                     <li><a href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Laravel Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
                     <li><a href="https://filamentphp.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Filament Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
                     <li><a href="https://livewire.laravel.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Livewire Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
-                    <li><a href="{{ LaravelLocalization::localizeUrl('/articles') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.blog') }}</a></li>
                 </ul>
             </nav>
 

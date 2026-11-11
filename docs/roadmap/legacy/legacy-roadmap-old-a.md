@@ -36,5 +36,5 @@ Il tema Meetup e' la faccia pubblica di LaravelPizza. Usa:
 
 - Il tema deve essere WOW - non solo funzionale
 - Seguire pattern CMS blocks per tutte le pagine
-- npm run build && npm run copy dopo ogni modifica CSS/JS
+- npm run build dopo ogni modifica CSS/JS
 - NO controller tradizionali per frontend

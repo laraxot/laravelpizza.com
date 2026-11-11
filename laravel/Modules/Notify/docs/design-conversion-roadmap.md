@@ -87,7 +87,7 @@ status: draft
 - [ ] CSS difference analysis
 - [ ] Identify container/section spacing issues
 - [ ] Apply targeted fixes
-- [ ] Build and verify (npm run build && npm run copy)
+- [ ] Build and verify (npm run build)
 - [ ] Cross-browser testing
 
 **Expected Outcome**: 15 total pages at 95%+ visual parity (28% conversion complete)
@@ -178,7 +178,7 @@ cd laravel/Themes/Sixteen
 npm run build
 
 # Copy to public
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # View reports
 cat laravel/Themes/Sixteen/docs/complete-visual-parity-report.md
@@ -206,7 +206,7 @@ gh issue list --repo laraxot/base_fixcity_fila5 --label "priority:critical"
 2. **Screenshot** → Compare local vs reference side-by-side
 3. **Identify** → Document CSS changes needed (spacing, colors, layout)
 4. **Modify** → Edit `laravel/Themes/Sixteen/resources/css/app.css`
-5. **Build** → Run `npm run build && npm run copy`
+5. **Build** → Run `npm run build`
 6. **Test** → View page at http://127.0.0.1:8000/it/tests/<page>
 7. **Verify** → Take screenshot, compare with reference
 8. **Iterate** → Repeat steps 3-7 until visual parity achieved
@@ -221,7 +221,7 @@ gh issue list --repo laraxot/base_fixcity_fila5 --label "priority:critical"
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # ~2 seconds
-npm run copy     # ~1 second
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 # New CSS hash appears in output (e.g., app-DCbieyUp.css)
 ```
 
@@ -307,7 +307,7 @@ open laravel/Themes/Sixteen/docs/pages/persona/DETAILED-ANALYSIS.md
 
 1. **No Bootstrap Italia** - Use only Tailwind CSS + Alpine.js
 2. **CSS-Only Fixes** - Modify only CSS/JS, not HTML templates (unless absolutely needed)
-3. **Build & Copy** - Always run `npm run build && npm run copy` to test changes
+3. **Build & Copy** - Always run `npm run build` to test changes
 4. **Screenshots** - Compare local vs reference using same viewport (1920px default)
 5. **Git Commits** - Include screenshot comparisons in commit descriptions
 6. **Parallel Work** - Pages are independent, can be worked on simultaneously

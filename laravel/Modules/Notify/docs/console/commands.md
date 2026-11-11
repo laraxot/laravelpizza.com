@@ -160,7 +160,7 @@ vendor/bin/phpstan analyse app/
 
 # 5. Frontend (SEMPRE dopo modifiche CSS/JS)
 cd Themes/Sixteen/
-npm run build && npm run copy
+npm run build
 cd ../../
 
 # 6. Commit
@@ -177,7 +177,7 @@ php artisan test
 
 # Frontend build (CRITICO)
 cd Themes/Sixteen/
-npm run build && npm run copy
+npm run build
 cd ../../
 
 # Deploy optimizations
@@ -301,7 +301,7 @@ dev:reset-demo
 ```bash
 cd Themes/Sixteen/
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 Senza questi comandi, le modifiche frontend NON saranno visibili agli utenti!

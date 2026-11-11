@@ -50,7 +50,7 @@ Effetto: aggiornamento piu affidabile su Alpine + Livewire entangle quando il ma
 ## Verifica tecnica
 
 - build modulo: `npm run build` ✅
-- publish asset modulo: `npm run copy` ✅
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - output generato in `laravel/Modules/Geo/public` e pubblicato in `public_html/assets/geo`.
 
 ## Nota Lit (riferimento)

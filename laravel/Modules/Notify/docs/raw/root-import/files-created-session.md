@@ -272,7 +272,7 @@ cat laravel/Themes/Sixteen/docs/pages/persona/DETAILED-ANALYSIS.md
 # 4. Start CSS fixing
 cd laravel/Themes/Sixteen
 vim resources/css/app.css
-npm run build && npm run copy
+npm run build
 ```
 
 ### Weekly
@@ -293,7 +293,7 @@ diff <(cat laravel/Themes/Sixteen/docs/visual-parity-data.json) <(previous.json)
 2. Take screenshots (provided by script)
 3. Identify CSS changes needed
 4. Apply fixes
-5. Run npm run build && npm run copy
+5. Run npm run build
 6. Take new screenshots
 7. Compare old vs new
 8. Commit with before/after attached

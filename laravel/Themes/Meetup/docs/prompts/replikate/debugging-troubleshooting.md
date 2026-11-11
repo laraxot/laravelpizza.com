@@ -138,7 +138,7 @@ Changes to app.css or app.js not showing in browser
 
 **Diagnostic Steps:**
 1. Check if ran `npm run build`
-2. Check if ran `npm run copy`
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 3. Verify working directory is correct
 4. Check browser cache
 

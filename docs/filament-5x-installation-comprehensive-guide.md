@@ -265,7 +265,7 @@ php artisan filament:install --panels
 cd Themes/Meetup
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # 3. Testing
 php artisan serve

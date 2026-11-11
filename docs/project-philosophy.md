@@ -11,12 +11,12 @@
 
 ### Frontend Asset Management
 
-**REGOLA CRITICA**: Ogni modifica a `resources/css/app.css` o `resources/js/app.js` richiede `npm run build && npm run copy`.
+**REGOLA CRITICA**: Ogni modifica a `resources/css/app.css` o `resources/js/app.js` richiede `npm run build`.
 
 **Comando**:
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 **Perché**:
@@ -109,7 +109,7 @@ Themes/Meetup/
 1. **Modifica CSS/JS** in `resources/css/app.css` o `resources/js/app.js`
 2. **Build e Copy**:
    ```bash
-   npm run build && npm run copy
+   npm run build
    ```
 3. **Test** nel browser: `http://127.0.0.1:8000/it`
 4. **Confronta** con `https://laravelpizza.com` per verificare allineamento

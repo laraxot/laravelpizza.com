@@ -20,7 +20,7 @@ Prompts described colors from a different business:
 
 ### 3. **Missing Context**
 - No mention of URL mapping (flat vs multilingual)
-- No mention of theme workflow (npm run build + npm run copy)
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Incomplete architectural rules
 - Vague instructions
 

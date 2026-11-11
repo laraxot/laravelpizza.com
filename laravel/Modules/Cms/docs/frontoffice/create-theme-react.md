@@ -232,7 +232,7 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Troubleshooting

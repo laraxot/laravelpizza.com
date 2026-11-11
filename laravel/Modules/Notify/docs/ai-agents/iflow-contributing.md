@@ -25,7 +25,7 @@ Come contribuire al progetto.
 
 - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)
 - Porta nuove idee di sezioni/animazioni
-- **IMPORTANTE**: Ogni modifica CSS/JS richiede `npm run build && npm run copy`
+- **IMPORTANTE**: Ogni modifica CSS/JS richiede `npm run build`
 
 ---
 
