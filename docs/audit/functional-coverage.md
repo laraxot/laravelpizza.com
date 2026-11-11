@@ -3,6 +3,28 @@
 > Audit del 2026-11-05, branch `dev`. Ogni stato è motivato con un riferimento al codice.
 > Legenda: ✅ completo e verificato · 🟢 implementato, non verificato end-to-end · 🟡 parziale · 🔴 difettoso · ⛔ mancante o non raggiungibile.
 
+## Stato al ciclo 3 (11 novembre 2026)
+
+| FR | Stato | Dove / test |
+|---|---|---|
+| FR-1 Eventi | ✅ | `EventForm` (sede, fine dopo inizio), `CreateEvent`/`EditEvent` via `CreateEventAction`/`UpdateEventAction`, eliminazione singola e multipla via `DeleteEventAction` — `Feature/Admin/OrganizerPanelTest` |
+| FR-2 Sedi, relatori, sponsor | ✅ | `VenueResource`, `PerformerResource`, `SponsorResource`; collegamento nel form evento con creazione al volo — `OrganizerPanelTest`, `MeetupDataIntegrityTest` |
+| FR-3 Dashboard | ✅ | `RecentEventsWidget`: eventi futuri con iscritti/posti e soglie di colore |
+| FR-4 Lista iscritti | ✅ | `RegistrationsRelationManager`: elenco, annullamento, CSV (`ExportEventRegistrationsAction`, protetto da formula injection) |
+| FR-5 Eventi futuri | ✅ | `SearchPublicEventsAction` — `PublicEventsListTest` |
+| FR-6 Eventi passati | ✅ | pagina `events-past` — `PublicEventsListTest` |
+| FR-7 Dettaglio | ✅ | invariato, più "Aggiungi al calendario" (.ics) |
+| FR-8 Filtro città/data | ✅ | query string `city`, `from`, `until`, messaggio senza risultati — `PublicEventsListTest` |
+| FR-9…11 Iscrizione | ✅ / 🟢 | come ciclo 1; conferma con allegato .ics, promemoria il giorno prima (`SendEventRemindersAction`) — `CalendarAndRemindersTest`. In produzione servono worker e mailer reale (runbook) |
+| FR-12…14 CMS | ✅ | rimosse le pagine finte `articles` e `events-near-me` (301 a `/events`) |
+| FR-15 IT/EN | ✅ per le pagine core | home, eventi, eventi passati, chi siamo, contatti, i miei eventi, privacy, termini, cookie policy in IT e EN; de/fr/es/ru tradotti solo nell'interfaccia |
+| FR-17 Stringhe | 🟢 | pannello e tema tradotti; restano testi interni dei moduli condivisi |
+| FR-18 Cookie | ✅ | banner incluso, cookie solo tecnici documentati in `/cookie-policy`, Inter servito dal sito, nessun preconnect a Google |
+| FR-19 WCAG | 🟢 | un solo h1 per pagina in home, etichette sui campi; audit axe non ancora eseguito |
+| FR-21 JSON-LD | ✅ | senza email dell'organizzatore (S-10) |
+
+Il dettaglio storico per FR, dal ciclo 1, segue.
+
 Percorsi abbreviati: `M/` = `laravel/Modules/`, `T/` = `laravel/Themes/Meetup/resources/views/`, `P/` = `laravel/config/local/laravelpizza/database/content/pages/`.
 
 ## Epic 1 — Amministrazione eventi
