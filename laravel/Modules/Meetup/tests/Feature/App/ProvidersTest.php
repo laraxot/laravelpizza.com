@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Feature\App;
+
 use App\Providers\AppServiceProvider;
 use App\Providers\FolioServiceProvider;
 use App\Providers\VoltServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
-use Tests\TestCase;
+use Modules\Meetup\Tests\TestCase as MeetupTestCase;
 
-uses(TestCase::class, CreatesApplication::class);
+uses(MeetupTestCase::class);
 
 test('app service provider can be instantiated', function (): void {
     $provider = new AppServiceProvider(app());

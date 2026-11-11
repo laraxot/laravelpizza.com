@@ -1,9 +1,12 @@
 <?php
 
-use Illuminate\Foundation\Testing\TestCase;
-use Modules\Xot\Tests\CreatesApplication;
+declare(strict_types=1);
 
-uses(TestCase::class, CreatesApplication::class);
+namespace Modules\Meetup\Tests\Feature\App;
+
+use Modules\Meetup\Tests\TestCase as MeetupTestCase;
+
+uses(MeetupTestCase::class);
 
 test('can render registration page', function (): void {
     $response = $this->get('/en/auth/register');

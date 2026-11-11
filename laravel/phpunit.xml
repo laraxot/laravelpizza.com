@@ -5,17 +5,9 @@
          colors="true"
 >
     <testsuites>
-        <!-- Suite che blocca la CI: codice del progetto (app, tema, modulo Meetup). docs/audit/test-coverage.md -->
+        <!-- Suite che blocca la CI: modulo Meetup, inclusi i test di app/ e del tema. Ogni modulo tiene i suoi test: niente laravel/tests -->
         <testsuite name="Project">
-            <directory>tests/Unit</directory>
-            <directory>tests/Feature</directory>
             <directory>Modules/Meetup/tests</directory>
-        </testsuite>
-        <testsuite name="Unit">
-            <directory>tests/Unit</directory>
-        </testsuite>
-        <testsuite name="Feature">
-            <directory>tests/Feature</directory>
         </testsuite>
         <!-- I test dei moduli: senza questa suite `php artisan test` eseguiva solo gli 8 test della root -->
         <testsuite name="Modules">

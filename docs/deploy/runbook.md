@@ -137,6 +137,6 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 
 ## 10. Test e CI
 
-- Bloccanti: `vendor/bin/pest --testsuite=Project` (app, tema e modulo Meetup), PHPStan livello 10 su `Modules`, Pint, build del tema.
+- Bloccanti: `vendor/bin/pest --testsuite=Project` (modulo Meetup, che contiene anche i test di app e tema: ogni modulo tiene i suoi test, niente `laravel/tests`), PHPStan livello 10 su `Modules`, Pint, build del tema.
 - Informativi: le suite dei moduli Laraxot condivisi (Xot, User, Cms, …), pubblicate nel riepilogo del job CI. Contengono test scritti per altri progetti; vanno sistemate nei rispettivi repository dei moduli.
 - Attenzione: in locale alcune suite di Xot eseguono comandi composer sul progetto reale (`storage/framework/composer-home`) e possono riscrivere `vendor/composer/autoload_*`. Lanciarle solo in CI o su una copia; se succede, `composer dump-autoload` ripristina.
