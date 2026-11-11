@@ -1,5 +1,5 @@
 # generated: 2026-07-07
-# last_updated: 2026-07-07
+# last_updated: 2026-11-11
 # project: laravelpizza.com
 # project_key: NOKEY
 # tracking_system: file-system
@@ -41,7 +41,7 @@
 # - Retrospective appends its action items to action_items; sprint-status surfaces open ones
 
 generated: 2026-07-07
-last_updated: 2026-07-07 (story 1-1 created)
+last_updated: 2026-11-11 (implementazione cicli 1-3: storie in review, vedi docs/audit/functional-coverage.md)
 project: laravelpizza.com
 project_key: NOKEY
 tracking_system: file-system
@@ -49,40 +49,48 @@ story_location: _bmad-output/implementation-artifacts
 
 development_status:
   epic-1: in-progress
-  1-1-creazione-e-gestione-evento: ready-for-dev
-  1-2-gestione-sedi-relatori-e-sponsor: backlog
-  1-3-dashboard-statistiche-eventi: backlog
-  1-4-gestione-iscrizioni-e-liste-iscritti: backlog
+  1-1-creazione-e-gestione-evento: review
+  1-2-gestione-sedi-relatori-e-sponsor: review
+  1-3-dashboard-statistiche-eventi: review
+  1-4-gestione-iscrizioni-e-liste-iscritti: review
   epic-1-retrospective: optional
 
-  epic-2: backlog
-  2-1-lista-eventi-futuri: backlog
-  2-2-lista-eventi-passati: backlog
-  2-3-dettaglio-evento: backlog
-  2-4-ricerca-filtro-eventi-per-citta-o-data: backlog
+  epic-2: in-progress
+  2-1-lista-eventi-futuri: review
+  2-2-lista-eventi-passati: review
+  2-3-dettaglio-evento: review
+  2-4-ricerca-filtro-eventi-per-citta-o-data: review
   epic-2-retrospective: optional
 
-  epic-3: backlog
-  3-1-iscrizione-con-email-e-password: backlog
-  3-2-conferma-email-immediata: backlog
-  3-3-prevenzione-sovra-iscrizione: backlog
+  epic-3: in-progress
+  3-1-iscrizione-con-email-e-password: review
+  3-2-conferma-email-immediata: review
+  3-3-prevenzione-sovra-iscrizione: review
   epic-3-retrospective: optional
 
-  epic-4: backlog
-  4-1-rendering-pagina-pubblica-da-json: backlog
-  4-2-blocchi-di-contenuto-multi-tipo: backlog
-  4-3-aggiornamento-pagina-senza-deploy: backlog
+  epic-4: in-progress
+  4-1-rendering-pagina-pubblica-da-json: review
+  4-2-blocchi-di-contenuto-multi-tipo: review
+  4-3-aggiornamento-pagina-senza-deploy: review
   epic-4-retrospective: optional
 
-  epic-5: backlog
-  5-1-rendering-multilingua-via-prefisso-url: backlog
-  5-2-selettore-di-lingua: backlog
-  5-3-audit-e-completamento-traduzioni: backlog
+  epic-5: in-progress
+  5-1-rendering-multilingua-via-prefisso-url: review
+  5-2-selettore-di-lingua: review
+  5-3-audit-e-completamento-traduzioni: review
   epic-5-retrospective: optional
 
-  epic-6: backlog
-  6-1-cookie-consent: backlog
-  6-2-accessibilita-wcag-2-1-aa-sulle-pagine-critiche: backlog
-  6-3-seo-metadata: backlog
-  6-4-dati-strutturati-evento-json-ld: backlog
+  epic-6: in-progress
+  6-1-cookie-consent: review
+  6-2-accessibilita-wcag-2-1-aa-sulle-pagine-critiche: review
+  6-3-seo-metadata: review
+  6-4-dati-strutturati-evento-json-ld: review
   epic-6-retrospective: optional
+
+# Note 2026-11-11 (Claude, sessione di completamento):
+# - Tutte le storie FR-1..FR-21 sono implementate e coperte dalla suite Project (395 test); passano a `review`
+#   per la code review BMAD con un agente diverso, come da workflow.
+# - 3-1: l'iscrizione usa login/registrazione separati invece di email+password nello stesso form (decisione di prodotto
+#   da confermare).
+# - Evidenze per storia: docs/audit/functional-coverage.md (tabella "Stato al ciclo 3").
+
