@@ -6,8 +6,10 @@ use App\Livewire\Actions\Logout;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
 use Modules\User\Models\User;
+use Modules\Xot\Tests\CreatesApplication;
+use Tests\TestCase;
 
-uses(Tests\TestCase::class, Modules\Xot\Tests\CreatesApplication::class);
+uses(TestCase::class, CreatesApplication::class);
 
 /*
  * Logout reale invece dei mock di Auth e Session: il mock della facade Session rompeva redirect(),

@@ -22,7 +22,9 @@ use function Safe\file_put_contents;
 class GenerateSitemapWidget extends XotBaseWidget
 {
     protected static ?string $heading = 'Genera Sitemap';
+
     protected int|string|array $columnSpan = 2;
+
     protected static ?int $rows = 1;
 
     /** @return array<string, Action> */
@@ -34,7 +36,7 @@ class GenerateSitemapWidget extends XotBaseWidget
                 ->icon('heroicon-m-document-text')
                 ->color('primary')
                 ->action(static function (): void {
-                    $action = new BuildSitemapAction();
+                    $action = new BuildSitemapAction;
                     $xml = $action->execute();
                     $path = public_path('sitemap.xml');
                     file_put_contents($path, $xml);

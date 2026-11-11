@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Facade;
 use Livewire\Attributes\Locked;
 use Mockery\MockInterface;
 use Modules\Job\Filament\Widgets\JobStatusWidget;
+use Modules\Job\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 
 use function Safe\file_get_contents;
@@ -23,7 +24,7 @@ use function Safe\putenv;
 use function Safe\tempnam;
 use function Safe\unlink;
 
-uses(\Modules\Job\Tests\TestCase::class);
+uses(TestCase::class);
 
 /*
  * Test puri: nessun database, nessun bootstrap dell'app, nessun TestCase del modulo (usa
@@ -65,7 +66,7 @@ beforeEach(function (): void {
             'a=b' => ['driver' => 'null'],
         ]],
     ]));
-    $container->instance('files', new Filesystem());
+    $container->instance('files', new Filesystem);
     Container::setInstance($container);
     Facade::clearResolvedInstances();
     Facade::setFacadeApplication($container);
@@ -111,7 +112,7 @@ function jobEnvWidgetUser(bool $isSuperAdmin): MockInterface
 
 function jobEnvWidgetProbe(string $envFile, string $conn): JobStatusWidgetProbe
 {
-    $widget = new JobStatusWidgetProbe();
+    $widget = new JobStatusWidgetProbe;
     $widget->probeEnvFile = $envFile;
     $widget->old_value = 'database';
     $widget->form_data['conn'] = $conn;
@@ -126,7 +127,7 @@ it('locks old_value so the client cannot rewrite it', function (): void {
 });
 
 it('allows only well-formed connection names from config queue.connections', function (): void {
-    $widget = new JobStatusWidgetProbe();
+    $widget = new JobStatusWidgetProbe;
 
     expect($widget->getAllowedConnections())->toBe(['sync', 'database', 'ok_name-2']);
 });

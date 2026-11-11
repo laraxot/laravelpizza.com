@@ -17,6 +17,7 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Layout\Component as LayoutComponent;
+use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -285,7 +286,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     }
 
     /**
-     * @return array<string|int, \Filament\Tables\Filters\BaseFilter>
+     * @return array<string|int, BaseFilter>
      *
      * @not-deprecated Hook di progetto, non il metodo deprecato omonimo di Filament.
      */

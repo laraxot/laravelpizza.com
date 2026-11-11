@@ -6,9 +6,9 @@ namespace Modules\Activity\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Modules\Activity\Database\Factories\ActivityFactory;
@@ -75,7 +75,7 @@ class Activity extends SpatieActivity
     }
 
     /**
-     * @param Builder<Activity>|QueryBuilder $query
+     * @param  Builder<Activity>|QueryBuilder  $query
      * @return EloquentCollection<int, Activity>
      */
     public static function typedGet(Builder|QueryBuilder $query): EloquentCollection

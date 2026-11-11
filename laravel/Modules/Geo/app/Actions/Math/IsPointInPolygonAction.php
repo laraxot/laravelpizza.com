@@ -11,7 +11,7 @@ class IsPointInPolygonAction
     use QueueableAction;
 
     /**
-     * @param array<mixed> $polygon
+     * @param  array<mixed>  $polygon
      */
     public function execute(float $latitude, float $longitude, array $polygon): bool
     {

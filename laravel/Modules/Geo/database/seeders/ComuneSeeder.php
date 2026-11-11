@@ -29,7 +29,7 @@ class ComuneSeeder extends Seeder
     {
         $this->command?->info('ComuneSeeder: download dati comuni italiani (file ~40MB)...');
 
-        $downloader = new GeoJsonDownloader();
+        $downloader = new GeoJsonDownloader;
 
         // Processa a batch per gestire memoria
         $batchSize = 1000;
@@ -73,10 +73,10 @@ class ComuneSeeder extends Seeder
                 'updated_at' => now()->toISOString(),
             ];
 
-            ++$count;
+            $count++;
 
             // Salva batch intermedi per evitare problemi di memoria
-            if (0 === $count % $batchSize) {
+            if ($count % $batchSize === 0) {
                 $this->command?->info("ComuneSeeder: processati {$count}/{$total} comuni...");
             }
         }
@@ -93,12 +93,12 @@ class ComuneSeeder extends Seeder
     /**
      * Salva i dati nel file JSON del tenant.
      *
-     * @param array<int, array<string, mixed>> $data
+     * @param  array<int, array<string, mixed>>  $data
      */
     protected function saveToTenantJson(string $table, array $data): void
     {
         $tenant = config('tenant.current', 'central');
-        $tenant = is_string($tenant) && '' !== $tenant ? $tenant : 'central';
+        $tenant = is_string($tenant) && $tenant !== '' ? $tenant : 'central';
         $path = config_path("{$tenant}/database/content/{$table}.json");
 
         $dir = dirname($path);

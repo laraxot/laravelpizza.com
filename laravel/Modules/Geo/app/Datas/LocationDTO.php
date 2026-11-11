@@ -12,8 +12,7 @@ readonly class LocationDTO
         public ?string $address = null,
         public ?string $city = null,
         public ?string $country = null,
-    ) {
-    }
+    ) {}
 
     /**
      * @return array<string, float|string|null>

@@ -7,9 +7,10 @@ namespace Modules\Notify\Tests\Unit\Actions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Actions\SendAppointmentNotificationAction;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 function sendAppointmentNotificationTestModel(int $patientId = 1): Model
 {
     $appointment = new class extends Model

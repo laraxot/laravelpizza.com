@@ -37,8 +37,8 @@ final class ResolveRobotsPolicyAction
     public const array HIDDEN_SLUGS = ['tickets.confirmation', 'segnalazione-dettaglio', 'segnalazioni.index'];
 
     /**
-     * @param list<string> $localeCodes codici lingua che possono prefissare il percorso (`it`, `en`, ...)
-     * @param bool         $translated  `false` se la pagina non ha contenuto nella lingua corrente (duplicato della lingua di ripiego)
+     * @param  list<string>  $localeCodes  codici lingua che possono prefissare il percorso (`it`, `en`, ...)
+     * @param  bool  $translated  `false` se la pagina non ha contenuto nella lingua corrente (duplicato della lingua di ripiego)
      */
     public function execute(string $path, array $localeCodes, bool $translated = true): string
     {
@@ -52,7 +52,7 @@ final class ResolveRobotsPolicyAction
     }
 
     /**
-     * @param list<string> $localeCodes
+     * @param  list<string>  $localeCodes
      */
     public function isIndexable(string $path, array $localeCodes, bool $translated = true): bool
     {
@@ -69,7 +69,7 @@ final class ResolveRobotsPolicyAction
      */
     public function isPageIndexable(string $slug, mixed $middleware): bool
     {
-        if ('' === $slug || 'tests' === $slug || str_starts_with($slug, 'tests.') || str_starts_with($slug, 'auth.') || str_ends_with($slug, '.view')) {
+        if ($slug === '' || $slug === 'tests' || str_starts_with($slug, 'tests.') || str_starts_with($slug, 'auth.') || str_ends_with($slug, '.view')) {
             return false;
         }
 
@@ -84,13 +84,12 @@ final class ResolveRobotsPolicyAction
      * Segmenti del percorso come li vede il router: decodificati, in minuscolo, senza segmenti vuoti o punto e senza il prefisso lingua.
      * `/IT/preview-content`, `/it/%61uth` e `/it/./auth` sono lo stesso percorso riservato di `/it/auth`.
      *
-     * @param list<string> $localeCodes
-     *
+     * @param  list<string>  $localeCodes
      * @return list<string>
      */
     public function pathSegments(string $path, array $localeCodes): array
     {
-        $segments = (new CollapsePathSegmentsAction())->segments(mb_strtolower(rawurldecode($path)));
+        $segments = (new CollapsePathSegmentsAction)->segments(mb_strtolower(rawurldecode($path)));
 
         $locales = array_map(mb_strtolower(...), $localeCodes);
         if (isset($segments[0]) && in_array($segments[0], $locales, true)) {

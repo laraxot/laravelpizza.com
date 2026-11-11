@@ -182,8 +182,8 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
      * These fields maintain compatibility with older code that expects
      * generic field names like 'address', 'city', 'province', etc.
      *
-     * @param Blueprint             $table     The table blueprint
-     * @param XotBaseMigration|null $migration XotBaseMigration instance for UPDATE context
+     * @param  Blueprint  $table  The table blueprint
+     * @param  XotBaseMigration|null  $migration  XotBaseMigration instance for UPDATE context
      */
     private static function addLegacyColumns(Blueprint $table, ?XotBaseMigration $migration = null): void
     {
@@ -216,7 +216,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
         ];
 
         foreach ($legacyColumns as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }

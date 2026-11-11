@@ -3,8 +3,9 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
+use Modules\Notify\Tests\TestCase;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 test('html template contains optional function', function (): void {
     // Percorso del file
     $filePath = base_path('Modules/Notify/resources/views/emails/html.blade.php');

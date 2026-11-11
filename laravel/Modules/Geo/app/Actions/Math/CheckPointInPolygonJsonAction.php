@@ -11,13 +11,12 @@ class CheckPointInPolygonJsonAction
     use QueueableAction;
 
     public function __construct(
-        private readonly IsPointInPolygonAction $isPointInPolygonAction = new IsPointInPolygonAction(),
-    ) {
-    }
+        private readonly IsPointInPolygonAction $isPointInPolygonAction = new IsPointInPolygonAction,
+    ) {}
 
     public function execute(float $lat, float $lng, ?string $polygon): bool
     {
-        if (null === $polygon || '' === $polygon) {
+        if ($polygon === null || $polygon === '') {
             return false;
         }
 

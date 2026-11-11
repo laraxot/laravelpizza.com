@@ -24,7 +24,7 @@ function schemaType(SchemaObject|array $schema): ?string
 }
 
 test('robots policy hides private and untranslated pages', function (): void {
-    $policy = new ResolveRobotsPolicyAction();
+    $policy = new ResolveRobotsPolicyAction;
     $locales = ['it', 'en'];
 
     Assert::assertSame('noindex, follow', $policy->execute('it/auth/login', $locales));
@@ -33,7 +33,7 @@ test('robots policy hides private and untranslated pages', function (): void {
 });
 
 test('hreflang policy removes query fragments and adds the default locale', function (): void {
-    $policy = new ResolveHreflangAlternatesAction();
+    $policy = new ResolveHreflangAlternatesAction;
 
     Assert::assertSame(
         [
@@ -51,7 +51,7 @@ test('hreflang policy removes query fragments and adds the default locale', func
 });
 
 test('head schema separates homepage identity from page breadcrumbs', function (): void {
-    $builder = new BuildHeadSchemaAction();
+    $builder = new BuildHeadSchemaAction;
 
     $home = $builder->execute(
         isHome: true,
@@ -84,7 +84,7 @@ test('head schema separates homepage identity from page breadcrumbs', function (
 });
 
 test('page schema accepts the canonical URL rendered by the head component', function (): void {
-    $schema = (new BuildPageSchemaAction())->execute(
+    $schema = (new BuildPageSchemaAction)->execute(
         meta: MetatagData::make(),
         routeName: 'home',
         path: '/',

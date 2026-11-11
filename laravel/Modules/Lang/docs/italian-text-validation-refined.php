@@ -224,12 +224,12 @@ function auditRealItalianText(string $basePath): array
         foreach ($realItalianPatterns as $pattern) {
             $lineNumber = 0;
             foreach ($lines as $line) {
-                ++$lineNumber;
-                if (false !== stripos($line, $pattern)) {
+                $lineNumber++;
+                if (stripos($line, $pattern) !== false) {
                     // Verifica che non sia un falso positivo
                     $isExcluded = false;
                     foreach ($excludePatterns as $exclude) {
-                        if (false !== stripos($line, $exclude)) {
+                        if (stripos($line, $exclude) !== false) {
                             // Controlla se il pattern è parte del termine escluso
                             if (str_contains(strtolower($exclude), strtolower(trim($pattern)))) {
                                 $isExcluded = true;
@@ -277,7 +277,7 @@ function getLanguageFromPath(string $file): string
 }
 
 /**
- * @param array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string}>> $issues
+ * @param  array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string}>>  $issues
  */
 function generateRefinedReport(array $issues): string
 {

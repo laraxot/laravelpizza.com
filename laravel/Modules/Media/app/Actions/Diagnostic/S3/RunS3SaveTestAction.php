@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Diagnostic\S3;
 
-use Exception;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
@@ -13,7 +12,6 @@ use Spatie\QueueableAction\QueueableAction;
 class RunS3SaveTestAction
 {
     use QueueableAction;
-
 
     /**
      * @return array<string, mixed>

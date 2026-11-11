@@ -59,8 +59,8 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class AuthenticationLog extends BaseModel
 {
-    use MassPrunable;
     use AuthenticationLogRelationsTrait;
+    use MassPrunable;
 
     // public $timestamps = false;
 

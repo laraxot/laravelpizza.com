@@ -30,11 +30,11 @@ final class CollapsePathSegmentsAction
         $segments = [];
 
         foreach (explode('/', $path) as $segment) {
-            if ('' === $segment || '.' === $segment) {
+            if ($segment === '' || $segment === '.') {
                 continue;
             }
 
-            if ('..' === $segment) {
+            if ($segment === '..') {
                 array_pop($segments);
 
                 continue;

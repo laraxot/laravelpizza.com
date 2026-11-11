@@ -96,7 +96,7 @@ describe('Tenant statement coverage — actions', function (): void {
         Assert::assertSame('com/example', app(GetTenantNameAction::class)->execute());
 
         // solo la cartella creata dal test: config/com contiene configurazioni tenant reali
-    File::deleteDirectory($cfgRoot.'/com/example');
+        File::deleteDirectory($cfgRoot.'/com/example');
 
         $defaultHost = 'defaulthost.test';
         File::ensureDirectoryExists($cfgRoot.'/test/defaulthost');
@@ -106,7 +106,7 @@ describe('Tenant statement coverage — actions', function (): void {
         unset($_SERVER['SERVER_NAME']);
         Assert::assertSame('test/defaulthost', app(GetTenantNameAction::class)->execute());
         // solo la cartella creata dal test: config/test contiene configurazioni tenant reali
-    File::deleteDirectory($cfgRoot.'/test/defaulthost');
+        File::deleteDirectory($cfgRoot.'/test/defaulthost');
     });
 
     test('TranslateTenantKeyAction returns key when missing or non-string', function (): void {

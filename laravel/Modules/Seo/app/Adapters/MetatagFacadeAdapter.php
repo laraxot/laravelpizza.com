@@ -21,7 +21,7 @@ final class MetatagFacadeAdapter
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function set(array $data): void
     {
@@ -44,7 +44,7 @@ final class MetatagFacadeAdapter
     }
 
     /**
-     * @param array<string, string> $colors
+     * @param  array<string, string>  $colors
      */
     public function setColors(array $colors): void
     {

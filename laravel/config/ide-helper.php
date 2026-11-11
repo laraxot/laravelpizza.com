@@ -1,5 +1,19 @@
 <?php
 
+use Illuminate\Http\Client\Factory;
+use Illuminate\Http\Client\PendingRequest;
+use Modules\Geo\Models\Comune;
+use Modules\Geo\Models\Locality;
+use Modules\Geo\Models\Province;
+use Modules\Geo\Models\Region;
+use Modules\User\Models\OauthAccessToken;
+use Modules\User\Models\OauthAuthCode;
+use Modules\User\Models\OauthClient;
+use Modules\User\Models\OauthDeviceCode;
+use Modules\User\Models\OauthPersonalAccessClient;
+use Modules\User\Models\OauthRefreshToken;
+use Modules\User\Models\OauthToken;
+
 return [
 
     /*
@@ -157,18 +171,18 @@ return [
     'ignored_models' => [
         // App\MyModel::class,
         // OAuth models (extend Laravel Passport tokens)
-        Modules\User\Models\OauthAccessToken::class,
-        Modules\User\Models\OauthToken::class,
-        Modules\User\Models\OauthAuthCode::class,
-        Modules\User\Models\OauthRefreshToken::class,
-        Modules\User\Models\OauthClient::class,
-        Modules\User\Models\OauthPersonalAccessClient::class,
-        Modules\User\Models\OauthDeviceCode::class,
+        OauthAccessToken::class,
+        OauthToken::class,
+        OauthAuthCode::class,
+        OauthRefreshToken::class,
+        OauthClient::class,
+        OauthPersonalAccessClient::class,
+        OauthDeviceCode::class,
         // Sushi models (cause issues with ide-helper due to in-memory SQLite)
-        Modules\Geo\Models\Comune::class,
-        Modules\Geo\Models\Locality::class,
-        Modules\Geo\Models\Province::class,
-        Modules\Geo\Models\Region::class,
+        Comune::class,
+        Locality::class,
+        Province::class,
+        Region::class,
     ],
 
     /*
@@ -300,7 +314,7 @@ return [
     |
     */
     'macro_default_return_types' => [
-        Illuminate\Http\Client\Factory::class => Illuminate\Http\Client\PendingRequest::class,
+        Factory::class => PendingRequest::class,
     ],
 
     /*

@@ -23,7 +23,7 @@ it('renders the public profile route using the localized profile page', function
         cmsSkipTest('Public profile route returned server error in this install.');
     }
 
-    if (200 !== $status) {
+    if ($status !== 200) {
         cmsSkipTest("Public profile route returned {$status} — profile FO page not configured.");
     }
 

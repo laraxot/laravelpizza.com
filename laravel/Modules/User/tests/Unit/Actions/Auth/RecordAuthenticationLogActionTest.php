@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
 
 use function Safe\file_get_contents;
 
-uses(PHPUnit\Framework\TestCase::class);
+uses(TestCase::class);
 
 /**
  * Gate facts:
@@ -32,7 +33,7 @@ test('record authentication log action guards missing table', function (): void 
 
     expect($source)
         ->toContain('hasTable')
-        ->toContain("Log::warning")
+        ->toContain('Log::warning')
         ->toContain('authentication_logs missing on user connection');
 });
 

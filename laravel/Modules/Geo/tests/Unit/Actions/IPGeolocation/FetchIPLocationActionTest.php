@@ -21,9 +21,9 @@ uses(LightTestCase::class);
  */
 function createFetchIPLocationActionWithMock(): array
 {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
-    $action = new FetchIPLocationAction();
+    $action = new FetchIPLocationAction;
 
     $reflection = new \ReflectionClass($action);
     $property = $reflection->getProperty('client');

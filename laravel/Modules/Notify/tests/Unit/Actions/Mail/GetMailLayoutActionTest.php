@@ -12,7 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('GetMailLayoutAction', function () {
     it('can be instantiated', function () {
         Assert::assertSame(

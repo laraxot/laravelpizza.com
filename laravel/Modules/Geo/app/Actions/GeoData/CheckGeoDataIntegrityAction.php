@@ -11,7 +11,7 @@ class CheckGeoDataIntegrityAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function execute(array $data): bool
     {
@@ -38,8 +38,8 @@ class CheckGeoDataIntegrityAction
     }
 
     /**
-     * @param array<mixed, mixed> $region
-     * @param list<string>        $regionCodes
+     * @param  array<mixed, mixed>  $region
+     * @param  list<string>  $regionCodes
      *
      * @param-out list<string> $regionCodes
      */
@@ -71,8 +71,8 @@ class CheckGeoDataIntegrityAction
     }
 
     /**
-     * @param array<mixed, mixed> $province
-     * @param list<string>        $provinceCodes
+     * @param  array<mixed, mixed>  $province
+     * @param  list<string>  $provinceCodes
      *
      * @param-out list<string> $provinceCodes
      */
@@ -113,8 +113,8 @@ class CheckGeoDataIntegrityAction
     }
 
     /**
-     * @param array<mixed, mixed> $city
-     * @param list<string>        $cityCodes
+     * @param  array<mixed, mixed>  $city
+     * @param  list<string>  $cityCodes
      *
      * @param-out list<string> $cityCodes
      */

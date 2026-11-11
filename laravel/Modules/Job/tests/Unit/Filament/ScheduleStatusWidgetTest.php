@@ -9,7 +9,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('ScheduleStatusWidget espone solo comandi schedule in whitelist', function (): void {
-    $widget = new ScheduleStatusWidget();
+    $widget = new ScheduleStatusWidget;
     Assert::assertContains('schedule:list', $widget->getAllowedCommands());
     $widget->artisan('migrate:fresh');
     Assert::assertSame('', $widget->out);

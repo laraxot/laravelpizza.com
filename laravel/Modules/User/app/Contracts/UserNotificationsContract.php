@@ -14,7 +14,7 @@ use Modules\User\Models\Notification;
  * The capability is deliberately separate from UserContract: not every
  * contract implementation is required to persist notifications.
  *
- * @phpstan-require-extends \Illuminate\Database\Eloquent\Model
+ * @phpstan-require-extends Model
  */
 interface UserNotificationsContract extends UserContract
 {

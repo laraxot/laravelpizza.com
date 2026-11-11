@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Tests\Feature\Auth;
 use Livewire\Livewire;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
-use Modules\Gdpr\Tests\TestCase;
 
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */

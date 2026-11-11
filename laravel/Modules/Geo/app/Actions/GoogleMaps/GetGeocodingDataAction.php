@@ -9,10 +9,9 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\Geocoding\GeocodingData;
 use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
-
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottenere i dati di geocodifica da Google Maps.
@@ -25,8 +24,7 @@ class GetGeocodingDataAction
 
     public function __construct(
         private readonly Client $client,
-    ) {
-    }
+    ) {}
 
     /**
      * Ottiene i dati di geocodifica per un indirizzo.
@@ -113,7 +111,7 @@ class GetGeocodingDataAction
          * } $data */
         $data = json_decode($response, true);
 
-        if ('OK' !== $data['status'] || empty($data['results'])) {
+        if ($data['status'] !== 'OK' || empty($data['results'])) {
             Log::warning('Geocodifica fallita', [
                 'status' => $data['status'],
                 'error' => $data['error_message'] ?? 'Nessun risultato trovato',

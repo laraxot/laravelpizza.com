@@ -7,12 +7,12 @@ namespace Modules\Notify\Tests\Feature;
 use Illuminate\Support\Facades\Http;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Models\NotificationTemplate;
-use Modules\User\Database\Factories\UserFactory;
-use PHPUnit\Framework\Assert;
 use Modules\Notify\Tests\TestCase;
+use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Tests\XotBasePest;
+use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 beforeEach(function (): void {
     $user = UserFactory::new()->createOne(['email' => 'test@example.com']);
     $this->actingAs($user);

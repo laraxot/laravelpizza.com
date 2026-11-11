@@ -14,7 +14,7 @@ use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 function actionsNotificationManagerActiveTemplate(string $code): NotificationTemplate
 {
     return NotificationTemplateFactory::new()->createOne([

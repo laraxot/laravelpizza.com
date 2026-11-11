@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Video;
 
 use FFMpeg\Format\Video\X264;
-use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 

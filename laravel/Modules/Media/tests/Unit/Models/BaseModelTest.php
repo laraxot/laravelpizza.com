@@ -6,7 +6,6 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
-use Modules\Xot\Models\XotBaseModel;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

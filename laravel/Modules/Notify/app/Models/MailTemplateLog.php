@@ -38,7 +38,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|MailTemplateLog newQuery()
  * @method static Builder<static>|MailTemplateLog query()
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class MailTemplateLog extends BaseModel
 {

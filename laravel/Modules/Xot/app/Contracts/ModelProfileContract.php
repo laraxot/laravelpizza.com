@@ -16,7 +16,7 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 interface ModelProfileContract extends ModelContract
 {

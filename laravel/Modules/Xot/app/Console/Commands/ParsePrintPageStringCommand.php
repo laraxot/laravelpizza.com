@@ -3,6 +3,7 @@
 declare(strict_types=1);
 /**
  * Mirror di Modules\DbForge\Console\Commands\ParsePrintPageStringCommand (canonico, stessa signature).
+ *
  * @see ---
  */
 

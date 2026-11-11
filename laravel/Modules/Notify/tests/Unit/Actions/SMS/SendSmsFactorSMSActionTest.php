@@ -13,7 +13,7 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\class_uses;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('SendSmsFactorSMSAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);

@@ -12,9 +12,8 @@ class GetHereRouteDurationAndLengthAction
     use QueueableAction;
 
     public function __construct(
-        private readonly HereClient $hereClient = new HereClient(),
-    ) {
-    }
+        private readonly HereClient $hereClient = new HereClient,
+    ) {}
 
     /**
      * @return array<string, mixed>|null

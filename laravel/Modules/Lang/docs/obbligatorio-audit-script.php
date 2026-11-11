@@ -70,8 +70,8 @@ function auditObbligatorioInNonItalianFiles(string $basePath): array
         foreach ($obbligatorioPatterns as $pattern) {
             $lineNumber = 0;
             foreach ($lines as $line) {
-                ++$lineNumber;
-                if (false !== stripos($line, $pattern)) {
+                $lineNumber++;
+                if (stripos($line, $pattern) !== false) {
                     $fileIssues[] = [
                         'pattern' => $pattern,
                         'line' => $lineNumber,
@@ -171,7 +171,7 @@ function getSuggestedTranslation(string $italianText, string $targetLanguage): s
 }
 
 /**
- * @param array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string, suggested_translation: string}>> $issues
+ * @param  array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string, suggested_translation: string}>>  $issues
  */
 function generateObbligatorioReport(array $issues): string
 {

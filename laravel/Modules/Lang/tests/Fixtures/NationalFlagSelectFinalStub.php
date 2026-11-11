@@ -23,8 +23,7 @@ final class NationalFlagSelectFinalStub extends NationalFlagSelect
     }
 
     /**
-     * @param array<int, mixed> $filteredCountries
-     *
+     * @param  array<int, mixed>  $filteredCountries
      * @return array<int, mixed>
      */
     protected function finalizeFilteredCountries(array $filteredCountries): array

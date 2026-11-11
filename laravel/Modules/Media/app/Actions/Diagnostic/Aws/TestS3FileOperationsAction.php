@@ -11,7 +11,6 @@ class TestS3FileOperationsAction
 {
     use QueueableAction;
 
-
     /**
      * @return array<string, mixed>
      */

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Traits;
 
-use Modules\Job\Traits\FormatSeconds;
 use Modules\Job\Tests\TestCase;
+use Modules\Job\Traits\FormatSeconds;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

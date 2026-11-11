@@ -9,7 +9,7 @@ use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use PHPUnit\Framework\Assert;
 
 test('ValidateUserDataAction returns valid user data', function () {
-    $action = new ValidateUserDataAction();
+    $action = new ValidateUserDataAction;
     $uniqueEmail = 'test'.uniqid().'@example.com';
 
     $formData = [
@@ -36,7 +36,7 @@ test('ValidateUserDataAction returns valid user data', function () {
 });
 
 test('ValidateUserDataAction hashes password', function () {
-    $action = new ValidateUserDataAction();
+    $action = new ValidateUserDataAction;
     $uniqueEmail = 'test'.uniqid().'@example.com';
 
     $formData = [

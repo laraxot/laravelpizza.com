@@ -24,7 +24,6 @@ use Sushi\Sushi;
  * @method static Builder<static>|TenantDomain query()
  * @method static Builder<static>|TenantDomain whereId($value)
  * @method static Builder<static>|TenantDomain whereName($value)
- *
  */
 class TenantDomain extends BaseModel
 {

@@ -29,84 +29,81 @@ class GetNavigationItemByModulename
 
     /**
      * Ottiene gli elementi di navigazione per i moduli.
-     *
-     * @return NavigationItem
      */
     public function execute(string $module): NavigationItem
     {
 
+        $module_low = Str::lower($module);
+        Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
 
-            $module_low = Str::lower($module);
-            Assert::stringNotEmpty($module_low, 'Il nome del modulo convertito in minuscolo non può essere vuoto');
+        // Tolleranza: durante comandi CLI alcuni moduli possono non avere ancora struttura completa
+        $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
+        $configFilePath = $configPath.'/config.php';
 
-            // Tolleranza: durante comandi CLI alcuni moduli possono non avere ancora struttura completa
-            $configPath = app(GetModulePathByGeneratorAction::class)->execute($module, 'config');
-            $configFilePath = $configPath.'/config.php';
+        // Verifichiamo che il file esista
+        if (! File::exists($configFilePath)) {
+            throw new \Exception('Il file di configurazione non esiste: '.$configFilePath);
+        }
 
-            // Verifichiamo che il file esista
-            if (! File::exists($configFilePath)) {
-                throw new \Exception('Il file di configurazione non esiste: '.$configFilePath);
-            }
+        // Carichiamo la configurazione
+        /** @var array<string, mixed> $config */
+        $config = File::getRequire($configFilePath);
+        Assert::isArray($config, 'Il file di configurazione deve restituire un array');
 
-            // Carichiamo la configurazione
-            /** @var array<string, mixed> $config */
-            $config = File::getRequire($configFilePath);
-            Assert::isArray($config, 'Il file di configurazione deve restituire un array');
+        // Estraiamo i valori di configurazione con valori predefiniti
+        $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
+        Assert::string($icon, "L'icona deve essere una stringa");
 
-            // Estraiamo i valori di configurazione con valori predefiniti
-            $icon = $config['icon'] ?? 'heroicon-o-question-mark-circle';
-            Assert::string($icon, "L'icona deve essere una stringa");
+        // $role è sempre stringa non vuota (concatenazione di stringhe non vuote), check ridondante rimosso
+        $role = $module_low.'::admin';
 
-            // $role è sempre stringa non vuota (concatenazione di stringhe non vuote), check ridondante rimosso
-            $role = $module_low.'::admin';
+        $navigation_sort = $config['navigation_sort'] ?? 1;
+        Assert::integerish($navigation_sort, 'navigation_sort deve essere un intero');
+        $navigation_sort = (int) $navigation_sort;
 
-            $navigation_sort = $config['navigation_sort'] ?? 1;
-            Assert::integerish($navigation_sort, 'navigation_sort deve essere un intero');
-            $navigation_sort = (int) $navigation_sort;
+        // Check role using pre-loaded roles instead of hasRole() method
+        /*
+         $hasRole = in_array($role, $userRoles, true);
 
-            // Check role using pre-loaded roles instead of hasRole() method
-            /*
-             $hasRole = in_array($role, $userRoles, true);
+         // Only create NavigationItem if user has the role (memory optimization)
+         if ($hasRole) {
+             $nav = NavigationItem::make($module)
+                 ->url('/'.$module_low.'/admin')
+                 ->icon($icon)
+                 ->group('Modules')
+                 ->sort($navigation_sort)
+                 ->visible(true); // Already checked above
 
-             // Only create NavigationItem if user has the role (memory optimization)
-             if ($hasRole) {
-                 $nav = NavigationItem::make($module)
-                     ->url('/'.$module_low.'/admin')
-                     ->icon($icon)
-                     ->group('Modules')
-                     ->sort($navigation_sort)
-                     ->visible(true); // Already checked above
+             $navs[] = $nav;
+         }
+         */
 
-                 $navs[] = $nav;
-             }
-             */
+        // Creiamo l'elemento di navigazione
+        $nav = NavigationItem::make($module)
+            ->url('/'.$module_low.'/admin')
+            ->icon($icon)
+            ->group('Modules')
+            ->sort($navigation_sort)
+            ->visible(static function () use ($role): bool {
 
-            // Creiamo l'elemento di navigazione
-            $nav = NavigationItem::make($module)
-                ->url('/'.$module_low.'/admin')
-                ->icon($icon)
-                ->group('Modules')
-                ->sort($navigation_sort)
-                ->visible(static function () use ($role): bool {
+                /**
+                 * @var Authenticatable|null $user
+                 */
+                $user = Auth::user();
+                if ($user === null) {
+                    return false;
+                }
 
-                    /**
-                     * @var Authenticatable|null $user
-                     */
+                // Verifichiamo che il metodo hasRole esista
+                if (! method_exists($user, 'hasRole')) {
+                    return false;
+                }
 
-                    $user = Auth::user();
-                    if ($user === null) {
-                        return false;
-                    }
+                $res = (bool) $user->hasRole($role);
 
-                    // Verifichiamo che il metodo hasRole esista
-                    if (! method_exists($user, 'hasRole')) {
-                        return false;
-                    }
+                return $res;
 
-                    $res= (bool) $user->hasRole($role);
-                    return $res;
-
-                });
+            });
 
         return $nav;
     }

@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+use Modules\User\Tests\TestCase;
 use Symfony\Component\Finder\Finder;
 
 use function Safe\preg_match;
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('user boundaries depend on UserContract instead of BaseUser', function (): void {
     $root = dirname(__DIR__, 5);

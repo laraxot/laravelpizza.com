@@ -8,10 +8,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
-
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottenere l'indirizzo da coordinate geografiche usando Nominatim.
@@ -26,14 +25,14 @@ class ReverseGeocodeAction
 
     public function __construct()
     {
-        $this->client = new Client();
+        $this->client = new Client;
     }
 
     /**
      * Ottiene l'indirizzo da coordinate geografiche.
      *
-     * @param float $latitude  Latitudine
-     * @param float $longitude Longitudine
+     * @param  float  $latitude  Latitudine
+     * @param  float  $longitude  Longitudine
      *
      * @throws GuzzleException
      * @throws \RuntimeException

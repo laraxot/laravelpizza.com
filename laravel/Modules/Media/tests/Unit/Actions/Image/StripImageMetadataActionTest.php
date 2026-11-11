@@ -140,7 +140,7 @@ function stripActionMedia(string $bytes, string $fileName, ?string $mimeType): M
 {
     Storage::fake('public');
 
-    $media = new Media();
+    $media = new Media;
     $media->forceFill([
         'model_type' => 'strip-action-test',
         'model_id' => '1',
@@ -176,7 +176,7 @@ it('removes GPS and Exif from a JPEG, applies its orientation and updates the st
     $media = stripActionMedia($original, 'foto.jpg', 'image/jpeg');
     $path = $media->getPathRelativeToRoot();
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $clean = (string) Storage::disk('public')->get($path);
     $after = stripActionExif($clean);
@@ -206,7 +206,7 @@ it('removes text and XMP chunks from a PNG and keeps the picture', function (): 
 
     $media = stripActionMedia($original, 'foto.png', 'image/png');
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $clean = (string) Storage::disk('public')->get($media->getPathRelativeToRoot());
     Assert::assertStringStartsWith("\x89PNG\r\n\x1a\n", $clean);
@@ -224,7 +224,7 @@ it('leaves a PDF byte for byte identical and does not touch the record', functio
     $media = stripActionMedia($pdf, 'modulo.pdf', 'application/pdf');
     $size = (int) $media->size;
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     Assert::assertSame($pdf, Storage::disk('public')->get($media->getPathRelativeToRoot()));
     $media->refresh();
@@ -235,7 +235,7 @@ it('control: the same GPS JPEG recorded with another mime type keeps its GPS (th
     $original = stripActionGpsJpeg();
     $media = stripActionMedia($original, 'foto.bin', 'application/octet-stream');
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $kept = (string) Storage::disk('public')->get($media->getPathRelativeToRoot());
     Assert::assertSame($original, $kept);

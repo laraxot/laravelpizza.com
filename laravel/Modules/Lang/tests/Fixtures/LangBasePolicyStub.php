@@ -6,6 +6,4 @@ namespace Modules\Lang\Tests\Fixtures;
 
 use Modules\Lang\Models\Policies\LangBasePolicy;
 
-final class LangBasePolicyStub extends LangBasePolicy
-{
-}
+final class LangBasePolicyStub extends LangBasePolicy {}

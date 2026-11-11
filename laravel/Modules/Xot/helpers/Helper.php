@@ -13,11 +13,10 @@ use Illuminate\Testing\TestResponse;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Actions\File\FixPathAction;
+use Webmozart\Assert\Assert;
 
 use function Safe\define;
 use function Safe\preg_match;
-
-use Webmozart\Assert\Assert;
 
 if (! function_exists('merge_translation_files')) {
     /**

@@ -12,7 +12,7 @@ uses(TestCase::class);
 
 function makeGetTransPathAction(): GetTransPathAction
 {
-    return new GetTransPathAction();
+    return new GetTransPathAction;
 }
 
 describe('GetTransPathAction Business Logic', function () {

@@ -34,7 +34,7 @@ function searchPlacesActionWithQueue(Response ...$queue): array
 }
 
 /**
- * @param list<array<string, mixed>> $places
+ * @param  list<array<string, mixed>>  $places
  */
 function nominatimSearchResponse(array $places): Response
 {
@@ -49,7 +49,7 @@ function nominatimSearchResponse(array $places): Response
 function lastSearchQuery(MockHandler $mockHandler): array
 {
     $request = $mockHandler->getLastRequest();
-    if (null === $request) {
+    if ($request === null) {
         Assert::fail('Nominatim e stato chiamato zero volte');
     }
     parse_str($request->getUri()->getQuery(), $query);

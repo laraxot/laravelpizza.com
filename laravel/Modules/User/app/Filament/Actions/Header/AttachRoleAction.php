@@ -48,7 +48,7 @@ final class AttachRoleAction extends XotBaseAttachAction
             && Role::restrictAssignableBy(Role::query(), Auth::user())->whereKey($roleId)->exists();
 
         if (! $isAssignable) {
-            throw new AuthorizationException();
+            throw new AuthorizationException;
         }
     }
 

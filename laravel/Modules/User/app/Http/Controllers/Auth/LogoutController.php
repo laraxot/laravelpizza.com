@@ -7,6 +7,7 @@ declare(strict_types=1);
  *
  * @return RedirectResponse
  */
+
 namespace Modules\User\Http\Controllers\Auth;
 
 use Illuminate\Http\RedirectResponse;

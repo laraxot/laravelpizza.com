@@ -43,7 +43,6 @@ use Modules\Xot\Contracts\UserContract;
  * @method static Builder<static>|Tenant newModelQuery()
  * @method static Builder<static>|Tenant newQuery()
  * @method static Builder<static>|Tenant query()
- *
  */
 class Tenant extends BaseModel
 {

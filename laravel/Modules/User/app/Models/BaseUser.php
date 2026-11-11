@@ -129,7 +129,7 @@ use Spatie\Permission\Models\Permission;
  */
 abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuthentications, HasMedia, HasName, HasTeamsContract, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract, UserNotificationsContract
 {
-    use BaseUserMutators, BaseUserRelations, HasSpatiePermission, HasTeams, Notifiable, HasAuthenticationLogTrait {
+    use BaseUserMutators, BaseUserRelations, HasAuthenticationLogTrait, HasSpatiePermission, HasTeams, Notifiable {
         HasSpatiePermission::teams insteadof HasTeams;
         HasTeams::teams as membershipTeams;
         BaseUserRelations::notifications insteadof Notifiable;

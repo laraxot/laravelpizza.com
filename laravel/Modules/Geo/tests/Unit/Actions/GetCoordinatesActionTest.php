@@ -14,7 +14,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 it('returns coordinates for valid address', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -51,7 +51,7 @@ it('returns coordinates for valid address', function (): void {
 });
 
 it('throws exception when api key missing', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -67,7 +67,7 @@ it('throws exception when api key missing', function (): void {
 });
 
 it('throws exception when api request fails', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -87,7 +87,7 @@ it('throws exception when api request fails', function (): void {
 });
 
 it('returns null for invalid address', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Invalid Address That Does Not Exist';
@@ -110,7 +110,7 @@ it('returns null for invalid address', function (): void {
 });
 
 it('returns null for over query limit status', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -133,7 +133,7 @@ it('returns null for over query limit status', function (): void {
 });
 
 it('returns null for request denied status', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -156,7 +156,7 @@ it('returns null for request denied status', function (): void {
 });
 
 it('handles empty results array', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -179,7 +179,7 @@ it('handles empty results array', function (): void {
 });
 
 it('handles multiple results and returns first', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma, Italia';
@@ -223,7 +223,7 @@ it('handles multiple results and returns first', function (): void {
 });
 
 it('handles special characters in address', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia - Ufficio 4° piano';
@@ -258,7 +258,7 @@ it('handles special characters in address', function (): void {
 });
 
 it('handles numeric coordinates correctly', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = '123 Main St, New York, NY';
@@ -294,7 +294,7 @@ it('handles numeric coordinates correctly', function (): void {
 });
 
 it('handles very long addresses', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = str_repeat('Via Roma 123, Milano, Italia - ', 50).'Ufficio 4° piano';
@@ -329,7 +329,7 @@ it('handles very long addresses', function (): void {
 });
 
 it('handles coordinates with high precision', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Precise Location Test';
@@ -365,7 +365,7 @@ it('handles coordinates with high precision', function (): void {
 });
 
 it('handles network timeout gracefully', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';
@@ -385,7 +385,7 @@ it('handles network timeout gracefully', function (): void {
 });
 
 it('handles invalid json response', function (): void {
-    $action = new GetCoordinatesAction();
+    $action = new GetCoordinatesAction;
 
     // Arrange
     $address = 'Via Roma 123, Milano, Italia';

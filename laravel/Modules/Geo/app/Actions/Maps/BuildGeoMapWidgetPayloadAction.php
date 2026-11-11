@@ -138,8 +138,7 @@ class BuildGeoMapWidgetPayloadAction
     }
 
     /**
-     * @param Collection<int, Place> $places
-     *
+     * @param  Collection<int, Place>  $places
      * @return array{lat: float, lng: float}
      */
     private function resolveCenter(Collection $places): array
@@ -162,13 +161,13 @@ class BuildGeoMapWidgetPayloadAction
     {
         $title = $place->name;
 
-        if (\is_string($title) && '' !== trim($title)) {
+        if (\is_string($title) && trim($title) !== '') {
             return trim($title);
         }
 
         $formattedAddress = $place->getFormattedAddress();
 
-        if ('' !== $formattedAddress) {
+        if ($formattedAddress !== '') {
             return $formattedAddress;
         }
 

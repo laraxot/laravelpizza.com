@@ -6,6 +6,7 @@ namespace Modules\Tenant\Tests\Unit\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
+use League\Csv\Exception;
 use Mockery;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Tests\TestCase;
@@ -74,5 +75,5 @@ it('throws when csv file is missing', function (): void {
     File::delete(TestCase::$testDirectory.'/catalog.csv');
 
     expect(fn () => (new CatalogSushiCsvModel)->getSushiRows())
-        ->toThrow(\League\Csv\Exception::class);
+        ->toThrow(Exception::class);
 });

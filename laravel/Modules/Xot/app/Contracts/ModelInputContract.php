@@ -51,6 +51,6 @@ use Illuminate\Support\Carbon;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 interface ModelInputContract {}

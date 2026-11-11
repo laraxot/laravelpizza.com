@@ -3,8 +3,10 @@
 declare(strict_types=1);
 
 use App\Providers\FortifyServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
+use Tests\TestCase;
 
-uses(\Tests\TestCase::class, \Modules\Xot\Tests\CreatesApplication::class);
+uses(TestCase::class, CreatesApplication::class);
 
 test('fortify service provider can be instantiated', function (): void {
     $provider = new FortifyServiceProvider(app());

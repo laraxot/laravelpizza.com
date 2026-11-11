@@ -145,8 +145,7 @@ class ActivityLogger
             ->whereIn('causer_id', $userKeyValues)
             ->where('causer_type', $user::class)
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }
@@ -163,8 +162,7 @@ class ActivityLogger
             ->where('subject_type', $model::class)
             ->where('subject_id', $model->getKey())
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }
@@ -187,8 +185,7 @@ class ActivityLogger
             ->with(['causer', 'subject'])
             ->where('event', $type)
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }
@@ -207,8 +204,7 @@ class ActivityLogger
         $query = Activity::typedQuery()
             ->with(['causer', 'subject'])
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }

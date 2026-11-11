@@ -13,7 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('EsendexSendAction', function () {
     it('can be instantiated', function () {
         Assert::assertTrue(class_exists(EsendexSendAction::class));

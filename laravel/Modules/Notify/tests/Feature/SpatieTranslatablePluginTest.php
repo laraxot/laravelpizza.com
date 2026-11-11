@@ -11,13 +11,14 @@ use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Livewire\Livewire;
 use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates;
+use Modules\Notify\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\actingAs;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 beforeEach(function (): void {
     $user = UserFactory::new()->createOne();
     Assert::assertInstanceOf(Authenticatable::class, $user);

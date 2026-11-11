@@ -76,6 +76,5 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property string|null $trial_ends_at
  *
  * @method static Builder<static>|Tenant whereTrialEndsAt($value)
- *
  */
 class Tenant extends BaseTenant {}

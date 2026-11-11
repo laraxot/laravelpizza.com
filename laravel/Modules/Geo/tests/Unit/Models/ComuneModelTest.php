@@ -7,6 +7,7 @@ namespace Modules\Geo\Tests\Unit\Models;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Modules\Geo\Models\Comune;
+use Modules\Geo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
@@ -42,7 +43,7 @@ function comuneModelFixtures(): array
     ];
 }
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @var \Modules\Geo\Tests\TestCase $this */

@@ -10,7 +10,7 @@ use PHPUnit\Framework\Assert;
 
 describe('MenuResource', function (): void {
     test('menu resource has correct model', function (): void {
-        $resource = new MenuResource();
+        $resource = new MenuResource;
 
         Assert::assertSame(Menu::class, $resource::getModel());
     });
@@ -33,10 +33,10 @@ describe('MenuResource', function (): void {
                 continue;
             }
             $name = $item->getName();
-            if ('title' === $name) {
+            if ($name === 'title') {
                 $hasTitle = true;
             }
-            if ('items' === $name) {
+            if ($name === 'items') {
                 $hasItems = true;
             }
         }

@@ -8,9 +8,10 @@ use Illuminate\Support\Facades\Http;
 use Modules\Notify\Actions\SMS\FormatSmsMessageAction;
 use Modules\Notify\Actions\SMS\NormalizePhoneNumberAction;
 use Modules\Notify\Actions\SMS\SendSmsAction;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 beforeEach(function (): void {
     $this->sendAction = app(SendSmsAction::class);
     $this->normalizeAction = app(NormalizePhoneNumberAction::class);

@@ -72,9 +72,9 @@ use Webmozart\Assert\Assert;
  */
 class Role extends SpatieRole
 {
-    use RoleRelationsTrait;
     use HasXotFactory;
     use RelationX;
+    use RoleRelationsTrait;
     use Updater;
 
     // use HasUuids;

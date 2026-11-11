@@ -8,7 +8,7 @@ use Modules\Geo\Models\BaseModel;
 
 /**
  * @property int|string|null $id
- * @property mixed|null      $address
+ * @property mixed|null $address
  */
 abstract class GeoPhpstanProbeModel extends BaseModel
 {

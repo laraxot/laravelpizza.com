@@ -9,6 +9,7 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
 /**
  * @template TModel of BaseTreeModel
+ *
  * @implements HasRecursiveRelationshipsContract<TModel>
  */
 abstract class BaseTreeModel extends BaseModel implements HasRecursiveRelationshipsContract

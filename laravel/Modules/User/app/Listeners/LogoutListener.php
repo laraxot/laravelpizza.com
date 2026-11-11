@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Modules\User\Actions\Authentication\GetAuthenticationLogQueryForAuthenticatableAction;
 use Modules\User\Actions\GetCurrentDeviceAction;
-use Modules\User\Contracts\UserContract;
 use Modules\User\Contracts\HasAuthentications;
+use Modules\User\Contracts\UserContract;
 use Modules\User\Models\DeviceUser;
 
 class LogoutListener

@@ -11,15 +11,12 @@ use Mockery\Expectation;
 use Mockery\MockInterface;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Providers\XotServiceProvider;
 use Modules\Xot\Tests\XotBasePest;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\MockObject\MockObject;
 use ReflectionClass;
-use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
-
-use function Safe\file_get_contents;
 
 /**
  * Base test case for Media module.
@@ -115,7 +112,7 @@ abstract class TestCase extends XotBaseTestCase
      * @template T of object
      *
      * @param  class-string<T>  $class
-     * @return T&\PHPUnit\Framework\MockObject\MockObject
+     * @return T&MockObject
      */
     public function makeTestMock(string $class): object
     {

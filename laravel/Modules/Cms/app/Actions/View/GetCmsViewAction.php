@@ -17,11 +17,10 @@ class GetCmsViewAction
      * This action encapsulates the logic for validating a view name and asserting its existence,
      * specifically addressing PHPStan's `view-string` type requirement.
      *
-     * @param string $viewName The name of the view to resolve (e.g., 'pub_theme::components.sections.home' or 'cms::components.section')
+     * @param  string  $viewName  The name of the view to resolve (e.g., 'pub_theme::components.sections.home' or 'cms::components.section')
+     * @return view-string The resolved and existing view name
      *
      * @throws \Exception If the view does not exist
-     *
-     * @return view-string The resolved and existing view name
      */
     public function execute(string $viewName): string
     {

@@ -12,10 +12,11 @@ use PHPUnit\Framework\Assert;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
+
 use function Safe\exec;
 use function Safe\file_get_contents;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
  * @return list<string>

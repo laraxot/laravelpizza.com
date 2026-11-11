@@ -9,7 +9,7 @@ use Modules\Gdpr\Models\Event;
 use PHPUnit\Framework\Assert;
 
 test('event_fillable_attributes', function (): void {
-    $event = new Event();
+    $event = new Event;
     $fillable = $event->getFillable();
 
     assertFillableContains([
@@ -23,38 +23,38 @@ test('event_fillable_attributes', function (): void {
 });
 
 test('event_has_consent_relationship_method', function (): void {
-    $event = new Event();
+    $event = new Event;
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('consent'));
 });
 
 test('event_table_name_is_gdpr_events', function (): void {
-    $event = new Event();
+    $event = new Event;
 
     Assert::assertSame('gdpr_events', $event->getTable());
 });
 
 test('event_is_not_incrementing', function (): void {
-    $event = new Event();
+    $event = new Event;
 
     Assert::assertFalse($event->getIncrementing());
 });
 
 test('event_is_uuid', function (): void {
-    $event = new Event();
+    $event = new Event;
     $traits = class_uses_recursive($event);
 
     Assert::assertArrayHasKey(HasUuids::class, $traits);
 });
 
 test('event_has_set_payload_attribute', function (): void {
-    $event = new Event();
+    $event = new Event;
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setPayloadAttribute'));
 });
 
 test('event_has_set_ip_attribute', function (): void {
-    $event = new Event();
+    $event = new Event;
 
     Assert::assertTrue((new \ReflectionClass($event))->hasMethod('setIpAttribute'));
 });

@@ -26,7 +26,7 @@ class RegionSeeder extends Seeder
     {
         $this->command?->info('RegionSeeder: download dati regioni italiane...');
 
-        $downloader = new GeoJsonDownloader();
+        $downloader = new GeoJsonDownloader;
         $regions = $downloader->extractRegions();
 
         if (empty($regions)) {
@@ -65,12 +65,12 @@ class RegionSeeder extends Seeder
     /**
      * Salva i dati nel file JSON del tenant.
      *
-     * @param array<int, array<string, mixed>> $data
+     * @param  array<int, array<string, mixed>>  $data
      */
     protected function saveToTenantJson(string $table, array $data): void
     {
         $tenant = config('tenant.current', 'central');
-        $tenant = is_string($tenant) && '' !== $tenant ? $tenant : 'central';
+        $tenant = is_string($tenant) && $tenant !== '' ? $tenant : 'central';
         $path = config_path("{$tenant}/database/content/{$table}.json");
 
         $dir = dirname($path);

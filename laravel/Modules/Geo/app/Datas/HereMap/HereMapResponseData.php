@@ -10,14 +10,13 @@ use Spatie\LaravelData\Data;
 class HereMapResponseData extends Data
 {
     /**
-     * @param array<string, mixed>|null $position
-     * @param array<string, mixed>|null $address
+     * @param  array<string, mixed>|null  $position
+     * @param  array<string, mixed>|null  $address
      */
     public function __construct(
         #[MapInputName('items.0.position')]
         public ?array $position,
         #[MapInputName('items.0.address')]
         public ?array $address,
-    ) {
-    }
+    ) {}
 }

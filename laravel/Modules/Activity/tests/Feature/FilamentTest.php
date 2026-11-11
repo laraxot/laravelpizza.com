@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
+
 use Filament\Actions\Action;
 use Filament\Tables\Table;
 use Modules\Activity\Events\ActivityEvent;
@@ -25,9 +26,10 @@ use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use PHPUnit\Framework\Assert;
+
 use function Safe\class_uses;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('ActivityEvent', function (): void {
     test('can be instantiated', function (): void {

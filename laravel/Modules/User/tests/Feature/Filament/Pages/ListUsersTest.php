@@ -62,7 +62,7 @@ test('list users page has correct table actions', function (): void {
 
 test('list users page has correct header widgets', function (): void {
     // `getHeaderWidgets()` e' protected: Filament lo legge internamente, qui lo si legge via Reflection.
-    $widgets = (new ReflectionMethod(ListUsers::class, 'getHeaderWidgets'))->invoke(new ListUsers());
+    $widgets = (new ReflectionMethod(ListUsers::class, 'getHeaderWidgets'))->invoke(new ListUsers);
 
     expect($widgets)->toBe([UserOverview::class]);
 });
@@ -95,13 +95,13 @@ test('list users page has correct navigation label', function (): void {
 });
 
 test('list users page has correct title', function (): void {
-    expect((new ListUsers())->getTitle())->not->toBeEmpty();
+    expect((new ListUsers)->getTitle())->not->toBeEmpty();
 });
 
 test('list users page has correct breadcrumbs', function (): void {
     // Senza i parametri di rotta del tenant la generazione lancia: il test non e' applicabile.
     try {
-        $breadcrumbs = (new ListUsers())->getBreadcrumbs();
+        $breadcrumbs = (new ListUsers)->getBreadcrumbs();
     } catch (Exception) {
         $this->markTestSkipped('Breadcrumbs need route parameters not available in multi-tenant setup.');
     }

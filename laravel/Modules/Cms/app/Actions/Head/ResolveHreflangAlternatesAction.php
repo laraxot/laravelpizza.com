@@ -20,8 +20,7 @@ final class ResolveHreflangAlternatesAction
     public const string X_DEFAULT = 'x-default';
 
     /**
-     * @param list<string>|null $onlyLocales lingue in cui la pagina esiste davvero; `null` = tutte quelle supportate
-     *
+     * @param  list<string>|null  $onlyLocales  lingue in cui la pagina esiste davvero; `null` = tutte quelle supportate
      * @return array<string, string> codice lingua => URL assoluta
      */
     public function execute(?array $onlyLocales = null): array
@@ -29,7 +28,7 @@ final class ResolveHreflangAlternatesAction
         $urls = [];
         foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $code) {
             $url = LaravelLocalization::getLocalizedURL($code, null, [], true);
-            if (is_string($url) && (null === $onlyLocales || in_array((string) $code, $onlyLocales, true))) {
+            if (is_string($url) && ($onlyLocales === null || in_array((string) $code, $onlyLocales, true))) {
                 $urls[(string) $code] = $url;
             }
         }
@@ -38,8 +37,7 @@ final class ResolveHreflangAlternatesAction
     }
 
     /**
-     * @param array<string, string> $localizedUrls codice lingua => URL della stessa pagina in quella lingua
-     *
+     * @param  array<string, string>  $localizedUrls  codice lingua => URL della stessa pagina in quella lingua
      * @return array<string, string>
      */
     public function build(array $localizedUrls, string $defaultLocale): array

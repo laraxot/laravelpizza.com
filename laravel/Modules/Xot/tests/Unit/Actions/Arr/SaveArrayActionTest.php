@@ -49,5 +49,5 @@ test('save array action throws exception for unsupported format', function () us
     $action = app(SaveArrayAction::class);
 
     expect(fn (): bool => $action->execute(['foo' => 'bar'], $filename, 'xml'))
-        ->toThrow(\InvalidArgumentException::class, 'Formato non supportato: xml');
+        ->toThrow(InvalidArgumentException::class, 'Formato non supportato: xml');
 });

@@ -12,15 +12,14 @@ use Illuminate\View\Factory;
 use Illuminate\View\FileViewFinder;
 use Livewire\Wireable;
 use Modules\Cms\Actions\ResolveBlockQueryAction;
-
-use function Safe\fclose;
-use function Safe\fopen;
-use function Safe\fread;
-
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\DataCollection;
 use Webmozart\Assert\Assert;
+
+use function Safe\fclose;
+use function Safe\fopen;
+use function Safe\fread;
 
 class BlockData extends Data implements Wireable
 {
@@ -42,7 +41,7 @@ class BlockData extends Data implements Wireable
     public bool $active = true;
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function __construct(string $type, array $data, ?string $slug = null, bool $active = true)
     {
@@ -73,8 +72,7 @@ class BlockData extends Data implements Wireable
     }
 
     /**
-     * @param EloquentCollection<int, mixed>|Collection<int, mixed>|array<int, mixed> $data
-     *
+     * @param  EloquentCollection<int, mixed>|Collection<int, mixed>|array<int, mixed>  $data
      * @return DataCollection<int, BlockData>|array<int, BlockData>
      */
     public static function collection(EloquentCollection|Collection|array $data): DataCollection|array

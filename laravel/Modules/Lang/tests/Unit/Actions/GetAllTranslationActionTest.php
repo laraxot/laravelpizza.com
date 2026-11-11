@@ -12,7 +12,7 @@ uses(TestCase::class);
 
 function makeGetAllTranslationAction(): GetAllTranslationAction
 {
-    return new GetAllTranslationAction();
+    return new GetAllTranslationAction;
 }
 
 describe('GetAllTranslationAction Business Logic', function () {

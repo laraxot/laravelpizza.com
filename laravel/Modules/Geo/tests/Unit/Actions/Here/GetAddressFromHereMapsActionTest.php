@@ -12,7 +12,7 @@ use PHPUnit\Framework\Assert;
 
 uses(LightTestCase::class);
 it('throws exception when api key is not configured', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => null]);
 
@@ -26,7 +26,7 @@ it('throws exception when api key is not configured', function (): void {
 });
 
 it('returns null when api response is not successful', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => 'test_key']);
 
@@ -40,7 +40,7 @@ it('returns null when api response is not successful', function (): void {
 });
 
 it('returns null when no position in response', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => 'test_key']);
 
@@ -61,7 +61,7 @@ it('returns null when no position in response', function (): void {
 });
 
 it('returns null when no address in response', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => 'test_key']);
 
@@ -82,7 +82,7 @@ it('returns null when no address in response', function (): void {
 });
 
 it('returns address data for valid response', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => 'test_key']);
 
@@ -124,7 +124,7 @@ it('returns address data for valid response', function (): void {
 });
 
 it('uses default country when missing', function (): void {
-    $action = new GetAddressFromHereMapsAction();
+    $action = new GetAddressFromHereMapsAction;
 
     config(['services.here.key' => 'test_key']);
 

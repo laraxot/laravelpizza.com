@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Actions\Maps;
 
-use function Safe\file_get_contents;
-
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\file_get_contents;
 
 /**
  * @phpstan-type GeoProperties array<string, scalar|null>
@@ -57,8 +57,7 @@ class LoadGeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $decoded
-     *
+     * @param  array<array-key, mixed>  $decoded
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -66,7 +65,7 @@ class LoadGeoMapDatasetAction
         $type = $decoded['type'] ?? null;
         $features = $decoded['features'] ?? null;
 
-        if ('FeatureCollection' !== $type || ! is_array($features)) {
+        if ($type !== 'FeatureCollection' || ! is_array($features)) {
             throw new \RuntimeException('GeoMapWidget dataset is not a valid FeatureCollection.');
         }
 
@@ -79,7 +78,7 @@ class LoadGeoMapDatasetAction
 
             $normalizedFeature = $this->normalizeFeature($feature);
 
-            if (null !== $normalizedFeature) {
+            if ($normalizedFeature !== null) {
                 $normalized[] = $normalizedFeature;
             }
         }
@@ -88,8 +87,7 @@ class LoadGeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $feature
-     *
+     * @param  array<array-key, mixed>  $feature
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -111,7 +109,7 @@ class LoadGeoMapDatasetAction
 
         $normalizedProperties = $this->normalizeProperties($properties);
 
-        if (null === $normalizedProperties) {
+        if ($normalizedProperties === null) {
             return null;
         }
 
@@ -126,8 +124,7 @@ class LoadGeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $properties
-     *
+     * @param  array<array-key, mixed>  $properties
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array
@@ -135,7 +132,7 @@ class LoadGeoMapDatasetAction
         $normalized = [];
 
         foreach ($properties as $key => $value) {
-            if (! is_string($key) || (! is_scalar($value) && null !== $value)) {
+            if (! is_string($key) || (! is_scalar($value) && $value !== null)) {
                 return null;
             }
 

@@ -20,7 +20,7 @@ class CalculateGeoDistanceAction
         if ($lat1 === $lat2 && $lon1 === $lon2) {
             return 0.0;
         }
-        if (null === $lat1 || null === $lon1 || null === $lat2 || null === $lon2) {
+        if ($lat1 === null || $lon1 === null || $lat2 === null || $lon2 === null) {
             return null;
         }
 
@@ -32,7 +32,7 @@ class CalculateGeoDistanceAction
         $dist = rad2deg($dist);
         $miles = $dist * 60 * 1.1515;
 
-        if (null === $unit) {
+        if ($unit === null) {
             $unit = 'K';
         }
         $unit = strtoupper($unit);

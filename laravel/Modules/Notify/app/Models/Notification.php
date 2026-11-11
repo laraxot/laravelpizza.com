@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseModel;
@@ -54,7 +55,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Notification whereUpdatedAt($value)
  * @method static Builder<static>|Notification whereUpdatedBy($value)
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class Notification extends BaseModel
 {

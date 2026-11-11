@@ -23,8 +23,7 @@ class ThemeMetadataData extends Data
             'md' => '768px',
             'lg' => '1024px',
         ],
-    ) {
-    }
+    ) {}
 
     /**
      * Retrieves the spacing unit for a given scale key.

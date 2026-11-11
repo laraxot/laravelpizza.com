@@ -7,11 +7,12 @@ namespace Modules\Notify\Tests\Feature;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Database\Factories\NotificationTemplateVersionFactory;
 use Modules\Notify\Models\NotificationTemplate;
+use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use RuntimeException;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('Notification Template Version Business Logic', function (): void {
     test('_can_create_template_version_with_basic_information', function (): void {
         $template = NotificationTemplateFactory::new()->createOne();

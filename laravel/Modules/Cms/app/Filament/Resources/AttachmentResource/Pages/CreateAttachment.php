@@ -15,7 +15,7 @@ class CreateAttachment extends LangBaseCreateRecord
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         // Handle translatable attachment field for FileUpload in create mode
-        if (isset($data['attachment']) && is_string($data['attachment']) && '' !== $data['attachment']) {
+        if (isset($data['attachment']) && is_string($data['attachment']) && $data['attachment'] !== '') {
             $currentLocale = app()->getLocale();
 
             // Generate UUID for the file

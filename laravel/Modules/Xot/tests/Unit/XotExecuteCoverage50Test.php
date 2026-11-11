@@ -35,6 +35,7 @@ use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
 use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
 use Modules\Xot\Filament\Actions\Header\ExportXlsLazyAction;
 use Modules\Xot\Filament\Builders\ColumnBuilder;
+use Modules\Xot\Filament\Links\RecordAnchor;
 use Modules\Xot\Filament\Pages\ArtisanCommandsManager;
 use Modules\Xot\Filament\Pages\EnvPage;
 use Modules\Xot\Filament\Pages\HealthPage;
@@ -53,7 +54,6 @@ use Modules\Xot\Filament\Resources\ModuleResource;
 use Modules\Xot\Filament\Resources\ModuleResource\Pages\ListModules;
 use Modules\Xot\Filament\Resources\SessionResource;
 use Modules\Xot\Filament\Resources\SessionResource\Pages\ListSessions;
-use Modules\Xot\Filament\Links\RecordAnchor;
 use Modules\Xot\Filament\Widgets\Clock;
 use Modules\Xot\Filament\Widgets\EnvWidget;
 use Modules\Xot\Filament\Widgets\FilterFormWidget;
@@ -706,7 +706,7 @@ describe('Xot execute coverage floor 50', function (): void {
     });
 
     test('Support ColumnBuilder BaseQueryBuilder HandlerDecorator e zero-coverage bulk', function (): void {
-        $support = \Modules\Xot\Filament\Builders\ColumnBuilder::class;
+        $support = ColumnBuilder::class;
         Assert::assertNotNull($support::id());
         Assert::assertNotNull($support::name());
         Assert::assertNotNull($support::title());

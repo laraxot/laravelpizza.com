@@ -3,7 +3,6 @@
 declare(strict_types=1);
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogModelCreatedAction;
-use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;

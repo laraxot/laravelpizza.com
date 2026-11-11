@@ -7,6 +7,7 @@ namespace Modules\Job\Tests\Unit\Actions;
 use Modules\Job\Actions\ClearScheduleCacheAction;
 use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Spatie\QueueableAction\QueueableAction;
 
 uses(TestCase::class);
 
@@ -23,7 +24,7 @@ describe('ClearScheduleCacheAction', function () {
 
     it('uses QueueableAction trait', function () {
         $reflection = new \ReflectionClass(ClearScheduleCacheAction::class);
-        Assert::assertContains(\Spatie\QueueableAction\QueueableAction::class, $reflection->getTraitNames());
+        Assert::assertContains(QueueableAction::class, $reflection->getTraitNames());
     });
 
     it('has correct namespace', function () {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions;
 
+use Filament\Support\Colors\Color;
 use Modules\Xot\Enums\PaDesignColorEnum;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -47,12 +48,12 @@ final class PaDesignColorsAction
     public function filamentPalette(): array
     {
         return [
-            'danger' => \Filament\Support\Colors\Color::Red,
-            'gray' => \Filament\Support\Colors\Color::Zinc,
-            'info' => \Filament\Support\Colors\Color::hex(self::INSTITUTIONAL_BLUE_HEX),
-            'primary' => \Filament\Support\Colors\Color::hex(self::PRIMARY_HEX),
-            'success' => \Filament\Support\Colors\Color::Green,
-            'warning' => \Filament\Support\Colors\Color::Orange,
+            'danger' => Color::Red,
+            'gray' => Color::Zinc,
+            'info' => Color::hex(self::INSTITUTIONAL_BLUE_HEX),
+            'primary' => Color::hex(self::PRIMARY_HEX),
+            'success' => Color::Green,
+            'warning' => Color::Orange,
         ];
     }
 }

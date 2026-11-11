@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
-use Modules\User\Models\Tenant;
 use Mockery\MockInterface;
+use Modules\User\Models\Tenant;
 use Tests\TestCase;
 
 use function Safe\json_encode;
@@ -259,7 +259,7 @@ class TenantTest extends TestCase
 
     public function test_resolve_route_binding_query_preserve_slug_per_has_slug(): void
     {
-        $tenant = new Tenant();
+        $tenant = new Tenant;
 
         /** @var list<array{string, string|int}> $calls */
         $calls = [];
@@ -281,7 +281,7 @@ class TenantTest extends TestCase
 
     public function test_resolve_route_binding_query_uses_id_for_non_uuid_value(): void
     {
-        $tenant = new Tenant();
+        $tenant = new Tenant;
 
         /** @var list<array{string, string|int}> $calls */
         $calls = [];
@@ -303,7 +303,7 @@ class TenantTest extends TestCase
 
     public function test_resolve_route_binding_query_accetta_uuid_valido_sulla_chiave_univoca(): void
     {
-        $tenant = new Tenant();
+        $tenant = new Tenant;
 
         $uuid = (string) Str::uuid();
 

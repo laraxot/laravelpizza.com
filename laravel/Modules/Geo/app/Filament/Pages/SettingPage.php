@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Pages;
 
 use Modules\Xot\Filament\Pages\BaseSettingPage;
-
 use Modules\Xot\Filament\Widgets\EnvWidget;
 
 /**

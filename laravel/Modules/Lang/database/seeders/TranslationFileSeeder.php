@@ -16,7 +16,7 @@ class TranslationFileSeeder extends Seeder
     {
         $count = TranslationFile::query()->count();
 
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info("TranslationFileSeeder: {$count} file lang indicizzati via Sushi.");
         }
     }

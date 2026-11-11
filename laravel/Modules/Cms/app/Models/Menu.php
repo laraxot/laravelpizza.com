@@ -18,21 +18,21 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  *
  * @implements HasRecursiveRelationshipsContract<Model>
  *
- * @property string                $id
- * @property string|null           $title
- * @property int|null              $parent_id
- * @property string|null           $created_at
- * @property string|null           $updated_at
- * @property string|null           $created_by
- * @property string|null           $updated_by
+ * @property string $id
+ * @property string|null $title
+ * @property int|null $parent_id
+ * @property string|null $created_at
+ * @property string|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
  * @property Collection<int, Menu> $children
- * @property int|null              $children_count
- * @property ProfileContract|null  $creator
- * @property Menu|null             $parent
- * @property ProfileContract|null  $updater
- * @property int                   $depth
- * @property string                $path
- * @property Collection<int, Menu> $ancestors      The model's recursive parents.
+ * @property int|null $children_count
+ * @property ProfileContract|null $creator
+ * @property Menu|null $parent
+ * @property ProfileContract|null $updater
+ * @property int $depth
+ * @property string $path
+ * @property Collection<int, Menu> $ancestors The model's recursive parents.
  * @property-read int|null $ancestors_count
  * @property-read Collection<int, Menu> $ancestorsAndSelf The model's recursive parents and itself.
  * @property-read int|null $ancestors_and_self_count
@@ -53,30 +53,30 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  * @property-read int|null $siblings_and_self_count
  *
  * @method static Collection<int, static> all($columns = ['*'])
- * @method static Builder<static>|Menu    breadthFirst()
- * @method static Builder<static>|Menu    depthFirst()
- * @method static Builder<static>|Menu    doesntHaveChildren()
+ * @method static Builder<static>|Menu breadthFirst()
+ * @method static Builder<static>|Menu depthFirst()
+ * @method static Builder<static>|Menu doesntHaveChildren()
  * @method static Collection<int, static> get($columns = ['*'])
- * @method static Builder<static>|Menu    getExpressionGrammar()
- * @method static Builder<static>|Menu    hasChildren()
- * @method static Builder<static>|Menu    hasParent()
- * @method static Builder<static>|Menu    isLeaf()
- * @method static Builder<static>|Menu    isRoot()
- * @method static Builder<static>|Menu    newModelQuery()
- * @method static Builder<static>|Menu    newQuery()
- * @method static Builder<static>|Menu    query()
- * @method static Builder<static>|Menu    tree($maxDepth = null)
- * @method static Builder<static>|Menu    treeOf(\Illuminate\Database\Eloquent\Model|callable $constraint, $maxDepth = null)
- * @method static Builder<static>|Menu    whereCreatedAt($value)
- * @method static Builder<static>|Menu    whereCreatedBy($value)
- * @method static Builder<static>|Menu    whereDepth($operator, $value = null)
- * @method static Builder<static>|Menu    whereId($value)
- * @method static Builder<static>|Menu    whereParentId($value)
- * @method static Builder<static>|Menu    whereTitle($value)
- * @method static Builder<static>|Menu    whereUpdatedAt($value)
- * @method static Builder<static>|Menu    whereUpdatedBy($value)
- * @method static Builder<static>|Menu    withGlobalScopes(array<string, mixed> $scopes)
- * @method static Builder<static>|Menu    withRelationshipExpression($direction, callable $constraint, $initialDepth, $from = null, $maxDepth = null)
+ * @method static Builder<static>|Menu getExpressionGrammar()
+ * @method static Builder<static>|Menu hasChildren()
+ * @method static Builder<static>|Menu hasParent()
+ * @method static Builder<static>|Menu isLeaf()
+ * @method static Builder<static>|Menu isRoot()
+ * @method static Builder<static>|Menu newModelQuery()
+ * @method static Builder<static>|Menu newQuery()
+ * @method static Builder<static>|Menu query()
+ * @method static Builder<static>|Menu tree($maxDepth = null)
+ * @method static Builder<static>|Menu treeOf(\Illuminate\Database\Eloquent\Model|callable $constraint, $maxDepth = null)
+ * @method static Builder<static>|Menu whereCreatedAt($value)
+ * @method static Builder<static>|Menu whereCreatedBy($value)
+ * @method static Builder<static>|Menu whereDepth($operator, $value = null)
+ * @method static Builder<static>|Menu whereId($value)
+ * @method static Builder<static>|Menu whereParentId($value)
+ * @method static Builder<static>|Menu whereTitle($value)
+ * @method static Builder<static>|Menu whereUpdatedAt($value)
+ * @method static Builder<static>|Menu whereUpdatedBy($value)
+ * @method static Builder<static>|Menu withGlobalScopes(array<string, mixed> $scopes)
+ * @method static Builder<static>|Menu withRelationshipExpression($direction, callable $constraint, $initialDepth, $from = null, $maxDepth = null)
  *
  * @mixin \Eloquent
  */

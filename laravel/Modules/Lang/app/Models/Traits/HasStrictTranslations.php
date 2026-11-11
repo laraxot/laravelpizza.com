@@ -8,6 +8,7 @@ use Spatie\Translatable\HasTranslations;
 
 /**
  * Trait che estende HasTranslations con tipi di ritorno più stretti.
+ *
  * @phpstan-ignore trait.unused
  */
 trait HasStrictTranslations // @phpstan-ignore trait.unused
@@ -17,17 +18,16 @@ trait HasStrictTranslations // @phpstan-ignore trait.unused
     }
 
     /**
-     * @param string $key               Il nome dell'attributo da tradurre
-     * @param string $locale            Il codice della lingua richiesta
-     * @param bool   $useFallbackLocale Se utilizzare o meno la lingua di fallback
-     *
+     * @param  string  $key  Il nome dell'attributo da tradurre
+     * @param  string  $locale  Il codice della lingua richiesta
+     * @param  bool  $useFallbackLocale  Se utilizzare o meno la lingua di fallback
      * @return string|array<string, mixed>|int|null Il valore tradotto dell'attributo
      */
     public function getTranslation(string $key, string $locale, bool $useFallbackLocale = true): string|array|int|null
     {
         $value = $this->spatieGetTranslation($key, $locale, $useFallbackLocale);
 
-        if (is_string($value) || is_int($value) || null === $value) {
+        if (is_string($value) || is_int($value) || $value === null) {
             return $value;
         }
 
@@ -51,8 +51,7 @@ trait HasStrictTranslations // @phpstan-ignore trait.unused
     }
 
     /**
-     * @param array<array-key, mixed> $value
-     *
+     * @param  array<array-key, mixed>  $value
      * @return array<string, mixed>
      */
     private static function normalizeTranslationArray(array $value): array

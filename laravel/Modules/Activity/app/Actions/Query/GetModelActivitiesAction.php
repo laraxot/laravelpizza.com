@@ -26,8 +26,7 @@ class GetModelActivitiesAction
             ->where('subject_type', $model::class)
             ->where('subject_id', $model->getKey())
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }

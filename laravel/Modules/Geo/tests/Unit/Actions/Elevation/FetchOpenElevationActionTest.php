@@ -21,7 +21,7 @@ use function Safe\json_encode;
  */
 function createFetchOpenElevationActionWithMock(): array
 {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
 
     return [new FetchOpenElevationAction($client), $mockHandler];

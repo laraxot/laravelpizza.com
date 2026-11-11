@@ -28,7 +28,7 @@ final class StripImageMetadataAction
     {
         $encoder = match ($media->mime_type) {
             'image/jpeg' => new JpegEncoder(quality: self::JPEG_QUALITY, strip: true),
-            'image/png' => new PngEncoder(),
+            'image/png' => new PngEncoder,
             default => null,
         };
         if ($encoder === null) {

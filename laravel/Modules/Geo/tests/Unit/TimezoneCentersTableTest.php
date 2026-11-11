@@ -54,7 +54,7 @@ it('has valid coordinates for every timezone and covers the whole tz database of
     $missing = [];
     foreach (DateTimeZone::listIdentifiers() as $zone) {
         $location = (new DateTimeZone($zone))->getLocation();
-        $hasPlace = is_array($location) && (0 != $location['latitude'] || 0 != $location['longitude']);
+        $hasPlace = is_array($location) && ($location['latitude'] != 0 || $location['longitude'] != 0);
         if ($hasPlace && ! isset($table[$zone])) {
             $missing[] = $zone;
         }

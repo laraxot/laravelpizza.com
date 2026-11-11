@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\Media;
 use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
 use Modules\Notify\Enums\NotificationTypeEnum;
@@ -51,7 +52,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array<int, string> $locales)
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {

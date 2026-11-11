@@ -24,7 +24,6 @@ use Modules\Xot\Models\XotBaseModel;
  * @method static Builder<static>|AiToolLog newModelQuery()
  * @method static Builder<static>|AiToolLog newQuery()
  * @method static Builder<static>|AiToolLog query()
- *
  */
 class AiToolLog extends XotBaseModel
 {

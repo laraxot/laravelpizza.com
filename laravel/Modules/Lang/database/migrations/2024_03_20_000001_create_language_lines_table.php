@@ -5,7 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Lang\Models\LanguageLine;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = LanguageLine::class;
 
     public function up(): void

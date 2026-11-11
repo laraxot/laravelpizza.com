@@ -17,6 +17,6 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 interface PivotContract {}

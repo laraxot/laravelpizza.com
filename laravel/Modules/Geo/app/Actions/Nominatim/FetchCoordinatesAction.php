@@ -8,10 +8,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Infrastructure\Config\GeoApiEndpoints;
+use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
-
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per ottenere le coordinate geografiche da un indirizzo usando Nominatim.
@@ -26,13 +25,13 @@ class FetchCoordinatesAction
 
     public function __construct()
     {
-        $this->client = new Client();
+        $this->client = new Client;
     }
 
     /**
      * Ottiene le coordinate geografiche da un indirizzo.
      *
-     * @param string $address Indirizzo da geocodificare
+     * @param  string  $address  Indirizzo da geocodificare
      *
      * @throws GuzzleException
      * @throws \RuntimeException

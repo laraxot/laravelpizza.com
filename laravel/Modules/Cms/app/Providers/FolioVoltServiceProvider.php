@@ -19,20 +19,17 @@ use Modules\Cms\Http\Middleware\SetFolioLocale;
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
+use Webmozart\Assert\Assert;
 
 use function Safe\preg_replace;
 use function Safe\realpath;
-
-use Webmozart\Assert\Assert;
 
 class FolioVoltServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
      */
-    public function register(): void
-    {
-    }
+    public function register(): void {}
 
     /**
      * Bootstrap services.

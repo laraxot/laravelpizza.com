@@ -13,7 +13,6 @@ use Modules\Xot\Models\BaseModel;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
-use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Tests\Fixtures\Models\TestConcreteBaseModel;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\Updater;

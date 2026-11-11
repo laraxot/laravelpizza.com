@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Modules\User\Models\Profile;
@@ -21,7 +20,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * The `id` is NEVER exposed in APIs or URLs; `uuid` is used for all external
  * references. XotBaseModel::casts() already handles both.
  */
-return new class() extends XotBaseMigration
+return new class extends XotBaseMigration
 {
     protected ?string $model_class = Profile::class;
 
@@ -60,8 +59,6 @@ return new class() extends XotBaseMigration
             $table->string('updated_by')->nullable();
             $table->string('deleted_by')->nullable();
         });
-
-
 
         // -- UPDATE (existing installations: additive, idempotent) --
         $this->tableUpdate(function (Blueprint $table): void {

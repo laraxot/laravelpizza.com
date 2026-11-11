@@ -6,7 +6,6 @@ namespace Modules\Activity\Tests\Unit;
 
 use Carbon\Carbon;
 use PHPUnit\Framework\Assert;
-use Tests\TestCase;
 use RuntimeException;
 
 use function Safe\json_decode;
@@ -87,7 +86,7 @@ describe('Event Sourcing Business Logic', function () {
             $activity = (object) $this->activityData;
             $properties = $activity->properties;
             if (! is_array($properties)) {
-                throw new \RuntimeException('Activity properties must be an array');
+                throw new RuntimeException('Activity properties must be an array');
             }
 
             // Business Logic: Properties must contain tracking data
@@ -99,7 +98,7 @@ describe('Event Sourcing Business Logic', function () {
 
             // IP validation business logic
             if (! is_string($properties['ip_address'])) {
-                throw new \RuntimeException('Activity IP address must be a string');
+                throw new RuntimeException('Activity IP address must be a string');
             }
             Assert::assertMatchesRegularExpression('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', $properties['ip_address']);
         });
@@ -144,7 +143,7 @@ describe('Event Sourcing Business Logic', function () {
 
             // Business Logic: Event class must be valid PHP class name
             if (! is_string($event->event_class)) {
-                throw new \RuntimeException('Event class must be a string');
+                throw new RuntimeException('Event class must be a string');
             }
             Assert::assertMatchesRegularExpression('/^[A-Z][a-zA-Z0-9\\\\]*$/', $event->event_class);
             Assert::assertStringContainsString('\\', $event->event_class);
@@ -154,7 +153,7 @@ describe('Event Sourcing Business Logic', function () {
             $event = (object) $this->storedEventData;
             $properties = $event->event_properties;
             if (! is_array($properties)) {
-                throw new \RuntimeException('Event properties must be an array');
+                throw new RuntimeException('Event properties must be an array');
             }
 
             // Business Logic: Event properties must have identifiers
@@ -168,7 +167,7 @@ describe('Event Sourcing Business Logic', function () {
             $event = (object) $this->storedEventData;
             $metadata = $event->meta_data;
             if (! is_array($metadata)) {
-                throw new \RuntimeException('Event metadata must be an array');
+                throw new RuntimeException('Event metadata must be an array');
             }
 
             // Business Logic: Metadata must support distributed tracing
@@ -177,7 +176,7 @@ describe('Event Sourcing Business Logic', function () {
             Assert::assertArrayHasKey('causation_id', $metadata);
 
             if (! is_string($metadata['correlation_id']) || ! is_string($metadata['causation_id'])) {
-                throw new \RuntimeException('Event tracing identifiers must be strings');
+                throw new RuntimeException('Event tracing identifiers must be strings');
             }
             Assert::assertStringStartsWith('corr-', $metadata['correlation_id']);
             Assert::assertStringStartsWith('cause-', $metadata['causation_id']);
@@ -186,7 +185,7 @@ describe('Event Sourcing Business Logic', function () {
         it('maintains aggregate UUID consistency', function () {
             $event = (object) $this->storedEventData;
             if (! is_string($event->aggregate_uuid)) {
-                throw new \RuntimeException('Aggregate UUID must be a string');
+                throw new RuntimeException('Aggregate UUID must be a string');
             }
 
             // Business Logic: Aggregate UUID must be consistent across events
@@ -208,7 +207,7 @@ describe('Event Sourcing Business Logic', function () {
             $snapshot = (object) $this->snapshotData;
             $state = $snapshot->state;
             if (! is_array($state)) {
-                throw new \RuntimeException('Snapshot state must be an array');
+                throw new RuntimeException('Snapshot state must be an array');
             }
 
             // Business Logic: Snapshot must contain complete state

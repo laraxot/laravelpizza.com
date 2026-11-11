@@ -44,4 +44,3 @@ it('returns plain fallback path when public_html base path does not exist', func
 
     expect($result)->toBe($basePath.'/../public_html/foo/bar');
 });
-

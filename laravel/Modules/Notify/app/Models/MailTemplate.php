@@ -9,6 +9,7 @@ use Exception;
 use Illuminate\Contracts\Mail\Mailable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
@@ -71,12 +72,13 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
  * @method static Builder<static>|MailTemplate whereVersion($value)
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
     /** @use HasFactory<MailTemplateFactory> */
     use HasFactory;
+
     use HasSlug;
 
     // use SoftDeletes;

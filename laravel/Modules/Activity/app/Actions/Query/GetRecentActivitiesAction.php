@@ -28,8 +28,7 @@ class GetRecentActivitiesAction
         $query = Activity::typedQuery()
             ->with(['causer', 'subject'])
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }

@@ -7,12 +7,13 @@ namespace Modules\Notify\Tests\Unit\Actions\SMS;
 use Modules\Notify\Actions\SMS\SendGammuSMSAction;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionNamedType;
 use Spatie\QueueableAction\QueueableAction;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 test('gammu sms action has the expected public contract', function (): void {
     $reflection = new ReflectionClass(SendGammuSMSAction::class);
     $method = $reflection->getMethod('execute');

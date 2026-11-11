@@ -95,4 +95,3 @@ it('UI Datas UserData is a Spatie Data class', function (): void {
 
     Assert::assertSame('test@example.com', $data->email);
 });
-

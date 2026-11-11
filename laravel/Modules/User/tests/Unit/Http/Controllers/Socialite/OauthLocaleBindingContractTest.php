@@ -15,7 +15,7 @@ uses(TestCase::class);
  */
 test('RedirectToProviderController declares lang before provider', function (): void {
     $method = new ReflectionMethod(RedirectToProviderController::class, '__invoke');
-    $names = array_map(static fn (\ReflectionParameter $p) => $p->getName(), $method->getParameters());
+    $names = array_map(static fn (ReflectionParameter $p) => $p->getName(), $method->getParameters());
 
     Assert::assertContains('lang', $names);
     Assert::assertContains('provider', $names);

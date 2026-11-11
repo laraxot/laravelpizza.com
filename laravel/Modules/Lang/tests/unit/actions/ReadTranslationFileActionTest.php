@@ -44,7 +44,7 @@ function readTranslationTestFilePath(): string
 
 function makeReadTranslationFileAction(): ReadTranslationFileAction
 {
-    return new ReadTranslationFileAction();
+    return new ReadTranslationFileAction;
 }
 
 afterEach(function (): void {

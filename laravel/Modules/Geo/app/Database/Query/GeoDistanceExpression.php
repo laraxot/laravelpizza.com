@@ -13,8 +13,7 @@ final class GeoDistanceExpression implements Expression
         private readonly float $latitude,
         private readonly float $longitude,
         private readonly ?string $alias = null,
-    ) {
-    }
+    ) {}
 
     public function getValue(Grammar $grammar): string
     {
@@ -25,7 +24,7 @@ final class GeoDistanceExpression implements Expression
             $this->latitude,
         );
 
-        if (null !== $this->alias) {
+        if ($this->alias !== null) {
             $sql .= ' AS '.$this->alias;
         }
 

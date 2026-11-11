@@ -19,9 +19,9 @@ class GoogleMapsClient extends GeoHttpClientBase
     private const string ELEVATION_URL = GeoApiEndpoints::GOOGLE_ELEVATION;
 
     /**
-     * @throws GoogleMapsApiException
-     *
      * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException
      */
     public function reverseGeocode(float $latitude, float $longitude): array
     {
@@ -37,12 +37,11 @@ class GoogleMapsClient extends GeoHttpClientBase
     }
 
     /**
-     * @param array<string> $origins
-     * @param array<string> $destinations
+     * @param  array<string>  $origins
+     * @param  array<string>  $destinations
+     * @return array<string, mixed>
      *
      * @throws GoogleMapsApiException
-     *
-     * @return array<string, mixed>
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {
@@ -60,9 +59,9 @@ class GoogleMapsClient extends GeoHttpClientBase
     }
 
     /**
-     * @throws GoogleMapsApiException
-     *
      * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException
      */
     public function getElevation(float $latitude, float $longitude): array
     {

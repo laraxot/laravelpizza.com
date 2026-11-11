@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Activity\Models;
 
 use Illuminate\Support\Carbon;
-use Modules\Activity\Database\Factories\SnapshotFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 
@@ -20,7 +19,6 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- *
  */
 class Snapshot extends SpatieSnapshot
 {

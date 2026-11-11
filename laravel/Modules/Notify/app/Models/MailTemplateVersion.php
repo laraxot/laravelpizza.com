@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
@@ -58,7 +59,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|MailTemplateVersion whereUpdatedBy($value)
  * @method static Builder<static>|MailTemplateVersion whereVersion($value)
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class MailTemplateVersion extends BaseModel
 {

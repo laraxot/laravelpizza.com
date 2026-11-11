@@ -101,7 +101,7 @@ class CoordinatePicker extends Field
     }
 
     /**
-     * @param array<string, mixed> $input
+     * @param  array<string, mixed>  $input
      */
     protected function mutateState(array $input): void
     {
@@ -110,7 +110,7 @@ class CoordinatePicker extends Field
     }
 
     /**
-     * @param array<string, mixed> $coords
+     * @param  array<string, mixed>  $coords
      */
     #[On('coords-changed')]
     public function handleCoordsChanged(array $coords): void
@@ -149,7 +149,7 @@ class CoordinatePicker extends Field
             }
 
             $displayName = $data['display_name'] ?? null;
-            if (! is_string($displayName) || '' === trim($displayName)) {
+            if (! is_string($displayName) || trim($displayName) === '') {
                 return null;
             }
 
@@ -165,8 +165,7 @@ class CoordinatePicker extends Field
     }
 
     /**
-     * @param array<mixed> $data
-     *
+     * @param  array<mixed>  $data
      * @return array<string, float|null>
      */
     public static function extractCoordinates(array $data, string $fieldName = 'coordinates', string $latitudeColumn = 'latitude', string $longitudeColumn = 'longitude'): array

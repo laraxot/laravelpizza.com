@@ -18,7 +18,7 @@ function makeGetElevationAction(GoogleMapsAction $mapsService): GetElevationActi
 {
     app()->instance(GoogleMapsAction::class, $mapsService);
 
-    return new GetElevationAction();
+    return new GetElevationAction;
 }
 
 it('gets elevation for valid location', function (): void {
@@ -38,7 +38,7 @@ it('gets elevation for valid location', function (): void {
 });
 
 it('throws exception for invalid latitude', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     try {
         $action->execute(new LocationData(latitude: 100.0, longitude: 9.1900, address: 'Invalid Location'));
@@ -49,7 +49,7 @@ it('throws exception for invalid latitude', function (): void {
 });
 
 it('throws exception for invalid longitude', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     try {
         $action->execute(new LocationData(latitude: 45.4642, longitude: 200.0, address: 'Invalid Location'));
@@ -60,7 +60,7 @@ it('throws exception for invalid longitude', function (): void {
 });
 
 it('throws exception for negative latitude', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     try {
         $action->execute(new LocationData(latitude: -100.0, longitude: 9.1900, address: 'Invalid Location'));
@@ -71,7 +71,7 @@ it('throws exception for negative latitude', function (): void {
 });
 
 it('throws exception for negative longitude', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     try {
         $action->execute(new LocationData(latitude: 45.4642, longitude: -200.0, address: 'Invalid Location'));
@@ -115,25 +115,25 @@ it('throws exception when service throws generic exception', function (): void {
 });
 
 it('formats elevation correctly', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     Assert::assertSame('1234.5 m s.l.m.', $action->formatElevation(1234.5));
 });
 
 it('formats elevation with zero value', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     Assert::assertSame('0.0 m s.l.m.', $action->formatElevation(0));
 });
 
 it('formats negative elevation correctly', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     Assert::assertSame('-430.0 m s.l.m.', $action->formatElevation(-430.0));
 });
 
 it('handles high elevation correctly', function (): void {
-    $action = makeGetElevationAction(new GoogleMapsActionElevationStub());
+    $action = makeGetElevationAction(new GoogleMapsActionElevationStub);
 
     Assert::assertSame('8848.0 m s.l.m.', $action->formatElevation(8848.0));
 });

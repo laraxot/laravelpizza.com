@@ -6,7 +6,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Gdpr\Models\Event;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = Event::class;
 
     /**

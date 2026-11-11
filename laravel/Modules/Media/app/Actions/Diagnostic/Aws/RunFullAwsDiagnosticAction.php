@@ -10,7 +10,6 @@ class RunFullAwsDiagnosticAction
 {
     use QueueableAction;
 
-
     /**
      * @return array<string, mixed>
      */

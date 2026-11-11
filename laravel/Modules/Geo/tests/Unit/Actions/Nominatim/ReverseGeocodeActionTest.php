@@ -29,7 +29,7 @@ uses(LightTestCase::class);
 function reverseGeocodeActionWithQueue(Response|\Throwable ...$queue): array
 {
     $mockHandler = new MockHandler(array_values($queue));
-    $action = new ReverseGeocodeAction();
+    $action = new ReverseGeocodeAction;
 
     (new \ReflectionProperty($action, 'client'))->setValue($action, new Client(['handler' => HandlerStack::create($mockHandler)]));
 
@@ -63,7 +63,7 @@ test('ReverseGeocodeAction calls the Nominatim reverse endpoint with coordinates
     $action->execute(45.4642, 9.19);
 
     $request = $mockHandler->getLastRequest();
-    if (null === $request) {
+    if ($request === null) {
         Assert::fail('Nominatim e stato chiamato zero volte');
     }
     parse_str($request->getUri()->getQuery(), $query);

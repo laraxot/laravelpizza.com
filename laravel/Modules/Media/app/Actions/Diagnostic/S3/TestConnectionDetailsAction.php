@@ -13,7 +13,6 @@ class TestConnectionDetailsAction
 {
     use QueueableAction;
 
-
     /**
      * @return array<string, mixed>
      */

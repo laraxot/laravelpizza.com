@@ -43,7 +43,7 @@ abstract class TestCase extends XotBaseTestCase
         $connections = config('database.connections', []);
 
         foreach (array_keys($connections) as $connection) {
-            if ('sqlite' !== config("database.connections.{$connection}.driver")) {
+            if (config("database.connections.{$connection}.driver") !== 'sqlite') {
                 continue;
             }
 

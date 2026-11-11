@@ -102,7 +102,7 @@ test('TranslatorAdapter coerces non-string loaded values', function (): void {
     // connessione a SQLite avrebbe dato l'impressione di proteggere qualcosa
     // che non e' in pericolo, e avrebbe contraddetto la regola per cui i test
     // girano sulle repliche MySQL. Story LANG-17.4.
-    $loader = new ArrayLoader();
+    $loader = new ArrayLoader;
     $adapter = new TranslatorAdapter($loader, 'it');
     $loaded = new ReflectionProperty(LaravelTranslator::class, 'loaded');
     $loaded->setAccessible(true);

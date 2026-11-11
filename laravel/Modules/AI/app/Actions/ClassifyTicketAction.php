@@ -6,7 +6,6 @@ namespace Modules\AI\Actions;
 
 use Illuminate\Support\Facades\Cache;
 use Modules\AI\Actions\Prompt\BuildAIPromptAction;
-use Modules\AI\Actions\MakeAIRequestAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**

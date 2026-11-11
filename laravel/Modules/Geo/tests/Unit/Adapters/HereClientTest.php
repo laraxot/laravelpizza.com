@@ -11,7 +11,7 @@ use PHPUnit\Framework\Assert;
 uses(LightTestCase::class);
 
 it('uses the HERE routing endpoint', function (): void {
-    Assert::assertSame('https://router.hereapi.com/v8/routes', (new HereClient())->base_url);
+    Assert::assertSame('https://router.hereapi.com/v8/routes', (new HereClient)->base_url);
 });
 
 it('exposes route summary lookup', function (): void {

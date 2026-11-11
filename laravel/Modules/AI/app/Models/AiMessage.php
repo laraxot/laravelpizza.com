@@ -23,7 +23,6 @@ use Modules\Xot\Models\XotBaseModel;
  * @method static Builder<static>|AiMessage newModelQuery()
  * @method static Builder<static>|AiMessage newQuery()
  * @method static Builder<static>|AiMessage query()
- *
  */
 class AiMessage extends XotBaseModel
 {

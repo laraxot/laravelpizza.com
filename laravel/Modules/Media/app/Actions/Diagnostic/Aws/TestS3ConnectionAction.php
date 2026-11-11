@@ -11,7 +11,6 @@ class TestS3ConnectionAction
 {
     use QueueableAction;
 
-
     /**
      * @return array<string, mixed>
      */

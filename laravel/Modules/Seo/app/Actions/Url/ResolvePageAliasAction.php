@@ -21,8 +21,8 @@ final class ResolvePageAliasAction
     /**
      * Percorso canonico (con lingua) a cui reindirizzare, o null se `$path` non e' un alias.
      *
-     * @param list<string>          $locales lingue che possono prefissare il percorso
-     * @param array<array-key,mixed> $aliases alias => canonico, senza lingua
+     * @param  list<string>  $locales  lingue che possono prefissare il percorso
+     * @param  array<array-key,mixed>  $aliases  alias => canonico, senza lingua
      */
     public function execute(string $path, array $locales, array $aliases): ?string
     {
@@ -43,7 +43,7 @@ final class ResolvePageAliasAction
     /**
      * `true` se il percorso di pagina (senza lingua: `chi-siamo`, `blog/vecchio`) e' un alias in uso.
      *
-     * @param array<array-key,mixed> $aliases alias => canonico, senza lingua
+     * @param  array<array-key,mixed>  $aliases  alias => canonico, senza lingua
      */
     public function isAlias(string $pagePath, array $aliases): bool
     {
@@ -51,7 +51,7 @@ final class ResolvePageAliasAction
     }
 
     /**
-     * @param array<array-key,mixed> $aliases
+     * @param  array<array-key,mixed>  $aliases
      */
     private function canonicalOf(string $pagePath, array $aliases): ?string
     {

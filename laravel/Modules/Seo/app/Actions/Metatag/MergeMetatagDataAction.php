@@ -13,7 +13,7 @@ final class MergeMetatagDataAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $partial
+     * @param  array<string, mixed>  $partial
      */
     public function execute(array $partial): void
     {

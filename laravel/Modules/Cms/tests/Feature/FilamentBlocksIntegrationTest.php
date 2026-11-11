@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature;
 
-
 use function Pest\Laravel\get;
 
 describe('Filament Blocks Integration', function () {

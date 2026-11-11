@@ -30,6 +30,5 @@ class SocialShareData extends Data
         public ?string $hashtags = null,
         public ?string $via = null,
         public array $platforms = ['facebook', 'twitter', 'linkedin', 'whatsapp', 'telegram', 'copy'],
-    ) {
-    }
+    ) {}
 }

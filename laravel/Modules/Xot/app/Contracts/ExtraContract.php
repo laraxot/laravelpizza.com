@@ -45,6 +45,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 interface ExtraContract {}

@@ -36,7 +36,7 @@ function breadcrumbItems(SchemaObject|array $schema): array
 }
 
 test('home identity does not depend on the language of the page that publishes it', function (string $locale, string $homeUrl): void {
-    $schemas = (new BuildHeadSchemaAction())->execute(
+    $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: true,
         brand: 'Example',
         homeUrl: $homeUrl,
@@ -63,7 +63,7 @@ test('home identity does not depend on the language of the page that publishes i
 ]);
 
 test('a site written in one language declares that language as a single value', function (): void {
-    $schemas = (new BuildHeadSchemaAction())->execute(
+    $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: true,
         brand: 'Example',
         homeUrl: 'https://example.test/it',
@@ -79,7 +79,7 @@ test('a site written in one language declares that language as a single value', 
 });
 
 test('inner pages link to the web site and use short breadcrumb names', function (): void {
-    $schemas = (new BuildHeadSchemaAction())->execute(
+    $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: false,
         brand: 'Example',
         homeUrl: 'https://example.test/it',
@@ -101,7 +101,7 @@ test('inner pages link to the web site and use short breadcrumb names', function
 });
 
 test('the first breadcrumb falls back to the brand and an existing isPartOf is kept', function (): void {
-    $schemas = (new BuildHeadSchemaAction())->execute(
+    $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: false,
         brand: 'Example',
         homeUrl: 'https://example.test/it',

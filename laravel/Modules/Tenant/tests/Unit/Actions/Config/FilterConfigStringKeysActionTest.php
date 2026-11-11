@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 use Modules\Tenant\Actions\Config\FilterConfigStringKeysAction;
+use Modules\Tenant\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Tenant\Tests\TestCase::class);
+uses(TestCase::class);
 
 it('keeps only string keys', function (): void {
     $result = app(FilterConfigStringKeysAction::class)->execute([

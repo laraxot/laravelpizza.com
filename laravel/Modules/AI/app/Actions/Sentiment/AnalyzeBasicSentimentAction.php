@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\AI\Actions\Sentiment;
 
-use function Safe\preg_match_all;
-
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\preg_match_all;
 
 final class AnalyzeBasicSentimentAction
 {

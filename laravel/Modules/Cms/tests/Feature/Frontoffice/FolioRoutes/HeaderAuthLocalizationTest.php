@@ -10,7 +10,7 @@ it('GET /de localizes guest auth labels in header', function (): void {
         cmsSkipTest("Route /de returned server error ({$status}).");
     }
 
-    if (200 !== $status) {
+    if ($status !== 200) {
         cmsSkipTest("Route /de returned {$status} — cannot verify header auth localization.");
     }
 
@@ -31,7 +31,7 @@ it('GET /en localizes guest auth labels in header', function (): void {
         cmsSkipTest("Route /en returned server error ({$status}).");
     }
 
-    if (200 !== $status) {
+    if ($status !== 200) {
         cmsSkipTest("Route /en returned {$status} — cannot verify header auth localization.");
     }
 

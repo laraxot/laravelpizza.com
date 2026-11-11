@@ -74,7 +74,7 @@ function assertGdprTableHas(string $table, array $where, ?string $connection = '
 }
 
 /**
- * @param array<string, mixed> $where
+ * @param  array<string, mixed>  $where
  */
 function assertGdprTableMissing(string $table, array $where, ?string $connection = 'gdpr'): void
 {
