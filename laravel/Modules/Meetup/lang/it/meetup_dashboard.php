@@ -41,5 +41,10 @@ return [
         'delete' => [
             'label' => 'Elimina Meetup Dashboard',
         ],
+        'logout' => [
+            'tooltip' => 'logout',
+            'icon' => 'logout',
+            'label' => 'logout',
+        ],
     ],
 ];

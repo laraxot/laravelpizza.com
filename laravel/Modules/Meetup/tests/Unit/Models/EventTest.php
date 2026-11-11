@@ -52,7 +52,8 @@ test('upcoming scope filters events correctly', function () {
     ]);
     $pastEvent = Event::factory()->past()->create();
 
-    $upcomingEvents = Event::upcoming()->get();
+    // Solo gli eventi del test: il database condiviso puo' contenerne migliaia.
+    $upcomingEvents = Event::upcoming()->whereKey([$upcomingEvent->id, $pastEvent->id])->get();
 
     expect($upcomingEvents->contains($upcomingEvent))->toBeTrue()
         ->and($upcomingEvents->contains($pastEvent))->toBeFalse();
@@ -64,7 +65,7 @@ test('past scope filters events correctly', function () {
     ]);
     $pastEvent = Event::factory()->past()->create();
 
-    $pastEvents = Event::past()->get();
+    $pastEvents = Event::past()->whereKey([$upcomingEvent->id, $pastEvent->id])->get();
 
     expect($pastEvents->contains($pastEvent))->toBeTrue()
         ->and($pastEvents->contains($upcomingEvent))->toBeFalse();
