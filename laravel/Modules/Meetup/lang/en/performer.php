@@ -54,7 +54,7 @@ return [
         ],
         'github' => [
             'label' => 'GitHub',
-            'placeholder' => 'username',
+            'placeholder' => '',
             'helper_text' => '',
             'description' => '',
             'tooltip' => '',
@@ -68,7 +68,7 @@ return [
         ],
         'twitter' => [
             'label' => 'X / Twitter',
-            'placeholder' => 'username',
+            'placeholder' => '',
             'helper_text' => '',
             'description' => '',
             'tooltip' => '',

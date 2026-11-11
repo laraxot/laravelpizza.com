@@ -131,6 +131,7 @@ return [
         ],
     ],
     'search' => [
+        'see_all' => 'See all events',
         'label' => 'Search events',
         'city' => 'City',
         'all_cities' => 'All cities',

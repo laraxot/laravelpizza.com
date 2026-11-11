@@ -85,14 +85,14 @@ return [
     ],
     'actions' => [
         'create' => [
-            'tooltip' => 'create',
-            'label' => 'create',
+            'tooltip' => 'Nuovo',
+            'label' => 'Nuovo',
             'icon' => 'create',
         ],
         'logout' => [
-            'tooltip' => 'logout',
+            'tooltip' => 'Esci',
             'icon' => 'logout',
-            'label' => 'logout',
+            'label' => 'Esci',
         ],
         'createAnother' => [
             'label' => 'createAnother',
@@ -100,9 +100,9 @@ return [
             'tooltip' => 'createAnother',
         ],
         'cancel' => [
-            'label' => 'cancel',
+            'label' => 'Annulla',
             'icon' => 'cancel',
-            'tooltip' => 'cancel',
+            'tooltip' => 'Annulla',
         ],
         'profile' => [
             'label' => 'profile',

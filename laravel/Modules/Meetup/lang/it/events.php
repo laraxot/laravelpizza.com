@@ -54,6 +54,9 @@ return [
         'has_capacity' => [
             'label' => 'has_capacity',
         ],
+        'timing' => [
+            'label' => 'timing',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -77,6 +80,7 @@ return [
         'layout' => [
             'label' => 'Cambia vista',
             'tooltip' => 'Cambia vista (tabella o schede)',
+            'icon' => 'layout',
         ],
     ],
     'no_events_found' => [

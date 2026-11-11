@@ -46,5 +46,10 @@ return [
             'icon' => 'heroicon-o-arrow-left-on-rectangle',
             'label' => 'Esci',
         ],
+        'profile' => [
+            'tooltip' => 'profile',
+            'icon' => 'profile',
+            'label' => 'profile',
+        ],
     ],
 ];

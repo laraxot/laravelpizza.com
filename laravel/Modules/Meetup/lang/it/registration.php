@@ -61,6 +61,13 @@ return [
         ],
         'reorderRecords' => [
             'tooltip' => 'reorderRecords',
+            'icon' => 'reorderRecords',
+            'label' => 'reorderRecords',
+        ],
+        'resetColumnManager' => [
+            'tooltip' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
     ],
 ];

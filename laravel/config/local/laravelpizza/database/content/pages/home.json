@@ -17,7 +17,7 @@
                     "title": "{{ trans('pub_theme::home.title') }}",
                     "subtitle": "{{ trans('pub_theme::home.hero.subtitle') }}",
                     "description": "{{ trans('pub_theme::home.hero.description') }}",
-                    "background_image": "/images/hero-bg.jpg",
+                    "background_image": null,
                     "cta_primary": {
                         "label": "{{ trans('pub_theme::home.hero.cta_primary_label') }}",
                         "url": "/auth/register",
@@ -28,6 +28,19 @@
                         "url": "/events",
                         "style": "secondary"
                     }
+                }
+            },
+            {
+                "type": "events",
+                "slug": "home-upcoming-events",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "{{ trans('pub_theme::events.search.show_upcoming') }}",
+                    "events_source": "public",
+                    "timing": "upcoming",
+                    "show_search": false,
+                    "limit": 3,
+                    "heading_level": "h2"
                 }
             },
             {
@@ -91,7 +104,7 @@
                     "title": "{{ trans('pub_theme::home.title') }}",
                     "subtitle": "{{ trans('pub_theme::home.hero.subtitle') }}",
                     "description": "{{ trans('pub_theme::home.hero.description') }}",
-                    "background_image": "/images/hero-bg.jpg",
+                    "background_image": null,
                     "cta_primary": {
                         "label": "{{ trans('pub_theme::home.hero.cta_primary_label') }}",
                         "url": "/auth/register",
@@ -102,6 +115,19 @@
                         "url": "/events",
                         "style": "secondary"
                     }
+                }
+            },
+            {
+                "type": "events",
+                "slug": "home-upcoming-events",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "{{ trans('pub_theme::events.search.show_upcoming') }}",
+                    "events_source": "public",
+                    "timing": "upcoming",
+                    "show_search": false,
+                    "limit": 3,
+                    "heading_level": "h2"
                 }
             },
             {

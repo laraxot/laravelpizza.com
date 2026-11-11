@@ -4,6 +4,7 @@ return [
     'no_events_found' => 'События не найдены',
     'check_back_later' => 'Загляните позже',
     'search' => [
+        'see_all' => 'Все события',
         'label' => 'Поиск событий',
         'city' => 'Город',
         'all_cities' => 'Все города',
