@@ -7,8 +7,10 @@ declare(strict_types=1);
  * ../../laravel/Themes/<Tema>/public: una sola copia degli asset compilati, nessun sorgente nella document root.
  */
 test('every theme is published in the document root through a relative symlink to its public folder', function (): void {
-    $root = dirname(base_path());
-    $themes = glob(base_path('Themes/*'), GLOB_ONLYDIR) ?: [];
+    // Test puro sul filesystem: niente applicazione Laravel (tests/Unit non la avvia).
+    $laravel = dirname(__DIR__, 2);
+    $root = dirname($laravel);
+    $themes = glob($laravel.'/Themes/*', GLOB_ONLYDIR) ?: [];
 
     expect($themes)->not->toBeEmpty();
 
