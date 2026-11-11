@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Carbon\Carbon;
+use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use RuntimeException;
 
 use function Safe\json_decode;
 use function Safe\json_encode;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Event Sourcing Business Logic', function () {
     beforeEach(function () {
