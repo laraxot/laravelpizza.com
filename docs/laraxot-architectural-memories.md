@@ -42,7 +42,7 @@ Use `Spatie\LaravelData\DataCollection` for type-safe processing in Blade.
 ### Asset Compilation
 When modifying theme components (`laravel/Themes/*`):
 1. Execute `npm run build` in the theme root.
-2. Execute `npm run copy` to sync assets to `public_html/themes/{ThemeName}/dist`.
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 3. Perform a Hard Refresh (Ctrl+Shift+R) in the browser.
 
 ### Verification without Browser Tools

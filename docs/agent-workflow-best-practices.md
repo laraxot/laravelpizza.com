@@ -208,7 +208,7 @@ Dopo implementazione:
 - [ ] Screenshot presi (prima/dopo se necessario)
 - [ ] Documentazione aggiornata
 - [ ] Verifica visiva completata
-- [ ] Build asset eseguito (`npm run build && npm run copy`)
+- [ ] Build asset eseguito (`npm run build`)
 
 ---
 

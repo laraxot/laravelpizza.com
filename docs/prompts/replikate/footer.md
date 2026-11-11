@@ -73,7 +73,7 @@ The current `footer.json` already has correct LaravelPizza content with 3 link g
 - [ ] Footer consistent across all pages (home, events, about, etc.)
 - [ ] Social icons render correctly (GitHub, Twitter/X)
 - [ ] Bottom bar has subtle border and centered copyright text
-- [ ] Build: `npm run build && npm run copy` after CSS/JS changes
+- [ ] Build: `npm run build` after CSS/JS changes
 
 ## Common Mistakes to Avoid
 
@@ -83,12 +83,12 @@ The current `footer.json` already has correct LaravelPizza content with 3 link g
 - **Wrong namespace**: Never use `two::` or other theme prefixes
 - **Hardcoded URLs**: Never write `/it/events` — always `LaravelLocalization::localizeUrl('/events')`
 - **Inline SVG**: Never paste SVG markup in Blade — create `.svg` file and use icon component
-- **Missing build**: Always run `npm run build && npm run copy` after changes
+- **Missing build**: Always run `npm run build` after changes
 
 ## Critical Workflow Reminder
 
 After CSS/JS changes in Meetup theme:
 1. `cd laravel/Themes/Meetup/`
 2. `npm run build`
-3. `npm run copy`
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 4. Hard refresh browser

@@ -45,7 +45,7 @@ npm run build
 | `composer update -W` | Aggiorna dipendenze PHP del tema | Setup iniziale o modifiche PHP in `app/` |
 | `npm install` | Installa dipendenze Node | Setup iniziale o modifiche a `package.json` |
 | `npm run build` | Genera CSS e JS (Vite/Tailwind) | **SEMPRE** dopo modifiche CSS/JS |
-| `npm run copy` | Pubblica asset in `public_html/themes/Meetup/` | **SEMPRE** dopo `npm run build` |
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **NOTA CRITICA**: Per semplici modifiche a `resources/css/app.css` o `resources/js/app.js`, è sufficiente solo `npm run build`. Il workflow completo (composer + npm install) è ridondante e spreca tempo.
 

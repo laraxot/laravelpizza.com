@@ -107,7 +107,7 @@ php artisan serve
 
 | Issue | Status | Fix |
 |-------|--------|-----|
-| **Vite Manifest Missing** | ✅ Fixed | `npm run build && npm run copy` |
+| **Vite Manifest Missing** | ✅ Fixed | `npm run build` |
 | **SQLite Readonly** | ✅ Fixed | `chmod 775 database/` |
 | **NotebookLM MCP** | ✅ Installed | `claude mcp add notebooklm` |
 
@@ -155,7 +155,7 @@ Add to deployment docs:
 2. Build theme assets:
    ```bash
    cd laravel/Themes/Sixteen
-   npm run build && npm run copy
+   npm run build
    ```
 ```
 

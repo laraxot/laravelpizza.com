@@ -41,3 +41,10 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - Regola contract-first PHPDoc: per relazioni trasversali come `creator`, `updater`, `deleter` i docblock devono usare `\Modules\Xot\Contracts\ProfileContract|null`, non modelli concreti come `\Modules\Meetup\Models\Profile|null`, anche se ide-helper li propone.
 - Regola Passport/User: ogni classe concreta in `laravel/vendor/laravel/passport/src` che estende `Illuminate\Database\Eloquent\Model` deve avere un wrapper locale `Modules\User\Models\Oauth{NomeClasse}` che estende la classe originale `Laravel\Passport\{NomeClasse}`. I binding vanno registrati in `Modules\User\Providers\PassportServiceProvider`.
 - Regola Passport/User: ogni classe concreta in `laravel/vendor/laravel/passport/src` che estende `Illuminate\Database\Eloquent\Model` deve avere un wrapper locale `Modules\User\Models\Oauth{NomeClasse}` che estende la classe originale `Laravel\Passport\{NomeClasse}`. I binding vanno registrati in `Modules\User\Providers\PassportServiceProvider`.
+
+## Regole operative aggiornate (novembre 2026)
+
+- **Tema pubblico**: `public_html/themes/<Tema>` è sempre `ln -s ../../laravel/Themes/<Tema>/public` (relativo, tracciato da git). Dopo `npm run build` non si copia nulla: `npm run copy` non si usa più. Motivi: una sola fonte degli asset, nessun sorgente nella document root, percorso valido su ogni server.
+- **`public_html/` è la document root**: non si cancella e non ci si scrivono file a mano; solo il symlink del tema e gli asset pubblicati da `php artisan filament:assets`.
+- **Test**: ogni modulo ha la sua cartella `laravel/Modules/<Modulo>/tests/{Unit,Feature}`. Non aggiungere test in `laravel/tests/`. I test di `app/` e del tema stanno in `Modules/Meetup/tests` (suite `Project`, bloccante in CI).
+- **Commit**: si committa e si pusha su `dev` appena un lavoro è verificato (test, PHPStan, Pint), senza aspettare conferme.

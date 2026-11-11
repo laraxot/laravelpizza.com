@@ -36,6 +36,6 @@ Avoid ad-hoc layouts. Use the following structure:
 - Avoid creating new Blade files for simple content; use the generic `[slug].blade.php` with the `x-page` component.
 
 ## Frontend Assets
-- To see changes: `npm run build && npm run copy` inside the theme directory.
+- To see changes: `npm run build` inside the theme directory.
 - Assets are served from `public_html/themes/{ThemeName}`.
 - `@vite` requires the theme's base path (e.g., `'themes/Meetup'`).

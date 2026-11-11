@@ -36,7 +36,7 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
 - Dopo ogni modifica a `resources/css/app.css` o `resources/js/app.js` nel tema Meetup:
   1. `cd laravel/Themes/Meetup/`
   2. `npm run build` (compila con Vite)
-  3. `npm run copy` (copia in public_html)
+  3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
   4. Verifica nel browser con hard refresh
 
 **WORKFLOW COMPLETO:**
@@ -44,7 +44,7 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
 2. `composer update -W` (tema Meetup)
 3. `npm install` (tema Meetup)
 4. `npm run build` (compila CSS/JS)
-5. `npm run copy` (pubblica asset)
+5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 6. PHPStan livello 10
 7. Testa nel browser
 
@@ -88,9 +88,9 @@ Il progetto ha una struttura di tema separata fondamentale:
 2. `composer update -W` (aggiorna dipendenze PHP)
 3. `npm install` (installa dipendenze Node.js)
 4. `npm run build` (compila CSS/JS con Vite)
-5. `npm run copy` (copia asset in public_html/themes/Meetup/)
+5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
-**Importante**: Senza `npm run build` e `npm run copy`, le modifiche CSS/JS non sono visibili nel browser!
+**Importante**: Senza `npm run build`, le modifiche CSS/JS non sono visibili nel browser!
 - **Moduli** (business logic, servizi, integrazioni): `laravel/Modules/*`
   - `Activity` - Gestione attività e log
   - `Cms` - Content Management System
@@ -163,7 +163,7 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
     ```bash
     cd Themes/Meetup
     npm install
-    npm run build && npm run copy  # OBBLIGATORIO dopo ogni cambio CSS/JS
+    npm run build  # OBBLIGATORIO dopo ogni cambio CSS/JS
     ```
 - **3. Visita il frontoffice**
   - `http://127.0.0.1:8000/it`
@@ -210,7 +210,7 @@ npm run dev
 
 # Build assets tema Meetup
 cd Themes/Meetup
-npm run build && npm run copy
+npm run build
 
 # Test completi
 composer run test
@@ -247,7 +247,7 @@ php artisan migrate:fresh --seed
 - **Se ami il frontend**:
   - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)
   - Porta nuove idee di sezioni/animazioni, ma sempre nel rispetto di Folio + Volt.
-  - **IMPORTANTE**: Ogni modifica CSS/JS richiede `npm run build && npm run copy`
+  - **IMPORTANTE**: Ogni modifica CSS/JS richiede `npm run build`
 - **Se ami il backend/architettura**:
   - Migliora i moduli (`Modules/*`) seguendo PHPStan livello 10
   - Rafforza services, actions, DTO, code quality, pattern Laraxot.
@@ -266,7 +266,7 @@ Ogni contributo che:
 ## ⚠️ Regole Critiche da Ricordare
 
 ### Frontend Assets
-- **OBBLIGATORIO**: `npm run build && npm run copy` dopo ogni modifica CSS/JS nel tema Meetup
+- **OBBLIGATORIO**: `npm run build` dopo ogni modifica CSS/JS nel tema Meetup
 - Gli asset compilati vanno in `public_html/themes/Meetup/`
 - Senza build e copy, le modifiche NON sono visibili nel browser
 
@@ -310,3 +310,10 @@ Questo repo è il passo successivo:
 Se vuoi far parte di questa cosa, **forka il repo, apri una PR e raccontaci cosa hai fatto nelle docs.**
 
 Ci vediamo al prossimo meetup. 🍕
+
+## Regole operative aggiornate (novembre 2026)
+
+- **Tema pubblico**: `public_html/themes/<Tema>` è sempre `ln -s ../../laravel/Themes/<Tema>/public` (relativo, tracciato da git). Dopo `npm run build` non si copia nulla: `npm run copy` non si usa più. Motivi: una sola fonte degli asset, nessun sorgente nella document root, percorso valido su ogni server.
+- **`public_html/` è la document root**: non si cancella e non ci si scrivono file a mano; solo il symlink del tema e gli asset pubblicati da `php artisan filament:assets`.
+- **Test**: ogni modulo ha la sua cartella `laravel/Modules/<Modulo>/tests/{Unit,Feature}`. Non aggiungere test in `laravel/tests/`. I test di `app/` e del tema stanno in `Modules/Meetup/tests` (suite `Project`, bloccante in CI).
+- **Commit**: si committa e si pusha su `dev` appena un lavoro è verificato (test, PHPStan, Pint), senza aspettare conferme.

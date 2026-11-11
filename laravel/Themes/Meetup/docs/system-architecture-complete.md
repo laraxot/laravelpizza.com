@@ -274,7 +274,7 @@ Themes/Meetup/
 │       └── manifest.json  ← Manifest Vite
 └── public_html/
     └── themes/Meetup/
-        └── assets/       ← Copiato da npm run copy
+        niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
             ├── app-[hash].css
             ├── app-[hash].js
             └── manifest.json

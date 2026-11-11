@@ -77,7 +77,7 @@ Make the local homepage (`http://127.0.0.1:8000/it/tests/homepage`) visually ide
 1. [ ] Analyze existing CSS files in Sixteen/resources/css
 2. [ ] Create/fix homepage-specific CSS overrides
 3. [ ] Run npm run build
-4. [ ] Run npm run copy  
+4. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 5. [ ] Verify with new screenshots
 
 ## Files to Modify

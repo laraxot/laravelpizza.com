@@ -181,7 +181,7 @@ This document analyzes the HTML structure differences between:
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Build CSS/JS
-npm run copy    # Copy assets
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ---

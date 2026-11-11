@@ -114,7 +114,7 @@ php artisan config:clear
 php artisan view:clear
 
 # Theme assets
-cd Themes/Meetup && npm run build && npm run copy
+cd Themes/Meetup && npm run build
 
 # Composer
 cd laravel && composer dump-autoload

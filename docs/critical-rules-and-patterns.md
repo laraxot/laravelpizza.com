@@ -54,19 +54,19 @@ Themes/Meetup/
 ```bash
 # For Laravel integration at http://127.0.0.1:8000/it (MOST COMMON)
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy    # BOTH needed to see changes!
+npm run build    # BOTH needed to see changes!
 
 # Breakdown:
 # 1. npm run build  → Compiles resources/* to public/
-# 2. npm run copy   → Deploys public/* to ../../../public_html/themes/Meetup
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 # For static HTML prototypes (DESIGN ONLY)
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build               # Vite outputs to ./public/
-npm run copy                # Copies ./public/* to ../../../public_html/themes/Meetup
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
-**CRITICAL**: To see changes in http://127.0.0.1:8000/it you MUST run BOTH `npm run build && npm run copy`
+**CRITICAL**: To see changes in http://127.0.0.1:8000/it you MUST run BOTH `npm run build`
 
 **Critical package.json Commands**:
 ```json
@@ -570,7 +570,7 @@ Themes/Meetup/docs/
 ## Key Takeaways
 
 1. ✅ **Assets**: Use `Themes/Meetup/resources/css` NOT `resources/html/css` for Laravel
-2. ✅ **Build**: Run `npm run build && npm run copy` from theme directory to see changes at http://127.0.0.1:8000/it
+2. ✅ **Build**: Run `npm run build` from theme directory to see changes at http://127.0.0.1:8000/it
 3. ✅ **Static HTML Deploy**: ALWAYS copy from `./public/*` NOT `./resources/html/dist/*`
 4. ✅ **Vite**: Root vite.config.js must point to correct theme paths
 5. ✅ **Metatags**: Use `<x-metatags>` component, NEVER raw `<head>` tags

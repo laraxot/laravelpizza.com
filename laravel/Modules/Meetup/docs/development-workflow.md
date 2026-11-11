@@ -46,9 +46,9 @@ npm run build
 
 #### Regola generale per i comandi npm in un'app modulare con temi
 
-- Esegui `npm install`, `npm run dev`, `npm run build` e script come `npm run copy` **nella root del progetto frontend a cui appartengono** (cioè nella cartella che contiene il relativo `package.json` e `vite.config.*`).
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Per gli asset globali dell'app Laravel la root è `/var/www/_bases/base_laravelpizza/laravel` (qui vive il `package.json` principale).
-- Per il tema pubblico **Meetup** la root del frontend è `/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup` (qui vanno eseguiti `npm install`, `npm run build`, `npm run copy` quando lavori sugli assets del tema).
+- Per il tema pubblico **Meetup** la root del frontend è `/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup` (qui vanno eseguiti `npm install`, `npm run build` quando lavori sugli assets del tema).
 
 #### Development Server
 ```bash

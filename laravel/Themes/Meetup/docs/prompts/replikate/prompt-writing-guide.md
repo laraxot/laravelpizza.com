@@ -20,7 +20,7 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
   - ✅ CORRECT: `laravel/config/local/laravelpizza/`
 
 - **Public Assets**: `public_html/themes/Meetup/`
-  - ✅ CORRECT: Destination for `npm run copy`
+  - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 - **Namespace**:
   - PHP: `Modules\Meetup\` and `Themes\Meetup\`

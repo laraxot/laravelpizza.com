@@ -124,7 +124,7 @@ Copiato a:  ../../../public_html/themes/Meetup/
 
 **Lezione**: ENTRAMBI i comandi sono necessari:
 1. `npm run build` → compila in `./public/`
-2. `npm run copy` → deploya a `public_html/themes/Meetup/`
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Architettura del Sistema
 
@@ -137,7 +137,7 @@ resources/js/app.js                          public/assets/app-[hash].js
 
 ### Deploy Flow
 ```
-public/assets/*  →  npm run copy  →  public_html/themes/Meetup/assets/*
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 public/manifest.json                  public_html/themes/Meetup/manifest.json
 ```
 

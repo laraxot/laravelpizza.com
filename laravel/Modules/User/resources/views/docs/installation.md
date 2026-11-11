@@ -76,7 +76,7 @@ npm run build
 Copia gli assets compilati nella directory pubblica:
 
 ```bash
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Configurazione

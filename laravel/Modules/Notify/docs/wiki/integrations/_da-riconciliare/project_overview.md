@@ -519,7 +519,7 @@ php artisan migrate --seed
 
 # 4. Build
 npm run build
-cd Themes/Sixteen && npm run build && npm run copy
+cd Themes/Sixteen && npm run build
 
 # 5. Serve
 php artisan serve

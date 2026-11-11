@@ -42,7 +42,7 @@ I popup implementano il pattern di caricamento lazy:
 - **Owner markup Sixteen**: `Themes/Sixteen/resources/views/pages/tests/ticket-list.blade.php` include `pub_theme::components.sections.map-lit`, mentre `Themes/Sixteen/resources/views/components/blocks/segnalazioni/layout.blade.php` usa `<map-lit data-url="/data/tickets.json">`.
 - **Partial tema**: `Themes/Sixteen/resources/views/components/sections/map-lit.blade.php` esiste per evitare che `@include('pub_theme::components.sections.map-lit')` diventi un 500 server-side. La partial deve solo emettere il web component, non duplicare logica Leaflet.
 - **Registrazione tema**: `Themes/Sixteen/resources/js/app.js` deve importare `@modules/Geo/resources/js/components/map-lit.js`; se manca, il tag resta un elemento HTML sconosciuto e la mappa non si inizializza.
-- **Build Sixteen**: dopo ogni modifica agli import mappa eseguire `npm run build` e `npm run copy` dal tema Sixteen.
+- **Build Sixteen**: dopo ogni modifica agli import mappa eseguire `npm run build` dal tema Sixteen.
 - **Plugin Leaflet**: `leaflet.markercluster` e `leaflet.heat` vanno importati a runtime dopo `window.L/globalThis.L = L`; l'import statico e' un false friend ESM/Vite.
 - **Git Policy**: Sviluppo lineare "Forward-Only" (nessun revert, solo fix migliorativi).
 - **Zero CDN**: Dipendenze (`leaflet`, `lit`, `markercluster`, `heat`) caricate esclusivamente via npm e bundle Vite.

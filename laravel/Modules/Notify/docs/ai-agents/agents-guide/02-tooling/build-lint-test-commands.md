@@ -95,7 +95,7 @@ cd laravel/Themes/Meetup
 npm install
 npm run dev      # Development
 npm run build    # Production
-npm run copy    # Copy to public_html (REQUIRED after build)
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Cache Clearing

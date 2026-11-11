@@ -153,7 +153,7 @@ Before making any changes, apply **Advanced Prompt Engineering Protocol**:
 7.  **SVG icons** — `Modules/Meetup/resources/svg/` + `<x-filament::icon icon="meetup-{name}" />`
 8.  **Localized URLs** — `LaravelLocalization::localizeUrl()` always
 9.  **XotBase extension** — Filament classes extend XotBase* abstracts
-10. **Theme build** — `npm run build && npm run copy` from `Themes/Meetup/` after CSS/JS changes
+10. **Theme build** — `npm run build` from `Themes/Meetup/` after CSS/JS changes
 11. **belongsToManyX** — never use plain `belongsToMany()` for M2M relations
 12. **No inline SVG** — never paste SVG markup in Blade
 
@@ -165,7 +165,7 @@ Before making any changes, apply **Advanced Prompt Engineering Protocol**:
 - Creating controllers for public pages
 - Inline SVG in Blade (must use file + icon component)
 - Extending Filament classes directly (must use XotBase*)
-- Forgetting `npm run build && npm run copy` after theme changes
+- Forgetting `npm run build` after theme changes
 - Not updating documentation after changes
 
 ## Improvements Over Target

@@ -103,7 +103,7 @@ npm run build
 ### **✅ Obbligatorio**
 - **SEMPRE** usare `laravel/Themes/Meetup/docs/` per documentazione
 - **SEMPRE** eseguire `npm run build` dopo modifiche CSS/JS
-- **SEMPRE** eseguire `npm run copy` per pubblicare asset
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - **SEMPRE** verificare con PHPStan livello 10
 - **SEMPRE** seguire pattern DRY + KISS
 
@@ -112,7 +112,7 @@ npm run build
 ## 📊 **Workflow Completo**
 
 ```
-Modifica File → PHPStan L10 → npm run build → npm run copy → Test Browser
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
      ↓           ↓              ↓              ↓              ↓
    Codice      Qualità        Compilazione    Pubblicazione    Visibilità
    Corretto    ✅             ✅             ✅             ✅

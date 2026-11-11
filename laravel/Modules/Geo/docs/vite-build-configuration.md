@@ -186,7 +186,7 @@ npm run build
 ### 4. Copy to Public (opzionale)
 
 ```bash
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 # Copia in public_html/assets/geo/
 ```
 

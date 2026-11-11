@@ -106,7 +106,7 @@ php artisan optimize:clear
 ```bash
 cd Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Perché**: Vite compila e copia asset in `public_html/themes/Meetup/`

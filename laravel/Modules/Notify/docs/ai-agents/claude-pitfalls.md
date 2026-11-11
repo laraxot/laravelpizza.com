@@ -80,7 +80,7 @@ Errori comuni da evitare.
 
 ---
 
-### 14. ❌ Dimenticare npm run copy dopo theme build
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
 
 ---

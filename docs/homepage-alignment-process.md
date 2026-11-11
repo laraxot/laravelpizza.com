@@ -63,7 +63,7 @@ Allineare completamente la homepage locale (`http://127.0.0.1:8002/it`) con quel
 - Il sistema usa Folio + Volt + JSON per le pagine frontoffice
 - I contenuti sono in `config/local/laravelpizza/database/content/pages/home.json`
 - I componenti Blade sono in `Themes/Meetup/resources/views/components/blocks/`
-- Gli asset CSS/JS devono essere compilati con `npm run build && npm run copy`
+- Gli asset CSS/JS devono essere compilati con `npm run build`
 
 **Output**: Comprensione completa dell'architettura
 
@@ -143,14 +143,14 @@ if (str_contains($titleClean, 'Pizza.')) {
 
 **Cosa ho fatto**:
 1. Eseguito `npm run build` per compilare CSS/JS
-2. Eseguito `npm run copy` per copiare asset in `public_html/themes/Meetup/`
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 3. Verificato che gli asset siano stati copiati correttamente
 
 **Comandi**:
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Output**: Asset compilati e distribuiti
@@ -185,7 +185,7 @@ Ho seguito la metodologia "Super Mucca" obbligatoria:
 ### Regole Critiche Applicate
 
 - ✅ **Pagine Folio = Solo JSON**: Modificato solo JSON, non creato nuovi Blade
-- ✅ **Frontend Asset Management**: Eseguito `npm run build && npm run copy`
+- ✅ **Frontend Asset Management**: Eseguito `npm run build`
 - ✅ **Documentazione Prima**: Documentato prima di implementare
 - ✅ **Nomi File Minuscoli**: Tutti i file `.md` in minuscolo
 
@@ -228,7 +228,7 @@ Ho seguito la metodologia "Super Mucca" obbligatoria:
 1. **Screenshot Sempre**: Prendere screenshot prima/dopo per documentazione visiva
 2. **Documentazione Durante**: Documentare mentre si lavora, non dopo
 3. **Confronto Visivo**: Navigare su entrambe le versioni per confronto diretto
-4. **Build Dopo Modifiche**: Sempre eseguire `npm run build && npm run copy` dopo modifiche CSS/JS
+4. **Build Dopo Modifiche**: Sempre eseguire `npm run build` dopo modifiche CSS/JS
 
 ### Errori da Evitare
 

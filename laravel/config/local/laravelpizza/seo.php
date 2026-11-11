@@ -13,5 +13,9 @@ return [
         ['alias' => 'contatti', 'target' => 'contact'],
         ['alias' => 'contacts', 'target' => 'contact'],
         ['alias' => 'home', 'target' => ''],
+        // "Eventi vicini" non e' mai stato attivo (nessuna geolocalizzazione): la ricerca per citta' sta in /events.
+        ['alias' => 'events-near-me', 'target' => 'events'],
+        // Il blog non esiste: /articles era una copia vuota dell'elenco eventi.
+        ['alias' => 'articles', 'target' => 'events'],
     ],
 ];

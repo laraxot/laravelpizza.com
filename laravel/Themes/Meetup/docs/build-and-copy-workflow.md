@@ -3,7 +3,7 @@
 Gli asset del tema (CSS Tailwind, JS Alpine, font Inter) si compilano con Vite in `laravel/Themes/Meetup/public/`.
 
 `public_html/themes/Meetup` **è un symlink** a `../../laravel/Themes/Meetup/public`, tracciato da git: il web server serve
-direttamente l'output della build. **Non serve nessuna copia** (`npm run copy` non si usa più ed è rimasto solo come
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 promemoria che stampa un messaggio).
 
 ## Comandi

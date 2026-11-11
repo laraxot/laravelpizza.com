@@ -61,7 +61,7 @@ cd laravel
 ```bash
 cd laravel/Themes/Meetup/
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ---
@@ -84,7 +84,7 @@ npm run copy
 ```
 Modifica Modulo → PHPStan L10 → Migrazioni → 
 Test Business Logic → 
-Modifica Tema → npm run build → npm run copy → 
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 Test Frontend → 
 Verifica SEO → 
 Commit e Push
@@ -106,7 +106,7 @@ Modifico Modules/Meetup/app/Models/Event.php
 Modifico Modules/Meetup/app/Filament/Resources/EventResource.php
 Modifico laravel/Themes/Meetup/resources/views/components/ui/header.blade.php
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ---

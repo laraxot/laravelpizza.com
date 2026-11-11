@@ -36,9 +36,9 @@ Questo comando compila gli asset tramite Vite nella cartella locale del tema.
 ### 3. Pubblicazione (Sync con public_html)
 Per rendere le modifiche visibili sul sito (che serve i file da `public_html`):
 ```bash
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
-*Tip: È possibile concatenare i comandi: `npm run build && npm run copy`.*
+*Tip: È possibile concatenare i comandi: `npm run build`.*
 
 ## 🧠 Approccio Laraxot: Filosofia della Separazione
 

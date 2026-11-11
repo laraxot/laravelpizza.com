@@ -27,7 +27,7 @@ In **`Themes/Meetup/resources/css/app.css`** sono importati gli stili Filament c
 - `filament/support` – base per tutti i componenti
 - `filament/actions`, `filament/forms`, `filament/infolists`, `filament/notifications`, `filament/schemas`, `filament/tables`, `filament/widgets`
 
-Dopo modifiche a CSS: dalla cartella del tema eseguire `npm run build` e `npm run copy`. Vedi [theme-resolution-and-workflow](theme-resolution-and-workflow.md) e [development-workflow-css-js-changes](development-workflow-css-js-changes.md).
+Dopo modifiche a CSS: dalla cartella del tema eseguire `npm run build`. Vedi [theme-resolution-and-workflow](theme-resolution-and-workflow.md) e [development-workflow-css-js-changes](development-workflow-css-js-changes.md).
 
 ## Layout e Blade
 

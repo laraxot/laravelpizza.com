@@ -28,7 +28,7 @@ cd Themes/One
 npm run build
 
 # 2. Pubblicare asset nella cartella pubblica:
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 > **Requisito:** Filament 3.x supporta solo **Tailwind CSS 3.x**. Verificare in `package.json` di avere `"tailwindcss": "^3.x"` come dipendenza.

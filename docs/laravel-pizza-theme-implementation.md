@@ -91,7 +91,7 @@ Implement the Laravel Pizza Meetups design to match the original laravelpizza.co
 ## Build Process
 1. npm install - Install dependencies
 2. npm run build - Compile CSS/JS assets with Vite
-3. npm run copy - Copy assets to public_html/themes/Meetup
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Visual Consistency Achieved
 - Dark theme with red accents matching laravelpizza.com

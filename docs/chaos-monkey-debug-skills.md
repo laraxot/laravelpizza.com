@@ -682,7 +682,7 @@ php artisan cache:clear
 ```bash
 cd laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Fix 3: Restart Services

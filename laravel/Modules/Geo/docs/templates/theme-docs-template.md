@@ -36,7 +36,7 @@ status: draft
 cd laravel/Themes/{ThemeName}
 npm install
 npm run build
-npm run copy  # Copy assets to public
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ## Dependencies
@@ -62,7 +62,7 @@ For quick fixes: `GSD quick "{ThemeName}: description"`
 
 After every change:
 - [ ] `npm run build` succeeds
-- [ ] `npm run copy` publishes assets correctly
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - [ ] Vite pipeline completes without errors
 - [ ] Visual regression check (if applicable)
 - [ ] Responsive design verified

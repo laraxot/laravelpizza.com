@@ -211,7 +211,7 @@ Themes/Meetup/resources/views/
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm install        # Prima volta o dopo modifiche package.json
 npm run build      # Compila CSS/JS (Vite + Tailwind)
-npm run copy       # Copia asset in public_html/themes/Meetup/
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Quando Eseguire**:
@@ -302,7 +302,7 @@ npm run dev  # Hot reload automatico (NON serve copy)
 ### 2. Frontend Assets
 - ❌ NON modificare direttamente file in `public_html/`
 - ✅ Modificare `resources/css/app.css` e `resources/js/app.js`
-- ✅ Eseguire `npm run build && npm run copy` dopo modifiche
+- ✅ Eseguire `npm run build` dopo modifiche
 
 ### 3. Layout Hierarchy
 - `x-layouts.main` → Shell HTML base (no header/footer), NON usare direttamente

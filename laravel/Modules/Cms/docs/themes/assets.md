@@ -38,12 +38,12 @@ status: draft
 ## Best Practices
 
 1. **Sviluppo**
-   - Utilizzare `npm run dev` seguito da `npm run copy`
+   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - Verificare il corretto caricamento degli assets
    - Mantenere la documentazione aggiornata
 
 2. **Produzione**
-   - Eseguire `npm run build` seguito da `npm run copy`
+   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - Verificare la presenza e l'accessibilità degli assets
    - Testare il funzionamento completo del tema
 

@@ -133,7 +133,7 @@
 4. **Block components** — `Themes/Meetup/resources/views/components/blocks/`
 5. **SVG icons** — files in `Modules/Meetup/resources/svg/`, use `<x-filament::icon icon="meetup-{name}" />`
 6. **Localized URLs** — always `LaravelLocalization::localizeUrl($path)`, never manual prefix
-7. **Theme build** — after CSS/JS changes: `npm run build && npm run copy` (from `Themes/Meetup/`)
+7. **Theme build** — after CSS/JS changes: `npm run build` (from `Themes/Meetup/`)
 8. **XotBase extension** — Filament classes always extend XotBase* abstracts
 
 ---

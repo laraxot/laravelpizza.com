@@ -29,7 +29,7 @@ Per i temi con build separata il contratto operativo e':
 ```bash
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 `build` genera il manifest del tema.

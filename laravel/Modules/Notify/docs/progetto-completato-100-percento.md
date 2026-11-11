@@ -390,7 +390,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 ```bash
 # Production build
 cd Themes/Sixteen
-npm run build && npm run copy
+npm run build
 
 # Run migrations
 php artisan migrate --force

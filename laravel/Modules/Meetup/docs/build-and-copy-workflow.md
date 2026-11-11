@@ -7,7 +7,7 @@
 
 Il workflow di build e copy per il tema Meetup consiste in due passaggi:
 1. **`npm run build`**: Compila gli asset CSS/JS con Vite
-2. **`npm run copy`**: Copia gli asset compilati nella directory pubblica dove Laravel può servirli
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Perché Eseguire Questi Comandi?
 
@@ -28,7 +28,7 @@ Il workflow di build e copy per il tema Meetup consiste in due passaggi:
 - `assets/app-[hash].js` - JavaScript compilato e minificato
 - `manifest.json` - Manifest Vite con mapping asset
 
-### 2. `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Scopo**: Copia gli asset compilati nella directory pubblica accessibile da Laravel.
 
@@ -91,14 +91,14 @@ npm run dev  # Hot reload, nessun copy necessario
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build  # Compila asset
-npm run copy   # Copia nella directory pubblica
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Workflow Combinato
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy  # Esegue entrambi in sequenza
+npm run build  # Esegue entrambi in sequenza
 ```
 
 ## Struttura Directory
@@ -118,7 +118,7 @@ Themes/Meetup/
 
 public_html/
 └── themes/
-    └── Meetup/                  # ✅ Output copy (npm run copy)
+    niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
         ├── css/
         ├── js/
         └── (altri asset)
@@ -148,7 +148,7 @@ ls -la Themes/Meetup/public/
 # Dovresti vedere: assets/ directory e manifest.json
 ```
 
-### Dopo `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ```bash
 # Verifica che gli asset siano stati copiati
@@ -167,14 +167,14 @@ curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
 
 ## Troubleshooting
 
-### Problema: `npm run copy` fallisce
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Causa**: Directory `public_html/themes/Meetup/` non esiste
 
 **Soluzione**:
 ```bash
 mkdir -p public_html/themes/Meetup
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Problema: Asset non aggiornati
@@ -184,7 +184,7 @@ npm run copy
 **Soluzione**:
 ```bash
 # Ricompila e ricopia
-npm run build && npm run copy
+npm run build
 # Pulisci cache browser (Ctrl+Shift+R)
 ```
 
@@ -203,7 +203,7 @@ ls -la ../../../public_html/themes/Meetup  # Verifica destinazione
 ## Best Practices
 
 1. ✅ **Sempre eseguire dalla directory del tema**: `cd Themes/Meetup`
-2. ✅ **Build prima di copy**: `npm run build && npm run copy`
+2. ✅ **Build prima di copy**: `npm run build`
 3. ✅ **Verificare output**: Controllare che gli asset siano stati compilati e copiati
 4. ✅ **Versioning**: Considerare versioning degli asset per cache busting
 5. ✅ **Automazione**: Usare script helper per automatizzare il processo
@@ -214,7 +214,7 @@ ls -la ../../../public_html/themes/Meetup  # Verifica destinazione
 #!/bin/bash
 # build-and-copy.sh
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 echo "✅ Build e copy completati!"
 ```
 

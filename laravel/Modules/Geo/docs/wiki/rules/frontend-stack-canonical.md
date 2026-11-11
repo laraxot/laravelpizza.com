@@ -26,5 +26,5 @@ Geo contribuisce **Lit** (`map-lit`, `coordinate-picker-lit`). Non introdurre Bo
 ## build
 
 ```bash
-cd laravel/Themes/Sixteen && npm run build && npm run copy
+cd laravel/Themes/Sixteen && npm run build
 ```

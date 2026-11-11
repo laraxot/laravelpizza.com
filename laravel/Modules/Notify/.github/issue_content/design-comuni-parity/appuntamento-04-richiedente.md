@@ -29,7 +29,7 @@ Appointment step 4: applicant info.
 - [ ] Create/update JSON content file: `config/.../content/pages/tests.appuntamento-04-richiedente.json`
 - [ ] Create/update Blade templates in `Themes/Sixteen/resources/views/components/blocks/`
 - [ ] Add missing CSS to `bootstrap-italia.css`
-- [ ] Run `npm run build && npm run copy`
+- [ ] Run `npm run build`
 - [ ] Verify structural match (component classes, data-element attributes)
 - [ ] Update comparison doc: `docs/visual-comparison/APPUNTAMENTO-04-RICHIEDENTE-COMPARISON.md`
 - [ ] Update theme index: `docs/00-index.md`
@@ -49,4 +49,4 @@ Appointment step 4: applicant info.
 - Il file .json contiene testi e immagini
 - Le blade contengono la struttura HTML
 - I CSS sono in `Themes/Sixteen/resources/css/bootstrap-italia.css`
-- Build: `cd Themes/Sixteen && npm run build && npm run copy`
+- Build: `cd Themes/Sixteen && npm run build`

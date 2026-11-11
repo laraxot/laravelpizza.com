@@ -207,8 +207,8 @@ npm run build  # Production build
 ### CSS/JS Workflow (CRITICAL)
 1. Edit files in `resources/css/` or `resources/js/`
 2. Run `npm run build` to compile assets
-3. Run `npm run copy` to publish to `public_html/themes/Meetup/`
-4. **IMPORTANT**: Without `npm run build` and `npm run copy`, changes are NOT visible!
+3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+4. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### Testing
 

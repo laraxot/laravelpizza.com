@@ -199,7 +199,7 @@ chown -R $USER:$USER laravel/database/
 ### Build Themes
 ```bash
 cd laravel/Themes/<theme>
-composer update -W && npm install && npm run build && npm run copy
+composer update -W && npm install && npm run build
 ```
 
 ### Translation Migration

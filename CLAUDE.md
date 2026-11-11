@@ -67,7 +67,7 @@ Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
 3. **`config/local/laravelpizza/xra.php`** → chiave **`pub_theme`** (es. `'Meetup'`)
 4. **Tema** → **`laravel/Themes/Meetup`**; view namespace **`pub_theme::`**
 
-**Workflow dalla cartella del tema** (`laravel/Themes/Meetup`): `composer update -W`, `npm install`, `npm run build`. Dopo la build non serve copiare nulla (`npm run copy` non si usa più).
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Regola per ogni tema**: `public_html/themes/<Tema>` è sempre `ln -s ../../laravel/Themes/<Tema>/public` (relativo, tracciato da git). Perché:
 - una sola fonte: il web server serve esattamente l'output di `npm run build`, niente copie vecchie o dimenticate;

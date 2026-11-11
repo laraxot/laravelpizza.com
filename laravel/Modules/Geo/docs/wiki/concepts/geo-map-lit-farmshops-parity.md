@@ -241,7 +241,7 @@ Build tema: `laravel/Themes/Sixteen` → `npm run build` → `map-lit-*.js` in `
 ### Popup ticket (farmshops `#wrapper`)
 
 - `popup-ticket.js`: griglia indirizzo + link mappe (OSM, OpenRouteService, Google); hero image; headline `h1`; loading con icona tipologia.
-- Build obbligatoria: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.
+- Build obbligatoria: `cd laravel/Themes/Sixteen && npm run build`.
 
 ### Story
 

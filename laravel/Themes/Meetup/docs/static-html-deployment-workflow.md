@@ -73,7 +73,7 @@ Themes/Meetup/public/
 
 **CRITICAL**: Vite outputs to `./public/` NOT `resources/html/dist/`
 
-#### 2. `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 **Script**: `cp -r ./public/* ../../../public_html/themes/Meetup`
 
@@ -168,7 +168,7 @@ Themes/Meetup/
 - `resources/css/` and `resources/js/` = SOURCE files
 - `public/` = BUILD OUTPUT (compiled, minified, hashed)
 - `npm run build` reads SOURCE, writes to OUTPUT
-- `npm run copy` deploys OUTPUT to web server
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## NPM Scripts Reference
 
@@ -198,7 +198,7 @@ Themes/Meetup/
 - **Output**: Optimized, minified files
 - **Source maps**: Production mode
 
-### `npm run copy`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - **Use when**: Deploying static HTML to web server
 - **Requires**: `npm run build` must be run first
 - **Copies**: All files from `./public/` to public web directory

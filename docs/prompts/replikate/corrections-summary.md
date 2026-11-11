@@ -20,7 +20,7 @@ Prompts described colors from a different business:
 
 ### 3. **Missing Context**
 - No mention of URL mapping (flat vs multilingual)
-- No mention of theme workflow (npm run build + npm run copy)
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Incomplete architectural rules
 - Vague instructions
 
@@ -47,7 +47,7 @@ Prompts described colors from a different business:
 - Mission: "PIÙ COOL, PIÙ CLICKBAIT, PIÙ ENGAGING, PIÙ VIRALE"
 - Color Palette: #0f2b46, #ef4444, #f97316, #06b6d4
 - URL Mapping: /chi-siamo → /it/pages/chi-siamo
-- Workflow: npm run build && npm run copy
+- Workflow: npm run build
 
 ### 2. **main_replication_prompt.md**
 **Status**: ✅ Completely rewritten
@@ -190,7 +190,7 @@ Prompts described colors from a different business:
 ```bash
 cd laravel/Themes/Meetup/
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 Then verify in browser with hard refresh.
 

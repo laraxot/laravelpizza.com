@@ -89,7 +89,7 @@ Per pubblicare il tema compilato, è necessario eseguire il seguente comando:
 
 ```bash
 cd /var/www/html/saluteora/laravel/Themes/One
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 Questo comando copia tutti i file dalla directory `resources/dist` alla directory pubblica `public_html/themes/One`:

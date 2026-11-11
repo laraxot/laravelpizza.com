@@ -27,10 +27,10 @@ npm install
 npm run build
 
 # 4. Copia in public_html (CRUCIALE!)
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
-**IMPORTANTE**: `npm run copy` è FONDAMENTALE altrimenti le modifiche CSS/JS non sono visibili!
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### 2. Struttura Tema Meetup
 
@@ -80,14 +80,14 @@ Studio approfondito Filament 5.x documentazione:
 2. **Modifica stili** in `resources/css/app.css`
 3. **Modifica JavaScript** in `resources/js/app.js`
 4. **Esegui build**: `npm run build`
-5. **Copia assets**: `npm run copy` ❗ FONDAMENTALE
+5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 6. **Test nel browser**: `php artisan serve`
 
 ### 6. Risoluzione Problemi Comuni
 
 #### Problema: Assets non si vedono
-**Causa**: `npm run copy` non eseguito dopo build
-**Soluzione**: Eseguire sempre `npm run copy` dopo `npm run build`
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 #### Problema: Namespace non trovato
 **Causa**: Configurazione tenant errata

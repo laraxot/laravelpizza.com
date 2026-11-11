@@ -32,7 +32,7 @@
 ## Theme Development
 
 1. **Asset Management**: Each theme has its own package.json and vite.config.js
-2. **Build Process**: Use `npm run build && npm run copy` to compile and deploy theme assets
+2. **Build Process**: Use `npm run build` to compile and deploy theme assets
 3. **Layout Structure**: Use <x-metatags> component instead of manual head content
 
 ## Laravel 11+ Patterns

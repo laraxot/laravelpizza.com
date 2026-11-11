@@ -51,7 +51,7 @@ npm run build
 
 **Why**: Changes are not visible until:
 1. Vite compiles the assets (`npm run build`)
-2. Assets are copied to public directory (`npm run copy`)
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### 4. NPM Commands Directory
 
@@ -284,7 +284,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run dev
 ```
 
-**Note**: Watch mode runs Vite dev server but still requires `npm run copy` after changes.
+*niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Troubleshooting
 
@@ -352,7 +352,7 @@ npm run build
 |------|---------|----------|
 | Install dependencies | `npm install` | Theme directory |
 | Build assets | `npm run build` | Theme directory |
-| Copy to public | `npm run copy` | Theme directory |
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 | Build + Copy | `npm run build` | Theme directory |
 | Watch mode | `npm run dev` | Theme directory |
 | Clear cache | `php artisan view:clear && php artisan cache:clear` | Laravel root |

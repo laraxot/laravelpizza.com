@@ -240,7 +240,7 @@ Overall readiness: 100%
 1. Register theme in ThemeServiceProvider
 2. Configure view paths correctly
 3. Register namespace
-4. Rebuild theme assets: `npm run build && npm run copy`
+4. Rebuild theme assets: `npm run build`
 5. Clear view cache: `php artisan view:clear`
 
 ### Result

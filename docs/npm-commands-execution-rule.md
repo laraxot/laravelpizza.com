@@ -5,7 +5,7 @@
 
 ## ⚠️ REGOLA CRITICA
 
-**I comandi NPM (`npm install`, `npm run build`, `npm run dev`, `npm run copy`, etc.) DEVONO essere eseguiti SEMPRE nella directory root del tema o modulo, NON nella root del progetto Laravel.**
+**I comandi NPM (`npm install`, `npm run build`, `npm run dev`, etc.) DEVONO essere eseguiti SEMPRE nella directory root del tema o modulo, NON nella root del progetto Laravel.**
 
 ## Perché?
 
@@ -81,7 +81,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/{ThemeName}
 npm install
 npm run dev
 npm run build
-npm run copy  # Se presente nello script
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### Per Moduli con Assets Frontend
@@ -118,7 +118,7 @@ npm install  # Cerca package.json nella root Laravel
 cd /var/www/_bases/base_laravelpizza/laravel/Modules/User/resources/views
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # ❌ ERRATO
 cd /var/www/_bases/base_laravelpizza/laravel

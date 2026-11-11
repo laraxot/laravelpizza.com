@@ -27,7 +27,9 @@ class UserFactory extends Factory
         return [
             'id' => (string) Str::uuid(),
             'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            // unique() di Faker vale solo nel processo: un database di test condiviso puo' gia' contenere lo stesso
+            // indirizzo (users_email_unique). Un suffisso casuale evita collisioni che rendevano i test instabili.
+            'email' => Str::lower(Str::random(6)).'.'.fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => Hash::make('password123'),
             'remember_token' => Str::random(10),

@@ -624,7 +624,7 @@ Themes/Sixteen/
 # ALWAYS run after ANY frontend change:
 cd Themes/Sixteen/
 npm run build          # Compile assets
-npm run copy           # Deploy to Laravel app
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # These commands are MANDATORY for any:
 # - CSS changes
@@ -1534,7 +1534,7 @@ Effort: 1 day
 Impact: Developer experience, deployment reliability
 
 Tasks:
-- Add npm run build && npm run copy to CI/CD pipeline
+- Add npm run build to CI/CD pipeline
 - Create pre-commit hook for frontend changes
 - Document build process in README
 - Add build verification to tests
@@ -1821,7 +1821,7 @@ Monitoring:
 
 Frontend:
 [ ] Theme built (npm run build)
-[ ] Assets deployed (npm run copy)
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested
@@ -1928,7 +1928,7 @@ Pest for all tests:
 ```
 CRITICAL: After ANY frontend change:
 cd Themes/Sixteen/
-npm run build && npm run copy
+npm run build
 
 Without this, changes are INVISIBLE to users.
 ```

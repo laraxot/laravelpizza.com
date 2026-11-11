@@ -1,0 +1,122 @@
+{
+    "id": "cookie-policy",
+    "title": {
+        "it": "Cookie policy - Laravel Pizza Meetups",
+        "en": "Cookie policy - Laravel Pizza Meetups"
+    },
+    "slug": "cookie-policy",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "text",
+                "slug": "legal",
+                "data": {
+                    "view": "pub_theme::components.blocks.legal.article",
+                    "title": "Cookie policy",
+                    "subtitle": "Quali cookie usa questo sito e perché.",
+                    "last_updated": "Ultimo aggiornamento: 11 novembre 2026",
+                    "sections": [
+                        {
+                            "title": "Solo cookie tecnici",
+                            "paragraphs": [
+                                "Questo sito usa esclusivamente cookie tecnici, necessari al suo funzionamento. Non usiamo cookie di profilazione, di pubblicità o di statistica di terze parti, e i caratteri tipografici sono serviti dal sito stesso: aprendo una pagina il tuo browser non contatta servizi esterni. Per questo non serve il tuo consenso (art. 122 del Codice privacy e linee guida del Garante del 10 giugno 2021)."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "Elenco dei cookie",
+                            "paragraphs": [],
+                            "items": [
+                                "laravel-pizza-meetups-session: mantiene la sessione e l'accesso; dura fino a 2 ore di inattività.",
+                                "XSRF-TOKEN: protegge i moduli da invii fraudolenti (CSRF); stessa durata della sessione.",
+                                "cookie_consent: ricorda che hai chiuso l'avviso sui cookie, per non mostrarlo di nuovo; dura 1 anno."
+                            ]
+                        },
+                        {
+                            "title": "Come gestirli",
+                            "paragraphs": [
+                                "Puoi cancellare o bloccare i cookie dalle impostazioni del browser. Senza i cookie tecnici però l'accesso e i moduli del sito non funzionano."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contatti",
+                            "value": "Modulo contatti",
+                            "url": "/it/contact"
+                        }
+                    ]
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "text",
+                "slug": "legal",
+                "data": {
+                    "view": "pub_theme::components.blocks.legal.article",
+                    "title": "Cookie policy",
+                    "subtitle": "Which cookies this website uses and why.",
+                    "last_updated": "Last updated: 11 November 2026",
+                    "sections": [
+                        {
+                            "title": "Technical cookies only",
+                            "paragraphs": [
+                                "This website uses only technical cookies needed for it to work. We do not use profiling, advertising or third-party analytics cookies, and fonts are served by the website itself: opening a page does not make your browser contact external services. For this reason your consent is not required."
+                            ],
+                            "items": []
+                        },
+                        {
+                            "title": "List of cookies",
+                            "paragraphs": [],
+                            "items": [
+                                "laravel-pizza-meetups-session: keeps your session and login; lasts until 2 hours of inactivity.",
+                                "XSRF-TOKEN: protects forms from forged submissions (CSRF); same duration as the session.",
+                                "cookie_consent: remembers that you closed the cookie notice so it is not shown again; lasts 1 year."
+                            ]
+                        },
+                        {
+                            "title": "How to manage them",
+                            "paragraphs": [
+                                "You can delete or block cookies in your browser settings. Without technical cookies, however, login and the website's forms do not work."
+                            ],
+                            "items": []
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "url": "mailto:hello@laravelpizza.com"
+                        },
+                        {
+                            "label": "Contact",
+                            "value": "Contact form",
+                            "url": "/en/contact"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": []
+    },
+    "created_at": "2026-11-11T09:00:00.000000Z",
+    "updated_at": "2026-11-11T09:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

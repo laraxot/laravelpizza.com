@@ -5,7 +5,7 @@
 
 ## ⚠️ REGOLA CRITICA
 
-**I comandi NPM (`npm install`, `npm run build`, `npm run dev`, `npm run copy`, etc.) DEVONO essere eseguiti SEMPRE nella directory root del tema o modulo, NON nella root del progetto Laravel.**
+**I comandi NPM (`npm install`, `npm run build`, `npm run dev`, etc.) DEVONO essere eseguiti SEMPRE nella directory root del tema o modulo, NON nella root del progetto Laravel.**
 
 ## Perché?
 

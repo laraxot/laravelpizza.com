@@ -36,7 +36,7 @@ Nella route admin ticket create, la lente di ricerca risultava visivamente tropp
 ## Verifica tecnica
 
 - `npm run build` modulo Geo: OK
-- `npm run copy` modulo Geo: OK
+- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - asset pubblicati in `public_html/assets/geo`
 
 ## Riferimenti

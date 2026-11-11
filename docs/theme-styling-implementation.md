@@ -72,7 +72,7 @@ Portare gli stili e JavaScript dalla versione statica HTML ai file Laravel per r
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Output Build**:
@@ -120,11 +120,11 @@ Copiato a:  ../../../public_html/themes/Meetup/
 - Segue convenzioni standard web server
 
 ### Correzione 2: Build & Copy Workflow
-> "e ti ricordo che per vedere le modifiche in http://127.0.0.1:8000/it devi fare npm run build && npm run copy"
+> "e ti ricordo che per vedere le modifiche in http://127.0.0.1:8000/it devi fare npm run build"
 
 **Lezione**: ENTRAMBI i comandi sono necessari:
 1. `npm run build` → compila in `./public/`
-2. `npm run copy` → deploya a `public_html/themes/Meetup/`
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ## Architettura del Sistema
 
@@ -137,7 +137,7 @@ resources/js/app.js                          public/assets/app-[hash].js
 
 ### Deploy Flow
 ```
-public/assets/*  →  npm run copy  →  public_html/themes/Meetup/assets/*
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 public/manifest.json                  public_html/themes/Meetup/manifest.json
 ```
 
@@ -211,7 +211,7 @@ vim resources/css/app.css
 vim resources/js/app.js
 
 # Build e Deploy
-npm run build && npm run copy
+npm run build
 
 # Test
 curl http://127.0.0.1:8000/it

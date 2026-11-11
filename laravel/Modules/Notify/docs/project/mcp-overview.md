@@ -121,7 +121,7 @@ await client.add({
 ```bash
 # Using Chrome DevTools MCP
 cd laravel/Themes/Sixteen
-npm run build && npm run copy
+npm run build
 # Then capture screenshots for comparison
 ```
 

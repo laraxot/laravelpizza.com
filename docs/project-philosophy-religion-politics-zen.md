@@ -33,7 +33,7 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://laravelp
 
 ## 🏛️ Politica (Politics)
 
-- **Gestione Frontend Assets**: Ogni modifica CSS/JS richiede `npm run build && npm run copy`
+- **Gestione Frontend Assets**: Ogni modifica CSS/JS richiede `npm run build`
 - **Componenti Blade Anonimi**: Non supportano sintassi namespace esplicita
 - **Layout chiari**: `x-layouts.main`, `x-layouts.app`, `x-layouts.guest`
 - **Gestione Traduzioni**: Mai usare ->label() diretto, sempre file di traduzione

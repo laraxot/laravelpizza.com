@@ -173,7 +173,7 @@ public function handle($request, Closure $next)
 # Build theme assets
 cd laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # Check asset paths
 asset('css/app.css')
@@ -251,7 +251,7 @@ php artisan optimize:clear
 ```bash
 cd laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **Effect**: Rebuilds CSS/JS with Vite and copies to public_html

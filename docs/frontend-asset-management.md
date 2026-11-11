@@ -5,11 +5,11 @@
 
 ## Objective
 
-To clearly document the process and rationale behind executing Node.js-related commands (`npm install`, `npm run build`, `npm run copy`) within specific theme directories. This serves as a fundamental rule for managing frontend assets in this modular Laravel application.
+To clearly document the process and rationale behind executing Node.js-related commands (`npm install`, `npm run build`) within specific theme directories. This serves as a fundamental rule for managing frontend assets in this modular Laravel application.
 
 ## ⚠️ REGOLA CRITICA
 
-Frontend asset compilation and dependency management commands (such as `npm install`, `npm run dev`, `npm run build`, or custom scripts like `npm run copy`) **must be executed within the root directory of the respective theme or module's frontend project.**
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 ### Per Tema Meetup
 
@@ -18,7 +18,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm install
 npm run dev
 npm run build
-npm run copy   # Crea la directory di destinazione se non esiste, poi copia gli asset compilati da ./dist/* alla root web dell'applicazione principale in ../../../public_html/themes/Meetup
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 **NON eseguire dalla root Laravel!**
@@ -69,7 +69,7 @@ npm run build
 cd /var/www/_bases/base_laravelpizza/laravel/Modules/User/resources/views
 npm install
 npm run build
-npm run copy
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### ❌ ERRATO
