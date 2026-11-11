@@ -73,7 +73,7 @@ Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
 - una sola fonte: il web server serve esattamente l'output di `npm run build`, niente copie vecchie o dimenticate;
 - la document root espone solo gli asset compilati, mai sorgenti, `node_modules` o Blade del tema;
 - percorso relativo: funziona uguale in ogni clone e server, a qualsiasi percorso assoluto;
-- un tema nuovo si pubblica con un solo link, senza script di copia. Test di guardia: `laravel/tests/Unit/ThemePublicSymlinkTest.php`.
+- un tema nuovo si pubblica con un solo link, senza script di copia. Test di guardia: `laravel/Modules/Meetup/tests/Unit/Architecture/ThemePublicSymlinkTest.php`.
 
 Regola: `.cursor/rules/theme-resolution-critical.md`. Memoria: `.cursor/memories/theme-resolution.md`.
 
@@ -233,6 +233,8 @@ npm run dev
 ```
 
 ### Testing
+
+**Ogni modulo ha la sua cartella `tests/`** (`laravel/Modules/<Modulo>/tests/{Unit,Feature}`): non aggiungere test in `laravel/tests/`. I test di `app/` e del tema stanno in `Modules/Meetup/tests` (suite `Project`, quella che blocca la CI: `vendor/bin/pest --testsuite=Project`).
 
 ```bash
 # Run all tests

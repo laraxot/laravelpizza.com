@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Feature\App;
+
 use App\Livewire\Actions\Logout;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
+use Modules\Meetup\Tests\TestCase as MeetupTestCase;
 use Modules\User\Models\User;
-use Modules\Xot\Tests\CreatesApplication;
-use Tests\TestCase;
 
-uses(TestCase::class, CreatesApplication::class);
+uses(MeetupTestCase::class);
 
 /*
  * Logout reale invece dei mock di Auth e Session: il mock della facade Session rompeva redirect(),

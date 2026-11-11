@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-use App\Providers\FortifyServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
-use Tests\TestCase;
+namespace Modules\Meetup\Tests\Feature\App;
 
-uses(TestCase::class, CreatesApplication::class);
+use App\Providers\FortifyServiceProvider;
+use Modules\Meetup\Tests\TestCase as MeetupTestCase;
+
+uses(MeetupTestCase::class);
 
 test('fortify service provider can be instantiated', function (): void {
     $provider = new FortifyServiceProvider(app());
