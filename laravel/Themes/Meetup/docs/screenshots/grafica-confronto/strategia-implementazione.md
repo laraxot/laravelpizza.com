@@ -878,7 +878,7 @@ echo "Building assets..."
 npm run build
 
 echo "Copying assets..."
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 
 echo "Optimizing images..."
 find resources/img -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -exec optipng -o7 {} \;

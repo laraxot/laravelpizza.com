@@ -80,7 +80,7 @@ npm run build
 ### 2. Copy (`npm run copy`)
 
 ```bash
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Comando**: `cp -r ./public/* ../../../public_html/themes/Meetup`
@@ -174,7 +174,7 @@ curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
 **Soluzione**:
 ```bash
 mkdir -p /var/www/_bases/base_laravelpizza/public_html/themes/Meetup
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### Problema: Asset non trovati dopo copy
@@ -205,7 +205,7 @@ ls -la public/manifest.json
 ## Best Practices
 
 1. ✅ **Sempre eseguire dalla directory del tema**: `cd Themes/Meetup`
-2. ✅ **Build prima di copy**: `npm run build && npm run copy`
+2. ✅ **Build prima di copy**: `npm run build`
 3. ✅ **Verificare output**: Controllare che `public/` contenga gli asset dopo build
 4. ✅ **Verificare copy**: Controllare che `public_html/themes/Meetup/` contenga gli asset dopo copy
 5. ✅ **Non modificare manualmente**: Non modificare manualmente gli asset in `public/`, sempre ricompilare

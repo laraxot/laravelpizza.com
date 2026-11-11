@@ -27,7 +27,7 @@ Dalla cartella **`laravel/Themes/Meetup`**:
 
 ### Per modifiche CSS/JS standard (99% dei casi)
 ```bash
-npm run build && npm run copy
+npm run build
 ```
 
 ### Per setup iniziale o modifiche PHP nel tema
@@ -35,7 +35,7 @@ npm run build && npm run copy
 composer update -W
 npm install
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### Tabella comandi
@@ -47,7 +47,7 @@ npm run copy
 | `npm run build` | Genera CSS e JS (Vite/Tailwind) | **SEMPRE** dopo modifiche CSS/JS |
 | `npm run copy` | Pubblica asset in `public_html/themes/Meetup/` | **SEMPRE** dopo `npm run build` |
 
-**NOTA CRITICA**: Per semplici modifiche a `resources/css/app.css` o `resources/js/app.js`, è sufficiente solo `npm run build && npm run copy`. Il workflow completo (composer + npm install) è ridondante e spreca tempo.
+**NOTA CRITICA**: Per semplici modifiche a `resources/css/app.css` o `resources/js/app.js`, è sufficiente solo `npm run build`. Il workflow completo (composer + npm install) è ridondante e spreca tempo.
 
 ## Approccio critico
 

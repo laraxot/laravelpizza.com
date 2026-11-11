@@ -293,7 +293,7 @@ We are working on [Task Name] in `laravel/Themes/Meetup/`.
 ```bash
 cd laravel/Themes/Meetup/
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 # Then verify in browser with hard refresh
 ```
 
@@ -313,7 +313,7 @@ npm run copy
 - ❌ Extending Filament classes directly
 - ❌ Using `property_exists()` on models
 - ❌ Hardcoding URLs without localization
-- ❌ Forgetting `npm run build && npm run copy`
+- ❌ Forgetting `npm run build`
 - ❌ Not updating documentation
 - ❌ Using content from other businesses
 - ❌ Creating controllers for public pages

@@ -201,7 +201,7 @@ npm install
 ```bash
 npm run dev    # Development server with hot reload
 npm run build  # Production build
-npm run copy   # Copy assets to public_html
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### CSS/JS Workflow (CRITICAL)
@@ -374,7 +374,7 @@ export default defineConfig({
 ```bash
 cd laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### Translations Not Showing
