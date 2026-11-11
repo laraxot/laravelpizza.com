@@ -348,6 +348,17 @@
                                     </div>
                                 @endif
 
+                                {{-- I-02: file .ics generato sul momento, nessun servizio esterno coinvolto --}}
+                                @if($eventModel !== null && $eventModel->start_date?->isFuture())
+                                    @php($ics = app(\Modules\Meetup\Actions\Event\BuildEventIcsAction::class))
+                                    <a href="data:text/calendar;charset=utf-8;base64,{{ base64_encode($ics->execute($eventModel)) }}"
+                                       download="{{ $ics->filename($eventModel) }}"
+                                       class="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700">
+                                        <x-filament::icon icon="meetup-icon-calendar" class="h-4 w-4" />
+                                        {{ __('meetup::event_registration.add_to_calendar') }}
+                                    </a>
+                                @endif
+
                                 <p class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
                                     @if($availableSpots === 0)
                                         {{ __('pub_theme::event.messages.sold_out.label') }}

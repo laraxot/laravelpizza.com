@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Actions\Auth;
 
-use Illuminate\Support\Facades\Auth;
 use Modules\Meetup\Actions\Auth\RegisterUserAction;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;

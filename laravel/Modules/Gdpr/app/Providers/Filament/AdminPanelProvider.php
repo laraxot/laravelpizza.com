@@ -19,7 +19,9 @@ class AdminPanelProvider extends XotBasePanelProvider
         $panel = parent::panel($panel);
         FilamentAsset::register(
             [
-                Css::make('gdpr-styles', asset('/vendor/cookie-consent/css/cookie-consent.css')),
+                // Percorso del file, non URL: `php artisan filament:assets` lo copia nella cartella pubblica servita
+                // (public_html/css/gdpr). L'URL /vendor/cookie-consent/... puntava a laravel/public, non servita: 404 su ogni pagina.
+                Css::make('gdpr-styles', __DIR__.'/../../../resources/dist/cookie-consent.css'),
                 // Js::make('gdpr-scripts', __DIR__.'/../../resources/dist/assets/app2.js'),
             ],
             'gdpr',

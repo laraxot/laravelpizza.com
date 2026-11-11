@@ -113,4 +113,16 @@ return [
         'label' => 'Share this event',
         'description' => 'Label for share button',
     ],
+    'search' => [
+        'label' => 'Cerca eventi',
+        'city' => 'Città',
+        'all_cities' => 'Tutte le città',
+        'from' => 'Dal',
+        'until' => 'Al',
+        'apply' => 'Cerca',
+        'reset' => 'Togli i filtri',
+        'no_results' => 'Nessun evento con questi filtri.',
+        'show_past' => 'Eventi passati',
+        'show_upcoming' => 'Prossimi eventi',
+    ],
 ];

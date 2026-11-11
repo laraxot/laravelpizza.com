@@ -13,7 +13,7 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('event attendees relation uses belongstomanyx contract', function (): void {
-    $relation = (new Event())->attendees();
+    $relation = (new Event)->attendees();
 
     expect($relation)->toBeInstanceOf(BelongsToMany::class)
         ->and(Str::endsWith($relation->getTable(), 'event_user'))->toBeTrue()

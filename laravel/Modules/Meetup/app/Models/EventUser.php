@@ -24,7 +24,8 @@ use Modules\Xot\Models\XotBasePivot;
  * @property string $event_id
  * @property string $user_id
  * @property string $status
- * @property string|null $registered_at
+ * @property Carbon|null $registered_at
+ * @property Carbon|null $reminder_sent_at
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -61,7 +62,19 @@ class EventUser extends XotBasePivot
     protected $keyType = 'int';
 
     /** @var list<string> */
-    protected $fillable = ['event_id', 'user_id', 'status', 'registered_at'];
+    protected $fillable = ['event_id', 'user_id', 'status', 'registered_at', 'reminder_sent_at'];
+
+    /**
+     * @return array<string, string>
+     */
+    #[\Override]
+    protected function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'registered_at' => 'datetime',
+            'reminder_sent_at' => 'datetime',
+        ]);
+    }
 
     /**
      * Disable HasUuids auto-generation: id is a bigint autoincrement column.

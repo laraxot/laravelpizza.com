@@ -31,4 +31,10 @@ return [
         'venue' => 'Where: :venue',
         'action' => 'View the event',
     ],
+    'reminder' => [
+        'subject' => 'Tomorrow: :title',
+        'intro' => 'A friendly reminder that ":title" is tomorrow. See you there!',
+        'cant_come' => 'Can\'t make it anymore? Cancel your registration from the event page so someone else can take your seat.',
+    ],
+    'add_to_calendar' => 'Add to calendar',
 ];

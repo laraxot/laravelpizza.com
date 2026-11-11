@@ -20,7 +20,7 @@ test('it has correct module name', function () {
     $reflection = new \ReflectionClass($provider);
     $property = $reflection->getProperty('module');
     $property->setAccessible(true);
-    
+
     expect($property->getValue($provider))->toBe('Meetup');
 });
 

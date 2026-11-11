@@ -24,6 +24,8 @@ return [
         'register' => 'Inscription',
     ],
     'footer' => [
+        'privacy' => 'Confidentialité',
+        'terms' => 'Conditions générales',
         'events' => 'Événements',
         'community' => 'Communauté',
         'community_chat' => 'Chat de la communauté',

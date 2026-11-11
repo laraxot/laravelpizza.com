@@ -24,7 +24,7 @@ describe('Venue Model', function (): void {
     });
 
     test('it has fillable attributes', function (): void {
-        $venue = new Venue();
+        $venue = new Venue;
         $expected = ['name', 'address', 'city', 'country', 'latitude', 'longitude', 'capacity', 'website', 'phone', 'description', 'meta_data'];
 
         foreach ($expected as $field) {

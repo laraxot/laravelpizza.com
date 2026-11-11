@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Feature;
 
+use Illuminate\Testing\TestResponse;
 use Modules\Meetup\Tests\TestCase;
 
 uses(TestCase::class);
@@ -12,7 +13,7 @@ uses(TestCase::class);
  * Le etichette attese vengono dai file di traduzione del tema: il test verifica che l'intestazione segua la lingua
  * dell'URL, senza fissare una parola precisa (in tedesco "Einloggen" o "Anmelden" sono entrambe corrette).
  */
-function headerOf(\Illuminate\Testing\TestResponse $response): string
+function headerOf(TestResponse $response): string
 {
     preg_match('/<nav[^>]*id="main-navigation".*?<\/nav>/s', (string) $response->getContent(), $matches);
 

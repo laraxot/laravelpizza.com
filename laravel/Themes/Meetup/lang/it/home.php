@@ -44,14 +44,14 @@ return [
     'features' => [
         'title' => 'Perché scegliere i nostri Meetups?',
         'description' => 'Scopri le caratteristiche che rendono i nostri meetup unici e coinvolgenti',
-        'regular_meetups_title' => 'Meetup Regolari',
-        'regular_meetups_description' => 'Partecipa a incontri settimanali con presentazioni e discussioni tecniche',
+        'regular_meetups_title' => 'Meetup regolari',
+        'regular_meetups_description' => 'Incontri periodici con talk tecnici, domande e tanta pizza',
         'growing_community_title' => 'Community in Crescita',
         'growing_community_description' => 'Connettiti con sviluppatori esperti e apprendisti di tutto il mondo',
         'multiple_locations_title' => 'Punti di Incontro Multipli',
         'multiple_locations_description' => 'Tieniti aggiornato su eventi nelle tue città locali',
-        'realtime_chat_title' => 'Chat in Tempo Reale',
-        'realtime_chat_description' => 'Partecipa a discussioni collaborative durante gli eventi',
+        'easy_registration_title' => 'Posto garantito in un clic',
+        'easy_registration_description' => 'Ti iscrivi gratis, ricevi la conferma via email e puoi liberare il posto quando vuoi',
     ],
     'cta' => [
         'title' => 'Pronto per iniziare?',

@@ -11,7 +11,7 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('it can instantiate calendar widget', function () {
-    $widget = new CalendarWidget();
+    $widget = new CalendarWidget;
     expect($widget)->toBeInstanceOf(CalendarWidget::class);
 });
 
@@ -20,13 +20,13 @@ test('it can fetch events', function () {
         'start_date' => now()->startOfMonth(),
         'end_date' => now()->startOfMonth()->addHour(),
     ]);
-    
-    $widget = new CalendarWidget();
+
+    $widget = new CalendarWidget;
     $events = $widget->fetchEvents([
         'start' => now()->startOfMonth()->toDateTimeString(),
         'end' => now()->endOfMonth()->toDateTimeString(),
     ]);
-    
+
     expect($events)->toBeArray()
         ->and(count($events))->toBeGreaterThan(0);
 });

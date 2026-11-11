@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Inter servito dal sito stesso (niente Google Fonts: nessuna richiesta a terzi prima del consenso, R-10) */
+@import '@fontsource-variable/inter/wght.css';
+
 /* Required by all components */
 @import '../../../../vendor/filament/support/resources/css/index.css';
 
@@ -211,7 +214,7 @@
 }
 
 @theme {
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
 
     /* Spacing Scale */
     --spacing-0: 0;

@@ -11,11 +11,11 @@ uses(TestCase::class);
 test('can access terms page', function (): void {
     $response = $this->get('/it/terms');
     $response->assertStatus(200)
-             ->assertSee('Termini e Condizioni');
+        ->assertSee('Termini e Condizioni');
 });
 
 test('can access privacy page', function (): void {
     $response = $this->get('/it/privacy');
     $response->assertStatus(200)
-             ->assertSee('Informativa sulla Privacy');
+        ->assertSee('Informativa sulla Privacy');
 });

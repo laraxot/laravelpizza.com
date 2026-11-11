@@ -20,8 +20,9 @@
                 <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.community') }}</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
                     <li><a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.events') }}</a></li>
-                    <li><a href="{{ LaravelLocalization::localizeUrl('/chat') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.community_chat') }}</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.code_of_conduct') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/events-past') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::events.search.show_past') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.about') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.contact') }}</a></li>
                     @guest
                         <li><a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.auth.register') }}</a></li>
                     @else
@@ -36,20 +37,15 @@
                     <li><a href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Laravel Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
                     <li><a href="https://filamentphp.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Filament Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
                     <li><a href="https://livewire.laravel.com/docs" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">Livewire Docs<span class="sr-only"> ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})</span></a></li>
-                    <li><a href="#" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.blog') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/articles') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.blog') }}</a></li>
                 </ul>
             </nav>
 
             <div>
                 <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.follow_us') }}</h4>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg p-1" aria-label="Facebook">
-                        <x-filament::icon icon="meetup-facebook" class="w-6 h-6" aria-hidden="true" />
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg p-1" aria-label="Twitter">
-                        <x-filament::icon icon="meetup-twitter" class="w-6 h-6" aria-hidden="true" />
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg p-1" aria-label="GitHub">
+                    {{-- Solo profili reali: Facebook e X tornano quando la community avra' le sue pagine (prima erano link a "#") --}}
+                    <a href="https://github.com/laraxot/laravelpizza.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg p-1" aria-label="GitHub ({{ __('pub_theme::navigation.footer.opens_in_new_tab') }})">
                         <x-filament::icon icon="meetup-github" class="w-6 h-6" aria-hidden="true" />
                     </a>
                 </div>
@@ -58,6 +54,10 @@
 
         <div class="mt-8 pt-8 border-t border-slate-800 text-center text-gray-400 text-sm space-y-1">
             <p>&copy; {{ date('Y') }} Laravel Pizza Meetups. {{ __('pub_theme::navigation.footer.all_rights_reserved') }}</p>
+            <p class="space-x-4">
+                <a href="{{ LaravelLocalization::localizeUrl('/privacy') }}" class="hover:text-white underline-offset-2 hover:underline">{{ __('pub_theme::navigation.footer.privacy') }}</a>
+                <a href="{{ LaravelLocalization::localizeUrl('/terms') }}" class="hover:text-white underline-offset-2 hover:underline">{{ __('pub_theme::navigation.footer.terms') }}</a>
+            </p>
         </div>
     </div>
 </footer>

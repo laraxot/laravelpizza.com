@@ -31,4 +31,10 @@ return [
         'venue' => 'Dove: :venue',
         'action' => 'Vedi l\'evento',
     ],
+    'reminder' => [
+        'subject' => 'Domani: :title',
+        'intro' => 'Ti ricordiamo che domani c\'è ":title". Ti aspettiamo!',
+        'cant_come' => 'Non puoi più venire? Annulla l\'iscrizione dalla pagina dell\'evento: il posto andrà a qualcun altro.',
+    ],
+    'add_to_calendar' => 'Aggiungi al calendario',
 ];

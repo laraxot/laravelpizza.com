@@ -12,7 +12,7 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('it can instantiate event stats overview widget', function () {
-    $widget = new EventStatsOverviewWidget();
+    $widget = new EventStatsOverviewWidget;
     expect($widget)->toBeInstanceOf(EventStatsOverviewWidget::class);
 });
 
@@ -26,13 +26,14 @@ test('it returns stats array', function () {
         });
     }
 
-    $widget = new class extends EventStatsOverviewWidget {
+    $widget = new class extends EventStatsOverviewWidget
+    {
         public function getStatsForTest(): array
         {
             return $this->getStats();
         }
     };
-    
+
     $stats = $widget->getStatsForTest();
     expect($stats)->toBeArray()
         ->and(count($stats))->toBe(3);

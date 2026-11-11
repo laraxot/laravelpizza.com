@@ -11,9 +11,9 @@ use Modules\User\Models\User;
 
 /**
  * Factory for EventPerformer pivot model.
- * 
+ *
  * Represents speakers/presenters at an event.
- * 
+ *
  * @extends Factory<EventPerformer>
  */
 class EventPerformerFactory extends Factory

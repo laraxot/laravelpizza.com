@@ -5,6 +5,12 @@
          colors="true"
 >
     <testsuites>
+        <!-- Suite che blocca la CI: codice del progetto (app, tema, modulo Meetup). docs/audit/test-coverage.md -->
+        <testsuite name="Project">
+            <directory>tests/Unit</directory>
+            <directory>tests/Feature</directory>
+            <directory>Modules/Meetup/tests</directory>
+        </testsuite>
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
         </testsuite>

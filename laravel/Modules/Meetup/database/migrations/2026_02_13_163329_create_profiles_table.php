@@ -8,7 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migration: Change profiles id to UUID.
- * 
+ *
  * NOTA: La conversione UUID è già gestita nella migrazione originale
  * 2024_12_26_000008_create_profiles_table.php nel metodo tableUpdate()
  * Questa migrazione è ridondante e può essere eliminata dopo verifica.

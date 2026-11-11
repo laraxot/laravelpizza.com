@@ -32,9 +32,10 @@
                     <x-filament::icon icon="meetup-icon-calendar" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
                     <span>{{ __('pub_theme::navigation.events') }}</span>
                 </a>
-                <a href="#" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
-                    <x-filament::icon icon="meetup-icon-chat" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('pub_theme::navigation.community_chat') }}</span>
+                {{-- La chat della community non esiste ancora: il link portava a "#" (e /chat dava 404) --}}
+                <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
+                    <x-filament::icon icon="meetup-icon-community" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
+                    <span>{{ __('pub_theme::navigation.about') }}</span>
                 </a>
                 
                 {{-- Language Switcher Component --}}
@@ -74,7 +75,11 @@
                     <x-filament::icon icon="meetup-icon-calendar" class="w-5 h-5 text-red-500" />
                     <span>{{ __('pub_theme::navigation.events') }}</span>
                 </a>
-                
+                <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>
+                    <x-filament::icon icon="meetup-icon-community" class="w-5 h-5 text-red-500" />
+                    <span>{{ __('pub_theme::navigation.about') }}</span>
+                </a>
+
                 <div class="px-4 py-4 border-t border-slate-700/30 mt-2">
                     <x-ui.language-switcher mobile />
                 </div>

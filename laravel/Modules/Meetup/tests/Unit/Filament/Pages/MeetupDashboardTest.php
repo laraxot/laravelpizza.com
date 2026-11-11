@@ -13,21 +13,21 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('it can instantiate dashboard', function () {
-    $page = new Dashboard();
+    $page = new Dashboard;
     expect($page)->toBeInstanceOf(Dashboard::class);
 });
 
 test('it has correct widgets in dashboard', function () {
-    $page = new Dashboard();
+    $page = new Dashboard;
     $widgets = $page->getWidgets();
-    
+
     expect($widgets)->toContain(MeetupStatsOverviewWidget::class)
         ->and($widgets)->toContain(EventCalendarWidget::class)
         ->and($widgets)->toContain(RecentEventsWidget::class);
 });
 
 test('it returns exactly three widgets in expected order', function () {
-    $page = new Dashboard();
+    $page = new Dashboard;
 
     expect($page->getWidgets())->toBe([
         MeetupStatsOverviewWidget::class,

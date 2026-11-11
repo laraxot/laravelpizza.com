@@ -23,7 +23,7 @@ describe('Performer Model', function (): void {
     });
 
     test('it has fillable attributes', function (): void {
-        $performer = new Performer();
+        $performer = new Performer;
         $expected = ['name', 'type', 'bio', 'photo', 'website', 'email', 'company', 'twitter', 'linkedin', 'github', 'meta_data'];
 
         foreach ($expected as $field) {
@@ -118,4 +118,3 @@ describe('Performer Model', function (): void {
             ->and($performer->updated_at)->not->toBeNull();
     });
 });
-
