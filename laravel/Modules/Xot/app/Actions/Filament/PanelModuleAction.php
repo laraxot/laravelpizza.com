@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Module as NwidartModule;
-use Webmozart\Assert\Assert;
 use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 /**
  * Lettura config modulo nwidart da un Filament Panel (funzioni pure — non QueueableAction).
@@ -28,6 +28,7 @@ final class PanelModuleAction
     {
         return self::config($panel);
     }
+
     public static function moduleName(Panel $panel): string
     {
         $name = Str::before($panel->getId(), '::');

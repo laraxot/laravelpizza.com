@@ -155,7 +155,7 @@ class JobStatusWidget extends XotBaseWidget
     protected function authorizeSuperAdmin(): void
     {
         if (! static::canAccess()) {
-            throw new AuthorizationException();
+            throw new AuthorizationException;
         }
     }
 

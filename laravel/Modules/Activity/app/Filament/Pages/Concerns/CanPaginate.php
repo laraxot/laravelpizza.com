@@ -41,6 +41,7 @@ trait CanPaginate
         if (is_numeric($page)) {
             return (int) $page;
         }
+
         return 1;
     }
 

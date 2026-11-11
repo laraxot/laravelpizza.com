@@ -24,6 +24,7 @@ use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Diagnostic\S3\TestBucketPermissionsAction;
 use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Modules\Media\Filament\Clusters\Test;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 use Webmozart\Assert\Assert;
@@ -240,7 +241,7 @@ class S3Test extends XotBasePage
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
 
-        if (! is_string($filePath) || '' === $filePath) {
+        if (! is_string($filePath) || $filePath === '') {
             Notification::make()
                 ->warning()
                 ->title(Lang::string('media::s3test.notifications.no_attachment'))
@@ -555,7 +556,7 @@ class S3Test extends XotBasePage
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
                     } else {
-                        $valueStr = \Modules\Xot\Actions\Cast\SafeStringCastAction::cast($value);
+                        $valueStr = SafeStringCastAction::cast($value);
                         $output[] = "{$keyStr}: {$valueStr}";
                     }
                 }
@@ -580,7 +581,7 @@ class S3Test extends XotBasePage
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
 
-            if (! is_string($filePath) || '' === $filePath) {
+            if (! is_string($filePath) || $filePath === '') {
                 Notification::make()
                     ->warning()
                     ->title(Lang::string('media::s3test.notifications.no_attachment'))
@@ -727,7 +728,7 @@ class S3Test extends XotBasePage
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
 
-            $uploadedFile = is_string($filePath) && '' !== $filePath
+            $uploadedFile = is_string($filePath) && $filePath !== ''
                 ? [
                     'path' => $filePath,
                     'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 30),

@@ -13,7 +13,7 @@ class RatingDatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('RatingDatabaseSeeder: entity seeders…');
         }
 
@@ -22,7 +22,7 @@ class RatingDatabaseSeeder extends Seeder
             RatingMorphSeeder::class,
         ]);
 
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('RatingDatabaseSeeder: completato.');
         }
     }

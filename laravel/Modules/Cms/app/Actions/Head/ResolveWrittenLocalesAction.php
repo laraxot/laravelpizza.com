@@ -30,27 +30,26 @@ final class ResolveWrittenLocalesAction
     }
 
     /**
-     * @param mixed $rawTitle  titolo grezzo: mappa lingua => testo (array o JSON)
-     * @param mixed $rawBlocks blocchi grezzi: mappa lingua => blocchi; `null` o non-mappa = il contenuto non è per lingua, conta solo il titolo
-     *
+     * @param  mixed  $rawTitle  titolo grezzo: mappa lingua => testo (array o JSON)
+     * @param  mixed  $rawBlocks  blocchi grezzi: mappa lingua => blocchi; `null` o non-mappa = il contenuto non è per lingua, conta solo il titolo
      * @return list<string>|null
      */
     public function fromRaw(mixed $rawTitle, mixed $rawBlocks = null): ?array
     {
         $titles = $this->localeMap($rawTitle);
-        if (null === $titles) {
+        if ($titles === null) {
             return null;
         }
 
         $blocks = $this->localeMap($rawBlocks);
-        if (null !== $blocks && array_is_list($blocks)) {
+        if ($blocks !== null && array_is_list($blocks)) {
             $blocks = null;
         }
 
         $written = array_filter(
             $titles,
-            fn (mixed $text, int|string $locale): bool => is_string($text) && '' !== trim($text)
-                && (null === $blocks || $this->hasBodyBlocks($blocks[$locale] ?? null)),
+            fn (mixed $text, int|string $locale): bool => is_string($text) && trim($text) !== ''
+                && ($blocks === null || $this->hasBodyBlocks($blocks[$locale] ?? null)),
             ARRAY_FILTER_USE_BOTH,
         );
 

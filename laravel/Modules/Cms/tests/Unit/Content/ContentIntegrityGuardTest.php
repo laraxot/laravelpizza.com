@@ -131,9 +131,8 @@ function contentGuardSorted(mixed $node): mixed
 }
 
 /**
- * @param array<array-key, mixed> $left
- * @param array<array-key, mixed> $right
- *
+ * @param  array<array-key, mixed>  $left
+ * @param  array<array-key, mixed>  $right
  * @return list<string> chiavi di primo livello con valore diverso o presenti in una sola copia
  */
 function contentGuardDifferingKeys(array $left, array $right): array
@@ -157,7 +156,7 @@ function contentGuardViews(mixed $node, string $path): array
     $found = [];
     foreach ($node as $key => $value) {
         $where = $path.'/'.$key;
-        if ('view' === $key && is_string($value)) {
+        if ($key === 'view' && is_string($value)) {
             $found[$where] = $value;
         }
         $found += contentGuardViews($value, $where);
@@ -181,12 +180,12 @@ function contentGuardManifest(): array
 
     foreach (explode("\n", file_get_contents($manifest)) as $line) {
         $line = trim($line);
-        if ('' === $line || str_starts_with($line, '#')) {
+        if ($line === '' || str_starts_with($line, '#')) {
             continue;
         }
         $name = basename($line, '.html');
         $folder = dirname($line);
-        $rows['index' !== $name ? $name : ('.' === $folder ? 'index' : str_replace('/', '-', $folder).'-index')] = $line;
+        $rows[$name !== 'index' ? $name : ($folder === '.' ? 'index' : str_replace('/', '-', $folder).'-index')] = $line;
     }
 
     return $rows;
@@ -245,7 +244,7 @@ it('keeps tests.*.json identical between tenant and module', function (string $t
             continue; // confronto solo se la copia esiste in entrambi
         }
         $keys = contentGuardDifferingKeys(contentGuardPage($tenantDir.'/'.$name), contentGuardPage($moduleDir.'/'.$name));
-        if ([] !== $keys) {
+        if ($keys !== []) {
             $differences[] = sprintf('%s e %s differiscono (chiavi: %s)', $tenantDir.'/'.$name, $moduleDir.'/'.$name, implode(', ', $keys));
         }
     }
@@ -282,8 +281,8 @@ it('has no zero byte file under design-comuni assets', function (): void {
         if (! $file instanceof SplFileInfo || ! $file->isFile()) {
             continue;
         }
-        ++$checked;
-        if (0 === $file->getSize()) {
+        $checked++;
+        if ($file->getSize() === 0) {
             $empty[] = substr($file->getPathname(), strlen(contentGuardRoot()) + 1);
         }
     }

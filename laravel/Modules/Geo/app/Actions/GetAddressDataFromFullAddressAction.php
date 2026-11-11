@@ -28,21 +28,20 @@ class GetAddressDataFromFullAddressAction
 
     public function __construct()
     {
-        $this->errors = new Collection();
+        $this->errors = new Collection;
     }
 
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *
-     * @param string $fullAddress L'indirizzo da cercare
+     * @param  string  $fullAddress  L'indirizzo da cercare
+     * @return AddressData|null I dati dell'indirizzo trovato, null se nessun provider risponde
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
-     *
-     * @return AddressData|null I dati dell'indirizzo trovato, null se nessun provider risponde
      */
     public function execute(string $fullAddress): ?AddressData
     {
-        $this->errors = new Collection();
+        $this->errors = new Collection;
 
         // Catena di provider e ordine di default: stessi 7 provider, stesso
         // ordine, dell'array hardcoded preesistente (Google per primo). La

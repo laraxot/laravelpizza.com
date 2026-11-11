@@ -35,7 +35,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     use BaseTenantRelationsTrait;
     use HasSlug;
     use HasUuids {
-        \Illuminate\Database\Eloquent\Concerns\HasUuids::resolveRouteBindingQuery as resolveRouteBindingQueryFromUuids;
+        HasUuids::resolveRouteBindingQuery as resolveRouteBindingQueryFromUuids;
     }
     use InteractsWithMedia;
 
@@ -59,9 +59,9 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     ];
 
     /**
-     * @param Builder<Model>|Model $query
-     * @param string|int $value
-     * @param string|null $field
+     * @param  Builder<Model>|Model  $query
+     * @param  string|int  $value
+     * @param  string|null  $field
      * @return Builder<Model>
      */
     public function resolveRouteBindingQuery($query, $value, $field = null): Builder

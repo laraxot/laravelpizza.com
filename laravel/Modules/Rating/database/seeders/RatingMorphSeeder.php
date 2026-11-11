@@ -13,7 +13,7 @@ class RatingMorphSeeder extends Seeder
 {
     public function run(): void
     {
-        if (null !== $this->command) {
+        if ($this->command !== null) {
             $this->command->info('RatingMorphSeeder: pivot demo in Modules\\Predict\\Database\\Seeders\\RatingMorphSeeder.');
         }
     }

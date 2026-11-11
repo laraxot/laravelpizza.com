@@ -6,9 +6,10 @@ use Illuminate\Contracts\Auth\Access\Authorizable;
 use Mockery\MockInterface;
 use Modules\User\Models\Policies\UserPolicy;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 /*
  * Le azioni di riga sugli utenti (cambio password, verifica email, "deactivate") chiedono al Gate `update` o `delete`:
@@ -23,7 +24,7 @@ uses(\Modules\User\Tests\TestCase::class);
 function userActionsActor(string $id, array $roles): UserContract
 {
     /** @var MockInterface&UserContract $user */
-    $user = \Mockery::mock(UserContract::class, Authorizable::class);
+    $user = Mockery::mock(UserContract::class, Authorizable::class);
     $user->shouldReceive('hasRole')->andReturnUsing(
         static fn (string|array $role): bool => array_filter(
             is_array($role) ? $role : [$role],
@@ -41,7 +42,7 @@ function userActionsActor(string $id, array $roles): UserContract
 function userActionsTarget(string $id, array $roles): User
 {
     /** @var MockInterface&User $user */
-    $user = \Mockery::mock(User::class);
+    $user = Mockery::mock(User::class);
     $user->shouldReceive('hasRole')->andReturnUsing(
         static fn (string|array $role): bool => array_filter(
             is_array($role) ? $role : [$role],
@@ -55,7 +56,7 @@ function userActionsTarget(string $id, array $roles): User
 
 function userActionsAllows(UserContract $actor, string $ability, User $target): bool
 {
-    $policy = new UserPolicy();
+    $policy = new UserPolicy;
     $before = $policy->before($actor, $ability, $target);
     if ($before !== null) {
         return $before;
@@ -65,7 +66,7 @@ function userActionsAllows(UserContract $actor, string $ability, User $target): 
 }
 
 afterEach(function (): void {
-    \Mockery::close();
+    Mockery::close();
 });
 
 test('un amministratore di modulo cambia password, verifica email e cancella un utente ordinario', function (string $role, string $ability): void {

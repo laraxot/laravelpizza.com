@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
@@ -9,4 +10,4 @@ Artisan::command('inspire', function () {
 
 // Promemoria agli iscritti degli eventi del giorno dopo (Modules/Meetup SendEventRemindersAction): richiede
 // il cron `* * * * * php artisan schedule:run` sul server (docs/deploy/runbook.md).
-Illuminate\Support\Facades\Schedule::command('meetup:send-reminders')->hourly()->withoutOverlapping()->onOneServer();
+Schedule::command('meetup:send-reminders')->hourly()->withoutOverlapping()->onOneServer();

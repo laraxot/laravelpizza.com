@@ -14,7 +14,6 @@ class UpdateModelSubtitleFieldAction
 {
     use QueueableAction;
 
-
     public function execute(Model $model, string $filePath, string $fieldName = 'txt'): Model
     {
         $plain = app(ExtractSubtitlePlainTextAction::class)->execute($filePath);

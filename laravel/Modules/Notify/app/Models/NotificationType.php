@@ -24,7 +24,7 @@ use Modules\Notify\Database\Factories\NotificationTypeFactory;
  * @method static Builder<static>|NotificationType newQuery()
  * @method static Builder<static>|NotificationType query()
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class NotificationType extends Model
 {

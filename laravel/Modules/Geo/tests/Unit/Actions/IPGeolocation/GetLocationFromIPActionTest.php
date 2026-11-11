@@ -18,7 +18,7 @@ function makeGetLocationFromIPAction(FetchIPLocationAction $fetchAction): GetLoc
 {
     app()->instance(FetchIPLocationAction::class, $fetchAction);
 
-    return new GetLocationFromIPAction();
+    return new GetLocationFromIPAction;
 }
 
 it('delegates to fetch action and returns result', function (): void {

@@ -13,7 +13,7 @@ use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 /**
  * Marker: il modello usa {@see HasAuthenticationLogTrait}.
  *
- * @phpstan-require-extends \Illuminate\Database\Eloquent\Model
+ * @phpstan-require-extends Model
  */
 interface HasAuthentications extends Authenticatable
 {

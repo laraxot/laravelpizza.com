@@ -12,10 +12,11 @@ use Modules\Notify\Filament\Actions\SendRecordsNotificationBulkAction;
 use Modules\Notify\Filament\Forms\Components\ChannelCheckboxList;
 use Modules\Notify\Filament\Forms\Components\MailTemplateSelect;
 use Modules\Notify\Tests\Fixtures\SendRecordsNotificationBulkActionSpy;
+use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 /**
  * @param  array<string, mixed>  $attributes
  */

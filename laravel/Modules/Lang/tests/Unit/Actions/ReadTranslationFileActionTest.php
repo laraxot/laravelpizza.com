@@ -191,5 +191,3 @@ describe('Read Translation File Action', function (): void {
         Assert::assertLessThan($mPos, $aPos);
     });
 });
-
-

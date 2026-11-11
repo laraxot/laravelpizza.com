@@ -14,8 +14,7 @@ final class FetchIPLocationThrowingStub extends FetchIPLocationAction
 {
     public function __construct(
         private readonly \RuntimeException $exception,
-    ) {
-    }
+    ) {}
 
     public function execute(string $ip): IPLocationData
     {

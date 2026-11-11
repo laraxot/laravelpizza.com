@@ -19,13 +19,13 @@ class GetGeoMapDatasetCategoriesAction
         $categories = [];
 
         foreach ($features as $feature) {
-            if ('Point' !== $feature['geometry']['type']) {
+            if ($feature['geometry']['type'] !== 'Point') {
                 continue;
             }
 
             $category = $feature['properties']['p'] ?? $feature['properties']['category'] ?? null;
 
-            if (is_string($category) && '' !== $category) {
+            if (is_string($category) && $category !== '') {
                 $categories[] = $category;
             }
         }

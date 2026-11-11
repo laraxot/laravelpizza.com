@@ -16,7 +16,6 @@ use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Policies\ActivityPolicy;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

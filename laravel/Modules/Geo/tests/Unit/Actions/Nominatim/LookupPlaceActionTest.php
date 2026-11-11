@@ -28,7 +28,7 @@ uses(LightTestCase::class);
 function lookupPlaceActionWithQueue(Response|\Throwable ...$queue): array
 {
     $mockHandler = new MockHandler(array_values($queue));
-    $action = new LookupPlaceAction();
+    $action = new LookupPlaceAction;
 
     (new \ReflectionProperty($action, 'client'))->setValue($action, new Client(['handler' => HandlerStack::create($mockHandler)]));
 
@@ -63,7 +63,7 @@ test('LookupPlaceAction calls the Nominatim lookup endpoint with osm_ids, json f
     $action->execute('R123456');
 
     $request = $mockHandler->getLastRequest();
-    if (null === $request) {
+    if ($request === null) {
         Assert::fail('Nominatim e stato chiamato zero volte');
     }
     parse_str($request->getUri()->getQuery(), $query);

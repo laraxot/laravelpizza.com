@@ -10,7 +10,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 it('validates valid coordinates correctly', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test valid coordinates
     Assert::assertTrue($action->execute(45.4642, 9.1900)); // Milano
@@ -21,7 +21,7 @@ it('validates valid coordinates correctly', function (): void {
 });
 
 it('rejects invalid latitude', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test invalid latitudes
     Assert::assertFalse($action->execute(91, 0)); // Too north
@@ -31,7 +31,7 @@ it('rejects invalid latitude', function (): void {
 });
 
 it('rejects invalid longitude', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test invalid longitudes
     Assert::assertFalse($action->execute(0, 181)); // Too east
@@ -41,7 +41,7 @@ it('rejects invalid longitude', function (): void {
 });
 
 it('validates boundary coordinates', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test exact boundary values - should be valid
     Assert::assertTrue($action->execute(90, 180)); // North pole, far east
@@ -51,7 +51,7 @@ it('validates boundary coordinates', function (): void {
 });
 
 it('handles decimal coordinates correctly', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test high precision coordinates
     Assert::assertTrue($action->execute(45.123456, 9.654321));
@@ -61,7 +61,7 @@ it('handles decimal coordinates correctly', function (): void {
 });
 
 it('handles zero coordinates', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test coordinates with zero values
     Assert::assertTrue($action->execute(0, 0));
@@ -70,7 +70,7 @@ it('handles zero coordinates', function (): void {
 });
 
 it('rejects coordinates with extreme values', function (): void {
-    $action = new ValidateCoordinatesAction();
+    $action = new ValidateCoordinatesAction;
 
     // Test with extreme values that are clearly out of bounds
     Assert::assertFalse($action->execute(1000, 1000));

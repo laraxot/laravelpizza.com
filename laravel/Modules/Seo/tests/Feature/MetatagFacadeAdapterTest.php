@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Modules\Seo\Tests\Feature;
 
 use Modules\Seo\Adapters\MetatagFacadeAdapter;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Seo\Tests\TestCase::class);
+uses(TestCase::class);
 
 it('can set title', function (): void {
     $adapter = app(MetatagFacadeAdapter::class);

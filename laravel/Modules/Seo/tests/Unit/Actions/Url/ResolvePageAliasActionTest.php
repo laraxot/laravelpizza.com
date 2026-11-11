@@ -16,7 +16,7 @@ const PAGE_ALIASES = [
 ];
 
 /**
- * @param array<array-key, mixed>|null $aliases
+ * @param  array<array-key, mixed>|null  $aliases
  */
 function pageAliasTarget(string $path, ?array $aliases = null): ?string
 {

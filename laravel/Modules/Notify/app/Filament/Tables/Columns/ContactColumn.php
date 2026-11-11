@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Tables\Columns;
 
-use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
 use Modules\Notify\Enums\ContactTypeEnum;
+use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
 
 /**
  * ContactColumn - Colonna Filament riutilizzabile per rendering contatti

@@ -131,7 +131,6 @@ class GeoJsonDownloader
             $props = $feature['properties'];
             $geometry = $feature['geometry'];
             /** @var array<string, mixed> $geometry */
-
             $regions[] = [
                 'id' => $this->intValue($props['reg_istat_code_num'] ?? null),
                 'istat_code' => $props['reg_istat_code'] ?? '',
@@ -240,8 +239,7 @@ class GeoJsonDownloader
     /**
      * Calculate centroid of a geometry.
      *
-     * @param array<string, mixed> $geometry
-     *
+     * @param  array<string, mixed>  $geometry
      * @return array{lat: float, lng: float}|null
      */
     protected function calculateCentroid(array $geometry): ?array
@@ -260,7 +258,7 @@ class GeoJsonDownloader
         foreach ($coords as $coord) {
             $sumLng += $coord[0];
             $sumLat += $coord[1];
-            ++$count;
+            $count++;
         }
 
         return [
@@ -272,8 +270,7 @@ class GeoJsonDownloader
     /**
      * Extract all coordinates from a geometry recursively.
      *
-     * @param array<string, mixed> $geometry
-     *
+     * @param  array<string, mixed>  $geometry
      * @return array<int, array{0: float, 1: float}>
      */
     protected function extractCoordinates(array $geometry): array

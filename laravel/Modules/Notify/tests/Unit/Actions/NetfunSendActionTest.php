@@ -6,13 +6,14 @@ namespace Modules\Notify\Tests\Unit\Actions;
 
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Datas\SmsData;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
 use function Safe\class_uses;
 use function Safe\file_get_contents;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('NetfunSendAction', function () {
     it('has execute method returning array', function () {
         $reflection = new ReflectionClass(NetfunSendAction::class);

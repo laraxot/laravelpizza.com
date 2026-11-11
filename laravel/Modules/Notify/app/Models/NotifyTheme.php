@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -76,7 +75,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|NotifyTheme whereUpdatedBy($value)
  * @method static Builder<static>|NotifyTheme whereViewParams($value)
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class NotifyTheme extends BaseModel
 {

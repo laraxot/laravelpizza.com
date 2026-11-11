@@ -9,7 +9,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateRatingsTable.
  */
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * db up.
      */

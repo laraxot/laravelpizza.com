@@ -24,7 +24,6 @@ use Modules\Tenant\Models\Domain;
 use Modules\Tenant\Models\Policies\DomainPolicy;
 use Modules\Tenant\Models\Policies\TenantBasePolicy;
 use Modules\Tenant\Models\Tenant;
-use Modules\Tenant\Models\Traits\SushiToCsv;
 use Modules\Tenant\Tests\TestCase;
 use Modules\Tenant\Tests\Unit\Fixtures\CatalogSushiCsvModel;
 use Modules\Tenant\Tests\Unit\Fixtures\CatalogSushiJsonsModel;

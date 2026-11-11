@@ -17,6 +17,7 @@ use Modules\Xot\Models\XotBaseModel;
  * @property-read Collection<int, AiMessage> $messages
  * @property-read Collection<int, AiActionProposal> $proposals
  * @property-read Collection<int, AiToolLog> $toolLogs
+ *
  * @method static Builder<static> query()
  */
 class AiThread extends XotBaseModel

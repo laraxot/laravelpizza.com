@@ -26,7 +26,8 @@ test('BaseTreeModel implements HasRecursiveRelationships', function () {
 
 test('BaseTreeModel has expected fillable fields', function () {
     // Create a concrete implementation for testing
-    $model = new class extends BaseTreeModel {
+    $model = new class extends BaseTreeModel
+    {
         protected $table = 'test';
     };
 
@@ -41,7 +42,8 @@ test('BaseTreeModel has expected fillable fields', function () {
 
 test('BaseTreeModel has expected casts', function () {
     // Create a concrete implementation for testing
-    $model = new class extends BaseTreeModel {
+    $model = new class extends BaseTreeModel
+    {
         protected $table = 'test';
     };
 

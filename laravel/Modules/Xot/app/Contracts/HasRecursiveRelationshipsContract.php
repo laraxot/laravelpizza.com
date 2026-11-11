@@ -51,11 +51,10 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
  * fatal runtime. `TypedHasRecursiveRelationships` li restringe comunque ai tipi nativi
  * quando serve, e PHPStan legge il `@return`.
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  * The vendor trait is the source of truth for implementation. Its public methods are
  * intentionally untyped, so this contract keeps runtime-compatible signatures and
  * documents the types for static analysis instead.
- *
  * @mixin Model
  */
 interface HasRecursiveRelationshipsContract
@@ -65,8 +64,6 @@ interface HasRecursiveRelationshipsContract
      *
      * Il ritorno e' `mixed` perche' il trait vendor `HasAdjacencyList` lo dichiara cosi':
      * un tipo piu' stretto qui rende fatale il caricamento di ogni classe che usa il trait.
-     *
-     * @return mixed
      */
     public static function withMaxDepth(int $maxDepth, callable $query): mixed;
 
@@ -133,7 +130,7 @@ interface HasRecursiveRelationshipsContract
      */
     public function getExpressionName();
 
-/** @return Ancestors<TModel, TModel> */
+    /** @return Ancestors<TModel, TModel> */
     public function ancestors();
 
     /** @return Ancestors<TModel, TModel> */
@@ -189,7 +186,6 @@ interface HasRecursiveRelationshipsContract
     /**
      * Determine if an attribute is an integer.
      *
-     * @param string $attribute
      *
      * @return bool
      */

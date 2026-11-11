@@ -130,7 +130,7 @@ class SushiCommand extends Command
     /**
      * Valida i dati di un comune.
      *
-     * @param array<mixed, mixed> $comune
+     * @param  array<mixed, mixed>  $comune
      */
     protected function isValidComuneData(array $comune): bool
     {

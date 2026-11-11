@@ -6,8 +6,8 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
 class IconMediaColumn extends XotBaseIconColumn

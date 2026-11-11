@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Job\Models\Traits;
 
 use Webmozart\Assert\Assert;
+
 use function Safe\json_decode;
 
 trait JobMutators

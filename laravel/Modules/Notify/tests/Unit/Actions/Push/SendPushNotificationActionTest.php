@@ -9,9 +9,10 @@ use Modules\Notify\Actions\Push\SendPushToDeviceAction;
 use Modules\Notify\Actions\Push\SendPushToDevicesAction;
 use Modules\Notify\Actions\Push\SendPushToTopicAction;
 use Modules\Notify\Datas\PushNotificationData;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 beforeEach(function (): void {
     config(['notify.fcm.server_key' => 'test-key']);
     // Nessuna richiesta reale; ogni test registra il proprio stub FCM (un fake '*' qui vincerebbe su quelli)

@@ -11,6 +11,7 @@ use Mockery;
 use Mockery\MockInterface;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Widgets\EnvWidget;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Tests\TestCase;
 
 uses(TestCase::class);
@@ -168,7 +169,7 @@ it('refuses to write .env for a user who is not super-admin', function (): void 
     $widget->mount();
     $widget->data['telegram_bot_token'] = 'pest-test-'.uniqid('', true);
 
-    expect(fn () => $widget->submit())->toThrow(\Symfony\Component\HttpKernel\Exception\HttpException::class);
+    expect(fn () => $widget->submit())->toThrow(HttpException::class);
     expect(File::get($this->envPath))->toBe($this->originalEnvContent);
 });
 

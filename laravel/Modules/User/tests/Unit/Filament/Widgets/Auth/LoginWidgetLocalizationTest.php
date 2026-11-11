@@ -1,10 +1,11 @@
 <?php
 
 declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
 
 use function Safe\file_get_contents;
 
-uses(PHPUnit\Framework\TestCase::class);
+uses(TestCase::class);
 
 /**
  * Regressione D37: il redirect post-login non deve chiamare

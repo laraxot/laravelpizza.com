@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Database\Seeders;
 
+use Illuminate\Console\Command;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Console\Command;
 use Modules\Cms\Models\Conf;
 use Modules\Cms\Models\Menu;
 use Modules\Cms\Models\Module;

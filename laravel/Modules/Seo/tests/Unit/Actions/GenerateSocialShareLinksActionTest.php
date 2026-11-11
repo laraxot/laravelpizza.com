@@ -6,9 +6,10 @@ namespace Modules\Seo\Tests\Unit\Actions;
 
 use Modules\Seo\Actions\GenerateSocialShareLinksAction;
 use Modules\Seo\Datas\SocialShareData;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Seo\Tests\TestCase::class);
+uses(TestCase::class);
 
 it('generates social share links for all platforms', function (): void {
     $data = SocialShareData::from([

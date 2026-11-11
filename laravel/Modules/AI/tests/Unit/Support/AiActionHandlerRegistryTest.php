@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\AI\Tests\Unit\Support;
 
+use Modules\AI\Adapters\AiActionHandlerRegistry;
 use Modules\AI\Contracts\AiActionHandlerContract;
 use Modules\AI\Models\AiActionProposal;
-use Modules\AI\Adapters\AiActionHandlerRegistry;
 use PHPUnit\Framework\Assert;
 
 test('registry registers and resolves handlers by type', function (): void {

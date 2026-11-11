@@ -77,7 +77,6 @@ it('derives names, controller and namespace from a parametrized definition with 
         ->and($archive->getAction('uses'))->toBe('\Modules\Foo\Http\Controllers\XotarticlesIdController@archive');
 });
 
-
 it('refuses an empty definition list', function (): void {
     expect(fn () => app(RegisterDynamicRoutesAction::class)->execute([]))->toThrow(InvalidArgumentException::class);
 });

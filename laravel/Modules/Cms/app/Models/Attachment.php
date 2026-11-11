@@ -17,40 +17,40 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 /**
  * ---.
  *
- * @property string                              $id
- * @property array<array-key, mixed>|null        $title
- * @property array<array-key, mixed>|null        $description
- * @property string|null                         $slug
- * @property string|null                         $disk
- * @property array<array-key, mixed>|null        $attachment
- * @property Carbon|null                         $created_at
- * @property Carbon|null                         $updated_at
- * @property string|null                         $created_by
- * @property string|null                         $updated_by
- * @property ProfileContract|null                $creator
- * @property array<int|string, mixed>            $translatable_columns_from
- * @property MediaCollection<int, Media>         $media
- * @property int|null                            $media_count
+ * @property string $id
+ * @property array<array-key, mixed>|null $title
+ * @property array<array-key, mixed>|null $description
+ * @property string|null $slug
+ * @property string|null $disk
+ * @property array<array-key, mixed>|null $attachment
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property ProfileContract|null $creator
+ * @property array<int|string, mixed> $translatable_columns_from
+ * @property MediaCollection<int, Media> $media
+ * @property int|null $media_count
  * @property array<string, array<string, mixed>> $translations
- * @property ProfileContract|null                $updater
+ * @property ProfileContract|null $updater
  *
- * @method static Builder<static>|Attachment                               newModelQuery()
- * @method static Builder<static>|Attachment                               newQuery()
- * @method static Builder<static>|Attachment                               query()
- * @method static Builder<static>|Attachment                               whereAttachment($value)
- * @method static Builder<static>|Attachment                               whereCreatedAt($value)
- * @method static Builder<static>|Attachment                               whereCreatedBy($value)
- * @method static Builder<static>|Attachment                               whereDescription($value)
- * @method static Builder<static>|Attachment                               whereDisk($value)
- * @method static Builder<static>|Attachment                               whereId($value)
+ * @method static Builder<static>|Attachment newModelQuery()
+ * @method static Builder<static>|Attachment newQuery()
+ * @method static Builder<static>|Attachment query()
+ * @method static Builder<static>|Attachment whereAttachment($value)
+ * @method static Builder<static>|Attachment whereCreatedAt($value)
+ * @method static Builder<static>|Attachment whereCreatedBy($value)
+ * @method static Builder<static>|Attachment whereDescription($value)
+ * @method static Builder<static>|Attachment whereDisk($value)
+ * @method static Builder<static>|Attachment whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereJsonContainsLocales(string $column, array<int|string, mixed> $locales, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereLocale(string $column, string $locale)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereLocales(string $column, array<int|string, mixed> $locales)
- * @method static Builder<static>|Attachment                               whereSlug($value)
- * @method static Builder<static>|Attachment                               whereTitle($value)
- * @method static Builder<static>|Attachment                               whereUpdatedAt($value)
- * @method static Builder<static>|Attachment                               whereUpdatedBy($value)
+ * @method static Builder<static>|Attachment whereSlug($value)
+ * @method static Builder<static>|Attachment whereTitle($value)
+ * @method static Builder<static>|Attachment whereUpdatedAt($value)
+ * @method static Builder<static>|Attachment whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */

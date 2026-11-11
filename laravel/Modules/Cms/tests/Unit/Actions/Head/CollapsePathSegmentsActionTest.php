@@ -8,7 +8,7 @@ use Modules\Cms\Actions\Head\CollapsePathSegmentsAction;
 use PHPUnit\Framework\Assert;
 
 test('a path is reduced to the form the router serves', function (string $path, string $expected): void {
-    Assert::assertSame($expected, (new CollapsePathSegmentsAction())->execute($path), $path);
+    Assert::assertSame($expected, (new CollapsePathSegmentsAction)->execute($path), $path);
 })->with([
     'already clean' => ['it/faq', 'it/faq'],
     'leading and trailing slashes' => ['/it/faq/', 'it/faq'],
@@ -22,5 +22,5 @@ test('a path is reduced to the form the router serves', function (string $path, 
 ]);
 
 test('segments come back as a list in path order', function (): void {
-    Assert::assertSame(['it', 'auth', 'login'], (new CollapsePathSegmentsAction())->segments('/it/./x/../auth//login/'));
+    Assert::assertSame(['it', 'auth', 'login'], (new CollapsePathSegmentsAction)->segments('/it/./x/../auth//login/'));
 });

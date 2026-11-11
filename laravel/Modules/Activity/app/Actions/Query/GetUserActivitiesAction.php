@@ -35,8 +35,7 @@ class GetUserActivitiesAction
             ->whereIn('causer_id', [$user->getKey()])
             ->where('causer_type', $user::class)
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }

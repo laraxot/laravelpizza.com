@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
-use Modules\Xot\Datas\XotData;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Device;
 use Modules\User\Models\Notification;
@@ -15,6 +14,7 @@ use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
+use Modules\Xot\Datas\XotData;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 uses(TestCase::class);
@@ -59,7 +59,7 @@ describe('User Model Creation', function () {
 
 describe('User Model Configuration', function () {
     it('uses user database connection', function () {
-        expect((new User())->getConnectionName())->toBe('user');
+        expect((new User)->getConnectionName())->toBe('user');
     });
 });
 
@@ -133,58 +133,58 @@ describe('User Authentication Features', function () {
     });
 
     it('can access socialite feature', function () {
-        expect((new User())->canAccessSocialite())->toBe(true);
+        expect((new User)->canAccessSocialite())->toBe(true);
     });
 });
 
 describe('User Relationships', function () {
     it('can have teams', function () {
-        expect((new User())->teams()->getRelated()::class)->toBe(Team::class);
+        expect((new User)->teams()->getRelated()::class)->toBe(Team::class);
     });
 
     it('can own teams', function () {
-        expect((new User())->ownedTeams()->getRelated()::class)->toBe(Team::class);
+        expect((new User)->ownedTeams()->getRelated()::class)->toBe(Team::class);
     });
 
     it('can have current team', function () {
-        expect((new User())->currentTeam()->getRelated()::class)->toBe(Team::class);
+        expect((new User)->currentTeam()->getRelated()::class)->toBe(Team::class);
     });
 
     it('can have roles', function () {
-        expect((new User())->roles()->getRelated()::class)->toBe(Role::class);
+        expect((new User)->roles()->getRelated()::class)->toBe(Role::class);
     });
 
     it('can have permissions', function () {
-        expect((new User())->permissions()->getRelated()::class)->toBe(Permission::class);
+        expect((new User)->permissions()->getRelated()::class)->toBe(Permission::class);
     });
 
     it('can have profile', function () {
         // Il profilo e' la classe configurata del progetto (XotData), non sempre `User\Models\Profile`.
-        expect((new User())->profile()->getRelated()::class)->toBe(XotData::make()->getProfileClass());
+        expect((new User)->profile()->getRelated()::class)->toBe(XotData::make()->getProfileClass());
     });
 
     it('can have devices', function () {
-        expect((new User())->devices()->getRelated()::class)->toBe(Device::class);
+        expect((new User)->devices()->getRelated()::class)->toBe(Device::class);
     });
 
     it('can have authentication logs', function () {
-        expect((new User())->authentications()->getRelated()::class)->toBe(AuthenticationLog::class);
+        expect((new User)->authentications()->getRelated()::class)->toBe(AuthenticationLog::class);
     });
 
     it('can have oauth clients', function () {
-        expect((new User())->clients()->getRelated()::class)->toBe(OauthClient::class);
+        expect((new User)->clients()->getRelated()::class)->toBe(OauthClient::class);
     });
 
     it('can have oauth tokens', function () {
-        expect((new User())->tokens()->getRelated()::class)->toBe(OauthToken::class);
+        expect((new User)->tokens()->getRelated()::class)->toBe(OauthToken::class);
     });
 
     it('can have notifications', function () {
-        expect((new User())->notifications()->getRelated()::class)->toBe(Notification::class);
+        expect((new User)->notifications()->getRelated()::class)->toBe(Notification::class);
     });
 
     it('can have socialite users', function () {
-        expect((new User())->socialiteUsers()->getRelated()::class)->toBe(SocialiteUser::class);
+        expect((new User)->socialiteUsers()->getRelated()::class)->toBe(SocialiteUser::class);
     });
 });
 
@@ -284,7 +284,7 @@ describe('User Permission System', function () {
 
 describe('User Media Management', function () {
     it('can have media attached', function () {
-        expect((new User())->media()->getRelated()::class)->toBe(Media::class);
+        expect((new User)->media()->getRelated()::class)->toBe(Media::class);
     });
 });
 

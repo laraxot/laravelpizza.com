@@ -16,7 +16,8 @@ uses(TestCase::class);
  */
 function makeBaseUserSubject(): BaseUser
 {
-    return new class extends BaseUser {
+    return new class extends BaseUser
+    {
         protected $table = 'test_users';
     };
 }

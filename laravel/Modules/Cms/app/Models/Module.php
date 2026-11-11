@@ -12,8 +12,8 @@ use Sushi\Sushi;
 /**
  * Modules\Cms\Models\Module.
  *
- * @property string               $id
- * @property string|null          $name
+ * @property string $id
+ * @property string|null $name
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *

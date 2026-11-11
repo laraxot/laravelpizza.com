@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Binary;
 
-use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\Process;
 
@@ -320,4 +320,3 @@ final class BinaryAssetsNotCrStrippedTest extends TestCase
         return $head;
     }
 }
-

@@ -13,6 +13,7 @@ use function Safe\preg_replace_callback;
  * Trait HasNotificationTracking.
  *
  * Fornisce funzionalità per la gestione del tracking delle notifiche.
+ *
  * @phpstan-ignore trait.unused
  */
 trait HasNotificationTracking // @phpstan-ignore trait.unused

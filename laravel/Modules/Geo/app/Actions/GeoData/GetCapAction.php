@@ -17,8 +17,8 @@ class GetCapAction
     use QueueableAction;
 
     /**
-     * @param string $provinceCode Codice della provincia
-     * @param string $cityCode     Codice della città
+     * @param  string  $provinceCode  Codice della provincia
+     * @param  string  $cityCode  Codice della città
      */
     public function execute(string $provinceCode, string $cityCode): ?string
     {

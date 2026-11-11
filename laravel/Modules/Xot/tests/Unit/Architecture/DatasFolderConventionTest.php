@@ -37,7 +37,7 @@ test('i data object vivono solo in app/Datas (e i loro test in tests/*/Datas)', 
             }
 
             foreach (File::allFiles($dir) as $file) {
-                if ('php' === $file->getExtension()) {
+                if ($file->getExtension() === 'php') {
                     $found[] = ltrim(str_replace(base_path(), '', $file->getPathname()), '/');
                 }
             }

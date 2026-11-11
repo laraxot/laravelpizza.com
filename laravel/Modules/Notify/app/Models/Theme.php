@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Theme newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Theme query()
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 class Theme extends Model
 {

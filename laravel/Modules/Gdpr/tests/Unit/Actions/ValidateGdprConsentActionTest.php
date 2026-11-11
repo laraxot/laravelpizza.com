@@ -8,25 +8,25 @@ use Illuminate\Validation\ValidationException;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 
 test('ValidateGdprConsentAction passes with valid consents', function () {
-    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction;
 
     gdprAssertDoesNotThrow(ValidationException::class, static fn () => $action->execute(true, true));
 });
 
 test('ValidateGdprConsentAction throws with false privacy', function () {
-    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction;
 
     gdprAssertThrows(ValidationException::class, static fn () => $action->execute(false, true));
 });
 
 test('ValidateGdprConsentAction throws with false terms', function () {
-    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction;
 
     gdprAssertThrows(ValidationException::class, static fn () => $action->execute(true, false));
 });
 
 test('ValidateGdprConsentAction throws with both false', function () {
-    $action = new ValidateGdprConsentAction();
+    $action = new ValidateGdprConsentAction;
 
     gdprAssertThrows(ValidationException::class, static fn () => $action->execute(false, false));
 });

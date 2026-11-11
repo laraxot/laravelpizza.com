@@ -12,7 +12,7 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class HasMediasTable extends XotBaseResourceTable
 {
     /**
-     * @return array<int|string, \Filament\Tables\Columns\Column>
+     * @return array<int|string, Column>
      */
     public function getTableColumns(): array
     {

@@ -44,8 +44,7 @@ function auditHelperTextFiles(string $basePath): array
  * $data e' l'albero di traduzione ottenuto con include: struttura ricorsiva a profondita' aperta
  * (fino a 9 livelli oggi, foglie string|int), PHPStan non ha tipi ricorsivi, per questo mixed.
  *
- * @param array<array-key, mixed> $data
- *
+ * @param  array<array-key, mixed>  $data
  * @return list<array{path: string, key: int|string, current_value: string, should_be: string, line_context: string}>
  */
 function findHelperTextIssues(array $data, string $file, string $parentKey = ''): array
@@ -80,7 +79,7 @@ function findHelperTextIssues(array $data, string $file, string $parentKey = '')
 }
 
 /**
- * @param array<string, list<array{path: string, key: int|string, current_value: string, should_be: string, line_context: string}>> $issues
+ * @param  array<string, list<array{path: string, key: int|string, current_value: string, should_be: string, line_context: string}>>  $issues
  */
 function generateReport(array $issues): string
 {

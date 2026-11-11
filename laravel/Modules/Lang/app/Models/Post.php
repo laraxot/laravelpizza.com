@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 // --- traits ---
 // use Laravel\Scout\Searchable;
-use Modules\Lang\Database\Factories\PostFactory;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -228,7 +226,7 @@ class Post extends BaseModel
 
     public function getTitleAttribute(?string $value): ?string
     {
-        if (null !== $value) {
+        if ($value !== null) {
             return $value;
         }
 
@@ -237,7 +235,7 @@ class Post extends BaseModel
         $value = $postType.' '.$postId;
         $this->title = $value;
 
-        if (null !== $this->getKey()) {
+        if ($this->getKey() !== null) {
             $this->update(['title' => $value]);
         }
 
@@ -246,14 +244,14 @@ class Post extends BaseModel
 
     public function getGuidAttribute(?string $value): ?string
     {
-        if (is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
+        if (is_string($value) && $value !== '' && ! str_contains($value, ' ')) {
             return $value;
         }
 
         $value = Str::slug($this->title ?? '');
         $this->guid = $value;
 
-        if (null !== $this->getKey()) {
+        if ($this->getKey() !== null) {
             $this->update(['guid' => $value]);
         }
 

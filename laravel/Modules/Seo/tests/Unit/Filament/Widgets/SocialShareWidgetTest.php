@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace Modules\Seo\Tests\Unit\Filament\Widgets;
 
 use Modules\Seo\Filament\Widgets\SocialShareWidget;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-uses(\Modules\Seo\Tests\TestCase::class);
+
+uses(TestCase::class);
 
 it('builds social links and exposes platforms in widget view data', function (): void {
     $widget = new class extends SocialShareWidget

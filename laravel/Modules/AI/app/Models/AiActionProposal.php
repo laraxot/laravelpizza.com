@@ -42,7 +42,6 @@ use Modules\Xot\Models\XotBaseModel;
  * @method static Builder<static>|AiActionProposal newModelQuery()
  * @method static Builder<static>|AiActionProposal newQuery()
  * @method static Builder<static>|AiActionProposal query()
- *
  */
 class AiActionProposal extends XotBaseModel
 {

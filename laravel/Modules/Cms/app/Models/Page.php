@@ -15,47 +15,47 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\Cms\Models\Page.
  *
- * @property string|null                         $id
- * @property array<array-key, mixed>|null        $title
- * @property string|null                         $slug
- * @property array<array-key, mixed>|null        $middleware
- * @property string|null                         $content
- * @property string|null                         $description
- * @property string|null                         $layout
- * @property array<array-key, mixed>|null        $blocks
- * @property array<array-key, mixed>|null        $content_blocks
- * @property array<array-key, mixed>|null        $sidebar_blocks
- * @property array<array-key, mixed>|null        $footer_blocks
- * @property Carbon|null                         $created_at
- * @property Carbon|null                         $updated_at
- * @property string|null                         $created_by
- * @property string|null                         $updated_by
- * @property ProfileContract|null                $creator
- * @property array<int|string, mixed>            $translatable_columns_from
+ * @property string|null $id
+ * @property array<array-key, mixed>|null $title
+ * @property string|null $slug
+ * @property array<array-key, mixed>|null $middleware
+ * @property string|null $content
+ * @property string|null $description
+ * @property string|null $layout
+ * @property array<array-key, mixed>|null $blocks
+ * @property array<array-key, mixed>|null $content_blocks
+ * @property array<array-key, mixed>|null $sidebar_blocks
+ * @property array<array-key, mixed>|null $footer_blocks
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property ProfileContract|null $creator
+ * @property array<int|string, mixed> $translatable_columns_from
  * @property array<string, array<string, mixed>> $translations
- * @property ProfileContract|null                $updater
+ * @property ProfileContract|null $updater
  *
- * @method static Builder<static>|Page                               newModelQuery()
- * @method static Builder<static>|Page                               newQuery()
- * @method static Builder<static>|Page                               query()
- * @method static Builder<static>|Page                               whereBlocks($value)
- * @method static Builder<static>|Page                               whereContent($value)
- * @method static Builder<static>|Page                               whereContentBlocks($value)
- * @method static Builder<static>|Page                               whereCreatedAt($value)
- * @method static Builder<static>|Page                               whereCreatedBy($value)
- * @method static Builder<static>|Page                               whereDescription($value)
- * @method static Builder<static>|Page                               whereFooterBlocks($value)
- * @method static Builder<static>|Page                               whereId($value)
+ * @method static Builder<static>|Page newModelQuery()
+ * @method static Builder<static>|Page newQuery()
+ * @method static Builder<static>|Page query()
+ * @method static Builder<static>|Page whereBlocks($value)
+ * @method static Builder<static>|Page whereContent($value)
+ * @method static Builder<static>|Page whereContentBlocks($value)
+ * @method static Builder<static>|Page whereCreatedAt($value)
+ * @method static Builder<static>|Page whereCreatedBy($value)
+ * @method static Builder<static>|Page whereDescription($value)
+ * @method static Builder<static>|Page whereFooterBlocks($value)
+ * @method static Builder<static>|Page whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Page whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Page whereJsonContainsLocales(string $column, array<int|string, mixed> $locales, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Page whereLocale(string $column, string $locale)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Page whereLocales(string $column, array<int|string, mixed> $locales)
- * @method static Builder<static>|Page                               whereMiddleware($value)
- * @method static Builder<static>|Page                               whereSidebarBlocks($value)
- * @method static Builder<static>|Page                               whereSlug($value)
- * @method static Builder<static>|Page                               whereTitle($value)
- * @method static Builder<static>|Page                               whereUpdatedAt($value)
- * @method static Builder<static>|Page                               whereUpdatedBy($value)
+ * @method static Builder<static>|Page whereMiddleware($value)
+ * @method static Builder<static>|Page whereSidebarBlocks($value)
+ * @method static Builder<static>|Page whereSlug($value)
+ * @method static Builder<static>|Page whereTitle($value)
+ * @method static Builder<static>|Page whereUpdatedAt($value)
+ * @method static Builder<static>|Page whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */

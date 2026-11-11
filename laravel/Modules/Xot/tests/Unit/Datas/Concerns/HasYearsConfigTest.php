@@ -25,7 +25,7 @@ final class YearsConfigFixture implements YearsConfigContract
      */
     public static function prepare(array $properties): array
     {
-        return static::prepareAnni($properties);
+        return self::prepareAnni($properties);
     }
 }
 

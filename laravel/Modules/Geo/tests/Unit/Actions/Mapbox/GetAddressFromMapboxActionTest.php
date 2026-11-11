@@ -19,7 +19,7 @@ use function Safe\json_encode;
 
 uses(LightTestCase::class);
 it('throws exception when api key is not configured', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -36,7 +36,7 @@ it('throws exception when api key is not configured', function (): void {
 });
 
 it('throws exception for empty address', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -53,7 +53,7 @@ it('throws exception for empty address', function (): void {
 });
 
 it('throws exception for too long address', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -72,7 +72,7 @@ it('throws exception for too long address', function (): void {
 });
 
 it('throws exception for guzzle exception', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -87,7 +87,7 @@ it('throws exception for guzzle exception', function (): void {
 });
 
 it('returns null when no features in response', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -104,7 +104,7 @@ it('returns null when no features in response', function (): void {
 });
 
 it('returns address data for valid response', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);
@@ -147,7 +147,7 @@ it('returns address data for valid response', function (): void {
 });
 
 it('handles address without house number', function (): void {
-    $mockHandler = new MockHandler();
+    $mockHandler = new MockHandler;
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($client);

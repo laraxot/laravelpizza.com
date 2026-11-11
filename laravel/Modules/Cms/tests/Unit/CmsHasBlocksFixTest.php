@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit;
 
+use Modules\Cms\Models\Traits\HasBlocks;
 use PHPUnit\Framework\Assert;
 
 test('HasBlocks getBlocksBySlug handles MultipleRecordsFoundException', function (): void {
-    $reflectionClass = new \ReflectionClass(\Modules\Cms\Models\Traits\HasBlocks::class);
+    $reflectionClass = new \ReflectionClass(HasBlocks::class);
     $method = $reflectionClass->getMethod('getBlocksBySlug');
     expect($method)->not->toBeNull();
     expect($method->isStatic())->toBeTrue();
@@ -17,7 +18,7 @@ test('HasBlocks getBlocksBySlug handles MultipleRecordsFoundException', function
 });
 
 test('getBlocksBySlug method signature is correct', function (): void {
-    $reflectionClass = new \ReflectionClass(\Modules\Cms\Models\Traits\HasBlocks::class);
+    $reflectionClass = new \ReflectionClass(HasBlocks::class);
     $method = $reflectionClass->getMethod('getBlocksBySlug');
     $params = $method->getParameters();
     expect(count($params))->toBe(2);

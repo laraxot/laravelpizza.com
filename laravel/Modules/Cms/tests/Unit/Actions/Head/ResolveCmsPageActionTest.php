@@ -8,7 +8,7 @@ use Modules\Cms\Actions\Head\ResolveCmsPageAction;
 use PHPUnit\Framework\Assert;
 
 test('the request path maps to the CMS slugs the sitemap derives paths from', function (string $path, array $expected): void {
-    $action = new ResolveCmsPageAction();
+    $action = new ResolveCmsPageAction;
 
     Assert::assertSame($expected, $action->candidateSlugs($path, ['it', 'en']), $path);
 })->with([
@@ -21,7 +21,7 @@ test('the request path maps to the CMS slugs the sitemap derives paths from', fu
 ]);
 
 test('a named route is tried after the path slugs and ignored when it is a generic Folio route', function (): void {
-    $action = new ResolveCmsPageAction();
+    $action = new ResolveCmsPageAction;
 
     Assert::assertSame(['faqs', 'faqs.index', 'segnalazioni.index'], $action->candidateSlugs('it/faqs', ['it'], 'segnalazioni.index'));
     Assert::assertSame(['faq', 'faq.index'], $action->candidateSlugs('it/faq', ['it'], 'faq'));

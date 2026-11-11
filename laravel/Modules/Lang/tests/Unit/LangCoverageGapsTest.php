@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
-use function Safe\file_get_contents;
 use Illuminate\Support\Str;
 use Illuminate\Translation\ArrayLoader;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -46,6 +45,7 @@ use Modules\Xot\Actions\GetTransKeyAction;
 use PHPUnit\Framework\Assert;
 use ReflectionMethod;
 
+use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\getmypid;
 use function Safe\mkdir;

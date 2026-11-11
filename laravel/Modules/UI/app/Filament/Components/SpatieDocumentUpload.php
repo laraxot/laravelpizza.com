@@ -32,7 +32,7 @@ final class SpatieDocumentUpload
             ->previewable()
             ->maxSize(10240) // 10MB - limite ragionevole per documenti
             ->acceptedFileTypes([
-                'image/jpeg', 'image/png', 'image/heic', 'image/webp', 'application/pdf'
+                'image/jpeg', 'image/png', 'image/heic', 'image/webp', 'application/pdf',
             ])
             ->imagePreviewHeight('150');
     }

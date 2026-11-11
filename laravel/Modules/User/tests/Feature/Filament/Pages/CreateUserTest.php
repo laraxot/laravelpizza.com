@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-use Tests\TestCase;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->createUserPage = new CreateUser();
+    $this->createUserPage = new CreateUser;
 });
 
 test('create user page has correct resource', function (): void {

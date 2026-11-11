@@ -24,7 +24,7 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $stats = [];
-        if (null === $this->record) {
+        if ($this->record === null) {
             return $stats;
         }
         $ratings = $this->record->ratings()->wherePivot('user_id', null)->get();

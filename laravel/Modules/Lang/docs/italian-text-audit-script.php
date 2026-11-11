@@ -133,8 +133,8 @@ function auditItalianTextInNonItalianFiles(string $basePath): array
         foreach ($italianPatterns as $pattern) {
             $lineNumber = 0;
             foreach ($lines as $line) {
-                ++$lineNumber;
-                if (false !== stripos($line, $pattern)) {
+                $lineNumber++;
+                if (stripos($line, $pattern) !== false) {
                     $fileIssues[] = [
                         'pattern' => $pattern,
                         'line' => $lineNumber,
@@ -172,7 +172,7 @@ function getLanguageFromPath(string $file): string
 }
 
 /**
- * @param array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string}>> $issues
+ * @param  array<string, list<array{pattern: string, line: int<1, max>, content: string, language: string}>>  $issues
  */
 function generateItalianTextReport(array $issues): string
 {
@@ -195,7 +195,7 @@ function generateItalianTextReport(array $issues): string
         }
     }
 
-    if (0 === $totalFiles) {
+    if ($totalFiles === 0) {
         $report .= "✅ **Nessun problema trovato!** Tutti i file di traduzione non italiani sono puliti.\n\n";
     }
 

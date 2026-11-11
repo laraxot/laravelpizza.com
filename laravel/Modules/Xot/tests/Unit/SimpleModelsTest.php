@@ -15,4 +15,3 @@ it('legge i moduli nwidart dal registry Sushi', function () {
     Assert::assertInstanceOf(Module::class, $module);
     Assert::assertSame('Xot', $module->name);
 });
-

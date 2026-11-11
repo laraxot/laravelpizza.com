@@ -9,7 +9,7 @@ use PHPUnit\Framework\Assert;
 
 describe('SectionResource', function (): void {
     test('section resource has correct model', function (): void {
-        $resource = new SectionResource();
+        $resource = new SectionResource;
 
         Assert::assertSame(Section::class, $resource::getModel());
     });

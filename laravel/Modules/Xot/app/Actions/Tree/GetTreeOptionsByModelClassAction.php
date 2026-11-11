@@ -44,7 +44,7 @@ class GetTreeOptionsByModelClassAction
     }
 
     /**
-     * @param HasRecursiveRelationshipsContract<Model> $model
+     * @param  HasRecursiveRelationshipsContract<Model>  $model
      */
     public function parse(HasRecursiveRelationshipsContract $model): void
     {

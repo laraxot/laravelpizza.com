@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Models\MailTemplateLog;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('Mail Template Log Business Logic', function () {
     it('can create mail template log with basic information', function () {
         $template = MailTemplate::factory()->create();
@@ -171,7 +172,7 @@ describe('Mail Template Log Business Logic', function () {
                     'patient_name' => 'Mario Rossi',
                     'appointment_date' => '2024-12-15 10:00:00',
                     'doctor_name' => 'Dr. Bianchi',
-                    'clinic_name' => 'Studio Dentistico ' . config()->string('app.name', 'Our Platform'),
+                    'clinic_name' => 'Studio Dentistico '.config()->string('app.name', 'Our Platform'),
                     'clinic_address' => 'Via Roma 123, Milano',
                     'clinic_phone' => '+39 02 1234567',
                 ],

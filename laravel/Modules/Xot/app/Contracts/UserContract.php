@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Contracts\OAuthenticatable;
-use Laravel\Passport\PersonalAccessTokenResult;
 use Laravel\Passport\Contracts\ScopeAuthorizable;
+use Laravel\Passport\PersonalAccessTokenResult;
 use Laravel\Passport\Token;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role as UserRole;
@@ -50,7 +50,7 @@ use Spatie\Permission\Traits\HasRoles;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Illuminate\Database\Eloquent\Model
+ * @mixin Model
  */
 interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable
 {
@@ -67,8 +67,6 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
 
     /**
      * Get the access token currently associated with the user.
-     *
-     * @return ScopeAuthorizable|null
      */
     public function token(): ?ScopeAuthorizable;
 

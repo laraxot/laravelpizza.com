@@ -4,6 +4,12 @@
 use App\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter;
+use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes;
+use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath;
+use Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect;
+use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -14,16 +20,16 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         // Le pagine Folio sono registrate una volta per lingua con lo stesso nome: route('login') punterebbe
         // all'ultima lingua registrata (es. /ru/auth/login). Gli ospiti vanno al login nella lingua corrente.
-        $middleware->redirectGuestsTo(static fn (): string => \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/auth/login'));
+        $middleware->redirectGuestsTo(static fn (): string => LaravelLocalization::localizeUrl('/auth/login'));
 
         // Laravel Localization middleware aliases for Laravel 11+
         // These are used in FolioVoltServiceProvider for route localization
         $middleware->alias([
-            'localize' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
-            'localizationRedirect' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
-            'localeSessionRedirect' => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
-            'localeCookieRedirect' => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
-            'localeViewPath' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
+            'localize' => LaravelLocalizationRoutes::class,
+            'localizationRedirect' => LaravelLocalizationRedirectFilter::class,
+            'localeSessionRedirect' => LocaleSessionRedirect::class,
+            'localeCookieRedirect' => LocaleCookieRedirect::class,
+            'localeViewPath' => LaravelLocalizationViewPath::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

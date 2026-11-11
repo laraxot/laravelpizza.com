@@ -101,7 +101,7 @@ class GetActivityStatisticsAction
     }
 
     /**
-     * @param array<mixed, mixed> $statistics
+     * @param  array<mixed, mixed>  $statistics
      * @return array{total: int, by_type: array<string, int>, today: int, this_week: int, this_month: int}
      */
     private function normalizeStatistics(array $statistics): array

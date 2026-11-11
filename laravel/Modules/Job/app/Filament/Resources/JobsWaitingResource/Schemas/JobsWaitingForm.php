@@ -7,7 +7,6 @@ namespace Modules\Job\Filament\Resources\JobsWaitingResource\Schemas;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Section;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 /**

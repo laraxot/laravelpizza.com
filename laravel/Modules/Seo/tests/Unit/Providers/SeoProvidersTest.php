@@ -3,11 +3,14 @@
 declare(strict_types=1);
 
 namespace Modules\Seo\Tests\Unit\Providers;
+
 use Modules\Seo\Adapters\MetatagFacadeAdapter;
 use Modules\Seo\Providers\EventServiceProvider;
 use Modules\Seo\Providers\SeoServiceProvider;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-uses(\Modules\Seo\Tests\TestCase::class);
+
+uses(TestCase::class);
 
 it('registers metatag adapter singleton and provides list', function (): void {
     $provider = new SeoServiceProvider(app());

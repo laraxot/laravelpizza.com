@@ -32,8 +32,7 @@ class GetActivitiesByTypeAction
             ->with(['causer', 'subject'])
             ->where('event', $type)
             ->latest()
-            ->limit($limit)
-            ;
+            ->limit($limit);
 
         return Activity::typedGet($query);
     }

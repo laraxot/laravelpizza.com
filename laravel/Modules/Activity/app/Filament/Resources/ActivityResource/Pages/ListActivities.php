@@ -13,5 +13,4 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 class ListActivities extends XotBaseListRecords
 {
     protected static string $resource = ActivityResource::class;
-
 }

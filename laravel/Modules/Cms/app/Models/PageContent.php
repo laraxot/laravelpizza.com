@@ -13,18 +13,18 @@ use Spatie\Translatable\HasTranslations;
 /**
  * Modules\Cms\Models\PageContent.
  *
- * @property string|null                         $id
- * @property array<array-key, mixed>|null        $name
- * @property string|null                         $slug
- * @property array<array-key, mixed>|null        $blocks
- * @property Carbon|null                         $created_at
- * @property Carbon|null                         $updated_at
- * @property string|null                         $created_by
- * @property string|null                         $updated_by
- * @property ProfileContract|null                $creator
- * @property array<int|string, mixed>            $translatable_columns_from
+ * @property string|null $id
+ * @property array<array-key, mixed>|null $name
+ * @property string|null $slug
+ * @property array<array-key, mixed>|null $blocks
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property ProfileContract|null $creator
+ * @property array<int|string, mixed> $translatable_columns_from
  * @property array<string, array<string, mixed>> $translations
- * @property ProfileContract|null                $updater
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|PageContent newModelQuery()
  * @method static Builder<static>|PageContent newQuery()

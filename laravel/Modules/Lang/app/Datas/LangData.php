@@ -36,8 +36,7 @@ class LangData extends Data
     /**
      * Crea una collezione di dati di lingua.
      *
-     * @param Collection<int, array{id: string, name: string, flag: string, url: string}|LangData>|array<int, array{id: string, name: string, flag: string, url: string}|LangData> $data
-     *
+     * @param  Collection<int, array{id: string, name: string, flag: string, url: string}|LangData>|array<int, array{id: string, name: string, flag: string, url: string}|LangData>  $data
      * @return DataCollection<int, LangData>
      */
     public static function collection(Collection|array $data): DataCollection

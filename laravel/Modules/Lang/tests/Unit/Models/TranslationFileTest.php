@@ -14,13 +14,13 @@ uses(TestCase::class);
 
 describe('TranslationFile Model', function () {
     test('uses Sushi trait', function () {
-        $model = new TranslationFile();
+        $model = new TranslationFile;
 
         Assert::assertArrayHasKey('Sushi\Sushi', class_uses($model));
     });
 
     test('has correct fillable attributes', function () {
-        $model = new TranslationFile();
+        $model = new TranslationFile;
         $fillable = $model->getFillable();
 
         Assert::assertContains('id', $fillable);
@@ -30,7 +30,7 @@ describe('TranslationFile Model', function () {
     });
 
     test('has form property accessible via reflection', function () {
-        $model = new TranslationFile();
+        $model = new TranslationFile;
         $reflection = new \ReflectionClass($model);
         $property = $reflection->getProperty('form');
         $property->setAccessible(true);
@@ -43,14 +43,14 @@ describe('TranslationFile Model', function () {
     });
 
     test('casts content as array', function () {
-        $model = new TranslationFile();
+        $model = new TranslationFile;
         $casts = $model->getCasts();
 
         Assert::assertSame('array', $casts['content']);
     });
 
     test('has getRows method', function () {
-        $model = new TranslationFile();
+        $model = new TranslationFile;
 
         Assert::assertTrue(is_callable([$model, 'getRows']));
     });

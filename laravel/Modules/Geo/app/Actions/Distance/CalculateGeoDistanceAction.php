@@ -25,7 +25,7 @@ final class CalculateGeoDistanceAction
         if ($lat1 === $lat2 && $lon1 === $lon2) {
             return 0.0;
         }
-        if (null === $lat1 || null === $lon1 || null === $lat2 || null === $lon2) {
+        if ($lat1 === null || $lon1 === null || $lat2 === null || $lon2 === null) {
             return null;
         }
 

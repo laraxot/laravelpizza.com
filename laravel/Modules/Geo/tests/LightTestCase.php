@@ -10,6 +10,4 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * LightTestCase - Base test class for Geo module.
  * Extends XotBaseTestCase for common test functionality.
  */
-abstract class LightTestCase extends XotBaseTestCase
-{
-}
+abstract class LightTestCase extends XotBaseTestCase {}

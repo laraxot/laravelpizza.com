@@ -32,7 +32,6 @@ class LoginUserAction
             return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
         }
 
-
         event(new SocialiteUserConnected($socialiteUser));
 
         Filament::auth()->login($user);

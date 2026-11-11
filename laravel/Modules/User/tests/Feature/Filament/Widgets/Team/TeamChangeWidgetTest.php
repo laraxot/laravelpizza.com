@@ -180,7 +180,7 @@ describe('TeamChangeWidget dashboard discovery', function (): void {
 
 describe('Http Livewire twin retired', function (): void {
     test('team change http component is gone', function (): void {
-        Assert::assertFalse(class_exists("Modules\\User\\Http\\Livewire\\Team\\Change", false));
+        Assert::assertFalse(class_exists('Modules\\User\\Http\\Livewire\\Team\\Change', false));
         Assert::assertFileDoesNotExist(base_path('Modules/User/app/Http/Livewire/Team/Change.php'));
         Assert::assertFileDoesNotExist(base_path('Modules/User/resources/views/livewire/team/change.blade.php'));
     });

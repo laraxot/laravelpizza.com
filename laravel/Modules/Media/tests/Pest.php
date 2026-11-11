@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
 use PHPUnit\Framework\Assert;
@@ -97,11 +98,11 @@ function makeMedia(array $attributes = []): Media
  */
 function mediaTableColumns(): array
 {
-    $columns = \Illuminate\Support\Facades\Schema::getColumnListing('media');
+    $columns = Schema::getColumnListing('media');
 
     return array_values(array_filter(
         $columns,
-        static fn (mixed $column): bool => is_string($column) && '' !== $column,
+        static fn (mixed $column): bool => is_string($column) && $column !== '',
     ));
 }
 

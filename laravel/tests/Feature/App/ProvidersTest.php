@@ -5,8 +5,10 @@ declare(strict_types=1);
 use App\Providers\AppServiceProvider;
 use App\Providers\FolioServiceProvider;
 use App\Providers\VoltServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
+use Tests\TestCase;
 
-uses(\Tests\TestCase::class, \Modules\Xot\Tests\CreatesApplication::class);
+uses(TestCase::class, CreatesApplication::class);
 
 test('app service provider can be instantiated', function (): void {
     $provider = new AppServiceProvider(app());

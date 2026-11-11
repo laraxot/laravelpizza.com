@@ -33,6 +33,7 @@ use Modules\User\Models\Traits\OauthPersonalAccessClientRelationsTrait;
 class OauthPersonalAccessClient extends BaseModel
 {
     use OauthPersonalAccessClientRelationsTrait;
+
     protected $table = 'oauth_personal_access_clients';
 
     protected $connection = 'user';

@@ -24,7 +24,7 @@ final class ExportMapDataAction
     public const string FORMAT_KML = 'kml';
 
     /**
-     * @param array<string, mixed> $filters
+     * @param  array<string, mixed>  $filters
      */
     public function execute(array $filters = [], string $format = 'json'): string
     {

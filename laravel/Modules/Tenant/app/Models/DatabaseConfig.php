@@ -10,10 +10,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  * @property-read ProfileContract|null $deleter
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DatabaseConfig newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DatabaseConfig newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DatabaseConfig query()
- *
  */
 class DatabaseConfig extends BaseModel
 {

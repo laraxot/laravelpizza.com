@@ -37,7 +37,6 @@ class MorphToManyAction
         }
 
         throw new \LogicException('Store\MorphToManyAction with associative (pivot) data not implemented');
-
         /*
          * foreach ($data as $k => $v) {
          * if (\is_array($v)) {

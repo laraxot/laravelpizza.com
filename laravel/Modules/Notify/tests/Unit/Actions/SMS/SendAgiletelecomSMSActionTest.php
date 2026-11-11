@@ -6,11 +6,12 @@ namespace Modules\Notify\Tests\Unit\Actions\SMS;
 
 use Modules\Notify\Actions\SMS\SendAgiletelecomSMSAction;
 use Modules\Notify\Datas\SmsData;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionNamedType;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 it('SendAgiletelecomSMSAction can be instantiated', function () {
     Assert::assertTrue(class_exists(SendAgiletelecomSMSAction::class));
 });

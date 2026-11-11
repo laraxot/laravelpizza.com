@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Schema;
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\AuthenticationLog;
+use Modules\User\Models\BaseUser;
 
 /**
  * Persist an authentication_logs row on the User connection (`user` / fixcity_user).
@@ -17,7 +18,7 @@ use Modules\User\Models\AuthenticationLog;
  * a failed/successful login into a 500 (BMAD: audit must not break auth UX).
  *
  * Identity = {@see UserContract}; capability = {@see HasAuthentications}.
- * Never type-hint {@see \Modules\User\Models\BaseUser}: that is an internal
+ * Never type-hint {@see BaseUser}: that is an internal
  * abstract implementation, not the consumer boundary.
  */
 final class RecordAuthenticationLogAction

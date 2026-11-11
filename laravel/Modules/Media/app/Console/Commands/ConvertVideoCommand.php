@@ -8,8 +8,8 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 

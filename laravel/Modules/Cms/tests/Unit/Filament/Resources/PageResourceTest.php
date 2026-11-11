@@ -9,7 +9,7 @@ use PHPUnit\Framework\Assert;
 
 describe('PageResource', function (): void {
     test('page resource has correct model', function (): void {
-        $resource = new PageResource();
+        $resource = new PageResource;
 
         Assert::assertSame(Page::class, $resource::getModel());
     });

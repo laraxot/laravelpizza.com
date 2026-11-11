@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\AI\Actions;
 
 use Illuminate\Support\Carbon;
+use Modules\AI\Adapters\AiActionHandlerRegistry;
 use Modules\AI\Enums\AiActionProposalStatusEnum;
 use Modules\AI\Models\AiActionProposal;
-use Modules\AI\Adapters\AiActionHandlerRegistry;
 use Spatie\QueueableAction\QueueableAction;
 
 /**

@@ -13,7 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 describe('BuildMailMessageAction', function () {
     // Test strutturali - non richiede container per la classe
     it('has correct class definition', function () {

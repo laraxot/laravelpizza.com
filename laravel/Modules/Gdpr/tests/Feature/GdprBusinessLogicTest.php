@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Tests\Feature;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Event;
 use Modules\Gdpr\Models\Treatment;
-use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 

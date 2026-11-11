@@ -19,7 +19,7 @@ final class ResolveCmsPageAction
     use QueueableAction;
 
     /**
-     * @param list<string> $localeCodes
+     * @param  list<string>  $localeCodes
      */
     public function execute(string $path, array $localeCodes, ?string $routeName = null): ?Page
     {
@@ -42,17 +42,16 @@ final class ResolveCmsPageAction
     }
 
     /**
-     * @param list<string> $localeCodes
-     *
+     * @param  list<string>  $localeCodes
      * @return list<string>
      */
     public function candidateSlugs(string $path, array $localeCodes, ?string $routeName = null): array
     {
-        $segments = (new ResolveRobotsPolicyAction())->pathSegments($path, $localeCodes);
-        $slug = [] === $segments ? 'home' : implode('.', $segments);
+        $segments = (new ResolveRobotsPolicyAction)->pathSegments($path, $localeCodes);
+        $slug = $segments === [] ? 'home' : implode('.', $segments);
         $candidates = [$slug, $slug.'.index'];
 
-        if (null !== $routeName && ! in_array($routeName, ['', 'container0', 'container0.view'], true)) {
+        if ($routeName !== null && ! in_array($routeName, ['', 'container0', 'container0.view'], true)) {
             $candidates[] = $routeName;
         }
 

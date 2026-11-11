@@ -16,8 +16,7 @@ final class GetMapStatsAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $filters
-     *
+     * @param  array<string, mixed>  $filters
      * @return array<string, mixed>
      */
     public function execute(array $filters = []): array

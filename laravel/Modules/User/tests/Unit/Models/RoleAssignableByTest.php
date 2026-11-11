@@ -6,9 +6,10 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Builder;
 use Mockery\MockInterface;
 use Modules\User\Models\Role;
+use Modules\User\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 /*
  * Quali ruoli puo' assegnare chi opera dal pannello: il `super-admin` solo chi lo e' gia'.
@@ -18,7 +19,7 @@ uses(\Modules\User\Tests\TestCase::class);
 function roleAssignableActor(string ...$roles): UserContract
 {
     /** @var MockInterface&UserContract $user */
-    $user = \Mockery::mock(UserContract::class);
+    $user = Mockery::mock(UserContract::class);
     $user->shouldReceive('hasRole')->andReturnUsing(
         static fn (string|array $role): bool => array_filter(
             is_array($role) ? $role : [$role],
@@ -30,7 +31,7 @@ function roleAssignableActor(string ...$roles): UserContract
 }
 
 afterEach(function (): void {
-    \Mockery::close();
+    Mockery::close();
 });
 
 test('il nome del ruolo super-admin e quello usato dalle policy e da canAccessPanel', function (): void {
@@ -43,7 +44,7 @@ test('un ospite non assegna il super-admin', function (): void {
 
 test('un utente autenticato che non e UserContract non assegna il super-admin', function (): void {
     /** @var MockInterface&Authenticatable $actor */
-    $actor = \Mockery::mock(Authenticatable::class);
+    $actor = Mockery::mock(Authenticatable::class);
 
     expect(Role::mayAssignSuperAdmin($actor))->toBeFalse();
 });
@@ -66,7 +67,7 @@ test('un super-admin assegna il super-admin', function (): void {
 
 test('per chi non e super-admin la query esclude il ruolo super-admin, con la colonna qualificata', function (): void {
     /** @var MockInterface&Builder<Role> $query */
-    $query = \Mockery::mock(Builder::class);
+    $query = Mockery::mock(Builder::class);
     $query->shouldReceive('qualifyColumn')->with('name')->andReturn('roles.name');
     $query->shouldReceive('where')->once()->with('roles.name', '!=', 'super-admin')->andReturnSelf();
 
@@ -75,7 +76,7 @@ test('per chi non e super-admin la query esclude il ruolo super-admin, con la co
 
 test('anche senza operatore autenticato la query esclude il super-admin', function (): void {
     /** @var MockInterface&Builder<Role> $query */
-    $query = \Mockery::mock(Builder::class);
+    $query = Mockery::mock(Builder::class);
     $query->shouldReceive('qualifyColumn')->with('name')->andReturn('roles.name');
     $query->shouldReceive('where')->once()->with('roles.name', '!=', 'super-admin')->andReturnSelf();
 
@@ -84,7 +85,7 @@ test('anche senza operatore autenticato la query esclude il super-admin', functi
 
 test('per un super-admin la query resta intatta', function (): void {
     /** @var MockInterface&Builder<Role> $query */
-    $query = \Mockery::mock(Builder::class);
+    $query = Mockery::mock(Builder::class);
     $query->shouldNotReceive('where');
 
     expect(Role::restrictAssignableBy($query, roleAssignableActor('super-admin')))->toBe($query);

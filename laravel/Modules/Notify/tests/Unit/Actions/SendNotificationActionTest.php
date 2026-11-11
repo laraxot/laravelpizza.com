@@ -14,10 +14,11 @@ use Modules\Notify\Actions\SendNotificationAction;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Notifications\GenericNotification;
+use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 /**
  * @param  array<string, mixed>  $attributes
  */

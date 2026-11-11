@@ -7,6 +7,7 @@ namespace Modules\Notify\Tests\Unit\Actions\SMS;
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
+use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionNamedType;
@@ -14,7 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_encode;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 test('netfun sms action has the expected public contract', function (): void {
     $reflection = new ReflectionClass(SendNetfunSMSAction::class);
     $method = $reflection->getMethod('execute');

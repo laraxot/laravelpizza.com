@@ -3,15 +3,15 @@
 declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\WithFaker;
-use Modules\Geo\Infrastructure\Validation\GeoDataValidationRules;
 use Modules\Geo\Actions\GeoData\ValidateGeoDataAction;
+use Modules\Geo\Infrastructure\Validation\GeoDataValidationRules;
 use Tests\TestCase;
 
 uses(TestCase::class, WithFaker::class);
 
 beforeEach(function () {
     $this->action = app(ValidateGeoDataAction::class);
-    $this->rules = new GeoDataValidationRules();
+    $this->rules = new GeoDataValidationRules;
 });
 
 describe('ValidateGeoDataAction', function () {

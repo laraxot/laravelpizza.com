@@ -14,8 +14,7 @@ final class FetchIPLocationReturningStub extends FetchIPLocationAction
 {
     public function __construct(
         private readonly IPLocationData $locationData,
-    ) {
-    }
+    ) {}
 
     public function execute(string $ip): IPLocationData
     {

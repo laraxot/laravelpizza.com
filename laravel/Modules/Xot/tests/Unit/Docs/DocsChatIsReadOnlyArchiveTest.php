@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Docs;
 
+use Modules\Xot\Tests\TestCase;
+
 use function Safe\glob;
 
-uses(\Modules\Xot\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
  * `docs/chat/` e' un archivio in sola lettura.

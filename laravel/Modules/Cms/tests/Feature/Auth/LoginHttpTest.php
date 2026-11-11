@@ -7,10 +7,9 @@ namespace Modules\Cms\Tests\Feature\Auth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt as LivewireVolt;
+use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\actingAs;
-
-use PHPUnit\Framework\Assert;
 
 describe('Login Http', function (): void {
     test('login page can be rendered', function (): void {
@@ -125,7 +124,7 @@ describe('Login Http', function (): void {
             'password' => Hash::make('password123'),
         ]);
 
-        for ($i = 0; $i < 5; ++$i) {
+        for ($i = 0; $i < 5; $i++) {
             LivewireVolt::test('auth.login #4')
                 ->set('email', $email)
                 ->set('password', 'wrong_password')

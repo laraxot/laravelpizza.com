@@ -3,8 +3,8 @@
 declare(strict_types=1);
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
-use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Tests\Fixtures\Filament\Resources\ExtraResource\Tables\XotBaseResourceTableConfigureFixture;
+use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Tests\Unit\Fixtures\XotTableConfigureLivewireHarness;
 use PHPUnit\Framework\Assert;
 

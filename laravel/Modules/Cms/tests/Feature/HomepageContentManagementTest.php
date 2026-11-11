@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature;
 
-
 use function Pest\Laravel\get;
 
 describe('Homepage Content Management', function () {
@@ -116,7 +115,7 @@ describe('Homepage Content Management', function () {
         }
         $titlePos = strpos($content, '<nome progetto> - Promozione della <slogan> per le gestanti');
         $subtitlePos = strpos($content, 'il portale che vuole garantire alle pazienti vulnerabili');
-        if (false === $titlePos || false === $subtitlePos) {
+        if ($titlePos === false || $subtitlePos === false) {
             throw new \RuntimeException('Homepage content order markers are missing.');
         }
 

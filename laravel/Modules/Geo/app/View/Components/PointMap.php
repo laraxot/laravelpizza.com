@@ -62,7 +62,7 @@ class PointMap extends Component
     ) {
         $lat = self::coordinate($latitude, 90.0);
         $lng = self::coordinate($longitude, 180.0);
-        $hasPoint = null !== $lat && null !== $lng;
+        $hasPoint = $lat !== null && $lng !== null;
 
         $this->lat = $hasPoint ? $lat : null;
         $this->lng = $hasPoint ? $lng : null;
@@ -71,12 +71,12 @@ class PointMap extends Component
         $this->address = \is_string($address) ? trim($address) : '';
         $this->zoom = is_numeric($zoom) ? max(1, min(19, (int) $zoom)) : self::DEFAULT_ZOOM;
         // La altezza finisce in uno stile inline e in un attributo: solo lunghezze semplici, mai CSS libero.
-        $this->height = \is_string($height) && 1 === preg_match('/^\d+(?:\.\d+)?(?:px|rem|em|vh|%)$/', $height)
+        $this->height = \is_string($height) && preg_match('/^\d+(?:\.\d+)?(?:px|rem|em|vh|%)$/', $height) === 1
             ? $height
             : self::DEFAULT_HEIGHT;
 
-        $mapLabel = \is_string($label) && '' !== trim($label) ? trim($label) : __('geo::point-map.default_label');
-        $place = '' !== $this->address ? $this->address : $this->latText.', '.$this->lngText;
+        $mapLabel = \is_string($label) && trim($label) !== '' ? trim($label) : __('geo::point-map.default_label');
+        $place = $this->address !== '' ? $this->address : $this->latText.', '.$this->lngText;
         $this->ariaLabel = __('geo::point-map.aria_label', ['label' => $mapLabel, 'place' => $place]);
 
         $this->stateJson = json_encode([
@@ -100,7 +100,7 @@ class PointMap extends Component
         // id casuale: due istanze nella stessa pagina non collidono. Il wire:key invece e' legato al contenuto
         // (stabile tra i render Livewire; cambia solo se cambia il punto, cosi' la mappa si rimonta nel nuovo punto).
         // ponytail: due istanze con lo stesso punto nello stesso componente Livewire devono avere `id` esplicito.
-        $explicitId = \is_string($id) && '' !== trim($id) ? trim($id) : null;
+        $explicitId = \is_string($id) && trim($id) !== '' ? trim($id) : null;
         $this->mapId = $explicitId ?? 'geo-point-map-'.Str::lower(Str::random(8));
         $this->wireKey = $explicitId ?? 'geo-point-map-'.substr(md5($this->stateJson), 0, 12);
     }

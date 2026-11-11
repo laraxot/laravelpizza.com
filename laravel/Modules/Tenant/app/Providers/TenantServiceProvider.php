@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Providers;
 
+use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Arr;
@@ -101,7 +102,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
             }
 
             DB::purge($name);
-            DB::extend($name, static fn (): \Illuminate\Database\ConnectionInterface => DB::connection($defaultConnection));
+            DB::extend($name, static fn (): ConnectionInterface => DB::connection($defaultConnection));
         }
     }
 

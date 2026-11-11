@@ -5,16 +5,16 @@ declare(strict_types=1);
 // Canon: Modules/Job/docs/wiki — domain i18n only.
 
 return [
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
-// Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
+    // Job — translation section (claude-audit doc ratio).
     'actions' => [
         'create' => [
             'label' => 'Crea Job',

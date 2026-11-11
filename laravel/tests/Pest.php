@@ -1,12 +1,14 @@
 <?php
 
+use Illuminate\Foundation\Testing\TestCase;
+
 /*
 |--------------------------------------------------------------------------
 | Test Case
 |--------------------------------------------------------------------------
 */
 
-pest()->extend(\Illuminate\Foundation\Testing\TestCase::class)
+pest()->extend(TestCase::class)
     ->in('Feature')
     ->in('Unit')
     ->in('tests/Feature')

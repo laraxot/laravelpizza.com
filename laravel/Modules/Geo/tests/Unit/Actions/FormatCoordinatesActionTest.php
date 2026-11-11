@@ -10,7 +10,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 it('formats coordinates in decimal format', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     $result = $action->execute(45.4642, 9.1900, 'decimal');
     Assert::assertSame('45.464200, 9.190000', $result);
@@ -23,7 +23,7 @@ it('formats coordinates in decimal format', function (): void {
 });
 
 it('formats coordinates in DMS format', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     $result = $action->execute(45.4642, 9.1900, 'dms');
     Assert::assertSame('45°27\'51"N 9°11\'24"E', $result);
@@ -36,7 +36,7 @@ it('formats coordinates in DMS format', function (): void {
 });
 
 it('formats coordinates in Google Maps URL format', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     $result = $action->execute(45.4642, 9.1900, 'google');
     Assert::assertSame('https://www.google.com/maps?q=45.4642,9.19', $result);
@@ -49,14 +49,14 @@ it('formats coordinates in Google Maps URL format', function (): void {
 });
 
 it('uses decimal format as default', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     $result = $action->execute(45.4642, 9.1900);
     Assert::assertSame('45.464200, 9.190000', $result);
 });
 
 it('throws exception for unsupported format', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     try {
         $action->execute(45.4642, 9.1900, 'unsupported');
@@ -67,7 +67,7 @@ it('throws exception for unsupported format', function (): void {
 });
 
 it('handles edge case coordinates', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     // Test extreme valid coordinates
     $result = $action->execute(90, 180, 'decimal');
@@ -85,7 +85,7 @@ it('handles edge case coordinates', function (): void {
 });
 
 it('handles high precision coordinates', function (): void {
-    $action = new FormatCoordinatesAction();
+    $action = new FormatCoordinatesAction;
 
     $result = $action->execute(45.123456, 9.654321, 'decimal');
     Assert::assertSame('45.123456, 9.654321', $result);

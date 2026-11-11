@@ -6,7 +6,6 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon

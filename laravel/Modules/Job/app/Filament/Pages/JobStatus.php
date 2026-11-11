@@ -38,7 +38,7 @@ class JobStatus extends XotBasePage
     public function artisan(string $cmd): void
     {
         if (! static::canAccess()) {
-            throw new AuthorizationException();
+            throw new AuthorizationException;
         }
 
         $this->out = '';

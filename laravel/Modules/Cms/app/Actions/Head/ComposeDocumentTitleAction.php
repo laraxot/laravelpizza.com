@@ -29,11 +29,11 @@ final class ComposeDocumentTitleAction
         $title = $this->withoutBrand($pageTitle, $brand);
         $brand = trim($brand);
 
-        if ('' === $title) {
+        if ($title === '') {
             return $brand;
         }
 
-        if ('' === $brand || false !== mb_stripos($title, $brand)) {
+        if ($brand === '' || mb_stripos($title, $brand) !== false) {
             return $title;
         }
 
@@ -48,7 +48,7 @@ final class ComposeDocumentTitleAction
         $title = trim($title);
         $brand = trim($brand);
 
-        if ('' === $brand) {
+        if ($brand === '') {
             return $title;
         }
 

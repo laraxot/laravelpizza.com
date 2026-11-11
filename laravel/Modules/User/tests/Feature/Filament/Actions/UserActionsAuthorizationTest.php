@@ -88,7 +88,7 @@ test('attachRole limita le opzioni ruolo: senza operatore autenticato esclude il
     Assert::assertInstanceOf(Closure::class, $modify);
 
     /** @var MockInterface&Builder<Role> $query */
-    $query = \Mockery::mock(Builder::class);
+    $query = Mockery::mock(Builder::class);
     $query->shouldReceive('qualifyColumn')->with('name')->andReturn('roles.name');
     $query->shouldReceive('where')->once()->with('roles.name', '!=', Role::SUPER_ADMIN)->andReturnSelf();
 

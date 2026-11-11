@@ -18,8 +18,7 @@ class MergeTranslationsAction
      * Fonde key/value pairs da file di traduzione multipli in una singola struttura.
      * Sovrascrive chiavi esistenti con valori da file successivi (principio LIFO).
      *
-     * @param array<array<string, string>> $translationFiles Array di file di traduzione, dove ogni file è un array associativo (key => value)
-     *
+     * @param  array<array<string, string>>  $translationFiles  Array di file di traduzione, dove ogni file è un array associativo (key => value)
      * @return array<string, mixed> Struttura fusa e consolidata delle traduzioni
      */
     public function execute(array $translationFiles): array

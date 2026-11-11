@@ -11,11 +11,9 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
-use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

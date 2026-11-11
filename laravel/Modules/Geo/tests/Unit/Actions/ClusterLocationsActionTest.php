@@ -19,7 +19,7 @@ it('clusters locations that are close together', function (): void {
     $location2 = new LocationData(latitude: 45.4643, longitude: 9.1901);
     $location3 = new LocationData(latitude: 46.4642, longitude: 10.1900);
 
-    $clusters = (new ClusterLocationsAction(new ClusterDistanceStub()))->execute(
+    $clusters = (new ClusterLocationsAction(new ClusterDistanceStub))->execute(
         [$location1, $location2, $location3],
         1.0,
     );

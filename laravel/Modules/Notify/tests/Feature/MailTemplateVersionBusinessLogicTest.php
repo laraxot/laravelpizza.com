@@ -6,13 +6,14 @@ namespace Modules\Notify\Tests\Feature;
 
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Models\MailTemplateVersion;
+use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use RuntimeException;
 
 use function Safe\preg_match_all;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 /*
  * Scopo: ogni modifica di un MailTemplate lascia una MailTemplateVersion (storico
  * versionato soft-deletable) da cui si puo' ripristinare il contenuto con restoreTemplate().

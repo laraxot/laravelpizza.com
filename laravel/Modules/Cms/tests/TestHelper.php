@@ -10,7 +10,6 @@ use Modules\User\Models\User;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\CreatesApplication;
-use Spatie\Permission\Contracts\Role;
 
 /**
  * @method mixed getAttribute(string $key)

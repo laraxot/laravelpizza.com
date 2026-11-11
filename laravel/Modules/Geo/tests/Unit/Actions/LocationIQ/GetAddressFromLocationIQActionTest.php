@@ -12,7 +12,7 @@ use PHPUnit\Framework\Assert;
 
 uses(LightTestCase::class);
 it('throws exception when api key is not configured', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => null]);
 
@@ -26,7 +26,7 @@ it('throws exception when api key is not configured', function (): void {
 });
 
 it('returns null when api response is not successful', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 
@@ -40,7 +40,7 @@ it('returns null when api response is not successful', function (): void {
 });
 
 it('returns null when no results found', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 
@@ -54,7 +54,7 @@ it('returns null when no results found', function (): void {
 });
 
 it('returns null when first result is empty', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 
@@ -68,7 +68,7 @@ it('returns null when first result is empty', function (): void {
 });
 
 it('returns address data for valid response', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 
@@ -122,7 +122,7 @@ it('returns address data for valid response', function (): void {
 });
 
 it('uses default country when missing', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 
@@ -144,7 +144,7 @@ it('uses default country when missing', function (): void {
 });
 
 it('falls back to town and village for city', function (): void {
-    $action = new GetAddressFromLocationIQAction();
+    $action = new GetAddressFromLocationIQAction;
 
     config(['services.locationiq.key' => 'test_key']);
 

@@ -11,8 +11,7 @@ use Modules\Xot\Datas\MetatagData;
 use PHPUnit\Framework\Assert;
 
 /**
- * @param array<string, mixed> $schema
- *
+ * @param  array<string, mixed>  $schema
  * @return array<string, mixed>
  */
 function pageSchemaMainEntity(array $schema): array
