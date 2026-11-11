@@ -20,7 +20,7 @@
 | FR-15 IT/EN | ✅ per le pagine core | home, eventi, eventi passati, chi siamo, contatti, i miei eventi, privacy, termini, cookie policy in IT e EN; de/fr/es/ru tradotti solo nell'interfaccia |
 | FR-17 Stringhe | 🟢 | pannello e tema tradotti; restano testi interni dei moduli condivisi |
 | FR-18 Cookie | ✅ | banner incluso, cookie solo tecnici documentati in `/cookie-policy`, Inter servito dal sito, nessun preconnect a Google |
-| FR-19 WCAG | 🟢 | un solo h1 per pagina in home, etichette sui campi; audit axe non ancora eseguito |
+| FR-19 WCAG | ✅ | axe-core WCAG 2.1 A/AA: 0 violazioni su 10 pagine pubbliche (`npm run a11y` nel tema) |
 | FR-21 JSON-LD | ✅ | senza email dell'organizzatore (S-10) |
 
 Il dettaglio storico per FR, dal ciclo 1, segue.

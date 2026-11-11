@@ -90,7 +90,7 @@ Manuale d'uso per visitatore, partecipante e organizzatore, con screenshot: [`la
 4. Su un database esistente: controllo D-10b dello schema `profiles` prima del primo `migrate`.
 5. Una prova di ripristino del backup su staging.
 
-**Aperti, non bloccanti**: suite dei moduli condivisi (circa 1.600 test rossi, scritti per altri progetti: vanno sistemati nei repository dei moduli); alcune suite di Xot lanciano composer sul progetto reale; migrazioni duplicate (D-01); audit di accessibilità con axe.
+**Aperti, non bloccanti**: suite dei moduli condivisi (circa 1.600 test rossi, scritti per altri progetti: vanno sistemati nei repository dei moduli); alcune suite di Xot lanciano composer sul progetto reale; migrazioni duplicate (D-01).
 
 ## Limiti dell'audit
 
