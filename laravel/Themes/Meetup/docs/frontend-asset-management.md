@@ -18,7 +18,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm install
 npm run dev
 npm run build
-npm run copy   # Crea la directory di destinazione se non esiste, poi copia gli asset compilati da ./dist/* alla root web dell'applicazione principale in ../../../public_html/themes/Meetup
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **NON eseguire dalla root Laravel!**
@@ -69,7 +69,7 @@ npm run build
 cd /var/www/_bases/base_laravelpizza/laravel/Modules/User/resources/views
 npm install
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### ❌ ERRATO

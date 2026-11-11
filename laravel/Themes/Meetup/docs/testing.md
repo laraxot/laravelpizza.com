@@ -38,6 +38,6 @@ Vedi [testcase-xotbase-extends](../../../.cursor/rules/testcase-xotbase-extends.
 
 ## Checklist per Modifiche al Tema
 
-1. **Build**: `cd Themes/Meetup && npm run build && npm run copy`
+1. **Build**: `cd Themes/Meetup && npm run build`
 2. **Test correlati**: eseguire `php artisan test --filter 'Meetup'` e `--filter 'Cms'`
 3. **Verifica browser**: `http://127.0.0.1:8000/it`

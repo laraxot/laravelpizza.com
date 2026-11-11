@@ -8,7 +8,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "copy": "cp -r ./public/* ../../../public_html/themes/Meetup",
+        "copy": "echo 'Non serve: public_html/themes/Meetup e un symlink a Themes/Meetup/public'",
         "screenshots": "node scripts/capture-screenshots.mjs",
         "screenshots:footer": "node scripts/capture-footer-screenshots.mjs"
     },

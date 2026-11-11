@@ -17,7 +17,7 @@ Without it, Laravel looks in `laravel/public/build/` instead of `Themes/Meetup/p
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 **Why?** Changes to `resources/css/app.css` and `resources/js/app.js` are not immediately visible. Vite must:
@@ -35,7 +35,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm install    # First time only
 npm run dev    # Development (watch)
 npm run build  # Production (vite build)
-npm run copy   # Copy assets to public_html
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ## Build Configuration

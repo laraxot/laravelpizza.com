@@ -67,7 +67,7 @@ Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
 3. **`config/local/laravelpizza/xra.php`** → chiave **`pub_theme`** (es. `'Meetup'`)
 4. **Tema** → **`laravel/Themes/Meetup`**; view namespace **`pub_theme::`**
 
-**Workflow dalla cartella del tema** (`laravel/Themes/Meetup`): `composer update -W`, `npm install`, `npm run build`, `npm run copy`. Build e copy sono obbligatori per vedere modifiche CSS/JS.
+**Workflow dalla cartella del tema** (`laravel/Themes/Meetup`): `composer update -W`, `npm install`, `npm run build`. `public_html/themes/Meetup` è un **symlink** a `laravel/Themes/Meetup/public`: dopo la build non serve copiare nulla (`npm run copy` non si usa più).
 
 Regola: `.cursor/rules/theme-resolution-critical.md`. Memoria: `.cursor/memories/theme-resolution.md`.
 
@@ -195,7 +195,7 @@ php artisan migrate
 cd Themes/Meetup
 npm install
 npm run build
-npm run copy    # Copies to public_html/themes/Meetup
+# public_html/themes/Meetup è un symlink a Themes/Meetup/public: niente copy
 ```
 
 ### Development Server
@@ -416,7 +416,7 @@ npm run dev
 
 # Production build
 npm run build
-npm run copy    # MUST run after build to copy to public_html
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Key files:**
@@ -543,8 +543,8 @@ git push origin feature/your-feature
 13. ❌ UPPERCASE or CamelCase .md filenames
     ✅ Use lowercase-with-hyphens.md
 
-14. ❌ Forgetting `npm run copy` after theme build
-    ✅ Always run copy to deploy assets
+14. ❌ Copying theme assets into public_html (`npm run copy`) or replacing the symlink with a folder
+    ✅ `public_html/themes/Meetup` is a symlink to `laravel/Themes/Meetup/public`: `npm run build` is enough
 
 ## PHPStan Configuration
 

@@ -106,7 +106,7 @@ php artisan optimize:clear
 ```bash
 cd Themes/Meetup
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Perché**: Vite compila e copia asset in `public_html/themes/Meetup/`

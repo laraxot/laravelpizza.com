@@ -44,4 +44,4 @@ This directory contains structured prompts and reference documents to guide the 
 - **URLs**: Always `LaravelLocalization::localizeUrl('/path')`, never hardcode locale
 - **SVG**: No inline SVG in Blade. Files in `Modules/Meetup/resources/svg/` + `<x-filament::icon>`
 - **Architecture**: Folio + Volt + JSON CMS-driven pages. NO controllers.
-- **Build**: `npm run build && npm run copy` after CSS/JS changes
+- **Build**: `npm run build` after CSS/JS changes

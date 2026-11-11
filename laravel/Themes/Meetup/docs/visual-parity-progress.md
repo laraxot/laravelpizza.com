@@ -22,7 +22,7 @@ We are aiming for a premium, high-fidelity reproduction of the original communit
 ### 1. Theme and Assets
 - [x] Fix `logo.svg` path in `header.json`.
 - [ ] Ensure all red accents use `#dc2626` (Tailwind `red-600`).
-- [x] Run `npm run build && npm run copy` in `Themes/Meetup` to sync compiled assets.
+- [x] Run `npm run build` in `Themes/Meetup` to sync compiled assets.
 - [x] Fix `Page` component translation logic for localized block arrays.
 
 ### 2. Content Alignment (JSON)
@@ -35,4 +35,4 @@ We are aiming for a premium, high-fidelity reproduction of the original communit
 ---
 
 > [!TIP]
-> Always execute `npm run build && npm run copy` after modifying Tailwind classes in Blade files to ensure the public assets are updated.
+> Always execute `npm run build` after modifying Tailwind classes in Blade files to ensure the public assets are updated.

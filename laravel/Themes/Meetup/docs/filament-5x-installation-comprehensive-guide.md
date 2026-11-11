@@ -265,7 +265,7 @@ php artisan filament:install --panels
 cd Themes/Meetup
 npm install
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 
 # 3. Testing
 php artisan serve

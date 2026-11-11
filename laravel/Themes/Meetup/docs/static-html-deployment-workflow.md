@@ -28,7 +28,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
 
 # Copy to public web directory
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### What Happens
@@ -117,7 +117,7 @@ npm run dev  # Runs on port 5173
 npm run build
 
 # Copy to public directory
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Result**: Static site available at `/themes/Meetup/`
@@ -220,7 +220,7 @@ Themes/Meetup/
 **Solution**:
 ```bash
 mkdir -p /var/www/_bases/base_laravelpizza/public_html/themes/Meetup
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### Issue: Build Fails
@@ -289,7 +289,7 @@ npm run dev
 
 **Staging** (static preview):
 ```bash
-npm run build && npm run copy
+npm run build
 ```
 
 **Production** (Laravel):
@@ -315,7 +315,7 @@ npm run build (Vite processes and compiles)
     ↓
 public/assets/app-[hash].css + app-[hash].js  (OUTPUT)
     ↓
-npm run copy (Deploys to web server)
+# niente copy: public_html/themes/Meetup è un symlink a public/
     ↓
 ../../../public_html/themes/Meetup/  (DEPLOYED)
 ```
@@ -332,7 +332,7 @@ npm run copy (Deploys to web server)
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build      # Compiles resources/* → public/
-npm run copy       # Deploys public/* → web server
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Laravel Integration** (separate build):

@@ -204,7 +204,7 @@ Dopo ogni correzione:
 - [ ] Hover states funzionano
 - [ ] Focus states funzionano
 - [ ] Dark mode (se applicabile) funziona
-- [ ] Build asset eseguito (`npm run build && npm run copy`)
+- [ ] Build asset eseguito (`npm run build`)
 - [ ] Cache clear eseguito (`php artisan view:clear`)
 - [ ] Screenshot preso (prima/dopo se significativo)
 

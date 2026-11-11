@@ -68,7 +68,7 @@ php artisan queue:restart     # i worker ricaricano il codice nuovo
 php artisan up
 ```
 
-Il tema compilato (`laravel/Themes/Meetup/public` e `public_html/themes/Meetup`) è nel repository. Se si modifica CSS/JS: `cd laravel/Themes/Meetup && npm ci && npm run build && npm run copy`, poi commit dei file generati.
+Il tema compilato (`laravel/Themes/Meetup/public`) è nel repository; `public_html/themes/Meetup` è un **symlink** a quella cartella (tracciato da git). Se si modifica CSS/JS: `cd laravel/Themes/Meetup && npm ci && npm run build`, poi commit dei file generati. Non serve alcuna copia.
 
 ## 5. Processi in background
 

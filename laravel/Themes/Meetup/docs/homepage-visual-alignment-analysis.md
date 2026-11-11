@@ -172,7 +172,7 @@
 **Comandi**:
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build && npm run copy
+npm run build
 ```
 
 ---

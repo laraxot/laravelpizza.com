@@ -83,7 +83,7 @@ npm install
 npm run build
 
 # Copiare asset in public_html
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### **3. Verifica nel Browser**
@@ -132,7 +132,7 @@ Le modifiche non sono visibili
 # ✅ CORRETTO
 cd laravel/Themes/Meetup/
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 Vado su http://127.0.0.1:8000/it
 Le modifiche sono visibili
 ```
@@ -148,7 +148,7 @@ Vado direttamente a testare
 composer update -W
 npm install
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ---
