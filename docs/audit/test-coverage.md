@@ -2,6 +2,14 @@
 
 > Eseguiti il 2026-11-05 in locale: PHP 8.4.27, MySQL 8.0 (conda-forge), `.env.testing`, database ricreati da zero. Coverage non misurata: driver pcov/xdebug non attivo.
 
+## Ciclo 3 (11 novembre 2026)
+
+- **Suite bloccante `Project`** = `laravel/Modules/Meetup/tests` (ogni modulo tiene i suoi test; quelli di `app/` e del tema sono in `Meetup/tests/{Feature,Unit}/App` e `Unit/Architecture`): **395 test verdi, 1 saltato**. Comando: `cd laravel && vendor/bin/pest --testsuite=Project`.
+- Prima: 33 test Meetup rossi (rotte POST inesistenti, file che estendeva `Tests\TestCase` senza transazioni sul database utenti e lasciava `test@example.com`, pagina profilo duplicata con lo stesso componente Volt, aspettative superate). Tutti riscritti o corretti, e con loro i bug reali trovati.
+- Nuovi test: `Feature/Admin/OrganizerPanelTest`, `Feature/PublicEventsListTest`, `Feature/ContactFormTest`, `Unit/Models/MeetupDataIntegrityTest`, `Unit/Actions/Event/CalendarAndRemindersTest`, `Unit/Architecture/ThemePublicSymlinkTest`.
+- **Moduli condivisi** (Xot, User, Cms, Geo, Gdpr, Notify, …): eseguiti modulo per modulo con `php artisan xot:build-test-sqlite` e `DB_SQLITE_FILE=test_data.sqlite`. Da circa 3.500 a circa 1.600 fallimenti, quasi tutti test scritti per Fixcity o altri progetti. In CI girano in un job informativo che pubblica il riepilogo.
+- Attenzione: alcune suite di Xot lanciano composer sul progetto reale e possono riscrivere `vendor/composer/autoload_*` (si ripristina con `composer dump-autoload`).
+
 ## Come riprodurre
 
 ```bash
