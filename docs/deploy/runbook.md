@@ -9,7 +9,7 @@ Procedura per mettere in produzione `laraxot/laravelpizza.com` e tenerlo in salu
 | PHP | 8.4 con `pdo_mysql`, `mbstring`, `intl`, `gd`, `zip`, `bcmath`, `opcache` |
 | MySQL / MariaDB | MySQL 8.0+ — **due database**: dati (`DB_DATABASE`) e utenti (`DB_DATABASE_USER`) |
 | Node | 22 (solo se si ricompila il tema sul server; gli asset compilati sono già nel repository) |
-| Web server | document root = **`public_html/`** (non `laravel/public`) |
+| Web server | document root = **`public_html/`** (non `laravel/public`); deve seguire i symlink (`public_html/themes/<Tema>`, `public_html/assets/<modulo>`) |
 | Cron | `* * * * * cd /percorso/laravel && php artisan schedule:run >> /dev/null 2>&1` |
 | Coda | un worker permanente (supervisor o systemd), vedi §5 |
 

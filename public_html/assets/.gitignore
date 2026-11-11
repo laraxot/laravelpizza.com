@@ -1,0 +1,19 @@
+# Ogni public_html/assets/<modulo> e' un symlink (tracciato) a ../../laravel/Modules/<Modulo>/public.
+# Il nome con la barra finale ignora solo una CARTELLA reale con quel nome: le copie generate al posto
+# del link (vendor:publish --tag=module-assets, AssetAction, checkout senza symlink) non finiscono nel repository.
+ai/
+activity/
+cms/
+gdpr/
+geo/
+job/
+lang/
+media/
+meetup/
+notify/
+rating/
+seo/
+tenant/
+ui/
+user/
+xot/
