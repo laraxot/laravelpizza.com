@@ -33,6 +33,11 @@ class AppServiceProvider extends ServiceProvider
      */
     private function registerHealthChecks(): void
     {
+        // boot() puo' girare piu' volte (test, Octane): registrare due volte fa fallire spatie/laravel-health.
+        if (Health::registeredChecks()->isNotEmpty()) {
+            return;
+        }
+
         Health::checks([
             DatabaseCheck::new(),
             CacheCheck::new(),
