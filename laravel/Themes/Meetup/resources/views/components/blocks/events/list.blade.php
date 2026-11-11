@@ -67,13 +67,22 @@
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-8">
             <div>
                 @if($title)
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">{{ $title }}</h1>
+                    {{-- In home il titolo della pagina e' gia' nel hero: qui un h2 (un solo h1 per pagina) --}}
+                    @if(($data['heading_level'] ?? 'h1') === 'h2')
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">{{ $title }}</h2>
+                    @else
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">{{ $title }}</h1>
+                    @endif
                 @endif
                 @if($description)
                     <p class="text-xl text-slate-600 dark:text-gray-400">{{ $description }}</p>
                 @endif
             </div>
-            @if($source === 'public')
+            @if($source === 'public' && ! $showSearch)
+                <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="inline-flex h-fit shrink-0 items-center gap-2 self-start rounded-lg border border-red-500 px-4 py-2 text-sm font-semibold text-red-600 hover:bg-red-50 md:self-end dark:text-red-400 dark:hover:bg-red-950/20">
+                    {{ __('pub_theme::events.search.see_all') }}
+                </a>
+            @elseif($source === 'public')
                 <a href="{{ $otherUrl }}" class="inline-flex h-fit shrink-0 items-center gap-2 self-start md:self-end rounded-lg border border-red-500 px-4 py-2 text-sm font-semibold text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/20">
                     {{ __('pub_theme::events.search.'.($timing === SearchPublicEventsAction::PAST ? 'show_upcoming' : 'show_past')) }}
                 </a>

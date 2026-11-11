@@ -61,6 +61,10 @@ Pochi istanti dopo ricevi anche un'**email di conferma** con il riepilogo dell'e
 
 ![Email di conferma dell'iscrizione](img/p08-email-conferma.jpg)
 
+L'email ha un **allegato** (un file che finisce in `.ics`): aprilo e l'evento si aggiunge da solo al tuo calendario.
+
+**Il giorno prima** dell'evento ricevi un'altra email, il **promemoria**, con data, luogo e lo stesso allegato. Se non puoi più venire, è il momento giusto per annullare e lasciare il posto a qualcun altro.
+
 ## 2.4 Annullare l'iscrizione
 
 Non puoi più venire? Libera il posto per qualcun altro: apri l'evento e clicca **Annulla iscrizione** (riquadro 2 dell'immagine precedente). Il pulsante torna "Iscriviti all'evento".

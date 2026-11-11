@@ -16,11 +16,13 @@ Sei un **organizzatore** quando un amministratore ha dato al tuo account il perm
 
 ## 3.2 La bacheca
 
-Dopo l'accesso vedi la bacheca con i numeri principali: quanti eventi, quanti iscritti, i prossimi appuntamenti.
+Dopo l'accesso apri **Meetup Dashboard**: i numeri principali e i prossimi appuntamenti.
 
 ![La bacheca del pannello](img/o02-dashboard.jpg)
 
-1. Nel menu a sinistra, **Eventi** apre l'elenco completo.
+1. **Eventi** apre l'elenco completo degli eventi.
+2. **Sedi**, **Relatori** e **Sponsor**: le anagrafiche da collegare agli eventi (vedi 3.7).
+3. **Prossimi eventi e iscritti**: per ogni evento futuro quanti iscritti ci sono sui posti disponibili. Il numero diventa giallo quando l'evento è quasi pieno (80%) e rosso quando è pieno. Clicca sul titolo per modificare l'evento.
 
 ## 3.3 L'elenco degli eventi
 
@@ -28,7 +30,7 @@ Dopo l'accesso vedi la bacheca con i numeri principali: quanti eventi, quanti is
 
 1. **Nuovo**: crea un evento.
 
-In alto trovi i riquadri riassuntivi, sotto la tabella con tutti gli eventi (anche le bozze, che il pubblico non vede):
+In alto trovi i riquadri riassuntivi, sotto la tabella con tutti gli eventi (anche le bozze, che il pubblico non vede). La colonna **Iscritti** mostra "iscritti / posti". Con **Filtri** puoi vedere solo le bozze, solo gli eventi in arrivo o quelli passati, o cercare per date:
 
 ![La tabella degli eventi](img/o04-lista-eventi-schede.jpg)
 
@@ -43,7 +45,8 @@ Compila i campi principali:
 - **Titolo**: breve e chiaro, è la prima cosa che le persone leggono.
 - **Descrizione**: di cosa si parla, a chi è rivolto, cosa portare.
 - **Inizio** e **Fine**: data e ora. La fine deve venire dopo l'inizio.
-- **Città o luogo**.
+- **Città o luogo**: la città, mostrata nella scheda dell'evento e usata dal filtro per città del sito.
+- **Sede** (facoltativa): il locale preciso, scelto tra quelli salvati. Con il **+** accanto ne crei uno nuovo senza uscire dal modulo.
 - **Posti disponibili** (riquadro 1): quante persone possono iscriversi. È **obbligatorio** e deve essere almeno 1.
 
 Se dimentichi i posti disponibili, il sito non salva: il campo resta evidenziato e compare un avviso che chiede di compilarlo.
@@ -79,8 +82,36 @@ Prima di eliminare, il sito chiede conferma e ti avvisa se ci sono persone iscri
 
 > Attenzione: l'eliminazione cancella anche tutte le iscrizioni a quell'evento e non si può annullare. Se l'evento è solo rinviato, è meglio cambiare la data invece di eliminarlo.
 
+## 3.7 Relatori e sponsor
+
+In fondo al modulo dell'evento c'è la sezione **Relatori e sponsor**.
+
+![Relatori e sponsor nel modulo dell'evento](img/o11-relatori-sponsor.jpg)
+
+1. Scegli uno o più **relatori** e **sponsor** dagli elenchi. Inizia a scrivere il nome per trovarlo; con il **+** ne aggiungi uno nuovo. Poi clicca **Salva**.
+
+Le anagrafiche complete (contatti, biografia, sito) si gestiscono dalle voci **Sedi**, **Relatori** e **Sponsor** del menu a sinistra:
+
+![L'elenco delle sedi](img/o13-sedi.jpg)
+
+1. **Nuovo** aggiunge una sede (o un relatore, o uno sponsor nelle rispettive pagine). La colonna **Eventi** dice in quanti eventi è usata.
+
+Se elimini una sede, gli eventi che la usavano restano e mostrano solo la città. Se elimini un relatore o uno sponsor, sparisce solo dagli eventi, gli eventi restano.
+
+## 3.8 Chi si è iscritto
+
+Apri un evento con **Modifica** e scorri in fondo alla pagina: trovi la tabella **Iscritti**.
+
+![La tabella degli iscritti con il pulsante per scaricarla](img/o12-iscritti.jpg)
+
+1. **Scarica CSV**: scarica l'elenco (nome, email, stato, data di iscrizione) in un file che si apre con Excel o LibreOffice. Utile per la lista all'ingresso.
+2. L'icona rossa **annulla l'iscrizione** di quella persona, dopo una conferma: il posto torna libero. La persona non riceve un avviso automatico, quindi avvisala tu.
+
+> Gli iscritti ricevono da soli l'email di conferma all'iscrizione e il promemoria il giorno prima dell'evento: non devi fare niente.
+
 ## Consigli pratici
 
 - Prepara l'evento come **bozza**, ricontrollalo e pubblicalo solo quando è completo.
 - Imposta i posti disponibili in base alla sala vera: il sito chiude da solo le iscrizioni quando sono finiti.
-- Se cambi data o luogo dopo la pubblicazione, avvisa gli iscritti: il sito oggi non manda un'email automatica per le modifiche.
+- Se cambi data o luogo dopo la pubblicazione, avvisa gli iscritti (puoi usare gli indirizzi del CSV): il sito non manda un'email automatica per le modifiche. Il promemoria del giorno prima userà comunque la data e il luogo aggiornati.
+- I messaggi scritti dal modulo **Contatti** del sito arrivano all'indirizzo email configurato dall'amministratore.

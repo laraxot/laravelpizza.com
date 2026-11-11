@@ -92,8 +92,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'tooltip' => 'create',
-            'label' => 'create',
+            'tooltip' => 'Nuovo',
+            'label' => 'Nuovo',
             'icon' => 'create',
         ],
         'createAnother' => [
@@ -102,9 +102,9 @@ return [
             'tooltip' => 'createAnother',
         ],
         'cancel' => [
-            'label' => 'cancel',
+            'label' => 'Annulla',
             'icon' => 'cancel',
-            'tooltip' => 'cancel',
+            'tooltip' => 'Annulla',
         ],
         'profile' => [
             'label' => 'profile',
@@ -112,13 +112,22 @@ return [
             'tooltip' => 'profile',
         ],
         'logout' => [
-            'label' => 'logout',
+            'label' => 'Esci',
             'icon' => 'logout',
-            'tooltip' => 'logout',
+            'tooltip' => 'Esci',
         ],
         'reorderRecords' => [
             'tooltip' => 'reorderRecords',
             'icon' => 'reorderRecords',
+            'label' => 'reorderRecords',
+        ],
+        'resetColumnManager' => [
+            'tooltip' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
+        ],
+        'applyTableColumnManager' => [
+            'tooltip' => 'applyTableColumnManager',
         ],
     ],
 ];

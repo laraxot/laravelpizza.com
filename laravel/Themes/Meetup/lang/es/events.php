@@ -4,6 +4,7 @@ return [
     'no_events_found' => 'No se encontraron eventos',
     'check_back_later' => 'Vuelva más tarde',
     'search' => [
+        'see_all' => 'Ver todos los eventos',
         'label' => 'Buscar eventos',
         'city' => 'Ciudad',
         'all_cities' => 'Todas las ciudades',

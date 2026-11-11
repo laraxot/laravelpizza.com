@@ -12,7 +12,7 @@ return [
         ],
         'actions' => [
             'logout' => [
-                'tooltip' => 'logout',
+                'tooltip' => 'Esci',
             ],
             'seed_events' => [
                 'label' => 'Importa Eventi JSON',
@@ -59,17 +59,19 @@ return [
     ],
     'actions' => [
         'logout' => [
-            'tooltip' => 'logout',
+            'tooltip' => 'Esci',
             'icon' => 'logout',
-            'label' => 'logout',
+            'label' => 'Esci',
         ],
         'delete' => [
-            'tooltip' => 'delete',
+            'tooltip' => 'Elimina',
+            'label' => 'Elimina',
+            'icon' => 'delete',
         ],
         'cancel' => [
-            'tooltip' => 'cancel',
+            'tooltip' => '',
             'icon' => 'cancel',
-            'label' => 'cancel',
+            'label' => 'Annulla',
         ],
         'profile' => [
             'tooltip' => 'profile',
@@ -78,15 +80,18 @@ return [
         ],
         'createAnother' => [
             'tooltip' => 'createAnother',
+            'icon' => 'createAnother',
+            'label' => 'createAnother',
         ],
         'save' => [
-            'tooltip' => 'save',
+            'tooltip' => 'Salva',
             'icon' => 'save',
+            'label' => 'Salva',
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Nuovo',
             'icon' => 'create',
-            'tooltip' => 'create',
+            'tooltip' => 'Nuovo',
         ],
         'applyFilters' => [
             'label' => 'applyFilters',
@@ -122,6 +127,16 @@ return [
             'label' => 'reorderRecords',
             'icon' => 'reorderRecords',
             'tooltip' => 'reorderRecords',
+        ],
+        'submit' => [
+            'tooltip' => 'Invia',
+            'icon' => 'submit',
+            'label' => 'submit',
+        ],
+        'createOption' => [
+            'tooltip' => 'createOption',
+            'icon' => 'createOption',
+            'label' => 'createOption',
         ],
     ],
     'fields' => [
@@ -223,15 +238,15 @@ return [
         ],
         'values' => [
             'label' => 'values',
-            'placeholder' => 'values',
-            'helper_text' => 'values',
-            'description' => 'values',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'value' => [
             'label' => 'value',
-            'placeholder' => 'value',
-            'helper_text' => 'value',
-            'description' => 'value',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'label' => 'Evento',

@@ -15,9 +15,9 @@ Il sito ha tre tipi di utente. Ognuno vede cose diverse e può fare cose diverse
 
 | Tipo di utente | Chi è | Cosa può fare | Capitolo |
 |---|---|---|---|
-| **Visitatore** | Chiunque apra il sito, senza account | Guardare gli eventi, leggere i dettagli, cambiare lingua | [1. Visitatore](01-visitatore.md) |
-| **Partecipante** | Chi si è registrato con email e password | Tutto quello del visitatore, più: iscriversi agli eventi, annullare l'iscrizione, vedere "I miei eventi", gestire il profilo | [2. Partecipante](02-partecipante.md) |
-| **Organizzatore** | Chi ha ricevuto dall'amministratore il permesso di gestire gli eventi | Entrare nel pannello di amministrazione, creare, pubblicare, modificare ed eliminare eventi | [3. Organizzatore](03-organizzatore.md) |
+| **Visitatore** | Chiunque apra il sito, senza account | Guardare e cercare gli eventi, vedere quelli passati, aggiungerli al calendario, cambiare lingua, scrivere agli organizzatori | [1. Visitatore](01-visitatore.md) |
+| **Partecipante** | Chi si è registrato con email e password | Tutto quello del visitatore, più: iscriversi agli eventi (con email di conferma e promemoria), annullare l'iscrizione, vedere "I miei eventi", gestire il profilo | [2. Partecipante](02-partecipante.md) |
+| **Organizzatore** | Chi ha ricevuto dall'amministratore il permesso di gestire gli eventi | Entrare nel pannello di amministrazione, creare, pubblicare, modificare ed eliminare eventi; gestire sedi, relatori e sponsor; vedere e scaricare gli iscritti | [3. Organizzatore](03-organizzatore.md) |
 
 Se non sai quale sei: se non hai mai creato un account sei un **Visitatore**. Se hai un account sei un **Partecipante**. Diventi **Organizzatore** solo se un amministratore te lo ha detto.
 
@@ -37,7 +37,9 @@ Se non sai quale sei: se non hai mai creato un account sei un **Visitatore**. Se
 
 **Non vedo il pulsante "Iscriviti".** Hai fatto l'accesso? Se no, il pulsante si chiama "Accedi per iscriverti". Se l'evento è pieno o già iniziato, l'iscrizione è chiusa.
 
-**Posso cercare gli eventi vicino a me?** Non ancora: la funzione "Eventi vicini" è in preparazione e non è ancora attiva.
+**Posso cercare gli eventi vicino a me?** Sì: nella pagina Eventi scegli la tua città nella ricerca (vedi il [capitolo 1](01-visitatore.md#13-cercare-per-città-o-per-data)).
+
+**Come metto l'evento nel calendario?** Nella pagina dell'evento clicca "Aggiungi al calendario", oppure apri l'allegato dell'email di conferma.
 
 **Ho cliccato "Iscriviti" ma non è arrivata l'email.** Controlla la cartella spam. La tua iscrizione vale comunque: la trovi in "I miei eventi".
 

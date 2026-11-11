@@ -28,6 +28,7 @@ return [
         'edit' => [
             'label' => 'Modifica',
             'tooltip' => 'Modifica',
+            'icon' => 'edit',
         ],
         'delete' => [
             'label' => 'Elimina',
@@ -37,10 +38,12 @@ return [
         'view' => [
             'label' => 'Apri',
             'tooltip' => 'Apri',
+            'icon' => 'view',
         ],
         'layout' => [
             'label' => 'Cambia vista',
             'tooltip' => 'Cambia vista (tabella o schede)',
+            'icon' => 'layout',
         ],
     ],
 ];

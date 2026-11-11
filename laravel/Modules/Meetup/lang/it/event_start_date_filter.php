@@ -11,13 +11,13 @@ return [
             'label' => 'Dal',
             'placeholder' => '',
             'helper_text' => '',
-            'description' => 'from',
+            'description' => '',
         ],
         'until' => [
             'label' => 'Al',
             'placeholder' => '',
             'helper_text' => '',
-            'description' => 'until',
+            'description' => '',
         ],
     ],
 ];

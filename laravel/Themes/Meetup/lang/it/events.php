@@ -114,6 +114,7 @@ return [
         'description' => 'Label for share button',
     ],
     'search' => [
+        'see_all' => 'Vedi tutti gli eventi',
         'label' => 'Cerca eventi',
         'city' => 'Città',
         'all_cities' => 'Tutte le città',
