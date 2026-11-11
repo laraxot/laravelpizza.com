@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Actions\Event;
 
-use Modules\Meetup\Actions\Event\RegisterAttendeeToEventAction;
 use Modules\Meetup\Actions\Event\UnregisterAttendeeFromEventAction;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventUser;

@@ -10,7 +10,8 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('base model uses meetup connection', function () {
-    $model = new class extends BaseModel {
+    $model = new class extends BaseModel
+    {
         protected $table = 'tmp_meetup_models';
     };
 
@@ -18,7 +19,8 @@ test('base model uses meetup connection', function () {
 });
 
 test('base model default casts include audit and uuid fields', function () {
-    $model = new class extends BaseModel {
+    $model = new class extends BaseModel
+    {
         protected $table = 'tmp_meetup_models';
     };
 

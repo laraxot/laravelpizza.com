@@ -36,10 +36,7 @@
                         {{-- Icon --}}
                         @if(isset($contact['icon']))
                             <div class="w-16 h-16 bg-red-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-red-600/30">
-                                <x-dynamic-component 
-                                    :component="$contact['icon']" 
-                                    class="w-8 h-8 text-red-500" 
-                                />
+                                <x-filament::icon :icon="$contact['icon']" class="w-8 h-8 text-red-500" />
                             </div>
                         @endif
 

@@ -24,6 +24,8 @@ return [
         'register' => 'Registrati',
     ],
     'footer' => [
+        'privacy' => 'Privacy',
+        'terms' => 'Termini e condizioni',
         'events' => 'Eventi',
         'community' => 'Community',
         'community_chat' => 'Chat della Community',

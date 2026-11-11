@@ -16,7 +16,7 @@ uses(TestCase::class);
 test('event user model works', function () {
     $user = User::factory()->create();
     $event = Event::factory()->create();
-    
+
     $eventUser = EventUser::create([
         'user_id' => $user->id,
         'event_id' => $event->id,
@@ -28,7 +28,7 @@ test('event user model works', function () {
 });
 
 test('event performer model works', function () {
-    $performer = new EventPerformer();
+    $performer = new EventPerformer;
 
     expect($performer->getTable())->toBe('event_performer')
         ->and($performer->getFillable())->toContain('event_id')
@@ -36,7 +36,7 @@ test('event performer model works', function () {
 });
 
 test('event sponsor model works', function () {
-    $sponsor = new EventSponsor();
+    $sponsor = new EventSponsor;
 
     expect($sponsor->getTable())->toBe('event_sponsor')
         ->and($sponsor->getFillable())->toContain('event_id')

@@ -13,14 +13,14 @@ return [
     'features' => [
         'title' => 'Why choose our meetups?',
         'description' => 'Discover the features that make our meetups unique and engaging',
-        'regular_meetups_title' => 'Regular Meetups',
-        'regular_meetups_description' => 'Attend weekly meetings with technical presentations and discussions',
+        'regular_meetups_title' => 'Regular meetups',
+        'regular_meetups_description' => 'Recurring meetups with technical talks, Q&A and plenty of pizza',
         'growing_community_title' => 'Growing Community',
         'growing_community_description' => 'Connect with expert developers and apprentices worldwide',
         'multiple_locations_title' => 'Multiple Locations',
         'multiple_locations_description' => 'Stay updated on events in your local cities',
-        'realtime_chat_title' => 'Real-time Chat',
-        'realtime_chat_description' => 'Participate in collaborative discussions during events',
+        'easy_registration_title' => 'Save your seat in one click',
+        'easy_registration_description' => 'Sign up for free, get an email confirmation and free your seat whenever you need to',
     ],
     'cta' => [
         'title' => 'Ready to get started?',

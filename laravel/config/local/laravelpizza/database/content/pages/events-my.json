@@ -1,10 +1,13 @@
 {
     "id": "events-my",
     "title": {
-        "it": "I miei eventi - Laravel Pizza Meetups"
+        "it": "I miei eventi - Laravel Pizza Meetups",
+        "en": "My events - Laravel Pizza Meetups"
     },
     "slug": "events-my",
-    "middleware": ["auth"],
+    "middleware": [
+        "auth"
+    ],
     "content": null,
     "content_blocks": {
         "it": [
@@ -15,6 +18,18 @@
                     "view": "pub_theme::components.blocks.events.list",
                     "title": "I tuoi eventi",
                     "description": "Ecco gli eventi a cui sei iscritto",
+                    "events_source": "user_subscribed"
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "events",
+                "slug": "my-events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Your events",
+                    "description": "The events you have signed up for",
                     "events_source": "user_subscribed"
                 }
             }

@@ -151,7 +151,7 @@ jobs:
           php artisan xot:build-test-sqlite --path="$PWD/database/test_data.sqlite" --fresh
 
       # Niente `|| true`: un job di test che non può fallire non verifica nulla (docs/audit/risk-register.md R-02)
-      - name: Run Tests
+      - name: Run project tests (bloccanti)
         working-directory: laravel
         env:
           DB_CONNECTION: mysql
@@ -163,7 +163,32 @@ jobs:
           DB_PASSWORD: password
           DB_USERNAME_USER: root
           DB_PASSWORD_USER: password
-        run: php artisan test --no-interaction
+        run: vendor/bin/pest --testsuite=Project
+
+      # Le suite dei moduli Laraxot condivisi (Xot, User, Cms, ...) contengono test scritti per altri progetti:
+      # qui si misurano e si pubblicano nel riepilogo del job, senza bloccare. Elenco e piano: docs/audit/test-coverage.md
+      - name: Shared module suites (informativo)
+        if: always()
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_test
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: |
+          echo "| Modulo | Risultato |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          for dir in Modules/*/tests; do
+            module=$(basename "$(dirname "$dir")")
+            [ "$module" = "Meetup" ] && continue
+            result=$(timeout 900 vendor/bin/pest "$dir" 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E '^\s*Tests:' | tail -1 | sed 's/^ *Tests: *//')
+            echo "| $module | ${result:-non completata} |" >> "$GITHUB_STEP_SUMMARY"
+          done
 
   theme-build:
     name: Theme Build

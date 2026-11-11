@@ -13,14 +13,14 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('it can instantiate meetup dashboard', function () {
-    $page = new MeetupDashboard();
+    $page = new MeetupDashboard;
     expect($page)->toBeInstanceOf(MeetupDashboard::class);
 });
 
 test('it has correct widgets', function () {
-    $page = new MeetupDashboard();
+    $page = new MeetupDashboard;
     $widgets = $page->getWidgets();
-    
+
     // Il calendario è stato tolto dalla dashboard: mandava la pagina in errore (vedi docs/audit).
     expect($widgets)->toContain(MeetupStatsOverviewWidget::class)
         ->and($widgets)->not->toContain(EventCalendarWidget::class)
@@ -28,18 +28,18 @@ test('it has correct widgets', function () {
 });
 
 test('it has correct columns', function () {
-    $page = new MeetupDashboard();
+    $page = new MeetupDashboard;
     expect($page->getColumns())->toBe(1);
 });
 
 test('it exposes empty form schema', function () {
-    $page = new MeetupDashboard();
+    $page = new MeetupDashboard;
 
     expect($page->getFormSchema())->toBe([]);
 });
 
 test('it uses meetup dashboard blade view', function () {
-    $page = new MeetupDashboard();
+    $page = new MeetupDashboard;
     $reflection = new \ReflectionClass($page);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);

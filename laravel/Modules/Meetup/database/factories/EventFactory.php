@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Models\Venue;
 use Modules\User\Models\User;
 
 /**
@@ -34,7 +35,7 @@ class EventFactory extends Factory
         $title = $this->generateEventTitle();
         $startDate = Carbon::now()->addDays($this->faker->numberBetween(1, 90));
         $endDate = (clone $startDate)->addHours($this->faker->numberBetween(2, 4));
-        
+
         return [
             'title' => $title,
             'slug' => Str::slug($title).'-'.Str::random(6),
@@ -90,7 +91,7 @@ class EventFactory extends Factory
         ];
 
         $locations = ['Milano', 'Roma', 'Torino', 'Bologna', 'Firenze', 'Napoli'];
-        
+
         return $topics[array_rand($topics)].' - '.$locations[array_rand($locations)];
     }
 
@@ -141,7 +142,7 @@ class EventFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             $startDate = Carbon::now()->addDays($this->faker->numberBetween(1, 90));
-            
+
             return [
                 'start_date' => $startDate,
                 'end_date' => (clone $startDate)->addHours($this->faker->numberBetween(2, 4)),
@@ -157,7 +158,7 @@ class EventFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             $startDate = Carbon::now()->subDays($this->faker->numberBetween(1, 365));
-            
+
             return [
                 'start_date' => $startDate,
                 'end_date' => (clone $startDate)->addHours($this->faker->numberBetween(2, 4)),
@@ -225,7 +226,7 @@ class EventFactory extends Factory
     /**
      * State: with venue.
      */
-    public function withVenue(\Modules\Meetup\Models\Venue $venue): static
+    public function withVenue(Venue $venue): static
     {
         return $this->state(fn (array $attributes): array => [
             'location' => $venue->name,
@@ -233,4 +234,3 @@ class EventFactory extends Factory
         ]);
     }
 }
-

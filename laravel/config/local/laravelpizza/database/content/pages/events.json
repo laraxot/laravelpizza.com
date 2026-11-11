@@ -16,18 +16,10 @@
                     "view": "pub_theme::components.blocks.events.list",
                     "title": "Prossimi eventi",
                     "description": "Pizza, Laravel e buona compagnia: scegli il prossimo meetup e prenota il tuo posto.",
-                    "query": {
-                        "model": "Modules\\Meetup\\Models\\Event",
-                        "orderBy": "start_date",
-                        "direction": "asc",
-                        "limit": 50,
-                        "wrap_in": "events",
-                        "scopes": [
-                            "published",
-                            "upcoming"
-                        ]
-                    },
-                    "show_filters": false
+                    "events_source": "public",
+                    "timing": "upcoming",
+                    "show_search": true,
+                    "limit": 50
                 }
             }
         ],
@@ -39,18 +31,10 @@
                     "view": "pub_theme::components.blocks.events.list",
                     "title": "Upcoming events",
                     "description": "Pizza, Laravel and good company: pick your next meetup and save your seat.",
-                    "query": {
-                        "model": "Modules\\Meetup\\Models\\Event",
-                        "orderBy": "start_date",
-                        "direction": "asc",
-                        "limit": 50,
-                        "wrap_in": "events",
-                        "scopes": [
-                            "published",
-                            "upcoming"
-                        ]
-                    },
-                    "show_filters": false
+                    "events_source": "public",
+                    "timing": "upcoming",
+                    "show_search": true,
+                    "limit": 50
                 }
             }
         ]

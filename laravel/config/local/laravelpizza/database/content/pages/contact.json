@@ -1,7 +1,8 @@
 {
     "id": "1",
     "title": {
-        "it": "Contact Us - Laravel Pizza Meetups"
+        "it": "Contatti - Laravel Pizza Meetups",
+        "en": "Contact - Laravel Pizza Meetups"
     },
     "slug": "contact",
     "middleware": null,
@@ -10,11 +11,11 @@
         "it": [
             {
                 "type": "hero",
-                "slug": "contact-hero",
+                "slug": "hero",
                 "data": {
                     "view": "pub_theme::components.blocks.hero.main",
-                    "title": "Get in Touch",
-                    "subtitle": "Have questions about Laravel Developers Community? Reach out to our community team.",
+                    "title": "Contatti",
+                    "subtitle": "Hai una domanda, vuoi proporre un talk o ospitare un meetup?",
                     "description": "",
                     "background_image": null,
                     "cta_primary": null,
@@ -26,144 +27,80 @@
                 "slug": "contact-info-form",
                 "data": {
                     "view": "pub_theme::components.blocks.contact.main",
-                    "title": "Contact Information",
-                    "description": "Have questions about our community or events? Get in touch with us.",
+                    "title": "Come contattarci",
+                    "description": "Domande sugli eventi, proposte di talk o di sponsorizzazione: scrivici.",
+                    "form_title": "Scrivici un messaggio",
                     "contact_info": [
                         {
-                            "icon": "envelope",
+                            "icon": "heroicon-o-envelope",
                             "title": "Email",
                             "value": "hello@laravelpizza.com",
                             "link": "mailto:hello@laravelpizza.com",
-                            "description": "We respond within 24 hours"
+                            "description": "Per qualsiasi domanda"
                         },
                         {
-                            "icon": "comments",
-                            "title": "Community Chat",
-                            "value": "Join our Discord",
-                            "link": "/chat",
-                            "description": "Chat with other developers 24/7"
-                        },
-                        {
-                            "icon": "calendar-alt",
-                            "title": "Event Inquiries",
-                            "value": "View upcoming events",
+                            "icon": "heroicon-o-calendar",
+                            "title": "Eventi",
+                            "value": "Vedi i prossimi eventi",
                             "link": "/events",
-                            "description": "Find local meetups in your area"
+                            "description": "Iscrizione gratuita dal sito"
                         },
                         {
-                            "icon": "handshake",
-                            "title": "Partnerships",
+                            "icon": "heroicon-o-building-office",
+                            "title": "Sponsor e sedi",
                             "value": "partners@laravelpizza.com",
                             "link": "mailto:partners@laravelpizza.com",
-                            "description": "Sponsor or host an event"
+                            "description": "Vuoi ospitare o sostenere un meetup?"
                         }
-                    ],
-                    "social_links": [
-                        {
-                            "icon": "twitter",
-                            "url": "#",
-                            "label": "Follow us on Twitter"
-                        },
-                        {
-                            "icon": "discord",
-                            "url": "#",
-                            "label": "Join our Discord"
-                        },
-                        {
-                            "icon": "linkedin",
-                            "url": "#",
-                            "label": "Follow us on LinkedIn"
-                        },
-                        {
-                            "icon": "github",
-                            "url": "#",
-                            "label": "Follow us on GitHub"
-                        }
-                    ],
-                    "form_fields": [
-                        {
-                            "name": "first_name",
-                            "label": "First Name",
-                            "type": "text",
-                            "required": true
-                        },
-                        {
-                            "name": "last_name",
-                            "label": "Last Name",
-                            "type": "text",
-                            "required": true
-                        },
-                        {
-                            "name": "email",
-                            "label": "Email",
-                            "type": "email",
-                            "required": true
-                        },
-                        {
-                            "name": "subject",
-                            "label": "Subject",
-                            "type": "select",
-                            "required": true,
-                            "options": [
-                                {
-                                    "value": "",
-                                    "label": "Select a topic"
-                                },
-                                {
-                                    "value": "event-inquiry",
-                                    "label": "Event Inquiry"
-                                },
-                                {
-                                    "value": "community-support",
-                                    "label": "Community Support"
-                                },
-                                {
-                                    "value": "partnership",
-                                    "label": "Partnership Opportunity"
-                                },
-                                {
-                                    "value": "feedback",
-                                    "label": "Feedback"
-                                },
-                                {
-                                    "value": "volunteer",
-                                    "label": "Volunteer to Help"
-                                },
-                                {
-                                    "value": "other",
-                                    "label": "Other"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "message",
-                            "label": "Message",
-                            "type": "textarea",
-                            "required": true,
-                            "rows": 6
-                        }
-                    ],
-                    "privacy_policy_url": "/privacy",
-                    "submit_button_label": "Send Message"
+                    ]
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "hero",
+                "slug": "hero",
+                "data": {
+                    "view": "pub_theme::components.blocks.hero.main",
+                    "title": "Contact",
+                    "subtitle": "Got a question, want to give a talk or host a meetup?",
+                    "description": "",
+                    "background_image": null,
+                    "cta_primary": null,
+                    "cta_secondary": null
                 }
             },
             {
-                "type": "cta",
-                "slug": "contact-cta",
+                "type": "contact",
+                "slug": "contact-info-form",
                 "data": {
-                    "view": "pub_theme::components.blocks.cta.banner",
-                    "title": "Join Our Community",
-                    "description": "Connect with fellow Laravel developers. Share knowledge, build connections, and grow your skills together.",
-                    "cta_primary": {
-                        "label": "Join Chat",
-                        "url": "/chat",
-                        "style": "primary"
-                    },
-                    "cta_secondary": {
-                        "label": "Sign Up",
-                        "url": "/register",
-                        "style": "secondary"
-                    }
+                    "view": "pub_theme::components.blocks.contact.main",
+                    "title": "How to reach us",
+                    "description": "Questions about events, talk or sponsorship proposals: write to us.",
+                    "form_title": "Send us a message",
+                    "contact_info": [
+                        {
+                            "icon": "heroicon-o-envelope",
+                            "title": "Email",
+                            "value": "hello@laravelpizza.com",
+                            "link": "mailto:hello@laravelpizza.com",
+                            "description": "For any question"
+                        },
+                        {
+                            "icon": "heroicon-o-calendar",
+                            "title": "Events",
+                            "value": "See upcoming events",
+                            "link": "/events",
+                            "description": "Free registration on the website"
+                        },
+                        {
+                            "icon": "heroicon-o-building-office",
+                            "title": "Sponsors and venues",
+                            "value": "partners@laravelpizza.com",
+                            "link": "mailto:partners@laravelpizza.com",
+                            "description": "Want to host or support a meetup?"
+                        }
+                    ]
                 }
             }
         ]
@@ -179,9 +116,3 @@
     "created_by": null,
     "updated_by": null
 }
-
-
-
-
-
-

@@ -24,7 +24,7 @@ describe('Sponsor Model', function (): void {
     });
 
     test('it has fillable attributes', function (): void {
-        $sponsor = new Sponsor();
+        $sponsor = new Sponsor;
         $expected = ['name', 'level', 'website', 'logo', 'description', 'contact_email', 'contact_name', 'order', 'meta_data'];
 
         foreach ($expected as $field) {

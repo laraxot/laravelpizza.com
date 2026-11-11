@@ -1,8 +1,8 @@
 {
     "id": "2",
     "title": {
-        "it": "About Us - Laravel Pizza Meetups",
-        "en": "About Us - Laravel Pizza Meetups"
+        "it": "Chi siamo - Laravel Pizza Meetups",
+        "en": "About us - Laravel Pizza Meetups"
     },
     "slug": "about",
     "middleware": null,
@@ -11,19 +11,20 @@
         "it": [
             {
                 "type": "hero",
-                "slug": "about-hero",
+                "slug": "hero",
                 "data": {
                     "view": "pub_theme::components.blocks.hero.main",
-                    "title": "About Laravel Pizza Meetups",
-                    "subtitle": "Building a community of passionate developers",
-                    "description": "We bring together Laravel, Filament, and Livewire enthusiasts for pizza, knowledge sharing, and lasting connections.",
+                    "title": "Chi siamo",
+                    "subtitle": "Una community di sviluppatori Laravel, con la pizza al centro",
+                    "description": "Organizziamo incontri dal vivo su Laravel, Filament e Livewire: talk tecnici, domande e tempo per conoscersi davanti a una pizza.",
+                    "background_image": null,
                     "cta_primary": {
-                        "label": "Join Us",
+                        "label": "Registrati",
                         "url": "/auth/register",
                         "style": "primary"
                     },
                     "cta_secondary": {
-                        "label": "View Events",
+                        "label": "Vedi gli eventi",
                         "url": "/events",
                         "style": "secondary"
                     }
@@ -34,10 +35,8 @@
                 "slug": "our-story",
                 "data": {
                     "view": "pub_theme::components.blocks.about.story",
-                    "title": "Our Story",
-                    "content": "Laravel Pizza Meetups was born from a simple idea: great developers deserve great pizza. What started as a small gathering of Laravel enthusiasts in 2020 has grown into a vibrant community spanning multiple cities worldwide.\n\nWe believe that the best learning happens over food and conversation. Our meetups combine technical discussions, hands-on workshops, and networking opportunities - all while enjoying delicious pizza.\n\nWhether you're a Laravel beginner or a seasoned expert, you'll find a welcoming community ready to share knowledge, answer questions, and celebrate your successes.",
-                    "image": "/images/about-story.jpg",
-                    "image_alt": "Laravel Pizza Meetup gathering"
+                    "title": "La nostra idea",
+                    "content": "Laravel Pizza Meetups nasce da un'idea semplice: si impara meglio parlando con altre persone che usano gli stessi strumenti.\n\nOgni incontro ha uno o più talk tecnici, spazio per le domande e tempo per conoscersi. Ci si iscrive gratis dal sito, si riceve la conferma via email e si può liberare il posto quando si vuole.\n\nChe tu stia iniziando con Laravel o lo usi da anni, sei il benvenuto."
                 }
             },
             {
@@ -45,72 +44,118 @@
                 "slug": "our-values",
                 "data": {
                     "view": "pub_theme::components.blocks.about.values",
-                    "title": "Our Values",
-                    "description": "The principles that guide our community",
+                    "title": "I nostri valori",
+                    "description": "Quello che guida ogni incontro",
                     "values": [
                         {
                             "icon": "heroicon-o-users",
-                            "title": "Community First",
-                            "description": "We prioritize building genuine connections and supporting each other's growth. Every member matters, and we create an inclusive environment where everyone feels welcome.",
+                            "title": "Prima la community",
+                            "description": "Un ambiente accogliente per tutti: principianti ed esperti allo stesso tavolo.",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-academic-cap",
-                            "title": "Continuous Learning",
-                            "description": "We believe in lifelong learning and knowledge sharing. Our meetups feature workshops, talks, and discussions that help developers at all levels improve their skills.",
+                            "title": "Imparare insieme",
+                            "description": "Talk pratici, codice vero e domande senza imbarazzo.",
                             "color": "red"
                         },
                         {
-                            "icon": "heroicon-o-heart",
-                            "title": "Inclusivity",
-                            "description": "Everyone is welcome, regardless of experience level, background, or identity. We foster a respectful and supportive community where diverse perspectives are valued.",
+                            "icon": "heroicon-o-code-bracket",
+                            "title": "Open source",
+                            "description": "Usiamo e sosteniamo l'ecosistema open source di Laravel, Filament e Livewire.",
                             "color": "red"
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "stats",
-                "slug": "community-stats",
-                "data": {
-                    "view": "pub_theme::components.blocks.stats.overview",
-                    "title": "Our Community in Numbers",
-                    "background_color": "bg-slate-900",
-                    "stats": [
-                        {
-                            "number": "500+",
-                            "label": "Active Members",
-                            "description": "Developers from around the world"
-                        },
-                        {
-                            "number": "50+",
-                            "label": "Events Hosted",
-                            "description": "Meetups, workshops, and conferences"
-                        },
-                        {
-                            "number": "15+",
-                            "label": "Cities",
-                            "description": "Where we organize meetups"
-                        },
-                        {
-                            "number": "100%",
-                            "label": "Pizza Enjoyed",
-                            "description": "Every meetup includes great food"
                         }
                     ]
                 }
             },
             {
                 "type": "cta",
-                "slug": "join-cta",
+                "slug": "cta",
                 "data": {
                     "view": "pub_theme::components.blocks.cta.banner",
-                    "title": "Ready to Join Our Community?",
-                    "description": "Sign up today and start connecting with Laravel developers in your area. The next pizza meetup is just around the corner!",
+                    "title": "Vuoi partecipare?",
+                    "description": "Crea il tuo account gratuito e prenota il posto al prossimo meetup.",
                     "background_color": "bg-red-600",
                     "text_color": "text-white",
                     "cta_primary": {
-                        "label": "Create Your Account",
+                        "label": "Crea il tuo account",
+                        "url": "/auth/register",
+                        "style": "white"
+                    }
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "hero",
+                "slug": "hero",
+                "data": {
+                    "view": "pub_theme::components.blocks.hero.main",
+                    "title": "About us",
+                    "subtitle": "A community of Laravel developers, with pizza at its heart",
+                    "description": "We organise in-person meetups about Laravel, Filament and Livewire: technical talks, questions and time to get to know each other over pizza.",
+                    "background_image": null,
+                    "cta_primary": {
+                        "label": "Sign up",
+                        "url": "/auth/register",
+                        "style": "primary"
+                    },
+                    "cta_secondary": {
+                        "label": "View events",
+                        "url": "/events",
+                        "style": "secondary"
+                    }
+                }
+            },
+            {
+                "type": "about-story",
+                "slug": "our-story",
+                "data": {
+                    "view": "pub_theme::components.blocks.about.story",
+                    "title": "Our idea",
+                    "content": "Laravel Pizza Meetups started from a simple idea: you learn better by talking with other people who use the same tools.\n\nEvery meetup has one or more technical talks, room for questions and time to get to know each other. You sign up for free on the website, get an email confirmation and can free your seat whenever you need to.\n\nWhether you are just starting with Laravel or have used it for years, you are welcome."
+                }
+            },
+            {
+                "type": "about-values",
+                "slug": "our-values",
+                "data": {
+                    "view": "pub_theme::components.blocks.about.values",
+                    "title": "Our values",
+                    "description": "What guides every meetup",
+                    "values": [
+                        {
+                            "icon": "heroicon-o-users",
+                            "title": "Community first",
+                            "description": "A welcoming place for everyone: beginners and experts at the same table.",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-academic-cap",
+                            "title": "Learning together",
+                            "description": "Practical talks, real code and questions without embarrassment.",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-code-bracket",
+                            "title": "Open source",
+                            "description": "We use and support the open source ecosystem of Laravel, Filament and Livewire.",
+                            "color": "red"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "cta",
+                "slug": "cta",
+                "data": {
+                    "view": "pub_theme::components.blocks.cta.banner",
+                    "title": "Want to join?",
+                    "description": "Create your free account and save your seat at the next meetup.",
+                    "background_color": "bg-red-600",
+                    "text_color": "text-white",
+                    "cta_primary": {
+                        "label": "Create your account",
                         "url": "/auth/register",
                         "style": "white"
                     }

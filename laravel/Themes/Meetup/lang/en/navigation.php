@@ -24,6 +24,8 @@ return [
         'register' => 'Sign up',
     ],
     'footer' => [
+        'privacy' => 'Privacy',
+        'terms' => 'Terms and conditions',
         'events' => 'Events',
         'community' => 'Community',
         'community_chat' => 'Community Chat',

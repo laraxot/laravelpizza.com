@@ -1,0 +1,54 @@
+{
+    "id": "events-past",
+    "title": {
+        "it": "Eventi passati - Laravel Pizza Meetups",
+        "en": "Past events - Laravel Pizza Meetups"
+    },
+    "slug": "events-past",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Eventi passati",
+                    "description": "I meetup che si sono già svolti: argomenti, città e date.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Past events",
+                    "description": "Meetups that already took place: topics, cities and dates.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": []
+    },
+    "created_at": "2026-11-10T22:00:00.000000Z",
+    "updated_at": "2026-11-10T22:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

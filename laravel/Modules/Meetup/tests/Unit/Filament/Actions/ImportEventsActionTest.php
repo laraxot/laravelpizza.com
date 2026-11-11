@@ -13,14 +13,14 @@ uses(TestCase::class);
 
 test('it can instantiate import events action', function () {
     $action = ImportEventsAction::make();
-    
+
     expect($action)->toBeInstanceOf(ImportEventsAction::class)
         ->and($action->getName())->toBe('import_events');
 });
 
 test('it has the correct configuration', function () {
     $action = ImportEventsAction::make();
-    
+
     expect($action->getIcon())->toBe('heroicon-o-arrow-down-tray')
         ->and($action->getColor())->toBe('info')
         ->and($action->isConfirmationRequired())->toBeTrue();
@@ -29,9 +29,9 @@ test('it has the correct configuration', function () {
 test('it has a badge showing event count', function () {
     $initialCount = Event::query()->count();
     Event::factory()->count(3)->create();
-    
+
     $action = ImportEventsAction::make();
-    
+
     // Filament restituisce il badge come stringa: conta il valore.
     expect((int) $action->getBadge())->toBe($initialCount + 3);
 });
@@ -41,8 +41,8 @@ test('it executes the import action and sends notification', function () {
         ->shouldReceive('execute')
         ->once()
         ->andReturn(5);
-    
+
     $action = ImportEventsAction::make();
-    
+
     expect(fn () => $action->call())->not->toThrow(\Throwable::class);
 });

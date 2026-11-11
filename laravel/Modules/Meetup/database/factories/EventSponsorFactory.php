@@ -11,9 +11,9 @@ use Modules\User\Models\User;
 
 /**
  * Factory for EventSponsor pivot model.
- * 
+ *
  * Represents sponsors of an event (companies/individuals providing support).
- * 
+ *
  * @extends Factory<EventSponsor>
  */
 class EventSponsorFactory extends Factory

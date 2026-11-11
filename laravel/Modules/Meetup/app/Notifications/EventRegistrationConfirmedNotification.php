@@ -10,6 +10,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Meetup\Actions\Event\BuildEventIcsAction;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\Venue;
 
@@ -69,6 +70,12 @@ class EventRegistrationConfirmedNotification extends Notification implements Sho
             ->line((string) __('meetup::event_registration.mail.intro', $replace, $locale))
             ->line((string) __('meetup::event_registration.mail.date', ['date' => $date], $locale))
             ->line((string) __('meetup::event_registration.mail.venue', ['venue' => (string) $venue], $locale))
-            ->action((string) __('meetup::event_registration.mail.action', [], $locale), is_string($url) ? $url : url('/'));
+            ->action((string) __('meetup::event_registration.mail.action', [], $locale), is_string($url) ? $url : url('/'))
+            // I-02: l'evento si aggiunge al calendario con un clic sull'allegato.
+            ->attachData(
+                app(BuildEventIcsAction::class)->execute($this->event),
+                app(BuildEventIcsAction::class)->filename($this->event),
+                ['mime' => 'text/calendar; charset=UTF-8'],
+            );
     }
 }

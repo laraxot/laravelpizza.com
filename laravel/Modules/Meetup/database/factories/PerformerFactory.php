@@ -44,4 +44,3 @@ class PerformerFactory extends Factory
         ];
     }
 }
-

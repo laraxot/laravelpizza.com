@@ -10,6 +10,8 @@ return [
     'pub_theme' => 'Meetup',
     // Pagina dopo login e registrazione: l'area personale di LaravelPizza è "I miei eventi".
     'post_login_path' => '/events-my',
+    // Casella che riceve i messaggi del modulo Contatti (vuota = MAIL_FROM_ADDRESS).
+    'contact_email' => env('CONTACT_EMAIL'),
     'search_action' => 'it/videos',
     'show_trans_key' => false,
     'disable_admin_dynamic_route' => true,

@@ -23,7 +23,7 @@ it('uses ProfileContract for audit relation phpdoc in shared model metadata', fu
             expect($contents)->not->toContain('\\Modules\\Meetup\\Models\\Profile|null $'.$relation);
 
             $qualified = str_contains($contents, '\\Modules\\Xot\\Contracts\\ProfileContract|null $'.$relation);
-            $imported = $usesContract && 1 === preg_match('/[\s(]ProfileContract\|null \$'.$relation.'\b/', $contents);
+            $imported = $usesContract && preg_match('/[\s(]ProfileContract\|null \$'.$relation.'\b/', $contents) === 1;
 
             expect($qualified || $imported)->toBeTrue($file.' $'.$relation);
         }

@@ -11,9 +11,9 @@ use Modules\User\Models\User;
 
 /**
  * Factory for EventUser pivot model.
- * 
+ *
  * Represents attendees/participants of an event.
- * 
+ *
  * @extends Factory<EventUser>
  */
 class EventUserFactory extends Factory

@@ -12,16 +12,16 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('list events page can be instantiated', function () {
-    $page = new ListEvents();
+    $page = new ListEvents;
     expect($page)->toBeInstanceOf(ListEvents::class);
 });
 
 test('create event page can be instantiated', function () {
-    $page = new CreateEvent();
+    $page = new CreateEvent;
     expect($page)->toBeInstanceOf(CreateEvent::class);
 });
 
 test('edit event page can be instantiated', function () {
-    $page = new EditEvent();
+    $page = new EditEvent;
     expect($page)->toBeInstanceOf(EditEvent::class);
 });

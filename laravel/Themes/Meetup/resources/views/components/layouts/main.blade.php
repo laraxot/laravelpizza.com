@@ -4,8 +4,7 @@
         (function(){var d=document.documentElement;try{var v=localStorage.getItem('theme_dark');if(v==='false')d.classList.remove('dark');else d.classList.add('dark');}catch(e){d.classList.add('dark');}})();
     </script>
     <x-metatags>
-        {{-- Meetup Theme Fonts --}}
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        {{-- Font Inter incluso nel CSS del tema (@fontsource-variable/inter): nessuna richiesta a Google --}}
 
         @livewireStyles
     </x-metatags>

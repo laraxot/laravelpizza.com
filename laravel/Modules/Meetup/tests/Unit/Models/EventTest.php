@@ -8,7 +8,11 @@ use Illuminate\Support\Carbon;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Models\Performer;
+use Modules\Meetup\Models\Sponsor;
+use Modules\Meetup\Models\Venue;
 use Modules\Meetup\Tests\TestCase;
+use Modules\Seo\Datas\SocialShareData;
 use Modules\User\Models\User;
 
 uses(TestCase::class);
@@ -26,9 +30,9 @@ test('it can create an event and has correct defaults', function () {
 });
 
 test('event has expected fillable fields', function () {
-    $event = new Event();
+    $event = new Event;
     $expected = ['title', 'description', 'start_date', 'end_date', 'location', 'slug'];
-    
+
     foreach ($expected as $field) {
         expect(in_array($field, $event->getFillable()))->toBeTrue();
     }
@@ -91,7 +95,7 @@ test('dateRange scope filters events correctly', function () {
 test('getBySlug static method returns correct event', function () {
     $slug = 'static-slug-'.uniqid();
     $event = Event::factory()->create(['slug' => $slug]);
-    
+
     $result = Event::getBySlug($slug);
 
     expect($result->id)->toBe($event->id);
@@ -130,15 +134,15 @@ test('toSchemaOrg returns valid structured data', function () {
 
 test('getSocialShareData returns seo share data', function () {
     $event = Event::factory()->create(['title' => 'Social Share Test']);
-    
+
     $socialData = $event->getSocialShareData();
 
-    expect($socialData)->toBeInstanceOf(\Modules\Seo\Datas\SocialShareData::class)
+    expect($socialData)->toBeInstanceOf(SocialShareData::class)
         ->and($socialData->title)->toBe('Social Share Test');
 });
 
 test('getRouteKeyName returns slug', function () {
-    $event = new Event();
+    $event = new Event;
     expect($event->getRouteKeyName())->toBe('slug');
 });
 
@@ -153,7 +157,7 @@ test('event slug auto-generation from title', function () {
 
 test('event casts dates correctly', function () {
     $event = Event::factory()->create();
-    
+
     expect($event->start_date)->toBeInstanceOf(Carbon::class)
         ->and($event->end_date)->toBeInstanceOf(Carbon::class);
 });
@@ -407,13 +411,13 @@ test('event factory past state sets past dates', function () {
 });
 
 test('event connection is meetup', function () {
-    $event = new Event();
+    $event = new Event;
     expect($event->getConnectionName())->toBe('meetup');
 });
 
 test('event has timestamps', function () {
     $event = Event::factory()->create();
-    
+
     expect($event->created_at)->not->toBeNull()
         ->and($event->updated_at)->not->toBeNull()
         ->and($event->created_at)->toBeInstanceOf(Carbon::class);
@@ -422,17 +426,17 @@ test('event has timestamps', function () {
 test('event can be found by slug', function () {
     $slug = 'findme-'.uniqid();
     $event = Event::factory()->create(['slug' => $slug]);
-    
+
     $found = Event::getBySlug($slug);
-    
+
     expect($found)->not->toBeNull()
         ->and($found->id)->toBe($event->id);
 });
 
 test('event can have multiple performers', function () {
     $event = Event::factory()->create();
-    $performer1 = \Modules\Meetup\Models\Performer::factory()->create();
-    $performer2 = \Modules\Meetup\Models\Performer::factory()->create();
+    $performer1 = Performer::factory()->create();
+    $performer2 = Performer::factory()->create();
 
     $event->performers()->attach($performer1, ['name' => $performer1->name, 'role' => 'Speaker', 'order' => 1]);
     $event->performers()->attach($performer2, ['name' => $performer2->name, 'role' => 'Host', 'order' => 2]);
@@ -445,8 +449,8 @@ test('event can have multiple performers', function () {
 
 test('event can have multiple sponsors', function () {
     $event = Event::factory()->create();
-    $sponsor1 = \Modules\Meetup\Models\Sponsor::factory()->create();
-    $sponsor2 = \Modules\Meetup\Models\Sponsor::factory()->create();
+    $sponsor1 = Sponsor::factory()->create();
+    $sponsor2 = Sponsor::factory()->create();
 
     $event->sponsors()->attach($sponsor1, ['name' => $sponsor1->name]);
     $event->sponsors()->attach($sponsor2, ['name' => $sponsor2->name]);
@@ -455,10 +459,10 @@ test('event can have multiple sponsors', function () {
 });
 
 test('event can belong to a venue', function () {
-    $venue = \Modules\Meetup\Models\Venue::factory()->create();
+    $venue = Venue::factory()->create();
     $event = Event::factory()->create(['location_id' => $venue->id]);
 
-    expect($event->venue)->toBeInstanceOf(\Modules\Meetup\Models\Venue::class)
+    expect($event->venue)->toBeInstanceOf(Venue::class)
         ->and($event->venue->id)->toBe($venue->id);
 });
 

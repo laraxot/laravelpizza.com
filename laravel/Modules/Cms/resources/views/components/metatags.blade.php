@@ -28,10 +28,7 @@
     <meta name="twitter:description" content="{{ $meta->getDescription(limit: 160) }}">
     <meta name="twitter:image" content="{{ $meta->getImage() }}">
 
-    <!-- Preload critical resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    {{-- Nessun preconnect verso Google Fonts o Analytics: aprire la connessione invia l'IP del visitatore a terzi prima del consenso --}}
 
     {{-- Favicon (multi-size) --}}
     <link rel="icon" type="image/x-icon" href="{{ $meta->getPubThemeAsset('favicon.ico') }}">

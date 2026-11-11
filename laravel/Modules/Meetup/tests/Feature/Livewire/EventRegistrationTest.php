@@ -6,6 +6,7 @@ namespace Modules\Meetup\Tests\Feature\Livewire;
 
 use Illuminate\Support\Facades\Notification;
 use Livewire\Livewire;
+use Modules\Meetup\Actions\Event\GetUserRegisteredEventsAction;
 use Modules\Meetup\Actions\Event\JoinEventAction;
 use Modules\Meetup\Http\Livewire\EventRegistration;
 use Modules\Meetup\Models\Event;
@@ -117,7 +118,7 @@ test('my events lists only the published events the user registered for', functi
     EventUser::query()->create(['event_id' => $draft->getKey(), 'user_id' => (string) $user->getKey()]);
     $draft->forceFill(['status' => 'draft'])->save();
 
-    $ids = app(\Modules\Meetup\Actions\Event\GetUserRegisteredEventsAction::class)
+    $ids = app(GetUserRegisteredEventsAction::class)
         ->execute((string) $user->getKey())
         ->pluck('id')
         ->all();

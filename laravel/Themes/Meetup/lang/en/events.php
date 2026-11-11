@@ -130,4 +130,16 @@ return [
             'description' => 'Instruction to view location on map',
         ],
     ],
+    'search' => [
+        'label' => 'Search events',
+        'city' => 'City',
+        'all_cities' => 'All cities',
+        'from' => 'From',
+        'until' => 'Until',
+        'apply' => 'Search',
+        'reset' => 'Clear filters',
+        'no_results' => 'No events match these filters.',
+        'show_past' => 'Past events',
+        'show_upcoming' => 'Upcoming events',
+    ],
 ];
