@@ -69,6 +69,8 @@ Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
 
 *niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
+**Regola per ogni modulo (asset)**: `public_html/assets/<modulo-minuscolo>` è sempre `ln -s ../../laravel/Modules/<Modulo>/public` (relativo, tracciato da git) e `public_html/assets/.gitignore` contiene `<modulo-minuscolo>/`. Il link porta in git; la riga con la barra finale ignora solo una *cartella reale* con quel nome, cioè le copie che `vendor:publish --tag=module-assets`, `AssetAction` o un checkout senza symlink creerebbero al posto del link. Così ogni modulo resta autosufficiente (i suoi file pubblici vivono e viaggiano con il modulo, che è un repository condiviso tra progetti), non ci sono copie duplicate o vecchie nella document root e nessuna copia generata finisce nel repository. Un modulo nuovo: `mkdir laravel/Modules/<Modulo>/public`, `ln -s ../../laravel/Modules/<Modulo>/public public_html/assets/<modulo>`, riga `<modulo>/` nel `.gitignore`. Test di guardia: `Modules/Meetup/tests/Unit/Architecture/ModuleAssetsSymlinkTest.php`.
+
 **Regola per ogni tema**: `public_html/themes/<Tema>` è sempre `ln -s ../../laravel/Themes/<Tema>/public` (relativo, tracciato da git). Perché:
 - una sola fonte: il web server serve esattamente l'output di `npm run build`, niente copie vecchie o dimenticate;
 - la document root espone solo gli asset compilati, mai sorgenti, `node_modules` o Blade del tema;
