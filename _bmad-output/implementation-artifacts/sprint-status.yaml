@@ -87,6 +87,10 @@ development_status:
   6-4-dati-strutturati-evento-json-ld: review
   epic-6-retrospective: optional
 
+  epic-7: in-progress
+  7-1-audit-front-office-ospite-e-loggato: review
+  epic-7-retrospective: optional
+
 # Note 2026-11-11 (Claude, sessione di completamento):
 # - Tutte le storie FR-1..FR-21 sono implementate e coperte dalla suite Project (395 test); passano a `review`
 #   per la code review BMAD con un agente diverso, come da workflow.
@@ -94,3 +98,7 @@ development_status:
 #   da confermare).
 # - Evidenze per storia: docs/audit/functional-coverage.md (tabella "Stato al ciclo 3").
 
+
+# Note 2026-11-12 (Claude): audit completo del front office (story 7-1). Corretti tra l'altro: reset password in
+# errore 500 (connessione inesistente), email dell'organizzatore pubblica, Gravatar, logout mobile, pagine 404 e auth
+# non tradotte, <title> uguale su tutte le pagine. Dettagli: laravel/Themes/Meetup/docs/front-office-audit.md.

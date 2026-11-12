@@ -12,6 +12,8 @@ return [
     'post_login_path' => '/events-my',
     // Casella che riceve i messaggi del modulo Contatti (vuota = MAIL_FROM_ADDRESS).
     'contact_email' => env('CONTACT_EMAIL'),
+    // Niente Gravatar: la cookie policy promette zero richieste a terzi; gli avatar senza foto mostrano le iniziali.
+    'gravatar' => false,
     'search_action' => 'it/videos',
     'show_trans_key' => false,
     'disable_admin_dynamic_route' => true,

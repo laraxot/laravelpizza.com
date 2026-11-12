@@ -7,6 +7,7 @@ namespace Modules\Cms\View\Components;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
+use Modules\Cms\Actions\ResolvePageMetaAction;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\LaravelData\DataCollection;
@@ -55,6 +56,11 @@ final class Page extends Component
         $this->slug = $slug;
 
         $this->blocks = PageModel::getBlocksBySlug($this->slug, $this->side);
+
+        // Titolo e descrizione della pagina per <x-metatags> (il layout è reso dopo il contenuto).
+        if ($this->side === 'content') {
+            app(ResolvePageMetaAction::class)->remember($this->slug, $this->blocks, $this->data);
+        }
     }
 
     public function render(): ViewContract|Factory

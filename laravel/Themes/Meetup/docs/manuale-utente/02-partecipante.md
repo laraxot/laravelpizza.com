@@ -38,6 +38,19 @@ Se arrivi qui dal pulsante "Accedi per iscriverti" di un evento, dopo l'accesso 
 
 > Se sbagli la password 5 volte di fila il sito ti blocca per un minuto: è una protezione contro chi prova a indovinarla. Aspetta e riprova, oppure usa "Password dimenticata?".
 
+### Hai dimenticato la password?
+
+Nella pagina di accesso clicca **Password dimenticata?**.
+
+![La pagina Password dimenticata](img/p14-password-dimenticata.jpg)
+
+1. Scrivi l'**email** del tuo account.
+2. Clicca **Inviami il link**.
+
+Ti arriva un'email con il pulsante **Reimposta la password**: aprilo, scegli una nuova password (almeno 8 caratteri, scritta due volte) e salva. Entri subito nel sito. Il link vale un'ora.
+
+> Per proteggere gli account, il sito risponde nello stesso modo anche se l'email non è registrata: se l'email non arriva, controlla lo spam e di aver scritto l'indirizzo giusto.
+
 Dopo l'accesso arrivi alla pagina **I tuoi eventi**, con il tuo nome in alto a destra:
 
 ![Il sito dopo l'accesso](img/p05-dopo-login.jpg)
@@ -81,6 +94,8 @@ Clicca sul tuo **nome** in alto a destra: si apre il menu personale.
 2. **Profilo**: i tuoi dati.
 3. **Esci**: chiude la sessione. Fallo sempre se usi un computer condiviso.
 
+C'è anche **Tutti gli eventi**, che apre l'elenco completo dei meetup. Al posto della foto vedi un cerchio con le tue iniziali.
+
 ### I miei eventi
 
 ![La pagina I miei eventi](img/p12-miei-eventi.jpg)
@@ -90,6 +105,8 @@ Qui trovi in ordine di data tutti gli eventi a cui sei iscritto. Un'etichetta co
 ### Profilo
 
 ![La pagina del profilo](img/p13-profilo.jpg)
+
+Il profilo è pubblico: gli altri vedono il tuo nome, la biografia e da quando sei iscritto. **La tua email la vedi solo tu**: agli altri non viene mostrata, nemmeno se sei tu a organizzare un evento.
 
 ## 2.6 Quando non puoi iscriverti
 

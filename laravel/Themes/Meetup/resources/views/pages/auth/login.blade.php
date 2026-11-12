@@ -18,10 +18,7 @@ name('login');
 
 ?>
 
-<x-layouts.app>
-    <x-slot name="title">
-        {{ __('pub_theme::auth.login.title') }}
-    </x-slot>
+<x-layouts.app :title="__('pub_theme::auth.login.page_title')">
 
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-red-900 relative overflow-hidden py-12 px-4">
         {{-- Background Elements --}}

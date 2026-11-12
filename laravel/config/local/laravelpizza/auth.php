@@ -97,10 +97,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            // Tabella del modulo User (2014_10_12_100002_create_password_resets_table), sul database utenti.
+            // Prima puntava alla connessione 'liveuser_general', che non esiste: "password dimenticata" andava in errore.
             'table' => 'password_resets',
             'expire' => 60,
-            'email' => 'lu::auth.emails.password',
-            'connection' => 'liveuser_general',
+            'throttle' => 60,
+            'connection' => 'user',
         ],
     ],
 ];

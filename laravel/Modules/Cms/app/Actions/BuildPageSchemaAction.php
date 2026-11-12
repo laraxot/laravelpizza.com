@@ -174,14 +174,12 @@ final class BuildPageSchemaAction
         }
         $profileFirstName = '';
         $profileLastName = '';
-        $profileEmail = '';
         $profileBio = '';
         $profileImage = null;
 
         if ($profile instanceof ProfileContract) {
             $profileFirstName = $this->readNullableStringProperty($profile, 'first_name');
             $profileLastName = $this->readNullableStringProperty($profile, 'last_name');
-            $profileEmail = $this->readNullableStringProperty($profile, 'email');
             $profileBio = $this->readNullableStringProperty($profile, 'bio');
 
             $avatarUrl = $profile->getAvatarUrl();
@@ -193,7 +191,6 @@ final class BuildPageSchemaAction
         $publicNameRaw = $publicUser instanceof Model ? $publicUser->getAttribute('name') : null;
         $publicFirstNameRaw = $publicUser instanceof Model ? $publicUser->getAttribute('first_name') : null;
         $publicLastNameRaw = $publicUser instanceof Model ? $publicUser->getAttribute('last_name') : null;
-        $publicEmailRaw = $publicUser instanceof Model ? $publicUser->getAttribute('email') : null;
 
         /** @var string $publicName */
         $publicName = is_string($publicNameRaw) ? $publicNameRaw : '';
@@ -201,8 +198,6 @@ final class BuildPageSchemaAction
         $publicFirstName = is_string($publicFirstNameRaw) ? $publicFirstNameRaw : '';
         /** @var string $publicLastName */
         $publicLastName = is_string($publicLastNameRaw) ? $publicLastNameRaw : '';
-        /** @var string $publicEmail */
-        $publicEmail = is_string($publicEmailRaw) ? $publicEmailRaw : '';
 
         $name = trim($publicName);
 
@@ -232,7 +227,6 @@ final class BuildPageSchemaAction
 
         $givenName = trim($publicFirstName) !== '' ? trim($publicFirstName) : $profileFirstName;
         $familyName = trim($publicLastName) !== '' ? trim($publicLastName) : $profileLastName;
-        $email = trim($publicEmail) !== '' ? trim($publicEmail) : trim($profileEmail);
         $description = $profileBio;
         $image = $profileImage;
 
@@ -244,9 +238,7 @@ final class BuildPageSchemaAction
             $schema['familyName'] = $familyName;
         }
 
-        if ($email !== '') {
-            $schema['email'] = $email;
-        }
+        // Niente email nel JSON-LD: la pagina profilo è pubblica e i crawler la raccoglierebbero (GDPR).
 
         if ($description !== '') {
             $schema['description'] = $description;

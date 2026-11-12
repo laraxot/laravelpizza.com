@@ -35,11 +35,13 @@
             :aria-expanded="open"
             {{-- WCAG 2.5.3: il nome accessibile contiene il testo visibile (la lingua corrente) --}}
             aria-label="{{ ($locales[$currentLocale]['native'] ?? strtoupper($currentLocale)).' – '.__('pub_theme::navigation.select_language') }}"
-            class="{{ $isMobile ? 'p-2' : 'hidden sm:flex items-center gap-2 px-3 py-2' }} rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-red-50 dark:hover:bg-red-950/20 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all duration-200 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900">
+            class="{{ $isMobile ? 'flex w-full items-center gap-3 px-3 py-3' : 'hidden sm:flex items-center gap-2 px-3 py-2' }} rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-red-50 dark:hover:bg-red-950/20 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all duration-200 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900">
         
         @if($isMobile)
-            {{-- Mobile: Globe icon (Standard A11y) --}}
-            <x-filament::icon icon="heroicon-o-globe-alt" class="h-5 w-5" />
+            {{-- Mobile: nel menu a tutta larghezza c'è spazio per il nome della lingua (prima solo il globo, poco chiaro) --}}
+            <x-filament::icon icon="heroicon-o-globe-alt" class="h-5 w-5 text-red-500/70" />
+            <span>{{ $locales[$currentLocale]['native'] ?? strtoupper($currentLocale) }}</span>
+            <x-filament::icon icon="meetup-icon-arrow-down" class="ml-auto w-4 h-4 transition-transform duration-200" ::class="{ 'rotate-180': open }" />
         @else
             {{-- Desktop: Globe + Current Language Name (Autonym) --}}
             <x-filament::icon icon="heroicon-o-globe-alt" class="h-5 w-5 text-red-500/70" />
@@ -56,13 +58,12 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 translate-y-1"
-         role="listbox"
-         aria-label="{{ __('Available Languages') }}"
+         aria-label="{{ __('pub_theme::navigation.select_language') }}"
          class="{{ $isMobile ? 'left-0' : 'right-0' }} absolute mt-2 w-52 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-black/20 z-50 lang-dropdown">
         @foreach($locales as $code => $locale)
             <a href="{{ LaravelLocalization::getLocalizedURL($code, null, [], true) }}" 
-               role="option"
-               aria-selected="{{ $code === $currentLocale ? 'true' : 'false' }}"
+               hreflang="{{ $code }}" lang="{{ $code }}"
+               @if($code === $currentLocale) aria-current="true" @endif
                class="flex items-center gap-3 px-4 py-2.5 text-sm {{ 
                    $code === $currentLocale 
                        ? 'bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 font-medium' 

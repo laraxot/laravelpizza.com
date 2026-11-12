@@ -19,6 +19,9 @@ return [
         'my_events' => [
             'label' => 'Meine Veranstaltungen',
         ],
+        'all_events' => [
+            'label' => 'Alle Veranstaltungen',
+        ],
         'nearby_events' => [
             'label' => 'Veranstaltungen in der Nähe',
         ],

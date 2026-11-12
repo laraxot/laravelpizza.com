@@ -57,8 +57,9 @@
     $attendanceModeKey = $attendanceModeValue instanceof \Modules\Meetup\Enums\EventAttendanceMode
         ? $attendanceModeValue->value
         : (is_string($attendanceModeValue) ? $attendanceModeValue : '');
+    // Etichetta dall'enum (values.<case>.label, presente in tutte le lingue del modulo)
     $attendanceModeLabel = $attendanceModeKey !== ''
-        ? (string) __('meetup::event_attendance_mode.'.$attendanceModeKey.'.label')
+        ? (string) __('meetup::event_attendance_mode.values.'.$attendanceModeKey.'.label')
         : '';
 
     $registrationOpensAt = $eventModel?->registration_opens_at
@@ -67,7 +68,6 @@
 
     $organizer = $eventModel?->organizer;
     $organizerName = $organizer?->name;
-    $organizerEmail = $organizer?->email;
     $organizerProfileUrl = null;
     if ($organizer) {
         $possibleProfileRoute = '/profile/'.$organizer->getRouteKey();
@@ -245,9 +245,6 @@
                                         @else
                                             <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
                                         @endif
-                                        @if($organizerEmail)
-                                            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
-                                        @endif
                                     </div>
                                 @endif
 
@@ -380,9 +377,6 @@
                                     </a>
                                 @else
                                     <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
-                                @endif
-                                @if($organizerEmail)
-                                    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
                                 @endif
                             </div>
                         @endif

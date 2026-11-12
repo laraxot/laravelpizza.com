@@ -73,13 +73,12 @@ class UserServiceProvider extends XotBaseServiceProvider
             // Il template `reset-password` non e' seminato: SpatieEmail lo creerebbe con il testo di registrazione (DCP-285, D-05).
             app(EnsureResetPasswordMailTemplateAction::class)->execute();
             $email = new SpatieEmail($notifiable, EnsureResetPasswordMailTemplateAction::SLUG);
+            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
             $email->mergeData([
                 'token' => $token,
-                // Radice da `app.url`, non dall'header Host della richiesta (SEC-007).
-                'reset_password_url' => app(BuildPasswordResetUrlAction::class)->execute($token),
+                // Radice da `app.url`, non dall'header Host della richiesta (SEC-007); email precompilata nella pagina.
+                'reset_password_url' => app(BuildPasswordResetUrlAction::class)->execute($token, $emailAddress),
             ]);
-
-            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
 
             if ($emailAddress === null) {
                 // Un reset password senza destinatario non arriva a nessuno: va registrato per trovare il modello senza email.

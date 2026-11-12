@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 return [
     'select_language' => 'changer de langue',
+    'skip_to_content' => 'Aller au contenu principal',
+    'toggle_menu' => 'Ouvrir ou fermer le menu',
     'main' => 'Navigation principale',
     'site_title' => 'Laravel Pizza Meetups',
     'home' => 'Accueil',

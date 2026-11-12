@@ -33,7 +33,9 @@ Se non sai quale sei: se non hai mai creato un account sei un **Visitatore**. Se
 
 **Quanto costa?** Niente. Iscriversi al sito e agli eventi è gratuito.
 
-**Ho dimenticato la password.** Nella pagina "Accedi" clicca su "Password dimenticata?" e segui le istruzioni che ricevi per email.
+**Ho dimenticato la password.** Nella pagina "Accedi" clicca su "Password dimenticata?" e segui le istruzioni che ricevi per email (vedi il [capitolo 2](02-partecipante.md#hai-dimenticato-la-password)).
+
+**Ho aperto un link e vedo "Pagina non trovata".** L'indirizzo è sbagliato o la pagina non esiste più (per esempio un evento cancellato). Usa i pulsanti della pagina per tornare agli eventi o alla home.
 
 **Non vedo il pulsante "Iscriviti".** Hai fatto l'accesso? Se no, il pulsante si chiama "Accedi per iscriverti". Se l'evento è pieno o già iniziato, l'iscrizione è chiusa.
 
