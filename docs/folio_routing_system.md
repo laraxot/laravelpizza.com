@@ -202,7 +202,7 @@ new class extends Component {
 **Principio chiave (REGOLA OBBLIGATORIA):** 
 - Il file di routing **NON DEVE** contenere logica di business
 - Deve **SOLO** passare `$pageSlug` e `$data` al componente `<x-page>`
-- Il componente `<x-page>` carica il JSON (es. `events_view.json`) che contiene i blocchi
+- Il componente `<x-page>` carica il JSON (es. `events/view.json`) che contiene i blocchi
 - Il view path nel JSON (es. `components.blocks.events.detail`) gestisce il rendering
 
 **Perché?**
@@ -344,7 +344,7 @@ new class extends Component {
     public function mount(): void
     {
         // Lo slug per il JSON del dettaglio è 'container0.view' (es. events.view)
-        // Questo permette di caricare events_view.json dal CMS
+        // Questo permette di caricare events/view.json dal CMS
         $this->data = [
             'container0' => $this->container0,
             'slug0' => $this->slug0,

@@ -82,6 +82,16 @@
                         {{ __('pub_theme::profile.actions.browse_events.label') }}
                     </a>
 
+                    @if($isOwner)
+                        <a
+                            href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/profile/edit') }}"
+                            class="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                        >
+                            <x-heroicon-o-pencil-square class="h-4 w-4" aria-hidden="true" />
+                            {{ __('meetup::profile_edit.link') }}
+                        </a>
+                    @endif
+
                 </div>
             </div>
 

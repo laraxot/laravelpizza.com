@@ -19,6 +19,9 @@ return [
         'my_events' => [
             'label' => 'My events',
         ],
+        'edit_profile' => [
+            'label' => 'Edit profile',
+        ],
         'all_events' => [
             'label' => 'All events',
         ],

@@ -1,14 +1,14 @@
 {
-    "id": "9",
+    "id": "view",
     "title": {
         "it": "Profilo pubblico",
         "en": "Public profile",
-        "de": "Offentliches Profil",
+        "de": "Öffentliches Profil",
         "fr": "Profil public",
-        "es": "Perfil publico",
-        "ru": "Public profile"
+        "es": "Perfil público",
+        "ru": "Публичный профиль"
     },
-    "slug": "profile.view",
+    "slug": "view",
     "middleware": null,
     "content": null,
     "content_blocks": {
@@ -18,7 +18,7 @@
                 "slug": "profile-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.profile.detail",
-                    "title": "Profilo"
+                    "title": "Profilo pubblico"
                 }
             }
         ],
@@ -28,7 +28,7 @@
                 "slug": "profile-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.profile.detail",
-                    "title": "Profile"
+                    "title": "Public profile"
                 }
             }
         ],
@@ -38,7 +38,7 @@
                 "slug": "profile-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.profile.detail",
-                    "title": "Offentliches Profil"
+                    "title": "Öffentliches Profil"
                 }
             }
         ],
@@ -58,7 +58,7 @@
                 "slug": "profile-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.profile.detail",
-                    "title": "Perfil publico"
+                    "title": "Perfil público"
                 }
             }
         ],
@@ -68,7 +68,7 @@
                 "slug": "profile-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.profile.detail",
-                    "title": "Public profile"
+                    "title": "Публичный профиль"
                 }
             }
         ]
@@ -90,7 +90,7 @@
         "ru": []
     },
     "created_at": "2026-03-10T00:00:00.000000Z",
-    "updated_at": "2026-03-10T00:00:00.000000Z",
+    "updated_at": "2026-11-12T00:00:00.000000Z",
     "created_by": null,
     "updated_by": null
 }

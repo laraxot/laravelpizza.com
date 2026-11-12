@@ -79,6 +79,6 @@ test('event json-ld cannot break out of the script tag', function (): void {
 });
 
 test('a CMS page that requires login sends guests to the login in their language', function (): void {
-    // events-my.json dichiara middleware ["auth"]: prima non veniva applicato (rotta fallback di Folio).
-    $this->get('/it/events-my')->assertRedirect('/it/auth/login');
+    // pages/events/my.json dichiara middleware ["auth"]: prima non veniva applicato (rotta fallback di Folio).
+    $this->get('/it/events/my')->assertRedirect('/it/auth/login');
 });

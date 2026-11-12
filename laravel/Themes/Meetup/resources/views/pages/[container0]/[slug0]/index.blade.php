@@ -44,11 +44,10 @@ new class extends Component
                 ->first();
 
             if ($this->item === null) {
-                // Sotto-pagine CMS del contenitore eventi (es. events/my.json → slug "events-my").
-                $cmsSlug = collect([$this->container0.'.'.$this->slug0, $this->container0.'-'.$this->slug0])
-                    ->first(fn (string $slug): bool => Page::query()->where('slug', $slug)->exists());
-
-                abort_if($cmsSlug === null, 404);
+                // Sotto-pagina CMS del contenitore: pages/events/my.json -> slug "events.my" -> /events/my
+                // (SushiToJsons prefissa id e slug con la cartella). Docs: Modules/Cms/docs/cms-subpages-folders.md
+                $cmsSlug = $this->container0.'.'.$this->slug0;
+                abort_unless(Page::query()->where('slug', $cmsSlug)->exists(), 404);
                 $this->pageSlug = $cmsSlug;
             }
         }

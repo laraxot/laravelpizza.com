@@ -20,7 +20,7 @@
                 <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.community') }}</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
                     <li><a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.footer.events') }}</a></li>
-                    <li><a href="{{ LaravelLocalization::localizeUrl('/events-past') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::events.search.show_past') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/events/past') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::events.search.show_past') }}</a></li>
                     <li><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.about') }}</a></li>
                     <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('pub_theme::navigation.contact') }}</a></li>
                     @guest

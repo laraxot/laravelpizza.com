@@ -19,6 +19,7 @@ return [
         'my_events' => 'My Events',
         'nearby_events' => 'Nearby Events',
         'my_profile' => 'Profile',
+        'edit_profile' => 'Edit profile',
         'settings' => 'Settings',
         'logout' => 'Log out',
     ],

@@ -68,7 +68,7 @@ Dopo il rebase sul `dev` aggiornato (nuovo `composer.lock`, PHPStan 2.3.5) sono 
 - `Venue`: regola `insteadof` su un metodo rimosso da `GeoTrait` → fatal error al caricamento.
 - Login: chiavi `user::auth.login.*` diventate array → errore 500 nella vista del tema.
 - Home: i blocchi CMS mostravano `{{ trans(...) }}` come testo dopo l'irrigidimento di `HasBlocks` (solo `route()`); ora sono ammesse anche `trans()`/`__()` con chiave letterale.
-- Dopo login/registrazione: redirect a `/area-personale` (pagina che in LaravelPizza non esiste, 404); ora configurabile con `xra.post_login_path` (`/events-my`).
+- Dopo login/registrazione: redirect a `/area-personale` (pagina che in LaravelPizza non esiste, 404); ora configurabile con `xra.post_login_path` (`/events/my`).
 - Form eventi admin: etichette grezze dopo lo spostamento in `EventResource/Schemas/EventForm`.
 
 Ancora aperti: test di modulo che lasciano dati sul DB `user` di test (es. `test@example.com`), 3 test `AuthFlowRedirectsTest` e il test `route('container0.index')` di Cms che presuppongono rotte di Fixcity.

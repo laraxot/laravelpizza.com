@@ -9,7 +9,7 @@ return [
     'primary_lang' => 'it',
     'pub_theme' => 'Meetup',
     // Pagina dopo login e registrazione: l'area personale di LaravelPizza è "I miei eventi".
-    'post_login_path' => '/events-my',
+    'post_login_path' => '/events/my',
     // Casella che riceve i messaggi del modulo Contatti (vuota = MAIL_FROM_ADDRESS).
     'contact_email' => env('CONTACT_EMAIL'),
     // Niente Gravatar: la cookie policy promette zero richieste a terzi; gli avatar senza foto mostrano le iniziali.

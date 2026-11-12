@@ -215,7 +215,7 @@ new class extends Component {
 **Principio chiave (REGOLA OBBLIGATORIA):** 
 - Il file di routing **NON DEVE** contenere logica di business
 - Deve **SOLO** passare `$pageSlug` e `$data` al componente `<x-page>`
-- Il componente `<x-page>` carica il JSON (es. `events_view.json`) che contiene i blocchi
+- Il componente `<x-page>` carica il JSON (es. `events/view.json`) che contiene i blocchi
 - Il view path nel JSON (es. `components.blocks.events.detail`) gestisce il rendering
 
 **Perché?**

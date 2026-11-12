@@ -128,7 +128,7 @@ public function mount(): void
 ```
 
 **Spiegazione**:
-- `$block->data` = dati dal JSON (`events_view.json`)
+- `$block->data` = dati dal JSON (`events/view.json`)
 - `$this->data` = dati dal componente Volt (`container0`, `slug0`)
 - `array_merge($block->data, $this->data)` = unisce i dati, con precedenza a `$this->data`
 

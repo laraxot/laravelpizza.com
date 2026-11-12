@@ -20,7 +20,7 @@ bashscripts/quality/chaos-readiness-check.sh --tenant=laravelpizza --strict
 2. Anti-pattern frontoffice nel tema (`route()`, namespace non conformi).
 3. Anti-pattern Filament su label/placeholder/helperText manuali.
 4. Integrita JSON CMS tenant (parse + view mapping `pub_theme::`, `cms::`, `ui::`).
-5. Presenza pagine chiave (`home.json`, `events.json`, `events_view.json`).
+5. Presenza pagine chiave (`home.json`, `events.json`, `events/view.json`).
 
 ## Baseline attuale (2026-03-02)
 

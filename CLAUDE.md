@@ -578,7 +578,7 @@ The project uses PHPStan level 10 (maximum strictness):
 ## Quick Reference Checklist
 
 **Creating a new public page:**
-1. ✅ Create JSON in `config/local/laravelpizza/database/content/pages/{slug}.json`
+1. ✅ Create JSON in `config/local/laravelpizza/database/content/pages/{slug}.json`; a page UNDER a container goes in the container's folder: `pages/{container}/{name}.json` with `"slug": "{name}"` (→ slug `{container}.{name}`, URL `/{locale}/{container}/{name}`, e.g. `pages/profile/edit.json` → `/it/profile/edit`). Never flatten it to `{container}-{name}.json`. See `laravel/Modules/Cms/docs/cms-subpages-folders.md`
 2. ✅ Define `content_blocks` using existing components
 3. ✅ Test at `/it/{slug}` or `/en/{slug}`
 4. ❌ Do NOT create Blade file in `pages/{slug}.blade.php`

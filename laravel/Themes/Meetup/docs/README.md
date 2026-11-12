@@ -30,6 +30,8 @@ contenuti dal CMS (JSON in `laravel/config/local/laravelpizza/database/content/p
 | [front-office-audit.md](front-office-audit.md) | come controllare tutto il front office prima di un rilascio (`npm run audit:fo`) e cosa ha corretto l'audit del 12/11/2026 |
 | [build-and-copy-workflow.md](build-and-copy-workflow.md) | build del tema: `npm run build`, nessuna copia (`public_html/themes/Meetup` è un symlink) |
 | [../../../Modules/Cms/docs/page-title-and-description.md](../../../Modules/Cms/docs/page-title-and-description.md) | da dove arrivano `<title>` e meta description di ogni pagina |
+| [../../../Modules/Cms/docs/cms-subpages-folders.md](../../../Modules/Cms/docs/cms-subpages-folders.md) | **sotto-pagine CMS nelle cartelle**: `pages/profile/edit.json` → `/profile/edit`, `pages/events/my.json` → `/events/my` |
+| [profile-edit-page.md](profile-edit-page.md) | pagina "Modifica il profilo" |
 | [../../../Modules/User/docs/front-office-privacy-avatar-password-reset.md](../../../Modules/User/docs/front-office-privacy-avatar-password-reset.md) | avatar senza Gravatar, profilo pubblico, reset password |
 | [../../../../docs/deploy/runbook.md](../../../../docs/deploy/runbook.md) | messa in produzione e controlli dopo il rilascio |
 
@@ -37,7 +39,7 @@ contenuti dal CMS (JSON in `laravel/config/local/laravelpizza/database/content/p
 
 | Percorso | Contenuto |
 |---|---|
-| `resources/views/pages/` | rotte Folio: `index` (home), `[slug]` (pagine CMS), `[container0]/[slug0]` (dettaglio evento), `profile/[id]`, `auth/*` |
+| `resources/views/pages/` | rotte Folio: `index` (home), `[slug]` (pagine CMS), `[container0]/[slug0]` (dettaglio evento e sotto-pagine `events/*`), `profile/[id]` (profilo pubblico e sotto-pagine `profile/*`), `auth/*` |
 | `resources/views/components/layouts/` | `main` (HTML, `<x-metatags>`), `app` (menu + footer); entrambi accettano `title` e `description` |
 | `resources/views/components/blocks/` | blocchi usati dai JSON del CMS (hero, events, contact, legal, profile…) |
 | `resources/views/components/sections/` | header e footer |

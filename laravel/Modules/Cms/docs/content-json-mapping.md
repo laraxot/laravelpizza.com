@@ -12,6 +12,11 @@ status: draft
 
 # Mappatura tra Slug e File JSON
 
+> **Aggiornato 12/11/2026.** Il caricamento oggi legge anche le sottocartelle (`File::allFiles`, non `glob('*.json')`):
+> `pages/events/my.json` con `"slug": "my"` diventa la pagina `events.my` (URL `/events/my`). Le sotto-pagine di un
+> contenitore vanno sempre nella sua cartella: [cms-subpages-folders.md](cms-subpages-folders.md). Il resto di questo
+> documento descrive la versione precedente ed è tenuto per storia.
+
 ## Indice
 - [Introduzione](#introduzione)
 - [Architettura del Sistema](#architettura-del-sistema)

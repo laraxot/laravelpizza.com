@@ -25,7 +25,7 @@ Per la visualizzazione di eventi: **Plain Blade**!
 
 ### Event Detail (`/it/events/{slug}`)
 - **Route**: Folio catch-all `[container0]/[slug0]/index.blade.php`
-- **JSON**: `config/local/laravelpizza/database/content/pages/events_view.json`
+- **JSON**: `config/local/laravelpizza/database/content/pages/events/view.json`
 - **View**: `pub_theme::components.blocks.events.detail` (Plain Blade!)
 
 ## JSON Configuration
@@ -49,7 +49,7 @@ Per la visualizzazione di eventi: **Plain Blade**!
 }
 ```
 
-### events_view.json (Detail)
+### events/view.json (Detail)
 ```json
 {
     "slug": "events.view",
@@ -162,7 +162,7 @@ pub_theme::event.book_your_spot.label
 | File | Purpose |
 |------|---------|
 | `config/local/.../pages/events.json` | Events list page definition |
-| `config/local/.../pages/events_view.json` | Event detail page definition |
+| `config/local/.../pages/events/view.json` | Event detail page definition |
 | `Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php` | Folio catch-all route |
 | `Themes/Meetup/resources/views/components/blocks/events/list.blade.php` | Events list component (Volt se serve interactivity) |
 | `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php` | Event detail component (Plain Blade!) |

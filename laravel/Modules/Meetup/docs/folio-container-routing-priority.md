@@ -268,7 +268,7 @@ pages/
 - ❌ Model mapping/config - VIETATO
 - ✅ `$pageSlug` e `$data` passati al componente `<x-page>`
 
-Il componente `<x-page>` carica il JSON (es. `events_view.json`) che contiene i blocchi. Il view path nel JSON gestisce il rendering.
+Il componente `<x-page>` carica il JSON (es. `events/view.json`) che contiene i blocchi. Il view path nel JSON gestisce il rendering.
 
 **Perché?**
 1. **Separation of Concerns**: Il file di routing gestisce solo il routing
@@ -335,7 +335,7 @@ Il flusso corretto è:
    - Passa `$pageSlug` e `$data` a `<x-page>`
 
 2. **Componente `<x-page>`**
-   - Carica il JSON (es. `events_view.json`)
+   - Carica il JSON (es. `events/view.json`)
    - Renderizza i blocchi definiti nel JSON
 
 3. **Blocco nel JSON**
@@ -346,7 +346,7 @@ Il flusso corretto è:
 ### JSON Template
 
 ```json
-// config/local/laravelpizza/database/content/pages/events_view.json
+// config/local/laravelpizza/database/content/pages/events/view.json
 {
     "slug": "events.view",
     "content_blocks": {

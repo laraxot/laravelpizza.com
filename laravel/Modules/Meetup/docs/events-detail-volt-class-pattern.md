@@ -142,7 +142,7 @@ URL:         /it/events/laravel-beginners-pizza-night
 Folio page:  pages/[container0]/[slug0]/index.blade.php
               └─ $slug0 = "laravel-beginners-pizza-night" (from Folio binding)
 
-JSON config: events_view.json
+JSON config: events/view.json
               └─ content_blocks[*].data.slug0 is NOT set (absent)
 
 CMS include: @include('pub_theme::components.blocks.events.detail', $blockData)

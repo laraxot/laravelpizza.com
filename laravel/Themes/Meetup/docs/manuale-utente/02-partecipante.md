@@ -91,10 +91,11 @@ Clicca sul tuo **nome** in alto a destra: si apre il menu personale.
 ![Il menu utente aperto](img/p10-menu-utente.jpg)
 
 1. **I miei eventi**: gli eventi a cui sei iscritto.
-2. **Profilo**: i tuoi dati.
-3. **Esci**: chiude la sessione. Fallo sempre se usi un computer condiviso.
+2. **Profilo**: il tuo profilo pubblico, come lo vedono gli altri.
+3. **Modifica il profilo**: cambia nome, biografia, foto, lingua e password (punto 2.6).
+4. **Esci**: chiude la sessione. Fallo sempre se usi un computer condiviso.
 
-C'è anche **Tutti gli eventi**, che apre l'elenco completo dei meetup. Al posto della foto vedi un cerchio con le tue iniziali.
+C'è anche **Tutti gli eventi**, che apre l'elenco completo dei meetup. Finché non carichi una foto vedi un cerchio con le tue iniziali.
 
 ### I miei eventi
 
@@ -108,7 +109,22 @@ Qui trovi in ordine di data tutti gli eventi a cui sei iscritto. Un'etichetta co
 
 Il profilo è pubblico: gli altri vedono il tuo nome, la biografia e da quando sei iscritto. **La tua email la vedi solo tu**: agli altri non viene mostrata, nemmeno se sei tu a organizzare un evento.
 
-## 2.6 Quando non puoi iscriverti
+## 2.6 Modificare il profilo
+
+Dal menu personale clicca **Modifica il profilo** (oppure il pulsante con lo stesso nome sul tuo profilo). La pagina ha tre parti, ognuna con il suo pulsante: salvi solo quella che hai cambiato.
+
+![I tuoi dati](img/p15-modifica-profilo.jpg)
+
+1. **I tuoi dati**: nome, cognome, una breve **biografia** (al massimo 500 caratteri, la vedono tutti) e la **lingua preferita**, cioè la lingua delle email che ti mandiamo. L'email non si può cambiare da qui: se ti serve, scrivici dalla pagina Contatti. Quando hai finito clicca **Salva i dati**: compare "Dati salvati." e il tuo nome in alto si aggiorna subito.
+
+![Foto e password](img/p16-foto-password.jpg)
+
+1. **Foto**: scegli un'immagine dal computer o dal telefono (JPG, PNG o WebP, al massimo 2 MB)...
+2. ...e clicca **Carica la foto**. Se ci ripensi, **Togli la foto** torna alle iniziali.
+3. **Password**: scrivi prima la password che usi adesso, poi due volte quella nuova (almeno 8 caratteri)...
+4. ...e clicca **Cambia la password**. Per sicurezza, se avevi fatto l'accesso anche su altri dispositivi, lì dovrai rientrare con la nuova password.
+
+## 2.7 Quando non puoi iscriverti
 
 Il pulsante di iscrizione non c'è, o è grigio, in questi casi:
 

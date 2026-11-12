@@ -19,6 +19,7 @@ return [
         'my_events' => 'Mes événements',
         'nearby_events' => 'Événements à proximité',
         'my_profile' => 'Profil',
+        'edit_profile' => 'Modifier le profil',
         'settings' => 'Paramètres',
         'logout' => 'Déconnexion',
     ],

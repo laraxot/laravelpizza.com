@@ -133,7 +133,7 @@ Use for about/company pages.
 |---|---|---|---|
 | `home` | `home.json` | `WebPage` | General landing page. |
 | `events` | `events.json` | `CollectionPage` | List of events. |
-| `events.view` (event detail) | `events_view.json` | `ItemPage` | Single event. Combine with `Event` as `mainEntity`. |
+| `events.view` (event detail) | `events/view.json` | `ItemPage` | Single event. Combine with `Event` as `mainEntity`. |
 | `about` | `about.json` | `AboutPage` | Community about page. |
 | `contact` | `contact.json` | `ContactPage` | Contact form page. |
 | `privacy` | `privacy.json` | `WebPage` | Legal page; no more specific type exists. |

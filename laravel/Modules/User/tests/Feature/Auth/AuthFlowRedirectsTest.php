@@ -47,8 +47,8 @@ test('the post-login url is the localized personal area', function (): void {
 });
 
 test('a tenant can choose its own post-login page', function (): void {
-    config(['xra.post_login_path' => 'events-my']);
-    expect(app(GetPostLoginUrlAction::class)->execute())->toBe(url('/it/events-my'));
+    config(['xra.post_login_path' => 'events/my']);
+    expect(app(GetPostLoginUrlAction::class)->execute())->toBe(url('/it/events/my'));
 });
 
 test('the old dashboard url answers 404 and the personal area redirects', function (): void {

@@ -98,12 +98,15 @@ trait BaseUserMutators
             return;
         }
 
-        if (\strlen($value) < 32) {
-            $this->attributes['password'] = Hash::make($value);
+        // Un valore già cifrato (bcrypt/argon, es. da Hash::make o da un import) resta com'è; tutto il resto viene cifrato.
+        // Prima il controllo era sulla lunghezza (< 32 caratteri): una password scelta di 32 o più caratteri
+        // finiva nel database IN CHIARO.
+        if (Hash::info($value)['algo'] !== null) {
+            $this->attributes['password'] = $value;
 
             return;
         }
 
-        $this->attributes['password'] = $value;
+        $this->attributes['password'] = Hash::make($value);
     }
 }
