@@ -86,9 +86,9 @@ test('the events pages render with filters, and the past page links back', funct
         ->assertSee('name="city"', false)
         ->assertSee("Meetup filtrato $tag")
         ->assertDontSee("Meetup altrove $tag")
-        ->assertSee('/it/events-past', false);
+        ->assertSee('/it/events/past', false);
 
-    $this->get('/en/events-past')->assertOk()->assertSee('/en/events', false);
+    $this->get('/en/events/past')->assertOk()->assertSee('/en/events', false);
 });
 
 test('a filter with no matches explains it and offers to clear the filters', function (): void {

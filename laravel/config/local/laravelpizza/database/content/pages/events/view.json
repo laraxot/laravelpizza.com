@@ -1,0 +1,96 @@
+{
+    "id": "view",
+    "title": {
+        "it": "Dettaglio evento - Laravel Pizza Meetups",
+        "en": "Event details - Laravel Pizza Meetups",
+        "de": "Event-Details - Laravel Pizza Meetups",
+        "fr": "Détails de l'événement - Laravel Pizza Meetups",
+        "es": "Detalles del evento - Laravel Pizza Meetups",
+        "ru": "Подробности события - Laravel Pizza Meetups"
+    },
+    "slug": "view",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Dettaglio evento"
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Event details"
+                }
+            }
+        ],
+        "de": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Event-Details"
+                }
+            }
+        ],
+        "fr": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Détails de l'événement"
+                }
+            }
+        ],
+        "es": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Detalles del evento"
+                }
+            }
+        ],
+        "ru": [
+            {
+                "type": "events",
+                "slug": "event-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.detail",
+                    "title": "Подробности события"
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2026-11-12T00:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

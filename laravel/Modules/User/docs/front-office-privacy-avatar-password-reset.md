@@ -40,3 +40,19 @@ La pagina `/{lingua}/profile/{id}` del tema mostra nome, biografia, data di iscr
 
 Test: `Modules/Meetup/tests/Feature/FrontOfficePrivacyAndSeoTest.php` (flusso completo, lingua del link,
 messaggio uguale per email sconosciute, profilo).
+
+## Password lunghe salvate in chiaro (corretto il 12/11/2026)
+
+`BaseUserMutators::setPasswordAttribute()` decideva se cifrare guardando la **lunghezza** (< 32 caratteri = cifra,
+altrimenti salva com'è, pensando a un hash). Una password scelta di 32 o più caratteri finiva nel database in chiaro.
+Ora il controllo è `Hash::info($value)['algo'] !== null`: si salva così com'è solo un hash bcrypt/argon vero.
+Test: `Modules/Meetup/tests/Feature/ProfileEditPageTest.php` ("stored hashed, never in clear").
+Chi ha un database esistente può trovare le righe interessate con
+`SELECT id FROM users WHERE password NOT LIKE '$2y$%' AND password NOT LIKE '$argon%';` e chiedere a quegli utenti un reset.
+
+## Modifica del profilo dal sito
+
+La pagina `/{lingua}/profile/edit` (tema Meetup, `pages/profile/edit.json`) usa le Actions di
+`Modules\Meetup\Actions\Profile`: dati (nome, cognome, biografia, lingua), foto (collezione media `avatar`, una sola
+per volta) e cambio password (verifica della password attuale, chiusura delle altre sessioni). Il menu utente
+(`UserDropdown`) si ridisegna con l'evento Livewire `profile-updated`.

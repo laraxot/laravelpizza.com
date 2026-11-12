@@ -17,6 +17,7 @@ use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
+use Modules\Cms\Models\Page;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Seo\Datas\SocialShareData;
@@ -176,7 +177,14 @@ class Event extends BaseModel
         $slug = $base;
         $suffix = 2;
 
-        while (self::query()->where('slug', $slug)->exists()) {
+        // Le sotto-pagine CMS di /events (pages/events/my.json -> /events/my, past, view) occupano lo stesso spazio di URL
+        // degli eventi: un evento con slug "my" renderebbe irraggiungibile "I miei eventi".
+        $reserved = Page::query()->where('slug', 'like', 'events.%')->pluck('slug')
+            ->filter(static fn (mixed $pageSlug): bool => \is_string($pageSlug))
+            ->map(static fn (string $pageSlug): string => substr($pageSlug, strlen('events.')))
+            ->all();
+
+        while (in_array($slug, $reserved, true) || self::query()->where('slug', $slug)->exists()) {
             $slug = $base.'-'.$suffix;
             $suffix++;
         }

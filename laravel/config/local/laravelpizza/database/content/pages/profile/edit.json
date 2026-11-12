@@ -1,0 +1,104 @@
+{
+    "id": "edit",
+    "title": {
+        "it": "Modifica il profilo - Laravel Pizza Meetups",
+        "en": "Edit profile - Laravel Pizza Meetups",
+        "de": "Profil bearbeiten - Laravel Pizza Meetups",
+        "fr": "Modifier le profil - Laravel Pizza Meetups",
+        "es": "Editar perfil - Laravel Pizza Meetups",
+        "ru": "Редактировать профиль - Laravel Pizza Meetups"
+    },
+    "slug": "edit",
+    "middleware": [
+        "auth"
+    ],
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Il tuo profilo",
+                    "description": "Nome, foto, biografia, lingua e password: decidi tu cosa mostrare agli altri partecipanti."
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Your profile",
+                    "description": "Name, photo, bio, language and password: you decide what other attendees see."
+                }
+            }
+        ],
+        "de": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Dein Profil",
+                    "description": "Name, Foto, Bio, Sprache und Passwort: du entscheidest, was andere Teilnehmende sehen."
+                }
+            }
+        ],
+        "fr": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Votre profil",
+                    "description": "Nom, photo, bio, langue et mot de passe : vous décidez ce que voient les autres participants."
+                }
+            }
+        ],
+        "es": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Tu perfil",
+                    "description": "Nombre, foto, biografía, idioma y contraseña: tú decides qué ven los demás asistentes."
+                }
+            }
+        ],
+        "ru": [
+            {
+                "type": "profile",
+                "slug": "profile-edit",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.edit",
+                    "title": "Ваш профиль",
+                    "description": "Имя, фото, о себе, язык и пароль: вы решаете, что видят другие участники."
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "created_at": "2026-11-12T00:00:00.000000Z",
+    "updated_at": "2026-11-12T00:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

@@ -140,7 +140,7 @@ test('forgot password works end to end: the email link resets the password and s
         ->set('passwordConfirmation', 'NuovaPassword!2026')
         ->call('resetPassword')
         ->assertHasNoErrors()
-        ->assertRedirectContains('/events-my');
+        ->assertRedirectContains('/events/my');
 
     expect(Hash::check('NuovaPassword!2026', (string) $user->fresh()?->password))->toBeTrue()
         ->and(auth()->id())->toBe($user->getKey());

@@ -38,7 +38,7 @@ declare(strict_types=1);
 
         <div class="py-1" role="none">
             {{-- "Dashboard" rimossa: la dashboard pubblica non esiste (pagina vuota, ora 404). L'area personale è "I miei eventi". --}}
-            <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+            <a href="{{ LaravelLocalization::localizeUrl('/events/my') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-calendar class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
                 <span>{{ __('user::common.nav.my_events.label') }}</span>
             </a>
@@ -49,6 +49,10 @@ declare(strict_types=1);
             <a href="{{ LaravelLocalization::localizeUrl('/profile/'.auth()->id()) }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
                 <x-heroicon-o-user class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
                 <span>{{ __('user::common.nav.profile.label') }}</span>
+            </a>
+            <a href="{{ LaravelLocalization::localizeUrl('/profile/edit') }}" class="flex items-center space-x-3 px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-white transition-colors group" role="menuitem">
+                <x-heroicon-o-pencil-square class="h-5 w-5 text-slate-500 group-hover:text-red-500" />
+                <span>{{ __('user::common.nav.edit_profile.label') }}</span>
             </a>
         </div>
 

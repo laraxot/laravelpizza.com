@@ -121,7 +121,7 @@ Se `page.blade.php` non riceve `container0`/`slug0` (es. da `[slug].blade.php`),
 | wrap_in sbagliato | events list vuota | wrap_in: "events" in JSON, list cerca $data['events'] |
 | toBlockArray senza url | Link senza locale | Aggiungere url in Event::toBlockArray() |
 | slug0 non propagato | Detail 404 | Page deve ricevere :data con container0, slug0 |
-| events.view mancante | /events/slug 500 | Creare events_view.json con slug events.view |
+| events.view mancante | /events/slug 500 | Creare events/view.json con slug events.view |
 
 ## 8. File canonici (ordine debug)
 

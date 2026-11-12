@@ -56,8 +56,8 @@
     $title = $title ?? ($data['title'] ?? null);
     $description = $description ?? ($data['description'] ?? null);
     $eventsJson = Js::from(array_values($eventsData));
-    $baseUrl = LaravelLocalization::localizeUrl('/'.($timing === SearchPublicEventsAction::PAST ? 'events-past' : 'events'));
-    $otherUrl = LaravelLocalization::localizeUrl('/'.($timing === SearchPublicEventsAction::PAST ? 'events' : 'events-past'));
+    $baseUrl = LaravelLocalization::localizeUrl('/'.($timing === SearchPublicEventsAction::PAST ? 'events/past' : 'events'));
+    $otherUrl = LaravelLocalization::localizeUrl('/'.($timing === SearchPublicEventsAction::PAST ? 'events' : 'events/past'));
     $showTimingFilter = $source === null && (bool) ($data['show_filters'] ?? true);
 @endphp
 

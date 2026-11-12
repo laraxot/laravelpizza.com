@@ -19,6 +19,7 @@ return [
         'my_events' => 'Мои события',
         'nearby_events' => 'События рядом',
         'my_profile' => 'Профиль',
+        'edit_profile' => 'Редактировать профиль',
         'settings' => 'Настройки',
         'logout' => 'Выйти',
     ],

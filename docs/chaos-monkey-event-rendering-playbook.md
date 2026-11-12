@@ -23,7 +23,7 @@ This playbook covers failures in events listing and event detail rendering acros
 1. Verify `events.json` block has valid `data.view` and `data.query` model.
 2. Verify `ResolveBlockQueryAction` returns items for query.
 3. Verify list template binds `:href=\"event.url\"`.
-4. Verify `events_view.json` exists and references detail block view.
+4. Verify `events/view.json` exists and references detail block view.
 5. Verify detail block receives slug (`slug0`) from route data.
 
 ## Common Breakages and Fixes

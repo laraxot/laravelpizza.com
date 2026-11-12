@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Feature;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
@@ -30,33 +28,13 @@ test('localized public profile page shows profile bio when related user profile 
         'email' => 'ada-lovelace-'.uniqid().'@example.com',
     ]);
 
-    DB::connection('user')->table('profiles')->insert([
-        // profiles.id del database utenti e' auto-increment (migrazione 2026_10_16): l'id lo assegna MySQL.
-        'uuid' => (string) Str::uuid(),
-        'user_id' => $user->id,
-        'type' => null,
+    // Il profilo dell'app è Modules\Meetup\Models\Profile (xra.main_module = Meetup), sul database dati.
+    $user->profile()->create([
         'first_name' => 'Ada',
         'last_name' => 'Lovelace',
-        'user_name' => 'ada-lovelace',
         'email' => $user->email,
-        'phone' => null,
-        'address' => null,
-        'birth_date' => null,
-        'gender' => null,
         'bio' => 'Speaker and community organizer.',
-        'avatar' => null,
-        'timezone' => null,
         'locale' => 'en',
-        'preferences' => null,
-        'status' => 'active',
-        'is_active' => true,
-        'extra' => null,
-        'created_at' => now(),
-        'updated_at' => now(),
-        'deleted_at' => null,
-        'created_by' => null,
-        'updated_by' => null,
-        'deleted_by' => null,
     ]);
 
     $this->get('/en/profile/'.$user->getRouteKey())

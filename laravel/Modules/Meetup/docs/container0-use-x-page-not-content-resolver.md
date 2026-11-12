@@ -105,7 +105,7 @@ Con `content-resolver`:
    ↓
 5. <x-page slug="events.view" :data="$this->data" />
    ↓
-6. Page Component carica: events_view.json (slug: events.view)
+6. Page Component carica: events/view.json (slug: events.view)
    ↓
 7. Content Blocks: Il JSON definisce quale componente renderizzare
    ↓

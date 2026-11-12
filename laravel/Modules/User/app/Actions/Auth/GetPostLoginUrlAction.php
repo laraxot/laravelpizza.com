@@ -15,7 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * `[container0]` is mounted before the User module. `/{lang}/area-personale` is resolved by the theme
  * (`ResolveContainer0IndexAction`): it sends a signed-in user to the case list.
  *
- * Each tenant can choose its own landing page with `xra.post_login_path` (e.g. LaravelPizza uses `/events-my`,
+ * Each tenant can choose its own landing page with `xra.post_login_path` (e.g. LaravelPizza uses `/events/my`,
  * because it has no `area-personale` page); without it the default stays `/area-personale`.
  */
 final class GetPostLoginUrlAction

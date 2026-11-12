@@ -33,12 +33,15 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
+        // Stessa configurazione della produzione (config/local/laravelpizza/xra.php): main_module "Meetup", quindi
+        // il profilo è Modules\Meetup\Models\Profile (database dati). Con "User" i test usavano un'altra tabella profiles
+        // (database utenti, con colonne diverse) e non vedevano i bug del profilo reale.
         config(['xra.pub_theme' => 'Meetup']);
-        config(['xra.main_module' => 'User']);
+        config(['xra.main_module' => 'Meetup']);
 
         XotData::make()->update([
             'pub_theme' => 'Meetup',
-            'main_module' => 'User',
+            'main_module' => 'Meetup',
         ]);
 
         // NOTE: Migrations are NOT run in setUp()

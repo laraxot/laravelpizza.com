@@ -8,7 +8,7 @@ Il componente `events/detail.blade.php` può ricevere `$slug0` tramite i content
 
 ### 1. JSON Content Block + Slug0 dalla Route
 
-**File**: `config/local/laravelpizza/database/content/pages/events_view.json`
+**File**: `config/local/laravelpizza/database/content/pages/events/view.json`
 
 ```json
 {
@@ -88,7 +88,7 @@ Il componente renderizza usando i dati del modello Event caricato:
    ↓
 6. JSON Lookup: Page::firstWhere('slug', 'events.view')
    ↓
-7. JSON File: events_view.json
+7. JSON File: events/view.json
    ↓
 8. Page Component unisce: array_merge($data, $block->data)
    ↓

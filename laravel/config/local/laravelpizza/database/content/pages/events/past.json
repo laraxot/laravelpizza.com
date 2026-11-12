@@ -1,0 +1,124 @@
+{
+    "id": "past",
+    "title": {
+        "it": "Eventi passati - Laravel Pizza Meetups",
+        "en": "Past events - Laravel Pizza Meetups",
+        "de": "Vergangene Events - Laravel Pizza Meetups",
+        "fr": "Événements passés - Laravel Pizza Meetups",
+        "es": "Eventos pasados - Laravel Pizza Meetups",
+        "ru": "Прошедшие события - Laravel Pizza Meetups"
+    },
+    "slug": "past",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Eventi passati",
+                    "description": "I meetup che si sono già svolti: argomenti, città e date.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Past events",
+                    "description": "Meetups that have already taken place: topics, cities and dates.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "de": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Vergangene Events",
+                    "description": "Meetups, die bereits stattgefunden haben: Themen, Städte und Termine.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "fr": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Événements passés",
+                    "description": "Les meetups qui ont déjà eu lieu : sujets, villes et dates.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "es": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Eventos pasados",
+                    "description": "Los meetups que ya se han celebrado: temas, ciudades y fechas.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ],
+        "ru": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Прошедшие события",
+                    "description": "Митапы, которые уже прошли: темы, города и даты.",
+                    "events_source": "public",
+                    "timing": "past",
+                    "show_search": true,
+                    "limit": 50
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "created_at": "2026-11-10T22:00:00.000000Z",
+    "updated_at": "2026-11-12T00:00:00.000000Z"
+}

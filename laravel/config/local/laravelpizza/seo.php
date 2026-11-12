@@ -17,6 +17,9 @@ return [
         ['alias' => 'events-near-me', 'target' => 'events'],
         // Il blog non esiste: /articles era una copia vuota dell'elenco eventi.
         ['alias' => 'articles', 'target' => 'events'],
+        // Vecchi indirizzi delle sotto-pagine (file piatti events-my.json/events-past.json, ora pages/events/my.json e past.json)
+        ['alias' => 'events-my', 'target' => 'events/my'],
+        ['alias' => 'events-past', 'target' => 'events/past'],
         // Indirizzi "a orecchio": le pagine di accesso stanno sotto /auth.
         ['alias' => 'login', 'target' => 'auth/login'],
         ['alias' => 'register', 'target' => 'auth/register'],

@@ -126,7 +126,7 @@ test('my events lists only the published events the user registered for', functi
     expect($ids)->toBe([$mine->getKey()]);
 
     $this->actingAs($user)
-        ->get('/it/events-my')
+        ->get('/it/events/my')
         ->assertOk()
         ->assertSee($mine->title)
         ->assertDontSee($other->title);

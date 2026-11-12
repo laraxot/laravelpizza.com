@@ -12,7 +12,7 @@
 | FR-3 Dashboard | ✅ | `RecentEventsWidget`: eventi futuri con iscritti/posti e soglie di colore |
 | FR-4 Lista iscritti | ✅ | `RegistrationsRelationManager`: elenco, annullamento, CSV (`ExportEventRegistrationsAction`, protetto da formula injection) |
 | FR-5 Eventi futuri | ✅ | `SearchPublicEventsAction` — `PublicEventsListTest` |
-| FR-6 Eventi passati | ✅ | pagina `events-past` — `PublicEventsListTest` |
+| FR-6 Eventi passati | ✅ | pagina `events/past` (`pages/events/past.json`) — `PublicEventsListTest` |
 | FR-7 Dettaglio | ✅ | invariato, più "Aggiungi al calendario" (.ics) |
 | FR-8 Filtro città/data | ✅ | query string `city`, `from`, `until`, messaggio senza risultati — `PublicEventsListTest` |
 | FR-9…11 Iscrizione | ✅ / 🟢 | come ciclo 1; conferma con allegato .ics, promemoria il giorno prima (`SendEventRemindersAction`) — `CalendarAndRemindersTest`. In produzione servono worker e mailer reale (runbook) |

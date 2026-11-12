@@ -128,7 +128,7 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 ## 9. Controllo dopo ogni rilascio (5 minuti)
 
 - [ ] `/it` e `/en` si aprono; menu e footer senza link rotti
-- [ ] `/it/events` mostra i prossimi eventi, il filtro per città funziona, `/it/events-past` si apre
+- [ ] `/it/events` mostra i prossimi eventi, il filtro per città funziona, `/it/events/past` si apre
 - [ ] registrazione di un account di prova, iscrizione a un evento, arriva l'email con il file `.ics`
 - [ ] `/it/contact`: il messaggio arriva a `CONTACT_EMAIL`
 - [ ] `/it/auth/password/reset` con l'email dell'account di prova: arriva il link, la nuova password funziona

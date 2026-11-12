@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\On;
 use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 use function Safe\preg_split;
@@ -15,6 +16,12 @@ class UserDropdown extends XotBaseSchemaWidget
      * The view for this widget.
      */
     protected string $view = 'user::filament.widgets.user-dropdown';
+
+    /**
+     * Il nome e la foto cambiano dalla pagina "Modifica il profilo" (evento Livewire `profile-updated`): ridisegna il menu.
+     */
+    #[On('profile-updated')]
+    public function refreshUser(): void {}
 
     /**
      * Handle user logout.
