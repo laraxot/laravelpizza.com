@@ -1,5 +1,2 @@
-@extends('errors::minimal')
-
-@section('title', __('Page Expired'))
-@section('code', '419')
-@section('message', __('Page Expired'))
+{{-- Pagina 419 del tema pubblico (Themes/<Tema>/resources/views/errors/page.blade.php); senza tema, la pagina autonoma. --}}
+@include(view()->exists('pub_theme::errors.page') ? 'pub_theme::errors.page' : 'errors.fallback', ['code' => 419])

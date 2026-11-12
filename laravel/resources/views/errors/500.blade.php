@@ -1,5 +1,2 @@
-@extends('errors::minimal')
-
-@section('title', __('Server Error'))
-@section('code', '500')
-@section('message', __('Server Error'))
+{{-- Pagina 500 autonoma: niente database né sessione, funziona anche quando il guasto è lì. --}}
+@include('errors.fallback', ['code' => 500])

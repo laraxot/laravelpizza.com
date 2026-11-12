@@ -131,10 +131,12 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] `/it/events` mostra i prossimi eventi, il filtro per città funziona, `/it/events-past` si apre
 - [ ] registrazione di un account di prova, iscrizione a un evento, arriva l'email con il file `.ics`
 - [ ] `/it/contact`: il messaggio arriva a `CONTACT_EMAIL`
+- [ ] `/it/auth/password/reset` con l'email dell'account di prova: arriva il link, la nuova password funziona
 - [ ] `/meetup/admin`: elenco eventi, modifica di un evento, scheda Iscritti con "Scarica CSV"
 - [ ] `php artisan health:list` tutto OK; `php artisan schedule:list` mostra i tre comandi
 - [ ] DevTools → Rete: nessuna richiesta a domini terzi al primo caricamento (niente Google Fonts)
 - [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
+- [ ] Audit del front office (ospite e loggato, desktop e mobile): `BASE_URL=https://laravelpizza.com USER_EMAIL=... USER_PASSWORD=... npm run audit:fo` → "Nessun problema trovato" (`laravel/Themes/Meetup/docs/front-office-audit.md`)
 
 ## 10. Test e CI
 

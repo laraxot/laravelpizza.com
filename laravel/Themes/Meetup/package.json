@@ -11,7 +11,8 @@
         "copy": "echo 'Non serve: public_html/themes/Meetup e un symlink a Themes/Meetup/public'",
         "screenshots": "node scripts/capture-screenshots.mjs",
         "screenshots:footer": "node scripts/capture-footer-screenshots.mjs",
-        "a11y": "node scripts/a11y-audit.mjs"
+        "a11y": "node scripts/a11y-audit.mjs",
+        "audit:fo": "node scripts/front-office-audit.cjs"
     },
     "devDependencies": {
         "@fontsource-variable/inter": "^5.3.0",

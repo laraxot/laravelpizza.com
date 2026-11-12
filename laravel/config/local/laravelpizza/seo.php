@@ -17,5 +17,8 @@ return [
         ['alias' => 'events-near-me', 'target' => 'events'],
         // Il blog non esiste: /articles era una copia vuota dell'elenco eventi.
         ['alias' => 'articles', 'target' => 'events'],
+        // Indirizzi "a orecchio": le pagine di accesso stanno sotto /auth.
+        ['alias' => 'login', 'target' => 'auth/login'],
+        ['alias' => 'register', 'target' => 'auth/register'],
     ],
 ];

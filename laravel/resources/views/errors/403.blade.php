@@ -1,5 +1,2 @@
-@extends('errors::minimal')
-
-@section('title', __('Forbidden'))
-@section('code', '403')
-@section('message', __($exception->getMessage() ?: 'Forbidden'))
+{{-- Pagina 403 del tema pubblico (Themes/<Tema>/resources/views/errors/page.blade.php); senza tema, la pagina autonoma. --}}
+@include(view()->exists('pub_theme::errors.page') ? 'pub_theme::errors.page' : 'errors.fallback', ['code' => 403])

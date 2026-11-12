@@ -1,5 +1,2 @@
-@extends('errors::minimal')
-
-@section('title', __('Not Found'))
-@section('code', '404')
-@section('message', __('Not Found'))
+{{-- Pagina 404 del tema pubblico (Themes/<Tema>/resources/views/errors/page.blade.php); senza tema, la pagina autonoma. --}}
+@include(view()->exists('pub_theme::errors.page') ? 'pub_theme::errors.page' : 'errors.fallback', ['code' => 404])

@@ -155,6 +155,12 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
             return '';
         }
 
+        // Gravatar e' una richiesta a un sito terzo che riceve l'IP del visitatore: un progetto puo' spegnerlo
+        // con `xra.gravatar = false` (le viste mostrano allora le iniziali).
+        if (config('xra.gravatar', true) === false) {
+            return '';
+        }
+
         $hash = hash('sha256', $email);
 
         // d=mp: silhouette neutra quando l'email non ha un Gravatar (mai il logo Gravatar).

@@ -94,3 +94,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+audit-shots/

@@ -62,7 +62,7 @@
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     x-data="{ mobileMenuOpen: false }"
                     class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" 
-                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('Toggle mobile menu') }}">
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('pub_theme::navigation.toggle_menu') }}">
                 <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" aria-hidden="true" />
             </button>
         </div>
@@ -93,10 +93,17 @@
                     <div class="px-4 py-2 space-y-1">
                         <div class="flex items-center space-x-3 px-2 py-4 border-b border-slate-700/30 mb-4">
                             @php
-                                $profile = Auth::user()->profile;
-                                $avatarUrl = $profile?->getAvatarUrl() ?? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
+                                $authUser = Auth::user();
+                                // Foto del profilo se caricata; altrimenti le iniziali (niente Gravatar: nessuna richiesta a terzi).
+                                $avatarUrl = (string) ($authUser?->profile?->getAvatarUrl() ?? '');
+                                $initials = \Illuminate\Support\Str::of((string) $authUser?->name)->squish()->explode(' ')
+                                    ->filter()->take(2)->map(fn (string $word): string => mb_strtoupper(mb_substr($word, 0, 1)))->implode('');
                             @endphp
-                            <img src="{{ $avatarUrl }}" class="h-12 w-12 rounded-full border-2 border-slate-700" alt="{{ Auth::user()->name }}">
+                            @if($avatarUrl !== '')
+                                <img src="{{ $avatarUrl }}" class="h-12 w-12 rounded-full border-2 border-slate-700 object-cover" alt="">
+                            @else
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-slate-700 bg-gradient-to-br from-red-500 to-orange-500 font-bold text-white" aria-hidden="true">{{ $initials !== '' ? $initials : '?' }}</span>
+                            @endif
                             <div>
                                 <p class="text-white font-bold">{{ Auth::user()->name }}</p>
                                 <p class="text-xs text-slate-400 font-medium">{{ Auth::user()->email }}</p>
@@ -112,10 +119,9 @@
                             <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>
                         </a>
                         
-                        {{-- In Folio projects, we redirect to localized paths, not named routes --}}
-                        <form method="POST" action="/{{ app()->getLocale() }}" class="pt-4 mt-4 border-t border-slate-700/30">
+                        {{-- Logout: POST alla rotta "logout" del modulo User (prima puntava alla home e non disconnetteva) --}}
+                        <form method="POST" action="{{ route('logout') }}" class="pt-4 mt-4 border-t border-slate-700/30">
                             @csrf
-                            <input type="hidden" name="_method" value="POST"> {{-- logout often needs a form --}}
                             <button type="submit" class="flex w-full items-center space-x-3 text-red-400 hover:text-red-300 px-4 py-3 hover:bg-red-500/10 rounded-xl transition-colors font-bold block">
                                 <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5" />
                                 <span>{{ __('pub_theme::navigation.user_menu.logout') }}</span>

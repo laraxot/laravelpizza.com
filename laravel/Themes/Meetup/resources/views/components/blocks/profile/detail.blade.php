@@ -23,6 +23,8 @@
     }
 
     $profileModel = $userModel?->profile;
+    // Il profilo è pubblico, ma email e indirizzo sono dati personali: li vede solo il titolare (GDPR).
+    $isOwner = $userModel !== null && auth()->id() === $userModel->getKey();
     $displayName = trim((string) ($userModel?->name ?? ''));
     if ($displayName === '') {
         $displayName = trim((string) (($userModel?->first_name ?? $profileModel?->first_name ?? '').' '.($userModel?->last_name ?? $profileModel?->last_name ?? '')));
@@ -32,12 +34,12 @@
     }
 
     $bio = trim((string) ($profileModel?->bio ?? ''));
-    $email = trim((string) ($userModel?->email ?? $profileModel?->email ?? ''));
+    $email = $isOwner ? trim((string) ($userModel?->email ?? $profileModel?->email ?? '')) : '';
     $locale = trim((string) ($profileModel?->locale ?? $userModel?->lang ?? app()->getLocale()));
     $memberSince = $userModel?->created_at?->translatedFormat('F Y');
     $avatarUrl = $profileModel?->getAvatarUrl() ?? ($userModel?->profile_photo_url ?? null);
     $eventsUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/events');
-    $location = trim((string) ($profileModel?->address ?? ''));
+    $location = $isOwner ? trim((string) ($profileModel?->address ?? '')) : '';
 @endphp
 
 <section class="relative overflow-hidden bg-slate-950 text-white">
@@ -53,7 +55,7 @@
                 <div class="flex items-start gap-5">
                     <div class="h-24 w-24 shrink-0 overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-2xl shadow-black/20">
                         @if(is_string($avatarUrl) && $avatarUrl !== '')
-                            <img src="{{ $avatarUrl }}" alt="{{ $displayName }}" class="h-full w-full object-cover">
+                            <img src="{{ $avatarUrl }}" alt="" class="h-full w-full object-cover">
                         @else
                             <div class="flex h-full w-full items-center justify-center text-3xl font-bold text-white/80">
                                 {{ \Illuminate\Support\Str::of($displayName)->trim()->substr(0, 1)->upper() }}
@@ -75,19 +77,11 @@
                 <div class="flex flex-wrap gap-3">
                     <a
                         href="{{ $eventsUrl }}"
-                        class="inline-flex items-center rounded-2xl bg-rose-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-rose-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
+                        class="inline-flex items-center rounded-2xl bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
                     >
                         {{ __('pub_theme::profile.actions.browse_events.label') }}
                     </a>
 
-                    @if($email !== '')
-                        <a
-                            href="mailto:{{ $email }}"
-                            class="inline-flex items-center rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
-                        >
-                            {{ __('pub_theme::profile.actions.contact.label') }}
-                        </a>
-                    @endif
                 </div>
             </div>
 

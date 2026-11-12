@@ -1,18 +1,26 @@
 <?php
 
-use Illuminate\Support\Facades\Password;
-use function Laravel\Folio\name;
-use Livewire\Volt\Component;
-use Livewire\Attributes\Validate;
+declare(strict_types=1);
 
+use Illuminate\Support\Facades\Password;
+use Livewire\Attributes\Validate;
+use Livewire\Volt\Component;
+
+use function Laravel\Folio\{middleware, name};
+
+/*
+ * "Password dimenticata": chiede l'email e manda il link per sceglierne una nuova.
+ * Il messaggio è lo stesso che l'email esista o no (nessuna enumerazione degli account).
+ */
+middleware(['guest', 'throttle:6,1']);
 name('password.request');
 
 new class extends Component
 {
     #[Validate('required|email')]
-    public $email;
+    public string $email = '';
 
-    public $emailSentMessage = false;
+    public ?string $emailSentMessage = null;
 
     public function sendResetPasswordLink(): void
     {
@@ -20,66 +28,42 @@ new class extends Component
 
         $response = Password::broker()->sendResetLink(['email' => $this->email]);
 
-        if ($response == Password::RESET_LINK_SENT) {
-            $this->emailSentMessage = trans($response);
+        if ($response === Password::INVALID_USER || $response === Password::RESET_LINK_SENT) {
+            $this->emailSentMessage = (string) trans(Password::RESET_LINK_SENT);
 
             return;
         }
 
-        $this->addError('email', trans($response));
+        $this->addError('email', (string) trans($response));
     }
 };
 
 ?>
 
-<x-layouts.main>
-
-    <div class="flex flex-col items-stretch justify-center w-screen min-h-screen py-10 sm:items-center">
-
-        <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <x-ui.link href="{{ route('home') }}">
-                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-            </x-ui.link>
-
-            <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">
-                Reset password
-            </h2>
-            <div class="text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
-                <span>Or</span>
-                <x-ui.text-link href="{{ route('login') }}">return to login</x-ui.text-link>
-            </div>
-        </div>
-
+<x-layouts.app :title="__('pub_theme::auth.password.request.title')">
+    <x-ui.auth-card :title="__('pub_theme::auth.password.request.title')" :subtitle="__('pub_theme::auth.password.request.subtitle')">
         @volt('auth.password.reset')
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
+            <div>
                 @if ($emailSentMessage)
-                <div class="p-4 rounded-md bg-green-50 dark:bg-green-600">
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <svg class="w-5 h-5 text-green-400 dark:text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="ml-3">
-                            <p class="text-sm font-medium leading-5 text-green-800 dark:text-green-200">
-                                {{ $emailSentMessage }}
-                            </p>
-                        </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-green-500/30 bg-green-500/10 p-4 text-sm text-green-200" role="status">
+                        <x-heroicon-o-check-circle class="h-5 w-5 shrink-0 text-green-400" aria-hidden="true" />
+                        <p>{{ $emailSentMessage }}</p>
                     </div>
-                </div>
                 @else
-                <form wire:submit="sendResetPasswordLink" class="space-y-6">
-                    <x-ui.input label="Email address" type="email" id="email" name="email" wire:model="email" />
-                    <x-ui.button type="primary" rounded="md" submit="true">Send password reset link</x-ui.button>
-                </form>
+                    <form wire:submit="sendResetPasswordLink" class="space-y-6" novalidate>
+                        <x-ui.auth-field :label="__('pub_theme::auth.password.request.email')" id="email" type="email" autocomplete="email" autofocus wire:model="email" />
+                        <button type="submit" wire:loading.attr="disabled" class="flex w-full items-center justify-center rounded-xl bg-red-600 px-4 py-3 font-bold text-white shadow-lg shadow-red-900/30 transition hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 disabled:opacity-60">
+                            {{ __('pub_theme::auth.password.request.submit') }}
+                        </button>
+                    </form>
                 @endif
             </div>
-        </div>
         @endvolt
 
-    </div>
-
-</x-layouts.main>
+        <p class="mt-8 border-t border-slate-700 pt-6 text-center text-sm">
+            <a href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/auth/login') }}" class="font-semibold text-red-400 transition-colors hover:text-red-300">
+                &larr; {{ __('pub_theme::auth.password.request.back_to_login') }}
+            </a>
+        </p>
+    </x-ui.auth-card>
+</x-layouts.app>

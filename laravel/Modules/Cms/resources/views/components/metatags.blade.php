@@ -1,12 +1,12 @@
 <head>
-    <title>{{ $meta->getTitle() }}</title>
+    <title>{{ $title }}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- SEO Basics --}}
-    <meta name="title" content="{{ $meta->getTitle() }}">
-    <meta name="description" content="{{ $meta->getDescription(limit: 160) }}">
+    <meta name="title" content="{{ $title }}">
+    <meta name="description" content="{{ $description }}">
     <meta name="keywords" content="{{ $meta->getKeywords() }}">
     <meta name="author" content="{{ $meta->getAuthor() }}">
     <meta name="robots" content="{{ $meta->getRobots() }}">
@@ -14,8 +14,8 @@
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="{{ $meta->getType() }}">
-    <meta property="og:title" content="{{ $meta->getTitle() }}">
-    <meta property="og:description" content="{{ $meta->getDescription(limit: 160) }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
     <meta property="og:url" content="{{ $meta->getCanonical() }}">
     <meta property="og:image" content="{{ $meta->getImage() }}">
     <meta property="og:site_name" content="{{ $meta->getSitename() }}">
@@ -24,8 +24,8 @@
     {{-- Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ $meta->getCurrentUrl() }}">
-    <meta name="twitter:title" content="{{ $meta->getTitle() }}">
-    <meta name="twitter:description" content="{{ $meta->getDescription(limit: 160) }}">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ $meta->getImage() }}">
 
     {{-- Nessun preconnect verso Google Fonts o Analytics: aprire la connessione invia l'IP del visitatore a terzi prima del consenso --}}

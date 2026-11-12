@@ -17,18 +17,7 @@ name('register');
 
 ?>
 
-<x-layouts.app>
-    <x-slot name="title">
-        {{ __('gdpr::register.title') }} - LaravelPizza Community
-    </x-slot>
-
-    <x-slot name="description">
-        {{ __('gdpr::register.subtitle') }}
-    </x-slot>
-
-    <x-slot name="keywords">
-        Laravel meetup, Laravel community, PHP developer community, Laravel tutorials, Laravel workshops, Laravel networking, LaravelPizza
-    </x-slot>
+<x-layouts.app :title="__('gdpr::register.title')" :description="__('gdpr::register.subtitle')">
 
     {{-- Full-width mobile-first layout with animated background --}}
     <main 
