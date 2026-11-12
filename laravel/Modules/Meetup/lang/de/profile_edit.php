@@ -47,4 +47,15 @@ return [
         'preview_alt' => 'Vorschau des neuen Fotos',
         'current_alt' => 'Dein aktuelles Foto',
     ],
+    'delete' => [
+        'title' => 'Konto löschen',
+        'description' => 'Wir löschen Name, E-Mail, Foto und Bio und melden dich von kommenden Events ab. Das kann nicht rückgängig gemacht werden.',
+        'open' => 'Ich möchte mein Konto löschen',
+        'reason' => 'Warum gehst du? (optional)',
+        'confirm' => 'Ich habe verstanden: Konto und Daten werden gelöscht und können nicht wiederhergestellt werden.',
+        'submit' => 'Endgültig löschen',
+        'cancel' => 'Abbrechen',
+        'done' => 'Konto gelöscht. Schade, dass du gehst: du kannst dich jederzeit wieder registrieren.',
+        'anonymous_name' => 'Gelöschtes Konto',
+    ],
 ];

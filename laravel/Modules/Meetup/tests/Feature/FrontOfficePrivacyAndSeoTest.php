@@ -154,3 +154,13 @@ test('the reset link in the email keeps the language of the request', function (
 
     expect($url)->toContain('/en/auth/password/tok123')->toContain('email='.urlencode($user->email));
 });
+
+test('generating the URL of a Folio page never changes the app language (mails sent from CLI or queue)', function (): void {
+    app()->setLocale('de');
+
+    route('login');
+    route('register');
+    route('password.request');
+
+    expect(app()->getLocale())->toBe('de');
+});

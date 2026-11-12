@@ -15,7 +15,9 @@ npm run dev     # sviluppo con hot reload
 npm run build   # produzione: public/manifest.json e public/assets/*
 ```
 
-Dopo la build: commit di `public/manifest.json` e dei nuovi file in `public/assets/`, eliminando quelli non più citati dal manifest.
+Dopo la build lo script `postbuild` (`scripts/clean-stale-assets.mjs`) toglie da `public/assets/` i file che il manifest non cita più (Vite scrive con `emptyOutDir: false` perché `public/` contiene anche favicon, `sw.js` e `site.webmanifest`). Poi commit di `public/manifest.json` e di `public/assets/` (`git add -A` registra anche le cancellazioni).
+
+Ogni classe Tailwind nuova in una vista (anche dei moduli: `@source` in `resources/css/app.css`) arriva nel CSS solo dopo `npm run build`: senza build la pagina si vede senza quegli stili.
 
 ## Dettagli
 

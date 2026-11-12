@@ -47,4 +47,15 @@ return [
         'preview_alt' => 'Preview of the new photo',
         'current_alt' => 'Your current photo',
     ],
+    'delete' => [
+        'title' => 'Delete account',
+        'description' => 'We erase your name, email, photo and bio and remove you from upcoming events. This cannot be undone.',
+        'open' => 'I want to delete my account',
+        'reason' => 'Why are you leaving? (optional)',
+        'confirm' => 'I understand: my account and data are deleted and cannot be recovered.',
+        'submit' => 'Delete permanently',
+        'cancel' => 'Cancel',
+        'done' => 'Account deleted. Sorry to see you go: you can always sign up again.',
+        'anonymous_name' => 'Deleted account',
+    ],
 ];

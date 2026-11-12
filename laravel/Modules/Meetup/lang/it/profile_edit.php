@@ -47,4 +47,15 @@ return [
         'preview_alt' => 'Anteprima della nuova foto',
         'current_alt' => 'La tua foto attuale',
     ],
+    'delete' => [
+        'title' => 'Elimina l\'account',
+        'description' => 'Cancelliamo nome, email, foto e biografia e ti togliamo dagli eventi futuri. Non si può annullare.',
+        'open' => 'Voglio eliminare l\'account',
+        'reason' => 'Perché te ne vai? (facoltativo)',
+        'confirm' => 'Ho capito: l\'account e i miei dati vengono eliminati e non si possono recuperare.',
+        'submit' => 'Elimina definitivamente',
+        'cancel' => 'Annulla',
+        'done' => 'Account eliminato. Ci dispiace vederti andare: se cambi idea, puoi sempre registrarti di nuovo.',
+        'anonymous_name' => 'Account eliminato',
+    ],
 ];

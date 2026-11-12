@@ -107,7 +107,23 @@ class Consent extends BaseModel
         'updated_by',
         'ip_address',
         'user_agent',
+        // Revoca e richiesta di cancellazione (migrazione 2026_11_12_000002): senza, updateOrCreate le scartava in silenzio.
+        'revoked_at',
+        'revoked_ip_address',
+        'metadata',
     ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'accepted_at' => 'datetime',
+            'revoked_at' => 'datetime',
+            'metadata' => 'array',
+        ]);
+    }
 
     /**
      * @return BelongsTo<Treatment, $this>
