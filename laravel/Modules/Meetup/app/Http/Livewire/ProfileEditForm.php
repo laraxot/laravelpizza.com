@@ -13,6 +13,7 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Livewire\WithFileUploads;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Actions\Profile\ChangeOwnPasswordAction;
+use Modules\Meetup\Actions\Profile\DeleteOwnAccountAction;
 use Modules\Meetup\Actions\Profile\ResolveOwnProfileAction;
 use Modules\Meetup\Actions\Profile\UpdateOwnAvatarAction;
 use Modules\Meetup\Actions\Profile\UpdateOwnProfileAction;
@@ -48,6 +49,12 @@ class ProfileEditForm extends Component
     public string $password = '';
 
     public string $password_confirmation = '';
+
+    public string $delete_password = '';
+
+    public bool $delete_confirmed = false;
+
+    public string $delete_reason = '';
 
     /** Sezione appena salvata (profile, photo, password): mostra la conferma accanto al pulsante giusto. */
     public string $saved = '';
@@ -127,6 +134,23 @@ class ProfileEditForm extends Component
     }
 
     /**
+     * Eliminazione dell'account (GDPR art. 17): password attuale + conferma esplicita, poi uscita e ritorno alla home.
+     */
+    public function deleteAccount(DeleteOwnAccountAction $deleteAccount): void
+    {
+        $this->validate([
+            'delete_password' => 'required|current_password:web',
+            'delete_confirmed' => 'accepted',
+            'delete_reason' => 'nullable|string|max:1000',
+        ]);
+
+        $deleteAccount->execute($this->user(), trim($this->delete_reason));
+
+        session()->flash('status_message', (string) __('meetup::profile_edit.delete.done'));
+        $this->redirect(LaravelLocalization::localizeUrl('/'));
+    }
+
+    /**
      * @return array<string, string>
      */
     protected function validationAttributes(): array
@@ -139,6 +163,9 @@ class ProfileEditForm extends Component
             'photo' => (string) __('meetup::profile_edit.fields.photo'),
             'current_password' => (string) __('meetup::profile_edit.fields.current_password'),
             'password' => (string) __('meetup::profile_edit.fields.password'),
+            'delete_password' => (string) __('meetup::profile_edit.fields.current_password'),
+            'delete_confirmed' => (string) __('meetup::profile_edit.delete.confirm'),
+            'delete_reason' => (string) __('meetup::profile_edit.delete.reason'),
         ];
     }
 

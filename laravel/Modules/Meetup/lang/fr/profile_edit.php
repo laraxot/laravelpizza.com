@@ -47,4 +47,15 @@ return [
         'preview_alt' => 'Aperçu de la nouvelle photo',
         'current_alt' => 'Votre photo actuelle',
     ],
+    'delete' => [
+        'title' => 'Supprimer le compte',
+        'description' => 'Nous effaçons votre nom, e-mail, photo et bio et vous retirons des événements à venir. Action irréversible.',
+        'open' => 'Je veux supprimer mon compte',
+        'reason' => 'Pourquoi partez-vous ? (facultatif)',
+        'confirm' => 'J\'ai compris : mon compte et mes données sont supprimés et ne peuvent pas être récupérés.',
+        'submit' => 'Supprimer définitivement',
+        'cancel' => 'Annuler',
+        'done' => 'Compte supprimé. Dommage de vous voir partir : vous pouvez vous réinscrire à tout moment.',
+        'anonymous_name' => 'Compte supprimé',
+    ],
 ];

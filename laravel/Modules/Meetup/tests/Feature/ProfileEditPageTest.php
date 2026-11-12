@@ -8,6 +8,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
+use Modules\Meetup\Actions\Event\RegisterAttendeeToEventAction;
 use Modules\Meetup\Http\Livewire\ProfileEditForm;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\Profile;
@@ -166,4 +167,52 @@ test('an event never takes the slug of an events sub-page', function (): void {
     expect(Event::uniqueSlug('my'))->not->toBe('my')
         ->and(Event::uniqueSlug('past'))->not->toBe('past')
         ->and(Event::uniqueSlug('serata-laravel-'.uniqid()))->toStartWith('serata-laravel-');
+});
+
+test('a participant can delete the account: future seats freed, personal data erased, profile gone', function (): void {
+    Storage::fake('public');
+    $user = profile_owner();
+    $email = $user->email;
+    $userId = (string) $user->getKey();
+
+    $future = Event::query()->create([
+        'title' => 'Serata futura '.uniqid(), 'location' => 'Milano', 'status' => 'published',
+        'start_date' => now()->addDays(5), 'end_date' => now()->addDays(5)->addHours(2), 'max_attendees' => 10,
+    ]);
+    app(RegisterAttendeeToEventAction::class)->execute($future, $userId);
+    expect($future->refresh()->attendees_count)->toBe(1);
+
+    Livewire::actingAs($user)->test(ProfileEditForm::class)
+        ->set('photo', UploadedFile::fake()->image('me.jpg'))
+        ->call('savePhoto')
+        ->set('delete_password', 'sbagliata')
+        ->set('delete_confirmed', true)
+        ->call('deleteAccount')
+        ->assertHasErrors(['delete_password']);
+
+    Livewire::actingAs($user)->test(ProfileEditForm::class)
+        ->set('delete_password', 'Password!2026')
+        ->set('delete_confirmed', false)
+        ->call('deleteAccount')
+        ->assertHasErrors(['delete_confirmed' => 'accepted']);
+
+    Livewire::actingAs($user)->test(ProfileEditForm::class)
+        ->set('delete_password', 'Password!2026')
+        ->set('delete_confirmed', true)
+        ->set('delete_reason', 'Mi trasferisco')
+        ->call('deleteAccount')
+        ->assertHasNoErrors()
+        ->assertRedirect();
+
+    $deleted = User::query()->find($userId);
+    expect($deleted)->not->toBeNull()
+        ->and($deleted->deleted_at)->not->toBeNull()
+        ->and($deleted->email)->not->toBe($email)
+        ->and($deleted->first_name)->toBeNull()
+        ->and($future->refresh()->attendees_count)->toBe(0)
+        ->and($deleted->profile()->first()?->getMedia('avatar'))->toHaveCount(0)
+        ->and(User::query()->where('email', $email)->exists())->toBeFalse()
+        ->and(auth()->check())->toBeFalse();
+
+    $this->get('/it/profile/'.$userId)->assertNotFound();
 });

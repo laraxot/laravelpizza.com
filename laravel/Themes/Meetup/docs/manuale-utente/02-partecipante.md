@@ -124,6 +124,18 @@ Dal menu personale clicca **Modifica il profilo** (oppure il pulsante con lo ste
 3. **Password**: scrivi prima la password che usi adesso, poi due volte quella nuova (almeno 8 caratteri)...
 4. ...e clicca **Cambia la password**. Per sicurezza, se avevi fatto l'accesso anche su altri dispositivi, lì dovrai rientrare con la nuova password.
 
+### Eliminare l'account
+
+In fondo alla stessa pagina c'è **Elimina l'account**. Clicca **Voglio eliminare l'account** e si apre il riquadro:
+
+![Eliminare l'account](img/p17-elimina-account.jpg)
+
+1. Scrivi la tua **password attuale** (se vuoi, sopra puoi dirci perché te ne vai).
+2. Spunta la casella: conferma che hai capito che non si torna indietro.
+3. Clicca **Elimina definitivamente**.
+
+Cancelliamo subito nome, email, foto e biografia, liberiamo i tuoi posti negli eventi futuri e ti facciamo uscire. In alto compare "Account eliminato". Se un giorno vorrai tornare, basterà registrarti di nuovo.
+
 ## 2.7 Quando non puoi iscriverti
 
 Il pulsante di iscrizione non c'è, o è grigio, in questi casi:

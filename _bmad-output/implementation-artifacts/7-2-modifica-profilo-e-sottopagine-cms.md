@@ -30,7 +30,11 @@ so that il mio profilo pubblico mi rappresenta senza dover chiedere a un amminis
 - [x] `Modules/Meetup/tests/TestCase.php` con `main_module = Meetup` (AC 7)
 - [x] Fix sicurezza: password di 32+ caratteri salvate in chiaro (`BaseUserMutators::setPasswordAttribute`)
 - [x] Link "Modifica il profilo" nel menu utente, nel menu mobile, sul proprio profilo
-- [x] Test `ProfileEditPageTest` (10), manuale d'uso §2.6 con screenshot e PDF
+- [x] Elimina account (GDPR art. 17): `DeleteOwnAccountAction` (posti futuri liberati, Gdpr DeleteAccountAction, dati anonimizzati), profilo 404, banner `status_message`
+- [x] Gdpr: migrazione `add_revocation_columns_to_consents_table` (revoked_at, revoked_ip_address, metadata mancavano: delete account 500)
+- [x] Lingua: login/register non chiamano più setLocale nel blocco PHP (Folio lo esegue anche per route('login'): email da coda in italiano); guardia architetturale
+- [x] postbuild del tema che toglie gli asset vecchi
+- [x] Test `ProfileEditPageTest` (11), manuale d'uso §2.6 con screenshot e PDF; bozze di Discussion in docs/github-discussions
 
 ## Dev Notes
 

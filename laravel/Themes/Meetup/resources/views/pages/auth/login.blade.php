@@ -3,15 +3,10 @@
 declare(strict_types=1);
 
 use function Laravel\Folio\{middleware, name};
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-// Set locale from URL segment
-$segments = request()->segments();
-$locale = $segments[0] ?? 'it';
-if (in_array($locale, ['it', 'en', 'es', 'de', 'fr', 'ru'], true)) {
-    LaravelLocalization::setLocale($locale);
-    app()->setLocale($locale);
-}
+// La lingua la imposta il middleware SetFolioLocale (modulo Cms). Niente codice con effetti qui: Folio esegue
+// questo blocco anche per leggere name()/middleware() quando si genera route('login') (es. nelle email da CLI),
+// e un setLocale qui cambiava la lingua dell'intera richiesta/processo in 'it'.
 
 middleware(['guest']);
 name('login');

@@ -139,4 +139,40 @@
             </div>
         </form>
     </section>
+
+    {{-- Eliminazione dell'account (GDPR art. 17) --}}
+    <section class="rounded-2xl border border-red-500/40 bg-red-950/30 p-6 shadow-xl sm:p-8" aria-labelledby="profile-delete-heading" x-data="{ open: @js($errors->hasAny(['delete_password', 'delete_confirmed', 'delete_reason'])) }">
+        <h2 id="profile-delete-heading" class="text-xl font-bold text-white">{{ __('meetup::profile_edit.delete.title') }}</h2>
+        <p class="mt-1 text-sm text-slate-300">{{ __('meetup::profile_edit.delete.description') }}</p>
+
+        <button type="button" x-show="! open" x-on:click="open = true" class="{{ $secondary }} mt-6 border-red-500/50 text-red-200 hover:bg-red-500/10">
+            {{ __('meetup::profile_edit.delete.open') }}
+        </button>
+
+        <form x-show="open" x-cloak wire:submit="deleteAccount" class="mt-6 space-y-5" novalidate>
+            <div>
+                <label for="profile-delete-reason" class="{{ $label }}">{{ __('meetup::profile_edit.delete.reason') }}</label>
+                <textarea id="profile-delete-reason" wire:model="delete_reason" rows="2" maxlength="1000" class="{{ $input }}"></textarea>
+            </div>
+            <div>
+                <label for="profile-delete-password" class="{{ $label }}">{{ __('meetup::profile_edit.fields.current_password') }}</label>
+                <input id="profile-delete-password" type="password" wire:model="delete_password" autocomplete="current-password" required class="{{ $input }}"
+                       @error('delete_password') aria-invalid="true" aria-describedby="profile-delete-password-error" @enderror>
+                @error('delete_password') <p id="profile-delete-password-error" class="{{ $error }}">{{ $message }}</p> @enderror
+            </div>
+            <div>
+                <label class="flex items-start gap-3 text-sm text-slate-200">
+                    <input type="checkbox" wire:model="delete_confirmed" class="mt-1 rounded border-slate-500 text-red-600 focus:ring-red-500">
+                    <span>{{ __('meetup::profile_edit.delete.confirm') }}</span>
+                </label>
+                @error('delete_confirmed') <p class="{{ $error }}">{{ $message }}</p> @enderror
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button type="submit" wire:loading.attr="disabled" wire:target="deleteAccount" class="inline-flex items-center justify-center rounded-xl bg-red-700 px-6 py-3 font-bold text-white transition hover:bg-red-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300 disabled:opacity-60">
+                    {{ __('meetup::profile_edit.delete.submit') }}
+                </button>
+                <button type="button" x-on:click="open = false" class="{{ $secondary }}">{{ __('meetup::profile_edit.delete.cancel') }}</button>
+            </div>
+        </form>
+    </section>
 </div>

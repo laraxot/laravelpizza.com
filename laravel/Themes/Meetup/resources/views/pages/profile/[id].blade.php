@@ -44,7 +44,8 @@ new class extends Component
         }
 
         $user = User::query()->with('profile')->find($id);
-        abort_if($user === null, 404);
+        // Un account eliminato dal titolare (deleted_at, dati anonimizzati) non ha più un profilo pubblico.
+        abort_if($user === null || $user->deleted_at !== null, 404);
 
         $this->data = ['container0' => 'profile', 'slug0' => $id, 'item' => $user];
 
