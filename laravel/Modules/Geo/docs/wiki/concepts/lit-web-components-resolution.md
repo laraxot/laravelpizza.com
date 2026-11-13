@@ -1,15 +1,3 @@
----
-title: "lit web components resolution"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "lit web components resolution"
-issues: []
-discussions: []
-status: draft
----
-
 # Lit Web Components Resolution — Build & Runtime Fix
 
 **Data:** 2026-04-15  
@@ -17,6 +5,7 @@ status: draft
 **Argomento:** Risoluzione errore build + integrazione runtime MyMap component
 
 ---
+
 ## Problema Iniziale
 
 Importare il componente `my-map-lit.js` (definito in Geo module) da Sixteen theme causava due errori:
@@ -84,7 +73,7 @@ Se assente, aggiungere questa riga dopo gli altri import (riga 17).
 ```bash
 cd laravel/Themes/Sixteen
 npm run build
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+npm run copy
 ```
 
 Output atteso:

@@ -1,15 +1,3 @@
----
-title: "admin map magnifier and controls visibility"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "admin map magnifier and controls visibility"
-issues: []
-discussions: []
-status: draft
----
-
 # Admin map magnifier and controls visibility
 
 ## Problema
@@ -36,7 +24,7 @@ Nella route admin ticket create, la lente di ricerca risultava visivamente tropp
 ## Verifica tecnica
 
 - `npm run build` modulo Geo: OK
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- `npm run copy` modulo Geo: OK
 - asset pubblicati in `public_html/assets/geo`
 
 ## Riferimenti

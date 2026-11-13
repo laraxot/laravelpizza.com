@@ -1,15 +1,6 @@
 ---
-title: "map picker admin visibility"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "map picker admin visibility"
-issues: []
-discussions: []
 name: map-picker-admin-visibility
 description: Specific troubleshooting steps for missing map on the admin ticket‑creation page
-status: draft
 ---
 
 # Admin Ticket Creation – Map Not Visible
@@ -26,7 +17,7 @@ When navigating to `http://127.0.0.1:8000/fixcity/admin/tickets/create` the Leaf
 - Added a **MutationObserver** with depth `≥12` in `map-picker-lit.js` to detect when the parent wizard step exits the `hidden` class and then call `map.invalidateSize()` with a 700‑1200 ms delay.
 - Updated the map wrapper’s CSS: added `bg-white` for the admin page and forced `pointer-events: auto` on `.map-container`.
 - Ensured the custom SVG marker `map-marker.svg` exists under `laravel/Modules/Geo/resources/svg/` and referenced it via `L.divIcon`.
-- Re‑built the theme assets: `cd laravel/Themes/Sixteen && npm run build`.
+- Re‑built the theme assets: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.
 
 ## Verification Checklist
 - [ ] Open the URL in a browser and confirm the map container has a non‑zero width/height.

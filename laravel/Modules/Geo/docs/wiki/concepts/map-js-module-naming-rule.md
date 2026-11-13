@@ -1,7 +1,4 @@
 ---
-qmd: "map js module naming rule"
-issues: []
-discussions: []
 title: "Map JS Module Naming Rule"
 type: concept
 module: Geo
@@ -13,8 +10,7 @@ related:
   - geo-map-controls-unification-rule.md
   - map-picker-family-architecture.md
   - geo-map-controls-shared-implementation.md
-  - ../../../../../Themes/Sixteen/docs/wiki/concepts/theme-geo-js-boundary.md
-status: draft
+  - ../../../../Themes/Sixteen/docs/wiki/concepts/theme-geo-js-boundary.md
 ---
 
 # Regola: moduli JS mappa in `components/map/`
@@ -105,7 +101,7 @@ import { resolveStateCoordinates } from './map/utils.js';
 ```bash
 cd laravel/Themes/Sixteen
 npm run build
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+npm run copy
 ```
 
 `app.js` importa `coordinate-picker-field` da `@modules/Geo/...` (usa il modulo Geo, non il mirror).
@@ -114,4 +110,4 @@ npm run build
 
 - [geo-map-controls-unification-rule](./geo-map-controls-unification-rule.md)
 - [geo-map-controls-shared-implementation](./geo-map-controls-shared-implementation.md)
-- [theme-geo-js-boundary](../../../../../Themes/Sixteen/docs/wiki/concepts/theme-geo-js-boundary.md)
+- [theme-geo-js-boundary](../../../../Themes/Sixteen/docs/wiki/concepts/theme-geo-js-boundary.md)

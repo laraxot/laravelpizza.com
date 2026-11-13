@@ -1,15 +1,6 @@
 ---
-title: "map picker troubleshooting"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "map picker troubleshooting"
-issues: []
-discussions: []
 name: map-picker-troubleshooting
 description: Guide for diagnosing and fixing MapPicker issues in the Geo module
-status: draft
 ---
 
 # MapPicker Troubleshooting Guide
@@ -85,14 +76,14 @@ import 'leaflet.markercluster/dist/MarkerCluster.css';
 | 4 | Check network tab for 404s on `*.svg` or `*.css` files under `resources/svg/` and `resources/css/`. |
 | 5 | Look for `leaflet-tile-error` classes in the rendered tiles. |
 | 6 | Ensure `pointer-events: auto` is set on `.map-container`. |
-| 7 | Validate that the correct Vite build was run (`npm run build` from `laravel/Themes/Sixteen`). |
+| 7 | Validate that the correct Vite build was run (`npm run build && npm run copy` from `laravel/Themes/Sixteen`). |
 | 8 | Capture a screenshot of the map area and compare against `reference/screenshots/map-ready.png`. |
 
 ## Fix Workflow
 
 1. **Make HTML adjustments** (add missing wrapper classes, ensure no `display: none` from Bootstrap Italia).  
 2. **Update JS** (add MutationObserver, use `invalidateSize()` with appropriate timeout).  
-3. **Re‑run the build**: `cd laravel/Themes/Sixteen && npm run build`.  
+3. **Re‑run the build**: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.  
 4. **Run the smoke test**: `node scripts/map-picker-smoke.cjs http://127.0.0.1:8000/it/segnalazione-crea?step=...`.  
 5. **Verify visually** – open the URL in a browser and confirm tiles appear, dropdown works, avatar is visible.  
 6. **Document the change** in `docs/wiki/concepts/map-picker-troubleshooting.md` and add a checklist entry to `docs/merge-conflict-task-list.md` under *MapPicker fixes*.

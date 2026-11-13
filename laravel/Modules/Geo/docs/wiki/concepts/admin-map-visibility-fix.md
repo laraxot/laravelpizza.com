@@ -1,17 +1,8 @@
 ---
-title: "admin map visibility fix"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "admin map visibility fix"
-issues: []
-discussions: []
 name: admin-map-visibility-fix
 description: >
   Fix for missing map in Filament 5 admin ticket creation wizard step.
   Ensures map loads and controls remain visible when step toggles via x-show/hidden.
-status: draft
 ---
 
 # Fix for Missing Map on Admin Ticket Creation Page
@@ -101,7 +92,7 @@ After any JS/CSS changes in the Geo module:
 ```bash
 cd /var/www/_bases/base_fixcity_fila5/laravel/Modules/Geo
 npm run build
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+npm run copy
 ```
 
 ## Documentation Links

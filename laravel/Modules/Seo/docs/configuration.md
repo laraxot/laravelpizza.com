@@ -7,10 +7,8 @@ updated: 2026-09-26
 qmd: "configuration"
 issues: []
 discussions: []
-status: stale
+status: active
 ---
-
-> Nota 2026-10-14 (docs-audit): Descrive Models, redirect, slug e analisi dei contenuti che non esistono: app/Models contiene solo .gitkeep, app/Http e app/Console solo .gitkeep o _components.json, nessuna migration (verificato 2026-10-14). Il modulo ha solo Adapters, Actions Metatag, Datas e il widget SocialShare. Contenuto non riscritto, verificare prima di usarlo.
 
 # Configurazione Modulo SEO
 

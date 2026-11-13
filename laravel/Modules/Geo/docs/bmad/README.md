@@ -1,24 +1,4 @@
----
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
-status: draft
----
-
 # bmad method
-
-## Kit BMAD owner (canonico)
-
-- [BMAD Planning](../bmad-planning.md)
-- [BMAD Brainstorming](../bmad-brainstorming.md)
-- [Filament blueprint](./filament-blueprint.md)
-- [Project context](./project-context.md)
-- [Decision log](./decision-log.md)
 
 ## Scopo (business logic)
 
@@ -58,3 +38,4 @@ BMAD Method serve a rendere **ripetibile** lo sviluppo AI-driven su una codebase
 ## Install/update upstream (riferimento)
 
 Installazione ufficiale BMAD Method: vedi [BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) (quick start: `npx bmad-method install`).
+

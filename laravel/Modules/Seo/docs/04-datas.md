@@ -25,7 +25,7 @@ Located in `Seo/app/Datas/`:
 
 ### Creating Meta Tag Data
 ```php
-use Modules\Seo\Datas\MetatagData;
+use Modules\Seo\app\Datas\MetatagData;
 
 $metatag = MetatagData::from([
     'title' => 'Page Title',
@@ -36,7 +36,7 @@ $metatag = MetatagData::from([
 
 ### Social Sharing Data
 ```php
-use Modules\Seo\Datas\SocialShareData;
+use Modules\Seo\app\Datas\SocialShareData;
 
 $sharing = SocialShareData::from([
     'title' => 'Shared Title',

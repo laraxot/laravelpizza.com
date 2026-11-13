@@ -29,7 +29,7 @@ Based on the research of modern UI libraries (FlyonUI, Tailwind Elements) and in
 We use `spatie/laravel-data` for strict typing and integration with Spatie Actions.
 
 ```php
-namespace Modules\Seo\Datas;
+namespace Modules\Seo\Data;
 
 use Spatie\LaravelData\Data;
 
@@ -113,22 +113,9 @@ public function getSocialShareData(): SocialShareData
 ## Final Architecture (Version 1.0.0)
 
 The final implementation follows a pure Laraxot approach:
-- **DTO**: `Modules/Seo/app/Datas/SocialShareData.php` (la cartella e' `Datas`, non `Data`)
+- **DTO**: [SocialShareData.php](file:///var/www/_bases/base_laravelpizza/laravel/Modules/Seo/app/Data/SocialShareData.php)
 - **Action**: [GenerateSocialShareLinksAction.php](file:///var/www/_bases/base_laravelpizza/laravel/Modules/Seo/app/Actions/GenerateSocialShareLinksAction.php)
 - **Widget**: [SocialShareWidget.php](file:///var/www/_bases/base_laravelpizza/laravel/Modules/Seo/app/Filament/Widgets/SocialShareWidget.php)
-
-## Uso verificato in un tema (blocco CMS)
-
-Il componente Blade `x-seo::social-share` non ha bisogno del widget Filament: un tema lo usa direttamente da un blocco di pagina.
-
-```blade
-<x-seo::social-share :data="new \Modules\Seo\Datas\SocialShareData(url: url()->current(), title: $text, platforms: ['linkedin', 'facebook', 'whatsapp', 'copy'])" />
-```
-
-- Nessuno script di terzi: ogni piattaforma e' un normale `<a target="_blank" rel="noopener noreferrer">` verso l'indirizzo di condivisione, quindi nulla esce dal sito finche' non si clicca. Il pulsante «Copia link» usa la clipboard con ripiego.
-- Accessibilita': ogni controllo ha `aria-label` tradotto (`seo::social_share`, in `it`, `en`, `de`, `es`) e il gruppo ha il nome «Condividi». I bersagli misurano 44 px (`p-2.5` attorno a icone da 24 px): axe 0 violazioni, nessun bersaglio sotto 44 px a 390 e 1280 px.
-- Le classi Tailwind del componente devono esistere nel CSS compilato del tema (`p-2.5`, `rounded-full`, `w-6`): il componente sta in un modulo che il tema potrebbe non scansionare.
-- Piattaforme disponibili: `facebook`, `twitter`, `linkedin`, `whatsapp`, `telegram`, `copy`.
 
 ---
 *Generated and Verified by Antigravity*

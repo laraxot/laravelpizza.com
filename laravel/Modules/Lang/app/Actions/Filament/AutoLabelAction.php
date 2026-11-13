@@ -110,12 +110,30 @@ class AutoLabelAction
 
         $label_key = $label_tkey.'.'.Str::snake($type);
 
+        /*
+         * Solo l'etichetta ha un ripiego sensato nel nome del campo. Per testo d'aiuto, segnaposto,
+         * descrizione e simili il nome del campo («email», «value», «remember») finiva salvato nei file
+         * lang e mostrato sotto ogni campo: si salva vuoto, e un valore uguale al nome non si applica.
+         */
+        $isAuxiliaryText = ! in_array($type, ['label', 'icon'], strict: true);
+        if ($isAuxiliaryText) {
+            $default_val ??= '';
+        }
+
         $label = trans($label_key);
         // Se la traduzione manca si salva (solo in locale, vedi SaveTransAction) ma solo per l'etichetta:
         // per helper_text, placeholder, description e tooltip il "valore di comodo" era il nome del campo,
         // che poi compariva sotto e dentro i campi ("route", "postal_code"). Meglio nessun testo d'aiuto.
         if (is_string($label) && $label_key === $label && 'label' === $type) {
             app(SaveTransAction::class)->execute($label_key, $default_val ?? $val);
+        }
+        if ($isAuxiliaryText && is_string($label) && ($label === '' || $label === $val)) {
+            return $component;
+        }
+        // Un'azione con l'etichetta ancora uguale al proprio nome («edit», «delete», «restore») tiene
+        // l'etichetta già tradotta di Filament («Modifica», «Elimina», «Ripristina»).
+        if ($component instanceof Action && is_string($label) && $label === $val) {
+            return $component;
         }
         if (! is_string($label)) {
             $component->label('FIX:'.$label_key);

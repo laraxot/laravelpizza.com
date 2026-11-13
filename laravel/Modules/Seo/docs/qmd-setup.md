@@ -68,7 +68,7 @@ qmd search "form" -c seo  # Solo questo modulo
 
 - [Global QMD Config](../qmd.md) _(target mancante, verificato 2026-10-08)_ (root docs)
 - [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [On-Demand Pattern](on-demand-pattern.md)
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
 
 ---
 *Cache: ~/.cache/qmd-cache/ | Index: ~/.cache/qmd-cache/index*

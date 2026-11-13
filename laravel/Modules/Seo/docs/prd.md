@@ -436,8 +436,8 @@ CREATE TABLE seo_scores (
 - [Spatie Sitemap](https://github.com/spatie/laravel-sitemap)
 
 ### 11.3 Related PRDs
-- [Blog Module PRD](../../Blog/docs/prd.md)
-- [Cms Module PRD](../../Cms/docs/prd.md)
+- [Blog Module PRD](../../Blog/docs/PRD.md)
+- [Cms Module PRD](../../Cms/docs/PRD.md)
 - [Predict Module PRD](../Predict/docs/PRD.md) _(target mancante, verificato 2026-10-08)_
 - [Media Module PRD](../../Media/docs/PRD.md)
 
@@ -456,7 +456,7 @@ CREATE TABLE seo_scores (
 
 Documento ponte verso il file canonico legacy:
 
-- [PRD.md](prd.md)
+- [PRD.md](PRD.md)
 
 Nota operativa:
 - il naming legacy in maiuscolo resta compatibile

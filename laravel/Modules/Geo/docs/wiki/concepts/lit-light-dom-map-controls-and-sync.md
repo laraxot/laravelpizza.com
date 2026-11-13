@@ -1,15 +1,3 @@
----
-title: "lit light dom map controls and sync"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "lit light dom map controls and sync"
-issues: []
-discussions: []
-status: draft
----
-
 # Lit light dom map controls and sync
 
 ## Scopo
@@ -50,7 +38,7 @@ Effetto: aggiornamento piu affidabile su Alpine + Livewire entangle quando il ma
 ## Verifica tecnica
 
 - build modulo: `npm run build` ✅
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- publish asset modulo: `npm run copy` ✅
 - output generato in `laravel/Modules/Geo/public` e pubblicato in `public_html/assets/geo`.
 
 ## Nota Lit (riferimento)

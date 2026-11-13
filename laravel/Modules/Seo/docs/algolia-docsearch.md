@@ -10,10 +10,8 @@ title: Algolia DocSearch
 description: Configure Algolia DocSearch with the Jigsaw docs starter template
 extends: _layouts.documentation
 section: content
-status: stale
+status: active
 ---
-
-> Nota 2026-10-14 (docs-audit): Template Jigsaw (generatore di siti di documentazione) copiato nei docs: non descrive il modulo Seo, che non ha navigation.php ne' config.php di sito. Contenuto non riscritto, verificare prima di usarlo.
 
 # Algolia DocSearch {#algolia-docsearch}
 

@@ -12,15 +12,4 @@ status: active
 
 # Seo bmad docs
 
-## Kit BMAD owner (canonico)
-
-- [BMAD Planning](../bmad-planning.md)
-- [BMAD Brainstorming](../bmad-brainstorming.md)
-- [Filament blueprint](./filament-blueprint.md)
-- [Project context](./project-context.md)
-- [Decision log](./decision-log.md)
-
 This folder contains BMAD method documentation for the Seo module.
-
-- [Schema articoli ed eventi](../stories/inbound-article-event-schema.story.md)
-- [Dossier coordinatore](../../../Fixcity/docs/bmad/inbound-marketing/README.md)

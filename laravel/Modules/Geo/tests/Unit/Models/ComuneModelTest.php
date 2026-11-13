@@ -51,9 +51,12 @@ function comuneModelFixtures(): array
     ];
 }
 
+<<<<<<< .merge_file_gWA8f5
+=======
 <<<<<<< .merge_file_RPJx5y
 uses(TestCase::class);
 =======
+>>>>>>> .merge_file_tfa93k
 function comuneModelFixturePath(): string
 {
     return storage_path('framework/testing/geo/comuni-model-test.json');
