@@ -236,6 +236,9 @@ return [
             'confirmation' => 'ATTENZIONE: Vuoi eseguire il replay di tutti gli eventi selezionati? Questa è un\'operazione critica.',
             'requires_permission' => 'events.bulk_replay',
         ],
+        'logout' => [
+            'tooltip' => 'logout',
+        ],
     ],
     'messages' => [
         'no_events' => 'Nessun evento trovato',

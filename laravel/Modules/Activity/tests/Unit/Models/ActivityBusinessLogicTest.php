@@ -9,7 +9,7 @@ use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 /**
  * Verifica il contratto pubblico del model Activity (connessione, mass assignment, query scopes).

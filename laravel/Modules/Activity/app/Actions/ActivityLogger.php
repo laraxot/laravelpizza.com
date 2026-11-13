@@ -24,8 +24,6 @@ class ActivityLogger
     use QueueableAction;
 
     /**
-     * Log activity.
-     *
      * @param  array<string, mixed>|null  $properties
      */
     public function log(
@@ -74,7 +72,13 @@ class ActivityLogger
      */
     public function created(Model $model, ?UserContract $user = null): Activity
     {
+<<<<<<< .merge_file_sFkdDV
+        $action = new LogModelCreatedAction($model, $user);
+
+        return $action->execute();
+=======
         return (new LogModelCreatedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_icBWev
     }
 
     /**
@@ -82,7 +86,13 @@ class ActivityLogger
      */
     public function updated(Model $model, ?UserContract $user = null): Activity
     {
+<<<<<<< .merge_file_sFkdDV
+        $action = new LogModelUpdatedAction($model, $user);
+
+        return $action->execute();
+=======
         return (new LogModelUpdatedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_icBWev
     }
 
     /**
@@ -90,7 +100,13 @@ class ActivityLogger
      */
     public function deleted(Model $model, ?UserContract $user = null): Activity
     {
+<<<<<<< .merge_file_sFkdDV
+        $action = new LogModelDeletedAction($model, $user);
+
+        return $action->execute();
+=======
         return (new LogModelDeletedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_icBWev
     }
 
     /**
@@ -98,7 +114,13 @@ class ActivityLogger
      */
     public function login(UserContract $user): Activity
     {
+<<<<<<< .merge_file_sFkdDV
+        $action = new LogUserLoginAction($user);
+
+        return $action->execute();
+=======
         return (new LogUserLoginAction($user))->execute();
+>>>>>>> .merge_file_icBWev
     }
 
     /**
@@ -106,12 +128,16 @@ class ActivityLogger
      */
     public function logout(UserContract $user): Activity
     {
+<<<<<<< .merge_file_sFkdDV
+        $action = new LogUserLogoutAction($user);
+
+        return $action->execute();
+=======
         return (new LogUserLogoutAction($user))->execute();
+>>>>>>> .merge_file_icBWev
     }
 
     /**
-     * Log custom event.
-     *
      * @param  array<string, mixed>|null  $properties
      */
     public function custom(
@@ -259,7 +285,7 @@ class ActivityLogger
 
                 // Explicitly map and cast to ensure types
                 /** @var array<string, int> $byType */
-                $byType = $results->mapWithKeys(function (object $item, int $_key): array {
+                $byType = $results->mapWithKeys(function (object $item): array {
                     // PHPStan L10: isset() per magic attributes invece di property_exists()
                     if (! isset($item->event, $item->count)) {
                         return [];

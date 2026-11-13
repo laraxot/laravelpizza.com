@@ -38,7 +38,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Modules\\Activity\\Tests\\": "tests/"
+            "Modules\\Activity\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
         }
     },
     "require": {

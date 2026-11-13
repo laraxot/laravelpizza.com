@@ -86,10 +86,15 @@ return [
             'label' => 'Ripristina',
             'tooltip' => 'Ripristina stato precedente',
         ],
+<<<<<<< .merge_file_hTkIug
+        'logout' => [
+            'tooltip' => 'logout',
+=======
         'delete' => [
             'label' => 'Elimina',
             'icon' => 'delete',
             'tooltip' => 'Elimina questa attività',
+>>>>>>> .merge_file_2BtG5P
         ],
     ],
     'messages' => [

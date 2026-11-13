@@ -10,15 +10,22 @@ related:
   - ./phpstan-pest-discipline.md
   - ../../stories/3.10.activity-pest-extend-bootstrap.story.md
   - ../../../../Xot/docs/wiki/concepts/pest5-configuring-tests.md
+<<<<<<< .merge_file_yiq5mB
+  - ../../../../../bmad-output/architecture.md
+=======
   - ../../../../../../bmad-output/architecture.md
+>>>>>>> .merge_file_sjxbMz
 tags: [activity, pest, phpstan, bootstrap, extend]
 issues:
   - "https://github.com/laraxot/module_activity_fila5/issues/48"
 discussions:
   - "https://github.com/laraxot/module_activity_fila5/discussions/16"
+<<<<<<< .merge_file_yiq5mB
+=======
 type: note
 updated: 2026-10-23
 qmd: "pest bootstrap   `pest()->extend()` con ignore inline (activity) activity"
+>>>>>>> .merge_file_sjxbMz
 ---
 
 # Pest bootstrap — `pest()->extend()` con ignore inline (Activity)

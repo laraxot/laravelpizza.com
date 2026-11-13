@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_QxJk8y
+=======
 ---
 title: "PRD - Activity Module"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-07
 tags: [docs, activity]
 qmd: "prd - activity module activity"
 ---
+>>>>>>> .merge_file_jKP3fB
 # PRD - Activity Module
 
 ## 1. Executive Summary
@@ -15,22 +18,6 @@ The Activity module is responsible for tracking and logging all system actions, 
 - **System Administrators:** Monitor system health and audit logs.
 - **Security Officers:** Review access logs for compliance and security investigations.
 - **Internal Developers:** Integrate activity logging into other modules.
-
-## 🎯 Goals & Success Metrics
-- **Goal 1:** 100% PHPStan L10 compliance.
-- **Goal 2:** Seamless integration with XotBase.
-
-
-# PRD - Activity Module (2025-2026 Lean Standard)
-
-## 1. Problem Statement
-System observability and audit trails are fragmented and lack a unified, type-safe implementation. There is a need for a centralized, agnostic module that handles logging and event sourcing across all platform modules without creating circular dependencies.
-
-## 2. KPIs (Key Performance Indicators)
-- **Compliance**: 100% PHPStan Level 10 across all module files.
-- **Performance**: < 5ms overhead for log generation (using asynchronous queues).
-- **Quality**: 0 issues reported by PHPMD and PHPInsights.
-- **Coverage**: > 80% test coverage for core logging actions.
 
 ## 3. Functional Requirements
 
@@ -51,6 +38,8 @@ System observability and audit trails are fragmented and lack a unified, type-sa
 - 100% PHPStan Level 10 compliance.
 - Test coverage > 80% for logging logic.
 - API documentation completed.
+<<<<<<< .merge_file_QxJk8y
+=======
 ## 4. Technical Specifications
 
 ### Agnostic Design
@@ -86,3 +75,4 @@ System observability and audit trails are fragmented and lack a unified, type-sa
 - **Performance:** Logging must be asynchronous to avoid blocking main requests.
 - **Observability:** Must expose metrics for logging rate and failure rate.
 - **Security:** Logs must be immutable and access-controlled.
+>>>>>>> .merge_file_jKP3fB

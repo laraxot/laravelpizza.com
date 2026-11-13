@@ -8,6 +8,7 @@ qmd: "fix: activity testcase - database connection configuration activity"
 ---
 # Fix: Activity TestCase - Database Connection Configuration
 
+**Data**: 2025-01-22
 **Problema**: Test Activity falliscono con "Database connection [activity] not configured"
 **Principio**: Il sito funziona, quindi il test deve riflettere il comportamento reale
 

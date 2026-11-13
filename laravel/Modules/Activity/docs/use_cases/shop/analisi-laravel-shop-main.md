@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_DHrGSs
+=======
 ---
 title: "Analisi Approfondita: laravel-shop-main"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-07
 tags: [docs, activity, use_cases]
 qmd: "analisi approfondita: laravel-shop-main activity"
 ---
+>>>>>>> .merge_file_03Yviu
 # Analisi Approfondita: laravel-shop-main
 
 ## 1. Struttura delle Cartelle e Naming

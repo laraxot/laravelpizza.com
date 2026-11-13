@@ -5,9 +5,12 @@ tags: [docs, migrated-from-txt]
 created: 2026-08-24
 updated: 2026-08-24
 source: laravel/Themes/Zero/docs/jpgraph-guide.txt
+<<<<<<< .merge_file_FJldoi
+=======
 qmd: "jpgraph 4.4.2 guide activity"
 status: superseded
 superseded_by: ../../jpgraph-guide.md
+>>>>>>> .merge_file_ze2TQK
 ---
 
 # JpGraph 4.4.2 Guide

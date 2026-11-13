@@ -1,14 +1,25 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_VmE6FN
+
+=======
+>>>>>>> .merge_file_wQbq9k
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Datas\LogFileData;
 use Safe\Exceptions\FilesystemException;
+<<<<<<< .merge_file_VmE6FN
+use Tests\TestCase;
+
+use function Safe\touch;
+use function Safe\symlink;
+=======
 use Modules\Activity\Tests\TestCase;
 
 use function Safe\symlink;
 use function Safe\touch;
+>>>>>>> .merge_file_wQbq9k
 
 uses(TestCase::class);
 
@@ -41,7 +52,11 @@ it('lists log files recursively including the subfolders', function (): void {
     File::put($this->base.'/reports/252/daily_2026-09-17.log', 'bb');
     File::put($this->base.'/reports/rejected/daily_2026-09-20.log', 'ccc');
 
+<<<<<<< .merge_file_VmE6FN
+    $paths = listedLogFilePaths((new ListLogFilesAction())->execute($this->base));
+=======
     $paths = listedLogFilePaths((new ListLogFilesAction)->execute($this->base));
+>>>>>>> .merge_file_wQbq9k
 
     expect($paths)->toContain('laravel.log');
     expect($paths)->toContain('reports/252/daily_2026-09-17.log');
@@ -55,13 +70,21 @@ it('ignores files that are not .log and dot files', function (): void {
     File::put($this->base.'/.gitignore', '*');
     File::put($this->base.'/dump.log.gz', 'x');
 
+<<<<<<< .merge_file_VmE6FN
+    expect(listedLogFilePaths((new ListLogFilesAction())->execute($this->base)))->toBe(['laravel.log']);
+=======
     expect(listedLogFilePaths((new ListLogFilesAction)->execute($this->base)))->toBe(['laravel.log']);
+>>>>>>> .merge_file_wQbq9k
 });
 
 it('returns size, name, directory and modification time for each file', function (): void {
     File::put($this->base.'/reports/252/daily_2026-09-17.log', 'hello');
 
+<<<<<<< .merge_file_VmE6FN
+    $files = (new ListLogFilesAction())->execute($this->base);
+=======
     $files = (new ListLogFilesAction)->execute($this->base);
+>>>>>>> .merge_file_wQbq9k
 
     expect($files)->toHaveCount(1);
     expect($files[0]->name)->toBe('daily_2026-09-17.log');
@@ -78,7 +101,11 @@ it('sorts files from the most recently modified to the oldest', function (): voi
     touch($this->base.'/medio.log', 2_000_000);
     touch($this->base.'/recente.log', 3_000_000);
 
+<<<<<<< .merge_file_VmE6FN
+    expect(listedLogFilePaths((new ListLogFilesAction())->execute($this->base)))->toBe(['recente.log', 'medio.log', 'vecchio.log']);
+=======
     expect(listedLogFilePaths((new ListLogFilesAction)->execute($this->base)))->toBe(['recente.log', 'medio.log', 'vecchio.log']);
+>>>>>>> .merge_file_wQbq9k
 });
 
 it('limits the number of returned files', function (): void {
@@ -86,7 +113,11 @@ it('limits the number of returned files', function (): void {
         File::put($this->base."/f{$i}.log", 'a');
     }
 
+<<<<<<< .merge_file_VmE6FN
+    expect((new ListLogFilesAction())->execute($this->base, 2))->toHaveCount(2);
+=======
     expect((new ListLogFilesAction)->execute($this->base, 2))->toHaveCount(2);
+>>>>>>> .merge_file_wQbq9k
 });
 
 it('does not list a symlink that points outside the log directory', function (): void {
@@ -97,9 +128,17 @@ it('does not list a symlink that points outside the log directory', function ():
         $this->markTestSkipped('Impossibile creare link simbolici in questo ambiente.');
     }
 
+<<<<<<< .merge_file_VmE6FN
+    expect(listedLogFilePaths((new ListLogFilesAction())->execute($this->base)))->toBe(['laravel.log']);
+});
+
+it('returns an empty list when the log directory does not exist', function (): void {
+    expect((new ListLogFilesAction())->execute($this->root.'/non-esiste'))->toBe([]);
+=======
     expect(listedLogFilePaths((new ListLogFilesAction)->execute($this->base)))->toBe(['laravel.log']);
 });
 
 it('returns an empty list when the log directory does not exist', function (): void {
     expect((new ListLogFilesAction)->execute($this->root.'/non-esiste'))->toBe([]);
+>>>>>>> .merge_file_wQbq9k
 });

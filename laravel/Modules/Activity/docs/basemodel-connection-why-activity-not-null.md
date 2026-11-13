@@ -53,6 +53,17 @@ protected $connection = null;
 
 ## Collegamenti
 
+<<<<<<< .merge_file_cT4ie5
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [basemodel-connection-religion (canon Xot)](../../Xot/docs/wiki/concepts/basemodel-connection-religion.md)
+=======
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+- [fix01](prompts/fix01.txt)
+=======
 - [basemodel-connection-religion (canon Xot)](../../Xot/docs/wiki/concepts/basemodel-connection-religion.md)- [fix01](prompts/fix01.txt)
+>>>>>>> .merge_file_Yh6GI2
 - [database-connections](database-connections.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)

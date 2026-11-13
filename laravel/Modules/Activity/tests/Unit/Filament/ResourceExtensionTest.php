@@ -11,7 +11,7 @@ use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('activity resources extend xot base resource', function () {
     $activityResource = new ReflectionClass(ActivityResource::class);
@@ -42,8 +42,12 @@ test('activity resource implements required getFormSchema method', function () {
 
     $method = $reflection->getMethod('getFormSchema');
     Assert::assertTrue($method->isPublic());
+<<<<<<< .merge_file_bp66Ph
+    Assert::assertTrue($method->isStatic());
+=======
     // XotBaseResource::getFormSchema() e' un metodo d'istanza final: lo schema vero sta nelle classi Schemas\*Form.
     Assert::assertFalse($method->isStatic());
+>>>>>>> .merge_file_0a79aX
     $returnType = $method->getReturnType();
     Assert::assertInstanceOf(ReflectionNamedType::class, $returnType);
     Assert::assertSame('array', $returnType->getName());
@@ -94,7 +98,11 @@ test('activity resource has correct model configuration', function () {
 });
 
 test('activity resource form schema returns array', function () {
+<<<<<<< .merge_file_bp66Ph
+    $formInstance = app(\Modules\Activity\Filament\Resources\ActivityResource\Schemas\ActivityForm::class);
+=======
     $formInstance = app(ActivityForm::class);
+>>>>>>> .merge_file_0a79aX
     $form = $formInstance->getFormSchema();
 
     Assert::assertNotEmpty($form);
@@ -113,7 +121,11 @@ test('activity resource form schema returns array', function () {
 });
 
 test('snapshot resource form schema returns array', function () {
+<<<<<<< .merge_file_bp66Ph
+    $formInstance = app(\Modules\Activity\Filament\Resources\SnapshotResource\Schemas\SnapshotForm::class);
+=======
     $formInstance = app(SnapshotForm::class);
+>>>>>>> .merge_file_0a79aX
     $form = $formInstance->getFormSchema();
 
     Assert::assertNotEmpty($form);
@@ -130,7 +142,11 @@ test('snapshot resource form schema returns array', function () {
 });
 
 test('stored event resource form schema returns array', function () {
+<<<<<<< .merge_file_bp66Ph
+    $formInstance = app(\Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventForm::class);
+=======
     $formInstance = app(StoredEventForm::class);
+>>>>>>> .merge_file_0a79aX
     $form = $formInstance->getFormSchema();
 
     Assert::assertNotEmpty($form);

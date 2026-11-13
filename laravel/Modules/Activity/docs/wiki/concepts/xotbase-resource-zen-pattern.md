@@ -4,7 +4,19 @@ type: concept
 sources: []
 confidence: high
 created: 2026-05-06
+<<<<<<< .merge_file_5i0pEV
+<<<<<<< HEAD
+<<<<<<< HEAD
 updated: 2026-07-16
+=======
+updated: 2026-05-06
+>>>>>>> 0a02158a (.)
+=======
+updated: 2026-05-06
+>>>>>>> 35d8cf69 (Initial commit)
+=======
+updated: 2026-07-16
+>>>>>>> .merge_file_N587kH
 tags: [filament, xotbase, zen-pattern, resource]
 related:
   - ../../Xot/docs/wiki/concepts/xotbase-resourceform-zen-pattern.md
@@ -19,7 +31,18 @@ qmd: "xotbaseresource zen pattern activity"
 
 **Core Rule**: `XotBaseResource` base class owns the `form()` and `table()` methods. Subclasses MUST NOT override them.
 
+<<<<<<< .merge_file_5i0pEV
+<<<<<<< HEAD
+<<<<<<< HEAD
 La frontiera vale per tutto il codice del modulo, inclusi test e fixture: una classe di supporto non puo estendere `Filament\*` direttamente. Deve usare la base dello stesso percorso in `Modules\Xot\Filament\*`, cosi i test esercitano lo stesso contratto architetturale della produzione.
+
+=======
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+=======
+La frontiera vale per tutto il codice del modulo, inclusi test e fixture: una classe di supporto non puo estendere `Filament\*` direttamente. Deve usare la base dello stesso percorso in `Modules\Xot\Filament\*`, cosi i test esercitano lo stesso contratto architetturale della produzione.
+>>>>>>> .merge_file_N587kH
 The base class performs auto-discovery:
 - `form()` → looks for `Schemas/<Model>Form::configure($schema)`
 - `table()` → looks for `Tables/<Model>Table::configure($table)`
@@ -84,7 +107,18 @@ XotBaseResource::table()
 - [ ] `Schemas/<Model>Form.php` exists with `static getFormSchema(): array`
 - [ ] `Tables/<Model>Table.php` exists with `static getTableColumns(): array`
 - [ ] No `->label()` calls (LangServiceProvider owns labels)
+<<<<<<< .merge_file_5i0pEV
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [ ] Test e fixture non estendono classi `Filament\*` direttamente
+=======
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+- [ ] Safe functions preserved (`use function Safe\...`)
+=======
 - [ ] Test e fixture non estendono classi `Filament\*` direttamente- [ ] Safe functions preserved (`use function Safe\...`)
+>>>>>>> .merge_file_N587kH
 
 ## References
 

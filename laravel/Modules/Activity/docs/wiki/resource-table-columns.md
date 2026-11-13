@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_kwjSHb
+=======
 ---
 title: "Resource table columns"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-07
 tags: [docs, activity, wiki]
 qmd: "resource table columns activity"
 ---
+>>>>>>> .merge_file_hyx0wM
 # Resource table columns
 
 ## BMAD story and evidence

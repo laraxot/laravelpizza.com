@@ -11,7 +11,20 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 
+<<<<<<< .merge_file_6gjBxx
+uses(\Modules\Activity\Tests\TestCase::class);
+
+test('Snapshot Business Logic', function () {
+    test('snapshot has correct connection configured', function () {
+        $reflection = new ReflectionClass(Snapshot::class);
+        $property = $reflection->getProperty('connection');
+        $property->setAccessible(true);
+
+        Assert::assertSame('activity', $property->getValue($reflection->newInstanceWithoutConstructor()));
+    });
+=======
 use function Safe\class_uses;
+>>>>>>> .merge_file_1xzpqi
 
 uses(TestCase::class);
 

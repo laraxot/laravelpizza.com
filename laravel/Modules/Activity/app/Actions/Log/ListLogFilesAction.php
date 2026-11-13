@@ -58,7 +58,11 @@ class ListLogFilesAction
 
         usort(
             $files,
+<<<<<<< .merge_file_Fjo7Hz
+            static fn (LogFileData $a, LogFileData $b): int => [$b->modifiedAt, $a->path] <=> [$a->modifiedAt, $b->path],
+=======
             static fn (LogFileData $left, LogFileData $right): int => [$right->modifiedAt, $left->path] <=> [$left->modifiedAt, $right->path],
+>>>>>>> .merge_file_QEIqB7
         );
 
         return array_slice($files, 0, max(1, $limit));

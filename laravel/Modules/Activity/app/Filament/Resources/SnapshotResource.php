@@ -17,31 +17,5 @@ class SnapshotResource extends XotBaseResource
 {
     protected static ?string $model = Snapshot::class;
 
-    #[Override]
-    public function getFormSchemaOld(): array
-    {
-        return [
-            'model_type' => TextInput::make('model_type')->required()->maxLength(255),
-            'model_id' => TextInput::make('model_id')->numeric()->required(),
-            'state' => KeyValue::make('state')->columnSpanFull(),
-            'created_by_type' => TextInput::make('created_by_type')->maxLength(255),
-            'created_by_id' => TextInput::make('created_by_id')->numeric(),
-        ];
-    }
-
-    #[Override]
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
-    #[Override]
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListSnapshots::route('/'),
-            'create' => CreateSnapshot::route('/create'),
-            'edit' => EditSnapshot::route('/{record}/edit'),
-        ];
-    }
+   
 }

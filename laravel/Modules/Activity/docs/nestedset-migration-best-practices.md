@@ -26,6 +26,7 @@ return new class extends XotBaseMigration
     protected ?string $model_class = \Modules\Activity\Models\ActivityCategory::class;
 
     public function up(): void
+    {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
 
@@ -53,44 +54,81 @@ return new class extends XotBaseMigration
             }
 
             $this->updateTimestamps($table, true);
+        });
+    }
 };
 ```
 
 ## Pattern per Activity Types
 
+```php
+<?php
 
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = \Modules\Activity\Models\ActivityType::class;
 
+    public function up(): void
+    {
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->id();
 
             // Campi per tipi di attività
+            $table->string('name');
             $table->string('code')->unique();
+            $table->text('description')->nullable();
 
             // NestedSet per gerarchia tipi
+            NestedSet::columns($table);
 
             // Configurazioni per tipi
             $table->json('settings')->nullable();
             $table->boolean('requires_approval')->default(false);
             $table->boolean('is_system')->default(false);
 
+            $table->timestamps();
+        });
+    }
+};
+```
 
 ## Pattern per Workflow States
 
+```php
+<?php
 
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = \Modules\Activity\Models\WorkflowState::class;
 
+    public function up(): void
+    {
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->id();
 
             // Campi per stati workflow
+            $table->string('name');
+            $table->string('code')->unique();
+            $table->text('description')->nullable();
 
             // NestedSet per gerarchia stati
+            NestedSet::columns($table);
 
             // Configurazioni workflow
             $table->json('transitions')->nullable()->comment('Transizioni possibili da questo stato');
             $table->boolean('is_final')->default(false);
             $table->boolean('is_initial')->default(false);
 
+            $table->timestamps();
+        });
+    }
+};
+```
 
 ## Integrazione con Modelli Activity
 
+```php
+<?php
 
 namespace Modules\Activity\Models;
 
@@ -98,6 +136,7 @@ use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 
 class ActivityCategory extends Model
+{
     use NodeTrait;
 
     protected $fillable = [
@@ -115,13 +154,20 @@ class ActivityCategory extends Model
         'metadata' => 'array',
         'is_active' => 'boolean',
         'sort_order' => 'integer',
+    ];
 
     // Scopes specifici per Activity
     public function scopeActive($query)
+    {
         return $query->where('is_active', true);
+    }
 
     public function scopeOrdered($query)
+    {
         return $query->orderBy('sort_order')->orderBy('name');
+    }
+}
+```
 
 ## Best Practices Specifiche per Activity
 
@@ -133,6 +179,7 @@ class ActivityCategory extends Model
 
 ### 2. Metadata Flessibili
 
+```php
 // Esempio di metadata per ActivityCategory
 $metadata = [
     'default_duration' => 60, // minuti
@@ -141,48 +188,19 @@ $metadata = [
         'email' => true,
         'sms' => false
     ]
+];
+```
 
 ### 3. Indici per Performance
 
+```php
 // Indici specifici per query Activity
 $table->index(['parent_id', 'is_active']);
 $table->index(['slug', 'is_active']);
 $table->index('sort_order');
+```
 
 ## Riferimenti
 
 - [Documentazione principale](/docs/migration/nestedset-best-practices.md)
 - [Activity Module Architecture](/docs/architecture/activity-module.md)
-# NestedSet Migration Best Practices — DOCUMENTO LEGACY
-
-> **ATTENZIONE**: Questo documento è **legacy**. Il progetto ha completato la migrazione
-> da `kalnoy/nestedset` a `staudenmeir/laravel-adjacency-list` (marzo 2026).
->
-> Il pacchetto `kalnoy/nestedset` è stato **rimosso** dal progetto.
-
-## Documento Aggiornato
-
-Per le best practices attuali sulle strutture ad albero, consultare:
-
-- **[Adjacency List Migration — Filosofia Completa](../../Xot/docs/adjacency-list-migration.md)**
-- **[Adjacency List Best Practices](../../Xot/docs/best-practices/adjacency-list-best-practices.md)**
-- **[BaseTreeModel Documentation](../../Xot/docs/models/base-tree-model.md)**
-
-## Regola Attuale
-
-Per tutti i nuovi modelli ad albero:
-
-use Modules\Xot\Models\BaseTreeModel;
-
-class MyTreeModel extends BaseTreeModel
-    // Tutto il tree functionality è ereditato automaticamente
-
-**NON usare** `NodeTrait`, `NestedSet::columns()`, o colonne `_lft`/`_rgt`.
-
-## Cronologia
-
-- **Pre-2025**: Progetto usava `kalnoy/nestedset`
-- **2025**: Migrazione progressiva a `staudenmeir/laravel-adjacency-list`
-- **2026-03**: Rimozione completa di `kalnoy/nestedset`
-
-*Ultimo aggiornamento: marzo 2026*

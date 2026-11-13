@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_1AZids
+=======
 ---
 title: "Login Test Implementation Summary - SaluteOra Project"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-23
 tags: [docs, activity]
 qmd: "login test implementation summary - saluteora project activity"
 ---
+>>>>>>> .merge_file_ZZeFfS
 # Login Test Implementation Summary - SaluteOra Project
 
 ## 🎊 Mission Accomplished: Complete Login Testing Suite
@@ -181,9 +184,15 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 ## 🔗 Links & References
 
 ### **Project Documentation**
+<<<<<<< .merge_file_1AZids
+- [LoginTest.php](../laravel/Modules/Cms/tests/Feature/Auth/LoginTest.php) - Main test file
+- [Implementation Guide](../laravel/Modules/Cms/docs/tests/login-test-implementation.md) - Complete documentation
+- [LoginWidget](../laravel/Modules/User/app/Filament/Widgets/LoginWidget.php) - Widget under test
+=======
 - [LoginTest.php](../../Cms/tests/Feature/Auth/LoginTest.php) - Main test file
 - [Implementation Guide](../../Cms/docs/tests/login-test-implementation.md) - Complete documentation
 - [LoginWidget](../../User/app/Filament/Widgets/LoginWidget.php) - Widget under test
+>>>>>>> .merge_file_ZZeFfS
 - [Login Page](../laravel/Themes/One/resources/views/pages/auth/login.blade.php) - UI page
 
 ### **Related Components**

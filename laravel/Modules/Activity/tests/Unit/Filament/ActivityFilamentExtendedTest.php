@@ -16,12 +16,18 @@ use Modules\Activity\Filament\Resources\SnapshotResource\Tables\SnapshotsTable;
 use Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventForm;
 use Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventInfolist;
 use Modules\Activity\Filament\Resources\StoredEventResource\Tables\StoredEventsTable;
+<<<<<<< .merge_file_FH59AU
+use PHPUnit\Framework\Assert;
+use ReflectionMethod;
+
+=======
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionMethod;
 
 uses(TestCase::class);
 
+>>>>>>> .merge_file_npv4lQ
 afterEach(function (): void {
     Mockery::close();
 });
@@ -31,14 +37,22 @@ test('EditActivity espone DeleteAction in header', function (): void {
     $method->setAccessible(true);
 
     /** @var array<string, DeleteAction> $actions */
+<<<<<<< .merge_file_FH59AU
+    $actions = $method->invoke(new EditActivity());
+=======
     $actions = $method->invoke(new EditActivity);
+>>>>>>> .merge_file_npv4lQ
 
     Assert::assertArrayHasKey('delete', $actions);
     Assert::assertInstanceOf(DeleteAction::class, $actions['delete']);
 });
 
 test('ActivitiesTable espone colonne complete', function (): void {
+<<<<<<< .merge_file_FH59AU
+    $tabella = new ActivitiesTable();
+=======
     $tabella = new ActivitiesTable;
+>>>>>>> .merge_file_npv4lQ
 
     Assert::assertSame(
         [
@@ -51,7 +65,11 @@ test('ActivitiesTable espone colonne complete', function (): void {
 });
 
 test('ActivityInfolist espone schema infolist', function (): void {
+<<<<<<< .merge_file_FH59AU
+    $instance = app(\Modules\Activity\Filament\Resources\ActivityResource\Schemas\ActivityInfolist::class);
+=======
     $instance = app(ActivityInfolist::class);
+>>>>>>> .merge_file_npv4lQ
     $schema = $instance->getInfolistSchema();
 
     Assert::assertSame(
@@ -64,7 +82,11 @@ test('ActivityInfolist espone schema infolist', function (): void {
 });
 
 test('SnapshotsTable espone colonne attese', function (): void {
+<<<<<<< .merge_file_FH59AU
+    $tabella = new SnapshotsTable();
+=======
     $tabella = new SnapshotsTable;
+>>>>>>> .merge_file_npv4lQ
 
     Assert::assertSame(
         ['id', 'aggregate_uuid', 'aggregate_version', 'state', 'created_at', 'updated_at'],
@@ -73,15 +95,26 @@ test('SnapshotsTable espone colonne attese', function (): void {
 });
 
 test('SnapshotForm e SnapshotInfolist espongono schema', function (): void {
+<<<<<<< .merge_file_FH59AU
+    Assert::assertSame(['aggregate_uuid', 'aggregate_version', 'state'], array_keys(app(\Modules\Activity\Filament\Resources\SnapshotResource\Schemas\SnapshotForm::class)->getFormSchema()));
+    Assert::assertSame(
+        ['id', 'model_type', 'model_id', 'created_by_type', 'created_by_id', 'created_at'],
+        array_keys(app(\Modules\Activity\Filament\Resources\SnapshotResource\Schemas\SnapshotInfolist::class)->getInfolistSchema()),
+=======
     Assert::assertSame(['aggregate_uuid', 'aggregate_version', 'state'], array_keys(app(SnapshotForm::class)->getFormSchema()));
     Assert::assertSame(
         ['id', 'model_type', 'model_id', 'created_by_type', 'created_by_id', 'created_at'],
         array_keys(app(SnapshotInfolist::class)->getInfolistSchema()),
+>>>>>>> .merge_file_npv4lQ
     );
 });
 
 test('StoredEventsTable StoredEventForm StoredEventInfolist espongono schema', function (): void {
+<<<<<<< .merge_file_FH59AU
+    $tabella = new StoredEventsTable();
+=======
     $tabella = new StoredEventsTable;
+>>>>>>> .merge_file_npv4lQ
     Assert::assertSame(
         ['id', 'event_class', 'properties', 'created_at', 'updated_at'],
         array_keys($tabella->getTableColumns()),
@@ -89,11 +122,19 @@ test('StoredEventsTable StoredEventForm StoredEventInfolist espongono schema', f
 
     Assert::assertSame(
         ['event_class', 'event_properties', 'aggregate_uuid', 'aggregate_version', 'meta_data', 'created_at'],
+<<<<<<< .merge_file_FH59AU
+        array_keys(app(\Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventForm::class)->getFormSchema()),
+=======
         array_keys(app(StoredEventForm::class)->getFormSchema()),
+>>>>>>> .merge_file_npv4lQ
     );
 
     Assert::assertSame(
         ['id', 'event_class', 'aggregate_uuid', 'aggregate_version', 'created_at'],
+<<<<<<< .merge_file_FH59AU
+        array_keys(app(\Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventInfolist::class)->getInfolistSchema()),
+=======
         array_keys(app(StoredEventInfolist::class)->getInfolistSchema()),
+>>>>>>> .merge_file_npv4lQ
     );
 });

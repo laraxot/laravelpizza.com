@@ -1,13 +1,20 @@
 ---
+<<<<<<< .merge_file_Vy6xSd
+title: "Epics — Activity"
+=======
 title: "Epics: Activity"
+>>>>>>> .merge_file_FrcvYu
 type: epics
 module: Activity
 related:
   - ./livewire-inventory.md
+<<<<<<< .merge_file_Vy6xSd
+=======
 status: draft
 updated: 2026-10-07
 tags: [docs, activity, bmad]
 qmd: "epics activity activity"
+>>>>>>> .merge_file_FrcvYu
 ---
 
 # Epics Activity

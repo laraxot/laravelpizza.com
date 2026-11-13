@@ -66,9 +66,15 @@ status: draft
 
 - Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt) _(target mancante, verificato 2026-10-14)_
 - GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
+<<<<<<< HEAD
+=======
 
 ---
 title: "Activity Log"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4fb998e0 (.)
 type: log
 module: Activity
 tags: [activity, phpstan, pest, qmd]
@@ -79,7 +85,9 @@ issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/328"
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/329"
+---
 
+---
 
 ## [2026-06-13] phpstan | Gate chef — 7 file Actions → Assert
 
@@ -120,6 +128,11 @@ discussions:
 
 ---
 title: "Activity Log"
+<<<<<<< HEAD
+=======
+>>>>>>> 77d3d692 (.)
+=======
+>>>>>>> 4fb998e0 (.)
 module: "Activity"
 ---
 
@@ -152,6 +165,10 @@ module: "Activity"
 - 2026-06-10: activity_log consolidato in 2026_06_10_140000_create_activity_table.php; duplicate in _bak/
 
 - 2026-06-10: activity_log — consolidate add/fix/update in 141000_create_activity_table; anti-pattern in _bak/
+<<<<<<< .merge_file_DCzJGY
+>>>>>>> 35d8cf69 (Initial commit)
+=======
+>>>>>>> .merge_file_yJbfCX
 
 
 ## 2026-09-20 — Pagina Log nel pannello Activity (`/activity/admin/log-viewer`)
@@ -161,7 +178,11 @@ module: "Activity"
 - La risorsa `/xot/admin/logs` (modulo Xot) non è stata toccata: spostarla o rimuoverla resta una decisione del team.
 - Secondo audit alle linee guida: story anche in Activity, registro `sprint-status.yaml` aggiornato; scostamenti aperti (CSS in linea, TestCase, PHPMD/PHPInsights, chiavi lang) elencati nel concept.
 - Classi base di Xot: usata `XotBasePage` per `LogViewer`; per Action, Data ed eccezione non c'è una base applicabile (vedi il concept). Unico scostamento: i test usano `Tests\TestCase` della root e non il `TestCase` del modulo (manca `database/test_data.sqlite`).
+<<<<<<< .merge_file_DCzJGY
+- Dettagli: [concepts/log-viewer-page-no-ssh.md](concepts/log-viewer-page-no-ssh.md), story [quaeris-admin-log-viewer-no-ssh](../../../Quaeris/docs/stories/quaeris-admin-log-viewer-no-ssh.md).
+=======
 - Dettagli: [concepts/log-viewer-page-no-ssh.md](concepts/log-viewer-page-no-ssh.md); la story di origine (`quaeris-admin-log-viewer-no-ssh`) sta nel repo di un altro progetto e non esiste qui.
+>>>>>>> .merge_file_yJbfCX
 
 ---
 
@@ -169,4 +190,8 @@ module: "Activity"
 - `app/Filament/Pages/Concerns/CanPaginate.php`: added `@template TModel of Model` to `paginateQuery()` so callers passing `Builder<Activity>` satisfy the `Builder<Model>` parameter (template covariance).
 - `tests/Fixtures/CanPaginateHarness.php` + `tests/fixtures/CanPaginateHarness.php`: aligned `exposePaginateQuery()` PHPDoc to `Builder<Model>` (removed own `@template` that shadowed the trait's).
 - `app/Filament/Pages/ListLogActivities.php`: added `@var LengthAwarePaginator<int, Activity>` after the instanceof check to satisfy return-type covariance.
+<<<<<<< .merge_file_DCzJGY
 - Cleared 6 `argument.type` / `return.type` errors.
+=======
+- Cleared 6 `argument.type` / `return.type` errors.
+>>>>>>> .merge_file_yJbfCX

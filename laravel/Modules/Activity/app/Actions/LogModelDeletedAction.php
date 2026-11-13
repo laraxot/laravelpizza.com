@@ -18,7 +18,11 @@ class LogModelDeletedAction
     use QueueableAction;
 
     public function __construct(
+<<<<<<< .merge_file_RiHGOy
+        public Model $model,
+=======
         public ?Model $model = null,
+>>>>>>> .merge_file_DhF2Bt
         public ?Model $user = null,
     ) {
         if ($user !== null) {
@@ -26,21 +30,32 @@ class LogModelDeletedAction
         }
     }
 
+<<<<<<< .merge_file_RiHGOy
+    public function execute(): Activity
+    {
+=======
     public function execute(?Model $model = null): Activity
     {
         $model = $model ?? $this->model;
         if (! $model instanceof Model) {
             throw new \InvalidArgumentException('A model is required');
         }
+>>>>>>> .merge_file_DhF2Bt
         // PHPStan Level 10: Explicit type guard for nullable Model
         $user = $this->user instanceof Model ? $this->user : null;
 
         $action = new LogActivityAction(
             type: 'deleted',
             user: $user,
+<<<<<<< .merge_file_RiHGOy
+            subject: $this->model,
+            properties: ['attributes' => $this->model->getAttributes()],
+            description: sprintf('%s deleted', class_basename($this->model))
+=======
             subject: $model,
             properties: ['attributes' => $model->getAttributes()],
             description: sprintf('%s deleted', class_basename($model))
+>>>>>>> .merge_file_DhF2Bt
         );
 
         return $action->execute();

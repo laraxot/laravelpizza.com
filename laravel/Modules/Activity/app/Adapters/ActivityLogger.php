@@ -21,7 +21,11 @@ use Modules\Activity\Actions\Query\GetModelActivitiesAction;
 use Modules\Activity\Actions\Query\GetRecentActivitiesAction;
 use Modules\Activity\Actions\Query\GetUserActivitiesAction;
 use Modules\Activity\Models\Activity;
+<<<<<<< .merge_file_PhlRdX
+use Modules\User\Models\User;
+=======
 use Modules\Xot\Contracts\UserContract;
+>>>>>>> .merge_file_oNAe2Y
 
 /**
  * Coordinator — delegates to single-purpose QueueableActions (not an Action: multi-method API).
@@ -38,13 +42,13 @@ class ActivityLogger
         ?array $properties = null,
         ?string $description = null,
     ): Activity {
-        if ($user !== null && (! $user instanceof UserContract || ! $user instanceof Model)) {
-            throw new InvalidArgumentException('User must implement UserContract');
+        if ($user !== null && ! $user instanceof User) {
+            throw new InvalidArgumentException('User must be an instance of User');
         }
 
         $activity = (new LogActivityAction(
             type: $type,
-            user: $user instanceof Model ? $user : null,
+            user: $user instanceof User ? $user : null,
             subject: $subject,
             properties: $properties,
             description: $description,
@@ -58,27 +62,39 @@ class ActivityLogger
         return $activity;
     }
 
-    public function created(Model $model, ?UserContract $user = null): Activity
+    public function created(Model $model, ?User $user = null): Activity
     {
+<<<<<<< .merge_file_PhlRdX
+        return (new LogModelCreatedAction($model, $user))->execute();
+=======
         return (new LogModelCreatedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_oNAe2Y
     }
 
-    public function updated(Model $model, ?UserContract $user = null): Activity
+    public function updated(Model $model, ?User $user = null): Activity
     {
+<<<<<<< .merge_file_PhlRdX
+        return (new LogModelUpdatedAction($model, $user))->execute();
+=======
         return (new LogModelUpdatedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_oNAe2Y
     }
 
-    public function deleted(Model $model, ?UserContract $user = null): Activity
+    public function deleted(Model $model, ?User $user = null): Activity
     {
+<<<<<<< .merge_file_PhlRdX
+        return (new LogModelDeletedAction($model, $user))->execute();
+=======
         return (new LogModelDeletedAction($model, $user instanceof Model ? $user : null))->execute();
+>>>>>>> .merge_file_oNAe2Y
     }
 
-    public function login(UserContract $user): Activity
+    public function login(User $user): Activity
     {
         return (new LogUserLoginAction($user))->execute();
     }
 
-    public function logout(UserContract $user): Activity
+    public function logout(User $user): Activity
     {
         return (new LogUserLogoutAction($user))->execute();
     }
@@ -96,7 +112,7 @@ class ActivityLogger
     }
 
     /** @return Collection<int, Activity> */
-    public function getUserActivities(UserContract $user, int $limit = 50): Collection
+    public function getUserActivities(User $user, int $limit = 50): Collection
     {
         return app(GetUserActivitiesAction::class)->execute($user, $limit);
     }
@@ -127,7 +143,7 @@ class ActivityLogger
     /**
      * @return array{total: int, by_type: array<string, int>, today: int, this_week: int, this_month: int}
      */
-    public function getStatistics(?UserContract $user = null): array
+    public function getStatistics(?User $user = null): array
     {
         return app(GetActivityStatisticsAction::class)->execute($user);
     }

@@ -1,11 +1,18 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_6YUnaI
+
+use Modules\Activity\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
+
+=======
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 
 uses(TestCase::class);
 
+>>>>>>> .merge_file_sAmAWt
 it('tests that TestCase class structure is correct', function () {
     /** @var TestCase $this */
     $this->assertInstanceOf(TestCase::class, $this);

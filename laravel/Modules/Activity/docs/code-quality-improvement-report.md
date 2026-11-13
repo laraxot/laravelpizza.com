@@ -1,5 +1,9 @@
 ---
+<<<<<<< .merge_file_Gbufn0
+title: "Code Quality Improvement Report — Activity"
+=======
 title: "Code Quality Improvement Report: Activity"
+>>>>>>> .merge_file_XYSwgZ
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "Activity"
@@ -13,10 +17,16 @@ discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/47"
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
+<<<<<<< .merge_file_Gbufn0
+---
+
+# Code Quality Improvement Report — Activity
+=======
 status: draft
 ---
 
 # Code Quality Improvement Report: Activity
+>>>>>>> .merge_file_XYSwgZ
 
 > Baseline statica riproducibile per orientare il miglioramento. I conteggi sono segnali, non sostituiscono PHPStan, Pest o la review del flusso reale.
 
@@ -46,25 +56,41 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
+<<<<<<< .merge_file_Gbufn0
+### P0 — baseline affidabile
+=======
 ### P0: baseline affidabile
+>>>>>>> .merge_file_XYSwgZ
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
+<<<<<<< .merge_file_Gbufn0
+### P1 — rischio di regressione
+=======
 ### P1: rischio di regressione
+>>>>>>> .merge_file_XYSwgZ
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
+<<<<<<< .merge_file_Gbufn0
+### P2 — manutenibilità
+=======
 ### P2: manutenibilità
+>>>>>>> .merge_file_XYSwgZ
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
+<<<<<<< .merge_file_Gbufn0
+### P3 — continuità
+=======
 ### P3: continuità
+>>>>>>> .merge_file_XYSwgZ
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.
 - Aggiornare il report solo con metriche ripetibili e tracciamento pertinente.

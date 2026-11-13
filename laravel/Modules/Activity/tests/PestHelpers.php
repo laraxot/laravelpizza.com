@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_huBUxI
+use Modules\Activity\Database\Factories\ActivityFactory;
+use Modules\Activity\Models\Activity;
+=======
 use Mockery\CompositeExpectation;
 use Mockery\Expectation;
 use Modules\Activity\Database\Factories\ActivityFactory;
 use Modules\Activity\Models\Activity;
 use Modules\User\Contracts\UserContract;
+>>>>>>> .merge_file_N9ywhE
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 
@@ -22,7 +27,11 @@ use Modules\User\Models\User;
 function activityCreateUser(array $attributes = []): User
 {
     $user = UserFactory::new()->createOne($attributes);
+<<<<<<< .merge_file_huBUxI
+    assert($user instanceof User);
+=======
     assert($user instanceof UserContract);
+>>>>>>> .merge_file_N9ywhE
 
     return $user;
 }
@@ -37,6 +46,8 @@ function activityCreateActivity(array $attributes = []): Activity
 
     return $activity;
 }
+<<<<<<< .merge_file_huBUxI
+=======
 
 /**
  * Mockery 1.6 returns a CompositeExpectation from shouldReceive()/allows(), which forwards
@@ -55,3 +66,4 @@ function mockeryExpect(object $expectation): Expectation
 
     return $expectation;
 }
+>>>>>>> .merge_file_N9ywhE

@@ -11,7 +11,7 @@ use Modules\Activity\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('LogActivityAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
@@ -43,9 +43,9 @@ test('LogActivityAction handles null user', function () {
 test('LogUserLoginAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
 
-    $action = new LogUserLoginAction;
+    $action = new LogUserLoginAction($user);
 
-    $activity = $action->execute($user);
+    $activity = $action->execute();
 
     Assert::assertSame('login', $activity->event);
 });
@@ -53,9 +53,9 @@ test('LogUserLoginAction can execute', function () {
 test('LogUserLogoutAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
 
-    $action = new LogUserLogoutAction;
+    $action = new LogUserLogoutAction($user);
 
-    $activity = $action->execute($user);
+    $activity = $action->execute();
 
     Assert::assertSame('logout', $activity->event);
 });
@@ -63,9 +63,9 @@ test('LogUserLogoutAction can execute', function () {
 test('LogModelCreatedAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
 
-    $action = new LogModelCreatedAction;
+    $action = new LogModelCreatedAction($user);
 
-    $activity = $action->execute($user);
+    $activity = $action->execute();
 
     Assert::assertSame('created', $activity->event);
 });
@@ -73,9 +73,9 @@ test('LogModelCreatedAction can execute', function () {
 test('LogModelUpdatedAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
 
-    $action = new LogModelUpdatedAction;
+    $action = new LogModelUpdatedAction($user);
 
-    $activity = $action->execute($user);
+    $activity = $action->execute();
 
     Assert::assertSame('updated', $activity->event);
 });
@@ -83,9 +83,9 @@ test('LogModelUpdatedAction can execute', function () {
 test('LogModelDeletedAction can execute', function () {
     $user = UserFactory::new()->createOne(['name' => 'Test User', 'password' => 'password']);
 
-    $action = new LogModelDeletedAction;
+    $action = new LogModelDeletedAction($user);
 
-    $activity = $action->execute($user);
+    $activity = $action->execute();
 
     Assert::assertSame('deleted', $activity->event);
 });

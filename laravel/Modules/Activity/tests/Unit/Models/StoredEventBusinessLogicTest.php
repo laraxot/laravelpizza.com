@@ -10,6 +10,26 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder;
 
+<<<<<<< .merge_file_PIJF3v
+uses(\Modules\Activity\Tests\TestCase::class);
+
+describe('StoredEvent Business Logic', function (): void {
+    test('stored event has correct connection configured', function (): void {
+        $storedEvent = new StoredEvent();
+
+        Assert::assertSame('activity', $storedEvent->getConnectionName());
+    });
+
+    test('stored event has correct table configured', function (): void {
+        $storedEvent = new StoredEvent();
+
+        Assert::assertSame('stored_events', $storedEvent->getTable());
+    });
+
+    test('stored event has expected fillable fields for event sourcing', function (): void {
+        $storedEvent = new StoredEvent();
+        $expectedFillable = [
+=======
 use function Safe\class_uses;
 
 uses(TestCase::class);
@@ -32,6 +52,7 @@ final class StoredEventBusinessLogicTest extends TestCase
     public function test_exposes_expected_fillable_attributes_for_event_payload(): void
     {
         $expected = [
+>>>>>>> .merge_file_jBDpVF
             'id',
             'aggregate_uuid',
             'aggregate_version',

@@ -123,7 +123,14 @@ public function searchActivities($searchTerm, $filters = [])
 {
     $cacheKey = "activity_search_" . md5($searchTerm . serialize($filters));
     
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+>>>>>>> 0a02158a (.)
+=======
+    
+>>>>>>> 35d8cf69 (Initial commit)
     return Cache::remember($cacheKey, 300, function() use ($searchTerm, $filters) {
         $query = ActivityLog::with(['causer', 'subject'])
             ->where(function($q) use ($searchTerm) {
@@ -223,7 +230,11 @@ CREATE INDEX idx_activity_log_causer_type ON activity_log(causer_type);
 ## 📚 Related Documentation
 
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
+<<<<<<< .merge_file_3aTrxe
+- [bottlenecks.md](./bottlenecks.md)
+=======
 - [bottlenecks.md](../bottlenecks.md)
+>>>>>>> .merge_file_q1DrfG
 - [event-sourcing.md](./event-sourcing.md)
 
 ## 🎯 Implementation Checklist
@@ -289,6 +300,15 @@ CREATE INDEX idx_activity_log_causer_type ON activity_log(causer_type);
 3. **Medium-term**: Implement systematic optimizations
 4. **Long-term**: Advanced performance strategies
 
+<<<<<<< .merge_file_3aTrxe
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+This document provides the roadmap for resolving the performance issues in the Activity module while maintaining data integrity and functionality.
+=======
+>>>>>>> .merge_file_q1DrfG
 # Activity Log Optimization - Activity Module
 
 ## 🚨 Critical Issues Identified
@@ -572,4 +592,8 @@ CREATE INDEX idx_activity_log_causer_type ON activity_log(causer_type);
 3. **Medium-term**: Implement systematic optimizations
 4. **Long-term**: Advanced performance strategies
 
+<<<<<<< HEAD
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
 This document provides the roadmap for resolving the performance issues in the Activity module while maintaining data integrity and functionality.

@@ -1,0 +1,9 @@
+documentation-2024-03-27.md
+test-14.md
+test-14-02-2024.md
+test2024-12-04.md
+2024-03-27.md
+
+# No numbered .md duplicates (rule: docs/wiki/rules/no-numbered-filenames.md)
+*-[0-9].md
+*-[0-9][0-9].md

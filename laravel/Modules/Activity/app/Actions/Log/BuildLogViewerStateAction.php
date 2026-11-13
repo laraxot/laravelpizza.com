@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Activity\Actions\Log;
 
 use Modules\Activity\Datas\LogViewerStateData;
+<<<<<<< .merge_file_HY7vQ0
+=======
 use Modules\Activity\Enums\LogLevelEnum;
+>>>>>>> .merge_file_ts1VEZ
 use Modules\Activity\Exceptions\InvalidLogFileException;
 use RuntimeException;
 use Safe\Exceptions\SafeExceptionInterface;
@@ -24,11 +27,17 @@ class BuildLogViewerStateAction
 {
     use QueueableAction;
 
+<<<<<<< .merge_file_HY7vQ0
+    public const array LEVELS = ['EMERGENCY', 'ALERT', 'CRITICAL', 'ERROR', 'WARNING', 'NOTICE', 'INFO', 'DEBUG'];
+
+    /** Finestre di lettura selezionabili, in KB. */
+=======
     /**
      * Finestre di lettura selezionabili, in KB.
      *
      * @var list<int>
      */
+>>>>>>> .merge_file_ts1VEZ
     public const array WINDOW_OPTIONS_KB = [128, 256, 512, 1024, 2048, 4096];
 
     public const int DEFAULT_WINDOW_KB = 256;
@@ -66,16 +75,25 @@ class BuildLogViewerStateAction
                 $entries = [];
                 $total = 0;
                 $tail = null;
+<<<<<<< .merge_file_HY7vQ0
+                $modifiedAt = null;
+                $error = (string) __('activity::log_viewer.messages.file_unavailable');
+=======
                 // $modifiedAt resta null: filemtime() e' l'ultima istruzione del try e lancia prima di assegnare.
                 $message = __('activity::log_viewer.messages.file_unavailable');
                 $error = is_string($message) ? $message : null;
+>>>>>>> .merge_file_ts1VEZ
             }
         }
 
         return new LogViewerStateData(
             files: $files,
             tree: app(BuildLogFileTreeAction::class)->execute($files),
+<<<<<<< .merge_file_HY7vQ0
+            levels: self::LEVELS,
+=======
             levels: LogLevelEnum::cases(),
+>>>>>>> .merge_file_ts1VEZ
             windows: self::WINDOW_OPTIONS_KB,
             entries: $entries,
             total: $total,
@@ -97,8 +115,14 @@ class BuildLogViewerStateAction
 
     private function validLevel(string $level): string
     {
+<<<<<<< .merge_file_HY7vQ0
+        $level = mb_strtoupper(trim($level));
+
+        return in_array($level, self::LEVELS, true) ? $level : '';
+=======
         $levelEnum = LogLevelEnum::tryFrom(mb_strtoupper(trim($level)));
 
         return $levelEnum instanceof LogLevelEnum ? $levelEnum->value : '';
+>>>>>>> .merge_file_ts1VEZ
     }
 }

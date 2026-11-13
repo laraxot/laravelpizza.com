@@ -5,22 +5,35 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
+<<<<<<< .merge_file_vY4JAi
+  - ../../docs/wiki/rules/on-demand-pattern.md
+  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+=======
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 status: draft
 qmd: "on-demand pattern   module **activity** activity"
+>>>>>>> .merge_file_espFVC
 ---
 
 # On-Demand Pattern — Module **Activity**
 
+<<<<<<< .merge_file_vY4JAi
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
+=======
 **Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+>>>>>>> .merge_file_espFVC
 
 ## Principio
 
 Questo Module segue il **pattern on-demand** per rules, skills, commands e memories:
 
 - ✅ **Vivono solo nel wiki** — ../../docs/wiki/
+<<<<<<< .merge_file_vY4JAi
+- ✅ **Caricati on-demand** — via trigger map o 
+=======
 - ✅ **Caricati on-demand** — via trigger map o
+>>>>>>> .merge_file_espFVC
 - ❌ **NON pre-caricati** — mai embeddare nei bootstrap files
 - ❌ **Nessuna duplicazione** — wiki = sorgente di verità unica
 
@@ -88,9 +101,15 @@ qmd search "<topic>"
 
 ## Riferimenti
 
+<<<<<<< .merge_file_vY4JAi
+- [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
 - [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> .merge_file_espFVC
 - [Module Wiki Index](./wiki/index.md)
 
 ---

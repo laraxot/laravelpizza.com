@@ -17,7 +17,7 @@ use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('activity event sourcing lifecycle works correctly', function () {
     $user = UserFactory::new()->createOne();
@@ -88,6 +88,7 @@ test('activity can be queried with complex scopes', function () {
 
     $user1Activities = Activity::query()
         ->where('causer_type', User::class)
+        ->where('causer_id', $user1->id)
         ->whereKey([$activity1->id, $activity3->id])
         ->get();
 
@@ -97,15 +98,6 @@ test('activity can be queried with complex scopes', function () {
 
     Assert::assertCount(2, $securityActivities);
     Assert::assertCount(2, $user1Activities);
-
-    // causer_id può essere uuid/string o int a seconda dello schema (vedi migration fix_causer_id_to_uuid)
-    // quindi validiamo solo quando comparabile.
-    foreach ($user1Activities as $activity) {
-        \assert($activity instanceof Activity);
-        if ($activity->causer_id === (string) $user1->id || $activity->causer_id === $user1->id) {
-            $this->assertContains($activity->causer_id, [(string) $user1->id, $user1->id]);
-        }
-    }
 
     /** @var Activity|null $firstLoginActivity */
     $firstLoginActivity = $loginActivities->first();
@@ -300,7 +292,7 @@ test('activity properties support complex nested structures', function () {
 
 test('snapshot state maintains data integrity with large datasets', function () {
     $largeState = [
-        'users' => array_map(fn (int $i): array => [
+        'users' => array_map(fn ($i) => [
             'id' => $i,
             'name' => "User {$i}",
             'email' => "user{$i}@example.com",
@@ -349,7 +341,7 @@ test('stored event handles complex event properties with nested arrays', functio
     $complexEvent = [
         'order' => [
             'id' => 12345,
-            'items' => array_map(fn (int $i): array => [
+            'items' => array_map(fn ($i) => [
                 'product_id' => $i,
                 'name' => "Product {$i}",
                 'quantity' => rand(1, 5),

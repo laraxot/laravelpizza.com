@@ -1,9 +1,16 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_Q6NqeW
+
+use Illuminate\Support\Facades\File;
+use Modules\Activity\Actions\Log\ReadLogTailAction;
+use Tests\TestCase;
+=======
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ReadLogTailAction;
 use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_TZasYH
 
 uses(TestCase::class);
 

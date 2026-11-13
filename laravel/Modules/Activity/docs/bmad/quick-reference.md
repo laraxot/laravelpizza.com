@@ -1,10 +1,19 @@
 ---
+<<<<<<< .merge_file_CHG86D
+title: "Activity — BMAD Quick Reference"
+=======
 title: "Activity: BMAD Quick Reference"
+>>>>>>> .merge_file_8t1ByP
 description: "Comandi rapidi BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
+<<<<<<< .merge_file_CHG86D
+---
+
+# Activity — BMAD Quick Reference
+=======
 type: note
 status: draft
 updated: 2026-10-07
@@ -13,6 +22,7 @@ qmd: "activity   bmad quick reference activity"
 ---
 
 # Activity: BMAD Quick Reference
+>>>>>>> .merge_file_8t1ByP
 
 ## Comandi Rapidi
 

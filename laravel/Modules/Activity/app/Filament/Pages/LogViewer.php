@@ -118,12 +118,20 @@ class LogViewer extends XotBasePage
     {
         return [
             'refresh' => Action::make('refresh')
+<<<<<<< .merge_file_QL2KNT
+                ->label((string) __('activity::log_viewer.actions.refresh.label'))
+=======
                 ->label($this->translation('activity::log_viewer.actions.refresh.label'))
+>>>>>>> .merge_file_FLeT0N
                 ->icon('heroicon-o-arrow-path')
                 ->color('gray')
                 ->action(static fn (): null => null),
             'download' => Action::make('download')
+<<<<<<< .merge_file_QL2KNT
+                ->label((string) __('activity::log_viewer.actions.download.label'))
+=======
                 ->label($this->translation('activity::log_viewer.actions.download.label'))
+>>>>>>> .merge_file_FLeT0N
                 ->icon('heroicon-o-arrow-down-tray')
                 ->url(fn (): string => $this->getDownloadUrl())
                 ->disabled(fn (): bool => $this->file === ''),
@@ -146,6 +154,8 @@ class LogViewer extends XotBasePage
         return $files[0]->path ?? '';
     }
 
+<<<<<<< .merge_file_QL2KNT
+=======
     private function translation(string $key): string
     {
         $translation = __($key);
@@ -153,6 +163,7 @@ class LogViewer extends XotBasePage
         return is_string($translation) ? $translation : $key;
     }
 
+>>>>>>> .merge_file_FLeT0N
     /**
      * Cartelle aperte all'inizio: quelle di primo livello e tutte quelle che contengono il file scelto,
      * cosi' il file selezionato e' sempre visibile nell'albero.
