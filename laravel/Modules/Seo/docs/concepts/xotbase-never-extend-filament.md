@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Seo — mai Filament*, sempre XotBase*"
+title: "Seo — mai Filament\*, sempre XotBase*"
 type: concept
 module: Seo
 tags: [seo, filament, xotbase, architecture]

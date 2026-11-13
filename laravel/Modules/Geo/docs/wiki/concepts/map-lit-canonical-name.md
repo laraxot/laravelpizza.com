@@ -1,15 +1,3 @@
----
-title: "map lit canonical name"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "map lit canonical name"
-issues: []
-discussions: []
-status: draft
----
-
 # `<map-lit>` — Canonical Custom Element Name
 
 **Decision date**: 2026-05-08
@@ -53,7 +41,7 @@ NON aggiungere `<script type="module" src="{{ Vite::asset('...,'assets/geo') }}"
 
 ### Cosa fare se `<map-lit>` non si registra
 1. Verifica `import '@modules/Geo/resources/js/components/map-lit.js';` in `Themes/Sixteen/resources/js/app.js`
-2. `cd laravel/Themes/Sixteen && npm run build`
+2. `cd laravel/Themes/Sixteen && npm run build && npm run copy`
 3. `cd laravel && php artisan optimize:clear`
 4. Hard reload browser (Ctrl+Shift+R)
 5. Verifica console: `customElements.get('map-lit')` deve tornare la classe, non `undefined`
@@ -63,7 +51,7 @@ NON aggiungere `<script type="module" src="{{ Vite::asset('...,'assets/geo') }}"
 ## Anti-pattern condannati
 
 - File alias proliferati: `geo-map-lit-final.js`, `geo-map-lit-new.js`, `geo-map-lit.bak.js`, `my-map-lit.js`
-- **Fork nel tema Sixteen:** `Themes/Sixteen/resources/js/components/geo-map-lit-local.js` (vietato — regola progetto [no-theme-map-lit-fork](../../../../../../docs/wiki/rules/no-theme-map-lit-fork.md))
+- **Fork nel tema Sixteen:** `Themes/Sixteen/resources/js/components/geo-map-lit-local.js` (vietato — regola progetto [no-theme-map-lit-fork](../../../../../docs/wiki/rules/no-theme-map-lit-fork.md))
 - Custom element duplicati: `<geo-map-lit>`, `<my-map-lit>`, `<ticket-map-lit>`
 - Cross-module Vite asset deploy: `<script src="{{ Vite::asset('...,'assets/geo') }}">`
 - "Compat layer" che mantiene entrambi i nomi attivi → causa "Custom element already defined"

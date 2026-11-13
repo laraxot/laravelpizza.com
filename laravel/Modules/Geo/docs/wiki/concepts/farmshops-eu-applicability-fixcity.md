@@ -1,9 +1,4 @@
 ---
-tags: [documentation]
-created: 2026-09-26
-qmd: "farmshops eu applicability fixcity"
-issues: []
-discussions: []
 title: "farmshops.eu — cosa riusare in Fixcity (studio 2026)"
 type: concept
 module: Geo
@@ -13,13 +8,12 @@ sources:
   - https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/js/popupcontent.js
   - https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/update_data.js
   - ./geo-map-widget-farmshops-pattern.md
-  - ../../farmshops-integration-analysis.md
+  - ../../../farmshops-integration-analysis.md
 confidence: high
 updated: 2026-06-10
 related:
   - ../../../../Fixcity/docs/wiki/concepts/ticket-list-map-architecture.md
-  - ../../../../../../docs/stories/STORY-064-farmshops-eu-study-second-brain.md
-status: draft
+  - ../../../../../docs/stories/STORY-064-farmshops-eu-study-second-brain.md
 ---
 
 # farmshops.eu — applicabilità Fixcity
@@ -31,7 +25,7 @@ status: draft
 Documenti correlati (non duplicare qui l’analisi lunga):
 
 - [geo-map-widget-farmshops-pattern.md](./geo-map-widget-farmshops-pattern.md) — decisione architetturale Geo
-- [farmshops-integration-analysis.md](../../farmshops-integration-analysis.md) — analisi estesa
+- [farmshops-integration-analysis.md](../../../farmshops-integration-analysis.md) — analisi estesa
 - [ticket-list-map-architecture.md](../../../../Fixcity/docs/wiki/concepts/ticket-list-map-architecture.md) — flusso `tickets.json` + `map-lit`
 
 ## Architettura farmshops (verificata su repo)
@@ -86,7 +80,7 @@ index.html + js/direktvermarkter.js
 1. Dopo modifica ticket/location: esportare `tickets.json`.
 2. Verificare `total` e `features.length` > 0 su `/data/tickets.json`.
 3. `/it` tab Mappa: `map-lit` carica JSON; filtri allineati (STORY-053).
-4. Build tema: `cd laravel/Themes/Sixteen && npm run build`.
+4. Build tema: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.
 
 ## GitHub
 
@@ -113,7 +107,7 @@ Incidenti: [map-lit-it-incidents-2026-06.md](../troubleshooting/map-lit-it-incid
 
 ## Aggiornamento 2026-06-10 — confronto fine sorgente + verifica empirica popup
 
-Studio architettura BMAD: `_bmad-output/architecture-map-farmshops-parity.md` (decisioni A1–A5 con trade-off e traceability — non duplicare qui).
+Studio architettura BMAD: `_bmad-output/architecture-map-farmshops-parity-2026-06-10.md` (decisioni A1–A5 con trade-off e traceability — non duplicare qui).
 
 **CSS farmshops verificato** (`css/style.css`): `#offen` verde / `#geschlossen` rosso; `a.button` blu `#4ca7ce`; `.leaflet-popup-content-wrapper` border-radius 0, Verdana 10px; resize popup su `popupopen` con `maxHeight = 0.8 * mapH`, `maxWidth = 0.95 * mapW` (Fixcity: 0.4 / 0.9).
 

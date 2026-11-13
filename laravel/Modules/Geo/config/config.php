@@ -53,6 +53,16 @@ return [
     'comuni_json_path' => null,
     /*
      * |--------------------------------------------------------------------------
+     * | Comuni JSON
+     * |--------------------------------------------------------------------------
+     * |
+     * | Percorso del file JSON letto dal modello Sushi Comune. Null = il file
+     * | versionato del modulo (resources/json/comuni.json).
+     * |
+     */
+    'comuni_json_path' => null,
+    /*
+     * |--------------------------------------------------------------------------
      * | Rate Limiting
      * |--------------------------------------------------------------------------
      * |

@@ -1,15 +1,7 @@
 ---
-title: "geo map data source"
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "geo map data source"
-issues: []
-discussions: []
 name: geo-map-data-source
 description: Data source configuration for Geo map components
 type: concept
-status: draft
 ---
 
 # Geo Map Data Source
@@ -26,7 +18,7 @@ status: draft
 1. Generare il file di test (già fatto) con lo script `GenerateClusterTestJsonAction` o, se necessario, via script inline.
 2. Copiare `cluster-test.json` in `public/data/tickets_big.json`.
 3. Aggiornare il markup del componente nei template (es. `ticket-list.blade.php`) impostando `data-url="/data/tickets_big.json"`.
-4. Ricostruire gli assets con `npm run build`.
+4. Ricostruire gli assets con `npm run build && npm run copy`.
 5. Verificare con Playwright o manualmente che i marker e i cluster siano visibili.
 
 ## LOGICHE DI VALIDAZIONE

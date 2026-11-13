@@ -1,0 +1,280 @@
+#!/bin/bash
+# Wiki Relations Analyzer - Extract and analyze wiki cross-references and relationships
+# Supports: backlinks, semantic similarity, related pages
+#
+# Usage:
+#   wiki-relations --file docs/wiki/concepts/actions-over-services.md
+#   wiki-relations --backlinks docs/wiki/concepts/actions-over-services.md
+#   wiki-relations --related --semantic docs/wiki/concepts/actions-over-services.md
+
+set -euo pipefail
+
+# Configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+WIKI_ROOT="$PROJECT_ROOT/docs/wiki"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Default options
+TARGET_FILE=""
+SHOW_BACKLINKS=false
+SHOW_RELATED=false
+USE_SEMANTIC=false
+FORMAT="table"
+LIMIT=5
+SHOW_HELP=false
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help)
+            SHOW_HELP=true
+            shift
+            ;;
+        --file)
+            TARGET_FILE="$2"
+            shift 2
+            ;;
+        --backlinks)
+            SHOW_BACKLINKS=true
+            shift
+            ;;
+        --related)
+            SHOW_RELATED=true
+            shift
+            ;;
+        --semantic)
+            USE_SEMANTIC=true
+            shift
+            ;;
+        --format)
+            FORMAT="$2"
+            shift 2
+            ;;
+        -l|--limit)
+            LIMIT="$2"
+            shift 2
+            ;;
+        -*)
+            echo -e "${RED}Error: Unknown option $1${NC}" >&2
+            SHOW_HELP=true
+            shift
+            ;;
+        *)
+            TARGET_FILE="$1"
+            shift
+            ;;
+    esac
+done
+
+# Show help
+if [[ "$SHOW_HELP" == true ]] || [[ -z "$TARGET_FILE" ]]; then
+    cat << 'EOF'
+Wiki Relations Analyzer - Extract wiki cross-references and relationships
+
+USAGE:
+  wiki-relations [OPTIONS] <file>
+
+OPTIONS:
+  -h, --help              Show this help message
+  --file FILE             Target wiki file to analyze (or pass as argument)
+  --backlinks             Show pages that link TO this page
+  --related               Show semantically related pages
+  --semantic              Use semantic similarity (requires QMD vectors)
+  --format FORMAT         Output format: table, json (default: table)
+  -l, --limit N           Limit results to N items (default: 5)
+
+EXAMPLES:
+  # Show all references FROM a page
+  wiki-relations docs/wiki/concepts/actions-over-services.md
+
+  # Show pages that link TO this page
+  wiki-relations --backlinks docs/wiki/concepts/actions-over-services.md
+
+  # Show semantically related pages
+  wiki-relations --related --semantic docs/wiki/concepts/actions-over-services.md
+
+  # Combine: backlinks + semantic
+  wiki-relations --backlinks --related --semantic docs/wiki/concepts/actions-over-services.md
+EOF
+    exit 0
+fi
+
+# Normalize file path
+if [[ ! "$TARGET_FILE" = /* ]]; then
+    TARGET_FILE="$PROJECT_ROOT/$TARGET_FILE"
+fi
+
+# Verify file exists
+if [[ ! -f "$TARGET_FILE" ]]; then
+    echo -e "${RED}Error: File not found: $TARGET_FILE${NC}" >&2
+    exit 1
+fi
+
+# Extract outgoing links from a file (pages this file links to)
+extract_outgoing_links() {
+    local file="$1"
+    local wiki_root="$2"
+
+    # Find markdown links [text](path) and wiki references
+    grep -oE '\[([^\]]+)\]\(([^)]+)\)' "$file" 2>/dev/null | sed 's/\[\([^\]]*\)](\([^)]*\))/\2/' | while read -r link; do
+        # Normalize paths
+        if [[ "$link" == ./* ]] || [[ "$link" == ../* ]]; then
+            # Relative link
+            local resolved
+            resolved=$(cd "$(dirname "$file")" && python3 -c "import os; print(os.path.normpath('$link'))" 2>/dev/null || echo "")
+            if [[ -n "$resolved" ]]; then
+                echo "$resolved"
+            fi
+        elif [[ "$link" == docs/wiki/* ]]; then
+            # Absolute path from root
+            echo "$link"
+        fi
+    done | sort -u
+}
+
+# Extract backlinks (pages that link TO target file)
+extract_backlinks() {
+    local target_file="$1"
+    local wiki_root="$2"
+
+    # Relative path for matching
+    local target_rel
+    target_rel=$(python3 -c "import os; print(os.path.relpath('$target_file', '$PROJECT_ROOT'))" 2>/dev/null || echo "")
+
+    # Find all wiki files
+    find "$wiki_root" -type f -name "*.md" 2>/dev/null | while read -r file; do
+        # Skip the target file itself
+        if [[ "$file" == "$target_file" ]]; then
+            continue
+        fi
+
+        # Check if this file links to target
+        if grep -q "\[$target_rel\]\|$target_rel" "$file" 2>/dev/null; then
+            echo "$file"
+        fi
+    done | sort -u
+}
+
+# Get semantic related pages using QMD
+get_semantic_related() {
+    local query_file="$1"
+    local limit="$2"
+
+    # Extract key terms from file frontmatter and first paragraph
+    local keywords
+    keywords=$(grep -A 2 "^description:" "$query_file" 2>/dev/null | tail -1 | sed 's/description: //' | tr -d '\"' || echo "")
+
+    if [[ -n "$keywords" ]]; then
+        # Query QMD for semantic similarity
+        qmd search "$keywords" -c wiki --semantic --limit "$limit" 2>/dev/null | tail -n +4 || echo ""
+    fi
+}
+
+# Format output as table
+format_table() {
+    local title="$1"
+    shift
+    local files=("$@")
+
+    if [[ ${#files[@]} -eq 0 ]]; then
+        echo -e "${YELLOW}No results found${NC}"
+        return 1
+    fi
+
+    echo -e "\n${CYAN}=== $title ===${NC}"
+    printf "${BLUE}%-60s${NC} ${BLUE}%-40s${NC} ${BLUE}%-15s${NC}\n" "File" "Path" "Type"
+    echo "────────────────────────────────────────────────────────────────────────────────────────────────────"
+
+    for file in "${files[@]}"; do
+        if [[ -f "$file" ]]; then
+            local name
+            name=$(basename "$file" .md)
+            local rel_path
+            rel_path=$(python3 -c "import os; print(os.path.relpath('$file', '$PROJECT_ROOT'))" 2>/dev/null || echo "$file")
+            local type
+            type=$(grep "^type:" "$file" 2>/dev/null | sed 's/type: //' || echo "document")
+
+            printf "%-60s %-40s %-15s\n" "$name" "$rel_path" "$type"
+        fi
+    done
+}
+
+# Format output as JSON
+format_json() {
+    local outgoing_links=("$@")
+
+    echo "{"
+    echo "  \"file\": \"$TARGET_FILE\","
+    echo "  \"path\": \"$(python3 -c "import os; print(os.path.relpath('$TARGET_FILE', '$PROJECT_ROOT'))" 2>/dev/null || echo "$TARGET_FILE")\","
+
+    if [[ "$SHOW_BACKLINKS" == true ]]; then
+        local backlinks
+        mapfile -t backlinks < <(extract_backlinks "$TARGET_FILE" "$WIKI_ROOT")
+        echo "  \"backlinks\": ["
+        for ((i=0; i<${#backlinks[@]}; i++)); do
+            echo "    \"${backlinks[$i]}\""
+            [[ $i -lt $((${#backlinks[@]} - 1)) ]] && echo "," || echo ""
+        done
+        echo "  ],"
+    fi
+
+    if [[ "$SHOW_RELATED" == true ]]; then
+        echo "  \"related\": ["
+        # Placeholder for semantic results
+        echo "  ]"
+    else
+        echo "  \"outgoing_links\": ["
+        for ((i=0; i<${#outgoing_links[@]}; i++)); do
+            echo "    \"${outgoing_links[$i]}\""
+            [[ $i -lt $((${#outgoing_links[@]} - 1)) ]] && echo "," || echo ""
+        done
+        echo "  ]"
+    fi
+    echo "}"
+}
+
+# Main execution
+echo -e "${BLUE}Analyzing: $(basename "$TARGET_FILE")${NC}"
+
+if [[ "$SHOW_BACKLINKS" == true ]]; then
+    # Show backlinks (pages linking TO this file)
+    mapfile -t backlinks < <(extract_backlinks "$TARGET_FILE" "$WIKI_ROOT" | head -n "$LIMIT")
+
+    if [[ "$FORMAT" == "json" ]]; then
+        echo "{"
+        echo "  \"backlinks\": ["
+        for ((i=0; i<${#backlinks[@]}; i++)); do
+            local rel_path
+            rel_path=$(python3 -c "import os; print(os.path.relpath('${backlinks[$i]}', '$PROJECT_ROOT'))" 2>/dev/null)
+            echo "    \"$rel_path\""
+            [[ $i -lt $((${#backlinks[@]} - 1)) ]] && echo "," || echo ""
+        done
+        echo "  ]"
+        echo "}"
+    else
+        format_table "Pages Linking TO This Document" "${backlinks[@]}"
+    fi
+elif [[ "$SHOW_RELATED" == true ]] && [[ "$USE_SEMANTIC" == true ]]; then
+    # Show semantically related pages
+    echo -e "${CYAN}=== Semantically Related Pages ===${NC}"
+    get_semantic_related "$TARGET_FILE" "$LIMIT"
+else
+    # Show outgoing links (pages this file links to)
+    mapfile -t outgoing < <(extract_outgoing_links "$TARGET_FILE" "$WIKI_ROOT")
+
+    if [[ "$FORMAT" == "json" ]]; then
+        format_json "${outgoing[@]}"
+    else
+        format_table "Pages Linked FROM This Document" "${outgoing[@]}"
+    fi
+fi
+
+echo ""

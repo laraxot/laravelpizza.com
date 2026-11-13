@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Geo\Actions\GeoData\ValidateGeoDataAction;
+<<<<<<< .merge_file_pq0qjY
+use Modules\Geo\Tests\TestCase;
+
+uses(TestCase::class, WithFaker::class);
+
+=======
 <<<<<<< .merge_file_oLmurf
 use Modules\Geo\Infrastructure\Validation\GeoDataValidationRules;
 use Tests\TestCase;
@@ -21,6 +27,7 @@ use Modules\Geo\Tests\TestCase;
 uses(TestCase::class, WithFaker::class);
 
 >>>>>>> .merge_file_s8kieq
+>>>>>>> .merge_file_nljes1
 describe('ValidateGeoDataAction', function () {
     it('validates correct geo data structure', function () {
         $validData = [

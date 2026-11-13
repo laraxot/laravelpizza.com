@@ -14,7 +14,10 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Modules\Lang\Models\Traits\PostMutators;
 use Modules\Lang\Models\Traits\PostRelations;
+<<<<<<< .merge_file_qSpGp0
+=======
 >>>>>>> .merge_file_mZHXKu
+>>>>>>> .merge_file_V78D33
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
@@ -216,6 +219,8 @@ class Post extends BaseModel
     // end function
     // -------------- MUTATORS ------------------
 
+<<<<<<< .merge_file_qSpGp0
+=======
 <<<<<<< .merge_file_nMh06h
     public function setTitleAttribute(string $value): void
     {
@@ -264,6 +269,7 @@ class Post extends BaseModel
 
 =======
 >>>>>>> .merge_file_mZHXKu
+>>>>>>> .merge_file_V78D33
     /**
      * @return array<string, mixed>
      */

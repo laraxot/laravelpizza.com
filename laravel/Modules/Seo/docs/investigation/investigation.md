@@ -1,7 +1,7 @@
 ---
 type: investigation
 title: "Investigation Schema.org Auto-Generation"
-links: {github_issue: "#XXX"}
+links: {github_issue: #XXX}
 updated: 2026-10-07
 tags: [docs, seo, investigation]
 qmd: "investigation: schema.org auto-generation seo"

@@ -1,15 +1,7 @@
 ---
-title: "leaflet wizard step invalidate size"
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "leaflet wizard step invalidate size"
-issues: []
-discussions: []
 name: leaflet-wizard-step-invalidate-size
 description: Leaflet map in Filament wizard must call invalidateSize() when step container becomes visible
 type: concept
-status: draft
 ---
 
 # Leaflet Map in Filament Wizard — invalidateSize() Rule
@@ -68,7 +60,7 @@ import 'leaflet/dist/leaflet.css';
 
 - `laravel/Modules/Geo/resources/js/components/coordinate-picker-lit.js` — fix MutationObserver + import CSS
 - `laravel/Themes/Sixteen/resources/js/app.js` — entry point che include coordinate-picker-lit
-- Build: `cd laravel/Themes/Sixteen && npm run build`
+- Build: `cd laravel/Themes/Sixteen && npm run build && npm run copy`
 
 ### Regole collegate
 

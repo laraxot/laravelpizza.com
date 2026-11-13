@@ -1,7 +1,4 @@
 ---
-qmd: "map current position bug fix"
-issues: []
-discussions: []
 title: "Map Current Position Bug Fix"
 type: troubleshooting
 confidence: high
@@ -11,7 +8,6 @@ tags: [map-lit, geolocation, fullscreen, search-control, coordinate-picker]
 related:
   - concepts/ticket-list-map-visibility-issue.md
   - concepts/ticket-location-json-architecture.md
-status: draft
 ---
 
 # Map Current Position Bug Fix
@@ -97,7 +93,7 @@ status: draft
 # Build Geo module assets
 cd laravel/Modules/Geo
 npm run build
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+npm run copy
 
 # This copies assets to public_html/assets/geo/
 ```

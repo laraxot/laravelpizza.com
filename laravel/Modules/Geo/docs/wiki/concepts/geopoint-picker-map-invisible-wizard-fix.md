@@ -1,15 +1,7 @@
 ---
-title: "geopoint picker map invisible wizard fix"
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "geopoint picker map invisible wizard fix"
-issues: []
-discussions: []
 name: geopoint-picker-map-invisible-wizard-fix
 description: "GeopointPicker map not visible in wizard: JS component not imported in theme, missing MutationObserver, missing Leaflet CSS import"
 type: bugfix
-status: draft
 ---
 
 # GeopointPicker — Map Invisible in Wizard Fix
@@ -75,7 +67,7 @@ Il component JS non importava `leaflet/dist/leaflet.css` via Vite → Leaflet in
    - `_refreshMapSize()` che controlla `offsetParent !== null` e `getBoundingClientRect()`
 
 3. **OGNI build tema deve essere seguito da:**
-   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+   - `npm run build` → `npm run copy` (se configurato)
 
 ### BAD Practices rimosse
 
