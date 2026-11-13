@@ -28,6 +28,15 @@ use Spatie\QueueableAction\QueueableAction;
  */
 abstract class TestCase extends XotBaseTestCase
 {
+    protected function setUp(): void
+    {
+        // Prima di parent::setUp(): DatabaseTransactions apre le transazioni subito; senza questo la
+        // connessione `user` (mysql) va in "Connection refused" dove non c'e' MariaDB (vedi XotBaseTestCase).
+        $this->prepareSharedSqliteForTesting();
+
+        parent::setUp();
+    }
+
     use DatabaseTransactions;
 
     public static function mockExpectation(MockInterface $mock, string $method): Expectation

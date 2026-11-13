@@ -36,3 +36,4 @@ find Modules/Cms -name '*.php' ! -name '*.blade.php' -print0 | xargs -0 -n1 php 
 
 Vedi anche: [no-conflict-markers-anywhere](../../../../docs/rules/no-conflict-markers-anywhere.md),
 story [ROOT-17.14](../../../../docs/stories/17-14-phpstan-modules-merge-markers-prerequisito.md).
+

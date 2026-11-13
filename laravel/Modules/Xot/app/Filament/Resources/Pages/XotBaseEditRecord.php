@@ -22,7 +22,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
     protected function getRecordReturnUrl(string $fallback): string
     {
         $returnTo = request()->query(RecordAnchor::RETURN_TO_PARAMETER);
-        $returnTo = is_string($returnTo) ? $returnTo : (is_string($this->previousUrl) ? $this->previousUrl : null);
+        $returnTo = is_string($returnTo) ? $returnTo : RecordAnchor::previousWithinResource($this->previousUrl, static::getResource()::getUrl('index'));
         $record = $this->getRecord();
         $key = $record->getKey();
 

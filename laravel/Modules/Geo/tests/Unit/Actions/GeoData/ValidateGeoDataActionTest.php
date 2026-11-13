@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Geo\Actions\GeoData\ValidateGeoDataAction;
+<<<<<<< .merge_file_oLmurf
 use Modules\Geo\Infrastructure\Validation\GeoDataValidationRules;
 use Tests\TestCase;
 
@@ -14,6 +15,12 @@ beforeEach(function () {
     $this->rules = new GeoDataValidationRules;
 });
 
+=======
+use Modules\Geo\Tests\TestCase;
+
+uses(TestCase::class, WithFaker::class);
+
+>>>>>>> .merge_file_s8kieq
 describe('ValidateGeoDataAction', function () {
     it('validates correct geo data structure', function () {
         $validData = [
@@ -35,7 +42,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($validData);
+        $result = app(ValidateGeoDataAction::class)->execute($validData);
 
         expect($result)->toBeTrue();
     });
@@ -43,7 +50,7 @@ describe('ValidateGeoDataAction', function () {
     it('rejects data without regions key', function () {
         $invalidData = ['provinces' => []];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -51,7 +58,7 @@ describe('ValidateGeoDataAction', function () {
     it('rejects data with non-array regions', function () {
         $invalidData = ['regions' => 'not-an-array'];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -63,7 +70,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -75,7 +82,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -87,7 +94,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -99,7 +106,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -115,7 +122,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -131,7 +138,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -147,7 +154,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -169,7 +176,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -191,7 +198,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -213,7 +220,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -235,7 +242,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(ValidateGeoDataAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -257,7 +264,7 @@ describe('ValidateGeoDataAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($validData);
+        $result = app(ValidateGeoDataAction::class)->execute($validData);
 
         expect($result)->toBeTrue();
     });

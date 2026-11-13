@@ -69,14 +69,26 @@
         "updated_by": null
     },
     {
-        "regione": "\"Lombardia\"",
-        "provincia": "\"Milano\"",
         "nome": "Bresso",
-        "cap": "\"20091\"",
+        "codice": 15062,
+        "regione": "Lombardia",
+        "provincia": "Milano",
+        "sigla_provincia": "MI",
+        "cap": "20091",
+        "codice_catastale": "A793",
+        "popolazione": 46879,
+        "zona_altimetrica": "pianura",
+        "altitudine": 141,
+        "superficie": 46.4,
         "lat": 45.5389,
         "lng": 9.19,
         "id": 4,
+        "slug": "bresso",
+        "title": "Bresso",
+        "content": null,
         "updated_at": "2026-06-30T12:04:15.869651Z",
-        "created_at": "2026-06-30T12:04:15.869733Z"
+        "created_at": "2026-06-30T12:04:15.869733Z",
+        "created_by": null,
+        "updated_by": null
     }
 ]

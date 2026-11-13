@@ -24,21 +24,16 @@ class LogoutUserAction
     public function execute(UserContract $user): void
     {
         Assert::notNull($accessToken = $user->token(), '['.__FILE__.']['.__LINE__.']');
-        /*
-         * DB::table('oauth_refresh_tokens')
-         * ->where('access_token_id', $accessToken->)
-         * ->delete();
-         */
 
-        // Assert::methodExists($accessToken, 'delete');
+        // Revoca, non cancellazione: e' cio' che fa Passport, il token resta per l'audit e non e' piu' utilizzabile.
         if (method_exists($accessToken, 'getKey')) {
-            OauthRefreshToken::where('access_token_id', $accessToken->getKey())->delete();
+            OauthRefreshToken::query()
+                ->where('access_token_id', $accessToken->getKey())
+                ->update(['revoked' => true]);
         }
 
-        if (method_exists($accessToken, 'delete')) {
-            $accessToken->delete();
-
-            // $user->token()->delete();
+        if (method_exists($accessToken, 'revoke')) {
+            $accessToken->revoke();
         }
 
         /*

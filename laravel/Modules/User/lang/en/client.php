@@ -14,10 +14,6 @@ return [
         'sort' => '92',
         'icon' => 'user-user-client',
     ],
-    'fields' => [
-        'name' => [
-        ],
-    ],
     'plural' => [
         'model' => [
             'label' => 'client.plural.model',

@@ -29,7 +29,7 @@ it('throws exception when api key is not configured', function (): void {
         $action->execute('Milano, Italia');
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('Chiave API Google Maps non configurata', $exception->getMessage());
+        Assert::assertSame('Chiave API Google Maps non configurata!', $exception->getMessage());
     }
 });
 

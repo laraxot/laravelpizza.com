@@ -6,7 +6,7 @@ namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Validator;
 use PHPUnit\Framework\Assert;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 use function Safe\preg_match;
 

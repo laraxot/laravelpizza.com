@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Modules\User\Datas\UserData;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

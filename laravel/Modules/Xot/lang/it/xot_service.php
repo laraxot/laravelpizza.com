@@ -5,25 +5,21 @@ declare(strict_types=1);
 return [
     'fields' => [
         'matr' => [
-            'label' => 'matr',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'cognome' => [
-            'label' => 'cognome',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'value' => [
-            'label' => 'value',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'remember' => [
-            'label' => 'remember',
             'fields' => [
                 'label' => 'remember',
             ],
@@ -32,7 +28,6 @@ return [
             'description' => '',
         ],
         'password' => [
-            'label' => 'password',
             'fields' => [
                 'label' => 'password',
             ],
@@ -47,13 +42,11 @@ return [
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'updated_at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'created_at' => [
-            'label' => 'created_at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -86,19 +79,16 @@ return [
             'description' => '',
         ],
         'email_verified_at' => [
-            'label' => 'email_verified_at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'password_expires_at' => [
-            'label' => 'password_expires_at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'values' => [
-            'label' => 'values',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

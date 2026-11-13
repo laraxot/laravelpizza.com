@@ -6,7 +6,7 @@ namespace Modules\Tenant\Tests\Unit\Actions\Ente;
 
 use Modules\Tenant\Actions\Ente\GetEnteDataAction;
 use Modules\Tenant\Datas\EnteData;
-use Modules\Tenant\Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 

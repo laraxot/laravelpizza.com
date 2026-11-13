@@ -3,48 +3,23 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'authenticate' => [
-            'label' => 'authenticate',
-        ],
-        'login' => [
-            'label' => 'login',
-        ],
-        'request' => [
-            'label' => 'request',
-        ],
-    ],
     'fields' => [
         'email' => [
-            'label' => 'email',
-            'description' => 'email',
             'helper_text' => '',
-            'placeholder' => 'email',
             'tooltip' => '',
         ],
         'password' => [
-            'label' => 'password',
-            'description' => 'password',
             'helper_text' => '',
-            'placeholder' => 'password',
             'tooltip' => '',
         ],
         'remember' => [
-            'label' => 'remember',
-            'description' => 'remember',
             'helper_text' => '',
-            'placeholder' => 'remember',
             'tooltip' => '',
         ],
         'cap' => [
-            'description' => 'cap',
-            'helper_text' => 'cap',
-            'placeholder' => 'cap',
-            'label' => 'cap',
             'tooltip' => '',
         ],
         'city' => [
-            'description' => 'city',
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',

@@ -23,7 +23,9 @@ abstract class XotBaseViewRecord extends FilamentViewRecord
     {
         return [
             'back' => Action::make('back')
-                ->label(__('filament-panels::resources/pages/view-record.actions.back.label'))
+                // Filament non ha una traduzione per il ritorno all'elenco: la chiave filament-panels::...back.label
+                // compariva grezza sulla pagina. `xot::buttons.back` e' tradotta in it/en/de.
+                ->label(__('xot::buttons.back'))
                 ->icon('heroicon-o-arrow-left')
                 ->url(function (): string {
                     $record = $this->getRecord();

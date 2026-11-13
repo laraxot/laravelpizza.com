@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
@@ -10,49 +11,30 @@ name('password.confirm');
 
 new class extends Component {
     #[Validate('required|current_password')]
-    public $password = '';
+    public string $password = '';
 
-    public function confirm()
+    public function confirm(): void
     {
         $this->validate();
-
         session()->put('auth.password_confirmed_at', time());
-
-        return redirect()->intended('/');
+        redirect()->intended(route('home'));
     }
 };
-
 ?>
 
-<x-layouts.main>
-    <div class="flex flex-col items-stretch justify-center w-screen min-h-screen py-10 sm:items-center">
-
-        <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <x-ui.link href="{{ route('home') }}">
-                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-            </x-ui.link>
-
-            <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">
-                {{ __('user::auth_pages.sections.password_confirm.title') }}
-            </h2>
-            <p class="text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
-                {{ __('user::auth_pages.sections.password_confirm.description') }}
-            </p>
+{{--
+  Conferma password: stesso guscio delle altre pagine di accesso (x-auth.shell via partial, DCP-290).
+  Prima era <x-layouts.main> legacy — niente header/footer CMS, card grigia.
+  Logica invariata: `auth.password_confirmed_at` + redirect()->intended.
+  @volt deve stare direttamente in x-layouts.app: il markup va nel partial del tema attivo.
+--}}
+<x-layouts.app
+    :title="__('user::auth_pages.sections.password_confirm.title')"
+    :meta-description="__('user::auth_pages.sections.password_confirm.description')"
+>
+    @volt('auth.password.confirm')
+        <div class="page-content content" data-dc data-slug="auth.password.confirm" data-side="content">
+            @include('pub_theme::components.pages.auth.password-confirm')
         </div>
-
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
-                @volt('auth.password.confirm')
-                <form wire:submit="confirm" class="space-y-6">
-                    <x-ui.input :label="__('user::login.fields.password.label')" type="password" id="password" name="password" wire:model="password" />
-                    <div class="flex items-center justify-end text-sm">
-                        <x-ui.text-link href="{{ route('password.request') }}">{{ __('user::auth.login.forgot_password.text') }}</x-ui.text-link>
-                    </div>
-                    <x-ui.button type="primary" rounded="md" submit="true">{{ __('user::auth_pages.password_confirm.submit.label') }}</x-ui.button>
-                </form>
-                @endvolt
-            </div>
-        </div>
-    </div>
-
-</x-layouts.main>
+    @endvolt
+</x-layouts.app>

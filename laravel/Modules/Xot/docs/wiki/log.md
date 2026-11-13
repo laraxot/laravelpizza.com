@@ -471,3 +471,14 @@ Create [issue #112](https://github.com/laraxot/module_xot_fila5/issues/112) e [d
 # Log wiki Xot
 
 - 2026-09-28: aggiunto il contratto verificabile per i README root dei 18 moduli e la relativa story BMAD.
+
+## 2026-11-09 — xot:theme-link / xot:module-link
+
+- `ThemeLinkCommand` + `ModuleLinkCommand` in `app/Console/Commands`, registrati in `XotServiceProvider::registerCommands()`
+- Contratto: `public_html/themes/{Theme}` → `Themes/{Theme}/public`; `public_html/assets/{lower(module)}` → `Modules/{Module}/public`
+- Safe functions (thecodingmachine/safe): solo `symlink`/`readlink`/`realpath` esistono; `is_link`/`dirname`/`basename` restano globali
+
+## 2026-11-09 (correzione) — Contratto asset moduli
+
+- Canonico: `Modules/{M}/public` → `public_html/assets/{lower(m)}` — è esattamente `xot:module-link`. NON `resources/images` → `public_html/modules/`.
+- `public_html/modules/{techplanner,ui}` è albero legacy: nessun riferimento nel codice (solo doc); le sorgenti sono `Modules/{M}/resources/`. Da non estendere con symlink senza prima verificare gli URL referenziati.

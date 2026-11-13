@@ -104,12 +104,6 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
-
-    // Coordinate Picker - Map Controls
     'coordinate-picker' => [
         'search_placeholder' => 'Nach einem Ort suchen...',
         'use_my_location' => 'Meinen Standort verwenden',

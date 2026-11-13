@@ -29,12 +29,12 @@ class TenantFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->company();
-
+        // Lo slug non si fissa qui: lo genera HasSlug dal nome effettivo (anche quando il test
+        // sovrascrive 'name'), unico per tabella. Calcolarlo dal nome casuale della definition
+        // produceva slug scollegati dal nome ("Test Tenant" -> "dibbert-zieme-KGEFT7").
         return [
             'id' => (string) Str::ulid(),
-            'name' => $name,
-            'slug' => Str::slug($name).'-'.Str::random(6),
+            'name' => $this->faker->company(),
         ];
     }
 }

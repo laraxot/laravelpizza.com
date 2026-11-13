@@ -6,12 +6,9 @@ use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Json\CreateJsonFileByRecordAction;
 use Modules\Tenant\Actions\Json\UpdateJsonFileByRecordAction;
 use Modules\Tenant\Tests\Fixtures\TestSushiModelForPath;
-use Modules\Tenant\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_decode;
-
-uses(TestCase::class);
 
 /*
  * Le action scrivono il file JSON del tenant quando un modello Sushi viene creato o aggiornato.

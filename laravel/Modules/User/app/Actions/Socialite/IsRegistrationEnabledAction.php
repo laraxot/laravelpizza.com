@@ -18,6 +18,9 @@ class IsRegistrationEnabledAction
      */
     public function execute(): bool
     {
-        return (bool) config('socialite.registration', true);
+        // Chiave assente o valorizzata a null (es. env non impostata): vale il default, registrazione attiva.
+        $registration = config('socialite.registration');
+
+        return $registration === null ? true : (bool) $registration;
     }
 }

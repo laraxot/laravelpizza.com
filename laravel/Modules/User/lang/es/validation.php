@@ -48,7 +48,7 @@ return array_replace_recursive(
             'uncompromised' => 'El :attribute indicado ha aparecido en una filtración de datos. Elige otro :attribute.',
         ],
         'starts_with' => 'El campo :attribute debe empezar con uno de los siguientes valores: :values.',
-        'uploaded' => 'No se ha podido subir el campo :attribute.',
+        'uploaded' => 'No se pudo subir el archivo: puede ser demasiado grande. Inténtalo de nuevo con uno más pequeño.',
         'uuid' => 'El campo :attribute debe ser un UUID válido.',
         'email_already_taken' => 'Este correo electrónico ya está en uso por otro usuario.',
         'password_confirmation' => 'La confirmación de la contraseña no coincide.',

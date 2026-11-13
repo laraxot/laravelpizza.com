@@ -15,10 +15,13 @@ use Webmozart\Assert\Assert;
  * Trait HasTenantNotifications.
  *
  * Fornisce funzionalità per la gestione delle notifiche per tenant.
+<<<<<<< .merge_file_16lKdK
  *
  * @phpstan-ignore trait.unused
+=======
+>>>>>>> .merge_file_S3sDLS
  */
-trait HasTenantNotifications // @phpstan-ignore trait.unused
+trait HasTenantNotifications
 {
     /**
      * @return MorphMany<NotificationLog, $this>

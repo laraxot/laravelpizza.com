@@ -73,7 +73,7 @@ it('throws exception when api response is not valid json', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected InvalidLocationException was not thrown');
     } catch (InvalidLocationException $exception) {
-        Assert::assertSame('Risposta JSON non valida', $exception->getMessage());
+        Assert::assertSame('Risposta JSON non valida da Bing Maps', $exception->getMessage());
     }
 });
 
@@ -115,7 +115,7 @@ it('throws exception when point is missing in response', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected InvalidLocationException was not thrown');
     } catch (InvalidLocationException $exception) {
-        Assert::assertSame('Point mancante', $exception->getMessage());
+        Assert::assertSame('Point mancante nella risposta', $exception->getMessage());
     }
 });
 
@@ -138,7 +138,7 @@ it('throws exception when coordinates are missing in response', function (): voi
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected InvalidLocationException was not thrown');
     } catch (InvalidLocationException $exception) {
-        Assert::assertSame('Coordinate mancanti', $exception->getMessage());
+        Assert::assertSame('Coordinate mancanti nella risposta', $exception->getMessage());
     }
 });
 
@@ -160,7 +160,7 @@ it('throws exception when address is missing in response', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected InvalidLocationException was not thrown');
     } catch (InvalidLocationException $exception) {
-        Assert::assertSame('Indirizzo mancante', $exception->getMessage());
+        Assert::assertSame('Indirizzo mancante nella risposta', $exception->getMessage());
     }
 });
 

@@ -166,7 +166,7 @@ it('always sets customer_user type regardless of input', function (): void {
     // Type must be customer_user — cannot be overridden
     Assert::assertSame('customer_user', $result['type']);
     Assert::assertSame('active', $result['state']);
-    Assert::assertNotNull($result['email_verified_at']);
+    Assert::assertNull($result['email_verified_at']);
 });
 
 it('hashes password during validation', function (): void {

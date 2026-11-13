@@ -14,7 +14,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('profile.viewAny');
+        return $user->hasPermissionToOrCreate('profile.viewAny');
     }
 
     /**
@@ -22,7 +22,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function view(UserContract $user, Profile $_profile): bool
     {
-        return $user->hasPermissionTo('profile.view');
+        return $user->hasPermissionToOrCreate('profile.view');
     }
 
     /**
@@ -30,7 +30,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('profile.create');
+        return $user->hasPermissionToOrCreate('profile.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function update(UserContract $user, Profile $_profile): bool
     {
-        return $user->hasPermissionTo('profile.update');
+        return $user->hasPermissionToOrCreate('profile.update');
     }
 
     /**
@@ -46,7 +46,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function delete(UserContract $user, Profile $_profile): bool
     {
-        return $user->hasPermissionTo('profile.delete');
+        return $user->hasPermissionToOrCreate('profile.delete');
     }
 
     /**
@@ -54,7 +54,7 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function restore(UserContract $user, Profile $_profile): bool
     {
-        return $user->hasPermissionTo('profile.restore');
+        return $user->hasPermissionToOrCreate('profile.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class ProfilePolicy extends GdprBasePolicy
      */
     public function forceDelete(UserContract $user, Profile $profile): bool
     {
-        return $user->hasPermissionTo('profile.forceDelete');
+        return $user->hasPermissionToOrCreate('profile.forceDelete');
     }
 }

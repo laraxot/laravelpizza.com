@@ -18,6 +18,11 @@ abstract class LangBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole('lang::admin')) {
+            return true;
+        }
+
         return null;
     }
 }

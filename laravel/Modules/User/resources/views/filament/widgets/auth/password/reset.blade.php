@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 ?>
+@push('head')
+    {{-- Widget Filament in FO: @filamentStyles non copre le pagine pubbliche
+         (nessun panel attivo), quindi il CSS Filament va linkato qui.
+         Il widget si auto-provisiona: dove viene montato, gli asset ci sono. --}}
+    <link rel="stylesheet" href="{{ asset('css/filament/filament/app.css') }}">
+@endpush
+
 <div>
     @if($this->emailSent)
         {{-- Success State --}}

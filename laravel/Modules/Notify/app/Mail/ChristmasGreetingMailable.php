@@ -31,8 +31,8 @@ class ChristmasGreetingMailable extends Mailable
      */
     public function envelope(): Envelope
     {
-        $fromAddress = config('mail.from.address', 'hello@example.com');
-        $fromAddress = is_string($fromAddress) ? $fromAddress : 'hello@example.com';
+        $fromAddress = config('mail.from.address', 'noreply@fixcity.eu');
+        $fromAddress = is_string($fromAddress) ? $fromAddress : 'noreply@fixcity.eu';
 
         return new Envelope(
             from: new Address($fromAddress, $this->senderName),

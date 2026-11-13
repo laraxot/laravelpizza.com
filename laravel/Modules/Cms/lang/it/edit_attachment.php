@@ -3,17 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'activeLocale' => [
-            'label' => 'activeLocale',
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-    ],
     'label' => 'Edit Attachment',
     'plural_label' => 'Edit Attachment (Plurale)',
     'navigation' => [

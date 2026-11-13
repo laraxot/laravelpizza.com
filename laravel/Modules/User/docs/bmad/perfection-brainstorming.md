@@ -83,7 +83,7 @@ Le migration di `oauth_access_tokens`, `oauth_auth_codes`, `socialite_user` usan
 `$table->foreignIdFor($userClass,'user_id')` **senza** `.constrained()`/
 `.cascadeOnDelete()`: nessun vincolo FK reale (verificato leggendo per intero
 `2023_01_01_000003_create_oauth_access_tokens_table.php` e
-`..._create_socialite_user_table.php`). `UserObserver::deleting()` pulisce solo il
+`..._create_socialite_users_table.php`). `UserObserver::deleting()` pulisce solo il
 personal team. `RevokeAllUserTokensAction.php` esiste gia' ma non e' mai chiamata da
 `DeleteUserAction` (unico consumer: `OauthAccessTokenResource.php`, azione manuale
 admin).

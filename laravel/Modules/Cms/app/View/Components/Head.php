@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
+use Illuminate\Support\Str;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\View\Component;
@@ -101,7 +102,9 @@ final class Head extends Component
             $this->applySchema($meta, $brand, $pageTitle, $description, $canonical, $isHome, $isHome ? $writtenLocales : null);
         }
 
-        return view('cms::components.head');
+        return view('cms::components.head', [
+            'pubTheme' => $meta->getPubTheme(),
+        ]);
     }
 
     private function resolveBrand(MetatagData $meta): string
@@ -169,8 +172,16 @@ final class Head extends Component
     private function canonicalUrl(): string
     {
         $path = app(CollapsePathSegmentsAction::class)->execute(request()->path());
+        $url = $path === '' ? $this->siteRoot() : $this->siteRoot().'/'.$path;
 
-        return $path === '' ? $this->siteRoot() : $this->siteRoot().'/'.$path;
+        // `?page=N` e' contenuto diverso: canonical e og:url lo dichiarano, altrimenti ogni pagina
+        // della serie punta canonical alla prima (stesso criterio degli hreflang).
+        $page = request()->query('page');
+        if (is_numeric($page) && (int) $page >= 2) {
+            $url .= '?page='.(int) $page;
+        }
+
+        return $url;
     }
 
     /**
@@ -181,7 +192,7 @@ final class Head extends Component
     {
         $root = rtrim(str_replace('/index.php', '', url('/')), '/');
 
-        return app()->environment('production') ? preg_replace('/^http:\/\//', 'https://', $root) : $root;
+        return app()->environment('production') ? Str::of($root)->replaceMatches('/^http:\/\//', 'https://')->toString() : $root;
     }
 
     /** `true` se la richiesta è già nella forma del canonical: nessun `index.php` nell'URL e nessun segmento vuoto o punto. */

@@ -12,6 +12,12 @@ status: draft
 
 # Convenzioni Namespace per Filament
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 > **Regola fondamentale:** Il namespace dei componenti Filament è sempre `Modules\<NomeModulo>\Filament`, anche se i file si trovano fisicamente in `app/Filament`. **Non va mai aggiunto `App` nel namespace.**
 
 ## Struttura Corretta dei File
@@ -66,7 +72,10 @@ namespace Modules\User\App\Filament\Widgets;
 - Per temi custom (es. Themes/One) la build e pubblicazione asset si fa SOLO dalla cartella del tema:
   ```sh
   npm run build
+<<<<<<< .merge_file_aml7uD
   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_rMcyv8
   ```
 - Non usare mai `vendor:publish` per asset dei temi custom.
 - Vedi anche [README tema One](../../../../themes/one/readme.md)

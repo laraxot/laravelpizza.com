@@ -43,17 +43,19 @@ afterEach(function (): void {
     Mockery::close();
 });
 
-test('RolePolicy: viewAny false, view/create/update/delete true', function (): void {
+test('RolePolicy: view true, viewAny/create/update/delete/addTeamMember false (solo super-admin via before)', function (): void {
+    // Gestire i ruoli e' riservato al super-admin: concederlo a chi amministra gli utenti permetterebbe
+    // di rinominare o assegnarsi super-admin (escalation, vedi docblock di RolePolicy).
     $policy = new RolePolicy;
     $role = new Role;
     $user = userBehaviorUser();
 
     Assert::assertFalse($policy->viewAny($user));
     Assert::assertTrue($policy->view($user, $role));
-    Assert::assertTrue($policy->create($user));
-    Assert::assertTrue($policy->update($user, $role));
-    Assert::assertTrue($policy->delete($user, $role));
-    Assert::assertTrue($policy->addTeamMember($user, $role));
+    Assert::assertFalse($policy->create($user));
+    Assert::assertFalse($policy->update($user, $role));
+    Assert::assertFalse($policy->delete($user, $role));
+    Assert::assertFalse($policy->addTeamMember($user, $role));
 });
 
 test('TeamPolicy: view legato a belongsToTeam, mutazioni a ownsTeam', function (): void {

@@ -441,10 +441,10 @@ describe('Mail Template Log Business Logic', function () {
         $now = now();
         $log = MailTemplateLog::factory()->create([
             'template_id' => $template->id,
-            'sent_at' => $now->copy(),
-            'delivered_at' => $now->copy()->addMinutes(1),
-            'opened_at' => $now->copy()->addMinutes(3),
-            'clicked_at' => $now->copy()->addMinutes(5),
+            'sent_at' => $now->copy()->subMinutes(10),
+            'delivered_at' => $now->copy()->subMinutes(9),
+            'opened_at' => $now->copy()->subMinutes(7),
+            'clicked_at' => $now->copy()->subMinutes(5),
         ]);
 
         Assert::assertNotNull($log->sent_at);

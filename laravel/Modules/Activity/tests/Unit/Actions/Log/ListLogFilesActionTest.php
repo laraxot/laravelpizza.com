@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Datas\LogFileData;
 use Safe\Exceptions\FilesystemException;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 use function Safe\symlink;
 use function Safe\touch;

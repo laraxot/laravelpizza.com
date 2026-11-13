@@ -11,6 +11,12 @@ discussions: []
 
 # Design Comuni Conversion Roadmap
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 **Status**: 🟢 Phase 1 Complete - Visual Parity Assessment Done
 **Last Updated**: 2026-04-03
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
@@ -186,7 +192,10 @@ cd laravel/Themes/Sixteen
 npm run build
 
 # Copy to public
+<<<<<<< .merge_file_NAJDiL
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_Izwfzv
 
 # View reports
 cat laravel/Themes/Sixteen/docs/COMPLETE-VISUAL-PARITY-REPORT.md
@@ -229,7 +238,10 @@ gh issue list --repo laraxot/base_fixcity_fila5 --label "priority:critical"
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # ~2 seconds
+<<<<<<< .merge_file_NAJDiL
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_Izwfzv
 # New CSS hash appears in output (e.g., app-DCbieyUp.css)
 ```
 

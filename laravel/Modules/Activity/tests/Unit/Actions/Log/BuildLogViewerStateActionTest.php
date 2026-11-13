@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
 use Modules\Activity\Enums\LogLevelEnum;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

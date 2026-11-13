@@ -82,3 +82,13 @@ test('un return_to della stessa origine viene accettato', function (string $retu
     'url assoluto stesso host' => ['http://localhost/admin/users?filter%5Bname%5D=a%20b'],
     'ancora gia presente' => ['/admin/users#record-5'],
 ]);
+
+test('la pagina precedente vale come ritorno solo dentro la stessa resource', function (): void {
+    $index = 'http://localhost/waste/admin/firs';
+
+    Assert::assertSame('http://localhost/waste/admin/firs?page=2', RecordAnchor::previousWithinResource('http://localhost/waste/admin/firs?page=2', $index));
+    Assert::assertSame('http://localhost/waste/admin/firs/7', RecordAnchor::previousWithinResource('http://localhost/waste/admin/firs/7', $index));
+    Assert::assertNull(RecordAnchor::previousWithinResource('http://localhost/roosko/admin', $index));
+    Assert::assertNull(RecordAnchor::previousWithinResource('http://localhost/waste/admin/firs-archive', $index));
+    Assert::assertNull(RecordAnchor::previousWithinResource(null, $index));
+});

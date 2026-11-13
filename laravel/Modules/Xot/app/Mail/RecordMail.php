@@ -40,6 +40,6 @@ class RecordMail extends Mailable
      */
     public function build(): self
     {
-        return $this->view('xot::emails.record')->with(['data' => $this->recordData]);
+        return $this->view((string) 'xot::emails.record')->with(['data' => $this->recordData]);
     }
 }

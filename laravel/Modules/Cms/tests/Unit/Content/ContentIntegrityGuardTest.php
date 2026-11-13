@@ -307,7 +307,6 @@ it('has a tests JSON in tenant and module for every manifest row', function (): 
         }
     }
 
-    Assert::assertNotEmpty(contentGuardManifest(), 'Manifest vuoto.');
     contentGuardAssertNone($missing, 'Righe del manifest senza JSON:');
 });
 

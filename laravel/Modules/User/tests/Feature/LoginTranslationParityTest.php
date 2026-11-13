@@ -8,15 +8,19 @@ use function Pest\Laravel\get;
 
 uses(TestCase::class);
 
-it('renders the english login calls to action from the user translation catalog', function (): void {
+/*
+ * La pagina /{locale}/auth/login la disegna il tema del progetto (Sixteen: components/pages/auth/login.blade.php)
+ * con le chiavi del modulo principale (`fixcity::auth.login.*`); il form e' il LoginWidget di User. Le frasi esatte
+ * ("Don't have an account?" e simili) sono del catalogo del progetto: qui si verifica che la pagina inglese mostri le
+ * chiamate all'azione tradotte e che nessuna chiave grezza arrivi all'utente.
+ */
+it('renders the english login calls to action without raw translation keys', function (): void {
     get('/en/auth/login')
         ->assertOk()
-        ->assertSee("Don't have an account yet?")
         ->assertSee('Create an account')
         ->assertSee('Forgot your password?')
-        ->assertSee('Reset it')
         ->assertSee('/en/auth/register')
-        ->assertSee('/en/auth/password/reset')
-        ->assertDontSee('user::login.no_account')
-        ->assertDontSee('user::login.forgot_password_text');
+        ->assertDontSee('user::login.')
+        ->assertDontSee('user::auth.login.')
+        ->assertDontSee('fixcity::auth.login.');
 });

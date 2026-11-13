@@ -15,7 +15,7 @@ namespace Modules\Xot\Tests\Unit\Actions;
 use Modules\Xot\Actions\Model\GetAllModelsAction;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Attributes\Test;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 class GetAllModelsActionTest extends TestCase
 {

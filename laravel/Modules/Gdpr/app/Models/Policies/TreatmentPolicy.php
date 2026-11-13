@@ -14,7 +14,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('treatment.viewAny');
+        return $user->hasPermissionToOrCreate('treatment.viewAny');
     }
 
     /**
@@ -22,7 +22,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function view(UserContract $user, Treatment $_treatment): bool
     {
-        return $user->hasPermissionTo('treatment.view');
+        return $user->hasPermissionToOrCreate('treatment.view');
     }
 
     /**
@@ -30,7 +30,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('treatment.create');
+        return $user->hasPermissionToOrCreate('treatment.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function update(UserContract $user, Treatment $_treatment): bool
     {
-        return $user->hasPermissionTo('treatment.update');
+        return $user->hasPermissionToOrCreate('treatment.update');
     }
 
     /**
@@ -46,7 +46,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function delete(UserContract $user, Treatment $_treatment): bool
     {
-        return $user->hasPermissionTo('treatment.delete');
+        return $user->hasPermissionToOrCreate('treatment.delete');
     }
 
     /**
@@ -54,7 +54,7 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function restore(UserContract $user, Treatment $_treatment): bool
     {
-        return $user->hasPermissionTo('treatment.restore');
+        return $user->hasPermissionToOrCreate('treatment.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class TreatmentPolicy extends GdprBasePolicy
      */
     public function forceDelete(UserContract $user, Treatment $treatment): bool
     {
-        return $user->hasPermissionTo('treatment.forceDelete');
+        return $user->hasPermissionToOrCreate('treatment.forceDelete');
     }
 }

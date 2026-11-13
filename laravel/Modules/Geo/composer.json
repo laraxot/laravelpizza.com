@@ -27,7 +27,9 @@
         }
     },
     "autoload-dev": {
-        "classmap": ["tests/"]
+        "psr-4": {
+            "Modules\\Geo\\Tests\\": "tests/"
+        }
     },
     "require": {
         

@@ -130,7 +130,7 @@ GeopointPicker        → geopoint-picker.blade.php         → geopoint-picker-
 ### Regole di Integrazione
 
 - **NO entangle**: usa `$wire.$set` con debounce
-- **NO client-side geocoding**: usa server-side via ExposedLivewireMethod
+- **NO client-side geocoding**: usa server-side via `#[Exposed]` (Filament >= 5.11; `ExposedLivewireMethod` e' il vecchio nome deprecato). I picker Lit oggi geocodificano dal browser: vedi [geo-exposed-attribute-filament-511](stories/geo-exposed-attribute-filament-511.story.md)
 - **NO global IDs**: usa classi locali e Shadow DOM
 
 ---

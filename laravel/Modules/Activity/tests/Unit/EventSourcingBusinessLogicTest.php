@@ -7,6 +7,10 @@ namespace Modules\Activity\Tests\Unit;
 use Carbon\Carbon;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_AwtLGW
+=======
+use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_2feLtH
 use RuntimeException;
 
 use function Safe\json_decode;

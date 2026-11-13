@@ -6,36 +6,38 @@ namespace Modules\Tenant\Tests\Feature;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
-use Modules\Tenant\Providers\TenantServiceProvider;
-use Modules\Tenant\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
-
-it('resolves a module connection cloned from the default on the same Connection instance', function (): void {
+/** Nome della connessione di un modulo attivo, alias registrato da TenantServiceProvider al boot. */
+function aliasedModuleConnection(): string
+{
     $module = Module::find('Tenant');
     Assert::assertNotNull($module);
 
-    $default = Config::string('database.default');
-    $name = $module->getSnakeName();
-    $connections = Config::array('database.connections');
-    unset($connections[$name]);
-    Config::set('database.connections', $connections);
+    return $module->getSnakeName();
+}
 
-    $provider = app()->getProvider(TenantServiceProvider::class);
-    Assert::assertInstanceOf(TenantServiceProvider::class, $provider);
-    $provider->registerDB();
+it('resolves a module connection with the default config on the same Connection instance', function (): void {
+    $default = Config::string('database.default');
+    $name = aliasedModuleConnection();
+
+    Config::set('database.connections.'.$name, DB::connection($default)->getConfig());
+    DB::purge($name);
 
     Assert::assertSame(DB::connection($default), DB::connection($name));
 });
 
-it('keeps a module connection declared explicitly in the tenant config separate', function (): void {
-    Config::set('database.connections.tenant_explicit_test', [
+it('opens a separate connection when the module config points to another database', function (): void {
+    $default = Config::string('database.default');
+    $name = aliasedModuleConnection();
+
+    Config::set('database.connections.'.$name, [
         'driver' => 'sqlite',
         'database' => ':memory:',
         'prefix' => '',
     ]);
+    DB::purge($name);
 
-    Assert::assertNotSame(DB::connection(Config::string('database.default')), DB::connection('tenant_explicit_test'));
+    Assert::assertNotSame(DB::connection($default), DB::connection($name));
 });

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions\Head;
 
+use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -60,7 +61,21 @@ final class ResolveRobotsPolicyAction
             return false;
         }
 
-        return ! in_array($this->pathSegments($path, $localeCodes)[0] ?? '', self::HIDDEN_SEGMENTS, true);
+        $segments = $this->pathSegments($path, $localeCodes);
+        if (in_array($segments[0] ?? '', self::HIDDEN_SEGMENTS, true)) {
+            return false;
+        }
+
+        // Prefissi di percorso senza lingua (`tickets/create`, `tests/...`): il tenant li dichiara in
+        // `config/{tenant}/fixcity/head.php` → `noindex_paths`, senza toccare il codice del modulo (D-3).
+        $pathKey = implode('/', $segments);
+        foreach ($this->headStrings('noindex_paths') as $private) {
+            if ($pathKey === $private || str_starts_with($pathKey, $private.'/')) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -73,7 +88,8 @@ final class ResolveRobotsPolicyAction
             return false;
         }
 
-        if (in_array($slug, self::HIDDEN_SLUGS, true)) {
+        $hiddenSlugs = array_merge(self::HIDDEN_SLUGS, $this->headStrings('noindex_slugs'));
+        if (in_array($slug, $hiddenSlugs, true)) {
             return false;
         }
 
@@ -97,5 +113,29 @@ final class ResolveRobotsPolicyAction
         }
 
         return $segments;
+    }
+
+    /**
+     * Stringhe di una chiave del file tenant `head.php` (`noindex_paths`, `noindex_slugs`);
+     * file assente o chiave non lista → `[]`, il comportamento resta quello dei default del modulo.
+     *
+     * @return list<string>
+     */
+    private function headStrings(string $key): array
+    {
+        // I test unitari puri non bootstrappano il container: senza `app()` si usano i default del modulo.
+        try {
+            $config = app(GetTenantConfigArrayAction::class)->execute('head');
+        } catch (\Throwable) {
+            return [];
+        }
+
+        $value = $config[$key] ?? [];
+
+        if (! is_array($value)) {
+            return [];
+        }
+
+        return array_values(array_filter($value, 'is_string'));
     }
 }

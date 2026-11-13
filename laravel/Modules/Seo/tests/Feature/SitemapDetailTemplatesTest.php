@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use PHPUnit\Framework\Assert;
-use Tests\TestCase;
+use Modules\Seo\Tests\TestCase;
 
 use function Safe\simplexml_load_string;
 

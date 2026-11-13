@@ -6,7 +6,7 @@ bmad: true
 status: review
 priority: high
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-11-12
 tags: [sicurezza, autorizzazione, filament, env, audit]
 qmd: "xot super-admin canAccess pagine operative artisan env health setting escape dotenv EnvData EnvWidget"
 related:
@@ -69,3 +69,28 @@ li dava per «già riservati al super-admin»: non lo erano.
 - Altre pagine e campi del modulo non sono coperti da questa story: il dettaglio dei punti ancora da chiudere
   sta nel report riservato dell'audit (repo `bashscripts`), non in questo repository pubblico.
 - Default chiuso in `XotBasePage` o `Gate::before` unico: decisione dell'utente (vedi story audit).
+
+## Seguito — 2026-11-12: PHPStan sul test della pulizia della cache (#47)
+
+Il commit `52b2e78498` ([module_quaeris_fila5#47](https://github.com/laraxot/module_quaeris_fila5/issues/47))
+ha aggiunto a `tests/Feature/Filament/Widgets/EnvWidgetTest.php` il caso «clears the config cache after
+writing», con la verifica `Artisan::shouldHaveReceived('call')->with('config:clear')->once()`. Funziona a
+runtime (la facade inoltra la chiamata allo spy), ma PHPStan dava 3 errori alla riga 217:
+`staticMethod.notFound` su `shouldHaveReceived()` e `method.nonObject` su `with()` e `once()`.
+
+Correzione: lo spy si tiene in una variabile (`$artisan = Artisan::spy();`, tipo `MockInterface`) e la verifica
+passa da li' (`$artisan->shouldHaveReceived(...)`, tipo `VerificationDirector`), come gia' fa
+`Quaeris/tests/Feature/Filament/Widgets/QuestionChartItemWidgetTest.php` con `Log::spy()`. Nello stesso file Pint
+ha sostituito il nome completo di `HttpException` (riga 172, preesistente) con un `use`.
+
+Verifiche:
+
+- `php -l` ok; PHPStan sul file e sull'intero modulo Xot: 0 errori.
+- Pint ok; PHPMD (`tools/phpmd.sh`, ruleset di progetto) nessuna segnalazione.
+- Pest (`--test-directory=Modules/Xot/tests`): 11 falliti su 11 nel `setUp`, prima del corpo dei test, con
+  `SQLiteDatabaseDoesNotExistException` su `laravel/database/test_data.sqlite`. E' l'ambiente: il file non esiste
+  sulla macchina di sviluppo e si crea con `php artisan xot:build-test-sqlite`, che migra tutti i moduli e va
+  deciso dall'utente. Nessun test e' arrivato a `submit()`: `.env` confrontato con `cmp` prima e dopo, identico.
+- Il commento in testa al file dice ancora che il test usa il `Tests\TestCase` della radice per non toccare il
+  database: dal 2026-11-11 quella classe non esiste piu' e il file usa `Modules\Xot\Tests\TestCase`, che richiede
+  il database sqlite. Commento non aggiornato qui, segnalato.

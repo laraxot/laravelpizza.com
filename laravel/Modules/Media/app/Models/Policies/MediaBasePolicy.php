@@ -17,6 +17,11 @@ abstract class MediaBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole('media::admin')) {
+            return true;
+        }
+
         return null;
     }
 }

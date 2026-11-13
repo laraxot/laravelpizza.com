@@ -18,6 +18,11 @@ abstract class GdprBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole(['super-admin', 'gdpr::admin'])) {
+            return true;
+        }
+
         return null;
     }
 }

@@ -40,11 +40,16 @@ class PageContentBuilder
             $class = $block->class;
 
             try {
-                $blockInstance = $class::make(
-                    name: $block->name,
-                    context: $context,
-                );
-            } catch (\Error $e) {
+                // Non tutti i blocchi accettano `$context` (es. Rating estende direttamente Builder\Block):
+                // passarlo sempre dava "Unknown named parameter $context" e il blocco spariva dall'editor.
+                $acceptsContext = \array_filter(
+                    (new \ReflectionMethod($class, 'make'))->getParameters(),
+                    static fn (\ReflectionParameter $parameter): bool => $parameter->getName() === 'context',
+                ) !== [];
+                $blockInstance = $acceptsContext
+                    ? $class::make(name: $block->name, context: $context)
+                    : $class::make(name: $block->name);
+            } catch (\Error|\ReflectionException $e) {
                 if (! app()->environment('testing')) {
                     report($e);
                     Notification::make()

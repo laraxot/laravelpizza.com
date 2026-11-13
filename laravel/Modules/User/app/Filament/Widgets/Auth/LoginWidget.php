@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -12,10 +11,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\User\Actions\Auth\GetPostLoginUrlAction;
 use Modules\User\Actions\Auth\RememberLoginReturnUrlAction;
-use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 
 /**
  * LoginWidget: widget login con form Filament e "vestito" demandato al template tema.
@@ -116,63 +114,6 @@ class LoginWidget extends BaseAuthWidget
     public static function ipThrottleKey(?string $ip): string
     {
         return 'auth-login-ip:'.hash('sha256', $ip ?? 'unknown');
-    }
-
-    /**
-     * Footer actions: link di registrazione e password dimenticata (BMAD + Second Brain).
-     *
-     * Analisi: pagina login `/it/auth/login` manca i link registration e password recovery.
-     * Il widget Filament esegue login schema, senza template Blade con i link.
-     * Soluzione: aggiungi footer actions link registrazione e recupero password.
-     *
-     * @return list<Action>
-     */
-    public function getFooterActions(): array
-    {
-        $actions = [
-            Action::make('registration')
-                ->url(route('register'))
-                ->label(__('user::auth.login.create_account.text')),
-            Action::make('password_recovery')
-                ->url(route('password.request'))
-                ->label(__('user::auth.login.forgot_password.text')),
-        ];
-
-        // Route `oauth.redirect` definita in Modules/User/routes/socialite.php.
-        // Il URL va LOCALIZZATO: la pagina login e' `/it/auth/login`, quindi il
-        // redirect al provider deve essere `/it/auth/login/google`. Senza il prefisso
-        // locale il flusso OAuth perde il contesto della lingua e la callback
-        // (`/it/auth/login/google/callback`) non combacia con GOOGLE_REDIRECT_URI.
-        $locale = $this->resolveLocale();
-        $actions[] = Action::make('google')
-            ->url(route('oauth.redirect', ['provider' => 'google', 'lang' => $locale]))
-            ->label(__('user::auth.login.google.button.text'))
-            ->icon('heroicon-o-google')
-            ->color('gray');
-
-        return $actions;
-    }
-
-    /**
-     * Locale corrente per localizzare URL OAuth (coerenza con /it/auth/login).
-     */
-    private function resolveLocale(): string
-    {
-        $locale = app()->getLocale();
-        if (! is_string($locale)) {
-            $locale = config('app.locale', 'it');
-        }
-        if (! is_string($locale)) {
-            $locale = 'it';
-        }
-        $locale = trim($locale, '/');
-        $supported = LaravelLocalization::getSupportedLanguagesKeys();
-        if (! in_array($locale, $supported, true)) {
-            $fallback = config('app.locale', 'it');
-            $locale = is_string($fallback) ? $fallback : 'it';
-        }
-
-        return $locale;
     }
 
     /**

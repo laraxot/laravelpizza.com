@@ -144,4 +144,6 @@ class Role extends SpatieRole
             'updated_at' => 'datetime',
         ];
     }
+
+    use RoleRelationsTrait;
 }

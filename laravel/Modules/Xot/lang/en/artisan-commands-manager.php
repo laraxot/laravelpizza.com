@@ -66,9 +66,5 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
     'select_command' => 'Select a command from the header to begin.',
 ];

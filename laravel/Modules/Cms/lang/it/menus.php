@@ -4,7 +4,17 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-        'title' => ['label' => 'title'],
-        'parent_id' => ['label' => 'parent_id'],
+        'title' => [
+            'label' => 'Titolo',
+        ],
+        'parent_id' => [
+            'label' => 'Voce superiore',
+        ],
+    ],
+    'actions' => [
+        'delete' => [
+            'tooltip' => '',
+            'icon' => 'delete',
+        ],
     ],
 ];

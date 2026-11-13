@@ -16,7 +16,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Modules\Xot\Models\Module;
 use PHPUnit\Framework\Assert;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 class ModuleTest extends TestCase
 {

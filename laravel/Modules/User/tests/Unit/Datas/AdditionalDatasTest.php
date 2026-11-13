@@ -17,89 +17,100 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 test('PermissionTableNamesData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        PermissionTableNamesData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(PermissionTableNamesData::from([]))->toEqual(PermissionTableNamesData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('ShieldResourceData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        ShieldResourceData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(ShieldResourceData::from([]))->toEqual(ShieldResourceData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('FilamentUserData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        FilamentUserData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(FilamentUserData::from([]))->toEqual(FilamentUserData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('SuperAdminData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        SuperAdminData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(SuperAdminData::from([]))->toEqual(SuperAdminData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('PermissionData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        PermissionData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(PermissionData::from([]))->toEqual(PermissionData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('PermissionColumnNamesData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        PermissionColumnNamesData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(PermissionColumnNamesData::from([]))->toEqual(PermissionColumnNamesData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('PermissionCacheData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        PermissionCacheData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(PermissionCacheData::from([]))->toEqual(PermissionCacheData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('DeviceData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        DeviceData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(DeviceData::from([]))->toEqual(DeviceData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('SocialProviderData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        SocialProviderData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(SocialProviderData::from([]))->toEqual(SocialProviderData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('FilamentShieldData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        FilamentShieldData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(FilamentShieldData::from([]))->toEqual(FilamentShieldData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });
 
 test('PermissionModelsData can be instantiated', function () {
+    // Un payload vuoto puo' creare il Data (tutti i campi opzionali) o essere rifiutato: entrambi gli esiti vanno bene.
     try {
-        PermissionModelsData::from([]);
-    } catch (Exception $e) {
-        // assertTrue(true) removed — tautology // Pass if class exists
+        expect(PermissionModelsData::from([]))->toEqual(PermissionModelsData::from([]));
+    } catch (Exception $exception) {
+        expect($exception->getMessage())->not->toBe('');
     }
 });

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions\Head;
 
+use Illuminate\Support\Str;
+use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_replace;
@@ -37,7 +39,25 @@ final class ComposeDocumentTitleAction
             return $title;
         }
 
-        return $title.self::SEPARATOR.$brand;
+        return $title.$this->separator().$brand;
+    }
+
+    /**
+     * Separatore fra titolo e brand: il tenant lo dichiara in `config/{tenant}/fixcity/head.php`
+     * (`title_separator`, default ` — `). Sixteen usa ` | ` per parita' con il front office storico (D-2).
+     */
+    private function separator(): string
+    {
+        // I test unitari puri non bootstrappano il container: senza `app()` vale il default del modulo.
+        try {
+            $config = app(GetTenantConfigArrayAction::class)->execute('head');
+        } catch (\Throwable) {
+            return self::SEPARATOR;
+        }
+
+        $separator = $config['title_separator'] ?? null;
+
+        return is_string($separator) && trim($separator) !== '' ? $separator : self::SEPARATOR;
     }
 
     /**
@@ -58,8 +78,10 @@ final class ComposeDocumentTitleAction
 
         $quoted = preg_quote($brand, '/');
         $separators = self::SEPARATORS;
-        $title = preg_replace('/\s*['.$separators.']\s*'.$quoted.'\s*$/iu', '', $title);
-        $title = preg_replace('/^'.$quoted.'\s*['.$separators.']\s*/iu', '', $title);
+        $title = Str::of($title)
+            ->replaceMatches('/\s*['.$separators.']\s*'.$quoted.'\s*$/iu', '')
+            ->replaceMatches('/^'.$quoted.'\s*['.$separators.']\s*/iu', '')
+            ->toString();
 
         return trim($title);
     }

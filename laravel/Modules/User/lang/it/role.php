@@ -99,8 +99,6 @@ return [
             'label' => 'Valori',
             'tooltip' => 'Valori associati al ruolo',
             'helper_text' => 'Valori aggiuntivi o configurazioni specifiche del ruolo',
-            'description' => 'values',
-            'placeholder' => 'values',
         ],
         'enabled' => [
             'label' => 'Abilitato',
@@ -230,88 +228,54 @@ return [
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
-            'label' => 'reorderRecords',
-            'tooltip' => 'reorderRecords',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
-            'label' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
-            'label' => 'applyTableColumnManager',
-            'tooltip' => 'applyTableColumnManager',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
-            'label' => 'resetFilters',
-            'tooltip' => 'resetFilters',
         ],
         'applyFilters' => [
             'icon' => 'applyFilters',
-            'label' => 'applyFilters',
-            'tooltip' => 'applyFilters',
         ],
         'openFilters' => [
             'icon' => 'openFilters',
-            'label' => 'openFilters',
-            'tooltip' => 'openFilters',
         ],
         'detach' => [
             'icon' => 'detach',
-            'label' => 'detach',
-            'tooltip' => 'detach',
         ],
         'cancel' => [
             'icon' => 'cancel',
-            'tooltip' => 'cancel',
-            'label' => 'cancel',
         ],
         'attachRole' => [
             'icon' => 'attachRole',
-            'label' => 'attachRole',
-            'tooltip' => 'attachRole',
         ],
         'attach' => [
             'icon' => 'attach',
-            'label' => 'attach',
-            'tooltip' => 'attach',
         ],
         'logout' => [
-            'tooltip' => 'logout',
             'icon' => 'logout',
-            'label' => 'logout',
         ],
         'profile' => [
-            'tooltip' => 'profile',
             'icon' => 'profile',
-            'label' => 'profile',
         ],
         'layout' => [
-            'tooltip' => 'layout',
             'icon' => 'layout',
-            'label' => 'layout',
         ],
         'createAnother' => [
-            'tooltip' => 'createAnother',
-            'label' => 'createAnother',
             'icon' => 'createAnother',
         ],
         'submit' => [
-            'tooltip' => 'submit',
             'icon' => 'submit',
-            'label' => 'submit',
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
         'resetColumnManager' => [
-            'label' => 'resetColumnManager',
             'icon' => 'resetColumnManager',
-            'tooltip' => 'resetColumnManager',
         ],
     ],
     'sections' => [

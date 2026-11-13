@@ -150,7 +150,12 @@ test('can get team membership with pivot data', function (): void {
     Assert::assertSame('editor', $pivot->role);
 
     if (teamMgmtUserTableHasColumn('team_user', 'joined_at')) {
-        Assert::assertNotNull($pivot->getAttribute('joined_at'));
+        // Team::users() espone solo role/permissions come pivot (withPivot): joined_at si legge dalla riga.
+        $joinedAt = DB::connection('user')->table('team_user')
+            ->where('team_id', $team->id)
+            ->where('user_id', $member->id)
+            ->value('joined_at');
+        Assert::assertNotNull($joinedAt);
     }
 });
 

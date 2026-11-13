@@ -30,9 +30,17 @@ final class GetPostLoginUrlAction
             $locale = Config::string('app.locale', 'it');
         }
 
+<<<<<<< .merge_file_CkeLBf
         $path = config('xra.post_login_path');
         $path = is_string($path) && $path !== '' ? '/'.ltrim($path, '/') : '/area-personale';
 
         return LaravelLocalization::localizeURL($path, $locale);
+=======
+        // Pagina d'arrivo configurabile per sito (`auth.post_login_path` nella config del tenant):
+        // `/area-personale` esiste solo nel tema Sixteen; su Predict dava 404 dopo ogni accesso.
+        $path = Config::string('auth.post_login_path', '/area-personale');
+
+        return LaravelLocalization::localizeURL('/'.ltrim($path, '/'), $locale);
+>>>>>>> .merge_file_hy7JT8
     }
 }

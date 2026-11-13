@@ -111,6 +111,7 @@ describe('User Datas And Enums Coverage', function (): void {
         }
 
         Assert::assertSame('Italiano', $italianLabel);
-        Assert::assertSame('English', LanguageEnum::ENGLISH->getLabel());
+        // Locale 'it': anche l'etichetta dell'inglese e' tradotta (lang/it/language_enum.php).
+        Assert::assertSame('Inglese', LanguageEnum::ENGLISH->getLabel());
     });
 });

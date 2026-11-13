@@ -39,33 +39,16 @@ class LogoutController extends XotBaseController
 
         app(LogoutUserAction::class)->execute($user);
 
-        // TODO: Implement token cleanup logic here
-        // DB::table('oauth_refresh_tokens')
-        //     ->where('access_token_id', $accessToken->)
-        //     ->delete();
+        $userId = $user->getAuthIdentifier();
+        if (! \is_string($userId) && ! \is_int($userId)) {
+            throw new \UnexpectedValueException('['.__LINE__.']['.class_basename($this).']');
+        }
 
-        // TODO: Implement token cleanup logic here
-        // Assert::notNull($accessToken = $user->token(),'['.__LINE__.']['.class_basename($this).']');
-        // if (method_exists($accessToken, 'getKey')) {
-        //     OauthRefreshToken::where('access_token_id', $accessToken->getKey())->delete();
-        // }
-        // if (method_exists($accessToken, 'delete')) {
-        //     $accessToken->delete();
-        // }
-
-        // TODO: Implement mobile device user logout logic here
-        // MobileDeviceUser::where('user_id', $user->)->update(['logout_at' => now()]);
-
-        // TODO: Implement response logic here
-        // return response()->json([
-        //     'message' => 'Successfully logged out',
-        //     'session' => session()->all(),
-        // ]);
-
+        // Messaggio stabile per i client API (contratto JSON, non stringa di interfaccia).
+        // Prima la risposta restituiva l'intera sessione (`session()->all()`): ora solo l'id dell'utente.
         return JsonResponseData::from([
-            'message' => 'logout succefully',
-            // 'data' => $user->toArray(),
-            'data' => session()->all(),
+            'message' => 'Successfully logged out.',
+            'data' => ['user_id' => (string) $userId],
         ])->response();
     }
 }

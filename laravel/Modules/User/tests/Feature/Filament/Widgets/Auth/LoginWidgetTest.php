@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Livewire\Livewire;
 use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 use Modules\User\Filament\Widgets\Auth\LoginWidget;
-use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);

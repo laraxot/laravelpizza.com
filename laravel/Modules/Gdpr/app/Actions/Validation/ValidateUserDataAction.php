@@ -37,7 +37,8 @@ class ValidateUserDataAction
             ),
             'type' => 'customer_user',
             'lang' => app()->getLocale(),
-            'email_verified_at' => now(),
+            // Mai verificata alla registrazione (PRD-02, SEC-14): la verifica arriva solo dal link firmato nella mail.
+            'email_verified_at' => null,
         ];
     }
 }

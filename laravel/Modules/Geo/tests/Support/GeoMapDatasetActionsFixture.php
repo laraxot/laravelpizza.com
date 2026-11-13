@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Geo\Support;
+namespace Modules\Geo\Tests\Support;
 
 final class GeoMapDatasetActionsFixture
 {

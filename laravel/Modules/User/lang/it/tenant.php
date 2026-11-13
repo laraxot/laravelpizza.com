@@ -191,49 +191,31 @@ return [
             'icon' => 'heroicon-o-x-mark',
         ],
         'reorderRecords' => [
-            'tooltip' => 'reorderRecords',
-            'label' => 'reorderRecords',
             'icon' => 'reorderRecords',
         ],
         'detach' => [
-            'label' => 'detach',
             'icon' => 'detach',
-            'tooltip' => 'detach',
         ],
         'attach' => [
-            'label' => 'attach',
             'icon' => 'attach',
-            'tooltip' => 'attach',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'icon' => 'applyFilters',
-            'tooltip' => 'applyFilters',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
             'icon' => 'openFilters',
-            'tooltip' => 'openFilters',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'icon' => 'resetFilters',
-            'tooltip' => 'resetFilters',
         ],
         'applyTableColumnManager' => [
-            'label' => 'applyTableColumnManager',
             'icon' => 'applyTableColumnManager',
-            'tooltip' => 'applyTableColumnManager',
         ],
         'openColumnManager' => [
-            'label' => 'openColumnManager',
             'icon' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
         ],
         'resetColumnManager' => [
-            'label' => 'resetColumnManager',
             'icon' => 'resetColumnManager',
-            'tooltip' => 'resetColumnManager',
         ],
     ],
     'messages' => [

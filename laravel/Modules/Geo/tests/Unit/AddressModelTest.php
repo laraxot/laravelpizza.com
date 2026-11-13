@@ -41,10 +41,12 @@ describe('Address Model', function () {
 
         Assert::assertNull($address->deleted_at);
 
-        $address->update(['deleted_at' => now()]);
+        // deleted_at is not mass-assignable: soft delete goes through SoftDeletes::delete()
+        $address->delete();
         $address->refresh();
 
         Assert::assertNotNull($address->deleted_at);
+        Assert::assertTrue($address->trashed());
     });
 
     it('casts attributes correctly', function () {

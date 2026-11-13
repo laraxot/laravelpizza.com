@@ -42,8 +42,8 @@ morto**.
 
 Le colonne `state` e `password_expires_at` presenti solo nell'orfano sono
 invece reali (proprietà su `Modules\User\Models\User`, colonne aggiunte dalle
-migration `2026_02_13_172136_create_users_table.php` e
-`2026_09_01_150113_create_users_table.php`) e utili (stato account, scadenza
+migration `2026_11_12_120000_create_users_table.php` e
+`2026_11_12_120000_create_users_table.php`) e utili (stato account, scadenza
 password per sicurezza): non erano probe/placeholder.
 
 ## Azioni

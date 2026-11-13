@@ -61,12 +61,22 @@ class FolioVoltServiceProvider extends ServiceProvider
         $localePrefix = '#^((?:https?://[^/]+)?)/(?:'.implode('|', array_map(preg_quote(...), $supportedLocales)).')(?=[/?\#]|$)#';
 
         URL::resolveMissingNamedRoutesUsing(
-            static function (string $name, array $parameters, bool $absolute) use ($localePrefix): ?string {
+            static function (string $name, mixed $parameters, bool $absolute) use ($localePrefix): ?string {
                 $routes = app(FolioRoutes::class);
+                // route('nome', $modello) passa un singolo valore, non un array: prima TypeError.
+                $parameters = \is_array($parameters) ? $parameters : [$parameters];
 
-                return $routes->has($name)
-                    ? preg_replace($localePrefix, '${1}/'.app()->getLocale(), $routes->get($name, $parameters, $absolute), 1)
-                    : null;
+                if (! $routes->has($name)) {
+                    return null;
+                }
+                $url = $routes->get($name, $parameters, $absolute);
+
+                if (! \is_string($url)) {
+                    return null;
+                }
+                $localized = preg_replace($localePrefix, '${1}/'.app()->getLocale(), $url, 1);
+
+                return \is_string($localized) ? $localized : $url;
             }
         );
     }
@@ -159,6 +169,13 @@ class FolioVoltServiceProvider extends ServiceProvider
         }
 
         foreach ($modules as $module) {
+            // Moduli disabilitati (es. Mobile in smantellamento) non devono
+            // esporre pagine Folio/Volt: le loro view non avrebbero namespace
+            // registrato e farebbero fallire `view:cache`.
+            if (! $module->isEnabled()) {
+                continue;
+            }
+
             $path = $module->getPath().'/resources/views/pages';
             if (! File::exists($path) || ! File::isDirectory($path)) {
                 continue;

@@ -28,7 +28,7 @@ it('throws exception when api key is not configured', function (): void {
 
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('API key not found', $exception->getMessage());
+        Assert::assertSame('Google Maps API key not found', $exception->getMessage());
     }
 });
 
@@ -140,6 +140,6 @@ it('throws exception when api request fails', function (): void {
 
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('Failed to get directions', $exception->getMessage());
+        Assert::assertSame('Failed to get directions from Google Maps API', $exception->getMessage());
     }
 });

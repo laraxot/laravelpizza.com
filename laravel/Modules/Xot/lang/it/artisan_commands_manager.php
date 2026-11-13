@@ -80,39 +80,25 @@ return [
             'tooltip' => 'Esegue le migrazioni del database',
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
         'profile' => [
-            'label' => 'profile',
             'icon' => 'profile',
-            'tooltip' => 'profile',
         ],
         'logout' => [
-            'label' => 'logout',
             'icon' => 'logout',
-            'tooltip' => 'logout',
         ],
         'composer_dump_autoload' => [
-            'label' => 'composer_dump_autoload',
             'icon' => 'composer_dump_autoload',
-            'tooltip' => 'composer_dump_autoload',
         ],
         'notify_migrate_themes_to_mail_templates' => [
-            'label' => 'notify_migrate_themes_to_mail_templates',
             'icon' => 'notify_migrate_themes_to_mail_templates',
-            'tooltip' => 'notify_migrate_themes_to_mail_templates',
         ],
         'submit' => [
-            'label' => 'submit',
             'icon' => 'submit',
-            'tooltip' => 'submit',
         ],
         'cancel' => [
-            'label' => 'cancel',
             'icon' => 'cancel',
-            'tooltip' => 'cancel',
         ],
     ],
     'title' => 'Gestore comandi Artisan',

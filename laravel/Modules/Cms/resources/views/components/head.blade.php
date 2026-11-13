@@ -10,7 +10,7 @@
     </script>
     @livewireStyles
     @filamentStyles
-    @vite(['resources/css/app.css'], 'themes/Two')
+    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
     @stack('head')
     @stack('styles')
 </head>

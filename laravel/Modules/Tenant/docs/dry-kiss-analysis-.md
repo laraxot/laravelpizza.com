@@ -1,17 +1,3 @@
----
-issues: []
-discussions: []
-title: "DRY & KISS Analysis - Modulo Tenant"
-module: "Tenant"
-type: concept
-tags: [dry, kiss, analysis]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "dry kiss analysis "
-related:
-  - "./phpstan-corrections-january.md"
-status: draft
----
 # DRY & KISS Analysis - Modulo Tenant
 
 **Data:** 15 Ottobre 2025
@@ -43,4 +29,5 @@ abstract class BaseModel extends XotBaseModel
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
+[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)

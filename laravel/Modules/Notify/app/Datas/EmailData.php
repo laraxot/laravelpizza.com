@@ -46,7 +46,7 @@ class EmailData extends Data
         }
         $this->from = $from;
         if (! is_string($from_email)) {
-            Assert::string($from_email = config('mail.from.address', 'default@example.com'));
+            Assert::string($from_email = config('mail.from.address', 'noreply@fixcity.eu'));
         }
         $this->from_email = $from_email;
 
@@ -65,7 +65,7 @@ class EmailData extends Data
             $this->from = $from;
         }
         if (! isset($this->from_email)) {
-            Assert::string($from_email = config('mail.from.address', 'default@example.com'));
+            Assert::string($from_email = config('mail.from.address', 'noreply@fixcity.eu'));
             $this->from_email = $from_email;
         }
 

@@ -25,15 +25,11 @@ return [
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Nome del contenuto',
-            'helper_text' => 'name',
-            'description' => 'name',
             'tooltip' => '',
         ],
         'slug' => [
             'label' => 'Slug',
             'placeholder' => 'Slug del contenuto pagina',
-            'description' => 'slug',
-            'helper_text' => 'slug',
             'tooltip' => '',
         ],
         'blocks' => [
@@ -70,49 +66,41 @@ return [
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'delete' => [
-            'label' => 'delete',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'edit' => [
-            'label' => 'edit',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'view' => [
-            'label' => 'view',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -120,14 +108,8 @@ return [
     ],
     'actions' => [
         'view' => 'Visualizza Contenuto',
-        'create' => [
-            'label' => 'create',
-        ],
         'edit' => 'Modifica Contenuto',
         'delete' => 'Elimina Contenuto',
-        'activeLocale' => [
-            'label' => 'activeLocale',
-        ],
     ],
     'messages' => [
         'created' => 'Contenuto creato con successo',
@@ -141,12 +123,6 @@ return [
     ],
     'model' => [
         'label' => 'page content.model',
-    ],
-    'sections' => [
-        'Content' => [
-            'label' => 'Content',
-            'heading' => 'Content',
-        ],
     ],
     'label' => 'Page Content',
     'plural_label' => 'Page Content (Plurale)',

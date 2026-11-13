@@ -359,10 +359,7 @@ return [
             'description' => '',
         ],
         'value' => [
-            'label' => 'value',
-            'placeholder' => 'value',
             'helper_text' => '',
-            'description' => 'value',
         ],
     ],
     'actions' => [

@@ -3,11 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'activeLocale' => [
-            'label' => 'activeLocale',
-        ],
-    ],
     'label' => 'Lang Base List Records',
     'plural_label' => 'Lang Base List Records (Plurale)',
     'navigation' => [

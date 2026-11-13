@@ -121,3 +121,34 @@ Misura in sola lettura (`docs-organizer.py audit --out`), nessuna correzione: qu
 | **Totale** | 11090 | 2711 | 1082 | 643 | 25 | 50 | 1243 |
 
 Confronto con il 2026-10-29 sui sette moduli misurati in tutte e due le date: link rotti invariati in Activity (87), Notify (241), Quaeris (14), Tenant (70), User (134) e Xot (380), +1 in Geo (da 121 a 122). In Xot compare un nome con data, `bmad/stories/phpstan-analyse-modules.story.md`: aggiunto il 2026-09-24 da Marco Sottana e arrivato con il pull, non creato oggi. Zero non era nella misura del 2026-10-29. Le variazioni vengono dai commit di modulo fra le due misure (dettaglio in `docs/worklog/2026/11/03/`), non da correzioni del Passo 7.
+
+## Misura del 2026-11-12 (worklog del giorno, prompt 98, Passo 7)
+
+Fonte: `docs-organizer.py audit` (sola lettura) sui 14 moduli con commit propri il 2026-11-12 (colonna 4 di `#repo` del
+registro), raccolta alle 18:38 CET. Nessuna correzione: la story e' `in-progress`, quindi il Passo 7 si ferma alla
+misura. Worklog: `docs/worklog/2026/11/12/index.md`.
+
+| Perimetro | n_md | links | broken_n | case_collisions | dated_names | dup_extra | stubs |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| AI | 260 | 261 | 21 | 0 | 1 | 1 | 60 |
+| Chart | 671 | 733 | 585 | 0 | 1 | 8 | 33 |
+| Cms | 948 | 1382 | 349 | 0 | 1 | 2 | 190 |
+| Gdpr | 422 | 94 | 40 | 0 | 0 | 4 | 156 |
+| Geo | 1873 | 344 | 148 | 19 | 12 | 45 | 337 |
+| Job | 453 | 97 | 18 | 0 | 0 | 0 | 176 |
+| Media | 548 | 205 | 35 | 32 | 0 | 3 | 112 |
+| Notify | 3492 | 651 | 233 | 536 | 1 | 1 | 133 |
+| Quaeris | 227 | 108 | 14 | 0 | 15 | 0 | 1 |
+| Setting | 96 | 33 | 4 | 1 | 3 | 1 | 48 |
+| Tenant | 531 | 318 | 182 | 0 | 0 | 0 | 124 |
+| UI | 458 | 362 | 304 | 3 | 1 | 2 | 55 |
+| User | 2209 | 329 | 134 | 82 | 4 | 5 | 114 |
+| Xot | 1096 | 588 | 390 | 2 | 1 | 0 | 252 |
+| **Totale** | 13284 | 5505 | 2457 | 675 | 40 | 72 | 1791 |
+
+Confronto con il 2026-11-03 sui sei moduli misurati in tutte e due le date: link rotti invariati in Quaeris (14) e User
+(134), scesi in Notify (241 -> 233), saliti in Geo (122 -> 148), Tenant (70 -> 182) e Xot (380 -> 390); stub scesi in
+Xot (340 -> 252), User (144 -> 114), Notify (144 -> 133), Tenant (133 -> 124), Geo (345 -> 337). File Markdown di Xot
+da 1576 a 1096 e di Geo da 2050 a 1873: coerente con lo spostamento delle note da `app/` a `docs/` e con il
+riallineamento della radice dell'11-12 novembre, non verificato file per file. L'aumento dei link rotti in Tenant
+(+112) e' da indagare prima di qualsiasi `links --fix`.

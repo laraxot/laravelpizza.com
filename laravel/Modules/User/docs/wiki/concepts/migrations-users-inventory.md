@@ -41,7 +41,7 @@ Più file per la stessa tabella; da consolidare in futuro nella migration con ti
 
 | Tabella | File (ordine cronologico) | Nota |
 |---------|---------------------------|------|
-| users | `2024_01_01_000001`, `000002`, `000006`, `000007`, `2026_02_13_172136` | `172135` = solo update `lang` (ridondante vs `000007`) |
+| users | `2024_01_01_000001`, `000002`, `000006`, `000007`, `2026_11_12_120000` | owner migration timestamp refreshed; schema completion remains in the canonical User migration |
 | profiles | `2022_01_01_000000`, `2026_01_01_000000`, `2026_03_12_172000`, `2026_04_28_120000` | UUID / ownership in evoluzione |
 | devices | `2023_01_01_000000`, `000001` | |
 | oauth_clients | `2023_01_01_000004`, `000005`, `2026_03_01_000003` | |
@@ -67,7 +67,7 @@ Più file per la stessa tabella; da consolidare in futuro nella migration con ti
 | `2023_01_01_000001_create_devices_table.php` | devices | create+update | Duplicato devices |
 | `2023_01_01_000002_create_team_invitations_table.php` | team_invitations | create+update | Jetstream |
 | `2023_01_01_000003_create_oauth_access_tokens_table.php` | oauth_access_tokens | create+update | |
-| `2023_01_01_000003_create_socialite_user_table.php` | socialite_user | create+update | |
+| `2026_11_12_120002_create_socialite_users_table.php` | socialite_users | create+update | user connection |
 | `2023_01_01_000003_create_tenant_user_table.php` | tenant_user | create+update | |
 | `2023_01_01_000004_create_device_user_table.php` | device_user | create+update | |
 | `2023_01_01_000004_create_oauth_clients_table.php` | oauth_clients | create+update | |
@@ -112,7 +112,7 @@ Più file per la stessa tabella; da consolidare in futuro nella migration con ti
 | `2026_01_01_000035_create_model_has_roles_table.php` | model_has_roles | create+update | |
 | `2026_01_12_114416_create_team_user_table.php` | team_user | create+update | |
 | `2026_02_13_172135_create_users_table.php` | users | update | Ridondante (`lang`) |
-| `2026_02_13_172136_create_users_table.php` | users | create+update | Commento: overlap con `000007` |
+| `2026_11_12_120000_create_users_table.php` | users | create+update | Canonical User owner migration; `tableUpdate()` repairs legacy columns idempotently |
 | `2026_03_01_000003_create_oauth_clients_table.php` | oauth_clients | create+update | |
 | `2026_03_12_172000_create_profiles_table.php` | profiles | create+update | |
 | `2026_04_28_120000_create_profiles_table.php` | profiles | create+update | |

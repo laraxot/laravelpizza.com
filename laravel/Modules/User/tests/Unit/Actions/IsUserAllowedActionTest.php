@@ -12,7 +12,7 @@ uses(TestCase::class);
 describe('IsUserAllowedAction', function (): void {
     beforeEach(function (): void {
         /* @var \Modules\User\Tests\TestCase $this */
-        config(['filament-socialite.domain_allowlist' => []]);
+        config(['socialite.domain_allowlist' => []]);
     });
 
     $getMockUser = function (string $email = 'user@example.com'): SocialiteUserContract {

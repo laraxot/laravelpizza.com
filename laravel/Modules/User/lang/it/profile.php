@@ -81,17 +81,14 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'ente',
         ],
         'matr' => [
             'label' => 'Matricola',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'matr',
         ],
         'photo' => [
-            'label' => 'photo',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -101,48 +98,6 @@ return [
                 'label' => 'user.name',
             ],
         ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-        'name' => [
-            'label' => 'name',
-            'placeholder' => 'name',
-            'helper_text' => 'name',
-            'description' => 'name',
-        ],
-        'password' => [
-            'label' => 'password',
-            'placeholder' => 'password',
-            'helper_text' => 'password',
-            'description' => 'password',
-        ],
-        'passwordConfirmation' => [
-            'label' => 'passwordConfirmation',
-            'placeholder' => 'passwordConfirmation',
-            'helper_text' => 'passwordConfirmation',
-            'description' => 'passwordConfirmation',
-        ],
-        'currentPassword' => [
-            'label' => 'currentPassword',
-            'placeholder' => 'currentPassword',
-            'helper_text' => 'currentPassword',
-            'description' => 'currentPassword',
-        ],
-        'email_verified_at' => [
-            'label' => 'email_verified_at',
-            'placeholder' => 'email_verified_at',
-            'helper_text' => 'email_verified_at',
-            'description' => 'email_verified_at',
-        ],
-        'password_confirmation' => [
-            'label' => 'password_confirmation',
-            'placeholder' => 'password_confirmation',
-            'helper_text' => 'password_confirmation',
-            'description' => 'password_confirmation',
-        ],
-        'updated_at' => [
-            'label' => 'updated_at',
-        ],
     ],
     'actions' => [
         'edit' => [
@@ -150,109 +105,69 @@ return [
             'success' => 'Profilo aggiornato con successo!',
             'error' => 'Errore durante l\'aggiornamento del profilo',
             'icon' => 'edit',
-            'tooltip' => 'edit',
         ],
         'delete' => [
             'label' => 'Elimina',
             'success' => 'Profilo eliminato con successo!',
             'error' => 'Errore durante l\'eliminazione del profilo',
-            'tooltip' => 'delete',
             'icon' => 'delete',
         ],
         'layout' => [
-            'tooltip' => 'layout',
             'icon' => 'layout',
-            'label' => 'layout',
         ],
         'create' => [
-            'tooltip' => 'create',
             'icon' => 'create',
-            'label' => 'create',
         ],
         'showPassword' => [
-            'label' => 'showPassword',
             'icon' => 'showPassword',
-            'tooltip' => 'showPassword',
         ],
         'hidePassword' => [
-            'label' => 'hidePassword',
             'icon' => 'hidePassword',
-            'tooltip' => 'hidePassword',
         ],
         'attach' => [
-            'label' => 'attach',
             'icon' => 'attach',
-            'tooltip' => 'attach',
         ],
         'detach' => [
-            'label' => 'detach',
             'icon' => 'detach',
-            'tooltip' => 'detach',
         ],
         'view' => [
-            'label' => 'view',
             'icon' => 'view',
-            'tooltip' => 'view',
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
         'back' => [
-            'label' => 'back',
             'icon' => 'back',
-            'tooltip' => 'back',
         ],
         'createAnother' => [
-            'label' => 'createAnother',
             'icon' => 'createAnother',
-            'tooltip' => 'createAnother',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'icon' => 'applyFilters',
-            'tooltip' => 'applyFilters',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
             'icon' => 'openFilters',
-            'tooltip' => 'openFilters',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'icon' => 'resetFilters',
-            'tooltip' => 'resetFilters',
         ],
         'applyTableColumnManager' => [
-            'label' => 'applyTableColumnManager',
             'icon' => 'applyTableColumnManager',
-            'tooltip' => 'applyTableColumnManager',
         ],
         'openColumnManager' => [
-            'label' => 'openColumnManager',
             'icon' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
         ],
         'resetColumnManager' => [
-            'label' => 'resetColumnManager',
             'icon' => 'resetColumnManager',
-            'tooltip' => 'resetColumnManager',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'icon' => 'reorderRecords',
-            'tooltip' => 'reorderRecords',
         ],
         'submit' => [
-            'label' => 'submit',
             'icon' => 'submit',
-            'tooltip' => 'submit',
         ],
         'cancel' => [
-            'label' => 'cancel',
             'icon' => 'cancel',
-            'tooltip' => 'cancel',
         ],
     ],
     'messages' => [

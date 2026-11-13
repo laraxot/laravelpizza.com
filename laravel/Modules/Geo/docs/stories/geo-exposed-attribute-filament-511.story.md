@@ -121,20 +121,46 @@ Verifica: PHPStan Geo/Notify/Quaeris 0 errori, PHPStan dell'intero progetto 0 er
 Da fare fuori da qui: chi ha Filament sotto 5.11 lancia `composer update "filament/*" livewire/livewire`;
 la produzione deve avere filament >= 5.11 e livewire >= 4.4.8 prima del deploy.
 
-## 2026-11-05: i 22 errori residui sono il vendor vecchio, non il codice (swarm PHPStan, moduli piccoli)
+## 2026-11-11: stessi errori, vendor indietro rispetto al lock (nessun cambio di codice)
 
-Scopo: `searchAddress()` e `reverseGeocode()` devono poter essere chiamati dal browser (ricerca indirizzo e
-geocodifica inversa della mappa). Filament lo permette solo ai metodi col suo attributo di esposizione.
+Fase BMAD: Verify. Bonifica PHPStan, cluster Geo. Il codice e' giusto; l'ambiente no.
 
-Causa dei 22 errori (`attribute.notFound` x20 nel trait e in `XotBaseCoordinateField`, `class.notFound` x1 nella guardia
-di `CoordinatePickerRefactorTest`): in questa copia di lavoro `laravel/vendor` e' **Filament 5.9.0 / Livewire 4.4.7**
-(`vendor/composer/installed.json` del 2026-10-05), sotto il `composer.lock` (5.10.3) e molto sotto il vincolo
-`filament/filament: ^5.11` di `Modules/Xot/composer.json`. In 5.9.0 esiste solo `ExposedLivewireMethod`: `Exposed` nasce in 5.11.
+Misura, `analyse Modules/Geo` con il vendor com'e': **21 errori**, exit 1. 20 `attribute.notFound`
+(`HasCoordinatePicker` 235 e 293 ripetuti per le 9 classi che usano il trait = 18; `XotBaseCoordinateField` 203 e
+213 = 2) e 1 `class.notFound` in `CoordinatePickerRefactorTest.php:89`. E' un solo difetto.
 
-Fix: **nessuna modifica al codice**. `#[Exposed]` e' gia' la scelta documentata sopra (opzione 1, vincolo `^5.11`);
-tornare a `#[ExposedLivewireMethod]` rifarebbe i 45 `attribute.deprecated` visti con 5.11 e sposterebbe la guardia del test
-sul nome vecchio. La cura e' allineare il vendor: `composer update "filament/*" livewire/livewire` (serve anche per `laravel/head`).
-Non l'ho eseguito: il vendor su NAS e' condiviso con gli altri agenti dello swarm e cambiarlo a meta' run falserebbe le loro misure.
+Causa, verificata:
+- `vendor/composer/installed.json` ha `filament/*` **v5.10.3** (vendor installato il 2026-10-26, mai toccato dopo);
+  `composer.lock` (aggiornato dal sync il 2026-11-11) ha **v5.11.2**; `Modules/Xot/composer.json` chiede `^5.11.2`.
+  Sul lock il vendor e' indietro di 123 pacchetti (anche `laravel/framework` 13.38.0 contro 13.42.0 e
+  `larastan/larastan` 3.13.2 contro 3.14.0).
+- In 5.10.3 esiste solo `ExposedLivewireMethod`; `Exposed` c'e' da 5.11.0. Controllo in
+  `InteractsWithSchemas::callSchemaComponentMethod`: 5.10.3 righe 101-103, `getAttributes(ExposedLivewireMethod::class)`;
+  5.11.2 (letto nel vendor di `base_predict_fila5`) riga 107,
+  `getAttributes(Exposed::class, ReflectionAttribute::IS_INSTANCEOF)`, con `ExposedLivewireMethod extends Exposed`
+  deprecato. Un metodo senza l'attributo giusto fa `return null`: nessuna eccezione, nessun log.
+- Quindi `#[Exposed]` e' l'attributo corretto per il vincolo dichiarato. Tornare a `#[ExposedLivewireMethod]`
+  riaprirebbe il ping-pong del 2026-11-05 (45 deprecazioni sotto 5.11), non e' la correzione.
 
-Verifica: PHPStan sui 3 file Geo ripete gli stessi errori sul vendor 5.9.0 (nessuno e' nuovo); con 5.11 la misura registrata sopra
-e' 0 errori in Geo. Non riverificato qui per lo stesso motivo.
+Cosa funziona oggi con il vendor 5.10.3:
+- `LocationPicker`: `location-picker.blade.php:59` chiama `$wire.callSchemaComponentMethod(id, 'reverseGeocode', ...)`.
+  Con `Exposed` sconosciuto Filament risponde `null` e l'indirizzo si svuota in silenzio (ramo `else`). E' l'unica
+  vista Geo che usa il percorso Livewire; nessun modulo o tema fuori da Geo la usa.
+- I picker Lit (`CoordinatePicker`, usato da `Fixcity/TicketForm`, e gli altri) non chiamano questi metodi dal
+  server: `ctx.searchAddress` non e' definito e `resolveAddressResults()` (`map-picker-search.js:237`,
+  `map/controls/search.js:215`) ricade su `fetch` diretto a Nominatim dal browser. Non toccati dal vendor vecchio.
+- Aperta, decisione di prodotto: la regola «NO client-side geocoding» di
+  [filament-geo-pickers-philosophy](../filament-geo-pickers-philosophy.md) non descrive questi picker Lit.
+
+Prova (vendor di sviluppo non toccato; `Exposed.php` copiato da `base_predict_fila5`, 5.11.2, identico a quello di
+5.11.1, e caricato solo per la prova):
+- PHPStan `Modules/Geo` con `-a <Exposed.php>`: **0 errori, exit 0**.
+- Pest `CoordinatePickerRefactorTest` (via `pest-scratch-db`): vendor com'e' **7 passed, 1 failed** (`Class
+  "Filament\Support\Components\Attributes\Exposed" not found`, riga 89); con `Exposed` caricata **8 passed**. Il test
+  e' valido: replica il controllo di Filament e fallisce se il metodo ha l'attributo sbagliato o nessuno.
+
+Cura (da decidere dall'utente, tocca tutto il progetto): allineare il vendor al lock, `cd laravel && composer
+install` (parte dal lock, senza solver; provarlo prima con `--dry-run`), non `composer update -W` (blocchi noti in
+[phpstan-modules-zero-errors](../../../Xot/docs/stories/phpstan-modules-zero-errors.story.md)). Stesso ping-pong e
+stessa guardia (`InstalledVendorSatisfiesXotConstraintsTest`) in
+[filament-5-11-2-filter-form-naming](../../../Xot/docs/stories/filament-5-11-2-filter-form-naming.story.md).

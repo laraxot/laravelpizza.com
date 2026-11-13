@@ -366,9 +366,20 @@ class XotData extends Data implements Wireable
         return asset('themes/'.$this->pub_theme.'/'.$key);
     }
 
+    /**
+     * Layout HTML delle email: prima quello del tema pubblico, se il tema non lo ha quello del modulo Notify.
+     * Un tema senza `resources/mail-layouts` non deve far fallire l'invio (es. il reset della password).
+     */
     public function getMailHtmlLayoutPath(string $key = ''): string
     {
-        return base_path('Themes/'.$this->pub_theme.'/resources/mail-layouts/'.$key);
+        $themePath = base_path('Themes/'.$this->pub_theme.'/resources/mail-layouts/'.$key);
+        if ($key === '' || is_file($themePath)) {
+            return $themePath;
+        }
+
+        $notifyPath = base_path('Modules/Notify/resources/mail-layouts/'.$key);
+
+        return is_file($notifyPath) ? $notifyPath : $themePath;
     }
 
     /**
@@ -495,6 +506,16 @@ class XotData extends Data implements Wireable
             return false;
         }
         if (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === '127.0.0.1') {
+            return false;
+        }
+        // IP privato/riservato (LAN, 192.168.x.x, 10.x, 172.16-31.x): niente TLS reale
+        // dietro `php artisan serve` — forzare https romperebbe tutti gli asset.
+        $serverName = $_SERVER['SERVER_NAME'] ?? null;
+        if (
+            \is_string($serverName)
+            && filter_var($serverName, FILTER_VALIDATE_IP) !== false
+            && filter_var($serverName, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false
+        ) {
             return false;
         }
         // AWS ELB

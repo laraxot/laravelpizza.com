@@ -26,34 +26,35 @@ class TenantFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->company();
-
         return [
-            'id' => $this->faker->uuid(),
-            'name' => $name,
-            'slug' => $this->faker->unique()->slug(),
+            'name' => $this->faker->company(),
             'domain' => $this->faker->domainName(),
             'database' => 'tenant_'.$this->faker->unique()->slug(),
             'is_active' => $this->faker->boolean(80),
-            // `settings` non è nella factory di default: lo schema sqlite condiviso
-            // può non avere la colonna (drift migration). Usare withSettings().
+            'settings' => [
+                'timezone' => $this->faker->randomElement(['Europe/Rome', 'Europe/London', 'America/New_York']),
+                'locale' => $this->faker->randomElement(['it', 'en', 'de']),
+                'currency' => $this->faker->randomElement(['EUR', 'USD', 'GBP']),
+            ],
             'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'updated_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
         ];
     }
 
     /**
+     * Imposta i settings del tenant (merge con quelli di default).
+     *
      * @param  array<string, mixed>  $settings
      */
-    public function withSettings(array $settings = []): static
+    public function withSettings(array $settings): static
     {
-        return $this->state(fn (array $_attributes) => [
-            'settings' => $settings !== [] ? $settings : [
-                'timezone' => 'Europe/Rome',
-                'locale' => 'it',
-                'currency' => 'EUR',
-            ],
-        ]);
+        return $this->state(function (array $attributes) use ($settings): array {
+            $current = \is_array($attributes['settings'] ?? null) ? $attributes['settings'] : [];
+
+            return [
+                'settings' => array_merge($current, $settings),
+            ];
+        });
     }
 
     /**

@@ -15,20 +15,23 @@ uses(TestCase::class);
 test('IconData can be instantiated', function (): void {
     $icon = IconData::from([
         'url' => 'https://example.com/icon.png',
-        'size' => ['width' => 32, 'height' => 32],
+        // Google Maps Icon uses `scaledSize`, required by IconData
+        'scaledSize' => ['width' => 32, 'height' => 32],
     ]);
 
     Assert::assertSame('https://example.com/icon.png', $icon->url);
+    Assert::assertSame(32, $icon->scaledSize->width);
 });
 
 test('MarkerData can be instantiated', function (): void {
     $marker = MarkerData::from([
         'position' => ['lat' => 41.9028, 'lng' => 12.4964],
         'title' => 'Test Marker',
-        'icon' => ['url' => 'https://example.com/icon.png'],
+        'icon' => ['url' => 'https://example.com/icon.png', 'scaledSize' => ['width' => 24, 'height' => 24]],
     ]);
 
     Assert::assertSame('Test Marker', $marker->title);
+    Assert::assertSame('https://example.com/icon.png', $marker->icon?->url);
 });
 
 test('PositionData can be instantiated', function (): void {

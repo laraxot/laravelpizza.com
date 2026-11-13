@@ -7,10 +7,7 @@ namespace Modules\User\Models\Traits;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Datas\PasswordData;
 
-/**
- * @phpstan-ignore trait.unused
- */
-trait HasPasswordExpiry // @phpstan-ignore trait.unused
+trait HasPasswordExpiry
 {
     public static function bootHasPasswordExpiry(): void
     {

@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Filament\Schemas\Schema;
+use Illuminate\Auth\SessionGuard;
 use Illuminate\Cache\ArrayStore;
 use Illuminate\Cache\Repository;
 use Illuminate\Container\Container;
-use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
@@ -24,26 +24,26 @@ uses(TestCase::class);
 test('credenziali errate mostrano un errore tradotto sul campo email', function (string $locale, string $method): void {
     $previousContainer = Container::getInstance();
     $previousFacadeApplication = Facade::getFacadeApplication();
-    $container = new Application;
+    $container = new Application();
     Container::setInstance($container);
     Facade::setFacadeApplication($container);
     Facade::clearResolvedInstances();
 
     try {
-        $loader = new FileLoader(new Filesystem, []);
+        $loader = new FileLoader(new Filesystem(), []);
         $loader->addNamespace('user', dirname(__DIR__, 4).'/lang');
         $translator = new Translator($loader, $locale);
         $container->instance('translator', $translator);
         $container->instance('request', Request::create('/'));
-        $container->instance('cache.store', new Repository(new ArrayStore));
+        $container->instance('cache.store', new Repository(new ArrayStore()));
         $container->singleton(DataStore::class);
 
         $credentials = [
             'email' => 'utente@example.test',
             'password' => 'password-errata',
         ];
-        $guard = $this->createMock(StatefulGuard::class);
-        $guard->expects($this->once())->method('attempt')->with($credentials, false)->willReturn(false);
+        $guard = $this->createMock(SessionGuard::class);
+        $guard->expects($this->once())->method('attemptWhen')->willReturn(false);
         Auth::swap($guard);
 
         $schema = $this->createMock(Schema::class);

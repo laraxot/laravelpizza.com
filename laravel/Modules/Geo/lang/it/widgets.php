@@ -55,4 +55,12 @@ return [
             'label' => 'Elimina Widgets',
         ],
     ],
+    'base_map' => [
+        'aria_label' => 'Mappa interattiva',
+        'fullscreen' => 'Schermo intero',
+        'fullscreen_exit' => 'Esci da schermo intero',
+        'locate' => 'Centra sulla mia posizione',
+        'layer_satellite' => 'Satellite',
+        'markers_shown' => 'Mostrati :count marker',
+    ],
 ];

@@ -56,7 +56,7 @@ class CalculateDistanceMatrixAction
 
         /** @var Response $response */
         if (! $response->successful()) {
-            throw GoogleMapsApiException::requestFailed((string) $response->status());
+            throw GoogleMapsApiException::requestFailed('Richiesta a Google Maps fallita: HTTP '.$response->status());
         }
 
         /** @var array{status?: string, rows?: array<int, array{elements?: array<int, array{distance?: array{text: string, value: int}, duration?: array{text: string, value: int}, status?: string}>}>} $data */

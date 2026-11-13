@@ -22,6 +22,7 @@ status: draft
 |---|---|
 | `Tenant\Services\TenantService::getConfig($key)` | `app(\Modules\Tenant\Actions\Config\GetTenantConfigArrayAction::class)->execute($key)` |
 | `Tenant\Services\TenantService::saveConfig($key, $data)` | `app(\Modules\Tenant\Actions\Config\SaveTenantConfigAction::class)->execute($key, $data)` |
+| `Tenant\Services\TenantService::filePath($filename)` | `app(\Modules\Tenant\Actions\Config\GetTenantFilePathAction::class)->execute($filename)` |
 | `Tenant\Services\Config\ConfigStringKeyFilter::onlyStringKeys($arr)` | `app(\Modules\Tenant\Actions\Config\FilterConfigStringKeysAction::class)->execute($arr)` |
 
 Consumer aggiornati: `Modules/User/app/Datas/{PasswordData,SocialProviderData}.php`, `Modules/User/app/Filament/Pages/Password.php`, `Modules/Notify/app/Providers/NotifyServiceProvider.php` (import morto rimosso), `Modules/User/resources/views/pages/index.blade.php` (import morto rimosso).

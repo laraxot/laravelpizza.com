@@ -6,7 +6,7 @@ namespace Modules\Notify\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Xot\Tests\XotBaseTestCase;
 use Illuminate\Support\Facades\DB;
 use Mockery;
 use Mockery\Expectation;
@@ -15,7 +15,6 @@ use Modules\Notify\Models\NotificationType;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Models\NotifyThemeable;
 use Modules\Notify\Providers\NotifyServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -32,9 +31,17 @@ use function Safe\json_decode;
  * non di `Illuminate\Foundation\Testing\TestCase`, e non esiste qui.
  * Mai RefreshDatabase: wipea il MariaDB `*_test` condiviso con Fixcity.
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotBaseTestCase
 {
-    use CreatesApplication;
+    protected function setUp(): void
+    {
+        // Prima di parent::setUp(): DatabaseTransactions apre le transazioni subito; senza questo la
+        // connessione `user` (mysql) va in "Connection refused" dove non c'e' MariaDB (vedi XotBaseTestCase).
+        $this->prepareSharedSqliteForTesting();
+
+        parent::setUp();
+    }
+
     use DatabaseTransactions;
 
     /** @var list<string> */

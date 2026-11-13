@@ -16,6 +16,12 @@ related:
 
 # Media: foto da fotocamera mobile, scelta galleria e riduzione nel browser
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 Fase BMAD: Analisi, Solutioning, Dev, Verifica.
 
 ## Richiesta
@@ -143,17 +149,3 @@ Il commit `354ef7b492` (componente `CameraPhotoUpload`) ha incluso per errore la
 `Themes/Sixteen/resources/js/components/camera-upload.js` fatta da questa story. Working tree invariato (il file era gia' cancellato
 su disco), ma in git la cancellazione precede l'aggiunta di `Modules/Media/resources/js/camera-image.js`, ancora non tracciato.
 Forward-only: nessun revert. Va chiuso committando `camera-image.js` con il resto di questa story.
-
-## 2026-11-05: `StripImageMetadataActionTest` e il tipo di `array_map` (swarm PHPStan, moduli piccoli)
-
-Scopo del test: dimostrare che `StripImageMetadataAction` toglie GPS/Exif/testo da JPEG e PNG, applica l'Orientation e lascia intatti i PDF.
-Le fixture sono JPEG con Exif costruito byte per byte; i razionali GPS li produce un helper.
-
-Causa: `argument.type` a riga 63. L'helper era una closure `static fn (array $parts)` con `array` non tipizzato, ma dentro faceva
-`array_map(static fn (int $part) => ..., $parts)`: PHPStan vede `array<mixed>` contro un callback che vuole `int`.
-
-Fix: la closure diventa la funzione `stripActionRationals(array $parts)` con `@param list<int>`, nello stile degli altri helper `stripAction*` del file.
-Stessi byte prodotti. Pint ha riallineato import e `new X()` nello stesso file.
-
-Verifica: PHPStan 0 errori sul file. Pest non eseguibile qui: il gruppo `media-db` ha bisogno della tabella `media` e il test gira su sqlite `:memory:` senza schema
-(`no such table: media`). Le precondizioni sulla fixture (GPS `45/1,27/1,51/1` e Orientation=6) passano prima della query, quindi l'helper produce lo stesso Exif.

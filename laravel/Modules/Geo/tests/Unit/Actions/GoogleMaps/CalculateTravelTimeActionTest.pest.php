@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Geo\Unit\Actions\GoogleMaps;
+namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;

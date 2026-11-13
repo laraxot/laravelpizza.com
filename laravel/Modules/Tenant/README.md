@@ -1,335 +1,259 @@
----
-id: module-tenant-readme
-title: "Tenant — Multi-tenancy e Isolamento Organizzativo"
-type: module-readme
-category: module-documentation
-module: Tenant
-status: active
-tags: [tenant, multitenancy, isolation, organization]
-created: 2026-09-14
-updated: 2026-09-14
-qmd: "tenant multitenancy isolation domains configuration module documentation"
-issues:
-  - "https://github.com/laraxot/module_tenant_fila5/issues/46"
-discussions:
-  - "https://github.com/laraxot/module_tenant_fila5/discussions/47"
-related:
-  - "./docs/"
-sources: []
----
-title: Tenant
-module: tenant
-related: Xot, User
-status: production
-last_updated: 2026-07-28
----
+### Versione HEAD
 
-# 🏢 Tenant
+# 🌐 Simplify Multi-Tenancy with the Fila3 Tenant Module! 🚀
 
-> **Multi-tenancy e isolamento organizzativo.**
----
-**Module**: `tenant`
-**Namespace**: `Modules\Tenant\`
-**Status**: ✅ Production  
-**Last updated**: 2026-07-28
+![GitHub issues](https://img.shields.io/github/issues/laraxot/module_tenant_fila3)
+![GitHub forks](https://img.shields.io/github/forks/laraxot/module_tenant_fila3)
+![GitHub stars](https://img.shields.io/github/stars/laraxot/module_tenant_fila3)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-Tenant, domini, configurazione e appartenenza degli utenti.
+Welcome to the **Fila3 Tenant Module**! This powerful multi-tenancy solution is designed to help developers build scalable applications that can serve multiple clients with ease. Streamline your architecture and enhance user experience by managing tenants effortlessly!
 
-## Cosa offre
+## 📦 What’s Inside?
 
-- **Identificazione** – tenancy ID e ruoli
-- **Config organizzativa** – impostazioni per entità
-- **Utenti/tenant** – membership e permessi
-- **Isolamento dati**
----
-Il modulo Tenant gestisce la multi-tenancy dell'applicazione in modo completo e robusto. Ogni tenant ha il proprio dominio (o sottodominio), le proprie configurazioni e i propri dati completamente isolati. L'isolamento avviene a livello di connessione database: ogni modulo usa automaticamente la connessione corretta basandosi sul namespace del modello.
+The Fila3 Tenant Module provides a comprehensive suite of features for handling multi-tenancy, including:
 
-## Confini architetturali
+- **Tenant Management**: Create, update, and delete tenant profiles with ease.
+- **Isolation**: Ensure data and configurations are securely isolated between tenants.
+- **Flexible Architecture**: Choose between a shared database or separate databases for each tenant.
+- **Dynamic Configuration**: Customize settings for each tenant to suit their unique requirements.
 
-This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
+## 🌟 Key Features
 
-## Integrazione rapida
+- **User Authentication**: Built-in support for tenant-based user authentication.
+- **Role-Based Access Control**: Assign roles and permissions per tenant to maintain security.
+- **Tenant-Specific Routes**: Easily manage routing and access control tailored for each tenant.
+- **Automatic Tenant Switching**: Implement seamless tenant switching based on user context.
+- **Centralized Dashboard**: Monitor all tenants from a single dashboard for administrative ease.
+- **Extensible API**: Integrate with external services and extend functionality effortlessly.
 
+## 🚀 Why Choose Fila3 Tenant?
+
+- **Scalable & Efficient**: Designed for high performance, making it suitable for both small applications and large enterprises.
+- **Developer-Friendly**: Easy to set up and integrate into existing projects.
+- **Community Support**: Engage with an active community of developers ready to help you succeed.
+
+## 🔧 Installation
+
+Getting started with the Fila3 Tenant Module is straightforward! Follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/laraxot/module_tenant_fila3.git
+
+Navigate to the project directory:
+bash
+Copia codice
+cd module_tenant_fila3
+Install dependencies:
+bash
+Copia codice
+npm install
+Configure tenant settings in the config file.
+Launch your application and experience effortless multi-tenancy!
+📜 Usage Examples
+Here are a few snippets to demonstrate how to use the Fila3 Tenant Module in your application:
+
+Creating a New Tenant
+javascript
+Copia codice
+tenantManager.create({
+  name: "Tenant A",
+  database: "tenant_a_db",
+  settings: { /* tenant-specific settings */ }
+});
+Switching Tenants
+javascript
+Copia codice
+tenantManager.switchTo("Tenant A");
+Retrieving Tenant Information
+javascript
+Copia codice
+const tenantInfo = tenantManager.getCurrentTenant();
+console.log("Current Tenant:", tenantInfo);
+🤝 Contributing
+We welcome contributions! If you have ideas, bug fixes, or enhancements, check out the contributing guidelines to get started.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👤 Author
+Marco Sottana
+Discover more of my work at marco76tv!
+
+### Versione Incoming
+
+# 🏢 Tenant Module - Gestione Multi-Tenant
+
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-success.svg)](phpunit.xml.dist)
+[![Multi-Tenant](https://img.shields.io/badge/multi--tenant-enabled-brightgreen.svg)](docs/module_tenant.md)
+[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/module_tenant)
+[![Downloads](https://img.shields.io/badge/downloads-1k+-blue.svg)](https://packagist.org/packages/laraxot/module_tenant)
+[![Stars](https://img.shields.io/badge/stars-100+-yellow.svg)](https://github.com/laraxot/module_tenant)
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laraxot/module_tenant/main/docs/assets/tenant-banner.png" alt="Tenant Module Banner" width="800">
+</div>
+
+## 🇮🇹 Italiano
+
+### 📝 Descrizione
+Il modulo Tenant fornisce un sistema completo di gestione multi-tenant per applicazioni Laravel, con supporto per database separati e isolamento dei dati.
+
+### ✨ Caratteristiche Principali
+- ✅ Gestione multi-tenant avanzata
+- ✅ Isolamento completo dei dati
+- ✅ Database separati per tenant
+- ✅ Interfaccia amministrativa Filament
+- ✅ API RESTful per la gestione dei tenant
+- ✅ Migrazioni automatiche per tenant
+- ✅ Backup e ripristino per tenant
+- ✅ Gestione delle risorse condivise
+
+### 🚀 Installazione
 ```bash
-cd laravel
-php artisan module:list
-./vendor/bin/phpstan analyse Modules/Tenant
----
-- **Tenant Isolation**: Complete data separation per tenant via database/schema/scoping strategies
-- **Multi-Domain Support**: Ogni tenant può essere raggiunto da più domini/sottodomini
-- **Configuration Management**: Settings per-tenant con override di configurazione globale
-- **Subscription Tracking**: Modello di subscription per gestire piani e accesso
-- **Filament Admin Panel**: Risorse Filament complete per la gestione tenant
-- **Automatic Connection Resolution**: Routing automatico verso la connessione database corretta
-
-### Module Dependencies
-
-- [Xot](../Xot/README.md) (required) — Core framework, abstractions, base models
-- [User](../User/README.md) (required) — User management and authentication
-
----
-
-## Quick Start
-
-### Installation
-
-```bash
-# Already included in main project
-# No additional setup required
-
-# Publish migrations (if needed)
+composer require modules/tenant
+php artisan module:enable Tenant
 php artisan migrate
 ```
 
-See local docs for integration patterns.
+### 📚 Documentazione
+Consulta la [documentazione completa](docs/module_tenant.md) per:
+- [Configurazione](docs/configuration.md)
+- [API](docs/api.md)
+- [Best Practices](docs/best-practices.md)
+
+## 🇬🇧 English
+
+### 📝 Description
+The Tenant module provides a complete multi-tenant management system for Laravel applications, with support for separate databases and data isolation.
+
+### ✨ Key Features
+- ✅ Advanced multi-tenant management
+- ✅ Complete data isolation
+- ✅ Separate databases per tenant
+- ✅ Filament admin interface
+- ✅ RESTful API for tenant management
+- ✅ Automatic tenant migrations
+- ✅ Tenant backup and restore
+- ✅ Shared resource management
+
+### 🚀 Installation
+```bash
+composer require modules/tenant
+php artisan module:enable Tenant
+php artisan migrate
+```
+
+### 📚 Documentation
+Check out the [complete documentation](docs/module_tenant.md) for:
+- [Configuration](docs/configuration.md)
+- [API](docs/api.md)
+- [Best Practices](docs/best-practices.md)
+
+## 🇪🇸 Español
+
+### 📝 Descripción
+El módulo Tenant proporciona un sistema completo de gestión multi-tenant para aplicaciones Laravel, con soporte para bases de datos separadas y aislamiento de datos.
+
+### ✨ Características Principales
+- ✅ Gestión avanzada multi-tenant
+- ✅ Aislamiento completo de datos
+- ✅ Bases de datos separadas por tenant
+- ✅ Interfaz administrativa Filament
+- ✅ API RESTful para gestión de tenants
+- ✅ Migraciones automáticas por tenant
+- ✅ Backup y restauración por tenant
+- ✅ Gestión de recursos compartidos
+
+### 🚀 Instalación
+```bash
+composer require modules/tenant
+php artisan module:enable Tenant
+php artisan migrate
+```
+
+### 📚 Documentación
+Consulta la [documentación completa](docs/module_tenant.md) para:
+- [Configuración](docs/configuration.md)
+- [API](docs/api.md)
+- [Mejores Prácticas](docs/best-practices.md)
+
+## 🤝 Contribuire / Contributing / Contribuir
+
+Siamo aperti a contribuzioni! Consulta le nostre [linee guida per i contributori](.github/CONTRIBUTING.md).
+
+We are open to contributions! Check out our [contributor guidelines](.github/CONTRIBUTING.md).
+
+¡Estamos abiertos a contribuciones! Consulta nuestras [pautas para contribuidores](.github/CONTRIBUTING.md).
+
+## 📄 Licenza / License / Licencia
+
+Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
+
+This project is distributed under the MIT license. See the [LICENSE](LICENSE) file for more details.
+
+Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+# 🏢 Tenant
+
+[![Domain-Multi-Tenant](https://img.shields.io/badge/Domain-Multi--Tenant-283593.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
+
+> **Un codice, più comuni.** Isolamento dati, team, configurazione per tenant — SaaS PA-ready.
+
+---
+
+## Perché esiste
+
+FixCity scala su più enti senza fork del codebase.
+
+## Superpoteri
+
+- Scope tenant su modelli
+- Team e binding
+- Config per ente
+- Filament multi-tenant patterns
+
+## Certificazioni
+
+| Certificazione | Stato |
+|----------------|-------|
+| PHPStan livello 10 | Target progetto |
+| `declare(strict_types=1)` | Su nuovo codice PHP |
+| Filament 5 + XotBase | Admin enterprise |
+| Test PHPUnit / Pest | Suite modulo |
+| Documentazione wiki | Cartella `docs/` |
+
+## Vuoi entrare nel team?
+
+Architettura **multi-comune** senza duplicare il monolite.
+
+Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+
+---
 
 ## Documentazione
 
-The technical map is in [docs/README.md](./docs/README.md).
----
-```php
-use Modules\Tenant\Models\Tenant;
-use Modules\Tenant\Models\Domain;
-
-// Get current tenant
-$tenant = Tenant::first();
-
-// List all domains for a tenant
-$domains = $tenant->domains()->get();
-
-// Access tenant settings
-$setting = $tenant->settings['key'] ?? null;
-```
-
-- [Story BMAD del modulo](./docs/stories/)
-- [Regole del progetto../../../docs/wiki/
-- [README del progetto../../README.md]
-
-## Qualità e manutenzione
-
-Keep `declare(strict_types=1);` in PHP, respect project PHPStan config, and update docs when contracts evolve.
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
 ---
 
-**Modulo** `tenant` · **Laraxot ecosystem** · **Project-agnostic**
----
-Configuration files:
-- `config/config.php` — Module configuration, navigation, routes, providers
-- `config/database.php` — Database connection isolation settings
-- `config/metatag.php` — Meta tag configuration per tenant
-
-Key settings:
-- `routes.middleware` — Middleware stack for tenant routes (default: `['web', 'auth']`)
-- `navigation.enabled` — Display in admin navigation (default: `true`)
-- `navigation.sort` — Navigation sort order (default: `80`)
-
----
-
-## Architecture
-
-### Directory Structure
-
-```
-Tenant/
-├── app/
-│   ├── Models/              # 15 models (Tenant, Domain, TenantDomain, etc.)
-│   ├── Actions/             # 15 business logic actions
-│   ├── Services/            # 7 service classes (Config resolvers, etc.)
-│   ├── Contracts/           # 2 interfaces and contracts
-│   ├── Traits/              # 4 reusable model traits
-│   ├── Filament/            # 7 Filament resources and components
-│   ├── Http/
-│   │   ├── Controllers/     # Controllers
-│   │   ├── Middleware/      # Middleware for tenant routing
-│   │   ├── Requests/        # Form requests
-│   │   └── Livewire/        # Livewire components
-│   ├── Console/Commands/    # 1 Artisan command
-│   ├── Providers/           # 4 service providers
-│   ├── Enums/               # Enumerations
-│   └── View/                # Blade components
-├── database/
-│   ├── migrations/          # 3 migrations
-│   ├── seeders/             # 9 seeders
-│   └── factories/           # 8 model factories
-├── config/
-│   ├── config.php           # Module configuration
-│   ├── database.php         # Database connection config
-│   └── metatag.php          # Meta tag configuration
-├── routes/                  # Route definitions (if any)
-├── docs/
-│   ├── index.md             # Documentation index
-│   ├── README.md            # This file
-│   ├── architecture.md      # Detailed architecture
-│   ├── PATTERNS.md          # Design patterns
-│   └── TROUBLESHOOTING.md   # Common issues
-└── composer.json
-```
-
-### Core Models
-
-- **Tenant** — Root multi-tenant entity with settings, domain, and metadata
-- **Domain** — Domain/subdomain associations for tenant routing
-- **TenantDomain** — Junction model linking tenant to multiple domains
-- **TenantSetting** — Key-value configuration storage per tenant
-- **TenantSubscription** — Subscription and plan tracking
-- **DatabaseConfig** — Database connection configuration per tenant
-- **TestSushiModel** — Testing utilities for Sushi model compatibility
-
-### Key Components
-
-**Actions**: Business logic organized by feature
-- `Actions/Config/` — Configuration management
-- `Actions/Domains/` — Domain/routing logic
-- `Actions/Models/` — Model-level operations
-- `Actions/Modules/` — Module integration
-- `Actions/Translations/` — Localization support
-- `Actions/Markdown/` — Markdown processing
-
-**Services**: System services for isolation and configuration
-- Configuration resolvers (per-tenant settings)
-- Domain routing services
-- Database connection management
-
-**Filament Resources**: Admin panel interface
-- DomainResource with custom forms and tables
-- Form components for tenant management
-- Pages for administration
-
----
-
-## API Reference
-
-See [API Documentation](API.md) for detailed model signatures, methods, and service interfaces.
-
----
-
-## Usage Examples
-
-### Creating a Tenant
-
-```php
-use Modules\Tenant\Models\Tenant;
-use Modules\Tenant\Models\Domain;
-
-// Create a new tenant
-$tenant = Tenant::create([
-    'name' => 'Customer Company',
-    'slug' => 'customer-company',
-    'domain' => 'customer.example.com',
-    'database' => 'customer_db',
-    'is_active' => true,
-]);
-
-// Add domains
-Domain::create([
-    'tenant_id' => $tenant->id,
-    'domain' => 'customer.example.com',
-    'is_primary' => true,
-]);
-```
-
-### Accessing Tenant Data
-
-```php
-use Modules\Tenant\Models\Tenant;
-
-// Query is automatically scoped to current tenant
-$tenant = Tenant::currentTenant();
-
-// Access related domains
-$domains = $tenant->domains()->get();
-
-// Get settings
-$theme = $tenant->settings['theme'] ?? 'default';
-```
-
-### Setting Tenant Configuration
-
-```php
-$tenant = Tenant::find($id);
-$tenant->settings = [
-    'theme' => 'dark',
-    'locale' => 'it',
-    'timezone' => 'Europe/Rome',
-];
-$tenant->save();
-```
-
----
-
-## Testing
-
-### Running Tests
-
-```bash
-# Run all module tests
-php artisan test Modules/Tenant
-
-# Run specific test class
-php artisan test Modules/Tenant/Tests/Feature/TenantTest
-
-# Run with coverage
-php artisan test --coverage Modules/Tenant
-```
-
-### Test Factories
-
-```php
-use Modules\Tenant\Database\Factories\TenantFactory;
-
-// Create test tenant
-$tenant = TenantFactory::new()->create();
-
-// Create with specific attributes
-$tenant = TenantFactory::new()
-    ->state(['name' => 'Test Tenant'])
-    ->create();
-```
-
----
-
-## Troubleshooting
-
-See [Troubleshooting Guide](TROUBLESHOOTING.md) for detailed information on:
-- Isolation failures
-- Context leaks
-- Routing errors
-- Database connection errors
-- Permission issues
-- Sync problems
-
----
-
-## Related Modules
-
-### Dependencies
-
-- [Xot](../Xot/README.md) — Core framework and abstractions
-- [User](../User/README.md) — User authentication and profiles
-
-### Design Patterns
-
-See [Patterns Documentation](PATTERNS.md) for:
-- Tenant isolation pattern
-- Database strategy selection
-- Middleware scoping pattern
-- Query scoping approach
-- Context switching mechanisms
-
----
-
-## Contributing
-
-To contribute to the Tenant module:
-
-1. Read [Architecture](architecture.md) for design principles
-2. Follow patterns in [Patterns](PATTERNS.md)
-3. Add troubleshooting entries for known issues
-4. Keep isolation constraints in mind
-5. Document complex business logic
-
-See [Contributing Guide](../../docs/wiki/how-to/contributing.md) for details.
-
----
-
-Navigation: [Project Home](../../docs/index.md) | [Modules](../../docs/modules/README.md) | [Documentation Index](index.md)
+**Modulo** `tenant` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

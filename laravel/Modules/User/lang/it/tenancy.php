@@ -7,8 +7,6 @@ return [
         'register' => 'Registra negozio',
         'edit' => 'Modifica dati negozio',
     ],
-    'fields' => [
-    ],
     'actions' => [
         'register_tenant' => [
             'label' => 'Aggiungi Studio',

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Facades\DB;
@@ -204,9 +205,7 @@ class BuildTestSqliteCommand extends Command
 
     private function firstLine(string $message): string
     {
-        $normalised = preg_replace('/\s+/', ' ', $message);
-
-        return mb_substr($normalised, 0, 160);
+        return Str::of($message)->replaceMatches('/\s+/', ' ')->substr(0, 160)->toString();
     }
 
     private function stringOption(string $name): ?string

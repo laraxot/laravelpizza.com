@@ -134,7 +134,7 @@ class EditTranslationFile extends XotBaseEditRecord
             $key = is_string($recordKeyNarrowed) ? $recordKeyNarrowed : (string) $recordKeyNarrowed;
             /** @var array<string, mixed>|string|int|Htmlable|null $contentNarrowed */
             $contentNarrowed = $data['content'] ?? null;
-            app(SaveTransAction::class)->execute($key, $contentNarrowed);
+            app(SaveTransAction::class)->persist($key, $contentNarrowed);
         }
 
         // dddx(['record'=>$this->record,'data'=>$data]);

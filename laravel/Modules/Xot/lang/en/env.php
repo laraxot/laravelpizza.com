@@ -95,7 +95,6 @@ return [
             'description' => '',
         ],
         'telegram_bot_token' => [
-            'description' => 'telegram_bot_token',
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',

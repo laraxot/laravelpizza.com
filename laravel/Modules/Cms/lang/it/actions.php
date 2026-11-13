@@ -23,7 +23,6 @@ return [
             'tooltip' => 'Elementi dell\'azione',
             'helper_text' => 'Lista degli elementi che compongono l\'azione',
             'help' => 'Seleziona gli elementi che faranno parte di questa azione',
-            'description' => 'items',
         ],
         'label' => [
             'label' => 'Etichetta',
@@ -31,7 +30,6 @@ return [
             'tooltip' => 'Etichetta dell\'azione',
             'helper_text' => 'Testo che viene visualizzato per identificare l\'azione',
             'help' => 'Inserisci un\'etichetta descrittiva per l\'azione',
-            'description' => 'label',
         ],
         'url' => [
             'label' => 'URL',
@@ -39,7 +37,6 @@ return [
             'tooltip' => 'URL di destinazione',
             'helper_text' => 'Indirizzo web a cui l\'azione reindirizzerà l\'utente',
             'help' => 'Inserisci l\'URL completo di destinazione',
-            'description' => 'url',
         ],
         'style' => [
             'label' => 'Stile',
@@ -47,7 +44,6 @@ return [
             'tooltip' => 'Stile visivo dell\'azione',
             'helper_text' => 'Aspetto visivo e styling applicato all\'azione',
             'help' => 'Scegli lo stile più appropriato per l\'azione',
-            'description' => 'style',
         ],
         'icon' => [
             'label' => 'Icona',
@@ -55,7 +51,6 @@ return [
             'tooltip' => 'Icona dell\'azione',
             'helper_text' => 'Icona grafica che rappresenta l\'azione nell\'interfaccia',
             'help' => 'Scegli un\'icona che rappresenti chiaramente l\'azione',
-            'description' => 'icon',
         ],
         'size' => [
             'label' => 'Dimensione',
@@ -63,7 +58,6 @@ return [
             'tooltip' => 'Dimensione dell\'elemento',
             'helper_text' => 'Dimensione fisica dell\'azione nell\'interfaccia utente',
             'help' => 'Seleziona la dimensione appropriata per l\'azione',
-            'description' => 'size',
         ],
         'alignment' => [
             'label' => 'Allineamento',
@@ -71,7 +65,6 @@ return [
             'tooltip' => 'Allineamento dell\'azione',
             'helper_text' => 'Posizionamento dell\'azione rispetto agli altri elementi',
             'help' => 'Scegli l\'allineamento più appropriato nell\'interfaccia',
-            'description' => 'alignment',
         ],
         'gap' => [
             'label' => 'Spaziatura',
@@ -79,7 +72,6 @@ return [
             'tooltip' => 'Spazio tra gli elementi',
             'helper_text' => 'Distanza tra l\'azione e gli elementi circostanti',
             'help' => 'Imposta la spaziatura adeguata per una buona leggibilità',
-            'description' => 'gap',
         ],
     ],
     'actions' => [

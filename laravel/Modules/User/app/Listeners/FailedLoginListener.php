@@ -10,6 +10,7 @@ namespace Modules\User\Listeners;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Http\Request;
 use Modules\User\Actions\Auth\RecordAuthenticationLogAction;
+use Modules\User\Actions\Login\RecordLoginPulseAction;
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Contracts\UserContract;
 
@@ -32,12 +33,16 @@ class FailedLoginListener
             return;
         }
 
+        $loginAt = now();
+
         app(RecordAuthenticationLogAction::class)->execute($event->user, [
             'ip_address' => $this->request->ip(),
             'user_agent' => $this->request->userAgent(),
-            'login_at' => now(),
+            'login_at' => $loginAt,
             'login_successful' => false,
             'location' => [],
         ]);
+
+        app(RecordLoginPulseAction::class)->execute($loginAt);
     }
 }

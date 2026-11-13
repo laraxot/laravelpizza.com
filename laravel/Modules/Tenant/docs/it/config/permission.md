@@ -1,18 +1,3 @@
----
-issues: []
-discussions: []
-title: "Permission"
-module: "Tenant"
-type: concept
-tags: [permission]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "permission"
-related:
-  - "./phpstan-corrections-january.md"
-  - "../../phpstan-corrections-january.md"
-status: draft
----
 <?php
 
 declare(strict_types=1);
@@ -181,6 +166,8 @@ return [
 
 ];
 ## Collegamenti tra versioni di permission.md
+* [permission.md](../../../Xot/docs/install/permission.md)
+* [permission.md](../../../Tenant/docs/it/config/permission.md)
 * [permission.md](../../../xot/docs/install/permission.md)
 * [permission.md](../../../tenant/docs/it/config/permission.md)
 

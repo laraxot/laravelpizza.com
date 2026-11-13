@@ -11,6 +11,12 @@ discussions: []
 
 # Design Comuni Pages Conversion Project
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 > **Goal**: Convert all 32 Design Comuni pages from Bootstrap Italia to Tailwind CSS + Alpine.js  
 > **Status**: 🚀 Phase 2 (CSS + Alpine implementation starting)  
 > **Progress**: HTML structure verified ✅ | CSS/Alpine in progress 🔄
@@ -139,7 +145,10 @@ npm install
 npm run build
 
 # Copy assets to public_html
+<<<<<<< .merge_file_ztGBCe
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_2vWxrx
 
 # Test in browser
 open http://127.0.0.1:8000/it/tests/

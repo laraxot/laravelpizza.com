@@ -6,6 +6,7 @@ namespace Modules\User\Tests\Feature\Filament\Widgets;
 
 use Filament\Facades\Filament;
 use Filament\Widgets\WidgetConfiguration;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Schema;
 use Livewire\Livewire;
@@ -32,7 +33,7 @@ uses(TestCase::class);
 function superAdminWidgetProfileConnectionName(): string
 {
     $profileClass = XotData::make()->getProfileClass();
-    $connection = (new $profileClass)->getConnectionName();
+    $connection = (new $profileClass())->getConnectionName();
 
     if (is_string($connection) && $connection !== '') {
         return $connection;
@@ -52,7 +53,7 @@ function superAdminWidgetProfileConnectionName(): string
  * fallback catch (RoleDoesNotExist) esiste solo per un ruolo mai seedato ed e' fuori
  * dallo scope di questa story (test del solo widget, non di IsProfileTrait).
  */
-function grantSuperAdminWidgetRole(User $user, string $roleName): void
+function grantSuperAdminWidgetRole(User $user, string $roleName): Model&UserContract
 {
     /** @var Role $superAdminRole */
     $superAdminRole = Role::query()->firstOrCreate(
@@ -68,7 +69,14 @@ function grantSuperAdminWidgetRole(User $user, string $roleName): void
 
     $role = $roleName === 'super-admin' ? $superAdminRole : $negateSuperAdminRole;
 
-    $user->assignRole($role);
+    // Il profilo del progetto (XotData::getProfileModel()) guarda i ruoli del suo `user`, cioe' la classe
+    // utente del progetto (config auth, es. Modules\Fixcity\Models\User). I ruoli Spatie sono legati al
+    // morph class del modello: assegnati a Modules\User\Models\User il profilo non li vedrebbe.
+    $userClass = XotData::make()->getUserClass();
+    $projectUser = $userClass::query()->whereKey($user->getKey())->firstOrFail();
+    $projectUser->assignRole($role);
+
+    return $projectUser;
 }
 
 beforeEach(function (): void {
@@ -110,7 +118,7 @@ describe('SuperAdminWidget visibility', function (): void {
     test('super-admin user sees the active hero emblem toggle', function (): void {
         /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
-        grantSuperAdminWidgetRole($user, 'super-admin');
+        $user = grantSuperAdminWidgetRole($user, 'super-admin');
         actingAs($user);
 
         Livewire::test(SuperAdminWidget::class)
@@ -127,7 +135,7 @@ describe('SuperAdminWidget visibility', function (): void {
     test('negate-super-admin user sees the barred hero emblem toggle', function (): void {
         /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
-        grantSuperAdminWidgetRole($user, 'negate-super-admin');
+        $user = grantSuperAdminWidgetRole($user, 'negate-super-admin');
         actingAs($user);
 
         Livewire::test(SuperAdminWidget::class)
@@ -161,7 +169,7 @@ describe('SuperAdminWidget toggle', function (): void {
     test('toggleSuperAdmin flips super-admin into negate-super-admin', function (): void {
         /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
-        grantSuperAdminWidgetRole($user, 'super-admin');
+        $user = grantSuperAdminWidgetRole($user, 'super-admin');
         actingAs($user);
 
         Assert::assertTrue((bool) $user->fresh()?->hasRole('super-admin'));
@@ -179,7 +187,7 @@ describe('SuperAdminWidget toggle', function (): void {
     test('toggleSuperAdmin flips negate-super-admin back into super-admin', function (): void {
         /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
-        grantSuperAdminWidgetRole($user, 'negate-super-admin');
+        $user = grantSuperAdminWidgetRole($user, 'negate-super-admin');
         actingAs($user);
 
         Livewire::test(SuperAdminWidget::class)
@@ -195,10 +203,10 @@ describe('SuperAdminWidget toggle', function (): void {
     test('toggleSuperAdmin returns a real 303 redirect response, not just a Livewire effect', function (): void {
         /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
-        grantSuperAdminWidgetRole($user, 'super-admin');
+        $user = grantSuperAdminWidgetRole($user, 'super-admin');
         actingAs($user);
 
-        $widget = new SuperAdminWidget;
+        $widget = new SuperAdminWidget();
         $widget->mount();
         // Dal controllo di DCP-181 il profilo deve vedere il ruolo: l'utente del profilo e' `Modules\Fixcity\Models\User`, quello della factory
         // `Modules\User\Models\User`, e i ruoli Spatie sono legati alla classe del modello. Si collega il profilo all'utente che ha il ruolo.

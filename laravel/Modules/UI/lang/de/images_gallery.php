@@ -5,38 +5,18 @@ declare(strict_types=1);
 return [
     'fields' => [
         'version' => [
-            'label' => 'version',
-            'description' => 'version',
-            'helper_text' => 'version',
-            'placeholder' => 'version',
             'tooltip' => '',
         ],
         'subtitle' => [
-            'label' => 'subtitle',
-            'description' => 'subtitle',
-            'helper_text' => 'subtitle',
-            'placeholder' => 'subtitle',
             'tooltip' => '',
         ],
         'title' => [
-            'label' => 'title',
-            'description' => 'title',
-            'helper_text' => 'title',
-            'placeholder' => 'title',
             'tooltip' => '',
         ],
         'image' => [
-            'label' => 'image',
-            'placeholder' => 'image',
-            'helper_text' => 'image',
-            'description' => 'image',
             'tooltip' => '',
         ],
         'gallery' => [
-            'label' => 'gallery',
-            'placeholder' => 'gallery',
-            'helper_text' => 'gallery',
-            'description' => 'gallery',
             'tooltip' => '',
         ],
     ],
@@ -49,6 +29,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

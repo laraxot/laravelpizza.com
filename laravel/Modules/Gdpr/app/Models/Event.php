@@ -154,18 +154,8 @@ class Event extends BaseModel
         'treatment_id',
         'consent_id',
         'subject_id',
-        'ip',
         'payload',
     ];
-
-    protected static function booted(): void
-    {
-        static::creating(function (Event $event): void {
-            if (blank($event->ip)) {
-                $event->ip = '127.0.0.1';
-            }
-        });
-    }
 
     protected $table = 'gdpr_events';
 

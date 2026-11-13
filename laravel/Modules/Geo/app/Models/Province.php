@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\File;
+use Modules\Geo\Actions\GeoData\GetItalianMunicipalitiesPathAction;
 use Modules\Geo\Database\Factories\ProvinceFactory;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Contracts\ProfileContract;
@@ -52,11 +53,26 @@ class Province extends BaseModel
     ];
 
     /**
+     * Cache su file della tabella Sushi: senza, ogni richiesta che usa il modello rileggeva il JSON dei
+     * comuni (1,9 MB) e reinseriva le righe in un database in memoria (salvataggio di un indirizzo > 10 s).
+     * La cache si rigenera quando cambia il file dei comuni.
+     */
+    protected function sushiShouldCache(): bool
+    {
+        return true;
+    }
+
+    protected function sushiCacheReferencePath(): string
+    {
+        return app(GetItalianMunicipalitiesPathAction::class)->execute();
+    }
+
+    /**
      * @return array<int, array<string, mixed>>
      */
     public function getRows(): array
     {
-        $path = module_path('Geo', 'resources/json/comuni.json');
+        $path = app(GetItalianMunicipalitiesPathAction::class)->execute();
         if (! file_exists($path)) {
             return [];
         }

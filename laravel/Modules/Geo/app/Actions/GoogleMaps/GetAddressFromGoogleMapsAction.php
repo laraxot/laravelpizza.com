@@ -64,7 +64,7 @@ final class GetAddressFromGoogleMapsAction
 
         /** @var Response $response */
         if (! $response->successful()) {
-            throw GoogleMapsApiException::requestFailed((string) $response->status());
+            throw GoogleMapsApiException::requestFailed('Richiesta a Google Maps fallita: HTTP '.$response->status());
         }
 
         return $response;

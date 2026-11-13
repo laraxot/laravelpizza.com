@@ -5,30 +5,16 @@ declare(strict_types=1);
 return [
     'fields' => [
         'caption' => [
-            'label' => 'caption',
-            'description' => 'caption',
-            'helper_text' => 'caption',
-            'placeholder' => 'caption',
             'tooltip' => '',
         ],
         'alt' => [
-            'label' => 'alt',
-            'description' => 'alt',
-            'helper_text' => 'alt',
-            'placeholder' => 'alt',
             'tooltip' => '',
         ],
         'ratio' => [
-            'label' => 'ratio',
-            'description' => 'ratio',
             'tooltip' => '',
             'helper_text' => '',
         ],
         'url' => [
-            'label' => 'url',
-            'description' => 'url',
-            'helper_text' => 'url',
-            'placeholder' => 'url',
             'tooltip' => '',
         ],
         'image' => [
@@ -48,6 +34,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

@@ -4,6 +4,7 @@ declare(strict_types=1);
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\Components\Field;
+use Filament\Infolists\Components\Entry;
 use Filament\Panel;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
@@ -241,7 +242,7 @@ function userResourceSectionComponents(TestCase $testCase, Component $section): 
 function userResourceFindComponentByName(array $components, string $name): ?Component
 {
     foreach ($components as $component) {
-        if (! $component instanceof Field) {
+        if (! $component instanceof Field && ! $component instanceof Entry) {
             continue;
         }
 

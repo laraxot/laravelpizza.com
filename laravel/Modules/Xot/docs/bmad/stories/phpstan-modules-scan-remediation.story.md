@@ -4,7 +4,7 @@ type: story
 module: Xot
 status: done
 created: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-06
 tags: [bmad, phpstan, modules, remediation]
 qmd: "PHPStan analyse Modules full tree trait extraction errors remediation gate"
 related:
@@ -64,3 +64,19 @@ filesystem; questa story ripristina una traccia reale e verificabile.
   inventario finale.
 - Nessun ignore PHPStan né baseline aggiunto. I file Sigma hanno ownership/lock
   attivi; i fix vanno coordinati col relativo owner, senza sovrascriverne i diff.
+
+## Ciclo coordinatore 2026-11-06
+
+- Baseline richiesta: `cd laravel && ./vendor/bin/phpstan analyse Modules`
+  completata con `[OK] No errors`; il JSON ha riportato `errors: 0` e
+  `file_errors: 0`.
+- Le tre segnalazioni individuate erano due annotazioni `@use` non supportate
+  dal trait non generico `GeoTrait` e una firma di policy che ometteva il record
+  richiesto dal contratto comune di `replicate()`.
+- Correzione alla sorgente: rimosse le annotazioni PHPDoc false; la policy ora
+  accetta `Model $record` e il test passa il record reale. Nessun ignore, cast o
+  modifica a `phpstan.neon`.
+- Verifiche: PHPStan mirato `file_errors: 0`, lint PHP sui tre file e Pest
+  `AbsenceRequestPolicyTest` con `30 passed`, `38 assertions`.
+- Le modifiche preesistenti al worktree sono state preservate. Nessun commit o
+  push eseguito.

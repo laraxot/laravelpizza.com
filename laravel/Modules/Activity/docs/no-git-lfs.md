@@ -1,8 +1,8 @@
 ---
-title: "Git LFS vietato: linea guida e blocco canonico .gitattributes"
+title: "Git LFS vietato: linea guida e prototipo .gitattributes"
 type: guideline
 module: Activity
-updated: 2026-11-06
+updated: 2026-09-01
 qmd: "git lfs vietato gitattributes prototipo binari blob normali activity puntatori immagini"
 status: draft
 tags: [docs, activity]
@@ -36,34 +36,36 @@ Non e' una preferenza di stile, e' il risultato di incidenti ripetuti.
   organizzazioni (`laraxot` e `provtv`). Gli oggetti LFS non erano presenti su entrambe:
   un puntatore che punta a un oggetto che nessun remote ha e' un file perduto.
 
-## Il blocco canonico
+## Il prototipo
 
-Il prototipo `bashscripts/templates/gitattributes.module` e lo script `sync-gitattributes-modules.sh`
-non esistono piu' (cancellati il 2026-10-23, vedi la regola): non vanno ricreati. La fonte di verita'
-e' il blocco in `bashscripts/ai/wiki/rules/no-git-lfs.md`. Il `.gitattributes` di questo modulo ne e'
-una copia con l'intestazione e **nessuna regola locale**: la storia del file non mostra righe specifiche
-del modulo. Si modifica a mano, tenendolo uguale a quello di AI e Cms, e si verifica con
-`bashscripts/tools/check-no-git-lfs.sh`.
+Fonte unica: `bashscripts/templates/gitattributes.module`. Il `.gitattributes` di questo
+modulo ne e' una copia identica e **non va modificato a mano**: si modifica il prototipo e
+si rilancia il sync, altrimenti alla propagazione successiva la modifica sparisce.
 
-Sui binari si usa solo `binary !filter`. Non vanno aggiunti `!merge`, `!diff`, `!text`: `binary` e' la
-macro `-diff -merge -text`, e `!merge` riporta il driver a "non specificato", quindi Git fa un merge
-testuale e per un SVG (testo, senza byte NUL) scrive i marker di conflitto dentro il file. Con
-`binary !filter` un conflitto su un SVG resta un conflitto binario e non scrive nulla.
+```bash
+bash bashscripts/templates/sync-gitattributes-modules.sh
+```
 
 ```gitattributes
-# Git LFS vietato: tutti i binari restano blob Git normali.
+# Prototipo .gitattributes per laravel/Modules/* e laravel/Themes/*
 # Canon: bashscripts/ai/wiki/rules/no-git-lfs.md
+# Sync:  bash bashscripts/templates/sync-gitattributes-modules.sh
 #
-# Sui binari usare solo `binary !filter`. Non aggiungere !merge, !diff o !text:
-# !merge riattiva il merge testuale e Git scrive i marker di conflitto dentro gli SVG.
+# Git LFS VIETATO. I binari sono blob git normali.
+# Mai: filter=lfs / diff=lfs / merge=lfs
 
 * text=auto
+
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
 
-# Binary files: binary disables text normalization; !filter blocks inherited LFS.
+# Binari come blob git normali: NIENTE git-lfs.
+# `binary` disattiva diff e normalizzazione di fine riga.
+# `!filter` annulla un eventuale filter.lfs ereditato dalla configurazione di sistema:
+# e' questa la protezione vera, perche' filter.lfs.* puo' restare installato sulla
+# macchina per altri progetti e senza `!filter` verrebbe applicato anche qui.
 *.png binary !filter
 *.jpg binary !filter
 *.jpeg binary !filter
@@ -71,7 +73,6 @@ CHANGELOG.md export-ignore
 *.webp binary !filter
 *.ico binary !filter
 *.svg binary !filter
-*.psd binary !filter
 *.pdf binary !filter
 *.zip binary !filter
 *.woff binary !filter
@@ -79,6 +80,8 @@ CHANGELOG.md export-ignore
 *.ttf binary !filter
 *.eot binary !filter
 *.otf binary !filter
+*.mp4 binary !filter
+*.psd binary !filter
 *.phar binary !filter
 *.db binary !filter
 *.sqlite binary !filter
@@ -92,13 +95,13 @@ LFS di intervenire. `!filter` annulla per path qualunque `filter.lfs` ereditato.
 Serve davvero: su questa macchina `filter.lfs.*` e' installato a livello **system**
 (`git config --system`) e serve ad altri progetti: `base_predict_fila5` ha 38 file
 legittimamente in LFS. Non si disinstalla il pacchetto. Cio' che tiene questo monorepo
-fuori da LFS non e' l'assenza del filtro, e' il `!filter` del blocco canonico.
+fuori da LFS non e' l'assenza del filtro, e' il `!filter` del prototipo.
 
 ### Una sola `.gitattributes` per modulo
 
 Solo la root del modulo puo' averne una. Una `.gitattributes` in una sottocartella
 sovrascrive la policy per i path che copre, ed e' il modo in cui LFS e' rientrato dalla
-finestra le altre volte. Se ne trova una, va rimossa.
+finestra le altre volte. Lo script di sync le cancella.
 
 ## Verifica
 
@@ -107,15 +110,14 @@ bash bashscripts/tools/check-no-git-lfs.sh
 ```
 
 Esce 0 se pulito, 1 con l'elenco. Controlla sei cose: righe `filter=lfs` attive nei
-`.gitattributes` (i commenti che citano la stringa sono esclusi), marker di conflitto negli
-stessi file, puntatori LFS nei file committati, hook LFS in `.git/hooks/`, sezione `[lfs]`
-nel config locale e attributi effettivi dei binari (`git check-attr`: `filter` non
-specificato, `merge` disattivato) in ogni repo annidato.
+`.gitattributes` (le righe di commento del prototipo citano la stringa e sono escluse),
+marker di conflitto negli stessi file, puntatori nei file committati, file tracciati da
+LFS, hook LFS in `.git/hooks/`, e testo di puntatore annegato dentro artefatti di build.
 
 Due trappole che quel controllo evita e che a mano si sbagliano:
 
-1. **`grep filter=lfs` puo' dare risultati anche quando tutto e' pulito**, perche' i
-   commenti di un `.gitattributes` possono citare la stringa. Va cercata la riga *attiva*:
+1. **`grep filter=lfs` da 12 risultati anche quando tutto e' pulito**, perche' il
+   prototipo cita la stringa nella propria intestazione. Va cercata la riga *attiva*:
    `grep "^[^#]*filter=lfs"`.
 2. **Invocare `git lfs` ricrea cio' che si sta verificando.** Un `git lfs ls-files` di
    controllo riscrive `lfs.repositoryformatversion` nel config locale. Se la sezione

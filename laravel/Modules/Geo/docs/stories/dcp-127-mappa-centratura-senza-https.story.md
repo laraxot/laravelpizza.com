@@ -19,6 +19,12 @@ qmd: "dcp-127 geo coordinate picker centratura posizione utente gps http https f
 
 # DCP-127: centratura della mappa senza HTTPS
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 ## Richiesta (utente, 2026-10-13)
 Nel wizard `/it/tickets/create?step=form.dati-di-segnalazione::data::wizard-step` le coordinate fisse (`CoordinatePicker::make('location')->center(43.7696, 11.2558)`) vanno contro lo scopo: se il record ha le coordinate si leggono, se sono null la mappa si centra sulla posizione dell'utente (browser). Chi segnala puo' essere ovunque nel mondo. Niente testo «Apri questa pagina in HTTPS per usare la posizione.»; «la mappa deve funzionare sempre», anche senza HTTPS.
 

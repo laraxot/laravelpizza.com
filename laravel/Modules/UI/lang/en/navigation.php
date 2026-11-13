@@ -5,24 +5,12 @@ declare(strict_types=1);
 return [
     'fields' => [
         'items' => [
-            'label' => 'items',
-            'placeholder' => 'items',
-            'helper_text' => 'items',
-            'description' => 'items',
             'tooltip' => '',
         ],
         'label' => [
-            'label' => 'label',
-            'placeholder' => 'label',
-            'helper_text' => 'label',
-            'description' => 'label',
             'tooltip' => '',
         ],
         'url' => [
-            'label' => 'url',
-            'placeholder' => 'url',
-            'helper_text' => 'url',
-            'description' => 'url',
             'tooltip' => '',
         ],
     ],
@@ -35,8 +23,6 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
     'login' => 'Sign in',
     'logout' => 'Log out',
     'profile' => 'Profile',

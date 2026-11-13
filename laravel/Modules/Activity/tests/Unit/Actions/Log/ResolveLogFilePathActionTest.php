@@ -6,7 +6,7 @@ use Modules\Activity\Actions\Log\ResolveLogDirectoryAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
 use Safe\Exceptions\FilesystemException;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 use function Safe\realpath;
 use function Safe\symlink;

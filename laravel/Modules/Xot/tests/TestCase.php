@@ -55,6 +55,11 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
+        // Prima di parent::setUp(): DatabaseTransactions apre subito le transazioni su
+        // `connectionsToTransact`; senza questo `user` (mysql) andava in "Connection refused"
+        // su ogni macchina senza MariaDB. Stesso schema del TestCase di Restaurant.
+        $this->prepareSharedSqliteForTesting();
+
         parent::setUp();
 
         $database = self::sharedSqlitePath();

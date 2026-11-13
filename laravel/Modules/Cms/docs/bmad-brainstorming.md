@@ -64,3 +64,33 @@ Come evitare che i blocchi CMS diventino una seconda homepage hardcoded nel tema
 ## Prossimo step BMAD
 
 Vedi [bmad-planning.md](./bmad-planning.md) — eseguire la Wave 1 e aggiornare il decision-log owner.
+
+## Iniziativa Head Sixteen
+
+Per l'adozione del componente Head Cms nel tema Sixteen, il brainstorming multi-tecnica e' nel report owner del tema: [front-office-readiness-brainstorming.md](../../../Themes/Sixteen/docs/bmad/front-office-readiness-brainstorming.md). Le decisioni approvate e la D-7 ancora aperta sono raccolte nella [GitHub discussion #93](https://github.com/laraxot/theme_sixteen_fila5/discussions/93) e nel [piano di adozione Head](./bmad/head-component-adoption-plan.md).
+
+## Sessione 85: D-7 e pagine non tradotte (2026-11-12)
+
+Evidenze: diff dell'head su 128 URL in [head-sixteen-layout-migration](./stories/head-sixteen-layout-migration.story.md); misura sul blog in [untranslated-detail-pages-indexing](./stories/untranslated-detail-pages-indexing.story.md). Decisioni e alternative scartate: [discussion #95](https://github.com/laraxot/theme_sixteen_fila5/discussions/95). Le due decisioni **si influenzano** e vanno prese insieme.
+
+### Matrice delle opzioni (1 = peggio, 3 = meglio)
+
+| Criterio | D-7 (a) canonical + hreflang anche su `noindex` | D-7 (b) restringere `LG-03`/`LG-04` | F-07 (A) lingue «scritte» ai modelli traducibili | F-07 (B) solo `noindex` + `lang` | F-07 (D) redirect all'italiano |
+|---|---|---|---|---|---|
+| Parita' con il vecchio head | 3 | 1 | n/a | n/a | n/a |
+| Rischio SEO | 2 | 2 | 3 | 2 | 2 |
+| Accessibilita' (lingua dichiarata) | n/a | n/a | 3 | 2 | 3 |
+| Sforzo | 2 | 3 | 1 | 3 | 1 |
+| Reversibilita' | 3 | 3 | 2 | 3 | 1 |
+| Effetto sul gate go-live | chiude `LG-03`/`LG-04` | chiude per ridefinizione | nessuno diretto | nessuno diretto | nessuno diretto |
+
+Lettura: D-7 (a) + F-07 (A) e' la coppia coerente (la regola «scritto o no» decide quali pagine sono `noindex`, e la D-7 decide se anche quelle portano canonical e hreflang). D-7 (b) + F-07 (B) e' la coppia veloce, con due regole diverse per `Page` e modelli.
+
+### Reverse brainstorming: come rompere di nuovo la parita'
+
+1. Aggiungere un nuovo modello pubblico (evento, servizio) senza passarlo dal contratto delle lingue «scritte».
+2. Cambiare `noindex_paths` nel tenant senza rilanciare lo sweep.
+3. Aggiornare `laravel/head` senza un diff su 128 URL.
+4. Spostare il controllo `LG-03`/`LG-04` sulle sole pagine indicizzabili e scordare che le pagine `noindex` erano il motivo.
+
+Prevenzione: test da file nel modulo che confronta le lingue «scritte» di ogni modello pubblico, e lo sweep dell'head come strumento versionato ([piano di hardening](../../../Themes/Sixteen/docs/plans/front-office-hardening-plan.md), onda 3).

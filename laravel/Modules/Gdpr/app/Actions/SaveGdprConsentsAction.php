@@ -62,8 +62,9 @@ class SaveGdprConsentsAction
                 'type' => $treatmentName,
                 'accepted_at' => $isAccepted ? now() : null,
                 'subject_id' => $user->id,
-                'created_by' => 'gdpr_register_widget',
-                'updated_by' => 'gdpr_register_widget',
+                // UUID dell'utente: le colonne sono uuid e la stringa 'gdpr_register_widget' veniva rifiutata da MariaDB/MySQL.
+                'created_by' => $user->id,
+                'updated_by' => $user->id,
                 'ip_address' => $ipAddress,
                 'user_agent' => $userAgent,
                 // quale testo ha accettato: senza versione non si dimostra cosa e' stato accettato

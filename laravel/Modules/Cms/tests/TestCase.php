@@ -14,7 +14,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
-use Tests\TestCase as RootTestCase;
+use Modules\Xot\Tests\XotBaseTestCase;
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;
@@ -22,7 +22,7 @@ use function Safe\json_decode;
 /**
  * TestCase base per il modulo Cms.
  */
-abstract class TestCase extends RootTestCase
+abstract class TestCase extends XotBaseTestCase
 {
     public static ?self $currentTest = null;
 

@@ -5,10 +5,7 @@ declare(strict_types=1);
 return [
     'fields' => [
         'email' => [
-            'label' => 'email',
-            'placeholder' => 'email',
             'helper_text' => '',
-            'description' => 'email',
             'tooltip' => '',
         ],
     ],
@@ -21,6 +18,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

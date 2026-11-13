@@ -67,3 +67,12 @@ Dettaglio contratto: [filament-blueprint.md](./bmad/filament-blueprint.md).
 - [ ] Blueprint Filament aggiornato (o esplicitamente N/A)
 - [ ] Link bidirezionali ai dossier/topic gia esistenti
 - [ ] Nessun artefatto in `bmad-output/`
+
+## Iniziativa: Head Cms per Sixteen
+
+Il Cms possiede il renderer Head e le policy SEO condivise; Sixteen passa contesto semantico e mantiene solo markup e comportamento visuale propri. Il piano specifico e' [head-component-adoption-plan.md](./bmad/head-component-adoption-plan.md), coordinato con la [readiness Sixteen](../../../Themes/Sixteen/docs/bmad/front-office-production-readiness-plan.md).
+
+- Decisioni PO registrate: D-1…D-6 nella [story Head](./stories/head-sixteen-layout-migration.story.md) e nella [discussion #93](https://github.com/laraxot/theme_sixteen_fila5/discussions/93).
+- D-7 resta aperta: comportamento canonical/hreflang sulle pagine `noindex`; non dichiarare chiusa la parita' finche' il PO non decide.
+- Filament Blueprint: nessun Resource Head nuovo; restano validi i contratti Page/Section/Menu.
+- Le story esistenti sono in corso e restano la traccia esecutiva: [migrazione](./stories/head-sixteen-layout-migration.story.md) e [chiusura parita'](./stories/head-sixteen-parity-closeout.story.md). Nessuna story duplicata.

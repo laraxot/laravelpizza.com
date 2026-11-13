@@ -32,7 +32,7 @@ test('ValidateUserDataAction returns valid user data', function () {
     Assert::assertSame('Doe', $result['last_name']);
     Assert::assertSame($uniqueEmail, $result['email']);
     Assert::assertSame('customer_user', $result['type']);
-    Assert::assertNotNull($result['email_verified_at']);
+    Assert::assertNull($result['email_verified_at']);
 });
 
 test('ValidateUserDataAction hashes password', function () {

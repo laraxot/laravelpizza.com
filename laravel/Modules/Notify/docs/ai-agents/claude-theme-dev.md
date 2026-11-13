@@ -12,6 +12,12 @@ status: draft
 
 # CLAUDE Theme Development
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 Guida allo sviluppo del tema Meetup.
 
 ## Theme Development (Meetup Theme)
@@ -39,7 +45,10 @@ npm run dev
 
 # Production build
 npm run build
+<<<<<<< .merge_file_20p8Vb
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_RJQYYB
 ```
 
 ---

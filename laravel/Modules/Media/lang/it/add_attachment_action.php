@@ -7,7 +7,6 @@ return [
     'label' => 'Carica allegato',
     'fields' => [
         'file' => [
-            'label' => 'file',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

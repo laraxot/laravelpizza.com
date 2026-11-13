@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests;
 
+use Illuminate\Database\DatabaseManager;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema as FilamentSchema;
 use Filament\Widgets\Widget;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -64,7 +66,40 @@ use function Safe\json_encode;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
+    use DatabaseTransactions {
+        beginDatabaseTransaction as openDatabaseTransactions;
+    }
+
+    /**
+     * Le migration girano una volta per processo, come in `Tests\TestCase`.
+     */
+    public static bool $userSchemaMigrated = false;
+
+    /**
+     * Su MariaDB (CI e sviluppo) lo schema del database `*_test` non viene costruito da
+     * `xot:build-test-sqlite`, che popola solo lo SQLite condiviso: senza questo passo i test
+     * che girano prima del primo `Tests\TestCase` (che lancia `migrate`) muoiono con
+     * "Table 'fixcity_user_test.users' doesn't exist". `migrate` e' additivo (mai `fresh`)
+     * e la `TestDatabaseGuard` garantisce che ogni connessione punti a un database `_test`.
+     * Va fatto prima di aprire le transazioni: in MySQL ogni DDL fa commit implicito.
+     *
+     * Nessun tipo di ritorno nativo: il metodo del trait non lo dichiara.
+     *
+     * @return void
+     */
+    public function beginDatabaseTransaction()
+    {
+        if (! static::$userSchemaMigrated) {
+            static::$userSchemaMigrated = true;
+
+            if (config('database.default') !== 'sqlite') {
+                $this->app?->make(\Illuminate\Contracts\Console\Kernel::class)
+                    ->call('migrate', ['--force' => true]);
+            }
+        }
+
+        $this->openDatabaseTransactions();
+    }
 
     protected function setUp(): void
     {
@@ -120,8 +155,13 @@ abstract class TestCase extends XotBaseTestCase
     /** @var Collection<int, User>|null */
     public static ?Collection $users = null;
 
-    /** @var list<string> */
-    protected $connectionsToTransact = ['mysql', 'user'];
+    /**
+     * Come `Tests\TestCase`: anche `mariadb` (default in CI) e `fixcity` (Profile del progetto)
+     * vanno in transazione, altrimenti le righe scritte dai test restano nel DB `_test`.
+     *
+     * @var list<string>
+     */
+    protected $connectionsToTransact = ['mysql', 'mariadb', 'user', 'fixcity'];
 
     public function setupFilamentAdminPanel(): void
     {
@@ -539,7 +579,19 @@ abstract class TestCase extends XotBaseTestCase
      */
     public static function filamentSectionChildComponents(Section $section): array
     {
-        return array_values($section->getChildComponents());
+        // getChildComponents() costruisce lo schema figlio e richiede il container con il componente
+        // Livewire (Filament 5): fuori da una pagina si leggono i componenti dichiarati nella Section.
+        $declared = $section->getDefaultChildComponents();
+        if ($declared instanceof FilamentSchema) {
+            return [];
+        }
+
+        return array_values(array_filter(
+            $declared,
+            static fn (mixed $component): bool => $component instanceof Component
+                || $component instanceof Action
+                || $component instanceof ActionGroup,
+        ));
     }
 
     public static function teamUsesSoftDeletes(): bool
@@ -571,5 +623,38 @@ abstract class TestCase extends XotBaseTestCase
         $invitation->save();
 
         return $invitation->fresh() ?? $invitation;
+    }
+
+    /**
+     * Una transazione di test per ogni ISTANZA di connessione, non per ogni nome.
+     *
+     * `TenantServiceProvider::aliasModuleConnectionsToDefault()` risolve le connessioni di modulo senza database proprio (`fixcity`,
+     * `comment`, `media`, `blog`) sulla stessa istanza `Connection` della default. Con i cinque nomi il trait apriva quattro livelli
+     * sulla stessa connessione: un'Action con `transaction()` committava al livello 4, mai a 1, e il DatabaseTransactionsManager di test
+     * non eseguiva piu' i callback "dopo il commit" (observer `ShouldHandleEventsAfterCommit`, eventi `ShouldDispatchAfterCommit`).
+     * Effetto in CI su MariaDB: nessuna notifica di approvazione, scarto o chiusura (TicketLifecycleNotificationTest, area personale).
+     * Lo skip del manager conta i nomi restituiti qui, quindi ogni nome deve corrispondere a una sola transazione aperta.
+     *
+     * @return list<string>
+     */
+    protected function connectionsToTransact()
+    {
+        $database = $this->app?->make('db');
+        if (! $database instanceof DatabaseManager) {
+            return $this->connectionsToTransact;
+        }
+
+        $names = [];
+        $seen = [];
+        foreach ($this->connectionsToTransact as $name) {
+            $id = spl_object_id($database->connection($name));
+            if (isset($seen[$id])) {
+                continue;
+            }
+            $seen[$id] = true;
+            $names[] = $name;
+        }
+
+        return $names;
     }
 }

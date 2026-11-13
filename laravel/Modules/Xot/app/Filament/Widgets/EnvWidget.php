@@ -11,6 +11,7 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Artisan;
 use Modules\Xot\Datas\EnvData;
 use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 
@@ -70,6 +71,23 @@ class EnvWidget extends XotBaseSchemaWidget
 
             return;
         }
+
+        // Scrivere nel .env non basta: con la configurazione in cache
+        // (`php artisan config:cache`, che è la norma in produzione) Laravel
+        // legge i valori dal file compilato in bootstrap/cache/config.php e il
+        // .env nuovo viene ignorato. Senza questa riga l'utente cambiava
+        // MAIL_HOST dal pannello, non succedeva niente, e concludeva che la
+        // pagina non funziona — proprio il motivo per cui questa pagina esiste
+        // (module_quaeris_fila5#47: nessun accesso SSH al server).
+        //
+        // `config:clear` e non `config:cache`: è quello che fa già
+        // SocialiteProviderSettingsPage dopo aver scritto la sua
+        // configurazione, e soprattutto non può lasciare una cache a metà. Il
+        // prezzo è che da qui al prossimo deploy la configurazione si rilegge a
+        // ogni richiesta, cioè un po' più lenta: è il verso giusto in cui
+        // sbagliare, rispetto a un'impostazione che non si applica in silenzio.
+        Artisan::call('config:clear');
+
         Notification::make()
             ->title('Saved successfully')
             ->success()

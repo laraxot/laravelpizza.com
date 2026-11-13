@@ -1,49 +1,30 @@
----
-issues: []
-discussions: []
-title: "DRY & KISS Analysis - Modulo Tenant"
-module: "Tenant"
-type: concept
-tags: [dry, kiss, analysis]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "dry kiss analysis"
-related:
-  - "./phpstan-corrections-january.md"
-status: draft
----
-# DRY & KISS Analysis - Modulo Tenant
+**Data:** 2025-10-15 | **Status:** ✅
 
-**Data:** 15 Ottobre 2025  
-**DRY Score:** ✅ 94%  
-**KISS Score:** ✅ 90%
+## 📊 Struttura
+Models: 11 | Resources: 1 | Services: 6 | Actions: 2 | Docs: 45
 
-## ✅ Stato Attuale
+## 🎯 Score: 6/10 🟡 **DA MIGLIORARE**
 
-### BaseModel Buono
+## 🔴 CRITICI
+### BaseModel NON estende XotBaseModel!
 ```php
-abstract class BaseModel extends XotBaseModel
-{
-    protected $connection = 'tenant';
-    
-    protected function casts(): array {
-        return array_merge(parent::casts(), [
-            'verified_at' => 'datetime',
-        ]);
-    }
-}
+abstract class BaseModel extends EloquentModel  // ⚠️
 ```
 
-**Righe:** 13  
-**DRY Level:** ✅ 94%
+**Raccomandazione:** Investigare PERCHÉ e se possibile unificare
 
-## 🎯 Raccomandazioni
-- ✅ BaseModel: Buono, mantenere
-- ⏸️ verified_at: Valutare centralizzazione
-- 🔄 ServiceProvider: Auto-detect nome
+**Priority:** 🔴 ALTA
+**Effort:** 1 settimana
 
+## ⚠️ MIGLIORAMENTI
+1. Unificare con User module? (Team/Tenant overlap)
+2. Services (6): Audit vs Actions (2)
+
+**Status:** 🟡 RICHIEDE ATTENZIONE
 ---
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+module: theme
+topic: dry-kiss-analysis
+canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis-2025-10-15-Modules.md
+---
 
-
-
+See canonical documentation: ../../../Themes/docs/shared-components/dry-kiss-analysis-2025-10-15-Modules.md

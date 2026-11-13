@@ -3565,7 +3565,7 @@ cd laravel/Themes/Sixteen
 yarn install
 
 # Build e copia
-yarn run build && yarn run copy
+yarn run build   # asset serviti via symlink: niente copy
 ```
 
 ## 2. Importazione CSS
@@ -3651,7 +3651,7 @@ yarn run build && yarn run copy
    {
        "scripts": {
            "build": "vite build",
-           "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/dist"
+           "_note": "niente script copy: public_html/themes/<Tema> e' un symlink (xot:theme-link)"
        }
    }
    ```
@@ -3671,7 +3671,7 @@ yarn run build && yarn run copy
    yarn run dev
 
    # Production + Copy
-   yarn run build && yarn run copy
+   yarn run build   # asset serviti via symlink: niente copy
    ```
 
 4. **Verifica Installazione**:
@@ -3764,7 +3764,7 @@ yarn install
 yarn cache clean
 
 # Build e copia
-yarn run build && yarn run copy
+yarn run build   # asset serviti via symlink: niente copy
 ```
 
 ### 2. Verifica Build
@@ -3808,7 +3808,7 @@ ls public_html/themes/Sixteen/dist
    {
        "scripts": {
            "build": "vite build",
-           "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/dist"
+           "_note": "niente script copy: public_html/themes/<Tema> e' un symlink (xot:theme-link)"
        }
    }
    ```
@@ -6269,7 +6269,7 @@ cd laravel/Themes/Sixteen
 yarn install
 
 # Build e copia
-yarn run build && yarn run copy
+yarn run build   # asset serviti via symlink: niente copy
 ```
 
 ## 2. Importazione CSS
@@ -6355,7 +6355,7 @@ yarn run build && yarn run copy
    {
        "scripts": {
            "build": "vite build",
-           "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/dist"
+           "_note": "niente script copy: public_html/themes/<Tema> e' un symlink (xot:theme-link)"
        }
    }
    ```
@@ -6375,7 +6375,7 @@ yarn run build && yarn run copy
    yarn run dev
 
    # Production + Copy
-   yarn run build && yarn run copy
+   yarn run build   # asset serviti via symlink: niente copy
    ```
 
 4. **Verifica Installazione**:
@@ -6468,7 +6468,7 @@ yarn install
 yarn cache clean
 
 # Build e copia
-yarn run build && yarn run copy
+yarn run build   # asset serviti via symlink: niente copy
 ```
 
 ### 2. Verifica Build
@@ -6512,7 +6512,7 @@ ls public_html/themes/Sixteen/dist
    {
        "scripts": {
            "build": "vite build",
-           "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/dist"
+           "_note": "niente script copy: public_html/themes/<Tema> e' un symlink (xot:theme-link)"
        }
    }
    ```

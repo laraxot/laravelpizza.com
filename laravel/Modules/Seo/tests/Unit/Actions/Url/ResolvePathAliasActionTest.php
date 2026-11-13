@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\Seo\Actions\Url\ResolvePathAliasAction;
 use Modules\Seo\Datas\SeoConfigData;
-use Tests\TestCase;
+use Modules\Seo\Tests\TestCase;
 
 uses(TestCase::class);
 

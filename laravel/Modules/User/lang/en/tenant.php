@@ -31,43 +31,36 @@ return [
             'description' => '',
         ],
         'secondary_color' => [
-            'label' => 'secondary_color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'slug' => [
-            'label' => 'slug',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'name' => [
-            'label' => 'name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'id' => [
-            'label' => 'id',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'message' => [
-            'label' => 'message',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

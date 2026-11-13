@@ -7,7 +7,7 @@ namespace Modules\User\Tests\Unit;
 use Carbon\Carbon;
 use PHPUnit\Framework\Assert;
 use stdClass;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -19,7 +19,8 @@ describe('Authentication Business Logic', function () {
             'name' => 'Mario Rossi',
             'email' => 'mario.rossi@example.com',
             'email_verified_at' => Carbon::now()->subDays(5),
-            'password' => '$2y$10$encrypted_password_hash',
+            // Hash bcrypt reale (60 caratteri) della stringa 'password'.
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
             'remember_token' => 'remember_token_123',
             'current_team_id' => 2001,
             'profile_photo_path' => 'avatars/mario-rossi.jpg',

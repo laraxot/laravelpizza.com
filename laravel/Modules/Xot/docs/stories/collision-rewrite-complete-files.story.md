@@ -156,3 +156,105 @@ Perimetro ridotto dal coordinatore: Codex (`codex`, task `collision-rewrite-2026
 - `Activity/Activity/` (cartella tracciata nella root del modulo, con `bashscripts/`, `.agents/`, ...) e `Activity/tools/convert-pest-to-assert.php`, tracciato ma colpito dalla regola `tools`: viola l'igiene di root, da pulire in una story dedicata.
 - Pattern senza `/` iniziale (`tools`, `scripts`, `workbench`, `bashscripts`, `laravel`, `public_html`) ignorano a qualunque profondita'; oggi non coprono sorgenti (verificato sul modulo), ma `resources/js/tools/` verrebbe ignorata. Ancorarli con `/` e' una scelta che cambia il comportamento: non fatta.
 - Non verificato: Pest non eseguibile (`.env.testing` senza `DB_USERNAME`); nessun codice PHP toccato, nessun commit.
+
+### Agente E1 (Claude): nomi doppi in `User/docs/archive` e `User/docs/bug-fixes`, 2026-11-06
+
+Perimetro: le sei violazioni di `md-filenames.py check` in `User/docs` (quattro serie), piu' lo studio di `archive/` e `bug-fixes/` per l'indice del modulo. Metodo: letti tutti i file di ogni serie e i loro fratelli, ricostruito lo scopo, riscritto un documento unico col nome senza numeri o date, front matter valido (data utile in `created`/`updated`, nessun `issues:`/`discussions:` verso l'altro repository `provtv/base_ptv_fila5`, nessun `related` verso file inesistenti), originali ritirati come `.md.old` nella stessa cartella (convenzione di `md-filenames.py apply`), lock per file presi e rilasciati. Nessun commit.
+
+**`archive/quality-status.md`** (nuovo; ritirati `quality-status-11.md` e `quality-status-2025-11.md`)
+- Scopo: istantanea PHPStan del modulo di autenticazione a novembre 2025 (13 errori scesi a circa 5: `ChangeTypeCommand`, `EditUserWidget`).
+- Da `-11`: tutto il corpo. Da `-2025-11`: nulla in piu' del corpo (identico riga per riga, verificato con `diff`); il suo front matter aveva `related` verso file mai esistiti (`00-index-1.md`, `actions-path-convention-1.md`, ...) e un issue di un altro repository, tolti. La data reale (15 novembre 2025, dal piede del documento) va in `created`.
+- Migliorato: sezione "Stato verificato oggi" (`EditUserWidget` usa ancora `Assert::classExists`/`subclassOf` e `array_fill_keys` annotato; `ChangeTypeCommand` conserva `method_exists(..., 'getLabel')` a riga 66; User a zero errori nel run intero del 2026-11-06); i controlli segnati come eseguiti senza prova sono ora un elenco di controlli, non una prova; le metriche senza misura (+40%) dichiarate stime.
+- Verifica: `frontmatter-check` 0 invalidi; tutti i link relativi risolti.
+
+**`archive/historical/phpstan-fixes.md`** (riscritto; ritirati `phpstan-fixes-2.md` e `phpstan-fixes-3.md`)
+- Scopo: registro dei quattro errori PHPStan di gennaio 2025 e del loro esito. Il nome pulito era occupato da un alias ("identico al canonico", `canonical: archive/phpstan-fixes.md`) che puntava a un altro documento, la sessione di ottobre 2025: l'alias era falso per questo testo.
+- Da `-2`: il corpo. Da `-3`: stesso corpo, front matter con `related` morti, tolto. Dall'alias: il rinvio alla sessione di ottobre, ora una voce di "Altre cronache PHPStan".
+- Migliorato: tabella con la colonna "Oggi" verificata sul codice (`BaseListUsers` non dichiara piu' `getTableActions()`; `PasswordResetConfirmWidget` estende `XotBaseSchemaWidget` e non ha piu' `$view`; `is_string` ancora in `RegisterWidget` e `ResetPasswordWidget`; il callback di `UserTypeRegistrationsChartWidget` accetta `mixed` e restringe con `instanceof TrendValue`); la raccomandazione `@phpstan-ignore-next-line` e' dichiarata **superata** dalla regola `docs/wiki/rules/phpstan-l10-compliance.md`; elencate le copie dello stesso testo (`phpstan-fixes-2025.md`, `phpstan-fixes-conflict.md`, `phpstan-fixes-conflict-2e.md`, `../phpstan_fixes_2025.md`).
+- Verifica: `frontmatter-check` 0; link risolti.
+
+**`archive/historical/actions-structure.md`** (riscritto; ritirato `actions-structure-1.md`)
+- Scopo: dove stanno le Actions (`app/Actions/`), namespace senza `App`, come si scrive un'Action Spatie.
+- Da `-1`: la struttura del testo e le regole. Dalla `actions-structure.md` precedente: lo stesso corpo, ma scritto due volte di seguito (artefatto di concatenazione), con due segnaposto diversi per il nome del progetto (`<main module>`, `<nome progetto>`) e una prima frase senza soggetto.
+- Migliorato: esempio corretto `Auth/LoginAction.php` (non esiste) sostituito con `Auth/ResendEmailVerificationAction.php`, codice dell'Action preso dal file reale; tipizzazione sul contratto (`UserContract`, `MustVerifyEmail`) invece del modello concreto; regola no-services e no-proxy-delle-relazioni; `composer.json` con il mapping vero; link al `best-practices/queueable-actions.md` ora risolvibile (prima puntava a una cartella inesistente). Status `active` perche' verificato su `composer.json`, sulla cartella `app/Actions/` e su `DeleteAccountWidget`.
+- Non toccata: la copia in radice `docs/actions-structure.md`, che ha lo stesso difetto (corpo doppio, segnaposto).
+
+**`bug-fixes/legacy/parse-error-orphan-methods-2025-01-27.md`** (ritirata; riscritto `legacy/parse-error-orphan-methods.md`; **fuori lista:** riscritto `bug-fixes/parse-error-orphan-methods.md`)
+- Scopo: il ParseError di `RegisterWidget` (metodo rimasto dopo la `}` della classe) comparso il 2025-01-27 durante la risoluzione di conflitti git, risolto il 2025-06-24. La data nel nome era il giorno del bug.
+- I cinque file di `legacy/` non contenevano informazione: due rinvii a un `canonical` inesistente (`.gitkeep-Modules`), un modello "[Da completare]", un front matter vuoto, un `.md.old` vuoto. Il contenuto vero era in `bug-fixes/` in tre copie (`parse-error-orphan-methods.md` con in fondo un secondo blocco `module: theme`, `-.md` pulita, `parse-orphan-methods.md` con un link a `project_docs`). Per questo ho riscritto anche il documento di `bug-fixes/` (lock preso e rilasciato).
+- Migliorato: un solo documento con causa, sintomi, fix, prevenzione e la sezione "Stato verificato oggi" (`RegisterWidget` 133 righe, `php -l` pulito, `}` ultima riga, `getUserTypeOptions()` non esiste piu'); aggiunto il legame con le fusioni di rami e il rinvio a `docs/wiki/how-to/git-merge-marker-sweep.md` ("senza marcatori" non vuol dire "valido": `php -l` sempre); link morti (`../git-conflicts-resolution-.md.md`, `bug-fixing-guidelines.md`) sostituiti con documenti reali; il registro `legacy/` dice che cosa era ciascuna variante.
+- Restano, da ritirare quando si decide: gli stub `parse-error-orphan-methods-*` e `parse-orphan-methods.md` in `bug-fixes/`, e `-.md`/`-archive.md` in `legacy/`.
+
+**Indice del modulo.** `User/docs/00-index.md`: nuova sezione "Cronache storiche riscritte in un documento unico" con i cinque documenti e il loro stato; "Debito noto" aggiornato (i 33 nomi con suffisso o data sono chiusi: `check` non ne segnala piu' in User; restano le copie con nomi diversi e `actions-structure.md` in radice); `updated`, `qmd` e `related` allineati. `User/docs/README.md` non toccato (rimanda gia' a `00-index.md`).
+
+**Misure.** `md-filenames.py check`: nessuna riga in `User/docs` (prima 6). `md-filenames.py links`: 38572 prima, 38563 dopo (non peggiorato; il delta include il lavoro degli altri agenti). `frontmatter-check` su `bug-fixes/` e sui cinque file: 0 invalidi. Link relativi dei cinque documenti e del nuovo blocco dell'indice: tutti risolti. Lock presi e rilasciati: 13, nessuno residuo. Nessun codice PHP toccato, Pest non coinvolto.
+
+**Aperto, per decisione dell'utente o del coordinatore.**
+- Ritirare le copie con nomi diversi elencate sopra (`phpstan-fixes-2025.md`, `phpstan-fixes-conflict*.md`, `../phpstan_fixes_2025.md`, stub `parse-error-orphan-methods-*`) e allineare `docs/actions-structure.md` in radice (propongo: ritiro o `superseded_by` verso i documenti nuovi).
+- `User/docs/quality-status.md` (radice) ha lo stesso corpo piu' un front matter `module: theme` incollato in fondo, con rinvio a `Themes/docs/shared-components/` inesistente: non toccato.
+- I `issues:`/`discussions:` verso `provtv/base_ptv_fila5` compaiono in centinaia di documenti del modulo; non sono di questo repository (`festionali/base_restaurant_fila5`).
+- `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `UI/docs-archive/INDEX.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.
+
+---
+
+## Round 2 — merge `laraxot/dev` interrotti su 18 repo (2026-11-11)
+
+Richiesta utente: «sistema le collisioni git utilizzando bmad + ecc + second brain».
+
+### Misura iniziale
+
+Tutti i `laravel/Modules/*` e `laravel/Themes/*` con `.git` proprio sono in `git merge` interrotto (`MERGE_HEAD` presente; `REBASE_HEAD` su Fixcity, Job, Lang, UI, Xot, Sixteen e' residuo senza `rebase-merge/`). Ogni repo `dev` e' avanti 1 e dietro 5-1357 commit rispetto a `laraxot/dev`. File unmerged totali: ~210.
+
+| Repo | Unmerged |
+|---|---:|
+| Xot | 29 |
+| User | 26 |
+| Job | 26 |
+| Notify | 23 |
+| Activity | 16 |
+| Tenant | 16 |
+| Media | 14 |
+| TwentyOne | 13 |
+| Geo | 11 |
+| Cms | 10 |
+| UI | 9 |
+| Fixcity | 9 |
+| Sixteen | 9 |
+| Lang | 7 |
+| Gdpr | 5 |
+| Seo | 4 |
+| AI | 1 |
+| Rating | 1 |
+
+### Metodo per questo round
+
+- Stesso metodo della sezione sopra: riscrittura del file completo, mai ours/theirs in blocco. Per i binari (png/svg/pdf) si sceglie il blob piu' recente documentando la scelta.
+- Agenti in parallelo su repo disgiunti, lock `bashscripts/lock/` per file.
+- Gli agenti risolvono e fanno `git add`; **il commit di chiusura merge lo fa il coordinatore** dopo verifica (AC: nessun commit da agenti).
+- Dopo la chiusura: `git ls-files -u` vuoto, zero marker `<<<<<<<`, `php -l`/`json.tool` dove applicabile.
+
+### Record degli agenti (round 2)
+
+#### Agente Devin (subagent), repo Xot — 2026-11-11
+
+Perimetro: i 28 file Xot assegnati (da `git ls-files -u`: 27 `UU`/`AA` + `docs/bmad/stories/phpstan-modules-remediation.story.md` `DU`). Lock `bashscripts/lock/` presi e rilasciati per file; nessun commit.
+
+- **Identici sui due lati, working tree già pulito** (stage2 == stage3, zero marker): `GetTreeOptionsByModelClassAction`, `AnalyzeComponentsCommand`, `ExportTreeXlsAction`, `XotBaseListRecords`, `XotBaseWidget` — `git add` diretto.
+- **Stage3 (laraxot/dev) è il superset corretto**, stage2 senza nulla di unico: `ModuleLinkCommand`, `ThemeLinkCommand` (gitignore dei link + symlink relativi via `CreateRelativeSymlinkAction`/`EnsureGitignoreEntriesAction`), `RecordAnchor` (`previousWithinResource`), `XotBaseCreateRecord`/`XotBaseEditRecord` (uso del nuovo metodo), `XotBaseViewRecord` (label `xot::buttons.back` tradotta), `HasXotTable` (closure `mixed $record` + `instanceof Model` per tabelle con record array), `XotServiceProvider` (registrazione `SymlinkPublishCommand`), `composer.json` (`filament/filament ^5.11.2` + autoload-dev `Modules\Xot\Tests\`), `docs-prompts-reorganization.story.md` (baseline_commit + handoff), `docs/structure.md` (stessa versione filament), `AssetActionsTest` (il lato nostro testava `copyAsset`, rimosso da `AssetAction`), `RecordAnchorReturnUrlTest` (nuovo test), `ValidationMessagesTest` (namespace `Modules\Xot\Tests\TestCase`), `lang/de|en/artisan-commands-manager.php` e `lang/it/health.php` (rimossi key vuote/placeholder non referenziati). Verifica: `php -l` su tutti i PHP, `composer.json` validato con `json_decode`.
+- **`lang/en/db_inspector.php`**: tenuto il lato nostro — la chiave `actions.search.label` è referenziata da `resources/views/admin/home/acts/db.blade.php`; il lato dev la rimuoveva (label grezza a video).
+- **`app/Database/Migrations/XotBaseMigration.php`**: integrati entrambi — meccanismo del lato dev (passo intermedio `char(36)` nello stesso Blueprint, un ALTER per colonna in ordine) + precisione del lato nostro (solo driver `mariadb`; MySQL mappa `uuid()` su char(36) e non ne ha bisogno; `isMysqlFamilyDriver()` coprirebbe mysql inutilmente).
+- **`docs/theme-assets-workflow.md`**: riscritto — struttura del lato nostro (doc accurata e concisa su symlink) + dal lato dev i comandi `xot:theme-link`/`xot:module-link` (documentati in `docs/console/commands/xot-asset-links.md`), la sezione «Non fare» e le voci di troubleshooting sul symlink; scartato il testo residuo «npm run copy obsoleto» e gli esempi tema One/Two.
+- **`docs/wiki/decisions/security-middleware-csrf-order.md`**: il lato dev portava marker `.merge_file_*` committati attorno alla sezione «Aggiornamento 2026-11-10 — rate limiting»; riscritto = contenuto nostro + sezione rate limiting de-markata (coerente con `SecurityMiddleware` corrente: `RateLimiter` per IP+gruppo).
+- **`docs/wiki/decisions/module-admin-role-policy-bypass.md`**: unione — sezione trait `RequiresOperationalPermissions` del lato dev + casi Fixcity/User e nota moduli nuovi del lato nostro; `related` esteso al trait; `updated` 2026-11-11.
+- **`docs/stories/collision-rewrite-complete-files.story.md`** (questa story): stage3 (conteneva il record E1 mancante nel lato nostro) + sezione Round 2 reintrodotta (era presente nel working tree ma assente da entrambi gli stage) + questo record.
+- **`docs/bmad/stories/phpstan-modules-remediation.story.md`** (`DU`): il lato nostro l'aveva cancellato in una pulizia docs; il lato dev l'aveva riscritto (`status: done`,contenuto unico non duplicato altrove). Scelto il lato dev: una story done non si perde; nessun rename equivalente trovato.
+
+Verifica: `git ls-files -u` vuoto sui 28 file; zero marker `<<<<<<<`/`>>>>>>>` residui; `php -l` ok sui PHP toccati; `composer.json` JSON valido. Pest non eseguito (`.env.testing` senza `DB_USERNAME`, limite noto della story).
+
+#### Esito finale round 2 (coordinatore) — 2026-11-11
+
+- `git ls-files -u` = 0 su tutti i 18 repo; merge commits presenti; `HEAD..laraxot/dev` = 0 ovunque (la sync script `-s resolve` aveva gia' committato la maggior parte; i 3 temi e Xot sono stati chiusi manualmente con `git commit --no-edit` dopo verifica).
+- 3 file Fixcity con lock stale (PID morti, date 2026-09/10) rimossi e risolti: `TicketForm.php` (SEC-04 image decodability), `TicketResourceTest.php`, `dc-file-upload.blade.php` (aria-label) — ours era superset semantico, `php -l` ok.
+- 6 file con marker `.merge_file_*` **committati** (patologia nota della sync script): riscritti per il canon symlink — `Notify/docs/ai-agents/claude-pitfalls.md`, `Notify/docs/ai-agents/split/claude/theme-build-rules.md`, `Notify/docs/wiki/integrations/documentation-consolidated.md`, `UI/docs/theme-build.md`, `User/resources/views/docs/installation.md`, `User/resources/views/README.md`. Rimossa ogni traccia di `npm run copy` (dismesso): si resta su `xot:theme-link`/`xot:module-link`.
+- Restano ~20 file docs in `Notify/docs/**` con marker committati (molti duplicati case-variant in `_da-riconciliare/`): sweep delegato a subagent dedicato.
+- PHPStan: `./vendor/bin/phpstan analyse Modules` rilanciato post-merge (i log precedenti in `/tmp` erano di un altro checkout).

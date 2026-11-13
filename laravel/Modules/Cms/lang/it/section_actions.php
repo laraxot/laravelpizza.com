@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-// Cms translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// Canon: Modules/Cms/docs/wiki/concepts/claude-audit-static.md
-// File: lang/it/section_actions.php
 return [
     'actions' => [
         'create' => [
@@ -37,15 +34,6 @@ return [
         ],
         'activeLocale' => [
             'label' => 'Lingua Attiva',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'preview' => [
-            'label' => 'preview',
         ],
     ],
 ];

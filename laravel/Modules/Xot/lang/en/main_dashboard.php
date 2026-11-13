@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< .merge_file_9bhTi6
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
+=======
+>>>>>>> .merge_file_lXA6gt
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -18,8 +21,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

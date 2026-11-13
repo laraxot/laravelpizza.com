@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Region;
 use Modules\Geo\Tests\TestCase;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Sushi\Sushi;
 
@@ -22,7 +22,7 @@ describe('Region Business Logic', function () {
     });
 
     test('region has factory trait for testing', function () {
-        Assert::assertContains(HasFactory::class, class_uses_recursive(Region::class));
+        Assert::assertContains(HasXotFactory::class, class_uses_recursive(Region::class));
     });
 
     test('region uses sushi trait for in-memory data', function () {
@@ -30,11 +30,11 @@ describe('Region Business Logic', function () {
     });
 
     test('region has correct key type configured', function () {
-        Assert::assertSame('integer', (new Region)->getKeyType());
+        Assert::assertSame('integer', (new Region())->getKeyType());
     });
 
     test('region has schema definition for geographic data', function () {
-        $schema = (new Region)->getSchema();
+        $schema = (new Region())->getSchema();
 
         Assert::assertIsArray($schema);
         Assert::assertSame('integer', $schema['id'] ?? null);
@@ -44,7 +44,7 @@ describe('Region Business Logic', function () {
     test('region factory produces region instance', function () {})->todo();
 
     test('region model can be instantiated without errors', function () {
-        $region = new Region;
+        $region = new Region();
 
         Assert::assertFalse($region->exists);
     });

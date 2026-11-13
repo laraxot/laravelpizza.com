@@ -27,24 +27,15 @@ use Modules\Xot\Datas\XotData;
  * @property string|null $user_id
  * @property string|null $type
  * @property string|null $accepted_at
+ * @property string|null $revoked_at
+ * @property string|null $ip_address
+ * @property string|null $revoked_ip_address
+ * @property string|null $user_agent
+ * @property array<string, mixed>|null $metadata
  * @property ProfileContract|null $creator
- * @property Treatment|null $treatment
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $subject_id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $user_type
- * @property string|null $user_id
- * @property string|null $type
- * @property string|null $accepted_at
- * @property ProfileContract|null $creator
- * @property Treatment|null $treatment
  * @property ProfileContract|null $updater
+ * @property ProfileContract|null $deleter
+ * @property Treatment|null $treatment
  *
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
@@ -62,21 +53,10 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder<static>|Consent whereUpdatedBy($value)
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
- *
- * @property ProfileContract|null $deleter
- * @property string|null $ip_address
- * @property string|null $user_agent
- *
- * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Consent whereIpAddress($value)
  * @method static Builder<static>|Consent whereUserAgent($value)
  *
- * @property string|null $ip_address
- * @property string|null $user_agent
- *
  * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
- * @method static Builder<static>|Consent whereIpAddress($value)
- * @method static Builder<static>|Consent whereUserAgent($value)
  *
  * @mixin \Eloquent
  */
@@ -107,6 +87,7 @@ class Consent extends BaseModel
         'updated_by',
         'ip_address',
         'user_agent',
+<<<<<<< .merge_file_g81dI9
         // Revoca e richiesta di cancellazione (migrazione 2026_11_12_000002): senza, updateOrCreate le scartava in silenzio.
         'revoked_at',
         'revoked_ip_address',
@@ -114,14 +95,31 @@ class Consent extends BaseModel
     ];
 
     /**
+=======
+        'metadata',
+        'revoked_at',
+        'revoked_ip_address',
+    ];
+
+    /**
+     * `metadata` conserva la prova di cosa e' stato accettato (versione e URL del documento, lingua): senza cast ad array
+     * e senza fillable veniva scartato in silenzio (regressione del mirror becb0d58bd, ripristinata il 2026-11-11).
+     *
+>>>>>>> .merge_file_147EoW
      * @return array<string, string>
      */
     protected function casts(): array
     {
         return array_merge(parent::casts(), [
+<<<<<<< .merge_file_g81dI9
             'accepted_at' => 'datetime',
             'revoked_at' => 'datetime',
             'metadata' => 'array',
+=======
+            'metadata' => 'array',
+            'accepted_at' => 'datetime',
+            'revoked_at' => 'datetime',
+>>>>>>> .merge_file_147EoW
         ]);
     }
 

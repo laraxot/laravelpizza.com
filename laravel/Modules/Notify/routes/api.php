@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+use Illuminate\Support\Facades\Route;
+use Modules\Notify\Actions\Mail\ProcessInboundMailAction;
 /*--work in progress
  * use Modules\Notify\Http\Controllers\TelegramNotificationController;
  *
@@ -12,3 +15,6 @@ declare(strict_types=1);
  * [TelegramNotificationController::class, 'view'])->middleware('api');
  * });
  */
+
+Route::post('/inbound/{provider}/{token}', [ProcessInboundMailAction::class, '__invoke'])
+    ->name('notify.inbound');

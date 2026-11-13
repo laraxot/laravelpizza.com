@@ -29,8 +29,6 @@ return [
             'help' => 'Nome completo della classe che rappresenta l\'evento',
             'validation' => 'required|string|max:255',
             'searchable' => true,
-            'helper_text' => 'event_class',
-            'description' => 'event_class',
             'tooltip' => '',
         ],
         'event_properties' => [
@@ -40,8 +38,6 @@ return [
             'validation' => 'required|json',
             'type' => 'json',
             'format' => 'json',
-            'helper_text' => 'event_properties',
-            'description' => 'event_properties',
             'tooltip' => '',
         ],
         'aggregate_uuid' => [
@@ -50,8 +46,6 @@ return [
             'help' => 'Identificativo unico dell\'aggregato di appartenenza',
             'validation' => 'required|uuid',
             'searchable' => true,
-            'helper_text' => 'aggregate_uuid',
-            'description' => 'aggregate_uuid',
             'tooltip' => '',
         ],
         'aggregate_version' => [
@@ -60,8 +54,6 @@ return [
             'help' => 'Numero di versione dell\'aggregato',
             'validation' => 'required|integer|min:1',
             'sortable' => true,
-            'helper_text' => 'aggregate_version',
-            'description' => 'aggregate_version',
             'tooltip' => '',
         ],
         'event_version' => [
@@ -80,8 +72,6 @@ return [
             'validation' => 'nullable|json',
             'type' => 'json',
             'format' => 'json',
-            'helper_text' => 'meta_data',
-            'description' => 'meta_data',
             'tooltip' => '',
         ],
         'created_at' => [
@@ -91,8 +81,6 @@ return [
             'validation' => 'required|date',
             'format' => 'd/m/Y H:i:s',
             'sortable' => true,
-            'helper_text' => 'created_at',
-            'description' => 'created_at',
             'tooltip' => '',
         ],
         'created_by' => [
@@ -332,19 +320,19 @@ return [
     'pagination' => [
         'per_page' => 50,
         'options' => [
-            0 => 25,
-            1 => 50,
-            2 => 100,
-            3 => 200,
+            25,
+            50,
+            100,
+            200,
         ],
         'simple' => false,
     ],
     'cache' => [
         'ttl' => 600,
         'tags' => [
-            0 => 'stored_events',
-            1 => 'event_sourcing',
-            2 => 'monitoring',
+            'stored_events',
+            'event_sourcing',
+            'monitoring',
         ],
     ],
     'event_sourcing' => [

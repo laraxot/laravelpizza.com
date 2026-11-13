@@ -43,6 +43,14 @@ final class ResolveWrittenLocalesAction
 
         $blocks = $this->localeMap($rawBlocks);
         if ($blocks !== null && array_is_list($blocks)) {
+<<<<<<< .merge_file_iri5Om
+=======
+            $blocks = null;
+        }
+        // Nessun blocco in nessuna lingua (non "solo hero": quella e' una pagina vuota): il corpo lo disegna il codice (es. tickets/track, incluso dal tema), che e' tradotto.
+        // La pagina esiste in ogni lingua con un titolo; altrimenti spariva da sitemap e hreflang.
+        if ($blocks !== null && array_filter($blocks, static fn (mixed $localeBlocks): bool => ! empty($localeBlocks)) === []) {
+>>>>>>> .merge_file_shYk1o
             $blocks = null;
         }
 

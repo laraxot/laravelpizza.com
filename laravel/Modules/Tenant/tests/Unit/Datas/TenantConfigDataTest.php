@@ -8,14 +8,13 @@ use Illuminate\Support\Facades\Validator;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Tenant\Datas\TenantConfigData;
 use Modules\Tenant\Filament\Pages\SettingPage;
-use Modules\Tenant\Tests\TestCase;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
 use Modules\Xot\Datas\MetatagData;
 use Webmozart\Assert\Assert;
 
 use function Safe\preg_match;
 
-uses(TestCase::class)->group('no-tenant-db');
+uses()->group('no-tenant-db');
 
 /**
  * Fa leggere un file `metatag` finto a chi usa GetTenantConfigArrayAction (MetatagData e SettingPage), senza scrivere in `config/{tenant}`.

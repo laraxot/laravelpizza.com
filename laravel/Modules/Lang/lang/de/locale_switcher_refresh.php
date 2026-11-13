@@ -5,10 +5,6 @@ declare(strict_types=1);
 return [
     'fields' => [
         'locale' => [
-            'label' => 'locale',
-            'placeholder' => 'locale',
-            'helper_text' => 'locale',
-            'description' => 'locale',
             'tooltip' => '',
         ],
     ],
@@ -21,6 +17,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

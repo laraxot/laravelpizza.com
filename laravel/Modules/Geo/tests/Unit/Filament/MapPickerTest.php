@@ -16,9 +16,8 @@ test('map picker resolves explicit coordinate fields', function (): void {
 
     Assert::assertSame('longitude', $field->getLongitudeColumn());
 
-    Assert::assertSame('data.latitude', $field->getLatitudeColumn());
-
-    Assert::assertSame('data.longitude', $field->getLongitudeColumn());
+    // The columns are record attribute names: they are not prefixed with the field's statePath ('data.').
+    Assert::assertNotSame('data.latitude', $field->getLatitudeColumn());
 
     Assert::assertSame(12, $field->getZoom());
 });

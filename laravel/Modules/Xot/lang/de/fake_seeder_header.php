@@ -5,7 +5,6 @@ declare(strict_types=1);
 return [
     'fields' => [
         'qty' => [
-            'label' => 'qty',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -20,6 +19,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

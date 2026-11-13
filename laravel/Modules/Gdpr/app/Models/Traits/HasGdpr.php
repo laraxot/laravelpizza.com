@@ -22,11 +22,15 @@ use Stringable;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
+<<<<<<< .merge_file_F1ZziF
  * @see HasGdprTraitTest
  *
  * @phpstan-ignore trait.unused
+=======
+ * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
+>>>>>>> .merge_file_Zo0Ch6
  */
-trait HasGdpr // @phpstan-ignore trait.unused
+trait HasGdpr
 {
     /**
      * Get all consents for the model (polymorphic).

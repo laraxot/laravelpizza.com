@@ -17,6 +17,11 @@ abstract class ActivityBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole('activity::admin')) {
+            return true;
+        }
+
         return null;
     }
 }

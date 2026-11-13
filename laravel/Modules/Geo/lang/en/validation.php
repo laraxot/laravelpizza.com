@@ -111,8 +111,6 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
-    'attributes' => [
-    ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -122,8 +120,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

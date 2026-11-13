@@ -21,7 +21,7 @@ uses(TestCase::class);
  */
 function userOverviewStats(): array
 {
-    $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview);
+    $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview());
     Assert::assertIsArray($stats);
 
     $result = [];
@@ -46,8 +46,8 @@ test('user overview widget exposes total, active, verified and recent login stat
 
     Assert::assertCount(count($keys), $stats);
     foreach ($keys as $index => $key) {
-        Assert::assertSame(trans('user::user.widgets.overview.'.$key.'.label'), $stats[$index]->getLabel());
-        Assert::assertSame(trans('user::user.widgets.overview.'.$key.'.description'), $stats[$index]->getDescription());
+        Assert::assertSame(trans('user::user_overview_widget.'.$key.'.label'), $stats[$index]->getLabel());
+        Assert::assertSame(trans('user::user_overview_widget.'.$key.'.description'), $stats[$index]->getDescription());
     }
 });
 

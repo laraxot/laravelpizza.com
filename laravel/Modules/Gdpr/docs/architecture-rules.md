@@ -1,21 +1,12 @@
----
-title: "architecture rules"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "architecture rules"
-issues: []
-discussions: []
-status: draft
----
-
 # Architectural Rules & Guidelines
 
 This module adheres to the **Laraxot Architecture** and **Super Cow Methodology**.
 
 For strict coding standards, Filament extension rules, and PHPStan guidelines, please refer to the central documentation in the **Xot Module**:
 
+-   [Super Cow Methodology](../../Xot/docs/super_cow_methodology.md)
+-   [PHP Quality Guide](../../Xot/docs/php_quality_guide.md)
+-   [Filament Extension Rules](../../Xot/docs/filament_extension_rules.md)
 -   [Super Cow Methodology](../../xot/docs/super_cow_methodology.md)
 -   [PHP Quality Guide](../../xot/docs/php_quality_guide.md)
 -   [Filament Extension Rules](../../xot/docs/filament_extension_rules.md)

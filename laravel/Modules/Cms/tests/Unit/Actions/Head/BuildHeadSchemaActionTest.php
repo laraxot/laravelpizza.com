@@ -9,7 +9,8 @@ use Modules\Cms\Actions\Head\BuildHeadSchemaAction;
 use PHPUnit\Framework\Assert;
 
 /**
- * @param  SchemaObject|array<string, mixed>  $schema
+ * @param SchemaObject|array<string, mixed> $schema
+ *
  * @return array<string, mixed>
  */
 function schemaArray(SchemaObject|array $schema): array
@@ -18,7 +19,8 @@ function schemaArray(SchemaObject|array $schema): array
 }
 
 /**
- * @param  SchemaObject|array<string, mixed>  $schema
+ * @param SchemaObject|array<string, mixed> $schema
+ *
  * @return list<array<mixed>>
  */
 function breadcrumbItems(SchemaObject|array $schema): array

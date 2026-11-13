@@ -43,7 +43,7 @@ declare(strict_types=1);
                 <p>{{ __('user::auth_pages.verify.check_email.description') }}</p>
 
                 <p class="mt-3">
-                    {{ __('user::auth_pages.verify.not_received.message') }} <a wire:click="resend" class="text-indigo-700 cursor-pointer hover:text-indigo-600 focus:outline-none focus:underline transition ease-in-out duration-150">{{ __('user::auth_pages.verify.request_another.label') }}</a>.
+                    {{ __('user::auth_pages.verify.not_received.message') }} <a wire:click="resend" wire:loading.attr="disabled" wire:target="resend" class="text-indigo-700 cursor-pointer hover:text-indigo-600 focus:outline-none focus:underline transition ease-in-out duration-150"><span wire:loading.remove wire:target="resend">{{ __('user::auth_pages.verify.request_another.label') }}</span><span wire:loading wire:target="resend" class="inline-flex items-center gap-1"><x-filament::loading-indicator class="h-3.5 w-3.5" />{{ __('user::auth_pages.verify.request_another.sending') }}</span></a>.
                 </p>
             </div>
         </div>

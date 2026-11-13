@@ -40,7 +40,9 @@
     }
   },
   "autoload-dev": {
-    "classmap": ["tests/"],
+    "psr-4": {
+      "Modules\\User\\Tests\\": "tests/"
+    },
     "files": [
       "tests/Support/helpers.php"
     ]
@@ -48,7 +50,7 @@
   "require": {
     "flowframe/laravel-trend": "*",
     "jenssegers/agent": "*",
-    "laravel/passport": "*",
+    "laravel/passport": "^13.7.1",
     "socialiteproviders/auth0": "*",
     "spatie/laravel-personal-data-export": "*",
     "socialiteproviders/microsoft": "^4.8"

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 use Modules\Activity\Actions\Log\FilterLogEntriesAction;
 use Modules\Activity\Actions\Log\ParseLogEntriesAction;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Datas;
 
+use Illuminate\Support\Str;
 use Modules\Tenant\Actions\Ente\GetEnteDataAction;
 use Spatie\LaravelData\Data;
 
@@ -84,7 +85,7 @@ class EnteData extends Data
             return null;
         }
 
-        $target = $scheme === 'tel:' ? preg_replace('/[^\d+]/', '', $value) : $value;
+        $target = $scheme === 'tel:' ? Str::of($value)->replaceMatches('/[^\d+]/', '')->toString() : $value;
 
         return ['label' => $value, 'href' => $scheme.$target];
     }

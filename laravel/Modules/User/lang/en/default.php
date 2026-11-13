@@ -101,8 +101,6 @@ return [
         'link' => 'Copy to clipboard',
         'tooltip' => 'Copied!',
     ],
-    'fields' => [
-    ],
     'or' => 'Or',
     'cancel' => 'Cancel',
     'login' => [

@@ -53,7 +53,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        'spipu' => ['label' => 'spipu', 'placeholder' => 'spipu', 'helper_text' => 'spipu', 'description' => 'spipu'],
     ],
     'actions' => [
         'create' => [

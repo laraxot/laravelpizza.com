@@ -7,7 +7,7 @@ return [
     'alert_title_info' => 'Cookies',
     'alert_text_info' => 'Diese Website verwendet nur technische Cookies, die für ihren Betrieb nötig sind: Dafür ist keine Einwilligung erforderlich. Wir verwenden keine Profiling- oder Analyse-Cookies.',
     'alert_title_consent' => 'Diese Website verwendet Cookies',
-    'alert_text_consent' => 'Wir verwenden technische Cookies, die für den Betrieb nötig sind, und nur mit Ihrer Einwilligung Analyse- und Marketing-Cookies. Wenn Sie das Banner schließen, ohne zu wählen, bleiben nur die technischen Cookies aktiv.',
+    'alert_text_consent' => 'Wir verwenden technische Cookies, die für den Betrieb nötig sind, und nur mit Ihrer Einwilligung Analyse- und Marketing-Cookies. Wenn Sie das Banner schließen, ohne zu wählen, bleiben nur die technischen Cookies aktiv. Ihre Auswahl können Sie über den Link „Cookies verwalten“ am Seitenende ändern.',
     'alert_accept' => 'Alle akzeptieren',
     'alert_reject' => 'Alle ablehnen',
     'alert_settings' => 'Anpassen',

@@ -14,7 +14,7 @@ abstract class XotBaseCreateRecord extends FilamentCreateRecord
     {
         $record = $this->getRecord();
         $returnTo = request()->query(RecordAnchor::RETURN_TO_PARAMETER);
-        $returnTo = is_string($returnTo) ? $returnTo : (is_string($this->previousUrl) ? $this->previousUrl : null);
+        $returnTo = is_string($returnTo) ? $returnTo : RecordAnchor::previousWithinResource($this->previousUrl, static::getResource()::getUrl('index'));
 
         if (! $record instanceof Model || (! is_int($record->getKey()) && ! is_string($record->getKey()))) {
             return $fallback;

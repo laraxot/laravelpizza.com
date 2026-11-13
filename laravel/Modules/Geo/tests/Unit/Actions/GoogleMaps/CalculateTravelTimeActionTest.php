@@ -87,7 +87,8 @@ it('returns error for invalid response status', function (): void {
 
     $result = $action->execute($origin, $destination);
 
-    Assert::assertSame('INVALID_RESPONSE', $result->status);
+    // Google's own status is propagated as-is
+    Assert::assertSame('INVALID_REQUEST', $result->status);
 });
 
 it('returns error when no route found', function (): void {
@@ -112,7 +113,8 @@ it('returns error when no route found', function (): void {
 
     $result = $action->execute($origin, $destination);
 
-    Assert::assertSame('NO_ROUTE', $result->status);
+    // The element status reported by Google is propagated as-is
+    Assert::assertSame('ZERO_RESULTS', $result->status);
 });
 
 it('returns travel time data for valid route', function (): void {
@@ -127,6 +129,7 @@ it('returns travel time data for valid route', function (): void {
         'status' => 'OK',
         'rows' => [[
             'elements' => [[
+                'status' => 'OK',
                 'duration' => ['value' => 19800, 'text' => '5 hours 30 mins'],
                 'duration_in_traffic' => ['value' => 21000, 'text' => '5 hours 50 mins'],
                 'distance' => ['value' => 572000, 'text' => '572 km'],
@@ -164,6 +167,7 @@ it('uses duration as fallback for duration in traffic', function (): void {
         'status' => 'OK',
         'rows' => [[
             'elements' => [[
+                'status' => 'OK',
                 'duration' => ['value' => 19800, 'text' => '5 hours 30 mins'],
                 'distance' => ['value' => 572000, 'text' => '572 km'],
             ]],

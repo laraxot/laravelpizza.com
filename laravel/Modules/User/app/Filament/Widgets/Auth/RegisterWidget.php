@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use Modules\Activity\Actions\Schema\IsActivityLogSchemaWritableAction;
 use Modules\User\Actions\Auth\ConsumeAuthSubmissionSlotAction;
 use Modules\User\Enums\AuthThrottleScope;
-use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;

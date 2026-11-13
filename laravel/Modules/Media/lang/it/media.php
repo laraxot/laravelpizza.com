@@ -8,7 +8,10 @@ return [
     'navigation' => [
         'name' => 'Media',
         'plural' => 'Media',
-        'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
+        'group' => [
+            'name' => 'Sistema',
+            'description' => 'Gestione dei file multimediali',
+        ],
         'label' => 'Media',
         'sort' => 20,
         'icon' => 'media-main-animated',
@@ -77,14 +80,14 @@ return [
         'select_all' => [
             'name' => 'Seleziona Tutti',
             'message' => '',
-            'label' => '',
+            'label' => 'Seleziona tutto',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'creator' => [
             'name' => 'Creatore',
-            'label' => '',
+            'label' => 'Autore',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -96,28 +99,28 @@ return [
             'description' => '',
         ],
         'id' => [
-            'label' => 'id',
+            'label' => 'ID',
         ],
         'file_name' => [
-            'label' => 'file_name',
+            'label' => 'Nome del file',
         ],
         'disk' => [
-            'label' => 'disk',
+            'label' => 'Disco',
         ],
         'size' => [
-            'label' => 'size',
+            'label' => 'Dimensione',
         ],
         'order_column' => [
-            'label' => 'order_column',
+            'label' => 'Ordine',
         ],
         'model_type' => [
-            'label' => 'model_type',
+            'label' => 'Tipo di oggetto',
         ],
         'model_id' => [
-            'label' => 'model_id',
+            'label' => 'Oggetto',
         ],
         'created_at' => [
-            'label' => 'created_at',
+            'label' => 'Creato il',
         ],
     ],
     'actions' => [
@@ -132,6 +135,10 @@ return [
                 'name' => 'Nome area',
                 'parent_name' => 'Nome area livello superiore',
             ],
+        ],
+        'delete' => [
+            'tooltip' => '',
+            'icon' => 'delete',
         ],
     ],
     'model' => [

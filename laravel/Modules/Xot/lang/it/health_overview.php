@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< .merge_file_gCPAV8
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
+=======
+>>>>>>> .merge_file_ITDUXA
     'label' => 'Health Overview',
     'plural_label' => 'Health Overview (Plurale)',
     'navigation' => [

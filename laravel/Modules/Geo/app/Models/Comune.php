@@ -122,9 +122,19 @@ class Comune extends BaseModel
         'updated_by' => 'string',
     ];
 
+    /**
+     * Percorso del JSON dei comuni.
+     *
+     * `geo.comuni_json_path` permette di puntare a un altro file (es. un fixture nei test,
+     * così create/update/delete non riscrivono il JSON versionato del modulo).
+     */
     public function getJsonFile(): string
     {
-        return module_path('Geo', 'resources/json/comuni.json');
+        $path = config('geo.comuni_json_path');
+
+        return \is_string($path) && '' !== $path
+            ? $path
+            : module_path('Geo', 'resources/json/comuni.json');
     }
 
     /**

@@ -6,8 +6,6 @@ return [
     'add_attachment' => [
         'title' => 'Anhänge',
         'label' => 'Anhang hochladen',
-        'fields' => [
-        ],
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
@@ -18,8 +16,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

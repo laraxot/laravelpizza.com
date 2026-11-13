@@ -88,7 +88,7 @@ class FilterBuilder
     public static function dateRange(string $column = 'created_at', string $label = 'Date Range'): Filter
     {
         return Filter::make($column)
-            ->schema([
+            ->form([
                 DatePicker::make('from')
                     ->label('From'),
                 DatePicker::make('until')

@@ -27,85 +27,85 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 test('Notification model can be instantiated', function () {
-    new Notification;
+    expect(new Notification)->toEqual(new Notification);
 });
 
 test('OauthAccessToken model can be instantiated', function () {
-    new OauthAccessToken;
+    expect(new OauthAccessToken)->toEqual(new OauthAccessToken);
 });
 
 test('OauthClient model can be instantiated', function () {
-    new OauthClient;
+    expect(new OauthClient)->toEqual(new OauthClient);
 });
 
 test('OauthAuthCode model can be instantiated', function () {
-    new OauthAuthCode;
+    expect(new OauthAuthCode)->toEqual(new OauthAuthCode);
 });
 
 test('OauthRefreshToken model can be instantiated', function () {
-    new OauthRefreshToken;
+    expect(new OauthRefreshToken)->toEqual(new OauthRefreshToken);
 });
 
 test('OauthPersonalAccessClient model can be instantiated', function () {
-    new OauthPersonalAccessClient;
+    expect(new OauthPersonalAccessClient)->toEqual(new OauthPersonalAccessClient);
 });
 
 test('OauthToken model can be instantiated', function () {
-    new OauthToken;
+    expect(new OauthToken)->toEqual(new OauthToken);
 });
 
 test('OauthDeviceCode model can be instantiated', function () {
-    new OauthDeviceCode;
+    expect(new OauthDeviceCode)->toEqual(new OauthDeviceCode);
 });
 
 test('TeamPermission model can be instantiated', function () {
-    new TeamPermission;
+    expect(new TeamPermission)->toEqual(new TeamPermission);
 });
 
 test('TeamInvitation model can be instantiated', function () {
-    new TeamInvitation;
+    expect(new TeamInvitation)->toEqual(new TeamInvitation);
 });
 
 test('AuthenticationLog model can be instantiated', function () {
-    new AuthenticationLog;
+    expect(new AuthenticationLog)->toEqual(new AuthenticationLog);
 });
 
 test('Authentication model can be instantiated', function () {
-    new Authentication;
+    expect(new Authentication)->toEqual(new Authentication);
 });
 
 test('SocialiteUser model can be instantiated', function () {
-    new SocialiteUser;
+    expect(new SocialiteUser)->toEqual(new SocialiteUser);
 });
 
 test('SocialProvider model can be instantiated', function () {
-    new SocialProvider;
+    expect(new SocialProvider)->toEqual(new SocialProvider);
 });
 
 test('SsoProvider model can be instantiated', function () {
-    new SsoProvider;
+    expect(new SsoProvider)->toEqual(new SsoProvider);
 });
 
 test('Feature model can be instantiated', function () {
-    new Feature;
+    expect(new Feature)->toEqual(new Feature);
 });
 
 test('Extra model can be instantiated', function () {
-    new Extra;
+    expect(new Extra)->toEqual(new Extra);
 });
 
 test('Device model can be instantiated', function () {
-    new Device;
+    expect(new Device)->toEqual(new Device);
 });
 
 test('DeviceProfile model can be instantiated', function () {
-    new DeviceProfile;
+    expect(new DeviceProfile)->toEqual(new DeviceProfile);
 });
 
 test('DeviceUser model can be instantiated', function () {
-    new DeviceUser;
+    expect(new DeviceUser)->toEqual(new DeviceUser);
 });
 
 test('PasswordReset model can be instantiated', function () {
-    new PasswordReset;
+    expect(new PasswordReset)->toEqual(new PasswordReset);
 });

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Artisan;
 
+use Illuminate\Support\Str;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\File;
@@ -35,11 +36,8 @@ class ShowArtisanErrorLogAction
         }
 
         $pattern = '/url":"([^"]*)"/';
-        $matches = [];
-        preg_match_all($pattern, $content, $matches);
-
-        // PREG_PATTERN_ORDER con un solo gruppo: $matches[1] esiste sempre (lista vuota se nessun match).
-        $urls = array_values(array_unique($matches[1]));
+        // Str::matchAll restituisce il primo gruppo di ogni occorrenza (lista vuota se nessun match).
+        $urls = Str::matchAll($pattern, $content)->unique()->values()->all();
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),

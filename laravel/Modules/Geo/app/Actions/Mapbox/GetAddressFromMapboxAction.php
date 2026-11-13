@@ -160,7 +160,8 @@ class GetAddressFromMapboxAction
             'postal_code' => (int) ($postalCode ? $postalCode : 0),
             'street' => $street,
             'street_number' => $streetNumber,
-            'province' => $province,
+            // AddressData non ha una proprietà 'province': la sigla della regione Mapbox va in 'state'
+            'state' => '' !== $province ? $province : null,
         ]);
     }
 }

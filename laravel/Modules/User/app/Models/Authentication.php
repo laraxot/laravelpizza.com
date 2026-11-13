@@ -63,8 +63,11 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Authentication extends BaseModel
 {
+<<<<<<< .merge_file_hBrL8C
     use AuthenticationRelationsTrait;
 
+=======
+>>>>>>> .merge_file_NFwFou
     /**
      * The attributes that are mass assignable.
      *
@@ -95,4 +98,6 @@ class Authentication extends BaseModel
             'login_successful' => 'boolean',
         ];
     }
+
+    use AuthenticationRelationsTrait;
 }

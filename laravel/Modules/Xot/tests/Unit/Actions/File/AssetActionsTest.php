@@ -10,16 +10,9 @@ use Modules\Xot\Actions\File\GetModulePathAction;
 use Modules\Xot\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
-use ReflectionMethod;
 
-use function Safe\chmod;
-use function Safe\file_get_contents;
 use function Safe\file_put_contents;
-use function Safe\fileinode;
-use function Safe\filemtime;
-use function Safe\glob;
 use function Safe\mkdir;
-use function Safe\touch;
 use function Safe\unlink;
 
 uses(TestCase::class);
@@ -48,16 +41,19 @@ it('returns path if asset already exists in public folder', function (): void {
     }
 });
 
-it('publishes module asset to public assets path', function (): void {
+/**
+ * public_html/assets/<module> is a symlink to Modules/<Module>/public, so the asset is served from
+ * there. The action used to copy resources/ into public_html on every request and failed with
+ * "Failed to open stream" when the link was missing or checked out as a plain file
+ * (git core.symlinks=false). It must now only resolve the URL and write nothing.
+ */
+it('resolves a module asset to its public url without copying anything into public', function (): void {
     $moduleRoot = sys_get_temp_dir().'/xot_mod_'.uniqid('', true);
     $resourceFile = $moduleRoot.'/resources/css/style.css';
     mkdir(\dirname($resourceFile), 0o755, true);
     file_put_contents($resourceFile, 'body{}');
 
     $dest = public_path('assets/XotAssetTest/css/style.css');
-    if (is_file($dest)) {
-        unlink($dest);
-    }
 
     app()->instance(GetModulePathAction::class, new class($moduleRoot) extends GetModulePathAction
     {
@@ -71,120 +67,40 @@ it('publishes module asset to public assets path', function (): void {
 
     try {
         $result = app(AssetAction::class)->execute('XotAssetTest::css/style.css');
-        Assert::assertStringContainsString('assets/XotAssetTest/css/style.css', $result);
-        Assert::assertFileExists($dest);
+        Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
+        Assert::assertFileDoesNotExist($dest, 'the asset must be served through the symlink, never copied');
     } finally {
-        if (is_file($dest)) {
-            unlink($dest);
-        }
         if (is_file($resourceFile)) {
             unlink($resourceFile);
         }
     }
 });
 
-it('keeps published dest when force-copy fails (best-effort via copyAsset)', function (): void {
-    $from = sys_get_temp_dir().'/xot_asset_from_'.uniqid('', true).'.bin';
-    $to = sys_get_temp_dir().'/xot_asset_to_'.uniqid('', true).'.bin';
-    file_put_contents($from, 'source-bytes');
-    file_put_contents($to, 'dest-already-published');
-    chmod($to, 0444);
+it('does not throw when public assets dir is a plain file left by a checkout without symlinks', function (): void {
+    $moduleRoot = sys_get_temp_dir().'/xot_mod_'.uniqid('', true);
+    $publicFile = $moduleRoot.'/public/css/style.css';
+    mkdir(\dirname($publicFile), 0o755, true);
+    file_put_contents($publicFile, 'body{}');
+
+    $standIn = public_path('assets/xotstandintest'); // link in minuscolo, come gli URL
+    file_put_contents($standIn, '../../laravel/Modules/XotStandInTest/public');
+
+    app()->instance(GetModulePathAction::class, new class($moduleRoot) extends GetModulePathAction
+    {
+        public function __construct(private string $modulePath) {}
+
+        public function execute(string $module): string
+        {
+            return $this->modulePath;
+        }
+    });
 
     try {
-        $action = app(AssetAction::class);
-        $method = new ReflectionMethod(AssetAction::class, 'copyAsset');
-        $method->invoke($action, $from, $to, 'assets/demo/icon.png', true);
-
-        Assert::assertFileExists($to);
-        Assert::assertSame('dest-already-published', file_get_contents($to));
+        $result = app(AssetAction::class)->execute('XotStandInTest::css/style.css');
+        Assert::assertStringContainsString('assets/xotstandintest/css/style.css', $result);
+        Assert::assertTrue(is_file($standIn), 'the stand-in file must be left untouched');
     } finally {
-        chmod($to, 0644);
-        if (is_file($from)) {
-            unlink($from);
-        }
-        if (is_file($to)) {
-            unlink($to);
-        }
-    }
-});
-
-it('skips force-copy when destination exists but is not writable', function (): void {
-    $from = sys_get_temp_dir().'/xot_asset_from_'.uniqid('', true).'.bin';
-    $to = sys_get_temp_dir().'/xot_asset_to_'.uniqid('', true).'.bin';
-    file_put_contents($from, 'new-source');
-    file_put_contents($to, 'keep-me');
-    chmod($to, 0444);
-
-    try {
-        $action = app(AssetAction::class);
-        $method = new ReflectionMethod(AssetAction::class, 'copyAsset');
-        $method->invoke($action, $from, $to, 'assets/demo/icon.png', true);
-
-        Assert::assertSame('keep-me', file_get_contents($to));
-    } finally {
-        chmod($to, 0644);
-        if (is_file($from)) {
-            unlink($from);
-        }
-        if (is_file($to)) {
-            unlink($to);
-        }
-    }
-});
-
-/*
- * Outside production every request force-copies the asset (story 5.180). A plain copy()
- * truncates the public file before writing it: a browser fetching the logo in that
- * window gets an empty PNG (measured 2026-09-29: 11787 truncated reads out of 20000
- * with 4 concurrent writers, 0 with temp file + rename).
- */
-it('does not rewrite an up-to-date destination on force-copy', function (): void {
-    $from = sys_get_temp_dir().'/xot_asset_from_'.uniqid('', true).'.bin';
-    $to = sys_get_temp_dir().'/xot_asset_to_'.uniqid('', true).'.bin';
-    file_put_contents($from, 'same-bytes');
-    file_put_contents($to, 'same-bytes');
-    $publishedAt = time() - 100;
-    touch($from, $publishedAt - 100);
-    touch($to, $publishedAt);
-    clearstatcache();
-
-    try {
-        $action = app(AssetAction::class);
-        $method = new ReflectionMethod(AssetAction::class, 'copyAsset');
-        $method->invoke($action, $from, $to, 'assets/demo/logo.png', true);
-
-        clearstatcache();
-        Assert::assertSame($publishedAt, filemtime($to), 'an identical destination must not be rewritten');
-    } finally {
-        foreach ([$from, $to] as $file) {
-            if (is_file($file)) {
-                unlink($file);
-            }
-        }
-    }
-});
-
-it('replaces a stale destination atomically, never truncating it in place', function (): void {
-    $from = sys_get_temp_dir().'/xot_asset_from_'.uniqid('', true).'.bin';
-    $to = sys_get_temp_dir().'/xot_asset_to_'.uniqid('', true).'.bin';
-    file_put_contents($from, 'new-logo-bytes');
-    file_put_contents($to, 'old');
-    touch($to, time() - 200);
-    touch($from, time() - 100);
-    clearstatcache();
-    $inodeBefore = fileinode($to);
-
-    try {
-        $action = app(AssetAction::class);
-        $method = new ReflectionMethod(AssetAction::class, 'copyAsset');
-        $method->invoke($action, $from, $to, 'assets/demo/logo.png', true);
-
-        clearstatcache();
-        Assert::assertSame('new-logo-bytes', file_get_contents($to));
-        Assert::assertNotSame($inodeBefore, fileinode($to), 'the destination must be swapped by rename(), not rewritten in place');
-        Assert::assertSame([], glob($to.'.*.tmp'), 'no temporary file may be left behind');
-    } finally {
-        foreach ([$from, $to] as $file) {
+        foreach ([$standIn, $publicFile] as $file) {
             if (is_file($file)) {
                 unlink($file);
             }
@@ -202,4 +118,11 @@ it('calculates asset path correctly in AssetPathAction', function (): void {
     $result = $action->execute('User::js/app.js');
 
     Assert::assertSame('/path/to/User/resources/js/app.js', $result);
+});
+
+it('resolves a public URL path to a file under the document root', function (): void {
+    $action = app(AssetPathAction::class);
+
+    Assert::assertSame(public_path('themes/Trattoria/images/logo.svg'), $action->execute('/themes/Trattoria/images/logo.svg?v=2'));
+    Assert::assertSame(public_path('images/logo.png'), $action->execute('images/logo.png'));
 });

@@ -75,6 +75,12 @@ abstract class XotBaseListRecords extends FilamentListRecords
      */
     protected function getHeaderActions(): array
     {
+        // Risorse senza pagina `create` (es. moderazione commenti): niente "Nuovo",
+        // altrimenti `getUrl('create')` lancia RouteNotFound e l'elenco va in 500.
+        if (! \array_key_exists('create', static::getResource()::getPages())) {
+            return [];
+        }
+
         return [
             'create' => CreateAction::make()
                 ->icon('heroicon-o-plus')

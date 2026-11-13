@@ -17,6 +17,11 @@ abstract class CmsBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole('cms::admin')) {
+            return true;
+        }
+
         return null;
     }
 }

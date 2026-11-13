@@ -86,8 +86,4 @@ Per questo Le chiediamo il permesso di trasmettere i Suoi dati e le Sue risposte
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

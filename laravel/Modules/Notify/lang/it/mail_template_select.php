@@ -5,11 +5,9 @@ declare(strict_types=1);
 return [
     'fields' => [
         'mail_template_slug' => [
-            'label' => 'mail_template_slug',
-            'placeholder' => 'mail_template_slug',
-            'helper_text' => 'mail_template_slug',
-            'description' => 'mail_template_slug',
-            'tooltip' => '']],
+            'tooltip' => '',
+        ],
+    ],
     'label' => 'Mail Template Select',
     'plural_label' => 'Mail Template Select (Plurale)',
     'navigation' => [
@@ -17,14 +15,21 @@ return [
         'plural' => 'Mail Template Select',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings'],
+            'description' => 'General Settings',
+        ],
         'label' => 'Mail Template Select',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection'],
+        'icon' => 'heroicon-o-collection',
+    ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Mail Template Select'],
+            'label' => 'Crea Mail Template Select',
+        ],
         'edit' => [
-            'label' => 'Modifica Mail Template Select'],
+            'label' => 'Modifica Mail Template Select',
+        ],
         'delete' => [
-            'label' => 'Elimina Mail Template Select']]];
+            'label' => 'Elimina Mail Template Select',
+        ],
+    ],
+];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 use Modules\Activity\Enums\LogLevelEnum;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

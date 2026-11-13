@@ -120,7 +120,7 @@ return [
     'login' => 'Accedi subito',
     'success' => 'Benvenuto! 🎉',
     'throttle' => 'Troppi tentativi di registrazione. Riprova tra :seconds secondi.',
-    'success_message' => 'Il tuo account è pronto',
+    'success_message' => 'Il tuo account è pronto. Ti abbiamo inviato una email: apri il link per confermare l\'indirizzo prima di inviare una segnalazione.',
     'error' => 'Errore di registrazione',
     'error_message' => 'Riprova più tardi',
     'label' => 'Register',

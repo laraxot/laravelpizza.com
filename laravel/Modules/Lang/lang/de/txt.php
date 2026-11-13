@@ -9,7 +9,6 @@ return [
             'placeholder' => 'Geben Sie Ihre E-Mail ein',
             'tooltip' => 'Verwenden Sie eine gültige E-Mail-Adresse',
             'icon' => 'heroicon-o-envelope',
-            'description' => 'email',
             'helper_text' => '',
         ],
         'password' => [
@@ -17,15 +16,12 @@ return [
             'placeholder' => 'Geben Sie Ihr Passwort ein',
             'tooltip' => 'Das Passwort muss mindestens 8 Zeichen enthalten',
             'icon' => 'heroicon-o-lock-closed',
-            'description' => 'password',
             'helper_text' => '',
         ],
         'remember' => [
             'label' => 'Angemeldet bleiben',
             'tooltip' => 'Halten Sie mich auf diesem Gerät angemeldet',
-            'description' => 'remember',
             'helper_text' => '',
-            'placeholder' => 'remember',
         ],
     ],
     'actions' => [
@@ -40,9 +36,6 @@ return [
             'tooltip' => 'Mit Ihren Anmeldedaten anmelden',
             'icon' => 'heroicon-o-key',
             'color' => 'success',
-        ],
-        'request' => [
-            'label' => 'request',
         ],
     ],
     'navigation' => [

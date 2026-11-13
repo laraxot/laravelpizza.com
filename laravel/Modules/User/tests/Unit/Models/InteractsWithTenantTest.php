@@ -6,30 +6,17 @@ namespace Modules\User\Tests\Unit\Models;
 
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
-use Modules\User\Models\Traits\InteractsWithTenant;
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 
 uses(TestCase::class)->group('no-user-db');
-
-/**
- * Modello d'esempio di un'area tenant (es. i cantieri di un cliente).
- */
-final class InteractsWithTenantFixtureModel extends Model
-{
-    use InteractsWithTenant;
-
-    protected $table = 'worksites';
-
-    protected $guarded = [];
-}
 
 function interactsWithTenantModel(): InteractsWithTenantFixtureModel
 {
     return new InteractsWithTenantFixtureModel;
 }
 
-function interactsWithTenantTenant(string $id): Model
+function interactsWithTenantTenant(string $id): \Illuminate\Database\Eloquent\Model
 {
     $tenantClass = XotData::make()->getTenantClass();
     $tenant = new $tenantClass;
