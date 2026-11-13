@@ -13,6 +13,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_2Y6j17
 beforeEach(function (): void {
     /** @var TestCase $this */
     $this->page = new class extends ListLogActivities
@@ -38,12 +39,21 @@ describe('List Log Activities Page Coverage', function (): void {
     test('get breadcrumb returns string', function (): void {
         /** @var TestCase $this */
         $result = $this->requirePage()->getBreadcrumb();
+=======
+describe('List Log Activities Page Coverage', function (): void {
+    test('get breadcrumb returns string', function (): void {
+        $result = TestCase::makeListLogActivitiesPage()->getBreadcrumb();
+>>>>>>> .merge_file_wl2poY
 
         Assert::assertNotEmpty($result);
     });
 
     test('get breadcrumb uses static breadcrumb when set', function (): void {
+<<<<<<< .merge_file_Gisxmu
+        $page = new class() extends ListLogActivities
+=======
         $page = new class extends ListLogActivities
+>>>>>>> .merge_file_m6CipQ
         {
             protected static ?string $breadcrumb = 'Custom Breadcrumb';
 
@@ -62,7 +72,11 @@ describe('List Log Activities Page Coverage', function (): void {
     });
 
     test('can restore activity returns false when resource lacks can restore method', function (): void {
+<<<<<<< .merge_file_Gisxmu
+        $page = new class() extends ListLogActivities
+=======
         $page = new class extends ListLogActivities
+>>>>>>> .merge_file_m6CipQ
         {
             public static function getResource(): string
             {
@@ -74,22 +88,34 @@ describe('List Log Activities Page Coverage', function (): void {
     });
 
     test('get pagination mode returns default', function (): void {
+<<<<<<< .merge_file_2Y6j17
         $mode = $this->requirePage()->getPaginationMode();
+=======
+        $mode = TestCase::makeListLogActivitiesPage()->getPaginationMode();
+>>>>>>> .merge_file_wl2poY
 
         Assert::assertSame(PaginationMode::Default, $mode);
     });
 
     test('get field label returns name when not in map', function (): void {
         try {
+<<<<<<< .merge_file_2Y6j17
             $label = $this->requirePage()->getFieldLabel('nonexistent_field');
+=======
+            $label = TestCase::makeListLogActivitiesPage()->getFieldLabel('nonexistent_field');
+>>>>>>> .merge_file_wl2poY
             Assert::assertSame('nonexistent_field', $label);
         } catch (\Throwable $e) {
-            $this->skipTest('getFieldLabel() method not available in test context');
+            Assert::markTestSkipped('getFieldLabel() method not available in test context');
         }
     });
 
     test('send restore success notification returns notification', function (): void {
+<<<<<<< .merge_file_Gisxmu
+        $page = new class() extends ListLogActivities
+=======
         $page = new class extends ListLogActivities
+>>>>>>> .merge_file_m6CipQ
         {
             /** @return class-string */
             public static function getResource(): string
@@ -108,7 +134,11 @@ describe('List Log Activities Page Coverage', function (): void {
     });
 
     test('send restore failure notification without message returns notification', function (): void {
+<<<<<<< .merge_file_Gisxmu
+        $page = new class() extends ListLogActivities
+=======
         $page = new class extends ListLogActivities
+>>>>>>> .merge_file_m6CipQ
         {
             /** @return class-string */
             public static function getResource(): string
@@ -127,7 +157,11 @@ describe('List Log Activities Page Coverage', function (): void {
     });
 
     test('send restore failure notification with message includes body', function (): void {
+<<<<<<< .merge_file_Gisxmu
+        $page = new class() extends ListLogActivities
+=======
         $page = new class extends ListLogActivities
+>>>>>>> .merge_file_m6CipQ
         {
             /** @return class-string */
             public static function getResource(): string
@@ -146,7 +180,11 @@ describe('List Log Activities Page Coverage', function (): void {
     });
 
     test('can restore activity with record executes resource check', function (): void {
+<<<<<<< .merge_file_2Y6j17
         $result = $this->requirePage()->canRestoreActivity();
+=======
+        $result = TestCase::makeListLogActivitiesPage()->canRestoreActivity();
+>>>>>>> .merge_file_wl2poY
         Assert::assertFalse($result);
     });
 });

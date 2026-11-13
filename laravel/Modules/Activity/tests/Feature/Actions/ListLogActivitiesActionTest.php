@@ -8,7 +8,7 @@ use Modules\Activity\Tests\Fixtures\ListLogActivitiesActionTestResourceSimple;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('action can be instantiated', function (): void {
     $action = ListLogActivitiesAction::make();
@@ -28,7 +28,7 @@ test('action generates a log-activity URL containing record key', function (): v
     $action = ListLogActivitiesAction::make();
 
     $livewire = ListLogActivitiesActionTestPage::usingResource(ListLogActivitiesActionTestResourceSimple::class);
-    $record = new ListLogActivitiesActionTestRecord;
+    $record = new ListLogActivitiesActionTestRecord();
 
     $action->livewire($livewire);
     $action->record($record);

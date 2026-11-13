@@ -11,48 +11,49 @@ namespace Modules\Activity\Tests\Security;
  * and audit trail functionality.
  */
 
-use Modules\Activity\Database\Factories\ActivityFactory;
-use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Policies\ActivityPolicy;
 use Modules\Activity\Tests\TestCase;
+<<<<<<< .merge_file_isMmtv
 use Modules\User\Database\Factories\UserFactory;
+=======
+>>>>>>> .merge_file_iMhAAA
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 it('denies activity viewAny to users without permission', function (): void {
-    $user = UserFactory::new()->createOne();
-    $policy = new ActivityPolicy;
+    $user = activityCreateUser();
+    $policy = new ActivityPolicy();
 
     Assert::assertFalse($policy->viewAny($user));
 });
 
 it('allows activity viewAny to users with the correct permission', function (): void {
-    $user = UserFactory::new()->createOne();
+    $user = activityCreateUser();
     $user->givePermissionTo('activity.viewAny');
-    $policy = new ActivityPolicy;
+    $policy = new ActivityPolicy();
 
     Assert::assertTrue($policy->viewAny($user));
 });
 
 it('denies activity view to users without permission', function (): void {
-    $user = UserFactory::new()->createOne();
-    $policy = new ActivityPolicy;
+    $user = activityCreateUser();
+    $policy = new ActivityPolicy();
 
     Assert::assertFalse($policy->view($user));
 });
 
 it('super-admin bypasses activity policy checks via before()', function (): void {
-    $superAdmin = UserFactory::new()->createOne();
+    $superAdmin = activityCreateUser();
     $superAdmin->assignRole('super-admin');
-    $policy = new ActivityPolicy;
+    $policy = new ActivityPolicy();
 
     Assert::assertTrue($policy->viewAny($superAdmin));
     Assert::assertTrue($policy->view($superAdmin));
 });
 
 it('validates activity log data integrity', function (): void {
-    $activity = ActivityFactory::new()->createOne([
+    $activity = activityCreateActivity([
         'description' => 'Valid description',
     ]);
 

@@ -102,8 +102,20 @@ class Activity extends ActivityLog
 ### Integrazione Moduli
 
 Il modulo Activity **è utilizzato da** tutti i moduli business:
+<<<<<<< .merge_file_VneXcS
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **<nome progetto>**: Traccia modifiche clienti, appuntamenti, dispositivi
+=======
+- **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
+>>>>>>> 0a02158a (.)
+=======
+- **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
+>>>>>>> 35d8cf69 (Initial commit)
+=======
 - **<nome progetto>**: Traccia modifiche clienti, appuntamenti, dispositivi=======
 - **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
+>>>>>>> .merge_file_gDTZLG
 - **User**: Traccia azioni utente, login, cambi ruoli
 - **Employee**: Traccia timbrature, modifiche dipendenti
 - **Notify**: Traccia invii notifiche

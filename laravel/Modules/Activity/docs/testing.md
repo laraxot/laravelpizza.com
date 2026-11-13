@@ -1,11 +1,19 @@
+<<<<<<< .merge_file_FEAyr2
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_pKwAiA
 ---
 title: "Activity Module Testing"
 type: guide
 tags: [activity, testing, pest]
 created: 2026-07-28
 updated: 2026-07-28
+<<<<<<< .merge_file_FEAyr2
+=======
 status: draft
 qmd: "activity module   testing activity"
+>>>>>>> .merge_file_pKwAiA
 ---
 
 # Activity Module — Testing
@@ -35,7 +43,15 @@ test('logs causer on user action', function () {
     $activity = Activity::latest()->first();
     expect($activity->causer_id)->toBe($admin->id);
 });
+<<<<<<< .merge_file_FEAyr2
+```
+=======
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+# Testing Documentation
+=======
 ```# Testing Documentation
+>>>>>>> .merge_file_pKwAiA
 
 ## Overview
 
@@ -295,7 +311,7 @@ protected function createApplication()
 
 ### External Resources
 
-- [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 - [Pest Installation Guide](https://pestphp.com/docs/installation)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 
@@ -421,4 +437,9 @@ Remember: Good tests are the foundation of reliable software development.
 ---
 
 *Last updated: January 2025*
+<<<<<<< HEAD
 *
+>>>>>>> 0a02158a (.)
+=======
+*
+>>>>>>> 35d8cf69 (Initial commit)

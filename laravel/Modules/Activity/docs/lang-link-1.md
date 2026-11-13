@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+# Collegamento alle Traduzioni del Modulo Activity
+
+Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
+
+Consulta la documentazione delle traduzioni qui:
+- [Introduzione alle Traduzioni](../../Lang/project_docs/introduction.md)
+- [Struttura delle Traduzioni](../../Lang/project_docs/structure.md)
+- [Gestione dei File di Lingua](../../Lang/project_docs/module_lang.md)
+
+## Collegamento Bidirezionale
+
+## Collegamenti
+
+- [Torna a README](./README.md)
+- [Vai a Struttura](./structure.md)
+- [Vai a Traduzioni](./translations.md)
+
+Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
+
+> Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
+
+## Collegamenti tra versioni di lang-link.md
+* [lang-link.md](laravel/Modules/Chart/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Reporting/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Gdpr/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Notify/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Xot/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Dental/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/User/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/UI/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Job/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Media/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Tenant/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Activity/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Patient/project_docs/lang-link.md)
+* [lang-link.md](laravel/Modules/Cms/project_docs/lang-link.md)
+=======
+---
+module: theme
+topic: lang-link-1
+canonical: ../../../Themes/docs/shared-components/lang-link-1.md
+---
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+See canonical documentation: ../../../Themes/docs/shared-components/lang-link-1.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/lang-link-1.md
+>>>>>>> d4098eb (.)
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/lang-link-1.md
+>>>>>>> 26b6dbd (.)
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/lang-link-1.md
+>>>>>>> 2d6a374 (.)
+>>>>>>> laraxot/dev

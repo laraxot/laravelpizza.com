@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Filament\Resources\StoredEventResource\Pages;
 
-use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ViewColumn;
 use Modules\Activity\Filament\Resources\StoredEventResource;
 use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -19,6 +16,8 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 class ListStoredEvents extends XotBaseListRecords
 {
     protected static string $resource = StoredEventResource::class;
+<<<<<<< .merge_file_y7493k
+=======
 
     /**
      * @return array<Tables\Columns\Column>
@@ -33,4 +32,5 @@ class ListStoredEvents extends XotBaseListRecords
             'event_properties' => ViewColumn::make('event_properties')->view($eventPropertiesView),
         ];
     }
+>>>>>>> .merge_file_d6t5aZ
 }

@@ -9,8 +9,20 @@ qmd: "activity module - business logic analysis activity"
 # Activity Module - Business Logic Analysis
 
 ## Overview
+<<<<<<< .merge_file_L2Pp1l
+<<<<<<< HEAD
+<<<<<<< HEAD
+The Activity module provides comprehensive audit logging and event sourcing capabilities for the Quaeris platform. It tracks user actions, system events, and data changes across all modules.
+=======
+The Activity module provides comprehensive audit logging and event sourcing capabilities for the <nome progetto> platform. It tracks user actions, system events, and data changes across all modules.
+>>>>>>> 0a02158a (.)
+=======
+The Activity module provides comprehensive audit logging and event sourcing capabilities for the <nome progetto> platform. It tracks user actions, system events, and data changes across all modules.
+>>>>>>> 35d8cf69 (Initial commit)
+=======
 The Activity module provides comprehensive audit logging and event sourcing capabilities for the Quaeris platform. It tracks user actions, system events, and data changes across all modules.=======
 The Activity module provides comprehensive audit logging and event sourcing capabilities for the <nome progetto> platform. It tracks user actions, system events, and data changes across all modules.
+>>>>>>> .merge_file_kcgpiz
 
 ## Business Purpose
 - **Audit Trail**: Maintain complete audit trails for compliance and security
@@ -201,6 +213,15 @@ The Activity module provides comprehensive audit logging and event sourcing capa
 - **Security**: Provides audit trails for security incidents
 - **Debugging**: Helps diagnose application issues
 - **Analytics**: Enables user behavior analysis
+<<<<<<< .merge_file_L2Pp1l
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+- **Accountability**: Tracks user actions for accountability
+=======
+>>>>>>> .merge_file_kcgpiz
 # Activity Module - Business Logic Analysis
 
 ## Overview
@@ -398,4 +419,8 @@ The Activity module provides comprehensive audit logging and event sourcing capa
 - **Debugging**: Helps diagnose application issues
 - **Analytics**: Enables user behavior analysis
 - **Accountability**: Tracks user actions for accountability
+<<<<<<< HEAD
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
 - **Accountability**: Tracks user actions for accountability

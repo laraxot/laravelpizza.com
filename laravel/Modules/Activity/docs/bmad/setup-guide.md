@@ -1,10 +1,19 @@
 ---
+<<<<<<< .merge_file_xtuaax
+title: "Activity — BMAD Setup Guide"
+=======
 title: "Activity: BMAD Setup Guide"
+>>>>>>> .merge_file_WSoz6o
 description: "Setup e configurazione BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
+<<<<<<< .merge_file_xtuaax
+---
+
+# Activity — BMAD Setup Guide
+=======
 type: note
 status: draft
 updated: 2026-10-07
@@ -13,6 +22,7 @@ qmd: "activity   bmad setup guide activity"
 ---
 
 # Activity: BMAD Setup Guide
+>>>>>>> .merge_file_WSoz6o
 
 ## Scopo
 
@@ -34,7 +44,11 @@ In questo modulo, BMAD serve a:
 - PHPStan Level 10: nessun ignoreErrors
 - Traduzioni dai file: mai hardcoded
 
+<<<<<<< .merge_file_xtuaax
+## Bad Practices (Pratiche Sbagliate — Mai Fare)
+=======
 ## Bad Practices (Pratiche Sbagliate: Mai Fare)
+>>>>>>> .merge_file_WSoz6o
 
 - Mai estendere Filament direttamente
 - Mai silenziare PHPStan
@@ -47,7 +61,11 @@ In questo modulo, BMAD serve a:
 | Termine | Sembra Significare | In Realtà Significa |
 |---|---|---|
 | **Action** | Funzione generica | Classe con `execute()` che estende `QueueableAction` |
+<<<<<<< .merge_file_xtuaax
+| **Service** | Servizio generico | **Vietato** in Xot — usare `Actions` |
+=======
 | **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
+>>>>>>> .merge_file_WSoz6o
 | **Module/Modulo** | Pacchetto generico | Modulo con `module.json`, `XotBaseServiceProvider` |
 | **Resource** | Risorsa generica | `XotBaseResource` con `form()`, `table()` |
 

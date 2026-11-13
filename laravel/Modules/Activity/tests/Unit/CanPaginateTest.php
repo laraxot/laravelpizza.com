@@ -13,7 +13,10 @@ uses(TestCase::class);
 
 describe('Can Paginate', function (): void {
     test('trait exists', function (): void {
+<<<<<<< .merge_file_fSj2Ps
         /** @var TestCase $this */
+=======
+>>>>>>> .merge_file_ytZmvy
         Assert::assertTrue(trait_exists(CanPaginate::class));
     });
 
@@ -39,7 +42,37 @@ describe('Can Paginate', function (): void {
     });
 
     test('default pagination options return array', function (): void {
+<<<<<<< .merge_file_PN0YI8
+        // Test the default pagination options via reflection
+        $trait = new class()
+        {
+            use CanPaginate;
+
+            public function resetLivewirePage(): void {}
+
+            public function getPage(string $pageName): int
+            {
+                return 1;
+            }
+
+            public function getPaginationMode(): PaginationMode
+            {
+                return PaginationMode::Default;
+            }
+
+            /**
+             * @return array<int|string>
+             */
+            public function test_get_records_per_page_select_options(): array
+            {
+                return $this->getRecordsPerPageSelectOptions();
+            }
+        };
+
+        $options = $trait->test_get_records_per_page_select_options();
+=======
         $options = (new CanPaginateHarness)->exposeOptions();
+>>>>>>> .merge_file_L3fJ0c
         Assert::assertEquals([10, 25, 50], $options);
     });
 });

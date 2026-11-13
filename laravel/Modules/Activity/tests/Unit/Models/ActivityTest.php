@@ -7,6 +7,7 @@ use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< .merge_file_6WvNie
 uses(TestCase::class);
 
 beforeEach(function () {
@@ -17,6 +18,9 @@ beforeEach(function () {
         $this->markTestSkipped('Database not available: '.$e->getMessage());
     }
 });
+=======
+uses(\Modules\Activity\Tests\TestCase::class);
+>>>>>>> .merge_file_PnUuvZ
 
 test('activity model can be created', function () {
     $activity = ActivityFactory::new()->make();

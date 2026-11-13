@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_9a77V8
+=======
 ---
 title: "Migration: Support → Actions"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-22
 tags: [docs, activity]
 qmd: "migration: support → actions activity"
 ---
+>>>>>>> .merge_file_yt0e1H
 # Migration: Support → Actions
 
 **Module:** Activity  

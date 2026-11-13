@@ -7,6 +7,11 @@ namespace Modules\Activity\Tests\Unit\Actions;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
 use Modules\Activity\Actions\LogActivityAction;
+<<<<<<< .merge_file_MP0B4E
+
+test('LogActivityAction execute rifiuta user non User', function (): void {
+    $nonUser = new class() extends Model
+=======
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 
@@ -14,6 +19,7 @@ uses(TestCase::class);
 
 test('LogActivityAction execute rifiuta user non User', function (): void {
     $nonUser = new class extends Model
+>>>>>>> .merge_file_xiMLRO
     {
         protected $table = 'stub_users';
     };
@@ -23,7 +29,11 @@ test('LogActivityAction execute rifiuta user non User', function (): void {
         user: $nonUser,
     );
 
+<<<<<<< .merge_file_MP0B4E
+    expect(fn (): mixed => $action->execute())
+=======
     expect(fn (): Activity => $action->execute())
+>>>>>>> .merge_file_xiMLRO
         ->toThrow(InvalidArgumentException::class, 'User must be an instance of User');
 });
 

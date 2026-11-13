@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_if2pgC
+=======
 ---
 title: "Glossario <nome progetto>ion Market"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-07
 tags: [docs, activity, use_cases]
 qmd: "glossario <nome progetto>ion market activity"
 ---
+>>>>>>> .merge_file_ecfRGc
 # Glossario <nome progetto>ion Market
 
 - **<nome progetto>ion Market**: Mercato di previsione, piattaforma per scommettere su eventi futuri.

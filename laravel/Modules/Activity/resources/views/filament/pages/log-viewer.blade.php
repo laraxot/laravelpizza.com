@@ -1,22 +1,45 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_rc08gE
+
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Number;
+=======
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Number;
 use Modules\Activity\Enums\LogLevelEnum;
+>>>>>>> .merge_file_K6sm61
 
 /*
  * ponytail: stili di layout in linea (style="...") e un <style> locale al posto di classi Tailwind, perche' il pannello
  * Activity non ha un tema Vite proprio e le utility non gia' usate da Filament non verrebbero compilate.
  * Scostamento noto dalla regola Blade «no inline CSS»: via d'uscita conforme = asset CSS costruito con Vite
  * (Vite::asset('resources/css/app.css', 'assets/activity') in un FilamentAsset::register, come Chart e Geo), che richiede
+<<<<<<< .merge_file_rc08gE
+ * build e deploy degli asset del modulo. Il file che Xot registra (header-actions-wrap.css) non esiste: non e' un precedente.
+=======
  * build e deploy degli asset del modulo. Xot pubblica header-actions-wrap.css solo per il wrap delle azioni Filament: non e' un precedente per gli stili di questa pagina.
+>>>>>>> .merge_file_K6sm61
  *
  * Il testo dei log e' sempre passato da {{ }} (escape): un log puo' contenere HTML/JS arrivato da input esterni.
  */
 
 /** @var \Modules\Activity\Filament\Pages\LogViewer $this */
 $state = $this->getLogState();
+<<<<<<< .merge_file_rc08gE
+$levelColors = [
+    'EMERGENCY' => 'danger',
+    'ALERT' => 'danger',
+    'CRITICAL' => 'danger',
+    'ERROR' => 'danger',
+    'WARNING' => 'warning',
+    'NOTICE' => 'info',
+    'INFO' => 'info',
+    'DEBUG' => 'gray',
+];
+=======
+>>>>>>> .merge_file_K6sm61
 // Voci molto lunghe (per esempio un log con una sola intestazione seguita da migliaia di righe JSON):
 // si mostrano l'inizio E la fine, perche' le righe piu' recenti sono in fondo.
 $maxBodyChars = 20000;
@@ -64,8 +87,13 @@ $labelStyle = 'display:block;font-size:.875rem;font-weight:500;margin-bottom:.25
                         <x-filament::input.wrapper>
                             <x-filament::input.select wire:model.live="level">
                                 <option value="">{{ __('activity::log_viewer.placeholders.all_levels') }}</option>
+<<<<<<< .merge_file_rc08gE
+                                @foreach ($state->levels as $levelName)
+                                    <option value="{{ $levelName }}">{{ $levelName }}</option>
+=======
                                 @foreach ($state->levels as $levelCase)
                                     <option value="{{ $levelCase->value }}">{{ $levelCase->getLabel() }}</option>
+>>>>>>> .merge_file_K6sm61
                                 @endforeach
                             </x-filament::input.select>
                         </x-filament::input.wrapper>
@@ -121,7 +149,11 @@ $labelStyle = 'display:block;font-size:.875rem;font-weight:500;margin-bottom:.25
                             <summary style="cursor:pointer;padding:.5rem .75rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;font-size:.875rem;">
                                 <span style="opacity:.7;white-space:nowrap;">{{ $entry->timestamp ?? '—' }}</span>
                                 @if ($entry->level !== null)
+<<<<<<< .merge_file_rc08gE
+                                    <x-filament::badge :color="$levelColors[$entry->level] ?? 'gray'">{{ $entry->level }}</x-filament::badge>
+=======
                                     <x-filament::badge :color="LogLevelEnum::tryFrom($entry->level)?->getColor() ?? 'gray'">{{ $entry->level }}</x-filament::badge>
+>>>>>>> .merge_file_K6sm61
                                 @endif
                                 <span style="word-break:break-word;min-width:0;flex:1 1 20rem;">{{ mb_substr($entry->message, 0, 300) }}@if (mb_strlen($entry->message) > 300)…@endif</span>
                             </summary>

@@ -11,10 +11,13 @@ discussions:
 sources:
   - https://laravelmodules.com/docs/13/advanced/tests
   - https://github.com/nWidart/laravel-modules
+<<<<<<< .merge_file_eOKgH4
+=======
 type: note
 updated: 2026-10-07
 tags: [docs, activity]
 qmd: "brainstorm: testcase architecture for laravel modules activity"
+>>>>>>> .merge_file_kQx0EZ
 ---
 
 # Brainstorm: TestCase Architecture for Laravel Modules

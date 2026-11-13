@@ -8,39 +8,40 @@ qmd: "use case <nome progetto>ion market   event sourcing e console commands act
 ---
 # Use Case <nome progetto>ion Market – Event Sourcing e Console Commands
 
-## Introduzione
-Questo modulo implementa un <nome progetto>ion market tramite event sourcing, aggregate root e proiezioni, ispirandosi alle best practice di progetti open source come [event-sourcing-with-laravel](https://github.com/cnastasi/event-sourcing-with-laravel).
+[![Module](https://img.shields.io/badge/Module-Use Case <nome progetto>ion Market – Event Sourcing e Console Commands-8B0000.svg)]()
+[![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
+[![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)
+[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://php.net/)
+[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue?style=for-the-badge)](https://www.php-fig.org/psr/psr-12/)](https://www.php-fig.org/psr/psr-12/)
+[![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)]()
+]()
 
-## Obiettivi
-- Tracciabilità completa delle modifiche a mercati, scommesse e payout
-- Separazione della logica di business tramite eventi e aggregate
-- Audit trail e rollback garantiti
-- Performance e scalabilità tramite proiezioni ottimizzate
+> **Core module for the FixCity Platform.**
 
-## Console Commands Principali
-- `activity:market:create {title} {description} {endDate}` – Crea un nuovo mercato
-- `activity:market:place-bet {marketUuid} {userId} {<nome progetto>ion} {amount}` – Piazza una scommessa
-- `activity:market:resolve {marketUuid} {outcome}` – Risolve un mercato
-- Altri: gestione payout, reportistica, audit (vedi esempi nei file dedicati)
+## Perché esiste
 
-## Esempi di Utilizzo
-```bash
-php artisan activity:market:create "Elezioni 2024" "Prevedi il vincitore" "2024-11-30"
-php artisan activity:market:place-bet market_xxx 12345 "Candidato A" 100
-php artisan activity:market:resolve market_xxx "Candidato A"
+Core module for the FixCity Platform.
 
-# 🎯 <nome progetto>ion Market Module
+## Superpoteri
 
-## 📚 Introduzione
-Il modulo <nome progetto>ion Market implementa un sistema completo di mercati predittivi utilizzando l'Event Sourcing in Laravel. Permette agli utenti di scommettere sull'esito di eventi futuri, con funzionalità avanzate di gestione dei mercati, calcolo delle quote e distribuzione dei pagamenti.
+- Modular component with XotBase patterns
+- Professional-grade implementation
+- Integrated with FixCity Platform
 
-## 🎯 Funzionalità Principali
+## Documentazione
 
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
+<<<<<<< .merge_file_FB4MNw
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+=======
 | 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](../..) |
+>>>>>>> .merge_file_fZxG1K
 
 ---
-**Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.**
+
+**Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

@@ -8,6 +8,15 @@ qmd: "collegamento alle traduzioni del modulo activity activity"
 ---
 # Collegamento alle Traduzioni del Modulo Activity
 
+<<<<<<< .merge_file_WHOzhx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
+=======
+>>>>>>> .merge_file_8HpIEq
 
 Consulta la documentazione delle traduzioni qui:
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
@@ -93,6 +102,35 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
 # Collegamento alle Traduzioni del Modulo Activity
 
+<<<<<<< .merge_file_WHOzhx
+<<<<<<< HEAD
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
+
+Consulta la documentazione delle traduzioni qui:
+- [Introduzione alle Traduzioni](../../Lang/project_docs/introduction.md)
+- [Struttura delle Traduzioni](../../Lang/project_docs/structure.md)
+- [Gestione dei File di Lingua](../../Lang/project_docs/module_lang.md)
+
+## Collegamento Bidirezionale
+
+## Collegamenti
+
+- [Torna a README](./README.md)
+- [Vai a Struttura](./structure.md)
+- [Vai a Traduzioni](./translations.md)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0a02158a (.)
+=======
+>>>>>>> 35d8cf69 (Initial commit)
+=======
+>>>>>>> .merge_file_8HpIEq
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.

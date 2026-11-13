@@ -8,14 +8,13 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-test('LogUserLoginAction can execute for a user', function (): void {
+test('LogUserLoginAction can be instantiated', function () {
     $user = UserFactory::new()->createOne();
     Assert::assertInstanceOf(User::class, $user);
 
-    $action = new LogUserLoginAction;
-    $activity = $action->execute($user);
+    $action = new LogUserLoginAction($user);
 
-    Assert::assertSame($user->getKey(), $activity->causer_id);
+    Assert::assertSame($user, $action->user);
 });

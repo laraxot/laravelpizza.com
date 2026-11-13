@@ -41,10 +41,15 @@ final class CanPaginateHarness
     }
 
     /**
+<<<<<<< .merge_file_zvgYZq
+     * @param  Builder<\Illuminate\Database\Eloquent\Model>  $query
+     * @return Paginator<int, \Illuminate\Database\Eloquent\Model>|CursorPaginator<int, \Illuminate\Database\Eloquent\Model>|LengthAwarePaginator<int, \Illuminate\Database\Eloquent\Model>
+=======
      * @template TModel of Model
      *
      * @param  Builder<TModel>  $query
      * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
+>>>>>>> .merge_file_dU31nx
      */
     public function exposePaginateQuery(Builder $query): Paginator|CursorPaginator|LengthAwarePaginator
     {
@@ -61,6 +66,6 @@ final class CanPaginateHarness
 
     public function setDefaultPerPage(int|string|null $value): void
     {
-        $this->defaultRecordsPerPageSelectOption = $value;
+        $this->defaultPerPageOption = $value;
     }
 }

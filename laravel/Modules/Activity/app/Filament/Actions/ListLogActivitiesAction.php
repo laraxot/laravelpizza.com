@@ -18,7 +18,7 @@ use Modules\Xot\Filament\Actions\XotBaseAction;
  *
  * ⚠️ IMPORTANTE: Estende XotBaseAction, MAI estendere Filament\Actions\Action direttamente!
  *
- * @example
+ *
  * ```php
  * // In getTableActions() di una Resource Page
  * public function getTableActions(): array

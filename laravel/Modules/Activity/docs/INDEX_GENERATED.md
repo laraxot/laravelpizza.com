@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_H1HYQt
+=======
 ---
 title: "Activity Module Documentation Index"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-23
 tags: [docs, activity]
 qmd: "activity module documentation index activity"
 ---
+>>>>>>> .merge_file_rmQPHs
 # Activity Module Documentation Index
 
 **Stats**: 698 files | 20 categories | Last update: 2026-07-28 10:45
@@ -22,17 +25,30 @@ qmd: "activity module documentation index activity"
 Strategic, foundational, and consolidated documentation at module level:
 
 **Core Documentation** (Key files)
+<<<<<<< .merge_file_H1HYQt
+  - [ARCHITECTURE.md](ARCHITECTURE.md) — System architecture and design patterns
+  - [API.md](API.md) — API reference and endpoints
+  - [DATABASE-SCHEMA.md](DATABASE-SCHEMA.md) — Database schema definitions
+  - [QUICK-START.md](QUICK-START.md) — Quick start guide
+  - [PATTERNS.md](PATTERNS.md) — Design patterns and implementation guides
+  - [TESTING.md](TESTING.md) — Testing strategy and guidelines
+=======
   - [ARCHITECTURE.md](ARCHITECTURE.md): System architecture and design patterns
   - [API.md](API.md): API reference and endpoints
   - [DATABASE-SCHEMA.md](DATABASE-SCHEMA.md): Database schema definitions
   - [QUICK-START.md](QUICK-START.md): Quick start guide
   - [PATTERNS.md](PATTERNS.md): Design patterns and implementation guides
   - [TESTING.md](TESTING.md): Testing strategy and guidelines
+>>>>>>> .merge_file_rmQPHs
 
 **Planning & Strategy** (Key documents)
   - [README.md](README.md)
   - [PRODUCT_STRATEGY.md](PRODUCT_STRATEGY.md)
+<<<<<<< .merge_file_H1HYQt
+  - [ROADMAP.md](ROADMAP.md)
+=======
   - [ROADMAP.md](roadmap.md)
+>>>>>>> .merge_file_rmQPHs
   - [SPRINT_PLANNING.md](SPRINT_PLANNING.md)
 
 **Additional Root Files**
@@ -42,11 +58,19 @@ Strategic, foundational, and consolidated documentation at module level:
 
 Real-world implementation scenarios and workflow documentation:
 
+<<<<<<< .merge_file_H1HYQt
+- **Activity Tracking** — User activity logging and monitoring
+- **Event Management** — Event lifecycle and state management
+- **Analytics** — Tracking, reporting, and data analysis
+- **Integrations** — Third-party system integrations
+- **Performance** — Optimization and bottleneck analysis
+=======
 - **Activity Tracking**: User activity logging and monitoring
 - **Event Management**: Event lifecycle and state management
 - **Analytics**: Tracking, reporting, and data analysis
 - **Integrations**: Third-party system integrations
 - **Performance**: Optimization and bottleneck analysis
+>>>>>>> .merge_file_rmQPHs
 - and 112+ more use case specifications
 
 ### Wiki (56 files)
@@ -210,6 +234,23 @@ Testing strategies and guidelines:
 
 ### Other Categories
 
+<<<<<<< .merge_file_H1HYQt
+**Architecture** (3 files) — System design documentation  
+**Tecnico** (2 files) — Technical specifications  
+**Guides** (2 files) — User and developer guides  
+**Use-Cases** (1 file) — Use case documentation  
+**UI/UX** (1 file) — Interface design documentation  
+**Troubleshooting** (1 file) — General troubleshooting  
+**Tests** (1 file) — Test documentation  
+**Quality Analysis** (1 file) — Code quality metrics  
+**Outputs** (1 file) — Generated reports  
+**Development** (1 file) — Development workflow  
+**Database** (1 file) — Database documentation  
+**Concepts** (1 file) — Conceptual guides  
+**Charts** (1 file) — Data visualization  
+**Actions** (1 file) — Action implementation  
+**Integration** (1 file) — Integration patterns  
+=======
 **Architecture** (3 files): System design documentation  
 **Tecnico** (2 files): Technical specifications  
 **Guides** (2 files): User and developer guides  
@@ -225,6 +266,7 @@ Testing strategies and guidelines:
 **Charts** (1 file): Data visualization  
 **Actions** (1 file): Action implementation  
 **Integration** (1 file): Integration patterns  
+>>>>>>> .merge_file_rmQPHs
 
 ---
 
@@ -247,12 +289,20 @@ Testing strategies and guidelines:
 | 2026-07-28 | [testing-guidelines.md](testing-guidelines.md) | root |
 | 2026-07-28 | [test444.md](test444.md) | root |
 | 2026-07-28 | [test2222.md](test2222.md) | root |
+<<<<<<< .merge_file_H1HYQt
+| 2026-07-28 | [test2024-12-04.md](test2024-12-04.md) | root |
+=======
 | 2026-07-28 | [test2024-12-04.md](raw/root-import/test2024-12-04.md) | root |
+>>>>>>> .merge_file_rmQPHs
 | 2026-07-28 | [test04.md](test04.md) | root |
 | 2026-07-28 | [test03.md](test03.md) | root |
 | 2026-07-28 | [test02.md](test02.md) | root |
 | 2026-07-28 | [test.md](test.md) | root |
+<<<<<<< .merge_file_H1HYQt
+| 2026-07-28 | [test-14-02-2024.md](test-14-02-2024.md) | root |
+=======
 | 2026-07-28 | [test-14-02-2024.md](raw/root-import/test-14-02-2024.md) | root |
+>>>>>>> .merge_file_rmQPHs
 | 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
 
 ---
@@ -275,7 +325,11 @@ Testing strategies and guidelines:
 2. **Test Files**: Multiple test*.md files in root suggest work-in-progress documentation (consider archiving)
 3. **Deduplication**: Similar files in root-md-files/, archived/, and main locations should be consolidated
 4. **Wiki Structure**: Well-organized wiki with concepts and troubleshooting but could expand how-to guides
+<<<<<<< .merge_file_H1HYQt
+5. **Use Cases**: 117 use case files are a valuable asset — ensure they remain indexed and discoverable
+=======
 5. **Use Cases**: 117 use case files are a valuable asset: ensure they remain indexed and discoverable
+>>>>>>> .merge_file_rmQPHs
 
 ## Recommendations
 

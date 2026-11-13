@@ -7,7 +7,7 @@ namespace Modules\Activity\Tests\Fixtures;
 use Modules\Activity\Models\BaseModel;
 
 /**
- * Test model for BaseModelTest.
+ * Test model per BaseModelTest.
  *
  * Classe concreta per testing senza usare classi anonime,
  * garantendo piena conformità PSR-4.
@@ -18,9 +18,6 @@ final class TestBaseModel extends BaseModel
 {
     /** @var string */
     protected $table = 'test_models';
-
-    /** @var string */
-    protected $connection = 'mysql';
 
     /** @var list<string> */
     protected $fillable = ['name'];

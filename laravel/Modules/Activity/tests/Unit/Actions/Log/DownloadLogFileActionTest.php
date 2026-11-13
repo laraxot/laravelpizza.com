@@ -1,10 +1,19 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_tRmDY5
+
+use Illuminate\Support\Facades\File;
+use Modules\Activity\Actions\Log\DownloadLogFileAction;
+use Modules\Activity\Exceptions\InvalidLogFileException;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Tests\TestCase;
+=======
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_ywWBJD
 
 uses(TestCase::class);
 
@@ -30,17 +39,29 @@ afterEach(function (): void {
 });
 
 it('returns a streamed download of the requested log file', function (): void {
+<<<<<<< .merge_file_tRmDY5
+    $response = (new DownloadLogFileAction())->execute('reports/252/daily.log');
+
+    expect($response->headers->get('Content-Disposition'))->toContain('reports_252_daily.log');
+    expect($response->headers->get('Content-Type'))->toContain('text/plain');
+    /** @var \Symfony\Component\HttpFoundation\File\File $file */
+=======
     $response = (new DownloadLogFileAction)->execute('reports/252/daily.log');
 
     expect($response->headers->get('Content-Disposition'))->toContain('reports_252_daily.log');
     expect($response->headers->get('Content-Type'))->toContain('text/plain');
     /** @var Symfony\Component\HttpFoundation\File\File $file */
+>>>>>>> .merge_file_ywWBJD
     $file = $response->getFile();
     expect(File::get($file->getPathname()))->toBe("contenuto del report\n");
 });
 
 it('refuses files outside the log directory, missing files and non-log files', function (): void {
+<<<<<<< .merge_file_tRmDY5
+    $action = new DownloadLogFileAction();
+=======
     $action = new DownloadLogFileAction;
+>>>>>>> .merge_file_ywWBJD
 
     foreach (['../framework/testing/segreto-download.log', 'non-esiste.log', '', 'laravel.log/../../.env', '/etc/passwd'] as $file) {
         expect(fn () => $action->execute($file))->toThrow(InvalidLogFileException::class);

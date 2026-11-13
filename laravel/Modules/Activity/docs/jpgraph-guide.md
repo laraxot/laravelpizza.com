@@ -8,8 +8,11 @@ tags: [migrato-da-txt, activity]
 converted_from: jpgraph-guide.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_1QonET
+=======
 status: draft
 qmd: "jpgraph 4.4.2 guide activity"
+>>>>>>> .merge_file_gk5q3w
 ---
 
 # JpGraph 4.4.2 Guide

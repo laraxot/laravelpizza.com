@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Datas;
 
+<<<<<<< .merge_file_OCi5yr
+=======
 use Modules\Activity\Enums\LogLevelEnum;
+>>>>>>> .merge_file_yJRfdq
 use Spatie\LaravelData\Data;
 
 /**
@@ -17,7 +20,11 @@ final class LogViewerStateData extends Data
 {
     /**
      * @param  list<LogFileData>  $files
+<<<<<<< .merge_file_OCi5yr
+     * @param  list<string>  $levels
+=======
      * @param  list<LogLevelEnum>  $levels
+>>>>>>> .merge_file_yJRfdq
      * @param  list<int>  $windows  finestre di lettura selezionabili, in KB
      * @param  list<LogEntryData>  $entries
      */

@@ -1,4 +1,12 @@
 ---
+<<<<<<< .merge_file_QXCVS7
+title: Root .md Consolidation Analysis — Activity Module
+date: 2026-08-18
+status: analysis
+---
+
+# Consolidation Analysis — Activity Module
+=======
 title: Root .md Consolidation Analysis: Activity Module
 date: 2026-08-18
 type: note
@@ -10,6 +18,7 @@ superseded_by: consolidation-analysis.md
 ---
 
 # Consolidation Analysis: Activity Module
+>>>>>>> .merge_file_Y381wO
 
 **Module:** Activity  
 **Scope:** Root .md files owned by Activity, relocation plan  
@@ -33,7 +42,11 @@ superseded_by: consolidation-analysis.md
 - **Isolation:** Activity owns its migration policy; policy should live in Activity module.
 
 **When to move:**
+<<<<<<< .merge_file_QXCVS7
+- **NOW** — No delays. This is a safety-critical document.
+=======
 - **NOW**: No delays. This is a safety-critical document.
+>>>>>>> .merge_file_Y381wO
 
 ## Post-Move Structure
 
@@ -46,7 +59,11 @@ laravel/Modules/Activity/
 ├── app/
 ├── config/
 ├── database/
+<<<<<<< .merge_file_QXCVS7
+│   ├── migrations/ (sacred — no refresh)
+=======
 │   ├── migrations/ (sacred: no refresh)
+>>>>>>> .merge_file_Y381wO
 │   ├── factories/
 │   └── seeders/
 └── tests/
@@ -61,8 +78,13 @@ laravel/Modules/Activity/
 
 ## Related Modules
 
+<<<<<<< .merge_file_QXCVS7
+- **Progressioni** — depends on Activity; same constraint applies to Progressioni migrations.
+- **Tenant** — shared tenancy; migration policy affects all modules.
+=======
 - **Progressioni**: depends on Activity; same constraint applies to Progressioni migrations.
 - **Tenant**: shared tenancy; migration policy affects all modules.
+>>>>>>> .merge_file_Y381wO
 
 ## Action Items
 

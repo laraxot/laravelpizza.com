@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_bLqViI
+=======
 ---
 title: "Collisioni di nome per sola differenza di maiuscole"
 type: note
@@ -6,6 +8,7 @@ updated: 2026-10-07
 tags: [docs, activity]
 qmd: "collisioni di nome per sola differenza di maiuscole activity"
 ---
+>>>>>>> .merge_file_ez9Y3j
 # Collisioni di nome per sola differenza di maiuscole
 
 **Misurato**: 2026-08-31

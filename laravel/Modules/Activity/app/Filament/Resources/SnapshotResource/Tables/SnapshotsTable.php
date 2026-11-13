@@ -6,10 +6,14 @@ namespace Modules\Activity\Filament\Resources\SnapshotResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< .merge_file_5qdCEs
+use Modules\Activity\Models\Snapshot;
+=======
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Activity\Models\Snapshot;
 use Modules\UI\Filament\Tables\Columns\IDColumn;
+>>>>>>> .merge_file_BzTneY
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 use function Safe\json_encode;
@@ -36,6 +40,9 @@ class SnapshotsTable extends XotBaseResourceTable
                 ->toggleable(isToggledHiddenByDefault: true),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
+<<<<<<< .merge_file_5qdCEs
+            'id' => TextColumn::make('id')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+=======
             'id' => IDColumn::make('id')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
     }
@@ -56,6 +63,7 @@ class SnapshotsTable extends XotBaseResourceTable
                     ->pluck('aggregate_uuid', 'aggregate_uuid')
                     ->all())
                 ->getOptionLabelUsing(fn (string $value): string => $value),
+>>>>>>> .merge_file_BzTneY
         ];
     }
 }
