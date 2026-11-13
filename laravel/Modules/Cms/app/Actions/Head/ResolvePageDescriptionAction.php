@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions\Head;
 
+use Illuminate\Support\Str;
 use Modules\Cms\Models\Page;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -63,7 +64,7 @@ final class ResolvePageDescriptionAction
             return null;
         }
 
-        $text = trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags($value), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+        $text = Str::of(html_entity_decode(strip_tags($value), ENT_QUOTES | ENT_HTML5, 'UTF-8'))->replaceMatches('/\s+/u', ' ')->trim()->toString();
 
         // Una chiave di traduzione grezza («ns::file.chiave») non è testo da pubblicare.
         return mb_strlen($text) >= self::MINIMUM && ! str_contains($text, '::') ? $text : null;

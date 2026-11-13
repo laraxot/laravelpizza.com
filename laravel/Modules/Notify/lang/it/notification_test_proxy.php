@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_KaGEz2
 return [
     'sections' => [
         'empty' => ['label' => '', 'heading' => '']],
@@ -14,3 +15,6 @@ return [
         'read_at' => ['label' => 'read_at'],
         'created_at' => ['label' => 'created_at'],
         'updated_at' => ['label' => 'updated_at']]];
+=======
+return [];
+>>>>>>> .merge_file_B0IMEP

@@ -1,3 +1,12 @@
+---
+title: "Filosofia dei Comandi Console - Modulo User"
+type: note
+updated: 2026-10-27
+tags: [docs, user, console_commands]
+qmd: "filosofia dei comandi console - modulo user user"
+status: superseded
+superseded_by: ../../console-commands/console-commands-philosophy.md
+---
 # Filosofia dei Comandi Console - Modulo User
 
 ## Principi Fondamentali

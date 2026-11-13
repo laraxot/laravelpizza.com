@@ -18,10 +18,12 @@ describe('User Business Logic', function () {
     test('user has authentication capabilities', function () {
         $user = new User;
         $user->email = 'test@example.com';
-        $user->password = 'hashed-password';
+        $user->password = 'plain-password';
 
         Assert::assertSame('test@example.com', $user->email);
-        Assert::assertSame('hashed-password', $user->password);
+        // Il mutator di BaseUser hasha la password: mai in chiaro sul modello.
+        Assert::assertNotSame('plain-password', $user->password);
+        Assert::assertTrue(\Illuminate\Support\Facades\Hash::check('plain-password', (string) $user->password));
     });
 
     test('user can have name components', function () {

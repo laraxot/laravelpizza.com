@@ -2,99 +2,33 @@
 
 declare(strict_types=1);
 
+// Etichette della tabella utenti (UsersTable / BaseUsersTable).
 return [
     'fields' => [
-        'id' => [
-            'label' => 'id',
-        ],
-        'name' => [
-            'label' => 'name',
-        ],
-        'first_name' => [
-            'label' => 'first_name',
-        ],
-        'last_name' => [
-            'label' => 'last_name',
-        ],
-        'email' => [
-            'label' => 'email',
-        ],
-        'email_verified_at' => [
-            'label' => 'email_verified_at',
-        ],
-        'is_active' => [
-            'label' => 'is_active',
-        ],
-        'is_otp' => [
-            'label' => 'is_otp',
-        ],
-        'lang' => [
-            'label' => 'lang',
-        ],
-        'current_team_id' => [
-            'label' => 'current_team_id',
-        ],
-        'type' => [
-            'label' => 'type',
-        ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-        'updated_at' => [
-            'label' => 'updated_at',
-        ],
-        'state' => [
-            'label' => 'state',
-        ],
-        'password_expires_at' => [
-            'label' => 'password_expires_at',
-        ],
+        'name' => ['label' => 'Nome e cognome'],
+        'email' => ['label' => 'Email'],
+        'first_name' => ['label' => 'Nome'],
+        'last_name' => ['label' => 'Cognome'],
+        'is_active' => ['label' => 'Attivo'],
+        'email_verified_at' => ['label' => 'Email verificata il'],
+        'is_otp' => ['label' => 'Password temporanea'],
+        'lang' => ['label' => 'Lingua'],
+        'current_team_id' => ['label' => 'Team corrente'],
+        'type' => ['label' => 'Tipo'],
+        'state' => ['label' => 'Stato'],
+        'password_expires_at' => ['label' => 'Scadenza password'],
+        'id' => ['label' => 'ID'],
+        'created_at' => ['label' => 'Creato il'],
+        'updated_at' => ['label' => 'Aggiornato il'],
     ],
     'actions' => [
-        'create' => [
-            'label' => 'create',
-            'icon' => 'create',
-            'tooltip' => 'create',
-        ],
-        'layout' => [
-            'label' => 'layout',
-            'icon' => 'layout',
-            'tooltip' => 'layout',
-        ],
-        'delete' => [
-            'label' => 'delete',
-            'icon' => 'delete',
-            'tooltip' => 'delete',
-        ],
-        'changePassword' => [
-            'label' => 'changePassword',
-            'icon' => 'changePassword',
-            'tooltip' => 'changePassword',
-        ],
-        'deactivate' => [
-            'label' => 'deactivate',
-            'icon' => 'deactivate',
-            'tooltip' => 'deactivate',
-        ],
-        'edit' => [
-            'tooltip' => 'edit',
-            'icon' => 'edit',
-            'label' => 'edit',
-        ],
-        'view' => [
-            'tooltip' => 'view',
-            'icon' => 'view',
-            'label' => 'view',
-        ],
-        'verify_email' => [
-            'tooltip' => 'verify_email',
-            'icon' => 'verify_email',
-            'label' => 'verify_email',
-        ],
-        'export' => [
-            'label' => 'export',
-            'icon' => 'export',
-            'tooltip' => 'export',
-        ],
+        'create' => ['label' => 'Nuovo utente'],
+        'delete' => ['label' => 'Elimina'],
+        'change_password' => ['label' => 'Cambia password', 'tooltip' => 'Imposta una nuova password'],
+        'deactivate' => ['label' => 'Disattiva', 'tooltip' => 'Toglie l\'accesso: l\'utente viene eliminato (ripristinabile dal cestino)'],
+        'edit' => ['label' => 'Modifica'],
+        'view' => ['label' => 'Apri'],
+        'verify_email' => ['label' => 'Segna email verificata'],
+        'export' => ['label' => 'Esporta'],
     ],
 ];

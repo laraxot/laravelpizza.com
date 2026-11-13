@@ -82,7 +82,8 @@ describe('TeamChangeWidget mount + render', function (): void {
         $widget = $component->instance();
         Assert::assertInstanceOf(TeamChangeWidget::class, $widget);
         $rendered = $widget->render();
-        Assert::assertSame('ui::livewire.empty', $rendered->getData()['view'] ?? null);
+        // render() sceglie la vista vuota condivisa: e' il nome della View, non un dato passato alla vista.
+        Assert::assertSame('ui::livewire.empty', $rendered->name());
         Assert::assertSame([], $component->get('teams'));
     });
 });
@@ -112,7 +113,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         $team = teamChangeWidgetCreateTeam($owner);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget;
+        $widget = new TeamChangeWidget();
         $widget->mount();
 
         $response = $widget->switchTeam($team->id);
@@ -129,7 +130,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         $otherOwnerTeam = teamChangeWidgetCreateTeam($stranger);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget;
+        $widget = new TeamChangeWidget();
         $widget->mount();
 
         try {
@@ -150,7 +151,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         teamChangeWidgetCreateTeam($owner);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget;
+        $widget = new TeamChangeWidget();
         $widget->mount();
 
         try {

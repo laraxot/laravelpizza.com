@@ -8,7 +8,7 @@ use Modules\Seo\Filament\Pages\SettingPage;
 use Modules\Seo\Http\Middleware\RedirectToCanonicalPath;
 use Modules\Seo\Tests\Support\FakeTenantSeoConfig;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\TestCase;
+use Modules\Seo\Tests\TestCase;
 use Webmozart\Assert\Assert;
 
 uses(TestCase::class);

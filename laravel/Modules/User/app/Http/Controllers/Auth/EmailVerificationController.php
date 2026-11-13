@@ -1,61 +1,54 @@
 <?php
 
 declare(strict_types=1);
-/**
- * Handles the email verification process for authenticated users.
- *
- * This controller method is responsible for verifying a user's email address
- * when they click on a verification link. It checks that the user is
- * authenticated, that the provided ID and hash match the user's information,
- * and that the email has not already been verified. If the verification is
- * successful, it marks the email as verified and dispatches a Verified event.
- *
- * @param  string  $id  the ID of the user to be verified
- * @param  string  $hash  the hash of the user's email address
- * @return RedirectResponse a redirect response to the home page
- *
- * @throws AuthorizationException if the verification fails
- */
 
 namespace Modules\User\Http\Controllers\Auth;
 
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Modules\User\Http\Controllers\Controller;
 
+/**
+ * Rotta `verification.verify` (PRD-02): segna l'indirizzo come verificato dopo i controlli su utente, id e hash.
+ *
+ * `id` e `hash` si leggono per nome dalla rotta: il dispatcher passa i parametri scalari per posizione, e un prefisso
+ * `{lang}` li sposterebbe (`$id` riceverebbe la lingua).
+ */
 class EmailVerificationController extends Controller
 {
-    public function __invoke(string $id, string $hash): RedirectResponse
+    public function __invoke(Request $request): RedirectResponse
     {
-        $user = Auth::user();
-        if ($user === null) {
-            throw new AuthorizationException;
-        }
-
-        if (! hash_equals($id, (string) Auth::id())) {
-            throw new AuthorizationException;
-        }
-
-        if (! hash_equals($hash, sha1($user->getEmailForVerification()))) {
-            throw new AuthorizationException;
-        }
-
-        if ($user->hasVerifiedEmail()) {
-            return redirect(route('home'));
-        }
-
-        $user->markEmailAsVerified();
-
-        // Verificare che l'utente implementi l'interfaccia MustVerifyEmail
+        $user = $request->user();
         if (! $user instanceof MustVerifyEmail) {
-            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia MustVerifyEmail');
+            throw new AuthorizationException;
         }
 
-        event(new Verified($user));
+        $id = $request->route('id');
+        $hash = $request->route('hash');
+        if (! \is_string($id) || ! \is_string($hash)) {
+            throw new AuthorizationException;
+        }
 
-        return redirect(route('home'));
+        $userId = $user->getAuthIdentifier();
+        if (! \is_scalar($userId) || ! hash_equals((string) $userId, $id)) {
+            throw new AuthorizationException;
+        }
+
+        if (! hash_equals(sha1($user->getEmailForVerification()), $hash)) {
+            throw new AuthorizationException;
+        }
+
+        if (! $user->hasVerifiedEmail()) {
+            $user->markEmailAsVerified();
+            event(new Verified($user));
+        }
+
+        // Chi conferma l'email di solito vuole segnalare: senza una pagina "intended" ancora valida si va al modulo,
+        // non alla home (l'URL intended della registrazione e' gia' stato consumato).
+        return redirect()->intended(LaravelLocalization::localizeURL('/tickets/create'));
     }
 }

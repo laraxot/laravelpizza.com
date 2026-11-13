@@ -40,6 +40,15 @@ test('a language with only a hero block is not written: it would be a thin page 
     Assert::assertSame([], $action->fromRaw($title, ['it' => [['type' => 'hero']], 'en' => [['type' => 'hero'], ['type' => 'hero']]]));
 });
 
+test('a page with no blocks in any language is drawn by code and exists in every titled language', function (): void {
+    // es. tickets/track: content_blocks {"it":[],"en":[]} e il tema include la pagina tradotta.
+    $action = new ResolveWrittenLocalesAction;
+    $title = ['it' => 'Traccia', 'en' => 'Track', 'de' => ''];
+
+    Assert::assertSame(['it', 'en'], $action->fromRaw($title, ['it' => [], 'en' => [], 'de' => []]));
+    Assert::assertSame(['it'], $action->fromRaw($title, ['it' => [['type' => 'content']], 'en' => []]));
+});
+
 test('a block without a readable type counts as body content, so unknown block shapes never hide a page', function (): void {
     $action = new ResolveWrittenLocalesAction;
     $title = '{"it":"Servizi","en":"Services"}';

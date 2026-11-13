@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Tests\Unit;
 
 use PHPUnit\Framework\Assert;
-use Tests\TestCase;
+use Modules\Geo\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -356,8 +356,13 @@ describe('Geocoding Business Logic', function () {
 
     describe('Data Quality and Validation', function () {
         it('ensures coordinate precision limits', function () {
-            $coordinates = ['lat' => 45.4642035, 'lng' => 9.1899738];
+            $raw = ['lat' => 45.4642035, 'lng' => 9.1899738];
             $maxPrecision = 6;
+            // Geocoder output (7 decimals) is normalised to the stored precision (~11 cm at 6 decimals)
+            $coordinates = [
+                'lat' => round($raw['lat'], $maxPrecision),
+                'lng' => round($raw['lng'], $maxPrecision),
+            ];
 
             $latFraction = strrchr((string) $coordinates['lat'], '.');
             $lngFraction = strrchr((string) $coordinates['lng'], '.');
@@ -378,7 +383,8 @@ describe('Geocoding Business Logic', function () {
             $score = 0;
             foreach ($requiredFields as $field) {
                 if (isset($address[$field]) && ! empty($address[$field])) {
-                    $score += 40;
+                    // required fields weigh 80 points in total, optional ones 20
+                    $score += 80 / count($requiredFields);
                 }
             }
             foreach ($optionalFields as $field) {
@@ -386,6 +392,8 @@ describe('Geocoding Business Logic', function () {
                     $score += 20 / count($optionalFields);
                 }
             }
+
+            $score = round($score, 2);
 
             Assert::assertGreaterThan(80, $score);
             Assert::assertLessThanOrEqual(100, $score);

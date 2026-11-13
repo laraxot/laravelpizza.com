@@ -37,20 +37,20 @@ class UserOverview extends XotBaseStatsOverviewWidget
             ->count();
 
         return [
-            Stat::make(trans('user::user.widgets.overview.total.label'), (string) $total)
-                ->description(trans('user::user.widgets.overview.total.description'))
+            Stat::make(trans('user::user_overview_widget.total.label'), (string) $total)
+                ->description(trans('user::user_overview_widget.total.description'))
                 ->icon('heroicon-o-users')
                 ->color('primary'),
-            Stat::make(trans('user::user.widgets.overview.active.label'), (string) $active)
-                ->description(trans('user::user.widgets.overview.active.description'))
+            Stat::make(trans('user::user_overview_widget.active.label'), (string) $active)
+                ->description(trans('user::user_overview_widget.active.description'))
                 ->icon('heroicon-o-check-circle')
                 ->color('success'),
-            Stat::make(trans('user::user.widgets.overview.verified.label'), $verifiedPercent.'%')
-                ->description(trans('user::user.widgets.overview.verified.description'))
+            Stat::make(trans('user::user_overview_widget.verified.label'), $verifiedPercent.'%')
+                ->description(trans('user::user_overview_widget.verified.description'))
                 ->icon('heroicon-o-shield-check')
                 ->color($verifiedPercent >= 80 ? 'success' : 'warning'),
-            Stat::make(trans('user::user.widgets.overview.recent_logins.label'), (string) $recentLogins)
-                ->description(trans('user::user.widgets.overview.recent_logins.description'))
+            Stat::make(trans('user::user_overview_widget.recent_logins.label'), (string) $recentLogins)
+                ->description(trans('user::user_overview_widget.recent_logins.description'))
                 ->icon('heroicon-o-arrow-right-on-rectangle')
                 ->color('info'),
         ];

@@ -6,7 +6,7 @@ namespace Modules\User\Tests\Unit\Models;
 
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(\Modules\User\Tests\TestCase::class);
 
@@ -25,7 +25,7 @@ class TeamTest extends TestCase
             'id' => $team->id,
             'user_id' => $user->id,
             'name' => 'Test Team',
-        ]);
+        ], 'user');
     }
 
     public function test_can_create_team_with_all_fields(): void
@@ -51,7 +51,7 @@ class TeamTest extends TestCase
             'code' => 'TEAM001',
             'uuid' => '550e8400-e29b-41d4-a716-446655440000',
             'owner_id' => $user->id,
-        ]);
+        ], 'user');
     }
 
     public function test_team_delete_is_hard_delete(): void
@@ -63,7 +63,7 @@ class TeamTest extends TestCase
 
         $team->delete();
 
-        $this->assertDatabaseMissing('teams', ['id' => $teamId]);
+        $this->assertDatabaseMissing('teams', ['id' => $teamId], 'user');
         static::assertNull(Team::find($teamId));
     }
 
@@ -144,7 +144,7 @@ class TeamTest extends TestCase
         $personalTeams = Team::where('personal_team', 1)->get();
 
         static::assertCount(1, $personalTeams);
-        static::assertSame(1, $personalTeams->firstOrFail()->personal_team);
+        static::assertTrue($personalTeams->firstOrFail()->personal_team);
     }
 
     public function test_can_find_teams_by_user_id(): void
@@ -188,7 +188,7 @@ class TeamTest extends TestCase
         $this->assertDatabaseHas('teams', [
             'id' => $team->id,
             'name' => 'New Name',
-        ]);
+        ], 'user');
     }
 
     public function test_can_handle_null_values(): void
@@ -207,7 +207,7 @@ class TeamTest extends TestCase
             'code' => null,
             'uuid' => null,
             'owner_id' => null,
-        ]);
+        ], 'user');
     }
 
     public function test_can_find_teams_by_multiple_criteria(): void
@@ -230,6 +230,6 @@ class TeamTest extends TestCase
         static::assertCount(1, $teams);
         $team = $teams->firstOrFail();
         static::assertSame('Development Team', $team->name);
-        static::assertSame(0, $team->personal_team);
+        static::assertFalse($team->personal_team);
     }
 }

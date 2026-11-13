@@ -147,6 +147,8 @@ class RegisterWidget extends XotBaseWidget
         ];
 
         $validatedData = app(ValidateUserDataAction::class)->execute($formData);
+        // `name` e' il nome mostrato in testata, nei commenti e nelle email: senza, la testata mostrava l'indirizzo email.
+        $validatedData['name'] = trim($this->first_name.' '.$this->last_name);
         $this->logRegistrationAttempt($formData);
 
         $user = DB::connection('user')->transaction(function () use ($validatedData) {

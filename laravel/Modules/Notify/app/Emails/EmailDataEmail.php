@@ -33,7 +33,7 @@ class EmailDataEmail extends Mailable
             $this->email_data->from = $from;
         }
         if ($this->email_data->from_email === null) {
-            Assert::string($from_email = config('mail.from.address', 'default@example.com'));
+            Assert::string($from_email = config('mail.from.address', 'noreply@fixcity.eu'));
             $this->email_data->from_email = $from_email;
         }
 

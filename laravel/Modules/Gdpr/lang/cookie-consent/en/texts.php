@@ -7,7 +7,7 @@ return [
     'alert_title_info' => 'Cookies',
     'alert_text_info' => 'This site only uses technical cookies, which it needs to work: they do not require your consent. We do not use profiling or analytics cookies.',
     'alert_title_consent' => 'This site uses cookies',
-    'alert_text_consent' => 'We use technical cookies, which are needed for the site to work, and, only if you allow it, analytics and marketing cookies. If you close the banner without choosing, only technical cookies stay active.',
+    'alert_text_consent' => 'We use technical cookies, which are needed for the site to work, and, only if you allow it, analytics and marketing cookies. If you close the banner without choosing, only technical cookies stay active. You can change your choice with the "Manage cookies" link at the bottom of the page.',
     'alert_accept' => 'Accept all',
     'alert_reject' => 'Reject all',
     'alert_settings' => 'Customise',

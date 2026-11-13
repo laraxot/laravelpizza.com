@@ -49,55 +49,28 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        'key' => [
-            'label' => 'key',
-            'placeholder' => 'key',
-            'helper_text' => 'key',
-            'description' => 'key',
-        ],
-        'owner' => [
-            'label' => 'owner',
-            'placeholder' => 'owner',
-            'helper_text' => 'owner',
-            'description' => 'owner',
-        ],
-        'expiration' => [
-            'label' => 'expiration',
-            'placeholder' => 'expiration',
-            'helper_text' => 'expiration',
-            'description' => 'expiration',
-        ],
     ],
     'actions' => [
         'create' => [
             'label' => 'Crea Cache Lock',
             'icon' => 'create',
-            'tooltip' => 'create',
         ],
         'edit' => [
             'label' => 'Modifica Cache Lock',
             'icon' => 'edit',
-            'tooltip' => 'edit',
         ],
         'delete' => [
             'label' => 'Elimina Cache Lock',
             'icon' => 'delete',
-            'tooltip' => 'delete',
         ],
         'createAnother' => [
-            'label' => 'createAnother',
             'icon' => 'createAnother',
-            'tooltip' => 'createAnother',
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
         'view' => [
-            'label' => 'view',
             'icon' => 'view',
-            'tooltip' => 'view',
         ],
     ],
 ];

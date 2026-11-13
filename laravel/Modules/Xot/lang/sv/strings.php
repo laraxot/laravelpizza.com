@@ -107,8 +107,4 @@ Denna boilerplate kommer med fullt funktionerande <em>Access Control Library</em
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

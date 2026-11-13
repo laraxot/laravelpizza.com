@@ -6,8 +6,8 @@ namespace Modules\Geo\Filament\Actions;
 
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Collection;
-use Modules\Geo\Actions\UpdateCoordinatesAction;
-use Modules\Geo\Models\Place;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Geo\Actions\UpdateCoordinatesFromAddressAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
 
@@ -45,7 +45,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             ->icon('heroicon-o-map-pin')
             ->deselectRecordsAfterCompletion()
             ->action(function (Collection $records): void {
-                /* @var Collection<int, Place> $records */
+                /** @var Collection<int, Model> $records */
                 $this->processRecords($records);
             });
     }
@@ -119,19 +119,35 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
     /**
      * Elabora i record selezionati aggiornando le coordinate.
      *
+<<<<<<< .merge_file_yfWCjX
      * @param  Collection<int, Place>  $records
+=======
+     * @param  Collection<int, Model>  $records
+>>>>>>> .merge_file_53FUGz
      */
     private function processRecords(Collection $records): void
     {
         /** @var \Illuminate\Support\Collection<int, string> $errors */
         $errors = collect();
         $successCount = 0;
-        $action = app(UpdateCoordinatesAction::class);
+        $action = app(UpdateCoordinatesFromAddressAction::class);
 
         foreach ($records as $record) {
             try {
+<<<<<<< .merge_file_yfWCjX
                 $action->execute($record);
                 $successCount++;
+=======
+                if ($action->execute($record)) {
+                    $successCount++;
+                } else {
+                    $errors->push(sprintf(
+                        'Record #%s: %s',
+                        SafeStringCastAction::cast($record->getKey()),
+                        $action->getErrors()->implode(', '),
+                    ));
+                }
+>>>>>>> .merge_file_53FUGz
             } catch (\Throwable $e) {
                 $errors->push(sprintf('Place #%s: %s', SafeStringCastAction::cast($record->getKey()), $e->getMessage()));
             }

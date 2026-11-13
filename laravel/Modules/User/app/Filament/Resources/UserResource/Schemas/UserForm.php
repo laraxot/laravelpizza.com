@@ -7,6 +7,7 @@ namespace Modules\User\Filament\Resources\UserResource\Schemas;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component as SchemaComponent;
@@ -14,9 +15,11 @@ use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
+use Illuminate\Validation\Rules\Password;
 use Livewire\Component as LivewireComponent;
 use Modules\User\Filament\Forms\Components\UserSection;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
+use Modules\User\Models\User;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class UserForm extends XotBaseResourceForm
@@ -90,12 +93,23 @@ class UserForm extends XotBaseResourceForm
             'email' => TextInput::make('email')
                 ->email()
                 ->required()
-                ->autofocus(),
+                // Niente autofocus (DCP-290, WCAG 3.2.1/2.4.3): spostare il focus al caricamento disorienta chi usa un
+                // lettore di schermo; il focus va al primo campo con errore dopo un invio fallito (script del tema).
+                ->autocomplete('username')
+                ->helperText(null)
+                ->placeholder(null)
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
             'password' => TextInput::make('password')
                 ->password()
                 ->revealable()
-                ->required(),
-            'remember' => Checkbox::make('remember'),
+                ->required()
+                ->helperText(null) // user_form e' condiviso col register: regola "min 12 caratteri" e placeholder "password sicura" non vanno al login
+                ->placeholder(null)
+                ->autocomplete('current-password')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
+            'remember' => Checkbox::make('remember')
+                ->helperText(null)
+                ->extraInputAttributes(['class' => 'fo-auth-checkbox']),
         ];
     }
 
@@ -112,19 +126,22 @@ class UserForm extends XotBaseResourceForm
                 ->string()
                 ->minLength(2)
                 ->maxLength(255)
-                ->autocomplete('given-name'),
+                ->autocomplete('given-name')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
             'last_name' => TextInput::make('last_name')
                 ->required()
                 ->string()
                 ->minLength(2)
                 ->maxLength(255)
-                ->autocomplete('family-name'),
+                ->autocomplete('family-name')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
             'email' => TextInput::make('email')
                 ->required()
                 ->email()
                 ->maxLength(255)
-                ->unique('users', 'email')
-                ->autocomplete('email'),
+                ->unique(User::class, 'email')
+                ->autocomplete('email')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
             'password' => TextInput::make('password')
                 ->password()
                 ->revealable()
@@ -144,9 +161,16 @@ class UserForm extends XotBaseResourceForm
                 ->validationMessages([
                     'password.regex' => __('user::auth.register.sidebar.help_password.text'),
                 ])
-                ->dehydrateStateUsing(static fn (string $state): string => Hash::make($state))
                 ->autocomplete('new-password')
-                ->confirmed(),
+                ->confirmed()
+                ->dehydrateStateUsing(static function (?string $state): ?string {
+                    if ($state === null || $state === '') {
+                        return null;
+                    }
+
+                    return Hash::make($state);
+                })
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->revealable()
@@ -156,7 +180,8 @@ class UserForm extends XotBaseResourceForm
                 ->maxLength(255)
                 ->autocomplete('new-password')
                 ->dehydrated(false)
-                ->same('password'),
+                ->same('password')
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
         ];
     }
 
@@ -171,32 +196,100 @@ class UserForm extends XotBaseResourceForm
             'email' => TextInput::make('email')
                 ->email()
                 ->required()
-                ->maxLength(255),
+                ->maxLength(255)
+                ->autocomplete('email')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
+        ];
+    }
+
+    /**
+     * FO auth password-reset (send link) — SSoT campi (PasswordResetWidget delega qui).
+     *
+     * @return array<string, SchemaComponent>
+     */
+    public static function getPasswordResetFormSchema(): array
+    {
+        return [
+            'email' => TextInput::make('email')
+                ->email()
+                ->required()
+                ->autocomplete('email')
+                ->maxLength(255)
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--centered']),
         ];
     }
 
     /**
      * FO auth reset-password (token) — SSoT campi (ResetPasswordWidget delega qui).
      *
+     * `password` resta in chiaro: il callback di `Password::reset()` la hasha una volta.
+     * Con `dehydrateStateUsing(Hash::make)` qui si salvava l'hash di un hash (login impossibile).
+     *
      * @return array<string, SchemaComponent>
      */
     public static function getResetPasswordFormSchema(): array
     {
         return [
+            'token' => Hidden::make('token'),
             'email' => TextInput::make('email')
                 ->email()
                 ->required()
-                ->autocomplete('email'),
+                ->autocomplete('email')
+                ->extraInputAttributes(['class' => 'fo-auth-input']),
+            // Password in chiaro nello stato: la cifra una volta sola `ResetPasswordWidget::resetPassword()` (DCP-290).
+            // Un secondo hash qui salvava l'hash dell'hash e il login con la nuova password falliva.
+            'password' => TextInput::make('password')
+                ->password()
+                ->revealable()
+                ->required()
+                ->minLength(8)
+                // Stessa policy della registrazione (`Password::defaults()` = `PasswordData`): con il solo minLength(8) `12345678` passava.
+                ->rule(Password::default())
+                ->same('password_confirmation')
+                ->autocomplete('new-password')
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
+            'password_confirmation' => TextInput::make('password_confirmation')
+                ->password()
+                ->revealable()
+                ->required()
+                ->autocomplete('new-password')
+                ->dehydrated(false)
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
+        ];
+    }
+
+    /**
+     * FO auth password-reset-confirm — SSoT campi (PasswordResetConfirmWidget delega qui).
+     *
+     * Come il reset: `password` in chiaro, il callback di `Password::broker()->reset()` la hasha una volta.
+     *
+     * @return array<string, SchemaComponent>
+     */
+    public static function getPasswordResetConfirmFormSchema(): array
+    {
+        return [
+            'email' => TextInput::make('email')
+                ->email()
+                ->required()
+                ->autocomplete('email')
+                ->maxLength(255)
+                ->suffixIcon('heroicon-o-envelope')
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--centered']),
             'password' => TextInput::make('password')
                 ->password()
                 ->required()
+                ->revealable()
                 ->minLength(8)
-                ->same('password_confirmation')
-                ->autocomplete('new-password'),
+                ->rule(Password::default())
+                ->suffixIcon('heroicon-o-key')
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->required()
-                ->autocomplete('new-password'),
+                ->same('password')
+                ->suffixIcon('heroicon-o-key')
+                ->dehydrated(false)
+                ->extraInputAttributes(['class' => 'fo-auth-input fo-auth-input--password']),
         ];
     }
 }

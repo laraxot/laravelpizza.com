@@ -42,3 +42,7 @@ così da **non lasciare mai il registro scritto senza il conferimento, o il cont
   chiamata sarebbe saltata in silenzio. Ora `Assert::assertInstanceOf(TenantServiceProvider::class, $provider)` poi `$provider->registerDB()`:
   asserzione sull'alias invariata, nessuna Reflection (`registerDB()` e' pubblico; `aliasModuleConnectionsToDefault()` resta privato, esercitato da `registerDB()`).
   Verifica: PHPStan 0 errori sul file; Pest `ModuleConnectionAliasTest` 2 passed (4 assertions).
+- 2026-11-10 — Claude: l'alias ora vale solo finche' la config del modulo coincide con quella della default (a parte `name`). Prima un test che
+  ridefiniva a runtime `database.connections.waste` su un file sqlite proprio (Waste `ConcurrentRegisterNumberingTest`) riceveva comunque la
+  connessione default e falliva ("Registro #1 inesistente"). Confronto tipizzato (`instanceof Connection`, `is_array`). Test riscritto: config
+  uguale → stessa istanza; config diversa → istanza separata. Verifica: PHPStan 0 sul provider; Pest alias 2 passed; Waste concorrenza 1 passed.

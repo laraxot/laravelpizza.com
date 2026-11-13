@@ -62,7 +62,7 @@ trait HasAuthenticationLogTrait
     public function lastLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->first();
+        $auth = $this->authentications()->latest('login_at')->first();
 
         return $auth !== null ? $auth->login_at : null;
     }
@@ -75,7 +75,7 @@ trait HasAuthenticationLogTrait
     public function lastSuccessfulLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->where('login_successful', true)->first();
+        $auth = $this->authentications()->where('login_successful', true)->latest('login_at')->first();
 
         return $auth !== null ? $auth->login_at : null;
     }
@@ -88,7 +88,7 @@ trait HasAuthenticationLogTrait
     public function lastLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->first();
+        $auth = $this->authentications()->latest('login_at')->first();
 
         return $auth !== null ? $auth->ip_address : null;
     }
@@ -101,7 +101,7 @@ trait HasAuthenticationLogTrait
     public function lastSuccessfulLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->where('login_successful', true)->first();
+        $auth = $this->authentications()->where('login_successful', true)->latest('login_at')->first();
 
         return $auth !== null ? $auth->ip_address : null;
     }
@@ -114,7 +114,7 @@ trait HasAuthenticationLogTrait
     public function previousLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->skip(1)->first();
+        $auth = $this->authentications()->latest('login_at')->skip(1)->first();
 
         return $auth !== null ? $auth->login_at : null;
     }
@@ -127,7 +127,7 @@ trait HasAuthenticationLogTrait
     public function previousLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications()->skip(1)->first();
+        $auth = $this->authentications()->latest('login_at')->skip(1)->first();
 
         return $auth !== null ? $auth->ip_address : null;
     }

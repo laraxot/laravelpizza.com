@@ -14,6 +14,7 @@ use Modules\Geo\Actions\Elevation\FetchOpenElevationAction;
 use Modules\Geo\Datas\Elevation\ElevationData;
 use PHPUnit\Framework\Assert;
 
+use function Safe\json_decode;
 use function Safe\json_encode;
 
 /**
@@ -62,7 +63,7 @@ it('throws exception for failed API request', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('Failed to get elevation data', $exception->getMessage());
+        Assert::assertStringStartsWith('Failed to get elevation data: ', $exception->getMessage());
     }
 });
 
@@ -126,5 +127,13 @@ it('sends correct API payload', function (): void {
 
     $action->execute(45.4642, 9.1900);
 
-    Assert::assertCount(1, $mockHandler);
+    $request = $mockHandler->getLastRequest();
+    Assert::assertNotNull($request);
+    Assert::assertSame('POST', $request->getMethod());
+    Assert::assertSame('https://api.open-elevation.com/api/v1/lookup', (string) $request->getUri());
+    Assert::assertSame(
+        ['locations' => [['latitude' => 45.4642, 'longitude' => 9.19]]],
+        json_decode((string) $request->getBody(), true),
+    );
+    Assert::assertCount(0, $mockHandler);
 });

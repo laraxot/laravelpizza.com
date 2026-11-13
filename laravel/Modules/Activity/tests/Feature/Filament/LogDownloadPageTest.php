@@ -7,7 +7,7 @@ use Mockery\MockInterface;
 use Modules\Xot\Contracts\UserContract;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

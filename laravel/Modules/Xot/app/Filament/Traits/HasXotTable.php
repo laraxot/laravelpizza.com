@@ -18,6 +18,7 @@ use Filament\Actions\ReplicateAction;
 use Filament\Actions\ViewAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Resource;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\Layout\Component as LayoutComponent;
@@ -45,6 +46,7 @@ use Modules\Xot\Actions\Filament\PlainTextFromFilamentValueAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\Model\ModelHasColumnAction;
 use Modules\Xot\Filament\Links\RecordAnchor;
+use ReflectionMethod;
 use RuntimeException;
 use Webmozart\Assert\Assert;
 
@@ -101,9 +103,13 @@ trait HasXotTable
 
         // dddx(method_exists($resource, 'canAttach'));
 
-        $actions = [
-            CreateAction::make(),
-        ];
+        $actions = [];
+        // Niente "Nuovo" se la risorsa non ha la pagina `create` (es. moderazione commenti):
+        // il pulsante portava a una rotta inesistente.
+        $createPageResource = $this->resolveCreatePageResource();
+        if ($createPageResource === null || array_key_exists('create', $createPageResource::getPages())) {
+            $actions[] = CreateAction::make();
+        }
 
         if ($this->shouldShowAssociateAction()) {
             $actions[] = AssociateAction::make()
@@ -342,11 +348,13 @@ trait HasXotTable
         }
         Assert::object($resource);
 
+        // Le tabelle con record array (`->records()`, es. riepiloghi nei widget) non hanno un modello da
+        // autorizzare: con `Model $record` la closure lanciava TypeError e la pagina andava in 500.
         if (method_exists($resource, 'canView')) {
             $actions['view'] = self::withRecordReturnTo(
                 ViewAction::make()
                     ->iconButton()
-                    ->visible(static fn (Model $record): bool => (bool) $resource->canView($record)),
+                    ->visible(static fn (mixed $record): bool => $record instanceof Model && (bool) $resource->canView($record)),
                 isAnchor: true,
             );
         }
@@ -355,7 +363,7 @@ trait HasXotTable
             $actions['edit'] = self::withRecordReturnTo(
                 EditAction::make()
                     ->iconButton()
-                    ->visible(static fn (Model $record): bool => (bool) $resource->canEdit($record)),
+                    ->visible(static fn (mixed $record): bool => $record instanceof Model && (bool) $resource->canEdit($record)),
                 isAnchor: ! isset($actions['view']),
             );
         }
@@ -363,7 +371,7 @@ trait HasXotTable
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()
-                ->visible(static fn (Model $record): bool => (bool) $resource->canDelete($record));
+                ->visible(static fn (mixed $record): bool => $record instanceof Model && (bool) $resource->canDelete($record));
         }
 
         if ($this->shouldShowReplicateAction()) {
@@ -582,6 +590,29 @@ trait HasXotTable
     protected function shouldShowAssociateAction(): bool
     {
         return false;
+    }
+
+    /**
+     * La Resource le cui pagine dicono se il pulsante "Nuovo" porta da qualche parte.
+     *
+     * Vale per le pagine ListRecords e per le classi Table con `getResource()` statico
+     * (XotBaseResourceTable). I RelationManager restano fuori di proposito: il loro
+     * `getResource()` d'istanza restituisce la Resource dell'owner, le cui pagine non dicono
+     * nulla sulla creazione di un record della relazione. `null` = nessuna Resource da
+     * interrogare, quindi "Nuovo" resta visibile.
+     *
+     * @return class-string<resource>|null
+     */
+    private function resolveCreatePageResource(): ?string
+    {
+        $resourceClass = null;
+        if ($this instanceof ListRecords) {
+            $resourceClass = $this->getResource();
+        } elseif (method_exists($this, 'getResource') && (new ReflectionMethod($this, 'getResource'))->isStatic()) {
+            $resourceClass = $this->getResource();
+        }
+
+        return is_string($resourceClass) && is_a($resourceClass, Resource::class, true) ? $resourceClass : null;
     }
 
     protected function shouldShowAttachAction(): bool

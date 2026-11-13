@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Modules\User\Filament\Actions\ChangePasswordAction;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 use function Safe\file_get_contents;
 

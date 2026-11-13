@@ -5,33 +5,24 @@ declare(strict_types=1);
 return [
     'fields' => [
         'message' => [
-            'label' => 'message',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'delete' => [
-            'label' => 'delete',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'edit' => [
-            'label' => 'edit',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'view' => [
-            'label' => 'view',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'create',
         ],
     ],
     'label' => 'Xot Base List Records',

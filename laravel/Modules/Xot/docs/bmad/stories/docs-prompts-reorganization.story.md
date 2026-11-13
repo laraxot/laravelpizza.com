@@ -6,7 +6,8 @@ module: Xot
 epic: documentation/second-brain
 status: in-progress
 created: 2026-10-09
-updated: 2026-10-28
+baseline_commit: bd1c12c5736bad347e5f89981af2293507c5a6cc
+updated: 2026-11-11
 tags: [bmad, docs, prompts, second-brain, swarm]
 qmd: "riorganizzazione docs prompt moduli temi second brain"
 ---
@@ -111,3 +112,18 @@ il codice applicativo durante questo epic documentale.
 - Criterio: conservare l'intento autonomo dei prompt, eliminare solo istruzioni
   duplicate o che contraddicono le regole correnti e documentare ogni marker con
   confronto delle versioni sorgenti.
+
+## Handoff: contratto README/INDEX/MANIFEST e frontmatter
+
+- Aggiornati `bashscripts/docs/prompts/README.md`, `INDEX.md`, `MANIFEST.md` e
+  `97-yaml-frontmatter-convention.md`: distinti gli owner di navigazione e
+  procedure; rimossi comandi di validazione non presenti; chiariti `id` e
+  `source_of_truth`; corretti i controlli dei marker e degli ID.
+- Verificati YAML e link relativi dei quattro file, `git diff --check`, ID
+  duplicati e marker merge: nessun problema in questi controlli.
+- Residuo: il controllo case-folded trova anche `START.md`/`start.md`, oltre
+  all'alias frontmatter; alcune note correnti dichiarano una sola collisione.
+  Non rinominare: analizzare riferimenti e contenuti quando si riprende il
+  gruppo. La query QMD MCP è andata in timeout; `qmd update` resta da eseguire.
+- Tranche sospesa per priorità al bug Login Pulse; lock rilasciati dopo questo
+  handoff. Nessun commit creato.

@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-        'qty' => ['label' => 'qty', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'qty'],
+        'qty' => [
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
     ],
     'label' => 'Fake Seeder Header',
     'plural_label' => 'Fake Seeder Header (Plurale)',

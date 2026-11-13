@@ -59,9 +59,5 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
     'select_command' => 'Wählen Sie im Header einen Befehl aus, um zu beginnen.',
 ];

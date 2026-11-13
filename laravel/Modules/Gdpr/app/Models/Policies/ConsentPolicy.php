@@ -14,7 +14,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('consent.viewAny');
+        return $user->hasPermissionToOrCreate('consent.viewAny');
     }
 
     /**
@@ -22,7 +22,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function view(UserContract $user, Consent $_consent): bool
     {
-        return $user->hasPermissionTo('consent.view');
+        return $user->hasPermissionToOrCreate('consent.view');
     }
 
     /**
@@ -30,7 +30,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('consent.create');
+        return $user->hasPermissionToOrCreate('consent.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function update(UserContract $user, Consent $_consent): bool
     {
-        return $user->hasPermissionTo('consent.update');
+        return $user->hasPermissionToOrCreate('consent.update');
     }
 
     /**
@@ -46,7 +46,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function delete(UserContract $user, Consent $_consent): bool
     {
-        return $user->hasPermissionTo('consent.delete');
+        return $user->hasPermissionToOrCreate('consent.delete');
     }
 
     /**
@@ -54,7 +54,7 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function restore(UserContract $user, Consent $_consent): bool
     {
-        return $user->hasPermissionTo('consent.restore');
+        return $user->hasPermissionToOrCreate('consent.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class ConsentPolicy extends GdprBasePolicy
      */
     public function forceDelete(UserContract $user, Consent $consent): bool
     {
-        return $user->hasPermissionTo('consent.forceDelete');
+        return $user->hasPermissionToOrCreate('consent.forceDelete');
     }
 }

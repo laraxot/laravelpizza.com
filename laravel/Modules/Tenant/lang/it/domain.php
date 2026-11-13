@@ -56,53 +56,19 @@ return [
             'description' => '',
         ],
         'rating' => [
-            'label' => 'rating',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'rating',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-        ],
-        'title' => [
-            'label' => 'title',
-            'placeholder' => 'title',
-            'helper_text' => 'title',
-            'description' => 'title',
-        ],
-        'brand' => [
-            'label' => 'brand',
-            'placeholder' => 'brand',
-            'helper_text' => 'brand',
-            'description' => 'brand',
-        ],
-        'category' => [
-            'label' => 'category',
-            'placeholder' => 'category',
-            'helper_text' => 'category',
-            'description' => 'category',
-        ],
-        'description' => [
-            'label' => 'description',
-            'placeholder' => 'description',
-            'helper_text' => 'description',
-            'description' => 'description',
-        ],
-        'price' => [
-            'label' => 'price',
-            'placeholder' => 'price',
-            'helper_text' => 'price',
-            'description' => 'price',
         ],
     ],
     'actions' => [
@@ -117,7 +83,6 @@ return [
         'set_primary' => 'Imposta come Principale',
         'domain_set_primary' => 'Dominio impostato come principale con successo',
         'logout' => [
-            'tooltip' => 'logout',
             'icon' => 'logout',
         ],
     ],

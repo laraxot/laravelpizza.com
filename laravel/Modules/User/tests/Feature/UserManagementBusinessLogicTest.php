@@ -11,7 +11,7 @@ use Modules\User\Models\Permission;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(\Modules\User\Tests\TestCase::class);
 

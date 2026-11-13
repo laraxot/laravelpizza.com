@@ -152,7 +152,8 @@ describe('User Business Logic', function (): void {
 
         $freshUser = $user->fresh();
         Assert::assertNotNull($freshUser);
-        Assert::assertCount(5, $freshUser->teams);
+        // teams e' la relazione Spatie (model_has_role): l'appartenenza ai team sta in membershipTeams.
+        Assert::assertCount(5, $freshUser->membershipTeams);
 
         $firstTeam = $teams->first();
         Assert::assertInstanceOf(Team::class, $firstTeam);

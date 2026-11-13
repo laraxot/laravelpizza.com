@@ -9,5 +9,5 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListDomains extends XotBaseListRecords
 {
-    protected static string $resource = DomainResource::class;
+    public static string $resource = DomainResource::class;
 }

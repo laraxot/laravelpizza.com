@@ -1,57 +1,4 @@
----
-issues: []
-discussions: []
-title: "Testing Documentation"
-module: "Tenant"
-type: concept
-tags: [testing]
-created: 2026-07-14
-updated: 2026-10-20
-qmd: "testing"
-related:
-  - "./phpstan-corrections-january.md"
-status: draft
----
 # Testing Documentation
-
-## Stories PHPStan attive
-
-- [TENANT-7.1: boundary Sushi](./stories/7.1.phpstan-sushi-boundaries.story.md) possiede
-  trait, Action e consumer domain.
-- [TENANT-7.2: contratti dei test harness](./stories/7.2.phpstan-test-harness-contracts.story.md)
-  possiede i 40 findings residui nei test di configurazione, Sushi e coverage.
-
-- [Regressione dei test dopo il pull, 2026-10-20](./stories/phpstan-test-wave-tenant.story.md):
-  `tests/TestCase.php` e 9 file di test erano tornati a una generazione senza helper e
-  senza tipi (733 errori); ripristinata la generazione tipizzata, 0 errori sul modulo.
-
-### Esito TENANT-7.2
-
-La baseline cold di 40 findings è stata portata a zero. Config e resolver vengono ristretti
-prima degli offset, le fixture Sushi dichiarano value types reali, le funzioni fallibili
-usano `Safe\` e gli attributi Eloquent passano da `setAttribute()`/`getAttribute()`.
-
-Disposition: **75 test mantenuti, 0 file test cancellati**. La tautologia sull'ID Sushi è
-diventata un'asserzione sull'ID realmente assegnato; input impossibili (`domain = null`,
-row JSON scalare passata a `saveToJson`) sono stati rimossi dai test senza allargare i
-contratti applicativi. Il gate mirato produce **75 pass e 311 asserzioni**.
-
-Famiglia A (story 4.26): le fixture e le classi anonime **estendono l'host reale del trait**,
-non `Model` nudo: `SushiToCsv` → `Sigma\Models\WebService`, `SushiToPhpArray` →
-`User\Models\SocialProvider`, `SushiToJsons` → `Tenant\Models\BaseModelJsons`. I test
-restano in memoria (`forceFill` / file tmp + mock di `GetTenantFilePathAction`).
-`setAttribute()` nel trait resta il contratto Eloquent delle colonne dinamiche.
-
-### Helper di `Modules\Tenant\Tests\TestCase`
-
-I test Pest del modulo chiamano metodi statici di `TestCase`, non funzioni libere
-(`tests/Pest.php` e' solo un commento: Pest legge un solo `Pest.php`, quello della root).
-I principali: `mockAppService($classe, $callback)` (mock Mockery registrato nel container
-con `app()->instance`), `expectMockery($mock, $metodo)` (espettativa tipizzata),
-`sushiModel()` / `sushiJsonPath()` / `sushiTestData()` / `sushiRowById()` (fixture del modello
-Sushi di test), `createTenant()` / `tenantModel()`, `setServerNameForTenantTest()`,
-`tenantDbUnavailable()` (oggi `true`: i test che scrivono sul DB tenant si saltano) e
-`skipCurrentTest()`. Un helper nuovo va qui, tipizzato, non in un file `Support`.
 
 ## Overview
 
@@ -309,7 +256,7 @@ protected function createApplication()
 
 ### External Resources
 
-- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+- [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 - [Pest Installation Guide](https://pestphp.com/docs/installation)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 
@@ -318,7 +265,6 @@ protected function createApplication()
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
 - [Troubleshooting Guide](../../../docs/troubleshooting.md)
-- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
 
 ## Testing Examples
 
@@ -424,30 +370,7 @@ Following these guidelines will ensure your Tenant module tests are:
 
 Remember: Good tests are the foundation of reliable software development.
 
-## Coverage: gate 100%
-
-**Perché:** il tenant risolve path, config, morph map e persistenza Sushi per-tenant.
-Senza coverage completa sui resolver/action/trait, un tenant sbagliato può leggere
-config di un altro dominio o scrivere JSON nel path sbagliato.
-
-| Perimetro | Coverage | Gate `--min=100` | Suite |
-|-----------|---------:|:----------------:|-------|
-| `./app` completo, nessun exclude | **100,0 %** | ✅ PASS | 138 pass, 32 skip, 2 risky |
-
-```bash
-cd laravel
-XDEBUG_MODE=coverage ./vendor/bin/pest -c Modules/Tenant/phpunit.xml --coverage --min=100
-```
-
-### Strategia
-
-1. Pest only, `uses(TestCase::class)`: **no** `RefreshDatabase` (sqlite tenant condiviso → skip su lock).
-2. Unit: Actions, Resolvers, Providers, Policy, trait Sushi via **named subclasses** in `tests/Unit/Fixtures/`.
-3. Assertion reali; niente `@codeCoverageIgnore`.
-4. Feature/Integration/Performance: skip condizionato se DB/fixture indisponibili.
-
-Riferimenti: [Xot coverage.md](../../Xot/docs/coverage.md).
-
 ---
 
-*Last updated: August 2026*
+*Last updated: January 2025*
+*

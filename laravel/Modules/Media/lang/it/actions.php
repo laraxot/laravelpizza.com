@@ -6,8 +6,6 @@ return [
     'add_attachment' => [
         'title' => 'Allegati',
         'label' => 'Carica allegato',
-        'fields' => [
-        ],
     ],
     'label' => 'Actions',
     'plural_label' => 'Actions (Plurale)',

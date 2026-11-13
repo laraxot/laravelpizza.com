@@ -12,37 +12,31 @@ return [
     ],
     'fields' => [
         'background_color' => [
-            'label' => 'background_color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'background' => [
-            'label' => 'background',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'overlay_color' => [
-            'label' => 'overlay_color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'overlay_opacity' => [
-            'label' => 'overlay_opacity',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'class' => [
-            'label' => 'class',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'style' => [
-            'label' => 'style',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -114,9 +108,6 @@ return [
                 'name' => 'Nome area',
                 'parent_name' => 'Nome area livello superiore',
             ],
-        ],
-        'updateAction' => [
-            'label' => 'updateAction',
         ],
     ],
     'label' => 'Breadcrumb',

@@ -123,7 +123,7 @@ return [
     'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
     'success' => 'Registrierung erfolgreich abgeschlossen! Ihr Konto wurde DSGVO-konform erstellt.',
     'throttle' => 'Zu viele Registrierungsversuche. Versuchen Sie es in :seconds Sekunden erneut.',
-    'success_message' => 'Ihr Konto ist bereit',
+    'success_message' => 'Ihr Konto ist bereit. Wir haben Ihnen eine E-Mail gesendet: Öffnen Sie den Link, um Ihre Adresse zu bestätigen, bevor Sie eine Meldung senden.',
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
     'clickbait' => [

@@ -20,7 +20,8 @@ describe('Password Data Labels', function (): void {
         $passwordComponent = $passwordData->getPasswordFormComponent('password');
         $confirmationComponent = $passwordData->getPasswordConfirmationFormComponent();
 
-        Assert::assertSame('Parola d\'ordine', $passwordComponent->getLabel());
+        // In italiano il campo resta "Password" (lang/it): "Parola d'ordine" non e' piu' usato.
+        Assert::assertSame('Password', $passwordComponent->getLabel());
         Assert::assertSame('Conferma Password', $confirmationComponent->getLabel());
     });
 

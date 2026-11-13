@@ -7,9 +7,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
+use Illuminate\Auth\AuthManager;
+use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -17,6 +21,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\Rules\Password;
 use Modules\Notify\Emails\SpatieEmail;
+use Modules\User\Actions\Auth\BuildActiveUserProviderAction;
 use Modules\User\Actions\Auth\BuildApiLoginLimitAction;
 use Modules\User\Actions\Auth\BuildPasswordResetUrlAction;
 use Modules\User\Actions\Auth\EnsureResetPasswordMailTemplateAction;
@@ -52,6 +57,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
+        $this->registerActiveUserProvider();
         // $this->registerTeamModelBindings();
     }
 
@@ -144,6 +150,43 @@ class UserServiceProvider extends XotBaseServiceProvider
             $pwd = PasswordData::make();
 
             return $pwd->getPasswordRule();
+        });
+    }
+
+    /**
+     * Sostituisce il driver `eloquent` dei provider utenti con quello che esclude gli account cancellati (SEC-05).
+     * Il driver custom ha la precedenza su quello del framework (`AuthManager::createUserProvider`), quindi vale per ogni
+     * `config/<tenant>/auth.php` e per la guard `api` di Passport. Dettagli in {@see BuildActiveUserProviderAction}.
+     */
+    protected function registerActiveUserProvider(): void
+    {
+        // In register(), non in boot(): se un altro modulo risolve una guard durante il proprio boot, AuthManager la
+        // tiene in cache con il provider di serie e gli account cancellati entrerebbero ancora (revisione 2026-11-10).
+        $install = static function (AuthManager $auth): void {
+            $auth->provider('eloquent', static function (Application $app, array $config): EloquentUserProvider {
+                $model = $config['model'] ?? null;
+                Assert::stringNotEmpty($model, 'auth.providers.*.model must be a class name.');
+                $hasher = $app->make('hash');
+                Assert::isInstanceOf($hasher, Hasher::class);
+
+                return app(BuildActiveUserProviderAction::class)->execute($hasher, $model);
+            });
+            // Guard gia' create con il provider di serie: le ricrea al prossimo uso.
+            $auth->forgetGuards();
+        };
+
+        if ($this->app->resolved('auth')) {
+            $auth = $this->app->make('auth');
+            Assert::isInstanceOf($auth, AuthManager::class);
+            $install($auth);
+
+            return;
+        }
+
+        $this->app->afterResolving('auth', static function (mixed $auth) use ($install): void {
+            if ($auth instanceof AuthManager) {
+                $install($auth);
+            }
         });
     }
 

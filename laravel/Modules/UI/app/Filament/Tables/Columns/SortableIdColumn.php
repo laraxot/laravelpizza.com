@@ -35,7 +35,6 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseTextColumn;
  */
 class SortableIdColumn extends XotBaseTextColumn
 {
-    /** @var non-empty-string */
     protected const string DEFAULT_NAME = 'id';
 
     public static function make(?string $name = null): static

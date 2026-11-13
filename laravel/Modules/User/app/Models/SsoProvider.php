@@ -66,8 +66,6 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class SsoProvider extends BaseModel
 {
-    use SsoProviderRelationsTrait;
-
     /**
      * Fuori da `toArray()` e quindi dallo stato Livewire delle pagine Edit/View di Filament, che lo manderebbe al browser (audit DCP-181, D-3).
      *
@@ -149,4 +147,6 @@ class SsoProvider extends BaseModel
             'is_active' => 'boolean',
         ];
     }
+
+    use SsoProviderRelationsTrait;
 }

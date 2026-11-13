@@ -50,18 +50,6 @@ return [
             'tooltip' => 'Una descrizione del ruolo e delle sue funzioni.',
             'placeholder' => 'Descrizione del ruolo',
         ],
-        'team_id' => [
-            'description' => 'team_id',
-            'helper_text' => 'team_id',
-            'placeholder' => 'team_id',
-            'label' => 'team_id',
-        ],
-        'recordId' => [
-            'description' => 'recordId',
-            'helper_text' => 'recordId',
-            'placeholder' => 'recordId',
-            'label' => 'recordId',
-        ],
     ],
     'roles' => [
         'super_admin' => 'Super Amministratore',

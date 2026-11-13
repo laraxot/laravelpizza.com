@@ -77,7 +77,6 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Activities',
-            'tooltip' => 'delete',
         ],
     ],
 ];

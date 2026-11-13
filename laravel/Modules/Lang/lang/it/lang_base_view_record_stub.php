@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 return [
     'actions' => [
-        'activeLocale' => ['label' => 'activeLocale', 'icon' => 'activeLocale', 'tooltip' => 'activeLocale'],
+        'activeLocale' => [
+            'icon' => 'activeLocale',
+        ],
     ],
 ];

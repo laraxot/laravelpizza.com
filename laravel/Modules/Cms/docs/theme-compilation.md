@@ -12,6 +12,12 @@ status: draft
 
 # Compilazione e Pubblicazione dei Temi
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 ## Indice
 - [Introduzione](#introduzione)
 - [Architettura dei Temi](#architettura-dei-temi)
@@ -101,7 +107,10 @@ Per pubblicare il tema compilato, è necessario eseguire il seguente comando:
 
 ```bash
 cd /var/www/html/<nome progetto>/laravel/Themes/One
+<<<<<<< .merge_file_OiTaZm
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_CuFCo3
 ```
 
 Questo comando copia tutti i file dalla directory `resources/dist` alla directory pubblica `public_html/themes/One`:

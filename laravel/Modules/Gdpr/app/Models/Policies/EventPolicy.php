@@ -14,7 +14,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function viewAny(UserContract $user): bool
     {
-        return $user->hasPermissionTo('event.viewAny');
+        return $user->hasPermissionToOrCreate('event.viewAny');
     }
 
     /**
@@ -22,7 +22,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function view(UserContract $user, Event $_event): bool
     {
-        return $user->hasPermissionTo('event.view');
+        return $user->hasPermissionToOrCreate('event.view');
     }
 
     /**
@@ -30,7 +30,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function create(UserContract $user): bool
     {
-        return $user->hasPermissionTo('event.create');
+        return $user->hasPermissionToOrCreate('event.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function update(UserContract $user, Event $_event): bool
     {
-        return $user->hasPermissionTo('event.update');
+        return $user->hasPermissionToOrCreate('event.update');
     }
 
     /**
@@ -46,7 +46,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function delete(UserContract $user, Event $_event): bool
     {
-        return $user->hasPermissionTo('event.delete');
+        return $user->hasPermissionToOrCreate('event.delete');
     }
 
     /**
@@ -54,7 +54,7 @@ class EventPolicy extends GdprBasePolicy
      */
     public function restore(UserContract $user, Event $_event): bool
     {
-        return $user->hasPermissionTo('event.restore');
+        return $user->hasPermissionToOrCreate('event.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class EventPolicy extends GdprBasePolicy
      */
     public function forceDelete(UserContract $user, Event $event): bool
     {
-        return $user->hasPermissionTo('event.forceDelete');
+        return $user->hasPermissionToOrCreate('event.forceDelete');
     }
 }

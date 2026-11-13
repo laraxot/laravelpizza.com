@@ -43,6 +43,14 @@ class TranslationFile extends BaseModel
     use Sushi;
     use TranslationFileRowLoader;
 
+    /**
+     * La chiave è il nome del file (`xot::yes_no_enum`): senza keyType string ogni id
+     * diventava 0, l'elenco ripeteva la stessa riga e "Modifica" apriva `/translation-files/0` (404).
+     */
+    protected $keyType = 'string';
+
+    public $incrementing = false;
+
     protected $fillable = [
         'id',
         'name',

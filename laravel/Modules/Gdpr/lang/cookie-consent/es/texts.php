@@ -7,7 +7,7 @@ return [
     'alert_title_info' => 'Cookies',
     'alert_text_info' => 'Este sitio solo usa cookies técnicas, necesarias para su funcionamiento: no requieren su consentimiento. No usamos cookies de perfilado ni de análisis.',
     'alert_title_consent' => 'Este sitio usa cookies',
-    'alert_text_consent' => 'Usamos cookies técnicas, necesarias para el funcionamiento, y, solo si usted lo permite, cookies de análisis y de marketing. Si cierra el aviso sin elegir, solo permanecen activas las cookies técnicas.',
+    'alert_text_consent' => 'Usamos cookies técnicas, necesarias para el funcionamiento, y, solo si usted lo permite, cookies de análisis y de marketing. Si cierra el aviso sin elegir, solo permanecen activas las cookies técnicas. Puede cambiar su elección con el enlace «Gestionar cookies» al final de la página.',
     'alert_accept' => 'Aceptar todas',
     'alert_reject' => 'Rechazar todas',
     'alert_settings' => 'Personalizar',

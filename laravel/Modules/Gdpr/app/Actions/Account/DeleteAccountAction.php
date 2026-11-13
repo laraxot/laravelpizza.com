@@ -13,6 +13,7 @@ use Modules\Activity\Models\Activity;
 use Modules\Gdpr\Actions\Consent\RevokeGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
+use Modules\User\Actions\Auth\RevokeUserAccessAction;
 use Modules\User\Models\BaseUser;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
@@ -75,6 +76,9 @@ class DeleteAccountAction
             $user->deleted_at = now();
             $user->deleted_by = (string) (Auth::id() ?? $user->id);
             $user->save();
+
+            // 3b. Revoca token Passport, refresh token e "ricordami" (SEC-05): l'account e' disattivato subito, anche via API.
+            app(RevokeUserAccessAction::class)->execute($user);
 
             // 4. Soft-delete dei log di activity dell'utente (se il modulo Activity e' installato).
             if (class_exists(Activity::class)) {

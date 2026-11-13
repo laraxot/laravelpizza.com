@@ -13,12 +13,19 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 test('PhotonAddressData can be instantiated', function (): void {
+    // from(array) is routed to the magic PhotonAddressData::fromPhotonFeature(): it expects a GeoJSON feature
     $address = PhotonAddressData::from([
-        'city' => 'Rome',
-        'country' => 'Italy',
+        'type' => 'Feature',
+        'geometry' => ['type' => 'Point', 'coordinates' => [12.4964, 41.9028]],
+        'properties' => [
+            'city' => 'Rome',
+            'country' => 'Italy',
+        ],
     ]);
 
     Assert::assertSame('Rome', $address->city);
+    Assert::assertSame('Italy', $address->country);
+    Assert::assertSame(['latitude' => 41.9028, 'longitude' => 12.4964], $address->coordinates);
 });
 
 test('PhotonFeatureData can be instantiated', function (): void {

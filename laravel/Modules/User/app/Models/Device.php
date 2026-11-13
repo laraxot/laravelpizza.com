@@ -78,8 +78,11 @@ use Modules\Xot\Contracts\UserContract;
  */
 class Device extends BaseModel
 {
+<<<<<<< .merge_file_gqIgp8
     use DeviceRelationsTrait;
 
+=======
+>>>>>>> .merge_file_h0dXKN
     protected $connection = 'user';
 
     /** @var list<string> */
@@ -133,4 +136,6 @@ class Device extends BaseModel
             'is_phone' => 'boolean',
         ];
     }
+
+    use DeviceRelationsTrait;
 }

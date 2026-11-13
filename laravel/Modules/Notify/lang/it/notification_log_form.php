@@ -47,13 +47,20 @@ return [
             'placeholder' => 'ID tenant',
             'helper_text' => 'Tenant proprietario del log',
         ],
-        'sent_at' => ['label' => 'Inviata il'],
-        'delivered_at' => ['label' => 'Consegnata il'],
-        'failed_at' => ['label' => 'Fallita il'],
-        'opened_at' => ['label' => 'Aperta il'],
-        'clicked_at' => ['label' => 'Cliccata il'],
-    ],
-    'sections' => [
-        'empty' => ['label' => 'empty', 'heading' => 'empty'],
+        'sent_at' => [
+            'label' => 'Inviata il',
+        ],
+        'delivered_at' => [
+            'label' => 'Consegnata il',
+        ],
+        'failed_at' => [
+            'label' => 'Fallita il',
+        ],
+        'opened_at' => [
+            'label' => 'Aperta il',
+        ],
+        'clicked_at' => [
+            'label' => 'Cliccata il',
+        ],
     ],
 ];

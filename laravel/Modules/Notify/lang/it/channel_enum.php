@@ -3,12 +3,14 @@
 declare(strict_types=1);
 
 return [
+    'values' => [
     'mail' => [
         'label' => 'Mail'],
     'sms' => [
         'label' => 'SMS'],
     'whatsapp' => [
         'label' => 'WhatsApp'],
+    ],
     'label' => 'Channel Enum',
     'plural_label' => 'Channel Enum (Plurale)',
     'navigation' => [

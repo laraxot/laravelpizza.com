@@ -46,18 +46,24 @@ così da **poter associare gli utenti ai tenant (`$user->tenants()`) e far funzi
   deve mantenere la generazione slug, la validazione UUID e il route binding Filament
   configurato con `slugAttribute: 'slug'`; implementazione in corso, il file model è
   temporaneamente lockato dalla story `user-model-relationships-to-traits`.
-- 2026-11-05 (sera) — Claude: chiusa la regressione lasciata dalla pulizia dei marcatori, che aveva tolto `HasUuids`
-  da `BaseTenant` (AC 1 e 4 tornati aperti). Ripristinato `use HasUuids;` accanto a `use HasSlug;`.
-  **Correzione della premessa:** la "collisione su `resolveRouteBindingQuery`" scritta sopra non c'è nelle versioni
-  installate. `HasSlug` (spatie/laravel-sluggable 4.0.3 in vendor, 4.0.4 nel lock) definisce solo `resolveRouteBinding`;
-  `resolveRouteBindingQuery` sta in `HasUniqueStringIds` (usato da `HasUuids`) e, per Spatie, solo in `HasTranslatableSlug`.
-  Lo stesso vale in tutti e 9 i `vendor` dei progetti `_bases` (laravel 13.33-13.40). Il tentativo con
-  `use HasSlug { HasSlug::resolveRouteBindingQuery as ... }` e il metodo ponte dava invece un fatal in autoload
-  ("An alias was defined for ... but this method does not exist"), quindi alias e override sono stati tolti.
-  **Se una versione futura di Spatie aggiungesse `resolveRouteBindingQuery` a `HasSlug`**, PHP andrebbe in fatal al
-  caricamento della classe: la guardia e' `tests/Unit/Models/BaseTenantKeyTest.php` (primo caso), poi si torna ad
-  alias + ponte come nel commit `bd6a68733`.
-  Verifica: `php -l`, Pint, PHPStan su `BaseTenant`, `Tenant` e sul test: 0 errori. Caricamento della classe e UUID
-  generato provati con `php -r` sul bootstrap reale (uniqueIds `["id"]`, `newUniqueId()` e' un UUID, slug da `name`).
-  **Pest non parte qui** (`DB_USERNAME` vuoto in `.env.testing`: `TestCase` fallisce prima delle asserzioni, vale per
-  tutti i test del modulo); da eseguire dove il DB di test e' configurato. `status` resta `in-progress` per questo motivo.
+
+## Effetto collaterale su un figlio con chiave intera (trovato il 2026-11-10)
+
+`HasUuids` in `BaseTenant` vale anche per `Modules\Quaeris\Models\Customer`, l'unico altro figlio, che
+dichiara `$keyType = 'int'` e `$incrementing = true` su `customers.id` `int unsigned auto_increment`.
+`HasUniqueStringIds` scavalca quelle proprieta': `uniqueIds() = ["id"]`, `getKeyType() = 'string'`,
+`getIncrementing() = false` (verificato con tinker). Conseguenze:
+
+- in inserimento Laravel (`Model::performInsert`, `setUniqueIds()`) scrive un UUID in `customers.id` e non
+  legge l'id generato dal DB: "Nuovo cliente" fallisce in strict mode o, senza strict, tronca l'UUID in un
+  intero (collisioni possibili);
+- `whereKey($customer)` lega la chiave come stringa (`` `customers`.`id` = '10' ``): lo ha rilevato
+  `Quaeris/tests/Feature/Filament/TenantSwitcherListsAllUserCustomersTest.php:52`.
+
+Correzione proposta, in attesa di decisione: dettagli in
+`laravel/Modules/Quaeris/docs/stories/quaeris-tenant-switcher-lists-all-user-customers.story.md`,
+sezione "Seguito 2026-11-10".
+
+Risolto lato Quaeris il 2026-11-10: `Customer::uniqueIds()` restituisce `[]` (estensione prevista da Laravel
+per `HasUuids`), `BaseTenant` non toccata. Chi aggiunge un altro figlio di `BaseTenant` con chiave intera deve
+fare lo stesso. Test: `laravel/Modules/Quaeris/tests/Unit/Models/CustomerIntegerKeyTest.php`.

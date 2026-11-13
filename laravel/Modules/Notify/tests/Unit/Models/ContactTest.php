@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Models;
 
 use Modules\Notify\Models\Contact;
-use Tests\TestCase;
+use Modules\Notify\Tests\TestCase;
 
 uses(\Modules\Notify\Tests\TestCase::class);
 class ContactTest extends TestCase

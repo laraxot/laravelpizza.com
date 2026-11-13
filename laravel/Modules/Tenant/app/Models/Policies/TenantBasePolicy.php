@@ -17,6 +17,11 @@ abstract class TenantBasePolicy
             return true;
         }
 
+        // Il ruolo che apre il pannello del modulo gestisce tutto il modulo (ADR Xot module-admin-role-policy-bypass).
+        if ($user->hasRole('tenant::admin')) {
+            return true;
+        }
+
         return null;
     }
 }

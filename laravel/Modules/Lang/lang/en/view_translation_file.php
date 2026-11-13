@@ -1,11 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-    'actions' => [
-        'edit' => [
-            'label' => 'edit',
-        ],
-    ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',

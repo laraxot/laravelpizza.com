@@ -51,7 +51,12 @@ Il trait `Modules\Xot\Filament\Traits\HasXotTable` è utilizzato da `XotBaseRela
     -   Azione `TableLayoutToggleTableAction` aggiunta automaticamente per permettere all'utente di cambiare layout (es. da lista a griglia, se configurato).
 3.  **Azioni Predefinite e Personalizzabili**:
     -   **Header Actions (`getTableHeaderActions`)**:
-        -   `CreateAction` di default.
+        -   `CreateAction` di default, **ma solo se la Resource ha la pagina `create`** (Xot `e29b74f8c7`, 2026-11-09):
+            senza, il pulsante "Nuovo" portava a una rotta inesistente. La Resource si ricava da
+            `resolveCreatePageResource()`: pagine `ListRecords` e classi Table con `getResource()`
+            **statico** (`XotBaseResourceTable`). I RelationManager restano fuori di proposito: il loro
+            `getResource()` d'istanza è la Resource dell'owner, che non dice nulla sulla relazione.
+            Guardia: `tests/Unit/Filament/HeaderCreateActionFollowsCreatePageTest.php`.
         -   `AssociateAction` e `AttachAction` condizionali (controllate da `shouldShowAssociateAction()` e `shouldShowAttachAction()` che puoi sovrascrivere).
         -   `TableLayoutToggleTableAction`.
     -   **Row Actions (`getTableActions`)**:

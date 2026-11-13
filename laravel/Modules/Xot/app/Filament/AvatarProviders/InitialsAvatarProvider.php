@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\AvatarProviders;
 
+use Illuminate\Support\Str;
 use Filament\AvatarProviders\Contracts\AvatarProvider;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -37,7 +38,7 @@ final class InitialsAvatarProvider implements AvatarProvider
             ->squish()
             ->explode(' ')
             // inizio con una lettera o una cifra: "[SYSTEM] Admin" non deve dare "[" come iniziale
-            ->map(static fn (string $segment): string => mb_substr(preg_replace('/^[^\p{L}\p{N}]+/u', '', $segment), 0, 1))
+            ->map(static fn (string $segment): string => Str::of($segment)->replaceMatches('/^[^\p{L}\p{N}]+/u', '')->substr(0, 1)->toString())
             ->filter()
             ->take(2)
             ->join('');

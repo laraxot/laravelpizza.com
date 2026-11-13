@@ -32,28 +32,31 @@ class FetchIPLocationAction
      *
      * @param  string  $ip  Indirizzo IP da geolocalizzare
      *
-     * @throws GuzzleException
-     * @throws \RuntimeException
+     * @throws \RuntimeException Se la richiesta HTTP fallisce o l'API risponde con errore
      */
     public function execute(string $ip): IPLocationData
     {
-        $response = $this->client->get(self::API_URL.$ip, [
-            'query' => [
-                'fields' => implode(',', [
-                    'status',
-                    'message',
-                    'country',
-                    'countryCode',
-                    'region',
-                    'regionName',
-                    'city',
-                    'lat',
-                    'lon',
-                    'timezone',
-                    'isp',
-                ]),
-            ],
-        ]);
+        try {
+            $response = $this->client->get(self::API_URL.$ip, [
+                'query' => [
+                    'fields' => implode(',', [
+                        'status',
+                        'message',
+                        'country',
+                        'countryCode',
+                        'region',
+                        'regionName',
+                        'city',
+                        'lat',
+                        'lon',
+                        'timezone',
+                        'isp',
+                    ]),
+                ],
+            ]);
+        } catch (GuzzleException $e) {
+            throw new \RuntimeException('Failed to get IP location: '.$e->getMessage(), 0, $e);
+        }
 
         /** @var array{
          *     status: string,

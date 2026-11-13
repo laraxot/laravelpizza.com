@@ -88,17 +88,16 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        1 => ['label' => '1', 'placeholder' => '1', 'helper_text' => '1', 'description' => '1'],
-        2 => ['label' => '2', 'placeholder' => '2', 'helper_text' => '2', 'description' => '2'],
-        3 => ['label' => '3', 'placeholder' => '3', 'helper_text' => '3', 'description' => '3'],
-        4 => ['label' => '4', 'placeholder' => '4', 'helper_text' => '4', 'description' => '4'],
-        5 => ['label' => '5', 'placeholder' => '5', 'helper_text' => '5', 'description' => '5'],
-        6 => ['label' => '6', 'placeholder' => '6', 'helper_text' => '6', 'description' => '6'],
-        7 => ['label' => '7', 'placeholder' => '7', 'helper_text' => '7', 'description' => '7'],
     ],
     'actions' => [
-        'create' => ['label' => 'Crea Day Of Week'],
-        'edit' => ['label' => 'Modifica Day Of Week'],
-        'delete' => ['label' => 'Elimina Day Of Week'],
+        'create' => [
+            'label' => 'Crea Day Of Week',
+        ],
+        'edit' => [
+            'label' => 'Modifica Day Of Week',
+        ],
+        'delete' => [
+            'label' => 'Elimina Day Of Week',
+        ],
     ],
 ];

@@ -1,22 +1,49 @@
-# .gitignore del modulo Activity (Laraxot).
-# Igiene della root di modulo: docs/wiki/rules/module-theme-root-cleanup.md
-# Cartelle scaffold dei tool AI: docs/no-ai-tool-scaffold-dirs.md (in questo modulo)
-#
-# Un solo pattern per percorso: la forma senza `/` finale vale per file e cartelle.
-# Un pattern senza `/` iniziale vale a QUALUNQUE profondita' (non solo alla root del modulo):
-# prima di aggiungerne uno controllare che non ignori sorgenti o docs
-# (vedi bashscripts/ai/wiki/memories/gitignore-phpstan-star-swallows-bmad-story-docs.md).
+# Auto-generated forbidden paths — do not edit manually
+# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 
-# --- Dipendenze e artefatti di build ---
+bashscripts
+_bmad-output
+.circleci
+.claude-audit
+.devcontainer
+_docs
+docs/archive
+docs/archived
+docs/legacy
+docs/archive/
+docs/workbench
+.kilocode
+.kiro
+.ralph
+scripts
+test-results
+tests/.claude-audit
+# ==============================================
+# LARAXOT MODULE ACTIVITY - .GITIGNORE
+# Modulo Activity Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-31
+
+# DEPENDENCIES & PACKAGES
+/vendor/
 /vendor
+/node_modules/
 /node_modules
 /docs/vendor/
 package-lock.json
+yarn.lock
+composer.lock
+yarn-error.log
+npm-debug.log
+
+# BUILD & COMPILED FILES
+/build
+/build/
 build/
 dist/
+docs/cache/
 cache/
 
-# --- File temporanei, cache, lock (anche i lock multi-agente `<file>.lock`) ---
+# CACHE & TEMPORARY FILES
 *.cache
 *.lock
 *.phar
@@ -27,15 +54,17 @@ cache/
 *.stackdump
 *:Zone.Identifier
 v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
 
-# --- Log ---
+# LOG FILES
 *.log
 error_log
 npm-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# --- Laravel ---
+# LARAVEL SPECIFIC
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -47,25 +76,20 @@ storage/*.key
 .env.*
 !.env.example
 
-# --- Ambiente e IDE ---
+# ENVIRONMENT & CONFIGURATION
 Homestead.yaml
 Homestead.json
 /.vagrant
 /.idea
 .phpintel
-.phpstorm.meta.php
-.vscode
-.cursor
-.windsurf
-.cursor~*
-.windsurf~*
-.devcontainer
-.circleci
-.kilocode
-.kiro
-.ralph
+.vscode/
 
-# --- Sistema operativo ---
+# GIT SPECIFIC
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+
+# SYSTEM FILES
 .DS_Store
 .DS_Store?
 ._*
@@ -75,7 +99,7 @@ ehthumbs.db
 Thumbs.db
 *~
 
-# --- Backup e residui di merge/rebase (mai committare, es. `x~HEAD`, `x.orig`) ---
+# BACKUP FILES
 *.old
 *.old1
 *.old2
@@ -86,77 +110,105 @@ Thumbs.db
 *.bak
 *.bakcup
 *.new
-*.orig
-*.rej
-*~HEAD
-*~head
-*~BASE
-*~LOCAL
-*~REMOTE
 
-# --- Git ---
-.git-rewrite
-.git-blame-ignore-revs
+# DEVELOPMENT TOOLS
+.windsurf/
+.cursor/
+.phpstorm.meta.php
 
-# --- Docs: archivi, cache e output di tool (la conoscenza vive in docs/) ---
-_docs
-_bmad-output
-docs/archive
-docs/archived
-docs/legacy
+# DOCUMENTATION CACHE
 docs/phpstan/
-docs/workbench
-docs/graphify
+docs/legacy/
+docs/legacy/**
 
-# --- Lingue: le traduzioni vivono in lang/<locale>/ ---
+# LANGUAGE FILES
 lang/lang/
-resources/lang
+resources/lang/
 
-# --- Cartelle legacy ---
+# OLD DIRECTORIES (LEGACY CLEANUP)
 resources/views/Components_old/
 database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
 
-# --- Scaffold e tool AI/CI: non devono esistere nell'albero del modulo ---
-.agents
-.claude*
-.codex*
-.opencode
-.gitmodules
-.claude-audit
-tests/.claude-audit
-graphify-out/
-agentdb.rvf
-audit-coverage/
-tests/AuditCoverage
-bashscripts
-scripts
-tools
-workbench
-test-results
-/.github/skills/
-
-# --- Config di qualita' vietate nella root di modulo (usare laravel/phpinsights.php e laravel/rector.php) ---
-phpinsights.php
-rector.php
-
-# --- Specifici del modulo Activity ---
+# MODULE SPECIFIC - ACTIVITY
+# File di configurazione locale
 config/local.php
 config/development.php
+
+# Cache activity log
 storage/activity/
 storage/logs/
+
+# File di test activity
 activity_test_data.json
 test_activity_logs.sql
-activity_coverage.xml
-tests/coverage
-tests/coverage.xml
-*.fila2
 
-# --- Residui del progetto: clone annidati e cartelle del monorepo ---
-# `Activity/` e' una cartella tracciata nella root del modulo (residuo di clone):
-# non ricrearla, da pulire in una story dedicata.
-Activity
+# END OF ACTIVITY .GITIGNORE
+
+# File specifici del progetto
+*.fila2
 laravel
 public_html
+tests/coverage
+_docs/
+tests/coverage/
+tests/coverage.xml/
+activity_coverage.xml
+
+# -----------------------------------------------------------------------------
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*.orig
+*.rej
+*~head
+agentdb.rvf
+tests/AuditCoverage
+audit-coverage/
+# AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+.devcontainer/
+tests/AuditCoverage/
+
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+phpinsights.php
+rector.php
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
+.agents
+tools
+workbench
+.claude*
+.codex*
+.gitmodules
+.opencode
+.agents~HEAD
+.opencode~HEAD
+workbench/
+.cursor
+.windsurf
+.vscode
+
+# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
+/rector.php
+/phpinsights.php
+/.cursor
+/.cursor/
+/.windsurf
+/.windsurf/
+/.vscode
+/.vscode/
+.cursor~*
+.windsurf~*
+tests/activity_coverage.xml
+
+# module-root-hygiene (story module-root-hygiene)
+/.github/skills/
+docs/graphify
+resources/lang
+Activity

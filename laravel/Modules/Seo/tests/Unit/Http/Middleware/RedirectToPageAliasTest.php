@@ -7,7 +7,7 @@ use Modules\Seo\Http\Middleware\RedirectToCanonicalPath;
 use Modules\Seo\Tests\Support\FakeTenantSeoConfig;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\TestCase;
+use Modules\Seo\Tests\TestCase;
 
 uses(TestCase::class);
 

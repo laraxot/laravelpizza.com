@@ -12,6 +12,12 @@ status: draft
 
 # Risoluzione Problemi con Assets dei Temi
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 > [!NOTE]
 > Questo documento è collegato alla documentazione principale in `/docs/VITE_ASSETS_TROUBLESHOOTING.md`
 
@@ -63,6 +69,10 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 
 3. **Ambiente di Sviluppo**
    - In sviluppo: utilizzare `npm run dev`
+<<<<<<< .merge_file_vleQnk
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+=======
+   - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
+>>>>>>> .merge_file_5Zq2H6
 
 Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

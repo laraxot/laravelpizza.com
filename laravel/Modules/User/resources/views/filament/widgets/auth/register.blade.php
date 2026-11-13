@@ -9,6 +9,13 @@ declare(strict_types=1);
     E' il ripiego senza consensi: per la registrazione con privacy e condizioni usare Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget.
     Un tema puo' sostituirlo con pub_theme::filament.widgets.auth.register.
 --}}
+@push('head')
+    {{-- Widget Filament in FO: @filamentStyles non copre le pagine pubbliche
+         (nessun panel attivo), quindi il CSS Filament va linkato qui.
+         Il widget si auto-provisiona: dove viene montato, gli asset ci sono. --}}
+    <link rel="stylesheet" href="{{ asset('css/filament/filament/app.css') }}">
+@endpush
+
 <div class="space-y-6">
     <form wire:submit="save" novalidate class="space-y-6">
         {{ $this->form }}

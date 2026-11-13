@@ -117,3 +117,7 @@ Non toccati: `Modules/Comment/**`, `UserServiceProvider.php`, `UserPolicy`, `rou
 ## Esito
 
 (da compilare a fine lavoro)
+
+---
+
+Nota di un'altra sessione (2026-11-12, aggiunta in coda, il resto della story non è toccato): la policy della password dei due form di reset (`getResetPasswordFormSchema`, `getPasswordResetConfirmFormSchema`) è stata allineata a quella della registrazione in [DCP-446](./dcp-446-reset-password-con-la-policy-della-registrazione.story.md). Qui non cambia nulla: questa story resta sul layout, la lingua e l'accessibilità delle pagine.

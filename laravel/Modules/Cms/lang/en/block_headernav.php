@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 return [
+    'menu' => [
+        'toggle' => 'Toggle menu',
+    ],
     'user_menu' => [
         'profile' => [
             'label' => 'Profile',

@@ -122,6 +122,21 @@ class PasswordExpired extends \Filament\Pages\Page implements HasForms
 - Logica business specifica per gestione password scaduta
 - Non necessita funzionalità aggiuntive XotBase (rilevamento modello, autorizzazioni avanzate, etc.)
 
+#### 5. Reset password (policy unica)
+
+I due schemi del reset, `UserForm::getResetPasswordFormSchema()` (con token) e `UserForm::getPasswordResetConfirmFormSchema()` (conferma), applicano
+alla password **la stessa policy della registrazione**: `->rule(Password::default())`, cioe' `Password::defaults()` impostato da `PasswordData`
+(minimo 8, maiuscole e minuscole, lettere, numeri, simboli, `uncompromised`).
+
+**Perche'**: fino al 2026-11-11 il reset aveva solo `minLength(8)` e accettava `12345678` e `aaaaaaaa` (audit front office, E-01): chi resetta
+poteva scegliere una password piu' debole di quella con cui si era registrato. Una regola nuova sulla policy si cambia in `PasswordData`, mai nei
+singoli schemi.
+
+**Guardia**: `tests/Unit/Filament/Schemas/PasswordResetUsesPasswordPolicyTest.php` (entrambi gli schemi: rifiuta `12345678`, `aaaaaaaa`, `abc`;
+accetta una password forte). `uncompromised` fa una chiamata a HIBP: nei test serve `Http::fake()`, altrimenti l'esito dipende dalla rete e da quanto
+e' nota la password di prova. Le regole si leggono per reflection sulla proprieta' `rules` del campo, perche' `getValidationRules()` chiede il
+container del form (per `same()`) e fuori da un form montato non e' inizializzato.
+
 ## Pattern Comune
 
 Tutte queste pagine condividono:

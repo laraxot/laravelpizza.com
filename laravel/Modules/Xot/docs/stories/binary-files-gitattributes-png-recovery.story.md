@@ -97,3 +97,29 @@ conflitto di merge mai risolti (`<<<<<<<`, `=======`, `>>>>>>>`).
 - Rischio residuo separato: `check-no-git-lfs.sh` rileva ancora due pointer LFS già
   presenti in `Modules/Weighing/laravel/Modules/Geo/docs/img/`; non sono stati alterati
   perché questa tranche riguarda esclusivamente gli attributi Git.
+
+## Aggiornamento 2026-11-10 - correzione a monte nei repository dei moduli
+
+- Fase BMAD: Quick Flow, implementazione e verifica; owner Xot.
+- Dopo il pull dei moduli la root mostrava 1.797 modifiche. Fra queste, **453 binari
+  integri in root ma corrotti nei repository dei moduli** (`\r\n` → `\n`, esattamente
+  il rischio "mirror al root" segnalato sopra). Committare il mirror così com'era
+  avrebbe annullato il recupero del 2026-11-05.
+- Ripristinati nel working tree dei moduli 458 binari, ognuno solo se la versione
+  corrotta coincide byte per byte con la sorgente integra dopo `CRLF→LF` (quindi è la
+  stessa immagine):
+  - 453 dalla root `HEAD`;
+  - `Geo/public/assets/images/{layers,layers-2x,marker-shadow}.png` da
+    `Geo/node_modules/leaflet/dist/images/` (Leaflet 1.9.4);
+  - `Geo/public/assets/images/marker-icon{,-2x}.png` da `Geo/resources/css/images/`
+    (icone personalizzate, diverse da quelle di Leaflet).
+  Repository toccati: Blog (16), Cms (2), Gdpr (2), Geo (53), Job (3), Lang (2),
+  Notify (17), Rating (1), Tenant (3), UI (24), User (4), Sixteen (322), TwentyOne (9).
+- Il pull aveva riportato le righe `*.ext !text !filter !merge !diff` nei
+  `.gitattributes` di **Blog** e **Comment**: tolte di nuovo; `git check-attr text`
+  sui `.png` torna `unset`.
+- Ancora non recuperabile: `Cms/docs/screenshots/design-comuni/reference-homepage.png`
+  (corrotto dal primo commit, già nell'elenco dei 22 sopra).
+- Rischio residuo: lo strumento di sync che rimette `!text` nei `.gitattributes` dei
+  moduli non è nel checkout (`bashscripts/templates/` non esiste); finché non viene
+  corretto a monte, ogni pull va ricontrollato con la verifica della firma PNG.

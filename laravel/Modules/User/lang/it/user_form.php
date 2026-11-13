@@ -38,34 +38,9 @@ return [
             'label' => 'Ricordami',
             'description' => 'Mantieni la sessione attiva su questo dispositivo',
             'helper_text' => 'Sessione prolungata su dispositivo attendibile',
-            'placeholder' => 'remember',
-        ],
-        'state' => [
-            'description' => 'state',
-            'label' => 'state',
-            'placeholder' => 'state',
-            'helper_text' => 'state',
-        ],
-        'type' => [
-            'label' => 'type',
-            'placeholder' => 'type',
-            'helper_text' => 'type',
-            'description' => 'type',
-        ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-        'name' => [
-            'label' => 'name',
-            'placeholder' => 'name',
-            'helper_text' => 'name',
-            'description' => 'name',
         ],
         'token' => [
-            'description' => 'token',
-            'helper_text' => 'token',
             'label' => 'token',
-            'placeholder' => 'token',
         ],
     ],
     'actions' => [
@@ -80,6 +55,7 @@ return [
             'tooltip' => 'Nascondi password',
         ],
     ],
+<<<<<<< .merge_file_T3WJVU
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -90,4 +66,6 @@ return [
             'heading' => 'worker',
         ],
     ],
+=======
+>>>>>>> .merge_file_iPwtsu
 ];

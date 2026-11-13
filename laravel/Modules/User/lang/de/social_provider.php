@@ -17,7 +17,6 @@ return [
         'sort' => '93',
         'icon' => 'user-user-social',
     ],
-    'fields' => [],
     'actions' => [
         'import' => [
             'fields' => [
@@ -30,9 +29,6 @@ return [
                 'name' => 'Nome area',
                 'parent_name' => 'Nome area livello superiore',
             ],
-        ],
-        'create' => [
-            'label' => 'create',
         ],
     ],
     'plural' => [

@@ -8,7 +8,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Password;
 use Modules\User\Actions\Auth\ConsumeAuthSubmissionSlotAction;
 use Modules\User\Enums\AuthThrottleScope;
-use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
 /**

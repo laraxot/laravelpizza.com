@@ -18,7 +18,7 @@ uses(TestCase::class);
  */
 test('login form schema source keeps password revealable filament chain', function (): void {
     $source = (string) file_get_contents(
-        dirname(__DIR__, 6).'/app/Filament/Widgets/Auth/Schemas/UserForm.php'
+        dirname(__DIR__, 6).'/app/Filament/Resources/UserResource/Schemas/UserForm.php'
     );
 
     expect($source)

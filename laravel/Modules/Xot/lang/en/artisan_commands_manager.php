@@ -38,35 +38,7 @@ return [
             ],
         ],
     ],
-    'actions' => [
-        'queue_restart' => [
-            'label' => 'queue_restart',
-        ],
-        'event_cache' => [
-            'label' => 'event_cache',
-        ],
-        'route_cache' => [
-            'label' => 'route_cache',
-        ],
-        'config_cache' => [
-            'label' => 'config_cache',
-        ],
-        'view_cache' => [
-            'label' => 'view_cache',
-        ],
-        'filament_optimize' => [
-            'label' => 'filament_optimize',
-        ],
-        'filament_upgrade' => [
-            'label' => 'filament_upgrade',
-        ],
-        'migrate' => [
-            'label' => 'migrate',
-        ],
-    ],
     'title' => 'Artisan Commands Manager',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
 ];

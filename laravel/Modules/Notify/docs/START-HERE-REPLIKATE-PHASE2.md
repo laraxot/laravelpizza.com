@@ -13,6 +13,12 @@ superseded_by: start-here-replikate-phase2.md
 
 # 🚀 START HERE - REPLIKATE Phase 2
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 **Status**: Phase 1 Analysis Complete ✅  
 **Your Job**: Execute Phase 2 - HTML Structure Fixes ⏳  
 **Time Estimate**: ~50 minutes
@@ -145,7 +151,10 @@ cd laravel/Themes/Sixteen
 npm run build
 
 # Copy assets
+<<<<<<< .merge_file_yZj0Ku
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_lXUKpf
 
 # Clear cache
 php artisan optimize:clear

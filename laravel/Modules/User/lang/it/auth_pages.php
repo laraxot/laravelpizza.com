@@ -49,6 +49,7 @@ return [
         ],
         'request_another' => [
             'label' => 'clicca qui per richiederne un altro',
+            'sending' => 'invio in corso…',
         ],
     ],
     'password_confirm' => [

@@ -139,4 +139,22 @@ return [
             'label' => 'Elimina Coordinates',
         ],
     ],
+    'address_form' => [
+        'section' => [
+            'heading' => 'Coordinate',
+            'description' => 'Latitudine e longitudine. Salva prima l\'indirizzo, poi aggiorna le coordinate per distanza e mappa.',
+        ],
+        'geocode' => [
+            'label' => 'Aggiorna da indirizzo',
+            'success_title' => 'Coordinate aggiornate dall\'indirizzo',
+            'failed_title' => 'Geocoding non riuscito',
+        ],
+        'map' => [
+            'heading' => 'Mappa della posizione',
+            'aria_label' => 'Mappa della posizione',
+            'google_maps' => 'Apri in Google Maps',
+            'viamichelin' => 'Apri in ViaMichelin',
+            'missing' => 'Coordinate non disponibili. Completa l\'indirizzo e usa "Aggiorna da indirizzo" nella sezione Coordinate.',
+        ],
+    ],
 ];

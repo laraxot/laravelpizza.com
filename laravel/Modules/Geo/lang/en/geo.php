@@ -192,10 +192,6 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-
-    // Coordinate Picker - Map Controls
     'coordinate-picker' => [
         'search_placeholder' => 'Search for a place...',
         'use_my_location' => 'Use my location',

@@ -18,6 +18,10 @@ interface CanReceivePushNotifications
 
     /**
      * Chiave primaria del modello notificabile (come Model::getKey()).
+     * Senza tipo di ritorno: Model::getKey() non lo dichiara e un tipo qui renderebbe
+     * incompatibile (fatal) ogni modello che implementa il contratto.
+     *
+     * @return int|string|null
      */
-    public function getKey(): mixed;
+    public function getKey();
 }

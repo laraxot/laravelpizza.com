@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
@@ -11,6 +9,9 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Modules\Cms\Actions\ResolvePageAction;
+use Modules\Cms\Tests\Feature\Dcp283AllowViewPolicy;
+use Modules\Cms\Tests\Feature\Dcp283DenyViewPolicy;
+use Modules\Cms\Tests\Feature\Dcp283Item;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
@@ -25,41 +26,6 @@ use PHPUnit\Framework\Assert;
  */
 
 /** Modello di prova su una tabella sqlite in memoria, con uno scope globale: nasconde le righe `visible = 0`. */
-final class Dcp283Item extends Model
-{
-    public $timestamps = false;
-
-    protected $connection = 'dcp283';
-
-    protected $table = 'dcp283_items';
-
-    protected $guarded = [];
-
-    #[Override]
-    protected static function booted(): void
-    {
-        self::addGlobalScope('dcp283-visible', static function (Builder $query): void {
-            $query->where('visible', true);
-        });
-    }
-}
-
-final class Dcp283AllowViewPolicy
-{
-    public function view(?Authenticatable $user, Dcp283Item $model): bool
-    {
-        return true;
-    }
-}
-
-final class Dcp283DenyViewPolicy
-{
-    public function view(?Authenticatable $user, Dcp283Item $model): bool
-    {
-        return false;
-    }
-}
-
 /**
  * Crea la tabella di prova (sqlite in memoria, una per test) con una riga visibile (id 1) e una nascosta dallo scope (id 2).
  */

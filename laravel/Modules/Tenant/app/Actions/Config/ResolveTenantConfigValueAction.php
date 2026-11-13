@@ -21,54 +21,41 @@ class ResolveTenantConfigValueAction
      * Works consistently in web, console, queue, and scheduler contexts.
      *
      * @param  string  $key  Config key (e.g., 'app.name', 'mail.driver')
-     * @param  string|int|array<mixed>|null  $defaultValue  Default value if config not found
+     * @param  string|int|array<mixed>|null  $_default  Default value if config not found
      * @return float|int|string|array<mixed>|null Resolved configuration value
      *
      * @throws Exception If config key is invalid or value type is unexpected
      *
      * @see docs/resolve-tenant-config-console-debate.md
      */
-    public function execute(string $key, string|int|array|null $defaultValue = null): float|int|string|array|null
+    public function execute(string $key, string|int|array|null $_default = null): float|int|string|array|null
     {
         $group = Arr::first(explode('.', $key));
         if ($group === null || $group === '') {
             throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
         }
 
-        $mergeConf = $this->buildMergedGroupConfig($group);
-        Config::set($group, $mergeConf);
-
-        return $this->assertValidConfigValue(config($key, $defaultValue));
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    private function buildMergedGroupConfig(string $group): array
-    {
         $originalConf = config($group);
         $tenantName = app(GetTenantNameAction::class)->execute();
+
         $configName = str_replace('/', '.', $tenantName).'.'.$group;
         $extraConf = config($configName);
 
-        $originalConfTyped = is_array($originalConf)
-            ? app(FilterConfigStringKeysAction::class)->execute($originalConf)
-            : [];
+        if (! \is_array($originalConf)) {
+            $originalConf = [];
+        }
 
-        $extraConfTyped = is_array($extraConf)
-            ? app(FilterConfigStringKeysAction::class)->execute($extraConf)
-            : [];
+        if (! \is_array($extraConf)) {
+            $extraConf = [];
+        }
 
-        return app(MergeRecursiveStringKeyConfigAction::class)->execute($originalConfTyped, $extraConfTyped);
-    }
+        $mergeConf = array_replace_recursive($originalConf, $extraConf);
 
-    /**
-     * @param  mixed  $res  Raw config() payload; only scalar/array values are accepted
-     * @return float|int|string|array<mixed>|null
-     */
-    private function assertValidConfigValue(mixed $res): float|int|string|array|null
-    {
-        if (is_numeric($res) || is_string($res) || is_array($res) || $res === null) {
+        Config::set($group, $mergeConf);
+
+        $res = config($key, $_default);
+
+        if (is_numeric($res) || \is_string($res) || \is_array($res) || $res === null) {
             return $res;
         }
 

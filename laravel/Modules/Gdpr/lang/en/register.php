@@ -126,7 +126,7 @@ return [
     'required_consent_missing' => 'You must accept all required consents to proceed.',
     'success' => 'Registration completed successfully! Your account has been created GDPR compliant.',
     'throttle' => 'Too many registration attempts. Try again in :seconds seconds.',
-    'success_message' => 'Your account is ready',
+    'success_message' => 'Your account is ready. We sent you an email: open the link to confirm your address before submitting a report.',
     'error' => 'Registration error',
     'error_message' => 'An error occurred during registration. Please try again later. If the problem persists, contact our support.',
     'clickbait' => [

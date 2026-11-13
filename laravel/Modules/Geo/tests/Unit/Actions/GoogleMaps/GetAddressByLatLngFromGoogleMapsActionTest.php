@@ -136,7 +136,7 @@ it('throws exception when no results found', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('No address found', $exception->getMessage());
+        Assert::assertSame('No address found for coordinates', $exception->getMessage());
     }
 });
 
@@ -157,7 +157,7 @@ it('throws exception for invalid response status', function (): void {
         $action->execute(45.4642, 9.1900);
         Assert::fail('Expected RuntimeException was not thrown');
     } catch (\RuntimeException $exception) {
-        Assert::assertSame('No address found', $exception->getMessage());
+        Assert::assertSame('No address found for coordinates', $exception->getMessage());
     }
 });
 

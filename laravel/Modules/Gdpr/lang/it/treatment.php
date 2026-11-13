@@ -2,14 +2,6 @@
 
 declare(strict_types=1);
 
-// Gdpr translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Gdpr/docs/wiki — domain i18n only.
-// File: lang/it/treatment.php
-// GDPR treatment resource — traduzioni Filament (LangServiceProvider).
-// Chiavi: navigation, fields, legal_bases, actions.
-// Canon: docs/wiki/concepts/treatment-translations.md
-
 return [
     'navigation' => [
         'name' => 'Trattamenti',
@@ -66,19 +58,19 @@ return [
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Colonne',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Riordina',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
+            'label' => 'Azzera filtri',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -103,6 +95,13 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Treatment',
+        ],
+        'logout' => [
+            'tooltip' => '',
+            'icon' => 'logout',
+        ],
+        'profile' => [
+            'icon' => 'profile',
         ],
     ],
 ];

@@ -19,10 +19,15 @@ final class PrivacyPolicyWidget extends XotBaseWidget
 {
     public function render(): View
     {
-        $policyContent = file_get_contents(resource_path('markdown/privacy-policy.md'));
+        /** @var view-string $viewName */
+        $viewName = 'user::filament.widgets.privacy-policy';
+        $policyFile = resource_path('markdown/privacy-policy.md');
+        $policyContent = file_get_contents($policyFile);
 
-        return view('user::filament.widgets.privacy-policy', [
+        return view($viewName, [
             'terms' => Str::markdown($policyContent),
+        ])->layout('filament::components.layouts.base', [
+            'title' => __('user::profile.privacy_policy.title'),
         ]);
     }
 }

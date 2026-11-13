@@ -86,7 +86,6 @@ npm-debug.log*
 *.old2
 # OLD DIRECTORIES (LEGACY CLEANUP)
 *.orig
-package-lock.json
 *.phar
 .php-cs-fixer.cache
 .phpintel

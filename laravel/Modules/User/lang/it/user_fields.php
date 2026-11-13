@@ -2,30 +2,7 @@
 
 declare(strict_types=1);
 
-// User translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: split from user.php for maintainability (<500 LOC).
-// Canon: Modules/User/docs/wiki/concepts/claude-audit-static.md
-// File: lang/it/user_fields.php
 return [
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -40,7 +17,6 @@ return [
             'help' => 'Nome completo dell\'utente',
             'tooltip' => 'Nome e cognome dell\'utente',
             'helper_text' => '',
-            'description' => 'name',
         ],
         'first_name' => [
             'label' => 'Nome',
@@ -64,7 +40,6 @@ return [
             'help' => 'Indirizzo email dell\'utente',
             'tooltip' => 'Email per l\'accesso e le comunicazioni',
             'helper_text' => '',
-            'description' => 'email',
         ],
         'password' => [
             'label' => 'Password',
@@ -72,7 +47,6 @@ return [
             'help' => 'Password per l\'accesso al sistema',
             'tooltip' => 'Password di accesso',
             'helper_text' => '',
-            'description' => 'password',
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',
@@ -309,48 +283,26 @@ return [
             'description' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'layout' => [
-            'label' => 'layout',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'endDate' => [
-            'description' => 'endDate',
             'helper_text' => 'endDate1',
-            'placeholder' => 'endDate',
-            'label' => 'endDate',
             'tooltip' => '',
         ],
         'startDate' => [
-            'description' => 'startDate',
-            'helper_text' => 'startDate',
-            'placeholder' => 'startDate',
-            'label' => 'startDate',
             'tooltip' => '',
-        ],
-        'matr' => [
-            'description' => 'matr',
-            'label' => 'matr',
-            'placeholder' => 'matr',
-            'helper_text' => 'matr',
-        ],
-        'ente' => [
-            'label' => 'ente',
-            'placeholder' => 'ente',
-            'helper_text' => 'ente',
-            'description' => 'ente',
         ],
     ],
 ];

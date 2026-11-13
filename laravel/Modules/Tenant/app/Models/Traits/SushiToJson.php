@@ -5,16 +5,12 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use InvalidArgumentException;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
-use Modules\Tenant\Actions\Json\CreateJsonFileByRecordAction;
-use Modules\Tenant\Actions\Json\DeleteJsonFileByRecordAction;
-use Modules\Tenant\Actions\Json\UpdateJsonFileByRecordAction;
-use Modules\Tenant\Models\Contracts\HasSushiToJson;
-use Modules\Xot\Actions\Arr\EnsureKeysAction;
 use Sushi\Sushi;
-use Webmozart\Assert\Assert;
+use Throwable;
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;
@@ -31,53 +27,7 @@ use function Safe\json_encode;
  */
 trait SushiToJson
 {
-    use Sushi {
-        getSchema as protected sushiGetSchema;
-    }
-    use SushiConnectionByName;
-
-    /**
-     * @return array<string, string>
-     */
-    public function getSchema(): array
-    {
-        $schema = $this->sushiGetSchema();
-        Assert::isArray($schema);
-
-        /** @var array<string, string> $schema */
-        return $schema;
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    public function loadExistingData(): array
-    {
-        $path = $this->getJsonFile();
-
-        if (! File::exists($path)) {
-            return [];
-        }
-
-        $content = File::get($path);
-        $data = json_decode($content, true);
-        Assert::isArray($data);
-
-        /** @var array<string, mixed> $data */
-        return $data;
-    }
-
-    /**
-     * @param  array<int|string, array<string, mixed>>  $data
-     */
-    public function saveToJson(array $data): bool
-    {
-        $path = $this->getJsonFile();
-
-        File::put($path, json_encode($data, JSON_PRETTY_PRINT));
-
-        return true;
-    }
+    use Sushi;
 
     /**
      * Ottiene il percorso del file JSON per il modello corrente.
@@ -88,15 +38,44 @@ trait SushiToJson
     public function getJsonFile(): string
     {
         $tbl = $this->getTable();
+        if (! is_string($tbl)) {
+            throw new InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
+        }
 
         return app(GetTenantFilePathAction::class)->execute('database/content/'.$tbl.'.json');
+    }
+
+    /**
+     * Schema delle colonne della tabella in-memory (Sushi).
+     * Override tipizzato di Sushi::getSchema() — il vendor non dichiara il tipo di ritorno.
+     *
+     * @return array<string, string>
+     */
+    public function getSchema()
+    {
+        $schema = $this->schema ?? [];
+        if (! \is_array($schema)) {
+            return [];
+        }
+
+        /** @var array<string, string> $typedSchema */
+        $typedSchema = [];
+        foreach ($schema as $key => $type) {
+            if (! \is_string($key)) {
+                continue;
+            }
+
+            $typedSchema[$key] = \is_string($type) ? $type : 'string';
+        }
+
+        return $typedSchema;
     }
 
     /**
      * Metodo richiesto da Sushi per popolare la tabella in-memory.
      * Delegato a getSushiRows() per mantenere separazione semantica.
      *
-     * @return array<array-key, array<string, mixed>>
+     * @return array<int, array<string, mixed>>
      */
     public function getRows(): array
     {
@@ -104,74 +83,323 @@ trait SushiToJson
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * Ottiene i dati dal file JSON per il modello Sushi.
+     * I dati vengono normalizzati per garantire compatibilità con Eloquent.
+     *
+     * @return array<int, array<string, mixed>> Array di record per Sushi
+     *
+     * @throws Exception Se i dati non sono in formato array valido
      */
     public function getSushiRows(): array
     {
         $path = $this->getJsonFile();
-        // Tabella vuota, non errore, finche' il file JSON del tenant non esiste: e' il caso del
-        // primo avvio e dei test (`SushiToJsonTraitPestTest` "returns empty rows when json file is missing").
+        $form = $this->getSchema();
+        if (! File::exists($path)) {
+            return [];
+        }
+
+        $data = json_decode(file_get_contents($path), true);
+        if (! \is_array($data)) {
+            throw new Exception('Data is not array ['.$path.']');
+        }
+
+        // Normalize nested arrays/objects into JSON strings for Sushi
+        /** @var array<int, array<string, mixed>> $normalizedData */
+        $normalizedData = [];
+        foreach ($data as $item) {
+            if (! \is_array($item)) {
+                continue;
+            }
+
+            /** @var array<string, mixed> $normalizedItem */
+            $normalizedItem = [];
+            foreach ($item as $key => $value) {
+                $stringKey = is_string($key) ? $key : (string) $key;
+                if (\is_array($value) || \is_object($value)) {
+                    $value = json_encode($value);
+                }
+                $normalizedItem[$stringKey] = $value;
+            }
+
+            $normalizedData[] = $normalizedItem;
+        }
+
+        /** @var array<string, mixed> $safeForm */
+        $safeForm = $form;
+
+        /** @var array<int, array<string, mixed>> $completedData */
+        $completedData = array_map(
+            static function (array $item) use ($safeForm): array {
+                foreach ($safeForm as $key => $_type) {
+                    $safeKey = is_string($key) ? $key : (string) $key;
+
+                    if (! array_key_exists($safeKey, $item)) {
+                        $item[$safeKey] = null;
+                    }
+                }
+
+                ksort($item);
+
+                return $item;
+            },
+            $normalizedData,
+        );
+
+        return array_values($completedData);
+    }
+
+    /**
+     * Carica i dati esistenti dal file JSON.
+     * Preserva la struttura originale dei dati senza normalizzazione.
+     *
+     * @return array<int, array<string, mixed>> Dati esistenti
+     */
+    public function loadExistingData(): array
+    {
+        $path = $this->getJsonFile();
+
         if (! File::exists($path)) {
             return [];
         }
 
         $content = file_get_contents($path);
         $data = json_decode($content, true);
-        if (! \is_array($data)) {
-            throw new Exception('Data is not array ['.$path.']');
+
+        if (! is_array($data)) {
+            return [];
         }
 
-        /** @var array<int|string, array<string, mixed>> $data */
-        $schema = $this->getSchema();
+        // Assicura che i dati abbiano la struttura corretta
+        $result = [];
+        foreach ($data as $item) {
+            if (is_array($item)) {
+                $safeItem = [];
+                foreach ($item as $key => $value) {
+                    $safeItem[(string) $key] = $value;
+                }
 
-        $res = app(EnsureKeysAction::class)->execute($data, array_keys($schema));
+                $result[] = $safeItem;
+            }
+        }
 
-        // La tabella in-memory di Sushi non salva array: i valori annidati diventano stringhe JSON.
-        return array_map(
-            static fn (array $row): array => array_map(
-                static fn (mixed $value): mixed => \is_array($value) || \is_object($value) ? json_encode($value) : $value,
-                $row,
-            ),
-            array_values($res),
-        );
+        return $result;
     }
 
-    protected function sushiShouldCache(): bool
+    /**
+     * Salva i dati del modello nel file JSON.
+     * Crea la directory se non esiste e salva con formattazione JSON.
+     * Utilizza JSON_PRETTY_PRINT e JSON_UNESCAPED_UNICODE per leggibilità.
+     *
+     * @param  array<int, array<string, mixed>>  $data  Array di record da salvare
+     * @return bool True se il salvataggio è riuscito, false in caso di errore
+     */
+    public function saveToJson(array $data): bool
     {
-        return false;
+        try {
+            $file = $this->getJsonFile();
+            $directory = dirname($file);
+
+            if (! File::exists($directory)) {
+                File::makeDirectory($directory, 0o755, true, true);
+            }
+
+            // Validate data structure
+            $validatedData = [];
+            foreach ($data as $item) {
+                if (is_array($item)) {
+                    $validatedItem = [];
+                    foreach ($item as $key => $value) {
+                        $stringKey = is_string($key) ? $key : (string) $key;
+                        $validatedItem[$stringKey] = $value;
+                    }
+                    $validatedData[] = $validatedItem;
+                }
+            }
+
+            $content = json_encode($validatedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            File::put($file, $content);
+
+            return true;
+        } catch (Exception $e) {
+            report($e);
+
+            return false;
+        }
+    }
+
+    /**
+     * Ottiene l'ID successivo disponibile per un nuovo record.
+     *
+     * @return int ID successivo disponibile
+     */
+    public function getNextId(): int
+    {
+        $existingData = $this->loadExistingData();
+
+        if (empty($existingData)) {
+            return 1;
+        }
+
+        $keys = array_keys($existingData);
+        if (empty($keys)) {
+            return 1;
+        }
+
+        $maxId = max($keys);
+
+        return is_numeric($maxId) ? ((int) $maxId) + 1 : 1;
     }
 
     /**
      * Boot method per il trait SushiToJson.
      * Gestisce gli eventi di creazione, aggiornamento e cancellazione
      * per sincronizzare automaticamente i dati con i file JSON.
-     *
-     * I modelli Sushi read-only (che usano il trait solo per leggere il JSON)
-     * non implementano HasSushiToJson: su di loro la sincronizzazione non deve
-     * essere registrata, altrimenti le callback riceverebbero un tipo non
-     * conforme al contratto e il listener fallirebbe con TypeError.
      */
     protected static function bootSushiToJson(): void
     {
-        static::creating(static function (Model $record): void {
-            if (! $record instanceof HasSushiToJson) {
-                return;
+        static::creating(function ($model): void {
+            /** @var static $modelWithTrait */
+            $modelWithTrait = $model;
+            $file = $modelWithTrait->getJsonFile();
+
+            // Load existing data and compute next ID
+            $existingData = $modelWithTrait->loadExistingData();
+            $rows = $existingData;
+            $maxIdFromFile = 0;
+            foreach ($rows as $r) {
+                if (! \is_array($r)) {
+                    continue;
+                }
+                $rawId = $r['id'] ?? 0;
+                $id = \is_numeric($rawId) ? ((int) $rawId) : 0;
+                $maxIdFromFile = max($maxIdFromFile, $id);
             }
-            app(CreateJsonFileByRecordAction::class)->execute($record);
+            // Safely read current max id from table (Sushi in-memory)
+            $maxIdFromDb = 0;
+            try {
+                /** @var int|null $dbMax */
+                $dbMax = static::query()->max('id');
+                if (\is_int($dbMax)) {
+                    $maxIdFromDb = $dbMax;
+                }
+            } catch (Throwable) {
+                // ignore if table not initialized yet
+            }
+
+            $nextId = max($maxIdFromFile, $maxIdFromDb) + 1;
+            $modelWithTrait->setAttribute('id', $nextId);
+            $modelWithTrait->setAttribute('updated_at', now());
+            $modelWithTrait->setAttribute('created_at', now());
+
+            // Set audit fields if available via helper
+            $authId = $modelWithTrait->authId();
+            if ($authId !== null) {
+                $modelWithTrait->setAttribute('updated_by', $authId);
+                $modelWithTrait->setAttribute('created_by', $authId);
+            }
+
+            // Add new record to existing data
+            $existingData[] = $modelWithTrait->getAttributes();
+
+            // Ensure directory exists and save
+            $modelWithTrait->ensureDirectoryExists($file);
+            $modelWithTrait->saveToJson($existingData);
         });
 
-        static::updating(static function (Model $record): void {
-            if (! $record instanceof HasSushiToJson) {
-                return;
+        static::updating(function ($model): void {
+            /** @var static $modelWithTrait */
+            $modelWithTrait = $model;
+            $modelWithTrait->setAttribute('updated_at', now());
+
+            // Set audit fields if available via helper
+            $authId = $modelWithTrait->authId();
+            if ($authId !== null) {
+                $modelWithTrait->setAttribute('updated_by', $authId);
             }
-            app(UpdateJsonFileByRecordAction::class)->execute($record);
+
+            // Update existing record
+            $existingData = $modelWithTrait->loadExistingData();
+            $rawId = $modelWithTrait->getAttribute('id');
+            $id = is_numeric($rawId) ? ((int) $rawId) : 0;
+
+            if ($id > 0) {
+                $index = $modelWithTrait->findRowIndexById($existingData, $id);
+                if ($index !== null) {
+                    /** @var array<string, mixed> $modelArray */
+                    $modelArray = $modelWithTrait->toArray();
+                    $existingData[$index] = $modelArray;
+
+                    $modelWithTrait->saveToJson($existingData);
+                }
+            }
         });
 
-        static::deleting(static function (Model $record): void {
-            if (! $record instanceof HasSushiToJson) {
-                return;
+        static::deleting(function ($model): void {
+            /** @var static $modelWithTrait */
+            $modelWithTrait = $model;
+            $rawId = $modelWithTrait->getAttribute('id');
+            $id = is_numeric($rawId) ? ((int) $rawId) : 0;
+
+            if ($id > 0) {
+                $existingData = $modelWithTrait->loadExistingData();
+                $index = $modelWithTrait->findRowIndexById($existingData, $id);
+
+                if ($index !== null) {
+                    unset($existingData[$index]);
+                    $existingData = array_values($existingData);
+                    $modelWithTrait->saveToJson($existingData);
+                }
             }
-            app(DeleteJsonFileByRecordAction::class)->execute($record);
         });
+    }
+
+    /**
+     * Trova l'indice del record nell'array dato un id.
+     *
+     * @param  array<int, array<string, mixed>>  $rows
+     * @return int|null Indice se trovato, altrimenti null
+     */
+    protected function findRowIndexById(array $rows, int $id): ?int
+    {
+        foreach ($rows as $index => $row) {
+            if (! is_array($row)) {
+                continue;
+            }
+
+            $rawId = $row['id'] ?? null;
+            if (is_numeric($rawId) && ((int) $rawId) === $id) {
+                return (int) $index;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Ottiene l'ID dell'utente autenticato per i campi di audit.
+     */
+    public function authId(): int|string|null
+    {
+        if (\function_exists('authId')) {
+            return authId();
+        }
+
+        if (class_exists('\Illuminate\Support\Facades\Auth')) {
+            return Auth::id();
+        }
+
+        return null;
+    }
+
+    /**
+     * Assicura che la directory per il file JSON esista.
+     */
+    protected function ensureDirectoryExists(string $filePath): void
+    {
+        $directory = dirname($filePath);
+
+        if (! File::exists($directory)) {
+            File::makeDirectory($directory, 0o755, true, true);
+        }
     }
 }

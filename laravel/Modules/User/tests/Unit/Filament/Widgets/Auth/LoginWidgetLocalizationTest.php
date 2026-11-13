@@ -10,10 +10,13 @@ uses(TestCase::class);
 /**
  * Regressione D37: il redirect post-login non deve chiamare
  * getLocalizedURL() con un path come primo argomento (firma locale-first).
+ *
+ * La costruzione dell'URL localizzato vive in `GetPostLoginUrlAction`
+ * (il widget delega il redirect): il contratto si verifica li'.
  */
-test('login widget source uses localizeURL with explicit locale second', function (): void {
+test('post-login url action uses localizeURL with explicit locale second', function (): void {
     $source = (string) file_get_contents(
-        dirname(__DIR__, 5).'/app/Filament/Widgets/Auth/LoginWidget.php'
+        dirname(__DIR__, 5).'/app/Actions/Auth/GetPostLoginUrlAction.php'
     );
 
     expect($source)

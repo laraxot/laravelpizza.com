@@ -8,10 +8,69 @@ return [
             'label' => 'Crea',
             'tooltip' => 'Crea nuovo file di traduzione',
             'success' => 'File di traduzione creato con successo',
+            'icon' => 'create',
         ],
         'lang' => [
             'label' => 'Lingua',
             'tooltip' => 'Seleziona lingua',
+            'icon' => 'lang',
+        ],
+        'logout' => [
+            'tooltip' => '',
+            'icon' => 'logout',
+            'label' => 'Esci',
+        ],
+        'applyFilters' => [
+            'label' => 'Applica filtri',
+            'icon' => 'applyFilters',
+            'tooltip' => '',
+        ],
+        'openFilters' => [
+            'label' => 'Filtri',
+            'icon' => 'openFilters',
+            'tooltip' => '',
+        ],
+        'resetFilters' => [
+            'label' => 'Azzera filtri',
+            'icon' => 'resetFilters',
+            'tooltip' => '',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'Applica colonne',
+            'icon' => 'applyTableColumnManager',
+            'tooltip' => '',
+        ],
+        'openColumnManager' => [
+            'label' => 'Scegli colonne',
+            'icon' => 'openColumnManager',
+            'tooltip' => '',
+        ],
+        'resetColumnManager' => [
+            'label' => 'Ripristina colonne',
+            'icon' => 'resetColumnManager',
+            'tooltip' => '',
+        ],
+        'reorderRecords' => [
+            'label' => 'Riordina',
+            'icon' => 'reorderRecords',
+            'tooltip' => '',
+        ],
+        'removeAllFilters' => [
+            'label' => 'Rimuovi tutti i filtri',
+            'icon' => 'removeAllFilters',
+            'tooltip' => '',
+        ],
+        'profile' => [
+            'tooltip' => '',
+            'icon' => 'profile',
+            'label' => 'Profile',
+        ],
+        'cancel' => [
+            'tooltip' => '',
+            'icon' => 'cancel',
+        ],
+        'save' => [
+            'icon' => 'save',
         ],
     ],
     'fields' => [
@@ -69,7 +128,7 @@ return [
                     ],
                 ],
             ],
-            'label' => '',
+            'label' => 'Istantanee',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -89,7 +148,7 @@ return [
             'description' => '',
         ],
         'delete' => [
-            'label' => 'delete',
+            'label' => 'Elimina',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

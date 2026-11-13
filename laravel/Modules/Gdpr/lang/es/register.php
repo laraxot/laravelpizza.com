@@ -123,7 +123,7 @@ return [
     'required_consent_missing' => 'Debes aceptar todos los consentimientos obligatorios para continuar.',
     'success' => '¡Registro completado con éxito! Tu cuenta ha sido creada cumpliendo con el GDPR.',
     'throttle' => 'Demasiados intentos de registro. Vuelve a intentarlo en :seconds segundos.',
-    'success_message' => 'Tu cuenta está lista',
+    'success_message' => 'Tu cuenta está lista. Te hemos enviado un correo: abre el enlace para confirmar tu dirección antes de enviar un aviso.',
     'error' => 'Error de registro',
     'error_message' => 'Ocurrió un error durante el registro. Por favor inténtalo de nuevo más tarde. Si el problema persiste, contacta nuestro soporte.',
     'clickbait' => [

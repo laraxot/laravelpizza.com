@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Modules\Seo\Http\Middleware\RedirectToCanonicalPath;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\TestCase;
+use Modules\Seo\Tests\TestCase;
 
 uses(TestCase::class);
 

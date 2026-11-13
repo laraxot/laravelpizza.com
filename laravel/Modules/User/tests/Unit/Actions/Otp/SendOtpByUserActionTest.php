@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use Mockery\MockInterface;
@@ -31,8 +32,11 @@ describe('SendOtpByUserAction', function () {
             $mock->allows(['random' => 'random-otp-12']);
         });
 
-        $mockHasher = configureMock(Hasher::class, function (MockInterface $mock): void {
-            $mock->allows(['make' => str_repeat('a', 60)]);
+        // Il mutator di BaseUser conserva solo un valore gia' hashato: il finto hasher
+        // deve restituire un hash vero, altrimenti il model lo riasha.
+        $hashedOtp = Hash::make('random-otp-12');
+        $mockHasher = configureMock(Hasher::class, function (MockInterface $mock) use ($hashedOtp): void {
+            $mock->allows(['make' => $hashedOtp]);
         });
 
         $action = new SendOtpByUserAction($passwordData, $mockStr, $mockHasher);
@@ -43,7 +47,7 @@ describe('SendOtpByUserAction', function () {
         $action->execute($user);
 
         $user->refresh();
-        Assert::assertSame(str_repeat('a', 60), $user->password);
+        Assert::assertSame($hashedOtp, $user->password);
         Assert::assertTrue($user->is_otp);
         Assert::assertSame($now->addMinutes(10)->toDateTimeString(), $user->password_expires_at?->toDateTimeString());
 

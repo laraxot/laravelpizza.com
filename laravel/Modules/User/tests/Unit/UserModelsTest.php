@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 use Modules\User\Database\Factories\PermissionFactory;
-use Modules\User\Database\Factories\ProfileFactory;
 use Modules\User\Database\Factories\RoleFactory;
 use Modules\User\Database\Factories\SocialiteUserFactory;
 use Modules\User\Database\Factories\TenantFactory;
 use Modules\User\Models\Permission;
-use Modules\User\Models\Profile;
 use Modules\User\Models\Role;
 use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\Tenant;
 use Modules\User\Tests\TestCase;
+use Modules\Xot\Datas\XotData;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
@@ -40,12 +39,18 @@ it('can create a user with profile', function () {
         'email' => $email,
     ]);
 
-    ProfileFactory::new()->createOne(['user_id' => $user->id]);
+    // $user->profile usa la classe Profile del progetto (XotData::getProfileClass(), es. Fixcity su
+    // un'altra connessione): il profilo va creato con quella, non con Modules\User\Models\Profile.
+    $profileClass = XotData::make()->getProfileClass();
+    $profile = new $profileClass;
+    $profile->setAttribute('user_id', $user->id);
+    $profile->save();
 
     $user->refresh();
 
-    Assert::assertInstanceOf(Profile::class, $user->profile);
-    Assert::assertSame($user->id, $user->profile->user_id);
+    $userProfile = $user->profile;
+    Assert::assertInstanceOf($profileClass, $userProfile);
+    Assert::assertSame($user->id, $userProfile->getAttribute('user_id'));
 });
 
 it('can authenticate a user', function () {

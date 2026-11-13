@@ -21,7 +21,7 @@ it('throws exception when api key is not configured', function (): void {
 
         Assert::fail('Expected GoogleMapsApiException was not thrown');
     } catch (GoogleMapsApiException $exception) {
-        Assert::assertSame('API key non configurata', $exception->getMessage());
+        Assert::assertSame('API key di Google Maps non configurata', $exception->getMessage());
     }
 });
 
@@ -52,7 +52,7 @@ it('throws exception when api response is not successful', function (): void {
 
         Assert::fail('Expected GoogleMapsApiException was not thrown');
     } catch (GoogleMapsApiException $exception) {
-        Assert::assertSame('Richiesta fallita', $exception->getMessage());
+        Assert::assertSame('Richiesta a Google Maps fallita: HTTP 500', $exception->getMessage());
     }
 });
 
@@ -64,6 +64,7 @@ it('throws exception when no results found', function (): void {
     Http::fake([
         '*' => Http::response([
             'results' => [],
+            'status' => 'ZERO_RESULTS',
         ], 200),
     ]);
 
@@ -72,7 +73,7 @@ it('throws exception when no results found', function (): void {
 
         Assert::fail('Expected GoogleMapsApiException was not thrown');
     } catch (GoogleMapsApiException $exception) {
-        Assert::assertSame('Nessun risultato', $exception->getMessage());
+        Assert::assertSame('Nessun risultato trovato', $exception->getMessage());
     }
 });
 
@@ -83,7 +84,10 @@ it('returns address data for valid address', function (): void {
 
     Http::fake([
         '*' => Http::response([
+            'status' => 'OK',
             'results' => [[
+                'formatted_address' => 'Via Roma, 1, 20100 Milano MI, Italia',
+                'types' => ['street_address'],
                 'geometry' => [
                     'location' => [
                         'lat' => 45.4642,
@@ -137,7 +141,10 @@ it('handles missing optional address components', function (): void {
 
     Http::fake([
         '*' => Http::response([
+            'status' => 'OK',
             'results' => [[
+                'formatted_address' => 'Via Roma, 1, 20100 Milano MI, Italia',
+                'types' => ['street_address'],
                 'geometry' => [
                     'location' => [
                         'lat' => 45.4642,

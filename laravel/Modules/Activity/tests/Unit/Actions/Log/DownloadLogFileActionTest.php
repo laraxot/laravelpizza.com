@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

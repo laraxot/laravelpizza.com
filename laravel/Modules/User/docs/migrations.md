@@ -39,7 +39,7 @@ All models in User module must maintain 1:1:1:1 parity with migrations, seeders,
 
 | Model | Migration | Status | Notes |
 |-------|-----------|--------|-------|
-| User | 2026_02_13_172136_create_users_table.php | ✅ | Main users table, Jetstream-based |
+| User | 2026_11_12_120000_create_users_table.php | ✅ | Main users table, Jetstream-based; owner migration timestamp refreshed for schema repair |
 | Team | 2026_07_15_120000_create_teams_table.php | ✅ | Multi-user teams, owner_id pivot |
 | Profile | 2026_04_28_120000_create_profiles_table.php | ✅ | Extended user info (addresses, etc) |
 | TeamUser | 2023_01_01_000004_create_team_user_table.php | ✅ | Pivot: Team ↔ User membership |
@@ -48,7 +48,7 @@ All models in User module must maintain 1:1:1:1 parity with migrations, seeders,
 | DeviceUser | 2023_01_01_000004_create_device_user_table.php | ✅ | Pivot: Device ↔ User mapping |
 | TenantUser | 2026_01_01_000002_create_tenant_user_table.php | ✅ | Pivot: Tenant ↔ User access |
 | SsoProvider | 2025_10_15_153835_create_sso_providers_table.php | ✅ | OAuth/SAML providers (Socialite) |
-| SocialiteUser | 2023_01_01_000003_create_socialite_user_table.php | ✅ | OAuth user identities (GitHub, Google) |
+| SocialiteUser | 2026_11_12_120002_create_socialite_users_table.php | ✅ | OAuth user identities (GitHub, Google), owned by the `user` connection |
 | OauthClient | 2026_03_01_000003_create_oauth_clients_table.php | ✅ | Passport OAuth clients |
 | OauthAccessToken | 2023_01_01_000003_create_oauth_access_tokens_table.php | ✅ | Passport access tokens |
 | OauthRefreshToken | 2020_01_01_000003_create_oauth_refresh_tokens_table.php | ✅ | Passport refresh tokens |
@@ -134,7 +134,7 @@ YYYY_MM_DD_HHMMSS_create_<table>_table.php
 
 ✅ **Correct:**
 - `2026_07_15_120000_create_teams_table.php`
-- `2026_02_13_172136_create_users_table.php`
+- `2026_11_12_120000_create_users_table.php`
 - `2023_01_01_000004_create_team_user_table.php`
 
 ❌ **Incorrect (never use):**

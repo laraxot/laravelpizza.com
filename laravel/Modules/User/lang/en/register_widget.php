@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< .merge_file_MKFRfM
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
+=======
+>>>>>>> .merge_file_tuAX6h
     'fields' => [
         'first_name' => [
             'label' => 'First Name',
@@ -89,6 +92,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

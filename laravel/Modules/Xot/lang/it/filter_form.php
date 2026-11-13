@@ -3,25 +3,11 @@
 declare(strict_types=1);
 
 return [
-    'sections' => [
-        'Filtri' => [
-            'label' => 'Filtri',
-            'heading' => 'Filtri',
-        ],
-    ],
     'fields' => [
         'created_from' => [
-            'label' => 'created_from',
-            'placeholder' => 'created_from',
-            'helper_text' => 'created_from',
-            'description' => 'created_from',
             'tooltip' => '',
         ],
         'created_until' => [
-            'label' => 'created_until',
-            'placeholder' => 'created_until',
-            'helper_text' => 'created_until',
-            'description' => 'created_until',
             'tooltip' => '',
         ],
     ],
@@ -48,6 +34,8 @@ return [
         'delete' => [
             'label' => 'Elimina Filter Form',
         ],
-        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+        'save' => [
+            'icon' => 'save',
+        ],
     ],
 ];

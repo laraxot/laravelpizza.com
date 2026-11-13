@@ -139,4 +139,22 @@ return [
             'label' => 'Delete Coordinates',
         ],
     ],
+    'address_form' => [
+        'section' => [
+            'heading' => 'Coordinates',
+            'description' => 'Latitude and longitude. Save the address first, then update the coordinates for distance and map.',
+        ],
+        'geocode' => [
+            'label' => 'Update from address',
+            'success_title' => 'Coordinates updated from address',
+            'failed_title' => 'Geocoding failed',
+        ],
+        'map' => [
+            'heading' => 'Location map',
+            'aria_label' => 'Location map',
+            'google_maps' => 'Open in Google Maps',
+            'viamichelin' => 'Open in ViaMichelin',
+            'missing' => 'Coordinates are not available. Complete the address and use "Update from address" in the Coordinates section.',
+        ],
+    ],
 ];

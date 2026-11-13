@@ -1,17 +1,3 @@
----
-issues: []
-discussions: []
-title: "Risoluzione Conflitti Git - Modulo Tenant"
-module: "Tenant"
-type: concept
-tags: [conflict, resolution, fixes]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "conflict resolution fixes"
-related:
-  - "./phpstan-corrections-january.md"
-status: draft
----
 # Risoluzione Conflitti Git - Modulo Tenant
 
 ## Panoramica
@@ -52,4 +38,5 @@ Documentazione della risoluzione dei conflitti Git nel modulo Tenant che bloccav
 - [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
 - [Report Completo PHPStan Fixes](../../../bashscripts/docs/phpstan_fixes_comprehensive_report.md)
 
+*Ultimo aggiornamento: Dicembre 2024*
 *Ultimo aggiornamento: Dicembre 2024*

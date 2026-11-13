@@ -10,6 +10,10 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Log;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;
+use Modules\Cms\Tests\TestCase;
+use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283NoHandleMiddleware;
+use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ProbeMiddleware;
+use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ReturnsNothingMiddleware;
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger as Monolog;
@@ -17,37 +21,14 @@ use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
+uses(TestCase::class);
+
 /*
  * DCP-283 (C-03): PageSlugMiddleware deve essere fail-closed. Una pagina la cui protezione non si riesce a determinare
  * non va servita (503), e dal campo `middleware` del JSON si eseguono solo i middleware in allowlist.
  */
 
 /** Middleware con effetto osservabile: se la allowlist non lo ferma, `$calls` sale. */
-final class Dcp283ProbeMiddleware
-{
-    public static int $calls = 0;
-
-    /** @param  Closure(Request): Response  $next */
-    public function handle(Request $request, Closure $next): Response
-    {
-        self::$calls++;
-
-        return $next($request);
-    }
-}
-
-/** Middleware che non restituisce una Response: la richiesta non deve proseguire. */
-final class Dcp283ReturnsNothingMiddleware
-{
-    public function handle(Request $request, Closure $next): mixed
-    {
-        return null;
-    }
-}
-
-/** Classe esistente senza `handle`: la richiesta non deve proseguire. */
-final class Dcp283NoHandleMiddleware {}
-
 /**
  * Middleware con slug e middleware dichiarati decisi dal test (le due cuciture sono i metodi protetti).
  *

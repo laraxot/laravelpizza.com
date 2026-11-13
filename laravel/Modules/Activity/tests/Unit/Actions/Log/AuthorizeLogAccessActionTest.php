@@ -6,7 +6,7 @@ use Mockery\MockInterface;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

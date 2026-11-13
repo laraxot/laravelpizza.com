@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Unit\Models;
 
 use Modules\User\Models\Device;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(\Modules\User\Tests\TestCase::class);
 
@@ -22,7 +22,7 @@ class DeviceTest extends TestCase
             'id' => $device->id,
             'device' => 'iPhone',
             'platform' => 'iOS',
-        ]);
+        ], 'user');
     }
 
     public function test_can_create_device_with_all_fields(): void
@@ -58,7 +58,7 @@ class DeviceTest extends TestCase
             'is_mobile' => true,
             'is_tablet' => false,
             'is_phone' => true,
-        ]);
+        ], 'user');
 
         // Verifica campi JSON
         static::assertSame(['en', 'it', 'de'], $device->languages);
@@ -232,7 +232,7 @@ class DeviceTest extends TestCase
         $this->assertDatabaseHas('devices', [
             'id' => $device->id,
             'device' => 'New Device',
-        ]);
+        ], 'user');
     }
 
     public function test_can_handle_null_values(): void
@@ -253,7 +253,7 @@ class DeviceTest extends TestCase
             'browser' => null,
             'version' => null,
             'robot' => null,
-        ]);
+        ], 'user');
     }
 
     public function test_can_find_devices_by_multiple_criteria(): void

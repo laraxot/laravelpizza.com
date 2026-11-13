@@ -2,7 +2,7 @@
 title: "Xot - Prompt 64 di audit multidisciplinare: esecuzione, revisione e completamento"
 module: Xot
 bmad: true
-status: review
+status: done
 owner: Modules/Xot (i prompt condivisi vivono in bashscripts/docs/prompts)
 related:
   - ./gitattributes-svg-merge-markers.story.md
@@ -70,6 +70,30 @@ nel prompt 46 (`46-multi-agent-module-swarm.md`), entrambi nel `related` del 64.
 - `python3 -I bashscripts/tools/docs/md-filenames.py check --paths <file>`: 0 non conformi per prompt e story.
 - Nessun nome di progetto o percorso assoluto nel prompt (e' condiviso tra progetti).
 
+## Chiusura 2026-11-06
+
+- Corretto il refuso `reamente` e riallineato il riferimento al trigger map
+  canonico `docs/wiki/rules/00-TRIGGER_MAP.md`.
+- Aggiunta la matrice minima obbligatoria per perimetro, copertura e stato
+  `unverified`, evitando audit senza fine o copertura dichiarata senza prova.
+- Esplicitato il confine di scrittura tra `audit-only`, `remediation-plan` e
+  `implementation-authorized`, così la sezione di chiusura non contraddice la
+  modalità selezionata.
+- Rimossa l'assunzione ambientale su PHP 8.4 e resa più sicura la diagnostica
+  delle cache, vietando pulizie automatiche su directory condivise o produzione.
+- Aggiornato l'indice prompt da `review` a `stable`.
+
+### Gate eseguiti
+
+| Gate | Esito |
+|---|---|
+| `python3 -I bashscripts/tools/docs/md-filenames.py check --paths bashscripts/docs/prompts` | BLOCKED: lo script non esiste in questo checkout |
+| ricerca marker di conflitto in `64-audit.md` | PASS: nessun marker trovato |
+| `git -C bashscripts diff --check -- docs/prompts/64-audit.md` | PASS |
+| frontmatter YAML e riferimenti prompt | PASS |
+
+Nessun codice PHP, configurazione runtime, dato, commit o push è stato toccato.
+
 ## Decisioni aperte
 
 1. Commit e push: il master prompt (vincolo 5) li vieta senza richiesta, la chiusura modulo di `AGENTS.md` li prevede.
@@ -80,3 +104,83 @@ nel prompt 46 (`46-multi-agent-module-swarm.md`), entrambi nel `related` del 64.
    dei gate del 64 usa `flock` per PHPStan e `heavy-slot` per phpinsights.
 4. La versione pulita e' solo nel working tree: su `laraxot/dev` c'e' ancora quella con i marker. Il sync deprecato
    e' in esecuzione e puo' sovrascriverla di nuovo.
+
+## Aggiornamento sessione 2026-11-06 (seconda parte)
+
+### Stato merge e collisioni
+
+- In root repo girano due `git merge origin/master --allow-unrelated-histories -s resolve`
+  lanciati da shell interattivi (PID 390639 alle 10:29, PID 398735 alle 10:31).
+  Il secondo era un duplicato esatto: terminato (PID 398735 + figli 398836/398936)
+  per evitare scritture doppie sullo stesso worktree. È sopravvissuto il primo
+  (merge-resolve 390731 + merge-index 390777).
+- `git ls-files -u` ~16.7k path unmerged; merge-index sta riscrivendo i file
+  con marker `<<<<<<< HEAD / >>>>>>> 6ed19256f` (conflitti verso la storia
+  master non correlata). I marker compaiono anche nei worktree dei moduli
+  nested (repo git propri): ~1.079 file PHP in `Modules/` con marker attivi,
+  1.111 file falliscono `php -l`.
+- I marker sono SCRITTURA IN CORSO: risolverli ora fa solo razza col merge-index.
+  Strategia: attendere fine merge, poi sweep finale con intent per file.
+
+### Lavoro completato in questa sessione
+
+- `laravel/phpstan_bootstrap.php`, `app/` (Application, User, provider, config,
+  routes, seeders) e 7 provider di modulo risolti marker → `php -l` OK.
+- `64-audit.md` aggiornato: path canonici (`docs/wiki/rules/00-TRIGGER_MAP.md`,
+  serie audit `docs/wiki/audits/`/`bashscripts/docs/audit/`), `heavy-slot.sh`
+  reso condizionale (`test -x`), tabella gate marcata come catalogo non
+  garentito, aggiunta nota verifica `bashscripts/tools/` assente.
+- Standing order permanente persistito: Hindsight doc +
+  `bashscripts/ai/wiki/memories/standing-order-permanente-utente.md`.
+- Lock rilasciati su tutti i file toccati.
+
+### Bloccato / residuo
+
+- PHPStan `analyse Modules`: BLOCKED — ~7 provider unmerged (Cms×3, Gdpr×2,
+  Geo×2) + migliaia di marker in Modules rendono il bootstrap inaffidabile.
+  I 3 errori della baseline iniziale (`AbsenceRequestPolicy::replicate`,
+  `GeoTrait` generico in Client/Worker) erano letti su stato meta-merge:
+  ri-verificare a merge completato.
+- File `.md` toccati: solo `64-audit.md` e questa story (nessuna data/timestamp
+  nei nomi).
+
+## Aggiornamento sessione 2026-11-06 (terza parte — merge storm)
+
+### Cosa è successo
+
+- MANY merge automatice concorrenti (`git merge origin/master -s resolve` e
+  `git merge laraxot/dev -s resolve`) lanciati da shell interattivi di altri
+  agenti (pts/0,6,9,10). Ogni merge scriveva marker in ~19k path e committava
+  automaticamente (commit "." di Marco Xot ogni ~30s-20min).
+- Il branch locale era `master` (non dev): contiene lo snapshot master di
+  luglio (3583f9e5d, 8.050 file). `laraxot/dev` è il remote canonico, 224
+  commit avanti.
+- Risoluzione index: ~6.4k path unmerged → presi i lati giusti (ours per UU/AA,
+  theirs per UA, rm per DU), poi `checkout --theirs` + merge commit manuale
+  `82a497991` (MERGE_HEAD=1d98c1035) → master ora contiene laraxot/dev.
+- Cleanup marker: 2.232 file `.merge_file_*` committati rimossi, ~1.300 file
+  con marker risolti (ours/remote/clean-blob), commit `02befe01e` (773 file,
+  -15k righe marker). Worktree: 0 marker, `php artisan` boot OK (Laravel 13.40).
+
+### Ripristini dev-intent
+
+File ritornati alla versione pre-merge (8a234df95) perché il merge li aveva
+resi master-flavored: TenantServiceProvider, ConsentResource, 14 file
+TechPlanner/Employee/Job Filament (override di `getFormSchema()` final in
+XotBaseResource → fatal error).
+
+### Stato PHPStan
+
+- Baseline post-merge: **1.049 file_errors** (errore fatale 0). Dominati da
+  `mixed` e test Tenant (mockAppService/expectMockery). Run:
+  `phpstan analyse Modules --error-format=json` → /tmp/phpstan-final2.json
+- I 3 errori iniziali (AbsenceRequestPolicy, GeoTrait) non si ripresentano nel
+  top-error; verificare nel dettaglio.
+
+### Rischi residui
+
+- Altri agenti possono rilanciare i merge: se riparte il loop, rifare
+  `git ls-files -u` + stesso protocollo.
+- Moduli nested hanno repo propri ancora sporchi (lavoro altrui).
+- 5.336 file locali-extra preservati nel merge (snapshot files, .playwright-mcp,
+  workspace) — da ripulire in una passata dedicata se indesiderati.

@@ -17,7 +17,7 @@ class HtmlLayoutPathSelect extends XotBaseSelect
         $xot = XotData::make();
         $path = $xot->getMailHtmlLayoutPath();
 
-        $files = File::files($path);
+        $files = File::isDirectory($path) ? File::files($path) : [];
         $options = [];
         foreach ($files as $file) {
             if ($file->getExtension() !== 'html') {

@@ -79,7 +79,7 @@ final class UsersRelationManager extends XotBaseRelationManager
         return [
             Filter::make('active')->query(fn (Builder $query): Builder => $query->where('is_active', true))->toggle(),
             Filter::make('created_at')
-                ->schema([
+                ->form([
                     DatePicker::make('created_from'),
                     DatePicker::make('created_until'),
                 ])

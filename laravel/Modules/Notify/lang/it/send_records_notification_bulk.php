@@ -5,13 +5,12 @@ declare(strict_types=1);
 return [
     'actions' => [
         'submit' => [
-            'label' => 'submit',
             'icon' => 'submit',
-            'tooltip' => 'submit'],
+        ],
         'cancel' => [
-            'label' => 'cancel',
             'icon' => 'cancel',
-            'tooltip' => 'cancel']],
+        ],
+    ],
     'label' => 'Send Records Notification Bulk',
     'plural_label' => 'Send Records Notification Bulk (Plurale)',
     'navigation' => [
@@ -19,23 +18,30 @@ return [
         'plural' => 'Send Records Notification Bulk',
         'group' => [
             'name' => 'General',
-            'description' => 'General Settings'],
+            'description' => 'General Settings',
+        ],
         'label' => 'Send Records Notification Bulk',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection'],
+        'icon' => 'heroicon-o-collection',
+    ],
     'fields' => [
         'id' => [
             'label' => 'Identificativo',
             'tooltip' => 'Identificativo univoco del record',
             'helper_text' => '',
-            'description' => ''],
+            'description' => '',
+        ],
         'created_at' => [
             'label' => 'Data Creazione',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => ''],
+            'description' => '',
+        ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'tooltip' => '',
             'helper_text' => '',
-            'description' => '']]];
+            'description' => '',
+        ],
+    ],
+];

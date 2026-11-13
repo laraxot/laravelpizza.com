@@ -27,17 +27,18 @@ return [
     ],
     'actions' => [
         'refresh' => [
-            'label' => 'refresh',
-            'tooltip' => 'refresh',
+            'label' => 'Aggiorna',
+            'tooltip' => '',
             'icon' => 'refresh',
         ],
         'logout' => [
-            'tooltip' => 'logout',
+            'tooltip' => '',
+            'icon' => 'logout',
         ],
         'save' => [
-            'label' => 'save',
+            'label' => 'Salva',
             'icon' => 'save',
-            'tooltip' => 'save',
+            'tooltip' => '',
         ],
     ],
     'label' => 'Health',

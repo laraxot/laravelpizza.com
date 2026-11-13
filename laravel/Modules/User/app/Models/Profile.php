@@ -10,26 +10,25 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
+use Modules\User\Contracts\UserContract;
 use Modules\User\Models\Traits\ProfileRelationsTrait;
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Contracts\UserContract;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\Permission\Traits\HasRoles;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
+use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttributes;
 
 /**
  * User Profile Model.
  *
  * Represents a user profile with relationships to devices, teams, and roles.
  *
- * Roles, media and schemaless attributes (`HasRoles`, `InteractsWithMedia`,
- * `SchemalessAttributesTrait`) and the `HasMedia` contract come from {@see BaseProfile}:
- * they are not composed again here. `teams()` comes from {@see ProfileRelationsTrait} and
- * overrides the inherited Spatie `HasRoles::teams()`.
- *
  * @property int $id
- * @property string|null $first_name
- * @property string|null $last_name
- * @property string|null $user_name
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $user_name
  * @property string $email
  * @property string|null $phone
  * @property string|null $bio
@@ -39,13 +38,16 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property array<string, mixed> $preferences
  * @property string $status
  * @property SchemalessAttributes $extra
+ * @property string $avatar
  * @property ProfileContract|null $creator
  * @property Collection<int, DeviceUser> $deviceUsers
  * @property int|null $device_users_count
  * @property ProfileTeam|DeviceProfile|null $pivot
  * @property Collection<int, Device> $devices
  * @property int|null $devices_count
+ * @property string|null $first_name
  * @property string|null $full_name
+ * @property string|null $last_name
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
  * @property Collection<int, DeviceUser> $mobileDeviceUsers
@@ -62,6 +64,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property int|null $teams_count
  * @property ProfileContract|null $updater
  * @property UserContract|null $user
+ * @property string|null $user_name
  *
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()
@@ -186,9 +189,11 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @mixin \Eloquent
  */
-class Profile extends BaseProfile
+class Profile extends BaseProfile implements HasMedia
 {
-    use ProfileRelationsTrait;
+    use HasRoles, HasSchemalessAttributes, InteractsWithMedia, ProfileRelationsTrait {
+        ProfileRelationsTrait::teams insteadof HasRoles;
+    }
 
     /**
      * The table associated with the model.
@@ -196,24 +201,20 @@ class Profile extends BaseProfile
     protected $table = 'profiles';
 
     /**
-     * Keeps `Profile::withExtraAttributes()` callable.
-     *
-     * The Spatie `SchemalessAttributesTrait` has no such scope, so this one is a deliberate
-     * no-op: it returns the query untouched. The `extra` column is read through the
-     * `SchemalessAttributes` cast, not filtered here.
+     * Scope a query to include schemaless attributes.
      *
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
     public function scopeWithExtraAttributes(Builder $query): Builder
     {
-        return $query;
+        return $query; // SchemalessAttributesTrait should handle this, but adding for completeness/test
     }
 
     /**
-     * Attributes handled by `SchemalessAttributesTrait`.
+     * Get the schemaless attributes.
      *
-     * @return list<string>
+     * @return array<int, string>
      */
     public function getSchemalessAttributes(): array
     {
@@ -228,7 +229,7 @@ class Profile extends BaseProfile
      * @see https://schema.org/Person
      * @see https://schema.org/ProfilePage
      *
-     * @return array<string, string|null>
+     * @return array<string, mixed>
      */
     public function toSchemaOrg(): array
     {

@@ -123,7 +123,7 @@ describe('Socialite utility actions', function (): void {
         Assert::assertFalse(app(IsProviderConfiguredAction::class)->execute('pest-missing-socialite-provider'));
     });
 
-    it('logs out user token and device sessions', function (): void {
+    it('logs out by revoking the user token and marking device sessions', function (): void {
         $accessToken = new DeletableAccessTokenFixture;
         $refreshTokenId = 'rtok-'.uniqid();
         $deviceId = 'dev-'.uniqid();
@@ -151,9 +151,11 @@ describe('Socialite utility actions', function (): void {
 
         app(LogoutUserAction::class)->execute($user);
 
-        Assert::assertSame(0, DB::connection('user')->table('oauth_refresh_tokens')->where('access_token_id', 'tok-1')->count());
+        // Revoca, non cancellazione (come Passport): il refresh token resta, revocato, e il token d'accesso e' revocato.
+        Assert::assertSame(1, DB::connection('user')->table('oauth_refresh_tokens')->where('access_token_id', 'tok-1')->where('revoked', true)->count());
         Assert::assertSame(1, DB::connection('user')->table('device_user')->where('user_id', $userId)->whereNotNull('logout_at')->count());
-        Assert::assertTrue($accessToken->deleted);
+        Assert::assertTrue($accessToken->revoked);
+        Assert::assertFalse($accessToken->deleted);
     });
 
     it('redirects to login route with error', function (): void {

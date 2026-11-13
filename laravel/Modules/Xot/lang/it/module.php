@@ -77,19 +77,19 @@ return [
             'description' => '',
         ],
         'color' => [
-            'label' => 'color',
+            'label' => 'Colore',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'value' => [
-            'label' => 'value',
+            'label' => 'Valore',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'hex' => [
-            'label' => 'hex',
+            'label' => 'Hex',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -109,10 +109,10 @@ return [
             'description' => '',
         ],
         'path' => [
-            'label' => 'path',
+            'label' => 'Percorso',
         ],
         'enabled' => [
-            'label' => 'enabled',
+            'label' => 'Attivo',
         ],
     ],
     'pages' => [
@@ -136,32 +136,36 @@ return [
         'create' => [
             'label' => 'Crea Module',
             'icon' => 'create',
-            'tooltip' => 'create',
+            'tooltip' => '',
         ],
         'edit' => [
             'label' => 'Modifica Module',
             'icon' => 'edit',
-            'tooltip' => 'edit',
+            'tooltip' => '',
         ],
         'delete' => [
             'label' => 'Elimina Module',
             'icon' => 'delete',
-            'tooltip' => 'delete',
+            'tooltip' => '',
         ],
         'createAnother' => [
-            'label' => 'createAnother',
+            'label' => 'Salva e crea un altro',
             'icon' => 'createAnother',
-            'tooltip' => 'createAnother',
+            'tooltip' => '',
         ],
         'save' => [
-            'label' => 'save',
+            'label' => 'Salva',
             'icon' => 'save',
-            'tooltip' => 'save',
+            'tooltip' => '',
         ],
         'view' => [
-            'label' => 'view',
+            'label' => 'Vista',
             'icon' => 'view',
-            'tooltip' => 'view',
+            'tooltip' => '',
+        ],
+        'logout' => [
+            'tooltip' => '',
+            'icon' => 'logout',
         ],
     ],
 ];

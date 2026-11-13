@@ -3,5 +3,10 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => ['group' => 'appearance.navigation', 'label' => 'appearance.navigation'],
+    'navigation' => [
+        'group' => 'Aspetto',
+        'label' => 'Aspetto del sito',
+        'sort' => 85,
+        'icon' => 'heroicon-o-paint-brush',
+    ],
 ];

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Comune;
 use Modules\Geo\Tests\TestCase;
 use Modules\Tenant\Models\Traits\SushiToJson;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
@@ -24,7 +24,7 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has factory trait for testing', function () {
-        Assert::assertContains(HasFactory::class, class_uses_recursive(Comune::class));
+        Assert::assertContains(HasXotFactory::class, class_uses_recursive(Comune::class));
     });
 
     test('comune has sushi to json trait', function () {
@@ -32,7 +32,7 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has expected fillable fields for italian municipalities', function () {
-        $comune = new Comune;
+        $comune = new Comune();
         $expectedFillable = [
             'id',
             'codice',
@@ -54,7 +54,7 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has schema definition for structured geographic data', function () {
-        $schema = (new Comune)->getSchema();
+        $schema = (new Comune())->getSchema();
 
         Assert::assertSame('json', $schema['zona'] ?? null);
         Assert::assertSame('json', $schema['provincia'] ?? null);
@@ -63,14 +63,14 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has json directory property for data source', function () {
-        Assert::assertSame('', (new Comune)->jsonDirectory);
+        Assert::assertSame('', (new Comune())->jsonDirectory);
     });
 
     test('comune has translatable array configured', function () {
-        Assert::assertSame([], (new Comune)->translatable);
+        Assert::assertSame([], (new Comune())->translatable);
     });
 
     test('comune model can be instantiated without errors', function () {
-        new Comune;
+        new Comune();
     });
 });

@@ -81,7 +81,6 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 
     use HasSlug;
 
-    // use SoftDeletes;
     use HasTranslations;
 
     /** @var list<string> */

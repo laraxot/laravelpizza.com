@@ -145,9 +145,7 @@ return [
             'label' => 'Elimina Env',
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
     ],
     'title' => 'Ambiente',
@@ -155,14 +153,6 @@ return [
         'General' => [
             'label' => 'Generale',
             'heading' => 'Generale',
-        ],
-        'SMS' => [
-            'label' => 'SMS',
-            'heading' => 'SMS',
-        ],
-        'Mail' => [
-            'label' => 'Mail',
-            'heading' => 'Mail',
         ],
     ],
 ];

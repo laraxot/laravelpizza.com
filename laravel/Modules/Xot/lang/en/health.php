@@ -27,10 +27,6 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
     'page' => [
         'last_check' => [
             'label' => 'Last check',

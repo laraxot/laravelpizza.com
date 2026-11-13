@@ -65,6 +65,37 @@ final class RecordAnchor
         ], '', '&', PHP_QUERY_RFC3986);
     }
 
+    /**
+     * La pagina precedente vale come ritorno solo se e' una pagina della stessa resource (elenco o
+     * dettaglio). Chi apre "Nuovo" da un altro pannello o dalla dashboard, dopo il salvataggio deve
+     * arrivare alla resource, non tornare alla dashboard con un'ancora che li' non esiste.
+     */
+    public static function previousWithinResource(?string $previousUrl, mixed $resourceIndexUrl): ?string
+    {
+        if (! is_string($previousUrl) || $previousUrl === '' || ! is_string($resourceIndexUrl)) {
+            return null;
+        }
+
+        $previousPath = self::pathOf($previousUrl);
+        $indexPath = self::pathOf($resourceIndexUrl);
+        if ($previousPath === null || $indexPath === null) {
+            return null;
+        }
+
+        return $previousPath === $indexPath || str_starts_with($previousPath, rtrim($indexPath, '/').'/') ? $previousUrl : null;
+    }
+
+    private static function pathOf(string $url): ?string
+    {
+        try {
+            $path = parse_url($url, PHP_URL_PATH);
+        } catch (UrlException) {
+            return null;
+        }
+
+        return is_string($path) ? $path : null;
+    }
+
     public static function resolveReturnTo(?string $returnTo, int|string $key): ?string
     {
         if (! is_string($returnTo) || $returnTo === '' || preg_match(self::UNSAFE_URL_CHARACTERS, $returnTo) === 1) {

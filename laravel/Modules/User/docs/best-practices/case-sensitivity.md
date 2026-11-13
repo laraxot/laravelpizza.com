@@ -120,7 +120,7 @@ Il modulo User aveva la struttura più complessa di duplicati:
 - 2023_01_01_000000_create_oauth_auth_codes_table.php
 - 2023_01_01_000002_create_team_invitations_table.php
 - 2023_01_01_000003_create_oauth_access_tokens_table.php
-- 2023_01_01_000003_create_socialite_user_table.php
+- 2026_11_12_120002_create_socialite_users_table.php
 - 2023_01_01_000003_create_tenant_user_table.php
 - 2023_01_01_000004_create_device_user_table.php
 - 2023_01_01_000004_create_oauth_clients_table.php

@@ -8,6 +8,13 @@ declare(strict_types=1);
     Enhanced UX/UI with modern 2026 design trends
     Features: Social login buttons, micro-interactions, accessibility, mobile-first
 --}}
+@push('head')
+    {{-- Widget Filament in FO: @filamentStyles non copre le pagine pubbliche
+         (nessun panel attivo), quindi il CSS Filament va linkato qui.
+         Il widget si auto-provisiona: dove viene montato, gli asset ci sono. --}}
+    <link rel="stylesheet" href="{{ asset('css/filament/filament/app.css') }}">
+@endpush
+
 <div class="filament-widget-login space-y-6">
     <!-- Login Form -->
     <form wire:submit.prevent="save" class="space-y-5">

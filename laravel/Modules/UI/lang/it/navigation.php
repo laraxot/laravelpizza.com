@@ -34,12 +34,6 @@ return [
             'description' => 'Destinazione del link',
             'tooltip' => 'URL completo o nome route',
         ],
-        'text' => [
-            'label' => 'text',
-            'placeholder' => 'text',
-            'helper_text' => 'text',
-            'description' => 'text',
-        ],
     ],
     'actions' => [
         'create' => [

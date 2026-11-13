@@ -12,6 +12,10 @@ status: draft
 
 # Footer
 
+> Contratto corrente Sixteen: il footer pubblico è la sezione CMS `footer`, resa dal partial condiviso Sixteen. Il CMS fornisce label, URL, contatti e social; Sixteen usa `config('comune.*')` solo come fallback sicuro, filtra URL vuoti/hash e protegge dati tenant nullable. Il markup deve rimanere riusabile e data-driven: non aggiungere una pagina o un footer duplicato al tema.
+
+Il riferimento di produzione è il renderer del tema e i test `FooterV1DesignComuniStructureTest`/`HeaderTenantFallbackTest`. Il blocco generico seguente resta una guida Blueprint per l'editor, non descrive un renderer alternativo.
+
 ## Panoramica
 Il footer è una sezione **generica** che consente di inserire **qualsiasi** blocco disponibile nel sistema. Non ci sono blocchi dedicati esclusivamente al footer: si possono usare Hero, Paragraph, Navigation, Stats, CTA, ecc.
 

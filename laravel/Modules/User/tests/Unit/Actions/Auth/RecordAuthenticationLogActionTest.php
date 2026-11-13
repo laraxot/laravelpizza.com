@@ -65,3 +65,18 @@ test('auth login listeners guard UserContract not BaseUser', function (): void {
             ->not->toContain('instanceof BaseUser');
     }
 });
+
+test('auth login listeners record the pulse metric for the same timestamp', function (): void {
+    $sources = [
+        file_get_contents(dirname(__DIR__, 4).'/app/Listeners/LoginListener.php'),
+        file_get_contents(dirname(__DIR__, 4).'/app/Listeners/FailedLoginListener.php'),
+    ];
+
+    foreach ($sources as $source) {
+        expect($source)
+            ->toContain('use Modules\User\Actions\Login\RecordLoginPulseAction')
+            ->toContain('$loginAt = now()')
+            ->toContain("'login_at' => \$loginAt")
+            ->toContain('app(RecordLoginPulseAction::class)->execute($loginAt)');
+    }
+});

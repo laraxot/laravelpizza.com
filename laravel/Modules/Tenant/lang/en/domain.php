@@ -56,13 +56,11 @@ return [
             'description' => '',
         ],
         'rating' => [
-            'label' => 'rating',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

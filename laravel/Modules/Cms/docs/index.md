@@ -479,7 +479,7 @@ Sottocartelle senza indice interno (elenco file diretto consigliato per chi le a
 | [refactoring/](./refactoring/) | 1 | [refactoring/page-content-to-section.md](./refactoring/page-content-to-section.md) |
 | [responsive/](./responsive/) | 1 | [responsive/guidelines.md](./responsive/guidelines.md) |
 | [screenshots/](./screenshots/) | 9 | (note su screenshot, nessun heading) |
-| [stories/](./stories/) | 2 | [stories/seo-head-component.story.md](./stories/seo-head-component.story.md), [stories/7.1.phpstan-paramtype-coverage.story.md](./stories/7.1.phpstan-paramtype-coverage.story.md) |
+| [stories/](./stories/) | 2 | [stories/seo-head-component.story.md](./stories/seo-head-component.story.md), [stories/head-sixteen-layout-migration.story.md](./stories/head-sixteen-layout-migration.story.md), [stories/head-sixteen-parity-closeout.story.md](./stories/head-sixteen-parity-closeout.story.md), [stories/untranslated-detail-pages-indexing.story.md](./stories/untranslated-detail-pages-indexing.story.md), [stories/7.1.phpstan-paramtype-coverage.story.md](./stories/7.1.phpstan-paramtype-coverage.story.md) |
 | [tasks/](./tasks/) _(target mancante, verificato 2026-10-14)_ | 11 | [tasks/001-content-management-system.md](./tasks/001-content-management-system.md) _(target mancante, verificato 2026-10-14)_ |
 | [testing/](./testing/) | 1 | [testing/naming-conventions.md](./testing/naming-conventions.md) |
 | [tests/](./tests/) | 11 | [tests/architecture-aration-rules.md](./tests/architecture-aration-rules.md) |

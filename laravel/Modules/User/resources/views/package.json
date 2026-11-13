@@ -7,8 +7,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "watch": "vite build --watch",
-        "copy": "cp -r ./resources/dist/* ../../../public_html/themes/One"
+        "watch": "vite build --watch"
     },
     "devDependencies": {
         "@alpinejs/focus": "^3.14.9",

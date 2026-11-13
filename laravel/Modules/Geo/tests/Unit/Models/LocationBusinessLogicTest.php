@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Location;
 use Modules\Geo\Tests\TestCase;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
@@ -21,7 +21,7 @@ describe('Location Business Logic', function () {
     });
 
     test('location has factory trait for testing', function () {
-        Assert::assertContains(HasFactory::class, class_uses_recursive(Location::class));
+        Assert::assertContains(HasXotFactory::class, class_uses_recursive(Location::class));
     });
 
     test('location can be queried within distance scope', function () {

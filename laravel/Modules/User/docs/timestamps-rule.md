@@ -53,7 +53,7 @@ Eliminare qualsiasi uso combinato di:
 |------|--------|------|
 | `2025_01_22_120001_create_team_permissions_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2026_01_01_000001_create_tenants_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
-| `2023_01_01_000003_create_socialite_user_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
+| `2026_11_12_120002_create_socialite_users_table.php` | ✅ Uses `updateTimestamps` | Canonical owner on `user` connection |
 | `2025_10_15_153835_create_sso_providers_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2023_01_01_000005_create_model_has_permissions_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2024_01_01_000008_create_profile_team_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
@@ -62,7 +62,7 @@ Eliminare qualsiasi uso combinato di:
 | `2023_01_01_000004_create_team_user_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2026_03_01_000003_create_oauth_clients_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2024_01_01_000002_create_authentication_log_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
-| `2026_02_13_172136_create_users_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
+| `2026_11_12_120000_create_users_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2026_01_12_114416_create_team_user_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2024_12_05_000034_create_model_has_roles_table.php` | ✅ Uses `updateTimestamps` | Confirmed correct |
 | `2014_10_12_100002_create_password_resets_table.php` | ⚠️ Uses `$this->timestamps()` | **NEEDS REFACTOR** |

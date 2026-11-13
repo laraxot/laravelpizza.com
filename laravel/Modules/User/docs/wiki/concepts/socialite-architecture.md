@@ -25,7 +25,7 @@ qmd: "socialite architecture user"
 
 **Perché**: con molti provider OAuth la tabella si sporca (N colonne per N provider). Ogni provider aggiunto richiede una migration.
 
-**Soluzione**: tabella separata `socialite_users` tramite il modello `SocialiteUser`.
+**Soluzione**: tabella separata `socialite_users` tramite il modello `SocialiteUser`, sulla connessione `user`.
 
 ---
 

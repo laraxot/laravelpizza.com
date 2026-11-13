@@ -6,7 +6,7 @@ namespace Modules\Geo\Tests\Unit;
 
 use Modules\Geo\Database\Factories\PlaceFactory;
 use Modules\Geo\Models\Place;
-use Tests\TestCase;
+use Modules\Geo\Tests\TestCase;
 
 class PlaceTest extends TestCase
 {

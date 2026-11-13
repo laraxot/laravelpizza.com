@@ -172,3 +172,19 @@ status: draft
 - Aggiunta la pagina canonica `concepts/auth-registration-verification-lifecycle.md`.
 - Esplicitato il confine: identità in User, evidenze dei consensi in Gdpr, resa UI in Sixteen.
 - Nessun documento storico cancellato o rinominato.
+
+## 2026-11-09 — LoginWidget: revealable password verificato + cleanup
+
+- Verificato: `UserForm::getLoginFormSchema()` ha gia' `->password()->revealable()` (FF-5 docs); la view `auth/login` renderizza `{{ $this->form }}` + toggle mostra/nascondi. Il problema "si vede male" era solo il CSS Filament mancante nel bundle pubblico (fixato in Theme Two con `filament.css` on-demand)
+- Rimossi `getFooterActions()` + `resolveLocale()` da `LoginWidget`: codice morto — nessuna view li renderizza (la vista tema gestisce social/register/forgot in modo piu' ricco: Google/Microsoft/GitHub condizionali su config)
+- Fix test drift: `AuthLoginFeedbackTest` mockava `StatefulGuard::attempt()` ma il widget usa `attemptWhen()` (check `deleted_at`) → mock su `SessionGuard::attemptWhen`. Verificato: 7 passed, 4 skipped (pre-esistenti)
+- Infra: `database/test_data.sqlite` era assente → `xot:build-test-sqlite` eseguito (108 tabelle); Fixcity resta non configurato (confermato warning)
+
+## 2026-11-09 — UserForm SSoT spostata in UserResource + fix JS auth
+
+- Corretto errore mio: i 6 widget auth (Login/Register/ForgotPassword/PasswordReset/PasswordResetConfirm/ResetPassword) usavano `Widgets/Auth/Schemas/UserForm` duplicato → ora delegano a `Resources/UserResource/Schemas/UserForm` (unico SSoT). I metodi auth (login/register/forgot/password-reset/reset-password/reset-confirm) sono stati consolidati li' con tutti gli attributi superiori (autocomplete, classi fo-auth-*, revealable, Hidden token, nullable dehydrate)
+- File `Widgets/Auth/Schemas/UserForm.php` eliminato; test aggiornati (path source-contract, import, method_exists rimossi perche' i metodi esistono sempre)
+- `LoginWidgetLocalizationTest` ripuntato su `GetPostLoginUrlAction` (la logica localizeURL vive li', non piu' nel widget)
+- Fix UI reale: `components/layouts/base.blade.php` (layout auth) non aveva `@filamentScripts` → Alpine `filamentSchema`/`filamentSchemaComponent`/`passwordRevealFormComponent` non definiti (console: password reveal rotto). Aggiunto `@filamentScripts(withCore: true)` come nel panel Filament
+- Verificato: script filament app.js/schemas.js/support.js ora serviti 200; test auth 21 passati/4 skip preesistenti; PHPStan 0 errori
+- 2026-11-09 — Convenzione i18n widget: `user::user.widgets.overview.*` spostato in `user::user_overview_widget.*` (nuovi file lang it/en + test aggiornato).

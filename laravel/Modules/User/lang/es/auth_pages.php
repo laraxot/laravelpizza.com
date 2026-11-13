@@ -59,6 +59,7 @@ return [
         ],
         'request_another' => [
             'label' => 'haz clic aquí para solicitar otro',
+            'sending' => 'enviando…',
         ],
     ],
 ];

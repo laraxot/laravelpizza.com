@@ -16,37 +16,31 @@ return [
     ],
     'fields' => [
         'name' => [
-            'label' => 'name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'create' => [
-            'label' => 'create',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'edit' => [
-            'label' => 'edit',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'delete' => [
-            'label' => 'delete',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -54,7 +48,6 @@ return [
     ],
     'actions' => [
         'reorderRecords' => [
-            'tooltip' => 'reorderRecords',
             'icon' => 'reorderRecords',
         ],
     ],

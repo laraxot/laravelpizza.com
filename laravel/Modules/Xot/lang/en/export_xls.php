@@ -37,6 +37,4 @@ return [
         'icon' => 'xot-files.xls',
         'sort' => 100,
     ],
-    'fields' => [
-    ],
 ];

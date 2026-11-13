@@ -10,7 +10,7 @@ use Mockery;
 use Mockery\MockInterface;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(\Modules\User\Tests\TestCase::class);
 

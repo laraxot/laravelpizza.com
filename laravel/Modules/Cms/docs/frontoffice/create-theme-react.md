@@ -12,6 +12,12 @@ status: draft
 
 # Creazione di un Tema con React
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 ## Introduzione
 
 Questa guida descrive come creare un nuovo tema per il CMS utilizzando React come framework frontend. Il tema utilizza una combinazione di tecnologie moderne tra cui Flowbite, Tailwind CSS, React, Inertia.js e Laravel.
@@ -232,7 +238,10 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
+<<<<<<< .merge_file_mj0bLD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_If1xMW
 ```
 
 ## Troubleshooting

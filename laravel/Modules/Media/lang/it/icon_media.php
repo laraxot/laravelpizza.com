@@ -29,7 +29,6 @@ return [
             'tooltip' => '',
         ],
         'open_link' => [
-            'label' => 'open_link',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

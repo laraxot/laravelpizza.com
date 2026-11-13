@@ -2,31 +2,42 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_BuEqcB
+=======
+use Modules\User\Tests\TestCase;
+>>>>>>> .merge_file_UcomDz
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
+/**
+ * @property CreateUser $page
+ */
 uses(TestCase::class);
 
 beforeEach(function (): void {
+<<<<<<< .merge_file_BuEqcB
     $this->createUserPage = new CreateUser;
+=======
+    $this->page = new CreateUser();
+>>>>>>> .merge_file_UcomDz
 });
 
 test('create user page has correct resource', function (): void {
-    expect($this->createUserPage->getResource())->toBe(UserResource::class);
+    expect($this->page->getResource())->toBe(UserResource::class);
 });
 
 test('create user page has correct navigation label', function (): void {
-    $label = $this->createUserPage->getNavigationLabel();
+    $label = $this->page->getNavigationLabel();
 
     // The label should be defined or fall back to default
     expect($label)->not->toBeNull();
 });
 
 test('create user page has correct title', function (): void {
-    $title = $this->createUserPage->getTitle();
+    $title = $this->page->getTitle();
 
     // The title should be defined or fall back to default
     expect($title)->not->toBeNull();
@@ -35,7 +46,7 @@ test('create user page has correct title', function (): void {
 test('create user page has correct breadcrumbs structure', function (): void {
     // Senza i parametri di rotta del tenant la generazione lancia: il test non e' applicabile.
     try {
-        $breadcrumbs = $this->createUserPage->getBreadcrumbs();
+        $breadcrumbs = $this->page->getBreadcrumbs();
     } catch (Exception) {
         $this->markTestSkipped('Breadcrumbs need route parameters not available in multi-tenant setup.');
     }
@@ -84,11 +95,11 @@ test('create user page handles form submission structure', function (): void {
 test('create user page has basic form functionality', function (): void {
     // Test that the page has basic form capabilities
     // Filament 5 non espone piu' `getFormModel()` (form -> schema): il modello e' verificato da `getModel()` sotto.
-    expect(method_exists($this->createUserPage, 'form'))->toBeTrue();
+    expect(method_exists($this->page, 'form'))->toBeTrue();
 });
 
 test('create user page follows filament conventions', function (): void {
     // Test that the page follows standard Filament conventions
-    expect($this->createUserPage->getResource())->toBe(UserResource::class);
-    expect($this->createUserPage->getModel())->toBe(User::class);
+    expect($this->page->getResource())->toBe(UserResource::class);
+    expect($this->page->getModel())->toBe(User::class);
 });

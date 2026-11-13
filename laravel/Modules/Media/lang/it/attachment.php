@@ -14,7 +14,6 @@ return [
     ],
     'fields' => [
         'file' => [
-            'label' => 'file',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

@@ -29,7 +29,7 @@ test('has teams trait belongsToTeam when team is in relation', function (): void
     $user = traitsHasTeamsMockUser();
     $team = new Team;
     $team->forceFill(['id' => 5, 'user_id' => 'other-user', 'name' => 'Team 5']);
-    $user->setRelation('teams', collect([$team]));
+    $user->setRelation('membershipTeams', collect([$team]));
 
     Assert::assertTrue($user->belongsToTeam($team));
 });
@@ -46,7 +46,7 @@ test('has teams trait belongsToTeam returns false for unknown team', function ()
     $user = traitsHasTeamsMockUser();
     $team = new Team;
     $team->forceFill(['id' => 999, 'user_id' => 'other-user', 'name' => 'Missing']);
-    $user->setRelation('teams', collect([]));
+    $user->setRelation('membershipTeams', collect([]));
 
     Assert::assertFalse($user->belongsToTeam($team));
 });
@@ -79,7 +79,7 @@ test('has teams trait handles multiple memberships via relation', function (): v
 
         return $team;
     });
-    $user->setRelation('teams', $teams);
+    $user->setRelation('membershipTeams', $teams);
 
     foreach ([1, 2, 3] as $teamId) {
         $team = new Team;
@@ -96,7 +96,7 @@ test('has teams trait concurrent checks use loaded relation', function (): void 
     $team10->forceFill(['id' => 10, 'user_id' => 'x', 'name' => 'T10']);
     $team30 = new Team;
     $team30->forceFill(['id' => 30, 'user_id' => 'x', 'name' => 'T30']);
-    $user->setRelation('teams', collect([$team20]));
+    $user->setRelation('membershipTeams', collect([$team20]));
 
     Assert::assertTrue($user->belongsToTeam($team20));
     Assert::assertFalse($user->belongsToTeam($team10));
@@ -111,7 +111,10 @@ test('has teams trait integration with real user model', function (): void {
 });
 
 test('has teams trait user model exposes teams relation', function (): void {
-    Assert::assertSame(BelongsToMany::class, get_class((new User)->teams()));
+    // Su BaseUser `teams()` e' quella di Spatie (MorphToMany su model_has_role, sottoclasse di
+    // BelongsToMany); l'appartenenza Jetstream-style e' `membershipTeams()` su team_user.
+    Assert::assertSame(config('permission.table_names.model_has_roles'), (new User)->teams()->getTable());
+    Assert::assertSame('team_user', (new User)->membershipTeams()->getTable());
 });
 
 test('has teams trait empty teams collection', function (): void {

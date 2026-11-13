@@ -2,18 +2,7 @@
 
 declare(strict_types=1);
 
-// User translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: split from user.php for maintainability (<500 LOC).
-// Canon: Modules/User/docs/wiki/concepts/claude-audit-static.md
-// File: lang/it/user_actions.php
 return [
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
-    // User — translation section (claude-audit doc ratio).
     'actions' => [
         'create' => [
             'label' => 'Crea Utente',
@@ -86,82 +75,49 @@ return [
             'tooltip' => 'Disattiva l\'utente',
         ],
         'logout' => [
-            'label' => 'logout',
             'icon' => 'logout',
-            'tooltip' => 'logout',
         ],
         'profile' => [
-            'label' => 'profile',
             'icon' => 'profile',
-            'tooltip' => 'profile',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'icon' => 'reorderRecords',
-            'tooltip' => 'reorderRecords',
         ],
         'openColumnManager' => [
-            'label' => 'openColumnManager',
             'icon' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
         ],
         'applyTableColumnManager' => [
-            'label' => 'applyTableColumnManager',
             'icon' => 'applyTableColumnManager',
-            'tooltip' => 'applyTableColumnManager',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'icon' => 'resetFilters',
-            'tooltip' => 'resetFilters',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'icon' => 'applyFilters',
-            'tooltip' => 'applyFilters',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
             'icon' => 'openFilters',
-            'tooltip' => 'openFilters',
         ],
         'export' => [
             'icon' => 'export',
-            'label' => 'export',
-            'tooltip' => 'export',
         ],
         'changePassword' => [
             'icon' => 'changePassword',
-            'label' => 'changePassword',
-            'tooltip' => 'changePassword',
         ],
         'layout' => [
             'icon' => 'layout',
-            'label' => 'layout',
-            'tooltip' => 'layout',
         ],
         'export_xls' => [
             'icon' => 'export_xls',
-            'label' => 'export_xls',
-            'tooltip' => 'export_xls',
         ],
         'cancel' => [
             'icon' => 'cancel',
-            'label' => 'cancel',
-            'tooltip' => 'cancel',
         ],
         'save' => [
             'icon' => 'save',
-            'label' => 'save',
-            'tooltip' => 'save',
-        ],
-        'submit' => [
-            'tooltip' => 'submit',
         ],
         'createAnother' => [
-            'tooltip' => 'createAnother',
             'icon' => 'createAnother',
-            'label' => 'createAnother',
         ],
     ],
 ];

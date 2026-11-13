@@ -20,6 +20,7 @@ use Modules\Xot\Contracts\UserContract;
  * @property string|null $role
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property Team|null $team
  * @property TeamContract|null $team
  *
  * @method static Builder|TeamInvitation newModelQuery()
@@ -60,8 +61,6 @@ use Modules\Xot\Contracts\UserContract;
  */
 class TeamInvitation extends BaseModel
 {
-    use TeamInvitationRelationsTrait;
-
     protected $connection = 'user';
 
     /** @var list<string> */
@@ -105,4 +104,6 @@ class TeamInvitation extends BaseModel
             'declined_at' => 'datetime',
         ];
     }
+
+    use TeamInvitationRelationsTrait;
 }

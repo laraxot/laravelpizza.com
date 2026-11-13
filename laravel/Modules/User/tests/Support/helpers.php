@@ -4,6 +4,7 @@ declare(strict_types=1);
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\Components\Field;
+use Filament\Infolists\Components\Entry;
 use Filament\Panel;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
@@ -376,7 +377,8 @@ function userResourceSectionComponents(TestCase $testCase, Component $section): 
 function userResourceFindComponentByName(array $components, string $name): ?Component
 {
     foreach ($components as $component) {
-        if (! $component instanceof Field) {
+        // Field (form) ed Entry (es. TextEntry di created_at) hanno entrambi un nome.
+        if (! $component instanceof Field && ! $component instanceof Entry) {
             continue;
         }
 

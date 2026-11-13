@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role;
 use Modules\User\Models\TeamUser;
@@ -77,7 +78,21 @@ trait HasTeams
             return false;
         }
 
-        return $this->ownsTeam($team) || $this->membershipTeams->contains('id', (string) $team->id);
+        if ($this->ownsTeam($team)) {
+            return true;
+        }
+
+        // Prima la relazione gia' caricata (nessuna query; i team impostati in memoria contano), poi team_user:
+        // dopo un attach() la collection in cache di membershipTeams non vede ancora il nuovo team.
+        if ($this->relationLoaded('membershipTeams')) {
+            $loaded = $this->getRelation('membershipTeams');
+            if ($loaded instanceof Collection
+                && $loaded->contains(static fn (mixed $member): bool => $member instanceof Model && SafeStringCastAction::cast($member->getKey()) === (string) $team->id)) {
+                return true;
+            }
+        }
+
+        return $this->teamUsers()->where('team_id', (string) $team->id)->exists();
     }
 
     /**
@@ -355,6 +370,11 @@ trait HasTeams
      */
     public function teamPermissions(TeamContract $team): array
     {
+        // Jetstream: il proprietario ha ogni permesso sul proprio team, coerente con hasTeamPermission().
+        if ($this->ownsTeam($team)) {
+            return ['*'];
+        }
+
         /** @var array<int, string> $permissions */
         $permissions = [];
 

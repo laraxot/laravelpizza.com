@@ -28,10 +28,13 @@
         }
     },
     "autoload-dev": {
-        "classmap": ["tests/"]
+        "psr-4": {
+            "Modules\\Cms\\Tests\\": "tests/"
+        }
     },
     "require": {
-        "laravel/head": "^0.2.2"
+        "laravel/head": "^0.2.2",
+        "ezyang/htmlpurifier": "^4.17"
     },
     "repositories": [
         {

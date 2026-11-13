@@ -52,19 +52,19 @@ return [
             'description' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
+            'label' => 'Applica filtri',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Colonne',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Riordina',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -86,6 +86,10 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Profile',
+        ],
+        'logout' => [
+            'tooltip' => '',
+            'icon' => 'logout',
         ],
     ],
 ];

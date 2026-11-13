@@ -10,11 +10,10 @@ use Modules\Media\Actions\Image\StripImageMetadataAction;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
-use function Safe\imagecreatefromstring;
 use function Safe\imagecreatetruecolor;
+use function Safe\imagecreatefromstring;
 use function Safe\imagefill;
 use function Safe\imagefilledrectangle;
 use function Safe\imagejpeg;
@@ -58,24 +57,15 @@ function stripActionPlainJpeg(): string
     return (string) ob_get_clean();
 }
 
-/**
- * Razionali TIFF little-endian (numeratore, denominatore 1) uno dopo l'altro.
- *
- * @param  list<int>  $parts
- */
-function stripActionRationals(array $parts): string
-{
-    return implode('', array_map(static fn (int $part): string => pack('VV', $part, 1), $parts));
-}
-
 /** Stesso JPEG con APP1 Exif reale subito dopo SOI: Orientation=6 (ruota di 90 gradi in senso orario), GPS 45 27'51" N, 9 11'24" E. */
 function stripActionGpsJpeg(): string
 {
+    $rationals = static fn (array $parts): string => implode('', array_map(static fn (int $part): string => pack('VV', $part, 1), $parts));
     $tiff = 'II'.pack('vV', 42, 8)
         .pack('v', 2).pack('vvVv', 0x0112, 3, 1, 6).pack('v', 0).pack('vvVV', 0x8825, 4, 1, 38).pack('V', 0)
         .pack('v', 4).pack('vvV', 1, 2, 2)."N\0\0\0".pack('vvVV', 2, 5, 3, 92)
         .pack('vvV', 3, 2, 2)."E\0\0\0".pack('vvVV', 4, 5, 3, 116).pack('V', 0)
-        .stripActionRationals([45, 27, 51]).stripActionRationals([9, 11, 24]);
+        .$rationals([45, 27, 51]).$rationals([9, 11, 24]);
     $app1 = "\xFF\xE1".pack('n', 2 + 6 + strlen($tiff))."Exif\0\0".$tiff;
     $jpeg = stripActionPlainJpeg();
 

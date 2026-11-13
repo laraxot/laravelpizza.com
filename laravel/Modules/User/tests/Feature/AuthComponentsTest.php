@@ -21,7 +21,7 @@ describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
         // Test existing auth components
         expect(View::exists('components.auth-session-status'))->toBeTrue();
-        expect(View::exists('components.auth-header'))->toBeTrue();
+        expect(View::exists('user::components.auth-header'))->toBeTrue();
         expect(View::exists('user::components.auth-session-status'))->toBeTrue();
     });
 
@@ -55,10 +55,10 @@ describe('Auth Components Tests', function (): void {
 
     test('auth header component exists and renders', function (): void {
         // Test the auth header component that exists
-        expect(View::exists('components.auth-header'))->toBeTrue();
+        expect(View::exists('user::components.auth-header'))->toBeTrue();
 
         /** @var view-string $view */
-        $view = 'components.auth-header';
+        $view = 'user::components.auth-header';
         $html = View::make($view, [
             'title' => 'Login Test',
             'description' => 'Test description',

@@ -3,11 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'edit' => [
-            'label' => 'edit',
-        ],
-    ],
     'label' => 'View Translation File',
     'plural_label' => 'View Translation File (Plurale)',
     'navigation' => [

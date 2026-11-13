@@ -3,6 +3,17 @@
 declare(strict_types=1);
 
 return [
+    'inbound_token' => env('MAIL_INBOUND_TOKEN'),
+    // Records the mail provider asks for; read as config('notify.notify.mail_dns'), checked by `php artisan notify:check-dns` (CheckMailDnsAction).
+    'mail_dns' => [
+        'domain' => env('MAIL_DNS_DOMAIN', 'fixcity.eu'),
+        'cnames' => [
+            'mt78' => 'smtp.mailtrap.live',
+            'rwmt1._domainkey' => 'rwmt1.dkim.smtp.mailtrap.live',
+            'rwmt2._domainkey' => 'rwmt2.dkim.smtp.mailtrap.live',
+            'mt-link' => 't.mailtrap.live',
+        ],
+    ],
     'company' => [
         'name' => 'Default Company',
         'team' => 'Default Team',
@@ -24,7 +35,7 @@ return [
         'notification_bounced' => '{{webhook_base}}/webhooks/notification-bounced',
         'notification_clicked' => '{{webhook_base}}/webhooks/notification-clicked'],
     'email' => [
-        'default_from_address' => 'noreply@example.com',
+        'default_from_address' => 'noreply@fixcity.eu',
         'default_from_name' => '{{company_name}}',
         'default_admin_email' => 'admin@{{company_name}}.com',
         'default_developer_email' => 'developer@{{company_name}}.com'],

@@ -1,17 +1,3 @@
----
-issues: []
-discussions: []
-title: "MCP Server Consigliati per il Modulo Tenant"
-module: "Tenant"
-type: concept
-tags: [mcp, server, recommended]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "mcp server recommended"
-related:
-  - "./phpstan-corrections-january.md"
-status: draft
----
 # MCP Server Consigliati per il Modulo Tenant
 
 ## Scopo del Modulo
@@ -35,3 +21,10 @@ Gestione multi-tenant, isolamento dati e provisioning tenant.
 
 ## Note
 - Adatta la configurazione per esigenze di isolamento o sincronizzazione avanzata.
+---
+module: theme
+topic: mcp-server-recommended
+canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-1-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-1-Modules.md

@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Province;
 use Modules\Geo\Tests\TestCase;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Sushi\Sushi;
 
@@ -22,7 +22,7 @@ describe('Province Business Logic', function () {
     });
 
     test('province has factory trait for testing', function () {
-        Assert::assertContains(HasFactory::class, class_uses_recursive(Province::class));
+        Assert::assertContains(HasXotFactory::class, class_uses_recursive(Province::class));
     });
 
     test('province uses sushi trait for in-memory data', function () {
@@ -30,7 +30,7 @@ describe('Province Business Logic', function () {
     });
 
     test('province has schema definition for geographic hierarchy', function () {
-        $schema = (new Province)->getSchema();
+        $schema = (new Province())->getSchema();
 
         Assert::assertIsArray($schema);
         Assert::assertSame('integer', $schema['region_id'] ?? null);
@@ -39,13 +39,13 @@ describe('Province Business Logic', function () {
     });
 
     test('province can get rows from comune data', function () {
-        $rows = (new Province)->getRows();
+        $rows = (new Province())->getRows();
 
         Assert::assertGreaterThanOrEqual(0, count($rows));
     });
 
     test('province model can be instantiated without errors', function () {
-        $province = new Province;
+        $province = new Province();
 
         Assert::assertFalse($province->exists);
     });

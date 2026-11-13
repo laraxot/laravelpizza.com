@@ -75,7 +75,9 @@ class UpdateCoordinatesFromAddressAction
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
-                $this->errors->merge($geocodingErrors);
+                // merge() restituisce una nuova Collection: senza riassegnare
+                // gli errori andrebbero persi e la notifica resterebbe vuota.
+                $this->errors = $this->errors->merge($geocodingErrors);
             } else {
                 $this->errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
             }

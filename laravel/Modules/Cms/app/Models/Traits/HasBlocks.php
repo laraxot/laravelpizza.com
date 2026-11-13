@@ -131,9 +131,9 @@ trait HasBlocks
 
     private function renderAllowedExpressions(string $value): string
     {
-        return (string) preg_replace_callback(
+        return Str::of($value)->replaceMatches(
             '/\{\{\s*(.+?)\s*\}\}/s',
-            function (array $match): string {
+            static function (array $match): string {
                 /** @var array<int, string> $match */
                 if (preg_match(self::SAFE_EXPRESSION, $match[1]) === 1) {
                     return Blade::render($match[0]);
@@ -149,8 +149,7 @@ trait HasBlocks
 
                 return $match[0];
             },
-            $value,
-        );
+        )->toString();
     }
 
     /**

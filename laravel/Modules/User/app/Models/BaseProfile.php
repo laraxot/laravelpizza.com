@@ -197,7 +197,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
         return $userLang;
     }
-    // use SoftDeletes;
 
     /**
      * The "booted" method of the model.

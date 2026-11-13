@@ -2,58 +2,24 @@
 
 declare(strict_types=1);
 
-// Xot translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// Canon: Modules/Xot/docs/wiki — domain i18n only.
-// File: lang/it/set_default_tenant_for_urls_fields_fields_p01.php
 return [
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
-    // Xot — translation keys (no business logic).
     'fields' => [
         'email' => [
-            'label' => 'email',
-            'description' => 'email',
             'helper_text' => '',
-            'placeholder' => 'email',
             'tooltip' => '',
         ],
         'password' => [
-            'label' => 'password',
-            'description' => 'password',
             'helper_text' => '',
-            'placeholder' => 'password',
             'tooltip' => '',
         ],
         'remember' => [
-            'label' => 'remember',
-            'description' => 'remember',
             'helper_text' => '',
-            'placeholder' => 'remember',
             'tooltip' => '',
         ],
         'cap' => [
-            'description' => 'cap',
-            'helper_text' => 'cap',
-            'placeholder' => 'cap',
-            'label' => 'cap',
             'tooltip' => '',
         ],
         'city' => [
-            'description' => 'city',
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
@@ -249,10 +215,6 @@ return [
             'description' => '',
         ],
         'itemIsDefault' => [
-            'description' => 'itemIsDefault',
-            'helper_text' => 'itemIsDefault',
-            'placeholder' => 'itemIsDefault',
-            'label' => 'itemIsDefault',
             'tooltip' => '',
         ],
         'zeusData' => [
@@ -286,52 +248,24 @@ return [
             'description' => '',
         ],
         'user_id' => [
-            'label' => 'user_id',
-            'placeholder' => 'user_id',
-            'helper_text' => 'user_id',
-            'description' => 'user_id',
             'tooltip' => '',
         ],
         'name' => [
-            'label' => 'name',
-            'placeholder' => 'name',
-            'helper_text' => 'name',
-            'description' => 'name',
             'tooltip' => '',
         ],
         'slug' => [
-            'label' => 'slug',
-            'placeholder' => 'slug',
-            'helper_text' => 'slug',
-            'description' => 'slug',
             'tooltip' => '',
         ],
         'category_id' => [
-            'label' => 'category_id',
-            'placeholder' => 'category_id',
-            'helper_text' => 'category_id',
-            'description' => 'category_id',
             'tooltip' => '',
         ],
         'description' => [
-            'label' => 'description',
-            'placeholder' => 'description',
-            'helper_text' => 'description',
-            'description' => 'description',
             'tooltip' => '',
         ],
         'details' => [
-            'label' => 'details',
-            'placeholder' => 'details',
-            'helper_text' => 'details',
-            'description' => 'details',
             'tooltip' => '',
         ],
         'is_active' => [
-            'label' => 'is_active',
-            'placeholder' => 'is_active',
-            'helper_text' => 'is_active',
-            'description' => 'is_active',
             'tooltip' => '',
         ],
     ],

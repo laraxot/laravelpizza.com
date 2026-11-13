@@ -224,21 +224,16 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'key',
         ],
         'color' => [
-            'label' => 'color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'color',
         ],
         'hex' => [
-            'label' => 'hex',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'hex',
         ],
         'timezone' => [
             'label' => 'Fuso orario',
@@ -328,9 +323,7 @@ return [
             ],
         ],
         'save' => [
-            'label' => 'save',
             'icon' => 'save',
-            'tooltip' => 'save',
         ],
     ],
     'label' => 'Metatag',

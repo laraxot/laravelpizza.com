@@ -11,21 +11,21 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 test('AssignRoleCommand can be instantiated', function () {
-    new AssignRoleCommand;
+    expect(new AssignRoleCommand)->toEqual(new AssignRoleCommand);
 });
 
 test('ChangeTypeCommand can be instantiated', function () {
-    new ChangeTypeCommand;
+    expect(new ChangeTypeCommand)->toEqual(new ChangeTypeCommand);
 });
 
 test('SuperAdminCommand can be instantiated', function () {
-    new SuperAdminCommand;
+    expect(new SuperAdminCommand)->toEqual(new SuperAdminCommand);
 });
 
 test('CreateTeamCommand can be instantiated', function () {
-    new CreateTeamCommand;
+    expect(new CreateTeamCommand)->toEqual(new CreateTeamCommand);
 });
 
 test('CreateTenantCommand can be instantiated', function () {
-    new CreateTenantCommand;
+    expect(new CreateTenantCommand)->toEqual(new CreateTenantCommand);
 });

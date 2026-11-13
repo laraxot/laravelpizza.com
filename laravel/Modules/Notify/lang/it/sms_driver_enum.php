@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+    'values' => [
     'smsfactor' => [
         'label' => 'SMSFactor',
         'color' => 'primary',
@@ -38,6 +39,7 @@ return [
         'color' => 'gray',
         'icon' => 'heroicon-o-truck',
         'description' => 'Provider italiano per servizi di telecomunicazioni e SMS'],
+    ],
     'label' => 'Sms Driver Enum',
     'plural_label' => 'Sms Driver Enum (Plurale)',
     'navigation' => [

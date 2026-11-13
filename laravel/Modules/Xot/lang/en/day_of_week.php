@@ -65,8 +65,4 @@ return [
         'sort' => 100,
     ],
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

@@ -142,6 +142,13 @@ class PageSlugMiddleware
             $candidates[] = $container0.'.'.$slug0;
         }
 
+        // Route a 3 segmenti ({container0}/{slug0}/{container1}, es. /restaurants/{slug}/menu):
+        // la pagina CMS e' quella del sotto-sezione `{container0}.{container1}` (es. restaurants.menu).
+        $container1 = $route->parameter('container1');
+        if (\is_string($container0) && $container0 !== '' && \is_string($container1) && $container1 !== '') {
+            $candidates[] = $container0.'.'.$container1;
+        }
+
         $container = $route->parameter('container');
         $slug = $route->parameter('slug');
         if (\is_string($container) && $container !== '' && \is_string($slug) && $slug !== '') {

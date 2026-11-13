@@ -7,7 +7,6 @@ namespace Modules\User\Models\Traits;
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\User\Contracts\TenantContract;
 use Modules\User\Models\Scopes\TenantScope;
 use Modules\Xot\Datas\XotData;
 
@@ -31,9 +30,9 @@ trait InteractsWithTenant
     /**
      * Relazione con il tenant a cui appartiene il modello.
      *
-     * @return BelongsTo<Model&TenantContract, self>
+     * @return BelongsTo<Model, self>
      *
-     * @phpstan-return BelongsTo<Model&TenantContract, $this>
+     * @phpstan-return BelongsTo<Model, $this>
      */
     public function tenant(): BelongsTo
     {

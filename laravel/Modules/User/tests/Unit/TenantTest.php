@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_mT0QGr
+=======
+use Modules\User\Tests\TestCase;
+use Modules\User\Models\BaseTenant;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+>>>>>>> .merge_file_Mii9Oo
 use Filament\Models\Contracts\HasAvatar;
 use Modules\User\Contracts\TenantContract;
 use Modules\User\Models\Tenant;
@@ -60,13 +66,13 @@ test('tenant slug is automatically generated', function (): void {
 });
 
 test('tenant has users relationship', function (): void {
-    expect($this->tenant)->toHaveMethod('users');
+    expect(method_exists($this->tenant, 'users'))->toBeTrue();
 
     expect($this->tenant->users()->getRelated())->toBeInstanceOf(User::class);
 });
 
 test('tenant has members relationship', function (): void {
-    expect($this->tenant)->toHaveMethod('members');
+    expect(method_exists($this->tenant, 'members'))->toBeTrue();
 
     expect($this->tenant->members()->getRelated())->toBeInstanceOf(User::class);
 });
@@ -80,13 +86,13 @@ test('tenant implements required interfaces', function (): void {
 });
 
 test('tenant has slug options configuration', function (): void {
-    expect($this->tenant)->toHaveMethod('getSlugOptions');
+    expect(method_exists($this->tenant, 'getSlugOptions'))->toBeTrue();
 
     expect($this->tenant->getSlugOptions()->slugField)->toBe('slug');
 });
 
 test('tenant has filament avatar url method', function (): void {
-    expect($this->tenant)->toHaveMethod('getFilamentAvatarUrl');
+    expect(method_exists($this->tenant, 'getFilamentAvatarUrl'))->toBeTrue();
 
     $avatarUrl = $this->tenant->getFilamentAvatarUrl();
     expect($avatarUrl)->toBeNull(); // Default implementation returns null
@@ -107,7 +113,8 @@ test('tenant has correct primary key', function (): void {
 });
 
 test('tenant has correct connection', function (): void {
-    expect($this->tenant->getConnectionName())->toBe('default');
+    // I modelli del modulo User vivono sulla connessione dedicata 'user' (BaseModel).
+    expect($this->tenant->getConnectionName())->toBe('user');
 });
 
 test('tenant can be updated', function (): void {

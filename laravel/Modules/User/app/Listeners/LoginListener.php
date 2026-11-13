@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 use Modules\User\Actions\Auth\RecordAuthenticationLogAction;
+use Modules\User\Actions\Database\IsUserDatabaseConfiguredAction;
 use Modules\User\Actions\GetCurrentDeviceAction;
+use Modules\User\Actions\Login\RecordLoginPulseAction;
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\DeviceUser;
@@ -40,7 +42,8 @@ class LoginListener
         // A restored/partially migrated user database may not have these
         // tables yet; do not turn a valid login into a 500 in that case.
         $userSchema = Schema::connection('user');
-        if ($userSchema->hasTable('devices') && $userSchema->hasTable('device_user')) {
+        $hasUserDatabase = app(IsUserDatabaseConfiguredAction::class)->execute();
+        if ($hasUserDatabase && $userSchema->hasTable('devices') && $userSchema->hasTable('device_user')) {
             $device = app(GetCurrentDeviceAction::class)->execute();
             $pivot = DeviceUser::firstOrCreate(['user_id' => $user->getAuthIdentifier(), 'device_id' => $device->id]);
 
@@ -67,12 +70,16 @@ class LoginListener
             return;
         }
 
+        $loginAt = now();
+
         app(RecordAuthenticationLogAction::class)->execute($user, [
             'ip_address' => $this->request->ip(),
             'user_agent' => $this->request->userAgent(),
-            'login_at' => now(),
+            'login_at' => $loginAt,
             'login_successful' => true,
             'location' => [],
         ]);
+
+        app(RecordLoginPulseAction::class)->execute($loginAt);
     }
 }

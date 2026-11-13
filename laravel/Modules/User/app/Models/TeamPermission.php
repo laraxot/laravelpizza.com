@@ -52,8 +52,6 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class TeamPermission extends BaseModel
 {
-    use TeamPermissionRelationsTrait;
-
     /**
      * The database connection that should be used by the model.
      */
@@ -69,4 +67,6 @@ class TeamPermission extends BaseModel
         'user_id',
         'permission',
     ];
+
+    use TeamPermissionRelationsTrait;
 }

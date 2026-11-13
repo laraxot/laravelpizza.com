@@ -143,8 +143,10 @@ test('it returns all teams user owns or belongs to', function (): void {
     $allTeams = $user->allTeams();
 
     Assert::assertInstanceOf(Collection::class, $allTeams);
-    Assert::assertCount(1, $allTeams);
+    // allTeams() = team posseduti + team di cui si e' membri (membershipTeams su team_user).
+    Assert::assertCount(2, $allTeams);
     Assert::assertContains($personalTeam->id, $allTeams->pluck('id')->toArray());
+    Assert::assertContains($team->id, $allTeams->pluck('id')->toArray());
     Assert::assertTrue($user->teamUsers()->where('team_id', $team->id)->exists());
 });
 

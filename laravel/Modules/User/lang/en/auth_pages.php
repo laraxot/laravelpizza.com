@@ -49,6 +49,7 @@ return [
         ],
         'request_another' => [
             'label' => 'click here to request another',
+            'sending' => 'sending…',
         ],
     ],
     'password_confirm' => [

@@ -37,17 +37,21 @@ test('CoordinatesData can be instantiated', function () {
 test('AddressData can be instantiated', function () {
     Assert::assertTrue(class_exists(AddressData::class));
 
-    $address = AddressData::from(['city' => 'Roma']);
+    // latitude/longitude are required constructor parameters
+    $address = AddressData::from(['latitude' => 41.9028, 'longitude' => 12.4964, 'city' => 'Roma']);
 
     Assert::assertSame('Roma', $address->city);
+    Assert::assertSame(41.9028, $address->latitude);
 });
 
 test('LocationData can be instantiated', function () {
     Assert::assertTrue(class_exists(LocationData::class));
 
-    $location = LocationData::from(['name' => 'Rome']);
+    // from(array) is routed to the magic LocationData::fromArray(), which requires latitude/longitude
+    $location = LocationData::from(['latitude' => 41.9028, 'longitude' => 12.4964, 'name' => 'Rome']);
 
     Assert::assertSame('Rome', $location->name);
+    Assert::assertSame(41.9028, $location->latitude);
 });
 
 test('PlaceData can be instantiated', function () {
@@ -219,13 +223,23 @@ test('IPLocationData can be instantiated', function () {
 test('GeocodingData can be instantiated', function () {
     Assert::assertTrue(class_exists(GeocodingData::class));
 
+    // from(array) is routed to the magic GeocodingData::fromGoogleResponse(): it expects a Google Geocoding payload
     $geocodingData = GeocodingData::from([
-        'latitude' => 41.9028,
-        'longitude' => 12.4964,
-        'formatted_address' => 'Rome, Italy',
+        'status' => 'OK',
+        'results' => [[
+            'geometry' => ['location' => ['lat' => 41.9028, 'lng' => 12.4964]],
+            'formatted_address' => 'Rome, Italy',
+            'address_components' => [
+                ['long_name' => 'Roma', 'short_name' => 'Roma', 'types' => ['locality']],
+                ['long_name' => 'Italia', 'short_name' => 'IT', 'types' => ['country']],
+            ],
+        ]],
     ]);
 
     Assert::assertSame('Rome, Italy', $geocodingData->formatted_address);
+    Assert::assertSame(41.9028, $geocodingData->latitude);
+    Assert::assertSame('Roma', $geocodingData->locality);
+    Assert::assertNull($geocodingData->error);
 });
 
 test('TimeZoneData can be instantiated', function () {
@@ -236,7 +250,10 @@ test('TimeZoneData can be instantiated', function () {
         'timeZoneName' => 'Central European Time',
         'rawOffset' => 3600,
         'dstOffset' => 3600,
+        // required by the magic TimeZoneData::fromGoogleMaps() used by from(array)
+        'countryCode' => 'IT',
     ]);
 
     Assert::assertSame('Europe/Rome', $timeZoneData->timeZoneId);
+    Assert::assertSame(7200, $timeZoneData->getTotalOffset());
 });

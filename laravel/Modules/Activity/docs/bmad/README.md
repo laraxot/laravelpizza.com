@@ -98,8 +98,8 @@ bmad-quick-spec "Specifica per retention log Y giorni"
 ## Configurazione
 
 ```bash
-# Verifica che Activity sia abilitato
-php artisan module:status Activity
+# Verifica che Activity sia abilitato (module:status non esiste: usare module:list)
+php artisan module:list | grep Activity
 
 # Esegui migration
 php artisan migrate --path=modules/Activity/database/migrations

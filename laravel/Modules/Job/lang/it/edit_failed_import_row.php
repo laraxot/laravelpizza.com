@@ -3,11 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'delete' => [
-            'label' => 'delete',
-        ],
-    ],
     'label' => 'Edit Failed Import Row',
     'plural_label' => 'Edit Failed Import Row (Plurale)',
     'navigation' => [

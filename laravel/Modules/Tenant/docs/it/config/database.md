@@ -1,18 +1,3 @@
----
-issues: []
-discussions: []
-title: "Database"
-module: "Tenant"
-type: concept
-tags: [database]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "database"
-related:
-  - "./phpstan-corrections-january.md"
-  - "../../phpstan-corrections-january.md"
-status: draft
----
 <?php
 
 declare(strict_types=1);
@@ -100,6 +85,8 @@ return $def1;
 
 ## Collegamenti tra versioni di database.md
 * [database.md](docs/tecnico/database/database.md)
+* [database.md](../../../Xot/docs/install/database.md)
+* [database.md](../../../Tenant/docs/it/config/database.md)
 * [database.md](../../../xot/docs/install/database.md)
 * [database.md](../../../tenant/docs/it/config/database.md)
 

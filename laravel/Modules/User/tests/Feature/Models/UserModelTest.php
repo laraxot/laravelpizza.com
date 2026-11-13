@@ -173,14 +173,16 @@ describe('User Model', function (): void {
         Assert::assertNull($user->email_verified_at);
     });
 
-    test('user can access the default admin filament panel by default', function (): void {
+    test('user without an admin role cannot access the default admin filament panel', function (): void {
         $user = UserFactory::new()->createOne();
 
         $panel = configureMock(Panel::class, function (MockInterface $mock): void {
             $mock->allows(['getId' => 'admin']);
         });
 
-        Assert::assertTrue($user->canAccessPanel($panel));
+        // BaseUser::canAccessPanel(): il pannello 'admin' e' riservato a super-admin/admin;
+        // un cittadino appena registrato non ci entra (il pannello 'access' resta aperto a tutti).
+        Assert::assertFalse($user->canAccessPanel($panel));
     });
 
     test('user can access socialite by default', function (): void {

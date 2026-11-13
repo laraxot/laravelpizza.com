@@ -21,55 +21,46 @@ return [
             'description' => '',
         ],
         'login_at' => [
-            'label' => 'login_at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'ip_address' => [
-            'label' => 'ip_address',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'user_agent' => [
-            'label' => 'user_agent',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'user' => [
-            'label' => 'user',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -84,5 +75,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [],
 ];

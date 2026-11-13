@@ -2,21 +2,7 @@
 
 declare(strict_types=1);
 
-// Cms translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// Canon: Modules/Cms/docs/wiki — domain i18n only.
-// File: lang/it/section_fields_p01.php
-// Cms nested fields split — claude-audit <500 LOC
 return [
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
-    // Cms — translation keys (no business logic).
     'fields' => [
         'toggleColumns' => [
             'label' => 'Mostra/Nascondi Colonne',
@@ -51,15 +37,11 @@ return [
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il nome della sezione',
-            'helper_text' => 'name',
-            'description' => 'name',
             'tooltip' => '',
         ],
         'slug' => [
             'label' => 'Slug',
             'placeholder' => 'Inserisci lo slug della sezione',
-            'helper_text' => 'slug',
-            'description' => 'slug',
             'tooltip' => '',
         ],
         'blocks' => [

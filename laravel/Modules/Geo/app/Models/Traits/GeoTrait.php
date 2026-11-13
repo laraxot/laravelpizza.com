@@ -62,6 +62,17 @@ trait GeoTrait
     }
 
     /**
+     * Espone `distance` come attributo (prodotto da `scopeWithDistance`)
+     * invece di relation: senza questo accessor, `$model->distance` cada
+     * nel ramo relation di Eloquent e `distance()` — che non e' una
+     * relation — fa fallire il boot delle tabelle Filament.
+     */
+    public function getDistanceAttribute(mixed $value): ?float
+    {
+        return is_numeric($value) ? (float) $value : null;
+    }
+
+    /**
      * Ordina per distanza Haversine da un punto (colonna distance in select).
      *
      * @param  Builder<static>  $query
@@ -73,11 +84,20 @@ trait GeoTrait
             return $query;
         }
 
+        /*
+         * `*` va aggiunto solo se la query non ha gia' colonne selezionate:
+         * con `clients.*, <subselect>, *, 6371...` MariaDB rifiuta la sintassi.
+         */
+        $expression = '6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude))) AS distance';
+        $bindings = [$lat, $lng, $lat];
+        $prefix = empty($query->getQuery()->columns) ? '*, ' : '';
+
         return $query
-            ->selectRaw(
-                '*, (6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) * 1.1515 AS distance',
-                [$lat, $lng, $lat],
-            )
+            ->selectRaw($prefix.$expression, $bindings)
+            // Senza coords `distance` e' NULL: in MySQL gli NULL vengono
+            // prima in ASC → i record senza coordinate_DOMINANO la lista.
+            // `distance IS NULL` ordina 0/1: prima i calcolati, poi gli altri.
+            ->orderByRaw('distance IS NULL')
             ->orderBy('distance');
     }
 

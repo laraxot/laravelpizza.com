@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Geo\Actions\GeoData\CheckGeoDataIntegrityAction;
-use Tests\TestCase;
+use Modules\Geo\Tests\TestCase;
 
 uses(TestCase::class, WithFaker::class);
-
-beforeEach(function () {
-    $this->action = app(CheckGeoDataIntegrityAction::class);
-});
 
 describe('CheckGeoDataIntegrityAction', function () {
     it('returns true for valid geo data', function () {
@@ -24,7 +20,7 @@ describe('CheckGeoDataIntegrityAction', function () {
                             'name' => 'Milano',
                             'code' => 'MI',
                             'cities' => [
-                                ['name' => 'Milano', 'cap' => '20100'],
+                                ['name' => 'Milano', 'code' => '015146', 'cap' => '20100'],
                             ],
                         ],
                     ],
@@ -32,25 +28,25 @@ describe('CheckGeoDataIntegrityAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($validData);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute($validData);
 
         expect($result)->toBeTrue();
     });
 
     it('returns false for missing regions', function () {
-        $result = $this->action->execute([]);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute([]);
 
         expect($result)->toBeFalse();
     });
 
     it('returns false for non-array regions', function () {
-        $result = $this->action->execute(['regions' => 'invalid']);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute(['regions' => 'invalid']);
 
         expect($result)->toBeFalse();
     });
 
     it('returns false for empty regions array', function () {
-        $result = $this->action->execute(['regions' => []]);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute(['regions' => []]);
 
         expect($result)->toBeFalse();
     });
@@ -62,7 +58,7 @@ describe('CheckGeoDataIntegrityAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -78,7 +74,7 @@ describe('CheckGeoDataIntegrityAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });
@@ -100,7 +96,7 @@ describe('CheckGeoDataIntegrityAction', function () {
             ],
         ];
 
-        $result = $this->action->execute($invalidData);
+        $result = app(CheckGeoDataIntegrityAction::class)->execute($invalidData);
 
         expect($result)->toBeFalse();
     });

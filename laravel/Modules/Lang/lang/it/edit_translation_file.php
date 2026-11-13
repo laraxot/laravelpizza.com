@@ -5,10 +5,6 @@ declare(strict_types=1);
 return [
     'fields' => [
         'key' => [
-            'label' => 'key',
-            'placeholder' => 'key',
-            'helper_text' => 'key',
-            'description' => 'key',
             'tooltip' => '',
         ],
         'data' => [
@@ -23,14 +19,9 @@ return [
             'description' => '',
         ],
         'pippo' => [
-            'description' => 'pippo',
-            'helper_text' => 'pippo',
-            'placeholder' => 'pippo',
-            'label' => 'pippo',
             'tooltip' => '',
         ],
         'pluto' => [
-            'description' => 'pluto',
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
@@ -413,17 +404,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-        ],
-    ],
-    'actions' => [
-        'delete' => [
-            'label' => 'delete',
-        ],
-        'activeLocale' => [
-            'label' => 'activeLocale',
-        ],
-        'lang' => [
-            'label' => 'lang',
         ],
     ],
     'label' => 'Edit Translation File',

@@ -6,29 +6,18 @@ return [
     'fields' => [
         'title' => [
             'label' => 'Titolo',
-            'description' => 'title',
-            'helper_text' => 'title',
-            'placeholder' => 'title',
             'tooltip' => '',
         ],
         'text' => [
             'label' => 'Testo',
-            'description' => 'text',
-            'helper_text' => 'text',
-            'placeholder' => 'text',
             'tooltip' => '',
         ],
         '_tpl' => [
-            'label' => '_tpl',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'view' => [
-            'label' => 'view',
-            'description' => 'view',
-            'helper_text' => 'view',
-            'placeholder' => 'view',
             'tooltip' => '',
         ],
     ],
@@ -41,6 +30,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'actions' => [
-    ],
 ];

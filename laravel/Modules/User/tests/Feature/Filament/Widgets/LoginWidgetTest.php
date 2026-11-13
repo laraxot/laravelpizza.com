@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\MessageBag;
 use Illuminate\Validation\ValidationException;
-use Modules\User\Filament\Widgets\Auth\Schemas\UserForm;
+use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 use Modules\User\Filament\Widgets\LoginWidget;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;

@@ -73,8 +73,6 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
     'actions' => [
         'login' => [
             'success' => 'Sesión iniciada correctamente.',
@@ -83,27 +81,63 @@ return [
         ],
     ],
     'login' => [
-        'title' => ['label' => 'Inicia sesión en tu cuenta', 'text' => 'Inicia sesión en tu cuenta'],
-        'subtitle' => ['text' => 'Introduce tus credenciales para acceder'],
-        'welcome_back' => ['text' => 'Bienvenido de nuevo'],
-        'welcome_message' => ['text' => 'Introduce tus credenciales para acceder.'],
-        'intro' => ['text' => 'Inicia sesión para informar de un problema y seguir tus trámites.'],
+        'title' => [
+            'label' => 'Inicia sesión en tu cuenta',
+            'text' => 'Inicia sesión en tu cuenta',
+        ],
+        'subtitle' => [
+            'text' => 'Introduce tus credenciales para acceder',
+        ],
+        'welcome_back' => [
+            'text' => 'Bienvenido de nuevo',
+        ],
+        'welcome_message' => [
+            'text' => 'Introduce tus credenciales para acceder.',
+        ],
+        'intro' => [
+            'text' => 'Inicia sesión para informar de un problema y seguir tus trámites.',
+        ],
         'email' => 'Correo electrónico',
         'email_placeholder' => 'ejemplo@correo.com',
         'password' => 'Contraseña',
         'password_placeholder' => '••••••••',
         'remember' => 'Recuérdame',
-        'register' => ['text' => 'Registrarse'],
-        'google' => ['text' => 'Google', 'button' => ['text' => 'Iniciar sesión con Google']],
-        'microsoft' => ['text' => 'Microsoft'],
-        'github' => ['text' => 'GitHub'],
-        'or_continue_with' => ['text' => 'o'],
-        'submit' => ['text' => 'Iniciar sesión'],
-        'forgot_password' => ['text' => '¿Has olvidado la contraseña?'],
-        'no_account' => ['text' => '¿Todavía no tienes una cuenta?'],
-        'create_account' => ['text' => 'Crear una cuenta'],
-        'logging_in' => ['text' => 'Iniciando sesión…'],
-        'success' => ['text' => 'Sesión iniciada correctamente.'],
+        'register' => [
+            'text' => 'Registrarse',
+        ],
+        'google' => [
+            'text' => 'Google',
+            'button' => [
+                'text' => 'Iniciar sesión con Google',
+            ],
+        ],
+        'microsoft' => [
+            'text' => 'Microsoft',
+        ],
+        'github' => [
+            'text' => 'GitHub',
+        ],
+        'or_continue_with' => [
+            'text' => 'o',
+        ],
+        'submit' => [
+            'text' => 'Iniciar sesión',
+        ],
+        'forgot_password' => [
+            'text' => '¿Has olvidado la contraseña?',
+        ],
+        'no_account' => [
+            'text' => '¿Todavía no tienes una cuenta?',
+        ],
+        'create_account' => [
+            'text' => 'Crear una cuenta',
+        ],
+        'logging_in' => [
+            'text' => 'Iniciando sesión…',
+        ],
+        'success' => [
+            'text' => 'Sesión iniciada correctamente.',
+        ],
         'invalid_provider' => 'Proveedor de inicio de sesión no válido.',
         'redirecting' => 'Redirigiendo…',
         'redirect_to_provider' => 'Serás redirigido a :provider.',

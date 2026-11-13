@@ -72,8 +72,4 @@ return [
     'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

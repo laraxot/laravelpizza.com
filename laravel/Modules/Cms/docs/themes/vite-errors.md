@@ -12,6 +12,12 @@ status: draft
 
 # Gestione Errori Vite nei Temi
 
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
 ## Perché
 I temi sono una componente fondamentale del modulo CMS e la loro corretta compilazione attraverso Vite è essenziale per il funzionamento dell'interfaccia utente. Gli errori di compilazione Vite possono bloccare la visualizzazione del tema e devono essere gestiti in modo sistematico.
 
@@ -56,7 +62,10 @@ cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
+<<<<<<< .merge_file_584KxC
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+>>>>>>> .merge_file_uEOFPK
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -120,7 +129,11 @@ npm cache clean --force
 
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
+<<<<<<< .merge_file_584KxC
 npm install
+=======
+npm install && npm run build
+>>>>>>> .merge_file_uEOFPK
 ```
 
 ## Manutenzione

@@ -81,9 +81,9 @@ class LangServiceProvider extends XotBaseServiceProvider
             return app(AutoLabelAction::class)->execute($component, 'label');
         });
 
+        // Solo l'intestazione: in Filament 5 la `label` di una Section si disegna sopra il riquadro
+        // (`fi-sc-section-label`), quindi ogni sezione mostrava il titolo due volte.
         Section::configureUsing(function (Section $component) {
-            $component = app(AutoLabelAction::class)->execute($component);
-
             return app(AutoLabelAction::class)->execute($component, 'heading');
         });
 
