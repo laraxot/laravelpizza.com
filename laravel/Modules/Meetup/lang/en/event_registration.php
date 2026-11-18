@@ -28,6 +28,7 @@ return [
         'intro' => 'Just an email and a password: if you don\'t have an account, we create it now.',
         'email' => 'Email',
         'password' => 'Password',
+        'password_hint' => 'For a new account: at least :min characters, with upper and lower case letters, a number and a symbol.',
         'consents' => 'I accept the :privacy and the :terms.',
         'privacy' => 'privacy policy',
         'terms' => 'terms of service',

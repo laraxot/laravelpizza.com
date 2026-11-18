@@ -45,13 +45,20 @@
                         type="{{ $type }}"
                         autocomplete="{{ $autocomplete }}"
                         required
-                        @error($field) aria-invalid="true" aria-describedby="event-signup-{{ $field }}-error" @enderror
+                        @php($describedBy = trim(($field === 'password' ? 'event-signup-password-hint ' : '').($errors->has($field) ? 'event-signup-'.$field.'-error' : '')))
+                        @if ($describedBy !== '') aria-describedby="{{ $describedBy }}" @endif
+                        @error($field) aria-invalid="true" @enderror
                         @class([
                             'block w-full rounded-lg border bg-white px-3 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-red-500/50 dark:bg-slate-900 dark:text-white',
                             'border-red-500' => $errors->has($field),
                             'border-slate-300 dark:border-slate-600' => ! $errors->has($field),
                         ])
                     />
+                    @if ($field === 'password')
+                        <p id="event-signup-password-hint" class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                            {{ __('meetup::event_registration.signup.password_hint', ['min' => $passwordMin]) }}
+                        </p>
+                    @endif
                     @error($field)
                         <p id="event-signup-{{ $field }}-error" class="mt-1 text-sm text-red-700 dark:text-red-300">{{ $message }}</p>
                     @enderror

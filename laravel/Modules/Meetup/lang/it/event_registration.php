@@ -28,6 +28,7 @@ return [
         'intro' => 'Bastano email e password: se non hai un account lo creiamo adesso.',
         'email' => 'Email',
         'password' => 'Password',
+        'password_hint' => 'Per un account nuovo: almeno :min caratteri, con maiuscole, minuscole, un numero e un simbolo.',
         'consents' => 'Accetto l\':privacy e i :terms.',
         'privacy' => 'informativa privacy',
         'terms' => 'termini di servizio',

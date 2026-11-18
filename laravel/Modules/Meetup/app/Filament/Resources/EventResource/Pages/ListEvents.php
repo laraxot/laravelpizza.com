@@ -6,7 +6,6 @@ namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
-use Filament\Actions\CreateAction;
 use Filament\Widgets\Widget;
 use Modules\Meetup\Filament\Actions\ImportEventsAction;
 use Modules\Meetup\Filament\Resources\EventResource;
@@ -26,7 +25,7 @@ class ListEvents extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return [
-            'create' => CreateAction::make()->icon('heroicon-o-plus'),
+            ...parent::getHeaderActions(),
             'import_events' => ImportEventsAction::make(),
         ];
     }

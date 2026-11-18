@@ -21,8 +21,9 @@ final class ChangePasswordAction extends XotBaseAction
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
-            ->tooltip(__('user::user.actions.change_password'))
+        // Etichetta esplicita: translateLabel() ricavava "Change password" dal nome tecnico, anche in italiano.
+        $this->label(static fn (): string => (string) __('user::user.actions.change_password'))
+            ->tooltip(static fn (): string => (string) __('user::user.actions.change_password'))
             ->icon('heroicon-o-key')
             ->authorize('update')
             ->requiresConfirmation()
