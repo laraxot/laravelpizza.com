@@ -234,19 +234,10 @@ IndennitaResponsabilita::withoutEvents(function (): void {
 
 ---
 
-<<<<<<< .merge_file_OuyhmA
-<<<<<<< HEAD
-<<<<<<< HEAD
 **
-=======
 **Ultimo aggiornamento**: 19 Novembre 2025  
->>>>>>> 0a02158a (.)
-=======
 **Ultimo aggiornamento**: 19 Novembre 2025  
->>>>>>> 35d8cf69 (Initial commit)
-=======
 **=======
 **Ultimo aggiornamento**: 19 Novembre 2025  
->>>>>>> .merge_file_rbpZHb
 **Severità**: Alta (blocca operazioni batch)  
 **Soluzione**: Usare `withoutEvents()` durante `firstOrCreate()`

@@ -42,8 +42,6 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
-<<<<<<< .merge_file_w7vaS1
-=======
 
 ---
 
@@ -82,4 +80,3 @@ qmd search "Activity <argomento>" --limit 5
 ```
 
 I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [INDEX.md](./INDEX.md) e le pagine di `concepts/` per non duplicarla.
->>>>>>> .merge_file_2ycT6I

@@ -12,17 +12,11 @@ use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Snapshot Policy', function (): void {
     test('policy extends user base policy', function (): void {
-<<<<<<< .merge_file_2BB1Tx
-        $policy = new SnapshotPolicy();
-
-        Assert::assertInstanceOf(UserBasePolicy::class, $policy);
-=======
         Assert::assertTrue((new \ReflectionClass(SnapshotPolicy::class))->isSubclassOf(UserBasePolicy::class));
->>>>>>> .merge_file_P888Q7
     });
 
     test('policy has expected public methods', function (): void {
@@ -39,7 +33,7 @@ describe('Snapshot Policy', function (): void {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('hasPermissionTo')->with('snapshot.view')->andReturn(true);
 
-        $policy = new SnapshotPolicy();
+        $policy = new SnapshotPolicy;
         $result = $policy->view($user);
 
         Assert::assertTrue($result);
@@ -50,7 +44,7 @@ describe('Snapshot Policy', function (): void {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('hasPermissionTo')->with('snapshot.view')->andReturn(false);
 
-        $policy = new SnapshotPolicy();
+        $policy = new SnapshotPolicy;
         $result = $policy->view($user);
 
         Assert::assertFalse($result);

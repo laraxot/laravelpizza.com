@@ -257,11 +257,8 @@ x-layouts.main (base HTML: DOCTYPE, head, body, scripts)
 
 ---
 
-<<<<<<< .merge_file_upxg31
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 ### 9. Vite Build: outDir: './public' + symlink public_html/themes (npm run copy obsoleto) ✅
->>>>>>> .merge_file_VKiGFx
 
 **Decision**: Build theme independently, copy to public_html.
 
@@ -289,10 +286,7 @@ cd laravel/Themes/Sixteen
 composer update -W
 npm install
 npm run build
-<<<<<<< .merge_file_upxg31
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_VKiGFx
 ```
 
 **Alternatives Rejected**:

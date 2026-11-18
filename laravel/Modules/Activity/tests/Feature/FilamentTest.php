@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Feature;
 
 use Filament\Actions\Action;
-use Filament\Actions\ActionGroup;
 use Filament\Tables\Table;
 use Modules\Activity\Events\ActivityEvent;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
@@ -112,11 +111,7 @@ describe('ActivityResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-<<<<<<< .merge_file_ERYyp4
-        $instance = app(\Modules\Activity\Filament\Resources\ActivityResource\Schemas\ActivityForm::class);
-=======
         $instance = app(ActivityForm::class);
->>>>>>> .merge_file_pneSfz
         $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('log_name', $schema);
@@ -189,11 +184,7 @@ describe('SnapshotResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-<<<<<<< .merge_file_ERYyp4
-        $instance = app(\Modules\Activity\Filament\Resources\SnapshotResource\Schemas\SnapshotForm::class);
-=======
         $instance = app(SnapshotForm::class);
->>>>>>> .merge_file_pneSfz
         $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('model_type', $schema);
@@ -263,11 +254,7 @@ describe('StoredEventResource', function (): void {
     });
 
     test('has required form schema fields', function (): void {
-<<<<<<< .merge_file_ERYyp4
-        $instance = app(\Modules\Activity\Filament\Resources\StoredEventResource\Schemas\StoredEventForm::class);
-=======
         $instance = app(StoredEventForm::class);
->>>>>>> .merge_file_pneSfz
         $schema = $instance->getFormSchema();
 
         Assert::assertArrayHasKey('event_class', $schema);

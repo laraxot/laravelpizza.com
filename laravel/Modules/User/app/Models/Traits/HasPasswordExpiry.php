@@ -7,6 +7,9 @@ namespace Modules\User\Models\Traits;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Datas\PasswordData;
 
+/**
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+ */
 trait HasPasswordExpiry
 {
     public static function bootHasPasswordExpiry(): void

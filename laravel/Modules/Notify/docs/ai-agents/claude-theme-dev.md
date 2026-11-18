@@ -45,10 +45,7 @@ npm run dev
 
 # Production build
 npm run build
-<<<<<<< .merge_file_20p8Vb
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_RJQYYB
 ```
 
 ---

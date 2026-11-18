@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
-use Illuminate\Support\Str;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Laravel\Head\Facades\Head as HeadManager;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -23,7 +23,6 @@ use Modules\Cms\Models\Page;
 use Modules\Xot\Datas\MetatagData;
 
 use function Safe\parse_url;
-use function Safe\preg_replace;
 
 /**
  * Il `<head>` del front office: la vista emette `<head>…</head>`, i layout non lo avvolgono.

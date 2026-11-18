@@ -444,11 +444,8 @@ Vite Build Process:
 2. Compiles resources/css/app.css
 3. Compiles resources/js/app.js
 4. Outputs to public/
-<<<<<<< .merge_file_nmG0XA
 5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 5. npm run copy (dismesso: symlink public_html/themes/<Tema>) (copies to public_html/themes/Meetup)
->>>>>>> .merge_file_E6V8Lh
 ```
 
 ## Common Integration Patterns

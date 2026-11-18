@@ -119,15 +119,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
     /**
      * Elabora i record selezionati aggiornando le coordinate.
      *
-<<<<<<< .merge_file_PvBZam
      * @param  Collection<int, Model>  $records
-=======
-<<<<<<< .merge_file_yfWCjX
-     * @param  Collection<int, Place>  $records
-=======
-     * @param  Collection<int, Model>  $records
->>>>>>> .merge_file_53FUGz
->>>>>>> .merge_file_GiV9oT
      */
     private function processRecords(Collection $records): void
     {
@@ -138,13 +130,6 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
 
         foreach ($records as $record) {
             try {
-<<<<<<< .merge_file_PvBZam
-=======
-<<<<<<< .merge_file_yfWCjX
-                $action->execute($record);
-                $successCount++;
-=======
->>>>>>> .merge_file_GiV9oT
                 if ($action->execute($record)) {
                     $successCount++;
                 } else {
@@ -154,10 +139,6 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
                         $action->getErrors()->implode(', '),
                     ));
                 }
-<<<<<<< .merge_file_PvBZam
-=======
->>>>>>> .merge_file_53FUGz
->>>>>>> .merge_file_GiV9oT
             } catch (\Throwable $e) {
                 $errors->push(sprintf('Place #%s: %s', SafeStringCastAction::cast($record->getKey()), $e->getMessage()));
             }

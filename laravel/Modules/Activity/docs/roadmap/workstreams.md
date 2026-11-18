@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_ehUNtO
-=======
 ---
 title: "Workstreams - Activity"
 type: note
@@ -8,7 +6,6 @@ updated: 2026-10-07
 tags: [docs, activity, roadmap]
 qmd: "workstreams - activity activity"
 ---
->>>>>>> .merge_file_JeHWoz
 # Workstreams - Activity
 
 ## WS1 Architecture

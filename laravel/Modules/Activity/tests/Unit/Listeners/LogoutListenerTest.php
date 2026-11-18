@@ -8,16 +8,8 @@ use Modules\Activity\Providers\EventServiceProvider;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_aFD3Xl
 
-=======
-<<<<<<< .merge_file_e19I9v
-
-uses(\Modules\Activity\Tests\TestCase::class);
-=======
->>>>>>> .merge_file_0AVARw
 uses(TestCase::class);
->>>>>>> .merge_file_AaXnvd
 
 test('logout listener is registered for logout event', function () {
     $reflection = new ReflectionClass(EventServiceProvider::class);
@@ -30,24 +22,18 @@ test('logout listener is registered for logout event', function () {
 });
 
 test('logout listener can be instantiated', function () {
-<<<<<<< .merge_file_e19I9v
-    $listener = new LogoutListener();
-
-    Assert::assertInstanceOf(LogoutListener::class, $listener);
-=======
     Assert::assertTrue((new ReflectionClass(LogoutListener::class))->isInstantiable());
->>>>>>> .merge_file_AaXnvd
 });
 
 test('logout listener has handle method', function () {
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $reflection = new ReflectionClass($listener);
 
     Assert::assertTrue($reflection->hasMethod('handle'));
 });
 
 test('logout listener handle method accepts logout event', function () {
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $reflection = new ReflectionClass($listener);
     $method = $reflection->getMethod('handle');
     $parameters = $method->getParameters();
@@ -59,11 +45,11 @@ test('logout listener handle method accepts logout event', function () {
 });
 
 test('logout listener handles event without user gracefully', function () {
-    $user = new User();
+    $user = new User;
     $user->exists = true;
     $event = new Logout('web', $user);
     (new ReflectionClass(Logout::class))->getProperty('user')->setValue($event, null);
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 });

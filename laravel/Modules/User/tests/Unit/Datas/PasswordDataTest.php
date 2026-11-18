@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Modules\User\Datas\PasswordData;
-use PHPUnit\Framework\Assert;
 use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Safe\file_get_contents;
 

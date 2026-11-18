@@ -7,7 +7,6 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Modules\Geo\Actions\Address\FormatAddressAction;
 use Modules\Geo\Enums\AddressTypeEnum;
@@ -206,8 +205,7 @@ class Address extends BaseModel
      * Il filtro è fatto in PHP e non con json_extract(): i dati Sushi dei comuni possono
      * contenere valori non-JSON (es. "Sicilia") e SQLite fallirebbe con "malformed JSON".
      *
-     * @param 'regione'|'provincia' $column
-     *
+     * @param  'regione'|'provincia'  $column
      * @return array{codice: mixed, nome: mixed}|null
      */
     private function findComuneArea(string $column, mixed $code): ?array

@@ -44,20 +44,14 @@ status: draft
 ## Best Practices
 
 1. **Sviluppo**
-<<<<<<< .merge_file_HV41t7
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
    - Utilizzare `npm run dev`
->>>>>>> .merge_file_OQg5Zq
    - Verificare il corretto caricamento degli assets
    - Mantenere la documentazione aggiornata
 
 2. **Produzione**
-<<<<<<< .merge_file_HV41t7
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
    - Eseguire `npm run build` (servito via symlink, niente copy)
->>>>>>> .merge_file_OQg5Zq
    - Verificare la presenza e l'accessibilità degli assets
    - Testare il funzionamento completo del tema
 

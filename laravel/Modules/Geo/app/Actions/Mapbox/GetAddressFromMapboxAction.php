@@ -161,7 +161,7 @@ class GetAddressFromMapboxAction
             'street' => $street,
             'street_number' => $streetNumber,
             // AddressData non ha una proprietà 'province': la sigla della regione Mapbox va in 'state'
-            'state' => '' !== $province ? $province : null,
+            'state' => $province !== '' ? $province : null,
         ]);
     }
 }

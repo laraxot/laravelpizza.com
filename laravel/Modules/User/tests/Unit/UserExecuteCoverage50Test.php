@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit;
 
-use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Filament\Actions\Action as FilamentAction;
 use Filament\Actions\BulkAction;
 use Filament\Panel;
@@ -56,6 +55,7 @@ use Modules\User\Tests\TestCase;
 use Modules\User\Tests\Unit\Fixtures\HasShieldPermissionsFixture;
 use Modules\User\View\Components\Mail\Message;
 use Modules\User\View\Pages\ProfileEditVoltComponent;
+use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Tests\ModuleBusinessCoverage;
 use Modules\Xot\Tests\ModuleExecuteCoverage;
 use PHPUnit\Framework\Assert;
@@ -108,7 +108,7 @@ function userInvoke(object $target, string $method, mixed ...$args): mixed
 
 function userMockWithTeams(string $id = 'owner-1'): User
 {
-    $user = new User();
+    $user = new User;
     $user->forceFill(['id' => $id, 'current_team_id' => null, 'total_members' => 0]);
 
     return $user;
@@ -116,7 +116,7 @@ function userMockWithTeams(string $id = 'owner-1'): User
 
 function userTeamFixture(string $ownerId, int $teamId = 1, bool $personal = false): Team
 {
-    $team = new Team();
+    $team = new Team;
     $team->forceFill([
         'id' => $teamId,
         'user_id' => $ownerId,
@@ -336,7 +336,7 @@ describe('User execute coverage floor 50', function (): void {
             'services.microsoft.scopes' => ['User.Read'],
         ]);
 
-        $page = new SocialiteProviderSettingsPage();
+        $page = new SocialiteProviderSettingsPage;
         $page->mount();
 
         Assert::assertTrue($page->google['enabled']);
@@ -368,7 +368,7 @@ describe('User execute coverage floor 50', function (): void {
         Assert::assertInstanceOf(XotBaseResourceForm::class, $tokenForm);
         Assert::assertNotEmpty($tokenForm->getFormSchema());
 
-        $resource = new OauthAccessTokenResource();
+        $resource = new OauthAccessTokenResource;
         $columns = $resource->getTableColumns();
 
         Assert::assertArrayHasKey('id', $columns);
@@ -429,7 +429,7 @@ describe('User execute coverage floor 50', function (): void {
     });
 
     test('profile edit volt component mount inizializza stato utente', function (): void {
-        $user = new User();
+        $user = new User;
         $user->forceFill([
             'id' => 'user-1',
             'first_name' => 'Mario',
@@ -439,7 +439,7 @@ describe('User execute coverage floor 50', function (): void {
 
         Auth::shouldReceive('user')->once()->andReturn($user);
 
-        $component = new ProfileEditVoltComponent();
+        $component = new ProfileEditVoltComponent;
         $component->mount();
 
         Assert::assertSame('Mario', $component->first_name);
@@ -528,7 +528,7 @@ describe('User execute coverage — HasTeams trait mock', function (): void {
         Assert::assertCount(1, $owner->getTeamAdmins($teamMock));
         Assert::assertCount(1, $owner->getTeamMembers($teamMock));
 
-        $membership = new TeamUser();
+        $membership = new TeamUser;
         $membership->forceFill(['user' => $memberUser]);
         $owner->setRelation('teamUsers', collect([$membership]));
         $owner->setRelation('owner', $owner);
@@ -552,7 +552,7 @@ describe('User execute coverage — ProfileEditVoltComponent', function (): void
         Auth::shouldReceive('id')->andReturn('profile-user-1');
         Auth::shouldReceive('logout')->andReturnNull();
 
-        $component = new ProfileEditVoltComponent();
+        $component = new ProfileEditVoltComponent;
         $component->user_id = 'profile-user-1';
         $component->first_name = 'Mario';
         $component->last_name = 'Rossi';
@@ -582,7 +582,7 @@ describe('User execute coverage — ProfileEditVoltComponent', function (): void
     test('mount gestisce dati utente invalidi', function (): void {
         Log::shouldReceive('error')->atLeast()->once();
 
-        $badUser = new User();
+        $badUser = new User;
         $badUser->forceFill([
             'id' => 'bad-1',
             'first_name' => '',
@@ -593,7 +593,7 @@ describe('User execute coverage — ProfileEditVoltComponent', function (): void
         Auth::shouldReceive('user')->andReturn($badUser);
         Auth::shouldReceive('id')->andReturn('bad-1');
 
-        $component = new ProfileEditVoltComponent();
+        $component = new ProfileEditVoltComponent;
         $component->mount();
 
         // `mount()` idrata le quattro proprietà e solo dopo verifica gli invarianti:
@@ -614,7 +614,7 @@ describe('User execute coverage — Socialite settings e OAuth resource', functi
 
         Artisan::shouldReceive('call')->once()->with('config:clear');
 
-        $page = new SocialiteProviderSettingsPage();
+        $page = new SocialiteProviderSettingsPage;
         $page->mount();
         $page->data = [
             'google' => [
@@ -663,7 +663,7 @@ describe('User execute coverage — Socialite settings e OAuth resource', functi
     });
 
     test('oauth access token resource callbacks e azioni revoke', function (): void {
-        $resource = new OauthAccessTokenResource();
+        $resource = new OauthAccessTokenResource;
         $columns = $resource->getTableColumns();
 
         $expiresAt = $columns['expires_at'];
@@ -683,7 +683,7 @@ describe('User execute coverage — Socialite settings e OAuth resource', functi
         Assert::assertSame('read', $scopes->getTooltip('read'));
 
         $user = userProfileMock();
-        $token = new OauthAccessToken();
+        $token = new OauthAccessToken;
         $token->forceFill([
             'id' => 'token-1',
             'user_id' => $user->id,
@@ -697,14 +697,14 @@ describe('User execute coverage — Socialite settings e OAuth resource', functi
         $userName->getUrl($token);
         $userName->formatState(null);
 
-        app()->instance(RevokeTokenAction::class, new class()
+        app()->instance(RevokeTokenAction::class, new class
         {
             public function execute(string $id): bool
             {
                 return $id === 'token-1';
             }
         });
-        app()->instance(RevokeAllUserTokensAction::class, new class()
+        app()->instance(RevokeAllUserTokensAction::class, new class
         {
             public function execute(string $userId): bool
             {
@@ -739,15 +739,15 @@ describe('User execute coverage — UserResource form schemas', function (): voi
         $createdAt = userFindNamedComponent($schema, 'created_at');
         Assert::assertNotNull($createdAt);
 
-        $model = new User();
+        $model = new User;
         $model->forceFill(['created_at' => Carbon::parse('2024-06-01 12:00:00')]);
         $human = userInvokeStateClosure($createdAt, $model);
         Assert::assertIsString($human);
 
-        $missing = userInvokeStateClosure($createdAt, new User());
+        $missing = userInvokeStateClosure($createdAt, new User);
         Assert::assertNotNull($missing);
 
-        $badRecord = userInvokeStateClosure($createdAt, new Team());
+        $badRecord = userInvokeStateClosure($createdAt, new Team);
         Assert::assertNotNull($badRecord);
     });
 
@@ -771,7 +771,7 @@ describe('User execute coverage — notifications rules observer helpers', funct
         \module_helper_placeholder();
 
         $user = userProfileMock();
-        $notifiable = new AnonymousNotifiable();
+        $notifiable = new AnonymousNotifiable;
 
         $otp = new Otp($user, '123456');
         Assert::assertSame(['mail'], $otp->via($notifiable));
@@ -782,12 +782,12 @@ describe('User execute coverage — notifications rules observer helpers', funct
         $mail = (new \ReflectionMethod($reset, 'buildMailMessage'))->invoke($reset, $reset->url);
         Assert::assertInstanceOf(MailMessage::class, $mail);
 
-        $verify = new VerifyEmail();
+        $verify = new VerifyEmail;
         $verify->url = 'https://example.test/verify';
         $verifyUrl = (new \ReflectionMethod($verify, 'verificationUrl'))->invoke($verify, $user);
         Assert::assertSame($verify->url, $verifyUrl);
 
-        $freshUser = new User();
+        $freshUser = new User;
         $freshUser->forceFill(['updated_at' => now()]);
         $rule = new CheckOtpExpiredRule($freshUser);
         $failed = false;
@@ -795,7 +795,7 @@ describe('User execute coverage — notifications rules observer helpers', funct
         Assert::assertFalse($failed);
         Assert::assertNotSame('', $rule->message());
 
-        $expiredUser = new User();
+        $expiredUser = new User;
         $expiredUser->forceFill(['updated_at' => now()->subMinutes(30)]);
         $expiredRule = new CheckOtpExpiredRule($expiredUser);
         $expired = false;
@@ -805,7 +805,7 @@ describe('User execute coverage — notifications rules observer helpers', funct
 
     test('user observer e passport token user relation', function (): void {
         FakeTenantUserConfig::bind(['create_personal_team' => false]);
-        $observer = new UserObserver();
+        $observer = new UserObserver;
         $user = userProfileMock();
         mockeryExpect($user->shouldReceive('personalTeam'))->andReturn(null);
         $observer->created($user);
@@ -820,7 +820,7 @@ describe('User execute coverage — notifications rules observer helpers', funct
             $observer->created($owner);
         }));
 
-        $token = new OauthAccessToken();
+        $token = new OauthAccessToken;
         $token->forceFill(['user_id' => $owner->id]);
         $token->setRelation('client', new OauthClient(['provider' => 'users']));
         // `Token::user()` è deprecato in Passport: si esercita la relazione
@@ -894,16 +894,16 @@ describe('User execute coverage — remaining 0% helpers', function (): void {
     test('notification schema auth log mail message socialite provider', function (): void {
         // `isReadable()` promette una cosa sola: rispondere quanto lo schema
         // della connection del model Notification dice della sua tabella.
-        $notification = new Notification();
+        $notification = new Notification;
         Assert::assertSame(
             Schema::connection($notification->getConnectionName())->hasTable($notification->getTable()),
             app(IsNotificationSchemaReadableAction::class)->execute()
         );
 
-        $user = new User();
+        $user = new User;
         $user->forceFill(['id' => 'auth-log-1']);
 
-        $mail = new Message();
+        $mail = new Message;
         $rendered = null;
         $renderError = null;
         try {
@@ -942,8 +942,8 @@ describe('User execute coverage — remaining 0% helpers', function (): void {
     });
 
     test('tenant traits espongono relazioni in memoria', function (): void {
-        $user = new User();
-        $tenant = new Tenant();
+        $user = new User;
+        $tenant = new Tenant;
         $tenant->forceFill(['id' => 1, 'name' => 'T1']);
         $user->setRelation('tenants', collect([$tenant]));
 

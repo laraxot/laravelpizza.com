@@ -730,7 +730,6 @@ return [
         ],
     ],
     'label' => 'Utente',
-<<<<<<< .merge_file_N23cbn
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -741,7 +740,5 @@ return [
             'heading' => 'worker',
         ],
     ],
-=======
->>>>>>> .merge_file_uX26zG
     'plural_label' => 'User (Plurale)',
 ];

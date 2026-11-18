@@ -1,8 +1,9 @@
 <?php
 
 declare(strict_types=1);
+use Modules\Cms\Tests\TestCase;
 
-uses(\Modules\Cms\Tests\TestCase::class);
+uses(TestCase::class);
 
 it('GET /it/auth/password/{token} renders the shared Design Comuni shell', function (): void {
     $response = $this->get('/it/auth/password/test-token?email=test@example.com');

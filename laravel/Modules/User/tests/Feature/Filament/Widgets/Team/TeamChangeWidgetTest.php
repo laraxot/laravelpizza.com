@@ -113,7 +113,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         $team = teamChangeWidgetCreateTeam($owner);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget();
+        $widget = new TeamChangeWidget;
         $widget->mount();
 
         $response = $widget->switchTeam($team->id);
@@ -130,7 +130,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         $otherOwnerTeam = teamChangeWidgetCreateTeam($stranger);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget();
+        $widget = new TeamChangeWidget;
         $widget->mount();
 
         try {
@@ -151,7 +151,7 @@ describe('TeamChangeWidget switchTeam', function (): void {
         teamChangeWidgetCreateTeam($owner);
         actingAs($owner);
 
-        $widget = new TeamChangeWidget();
+        $widget = new TeamChangeWidget;
         $widget->mount();
 
         try {

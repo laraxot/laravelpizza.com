@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Database\Migrations;
 
-use Modules\User\Tests\TestCase;
 use Modules\User\Models\SocialiteUser;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\exec;
@@ -41,7 +41,7 @@ describe('User Migration Syntax', function (): void {
         $contents = file_get_contents($migration);
         Assert::assertStringContainsString('protected ?string $model_class = SocialiteUser::class;', $contents);
         Assert::assertStringContainsString('$this->updateTimestamps($table);', $contents);
-        Assert::assertSame('user', (new SocialiteUser())->getConnectionName());
+        Assert::assertSame('user', (new SocialiteUser)->getConnectionName());
     });
 
     test('user migrations do not contain merge conflict markers', function (): void {

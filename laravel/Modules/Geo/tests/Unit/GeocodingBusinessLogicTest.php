@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit;
 
-use PHPUnit\Framework\Assert;
 use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
