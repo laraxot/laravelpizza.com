@@ -12,6 +12,12 @@
     <x-metatags :title="$metaTitle" :description="$metaDescription">
         {{-- Font Inter incluso nel CSS del tema (@fontsource-variable/inter): nessuna richiesta a Google --}}
 
+        {{-- Stessa pagina nelle altre lingue (SEO, FR-15/FR-20); x-default = lingua di default del sito. --}}
+        @foreach (\Mcamara\LaravelLocalization\Facades\LaravelLocalization::getSupportedLocales() as $code => $localeProperties)
+            <link rel="alternate" hreflang="{{ $code }}" href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL($code, request()->url(), [], true) }}">
+        @endforeach
+        <link rel="alternate" hreflang="x-default" href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL(\Mcamara\LaravelLocalization\Facades\LaravelLocalization::getDefaultLocale(), request()->url(), [], true) }}">
+
         @livewireStyles
     </x-metatags>
     <body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-200">
