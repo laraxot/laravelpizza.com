@@ -3,7 +3,7 @@
 // delle chiamate Livewire e chiavi di traduzione grezze (modulo::chiave) nel testo.
 // Docs: laravel/Modules/Xot/docs/filament/xotbasepage-form-and-generic-view.md, docs/deploy/runbook.md §9.
 //
-// Uso: npm run audit:bo
+// Uso: npm run audit:bo   (RECORDS=0 per saltare le pagine dei singoli record)
 //   BASE_URL        default http://laravelpizza.local
 //   ADMIN_EMAIL / ADMIN_PASSWORD   utente con ruolo super-admin
 //   PHP_BIN         default php (serve per `artisan route:list`)
@@ -40,8 +40,23 @@ const RAW_OK = ['lang/admin/translation-files', 'user/admin/roles'];
   await p.locator('form button[type=submit]').first().click();
   await p.waitForTimeout(3000);
 
+  // Oltre alle pagine senza parametri, da ogni elenco si apre il primo record in "vedi" e in "modifica":
+  // le pagine con {record} sono quelle che si rompono senza che una lista lo mostri (es. TeamModelNotConfigured).
+  const pages = [...routes];
+  if (process.env.RECORDS !== '0') {
+    for (const r of routes) {
+      try {
+        await p.goto(B + '/' + r, { waitUntil: 'networkidle', timeout: 30000 });
+        const hrefs = await p.$$eval('table a[href]', (as, base) => as.map(a => a.href.split('?')[0]).filter(h => h.startsWith(base + '/')), B + '/' + r);
+        const edit = hrefs.find(h => /\/[^/]+\/edit$/.test(h));
+        const view = hrefs.find(h => /^[^/]+$/.test(h.slice((B + '/' + r + '/').length)));
+        for (const h of [view, edit]) if (h) pages.push(h.slice(B.length + 1));
+      } catch (e) { /* l'elenco stesso viene controllato sotto */ }
+    }
+  }
+
   let bad = 0;
-  for (const r of routes) {
+  for (const r of [...new Set(pages)]) {
     const errs = [];
     const onErr = e => errs.push('js: ' + e.message.slice(0, 120));
     const onCon = m => { if (m.type() === 'error') errs.push('console: ' + m.text().slice(0, 120)); };
@@ -54,7 +69,8 @@ const RAW_OK = ['lang/admin/translation-files', 'user/admin/roles'];
       status = resp ? resp.status() : 0;
       await p.waitForTimeout(300);
       const info = await p.evaluate(() => ({
-        raw: (document.body.innerText.match(/\b[a-z_]+::[a-z_.]+\b/g) || []).slice(0, 4),
+        // i nomi di vista ("pub_theme::components.blocks...") nei dati delle sezioni CMS sono contenuto, non traduzioni
+        raw: (document.body.innerText.match(/\b[a-z_]+::[a-z_.]+\b/g) || []).filter(k => !/::(components|layouts|pages)\./.test(k)).slice(0, 4),
         exc: !!document.querySelector('.exception-message, #sf-resetcontent'),
       }));
       raw = RAW_OK.includes(r) ? [] : info.raw;
@@ -66,7 +82,7 @@ const RAW_OK = ['lang/admin/translation-files', 'user/admin/roles'];
       console.log(`[${status}] /${r}  ${raw.length ? 'RAW ' + raw.join(', ') + '  ' : ''}${errs.slice(0, 3).join(' | ')}`);
     }
   }
-  console.log(`\n${routes.length} pagine, ${bad} con problemi`);
+  console.log(`\n${new Set(pages).size} pagine (${routes.length} elenchi e pagine, il resto record), ${bad} con problemi`);
   await b.close();
   process.exitCode = bad ? 1 : 0;
 })();
