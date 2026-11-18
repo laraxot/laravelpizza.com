@@ -13,6 +13,7 @@
         "screenshots:footer": "node scripts/capture-footer-screenshots.mjs",
         "a11y": "node scripts/a11y-audit.mjs",
         "audit:fo": "node scripts/front-office-audit.cjs",
+        "audit:bo": "node scripts/back-office-audit.cjs",
         "postbuild": "node scripts/clean-stale-assets.mjs"
     },
     "devDependencies": {
