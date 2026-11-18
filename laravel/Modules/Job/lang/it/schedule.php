@@ -293,4 +293,7 @@ return [
     'status_widget' => [
         'heading' => 'Stato della schedulazione',
     ],
+    'title' => 'Nuova attività pianificata',
+    'heading' => 'Nuova attività pianificata',
+    'sub_heading' => 'Comando da eseguire a orari prestabiliti',
 ];

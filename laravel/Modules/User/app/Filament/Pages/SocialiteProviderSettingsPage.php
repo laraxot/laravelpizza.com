@@ -64,6 +64,14 @@ class SocialiteProviderSettingsPage extends XotBasePage
     public function mount(): void
     {
         $this->loadProviderConfigs();
+
+        // Il form legge e salva in $this->data (statePath 'data'): senza questa riga i campi restavano vuoti e
+        // Livewire segnalava "property data.google.enabled cannot be found".
+        $this->data = [
+            'google' => $this->google,
+            'github' => $this->github,
+            'microsoft' => $this->microsoft,
+        ];
     }
 
     /**

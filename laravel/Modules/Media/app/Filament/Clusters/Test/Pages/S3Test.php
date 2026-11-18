@@ -128,6 +128,16 @@ class S3Test extends XotBasePage
     }
 
     /**
+     * Stato del form in $this->data (dichiarato in XotBasePage): senza statePath i campi cercavano le proprietà
+     * $attachment e $debug_output, che non esistono ("Livewire property ['attachment'] cannot be found").
+     */
+    #[Override]
+    protected function getFormStatePath(): string
+    {
+        return 'data';
+    }
+
+    /**
      * Fill the forms with initial data.
      */
     protected function fillForms(): void
