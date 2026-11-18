@@ -144,4 +144,6 @@ return [
             ],
         ],
     ],
+    'create_title' => 'New event',
+    'edit_title' => 'Edit event',
 ];

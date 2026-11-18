@@ -97,4 +97,6 @@ return [
         'button' => 'Delete Account',
         'delete' => 'Delete Account',
     ],
+    'my_profile' => 'My profile',
+    'subheading' => 'Your personal details and password',
 ];

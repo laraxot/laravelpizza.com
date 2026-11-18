@@ -69,9 +69,10 @@ class OauthClientResource extends XotBaseResource
     {
         return [
             'index' => ListOauthClients::route('/'),
+            // "/create" prima di "/{record}": altrimenti "create" veniva preso come id del record (404).
+            'create' => CreateOauthClient::route('/create'),
             'view' => ViewOauthClient::route('/{record}'),
             'edit' => EditOauthClient::route('/{record}/edit'),
-            'create' => CreateOauthClient::route('/create'),
         ];
     }
 

@@ -29,6 +29,8 @@ return [
     'youtube_href' => '',
     'fastlink' => false,
     'color_primary' => '#0071b0',
+    // Colore primario dei pannelli Filament (pulsanti, voce attiva del menu): il rosso del marchio, come il sito.
+    'filament_primary' => 'red',
     'color_title' => 'white',
     'color_megamenu' => '#d60021',
     'color_hamburger' => '#000',

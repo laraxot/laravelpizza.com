@@ -92,8 +92,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'tooltip' => 'Nuovo',
-            'label' => 'Nuovo',
+            'tooltip' => 'Nuova sede',
+            'label' => 'Nuova sede',
             'icon' => 'create',
         ],
         'createAnother' => [
@@ -130,4 +130,6 @@ return [
             'tooltip' => 'applyTableColumnManager',
         ],
     ],
+    'create_title' => 'Nuova sede',
+    'edit_title' => 'Modifica sede',
 ];

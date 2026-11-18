@@ -19,4 +19,8 @@ use Laravel\Passport\DeviceCode as PassportDeviceCode;
  *
  * @mixin \Eloquent
  */
-class OauthDeviceCode extends PassportDeviceCode {}
+class OauthDeviceCode extends PassportDeviceCode
+{
+    /** Stesso database delle altre tabelle OAuth (OauthAuthCode, OauthClient, ...): il database utenti. */
+    protected $connection = 'user';
+}

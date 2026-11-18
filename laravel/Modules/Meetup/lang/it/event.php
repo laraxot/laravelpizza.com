@@ -15,9 +15,9 @@ return [
                 'tooltip' => 'Esci',
             ],
             'seed_events' => [
-                'label' => 'Importa Eventi JSON',
+                'label' => 'Importa eventi di esempio',
                 'notification' => [
-                    'title' => 'Importazione Completata',
+                    'title' => 'Importazione completata',
                     'body' => 'Importati :count eventi con successo.',
                 ],
             ],
@@ -32,7 +32,7 @@ return [
                 'past' => 'Passati',
             ],
             'event_status' => [
-                'label' => 'Stato Evento',
+                'label' => 'Stato dell\'evento',
                 'confirmed' => 'Confermato',
                 'scheduled' => 'Programmato',
                 'cancelled' => 'Cancellato',
@@ -89,9 +89,9 @@ return [
             'label' => 'Salva',
         ],
         'create' => [
-            'label' => 'Nuovo',
+            'label' => 'Nuovo evento',
             'icon' => 'create',
-            'tooltip' => 'Nuovo',
+            'tooltip' => 'Nuovo evento',
         ],
         'applyFilters' => [
             'label' => 'applyFilters',
@@ -307,4 +307,7 @@ return [
             'heading' => 'Dettagli dell\'evento',
         ],
     ],
+    // Titolo della pagina di creazione (Filament direbbe "Nuovo :label", sbagliato per i nomi femminili)
+    'create_title' => 'Nuovo evento',
+    'edit_title' => 'Modifica evento',
 ];
