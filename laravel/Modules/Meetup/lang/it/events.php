@@ -60,8 +60,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Nuovo',
-            'tooltip' => 'Nuovo',
+            'label' => 'Nuovo evento',
+            'tooltip' => 'Nuovo evento',
         ],
         'edit' => [
             'label' => 'Modifica',

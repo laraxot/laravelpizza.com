@@ -22,16 +22,16 @@ test('it has correct widgets in dashboard', function () {
     $widgets = $page->getWidgets();
 
     expect($widgets)->toContain(MeetupStatsOverviewWidget::class)
-        ->and($widgets)->toContain(EventCalendarWidget::class)
-        ->and($widgets)->toContain(RecentEventsWidget::class);
+        ->and($widgets)->toContain(RecentEventsWidget::class)
+        // Il calendario è ancora un segnaposto ("Event calendar will be displayed here"): fuori dalla dashboard finché non c'è.
+        ->and($widgets)->not->toContain(EventCalendarWidget::class);
 });
 
-test('it returns exactly three widgets in expected order', function () {
+test('it returns the stats and the upcoming events, in this order', function () {
     $page = new Dashboard;
 
     expect($page->getWidgets())->toBe([
         MeetupStatsOverviewWidget::class,
-        EventCalendarWidget::class,
         RecentEventsWidget::class,
     ]);
 });

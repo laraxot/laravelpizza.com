@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
-use Modules\Job\Filament\Resources\JobResource\Pages\BoardJobs;
 use Modules\Job\Filament\Resources\JobResource\Pages\CreateJob;
 use Modules\Job\Filament\Resources\JobResource\Pages\EditJob;
 use Modules\Job\Filament\Resources\JobResource\Pages\ListJobs;
@@ -29,7 +28,6 @@ class JobResource extends XotBaseResource
         return [
             'index' => ListJobs::route('/'),
             'create' => CreateJob::route('/create'),
-            'board' => BoardJobs::route('/board'),
             'edit' => EditJob::route('/{record}/edit'),
         ];
     }

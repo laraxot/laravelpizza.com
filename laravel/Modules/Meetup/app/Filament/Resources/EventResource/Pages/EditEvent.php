@@ -36,4 +36,14 @@ class EditEvent extends XotBaseEditRecord
 
         return app(UpdateEventAction::class)->execute($record, $data);
     }
+
+    /**
+     * "Modifica evento" e non "Modifica Evento": il titolo predefinito di Filament usa l'etichetta del modello con
+     * l'iniziale maiuscola.
+     */
+    #[\Override]
+    public function getTitle(): string
+    {
+        return (string) __('meetup::event.edit_title');
+    }
 }

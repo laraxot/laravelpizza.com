@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -62,6 +63,25 @@ class TenantUser extends BasePivot
         'tenant_id',
         'user_id',
     ];
+
+    /**
+     * Il tenant dell'appartenenza (usato dal form del pannello: senza la relazione /user/admin/tenant-users/create
+     * dava 500 "The relationship [tenant] does not exist").
+     *
+     * @return BelongsTo<Tenant, $this>
+     */
+    public function tenant(): BelongsTo
+    {
+        return $this->belongsTo(Tenant::class, 'tenant_id');
+    }
+
+    /**
+     * @return BelongsTo<User, $this>
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
     /** @return array<string, string> */
     #[\Override]

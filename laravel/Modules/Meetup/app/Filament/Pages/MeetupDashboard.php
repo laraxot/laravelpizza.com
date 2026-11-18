@@ -14,6 +14,9 @@ class MeetupDashboard extends XotBasePage
 {
     protected string $view = 'meetup::filament.pages.meetup-dashboard';
 
+    /** Stessi widget della Dashboard del pannello: nel menu c'erano due voci per la stessa cosa. L'indirizzo resta valido. */
+    protected static bool $shouldRegisterNavigation = false;
+
     /**
      * @return array<int, class-string>
      */
