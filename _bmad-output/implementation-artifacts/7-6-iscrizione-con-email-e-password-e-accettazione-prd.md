@@ -25,3 +25,8 @@ so that non devo passare da una registrazione separata (PRD FR-9, "minimo attrit
 - [x] `hreflang` nel layout del tema; testi legali e aria-label tradotti (FR-17)
 - [x] Rimosse 53 viste inutilizzate portate da un tema Bootstrap Italia di un altro progetto
 - [x] `PrdAcceptanceTest` (9 test)
+- [x] Manuale aggiornato (md + pdf, 46 screenshot rifatti): iscrizione in un passo (2.1), regole password corrette
+      (12 caratteri, non 8), pulsanti "Nuovo evento/sede", nuovo **capitolo 4 Amministratore** (utenti, ruolo organizzatore)
+- [x] Strumenti del manuale nel repo (`manuale-utente/tools/`): dati demo, reset del db demo, email, cattura
+- [x] `docs/manuale-utente/*` (guida non verificata del 16/11) sostituito da un rimando al manuale verificato
+- [ ] Edizione inglese del manuale con screenshot delle pagine `/en`
