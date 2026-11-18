@@ -6,11 +6,10 @@ use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /*
- * Class CreateLiveuserUsersTable.
- */
-/*
  * Canonical owner migration for `User::users` (consolidated 2026-11-12).
  * The tableUpdate block is also the forward-only repair path for legacy schemas.
+ * 2026-11-17: absorbed add_lang_column, repair_users_type_state_columns and
+ * add_digital_identity_columns_to_users_table (removed: one model = one migration).
  */
 return new class extends XotBaseMigration
 {
@@ -44,14 +43,48 @@ return new class extends XotBaseMigration
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
+            // Schema parziale: una vecchia migrazione add_*/repair_* eseguita prima di questa
+            // ha creato `users` senza le colonne base. Solo aggiunte idempotenti, nessun drop.
+            if (! $this->hasColumn('id')) {
+                $table->string('id', 36)->primary()->first();
+            }
+
+            if (! $this->hasColumn('name')) {
+                $table->string('name')->nullable();
+            }
+
+            if (! $this->hasColumn('email')) {
+                $table->string('email')->unique();
+            }
+
+            if (! $this->hasColumn('email_verified_at')) {
+                $table->timestamp('email_verified_at')->nullable();
+            }
+
+            if (! $this->hasColumn('password')) {
+                $table->string('password')->nullable();
+            }
+
+            if (! $this->hasColumn('remember_token')) {
+                $table->rememberToken();
+            }
+
+            // after('name') solo se la colonna name esiste: schemi parziali (migrazioni
+            // precedenti alla create canonica) non devono far fallire l'alter.
             if (! $this->hasColumn('first_name')) {
-                $table->string('first_name')->after('name')->nullable();
+                $col = $table->string('first_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
             } else {
                 $table->string('first_name')->nullable()->change();
             }
 
             if (! $this->hasColumn('last_name')) {
-                $table->string('last_name')->after('name')->nullable();
+                $col = $table->string('last_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
             } else {
                 $table->string('last_name')->nullable()->change();
             }
@@ -89,7 +122,10 @@ return new class extends XotBaseMigration
             }
 
             if (! $this->hasColumn('two_factor_secret')) {
-                $table->text('two_factor_secret')->nullable()->after('password');
+                $col = $table->text('two_factor_secret')->nullable();
+                if ($this->hasColumn('password')) {
+                    $col->after('password');
+                }
             }
             if (! $this->hasColumn('two_factor_recovery_codes')) {
                 $table->text('two_factor_recovery_codes')->nullable()->after('two_factor_secret');

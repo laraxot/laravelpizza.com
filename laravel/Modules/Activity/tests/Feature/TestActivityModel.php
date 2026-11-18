@@ -6,7 +6,6 @@ namespace Modules\Activity\Tests\Feature;
 
 use Illuminate\Support\Carbon;
 use Modules\Activity\Models\BaseModel;
-use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Classe concreta di test per BaseModel.
@@ -29,18 +28,6 @@ class TestActivityModel extends BaseModel
 {
     /**
      * @use HasFactory<Factory<self>>
-     *
-        HasXotFactory::factory insteadof HasFactory;
-    }
-
-
-    protected $table = 'test_models';
-
-    /** @var list<string> */
-    protected $fillable = ['name', 'value', 'uuid', 'published_at', 'created_by', 'updated_by', 'deleted_by'];
-
-    /**
-     * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */

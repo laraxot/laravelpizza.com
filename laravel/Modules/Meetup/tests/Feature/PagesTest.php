@@ -26,3 +26,8 @@ test('can access privacy page', function (): void {
 test('the cookie policy linked by the cookie notice exists in both languages', function (string $locale): void {
     $this->get('/'.$locale.'/cookie-policy')->assertOk()->assertSee('XSRF-TOKEN');
 })->with(['it', 'en']);
+
+test('a container path with no model and no CMS page is a 404, not an empty page', function (string $path): void {
+    // Prima ResolvePageAction ripiegava su uno slug inesistente e la pagina usciva vuota con 200 (soft 404).
+    $this->get('/it/'.$path)->assertNotFound();
+})->with(['genesis/about', 'area-personale/pratiche', 'pages/does-not-exist']);

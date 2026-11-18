@@ -30,7 +30,7 @@ new class extends Component
 
 <x-layouts.app :title="__('pub_theme::auth.password.confirm.title')">
     <x-ui.auth-card :title="__('pub_theme::auth.password.confirm.title')" :subtitle="__('pub_theme::auth.password.confirm.subtitle')">
-        @volt('auth.password.confirm')
+        @volt('meetup.auth.password.confirm')
             <form wire:submit="confirm" class="space-y-6" novalidate>
                 <x-ui.auth-field :label="__('pub_theme::auth.password.confirm.password')" id="password" type="password" autocomplete="current-password" autofocus wire:model="password" />
                 <div class="text-right text-sm">
