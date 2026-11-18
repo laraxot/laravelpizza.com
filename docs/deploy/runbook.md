@@ -137,6 +137,7 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] DevTools → Rete: nessuna richiesta a domini terzi al primo caricamento (niente Google Fonts)
 - [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
 - [ ] Audit del front office (ospite e loggato, desktop e mobile): `BASE_URL=https://laravelpizza.com USER_EMAIL=... USER_PASSWORD=... npm run audit:fo` → "Nessun problema trovato" (`laravel/Themes/Meetup/docs/front-office-audit.md`)
+- [ ] Passport (API e server MCP `/api/mcp`): `php artisan passport:keys` (oppure `PASSPORT_PRIVATE_KEY`/`PASSPORT_PUBLIC_KEY` nell'ambiente) e, una volta, `php artisan passport:client --personal --name="Laravel Pizza MCP" --provider=users`. Senza chiavi ogni richiesta con `auth:api` risponde 500 invece di 401. Verifica: `curl -X POST https://<dominio>/api/mcp` → 401
 - [ ] Audit del back office (tutte le pagine dei pannelli Filament come super-admin): `PHP_BIN=php ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run audit:bo` → "0 con problemi". In locale, dopo l'audit, ripristinare i file lang (vedi l'intestazione di `scripts/back-office-audit.cjs`)
 
 ## 10. Test e CI

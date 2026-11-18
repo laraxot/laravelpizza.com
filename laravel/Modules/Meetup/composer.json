@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "saade/filament-fullcalendar": "^4.0@beta"
+        "saade/filament-fullcalendar": "^4.0@beta",
+        "laravel/mcp": "^1.1"
     },
     "require-dev": {},
     "autoload": {
