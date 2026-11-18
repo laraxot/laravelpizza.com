@@ -282,4 +282,7 @@ return [
     'status_widget' => [
         'heading' => 'Schedule status',
     ],
+    'title' => 'New scheduled task',
+    'heading' => 'New scheduled task',
+    'sub_heading' => 'Command run on a fixed schedule',
 ];
