@@ -1,3 +1,8 @@
+---
+date: 2026-11-12
+pubblicata: no
+---
+
 Categoria: General · Titolo: **Audit del front office (ospite e loggato): cosa abbiamo trovato e come lo controlliamo d'ora in poi**
 
 Abbiamo controllato tutte le pagine pubbliche, da ospite e da utente loggato, su desktop e telefono (29 + 12 pagine, axe WCAG 2.1 AA, richieste a siti terzi, traduzioni). Dettagli e correzioni: issue #580 e `laravel/Themes/Meetup/docs/front-office-audit.md`.

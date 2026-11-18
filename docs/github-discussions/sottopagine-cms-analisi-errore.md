@@ -1,3 +1,8 @@
+---
+date: 2026-11-12
+pubblicata: no
+---
+
 Categoria: Ideas (o General) · Titolo: **Sotto-pagine CMS: una cartella per contenitore (e l'errore che ce l'ha insegnato)**
 
 Regola: una pagina che sta sotto un contenitore è un JSON nella sua cartella, con slug corto.

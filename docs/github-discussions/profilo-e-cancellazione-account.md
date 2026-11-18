@@ -1,3 +1,8 @@
+---
+date: 2026-11-12
+pubblicata: no
+---
+
 Categoria: Announcements (o General) · Titolo: **Nuovo: modifica del profilo e cancellazione dell'account dal sito (+ 4 bug trovati lungo la strada)**
 
 Da `/it/profile/edit` ogni partecipante può cambiare nome, biografia, foto, lingua e password, ed eliminare il proprio account (GDPR art. 17). Documentazione: `laravel/Themes/Meetup/docs/profile-edit-page.md`; manuale d'uso §2.6.
