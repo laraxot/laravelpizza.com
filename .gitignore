@@ -135,3 +135,6 @@ laravel/Modules/*/agentdb.rvf
 laravel/Modules/*/.codeclimate.yml
 laravel/Modules/*/phpi*.*
 laravel/phpunit.coverage*.*
+
+# PID del queue worker locale (file di runtime)
+/cache/
