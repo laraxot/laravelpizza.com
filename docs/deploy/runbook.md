@@ -137,9 +137,21 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] DevTools → Rete: nessuna richiesta a domini terzi al primo caricamento (niente Google Fonts)
 - [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
 - [ ] Audit del front office (ospite e loggato, desktop e mobile): `BASE_URL=https://laravelpizza.com USER_EMAIL=... USER_PASSWORD=... npm run audit:fo` → "Nessun problema trovato" (`laravel/Themes/Meetup/docs/front-office-audit.md`)
+- [ ] Audit del back office (tutte le pagine dei pannelli Filament come super-admin): `PHP_BIN=php ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run audit:bo` → "0 con problemi". In locale, dopo l'audit, ripristinare i file lang (vedi l'intestazione di `scripts/back-office-audit.cjs`)
 
 ## 10. Test e CI
 
 - Bloccanti: `vendor/bin/pest --testsuite=Project` (modulo Meetup, che contiene anche i test di app e tema: ogni modulo tiene i suoi test, niente `laravel/tests`), PHPStan livello 10 su `Modules`, Pint, build del tema.
 - Informativi: le suite dei moduli Laraxot condivisi (Xot, User, Cms, …), pubblicate nel riepilogo del job CI. Contengono test scritti per altri progetti; vanno sistemate nei rispettivi repository dei moduli.
 - Attenzione: in locale alcune suite di Xot eseguono comandi composer sul progetto reale (`storage/framework/composer-home`) e possono riscrivere `vendor/composer/autoload_*`. Lanciarle solo in CI o su una copia; se succede, `composer dump-autoload` ripristina.
+
+## 11. Dopo un sync dei moduli Laraxot condivisi
+
+1. `git grep -nE '^(<<<<<<< |>>>>>>> )'` deve essere vuoto (lo controlla anche `NoMergeConflictMarkersTest`).
+2. `composer validate && composer install`, poi PHPStan livello 10 su `Modules` e Pint.
+3. Migrare un **database vuoto**, non solo quello locale: un database già migrato nasconde l'ordine sbagliato delle
+   migrazioni (è successo con `users` il 18/11/2026).
+4. Suite `Project`, `npm run build`, `npm run audit:fo` e `npm run audit:bo`.
+5. Le pagine Folio dei moduli non devono usare nomi `@volt(...)` del tema (`UniqueVoltFragmentNamesTest`).
+
+Storia dei problemi trovati: `laravel/Modules/Xot/docs/lessons/module-sync-merge-conflicts.md`.

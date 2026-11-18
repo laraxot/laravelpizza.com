@@ -43,3 +43,18 @@ Nei marcatori il **primo lato** era la versione di laravelpizza, il **secondo** 
 - Dopo un sync: `composer validate`, `composer install`, `php artisan package:discover`, PHPStan, test.
 - I repository dei moduli hanno ancora marcatori nei **docs** (Notify ~280 file, Geo ~90, Gdpr ~40): vanno puliti
   là, altrimenti il prossimo sync li riporta qui e il test di guardia blocca la CI.
+
+## Cosa è venuto fuori dopo, a marcatori tolti (18/11/2026)
+
+Tolti i marcatori, la CI è ripartita e ha mostrato i problemi che i conflitti nascondevano:
+
+| Problema | Causa | Correzione |
+|---|---|---|
+| CI ferma a "Prepare databases": `Unknown column 'name' in 'users'` | `add_lang_column` (2026_02_13) girava prima di `create_users_table` e, con `tableUpdate()`, creava `users` con la sola colonna `lang` | migrazione unica `2026_11_17_114812_create_users_table` del modulo (upstream d8ef195); tolte le `add_*` |
+| `/it/auth/password/confirm` in errore 500 | il modulo User ora ha pagine Folio proprie; tema e modulo usavano lo stesso `@volt('auth.password.confirm')` e Volt mostrava il frammento del modulo | nomi del tema con prefisso `meetup.`; test `UniqueVoltFragmentNamesTest` |
+| Dopo il login: 404 su `/area-personale` | `GetPostLoginUrlAction` legge `auth.post_login_path` con quel default | `config/local/laravelpizza/auth.php`: `post_login_path => '/events/my'` |
+| Build del tema in CI: `clean-stale-assets.mjs` non trovato | il `.gitignore` del tema ignorava `scripts/` | si ignorano solo i file non `.mjs`/`.cjs` |
+| Pagine admin in 500 | viste mancanti, form definiti in `schema()` ma letti da `form()` | vedi `../filament/xotbasepage-form-and-generic-view.md` |
+
+Regola in più: dopo un sync, **migrare un database vuoto** (non solo quello locale, già migrato) e aprire tutte le
+pagine admin. Un database già migrato nasconde l'ordine sbagliato delle migrazioni.

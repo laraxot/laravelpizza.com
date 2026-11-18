@@ -90,6 +90,7 @@ development_status:
   epic-7: in-progress
   7-1-audit-front-office-ospite-e-loggato: review
   7-2-modifica-profilo-e-sottopagine-cms: review
+  7-3-riparazione-sync-moduli-e-back-office: review
   epic-7-retrospective: optional
 
 # Note 2026-11-11 (Claude, sessione di completamento):
@@ -103,3 +104,8 @@ development_status:
 # Note 2026-11-12 (Claude): audit completo del front office (story 7-1). Corretti tra l'altro: reset password in
 # errore 500 (connessione inesistente), email dell'organizzatore pubblica, Gravatar, logout mobile, pagine 404 e auth
 # non tradotte, <title> uguale su tutte le pagine. Dettagli: laravel/Themes/Meetup/docs/front-office-audit.md.
+
+
+# Note 2026-11-18 (Claude): story 7-3. Il sync dei moduli del 13/11 aveva lasciato 476 file con conflitti (CI ferma).
+# Risolti; poi corretti migrazione users su db vuoto, 500 e errori JS in admin (223 pagine pulite con npm run audit:bo),
+# collisione dei nomi Volt tema/modulo (password confirm 500), soft 404, workflow CI.
