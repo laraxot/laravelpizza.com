@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\AvatarProviders;
 
-use Illuminate\Support\Str;
 use Filament\AvatarProviders\Contracts\AvatarProvider;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-
-use function Safe\preg_replace;
+use Illuminate\Support\Str;
 
 /**
  * Avatar predefinito dei pannelli Filament, generato in locale (DCP-139, DCP-137).

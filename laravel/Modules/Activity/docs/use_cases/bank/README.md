@@ -37,9 +37,7 @@ Core module for the FixCity Platform.
 | 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
-<<<<<<< .merge_file_f76Pgq
 ---
-=======
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
@@ -51,6 +49,5 @@ Core module for the FixCity Platform.
 - Gestione avanzata di aggregate, snapshot, replay
 - Maggiore automazione e coerenza
 - Ideale per sistemi complessi e ad alta tracciabilità
->>>>>>> .merge_file_Oi6FBP
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

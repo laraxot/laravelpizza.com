@@ -12,7 +12,7 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 class GetCurrentDeviceActionTest extends TestCase
 {

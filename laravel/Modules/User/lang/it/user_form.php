@@ -55,7 +55,6 @@ return [
             'tooltip' => 'Nascondi password',
         ],
     ],
-<<<<<<< .merge_file_T3WJVU
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -66,6 +65,4 @@ return [
             'heading' => 'worker',
         ],
     ],
-=======
->>>>>>> .merge_file_iPwtsu
 ];

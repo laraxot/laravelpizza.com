@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Facade;
 use Livewire\Attributes\Locked;
 use Mockery\MockInterface;
 use Modules\Job\Filament\Widgets\JobStatusWidget;
-<<<<<<< .merge_file_dDPjzl
-use Modules\Job\Tests\TestCase;
-=======
 use Modules\Job\Tests\Unit\Filament\JobStatusWidgetProbe;
->>>>>>> .merge_file_QdpvNM
 use Modules\Xot\Contracts\UserContract;
 
 use function Safe\file_get_contents;

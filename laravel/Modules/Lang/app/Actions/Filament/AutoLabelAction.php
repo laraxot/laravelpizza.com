@@ -124,7 +124,7 @@ class AutoLabelAction
         // Se la traduzione manca si salva (solo in locale, vedi SaveTransAction) ma solo per l'etichetta:
         // per helper_text, placeholder, description e tooltip il "valore di comodo" era il nome del campo,
         // che poi compariva sotto e dentro i campi ("route", "postal_code"). Meglio nessun testo d'aiuto.
-        if (is_string($label) && $label_key === $label && 'label' === $type) {
+        if (is_string($label) && $label_key === $label && $type === 'label') {
             app(SaveTransAction::class)->execute($label_key, $default_val ?? $val);
         }
         if ($isAuxiliaryText && is_string($label) && ($label === '' || $label === $val)) {

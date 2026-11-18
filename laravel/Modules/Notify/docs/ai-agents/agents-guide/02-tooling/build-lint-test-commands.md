@@ -101,10 +101,7 @@ cd laravel/Themes/Meetup
 npm install
 npm run dev      # Development
 npm run build    # Production
-<<<<<<< .merge_file_nR5qXz
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_S9tWIz
 ```
 
 ### Cache Clearing

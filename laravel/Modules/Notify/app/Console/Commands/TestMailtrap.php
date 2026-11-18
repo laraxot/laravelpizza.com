@@ -9,6 +9,8 @@ use Mailtrap\Helper\ResponseHelper;
 use Mailtrap\MailtrapClient;
 use Mailtrap\Mime\MailtrapEmail;
 use Symfony\Component\Mime\Address;
+use Throwable;
+use Webmozart\Assert\Assert;
 
 class TestMailtrap extends Command
 {
@@ -32,41 +34,43 @@ class TestMailtrap extends Command
 
         if (! is_string($apiKey) || $apiKey === '') {
             $this->error('MAILTRAP_API_KEY is not configured');
-            return Command::FAILURE;
+
+            return self::FAILURE;
         }
 
         if (! is_string($recipient) || $recipient === '') {
             $this->error('MAILTRAP_TEST_RECIPIENT is not configured');
-            return Command::FAILURE;
+
+            return self::FAILURE;
         }
 
-        // Create the email using the Mailtrap SDK
-        $email = (new MailtrapEmail())
-            ->from(new Address(
-                (string) config('mail.from.address', 'noreply@fixcity.eu'),
-                (string) config('mail.from.name', 'FixCity'),
-            ))
+        $fromAddress = config('mail.from.address', 'noreply@fixcity.eu');
+        $fromName = config('mail.from.name', 'FixCity');
+        Assert::string($fromAddress);
+        Assert::string($fromName);
+
+        $email = (new MailtrapEmail)
+            ->from(new Address($fromAddress, $fromName))
             ->to(new Address($recipient))
             ->subject('You are awesome!')
             ->category('Integration Test')
-            ->text('Congrats for sending test email with Mailtrap!')
-        ;
+            ->text('Congrats for sending test email with Mailtrap!');
 
         try {
-            // Send the email via Mailtrap
             $response = MailtrapClient::initSendingEmails(
                 apiKey: $apiKey,
-                isBulk: false
+                isBulk: false,
             )->send($email);
 
             $this->info('Test email sent successfully!');
-            $this->info('Response: ' . print_r(ResponseHelper::toArray($response), true));
-            
-            return Command::SUCCESS;
-        } catch (\Exception $e) {
-            $this->error('Error sending test email: ' . $e->getMessage());
-            $this->error('Trace: ' . $e->getTraceAsString());
-            return Command::FAILURE;
+            $this->line(print_r(ResponseHelper::toArray($response), true));
+
+            return self::SUCCESS;
+        } catch (Throwable $e) {
+            report($e);
+            $this->error('Error sending test email. Check the application log for details.');
+
+            return self::FAILURE;
         }
     }
 }

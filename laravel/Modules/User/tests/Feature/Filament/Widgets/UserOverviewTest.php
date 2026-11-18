@@ -21,7 +21,7 @@ uses(TestCase::class);
  */
 function userOverviewStats(): array
 {
-    $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview());
+    $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview);
     Assert::assertIsArray($stats);
 
     $result = [];

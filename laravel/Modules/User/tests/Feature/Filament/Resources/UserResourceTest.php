@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Filament\Resources;
 
-use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\Components\Field;
@@ -19,6 +18,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 

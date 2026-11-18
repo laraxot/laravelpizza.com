@@ -32,10 +32,7 @@ Segui questi passaggi per risolvere:
    ```
 2. Esegui il comando:
    ```bash
-<<<<<<< .merge_file_jhyFIG
    # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_ymDu11
    ```
 
 Questo comando pubblica gli asset necessari e risolve l'errore.

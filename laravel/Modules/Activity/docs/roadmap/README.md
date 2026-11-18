@@ -37,9 +37,7 @@ Core module for the FixCity Platform.
 | 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
-<<<<<<< .merge_file_9YV6aT
 ---
-=======
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
@@ -52,6 +50,5 @@ Core module for the FixCity Platform.
 - [ ] <nome progetto>ive analytics
 - [ ] Custom dashboard widgets
 - [ ] API for external analytics tools
->>>>>>> .merge_file_Fn57I8
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

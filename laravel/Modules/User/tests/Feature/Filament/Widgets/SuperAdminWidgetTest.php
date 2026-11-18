@@ -33,7 +33,7 @@ uses(TestCase::class);
 function superAdminWidgetProfileConnectionName(): string
 {
     $profileClass = XotData::make()->getProfileClass();
-    $connection = (new $profileClass())->getConnectionName();
+    $connection = (new $profileClass)->getConnectionName();
 
     if (is_string($connection) && $connection !== '') {
         return $connection;
@@ -206,7 +206,7 @@ describe('SuperAdminWidget toggle', function (): void {
         $user = grantSuperAdminWidgetRole($user, 'super-admin');
         actingAs($user);
 
-        $widget = new SuperAdminWidget();
+        $widget = new SuperAdminWidget;
         $widget->mount();
         // Dal controllo di DCP-181 il profilo deve vedere il ruolo: l'utente del profilo e' `Modules\Fixcity\Models\User`, quello della factory
         // `Modules\User\Models\User`, e i ruoli Spatie sono legati alla classe del modello. Si collega il profilo all'utente che ha il ruolo.

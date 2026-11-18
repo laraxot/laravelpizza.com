@@ -16,7 +16,7 @@ function interactsWithTenantModel(): InteractsWithTenantFixtureModel
     return new InteractsWithTenantFixtureModel;
 }
 
-function interactsWithTenantTenant(string $id): \Illuminate\Database\Eloquent\Model
+function interactsWithTenantTenant(string $id): Model
 {
     $tenantClass = XotData::make()->getTenantClass();
     $tenant = new $tenantClass;

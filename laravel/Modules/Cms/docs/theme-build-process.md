@@ -34,10 +34,7 @@ npm run build
 2. **Pubblicazione degli asset** - Copia i file compilati nella directory pubblica:
 
 ```bash
-<<<<<<< .merge_file_Fcjbo2
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_U36wMn
 ```
 
 È fondamentale eseguire entrambi i comandi per vedere le modifiche nel frontend dell'applicazione.

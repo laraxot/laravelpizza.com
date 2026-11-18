@@ -7,6 +7,9 @@ namespace Modules\UI\Traits;
 use Illuminate\Support\Facades\Session;
 use Modules\UI\Enums\TableLayoutEnum;
 
+/**
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+ */
 trait TableLayoutTrait
 {
     public function getTableLayout(): TableLayoutEnum

@@ -6,6 +6,9 @@ namespace Modules\User\Models\Traits;
 
 use Illuminate\Support\Str;
 
+/**
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+ */
 trait BaseUserUniqueNameAttribute
 {
     public function getNameAttribute(?string $value): string

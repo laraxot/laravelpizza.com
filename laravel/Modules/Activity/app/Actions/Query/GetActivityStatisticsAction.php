@@ -5,11 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Actions\Query;
 
 use Illuminate\Database\Eloquent\Builder;
-<<<<<<< .merge_file_pCJ4um
-use Illuminate\Support\Collection;
-=======
 use Illuminate\Database\Eloquent\Model;
->>>>>>> .merge_file_GBPfqo
 use Illuminate\Support\Facades\Cache;
 use InvalidArgumentException;
 use Modules\Activity\Models\Activity;
@@ -17,7 +13,9 @@ use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
- * Get activity statistics, cached 5 minutes.
+ * Statistiche activity log (totali / per tipo / finestre temporali), cache 5 minuti.
+ *
+ * Scopo: dashboard audit senza query ripetute; `typedQuery`/`typedGet` tengono il contratto tipizzato.
  */
 class GetActivityStatisticsAction
 {
@@ -29,23 +27,18 @@ class GetActivityStatisticsAction
     public function execute(?UserContract $user = null): array
     {
         $userKey = $user?->getKey();
-        $cacheKeySuffix = is_scalar($userKey) ? (string) $userKey : 'global';
+        $cacheKeySuffix = match (true) {
+            is_int($userKey) => (string) $userKey,
+            is_string($userKey) && $userKey !== '' => $userKey,
+            default => 'global',
+        };
         $cacheKey = 'activity.statistics.'.$cacheKeySuffix;
 
-<<<<<<< .merge_file_pCJ4um
-        /** @var array{total: int, by_type: array<string, int>, today: int, this_week: int, this_month: int} $stats */
-        $stats = Cache::remember($cacheKey, now()->addMinutes(5), function () use ($user): array {
-            return $this->computeStatistics($user);
-        });
-
-        return $stats;
-=======
         $statistics = Cache::remember($cacheKey, now()->addMinutes(5), function () use ($user): array {
             return $this->computeStatistics($user);
         });
 
         return is_array($statistics) ? $this->normalizeStatistics($statistics) : $this->computeStatistics($user);
->>>>>>> .merge_file_GBPfqo
     }
 
     /**
@@ -53,12 +46,7 @@ class GetActivityStatisticsAction
      */
     private function computeStatistics(?UserContract $user): array
     {
-<<<<<<< .merge_file_pCJ4um
-        /** @var Builder<Activity> $query */
-        $query = Activity::newQuery();
-=======
         $query = Activity::typedQuery();
->>>>>>> .merge_file_GBPfqo
 
         if ($user) {
             if (! $user instanceof Model) {
@@ -75,7 +63,10 @@ class GetActivityStatisticsAction
                 ->whereDate('created_at', now()->toDateString())
                 ->count(),
             'this_week' => $query->clone()
-                ->whereBetween('created_at', [now()->startOfWeek(), now()->endOfWeek()])
+                ->whereBetween('created_at', [
+                    now()->startOfWeek(),
+                    now()->endOfWeek(),
+                ])
                 ->count(),
             'this_month' => $query->clone()
                 ->whereMonth('created_at', now()->month)
@@ -90,28 +81,26 @@ class GetActivityStatisticsAction
      */
     private function countByType(Builder $query): array
     {
-<<<<<<< .merge_file_pCJ4um
-        /** @var Builder<Activity> $clonedQuery */
-        $clonedQuery = $query->clone();
-
-        /** @var Collection<int, object{event: string, count: int}> $results */
-        $results = $clonedQuery
-=======
         $results = Activity::typedGet($query->clone()
->>>>>>> .merge_file_GBPfqo
             ->selectRaw('event, COUNT(*) as count')
             ->groupBy('event')
         );
 
-        /** @var array<string, int> $byType */
-        $byType = $results->mapWithKeys(function (object $item): array {
-            // PHPStan L10: isset() per magic attributes invece di property_exists()
-            if (! isset($item->event, $item->count)) {
-                return [];
+        $byType = [];
+        foreach ($results as $activity) {
+            $event = $activity->getAttribute('event');
+            $count = $activity->getAttribute('count');
+
+            if (! is_string($event) || $event === '') {
+                continue;
             }
 
-            return [(string) $item->event => (int) $item->count];
-        })->toArray();
+            if (! is_int($count) && ! (is_string($count) && ctype_digit($count))) {
+                continue;
+            }
+
+            $byType[$event] = (int) $count;
+        }
 
         return $byType;
     }
@@ -140,6 +129,8 @@ class GetActivityStatisticsAction
 
     private function normalizeInteger(mixed $value): int
     {
-        return is_int($value) ? $value : (is_string($value) && is_numeric($value) ? (int) $value : 0);
+        return is_int($value)
+            ? $value
+            : (is_string($value) && is_numeric($value) ? (int) $value : 0);
     }
 }

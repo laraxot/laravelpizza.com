@@ -62,10 +62,7 @@ cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
-<<<<<<< .merge_file_584KxC
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_uEOFPK
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -129,11 +126,8 @@ npm cache clean --force
 
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
-<<<<<<< .merge_file_584KxC
 npm install
-=======
 npm install && npm run build
->>>>>>> .merge_file_uEOFPK
 ```
 
 ## Manutenzione

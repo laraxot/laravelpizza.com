@@ -256,10 +256,7 @@ npm install
 npm run build
 
 # 4. Copy to public_html
-<<<<<<< .merge_file_ha62IT
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_yinMZB
 ```
 
 **Result:**
@@ -489,11 +486,8 @@ pages/tests/amministrazione.blade.php # SBAGLIATO
 - [ ] `composer update -W` executed
 - [ ] `npm install` executed
 - [ ] `npm run build` executed
-<<<<<<< .merge_file_ha62IT
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 - [ ] `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public` (`npm run copy` dismesso)
->>>>>>> .merge_file_yinMZB
 - [ ] Manifest exists: `public_html/themes/{theme}/manifest.json`
 
 ### Blade Components

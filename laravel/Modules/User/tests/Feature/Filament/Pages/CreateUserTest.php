@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_BuEqcB
-=======
-use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_UcomDz
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 /**
  * @property CreateUser $page
@@ -18,11 +14,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< .merge_file_BuEqcB
-    $this->createUserPage = new CreateUser;
-=======
-    $this->page = new CreateUser();
->>>>>>> .merge_file_UcomDz
+    $this->page = new CreateUser;
 });
 
 test('create user page has correct resource', function (): void {

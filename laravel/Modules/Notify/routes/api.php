@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 use Modules\Notify\Actions\Mail\ProcessInboundMailAction;
+
 /*--work in progress
  * use Modules\Notify\Http\Controllers\TelegramNotificationController;
  *

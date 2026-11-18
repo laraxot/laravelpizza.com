@@ -7,7 +7,7 @@ namespace Modules\Notify\Tests\Unit\Models;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Tests\TestCase;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 class ContactTest extends TestCase
 {
     protected function setUp(): void

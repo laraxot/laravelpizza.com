@@ -1,4 +1,3 @@
-<<<<<<< .merge_file_jiQvwB
 # Activity
 
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()
@@ -30,7 +29,6 @@ Core module for the FixCity Platform.
 | 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
-=======
 ---
 title: "Activity"
 type: index
@@ -38,13 +36,10 @@ status: draft
 updated: 2026-10-23
 tags: [docs, activity, outputs]
 qmd: "activity activity"
->>>>>>> .merge_file_v3IBTL
 ---
 # Activity
 
-<<<<<<< .merge_file_jiQvwB
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
-=======
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()
 [![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
 [![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)
@@ -77,4 +72,3 @@ Core module for the FixCity Platform.
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/README-Modules.md
->>>>>>> .merge_file_v3IBTL

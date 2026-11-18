@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Auth;
 
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\User\Http\Controllers\Controller;
 
 /**

@@ -39,10 +39,7 @@ Segui questi passaggi per risolvere:
    ```
 2. Esegui il comando:
    ```bash
-<<<<<<< .merge_file_9gzeQo
    # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_9la9rn
    ```
 
 Questo comando pubblica gli asset necessari e risolve l'errore.

@@ -6,11 +6,12 @@ namespace Modules\Geo\Tests\Unit\Services;
 
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Geo\Services\GeoService;
 use Modules\Geo\Services\GoogleMapsService;
 use Modules\Geo\Services\HereService;
+use Modules\Geo\Tests\TestCase;
 
 test('GeoService can be instantiated', function () {
     $service = app(GeoService::class);

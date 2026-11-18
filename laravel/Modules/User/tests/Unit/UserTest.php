@@ -2,14 +2,10 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_jr4ZUz
-=======
-use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_BzcmGC
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 /**
  * @property User $subjectUser

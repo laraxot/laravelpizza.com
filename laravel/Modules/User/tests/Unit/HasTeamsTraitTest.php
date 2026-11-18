@@ -7,11 +7,7 @@ use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Models\TeamUser;
 use Modules\User\Models\User;
-<<<<<<< .merge_file_CfGXTZ
-use Tests\TestCase;
-=======
 use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_6nEM8h
 
 /**
  * Test per il trait HasTeams corretto secondo filosofia Jetstream + Laraxot.
@@ -275,12 +271,8 @@ test('it handles edge cases correctly', function (): void {
 });
 
 test('it validates assertions correctly', function (): void {
-<<<<<<< .merge_file_CfGXTZ
-    expect(fn () => $this->user->ownsTeam(null))->toThrow(InvalidArgumentException::class, 'Team cannot be null');
-=======
     ['user' => $user] = hasTeamsTraitTestFixture();
 
     // ownsTeam() accetta ?TeamContract: un team assente non e' posseduto, nessuna eccezione.
     expect($user->ownsTeam(null))->toBeFalse();
->>>>>>> .merge_file_6nEM8h
 });

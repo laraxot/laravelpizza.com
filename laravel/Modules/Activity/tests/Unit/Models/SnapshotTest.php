@@ -7,7 +7,7 @@ use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('Snapshot model can be instantiated', function () {
     $reflection = new ReflectionClass(Snapshot::class);
