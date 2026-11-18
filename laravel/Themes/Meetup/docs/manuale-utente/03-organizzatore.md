@@ -4,7 +4,7 @@
 
 Sei un **organizzatore** quando un amministratore ha dato al tuo account il permesso di gestire gli eventi. Gli eventi non si creano dal sito pubblico ma dal **pannello di amministrazione**, una zona riservata con un indirizzo diverso: aggiungi `/meetup/admin` all'indirizzo del sito (per esempio `https://laravelpizza.com/meetup/admin`).
 
-> Non vedi il pannello, o ricevi "Accesso negato"? Il tuo account non ha ancora il permesso: chiedilo all'amministratore del sito.
+> Non vedi il pannello, o ricevi "Accesso negato"? Il tuo account non ha ancora il permesso: chiedilo all'amministratore del sito (come lo concede è spiegato nel [capitolo 4](04-amministratore.md#42-dare-a-qualcuno-il-ruolo-di-organizzatore)).
 
 ## 3.1 Entrare nel pannello
 
@@ -16,27 +16,29 @@ Sei un **organizzatore** quando un amministratore ha dato al tuo account il perm
 
 ## 3.2 La bacheca
 
-Dopo l'accesso apri **Meetup Dashboard**: i numeri principali e i prossimi appuntamenti.
+Dopo l'accesso si apre la **Dashboard**: i numeri principali e i prossimi appuntamenti.
 
 ![La bacheca del pannello](img/o02-dashboard.jpg)
 
 1. **Eventi** apre l'elenco completo degli eventi.
 2. **Sedi**, **Relatori** e **Sponsor**: le anagrafiche da collegare agli eventi (vedi 3.7).
-3. **Prossimi eventi e iscritti**: per ogni evento futuro quanti iscritti ci sono sui posti disponibili. Il numero diventa giallo quando l'evento è quasi pieno (80%) e rosso quando è pieno. Clicca sul titolo per modificare l'evento.
+3. I tre **riquadri**: quanti eventi hai creato in tutto, quanti sono in arrivo e quanti sono pubblicati, cioè visibili sul sito.
+
+Sotto c'è la tabella **Prossimi eventi e iscritti**: per ogni evento futuro quanti iscritti ci sono sui posti disponibili. Il numero diventa giallo quando l'evento è quasi pieno (80%) e rosso quando è pieno. Clicca sul titolo per modificare l'evento.
 
 ## 3.3 L'elenco degli eventi
 
 ![Elenco eventi nel pannello](img/o03-lista-eventi.jpg)
 
-1. **Nuovo**: crea un evento.
+1. **Nuovo evento**: crea un evento.
 
-In alto trovi i riquadri riassuntivi, sotto la tabella con tutti gli eventi (anche le bozze, che il pubblico non vede). La colonna **Iscritti** mostra "iscritti / posti". Con **Filtri** puoi vedere solo le bozze, solo gli eventi in arrivo o quelli passati, o cercare per date:
+In alto trovi i riquadri riassuntivi (eventi creati, in arrivo, posti già prenotati), sotto la tabella con tutti gli eventi (anche le bozze, che il pubblico non vede). La colonna **Iscritti** mostra "iscritti / posti". Con **Filtri** puoi vedere solo le bozze, solo gli eventi in arrivo o quelli passati, o cercare per date:
 
 ![La tabella degli eventi](img/o04-lista-eventi-schede.jpg)
 
 ## 3.4 Creare un evento
 
-Clicca **Nuovo**. Si apre il modulo.
+Clicca **Nuovo evento**. Si apre il modulo.
 
 ![Modulo di creazione evento](img/o05-nuovo-evento.jpg)
 
@@ -94,7 +96,7 @@ Le anagrafiche complete (contatti, biografia, sito) si gestiscono dalle voci **S
 
 ![L'elenco delle sedi](img/o13-sedi.jpg)
 
-1. **Nuovo** aggiunge una sede (o un relatore, o uno sponsor nelle rispettive pagine). La colonna **Eventi** dice in quanti eventi è usata.
+1. **Nuova sede** aggiunge una sede (nelle altre pagine i pulsanti sono **Nuovo relatore** e **Nuovo sponsor**). La colonna **Eventi** dice in quanti eventi è usata.
 
 Se elimini una sede, gli eventi che la usavano restano e mostrano solo la città. Se elimini un relatore o uno sponsor, sparisce solo dagli eventi, gli eventi restano.
 
@@ -115,3 +117,5 @@ Apri un evento con **Modifica** e scorri in fondo alla pagina: trovi la tabella 
 - Imposta i posti disponibili in base alla sala vera: il sito chiude da solo le iscrizioni quando sono finiti.
 - Se cambi data o luogo dopo la pubblicazione, avvisa gli iscritti (puoi usare gli indirizzi del CSV): il sito non manda un'email automatica per le modifiche. Il promemoria del giorno prima userà comunque la data e il luogo aggiornati.
 - I messaggi scritti dal modulo **Contatti** del sito arrivano all'indirizzo email configurato dall'amministratore.
+
+[Continua con il capitolo 4 – Amministratore →](04-amministratore.md)

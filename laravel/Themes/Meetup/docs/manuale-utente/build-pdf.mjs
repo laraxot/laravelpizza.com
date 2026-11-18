@@ -25,6 +25,7 @@ const chapters = [
     { file: '01-visitatore.md', label: 'Capitolo 1 · Visitatore' },
     { file: '02-partecipante.md', label: 'Capitolo 2 · Partecipante' },
     { file: '03-organizzatore.md', label: 'Capitolo 3 · Organizzatore' },
+    { file: '04-amministratore.md', label: 'Capitolo 4 · Amministratore' },
 ];
 const today = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -97,7 +98,7 @@ async function render(html, out, footerLabel) {
 // 1. Manuale completo: copertina, indice (readme), capitoli. Link tra file → ancore interne.
 const toAnchor = (md) => md.replace(/\]\((0\d-[a-z]+)\.md(#[^)]+)?\)/g, (_, f, hash) => `](${hash ?? '#' + f})`);
 let body = `<section class="cover"><h1>${title}</h1>
-<div class="sub">Guida passo per passo per visitatori, partecipanti e organizzatori</div>
+<div class="sub">Guida passo per passo per visitatori, partecipanti, organizzatori e amministratori</div>
 <div class="date">Aggiornato al ${today}</div></section>`;
 body += `<section class="toc">${toHtml(toAnchor(stripMaintainerNotes(read('readme.md'))))}</section>`;
 for (const c of chapters) {

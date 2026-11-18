@@ -1,7 +1,28 @@
 # Functional coverage — PRD FR-1 … FR-21
 
-> Audit del 2026-11-05, branch `dev`. Ogni stato è motivato con un riferimento al codice.
+> Audit del 2026-11-05, aggiornato il 2026-11-18, branch `dev`. Ogni stato è motivato con un riferimento al codice.
 > Legenda: ✅ completo e verificato · 🟢 implementato, non verificato end-to-end · 🟡 parziale · 🔴 difettoso · ⛔ mancante o non raggiungibile.
+
+## Stato al 18 novembre 2026: tutti gli FR completi e coperti da test
+
+| FR | Stato | Cosa è cambiato / test di accettazione |
+|---|---|---|
+| FR-1…4 Amministrazione | ✅ | invariati; pannello senza errori (`npm run audit:bo`: 251 pagine, 0 problemi), pulsanti "Nuovo evento/sede/…" |
+| FR-5…8 Scoperta | ✅ | invariati |
+| FR-9 Iscrizione con email e password | ✅ | **ora dalla pagina evento, con sola email e password** (account creato insieme all'iscrizione): `SignUpAndJoinEventAction`, `EventSignUpTest` |
+| FR-10 Conferma email | ✅ | anche per gli account creati dalla pagina evento (`EventSignUpTest`) |
+| FR-11 No sovra-iscrizione | ✅ | l'evento pieno è rifiutato **prima** di creare l'account |
+| FR-12, 13 CMS | ✅ | rimosse 53 viste inutilizzate di un altro progetto |
+| FR-14 Aggiornamento senza deploy | ✅ | `PrdAcceptanceTest`: JSON modificato → visibile alla richiesta successiva (con PHP-FPM; con Octane serve invalidare, vedi runbook) |
+| FR-15 IT/EN via prefisso | ✅ | `/events` senza lingua → redirect alla lingua del browser o di default; `PrdAcceptanceTest` |
+| FR-16 Selettore lingua | ✅ | `PrdAcceptanceTest`: i link portano alla stessa pagina in tutte le lingue |
+| FR-17 Stringhe tradotte | ✅ (tema) | testi legali e aria-label tradotti; messaggi di validazione Laravel in 6 lingue; restano testi interni dei moduli condivisi nei pannelli tecnici |
+| FR-18 Cookie | ✅ | `PrdAcceptanceTest`: alla prima visita solo cookie tecnici |
+| FR-19 WCAG | ✅ | `npm run audit:fo` (axe) senza problemi, anche sul nuovo modulo d'iscrizione |
+| FR-20 SEO | ✅ | `PrdAcceptanceTest`: title univoci, description, canonical localizzato; aggiunti `hreflang` |
+| FR-21 JSON-LD | ✅ | invariato |
+
+Fuori PRD, nuovo: **server MCP** per agenti AI (`/api/mcp`, story 7-4). In backlog: chat AI nel sito (story 7-5).
 
 ## Stato al ciclo 3 (11 novembre 2026)
 
