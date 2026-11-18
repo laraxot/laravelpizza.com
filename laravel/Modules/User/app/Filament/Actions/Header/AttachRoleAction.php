@@ -29,7 +29,9 @@ final class AttachRoleAction extends XotBaseAttachAction
             // Opzioni e lettura del valore ricevuto: senza super-admin per chi non lo e'.
             ->recordSelectOptionsQuery(static fn (Builder $query): Builder => Role::restrictAssignableBy($query, Auth::user()))
             // Il form e' controllato dal client: l'id inviato si rivalida sul server, non ci si fida delle opzioni mostrate.
-            ->recordSelect(static fn (Select $select): Select => $select->rule(
+            ->modalHeading(static fn (): string => (string) __('user::attach_role.heading'))
+            // Etichetta esplicita: senza, il campo del ruolo non aveva nome per i lettori di schermo.
+            ->recordSelect(static fn (Select $select): Select => $select->label((string) __('user::attach_role.fields.recordId.label'))->rule(
                 static fn (): Closure => static function (string $attribute, mixed $value): void {
                     self::assertAssignable($value);
                 }
@@ -37,7 +39,10 @@ final class AttachRoleAction extends XotBaseAttachAction
             ->schema(static function (AttachAction $action) use ($xotData): array {
                 return [
                     $action->getRecordSelect(),
-                    Select::make('team_id')->options($xotData->getTeamClass()::get()->pluck('name', 'id')),
+                    Select::make('team_id')
+                        ->label((string) __('user::attach_role.fields.team_id.label'))
+                        ->helperText((string) __('user::attach_role.fields.team_id.helper_text'))
+                        ->options($xotData->getTeamClass()::get()->pluck('name', 'id')),
                 ];
             });
     }

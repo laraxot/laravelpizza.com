@@ -16,6 +16,7 @@ use Modules\Meetup\Actions\Event\SignUpAndJoinEventAction;
 use Modules\Meetup\Actions\Event\UnregisterAttendeeFromEventAction;
 use Modules\Meetup\Models\Event;
 use Modules\User\Actions\Auth\ResendEmailVerificationAction;
+use Modules\User\Datas\PasswordData;
 use Modules\User\Models\User;
 
 /**
@@ -178,6 +179,8 @@ class EventRegistration extends Component
             'loginUrl' => LaravelLocalization::localizeUrl('/auth/login'),
             'privacyUrl' => LaravelLocalization::localizeUrl('/privacy'),
             'termsUrl' => LaravelLocalization::localizeUrl('/terms'),
+            // Stessa lunghezza minima di Password::defaults() (config password.min del tenant).
+            'passwordMin' => PasswordData::make()->min,
             'isRegistered' => $user !== null && $event->isUserRegistered($user->id),
             'isFull' => $event->isFull(),
             'availableSpots' => max(0, (int) $event->max_attendees - (int) $event->attendees_count),

@@ -320,6 +320,7 @@ return [
         ],
     ],
     'actions' => [
+        'change_password' => 'Cambia password',
         'create' => [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
@@ -424,6 +425,8 @@ return [
         ],
         'changePassword' => [
             'icon' => 'changePassword',
+            'label' => 'Cambia password',
+            'tooltip' => 'Cambia password',
         ],
         'layout' => [
             'icon' => 'layout',

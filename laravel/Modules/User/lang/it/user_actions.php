@@ -103,6 +103,8 @@ return [
         ],
         'changePassword' => [
             'icon' => 'changePassword',
+            'label' => 'Cambia password',
+            'tooltip' => 'Cambia password',
         ],
         'layout' => [
             'icon' => 'layout',
