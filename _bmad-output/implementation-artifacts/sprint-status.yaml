@@ -91,6 +91,9 @@ development_status:
   7-1-audit-front-office-ospite-e-loggato: review
   7-2-modifica-profilo-e-sottopagine-cms: review
   7-3-riparazione-sync-moduli-e-back-office: review
+  7-4-server-mcp-per-agenti-ai: review
+  7-5-assistente-ai-in-chat-e-webmcp: backlog
+  7-6-iscrizione-con-email-e-password-e-accettazione-prd: review
   epic-7-retrospective: optional
 
 # Note 2026-11-11 (Claude, sessione di completamento):

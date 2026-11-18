@@ -42,9 +42,9 @@ class EventRegistration extends Component
 
     public bool $consentsAccepted = false;
 
-    private const SESSION_FLASH = 'meetup.event_registration.flash';
+    private const string SESSION_FLASH = 'meetup.event_registration.flash';
 
-    private const MAX_ATTEMPTS = 5;
+    private const int MAX_ATTEMPTS = 5;
 
     public function mount(Event $event): void
     {
