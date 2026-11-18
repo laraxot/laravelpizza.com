@@ -57,6 +57,9 @@ new class extends Component
             $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
             $this->pageSlug = $resolved->pageSlug;
             $this->item = $resolved->item;
+
+            // Né un modello né una pagina CMS: 404, non una pagina vuota con 200 (es. /it/genesis/about).
+            abort_if($this->item === null && ! Page::query()->where('slug', $this->pageSlug)->exists(), 404);
         }
 
         if ($this->item instanceof Event) {
