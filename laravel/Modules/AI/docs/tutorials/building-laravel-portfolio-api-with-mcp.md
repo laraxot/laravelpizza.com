@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "building laravel portfolio api with mcp"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Building a Laravel Portfolio API with MCP
@@ -897,4 +896,13 @@ class OptimizeProjectDescriptionTool extends Tool
    - Seguire le best practices per la gestione dei valori mixed
 
 ---
+
+title: "building laravel portfolio api with mcp"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "building laravel portfolio api with mcp"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Maggio 2025*

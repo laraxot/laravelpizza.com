@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "installazione mcp servers"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Installazione e Gestione Centralizzata MCP Servers
@@ -16,12 +15,21 @@ status: draft
 Centralizzare l'installazione dei server MCP in `/var/www/html/_bases/mcp-servers` per consentire l'uso condiviso tra più progetti Laravel/PHP, evitando duplicazioni e facilitando aggiornamenti e manutenzione.
 
 ---
+
+title: "installazione mcp servers"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installazione mcp servers"
+issues: []
+discussions: []
 ## 1. Struttura consigliata
 
 ```
 /var/www/html/_bases/
     ├── mcp-servers/         # Qui risiedono tutti i server MCP (clonati e gestiti una sola volta)
-    ├── base_predict_fila5_mono/
+    ├── base_predict_fila5/
     ├── altro_progetto/
     └── ...
 ```
@@ -87,8 +95,8 @@ node dist/everything.js
 Se hai già cartelle `mcp-server` o `mcp-servers` in altre posizioni:
 ```bash
 # (da eseguire solo dopo aver verificato che non ci siano file personalizzati da salvare)
-rm -rf /var/www/html/_bases/base_predict_fila5_mono/mcp-server
-rm -rf /var/www/html/_bases/base_predict_fila5_mono/mcp-servers
+rm -rf /var/www/html/_bases/base_predict_fila5/mcp-server
+rm -rf /var/www/html/_bases/base_predict_fila5/mcp-servers
 ```
 
 ---
@@ -123,4 +131,4 @@ Per aggiornare o avviare un server MCP, segui la documentazione centrale in `/va
 
 **Questa guida è pensata per essere seguita anche da chi lavora su altri PC o ambienti.**
 
-Per domande o aggiornamenti, fare riferimento alla documentazione centrale e ai README dei progetti coinvolti. 
+Per domande o aggiornamenti, fare riferimento alla documentazione centrale e ai README dei progetti coinvolti.

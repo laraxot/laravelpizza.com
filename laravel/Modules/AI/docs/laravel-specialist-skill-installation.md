@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laravel specialist skill installation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # laravel-specialist skill installation - 2026-03-02

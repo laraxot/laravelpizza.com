@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "file naming rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole di Naming per File

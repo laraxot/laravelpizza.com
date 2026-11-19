@@ -21,9 +21,9 @@ use Modules\Xot\Models\XotBaseModel;
  * @property-read AiThread|null $thread
  * @property-read ProfileContract|null $updater
  *
- * @method static Builder<static>|AiToolLog newModelQuery()
- * @method static Builder<static>|AiToolLog newQuery()
- * @method static Builder<static>|AiToolLog query()
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> query()
  */
 class AiToolLog extends XotBaseModel
 {

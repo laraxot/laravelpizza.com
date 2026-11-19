@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laravel helper tools for mcp"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Laravel Helper Tools per MCP
@@ -870,4 +869,13 @@ class AnalyzePerformanceTool extends Tool
    - Seguire le best practices per la gestione dei valori mixed
 
 ---
+
+title: "laravel helper tools for mcp"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel helper tools for mcp"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Maggio 2025*

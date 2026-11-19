@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: laravel_helper_tools_for_mcp
 canonical: ../../../../Themes/docs/shared-components/laravel-helper-tools-for-mcp.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/laravel-helper-tools-for-mcp.md

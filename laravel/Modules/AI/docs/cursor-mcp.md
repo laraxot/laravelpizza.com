@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "cursor mcp"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Configurazione MCP per Cursor

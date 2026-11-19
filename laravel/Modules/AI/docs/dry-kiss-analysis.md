@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐄 DRY & KISS Analysis - AI

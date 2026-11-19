@@ -8,14 +8,13 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
-  - ../../../../docs/wiki/rules/on-demand-pattern.md
-  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
+  - ../../docs/wiki/rules/on-demand-pattern.md
+  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 ---
 
 # On-Demand Pattern — Module **AI**
 
-**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
 
 ## Principio
 
@@ -90,9 +89,9 @@ qmd search "<topic>"
 
 ## Riferimenti
 
-- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
-- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Module Wiki Index](./wiki/index.md)
 
 ---

@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "ollama actions moved from xot"
 issues: []
 discussions: []
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): Dice che ChatOllamaAction e GenerateOllamaAction sono stati spostati da Modules/Xot a Modules/AI; il 2026-10-14 le copie in Modules/Xot/app/Actions/AI/Ollama/ esistono ancora (ultimo commit 2026-10-09) con codice quasi identico: e' una copia, non uno spostamento. Contenuto non riscritto, verificare prima di usarlo.
 
 # Ollama actions moved from Modules/Xot to Modules/AI
 
@@ -33,7 +30,7 @@ for a domain that already owns a dedicated module. `Modules/AI` already existed
 with its own `app/Actions/{Prediction,Prompt,Sentiment,Predict,...}` structure —
 Ollama chat/generate actions belong there, not in Xot.
 
-See the general rule: [`xot-is-framework-base-not-domain-owner`](../../../../bashscripts/ai/wiki/concepts/xot-is-framework-base-not-domain-owner.md)
+See the general rule: [`xot-is-framework-base-not-domain-owner`](../../../bashscripts/ai/wiki/concepts/xot-is-framework-base-not-domain-owner.md)
 (wiki concept) and skill `xot-is-framework-base`.
 
 ## Verification performed

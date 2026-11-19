@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "product roadmap"
 issues: []
 discussions: []
-status: superseded
-superseded_by: product-roadmap.md
 ---
 
 # AI Module - Product Roadmap
@@ -19,6 +17,15 @@ superseded_by: product-roadmap.md
 **Status:** In Development
 
 ---
+
+title: "product roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product roadmap"
+issues: []
+discussions: []
 ## Vision Statement
 
 To integrate **intelligent automation and AI-powered insights** throughout the platform, enhancing user experience, improving operational efficiency, and enabling capabilities that would be impossible with traditional software alone.

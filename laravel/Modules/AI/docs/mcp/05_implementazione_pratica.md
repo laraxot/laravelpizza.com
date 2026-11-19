@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: 05_implementazione_pratica
 canonical: ../../../../Themes/docs/shared-components/05-implementazione-pratica.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/05-implementazione-pratica.md
