@@ -100,3 +100,14 @@ test('the home describes the site for search engines and social networks', funct
     'italiano' => ['it', 'Meetup Laravel gratuiti in Italia'],
     'inglese' => ['en', 'Free Laravel meetups in Italy'],
 ]);
+
+test('anonymous visitors get the light stylesheet without Filament, login pages the full one', function (): void {
+    $public = (string) $this->get('/it/events')->assertOk()->getContent();
+    $login = (string) $this->get('/it/auth/login')->assertOk()->getContent();
+
+    // Prestazioni = segnale di ranking: CSS e JS di Filament solo dove ci sono componenti Filament.
+    expect($public)->toMatch('#themes/Meetup/assets/site-[^"]+\.css#')
+        ->not->toContain('js/filament/support')
+        ->and($login)->toMatch('#themes/Meetup/assets/app-[^"]+\.css#')
+        ->toContain('js/filament/support');
+});

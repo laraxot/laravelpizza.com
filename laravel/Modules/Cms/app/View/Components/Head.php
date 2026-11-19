@@ -50,6 +50,8 @@ final class Head extends Component
         public readonly ?string $description = null,
         public readonly ?bool $homepage = null,
         public readonly ?string $themeColor = null,
+        // Entry Vite del CSS del tema: un tema può servire un foglio più leggero dove non servono i componenti Filament.
+        public readonly string $stylesheet = 'resources/css/app.css',
     ) {}
 
     public function render(): ViewContract
@@ -105,6 +107,7 @@ final class Head extends Component
 
         return view('cms::components.head', [
             'pubTheme' => $meta->getPubTheme(),
+            'stylesheet' => $this->stylesheet,
         ]);
     }
 
