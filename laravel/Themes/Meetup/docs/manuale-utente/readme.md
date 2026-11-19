@@ -4,6 +4,8 @@ Benvenuto! Questo manuale spiega, passo per passo e senza dare nulla per scontat
 
 Non serve essere esperti di computer. Ogni capitolo ha delle **immagini prese dal sito vero**: i riquadri gialli con il numero indicano esattamente dove cliccare, e i passi del testo usano gli stessi numeri.
 
+*English edition: [User guide](en/readme.md).*
+
 ## Versione PDF da stampare o inviare
 
 - [Manuale completo (PDF)](pdf/manuale-completo.pdf)
@@ -16,7 +18,7 @@ Il sito ha quattro tipi di utente. Ognuno vede cose diverse e può fare cose div
 | Tipo di utente | Chi è | Cosa può fare | Capitolo |
 |---|---|---|---|
 | **Visitatore** | Chiunque apra il sito, senza account | Guardare e cercare gli eventi, vedere quelli passati, aggiungerli al calendario, cambiare lingua, scrivere agli organizzatori | [1. Visitatore](01-visitatore.md) |
-| **Partecipante** | Chi ha un account (anche creato iscrivendosi a un evento, con sola email e password) | Tutto quello del visitatore, più: iscriversi agli eventi (con email di conferma e promemoria), annullare l'iscrizione, vedere "I miei eventi", gestire il profilo | [2. Partecipante](02-partecipante.md) |
+| **Partecipante** | Chi ha un account (anche creato iscrivendosi a un evento, con sola email e password) | Tutto quello del visitatore, più: iscriversi agli eventi (con email di conferma e promemoria), annullare l'iscrizione, vedere "I miei eventi", gestire il profilo, chiedere all'assistente | [2. Partecipante](02-partecipante.md) |
 | **Organizzatore** | Chi ha ricevuto dall'amministratore il permesso di gestire gli eventi | Entrare nel pannello di amministrazione, creare, pubblicare, modificare ed eliminare eventi; gestire sedi, relatori e sponsor; vedere e scaricare gli iscritti | [3. Organizzatore](03-organizzatore.md) |
 | **Amministratore** | Chi gestisce il sito (ruolo super-admin) | Tutto quello dell'organizzatore, più: dare e togliere il ruolo di organizzatore, controllare gli account, le impostazioni e i pannelli tecnici | [4. Amministratore](04-amministratore.md) |
 
@@ -50,12 +52,15 @@ Se non sai quale sei: se non hai mai creato un account sei un **Visitatore**. Se
 
 **Ho cliccato "Iscriviti" ma non è arrivata l'email.** Controlla la cartella spam. La tua iscrizione vale comunque: la trovi in "I miei eventi".
 
+**Posso semplicemente chiedere quello che mi serve?** Sì: dopo l'accesso clicca **Chiedi all'assistente** in basso a destra (vedi il [capitolo 2](02-partecipante.md#29-chiedere-allassistente)).
+
 ## Note per chi mantiene il manuale
 
 - Le immagini sono in [`img/`](img/) e vanno rifatte quando l'interfaccia cambia. Sono state catturate su un'installazione locale con dati dimostrativi (persone ed eventi inventati), non dal sito in produzione.
 - Gli screenshot si rifanno con gli script in [`tools/`](tools/), su un database demo con dati inventati:
   1. da `laravel/`: `sh Themes/Meetup/docs/manuale-utente/tools/reset-demo.sh` (si rifiuta di girare se il database non ha "demo" nel nome);
   2. da `laravel/`: `php Themes/Meetup/docs/manuale-utente/tools/render-mail.php $PWD /tmp/mail.html` (l'email di conferma, p08);
-  3. da `laravel/Themes/Meetup`: `node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/img /tmp/mail.html`. Alla fine stampa "Tutti i riquadri trovati"; altrimenti l'interfaccia è cambiata e il riquadro va corretto nello script.
-- I PDF in [`pdf/`](pdf/) si generano dai `.md` con `node build-pdf.mjs` (richiede pandoc e Playwright). Dopo ogni modifica al testo o agli screenshot rigenera i PDF e committa `.md` e `.pdf` insieme.
+  3. da `laravel/Themes/Meetup`: `PHP_BIN=php node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/img /tmp/mail.html`. Alla fine stampa "Tutti i riquadri trovati"; altrimenti l'interfaccia è cambiata e il riquadro va corretto nello script. Le schermate dell'assistente (p20-p23) non chiamano nessun modello AI: le risposte le compone lo script con i dati veri del database demo (`tools/assistant-events.php`).
+- Edizione inglese in [`en/`](en/): stesse sezioni e stessi nomi delle immagini, catturate con `MANUAL_LANG=en` (istruzioni in `en/readme.md`); i capitoli 3 e 4 usano le immagini italiane perché il pannello di amministrazione è in italiano. Quando cambia un capitolo italiano, aggiorna anche quello inglese.
+- I PDF in [`pdf/`](pdf/) si generano dai `.md` con `node build-pdf.mjs` (inglese: `node build-pdf.mjs en`, in `en/pdf/`; richiede pandoc e Playwright). Dopo ogni modifica al testo o agli screenshot rigenera i PDF e committa `.md` e `.pdf` insieme.
 - Nomi file: `v` = visitatore, `p` = partecipante, `o` = organizzatore, `a` = amministratore, seguiti dal numero d'ordine.

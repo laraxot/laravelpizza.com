@@ -2,20 +2,66 @@
 //
 // Uso, da laravel/Themes/Meetup (dove c'è playwright):
 //   sh docs/manuale-utente/tools/reset-demo.sh            (da laravel/, con PHP_BIN se serve)
-//   php docs/manuale-utente/tools/render-mail.php ../.. /tmp/mail.html   (da laravel/: email per p08)
+//   php docs/manuale-utente/tools/render-mail.php $PWD /tmp/mail.html it   (da laravel/: email per p08)
 //   node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/img /tmp/mail.html
-// Variabili: BASE_URL (default http://laravelpizza.local), MAP_HOST (es. 127.0.0.1), CHROMIUM_PATH.
+// Edizione inglese (solo sito pubblico: il pannello di amministrazione è in italiano, i capitoli 3 e 4 usano le
+// immagini italiane): reset-demo.sh, render-mail.php ... /tmp/mail-en.html en, poi
+//   MANUAL_LANG=en node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/en/img /tmp/mail-en.html
+// Variabili: BASE_URL (default http://laravelpizza.local), MAP_HOST (es. 127.0.0.1), CHROMIUM_PATH, PHP_BIN (per i
+// dati dell'assistente, tools/assistant-events.php), MANUAL_LANG (it, default, o en).
 // Ogni riquadro giallo numerato corrisponde a un passo del testo. "! mark non trovato" = interfaccia cambiata.
+// L'assistente (p20-p23) risponde con flussi AG-UI composti qui dai dati veri: nessun modello AI viene chiamato.
 const { chromium } = require('playwright');
 const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
 
 const OUT = process.argv[2];
 const MAILHTML = process.argv[3];
 const B = process.env.BASE_URL ?? 'http://laravelpizza.local';
 const HOST = new URL(B).hostname;
-const EV1 = '/it/events/laravel-13-e-filament-5-cosa-cambia-davvero';
-const EV2 = '/it/events/livewire-4-in-produzione-lezioni-imparate';
-const EV3 = '/it/events/pizza-pest-testare-senza-paura';
+const LANG = process.env.MANUAL_LANG ?? 'it';
+const L = (url) => `/${LANG}${url === '/' ? '' : url}`;
+const EV1 = L('/events/laravel-13-e-filament-5-cosa-cambia-davvero');
+const EV2 = L('/events/livewire-4-in-produzione-lezioni-imparate');
+const EV3 = L('/events/pizza-pest-testare-senza-paura');
+const LARAVEL = path.resolve(__dirname, '../../../../..');
+
+// Testi dell'interfaccia e dati di esempio nelle due lingue.
+const T = {
+  it: {
+    cookie: 'Ho capito', events: 'Eventi', langBtn: /cambia lingua/, login: 'Accedi', register: 'Registrati',
+    past: 'Eventi passati', search: 'Cerca', reset: 'Togli i filtri', send: 'Invia il messaggio', date: 'Data',
+    calendar: /Aggiungi al calendario/, otherLang: 'English', otherLangUrl: '/en/events',
+    first: 'Nome', last: 'Cognome', privacy: "Ho letto e accetto l'Informativa Privacy",
+    terms: 'Ho letto e accetto i Termini e Condizioni', create: /Crea il mio account/, signIn: /^Accedi/,
+    join: /Iscriviti all'evento/, leave: /Annulla iscrizione/, myEvents: 'I miei eventi', profile: /^\s*Profilo\s*$/,
+    editProfile: 'Modifica il profilo', logout: 'Esci', save: 'Salva i dati', photo: 'Carica la foto',
+    password: 'Cambia la password', deleteOpen: "Voglio eliminare l'account", deleteOk: 'Elimina definitivamente',
+    resetLink: 'Inviami il link', full: /Posti esauriti/, locale: 'it-IT',
+    contact: 'Ciao! Vorrei proporre un talk su Pest per il prossimo meetup di Milano.',
+    assistant: "Chiedi all'assistente", confirm: 'Conferma', ask: 'Quali sono i prossimi meetup?',
+    askJoin: (t) => `Iscrivimi a ${t}`,
+    answer: (n) => `Ho trovato **${n} meetup** nei prossimi mesi: li vedi nelle schede qui sopra.\nVuoi che ti iscriva a uno di questi?`,
+    done: (t) => `Fatto! Sei iscritto a **${t}**: ti ho mandato l'email con il file per il calendario.`,
+  },
+  en: {
+    cookie: 'Got it', events: 'Events', langBtn: /change language/, login: 'Log in', register: 'Sign up',
+    past: 'Past events', search: 'Search', reset: 'Clear filters', send: 'Send message', date: 'Date',
+    calendar: /Add to calendar/, otherLang: 'Italiano', otherLangUrl: '/it/events',
+    first: 'First Name', last: 'Last Name', privacy: 'I have read and understood the Privacy Policy',
+    terms: 'I have read and accept the Terms and Conditions', create: /Join the Community/, signIn: /^Sign in/,
+    join: /Register for this event/, leave: /Cancel registration/, myEvents: 'My events', profile: /^\s*Profile\s*$/,
+    editProfile: 'Edit profile', logout: 'Log out', save: 'Save details', photo: 'Upload photo',
+    password: 'Change password', deleteOpen: 'I want to delete my account', deleteOk: 'Delete permanently',
+    resetLink: 'Send me the link', full: /Sold out/, locale: 'en-GB',
+    contact: "Hi! I'd like to propose a talk on Pest for the next meetup in Milan.",
+    assistant: 'Ask the assistant', confirm: 'Confirm', ask: 'What are the next meetups?',
+    askJoin: (t) => `Register me for ${t}`,
+    answer: (n) => `I found **${n} upcoming meetups**: they are in the cards above.\nShall I register you for one of them?`,
+    done: (t) => `Done! You are registered for **${t}**: I sent you the email with the calendar file.`,
+  },
+}[LANG];
 const PWD = 'Password!2026';
 const log = (...a) => console.log(...a);
 let missing = 0;
@@ -55,19 +101,83 @@ async function go(page, url) {
   await page.goto(B + url, { waitUntil: 'networkidle', timeout: 120000 });
   await page.waitForTimeout(500);
   // chiude il banner cookie (una volta per contesto) per non coprire la pagina
-  const ok = page.getByRole('button', { name: 'Ho capito' });
+  const ok = page.getByRole('button', { name: T.cookie });
   if (await ok.count() && await ok.first().isVisible()) { await ok.first().click(); await page.waitForTimeout(400); }
 }
 async function siteLogin(page, email) {
-  await go(page, '/it/auth/login');
+  await go(page, L('/auth/login'));
   await page.locator('input[type=email]').fill(email);
   await page.locator('input[type=password]').fill(PWD);
-  await page.getByRole('button', { name: /^Accedi/ }).last().click();
+  await page.getByRole('button', { name: T.signIn }).last().click();
   await settle(page); await page.waitForTimeout(800);
 }
 // Centra un elemento nella schermata (dopo un ricaricamento scrollBy da solo non basta).
 const center = (locator) => locator.first().evaluate(e => e.scrollIntoView({ block: 'center' })).catch(() => {});
 const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
+
+// ---------------- ASSISTENTE (p20-p23) ----------------
+// Flusso AG-UI: un frame "data: {json}" per evento, come lo manda StreamAgentRunAction.
+const sse = (events) => events.map((e) => `data: ${JSON.stringify(e)}\n\n`).join('');
+const text = (id, body) => [
+  { type: 'TEXT_MESSAGE_START', messageId: id, role: 'assistant' },
+  ...body.match(/[\s\S]{1,12}/g).map((delta) => ({ type: 'TEXT_MESSAGE_CONTENT', messageId: id, delta })),
+  { type: 'TEXT_MESSAGE_END', messageId: id },
+];
+const tool = (id, name, args, content) => [
+  { type: 'TOOL_CALL_START', toolCallId: id, toolCallName: name },
+  { type: 'TOOL_CALL_ARGS', toolCallId: id, delta: JSON.stringify(args) },
+  { type: 'TOOL_CALL_END', toolCallId: id },
+  { type: 'TOOL_CALL_RESULT', messageId: `result_${id}`, role: 'tool', toolCallId: id, content },
+];
+
+async function assistantShots(page) {
+  // Dati veri dal database demo, nella lingua del manuale (eventi futuri e testo della conferma).
+  const data = JSON.parse(execFileSync(process.env.PHP_BIN ?? 'php', [path.join(__dirname, 'assistant-events.php'), LARAVEL, LANG], { encoding: 'utf8' }));
+  if (!data.join) { log('  ! assistente: nessun evento libero per la conferma'); missing++; return; }
+  let turn = 0;
+  await page.route('**/meetup/assistant', async (route) => {
+    const req = JSON.parse(route.request().postData());
+    const run = { threadId: req.threadId, runId: req.runId };
+    turn++;
+    let events;
+    if (turn === 1) {
+      events = [...tool('call_s', 'search_events', {}, JSON.stringify({ events: data.events })), ...text('m1', T.answer(data.events.length))];
+    } else if (turn === 2) {
+      const interrupt = { id: 'call_j', reason: 'confirmation', message: data.join.approval, responseSchema: { type: 'object', properties: { approved: { type: 'boolean' } }, required: ['approved'] } };
+      events = [{ type: 'RUN_STARTED', ...run }, { type: 'RUN_FINISHED', ...run, outcome: { type: 'interrupt', interrupts: [interrupt] } }];
+      return route.fulfill({ status: 200, headers: { 'Content-Type': 'text/event-stream; charset=utf-8' }, body: sse(events) });
+    } else {
+      events = [...tool('call_j', 'join_event', { slug: data.join.slug }, 'OK'), ...text('m3', T.done(data.join.title))];
+    }
+    await route.fulfill({ status: 200, headers: { 'Content-Type': 'text/event-stream; charset=utf-8' }, body: sse([{ type: 'RUN_STARTED', ...run }, ...events, { type: 'RUN_FINISHED', ...run }]) });
+  });
+
+  await go(page, L('/events'));
+  const toggle = page.getByRole('button', { name: T.assistant });
+  await mark(page, toggle, 1);
+  await shot(page, 'p20-assistente');
+  await clearMarks(page);
+
+  await toggle.click(); await page.waitForTimeout(500);
+  await page.fill('#meetup-assistant-input', T.ask); await page.keyboard.press('Enter');
+  await page.waitForTimeout(2500);
+  const panel = page.locator('[data-assistant-panel]');
+  await mark(page, panel.locator('[data-assistant-messages] ul').first(), 1, 2);
+  await mark(page, page.locator('#meetup-assistant-input'), 2, 2);
+  await shot(page, 'p21-assistente-risposta');
+  await clearMarks(page);
+
+  await page.fill('#meetup-assistant-input', T.askJoin(data.join.title)); await page.keyboard.press('Enter');
+  await page.waitForTimeout(2500);
+  await mark(page, panel.getByRole('group').getByRole('button', { name: T.confirm, exact: true }), 1, 2);
+  await shot(page, 'p22-assistente-conferma');
+  await clearMarks(page);
+
+  await panel.getByRole('button', { name: T.confirm, exact: true }).click(); await page.waitForTimeout(2500);
+  await shot(page, 'p23-assistente-fatto');
+  await page.unroute('**/meetup/assistant');
+  if (turn !== 3) { log('  ! assistente: richieste', turn); missing++; }
+}
 
 (async () => {
   const browser = await chromium.launch({
@@ -76,7 +186,7 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
   });
   const AVATAR = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#cbd5e1"/><circle cx="32" cy="24" r="12" fill="#94a3b8"/><path d="M10 60c4-14 14-20 22-20s18 6 22 20z" fill="#94a3b8"/></svg>';
   const newCtx = async () => {
-    const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, locale: 'it-IT' });
+    const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, locale: T.locale });
     await c.route(/gravatar\.com|ui-avatars\.com/, r => r.fulfill({ status: 200, contentType: 'image/svg+xml', body: AVATAR }));
     return c;
   };
@@ -84,48 +194,48 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
   // ---------------- VISITATORE ----------------
   log('Visitatore');
   let ctx = await newCtx(); let page = await ctx.newPage();
-  await go(page, '/it');
-  await mark(page, page.getByRole('link', { name: 'Eventi', exact: true }).first(), 1);
-  await mark(page, page.getByRole('button', { name: /cambia lingua|Select Language/ }).first(), 2);
-  await mark(page, page.getByRole('link', { name: 'Accedi', exact: true }).first(), 3);
-  await mark(page, page.getByRole('link', { name: 'Registrati', exact: true }).first(), 4);
+  await go(page, L('/'));
+  await mark(page, page.getByRole('link', { name: T.events, exact: true }).first(), 1);
+  await mark(page, page.getByRole('button', { name: T.langBtn }).first(), 2);
+  await mark(page, page.getByRole('link', { name: T.login, exact: true }).first(), 3);
+  await mark(page, page.getByRole('link', { name: T.register, exact: true }).first(), 4);
   await top(page);
   await shot(page, 'v01-home');
   await clearMarks(page);
 
-  await go(page, '/it/events');
+  await go(page, L('/events'));
   await mark(page, page.locator('a[href*="/events/laravel-13"]').first(), 1, 4);
   await mark(page, page.locator('form[role=search]'), 2, 4);
-  await mark(page, page.getByRole('link', { name: 'Eventi passati' }).first(), 3);
+  await mark(page, page.getByRole('link', { name: T.past }).first(), 3);
   await top(page);
   await shot(page, 'v02-eventi');
   await clearMarks(page);
 
   await page.locator('select[name=city]').selectOption('Roma');
   await mark(page, page.locator('select[name=city]'), 1);
-  await mark(page, page.getByRole('button', { name: 'Cerca' }), 2);
+  await mark(page, page.getByRole('button', { name: T.search }), 2);
   await top(page);
   await shot(page, 'v06-filtro-citta', { clip: { x: 0, y: 0, width: 1280, height: 520 } });
   await clearMarks(page);
-  await page.getByRole('button', { name: 'Cerca' }).click();
+  await page.getByRole('button', { name: T.search }).click();
   await settle(page);
-  await mark(page, page.getByRole('link', { name: 'Togli i filtri' }).first(), 1);
+  await mark(page, page.getByRole('link', { name: T.reset }).first(), 1);
   await top(page);
   await shot(page, 'v07-filtro-risultato');
   await clearMarks(page);
 
-  await go(page, '/it/events/past');
+  await go(page, L('/events/past'));
   await top(page);
   await shot(page, 'v08-eventi-passati');
 
-  await go(page, '/it/contact');
+  await go(page, L('/contact'));
   await page.locator('#contact-name').fill('Giulia Rossi');
   await page.locator('#contact-email').fill('giulia@example.com');
-  await page.locator('#contact-message').fill('Ciao! Vorrei proporre un talk su Pest per il prossimo meetup di Milano.');
+  await page.locator('#contact-message').fill(T.contact);
   await mark(page, page.locator('#contact-name').locator('xpath=ancestor::div[contains(@class,"grid")][1]'), 1, 4);
   await mark(page, page.locator('#contact-message'), 2);
   await mark(page, page.locator('form input[type=checkbox]').first().locator('xpath=ancestor::label[1]'), 3);
-  await mark(page, page.getByRole('button', { name: 'Invia il messaggio' }), 4);
+  await mark(page, page.getByRole('button', { name: T.send }), 4);
   await page.locator('#contact-message').scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, 60));
   await shot(page, 'v09-contatti');
@@ -134,21 +244,21 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
   // dettaglio evento: da visitatore il riquadro d'iscrizione è il modulo email + password
   await go(page, EV1);
   await top(page, 260); await page.waitForTimeout(300);
-  await mark(page, page.getByText('Data', { exact: true }).first().locator('xpath=ancestor::div[contains(@class,"rounded-lg")][1]'), 1, 2);
+  await mark(page, page.getByText(T.date, { exact: true }).first().locator('xpath=ancestor::div[contains(@class,"rounded-lg")][1]'), 1, 2);
   await mark(page, page.locator('form[wire\\:submit="signUp"]'), 2, 4);
-  await mark(page, page.getByRole('link', { name: /Aggiungi al calendario/ }), 3);
+  await mark(page, page.getByRole('link', { name: T.calendar }), 3);
   await top(page, 260);
   await shot(page, 'v03-dettaglio');
   await clearMarks(page);
 
-  await go(page, '/it/events');
-  const langBtn = page.getByRole('button', { name: /cambia lingua|Select Language/ }).first();
+  await go(page, L('/events'));
+  const langBtn = page.getByRole('button', { name: T.langBtn }).first();
   if (await langBtn.count()) { await langBtn.click(); await page.waitForTimeout(500); }
-  await mark(page, page.locator('a:visible, [role=menuitem]:visible, [role=option]:visible').filter({ hasText: /^\s*English\s*$/ }).first(), 1);
+  await mark(page, page.locator('a:visible, [role=menuitem]:visible, [role=option]:visible').filter({ hasText: new RegExp(`^\\s*${T.otherLang}\\s*$`, 'i') }).first(), 1);
   await top(page);
   await shot(page, 'v04-lingua', { clip: { x: 0, y: 0, width: 1280, height: 420 } });
   await clearMarks(page);
-  await go(page, '/en/events');
+  await go(page, T.otherLangUrl);
   await shot(page, 'v05-english', { clip: { x: 0, y: 0, width: 1280, height: 560 } });
   await ctx.close();
 
@@ -177,10 +287,10 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
 
   // Registrazione classica
   ctx = await newCtx(); page = await ctx.newPage();
-  await go(page, '/it/auth/register');
+  await go(page, L('/auth/register'));
   const reg = { first: 'Luca', last: 'Bianchi', email: 'luca.bianchi@laravelpizza.test', pwd: 'PizzaMargherita!26' };
-  await page.getByLabel('Nome', { exact: true }).fill(reg.first).catch(() => log('  ! nome'));
-  await page.getByLabel('Cognome').fill(reg.last).catch(() => log('  ! cognome'));
+  await page.getByLabel(T.first, { exact: true }).fill(reg.first).catch(() => log('  ! nome'));
+  await page.getByLabel(T.last).fill(reg.last).catch(() => log('  ! cognome'));
   await page.getByLabel(/email/i).first().fill(reg.email).catch(() => log('  ! email'));
   const pw = page.locator('input[type=password]');
   await pw.nth(0).fill(reg.pwd); await pw.nth(1).fill(reg.pwd);
@@ -190,14 +300,14 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
   await clearMarks(page);
   const boxes = page.locator('input[type=checkbox]');
   for (let i = 0; i < Math.min(2, await boxes.count()); i++) await boxes.nth(i).check({ force: true }).catch(() => log('  ! check', i));
-  await mark(page, page.getByText("Ho letto e accetto l'Informativa Privacy").first(), 1, 8);
-  await mark(page, page.getByText('Ho letto e accetto i Termini e Condizioni').first(), 2, 8);
-  await mark(page, page.getByRole('button', { name: /Crea il mio account/ }), 3);
-  await page.getByRole('button', { name: /Crea il mio account/ }).scrollIntoViewIfNeeded();
+  await mark(page, page.getByText(T.privacy).first(), 1, 8);
+  await mark(page, page.getByText(T.terms).first(), 2, 8);
+  await mark(page, page.getByRole('button', { name: T.create }), 3);
+  await page.getByRole('button', { name: T.create }).scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, 120));
   await shot(page, 'p02-registrazione-consensi');
   await clearMarks(page);
-  await page.getByRole('button', { name: /Crea il mio account/ }).click();
+  await page.getByRole('button', { name: T.create }).click();
   await page.waitForURL(u => !u.toString().includes('/auth/register'), { timeout: 20000 }).catch(() => log('  ! nessun redirect dopo la registrazione'));
   await settle(page); await page.waitForTimeout(1500);
   await top(page);
@@ -206,95 +316,97 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
 
   // Giulia: accesso, iscrizione, annullamento, menu, i miei eventi, profilo
   ctx = await newCtx(); page = await ctx.newPage();
-  await go(page, '/it/auth/login');
+  await go(page, L('/auth/login'));
   await page.locator('input[type=email]').fill('giulia@laravelpizza.test');
   await page.locator('input[type=password]').fill(PWD);
   await mark(page, page.locator('input[type=email]'), 1);
   await mark(page, page.locator('input[type=password]'), 2);
-  await mark(page, page.getByRole('button', { name: /^Accedi/ }).last(), 3);
+  await mark(page, page.getByRole('button', { name: T.signIn }).last(), 3);
   await top(page);
   await shot(page, 'p04-login');
   await clearMarks(page);
-  await page.getByRole('button', { name: /^Accedi/ }).last().click();
+  await page.getByRole('button', { name: T.signIn }).last().click();
   await settle(page); await page.waitForTimeout(1000);
   await shot(page, 'p05-dopo-login', { clip: { x: 0, y: 0, width: 1280, height: 420 } });
 
   await go(page, EV1);
   await top(page, 260); await page.waitForTimeout(300);
-  await mark(page, page.getByRole('button', { name: /Iscriviti all'evento/ }), 1);
+  await mark(page, page.getByRole('button', { name: T.join }), 1);
   await top(page, 260);
   await shot(page, 'p06-iscriviti');
   await clearMarks(page);
-  await page.getByRole('button', { name: /Iscriviti all'evento/ }).click();
+  await page.getByRole('button', { name: T.join }).click();
   await page.waitForTimeout(2000);
   await mark(page, page.getByRole('status').first(), 1, 4);
-  await mark(page, page.getByRole('button', { name: /Annulla iscrizione/ }), 2);
+  await mark(page, page.getByRole('button', { name: T.leave }), 2);
   await top(page, 260);
   await shot(page, 'p07-iscritto');
   await clearMarks(page);
-  await page.getByRole('button', { name: /Annulla iscrizione/ }).click();
+  await page.getByRole('button', { name: T.leave }).click();
   await page.waitForTimeout(2000);
   await top(page, 260);
   await shot(page, 'p09-annullata');
 
   // Giulia occupa l'ultimo posto del workshop di Torino (per p11) e resta iscritta a Milano (per p12)
   await go(page, EV3);
-  await page.getByRole('button', { name: /Iscriviti all'evento/ }).click().catch(() => log('  ! iscrizione torino'));
+  await page.getByRole('button', { name: T.join }).click().catch(() => log('  ! iscrizione torino'));
   await page.waitForTimeout(1500);
   await go(page, EV1);
-  await page.getByRole('button', { name: /Iscriviti all'evento/ }).click().catch(() => log('  ! iscrizione milano'));
+  await page.getByRole('button', { name: T.join }).click().catch(() => log('  ! iscrizione milano'));
   await page.waitForTimeout(1500);
 
-  await go(page, '/it');
+  await go(page, L('/'));
   await page.locator('#user-menu-button').first().click(); await page.waitForTimeout(400);
-  await mark(page, page.locator('a:visible', { hasText: 'I miei eventi' }).first(), 1);
-  await mark(page, page.locator('a:visible', { hasText: /^\s*Profilo\s*$/ }).first(), 2);
-  await mark(page, page.locator('a:visible', { hasText: 'Modifica il profilo' }).first(), 3);
-  await mark(page, page.locator(':is(a,button):visible', { hasText: 'Esci' }).first(), 4);
+  await mark(page, page.locator('a:visible', { hasText: T.myEvents }).first(), 1);
+  await mark(page, page.locator('a:visible', { hasText: T.profile }).first(), 2);
+  await mark(page, page.locator('a:visible', { hasText: T.editProfile }).first(), 3);
+  await mark(page, page.locator(':is(a,button):visible', { hasText: T.logout }).first(), 4);
   await top(page);
   await shot(page, 'p10-menu-utente', { clip: { x: 0, y: 0, width: 1280, height: 480 } });
   await clearMarks(page);
-  await go(page, '/it/events/my');
+  await go(page, L('/events/my'));
   await shot(page, 'p12-miei-eventi');
   await page.locator('#user-menu-button').first().click(); await page.waitForTimeout(400);
-  await page.locator('a:visible', { hasText: /^\s*Profilo\s*$/ }).first().click(); await settle(page);
+  await page.locator('a:visible', { hasText: T.profile }).first().click(); await settle(page);
   await shot(page, 'p13-profilo');
 
-  await go(page, '/it/profile/edit');
+  await go(page, L('/profile/edit'));
   await mark(page, page.locator('#profile-data-heading').locator('xpath=ancestor::section[1]'), 1, 2);
-  await mark(page, page.getByRole('button', { name: 'Salva i dati' }), 2);
+  await mark(page, page.getByRole('button', { name: T.save }), 2);
   await top(page);
   await shot(page, 'p15-modifica-profilo');
   await clearMarks(page);
   await page.locator('#profile-photo-heading').scrollIntoViewIfNeeded();
   await mark(page, page.locator('#profile-photo'), 1);
-  await mark(page, page.getByRole('button', { name: 'Carica la foto' }), 2);
+  await mark(page, page.getByRole('button', { name: T.photo }), 2);
   await mark(page, page.locator('#profile-current-password'), 3);
-  await mark(page, page.getByRole('button', { name: 'Cambia la password' }), 4);
+  await mark(page, page.getByRole('button', { name: T.password }), 4);
   await page.evaluate(() => window.scrollBy(0, -40));
   await shot(page, 'p16-foto-password');
   await clearMarks(page);
-  await page.getByRole('button', { name: "Voglio eliminare l'account" }).click(); await page.waitForTimeout(400);
+  await page.getByRole('button', { name: T.deleteOpen }).click(); await page.waitForTimeout(400);
   await page.locator('#profile-delete-heading').scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, 120));
   await mark(page, page.locator('#profile-delete-password'), 1);
   await mark(page, page.locator('input[wire\\:model="delete_confirmed"]').locator('xpath=ancestor::label[1]'), 2);
-  await mark(page, page.getByRole('button', { name: 'Elimina definitivamente' }), 3);
+  await mark(page, page.getByRole('button', { name: T.deleteOk }), 3);
   await shot(page, 'p17-elimina-account');
+  await clearMarks(page);
+  await assistantShots(page);
   await ctx.close();
 
   // password dimenticata (da visitatore)
   ctx = await newCtx(); page = await ctx.newPage();
-  await go(page, '/it/auth/password/reset');
+  await go(page, L('/auth/password/reset'));
   await page.locator('#email').fill('giulia@laravelpizza.test');
   await mark(page, page.locator('#email'), 1);
-  await mark(page, page.getByRole('button', { name: 'Inviami il link' }), 2);
+  await mark(page, page.getByRole('button', { name: T.resetLink }), 2);
   await shot(page, 'p14-password-dimenticata', { clip: { x: 0, y: 0, width: 1280, height: 640 } });
   await clearMarks(page);
   // evento pieno visto da un visitatore
   await go(page, EV3);
   await top(page, 260); await page.waitForTimeout(300);
-  await mark(page, page.getByText(/Posti esauriti/).first(), 1, 6);
+  await mark(page, page.getByText(T.full).first(), 1, 6);
   await top(page, 260);
   await shot(page, 'p11-evento-pieno');
   await ctx.close();
@@ -306,6 +418,12 @@ const top = (page, y = 0) => page.evaluate(y => window.scrollTo(0, y), y);
     await shot(page, 'p08-email-conferma', { fullPage: true });
     await ctx.close();
   } else { log('  ! email non generata: p08 non aggiornato'); }
+
+  if (LANG !== 'it') {
+    await browser.close();
+    log(missing ? `\n${missing} riquadri non trovati: controlla le immagini` : '\nTutti i riquadri trovati');
+    return;
+  }
 
   // ---------------- ORGANIZZATORE ----------------
   log('Organizzatore');

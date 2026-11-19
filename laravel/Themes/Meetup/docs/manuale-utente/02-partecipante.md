@@ -176,4 +176,33 @@ Il pulsante di iscrizione non c'è, o è grigio, in questi casi:
 
 1. L'avviso **Posti esauriti**.
 
+## 2.9 Chiedere all'assistente
+
+Dopo l'accesso, in basso a destra in ogni pagina c'è il pulsante **Chiedi all'assistente**: una chat che trova gli eventi e ti iscrive, scrivendo come parleresti a una persona. Il pulsante c'è solo se il sito ha l'assistente attivo.
+
+![Il pulsante Chiedi all'assistente](img/p20-assistente.jpg)
+
+1. Clicca **Chiedi all'assistente**. Si apre la chat con qualche domanda già pronta da cliccare.
+
+Scrivi una domanda, per esempio "Quali sono i prossimi meetup?", e premi **Invio**:
+
+![La risposta con le schede degli eventi](img/p21-assistente-risposta.jpg)
+
+1. L'assistente mostra gli eventi come **schede**: titolo, data, città e posti liberi (oppure "Sei iscritto" o "Posti esauriti"). Clicca una scheda per aprire l'evento.
+2. Qui scrivi la domanda successiva.
+
+Chiedigli di iscriverti, per esempio "Iscrivimi a Livewire 4 in produzione". L'assistente **non fa niente da solo**: prima ti chiede conferma.
+
+![La richiesta di conferma prima dell'iscrizione](img/p22-assistente-conferma.jpg)
+
+1. Clicca **Conferma** per iscriverti, oppure **Annulla**. Finché non scegli, non puoi scrivere altri messaggi.
+
+Dopo la conferma l'iscrizione è fatta, come con il pulsante della pagina: ricevi la stessa email con il file per il calendario e la pagina aggiorna i posti liberi.
+
+![L'iscrizione fatta dall'assistente](img/p23-assistente-fatto.jpg)
+
+Allo stesso modo puoi chiedere "A quali eventi sono iscritto?" o "Annulla la mia iscrizione a…" (anche qui con conferma).
+
+> Le risposte le scrive un modello di intelligenza artificiale e possono contenere errori: i dati delle schede (date, posti) invece vengono dal sito e sono quelli giusti. Non scrivere nella chat dati personali che non servono. Per chiudere la chat clicca la **X** o premi **Esc**.
+
 [Continua con il capitolo 3 – Organizzatore →](03-organizzatore.md)
