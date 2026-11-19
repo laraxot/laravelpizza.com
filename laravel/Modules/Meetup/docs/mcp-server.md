@@ -36,10 +36,12 @@ annotazioni MCP (`IsDestructive`, `IsIdempotent`) permettono ai client di chiede
 
 ## Collegare un client
 
-1. Il server deve avere le chiavi Passport e un client "personal access" (una volta per ambiente, vedi runbook §9):
-   `php artisan passport:keys` e `php artisan passport:client --personal --name="Laravel Pizza MCP" --provider=users`.
-2. Token per un utente (oggi da un amministratore; una pagina "Collega un assistente AI" nel profilo è nella story 7-5):
-   `php artisan tinker --execute 'echo Modules\User\Models\User::where("email","...")->first()->createToken("mcp")->accessToken;'`
+1. Il server deve avere le chiavi Passport (una volta per ambiente, vedi runbook §9): `php artisan passport:keys`.
+   Il client "personal access" lo crea da solo la prima richiesta di token (`CreateOwnAssistantTokenAction`);
+   a mano: `php artisan passport:client --personal --name="Laravel Pizza MCP" --provider=users`.
+2. Token: l'utente lo crea e lo revoca da solo in **Modifica il profilo → Collega un assistente AI**
+   (`/{lingua}/profile/assistants`, CMS `pages/profile/assistants.json`, Livewire `AssistantTokens`). Il token si vede
+   una volta sola, dura 6 mesi (default Passport), la revoca vale subito. Test: `tests/Feature/ProfileAssistantTokensTest.php`.
 3. Nel client, per esempio Claude Code:
    `claude mcp add --transport http laravelpizza https://<dominio>/api/mcp --header "Authorization: Bearer <token>"`
 

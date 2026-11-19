@@ -393,6 +393,19 @@ async function assistantShots(page) {
   await shot(page, 'p17-elimina-account');
   await clearMarks(page);
   await assistantShots(page);
+
+  // Collegare un assistente esterno (Claude, Cursor): token personale creato dal profilo
+  await go(page, L('/profile/assistants'));
+  await page.fill('#assistant-token-name', 'Claude Desktop');
+  await page.locator('form[wire\\:submit="create"] button[type=submit]').click();
+  await page.waitForSelector('#assistant-new-token', { timeout: 10000 }).catch(() => log('  ! token non creato'));
+  await settle(page);
+  await mark(page, page.locator('[data-mcp-url]'), 1, 4);
+  await mark(page, page.locator('#assistant-new-token').locator('xpath=..'), 2, 4);
+  await mark(page, page.locator('pre').first(), 3, 4);
+  await page.locator('[data-mcp-url]').scrollIntoViewIfNeeded(); await page.evaluate(() => window.scrollBy(0, -60));
+  await shot(page, 'p24-collega-assistente');
+  await clearMarks(page);
   await ctx.close();
 
   // password dimenticata (da visitatore)

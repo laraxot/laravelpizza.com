@@ -205,4 +205,20 @@ Allo stesso modo puoi chiedere "A quali eventi sono iscritto?" o "Annulla la mia
 
 > Le risposte le scrive un modello di intelligenza artificiale e possono contenere errori: i dati delle schede (date, posti) invece vengono dal sito e sono quelli giusti. Non scrivere nella chat dati personali che non servono. Per chiudere la chat clicca la **X** o premi **Esc**.
 
+## 2.10 Collegare il tuo assistente AI (Claude, Cursor…)
+
+Usi già un assistente AI sul tuo computer, come Claude o Cursor? Puoi collegarlo al tuo account: cercherà i meetup e ti iscriverà con le stesse regole del sito. Serve un **token personale**, una specie di password solo per l'assistente.
+
+In **Modifica il profilo** clicca **Collega un assistente AI**. Scrivi un nome per il token (per esempio "Claude Desktop") e clicca **Crea il token**:
+
+![Il token appena creato](img/p24-collega-assistente.jpg)
+
+1. L'**indirizzo del server** da inserire nell'assistente.
+2. Il **token**: clicca **Copia il token** e incollalo nell'assistente. **Si vede una volta sola**: se lo perdi, revocalo e creane un altro.
+3. Un **esempio di configurazione** già pronto, con indirizzo e token, per gli assistenti che usano questo formato (Claude Desktop, Cursor).
+
+Clicca **Fatto, l'ho copiato**. Sotto, in **Token attivi**, trovi tutti i tuoi token con la data di scadenza (6 mesi). **Revoca** blocca subito l'assistente che usa quel token: fallo se cambi computer o pensi che qualcuno l'abbia visto.
+
+> Tratta il token come una password: chi lo ha può iscriverti e cancellare le tue iscrizioni.
+
 [Continua con il capitolo 3 – Organizzatore →](03-organizzatore.md)
