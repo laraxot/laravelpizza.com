@@ -2,7 +2,8 @@
 // Genera i PDF del manuale d'uso dai file .md di questa cartella.
 //
 // Requisiti: pandoc (>= 3) e Node con il pacchetto `playwright` (Chromium installato).
-// Uso, da questa cartella:   node build-pdf.mjs
+// Uso, da questa cartella:   node build-pdf.mjs        (edizione italiana)
+//                             node build-pdf.mjs en     (edizione inglese, cartella en/)
 // (se Playwright non trova il browser: CHROMIUM_PATH=/percorso/chrome node build-pdf.mjs)
 // Risultato: pdf/manuale-completo.pdf e un PDF per capitolo (pdf/01-visitatore.pdf, ...).
 //
@@ -15,30 +16,57 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 
-const here = dirname(fileURLToPath(import.meta.url));
+const LANG = process.argv[2] === 'en' ? 'en' : 'it';
+const here = join(dirname(fileURLToPath(import.meta.url)), LANG === 'en' ? 'en' : '');
 const outDir = join(here, 'pdf');
 const tmp = mkdtempSync(join(tmpdir(), 'manuale-'));
 mkdirSync(outDir, { recursive: true });
 
-const title = 'Manuale d\'uso di Laravel Pizza Meetups';
-const chapters = [
-    { file: '01-visitatore.md', label: 'Capitolo 1 · Visitatore' },
-    { file: '02-partecipante.md', label: 'Capitolo 2 · Partecipante' },
-    { file: '03-organizzatore.md', label: 'Capitolo 3 · Organizzatore' },
-    { file: '04-amministratore.md', label: 'Capitolo 4 · Amministratore' },
-];
-const today = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+const I18N = {
+    it: {
+        title: 'Manuale d\'uso di Laravel Pizza Meetups',
+        chapters: [
+            { file: '01-visitatore.md', label: 'Capitolo 1 · Visitatore' },
+            { file: '02-partecipante.md', label: 'Capitolo 2 · Partecipante' },
+            { file: '03-organizzatore.md', label: 'Capitolo 3 · Organizzatore' },
+            { file: '04-amministratore.md', label: 'Capitolo 4 · Amministratore' },
+        ],
+        sub: 'Guida passo per passo per visitatori, partecipanti, organizzatori e amministratori',
+        updated: 'Aggiornato al',
+        locale: 'it-IT',
+        file: 'manuale-completo.pdf',
+        back: /^\[← Torna all'indice\]\(readme\.md\)\s*$/m,
+        next: /^\[Continua con [^\]]*\]\([^)]*\.md\)\s*$/m,
+        notes: /\n## Note per chi mantiene il manuale[\s\S]*$/,
+    },
+    en: {
+        title: 'Laravel Pizza Meetups user guide',
+        chapters: [
+            { file: '01-visitor.md', label: 'Chapter 1 · Visitor' },
+            { file: '02-participant.md', label: 'Chapter 2 · Participant' },
+            { file: '03-organiser.md', label: 'Chapter 3 · Organiser' },
+            { file: '04-administrator.md', label: 'Chapter 4 · Administrator' },
+        ],
+        sub: 'A step-by-step guide for visitors, participants, organisers and administrators',
+        updated: 'Updated on',
+        locale: 'en-GB',
+        file: 'user-guide.pdf',
+        back: /^\[← Back to the contents\]\(readme\.md\)\s*$/m,
+        next: /^\[Continue with [^\]]*\]\([^)]*\.md\)\s*$/m,
+        notes: /\n## Notes for maintainers[\s\S]*$/,
+    },
+}[LANG];
+const { title, chapters } = I18N;
+const today = new Date().toLocaleDateString(I18N.locale, { day: 'numeric', month: 'long', year: 'numeric' });
 
 const read = (f) => readFileSync(join(here, f), 'utf8');
 const stem = (f) => f.replace(/\.md$/, '');
 
 // Righe di sola navigazione tra i file: nel PDF non servono.
-const stripNav = (md) => md
-    .replace(/^\[← Torna all'indice\]\(readme\.md\)\s*$/m, '')
-    .replace(/^\[Continua con [^\]]*\]\([^)]*\.md\)\s*$/m, '');
+const stripNav = (md) => md.replace(I18N.back, '').replace(I18N.next, '');
 
 // La sezione per i manutentori resta solo nel .md.
-const stripMaintainerNotes = (md) => md.replace(/\n## Note per chi mantiene il manuale[\s\S]*$/, '\n');
+const stripMaintainerNotes = (md) => md.replace(I18N.notes, '\n');
 
 const toHtml = (md) => execFileSync('pandoc', ['-f', 'gfm', '-t', 'html5'], { input: md, encoding: 'utf8' });
 
@@ -68,7 +96,7 @@ code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #
 .toc ol { font-size: 12pt; line-height: 2; }
 `;
 
-const page = (body) => `<!doctype html><html lang="it"><head><meta charset="utf-8">
+const page = (body) => `<!doctype html><html lang="${LANG}"><head><meta charset="utf-8">
 <base href="${pathToFileURL(here + '/').href}"><title>${title}</title><style>${css}</style></head>
 <body>${body}</body></html>`;
 
@@ -98,17 +126,17 @@ async function render(html, out, footerLabel) {
 // 1. Manuale completo: copertina, indice (readme), capitoli. Link tra file → ancore interne.
 const toAnchor = (md) => md.replace(/\]\((0\d-[a-z]+)\.md(#[^)]+)?\)/g, (_, f, hash) => `](${hash ?? '#' + f})`);
 let body = `<section class="cover"><h1>${title}</h1>
-<div class="sub">Guida passo per passo per visitatori, partecipanti, organizzatori e amministratori</div>
-<div class="date">Aggiornato al ${today}</div></section>`;
+<div class="sub">${I18N.sub}</div>
+<div class="date">${I18N.updated} ${today}</div></section>`;
 body += `<section class="toc">${toHtml(toAnchor(stripMaintainerNotes(read('readme.md'))))}</section>`;
 for (const c of chapters) {
     body += `<section class="chapter" id="${stem(c.file)}">${toHtml(toAnchor(stripNav(read(c.file))))}</section>`;
 }
-await render(page(body), 'manuale-completo.pdf', title);
+await render(page(body), I18N.file, title);
 
 // 2. Un PDF per capitolo, da dare a chi interessa solo il proprio ruolo. Link → altri PDF.
 const toPdfLink = (md) => md
-    .replace(/\]\(readme\.md\)/g, '](manuale-completo.pdf)')
+    .replace(/\]\(readme\.md\)/g, `](${I18N.file})`)
     .replace(/\]\((0\d-[a-z]+)\.md(#[^)]+)?\)/g, (_, f, hash) => `](${f}.pdf${hash ?? ''})`);
 for (const c of chapters) {
     await render(page(toHtml(toPdfLink(stripNav(read(c.file))))), `${stem(c.file)}.pdf`, `${title} — ${c.label}`);
