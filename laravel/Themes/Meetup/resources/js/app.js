@@ -285,16 +285,7 @@ function formatCurrency(amount) {
     }).format(amount);
 }
 
-// Accessibility utility: Add skip link for screen readers
-function addSkipLink() {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Salta al contenuto principale';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-black focus:p-4 focus:rounded';
-    skipLink.setAttribute('aria-label', 'Salta al contenuto principale');
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-}
+// Lo skip link è nel layout (layouts/main.blade.php), tradotto: qui non se ne aggiunge un secondo.
 
 // Global error handling with user feedback
 window.addEventListener('error', function(event) {
@@ -340,6 +331,3 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
-
-// Initialize skip link when DOM is loaded
-document.addEventListener('DOMContentLoaded', addSkipLink);
