@@ -110,12 +110,12 @@ return [
         ],
     ],
     'navigation' => [
-        'label' => 'Missing Navigation Label',
-        'plural_label' => 'Missing Navigation Plural Label',
-        'group' => 'Missing Group',
+        'label' => 'Devices',
+        'plural_label' => 'Devices',
+        'group' => 'Security',
         'icon' => 'heroicon-o-puzzle-piece',
         'sort' => 100,
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
+    'label' => 'Device',
+    'plural_label' => 'Devices',
 ];

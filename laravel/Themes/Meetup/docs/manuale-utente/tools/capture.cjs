@@ -44,6 +44,11 @@ const T = {
     askJoin: (t) => `Iscrivimi a ${t}`,
     answer: (n) => `Ho trovato **${n} meetup** nei prossimi mesi: li vedi nelle schede qui sopra.\nVuoi che ti iscriva a uno di questi?`,
     done: (t) => `Fatto! Sei iscritto a **${t}**: ti ho mandato l'email con il file per il calendario.`,
+    // pannello di amministrazione
+    pEvents: /^Eventi/, pVenues: /^Sedi/, newEvent: 'Nuovo evento', title: /Titolo/, description: /Descrizione/,
+    city: /Città o luogo/, seats: /Posti disponibili/, publication: /Pubblicazione|Stato dell'evento/, published: 'Pubblicato',
+    del: /Elimina/, people: 'Relatori e sponsor', csv: /Scarica CSV/, newVenue: 'Nuova sede',
+    users: /^Utenti/, orgTab: 'Organizzazione', attach: 'Collega',
   },
   en: {
     cookie: 'Got it', events: 'Events', langBtn: /change language/, login: 'Log in', register: 'Sign up',
@@ -60,6 +65,10 @@ const T = {
     askJoin: (t) => `Register me for ${t}`,
     answer: (n) => `I found **${n} upcoming meetups**: they are in the cards above.\nShall I register you for one of them?`,
     done: (t) => `Done! You are registered for **${t}**: I sent you the email with the calendar file.`,
+    pEvents: /^Events/, pVenues: /^Venues/, newEvent: 'New event', title: /Title/, description: /Description/,
+    city: /City or place/, seats: /Available seats/, publication: /Publication/, published: 'Published',
+    del: /Delete/, people: 'Speakers and sponsors', csv: /CSV/, newVenue: 'New Venue',
+    users: /^Users/, orgTab: 'Organization', attach: 'Attach',
   },
 }[LANG];
 const PWD = 'Password!2026';
@@ -74,7 +83,7 @@ async function mark(page, locator, n, pad = 6) {
   const el = locator.first();
   await el.scrollIntoViewIfNeeded({ timeout: 5000 }).catch(() => {});
   const box = await el.boundingBox({ timeout: 5000 }).catch(() => null);
-  if (!box) { log('  ! mark non trovato', n); missing++; return; }
+  if (!box) { log('  ! mark non trovato', n, String(locator)); missing++; return; }
   await page.evaluate(({ box, n, pad }) => {
     const sx = window.scrollX, sy = window.scrollY;
     const d = document.createElement('div');
@@ -432,11 +441,8 @@ async function assistantShots(page) {
     await ctx.close();
   } else { log('  ! email non generata: p08 non aggiornato'); }
 
-  if (LANG !== 'it') {
-    await browser.close();
-    log(missing ? `\n${missing} riquadri non trovati: controlla le immagini` : '\nTutti i riquadri trovati');
-    return;
-  }
+  // I pannelli seguono la lingua preferita dell'utente (users.lang): organizzatrice e amministratore nella lingua del manuale.
+  execFileSync(process.env.PHP_BIN ?? 'php', ['artisan', 'tinker', `--execute=Modules\\User\\Models\\User::whereIn('email', ['organizzatrice@laravelpizza.test', 'superadmin@laravelpizza.test'])->update(['lang' => '${LANG}']);`], { cwd: LARAVEL });
 
   // ---------------- ORGANIZZATORE ----------------
   log('Organizzatore');
@@ -454,48 +460,48 @@ async function assistantShots(page) {
   await settle(page);
 
   await go(page, '/meetup/admin');
-  await mark(page, page.getByRole('link', { name: /^Eventi/ }).first(), 1);
-  await mark(page, page.getByRole('link', { name: /^Sedi/ }).first(), 2);
+  await mark(page, page.getByRole('link', { name: T.pEvents }).first(), 1);
+  await mark(page, page.getByRole('link', { name: T.pVenues }).first(), 2);
   await mark(page, page.locator('.fi-wi-stats-overview').first(), 3, 4);
   await shot(page, 'o02-dashboard');
   await clearMarks(page);
 
   await go(page, '/meetup/admin/events');
-  await mark(page, page.getByRole('link', { name: 'Nuovo evento' }).first().or(page.getByRole('button', { name: 'Nuovo evento' }).first()), 1);
+  await mark(page, page.getByRole('link', { name: T.newEvent }).first().or(page.getByRole('button', { name: T.newEvent }).first()), 1);
   await shot(page, 'o03-lista-eventi');
   await clearMarks(page);
   await top(page, 250); await page.waitForTimeout(300);
   await shot(page, 'o04-lista-eventi-schede');
 
   await go(page, '/meetup/admin/events/create');
-  await page.getByLabel(/Titolo/).fill('Laravel Pizza Bologna: primo meetup');
-  await page.getByLabel(/Descrizione/).fill('Il primo meetup a Bologna: presentazioni, networking e pizza.');
+  await page.getByLabel(T.title).fill('Laravel Pizza Bologna: primo meetup');
+  await page.getByLabel(T.description).fill('Il primo meetup a Bologna: presentazioni, networking e pizza.');
   const dt = page.locator('input[type="datetime-local"]');
   if (await dt.count() >= 2) { await dt.nth(0).fill('2027-01-21T19:00'); await dt.nth(1).fill('2027-01-21T22:00'); } else { log('  ! datetime inputs', await dt.count()); }
-  await page.getByLabel(/Città o luogo/).fill('Bologna');
-  await page.getByLabel(/Posti disponibili/).fill('');
-  await mark(page, page.getByLabel(/Posti disponibili/), 1);
+  await page.getByLabel(T.city).fill('Bologna');
+  await page.getByLabel(T.seats).fill('');
+  await mark(page, page.getByLabel(T.seats), 1);
   await top(page);
   await shot(page, 'o05-nuovo-evento', { fullPage: true });
   await clearMarks(page);
-  await page.getByRole('button', { name: 'Salva', exact: true }).click();
+  await page.locator('button[type=submit][wire\\:target="create"]').click();
   await page.waitForTimeout(1500);
-  await page.getByLabel(/Posti disponibili/).scrollIntoViewIfNeeded();
+  await page.getByLabel(T.seats).scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, -200));
   await shot(page, 'o06-errore-capienza');
-  await page.getByLabel(/Posti disponibili/).fill('45');
-  const sel = page.getByLabel(/Pubblicazione|Stato dell'evento/);
-  await sel.selectOption({ label: 'Pubblicato' }).catch(async () => { await sel.selectOption('published').catch(() => log('  ! status select')); });
+  await page.getByLabel(T.seats).fill('45');
+  const sel = page.getByLabel(T.publication);
+  await sel.selectOption({ label: T.published }).catch(async () => { await sel.selectOption('published').catch(() => log('  ! status select')); });
   await mark(page, sel, 1);
-  await mark(page, page.getByRole('button', { name: 'Salva', exact: true }), 2);
+  await mark(page, page.locator('button[type=submit][wire\\:target="create"]'), 2);
   await shot(page, 'o07-pubblica-e-salva');
   await clearMarks(page);
-  await page.getByRole('button', { name: 'Salva', exact: true }).click();
+  await page.locator('button[type=submit][wire\\:target="create"]').click();
   await settle(page); await page.waitForTimeout(1200);
   await shot(page, 'o08-evento-salvato', { clip: { x: 0, y: 0, width: 1280, height: 520 } });
 
   await go(page, '/meetup/admin/events/laravel-13-e-filament-5-cosa-cambia-davvero/edit');
-  const delBtn = page.getByRole('button', { name: /Elimina/ }).first();
+  const delBtn = page.getByRole('button', { name: T.del }).first();
   await mark(page, delBtn, 1);
   await top(page);
   await shot(page, 'o09-modifica-evento');
@@ -506,7 +512,7 @@ async function assistantShots(page) {
   await page.keyboard.press('Escape'); await page.waitForTimeout(600);
 
   await go(page, '/meetup/admin/events/laravel-13-e-filament-5-cosa-cambia-davvero/edit');
-  const people = page.getByRole('heading', { name: 'Relatori e sponsor' }).last();
+  const people = page.getByRole('heading', { name: T.people }).last();
   await people.scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, -120));
   await mark(page, people.locator('xpath=ancestor::section[1]'), 1, 4);
@@ -514,7 +520,7 @@ async function assistantShots(page) {
   await clearMarks(page);
 
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(2500);
-  const csv = page.getByRole('button', { name: /Scarica CSV/ }).first();
+  const csv = page.getByRole('button', { name: T.csv }).first();
   await mark(page, csv, 1);
   await mark(page, page.locator('table').last().locator('tbody tr').first().locator('button').first(), 2);
   await csv.scrollIntoViewIfNeeded();
@@ -523,7 +529,7 @@ async function assistantShots(page) {
   await clearMarks(page);
 
   await go(page, '/meetup/admin/venues');
-  await mark(page, page.getByRole('link', { name: 'Nuova sede' }).first().or(page.getByRole('button', { name: 'Nuova sede' }).first()), 1);
+  await mark(page, page.getByRole('link', { name: T.newVenue }).first().or(page.getByRole('button', { name: T.newVenue }).first()), 1);
   await shot(page, 'o13-sedi');
   await ctx.close();
 
@@ -533,16 +539,16 @@ async function assistantShots(page) {
   await siteLogin(page, 'superadmin@laravelpizza.test');
   await go(page, '/user/admin/users');
   const paolo = page.locator('tr', { hasText: 'paolo.ferri@laravelpizza.test' });
-  await mark(page, page.getByRole('link', { name: /^Utenti/ }).first(), 1);
+  await mark(page, page.getByRole('link', { name: T.users }).first(), 1);
   await mark(page, page.getByRole('searchbox').first().or(page.locator('input[type=search]').first()), 2);
   await mark(page, paolo.locator('a[href*="/edit"]').first(), 3);
   await top(page);
   await shot(page, 'a01-utenti');
   await clearMarks(page);
   await paolo.locator('a[href*="/edit"]').first().click(); await settle(page); await page.waitForTimeout(1000);
-  await page.getByRole('tab', { name: 'Organizzazione' }).click(); await page.waitForTimeout(2500);
-  const attach = page.getByRole('button', { name: 'Collega' }).first();
-  await mark(page, page.getByRole('tab', { name: 'Organizzazione' }), 1);
+  await page.getByRole('tab', { name: T.orgTab }).click(); await page.waitForTimeout(2500);
+  const attach = page.getByRole('button', { name: T.attach }).first();
+  await mark(page, page.getByRole('tab', { name: T.orgTab }), 1);
   await mark(page, attach, 2);
   await attach.scrollIntoViewIfNeeded(); await page.evaluate(() => window.scrollBy(0, -260));
   await shot(page, 'a02-scheda-organizzazione');
@@ -550,15 +556,15 @@ async function assistantShots(page) {
   await attach.click(); await page.waitForTimeout(1500);
   const dlg = page.locator('.fi-modal-window:visible').first();
   await dlg.locator('.fi-select-input-btn').first().click(); await page.waitForTimeout(800);
-  const search = dlg.locator('input[type=search]:visible, input[placeholder*="cercare"]:visible').first();
+  const search = dlg.locator('input[placeholder*="cercare"]:visible, input[placeholder*="search" i]:visible, input[type=search]:visible').first();
   if (await search.count()) { await search.fill('meetup'); await page.waitForTimeout(1500); }
   await page.locator('[role=option]:visible', { hasText: 'meetup::admin' }).first().click().catch(() => log('  ! ruolo non trovato'));
   await page.waitForTimeout(500);
   await mark(page, dlg.locator('.fi-select-input-btn').first(), 1);
-  await mark(page, dlg.getByRole('button', { name: 'Collega', exact: true }), 2);
+  await mark(page, dlg.getByRole('button', { name: T.attach, exact: true }), 2);
   await shot(page, 'a03-assegna-ruolo');
   await clearMarks(page);
-  await dlg.getByRole('button', { name: 'Collega', exact: true }).click(); await page.waitForTimeout(2500);
+  await dlg.getByRole('button', { name: T.attach, exact: true }).click(); await page.waitForTimeout(2500);
   const roleRow = page.locator('tr', { hasText: 'meetup::admin' }).first();
   await center(roleRow); await page.waitForTimeout(300);
   await mark(page, roleRow, 1, 2);

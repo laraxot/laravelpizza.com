@@ -3,6 +3,14 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'name' => 'Permission',
+        'plural' => 'Permissions',
+        'label' => 'Permissions',
+        'group' => 'Access management',
+        'icon' => 'heroicon-o-key',
+        'sort' => 32,
+    ],
     'fields' => [
         'name' => [
             'label' => 'Name',

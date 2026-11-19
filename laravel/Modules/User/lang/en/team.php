@@ -7,7 +7,7 @@ return [
         'name' => 'Team',
         'plural' => 'Teams',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione dei team e delle loro autorizzazioni',
         ],
         'label' => 'Team',

@@ -10,7 +10,7 @@ return [
         'name' => 'Feature',
         'plural' => 'Features',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione delle feature e delle funzionalità',
         ],
         'label' => 'Feature',

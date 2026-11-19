@@ -10,7 +10,7 @@ return [
         'name' => 'Profilo',
         'plural' => 'Profili',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione dei profili',
         ],
         'label' => 'profili',

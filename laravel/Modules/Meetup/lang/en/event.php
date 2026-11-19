@@ -110,6 +110,11 @@ return [
         ],
     ],
     'actions' => [
+        'create' => [
+            'label' => 'New event',
+            'icon' => 'create',
+            'tooltip' => 'New event',
+        ],
     ],
     'delete_confirmation' => [
         'with_attendees' => 'This event has :count active registrations that will be lost. Do you want to delete it?',

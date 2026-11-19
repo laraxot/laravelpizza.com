@@ -7,7 +7,7 @@ return [
         'name' => 'Client',
         'plural' => 'Clients',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione dei client e delle loro autorizzazioni',
         ],
         'label' => 'Client',
