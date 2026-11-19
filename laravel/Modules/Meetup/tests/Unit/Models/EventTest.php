@@ -300,14 +300,15 @@ test('toSchemaOrg includes image array when cover image provided', function () {
         ->and(count($schema['image']))->toBeGreaterThan(0);
 });
 
-test('toSchemaOrg excludes image when no cover image', function () {
+test('toSchemaOrg falls back to the theme social image when there is no cover image', function () {
     $event = Event::factory()->create([
         'cover_image' => null,
     ]);
 
     $schema = $event->toSchemaOrg();
 
-    expect(isset($schema['image']))->toBeFalse();
+    // Google consiglia sempre un'immagine (issue #584): quella social del tema, 1200x630.
+    expect($schema['image'])->toBe([url('themes/Meetup/images/social-share.jpg')]);
 });
 
 test('toSchemaOrg includes organizer when available', function () {
@@ -321,20 +322,24 @@ test('toSchemaOrg includes organizer when available', function () {
 
     $schema = $event->toSchemaOrg();
 
-    expect($schema['organizer']['@type'])->toBe('Person')
-        ->and($schema['organizer']['name'])->toContain('John Organizer')
+    // Prima il sito che ospita l'evento (Google: organizer.url = dominio), poi la persona.
+    [$host, $person] = $schema['organizer'];
+    expect($host['@type'])->toBe('Organization')
+        ->and($person['@type'])->toBe('Person')
+        ->and($person['name'])->toContain('John Organizer')
         // S-10: la pagina e' pubblica, l'email dell'organizzatore non deve finire nel JSON-LD.
-        ->and($schema['organizer'])->not->toHaveKey('email');
+        ->and($person)->not->toHaveKey('email');
 });
 
-test('toSchemaOrg excludes organizer when null', function () {
+test('toSchemaOrg names only the hosting site when the event has no organizer', function () {
     $event = Event::factory()->create([
         'organizer_id' => null,
     ]);
 
     $schema = $event->toSchemaOrg();
 
-    expect(isset($schema['organizer']))->toBeFalse();
+    expect($schema['organizer']['@type'])->toBe('Organization')
+        ->and($schema['organizer']['url'])->toBe(url('/'));
 });
 
 test('getSocialShareData includes event title', function () {

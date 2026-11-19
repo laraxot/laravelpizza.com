@@ -19,7 +19,9 @@ use Modules\Cms\Actions\Head\ResolveHreflangAlternatesAction;
 use Modules\Cms\Actions\Head\ResolvePageDescriptionAction;
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
 use Modules\Cms\Actions\Head\ResolveWrittenLocalesAction;
+use Modules\Cms\Actions\ResolvePageMetaAction;
 use Modules\Cms\Models\Page;
+use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
 use Modules\Xot\Datas\MetatagData;
 
 use function Safe\parse_url;
@@ -138,6 +140,12 @@ final class Head extends Component
             return trim($this->description);
         }
 
+        // Pagine con un modello (evento, profilo); la home tiene la descrizione curata del sito, non il sottotitolo dell'hero.
+        $fromRequest = $isHome ? '' : $this->requestMeta(ResolvePageMetaAction::DESCRIPTION);
+        if ($fromRequest !== '') {
+            return Str::limit($fromRequest, 160);
+        }
+
         $key = 'pub_theme::seo.site.description';
         $siteDescription = Lang::has($key) ? trim((string) __($key)) : '';
 
@@ -150,6 +158,12 @@ final class Head extends Component
 
         if ($siteDescription !== '') {
             return $siteDescription;
+        }
+
+        // Descrizione del sito curata dal tenant (config/local/{tenant}/lang/{lingua}/metatag.php), nella lingua corrente.
+        $tenantDescription = trim(app(TranslateTenantKeyAction::class)->execute('metatag.description'));
+        if ($tenantDescription !== '' && $tenantDescription !== 'metatag.description') {
+            return $tenantDescription;
         }
 
         $fallback = trim($meta->getDescription(limit: 160));
@@ -206,11 +220,22 @@ final class Head extends Component
     private function resolvePageTitle(?Page $page): string
     {
         $pageTitle = trim((string) $this->title);
+        if ($pageTitle === '') {
+            // Pagine con un modello (evento, profilo): ResolvePageMetaAction mette titolo e descrizione nella richiesta.
+            $pageTitle = $this->requestMeta(ResolvePageMetaAction::TITLE);
+        }
         if ($pageTitle !== '' || $page === null) {
             return $pageTitle;
         }
 
         return trim($this->stringAttribute($page, 'title'));
+    }
+
+    private function requestMeta(string $attribute): string
+    {
+        $value = request()->attributes->get($attribute);
+
+        return is_string($value) ? Str::of(strip_tags($value))->squish()->toString() : '';
     }
 
     private function stringAttribute(Page $page, string $attribute): string

@@ -96,13 +96,19 @@ test('FR-20: every core page has a unique title, a description and a localized c
     expect($duplicates)->toBe([], 'Titoli uguali su più pagine: '.json_encode($duplicates, JSON_UNESCAPED_SLASHES));
 })->with(['it', 'en']);
 
+// hreflang solo per le lingue in cui la pagina è scritta (pages/events.json: it, en), come la sitemap: le altre lingue
+// mostrerebbero il testo italiano, quindi sono duplicati e restano fuori (Google: annotazioni coerenti e reciproche).
 test('FR-20: each page links its versions in the other languages (hreflang), without query string', function (): void {
     $html = (string) $this->get('/it/events?city=Torino')->getContent();
 
-    foreach (['it', 'en', 'de', 'fr', 'es', 'ru'] as $code) {
+    foreach (['it', 'en'] as $code) {
         expect($html)->toContain('<link rel="alternate" hreflang="'.$code.'" href="'.url('/'.$code.'/events').'">');
     }
-    expect($html)->toContain('<link rel="alternate" hreflang="x-default" href="'.url('/it/events').'">');
+    expect($html)->toContain('<link rel="alternate" hreflang="x-default" href="'.url('/it/events').'">')
+        ->not->toContain('hreflang="de" href="'.url('/de/events').'"');
+
+    // Una lingua in cui la pagina non è scritta resta raggiungibile dal selettore ma non va indicizzata.
+    expect((string) $this->get('/de/events')->getContent())->toContain('<meta name="robots" content="noindex');
 });
 
 // FR-14 — una modifica al JSON di una pagina è visibile senza build, migrazioni o riavvii.
