@@ -7,12 +7,11 @@ updated: 2026-09-26
 qmd: "merge conflict files list"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Merge Conflict Files List
 
-This file contains a comprehensive list of files with merge conflict markers (`<<<< HEAD` or `<<<< .merge_file`) that need to be resolved.
+This file contains a comprehensive list of files with merge conflict markers (`<` or `<<<< .merge_file`) that need to be resolved.
 
 ## Total Files Found: 96
 
@@ -58,7 +57,7 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ### Notify Module (3 files)
 - ./laravel/Modules/Notify/docs/wiki/index.md
 - ./laravel/Modules/Notify/docs/wiki/log.md
-- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-obiettivo.md
+- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
 
 ### Other Files (62 files)
 - Various agent session files, todo files, and system files
@@ -70,7 +69,7 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 - [ ] Update this list as files are resolved
 
 ## Resolution Guidelines:
-1. **Identify the conflict**: Look for `<<<< HEAD` or `<<<< .merge_file` markers
+1. **Identify the conflict**: Look for `<` or `<<<< .merge_file` markers
 2. **Analyze changes**: Compare both versions to understand what each represents
 3. **Choose the correct version**: Based on project context and best practices
 4. **Remove markers**: Delete all conflict markers and keep only the resolved content
@@ -89,6 +88,14 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 - **Automated Testing**: Run tests after resolution to ensure functionality
 
 ---
+title: "merge conflict files list"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "merge conflict files list"
+issues: []
+discussions: []
 *Generated on: $(date)
 *Total files: 96
 *Status: Pending resolution*

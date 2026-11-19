@@ -6,13 +6,12 @@ namespace Modules\AI\Tests\Unit\Actions;
 
 use Mockery;
 use Modules\AI\Actions\CompletionAction;
-use Modules\AI\Tests\TestCase;
 use OpenAI\Laravel\Facades\OpenAI;
 use OpenAI\Resources\Completions;
 use OpenAI\Responses\Completions\CreateResponse;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\AI\Tests\TestCase::class);
 
 afterEach(function (): void {
     Mockery::close();

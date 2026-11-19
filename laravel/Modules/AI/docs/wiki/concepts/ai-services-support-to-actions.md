@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ai services support to actions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI module: Services/Support -> Queueable Actions
@@ -60,11 +59,4 @@ e un singolo metodo pubblico `execute(...)`.
 Un merge (`laraxot/dev`, commit `9b0682a`) aveva riportato in `app/Services/` i 5 file (`AIService`, `AIChatCompletionClient`,
 `AIServiceJsonDecoder`, `AIServicePromptBuilder`, `AIServicePromptTemplates`) e il `.bak`. Erano ancora codice morto (0 chiamanti):
 eliminati, nessuna nuova Action. Equivalenti vivi: `ClassifyTicketAction`, `SuggestSolutionsAction`, `MakeAIRequestAction`,
-`AiJsonResponseDecoderAction`, `BuildAIPromptAction`. Dettagli: [story](../../stories/services-to-actions-ai.story.md).
-
-## Aggiornamento 2026-10-20
-
-Il sync del pull (commit `0c5e0a4` del repo del modulo, 08:57) ha riportato `app/Services/AIService.php` e `tests/Unit/Services/AIServiceTest.php`
-per la terza volta (prima volta: `3724569`, eliminato da `dfed680` l'8 ottobre). Ancora 0 chiamanti. La lane PHPStan ha ricostruito scopo, metodi
-pubblici, chiamanti e contratto dei tipi di `AIService`: [phpstan-test-wave-ai](../../stories/phpstan-test-wave-ai.story.md). Il commit `e0c8ec4`
-(12:14) ha poi registrato la cancellazione dei due file. Finche' `AIService.php` resta in `laraxot/dev`, ogni pull lo riporta.
+`AiJsonResponseDecoderAction`, `BuildAIPromptAction`. Dettagli: [story](../../stories/2026-10-08-services-to-actions-ai.story.md).

@@ -7,15 +7,13 @@ updated: 2026-09-26
 qmd: "08 api reference"
 issues: []
 discussions: []
-status: superseded
-superseded_by: api-reference.md
 ---
 
 # API Reference dei Server MCP
 
 ## Panoramica
 
-Questa documentazione fornisce una reference completa delle API esposte dai server MCP (Model Context Protocol) utilizzati nei progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa documentazione fornisce una reference completa delle API esposte dai server MCP (Model Context Protocol) utilizzati nei progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## Server Sequential Thinking
 

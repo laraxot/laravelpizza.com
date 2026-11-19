@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "create an assistant"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Creazione di un Assistant

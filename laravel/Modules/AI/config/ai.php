@@ -69,4 +69,19 @@ return [
     */
     'logging' => config('services.openai.logging', true),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Assistant (base di conoscenza + passaggio a una persona)
+    |--------------------------------------------------------------------------
+    |
+    | Il modulo AI e' agnostico: le parole che fanno passare subito la domanda
+    | a una persona le decide il modulo del progetto che usa l'assistente
+    | (es. ['rimborso', 'reclamo', 'avvocato']). Vuoto = nessun filtro
+    | deterministico, restano le regole del prompt.
+    */
+    'assistant' => [
+        'handoff_keywords' => [],
+        'max_sources' => 5,
+    ],
+
 ];

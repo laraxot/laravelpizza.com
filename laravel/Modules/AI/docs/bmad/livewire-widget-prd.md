@@ -10,7 +10,6 @@ type: prd
 module: AI
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # PRD AI

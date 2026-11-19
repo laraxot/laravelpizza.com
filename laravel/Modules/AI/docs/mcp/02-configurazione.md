@@ -7,15 +7,13 @@ updated: 2026-09-26
 qmd: "02 configurazione"
 issues: []
 discussions: []
-status: superseded
-superseded_by: configurazione.md
 ---
 
 # Configurazione dei Server MCP per Progetti Laravel
 
 ## Panoramica
 
-Questa guida fornisce istruzioni dettagliate per la configurazione dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa guida fornisce istruzioni dettagliate per la configurazione dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## Struttura delle Directory
 
@@ -351,9 +349,9 @@ SCRIPTS_DIR="$PROJECT_DIR/bashscripts/mcp"
 LOGS_DIR="$PROJECT_DIR/storage/logs/mcp"
 
 # Aggiorna i percorsi negli script
-sed -i "s|/var/www/html/_bases/base_predict_fila5_mono|$PROJECT_DIR|g" "$SCRIPTS_DIR/mcp-manager-v2.sh"
-sed -i "s|/var/www/html/_bases/base_predict_fila5_mono|$PROJECT_DIR|g" "$SCRIPTS_DIR/start-mysql-mcp.sh"
-sed -i "s|/var/www/html/_bases/base_predict_fila5_mono|$PROJECT_DIR|g" "$SCRIPTS_DIR/mysql-db-connector.js"
+sed -i "s|/var/www/html/_bases/base_predict_fila5|$PROJECT_DIR|g" "$SCRIPTS_DIR/mcp-manager-v2.sh"
+sed -i "s|/var/www/html/_bases/base_predict_fila5|$PROJECT_DIR|g" "$SCRIPTS_DIR/start-mysql-mcp.sh"
+sed -i "s|/var/www/html/_bases/base_predict_fila5|$PROJECT_DIR|g" "$SCRIPTS_DIR/mysql-db-connector.js"
 
 # Crea i file di configurazione
 echo '{
@@ -514,4 +512,13 @@ sudo chown -R $(whoami) /path/to/your/project
 Hai completato con successo la configurazione dei server MCP per il tuo progetto Laravel. Ora puoi procedere con l'utilizzo seguendo la guida nella sezione successiva.
 
 ---
-Continua con la sezione [Utilizzo](./03_utilizzo.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.
+
+title: "02 configurazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "02 configurazione"
+issues: []
+discussions: []
+Continua con la sezione [Utilizzo](03_utilizzo.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.

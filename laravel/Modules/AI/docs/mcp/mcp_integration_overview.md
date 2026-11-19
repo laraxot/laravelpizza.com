@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: mcp_integration_overview
 canonical: ../../../../Themes/docs/shared-components/mcp-integration-overview.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/mcp-integration-overview.md

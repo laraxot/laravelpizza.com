@@ -8,7 +8,6 @@ title: "Mirror skill .agents vs .codex (bashscripts)"
 module: "AI"
 type: "comparison"
 updated: "2026-05-04"
-status: draft
 ---
 
 # Mirror skill: `.agents` e `.codex` nel repo FixCity

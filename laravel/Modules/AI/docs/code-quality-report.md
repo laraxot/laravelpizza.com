@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "code quality report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Code quality — modulo AI

@@ -15,14 +15,19 @@ use Modules\Xot\Models\XotBaseModel;
  *
  * A single message (user|assistant|tool|system) within an AiThread.
  *
+ * @property int $id
+ * @property int $ai_thread_id
+ * @property string|null $user_id
  * @property AiMessageRoleEnum $role
+ * @property string|null $content
+ * @property array<string, mixed>|null $payload
  * @property-read ProfileContract|null $creator
  * @property-read AiThread|null $thread
  * @property-read ProfileContract|null $updater
  *
- * @method static Builder<static>|AiMessage newModelQuery()
- * @method static Builder<static>|AiMessage newQuery()
- * @method static Builder<static>|AiMessage query()
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> query()
  */
 class AiMessage extends XotBaseModel
 {

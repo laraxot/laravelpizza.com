@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "AGENTS"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module LLM Wiki Agent Instructions

@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: 00_introduzione
 canonical: ../../../../Themes/docs/shared-components/00-introduzione.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-introduzione.md
