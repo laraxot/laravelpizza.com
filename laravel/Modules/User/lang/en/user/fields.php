@@ -72,7 +72,7 @@ return [
         'description' => '',
     ],
     'roles' => [
-        'label' => 'Ruoli',
+        'label' => 'Roles',
         'tooltip' => '',
         'helper_text' => '',
         'description' => '',

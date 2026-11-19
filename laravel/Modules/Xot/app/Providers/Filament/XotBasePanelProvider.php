@@ -19,11 +19,12 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Str;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-// Remove if not used elsewhere implicitly
 use Modules\Xot\Actions\Filament\GetSidebarStateScriptAction;
+// Remove if not used elsewhere implicitly
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\AvatarProviders\InitialsAvatarProvider;
+use Modules\Xot\Http\Middleware\SetPanelLocaleFromUserMiddleware;
 use Webmozart\Assert\Assert;
 
 abstract class XotBasePanelProvider extends PanelProvider
@@ -116,6 +117,10 @@ abstract class XotBasePanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
+            // Lingua preferita dell'utente (users.lang): persistente, vale anche per le richieste Livewire.
+            ->authMiddleware([
+                SetPanelLocaleFromUserMiddleware::class,
+            ], isPersistent: true)
             // Fix "This page has expired" (Livewire) sulla pagina di login:
             // riprodotto con evidenza che e' un vero 419 quando il browser
             // ripresenta (bfcache/"indietro") la pagina di login DOPO che la

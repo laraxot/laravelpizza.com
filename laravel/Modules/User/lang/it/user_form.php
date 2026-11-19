@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+        'name' => [
+            'label' => 'Nome visualizzato',
+            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
         'first_name' => [
             'label' => 'Nome',
             'placeholder' => 'Mario',

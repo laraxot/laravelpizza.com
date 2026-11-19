@@ -35,7 +35,7 @@ class UserForm extends XotBaseResourceForm
     public function getFormSchema(): array
     {
         return [
-            'worker' => UserSection::make('worker'),
+            'worker' => UserSection::make('worker')->heading(static fn (): string => (string) __('user::user_section.heading')),
             'section01' => Section::make()
                 ->schema([
                     TextInput::make('name')->required(),
