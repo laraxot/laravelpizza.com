@@ -75,7 +75,11 @@ final class StreamAgentRunAction
             : $agent->stream(new UserMessage((string) $prompt));
 
         // Un turno puo' concatenare piu' chiamate al modello: 60 secondi spezzerebbero lo stream a meta'.
-        set_time_limit(self::TIME_LIMIT);
+        // Solo nelle richieste web: da console (test, code) il limite varrebbe per tutto il processo e
+        // fermerebbe una suite di test lunga dopo TIME_LIMIT secondi.
+        if (! app()->runningInConsole()) {
+            set_time_limit(self::TIME_LIMIT);
+        }
 
         // Avvio subito: un run rifiutato (es. approvazione ancora in attesa) diventa un errore HTTP, non uno stream.
         $events->valid();
