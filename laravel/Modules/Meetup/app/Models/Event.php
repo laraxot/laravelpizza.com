@@ -24,6 +24,7 @@ use Modules\Seo\Datas\SocialShareData;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection;
 
@@ -494,16 +495,21 @@ class Event extends BaseModel
     {
         $startDate = $this->start_date ?? Carbon::now();
         $endDate = $this->end_date ?? $startDate;
+        $url = LaravelLocalization::localizeUrl('/events/'.($this->slug ?? ''));
+        // Relatori e sponsor fanno parte del markup: caricati qui, così la pagina non deve ricordarsene.
+        $this->loadMissing(['performers', 'sponsors']);
 
         $data = [
             '@context' => 'https://schema.org',
             '@type' => 'Event',
+            // Stesso @id della mainEntity della pagina (Cms BuildPageSchemaAction): un'entità sola, non due.
+            '@id' => $url.'#event',
             'name' => $this->title,
             'startDate' => $startDate->toIso8601String(),
             'endDate' => $endDate->toIso8601String(),
             'eventStatus' => $this->event_status->toSchemaOrgUri(),
             'eventAttendanceMode' => $this->event_attendance_mode->toSchemaOrgUri(),
-            'url' => LaravelLocalization::localizeUrl('/events/'.($this->slug ?? '')),
+            'url' => $url,
             'maximumAttendeeCapacity' => $this->max_attendees,
             'remainingAttendeeCapacity' => $this->max_attendees - $this->attendees_count,
         ];
@@ -512,9 +518,14 @@ class Event extends BaseModel
         if ($this->location_id !== null && $this->venue !== null) {
             $data['location'] = $this->venue->toSchemaOrg();
         } else {
+            // Google vuole sempre un indirizzo (PostalAddress): senza sede salvata si usa la città o il luogo scritto nell'evento.
             $data['location'] = [
                 '@type' => 'Place',
                 'name' => $this->location,
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressLocality' => $this->location,
+                ],
             ];
         }
 
@@ -522,7 +533,7 @@ class Event extends BaseModel
             $data['description'] = $this->description;
         }
 
-        $image = $this->coverImageUrl();
+        $image = $this->coverImageUrl() ?? $this->defaultSchemaImageUrl();
         if ($image !== null) {
             $data['image'] = [$image];
         }
@@ -546,8 +557,29 @@ class Event extends BaseModel
             $data['organizer'] = $organizerData;
         }
 
+        // Chi ospita l'evento (Google: organizer.url = dominio dell'organizzatore): il sito stesso, prima della persona.
+        $brand = trim(MetatagData::make()->getBrandName());
+        if ($brand !== '') {
+            $host = ['@type' => 'Organization', 'name' => $brand, 'url' => url('/')];
+            $data['organizer'] = isset($data['organizer']) && is_array($data['organizer'])
+                ? [$host, $data['organizer']]
+                : $host;
+        }
+
         if ($this->offers !== null) {
             $data['offers'] = $this->offers;
+        } elseif ((bool) $this->is_accessible_for_free) {
+            // Meetup gratuito: un'offerta a prezzo 0 con disponibilità reale (Google: offers consigliato, price 0 se gratis).
+            $data['offers'] = [
+                '@type' => 'Offer',
+                'price' => 0,
+                'priceCurrency' => 'EUR',
+                'availability' => $this->isFull() ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
+                'url' => $url,
+            ];
+            if ($this->created_at !== null) {
+                $data['offers']['validFrom'] = $this->created_at->toIso8601String();
+            }
         }
 
         if ($this->in_language !== null) {
@@ -612,6 +644,17 @@ class Event extends BaseModel
         }
 
         return $data;
+    }
+
+    /** Immagine di riserva per il markup: quella social del tema (1200x630), se esiste. */
+    private function defaultSchemaImageUrl(): ?string
+    {
+        $theme = config('xra.pub_theme');
+        if (! is_string($theme) || $theme === '' || ! is_file(base_path('Themes/'.$theme.'/public/images/social-share.jpg'))) {
+            return null;
+        }
+
+        return url('themes/'.$theme.'/images/social-share.jpg');
     }
 
     /**

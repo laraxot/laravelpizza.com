@@ -9,17 +9,13 @@
     <script>
         (function(){var d=document.documentElement;try{var v=localStorage.getItem('theme_dark');if(v==='false')d.classList.remove('dark');else d.classList.add('dark');}catch(e){d.classList.add('dark');}})();
     </script>
-    <x-metatags :title="$metaTitle" :description="$metaDescription">
-        {{-- Font Inter incluso nel CSS del tema (@fontsource-variable/inter): nessuna richiesta a Google --}}
-
-        {{-- Stessa pagina nelle altre lingue (SEO, FR-15/FR-20); x-default = lingua di default del sito. --}}
-        @foreach (\Mcamara\LaravelLocalization\Facades\LaravelLocalization::getSupportedLocales() as $code => $localeProperties)
-            <link rel="alternate" hreflang="{{ $code }}" href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL($code, request()->url(), [], true) }}">
-        @endforeach
-        <link rel="alternate" hreflang="x-default" href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL(\Mcamara\LaravelLocalization\Facades\LaravelLocalization::getDefaultLocale(), request()->url(), [], true) }}">
-
-        @livewireStyles
-    </x-metatags>
+    {{-- <head> del CMS (Modules/Cms/View/Components/Head): titolo, descrizione, canonical, hreflang delle sole lingue scritte,
+         robots, Open Graph, dati strutturati (Organization/WebSite in home, pagina + briciole altrove). Le pagine aggiungono
+         i loro tag con @push('head') (es. JSON-LD Event nel dettaglio evento). --}}
+    @push('head')
+        @vite(['resources/js/app.js'], 'themes/'.\Modules\Xot\Datas\MetatagData::make()->getPubTheme())
+    @endpush
+    <x-cms::head :title="$metaTitle" :description="$metaDescription" />
     <body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-200">
         <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-black focus:px-4 focus:py-3 focus:rounded-lg">
             {{ __('pub_theme::navigation.skip_to_content') }}

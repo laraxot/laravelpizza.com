@@ -1,8 +1,8 @@
 {
     "id": "home",
     "title": {
-        "it": "Laravel Pizza Meetups - Home",
-        "en": "Laravel Pizza Meetups"
+        "it": "Meetup Laravel gratuiti in Italia",
+        "en": "Free Laravel meetups in Italy"
     },
     "slug": "home",
     "middleware": null,

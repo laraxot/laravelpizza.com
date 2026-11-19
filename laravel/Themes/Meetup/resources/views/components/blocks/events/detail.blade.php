@@ -403,7 +403,7 @@
     @endif
 </div>
 
-@push('meta')
+@push('head')
     @if($schemaOrg)
         <script type="application/ld+json">
 {!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}

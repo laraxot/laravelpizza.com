@@ -31,7 +31,7 @@ test('the page is a CMS sub-page that requires login and is linked from the edit
     $user = User::factory()->create();
     $this->actingAs($user)->get('/it/profile/assistants')
         ->assertOk()
-        ->assertSee('<title>Collega un assistente AI - Laravel Pizza Meetups</title>', false)
+        ->assertSee('<title>Collega un assistente AI — Laravel Pizza Meetups</title>', false)
         ->assertSee(url('/api/mcp'))
         ->assertSee('Non hai ancora nessun token');
     $this->actingAs($user)->get('/en/profile/assistants')->assertOk()->assertSee('Connect an AI assistant');

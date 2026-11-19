@@ -40,7 +40,7 @@ test('the edit page is a CMS sub-page in pages/profile/edit.json and requires lo
     $this->actingAs($user)
         ->get('/it/profile/edit')
         ->assertOk()
-        ->assertSee('<title>Modifica il profilo - Laravel Pizza Meetups</title>', false)
+        ->assertSee('<title>Modifica il profilo — Laravel Pizza Meetups</title>', false)
         ->assertSee('Il tuo profilo')
         ->assertSee($user->email);
 

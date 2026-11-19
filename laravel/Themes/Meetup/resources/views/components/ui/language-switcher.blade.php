@@ -61,7 +61,7 @@
          aria-label="{{ __('pub_theme::navigation.select_language') }}"
          class="{{ $isMobile ? 'left-0' : 'right-0' }} absolute mt-2 w-52 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-black/20 z-50 lang-dropdown">
         @foreach($locales as $code => $locale)
-            <a href="{{ LaravelLocalization::getLocalizedURL($code, null, [], true) }}" 
+            <a href="{{ LaravelLocalization::getLocalizedURL($code, request()->fullUrl(), [], true) }}" 
                hreflang="{{ $code }}" lang="{{ $code }}"
                @if($code === $currentLocale) aria-current="true" @endif
                class="flex items-center gap-3 px-4 py-2.5 text-sm {{ 
