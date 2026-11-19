@@ -122,6 +122,15 @@ return [
         ],
     ],
     'event' => [
+        'actions' => [
+            'seed_events' => [
+                'label' => 'Import sample events',
+                'notification' => [
+                    'title' => 'Import completed',
+                    'body' => ':count events imported successfully.',
+                ],
+            ],
+        ],
         'filters' => [
             'status' => [
                 'label' => 'Status',
