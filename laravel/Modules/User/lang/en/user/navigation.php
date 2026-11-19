@@ -10,7 +10,7 @@ return [
     'name' => 'Users',
     'plural' => 'Users',
     'group' => [
-        'name' => 'Gestione Utenti',
+        'name' => 'User management',
         'description' => 'Gestione degli utenti e dei loro permessi',
     ],
     'label' => 'Users',

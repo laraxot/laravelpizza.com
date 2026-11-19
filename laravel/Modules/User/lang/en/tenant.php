@@ -7,7 +7,7 @@ return [
         'name' => 'Tenant',
         'plural' => 'Tenants',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione dei tenant e delle loro configurazioni',
         ],
         'label' => 'Tenant',
