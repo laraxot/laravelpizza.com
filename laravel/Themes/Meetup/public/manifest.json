@@ -36,6 +36,15 @@
       "app.css"
     ]
   },
+  "resources/css/site.css": {
+    "file": "assets/site-D6PE46J3.css",
+    "src": "resources/css/site.css",
+    "isEntry": true,
+    "name": "site",
+    "names": [
+      "site.css"
+    ]
+  },
   "resources/js/app.js": {
     "file": "assets/app-BbTkBIaX.js",
     "name": "app",
