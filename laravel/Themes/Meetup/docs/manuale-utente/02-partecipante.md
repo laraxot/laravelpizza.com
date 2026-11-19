@@ -143,7 +143,7 @@ Dal menu personale clicca **Modifica il profilo** (oppure il pulsante con lo ste
 
 ![I tuoi dati](img/p15-modifica-profilo.jpg)
 
-1. **I tuoi dati**: nome, cognome, una breve **biografia** (al massimo 500 caratteri, la vedono tutti) e la **lingua preferita**, cioè la lingua delle email che ti mandiamo. L'email non si può cambiare da qui: se ti serve, scrivici dalla pagina Contatti. Quando hai finito clicca **Salva i dati**: compare "Dati salvati." e il tuo nome in alto si aggiorna subito.
+1. **I tuoi dati**: nome, cognome, una breve **biografia** (al massimo 500 caratteri, la vedono tutti) e la **lingua preferita**, cioè la lingua delle email che ti mandiamo e, per organizzatori e amministratori, del pannello di amministrazione. L'email non si può cambiare da qui: se ti serve, scrivici dalla pagina Contatti. Quando hai finito clicca **Salva i dati**: compare "Dati salvati." e il tuo nome in alto si aggiorna subito.
 
 ![Foto e password](img/p16-foto-password.jpg)
 

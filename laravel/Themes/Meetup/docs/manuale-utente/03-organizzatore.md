@@ -4,6 +4,8 @@
 
 Sei un **organizzatore** quando un amministratore ha dato al tuo account il permesso di gestire gli eventi. Gli eventi non si creano dal sito pubblico ma dal **pannello di amministrazione**, una zona riservata con un indirizzo diverso: aggiungi `/meetup/admin` all'indirizzo del sito (per esempio `https://laravelpizza.com/meetup/admin`).
 
+> Il pannello usa la tua **lingua preferita** (Modifica il profilo → Lingua preferita, [capitolo 2.7](02-partecipante.md#27-modificare-il-profilo)). Solo la pagina di accesso è sempre in italiano, perché il sito non sa ancora chi sei.
+
 > Non vedi il pannello, o ricevi "Accesso negato"? Il tuo account non ha ancora il permesso: chiedilo all'amministratore del sito (come lo concede è spiegato nel [capitolo 4](04-amministratore.md#42-dare-a-qualcuno-il-ruolo-di-organizzatore)).
 
 ## 3.1 Entrare nel pannello
