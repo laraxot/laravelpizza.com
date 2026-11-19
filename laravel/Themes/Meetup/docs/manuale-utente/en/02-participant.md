@@ -143,7 +143,7 @@ From the personal menu click **Edit profile** (or the button with the same name 
 
 ![Your details](img/p15-modifica-profilo.jpg)
 
-1. **Your details**: first name, last name, a short **bio** (at most 500 characters, everyone sees it) and the **preferred language**, that is the language of the emails we send you. The email cannot be changed here: if you need to, write to us from the Contact page. When you are done click **Save details**: a confirmation appears and your name at the top updates right away.
+1. **Your details**: first name, last name, a short **bio** (at most 500 characters, everyone sees it) and the **preferred language**, that is the language of the emails we send you and, for organisers and administrators, of the admin panel. The email cannot be changed here: if you need to, write to us from the Contact page. When you are done click **Save details**: a confirmation appears and your name at the top updates right away.
 
 ![Photo and password](img/p16-foto-password.jpg)
 

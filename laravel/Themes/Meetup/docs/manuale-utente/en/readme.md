@@ -24,7 +24,7 @@ The site has four kinds of user. Each one sees different things and can do diffe
 
 Not sure which one you are? If you have never created an account you are a **Visitor**. If you have an account you are a **Participant**. You become an **Organiser** only if an administrator gave you permission; **Administrators** are one or two people, and they already know.
 
-> The admin panel (chapters 3 and 4) is currently in Italian. Those chapters show the Italian screens and give every label in Italian, followed by its meaning in English.
+> The admin panel (chapters 3 and 4) speaks the preferred language of your profile, so organisers and administrators who choose English see it in English.
 
 ## Words you will meet
 
@@ -58,7 +58,7 @@ Not sure which one you are? If you have never created an account you are a **Vis
 
 ## Notes for maintainers
 
-- The pictures are in [`img/`](img/) (public site, in English); chapters 3 and 4 use the Italian ones in [`../img/`](../img/) because the admin panel is in Italian. They were captured on a local installation with demo data (made-up people and events), not from the live site. Event titles and descriptions are in Italian because that is how the demo events are written.
-- To redo the screenshots, from `laravel/`: `sh Themes/Meetup/docs/manuale-utente/tools/reset-demo.sh`, then `php Themes/Meetup/docs/manuale-utente/tools/render-mail.php $PWD /tmp/mail-en.html en`; from `laravel/Themes/Meetup`: `MANUAL_LANG=en PHP_BIN=php node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/en/img /tmp/mail-en.html`. It must end with "Tutti i riquadri trovati" (all boxes found).
+- The pictures are in [`img/`](img/), all in English. They were captured on a local installation with demo data (made-up people and events), not from the live site. Event titles and descriptions are in Italian because that is how the demo events are written.
+- To redo the screenshots, from `laravel/`: `sh Themes/Meetup/docs/manuale-utente/tools/reset-demo.sh`, then `php Themes/Meetup/docs/manuale-utente/tools/render-mail.php $PWD /tmp/mail-en.html en`; from `laravel/Themes/Meetup`: `MANUAL_LANG=en PHP_BIN=php node docs/manuale-utente/tools/capture.cjs docs/manuale-utente/en/img /tmp/mail-en.html`. It must end with "Tutti i riquadri trovati" (all boxes found). The admin panel pictures are in English because the script sets the demo accounts' preferred language first.
 - The PDFs in [`pdf/`](pdf/) are generated from the `.md` files with `node ../build-pdf.mjs en` (needs pandoc and Playwright). After changing text or pictures, regenerate the PDFs and commit `.md` and `.pdf` together.
 - When the Italian chapters change, update these too: same sections, same picture names.
