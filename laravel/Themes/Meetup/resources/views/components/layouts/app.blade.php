@@ -14,4 +14,9 @@
 
     <x-section slug="footer"/>
 
+    {{-- Assistente AI: solo utenti collegati e con un fornitore AI configurato (story 7-5) --}}
+    @auth
+        <x-ui.assistant />
+    @endauth
+
 </x-layouts.main>

@@ -4,6 +4,12 @@
 // Import particle system
 import './particles.js';
 
+// Chat dell'assistente AI: caricata solo se la pagina la contiene (utente collegato e fornitore AI configurato),
+// così @ag-ui/client non pesa sulle pagine dei visitatori.
+if (document.getElementById('meetup-assistant')) {
+    import('./assistant.js');
+}
+
 
 // Cart management with localStorage persistence
 class PizzaCart {

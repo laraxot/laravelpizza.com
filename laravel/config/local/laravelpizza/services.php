@@ -3,6 +3,14 @@
 declare(strict_types=1);
 
 return [
+    // Fornitori AI dell'assistente nel sito (modulo AI, solo modelli gratuiti). Chiavi solo in .env, mai nel repo.
+    // Senza nessuna delle due l'assistente non compare. Docs: Modules/Meetup/docs/assistant.md
+    'groq' => [
+        'key' => env('GROQ_API_KEY'),
+    ],
+    'openrouter' => [
+        'key' => env('OPENROUTER_API_KEY'),
+    ],
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),

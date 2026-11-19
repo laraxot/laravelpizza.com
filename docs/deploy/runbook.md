@@ -35,6 +35,10 @@ MAIL_MAILER=smtp              # credenziali del provider reale
 MAIL_FROM_ADDRESS=...  MAIL_FROM_NAME="Laravel Pizza Meetups"
 CONTACT_EMAIL=...             # riceve i messaggi della pagina Contatti
 HEALTH_NOTIFY_EMAIL=...       # riceve gli avvisi dei controlli di salute
+
+# Assistente AI nel sito (facoltativo): basta una chiave; senza chiavi il pulsante non compare.
+GROQ_API_KEY=                 # primo fornitore provato (modelli gratuiti)
+OPENROUTER_API_KEY=           # alternativa, modelli ":free"
 ```
 
 Mai committare `.env`. I file `.env.*` presenti nel repository sono solo per sviluppo e test: la chiave di `.env.latest` è stata tolta; se in passato è stata usata su un server, **rigenerarla** (`php artisan key:generate --force`) invalida sessioni e dati cifrati con la vecchia.
@@ -138,6 +142,7 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
 - [ ] Audit del front office (ospite e loggato, desktop e mobile): `BASE_URL=https://laravelpizza.com USER_EMAIL=... USER_PASSWORD=... npm run audit:fo` → "Nessun problema trovato" (`laravel/Themes/Meetup/docs/front-office-audit.md`)
 - [ ] Passport (API e server MCP `/api/mcp`): `php artisan passport:keys` (oppure `PASSPORT_PRIVATE_KEY`/`PASSPORT_PUBLIC_KEY` nell'ambiente) e, una volta, `php artisan passport:client --personal --name="Laravel Pizza MCP" --provider=users`. Senza chiavi ogni richiesta con `auth:api` risponde 500 invece di 401. Verifica: `curl -X POST https://<dominio>/api/mcp` → 401
+- [ ] Assistente AI (solo se è impostata `GROQ_API_KEY` o `OPENROUTER_API_KEY`): il modulo `AI` è attivo in `modules_statuses.json`, `php artisan migrate --force` ha creato `ai_agent_messages` e `ai_agent_runs`; da loggato compare "Chiedi all'assistente" in basso a destra, la domanda "Che meetup ci sono a Bologna?" mostra le schede, "Iscrivimi" chiede conferma prima di iscrivere (`laravel/Modules/Meetup/docs/assistant.md`)
 - [ ] Audit del back office (tutte le pagine dei pannelli Filament come super-admin): `PHP_BIN=php ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run audit:bo` → "0 con problemi". In locale, dopo l'audit, ripristinare i file lang (vedi l'intestazione di `scripts/back-office-audit.cjs`)
 
 ## 10. Test e CI
