@@ -140,6 +140,15 @@
         </form>
     </section>
 
+    {{-- Assistenti AI: token personali per il server MCP (pagina dedicata) --}}
+    <section class="{{ $card }} flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between" aria-labelledby="profile-assistants-heading">
+        <div>
+            <h2 id="profile-assistants-heading" class="text-xl font-bold text-white">{{ __('meetup::assistant_tokens.link.title') }}</h2>
+            <p class="mt-1 text-sm text-slate-300">{{ __('meetup::assistant_tokens.link.description') }}</p>
+        </div>
+        <a href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/profile/assistants') }}" class="{{ $secondary }} shrink-0">{{ __('meetup::assistant_tokens.link.action') }}</a>
+    </section>
+
     {{-- Eliminazione dell'account (GDPR art. 17) --}}
     <section class="rounded-2xl border border-red-500/40 bg-red-950/30 p-6 shadow-xl sm:p-8" aria-labelledby="profile-delete-heading" x-data="{ open: @js($errors->hasAny(['delete_password', 'delete_confirmed', 'delete_reason'])) }">
         <h2 id="profile-delete-heading" class="text-xl font-bold text-white">{{ __('meetup::profile_edit.delete.title') }}</h2>

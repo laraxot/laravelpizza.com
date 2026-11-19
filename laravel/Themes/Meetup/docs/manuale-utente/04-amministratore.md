@@ -77,7 +77,7 @@ Gli altri pannelli (`/xot/admin`, `/job/admin`, `/activity/admin`, …) servono 
 
 **Nel sito.** I partecipanti che hanno fatto l'accesso possono usare la chat **Chiedi all'assistente** ([capitolo 2.9](02-partecipante.md#29-chiedere-allassistente)). Compare solo se chi mantiene il sito ha configurato un fornitore AI gratuito (Groq o OpenRouter); iscrive le persone solo dopo la loro conferma. Note tecniche: `laravel/Modules/Meetup/docs/assistant.md`.
 
-**Da fuori.** Il sito può essere usato anche da assistenti AI come Claude o Cursor, per conto di una persona: cercano eventi, iscrivono e annullano le iscrizioni con le stesse regole del sito. Per collegare un assistente serve un **token personale** della persona, che per ora crea chi mantiene il sito; le istruzioni tecniche sono in `laravel/Modules/Meetup/docs/mcp-server.md`. Una pagina per crearlo da soli dal profilo è prevista.
+**Da fuori.** Il sito può essere usato anche da assistenti AI come Claude o Cursor, per conto di una persona: cercano eventi, iscrivono e annullano le iscrizioni con le stesse regole del sito. Per collegare un assistente serve un **token personale**, che ogni persona crea e revoca da sola dal profilo ([capitolo 2.10](02-partecipante.md#210-collegare-il-tuo-assistente-ai-claude-cursor)); le istruzioni tecniche sono in `laravel/Modules/Meetup/docs/mcp-server.md`.
 
 ## Note per chi mantiene il manuale
 

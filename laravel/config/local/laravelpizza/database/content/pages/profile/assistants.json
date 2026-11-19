@@ -1,0 +1,104 @@
+{
+    "id": "assistants",
+    "title": {
+        "it": "Collega un assistente AI - Laravel Pizza Meetups",
+        "en": "Connect an AI assistant - Laravel Pizza Meetups",
+        "de": "KI-Assistenten verbinden - Laravel Pizza Meetups",
+        "fr": "Connecter un assistant IA - Laravel Pizza Meetups",
+        "es": "Conectar un asistente de IA - Laravel Pizza Meetups",
+        "ru": "Подключить ИИ-ассистента - Laravel Pizza Meetups"
+    },
+    "slug": "assistants",
+    "middleware": [
+        "auth"
+    ],
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "Collega un assistente AI",
+                    "description": "Usa Claude, Cursor o un altro assistente per cercare i meetup e iscriverti a tuo nome."
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "Connect an AI assistant",
+                    "description": "Use Claude, Cursor or another assistant to search meetups and register on your behalf."
+                }
+            }
+        ],
+        "de": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "KI-Assistenten verbinden",
+                    "description": "Nutze Claude, Cursor oder einen anderen Assistenten, um Meetups zu finden und dich in deinem Namen anzumelden."
+                }
+            }
+        ],
+        "fr": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "Connecter un assistant IA",
+                    "description": "Utilise Claude, Cursor ou un autre assistant pour trouver des meetups et t'inscrire en ton nom."
+                }
+            }
+        ],
+        "es": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "Conectar un asistente de IA",
+                    "description": "Usa Claude, Cursor u otro asistente para buscar meetups e inscribirte en tu nombre."
+                }
+            }
+        ],
+        "ru": [
+            {
+                "type": "profile",
+                "slug": "profile-assistants",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.assistants",
+                    "title": "Подключить ИИ-ассистента",
+                    "description": "Используйте Claude, Cursor или другого ассистента, чтобы находить митапы и записываться от вашего имени."
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": [],
+        "fr": [],
+        "es": [],
+        "ru": []
+    },
+    "created_at": "2026-11-19T00:00:00.000000Z",
+    "updated_at": "2026-11-19T00:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

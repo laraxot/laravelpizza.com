@@ -205,4 +205,20 @@ In the same way you can ask "Which events am I registered for?" or "Cancel my re
 
 > The answers are written by an artificial intelligence model and may contain mistakes: the data in the cards (dates, seats) comes from the site and is correct. Don't type personal data the chat doesn't need. To close the chat click the **X** or press **Esc**.
 
+## 2.10 Connect your own AI assistant (Claude, Cursor…)
+
+Do you already use an AI assistant on your computer, such as Claude or Cursor? You can connect it to your account: it will search meetups and register you with the same rules as the site. You need a **personal token**, a kind of password just for the assistant.
+
+In **Edit profile** click **Connect an AI assistant**. Type a name for the token (for example "Claude Desktop") and click **Create token**:
+
+![The token just created](img/p24-collega-assistente.jpg)
+
+1. The **server address** to enter in the assistant.
+2. The **token**: click **Copy token** and paste it in the assistant. **It is shown only once**: if you lose it, revoke it and create another one.
+3. A ready-made **example configuration**, with address and token, for assistants that use this format (Claude Desktop, Cursor).
+
+Click **Done, I copied it**. Below, in **Active tokens**, you find all your tokens with their expiry date (6 months). **Revoke** blocks the assistant using that token immediately: do it if you change computer or think someone saw it.
+
+> Treat the token like a password: whoever has it can register you and cancel your registrations.
+
 [Continue with chapter 3 – Organiser →](03-organiser.md)

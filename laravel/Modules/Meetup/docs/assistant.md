@@ -42,7 +42,9 @@ la logica sta nelle Action, il server MCP (story 7-4, [mcp-server.md](mcp-server
 altrui, input vuoto, streaming e salvataggio, ricerca senza conferma, iscrizione solo dopo l'approvazione, rifiuto,
 creazione del thread. Nessuna chiamata a un modello vero.
 
+Per gli assistenti esterni (Claude, Cursor) l'utente crea il proprio token in `/{lingua}/profile/assistants`: vedi
+[mcp-server.md](mcp-server.md).
+
 ## Non ancora fatto
 
-- Pagina profilo "Collega un assistente AI" per creare e revocare da soli il token MCP (oggi lo crea l'amministratore).
 - WebMCP (`document.modelContext.registerTool`), facoltativo e solo per browser in origin trial.

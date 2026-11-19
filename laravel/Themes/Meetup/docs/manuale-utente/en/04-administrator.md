@@ -79,7 +79,7 @@ The other panels (`/xot/admin`, `/job/admin`, `/activity/admin`, `/ai/admin`, â€
 
 **On the site.** Signed-in participants can use the **Ask the assistant** chat ([chapter 2.9](02-participant.md#29-ask-the-assistant)). It only appears when whoever maintains the site has configured a free AI provider (Groq or OpenRouter); it registers people only after they confirm. Technical notes: `laravel/Modules/Meetup/docs/assistant.md`.
 
-**From outside.** The site can also be used by AI assistants such as Claude or Cursor, on behalf of a person: they search events, register and cancel registrations with the same rules as the site. To connect an assistant you need the person's **personal token**, which for now is created by whoever maintains the site; the technical instructions are in `laravel/Modules/Meetup/docs/mcp-server.md`. A page to create it yourself from the profile is planned.
+**From outside.** The site can also be used by AI assistants such as Claude or Cursor, on behalf of a person: they search events, register and cancel registrations with the same rules as the site. To connect an assistant you need a **personal token**, which each person creates and revokes from their profile ([chapter 2.10](02-participant.md#210-connect-your-own-ai-assistant-claude-cursor)); the technical instructions are in `laravel/Modules/Meetup/docs/mcp-server.md`.
 
 ## Notes for maintainers
 

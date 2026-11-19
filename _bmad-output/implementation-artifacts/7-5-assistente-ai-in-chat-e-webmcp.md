@@ -37,7 +37,7 @@ Fonte: passaggi 2–5 del talk LaravelDay 2026 (https://github.com/datomatic/lar
 - AC1 ✅ tool MCP riusati con `McpToolAdapter`. AC2 ✅ Groq/OpenRouter, nessuna chiave → pulsante nascosto.
   AC3 ✅ approvazione lato server con il titolo dell'evento. AC4 ✅ thread creato dal server, 403 sui thread altrui.
   AC5 ⚠️ schede costruite dai risultati dei tool, con link alla pagina evento (lì il pulsante Livewire); l'iscrizione
-  dalla scheda passa dalla conferma in chat. AC6 ⏳ follow-up. AC7 ⏳ facoltativo, rimandato.
+  dalla scheda passa dalla conferma in chat. AC6 ✅ pagina `/{lingua}/profile/assistants` (crea, mostra una volta, revoca; 5 test). AC7 ⏳ facoltativo, rimandato.
 - Correzioni al modulo AI condiviso (da riportare upstream): `StreamAgentRunAction` perdeva `role`/`content` dei
   messaggi con `validate()` (ogni turno → 422); tipi Safe/PHPStan in `StreamAgentRunAction` e `McpToolAdapter`.
 - Verifiche: 8 test feature, suite Project verde, PHPStan 10 OK, Pint, audit FO senza problemi, e2e nel browser con
