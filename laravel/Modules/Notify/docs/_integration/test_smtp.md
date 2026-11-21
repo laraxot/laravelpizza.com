@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "test smtp"
 issues: []
 discussions: []
-status: superseded
-superseded_by: test-smtp.md
 ---
 
 # test_smtp

@@ -54,7 +54,7 @@ Buongiorno! Ecco tutto quello che abbiamo fatto ieri e cosa fare oggi.
 
 **Comando verifica**:
 ```bash
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
+cd /var/www/_bases/base_fixcity_fila5/laravel
 ./vendor/bin/phpstan analyse Modules/Xot --memory-limit=-1
 ```
 
@@ -68,7 +68,7 @@ cd /var/www/_bases/base_fixcity_fila5_mono/laravel
 # Deve mostrare: [OK] No errors
 ```
 
-**Se OK**: ✅ Xot completato!  
+**Se OK**: ✅ Xot completato!
 **Se errori**: Debug e fix
 
 ---
@@ -82,7 +82,7 @@ cd /var/www/_bases/base_fixcity_fila5_mono/laravel
 
 **Step 2**: Categorizza errori
 - Property access issues
-- Type safety issues  
+- Type safety issues
 - Method calls
 
 **Step 3**: Correggi Models (priorità alta)
@@ -123,13 +123,13 @@ cd /var/www/_bases/base_fixcity_fila5_mono/laravel
 
 **Verifica Completa**:
 ```bash
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
+cd /var/www/_bases/base_fixcity_fila5/laravel
 ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 ```
 
 **Target**: `[OK] No errors` su TUTTI i 18 moduli!
 
-**Se OK**: 
+**Se OK**:
 - ✅ Update documentazione finale
 - ✅ Commit tutto
 - ✅ Celebrate! 🎊
@@ -147,7 +147,7 @@ cd /var/www/_bases/base_fixcity_fila5_mono/laravel
 
 ### Fine Giornata (update)
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
-5. **[Analisi Completa](./ANALISI-COMPLETA.md)** - Executive summary
+5. **[Analisi Completa](./analisi-completa.md)** - Executive summary
 3. **[User Roadmap](../../User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
@@ -202,7 +202,7 @@ php artisan test --filter=BaseUserTest
 - ❌ Non usare `->label()`, `->placeholder()`, `->tooltip()`
 
 ### ✅ Sempre Fare
-- ✅ Eseguire da `/var/www/_bases/base_fixcity_fila5_mono/laravel/`
+- ✅ Eseguire da `/var/www/_bases/base_fixcity_fila5/laravel/`
 - ✅ Verificare ogni fix con PHPStan
 - ✅ Usare sempre classi XotBase
 - ✅ Aggiornare docs dopo ogni correzione
@@ -219,9 +219,9 @@ php artisan test --filter=BaseUserTest
 ╚════════════════════════════════════════╝
 ```
 
-**Da**: 15/18 (83%)  
-**A**: 18/18 (100%)  
-**Effort**: ~8 ore  
+**Da**: 15/18 (83%)
+**A**: 18/18 (100%)
+**Effort**: ~8 ore
 **Difficulty**: Media (errori già identificati)
 
 ---
@@ -235,7 +235,7 @@ php artisan test --filter=BaseUserTest
 **Soluzione**: Leggi la roadmap del modulo, ha esempi e soluzioni
 
 ### Problem: Non sai come fixare
-**Soluzione**: 
+**Soluzione**:
 1. Leggi l'errore completo di PHPStan
 2. Controlla roadmap modulo per pattern simili
 3. Cerca in docs Filament/Laravel
@@ -244,10 +244,10 @@ php artisan test --filter=BaseUserTest
 
 ## 🎉 MOTIVAZIONE
 
-Ieri abbiamo fatto **83% del lavoro**!  
+Ieri abbiamo fatto **83% del lavoro**!
 Oggi facciamo solo il **17% rimanente**.
 
-**Xot**: 9 errori = facile!  
+**Xot**: 9 errori = facile!
 **User**: 95 errori = sistematico ma fattibile!
 
 **Ce la facciamo! 💪**
@@ -260,8 +260,8 @@ Ricorda: **Qualità del codice = Qualità del servizio ai cittadini** 🏙️
 
 ---
 
-**Start**: ore 09:00  
-**Target End**: ore 18:00  
+**Start**: ore 09:00
+**Target End**: ore 18:00
 **Goal**: 100% PHPStan Compliance
 
 **Let's do this! 🚀**

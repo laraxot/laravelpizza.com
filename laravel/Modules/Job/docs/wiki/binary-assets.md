@@ -1,12 +1,3 @@
----
-title: "Asset binari"
-type: note
-updated: 2026-10-08
-tags: [docs, job, wiki]
-qmd: "asset binari job"
-status: superseded
-superseded_by: ../binary-assets.md
----
 # Asset binari
 
 Gli asset binari sono file normali del repository.

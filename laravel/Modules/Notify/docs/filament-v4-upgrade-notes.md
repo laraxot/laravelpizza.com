@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament v4 upgrade notes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Module - Filament v4 Upgrade Notes

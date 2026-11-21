@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/section_messages.php
 return [
     'messages' => [
-        'created' => 'Sezione creata con successo',
-        'updated' => 'Sezione aggiornata con successo',
-        'deleted' => 'Sezione eliminata con successo',
-        'bulk_deleted' => 'Sezioni eliminate con successo',
+        'created' => 'Section created successfully',
+        'updated' => 'Section updated successfully',
+        'deleted' => 'Section deleted successfully',
+        'bulk_deleted' => 'Sections deleted successfully',
     ],
 ];

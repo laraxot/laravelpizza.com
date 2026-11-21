@@ -1,12 +1,7 @@
 ---
+qmd: "activity wiki analysis analysis religion zen md"
 title: Analysis religion zen
 module: Activity
-type: note
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "activity module: complete analysis (religion, philosophy, politics, zen) activity"
-status: superseded
-superseded_by: ../../analysis-religion-zen.md
 ---
 
 # Activity Module: Complete Analysis (Religion, Philosophy, Politics, Zen)

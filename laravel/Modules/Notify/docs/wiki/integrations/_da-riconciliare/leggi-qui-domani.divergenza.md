@@ -1,14 +1,13 @@
 ---
-qmd: "leggi qui domani.divergenza"
+qmd: "Leggi Qui Domani.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: leggi-qui-domani.md"
+title: "Leggi Qui Domani.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `leggi-qui-domani.md`

@@ -5,7 +5,7 @@ updated: 2026-09-26
 qmd: "git status fleet merge markers notify.story"
 issues: []
 discussions: []
-title: "Bonifica marker merge committati: Notify"
+title: "Bonifica marker merge committati — Notify"
 type: story
 module: Notify
 epic: quality
@@ -13,7 +13,7 @@ story_id: "git-status-fleet-merge-markers-notify"
 status: done
 track: quality/fleet
 related:
-  - ../../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
+  - ../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
 ---
 
 # git-status-fleet-merge-markers-notify
@@ -49,7 +49,7 @@ Dettaglio:
   due alternative). Non rilevati dal grep candidati dello script; trovati in
   verifica con detection estesa (`=`, `|` inclusi). Tutti ripristinati dal
   blob pulito `604a432b` (commits_reverted=1 ciascuno):
-  `docs/phpstan-fixes.md`, `docs/correzioni-phpstan-completate-modulo-notify.md`,
+  `docs/phpstan-fixes.md`, `docs/correzioni-phpstan-completate-3.md`,
   `docs/archive/email-backup.md`, `docs/reports/{FINAL_DOCUMENTATION_REPORT,
   FINAL_SUCCESS_REPORT, DOCUMENTATION_UPDATE_COMPLETE,
   DOCUMENT_ROOT_UPDATE_SUMMARY, THEME_UPDATE_FINAL_REPORT,

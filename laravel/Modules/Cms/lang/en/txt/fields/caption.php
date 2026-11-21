@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/caption.php
 // Cms txt.fields.caption — LangServiceProvider SSoT.
 return [
-    'label' => 'Didascalia',
-    'placeholder' => 'Didascalia per immagine o video',
-    'helper_text' => 'Testo descrittivo mostrato sotto contenuti multimediali',
+    'label' => 'Caption',
+    'placeholder' => 'Caption for image or video',
+    'helper_text' => 'Descriptive text shown below media',
     'tooltip' => '',
     'description' => '',
 ];

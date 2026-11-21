@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git subtree error resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 Gestione Errori Git Subtree

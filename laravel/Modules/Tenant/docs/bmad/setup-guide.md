@@ -1,5 +1,5 @@
 ---
-title: "Tenant: Setup Guide"
+title: "Tenant — Setup Guide"
 type: note
 module: Tenant
 tags:
@@ -12,12 +12,11 @@ qmd: "tenant setup install config migrate test"
 related:
   - README.md
   - quick-reference.md
-status: draft
 ---
 
-# Tenant: Setup Guide
+# Tenant — Setup Guide
 
-> **SUMMARY**: Come si porta il modulo `Tenant` in un ambiente funzionante: config da
+> **SUMMARY** — Come si porta il modulo `Tenant` in un ambiente funzionante: config da
   caricare, provider da registrare, migrazioni presenti nel modulo, test da eseguire.
 > Comandi da eseguire dalla root di `laravel/`.
 
@@ -84,6 +83,6 @@ Nota di progetto: sull'host `10.100.200.15` non si lanciano test (dati sacri).
 ## 6. Helper di test
 
 - `tests/Pest.php`, `tests/TestCase.php`
-- `tests/TenantContextSetter.php`: contesto di tenant per i test
+- `tests/TenantContextSetter.php` — contesto di tenant per i test
 - `tests/Support/helpers.php`
-- `tests/Fixtures/`: modelli di prova per i trait Sushi
+- `tests/Fixtures/` — modelli di prova per i trait Sushi

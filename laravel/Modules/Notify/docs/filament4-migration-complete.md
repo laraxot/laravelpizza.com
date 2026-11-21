@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament4 migration complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament v4 Migration Complete - Notify Module

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "bottlenecks"
 related:
   - "./webm.md"
-status: draft
 ---
 # Colli di Bottiglia e Soluzioni - Modulo Media
 
@@ -835,14 +834,14 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../User/docs/bottlenecks.md)
+* [BOTTLENECKS.md](../../../user/docs/bottlenecks.md)
 * [BOTTLENECKS.md](../../../media/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../Cms/docs/bottlenecks.md)
+* [BOTTLENECKS.md](../../../cms/docs/bottlenecks.md)
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
-* [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)

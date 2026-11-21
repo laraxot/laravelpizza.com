@@ -1,9 +1,11 @@
 ---
+title: "📸 Analisi Visiva Homepage FixCity vs Bootstrap Italia"
 title: "📸 Analisi Visiva Homepage Notify vs Bootstrap Italia"
 type: concept
 tags: [analisi, visiva]
 created: 2026-07-14
 updated: 2026-07-14
+qmd: "analisi-visiva 📸 analisi visiva homepage fixcity vs bootstrap italia"
 qmd: "analisi-visiva 📸 analisi visiva homepage laraxot vs bootstrap italia"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -11,7 +13,6 @@ related:
   - "./analisi-colori-header-footer.md"
   - "./fix-plan.md"
   - "./screenshot-analysis.md"
-status: draft
 ---
 
 # 📸 Analisi Visiva Homepage FixCity vs Bootstrap Italia

@@ -22,7 +22,7 @@ metadata:
 
 "`laravel/Modules/Comment/app/Models/CommentNotificationSubscription.php`
 non deve estendere `Illuminate\Database\Eloquent\Model`, nessun modello
-deve estendere direttamente `Illuminate\Database\Eloquent\Model`": con
+deve estendere direttamente `Illuminate\Database\Eloquent\Model`" — con
 richiesta di applicare la regola a tutto il repo, non solo al file
 segnalato, e di capire il perche'.
 
@@ -35,7 +35,7 @@ il trait `Updater` (popolamento automatico `created_by`/`updated_by`/
 `deleted_by`), `HasXotFactory` (risoluzione factory via
 `GetFactoryAction`), `RelationX`, `getClassName()` per la risoluzione
 modulo-agnostica del namespace concreto. Un model che estende `Model`
-direttamente perde TUTTO questo silenziosamente: nessun errore, nessun
+direttamente perde TUTTO questo silenziosamente — nessun errore, nessun
 warning, solo comportamento mancante (es. audit fields sempre `null`).
 
 ## Controllo altri agenti + ricerca per regola, non per sintomo
@@ -53,21 +53,21 @@ dall'utente:
 - `Modules/Comment/app/Models/CommentNotificationOptOut.php`
 - `Modules/Comment/app/Models/CommentNotificationSubscription.php`
   (quest'ultimo gia' preso in carico da un'altra sessione con lock attivo
-  al momento dell'indagine: vedi
+  al momento dell'indagine — vedi
   `docs/chat/commentnotificationsubscription-morphto-covariance-standdown.md`)
 
 Due file esclusi dopo revisione, non modificati:
 
-- `Modules/Activity/app/Models/TestModel.php`: modello di test dedicato
+- `Modules/Activity/app/Models/TestModel.php` — modello di test dedicato
   con migration/factory/seeder propri, usato per verificare che il
   sistema di Activity logging funzioni contro un model Eloquent generico
   (non-XotBase). Probabile scelta deliberata per isolare il test dal
-  comportamento XotBase: non toccato senza conferma owner.
-- `Modules/User/app/Models/PersonalAccessToken.php`: punto di
+  comportamento XotBase — non toccato senza conferma owner.
+- `Modules/User/app/Models/PersonalAccessToken.php` — punto di
   integrazione Laravel Sanctum, richiede valutazione separata (il modello
   e' configurabile via `Sanctum::usePersonalAccessTokenModel()`, ma
   cambiare la classe base tocca un pacchetto di terze parti con
-  aspettative proprie sul modello token): segnalato, non toccato qui.
+  aspettative proprie sul modello token) — segnalato, non toccato qui.
 
 ## Fix applicato (questo modulo)
 

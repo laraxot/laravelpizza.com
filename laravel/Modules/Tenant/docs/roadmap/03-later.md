@@ -10,9 +10,6 @@ updated: 2026-07-14
 qmd: "03 later"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: superseded
-superseded_by: later.md
 ---
 # Later (Module Tenant)
 

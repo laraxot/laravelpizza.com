@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "quality improvements"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Miglioramenti Qualità Codice - Modulo Notify

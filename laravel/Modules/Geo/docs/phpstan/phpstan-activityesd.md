@@ -10,8 +10,6 @@ discussions: []
 module: theme
 topic: phpstan-activityesd
 canonical: ../../../Themes/docs/shared-components/phpstan-activity-fixes-completed.md
-status: superseded
-superseded_by: ../phpstan-activityesd.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-activity-fixes-completed.md

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament charts complete guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📊 Filament Charts & Chart.js - Guida Completa PTVX
@@ -15,6 +14,15 @@ status: draft
 > **CHART INTEGRATION**: Sistema completo per grafici interattivi in Filament con esportazione PNG/SVG.
 
 ---
+
+title: "filament charts complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament charts complete guide"
+issues: []
+discussions: []
 ## 🎯 **Panoramica**
 
 PTVX integra **Filament Charts** con **Chart.js** per creare dashboard interattivi avanzati. Il sistema supporta:

@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Modules Statuses: root vs tenant-scoped"
+title: "Modules Statuses — root vs tenant-scoped"
 module: "Tenant"
 type: concept
 tags: [modules, statuses, tenant, navigation, config]
@@ -13,23 +13,22 @@ related:
   - "../../../app/Actions/GetTenantNameAction.php"
   - "../../../app/Actions/Config/GetTenantFilePathAction.php"
   - "../../../../Xot/app/Actions/Filament/GetModulesNavigationItems.php"
-status: draft
 ---
 
-# Modules Statuses: due file indipendenti, non uno solo
+# Modules Statuses — due file indipendenti, non uno solo
 
 Questo progetto ha **due file `modules_statuses.json` completamente separati**, con
 scopi diversi. Confonderli (o dimenticarsi del secondo) produce un bug silenzioso:
 un modulo perfettamente funzionante ma invisibile nel menu di navigazione admin.
 
-## 1. Root: `laravel/modules_statuses.json`
+## 1. Root — `laravel/modules_statuses.json`
 
 Letto da nwidart/laravel-modules (`config('modules.activators.file.statuses-file')`
 → `base_path('modules_statuses.json')`). Controlla se il `ServiceProvider` del
 modulo viene registrato/booted da Laravel. Se un modulo è `false` qui, non esiste
 per l'applicazione: niente rotte, niente migrazioni, niente Eloquent.
 
-## 2. Tenant-scoped: `config/{tenant}/modules_statuses.json`
+## 2. Tenant-scoped — `config/{tenant}/modules_statuses.json`
 
 Risolto dinamicamente per hostname. Per workorder, `config/local/workorder/modules.php` **sovrascrive** anche l’activator nwidart:
 
@@ -49,7 +48,7 @@ GetTenantModulesAction::execute()
   → consumato da Modules\Xot\app\Actions\Filament\GetModulesNavigationItems.php
 ```
 
-Questo file **non** influenza se il modulo funziona: influenza **solo** se
+Questo file **non** influenza se il modulo funziona — influenza **solo** se
 compare come voce di navigazione nel pannello Filament admin. Un modulo può avere
 rotte, migrazioni e modelli perfettamente funzionanti e restare invisibile nel
 menu solo perché manca da questo file, senza nessun errore o eccezione.
@@ -58,8 +57,8 @@ menu solo perché manca da questo file, senza nessun errore o eccezione.
 
 `config/local/workorder/modules_statuses.json` conteneva moduli di un progetto
 completamente diverso (`modulo questionari`, `BarberShop`, `RealEstate`, `Food`, `Forum`,
-`Shop`, `Ticket`, `Limesurvey`, …): nessuno esistente in `Modules/` di questo
-progetto: più `Blog`/`Comment`/`TestModule` mai ripuliti dopo la loro rimozione.
+`Shop`, `Ticket`, `Limesurvey`, …) — nessuno esistente in `Modules/` di questo
+progetto — più `Blog`/`Comment`/`TestModule` mai ripuliti dopo la loro rimozione.
 `GetTenantModulesAction` filtra silenziosamente le voci senza directory reale, per
 cui l'errore non si è mai manifestato come eccezione: semplicemente, la maggior
 parte dei moduli reali di questo progetto (WhatsApp, TimberBilling,
@@ -75,7 +74,7 @@ diff <(php -r 'echo implode("\n", array_keys(json_decode(file_get_contents("modu
      <(php -r 'echo implode("\n", array_keys(json_decode(file_get_contents("config/local/workorder/modules_statuses.json"), true)));' | sort)
 ```
 
-Quando si aggiunge o rimuove un modulo, aggiornare **entrambi** i file JSON (root e tenant): non solo quello root.
+Quando si aggiunge o rimuove un modulo, aggiornare **entrambi** i file JSON (root e tenant) — non solo quello root.
 
 Rigenerazione: `bash bashscripts/tools/sync-tenant-modules-statuses.sh local/workorder`
 

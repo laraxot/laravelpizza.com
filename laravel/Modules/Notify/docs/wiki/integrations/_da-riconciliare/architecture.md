@@ -1,16 +1,15 @@
 ---
-qmd: "architecture"
+qmd: "Architecture"
 issues: []
 discussions: []
-title: "Notify Module Architecture"
+title: "Architecture"
 type: architecture
 tags: [module, architecture, notifications]
 created: 2026-07-28
 updated: 2026-07-28
-status: draft
 ---
 
-# Notify Module: Architecture
+# Notify Module — Architecture
 
 ## Purpose
 Manages notifications and messaging via Laravel Notifications and Mailable. Supports email, Slack, SMS, in-app notifications.

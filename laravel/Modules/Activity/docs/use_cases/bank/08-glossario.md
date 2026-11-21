@@ -1,12 +1,10 @@
 ---
 title: "Glossario Bank (Event Sourcing)"
+qmd: "activity use cases bank 08 glossario md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "glossario bank (event sourcing) activity"
-status: superseded
-superseded_by: glossario.md
+tags: [documentation]
 ---
+
 # Glossario Bank (Event Sourcing)
 
 - **Event Sourcing**: Pattern di persistenza basato su eventi immutabili.

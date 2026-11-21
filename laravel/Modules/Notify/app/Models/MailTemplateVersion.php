@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
+use Modules\Notify\Database\Factories\MailTemplateVersionFactory;
 use Modules\Notify\Models\Traits\MailTemplateVersionRelations;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Traits\Updater;
@@ -15,6 +16,8 @@ use RuntimeException;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
+ * @method static MailTemplateVersionFactory factory($count = null, $state = [])
+ *
  * @property-read ProfileContract|null $creator
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
@@ -63,7 +66,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 class MailTemplateVersion extends BaseModel
 {
     use MailTemplateVersionRelations;
+    use SoftDeletes;
     use Updater;
+
 
     protected $connection = 'notify';
 

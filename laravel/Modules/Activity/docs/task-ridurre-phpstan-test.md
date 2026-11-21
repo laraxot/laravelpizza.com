@@ -1,11 +1,10 @@
 ---
 title: "Task: Ridurre Suppressioni PHPStan nei Test - Activity"
+qmd: "activity task ridurre phpstan test md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "task: ridurre suppressioni phpstan nei test - activity activity"
+tags: [documentation]
 ---
+
 # Task: Ridurre Suppressioni PHPStan nei Test - Activity
 
 **Modulo**: Activity

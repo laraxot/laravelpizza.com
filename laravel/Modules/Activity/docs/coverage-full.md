@@ -1,13 +1,12 @@
 ---
 title: "coverage full"
+qmd: "activity coverage full md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "coverage full activity"
+tags: [documentation]
 ---
 
-> Conflict cleanup note: 2026-04-28
+
+> Conflict cleanup note — 2026-04-28
 >
 > - Error found: unresolved Git conflict markers around the coverage section between `Notify/*` and `Tenant/*`.
 > - Resolution applied: kept the additional `Quaeris/*` and `healthcare_app/*` coverage rows because they extend the report, then removed the raw merge markers (`<<<<<<<`, `=======`, `>>>>>>>`).

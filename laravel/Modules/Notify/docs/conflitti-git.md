@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "conflitti git"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Conflitti Git - Modulo Notify

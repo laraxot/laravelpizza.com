@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan errors resolution roadmap"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-errors-resolution-roadmap.md
 ---
 
 # Geo Module - PHPStan Level 10 Errors Resolution Roadmap
@@ -264,6 +262,15 @@ Prima di considerare completata la risoluzione:
 - [ ] Code review completata
 
 ---
+
+title: "phpstan errors resolution roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors resolution roadmap"
+issues: []
+discussions: []
 *Roadmap creata il: Gennaio 2025*  
 *⚠️ File critico: AddressItemEnum.php (67 errori)*
 

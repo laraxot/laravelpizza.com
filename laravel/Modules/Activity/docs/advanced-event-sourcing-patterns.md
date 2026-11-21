@@ -1,11 +1,10 @@
 ---
 title: "Advanced Event Sourcing Patterns for Healthcare Applications"
+qmd: "activity advanced event sourcing patterns md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "advanced event sourcing patterns for healthcare applications activity"
+tags: [documentation]
 ---
+
 # Advanced Event Sourcing Patterns for Healthcare Applications
 
 ## Table of Contents
@@ -48,6 +47,7 @@ sequenceDiagram
     participant C as Client
     participant A as API
     participant AR as PatientAggregate
+<<<<<<< .merge_file_8gMVdC
     participant ES as Event Store
     
 
@@ -269,3 +269,6 @@ Event Sourcing provides a robust foundation for healthcare applications by ensur
 - [Spatie Laravel Event Sourcing Documentation](https://spatie.be/docs/laravel-event-sourcing/v7/)
 - [Domain-Driven Design by Eric Evans](https://domainlanguage.com/ddd/)
 
+=======
+    participant ES as Event Store
+>>>>>>> .merge_file_eyqbyx

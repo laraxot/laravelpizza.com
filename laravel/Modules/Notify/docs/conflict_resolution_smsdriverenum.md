@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "conflict resolution smsdriverenum"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/conflict-resolution-smsdriverenum.md
 ---
 
 # Risoluzione Conflitto SmsDriverEnum

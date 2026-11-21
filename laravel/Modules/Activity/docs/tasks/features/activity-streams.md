@@ -1,3 +1,10 @@
+---
+title: "Activity Streams - Activity"
+qmd: "activity tasks features activity streams md"
+type: note
+tags: [documentation]
+---
+
 # Activity Streams - Activity
 
 **Task ID**: ACTIVITY-FEATURE-007

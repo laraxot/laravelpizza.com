@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament custom pages"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament Custom Pages - Documentazione Modulo Notify

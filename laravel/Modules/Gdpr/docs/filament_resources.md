@@ -10,8 +10,6 @@ discussions: []
 module: theme
 topic: filament_resources
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
-status: superseded
-superseded_by: lang_link.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules

@@ -50,7 +50,10 @@ mantenendo solo `$name` e `$parameters` effettivamente usati nel corpo.
 a PHPStan per fidarsi del narrowing lungo tutta la catena di assegnazione.
 
 **Fix:** aggiunta `Webmozart\Assert\Assert::subclassOf(...)` sia in
+<<<<<<< .merge_file_n3WyMc
 `usingResource()` sia in `getResource()` prima del return — stesso pattern già
+=======
+>>>>>>> .merge_file_v5BvqV
 `usingResource()` sia in `getResource()` prima del return: stesso pattern già
 in uso in `Modules\Xot\Filament\Resources\XotBaseResource::getModel()`.
 
@@ -58,7 +61,10 @@ in uso in `Modules\Xot\Filament\Resources\XotBaseResource::getModel()`.
 
 Non in questo modulo, ma stessa causa radice architetturale: un enum con
 alcune `case` disabilitate via commento ma ancora referenziate in un metodo
+<<<<<<< .merge_file_n3WyMc
 che le consuma (`self::CASE_DISABILITATA->value`) — errore `classConstant.notFound`,
+=======
+>>>>>>> .merge_file_v5BvqV
 che le consuma (`self::CASE_DISABILITATA->value`): errore `classConstant.notFound`,
 avrebbe fatto fallire qualsiasi migrazione che chiamasse `EnumTrait::columns()`.
 Documentato qui perché è un pattern di bug ricorrente nell'architettura

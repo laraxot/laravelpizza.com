@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test naming pascalcase"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regola Critica: Naming File Test - PascalCase Obbligatorio
@@ -230,6 +229,15 @@ find tests/ -name "*Test*" | sort -f | uniq -i -d
 ✅ Convenzioni standard
 
 ---
+
+title: "test naming pascalcase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test naming pascalcase"
+issues: []
+discussions: []
 **Regola Critica: Test File Naming**  
 **SEMPRE PascalCase - MAI minuscolo** 🎯
 

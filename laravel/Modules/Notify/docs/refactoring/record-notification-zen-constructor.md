@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "record notification zen constructor"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 RecordNotification Zen Delegation Strategy

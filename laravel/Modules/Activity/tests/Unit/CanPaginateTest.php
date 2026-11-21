@@ -13,7 +13,11 @@ uses(TestCase::class);
 
 describe('Can Paginate', function (): void {
     test('trait exists', function (): void {
+<<<<<<< .merge_file_araOnn
         /** @var TestCase $this */
+=======
+        /** @var \Modules\Activity\Tests\TestCase $this */
+>>>>>>> .merge_file_kEmM1w
         Assert::assertTrue(trait_exists(CanPaginate::class));
     });
 

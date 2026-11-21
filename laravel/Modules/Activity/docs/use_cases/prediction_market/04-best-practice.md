@@ -1,11 +1,10 @@
 ---
 title: "Best Practice <nome progetto>ion Market"
+qmd: "activity use cases prediction market 04 best practice md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "best practice <nome progetto>ion market activity"
+tags: [documentation]
 ---
+
 # Best Practice <nome progetto>ion Market
 
 ## Sicurezza

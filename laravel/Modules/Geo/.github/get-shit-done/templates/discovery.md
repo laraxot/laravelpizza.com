@@ -15,7 +15,7 @@ Template for `.planning/phases/XX-name/DISCOVERY.md` - shallow research for libr
 
 **Purpose:** Answer "which library/option should we use" questions during mandatory discovery in plan-phase.
 
-For deep ecosystem research ("how do experts build this"), use `/gsd-research-phase` which produces RESEARCH.md.
+For deep ecosystem research ("how do experts build this"), use `/gsd-research-phase` which produces research.md.
 
 ---
 
@@ -142,7 +142,7 @@ Create `.planning/phases/XX-name/DISCOVERY.md`:
 - Quality checklist items completed
 - Clear primary recommendation
 - Low-confidence findings marked with validation checkpoints
-- Ready to inform PLAN.md creation
+- Ready to inform plan.md creation
 </success_criteria>
 
 <guidelines>
@@ -157,7 +157,7 @@ Create `.planning/phases/XX-name/DISCOVERY.md`:
 - Implementation details (defer to execution)
 - Questions answerable from existing project context
 
-**When to use RESEARCH.md instead:**
+**When to use research.md instead:**
 - Niche/complex domains (3D, games, audio, shaders)
 - Need ecosystem knowledge, not just library choice
 - "How do experts build this" questions

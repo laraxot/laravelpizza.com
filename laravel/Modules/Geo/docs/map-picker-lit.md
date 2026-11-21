@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "map picker lit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CoordinatePickerLit Component Implementation

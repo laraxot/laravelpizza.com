@@ -10,12 +10,11 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md
-status: draft
+  - ../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md
 ---
 
 # Gdpr — nessun `app/Support/`
 
 Il modulo Gdpr **non ha mai** avuto cartella `app/Support/`. Business logic GDPR (consensi, export, purge) vive già in `app/Actions/`.
 
-Regola standing: non introdurre `Support/` — seguire [no-app-support-monorepo-migration](../../../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md).
+Regola standing: non introdurre `Support/` — seguire [no-app-support-monorepo-migration](../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md).

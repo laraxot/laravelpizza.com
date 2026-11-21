@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "agents"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Project Agents (Modular)
@@ -50,7 +49,7 @@ docs/
 │   ├── papers/    # Paper tecnici
 │   └── notes/     # Note e appunti
 ├── .schema/       # Schema per l'LLM
-│   └── WIKI_SCHEMA.md
+│   └── wiki_schema.md
 ├── wiki/index.md  # Indice principale
 └── log.md         # Log cronologico
 ```
@@ -63,12 +62,9 @@ docs/
 
 ### Riferimenti
 
-- [Schema Wiki](./docs/.schema/WIKI_SCHEMA.md) - Istruzioni per l'LLM
+- [Schema Wiki](./docs/.schema/wiki_schema.md) - Istruzioni per l'LLM
 - [Index Globale](./docs/wiki/index.md) - Catalogo di tutte le wiki
 - [Log](./docs/log.md) - Cronologia delle operazioni
-- [Schema Wiki](.schema/WIKI_SCHEMA.md) - Istruzioni per l'LLM
-- [Index Globale](./wiki/index.md) - Catalogo di tutte le wiki
-- [Log](./log.md) - Cronologia delle operazioni
 
 ### Workflow
 
@@ -77,6 +73,15 @@ docs/
 - **Lint**: Verifica consistenza e cross-references
 
 ---
+
+title: "agents"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents"
+issues: []
+discussions: []
 ## Reusable Tasks
 
 - [Task: validate-next-story](./.agents/docs/main-rules/task-validate-next-story.md)
@@ -90,9 +95,9 @@ docs/
 
 ---
 **See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [QWEN.md](./QWEN.md)
-- [GEMINI.md](./GEMINI.md)
+- [CLAUDE.md](./claude.md)
+- [qwen.md](./qwen.md)
+- [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
 
@@ -108,7 +113,7 @@ No previous sessions found.
 
 ---
 
-<!-- Merged from agents.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
 
 # Project Agents (Modular)
 
@@ -166,9 +171,6 @@ docs/
 - [Schema Wiki](./docs/.schema/wiki-schema.md) - Istruzioni per l'LLM
 - [Index Globale](./docs/wiki/index.md) - Catalogo di tutte le wiki
 - [Log](./docs/log.md) - Cronologia delle operazioni
-- [Schema Wiki](.schema/wiki-schema.md) - Istruzioni per l'LLM
-- [Index Globale](./wiki/index.md) - Catalogo di tutte le wiki
-- [Log](./log.md) - Cronologia delle operazioni
 
 ### Workflow
 
@@ -191,9 +193,9 @@ docs/
 
 ---
 **See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [QWEN.md](./QWEN.md)
-- [GEMINI.md](./GEMINI.md)
+- [CLAUDE.md](./claude.md)
+- [qwen.md](./qwen.md)
+- [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
 

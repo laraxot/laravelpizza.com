@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gsd methodology"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GSD (Get Shit Done) - Metodologia Spec-Driven per AI Agents
@@ -32,6 +31,15 @@ GSD è un sistema leggero e potente di **meta-prompting**, **context engineering
 - [Antigravity Port: toonight/get-shit-done-for-antigravity](https://github.com/toonight/get-shit-done-for-antigravity)
 
 ---
+
+title: "gsd methodology"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd methodology"
+issues: []
+discussions: []
 ## Workflow GSD (6 Step)
 
 ```
@@ -46,7 +54,7 @@ Il sistema:
 3. **Requisiti** — Estrae cosa è v1, v2 e fuori scope
 4. **Roadmap** — Crea fasi mappate ai requisiti
 
-**File generati** (in questo repo): `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md`, `.planning/ROADMAP.md`, `.planning/STATE.md`, `.planning/research/`
+**File generati** (in questo repo): `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md`, `.planning/roadmap.md`, `.planning/STATE.md`, `.planning/research/`
 
 ### Step 2: Discuss Phase (`/gsd:discuss-phase N`)
 
@@ -150,7 +158,7 @@ WAVE 1 (parallel)     WAVE 2 (parallel)     WAVE 3
 |------------|-------------------|
 | `PROJECT.md` | `.planning/PROJECT.md` |
 | `REQUIREMENTS.md` | `.planning/REQUIREMENTS.md` |
-| `ROADMAP.md` | `.planning/ROADMAP.md` |
+| `roadmap.md` | `.planning/roadmap.md` |
 | `STATE.md` | `.planning/STATE.md` |
 | Research | `.planning/research/` |
 | Phase plans | `.planning/phases/` |
@@ -161,7 +169,7 @@ WAVE 1 (parallel)     WAVE 2 (parallel)     WAVE 3
 
 Per progetti esistenti come il nostro, eseguire prima la mappatura:
 - Analizza stack, architettura, convenzioni, preoccupazioni
-- Genera `.planning/codebase/ARCHITECTURE.md`, `STACK.md`, `MODULES.md`, `DOMAIN.md`
+- Genera `.planning/codebase/architecture.md`, `STACK.md`, `MODULES.md`, `DOMAIN.md`
 
 ### Integrazione con BMAD
 

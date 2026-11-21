@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Enum Translation Pattern - Regola Critica
 
@@ -238,7 +237,7 @@ Prima di ogni commit, verificare:
 
 - [Enum Standards](enum_standards.md)
 - [Translation Management](translation-management.md)
-- [TableLayoutEnum Guide](../../UI/docs/table-layout-enum-complete-guide.md)
+- [TableLayoutEnum Guide](../laravel/Modules/UI/docs/table-layout-enum-complete-guide.md)
 
 ## Ultimo Aggiornamento
 2025-01-27 - Regola critica per enum translation pattern

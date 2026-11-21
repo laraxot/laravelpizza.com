@@ -1,11 +1,10 @@
 ---
 title: "Task: Consolidare Documentazione - Activity"
+qmd: "activity task consolidare documentazione md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "task: consolidare documentazione - activity activity"
+tags: [documentation]
 ---
+
 # Task: Consolidare Documentazione - Activity
 
 **Modulo**: Activity

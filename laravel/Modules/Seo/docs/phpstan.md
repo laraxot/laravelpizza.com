@@ -1,22 +1,19 @@
 ---
 title: "phpstan"
 type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "phpstan"
-issues: []
-discussions: []
-module: theme
-topic: phpstan
-canonical: ../../../Themes/docs/shared-components/phpstan.md  # target mancante, verificato 2026-10-08
-status: stub
+tags: [seo, phpstan, quality]
+updated: 2026-11-17
+qmd: "seo phpstan level max pest assert sitemap"
+module: Seo
+status: active
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan.md
----
-# PHPStan Configuration
+# PHPStan — Modulo Seo
 
-This module adheres to PHPStan Level 10.
+Gate: **0 errori** a `level: max` (wave 111 → 0).
 
-- [Global PHPStan Guide](../../../../docs/phpstan-level-10.md) _(target mancante, verificato 2026-10-08)_
+Scopo del modulo sotto analisi: URL canoniche, alias di pagina, sitemap pubblica e share social — senza conoscere i modelli dei moduli consumer (`SitemapPathsContract`).
+
+Dettaglio cause e fix: [wiki/concepts/phpstan-compliance.md](wiki/concepts/phpstan-compliance.md).
+
+Pattern test: Pest resta Pest; asserzioni con `PHPUnit\Framework\Assert` (no `expect()` fluente) perche' `Pest\Mixins\Expectation` e' `@internal`.

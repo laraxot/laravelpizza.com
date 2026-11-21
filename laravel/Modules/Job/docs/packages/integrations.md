@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "integrations"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazioni
@@ -101,11 +100,20 @@ SlackAlert::to('channel-name')->message('Job in corso...');
 
 ## Collegamenti tra versioni di integrations.md
 * [integrations.md](docs/tecnico/filament/integrations.md)
-* [integrations.md](../../../job/docs/packages/integrations.md)
+* [integrations.md](integrations.md)
 
 ### Versione Incoming
 
 ---
+
+title: "integrations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "integrations"
+issues: []
+discussions: []
 ### Versione Incoming
 
 ---

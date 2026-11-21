@@ -1,5 +1,5 @@
 ---
-title: "claude-audit static: modulo Activity"
+title: "claude-audit static — modulo Activity"
 type: concept
 module: Activity
 tags: [activity, quality, claude-audit, testing]
@@ -14,7 +14,6 @@ related:
   - ./testing.md
   - ./ponytail-audit.md
   - ../../../../../../bashscripts/tools/run-claude-audit-module-static.sh
-status: draft
 ---
 
 # claude-audit static (Activity)
@@ -37,8 +36,8 @@ cd laravel && npx claude-audit --static Modules/Activity/ --max-files 2000
 
 | Pattern | Rilevato da claude-audit |
 |--------|---------------------------|
-| `tests/Feature/*Test.php` (Pest) | **No**: path `tests/` senza `/tests/` nel matcher |
-| `audit-coverage/tests/*BridgeTest.php` | **Sì**: contiene `/tests/` |
+| `tests/Feature/*Test.php` (Pest) | **No** — path `tests/` senza `/tests/` nel matcher |
+| `audit-coverage/tests/*BridgeTest.php` | **Sì** — contiene `/tests/` |
 | `*.test.js` (Vitest) | **Sì** |
 
 Bridge PHPUnit in `audit-coverage/tests/` allinea il ratio senza duplicare la suite Pest (`tests/`).

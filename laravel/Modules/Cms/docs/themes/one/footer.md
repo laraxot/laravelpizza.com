@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "footer"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Footer Component Reference (CMS Module)
@@ -56,16 +55,16 @@ return [
 
 ## Collegamenti Utili
 
-- [Tema One - Overview](/laravel/themes/one/docs/readme.md)
-- [CMS Module - Components](/laravel/modules/cms/docs/components.md)
+- [Tema One - Overview](/laravel/themes/one/docs/README.md)
+- [CMS Module - Components](/laravel/Modules/Cms/docs/components.md)
 - [Integrazione Temi](/laravel/modules/cms/docs/themes.md)
 
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)
 * [footer.md](docs/sections/footer.md)
-* [footer.md](../../../../UI/docs/components/footer.md)
-* [footer.md](../../blocks/footer.md)
+* [footer.md](laravel/modules/ui/docs/components/footer.md)
+* [footer.md](laravel/modules/cms/docs/blocks/footer.md)
 * [footer.md](laravel/modules/cms/docs/themes/one/footer.md)
-* [footer.md](../../components/footer.md)
+* [footer.md](laravel/modules/cms/docs/components/footer.md)
 * [footer.md](laravel/themes/one/docs/components/layouts/footer.md)
 * [footer.md](laravel/themes/one/docs/sections/footer.md)

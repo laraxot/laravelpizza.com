@@ -9,33 +9,21 @@ use Illuminate\Support\Str;
 use Safe\Exceptions\FilesystemException;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\parse_url;
 use function Safe\realpath;
 
 /**
- * Action per ottenere il nome del tenant basato sul server name.
+ * Ricava il nome tenant dall'host (SERVER_NAME / app.url).
+ *
+ * Pattern: dominio invertito e slugato (`foo.example.com` → `com/example/foo`), poi lookup
+ * in `config/<path>`. Se l'host è un symlink (es. `eu/fixcity` → `local/fixcity`), la chiave
+ * di config deve usare il path reale, non l'alias — altrimenti Laravel non trova i file.
  */
 class GetTenantNameAction
 {
     use QueueableAction;
 
-    /**
-     * Esegue l'action per ottenere il nome del tenant.
-     *
-     * @return string Il nome del tenant
-     */
     public function execute(): string
-    {
-        $default = $this->resolveDefaultHost();
-
-        /** @var Collection<int, string> $parts */
-        $parts = $this->buildServerParts($default);
-
-        return $this->resolveFromParts($parts)
-            ?? $this->resolveFromDefaultHost($default)
-            ?? 'localhost';
-    }
-
-    private function resolveDefaultHost(): string
     {
         $default = config('app.url');
 
@@ -43,20 +31,19 @@ class GetTenantNameAction
             $default = 'localhost';
         }
 
-        return Str::after($default, '//');
-    }
+        $default = $this->hostFromUrl($default);
 
-    /**
-     * @return Collection<int, string>
-     */
-    private function buildServerParts(string $default): Collection
-    {
-        $serverName = Str::of($this->getServerName($default))->replace('www.', '')->toString();
+        $server_name = Str::of($this->getServerName($default))->replace('www.', '')->toString();
 
-        return collect(explode('.', $serverName))
-            ->map(static fn (string $part): string => Str::slug($part))
+        /** @var Collection<int, string> $parts */
+        $parts = collect(explode('.', $server_name))
+            ->map(fn (string $part): string => Str::slug($part))
             ->reverse()
             ->values();
+
+        return $this->resolveFromParts($parts)
+            ?? $this->resolveFromDefaultHost($default)
+            ?? 'localhost';
     }
 
     /**
@@ -98,7 +85,7 @@ class GetTenantNameAction
 
     /**
      * Un host può essere un symlink verso la config già caricata da Laravel.
-     * La chiave di config usa il path reale (`local.fixcity`), non l'alias (`eu.fixcity`).
+     * La chiave di config usa il path reale (`local/fixcity`), non l'alias (`eu/fixcity`).
      */
     private function tenantNameFromPath(string $path): string
     {
@@ -124,30 +111,57 @@ class GetTenantNameAction
         return str_replace(DIRECTORY_SEPARATOR, '/', $relative);
     }
 
-    /**
-     * Durante LoadConfiguration le facade non sono ancora disponibili — usare getenv.
-     *
-     * @param  string  $default  Il valore di default da usare
-     */
     private function getServerName(string $default): string
     {
-        $serverName = getenv('SERVER_NAME');
-        if ((! is_string($serverName) || $serverName === '') && isset($_SERVER['SERVER_NAME']) && is_string($_SERVER['SERVER_NAME'])) {
-            $serverName = $_SERVER['SERVER_NAME'];
+        $serverName = $_SERVER['SERVER_NAME'] ?? null;
+        if (
+            \is_string($serverName) &&
+                $serverName !== '' &&
+                ! \in_array($serverName, ['127.0.0.1', '::1', 'localhost'], true)
+        ) {
+            return $serverName;
         }
 
-        if (is_string($serverName) && $serverName !== '' && $serverName !== '127.0.0.1') {
-            return $serverName;
+        // `php artisan serve` e proxy inversi lasciano in SERVER_NAME l'indirizzo di bind
+        // (127.0.0.1), mentre l'host richiesto arriva solo nell'header Host. Senza leggerlo
+        // ogni dominio ricade sul tenant di fallback e le pagine CMS rispondono 404.
+        $requestHost = $this->requestHost();
+        if ($requestHost !== null) {
+            return $requestHost;
         }
 
         return $default;
     }
 
+    private function requestHost(): ?string
+    {
+        // In console e code non esiste una richiesta HTTP: niente header Host da leggere.
+        if (app()->runningInConsole()) {
+            return null;
+        }
+
+        try {
+            $host = request()->getHost();
+        } catch (\Throwable) {
+            return null;
+        }
+
+        return \is_string($host) && $host !== '' ? $host : null;
+    }
+
     /**
-     * Costruisce il percorso di configurazione.
-     *
-     * @param  Collection<int, string>  $parts  Le parti del percorso
-     * @return string Il percorso completo
+     * `app.url` puo' portare scheme, porta e path (`https://foo.test:8443/app`): il tenant
+     * si ricava solo dall'host.
+     */
+    private function hostFromUrl(string $url): string
+    {
+        $host = parse_url($url, PHP_URL_HOST);
+
+        return \is_string($host) && $host !== '' ? $host : $url;
+    }
+
+    /**
+     * @param  Collection<int, string>  $parts
      */
     private function buildConfigPath(Collection $parts): string
     {

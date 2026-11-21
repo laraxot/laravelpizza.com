@@ -1,3 +1,10 @@
+---
+title: "Activity Filters - Activity"
+qmd: "activity tasks features activity filters md"
+type: note
+tags: [documentation]
+---
+
 # Activity Filters - Activity
 
 **Task ID**: ACTIVITY-FEATURE-014

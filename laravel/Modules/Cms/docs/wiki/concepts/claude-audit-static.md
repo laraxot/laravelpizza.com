@@ -13,7 +13,6 @@ discussions:
 related:
   - ../../../../../../bashscripts/tools/split-cms-lang-for-audit.php
   - ../../../../../../bashscripts/tools/run-claude-audit-module-static.sh
-status: draft
 ---
 
 # claude-audit static (Cms)

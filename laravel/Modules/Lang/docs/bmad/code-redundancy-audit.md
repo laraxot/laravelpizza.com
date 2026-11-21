@@ -1,17 +1,16 @@
 ---
-title: "Code redundancy audit: Lang"
+qmd: "lang bmad code redundancy audit md"
+title: "Code redundancy audit — Lang"
 type: source
+status: draft
 tags: [code-audit, redundancy, dry, second-brain, module]
 created: "2026-05-26"
 updated: "2026-05-26"
 owner: "Lang"
 issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/150"
-qmd: "code redundancy audit   lang lang"
-status: superseded
-superseded_by: ../code-redundancy-audit.md
 ---
 
-# Code redundancy audit: Lang
+# Code redundancy audit — Lang
 
 ## Scopo
 
@@ -71,7 +70,7 @@ Ridurre rumore, duplicazione e ambiguita' nel codice di questo module, senza per
 - Religione: DRY e KISS sono dogmi utili solo se servono lo scopo.
 - Filosofia: il codice e' memoria operativa; la documentazione spiega perche' esiste.
 
-## Second Brain 2026: note operative
+## Second Brain 2026 — note operative
 
 - Markdown locale + Git restano la base piu' portabile: gli agenti leggono/scrivono file senza database esterni.
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.

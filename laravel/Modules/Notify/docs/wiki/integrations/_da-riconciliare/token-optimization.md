@@ -2,17 +2,16 @@
 qmd: "token optimization"
 issues: []
 discussions: []
-title: "Token Optimization: <nome repository>"
+title: "Token Optimization — <nome repository>"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Token Optimization: <nome repository>
-# Token Optimization: <nome repitory>
+# Token Optimization — <nome repository>
+# Token Optimization — <nome repitory>
 
 ## 🔴 Documento Aggiornato: [token-efficiency-religion.md](./token-efficiency-religion.md)
 
@@ -54,7 +53,7 @@ status: draft
 ### Durante la sessione
 - `Grep` per trovare il blocco CSS, poi `Read` con `offset`+`limit`
 - Non rileggere file già letti nella stessa sessione
-- Output: tabelle, diff, bullet: non descrizioni verbose
+- Output: tabelle, diff, bullet — non descrizioni verbose
 - **MAI** leggere file > 500 righe senza prima fare `Grep`
 
 ### File pesanti da NON leggere intero
@@ -66,19 +65,19 @@ status: draft
 | `laravel/CLAUDE.md` | ~825 | Già in contesto automaticamente |
 | `sprint-status.yaml` | ~170 | `Read offset+limit` per epic specifico |
 
-## Strategia CLAUDE.md/QWEN.md ottimale
+## Strategia CLAUDE.md/qwen.md ottimale
 
 Mantenere ≤ 2,000 token (≈ 1,500 parole). Il file root `CLAUDE.md` attuale è ~200 parole: dentro il limite.
 
-`laravel/CLAUDE.md` è ~10,000 token ma è auto-generato da Laravel Boost: non modificabile.
+`laravel/CLAUDE.md` è ~10,000 token ma è auto-generato da Laravel Boost — non modificabile.
 
 ## Fonti
 
-- [Branch8: Claude Code Token Limits Guide](https://branch8.com/posts/claude-code-token-limits-cost-optimization-apac-teams)
-- [Sabrina.dev: 6 Ways to Cut Token Usage in Half](https://www.sabrina.dev/p/6-ways-i-cut-my-claude-token-usage)
-- [Mindstudio: 18 Claude Code Token Hacks](https://www.mindstudio.ai/blog/claude-code-token-management-hacks-3)
+- [Branch8 — Claude Code Token Limits Guide](https://branch8.com/posts/claude-code-token-limits-cost-optimization-apac-teams)
+- [Sabrina.dev — 6 Ways to Cut Token Usage in Half](https://www.sabrina.dev/p/6-ways-i-cut-my-claude-token-usage)
+- [Mindstudio — 18 Claude Code Token Hacks](https://www.mindstudio.ai/blog/claude-code-token-management-hacks-3)
 - [drona23/claude-token-efficient (GitHub)](https://github.com/drona23/claude-token-efficient)
-- [The New Stack: Token-Efficient Data Prep](https://thenewstack.io/a-guide-to-token-efficient-data-prep-for-llm-workloads/)
-- [Sitepoint: Claude API Token Optimization](https://www.sitepoint.com/claude-api-token-optimization/)
-- [Reddit: Practical Guide (Pochi)](https://www.reddit.com/r/AI_Agents/comments/1remock/wrote_a_practical_guide_on_reducing_token_usage/)
-- [LogRocket: 10 Ways to Cut Token Usage](https://blog.logrocket.com/stop-wasting-ai-tokens-10-ways-to-reduce-usage/)
+- [The New Stack — Token-Efficient Data Prep](https://thenewstack.io/a-guide-to-token-efficient-data-prep-for-llm-workloads/)
+- [Sitepoint — Claude API Token Optimization](https://www.sitepoint.com/claude-api-token-optimization/)
+- [Reddit — Practical Guide (Pochi)](https://www.reddit.com/r/AI_Agents/comments/1remock/wrote_a_practical_guide_on_reducing_token_usage/)
+- [LogRocket — 10 Ways to Cut Token Usage](https://blog.logrocket.com/stop-wasting-ai-tokens-10-ways-to-reduce-usage/)

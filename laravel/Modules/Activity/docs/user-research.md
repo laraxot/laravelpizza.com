@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_7kfB4j
 # Activity Module - User Research
 
 **Module:** Activity  
@@ -99,6 +100,8 @@ Legal teams need configurable retention periods.
 ---
 
 *Last Updated: March 12, 2026*
+=======
+>>>>>>> .merge_file_OIWXwC
 ---
 title: "Activity Module - User Research"
 type: note
@@ -106,6 +109,7 @@ status: draft
 updated: 2026-10-08
 tags: [docs, activity]
 qmd: "activity module - user research activity"
+<<<<<<< .merge_file_7kfB4j
 ---
 # Activity Module - User Research
 
@@ -216,3 +220,6 @@ Identify user needs for Activity functionality.
 
 ## 🔬 Research Goals
 Identify user needs for Activity functionality.
+=======
+---
+>>>>>>> .merge_file_OIWXwC

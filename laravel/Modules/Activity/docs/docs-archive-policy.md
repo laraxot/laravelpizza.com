@@ -1,4 +1,5 @@
 ---
+qmd: "activity docs archive policy md"
 title: docs archive policy — puntatore
 type: reference
 updated: 2026-05-21

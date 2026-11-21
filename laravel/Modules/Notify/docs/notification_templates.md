@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notification templates"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Template delle Notifiche

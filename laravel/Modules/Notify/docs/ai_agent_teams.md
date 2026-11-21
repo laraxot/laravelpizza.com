@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ai agent teams"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Agent Teams - Coordination Hub
@@ -17,6 +16,15 @@ status: draft
 **Purpose**: Coordinate multiple AI agents working on the same codebase
 
 ---
+
+title: "ai agent teams"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai agent teams"
+issues: []
+discussions: []
 ## 🎯 Why Agent Teams?
 
 Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity platform. Without coordination:
@@ -76,7 +84,7 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
 - ✅ Update AGENTS.md with commit/push rules
-- ✅ Update agents.md with commit/push rules
+- ✅ Update AGENTS.md with commit/push rules
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 
@@ -240,7 +248,7 @@ git push origin dev
 - **Issue #12**: AI Agent Collaboration
 - **Issue #13**: Documentation Updates
 - **docs/SYNC_TEST_RESULTS.md**: Latest sync test results
-- **docs/SYNC_REMOTE_REPO_TEST_PLAN.md**: Test plan
+- **docs/sync_remote_repo_test_plan.md**: Test plan
 
 ---
 

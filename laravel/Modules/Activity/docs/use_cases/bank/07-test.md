@@ -1,12 +1,10 @@
 ---
 title: "Testing Bank (Event Sourcing)"
+qmd: "activity use cases bank 07 test md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "testing bank (event sourcing) activity"
-status: superseded
-superseded_by: test.md
+tags: [documentation]
 ---
+
 # Testing Bank (Event Sourcing)
 
 ## Unit Test

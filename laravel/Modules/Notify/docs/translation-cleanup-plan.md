@@ -12,7 +12,7 @@ status: draft
 
 # Piano di Pulizia e Standardizzazione delle Traduzioni
 
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Quaeris.
+Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
 

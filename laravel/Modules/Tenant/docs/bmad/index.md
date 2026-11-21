@@ -1,13 +1,11 @@
 ---
-title: Tenant: indice BMAD
+title: Tenant — indice BMAD
 type: index
 tags: [docs, bmad, tenant]
 qmd: "Tenant indice BMAD documentazione"
-status: draft
-updated: 2026-10-09
 ---
 
-# Tenant: indice BMAD
+# Tenant — indice BMAD
 
 ## Canonico
 

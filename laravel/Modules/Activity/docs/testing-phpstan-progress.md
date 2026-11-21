@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - PHPStan Testing Progress"
+qmd: "activity testing phpstan progress md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - phpstan testing progress activity"
+tags: [documentation]
 ---
+
 # Activity Module - PHPStan Testing Progress
 
 **Date**: 2025-12-15
@@ -103,8 +102,3 @@ parameters:
 > "The site works. If tests fail, the tests are wrong, not the code."
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-## event sourcing business logic (2026-10)
-
-`EventSourcingBusinessLogicTest` usa asserzioni PHPUnit e `Safe\json_encode`/`json_decode` al posto delle catene Pest higher-order.
-

@@ -16,7 +16,7 @@ related:
 
 # Proprietà tipizzate invece di `$this->attributes[...]`
 
-> `(int) ($this->attributes['total_jobs'] ?? 0)` produce `cast.int: Cannot cast mixed to
+> `(int) ($this->attributes['total_jobs'] ?? 0)` produce `cast.int — Cannot cast mixed to
 > int` a livello max. Il cast non è la causa: la causa è aver bypassato il sistema di
 > cast di Eloquent, che sul model era già configurato correttamente.
 
@@ -50,8 +50,8 @@ L'operatore vede conteggi batch corretti: non è un esercizio PHPStan.
 2. `mixed` è l'ultima spiaggia. Prima di dichiararlo o di passarci attraverso, chiediti
    da dove nasce il valore: quasi sempre c'è un tipo più stretto già disponibile a monte.
 3. Solo se il valore è davvero non tipizzabile alla fonte (stato di una colonna Filament,
-   JSON esterno, argomenti arbitrari) usa le Action di cast del modulo Xot -
-   `SafeStringCastAction`, `SafeIntCastAction`: invece di un cast inline.
+   JSON esterno, argomenti arbitrari) usa le Action di cast del modulo Xot —
+   `SafeStringCastAction`, `SafeIntCastAction` — invece di un cast inline.
 4. Non aggiungere `@var` o `assert()` per zittire l'analizzatore: sposta il tipo dove il
    valore nasce.
 
@@ -73,4 +73,4 @@ cd laravel && php -d memory_limit=-1 ./vendor/bin/phpstan analyse Modules/Job
 ## Riferimenti
 
 - [Azioni di cast sicure (Xot)](../../Xot/docs/cast-actions.md)
-- [Story 5.7: PHPStan Modules green](../../Xot/docs/stories/5.7.phpstan-modules-green.story.md)
+- [Story 5.7 — PHPStan Modules green](../../Xot/docs/stories/5.7.phpstan-modules-green.story.md)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coordinate picker entanglement"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CoordinatePicker: State Management and Multi-Column Mapping

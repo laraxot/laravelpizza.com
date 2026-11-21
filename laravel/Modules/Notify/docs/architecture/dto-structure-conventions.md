@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Convenzioni per la Struttura dei DTO nel Modulo Notify
 

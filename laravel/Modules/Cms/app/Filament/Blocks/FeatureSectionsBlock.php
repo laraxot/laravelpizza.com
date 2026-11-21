@@ -14,12 +14,12 @@ class FeatureSectionsBlock extends XotBaseBlock
     public static function getBlockSchema(): array
     {
         return [
-            TextInput::make('title')->label('Titolo')->required(),
+            TextInput::make('title')->label('Title')->required(),
             Repeater::make('sections')
                 ->label('Sezioni')
                 ->schema([
-                    TextInput::make('title')->label('Titolo')->required(),
-                    TextInput::make('description')->label('Descrizione')->required(),
+                    TextInput::make('title')->label('Title')->required(),
+                    TextInput::make('description')->label('Description')->required(),
                     Select::make('icon')
                         ->label('Icona')
                         ->options([

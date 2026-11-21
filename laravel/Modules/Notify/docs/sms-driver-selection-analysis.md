@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms driver selection analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi: Spostamento Logica Selezione Driver in SmsData

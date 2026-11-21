@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coordinate picker blade fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Coordinate Picker Blade Template Fix

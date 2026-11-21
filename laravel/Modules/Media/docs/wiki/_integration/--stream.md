@@ -1,14 +1,8 @@
 ---
+qmd: "media wiki integration stream md"
 module: theme
 topic: __stream
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
-title: "__stream"
-type: note
-updated: 2026-10-08
-tags: [docs, media, wiki]
-qmd: "__stream media"
-status: superseded
-superseded_by: ../../_integration/--stream.md
 ---
 # __stream
 

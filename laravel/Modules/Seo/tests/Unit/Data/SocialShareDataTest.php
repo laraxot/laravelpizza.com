@@ -48,13 +48,6 @@ it('accepts all optional fields', function (): void {
     Assert::assertSame('laravel,php,meetup', $data->hashtags);
     Assert::assertSame('laravelpizza', $data->via);
     Assert::assertSame(['twitter', 'linkedin'], $data->platforms);
-    expect($data->url)->toBe('https://laravelpizza.com/events/laravel-pizza-1')
-        ->and($data->title)->toBe('Laravel Pizza Meetup')
-        ->and($data->text)->toBe('Join us for pizza and Laravel!')
-        ->and($data->image)->toBe('https://laravelpizza.com/images/og.png')
-        ->and($data->hashtags)->toBe('laravel,php,meetup')
-        ->and($data->via)->toBe('laravelpizza')
-        ->and($data->platforms)->toBe(['twitter', 'linkedin']);
 });
 
 it('can override platforms with custom list', function (): void {
@@ -79,6 +72,4 @@ it('serializes to array via Spatie Data', function (): void {
     Assert::assertSame('https://laravelpizza.com', $array['url']);
     Assert::assertArrayHasKey('title', $array);
     Assert::assertSame('Laravel Pizza', $array['title']);
-    expect($array)->toHaveKey('url', 'https://laravelpizza.com')
-        ->and($array)->toHaveKey('title', 'Laravel Pizza');
 });

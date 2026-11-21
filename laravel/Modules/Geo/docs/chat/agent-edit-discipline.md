@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "agent edit discipline"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Confronto agenti — disciplina edit (#124) + second brain

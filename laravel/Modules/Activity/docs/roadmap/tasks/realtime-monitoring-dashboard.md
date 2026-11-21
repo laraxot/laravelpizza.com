@@ -1,3 +1,10 @@
+---
+title: "Task: Real-time Activity Monitoring Dashboard"
+qmd: "activity roadmap tasks realtime monitoring dashboard md"
+type: note
+tags: [documentation]
+---
+
 # Task: Real-time Activity Monitoring Dashboard
 
 ## 🎯 Objective

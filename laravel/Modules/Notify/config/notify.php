@@ -15,7 +15,12 @@ return [
     'mailjet_webhook_token' => Env::get('MAILJET_WEBHOOK_TOKEN'),
     // Records the mail provider asks for; read as config('notify.notify.mail_dns'), checked by `php artisan notify:check-dns` (CheckMailDnsAction).
     'mail_dns' => [
+<<<<<<< .merge_file_QaT65v
         'domain' => Env::get('MAIL_DNS_DOMAIN', 'fixcity.eu'),
+=======
+        // Nessun dominio di un progetto preciso: il modulo e' condiviso. Ogni installazione imposta MAIL_DNS_DOMAIN.
+        'domain' => Env::get('MAIL_DNS_DOMAIN'),
+>>>>>>> .merge_file_vuqR3O
         'cnames' => [
             'mt78' => 'smtp.mailtrap.live',
             'rwmt1._domainkey' => 'rwmt1.dkim.smtp.mailtrap.live',
@@ -47,7 +52,8 @@ return [
         'notification_clicked' => '{{webhook_base}}/webhooks/notification-clicked',
     ],
     'email' => [
-        'default_from_address' => 'noreply@fixcity.eu',
+        // Prima 'noreply@fixcity.eu' per tutti i progetti: un'altra installazione avrebbe spedito a nome di FixCity.
+        'default_from_address' => Env::get('MAIL_FROM_ADDRESS', 'noreply@localhost'),
         'default_from_name' => '{{company_name}}',
         'default_admin_email' => 'admin@{{company_name}}.com',
         'default_developer_email' => 'developer@{{company_name}}.com',

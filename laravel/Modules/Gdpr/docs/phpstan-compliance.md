@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan compliance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Compliance - GDPR Module

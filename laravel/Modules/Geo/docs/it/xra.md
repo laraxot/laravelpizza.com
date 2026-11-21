@@ -10,7 +10,6 @@ title: Il file xra.php
 description: Il file xra.php
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Il file xra.php {#il-file-xra}

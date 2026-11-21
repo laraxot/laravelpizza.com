@@ -5,7 +5,6 @@ tags: [activity, best-practices, dry, kiss]
 created: 2026-06-10
 updated: 2026-06-10
 qmd: self
-status: draft
 ---
 
 # Best Practices – Activity
@@ -24,5 +23,5 @@ status: draft
 - Copri casi limite come transizioni di stato non valide.
 
 ## Documentazione
-- Aggiorna `docs/INDEX.md` con nuovi modelli e relazioni.
+- Aggiorna `docs/index.md` con nuovi modelli e relazioni.
 - Collega a `Projects` e `Tasks` per contesto operativo.

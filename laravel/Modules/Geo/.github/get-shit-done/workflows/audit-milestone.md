@@ -39,9 +39,9 @@ CHECKER_MODEL=$(node .github/get-shit-done/bin/gsd-tools.cjs resolve-model gsd-i
 node .github/get-shit-done/bin/gsd-tools.cjs phases list
 ```
 
-- Parse version from arguments or detect current from ROADMAP.md
+- Parse version from arguments or detect current from roadmap.md
 - Identify all phase directories in scope
-- Extract milestone definition of done from ROADMAP.md
+- Extract milestone definition of done from roadmap.md
 - Extract requirements mapped to this milestone from REQUIREMENTS.md
 
 ## 2. Read All Phase Verifications
@@ -52,7 +52,7 @@ For each phase directory, read the VERIFICATION.md:
 # For each phase, use find-phase to resolve the directory (handles archived phases)
 PHASE_INFO=$(node .github/get-shit-done/bin/gsd-tools.cjs find-phase 01 --raw)
 # Extract directory from JSON, then read VERIFICATION.md from that directory
-# Repeat for each phase number from ROADMAP.md
+# Repeat for each phase number from roadmap.md
 ```
 
 From each VERIFICATION.md, extract:
@@ -110,9 +110,9 @@ For each phase's VERIFICATION.md, extract the expanded requirements table:
 - Requirement | Source Plan | Description | Status | Evidence
 - Map each entry back to its REQ-ID
 
-### 5c. Extract SUMMARY.md Frontmatter Cross-Check
+### 5c. Extract summary.md Frontmatter Cross-Check
 
-For each phase's SUMMARY.md, extract `requirements-completed` from YAML frontmatter:
+For each phase's summary.md, extract `requirements-completed` from YAML frontmatter:
 ```bash
 for summary in .planning/phases/*-*/*-SUMMARY.md; do
   node .github/get-shit-done/bin/gsd-tools.cjs summary-extract "$summary" --fields requirements_completed | jq -r '.requirements_completed'
@@ -304,7 +304,7 @@ All requirements met. No critical blockers. Accumulated tech debt needs review.
 <success_criteria>
 - [ ] Milestone scope identified
 - [ ] All phase VERIFICATION.md files read
-- [ ] SUMMARY.md `requirements-completed` frontmatter extracted for each phase
+- [ ] summary.md `requirements-completed` frontmatter extracted for each phase
 - [ ] REQUIREMENTS.md traceability table parsed for all milestone REQ-IDs
 - [ ] 3-source cross-reference completed (VERIFICATION + SUMMARY + traceability)
 - [ ] Orphaned requirements detected (in traceability but absent from all VERIFICATIONs)

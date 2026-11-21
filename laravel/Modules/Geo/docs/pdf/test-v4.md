@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test v4"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Conversione di test.pdf in Markdown (test_v4.md)
@@ -15,6 +14,15 @@ status: draft
 > **Attenzione:** Il PDF originale non contiene testo estraibile. Tutti i tentativi di estrazione automatica (testo, immagini, OCR) hanno fallito. Questo file contiene la struttura, i metadati, i dettagli tecnici e placeholder per i contenuti delle pagine.
 
 ---
+
+title: "test v4"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v4"
+issues: []
+discussions: []
 ## Metadati principali
 
 - **Percorso originale**: bashscripts/pdf/test.pdf

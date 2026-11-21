@@ -1,14 +1,13 @@
 ---
-qmd: "AGENTS"
+qmd: "Agents"
 issues: []
 discussions: []
-title: "Project Agents (Modular)"
+title: "Agents"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Project Agents (Modular)
@@ -67,9 +66,6 @@ docs/
 - [Schema Wiki](./docs/.schema/wiki-schema.md) - Istruzioni per l'LLM
 - [Index Globale](./docs/wiki/index.md) - Catalogo di tutte le wiki
 - [Log](./docs/log.md) - Cronologia delle operazioni
-- [Schema Wiki](../../../.schema/wiki-schema.md) - Istruzioni per l'LLM
-- [Index Globale](../../index.md) - Catalogo di tutte le wiki
-- [Log](../../../log.md) - Cronologia delle operazioni
 
 ### Workflow
 
@@ -93,8 +89,8 @@ docs/
 ---
 **See also:**
 - [CLAUDE.md](./CLAUDE.md)
-- [QWEN.md](./QWEN.md)
-- [GEMINI.md](./GEMINI.md)
+- [qwen.md](./qwen.md)
+- [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
 

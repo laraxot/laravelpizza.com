@@ -10,7 +10,6 @@ related:
   - no-app-support-queueable-actions.md
   - ../../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
   - ../../../Xot/docs/wiki/concepts/no-app-support-queueable-actions.md
-status: active
 ---
 
 # Activity — Services/Support vietati: solo Actions

@@ -1,17 +1,14 @@
 ---
-title: "Agent instructions"
-type: reference
-tags: [agents, coding-agent, llm-wiki]
-created: 2026-07-01
-updated: 2026-07-01
-qmd: "istruzioni agenti LLM wiki modulo"
-issues: []
-discussions: []
+title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
+module: "Media"
+type: concept
+tags: [AGENTS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "agents"
 related:
   - "./webm.md"
-status: draft
 ---
-
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
@@ -155,7 +152,7 @@ Related:
 
 ---
 
-<!-- Merged from agents.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Agent instructions"

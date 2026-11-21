@@ -11,7 +11,6 @@ related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/how-to/phpstan-modules-swarm.md
   - handoff-phpstan-modules-zero.md
-status: draft
 ---
 
 # Handoff — PHPStan scan random 2026-06-15

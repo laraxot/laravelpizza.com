@@ -3,11 +3,10 @@ title: "sms troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-23
+updated: 2026-09-26
 qmd: "sms troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Troubleshooting SMS
@@ -89,7 +88,7 @@ status: draft
 ### 1. Struttura Log
 ```json
 {
-    "timestamp": "2024-03-20 10:00:00",
+    "timestamp": "[DATE] 10:00:00",
     "level": "error",
     "message": "SMS sending failed",
     "context": {

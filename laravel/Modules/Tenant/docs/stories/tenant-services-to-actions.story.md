@@ -11,7 +11,7 @@ status: done
 created: 2026-09-04
 updated: 2026-09-04
 owned_scope:
-  - "laravel/Modules/Tenant/app/Services/** (deleted entirely)"
+  - "laravel/Modules/Tenant/app/Services/**" (deleted entirely)
   - "laravel/Modules/Tenant/tests/Unit/TenantCoverageBoostTest.php"
   - "laravel/Modules/Tenant/tests/Unit/TenantStatementCoverageTest.php"
   - "laravel/Modules/Tenant/tests/Unit/TenantGapsCoverageTest.php"
@@ -27,12 +27,12 @@ related:
 
 ## Contesto
 
-Regola di progetto: "RELIGION, NO EXCEPTIONS" -
+Regola di progetto: "RELIGION, NO EXCEPTIONS" —
 `bashscripts/ai/wiki/rules/no-services-rule.md`. Nessuna classe `app/Services/*Service`
 per business logic; tutto va in `app/Actions/**` come
 `Spatie\QueueableAction\QueueableAction` con un singolo `execute(...)`. Una classe senza
 un vero `execute()` non vive comunque in `Actions/`: va spostata altrove (Adapters,
-Contracts, Datas): o rimossa se e' morta.
+Contracts, Datas) — o rimossa se e' morta.
 
 `Modules/Tenant/app/Services/` conteneva 7 file. Questo documento registra la
 classificazione file-per-file (Kind A = god-service facade da smontare in Action
@@ -42,7 +42,7 @@ registry), cosi' che nessuno debba rifare l'indagine.
 ## Stato di partenza (git status --short, prima di ogni modifica)
 
 `Modules/Tenant` aveva ~87 file gia' modificati e non committati da una sessione
-concorrente (docs, model, migration, quasi tutti i test: riformattazione Pint
+concorrente (docs, model, migration, quasi tutti i test — riformattazione Pint
 `new Foo` → `new Foo()`, rename `mockService` → `TestCase::mockAppService`,
 `shouldReceive` → `TestCase::expectMockery`). Non toccato ne' scartato nulla di
 quel lavoro: gli unici file the cui contenuto e' stato modificato in questo task sono
@@ -53,13 +53,13 @@ contenuto gia' presente (mai `git checkout`/`reset` per "ripulire" prima di edit
 
 | File | Kind | Callers reali (repo-wide grep) | Decisione | Perche' |
 |---|---|---|---|---|
-| `app/Services/TenantService.php` | A: facade gia' sottile | Solo test (`TenantCoverageBoostTest.php`, `TenantStatementCoverageTest.php`); 2 menzioni in `Modules/Notify`/`Modules/User` sono commenti morti, non call site | **Eliminata**. Ogni metodo delegava gia' 1:1 a un'Action esistente (`GetTenantNameAction`, `GetTenantFilePathAction`, `ResolveTenantConfigValueAction`, `GetTenantConfigPathAction`, `GetTenantConfigArrayAction`, `SaveTenantConfigAction`, `GetTenantConfigNamesAction`, `ResolveTenantModelClassAction`, `ResolveTenantModelInstanceAction`, `TranslateTenantKeyAction`, `GetTenantModulesAction`): tutte gia' in `app/Actions/**`, tutte gia' `QueueableAction`. Caller aggiornati a `app(XxxAction::class)->execute(...)`. | Il lavoro vero era gia' fatto (vedi `docs/concepts/tenant-service-to-actions-migration.md`, 2026-07-21); restava solo ritirare il wrapper statico e i suoi ultimi due call site di test. |
-| `app/Services/Config/ConfigResolverRegistry.php` | B: Registry/Strategy dispatcher | **Zero** in produzione: non istanziata, non bindata in `TenantServiceProvider`, non referenziata da `ResolveTenantConfigValueAction` (il vero path usa `FilterConfigStringKeysAction`+`MergeRecursiveStringKeyConfigAction`, implementazione indipendente). Solo test la usavano. | **Eliminata**, non rilocata sotto `Actions/Config/Strategies/`. | Codice morto verificato via grep repo-wide + lettura di `TenantServiceProvider`. Rilocare codice morto sotto `Actions/` avrebbe solo spostato l'anti-pattern di un livello, non l'avrebbe rimosso: la guida della regola ("una classe senza execute() non vive in Actions/") si applica a maggior ragione a una classe senza *nessun* chiamante reale. |
-| `app/Services/Config/Contracts/ConfigResolverInterface.php` | B: Contract per il registry sopra | Solo il registry morto + i 3 resolver sotto + test | **Eliminata** (parte dello stesso sottoalbero morto). | Stesso motivo. |
-| `app/Services/Config/Resolvers/DatabaseConfigResolver.php` | B: Strategy | Solo dal registry morto + test | **Eliminata**. | Stesso motivo. |
-| `app/Services/Config/Resolvers/MorphMapConfigResolver.php` | B: Strategy | Solo dal registry morto + test (usava anche `TenantService::filePath()`, gia' morto) | **Eliminata**. | Stesso motivo. |
-| `app/Services/Config/Resolvers/StandardConfigResolver.php` | B: Strategy (fallback) | Solo dal registry morto + test (usava anche `TenantService::getName()`) | **Eliminata**. | Stesso motivo. |
-| `app/Services/Config/ConfigStringKeyFilter.php` | A: utility con 2 metodi statici indipendenti | Solo test | **Eliminata senza creare nuove Action**: `onlyStringKeys()` e `mergeRecursive()` sono duplicati byte-per-byte di `app/Actions/Config/FilterConfigStringKeysAction::execute()` e `app/Actions/Config/MergeRecursiveStringKeyConfigAction::execute()`, gia' esistenti, gia' `QueueableAction`, gia' usate dal path di produzione reale. | Non ha senso creare una Action duplicata quando l'equivalente gia' esiste: il caller di test e' stato ripuntato sulle Action reali. |
+| `app/Services/TenantService.php` | A — facade gia' sottile | Solo test (`TenantCoverageBoostTest.php`, `TenantStatementCoverageTest.php`); 2 menzioni in `Modules/Notify`/`Modules/User` sono commenti morti, non call site | **Eliminata**. Ogni metodo delegava gia' 1:1 a un'Action esistente (`GetTenantNameAction`, `GetTenantFilePathAction`, `ResolveTenantConfigValueAction`, `GetTenantConfigPathAction`, `GetTenantConfigArrayAction`, `SaveTenantConfigAction`, `GetTenantConfigNamesAction`, `ResolveTenantModelClassAction`, `ResolveTenantModelInstanceAction`, `TranslateTenantKeyAction`, `GetTenantModulesAction`) — tutte gia' in `app/Actions/**`, tutte gia' `QueueableAction`. Caller aggiornati a `app(XxxAction::class)->execute(...)`. | Il lavoro vero era gia' fatto (vedi `docs/concepts/tenant-service-to-actions-migration.md`, 2026-07-21); restava solo ritirare il wrapper statico e i suoi ultimi due call site di test. |
+| `app/Services/Config/ConfigResolverRegistry.php` | B — Registry/Strategy dispatcher | **Zero** in produzione: non istanziata, non bindata in `TenantServiceProvider`, non referenziata da `ResolveTenantConfigValueAction` (il vero path usa `FilterConfigStringKeysAction`+`MergeRecursiveStringKeyConfigAction`, implementazione indipendente). Solo test la usavano. | **Eliminata**, non rilocata sotto `Actions/Config/Strategies/`. | Codice morto verificato via grep repo-wide + lettura di `TenantServiceProvider`. Rilocare codice morto sotto `Actions/` avrebbe solo spostato l'anti-pattern di un livello, non l'avrebbe rimosso — la guida della regola ("una classe senza execute() non vive in Actions/") si applica a maggior ragione a una classe senza *nessun* chiamante reale. |
+| `app/Services/Config/Contracts/ConfigResolverInterface.php` | B — Contract per il registry sopra | Solo il registry morto + i 3 resolver sotto + test | **Eliminata** (parte dello stesso sottoalbero morto). | Stesso motivo. |
+| `app/Services/Config/Resolvers/DatabaseConfigResolver.php` | B — Strategy | Solo dal registry morto + test | **Eliminata**. | Stesso motivo. |
+| `app/Services/Config/Resolvers/MorphMapConfigResolver.php` | B — Strategy | Solo dal registry morto + test (usava anche `TenantService::filePath()`, gia' morto) | **Eliminata**. | Stesso motivo. |
+| `app/Services/Config/Resolvers/StandardConfigResolver.php` | B — Strategy (fallback) | Solo dal registry morto + test (usava anche `TenantService::getName()`) | **Eliminata**. | Stesso motivo. |
+| `app/Services/Config/ConfigStringKeyFilter.php` | A — utility con 2 metodi statici indipendenti | Solo test | **Eliminata senza creare nuove Action**: `onlyStringKeys()` e `mergeRecursive()` sono duplicati byte-per-byte di `app/Actions/Config/FilterConfigStringKeysAction::execute()` e `app/Actions/Config/MergeRecursiveStringKeyConfigAction::execute()`, gia' esistenti, gia' `QueueableAction`, gia' usate dal path di produzione reale. | Non ha senso creare una Action duplicata quando l'equivalente gia' esiste — il caller di test e' stato ripuntato sulle Action reali. |
 
 **Precedente reale nello stesso repo**: il commit `a85698f` ("Delete dead
 ConfigResolverRegistry strategy-chain (zero callers)", 2026-07-02, stesso autore) aveva
@@ -86,7 +86,7 @@ fresca.
 - `Modules/Tenant/tests/Unit/TenantStatementCoverageTest.php`:
   - rimossi gli `use` verso `Modules\Tenant\Services\*` (5 import) e `ReflectionClass`
     (usata solo nel describe rimosso)
-  - rimosso l'intero describe `'Tenant statement coverage: resolvers'` (4 test sui
+  - rimosso l'intero describe `'Tenant statement coverage — resolvers'` (4 test sui
     resolver morti + registry)
   - `TenantService::model('tenant')` rimosso (duplicato della riga precedente nello
     stesso test, che gia' verifica `ResolveTenantModelInstanceAction` direttamente)
@@ -103,7 +103,7 @@ fresca.
 
 **Cross-module**: nessun call site reale fuori da `Modules/Tenant`. Trovate solo 2
 menzioni in commenti morti (`Modules/Notify/app/Datas/SMS/AgiletelecomData.php:38`,
-`Modules/User/resources/views/pages/index.blade.php:17`), non funzionali: lasciate
+`Modules/User/resources/views/pages/index.blade.php:17`), non funzionali — lasciate
 intatte, nessun modulo esterno da committare.
 
 ## Collisione con un'altra sessione (scoperta durante il lavoro)
@@ -123,7 +123,7 @@ Modules/Tenant/app/Actions/TenantAction.php
 ```
 
 `mtime` di questi file e' rimasto invariato per oltre 5 minuti di osservazione (nessuna
-scrittura attiva rilevata): probabile sessione concorrente andata in errore/arrestata a
+scrittura attiva rilevata) — probabile sessione concorrente andata in errore/arrestata a
 meta' di uno script di trasformazione automatica, non ripulita. **Non toccati** (mai
 `rm`/edit su file non miei), per rispetto della regola "non scartare il lavoro in corso
 di un'altra sessione". Bloccano `phpstan analyse Modules/Tenant` con 6 errori

@@ -2,16 +2,15 @@
 qmd: "optimization consolidated"
 issues: []
 discussions: []
-title: "optimization: Consolidated Documentation"
+title: "optimization — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# optimization: Consolidated Documentation
+# optimization — Consolidated Documentation
 
 Consolidated from **8** individual files.
 
@@ -30,7 +29,6 @@ Consolidated from **8** individual files.
 
 ## optimization-analysis-1
 
-*Consolidated from: `optimization-analysis.md`*
 *Consolidated from: `optimization-analysis-user-module-documentation.md`*
 
 title: "notify module documentation optimization analysis"
@@ -42,17 +40,12 @@ qmd: "optimization-analysis-1 notify module documentation optimization analysis"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -108,7 +101,7 @@ docs/
 │   ├── notification_system.md
 │   ├── getting_started.md
 │   ├── advanced_topics.md
-│   └── performance-optimization-analisi-ottimizzazione.md
+│   └── performance-optimization-2.md
 ├── channels/
 │   ├── email-notifications.md
 │   ├── sms_notifications.md
@@ -261,7 +254,7 @@ class NotificationTemplateCache
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -471,7 +464,6 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-- [Linee Guida Riusabilità](../../reusability_guidelines.md)
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
@@ -480,7 +472,7 @@ php artisan notify:benchmark
 
 ## optimization-recommendations-2
 
-*Consolidated from: `optimization-recommendations.md`*
+*Consolidated from: `optimization-recommendations-2.md`*
 
 title: "Raccomandazioni di Ottimizzazione - Modulo Notify"
 type: concept
@@ -491,17 +483,12 @@ qmd: "optimization-recommendations-2 raccomandazioni di ottimizzazione - modulo 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -521,7 +508,7 @@ related:
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -733,7 +720,7 @@ php artisan notify:benchmark
 
 ## Collegamenti
 
-- [Linee Guida Riusabilità](reusability-guidelines.md)
+- [Linee Guida Riusabilità](reusability-guidelines-2.md)
 *Ultimo aggiornamento: gennaio 2025*
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
@@ -758,7 +745,7 @@ php artisan notify:benchmark
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -968,7 +955,6 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-- [Linee Guida Riusabilità](../../reusability_guidelines.md)
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
@@ -987,7 +973,7 @@ php artisan notify:benchmark
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -1197,7 +1183,6 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-- [Linee Guida Riusabilità](../../reusability_guidelines.md)
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
@@ -1415,7 +1400,7 @@ docs/
 
 #### 2. Documentazione Frammentata
 - **150+ file** di documentazione non organizzati
-- **Duplicazioni** multiple (analysis-dettagliata-architettura-struttura.md fino a -8.md)
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
 - **File obsoleti** non rimossi
 - **Naming inconsistente** (alcuni file con maiuscole)
 
@@ -1632,7 +1617,6 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-- [Linee Guida Riusabilità](../../reusability_guidelines.md)
 - [Piano Implementazione](../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 

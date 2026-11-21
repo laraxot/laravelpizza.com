@@ -46,7 +46,7 @@ discussions: []
 ## Format Rules
 
 1. **Always show what it is** — name + description, never just a command path
-2. **Pull context from source** — ROADMAP.md for phases, PLAN.md `<objective>` for plans
+2. **Pull context from source** — roadmap.md for phases, plan.md `<objective>` for plans
 3. **Command in inline code** — backticks, easy to copy-paste, renders as clickable link
 4. **`/clear` explanation** — always include, keeps it concise but explains why
 5. **"Also available" not "Other options"** — sounds more app-like
@@ -197,7 +197,7 @@ All 4 phases shipped
 
 ## Pulling Context
 
-### For phases (from ROADMAP.md):
+### For phases (from roadmap.md):
 
 ```markdown
 ### Phase 2: Authentication
@@ -206,14 +206,14 @@ All 4 phases shipped
 
 Extract: `**Phase 2: Authentication** — JWT login flow with refresh tokens`
 
-### For plans (from ROADMAP.md):
+### For plans (from roadmap.md):
 
 ```markdown
 Plans:
 - [ ] 02-03: Add refresh token rotation
 ```
 
-Or from PLAN.md `<objective>`:
+Or from plan.md `<objective>`:
 
 ```xml
 <objective>

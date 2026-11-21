@@ -1,11 +1,10 @@
 ---
 title: "Confronto tra Implementazioni del Carrello della Spesa"
+qmd: "activity use cases shop comparison md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "confronto tra implementazioni del carrello della spesa activity"
+tags: [documentation]
 ---
+
 # Confronto tra Implementazioni del Carrello della Spesa
 
 ## Introduzione

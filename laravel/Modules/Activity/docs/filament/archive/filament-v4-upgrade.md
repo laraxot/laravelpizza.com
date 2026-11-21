@@ -1,5 +1,14 @@
+---
+title: "Filament v4 Upgrade Documentation"
+type: note
+status: archived
+updated: 2026-10-08
+tags: [docs, activity, filament]
+qmd: "filament v4 upgrade documentation activity"
+---
 # Filament v4 Upgrade Documentation
 
+<<<<<<< .merge_file_3ex97U
 ## Overview
 This document outlines the key changes and upgrades implemented for Filament v4 in the Activity module.
 
@@ -50,3 +59,6 @@ public static function getFormSchema(): array
 
 - [Filament v4 Upgrade Guide](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Filament v4 Schema Documentation](https://filamentphp.com/docs/4.x/forms/fields)
+=======
+This archived copy points to the maintained module documentation: [filament-v4-upgrade.md](../filament-v4-upgrade.md).
+>>>>>>> .merge_file_j5ZNuF

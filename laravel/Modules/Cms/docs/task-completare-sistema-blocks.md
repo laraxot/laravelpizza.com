@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "task completare sistema blocks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Task: Completare Sistema Blocks - Cms
@@ -17,6 +16,15 @@ status: draft
 **Completamento**: 60%
 
 ---
+
+title: "task completare sistema blocks"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task completare sistema blocks"
+issues: []
+discussions: []
 ## Descrizione
 
 Il sistema blocks e' funzionante con 7 tipi (Paragraph, Navigation, Newsletter, Logo, Actions, SocialLinks, Links) ma necessita estensione per coprire tutte le esigenze del tema Meetup.

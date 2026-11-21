@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Testing Standards & Workflow

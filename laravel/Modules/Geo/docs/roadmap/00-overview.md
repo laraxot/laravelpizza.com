@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "00 overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Roadmap overview (Module Geo)

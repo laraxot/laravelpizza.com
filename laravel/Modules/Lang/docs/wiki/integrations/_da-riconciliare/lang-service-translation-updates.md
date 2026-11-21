@@ -138,13 +138,6 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ### Regole Applicate
 - [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
 - [Struttura Espansa Traduzioni](struttura-traduzioni.md)
-- [Translation Standards](../../../translation-standards.md)
-- [Helper Text Rules](../../../translation-helper-text-standards.md)
-- [Lang Service Provider](../../../lang-service-provider.md)
-
-### Regole Applicate
-- [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](../../../struttura-traduzioni.md)
 - [Convenzioni Multi-Lingua](../../../docs/multi-language-conventions.md)
 
 ## Note Implementative

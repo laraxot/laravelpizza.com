@@ -69,7 +69,7 @@ Output: [Working, tested feature]
 
 <context>
 @.planning/PROJECT.md
-@.planning/ROADMAP.md
+@.planning/roadmap.md
 @relevant/source/files.ts
 </context>
 
@@ -95,7 +95,7 @@ Output: [Working, tested feature]
 </success_criteria>
 
 <output>
-After completion, create SUMMARY.md with:
+After completion, create summary.md with:
 - RED: What test was written, why it failed
 - GREEN: What implementation made it pass
 - REFACTOR: What cleanup was done (if any)

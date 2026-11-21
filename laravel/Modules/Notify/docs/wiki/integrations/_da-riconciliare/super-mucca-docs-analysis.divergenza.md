@@ -1,14 +1,13 @@
 ---
-qmd: "super mucca docs analysis.divergenza"
+qmd: "Super Mucca Docs Analysis.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: SUPER_MUCCA_DOCS_ANALYSIS.md"
+title: "Super Mucca Docs Analysis.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `SUPER_MUCCA_DOCS_ANALYSIS.md`

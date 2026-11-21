@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing renamed"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cms Module Testing Guide

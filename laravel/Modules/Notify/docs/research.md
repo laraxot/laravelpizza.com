@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "research"
 issues: []
 discussions: []
-status: draft
 ---
 
 # User Research - FixCity Platform

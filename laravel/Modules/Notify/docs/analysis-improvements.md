@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "analysis improvements"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi e Miglioramenti del Modulo Notify

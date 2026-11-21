@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "models"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modelli e Relazioni del Modulo Notify

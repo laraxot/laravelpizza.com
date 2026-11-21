@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_r4Bf6m
 title: "Gitmodules sync session — note modulo/tema"
+=======
+>>>>>>> .merge_file_hg5tzi
 title: "Gitmodules sync session: note modulo/tema"
 type: how-to
 tags: [git, gitmodules, sync, quality-gates, merge-conflict]
@@ -21,7 +24,10 @@ Sessione orchestrata dal prompt `bashscripts/tools/prompts/02-gitmodules-sync.md
 
 ## Cosa fare su questo owner
 
+<<<<<<< .merge_file_r4Bf6m
 1. `git remote -v` — sync **tutte** le organizzazioni (`fetch` + `pull --ff-only` + `push`, mai `--force`).
+=======
+>>>>>>> .merge_file_hg5tzi
 1. `git remote -v`: sync **tutte** le organizzazioni (`fetch` + `pull --ff-only` + `push`, mai `--force`).
 2. Quality gates da `laravel/`: phpstan → phpmd → phpinsights (`--composer=composer.lock`).
 3. Marker Git: risoluzione manuale forward-only (no `git restore`).

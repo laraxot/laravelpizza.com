@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address italian structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura degli Indirizzi Italiani

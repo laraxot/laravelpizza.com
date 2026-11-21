@@ -8,23 +8,14 @@ qmd: "migration-plan documentation agnostic migration plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # Documentation Agnostic Migration Plan
@@ -313,7 +304,14 @@ Access at: `[YOUR_DOMAIN]/blog`
 
 ### Rollback Plan
 
-If issues are found, git is forward-only: fix the affected files in `laravel/Modules/Cms/docs/` and record the correction with a new commit. Never use `git checkout`, `git restore`, `git reset`, `git revert`, `git stash` or `git rebase` to roll back.
+If issues are found:
+```bash
+# Git makes rollback easy
+git checkout HEAD -- laravel/Modules/Cms/docs/
+
+# Or revert specific commits
+git revert <commit-hash>
+```
 
 ---
 

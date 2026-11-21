@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpmd phar policy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPMD PHAR Policy

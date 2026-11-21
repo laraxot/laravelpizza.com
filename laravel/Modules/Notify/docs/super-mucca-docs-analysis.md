@@ -8,23 +8,14 @@ qmd: "super-mucca-docs-analysis 🐄 super mucca - analisi completa documentazio
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🐄 SUPER MUCCA - Analisi Completa Documentazione
@@ -60,7 +51,7 @@ status: draft
 
 #### 4. **Naming Inconsistente**
 - **README.md**: 56 file (corretto)
-- **readme.md**: 13 file (minuscolo - errato)
+- **README.md**: 13 file (minuscolo - errato)
 - **Convenzione**: Solo README.md in maiuscolo
 - **Priorità**: **MEDIA** - Inconsistenza nelle convenzioni
 
@@ -140,7 +131,7 @@ touch laravel/Modules/Seo/docs/README.md
 
 #### 3.1 Correggere File Minuscoli
 ```bash
-# 13 file "readme.md" da rinominare in "README.md"
+# 13 file "README.md" da rinominare in "README.md"
 # Mantenere consistenza con convezioni
 ```
 

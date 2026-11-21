@@ -1,11 +1,10 @@
 ---
 title: "Collegamento alle Traduzioni del Modulo Activity"
+qmd: "activity lang link md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity]
-qmd: "collegamento alle traduzioni del modulo activity activity"
+tags: [documentation]
 ---
+
 # Collegamento alle Traduzioni del Modulo Activity
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
@@ -33,7 +32,7 @@ Consulta la documentazione delle traduzioni qui:
 ## Collegamenti
 
 - [Torna a README](./README.md)
-- [Torna a README](./readme.md)
+- [Torna a README](./README.md)
 - [Vai a Struttura](./structure.md)
 - [Vai a Traduzioni](./translations.md)
 

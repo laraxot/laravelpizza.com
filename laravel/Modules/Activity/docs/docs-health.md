@@ -1,11 +1,10 @@
 ---
 title: "Docs Health - Activity"
+qmd: "activity docs health md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "docs health - activity activity"
+tags: [documentation]
 ---
+
 # Docs Health - Activity
 
 ## Snapshot

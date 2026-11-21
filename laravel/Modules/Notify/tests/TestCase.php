@@ -44,8 +44,18 @@ abstract class TestCase extends XotBaseTestCase
 
     use DatabaseTransactions;
 
-    /** @var list<string> */
-    protected $connectionsToTransact = ['user', 'notify'];
+    /**
+     * Connessioni da riportare indietro dopo ogni test. Prima elencava `fixcity`, la connessione di
+     * un altro progetto: in ogni altro progetto ogni test falliva con «connection [fixcity] not configured».
+     *
+     * @return list<string>
+     */
+    protected function connectionsToTransact()
+    {
+        $default = config('database.default');
+
+        return array_values(array_unique(array_filter([\is_string($default) ? $default : null, 'user', 'notify'])));
+    }
 
     /**
      * Type-guard: accetta un valore arbitrario e asserisce che sia un array.

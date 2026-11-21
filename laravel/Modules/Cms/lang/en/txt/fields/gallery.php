@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/gallery.php
 // Cms txt.fields.gallery — LangServiceProvider SSoT.
 return [
-    'label' => 'Galleria',
-    'placeholder' => 'Collezione di immagini',
-    'helper_text' => 'Galleria di immagini correlate',
+    'label' => 'Gallery',
+    'placeholder' => 'Image collection',
+    'helper_text' => 'Gallery of related images',
     'tooltip' => '',
     'description' => '',
 ];

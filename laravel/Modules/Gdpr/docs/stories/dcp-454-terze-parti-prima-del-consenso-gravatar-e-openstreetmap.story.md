@@ -1,11 +1,11 @@
 ---
 id: dcp-454
-title: "DCP-454: terze parti caricate prima del consenso (avatar Gravatar e tile OpenStreetMap): decisione"
+title: "DCP-454: terze parti caricate prima del consenso (avatar Gravatar e tile OpenStreetMap)"
 type: story
-status: needs-decision
+status: done
 module: Gdpr
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-17
 tags: [bmad, story, gdpr, cookie, consenso, gravatar, openstreetmap, terze-parti, csp, decisione]
 qmd: "terze parti prima del consenso gravatar avatar md5 email tile openstreetmap cookie banner solo tecnici csp informativa UX-04 UX-09 DEC-69 CMT-022"
 related:
@@ -20,7 +20,57 @@ discussions: ["https://github.com/laraxot/theme_sixteen_fila5/discussions/94", "
 
 # DCP-454: terze parti caricate prima del consenso
 
-Status: **da decidere** (2026-11-12). Fase BMAD: Analysis fatta (audit F, UX-04 e UX-09, 2026-11-11); nessuna modifica di comportamento. Registro: DEC-69 in DCP-200.
+## Decisione e implementazione (2026-11-17)
+
+Il titolare (Marco) ha chiesto «la scelta migliore, studiando prima». Fonti studiate:
+
+- **LG Muenchen, 3 O 17493/20 (20 gennaio 2022)**: mandare l'IP del visitatore a un terzo senza consenso e' illecito quando il
+  terzo non serve (i font si possono ospitare in casa): l'interesse legittimo non regge. Stesso schema per Gravatar.
+- **OSMF Tile Usage Policy**: proxy con cache ammesso (sconsigliato ma regolato): User-Agent con contatto, Referer inoltrato,
+  Cache-Control/Expires rispettati e almeno 7 giorni, richieste condizionali, nessun pre-scaricamento, attribuzione visibile.
+- **OSMF Nominatim Usage Policy**: massimo 1 richiesta al secondo per tutta l'app, cache obbligatoria, autocompletamento
+  vietato, «set up a proxy and enable caching if at all possible», servizio spegnibile senza aggiornare il software.
+
+Scelta: **nessuna richiesta a terzi dal browser prima della scelta**, senza peggiorare il servizio.
+
+| Terzo | Prima | Ora | Dove |
+|---|---|---|---|
+| Gravatar | URL con md5 dell'email in testata e commenti | iniziali (o foto del profilo); interruttore `comments.gravatar.enabled`, spento per Fixcity, acceso di default per gli altri progetti | `Modules/Comment` (CommentConfigData, InteractsWithComments), `config/local/fixcity/comments.php` |
+| Tile OSM | `{a,b,c}.tile.openstreetmap.org` dal browser | `/api/geo/tiles/osm/{z}/{x}/{y}.png`, cache su disco, conditional GET | `Modules/Geo` (FetchOsmTileAction, OsmTileController) |
+| Nominatim | dal browser, anche mentre si digita (vietato dalla policy) | `/api/geo/nominatim/{search,reverse}`, 1 req/s globale, cache 30 giorni, solo Invio o pulsante | `Modules/Geo` (QueryNominatimAction, NominatimController, map/controls/search.js) |
+| Attribuzione | solo «Leaflet» | «© OpenStreetMap contributors» (e Esri, HOT sugli strati scelti) | `Modules/Geo/resources/js/components/map/layers.js` |
+
+Il modulo Geo resta agnostico: le mappe usano il proxy solo se il layout lo dichiara su `<html data-geo-tile-url data-geo-nominatim-url>`
+(il tema Sixteen lo fa in `layouts/main`); senza, usano gli indirizzi pubblici. Le rotte stanno in `routes/api.php` di Geo
+(gruppo `api`: niente sessione ne' cookie). `GeoServiceProvider` ora registra il proprio RouteServiceProvider: senza
+`$module_ns` la base registrava quello di Xot e le rotte di Geo non erano mai state caricate (difetto di fondo da correggere a
+parte: con `$module_ns` cambierebbero anche migrazioni, eventi e traduzioni caricati).
+
+Strati della mappa scelti dall'utente (satellitare/topografica Esri, umanitaria OpenStreetMap France): restano diretti, perche'
+partono solo per una scelta esplicita; informativa e cookie policy lo dicono.
+
+### Verifica
+
+- Playwright, 13 pagine (anonimo): **0 richieste a domini terzi** prima della scelta (prima: tile OSM su home, elenco, dettaglio).
+- Mappa dell'elenco: 16 tile serviti dal proxy (200), attribuzione OSM visibile.
+- `Modules/Geo/tests/Feature/OsmProxyTest.php` (11 test): User-Agent con contatto, Referer, cache minima 7 giorni, 304, copia
+  scaduta se OSM e' giu', 404 fuori griglia, parametri filtrati, 422/503, 1 richiesta al secondo.
+- `Themes/Sixteen/tests/Feature/NoThirdPartyBeforeConsentTest.php`: proxy dichiarato, nessun indirizzo di terzi nell'HTML.
+- `Modules/Comment/tests/Feature/FrontOfficeCommentThreadTest.php`: iniziali e nessun gravatar.com con l'interruttore spento.
+- Informativa (`config/local/fixcity/lang/*/policy.md`, 4 lingue) e cookie policy (`Modules/Gdpr/lang/cookie-consent/*/texts.php`)
+  riscritte: barra, informativa e comportamento dicono la stessa cosa. Tolte anche le righe superate su Google Fonts (font gia'
+  ospitati in casa, nessun preconnect) e staticmap.openstreetmap.de (solo in una vista senza rotte).
+
+### Criteri di accettazione
+
+- [x] Decisione presa dal titolare (2026-11-17).
+- [x] Guardia: senza scelta nessuna richiesta a gravatar.com e tile.openstreetmap.org (test e misura nel browser).
+- [x] Barra cookie e informativa dicono la stessa cosa.
+- [x] Misura nel browser a rete tracciata: 0 richieste a domini terzi prima della scelta.
+
+## Storia (analisi del 2026-11-12)
+
+Status allora: **da decidere** (2026-11-12). Fase BMAD: Analysis fatta (audit F, UX-04 e UX-09, 2026-11-11); nessuna modifica di comportamento. Registro: DEC-69 in DCP-200.
 
 ## Cosa succede oggi (misurato nell'audit, non rimisurato oggi)
 

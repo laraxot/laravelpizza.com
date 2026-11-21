@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "package dependency chaos map"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Package Dependency Chaos Map (Tenant)
 

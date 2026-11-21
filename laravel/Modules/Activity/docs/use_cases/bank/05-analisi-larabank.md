@@ -1,12 +1,10 @@
 ---
 title: "Analisi di Larabank-Aggregates (Spatie)"
+qmd: "activity use cases bank 05 analisi larabank md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "analisi di larabank-aggregates (spatie) activity"
-status: superseded
-superseded_by: analisi-larabank.md
+tags: [documentation]
 ---
+
 # Analisi di Larabank-Aggregates (Spatie)
 
 ## Regole Implementate

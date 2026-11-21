@@ -7,7 +7,7 @@ issues: []
 discussions: []
 id: story-164-media-case-variant-consolidation
 slug: story-164-media-case-variant-consolidation
-title: "STORY-164: Consolidamento delle coppie case-variant nel modulo Media"
+title: "STORY-164 — Consolidamento delle coppie case-variant nel modulo Media"
 description: "Tre coppie di directory case-variant in Media producono due test con lo stesso FQCN di cui uno solo viene eseguito, e due generatori di conversione duplicati. Consolidare confrontando il contenuto, non le date."
 document_type: story
 category: bmad
@@ -18,7 +18,7 @@ language: it-IT
 ecosystem: Laraxot
 priority: high
 epic: 16
-epic_title: "PHPStan: da stato pulito a gate durevole"
+epic_title: "PHPStan — da stato pulito a gate durevole"
 blocks: [16.2]
 created_at: '2026-08-06'
 updated_at: '2026-08-06'
@@ -33,7 +33,7 @@ github:
   discussions: https://github.com/laraxot/module_media_fila5/discussions
 ---
 
-# STORY-164: Consolidamento delle coppie case-variant in Media
+# STORY-164 — Consolidamento delle coppie case-variant in Media
 
 Status: `ready-for-dev` · Scope: `module:Media` · Epic: 16
 Blocca: 16.2 (il guard non puo' entrare finche' Media e' rosso)
@@ -52,7 +52,7 @@ ls -la laravel/Modules/Media/tests/feature laravel/Modules/Media/tests/Feature
 
 | Coppia | Contenuto | Esito |
 |--------|-----------|-------|
-| `tests/feature` + `tests/Feature` | `MediaBusinessLogicTest.php`: 16504 vs 16510 byte | **divergenti** |
+| `tests/feature` + `tests/Feature` | `MediaBusinessLogicTest.php` — 16504 vs 16510 byte | **divergenti** |
 | `tests/filament` + `tests/Filament` | `resources/` vs `Resources/` (a loro volta case-variant) | da ispezionare |
 | `app/conversions` + `app/Conversions` | `imagegenerators`/`videogenerators` vs `ImageGenerators`; `PowerPoint.php`, `Webm.php` | **divergenti** |
 
@@ -72,7 +72,7 @@ stato eseguito, quindi non c'e' alcuna garanzia che passi.
 
 Scegliere per data e' l'errore da non fare. La copia in `tests/feature/` e'
 piu' recente (2026-08-06 21:39) perche' e' stata modificata durante la
-sessione di fix PHPStan: non perche' sia la versione buona.
+sessione di fix PHPStan — non perche' sia la versione buona.
 
 ## Acceptance Criteria
 
@@ -119,6 +119,6 @@ Il numero non e' scritto perche' non esiste ancora: `gh` non e' autenticato in q
 
 ```bash
 gh issue create --repo laraxot/module_media_fila5 \
-  --title "STORY-164: Consolidamento delle coppie case-variant nel modulo Media" --body-file 16-4-media-case-variant-consolidation.md
-gh api repos/laraxot/module_media_fila5/discussions -f title="STORY-164: Consolidamento delle coppie case-variant nel modulo Media" -f body="vedi la story"
+  --title "STORY-164 — Consolidamento delle coppie case-variant nel modulo Media" --body-file 16-4-media-case-variant-consolidation.md
+gh api repos/laraxot/module_media_fila5/discussions -f title="STORY-164 — Consolidamento delle coppie case-variant nel modulo Media" -f body="vedi la story"
 ```

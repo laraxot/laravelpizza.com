@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "license renamed"
 issues: []
 discussions: []
-status: superseded
-superseded_by: LICENSE.md
 ---
 
 The MIT License (MIT)

@@ -12,6 +12,7 @@ use Modules\Activity\Actions\LogModelDeletedAction;
 use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\Activity\Actions\LogUserLoginAction;
 use Modules\Activity\Actions\LogUserLogoutAction;
+<<<<<<< .merge_file_7kUqxf
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
@@ -69,3 +70,5 @@ test('LogUserLoginAction e LogUserLogoutAction accettano User', function (): voi
     $logout = new LogUserLogoutAction(user: $user);
     Assert::assertSame($user, $logout->user);
 });
+=======
+>>>>>>> .merge_file_b31d0X

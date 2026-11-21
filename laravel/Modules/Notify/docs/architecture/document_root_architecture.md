@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "document root architecture"
 issues: []
 discussions: []
-status: superseded
-superseded_by: document-root-architecture.md
 ---
 
 # Document Root Architecture

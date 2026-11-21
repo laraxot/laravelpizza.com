@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing supreme index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎯 INDICE SUPREMO: Testing Business Behavior Rules
@@ -116,6 +115,15 @@ Queste regole si applicano a:
 - **TUTTI i framework** utilizzati (Pest, PHPUnit, Filament, Livewire)
 
 ---
+
+title: "testing supreme index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing supreme index"
+issues: []
+discussions: []
 **Questa è la REGOLA SUPREMA del progetto <nome progetto> e ha precedenza su qualsiasi altra considerazione di testing.**
 
 **Status**: REGOLA SUPREMA E NON NEGOZIABILE

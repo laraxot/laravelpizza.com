@@ -1,14 +1,13 @@
 ---
-qmd: "documentation governance.divergenza"
+qmd: "Documentation Governance.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: DOCUMENTATION_GOVERNANCE.md"
+title: "Documentation Governance.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `DOCUMENTATION_GOVERNANCE.md`

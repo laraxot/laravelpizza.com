@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "AGENTS"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gdpr {{TYPE^}} LLM Wiki Agent Instructions

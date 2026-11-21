@@ -1,11 +1,10 @@
 ---
 title: "Model/Factory/Seeder Audit"
+qmd: "activity model factory seeder audit md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "model/factory/seeder audit activity"
+tags: [documentation]
 ---
+
 # Model/Factory/Seeder Audit
 
 Generated: 2025-08-22 16:20

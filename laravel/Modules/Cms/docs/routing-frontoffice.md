@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "routing frontoffice"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Routing Frontoffice (Cms)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "docs3"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Docs3
@@ -28,6 +27,15 @@ status: draft
 ### 10. CROSS-REFERENCES E VALIDAZIONE
 
 ---
+
+title: "docs3"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs3"
+issues: []
+discussions: []
 ## 1. STRUTTURA GERARCHICA E MODULARITÀ
 
 ### 1.1 Struttura delle Cartelle
@@ -478,4 +486,4 @@ Ogni documento deve avere collegamenti ai documenti correlati:
 
 
 facciamo un recfactor radicale di tutte le cartelle docs, in ottica dry + kiss, ti ricordo che dentro le cartelle docs, ne i nomi dei files ne i nomi delle cartelle devono contenere caratteri maiuscoli ad eccezzione di README.md
-dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere readme.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale
+dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere README.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale

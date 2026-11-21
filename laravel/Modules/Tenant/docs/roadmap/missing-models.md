@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "missing models"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Modelli mancanti e completamento schema
 

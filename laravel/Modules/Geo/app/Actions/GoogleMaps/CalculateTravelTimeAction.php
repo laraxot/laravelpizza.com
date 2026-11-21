@@ -124,7 +124,11 @@ class CalculateTravelTimeAction
             return TravelTimeData::error('INVALID_RESPONSE');
         }
 
+<<<<<<< .merge_file_7xK6wf
         if ($element['status'] !== 'OK') {
+=======
+        if ('OK' !== $element['status']) {
+>>>>>>> .merge_file_sU20X4
             return TravelTimeData::error($element['status']);
         }
 

@@ -1,5 +1,5 @@
 ---
-qmd: "prd"
+qmd: "PRD"
 issues: []
 discussions: []
 title: "Product Requirements Document (PRD) - Lang Module"
@@ -8,7 +8,8 @@ type: concept
 tags: [PRD, lang]
 created: 2026-08-04
 updated: 2026-08-04
-status: draft
+status: superseded
+superseded_by: prd.md
 ---
 # Product Requirements Document (PRD) - Lang Module
 
@@ -209,6 +210,8 @@ The Lang module provides a structured framework for managing lang operations wit
 ### 7.3 Technical Constraints
 - PHP 8.3+ required
 - Laravel 13+ required
+---
+- Laravel 12+ required
 - Filament v5 for UI
 - MySQL 8.0+
 
@@ -253,6 +256,10 @@ The Lang module provides a structured framework for managing lang operations wit
 | Module | Self-contained Laravel module following Laraxot conventions |
 
 ### Related Documents
-- [Architecture](ARCHITECTURE.md)
-- [Technical Specification](TECH_SPEC.md)
+- [Architecture](architecture.md)
+---
+- [Architecture](architecture.md)
+---
+- [Architecture](architecture.md)
+- [Technical Specification](tech_spec.md)
 - [User Stories](epics/lang-epics-and-stories.md)

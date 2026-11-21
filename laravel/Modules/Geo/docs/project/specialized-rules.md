@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "specialized rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Specialized Rules & Configurations

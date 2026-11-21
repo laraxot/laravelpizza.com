@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Feature\Auth;
 
 use Livewire\Volt\Volt as LivewireVolt;
+use Modules\Cms\Tests\TestCase;
 
 use function Pest\Laravel\get;
+
+uses(TestCase::class);
 
 test('login screen can be rendered', function (): void {
     $lang = app()->getLocale();

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Testing Rules Summary
 
@@ -25,7 +24,6 @@ status: draft
 - **MAI** usare `use RefreshDatabase` nei test
 - **MAI** usare `RefreshDatabase` trait
 - Utilizzare `.env.testing` con SQLite in-memory
-- Utilizzare `.env.testing` con MySQL (suffisso `_test`, mai SQLite: regola `bashscripts/ai/wiki/rules/workflow/mysql-testing-only.mdc`)
 - Usare `DatabaseTransactions` se necessario (raro)
 
 ### 3. **Configurazione Testing**
@@ -61,6 +59,28 @@ Ogni modulo può avere il proprio `Pest.php` con:
 - Estensioni personalizzate
 - Helper functions
 - Custom expectations
+
+## Binding del TestCase
+
+Ogni file di test che usa l'applicazione o i metodi di `Modules\Lang\Tests\TestCase` lo lega da solo:
+
+```php
+use Modules\Lang\Tests\TestCase;
+
+uses(TestCase::class);
+```
+
+Mai `uses(...)->in(...)` in `tests/Pest.php`: il runner di root non lo esegue (i test restano senza
+applicazione) e con `--test-directory` raddoppia il binding (`TestCaseAlreadyInUse`). Decisione e guardia:
+[ADR pest-testcase-binding-per-file](../../Xot/docs/adr/pest-testcase-binding-per-file.md).
+
+## Test che riscrivono lang/
+
+Alcune Action (es. `SyncTranslationsAction`) scrivono davvero in `Modules/Lang/lang/<locale>`. Il test salva
+la cartella e la rimette con una **copia** (`File::copyDirectory`), mai con `File::moveDirectory()` da
+`sys_get_temp_dir()`: `rename()` fallisce in silenzio fra filesystem diversi (qui `/tmp` è tmpfs) e il
+2026-11-19 ha lasciato `lang/en` cancellata (33 file). Se la copia fallisce il test lancia un errore con il
+percorso del backup. Prima e dopo una suite che tocca le traduzioni, confronta la checksum di `lang/`.
 
 ## Comandi Importanti
 
@@ -102,7 +122,6 @@ php bashscripts/test_conversion/convert_phpunit_to_pest.php
 
 ### ✅ Best Practices
 1. Usare `.env.testing` con SQLite in-memory
-1. Usare `.env.testing` con MySQL (suffisso `_test`, mai SQLite: regola `bashscripts/ai/wiki/rules/workflow/mysql-testing-only.mdc`)
 2. Scrivere test in formato Pest functional
 3. Usare `DatabaseTransactions` invece di `RefreshDatabase`
 4. Seguire la struttura esistente dei test
@@ -383,7 +402,6 @@ protected function createApplication()
 - [Testing Setup Guide](../../docs/testing-setup.md)
 - [Testing Best Practices](../../docs/testing-best-practices.md)
 - [Troubleshooting Guide](../../docs/troubleshooting.md)
-- [Troubleshooting Guide](troubleshooting.md)
 
 ## Testing Examples
 

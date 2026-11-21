@@ -1,5 +1,5 @@
 ---
-title: "Code Quality Improvement Report: Job"
+title: "Code Quality Improvement Report — Job"
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "Job"
@@ -13,11 +13,9 @@ discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/47"
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
-status: superseded
-superseded_by: ../code-quality-improvement-report.md
 ---
 
-# Code Quality Improvement Report: Job
+# Code Quality Improvement Report — Job
 
 > Baseline statica riproducibile per orientare il miglioramento. I conteggi sono segnali, non sostituiscono PHPStan, Pest o la review del flusso reale.
 
@@ -47,32 +45,32 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
-### P0: baseline affidabile
+### P0 — baseline affidabile
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
-### P1: rischio di regressione
+### P1 — rischio di regressione
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
-### P2: manutenibilità
+### P2 — manutenibilità
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
-### P3: continuità
+### P3 — continuità
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.
 - Aggiornare il report solo con metriche ripetibili e tracciamento pertinente.
 
 ## Modifiche effettive da fare
 
-2. **resources/views/livewire/modal/schedule/create.blade.php:247:                    class="uk-input" placeholder="e.g. https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX">: debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
+2. **resources/views/livewire/modal/schedule/create.blade.php:247:                    class="uk-input" placeholder="e.g. https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX"> — debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
 6. **app/Actions/ExecuteTaskAction.php:15.** Implementare davvero l’esecuzione del task o impedire che l’Action sia risolta; aggiungere test su successo, eccezione e stato finale. Uno stub callable è più rischioso dell’assenza della feature.
 
 

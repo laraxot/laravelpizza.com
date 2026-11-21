@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 return [
     'location' => [
-        'title' => 'Selezione Località',
+        'title' => 'Location Selection',
         'submit' => 'Select',
         'messages' => [
-            'success' => 'Località selezionata con successo',
-            'error' => 'Errore durante la selezione della località',
+            'success' => 'Location selected successfully',
+            'error' => 'Error while selecting the location',
         ],
     ],
     'navigation' => [

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user creation infinite loop fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix: Infinite Loop in User Creation (make:filament-user)

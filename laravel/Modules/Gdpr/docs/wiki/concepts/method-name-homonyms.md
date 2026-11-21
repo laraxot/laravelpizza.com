@@ -11,7 +11,6 @@ updated: 2026-06-15
 related:
   - ../../../../../../docs/wiki/method-name-homonym-census.md
   - ../../../../../../bashscripts/docs/method-homonym-census.json
-status: draft
 ---
 
 # Censimento omonimi metodi — Gdpr

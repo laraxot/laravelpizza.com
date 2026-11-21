@@ -14,10 +14,10 @@ Andrej Karpathy shared a simple but powerful pattern for maintaining LLM knowled
 
 ### Why This Works
 
-1. **Humans are bad at organizing**: we drop files, forget to categorize
-2. **LLMs are great at synthesizing**: they can read chaos and create structure
-3. **Git handles versioning**: no need for complex databases
-4. **Markdown is universal**: portable, readable, LLM-friendly
+1. **Humans are bad at organizing** — we drop files, forget to categorize
+2. **LLMs are great at synthesizing** — they can read chaos and create structure
+3. **Git handles versioning** — no need for complex databases
+4. **Markdown is universal** — portable, readable, LLM-friendly
 
 ## Three Operations
 
@@ -32,7 +32,7 @@ Andrej Karpathy shared a simple but powerful pattern for maintaining LLM knowled
 - High-value insights get filed as new wiki pages
 
 ### 3. Lint
-- Tell LLM: "Lint the wiki: find contradictions and orphans"
+- Tell LLM: "Lint the wiki — find contradictions and orphans"
 - LLM scans for broken links, missing concepts, contradictions
 - Maintains knowledge quality over time
 
@@ -42,8 +42,8 @@ This pattern is perfect for PTVX because:
 
 - **35 modules** with scattered documentation
 - **Multiple AI agents** working simultaneously
-- **Cross-project reuse**: knowledge must be portable
-- **Long-term maintenance**: git tracks knowledge evolution
+- **Cross-project reuse** — knowledge must be portable
+- **Long-term maintenance** — git tracks knowledge evolution
 
 ## Implementation
 
@@ -67,12 +67,12 @@ docs/
 
 ## Tools
 
-- **qmd**: Local markdown search engine (Shopify CEO)
+- **qmd** — Local markdown search engine (Shopify CEO)
   - Hybrid search: BM25 + vector + LLM re-ranking
   - On-device via node-llama-cpp
   - MCP server for AI agent integration
-- **Git**: Version control for knowledge
-- **Obsidian**: Optional visual interface
+- **Git** — Version control for knowledge
+- **Obsidian** — Optional visual interface
 
 ## Performance
 

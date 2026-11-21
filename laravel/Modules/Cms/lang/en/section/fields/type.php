@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/type.php
 // Cms section.fields.type — LangServiceProvider SSoT.
 return [
-    'label' => 'Tipo',
+    'label' => 'Type',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

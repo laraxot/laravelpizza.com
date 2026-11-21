@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "relazioni duplicati"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Elenco Metodi di Relazione Duplicati
@@ -16,6 +15,15 @@ status: draft
 Questo documento elenca i metodi di relazione (`HasMany`, `HasOne`) che presentano logiche sovrapposte o nomi confusionari nel codebase Laravel Modules.
 
 ---
+
+title: "relazioni duplicati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "relazioni duplicati"
+issues: []
+discussions: []
 ## 1. Metodi `qua00f` (HasMany) - Range di Date
 
 ### File: `laravel/Modules/Incentivi/app/Models/Employee.php`

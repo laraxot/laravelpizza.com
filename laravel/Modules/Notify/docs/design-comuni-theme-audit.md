@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "design comuni theme audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Theme Audit & Improvement Roadmap

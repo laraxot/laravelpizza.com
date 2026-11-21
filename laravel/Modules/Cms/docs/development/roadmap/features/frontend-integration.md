@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "frontend integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione Frontend CMS

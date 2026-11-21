@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_FwXBYD
 # Filament v4 Upgrade Documentation
 
 ## Overview
@@ -50,6 +51,8 @@ public function getFormSchema(): array
 - [Filament v4 Upgrade Guide](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Filament v4 Schema Documentation](https://filamentphp.com/docs/4.x/forms/fields)
 # Filament v4 Upgrade Documentation
+=======
+>>>>>>> .merge_file_tWAJyT
 ---
 title: "Filament v4 Upgrade Documentation"
 type: note
@@ -58,6 +61,7 @@ updated: 2026-10-08
 tags: [docs, activity, filament]
 qmd: "filament v4 upgrade documentation activity"
 ---
+<<<<<<< .merge_file_FwXBYD
 # Filament v4 Upgrade Documentation
 
 > **Storico** — migrazione verso Filament v4 (2025). **Stack attuale del progetto: Filament v5.** Vedi [filament-version.md](../filament-version.md) e [filament-version-policy.md](../../../../../docs/wiki/memories/filament-version-policy.md).
@@ -118,3 +122,5 @@ canonical: ../../../../Themes/docs/shared-components/FILAMENT_V4_UPGRADE.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/FILAMENT_V4_UPGRADE.md
+=======
+>>>>>>> .merge_file_tWAJyT

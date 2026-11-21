@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_JkYc8G
 title: "Decision log — Activity"
+=======
+>>>>>>> .merge_file_mDcx5u
 title: "Decision log: Activity"
 type: decision-log
 module: Activity

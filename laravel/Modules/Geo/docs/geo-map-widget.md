@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "geo map widget"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GeoMapWidget

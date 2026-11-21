@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "tailwind css webcrunch"
 issues: []
 discussions: []
-status: superseded
-superseded_by: tailwind-css-webcrunch.md
 ---
 
 # Tailwind CSS: Approfondimento Collezione Webcrunch

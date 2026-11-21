@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "02 goals"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Goals - Tenant
 

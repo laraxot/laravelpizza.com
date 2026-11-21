@@ -108,7 +108,7 @@ STATE.md is the project's short-term memory spanning all phases and sessions.
 
 <lifecycle>
 
-**Creation:** After ROADMAP.md is created (during init)
+**Creation:** After roadmap.md is created (during init)
 - Reference PROJECT.md (read it for current context)
 - Initialize empty accumulated context sections
 - Set position to "Phase 1 ready to plan"
@@ -120,7 +120,7 @@ STATE.md is the project's short-term memory spanning all phases and sessions.
 - transition: Know what's complete
 
 **Writing:** After every significant action
-- execute: After SUMMARY.md created
+- execute: After summary.md created
   - Update position (phase, plan, status)
   - Note new decisions (detail in PROJECT.md)
   - Add blockers/concerns

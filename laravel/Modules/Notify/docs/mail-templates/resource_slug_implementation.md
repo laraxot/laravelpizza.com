@@ -175,9 +175,9 @@ return [
 
 ## Riferimenti
 
-- [Implementazione del Modello](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
-- [Guida alla Migrazione](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
+- [Implementazione del Modello](model_slug_implementation.md)
+- [Struttura della Migrazione](migration_structure.md)
+- [Guida alla Migrazione](../mail_template_migration_guide.md)
 - [Implementazione del Modello](./model_slug_implementation.md)
 - [Struttura della Migrazione](./migration_structure.md)
 - [Guida alla Migrazione](../mail_template_migration_guide.md)

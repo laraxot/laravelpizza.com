@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: mcp_server_recommended
 canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md

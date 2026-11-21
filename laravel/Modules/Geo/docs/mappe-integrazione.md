@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "mappe integrazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione Mappe - Geo Module

@@ -7,15 +7,23 @@ updated: 2026-09-26
 qmd: "module test location rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regola: Posizione dei Test nei Moduli Laraxot
 
-**Fonte:** Incidente del 2026-04-21: test del modulo Notify creati erroneamente nella root del progetto
-**Scope:** Architettura Laraxot: si applica a TUTTI i moduli e temi
+**Fonte:** Incidente del 2026-04-21 — test del modulo Notify creati erroneamente nella root del progetto
+**Scope:** Architettura Laraxot — si applica a TUTTI i moduli e temi
 
 ---
+
+title: "module test location rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module test location rule"
+issues: []
+discussions: []
 ## Il Problema
 
 Il 2026-04-21 i seguenti test sono stati creati nel percorso errato:
@@ -78,12 +86,12 @@ In Laraxot, il progetto è strutturato come monorepo/conductor:
 ## Principio DDD Sottostante
 
 Ogni modulo Laraxot è un **bounded context autonomo** con:
-- `app/`: codice PHP (Controllers, Models, Actions, Services)
-- `tests/`: test del modulo (Feature e Unit)
-- `docs/`: documentazione
-- `lang/`: traduzioni
-- `config/`: configurazione
-- `resources/`: view, assets
+- `app/` — codice PHP (Controllers, Models, Actions, Services)
+- `tests/` — test del modulo (Feature e Unit)
+- `docs/` — documentazione
+- `lang/` — traduzioni
+- `config/` — configurazione
+- `resources/` — view, assets
 
 **Regola mnemonica:**
 > "I test di un modulo seguono il modulo, non l'host.

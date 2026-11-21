@@ -1,13 +1,21 @@
 ---
-title: "Competitors — risorse esterne"
-type: alias
-status: superseded
-canonical: "bmad/competitors.md"
-qmd: "competitors alias superseded"
+qmd: "media wiki competitors md"
+title: 'Competitors — risorse esterne'
+module: Media
+type: reference
+slug: competitors
+description: 'Elenco di 1 riferimenti esterni raccolti per competitors, deduplicati e convertiti da un dump di link.'
+tags: [migrato-da-txt, media]
+converted_from: _competitors.txt
+created: 2026-08-24
+updated: 2026-08-24
 ---
 
 # Competitors — risorse esterne
 
-Documento identico al canonico: [competitors.md](../bmad/competitors.md).
+> Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
+> collega a un punto del codice: leggila, poi trova dove è già applicata.
 
-Canonico: `laravel/Modules/Media/docs/bmad/competitors.md`. Qui non ci sono istruzioni: seguire il file collegato.
+## Riferimenti
+
+- <https://github.com/outer-web/filament-image-library>

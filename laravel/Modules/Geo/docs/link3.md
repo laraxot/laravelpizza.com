@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: link3
 canonical: ../../../Themes/docs/shared-components/link3.txt
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/link3.txt

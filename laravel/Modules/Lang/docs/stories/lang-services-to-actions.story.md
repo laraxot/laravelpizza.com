@@ -29,7 +29,7 @@ owned_scope:
   - laravel/Modules/Lang/docs/stories/lang-services-to-actions.story.md
 ---
 
-# Lang: app/Services retired, no-services-rule compliance
+# Lang — app/Services retired, no-services-rule compliance
 
 ## Story
 
@@ -52,7 +52,7 @@ singleton `translator` nel container, di cui esisteva già una versione migrata 
   `Translation::firstOrCreate()` come faceva `TranslatorService`.
 - `Modules\Lang\Providers\LangServiceProvider::registerTranslator()` bindava già `TranslatorAdapter`
   come singleton `translator` (la chiamata a `registerTranslator()` in `boot()` è oggi commentata,
-  pre-esistente, fuori scope di questa story: non riattivata qui).
+  pre-esistente, fuori scope di questa story — non riattivata qui).
 
 `TranslatorService` non aveva **nessun call site di produzione**: zero `app(TranslatorService::class)`,
 zero `new TranslatorService(...)` fuori dal file stesso e da due test di coverage che lo
@@ -69,12 +69,12 @@ unico relitto di una migrazione precedente incompleta, non un god-service vivo.
 
 ## Call site aggiornati
 
-- `tests/Unit/LangCoverageGapsTest.php`: rimosso l'import, test rinominato e riscritto per
+- `tests/Unit/LangCoverageGapsTest.php` — rimosso l'import, test rinominato e riscritto per
   istanziare `TranslatorAdapter` al posto di `TranslatorService`.
-- `tests/Unit/LangHundredPercentCoverageTest.php`: idem, con l'aggiunta di un'asserzione sulla
+- `tests/Unit/LangHundredPercentCoverageTest.php` — idem, con l'aggiunta di un'asserzione sulla
   missing-key per continuare a coprire il percorso `RecordMissingTranslationAction` (il vecchio
   test copriva solo `notifyMissingKey` inline).
-- `tests/Unit/Services/TranslatorServiceTest.php`: **eliminato**: non istanziava mai
+- `tests/Unit/Services/TranslatorServiceTest.php` — **eliminato**: non istanziava mai
   `TranslatorService` (risolveva `app('translator')`, che con `registerTranslator()` commentato
   risolve al translator stock di Laravel), duplicava `tests/Unit/Adapters/TranslatorAdapterTest.php`
   senza testare nulla di specifico alla classe che il nome del file dichiarava di coprire.
@@ -86,7 +86,7 @@ referenzia `Modules\Lang\Services\*`.
 ## Debito noto, non toccato (fuori scope)
 
 `app/Actions/TranslatorAction.php` è una terza copia quasi identica della stessa classe (logica
-inline, non raggruppata per contesto: flat in `Actions/` invece che in un sottofolder, `execute()`
+inline, non raggruppata per contesto — flat in `Actions/` invece che in un sottofolder, `execute()`
 fittizio a corpo vuoto). Non è sotto `app/Services/`, quindi fuori dal perimetro letterale di questa
 story; segnalato qui perché la prossima sessione non lo riscopra alla cieca. Andrebbe idealmente
 ritirato in favore di `TranslatorAdapter`, con lo stesso ragionamento di questa story.
@@ -95,7 +95,7 @@ ritirato in favore di `TranslatorAdapter`, con lo stesso ragionamento di questa 
 
 Durante la verifica, `app/Actions/TranslatorAction.php` è stato trovato con un errore di sintassi
 (`use Spatie\QueueableAction\ActionJob;` duplicato tre volte, due delle quali dentro corpi di
-metodo): coerente con una modifica in corso di un'altra sessione AI concorrente
+metodo) — coerente con una modifica in corso di un'altra sessione AI concorrente
 (`bashscripts/ai/wiki/rules/multi-agent-same-repo-race.md`). Ripristinato esattamente allo stato
 trovato dopo un fix locale temporaneo usato solo per sbloccare la verifica PHPStan/Pest di questo
 modulo (mai committato). `lang/it/txt.php` era già modificato prima dell'inizio di questa story e ha
@@ -110,4 +110,4 @@ continuato a cambiare durante il lavoro: lasciato intatto ed escluso dal commit.
 - PHPMD: crash pre-esistente sull'intero modulo (`visitAnonymousClass`); scoped ai due file di test
   modificati, solo debito pre-esistente fuori dalle righe toccate.
 
-Dettagli completi: `../coverage.md` (sezione "2026-09-04: app/Services retired").
+Dettagli completi: `../coverage.md` (sezione "2026-09-04 — app/Services retired").

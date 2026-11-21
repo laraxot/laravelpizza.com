@@ -134,3 +134,4 @@ geo.code-workspace
 
 # Forbidden parallel documentation archive
 docs/archive/
+.git/

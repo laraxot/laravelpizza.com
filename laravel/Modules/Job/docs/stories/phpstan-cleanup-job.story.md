@@ -1,5 +1,5 @@
 ---
-title: "[STORY] PHPStan cleanup: Job"
+title: "[STORY] PHPStan cleanup — Job"
 type: story
 module: Job
 status: done
@@ -9,7 +9,7 @@ updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, job]
 ---
 
-# [STORY] PHPStan cleanup: Job
+# [STORY] PHPStan cleanup — Job
 
 ## User Request
 
@@ -46,4 +46,4 @@ Soluzione: riuso di `Status` (nessun enum nuovo), costanti rimosse.
 - Issue: TODO (gh non installato su questa macchina)
 - Discussion: TODO
 
-Dev story: [phpstan-cleanup-job.dev.md](./phpstan-cleanup-job.dev.md)
+Dev story: [2026-10-06-phpstan-cleanup-job.dev.md](./2026-10-06-phpstan-cleanup-job.dev.md)

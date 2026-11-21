@@ -8,20 +8,14 @@ qmd: "replikate-phase-1-complete 🎉 replikate phase 1 - complete"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🎉 REPLIKATE Phase 1 - COMPLETE
@@ -77,7 +71,7 @@ status: draft
 |----------|---------|--------|
 | `replikate.txt` | Execution protocol | ✅ Complete |
 | `homepage-structure-diff.md` | Detailed analysis + fixes | ✅ Complete |
-| `00-index.md` | Navigation hub | ✅ Complete |
+| `00-index-1.md` | Navigation hub | ✅ Complete |
 
 #### Automation
 | Script | Purpose | Status |
@@ -165,7 +159,7 @@ laravel/Themes/Sixteen/
 │   ├── prompts/
 │   │   └── replikate.txt              ← PROTOCOL
 │   └── design-comuni/
-│       ├── 00-index.md                ← HUB
+│       ├── 00-index-1.md                ← HUB
 │       ├── pages/
 │       │   └── homepage-structure-diff.md
 │       └── screenshots/
@@ -356,7 +350,7 @@ All the information needed to fix the homepage is documented, prioritized, and e
 |----------|---------|--------|
 | `replikate.txt` | Execution protocol | ✅ Complete |
 | `homepage-structure-diff.md` | Detailed analysis + fixes | ✅ Complete |
-| `00-INDEX.md` | Navigation hub | ✅ Complete |
+| `00-index.md` | Navigation hub | ✅ Complete |
 
 #### Automation
 | Script | Purpose | Status |

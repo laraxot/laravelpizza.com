@@ -7,10 +7,12 @@ updated: 2026-09-26
 qmd: "multi language translation guidelines"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Multi-Language Translation Guidelines for Laravel Pizza
+
+> **Superato (2026-11-19).** I testi di registrazione descritti qui venivano da un altro progetto e sono stati tolti dal modulo, che e' condiviso e deve restare neutro. Cosa possiede il modulo e cosa il tema: [register-widget-copy-ownership.md](register-widget-copy-ownership.md). Storia: [stories/register-copy-project-agnostic.story.md](stories/register-copy-project-agnostic.story.md).
+
 
 ## Overview
 Complete guide for implementing and maintaining multi-language translations in the Laravel Pizza project following Laraxot patterns.

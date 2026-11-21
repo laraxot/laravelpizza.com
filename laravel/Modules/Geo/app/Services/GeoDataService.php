@@ -120,8 +120,14 @@ class GeoDataService
 
     /**
      * Ottiene le città di una provincia come mappa codice => nome.
+<<<<<<< .merge_file_hhUMwW
      *
      * @param  string  $provinceCode  Codice della provincia
+=======
+     *
+     * @param string $provinceCode Codice della provincia
+     *
+>>>>>>> .merge_file_nv1zYh
      * @return Collection<string, string>
      */
     public function getCities(string $provinceCode): Collection
@@ -194,7 +200,11 @@ class GeoDataService
             : [])->firstWhere('code', $provinceCode);
 
         if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
+<<<<<<< .merge_file_hhUMwW
             return new Collection;
+=======
+            return new Collection();
+>>>>>>> .merge_file_nv1zYh
         }
 
         /** @var array<int, array<string, mixed>> $cities */

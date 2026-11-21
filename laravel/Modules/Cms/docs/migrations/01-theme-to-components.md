@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "01 theme to components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Migrazione da ThemeComposer a Componenti Blade
@@ -248,9 +247,17 @@ git checkout -- Themes/*/resources/views/pages/
 ## Riferimenti
 
 - [Laravel Components Documentation](https://laravel.com/docs/blade#components)
-- [Best Practices per il Rendering delle Pagine](../best-practices/page-rendering.md)
-- [Architettura del CMS](../frontoffice/architecture.md)
+- [Best Practices per il Rendering delle Pagine](best-practices/page-rendering.md)
+- [Architettura del CMS](../architecture.md)
 
 ---
+title: "01 theme to components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "01 theme to components"
+issues: []
+discussions: []
 @see Themes/One/resources/views/pages/index.blade.php
 @see Modules/Cms/View/Composers/ThemeComposer.php

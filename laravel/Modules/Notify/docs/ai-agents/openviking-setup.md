@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "openviking setup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # OpenViking Setup

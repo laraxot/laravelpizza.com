@@ -1,10 +1,10 @@
 ---
-title: "CONTRIBUTING"
+title: "Contributing"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "CONTRIBUTING"
+qmd: "Contributing"
 issues: []
 discussions: []
 ---

@@ -8,7 +8,7 @@ declare(strict_types=1);
 // Cms section.fields.slug — LangServiceProvider SSoT.
 return [
     'label' => 'Slug',
-    'placeholder' => 'Inserisci lo slug della sezione',
+    'placeholder' => 'Enter the section slug',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

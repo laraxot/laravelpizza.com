@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "product strategy"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media - Product Strategy
 # Media Module - Product Strategy

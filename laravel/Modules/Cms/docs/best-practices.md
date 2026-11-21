@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Best Practices – Cms
@@ -26,5 +25,5 @@ status: draft
 - Copri edge case per permessi pagina (draft vs published).
 
 ## Documentazione
-- Aggiorna `docs/INDEX.md` con nuovi blocchi disponibili.
+- Aggiorna `docs/index.md` con nuovi blocchi disponibili.
 - Documenta flusso approvazione contenuti.

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "security analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi della Sicurezza

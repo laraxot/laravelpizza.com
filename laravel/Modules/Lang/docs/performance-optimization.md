@@ -1,5 +1,5 @@
 ---
-qmd: "performance optimization"
+qmd: "PERFORMANCE OPTIMIZATION"
 issues: []
 discussions: []
 title: "Performance Optimization: Module Lang"
@@ -8,9 +8,10 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+status: superseded
+superseded_by: performance-optimization.md
 ---
 
 # Performance Optimization: Module **Lang**
@@ -23,7 +24,7 @@ status: draft
 **Dopo**: Carico solo what's needed (~2K startup)
 
 \`\`\`diff
-- 150+ rules embeddate in agents.md
+- 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate: tutte on-demand
 \`\`\`
 
@@ -119,8 +120,8 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
+- [On-Demand Pattern](./on-demand-pattern.md)
+- [QMD Setup](./qmd-setup.md)
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

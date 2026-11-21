@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email translations"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-translations.md
 ---
 
 # Integrazione Traduzioni Email - il progetto

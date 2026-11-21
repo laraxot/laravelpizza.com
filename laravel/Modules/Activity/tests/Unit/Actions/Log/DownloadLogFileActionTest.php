@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_NzV1aZ
+=======
+
+>>>>>>> .merge_file_wWXp2v
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
@@ -13,6 +17,7 @@ uses(TestCase::class);
  * storage/logs e i test non devono mai toccare quello vero. L'originale e' ripristinato in afterEach.
  */
 beforeEach(function (): void {
+    /** @var TestCase $this */
     $this->originalStorage = storage_path();
     $this->tempStorage = $this->originalStorage.'/framework/testing/log-download-'.uniqid('', true);
     File::makeDirectory($this->tempStorage.'/logs/reports/252', 0777, true);

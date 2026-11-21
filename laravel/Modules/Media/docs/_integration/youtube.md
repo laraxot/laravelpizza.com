@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "youtube"
 related:
   - "./webm.md"
-status: draft
 ---
 # youtube
 

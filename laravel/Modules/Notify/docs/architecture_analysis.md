@@ -1639,7 +1639,7 @@ Tasks:
 
 ### Recommended New Documentation
 ```
-1. ARCHITECTURE.md
+1. architecture.md
 1. architecture.md
    - System architecture diagrams
    - Module dependency graph
@@ -1806,7 +1806,10 @@ Monitoring:
 Frontend:
 [ ] Theme built (npm run build)
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_mg65bD
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
+=======
+>>>>>>> .merge_file_locCjA
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

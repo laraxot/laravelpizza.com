@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "seasonal email system implementation report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Report di Revisione Sistema Email Stagionali - Dicembre 2025

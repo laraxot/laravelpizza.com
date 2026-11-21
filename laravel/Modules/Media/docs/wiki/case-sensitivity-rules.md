@@ -8,7 +8,6 @@ updated: 2026-07-14
 qmd: "case sensitivity rules"
 related:
   - "./webm.md"
-status: draft
 ---
 # Case Sensitivity Rules - Media Module
 

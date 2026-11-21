@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "segnalazione wizard design"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design: Ticket Wizard Widget (Filament)

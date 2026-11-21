@@ -4,9 +4,12 @@ type: report
 module: Activity
 updated: 2026-09-01
 qmd: "cosa migliorare activity phpstan phpmd phpinsights coverage debito priorita"
+<<<<<<< .merge_file_W88cmA
 ---
 
 # Cosa migliorare — modulo Activity
+=======
+>>>>>>> .merge_file_xnNpDy
 status: draft
 tags: [docs, activity]
 ---
@@ -23,9 +26,12 @@ un autoloader dimezzato e non valgono.
 |---|---:|
 | Errori PHPStan (modulo isolato) | 0 |
 | Rilievi PHPMD su `app/` | 2 |
+<<<<<<< .merge_file_W88cmA
 | PHPInsights — Code | 94.1 % |
 | PHPInsights — Architecture | 92.9 % |
 | PHPInsights — Style | 86.4 % |
+=======
+>>>>>>> .merge_file_xnNpDy
 | PHPInsights: Code | 94.1 % |
 | PHPInsights: Architecture | 92.9 % |
 | PHPInsights: Style | 86.4 % |
@@ -60,6 +66,9 @@ Prima di fidarsi di qualunque numero: il tree deve essere fermo e `vendor/` comp
 php -r 'echo count(require "vendor/composer/autoload_classmap.php");'   # ~25358, non 13041
 ```
 
+<<<<<<< .merge_file_W88cmA
 Quadro comparativo di tutte le unità: [`docs/quality-audit.md`](../../../../docs/quality-audit.md).
+=======
+>>>>>>> .merge_file_xnNpDy
 Quadro comparativo di tutte le unità: [`docs/quality-audit.md`](quality-audit.md).
 

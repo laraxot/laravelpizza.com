@@ -7,7 +7,6 @@ type: documentation
 tags: [gdpr, module]
 created: 2026-10-06
 updated: 2026-10-06
-status: draft
 ---
 
 # Gdpr — Status BMAD

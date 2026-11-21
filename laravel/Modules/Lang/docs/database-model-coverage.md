@@ -7,10 +7,9 @@ updated: 2026-09-26
 qmd: "database model coverage"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Lang: Copertura Model / Migration / Seeder / Factory
+# Lang — Copertura Model / Migration / Seeder / Factory
 
 Stato: colmato il gap su `LanguageLine` (mancavano factory e seeder). Documentati gli skip su
 `TranslationFile` (Sushi, no tabella) e sulle classi base astratte.

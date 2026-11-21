@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "register page typography"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Register Page Typography System

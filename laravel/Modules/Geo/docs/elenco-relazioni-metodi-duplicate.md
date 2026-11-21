@@ -11,7 +11,6 @@ related:
   - ./wiki/method-name-homonym-census.md
   - ./wiki/rules/laraxot-relationship-integrity.md
   - ../laravel/Modules/Sigma/docs/wiki/concepts/ente-matr-field-ownership.md
-status: draft
 ---
 
 # Elenco metodi che restituiscono relazioni duplicate

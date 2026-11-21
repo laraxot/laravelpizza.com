@@ -1,3 +1,14 @@
+---
+title: "terms conditions 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "terms conditions 1"
+issues: []
+discussions: []
+---
+
 https://julienboyer.re/en/posts/how-to-add-terms-and-conditions-checkbox-on-filament-registration-page
 
 https://julienboyer.re/en/posts/how-to-generate-terms-and-conditions-pdf-and-send-it-to-user-after-consent

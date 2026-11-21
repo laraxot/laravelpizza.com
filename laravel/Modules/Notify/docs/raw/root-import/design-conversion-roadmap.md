@@ -150,7 +150,7 @@ laravel/Themes/Sixteen/docs/pages/<page-name>/
 ### Theme-Level
 ```
 laravel/Themes/Sixteen/docs/
-├── INDEX.md                                    # Main index
+├── index.md                                    # Main index
 ├── index.md                                    # Main index
 ├── COMPLETE-VISUAL-PARITY-REPORT.md          # All 54 pages
 ├── PRIORITY-MATRIX.json                       # Workload planning
@@ -163,7 +163,7 @@ laravel/Themes/Sixteen/docs/
 ### Bash Scripts
 ```
 bashscripts/docs/
-├── INDEX.md                    # Tools overview
+├── index.md                    # Tools overview
 ├── index.md                    # Tools overview
 └── github-issues-batch.md      # GitHub CLI guide
 ```
@@ -354,8 +354,8 @@ cat laravel/Themes/Sixteen/docs/visual-parity-data.json
 - **Design Comuni**: https://italia.github.io/design-comuni-pagine-statiche/
 - **Tailwind CSS**: https://tailwindcss.com/
 - **Alpine.js**: https://alpinejs.dev/
-- **Internal Docs**: `laravel/Themes/Sixteen/docs/INDEX.md`
-- **Tools Guide**: `bashscripts/docs/INDEX.md`
+- **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
+- **Tools Guide**: `bashscripts/docs/index.md`
 - **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
 - **Tools Guide**: `bashscripts/docs/index.md`
 

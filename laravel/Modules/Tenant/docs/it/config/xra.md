@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Xra"
+module: "Tenant"
+type: concept
+tags: [xra]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "xra"
+related:
+  - "./phpstan-corrections-january.md"
+---
 <?php
 
 declare(strict_types=1);
@@ -19,9 +32,6 @@ return [
 
 ];
 ## Collegamenti tra versioni di xra.md
-* [xra.md](../../../Xot/docs/install/xra.md)
-* [xra.md](../../../Tenant/docs/it/xra.md)
-* [xra.md](../../../Tenant/docs/it/config/xra.md)
 * [xra.md](../../../xot/docs/install/xra.md)
 * [xra.md](../../../tenant/docs/it/xra.md)
 * [xra.md](../../../tenant/docs/it/config/xra.md)

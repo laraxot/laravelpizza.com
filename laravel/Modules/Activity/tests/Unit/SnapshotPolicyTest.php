@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit;
 
-use Mockery;
-use Mockery\MockInterface;
 use Modules\Activity\Models\Policies\SnapshotPolicy;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\Policies\UserBasePolicy;
@@ -29,9 +27,8 @@ describe('Snapshot Policy', function (): void {
     });
 
     test('user with permission can view', function (): void {
-        /** @var MockInterface&User $user */
-        $user = Mockery::mock(User::class);
-        $user->shouldReceive('hasPermissionTo')->with('snapshot.view')->andReturn(true);
+        $user = $this->createUnitMock(User::class);
+        $user->method('hasPermissionTo')->willReturn(true);
 
         $policy = new SnapshotPolicy;
         $result = $policy->view($user);
@@ -40,9 +37,8 @@ describe('Snapshot Policy', function (): void {
     });
 
     test('user without permission cannot view', function (): void {
-        /** @var MockInterface&User $user */
-        $user = Mockery::mock(User::class);
-        $user->shouldReceive('hasPermissionTo')->with('snapshot.view')->andReturn(false);
+        $user = $this->createUnitMock(User::class);
+        $user->method('hasPermissionTo')->willReturn(false);
 
         $policy = new SnapshotPolicy;
         $result = $policy->view($user);

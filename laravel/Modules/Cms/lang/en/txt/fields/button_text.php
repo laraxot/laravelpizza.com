@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/button_text.php
 // Cms txt.fields.button_text — LangServiceProvider SSoT.
 return [
-    'label' => 'Testo del pulsante',
-    'placeholder' => 'Scopri di più',
-    'help' => 'Testo visualizzato sul pulsante',
-    'helper_text' => 'Testo che apparirà sul pulsante',
+    'label' => 'Button text',
+    'placeholder' => 'Learn more',
+    'help' => 'Text displayed on the button',
+    'helper_text' => 'Text that will appear on the button',
     'tooltip' => '',
     'description' => '',
 ];

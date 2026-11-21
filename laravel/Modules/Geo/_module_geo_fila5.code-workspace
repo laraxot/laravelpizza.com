@@ -9,7 +9,7 @@
 		"php-cs-fixer.onsave": true,
 		"php-cs-fixer.formatHtml": true,
 		"php-cs-fixer.executable": "php-cs-fixer",
-		"php-cs-fixer.executablePath":"",
+		"php-cs-fixer.executablePath": "",
 		"php-cs-fixer.executablePathWindows": "php-cs-fixer.bat",
 		"vscode-php-cs-fixer.allowRisky": true,
 		"phpmd.enabled": false,

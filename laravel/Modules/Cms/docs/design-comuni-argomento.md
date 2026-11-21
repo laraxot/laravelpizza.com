@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "design comuni argomento"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Argomento
@@ -46,4 +45,4 @@ Quindi il mismatch e' prima di tutto di composizione CMS e non di styling.
 
 ## Linked Theme Report
 
-- [laravel/Themes/Sixteen/docs/design-comuni/argomento-parity.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/argomento-parity.md)
+- [laravel/Themes/Sixteen/docs/design-comuni/argomento-parity-2026-04-02.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/argomento-parity-2026-04-02.md)

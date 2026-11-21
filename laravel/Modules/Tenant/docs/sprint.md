@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "sprint"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Sprint Planning Meeting - Tenant Module
 

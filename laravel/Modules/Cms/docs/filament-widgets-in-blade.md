@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament widgets in blade"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Utilizzo dei Widget Filament nelle Viste Blade in il progetto

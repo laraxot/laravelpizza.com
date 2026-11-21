@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/sidebar_blocks.php
 // Cms txt.fields.sidebar_blocks — LangServiceProvider SSoT.
 return [
-    'label' => 'Blocchi Sidebar',
-    'placeholder' => 'Contenuti della barra laterale',
-    'helper_text' => 'Elementi da visualizzare nella barra laterale',
+    'label' => 'Sidebar Blocks',
+    'placeholder' => 'Sidebar contents',
+    'helper_text' => 'Items to show in the sidebar',
     'tooltip' => '',
     'description' => '',
 ];

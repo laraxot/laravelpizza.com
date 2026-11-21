@@ -3,22 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'title' => 'Unisciti alla Pizza Revolution 🍕',
-    'subtitle' => 'Entra nella nostra community di sviluppatori e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
-    'submit' => 'Crea il mio account gratis',
-    'submitting' => 'Stiamo preparando il tuo account...',
+    'title' => 'Crea il tuo account',
+    'subtitle' => 'Compila il modulo per creare il tuo account personale.',
+    'submit' => 'Crea account',
+    'submitting' => 'Creazione dell\'account in corso...',
     'register' => [
-        'submit' => 'Crea il mio account gratis',
-        'submitting' => 'Stiamo preparando il tuo account...',
-    ],
-    'stats' => [
-        'active_developers' => 'Community in Crescita',
-        'monthly_meetups' => 'Prossimi Eventi',
-        'community_support' => 'Supporto 24/7',
+        'submit' => 'Crea account',
+        'submitting' => 'Creazione dell\'account in corso...',
     ],
     'form' => [
-        'cta_title' => 'Crea il tuo account gratuito',
-        'cta_subtitle' => 'Nessuna carta di credito richiesta',
+        'cta_title' => 'Crea il tuo account',
+        'cta_subtitle' => 'Inserisci i tuoi dati e accetta i consensi obbligatori.',
         'terms_notice' => 'Registrandoti accetti i nostri Termini e Privacy Policy',
         'first_name' => 'Nome',
         'last_name' => 'Cognome',
@@ -29,24 +24,6 @@ return [
         'password_confirmation' => 'Conferma password',
         'submit' => 'Crea account',
     ],
-    'benefits' => [
-        'community' => [
-            'title' => 'Entra nella Community',
-            'description' => 'Connettiti con professionisti e appassionati Laravel',
-            'cta' => 'Accesso gratuito immediato',
-        ],
-        'tutorials' => [
-            'title' => 'Tutorial & Workshop Esclusivi',
-            'description' => 'Accesso prioritario a contenuti premium e formazione',
-            'cta' => 'Ottieni accesso esclusivo',
-        ],
-        'networking' => [
-            'title' => 'Networking & Carriera',
-            'description' => 'Opportunità di collaborazione e crescita professionale',
-            'cta' => 'Fatti assumere dalle migliori aziende',
-        ],
-    ],
-    'social_proof' => 'Unisciti alla community <nome progetto>',
     'fields' => [
         'first_name' => [
             'label' => 'Nome',
@@ -91,9 +68,7 @@ return [
         'required_consents_description' => 'Devi accettare le seguenti condizioni',
         'optional_consents' => 'Consensi Facoltativi',
         'optional_consents_description' => 'Puoi modificarli in qualsiasi momento',
-        'trust_badges' => 'Badge di fiducia',
         'registration_form' => 'Form di registrazione',
-        'benefits' => 'Vantaggi',
     ],
     'consents' => [
         'title' => 'Consensi',
@@ -104,25 +79,32 @@ return [
         'privacy_policy_link' => 'Leggi l\'informativa privacy',
         'terms_link' => 'Leggi le condizioni d\'uso',
         'opens_new_tab' => 'si apre in una nuova scheda',
-        'terms_hint' => 'Ai sensi dell\'art. 6(1](b] GDPR',
+        'terms_hint' => 'Ai sensi dell\'art. 6(1)(b) GDPR',
         'terms_required' => 'Devi accettare i termini e condizioni',
         'marketing_label' => 'Voglio ricevere aggiornamenti e inviti (facoltativo)',
         'marketing_hint' => 'Puoi revocarlo in qualsiasi momento',
         'privacy_policy' => 'Ho letto e accetto l\'informativa sulla privacy',
         'terms' => 'Accetto i termini e le condizioni d\'uso',
         'marketing' => 'Desidero ricevere comunicazioni di marketing (facoltativo)',
+        'privacy_checkbox_html' => 'Ho letto l\'<a href=":privacy_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Informativa privacy</a>',
+        'terms_checkbox_html' => 'Accetto i <a href=":terms_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Termini e condizioni</a>',
+        'required_consent_missing' => 'Devi accettare tutti i consensi obbligatori per procedere.',
     ],
     'actions' => [
         'read_privacy_policy' => 'Leggi privacy policy',
         'read_terms' => 'Leggi termini e condizioni',
     ],
+    'validation' => [
+        'password_complexity' => 'La password deve contenere almeno 12 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale.',
+    ],
     'already_registered' => 'Hai già un account?',
     'login' => 'Accedi subito',
-    'success' => 'Benvenuto! 🎉',
+    'required_consent_missing' => 'Devi accettare tutti i consensi obbligatori per procedere.',
+    'success' => 'Registrazione completata.',
     'throttle' => 'Troppi tentativi di registrazione. Riprova tra :seconds secondi.',
-    'success_message' => 'Il tuo account è pronto. Ti abbiamo inviato una email: apri il link per confermare l\'indirizzo prima di inviare una segnalazione.',
+    'success_message' => 'Il tuo account è pronto. Ti abbiamo inviato una email: apri il link per confermare l\'indirizzo.',
     'error' => 'Errore di registrazione',
-    'error_message' => 'Riprova più tardi',
+    'error_message' => 'Si è verificato un errore durante la registrazione. Riprova più tardi; se il problema persiste, contatta l\'assistenza.',
     'label' => 'Register',
     'plural_label' => 'Register (Plurale)',
     'navigation' => [

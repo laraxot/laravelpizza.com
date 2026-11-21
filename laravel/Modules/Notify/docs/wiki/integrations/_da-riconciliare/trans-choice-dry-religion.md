@@ -345,8 +345,8 @@ Amen.
 - [Laravel Localization - Pluralization](https://laravel.com/docs/localization#pluralization)
 - [ticket.php (corretto)](../../Modules/App/lang/it/ticket.php)
 - [ticket.php (corretto)](../../Modules/<nome progetto>/lang/it/ticket.php)
-- [Translation Namespace Religion](../../docs/translation-namespace-religion.md)
-- [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
+- [Translation Namespace Religion](../../../translation-namespace-religion.md)
+- [No Hardcoded Language Religion](../../../no-hardcoded-language-religion.md)
 - [Translation Namespace Religion](../../../translation-namespace-religion.md)
 - [No Hardcoded Language Religion](../../../no-hardcoded-language-religion.md)
 

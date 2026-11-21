@@ -24,7 +24,7 @@ test('ActivityLogger Action custom delega a log', function (): void {
 
     /** @var ActivityLoggerAction&Mockery\MockInterface $logger */
     $logger = Mockery::mock(ActivityLoggerAction::class)->makePartial();
-    mockeryExpect($logger->shouldReceive('log'))
+    TestCase::mockeryExpect($logger->shouldReceive('log'))
         ->once()
         ->with('evt', null, null, null, 'Descrizione')
         ->andReturn($activity);
@@ -43,8 +43,8 @@ test('ActivityLogger Adapter login e logout sono invocabili con partial mock', f
 
     /** @var ActivityLoggerAdapter&Mockery\MockInterface $logger */
     $logger = Mockery::mock(ActivityLoggerAdapter::class)->makePartial();
-    mockeryExpect($logger->shouldReceive('login'))->once()->with($user)->andReturn($activity);
-    mockeryExpect($logger->shouldReceive('logout'))->once()->with($user)->andReturn($activity);
+    TestCase::mockeryExpect($logger->shouldReceive('login'))->once()->with($user)->andReturn($activity);
+    TestCase::mockeryExpect($logger->shouldReceive('logout'))->once()->with($user)->andReturn($activity);
 
     Assert::assertSame($activity, $logger->login($user));
     Assert::assertSame($activity, $logger->logout($user));

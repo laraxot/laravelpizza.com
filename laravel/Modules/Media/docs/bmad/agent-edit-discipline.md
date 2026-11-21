@@ -1,9 +1,8 @@
 ---
-title: agent edit discipline: puntatore
+qmd: "media bmad agent edit discipline md"
+title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-21
-status: superseded
-superseded_by: ../wiki/agent-edit-discipline.md
 ---
 
 # Disciplina edit e qualità (puntatore)
@@ -12,9 +11,9 @@ Stub **DRY**: policy nella wiki di progetto; discussioni GitHub issue [#124](htt
 
 ## Link operativi
 
-- Regola canonica: [../../../../docs/wiki/rules/validation-post-edit-rule.md](../../../../../docs/wiki/rules/validation-post-edit-rule.md)
-- How-to issue ↔ wiki: [../../../../docs/wiki/how-to/github-issue-agent-discipline.md](../../../../../docs/wiki/how-to/github-issue-agent-discipline.md)
-- Context overflow / Autocompact: [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)
-- Deduplica docs: [../../../../docs/wiki/how-to/module-docs-deduplication.md](../../../../../docs/wiki/how-to/module-docs-deduplication.md)
+- Regola canonica: [../../../../docs/wiki/rules/validation-post-edit-rule.md](../../../../docs/wiki/rules/validation-post-edit-rule.md)
+- How-to issue ↔ wiki: [../../../../docs/wiki/how-to/github-issue-agent-discipline.md](../../../../docs/wiki/how-to/github-issue-agent-discipline.md)
+- Context overflow / Autocompact: [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)
+- Deduplica docs: [../../../../docs/wiki/how-to/module-docs-deduplication.md](../../../../docs/wiki/how-to/module-docs-deduplication.md)
 - Prompt LLM: [../../../../bashscripts/tools/prompts/llm-wiki.txt](../../../../bashscripts/tools/prompts/llm-wiki.txt) §2.1
-- Autocompact thrashing (recovery): [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)
+- Autocompact thrashing (recovery): [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)

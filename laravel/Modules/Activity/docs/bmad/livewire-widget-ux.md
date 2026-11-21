@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_kA03lN
 title: "UX — Activity"
+=======
+>>>>>>> .merge_file_Rw1EWi
 title: "UX: Activity"
 type: ux-design
 module: Activity

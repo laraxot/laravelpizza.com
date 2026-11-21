@@ -1,11 +1,10 @@
 ---
 title: "Migration Spatie Activity Log Integration"
+qmd: "activity migration spatie integration md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "migration spatie activity log integration activity"
+tags: [documentation]
 ---
+
 # Migration Spatie Activity Log Integration
 
 ## Gestione Tabella activity_log
@@ -135,7 +134,14 @@ Per activity_log, il nome corretto è `create_activity_log_table.php`, non `fix_
 - [Root Migration Rules](../../../.windsurf/rules/migration-complete-rules.md)
 
 *
+<<<<<<< .merge_file_CDroaW
 *Ultimo aggiornamento: 2026-02-26*
 *Ultimo aggiornamento: 2026-02-26*
 *=======
 *Ultimo aggiornamento: 2026-02-26*
+=======
+
+*Ultimo aggiornamento: 2026-02-26*
+
+*=======
+>>>>>>> .merge_file_2yFEja

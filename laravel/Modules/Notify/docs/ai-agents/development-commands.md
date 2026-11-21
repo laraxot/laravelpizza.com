@@ -28,7 +28,7 @@ npm run build
 php artisan serve
 ```
 
-**Access:** http://localhost:8000/quaeris/admin/{tenant}
+**Access:** http://localhost:8000/<nome progetto>/admin/{tenant}
 **Access:** http://localhost:8000/this-project/admin/{tenant}
 
 ## Testing
@@ -54,7 +54,7 @@ php artisan test --coverage
 ./vendor/bin/pest --coverage --min=80
 
 # Per modulo
-./vendor/bin/pest Modules/Quaeris/tests --coverage
+./vendor/bin/pest Modules/<nome progetto>/tests --coverage
 ./vendor/bin/pest Modules/App/tests --coverage
 
 # Report HTML → build/coverage/html/

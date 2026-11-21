@@ -2,7 +2,7 @@
 qmd: "schedule 1"
 issues: []
 discussions: []
-title: 'Schedule 1: risorse esterne'
+title: 'Schedule 1 — risorse esterne'
 module: Job
 type: reference
 slug: schedule-1
@@ -11,10 +11,9 @@ tags: [migrato-da-txt, job]
 converted_from: schedule_1.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Schedule 1: risorse esterne
+# Schedule 1 — risorse esterne
 
 > Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
 > collega a un punto del codice: leggila, poi trova dove è già applicata.

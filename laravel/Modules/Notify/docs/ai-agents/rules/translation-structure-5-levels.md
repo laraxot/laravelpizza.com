@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translation structure 5 levels"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔴 TRANSLATION STRUCTURE - 5 LEVELS REQUIRED
@@ -18,6 +17,15 @@ status: draft
 **Priority**: BLOCKER
 
 ---
+
+title: "translation structure 5 levels"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure 5 levels"
+issues: []
+discussions: []
 ## 🎯 The Rule
 
 > **SEMPRE** usare traduzioni a **5 LIVELLI**:
@@ -278,7 +286,7 @@ __('forecast::fields.outcome.title.label')  // aggiunto .label
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-- **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Rules Index](00-index.md)** - All rules
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "badges"
 issues: []
 discussions: []
-status: draft
 ---
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laraxot/module_ai_fila5.svg?style=flat-square)](https://packagist.org/packages/laraxot/module_ai_fila5)

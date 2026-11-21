@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "test 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Correzioni Pattern ".navigation" - Gennaio 2025
 
@@ -254,9 +253,9 @@ Ogni sezione `navigation` deve includere:
 - [Traduzioni Navigation Audit](traduzioni-navigation-2025.md)
 - [Best Practices Traduzioni](../../Xot/docs/translation-standards.md)
 - [NavigationLabelTrait Explained](../../Xot/docs/filament/navigation-label-trait-explained.md)
-- [Best Practices Traduzioni](../../Xot/docs/translation-standards.md)
+- [Best Practices Traduzioni](../../xot/docs/translation-standards.md)
 - [NavigationLabelTrait Explained](../../xot/docs/filament/navigation-label-trait-explained.md)
-- [Best Practices Traduzioni](../../Xot/docs/translation-standards.md)
+- [Best Practices Traduzioni](../../xot/docs/translation-standards.md)
 - [NavigationLabelTrait Explained](../../xot/docs/filament/navigation-label-trait-explained.md)
 
 ## Note Tecniche

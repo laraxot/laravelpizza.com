@@ -12,7 +12,6 @@ related:
   - "./database-naming-fix-summary.md"
   - "./database-naming-verification-report.md"
   - "./sqlite-permission-fix.md"
-status: draft
 ---
 
 # Database Directory Naming Convention Fix

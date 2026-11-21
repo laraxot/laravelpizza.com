@@ -13,22 +13,19 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - ../notifications/readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
-status: draft
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 ---
 # Indice Documentazione Template Email
 
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../index.md)
-- [README Modulo Notify](../readme.md)
+- [README Modulo Notify](../README.md)
 - [Sistema Email](../database-mail-system.md)
 - [Template Email](../email_templates.md)
-- [Documentazione Generale ](../../../../../../docs/readme.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/readme.md)
-- [Documentazione Generale ](../../../../../docs/README.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+- [Documentazione Generale ](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Struttura e Architettura

@@ -1,5 +1,5 @@
 ---
-title: "no app/Support: business logic in QueueableAction"
+title: "no app/Support — business logic in QueueableAction"
 type: concept
 tags: [lang, actions, queueable-action, support, refactor, adapter]
 created: 2026-07-12
@@ -11,11 +11,9 @@ discussions:
   - "https://github.com/laraxot/platform/discussions/273"
 related:
   - ../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
-  - ../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
-status: draft
 ---
 
-# no `app/Support/`: business logic in QueueableAction
+# no `app/Support/` — business logic in QueueableAction
 
 ## Scopo
 
@@ -36,4 +34,3 @@ La logica `notifyMissingKey` resta nell'adapter; eventuale orchestrazione futura
 ## Collegamenti
 
 - [queueable-action-trait-mandatory](../../../../docs/wiki/rules/queueable-action-trait-mandatory.md)
-- [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md)

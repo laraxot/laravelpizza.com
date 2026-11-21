@@ -6,6 +6,7 @@ namespace Modules\Tenant\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Modules\Tenant\Database\Factories\TenantSubscriptionFactory;
 use Modules\Tenant\Models\Traits\TenantSubscriptionRelations;
 
 /**
@@ -26,6 +27,7 @@ use Modules\Tenant\Models\Traits\TenantSubscriptionRelations;
  * @property Carbon|null $expires_at
  * @property-read Tenant|null $tenant
  *
+ * @method static TenantSubscriptionFactory factory($count = null, $state = [])
  * @method static Builder<static>|TenantSubscription newModelQuery()
  * @method static Builder<static>|TenantSubscription newQuery()
  * @method static Builder<static>|TenantSubscription query()

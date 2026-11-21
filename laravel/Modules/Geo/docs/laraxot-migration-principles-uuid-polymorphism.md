@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laraxot migration principles uuid polymorphism"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Principi Migrazioni Laraxot: UUID e Polimorfismo Context-Aware

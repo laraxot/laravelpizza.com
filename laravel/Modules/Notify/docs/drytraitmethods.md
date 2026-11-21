@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "drytraitmethods"
 issues: []
 discussions: []
-status: draft
 ---
 
 # DRY Principle for Trait Methods

@@ -6,8 +6,6 @@ slug: sushi-model-pitfalls
 status: active
 created: 2026-09-30
 updated: 2026-09-30
-tags: [docs, tenant, bmad]
-qmd: "sushi nei modelli tenant: trappole verificate tenant"
 ---
 tags: [docs, tenant, bmad]
 
@@ -58,14 +56,3 @@ da `SushiToJson`. Il `use` va tolto: il trait c'e' gia' nel padre.
 - `Model::clearBootedModels()` da solo registra due volte i listener `creating/updating/deleting`: prima `Modello::flushEventListeners()`.
 - Sushi legge il JSON al boot del modello, quindi ogni test deve ripartire da un modello non avviato.
 - Fixture di riferimento: `tests/Unit/Traits/SushiConnectionByNameTest.php` (Tenant), `tests/Unit/Models/WebServiceJsonStorageTest.php` (Sigma).
-
-## 6. `SushiToJsons`: una sola cartella, e mai un dump
-
-- Dal commit upstream `33465888` (2026-10-28) le righe arrivano solo da
-  `config/<tenant>/database/content/<tabella>/**.json`. Tema e baseline dei moduli non si leggono piu'.
-- La cartella puo' mancare, e in questo progetto manca per tutti i modelli Cms (Menu, Page, Section, ...):
-  il controllo `File::isDirectory()` prima di `File::allFiles()` e' obbligatorio, senza si ha
-  `DirectoryNotFoundException` al primo uso del modello.
-- Un file non JSON o un modello senza `$schema` si salta (`null`). Un `dd()`/`dddx()` li' blocca la richiesta
-  e anche la suite Pest: e' successo nello stesso commit, vedi
-  [la story](../stories/sushi-to-jsons-single-source-cleanup.story.md).

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "locale prefix e2e rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Locale Prefix E2E Rule

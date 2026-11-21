@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git scripts"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Git Scripts

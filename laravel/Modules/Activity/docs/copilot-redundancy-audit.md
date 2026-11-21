@@ -1,12 +1,11 @@
 ---
 title: "copilot redundancy audit"
+qmd: "activity copilot redundancy audit md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "copilot redundancy audit activity"
+tags: [documentation]
 ---
-Copilot Redundancy Audit: 2026-05-25
+
+Copilot Redundancy Audit — 2026-05-25
 
 Sintesi
 - Scansione iniziale dei moduli ha rilevato ridondanze ricorrenti nei nomi file e nella documentazione (es.: README.md, .gitkeep, index.md, auth.php, validation.php, messages.php).
@@ -18,7 +17,7 @@ Problemi rilevati
 Raccomandazioni immediate
 - Centralizzare linee guida comuni in laravel/Modules/docs/ (MASTER_DOCS.md) e usare link canonical nei moduli.
 - Consolidare traduzioni condivise in resources/lang/shared/ o pacchetto comune.
-- Standardizzare nomi dei file docs (INDEX.md) e usare metadati YAML per mapping.
+- Standardizzare nomi dei file docs (index.md) e usare metadati YAML per mapping.
 
 Migliorare il "second brain"
 - Aggiungere metadati (module, topic, canonical) a ogni documento per poter indicizzare automaticamente e ridurre duplicazioni.

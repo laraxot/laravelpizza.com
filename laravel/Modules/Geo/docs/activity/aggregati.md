@@ -10,7 +10,6 @@ title: Aggregati
 description: Aggregati
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Aggregati {#aggregati}

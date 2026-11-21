@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "contact enum integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ContactTypeEnum Integration Guide

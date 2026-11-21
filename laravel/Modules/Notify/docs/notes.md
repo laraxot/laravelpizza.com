@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Note Finali sul Modulo Notify

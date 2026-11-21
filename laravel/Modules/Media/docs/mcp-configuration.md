@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "mcp configuration"
 related:
   - "./webm.md"
-status: draft
 ---
 # MCP Server Configuration - Media Module
 

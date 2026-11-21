@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "legal pages json rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Legal Pages JSON Rule

@@ -8,19 +8,17 @@ discussions: []
 type: overview
 module: Tenant
 sources:
-  - ../../module.md
-  - ../../philosophy.md
-  - ../../philosophy-religion.md
-  - ../../configuration.md
-  - ../../structure.md
+  - ../../../module.md
+  - ../../../philosophy.md
+  - ../../../configuration.md
+  - ../../../structure.md
 confidence: high
-updated: 2026-10-25
-status: draft
+updated: 2026-04-15
 ---
 
-# Tenant Module: Overview
+# Tenant Module — Overview
 
-> **Ruolo**: Multi-tenancy per monolite Laraxot: isolamento completo dati, DB-per-tenant, domain routing, configurazione per-tenant.
+> **Ruolo**: Multi-tenancy per monolite Laraxot — isolamento completo dati, DB-per-tenant, domain routing, configurazione per-tenant.
 
 ## Responsabilità del Modulo
 
@@ -36,10 +34,10 @@ Il modulo Tenant fornisce il layer di **multi-tenancy**:
 ## Filosofia Core
 
 **Sovranità digitale distribuita**:
-1. **Isolamento Sovrano**: ogni tenant è entità autonoma con piena sovranità sui propri dati
-2. **Segregazione Assoluta**: dati di un tenant non contaminano MAI quelli di un altro
-3. **Blast Radius**: ogni errore impatta SOLO il tenant coinvolto
-4. **Privacy by Architecture**: isolamento strutturale, non procedurale
+1. **Isolamento Sovrano** — ogni tenant è entità autonoma con piena sovranità sui propri dati
+2. **Segregazione Assoluta** — dati di un tenant non contaminano MAI quelli di un altro
+3. **Blast Radius** — ogni errore impatta SOLO il tenant coinvolto
+4. **Privacy by Architecture** — isolamento strutturale, non procedurale
 
 **Governance multi-livello**: Super Admin → Tenant Owner → Tenant Users → Sistema (enforcement automatico)
 
@@ -68,7 +66,7 @@ Tenant Detection → Configuration Load → Bootstrap → Response
 | `Domain` | Dominio/subdomain del tenant | Routing e identification |
 | `XraData` | Configurazione XRA per tenant | Sushi → JSON models |
 
-**3 tabelle core**: Tenant, Domain, TenantUser (relazione): minimalismo zen.
+**3 tabelle core**: Tenant, Domain, TenantUser (relazione) — minimalismo zen.
 
 ## Tenant Identification
 
@@ -104,19 +102,19 @@ Il modulo Tenant usa il trait `SushiToJson` per modelli configurazione:
 ## Utilizzo Cross-Module
 
 Tutti gli altri moduli del progetto sono automaticamente multi-tenant via Xot:
-- `XotData::getTenantId()`: recupero tenant corrente
+- `XotData::getTenantId()` — recupero tenant corrente
 - Model scoping automatico via `Updater` trait (created_by, updated_by)
 - Connection switching trasparente per query Eloquent
 
 ## Cross-References
 
-- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]]: XotData, XotBaseModel, connection scoping
-- [[../../../../../../laravel/Modules/User/docs/wiki/overviews/user-module|User Module]]: utenti per tenant
+- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotData, XotBaseModel, connection scoping
+- [[../../../../../../laravel/Modules/User/docs/wiki/overviews/user-module|User Module]] — utenti per tenant
 
 ## Raw Sources Prioritari
 
-- `module.md`: funzionalità implementate, architettura stack
-- `philosophy.md`: sovranità, isolamento, etica, zen
-- `configuration.md`: configurazione base, dipendenze
-- `traits/sushi-to-json.md`: pattern JSON models
-- `it/config/`: file configurazione per tenant
+- `module.md` — funzionalità implementate, architettura stack
+- `philosophy.md` — sovranità, isolamento, etica, zen
+- `configuration.md` — configurazione base, dipendenze
+- `traits/sushi-to-json.md` — pattern JSON models
+- `it/config/` — file configurazione per tenant

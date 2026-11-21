@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email plugins analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-plugins-analysis.md
 ---
 
 # Analisi Plugin Email per Filament - il progetto

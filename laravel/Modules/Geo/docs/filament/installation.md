@@ -10,7 +10,6 @@ title: Installazione Filament
 description: Installazione Filament
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Installazione Filament {#installazione-filament}

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "send record notification action"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Refactoring Plan: SendRecordNotificationAction

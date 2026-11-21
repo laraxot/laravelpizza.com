@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "themes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Temi - Linee Guida e Riflessioni
@@ -172,5 +171,5 @@ npm run build
 
 ## Collegamenti tra versioni di themes.md
 * [themes.md](docs/rules/themes.md)
-* [themes.md](../../../Xot/docs/themes.md)
+* [themes.md](laravel/modules/xot/docs/themes.md)
 * [themes.md](laravel/modules/cms/docs/frontoffice/themes.md)

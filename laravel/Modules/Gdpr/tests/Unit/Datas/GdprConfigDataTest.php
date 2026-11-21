@@ -5,8 +5,11 @@ declare(strict_types=1);
 use Modules\Gdpr\Actions\Cookie\GetCookieInventoryAction;
 use Modules\Gdpr\Datas\GdprConfigData;
 use Modules\Gdpr\Filament\Pages\SettingPage;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Webmozart\Assert\Assert;
+
+uses(TestCase::class);
 
 /**
  * Fa leggere a `GdprConfigData::make()` un file tenant finto, senza scrivere in `config/{tenant}`.

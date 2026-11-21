@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "refactoring basemodel report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎉 REFACTORING BASEMODEL - REPORT FINALE
@@ -17,6 +16,15 @@ status: draft
 **Status**: ✅ COMPLETATO CON SUCCESSO
 
 ---
+
+title: "refactoring basemodel report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "refactoring basemodel report"
+issues: []
+discussions: []
 ## 📊 RISULTATI
 
 ### Moduli Refactorati

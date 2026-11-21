@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "interfaces implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida all'Implementazione delle Interfacce nel Modulo Notify

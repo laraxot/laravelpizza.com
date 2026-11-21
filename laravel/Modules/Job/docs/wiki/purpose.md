@@ -1,27 +1,26 @@
 ---
-title: "Job: scopo del modulo e come raggiungerlo meglio"
+title: "Job — scopo del modulo e come raggiungerlo meglio"
 type: concept
+status: active
 created: 2026-09-02
 tags: [job, purpose, code, import, export, fallimenti, schedule]
 qmd: "job scopo modulo code queue import export failed jobs batch schedule fallimenti visibili"
 updated: 2026-09-02
 issues:
-  # DA CREARE: `gh` non autenticato: mai numeri inventati.
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_job_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_job_fila5/issues/"
 discussions:
-  # DA CREARE: vedi sopra.
+  # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_job_fila5/discussions/"
-status: superseded
-superseded_by: ../purpose.md
 ---
 
-# Job: perche' esiste
+# Job — perche' esiste
 
 ## Lo scopo in una frase
 
 **Job rende visibile e governabile tutto cio' che accade fuori dalla richiesta HTTP:
-code, importazioni, esportazioni, lavori pianificati: e soprattutto i loro
+code, importazioni, esportazioni, lavori pianificati — e soprattutto i loro
 fallimenti.**
 
 ## L'evidenza
@@ -40,7 +39,7 @@ richiesto crede che sia andato a buon fine.
 ## Il valore che aggiunge rispetto a Laravel nudo
 
 Laravel ha code, batch e `failed_jobs`. Quello che non ha e' una **superficie** in cui
-un funzionario: non un sistemista: possa vedere che l'importazione di ieri sera si e'
+un funzionario — non un sistemista — possa vedere che l'importazione di ieri sera si e'
 fermata alla riga 4.312 e perche'. `FailedImportRow` esiste per questo: non "l'import e'
 fallito", ma **quale riga** e **quale errore**.
 
@@ -76,7 +75,7 @@ classe accanto all'errore. Senza, ogni fallimento va istruito a mano.
 
 `Schedule` dice cosa **dovrebbe** girare. Il caso pericoloso non e' il job che fallisce:
 e' il job che smette di partire. Nessun errore, nessuna riga in `failed_jobs`, nessun
-sintomo: finche' qualcuno non nota che un dato e' fermo da settimane.
+sintomo — finche' qualcuno non nota che un dato e' fermo da settimane.
 
 **Azione:** registrare l'ultima esecuzione riuscita di ogni voce pianificata e segnalare
 quando supera l'intervallo atteso. E' il controllo che nessuno scrive e che tutti
@@ -90,7 +89,7 @@ Ritentare un'operazione non idempotente raddoppia gli effetti.
 una chiave di idempotenza. Prima di aggiungere `$tries`, chiedersi cosa succede se
 questo lavoro gira due volte.
 
-## Confini: cosa **non** appartiene a Job
+## Confini — cosa **non** appartiene a Job
 
 - Il **contenuto** del lavoro: dominio. Job esegue e osserva, non sa cosa sta importando.
 - L'**invio** delle notifiche: Notify.
@@ -98,5 +97,5 @@ questo lavoro gira due volte.
 
 ## Collegamenti
 
-- `laravel/Modules/Notify/docs/purpose.md`: per notificare i fallimenti
-- `docs/wiki/rules/queueable-actions.md`: Action accodabili
+- `laravel/Modules/Notify/docs/purpose.md` — per notificare i fallimenti
+- `docs/wiki/rules/queueable-actions.md` — Action accodabili

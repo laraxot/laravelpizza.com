@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Roadmap - Gdpr Module

@@ -20,11 +20,11 @@ sources: []
 
 # Media
 
-## Perche guardarlo adesso
+> **File, immagini, video e documenti.**
 
 Upload, storage, trasformazioni e distribuzione media locale o cloud, per l'ecosistema Laraxot.
 
-## Cosa promette
+## Cosa offre
 
 - **Upload**: carico sicuro di file, con upload temporanei legati alla sessione
 - **Immagini**: gestione dimensioni e formati (Intervention Image)
@@ -47,6 +47,11 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud, per l'ecos
 - Supporto multi-disk (local, S3, Minio, CloudFront)
 - Operazioni di attach atomiche
 
+### Elaborazione immagini
+- Trasformazioni Intervention Image (resize, crop, optimize)
+- Conversione formato (WebP, fallback AVIF)
+- Generazione thumbnail
+- Preservazione e sanitizzazione dati EXIF
 
 ### Video
 - Pipeline di conversione FFmpeg (MP4, WebM, HLS)
@@ -63,14 +68,14 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud, per l'ecos
 > (2026-10-07): WebM, thumbnail, sottotitoli e URL firmati CloudFront. Non trovati in `app/`:
 > HLS, AVIF, invalidazione CDN, bitrate adattivo (da verificare prima di promettere queste voci).
 
-## Documentazione essenziale
+## Dipendenze
 
 - `pbmedia/laravel-ffmpeg` e `intervention/image` (vedi `composer.json` per i vincoli correnti)
 - `spatie/laravel-medialibrary` (model `Media`, `TemporaryUpload`)
 - `spatie/laravel-queueable-action` (Actions asincrone)
 - Pacchetti di sistema: `ffmpeg`, `imagemagick` o `gd`
 
-## Filosofia
+## Confini architetturali
 
 Questo modulo pubblica contratti usabili da altri moduli. La logica vive in `Actions`; la UI admin segue Laraxot/XotBase.
 
@@ -86,11 +91,11 @@ Per i pattern di integrazione vedi la documentazione locale.
 
 ## Documentazione
 
-La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in [docs/INDEX.md](./docs/INDEX.md).
+La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in [docs/index.md](./docs/index.md).
 
 - [Story BMAD del modulo](./docs/stories/)
-- [Architettura](./docs/ARCHITECTURE.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
-- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
+- [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
+- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/performance-optimization.md) · [Migrazioni](./docs/migrations.md) · [Testing](./docs/testing-guidelines.md)
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "x page data bag only"
 issues: []
 discussions: []
-status: draft
 ---
 
 # `<x-page>` — solo `side`, `slug`, `data`

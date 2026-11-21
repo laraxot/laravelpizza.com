@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bottlenecks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Lang Module Performance Bottlenecks

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database mail templates improvements"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Database Mail Templates Integration Ideas

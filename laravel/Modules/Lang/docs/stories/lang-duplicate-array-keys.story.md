@@ -33,7 +33,7 @@ owned_scope:
   - laravel/Modules/Lang/docs/stories/lang-duplicate-array-keys.story.md
 ---
 
-# LANG-7.3: chiavi duplicate in `lang_service.php`
+# LANG-7.3 — chiavi duplicate in `lang_service.php`
 
 ## Story
 
@@ -58,7 +58,7 @@ Il file ha 10.028 righe e 1760 blocchi di secondo livello, di cui **934 chiavi d
 
 ### Il dato che rende la correzione sicura
 
-Analizzando le duplicazioni **con lo scope della sezione**: `fields.title` e
+Analizzando le duplicazioni **con lo scope della sezione** — `fields.title` e
 `actions.title` sono chiavi diverse in PHP, e PHPStan non le confonde:
 
 | | |
@@ -79,7 +79,7 @@ cambia il valore di nessuna chiave.
 
 In PHP, in un array letterale con chiavi ripetute **vince l'ultima** e le precedenti sono
 codice morto, senza alcun avviso a runtime. Qui le copie sono identiche, quindi non c'è un
-bug di comportamento: ma il file pesa 328 KB per contenere 934 chiavi utili, e ogni
+bug di comportamento — ma il file pesa 328 KB per contenere 934 chiavi utili, e ogni
 `__('lang_service.fields.x')` carica tutto.
 
 Il rischio vero è futuro: se qualcuno modifica **la prima** occorrenza di una chiave
@@ -140,7 +140,7 @@ ignorata.
 
 <!-- Da compilare durante l'implementazione. -->
 
-### Esecuzione 2026-08-24: Claude (Opus 5)
+### Esecuzione 2026-08-24 — Claude (Opus 5)
 
 **781 finding, un file, una causa. Rimossi 770 blocchi duplicati, nessun valore cambiato.**
 
@@ -170,7 +170,7 @@ sezione stessero. Risultato: 54 «duplicati divergenti», con `title` che appari
 `label/placeholder/helper_text` sia come `label/icon/tooltip`.
 
 Sembrava un conflitto da risolvere a mano. Non lo era: erano `fields.title` e
-`actions.title`: **chiavi diverse, in sezioni diverse, entrambe legittime**. PHPStan non
+`actions.title` — **chiavi diverse, in sezioni diverse, entrambe legittime**. PHPStan non
 le ha mai confuse; le ho confuse io contandole male.
 
 Rifatta l'analisi con lo scope della sezione: **770 duplicati, tutti dentro `fields`, tutti
@@ -200,7 +200,7 @@ Dopo la rimozione dei 770, PHPStan ne segnalava ancora **uno**:
 `'notify::filament'`, definito due volte nella stessa sezione.
 
 Il mio parser a due livelli non lo aveva visto perché stava a una profondità diversa. L'ho
-trovato con un rilevatore basato sul **tokenizer PHP** invece che sull'indentazione: con
+trovato con un rilevatore basato sul **tokenizer PHP** invece che sull'indentazione — con
 `token_get_all` e una pila di array aperti, il livello di annidamento non conta:
 
 ```bash
@@ -215,7 +215,7 @@ E qui, a differenza degli altri 770, **le due copie non erano identiche**:
     'components' => [ 'params-badges' => [] ],
 ],
 ...
-'notify::filament' => [],                  // riga 1605: vuota
+'notify::filament' => [],                  // riga 1605 — vuota
 ```
 
 In PHP vince l'ultima: il blocco **vuoto** sovrascriveva quello popolato, e

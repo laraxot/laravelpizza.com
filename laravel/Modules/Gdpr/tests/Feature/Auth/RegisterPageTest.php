@@ -7,6 +7,9 @@ namespace Modules\Gdpr\Tests\Feature\Auth;
 use Livewire\Livewire;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
+use Modules\Gdpr\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */
@@ -18,47 +21,58 @@ beforeEach(function (): void {
 it('can render the registration page in English', function (): void {
     gdprGet('/en/auth/register')
         ->assertStatus(200)
-        ->assertSeeText(__('gdpr::register.title'));
+        // Il titolo della pagina e' del tema ospite: del modulo e' il form, quindi si cerca la sua prima etichetta.
+        ->assertSeeText(__('gdpr::register.fields.first_name.label'));
 
     Livewire::test(RegisterWidget::class)->assertStatus(200);
 });
 
 it('displays the registration form elements in English', function (): void {
     gdprGet('/en/auth/register')
-        ->assertSeeTextInOrder([
+        ->assertSeeInOrder([
+            __('gdpr::register.fields.first_name.label'),
+            __('gdpr::register.fields.last_name.label'),
             __('gdpr::register.fields.email.label'),
             __('gdpr::register.fields.password.label'),
             __('gdpr::register.fields.password_confirmation.label'),
-            __('gdpr::register.fields.terms.label'),
         ]);
 });
 
 it('can register a new user', function (): void {
-    Livewire::test(RegisterWidget::class)
-        ->set('data.email', 'test@example.com')
-        ->set('data.password', 'password123')
-        ->set('data.password_confirmation', 'password123')
-        ->set('data.terms', true)
-        ->call('register')
-        ->assertRedirect('/en/home');
+    $email = 'auth-register-'.uniqid().'@example.test';
 
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Test')
+        ->set('last_name', 'User')
+        ->set('email', $email)
+        ->set('password', 'Str0ng-Passw0rd!2026')
+        ->set('password_confirmation', 'Str0ng-Passw0rd!2026')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasNoErrors();
+
+    // `users` sta sulla connessione `user`, non su quella di default.
     gdprTest()->assertDatabaseHasRow('users', [
-        'email' => 'test@example.com',
-    ]);
+        'email' => $email,
+    ], 'user');
 });
 
 it('shows validation errors for invalid data', function (): void {
     Livewire::test(RegisterWidget::class)
-        ->set('data.email', 'invalid-email')
-        ->set('data.password', 'short')
-        ->set('data.password_confirmation', 'mismatch')
-        ->set('data.terms', false)
-        ->call('register')
+        ->set('email', 'invalid-email')
+        ->set('password', 'short')
+        ->set('password_confirmation', 'mismatch')
+        ->set('privacy_accepted', false)
+        ->set('terms_accepted', false)
+        ->call('submit')
         ->assertHasErrors([
-            'data.email',
-            'data.password',
-            'data.password_confirmation',
-            'data.terms',
+            'first_name',
+            'email',
+            'password',
+            'password_confirmation',
+            'privacy_accepted',
+            'terms_accepted',
         ]);
 });
 
@@ -69,14 +83,11 @@ it('does not display duplicated phrases on the registration page', function (): 
     $response->assertDontSeeText('Hai gia un account?', false);
 });
 
-it('uses correct English translations for benefits section', function (): void {
+it('shows the consents in English in the order privacy, terms, marketing', function (): void {
     gdprGet('/en/auth/register')
         ->assertSeeTextInOrder([
-            __('gdpr::register.benefits.community.title'),
-            __('gdpr::register.benefits.community.cta'),
-            __('gdpr::register.benefits.tutorials.title'),
-            __('gdpr::register.benefits.tutorials.cta'),
-            __('gdpr::register.benefits.networking.title'),
-            __('gdpr::register.benefits.networking.cta'),
+            __('gdpr::register.consents.privacy_policy_label'),
+            __('gdpr::register.consents.terms_label'),
+            __('gdpr::register.consents.marketing_label'),
         ]);
 });

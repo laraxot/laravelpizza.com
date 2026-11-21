@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/description.php
 // Cms txt.fields.description — LangServiceProvider SSoT.
 return [
-    'label' => 'Descrizione',
-    'placeholder' => 'Inserisci una descrizione',
-    'help' => 'Testo descrittivo',
-    'helper_text' => 'Descrizione utilizzata per SEO e preview social',
+    'label' => 'Description',
+    'placeholder' => 'Enter a description',
+    'help' => 'Descriptive text',
+    'helper_text' => 'Description used for SEO and social previews',
     'tooltip' => '',
     'description' => '',
 ];

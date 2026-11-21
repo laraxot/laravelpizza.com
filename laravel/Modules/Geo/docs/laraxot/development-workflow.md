@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "development workflow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Development Workflow in Laraxot

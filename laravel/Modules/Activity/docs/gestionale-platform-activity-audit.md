@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_sXsgbY
 # Activity vs Platform.AuditLog — Mappatura e Gap Analysis
+=======
+>>>>>>> .merge_file_RLwVxt
 ---
 title: "Activity vs Platform.AuditLog: Mappatura e Gap Analysis"
 type: note
@@ -17,14 +20,20 @@ qmd: "activity vs platform.auditlog   mappatura e gap analysis activity"
 |---------|-------------------|---------------------|
 | **Modulo SRC** | `Modules/Platform` (parziale: `AuditLog`) | `Modules/Activity` |
 | **Ruolo** | Audit logging delle azioni utente | Tracciamento attività event-sourced con snapshot |
+<<<<<<< .merge_file_sXsgbY
 | **Stato mapping** | VICINO — Activity è più ricco, copre AuditLog ~90% | |
+=======
+>>>>>>> .merge_file_RLwVxt
 | **Stato mapping** | VICINO: Activity è più ricco, copre AuditLog ~90% | |
 
 ---
 
 ## Cosa fa Platform.AuditLog (SRC)
 
+<<<<<<< .merge_file_sXsgbY
 - **Modello `AuditLog`** — tabella `audit_logs`
+=======
+>>>>>>> .merge_file_RLwVxt
 - **Modello `AuditLog`**: tabella `audit_logs`
 - Campi: `user_id`, `action` (string), `auditable_type` (morph), `auditable_id` (morph), `old_values` (json), `new_values` (json), `ip_address`, `user_agent`
 - **Filament Resource**: `AuditLogResource` (read-only: List + View)
@@ -35,8 +44,11 @@ qmd: "activity vs platform.auditlog   mappatura e gap analysis activity"
 
 - **Modelli**: `Activity`, `Snapshot`, `StoredEvent`, `TestModel`
 - **Filament Resources**: `ActivityResource`, `SnapshotResource`, `StoredEventResource`
+<<<<<<< .merge_file_sXsgbY
 - **Pattern event sourcing** — `StoredEvent` tiene la cronologia eventi, `Snapshot` cattura stato aggregato a un punto nel tempo
 - **Activity restore** — possibilità di ripristinare stato da eventi + snapshot
+=======
+>>>>>>> .merge_file_RLwVxt
 - **Pattern event sourcing**: `StoredEvent` tiene la cronologia eventi, `Snapshot` cattura stato aggregato a un punto nel tempo
 - **Activity restore**: possibilità di ripristinare stato da eventi + snapshot
 - Più ricco e complesso del semplice audit log
@@ -58,8 +70,11 @@ qmd: "activity vs platform.auditlog   mappatura e gap analysis activity"
 
 ## Note
 
+<<<<<<< .merge_file_sXsgbY
 - **Activity è già superiore** a AuditLog — non serve creare nulla
 - Il gap vero è che Platform ha anche `PlatformSetting` (settings key-value) — quello va mappato su Tenant/Xot
+=======
+>>>>>>> .merge_file_RLwVxt
 - **Activity è già superiore** a AuditLog: non serve creare nulla
 - Il gap vero è che Platform ha anche `PlatformSetting` (settings key-value): quello va mappato su Tenant/Xot
 - Activity è già usato in produzione su base_workorder_fila5

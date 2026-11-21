@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "migration patterns"
 related:
   - "./webm.md"
-status: draft
 ---
 # Migration Patterns - Media Module
 

@@ -9,10 +9,9 @@ tags: [phpstan, trait, probe, no-phpstan-probe-models, quality]
 created: 2026-07-16
 updated: 2026-07-16
 related:
-  - ../../../../../docs/wiki/rules/no-phpstan-probe-models.md
+  - ../../../../docs/wiki/rules/no-phpstan-probe-models.md
   - ../../Xot/docs/wiki/concepts/phpstan-partial-scope-false-positives.md
   - ../roadmap/quality-fixes-log.md
-status: draft
 ---
 
 # Rimozione probe model PHPStan — GdprPhpstanTraitProbe
@@ -27,7 +26,7 @@ in contesto app (`/** Probe host so PHPStan analyses HasGdpr trait ... */`).
 
 1. **Viola una regola esplicita del progetto.** I file `*PhpstanTraitProbe.php`
    sono vietati dalla regola
-   [no-phpstan-probe-models](../../../../../docs/wiki/rules/no-phpstan-probe-models.md):
+   [no-phpstan-probe-models](../../../../docs/wiki/rules/no-phpstan-probe-models.md):
    non si creano classi finte solo per far passare PHPStan.
 2. **Era ridondante.** Il trait `HasGdpr` è realmente consumato da
    `Modules/Employee/app/Models/User.php` (`use HasGdpr;`) ed è già esercitato
@@ -61,7 +60,3 @@ Il test del trait `tests/Unit/Traits/HasGdprTraitTest.php` usava assert statici
 idiomatico (`expect()->toBeTrue()` / `->toContain()`). Altri file di test del
 modulo usano ancora la facade `Assert::` (convenzione diffusa): candidato a
 un refactor separato, non incluso qui per non allargare lo scope.
-
-## Aggiornamento del 2026-10-20
-
-`app/Models/GdprPhpstanTraitProbe.php` era ricomparso: il commit `7cedc3b` lo aveva aggiunto, `6b72891` (2026-09-24) lo aveva cancellato e `a02dd4c` (2026-10-08, re-import) lo ha riportato. Nessun file del modulo, ne' di altri moduli o temi, lo cita (`rg` su `Modules`, `Themes`, `app`, `config`, `database`). E' stato cancellato di nuovo, con la stessa motivazione. Il trait `HasGdpr` resta in scope tramite `tests/Fixtures/HasGdprDummy.php`. Se un merge futuro lo riporta, e' un'altra riapparizione del file, non una scelta del modulo.

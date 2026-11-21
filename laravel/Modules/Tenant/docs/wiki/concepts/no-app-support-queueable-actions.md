@@ -1,5 +1,5 @@
 ---
-title: "no app/Support: Tenant QueueableAction"
+title: "no app/Support — Tenant QueueableAction"
 type: concept
 tags: [tenant, actions, queueable-action, support, config, migration]
 created: 2026-07-12
@@ -11,12 +11,10 @@ discussions:
   - "https://github.com/laraxot/platform/discussions/273"
 related:
   - ../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md
-  - ../../../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md
   - config-merge-philosophy.md
-status: draft
 ---
 
-# Tenant: `app/Services/` senza PHP attivo
+# Tenant — `app/Services/` senza PHP attivo
 
 | Legacy | Action |
 |--------|--------|
@@ -25,7 +23,7 @@ status: draft
 
 ## TenantService → Action dirette (2026-07)
 
-`TenantService` (facade statica) **eliminata**. I caller usano `app(SomeAction::class)->execute(...)`: **non** `handle()`.
+`TenantService` (facade statica) **eliminata**. I caller usano `app(SomeAction::class)->execute(...)` — **non** `handle()`.
 
 | Ex `TenantService::` | Action |
 |----------------------|--------|
@@ -58,4 +56,3 @@ Config tenant e morph map devono ignorare chiavi non-string (PHPStan + merge sic
 ## Collegamenti
 
 - [no-app-support-monorepo-migration](../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md)
-- [no-app-support-monorepo-migration](../../../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md)

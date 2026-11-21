@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "temporary upload path generator 1"
 related:
   - "./webm.md"
-status: draft
 ---
 # TemporaryUploadPathGenerator
 
@@ -58,8 +57,8 @@ Questa classe gestisce la generazione dei percorsi per i file temporanei caricat
 - Validazione degli input per prevenire injection
 
 ## Collegamenti
-- [Documentazione Media Module](../module-media.md)
-- [Gestione File Temporanei](../file-management.md)
+- [Documentazione Media Module](../module_media.md)
+- [Gestione File Temporanei](../file_management.md)
 
 ## Note di Manutenzione
 - Mantenere la documentazione PHPDoc aggiornata

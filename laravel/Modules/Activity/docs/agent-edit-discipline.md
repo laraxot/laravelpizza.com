@@ -1,10 +1,8 @@
 ---
-title: agent edit discipline: puntatore
+qmd: "activity agent edit discipline md"
+title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-21
-status: draft
-tags: [docs, activity]
-qmd: "disciplina edit e qualità (puntatore) activity"
 ---
 
 # Disciplina edit e qualità (puntatore)

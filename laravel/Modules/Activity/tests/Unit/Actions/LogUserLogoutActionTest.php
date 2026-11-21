@@ -10,11 +10,12 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-test('LogUserLogoutAction can be instantiated', function () {
+test('LogUserLogoutAction can execute for a user', function (): void {
     $user = UserFactory::new()->createOne();
     Assert::assertInstanceOf(User::class, $user);
 
-    $action = new LogUserLogoutAction($user);
+    $action = new LogUserLogoutAction;
+    $activity = $action->execute($user);
 
-    Assert::assertSame($user, $action->user);
+    Assert::assertSame($user->getKey(), $activity->causer_id);
 });

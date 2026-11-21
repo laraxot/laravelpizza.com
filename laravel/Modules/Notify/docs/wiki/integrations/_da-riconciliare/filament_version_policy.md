@@ -8,7 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # 🎯 Filament Version Policy - ALWAYS LATEST
@@ -244,7 +243,7 @@ composer update "filament/*" -W
 - [GitHub Releases](https://github.com/filamentphp/filament/releases)
 
 ### Project Documentation
-- [COMPOSER_STRATEGY.md](COMPOSER_STRATEGY.md)
+- [COMPOSER_STRATEGY.md](composer_strategy.md)
 - [COMPOSER_UPDATE_REPORT.md](COMPOSER_UPDATE_REPORT.md)
 
 ## ✅ Checklist

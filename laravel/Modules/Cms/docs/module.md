@@ -10,7 +10,6 @@ qmd: "Cms module doctrine BMAD analysis purpose religion philosophy policy why z
 related:
   - "../../Xot/docs/module.md"
   - "../../UI/docs/module.md"
-status: draft
 ---
 
 # Cms Module — Doctrine

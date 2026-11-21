@@ -1,14 +1,13 @@
 ---
-qmd: "localizing dates and currencies.divergenza"
+qmd: "Localizing Dates and Currencies.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: localizing_dates_and_currencies.md"
+title: "Localizing Dates and Currencies.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `localizing_dates_and_currencies.md`

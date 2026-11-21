@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ollama token optimization"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Ollama Token Optimization Guide

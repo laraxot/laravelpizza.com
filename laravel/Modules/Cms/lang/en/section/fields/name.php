@@ -7,8 +7,8 @@ declare(strict_types=1);
 // File: lang/en/section/fields/name.php
 // Cms section.fields.name — LangServiceProvider SSoT.
 return [
-    'label' => 'Nome',
-    'placeholder' => 'Inserisci il nome della sezione',
+    'label' => 'Name',
+    'placeholder' => 'Enter the section name',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

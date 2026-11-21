@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Nested Resource Implementation Guide"
+qmd: "activity nested resources md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - nested resource implementation guide activity"
+tags: [documentation]
 ---
+
 # Activity Module - Nested Resource Implementation Guide
 
 ## Overview

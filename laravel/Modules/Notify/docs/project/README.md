@@ -13,10 +13,9 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - ../notifications/readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
-status: draft
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 ---
 # 📁 Project Documentation Index
 
@@ -65,7 +64,7 @@ This directory contains project-wide configuration and setup documentation for t
 | [`2-1-CONTEXT.md`](2-1-context.md) | Project context | Planning |
 | [`PROJECT.md`](project.md) | Project overview | Planning |
 | [`REQUIREMENTS.md`](requirements.md) | Requirements | Planning |
-| [`ROADMAP.md`](roadmap.md) | Project roadmap | Planning |
+| [`roadmap.md`](roadmap.md) | Project roadmap | Planning |
 | [`STATE.md`](state.md) | Current state | Planning |
 
 ### Philosophy
@@ -125,7 +124,6 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [Modules Docs](../../Modules/docs/) - Module documentation
 - [Themes Docs](../../Themes/docs/) - Theme documentation
 - [Bash Scripts](../../../../bashscripts/docs/) - Script documentation
-- [Bash Scripts](../../../../../bashscripts/docs) - Script documentation
 
 ### External
 
@@ -155,7 +153,7 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 **Planning:**
 - [`PROJECT.md`](project.md)
 - [`REQUIREMENTS.md`](requirements.md)
-- [`ROADMAP.md`](roadmap.md)
+- [`roadmap.md`](roadmap.md)
 - [`STATE.md`](state.md)
 - [`2-1-1-PLAN.md`](2-1-1-plan.md)
 - [`2-1-CONTEXT.md`](2-1-context.md)

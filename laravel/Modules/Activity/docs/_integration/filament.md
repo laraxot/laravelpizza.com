@@ -1,11 +1,10 @@
 ---
 title: "filament"
+qmd: "activity integration filament md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, _integration]
-qmd: "filament activity"
+tags: [documentation]
 ---
+
 # filament
 
 <!-- Contenuto migrato da _docs/filament.txt -->

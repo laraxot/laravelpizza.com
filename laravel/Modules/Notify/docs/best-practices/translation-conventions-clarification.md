@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - naming-conventions.md
-status: draft
 ---
 # Chiarimento sulle Convenzioni di Traduzione nel Modulo Notify
 
@@ -111,7 +110,3 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 - [Convenzioni Specifiche del Modulo Notify](./translation_conventions.md)
 - [Regole per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
 - [Regole per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
-- [Convenzioni Generali di Traduzione](../../../Lang/docs/translation_keys_rules.md)
-- [Convenzioni Specifiche del Modulo Notify](../translation_conventions.md)
-- [Regole per le Chiavi di Traduzione](../../../Lang/docs/translation_keys_best_practices.md)
-- [Regole per le Chiavi di Traduzione](../../../Lang/docs/translation-keys-best-practices.md)

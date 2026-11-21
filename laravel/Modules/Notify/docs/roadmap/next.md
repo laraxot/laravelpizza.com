@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "next"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Next (Module Notify)

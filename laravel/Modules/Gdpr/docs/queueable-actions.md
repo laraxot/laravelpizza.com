@@ -10,7 +10,6 @@ confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, gdpr]
 related:
   - Modules/Xot/docs/queueable-actions.md
-status: draft
 ---
 
 # Queueable Actions — Gdpr Module Doctrine

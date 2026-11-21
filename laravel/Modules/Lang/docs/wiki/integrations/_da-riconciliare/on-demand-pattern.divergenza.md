@@ -1,22 +1,21 @@
 ---
-qmd: "on demand pattern.divergenza"
+qmd: "On Demand Pattern.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: ON-DEMAND-PATTERN.md"
+title: "On Demand Pattern.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Divergenza: `ON-DEMAND-PATTERN.md`
+# Divergenza: `on-demand-pattern.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/lang/ON-DEMAND-PATTERN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/lang/on-demand-pattern.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/ON-DEMAND-PATTERN.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/ON-DEMAND-PATTERN.md`
+- versione del modulo: `laravel/Modules/Lang/docs/on-demand-pattern.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/on-demand-pattern.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

@@ -1,12 +1,10 @@
 ---
 title: "Later (Module Activity)"
+qmd: "activity roadmap 03 later md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "later (module activity) activity"
-status: superseded
-superseded_by: later.md
+tags: [documentation]
 ---
+
 # Later (Module Activity)
 
 ## Longer-term ideas

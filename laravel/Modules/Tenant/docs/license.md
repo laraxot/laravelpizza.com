@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "license"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 The MIT License (MIT)
 

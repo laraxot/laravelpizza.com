@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "base model"
 issues: []
 discussions: []
-status: draft
 ---
 
 # BaseModel del Modulo Notify

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "firebase"
 issues: []
 discussions: []
-status: draft
 ---
 
 # firebase

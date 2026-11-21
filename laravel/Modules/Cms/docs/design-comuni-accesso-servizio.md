@@ -1,11 +1,3 @@
----
-title: "Design Comuni — accesso-servizio"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, cms]
-qmd: "design comuni   accesso-servizio cms"
----
 # Design Comuni — accesso-servizio
 
 La pagina di test `/it/tests/accesso-servizio` è una pagina CMS, non una view Folio dedicata.

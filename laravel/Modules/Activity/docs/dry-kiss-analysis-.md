@@ -1,42 +1,12 @@
 ---
-title: "DRY & KISS Analysis - Modulo Activity"
-type: note
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "dry & kiss analysis - modulo activity activity"
-status: superseded
-superseded_by: dry-kiss-analysis.md
+title: "dry kiss analysis (alias)"
+type: alias
+status: deprecated
+updated: 2026-11-17
+qmd: "alias superseded dry-kiss-analysis-.md"
+superseded_by: "./dry-kiss-analysis.md"
 ---
-# DRY & KISS Analysis - Modulo Activity
 
-**Data:** 15 Ottobre 2025
-**DRY Score:** ✅ 97%
-**KISS Score:** ✅ 94%
+# dry kiss analysis
 
-## ✅ Stato Attuale
-
-### BaseModel Ottimo
-```php
-abstract class BaseModel extends XotBaseModel
-{
-    protected $connection = 'activity';
-
-    protected function casts(): array {
-        return array_merge(parent::casts(), [
-            // Module-specific casts only (attualmente nessuno)
-        ]);
-    }
-}
-```
-
-**Righe:** 12
-**DRY Level:** ✅ 97%
-
-## 🎯 Raccomandazioni
-- ✅ BaseModel: Eccellente
-- ✅ Integrazione Spatie Activity Log
-- 🔄 ServiceProvider: Auto-detect nome
-
----
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-[DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
+Stub alias post-strip data/timestamp. Canonico: [./dry-kiss-analysis.md](./dry-kiss-analysis.md).

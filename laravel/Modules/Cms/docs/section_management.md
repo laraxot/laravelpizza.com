@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: section_management
 canonical: ../../../Themes/docs/shared-components/section-management.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/section-management.md

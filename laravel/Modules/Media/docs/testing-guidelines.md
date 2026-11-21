@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "testing guidelines"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module - Testing Guidelines
 
@@ -41,7 +40,7 @@ declare(strict_types=1);
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
-use Modules\User\Models\User;
+use Modules\Xot\Contracts\UserContract;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 

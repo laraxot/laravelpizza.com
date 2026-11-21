@@ -14,7 +14,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * Owner migration `Notify::mail_templates` (consolidamento 2026-09-01).
  * Colonne unione viste nei duplicati non presenti qui: nessuna.
  *
- * Evoluzione 2026-09-10 (story quaeris-send-invite-migrate-to-record-notification.md,
+ * Evoluzione 2026-09-10 (story <nome progetto>-send-invite-migrate-to-record-notification.md,
  * Difetto 9): aggiunta `sms_from` — mittente SMS per template, prima fisso a "Xot"
  * in `RecordNotification::toSms()`. Timestamp del filename bumpato come da
  * bashscripts/ai/wiki/memories/one-migration-per-model-bump-timestamp.md.

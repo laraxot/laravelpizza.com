@@ -8,12 +8,11 @@ updated: 2026-09-26
 qmd: "architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gdpr Architecture
 
-Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026-09-24).
+Core components and design decisions (migrato da `architecture.md` in root, 2026-09-24).
 
 ## Structure
 
@@ -25,5 +24,5 @@ Core components and design decisions (migrato da `ARCHITECTURE.md` in root, 2026
 - `database/migrations/` — Database schema
 - `lang/` — Translations
 
-See the module [README](../README.md) for overview, [contributing](../contributing.md) for the
-development workflow, and [architecture/structure](./structure.md) for details.
+See the module [README](../README.md) for overview, [contributing](./CONTRIBUTING.md) for the
+development workflow, and [architecture/structure](./architecture/structure.md) for details.

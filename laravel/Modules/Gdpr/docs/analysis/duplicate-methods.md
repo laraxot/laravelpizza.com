@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "duplicate methods"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Metodi duplicati — Gdpr

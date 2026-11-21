@@ -177,11 +177,11 @@ ssh-keygen -t ed25519 -C "actions@github.com"
 ## 📚 Resources
 
 ### Documentation
-- [GitHub Action Setup Guide](GITHUB_ACTION_SETUP_REQUIRED.md)
-- [AI Lessons Learned](AI_AGENT_LESSONS_LEARNED.md)
+- [GitHub Action Setup Guide](github_action_setup_required.md)
+- [AI Lessons Learned](../project/AI_AGENT_LESSONS_LEARNED.md)
 - [Critical AI Rules](docs/AI_RULES_CRITICAL.md)
 - [AI Lessons Learned](../project/AI_AGENT_LESSONS_LEARNED.md)
-- [Critical AI Rules](../AI_RULES_CRITICAL.md)
+- [Critical AI Rules](../ai_rules_critical.md)
 - [Sync Subtrees Docs](bashscripts/docs/github/actions/sync-subtrees.md)
 
 ### GitHub Links

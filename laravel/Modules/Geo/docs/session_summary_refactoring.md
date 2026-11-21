@@ -1,14 +1,12 @@
 ---
-title: "session summary refactoring"
+title: "Session Summary Refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "session summary refactoring"
+qmd: "Session Summary Refactoring"
 issues: []
 discussions: []
-status: superseded
-superseded_by: session-summary-refactoring.md
 ---
 
 # SESSION SUMMARY — Refactoring Module Inheritance
@@ -33,7 +31,7 @@ superseded_by: session-summary-refactoring.md
 
 ## Output
 
-- `docs/RELATIONSHIP_METHODS_DUPLICATE_LIST.md`
+- `docs/relationship_methods_duplicate_list.md`
 
 ## PHPStan Status
 

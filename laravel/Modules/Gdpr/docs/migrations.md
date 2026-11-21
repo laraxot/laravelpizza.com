@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migrations"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Migrazioni Modulo GDPR
@@ -262,9 +261,9 @@ Per lo stato dell'analisi statica condivisa tra agenti si veda [phpstan-analysis
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Migrazioni User](../../User/docs/migrations.md)
-- [Migrazioni Activity](../../Activity/docs/migrations.md)
-- [Migrazioni Xot](../../Xot/docs/migrations.md)
+- [Migrazioni User](../user/docs/migrations.md)
+- [Migrazioni Activity](../activity/docs/migrations.md)
+- [Migrazioni Xot](../xot/docs/migrations.md)
 
 ### Collegamenti Interni
 - [README Principale](./README.md)

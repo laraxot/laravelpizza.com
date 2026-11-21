@@ -3,11 +3,9 @@ title: "Riorganizzazione docs core Media"
 type: story
 tags: [docs, bmad, media, reorganization]
 qmd: "riorganizzazione docs core Media"
-status: draft
-updated: 2026-10-09
 ---
 
-# Story: riorganizzazione docs core: Media
+# Story — riorganizzazione docs core: Media
 
 - **ID:** `2026-10-09-docs-reorg-core-media`
 - **Status:** done

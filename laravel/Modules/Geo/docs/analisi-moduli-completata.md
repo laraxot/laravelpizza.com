@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "analisi moduli completata"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ ANALISI MODULI COMPLETATA - Report Finale
@@ -93,7 +92,7 @@ Creato file `optimization_recommendations.md` in ogni modulo con:
 
 1. **Xot PathHelper** (2 ore)
    - Problema: Path hardcoded bloccano framework
-   - Soluzione: [Xot optimization_recommendations.md](../../Xot/docs/optimization_recommendations.md)
+   - Soluzione: [Xot optimization_recommendations.md](../laravel/modules/xot/docs/optimization_recommendations.md)
 
 2. **Notify Riusabilità** (2 giorni)
    - Problema: 336 occorrenze bloccano notifiche
@@ -189,6 +188,15 @@ Creato file `optimization_recommendations.md` in ogni modulo con:
 4. **Verificare** con script check ad ogni step
 
 ---
+
+title: "analisi moduli completata"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analisi moduli completata"
+issues: []
+discussions: []
 ## 📞 Supporto
 
 Per domande sull'implementazione delle raccomandazioni:

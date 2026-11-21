@@ -34,5 +34,5 @@ cd laravel && git grep -n '^<<<<<<< ' -- Modules/Notify/
 
 ## Memoria
 
-[`docs/wiki/memories/merge-collision-notify-lessons.md`](wiki/memories/merge-collision-notify-lessons.md)
+[`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)

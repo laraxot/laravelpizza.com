@@ -2,15 +2,14 @@
 qmd: "actions"
 issues: []
 discussions: []
-title: "Job Module: QueueableActions Architecture (Consolidated)"
+title: "Job Module — QueueableActions Architecture (Consolidated)"
 type: guide
 tags: [actions, architecture, queueable]
 created: 2026-07-21
 updated: 2026-07-21
-status: draft
 ---
 
-# Job Module: QueueableActions Architecture
+# Job Module — QueueableActions Architecture
 
 ## Status
 
@@ -132,11 +131,11 @@ php artisan schedule:clear-cache
 
 ## Design Principles
 
-1. **Separation of concerns**: Cache logic isolated from Observer/Command
-2. **Reusability**: Use same action across multiple call sites
-3. **Testability**: Call `execute()` directly without mocking container
-4. **Queueability**: Inherit `dispatch()` for free via QueueableAction trait
-5. **Composition**: Actions call other actions without constructor DI bloat
+1. **Separation of concerns** — Cache logic isolated from Observer/Command
+2. **Reusability** — Use same action across multiple call sites
+3. **Testability** — Call `execute()` directly without mocking container
+4. **Queueability** — Inherit `dispatch()` for free via QueueableAction trait
+5. **Composition** — Actions call other actions without constructor DI bloat
 
 ## Adding New Actions
 
@@ -160,14 +159,12 @@ php artisan schedule:clear-cache
        }
    }
    ```
-3. Update `docs/ACTIONS.md` with new action documentation
+3. Update `docs/actions.md` with new action documentation
 
 ## Related Documentation
 
 - **Pattern docs:** `docs/wiki/patterns/services-support-to-actions-migration-pattern.md`
-- **Coordinamento operativo:** [story owner del refactoring Actions](stories/job-services-to-actions.story.md).
-  La story contiene scope, decisioni, handoff e verifiche; `docs/chat/` resta archivio
-  storico e non è una fonte operativa.
+- **Coordination hub:** `docs/chat/services-support-to-actions-refactoring-coordination.md`
 - **Spatie library:** https://github.com/spatie/laravel-queueable-action
 
 ---

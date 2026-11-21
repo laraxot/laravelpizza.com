@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "layout"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Anatomia di un Sito Web

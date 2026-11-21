@@ -11,10 +11,7 @@ related:
   - ../../bashscripts/docs/method-homonym-census.json
   - ../../laravel/Modules/Sigma/docs/wiki/concepts/method-name-homonyms.md
   - ../../laravel/Modules/Xot/docs/wiki/concepts/redundancy-catalog.md
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): Censimento degli omonimi di metodo a livello di progetto, copiato dalla radice docs/wiki: i 33 link (bashscripts/docs/method-homonym-census.json, Modules/*/docs/wiki/...) sono relativi a quella radice e il JSON citato non esiste. Contenuto non riscritto, verificare prima di usarlo.
 
 # Censimento omonimi metodi — PTVX
 

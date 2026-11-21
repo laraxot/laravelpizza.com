@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "navigation block"
 issues: []
 discussions: []
-status: draft
 ---
 
 # NavigationBlock

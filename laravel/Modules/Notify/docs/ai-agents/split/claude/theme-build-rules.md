@@ -25,15 +25,15 @@ status: draft
 
 ### Required Commands (ALWAYS):
 ```bash
-cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
-cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
+cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
+cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
 npm run build
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
 ### When to Run:
 - After modifying `tailwind.config.js`
-- After modifying `resources/css/app.css` 
+- After modifying `resources/css/app.css`
 - After modifying any JavaScript files
 - After adding new Tailwind classes to Blade files
 - After ANY frontend changes
@@ -42,7 +42,10 @@ npm run build
 - The Laravel application reads compiled assets from the theme's `resources/dist/` directory
 - Without `npm run build`, Tailwind won't compile new classes or changes
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_kiULdb
 - Without `public_html/themes/<Tema>` symlinked to `laravel/Themes/<Tema>/public` (`npm run copy` dismesso), the changes won't be available to the main Laravel application
+=======
+>>>>>>> .merge_file_t0vaMX
 - Users will NOT see any frontend changes without these steps
 
 ### Remember:
@@ -56,8 +59,8 @@ This is a fundamental rule that must NEVER be forgotten when working with themes
 ---
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
+- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md): Master index
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source

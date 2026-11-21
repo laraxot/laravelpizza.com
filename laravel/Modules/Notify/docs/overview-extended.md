@@ -58,7 +58,7 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 - **[Spatie Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)**  
   Sistema template email database
 
-- **[Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)**  
+- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
 - **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
   Best practices layout email
 
@@ -250,8 +250,8 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 **Versione**: 1.1  
 **Stato**: PSR-4 compliant, test business logic completati (95% copertura)  
 **Prossimi passi**: Completamento test modelli base  
-**Changelog**: [CHANGELOG.md](./CHANGELOG.md)
-**Changelog**: [changelog.md](./CHANGELOG.md)
+**Changelog**: [CHANGELOG.md](./CHANGELOG.MD)
+**Changelog**: [CHANGELOG.md](./CHANGELOG.MD)
 
 ## 🔗 Collegamenti
 
@@ -274,9 +274,9 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
-- [Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [Spatie Mail Templates Structure](./mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
-- [Email Troubleshooting](./email-sending/EMAIL_TROUBLESHOOTING.md)
+- [Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)
+- [Spatie Mail Templates Structure](mail-templates/spatie_mail_templates_structure.md)
+- [Email Troubleshooting](email-sending/email_troubleshooting.md)
 - [Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)
 - [Spatie Mail Templates Structure](./mail-templates/spatie_mail_templates_structure.md)
 - [Email Troubleshooting](./email-sending/email_troubleshooting.md)

@@ -10,7 +10,6 @@ type: epics
 module: Cms
 related:
   - ../stories/12.1.cms-page-show-not-widget.story.md
-status: draft
 ---
 
 # Epic 12

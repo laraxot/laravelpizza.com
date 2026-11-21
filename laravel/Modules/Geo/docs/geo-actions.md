@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "geo actions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Actions Architecture

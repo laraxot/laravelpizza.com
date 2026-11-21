@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "coordinate picker filament5 save pattern"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../coordinate-picker-filament5-save-pattern.md
 ---
 
 # Coordinate Picker Multi-Column Save Pattern (FILAMENT 5)

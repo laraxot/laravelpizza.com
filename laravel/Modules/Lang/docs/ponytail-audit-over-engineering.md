@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Ponytail audit: Lang (over-engineering)"
+title: "Ponytail audit — Lang (over-engineering)"
 module: "Lang"
 type: concept
 tags: [google, translate]
@@ -10,9 +10,8 @@ updated: 2026-07-14
 qmd: "google translate"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
-# Ponytail audit: Lang (over-engineering)
+# Ponytail audit — Lang (over-engineering)
 
 **Ultimo run:** 2026-06-30  
 **Hub:** [../../../../docs/audit/ponytail-audit.md](../../../../docs/audit/ponytail-audit.md)

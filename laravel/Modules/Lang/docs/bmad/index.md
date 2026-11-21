@@ -1,22 +1,20 @@
 ---
-title: Lang: indice BMAD
+title: Lang — indice BMAD
 type: index
 tags: [docs, bmad, lang]
 qmd: "Lang indice BMAD documentazione"
-status: draft
-updated: 2026-10-09
 ---
 
-# Lang: indice BMAD
+# Lang — indice BMAD
 
 ## Canonico
 
+- [Entry point audit 2026-11-16](./00-index.md): [purpose](./purpose.md), [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [audit](./audit.md), [piano](./piano-miglioramento.md), [story](./stories/module-bmad-audit.story.md)
 - [README BMAD](./README.md)
 - [Architettura](./architecture/)
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
-  - [Migrazioni UUID e convenzione filename](./stories/user-id-uuid-migration-convention.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere

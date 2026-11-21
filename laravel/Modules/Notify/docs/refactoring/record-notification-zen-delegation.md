@@ -267,7 +267,7 @@ $client->notify($notification); // via() determina canali da routeNotificationFo
 - [RECORD_NOTIFICATION_ZEN_CONSTRUCTOR.md](./record_notification_zen_constructor.md) - Filosofia Zen Delegation
 - [record-notification.md](../notifications/record-notification.md) - Documentazione completa RecordNotification
 - [record-notification-constructor-slug.md](./record-notification-constructor-slug.md) - Refactoring precedente (Lazy Resolution, ora superato)
-- [send-record-notification-action.md](../actions/send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
 
 ---

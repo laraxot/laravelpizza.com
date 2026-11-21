@@ -1,6 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Configuration System Architecture - Tenant Module"
+module: "Tenant"
+type: concept
+tags: [configuration, logic, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "configuration logic analysis"
+related:
+  - "./phpstan-corrections-january.md"
+---
 # Configuration System Architecture - Tenant Module
 
-## Data: 2026-01-08
 ## Data: [DATE]
 ## Metodologia: Super Mucca - La Litigata Interna
 ## File: `Modules/Tenant/app/Services/TenantService.php` e `app/Actions/Config/GetTenantFilePathAction.php`
@@ -225,7 +237,6 @@ I contenuti delle pagine sono memorizzati in JSON:
 
 ---
 
-**Ultimo aggiornamento**: 2026-01-08
 **Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Completato

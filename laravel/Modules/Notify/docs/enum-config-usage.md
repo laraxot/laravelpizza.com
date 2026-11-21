@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "enum config usage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Utilizzo di Enum e Config

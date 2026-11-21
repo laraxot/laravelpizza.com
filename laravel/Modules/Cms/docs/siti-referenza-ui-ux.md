@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "siti referenza ui ux"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Siti di Riferimento per UI/UX in Ambito Sanitario

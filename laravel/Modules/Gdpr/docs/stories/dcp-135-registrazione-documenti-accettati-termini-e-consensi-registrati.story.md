@@ -11,6 +11,7 @@ created: 2026-10-13
 updated: 2026-10-13
 qmd: "registrazione consensi treatment consent termini condizioni informativa link checkbox saveGdprConsentsAction marketing facoltativo"
 related: [dcp-112, dcp-130, dcp-134, dcp-124]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-135: la registrazione fa accettare solo cio' che si puo' leggere e lascia traccia

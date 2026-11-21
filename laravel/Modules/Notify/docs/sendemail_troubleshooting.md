@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sendemail troubleshooting"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sendemail-troubleshooting.md
 ---
 
 # Troubleshooting SendEmail

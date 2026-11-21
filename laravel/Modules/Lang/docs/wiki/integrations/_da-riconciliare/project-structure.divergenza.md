@@ -1,22 +1,21 @@
 ---
-qmd: "project structure.divergenza"
+qmd: "Project Structure.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: PROJECT-STRUCTURE.md"
+title: "Project Structure.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Divergenza: `PROJECT-STRUCTURE.md`
+# Divergenza: `project-structure.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/lang/PROJECT-STRUCTURE.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/lang/project-structure.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/PROJECT-STRUCTURE.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/PROJECT-STRUCTURE.md`
+- versione del modulo: `laravel/Modules/Lang/docs/project-structure.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/project-structure.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

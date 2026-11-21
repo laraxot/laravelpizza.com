@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "anti patterns"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Anti-Pattern Comuni in Laraxot
@@ -61,7 +60,7 @@ if (app(SafeObjectCastAction::class)->hasProperty($object, 'value')) {
 
 ### Collegamenti
 
-- [Documentazione Azioni Cast](../../Xot/docs/cast-actions.md)
+- [Documentazione Azioni Cast](../../laravel/modules/xot/docs/cast-actions.md)
 - [SafeEloquentCastAction](../../Xot/app/Actions/Cast/SafeEloquentCastAction.php)
 - [SafeObjectCastAction](../../Xot/app/Actions/Cast/SafeObjectCastAction.php)
 
@@ -264,7 +263,7 @@ php artisan test
 
 ## Collegamenti
 
-- [Regole Cursor](../../../../.cursor/rules)
+- [Regole Cursor](../../.cursor/rules)
 - [Regole Windsurf](../../.windsurf/rules)
 - [Documentazione Moduli](../..)
 - [PHPStan Configuration](../../../phpstan.neon)

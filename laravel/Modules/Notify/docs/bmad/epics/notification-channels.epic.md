@@ -1,5 +1,5 @@
 ---
-title: "Notify: epic 5.251: canali e provider di notifica"
+title: "Notify — epic 5.251: canali e provider di notifica"
 type: epic
 tags: [notify, epic, channels, sms, telegram, whatsapp, push, email]
 created: 2026-09-28
@@ -10,11 +10,10 @@ related:
   - ../architecture/module-boundary.md
   - ../brainstorming.md
   - ./module-roadmap.md
-  - ../stories/module-bmad-audit.story.md
-status: draft
+  - ../stories/module-bmad-audit-20260928.story.md
 ---
 
-# Epic 5.251: canali e provider di notifica Notify
+# Epic 5.251 — canali e provider di notifica Notify
 
 > **SUMMARY**: epic per documentare i canali di notifica (SMS, Telegram,
 > WhatsApp, Email, FCM push) e i rispettivi provider/driver nel modulo
@@ -49,19 +48,19 @@ documenta:
 | Actions Mail | `app/Actions/Mail/` (7 file) |
 | Enums | `app/Enums/` (9 file) |
 | Config | `config/sms.php`, `config/telegram.php`, `config/whatsapp.php`, `config/notify.php` |
-| Coda | `QueueableAction` in `app/Actions/` |
+| Jobs | `app/Jobs/` (2 file) |
 | Facade | `app/Facades/NotificationFacade.php` |
 | Migrations | `database/migrations/2022_10_12_133532_create_notifications_table.php` |
 
 ## Task
 
-- [x] T1: Inventariare canali in `app/Channels/`
-- [x] T2: Mappare notification native in `app/Notifications/`
-- [x] T3: Catalogare driver SMS in `app/Actions/SMS/`
-- [x] T4: Documentare action push, telegram, whatsapp
-- [x] T5: Mappare enum di supporto in `app/Enums/`
-- [x] T6: Redigere `architecture.md` (indice root → shard)
-- [x] T7: Redigere `quick-reference.md` e `setup-guide.md`
+- [x] T1 — Inventariare canali in `app/Channels/`
+- [x] T2 — Mappare notification native in `app/Notifications/`
+- [x] T3 — Catalogare driver SMS in `app/Actions/SMS/`
+- [x] T4 — Documentare action push, telegram, whatsapp
+- [x] T5 — Mappare enum di supporto in `app/Enums/`
+- [x] T6 — Redigere `architecture.md` (indice root → shard)
+- [x] T7 — Redigere `quick-reference.md` e `setup-guide.md`
 
 ## Acceptance Criteria
 

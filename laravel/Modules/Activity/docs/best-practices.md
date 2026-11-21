@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_NhjdI1
 # Best Practices – Activity
 
 ## Principi DRY/KISS
@@ -16,6 +17,8 @@
 ## Documentazione
 - Aggiorna `docs/INDEX.md` con nuovi modelli e relazioni.
 - Collega a `Projects` e `Tasks` per contesto operativo.
+=======
+>>>>>>> .merge_file_uxNKiV
 ---
 title: "Best Practices – Activity"
 type: note
@@ -24,6 +27,7 @@ updated: 2026-10-08
 tags: [docs, activity]
 qmd: "best practices   activity activity"
 ---
+<<<<<<< .merge_file_NhjdI1
 # Best Practices – Activity
 
 ## Principi DRY/KISS
@@ -49,3 +53,7 @@ canonical: ../../../Themes/docs/shared-components/BEST_PRACTICES.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/BEST_PRACTICES.md
+=======
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/best_practices.md
+>>>>>>> .merge_file_uxNKiV

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "level max"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Livello Massimo - Modulo Activity

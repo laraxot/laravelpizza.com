@@ -137,7 +137,7 @@ public function scopeWithExtraAttributes(
    - Module-specific usage
    - Examples
 
-8. **[Quick Start](laravel/Modules/IndennitaResponsabilita/docs/QUICK-START.md)** (~150 lines)
+8. **[Quick Start](laravel/Modules/IndennitaResponsabilita/docs/quick-start.md)** (~150 lines)
    - Fast onboarding
    - Essential links
 
@@ -256,7 +256,7 @@ public function scopeWithExtraAttributes(
 
 ### For Immediate Use
 
-1. **[Quick Start Guide](laravel/Modules/IndennitaResponsabilita/docs/QUICK-START.md)** - Onboarding in 1 hour
+1. **[Quick Start Guide](laravel/Modules/IndennitaResponsabilita/docs/quick-start.md)** - Onboarding in 1 hour
 2. **[Refactoring Action Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md)** - Ready to execute
 3. **[Best Practices](laravel/Modules/IndennitaResponsabilita/docs/best-practices.md)** - Reference guide
 
@@ -358,7 +358,7 @@ public function scopeWithExtraAttributes(
 | Role | Document | Time |
 |------|----------|------|
 | **New Developer** | [START-HERE](docs/START-HERE.md) | 15 min |
-| **Module Developer** | [Quick Start](laravel/Modules/IndennitaResponsabilita/docs/QUICK-START.md) | 15 min |
+| **Module Developer** | [Quick Start](laravel/Modules/IndennitaResponsabilita/docs/quick-start.md) | 15 min |
 | **Tech Lead** | [Analysis Summary](laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md) | 20 min |
 | **Code Reviewer** | [Best Practices](laravel/Modules/IndennitaResponsabilita/docs/best-practices.md) | 20 min |
 | **AI Assistant** | [Claude README](docs/claude/README.md) | 15 min |

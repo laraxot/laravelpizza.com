@@ -33,12 +33,12 @@ class MenuForm extends XotBaseResourceForm
             Radio::make('target')
                 ->options([
                     '_self' => 'Stessa pagina',
-                    '_blank' => 'Nuova finestra',
+                    '_blank' => 'New window',
                 ])
                 ->default('_self'),
             SpatieMediaLibraryFileUpload::make('icon')
                 ->collection('cms-icons')
-                ->helperText('Carica un\'icona per il menu'),
+                ->helperText('Upload an icon for the menu'),
         ];
     }
 }

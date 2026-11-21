@@ -1,11 +1,10 @@
 ---
 title: "Activity Log Optimization - Activity Module"
+qmd: "activity performance activity log optimization md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity, performance]
-qmd: "activity log optimization - activity module activity"
+tags: [documentation]
 ---
+
 # Activity Log Optimization - Activity Module
 
 ## 🚨 Critical Issues Identified
@@ -124,6 +123,10 @@ public function searchActivities($searchTerm, $filters = [])
     $cacheKey = "activity_search_" . md5($searchTerm . serialize($filters));
     
     
+<<<<<<< .merge_file_nF5E0Z
+=======
+    
+>>>>>>> .merge_file_5EjtjG
     return Cache::remember($cacheKey, 300, function() use ($searchTerm, $filters) {
         $query = ActivityLog::with(['causer', 'subject'])
             ->where(function($q) use ($searchTerm) {
@@ -223,7 +226,10 @@ CREATE INDEX idx_activity_log_causer_type ON activity_log(causer_type);
 ## 📚 Related Documentation
 
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
+<<<<<<< .merge_file_nF5E0Z
 - [bottlenecks.md](./bottlenecks.md)
+=======
+>>>>>>> .merge_file_5EjtjG
 - [bottlenecks.md](../bottlenecks.md)
 - [event-sourcing.md](./event-sourcing.md)
 
@@ -508,7 +514,7 @@ CREATE INDEX idx_activity_log_causer_type ON activity_log(causer_type);
 
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
-- [bottlenecks.md](../bottlenecks.md)
+- [bottlenecks.md](./bottlenecks.md)
 - [event-sourcing.md](./event-sourcing.md)
 
 ## 🎯 Implementation Checklist

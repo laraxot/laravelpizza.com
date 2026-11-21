@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📚 Project Rules Index
@@ -17,6 +16,15 @@ status: draft
 > **Versione**: 1.0
 
 ---
+
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
 ## 🎯 Panoramica
 
 Questo documento fornisce un **indice centrale** per tutte le regole del progetto, organizzato per categoria.

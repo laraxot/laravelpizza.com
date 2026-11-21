@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/number.php
 // Cms txt.fields.number — LangServiceProvider SSoT.
 return [
-    'label' => 'Numero',
-    'placeholder' => 'Valore numerico',
-    'helper_text' => 'Valore numerico per contatori o statistiche',
+    'label' => 'Number',
+    'placeholder' => 'Numeric value',
+    'helper_text' => 'Numeric value for counters or statistics',
     'tooltip' => '',
     'description' => '',
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "semantic html css"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎨 Semantic HTML & CSS - Best Practices
@@ -18,6 +17,15 @@ status: draft
 **Priority**: HIGH
 
 ---
+
+title: "semantic html css"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic html css"
+issues: []
+discussions: []
 ## 🎯 Philosophy
 
 > "Use elements for their **SEMANTIC MEANING**, not their default styling."
@@ -300,9 +308,9 @@ Semantic HTML **REDUCES** need for ARIA:
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-- **[Guidelines Index](00-INDEX.md)** - All guidelines
+- **[Guidelines Index](00-index.md)** - All guidelines
 - **[Reusable Components](reusable-components-philosophy.md)** - DRY+KISS
-- **[Rules Index](../rules/00-INDEX.md)** - All rules
+- **[Rules Index](../rules/00-index.md)** - All rules
 
 ### External Resources
 - **[Maintainable CSS](https://maintainablecss.com/chapters/semantics/)** - Source material

@@ -1,9 +1,14 @@
-{{-- GDPR Register Widget View --}}
-<div class="space-y-4">
+{{--
+  Vista di riserva del RegisterWidget: si usa quando il tema non ha `filament/widgets/auth/register.blade.php`.
+  Un <form> vero: Invio da tastiera invia, i lettori di schermo lo annunciano come modulo.
+  Etichette = `gdpr::register.fields.*.label`, le stesse di RegisterWidget::validationAttributes(): campo e messaggio d'errore dicono la stessa parola.
+  Contratto condiviso con le viste dei temi: Modules/Gdpr/docs/register-widget-copy-ownership.md
+--}}
+<form wire:submit="submit" class="space-y-4" novalidate>
     {{-- Nome --}}
     <div>
         <label for="first_name" class="block text-sm font-medium text-white mb-1">
-            {{ __('gdpr::register.form.first_name') }}
+            {{ __('gdpr::register.fields.first_name.label') }}
         </label>
         <input
             wire:model="first_name"
@@ -24,7 +29,7 @@
 
     <div>
         <label for="last_name" class="block text-sm font-medium text-white mb-1">
-            {{ __('gdpr::register.form.last_name') }}
+            {{ __('gdpr::register.fields.last_name.label') }}
         </label>
         <input
             wire:model="last_name"
@@ -46,7 +51,7 @@
     {{-- Email --}}
     <div>
         <label for="email" class="block text-sm font-medium text-white mb-1">
-            {{ __('gdpr::register.form.email') }}
+            {{ __('gdpr::register.fields.email.label') }}
         </label>
         <input
             wire:model="email"
@@ -67,7 +72,7 @@
     {{-- Password --}}
     <div>
         <label for="password" class="block text-sm font-medium text-white mb-1">
-            {{ __('gdpr::register.form.password') }}
+            {{ __('gdpr::register.fields.password.label') }}
         </label>
         <div class="relative">
             <input
@@ -101,7 +106,7 @@
     {{-- Confirm Password --}}
     <div>
         <label for="password_confirmation" class="block text-sm font-medium text-white mb-1">
-            {{ __('gdpr::register.form.password_confirmation') }}
+            {{ __('gdpr::register.fields.password_confirmation.label') }}
         </label>
         <input
             wire:model="password_confirmation"
@@ -130,7 +135,8 @@
                 class="mt-1 w-4 h-4 text-red-600 border-slate-600 rounded bg-slate-800 focus:ring-red-500 focus:ring-2"
             >
             <label for="privacy_accepted" class="text-sm text-slate-300">
-                {{ __('gdpr::register.consents.privacy_policy', ['url' => url('/'.app()->getLocale().'/privacy')]) }}
+                {{ __('gdpr::register.consents.privacy_policy_label') }}
+                <a href="{{ url('/'.app()->getLocale().'/privacy') }}" target="_blank" rel="noopener" class="underline text-white">{{ __('gdpr::register.consents.privacy_policy_link') }}<span class="sr-only"> ({{ __('gdpr::register.consents.opens_new_tab') }})</span></a>
             </label>
         </div>
         @error('privacy_accepted')
@@ -147,7 +153,8 @@
                 class="mt-1 w-4 h-4 text-red-600 border-slate-600 rounded bg-slate-800 focus:ring-red-500 focus:ring-2"
             >
             <label for="terms_accepted" class="text-sm text-slate-300">
-                {{ __('gdpr::register.consents.terms', ['url' => url('/'.app()->getLocale().'/terms')]) }}
+                {{ __('gdpr::register.consents.terms_label') }}
+                <a href="{{ url('/'.app()->getLocale().'/terms') }}" target="_blank" rel="noopener" class="underline text-white">{{ __('gdpr::register.consents.terms_link') }}<span class="sr-only"> ({{ __('gdpr::register.consents.opens_new_tab') }})</span></a>
             </label>
         </div>
         @error('terms_accepted')
@@ -163,7 +170,7 @@
                 class="mt-1 w-4 h-4 text-red-600 border-slate-600 rounded bg-slate-800 focus:ring-red-500 focus:ring-2"
             >
             <label for="marketing_consent" class="text-sm text-slate-300">
-                {{ __('gdpr::register.consents.marketing') }}
+                {{ __('gdpr::register.consents.marketing_label') }}
             </label>
         </div>
     </div>
@@ -171,9 +178,8 @@
     {{-- Submit --}}
     <div class="pt-4">
         <button
-            wire:click="submit"
             wire:loading.attr="disabled"
-            type="button"
+            type="submit"
             class="w-full py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
             {{ __('gdpr::register.form.submit') }}
@@ -190,4 +196,4 @@
             </ul>
         </div>
     @endif
-</div>
+</form>

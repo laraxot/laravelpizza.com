@@ -1,3 +1,14 @@
+---
+title: "STORY 002 scheda contract unification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "STORY 002 scheda contract unification"
+issues: []
+discussions: []
+---
+
 # STORY-002: Unificazione SchedaContract e gerarchia BaseScheda
 
 **Epic:** Architecture — Module Inheritance & DRY  
@@ -9,6 +20,14 @@
 
 ---
 
+title: "STORY 002 scheda contract unification"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "STORY 002 scheda contract unification"
+issues: []
+discussions: []
 ## User Story
 
 **As a** architetto Laraxot  

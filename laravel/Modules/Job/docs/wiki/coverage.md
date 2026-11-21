@@ -1,18 +1,16 @@
 ---
 id: module-job-coverage
-title: "Job: Stato qualità e coverage"
+title: "Job — Stato qualità e coverage"
 type: coverage-report
 module: Job
 status: active
 updated: 2026-09-22
 related:
-  - ../bmad/stories/12.3.root-hygiene-conflict-markers.story.md
-  - ../bmad/stories/12.4.git-hygiene-queue-pid-graphify-out-aaa.story.md
-tags: [docs, job, wiki]
-qmd: "job   stato qualità (2026-09-22) job"
+  - ./bmad/stories/12.3.root-hygiene-conflict-markers.story.md
+  - ./bmad/stories/12.4.git-hygiene-queue-pid-graphify-out-aaa.story.md
 ---
 
-# Job: Stato qualità (2026-09-22)
+# Job — Stato qualità (2026-09-22)
 
 Nessun baseline di coverage precedente trovato nel modulo (`docs/coverage.md` non
 esisteva). Questo documento registra lo stato **onesto** osservato in questa sessione,
@@ -24,7 +22,7 @@ non un target dichiarato.
 cd laravel && ./vendor/bin/phpstan analyse Modules/Job --no-progress --error-format=table
 ```
 
-Esito: `[OK] No errors` (config `phpstan.neon`, livello del progetto: nessun
+Esito: `[OK] No errors` (config `phpstan.neon`, livello del progetto — nessun
 `--level` passato, come da regola). Verificato dopo la rimozione dei due file
 `.aaa` morti (nessun impatto: erano fuori dall'autoload, mai referenziati).
 
@@ -38,7 +36,7 @@ Esito: **hang**, terminato dopo 90s da timeout esterno (`nc -z -w3 10.100.200.53
 → DB **non raggiungibile** prima ancora di lanciare la suite). Coerente con la memoria
 second-brain `project-test-db-unreachable-drives-skips.md`: il DB di test
 (`10.100.200.53:3306`) non risponde da questa macchina in questa sessione. Nessun
-numero di coverage prodotto: non è un regressione introdotta qui, è un blocco
+numero di coverage prodotto — non è un regressione introdotta qui, è un blocco
 infrastrutturale preesistente e documentato.
 
 **Non è stato possibile alzare il coverage in questa sessione** per il motivo sopra:
@@ -53,7 +51,7 @@ cd laravel && bash tools/phpmd.sh Modules/Job
 
 Esito: **124 righe di findings** (non zero). Debito pre-esistente, non introdotto in
 questa sessione (le uniche modifiche PHP di questa sessione sono state la *rimozione*
-di due classi stub mai referenziate: non può aver generato questi finding, tutti su
+di due classi stub mai referenziate — non può aver generato questi finding, tutti su
 file diversi: `Policies/*`, `Schedule.php`, `Task.php`, `Observers/ScheduleObserver.php`,
 `Rules/Corn.php`, `Traits/FormatSeconds.php`, `tests/*`). Categorie principali:
 `UnusedFormalParameter`/`CamelCaseParameterName` sui parametri Policy prefissati `_`

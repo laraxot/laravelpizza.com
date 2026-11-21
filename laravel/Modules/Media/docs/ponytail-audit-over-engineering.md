@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Ponytail audit: Media (over-engineering)"
+title: "Ponytail audit — Media (over-engineering)"
 module: "Media"
 type: concept
 tags: [ponytail, audit, over, engineering]
@@ -10,15 +10,14 @@ updated: 2026-07-14
 qmd: "ponytail audit over engineering"
 related:
   - "./webm.md"
-status: draft
 ---
-# Ponytail audit: Media (over-engineering)
+# Ponytail audit — Media (over-engineering)
 
 **Ultimo run:** 2026-06-30  
 **Modulo:** upload, library, media Filament.  
 **Hub:** [../../../../docs/audit/ponytail-audit.md](../../../../docs/audit/ponytail-audit.md)  
 **Remediation:** [../../../../docs/project/ponytail-audit-remediation.md](../../../../docs/project/ponytail-audit-remediation.md)  
-**GitHub monorepo:** [Issue #221](https://github.com/laraxot/base_predict_fila5/issues/221) · [Discussion #222](https://github.com/laraxot/base_predict_fila5/discussions/222) · [Discussion #228](https://github.com/laraxot/base_predict_fila5/discussions/228)
+**GitHub monorepo:** [Issue #221](https://github.com/laraxot/base_ptvx_fila5/issues/221) · [Discussion #222](https://github.com/laraxot/base_ptvx_fila5/discussions/222) · [Discussion #228](https://github.com/laraxot/base_ptvx_fila5/discussions/228)
 
 ## Findings
 
@@ -33,6 +32,6 @@ Rename `.bak` su `BaseController.php` dopo grep globale. Nessun impatto se nessu
 
 ## Collegamenti
 
-- [00-INDEX.md](./00-index.md)
+- [00-index.md](./00-index.md)
 ---
-- [00-INDEX.md](./00-index.md)
+- [00-index.md](./00-index.md)

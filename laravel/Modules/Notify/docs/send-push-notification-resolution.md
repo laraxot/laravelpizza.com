@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "send push notification resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione conflitto git su SendPushNotification.php

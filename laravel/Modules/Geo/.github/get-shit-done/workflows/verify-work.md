@@ -97,11 +97,11 @@ Use `phase_dir` from init (or run init if not already done).
 ls "$phase_dir"/*-SUMMARY.md 2>/dev/null
 ```
 
-Read each SUMMARY.md to extract testable deliverables.
+Read each summary.md to extract testable deliverables.
 </step>
 
 <step name="extract_tests">
-**Extract testable deliverables from SUMMARY.md:**
+**Extract testable deliverables from summary.md:**
 
 Parse for:
 1. **Accomplishments** - Features/functionality added
@@ -143,7 +143,7 @@ issues: []
 discussions: []
 status: testing
 phase: XX-name
-source: [list of SUMMARY.md files]
+source: [list of summary.md files]
 started: [ISO timestamp]
 updated: [ISO timestamp]
 ---
@@ -386,7 +386,7 @@ Task(
 <files_to_read>
 - {phase_dir}/{phase_num}-UAT.md (UAT with diagnoses)
 - .planning/STATE.md (Project State)
-- .planning/ROADMAP.md (Roadmap)
+- .planning/roadmap.md (Roadmap)
 </files_to_read>
 
 </planning_context>
@@ -481,7 +481,7 @@ Task(
 </revision_context>
 
 <instructions>
-Read existing PLAN.md files. Make targeted updates to address checker issues.
+Read existing plan.md files. Make targeted updates to address checker issues.
 Do NOT replan from scratch unless issues are fundamental.
 </instructions>
 """,
@@ -573,7 +573,7 @@ Default to **major** if unclear. User can correct if needed.
 </severity_inference>
 
 <success_criteria>
-- [ ] UAT file created with all tests from SUMMARY.md
+- [ ] UAT file created with all tests from summary.md
 - [ ] Tests presented one at a time with expected behavior
 - [ ] User responses processed as pass/issue/skip
 - [ ] Severity inferred from description (never asked)

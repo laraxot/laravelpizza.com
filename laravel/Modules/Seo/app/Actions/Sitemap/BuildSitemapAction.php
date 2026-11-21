@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Seo\Actions\Sitemap;
 
+use DateTimeInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Response;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
 use Modules\Cms\Actions\Head\ResolveWrittenLocalesAction;
 use Modules\Cms\Models\Page;
+use Modules\Seo\Contracts\SitemapLastModifiedContract;
 use Modules\Seo\Contracts\SitemapPathsContract;
 use Modules\Seo\Datas\SeoConfigData;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -57,6 +60,9 @@ final class BuildSitemapAction
             ));
             foreach ($pageLocales as $locale) {
                 $xml .= "  <url>\n    <loc>".$this->url($locale, $entry['path'])."</loc>\n";
+                if ($entry['lastmod'] !== null) {
+                    $xml .= '    <lastmod>'.$entry['lastmod']->format(DateTimeInterface::ATOM)."</lastmod>\n";
+                }
                 if (count($pageLocales) > 1) {
                     foreach ($pageLocales as $alternate) {
                         $xml .= '    <xhtml:link rel="alternate" hreflang="'.$alternate.'" href="'.$this->url($alternate, $entry['path'])."\"/>\n";
@@ -76,7 +82,7 @@ final class BuildSitemapAction
      * `path`: percorso senza lingua ('' per la home, 'privacy', 'tickets/track', 'blog/{slug}', 'tickets/{id}').
      * `written`: lingue in cui la pagina CMS e' scritta (titolo e contenuto); `null` = nessuna restrizione (URL di dettaglio dei moduli).
      *
-     * @return list<array{path: string, written: list<string>|null}>
+     * @return list<array{path: string, written: list<string>|null, lastmod: DateTimeInterface|null}>
      */
     private function indexableEntries(): array
     {
@@ -94,15 +100,17 @@ final class BuildSitemapAction
             if (array_key_exists($path, $aliases)) {
                 continue;
             }
-            $entries['/'.$path] = ['path' => $path, 'written' => app(ResolveWrittenLocalesAction::class)->execute($page)];
+            $entries['/'.$path] = ['path' => $path, 'written' => app(ResolveWrittenLocalesAction::class)->execute($page), 'lastmod' => null];
         }
 
         foreach (app()->tagged(SitemapPathsContract::TAG) as $source) {
             if ($source instanceof SitemapPathsContract) {
+                // Date vere di ultima modifica, se la fonte le ha (SitemapLastModifiedContract); mai inventate.
+                $lastModified = $source instanceof SitemapLastModifiedContract ? $source->lastModified() : [];
                 foreach ($source->execute() as $path) {
                     if (! str_starts_with(trim($path, '/'), 'tests/') && trim($path, '/') !== 'tests') {
                         // Una pagina CMS gia' vista conserva le sue lingue: il modulo che la elenca non ne sa nulla.
-                        $entries['/'.$path] ??= ['path' => $path, 'written' => null];
+                        $entries['/'.$path] ??= ['path' => $path, 'written' => null, 'lastmod' => $lastModified[$path] ?? null];
                     }
                 }
             }
@@ -118,12 +126,15 @@ final class BuildSitemapAction
      */
     private function indexableCmsPages(): Collection
     {
-        return Page::query()->get();
+        /** @var Builder<Page> $query */
+        $query = Page::query();
+
+        return $query->get();
     }
 
     private function pathOf(string $slug): string
     {
-        $slug = preg_replace('/\.index$/', '', $slug);
+        $slug = SafeStringCastAction::cast(preg_replace('/\.index$/', '', $slug));
 
         return $slug === 'home' ? '' : str_replace('.', '/', $slug);
     }

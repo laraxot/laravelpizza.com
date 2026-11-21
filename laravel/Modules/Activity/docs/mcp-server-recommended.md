@@ -2,6 +2,15 @@
 module: theme
 topic: MCP_SERVER_RECOMMENDED
 canonical: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
+<<<<<<< .merge_file_ReAzO6
+=======
+title: "MCP Server Consigliati per il Modulo Activity"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "mcp server consigliati per il modulo activity activity"
+>>>>>>> .merge_file_v3gjzL
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md

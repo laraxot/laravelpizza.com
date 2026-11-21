@@ -2,16 +2,15 @@
 qmd: "analysis consolidated"
 issues: []
 discussions: []
-title: "analysis: Consolidated Documentation"
+title: "analysis — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# analysis: Consolidated Documentation
+# analysis — Consolidated Documentation
 
 Consolidated from **29** individual files.
 
@@ -347,17 +346,12 @@ qmd: "analysis-detailed-1 analysis detailed 1"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -417,7 +411,7 @@ related:
 
 ## analysis-dettagliata-1
 
-*Consolidated from: `analysis-dettagliata-architettura-struttura.md`*
+*Consolidated from: `analysis-dettagliata-1.md`*
 
 
 ## 1. Architettura del Sistema
@@ -940,7 +934,7 @@ return [
 
 ## analysis-dettagliata-2
 
-*Consolidated from: `analysis-dettagliata-modelli-relazioni.md`*
+*Consolidated from: `analysis-dettagliata-2.md`*
 
 
 ## 2. Modelli e Relazioni
@@ -1587,7 +1581,7 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 ## analysis-dettagliata-3
 
-*Consolidated from: `analysis-dettagliata-servizi-core.md`*
+*Consolidated from: `analysis-dettagliata-3.md`*
 
 
 ## 3. Servizi Core
@@ -2238,7 +2232,7 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 ## analysis-dettagliata-4
 
-*Consolidated from: `analysis-dettagliata-integrazione-filament.md`*
+*Consolidated from: `analysis-dettagliata-4.md`*
 
 
 ## 4. Integrazione con Filament
@@ -2929,7 +2923,7 @@ class TemplateTestPage extends Page
 
 ## analysis-dettagliata-5
 
-*Consolidated from: `analysis-dettagliata-testing-parte.md`*
+*Consolidated from: `analysis-dettagliata-5.md`*
 
 
 ## 5. Testing
@@ -3749,7 +3743,7 @@ class WebhookControllerTest extends TestCase
 
 ## analysis-dettagliata-6
 
-*Consolidated from: `analysis-dettagliata-monitoraggio-analytics.md`*
+*Consolidated from: `analysis-dettagliata-6.md`*
 
 
 ## 6. Monitoraggio e Analytics
@@ -4373,7 +4367,7 @@ class AnalyticsExporter
 
 ## analysis-dettagliata-7
 
-*Consolidated from: `analysis-dettagliata-manutenzione-backup.md`*
+*Consolidated from: `analysis-dettagliata-7.md`*
 
 
 ## 7. Manutenzione e Backup
@@ -5022,7 +5016,7 @@ class MaintainTemplatesCommand extends Command
 
 ## analysis-dettagliata-8
 
-*Consolidated from: `analysis-dettagliata-finali-parte.md`*
+*Consolidated from: `analysis-dettagliata-8.md`*
 
 
 ## 8. Note Finali
@@ -6241,17 +6235,6 @@ Modules/Notify/
 * [analysis.md](../../../job/docs/analysis.md)
 * [analysis.md](../../../job/docs/phpstan/analysis.md)
 * [analysis.md](../../../media/docs/analysis.md)
-* [analysis.md](../../analysis.md)
-* [analysis.md](../../../notify/docs/phpstan/analysis.md)
-* [analysis.md](../../../xot/docs/analysis.md)
-* [analysis.md](../../../xot/docs/phpstan/analysis.md)
-* [analysis.md](../../../../User/docs/analysis.md)
-* [analysis.md](../../../user/docs/phpstan/analysis.md)
-* [analysis.md](../../../ui/docs/analysis.md)
-* [analysis.md](../../../ui/docs/phpstan/analysis.md)
-* [analysis.md](../../../../Job/docs/analysis.md)
-* [analysis.md](../../../job/docs/phpstan/analysis.md)
-* [analysis.md](../../../../Media/docs/analysis.md)
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
 
@@ -6266,7 +6249,7 @@ Modules/Notify/
 
 ## analysisettagliata-2
 
-*Consolidated from: `analysisettagliata-modelli-relazioni.md`*
+*Consolidated from: `analysisettagliata-2.md`*
 
 
 ## 2. Modelli e Relazioni
@@ -6913,7 +6896,7 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 ## analysisettagliata-3
 
-*Consolidated from: `analysisettagliata-servizi-core.md`*
+*Consolidated from: `analysisettagliata-3.md`*
 
 
 ## 3. Servizi Core
@@ -7564,7 +7547,7 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 ## analysisettagliata-4
 
-*Consolidated from: `analysisettagliata-integrazione-filament.md`*
+*Consolidated from: `analysisettagliata-4.md`*
 
 
 ## 4. Integrazione con Filament
@@ -8255,7 +8238,7 @@ class TemplateTestPage extends Page
 
 ## analysisettagliata-5
 
-*Consolidated from: `analysisettagliata-testing-parte.md`*
+*Consolidated from: `analysisettagliata-5.md`*
 
 
 ## 5. Testing
@@ -9075,7 +9058,7 @@ class WebhookControllerTest extends TestCase
 
 ## analysisettagliata-6
 
-*Consolidated from: `analysisettagliata-monitoraggio-analytics.md`*
+*Consolidated from: `analysisettagliata-6.md`*
 
 
 ## 6. Monitoraggio e Analytics
@@ -9699,7 +9682,7 @@ class AnalyticsExporter
 
 ## analysisettagliata-7
 
-*Consolidated from: `analysisettagliata-manutenzione-backup.md`*
+*Consolidated from: `analysisettagliata-7.md`*
 
 
 ## 7. Manutenzione e Backup
@@ -10348,7 +10331,7 @@ class MaintainTemplatesCommand extends Command
 
 ## analysisettagliata-8
 
-*Consolidated from: `analysisettagliata-finali-parte.md`*
+*Consolidated from: `analysisettagliata-8.md`*
 
 
 ## 8. Note Finali

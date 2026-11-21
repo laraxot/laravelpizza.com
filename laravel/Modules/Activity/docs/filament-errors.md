@@ -1,11 +1,10 @@
 ---
 title: "Errori Comuni Filament nel Modulo Activity"
+qmd: "activity filament errors md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "errori comuni filament nel modulo activity activity"
+tags: [documentation]
 ---
+
 # Errori Comuni Filament nel Modulo Activity
 
 ## Errori di Metodi Statici

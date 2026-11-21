@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Business Logic Overview"
+qmd: "activity business logic overview md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - business logic overview activity"
+tags: [documentation]
 ---
+
 # Activity Module - Business Logic Overview
 
 ## Core Business Logic Components

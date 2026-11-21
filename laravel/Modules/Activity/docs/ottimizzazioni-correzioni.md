@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Ottimizzazioni e Correzioni"
+qmd: "activity ottimizzazioni correzioni md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - ottimizzazioni e correzioni activity"
+tags: [documentation]
 ---
+
 # Activity Module - Ottimizzazioni e Correzioni
 
 ## Panoramica

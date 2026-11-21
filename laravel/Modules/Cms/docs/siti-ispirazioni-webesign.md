@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: siti-ispirazioni-webesign
 canonical: ../../../Themes/docs/shared-components/siti-ispirazioni-web-design.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/siti-ispirazioni-web-design.md

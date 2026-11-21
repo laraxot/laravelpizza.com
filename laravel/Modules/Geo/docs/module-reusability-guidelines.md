@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module reusability guidelines"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Linee Guida per la Riusabilità dei Moduli Laraxot

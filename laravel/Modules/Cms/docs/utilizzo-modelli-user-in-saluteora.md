@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "utilizzo modelli user in saluteora"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Utilizzo Corretto dei Modelli User in il progetto

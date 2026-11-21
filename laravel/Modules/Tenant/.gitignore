@@ -120,7 +120,6 @@ Thumbs.db
 # DOCUMENTATION CACHE
 # ==============================================
 docs/phpstan/
-docs/cache/
 
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
@@ -162,7 +161,6 @@ laravel
 public_html
 lang/lang/
 _docs/
-_docs/
 Tests/
 
 # -----------------------------------------------------------------------------
@@ -179,3 +177,14 @@ Tests/
 
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 docs/archive/
+
+# Laraxot — agenti e tool di qualita locali (module-theme-root-hygiene)
+.agents/
+.codex/
+.opencode/
+.qwen/
+audit-coverage/
+rector.php
+phpinsights.php
+.php-cs-fixer.php
+.php-cs-fixer.dist.php

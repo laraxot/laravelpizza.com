@@ -104,7 +104,7 @@ status: "da-riconciliare"
 
 - [Quality Improvements](./quality-improvements.md)
 - [Index Documentation](./index.md)
-- [Best Practices](./BEST_PRACTICES.md)
+- [Best Practices](./best_practices.md)
 
 *Ultimo aggiornamento: 2025-01-06*
 

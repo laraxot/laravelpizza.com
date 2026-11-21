@@ -1,11 +1,10 @@
 ---
 title: "Proiettori in Larabank"
+qmd: "activity use cases bank projectors md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "proiettori in larabank activity"
+tags: [documentation]
 ---
+
 # Proiettori in Larabank
 
 ## Introduzione

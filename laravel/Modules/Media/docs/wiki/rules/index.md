@@ -1,5 +1,5 @@
 ---
-title: "Indice regole: Modulo Media"
+title: "Indice regole — Modulo Media"
 module: "Media"
 type: concept
 tags: [index]
@@ -8,9 +8,8 @@ updated: 2026-07-14
 qmd: "index"
 related:
   - "./webm.md"
-status: draft
 ---
-# Indice regole: Modulo Media
+# Indice regole — Modulo Media
 
 ## Scopo
 
@@ -28,7 +27,7 @@ qmd search "Media rules" --limit 5
 
 ---
 
-<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
 
 # Media Module - rules Index
 
@@ -42,10 +41,10 @@ qmd search "Media rules" --limit 5
 ```
 
 ## See Also
-- [Root Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Root Wiki](../../../docs/wiki/)
 
 ---
 *Updated: 2026-05-11*
 
-- [context-overflow-prevention](../../../../../../docs/wiki/rules/context-overflow-prevention.md): prevenzione 262K token overflow; file vietati; tool output compression
+- [context-overflow-prevention](../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression

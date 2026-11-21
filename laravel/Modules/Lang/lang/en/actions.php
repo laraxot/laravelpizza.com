@@ -2,56 +2,56 @@
 
 return [
     'delete' => [
-        'label' => 'Elimina',
-        'tooltip' => 'Elimina l\'elemento selezionato',
+        'label' => 'Delete',
+        'tooltip' => 'Delete the selected item',
         'icon' => 'heroicon-o-trash',
         'color' => 'danger',
     ],
     'edit' => [
-        'label' => 'Modifica',
-        'tooltip' => 'Modifica l\'elemento selezionato',
+        'label' => 'Edit',
+        'tooltip' => 'Edit the selected item',
         'icon' => 'heroicon-o-pencil',
         'color' => 'primary',
     ],
     'request' => [
         'label' => 'Richiedi',
-        'tooltip' => 'Invia la richiesta',
+        'tooltip' => 'Submit the request',
         'icon' => 'heroicon-o-paper-airplane',
         'color' => 'info',
     ],
     'cancel' => [
-        'label' => 'Annulla',
-        'tooltip' => 'Annulla l\'operazione',
+        'label' => 'Cancel',
+        'tooltip' => 'Cancel the operation',
         'icon' => 'heroicon-o-x-mark',
         'color' => 'secondary',
     ],
     'save' => [
-        'label' => 'Salva',
-        'tooltip' => 'Salva le modifiche',
+        'label' => 'Save',
+        'tooltip' => 'Save changes',
         'icon' => 'heroicon-o-check',
         'color' => 'success',
     ],
     'active_locale' => [
-        'label' => 'Lingua attiva',
-        'tooltip' => 'Cambia la lingua corrente',
+        'label' => 'Active language',
+        'tooltip' => 'Change the current language',
         'icon' => 'heroicon-o-language',
         'color' => 'info',
     ],
     'open' => [
-        'label' => 'Apri',
-        'tooltip' => 'Apri l\'elemento selezionato',
+        'label' => 'Open',
+        'tooltip' => 'Open the selected item',
         'icon' => 'heroicon-o-eye',
         'color' => 'primary',
     ],
     'create' => [
-        'label' => 'Crea',
-        'tooltip' => 'Crea un nuovo elemento',
+        'label' => 'Create',
+        'tooltip' => 'Create a new item',
         'icon' => 'heroicon-o-plus',
         'color' => 'success',
     ],
     'create_another' => [
-        'label' => 'Crea un altro',
-        'tooltip' => 'Crea un altro elemento dopo questo',
+        'label' => 'Create another',
+        'tooltip' => 'Create another item after this one',
         'icon' => 'heroicon-o-plus-circle',
         'color' => 'success',
     ],
@@ -70,19 +70,19 @@ return [
     ],
     'fields' => [
         'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
+            'label' => 'Identifier',
+            'tooltip' => 'Unique record identifier',
             'helper_text' => '',
             'description' => '',
         ],
         'created_at' => [
-            'label' => 'Data Creazione',
+            'label' => 'Created at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'Ultima Modifica',
+            'label' => 'Last modified',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -90,13 +90,13 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Actions',
+            'label' => 'Create Actions',
         ],
         'edit' => [
-            'label' => 'Modifica Actions',
+            'label' => 'Edit Actions',
         ],
         'delete' => [
-            'label' => 'Elimina Actions',
+            'label' => 'Delete Actions',
         ],
     ],
 ];

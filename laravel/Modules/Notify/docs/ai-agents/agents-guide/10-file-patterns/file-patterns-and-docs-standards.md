@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "file patterns and docs standards"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 10. File Patterns
@@ -93,3 +92,12 @@ Indice centralizzato: `laravel/docs/roadmap/00-index.md`
 4. **Consistent structure** - follow the same patterns across all modules
 
 ---
+
+title: "file patterns and docs standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "file patterns and docs standards"
+issues: []
+discussions: []

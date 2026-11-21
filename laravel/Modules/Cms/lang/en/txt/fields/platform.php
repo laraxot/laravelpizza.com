@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/platform.php
 // Cms txt.fields.platform — LangServiceProvider SSoT.
 return [
-    'label' => 'Piattaforma',
+    'label' => 'Platform',
     'placeholder' => 'Facebook, Instagram, LinkedIn, Twitter',
-    'helper_text' => 'Nome della piattaforma social media',
+    'helper_text' => 'Social media platform name',
     'tooltip' => '',
     'description' => '',
 ];

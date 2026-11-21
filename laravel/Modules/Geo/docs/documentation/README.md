@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🏗️ LARAXOT Documentation Framework
@@ -32,6 +31,15 @@ Framework completo per la gestione centralizzata, automatizzata e qualitativa de
 - **🚀 LARAXOT**: Standard nativi, integrazione ecosystem, qualità enterprise
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 📂 Struttura Framework
 
 ```
@@ -42,7 +50,7 @@ bashscripts/documentation/
 ├── validators/                         # Validatori qualità
 │   └── validate-docs.php              # Validatore completo documentazione
 ├── templates/                          # Template riutilizzabili (DRY)
-│   ├── base_README_template.md        # Template README base
+│   ├── base_readme_template.md        # Template README base
 │   ├── getting_started_template.md    # Template getting started
 │   ├── configuration_template.md      # Template configurazione
 │   └── api_reference_template.md      # Template API reference
@@ -445,7 +453,7 @@ Creazione template personalizzati per esigenze specifiche:
 
 ```bash
 # Crea nuovo template
-cp templates/base_README_template.md templates/custom_auth_template.md
+cp templates/base_readme_template.md templates/custom_auth_template.md
 
 # Configura utilizzo
 # config/structure.php:

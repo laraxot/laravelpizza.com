@@ -2,10 +2,14 @@
 module: Activity
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< .merge_file_oNJxwS
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
 ---
 
 # Metodi Duplicati — Analisi Activity
+=======
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+>>>>>>> .merge_file_kXDXan
 title: "Metodi Duplicati: Analisi Activity"
 type: note
 status: stub
@@ -25,7 +29,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Models/Policies/ActivityBasePolicy.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 13 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 13 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
@@ -38,7 +45,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/database/factories/BaseActivityFactory.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
@@ -51,7 +61,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -64,7 +77,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
@@ -77,7 +93,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Providers/ActivityServiceProvider.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -90,7 +109,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
@@ -103,7 +125,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
@@ -117,7 +142,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Activity/database/factories/SnapshotFactory.php`
 - `./laravel/Modules/Activity/database/factories/StoredEventFactory.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
@@ -131,7 +159,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Activity/database/factories/SnapshotFactory.php`
 - `./laravel/Modules/Activity/database/factories/StoredEventFactory.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
@@ -144,7 +175,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Filament/Pages/ListLogActivities.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
@@ -157,7 +191,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/database/seeders/ActivityMassSeeder.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -170,7 +207,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -183,7 +223,10 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
 
+<<<<<<< .merge_file_oNJxwS
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+=======
+>>>>>>> .merge_file_kXDXan
 [Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -213,8 +256,11 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - **Setting:** 1 metodi in comune
 
 ---
+<<<<<<< .merge_file_oNJxwS
 _Report generato automaticamente — fonte: `/tmp/metodi_duplicati_domain_report.md`_
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
+=======
+>>>>>>> .merge_file_kXDXan
 _Report generato automaticamente: fonte: `/tmp/metodi_duplicati_domain_report.md`_# 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
 **Powered by**: Super Mucca AI 🐄✨
@@ -1314,3 +1360,7 @@ public function getTableFilters(): array
 4. Implementazione ColumnBuilder
 
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
+<<<<<<< .merge_file_oNJxwS
+=======
+**Domande?** Chiedi alla Super Mucca! 🐄⚡
+>>>>>>> .merge_file_kXDXan

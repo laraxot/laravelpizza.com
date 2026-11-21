@@ -1,11 +1,10 @@
 ---
 title: "agents"
+qmd: "activity llm wiki agents md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity, llm-wiki]
-qmd: "agents activity"
+tags: [documentation]
 ---
+<<<<<<< .merge_file_AZcJdQ
 title: "Agent instructions"
 type: reference
 tags: [agents, coding-agent, llm-wiki]
@@ -78,3 +77,6 @@ related:
 - Every page MUST have 3+ outgoing links
 - Every page MUST have 3+ outgoing links
 - Every page MUST have 3+ outgoing links
+=======
+
+>>>>>>> .merge_file_ihzMxu

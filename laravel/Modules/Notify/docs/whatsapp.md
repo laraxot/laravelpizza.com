@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "whatsapp"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96

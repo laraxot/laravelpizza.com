@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "get cms view action"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GetCmsViewAction Action

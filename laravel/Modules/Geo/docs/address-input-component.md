@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address input component"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AddressInput Component — Filament Field con Geolocalizzazione
@@ -19,6 +18,15 @@ status: draft
 **Version**: 1.0.0
 
 ---
+
+title: "address input component"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address input component"
+issues: []
+discussions: []
 ## Cos'è
 
 `AddressInput` è un **campo Filament nativo** che fornisce un input per indirizzo con:
@@ -376,7 +384,7 @@ AddressInput::make('address');  // Geo gestisce tutto
 - **Module Boundary Philosophy**: `../../Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md`
 - **Geo Philosophy**: `./philosophy.md`
 - **Geo Index**: `./00-index.md`
-- **Components Index**: `./components/INDEX.md`
+- **Components Index**: `./components/index.md`
 - **CreateTicketWizardWidget**: `../../Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php`
 - **Filament v5 Fields**: https://filamentphp.com/docs/5.x/forms/fields
 - **DDD Bounded Contexts**: https://martinfowler.com/bliki/BoundedContext.html

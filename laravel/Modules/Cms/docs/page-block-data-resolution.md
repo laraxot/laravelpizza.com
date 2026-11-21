@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page block data resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Page Block Data Resolution

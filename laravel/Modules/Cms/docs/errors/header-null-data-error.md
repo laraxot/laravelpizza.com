@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "header null data error"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errore: Attempt to read property "data" on null nel Header

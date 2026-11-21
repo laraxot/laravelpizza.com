@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prompt start refactor"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Refactor prompt start
@@ -23,7 +22,7 @@ Aggiornato `bashscripts/tools/prompts/start.txt`.
 - Rimossa duplicazione di blocchi PHPStan e istruzioni ripetute.
 - Reso esplicito il bootstrap: `AGENTS.md`, trigger map, chat, ricerca wiki/docs.
 - Consolidati lock file, quality gate, Git forward-only, divieti PHPStan/test e regole root moduli.
-- Corretto il riferimento operativo da `docs/chat/INDEX.md` a `docs/chat/README.md`, che e' l'indice presente nel repository.
+- Corretto il riferimento operativo da `docs/chat/index.md` a `docs/chat/README.md`, che e' l'indice presente nel repository.
 
 ## Verifiche
 

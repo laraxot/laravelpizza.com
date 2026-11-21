@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "link2"
 issues: []
 discussions: []
-status: draft
 ---
 
 # link2

@@ -1,11 +1,10 @@
 ---
 title: "ListLogActivities UI/UX Improvements - 2025-12-04"
+qmd: "activity list log activities improvements md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "listlogactivities ui/ux improvements - 2025-12-04 activity"
+tags: [documentation]
 ---
+
 # ListLogActivities UI/UX Improvements - 2025-12-04
 
 ## Data Intervento: 2025-12-04
@@ -306,6 +305,5 @@ PASS: 2 files formattati correttamente
 ---
 
 **Autore**: iFlow CLI
-**Data**: 2025-12-04
 **Versione**: 1.0
 **Status**: ✅ Production Ready

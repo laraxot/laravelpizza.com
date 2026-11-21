@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "handoff trova esclusi check sessione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Handoff: sessione Trova esclusi / Check (2026-06-18)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "implementations completed"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
@@ -17,6 +16,15 @@ status: draft
 **Status**: 🚀 CRITICAL FEATURES IMPLEMENTED  
 
 ---
+
+title: "implementations completed"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementations completed"
+issues: []
+discussions: []
 ## 🎯 OBIETTIVO RAGGIUNTO
 
 Analizzato lo scopo del progetto, identificate le features mancanti e implementate le funzionalità critiche per trasformare FixCity da MVP a piattaforma enterprise-ready.
@@ -72,7 +80,7 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 ### 🗺️ Roadmap (3 - da sessione precedente)
 18. ✅ **ROADMAP_STATUS_SUMMARY.md**
 19. ✅ **Fixcity/ROADMAP_2025.md**
-20. ✅ **User/ROADMAP.md**
+20. ✅ **User/roadmap.md**
 
 ---
 
@@ -424,9 +432,9 @@ Modules/Fixcity/
 ## 📞 SUPPORT & RESOURCES
 
 ### Documentation
-- **[GAP_ANALYSIS_IMPLEMENTATION.md](./GAP_ANALYSIS_IMPLEMENTATION.md)** - Piano completo
-- **[DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md)** - Indice generale
-- **[QUICK_START.md](./QUICK_START.md)** - Guida sviluppatori
+- **[GAP_ANALYSIS_IMPLEMENTATION.md](./gap_analysis_implementation.md)** - Piano completo
+- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice generale
+- **[QUICK_START.md](./quick_start.md)** - Guida sviluppatori
 
 ### Implementation
 - **[GeocodeTicketAddressJob.php](./laravel/Modules/Fixcity/Jobs/GeocodeTicketAddressJob.php)**

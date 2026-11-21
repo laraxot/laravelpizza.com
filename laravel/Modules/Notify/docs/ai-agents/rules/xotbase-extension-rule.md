@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "xotbase extension rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔴 XotBase Extension Rule - PHILOSOPHY
@@ -18,6 +17,15 @@ status: draft
 **Priority**: BLOCKER
 
 ---
+
+title: "xotbase extension rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xotbase extension rule"
+issues: []
+discussions: []
 ## 🎯 The Rule
 
 > **TUTTI** i widget FILAMENT devono estendere `XotBaseWidget`

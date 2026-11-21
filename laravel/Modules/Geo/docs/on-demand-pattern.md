@@ -10,7 +10,6 @@ tags: [on-demand, pattern, wiki, qmd]
 related:
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 ---
 
 # On-Demand Pattern — Module **Geo**
@@ -60,11 +59,11 @@ qmd search "<topic>"
 ```
 ./laravel/Modules/Geo/docs/
 ├── wiki/                    # Knowledge base locale
-│   ├── rules/INDEX.md      # Indice rules modulo-specifiche
-│   ├── skills/INDEX.md     # Indice skills modulo-specifiche
-│   ├── commands/INDEX.md   # Indici commands
-│   └── memories/INDEX.md   # Indice memories
-└── ON-DEMAND-PATTERN.md     # Questo file
+│   ├── rules/index.md      # Indice rules modulo-specifiche
+│   ├── skills/index.md     # Indice skills modulo-specifiche
+│   ├── commands/index.md   # Indici commands
+│   └── memories/index.md   # Indice memories
+└── on-demand-pattern.md     # Questo file
 ```
 
 ## Quick Reference

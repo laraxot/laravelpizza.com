@@ -51,7 +51,6 @@ use Modules\Job\Observers\ScheduleObserver;
 use Modules\Job\Rules\Corn;
 use Modules\Job\Tests\TestCase;
 use Modules\Job\Traits\FormatSeconds;
-use Modules\User\Models\Team;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
@@ -306,31 +305,30 @@ describe('Job execute coverage — actions enums commands livewire', function ()
         Assert::assertSame('results', (new Result)->getTable());
     });
 
-    test('policy CRUD con Team e hasPermissionTo', function (): void {
+    test('policy Job/FailedJob/JobBatch deny-default; Schedule/TaskComment con permessi', function (): void {
         $user = jobUser(false);
-        $team = new Team;
+        $job = new Job;
+        $failedModel = new FailedJob;
+        $batchModel = new JobBatch;
 
         $failed = new FailedJobPolicy;
         Assert::assertFalse($failed->viewAny($user));
-        Assert::assertTrue($failed->view($user, $team));
-        Assert::assertTrue($failed->create($user));
-        Assert::assertFalse($failed->update($user));
-        Assert::assertTrue($failed->addTeamMember($user, $team));
-        Assert::assertTrue($failed->updateTeamMember($user, $team));
-        Assert::assertTrue($failed->removeTeamMember($user, $team));
-        Assert::assertTrue($failed->delete($user, $team));
+        Assert::assertFalse($failed->view($user, $failedModel));
+        Assert::assertFalse($failed->create($user));
+        Assert::assertFalse($failed->update($user, $failedModel));
+        Assert::assertFalse($failed->delete($user, $failedModel));
 
         $jobPolicy = new JobPolicy;
         Assert::assertFalse($jobPolicy->viewAny($user));
-        Assert::assertTrue($jobPolicy->view($user, $team));
-        Assert::assertTrue($jobPolicy->create($user));
-        Assert::assertFalse($jobPolicy->update($user));
-        Assert::assertTrue($jobPolicy->delete($user, $team));
+        Assert::assertFalse($jobPolicy->view($user, $job));
+        Assert::assertFalse($jobPolicy->create($user));
+        Assert::assertFalse($jobPolicy->update($user, $job));
+        Assert::assertFalse($jobPolicy->delete($user, $job));
 
         $batch = new JobBatchPolicy;
         Assert::assertFalse($batch->viewAny($user));
-        Assert::assertTrue($batch->create($user));
-        Assert::assertFalse($batch->update($user));
+        Assert::assertFalse($batch->create($user));
+        Assert::assertFalse($batch->update($user, $batchModel));
 
         $schedule = new Schedule;
         $schedulePolicy = new SchedulePolicy;

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament blade components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard <nome progetto>: Componenti Blade Filament

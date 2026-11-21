@@ -26,7 +26,6 @@ use Modules\Job\Models\Task;
 use Modules\Job\Models\TaskComment;
 use Modules\Job\Rules\Corn;
 use Modules\Job\Tests\TestCase;
-use Modules\User\Models\Team;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 
@@ -104,27 +103,22 @@ test('TaskPolicy rifiuta utente senza permessi e concede con permessi', function
     Assert::assertTrue($policy->delete($allowed, $task));
 });
 
-test('JobPolicy: viewAny e update sempre false; create true; team ops solo owner', function (): void {
+test('JobPolicy: deny-default; before apre solo super-admin e job::admin', function (): void {
     $policy = new JobPolicy;
-    $team = new Team;
-    $outsider = jobBehaviorUser(ownsTeam: false, belongsToTeam: false);
-    $member = jobBehaviorUser(ownsTeam: false, belongsToTeam: true);
-    $owner = jobBehaviorUser(ownsTeam: true, belongsToTeam: true);
+    $job = new \Modules\Job\Models\Job;
+    $outsider = jobBehaviorUser();
+    $admin = jobBehaviorUser(roles: ['job::admin']);
+    $super = jobBehaviorUser(roles: ['super-admin']);
 
     Assert::assertFalse($policy->viewAny($outsider));
-    Assert::assertFalse($policy->viewAny($owner));
-    Assert::assertTrue($policy->create($outsider));
-    Assert::assertFalse($policy->update($owner));
+    Assert::assertFalse($policy->create($outsider));
+    Assert::assertFalse($policy->view($outsider, $job));
+    Assert::assertFalse($policy->update($outsider, $job));
+    Assert::assertFalse($policy->delete($outsider, $job));
 
-    Assert::assertFalse($policy->view($outsider, $team));
-    Assert::assertTrue($policy->view($member, $team));
-
-    Assert::assertFalse($policy->addTeamMember($member, $team));
-    Assert::assertTrue($policy->addTeamMember($owner, $team));
-    Assert::assertTrue($policy->updateTeamMember($owner, $team));
-    Assert::assertTrue($policy->removeTeamMember($owner, $team));
-    Assert::assertTrue($policy->delete($owner, $team));
-    Assert::assertFalse($policy->delete($member, $team));
+    Assert::assertTrue($policy->before($admin, 'create'));
+    Assert::assertTrue($policy->before($super, 'create'));
+    Assert::assertNull($policy->before($outsider, 'create'));
 });
 
 test('Schedule e history policy rispettano permessi specifici', function (): void {
@@ -148,13 +142,18 @@ test('TaskCommentPolicy deny/allow su permesso task_comment.view', function (): 
     Assert::assertTrue($policy->view(jobBehaviorUser(['task_comment.view']), $comment));
 });
 
-test('FailedJobPolicy e JobBatchPolicy legano view al membership del team', function (): void {
-    $team = new Team;
-    foreach ([new FailedJobPolicy, new JobBatchPolicy] as $policy) {
-        Assert::assertFalse($policy->viewAny(jobBehaviorUser(belongsToTeam: true)));
-        Assert::assertTrue($policy->create(jobBehaviorUser()));
-        Assert::assertFalse($policy->view(jobBehaviorUser(belongsToTeam: false), $team));
-        Assert::assertTrue($policy->view(jobBehaviorUser(belongsToTeam: true), $team));
+test('FailedJobPolicy e JobBatchPolicy deny-default create/view', function (): void {
+    $failed = new \Modules\Job\Models\FailedJob;
+    $batch = new \Modules\Job\Models\JobBatch;
+    foreach ([
+        [new FailedJobPolicy, $failed],
+        [new JobBatchPolicy, $batch],
+    ] as [$policy, $model]) {
+        $user = jobBehaviorUser();
+        Assert::assertFalse($policy->viewAny($user));
+        Assert::assertFalse($policy->create($user));
+        Assert::assertFalse($policy->view($user, $model));
+        Assert::assertTrue($policy->before(jobBehaviorUser(roles: ['job::admin']), 'viewAny'));
     }
 });
 

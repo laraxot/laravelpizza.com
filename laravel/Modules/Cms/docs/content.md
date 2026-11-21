@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "content"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Contenuti

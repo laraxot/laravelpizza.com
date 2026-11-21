@@ -7,7 +7,6 @@ type: reference
 tags: [tenant, api, contracts, services]
 created: 2026-07-09
 updated: 2026-07-09
-status: draft
 ---
 
 # API Reference: Tenant Module
@@ -54,11 +53,11 @@ public function __construct(
 
 | Method | Parameters | Returns | Description |
 |--------|-----------|---------|-------------|
-| `current()` |: | `?Tenant` | Get currently active tenant |
+| `current()` | — | `?Tenant` | Get currently active tenant |
 | `setCurrentTenant()` | `Tenant\|int` | `void` | Set active tenant (request scope) |
 | `forTenant()` | `Tenant\|int` | `Tenant` | Switch context to tenant |
-| `isMultiTenant()` |: | `bool` | Check if app is multi-tenant |
-| `allTenants()` |: | `Collection\|Tenant[]` | Get all active tenants |
+| `isMultiTenant()` | — | `bool` | Check if app is multi-tenant |
+| `allTenants()` | — | `Collection\|Tenant[]` | Get all active tenants |
 
 **Example Usage:**
 ```php
@@ -226,7 +225,7 @@ User::forTenant($otherTenant)->get();
 $tenant = $user->getTenant();
 ```
 
-**Important:** This trait is automatically applied via `BelongsToTenantsScope`: models don't need explicit inclusion in most cases.
+**Important:** This trait is automatically applied via `BelongsToTenantsScope` — models don't need explicit inclusion in most cases.
 
 ---
 
@@ -428,7 +427,7 @@ User::withoutGlobalScopes()->all();  // Requires permission
 ---
 
 ## Related Documentation
-- [Architecture Overview](./ARCHITECTURE.md)
+- [Architecture Overview](./architecture.md)
 - [Setup & Configuration](./SETUP.md)
 - [Troubleshooting](troubleshooting.md)
-- [Best Practices](./BEST_PRACTICES.md)
+- [Best Practices](./best_practices.md)

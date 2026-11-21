@@ -1,12 +1,10 @@
 ---
 title: "Now (Module Activity)"
+qmd: "activity roadmap 01 now md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "now (module activity) activity"
-status: superseded
-superseded_by: now.md
+tags: [documentation]
 ---
+
 # Now (Module Activity)
 
 ## Stabilization

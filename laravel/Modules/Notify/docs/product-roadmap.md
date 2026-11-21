@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify - Product Roadmap

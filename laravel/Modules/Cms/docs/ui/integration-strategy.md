@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "integration strategy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Strategia di Integrazione UI
@@ -169,5 +168,5 @@ class TailkitAssetManager
 
 ## Collegamenti
 - [Tailkit Components](tailkit-components.md)
-- [Theme System](../../../../Themes/README.md)
+- [Theme System](../themes/README.md)
 - [Performance Guidelines](../performance.md)

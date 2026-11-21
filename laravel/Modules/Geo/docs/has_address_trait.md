@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "has address trait"
 issues: []
 discussions: []
-status: superseded
-superseded_by: has-address-trait.md
 ---
 
 # Trait HasAddress

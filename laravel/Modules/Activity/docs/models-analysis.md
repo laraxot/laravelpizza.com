@@ -1,11 +1,10 @@
 ---
 title: "Models Analysis - Activity Module"
+qmd: "activity models analysis md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "models analysis - activity module activity"
+tags: [documentation]
 ---
+
 # Models Analysis - Activity Module
 
 ## Factory e Seeder Status

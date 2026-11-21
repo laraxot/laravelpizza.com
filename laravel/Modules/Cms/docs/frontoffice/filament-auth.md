@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament auth"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione Filament con Form di Autenticazione

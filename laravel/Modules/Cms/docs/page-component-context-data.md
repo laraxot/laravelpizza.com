@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page component context data"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Page component context data

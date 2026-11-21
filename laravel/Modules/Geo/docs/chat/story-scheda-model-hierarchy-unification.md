@@ -190,13 +190,13 @@ $tmp = $scheda->asz()  // Inherited from BaseScheda
    - `Progressioni/app/Models/Scheda.php` — Change extends from Model to `\Modules\Ptv\Models\BaseScheda`
    - `Progressioni/app/Models/Contracts/*` — Remove custom contracts if exist
    - `Progressioni/app/Actions/*.php` — Replace manual queries with inherited relationships
-   - `Progressioni/docs/wiki/rules/INDEX.md` — Update model architecture docs
+   - `Progressioni/docs/wiki/rules/index.md` — Update model architecture docs
 
 2. **Legge104 Module:**
    - `Legge104/app/Models/Scheda.php` — Change extends to `\Modules\Ptv\Models\BaseScheda`
    - `Legge104/app/Models/Contracts/*` — Remove custom contracts if exist
    - `Legge104/app/Actions/*.php` — Replace manual queries with inherited relationships
-   - `Legge104/docs/wiki/rules/INDEX.md` — Update model architecture docs
+   - `Legge104/docs/wiki/rules/index.md` — Update model architecture docs
 
 3. **Ptv Module:**
    - `Ptv/app/Models/BaseScheda.php` — No changes (already base)

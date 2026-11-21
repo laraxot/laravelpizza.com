@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "test coverage"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Test skipped e copertura critica
 

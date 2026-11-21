@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "repo"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://github.com/mooxphp/jobs/tree/main

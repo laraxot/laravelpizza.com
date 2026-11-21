@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "polygon integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # poligon

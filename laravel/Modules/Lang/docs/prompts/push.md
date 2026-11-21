@@ -11,7 +11,6 @@ tags: [migrato-da-txt, lang]
 converted_from: push.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 va nella cartella laravel/Modules/Lang e fa git push , capisci gli errori sistameli e documenta come hai risolto dentro laravel/Modules/Lang/docs ti ricordo che con git andiamo solo in avanti, percio' non puoi fare checkout revert rollback, ma puoi anzi devi studiare le vecchie versioni e ti ricordo che il tuo lavoro non e' finito finche' non supera anche il controllo di phpstan phpmd, phpinisghts tutta la cartella laravel/Modules/Lang
@@ -54,18 +53,18 @@ Output finale richiesto:
 - verifiche 0 0;
 - stato clean.
 
-Risultato reale 2026-07-29: AGGIORNATO (sessione corrente post-quality-gates):
+Risultato reale 2026-07-29 — AGGIORNATO (sessione corrente post-quality-gates):
 
 **Stato git attuale (git status --short --branch):**
 - Branch dev...provtv/dev [ahead 1229] (1229 commit davanti a provtv, vs. presunto 6 prima)
-- Working tree: ❌ DIRTY: 1000+ file modified/deleted (archivi docs rimossi, test duplicati rimossi)
+- Working tree: ❌ DIRTY — 1000+ file modified/deleted (archivi docs rimossi, test duplicati rimossi)
 - Merge laraxot/dev: ✅ integrata (commit 0ba629c "Merge remote-tracking branch 'laraxot/dev'")
 
 **Sync history (attività precedente 2026-07-29):**
 - Fetch da tutti i remote: laraxot/dev raggiungibile (28 commit indietro)
 - Merge forward-only: laraxot/dev integrato in HEAD (28 commit + 1 merge commit, risolti conflitti HEAD-first)
 - Push git: ✅ OK verso provtv (7eae7708, 0 0 sync achieved)
-- Push git: ❌ FAILED verso laraxot (error: "did not receive expected object": laraxot repo corrupted)
+- Push git: ❌ FAILED verso laraxot (error: "did not receive expected object" — laraxot repo corrupted)
 
 **Commit history (ultimi 5):**
 - 0ba629c: Merge remote-tracking branch 'laraxot/dev' into dev
@@ -73,13 +72,13 @@ Risultato reale 2026-07-29: AGGIORNATO (sessione corrente post-quality-gates):
 - e24f4e9: Remove deprecated documentation archives and duplicate test files; refactor translation handling
 - (precedenti: PHPInsights/PHPStan fixes)
 
-**Quality gates 2026-07-29 (sessione corrente): RETTIFICA rispetto report precedente:**
+**Quality gates 2026-07-29 (sessione corrente) — RETTIFICA rispetto report precedente:**
 
 ❌ **SCOPERTA: PHPStan report precedente era IMPRECISO**
 - PHPStan Lang/app (scope: Modules/Lang/app): ✅ [OK] No errors (0 errori, NON 1000+)
 - PHPStan Modules global (scope: tutti i Modules): ⏸️ TIMEOUT @ 120s
   - Root cause: Larastan bootstrap circolare (dipendenze cross-modulo, XotBaseServiceProvider riga 144 Livewire registration troppo aggressiva)
-  - Non è colpa di Lang: è un blocco architetturale globale che affetta TUTTI i moduli
+  - Non è colpa di Lang — è un blocco architetturale globale che affetta TUTTI i moduli
 - Pest Lang (scope: Modules/Lang/tests): ⏸️ TIMEOUT @ 60s
   - Cascata da Laravel application bootstrap (stesso Larastan issue)
 - PHPMD: ⏸️ N/A (bloccato da Larastan bootstrap timeout)
@@ -87,18 +86,18 @@ Risultato reale 2026-07-29: AGGIORNATO (sessione corrente post-quality-gates):
 
 **Preflight (PASS):**
 - ✅ No merge markers in dirty PHP files
-- ✅ PHP -l syntax check on dirty files (sample): OK
+- ✅ PHP -l syntax check on dirty files (sample) — OK
 - ✅ No Blade file edits
 - ✅ Pint --dirty: 1 file fixed (Activity module, not Lang)
 
 **STATO FINALE 2026-07-29 POST-LARAXOT MERGE (aggiornato sessione corrente):**
 - provtv/dev: ✅ Sincronizzato (42 commit ahead, 0 behind → push precedente successful 6ed7375..3e0dee2)
-- laraxot/dev: ⚠️ Merge completato localmente (12 commit ahead); push fallisce → repository corrotto (error: "did not receive expected object": richiede GitHub admin recovery)
+- laraxot/dev: ⚠️ Merge completato localmente (12 commit ahead); push fallisce → repository corrotto (error: "did not receive expected object" — richiede GitHub admin recovery)
 - Working tree: ✅ CLEAN (git status --short pulito, nessun file non staged)
 - Merge laraxot/dev: ✅ Risolti 35 file deleted-by-them (UD strategy HEAD-first); 50+ conflitti risolti
 - Commit merge: f59fed4 "Merge remote-tracking branch 'laraxot/dev' into dev" + 93c0ab0 (NationalFlagSelect state)
 - Lang/app quality gate: ✅ PHPStan [OK] (0 errors, scope-specific check passed; global bootstrap is separate issue)
-- Lang global quality gate: ⏸️ BLOCKED (Larastan bootstrap timeout: affects all Modules, not Lang-specific)
+- Lang global quality gate: ⏸️ BLOCKED (Larastan bootstrap timeout — affects all Modules, not Lang-specific)
 - Forward-only discipline: ✅ Fully respected (merge-only, no reset/revert/checkout/switch, zero destructive ops)
 
 
@@ -115,7 +114,7 @@ Lezioni apprese (2026-07-29 RETTIFICATE):
    ⚠️ **Azione richiesta:** Comunicare con amministratore GitHub laraxot per recovery del repository.
 
 4. **PHPStan L10 scope vs. global bootstrap (RETTIFICA CRITICA):**
-   - Presupposto precedente: "Lang ha 1000+ errori a L10": ❌ FALSO
+   - Presupposto precedente: "Lang ha 1000+ errori a L10" — ❌ FALSO
    - Scoperta attuale: Lang/app è PULITO (PHPStan analyse Modules/Lang/app = [OK] 0 errors)
    - Root problem: Larastan global bootstrap (XotBaseServiceProvider Livewire registration) timeout @ 120s
    - Impatto: TUTTI i Modules sono bloccati su bootstrap globale, NON è specifico a Lang
@@ -135,7 +134,7 @@ Lezioni apprese (2026-07-29 RETTIFICATE):
 
 Raccomandazioni prossimi step (CORRETTO):
 - ✅ provtv sync completato e verificato (7eae7708 pushed, 0 0 sync)
-- ⚠️ laraxot repository corrupted: contact GitHub admins for recovery (push failed "did not receive expected object")
+- ⚠️ laraxot repository corrupted — contact GitHub admins for recovery (push failed "did not receive expected object")
 - ⏸️ Lang/app qualità-gate: ✅ PASS (PHPStan [OK] 0 errors)
 - ⏸️ Modules global bootstrap: BLOCKED (Larastan timeout, architetturale, not Lang-specific)
 - 🔴 Decide: commit dirty tree archivi+test cleanup? (forward-only approach) o stashare?

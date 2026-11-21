@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DATA CONSOLIDATION"
+issues: []
+discussions: []
 title: Geo Module - Data Classes Consolidation Completed
 date: 2026-06-30
 status: COMPLETED

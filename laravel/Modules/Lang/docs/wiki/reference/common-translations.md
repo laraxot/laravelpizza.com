@@ -7,9 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
-  - "../../italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: ../../common-translations.md
+  - "./italian-text-refined-audit-report.md"
 ---
 # Errori comuni nei file di traduzione
 

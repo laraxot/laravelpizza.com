@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "social"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Social Block
@@ -151,10 +150,10 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../components.md)
+- [UI Components](../ui/components.md)
 - [Social Media Guidelines](../marketing/social-media.md)
-- [Analytics Integration](../packages/analytics.md)
+- [Analytics Integration](../marketing/analytics.md)
 
 ## Collegamenti tra versioni di social.md
-* [social.md](../../../Tenant/docs/it/config/social.md)
+* [social.md](laravel/modules/tenant/docs/it/config/social.md)
 * [social.md](laravel/modules/cms/docs/blocks/social.md)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "leaflet marker map input"
 issues: []
 discussions: []
-status: draft
 ---
 
 # LeafletMarkerMapInput Componente Filament

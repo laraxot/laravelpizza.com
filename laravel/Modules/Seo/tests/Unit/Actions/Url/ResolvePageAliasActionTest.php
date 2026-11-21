@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Modules\Seo\Actions\Url\ResolvePageAliasAction;
+use PHPUnit\Framework\Assert;
 
 /**
  * Due slug per la stessa pagina (about/chi-siamo, faq/faqs, /home e la home): l'alias risponde 301 al canonico, in tutte le lingue.
@@ -23,51 +24,50 @@ function pageAliasTarget(string $path, ?array $aliases = null): ?string
     return app(ResolvePageAliasAction::class)->execute($path, ['it', 'en', 'de', 'es'], $aliases ?? PAGE_ALIASES);
 }
 
-it('sends an alias to the canonical page keeping the language', function (string $path, string $canonical): void {
-    expect(pageAliasTarget($path))->toBe($canonical);
-})->with([
-    'italian' => ['/it/chi-siamo', '/it/about'],
-    'english' => ['/en/chi-siamo', '/en/about'],
-    'german' => ['/de/contatti', '/de/contacts'],
-    'spanish' => ['/es/contatti', '/es/contacts'],
-    'home alias goes to the language root' => ['/it/home', '/it'],
-    'nested alias' => ['/en/blog/vecchio', '/en/blog'],
-    'trailing slash' => ['/it/chi-siamo/', '/it/about'],
-    'upper case language' => ['/DE/chi-siamo', '/de/about'],
-]);
-
-it('leaves everything that is not an alias alone', function (string $path): void {
-    expect(pageAliasTarget($path))->toBeNull();
-})->with([
-    'canonical page' => ['/it/about'],
-    'home' => ['/it'],
-    'root' => ['/'],
-    'a sub page of an alias is another page' => ['/it/chi-siamo/team'],
-    'case of the slug is kept: it is another page' => ['/it/Chi-Siamo'],
-    'not a language' => ['/chi-siamo'],
-    'unknown language' => ['/fr/chi-siamo'],
-    'asset' => ['/livewire/livewire.js'],
-]);
-
-it('does nothing without a map', function (): void {
-    expect(pageAliasTarget('/it/chi-siamo', []))->toBeNull();
+it('sends an alias to the canonical page keeping the language', function (): void {
+    $cases = [
+        ['/it/chi-siamo', '/it/about'],
+        ['/en/chi-siamo', '/en/about'],
+        ['/de/contatti', '/de/contacts'],
+        ['/es/contatti', '/es/contacts'],
+        ['/it/home', '/it'],
+        ['/en/blog/vecchio', '/en/blog'],
+        ['/it/chi-siamo/', '/it/about'],
+        ['/DE/chi-siamo', '/de/about'],
+    ];
+    foreach ($cases as [$path, $canonical]) {
+        Assert::assertSame($canonical, pageAliasTarget($path));
+    }
 });
 
-it('ignores entries that could loop or are not readable', function (array $aliases): void {
-    expect(pageAliasTarget('/it/chi-siamo', $aliases))->toBeNull();
-})->with([
-    'alias of itself' => [['chi-siamo' => 'chi-siamo']],
-    'target is an alias too (a chain is a configuration error, not followed)' => [['chi-siamo' => 'about', 'about' => 'team']],
-    'target is not a string' => [['chi-siamo' => ['about']]],
-    'empty alias' => [['' => 'about']],
-]);
+it('leaves everything that is not an alias alone', function (): void {
+    foreach (['/it/about', '/it', '/', '/it/chi-siamo/team', '/it/Chi-Siamo', '/chi-siamo', '/fr/chi-siamo', '/livewire/livewire.js'] as $path) {
+        Assert::assertNull(pageAliasTarget($path));
+    }
+});
+
+it('does nothing without a map', function (): void {
+    Assert::assertNull(pageAliasTarget('/it/chi-siamo', []));
+});
+
+it('ignores entries that could loop or are not readable', function (): void {
+    $cases = [
+        [['chi-siamo' => 'chi-siamo']],
+        [['chi-siamo' => 'about', 'about' => 'team']],
+        [['chi-siamo' => ['about']]],
+        [['' => 'about']],
+    ];
+    foreach ($cases as [$aliases]) {
+        Assert::assertNull(pageAliasTarget('/it/chi-siamo', $aliases));
+    }
+});
 
 it('tells the sitemap which page paths are aliases', function (): void {
     $action = app(ResolvePageAliasAction::class);
 
-    expect($action->isAlias('chi-siamo', PAGE_ALIASES))->toBeTrue()
-        ->and($action->isAlias('/chi-siamo/', PAGE_ALIASES))->toBeTrue()
-        ->and($action->isAlias('blog/vecchio', PAGE_ALIASES))->toBeTrue()
-        ->and($action->isAlias('about', PAGE_ALIASES))->toBeFalse()
-        ->and($action->isAlias('', PAGE_ALIASES))->toBeFalse();
+    Assert::assertTrue($action->isAlias('chi-siamo', PAGE_ALIASES));
+    Assert::assertTrue($action->isAlias('/chi-siamo/', PAGE_ALIASES));
+    Assert::assertTrue($action->isAlias('blog/vecchio', PAGE_ALIASES));
+    Assert::assertFalse($action->isAlias('about', PAGE_ALIASES));
+    Assert::assertFalse($action->isAlias('', PAGE_ALIASES));
 });

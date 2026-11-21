@@ -8,11 +8,8 @@ qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
 related:
-  - ./coding-agent-manifests.md  # target mancante, verificato 2026-10-14
-status: draft
+  - ./coding-agent-manifests.md
 ---
-
-> Nota 2026-10-14: il titolo qui sotto contiene un segnaposto di template non risolto (`{{TYPE^}}`); si legge "Geo module LLM Wiki Agent Instructions". Il file `coding-agent-manifests.md` citato in `related` non esiste in questa cartella.
 
 # Geo {{TYPE^}} LLM Wiki Agent Instructions
 

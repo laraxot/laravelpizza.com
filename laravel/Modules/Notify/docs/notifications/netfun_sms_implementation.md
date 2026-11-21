@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "netfun sms implementation"
 issues: []
 discussions: []
-status: superseded
-superseded_by: archive/netfun-sms-implementation.md
 ---
 
 # Implementazione Netfun SMS 

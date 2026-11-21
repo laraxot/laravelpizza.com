@@ -4,10 +4,6 @@ date: 2026-10-06
 status: completed
 owner: Claude Haiku 4.5
 epic: module-bmad-audit
-type: story
-updated: 2026-10-07
-tags: [docs, lang, bmad]
-qmd: "lang module docs consolidation (2026-10-06) lang"
 ---
 
 # Lang Module Docs Consolidation (2026-10-06)
@@ -137,8 +133,8 @@ docs/
 
 ## Documentation Created
 
-- `docs/README.md`: Full structure guide with quick-start paths
-- `docs/bmad/stories/docs-consolidation.story.md`: This story
+- `docs/README.md` — Full structure guide with quick-start paths
+- `docs/bmad/stories/docs-consolidation-2026-10-06.story.md` — This story
 
 ## Next Steps
 

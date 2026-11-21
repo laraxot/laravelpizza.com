@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament 5x compatibility"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Compatibilità Filament 4.x - Modulo Cms

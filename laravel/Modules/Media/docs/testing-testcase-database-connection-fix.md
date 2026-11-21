@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "testing testcase database connection fix"
 related:
   - "./webm.md"
-status: draft
 ---
 # Fix: Media TestCase - Database Connection Configuration
 

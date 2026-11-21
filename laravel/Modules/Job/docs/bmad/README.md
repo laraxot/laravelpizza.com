@@ -1,5 +1,5 @@
 ---
-title: "Job: BMAD dossier"
+title: "Job — BMAD dossier"
 type: bmad-module-dossier
 module: Job
 status: baseline
@@ -10,14 +10,6 @@ issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
 ---
 # Job BMAD dossier
-
-## Kit BMAD owner (canonico)
-
-- [BMAD Planning](../bmad-planning.md)
-- [BMAD Brainstorming](../bmad-brainstorming.md)
-- [Filament blueprint](./filament-blueprint.md)
-- [Project context](./project-context.md)
-- [Decision log](./decision-log.md)
 **Purpose / product brief:** run and observe asynchronous work, imports, exports, retries and schedules without losing domain transactions.
 **Architecture:** Laravel queues/jobs/actions with idempotency and after-commit dispatch; Job must not own Fixcity semantics.
 **PRD:** queue health, retry/backoff, failed-job replay, scheduler visibility, import/export progress and safe cancellation.

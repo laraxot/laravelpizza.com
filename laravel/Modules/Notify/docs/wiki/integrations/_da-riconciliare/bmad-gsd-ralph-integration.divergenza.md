@@ -1,14 +1,13 @@
 ---
-qmd: "bmad gsd ralph integration.divergenza"
+qmd: "BMAD GSD Ralph Integration.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: bmad-gsd-ralph-integration.md"
+title: "BMAD GSD Ralph Integration.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `bmad-gsd-ralph-integration.md`

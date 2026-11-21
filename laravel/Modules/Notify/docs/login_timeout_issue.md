@@ -12,8 +12,8 @@ status: draft
 
 # 🚨 Problema Timeout Pagina Login - Diagnosi e Soluzione
 
-**Data**: 14 Ottobre 2025  
-**Severity**: 🔴 **CRITICO**  
+**Data**: 14 Ottobre 2025
+**Severity**: 🔴 **CRITICO**
 **URL Affetto**: http://127.0.0.1:8000/it/auth/login
 
 ---
@@ -24,7 +24,7 @@ status: draft
 [2025-10-14 18:28:51] local.ERROR: Maximum execution time of 30 seconds exceeded
 Location: vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php:1465
 
-[2025-10-14 18:29:53] local.ERROR: Maximum execution time of 30 seconds exceeded  
+[2025-10-14 18:29:53] local.ERROR: Maximum execution time of 30 seconds exceeded
 Location: vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:138
 ```
 
@@ -73,8 +73,8 @@ protected string $view = 'pub_theme::filament.widgets.auth.login';
 
 ```bash
 # Verificare configurazione tema
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
-cd /var/www/_bases/base_ptv_fila5_mono/laravel
+cd /var/www/_bases/base_fixcity_fila5/laravel
+cd /var/www/_bases/base_ptv_fila5/laravel
 php artisan config:cache
 php artisan view:cache
 ```
@@ -123,8 +123,8 @@ public function mount(): void
 ### Soluzione 5: Cache Viste
 
 ```bash
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
-cd /var/www/_bases/base_ptv_fila5_mono/laravel
+cd /var/www/_bases/base_fixcity_fila5/laravel
+cd /var/www/_bases/base_ptv_fila5/laravel
 
 # Clear tutti i cache
 php artisan cache:clear
@@ -146,8 +146,8 @@ php artisan view:cache
 
 ```bash
 # Verificare che esista
-ls -la /var/www/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
-ls -la /var/www/_bases/base_ptv_fila5_mono/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
+ls -la /var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
+ls -la /var/www/_bases/base_ptv_fila5/laravel/Themes/Sixteen/resources/views/filament/widgets/auth/login.blade.php
 ```
 
 ✅ **File esiste**: Abbiamo verificato che c'è
@@ -156,8 +156,8 @@ ls -la /var/www/_bases/base_ptv_fila5_mono/laravel/Themes/Sixteen/resources/view
 
 ```bash
 # Cercare dove è definito pub_theme
-cd /var/www/_bases/base_fixcity_fila5_mono/laravel
-cd /var/www/_bases/base_ptv_fila5_mono/laravel
+cd /var/www/_bases/base_fixcity_fila5/laravel
+cd /var/www/_bases/base_ptv_fila5/laravel
 grep -r "pub_theme" config/ app/Providers/
 ```
 
@@ -184,7 +184,7 @@ class LoginWidget extends XotBaseWidget
 
     // TEMPORANEO: usa path diretto senza namespace
     protected string $view = 'filament.widgets.auth.login';
-    
+
     // Oppure prova con tema esplicito:
     // protected string $view = 'theme-sixteen::filament.widgets.auth.login';
 
@@ -231,7 +231,7 @@ class LoginWidget extends XotBaseWidget
 # 1. Clear cache
 php artisan optimize:clear
 
-# 2. Restart server  
+# 2. Restart server
 pkill -f "php artisan serve"
 php artisan serve --host=127.0.0.1 --port=8000 &
 
@@ -255,7 +255,7 @@ public function mount(): void
         'view' => $this->view,
         'view_exists' => view()->exists($this->view),
     ]);
-    
+
     $this->form->fill();
 }
 ```
@@ -335,13 +335,13 @@ Fammi sapere il messaggio esatto e posso dare una soluzione mirata.
 
 ---
 
-**Status**: 🔴 **IN INVESTIGAZIONE**  
-**Priority**: **MASSIMA**  
+**Status**: 🔴 **IN INVESTIGAZIONE**
+**Priority**: **MASSIMA**
 **ETA Fix**: < 30 minuti con informazioni da browser
 
 ---
 
-**Preparato da**: Super Mucca Debugging Team 🐄  
+**Preparato da**: Super Mucca Debugging Team 🐄
 **Confidence**: 95% sulla diagnosi
 
 

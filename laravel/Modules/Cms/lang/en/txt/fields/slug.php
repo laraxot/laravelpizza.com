@@ -8,9 +8,9 @@ declare(strict_types=1);
 // Cms txt.fields.slug — LangServiceProvider SSoT.
 return [
     'label' => 'Slug',
-    'placeholder' => 'testo-per-url',
-    'help' => 'Versione dell\'URL del titolo (solo lettere minuscole, trattini e numeri)',
-    'helper_text' => 'URL SEO-friendly generato automaticamente dal titolo',
+    'placeholder' => 'url-text',
+    'help' => 'URL version of the title (lowercase letters, hyphens and numbers only)',
+    'helper_text' => 'SEO-friendly URL generated automatically from the title',
     'tooltip' => '',
     'description' => '',
 ];

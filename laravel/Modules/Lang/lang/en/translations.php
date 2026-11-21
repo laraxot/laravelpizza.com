@@ -3,8 +3,8 @@
 return [
     'tab' => [
         'index' => 'Indice',
-        'create' => 'Crea',
-        'edit' => 'Modifica',
+        'create' => 'Create',
+        'edit' => 'Edit',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
@@ -22,19 +22,19 @@ return [
     'plural_label' => 'Missing Plural label',
     'fields' => [
         'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
+            'label' => 'Identifier',
+            'tooltip' => 'Unique record identifier',
             'helper_text' => '',
             'description' => '',
         ],
         'created_at' => [
-            'label' => 'Data Creazione',
+            'label' => 'Created at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'Ultima Modifica',
+            'label' => 'Last modified',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -42,13 +42,13 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Translations',
+            'label' => 'Create Translations',
         ],
         'edit' => [
-            'label' => 'Modifica Translations',
+            'label' => 'Edit Translations',
         ],
         'delete' => [
-            'label' => 'Elimina Translations',
+            'label' => 'Delete Translations',
         ],
     ],
 ];

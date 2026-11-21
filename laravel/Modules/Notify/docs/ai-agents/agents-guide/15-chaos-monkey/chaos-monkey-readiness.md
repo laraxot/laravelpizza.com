@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "chaos monkey readiness"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Chaos Monkey Readiness

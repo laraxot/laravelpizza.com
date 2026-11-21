@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan sushitojson contract"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan: SushiToJsonContract per Comune

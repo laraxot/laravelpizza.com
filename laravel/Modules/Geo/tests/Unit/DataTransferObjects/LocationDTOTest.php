@@ -15,8 +15,6 @@ describe('LocationDTO', function () {
             longitude: 12.4964,
         );
 
-        Assert::assertInstanceOf(LocationDTO::class, $dto);
-
         Assert::assertSame(41.9028, $dto->latitude);
 
         Assert::assertSame(12.4964, $dto->longitude);
@@ -44,8 +42,6 @@ describe('LocationDTO', function () {
 
         $dto = LocationDTO::fromLocationData($locationData);
 
-        Assert::assertInstanceOf(LocationDTO::class, $dto);
-
         Assert::assertSame(45.4654, $dto->latitude);
 
         Assert::assertSame(9.1866, $dto->longitude);
@@ -61,8 +57,6 @@ describe('LocationDTO', function () {
         );
 
         $locationData = $dto->toLocationData();
-
-        Assert::assertInstanceOf(LocationData::class, $locationData);
 
         Assert::assertSame(45.4654, $locationData->latitude);
 

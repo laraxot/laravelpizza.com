@@ -1,5 +1,5 @@
 ---
-title: "QueueableAction: unico ingresso execute"
+title: "QueueableAction — unico ingresso execute"
 type: concept
 module: Activity
 tags: [activity, queueable-action, spatie, execute, architecture]
@@ -15,10 +15,9 @@ related:
   - ../../../Xot/docs/queueable-actions.md
   - ./activity-domain-focus.md
   - ../../../../../../docs/wiki/rules/no-services-rule.md
-status: draft
 ---
 
-# QueueableAction: unico ingresso `execute`
+# QueueableAction — unico ingresso `execute`
 
 ## Religione (perché)
 
@@ -29,8 +28,8 @@ status: draft
 | **Un verbo** | Ogni Action = un’intenzione; `execute` = «fallo ora» (sync o queued via `->onQueue()`) |
 | **No Services** | Vietato `*Service`; la logica vive in `app/Actions/*Action.php` |
 | **No metodi domain su Action aliasing** | Vietato `recordSubject()`, `cleanOld()`, `handle()` come API pubblica alternativa |
-| **Trait obbligatorio** | Ogni file in `app/Actions/` usa `use QueueableAction`: audit: `bash bashscripts/tools/audit-queueable-action-trait.sh` |
-| **Facade sì, duplicazione no** | Coordinatori in `app/Adapters/`: **senza** trait; delegano a `*Action->execute()` (`app/Support/` eliminato 2026-07-12) |
+| **Trait obbligatorio** | Ogni file in `app/Actions/` usa `use QueueableAction` — audit: `bash bashscripts/tools/audit-queueable-action-trait.sh` |
+| **Facade sì, duplicazione no** | Coordinatori in `app/Adapters/` — **senza** trait; delegano a `*Action->execute()` (`app/Support/` eliminato 2026-07-12) |
 
 ### Filosofia
 
@@ -48,7 +47,7 @@ status: draft
 app(RecordSubjectActivityAction::class)->execute($modelClass, $modelId, $action, $changes);
 ```
 
-**Vietato:** `app(ActivityLogger::class)->recordSubject(...)`: `ActivityLogger` non è l’Action; è un coordinator legacy.
+**Vietato:** `app(ActivityLogger::class)->recordSubject(...)` — `ActivityLogger` non è l’Action; è un coordinator legacy.
 
 ### Mappa Actions (canon)
 
@@ -69,7 +68,7 @@ Metodi pubblici (`log`, `created`, `getRecent`, `cleanOld`) **non** reimplementa
 ## Esempi
 
 ```php
-// ✅ Cross-modulo: contract ActivityRecorder
+// ✅ Cross-modulo — contract ActivityRecorder
 app(RecordSubjectActivityAction::class)->execute(Ticket::class, $id, 'update', $changes);
 
 // ✅ Query
@@ -86,11 +85,11 @@ app(ActivityLogger::class)->recordSubject(...);
 
 ## Riferimenti progetto
 
-- [QUEUEABLE-ACTION-RULE](../../../../docs/QUEUEABLE-ACTION-RULE.md): regola moduli
-- [Xot queueable-actions](../../../Xot/docs/queueable-actions.md): pattern DI + queue
-- [no-services-rule](../../../../../../docs/wiki/rules/no-services-rule.md): vietati Services
+- [QUEUEABLE-ACTION-RULE](../../../../docs/QUEUEABLE-ACTION-RULE.md) — regola moduli
+- [Xot queueable-actions](../../../Xot/docs/queueable-actions.md) — pattern DI + queue
+- [no-services-rule](../../../../../../docs/wiki/rules/no-services-rule.md) — vietati Services
 
 ## Backlink
 
 - [wiki index Activity](../index.md)
-- [ARCHITECTURE.md](../../ARCHITECTURE.md): overview (in aggiornamento verso Actions-only)
+- [architecture.md](../../architecture.md) — overview (in aggiornamento verso Actions-only)

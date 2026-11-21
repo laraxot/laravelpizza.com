@@ -10,7 +10,6 @@ title: Modulo Test
 description: Modulo Test
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Modulo Test {#modulo-Test}

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "model factory seeder audit"
 related:
   - "./webm.md"
-status: draft
 ---
 # Model/Factory/Seeder Audit
 

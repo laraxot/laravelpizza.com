@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "git conflicts resolution summary"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # 💡 **Esempi Pratici Modulo Lang - Laraxot**
 
@@ -926,11 +925,11 @@ class UserResourceTest extends TestCase
 
 ### **1. Documentazione**
 - [README.md](README.md) - Documentazione principale
-- [BEST_PRACTICES.md](best_practices.md) - Best practices
+- [best_practices.md](best_practices.md) - Best practices
 - [API_REFERENCE.md](api_reference.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 - [README.md](README.md) - Documentazione principale
-- [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices
+- [best_practices.md](best_practices.md) - Best practices
 - [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 

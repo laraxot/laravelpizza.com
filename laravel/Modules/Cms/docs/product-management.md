@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product management"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Prodotti con Laravel Folio e Volt
@@ -389,5 +388,5 @@ class ProductTest extends TestCase
 
 ## Collegamenti tra versioni di product-management.md
 * [product-management.md](laravel/modules/cms/project_docs/product-management.md)
-* [product-management.md](components/product-management.md)
+* [product-management.md](laravel/modules/cms/project_docs/components/product-management.md)
 

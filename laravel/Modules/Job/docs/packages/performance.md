@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "performance"
 issues: []
 discussions: []
-status: draft
 ---
 
 ### Versione HEAD
@@ -21,12 +20,21 @@ status: draft
 * [performance.md](../../../xot/docs/roadmap/architecture/performance.md)
 * [performance.md](../../../ui/docs/standards/performance.md)
 * [performance.md](../../../Lang/docs/packages/performance.md)
-* [performance.md](../../../job/docs/packages/performance.md)
+* [performance.md](performance.md)
 * [performance.md](../../../Cms/docs/frontoffice/performance.md)
 
 ### Versione Incoming
 
 ---
+
+title: "performance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "performance"
+issues: []
+discussions: []
 ### Versione Incoming
 
 ---

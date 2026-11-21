@@ -237,7 +237,7 @@ laravel/Modules/Incentivi/
 │   │   ├── 📄 laravel.md
 │   │   ├── 📄 advanced.md
 │   │   ├── 📄 styling.md
-│   │   └── 📄 security.md
+│   │   └── 📄 SECURITY.md
 │   │
 │   └── 📁 models/
 │       └── 📄 domain-model.md

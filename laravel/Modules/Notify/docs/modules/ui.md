@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ui"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modulo UI

@@ -12,7 +12,11 @@ use ReflectionClass;
 uses(TestCase::class);
 
 it('can be instantiated', function (): void {
+<<<<<<< .merge_file_l6t0nm
     Assert::assertInstanceOf(GoogleMapsService::class, new GoogleMapsService);
+=======
+    expect(fn (): GoogleMapsService => new GoogleMapsService)->not->toThrow(\Throwable::class);
+>>>>>>> .merge_file_diWQCA
 });
 
 it('has correct constants defined', function (): void {

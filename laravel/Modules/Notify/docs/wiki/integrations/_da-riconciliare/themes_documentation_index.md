@@ -348,7 +348,7 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
-| `guides/getting-started.md` | Theme setup | [View](../laravel/Themes/Sixteen/docs/guides/getting-started.md) |
+| `guides/getting-started.md` | Theme setup | [View](../../../GETTING-STARTED.md) |
 | `guides/adding-components.md` | Create new component | [View](../laravel/Themes/Sixteen/docs/guides/adding-components.md) |
 | `guides/styling-guide.md` | Styling best practices | [View](../laravel/Themes/Sixteen/docs/guides/styling-guide.md) |
 | `guides/responsive-design.md` | Mobile-first approach | [View](../laravel/Themes/Sixteen/docs/guides/responsive-design.md) |
@@ -459,8 +459,8 @@ public_html/assets/
 
 ## See Also
 
-- **Architecture Diagrams:** [ARCHITECTURE-DIAGRAMS.md](ARCHITECTURE-DIAGRAMS.md)
-- **Module Docs Index:** [MODULE_DOCS_INDEX.md](MODULE_DOCS_INDEX.md)
+- **Architecture Diagrams:** [architecture-diagrams.md](architecture-diagrams.md)
+- **Module Docs Index:** [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Master Index:** [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
 - **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "footer"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componente Footer
@@ -71,9 +70,9 @@ Il componente Footer è un elemento fondamentale dell'interfaccia utente che for
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)
 * [footer.md](docs/sections/footer.md)
-* [footer.md](../../../UI/docs/components/footer.md)
-* [footer.md](../blocks/footer.md)
-* [footer.md](../themes/one/footer.md)
+* [footer.md](laravel/modules/ui/docs/components/footer.md)
+* [footer.md](laravel/modules/cms/docs/blocks/footer.md)
+* [footer.md](laravel/modules/cms/docs/themes/one/footer.md)
 * [footer.md](laravel/modules/cms/docs/components/footer.md)
 * [footer.md](laravel/themes/one/docs/components/layouts/footer.md)
 * [footer.md](laravel/themes/one/docs/sections/footer.md)

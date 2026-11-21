@@ -8,20 +8,14 @@ qmd: "refactoring-completato 🐄✨ refactoring basemodel - completato! ✨🐄
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🐄✨ REFACTORING BASEMODEL - COMPLETATO! ✨🐄
@@ -172,7 +166,7 @@ Modules/Notify/app/Models/BaseModel.php
 Modules/User/app/Models/BaseModel.php
 
 # Documentazione creata/aggiornata (7 files)
-docs/analisi-metodi-duplicati-master.md
+docs/analisi-metodi-duplicati-master-1.md
 docs/analisi-metodi-duplicati-index.md
 docs/implementazione-refactoring-basemodel.md
 docs/refactoring-completato.md (questo file)
@@ -343,7 +337,7 @@ php artisan optimize:clear
 ## 📚 DOCUMENTI CREATI
 
 1. **MASTER EDITION** - Analisi completa divina
-   - `docs/analisi-metodi-duplicati-master.md`
+   - `docs/analisi-metodi-duplicati-master-1.md`
    - 100+ pagine di analisi
    - Implementazioni concrete
    - ROI dettagliato

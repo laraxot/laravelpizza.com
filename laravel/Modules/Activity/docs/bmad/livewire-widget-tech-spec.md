@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_TyxH2w
 title: "Tech spec — Activity"
+=======
+>>>>>>> .merge_file_7e29if
 title: "Tech spec: Activity"
 type: tech-spec
 module: Activity

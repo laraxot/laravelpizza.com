@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "build and dev commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Build & development commands

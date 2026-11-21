@@ -11,7 +11,6 @@ module: Geo
 related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
-status: draft
 ---
 
 # Architecture Geo

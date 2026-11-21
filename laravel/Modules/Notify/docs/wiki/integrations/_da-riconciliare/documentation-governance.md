@@ -1,14 +1,13 @@
 ---
-qmd: "documentation governance"
+qmd: "Documentation Governance"
 issues: []
 discussions: []
-title: "Documentation Governance Framework"
+title: "Documentation Governance"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Documentation Governance Framework
@@ -35,7 +34,7 @@ Modules/ModuleName/
 ├── docs/
 │   ├── README.md                    # Module overview and quick reference
 │   ├── 00-index.md                  # Alternative index (if needed)
-│   ├── changelog.md                 # Module changelog
+│   ├── CHANGELOG.md                 # Module changelog
 │   ├── architecture/                # Architecture decisions and patterns
 │   │   ├── overview.md
 │   │   └── decisions/               # ADRs (Architectural Decision Records)
@@ -437,10 +436,9 @@ jobs:
 
 ## 📚 Related Documents
 
-- [agents.md](../../../AGENTS.md) - Agent guidelines
+- [AGENTS.md](../../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
-- [DOCUMENTATION_INDEX.md](../../../DOCUMENTATION_INDEX.md) - Master index
 
 ---
 

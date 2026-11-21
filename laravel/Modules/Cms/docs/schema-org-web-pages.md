@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "schema org web pages"
 issues: []
 discussions: []
-status: draft
 ---
 
 # schema.org web page types

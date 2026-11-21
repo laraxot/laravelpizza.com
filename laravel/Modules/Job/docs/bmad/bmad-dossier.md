@@ -1,5 +1,5 @@
 ---
-title: "Job: BMAD dossier"
+title: "Job — BMAD dossier"
 type: bmad-dossier
 module: Job
 updated: 2026-10-07
@@ -7,9 +7,8 @@ tags: [bmad, job, queues, operations]
 qmd: "Job module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
-status: draft
 ---
-# Job: BMAD dossier
+# Job — BMAD dossier
 ## Product brief / PRD
 Run imports, exports, notifications and scheduled work reliably without losing transactions.
 ## Architecture / UX / security

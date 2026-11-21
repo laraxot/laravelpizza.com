@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "05 risks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risks - Notify

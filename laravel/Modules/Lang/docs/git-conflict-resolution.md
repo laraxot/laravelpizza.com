@@ -8,7 +8,6 @@ type: concept
 module: "Lang"
 created: 2026-07-31
 updated: 2026-07-31
-status: draft
 ---
 
 # Audit collisioni Git committate in bashscripts

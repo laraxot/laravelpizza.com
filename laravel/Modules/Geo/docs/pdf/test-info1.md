@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test info1"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Informazioni sul Libro: Event Sourcing in Laravel

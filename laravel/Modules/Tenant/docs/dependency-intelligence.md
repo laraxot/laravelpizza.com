@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "dependency intelligence"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Dependency Intelligence - Module Tenant
 

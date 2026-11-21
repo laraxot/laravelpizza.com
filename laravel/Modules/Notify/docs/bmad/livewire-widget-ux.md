@@ -5,12 +5,11 @@ updated: 2026-09-26
 qmd: "livewire widget ux"
 issues: []
 discussions: []
-title: "UX: campanella"
+title: "UX — campanella"
 type: ux-design
 module: Notify
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # UX

@@ -1,11 +1,10 @@
 ---
 title: "Eventi in Larabank"
+qmd: "activity use cases bank events md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "eventi in larabank activity"
+tags: [documentation]
 ---
+
 # Eventi in Larabank
 
 ## Introduzione

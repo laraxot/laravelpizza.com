@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes notify module"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Fixes for Notify Module

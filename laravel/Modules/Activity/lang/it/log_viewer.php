@@ -27,6 +27,7 @@ return [
     'actions' => [
         'refresh' => [
             'label' => 'Aggiorna',
+<<<<<<< .merge_file_5YfxsH
         ],
         'download' => [
             'label' => 'Scarica il file',
@@ -34,6 +35,8 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+=======
+>>>>>>> .merge_file_L2kUGj
         ],
     ],
     'messages' => [

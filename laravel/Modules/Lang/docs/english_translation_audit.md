@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "links"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Audit Traduzioni Inglesi - <main module>
 
@@ -307,7 +306,6 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../docs/translation-standards.md)
-- [Regole Traduzioni](translation-standards.md)
 - [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 

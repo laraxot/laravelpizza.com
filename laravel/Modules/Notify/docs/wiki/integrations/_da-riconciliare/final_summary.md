@@ -8,7 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # 📊 NOTIFY - RIEPILOGO FINALE COMPLETAMENTO
@@ -48,7 +47,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ### 👥 Modulo User (3)
 11. ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (TOTP, recovery codes, testing)
 12. ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (Azure AD, Google, Okta)
-13. ✅ **ROADMAP.md** - Aggiornata Q4 2025-Q1 2026
+13. ✅ **roadmap.md** - Aggiornata Q4 2025-Q1 2026
 
 ### 🎨 Tema Sixteen (1)
 14. ✅ **ROADMAP_2025.md** - Aggiornata Q4 2025-Q2 2026
@@ -146,7 +145,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
     │
     ├── Modules/User/docs/              ✅ 92% COMPLETO
     │   ├── README.md                   ✅ Completo
-    │   ├── ROADMAP.md                  ✅ Aggiornato
+    │   ├── roadmap.md                  ✅ Aggiornato
     │   ├── 2FA_GUIDE.md                ✅ NEW - Implementazione completa
     │   ├── SSO_GUIDE.md                ✅ NEW - SAML + OIDC
     │   └── API.md                      📋 TODO
@@ -216,7 +215,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - ✅ **ROADMAP_STATUS_SUMMARY.md** - Master status
 - ✅ **App/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 - ✅ **<nome progetto>/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
-- ✅ **User/ROADMAP.md** - Timeline Q4 2025-Q1 2026
+- ✅ **User/roadmap.md** - Timeline Q4 2025-Q1 2026
 - ✅ **Sixteen/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 
 ---
@@ -293,8 +292,8 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ## 📞 SUPPORTO E COMMUNITY
 
 ### Per Sviluppatori
-- **Quick Start**: [QUICK_START.md](./QUICK_START.md)
-- **Documentation Index**: [DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md)
+- **Quick Start**: [QUICK_START.md](./quick_start.md)
+- **Documentation Index**: [DOCUMENTATION_INDEX.md](./documentation_index.md)
 - **Slack**: #laraxot-dev
 
 ### Per Utenti
@@ -354,7 +353,7 @@ Il progetto <nome progetto> ha raggiunto un livello di documentazione e organizz
 ### Modulo User
 - [x] 2FA_GUIDE.md creato
 - [x] SSO_GUIDE.md creato
-- [x] ROADMAP.md aggiornato
+- [x] roadmap.md aggiornato
 - [ ] API.md da creare
 
 ### Tema Sixteen

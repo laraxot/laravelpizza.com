@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "service provider xotbase"
 issues: []
 discussions: []
-status: draft
 ---
 
 # XotBaseServiceProvider: Analisi, Regole e Best Practice
@@ -103,6 +102,15 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [Best Practices](Modules/Xot/docs/service-provider-best-practices.md)
 
 ---
+
+title: "service provider xotbase"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "service provider xotbase"
+issues: []
+discussions: []
 > **Questa documentazione è stata aggiornata dopo un errore di override errato del metodo boot. Seguire SEMPRE queste regole per evitare errori futuri.**
 # XotBaseServiceProvider: Analisi, Regole e Best Practice
 

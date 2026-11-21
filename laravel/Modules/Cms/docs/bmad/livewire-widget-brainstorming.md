@@ -10,7 +10,6 @@ type: brainstorming
 module: Cms
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Brainstorming

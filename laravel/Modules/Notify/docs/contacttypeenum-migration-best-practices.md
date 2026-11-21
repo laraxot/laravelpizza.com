@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "contacttypeenum migration best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ContactTypeEnum Migration Best Practices

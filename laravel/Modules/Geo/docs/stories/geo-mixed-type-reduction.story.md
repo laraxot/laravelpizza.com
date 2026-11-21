@@ -57,5 +57,5 @@ Refactor (typing only, no behavior change)
 - Before resuming further `mixed` cleanup in this module, check `git status --short` first: another
   session may still be mid-edit on `app/Models/Address.php`,
   `app/Filament/Forms/Components/XotBaseCoordinateField.php`,
-  `app/Filament/Forms/Components/CoordinatePickerHelpers.php`,
+  `app/Filament/Forms/Components/Support/CoordinatePickerHelpers.php`,
   `app/Filament/Forms/Components/Traits/HasCoordinatePicker.php`.

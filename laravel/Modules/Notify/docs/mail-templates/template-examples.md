@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "template examples"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Esempi di Template Email

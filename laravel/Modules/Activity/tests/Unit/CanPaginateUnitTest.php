@@ -6,6 +6,7 @@ namespace Modules\Activity\Tests\Unit;
 
 use Filament\Tables\Enums\PaginationMode;
 use Modules\Activity\Tests\Fixtures\CanPaginateHarness;
+<<<<<<< .merge_file_OpbL5W
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -49,3 +50,5 @@ test('CanPaginate espone pagination mode default', function (): void {
 
     Assert::assertSame(PaginationMode::Default, $harness->getPaginationMode());
 });
+=======
+>>>>>>> .merge_file_wZTeGu

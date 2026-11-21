@@ -11,7 +11,7 @@ discussions: []
 
 # Testing Patterns Template
 
-Template for `.planning/codebase/TESTING.md` - captures test framework and patterns.
+Template for `.planning/codebase/testing.md` - captures test framework and patterns.
 
 **Purpose:** Document how tests are written and run. Guide for adding tests that match existing patterns.
 
@@ -458,7 +458,7 @@ it('mocks file system', () => {
 </good_examples>
 
 <guidelines>
-**What belongs in TESTING.md:**
+**What belongs in testing.md:**
 - Test framework and runner configuration
 - Test file location and naming patterns
 - Test structure (describe/it, beforeEach patterns)

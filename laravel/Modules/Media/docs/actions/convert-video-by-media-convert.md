@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "convert video by media convert"
 related:
   - "./webm.md"
-status: draft
 ---
 # ConvertVideoByMediaConvertAction
 
@@ -85,5 +84,16 @@ $record = MediaConvert::create([
 $action = new ConvertVideoByMediaConvertAction();
 $convertedPath = $action->execute($data, $record);
 ```
+
+## Fix PHPStan (2026-07-15)
+
+`->addFilter()` viene inoltrato al driver `PHPFFMpeg` sottostante tramite
+`__call`/`@mixin` (trait `InteractsWithFilters`, usato solo da `PHPFFMpeg`, non
+da `MediaExporter`): la sua firma dichiarata restituisce l'istanza del driver,
+non del `MediaExporter`. Concatenare `->addFilter(...)->inFormat(...)->save(...)`
+dopo `->export()` rompeva quindi la chiamata (metodo `inFormat`/`save` inesistente
+sul tipo restituito). Fix: si mantiene il riferimento a `$export` (il
+`MediaExporter`) in una variabile, si applica `->inFormat()` in chain, e si
+chiama `addFilter()` e `save()` come chiamate separate su `$export`, non concatenate.
 
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions)

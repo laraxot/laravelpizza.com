@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/openFilters.php
 // Cms section.fields.openFilters — LangServiceProvider SSoT.
 return [
-    'label' => 'Apri Filtri',
+    'label' => 'Open Filters',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

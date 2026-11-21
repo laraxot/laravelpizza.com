@@ -1,10 +1,10 @@
 ---
-title: "github discussion sync remote repo"
+title: "Github Discussion Sync Remote Repo"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "github discussion sync remote repo"
+qmd: "Github Discussion Sync Remote Repo"
 issues: []
 discussions: []
 ---
@@ -18,12 +18,12 @@ discussions: []
 
 ---
 
-title: "github discussion sync remote repo"
+title: "GITHUB DISCUSSION SYNC REMOTE REPO"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "github discussion sync remote repo"
+qmd: "GITHUB DISCUSSION SYNC REMOTE REPO"
 issues: []
 discussions: []
 ## Test Results (2026-03-13)
@@ -98,7 +98,7 @@ bash bashscripts/git/subtrees/sync_remote_repo.sh --dry-run
 |----------|------|
 | **Script Documentation** | `bashscripts/docs/git/SYNC_REMOTE_REPO_SCRIPT.md` |
 | **Skill** | `.agents/skills/sync-remote-repo/SKILL.md` |
-| **Agent Teams** | `docs/AGENT_TEAMS.md` |
+| **Agent Teams** | `docs/agent_teams.md` |
 
 ### 4. GitHub Integration
 
@@ -258,7 +258,7 @@ Same action items as Gemini.
 - **Workflow**: `.github/workflows/sync-remote-repo.yml`
 - **Docs**: `bashscripts/docs/git/SYNC_REMOTE_REPO_SCRIPT.md`
 - **Skill**: `.agents/skills/sync-remote-repo/SKILL.md`
-- **Teams**: `docs/AGENT_TEAMS.md`
+- **Teams**: `docs/agent_teams.md`
 
 ---
 

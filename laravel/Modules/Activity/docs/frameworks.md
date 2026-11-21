@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_9zA03W
 # Activity — Framework Integration Notes
+=======
+>>>>>>> .merge_file_m8vRmI
 ---
 title: "Activity: Framework Integration Notes"
 type: note
@@ -23,7 +26,10 @@ Surgical editing patterns:
 ## Architecture (graphify)
 
 Dependency analysis:
+<<<<<<< .merge_file_9zA03W
 - Module dependencies: [TBD — graphify analysis]
+=======
+>>>>>>> .merge_file_m8vRmI
 - Module dependencies: [TBD: graphify analysis]
 - Circular deps: [TBD]
 - Cross-theme usage: [TBD]

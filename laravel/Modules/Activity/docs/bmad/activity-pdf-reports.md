@@ -1,12 +1,7 @@
 ---
+qmd: "activity bmad activity pdf reports md"
 title: Activity pdf reports
 module: Activity
-type: note
-updated: 2026-10-07
-tags: [docs, activity, bmad]
-qmd: "activity log pdf reports activity"
-status: superseded
-superseded_by: ../activity-pdf-reports.md
 ---
 
 # Activity Log PDF Reports

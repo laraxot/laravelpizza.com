@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms configuration access"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Pattern di Accesso alla Configurazione SMS

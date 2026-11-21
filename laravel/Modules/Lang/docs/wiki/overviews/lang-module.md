@@ -13,12 +13,11 @@ sources:
   - ../../../docs/mcamara-laravel-localization-governance.md
 confidence: high
 updated: 2026-04-15
-status: draft
 ---
 
-# Lang Module: Overview
+# Lang Module — Overview
 
-> **Ruolo**: Sistema di traduzioni automatizzato: auto-discovery i18n, routing localizzato, LangBase classes per moduli multilingua.
+> **Ruolo**: Sistema di traduzioni automatizzato — auto-discovery i18n, routing localizzato, LangBase classes per moduli multilingua.
 
 ## Responsabilità del Modulo
 
@@ -73,7 +72,7 @@ Modules/<Name>/lang/{locale}/
 | `cms::actions.create.label` | Azione "create" del modulo Cms |
 | `cms::sections.content.heading` | Sezione "content" del modulo Cms |
 
-## mcamara/laravel-localization: Regole
+## mcamara/laravel-localization — Regole
 
 Il routing localizzato segue regole strict derivate dal pacchetto:
 
@@ -88,7 +87,7 @@ Route::group([
 });
 ```
 
-### Regola 2: URL sempre via helper: mai concatenazione manuale
+### Regola 2: URL sempre via helper — mai concatenazione manuale
 
 ```php
 // ✅ CORRETTO
@@ -152,15 +151,15 @@ Modules/<Name>/lang/
 
 ## Cross-References
 
-- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]]: XotBase* che LangBase* estende
-- [[../../../../../../laravel/Modules/Cms/docs/wiki/overviews/cms-module|Cms Module]]: usa LangBase per content multilingua
-- [[../../../../../../laravel/Modules/UI/docs/wiki/overviews/ui-module|UI Module]]: Filament intercettato da AutoLabelAction
+- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotBase* che LangBase* estende
+- [[../../../../../../laravel/Modules/Cms/docs/wiki/overviews/cms-module|Cms Module]] — usa LangBase per content multilingua
+- [[../../../../../../laravel/Modules/UI/docs/wiki/overviews/ui-module|UI Module]] — Filament intercettato da AutoLabelAction
 
 ## Raw Sources Prioritari
 
-- `docs/translations-system.md`: LangServiceProvider, struttura file, cache
-- `docs/filosofia-modulo-lang.md`: AutoLabelAction, LangBase classes, key pattern
-- `docs/mcamara-laravel-localization-governance.md`: regole URL, routing, anti-pattern
-- `docs/enum-translation-pattern.md`: traduzione degli Enum
-- `docs/translation-preservation-rules.md`: regole per non perdere traduzioni
-- `docs/architecture.md`: architettura completa del modulo
+- `docs/translations-system.md` — LangServiceProvider, struttura file, cache
+- `docs/filosofia-modulo-lang.md` — AutoLabelAction, LangBase classes, key pattern
+- `docs/mcamara-laravel-localization-governance.md` — regole URL, routing, anti-pattern
+- `docs/enum-translation-pattern.md` — traduzione degli Enum
+- `docs/translation-preservation-rules.md` — regole per non perdere traduzioni
+- `docs/architecture.md` — architettura completa del modulo

@@ -3,11 +3,10 @@ title: "title with slug analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-23
+updated: 2026-09-26
 qmd: "title with slug analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi del Pacchetto Filament Title With Slug
@@ -147,7 +146,7 @@ TitleWithSlugInput::make()
 ```php
 use Camya\Filament\Forms\Components\TitleWithSlugInput;
 
-public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+public static function form(Form $form): Form
 {
     return $form
         ->schema([

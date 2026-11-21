@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notification behavior"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notification System Behavior

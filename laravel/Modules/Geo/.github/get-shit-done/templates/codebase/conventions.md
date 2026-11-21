@@ -297,9 +297,9 @@ discussions: []
 - Function and module design patterns
 
 **What does NOT belong here:**
-- Architecture decisions (that's ARCHITECTURE.md)
+- Architecture decisions (that's architecture.md)
 - Technology choices (that's STACK.md)
-- Test patterns (that's TESTING.md)
+- Test patterns (that's testing.md)
 - File organization (that's STRUCTURE.md)
 
 **When filling this template:**

@@ -10,13 +10,12 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
   - "./docs-governance.md"
-status: draft
 ---
 
 # ✅ AI Skills & Plugins - COMPLETE
@@ -63,7 +62,7 @@ ls -la ~/.claude/skills/notebooklm/
 "Set up NotebookLM authentication"
 
 # 2. Crea notebook su notebooklm.google.com
-#    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
+#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
 #    - Share → Copy link
 
 # 3. Aggiungi a library
@@ -359,7 +358,7 @@ claude
 
 # 3. Create notebook
 #    - Go to notebooklm.google.com
-#    - Upload: agents.md, docs/, .planning/
+#    - Upload: AGENTS.md, docs/, .planning/
 #    - Share → Copy link
 
 # 4. Add to library

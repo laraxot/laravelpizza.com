@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bulk coordinate updates"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Bulk Coordinate Updates
@@ -102,4 +101,13 @@ public function getTableBulkActions(): array
 - Proper separation of concerns
 
 ---
+
+title: "bulk coordinate updates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bulk coordinate updates"
+issues: []
+discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

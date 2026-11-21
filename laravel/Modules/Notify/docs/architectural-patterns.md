@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "architectural patterns"
 issues: []
 discussions: []
-status: superseded
-superseded_by: architecturals.md
 ---
 
 # Pattern Architetturali per le Notifiche

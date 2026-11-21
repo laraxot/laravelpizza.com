@@ -13,10 +13,10 @@ discussions: []
 
 **Fase BMAD**: Documentazione / manutenzione (docs-only, nessuna modifica a codice applicativo).
 
-**Contesto**: `Modules/Gdpr/docs/` ha accumulato ~130 file `.md` tra import grezzi (`raw/root-import/`), copie root (`root-md-files/`), roadmap frammentate (`roadmap/` e `development/roadmap/`) e indici concorrenti (`index.md`, `INDEX.md`, `00-index.md`, `00-INDEX.md`).
+**Contesto**: `Modules/Gdpr/docs/` ha accumulato ~130 file `.md` tra import grezzi (`raw/root-import/`), copie root (`root-md-files/`), roadmap frammentate (`roadmap/` e `development/roadmap/`) e indici concorrenti (`index.md`, `index.md`, `00-index.md`, `00-index.md`).
 
 **Azione**: aggiornato `docs/index.md` come indice unico organizzato per argomento (panoramica, conformità/consensi, pacchetti, html2pdf, qualità/performance, roadmap, task, wiki interno, raw import). Nessun file `.md` esistente è stato rinominato o cancellato.
 
-**Duplicati rilevati**: segnalati in `docs/index.md` § "Storico / da consolidare" (indici concorrenti, coppie `.md`/`.txt`, `raw/root-import/*` vs `*-1.md`, `roadmap/` vs `development/roadmap/`, `index.md`/`INDEX.md` per-cartella in `wiki/`, tre varianti di `agents.md`).
+**Duplicati rilevati**: segnalati in `docs/index.md` § "Storico / da consolidare" (indici concorrenti, coppie `.md`/`.txt`, `raw/root-import/*` vs `*-1.md`, `roadmap/` vs `development/roadmap/`, `index.md`/`index.md` per-cartella in `wiki/`, tre varianti di `AGENTS.md`).
 
 **Verifica**: elenco file confrontato con `find Modules/Gdpr/docs -type f`; nessun file toccato oltre a `docs/index.md` e questa story.

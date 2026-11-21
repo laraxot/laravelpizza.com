@@ -8,7 +8,6 @@ qmd: "testing registration widget"
 issues: []
 discussions: []
 description: Testing strategy for RegistrationWidget
-status: draft
 ---
 
 # Testing the RegistrationWidget (Filament / Livewire)

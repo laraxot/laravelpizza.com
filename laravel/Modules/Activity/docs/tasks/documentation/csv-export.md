@@ -1,3 +1,10 @@
+---
+title: "CSV Export - Activity"
+qmd: "activity tasks documentation csv export md"
+type: note
+tags: [documentation]
+---
+
 # CSV Export - Activity
 
 **Task ID**: ACTIVITY-FEATURE-016

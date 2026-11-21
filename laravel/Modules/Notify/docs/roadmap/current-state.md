@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "current state"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Current State - Notify

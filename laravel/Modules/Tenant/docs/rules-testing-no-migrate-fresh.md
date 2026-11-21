@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "rules testing no migrate fresh"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 

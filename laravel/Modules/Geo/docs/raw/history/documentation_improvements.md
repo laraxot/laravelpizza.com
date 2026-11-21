@@ -1,10 +1,10 @@
 ---
-title: "documentation improvements"
+title: "Documentation Improvements"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "documentation improvements"
+qmd: "Documentation Improvements"
 issues: []
 discussions: []
 ---
@@ -42,7 +42,7 @@ discussions: []
 - ✅ .github/ISSUE_TEMPLATE/documentation-request.md
 
 ### 6. Indici
-- ✅ docs/MODULES_INDEX.md
+- ✅ docs/modules_index.md
 
 ## Struttura Standard
 

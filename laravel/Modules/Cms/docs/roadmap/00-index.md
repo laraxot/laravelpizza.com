@@ -1,14 +1,12 @@
 ---
-title: "00 index"
+title: "00 Index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "00 index"
+qmd: "00 Index"
 issues: []
 discussions: []
-status: superseded
-superseded_by: 00-INDEX.md
 ---
 
 # Cms Module - Roadmap

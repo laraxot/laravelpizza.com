@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "progress bar"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Progress Bar

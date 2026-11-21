@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email testing analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi delle Pagine di Test Email

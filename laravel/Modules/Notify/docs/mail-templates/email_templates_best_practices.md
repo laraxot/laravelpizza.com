@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email templates best practices"
 issues: []
 discussions: []
-status: superseded
-superseded_by: email-templates-best-practices.md
 ---
 
 # Best Practices per Template Email

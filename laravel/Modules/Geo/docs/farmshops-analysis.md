@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "farmshops analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🗺️ ANALISI PROGETTO FARMSHOPS.EU
@@ -17,6 +16,15 @@ status: draft
 **Obiettivo**: Integrazione funzionalità mappa interattiva nel progetto FixCity
 
 ---
+
+title: "farmshops analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "farmshops analysis"
+issues: []
+discussions: []
 ## 📋 PANORAMICA PROGETTO
 
 ### 🎯 Scopo

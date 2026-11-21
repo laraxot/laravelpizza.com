@@ -11,11 +11,11 @@ discussions: []
 
 <purpose>
 Execute discovery at the appropriate depth level.
-Produces DISCOVERY.md (for Level 2-3) that informs PLAN.md creation.
+Produces DISCOVERY.md (for Level 2-3) that informs plan.md creation.
 
 Called from plan-phase.md's mandatory_discovery step with a depth parameter.
 
-NOTE: For comprehensive ecosystem research ("how do experts build this"), use /gsd-research-phase instead, which produces RESEARCH.md.
+NOTE: For comprehensive ecosystem research ("how do experts build this"), use /gsd-research-phase instead, which produces research.md.
 </purpose>
 
 <depth_levels>
@@ -286,7 +286,7 @@ NOTE: DISCOVERY.md is NOT committed separately. It will be committed with phase 
 - WebSearch findings cross-verified
 - DISCOVERY.md created with recommendation
 - Confidence level MEDIUM or higher
-- Ready to inform PLAN.md creation
+- Ready to inform plan.md creation
 
 **Level 3 (Deep Dive):**
 - Discovery scope defined
@@ -296,5 +296,5 @@ NOTE: DISCOVERY.md is NOT committed separately. It will be committed with phase 
 - Quality report with source attribution
 - If LOW confidence findings → validation checkpoints defined
 - Confidence gate passed
-- Ready to inform PLAN.md creation
+- Ready to inform plan.md creation
 </success_criteria>

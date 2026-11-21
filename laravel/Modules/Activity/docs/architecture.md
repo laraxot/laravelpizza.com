@@ -1,3 +1,106 @@
+<<<<<<< .merge_file_PWLev0
+=======
+---
+title: "Activity: architettura (diagramma non allineato al codice)"
+type: reference
+status: stale
+module: Activity
+updated: 2026-10-14
+tags: [activity, architecture, stale]
+qmd: "activity architettura diagramma repositories services projections stale"
+---
+
+> Nota 2026-10-14 (docs-audit): il diagramma elenca Repositories, Services, Commands e Projections che non esistono in `app/` (cartelle reali: Actions, Adapters, Console, Contracts, Datas, Enums, Events, Exceptions, Filament, Http, Listeners, Models, Providers, Traits, View; `Support` assente, riverificato 2026-10-23). Il modulo non ha un layer Services (regola no-services). Fonte corretta: [README.md](./README.md) e [wiki/concepts/queueable-action-execute-entrypoint.md](./wiki/concepts/queueable-action-execute-entrypoint.md). Contenuto non riscritto, verificare prima di usarlo.
+
+# Architecture Documentation
+## Activity Module Architecture
+
+### System Overview
+
+The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+
+### Core Components
+
+Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+
+```
+Activity Module Architecture
+┌─────────────────────────────────────────────────────────────┐
+│                     Activity Module                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Models     │  │ Repositories │  │  Services    │       │
+│  │              │  │              │  │              │       │
+│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
+│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
+│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Events     │  │   Commands   │  │  Projections │       │
+│  │              │  │              │  │              │       │
+│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
+│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Policies   │  │   Actions    │  │   Pages      │       │
+│  │              │  │              │  │              │       │
+│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
+│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow
+
+## Quality Gates
+✅ PHPStan L10: Executed (2026-07-28)# Architecture Documentation
+
+## Activity Module Architecture
+
+### System Overview
+
+The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+
+### Core Components
+
+Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+
+```
+Activity Module Architecture
+┌─────────────────────────────────────────────────────────────┐
+│                     Activity Module                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Models     │  │ Repositories │  │  Services    │       │
+│  │              │  │              │  │              │       │
+│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
+│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
+│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Events     │  │   Commands   │  │  Projections │       │
+│  │              │  │              │  │              │       │
+│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
+│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Policies   │  │   Actions    │  │   Pages      │       │
+│  │              │  │              │  │              │       │
+│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
+│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow
+
+## Quality Gates
+✅ PHPStan L10: Executed (2026-07-28)
+>>>>>>> .merge_file_mCiq10
 # Architecture Documentation
 
 ## Activity Module Architecture
@@ -154,6 +257,7 @@ class ActivityPolicy
 
 ### Related Documentation
 
+<<<<<<< .merge_file_PWLev0
 - [Security](SECURITY.md)
 - [Quality](QUALITY.md)
 - [Performance](PERFORMANCE.md)
@@ -187,3 +291,10 @@ Provides audit trail and activity logging via Spatie Laravel Activity Log. Track
 
 ## Quality Gates
 ✅ PHPStan L10: Executed (2026-07-28)
+=======
+- [Security](security.md)
+- [Quality](roadmap/quality.md)
+- [Performance](PERFORMANCE.md) _(target mancante, verificato 2026-10-14)_
+- [Testing](testing.md)
+=======
+>>>>>>> .merge_file_mCiq10

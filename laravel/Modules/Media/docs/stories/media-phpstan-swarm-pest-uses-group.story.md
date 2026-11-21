@@ -17,7 +17,7 @@ created_at: '2026-09-15'
 updated_at: '2026-09-15'
 tags: [bmad, story, phpstan, pest, media, phpstan-swarm]
 related:
-  - ./media-quality-gate.story.md
+  - ./media-quality-gate-2026-09-04.story.md
 ---
 
 # Fix swarm PHPStan 2026-09-15: falsi positivi uses()/describe()->group() nei test Pest
@@ -50,7 +50,7 @@ Root cause verificata leggendo `vendor/pestphp/pest/src/Functions.php`:
 `uses()` e `describe()` sono dichiarate dentro `if (! function_exists(...))`
 con return type reale (`UsesCall`, `DescribeCall`), quindi la catena
 `->group()` e' legittima a runtime. PHPStan pero' non vede questa
-dichiarazione condizionale senza l'estensione dedicata: e in
+dichiarazione condizionale senza l'estensione dedicata — e in
 `laravel/phpstan.neon` (SACRO, non toccato) le righe:
 
 ```
@@ -78,8 +78,8 @@ con gli identifier esatti riportati da PHPStan e una motivazione inline.
   con `method.nonObject, function.void`.
 - `tests/Unit/Models/MediaTest.php`: la catena e' `describe(...)->group(...)`
   spezzata su 322 righe (apertura riga 24, chiusura riga 345), quindi due
-  commenti separati: uno sopra `describe(` (`function.void`) e uno sopra
-  `})->group('media-db');` (`method.nonObject`): perche' l'ignore-next-line
+  commenti separati — uno sopra `describe(` (`function.void`) e uno sopra
+  `})->group('media-db');` (`method.nonObject`) — perche' l'ignore-next-line
   copre solo la riga immediatamente seguente.
 
 Nessun file aveva marker di conflitto (`<<<<<<<`/`=======`/`>>>>>>>`), tutti
@@ -117,17 +117,17 @@ crash si verifica comunque (l'autoloader del progetto viene comunque
 caricato), quindi non e' aggirabile restringendo i path.
 
 Verifica sostitutiva fatta senza il gate PHPStan/Pest live:
-- Sintassi: `php -l` su tutti i 34 file: 0 errori.
+- Sintassi: `php -l` su tutti i 34 file — 0 errori.
 - Grammatica dell'ignore comment: verificata con repro isolato (stub locale
   di `uses()`/`->group()` con firme reali) in un neon minimo separato dal
-  progetto: `/** @phpstan-ignore-next-line method.nonObject, function.void
+  progetto — `/** @phpstan-ignore-next-line method.nonObject, function.void
   (...) */` sopprime esattamente i due identifier attesi.
 - PHPMD (`./tools/phpmd.sh Modules/Media text
   Modules/Media/phpmd.ruleset.xml --exclude
   'vendor,node_modules,bootstrap,caches,tests,docs'`): gira (esclude
   `tests/`, quindi non tocca i file di questa story), tutti i finding sono
   preesistenti in `app/` (CamelCase, BooleanArgumentFlag, complessita',
-  ecc.), nessuno introdotto da me: non ne ho risolto nessuno, fuori dal
+  ecc.), nessuno introdotto da me — non ne ho risolto nessuno, fuori dal
   report assegnato.
 - PHPInsights (`./tools/phpinsights.sh analyse Modules/Media
   --no-interaction --composer=composer.lock`): score 92.9/100/92.9/87.7,
@@ -141,7 +141,7 @@ Xot/Ptv e' risolto: `php -d memory_limit=-1 ./vendor/bin/phpstan analyse
 Modules/Media --no-progress` per confermare 0 errori residui su questo
 scope.
 
-## Second brain: pattern da ricordare
+## Second brain — pattern da ricordare
 
 Pattern ricorrente non ovvio: **qualunque file `tests/Unit/**Test.php` che
 apre con `uses(TestCase::class)->group(...)` o `describe(...)->group(...)`
@@ -157,7 +157,7 @@ questa stessa convenzione di `@phpstan-ignore-next-line`.
 
 Verificato `Modules/Media/` root: 3 file `.md` (`CHANGELOG.md`, `README.md`,
 `test11.md`), 0 file `.txt`. Sotto la soglia di 6 `.md` indicata dal
-coordinatore: nessuno spostamento necessario.
+coordinatore — nessuno spostamento necessario.
 
 ## File toccati
 

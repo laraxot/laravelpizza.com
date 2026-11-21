@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "localization"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Localization Standards (mcamara/laravel-localization)

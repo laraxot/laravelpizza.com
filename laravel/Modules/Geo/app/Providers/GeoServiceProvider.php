@@ -27,6 +27,10 @@ class GeoServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
 
+        // Senza $module_ns la base registra il RouteServiceProvider di Xot, non questo: routes/api.php di Geo (proxy
+        // OpenStreetMap, OsmTileController e NominatimController) non veniva mai caricato.
+        $this->app->register(RouteServiceProvider::class);
+
         $this->app->bind(CalculateDistanceActionContract::class, CalculateDistanceAction::class);
     }
 

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "roadmap root symlink"
 related:
   - "./webm.md"
-status: draft
 ---
 roadmap_media.md
 ## Collegamenti tra versioni di roadmap_root_symlink.md

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "tailwind components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componenti UI con Filament
@@ -301,7 +300,7 @@ return [
 - [Documentazione Form](tailwind_forms.md)
 - [Documentazione Layout](tailwind_layouts.md)
 - [Documentazione Notifiche](tailwind_notifications.md)
-- [Architettura](ARCHITECTURE.md)
+- [Architettura](architecture.md)
 
 ## Note
 - Tutti i collegamenti sono relativi

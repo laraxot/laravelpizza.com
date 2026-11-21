@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "zen of documentation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 Zen of Documentation - Filosofia Unificata
@@ -19,6 +18,15 @@ status: draft
 Questo non significa non documentare. Significa documentare in modo **intelligente, sostenibile e automatico**.
 
 ---
+
+title: "zen of documentation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "zen of documentation"
+issues: []
+discussions: []
 ## 🎯 I Cinque Principi dello Zen
 
 ### 1. 📦 **Single Source of Truth (SSOT)**
@@ -86,7 +94,6 @@ Ogni documento deve essere:
 ```bash
 # ❌ CATTIVO
 phpstan-analysis-2026-03-02.md
-phpstan-analysis-level-report.md
 session-report-january.md
 achievement-2025-10-10.md
 
@@ -380,8 +387,6 @@ python scripts/run.py ask_question.py \
 
 - [Documentation Governance](../../docs/DOCUMENTATION_GOVERNANCE.md)
 - [Multi-Agent Collaboration](../../docs/MULTI_AGENT_COLLABORATION.md)
-- [Documentation Governance](DOCUMENTATION_GOVERNANCE.md)
-- [Multi-Agent Collaboration](MULTI_AGENT_COLLABORATION.md)
 - [Filament Blocks System](../blocks/content-blocks-system.md)
 - [OpenViking Global Context](../../bashscripts/ai/openviking.md)
 

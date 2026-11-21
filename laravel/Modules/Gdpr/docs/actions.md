@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "actions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GDPR Actions

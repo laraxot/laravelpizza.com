@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "kilo large projects"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Kilo Code for Large Projects

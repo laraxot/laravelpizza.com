@@ -158,7 +158,11 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
+<<<<<<< .merge_file_kEtgkA
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
+=======
+- [Project Wiki Agent Instructions](agents.md)
+>>>>>>> .merge_file_yCv7Cg
 - [Module Documentation](../README.md)=======
 - [Module Documentation](../README.md)
 - [Module Documentation](../README.md)

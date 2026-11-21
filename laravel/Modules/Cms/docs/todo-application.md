@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "todo application"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Applicazione Todo con Laravel Folio e Volt

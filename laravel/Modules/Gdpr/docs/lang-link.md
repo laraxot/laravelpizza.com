@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: lang-link
 canonical: ../../../Themes/docs/shared-components/algolia-docsearch-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch-Modules.md

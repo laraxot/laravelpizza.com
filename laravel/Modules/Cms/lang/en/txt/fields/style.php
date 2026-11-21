@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/style.php
 // Cms txt.fields.style — LangServiceProvider SSoT.
 return [
-    'label' => 'Stile',
-    'help' => 'Stile di visualizzazione',
-    'placeholder' => 'Seleziona stile di visualizzazione',
-    'helper_text' => 'Stile predefinito per la visualizzazione dell\'elemento',
+    'label' => 'Style',
+    'help' => 'Display style',
+    'placeholder' => 'Select display style',
+    'helper_text' => 'Default style for displaying the element',
     'tooltip' => '',
     'description' => '',
 ];

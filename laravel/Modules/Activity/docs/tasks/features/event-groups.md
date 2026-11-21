@@ -1,3 +1,10 @@
+---
+title: "Event Groups - Activity"
+qmd: "activity tasks features event groups md"
+type: note
+tags: [documentation]
+---
+
 # Event Groups - Activity
 
 **Task ID**: ACTIVITY-FEATURE-002

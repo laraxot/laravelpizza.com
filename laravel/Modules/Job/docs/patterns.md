@@ -386,7 +386,7 @@ ProcessUserDataAction::dispatch(Auth::id());
 ```php
 class LongRunningAction implements ShouldQueue
 {
-    // No $timeout set: job may timeout unpredictably
+    // No $timeout set — job may timeout unpredictably
 }
 ```
 

@@ -10,7 +10,7 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
@@ -330,7 +330,7 @@ docs/project/
 
 ```
 _bmad-output/
-├── DESIGN_COMUNI_INDEX.md            ← BMad index
+├── design_comuni_index.md            ← BMad index
 ├── design-comuni-prd.md              ← PRD
 ├── design-comuni-architecture.md     ← Architecture
 ├── design-comuni-ui-spec.md          ← UI Spec
@@ -377,7 +377,7 @@ _bmad-output/
 - **Index:** [Sixteen Docs Index](Themes/Sixteen/docs/00-index.md)
 - **Key Topics:**
   - [Layout Architecture](Themes/Sixteen/docs/layout-architecture-and-namespace.md)
-  - [Theme Detection](docs/project/theme-detection-system.md)
+  - [Theme Detection](theme-detection-system.md)
   - [Design Comuni Replication](Themes/Sixteen/docs/design-comuni-html-replication.md)
 ```
 
@@ -596,7 +596,7 @@ pages/tests/argomenti.blade.php     # NO
 ### Key Documents
 
 - [Master Index](docs/project/module-docs-index.md)
-- [Theme Detection](docs/project/theme-detection-system.md)
+- [Theme Detection](theme-detection-system.md)
 - [Theme Detection](theme-detection-system.md)
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture-and-namespace.md)
 - [Page Component](Modules/Cms/docs/PAGE_COMPONENT_architecture.md)

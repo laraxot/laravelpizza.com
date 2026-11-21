@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Tenant: scopo, confini e come servirlo meglio"
+title: "Tenant — scopo, confini e come servirlo meglio"
 type: concept
 module: Tenant
 status: active
@@ -11,7 +11,7 @@ tags: [scopo, confini, configurazione, bootstrap, connection, dipendenze]
 qmd: "scopo tenant configurazione per host bootstrap database connections morph map confini dipendenze"
 ---
 
-# Tenant: scopo, confini e come servirlo meglio
+# Tenant — scopo, confini e come servirlo meglio
 
 ## Lo scopo, dedotto dal codice
 
@@ -24,8 +24,8 @@ La catena è leggibile in tre file.
 1. `app/Actions/GetTenantNameAction.php:23-32` prende `SERVER_NAME`, ne inverte i
    segmenti (`ptvx.local` → `local/ptvx`) e verifica con `file_exists()` che esista
    la cartella `config_path('local/ptvx')`. Non interroga il database: non può, il
-   database non è ancora configurato. La riga 98 lo dice esplicitamente -
-   *«Durante LoadConfiguration le facade non sono ancora disponibili: usare getenv»*.
+   database non è ancora configurato. La riga 98 lo dice esplicitamente —
+   *«Durante LoadConfiguration le facade non sono ancora disponibili — usare getenv»*.
 2. Quella cartella esiste davvero: `config/local/ptvx/` contiene **22 file**
    (`app.php`, `auth.php`, `database.php`, `morph_map.php`, `permission.php`,
    `xra.php`, …) che sovrascrivono la config globale per quell'host.
@@ -36,8 +36,8 @@ La catena è leggibile in tre file.
    quella di default.
 
 L'ultimo passaggio è il più importante e il meno documentato. In
-`config/local/ptvx/database.php` sono dichiarate a mano **20** connection -
-`ptv`, `generale`, `performance`, `user`, `incentivi`, …: ognuna verso un database
+`config/local/ptvx/database.php` sono dichiarate a mano **20** connection —
+`ptv`, `generale`, `performance`, `user`, `incentivi`, … — ognuna verso un database
 fisico diverso. Le connection **`xot` e `tenant` non compaiono in nessun file di
 configurazione del progetto**, eppure `Modules\Xot\Models\XotBaseModel:40` dichiara
 `protected $connection = 'xot'` e `Modules\Tenant\Models\BaseModel:12` dichiara
@@ -61,7 +61,7 @@ Da qui la formulazione in una riga:
 > È il pezzo che gira per primo: non isola i dati di un tenant, decide quali dati
 > l'applicazione è in grado di raggiungere.**
 
-Il modulo è piccolo: 52 file, 3.684 righe, nessun file oltre 500: e questo è
+Il modulo è piccolo — 52 file, 3.684 righe, nessun file oltre 500 — e questo è
 coerente con lo scopo, non un difetto. Fa una cosa sola in un momento in cui non
 esiste nient'altro.
 
@@ -69,7 +69,7 @@ esiste nient'altro.
 
 Verso l'alto il confine è pulito: **25 file su 52 importano `Modules\Xot\`**, uno
 solo importa un altro modulo (`app/Models/Tenant.php:17`, `use Modules\User\Models\User`),
-e verso Ptv non c'è una sola riga di codice: solo tre PHPDoc in
+e verso Ptv non c'è una sola riga di codice — solo tre PHPDoc in
 `app/Models/TestSushiModel.php:23-25` che nominano `\Modules\Ptv\Models\Profile`
 invece di `ProfileContract`. È la stessa violazione che rende Sigma non isolabile,
 qui presa in tempo: tre righe.
@@ -97,7 +97,7 @@ lo schema. `XotData:72` sceglie quello di User come default.
 Il README amplifica il disallineamento invece di segnalarlo: dichiara «15 models»
 (sono 9), «Complete data separation per tenant via database/schema/scoping
 strategies», e mostra esempi d'uso con `Tenant::currentTenant()` e
-`$tenant->domains()`: **nessuno dei due metodi esiste** (`app/Models/Tenant.php`
+`$tenant->domains()` — **nessuno dei due metodi esiste** (`app/Models/Tenant.php`
 espone `users()`, `isActive()`, `getUrlAttribute()` e nient'altro). Documentazione
 che descrive un modulo diverso da quello installato è peggio di nessuna
 documentazione: manda a cercare bug in un posto che non c'è.
@@ -112,28 +112,28 @@ documentazione: manda a cercare bug in un posto che non c'è.
 per ognuno copiando il default. Differiscono nel modo di ottenere l'elenco
 (`Module::getOrdered()` contro `Module::toCollection()`). È la regola su cui poggia
 la connection `xot` di ogni modello del progetto, scritta due volte: una correzione
-a una delle due non raggiunge l'altra. Va tenuta una sola Action -
-`Actions/Config/MergeModuleConnectionsAction`: chiamata da entrambi i punti.
+a una delle due non raggiunge l'altra. Va tenuta una sola Action —
+`Actions/Config/MergeModuleConnectionsAction` — chiamata da entrambi i punti.
 
 ```bash
 cd laravel && grep -rn 'getSnakeName()' Modules/Tenant/app | wc -l   # obiettivo: 1
 ```
 
-### 2. Non ricreare `TenantService`: la conversione è completata
+### 2. Sciogliere `TenantService` — non ha chiamanti
 
-Il precedente `app/Services/TenantService.php` era una facade di **11 metodi statici** che delegavano
+`app/Services/TenantService.php` è una facade di **11 metodi statici** che delegano
 tutti ad Action già esistenti (il docblock lo dichiara: *«Business logic delegata
 alle Actions»*). Fuori dal modulo Tenant, `TenantService::` compare in **due**
 posti, entrambi commentati (`Modules/User/resources/views/pages/index.blade.php:17`,
 `Modules/Notify/app/Datas/SmtpData.php:45`). Chi ha davvero bisogno della config
-tenant chiama l'Action direttamente: `GetTenantConfigArrayAction` è usata in 10
+tenant chiama l'Action direttamente — `GetTenantConfigArrayAction` è usata in 10
 file, fra cui `Xot\Datas\XotData:89` e `User\Datas\PasswordData:49`.
 
 La facade non semplifica niente e viola la policy no-services
 ([actions-over-services](../../../../docs/wiki/rules/actions-over-services.md)):
 si cancella, dopo aver spostato in Action le poche righe non ancora delegate. Stesso
 esame per le altre 6 classi sotto `app/Services/Config/`: i tre `*Resolver` sono
-strategie con interfaccia, non use case: se restano, devono uscire da
+strategie con interfaccia, non use case — se restano, devono uscire da
 `app/Services/` e chiamarsi per quello che sono.
 
 ```bash
@@ -177,7 +177,7 @@ cd laravel && grep -rn 'currentTenant\|->domains()' Modules/Tenant/README.md Mod
 
 Nessun file di configurazione dichiara le connection `xot` e `tenant`: esistono
 perché questo modulo le crea. È l'invariante più importante che Tenant garantisce
-e non è verificata da niente: basta un `return` anticipato in `registerDB()` e
+e non è verificata da niente — basta un `return` anticipato in `registerDB()` e
 l'intero progetto perde la connection di default dei modelli. Un test di
 architettura che asserisca la presenza di `database.connections.xot` dopo il boot
 costa poche righe e trasforma una convenzione muta in un errore rosso. Da scrivere
@@ -195,7 +195,7 @@ cd laravel && grep -rn "'xot' =>\|'tenant' =>" config/ | wc -l   # 0: le connect
 - **Non** possiede la tabella `tenants`. La migrazione sta in User e ne dichiara
   `Modules\User\Models\Tenant` come owner: finché resta così, Tenant non deve avere
   un secondo modello che punti allo stesso nome di tabella.
-- **Non** conosce il portale. Nessun `use Modules\Ptv\`: e nemmeno nei PHPDoc: il
+- **Non** conosce il portale. Nessun `use Modules\Ptv\` — e nemmeno nei PHPDoc: il
   tipo giusto è `Modules\Xot\Contracts\ProfileContract`.
 - **Non** è un router HTTP. Mappa host → cartella di configurazione; le rotte di
   dominio le definiscono i moduli applicativi.
@@ -238,8 +238,8 @@ grep -rl '^use Modules\\User\\' --include='*.php' Modules/Tenant/app | wc -l    
 
 ## Collegamenti
 
-- [basemodel-connection-mandatory](../../../../docs/wiki/memories/basemodel-connection-mandatory.md): perché ogni `BaseModel` dichiara la sua connection, e chi gliela fornisce
-- [actions-over-services](../../../../docs/wiki/rules/actions-over-services.md): la policy violata da `app/Services/`
-- [circular-dependency-prevention](../../../../docs/wiki/rules/circular-dependency-prevention.md): perché i PHPDoc verso Ptv vanno chiusi ora che sono tre
-- [data-sacred-no-destructive-db](../../../../docs/wiki/rules/data-sacred-no-destructive-db.md): vincolo su qualunque intervento alle 3 migrazioni
-- [Xot: scopo](../../Xot/docs/scopo.md) · [User: scopo](../../User/docs/scopo.md) · [Sigma: scopo](../../Sigma/docs/scopo.md)
+- [basemodel-connection-mandatory](../../../../docs/wiki/memories/basemodel-connection-mandatory.md) — perché ogni `BaseModel` dichiara la sua connection, e chi gliela fornisce
+- [actions-over-services](../../../../docs/wiki/rules/actions-over-services.md) — la policy violata da `app/Services/`
+- [circular-dependency-prevention](../../../../docs/wiki/rules/circular-dependency-prevention.md) — perché i PHPDoc verso Ptv vanno chiusi ora che sono tre
+- [data-sacred-no-destructive-db](../../../../docs/wiki/rules/data-sacred-no-destructive-db.md) — vincolo su qualunque intervento alle 3 migrazioni
+- [Xot — scopo](../../Xot/docs/scopo.md) · [User — scopo](../../User/docs/scopo.md) · [Sigma — scopo](../../Sigma/docs/scopo.md)

@@ -1,6 +1,18 @@
+---
+issues: []
+discussions: []
+title: "Popolamento Database - Modulo Tenant"
+module: "Tenant"
+type: concept
+tags: [database, population]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "database population"
+related:
+  - "./phpstan-corrections-january.md"
+---
 # Popolamento Database - Modulo Tenant
 
-## Aggiornamento 2025-11-11 – Test Sushi Seeder
 ## Aggiornamento [DATE] – Test Sushi Seeder
 
 - Rafforzata la type safety del seeder `TestSushiSeeder` utilizzando `Webmozart\Assert` per evitare errori PHPStan (`method.nonObject`) su `create()` e `count()`.
@@ -297,8 +309,7 @@ private function generateRealisticDomain(string $tenantName, string $sector): st
 
 ## Collegamenti
 
-- [README Modulo Tenant](./README.md)
-- [README Modulo Tenant](./readme.md)
+- [README Modulo Tenant](README.md)
 - [Multi-Tenancy Architecture](./multi-tenancy.md)
 - [Database Schema](./database-schema.md)
 - [Testing Guidelines](./testing.md)

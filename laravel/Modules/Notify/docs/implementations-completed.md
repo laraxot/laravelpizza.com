@@ -4,27 +4,19 @@ type: concept
 tags: [implementations, completed]
 created: 2026-07-14
 updated: 2026-07-14
+qmd: "implementations-completed ✅ fixcity - implementazioni completate"
 qmd: "implementations-completed ✅ ptv - implementazioni completate"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
@@ -75,7 +67,7 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 8. ✅ **documentation-index.md**
 9. ✅ **quick-start.md**
 10. ✅ **project-completion-status.md**
-11. ✅ **excellence-2025.md**
+11. ✅ **excellence-year-note-snake.md**
 12. ✅ **final-summary.md**
 
 ### 📖 Guide Complete (3 - da sessione precedente)
@@ -417,7 +409,7 @@ Modules/Fixcity/
 ├── implementations-completed.md             ✅ NEW (questo file)
 ├── documentation-index.md                   ✅ EXISTING
 ├── quick-start.md                           ✅ EXISTING
-├── excellence-2025.md                       ✅ EXISTING
+├── excellence-year-note-snake.md                       ✅ EXISTING
 └── final-summary.md                         ✅ EXISTING
 ```
 

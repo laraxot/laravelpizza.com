@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "lang service helper text"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # 📚 **Best Practices Modulo Lang - Laraxot**
 
@@ -435,7 +433,6 @@ return [
 - [README.md](README.md) - Documentazione principale modulo
 - [README.md](README.md) - Documentazione principale modulo
 - [config/lang.php](../config/lang.php) - Configurazione centralizzata
-- [config/lang.php](../../config/lang.php) - Configurazione centralizzata
 - [Laraxot Framework](https://github.com/laraxot/laraxot) - Framework principale
 - [Laravel Localization](https://laravel.com/project_docs/localization) - Documentazione ufficiale
 

@@ -7,7 +7,7 @@ Rules, skills, memories live only in wiki. Load on-demand.
 - [Trigger Map](docs/wiki/rules/00-TRIGGER_MAP.md)
 - [GitHub issue discipline](docs/wiki/how-to/github-issue-agent-discipline.md)
 - [Standard Markdown (obbligatorio per `.md`)](docs/wiki/rules/markdown-documentation-standard.md)
-- [Skills Index](docs/wiki/skills/INDEX.md)
+- [Skills Index](docs/wiki/skills/index.md)
 - [QMD] `qmd search "<topic>"`
 
 *Updated: 2026*

@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/updated_at.php
 // Cms section.fields.updated_at — LangServiceProvider SSoT.
 return [
-    'label' => 'Data di Aggiornamento',
+    'label' => 'Update Date',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

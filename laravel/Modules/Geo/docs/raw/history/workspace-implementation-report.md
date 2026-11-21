@@ -52,7 +52,7 @@ Successfully implemented and enforced the workspace file naming convention acros
 | Document | Change |
 |----------|--------|
 | `AGENT_MEMORY.md` | Added workspace naming rule to Key Rules section |
-| `GEMINI.md` | Enhanced rule description with examples |
+| `gemini.md` | Enhanced rule description with examples |
 | `.agents/docs/agents-guide/04-architecture/critical-rules-summary.md` | Added as rule #12 |
 
 ### 3. Files Removed (Violations)

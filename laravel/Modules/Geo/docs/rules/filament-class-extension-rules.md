@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament class extension rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament Class Extension Rules - Laraxot Framework
@@ -15,6 +14,15 @@ status: draft
 **Principio Fondamentale**: Mai estendere classi Filament direttamente - sempre usare classi XotBase
 
 ---
+
+title: "filament class extension rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament class extension rules"
+issues: []
+discussions: []
 ## 🚨 Regola Assoluta
 
 **NON estendere MAI classi Filament direttamente**
@@ -580,8 +588,8 @@ Prima di creare una nuova classe Filament:
 
 ## 🔗 Collegamenti Utili
 
-- [XotBaseResource Documentation](../../../Xot/docs/consolidated/filament/resources/xot-base-resource.md)
-- [Base Classes Documentation](../../../Xot/docs/consolidated/base-classes.md)
+- [XotBaseResource Documentation](../../laravel/Modules/Xot/docs/consolidated/filament/resources/xot-base-resource.md)
+- [Base Classes Documentation](../../laravel/Modules/Xot/docs/consolidated/base-classes.md)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)
 - [Filament v4 Documentation](https://filamentphp.com/docs/4.x)
 

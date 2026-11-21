@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "handoff table layout toggle not working"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Handoff: Cambia layout non funziona

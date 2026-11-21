@@ -1,13 +1,9 @@
 ---
-title: "UX: Job"
+title: "UX — Job"
 type: ux-design
 module: Job
 related:
   - ./livewire-inventory.md
-status: draft
-updated: 2026-10-07
-tags: [docs, job, bmad]
-qmd: "ux job"
 ---
 
 # UX

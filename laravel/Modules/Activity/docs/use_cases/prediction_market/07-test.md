@@ -1,12 +1,10 @@
 ---
 title: "Testing <nome progetto>ion Market"
+qmd: "activity use cases prediction market 07 test md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "testing <nome progetto>ion market activity"
-status: superseded
-superseded_by: test.md
+tags: [documentation]
 ---
+
 # Testing <nome progetto>ion Market
 
 ## Unit Test

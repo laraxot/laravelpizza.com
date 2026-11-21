@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "schemaless attributes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Spatie Laravel Schemaless Attributes - Best Practices
@@ -66,4 +65,13 @@ public function scopeWithExtraAttributes(Builder $query, string|array $schemales
 **Status:** Non corretto - usare `where()` con JSON path come workaround
 
 ---
+
+title: "schemaless attributes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schemaless attributes"
+issues: []
+discussions: []
 *Ultimo aggiornamento: Dicembre 2025*

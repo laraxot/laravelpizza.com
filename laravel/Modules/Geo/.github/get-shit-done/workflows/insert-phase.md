@@ -50,7 +50,7 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init phase-op "${after_phase
 
 Check `roadmap_exists` from init JSON. If false:
 ```
-ERROR: No roadmap found (.planning/ROADMAP.md)
+ERROR: No roadmap found (.planning/roadmap.md)
 ```
 Exit.
 </step>
@@ -63,11 +63,11 @@ RESULT=$(node .github/get-shit-done/bin/gsd-tools.cjs phase insert "${after_phas
 ```
 
 The CLI handles:
-- Verifying target phase exists in ROADMAP.md
+- Verifying target phase exists in roadmap.md
 - Calculating next decimal phase number (checking existing decimals on disk)
 - Generating slug from description
 - Creating the phase directory (`.planning/phases/{N.M}-{slug}/`)
-- Inserting the phase entry into ROADMAP.md after the target phase with (INSERTED) marker
+- Inserting the phase entry into roadmap.md after the target phase with (INSERTED) marker
 
 Extract from result: `phase_number`, `after_phase`, `name`, `slug`, `directory`.
 </step>
@@ -94,7 +94,7 @@ Phase {decimal_phase} inserted after Phase {after_phase}:
 - Status: Not planned yet
 - Marker: (INSERTED) - indicates urgent work
 
-Roadmap updated: .planning/ROADMAP.md
+Roadmap updated: .planning/roadmap.md
 Project state updated: .planning/STATE.md
 
 ---

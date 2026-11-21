@@ -4,9 +4,6 @@ module: Tenant
 type: reference
 tags: [config, settings, customization]
 last_updated: 2026-08-04
-status: draft
-updated: 2026-10-15
-qmd: "tenant module configuration reference tenant"
 ---
 
 # Tenant Module Configuration Reference
@@ -14,9 +11,9 @@ qmd: "tenant module configuration reference tenant"
 ## Overview
 
 The Tenant module configuration is split across three files:
-1. **config/config.php**: Module meta, navigation, features
-2. **config/database.php**: Database strategy and connection management
-3. **config/metatag.php**: Per-tenant meta tag configuration
+1. **config/config.php** — Module meta, navigation, features
+2. **config/database.php** — Database strategy and connection management
+3. **config/metatag.php** — Per-tenant meta tag configuration
 
 All values can be overridden at runtime via `TenantSetting` model.
 
@@ -395,4 +392,4 @@ ConfigurationResolver::clearCache(); // Clear all tenant caches
 
 - [Architecture Reference](architecture.md)
 - [Module README](../README.md)
-- [Testing Guide](../../tests/Feature/README.md)
+- [Testing Guide](../tests/Feature/README.md)

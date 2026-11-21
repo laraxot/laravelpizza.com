@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gitignore readme"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione File .gitignore nei Moduli

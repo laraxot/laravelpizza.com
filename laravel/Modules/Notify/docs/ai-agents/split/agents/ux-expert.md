@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ux expert"
 issues: []
 discussions: []
-status: draft
 ---
 
 ### UX Expert (id: ux-expert)
@@ -78,13 +77,19 @@ dependencies:
 
 
 ---
+
+title: "ux expert"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ux expert"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [Agents Index](index.md): All 10 BMad agents
-- ← [Tasks Index](../../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../../agents.md): Original source
-- ← [Tasks Index](../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../AGENTS.md): Original source
+- ← [Agents Index](index.md) — All 10 BMad agents
+- ← [Tasks Index](../../tasks/index.md) — 22 reusable tasks
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 

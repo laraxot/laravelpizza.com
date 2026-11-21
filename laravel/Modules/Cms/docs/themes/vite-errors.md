@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "vite errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Errori Vite nei Temi
@@ -87,8 +86,8 @@ ls -la dist/
 - Verifica dell'integrità dei file compilati
 
 ## Collegamenti Correlati
-- [Documentazione Generale Errori](/project_docs/errors/readme.md)
-- [Gestione Temi CMS](../../../../Themes/README.md)
+- [Documentazione Generale Errori](/project_docs/errors/README.md)
+- [Gestione Temi CMS](../themes/README.md)
 - [Processo di Deploy](../../project_docs/deployment/themes.md)
 
 ## Note Tecniche
@@ -127,6 +126,10 @@ npm cache clean --force
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
 npm install
+<<<<<<< .merge_file_j2nSog
+=======
+
+>>>>>>> .merge_file_icePMp
 npm install && npm run build
 ```
 

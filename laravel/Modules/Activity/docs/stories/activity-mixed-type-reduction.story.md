@@ -1,4 +1,14 @@
+<<<<<<< .merge_file_oPt4GT
 # Story: Riduzione uso di `mixed` — Activity
+=======
+---
+title: "Story: Riduzione uso di `mixed`: Activity"
+qmd: "activity stories activity mixed type reduction story md"
+type: note
+tags: [documentation]
+---
+
+>>>>>>> .merge_file_uxjEDR
 # Story: Riduzione uso di `mixed`: Activity
 
 **Modulo**: Activity
@@ -16,7 +26,10 @@ usi di `mixed` (nativi e docblock) in 50 file del modulo.
 La maggior parte dei `mixed` del modulo e' gia' giustificata:
 
 - `@method`/`@property` generati da ide-helper su `Activity`/`StoredEvent` che
+<<<<<<< .merge_file_oPt4GT
   rispecchiano le firme vendor di Eloquent (`whereDate(..., mixed $value)`, ecc.) —
+=======
+>>>>>>> .merge_file_uxjEDR
   rispecchiano le firme vendor di Eloquent (`whereDate(..., mixed $value)`, ecc.) -
   narrowing rompe la generazione automatica.
 - Colonne JSON / payload genuinamente polimorfi (`properties`, `attribute_changes`,
@@ -24,7 +37,10 @@ La maggior parte dei `mixed` del modulo e' gia' giustificata:
 - `ActivityLogger::log(mixed $user = null, ...)` (sia l'adapter reale sia il duplicato
   legacy `app/Actions/ActivityLogger.php`): verificato via test esistenti
   (`ActivityLoggerTest.php:47`, `CoverageHundredActionsTest.php:233`) che il metodo viene
+<<<<<<< .merge_file_oPt4GT
   chiamato deliberatamente con valori non-`User` per testare `InvalidArgumentException` —
+=======
+>>>>>>> .merge_file_uxjEDR
   chiamato deliberatamente con valori non-`User` per testare `InvalidArgumentException` -
   e' un boundary di validazione runtime voluto, tipizzare `User|null` cambia
   l'`InvalidArgumentException` atteso in un `TypeError` prima ancora di entrare nel corpo.
@@ -39,7 +55,10 @@ Sostituiti 4 usi di `mixed` con tipi concreti, verificati contro il codice/vendo
 
 1. `app/Filament/Resources/ActivityResource/Pages/ListActivities.php` e
    `.../Tables/ActivitysTable.php`: `getTableColumns(): array<string, mixed>` →
+<<<<<<< .merge_file_oPt4GT
    `array<string, TextColumn>` — ogni entry nell'array ritornato e' effettivamente una
+=======
+>>>>>>> .merge_file_uxjEDR
    `array<string, TextColumn>`: ogni entry nell'array ritornato e' effettivamente una
    `TextColumn::make(...)`.
 2. `tests/Fixtures/ListLogActivitiesNestedFormResource.php`: `canRestore(mixed $record)`
@@ -54,7 +73,10 @@ Sostituiti 4 usi di `mixed` con tipi concreti, verificati contro il codice/vendo
 
 Un quinto tentativo (`tests/Feature/CodeQualityTest.php`, output di `exec()`) e' stato
 fatto e **scartato**: PHPStan continua a vedere l'array popolato by-ref da `exec()` come
+<<<<<<< .merge_file_oPt4GT
 `array` generico, quindi `mixed $line` + `is_string()` resta la forma corretta —
+=======
+>>>>>>> .merge_file_uxjEDR
 `array` generico, quindi `mixed $line` + `is_string()` resta la forma corretta -
 ripristinato l'originale dopo verifica con run reale di PHPStan (non assunto a tavolino).
 
@@ -68,13 +90,19 @@ deliberatamente una forma non conforme).
 - PHPStan (`./vendor/bin/phpstan analyse Modules/Activity --no-progress`): 0 → 0 errori,
   nessuna regressione introdotta.
 - PHPMD: crash noto su tutto il modulo (`No node to visit provided for
+<<<<<<< .merge_file_oPt4GT
   visitAnonymousClass`); rieseguito sui 4 file toccati — un solo finding informativo
+=======
+>>>>>>> .merge_file_uxjEDR
   visitAnonymousClass`); rieseguito sui 4 file toccati: un solo finding informativo
   pre-esistente (`UnusedFormalParameter $record`, gia' inutilizzato prima del rename di
   tipo).
 - Pest: `./vendor/bin/pest Modules/Activity/tests -c Modules/Activity/phpunit.xml
   --no-coverage` fallisce con bootstrap non trovato
+<<<<<<< .merge_file_oPt4GT
   (`Modules/Activity/vendor/autoload.php` non esiste — il monorepo ha un solo `vendor/`
+=======
+>>>>>>> .merge_file_uxjEDR
   (`Modules/Activity/vendor/autoload.php` non esiste: il monorepo ha un solo `vendor/`
   in `laravel/`). Difetto pre-esistente di `phpunit.xml` del modulo (file non toccato in
   questa sessione, `git status`/`git log` puliti su quel path), non imputabile a questo
@@ -88,7 +116,10 @@ un'altra sessione concorrente non committato. Non toccato/discardato. Due dei qu
 file che ho modificato (`ListActivities.php`, `ActivitysTable.php`) erano gia' nella
 lista dei file dirty: la loro diff pre-esistente (rispetto all'HEAD committato) rimuoveva
 l'import `Filament\Tables\Columns\Column` e retrocedeva il docblock da
+<<<<<<< .merge_file_oPt4GT
 `array<string, Column>` a `array<string, mixed>` — compatibile e complementare con la mia
+=======
+>>>>>>> .merge_file_uxjEDR
 `array<string, Column>` a `array<string, mixed>`: compatibile e complementare con la mia
 modifica (`mixed` → `TextColumn`, piu' preciso di entrambe le versioni precedenti). Non
 in conflitto, nessuna sovrascrittura del lavoro altrui.
@@ -96,10 +127,13 @@ in conflitto, nessuna sovrascrittura del lavoro altrui.
 ## Cosa resta da fare
 
 - Diagnosticare e correggere `Modules/Activity/phpunit.xml` (`bootstrap` path errato) in
+<<<<<<< .merge_file_oPt4GT
   una sessione dedicata — blocca completamente l'esecuzione della suite Pest del modulo.
 - `tests/Unit/Filament/ListLogActivitiesPureMethodsTest.php` e
   `tests/Fixtures/ListLogActivitiesPageHarness.php` richiamano via reflection un metodo
   `toTranslationString` non piu' presente in `ListLogActivities.php` — verificare se e'
+=======
+>>>>>>> .merge_file_uxjEDR
   una sessione dedicata: blocca completamente l'esecuzione della suite Pest del modulo.
 - `tests/Unit/Filament/ListLogActivitiesPureMethodsTest.php` e
   `tests/Fixtures/ListLogActivitiesPageHarness.php` richiamano via reflection un metodo

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "model analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../model-analysis.md
 ---
 
 # Geo Models Analysis: Address vs Place

@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 return [
     'sections' => [
-        'empty' => ['label' => '', 'heading' => '']],
+        'empty' => [
+            'label' => '',
+            'heading' => '',
+        ],
+    ],
     'fields' => [
+<<<<<<< .merge_file_OwAiBn
         'id' => ['label' => 'id'],
         'type' => ['label' => 'type'],
         'notifiable_type' => ['label' => 'notifiable_type'],
@@ -14,3 +19,31 @@ return [
         'read_at' => ['label' => 'read_at'],
         'created_at' => ['label' => 'created_at'],
         'updated_at' => ['label' => 'updated_at']]];
+=======
+        'id' => [
+            'label' => 'id',
+        ],
+        'type' => [
+            'label' => 'type',
+        ],
+        'notifiable_type' => [
+            'label' => 'notifiable_type',
+        ],
+        'notifiable_id' => [
+            'label' => 'notifiable_id',
+        ],
+        'data' => [
+            'label' => 'data',
+        ],
+        'read_at' => [
+            'label' => 'read_at',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
+    ],
+];
+>>>>>>> .merge_file_K6LYBz

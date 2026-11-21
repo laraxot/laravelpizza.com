@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_dXAzEP
 # Activity Module Filament Resource Guidelines
 
 ## Extension Patterns
@@ -106,6 +107,8 @@ All resources must be tested to ensure:
 - [XotBaseResource Documentation](../../Xot/project_docs/filament/resources/xot-base-resource.md)
 - [Filament Best Practices](../../Xot/project_docs/filament-best-practices.md)
 - [Laraxot Extension Patterns](../../Xot/project_docs/base-classes.md)
+=======
+>>>>>>> .merge_file_WwIDLj
 ---
 title: "Activity Module Filament Resource Guidelines"
 type: note

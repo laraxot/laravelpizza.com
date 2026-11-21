@@ -3,7 +3,7 @@ title: "Seo Module - PHPStan Type Compliance"
 type: concept
 tags: [seo, phpstan, types, compliance, quality, static-analysis]
 created: 2026-06-10
-updated: 2026-06-18
+updated: 2026-11-17
 qmd: "Seo PHPStan MetatagData SuppressWarnings phpDoc parseError"
 issues: []
 discussions: []
@@ -27,6 +27,20 @@ Errors:   0
 Level:    max
 Updated:  2026-06-10
 ```
+
+
+## Wave 2026-11-17 (111 → 0)
+
+Perche': PHPStan L10 (bleedingEdge) deve analizzare anche i test senza ignore/baseline.
+
+Cause radice chiuse:
+1. **Pest `method.internalClass`** — `expect()` / `->with()` / `uses()->group()` chiamano API `@internal` di Pest. Fix: `PHPUnit\Framework\Assert` + `foreach` al posto dei dataset; `tests/Pest.php` senza `uses()/group()`.
+2. **Sitemap CMS pages** — `Page::query()` tipizzato come union senza `get()`; narrowed a `Builder<Page>`.
+3. **`Safe\preg_replace` / `__()`** — restituiscono `array|string`; cast con `SafeStringCastAction`.
+4. **`view-string` su widget** — assegnazione via `@phpstan-var view-string` nel costruttore.
+5. **TestCase config** — `config()->set()` al posto di `$this->app['config']` (mixed).
+
+Verifica: `cd laravel && ./vendor/bin/phpstan analyse Modules/Seo Modules/Comment --memory-limit=-1 --error-format=raw` → 0.
 
 ## Module Structure
 

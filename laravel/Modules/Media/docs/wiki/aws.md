@@ -8,6 +8,5 @@ updated: 2026-07-14
 qmd: "aws"
 related:
   - "./webm.md"
-status: draft
 ---
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js

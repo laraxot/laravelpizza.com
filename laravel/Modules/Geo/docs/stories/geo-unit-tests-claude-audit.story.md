@@ -13,8 +13,8 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/XXXX"
 related:
-  - "docs/stories/notify-unit-tests-claude-audit.story.md"
-  - "docs/stories/tenant-unit-tests-claude-audit.story.md"
+  - "docs/stories/notify-unit-tests-claude-audit-100.story.md"
+  - "docs/stories/tenant-unit-tests-claude-audit-100.story.md"
   - "../../../docs/wiki/guidelines/claude-audit-static-free-tier.md"
 ---
 

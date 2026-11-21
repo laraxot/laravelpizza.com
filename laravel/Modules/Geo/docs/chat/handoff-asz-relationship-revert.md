@@ -11,7 +11,6 @@ related:
   - ../wiki/rules/eloquent-relationship-encapsulation.md
   - ../wiki/patterns/scheda-asz-relationship-query.md
   - handoff-phpstan-modules-zero.md
-status: draft
 ---
 
 # Handoff — revert bypass `asz()` in ListaAszTipCodEsclusoSubito

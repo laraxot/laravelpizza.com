@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "02 goals"
 issues: []
 discussions: []
-status: superseded
-superseded_by: goals.md
 ---
 
 # Goals - Notify

@@ -1,11 +1,10 @@
 ---
 title: "PSR-4 Autoloading Compliance Fix"
+qmd: "activity psr4 autoloading fix md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "psr-4 autoloading compliance fix activity"
+tags: [documentation]
 ---
+
 # PSR-4 Autoloading Compliance Fix
 
 ## Data: 21 Gennaio 2025
@@ -322,7 +321,7 @@ Analisi: tutti i file indicati erano gia' stati convertiti a factory functions +
 I warning erano da classmap composer stantio. Fix: `composer dump-autoload`.
 
 Lezione chiave: i warning PSR-4 su classi che non esistono piu' nei file indicano classmap
-obsoleto: non richiedono modifiche al codice, solo `composer dump-autoload`.
+obsoleto — non richiedono modifiche al codice, solo `composer dump-autoload`.
 
 ---
 

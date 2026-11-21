@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "composer lessons learned"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Theme Composer Lessons Learned
@@ -17,6 +16,15 @@ status: draft
 Lezioni apprese dal fix dei View Composer del modulo CMS.
 
 ---
+
+title: "composer lessons learned"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "composer lessons learned"
+issues: []
+discussions: []
 ## 1. Blocks Component Constructor — Syntax Error Critico
 
 ### Problema

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page component data contract"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Page Component - Data Contract

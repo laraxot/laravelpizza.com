@@ -1,5 +1,5 @@
 ---
-title: "Lang: BMAD dossier"
+title: "Lang — BMAD dossier"
 type: bmad-dossier
 module: Lang
 updated: 2026-10-07
@@ -7,9 +7,8 @@ tags: [bmad, lang, i18n]
 qmd: "Lang module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
-status: draft
 ---
-# Lang: BMAD dossier
+# Lang — BMAD dossier
 ## Product brief / PRD
 Provide consistent locale resolution and translation ownership across modules/themes.
 ## Architecture / UX / security

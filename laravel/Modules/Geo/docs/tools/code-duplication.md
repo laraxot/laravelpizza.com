@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code duplication"
+issues: []
+discussions: []
 title: Duplicazione del codice
 description: Duplicazione del codice
 extends: _layouts.documentation

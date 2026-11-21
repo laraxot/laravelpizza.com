@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: gestione_route_folio
 canonical: ../../../Themes/docs/shared-components/gestione-route-folio.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/gestione-route-folio.md

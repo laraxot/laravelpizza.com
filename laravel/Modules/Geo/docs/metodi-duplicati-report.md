@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "metodi duplicati report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Metodi Duplicati

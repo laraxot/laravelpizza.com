@@ -411,9 +411,9 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 ## 🔗 Related Documentation
 
 - [Translation Conventions](./translation-conventions.md)
-- [Blade Architecture](../laravel/claude.md#blade-components)
+- [Blade Architecture](../laravel/CLAUDE.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
-- [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 
 ---

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sushi implementation guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sushi Implementation for Comune Model

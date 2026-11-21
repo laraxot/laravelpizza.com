@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "html parity rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # HTML Parity Analysis Rules
@@ -18,6 +17,15 @@ status: draft
 > **Purpose**: Prevent architectural and translation errors in HTML parity phases
 
 ---
+
+title: "html parity rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "html parity rules"
+issues: []
+discussions: []
 ## 🎯 Core Philosophy
 
 **HTML structural parity is ESSENTIAL** - it is the foundation, not optional.
@@ -386,8 +394,8 @@ trans('ptv::segnalazione.heading.title.label')
 
 - [Translation Conventions](./translation-conventions.md)
 - [Blade Architecture](../laravel/CLAUDE.md#blade-components)
-- [Agnostic Scripts](./AGNOSTIC_DOCUMENTATION_RULE.md)
-- [Multi-Agent Coordination](./MULTI_AGENT_COORDINATION_RULES.md)
+- [Agnostic Scripts](./agnostic_documentation_rule.md)
+- [Multi-Agent Coordination](./multi_agent_coordination_rules.md)
 
 ---
 

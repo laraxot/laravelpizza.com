@@ -1,11 +1,10 @@
 ---
 title: "Risks - Activity"
+qmd: "activity roadmap 05 risks md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "risks - activity activity"
+tags: [documentation]
 ---
+
 # Risks - Activity
 
 ## Top Risks

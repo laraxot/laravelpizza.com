@@ -10,7 +10,5 @@ updated: 2026-07-14
 qmd: "tutorial video"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 https://www.youtube.com/watch?v=_eyz7rvwLTQ

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "dry kiss analysis "
 issues: []
 discussions: []
-status: draft
 ---
 
 # DRY & KISS Analysis - Modulo Job
@@ -45,4 +44,12 @@ abstract class BaseModel extends XotBaseModel
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
+title: "dry kiss analysis "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry kiss analysis "
+issues: []
+discussions: []
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)

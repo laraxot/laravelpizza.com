@@ -60,7 +60,7 @@ docs/
 - [Prompt REPLIKATE](./laravel/Themes/Sixteen/docs/prompts/replikate.txt)
 - [Theme Analysis](./docs/theme/sixteen/analysis/)
 - [Homepage Results](./docs/theme/sixteen/analysis/results.md)
-- [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
+- [Argomenti Analysis](pages/argomenti.md)
 - [Theme Analysis](../theme/sixteen/analysis)
 - [Homepage Results](../theme/sixteen/analysis/results.md)
 - [Argomenti Analysis](./pages/argomenti.md)

@@ -10,6 +10,5 @@ updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 Redundancy analysis available: docs/analysis/redundancies/summary.md

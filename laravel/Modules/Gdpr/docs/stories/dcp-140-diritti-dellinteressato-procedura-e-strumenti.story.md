@@ -11,6 +11,7 @@ created: 2026-10-13
 updated: 2026-10-13
 qmd: "diritti interessato accesso rettifica cancellazione portabilita export dati account delete account area personale impostazioni privacy gdpr art 15 17 20"
 related: [dcp-112, dcp-111, dcp-106, dcp-141]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-140: il cittadino puo' esercitare i propri diritti
@@ -40,9 +41,3 @@ GDPR art. 12 par. 3 (risposta «al piu' tardi entro un mese dal ricevimento dell
 
 ## Dipendenze e priorita'
 DCP-111, DCP-141 (conservazione), decisione del DPO. P1.
-
-## Nota 2026-10-14 (DCP-176, dalla skill `compliance-check` del plugin legal)
-Il registro delle richieste (requisito 3) deve avere anche: tipo di richiesta (accesso, rettifica, cancellazione, limitazione, portabilita', opposizione), esito della verifica dell'identita' del richiedente (proporzionata, senza documenti eccessivi), incaricato, e per ogni rifiuto la base giuridica e l'informazione sul diritto di reclamo al Garante. Termine: un mese, prorogabile di due con avviso motivato entro il primo mese (GDPR art. 12 par. 3). Le esenzioni (obbligo di legge, compito di interesse pubblico, difesa in giudizio) vanno annotate caso per caso. La skill cita anche CCPA e LGPD: non pertinenti a questo progetto.
-
-## Nota 2026-10-14 (DCP-178)
-La verifica della registrazione ha mostrato che oggi non esiste ne' cancellazione ne' revoca del consenso in autonomia: `DeleteAccountWidget` non e' raggiunto da nessuna pagina e `DeleteUserAction` lascia i ticket con `owner_id` orfano (NOT NULL, nessuna chiave esterna). La proposta di default e le decisioni aperte sono in `dcp-178-registrazione-e-disiscrizione-a-norma.story.md`. La regola sui ticket (requisito 2) resta il blocco per implementare la cancellazione.

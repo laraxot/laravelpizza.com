@@ -7,10 +7,12 @@ namespace Modules\Activity\Filament\Pages;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
+use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Datas\LogFileData;
+use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Activity\Datas\LogViewerStateData;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
@@ -26,12 +28,12 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  *
  * La logica sta nelle Action (`app/Actions/Log`): la pagina tiene solo lo stato della scelta dell'utente.
  * Tutti i percorsi passano da {@see ResolveLogFilePathAction}, che impedisce di uscire da storage/logs.
- * Il download e' la pagina Folio `resources/views/pages/api/log-download.blade.php` (nessun Controller).
+ * Download: Action Filament + {@see DownloadLogFileAction} (BinaryFileResponse).
+ * Nei progetti FO con Cms resta anche la pagina Folio `pages/api/log-download` (FolioVolt);
+ * in PTVX Cms e' assente: non si monta Folio da Activity ne' da App FolioServiceProvider.
  */
 class LogViewer extends XotBasePage
 {
-    /** Indirizzo della pagina Folio del download. */
-    public const string DOWNLOAD_PATH = '/api/log-download';
 
     protected string $view = 'activity::filament.pages.log-viewer';
 
@@ -98,11 +100,6 @@ class LogViewer extends XotBasePage
         $this->expanded[] = $path;
     }
 
-    public function getDownloadUrl(): string
-    {
-        return url(self::DOWNLOAD_PATH).'?'.http_build_query(['file' => $this->file]);
-    }
-
     /**
      * Stato completo della pagina (elenco e albero dei file + voci del file scelto), calcolato una volta per render.
      */
@@ -125,8 +122,19 @@ class LogViewer extends XotBasePage
             'download' => Action::make('download')
                 ->label($this->translation('activity::log_viewer.actions.download.label'))
                 ->icon('heroicon-o-arrow-down-tray')
-                ->url(fn (): string => $this->getDownloadUrl())
-                ->disabled(fn (): bool => $this->file === ''),
+                ->disabled(fn (): bool => $this->file === '')
+                ->action(function () {
+                    abort_unless(
+                        app(AuthorizeLogAccessAction::class)->execute(Filament::auth()->user()),
+                        403,
+                    );
+
+                    try {
+                        return app(DownloadLogFileAction::class)->execute($this->file);
+                    } catch (InvalidLogFileException) {
+                        abort(404);
+                    }
+                }),
         ];
     }
 

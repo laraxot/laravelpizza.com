@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "legacy code cleanup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Legacy Code Cleanup

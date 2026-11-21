@@ -8,6 +8,8 @@ use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 /**
+ * Lista Activity: colonne in ActivitiesTable (XotBaseListRecords non dichiara hook tabella).
+ *
  * @see ActivityResource
  */
 class ListActivities extends XotBaseListRecords

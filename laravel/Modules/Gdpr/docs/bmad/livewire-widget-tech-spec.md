@@ -11,7 +11,6 @@ module: Gdpr
 related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
-status: draft
 ---
 
 # Tech spec Gdpr

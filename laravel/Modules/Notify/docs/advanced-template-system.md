@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "advanced template system"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura del Sistema di Notifiche - Best Practices

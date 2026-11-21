@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "struttura route e viste"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura delle Route e Viste in il progetto

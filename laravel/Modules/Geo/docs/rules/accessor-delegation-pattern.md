@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "accessor delegation pattern"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔴 REGOLA SACRA: Accessor Delegation Pattern
@@ -17,6 +16,15 @@ status: draft
 > **Stato**: ✅ VERIFICATO (22/22 accessor refactorizzati)
 
 ---
+
+title: "accessor delegation pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "accessor delegation pattern"
+issues: []
+discussions: []
 ## La Regola
 
 Quando scrivi un accessor Laravel `get<Nome>Attribute()`:

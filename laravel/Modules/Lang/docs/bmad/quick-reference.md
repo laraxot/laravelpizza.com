@@ -1,5 +1,5 @@
 ---
-title: "Lang: quick reference"
+title: "Lang — quick reference"
 type: note
 tags: [lang, quick-reference, translations, i18n, localization, actions]
 created: 2026-09-28
@@ -9,10 +9,9 @@ related:
   - ./README.md
   - ./setup-guide.md
   - ./architecture/module-boundary.md
-status: draft
 ---
 
-# Lang: quick reference
+# Lang — quick reference
 
 > **SUMMARY**: riferimento rapido per lo sviluppo su `Modules\Lang`:
 > modelli, action traduzione, adapter, resource Filament, widget e config.
@@ -30,11 +29,11 @@ status: draft
 |---|---|---|---|
 | `LanguageLine` | `app/Models/LanguageLine.php` | `BaseModel` | `language_lines` |
 | `Translation` | `app/Models/Translation.php` | `BaseModel` | `translations` |
-| `TranslationFile` | `app/Models/TranslationFile.php` | `BaseModel` |: |
+| `TranslationFile` | `app/Models/TranslationFile.php` | `BaseModel` | — |
 | `Post` | `app/Models/Post.php` | `BaseModel` | `posts` |
-| `BaseModel` | `app/Models/BaseModel.php` | `XotBaseModel` |: |
-| `BaseModelLang` | `app/Models/BaseModelLang.php` | `BaseModel` |: |
-| `BaseMorphPivot` | `app/Models/BaseMorphPivot.php` |: |: |
+| `BaseModel` | `app/Models/BaseModel.php` | `XotBaseModel` | — |
+| `BaseModelLang` | `app/Models/BaseModelLang.php` | `BaseModel` | — |
+| `BaseMorphPivot` | `app/Models/BaseMorphPivot.php` | — | — |
 
 ## Traits modello
 
@@ -168,5 +167,5 @@ Scorciatoie: `bmad-quick-dev "<richiesta>"`, `bmad-quick-spec "<richiesta>"`.
 
 - [README](./README.md)
 - [Setup guide](./setup-guide.md)
-- [Architettura: module boundary](./architecture/module-boundary.md)
+- [Architettura — module boundary](./architecture/module-boundary.md)
 - [Epic translation infra](./epics/translation-infrastructure.epic.md)

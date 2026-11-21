@@ -62,7 +62,7 @@ docs/wiki/
 └── comparisons/       # Tabelle comparative
 ```
 
-### 3. Schema (`./docs/wiki/SCHEMA.md`)
+### 3. Schema (`./docs/wiki/schema.md`)
 
 Documento che istruisce l'LLM su come è strutturata la wiki, convenzioni, e workflow.
 
@@ -148,7 +148,7 @@ Per ogni modulo/tema:
 └── docs/wiki/              # Wiki (LLM owned)
     ├── index.md
     ├── log.md
-    ├── SCHEMA.md           # Istruzioni per LLM
+    ├── schema.md           # Istruzioni per LLM
     ├── concepts/
     ├── entities/
     ├── sources/

@@ -1,10 +1,10 @@
 ---
-title: "model naming convention"
+title: "Model Naming Convention"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "model naming convention"
+qmd: "Model Naming Convention"
 issues: []
 discussions: []
 ---
@@ -92,12 +92,12 @@ Nei PHPDoc delle relazioni, usare il nome singolare:
 
 ---
 
-title: "model naming convention"
+title: "MODEL NAMING CONVENTION"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "model naming convention"
+qmd: "MODEL NAMING CONVENTION"
 issues: []
 discussions: []
 **Ultimo aggiornamento**: 2026-03-10  

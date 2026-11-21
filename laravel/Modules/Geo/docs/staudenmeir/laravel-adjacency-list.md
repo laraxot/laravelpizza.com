@@ -10,7 +10,6 @@ title: staudenmeir/laravel-adjacency-list
 description: staudenmeir/laravel-adjacency-list package
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # staudenmeir/laravel-adjacency-list {#staudenmeir/laravel-adjacency-list}

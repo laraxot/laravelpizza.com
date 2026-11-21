@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 return [
     'tab' => [
-        'index' => 'Lista',
-        'create' => 'Aggiungi Luogo',
-        'edit' => 'Modifica Luogo',
+        'index' => 'List',
+        'create' => 'Add Place',
+        'edit' => 'Edit Place',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

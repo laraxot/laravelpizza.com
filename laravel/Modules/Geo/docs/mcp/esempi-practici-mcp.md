@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "esempi practici mcp"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Model Context Protocol (MCP) – Guida Pratica e Best Practice
@@ -18,6 +17,15 @@ Il [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) 
 Per approfondimenti: [Documentazione ufficiale Cursor MCP](https://docs.cursor.com/context/model-context-protocol)
 
 ---
+
+title: "esempi practici mcp"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "esempi practici mcp"
+issues: []
+discussions: []
 ## Trasporti MCP: stdio vs SSE
 
 | Tipo     | Dove gira         | Gestione         | Accessibilità        | Use-case tipico           |

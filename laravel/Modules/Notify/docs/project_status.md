@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "project status"
 issues: []
 discussions: []
-status: draft
 ---
 
 # FixCity Platform - Project Status Report
@@ -184,6 +183,15 @@ status: draft
 - [ ] ISO 27001 (planned)
 
 ---
+
+title: "project status"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project status"
+issues: []
+discussions: []
 **Report Generated**: 2025-01-01  
 **Next Update**: 2025-01-15  
 **Contact**: development@fixcity.io

@@ -190,7 +190,7 @@ Popup on click → AJAX fetch /api/ticket-details/{id}
 Implementazione attuale in `map-lit.js`:
 
 - `features.forEach` → `L.marker` → `this._markersLayer.addLayer(marker)`
-- Cluster config: vedi [map-lit-it-incidents-2026-06.md](../troubleshooting/map-lit-it-incidents-2026-06.md)
+- Cluster config: vedi [map-lit-it-incidents-2026-06.md](../troubleshooting/map-lit-it-incidents.md)
 - Elemento DOM canonico: `<map-lit>` (non `<geo-map-lit>`)
 
 Test Playwright:

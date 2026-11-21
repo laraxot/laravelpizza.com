@@ -1,5 +1,5 @@
 ---
-title: "Code Quality Improvement Report: Notify"
+title: "Code Quality Improvement Report — Notify"
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "Notify"
@@ -13,10 +13,9 @@ discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/47"
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
-status: draft
 ---
 
-# Code Quality Improvement Report: Notify
+# Code Quality Improvement Report — Notify
 
 > Baseline statica riproducibile per orientare il miglioramento. I conteggi sono segnali, non sostituiscono PHPStan, Pest o la review del flusso reale.
 
@@ -46,34 +45,34 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
-### P0: baseline affidabile
+### P0 — baseline affidabile
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
-### P1: rischio di regressione
+### P1 — rischio di regressione
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
-### P2: manutenibilità
+### P2 — manutenibilità
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
-### P3: continuità
+### P3 — continuità
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.
 - Aggiornare il report solo con metriche ripetibili e tracciamento pertinente.
 
 ## Modifiche effettive da fare
 
-1. **app/Console/Commands/CleanupNotificationLogsCommand.php: strict types e firme.** Inserire declare(strict_types=1) subito dopo l’apertura PHP; eseguire PHPStan e sostituire i tipi impliciti o mixed emersi con tipi concreti. Verifica: PHPStan scoped e test che esercita la prima API pubblica del file.
-2. **app/Actions/SMS/.php-cs-fixer.dist.php:10:    ->setParallelConfig(ParallelConfigFactory::detect()) // @TODO 4.0 no need to call this manually: debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
-3. **app/Http/Controllers/NotificationTrackingController.php: confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
+1. **app/Console/Commands/CleanupNotificationLogsCommand.php — strict types e firme.** Inserire declare(strict_types=1) subito dopo l’apertura PHP; eseguire PHPStan e sostituire i tipi impliciti o mixed emersi con tipi concreti. Verifica: PHPStan scoped e test che esercita la prima API pubblica del file.
+2. **app/Actions/SMS/.php-cs-fixer.dist.php:10:    ->setParallelConfig(ParallelConfigFactory::detect()) // @TODO 4.0 no need to call this manually — debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
+3. **app/Http/Controllers/NotificationTrackingController.php — confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
 
 
 - [ ] PHPStan L10 scoped senza errori non giustificati.

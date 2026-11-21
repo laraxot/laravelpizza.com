@@ -40,11 +40,11 @@ Exit.
 
 If missing STATE.md: suggest `/gsd-new-project`.
 
-**If ROADMAP.md missing but PROJECT.md exists:**
+**If roadmap.md missing but PROJECT.md exists:**
 
 This means a milestone was completed and archived. Go to **Route F** (between milestones).
 
-If missing both ROADMAP.md and PROJECT.md: suggest `/gsd-new-project`.
+If missing both roadmap.md and PROJECT.md: suggest `/gsd-new-project`.
 </step>
 
 <step name="load">
@@ -71,13 +71,13 @@ This returns structured JSON with:
 - Aggregated stats: total plans, summaries, progress percent
 - Current and next phase identification
 
-Use this instead of manually reading/parsing ROADMAP.md.
+Use this instead of manually reading/parsing roadmap.md.
 </step>
 
 <step name="recent">
 **Gather recent work context:**
 
-- Find the 2-3 most recent SUMMARY.md files
+- Find the 2-3 most recent summary.md files
 - Use `summary-extract` for efficient parsing:
   ```bash
   node .github/get-shit-done/bin/gsd-tools.cjs summary-extract <path> --fields one_liner
@@ -188,7 +188,7 @@ issues: []
 discussions: []
 **Route A: Unexecuted plan exists**
 
-Find the first PLAN.md without matching SUMMARY.md.
+Find the first plan.md without matching summary.md.
 Read its `<objective>` section.
 
 ```
@@ -196,7 +196,7 @@ Read its `<objective>` section.
 
 ## ▶ Next Up
 
-**{phase}-{plan}: [Plan Name]** — [objective summary from PLAN.md]
+**{phase}-{plan}: [Plan Name]** — [objective summary from plan.md]
 
 `/gsd-execute-phase {phase}`
 
@@ -218,7 +218,7 @@ Check if `{phase_num}-CONTEXT.md` exists in phase directory.
 
 ## ▶ Next Up
 
-**Phase {N}: {Name}** — {Goal from ROADMAP.md}
+**Phase {N}: {Name}** — {Goal from roadmap.md}
 <sub>✓ Context gathered, ready to plan</sub>
 
 `/gsd-plan-phase {phase-number}`
@@ -235,7 +235,7 @@ Check if `{phase_num}-CONTEXT.md` exists in phase directory.
 
 ## ▶ Next Up
 
-**Phase {N}: {Name}** — {Goal from ROADMAP.md}
+**Phase {N}: {Name}** — {Goal from roadmap.md}
 
 `/gsd-discuss-phase {phase}` — gather context and clarify approach
 
@@ -280,7 +280,7 @@ UAT.md exists with gaps (diagnosed issues). User needs to plan fixes.
 
 **Step 3: Check milestone status (only when phase complete)**
 
-Read ROADMAP.md and identify:
+Read roadmap.md and identify:
 1. Current phase number
 2. All phase numbers in the current milestone section
 
@@ -299,7 +299,7 @@ State: "Current phase is {X}. Milestone has {N} phases (highest: {Y})."
 
 **Route C: Phase complete, more phases remain**
 
-Read ROADMAP.md to get the next phase's name and goal.
+Read roadmap.md to get the next phase's name and goal.
 
 ```
 ---
@@ -308,7 +308,7 @@ Read ROADMAP.md to get the next phase's name and goal.
 
 ## ▶ Next Up
 
-**Phase {Z+1}: {Name}** — {Goal from ROADMAP.md}
+**Phase {Z+1}: {Name}** — {Goal from roadmap.md}
 
 `/gsd-discuss-phase {Z+1}` — gather context and clarify approach
 
@@ -352,7 +352,7 @@ All {N} phases finished!
 
 ---
 
-**Route F: Between milestones (ROADMAP.md missing, PROJECT.md exists)**
+**Route F: Between milestones (roadmap.md missing, PROJECT.md exists)**
 
 A milestone was completed and archived. Ready to start the next milestone cycle.
 

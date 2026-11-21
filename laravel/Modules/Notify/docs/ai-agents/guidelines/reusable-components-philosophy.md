@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "reusable components philosophy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧩 Componenti Riutilizzabili - Filosofia Zen
@@ -17,6 +16,15 @@ status: draft
 **Status**: ✅ PHILOSOPHY DEFINED
 
 ---
+
+title: "reusable components philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusable components philosophy"
+issues: []
+discussions: []
 ## 🎯 The Zen of Reusable Components
 
 > "Un componente, infiniti usi. Scrivi una volta, usa ovunque."
@@ -50,19 +58,19 @@ status: draft
 ### Principle 1: Single Responsibility
 
 ```blade
-{{-- ✅ CORRETTO: Un componente = una responsabilità -}}
+{{-- ✅ CORRETTO: Un componente = una responsabilità —}}
 <x-forecast-view.outcomes-grid :outcomes="$outcomes" />
 <x-forecast-view.stats-bar :stats="$stats" />
 <x-forecast-view.order-book :orderBook="$orderBook" />
 
-{{-- ❌ SBAGLIATO: Componente "god" che fa tutto -}}
+{{-- ❌ SBAGLIATO: Componente "god" che fa tutto —}}
 <x-forecast-view.everything :data="$everything" />
 ```
 
 ### Principle 2: Composability
 
 ```blade
-{{-- Componenti piccoli si combinano -}}
+{{-- Componenti piccoli si combinano —}}
 @livewire('view-predict-widget')
 @livewire('view-forecast-widget')
     ├── header.blade.php
@@ -95,20 +103,20 @@ if ($isBinary) {
     $stats = $stats ?? [];
 @endphp
 
-{{-- ❌ SBAGLIATO: Variabili globali implicite -}}
+{{-- ❌ SBAGLIATO: Variabili globali implicite —}}
 {{ $outcomes[0]['title'] }} {{-- Da dove viene? --}}
 ```
 
 ### Principle 5: Minimal Logic
 
 ```blade
-{{-- ✅ CORRETTO: Logica nelle Action classes -}}
+{{-- ✅ CORRETTO: Logica nelle Action classes —}}
 @php
     $orderBook = BuildOrderBookAction::make()->execute($forecast);
 @endphp
 <x-forecast-view.order-book :orderBook="$orderBook" />
 
-{{-- ❌ SBAGLIATO: Logica complessa nel blade -}}
+{{-- ❌ SBAGLIATO: Logica complessa nel blade —}}
 @php
     // 100 righe di logica...
 @endphp
@@ -207,12 +215,12 @@ if ($isBinary) {
 ### 1. Lazy Loading
 
 ```blade
-{{-- Load heavy components last -}}
+{{-- Load heavy components last —}}
 <x-predict-view.outcomes-grid :outcomes="$outcomes" />
 <x-predict-view.order-book :orderBook="$orderBook" />
 <x-forecast-view.outcomes-grid :outcomes="$outcomes" />
 <x-forecast-view.order-book :orderBook="$orderBook" />
-@livewire('comments-widget') {{-- Lazy via Livewire -}}
+@livewire('comments-widget') {{-- Lazy via Livewire —}}
 ```
 
 ### 2. Minimize Queries

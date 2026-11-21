@@ -1,11 +1,10 @@
 ---
 title: "Modulo Activity"
+qmd: "activity structure md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "modulo activity activity"
+tags: [documentation]
 ---
+
 # Modulo Activity
 
 Data: [DATE] 19:09:55

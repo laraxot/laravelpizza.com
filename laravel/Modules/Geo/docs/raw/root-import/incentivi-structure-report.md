@@ -284,7 +284,7 @@ discussions: []
   - laravel.md
   - advanced.md
   - styling.md
-  - security.md
+  - SECURITY.md
 
 #### 📝 Altre Documentazioni:
 - **module-icons.md** - Icone del modulo

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Module Structure in Laraxot

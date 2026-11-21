@@ -8,8 +8,8 @@ declare(strict_types=1);
 // Cms txt.fields.view — LangServiceProvider SSoT.
 return [
     'label' => 'Template',
-    'placeholder' => 'Seleziona template di visualizzazione',
-    'helper_text' => 'Template Blade utilizzato per renderizzare questo elemento',
+    'placeholder' => 'Select display template',
+    'helper_text' => 'Blade template used to render this element',
     'tooltip' => '',
     'description' => '',
 ];

@@ -1,5 +1,5 @@
 ---
-title: "Services → QueueableAction: modulo Notify"
+title: "Services → QueueableAction — modulo Notify"
 type: concept
 tags: [notify, push, actions, migration]
 created: 2026-07-13
@@ -16,40 +16,34 @@ related:
   - "./llm-wiki-governance.md"
   - "./method-name-homonyms.md"
   - "./module-root-uppercase-folders-archive.md"
-status: draft
 ---
 
-# Notify: `PushNotificationService` eliminato
+# Notify — `PushNotificationService` eliminato
 
 `app/Services/PushNotificationService.php` rimosso. Logica migrata in `Actions/Push/`,
 un'azione per responsabilità (una sola `execute()` pubblica ciascuna, come da
 `queueable-action-trait-mandatory`):
 
-- `Push/SendPushToDeviceAction`: invio a un singolo token multi-piattaforma
-- `Push/SendPushToDevicesAction`: invio a più token, raggruppati per piattaforma
-- `Push/SendPushToPlatformAction`: delivery su una piattaforma specifica (FCM reale via HTTP,
-  APNS/WebPush simulati: limite già presente nel Service originale, non introdotto dalla
+- `Push/SendPushToDeviceAction` — invio a un singolo token multi-piattaforma
+- `Push/SendPushToDevicesAction` — invio a più token, raggruppati per piattaforma
+- `Push/SendPushToPlatformAction` — delivery su una piattaforma specifica (FCM reale via HTTP,
+  APNS/WebPush simulati — limite già presente nel Service originale, non introdotto dalla
   migrazione)
-- `Push/SendPushToTopicAction`: invio a un topic
-- `Push/SendPushToAllUsersAction`: invio a tutti i token attivi
-- `Push/SendPushWithTemplateAction`: invio da template
-- `Push/SendPushWithTargetingAction`: invio con criteri di targeting
-- `Push/SchedulePushNotificationAction`: schedulazione via cache + `ActionJob`
+- `Push/SendPushToTopicAction` — invio a un topic
+- `Push/SendPushToAllUsersAction` — invio a tutti i token attivi
+- `Push/SendPushWithTemplateAction` — invio da template
+- `Push/SendPushWithTargetingAction` — invio con criteri di targeting
+- `Push/SchedulePushNotificationAction` — schedulazione via cache + job
 
-`Actions/Push/SendScheduledPushNotificationAction::execute()` risolve `Push\SendPushToDevicesAction` e chiama:
+`Jobs/SendScheduledPushNotification::handle()` inietta `Push\SendPushToDevicesAction` e chiama:
 
 ```php
 $pushService->execute($tokens, $notification, $data);
 ```
 
-Non esiste `app/Jobs` nel modulo Notify. La coda è una modalità di esecuzione
-delle Actions: `SendNotificationAction` gestisce già il caso d'uso e il push
-schedulato usa `SendScheduledPushNotificationAction`. Questo evita wrapper Job
-duplicati e mantiene `delay` e failure hook nel payload dell'`ActionJob`.
-
-Due tentativi intermedi di migrazione: `Actions/PushNotificationAction` (duplicato 1:1 del
+Due tentativi intermedi di migrazione — `Actions/PushNotificationAction` (duplicato 1:1 del
 vecchio Service, multi-metodo pubblico) e `Actions/SendPushNotificationAction` +
-`Actions/PushNotificationPlatformDelivery` (wrapper multi-metodo attorno alla stessa logica) -
+`Actions/PushNotificationPlatformDelivery` (wrapper multi-metodo attorno alla stessa logica) —
 sono stati rimossi il 2026-07-13 perché non referenziati altrove e superati dallo split in
 `Actions/Push/`.
 
@@ -70,4 +64,3 @@ erano tornati nel working tree. Rifatta e chiusa:
 `Actions\Push\LogSimulatedPushDeliveryAction` (collegata a `SendPushToPlatformAction` e `SendPushToTopicAction`).
 Le costanti `NotificationLog::STATUS_*` sono diventate `Enums\NotificationLogStatusEnum` (stessi literal nel DB).
 Story: `../../stories/2026-10-08-services-to-actions-notify.story.md`.
-Story: `../../stories/services-to-actions-notify.story.md`.

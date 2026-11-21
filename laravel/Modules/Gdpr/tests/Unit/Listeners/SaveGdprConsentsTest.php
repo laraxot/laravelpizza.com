@@ -7,8 +7,11 @@ namespace Modules\Gdpr\Tests\Unit\Listeners;
 use Mockery;
 use Modules\Gdpr\Actions\Consent\SaveRegistrationConsentsAction;
 use Modules\Gdpr\Listeners\SaveGdprConsents;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Events\UserRegistered;
 use Modules\User\Models\User;
+
+uses(TestCase::class);
 
 test('SaveGdprConsents delega a SaveRegistrationConsentsAction senza logica propria', function (): void {
     $user = new User;

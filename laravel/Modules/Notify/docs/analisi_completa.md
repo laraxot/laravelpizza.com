@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "analisi completa"
 issues: []
 discussions: []
-status: superseded
-superseded_by: analisi-completa.md
 ---
 
 # Analisi Completa del Modulo Notify

@@ -8,16 +8,14 @@ qmd: "readme-analisi-duplicati 🐄 analisi metodi duplicati - guida rapida"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "../../acronym-naming-conventions.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: superseded
-superseded_by: ../../readme-analisi-duplicati.md
 ---
 
 # 🐄 Analisi Metodi Duplicati - Guida Rapida
@@ -35,26 +33,26 @@ Questo è il documento PRINCIPALE con:
 - ✅ Piano di implementazione dettagliato
 
 ### Copie nei Moduli
-Ogni modulo ha una copia in `Modules/{ModuleName}/docs/metodi-duplicati-analisi.md`:
+Ogni modulo ha una copia in `Modules/{ModuleName}/docs/metodi-duplicati-analisi-1.md`:
 
-- `Modules/AI/docs/metodi-duplicati-analisi.md`
-- `Modules/Activity/docs/metodi-duplicati-analisi.md`
-- `Modules/Blog/docs/metodi-duplicati-analisi.md`
-- `Modules/Cms/docs/metodi-duplicati-analisi.md`
-- `Modules/Comment/docs/metodi-duplicati-analisi.md`
-- `Modules/Fixcity/docs/metodi-duplicati-analisi.md`
-- `Modules/Gdpr/docs/metodi-duplicati-analisi.md`
-- `Modules/Geo/docs/metodi-duplicati-analisi.md`
-- `Modules/Job/docs/metodi-duplicati-analisi.md`
-- `Modules/Lang/docs/metodi-duplicati-analisi.md`
-- `Modules/Media/docs/metodi-duplicati-analisi.md`
-- `Modules/Notify/docs/metodi-duplicati-analisi.md`
-- `Modules/Rating/docs/metodi-duplicati-analisi.md`
-- `Modules/Seo/docs/metodi-duplicati-analisi.md`
-- `Modules/Tenant/docs/metodi-duplicati-analisi.md`
-- `Modules/UI/docs/metodi-duplicati-analisi.md`
+- `Modules/AI/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Activity/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Blog/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Cms/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Comment/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Fixcity/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Gdpr/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Geo/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Job/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Lang/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Media/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Notify/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Rating/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Seo/docs/metodi-duplicati-analisi-1.md`
+- `Modules/Tenant/docs/metodi-duplicati-analisi-1.md`
+- `Modules/UI/docs/metodi-duplicati-analisi-1.md`
 - `Modules/User/docs/metodi-duplicati-analisi.md`
-- `Modules/Xot/docs/metodi-duplicati-analisi.md`
+- `Modules/Xot/docs/metodi-duplicati-analisi-1.md`
 
 ### Copie nei Temi
 - `Themes/Sixteen/docs/analisi-metodi-duplicati.md`

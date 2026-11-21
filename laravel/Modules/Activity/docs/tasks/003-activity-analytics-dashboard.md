@@ -1,3 +1,10 @@
+---
+title: "Task 003: Build Activity Analytics Dashboard"
+qmd: "activity tasks 003 activity analytics dashboard md"
+type: note
+tags: [documentation]
+---
+
 # Task 003: Build Activity Analytics Dashboard
 
 ## Description

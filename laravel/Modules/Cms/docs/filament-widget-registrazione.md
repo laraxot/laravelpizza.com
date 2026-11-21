@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament widget registrazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione del Widget di Registrazione con Filament

@@ -5,13 +5,12 @@ updated: 2026-09-26
 qmd: "livewire widget project context"
 issues: []
 discussions: []
-title: "Project context: Lang widget"
+title: "Project context — Lang widget"
 type: constitution
 module: Lang
 related:
   - ./livewire-inventory.md
   - ../../Xot/docs/bmad/livewire-widget-project-context.md
-status: draft
 ---
 
 # Context Lang

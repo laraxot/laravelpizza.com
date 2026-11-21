@@ -8,9 +8,9 @@ declare(strict_types=1);
 // Cms txt.fields.email — LangServiceProvider SSoT.
 return [
     'label' => 'Email',
-    'placeholder' => 'esempio@dominio.com',
+    'placeholder' => 'example@domain.com',
     'help' => 'Indirizzo email valido',
-    'helper_text' => 'Indirizzo email principale per contatti',
+    'helper_text' => 'Main email address for contacts',
     'tooltip' => '',
     'description' => '',
 ];

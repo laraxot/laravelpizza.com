@@ -1,14 +1,12 @@
 ---
-title: "tests routing normalization"
+title: "Tests Routing Normalization"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "tests routing normalization"
+qmd: "Tests Routing Normalization"
 issues: []
 discussions: []
-status: superseded
-superseded_by: tests-routing-normalization.md
 ---
 
 # Tests Routing Normalization

@@ -3,10 +3,6 @@ title: Tenant Module Models/Migrations Audit
 type: audit
 created: 2026-07-15
 confidence: high
-status: draft
-updated: 2026-10-07
-tags: [docs, tenant, bmad]
-qmd: "tenant module models & migrations audit tenant"
 ---
 tags: [docs, tenant, bmad]
 
@@ -18,7 +14,7 @@ tags: [docs, tenant, bmad]
 
 **Status:** Intentional architectural pattern (not a bug).
 
-**Risk Level:** Low: tables managed via dynamic connection configuration.
+**Risk Level:** Low — tables managed via dynamic connection configuration.
 
 ---
 
@@ -221,13 +217,13 @@ abstract `BaseModel` / `BaseModelJsons`):
 
 | Model | Persistence | Table | Decision | Where the table lives |
 |-------|-------------|-------|----------|-----------------------|
-| `Tenant` | Eloquent (`tenant` conn) | `tenants` | **SKIP**: defined elsewhere | `Modules/User/database/migrations/2023_01_01_000008_create_tenants_table.php` and `2026_01_01_000001_create_tenants_table.php` (bound to `Modules\User\Models\Tenant`). The `tenant` connection is a runtime clone of the default connection, so both `Tenant` models share the same physical `tenants` table. |
-| `Domain` | Sushi (`use Sushi`, `getRows()` via `GetDomainsArrayAction`) | none | **SKIP**: non-DB | In-memory rows, no table. |
-| `TenantDomain` | Sushi (`use Sushi`, `getRows()`) | none | **SKIP**: non-DB | In-memory rows, no table. |
-| `TestSushiModel` | Sushi (`SushiToJson` trait) | none | **SKIP**: non-DB | JSON file storage (`storage/tests/sushi-json/…`). |
-| `TenantSetting` | Eloquent (`tenant` conn) | `tenant_settings` | **CREATE**: missing everywhere | New: `database/migrations/2026_07_24_000000_create_tenant_settings_table.php` |
-| `TenantSubscription` | Eloquent (`tenant` conn) | `tenant_subscriptions` | **CREATE**: missing everywhere | New: `database/migrations/2026_07_24_000001_create_tenant_subscriptions_table.php` |
-| `DatabaseConfig` | Eloquent (`tenant` conn) | `database_configs` | **CREATE**: missing everywhere | New: `database/migrations/2026_07_24_000002_create_database_configs_table.php` |
+| `Tenant` | Eloquent (`tenant` conn) | `tenants` | **SKIP** — defined elsewhere | `Modules/User/database/migrations/2023_01_01_000008_create_tenants_table.php` and `2026_01_01_000001_create_tenants_table.php` (bound to `Modules\User\Models\Tenant`). The `tenant` connection is a runtime clone of the default connection, so both `Tenant` models share the same physical `tenants` table. |
+| `Domain` | Sushi (`use Sushi`, `getRows()` via `GetDomainsArrayAction`) | none | **SKIP** — non-DB | In-memory rows, no table. |
+| `TenantDomain` | Sushi (`use Sushi`, `getRows()`) | none | **SKIP** — non-DB | In-memory rows, no table. |
+| `TestSushiModel` | Sushi (`SushiToJson` trait) | none | **SKIP** — non-DB | JSON file storage (`storage/tests/sushi-json/…`). |
+| `TenantSetting` | Eloquent (`tenant` conn) | `tenant_settings` | **CREATE** — missing everywhere | New: `database/migrations/2026_07_24_000000_create_tenant_settings_table.php` |
+| `TenantSubscription` | Eloquent (`tenant` conn) | `tenant_subscriptions` | **CREATE** — missing everywhere | New: `database/migrations/2026_07_24_000001_create_tenant_subscriptions_table.php` |
+| `DatabaseConfig` | Eloquent (`tenant` conn) | `database_configs` | **CREATE** — missing everywhere | New: `database/migrations/2026_07_24_000002_create_database_configs_table.php` |
 
 ### Why some tables were created after all
 
@@ -249,7 +245,7 @@ So these three were genuinely missing and are now created (forward-only,
 
 `TenantServiceProvider::mergeModuleConnections()` clones the default DB connection into a
 `tenant` connection at boot. Tenant Eloquent models therefore live in the **default
-database**: the new migrations run there without an explicit `connection`, matching the
+database** — the new migrations run there without an explicit `connection`, matching the
 existing User-module `tenants` migration behaviour.
 
-**Resolution By:** Claude Code (Agent): 2026-07-24
+**Resolution By:** Claude Code (Agent) — 2026-07-24

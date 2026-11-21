@@ -36,6 +36,6 @@ PTVX is a modular HR & Performance evaluation system built on Laravel + Filament
 - [General docs index](../../docs/README.md)
 - [Claude docs index](./context.md)
 - [Workflow](./workflow.md)
-- [PHPStan](./phpstan.md)
+- [PHPStan](../phpstan.md)
 - [Filament](./filament.md)
 - [MCP](./mcp.md)

@@ -1,11 +1,10 @@
 ---
-title: "Architettura del Modulo <nome progetto>ion Market"
+title: "🏗️ Architettura del Modulo <nome progetto>ion Market"
+qmd: "activity use cases prediction market architecture md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "architettura del modulo <nome progetto>ion market activity"
+tags: [documentation]
 ---
+
 # 🏗️ Architettura del Modulo <nome progetto>ion Market
 
 ## 🌟 Panoramica dell'Architettura

@@ -8,8 +8,7 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
-  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
+  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 ---
 
 # Performance Optimization — Module **Gdpr**

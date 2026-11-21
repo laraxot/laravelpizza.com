@@ -13,6 +13,10 @@ use Override;
  *
  * Gestisce la registrazione e il boot del modulo per il tracciamento delle attività utente.
  *
+ * NON monta Folio: `Modules\Cms\Providers\FolioVoltServiceProvider` registra già
+ * `resources/views/pages` (e `pages/api` → `/api`) per ogni modulo abilitato.
+ * Montare qui le pagine con Folio è ridondante, anti-DRY e rischia l'ordine delle catch-all.
+ *
  * @phpstan-type ModuleConfig array{name: string, alias: string, description: string, keywords: array<int, string>, priority: int, providers: array<int, class-string>}
  */
 class ActivityServiceProvider extends XotBaseServiceProvider
@@ -25,12 +29,12 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     /**
      * Directory del modulo.
      */
-    protected string $moduleDir = __DIR__;
+    protected string $module_dir = __DIR__;
 
     /**
      * Namespace del modulo.
      */
-    protected string $moduleNs = __NAMESPACE__;
+    protected string $module_ns = __NAMESPACE__;
 
     /**
      * Boot del service provider.
@@ -48,13 +52,14 @@ class ActivityServiceProvider extends XotBaseServiceProvider
         // Registra i componenti Blade personalizzati
         $this->registerBladeComponents();
 
+        // ANTI-PATTERN: non registrare qui il mount Folio delle pagine del modulo.
+        // Activity possiede i FILE pages/*; il mount Folio e' cross-cutting (Cms/FolioVolt
+        // nei sibling FO). In PTVX Cms e' assente: non inventare un mini-FolioVolt nel dominio.
+        // Vedi docs/bmad/stories/folio-routing-centralization.story.md
+
         // Le impostazioni salvate dal tenant (SettingPage) arrivano al pacchetto activitylog.
         app(ApplyActivityConfigAction::class)->execute();
     }
-
-    /**
-     * Registra i servizi del provider.
-     */
 
     /**
      * Registra le configurazioni del modulo.

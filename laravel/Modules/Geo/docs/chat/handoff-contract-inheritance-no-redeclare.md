@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "handoff contract inheritance no redeclare"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Handoff — Contract Inheritance Fix (2026-06-15)

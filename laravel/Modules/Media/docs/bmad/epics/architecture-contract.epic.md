@@ -1,5 +1,5 @@
 ---
-title: "Media: epic 5.250: architettura e contratto API modulo"
+title: "Media — epic 5.250: architettura e contratto API modulo"
 type: epic
 tags: [media, architecture, contract, module-boundary]
 created: 2026-09-28
@@ -9,12 +9,11 @@ related:
   - ../architecture.md
   - ../architecture/module-boundary.md
   - ./module-roadmap.md
-  - ../stories/module-bmad-audit.story.md
+  - ../stories/module-bmad-audit-20260928.story.md
   - ../../../../Xot/docs/bmad-method.md
-status: draft
 ---
 
-# Epic 5.250: architettura e contratto API modulo Media
+# Epic 5.250 — architettura e contratto API modulo Media
 
 > **SUMMARY**: epic per stabilire e documentare il contratto API pubblica del
 > modulo `Modules\Media`, i confini di dipendenza e le invarianti architetturali.
@@ -54,13 +53,13 @@ AWS/S3/CloudFront e integrazione con Spatie MediaLibrary. Questa epic documenta:
 
 ## Task
 
-- [x] T1: Inventariare modelli e relazioni in `app/Models/`
-- [x] T2: Mappare resource Filament e schemi in `app/Filament/Resources/`
-- [x] T3: Catalogare action per area (`S3/`, `CloudFront/`, `Ffmpeg/`, `Subtitle/`, `Diagnostic/`)
-- [x] T4: Verificare dipendenze in `composer.json`
-- [x] T5: Redigere `architecture.md` (indice root → shard)
-- [x] T6: Redigere `README.md` (indice verificato)
-- [x] T7: Redigere `quick-reference.md` e `setup-guide.md`
+- [x] T1 — Inventariare modelli e relazioni in `app/Models/`
+- [x] T2 — Mappare resource Filament e schemi in `app/Filament/Resources/`
+- [x] T3 — Catalogare action per area (`S3/`, `CloudFront/`, `Ffmpeg/`, `Subtitle/`, `Diagnostic/`)
+- [x] T4 — Verificare dipendenze in `composer.json`
+- [x] T5 — Redigere `architecture.md` (indice root → shard)
+- [x] T6 — Redigere `README.md` (indice verificato)
+- [x] T7 — Redigere `quick-reference.md` e `setup-guide.md`
 
 ## Acceptance Criteria
 

@@ -10,7 +10,6 @@ title: About Tenant
 description: About Tenant
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # module_tenant

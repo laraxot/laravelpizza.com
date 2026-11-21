@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "geo actions sumy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Actions Summary
@@ -55,14 +54,16 @@ All actions in the Geo module are now PHPStan compliant:
 ## Usage Examples
 
 ```php
-// Get coordinates for an address (?LocationData)
-$location = app(GetCoordinatesAction::class)->execute('Via Roma 1, Milano');
+// Get coordinates for an address
+$coordinates = app(GetCoordinatesAction::class)->execute('Via Roma 1, Milano');
 
-// Calculate distance between two points (LocationData, LocationData): array
-$distance = app(CalculateDistanceAction::class)->execute($origin, $destination);
+// Calculate distance between two points
+$distance = app(CalculateDistanceAction::class)->execute(
+    $lat1, $lng1, $lat2, $lng2
+);
 
-// Get elevation for a point (LocationData): float
-$elevation = app(GetElevationAction::class)->execute($location);
+// Get elevation for coordinates
+$elevation = app(GetElevationAction::class)->execute($latitude, $longitude);
 
 // Cluster locations
 $clusters = app(ClusterLocationsAction::class)->execute($locations, $radius);
@@ -75,9 +76,8 @@ All actions require proper API keys configured in `config/services.php`:
 ```php
 'google' => [
     'maps' => [
-        'key' => env('GOOGLE_MAPS_API_KEY'),   // letta da GetCoordinatesAction
+        'key' => env('GOOGLE_MAPS_API_KEY'),
     ],
-    'maps_api_key' => env('GOOGLE_MAPS_API_KEY'), // letta da GetAddressFromGoogleMapsAction, GetCoordinatesByAddressAction
 ],
 'bing' => [
     'maps_api_key' => env('BING_MAPS_API_KEY'),
@@ -87,8 +87,9 @@ All actions require proper API keys configured in `config/services.php`:
 ## Error Handling
 
 Actions implement consistent error handling:
-- `GetCoordinatesAction`: `RuntimeException` se manca la chiave API o l'HTTP fallisce; `null` se Google risponde con status diverso da `OK`
-- Le altre Actions variano: leggere il metodo `execute()` prima di assumere il contratto
+- Return `null` for API failures
+- Throw specific exceptions for invalid input
+- Log errors for debugging purposes
 
 ## Performance Considerations
 
@@ -109,5 +110,5 @@ All actions include comprehensive unit tests covering:
 
 For detailed implementation guides and advanced usage, see:
 - `docs/actions/` directory for action-specific documentation
-- `docs/services/geocoding.md` (storico: i Services sono ritirati, vale il layer Actions)
+- `docs/services/` for service layer documentation
 - Language files in `lang/it/actions.php` for UI translations

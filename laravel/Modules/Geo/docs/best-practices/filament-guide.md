@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "filament guide"
 issues: []
 discussions: []
-status: draft
 ---

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "whatsapp provider architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura WhatsApp Provider per SaluteOra

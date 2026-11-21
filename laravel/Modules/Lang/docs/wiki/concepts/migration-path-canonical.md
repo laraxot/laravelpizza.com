@@ -64,11 +64,23 @@ Migrazioni additive per `Post` e `Translation`:
 
 Anche gli aggiornamenti usano la tabella plurale nel filename; l'azione è
 esplicita e `$model_class` identifica il modello owner.
+<<<<<<< .merge_file_Mn55kx
 Le modifiche sono state consolidate nelle migrazioni owner (non esistono più
 migrazioni additive separate per questi modelli):
+=======
+>>>>>>> .merge_file_vWba1q
 
 | Modello | File migrazione |
 |---------|-----------------|
+| `Post` | `2026_11_05_100000_update_posts_table.php` |
+| `Translation` | `2026_11_05_100001_update_translations_table.php` |
+
+Anche gli aggiornamenti usano la tabella plurale nel filename; l'azione è
+esplicita e `$model_class` identifica il modello owner.
+
+Le modifiche sono state consolidate nelle migrazioni owner (non esistono più
+migrazioni additive separate per questi modelli):
+
 | `Post` | `2026_11_05_100000_create_posts_table.php` |
 | `Translation` | `2026_11_05_100001_create_translations_table.php` |
 

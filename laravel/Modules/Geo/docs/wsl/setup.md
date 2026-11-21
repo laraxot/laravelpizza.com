@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "setup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida Super Semplice: WSL + Laravel + Webmin + HeidiSQL

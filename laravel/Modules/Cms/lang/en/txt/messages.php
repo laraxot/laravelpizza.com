@@ -6,15 +6,15 @@ declare(strict_types=1);
 // Canon: Modules/Cms/docs/wiki — domain i18n only.
 // File: lang/en/txt/messages.php
 return [
-    'content_saved' => 'Contenuto salvato con successo',
-    'save_error' => 'Si è verificato un errore durante il salvataggio',
-    'validation_failed' => 'Alcuni campi contengono errori. Controlla e riprova.',
-    'unsaved_changes' => 'Hai modifiche non salvate',
-    'confirm_navigation' => 'Vuoi davvero lasciare questa pagina? Le modifiche non salvate andranno perse.',
-    'loading_content' => 'Caricamento contenuto in corso...',
-    'processing_save' => 'Salvataggio in corso...',
-    'image_upload_success' => 'Immagine caricata con successo',
-    'image_upload_error' => 'Errore durante il caricamento dell\'immagine',
-    'video_upload_success' => 'Video caricato con successo',
-    'video_upload_error' => 'Errore durante il caricamento del video',
+    'content_saved' => 'Content saved successfully',
+    'save_error' => 'An error occurred while saving',
+    'validation_failed' => 'Some fields contain errors. Check and try again.',
+    'unsaved_changes' => 'You have unsaved changes',
+    'confirm_navigation' => 'Do you really want to leave this page? Unsaved changes will be lost.',
+    'loading_content' => 'Loading content...',
+    'processing_save' => 'Saving...',
+    'image_upload_success' => 'Image uploaded successfully',
+    'image_upload_error' => 'Error while uploading the image',
+    'video_upload_success' => 'Video uploaded successfully',
+    'video_upload_error' => 'Error while uploading the video',
 ];

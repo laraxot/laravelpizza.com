@@ -18,6 +18,7 @@ use Modules\Activity\Tests\Fixtures\ListLogActivitiesRestorableResource;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesStdClassResourceHarness;
 use Modules\Activity\Tests\Fixtures\RestoreActivityActionFails;
 use Modules\Activity\Tests\Fixtures\RestoreActivityActionNoOp;
+<<<<<<< .merge_file_DE2HRL
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -164,3 +165,5 @@ test('ListLogActivities canRestore senza record o resource invalida', function (
     $stdPage->setRecordForTest(activitySubjectForPage('std'));
     Assert::assertFalse($stdPage->canRestoreActivity());
 });
+=======
+>>>>>>> .merge_file_vMWRlg

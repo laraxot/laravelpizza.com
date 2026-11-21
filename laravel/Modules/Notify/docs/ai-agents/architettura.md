@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architettura"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura e Struttura

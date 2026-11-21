@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/links.php
 // Cms txt.fields.links — LangServiceProvider SSoT.
 return [
-    'label' => 'Collegamenti',
-    'placeholder' => 'Lista di link di navigazione',
-    'helper_text' => 'Collezione di collegamenti per menu o footer',
+    'label' => 'Links',
+    'placeholder' => 'List of navigation links',
+    'helper_text' => 'Collection of links for menu or footer',
     'tooltip' => '',
     'description' => '',
 ];

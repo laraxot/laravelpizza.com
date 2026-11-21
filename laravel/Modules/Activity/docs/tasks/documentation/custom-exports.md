@@ -1,3 +1,10 @@
+---
+title: "Custom Exports - Activity"
+qmd: "activity tasks documentation custom exports md"
+type: note
+tags: [documentation]
+---
+
 # Custom Exports - Activity
 
 **Task ID**: ACTIVITY-FEATURE-019

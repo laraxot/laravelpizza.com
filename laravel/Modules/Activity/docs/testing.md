@@ -297,7 +297,7 @@ protected function createApplication()
 
 ### External Resources
 
-- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+- [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 - [Pest Installation Guide](https://pestphp.com/docs/installation)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 
@@ -305,7 +305,7 @@ protected function createApplication()
 
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
+- [Troubleshooting Guide](../../../docs/troubleshooting.md)
 
 ## Testing Examples
 
@@ -424,3 +424,7 @@ Remember: Good tests are the foundation of reliable software development.
 
 *Last updated: January 2025*
 *
+<<<<<<< .merge_file_CA9Za5
+=======
+*
+>>>>>>> .merge_file_AAsuer

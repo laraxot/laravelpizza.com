@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gestione homepage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione della Homepage in il progetto

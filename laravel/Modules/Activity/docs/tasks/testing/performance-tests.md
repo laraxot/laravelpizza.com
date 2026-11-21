@@ -1,3 +1,10 @@
+---
+title: "Performance Tests - Activity"
+qmd: "activity tasks testing performance tests md"
+type: note
+tags: [documentation]
+---
+
 # Performance Tests - Activity
 
 **Task ID**: ACTIVITY-TEST-002

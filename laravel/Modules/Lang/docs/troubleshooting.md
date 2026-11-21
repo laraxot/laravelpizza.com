@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "filament4 migration"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # 🔧 **Troubleshooting Modulo Lang - Laraxot**
 
@@ -376,11 +375,11 @@ php artisan lang:reset --force
 
 ### **1. Documentazione**
 - [README.md](README.md) - Documentazione principale
-- [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices
+- [best_practices.md](best_practices.md) - Best practices
 - [README.md](README.md) - Documentazione principale
-- [BEST_PRACTICES.md](best_practices.md) - Best practices
+- [best_practices.md](best_practices.md) - Best practices
 - [README.md](README.md) - Documentazione principale
-- [BEST_PRACTICES.md](best_practices.md) - Best practices
+- [best_practices.md](best_practices.md) - Best practices
 - [config/lang.php](../config/lang.php) - Configurazione
 
 ### **2. Comandi Utili**

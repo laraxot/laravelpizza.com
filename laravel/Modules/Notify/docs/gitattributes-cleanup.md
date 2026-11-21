@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gitattributes cleanup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧹 GitAttributes Cleanup Report
@@ -17,6 +16,15 @@ status: draft
 > **Action**: Removed all `.gitattributes` files
 
 ---
+
+title: "gitattributes cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gitattributes cleanup"
+issues: []
+discussions: []
 ## 📋 Summary
 
 Tutti i file `.gitattributes` sono stati rimossi dal progetto e sostituiti con regole `.gitignore` più complete.
@@ -193,7 +201,7 @@ cp /path/to/backup/.gitattributes laravel/Modules/Blog/
 - [x] Update root `.gitignore`
 - [x] Create module `.gitignore` files
 - [x] Update AGENTS.md
-- [x] Update agents.md
+- [x] Update AGENTS.md
 - [x] Document cleanup
 - [x] Verify with git check-ignore
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "legacy roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cms Module Roadmap 2026
@@ -25,6 +24,15 @@ Transform content management from a technical constraint into a **creative super
 - **Developer Joy**: Intuitive APIs for content creation and manipulation
 
 ---
+
+title: "legacy roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap"
+issues: []
+discussions: []
 ## 📊 Current Architecture Assessment
 
 ### ✅ Architectural Strengths

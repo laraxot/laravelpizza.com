@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "phpstan level10 fixes 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Quality Analysis Report - Lang Module
 **Date**: 2025-11-11

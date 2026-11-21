@@ -1,14 +1,12 @@
 ---
-title: "relationship methods duplicate list"
+title: "Relationship Methods Duplicate List"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "relationship methods duplicate list"
+qmd: "Relationship Methods Duplicate List"
 issues: []
 discussions: []
-status: superseded
-superseded_by: relationship-methods-duplicate-list.md
 ---
 
 # Elenco metodi relazione duplicate

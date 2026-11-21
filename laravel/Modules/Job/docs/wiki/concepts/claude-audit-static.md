@@ -1,5 +1,5 @@
 ---
-title: "claude-audit static: modulo Job"
+title: "claude-audit static — modulo Job"
 type: concept
 module: Job
 tags: [job, quality, claude-audit, testing]
@@ -13,7 +13,6 @@ discussions:
 related:
   - ../../../../../../bashscripts/tools/run-claude-audit-module-static.sh
   - ../../../../../../bashscripts/tools/claude-audit-module-static-boost.sh
-status: draft
 ---
 
 # claude-audit static (Job)

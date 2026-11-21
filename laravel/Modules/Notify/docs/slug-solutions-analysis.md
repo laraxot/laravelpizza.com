@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "slug solutions analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Soluzioni per Slug in Filament
@@ -188,7 +187,6 @@ TextInput::make('slug')
 - [Documentazione Package](https://github.com/camya/filament-title-with-slug)
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Best Practices UI/UX](./BEST-PRACTICES.md)
 - [Best Practices UI/UX](./best-practices.md)
 
 ## Note Importanti

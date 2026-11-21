@@ -1,11 +1,10 @@
 ---
 title: "Esempi Pratici - Use Case Bancario"
+qmd: "activity use cases bank examples md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "esempi pratici - use case bancario activity"
+tags: [documentation]
 ---
+
 # Esempi Pratici - Use Case Bancario
 
 ## Approccio Tradizionale (CRUD)

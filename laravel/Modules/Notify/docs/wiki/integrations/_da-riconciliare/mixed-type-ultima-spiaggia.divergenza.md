@@ -1,14 +1,13 @@
 ---
-qmd: "mixed type ultima spiaggia.divergenza"
+qmd: "Mixed Type Ultima Spiaggia.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: mixed-type-ultima-spiaggia.md"
+title: "Mixed Type Ultima Spiaggia.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `mixed-type-ultima-spiaggia.md`

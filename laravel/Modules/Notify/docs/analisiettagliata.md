@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "analisiettagliata"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Dettagliata del Modulo Notify

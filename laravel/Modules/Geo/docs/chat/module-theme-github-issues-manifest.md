@@ -7,7 +7,6 @@ title: manifest issue moduli temi batch 2026-05-26
 type: chat
 tags: [github, modules, themes, manifest]
 updated: 2026-05-26
-status: draft
 ---
 
 # Manifest issue — moduli e temi

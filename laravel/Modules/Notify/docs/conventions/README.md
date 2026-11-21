@@ -330,7 +330,7 @@ Modules/ModuleName/
 
 **Links**: Use relative paths for internal
 ```markdown
-✅ [See Guide](./guides/setup.md)
+✅ [See Guide](../ai-agents/setup.md)
 ✅ [Architecture](../architecture/overview.md)
 ❌ [Guide](/var/www/.../guide.md)
 ```

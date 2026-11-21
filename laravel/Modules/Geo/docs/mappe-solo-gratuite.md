@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "mappe solo gratuite"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regola Critica: Solo Servizi Mappe Gratuiti

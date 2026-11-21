@@ -1,14 +1,13 @@
 ---
-qmd: "rinvex countries usage.divergenza"
+qmd: "Rinvex Countries Usage.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: rinvex_countries_usage.md"
+title: "Rinvex Countries Usage.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `rinvex_countries_usage.md`

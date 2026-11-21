@@ -36,8 +36,13 @@ Il modulo CMS include funzionalità per la gestione dei temi, inclusi:
 Per risolvere l'errore "Unable to locate file in Vite manifest", eseguire:
 
 ```bash
+<<<<<<< .merge_file_pwBBd5
 cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
+=======
+cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
+cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
+>>>>>>> .merge_file_dZKVv4
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
@@ -80,4 +85,4 @@ Il modulo CMS si integra con Filament per offrire un'interfaccia di amministrazi
 ## Collegamenti
 - [Indice generale](/docs/index.md)
 - [Documentazione moduli](/docs/modules/index.md)
-- [Gestione Temi](/docs/themes.md) 
+- [Gestione Temi](/docs/themes.md)

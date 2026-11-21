@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "webcrunch tailwind collection"
 issues: []
 discussions: []
-status: superseded
-superseded_by: webcrunch-tailwind-collection.md
 ---
 
 # Analisi collezione Tailwind CSS (Webcrunch)

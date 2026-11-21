@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "design comuni page census"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Page Census For CMS Blocks

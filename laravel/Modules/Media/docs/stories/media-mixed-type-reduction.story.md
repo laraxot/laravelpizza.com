@@ -24,12 +24,12 @@ tags: [bmad, story, phpstan, mixed, type-safety, media]
 ## Contesto
 
 Convenzione di progetto: "cerchiamo di non usare mixed, quando lo troviamo
-cerchiamo di sostituirlo con qualcosa di adeguato": best effort, non 100%
+cerchiamo di sostituirlo con qualcosa di adeguato" — best effort, non 100%
 coverage. Il modulo Media aveva 51 file con `mixed` (nativo o solo docblock).
 
 Prima di iniziare, `git status --short` su `Modules/Media` ha mostrato 124
 file gia' modificati e non committati da un'altra sessione concorrente (vedi
-memoria `multi-agent-same-repo-race`), inclusi alcuni file con `mixed`: in
+memoria `multi-agent-same-repo-race`), inclusi alcuni file con `mixed` — in
 un caso (`GetAttachmentsSchemaAction.php`) con esattamente lo stesso tipo di
 fix che questa story si proponeva di fare. Per non rischiare di sovrascrivere
 lavoro altrui, lo scope si e' ristretto ai 30 file con `mixed` che **non**
@@ -45,13 +45,13 @@ risultavano gia' sporchi.
   (skip motivato).
 - Applicati 3 fix in 2 file di alto valore (shape completamente desumibile
   dal corpo del metodo, poche righe sotto la firma):
-  - `app/Actions/Subtitle/ParseSubtitleXmlAction.php`: array-shape esplicita
+  - `app/Actions/Subtitle/ParseSubtitleXmlAction.php` — array-shape esplicita
     con le 6 chiavi tipizzate al posto di un union `float|int|string|mixed`
     ridondante (il `mixed` finale rendeva inutile l'intero union).
-  - `app/Actions/Diagnostic/S3/RunS3SaveTestAction.php`: array-shape
+  - `app/Actions/Diagnostic/S3/RunS3SaveTestAction.php` — array-shape
     annidata, verificando a monte che `GetCloudFrontSignedUrlAction::execute()`
     e `FilesystemAdapter::temporaryUrl()` restituiscano `string`.
-  - `app/Filament/Resources/MediaResource/Pages/ConvertMedia.php` -
+  - `app/Filament/Resources/MediaResource/Pages/ConvertMedia.php` —
     `array<string, \Filament\Schemas\Components\Component>`, riallineato al
     contratto reale usato da `XotBaseResource::getInfolistSchema()`.
 - Lasciate `mixed` (documentate in dettaglio in `docs/coverage.md`, sezione

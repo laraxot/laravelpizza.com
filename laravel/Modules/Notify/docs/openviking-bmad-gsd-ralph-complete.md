@@ -8,20 +8,14 @@ qmd: "openviking-bmad-gsd-ralph-complete openviking + bmad + gsd + ralph loop - 
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report
@@ -375,8 +369,8 @@ ls -la .planning/
 
 # Review AGENTS.md
 cat AGENTS.md
-# Review agents.md
-cat agents.md
+# Review AGENTS.md
+cat AGENTS.md
 ```
 
 ## Resources
@@ -387,9 +381,7 @@ cat agents.md
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
 - [AGENTS.md](../AGENTS.md)
-- [agents.md](../agents.md)
-- [AGENTS.md](../../../AGENTS.md)
-- [agents.md](../../../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

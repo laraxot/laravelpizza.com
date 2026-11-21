@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "dry violation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ DRY Violation Analysis - Risoluzione delle Cagatas Seasonal
@@ -16,6 +15,15 @@ status: draft
 **Approccio**: **DRY + KISS applicati correttamente**
 
 ---
+
+title: "dry violation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry violation"
+issues: []
+discussions: []
 ## 📋 Successo: "Fare GetSeasonalEmailLayoutAction e DetermineSeasonalLayoutPathAction era una cagata!"
 
 ### Problema Identificato e Risolto

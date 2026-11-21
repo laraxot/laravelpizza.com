@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page side content"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componente Page con Supporto per Sezioni di Contenuto

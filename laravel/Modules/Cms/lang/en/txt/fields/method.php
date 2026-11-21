@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/method.php
 // Cms txt.fields.method — LangServiceProvider SSoT.
 return [
-    'label' => 'Metodo',
+    'label' => 'Method',
     'placeholder' => 'GET, POST, PUT, DELETE',
-    'helper_text' => 'Metodo HTTP per form o richieste API',
+    'helper_text' => 'HTTP method for forms or API requests',
     'tooltip' => '',
     'description' => '',
 ];

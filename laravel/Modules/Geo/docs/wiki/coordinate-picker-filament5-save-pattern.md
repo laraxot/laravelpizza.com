@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coordinate picker filament5 save pattern"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CoordinatePicker Multi-Column Save Pattern (Filament 5)
@@ -68,6 +67,6 @@ protected function location(): Attribute
 
 ## Related
 
-- [CoordinatePicker Multi-Column Save Rule](../../../../../bashscripts/ai/wiki/rules/coordinatepicker-multi-column-save.md)
-- Story 8-64: Implementation artifacts _(target mancante, verificato 2026-10-14: `_bmad-output/` non esiste nel repo)_
+- [CoordinatePicker Multi-Column Save Rule](bashscripts/ai/.claude/rules/coordinatepicker-multi-column-save.md)
+- [Story 8-64: Implementation artifacts](_bmad-output/implementation-artifacts/8-64-coordinatepicker-filament5-custom-field-save-fix-and-docs.md)
 - [Wiki: concepts/coordinate-picker-filament5-save-pattern.md]( (indexed))

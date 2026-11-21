@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "01 now"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Now (Module Tenant)
 

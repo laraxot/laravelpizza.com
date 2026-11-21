@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 use Illuminate\Auth\Events\Logout;
-use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Providers\EventServiceProvider;
+use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_7qf2LQ
 
 uses(TestCase::class);
 
@@ -53,3 +54,5 @@ test('logout listener handles event without user gracefully', function () {
     $listener = new LogoutListener;
     $listener->handle($event);
 });
+=======
+>>>>>>> .merge_file_vwuwOI

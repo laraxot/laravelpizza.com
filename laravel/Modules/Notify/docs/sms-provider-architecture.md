@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms provider architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura dei Provider SMS 

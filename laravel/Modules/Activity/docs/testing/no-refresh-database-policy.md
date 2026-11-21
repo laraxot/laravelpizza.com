@@ -1,11 +1,10 @@
 ---
 title: "Policy: MAI Usare RefreshDatabase nei Test"
+qmd: "activity testing no refresh database policy md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity, testing]
-qmd: "policy: mai usare refreshdatabase nei test activity"
+tags: [documentation]
 ---
+
 # Policy: MAI Usare RefreshDatabase nei Test
 
 ## Regola Fondamentale
@@ -479,8 +478,8 @@ fi
 - [Real Data vs Mock Testing](../../xot/docs/testing/real-data-vs-mock-testing-strategy.md)
 
 ### Test Esempi
-- [SnapshotBusinessLogicTest](../../tests/Feature/SnapshotBusinessLogicTest.php) - Esempio corretto
-- [ActivityBusinessLogicTest](../../tests/Feature/ActivityBusinessLogicTest.php)
+- [SnapshotBusinessLogicTest](../tests/Feature/SnapshotBusinessLogicTest.php) - Esempio corretto
+- [ActivityBusinessLogicTest](../tests/Feature/ActivityBusinessLogicTest.php)
 
 ---
 

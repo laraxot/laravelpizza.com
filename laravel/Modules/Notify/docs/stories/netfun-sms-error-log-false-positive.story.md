@@ -17,7 +17,7 @@ metadata:
   updated: 2026-09-22
   repository: "git@github.com:laraxot/module_notify_fila5.git"
   github_issue: "https://github.com/laraxot/module_notify_fila5/issues/76"
-  github_discussion: "https://github.com/laraxot/base_quaeris_fila5/discussions/207"
+  github_discussion: "https://github.com/laraxot/base_<nome progetto>_fila5/discussions/207"
 ---
 
 # Story: log Netfun SMS a error() anche sugli invii riusciti
@@ -58,7 +58,7 @@ incollato dall'utente (troncato lì solo per condividerlo in chat).
 
 Verificato che non fosse un comportamento già discusso/voluto: nessuna
 story, issue o discussion esistente (in `module_notify_fila5`,
-`module_quaeris_fila5`, `base_quaeris_fila5`) parla del livello di log
+`module_<nome progetto>_fila5`, `base_<nome progetto>_fila5`) parla del livello di log
 sbagliato: solo di problemi di configurazione ormai risolti (token,
 driver, sender) o del refactor delle factory SMS/Telegram/WhatsApp
 (discussion [module_notify_fila5#50](https://github.com/laraxot/module_notify_fila5/discussions/50),

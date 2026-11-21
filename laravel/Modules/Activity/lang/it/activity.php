@@ -86,10 +86,15 @@ return [
             'label' => 'Ripristina',
             'tooltip' => 'Ripristina stato precedente',
         ],
+<<<<<<< .merge_file_PXGvk5
         'delete' => [
             'label' => 'Elimina',
             'icon' => 'delete',
             'tooltip' => 'Elimina questa attività',
+=======
+        'logout' => [
+            'tooltip' => 'logout',
+>>>>>>> .merge_file_63ug64
         ],
     ],
     'messages' => [

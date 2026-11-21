@@ -9,7 +9,6 @@ type: troubleshooting
 confidence: high
 updated: 2026-05-21
 tags: [filament, autoload, media, php]
-status: draft
 ---
 
 # Errore: Cannot redeclare `HasMediaForm`
@@ -25,11 +24,11 @@ Spesso durante `composer run go` o `php artisan optimize`.
 
 ## Causa
 
-1. **Due progetti Laraxot nella stessa sessione PHP** — autoload di `base_ptvx_fila5` e `base_fixcity_fila5` insieme (terminali/IDE multi-root, script che includono entrambi i `vendor/autoload.php`).
+1. **Due progetti Laraxot nella stessa sessione PHP** — autoload del progetto corrente e di un altro progetto Laraxot nella stessa sessione (terminali/IDE multi-root, script che includono entrambi i `vendor/autoload.php`).
 2. **Namespace errato** (storico): `namespace Modules\Media\app\Filament\...` nel file PHP. Il namespace corretto è `Modules\Media\Filament\...` (la cartella fisica è `app/`, il segmento `app` non va nel namespace).
 3. **Filament discover sbagliato**: `discoverResources(in: base_path('Modules/Media'), for: 'Modules\\Media')` costruisce FQCN con `app` nel mezzo — usare sempre `XotBasePanelProvider` (`.../app/Filament/Resources` + `Modules\\{Module}\\Filament\\Resources`).
 
-## Fix immediato (solo FixCity)
+## Fix immediato (solo progetto legacy)
 
 Dalla root **di questo** progetto:
 
@@ -41,7 +40,7 @@ php8.4 "$(command -v composer)" dump-autoload -o
 php8.4 artisan optimize
 ```
 
-Non eseguire `composer`/`artisan` da `base_ptvx_fila5` nella stessa shell se stai lavorando su FixCity.
+Non eseguire `composer`/`artisan` da `base_ptvx_fila5` nella stessa shell se stai lavorando su progetto legacy.
 
 ## Verifica namespace nel file
 

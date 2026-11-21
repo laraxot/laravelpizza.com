@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament 5x compatibility"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament 5.x compatibility - modulo Notify
@@ -20,7 +19,7 @@ Il modulo Notify è **compatibile** con Filament 5.x. Nessun breaking change fun
 
 ## Note specifiche modulo
 
-- Il fix precedente (Filament 4.x) per `SpatieEmail`: uso di `update()` al posto di `increment()`: resta valido
+- Il fix precedente (Filament 4.x) per `SpatieEmail` — uso di `update()` al posto di `increment()` — resta valido
 - Le email stagionali tramite layout Blade non sono impattate dall'upgrade Filament
 
 ## Regole architetturali

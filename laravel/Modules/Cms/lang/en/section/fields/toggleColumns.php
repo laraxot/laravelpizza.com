@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/toggleColumns.php
 // Cms section.fields.toggleColumns — LangServiceProvider SSoT.
 return [
-    'label' => 'Mostra/Nascondi Colonne',
+    'label' => 'Show/Hide Columns',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

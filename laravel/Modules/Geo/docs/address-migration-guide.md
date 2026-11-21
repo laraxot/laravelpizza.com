@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address migration guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida alla Migrazione del Modello Address

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification as NotificationFacade;
 use Modules\Notify\Enums\NotificationStatusEnum;
+use Modules\Notify\Exceptions\NotificationTemplateNotFoundException;
 use Modules\Notify\Models\Notification as NotificationModel;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Notifications\GenericNotification;
@@ -41,7 +42,7 @@ class SendNotificationAction
             ->first();
 
         if (! $template instanceof NotificationTemplate) {
-            throw new Exception("Template {$templateCode} non trovato o non attivo");
+            throw NotificationTemplateNotFoundException::forCode($templateCode);
         }
 
         if (! $template->shouldSend($data)) {

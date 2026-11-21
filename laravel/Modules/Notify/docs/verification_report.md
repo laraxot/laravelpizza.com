@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "verification report"
 issues: []
 discussions: []
-status: superseded
-superseded_by: verification-report.md
 ---
 
 # Verification Report - Compliance and XotBase Refactoring

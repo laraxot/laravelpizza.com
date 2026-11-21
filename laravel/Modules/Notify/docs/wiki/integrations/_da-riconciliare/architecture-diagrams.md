@@ -1,20 +1,19 @@
 ---
-qmd: "architecture diagrams"
+qmd: "Architecture Diagrams"
 issues: []
 discussions: []
-title: "Architecture Diagrams & Visual Reference"
+title: "Architecture Diagrams"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Architecture Diagrams & Visual Reference
 
 **📍 Cross-References:**
-- [← Back to Master Index](MASTER_DOCUMENTATION_INDEX.md)
+- [← Back to Master Index](master_documentation_index.md)
 - [Code Quality Analysis](CODE_QUALITY_ANALYSIS.md)
 - [Module Dependencies](#module-dependencies)
 - [Theme Architecture](#theme-architecture)
@@ -443,8 +442,8 @@ Modules/ModuleName/
 
 ## See Also
 
-- [→ Module Documentation Index](MODULE_DOCS_INDEX.md)
-- [→ Theme Documentation Index](THEMES_DOCUMENTATION_INDEX.md)
+- [→ Module Documentation Index](module_docs_index.md)
+- [→ Theme Documentation Index](themes_documentation_index.md)
 - [→ Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
 - [→ Filament Integration Guide](../laravel/Themes/Sixteen/docs/filament-integration.md)
 - [→ Data Flow Analysis](COMPREHENSIVE_CODE_ANALYSIS.md#data-flow)

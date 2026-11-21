@@ -1,15 +1,14 @@
 ---
-qmd: "performance optimization"
+qmd: "Performance Optimization"
 issues: []
 discussions: []
-title: "Performance Optimization — Module Cms"
+title: "Performance Optimization"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 ---
 
 # Performance Optimization — Module **Cms**

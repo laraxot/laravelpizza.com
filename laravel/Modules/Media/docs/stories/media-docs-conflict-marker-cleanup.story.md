@@ -9,7 +9,7 @@ issues: []
 discussions: []
 ---
 
-# Story: Media: pulizia marker di conflitto residui in docs/
+# Story: Media — pulizia marker di conflitto residui in docs/
 
 ## Status
 Done.
@@ -24,7 +24,7 @@ fa merge con un remote divergente e committa marker non risolti.
 
 ## Trovato
 47 file sotto `docs/` con marker `<<<<<<< HEAD` / `=======` / `>>>>>>> `
-committati (struttura piatta, un blocco per conflitto, nessun annidamento -
+committati (struttura piatta, un blocco per conflitto, nessun annidamento —
 verificato con conteggio bilanciato `<<<`/`===`/`>>>` per file).
 
 ## Azione
@@ -33,10 +33,10 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 - 34 blocchi risolti automaticamente (un lato vuoto o sottoinsieme dell'altro).
 - 13 blocchi divergenti risolti a mano, criteri principali: tenuto il lato
   con informazione reale quando l'altro era stub/generico; unite le sezioni
-  quando entrambe portavano contenuto nuovo (es. `00-INDEX.md`: sia "Ultimo
+  quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
   Aggiornamento" sia "Dependency Intelligence"); preferita la denominazione
   generica "laraxot" ai nomi di progetti ospiti (FixCity, SaluteOra)
-  hardcoded: Media e' un modulo condiviso fra piu' progetti (`git remote
+  hardcoded — Media e' un modulo condiviso fra piu' progetti (`git remote
   -v`: remote `laraxot` e `provtv`); normalizzati alcuni link a target
   minuscoli coerenti con le altre occorrenze nello stesso file, verificando
   via `find` l'esistenza reale del file target prima di scegliere.

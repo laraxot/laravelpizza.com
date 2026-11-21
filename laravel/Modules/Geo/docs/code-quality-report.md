@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "code quality report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Code quality — modulo Geo
@@ -179,7 +178,7 @@ Metodi/classi oltre soglia (10 per metodo, 50 per classe) in questo modulo:
 - Modules/Geo/app/Adapters/HereClient.php:20                                                        CyclomaticComplexity      The method getDurationAndLength() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.
 - Modules/Geo/app/Console/Commands/SushiCommand.php:58                                              CyclomaticComplexity      The method refresh() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.
 - Modules/Geo/app/Datas/Photon/PhotonAddressData.php:32                                             CyclomaticComplexity      The method fromPhotonFeature() has a Cyclomatic Complexity of 16. The configured cyclomatic complexity threshold is 10.
-- Modules/Geo/app/Filament/Forms/Components/CoordinatePickerHelpers.php:94                  CyclomaticComplexity      The method reverseGeocode() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
+- Modules/Geo/app/Filament/Forms/Components/Support/CoordinatePickerHelpers.php:94                  CyclomaticComplexity      The method reverseGeocode() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 - Modules/Geo/app/Filament/Forms/Components/Traits/HasCoordinatePicker.php:271                      CyclomaticComplexity      The method reverseGeocode() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 - Modules/Geo/app/Filament/Forms/LocationForm.php:35                                                CyclomaticComplexity      The method getSchema() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
 - Modules/Geo/app/Models/Address.php:96                                                             ExcessiveClassComplexity  The class Address has an overall complexity of 51 which is very high. The configured complexity threshold is 50.

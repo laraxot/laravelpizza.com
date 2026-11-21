@@ -7,8 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "analysis"
 related:
-  - "./phpstan-fixes-archive-2.md"
-status: draft
+  - "./phpstan-fixes-archive-gennaio.md"
 ---
 # Job Module Analysis
 
@@ -33,7 +32,7 @@ Modules/Job/
 ### Models
 - Must extend BaseModel from the module's namespace
 - Follow Laravel Model Array Properties Rules
-- PHPStan compliance is governed by the central `laravel/phpstan.neon` configuration (`level: max`)
+- PHPStan Level 7 compliance required
 
 ### Features
 1. Core Job Management

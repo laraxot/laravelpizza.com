@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 use Illuminate\Support\Facades\Artisan;
+use Modules\Cms\Tests\TestCase;
 
 use function Safe\preg_match;
 use function Safe\preg_split;
+
+uses(TestCase::class);
 
 /**
  * Parse Folio routes from `artisan folio:list` output and return a list of path strings.

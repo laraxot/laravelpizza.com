@@ -29,7 +29,7 @@ discussions: []
 ---
 status: testing | complete | diagnosed
 phase: XX-name
-source: [list of SUMMARY.md files tested]
+source: [list of summary.md files tested]
 started: [ISO timestamp]
 updated: [ISO timestamp]
 ---
@@ -156,7 +156,7 @@ skipped: [N]
 <lifecycle>
 
 **Creation:** When /gsd-verify-work starts new session
-- Extract tests from SUMMARY.md files
+- Extract tests from summary.md files
 - Set status to "testing"
 - Current Test points to test 1
 - All tests have result: [pending]

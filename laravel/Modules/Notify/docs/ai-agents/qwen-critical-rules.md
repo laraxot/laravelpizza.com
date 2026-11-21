@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "qwen critical rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # QWEN Critical Rules
@@ -16,6 +15,15 @@ Regole critiche del progetto Base Predict.
 Regole critiche del progetto Base Forecast.
 
 ---
+
+title: "qwen critical rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "qwen critical rules"
+issues: []
+discussions: []
 ## 🔴 REGOLA 1: FILAMENT WIDGETS FOR LISTS
 
 ### Principio Core
@@ -167,6 +175,5 @@ namespace::context.collection.element.type
 
 - [Indice QWEN](./qwen-split-index.md)
 - [critical-rules.md](./critical-rules.md)
-- [QWEN.md originale](../../QWEN.md)
-- [QWEN.md originale](../QWEN.md)
+- [qwen.md originale](../../qwen.md)
 - [Index principale](./index.md)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module Wiki Index
@@ -17,10 +16,19 @@ status: draft
 > **Created**: 2026-04-15
 
 ---
+
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
 ## Concepts
 
-- [Litelement in JS only rule](../wiki/concepts/litelement-in-js-only-rule.md)
-- [No docs archive rule](../wiki/concepts/no-docs-archive-rule.md)
+- [Litelement in JS only rule](concepts/litelement-in-js-only-rule.md)
+- [No docs archive rule](concepts/no-docs-archive-rule.md)
 - [Wiki sacred structure rule](concepts/wiki-sacred-structure-rule.md)
 - [CoordinatePicker Architecture](concepts/coordinate-picker-architecture.md)
 

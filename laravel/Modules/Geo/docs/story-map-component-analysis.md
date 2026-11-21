@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "story map component analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi del Componente Mappa per Ticket Wizard

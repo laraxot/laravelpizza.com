@@ -1,14 +1,13 @@
 ---
-qmd: "progetto completato 100 percento.divergenza"
+qmd: "Progetto Completato 100 Percento.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: progetto-completato-100-percento.md"
+title: "Progetto Completato 100 Percento.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `progetto-completato-100-percento.md`

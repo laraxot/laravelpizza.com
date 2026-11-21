@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "lamp"
 issues: []
 discussions: []
-status: draft
 ---
 
 ext-sqlite3

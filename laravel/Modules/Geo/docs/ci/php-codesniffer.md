@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "php codesniffer"
 issues: []
 discussions: []
-status: draft
 ---
 
 [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)

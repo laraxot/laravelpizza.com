@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sms action factory resolution"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sms-action-factory-resolution.md
 ---
 
 # Risoluzione dinamica vs match esplicito in SmsActionFactory

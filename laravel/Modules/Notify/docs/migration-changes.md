@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migration changes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modifiche alla Migrazione Mail Templates

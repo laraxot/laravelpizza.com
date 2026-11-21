@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "comune sushi conversion"
 issues: []
 discussions: []
-status: superseded
-superseded_by: comune-sushi-conversion.md
 ---
 
 # Analisi: Conversione del Modello Comune a Laravel Sushi
@@ -400,4 +398,13 @@ Considerando l'analisi sopra, **raccomandiamo un'implementazione ibrida** che co
 L'implementazione ibrida rappresenta il miglior compromesso tra funzionalità Eloquent e prestazioni, mantenendo al contempo la compatibilità con il codice esistente.
 
 ---
+
+title: "comune sushi conversion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune sushi conversion"
+issues: []
+discussions: []
 *Documento creato il: 28/05/2025*

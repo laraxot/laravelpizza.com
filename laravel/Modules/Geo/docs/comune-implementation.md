@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "comune implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione del Modello Comune

@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "business logic overview"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../business-logic-overview.md
 ---
 # Media Module - Business Logic Overview
 

@@ -1,5 +1,5 @@
 ---
-title: "Lang: setup guide"
+title: "Lang — setup guide"
 type: note
 tags: [lang, setup, environment, i18n, localization, mcamara]
 created: 2026-09-28
@@ -11,10 +11,9 @@ related:
   - ./architecture/module-boundary.md
   - ../../composer.json
   - ../../module.json
-status: draft
 ---
 
-# Lang: setup guide
+# Lang — setup guide
 
 > **SUMMARY**: guida per configurare l'ambiente di sviluppo del modulo
 > `Modules\Lang`. Copre composer, provider, config, migrazioni e verifica.
@@ -88,7 +87,7 @@ php artisan module:migrate Lang
 | `2026_08_06_190100_create_translations_table.php` | `translations` | `database/migrations/` |
 
 Nota: `database/Migrations/` contiene una copia duplicata di
-`2024_03_20_000001_create_language_lines_table.php`: non migrare da lì.
+`2024_03_20_000001_create_language_lines_table.php` — non migrare da lì.
 
 ## Dipendenze esterne
 
@@ -152,5 +151,5 @@ Da evitare:
 
 - [README](./README.md)
 - [Quick reference](./quick-reference.md)
-- [Architettura: module boundary](./architecture/module-boundary.md)
+- [Architettura — module boundary](./architecture/module-boundary.md)
 - [Epic translation infra](./epics/translation-infrastructure.epic.md)

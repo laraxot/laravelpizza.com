@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "legacy roadmap complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🗺️ ROADMAP COMPLETA - Modulo CMS
@@ -24,6 +23,15 @@ Il modulo **CMS** (Content Management System) gestisce tutti i contenuti dinamic
 - **Storage**: JSON-based per flessibilità e performance
 
 ---
+
+title: "legacy roadmap complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap complete"
+issues: []
+discussions: []
 ## 🎯 Funzionalità Implementate
 
 ### ✅ Core Content Management

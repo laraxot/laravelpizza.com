@@ -1,13 +1,7 @@
 ---
+qmd: "lang wiki case variant collisions md"
 bmad: true
 module: Lang
-title: "Collisioni di nome per sola differenza di maiuscole"
-type: note
-updated: 2026-10-08
-tags: [docs, lang, wiki]
-qmd: "collisioni di nome per sola differenza di maiuscole lang"
-status: superseded
-superseded_by: ../case-variant-collisions.md
 ---
 # Collisioni di nome per sola differenza di maiuscole
 

@@ -1,3 +1,10 @@
+---
+title: "Security Guide - Activity"
+qmd: "activity tasks documentation security guide md"
+type: note
+tags: [documentation]
+---
+
 # Security Guide - Activity
 
 **Task ID**: ACTIVITY-DOC-002

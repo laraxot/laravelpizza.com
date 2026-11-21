@@ -76,7 +76,7 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-# Convenzione di Naming per le Interfacce 
+# Convenzione di Naming per le Interfacce
 
 ## Regola Fondamentale
 
@@ -206,11 +206,11 @@ grep -r "interface.*Contract" --include="*.php" Modules
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](laravel/docs/code-quality.md)
+- [PTVX Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [PTVX Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
@@ -276,24 +276,24 @@ grep -r "interface.*Contract" --include="*.php" Modules
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](laravel/docs/code-quality.md)
+- [PTVX Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
-- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [PTVX Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
@@ -405,7 +405,7 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-# Chiarimento sulla Struttura delle Interfacce 
+# Chiarimento sulla Struttura delle Interfacce
 
 ## Struttura Corretta per le Interfacce SMS
 
@@ -639,18 +639,18 @@ grep -r "interface.*Interface" --include="*.php" /var/www/_bases/<nome repositor
 
 # Cerca interfacce con naming corretto
 grep -r "interface.*Contract" --include="*.php" /var/www/_bases/<nome repository>/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules
 grep -r "interface.*Interface" --include="*.php" /var/www/html/saluteora/laravel/Modules
 
 # Cerca interfacce con naming corretto
 grep -r "interface.*Contract" --include="*.php" /var/www/html/saluteora/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules
 ```
 
 ## Riferimenti
@@ -658,9 +658,9 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
 - [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5/laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila5/laravel/Modules/Xot/app/Contracts/)
-- [<nome progetto> Code Quality Guidelines]([project-root]/laravel/docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [<nome progetto> Code Quality Guidelines]([project-root]/laravel/project_docs/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [<nome progetto> Code Quality Guidelines](../../ai-agents/code-quality.md)
@@ -672,9 +672,9 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [SaluteOra Code Quality Guidelines](/var/www/html/saluteora/laravel/project_docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/saluteora/laravel/Modules/Xot/app/Contracts/)
-- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/project_docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Contracts/)
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5/laravel/project_docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Xot/app/Contracts/)
 
 ---
 
@@ -902,7 +902,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // ✅ CORRETTO
    interface SmsActionContract
-   
+
    // ❌ ERRATO
    interface SmsActionInterface
    ```
@@ -911,7 +911,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // Per interfacce nella directory principale
    namespace Modules\Notify\Contracts;
-   
+
    // Per interfacce in sottodirectory
    namespace Modules\Notify\Contracts\SMS;
    ```
@@ -943,7 +943,7 @@ use Modules\Notify\Datas\SmsData;
 final class SendNetfunSMSAction implements SmsActionContract
 {
     // Implementazione...
-    
+
     public function execute(SmsData $smsData): array
     {
         // Logica di invio SMS...
@@ -1432,7 +1432,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // ✅ CORRETTO
    interface SmsActionContract
-   
+
    // ❌ ERRATO
    interface SmsActionInterface
    ```
@@ -1441,7 +1441,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // Per interfacce nella directory principale
    namespace Modules\Notify\Contracts;
-   
+
    // Per interfacce in sottodirectory
    namespace Modules\Notify\Contracts\SMS;
    ```
@@ -1473,7 +1473,7 @@ use Modules\Notify\Datas\SmsData;
 final class SendNetfunSMSAction implements SmsActionContract
 {
     // Implementazione...
-    
+
     public function execute(SmsData $smsData): array
     {
         // Logica di invio SMS...

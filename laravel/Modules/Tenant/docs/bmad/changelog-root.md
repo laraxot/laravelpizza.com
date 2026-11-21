@@ -7,8 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "changelog root"
 related:
-  - "../phpstan-corrections-january.md"
-status: draft
+  - "./phpstan-corrections-january.md"
 ---
 # Changelog
 

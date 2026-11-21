@@ -1,13 +1,21 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_ZaKB4v
 
+=======
+>>>>>>> .merge_file_5lb2pD
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ResolveLogDirectoryAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
+<<<<<<< .merge_file_ZaKB4v
 use Modules\Activity\Tests\TestCase;
 use Safe\Exceptions\FilesystemException;
+=======
+use Safe\Exceptions\FilesystemException;
+use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_5lb2pD
 
 use function Safe\realpath;
 use function Safe\symlink;

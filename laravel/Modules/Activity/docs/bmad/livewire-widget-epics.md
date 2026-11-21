@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_ba4OlE
 title: "Epics — Activity"
+=======
+>>>>>>> .merge_file_roodkA
 title: "Epics: Activity"
 type: epics
 module: Activity

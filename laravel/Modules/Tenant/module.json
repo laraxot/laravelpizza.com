@@ -1,16 +1,17 @@
 {
     "name": "Tenant",
     "alias": "tenant",
-    "description": "",
+    "description": "Modulo multi-tenancy: istanza applicativa unica con piu tenant, domini e isolamento dei dati",
     "keywords": [],
-    "priority": 2,
+    "priority": 0,
     "active": 1,
     "order": 2,
     "providers": [
         "Modules\\Tenant\\Providers\\TenantServiceProvider",
         "Modules\\Tenant\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "aliases": [],
+    "aliases": {},
     "files": [],
-    "requires": []
+    "requires": ["Xot", "User", "UI"],
+    "phpVersion": "^8.3"
 }

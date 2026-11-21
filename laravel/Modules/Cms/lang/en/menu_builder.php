@@ -47,7 +47,7 @@ return [
             'label' => 'Link',
         ],
         'class_css' => [
-            'label' => 'Class CSS (optional)',
+            'label' => 'CSS Class (optional)',
         ],
         'move' => [
             'label' => 'Move',

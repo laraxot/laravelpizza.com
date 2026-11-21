@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/title.php
 // Cms txt.fields.title — LangServiceProvider SSoT.
 return [
-    'label' => 'Titolo',
-    'placeholder' => 'Inserisci il titolo principale',
-    'help' => 'Titolo principale',
-    'helper_text' => 'Titolo che apparirà come intestazione principale',
+    'label' => 'Title',
+    'placeholder' => 'Enter the main title',
+    'help' => 'Main title',
+    'helper_text' => 'Title that will appear as the main heading',
     'tooltip' => '',
     'description' => '',
 ];

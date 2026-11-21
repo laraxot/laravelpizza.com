@@ -12,10 +12,12 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 uses(TestCase::class);
 
-test('snapshot getConnectionName resolves activity connection', function (): void {
+test('snapshot getConnectionName resolves the default connection in testing', function (): void {
     $snapshot = new Snapshot;
 
-    Assert::assertSame('activity', $snapshot->getConnectionName());
+    // In testing i modelli event-sourcing usano la connessione di default
+    // (la 'activity' non esiste in config/database.php di test).
+    Assert::assertSame(config('database.default'), $snapshot->getConnectionName());
 });
 
 test('snapshot has expected table and fillable fields', function (): void {
@@ -27,10 +29,10 @@ test('snapshot has expected table and fillable fields', function (): void {
     Assert::assertContains('state', $fillable);
 });
 
-test('stored event constructor aligns activity connection', function (): void {
+test('stored event constructor aligns the default connection in testing', function (): void {
     $storedEvent = new StoredEvent;
 
-    Assert::assertSame('activity', $storedEvent->getConnectionName());
+    Assert::assertSame(config('database.default'), $storedEvent->getConnectionName());
 });
 
 test('stored event has expected casts and metadata behavior', function (): void {

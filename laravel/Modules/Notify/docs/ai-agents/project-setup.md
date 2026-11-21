@@ -7,13 +7,11 @@ updated: 2026-09-26
 qmd: "project setup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Project setup and running
 
 > Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md)
-> Source: [IFLOW.md](../../../../../bashscripts/ai/IFLOW.md)
 > Back: [index](index.md)
 
 ## Prerequisites

@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione Conflitti nel Modulo Tenant"
+module: "Tenant"
+type: concept
+tags: [risoluzione, conflitti]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "risoluzione conflitti"
+related:
+  - "./phpstan-corrections-january.md"
+---
 # Risoluzione Conflitti nel Modulo Tenant
 
 Questo documento descrive i conflitti Git risolti nel modulo Tenant, con particolare attenzione ai file critici e alle strutture di namespace.
@@ -153,6 +166,6 @@ Questo errore indica che ci sono ancora conflitti git non risolti in altri modul
 
 ## Collegamenti Utili
 
-- [Documentazione Principale Tenant](module_tenant.md)
+- [Documentazione Principale Tenant](archive/module_tenant.md)
 - [Rapporti PHPStan](phpstan/)
 - [Panoramica della Risoluzione dei Conflitti](../../../../docs/risoluzione_conflitti_git.md)

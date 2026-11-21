@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "feature sections"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Feature Sections Block
@@ -91,5 +90,5 @@ Builder::make('content')
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [UI Components](../components.md)
+- [UI Components](../ui/components.md)
 - [Heroicons](https://heroicons.com/)

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "login"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../-integration/login.md
 ---
 
 # login

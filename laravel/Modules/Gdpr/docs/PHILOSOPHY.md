@@ -1,4 +1,7 @@
 ---
+qmd: "PHILOSOPHY"
+issues: []
+discussions: []
 title: "GDPR Module Philosophy"
 description: "Core principles, architecture, and compliance philosophy of the FixCity GDPR module"
 type: philosophy

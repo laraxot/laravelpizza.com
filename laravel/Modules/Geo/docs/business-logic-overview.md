@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "business logic overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module - Business Logic Overview

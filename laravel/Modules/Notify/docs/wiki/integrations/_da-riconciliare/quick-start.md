@@ -502,8 +502,8 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Documentazione
 - **[Indice Documentazione](./documentation-index.md)**
-- **[Roadmap Status](./roadmap-status-summary.md)**
-- **[Documentation Status](./project_docs/documentation-status.md)**
+- **[Roadmap Status](../../../roadmap-status-summary.md)**
+- **[Documentation Status](../../../project_docs/documentation-status.md)**
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 
@@ -514,7 +514,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
-- **[Code Quality](./.windsurf/rules/code-quality.md)**
+- **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
@@ -560,7 +560,7 @@ documentazione del modulo specifico o chiedi supporto al team.*
 
 ---
 
-<!-- Merged from QUICK-START.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from quick-start.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Notify Module Quick Start"

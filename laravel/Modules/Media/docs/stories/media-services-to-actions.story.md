@@ -37,7 +37,7 @@ uso, cancellati insieme agli originali):
 - `SubtitleService.php`
 - `VideoStream.php`
 
-## Scoperta iniziale: il lavoro pesante era gia' fatto
+## Scoperta iniziale — il lavoro pesante era gia' fatto
 
 Prima di editare, `git status --short` + lettura del codice hanno mostrato che
 **un'altra sessione concorrente aveva gia' completato la conversione Kind A**
@@ -48,14 +48,14 @@ analyse Modules a zero errori`, `0593e8c4 Reduce mixed type usage in Media modul
 - `VideoStream::__construct()` + `start()` → `Modules\Media\Actions\Stream\StreamVideoAction`
   (`execute(string $disk, string $path, ?Media $media = null): void`, `use QueueableAction`).
   Aggiunge anche un controllo di autorizzazione (`Auth::check()` + owner/`super-admin`)
-  assente nell'originale: non toccato, fuori scope di questa story.
+  assente nell'originale — non toccato, fuori scope di questa story.
 - `SubtitleService::getFromXml()`/`get()` → `Modules\Media\Actions\Subtitle\ParseSubtitleXmlAction::execute(string $filePath): array`
 - `SubtitleService::getPlain()` → `Modules\Media\Actions\Subtitle\ExtractSubtitlePlainTextAction::execute(string $filePath): string`
 - `SubtitleService::upateModel()` → `Modules\Media\Actions\Subtitle\UpdateModelSubtitleFieldAction::execute(Model $model, string $filePath, string $fieldName = 'txt'): Model`
   (compone `ExtractSubtitlePlainTextAction` via `app(...)->execute()`, come da regola)
 
 Nessun call site di produzione usava piu' `Modules\Media\Services\SubtitleService`
-o `Modules\Media\Services\VideoStream`: confermato con grep sull'intero albero
+o `Modules\Media\Services\VideoStream` — confermato con grep sull'intero albero
 `Modules/` (nessun'altra modulo referenzia queste classi). Gli unici referenziatori
 rimasti erano 3 blocchi di test dentro lo stesso modulo Media.
 
@@ -65,8 +65,8 @@ rimasti erano 3 blocchi di test dentro lo stesso modulo Media.
 |---|---|---|---|---|
 | `app/Services/VideoStream.php` | A (god-facade a 2 responsabilita': init + streaming) | `__construct`+`start()` → `Modules\Media\Actions\Stream\StreamVideoAction::execute()` | Gia' migrato da altra sessione, Service ancora presente e referenziato solo dai test | Cancellata la classe Service; aggiornati i 2 test che la istanziavano direttamente |
 | `app/Services/SubtitleService.php` | A (god-facade, 6 metodi pubblici indipendenti) | `getFromXml`/`get` → `ParseSubtitleXmlAction`; `getPlain` → `ExtractSubtitlePlainTextAction`; `upateModel` → `UpdateModelSubtitleFieldAction`; `setFilePath`/`setModel`/`getModel`/`srtToVtt`/`getInstance`/`make` → non migrati (statici singleton/setter, non usati da nessun caller di produzione) | Gia' migrato da altra sessione | Cancellata la classe Service |
-| `app/Actions/Stream/SubtitleService.php` | Scarto: duplicato residuo, non un Kind A/B valido | n/a | Copia letterale e non convertita di `app/Services/SubtitleService.php`, lasciata sotto `app/Actions/Stream/` senza `QueueableAction` ne' `execute()` (probabile file intermedio dimenticato dalla sessione che ha fatto la migrazione) | Cancellata: per la regola stessa ("una classe senza un vero execute() non vive in Actions/"), un duplicato statico del vecchio Service non ha nessun titolo per stare in `Actions/` |
-| `app/Services/SubtitleService.php.bak`, `app/Services/VideoStream.php.bak` | Scarto: backup orfani | n/a | Copie `.bak` tracciate in git, mai referenziate da nessun autoload/require | Cancellate insieme agli originali |
+| `app/Actions/Stream/SubtitleService.php` | Scarto — duplicato residuo, non un Kind A/B valido | n/a | Copia letterale e non convertita di `app/Services/SubtitleService.php`, lasciata sotto `app/Actions/Stream/` senza `QueueableAction` ne' `execute()` (probabile file intermedio dimenticato dalla sessione che ha fatto la migrazione) | Cancellata: per la regola stessa ("una classe senza un vero execute() non vive in Actions/"), un duplicato statico del vecchio Service non ha nessun titolo per stare in `Actions/` |
+| `app/Services/SubtitleService.php.bak`, `app/Services/VideoStream.php.bak` | Scarto — backup orfani | n/a | Copie `.bak` tracciate in git, mai referenziate da nessun autoload/require | Cancellate insieme agli originali |
 
 Nessun file era Kind B (nessuno strategy/handler/adapter registrato in questo
 gruppo).
@@ -90,20 +90,20 @@ gruppo).
        `MediaCoverage100RemainingTest.php` via `StreamVideoAction`; il ramo
        "successo" non e' riproducibile su `StreamVideoAction::execute()` senza
        isolare il processo (chiama `exit()` a fine streaming, a differenza del
-       vecchio `VideoStream` che separava costruzione da `start()`): nessuna
+       vecchio `VideoStream` che separava costruzione da `start()`) — nessuna
        perdita di garanzie comportamentali verificabili in test;
      - test `'stream SubtitleService parses xml like the domain service'`
        (che usava il duplicato residuo `Modules\Media\Actions\Stream\SubtitleService`)
        sostituito con `'UpdateModelSubtitleFieldAction extracts the plain text
-       and stores it on the model field'`: nuova copertura reale per
+       and stores it on the model field'` — nuova copertura reale per
        `UpdateModelSubtitleFieldAction`, prima non testata.
    - `tests/Unit/MediaCoverage100RemainingTest.php`: rimosso
      `use Modules\Media\Services\VideoStream;` e il ramo del test che
      istanziava `new VideoStream(...)`, mantenuto il ramo equivalente su
      `StreamVideoAction::execute()` (test rinominato
      `'StreamVideoAction rifiuta un path inesistente sul disco'`).
-3. `secondsToHms()`: privato sia nel vecchio `SubtitleService` sia nel nuovo
-   `ParseSubtitleXmlAction`: resta coperto indirettamente dal test
+3. `secondsToHms()` — privato sia nel vecchio `SubtitleService` sia nel nuovo
+   `ParseSubtitleXmlAction` — resta coperto indirettamente dal test
    `'timecodes carry hours, minutes and milliseconds'` gia' presente in
    `tests/Unit/Actions/Subtitle/ParseSubtitleXmlActionTest.php`: nessuna
    perdita di copertura nel passaggio dal test via Reflection rimosso.
@@ -121,7 +121,7 @@ gruppo).
 - **Pest**: `./vendor/bin/pest Modules/Media/tests -c Modules/Media/phpunit.xml
   --no-coverage` → 288 passed, 6 failed, 1 risky, 4 skipped. I 6 fallimenti
   sono su `Modules/Media/tests/Unit/Models/MediaModelTest.php`,
-  `MediaTest.php` e `MediaFilamentAndActionsTest.php`: tutti relativi a cast
+  `MediaTest.php` e `MediaFilamentAndActionsTest.php` — tutti relativi a cast
   del model `Media` (`id`/`uuid`/`user_id`) e a conteggi su query DB
   (`toHaveCount`), nessuno tocca `SubtitleService`, `VideoStream`,
   `StreamVideoAction` o le Actions `Subtitle/*`; nessuno di questi file e'
@@ -132,13 +132,13 @@ gruppo).
 
 ## File toccati in questa sessione
 
-- `app/Services/SubtitleService.php`: cancellato
-- `app/Services/SubtitleService.php.bak`: cancellato
-- `app/Services/VideoStream.php`: cancellato
-- `app/Services/VideoStream.php.bak`: cancellato
-- `app/Actions/Stream/SubtitleService.php`: cancellato (duplicato residuo)
-- `tests/Unit/MediaHighestMissCoverageTest.php`: aggiornato
-- `tests/Unit/MediaCoverage100RemainingTest.php`: aggiornato
+- `app/Services/SubtitleService.php` — cancellato
+- `app/Services/SubtitleService.php.bak` — cancellato
+- `app/Services/VideoStream.php` — cancellato
+- `app/Services/VideoStream.php.bak` — cancellato
+- `app/Actions/Stream/SubtitleService.php` — cancellato (duplicato residuo)
+- `tests/Unit/MediaHighestMissCoverageTest.php` — aggiornato
+- `tests/Unit/MediaCoverage100RemainingTest.php` — aggiornato
 
 Nessun altro modulo referenziava le classi Service di Media: nessun commit
 cross-modulo necessario.

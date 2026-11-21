@@ -1,32 +1,33 @@
 ---
 title: "header nav block architecture"
 type: note
-tags: [documentation, blocks]
+tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-20
+updated: 2026-09-26
 qmd: "header nav block architecture"
 issues: []
 discussions: []
-status: active
-related:
-  - ../../00-index.md
-  - ../../scopo.md
-  - ../../content-blocks-architecture.md
-  - ./headernavblock-filament-builder.md
 ---
 
 # Header Nav Block Architecture
 
-Indice: [../../00-INDEX.md](../../00-index.md) · scopo: [../../scopo.md](../../scopo.md) · builder: [headernavblock-filament-builder.md](./headernavblock-filament-builder.md).
-
-**Perché:** se il dato varia per tenant/comune, sta nel JSON — non nel Blade.
-
-**Modulo:** Cms
+**Modulo:** Cms  
+**Story:** 8-107  
+**Data:** 2026-05-04
 
 ---
+
+title: "header nav block architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header nav block architecture"
+issues: []
+discussions: []
 ## Visione
 
-Il sito è un CMS headless basato su **blocchi JSON**. Ogni sezione (`header`, `footer`, `sidebar`, ...) è un record `Section` che aggrega blocchi. I blocchi sono dati puri — nessun link hardcoded nel Blade.
+Il sito FixCity è un CMS headless basato su **blocchi JSON**. Ogni sezione del sito (`header`, `footer`, `sidebar`, ...) è un record `Section` che aggrega blocchi di contenuto. I blocchi sono dati puri — nessun link hardcoded nel codice Blade.
 
 **Regola fondamentale:** se il dato può variare da un Comune all'altro, DEVE stare nel JSON, non nel Blade.
 

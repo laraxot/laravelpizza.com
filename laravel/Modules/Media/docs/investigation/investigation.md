@@ -1,11 +1,8 @@
 ---
+qmd: "media investigation investigation md"
 type: investigation
 title: "Investigation Media Optimization Workflow"
-links: {github_issue: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, media, investigation]
-qmd: "investigation: media optimization workflow media"
+links: {github_issue: #XXX}
 ---
 # Investigation: Media Optimization Workflow
 

@@ -6,7 +6,10 @@ namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */

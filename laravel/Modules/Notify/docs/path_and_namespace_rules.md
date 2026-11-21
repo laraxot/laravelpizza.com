@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "path and namespace rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole per Path e Namespace nel Modulo Notify
@@ -167,4 +166,13 @@ namespace Modules\Notify\App\Console\Commands;
 > **Nota:** Anche per i comandi console, il namespace non deve mai includere il segmento `App`.
 
 ---
+
+title: "path and namespace rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "path and namespace rules"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2025-05-12*

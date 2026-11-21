@@ -16,8 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: superseded
-superseded_by: ../translations-structure-template.md
 ---
 # Template di Struttura per le Traduzioni
 

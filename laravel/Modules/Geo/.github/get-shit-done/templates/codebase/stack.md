@@ -187,7 +187,7 @@ discussions: []
 
 **What does NOT belong here:**
 - File structure (that's STRUCTURE.md)
-- Architectural patterns (that's ARCHITECTURE.md)
+- Architectural patterns (that's architecture.md)
 - Every dependency in package.json (only critical ones)
 - Implementation details (defer to code)
 

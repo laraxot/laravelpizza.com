@@ -1,11 +1,10 @@
 ---
 title: "bad practices"
+qmd: "media wiki bad practices md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, media, wiki]
-qmd: "bad practices media"
+tags: [documentation]
 ---
+
 ```
 
 ```

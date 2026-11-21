@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module analysis and optimization plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Module Analysis and Optimization Plan

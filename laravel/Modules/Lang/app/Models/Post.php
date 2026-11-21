@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 // --- traits ---
 // use Laravel\Scout\Searchable;
+<<<<<<< .merge_file_mKhe8Z
+=======
+use Illuminate\Support\Str;
+>>>>>>> .merge_file_XThIRG
 use Modules\Lang\Models\Traits\PostMutators;
 use Modules\Lang\Models\Traits\PostRelations;
 use Modules\Xot\Contracts\ProfileContract;

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "assets"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione degli Assets dei Temi
@@ -45,12 +44,20 @@ status: draft
 
 1. **Sviluppo**
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_c3m5Ki
+=======
+
+>>>>>>> .merge_file_YSQJQI
    - Utilizzare `npm run dev`
    - Verificare il corretto caricamento degli assets
    - Mantenere la documentazione aggiornata
 
 2. **Produzione**
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_c3m5Ki
+=======
+
+>>>>>>> .merge_file_YSQJQI
    - Eseguire `npm run build` (servito via symlink, niente copy)
    - Verificare la presenza e l'accessibilità degli assets
    - Testare il funzionamento completo del tema

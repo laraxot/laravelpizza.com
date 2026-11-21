@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test enhanced"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sourcing di Eventi in Laravel
@@ -19,6 +18,15 @@ Di Brent Roose
 **EVENT-SOURCING-LARAVEL.COM | SPATIE**
 
 ---
+
+title: "test enhanced"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test enhanced"
+issues: []
+discussions: []
 ## Introduzione all'Sourcing di Eventi in Laravel
 
 **Un corso pratico per iniziare a utilizzare l'event sourcing in applicazioni di grandi dimensioni.**

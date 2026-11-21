@@ -10,7 +10,6 @@ title: Configurazione progetti
 description: Configurazione progetti
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Configurazione progetti {#configurazione-progetti}

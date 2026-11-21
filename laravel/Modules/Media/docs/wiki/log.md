@@ -2,24 +2,21 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-09-26
 qmd: "log"
 issues: []
 discussions: []
 title: "Media Wiki Activity Log"
 module: "Media"
-status: draft
 ---
 
 # Media - Wiki Activity Log
 
-## [2026-10-14] docs | Ingressi del modulo verificati sul codice
+## [2026-11-16] phpstan | intervention image v4
 
-- `README.md`, `00-INDEX.md`, `INDEX.md`, `architecture.md` riscritti nelle parti false con evidenza: `app/Services` non esiste, `Tenant` non e' usato in `app/`, HLS/DASH e watermark assenti, 4 Model (non 8), 5 migrazioni, 41 file in `app/Filament`, 124 file PHP in `app/`.
-- `ARCHITECTURE.md` marcato `stale` (cita `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`, tutte assenti).
-- `00-index.md`, `wiki/00-index.md`, `wiki/00-INDEX.md`, `wiki/index.md`: copie per variante di maiuscole marcate `superseded` verso l'indice canonico; `index.md` (bridge) con i link a file inesistenti ridotti a testo.
-- `vendor/bin/phpstan analyse Modules/Media` da `laravel/`: exit 0. Pest non eseguito.
-- Story: [2026-10-14 Ingressi docs Media](../stories/docs-ingressi-media.story.md).
+- Gate Media: 27 errori (soprattutto `class.notFound` su `Intervention\Image\*`) → 0.
+- Causa: mismatch layout vendor v2 vs autoload v4.4.1; azioni Image allineate ad API v4.
+- Story: [intervention-image-phpstan.md](../stories/intervention-image-phpstan.md).
 
 ## [2026-05-27] lint | phpstan zero
 
@@ -35,7 +32,7 @@ status: draft
 ## [2026-05-11] Wiki Structure Created
 
 - Created wiki structure: rules/, skills/, commands/, memories/, concepts/
-- Created INDEX.md for each section
+- Created index.md for each section
 - Created module index.md
 - Ready for on-demand loading via QMD
 

@@ -1,3 +1,14 @@
+---
+title: "conflict resolution 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution 1"
+issues: []
+discussions: []
+---
+
 # Risoluzione Conflitti Git - Modulo Geo
 
 ## Data: 2025-01-06
@@ -151,6 +162,14 @@ php artisan lang:check
 
 ---
 
+title: "conflict resolution 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "conflict resolution 1"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato

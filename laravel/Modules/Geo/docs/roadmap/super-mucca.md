@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "super mucca"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Roadmap: Super Mucca Transition 🐄✨

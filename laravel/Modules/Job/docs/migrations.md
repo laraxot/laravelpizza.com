@@ -7,10 +7,9 @@ updated: 2026-09-26
 qmd: "migrations"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Job Module: Migrations Documentation
+# Job Module — Migrations Documentation
 
 ## Overview
 
@@ -18,9 +17,18 @@ This document describes the migration strategy for the Job module, which manages
 
 **Module Path:** `laravel/Modules/Job/`
 
-**Parity Status:** 15 concrete models, 14 migrations: full parity (as of 2026-07-24). The only remaining "gap", `JobsWaiting`, is an intentional subclass of `Job` that shares the `jobs` table.
+**Parity Status:** 15 concrete models, 14 migrations — full parity (as of 2026-07-24). The only remaining "gap", `JobsWaiting`, is an intentional subclass of `Job` that shares the `jobs` table.
 
 ---
+
+title: "migrations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "migrations"
+issues: []
+discussions: []
 ## Philosophy
 
 Each migration represents the schema lifecycle for one or more models. Migrations follow the **XotBaseMigration pattern**:
@@ -49,12 +57,12 @@ Each migration represents the schema lifecycle for one or more models. Migration
 | 11 | `Import` | ✓ Migrated | `2024_01_01_000002_create_imports_table.php` | `imports` | Bulk import records |
 | 12 | `Export` | ✓ Migrated | `2024_03_12_082158_create_exports_table.php` | `exports` | Export tracking (Filament) |
 | 13 | `FailedImportRow` | ✓ Migrated | `2024_03_12_082158_create_failed_import_rows_table.php` | `failed_import_rows` | Failed import rows audit |
-|: | **Base Classes** |: |: |: |: |
-|: | `BaseModel` (abstract) |: |: |: | Base for all Job models |
-|: | `BaseMorphPivot` (abstract) |: |: |: | Polymorphic pivot base |
-|: | **Aliases (no table)** |: |: |: |: |
+| — | **Base Classes** | — | — | — | — |
+| — | `BaseModel` (abstract) | — | — | — | Base for all Job models |
+| — | `BaseMorphPivot` (abstract) | — | — | — | Polymorphic pivot base |
+| — | **Aliases (no table)** | — | — | — | — |
 | 14 | `JobsWaiting` | ⊂ Job | (same as Job) | `jobs` | Alias for `Job` model; uses `jobs` table |
-|: | **Missing Migrations** | ✗ NO |: |: |: |
+| — | **Missing Migrations** | ✗ NO | — | — | — |
 | 14 | `TaskComment` | ✓ Migrated | `2026_07_24_000000_create_task_comments_table.php` | `task_comments` | Created 2026-07-24 (was missing) |
 
 ---
@@ -64,7 +72,7 @@ Each migration represents the schema lifecycle for one or more models. Migration
 ### Summary
 - **Concrete models:** 15 (14 with own migration + 1 intentional table-sharing subclass)
 - **Migrations:** 14
-- **Mismatch:** 0 (parity reached: `JobsWaiting` shares `Job`'s table by design)
+- **Mismatch:** 0 (parity reached — `JobsWaiting` shares `Job`'s table by design)
 
 ### Breakdown
 
@@ -92,10 +100,10 @@ Each migration represents the schema lifecycle for one or more models. Migration
 - Status: ✓ EXPECTED (no separate table needed)
 - Action: No migration required
 
-**2. TaskComment** (standalone): RESOLVED
+**2. TaskComment** (standalone) — RESOLVED
 - Parent: `BaseModel`
 - Table: `task_comments` (declared in model)
-- Status: ✓ **RESOLVED (2026-07-24)**: migration created
+- Status: ✓ **RESOLVED (2026-07-24)** — migration created
 - Migration: `2026_07_24_000000_create_task_comments_table.php`
 - Columns: `id`, `task_id` (unsignedInteger, matches `tasks.increments`), `user_id` (unsignedBigInteger, nullable), `comment` (text) + audit/soft-delete columns via `updateTimestamps(hasSoftDeletes: true)`
 
@@ -192,7 +200,7 @@ $this->tableUpdate(function (Blueprint $table): void {
 
 ## Known Issues
 
-### 1. TaskComment: Missing Migration (RESOLVED 2026-07-24)
+### 1. TaskComment — Missing Migration (RESOLVED 2026-07-24)
 - **Status:** ✓ RESOLVED
 - **Model Path:** `app/Models/TaskComment.php`
 - **Resolution:** Created `2026_07_24_000000_create_task_comments_table.php` following the XotBaseMigration pattern (filename → model auto-resolution → `task_comments` table).

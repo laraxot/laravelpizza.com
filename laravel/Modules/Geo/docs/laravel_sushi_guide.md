@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "laravel sushi guide"
 issues: []
 discussions: []
-status: superseded
-superseded_by: laravel-sushi-guide.md
 ---
 
 # Laravel Sushi: Guida Completa

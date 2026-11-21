@@ -12,9 +12,12 @@ use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Cms\Tests\Feature\Dcp283AllowViewPolicy;
 use Modules\Cms\Tests\Feature\Dcp283DenyViewPolicy;
 use Modules\Cms\Tests\Feature\Dcp283Item;
+use Modules\Cms\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 // Il test usa il TestCase del modulo: eredita il bootstrap applicativo root e
 // mantiene un solo binding Pest per la directory Cms.

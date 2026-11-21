@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "volt livewire component boundaries"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Volt And Livewire Component Boundaries

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "compaction fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix per "Compaction exhausted: context still exceeds model limits after 3 attempts"

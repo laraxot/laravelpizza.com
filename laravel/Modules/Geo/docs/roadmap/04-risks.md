@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "04 risks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risks and dependencies (Module Geo)

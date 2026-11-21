@@ -12,7 +12,6 @@ discussions:
   - "https://github.com/provtv/base_ptv_fila5/discussions/219"
 related:
   - "../../../../../docs/HEADROOM-INTEGRATION.md"
-status: draft
 ---
 
 # Headroom - Modulo Notify

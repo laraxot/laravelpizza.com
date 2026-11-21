@@ -6,16 +6,15 @@ module: "Media"
 type: concept
 tags: [conflict, resolution, convertvideobymediaconvertaction]
 created: 2026-07-14
-updated: 2026-10-23
+updated: 2026-07-14
 qmd: "conflict resolution convertvideobymediaconvertaction"
 related:
   - "./webm.md"
-status: draft
 ---
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
-**File**: `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+**File**: `/var/www/html/ptvx/laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
 **Linee**: 49-53
 **Tipo**: Conflitto di annotazione PHPStan
 
@@ -83,10 +82,10 @@ FFMpeg::fromDisk($data->disk)
 **Anti-pattern**: Uso di annotazioni generiche quando sono disponibili annotazioni specifiche
 
 ## Collegamenti
-- [Media Module Documentation](module-media.md)
+- [Media Module Documentation](module_media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
 ---

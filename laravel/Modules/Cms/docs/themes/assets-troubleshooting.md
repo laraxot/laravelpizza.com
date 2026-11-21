@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "assets troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Problemi con Assets dei Temi
@@ -39,8 +38,8 @@ Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione
 
 ## Collegamenti Rilevanti
 
-- [Processo di Build dei Temi](../theme-build-process.md)
-- [Compilazione dei Temi](../theme-compilation.md)
+- [Processo di Build dei Temi](theme-build-process.md)
+- [Compilazione dei Temi](theme_compilation.md)
 - [Documentazione Principale Vite](/docs/vite_assets_troubleshooting.md)
 
 ## Comandi Utili
@@ -70,6 +69,10 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 3. **Ambiente di Sviluppo**
    - In sviluppo: utilizzare `npm run dev`
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_HXFtrb
+=======
+
+>>>>>>> .merge_file_PoKlPA
    - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
 
 Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

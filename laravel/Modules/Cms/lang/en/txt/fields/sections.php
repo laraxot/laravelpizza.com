@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/sections.php
 // Cms txt.fields.sections — LangServiceProvider SSoT.
 return [
-    'label' => 'Sezioni',
-    'help' => 'Elenco delle sezioni',
-    'placeholder' => 'Sezioni che compongono la pagina',
-    'helper_text' => 'Sezioni principali che strutturano il contenuto',
+    'label' => 'Sections',
+    'help' => 'List of sections',
+    'placeholder' => 'Sections that make up the page',
+    'helper_text' => 'Main sections that structure the content',
     'tooltip' => '',
     'description' => '',
 ];

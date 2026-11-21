@@ -3,11 +3,10 @@ title: "filament slug generation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-23
+updated: 2026-09-26
 qmd: "filament slug generation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Generazione di Slug in Filament
@@ -126,7 +125,7 @@ TextInput::make('name')
 
 ### 1. Form Resource
 ```php
-public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+public static function form(Form $form): Form
 {
     return $form
         ->schema([

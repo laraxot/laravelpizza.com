@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "migrazione filament 4"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Case Sensitivity Rules - Lang Module
 
@@ -26,7 +25,7 @@ I seguenti file/directory sono stati eliminati perché violavano le regole:
 
 ```
 ✗ Removed: database/Migrations/ (entire directory)
-✗ Removed: database/migrations/Migrations/ (nested anti-pattern: 2026-07-01)
+✗ Removed: database/migrations/Migrations/ (nested anti-pattern — 2026-07-01)
 ✓ Kept:    database/migrations/ (flat, solo file .php)
 ```
 

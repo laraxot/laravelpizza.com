@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Illuminate\Support\Facades\File;
 use Illuminate\Translation\ArrayLoader;
 use Illuminate\View\View;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -37,6 +40,7 @@ use Modules\Lang\View\Composers\ThemeComposer;
 use Modules\Xot\Actions\GetViewAction;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
+use RuntimeException;
 
 use function Safe\mkdir;
 use function Safe\rmdir;
@@ -150,12 +154,24 @@ describe('Lang coverage boost — Filament static', function (): void {
 });
 
 describe('Lang coverage boost — UI and data', function (): void {
+    /*
+     * Il form del traduttore ha due sezioni: `file` (nome e chiave in sola lettura) e `content`
+     * (una casella per ogni testo, chiave = percorso con i punti). Fino a novembre 2026 il form
+     * aveva il solo campo `name` e il test lo cercava ancora al primo livello.
+     *
+     * @see Modules/Lang/docs/translation-file-editor.md
+     */
     test('translation file schemas and pages build executable structures', function (): void {
         $formSchema = (new TranslationFileForm)->getFormSchema();
         $infolistSchema = (new TranslationFileInfolist)->getInfolistSchema();
         $tableColumns = (new TranslationFilesTable)->getTableColumns();
 
-        Assert::assertArrayHasKey('name', $formSchema);
+        Assert::assertSame(['file', 'content'], array_keys($formSchema));
+        $contentFields = TranslationFileForm::fieldsFromArray(['title' => 'Ciao', 'meta' => ['description' => 'Mondo']], 'content');
+        Assert::assertCount(2, $contentFields);
+        Assert::assertInstanceOf(TextInput::class, $contentFields[0]);
+        Assert::assertSame('content.title', $contentFields[0]->getName());
+        Assert::assertInstanceOf(Section::class, $contentFields[1]);
         Assert::assertArrayHasKey('id', $infolistSchema);
         Assert::assertArrayHasKey('path', $tableColumns);
 
@@ -316,7 +332,23 @@ describe('Lang coverage boost — Post accessors', function (): void {
 
 describe('Lang coverage boost — Sync and routes', function (): void {
     test('SyncTranslationsAction processes Lang module lang files', function (): void {
-        $result = app(SyncTranslationsAction::class)->execute('it', ['en'], 'Lang');
+        // L'azione riscrive davvero Modules/Lang/lang/en: si salva la cartella e la si rimette com'era, altrimenti
+        // ogni giro dei test lasciava in git decine di file riscritti (senza declare(strict_types=1)).
+        $enDir = base_path('Modules/Lang/lang/en');
+        $backup = sys_get_temp_dir().'/lang-en-backup-'.uniqid('', true);
+        File::copyDirectory($enDir, $backup);
+        try {
+            $result = app(SyncTranslationsAction::class)->execute('it', ['en'], 'Lang');
+        } finally {
+            // Copia, non moveDirectory(): rename() fallisce in silenzio fra filesystem diversi (/tmp in tmpfs) e il
+            // 2026-11-19 ha lasciato Modules/Lang/lang/en cancellata con il backup rimasto in /tmp.
+            // @see Modules/Lang/docs/testing.md#test-che-riscrivono-lang
+            File::deleteDirectory($enDir);
+            if (! File::copyDirectory($backup, $enDir)) {
+                throw new RuntimeException('Ripristino di '.$enDir.' fallito: il backup e\' in '.$backup);
+            }
+            File::deleteDirectory($backup);
+        }
 
         Assert::assertIsArray($result);
         Assert::assertSame(1, $result['total_modules']);

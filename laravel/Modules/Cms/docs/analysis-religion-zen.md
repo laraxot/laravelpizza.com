@@ -7,12 +7,20 @@ updated: 2026-09-26
 qmd: "analysis religion zen"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cms Module: Complete Analysis (Religion, Philosophy, Politics, Zen)
 
 ---
+
+title: "analysis religion zen"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analysis religion zen"
+issues: []
+discussions: []
 ## Analisi del modulo
 
 Il modulo Cms è il cuore del content management del progetto Laraxot. Gestisce pagine, sezioni e blocchi di contenuto con un approccio headless: il CMS si occupa della struttura e dei dati, il tema della presentazione. Utilizza Filament per l'interfaccia admin, Folio per il routing front-end, e Volt per l'interattivita.

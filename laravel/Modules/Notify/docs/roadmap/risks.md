@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "risks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risks and dependencies (Module Notify)

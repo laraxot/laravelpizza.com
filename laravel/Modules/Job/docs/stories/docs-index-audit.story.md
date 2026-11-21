@@ -17,7 +17,7 @@ bmad_phase: dev
 module: Job
 ---
 
-# Docs index audit: modulo Job
+# Docs index audit — modulo Job
 
 Audit di `docs/` (517 file `.md`) e ricostruzione di `docs/index.md` come indice
 organizzato per argomento, senza cancellare/rinominare/spostare alcun file.

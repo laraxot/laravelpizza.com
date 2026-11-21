@@ -8,10 +8,9 @@ type: report
 module: Job
 updated: 2026-09-01
 qmd: "audit qualita job phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
-status: draft
 ---
 
-# Audit di qualita: modulo Job
+# Audit di qualita — modulo Job
 
 Misurato il 1 settembre 2026 a tree fermo. Ogni numero viene da un comando
 eseguito, non da una stima; i comandi sono in fondo, cosi la misura si puo
@@ -28,10 +27,10 @@ rifare e contestare.
 | Casi di test per file PHP | 0.73 |
 | `@phpstan-ignore` nel codice | 0 |
 | Rilievi PHPMD su `app/` | 116 |
-| PHPInsights: Code | 88.2 % |
-| PHPInsights: Complexity | 100.0 % |
-| PHPInsights: Architecture | 71.4 % |
-| PHPInsights: Style | 90.1 % |
+| PHPInsights — Code | 88.2 % |
+| PHPInsights — Complexity | 100.0 % |
+| PHPInsights — Architecture | 71.4 % |
+| PHPInsights — Style | 90.1 % |
 | File `.md` sotto `docs/` | 484 |
 | `TODO`/`FIXME`/`HACK` | 1 |
 | Test con casi che non girano (senza suffisso `Test.php`) | 0 |
@@ -57,11 +56,11 @@ nemmeno raccolto: due file con lo stesso basename generano la stessa classe.
 Percorsi coinvolti:
 
 - `.github/SECURITY.md`
-- `.github/contributing.md`
+- `.github/CONTRIBUTING.md`
 
 ### 13 collisioni di case nei docs
 
-Coppie tipo `INDEX.md` e `index.md`. Sono documenti che divergono in silenzio:
+Coppie tipo `index.md` e `index.md`. Sono documenti che divergono in silenzio:
 nessun linter le segnala e chi legge non sa quale delle due e la buona.
 
 ## Coverage

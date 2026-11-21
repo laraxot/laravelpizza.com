@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_CrEoM7
 # Activity Module - Product Roadmap
 
 **Module:** Activity  
@@ -184,36 +185,16 @@ To provide a **comprehensive activity tracking and audit trail system** that ena
 
 ---
 title: "Activity Module - Product Roadmap# Activity - Product Roadmap"
+=======
+---
+title: "product roadmap"
+qmd: "activity product roadmap md"
+>>>>>>> .merge_file_2gjPY2
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "activity module - product roadmap# activity - product roadmap activity"
----
-# Activity Module - Product Roadmap# Activity - Product Roadmap
-
-**Module:** Activity  
-**Version:** 1.0.0  
-**Last Updated:** March 12, 2026  
-**Owner:** Product Team  
-**Status:** In Development
-
+tags: [documentation]
 ---
 
-## Vision Statement
-
-To provide a **comprehensive activity tracking and audit trail system** that enables complete visibility into user actions, system events, and data changes across the entire platform. The Activity module serves as the central nervous system for understanding user behavior, debugging issues, and maintaining compliance.
-
-### Vision Pillars
-
-1. **Complete Visibility:** Every significant action is captured and queryable
-2. **Real-Time Insights:** Activity data is available immediately for monitoring and alerts
-3. **Compliance Ready:** Audit trails meet regulatory requirements (GDPR, SOC2)
-4. **Performance Optimized:** Activity tracking has minimal impact on system performance
-5. **Actionable Intelligence:** Activity data drives product improvements and user insights
-
----
-
+<<<<<<< .merge_file_CrEoM7
 ## Quarterly Timeline (2026)
 
 ### Q1 2026 - Core Infrastructure
@@ -330,7 +311,14 @@ To provide a **comprehensive activity tracking and audit trail system** that ena
 - [Product Strategy](product-strategy.md)
 - [Sprint Planning Meeting](sprint-planning-meeting.md)
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+=======
+=======
+>>>>>>> .merge_file_2gjPY2
 
 ---
 
 *Last Updated: March 12, 2026*
+<<<<<<< .merge_file_CrEoM7
+=======
+=======
+>>>>>>> .merge_file_2gjPY2

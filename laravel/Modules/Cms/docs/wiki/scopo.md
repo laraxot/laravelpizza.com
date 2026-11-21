@@ -1,16 +1,12 @@
 ---
-qmd: "cms wiki scopo rimando docs/scopo"
+qmd: "scopo"
 issues: []
 discussions: []
-title: "Cms — scopo (wiki)"
-type: note
-status: active
-updated: 2026-10-20
-tags: [docs, cms, wiki]
+title: "Scopo"
 ---
 
-# Cms — Scopo (wiki)
-
-Canonico: [../scopo.md](../scopo.md).
-
-Breve: contenuti pubblici, pagine Folio, blocchi tipizzati; la resa visuale e' del tema. Story utile: `docs/bmad/stories/` e [../architecture/](../architecture/).
+# Cms — Scopo (BMAD)
+**Bold**: Gestione contenuti, pagine Folio, blocchi, componenti Blade, CMS pubblico.
+**Minimal**: Actions (GetCmsViewAction), Filament Resources, Model/Presenters; docs/wiki e docs/bmad presenti.
+**Actionable**: Riferimento: `docs/bmad/stories/STORY-CMS-FOLIO-LOCALE-AUTH-REDIRECT.md`; `docs/architecture/`.
+**Durable**: Scopo CMS (contenuti + frontoffice); PHPStan non corretto, solo documentato stato docs.

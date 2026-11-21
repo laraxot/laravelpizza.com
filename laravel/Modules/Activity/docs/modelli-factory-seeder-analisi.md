@@ -1,12 +1,14 @@
+<<<<<<< .merge_file_xR73nL
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, SaluteMo, Xot
+=======
+>>>>>>> .merge_file_ngfvdk
 ---
-title: "Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, SaluteMo, Xot======="
+title: "modelli factory seeder analisi"
+qmd: "activity modelli factory seeder analisi md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "analisi modelli, factory e seeder - moduli activity, gdpr, tenant, ui, salutemo, xot======= activity"
+tags: [documentation]
 ---
+<<<<<<< .merge_file_xR73nL
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, SaluteMo, Xot=======
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot
@@ -403,3 +405,6 @@ Modulo specifico per Modena, attualmente non utilizzato attivamente.
 
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa sistema <nome progetto>: 150+ modelli, 14 moduli*
+=======
+
+>>>>>>> .merge_file_ngfvdk

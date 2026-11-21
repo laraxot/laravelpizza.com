@@ -10,7 +10,6 @@ type: decision-log
 module: Geo
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Decision log

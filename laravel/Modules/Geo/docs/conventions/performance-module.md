@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "performance module"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni di Codifica del Modulo Performance

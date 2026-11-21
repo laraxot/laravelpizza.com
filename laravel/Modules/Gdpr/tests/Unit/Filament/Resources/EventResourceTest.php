@@ -6,10 +6,13 @@ namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
 use Modules\Gdpr\Filament\Resources\EventResource;
 use Modules\Gdpr\Models\Event;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_parents;
+
+uses(TestCase::class);
 
 test('event_resource_extends_xot_base_resource', function (): void {
     Assert::assertArrayHasKey(XotBaseResource::class, class_parents(EventResource::class));

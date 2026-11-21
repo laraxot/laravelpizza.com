@@ -8,7 +8,7 @@ return [
         'plural' => 'Luoghi',
         'group' => [
             'name' => 'Geo',
-            'description' => 'Gestione dei luoghi e punti di interesse',
+            'description' => 'Manage places and points of interest',
         ],
         'label' => 'Luoghi',
         'sort' => '32',
@@ -16,25 +16,25 @@ return [
     ],
     'fields' => [
         'name' => [
-            'label' => 'Nome',
+            'label' => 'Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'description' => [
-            'label' => 'Descrizione',
+            'label' => 'Description',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'category' => [
-            'label' => 'Categoria',
+            'label' => 'Category',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'location' => [
-            'label' => 'Località',
+            'label' => 'Location',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -46,7 +46,7 @@ return [
             'description' => '',
         ],
         'opening_hours' => [
-            'label' => 'Orari di Apertura',
+            'label' => 'Opening Hours',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -85,10 +85,10 @@ return [
         'culture' => 'Cultura',
     ],
     'actions' => [
-        'add_review' => 'Aggiungi Recensione',
-        'upload_photo' => 'Carica Foto',
+        'add_review' => 'Add Review',
+        'upload_photo' => 'Upload Photo',
         'share' => 'Condividi',
-        'bookmark' => 'Salva',
+        'bookmark' => 'Save',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',

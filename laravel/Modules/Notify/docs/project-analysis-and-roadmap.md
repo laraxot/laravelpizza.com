@@ -12,8 +12,8 @@ status: draft
 
 # FixCity - Analisi Completa del Progetto e Roadmap
 
-**Data Analisi**: 1 Ottobre 2025  
-**Analista**: AI Assistant  
+**Data Analisi**: 1 Ottobre 2025
+**Analista**: AI Assistant
 **Versione**: 1.0
 
 ---
@@ -80,8 +80,8 @@ Moduli Supporto:
 ### Architettura Modulare
 
 ```
-/var/www/_bases/base_fixcity_fila5_mono/
-/var/www/_bases/base_ptv_fila5_mono/
+/var/www/_bases/base_fixcity_fila5/
+/var/www/_bases/base_ptv_fila5/
 ├── laravel/                    # Root Laravel
 │   ├── Modules/               # Moduli business
 │   │   ├── Fixcity/          # Core segnalazioni
@@ -314,7 +314,7 @@ Moduli Supporto:
 
 1. **Map Picker Filament** (`TicketResource.php:17`)
    ```php
-   // use Dotswan\MapPicker\Fields\Map; 
+   // use Dotswan\MapPicker\Fields\Map;
    // TODO: Install dotswan/filament-map-picker package
    ```
    **Soluzione**: Installare `dotswan/filament-map-picker` per selezione coordinate visuale
@@ -474,17 +474,17 @@ Moduli Supporto:
 
 ### Per i Cittadini
 
-✅ **Voce diretta** con l'amministrazione  
-✅ **Trasparenza** sullo stato segnalazioni  
-✅ **Partecipazione attiva** miglioramento città  
+✅ **Voce diretta** con l'amministrazione
+✅ **Trasparenza** sullo stato segnalazioni
+✅ **Partecipazione attiva** miglioramento città
 ✅ **Feedback loop** chiuso
 
 ### Per le Amministrazioni
 
-✅ **Efficienza** gestione segnalazioni  
-✅ **Prioritizzazione** basata su dati  
-✅ **Soddisfazione** cittadini tracciabile  
-✅ **Riduzione costi** coordinamento  
+✅ **Efficienza** gestione segnalazioni
+✅ **Prioritizzazione** basata su dati
+✅ **Soddisfazione** cittadini tracciabile
+✅ **Riduzione costi** coordinamento
 ✅ **Reporting** per enti superiori
 
 ### Potenziale di Mercato
@@ -507,15 +507,15 @@ Moduli Supporto:
 
 **Conclusione**: FixCity è un progetto **solido e ben architettato** con un **core funzionale completo** (90%). Le aree di miglioramento principali sono **qualità del codice (quasi completa)**, **test coverage**, **API standardization** e **feature avanzate** (mobile, real-time, AI).
 
-**Potenziale commerciale**: ⭐⭐⭐⭐⭐ (5/5)  
-**Qualità tecnica**: ⭐⭐⭐⭐ (4/5 → 5/5 dopo PHPStan completion)  
-**Completezza funzionale**: ⭐⭐⭐⭐ (4/5)  
+**Potenziale commerciale**: ⭐⭐⭐⭐⭐ (5/5)
+**Qualità tecnica**: ⭐⭐⭐⭐ (4/5 → 5/5 dopo PHPStan completion)
+**Completezza funzionale**: ⭐⭐⭐⭐ (4/5)
 **Scalabilità**: ⭐⭐⭐⭐⭐ (5/5)
 
 ---
 
-**Documento creato**: 1 Ottobre 2025  
-**Prossimo review**: 1 Novembre 2025  
+**Documento creato**: 1 Ottobre 2025
+**Prossimo review**: 1 Novembre 2025
 **Maintainer**: [Team FixCity]
 
 

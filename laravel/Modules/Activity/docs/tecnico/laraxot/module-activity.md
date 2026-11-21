@@ -1,13 +1,8 @@
 ---
+qmd: "activity tecnico laraxot module activity md"
 module: theme
 topic: module-activity
 canonical: ../../../../../Themes/docs/shared-components/module-activity.md
-title: "module activity"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, activity, tecnico]
-qmd: "module activity activity"
 ---
 
 ## Overview
@@ -62,10 +57,8 @@ Activity::log('Utente ha modificato il profilo', [
 // Log automatico per modelli
 protected static $logAttributes = ['name', 'email'];
 protected static $logOnlyDirty = true;
-```
 
 ### Query Attività
-```php
 // Recupera tutte le attività
 $activities = Activity::all();
 
@@ -74,19 +67,17 @@ $userActivities = Activity::where('user_id', $userId)->get();
 
 // Filtra per tipo
 $modelChanges = Activity::where('type', 'model_change')->get();
-```
 
 ## Integrazione con Filament
 
 ### Resource
-```php
 use Modules\Activity\Filament\Resources\ActivityResource;
 
 class ActivityResource extends XotBaseResource
-{
     protected static ?string $model = Activity::class;
     
     public static function getTableColumns(): array
+<<<<<<< .merge_file_MwKH64
     {
         return [
             TextColumn::make('user.name')
@@ -235,6 +226,8 @@ class ActivityResource extends XotBaseResource
 
     public static function getTableColumns(): array
     {
+=======
+>>>>>>> .merge_file_kUelZM
         return [
             TextColumn::make('user.name')
                 ->label('Utente'),
@@ -244,30 +237,18 @@ class ActivityResource extends XotBaseResource
                 ->label('Data')
                 ->dateTime('d/m/Y H:i:s'),
         ];
-    }
-}
-```
 
 ## Testing
 
-```php
 class ActivityTest extends TestCase
-{
     public function test_can_log_activity(): void
-    {
         $user = User::factory()->create();
 
         Activity::log('Test activity', [
             'user_id' => $user->id
-        ]);
 
         $this->assertDatabaseHas('activities', [
             'description' => 'Test activity',
-            'user_id' => $user->id
-        ]);
-    }
-}
-```
 
 ## Best Practices
 
@@ -302,6 +283,7 @@ class ActivityTest extends TestCase
    - Pulizia periodica dei log
    - Backup dei dati di attività
    - Monitoraggio delle performance
+<<<<<<< .merge_file_MwKH64
 ---
 module: theme
 topic: module-activity
@@ -311,3 +293,6 @@ canonical: ../../../../../Themes/docs/shared-components/module-activity.md
 See canonical documentation: ../../../../../Themes/docs/shared-components/module-activity.md
 See canonical documentation: ../../../../../Themes/docs/shared-components/module-activity.md
 See canonical documentation: ../../../../../Themes/docs/shared-components/module-activity.md
+=======
+=======
+>>>>>>> .merge_file_kUelZM

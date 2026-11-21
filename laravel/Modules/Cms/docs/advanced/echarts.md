@@ -11,7 +11,6 @@ description: Echarts
 extends: _layouts.documentation
 section: content
 path: it/docs/advanced/
-status: draft
 ---
 
 # Echarts {#echarts}

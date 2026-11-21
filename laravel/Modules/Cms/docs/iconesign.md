@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: iconesign
 canonical: ../../../Themes/docs/shared-components/icon-design.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/icon-design.md

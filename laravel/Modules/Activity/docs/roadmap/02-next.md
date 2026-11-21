@@ -1,12 +1,10 @@
 ---
 title: "Next (Module Activity)"
+qmd: "activity roadmap 02 next md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "next (module activity) activity"
-status: superseded
-superseded_by: next.md
+tags: [documentation]
 ---
+
 # Next (Module Activity)
 
 ## Features

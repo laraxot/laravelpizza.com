@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "jpgraph notes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # JpGraph notes

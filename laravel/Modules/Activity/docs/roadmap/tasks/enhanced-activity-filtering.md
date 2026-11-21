@@ -1,3 +1,10 @@
+---
+title: "Task: Implement Enhanced Activity Filtering"
+qmd: "activity roadmap tasks enhanced activity filtering md"
+type: note
+tags: [documentation]
+---
+
 # Task: Implement Enhanced Activity Filtering
 
 ## 🎯 Objective

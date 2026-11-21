@@ -123,9 +123,9 @@ ls -la .qwen
 ls -la laravel/.qwen
 
 # Test file access from all paths
-cat .qwen/QWEN.md
-cat laravel/.qwen/QWEN.md
-cat bashscripts/ai/.qwen/QWEN.md
+cat .qwen/qwen.md
+cat laravel/.qwen/qwen.md
+cat bashscripts/ai/.qwen/qwen.md
 # All should show the same content
 
 # Find broken symlinks
@@ -141,7 +141,7 @@ find . -type l -exec test ! -e {} \; -print
 |----------|------|
 | **Full Rule** | `bashscripts/docs/AI_AGENT_JUNCTION_RULE.md` |
 | **Implementation Report** | `bashscripts/docs/AI_AGENT_JUNCTION_REPORT.md` |
-| **File Location Rules** | `docs/FILE_LOCATION_RULES.md` |
+| **File Location Rules** | `docs/file_location_rules.md` |
 | **Agent Memory** | `AGENT_MEMORY.md` |
 
 ---
@@ -162,7 +162,7 @@ find . -type l -exec test ! -e {} \; -print
 - [x] Implement in base_ptvx_fila5
 - [x] Create symlinks for `.gemini` and `.agent`
 - [ ] Sync to other bases
-- [x] Update documentation (AGENTS.md, GEMINI.md)
+- [x] Update documentation (AGENTS.md, gemini.md)
 
 ### Claude
 

@@ -1,11 +1,10 @@
 ---
 title: "Larabank: Caso d'Uso Bancario con Event Sourcing"
-type: index
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "larabank: caso d'uso bancario con event sourcing activity"
+qmd: "activity use cases bank index md"
+type: note
+tags: [documentation]
 ---
+
 # Larabank: Caso d'Uso Bancario con Event Sourcing
 
 ## Introduzione

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "phpstan level10 fixes 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Fix Errore Sintassi TransArrayAction
 
@@ -73,8 +72,7 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
-- [TransArrayAction.php](../app/Actions/TransArrayAction.php)
-- [PHPStan Fixes](./phpstan-fixes.md)
+- [PHPStan Fixes](./PHPSTAN-FIXES.md)
 - [Translation Actions](./translation-actions.md)
 
 ## Note per il Futuro

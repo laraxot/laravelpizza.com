@@ -10,7 +10,6 @@ title: Custom 404 Page
 description: Custom 404 pages with Jigsaw docs starter template
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Custom 404 Page {#custom-404-page}

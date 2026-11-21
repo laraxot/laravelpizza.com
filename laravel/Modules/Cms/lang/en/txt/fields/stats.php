@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/stats.php
 // Cms txt.fields.stats — LangServiceProvider SSoT.
 return [
-    'label' => 'Statistiche',
-    'placeholder' => 'Dati numerici da evidenziare',
-    'helper_text' => 'Statistiche o metriche da mostrare',
+    'label' => 'Statistics',
+    'placeholder' => 'Numeric data to highlight',
+    'helper_text' => 'Statistics or metrics to show',
     'tooltip' => '',
     'description' => '',
 ];

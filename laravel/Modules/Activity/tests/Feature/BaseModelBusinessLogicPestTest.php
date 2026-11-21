@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Feature;
 
 use Illuminate\Database\ConnectionInterface;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Str;
 use Modules\Activity\Tests\TestCase;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use PHPUnit\Framework\Assert;
 
@@ -77,10 +77,10 @@ test('has updater trait', function (): void {
     Assert::assertContains(Updater::class, $traits);
 });
 
-test('has has factory trait', function (): void {
+test('has xot factory trait', function (): void {
     $model = new TestActivityModel;
     $traits = class_uses_recursive($model::class);
-    Assert::assertContains(HasFactory::class, $traits);
+    Assert::assertContains(HasXotFactory::class, $traits);
 });
 
 test('can handle uuid generation', function (): void {

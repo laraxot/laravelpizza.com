@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: phpmd
 canonical: ../../../Themes/docs/shared-components/phpmd-report.txt
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpmd-report.txt

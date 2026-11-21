@@ -1,4 +1,5 @@
 ---
+qmd: "lang stories placeholder translations story md"
 type: story
 slug: placeholder-translations
 title: "Niente traduzioni segnaposto, niente titoli di sezione doppi"

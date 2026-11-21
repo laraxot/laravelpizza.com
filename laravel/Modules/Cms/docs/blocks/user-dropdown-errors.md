@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user dropdown errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errori nel Componente User Dropdown
@@ -241,5 +240,5 @@ return [
 
 ## Collegamenti
 - [Documentazione User Dropdown](./user-dropdown.md)
-- [Best Practices UI/UX](../guida-implementazione-ux.md)
+- [Best Practices UI/UX](./guida-implementazione-ux.md)
 - [Documentazione Accessibilità](./accessibility.md)

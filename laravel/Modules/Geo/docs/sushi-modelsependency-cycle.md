@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: sushi-modelsependency-cycle
 canonical: ../../../Themes/docs/shared-components/sushi-models-dependency-cycle-fix.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/sushi-models-dependency-cycle-fix.md

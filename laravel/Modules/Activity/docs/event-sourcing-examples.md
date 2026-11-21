@@ -1,4 +1,13 @@
+<<<<<<< .merge_file_HQ4hAe
 # Practical Event Sourcing Examples for Healthcare
+=======
+---
+qmd: "activity event sourcing examples md"
+module: theme
+topic: event-sourcing-examples
+canonical: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
+---
+>>>>>>> .merge_file_LhF94v
 
 ## Table of Contents
 - [Patient Management](#patient-management)
@@ -40,205 +49,116 @@ public function registerPatient(
         email: $email,
         registeredAt: new DateTimeImmutable()
     ));
-}
 ```
 
 ### 2. Patient Information Update
 
 **Event**: `PatientInformationUpdated`
-```php
 class PatientInformationUpdated implements ShouldBeStored
-{
-    public function __construct(
-        public string $patientId,
         public array $changes,
         public string $updatedBy,
         public DateTimeImmutable $updatedAt
-    ) {}
-}
-```
 
 ## Appointment Scheduling
 
 ### 1. Scheduling an Appointment
 
 **Event**: `AppointmentScheduled`
-```php
 class AppointmentScheduled implements ShouldBeStored
-{
-    public function __construct(
         public string $appointmentId,
-        public string $patientId,
         public string $doctorId,
         public DateTimeImmutable $scheduledTime,
         public int $durationMinutes,
         public string $reason,
         public string $scheduledBy
-    ) {}
-}
-```
 
 ### 2. Rescheduling an Appointment
 
 **Event**: `AppointmentRescheduled`
-```php
 class AppointmentRescheduled implements ShouldBeStored
-{
-    public function __construct(
-        public string $appointmentId,
         public DateTimeImmutable $oldTime,
         public DateTimeImmutable $newTime,
-        public string $reason,
         public string $rescheduledBy
-    ) {}
-}
-```
 
 ## Medical Records
 
 ### 1. Adding a Medical Note
 
 **Event**: `MedicalNoteAdded`
-```php
 class MedicalNoteAdded implements ShouldBeStored
-{
-    public function __construct(
         public string $noteId,
-        public string $patientId,
-        public string $doctorId,
         public string $content,
         public array $tags,
         public bool $isConfidential,
         public DateTimeImmutable $recordedAt
-    ) {}
-}
-```
 
 ### 2. Updating Vital Signs
 
 **Event**: `VitalSignsRecorded`
-```php
 class VitalSignsRecorded implements ShouldBeStored
-{
-    public function __construct(
         public string $recordingId,
-        public string $patientId,
         public string $recordedBy,
         public array $vitals, // [type => value, unit]
         public ?string $notes,
-        public DateTimeImmutable $recordedAt
-    ) {}
-}
-```
 
 ## Billing and Insurance
 
 ### 1. Creating an Invoice
 
 **Event**: `InvoiceCreated`
-```php
 class InvoiceCreated implements ShouldBeStored
-{
-    public function __construct(
         public string $invoiceId,
-        public string $patientId,
         public array $lineItems,
         public string $status,
         public float $totalAmount,
         public string $currency,
         public DateTimeImmutable $createdAt
-    ) {}
-}
-```
 
 ### 2. Insurance Claim Filed
 
 **Event**: `InsuranceClaimFiled`
-```php
 class InsuranceClaimFiled implements ShouldBeStored
-{
-    public function __construct(
         public string $claimId,
-        public string $patientId,
         public string $insuranceProviderId,
         public array $services, // [serviceId, description, amount]
-        public string $status,
         public DateTimeImmutable $filedAt
-    ) {}
-}
-```
 
 ## Pharmacy and Prescriptions
 
 ### 1. Prescription Filled
 
 **Event**: `PrescriptionFilled`
-```php
 class PrescriptionFilled implements ShouldBeStored
-{
-    public function __construct(
         public string $fulfillmentId,
         public string $prescriptionId,
         public string $pharmacyId,
         public string $pharmacistId,
         public array $medications, // [medId, name, dosage, quantity]
-        public string $status,
         public DateTimeImmutable $filledAt
-    ) {}
-}
-```
 
 ## Integration Patterns
 
 ### 1. External System Integration
 
 **Event**: `ExternalSystemNotificationSent`
-```php
 class ExternalSystemNotificationSent implements ShouldBeStored
-{
-    public function __construct(
         public string $notificationId,
         public string $systemName,
         public string $eventType,
         public array $payload,
-        public string $status,
         public ?string $response,
         public DateTimeImmutable $sentAt
-    ) {}
-}
-```
 
 ## Testing Strategies
 
 ### 1. Unit Testing Aggregates
 
-```php
 class PatientAggregateTest extends TestCase
-{
     /** @test */
     public function it_can_register_a_patient()
-    {
         $patientId = 'patient-123';
-        
-        $aggregate = PatientAggregate::retrieve($patientId);
-        
-        $aggregate->registerPatient(
-            patientId: $patientId,
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'john@example.com'
-        )->persist();
-        
-        $this->assertDatabaseHas('stored_events', [
-            'event_class' => PatientRegistered::class,
-            'aggregate_uuid' => $patientId
-        ]);
-    }
-}
-```
 
-### 2. Testing Projectors
-
+<<<<<<< .merge_file_HQ4hAe
 ```php
 class PatientProjectorTest extends TestCase
 {
@@ -250,22 +170,53 @@ class PatientProjectorTest extends TestCase
         $patientId = 'patient-123';
         $event = new PatientRegistered(
             patientId: $patientId,
+=======
+        $aggregate = PatientAggregate::retrieve($patientId);
+
+        $aggregate->registerPatient(
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john@example.com'
+        )->persist();
+
+        $this->assertDatabaseHas('stored_events', [
+            'event_class' => PatientRegistered::class,
+            'aggregate_uuid' => $patientId
+        ]);
+
+### 2. Testing Projectors
+
+class PatientProjectorTest extends TestCase
+    use RefreshProjection;
+
+    public function it_projects_patient_registration()
+        $event = new PatientRegistered(
+>>>>>>> .merge_file_LhF94v
             firstName: 'Jane',
             lastName: 'Smith',
             email: 'jane@example.com',
             registeredAt: now()
         );
+<<<<<<< .merge_file_HQ4hAe
         
         event($event);
         
+=======
+
+        event($event);
+
+>>>>>>> .merge_file_LhF94v
         $this->assertDatabaseHas('patients', [
             'id' => $patientId,
             'email' => 'jane@example.com',
             'full_name' => 'Jane Smith'
+<<<<<<< .merge_file_HQ4hAe
         ]);
     }
 }
 ```
+=======
+>>>>>>> .merge_file_LhF94v
 
 ## Conclusion
 
@@ -567,7 +518,6 @@ Remember to always consider the specific needs of your healthcare application an
 module: theme
 topic: event-sourcing-examples
 canonical: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
----
 
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md

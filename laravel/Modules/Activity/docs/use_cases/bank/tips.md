@@ -1,11 +1,10 @@
 ---
 title: "Consigli e Best Practice - Use Case Bancario"
+qmd: "activity use cases bank tips md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "consigli e best practice - use case bancario activity"
+tags: [documentation]
 ---
+
 # Consigli e Best Practice - Use Case Bancario
 
 ## Refactoring e Miglioramenti

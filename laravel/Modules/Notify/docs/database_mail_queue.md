@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database mail queue"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Code per Email - il progetto

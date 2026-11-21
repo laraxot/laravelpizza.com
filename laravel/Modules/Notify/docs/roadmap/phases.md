@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phases"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fasi di sviluppo - Notify Module

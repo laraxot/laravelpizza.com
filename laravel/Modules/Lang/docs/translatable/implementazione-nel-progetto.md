@@ -10,9 +10,6 @@ updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: implementation-nel-progetto.md
 ---
 # Implementazione di Spatie Laravel Translatable nel Progetto
 
@@ -312,7 +309,5 @@ public function testTranslations()
 - [Best Practices per Laravel Translatable](./best-practices.md)
 - [Configurazione Laravel Localization](../../Cms/docs/localization/localization-setup.md)
 - [Configurazione Laravel Localization](../../cms/docs/localization/localization-setup.md)
-- [Configurazione Laravel Localization](../../../Cms/docs/localization/localization-setup.md)
-- [Configurazione Laravel Localization](../../../Cms/docs/localization/localization-setup.md)
 - [Documentazione Ufficiale Spatie Translatable](https://spatie.be/docs/laravel-translatable/v6/basic-usage/handling-missing-translations)
 - [Documentazione Plugin Filament](https://filamentphp.com/plugins/filament-spatie-translatable)

@@ -1,5 +1,5 @@
 ---
-qmd: "super mucca login completed"
+qmd: "SUPER MUCCA LOGIN COMPLETED"
 issues: []
 discussions: []
 title: "SUPER MUCCA - LOGIN PAGE COMPLETATA!"
@@ -8,7 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # 🐄 SUPER MUCCA - LOGIN PAGE COMPLETATA!

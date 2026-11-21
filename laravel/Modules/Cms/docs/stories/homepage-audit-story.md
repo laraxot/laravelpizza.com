@@ -1,7 +1,7 @@
 ---
 type: story
 title: "STORY-Cms: Homepage Audit & Feature Gap Analysis"
-links: {github_issue: "#500", discussion: "#501"}
+links: {github_issue: #500, discussion: #501}
 ---
 # Homepage Audit Story
 

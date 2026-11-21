@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "level10 linee guida"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
@@ -77,7 +76,7 @@ protected function getInfolistSchema(): array
 }
 ```
 
-Per linee guida più dettagliate sul metodo `getInfolistSchema`, consultare il documento [INFOLIST_SCHEMA_GUIDELINES.md](../../filament/infolist_schema_guidelines.md).
+Per linee guida più dettagliate sul metodo `getInfolistSchema`, consultare il documento [infolist_schema_guidelines.md](../../filament/infolist_schema_guidelines.md).
 
 ## Gestione degli Errori Comuni
 

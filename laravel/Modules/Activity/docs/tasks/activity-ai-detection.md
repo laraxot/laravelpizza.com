@@ -1,3 +1,10 @@
+---
+title: "Task: AI-Driven Anomaly Detection - Activity"
+qmd: "activity tasks activity ai detection md"
+type: note
+tags: [documentation]
+---
+
 # Task: AI-Driven Anomaly Detection - Activity
 
 **Modulo**: Activity  

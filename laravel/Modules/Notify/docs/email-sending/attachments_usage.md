@@ -300,9 +300,9 @@ foreach ($records as $record) {
 ### Documentazione Interna
 - [Ptv - Complete PDF Email Guide](../../../Ptv/docs/pdf-email-attachments-complete-guide.md)
 - [Xot - PDF Generation Technical](../../../Xot/docs/actions/pdf-content-generation-technical.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
-- [EMAIL_TROUBLESHOOTING.md](./EMAIL_TROUBLESHOOTING.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
+- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
+- [EMAIL_TROUBLESHOOTING.md](email_troubleshooting.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 - [EMAIL_TROUBLESHOOTING.md](./email_troubleshooting.md)

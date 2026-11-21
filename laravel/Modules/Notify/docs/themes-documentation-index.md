@@ -365,7 +365,7 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
-| `guides/getting-started.md` | Theme setup | [View](../laravel/Themes/Sixteen/docs/guides/getting-started.md) |
+| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
 | `guides/adding-components.md` | Create new component | [View](../laravel/Themes/Sixteen/docs/guides/adding-components.md) |
 | `guides/styling-guide.md` | Styling best practices | [View](../laravel/Themes/Sixteen/docs/guides/styling-guide.md) |
 | `guides/responsive-design.md` | Mobile-first approach | [View](../laravel/Themes/Sixteen/docs/guides/responsive-design.md) |
@@ -480,8 +480,8 @@ public_html/assets/
 - **Module Docs Index:** [module-docs-index.md](module-docs-index.md)
 - **Master Index:** [00-index-1.md](../laravel/Themes/Sixteen/docs/00-index-1.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../laravel/claude.md](../laravel/claude.md)
-- **Framework Rules:** [../laravel/claude.md](../../../CLAUDE.md)
+- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules:** [../laravel/CLAUDE.md](../../../claude.md)
 
 ---
 

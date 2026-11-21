@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Symfony\Component\Finder\Finder;
 
 use function Safe\file_get_contents;
@@ -42,19 +43,26 @@ it('builds the sitemap only inside the Seo module', function (): void {
         }
     }
 
-    expect($strangers)->toBe([]);
+    Assert::assertSame([], $strangers);
 });
 
 it('keeps Seo independent of the modules that feed its sitemap', function (): void {
     $offenders = [];
     foreach (Finder::create()->files()->name('*.php')->in(base_path('Modules/Seo/app')) as $file) {
-        preg_match_all('/^use Modules\\\\([A-Za-z]+)\\\\/m', file_get_contents($file->getRealPath()), $found);
-        foreach (array_unique($found[1]) as $module) {
+        $matches = [];
+        preg_match_all('/^use Modules\\\\([A-Za-z]+)\\\\/m', file_get_contents($file->getRealPath()), $matches);
+        $modules = $matches[1] ?? [];
+        if (! is_array($modules)) {
+            continue;
+        }
+        /** @var list<string> $unique */
+        $unique = array_values(array_unique(array_filter($modules, is_string(...))));
+        foreach ($unique as $module) {
             if (! in_array($module, SEO_ALLOWED_MODULES, true)) {
                 $offenders[] = $file->getRelativePathname().' importa Modules\\'.$module;
             }
         }
     }
 
-    expect($offenders)->toBe([]);
+    Assert::assertSame([], $offenders);
 });

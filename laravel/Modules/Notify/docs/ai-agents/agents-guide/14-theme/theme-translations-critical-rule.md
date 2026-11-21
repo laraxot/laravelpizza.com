@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "theme translations critical rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 14. Theme Translations - CRITICAL RULE

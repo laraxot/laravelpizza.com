@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translation file merge function"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Translation File Merge Function

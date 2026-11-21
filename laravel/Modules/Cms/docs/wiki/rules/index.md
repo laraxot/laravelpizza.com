@@ -1,8 +1,8 @@
 ---
-qmd: "index"
+qmd: "Index"
 issues: []
 discussions: []
-title: "Rules Index"
+title: "Index"
 type: index
 created: 2026-05-11
 updated: 2026-05-11
@@ -10,8 +10,6 @@ tags: [rules, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
-status: superseded
-superseded_by: INDEX.md
 ---
 
 # Rules Index
@@ -39,7 +37,7 @@ Le Rules progettuali vivono qui, nel wiki del Module **Cms**, e vengono caricate
 
 - La sorgente di verita' per le Rules e' sempre il wiki locale
 - Non embeddare Rules nei prompt di avvio
-- Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/INDEX.md)
+- Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/index.md)
 
 ## Aggiungere una Nuova RULES
 

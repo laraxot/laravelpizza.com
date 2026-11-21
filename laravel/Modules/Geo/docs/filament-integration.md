@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione con Filament

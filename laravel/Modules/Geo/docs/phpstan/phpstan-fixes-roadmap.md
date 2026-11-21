@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes roadmap"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-fixes-roadmap.md
 ---
 
 # PHPStan Level 10 Fixes Roadmap - Modulo Geo

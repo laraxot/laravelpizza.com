@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coverage"
 issues: []
 discussions: []
-status: draft
 ---
 title: "Tenant Module Test Coverage"
 module: "Tenant"
@@ -36,7 +35,7 @@ This module has comprehensive test coverage with various test types implemented.
 
 **2026-09-06**: philosophy.md created. PHPStan analyzed (OK). Pest suite (TBD). Coverage target: +5% per module.
 
-### 2026-09-06 (sessione claude sonnet 5: `phpstan-tenant-fix.md`)
+### 2026-09-06 (sessione claude sonnet 5 — `phpstan-tenant-fix.md`)
 
 PHPStan `Modules/Tenant` con cache pulita: **0 errori** prima e dopo le modifiche (nessuna
 regressione introdotta). Dettaglio completo delle modifiche in
@@ -48,13 +47,13 @@ a `string|null` (colonna migration `text()` senza cast).
 
 Pest (`./vendor/bin/pest Modules/Tenant/tests -c Modules/Tenant/phpunit.xml --no-coverage`):
 run lanciato ma non ancora concluso entro il timeout di sessione (macchina condivisa con
-molti agenti concorrenti attivi in questo momento: vedi
+molti agenti concorrenti attivi in questo momento — vedi
 `docs/chat/2026-09-06-sonnet5-pest-fixes-plus-unclaimed-modules-wave.md`). Nessuno dei 7 file
 model toccati ha un test dedicato mancante da aggiungere: i cambi sono solo su
 docblock/type-hint (nessun comportamento runtime alterato), l'unico cambio con superficie di
 comportamento e' `Tenant::users()` che resta semanticamente identico (stesso `hasMany`,
 stessa foreign key di default, solo la resolution della classe concreta e' ora dinamica via
-`XotData` invece di hardcoded: comportamento identico su questa installazione dato che
+`XotData` invece di hardcoded — comportamento identico su questa installazione dato che
 `getUserClass()` risolve a `Modules\User\Models\User`). PHPMD
 (`./tools/phpmd.sh Modules/Tenant/app text phpmd.xml`): nessuna violazione nei file toccati.
 
@@ -65,13 +64,13 @@ stessa foreign key di default, solo la resolution della classe concreta e' ora d
 - **Coverage Rate**: 0%
 
 ---
-### 2026-09-07 (sessione claude sonnet 5: campagna "PHPStan zero", `docs/stories/phpstan-tenant-fix.md`)
+### 2026-09-07 (sessione claude sonnet 5 — campagna "PHPStan zero", `docs/stories/phpstan-tenant-fix.md`)
 
 Al `git status` di apertura, `Modules/Tenant` aveva gia' un WIP concorrente non committato
 (un altro agente stava applicando il fix repo-wide gia' chiuso in
 `Modules/Xot/docs/stories/18.19.xotbaseresource-final-getformschema-table-illegal-override-repo-wide-fix.story.md`:
-rimozione dell'override inline `getFormSchema()` su `DomainResource.php`: dead code, la
-Resource-level bridge e' `final` e non lo chiama mai: e conversione da `static` a metodo di
+rimozione dell'override inline `getFormSchema()` su `DomainResource.php` — dead code, la
+Resource-level bridge e' `final` e non lo chiama mai — e conversione da `static` a metodo di
 **istanza** di `DomainForm::getFormSchema()` / `DomainInfolist::getInfolistSchema()`, coerente
 col parent astratto `XotBaseResourceForm`/`XotBaseResourceInfolist`). Quel WIP era pero'
 incompleto: i chiamanti nei test non erano stati aggiornati.
@@ -79,16 +78,16 @@ incompleto: i chiamanti nei test non erano stati aggiornati.
 PHPStan `Modules/Tenant` (cache pulita) rilevava **3 errori reali** (tutti `method.staticCall`,
 conseguenza diretta di quel WIP incompleto):
 
-- `tests/Unit/TenantCoverageBoostTest.php:166`: `DomainForm::getFormSchema()` chiamata
+- `tests/Unit/TenantCoverageBoostTest.php:166` — `DomainForm::getFormSchema()` chiamata
   statica su metodo di istanza.
-- `tests/Unit/TenantCoverageBoostTest.php:167`: `DomainInfolist::getInfolistSchema()` idem.
-- `tests/Unit/TenantStatementCoverageTest.php:378`: `DomainResource::getFormSchema()`
+- `tests/Unit/TenantCoverageBoostTest.php:167` — `DomainInfolist::getInfolistSchema()` idem.
+- `tests/Unit/TenantStatementCoverageTest.php:378` — `DomainResource::getFormSchema()`
   (ereditato da `XotBaseResource::getFormSchema()`, anch'esso istanza) chiamata staticamente.
 
 **Causa radice**: `XotBaseResourceForm::getFormSchema()` e
 `XotBaseResourceInfolist::getInfolistSchema()` sono `abstract public function` (mai
 `static`); una chiamata `Class::metodo()` su un metodo non statico e' un `Error` fatale a
-runtime in PHP 8, non solo un warning: confermato con una chiamata isolata sulle 2 righe
+runtime in PHP 8, non solo un warning — confermato con una chiamata isolata sulle 2 righe
 originali (`git stash` mirato ai soli 2 file di test, run isolato, ripristino):
 
 ```
@@ -118,7 +117,7 @@ quella, mai sulla classe:
 - PHPInsights: `ComposerNotFound` (bug noto tooling quando scoped a un singolo modulo, vedi
   memoria `phpinsights-composer-lock-scoped-path`), non bloccante, non imputabile a questo fix.
 - Pest, run completo (`./vendor/bin/pest Modules/Tenant/tests -c Modules/Tenant/phpunit.xml
-  --no-coverage`, 515s su macchina condivisa con carico molto alto: load average ~40/24 core,
+  --no-coverage`, 515s su macchina condivisa con carico molto alto — load average ~40/24 core,
   8+ suite Pest di altri agenti in esecuzione in parallelo nello stesso momento):
   **120 passed / 21 failed / 32 skipped (940 assertions)**. I 2 test isolati dal fix
   (`TenantCoverageBoostTest::domain resource schemas and tables are executable`,
@@ -126,7 +125,7 @@ quella, mai sulla classe:
   (prima: `Error` fatale, non solo failure). I 21 failed residui sono pre-esistenti e non
   toccati da questa sessione (`ApplicationPublicPathCoverageTest`, `SushiToJsonTraitTest`,
   `Traits/SushiToJsonTest`, e diversi "Unexpected mockery expectation type" in
-  `TenantCoverageBoostTest`/`TenantGapsCoverageTest`/`TenantStatementCoverageTest` -
+  `TenantCoverageBoostTest`/`TenantGapsCoverageTest`/`TenantStatementCoverageTest` —
   nessuno riferisce `DomainForm`/`DomainInfolist`/`DomainResource`, verificato per esclusione
   che non sono stati introdotti da questo fix).
 
@@ -141,21 +140,6 @@ File toccati: `app/Filament/Resources/DomainResource.php` (solo cleanup import, 
 gia' WIP altrui), `app/Filament/Resources/DomainResource/Schemas/DomainForm.php` (gia' WIP
 altrui, non ritoccato), `app/Filament/Resources/DomainResource/Schemas/DomainInfolist.php`
 (idem), `tests/Unit/TenantCoverageBoostTest.php`, `tests/Unit/TenantStatementCoverageTest.php`.
-
-### 2026-10-29 (story `docs/stories/sushi-to-jsons-single-source-cleanup.story.md`)
-
-Il `<source>` di `phpunit.xml` copre tutti i moduli, quindi il totale (1,5%) non dice nulla su Tenant. La misura e'
-ristretta al file toccato con `--coverage-filter=Modules/Tenant/app/Models/Traits` (driver Xdebug,
-`XDEBUG_MODE=coverage`, cache di `bootstrap/cache` saltate):
-
-| File | Senza il test nuovo | Con il test nuovo |
-|---|---|---|
-| `app/Models/Traits/SushiToJsons.php` | 45,2% (`SushiToJsonsTest`, 4 test) | 46,2% (5 test, 8 asserzioni) |
-
-Il test nuovo, "returns empty rows when json directory does not exist", copre la riga 112 (`return $rows` quando la
-cartella del tenant manca). Comando:
-`pest Modules/Tenant/tests/Unit/Traits/SushiToJsonsTest.php --coverage --min=0 --coverage-filter=Modules/Tenant/app/Models/Traits`
-(per la misura "senza", `--exclude-filter='does not exist'`).
 
 ## Test Categories
 - Unit Tests

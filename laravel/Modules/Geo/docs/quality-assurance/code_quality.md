@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "code quality"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Script di Verifica della Qualità del Codice

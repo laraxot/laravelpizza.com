@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflicts inventory"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Inventario Conflitti Git - Notify Module

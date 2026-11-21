@@ -11,7 +11,6 @@ related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/reflective.md
   - ../../laravel/Modules/Ptv/docs/wiki/log.md
-status: draft
 ---
 
 # Handoff — PHPStan 0 su `Modules/*` (2026-06-15)

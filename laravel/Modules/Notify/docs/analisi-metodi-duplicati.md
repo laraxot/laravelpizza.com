@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "analisi metodi duplicati"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi dei Metodi Duplicati nei Moduli e Temi
@@ -23,6 +22,15 @@ status: draft
 8. [Raccomandazioni](#raccomandazioni)
 
 ---
+
+title: "analisi metodi duplicati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analisi metodi duplicati"
+issues: []
+discussions: []
 ## Panoramica
 
 Questo documento analizza i metodi duplicati trovati all'interno dei moduli Laraxot e dei temi, con l'obiettivo di identificare opportunità di refactoring per migliorare la manutenibilità e ridurre la duplicazione del codice.

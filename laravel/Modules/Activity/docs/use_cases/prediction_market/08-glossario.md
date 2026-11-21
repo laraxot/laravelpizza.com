@@ -1,12 +1,10 @@
 ---
 title: "Glossario <nome progetto>ion Market"
+qmd: "activity use cases prediction market 08 glossario md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "glossario <nome progetto>ion market activity"
-status: superseded
-superseded_by: glossario.md
+tags: [documentation]
 ---
+
 # Glossario <nome progetto>ion Market
 
 - **<nome progetto>ion Market**: Mercato di previsione, piattaforma per scommettere su eventi futuri.

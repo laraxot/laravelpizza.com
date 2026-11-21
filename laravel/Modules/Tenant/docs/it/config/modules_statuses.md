@@ -10,9 +10,6 @@ updated: 2026-07-14
 qmd: "modules statuses"
 related:
   - "./phpstan-corrections-january.md"
-  - "../../phpstan-corrections-january.md"
-status: superseded
-superseded_by: archive/modules-statuses.md
 ---
 {
     "Notify": true,

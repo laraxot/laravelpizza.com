@@ -48,9 +48,14 @@ class EmailDataEmail extends Mailable
      */
     public function content(): Content
     {
+        /** @var view-string $htmlView */
+        $htmlView = 'notify::emails.html';
+        /** @var view-string $textView */
+        $textView = 'notify::emails.text';
+
         return new Content(
-            html: 'notify::emails.html',
-            text: 'notify::emails.text',
+            html: $htmlView,
+            text: $textView,
             with: [
                 'email_data' => $this->email_data,
             ],

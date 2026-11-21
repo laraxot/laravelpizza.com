@@ -1643,7 +1643,7 @@ Tasks:
 ### Current Documentation
 ```
 ✅ Exists:
-- claude.md (AI assistant instructions)
+- CLAUDE.md (AI assistant instructions)
 - project-roadmap.md (high-level vision)
 - README.md (basic setup)
 - This document (architecture-analysis.md)
@@ -1675,7 +1675,7 @@ Tasks:
    - Configuration guide
    - Troubleshooting
 
-4. contributing.md
+4. CONTRIBUTING.md
    - Development setup
    - Coding standards
    - Testing requirements
@@ -1823,7 +1823,10 @@ Monitoring:
 Frontend:
 [ ] Theme built (npm run build)
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_d1IbJR
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
+=======
+>>>>>>> .merge_file_LqSkNm
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

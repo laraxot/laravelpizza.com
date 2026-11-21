@@ -10,7 +10,6 @@ type: report
 module: Notify
 created_at: '2026-07-31'
 updated_at: '2026-07-31'
-status: draft
 ---
 
 # Audit collisioni Git committate in bashscripts

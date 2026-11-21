@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "modules themes docs audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modules/Themes Docs Audit (2026-03-10)

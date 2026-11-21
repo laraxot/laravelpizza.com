@@ -11,7 +11,7 @@ discussions: []
 
 # Research Summary Template
 
-Template for `.planning/research/SUMMARY.md` — executive summary of project research with roadmap implications.
+Template for `.planning/research/summary.md` — executive summary of project research with roadmap implications.
 
 <template>
 
@@ -59,7 +59,7 @@ Template for `.planning/research/SUMMARY.md` — executive summary of project re
 
 ### Architecture Approach
 
-[Summary from ARCHITECTURE.md — 1 paragraph]
+[Summary from architecture.md — 1 paragraph]
 
 **Major components:**
 1. [Component] — [responsibility]

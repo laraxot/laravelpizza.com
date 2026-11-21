@@ -1,16 +1,14 @@
 ---
 title: "bugfix-larastan-tenant-model-collision.md"
 type: concept
+status: active
 module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
-qmd: "bugfix: phpstan `assign.propertytype`   tenantfactory duplicata confonde il tipo tenant tenant"
-status: superseded
-superseded_by: ../bugfix-larastan-tenant-model-collision.md
 ---
 
-# Bugfix: PHPStan `assign.propertyType`: TenantFactory duplicata confonde il tipo Tenant
+# Bugfix: PHPStan `assign.propertyType` — TenantFactory duplicata confonde il tipo Tenant
 
 ## 🐛 Errore
 
@@ -37,7 +35,7 @@ Il test importa esplicitamente `use Modules\Tenant\Database\Factories\TenantFact
 del modulo Tenant), ma **Larastan risolve il generic della factory per nome breve
 di classe**, e con due `TenantFactory` + due modelli con lo stesso basename `Tenant`
 nello scope analizzato, l'inferenza statica sceglie il modello sbagliato
-(`Modules\User\Models\Tenant`) nonostante l'import corretto: un falso positivo
+(`Modules\User\Models\Tenant`) nonostante l'import corretto — un falso positivo
 del tool, non un bug del codice.
 
 ### Fix
@@ -53,7 +51,7 @@ $this->tenant = $createdTenant;
 ```
 
 **Nota**: un tentativo precedente aveva usato `/** @var Tenant $createdTenant */`
-per silenziare l'errore: pattern esplicitamente vietato (sovrascrive
+per silenziare l'errore — pattern esplicitamente vietato (sovrascrive
 l'inferenza di PHPStan invece di dimostrarla a runtime). Sostituito con
 un'asserzione reale.
 
@@ -65,11 +63,11 @@ cd laravel
 ./vendor/bin/phpstan analyse Modules/Tenant --memory-limit=-1   # 0 errori (solo baseline noise)
 ```
 
-## Non è duplicazione da eliminare: sono due concetti di dominio distinti
+## Non è duplicazione da eliminare — sono due concetti di dominio distinti
 
-- `Modules\Tenant\Models\Tenant extends BaseModel`: concetto di dominio SaaS
+- `Modules\Tenant\Models\Tenant extends BaseModel` — concetto di dominio SaaS
   (tenant/cliente), usato da questo modulo.
-- `Modules\User\Models\Tenant extends BaseTenant`: tenant per la
+- `Modules\User\Models\Tenant extends BaseTenant` — tenant per la
   multi-tenancy Filament/team, modulo diverso.
 
 Non serve rinominare o consolidare le classi: entrambe sono usate
@@ -77,7 +75,7 @@ deliberatamente per concetti diversi. Se in futuro Larastan segnala di nuovo
 `assign.propertyType` con `Modules\User\Models\Tenant` altrove (altri test che
 usano `TenantFactory::new()->createOne()`/`make()`), applicare lo stesso
 narrowing esplicito con `Assert::assertInstanceOf()` nel punto di assegnazione
-ambiguo: mai `@var` per silenziare.
+ambiguo — mai `@var` per silenziare.
 
 ## Riferimenti
 

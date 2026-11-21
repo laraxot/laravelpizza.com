@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_lKDjzq
 # Activity Module - Query Optimization Analysis
 
 ## Overview
@@ -315,6 +316,8 @@ DB::listen(function ($query) {
 ```
 
 This optimization plan will significantly improve the Activity module's performance while maintaining all existing functionality.
+=======
+>>>>>>> .merge_file_98zer2
 ---
 title: "Activity Module - Query Optimization Analysis"
 type: note
@@ -322,6 +325,7 @@ status: draft
 updated: 2026-10-08
 tags: [docs, activity]
 qmd: "activity module - query optimization analysis activity"
+<<<<<<< .merge_file_lKDjzq
 ---
 # Activity Module - Query Optimization Analysis
 
@@ -657,3 +661,6 @@ canonical: ../../../Themes/docs/shared-components/QUERY_OPTIMIZATION_ANALYSIS.md
 See canonical documentation: ../../../Themes/docs/shared-components/QUERY_OPTIMIZATION_ANALYSIS.md
 
 ---
+=======
+---
+>>>>>>> .merge_file_98zer2

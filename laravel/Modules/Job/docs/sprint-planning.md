@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sprint planning"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sprint Planning: Job Module

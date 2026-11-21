@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "readme phase 1 execution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📖 README - PHASE 1 EXECUTION
@@ -19,6 +18,15 @@ status: draft
 **Target**: segnalazioni-elenco → 90% HTML parity
 
 ---
+
+title: "readme phase 1 execution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme phase 1 execution"
+issues: []
+discussions: []
 ## 🎯 QUICK ORIENTATION
 
 **WHERE AM I?**
@@ -41,35 +49,35 @@ status: draft
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
 | **PHASE-1-EXECUTION-DASHBOARD.md** | Multi-agent coordination board | 5 min |
-| **phase-1-execution-status.md** | Real-time progress tracking | 5 min |
+| **PHASE-1-EXECUTION-STATUS.md** | Real-time progress tracking | 5 min |
 | **PHASE-1-RESEARCH-COMPLETE.md** | Session summary (Italian) | 10 min |
 
 ### 📋 STRATEGY & PLANNING
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
-| **phase-1-strategy.md** | Complete research & strategy | 20 min |
-| **gsd-phase-1-execution.md** | Execution plan with all 6 subtasks | 15 min |
-| **00-INDEX.md** | Master documentation index | 10 min |
+| **PHASE-1-STRATEGY.md** | Complete research & strategy | 20 min |
+| **GSD-PHASE-1-EXECUTION.md** | Execution plan with all 6 subtasks | 15 min |
+| **00-index.md** | Master documentation index | 10 min |
 
 ### 🔧 TOOLS & SCRIPTS
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
-| **bashscripts/docs/html/INDEX.md** | HTML comparison tools docs | 10 min |
+| **bashscripts/docs/html/index.md** | HTML comparison tools docs | 10 min |
 
 ### 👥 TASK-SPECIFIC WORKFLOWS
 | Document | For | Purpose | Read Time |
 |----------|-----|---------|-----------|
 | **SUBTASK-2-ANALYSIS-WORKFLOW.md** | Researcher | How to analyze findings | 15 min |
 | **EXECUTOR-2-SUBTASKS-3-4.md** | Executor #2 | How to fix blade & verify JSON | 20 min |
-| **phase-1-findings-template.md** | Researcher | Template for gap analysis | 10 min |
+| **PHASE-1-FINDINGS-TEMPLATE.md** | Researcher | Template for gap analysis | 10 min |
 
 ### 📁 OUTPUT LOCATIONS
 ```
 laravel/Themes/Sixteen/docs/
-├─ phase-1-strategy.md                    (strategy)
-├─ gsd-phase-1-execution.md               (execution plan)
-├─ 00-INDEX.md                            (master index)
-├─ phase-1-execution-status.md            (progress tracking)
+├─ PHASE-1-STRATEGY.md                    (strategy)
+├─ GSD-PHASE-1-EXECUTION.md               (execution plan)
+├─ 00-index.md                            (master index)
+├─ PHASE-1-EXECUTION-STATUS.md            (progress tracking)
 ├─ body-structure-comparison/
 │  └─ segnalazioni-elenco/
 │     ├─ comparison-report.json           ← Subtask 1 output
@@ -78,7 +86,7 @@ laravel/Themes/Sixteen/docs/
 │     └─ local-body.html                  ← Subtask 1 output
 └─ prompts/segnalazione_disservizio/
    ├─ PHASE-1-FINDINGS.md                 ← Subtask 2 output
-   ├─ phase-1-findings-template.md        (template)
+   ├─ PHASE-1-FINDINGS-TEMPLATE.md        (template)
    ├─ EXECUTOR-2-SUBTASKS-3-4.md          (workflow)
    ├─ SUBTASK-2-ANALYSIS-WORKFLOW.md      (workflow)
    └─ PHASE-1-COMPLETION-REPORT.md        ← Subtask 6 output
@@ -104,8 +112,8 @@ laravel/Themes/Sixteen/docs/
 - 📞 Notify: Researcher with new parity score
 
 **Read First**:
-1. phase-1-execution-status.md (overview)
-2. gsd-phase-1-execution.md § Subtask 1 (details)
+1. PHASE-1-EXECUTION-STATUS.md (overview)
+2. GSD-PHASE-1-EXECUTION.md § Subtask 1 (details)
 
 ---
 
@@ -121,12 +129,12 @@ laravel/Themes/Sixteen/docs/
 **Subtask 6** (LATER):
 - ⏳ Input: Final comparison results from Subtask 5
 - 📝 Create: PHASE-1-COMPLETION-REPORT.md
-- 🔄 Update: 00-INDEX.md with Phase 1 status
+- 🔄 Update: 00-index.md with Phase 1 status
 
 **Read First**:
-1. phase-1-execution-status.md (overview)
+1. PHASE-1-EXECUTION-STATUS.md (overview)
 2. SUBTASK-2-ANALYSIS-WORKFLOW.md (your workflow)
-3. gsd-phase-1-execution.md § Subtask 2 (details)
+3. GSD-PHASE-1-EXECUTION.md § Subtask 2 (details)
 
 ---
 
@@ -147,9 +155,9 @@ laravel/Themes/Sixteen/docs/
 - 📤 Output: Verified JSON file
 
 **Read First**:
-1. phase-1-execution-status.md (overview)
+1. PHASE-1-EXECUTION-STATUS.md (overview)
 2. EXECUTOR-2-SUBTASKS-3-4.md (detailed workflow)
-3. gsd-phase-1-execution.md § Subtask 3 & 4 (details)
+3. GSD-PHASE-1-EXECUTION.md § Subtask 3 & 4 (details)
 
 ---
 
@@ -163,10 +171,10 @@ laravel/Themes/Sixteen/docs/
 2. **Read (5 min)**: PHASE-1-EXECUTION-DASHBOARD.md
    - Understand current status and your role
 
-3. **Read (10 min)**: phase-1-strategy.md § Executive Summary + segnalazioni-elenco Analysis
+3. **Read (10 min)**: PHASE-1-STRATEGY.md § Executive Summary + segnalazioni-elenco Analysis
    - Understand the reference and what needs to match
 
-4. **Skim (5 min)**: gsd-phase-1-execution.md
+4. **Skim (5 min)**: GSD-PHASE-1-EXECUTION.md
    - Understand all 6 subtasks and dependencies
 
 5. **Read your role guide** above (5 min)
@@ -217,7 +225,7 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 **Translation Pattern** (CRITICAL):
 - ✅ Correct: `fixcity::segnalazione.fields.title.label`
 - ❌ Wrong: `SEGNALAZIONE::SEGNALAZIONE.ELENCO.TITLE`
-- See: phase-1-strategy.md § Translation Patterns
+- See: PHASE-1-STRATEGY.md § Translation Patterns
 
 **File Locations**:
 - ✅ Blade: `laravel/Themes/Sixteen/resources/views/pages/tests/[slug].blade.php`
@@ -236,7 +244,7 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 ### Status Updates (Every Agent)
 - Report progress: ✅ Complete / 🟠 In Progress / ⏳ Blocked
 - Share blockers/questions immediately
-- Update phase-1-execution-status.md
+- Update PHASE-1-EXECUTION-STATUS.md
 
 ### Handoffs (Between Subtasks)
 - Previous agent: Notify next agent + share deliverables
@@ -255,19 +263,19 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 Before starting your subtask:
 
 **All Agents**:
-- [ ] Read phase-1-execution-status.md
+- [ ] Read PHASE-1-EXECUTION-STATUS.md
 - [ ] Understand the 6 subtasks and dependencies
 - [ ] Know the translation pattern
 - [ ] Have reference URLs bookmarked
 
 **Executor #1**:
-- [ ] Read gsd-phase-1-execution.md § Subtask 1
+- [ ] Read GSD-PHASE-1-EXECUTION.md § Subtask 1
 - [ ] Verify bash scripts are executable
 - [ ] Know where to save output
 
 **Researcher**:
 - [ ] Read SUBTASK-2-ANALYSIS-WORKFLOW.md
-- [ ] Have template ready: phase-1-findings-template.md
+- [ ] Have template ready: PHASE-1-FINDINGS-TEMPLATE.md
 - [ ] Understand gap categorization (HIGH/MEDIUM/LOW)
 
 **Executor #2**:
@@ -281,18 +289,18 @@ Before starting your subtask:
 ## 📞 HELP & SUPPORT
 
 **For questions about**:
-- **Strategy**: phase-1-strategy.md
-- **Execution**: gsd-phase-1-execution.md
-- **Tools**: bashscripts/docs/html/INDEX.md
+- **Strategy**: PHASE-1-STRATEGY.md
+- **Execution**: GSD-PHASE-1-EXECUTION.md
+- **Tools**: bashscripts/docs/html/index.md
 - **Blade fixes**: EXECUTOR-2-SUBTASKS-3-4.md
 - **Analysis**: SUBTASK-2-ANALYSIS-WORKFLOW.md
-- **Status**: phase-1-execution-status.md
+- **Status**: PHASE-1-EXECUTION-STATUS.md
 
 **Common Questions**:
-- "Why this approach?" → phase-1-strategy.md § Executive Summary
+- "Why this approach?" → PHASE-1-STRATEGY.md § Executive Summary
 - "What's my task?" → Your role guide above
 - "Where's the output?" → Output Locations section
-- "What's the parity score?" → Wait for Subtask 1, then check phase-1-execution-status.md
+- "What's the parity score?" → Wait for Subtask 1, then check PHASE-1-EXECUTION-STATUS.md
 
 ---
 
@@ -303,11 +311,11 @@ Before starting your subtask:
 - PHASE-1-EXECUTION-DASHBOARD.md (status board)
 
 **Medium (15-20 min)**:
-- phase-1-strategy.md (strategy overview)
+- PHASE-1-STRATEGY.md (strategy overview)
 - Your role-specific workflow guide
 
 **Deep (30-45 min)**:
-- gsd-phase-1-execution.md (all subtasks)
+- GSD-PHASE-1-EXECUTION.md (all subtasks)
 - Reference HTML analysis (open reference URL)
 - Current blade template code
 
@@ -356,10 +364,10 @@ Before starting your subtask:
 
 | What | File | Location | Status |
 |------|------|----------|--------|
-| Strategy | phase-1-strategy.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Execution Plan | gsd-phase-1-execution.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Master Index | 00-INDEX.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Tool Docs | bashscripts/docs/html/INDEX.md | bashscripts/docs/html/ | ✅ DONE |
+| Strategy | PHASE-1-STRATEGY.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
+| Execution Plan | GSD-PHASE-1-EXECUTION.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
+| Master Index | 00-index.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
+| Tool Docs | bashscripts/docs/html/index.md | bashscripts/docs/html/ | ✅ DONE |
 | Comparison Script | html-structure-compare.sh | bashscripts/body/ | ✅ READY |
 | Blade Fixes | [slug].blade.php | laravel/Themes/Sixteen/resources/views/pages/tests/ | ⏳ PENDING |
 | JSON Verify | tests.segnalazioni-elenco.json | laravel/config/local/fixcity/database/content/pages/ | ⏳ PENDING |

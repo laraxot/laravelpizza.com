@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/ratio.php
 // Cms txt.fields.ratio — LangServiceProvider SSoT.
 return [
-    'label' => 'Proporzioni',
+    'label' => 'Aspect ratio',
     'placeholder' => '16:9, 4:3, 1:1, 21:9',
-    'helper_text' => 'Rapporto di proporzione per immagini e video',
+    'helper_text' => 'Aspect ratio for images and videos',
     'tooltip' => '',
     'description' => '',
 ];

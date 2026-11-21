@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "packages"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Pacchetti e Risorse Consigliate

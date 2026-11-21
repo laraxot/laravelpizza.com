@@ -5,13 +5,12 @@ updated: 2026-09-26
 qmd: "livewire widget architecture"
 issues: []
 discussions: []
-title: "Architecture: Lang"
+title: "Architecture — Lang"
 type: architecture
 module: Lang
 related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
-status: draft
 ---
 
 # Architecture Lang
@@ -24,4 +23,4 @@ Filament/Widgets/LanguageSwitcherWidget → pronto (LaravelLocalization, righe 7
 View\Components\LanguageSwitcher → wrapper inerte (registrazione commentata, LangServiceProvider.php:42)
 ```
 
-ADR: non creare `LangChangeWidget`. Dettaglio e citazioni: [livewire-inventory.md](./livewire-inventory.md): stato volatile, rieseguire i grep prima di agire.
+ADR: non creare `LangChangeWidget`. Dettaglio e citazioni: [livewire-inventory.md](./livewire-inventory.md) — stato volatile, rieseguire i grep prima di agire.

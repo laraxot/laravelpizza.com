@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "auth"
 issues: []
 discussions: []
-status: draft
 ---
 
 <?php

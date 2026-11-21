@@ -1,12 +1,7 @@
 ---
+qmd: "activity bmad coverage plan md"
 title: Coverage plan
 module: Activity
-type: note
-updated: 2026-10-07
-tags: [docs, activity, bmad]
-qmd: "activity coverage plan activity"
-status: superseded
-superseded_by: ../coverage-plan.md
 ---
 
 # Activity Coverage Plan
@@ -62,13 +57,13 @@ Uncovered lines: `57..58, 67, 76..126, 142, 162..175, 190, 217..231, 282..318`
 
 | Lines | Reason |
 |-------|--------|
-| 57..58 | `mount()`: requires Livewire HTTP test context |
-| 67 | `getBreadcrumb()` array branch: requires `__()` to return array (edge case) |
-| 76..126 | `getTitle()`, `getActivities()`: require record + activities relation + Livewire |
-| 142 | `getFieldLabel()` non-string guard: defensive dead code |
-| 162..175 | `restoreActivity()`: requires `canRestoreActivity()=true` + Livewire |
-| 190, 217..231 | `createFieldLabelMap()` child components path: requires Filament form context |
-| 282..318 | `resolveActivity()`, `getOldProperties()`: private, require full Livewire + DB |
+| 57..58 | `mount()` — requires Livewire HTTP test context |
+| 67 | `getBreadcrumb()` array branch — requires `__()` to return array (edge case) |
+| 76..126 | `getTitle()`, `getActivities()` — require record + activities relation + Livewire |
+| 142 | `getFieldLabel()` non-string guard — defensive dead code |
+| 162..175 | `restoreActivity()` — requires `canRestoreActivity()=true` + Livewire |
+| 190, 217..231 | `createFieldLabelMap()` child components path — requires Filament form context |
+| 282..318 | `resolveActivity()`, `getOldProperties()` — private, require full Livewire + DB |
 
 ### What would be needed for 100%:
 - Livewire component test that mounts a concrete `ListLogActivities` subclass with a record

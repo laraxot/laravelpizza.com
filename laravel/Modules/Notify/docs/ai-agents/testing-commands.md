@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Testing commands

@@ -11,7 +11,6 @@ updated: 2026-04-21
 tags: [wiki, governance, structure]
 related:
   - concepts/no-docs-archive-rule.md
-status: draft
 ---
 
 The canonical wiki folders are protected and must be preserved:

@@ -1,146 +1,92 @@
-# Modulo Tenant - Multi-Tenancy Support
+---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+title: "Tenant — Multi-Tenancy"
+description: "Modulo per il multi-tenancy, isolamento dati per tenant"
+module: "Tenant"
+alias: "tenant"
+version: "1.0.0"
+priority: 2
+active: true
+status: "core-multi-tenancy"
+author: "Team Laraxot"
+license: "Proprietary"
+php_version: "^8.1"
+core_version: "10.0"
+dependencies: ["Xot", "User"]
+extends: []
+extended_by: 0
+documentation_date: "2026-05-27"
+---
 
-## 📋 Panoramica
+# Tenant — Multi-Tenancy
 
-Il modulo **Tenant** fornisce supporto completo per **multi-tenancy** nel framework Laraxot, permettendo l'isolamento completo dei dati tra diverse organizzazioni/tenant.
+## Scopo
 
-## 🎯 Funzionalità Principali
+Tenant è il modulo che gestisce il multi-tenancy dell'ecosistema. Ogni `BaseTenant` ha `slug`, `domain`, `database` e una relazione `users()` con pivot `tenant_user`. È il layer che permette a più organizzazioni di coesistere in un'unica installazione.
 
-### 1. Isolamento Dati
-- Separazione completa dati tra tenant
-- Database scoping automatico
-- Context switching tra tenant
+## Religione
 
-### 2. Domain Management
-- Gestione domini per tenant
-- Routing multi-tenant
-- Subdomain support
+- **"Un database per tenant o row-level security"**: due politiche accettate, ma **mai mixate**
+- **"Tenant è una primitiva, non un dettaglio"**: ogni modulo deve essere tenant-aware
+- **"HasTenants trait su BaseUser"**: la relazione è nel trait, non in ogni modulo
+- **"Salvataggio config con Action"**: `SaveTenantConfigAction` è il punto unico
+- **"XotBase come fondamento"**: ogni risorsa tenant estende `XotBaseResource`
 
-### 3. Tenant-Aware Policies
-- Authorization basata su tenant
-- Permission scoping
-- Role isolation per tenant
+## Filosofia
 
-## 🏗️ Architettura
+Tenant crede che **l'isolamento dei dati sia un diritto, non un optional**. Ogni tenant ha la sua configurazione, le sue risorse, la sua sicurezza. Il sistema è progettato per **scalare orizzontalmente** aggiungendo tenant senza modificare il codice.
 
-### Modelli Principali
-- **Tenant**: Rappresenta un'organizzazione/cliente
-- **Domain**: Domini associati ai tenant
-- **TenantUser**: Relazione utenti-tenant
+## Politica
 
-### Service Provider
-- **TenantServiceProvider**: Registrazione automatica tenant features
-- **TenantService**: Logica business per gestione tenant
+- **Pivot `tenant_user`**: `tenant_id`, `user_id`, `permissions`
+- **`SaveTenantConfigAction`**: unico punto per salvare config tenant
+- **`HasTenants` trait**: relazione `tenants()` su `BaseUser`
+- **Slug + domain**: identificazione tenant tramite slug o dominio
+- **`BaseTenant::$connection`**: supporto per database separati
 
-## 📊 Stato Qualità
+## Zen
 
-- **PHPStan Level**: 10 ✅
-- **Errori PHPStan**: 0 ✅ (da 17 → 0, -100%)
-- **Type Safety**: Completa ✅
-- **Data Correzione**: 5 Novembre 2025
+> **"Il tenant è un confine. Il confine è una promessa. La promessa è la privacy."**
 
-## 🔗 Collegamenti
+Lo Zen di Tenant è l'**isolamento**. I dati di un tenant non possono mai essere visti, modificati o cancellati da un altro tenant. È una promessa architetturale, non una feature.
 
-- [User Module](../../User/docs/README.md) - Integrazione autenticazione
-- [Xot Module](../../Xot/docs/README.md) - Framework base
-- [Multi-Tenancy Docs](https://tenancyforlaravel.com/)
+## Perché esiste
+
+Le applicazioni SaaS moderne hanno bisogno di multi-tenancy per servire più clienti con un'unica installazione. Tenant esiste per **gestire questa complessità** in modo standardizzato.
+
+## Cosa Mancherebbe (Gap Analysis)
+
+| Gap | Severità | Suggerimento |
+|-----|----------|--------------|
+| Manca tenant impersonation | Alta | Aggiungere `ImpersonateTenantAction` |
+| Nessun sistema di tenant billing | Alta | Integrare con `Billing` per fatturazione per tenant |
+| Manca tenant backup isolato | Media | Aggiungere `TenantBackup` con restore selettivo |
+| Nessun sistema di tenant analytics | Media | Aggiungere `TenantAnalytics` per usage tracking |
+| Manca cross-tenant reporting | Bassa | Aggiungere `CrossTenantReport` per admin globali |
 
 ---
 
-**Ultimo Aggiornamento**: 5 Novembre 2025
-**Status**: PHPStan Fixes In Progress
+*Documento generato secondo le convenzioni del progetto — modulo `Tenant` — data 2026-05-27*
 ---
-title: "Tenant Module Documentation"
-type: documentation
-tags: [module, documentation]
-created: 2026-06-05
-updated: 2026-06-05
----
+# Documentation
 
-# Modulo Tenant - Multi-Tenancy
+This directory contains documentation for the module.
 
-## Overview
+## Structure
 
-Il modulo **Tenant** implementa l'architettura multi-tenant per isolamento completo dei dati tra diversi tenant/organizzazioni.
+- **architecture.md** - Module architecture and design patterns
+- **README.md** - This file
 
-## Architettura Multi-Tenant
+## Guidelines
 
-### Approccio: Database-per-Tenant
-
-Ogni tenant ha il proprio database isolato con naming convenzioni standardizzate.
-
-### Modelli Principali
-
-```php
-// Tenant model
-Modules\Tenant\Models\Tenant
-
-// TenantUser pivot
-Modules\Tenant\Models\TenantUser
-
-// BaseModel con scope tenant
-Modules\Tenant\Models\BaseModel extends XotBaseModel
-```
-
-## Configurazione Database
-
-### Connessioni Dinamiche
-
-```php
-// TenantServiceProvider gestisce switch automatico
-Tenant::configureConnection($tenantId);
-```
-
-### Migrations
-
-- Migrations tenant-specifiche in `database/migrations/tenant/`
-- Override `XotBaseMigration` per context switching
-
-## Filament Integration
-
-```php
-class AdminPanelProvider extends PanelProvider
-{
-    public function panel(Panel $panel): Panel
-    {
-        return $panel
-            ->tenant(Tenant::class)
-            ->tenantRoutePrefix('admin');
-    }
-}
-```
-
-## Trait HasTenants
-
-```php
-use Modules\User\Models\Traits\HasTenants;
-
-class User extends Authenticatable
-{
-    use HasTenants;
-}
-```
-
-## Collegamenti
-
-- [Xot Base](../Xot/docs/)
-- [User Module](../User/docs/)
-- [Database Switching](./database-switching.md)
-
-## Backlinks
-
-- [Configurazione Root](../../../docs/TENANT_MODULE.md)
-
-
-## Standard Rules & Workflow
-
-- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
-- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
-- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
-
-## Documentation
-
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
-- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
-- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+Documentation should be:
+- Clear and concise
+- Example-driven
+- Updated with code changes
+- Use Markdown format (.md)

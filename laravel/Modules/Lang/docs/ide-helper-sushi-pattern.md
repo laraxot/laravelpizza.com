@@ -15,7 +15,6 @@ metadata:
   severity: medium
   status: implemented
   last_run: 2026-07-15
-status: draft
 ---
 
 # IDE Helper + Sushi: Pattern di Caricamento Lazy
@@ -43,7 +42,7 @@ Catena osservata il 2026-07-15:
 2. trait `Sushi` → `bootSushi()` → `getRows()`
 3. `GetAllTranslationAction` elenca path `Modules/*/lang/{locale}/*.php`
 4. `File::getRequire($path)` esegue file loader (es. `job_core.php`, `set_default_tenant_for_urls_fields.php`)
-5. Loader chiama `merge_translation_files()`: funzione **non presente** in `Helper.php` runtime (solo stub PHPStan in Xot)
+5. Loader chiama `merge_translation_files()` — funzione **non presente** in `Helper.php` runtime (solo stub PHPStan in Xot)
 6. Exception → `Could not analyze class`
 
 ### Scopo business (perché esiste TranslationFile)
@@ -121,9 +120,9 @@ php artisan ide-helper:models
 
 ## Filosofia
 
-- **Sushi è lazy loading in-memory**: dati reali solo a runtime utente/admin
-- **IDE Helper è analisi statica**: schema sì, `require` lang no
-- **Lo schema `$form` basta**: colonne note senza righe
+- **Sushi è lazy loading in-memory** — dati reali solo a runtime utente/admin
+- **IDE Helper è analisi statica** — schema sì, `require` lang no
+- **Lo schema `$form` basta** — colonne note senza righe
 - **Religione Lang:** traduzioni = SSoT filesystem; il model è una **vista**, non il loader
 - **Politica:** helper merge è di competenza Xot; Lang consuma path
 - **Zen:** `return []` durante ide-helper ≠ perdita funzionalità runtime
@@ -153,6 +152,6 @@ Se altri moduli usano `Sushi` o caricano risorse durante `__construct()`:
 
 **Vedi anche:**
 
-- [ide-helper-philosophy](../../Xot/docs/ide-helper-philosophy.md): Filosofia generale
-- [merge-translation-files-helper](../../Xot/docs/merge-translation-files-helper.md): Helper loader modulare
-- [ide-helper-models-wave](../../Xot/docs/ide-helper-models-wave.md): Registro wave
+- [ide-helper-philosophy](../../Xot/docs/ide-helper-philosophy.md) — Filosofia generale
+- [merge-translation-files-helper](../../Xot/docs/merge-translation-files-helper.md) — Helper loader modulare
+- [ide-helper-models-wave](../../Xot/docs/ide-helper-models-wave.md) — Registro wave

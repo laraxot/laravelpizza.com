@@ -1,14 +1,13 @@
 ---
-qmd: "token efficiency religion.divergenza"
+qmd: "Token Efficiency Religion.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: token-efficiency-religion.md"
+title: "Token Efficiency Religion.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `token-efficiency-religion.md`

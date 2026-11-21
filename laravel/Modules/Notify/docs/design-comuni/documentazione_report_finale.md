@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "documentazione report finale"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Report Aggiornamento Documentazione Design Comuni FAQ
@@ -21,6 +20,15 @@ Aggiornamento completo della documentazione per la pagina FAQ del progetto Desig
 - **Stato**: ✅ COMPLETATO
 
 ---
+
+title: "documentazione report finale"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentazione report finale"
+issues: []
+discussions: []
 ## 📚 Documenti Creati
 
 ### 1. Modulo Cms
@@ -131,10 +139,10 @@ docs/design-comuni/MASTER_INDEX.md
 │
 ├─→ laravel/Themes/Sixteen/docs/design-comuni/
 │   ├─→ 00-index.md
-│   ├─→ domande-frequenti-html-analysis.md
-│   ├─→ domande-frequenti-implementazione.md
-│   ├─→ domande-frequenti-analisi-visiva.md
-│   ├─→ domande-frequenti-report-finale.md
+│   ├─→ DOMANDE_FREQUENTI_HTML_ANALYSIS.md
+│   ├─→ DOMANDE_FREQUENTI_IMPLEMENTAZIONE.md
+│   ├─→ DOMANDE_FREQUENTI_ANALISI_VISIVA.md
+│   ├─→ DOMANDE_FREQUENTI_REPORT_FINALE.md
 │   └─→ screenshots/ (146 files)
 │
 ├─→ laravel/Modules/Cms/docs/
@@ -160,10 +168,10 @@ docs/design-comuni/MASTER_INDEX.md
 | Sixteen/00-index.md | 6 | 2 | 8 |
 | design-comuni-faq.md | 8 | 2 | 10 |
 | design-comuni-faq-components.md | 8 | 2 | 10 |
-| domande-frequenti-html-analysis.md | 2 | 2 | 4 |
-| domande-frequenti-implementazione.md | 2 | 2 | 4 |
-| domande-frequenti-analisi-visiva.md | 2 | 2 | 4 |
-| domande-frequenti-report-finale.md | 2 | 2 | 4 |
+| DOMANDE_FREQUENTI_HTML_ANALYSIS.md | 2 | 2 | 4 |
+| DOMANDE_FREQUENTI_IMPLEMENTAZIONE.md | 2 | 2 | 4 |
+| DOMANDE_FREQUENTI_ANALISI_VISIVA.md | 2 | 2 | 4 |
+| DOMANDE_FREQUENTI_REPORT_FINALE.md | 2 | 2 | 4 |
 | DESIGN_COMUNI_SCREENSHOT_SCRIPT.md | 2 | 2 | 4 |
 | **Totale** | **54** | **24** | **78** |
 
@@ -230,7 +238,7 @@ docs/design-comuni/MASTER_INDEX.md
 1. **Iniziare**: [Master Index](../MASTER_INDEX.md)
 2. **Architettura**: [Cms FAQ Architecture](../laravel/Modules/Cms/docs/design-comuni-faq.md)
 3. **Componenti**: [UI FAQ Components](../laravel/Modules/UI/docs/design-comuni-faq-components.md)
-4. **Analisi**: [Sixteen HTML Analysis](../laravel/Themes/Sixteen/docs/design-comuni/domande-frequenti-html-analysis.md)
+4. **Analisi**: [Sixteen HTML Analysis](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_ANALYSIS.md)
 5. **Screenshots**: [Sixteen Screenshots](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/)
 
 ### Per AI Agents
@@ -243,8 +251,8 @@ docs/design-comuni/MASTER_INDEX.md
 ### Per Project Managers
 
 1. **Stato**: [Master Index](../MASTER_INDEX.md) (sezione Stato Globale)
-2. **Dettaglio**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande-frequenti-report-finale.md)
-3. **Visivo**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande-frequenti-analisi-visiva.md)
+2. **Dettaglio**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_REPORT_FINALE.md)
+3. **Visivo**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_ANALISI_VISIVA.md)
 
 ---
 

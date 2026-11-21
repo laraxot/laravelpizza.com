@@ -17,6 +17,15 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
+     * File tenant `config/{tenant}/activitylog.php`: stesso nome che legge
+     * `ActivityConfigData::tenantConfigName()` e che il package spazia.
+     */
+    public static function getConfigName(): string
+    {
+        return 'activitylog';
+    }
+
+    /**
      * @return array<string, TextInput|Toggle>
      */
     protected function getFormSchema(): array

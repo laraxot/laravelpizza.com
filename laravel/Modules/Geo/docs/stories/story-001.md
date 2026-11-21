@@ -1,4 +1,12 @@
 ---
+title: "story 001"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "story 001"
+issues: []
+discussions: []
 scope: module:Geo
 ---
 
@@ -177,17 +185,17 @@ Ricerca online (best practice 2026) per la parte analytics:
 
 ## GitHub (tracciamento)
 
-Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_quaeris_fila5`**): **`laraxot/base_quaeris_fila5`**.
+Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_<nome progetto>_fila5`**): **`laraxot/base_<nome progetto>_fila5`**.
 
 | Risorsa | Stato | Link |
 |---|---|---|
-| Issue | **DA CREARE** | https://github.com/laraxot/base_quaeris_fila5/issues |
-| Discussion | **DA CREARE** | https://github.com/laraxot/base_quaeris_fila5/discussions |
+| Issue | **DA CREARE** | https://github.com/laraxot/base_<nome progetto>_fila5/issues |
+| Discussion | **DA CREARE** | https://github.com/laraxot/base_<nome progetto>_fila5/discussions |
 
 Il numero non e' scritto perche' non esiste ancora: `gh` non e' autenticato in questa sessione e i repo sono privati. Appena disponibile, creare con:
 
 ```bash
-gh issue create --repo laraxot/base_quaeris_fila5 \
+gh issue create --repo laraxot/base_<nome progetto>_fila5 \
   --title "STORY-001: Consolidamento stack release + changelog avanzato con analytics per-contributore" --body-file <FILE>
-gh api repos/laraxot/base_quaeris_fila5/discussions -f title="STORY-001: Consolidamento stack release + changelog avanzato con analytics per-contributore" -f body="vedi la story"
+gh api repos/laraxot/base_<nome progetto>_fila5/discussions -f title="STORY-001: Consolidamento stack release + changelog avanzato con analytics per-contributore" -f body="vedi la story"
 ```

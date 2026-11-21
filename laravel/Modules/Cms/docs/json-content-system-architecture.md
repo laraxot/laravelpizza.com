@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "json content system architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # JSON Content System Architecture - CMS Module
@@ -17,6 +16,15 @@ status: draft
 ## File: `Modules/Cms/app/View/Components/Section.php` e `config/local/laravelpizza/database/content/`
 
 ---
+
+title: "json content system architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json content system architecture"
+issues: []
+discussions: []
 ## 🧠 La Litigata Interna
 
 ### Contesto

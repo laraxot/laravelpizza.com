@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "comuni json usage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Using comuni.json for Location Data

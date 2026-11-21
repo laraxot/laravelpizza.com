@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Quality Status (November 2025)"
+qmd: "activity quality status md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity]
-qmd: "activity module - quality status (november 2025) activity"
+tags: [documentation]
 ---
+
 # Activity Module - Quality Status (November 2025)
 
 ## 🎯 Overview
@@ -99,19 +98,19 @@ public function withCustomProperties(array $attributes): static
 - `/docs/analysis/` - Quality analysis files
 - `/docs/guides/` - Implementation guides
 - `/docs/phpstan/` - PHPStan specific docs
-- `/docs/archived/` - Historical records
+- `/docs/archivedd/` - Historical records
 
 ## 🎓 Documentation Structure
 
 ### Current Files (Selected)
 - `code-quality-analysis.md` ✅ Comprehensive quality analysis
-- `phpstan-analysis-november-2025.md` ✅ Recent PHPStan status
+- `phpstan-analysis-archive.md` ✅ Recent PHPStan status
 - `business-logic-analysis.md` ✅ Business logic documentation
 - `query-optimization-analysis.md` ✅ Performance analysis
 - `testing-strategy-implementation.md` ✅ Testing approach
 
 ### Duplicate/Redundant Files
-- `README.md` vs `readme.md` (case sensitivity)
+- `README.md` vs `README.md` (case sensitivity)
 - `README.md.update` (outdated?)
 - Multiple phpstan analysis files with overlapping content
 
@@ -147,7 +146,7 @@ public function withCustomProperties(array $attributes): static
 ## 📚 Related Documentation
 
 - [Code Quality Analysis](./code-quality-analysis.md)
-- [PHPStan Analysis November 2025](./phpstan-analysis-november-2025.md)
+- [PHPStan Analysis November 2025](./phpstan-analysis-archive.md)
 - [Business Logic Analysis](./business-logic-analysis.md)
 - [Query Optimization Analysis](./query-optimization-analysis.md)
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "configuration architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura delle Configurazioni nei Moduli Laravel

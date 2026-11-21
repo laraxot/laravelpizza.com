@@ -1,9 +1,8 @@
 ---
 title: "Domain Logic"
+qmd: "activity domain logic md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "domain logic activity"
+tags: [documentation]
 ---
+
 # Domain Logic

@@ -1,14 +1,12 @@
 ---
-title: "github interaction log"
+title: "Github Interaction Log"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "github interaction log"
+qmd: "Github Interaction Log"
 issues: []
 discussions: []
-status: superseded
-superseded_by: github-interaction-log.md
 ---
 
 # GitHub Interaction Log — Module Geo
@@ -18,6 +16,15 @@ superseded_by: github-interaction-log.md
 **Scope:** Aggiornamento completo issues e discussions
 
 ---
+
+title: "GITHUB INTERACTION LOG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GITHUB INTERACTION LOG"
+issues: []
+discussions: []
 ## Issues Aggiornate
 
 ### STORY-123 — Cluster Stability

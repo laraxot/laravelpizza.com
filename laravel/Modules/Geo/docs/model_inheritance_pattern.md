@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "model inheritance pattern"
 issues: []
 discussions: []
-status: superseded
-superseded_by: model-inheritance-pattern.md
 ---
 
 # Principio di Ereditarietà nei Modelli

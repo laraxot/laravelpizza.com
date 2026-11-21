@@ -1,11 +1,10 @@
 ---
 title: "Fix: ActivityFactory subject_id deve usare UUID"
+qmd: "activity errori activity factory uuid consistency md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, errori]
-qmd: "fix: activityfactory subject_id deve usare uuid activity"
+tags: [documentation]
 ---
+
 # Fix: ActivityFactory subject_id deve usare UUID
 
 ## Problema

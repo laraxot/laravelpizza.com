@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "template content examples"
 issues: []
 discussions: []
-status: superseded
-superseded_by: template-content-examples.md
 ---
 
 # Esempi di Contenuto per Template Email

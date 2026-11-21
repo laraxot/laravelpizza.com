@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 Toolkit di Automazione Git
@@ -121,6 +120,15 @@ Le contribuzioni sono benvenute! Per favore, leggi le linee guida per i contribu
 Questo progetto è distribuito sotto la licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 <div align="center">
   <sub>Built with ❤️ by the development team</sub>
 </div> 

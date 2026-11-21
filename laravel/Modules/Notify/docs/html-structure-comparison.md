@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "html structure comparison"
 issues: []
 discussions: []
-status: draft
 ---
 
 # HTML Structure Comparison Tools

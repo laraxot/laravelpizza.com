@@ -366,14 +366,14 @@ When user asks for GSD or uses `gsd-*` commands:
 GSD directories:
 - Phases: `.planning/phases/`
 - Research: `.planning/research/`
-- Roadmap: `.planning/ROADMAP.md`
+- Roadmap: `.planning/roadmap.md`
 
 ---
 
 ## 🔗 Key Documentation Files
 
 ### Master Hubs (Start Here)
-- **Architecture Diagrams**: `docs/ARCHITECTURE-DIAGRAMS.md` (system overview, ASCII diagrams)
+- **Architecture Diagrams**: `docs/architecture-diagrams.md` (system overview, ASCII diagrams)
 - **Module Master Index**: `docs/MODULE_DOCS_INDEX.md` (all 19 modules + relationships)
 - **Theme Master Index**: `docs/THEMES_DOCUMENTATION_INDEX.md` (Sixteen, TwentyOne + integration)
 - **Documentation Ecosystem**: `docs/DOCUMENTATION_ECOSYSTEM.md` (complete navigation map)
@@ -384,8 +384,8 @@ GSD directories:
 - **Issue Tracking**: `.github/README.md` (Design Comuni project tracking)
 
 ### Module & Theme Documentation
-- **All Modules**: `laravel/Modules/{ModuleName}/docs/00-INDEX.md`
-- **All Themes**: `laravel/Themes/{ThemeName}/docs/00-INDEX.md`
+- **All Modules**: `laravel/Modules/{ModuleName}/docs/00-index.md`
+- **All Themes**: `laravel/Themes/{ThemeName}/docs/00-index.md`
 - **All Modules**: `laravel/Modules/{ModuleName}/docs/00-index.md`
 - **All Themes**: `laravel/Themes/{ThemeName}/docs/00-index.md`
 - **Component Catalog**: `laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md` (47 components, 38 pages)

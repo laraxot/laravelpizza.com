@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "data class"
 issues: []
 discussions: []
-status: draft
 ---
 
 # SmsFactorData Class Documentation

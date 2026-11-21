@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collegamento al Modulo User
@@ -23,7 +22,7 @@ Sia il modulo Cms che il modulo User seguono le stesse convenzioni di namespace 
 
 Per dettagli specifici, consulta:
 - [Convenzioni Namespace Filament](./convenzioni-namespace-filament.md) in questo modulo
-- [Convenzioni di Namespace](../../User/docs/namespace-conventions.md) nel modulo User
+- [Convenzioni di Namespace](../../user/project_docs/namespace-conventions.md) nel modulo User
 
 ## Punti di Integrazione
 
@@ -33,10 +32,19 @@ Per dettagli specifici, consulta:
 
 ## Collegamenti Bidirezionali
 
-- [Convenzioni di Namespace nel modulo User](../../User/docs/namespace-conventions.md)
+- [Convenzioni di Namespace nel modulo User](../../user/project_docs/namespace-conventions.md)
 - [Best Practices Filament nel modulo User](../../user/project_docs/filament_best_practices.md)
 
 ---
+
+title: "user link"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user link"
+issues: []
+discussions: []
 ### Nota Importante
 Quando aggiungi nuovi componenti Filament, assicurati di:
 1. Utilizzare il namespace corretto
@@ -44,6 +52,6 @@ Quando aggiungi nuovi componenti Filament, assicurati di:
 3. Mantenere aggiornata la documentazione in entrambi i moduli
 
 ## Collegamenti tra versioni di user-link.md
-* [user-link.md](../../Lang/docs/user-link.md)
+* [user-link.md](laravel/modules/lang/project_docs/user-link.md)
 * [user-link.md](laravel/modules/cms/project_docs/user-link.md)
 

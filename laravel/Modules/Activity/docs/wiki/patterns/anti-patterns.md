@@ -1,11 +1,7 @@
 ---
+qmd: "activity wiki patterns anti patterns md"
 title: Anti patterns
 module: Activity
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "anti-patterns in activity module activity"
 ---
 
 # Anti-patterns in Activity Module

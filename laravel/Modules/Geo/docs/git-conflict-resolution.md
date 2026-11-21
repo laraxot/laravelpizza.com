@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflict resolution 2026 07 31"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Audit collisioni Git committate in bashscripts
@@ -19,7 +18,7 @@ Risoluzione deterministica per singolo blocco: lato non vuoto, superset, metadat
 | `laravel/Modules/Geo/app/Models/Traits/HasAddress.php` | 6 | shorter_tiebreak=6 | `0de689907f92` → `888d62c34517` |
 | `laravel/Modules/Geo/app/Models/Traits/HasPlaceTrait.php` | 1 | incoming_nonempty=1 | `49f2b03850f5` → `024ab2845eec` |
 | `laravel/Modules/Geo/app/Traits/HasAddresses.php` | 1 | shorter_tiebreak=1 | `b28e63f50a57` → `ec5e7de9b772` |
-| `laravel/Modules/Geo/docs/chat/handoff-phpstan-modules-zero-errori.md` | 1 | shorter_tiebreak=1 | `8036fd81f10b` → `eeef67f6a04a` |
+| `laravel/Modules/Geo/docs/chat/handoff-phpstan-modules-zero-2026-07-07.md` | 1 | shorter_tiebreak=1 | `8036fd81f10b` → `eeef67f6a04a` |
 | `laravel/Modules/Geo/docs/index.md` | 2 | shorter_tiebreak=2 | `9ac4b2742d36` → `8ec4ebae1408` |
 | `laravel/Modules/Geo/docs/install/install-from-zero.md` | 1 | shorter_tiebreak=1 | `cfefde31cb78` → `0084c3869301` |
 | `laravel/Modules/Geo/docs/raw/history/docs-update-complete.md` | 1 | shorter_tiebreak=1 | `58caf6914cf9` → `b98a4d856a64` |

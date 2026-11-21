@@ -5,8 +5,11 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
+<<<<<<< .merge_file_CDEuqS
   - ../../docs/wiki/rules/on-demand-pattern.md
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+=======
+>>>>>>> .merge_file_KM1S9R
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 status: draft
@@ -15,7 +18,10 @@ qmd: "on-demand pattern   module **activity** activity"
 
 # On-Demand Pattern — Module **Activity**
 
+<<<<<<< .merge_file_CDEuqS
 **Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
+=======
+>>>>>>> .merge_file_KM1S9R
 **Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
 
 ## Principio
@@ -23,7 +29,11 @@ qmd: "on-demand pattern   module **activity** activity"
 Questo Module segue il **pattern on-demand** per rules, skills, commands e memories:
 
 - ✅ **Vivono solo nel wiki** — ../../docs/wiki/
+<<<<<<< .merge_file_CDEuqS
 - ✅ **Caricati on-demand** — via trigger map o 
+=======
+- ✅ **Caricati on-demand** — via trigger map o
+>>>>>>> .merge_file_KM1S9R
 - ❌ **NON pre-caricati** — mai embeddare nei bootstrap files
 - ❌ **Nessuna duplicazione** — wiki = sorgente di verità unica
 
@@ -61,11 +71,11 @@ qmd search "<topic>"
 ```
 ./laravel/Modules/Activity/docs/
 ├── wiki/                    # Knowledge base locale
-│   ├── rules/INDEX.md      # Indice rules modulo-specifiche
-│   ├── skills/INDEX.md     # Indice skills modulo-specifiche
-│   ├── commands/INDEX.md   # Indici commands
-│   └── memories/INDEX.md   # Indice memories
-└── ON-DEMAND-PATTERN.md     # Questo file
+│   ├── rules/index.md      # Indice rules modulo-specifiche
+│   ├── skills/index.md     # Indice skills modulo-specifiche
+│   ├── commands/index.md   # Indici commands
+│   └── memories/index.md   # Indice memories
+└── on-demand-pattern.md     # Questo file
 ```
 
 ## Quick Reference
@@ -91,9 +101,12 @@ qmd search "<topic>"
 
 ## Riferimenti
 
+<<<<<<< .merge_file_CDEuqS
 - [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+>>>>>>> .merge_file_KM1S9R
 - [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)

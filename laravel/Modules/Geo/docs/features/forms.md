@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "forms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Forms and Input Handling

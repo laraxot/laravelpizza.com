@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migrazione filament"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Module - Migrazione a Filament 4

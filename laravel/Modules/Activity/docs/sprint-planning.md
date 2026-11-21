@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_7tR0Lc
 # Activity Module - Sprint Planning
 
 **Module:** Activity  
@@ -79,6 +80,8 @@ Complete core activity tracking infrastructure with admin dashboard for viewing 
 ---
 
 *Last Updated: March 12, 2026*
+=======
+>>>>>>> .merge_file_UM1iGy
 ---
 title: "Activity Module - Sprint Planning"
 type: note
@@ -86,6 +89,7 @@ status: draft
 updated: 2026-10-08
 tags: [docs, activity]
 qmd: "activity module - sprint planning activity"
+<<<<<<< .merge_file_7tR0Lc
 ---
 # Activity Module - Sprint Planning
 
@@ -176,3 +180,6 @@ Finalize documentation and validation for Activity.
 
 ## 🏁 Sprint Goal
 Finalize documentation and validation for Activity.
+=======
+---
+>>>>>>> .merge_file_UM1iGy

@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Guida Step-by-Step Migrazione Filament 4"
+qmd: "activity guida migrazione step by step md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - guida step-by-step migrazione filament 4 activity"
+tags: [documentation]
 ---
+
 # Activity Module - Guida Step-by-Step Migrazione Filament 4
 
 ## 🎯 Panoramica della Migrazione

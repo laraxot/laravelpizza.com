@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "theme architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎨 Theme Architecture - "Il Tema è un Vestito"
@@ -306,9 +305,9 @@ Tema configurabile
 ## 🔗 Riferimenti
 
 ### Project Documentation
-- [THEME_ARCHITECTURE.md](THEME_ARCHITECTURE.md) - Questo file
-- [COMPOSER_STRATEGY.md](COMPOSER_STRATEGY.md) - Strategia composer
-- [FILAMENT_5_OFFICIAL_POLICY.md](FILAMENT_5_OFFICIAL_POLICY.md) - Politica Filament
+- [THEME_ARCHITECTURE.md](theme_architecture.md) - Questo file
+- [COMPOSER_STRATEGY.md](composer_strategy.md) - Strategia composer
+- [FILAMENT_5_OFFICIAL_POLICY.md](filament_5_official_policy.md) - Politica Filament
 
 ### Laravel Documentation
 - [Package Discovery](https://laravel.com/docs/packages#package-discovery)
@@ -316,6 +315,15 @@ Tema configurabile
 - [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
 
 ---
+
+title: "theme architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme architecture"
+issues: []
+discussions: []
 **Stato**: ✅ **ARCHITETTURA CORRETTA - Tema Configurabile**  
 **Concetto**: **"Il Tema è un Vestito"**  
 **Registrazione**: **Automatica (NON hardcoded)**  

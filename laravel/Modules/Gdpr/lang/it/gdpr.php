@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'register' => [
         'title' => 'Crea il tuo account',
-        'subtitle' => 'Unisciti alla community di sviluppatori Laravel più golosa d\'Italia!',
-        'submit' => 'Crea il mio account gratis',
+        'subtitle' => 'Compila il modulo per creare il tuo account personale.',
+        'submit' => 'Crea account',
         'submitting' => 'Creazione in corso...',
         'already_have_account' => 'Hai già un account?',
         'already_registered' => 'Hai già un account?',
@@ -48,9 +48,9 @@ return [
             'terms_label' => 'Termini e Condizioni',
             'terms_hint' => 'Ho letto e accetto i Termini e Condizioni',
             'marketing_label' => 'Consenso Marketing',
-            'marketing_hint' => 'Voglio ricevere consigli sulla pizza e inviti ai meetup',
-            'privacy_complete' => 'Informativa completa ai sensi degli articoli 13 e 14 del Regolamento (UE] 2016/679 (GDPR]',
-            'terms_complete' => 'Contratto di servizio ai sensi dell\'articolo 6(1](b] del Regolamento (UE] 2016/679 (GDPR]',
+            'marketing_hint' => 'Voglio ricevere notizie e aggiornamenti',
+            'privacy_complete' => 'Informativa completa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR)',
+            'terms_complete' => 'Contratto di servizio ai sensi dell\'articolo 6(1)(b) del Regolamento (UE) 2016/679 (GDPR)',
         ],
         'actions' => [
             'read_privacy_policy' => 'Leggi informativa privacy',

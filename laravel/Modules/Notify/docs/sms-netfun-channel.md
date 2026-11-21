@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms netfun channel"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione Netfun SMS Channel in Laravel
@@ -18,6 +17,15 @@ Questa guida spiega come integrare il provider Netfun come canale custom per l'i
 > **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./netfun_config_requirements.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
 
 ---
+
+title: "sms netfun channel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms netfun channel"
+issues: []
+discussions: []
 ## 1. Creazione del Channel Netfun
 
 ### 1.1. Struttura del Channel

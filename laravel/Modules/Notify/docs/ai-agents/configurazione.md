@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "configurazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Configurazione e Setup

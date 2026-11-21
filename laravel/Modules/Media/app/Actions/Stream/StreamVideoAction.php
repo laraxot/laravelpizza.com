@@ -58,14 +58,20 @@ class StreamVideoAction
      */
     private function initialize(string $disk, string $path, ?Media $media): void
     {
-        if ($media !== null && Auth::check()) {
-            $user = Auth::user();
-            if (! $user instanceof UserContract) {
-                abort(403, 'Unauthorized to stream this media');
-            }
-            if ($media->created_by != $user->getAuthIdentifier() && ! $user->hasRole('super-admin')) {
-                abort(403, 'Unauthorized to stream this media');
-            }
+        // P0: guest non puo' streamare; ownership obbligatorio quando $media e' noto.
+        if (! Auth::check()) {
+            abort(401, 'Authentication required to stream media');
+        }
+
+        $user = Auth::user();
+        if (! $user instanceof UserContract) {
+            abort(403, 'Unauthorized to stream this media');
+        }
+
+        if ($media !== null
+            && $media->created_by != $user->getAuthIdentifier()
+            && ! $user->hasRole('super-admin')) {
+            abort(403, 'Unauthorized to stream this media');
         }
 
         $filesystem = app(GetFilesystemAdapterAction::class)->execute($disk);

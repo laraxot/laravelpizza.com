@@ -301,7 +301,7 @@ All Active requirements are hypotheses until shipped and validated.
 
 Infer Validated requirements from existing code:
 
-1. Read `.planning/codebase/ARCHITECTURE.md` and `STACK.md`
+1. Read `.planning/codebase/architecture.md` and `STACK.md`
 2. Identify what the codebase already does
 3. These become the initial Validated set
 
@@ -665,7 +665,7 @@ How are [domain] systems typically structured? What are major components?
 </files_to_read>
 
 <downstream_consumer>
-Your ARCHITECTURE.md informs phase structure in roadmap. Include:
+Your architecture.md informs phase structure in roadmap. Include:
 - Component boundaries (what talks to what)
 - Data flow (how information moves)
 - Suggested build order (dependencies between components)
@@ -678,8 +678,8 @@ Your ARCHITECTURE.md informs phase structure in roadmap. Include:
 </quality_gate>
 
 <output>
-Write to: .planning/research/ARCHITECTURE.md
-Use template: .github/get-shit-done/templates/research-project/ARCHITECTURE.md
+Write to: .planning/research/architecture.md
+Use template: .github/get-shit-done/templates/research-project/architecture.md
 </output>
 ", subagent_type="general-purpose", model="{researcher_model}", description="Architecture research")
 
@@ -724,24 +724,24 @@ Use template: .github/get-shit-done/templates/research-project/PITFALLS.md
 ", subagent_type="general-purpose", model="{researcher_model}", description="Pitfalls research")
 ```
 
-After all 4 agents complete, spawn synthesizer to create SUMMARY.md:
+After all 4 agents complete, spawn synthesizer to create summary.md:
 
 ```
 Task(prompt="
 <task>
-Synthesize research outputs into SUMMARY.md.
+Synthesize research outputs into summary.md.
 </task>
 
 <files_to_read>
 - .planning/research/STACK.md
 - .planning/research/FEATURES.md
-- .planning/research/ARCHITECTURE.md
+- .planning/research/architecture.md
 - .planning/research/PITFALLS.md
 </files_to_read>
 
 <output>
-Write to: .planning/research/SUMMARY.md
-Use template: .github/get-shit-done/templates/research-project/SUMMARY.md
+Write to: .planning/research/summary.md
+Use template: .github/get-shit-done/templates/research-project/summary.md
 Commit after writing.
 </output>
 ", subagent_type="gsd-research-synthesizer", model="{synthesizer_model}", description="Synthesize research")
@@ -755,9 +755,9 @@ Display research complete banner and key findings:
 
 ## Key Findings
 
-**Stack:** [from SUMMARY.md]
-**Table Stakes:** [from SUMMARY.md]
-**Watch Out For:** [from SUMMARY.md]
+**Stack:** [from summary.md]
+**Table Stakes:** [from summary.md]
+**Watch Out For:** [from summary.md]
 
 Files: `.planning/research/`
 ```
@@ -929,7 +929,7 @@ Task(prompt="
 <files_to_read>
 - .planning/PROJECT.md (Project context)
 - .planning/REQUIREMENTS.md (v1 Requirements)
-- .planning/research/SUMMARY.md (Research findings - if exists)
+- .planning/research/summary.md (Research findings - if exists)
 - .planning/config.json (Depth and mode settings)
 </files_to_read>
 
@@ -941,7 +941,7 @@ Create roadmap:
 2. Map every v1 requirement to exactly one phase
 3. Derive 2-5 success criteria per phase (observable user behaviors)
 4. Validate 100% coverage
-5. Write files immediately (ROADMAP.md, STATE.md, update REQUIREMENTS.md traceability)
+5. Write files immediately (roadmap.md, STATE.md, update REQUIREMENTS.md traceability)
 6. Return ROADMAP CREATED with summary
 
 Write files first, then return. This ensures artifacts persist even if context is lost.
@@ -958,7 +958,7 @@ Write files first, then return. This ensures artifacts persist even if context i
 
 **If `## ROADMAP CREATED`:**
 
-Read the created ROADMAP.md and present it nicely inline:
+Read the created roadmap.md and present it nicely inline:
 
 ```
 ---
@@ -1006,7 +1006,7 @@ Use AskUserQuestion:
 - options:
   - "Approve" — Commit and continue
   - "Adjust phases" — Tell me what to change
-  - "Review full file" — Show raw ROADMAP.md
+  - "Review full file" — Show raw roadmap.md
 
 **If "Approve":** Continue to commit.
 
@@ -1020,7 +1020,7 @@ Use AskUserQuestion:
   [user's notes]
 
   <files_to_read>
-  - .planning/ROADMAP.md (Current roadmap to revise)
+  - .planning/roadmap.md (Current roadmap to revise)
   </files_to_read>
 
   Update the roadmap based on feedback. Edit files in place.
@@ -1031,12 +1031,12 @@ Use AskUserQuestion:
 - Present revised roadmap
 - Loop until user approves
 
-**If "Review full file":** Display raw `cat .planning/ROADMAP.md`, then re-ask.
+**If "Review full file":** Display raw `cat .planning/roadmap.md`, then re-ask.
 
 **Commit roadmap (after approval or auto mode):**
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create roadmap ([N] phases)" --files .planning/ROADMAP.md .planning/STATE.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create roadmap ([N] phases)" --files .planning/roadmap.md .planning/STATE.md .planning/REQUIREMENTS.md
 ```
 
 ## 9. Done
@@ -1056,7 +1056,7 @@ Present completion summary:
 | Config         | `.planning/config.json`     |
 | Research       | `.planning/research/`       |
 | Requirements   | `.planning/REQUIREMENTS.md` |
-| Roadmap        | `.planning/ROADMAP.md`      |
+| Roadmap        | `.planning/roadmap.md`      |
 
 **[N] phases** | **[X] requirements** | Ready to build ✓
 ```
@@ -1078,7 +1078,7 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase 1 --auto")
 
 ## ▶ Next Up
 
-**Phase 1: [Phase Name]** — [Goal from ROADMAP.md]
+**Phase 1: [Phase Name]** — [Goal from roadmap.md]
 
 /gsd-discuss-phase 1 — gather context and clarify approach
 
@@ -1101,11 +1101,11 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase 1 --auto")
 - `.planning/research/` (if research selected)
   - `STACK.md`
   - `FEATURES.md`
-  - `ARCHITECTURE.md`
+  - `architecture.md`
   - `PITFALLS.md`
-  - `SUMMARY.md`
+  - `summary.md`
 - `.planning/REQUIREMENTS.md`
-- `.planning/ROADMAP.md`
+- `.planning/roadmap.md`
 - `.planning/STATE.md`
 
 </output>
@@ -1125,7 +1125,7 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase 1 --auto")
 - [ ] gsd-roadmapper spawned with context
 - [ ] Roadmap files written immediately (not draft)
 - [ ] User feedback incorporated (if any)
-- [ ] ROADMAP.md created with phases, requirement mappings, success criteria
+- [ ] roadmap.md created with phases, requirement mappings, success criteria
 - [ ] STATE.md initialized
 - [ ] REQUIREMENTS.md traceability updated
 - [ ] User knows next step is `/gsd-discuss-phase 1`

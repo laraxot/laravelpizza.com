@@ -6,12 +6,11 @@ updated: 2026-09-26
 qmd: "git push resolution"
 issues: []
 discussions: []
-title: Notify Push Execution and Resolution: 2026-07-29 Continuation
+title: Notify Push Execution and Resolution — 2026-07-29 Continuation
 date: 2026-07-29
-status: draft
 ---
 
-# Notify Module Push Execution: Session Continuation
+# Notify Module Push Execution — Session Continuation
 
 ## Procedura Eseguita
 
@@ -117,7 +116,7 @@ git push laraxot dev
 
 ---
 
-## Quality Gates: Notify Module
+## Quality Gates — Notify Module
 
 ### PHPStan (Scope: Modules/Notify/app)
 ```bash
@@ -128,7 +127,7 @@ php ./vendor/bin/phpstan analyse Modules/Notify/app
 ### PHPStan (Scope: Global Modules bootstrap)
 ```bash
 php ./vendor/bin/phpstan analyse Modules
-# ⏸️ TIMEOUT @ 120s (Larastan bootstrap timeout: architectural issue, non-Notify-specific)
+# ⏸️ TIMEOUT @ 120s (Larastan bootstrap timeout — architectural issue, non-Notify-specific)
 ```
 
 ### Conclusion

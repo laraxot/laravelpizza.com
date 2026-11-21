@@ -12,7 +12,6 @@ related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
   - ../stories/12.1.retire-geo-test-livewire.story.md
-status: draft
 ---
 
 # Tech spec Geo

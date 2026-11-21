@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "lang link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collegamento alle Traduzioni del Modulo Notify
@@ -64,16 +63,4 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Activity/docs/lang-link.md)
 * [lang-link.md](../../../Patient/docs/lang-link.md)
 * [lang-link.md](../../../Cms/docs/lang-link.md)
-* [lang-link.md](../../Gdpr/docs/lang-link.md)
-* [lang-link.md](../../../Notify/docs/lang-link.md)
-* [lang-link.md](../../../Xot/docs/lang-link.md)
-* [lang-link.md](../../../Dental/docs/lang-link.md)
-* [lang-link.md](../../User/docs/lang-link.md)
-* [lang-link.md](../../../UI/docs/lang-link.md)
-* [lang-link.md](../../Job/docs/lang-link.md)
-* [lang-link.md](../../Media/docs/lang-link.md)
-* [lang-link.md](../../Tenant/docs/lang-link.md)
-* [lang-link.md](../../Activity/docs/lang-link.md)
-* [lang-link.md](../../../Patient/docs/lang-link.md)
-* [lang-link.md](../../Cms/docs/lang-link.md)
 

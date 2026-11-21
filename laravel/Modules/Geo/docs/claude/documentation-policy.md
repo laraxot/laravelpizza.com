@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "documentation policy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Policy
@@ -49,7 +48,7 @@ All links should be relative to maintain portability:
 2. **[architecture-rules.md](architecture-rules.md)** - Critical architecture rules
 3. **[module-structure.md](module-structure.md)** - Module structure and conventions
 4. **[development-tasks.md](development-tasks.md)** - Common development tasks
-5. **[conventions.md](../development/conventions.md)** - Code conventions and best practices
+5. **[conventions.md](conventions.md)** - Code conventions and best practices
 6. **[code-quality.md](code-quality.md)** - PHPStan, PHPMD, PHP Insights, Rector
 7. **[common-pitfalls.md](common-pitfalls.md)** - Common mistakes to avoid
 8. **[documentation-policy.md](documentation-policy.md)** - Documentation policies
@@ -89,5 +88,14 @@ Start with fundamental concepts and progressively introduce more complex topics.
 Each module should maintain its own detailed documentation in its `docs/` directory, following the same principles as the main documentation.
 
 ---
+
+title: "documentation policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation policy"
+issues: []
+discussions: []
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: documentation-policy.md - Documentation standards and policies

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # SMS Integration

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "consolidation plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Lang Module Docs Consolidation Plan
@@ -18,6 +17,15 @@ status: draft
 **Strategy:** Delete duplicates → Consolidate by topic → Move research to wiki/
 
 ---
+
+title: "consolidation plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "consolidation plan"
+issues: []
+discussions: []
 ## Quick Stats
 
 | Category | Current | Target | Action |
@@ -35,7 +43,7 @@ status: draft
 
 ## Consolidation Steps
 
-### 1. DELETE DUPLICATES (Kebab vs Snake Case): ~30 files
+### 1. DELETE DUPLICATES (Kebab vs Snake Case) — ~30 files
 
 Keep kebab-case (e.g., `translation-system.md`); delete snake_case (`translation_system.md`).
 
@@ -59,7 +67,7 @@ validation_*.md (all snake_case)
 working_with_locales.md
 ```
 
-### 2. DELETE OBSOLETE FILES: ~20 files
+### 2. DELETE OBSOLETE FILES — ~20 files
 
 Italian corrections, outdated analyses, and non-canonical content.
 
@@ -83,12 +91,12 @@ cyclomatic-complexity.md
 dependency-intelligence.md
 docs-health.md
 coverage.md
-REDUNDANCY_ANALYSIS.md
+redundancy_analysis.md
 
 # Index duplicates (consolidate into README.md)
-00-INDEX.md
 00-index.md
-INDEX.md
+00-index.md
+index.md
 ```
 
 ### 3. CONSOLIDATE TRANSLATION FILES (65 → 4)
@@ -115,17 +123,17 @@ Merge: All `conflict-resolution-*.md`, `conflicts*.md`, `case-conflicts.md`, `ca
 ### 5. CONSOLIDATE VALIDATION (4 → 2)
 
 Keep both (complementary):
-- **validation-messages.md**: Structure & standards
-- **translating-validation-messages.md**: Usage with plurals
+- **validation-messages.md** — Structure & standards
+- **translating-validation-messages.md** — Usage with plurals
 
 Merge: `translating-plural-singular-forms.md`
 
 ### 6. CONSOLIDATE PHPSTAN (3 → 2)
 
-- **PHPSTAN_L10.md**: Merge PHPSTAN-FIXES.md + PHPSTAN_STATUS.md into this
+- **PHPSTAN_L10.md** — Merge PHPSTAN-FIXES.md + PHPSTAN_STATUS.md into this
 - Delete: `PHPSTAN-FIXES.md`, `PHPSTAN_STATUS.md`
 
-### 7. MOVE TO WIKI/ SUBDIRECTORIES: ~40 files
+### 7. MOVE TO WIKI/ SUBDIRECTORIES — ~40 files
 
 Create subdirs and move strategy/research content (not essential to module root):
 
@@ -133,14 +141,14 @@ Create subdirs and move strategy/research content (not essential to module root)
 mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # Move strategy/research
-mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/
+mv product_launch_plan.md wiki/strategies/
 mv TRANSLATION_STRATEGIES.md wiki/strategies/
-mv USER_RESEARCH.md wiki/strategies/
-mv PERFORMANCE-OPTIMIZATION.md wiki/overviews/
-mv SPRINT_PLANNING.md wiki/strategies/
+mv user_research.md wiki/strategies/
+mv performance-optimization.md wiki/overviews/
+mv sprint_planning.md wiki/strategies/
 
 # Move how-to guides
-mv QMD-SETUP.md wiki/how-to/
+mv qmd-setup.md wiki/how-to/
 mv QUICK_REFERENCE.md wiki/how-to/
 mv best-practices.md wiki/how-to/
 mv laravel-localization-reference.md wiki/how-to/
@@ -157,7 +165,7 @@ mv database-model-coverage.md wiki/overviews/
 mv schema.md wiki/overviews/
 
 # Move rules/patterns
-mv ON-DEMAND-PATTERN.md wiki/rules/
+mv on-demand-pattern.md wiki/rules/
 mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/
 ```
 
@@ -170,7 +178,7 @@ laravel/Modules/Lang/docs/
 ├── README.md                         # Entry point (anchor for all docs)
 ├── PHPSTAN_L10.md                   # Technical status & fixes
 ├── MIGRATIONS.md                    # Schema/migrations
-├── PRODUCT_STRATEGY.md              # Product vision (optional: move to wiki/)
+├── product_strategy.md              # Product vision (optional: move to wiki/)
 ├── LOCALE_MANAGEMENT.md             # Locale management basics
 │
 ├── translation-system.md            # Core: system arch + syntax
@@ -246,7 +254,7 @@ rm -f \
   dependency-intelligence.md \
   docs-health.md \
   coverage.md \
-  REDUNDANCY_ANALYSIS.md \
+  redundancy_analysis.md \
   00-index.md \
   00-index.md \
   index.md
@@ -261,14 +269,14 @@ rm -f lang_service_provider.md lang_service_provider_improvements.md
 mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # 6. Move strategy/research files
-mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/ 2>/dev/null || true
+mv product_launch_plan.md wiki/strategies/ 2>/dev/null || true
 mv TRANSLATION_STRATEGIES.md wiki/strategies/ 2>/dev/null || true
-mv USER_RESEARCH.md wiki/strategies/ 2>/dev/null || true
-mv PERFORMANCE-OPTIMIZATION.md wiki/overviews/ 2>/dev/null || true
-mv SPRINT_PLANNING.md wiki/strategies/ 2>/dev/null || true
+mv user_research.md wiki/strategies/ 2>/dev/null || true
+mv performance-optimization.md wiki/overviews/ 2>/dev/null || true
+mv sprint_planning.md wiki/strategies/ 2>/dev/null || true
 
 # 7. Move how-to guides
-mv QMD-SETUP.md wiki/how-to/ 2>/dev/null || true
+mv qmd-setup.md wiki/how-to/ 2>/dev/null || true
 mv QUICK_REFERENCE.md wiki/how-to/ 2>/dev/null || true
 mv best-practices.md wiki/how-to/ 2>/dev/null || true
 mv laravel-localization-reference.md wiki/how-to/ 2>/dev/null || true
@@ -286,9 +294,9 @@ mv schema.md wiki/overviews/ 2>/dev/null || true
 mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/ 2>/dev/null || true
 
 # 9. Move rules
-mv ON-DEMAND-PATTERN.md wiki/rules/ 2>/dev/null || true
+mv on-demand-pattern.md wiki/rules/ 2>/dev/null || true
 
-# 10. Merge PHPSTAN files (manual step: see section below)
+# 10. Merge PHPSTAN files (manual step — see section below)
 # (Requires reading PHPSTAN-FIXES.md + PHPSTAN_STATUS.md into PHPSTAN_L10.md)
 ```
 
@@ -348,7 +356,7 @@ Example workflow:
 ```bash
 cd /var/www/_bases/base_ptvx_fila5
 git add -A
-git commit -m "chore: Lang docs aggressive consolidation: 579→150 files, 339→24 root
+git commit -m "chore: Lang docs aggressive consolidation — 579→150 files, 339→24 root
 
 - Delete 40 duplicates (kebab/snake case variants)
 - Delete 20 obsolete files (Italian corrections, analysis artifacts)
@@ -380,17 +388,17 @@ laravel/Modules/Lang/docs/
 ### After
 ```
 laravel/Modules/Lang/docs/
-├── 24 .md files (root): essential only
+├── 24 .md files (root) — essential only
 ├── ~150 total files
 ├── 4 translation-* canonical files
 ├── 1 conflict-resolution.md
 ├── 0 duplicates
 ├── 0 obsolete files
 ├── 1 index anchor (README.md)
-├── wiki/strategies/: product/planning
-├── wiki/how-to/: guides
-├── wiki/overviews/: technical reference
-├── wiki/rules/: patterns & rules
+├── wiki/strategies/ — product/planning
+├── wiki/how-to/ — guides
+├── wiki/overviews/ — technical reference
+├── wiki/rules/ — patterns & rules
 └── Clean: clear separation (root=essential, wiki=research)
 ```
 

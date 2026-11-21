@@ -10,7 +10,6 @@ confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, cms]
 related:
   - Modules/Xot/docs/queueable-actions.md
-status: draft
 ---
 
 # Queueable Actions — Cms Module Doctrine

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notify translation guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida alle Traduzioni nel Modulo Notify
@@ -181,11 +180,6 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./TRANSLATION_CONVENTIONS_CLARIFICATION.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
 - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
 - [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
 - [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation_keys_rules.md)

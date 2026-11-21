@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "christmas email templates v4 implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Christmas Email Templates v4.0 - Implementation Report
@@ -17,6 +16,15 @@ status: draft
 **Status**: ✅ Completato
 
 ---
+
+title: "christmas email templates v4 implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "christmas email templates v4 implementation"
+issues: []
+discussions: []
 ## 📋 Sommario Esecutivo
 
 Implementazione di 3 nuovi template email natalizi professionali e festivi per Sottana Service, con animazioni CSS avanzate, design premium e brand identity.

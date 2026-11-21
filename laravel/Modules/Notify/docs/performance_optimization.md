@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "performance optimization"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi e Ottimizzazione delle Performance

@@ -11,6 +11,7 @@ created: 2026-10-13
 updated: 2026-10-13
 qmd: "cookie tecnici inventario informativa cookie banner garante linee guida 2021 statikbe cookie-consent middleware allowlist XSRF session debugbar"
 related: [dcp-112, dcp-130, dcp-137]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-136: i cookie sono pochi, noti e dichiarati

@@ -100,9 +100,15 @@ class Consent extends BaseModel
     protected function casts(): array
     {
         return array_merge(parent::casts(), [
+<<<<<<< .merge_file_Hoy8Eq
             'accepted_at' => 'datetime',
             'revoked_at' => 'datetime',
             'metadata' => 'array',
+=======
+            'metadata' => 'array',
+            'accepted_at' => 'datetime',
+            'revoked_at' => 'datetime',
+>>>>>>> .merge_file_kp5C1U
         ]);
     }
 

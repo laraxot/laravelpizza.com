@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📋 Modulo PTV - Documentazione DRY + KISS
@@ -15,6 +14,15 @@ status: draft
 > **MODULO PTV**: Sistema di valutazione tecnica professionale con generazione PDF integrata e workflow complessi.
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 🎯 **Scopo e Business Logic**
 
 ### Sistema di Valutazione PTV

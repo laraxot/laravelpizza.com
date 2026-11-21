@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email templates deep dive"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Deep Dive: Soluzioni di Template Email in Laravel
@@ -15,6 +14,14 @@ status: draft
 Un'analisi dettagliata delle risorse, pacchetti, editor e tecniche per gestire i template email in Laravel.
 
 ---
+title: "email templates deep dive"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates deep dive"
+issues: []
+discussions: []
 ## 1. Core Laravel Mail System
 
 ### 1.1 Blade Templates

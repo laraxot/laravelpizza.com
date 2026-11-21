@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: webesign
 canonical: ../../../Themes/docs/shared-components/web-design-rules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/web-design-rules.md

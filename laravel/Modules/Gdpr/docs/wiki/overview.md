@@ -8,7 +8,6 @@ module: "Gdpr"
 type: overview
 created: "2026-04-15T08:28:42Z"
 updated: "2026-04-15T08:28:42Z"
-status: draft
 ---
 
 # Gdpr Wiki Overview

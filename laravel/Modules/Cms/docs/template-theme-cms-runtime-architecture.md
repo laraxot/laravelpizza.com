@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "template theme cms runtime architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Template, Theme, and CMS Runtime Architecture

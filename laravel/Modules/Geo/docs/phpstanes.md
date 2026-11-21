@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstanes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Fixes for Geo Module

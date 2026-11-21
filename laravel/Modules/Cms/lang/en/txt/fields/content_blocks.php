@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/content_blocks.php
 // Cms txt.fields.content_blocks — LangServiceProvider SSoT.
 return [
-    'label' => 'Blocchi Contenuto',
-    'placeholder' => 'Blocchi di contenuto principale',
-    'helper_text' => 'Blocchi che compongono il corpo principale della pagina',
+    'label' => 'Content Blocks',
+    'placeholder' => 'Main content blocks',
+    'helper_text' => 'Blocks that make up the main body of the page',
     'tooltip' => '',
     'description' => '',
 ];

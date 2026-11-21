@@ -15,7 +15,7 @@ discussions: []
 
 1. `.planning/STATE.md`
 2. `.planning/PROJECT.md`
-3. `.planning/ROADMAP.md`
+3. `.planning/roadmap.md`
 4. Current phase's plan files (`*-PLAN.md`)
 5. Current phase's summary files (`*-SUMMARY.md`)
 
@@ -131,7 +131,7 @@ If found, delete them — phase is complete, handoffs are stale.
 
 <step name="update_roadmap_and_state">
 
-**Delegate ROADMAP.md and STATE.md updates to gsd-tools:**
+**Delegate roadmap.md and STATE.md updates to gsd-tools:**
 
 ```bash
 TRANSITION=$(node .github/get-shit-done/bin/gsd-tools.cjs phase complete "${current_phase}")
@@ -180,7 +180,7 @@ cat .planning/phases/XX-current/*-SUMMARY.md
    - Add to Active: `- [ ] [New requirement]`
 
 4. **Decisions to log?**
-   - Extract decisions from SUMMARY.md files
+   - Extract decisions from summary.md files
    - Add to Key Decisions table with outcome if known
 
 5. **"What This Is" still accurate?**
@@ -375,7 +375,7 @@ This returns all phases with goals, disk status, and completion info.
 
 **Route A: More phases remain in milestone**
 
-Read ROADMAP.md to get the next phase's name and goal.
+Read roadmap.md to get the next phase's name and goal.
 
 **Check if next phase has CONTEXT.md:**
 
@@ -424,7 +424,7 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase [X+1] --auto")
 
 ## ▶ Next Up
 
-**Phase [X+1]: [Name]** — [Goal from ROADMAP.md]
+**Phase [X+1]: [Name]** — [Goal from roadmap.md]
 
 `/gsd-discuss-phase [X+1]` — gather context and clarify approach
 
@@ -448,7 +448,7 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase [X+1] --auto")
 
 ## ▶ Next Up
 
-**Phase [X+1]: [Name]** — [Goal from ROADMAP.md]
+**Phase [X+1]: [Name]** — [Goal from roadmap.md]
 <sub>✓ Context gathered, ready to plan</sub>
 
 `/gsd-plan-phase [X+1]`
@@ -554,7 +554,7 @@ Transition is complete when:
 
 - [ ] Current phase plan summaries verified (all exist or user chose to skip)
 - [ ] Any stale handoffs deleted
-- [ ] ROADMAP.md updated with completion status and plan count
+- [ ] roadmap.md updated with completion status and plan count
 - [ ] PROJECT.md evolved (requirements, decisions, description if needed)
 - [ ] STATE.md updated (position, project reference, context, session)
 - [ ] Progress table updated

@@ -48,6 +48,6 @@ return [
     'policy_how_text' => 'In qualsiasi momento puoi riaprire le preferenze con il link «Gestisci cookie» in fondo a ogni pagina, oppure cancellare i cookie dal tuo browser.',
     'policy_manage_button' => 'Apri le preferenze sui cookie',
     'policy_external_title' => 'Mappe e servizi esterni',
-    'policy_external_text' => 'Per mostrare le mappe e cercare gli indirizzi, il tuo browser contatta direttamente OpenStreetMap. Queste richieste non impostano cookie, ma il servizio riceve il tuo indirizzo IP.',
+    'policy_external_text' => 'Le mappe e la ricerca degli indirizzi usano i dati di OpenStreetMap, ma passano dal server di questo sito: il tuo browser non contatta OpenStreetMap e nessun servizio esterno riceve il tuo indirizzo IP. Solo se scegli la vista satellitare, topografica o umanitaria della mappa il browser chiede le immagini direttamente a Esri o a OpenStreetMap France.',
     'policy_privacy_link' => 'Leggi anche l\'informativa privacy',
 ];

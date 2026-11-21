@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "filament4 migration"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Ottimizzazioni Approfondite Modulo Lang - DRY + KISS
 
@@ -42,7 +41,7 @@ Questo documento identifica e propone ottimizzazioni approfondite per il modulo 
 **File duplicati identificati:**
 - `.php-cs-fixer.php` vs `.php-cs-fixer.dist.php`
 - `phpstan.neon.dist` vs `phpstan-baseline.neon`
-- `CHANGELOG.md` vs `changelog.md`
+- `CHANGELOG.md` vs `CHANGELOG.md`
 
 **Soluzione DRY + KISS:**
 1. **Mantenere** solo file attivi e necessari
@@ -115,8 +114,8 @@ find docs/ -name "*.md" | sort
 **File da rinominare:**
 ```bash
 # Esempi di rinominazione
-changelog.md → changelog.md (già corretto)
-CHANGELOG.md → changelog.md (eliminare duplicato)
+CHANGELOG.md → CHANGELOG.md (già corretto)
+CHANGELOG.md → CHANGELOG.md (eliminare duplicato)
 ```
 
 ### 3. Consolidamento Contenuto
@@ -125,7 +124,7 @@ CHANGELOG.md → changelog.md (eliminare duplicato)
 **Impatto:** Riduzione duplicazioni
 
 **Contenuto da consolidare:**
-- **Changelog:** Unire in `changelog.md`
+- **Changelog:** Unire in `CHANGELOG.md`
 - **Documentazione tool:** Unire in `tools-configuration.md`
 - **Guide sviluppo:** Unire in `development-guide.md`
 
@@ -158,7 +157,7 @@ mv Database/ database/
 
 **File da eliminare:**
 - `.php-cs-fixer.php` (mantenere solo `.dist`)
-- `CHANGELOG.md` (mantenere solo `changelog.md`)
+- `CHANGELOG.md` (mantenere solo `CHANGELOG.md`)
 - `webpack.mix.js` (obsoleto)
 - `grumphp.yml` (non utilizzato)
 - `psalm.xml` (non utilizzato)
@@ -174,7 +173,7 @@ if [ -d "_docs" ]; then
 fi
 
 # Eliminare file duplicati
-rm -f changelog.md
+rm -f CHANGELOG.md
 ```
 
 ### Fase 2: Standardizzazione Cartelle (Priorità ALTA)
@@ -307,16 +306,6 @@ php artisan test --testsuite=Lang
 - [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
 - [**Convenzioni Sistema**](../../docs/core/conventions.md)
 - [**Template Moduli**](../../docs/templates/)
-- [**Documentazione Core Sistema**](core)
-- [**PHPStan Guide**](../../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../../docs/core/filament-best-practices.md)
-- [**Convenzioni Sistema**](../../../docs/core/conventions.md)
-- [**Template Moduli**](../../../../docs/templates)
-- [**Documentazione Core Sistema**](core)
-- [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
-- [**Convenzioni Sistema**](../../docs/core/conventions.md)
-- [**Template Moduli**](templates)
 
 ---
 

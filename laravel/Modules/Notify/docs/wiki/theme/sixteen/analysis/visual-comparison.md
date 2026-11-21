@@ -1,14 +1,11 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
+status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
 updated: 2026-10-06
-tags: [docs, notify, wiki]
-qmd: "homepage visual comparison - css fixes required notify"
-status: superseded
-superseded_by: ../../../../theme/sixteen/analysis/visual-comparison.md
 ---
 
 # Homepage Visual Comparison - CSS Fixes Required

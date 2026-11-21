@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "tips"
 issues: []
 discussions: []
-status: draft
 ---
 
 \\wsl.localhost\Ubuntu-24.04\var\www\html\...
