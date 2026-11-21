@@ -1,5 +1,5 @@
 ---
-title: "Xot: scopo del modulo e come raggiungerlo meglio"
+title: "Xot — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-09-02
@@ -7,15 +7,15 @@ tags: [xot, purpose, framework, xotbase, ereditarieta, convenzioni]
 qmd: "xot scopo modulo framework base xotbase ereditarieta convenzioni mai estendere filament direttamente"
 updated: 2026-09-02
 issues:
-  # DA CREARE: `gh` non autenticato: mai numeri inventati.
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_xot_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_xot_fila5/issues/"
 discussions:
-  # DA CREARE: vedi sopra.
+  # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_xot_fila5/discussions/"
 ---
 
-# Xot: perche' esiste
+# Xot — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -28,7 +28,7 @@ Questa e' **la** regola fondamentale del progetto, e Xot e' il posto dove vive.
 
 ## L'evidenza
 
-- **220 Action**: la piu' grande concentrazione del progetto. Non e' logica di
+- **220 Action** — la piu' grande concentrazione del progetto. Non e' logica di
   dominio: sono le operazioni trasversali che tutti riusano (cast, export, file,
   moduli, traduzioni).
 - 621 file PHP, 5562 documenti in `docs/`. E' il modulo piu' documentato, e deve
@@ -66,8 +66,8 @@ guardia piu' semplice.
 ### 2. 5562 documenti sono troppi per essere una guida
 
 `docs/` di Xot e' cresciuto fino a diventare un archivio in cui la risposta esiste ma
-non si trova. Il progetto ha gia' la cura: il pattern on-demand: bridge corti,
-canonico lungo, ricerca via `qmd`: ma dentro Xot non e' applicata con rigore.
+non si trova. Il progetto ha gia' la cura — il pattern on-demand: bridge corti,
+canonico lungo, ricerca via `qmd` — ma dentro Xot non e' applicata con rigore.
 
 **Azione:** un `docs/index.md` che sia una mappa a una schermata (dieci voci, non
 cento), e per ogni argomento **un solo** documento canonico. Il resto o si collega o si
@@ -80,7 +80,7 @@ Sono troppe per un elenco piatto: chi cerca "come esporto una collezione" non sa
 guardare, e il rischio concreto e' che ne nasca una duplicata.
 
 **Azione:** raggruppare per area (`Actions/Cast/`, `Actions/Export/`, `Actions/File/`,
-`Actions/Module/`): in parte gia' cosi': e mantenere in `docs/actions-catalog.md`
+`Actions/Module/`) — in parte gia' cosi' — e mantenere in `docs/actions-catalog.md`
 l'elenco con una riga di scopo per ciascuna. Prima di scrivere una Action in Xot, si
 cerca li'.
 
@@ -96,7 +96,7 @@ Il progetto ha una famiglia di errori che non producono ne' eccezioni ne' log:
 | visibilita' di un metodo diversa dal parent | fatal error solo quando quella pagina viene aperta |
 
 Alcune hanno gia' una guardia (`php artisan xot:check-accessor-twins`,
-`PublicPathTest`). **Azione:** completare la copertura: ogni convenzione muta o ha un
+`PublicPathTest`). **Azione:** completare la copertura — ogni convenzione muta o ha un
 comando di verifica, o non e' una convenzione: e' una speranza.
 
 ### 5. Xot deve restare agnostico
@@ -108,7 +108,7 @@ amministrazione dentro Xot rompe tutti gli altri.
 placeholder `<nome progetto>` presente in molta documentazione e' il sintomo di questa
 tensione: va sostituito da `config()`, non da un altro nome fisso.
 
-## Confini: cosa **non** appartiene a Xot
+## Confini — cosa **non** appartiene a Xot
 
 - Qualunque regola specifica di questa amministrazione.
 - Qualunque modello del dominio del personale.
@@ -117,6 +117,6 @@ tensione: va sostituito da `config()`, non da un altro nome fisso.
 
 ## Collegamenti
 
-- `docs/wiki/rules/fundamental-xotbase-rule.md`: mai estendere Filament direttamente
-- `docs/wiki/rules/final-method-override.md`: perche' niente `final`
+- `docs/wiki/rules/fundamental-xotbase-rule.md` — mai estendere Filament direttamente
+- `docs/wiki/rules/final-method-override.md` — perche' niente `final`
 - `docs/wiki/memories/public-path-is-public-html.md`

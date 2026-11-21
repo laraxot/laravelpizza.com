@@ -1,7 +1,4 @@
 ---
-qmd: "visual testing playwright puppeteer"
-issues: []
-discussions: []
 title: Visual Testing con Playwright e Puppeteer — Tema Meetup
 type: concept
 sources:
@@ -14,7 +11,6 @@ updated: 2026-05-04
 tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, theme, Meetup]
 related:
   - playwright-testing-policy
-status: active
 ---
 
 # Visual Testing con Playwright e Puppeteer — Tema Meetup
@@ -23,7 +19,7 @@ status: active
 
 Il testing visivo permette di rilevare regressioni UI nel tema Meetup confrontando screenshot di riferimento con screenshot attuali.
 
-Per la policy di collocazione: vedi [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md).
+Per la policy di collocazione: vedi [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md).
 
 ## Collocazione Test
 
@@ -66,5 +62,5 @@ test('Meetup theme renders correctly', async ({ page }) => {
 ## Risorse
 
 - [Playwright Docs](https://playwright.dev/)
-- [Visual Control Mastery](../../../../../../docs/wiki/concepts/visual-control-mastery.md)
-- [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md)
+- [Visual Control Mastery](../../../../docs/wiki/concepts/visual-control-mastery.md)
+- [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md)

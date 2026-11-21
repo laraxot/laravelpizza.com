@@ -3,43 +3,85 @@
 declare(strict_types=1);
 
 return [
-    'select_language' => 'cambiar idioma',
-    'skip_to_content' => 'Ir al contenido principal',
-    'toggle_menu' => 'Abrir o cerrar el menú',
     'main' => 'Navegación principal',
     'site_title' => 'Laravel Pizza Meetups',
     'home' => 'Inicio',
     'about' => 'Acerca de',
     'contact' => 'Contacto',
-    'events' => 'Eventos',
-    'community_chat' => 'Chat de la comunidad',
-    'toggle_mobile_menu' => 'Alternar menú móvil',
+    'sections' => [
+        'events' => [
+            'label' => 'Eventos',
+        ],
+        'community_chat' => [
+            'label' => 'Chat de la comunidad',
+        ],
+        'toggle_mobile_menu' => [
+            'label' => 'Alternar menú móvil',
+        ],
+    ],
     'user_menu' => [
-        'dashboard' => 'Tablero',
-        'my_events' => 'Mis eventos',
-        'nearby_events' => 'Eventos cercanos',
-        'my_profile' => 'Perfil',
-        'edit_profile' => 'Editar perfil',
-        'settings' => 'Ajustes',
-        'logout' => 'Cerrar sesión',
+        'dashboard' => [
+            'label' => 'Tablero',
+        ],
+        'my_events' => [
+            'label' => 'Mis eventos',
+        ],
+        'nearby_events' => [
+            'label' => 'Eventos cercanos',
+        ],
+        'my_profile' => [
+            'label' => 'Perfil',
+        ],
+        'settings' => [
+            'label' => 'Ajustes',
+        ],
+        'logout' => [
+            'label' => 'Cerrar sesión',
+        ],
     ],
     'auth' => [
-        'login' => 'Iniciar sesión',
-        'register' => 'Registrarse',
+        'login' => [
+            'label' => 'Iniciar sesión',
+        ],
+        'register' => [
+            'label' => 'Registrarse',
+        ],
     ],
     'footer' => [
-        'privacy' => 'Privacidad',
-        'terms' => 'Términos y condiciones',
-        'events' => 'Eventos',
-        'community' => 'Comunidad',
-        'community_chat' => 'Chat de la comunidad',
-        'code_of_conduct' => 'Código de conducta',
-        'resources' => 'Recursos',
-        'blog' => 'Blog',
-        'follow_us' => 'Síguenos',
-        'all_rights_reserved' => 'Todos los derechos reservados.',
-        'community_description' => 'Comunidad de desarrolladores Laravel apasionados por el código y la pizza.',
-        'opens_in_new_tab' => 'se abre en una nueva pestaña',
+        'community' => [
+            'label' => 'Comunidad',
+            'description' => 'Comunidad de desarrolladores Laravel apasionados por el código y la pizza.',
+        ],
+        'community_chat' => [
+            'label' => 'Chat de la comunidad',
+        ],
+        'code_of_conduct' => [
+            'label' => 'Código de conducta',
+        ],
+        'resources' => [
+            'label' => 'Recursos',
+        ],
+        'blog' => [
+            'label' => 'Blog',
+        ],
+        'follow_us' => [
+            'label' => 'Síguenos',
+        ],
+        'all_rights_reserved' => [
+            'label' => 'Todos los derechos reservados.',
+        ],
+        'opens_in_new_tab' => [
+            'label' => 'se abre en una nueva pestaña',
+        ],
+        'community_links' => [
+            'label' => 'Enlaces de la comunidad',
+        ],
+        'resources_links' => [
+            'label' => 'Enlaces de recursos',
+        ],
+        'events' => [
+            'label' => 'Eventos',
+        ],
     ],
     'navigation' => [
         'label' => 'Navegación',
@@ -50,8 +92,4 @@ return [
     ],
     'label' => 'Navegación',
     'plural_label' => 'Navegaciones',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

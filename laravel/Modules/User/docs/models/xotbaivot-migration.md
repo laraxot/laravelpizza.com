@@ -14,7 +14,6 @@ related:
   - "./team.md"
   - "./teampermission.md"
   - "./xotbasepivot-migration.md"
-status: draft
 ---
 
 # User Module - XotBasePivot Migration

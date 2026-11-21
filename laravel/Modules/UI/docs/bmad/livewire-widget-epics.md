@@ -1,4 +1,6 @@
 ---
+title: "Epics — UI Livewire"
+
 title: "Epics: UI Livewire"
 type: epics
 module: UI
@@ -15,6 +17,10 @@ qmd: "epic 12: http/livewire ui vuoto ui"
 
 | ID | Intent | Status |
 |----|--------|--------|
+| 12.1 | Ritiro DarkModeSwitcher HTTP (Toast verificato non orfano, escluso — vedi [livewire-inventory.md](./livewire-inventory.md)) | done |
+
+Fuori epic: `Livewire/Components/Map/InteractiveMap` — orfano/non registrato, escluso dalla campagna widget (inventario, Cluster C).
+
 | 12.1 | Ritiro DarkModeSwitcher HTTP (Toast verificato non orfano, escluso: vedi [livewire-inventory.md](./livewire-inventory.md)) | done |
 
 Fuori epic: `Livewire/Components/Map/InteractiveMap`: orfano/non registrato, escluso dalla campagna widget (inventario, Cluster C).

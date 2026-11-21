@@ -4,11 +4,9 @@ type: architecture
 tags: [module, architecture, design]
 created: 2026-07-28
 updated: 2026-07-28
-status: draft
-qmd: "user module   architecture user"
 ---
 
-# User Module: Architecture
+# User Module — Architecture
 
 ## System Boundary
 
@@ -39,10 +37,10 @@ app/Models/
 ```
 
 **Relazioni Critiche:**
-- `User` → `HasMany(Team)`: gestione team multipli
-- `User` → `BelongsToMany(Role)`: via `model_has_role`
-- `User` → `BelongsToMany(Tenant)`: isolamento multi-tenant
-- `Team` → `HasMany(User)`: team members
+- `User` → `HasMany(Team)` — gestione team multipli
+- `User` → `BelongsToMany(Role)` — via `model_has_role`
+- `User` → `BelongsToMany(Tenant)` — isolamento multi-tenant
+- `Team` → `HasMany(User)` — team members
 
 ### Layer 2: Actions (Reusable Business Logic)
 ```

@@ -3,17 +3,32 @@
 declare(strict_types=1);
 
 use function Laravel\Folio\{middleware, name};
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-// La lingua la imposta il middleware SetFolioLocale (modulo Cms). Niente codice con effetti qui: Folio esegue
-// questo blocco anche per leggere name()/middleware() quando si genera route('login') (es. nelle email da CLI),
-// e un setLocale qui cambiava la lingua dell'intera richiesta/processo in 'it'.
+$segments = request()->segments();
+$locale = $segments[0] ?? 'it';
+if (in_array($locale, ['it', 'en', 'es', 'de', 'fr', 'ru'], true)) {
+    LaravelLocalization::setLocale($locale);
+    app()->setLocale($locale);
+}
 
 middleware(['guest']);
 name('register');
 
 ?>
 
-<x-layouts.app :title="__('gdpr::register.title')" :description="__('gdpr::register.subtitle')">
+<x-layouts.app>
+    <x-slot name="title">
+        {{ __('gdpr::register.title') }} - LaravelPizza Community
+    </x-slot>
+
+    <x-slot name="description">
+        {{ __('gdpr::register.subtitle') }}
+    </x-slot>
+
+    <x-slot name="keywords">
+        Laravel meetup, Laravel community, PHP developer community, Laravel tutorials, Laravel workshops, Laravel networking, LaravelPizza
+    </x-slot>
 
     {{-- Full-width mobile-first layout with animated background --}}
     <main 

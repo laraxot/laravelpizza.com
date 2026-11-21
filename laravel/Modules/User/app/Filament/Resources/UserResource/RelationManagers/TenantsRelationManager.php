@@ -83,7 +83,7 @@ class TenantsRelationManager extends XotBaseRelationManager
         return [
             'edit' => EditAction::make()
                 ->iconButton()
-                ->tooltip(trans('user::user.actions.edit.tooltip'))
+                ->tooltip(trans('user::user.actions.edit_tooltip'))
                 ->visible(static function (?Model $record) use ($me): bool {
                     if ($record === null) {
                         return false;
@@ -93,7 +93,7 @@ class TenantsRelationManager extends XotBaseRelationManager
                 }),
             'detach' => DetachAction::make()
                 ->iconButton()
-                ->tooltip(trans('user::user.actions.detach.tooltip'))
+                ->tooltip(trans('user::user.actions.detach_tooltip'))
                 ->visible(static function (?Model $record) use ($me): bool {
                     if ($record === null) {
                         return false;

@@ -17,10 +17,9 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
-# Contratto wiki locale: stub User
+# Contratto wiki locale — stub User
 
 | Risorsa | Link |
 |---------|------|

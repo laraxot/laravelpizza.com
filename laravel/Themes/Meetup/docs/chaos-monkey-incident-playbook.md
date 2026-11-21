@@ -26,7 +26,7 @@ Ridurre i tempi di diagnosi/ripristino per rotture casuali su rendering tema, bl
 ```bash
 cd laravel/Themes/Meetup
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ## Guardrail

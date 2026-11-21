@@ -100,6 +100,8 @@ return [
         ],
         'export' => [
             'icon' => 'export',
+            'label' => 'Esporta',
+            'tooltip' => 'export',
         ],
         'changePassword' => [
             'icon' => 'changePassword',

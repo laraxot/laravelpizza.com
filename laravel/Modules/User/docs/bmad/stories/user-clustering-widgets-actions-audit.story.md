@@ -1,5 +1,5 @@
 ---
-title: "UserResource: clustering RelationManager, widget reali, audit action riusabili"
+title: "UserResource — clustering RelationManager, widget reali, audit action riusabili"
 module: User
 status: review
 created: 2026-09-29
@@ -14,14 +14,11 @@ owned_scope:
   - lang/en/user.php
 related:
   - ../../wiki/user-resource-clustering-widgets-actions-audit.md
-  - ../filament-ux-brainstorming.md
+  - ./filament-ux-brainstorming.md
 excluded_scope:
   - app/Filament/Widgets/Auth/**  # owner concorrente PID 5418, in-progress su sprint-status.yaml
   - app/Filament/Widgets/Profile/DeleteAccountWidget.php
   - app/Filament/Widgets/PrivacyPolicyWidget.php
-type: story
-tags: [docs, user, bmad]
-qmd: "story: audit + interventi su clustering, widget e action di userresource user"
 ---
 
 # Story: audit + interventi su clustering, widget e action di UserResource
@@ -43,7 +40,7 @@ placeholder (`UserOverview`, `UserWidget`), e diverse action icon-only senza
 ## Acceptance criteria
 
 - [x] Verificato nel codice vendor (non assunto dalla doc) se Filament v4 supporta un
-      raggruppamento reale di RelationManager sotto una tab: **si', `RelationGroup`**.
+      raggruppamento reale di RelationManager sotto una tab — **si', `RelationGroup`**.
 - [x] Implementato il clustering (`UserResource::getRelations()`), da 9 a 4 tab
       (dopo rimozione duplicato, vedi sotto), raggruppamento Sicurezza/Organizzazione
       + due tab standalone (Profilo, Social login).
@@ -60,7 +57,7 @@ placeholder (`UserOverview`, `UserWidget`), e diverse action icon-only senza
 - [x] Cercata riusabilita' cross-modulo di `ChangePasswordAction`, `VerifyEmailAction`,
       `SendOtpAction` (grep sull'intero monorepo): nessuna duplicazione, nessuno
       spostamento verso `Xot` (evitato over-engineering senza secondo consumer reale).
-- [x] `SendOtpAction`: premessa del task ("manca tooltip") falsificata: ha gia' un
+- [x] `SendOtpAction`: premessa del task ("manca tooltip") falsificata — ha gia' un
       tooltip; il problema reale (segnalato, non risolto: e' una decisione di prodotto)
       e' che non e' invocata da nessuna parte nel modulo.
 - [x] Corretti i gap reali di accessibilita' trovati: `EditAction`/`DetachAction`
@@ -72,18 +69,18 @@ placeholder (`UserOverview`, `UserWidget`), e diverse action icon-only senza
       (`ProfileRelationManager`, `SocialiteUsersRelationManager`), deferred per non
       appesantire il render iniziale.
 - [ ] **Verifica visiva Filament (browser) della pagina `ViewUser` con le tab
-      raggruppate: NON eseguita in questa sessione** (Playwright MCP e browser
+      raggruppate — NON eseguita in questa sessione** (Playwright MCP e browser
       in-app non connessi, `CONNECTION_CLOSED`). Bloccante prima di chiudere la story
       come "done" definitivo.
 - [ ] Pest gate (regola progetto #9): non eseguito in questa sessione per istruzione
-      esplicita del coordinatore: demandato all'agente coordinatore sull'insieme
+      esplicita del coordinatore — demandato all'agente coordinatore sull'insieme
       delle modifiche parallele. Story resta `review`, non `done`, finche' non
       arriva conferma verde.
 
 ## Decisioni chiave (motivazione estesa in docs/wiki/user-resource-clustering-widgets-actions-audit.md)
 
 1. **Clustering via `RelationGroup`**: nativo Filament v4, non un hack. Stack verticale
-   di piu' RelationManager dentro una tab (non sub-tab con selettore): tradeoff
+   di piu' RelationManager dentro una tab (non sub-tab con selettore) — tradeoff
    accettato per ridurre il rumore nella barra tab.
 2. **Rimozione `TokensRelationManager`**: duplicato reale sulla stessa relazione,
    confermato via docblock modello + storia git (nessun refinement successivo, a
@@ -96,7 +93,7 @@ placeholder (`UserOverview`, `UserWidget`), e diverse action icon-only senza
    trovata, astrazione prematura evitata (YAGNI).
 6. **`XotBaseRelationManager` (Xot) non toccato**: root cause reale del gap
    accessibilita' di default, ma fuori scope assegnato e alto raggio d'impatto
-   (condiviso da tutti i moduli): segnalato, non modificato.
+   (condiviso da tutti i moduli) — segnalato, non modificato.
 
 ## File modificati
 

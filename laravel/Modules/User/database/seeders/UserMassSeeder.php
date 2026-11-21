@@ -161,7 +161,7 @@ class UserMassSeeder extends Seeder
                 'display_name' => 'Team DevOps',
                 'description' => 'Team per infrastruttura e deployment',
             ],
-            ['name' => 'QA', 'display_name' => 'Team Quality Assurance', 'description' => 'Team per test e qualità'],
+            ['name' => 'QA', 'display_name' => 'Team Quality Assurance', 'description' => 'Team for testing and quality'],
             ['name' => 'Design', 'display_name' => 'Team Design', 'description' => 'Team per design e UX/UI'],
             [
                 'name' => 'Marketing',

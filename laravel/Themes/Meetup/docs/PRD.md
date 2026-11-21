@@ -1,3 +1,8 @@
+---
+status: superseded
+superseded_by: prd.md
+---
+
 # Meetup Theme - Product Requirements Document (PRD)
 
 > Documento vivente. Tema pubblico LaravelPizza.
@@ -56,7 +61,7 @@ Senza tema dedicato:
 
 - **NFR-001**: SVG in `resources/svg/`, icon `meetup-*`
 - **NFR-002**: Link con `LaravelLocalization::localizeUrl()`
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- **NFR-003**: Build: `npm run build` + `npm run copy`
 - **NFR-004**: Accessibilità WCAG 2.1
 
 ## 7. Technical Architecture

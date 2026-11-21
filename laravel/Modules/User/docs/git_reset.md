@@ -8,8 +8,6 @@ tags: [migrato-da-txt, user]
 converted_from: git_reset.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "git reset user"
 ---
 
 #!/bin/sh

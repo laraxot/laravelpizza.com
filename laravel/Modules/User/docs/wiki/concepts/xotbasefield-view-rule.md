@@ -11,11 +11,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "XotBaseField View Calculation Rule"
-status: draft
-updated: 2026-10-07
-tags: [docs, user, wiki]
-qmd: "xotbasefield view calculation rule user"
 ---
 
 # XotBaseField View Calculation Rule

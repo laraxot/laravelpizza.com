@@ -179,6 +179,7 @@ return [
             'label' => 'End date:',
         ],
     ],
+<<<<<<< .merge_file_uS9CW7
     'users_chart' => [
         'heading' => 'New users',
     ],
@@ -186,8 +187,22 @@ return [
         'columns' => [
             'user' => 'User',
             'login_at' => 'Signed in',
+=======
+    'recent_logins' => [
+        'heading' => 'Recent logins',
+        'columns' => [
+            'user' => 'User',
+            'login_at' => 'Login time',
+>>>>>>> .merge_file_7No0Dw
             'ip_address' => 'IP address',
             'user_agent' => 'Browser',
         ],
     ],
+<<<<<<< .merge_file_uS9CW7
+=======
+    'users_chart' => [
+        'heading' => 'Users',
+        'label' => 'New users',
+    ],
+>>>>>>> .merge_file_7No0Dw
 ];

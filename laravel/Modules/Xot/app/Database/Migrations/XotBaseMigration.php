@@ -493,14 +493,14 @@ abstract class XotBaseMigration extends LaravelMigration
         $legacyRows = $legacyQuery->count();
 
         if ($legacyRows > 0 && ! $preserveLegacyValues) {
-            /** @var list<mixed> $legacyIds */
+            /** @var list<int|string|float> $legacyIds */
             $legacyIds = $legacyQuery
                 ->distinct()
                 ->orderBy('user_id')
                 ->pluck('user_id')
                 ->all();
             $legacyIdList = implode(', ', array_map(
-                static fn (mixed $value): string => SafeStringCastAction::cast($value),
+                static fn (int|string|float $value): string => SafeStringCastAction::cast($value),
                 $legacyIds,
             ));
 

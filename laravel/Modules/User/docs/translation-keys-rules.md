@@ -8,19 +8,14 @@ qmd: "translation-keys-rules regole per le chiavi di traduzione"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Regole per le Chiavi di Traduzione
@@ -141,10 +136,5 @@ return [
 - [Struttura del Modulo](module_structure.md)
 - [Convenzioni di Codice](code_conventions.md)
 - [Best Practices per le Traduzioni](translation-best-practices.md)
-- [Struttura del Modulo](module-structure.md)
-- [Best Practices per le Traduzioni](translation_best_practices.md)
-- [Struttura del Modulo](module_structure.md)
-- [Convenzioni di Codice](code_conventions.md)
-- [Best Practices per le Traduzioni](translation-best-practices-traduzioni.md)
 - [Struttura del Modulo](module-structure-user.md)
 - [Convenzioni di Codice](code-conventions.md)

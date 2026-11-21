@@ -10,7 +10,7 @@ use Modules\Xot\Filament\Pages\Auth\XotBaseEditProfile;
 
 class EditProfile extends XotBaseEditProfile
 {
-    public static ?string $title = 'Profilo Utente';
+    public static ?string $title = 'User Profile';
 
     /**
      * Costruisce il form schema per la pagina di modifica profilo.

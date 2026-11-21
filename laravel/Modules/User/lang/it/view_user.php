@@ -15,6 +15,7 @@ return [
         ],
         'filter' => [
             'icon' => 'filter',
+            'label' => 'Filtro',
         ],
     ],
     'fields' => [
@@ -28,12 +29,15 @@ return [
             'tooltip' => '',
         ],
     ],
+<<<<<<< .merge_file_NKl1DJ
     'sections' => [
         'empty' => [
             'heading' => '',
             'label' => '',
         ],
     ],
+=======
+>>>>>>> .merge_file_PqC6mI
     'navigation' => [
         'name' => 'View User',
         'plural' => 'View User',

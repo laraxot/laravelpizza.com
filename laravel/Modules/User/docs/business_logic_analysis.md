@@ -1,11 +1,3 @@
----
-title: "User Module - Business Logic Analysis"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module - business logic analysis user"
----
 # User Module - Business Logic Analysis
 
 ## Overview
@@ -484,7 +476,7 @@ class ApiRateLimitingMiddleware
 
 ---
 
-<!-- Merged from BUSINESS_LOGIC_ANALYSIS.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from business_logic_analysis.md, which collided with this file on case-insensitive filesystems. -->
 
 # User Module - Business Logic Analysis
 

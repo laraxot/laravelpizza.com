@@ -10,12 +10,11 @@ issues: []
 discussions: []
 related:
   - "./tabella-appartiene-alla-resource-non-alla-pagina.md"
-status: draft
 ---
 
 # I placeholder nelle traduzioni nascono dal codice, non da una svista
 
-> **SUMMARY**: Centinaia di stringhe come `permission.navigation` nelle guide linguistiche
+> **SUMMARY** — Centinaia di stringhe come `permission.navigation` nelle guide linguistiche
 > non sono errori di battitura: sono **output del codice**. `TransFuncTrait`, quando una
 > chiave non esiste, **scrive il segnaposto nel file di lingua**. Da quel momento il sistema
 > lo considera una traduzione valida e non lo corregge più: la UI mostra letteralmente
@@ -30,8 +29,8 @@ status: draft
 3. `formatTransFuncResult()` (~riga 100):
    `if ($trans === $key) { return static::persistGeneratedTransFuncLabel($key); }`
 4. `persistGeneratedTransFuncLabel()` (righe 118-127):
-   `Str::of($key)->between('::', '.')->replace('_', ' ')`: da
-   `user::permission.navigation.label` produce `"permission.navigation"`: e chiama
+   `Str::of($key)->between('::', '.')->replace('_', ' ')` — da
+   `user::permission.navigation.label` produce `"permission.navigation"` — e chiama
    `app(SaveTransAction::class)->execute($key, $newTrans)`.
 5. `Modules/Lang/app/Actions/SaveTransAction.php` **scrive nel file** se
    `config('lang.save_missing_translations') === true` (default **acceso**, spento sotto test:
@@ -81,7 +80,7 @@ moduli** contro 10851 righe con un campo `description`, e **nessun consumatore i
 nuovo**. ⇒ Per `.navigation.*` e per i campi utente: **stringa semplice**.
 
 Consumatore reale verificato: `XotBaseRelationManager.php:41`
-`return __(static::class.'.navigation.label');`: una **stringa**.
+`return __(static::class.'.navigation.label');` — una **stringa**.
 
 ## Due errori da non ripetere
 
@@ -98,5 +97,5 @@ Consumatore reale verificato: `XotBaseRelationManager.php:41`
 silenzioso**. Le opzioni (da discutere, non applicate): non scrivere affatto su chiave mancante,
 oppure scrivere ma segnalare il fallback con un log, oppure marcare il valore come segnaposto
 in modo che alla lettura successiva venga risolto. Finché non si decide, **ogni refactor delle
-traduzioni genera nuova spazzatura**: quindi ogni batch di correzioni va seguito da uno
+traduzioni genera nuova spazzatura** — quindi ogni batch di correzioni va seguito da uno
 scan, non dato per finito.

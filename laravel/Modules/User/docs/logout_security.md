@@ -1,11 +1,3 @@
----
-title: "Sicurezza nel Processo di Logout"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "sicurezza nel processo di logout user"
----
 # Sicurezza nel Processo di Logout
 
 ## Analisi della Sicurezza
@@ -179,8 +171,6 @@ Log::channel('auth')->info('Logout effettuato', [
 
 ## Collegamenti Correlati
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Gestione Sessione](./session_management.md)
-- [Documentazione Volt](./volt_blade_implementation.md)
 - [Gestione Sessione](./session_management.md)
 - [Documentazione Volt](./volt_blade_implementation.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 

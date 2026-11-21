@@ -6,10 +6,6 @@ related:
   - ../../../../Xot/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
   - ../../../../Ptv/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
   - ../../../../IndennitaResponsabilita/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
-type: story
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "story user"
 ---
 
 # Story

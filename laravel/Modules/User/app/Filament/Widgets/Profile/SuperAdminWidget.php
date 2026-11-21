@@ -15,8 +15,8 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  *
  * Icone: SVG in resources/svg auto-registrati da
  * XotBaseServiceProvider::registerBladeIcons() (prefisso = alias modulo).
- * Attivo: superman.svg → user-superman.
- * Negato: clark-kent.svg → user-clark-kent.
+ * Attivo: superman.svg → icon="user-superman" (non user::superman: SvgNotFound).
+ * Negato: clark-kent.svg → icon="user-clark-kent".
  * Gli altri SVG (superadmin, scudo, user-*) restano in resources/svg, non si cancellano.
  *
  * Vista: convenzione GetViewByClassAction

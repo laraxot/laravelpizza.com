@@ -1,22 +1,15 @@
 ---
-title: "User: scopo, confini e come servirlo meglio"
+title: "User — scopo, confini e come servirlo meglio"
 type: concept
 module: User
 status: active
 created: 2026-09-02
-updated: 2026-10-20
-tags: [scopo, confini, identita, autorizzazione, sti, contratti, team, dipendenze]
+updated: 2026-09-02
+tags: [scopo, confini, identita, autorizzazione, sti, contratti, dipendenze]
 qmd: "scopo user identita autenticazione ruoli permessi team tenant oauth sti parental confini dipendenze"
-related:
-  - ./00-index.md
-  - ./contracts/teamcontract.md
-  - ./team-contract-usage-reasoning.md
-  - ./stories/phpstan-test-wave-user-b.story.md
 ---
 
-# User: scopo, confini e come servirlo meglio
-
-Ingresso docs: [00-INDEX.md](./00-index.md).
+# User — scopo, confini e come servirlo meglio
 
 ## Lo scopo, dedotto dal codice
 
@@ -55,7 +48,7 @@ Da qui la formulazione in una riga:
 
 > **User è l'anagrafica di chi accede e di cosa può fare: 50 modelli e 34
 > migrazioni sulla connection dedicata `ptv_user` che coprono utenti, profili,
-> ruoli, permessi, team, tenant e OAuth: e 350 classi Filament che ne fanno
+> ruoli, permessi, team, tenant e OAuth — e 350 classi Filament che ne fanno
 > l'unico modulo dove l'identità si amministra, non solo si consulta.**
 
 C'è un secondo mestiere, meno visibile e più importante: **User è la radice STI
@@ -94,15 +87,6 @@ Zero estensioni dirette di classi `Filament\` fuori dalle `XotBase*`, zero
 `app/Services` (l'unico file che matcha `*Service*.php` è
 `app/Http/Livewire/TermsOfService.php`, un componente di UI: falso positivo). Su
 queste due policy User è in regola.
-`app/Services`. Su queste due policy User è in regola.
-
-**Panel chrome (fleet W0 ✓, 2026-10-20):** gli HTTP legali `TermsOfService` /
-`PrivacyPolicy` (viste e alias `_components.json`) sono ritirati; SSoT
-`TermsOfServiceWidget` / `PrivacyPolicyWidget`. Resta in `Http/Livewire` solo
-`Profile\DeleteAccount` fino a W2. Canone:
-[inventario Xot](../../Xot/docs/bmad/livewire-to-filament-widgets-inventory.md) ·
-[fleet story](../../Xot/docs/bmad/stories/livewire-to-filament-widgets-fleet.story.md).
-Pagina FO pubblica ≠ widget panel ([Gdpr 12.1](../../Gdpr/docs/stories/12.1.gdpr-owns-legal-pages.story.md)).
 
 Verso il basso c'è una riga sola, ma è la riga sbagliata:
 
@@ -110,7 +94,7 @@ Verso il basso c'è una riga sola, ma è la riga sbagliata:
 app/Models/OauthPersonalAccessClient.php:9   use Modules\Ptv\Models\Profile;
 ```
 
-Il modulo dell'identità importa il profilo concreto del portale: cioè la **classe
+Il modulo dell'identità importa il profilo concreto del portale — cioè la **classe
 figlia** del suo stesso `BaseProfile`. È un ciclo `User → Ptv → User` chiuso su un
 file, e la stessa violazione (in forma di PHPDoc) che rende Sigma non isolabile.
 Il tipo giusto è `Modules\Xot\Contracts\ProfileContract`, che User già usa in 37
@@ -126,22 +110,11 @@ Tenant; esistono **due** modelli `Tenant`:
 | `Modules\Tenant\Models\Tenant` | `Tenant\Models\BaseModel` | 26 | nessuna |
 
 E `XotData` sceglie la prima come default (`Modules/Xot/app/Datas/XotData.php:72`,
-`$tenant_class = 'Modules\User\Models\Tenant'`). Non è necessariamente sbagliato -
+`$tenant_class = 'Modules\User\Models\Tenant'`). Non è necessariamente sbagliato —
 il tenant come **riga di anagrafica** è un fatto di identità, il tenant come
-**risoluzione di configurazione** è un fatto di infrastruttura: ma oggi la
+**risoluzione di configurazione** è un fatto di infrastruttura — ma oggi la
 divisione non è dichiarata da nessuna parte e due modelli con lo stesso nome sono
 raggiungibili da chiunque.
-
-## Team: contratto e nullability (contratto di business)
-
-La terza domanda (*per conto di quale organizzazione*) passa da `HasTeams` tipizzato su
-`TeamContract`, non su `Team` concreto: vedi [team-contract-usage-reasoning.md](./team-contract-usage-reasoning.md).
-
-`personalTeam(): ?TeamContract` e `belongsToTeam(?TeamContract)` sono nullable perché
-un utente può non avere team. I test che assumono sempre un team, o passano un `int`,
-stanno mentendo sul dominio: tipizzare/fixture prima di “sistemare” PHPStan
-([contracts/teamcontract.md](./contracts/teamcontract.md),
-[stories/phpstan-test-wave-user-b.story.md](./stories/phpstan-test-wave-user-b.story.md)).
 
 ## Come servire meglio lo scopo
 
@@ -159,7 +132,7 @@ cd laravel && grep -rn '^use Modules\\Ptv\\' --include='*.php' Modules/User/app 
 ### 2. Cancellare i tre contratti che duplicano quelli di Xot
 
 `app/Contracts/` contiene tre nomi che esistono già in `Modules/Xot/app/Contracts/`
-- `ModelContract.php`, `PassportHasApiTokensContract.php`, `UserContract.php`: e
+— `ModelContract.php`, `PassportHasApiTokensContract.php`, `UserContract.php` — e
 la misura d'uso dice che sono zavorra:
 
 | Interfaccia | Referenze in `Modules/` + `Themes/` |
@@ -172,7 +145,7 @@ la misura d'uso dice che sono zavorra:
 | `Modules\User\Contracts\PassportHasApiTokensContract` | **0** |
 
 Due si cancellano subito. Il terzo, `User\Contracts\UserContract`, è un alias di 12
-righe (`interface UserContract extends \Modules\Xot\Contracts\UserContract {}`) -
+righe (`interface UserContract extends \Modules\Xot\Contracts\UserContract {}`) —
 la classica scorciatoia che diventa permanente: i due file che lo usano
 (`app/Models/Profile.php`, `app/Http/Livewire/Profile/DeleteAccount.php`) vanno
 puntati su quello di Xot, poi l'alias e il residuo `UserContract.php.to_xot`
@@ -190,7 +163,7 @@ Serve una decisione scritta e un solo modello raggiungibile. La divisione difend
 è: **la riga `tenants` resta in User** (è anagrafica, sta sulla connection `user`,
 `XotData` la usa già come default) e **`Modules\Tenant\Models\Tenant` sparisce o
 diventa un alias deprecato**, perché non ha una migrazione che lo sostenga. In
-alternativa si sposta tutto in Tenant: ma allora vanno spostate anche la migrazione
+alternativa si sposta tutto in Tenant — ma allora vanno spostate anche la migrazione
 e le 50 referenze. Quello che non è difendibile è lo stato attuale.
 Da chiudere insieme al doppione disattivato
 `2023_01_01_000008_create_tenants_table.php.LARAXOT_CORRECT`, che nel frattempo
@@ -205,8 +178,8 @@ cd laravel && grep -rl 'Modules\\Tenant\\Models\\Tenant\b' Modules/ Themes/ | wc
 Due file superano le 500 righe, e sono i due che tutte le foglie ereditano:
 `app/Models/Traits/HasTeams.php` (**621** righe) e `app/Models/BaseUser.php`
 (**514** righe, con 8 interfacce implementate alla riga 132). Un trait da 621 righe
-composto nella radice STI significa che ogni figlio concreto: compreso
-`Ptv\Models\User`: porta con sé tutta la logica dei team anche quando non ha team.
+composto nella radice STI significa che ogni figlio concreto — compreso
+`Ptv\Models\User` — porta con sé tutta la logica dei team anche quando non ha team.
 La separazione naturale segue le tabelle: appartenenza (`team_user`), inviti
 (`team_invitations`), permessi di team (`team_permissions`).
 
@@ -280,13 +253,8 @@ find Modules/User/app -type f ! -name '*.php' \
 
 ## Collegamenti
 
-- [00-INDEX.md](./00-index.md): ingresso operativo
-- [contracts/teamcontract.md](./contracts/teamcontract.md) · [team-contract-usage-reasoning.md](./team-contract-usage-reasoning.md)
-- [stories/phpstan-test-wave-user-b.story.md](./stories/phpstan-test-wave-user-b.story.md)
-- [parental-sti-filament-schemas](../../../../docs/wiki/rules/parental-sti-filament-schemas.md): perché `BaseUser`/`BaseProfile` con `HasChildren` obbligano ogni figlio a una propria classe Form
-- [circular-dependency-prevention](../../../../docs/wiki/rules/circular-dependency-prevention.md): il ciclo User → Ptv → User
-- [actions-over-services](../../../../docs/wiki/rules/actions-over-services.md): la policy che User rispetta
-- [basemodel-connection-mandatory](../../../../docs/wiki/memories/basemodel-connection-mandatory.md): la connection `user` non è opzionale
-- [Xot: scopo](../../Xot/docs/scopo.md) · [Tenant: scopo](../../Tenant/docs/scopo.md) · [Sigma: scopo](../../Sigma/docs/scopo.md)
-- [Lang: scopo](../../Lang/docs/scopo.md) · [Cms: scopo](../../Cms/docs/scopo.md)
-- [Xot: scopo](../../Xot/docs/scopo.md) · [Tenant: scopo](../../Tenant/docs/scopo.md)
+- [parental-sti-filament-schemas](../../../../docs/wiki/rules/parental-sti-filament-schemas.md) — perché `BaseUser`/`BaseProfile` con `HasChildren` obbligano ogni figlio a una propria classe Form
+- [circular-dependency-prevention](../../../../docs/wiki/rules/circular-dependency-prevention.md) — il ciclo User → Ptv → User
+- [actions-over-services](../../../../docs/wiki/rules/actions-over-services.md) — la policy che User rispetta
+- [basemodel-connection-mandatory](../../../../docs/wiki/memories/basemodel-connection-mandatory.md) — la connection `user` non è opzionale
+- [Xot — scopo](../../Xot/docs/scopo.md) · [Tenant — scopo](../../Tenant/docs/scopo.md) · [Sigma — scopo](../../Sigma/docs/scopo.md)

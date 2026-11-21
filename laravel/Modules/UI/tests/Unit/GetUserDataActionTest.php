@@ -6,7 +6,7 @@ namespace Modules\UI\Tests\Unit;
 
 use Illuminate\Auth\GenericUser;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Foundation\Auth\User;
+use Modules\User\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Modules\UI\Actions\GetUserDataAction;
 use Modules\UI\Tests\TestCase;
@@ -24,14 +24,13 @@ uses(TestCase::class);
  * connessione. Non è una scorciatoia — è il modo di provare la logica dell'azione invece
  * della disponibilità del database.
  *
- * @param  array<int, string>  $roles
- * @param  array<int, string>  $permissions
- * @param  array<string, mixed>  $attributes
+ * @param array<int, string>   $roles
+ * @param array<int, string>   $permissions
+ * @param array<string, mixed> $attributes
  */
 function uiAuthUser(array $roles = [], array $permissions = [], array $attributes = []): Authenticatable
 {
-    $user = new class extends User
-    {
+    $user = new class extends User {
         public ?object $profile = null;
 
         public function relationLoaded(mixed $key): bool
@@ -40,7 +39,7 @@ function uiAuthUser(array $roles = [], array $permissions = [], array $attribute
                 return false;
             }
 
-            return $key === 'profile' && $this->profile !== null;
+            return 'profile' === $key && null !== $this->profile;
         }
     };
     $user->forceFill(array_merge([
@@ -50,12 +49,12 @@ function uiAuthUser(array $roles = [], array $permissions = [], array $attribute
     ], $attributes));
 
     $user->setRelation('roles', collect(array_map(
-        static fn (string $name): Role => tap(new Role)->forceFill(['name' => $name]),
+        static fn (string $name): Role => tap(new Role())->forceFill(['name' => $name]),
         $roles,
     )));
 
     $user->setRelation('permissions', collect(array_map(
-        static fn (string $name): Permission => tap(new Permission)->forceFill(['name' => $name]),
+        static fn (string $name): Permission => tap(new Permission())->forceFill(['name' => $name]),
         $permissions,
     )));
 

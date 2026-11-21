@@ -8,15 +8,14 @@ qmd: "translation-syntax-fixes correzioni errori di sintassi nei file di traduzi
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
@@ -147,15 +146,3 @@ find Modules/User/lang -name "*.php" -exec php -l {} \;
 **Data**: 2025-01-15
 **Versione**: 1.0
 **Stato**: Completato
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-title: "translation syntax fixes 2025"
-type: note
-status: stub
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "translation syntax fixes 2025 user"
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/translation-syntax-fixes-2025.md

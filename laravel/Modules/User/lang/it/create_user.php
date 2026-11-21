@@ -8,16 +8,19 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Nome',
         ],
         'email' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'E-mail',
         ],
         'password' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Password',
         ],
     ],
     'actions' => [

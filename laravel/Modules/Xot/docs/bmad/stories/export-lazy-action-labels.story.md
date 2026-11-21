@@ -4,7 +4,7 @@ created: 2026-09-26
 updated: 2026-09-26
 issues: []
 discussions: []
-title: "Story: ExportXlsLazyAction: label degradate a path tecnico"
+title: "Story — ExportXlsLazyAction: label degradate a path tecnico"
 type: story
 module: Xot
 epic: export
@@ -24,7 +24,7 @@ related:
 
 Canale lazy/streaming (`ExportXlsLazyAction`) estrae solo i percorsi da
 `getXlsFields()`: le label esplicite (`path => title`) degradano a path
-tecnico nell'header: stessa UX rotta risolta altrove per
+tecnico nell'header — stessa UX rotta risolta altrove per
 `CollectionExport`/`ExportXlsByCollection`.
 
 ## Task
@@ -39,4 +39,4 @@ tecnico nell'header: stessa UX rotta risolta altrove per
 
 ## Priorita'
 
-Bassa: canale secondario. Verificare prima se qualcuno lo monta.
+Bassa — canale secondario. Verificare prima se qualcuno lo monta.

@@ -108,7 +108,10 @@ trait HasXotTable
         // il pulsante portava a una rotta inesistente.
         $createPageResource = $this->resolveCreatePageResource();
         if ($createPageResource === null || array_key_exists('create', $createPageResource::getPages())) {
-            $actions[] = CreateAction::make();
+            // Rispetta canCreate() della risorsa (es. registri in sola lettura): prima il pulsante compariva
+            // sempre e portava a una pagina 403.
+            $actions[] = CreateAction::make()
+                ->visible(static fn (): bool => $createPageResource === null || $createPageResource::canCreate());
         }
 
         if ($this->shouldShowAssociateAction()) {

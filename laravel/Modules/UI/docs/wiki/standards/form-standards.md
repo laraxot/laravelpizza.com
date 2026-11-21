@@ -14,7 +14,6 @@ related:
   - "./form-standards-1.md"
   - "./performance.md"
   - "./ui-standards.md"
-status: draft
 ---
 # Standard Form nei Temi
 

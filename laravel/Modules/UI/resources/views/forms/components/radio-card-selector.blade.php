@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 ?>
 {{-- Radio Card Selector Component --}}
 @php
@@ -141,7 +142,7 @@ declare(strict_types=1);
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
             <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                {{ $emptyStateTitle ?? 'Nessun elemento disponibile' }}
+                {{ $emptyStateTitle ?? 'No items available' }}
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 {{ $emptyStateDescription ?? 'Non ci sono elementi da selezionare al momento.' }}

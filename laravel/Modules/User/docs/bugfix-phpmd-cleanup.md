@@ -8,19 +8,14 @@ qmd: "bugfix-phpmd-cleanup-2026-07 bug fix + cleanup phpmd (modules/user, 2026-0
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Bug fix + cleanup phpmd (Modules/User, 2026-07-12)
@@ -65,7 +60,7 @@ status: draft
   `authentication-log.notify_other_devices` non veniva mai consumata (nessuna
   notifica viene inviata). Rimossa la query morta e lasciato un commento
   `ponytail:` che documenta il gap funzionale e il percorso di upgrade (serve
-  una Notification class per completare la feature: fuori scope per questo
+  una Notification class per completare la feature — fuori scope per questo
   cleanup).
 - `Models/Policies/UserBasePolicy.php`: rimossa `$xotData = XotData::make();`
   morta (nessun side effect) e il relativo import, stesso pattern già
@@ -91,7 +86,7 @@ status: draft
   a file singolo (`@phpstan-ignore method.notFound` risulta "unmatched"
   quando il file è analizzato isolato, perché phpstan perde il contesto
   dell'intero progetto). Lo stesso artefatto è già presente su
-  `RegistrationWidget.php` non toccato in questa sessione: non è una
+  `RegistrationWidget.php` non toccato in questa sessione — non è una
   regressione introdotta qui.
 - Nessun test esistente copre i file modificati (verificato con `find`).
 

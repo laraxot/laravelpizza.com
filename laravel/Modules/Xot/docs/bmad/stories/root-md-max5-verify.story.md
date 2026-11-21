@@ -14,7 +14,7 @@ created: 2026-09-22
 updated: 2026-09-22
 ---
 
-# 5.126: Verifica e correzione max 5 .md in root modulo ($MODULO)
+# 5.126 — Verifica e correzione max 5 .md in root modulo ($MODULO)
 
 ## Story
 

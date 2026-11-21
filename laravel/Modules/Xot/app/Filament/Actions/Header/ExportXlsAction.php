@@ -12,6 +12,8 @@ namespace Modules\Xot\Filament\Actions\Header;
 use Exception;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ListRecords;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Contracts\Support\Htmlable;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Export\ExportXlsByCollection;
@@ -48,7 +50,12 @@ class ExportXlsAction extends XotBaseAction
                 return (string) __('xot::export_xls.tooltip');
             })
             ->icon('xot-files.xls')
+            // Ability tipica: policy del model della Resource; undeclared = deny; admin via before().
+            ->authorize('xlsExport')
             ->action(static function (ListRecords $livewire, ExportXlsAction $action) {
+                $modelClass = $livewire->getResource()::getModel();
+                /** @var class-string<Model> $modelClass */
+                Gate::authorize('xlsExport', new $modelClass);
                 // Stesso nome file del canale nativo (XotBaseExportAction::fileName).
                 $filename = app(GetExportFileNameAction::class)->execute($livewire).'.xlsx';
                 $transKey = app(GetTransKeyAction::class)->execute($livewire::class);

@@ -13,6 +13,10 @@
     <!-- Title -->
     <title>{{ $title ?? 'Accesso' }} - {{ config('app.name') }}</title>
     
+    <!-- AGID Fonts - Titillium Web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
     
     <!-- Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/Sixteen')
@@ -197,8 +201,8 @@
 </head>
 <body class="h-full bg-gray-50">
     <!-- Skip Links AGID -->
-    <a href="#main-content" class="agid-skip-link">Salta al contenuto principale</a>
-    <a href="#login-form" class="agid-skip-link">Vai al modulo di accesso</a>
+    <a href="#main-content" class="agid-skip-link">{{ __('pub_theme::layout.skip_links.skip_main.label') }}</a>
+    <a href="#login-form" class="agid-skip-link">{{ __('pub_theme::layout.skip_links.login_form.label') }}</a>
 
     <!-- AGID Header Istituzionale -->
     <header role="banner" class="agid-header">
@@ -215,7 +219,7 @@
                     <a href="{{ config('app.institution_url') }}" 
                        class="text-white hover:text-blue-200 transition-colors text-sm"
                        target="_blank" rel="noopener noreferrer">
-                        Vai al sito dell'ente
+                        {{ __('pub_theme::layout.entity_site.link.label') }}
                     </a>
                 @endif
             </div>
@@ -223,18 +227,18 @@
     </header>
 
     <!-- AGID Breadcrumb -->
-    <nav class="agid-breadcrumb" aria-label="Percorso di navigazione">
+    <nav class="agid-breadcrumb" aria-label="{{ __('pub_theme::layout.breadcrumb.nav.label') }}">
         <div class="container mx-auto px-4">
             <ol class="flex items-center space-x-2 text-sm">
                 <li>
                     <a href="{{ route('home') }}" class="text-blue-600 hover:text-blue-800 transition-colors">
                         <x-filament::icon name="heroicon-o-home" class="w-4 h-4 inline mr-1" />
-                        Home
+                        {{ __('pub_theme::navigation.home') }}
                     </a>
                 </li>
                 <li class="text-gray-400" aria-hidden="true">/</li>
                 <li class="text-gray-700 font-medium" aria-current="page">
-                    Accesso
+                    {{ __('pub_theme::layout.breadcrumb.login.label') }}
                 </li>
             </ol>
         </div>
@@ -267,20 +271,20 @@
                 
                 <!-- Link Obbligatori AGID -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Informazioni</h4>
+                    <h4 class="text-lg font-semibold mb-4">{{ __('pub_theme::common.sections.information.label') }}</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{{ route('pages.view', ['slug' => 'privacy']) }}" class="opacity-80 hover:opacity-100 transition-opacity">Privacy</a></li>
-                        <li><a href="{{ route('pages.view', ['slug' => 'legal-notes']) }}" class="opacity-80 hover:opacity-100 transition-opacity">Note legali</a></li>
-                        <li><a href="{{ route('pages.view', ['slug' => 'accessibility']) }}" class="opacity-80 hover:opacity-100 transition-opacity">Dichiarazione di accessibilità</a></li>
+                        <li><a href="{{ route('pages.view', ['slug' => 'privacy']) }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ __('pub_theme::auth.layout.privacy.label') }}</a></li>
+                        <li><a href="{{ route('pages.view', ['slug' => 'legal-notes']) }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ __('pub_theme::auth.layout.legal_notes.label') }}</a></li>
+                        <li><a href="{{ route('pages.view', ['slug' => 'accessibility']) }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ __('pub_theme::auth.layout.accessibility.label') }}</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contatti -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Assistenza</h4>
+                    <h4 class="text-lg font-semibold mb-4">{{ __('pub_theme::auth.layout.support.title') }}</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{{ route('pages.view', ['slug' => 'contacts']) }}" class="opacity-80 hover:opacity-100 transition-opacity">Contatti</a></li>
-                        <li><a href="{{ route('pages.view', ['slug' => 'help']) }}" class="opacity-80 hover:opacity-100 transition-opacity">Guida</a></li>
+                        <li><a href="{{ route('pages.view', ['slug' => 'contacts']) }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ __('pub_theme::navigation.contact') }}</a></li>
+                        <li><a href="{{ route('pages.view', ['slug' => 'help']) }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ __('pub_theme::auth.layout.guide.label') }}</a></li>
                         @if(config('app.support_email'))
                             <li><a href="mailto:{{ config('app.support_email') }}" class="opacity-80 hover:opacity-100 transition-opacity">{{ config('app.support_email') }}</a></li>
                         @endif
@@ -290,8 +294,8 @@
             
             <!-- Copyright -->
             <div class="pt-8 border-t border-gray-700 text-center text-sm opacity-80">
-                <p>&copy; {{ date('Y') }} {{ config('app.name') }}. Tutti i diritti riservati.</p>
-                <p class="mt-2">Conforme alle linee guida AGID per i servizi digitali della Pubblica Amministrazione</p>
+                <p>&copy; {{ date('Y') }} {{ config('app.name') }}. {{ __('pub_theme::navigation.footer.all_rights_reserved.label') }}</p>
+                <p class="mt-2">{{ __('pub_theme::auth.layout.agid_compliance.message') }}</p>
             </div>
         </div>
     </footer>

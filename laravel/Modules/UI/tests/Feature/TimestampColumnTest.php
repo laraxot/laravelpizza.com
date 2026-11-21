@@ -8,7 +8,7 @@ use Modules\UI\Filament\Tables\Columns\TimestampColumn;
 use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-ui-db');
 describe('TimestampColumn — colonna data/ora standard del progetto', function (): void {
     it('requires an explicit name (no universal default)', function (): void {
         $column = TimestampColumn::make('created_at');

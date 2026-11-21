@@ -11,12 +11,6 @@ related:
   - "./component-verification-rules.md"
   - "./component-verification.md"
   - "./dependency-rules.md"
-title: "testing"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, user, best-practices]
-qmd: "testing user"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/testing-rules.md

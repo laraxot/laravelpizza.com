@@ -103,7 +103,7 @@ return [
             'description' => '',
         ],
         'description' => [
-            'label' => 'Descrizione',
+            'label' => 'Description',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

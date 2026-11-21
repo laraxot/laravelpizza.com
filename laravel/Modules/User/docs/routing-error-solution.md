@@ -8,20 +8,14 @@ qmd: "routing-error-solution soluzione errori di routing nel frontoffice"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: routing-solution.md
 ---
 
 # Soluzione Errori di Routing nel Frontoffice
@@ -55,7 +49,7 @@ Route::get('/profile', [ProfilePageController::class, 'show']);
   ```
   resources/views/pages/profile.blade.php
   ```
-- Il FolioServiceProvider del modulo la registra automaticamente.
+- `Cms\FolioVoltServiceProvider` monta già `resources/views/pages` di ogni modulo abilitato (mai `App\Providers\FolioServiceProvider`).
 - Rimuovi la rotta da `web.php`.
 
 ## 3. Volt (Componenti Livewire/Vue)

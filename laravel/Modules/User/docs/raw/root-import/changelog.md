@@ -4,7 +4,7 @@ type: concept
 tags: [changelog]
 created: 2026-07-14
 updated: 2026-07-14
-qmd: "changelog-5 changelog"
+qmd: "changelog changelog"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -13,7 +13,6 @@ related:
   - "./changelog-3.md"
   - "./changelog-4.md"
   - "./changelog-5.md"
-  - "./changelog.md"
   - "./git-reset-1.md"
   - "./git-reset.md"
   - "./pest-test-report-1.md"

@@ -1,4 +1,6 @@
 ---
+title: "UX — campagna widget-only"
+
 title: "UX: campagna widget-only"
 type: ux-design
 module: User

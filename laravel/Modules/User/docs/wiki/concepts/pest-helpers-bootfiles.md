@@ -1,5 +1,5 @@
 ---
-title: Helper di dominio in tests/Helpers.php: niente require_once, niente tests/Support
+title: Helper di dominio in tests/Helpers.php — niente require_once, niente tests/Support
 description: Come User è passato da 1264 a 84 errori PHPStan restituendo i 64 helper al file che Pest 5 carica da solo.
 document_type: concept
 module: User
@@ -12,9 +12,6 @@ related:
   - ../../../../../../bmad-output/stories/2.6.user-tests-helpers-bootstrap-phpstan.story.md
   - ../../../../../../docs/chat/hasxottable-rename-blocca-phpstan-2026-08-19.md
 tags: [pest, pest5, phpstan, bootstrap, helpers, testing]
-type: note
-updated: 2026-10-07
-qmd: "helper di dominio in `tests/helpers.php` user"
 ---
 
 # Helper di dominio in `tests/Helpers.php`
@@ -82,8 +79,8 @@ Gli helper non sono stati riscritti: erano già interamente tipizzati in `HEAD`,
 avrebbe significato inventare firme diverse dall'originale. Sono stati estratti con
 `token_get_all()` dai cinque file cancellati (`helpers.php`, `helpers-core.php`,
 `helpers-extended.php`, `team-management-helpers.php`,
-`team-management-business-helpers.php`), deduplicati per nome: `helpers.php` è di fatto
-l'unione di `helpers-core` e `helpers-extended`, quindi le collisioni erano attese: e
+`team-management-business-helpers.php`), deduplicati per nome — `helpers.php` è di fatto
+l'unione di `helpers-core` e `helpers-extended`, quindi le collisioni erano attese — e
 concatenati in un solo file con gli `use` uniti e ordinati.
 
 Le uniche modifiche di merito rispetto all'originale riguardano tre `mixed` che non
@@ -110,7 +107,7 @@ if (! is_string($secret)) {
 `Modules/Xot` la usano). Il cast su `decrypt()` era invece un `(string) mixed`: un cast non
 restringe niente, sposta solo il problema a runtime.
 
-## Strato 3: il binding del TestCase
+## Strato 3 — il binding del TestCase
 
 `Modules/User/tests/Pest.php` contiene ora solo il legame con il TestCase concreto del modulo:
 
@@ -124,7 +121,7 @@ non produce più `method.internalClass`: il divieto che circolava nei commenti d
 
 ## Come si esegue
 
-Gli helper vengono caricati solo se Pest riceve la test directory del modulo: `BootFiles`
+Gli helper vengono caricati solo se Pest riceve la test directory del modulo — `BootFiles`
 costruisce il percorso come `rootPath . '/' . testDirectory()`, e `rootPath` è `laravel/`:
 
 ```bash
@@ -133,7 +130,7 @@ cd laravel
 ```
 
 Senza `--test-directory` viene caricato solo `laravel/tests/Pest.php` e gli helper del modulo
-restano codice morto a runtime: pur restando visibili a PHPStan, che analizza tutto
+restano codice morto a runtime — pur restando visibili a PHPStan, che analizza tutto
 `Modules/`. È la stessa trappola documentata nella story 2.5 per `Modules/Media`.
 
 ## Da rifare altrove

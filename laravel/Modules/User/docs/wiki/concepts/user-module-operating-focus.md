@@ -13,9 +13,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
-tags: [docs, user, wiki]
-qmd: "user module operating focus user"
 ---
 
 # User Module Operating Focus
@@ -74,7 +71,6 @@ This avoids repeating the same identity analysis across sessions and keeps busin
 - [[User Architecture Sources]]
 - [[user-module]]
 - `../../README.md`
-- `../../product-strategy.md`
 - `../../product-strategy-user-module.md`
 - `../../architecture/architecture-rules.md`
 - `../../advanced-user-architecture.md`

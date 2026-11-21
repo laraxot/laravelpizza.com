@@ -78,7 +78,7 @@ class EnvWidget extends XotBaseSchemaWidget
         // .env nuovo viene ignorato. Senza questa riga l'utente cambiava
         // MAIL_HOST dal pannello, non succedeva niente, e concludeva che la
         // pagina non funziona — proprio il motivo per cui questa pagina esiste
-        // (module_quaeris_fila5#47: nessun accesso SSH al server).
+        // (module_<nome progetto>_fila5#47: nessun accesso SSH al server).
         //
         // `config:clear` e non `config:cache`: è quello che fa già
         // SocialiteProviderSettingsPage dopo aver scritto la sua
@@ -99,6 +99,36 @@ class EnvWidget extends XotBaseSchemaWidget
          * // 'data1' => $this->form->getState(),
          * ]);
          */
+    }
+
+    /**
+     * Driver di invio: quelli noti con un nome leggibile piu' tutti i mailer configurati in config/mail.php
+     * (array, failover, roundrobin, mailgun...). Un valore attuale fuori dall'elenco faceva fallire la
+     * validazione della Select e nessun campo del widget si poteva piu' salvare.
+     *
+     * @return array<string, string>
+     */
+    public static function mailerOptions(): array
+    {
+        $options = [
+            'smtp' => 'SMTP',
+            'ses' => 'Amazon SES',
+            'postmark' => 'Postmark',
+            'resend' => 'Resend',
+            'sendmail' => 'Sendmail',
+            'log' => 'Log (nessun invio reale)',
+        ];
+
+        $configured = config('mail.mailers');
+        if (is_array($configured)) {
+            foreach (array_keys($configured) as $name) {
+                if (is_string($name) && ! isset($options[$name])) {
+                    $options[$name] = $name;
+                }
+            }
+        }
+
+        return $options;
     }
 
     /**
@@ -130,14 +160,7 @@ class EnvWidget extends XotBaseSchemaWidget
                 ]),
             'netfun_token' => TextInput::make('netfun_token'),
             'mail_mailer' => Select::make('mail_mailer')
-                ->options([
-                    'smtp' => 'SMTP',
-                    'ses' => 'Amazon SES',
-                    'postmark' => 'Postmark',
-                    'resend' => 'Resend',
-                    'sendmail' => 'Sendmail',
-                    'log' => 'Log (nessun invio reale)',
-                ]),
+                ->options(self::mailerOptions()),
             'mail_host' => TextInput::make('mail_host'),
             'mail_port' => TextInput::make('mail_port'),
             'mail_encryption' => Select::make('mail_encryption')

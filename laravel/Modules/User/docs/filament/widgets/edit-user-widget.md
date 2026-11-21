@@ -12,7 +12,6 @@ related:
   - "./registration-widget-fileupload-fix.md"
   - "./registration-widget-fileupload.md"
   - "./registration-widget.md"
-status: draft
 ---
 
 # EditUserWidget: Widget generico per la modifica dati utente

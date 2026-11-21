@@ -1,11 +1,3 @@
----
-title: "Widget Translation Rules - SaluteOra Project"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "widget translation rules - saluteora project user"
----
 # Widget Translation Rules - SaluteOra Project
 
 ## Core Principles
@@ -191,13 +183,6 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-- [User Module Widget Structure](widgets_structure.md)
-- [EditUserWidget Documentation](widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-- [User Module Widget Structure](widgets_structure.md)
-- [EditUserWidget Documentation](widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](widgets/translation-guidelines.md)
 - [User Module Widget Structure](widgets_structure.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)

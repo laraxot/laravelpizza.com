@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< .merge_file_uiV5Mi
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
+=======
+>>>>>>> .merge_file_vvjnSd
     'fields' => [
         'first_name' => [
             'label' => 'First Name',

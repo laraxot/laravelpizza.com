@@ -12,15 +12,15 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
   - ✅ CORRECT: `laravel/Themes/Meetup/`
 
 - **Module Path**: `laravel/Modules/Meetup/`
-  - ❌ WRONG: `Modules/Meetup`, `Modules/Quaeris`
+  - ❌ WRONG: `Modules/Meetup`, `Modules/<nome progetto>`
   - ✅ CORRECT: `laravel/Modules/Meetup/`
 
 - **Config Path**: `laravel/config/local/laravelpizza/`
-  - ❌ WRONG: `config/local/laravelpizza`, `config/local/quaeris`
+  - ❌ WRONG: `config/local/laravelpizza`, `config/local/<nome progetto>`
   - ✅ CORRECT: `laravel/config/local/laravelpizza/`
 
 - **Public Assets**: `public_html/themes/Meetup/`
-  - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+  - ✅ CORRECT: Destination for `npm run copy`
 
 - **Namespace**:
   - PHP: `Modules\Meetup\` and `Themes\Meetup\`
@@ -293,7 +293,7 @@ We are working on [Task Name] in `laravel/Themes/Meetup/`.
 ```bash
 cd laravel/Themes/Meetup/
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 # Then verify in browser with hard refresh
 ```
 
@@ -313,7 +313,7 @@ npm run build
 - ❌ Extending Filament classes directly
 - ❌ Using `property_exists()` on models
 - ❌ Hardcoding URLs without localization
-- ❌ Forgetting `npm run build`
+- ❌ Forgetting `npm run build && npm run copy`
 - ❌ Not updating documentation
 - ❌ Using content from other businesses
 - ❌ Creating controllers for public pages

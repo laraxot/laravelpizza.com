@@ -8,19 +8,14 @@ qmd: "task-schema-org-person-enhancement task: schema.org person enhancement - [
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Task: Schema.org Person Enhancement - [DATE]
@@ -115,8 +110,7 @@ Based on comprehensive research of Schema.org documentation, I've identified key
 
 - [tasks-schema-org-person.md](./tasks-schema-org-person.md) - Existing person tasks
 - [place-address-schemaorg.md](../../Geo/docs/place-address-schemaorg.md) - Address documentation
-- [place-address-schemaorg.md](../../Geo/docs/place-address-schemaorg.md) - Address documentation
-- [architecture.md](./ARCHITECTURE.md) - User module architecture
+- [architecture.md](./architecture.md) - User module architecture
 
 ## Implementation Details
 

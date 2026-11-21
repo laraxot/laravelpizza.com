@@ -160,7 +160,7 @@ class IconStateColumn extends XotBaseIconColumn
                     $currentState->transitionTo($state, $message);
 
                     Notification::make()
-                        ->title('Stato aggiornato a '.$label)
+                        ->title('Status updated to '.$label)
                         ->success()
                         ->send();
                 }),

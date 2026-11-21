@@ -84,7 +84,7 @@
                                 type="button" 
                                 class="btn btn-outline-primary btn-sm"
                                 onclick="setCookieConsent('{{ $cookieName }}', 'declined', {{ $expiryDays }}, '{{ $cookiebarId }}')"
-                                aria-label="Rifiuta i cookie"
+                                aria-label="{{ __('pub_theme::layout.cookie.reject.label') }}"
                             >
                                 {{ $declineText }}
                             </button>
@@ -93,7 +93,7 @@
                             type="button" 
                             class="btn btn-primary btn-sm"
                             onclick="setCookieConsent('{{ $cookieName }}', 'accepted', {{ $expiryDays }}, '{{ $cookiebarId }}')"
-                            aria-label="Accetta i cookie"
+                            aria-label="{{ __('pub_theme::layout.cookie.accept.label') }}"
                         >
                             {{ $acceptText }}
                         </button>

@@ -7,10 +7,10 @@ declare(strict_types=1);
 // Canon: Modules/User/docs/wiki — domain i18n only.
 // File: lang/en/user/permissions.php
 return [
-    'view_users' => 'Visualizza utenti',
-    'create_users' => 'Crea utenti',
-    'edit_users' => 'Modifica utenti',
-    'delete_users' => 'Elimina utenti',
-    'impersonate_users' => 'Impersona utenti',
-    'manage_roles' => 'Gestisci ruoli',
+    'view_users' => 'View users',
+    'create_users' => 'Create users',
+    'edit_users' => 'Edit users',
+    'delete_users' => 'Delete users',
+    'impersonate_users' => 'Impersonate users',
+    'manage_roles' => 'Manage roles',
 ];

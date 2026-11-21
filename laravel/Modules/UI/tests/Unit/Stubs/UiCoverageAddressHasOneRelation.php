@@ -26,7 +26,7 @@ final class UiCoverageAddressHasOneRelation extends HasOne
     }
 
     /**
-     * @param  array<int, string>|string  $columns
+     * @param array<int, string>|string $columns
      */
     public function first($columns = ['*']): ?Model
     {

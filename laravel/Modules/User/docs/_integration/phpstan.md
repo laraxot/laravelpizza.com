@@ -16,8 +16,6 @@ related:
   - "./passport.md"
   - "./payment.md"
   - "./profile.md"
-status: superseded
-superseded_by: ../-integration/phpstan.md
 ---
 
 # phpstan

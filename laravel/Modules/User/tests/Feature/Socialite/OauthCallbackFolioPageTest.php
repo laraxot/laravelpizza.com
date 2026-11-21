@@ -22,7 +22,9 @@ uses(TestCase::class);
  */
 
 test('the callback is a Folio page, not a controller route', function (): void {
-    $page = base_path('Themes/Sixteen/resources/views/pages/auth/login/[provider]/callback.blade.php');
+    // La pagina sta nel tema pubblico del progetto (Sixteen, Four...): il modulo User e' condiviso.
+    $theme = config('xra.pub_theme');
+    $page = base_path('Themes/'.(is_string($theme) ? $theme : 'Sixteen').'/resources/views/pages/auth/login/[provider]/callback.blade.php');
 
     // nessun controller di callback: la rotta e' la pagina Folio (DCP-360), non un adattatore che la rimette in vita
     expect(is_file(base_path('Modules/User/app/Http/Controllers/Socialite/ProcessCallbackController.php')))->toBeFalse()

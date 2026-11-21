@@ -38,6 +38,7 @@ return [
             'zip' => [
                 'label' => 'billing_address.zip',
             ],
+            'label' => 'billing_address',
         ],
     ],
 ];

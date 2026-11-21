@@ -1,9 +1,9 @@
+=======
 ---
-title: "Xot - phpstan-fleet-remediation.story.md"
+title: "Xot - phpstan-fleet-remediation-2026-10-06.story.md"
 module: Xot
 bmad: true
 status: active
----
 # PHPStan fleet remediation — 2026-10-06
 
 ## Epic
@@ -86,7 +86,6 @@ Quando subagent docs torna:
 ✅ **DONE** — Fleet PHPStan clean (0 errori). Docs organizing in-progress. Learning loop captured.
 
 
----
 
 ## Consolidamento finale — 2026-10-06 10:30 UTC
 
@@ -162,6 +161,6 @@ cd laravel && ./vendor/bin/phpstan analyse Modules --no-progress --memory-limit=
 2. **Assenza policy implementation** (assenza-admin-policy.story.md) — ready-for-dev
 3. **Larastan configuration** (PHPStan cluster 5 finding) — ~5 min fix, removes false positives
 
----
 
 **Task status**: ✅ **DONE** — Fleet è clean, docs consolidated, learning loop captured, handoff stories created.
+

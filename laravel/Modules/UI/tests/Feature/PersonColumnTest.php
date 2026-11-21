@@ -7,10 +7,8 @@ namespace Modules\UI\Tests\Feature;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Modules\UI\Filament\Tables\Columns\PersonColumn;
-use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 describe('PersonColumn — controparte di PersonSection', function (): void {
     it('can be instantiated with make() using the default name', function (): void {
         $column = PersonColumn::make();

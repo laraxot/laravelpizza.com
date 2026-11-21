@@ -73,7 +73,7 @@ return [
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
     'unique' => 'The :attribute has already been taken.',
-    'uploaded' => 'The :attribute failed to upload.',
+    'uploaded' => 'Upload did not work: the file may be too large. Try again with a smaller file.',
     'url' => 'The :attribute format is invalid.',
     'custom' => [
         'attribute-name' => [

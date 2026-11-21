@@ -1,19 +1,17 @@
 ---
-updated: 2026-09-26
-qmd: "redundancy audit 2026 05 21"
-issues: []
-discussions: []
-title: "Meetup redundancy audit 2026-05-21"
+title: "Meetup redundancy audit"
 type: audit
 theme: Meetup
 tags: [redundancy, duplicate-code, docs]
 created: 2026-05-21
+updated: 2026-10-28
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
-status: active
 ---
 
-# Meetup redundancy audit 2026-05-21
+# Meetup redundancy audit
+
+Audit eseguito il 2026-05-21 (ex `redundancy-audit.md`, la data sta nel frontmatter).
 
 Static metrics: 24 files scanned, 0 case-only groups, 0 duplicate hash groups, 0 duplicate FQCN.
 

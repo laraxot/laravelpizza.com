@@ -1,5 +1,5 @@
 ---
-title: "Login EN: parity del catalogo owner User"
+title: "Login EN — parity del catalogo owner User"
 type: story
 status: done
 module: User

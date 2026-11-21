@@ -59,7 +59,10 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class AuthenticationLog extends BaseModel
 {
+<<<<<<< .merge_file_9OFCxn
     use AuthenticationLogRelationsTrait;
+=======
+>>>>>>> .merge_file_Og2kQT
     use MassPrunable;
 
     // public $timestamps = false;

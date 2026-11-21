@@ -3,7 +3,7 @@
 declare(strict_types=1);
 ?>
 @props([
-    'content' => 'Contenuto del paragrafo'
+    'content' => 'Paragraph content'
 ])
 
 <div class="py-8">

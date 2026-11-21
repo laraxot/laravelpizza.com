@@ -27,31 +27,30 @@ class LoginUserAction
     public function execute(SocialiteUser $socialiteUser): RedirectResponse
     {
         // Relazione gia' caricata (callback OAuth, test) o letta ora dal database.
-        /** @var mixed $user */
-        $user = $socialiteUser->relationLoaded('user')
+        $related = $socialiteUser->relationLoaded('user')
             ? $socialiteUser->getRelation('user')
             : $socialiteUser->user()->first();
 
-        if ($user === null) {
+        if ($related === null) {
             throw new \InvalidArgumentException('Socialite user has no related user.');
         }
 
-        if (! $user instanceof Authenticatable || ! $user instanceof UserContract) {
-            throw new \LogicException('User instance must implement Authenticatable.');
+        if (! $related instanceof Authenticatable || ! $related instanceof UserContract) {
+            throw new \LogicException('User instance must implement Authenticatable and UserContract.');
         }
 
         // Un account eliminato dal titolare (Gdpr DeleteAccountAction, `deleted_at`) resta chiuso anche con Google:
         // l'informativa dice che l'account e' disattivato subito, come per il login con password (LoginWidget).
         // Letto dagli attributi grezzi: un modello appena creato non ha la colonna caricata e
         // Model::preventAccessingMissingAttributes() farebbe fallire getAttribute().
-        $attributes = $user instanceof Model ? $user->getAttributes() : [];
+        $attributes = $related instanceof Model ? $related->getAttributes() : [];
         if (($attributes['deleted_at'] ?? null) !== null) {
             return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
         }
 
         event(new SocialiteUserConnected($socialiteUser));
 
-        Filament::auth()->login($user);
+        Filament::auth()->login($related);
 
         return redirect()->intended('/');
     }

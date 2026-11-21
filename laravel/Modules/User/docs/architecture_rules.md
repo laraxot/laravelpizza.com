@@ -1,12 +1,3 @@
----
-title: "Laraxot Architecture Rules"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "laraxot architecture rules user"
-status: superseded
-superseded_by: architecture-rules-laraxot.md
----
 # Laraxot Architecture Rules
 
 ## Core Principles

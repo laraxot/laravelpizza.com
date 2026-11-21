@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories services to actions xot small story md"
 title: "[STORY] Services piccoli di Xot verso Actions, const verso tipi adatti"
 type: story
 status: done

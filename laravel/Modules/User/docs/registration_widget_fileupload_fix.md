@@ -1,11 +1,3 @@
----
-title: "RegistrationWidget FileUpload Fix"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "registrationwidget fileupload fix user"
----
 # RegistrationWidget FileUpload Fix
 
 ## Problema Risolto
@@ -224,6 +216,6 @@ Per evitare simili problemi in futuro:
 ## Riferimenti
 
 - [Problema principale: docs/fileupload-foreach-error-fix.md](../../../docs/fileupload-foreach-error-fix.md)
-- [Correzione XotBaseResource: Modules/Xot/docs/fileupload-components.md](../../Xot/docs/fileupload-components.md)
+- [Correzione XotBaseResource: Modules/Xot/docs/fileupload-components.md](../../xot/docs/fileupload-components.md)
 - [Registration Widget base: registration-widget.md](./registration-widget.md)
 

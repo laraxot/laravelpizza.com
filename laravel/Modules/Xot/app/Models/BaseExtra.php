@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Modules\Xot\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Database\Factories\ExtraFactory;
@@ -63,6 +65,31 @@ abstract class BaseExtra extends BaseModel implements ExtraContract
 
     // ✅ CORRETTO: NON implementare scopeWithExtraAttributes() manualmente
     // Il trait SchemalessAttributesTrait lo fornisce automaticamente!
+
+    /**
+     * Il record a cui questi attributi extra appartengono.
+     *
+     * `model_type` e `model_id` sono dichiarati qui in `$fillable` da sempre, e
+     * `HasExtraTrait::extra()` scrive su di loro con una `morphOne`, ma il lato
+     * inverso non esisteva: chi partiva da un `Extra` non aveva modo di
+     * risalire al record che lo possiede.
+     *
+     * Serve alle policy. Un `Extra` non ha un tenant proprio — lo prende da chi
+     * lo possiede — quindi senza questa relazione l'unico controllo possibile
+     * era un permesso, che vale per tutti i clienti insieme
+     * (module_quaeris_fila5#34).
+     *
+     * Passare dalla relazione e non dal confronto di `model_type` a mano non e'
+     * pignoleria: quella colonna puo' contenere l'alias della morph map oppure
+     * il nome completo della classe, a seconda di quando la riga e' stata
+     * scritta. Eloquent risolve entrambi, un `===` no.
+     *
+     * @return MorphTo<Model, $this>
+     */
+    public function model(): MorphTo
+    {
+        return $this->morphTo();
+    }
 
     /**
      * Get the attributes that should be cast.

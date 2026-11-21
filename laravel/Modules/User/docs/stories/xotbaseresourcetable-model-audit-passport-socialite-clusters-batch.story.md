@@ -50,7 +50,7 @@ rispettando la connection DB specifica di ciascun model.
 
 All'apertura di questo turno i 13 file avevano già `$model` popolato (working
 tree condivisa, modifiche non committate di una sessione precedente/parallela
-- confermato via `git diff --stat` prima di editare nulla). Ho verificato
+— confermato via `git diff --stat` prima di editare nulla). Ho verificato
 ogni valore contro la fonte autorevole (property `$model` o `getModel()`
 della Resource sorella, con tracciamento della catena dinamica dove
 applicabile), mai contro il nome del file.
@@ -62,7 +62,7 @@ applicabile), mai contro il nome del file.
 1. Tutti i 13 file hanno `protected static string $model = X::class;` con `X`
    verificato contro la Resource sorella (mai dal nome del file).
 2. `getTableColumns()` di ognuno verificato contro lo schema reale,
-   rispettando la connection DB del model (`Schema::connection($name)`) -
+   rispettando la connection DB del model (`Schema::connection($name)`) —
    non la connection di default.
 3. Colonne non verificabili (chiavi con relazione, es. `user.name`) saltate.
 4. Colonne sospette segnalate con file:riga, NON rimosse salvo typo certo al
@@ -75,14 +75,14 @@ applicabile), mai contro il nome del file.
 
 ## Esplicitamente fuori scope
 
-- I model file (`app/Models/OauthDeviceCode.php`, ecc.): solo le classi
+- I model file (`app/Models/OauthDeviceCode.php`, ecc.) — solo le classi
   Table sono in `owned_scope`, anche quando un finding riguarda un model.
 - I file `ClientResource/Tables/OauthClientsTable.php`,
   `SocialiteUserResource/Tables/SocialiteUsersTable.php` (top-level, non
-  cluster) e simili: appartengono ad altri batch/issue (#90, #91), non
+  cluster) e simili — appartengono ad altri batch/issue (#90, #91), non
   toccati qui anche se il finding li cita per contesto.
 - Cancellazione di file dead-code identificati (`BaseUsersTable.php`,
-  `BaseProfilesTable.php`, `ClientsTable.php`): segnalati, non rimossi, per
+  `BaseProfilesTable.php`, `ClientsTable.php`) — segnalati, non rimossi, per
   policy esplicita del mandato.
 
 ## Tasks / Subtasks
@@ -101,7 +101,7 @@ applicabile), mai contro il nome del file.
 
 <!-- LOCKED. Ogni affermazione con [Source: ...]. -->
 
-### $model: tutti confermati corretti
+### $model — tutti confermati corretti
 
 | File | Model | Come verificato |
 |---|---|---|
@@ -115,11 +115,11 @@ applicabile), mai contro il nome del file.
 | SocialProvidersTable.php (cluster) | `Modules\User\Models\SocialProvider` | [Source: Clusters/Socialite/Resources/SocialProviderResource.php#L23] `$model` esplicito |
 | SsoProvidersTable.php (cluster) | `Modules\User\Models\SsoProvider` | [Source: Clusters/Socialite/Resources/SsoProviderResource.php#L25] `$model` esplicito |
 | AuthenticationLogsTable.php | `Modules\User\Models\AuthenticationLog` | [Source: app/Filament/Resources/AuthenticationLogResource.php#L15] `$model` esplicito |
-| BaseProfilesTable.php | `Modules\User\Models\BaseProfile` (abstract) | [Source: app/Filament/Resources/BaseProfileResource.php#L16] `$model` esplicito: coerente con il pattern "Base*" astratto pensato per essere esteso dai progetti consumer |
-| BaseUsersTable.php | `Modules\User\Models\BaseUser` (abstract) | `BaseUserResource::$model` e' commentato; risolto via [Source: Modules/Xot/app/Filament/Resources/XotBaseResource.php#L97-125] `getModel()` fallback per convenzione (`Str::before(class_basename(static::class), 'Resource')` = `BaseUser`): coincide col valore gia' presente |
+| BaseProfilesTable.php | `Modules\User\Models\BaseProfile` (abstract) | [Source: app/Filament/Resources/BaseProfileResource.php#L16] `$model` esplicito — coerente con il pattern "Base*" astratto pensato per essere esteso dai progetti consumer |
+| BaseUsersTable.php | `Modules\User\Models\BaseUser` (abstract) | `BaseUserResource::$model` e' commentato; risolto via [Source: Modules/Xot/app/Filament/Resources/XotBaseResource.php#L97-125] `getModel()` fallback per convenzione (`Str::before(class_basename(static::class), 'Resource')` = `BaseUser`) — coincide col valore gia' presente |
 | ClientsTable.php (top-level ClientResource) | `Modules\User\Models\OauthClient` | [Source: app/Filament/Resources/ClientResource.php#L27-39] `getModel()` → `Passport::clientModel()` → stesso fallback `OauthClient::class`, stessa config |
 
-### Colonne verificate: esito per file
+### Colonne verificate — esito per file
 
 **Nota metodologica critica**: questo modulo usa connection DB per-model
 diverse da quella di default (`protected $connection = 'user'` → DB fisico
@@ -128,7 +128,7 @@ diverse da quella di default (`protected $connection = 'user'` → DB fisico
 `Schema::getColumnListing()` (connection di default, senza specificarla) ha
 prodotto **8 falsi positivi** (`grant_types`, `redirect_uris`, `owner_id`,
 `owner_type` su `oauth_clients`; `is_otp`, `type`, `state`,
-`password_expires_at` su `users`): tutti rientrati verificando con
+`password_expires_at` su `users`) — tutti rientrati verificando con
 `Schema::connection($model->getConnectionName())->getColumnListing(...)`.
 Confermato anche indipendentemente dal batch parallelo issue #90 sullo
 stesso modulo.
@@ -142,16 +142,16 @@ BaseUsersTable, ClientsTable.
 - `SocialProvidersTable.php`: model Sushi (`SushiToPhpArray`, righe da
   `GetTenantConfigArrayAction` a runtime, nessuna migration/tabella fissa).
   Verificato contro il PHPDoc `@property` del model
-  [Source: app/Models/SocialProvider.php#L16-46]: tutte le chiavi
+  [Source: app/Models/SocialProvider.php#L16-46] — tutte le chiavi
   (`name`, `active`, `socialite`, `stateless`, `scopes`, `id`, `created_at`,
   `updated_at`) documentate. Config tenant vuota in questo ambiente
   (`getSushiRows()` → `[]`), quindi zero righe reali da rompere.
 - `OauthDeviceCodesTable.php`: tabella assente sia su connection `mysql`
-  (default, quella usata dal model: vedi finding sotto) sia su `user`.
+  (default, quella usata dal model — vedi finding sotto) sia su `user`.
   Verificato contro la migration vendor
-  [Source: vendor/laravel/passport/database/migrations/2024_06_01_000001_create_oauth_device_codes_table.php] -
+  [Source: vendor/laravel/passport/database/migrations/2024_06_01_000001_create_oauth_device_codes_table.php] —
   colonne `id, user_id, client_id, user_code, scopes, revoked,
-  user_approved_at, last_polled_at, expires_at`: tutte le chiavi
+  user_approved_at, last_polled_at, expires_at` — tutte le chiavi
   referenziate (`user_id`, `client_id`, `revoked`, `user_approved_at`,
   `expires_at`, `last_polled_at`, `scopes`) presenti; nessun `created_at`/
   `updated_at` nella tabella, e infatti la Table non li referenzia.
@@ -163,7 +163,7 @@ BaseUsersTable, ClientsTable.
   [Source: app/Models/BaseProfile.php#L101], cast boolean
   [Source: app/Models/BaseProfile.php#L215], e definito in 6 migration
   `create_profiles_table` duplicate incluso l'owner piu' recente datato
-  [Source: database/migrations/2026_09_01_150108_create_profiles_table.php#L57,L146-147] -
+  [Source: database/migrations/2026_09_01_150108_create_profiles_table.php#L57,L146-147] —
   drift ambientale pre-esistente (il modulo ha ≥6 migration quasi-duplicate
   per `profiles`, stesso pattern gia' noto per `users`), non un difetto del
   codice Table. Non toccato (era gia' cosi' prima del mio unico edit su
@@ -172,7 +172,7 @@ BaseUsersTable, ClientsTable.
 ### Findings aggiuntivi (fuori `owned_scope`, solo segnalati)
 
 1. **`OauthDeviceCode` model non allineato ai fratelli**
-   [Source: app/Models/OauthDeviceCode.php]: a differenza di
+   [Source: app/Models/OauthDeviceCode.php] — a differenza di
    `OauthAccessToken`, `OauthAuthCode`, `OauthClient`,
    `OauthPersonalAccessClient`, `OauthRefreshToken` (tutti
    `protected $connection = 'user';`), `OauthDeviceCode` non dichiara alcuna
@@ -192,45 +192,45 @@ BaseUsersTable, ClientsTable.
    `XotBaseResource::getTableClass()`
    [Source: Modules/Xot/app/Filament/Resources/XotBaseResource.php#L185-200]
    costruisce il nome classe da `static::class` (il **chiamante concreto**,
-   `ProfileResource`), non dalla classe astratta padre: quindi risolve
+   `ProfileResource`), non dalla classe astratta padre — quindi risolve
    `ProfileResource\Tables\ProfilesTable` (esistente,
    [Source: app/Filament/Resources/ProfileResource/Tables/ProfilesTable.php]),
    bypassando `BaseProfileResource\Tables\BaseProfilesTable` del tutto. Non
    cancellata.
 4. **`ClientResource/Tables/ClientsTable.php` duplicato byte-per-byte** (a
    parte il nome classe) di `ClientResource/Tables/OauthClientsTable.php`
-   (stesso `$model = OauthClient::class`, stesso `getTableColumns()`): file
+   (stesso `$model = OauthClient::class`, stesso `getTableColumns()`) — file
    non in questo batch. Per la stessa convenzione `getTableClass()`
    (`Str::plural(class_basename($model))` = `OauthClients`), la classe
    live e' `OauthClientsTable`, rendendo `ClientsTable.php` dead code. Non
    cancellata.
 5. Osservazione architetturale (non un difetto): esistono **due Resource
-   Socialite separate e legittimamente live** -
+   Socialite separate e legittimamente live** —
    `Modules\User\Filament\Resources\SocialiteUserResource` (standalone) e
    `Modules\User\Filament\Clusters\Socialite\Resources\SocialiteUserResource`
-   (`protected static ?string $cluster = Socialite::class;`): stesso model,
+   (`protected static ?string $cluster = Socialite::class;`) — stesso model,
    due registrazioni Filament distinte (una flat, una in un Cluster UI). Non
    e' duplicazione accidentale: sono entrambe raggiungibili e verificate
    separatamente (questa story copre solo la versione cluster).
 
 ### Migliorie UX applicate (3, additive, basso rischio)
 
-- `AuthenticationLogsTable.php:26`: `authenticatable_id` era l'unica
+- `AuthenticationLogsTable.php:26` — `authenticatable_id` era l'unica
   colonna del file senza alcun modifier fluent (`TextColumn::make(...)` nudo,
   mentre la colonna gemella `id` nello stesso file ha
   `->sortable()->copyable()`). Aggiunto `->sortable()->copyable()` per
   coerenza interna.
-- `BaseProfilesTable.php:77`: `is_active` aveva solo `->boolean()`, mentre
+- `BaseProfilesTable.php:77` — `is_active` aveva solo `->boolean()`, mentre
   ogni altra colonna boolean/icon nell'intero batch di 13 file
   (`revoked`, `active`, `socialite`, `stateless`, `login_successful`,
   `cleared_by_user`, `is_active` in `SsoProvidersTable`/`SocialProvidersTable`)
   ha anche `->sortable()`. Aggiunto `->sortable()`.
-- `BaseUsersTable.php:39`: `state` era un `TextColumn::make('state')` nudo
+- `BaseUsersTable.php:39` — `state` era un `TextColumn::make('state')` nudo
   (zero modifier), unico caso simile a `authenticatable_id`. Aggiunto
   `->sortable()`. Non aggiunto `->badge()`: nessun cast a enum/State
   dichiarato su `BaseUser::$casts` per `state`
   [Source: app/Models/BaseUser.php] (solo presente in `$fillable`), quindi
-  non verificabile come valore a bassa cardinalità: niente supposizioni.
+  non verificabile come valore a bassa cardinalità — niente supposizioni.
 
 Nessuna colonna rimossa. Una chiave per riga rispettata (i 3 edit sono
 append di metodi fluent su righe esistenti, nessuna riga con piu' di una
@@ -240,10 +240,10 @@ chiave introdotta).
 
 <!-- LOCKED. -->
 
-- `php -l` sui 13 file di `owned_scope`: nessun errore di sintassi
+- `php -l` sui 13 file di `owned_scope` — nessun errore di sintassi
   (rieseguito due volte per il rischio di race multi-agente sulla stessa
   working tree, vedi Dev Agent Record).
-- `cd laravel && vendor/bin/phpstan analyse <13 file> --no-progress`: `[OK] No errors`.
+- `cd laravel && vendor/bin/phpstan analyse <13 file> --no-progress` — `[OK] No errors`.
 - Nessun comando di scrittura DB eseguito (solo `Schema::connection(...)
   ->getColumnListing()` e query `SELECT` in sola lettura via tinker).
 
@@ -259,14 +259,14 @@ diversi, nessuna sovrapposizione di `owned_scope`) a:
 I 13 file in `owned_scope`. I findings su `OauthDeviceCode.php` (model),
 `ClientResource/Tables/OauthClientsTable.php`,
 `SocialiteUserResource/Tables/SocialiteUsersTable.php` (top-level) sono
-citati per contesto ma **non modificati**: appartengono ad altri file/batch.
+citati per contesto ma **non modificati** — appartengono ad altri file/batch.
 
 ## Learnings from Previous Stories
 
 - Conferma diretta della lezione gia' documentata in issue #90 dello stesso
   modulo: quando un model dichiara `protected $connection`, la verifica
   schema va fatta con `Schema::connection($name)`, mai con la connection di
-  default: altrimenti si rischia di leggere una tabella fisicamente diversa
+  default — altrimenti si rischia di leggere una tabella fisicamente diversa
   (stesso nome, DB diverso) e produrre falsi positivi/negativi. In questo
   batch la lezione si e' manifestata su `oauth_clients` (default `mysql` →
   schema Passport "vecchio stile"; `user` → schema con `grant_types`/
@@ -306,6 +306,6 @@ Claude Sonnet 5
   toccato, non di mia competenza.
 - 2026-09-11: `BaseProfilesTable.php` e' stato osservato cambiare sul disco
   durante la sessione (un blocco di condizioni `null === $x` → `$x === null`
-  applicato da un'altra sessione, poi parzialmente revertito da una terza) -
+  applicato da un'altra sessione, poi parzialmente revertito da una terza) —
   il mio singolo edit (`is_active` → `->sortable()`) e' rimasto intatto in
   ogni istante verificato; non ho toccato le altre righe del file.

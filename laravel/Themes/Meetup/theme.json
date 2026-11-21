@@ -1,1 +1,15 @@
+<<<<<<< .merge_file_657Jk0
 {"name":"Meetup","type":"pub","description":"","keywords":[],"active":true,"order":0,"aliases":[],"files":[],"requires":[]}
+=======
+{
+    "name": "Meetup",
+    "type": "pub",
+    "description": "Tema pubblico Meetup per Laravel Pizza (Tailwind CSS e Vite)",
+    "keywords": [],
+    "active": true,
+    "order": 0,
+    "aliases": ["meetup"],
+    "files": [],
+    "requires": []
+}
+>>>>>>> .merge_file_05vyEc

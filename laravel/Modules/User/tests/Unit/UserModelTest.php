@@ -10,6 +10,10 @@ use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+// Era `use Tests\TestCase;`, cioe' la classe della cartella `tests/` della
+// radice: quella cartella e' stata sciolta l'11 novembre e i suoi test spostati
+// nei moduli, quindi la classe non esiste piu' e Pest moriva in fase di
+// raccolta portandosi via tutta la suite (base_quaeris_fila5#213).
 uses(TestCase::class);
 
 // In-memory helper: build a User without touching DB

@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 ?>
+{{--
+  Filament 5 layout contract (PTVX owner User, non Cms):
+  https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout
+  OBBLIGATORIO: @filamentStyles in head, @filamentScripts a fine body; notifications senza @auth.
+--}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="- La piattaforma">
+        <meta name="description" content="- The platform">
         <meta name="keywords" content="">
-        <meta name="author" content="il progetto">
+        <meta name="author" content="the project">
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">

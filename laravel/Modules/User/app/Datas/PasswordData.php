@@ -95,26 +95,26 @@ class PasswordData extends Data
      */
     public function getHelperText(): string
     {
-        $msg = 'La password deve essere composta da minimo '.$this->min.' caratteri';
+        $msg = 'The password must be at least '.$this->min.' characters long';
 
         if ($this->mixedCase) {
-            $msg .= ', contenere almeno una lettera maiuscola e una minuscola';
+            $msg .= ', contain at least one uppercase and one lowercase letter';
         }
 
         if ($this->letters) {
-            $msg .= ', contenere almeno una lettera';
+            $msg .= ', contain at least one letter';
         }
 
         if ($this->numbers) {
-            $msg .= ', contenere almeno un numero';
+            $msg .= ', contain at least one number';
         }
 
         if ($this->symbols) {
-            $msg .= ', contenere almeno un carattere speciale';
+            $msg .= ', contain at least one special character';
         }
 
         if ($this->uncompromised) {
-            $msg .= ', non essere stata compromessa in precedenti violazioni di dati';
+            $msg .= ', not have been compromised in previous data breaches';
         }
 
         return $msg;

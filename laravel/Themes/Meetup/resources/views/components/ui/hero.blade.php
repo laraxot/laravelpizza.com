@@ -52,7 +52,7 @@
     class="{{ $heroClasses->implode(' ') }}"
     id="{{ $heroId }}"
     role="banner"
-    aria-label="Sezione principale"
+    aria-label="{{ __('pub_theme::layout.hero.main_section.label') }}"
     {{ $attributes->except(['type', 'size', 'backgroundImage', 'backgroundVideo', 'overlay', 'id', 'class', 'title', 'subtitle', 'description', 'showScrollIndicator']) }}
 >
     @if($type === 'video' && $backgroundVideo)
@@ -65,7 +65,7 @@
                 aria-hidden="true"
             >
                 <source src="{{ $backgroundVideo }}" type="video/mp4">
-                Your browser does not support the video tag.
+                {{ __('pub_theme::layout.hero.video_fallback.message') }}
             </video>
         </div>
     @elseif($type === 'image' && $backgroundImage)
@@ -114,7 +114,7 @@
                 <svg class="icon icon-sm" aria-hidden="true">
                     <use href="#it-chevron-down"></use>
                 </svg>
-                <span class="sr-only">Scorri verso il contenuto principale</span>
+                <span class="sr-only">{{ __('pub_theme::layout.hero.scroll_down.label') }}</span>
             </a>
         </div>
     @endif

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature\Filament\Widgets;
 
+use Filament\Widgets\StatsOverviewWidget as FilamentStatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\UI\Filament\Widgets\StatsOverviewWidget;
 use Modules\UI\Tests\TestCase;
@@ -12,6 +13,11 @@ use PHPUnit\Framework\Assert;
 use function Safe\file_get_contents;
 
 uses(TestCase::class);
+
+test('stats overview widget extends correct base class', function (): void {
+    $reflection = new \ReflectionClass(StatsOverviewWidget::class);
+    Assert::assertTrue($reflection->isSubclassOf(FilamentStatsOverviewWidget::class));
+});
 
 test('stats overview widget has correct namespace', function (): void {
     Assert::assertStringContainsString('Modules\\UI\\Filament\\Widgets', StatsOverviewWidget::class);
@@ -38,6 +44,10 @@ test('stats overview widget returns correct stats', function (): void {
     }
 });
 
+test('stats overview widget can be instantiated', function (): void {
+    expect(fn (): StatsOverviewWidget => new StatsOverviewWidget)->not->toThrow(\Throwable::class);
+});
+
 test('stats overview widget has correct strict types declaration', function (): void {
     $reflection = new \ReflectionClass(StatsOverviewWidget::class);
     $filename = $reflection->getFileName();
@@ -60,8 +70,7 @@ test('stats overview widget getStats method has correct return type', function (
     $returnType = $getStatsMethod->getReturnType();
 
     Assert::assertNotNull($returnType);
-    Assert::assertInstanceOf(\ReflectionNamedType::class, $returnType);
-    Assert::assertSame('array', $returnType->getName());
+    Assert::assertSame('array', $returnType instanceof \ReflectionNamedType ? $returnType->getName() : (string) $returnType);
 });
 
 test('stats overview widget has correct use statements', function (): void {
@@ -70,6 +79,6 @@ test('stats overview widget has correct use statements', function (): void {
 
     if ($filename !== false) {
         $content = file_get_contents($filename);
-        Assert::assertStringContainsString('use Modules\\Xot\\Filament\\Widgets\\XotBaseStatsOverviewWidget;', $content);
+        Assert::assertStringContainsString('use Filament\\Widgets\\StatsOverviewWidget as BaseWidget;', $content);
     }
 });

@@ -1,5 +1,5 @@
 ---
-title: "notifications: named route Folio (FO)"
+title: "notifications — named route Folio (FO)"
 type: concept
 tags: [user, notifications, folio, frontoffice, route]
 created: 2026-06-10
@@ -15,12 +15,11 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
-# notifications: named route Folio FO
+# notifications — named route Folio FO
 
-Quick reference: dettaglio pagina: [notifications-folio-page.md](notifications-folio-page.md).
+Quick reference — dettaglio pagina: [notifications-folio-page.md](notifications-folio-page.md).
 
 ## Mapping
 

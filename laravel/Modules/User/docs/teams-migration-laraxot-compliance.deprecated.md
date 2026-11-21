@@ -8,15 +8,14 @@ qmd: "2025-12-01-teams-migration-laraxot-compliance.deprecated teams migration -
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # Teams Migration - Laraxot Compliance Fix
@@ -81,7 +80,7 @@ Entrambe dovrebbero usare `uuid()` per coerenza con il sistema laraxot.
 
 ## Checklist Conformità Laraxot
 
-Riferimento: `/Modules/User/docs/migration-best-practices.md`
+Riferimento: `/Modules/User/docs/migration-best-practices-2.md`
 
 ### Prima della Correzione
 
@@ -187,7 +186,7 @@ Questo garantisce:
 
 ## Riferimenti
 
-- `/Modules/User/docs/migration-best-practices.md` - Standard migrations modulo User
+- `/Modules/User/docs/migration-best-practices-2.md` - Standard migrations modulo User
 - `/Modules/Xot/app/Database/Migrations/XotBaseMigration.php` - Classe base
 - `/Modules/Xot/docs/migration-standards.md` - Standard generali (se esiste)
 

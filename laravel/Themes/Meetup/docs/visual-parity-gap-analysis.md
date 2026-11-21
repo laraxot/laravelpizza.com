@@ -164,7 +164,7 @@ Sostituire con pizza slice SVG icon.
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 **Verification**:

@@ -8,4 +8,12 @@ return [
             'icon' => 'save',
         ],
     ],
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
+    ],
 ];

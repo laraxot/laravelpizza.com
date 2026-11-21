@@ -81,21 +81,25 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Modificato il',
         ],
         'created_at' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Creato il',
         ],
         'users_count' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Utenti',
         ],
         'name' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Nome',
         ],
         'recordId' => [
             'tooltip' => '',
@@ -104,9 +108,14 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Team personale',
         ],
         'role' => [
             'tooltip' => '',
+            'label' => 'Ruolo',
+            'description' => 'role',
+            'helper_text' => 'role',
+            'placeholder' => 'role',
         ],
         'description' => [
             'label' => '',

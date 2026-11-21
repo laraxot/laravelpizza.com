@@ -1,3 +1,10 @@
+---
+title: "mixins panel mixin"
+qmd: "xot note codice mixins panel mixin md"
+type: note
+tags: [documentation]
+---
+
 bastava risolvere con 
 
 ```php

@@ -67,7 +67,7 @@ it('resolves a module asset to its public url without copying anything into publ
 
     try {
         $result = app(AssetAction::class)->execute('XotAssetTest::css/style.css');
-        Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
+Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
         Assert::assertFileDoesNotExist($dest, 'the asset must be served through the symlink, never copied');
     } finally {
         if (is_file($resourceFile)) {

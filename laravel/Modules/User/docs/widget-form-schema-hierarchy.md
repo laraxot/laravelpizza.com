@@ -34,7 +34,7 @@ ferma `phpstan analyse Modules`. Chi lo usa: login `/it/auth/login` e widget pro
 
 | File | Prima | Dopo |
 |---|---|---|
-| `Filament/Widgets/Auth/BaseAuthWidget.php:31` | `getViewData()` chiamava `$this->getFormSchemaOld()`: metodo inesistente, `method.notFound` | chiama `$this->getFormSchema()` |
+| `Filament/Widgets/Auth/BaseAuthWidget.php:31` | `getViewData()` chiamava `$this->getFormSchemaOld()` — metodo inesistente, `method.notFound` | chiama `$this->getFormSchema()` |
 | `Filament/Resources/ClientResource/Widgets/ClientHeader.php` | override `getFormSchemaOld(): array` che restituiva `[]` | rimosso: `XotBaseWidget::getFormSchema()` restituisce già `[]` per i widget senza form |
 | `Filament/Resources/UserResource/Widgets/UserWidget.php` | idem | rimosso |
 | `Filament/Widgets/UserDropdown.php` | idem, con commento «Required by XotBaseWidget» ormai falso | rimosso |
@@ -50,7 +50,7 @@ default vuoto «per i widget senza form».
 |---|---|
 | Widget con campi | `getFormSchema()` |
 | Widget senza form | metodo vuoto rimosso |
-| Pagine Filament (`EditProfile`, tenancy) | `form()` delega a `getFormSchema()`: Filament v5 chiama `form()` |
+| Pagine Filament (`EditProfile`, tenancy) | `form()` delega a `getFormSchema()` — Filament v5 chiama `form()` |
 | `PasswordData` | `getFormSchema()` |
 | Resource | restano su `getFormSchemaOld()` |
 
@@ -59,4 +59,4 @@ Niente `mixed` aggiunto. Censimento storico: [formschema-widget-hierarchy-regres
 ## Riferimenti
 
 - [Pattern getFormSchema / getFormSchemaOld](../../../../docs/wiki/filament/xotbaseresource-formschema-old-pattern.md)
-- [Story 5.7: PHPStan Modules green](../../Xot/docs/stories/5.7.phpstan-modules-green.story.md)
+- [Story 5.7 — PHPStan Modules green](../../Xot/docs/stories/5.7.phpstan-modules-green.story.md)

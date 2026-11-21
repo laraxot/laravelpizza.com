@@ -16,8 +16,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
-qmd: "pattern ridondanza in `modules/user/docs/legacy` user"
 ---
 
 # Pattern ridondanza in `Modules/User/docs/legacy`
@@ -36,7 +34,6 @@ Cartella **`docs/legacy`** conserva **storia progettuale**: decisioni Volt/Filam
 
 - **`docs/wiki/concepts/`** per policy attuali modulo User.
 - **`docs/redundancy-report.md`** modulo per ridondanza **codice**.
-- Inventario tecnico trasversale: [`Modules/docs/redundancy-report.md`](../../redundancy-report.md).
 - Inventario tecnico trasversale: [`Modules/docs/redundancy-report.md`](../../redundancy-report.md).
 
 ## Gestione suggerita (senza purge massiccia)

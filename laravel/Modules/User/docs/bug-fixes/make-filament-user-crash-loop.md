@@ -11,17 +11,10 @@ related:
   - "./parse-error-orphan-methods-.md"
   - "./parse-error-orphan-methods.md"
   - "./parse-error-orphan-methods.md"
-  - "./parse-error-orphan-methods.md"
-  - "./parse-error-orphan-methods.md"
-  - "./parse-error-orphan-methods.md"
-  - "./parse-orphan-methods.md"
-  - "./parse-error-orphan-methods.md"
-  - "./parse-error-orphan-methods.md"
-  - "./parse-error-orphan-methods-documentation-themes.md"
-  - "./parse-error-orphan-methods-stato-rinominato.md"
+  - "./parse-error-orphan-methods-2.md"
+  - "./parse-error-orphan-methods-3.md"
   - "./parse-error-orphan-methods.md"
   - "./parse-orphan-methods.md"
-status: draft
 ---
 
 # Bug Fix: Crash durante creazione utenti con make:filament-user
@@ -299,7 +292,7 @@ class CreateTenantUserCommand extends Command
 
 ### Documentazione Root Progetto
 
-- [../../../../docs/modules/user/README.md](../../../../docs/modules/user/readme.md) - Panoramica modulo User
+- [../../../../docs/modules/user/README.md](../../../../docs/modules/user/README.md) - Panoramica modulo User
 - [../../../../docs/architecture/multi-tenancy.md](../../../../docs/architecture/multi-tenancy.md) - Architettura globale
 
 ## 🎓 Lezioni Apprese

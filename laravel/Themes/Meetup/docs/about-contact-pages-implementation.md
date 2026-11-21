@@ -163,7 +163,7 @@ php artisan cache:clear
 # Build assets (se necessario)
 cd Themes/Meetup
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 
 # Test nel browser
 # http://127.0.0.1:8002/it/about

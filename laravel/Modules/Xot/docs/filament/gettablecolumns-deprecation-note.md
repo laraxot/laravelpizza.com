@@ -10,14 +10,13 @@ discussions: []
 module: Xot
 topic: method-deprecation-documentation
 canonical: ../../docs/filament/xotbase-manage-related-records.md
-status: stub
 ---
 
-# Documento BMAD: `getTableColumns()`: NON deprecato, documentazione sostituto
+# Documento BMAD: `getTableColumns()` — NON deprecato, documentazione sostituto
 
 ## Contesto (second brain)
 
-- **Story**: PHPStan 260: `method.deprecated` su `XotBaseManageRelatedRecords::getTableColumns()`
+- **Story**: PHPStan 260 — `method.deprecated` su `XotBaseManageRelatedRecords::getTableColumns()`
 - **Regola**: `docs/wiki/rules/module-contracts-naming-placement.md` + `docs/wiki/rules/quality-gate-after-edit.md`
 - **Verdetto utente**: NON è deprecata; la USO; documentare il consiglio sostituto.
 
@@ -25,7 +24,7 @@ status: stub
 
 File: `laravel/Modules/Xot/app/Filament/Resources/Pages/XotBaseManageRelatedRecords.php`
 
-- `table()` è `final` (linea ~253): NON può essere sovrascritto dalle sottoclassi.
+- `table()` è `final` (linea ~253) — NON può essere sovrascritto dalle sottoclassi.
 - `getTableColumns()` è un **override point esplicito** (documentato nel docblock sopra linea 290):
   - `Default: quelle della Resource correlata`
   - Per estendere: `[...proprie, ...parent::getTableColumns()]`
@@ -40,7 +39,7 @@ Il messaggio `Override the table() method to configure the table.` proviene dall
 | Obiettivo | Consiglio | Note |
 |---|---|---|
 | Modificare colonne della tabella correlata | **Sovrascrivi `getTableColumns()`** con `[...proprie, ...parent::getTableColumns()]` | L'unico modo supportato; `table()` è `final` |
-| Configurare tabella globale (layout, sort, poll, striped) | **Non toccare**: già applicato da `$resourceClass::table()` | `table()` applica `HasXotTable::table()` sulla Resource correlata |
+| Configurare tabella globale (layout, sort, poll, striped) | **Non toccare** — già applicato da `$resourceClass::table()` | `table()` applica `HasXotTable::table()` sulla Resource correlata |
 | Aggiungere colonne custom solo per questa pagina | Estendi `getTableColumns()`; se serve query scoping usa `modifyRelatedQuery()` (linea ~130) | Hook aggiunto 2026-09-11 |
 
 ## Raccomandazione
@@ -49,8 +48,8 @@ Il messaggio `Override the table() method to configure the table.` proviene dall
 
 1. Verifica che sia `method.deprecated` dal framework Filament, non da Xot.
 2. Aggiungi `phpstan-ignore` o `@phpstan-ignore` nel caso specifico se l'warning è falso positivo.
-3. Non sostituire con override di `table()`: è `final`.
+3. Non sostituire con override di `table()` — è `final`.
 
 ## Decisione loggata (on-demand)
 
-> `docs/wiki/log.md` (aggiungere): `getTableColumns()` su `XotBaseManageRelatedRecords` NON deprecata: è override point per proxy alla Resource correlata; `table()` è `final`. Se PHPStan segnala deprecato, trattare come falso positivo del framework Filament.
+> `docs/wiki/log.md` (aggiungere): `getTableColumns()` su `XotBaseManageRelatedRecords` NON deprecata — è override point per proxy alla Resource correlata; `table()` è `final`. Se PHPStan segnala deprecato, trattare come falso positivo del framework Filament.

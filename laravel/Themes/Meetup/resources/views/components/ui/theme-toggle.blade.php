@@ -50,7 +50,7 @@
             @click="toggle()"
             role="switch"
             :aria-checked="dark.toString()"
-            :aria-label="dark ? '{{ __('Switch to light mode') }}' : '{{ __('Switch to dark mode') }}'"
+            :aria-label="dark ? '{{ __('pub_theme::layout.theme.toggle_light.label') }}' : '{{ __('pub_theme::layout.theme.toggle_dark.label') }}'"
             class="relative {{ $sizeClass }} rounded-xl text-slate-600 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-red-500/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 transition-all duration-200 group theme-toggle">
         
         <!-- Sun icon (light mode) -->

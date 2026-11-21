@@ -6,12 +6,12 @@ updated: 2026-09-26
 qmd: "quality gates 2026 07 28"
 issues: []
 discussions: []
-title: Quality Gates Analysis: User Module
+title: Quality Gates Analysis — User Module
 date: 2026-07-28
 status: completed-with-constraints
 ---
 
-# Quality Gates Analysis: laravel/Modules/User
+# Quality Gates Analysis — laravel/Modules/User
 
 ## Execution Summary
 

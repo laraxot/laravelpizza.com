@@ -95,7 +95,7 @@ return [
         'plural_label' => 'Authentications',
         'group' => 'General',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
+        'sort' => '100',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
@@ -107,21 +107,55 @@ return [
         'facebook' => 'Sign in with Facebook',
     ],
     'login' => [
-        'title' => ['label' => 'Sign in to your account', 'text' => 'Sign in to your account'],
-        'subtitle' => ['text' => 'Enter your credentials to sign in'],
-        'welcome_back' => ['text' => 'Welcome back'],
-        'welcome_message' => ['text' => 'Enter your credentials to sign in.'],
-        'intro' => ['text' => 'Sign in to report an issue and track your requests.'],
-        'google' => ['text' => 'Google', 'button' => ['text' => 'Sign in with Google']],
-        'microsoft' => ['text' => 'Microsoft'],
-        'github' => ['text' => 'GitHub'],
-        'or_continue_with' => ['text' => 'or'],
-        'submit' => ['text' => 'Sign in'],
-        'forgot_password' => ['text' => 'Forgot your password?'],
-        'no_account' => ['text' => 'Do not have an account?'],
-        'create_account' => ['text' => 'Create account'],
-        'logging_in' => ['text' => 'Logging in…'],
-        'success' => ['text' => 'Successfully signed in.'],
+        'title' => [
+            'label' => 'Sign in to your account',
+            'text' => 'Sign in to your account',
+        ],
+        'subtitle' => [
+            'text' => 'Enter your credentials to sign in',
+        ],
+        'welcome_back' => [
+            'text' => 'Welcome back',
+        ],
+        'welcome_message' => [
+            'text' => 'Enter your credentials to sign in.',
+        ],
+        'intro' => [
+            'text' => 'Sign in to report an issue and track your requests.',
+        ],
+        'google' => [
+            'text' => 'Google',
+            'button' => [
+                'text' => 'Sign in with Google',
+            ],
+        ],
+        'microsoft' => [
+            'text' => 'Microsoft',
+        ],
+        'github' => [
+            'text' => 'GitHub',
+        ],
+        'or_continue_with' => [
+            'text' => 'or',
+        ],
+        'submit' => [
+            'text' => 'Sign in',
+        ],
+        'forgot_password' => [
+            'text' => 'Forgot your password?',
+        ],
+        'no_account' => [
+            'text' => 'Do not have an account?',
+        ],
+        'create_account' => [
+            'text' => 'Create account',
+        ],
+        'logging_in' => [
+            'text' => 'Logging in…',
+        ],
+        'success' => [
+            'text' => 'Successfully signed in.',
+        ],
         'invalid_provider' => 'Invalid login provider.',
         'redirecting' => 'Redirecting…',
         'redirect_to_provider' => 'You are being redirected to :provider.',
@@ -243,11 +277,9 @@ return [
         'back_to_login' => 'Back to sign in',
         'submit' => 'Send instructions',
     ],
-    // Esiti del login social (RedirectToLoginAction): senza queste chiavi /en/ mostra l'italiano.
     'login-failed' => 'Sign-in failed, please try again.',
     'user-not-allowed' => 'Your email address is not authorised.',
     'registration-not-enabled' => 'New user registration is not available.',
-    // OAuth provider without credentials (DCP-271). The guide shows only with APP_DEBUG; the public gets the friendly message.
     'provider-not-configured' => 'Sign-in with :provider is not available right now. You can sign in with email and password.',
     'provider-setup-guide' => 'Sign-in with :provider is not configured: missing :missing. Where to create them: open :console and create OAuth credentials for a web application, registering :redirect as the authorized redirect URI. Where to set them: put the values (:missing) in the .env file and run "php artisan config:clear", or use the back office page :admin. :hint',
     'provider-setup-lan-hint' => 'Note: :provider rejects IP addresses and plain http as redirect URIs (localhost is the exception). Open the site from :localhost, for example through an SSH tunnel, or use a domain with HTTPS.',
@@ -280,5 +312,44 @@ return [
     'sign-up' => 'Sign up',
     'login-via' => [
         'text' => 'Sign in with',
+    ],
+    'logout_error' => 'An error occurred while logging out.',
+    'logout_title' => 'Log out',
+    'logout_confirmation' => 'Are you sure you want to log out?',
+    'user_not_found' => 'User not found.',
+    'password' => [
+        'error' => [
+            'text_current_incorrect' => 'The current password is incorrect.',
+            'text_fields_required' => 'Please fill in all required fields.',
+            'text_reset' => [
+                'email_failed' => [
+                    'title' => 'Email not sent',
+                ],
+                'email_sent' => [
+                    'title' => 'Email sent',
+                    'message' => 'We have emailed you a password reset link.',
+                ],
+                'errors' => [
+                    'generic' => 'Something went wrong. Please try again.',
+                    'invalid_token' => 'This password reset link is invalid or has expired.',
+                    'invalid_user' => 'We could not find a user with that email address.',
+                    'title' => 'Password reset error',
+                ],
+                'success' => [
+                    'title' => 'Password reset',
+                    'message' => 'Your password has been reset. You can now log in.',
+                ],
+            ],
+        ],
+    ],
+    'register' => [
+        'sidebar' => [
+            'help_password' => [
+                'text' => 'The password must be at least 8 characters and include uppercase and lowercase letters, a number and a symbol.',
+            ],
+        ],
+        'success' => [
+            'text' => 'Registration completed successfully',
+        ],
     ],
 ];

@@ -3,7 +3,7 @@ title: "Quality Gates Analysis: User Module"
 type: alias
 status: superseded
 canonical: "quality-gates-analysis-user-module.md"
-qmd: "quality_gates alias superseded"
+qmd: "QUALITY_GATES alias superseded"
 ---
 
 # Quality Gates Analysis: User Module

@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\Schemas;
 
-use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Grid;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component as SchemaComponent;
 use Filament\Schemas\Components\Section;
@@ -20,6 +23,7 @@ use Livewire\Component as LivewireComponent;
 use Modules\User\Filament\Forms\Components\UserSection;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class UserForm extends XotBaseResourceForm
@@ -34,52 +38,108 @@ class UserForm extends XotBaseResourceForm
      */
     public function getFormSchema(): array
     {
+<<<<<<< .merge_file_5RdNS9
         return [
             'worker' => UserSection::make('worker')->heading(static fn (): string => (string) __('user::user_section.heading')),
             'section01' => Section::make()
+=======
+        return [Grid::make(['default' => 1, 'lg' => 12])->schema([
+            'main' => Grid::make(1)
+>>>>>>> .merge_file_L9XoHA
                 ->schema([
-                    TextInput::make('name')->required(),
-                    TextInput::make('password')
-                        ->password()
-                        ->dehydrateStateUsing(function (?string $state): ?string {
-                            if (! is_string($state) || empty($state)) {
-                                return null;
-                            }
+                    'worker' => UserSection::make('worker')
+                        ->heading('Identity')
+                        ->description('Who this person is. The display name is shown across the panel.')
+                        ->icon('heroicon-o-user')
+                        ->schema([
+                            Grid::make(['default' => 1, 'sm' => 2])->schema([
+                                TextInput::make('first_name')->autocomplete('given-name'),
+                                TextInput::make('last_name')->autocomplete('family-name'),
+                                TextInput::make('name')
+                                    ->label('Display name')
+                                    ->helperText('Optional. If left empty on creation, the email address is used.')
+                                    ->columnSpanFull(),
+                            ]),
+                        ]),
+                    'signin' => Section::make('Sign-in')
+                        ->description('Credentials used to access the panel.')
+                        ->icon('heroicon-o-key')
+                        ->columns(['default' => 1, 'sm' => 2])
+                        ->schema([
+                            TextInput::make('email')
+                                ->email()
+                                ->required()
+                                ->unique(ignoreRecord: true)
+                                ->maxLength(255)
+                                ->helperText('Must be unique. Used to sign in.')
+                                ->columnSpanFull(),
+                            TextInput::make('password')
+                                ->password()
+                                ->revealable()
+                                ->autocomplete('new-password')
+                                ->helperText(fn ($livewire) => $livewire instanceof CreateUser
+                                    ? 'Temporary password: the user must change it at first sign-in. Use 12+ characters mixing upper and lower case, digits and symbols.'
+                                    : 'Leave empty to keep the current password.')
+                                ->dehydrateStateUsing(function (?string $state): ?string {
+                                    if (! is_string($state) || empty($state)) {
+                                        return null;
+                                    }
 
-                            return Hash::make($state);
-                        })
-                        ->required(fn (LivewireComponent $livewire) => $livewire instanceof CreateUser),
+                                    return Hash::make($state);
+                                })
+                                ->required(fn (LivewireComponent $livewire) => $livewire instanceof CreateUser)
+                                ->columnSpanFull(),
+                        ]),
+                    'access' => Section::make('Access')
+                        ->description('Roles decide which areas of the panel this user can open. Pick one or more.')
+                        ->icon('heroicon-o-shield-check')
+                        ->schema([
+                            CheckboxList::make('roles')
+                                ->relationship('roles', 'name')
+                                ->getOptionLabelFromRecordUsing(static fn (Model $record): string => \Modules\User\Models\Role::displayName(SafeStringCastAction::cast($record->getAttribute('name'))))
+                                ->columns(['default' => 1, 'sm' => 2])
+                                ->bulkToggleable(),
+                        ]),
                 ])
-                ->columnSpan(8),
-            'section02' => Section::make()
+                ->columnSpan(['default' => 1, 'lg' => 8]),
+            'side' => Grid::make(1)
                 ->schema([
-                    TextEntry::make('created_at')->state(static function (?Model $record) {
-                        if (! $record instanceof Model) {
-                            return new HtmlString('&mdash;');
-                        }
-
-                        if (! $record->hasAttribute('created_at')) {
-                            return new HtmlString('&mdash;');
-                        }
-
-                        /** @var Carbon|null $createdAt */
-                        $createdAt = $record->getAttribute('created_at');
-
-                        if ($createdAt === null) {
-                            return new HtmlString('&mdash;');
-                        }
-                        if ($createdAt instanceof CarbonInterface) {
-                            return $createdAt->diffForHumans();
-                        }
-                        if ($createdAt instanceof \DateTimeInterface) {
-                            return $createdAt->format('Y-m-d H:i:s');
-                        }
-
-                        return new HtmlString('&mdash;');
-                    }),
+                    'status' => Section::make('Status')
+                        ->icon('heroicon-o-power')
+                        ->schema([
+                            Toggle::make('is_active')
+                                ->default(true)
+                                ->helperText('Inactive users cannot sign in.'),
+                        ]),
+                    'record_info' => Section::make('Record')
+                        ->hiddenOn('create')
+                        ->icon('heroicon-o-clock')
+                        ->schema([
+                            TextEntry::make('created_at')
+                                ->state(static fn (?Model $record) => self::when($record, 'created_at')),
+                            TextEntry::make('updated_at')
+                                ->state(static fn (?Model $record) => self::when($record, 'updated_at')),
+                        ]),
                 ])
-                ->columnSpan(4),
-        ];
+                ->columnSpan(['default' => 1, 'lg' => 4]),
+        ])];
+    }
+
+    private static function when(?Model $record, string $attribute): \Stringable|string
+    {
+        if (! $record instanceof Model || ! $record->hasAttribute($attribute)) {
+            return new HtmlString('&mdash;');
+        }
+
+        $value = $record->getAttribute($attribute);
+        if ($value instanceof CarbonInterface) {
+            return $value->diffForHumans();
+        }
+        if ($value instanceof \DateTimeInterface) {
+            return $value->format('Y-m-d H:i:s');
+        }
+
+        return new HtmlString('&mdash;');
     }
 
     /**

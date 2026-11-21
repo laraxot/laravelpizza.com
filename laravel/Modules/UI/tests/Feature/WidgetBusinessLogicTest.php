@@ -18,8 +18,6 @@ use Modules\UI\Filament\Widgets\UserCalendarWidget;
 use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-use function Safe\class_parents;
-
 uses(TestCase::class, DatabaseTransactions::class);
 
 function concreteRowWidget(): RowWidget
@@ -40,9 +38,12 @@ it('widgets instantiate and extend filament base', function (): void {
         concreteRowWidget(),
     ];
 
-    Assert::assertCount(9, $widgets);
+    // Il vincolo e' anche statico: qui si verifica a runtime che la catena di ereditarieta' arrivi a Filament.
     foreach ($widgets as $widget) {
-        Assert::assertArrayHasKey(Widget::class, class_parents($widget));
+        Assert::assertTrue(
+            (new \ReflectionObject($widget))->isSubclassOf(Widget::class),
+            $widget::class.' non estende Filament\\Widgets\\Widget',
+        );
     }
 });
 

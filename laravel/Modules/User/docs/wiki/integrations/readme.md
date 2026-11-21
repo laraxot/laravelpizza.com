@@ -8,22 +8,14 @@ qmd: "readme user module - authentication & authorization"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
-  - "./00-index.md"
-  - "../../2fa-guide.md"
+  - "./2fa-guide.md"
   - "./2fa.md"
-  - "../../accessor-delegation-pattern.md"
+  - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "../../00-index-indice-documentazione-modulo-user.md"
-  - "./00-index.md"
-  - "../../2fa-guide.md"
-  - "./2fa.md"
-  - "../../accessor-delegation-pattern.md"
-  - "../../actions-path-convention.md"
-  - "../../actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - Authentication & Authorization
@@ -1022,7 +1014,6 @@ test('user can switch teams', function () {
 - [Permission System](./architecture/permission-system.md) - RBAC architecture
 - [Multi-Tenancy](./architecture/multi-tenancy.md) - Tenant isolation
 - [Team System](./architecture/teams.md) - Team collaboration
-- [Team System](../../teams.md) - Team collaboration
 
 ### Authentication
 - [Authentication Flow](./auth/authentication-flow.md) - Login/logout process
@@ -1042,13 +1033,12 @@ test('user can switch teams', function () {
 
 ### Security
 - [Security Best Practices](./security/best-practices.md) - Security guidelines
-- [Security Best Practices](../../best-practices.md) - Security guidelines
 - [Password Policies](./security/passwords.md) - Password requirements
 - [Audit Logging](./security/audit-log.md) - Security audit trail
 
 ### Troubleshooting
 - [Common Issues](./troubleshooting/common-issues.md) - Frequently encountered problems
-- [Login Component Troubleshooting](../../troubleshooting-login-component.md) - Login widget issues
+- [Login Component Troubleshooting](./troubleshooting-login-component.md) - Login widget issues
 - [FAQ](./troubleshooting/faq.md) - Frequently asked questions
 
 ---
@@ -1067,7 +1057,7 @@ test('user can switch teams', function () {
 - **Fixed**: File locking pattern implementation
 - **Improved**: Security alert widgets
 
-See [changelog.md](./changelog.md) for full history.
+See [CHANGELOG.md](./CHANGELOG.md) for full history.
 
 ---
 
@@ -1085,7 +1075,7 @@ See [changelog.md](./changelog.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
-See [ROADMAP.md](./roadmap.md) for details.
+See [roadmap.md](./roadmap.md) for details.
 
 ---
 
@@ -1098,16 +1088,8 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [Tenant Module](../../../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../../../CLAUDE.md) - Project architecture
-- [Security Guidelines](../../../../../../docs/security.md)
-- [Xot Module](../../../../Xot/docs/README.md) - Core foundation
-- [Activity Module](../../../../Activity/docs/README.md) - Activity tracking
-- [Lang Module](../../../../Lang/docs/README.md) - Translations
-- [Tenant Module](../../../../Tenant/docs/README.md) - Enhanced tenancy
-
-### Project Documentation
-- [CLAUDE.md](../../../../../CLAUDE.md) - Project architecture
-- [Security Guidelines](../../../../../../docs/security.md)
+- [CLAUDE.md](../../../../../claude.md) - Project architecture
+- [Security Guidelines](../../../../../../docs/SECURITY.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)

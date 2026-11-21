@@ -3,20 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'status' => [
-        'all' => [
-            'label' => 'Tutti gli eventi',
-            'description' => 'Filtro: tutti gli eventi',
-        ],
-        'upcoming' => [
-            'label' => 'In arrivo',
-            'description' => 'Filtro: eventi futuri',
-        ],
-        'past' => [
-            'label' => 'Passati',
-            'description' => 'Filtro: eventi passati',
-        ],
-    ],
     'about_this_event' => [
         'label' => 'About this event',
         'description' => 'Section title for event description',
@@ -113,17 +99,15 @@ return [
         'label' => 'Share this event',
         'description' => 'Label for share button',
     ],
-    'search' => [
-        'see_all' => 'Vedi tutti gli eventi',
-        'label' => 'Cerca eventi',
-        'city' => 'Città',
-        'all_cities' => 'Tutte le città',
-        'from' => 'Dal',
-        'until' => 'Al',
-        'apply' => 'Cerca',
-        'reset' => 'Togli i filtri',
-        'no_results' => 'Nessun evento con questi filtri.',
-        'show_past' => 'Eventi passati',
-        'show_upcoming' => 'Prossimi eventi',
+    'status' => [
+        'all' => [
+            'label' => 'Tutti gli eventi',
+        ],
+        'upcoming' => [
+            'label' => 'In arrivo',
+        ],
+        'past' => [
+            'label' => 'Eventi passati',
+        ],
     ],
 ];

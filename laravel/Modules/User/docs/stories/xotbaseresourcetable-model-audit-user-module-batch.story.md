@@ -1,5 +1,5 @@
 ---
-title: "XotBaseResourceTable: audit $model + verifica colonne (batch modulo User)"
+title: "XotBaseResourceTable: audit \$model + verifica colonne (batch modulo User)"
 type: story
 module: User
 epic: null
@@ -47,7 +47,7 @@ intercettare colonne fantasma prima che arrivino in produzione.
 ## Contesto / Baseline
 
 I 13 file avevano già `protected static string $model` popolato da una
-sessione precedente (working tree condivisa, modifiche non committate: vedi
+sessione precedente (working tree condivisa, modifiche non committate — vedi
 `git status` all'apertura di questo turno). Ho verificato ogni valore contro
 la Resource sorella (property `$model` o `getModel()`, mai il filename) e
 confermato che sono tutti corretti, incluso il caso non ovvio di
@@ -62,7 +62,7 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 
 1. Tutti i 13 file hanno `protected static string $model = X::class;` con `X`
    verificato contro la Resource sorella (mai dal nome del file).
-2. `getTableColumns()` di ognuno verificato contro lo schema reale: rispettando
+2. `getTableColumns()` di ognuno verificato contro lo schema reale — rispettando
    la connection DB del model (`Schema::connection('user')` per i model che
    dichiarano `protected $connection = 'user'`, DB fisico `quaeris_user`
    diverso dal default `quaeris_data`).
@@ -90,7 +90,7 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 
 <!-- LOCKED. -->
 
-### $model: tutti confermati corretti
+### $model — tutti confermati corretti
 
 | File | Model | Come verificato |
 |---|---|---|
@@ -104,34 +104,34 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 | TeamsTable.php | `Modules\User\Models\Team` | `TeamResource::getModel()` → `XotData::getTeamClass()` (default, nessun override in config) |
 | TeamUsersTable.php | `Modules\User\Models\TeamUser` | `TeamUserResource::$model` |
 | CustomersTable.php | `Modules\Quaeris\Models\Customer` | `TenantResource::getModel()` → `getTenantClass()` → `config('xot.tenant_class')` (override attivo in tutti gli env `config/*/xra.php`) |
-| TenantsTable.php | `Modules\Quaeris\Models\Customer` | idem: stessa Resource di CustomersTable, valore confermato coerente |
+| TenantsTable.php | `Modules\Quaeris\Models\Customer` | idem — stessa Resource di CustomersTable, valore confermato coerente |
 | TenantUsersTable.php | `Modules\User\Models\TenantUser` | `TenantUserResource::$model` |
 | UsersTable.php | `Modules\Quaeris\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\Quaeris\Models\User` |
 
-### Colonne verificate: esito per file
+### Colonne verificate — esito per file
 
 **OK, nessuna colonna sospetta** (tutte le chiavi dirette esistono in schema
 reale o in una migration owner non ancora applicata a questo DB dev):
 ProfilesTable, RolesTable, SocialiteUsersTable, SocialProvidersTable (model
 Sushi, verificato contro `$schema`/`$form` invece che DB), SsoProvidersTable
-(tabella non ancora migrata in questo DB: verificato contro la migration),
+(tabella non ancora migrata in questo DB — verificato contro la migration),
 TeamPermissionsTable, CustomersTable, UsersTable.
 
 **Colonne sospette segnalate (NON toccate)**:
 
-1. `TenantsTable.php:28-30`: `domain`, `is_active`, `trial_ends_at`. Queste tre
+1. `TenantsTable.php:28-30` — `domain`, `is_active`, `trial_ends_at`. Queste tre
    colonne esistono solo su `Modules\User\Models\Tenant` / tabella `tenants`
    (vedi `database/migrations/2026_09_01_150110_create_tenants_table.php`),
    NON sul model realmente attivo per questa Resource
    (`Modules\Quaeris\Models\Customer` / tabella `customers`, migration
    `Modules/Quaeris/database/migrations/2023_01_01_000012_create_customers_table.php`:
    id, email, mobile_phone, timestamps, created_by/updated_by, name, team_id,
-   user_id, slug: niente domain/is_active/trial_ends_at). Ipotesi: il file è
+   user_id, slug — niente domain/is_active/trial_ends_at). Ipotesi: il file è
    stato scritto quando `tenant_class` puntava ancora al model `Tenant`
    nativo del modulo, poi il config è cambiato verso `Customer` (Quaeris) senza
    aggiornare le colonne. Verificato via `Schema::connection('quaeris_data')`
    diretto sulla tabella `customers` (esiste live, colonne confermate assenti).
-2. `TenantUsersTable.php:27` (`role`) e `:29` (`uuid`): nessuna migration di
+2. `TenantUsersTable.php:27` (`role`) e `:29` (`uuid`) — nessuna migration di
    `tenant_user` (2 file duplicati trovati, `2023_01_01_000003` e
    `2026_01_01_000002`, identici) definisce queste colonne: `role` è
    letteralmente commentata nel codice sorgente della migration
@@ -139,36 +139,36 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    `Schema::connection('user')->getColumnListing('tenant_user')` (DB fisico
    `quaeris_user`, che è la connection dichiarata dal model `TenantUser`):
    `id,tenant_id,user_id,created_at,updated_at,updated_by,created_by,deleted_at,deleted_by`
-  : né `role` né `uuid` presenti.
-3. `TeamUsersTable.php:29` (`uuid`): non esiste in nessuna delle 4 migration
+   — né `role` né `uuid` presenti.
+3. `TeamUsersTable.php:29` (`uuid`) — non esiste in nessuna delle 4 migration
    `team_user` trovate, né nello schema live
    (`Schema::connection('user')->getColumnListing('team_user')` →
    `id,team_id,user_id,role,created_at,updated_at,updated_by,created_by,deleted_at,deleted_by,permissions,joined_at`).
    Il model `TeamUser` dichiara `@property string $uuid` nel docblock ma senza
    backing reale (nessun accessor, nessuna colonna). `joined_at` invece è
-   confermato presente live: non è sospetto.
-4. `TeamsTable.php:27,29,32` (`slug`, `description`, `uuid`): non presenti
+   confermato presente live — non è sospetto.
+4. `TeamsTable.php:27,29,32` (`slug`, `description`, `uuid`) — non presenti
    nello schema live (`teams`: `id,user_id,name,personal_team,created_at,updated_at`)
    ma DEFINITE nella migration owner più recente
    (`2026_08_06_142100_create_teams_table.php` /
-   `2026_09_01_150109_create_teams_table.php`, blocco `tableUpdate`): DB dev
+   `2026_09_01_150109_create_teams_table.php`, blocco `tableUpdate`) — DB dev
    dietro rispetto alle migration, non un errore nel codice Table. Non
    modificato, solo annotato per completezza.
-5. `TeamInvitationsTable.php:28-29` (`accepted_at`, `declined_at`): stessa
+5. `TeamInvitationsTable.php:28-29` (`accepted_at`, `declined_at`) — stessa
    categoria: definite nella migration (
    `2023_01_01_000002_create_team_invitations_table.php`, sia nel blocco
    CREATE che UPDATE) ma assenti nello schema live via connection `user`
    (`id,team_id,email,role,created_at,updated_at,updated_by,created_by,deleted_at,deleted_by`).
-   `deleted_at` invece è presente: coerente con `updateTimestamps($table, true)`.
+   `deleted_at` invece è presente — coerente con `updateTimestamps($table, true)`.
 
 **Nota ambientale**: il DB dev di questa sessione (connection default
 `quaeris_data` + connection `user` = `quaeris_user`, entrambe su
 `127.0.0.1`) risulta significativamente indietro rispetto alle migration più
 recenti su più tabelle (`teams`, `team_invitations`, `roles`, `profiles`
-erano tutte nello stesso stato prima di essere verificate: le prime tre
+erano tutte nello stesso stato prima di essere verificate — le prime tre
 però hanno confermato le colonne referenziate esistere via schema live
 sulla connection corretta). Non ho eseguito alcuna migration (vietato dal
-mandato): solo lettura schema.
+mandato) — solo lettura schema.
 
 ### Migliorie UX applicate (additive, basso rischio)
 
@@ -190,12 +190,12 @@ fluent sulle righe esistenti).
 <!-- LOCKED. -->
 
 - `php -l` su tutti i 13 file (Task 1 pre-esistente + 5 file editati in
-  questo turno): nessun errore di sintassi.
-- `vendor/bin/phpstan analyse <13 file>` dalla dir `laravel/`: 0 errori.
+  questo turno) — nessun errore di sintassi.
+- `vendor/bin/phpstan analyse <13 file>` dalla dir `laravel/` — 0 errori.
 
 ## Dependency Maps
 
-Nessuna: modifiche isolate a classi Table, nessun consumatore esterno del
+Nessuna — modifiche isolate a classi Table, nessun consumatore esterno del
 metodo `getTableColumns()` oltre a Filament stesso.
 
 ## Owned File/Module Scope
@@ -206,12 +206,12 @@ I 13 file in `owned_scope`. Nessun altro file toccato in questo turno.
 
 - Conferma diretta della lezione già in memoria
   `quaeris-user-auth-model-sorella-non-figlia`: la Resource è l'unica fonte
-  autorevole per il model, mai il nome del file: qui si è manifestata anche
+  autorevole per il model, mai il nome del file — qui si è manifestata anche
   nella forma "il model giusto secondo la Resource non è il model 'ovvio'
   per lo stesso nome di tabella" (`Tenant` vs `Customer`).
 - Nuova lezione: quando un model dichiara `protected $connection`, la verifica
   schema va fatta con `Schema::connection($name)`, non con la connection di
-  default: altrimenti si rischia di leggere una tabella fisicamente diversa
+  default — altrimenti si rischia di leggere una tabella fisicamente diversa
   (stesso nome, DB diverso) e produrre falsi negativi/positivi.
 
 ## Dev Agent Record
@@ -228,12 +228,12 @@ Claude Sonnet 5
   file: una sessione concorrente sulla stessa working tree
   (`Claude-Session: session_01BDKnZidgEpXG7nwJWg7e6H`, commit `71a61955`
   "fase 1 audit" + `89efff94` "fase 3 audit", gia' mergiati in
-  `laraxot/dev`) ha applicato: in parallelo e in modo indipendente: le
+  `laraxot/dev`) ha applicato — in parallelo e in modo indipendente — le
   stesse identiche modifiche byte-per-byte sui 5 file che avevo editato
   (`ProfilesTable.php` phone, `RolesTable.php` guard_name,
   `SsoProvidersTable.php` type, `TeamInvitationsTable.php` role,
   `TeamUsersTable.php` role). Nessun conflitto, nessun commit di codice
   necessario da parte mia: solo questa story (i findings Task 2 su
   `TenantsTable`/`TenantUsersTable`/`TeamUsersTable.uuid` sono fuori dallo
-  scope dell'altro batch, che copriva OAuth/Passport/Permission: vedi
+  scope dell'altro batch, che copriva OAuth/Passport/Permission — vedi
   issue collegata #90 di quel batch, distinta dalla #91 di questo).

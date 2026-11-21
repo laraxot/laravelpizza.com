@@ -4,39 +4,37 @@ type: log
 module: User
 tags: [user, wiki, log, phpstan, boundary]
 created: 2026-04-15
-updated: 2026-10-14
+updated: 2026-07-27
 qmd: "user module wiki log phpstan no comment dependency"
 issues:
 discussions:
 related:
-  - "./agents.md"
-  - "./Architecture.md"
+  - "./AGENTS.md"
+  - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"
   - "./context-compression.md"
   - "./index.md"
   - "./overview.md"
   - "./socialite-architecture.md"
-status: draft
 ---
 
 ---
 
-- 2026-10-14: docs: studio del modulo contro `docs/`: `00-INDEX.md` e `README.md` corretti con conteggi e percorsi verificati (50 modelli, 59 Actions, 102 migrazioni, 16 comandi, 185 file di test `.php`). PHPStan `Modules/User`: 3 errori `argument.type` in `lang/{de,en,es}/validation.php` riga 8, 0 in `app/` (la dicitura "Level 10 Compliant" valeva solo per `app/`). Falsi corretti: stack (PHP 8.4 e Laravel 13, non 8.3 e 11/12), versione "2.5.0" senza fonte, WorkOrder proprietario di `profiles` (il modulo non esiste; `create_profiles_table` ha 6 file attivi in User), regola "no Log::" violata (35 chiamate in 9 file di `app/`). Link non risolti: 14194 eventi in 1740 file (misura `--busy-minutes 0`); 70,6% sono bersagli che esistono in 2 o piu' copie (il tool non sceglie), 54,7% stanno in 6 indici generati, 7,1% non sono mai esistiti. Story: [2026-10-14-docs-user-studio-e-ingressi](../stories/docs-user-studio-e-ingressi.story.md)
-- 2026-10-13: widget auth: `ForgotPasswordWidget` e `ResetPasswordWidget` dichiaravano una vista inesistente (`View not found` a runtime, 2 errori PHPStan `property.defaultValue`). Tolto `$view`, blade spostati in `filament/widgets/auth/` e corretti (`$getForm()` -> `$this->form`). Guardia: `tests/Unit/Filament/Widgets/Auth/AuthWidgetsResolveConventionalViewTest.php`. Story: `../stories/auth-password-widgets-view-not-found.story.md`
-- 2026-07-27: runtime config: `permission.php` `table_names` immutabili (`model_has_role` singolare); eliminata migrazione errata `create_model_has_roles_table`; canon `create_model_has_role_table` + `ModelHasRole::getTable()`; profiles unica migrazione con `convertIdFromUuidToBigintIfNeeded()`. Doc: [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md), [profile-id-bigint-uuid-fix](./concepts/profile-id-bigint-uuid-fix.md), hub temi [runtime-config-religion-hub](../../../../Themes/docs/shared-components/runtime-config-religion-hub.md).
-- 2026-07-08: push `laraxot/dev`: squash 365 commit (LFS missing 41 oggetti); abort rebase 328 commit; PHPStan User 0 errori (`password_resets` `updateTimestamps`, `permission` config types). Doc: [git-push-lfs-missing-objects](./troubleshooting/git-push-lfs-missing-objects.md).
-- 2026-06-18: PHPStan User 14→0: ripristinato `Tenant\Models\Traits\SushiToPhpArray` (dipendenza `SocialProvider`), rimosso `hasRoleTest()` morto in `HasRoles`, `HasPasswordExpiry` via `getAttribute`/`setAttribute`, fixture `PasswordValidationRules*` usa il trait reale.
+- 2026-10-13: widget auth — `ForgotPasswordWidget` e `ResetPasswordWidget` dichiaravano una vista inesistente (`View not found` a runtime, 2 errori PHPStan `property.defaultValue`). Tolto `$view`, blade spostati in `filament/widgets/auth/` e corretti (`$getForm()` -> `$this->form`). Guardia: `tests/Unit/Filament/Widgets/Auth/AuthWidgetsResolveConventionalViewTest.php`. Story: `../stories/2026-10-13-auth-password-widgets-view-not-found.story.md`
+- 2026-07-27: runtime config — `permission.php` `table_names` immutabili (`model_has_role` singolare); eliminata migrazione errata `create_model_has_roles_table`; canon `create_model_has_role_table` + `ModelHasRole::getTable()`; profiles unica migrazione con `convertIdFromUuidToBigintIfNeeded()`. Doc: [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md), [profile-id-bigint-uuid-fix](./concepts/profile-id-bigint-uuid-fix.md), hub temi [runtime-config-religion-hub](../../../../Themes/docs/shared-components/runtime-config-religion-hub.md).
+- 2026-07-08: push `laraxot/dev` — squash 365 commit (LFS missing 41 oggetti); abort rebase 328 commit; PHPStan User 0 errori (`password_resets` `updateTimestamps`, `permission` config types). Doc: [git-push-lfs-missing-objects](./troubleshooting/git-push-lfs-missing-objects.md).
+- 2026-06-18: PHPStan User 14→0 — ripristinato `Tenant\Models\Traits\SushiToPhpArray` (dipendenza `SocialProvider`), rimosso `hasRoleTest()` morto in `HasRoles`, `HasPasswordExpiry` via `getAttribute`/`setAttribute`, fixture `PasswordValidationRules*` usa il trait reale.
 - 2026-06-18: rimosso coupling residuo User -> Comment: `BaseUser` non usa piu' `HasCommentatorRelations`, `UserContract` non espone metodi Comment, trait disattivata eliminata. Verifica: `bashscripts/tools/check-user-no-comment-dependency.sh`, `pest Modules/User/tests/Unit/NoCommentModuleDependencyTest.php`, PHPStan User/Progressioni.
-- 2026-06-10: notifications-folio-page + notifications-folio-route: `route('notifications')`, vietato `area-personale.notifiche`
-## [2026-06-05] docs | HackerNoon harness: tips 001-022 in wiki locale
+- 2026-06-10: notifications-folio-page + notifications-folio-route — `route('notifications')`, vietato `area-personale.notifiche`
+## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
 
 - Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
 - GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
 
 # User Wiki Log
 
-## [2026-06-05] arch | profiles schema: owner Fixcity, non User
+## [2026-06-05] arch | profiles schema — owner Fixcity, non User
 - migrazioni `create_profiles_table` User archiviate in `database/migrations/_bak/*.merged`
 - concept aggiornato: `concepts/profile-migration-uuid-contract.md` punta a migrazione Fixcity
 - riferimento: `docs/wiki/bmad/architecture-one-migration-per-model.md`
@@ -44,8 +42,7 @@ status: draft
 ## [2026-06-04] bugfix | profiles.uuid su connection fixcity (sqlite locale)
 - errore: `table profiles has no column named uuid` in `XotData::getProfileModelByUserId()` dopo login/registrazione
 - causa: tabella `profiles` legacy su `fixcity_data.sqlite` senza colonna `uuid`, mentre `BaseProfile::booted()` la valorizza in insert
-- ~~fix operativo con `--path`~~ **storico: vietato oggi**; canonico: `php artisan migrate` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
-- ~~fix operativo con `--path`~~ **storico: vietato oggi**; canonico: `php artisan migrate` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
+- ~~fix operativo con `--path`~~ **storico — vietato oggi**; canonico: `php artisan migrate` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
 - verifica: `getProfileModelByUserId()` crea profilo con `uuid`; schema sqlite include indice `profiles_uuid_index`
 - riferimento: `concepts/profile-migration-uuid-contract.md`
 
@@ -81,8 +78,7 @@ status: draft
 - fix applicato: rimosso `after()` dal create; `after()` resta nel `tableUpdate()`
   idempotente (ALTER path).
 - verifica:
-  ~~`migrate ... --force`~~: **vietato**; owner `profiles` ora Fixcity; usare `php artisan migrate` senza `--force` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
-  ~~`migrate ... --force`~~: **vietato**; owner `profiles` ora Fixcity; usare `php artisan migrate` senza `--force` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
+  ~~`migrate ... --force`~~ — **vietato**; owner `profiles` ora Fixcity; usare `php artisan migrate` senza `--force` ([dati sacri](../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
   eseguito con esito `DONE`.
 - docs aggiornati: `concepts/profile-migration-uuid-contract.md`.
 
@@ -135,8 +131,8 @@ status: draft
 ## [2026-04-15] init | wiki bootstrap
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/`: LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
+- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
+- Schema: `docs/.schema/wiki_schema.md`
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 
 ## [2026-04-20] bugfix | profiles.uuid nella migrazione canonica unica
@@ -156,35 +152,14 @@ status: draft
 - Enhancements proposti: canAny(), canAll(), scope(), after() hooks
 - Commit: docs: document policy inheritance boundary decision
 
-## 2026-06-10: session learnings
+## 2026-06-10 — session learnings
 
 - Notifiche: runtime User, schema Notify; `NotificationSchema::isReadable()` per guard FO
 - Folio: `name('notifications')`; vietato `area-personale.notifiche`
 - `user:super-admin`: `--email` + ask + fallback WSL (no Laravel Prompts)
-- Profiles: owner Fixcity `2026_06_10_123000_create_profiles_table`: vedi profile-migration-uuid-contract
+- Profiles: owner Fixcity `2026_06_10_123000_create_profiles_table` — vedi profile-migration-uuid-contract
 
-## 2026-06-10: Folio owner pattern docs
+## 2026-06-10 — Folio owner pattern docs
 
 - INDEX Folio FO con cross-link Cms
 - Catena notifications: Notify schema → User page → Sixteen link
-## [2026-10-14] docs | ciclo autenticazione, registrazione e verifica
-
-- Aggiunta la pagina canonica `concepts/auth-registration-verification-lifecycle.md`.
-- Esplicitato il confine: identità in User, evidenze dei consensi in Gdpr, resa UI in Sixteen.
-- Nessun documento storico cancellato o rinominato.
-
-## 2026-11-09 — LoginWidget: revealable password verificato + cleanup
-
-- Verificato: `UserForm::getLoginFormSchema()` ha gia' `->password()->revealable()` (FF-5 docs); la view `auth/login` renderizza `{{ $this->form }}` + toggle mostra/nascondi. Il problema "si vede male" era solo il CSS Filament mancante nel bundle pubblico (fixato in Theme Two con `filament.css` on-demand)
-- Rimossi `getFooterActions()` + `resolveLocale()` da `LoginWidget`: codice morto — nessuna view li renderizza (la vista tema gestisce social/register/forgot in modo piu' ricco: Google/Microsoft/GitHub condizionali su config)
-- Fix test drift: `AuthLoginFeedbackTest` mockava `StatefulGuard::attempt()` ma il widget usa `attemptWhen()` (check `deleted_at`) → mock su `SessionGuard::attemptWhen`. Verificato: 7 passed, 4 skipped (pre-esistenti)
-- Infra: `database/test_data.sqlite` era assente → `xot:build-test-sqlite` eseguito (108 tabelle); Fixcity resta non configurato (confermato warning)
-
-## 2026-11-09 — UserForm SSoT spostata in UserResource + fix JS auth
-
-- Corretto errore mio: i 6 widget auth (Login/Register/ForgotPassword/PasswordReset/PasswordResetConfirm/ResetPassword) usavano `Widgets/Auth/Schemas/UserForm` duplicato → ora delegano a `Resources/UserResource/Schemas/UserForm` (unico SSoT). I metodi auth (login/register/forgot/password-reset/reset-password/reset-confirm) sono stati consolidati li' con tutti gli attributi superiori (autocomplete, classi fo-auth-*, revealable, Hidden token, nullable dehydrate)
-- File `Widgets/Auth/Schemas/UserForm.php` eliminato; test aggiornati (path source-contract, import, method_exists rimossi perche' i metodi esistono sempre)
-- `LoginWidgetLocalizationTest` ripuntato su `GetPostLoginUrlAction` (la logica localizeURL vive li', non piu' nel widget)
-- Fix UI reale: `components/layouts/base.blade.php` (layout auth) non aveva `@filamentScripts` → Alpine `filamentSchema`/`filamentSchemaComponent`/`passwordRevealFormComponent` non definiti (console: password reveal rotto). Aggiunto `@filamentScripts(withCore: true)` come nel panel Filament
-- Verificato: script filament app.js/schemas.js/support.js ora serviti 200; test auth 21 passati/4 skip preesistenti; PHPStan 0 errori
-- 2026-11-09 — Convenzione i18n widget: `user::user.widgets.overview.*` spostato in `user::user_overview_widget.*` (nuovi file lang it/en + test aggiornato).

@@ -1,15 +1,11 @@
 ---
+qmd: "ui bmad readme en md"
 bmad_status: active
 scope: ui-docs
 updated: 2026-10-06
-title: "UI: English presentation"
-type: note
-status: draft
-tags: [docs, ui, bmad]
-qmd: "ui   english presentation ui"
 ---
 
-# 🎨 UI: English presentation
+# 🎨 UI — English presentation
 
 [![Domain-UI](https://img.shields.io/badge/Domain-UI%20Kit-7B1FA2.svg)](#)
 [![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
@@ -53,7 +49,7 @@ Visual consistency and DRY across Blade/Livewire/Filament.
 
 **Consistent UI** = strong public-sector brand.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5**: see [STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

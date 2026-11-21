@@ -1,11 +1,3 @@
----
-title: "Testing Rules & Strategy"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "testing rules & strategy user"
----
 # Testing Rules & Strategy
 
 ## Strict Guidelines (Super Mucca / Laraxot)
@@ -154,14 +146,11 @@ module: theme
 topic: testing-rules
 canonical: ../../../Themes/docs/shared-components/testing-rules-Modules.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

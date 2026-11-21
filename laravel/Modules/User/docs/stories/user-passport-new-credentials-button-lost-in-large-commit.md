@@ -1,7 +1,7 @@
 ---
 id: story-user-passport-new-credentials-button-lost-in-large-commit
 slug: story-user-passport-new-credentials-button-lost-in-large-commit
-title: "STORY: Il bottone 'Nuove credenziali' della Passport Dashboard è scomparso, cancellato da un commit di un giorno dopo"
+title: "STORY — Il bottone 'Nuove credenziali' della Passport Dashboard è scomparso, cancellato da un commit di un giorno dopo"
 description: "Il bottone che genera client OAuth client_credentials dalla UI (story user-passport-create-client-credentials-button.md, module_user_fila5#85), implementato e verificato dal vivo dall'utente il 2026-09-03, non è più presente nella Passport Dashboard oggi. Trovato via git log -S: cancellato dal commit 9d2362d94 (2026-09-04), che si dichiara un refactor del modulo AI ma tocca 7495 file in tutto il repository. Da verificare con il team leader se la cancellazione sia stata accidentale o voluta."
 document_type: story
 category: bmad
@@ -25,7 +25,7 @@ github:
   discussion: https://github.com/laraxot/module_user_fila5/discussions/99
 ---
 
-# STORY: Il bottone "Nuove credenziali" è scomparso dalla Passport Dashboard
+# STORY — Il bottone "Nuove credenziali" è scomparso dalla Passport Dashboard
 
 ## Contesto
 
@@ -42,12 +42,12 @@ git log --all -p -S "new_credentials" -- laravel/Modules/User/app/Filament/Clust
 ```
 
 **Aggiunto**: commit `78575b2c85fe0f629141630ba17ddf8bd815d236`, 2026-09-03,
-autore **Malebestia** (l'utente stesso): `feat+fix: pulsante Nuove
+autore **Malebestia** (l'utente stesso) — `feat+fix: pulsante Nuove
 credenziali Passport, e fix crash/campi persi in
 CreateContactsForSurveyAction`. Corrisponde esattamente alla story #85.
 
 **Cancellato**: commit `9d2362d941ffa669c8445c58352b4e3c95811098`,
-2026-09-04 (un giorno dopo), autore **Marco Sottana**: titolo:
+2026-09-04 (un giorno dopo), autore **Marco Sottana** — titolo:
 `refactor(AI): extract nested parsing logic into private methods + improve
 type safety`.
 
@@ -76,7 +76,7 @@ Ma il suo diff completo (`git show --stat 9d2362d94`) tocca:
 7495 files changed, 374664 insertions(+), 70212 deletions(-)
 ```
 
-- file in **ogni** modulo del progetto (AI, Activity, Cms, Job, Lang, Media,
+— file in **ogni** modulo del progetto (AI, Activity, Cms, Job, Lang, Media,
 Notify, Tenant, UI, User, Quaeris...), inclusi `.codeclimate.yml`,
 `.gitattributes`, `.github/dependabot.yml`, README, docs di decine di
 moduli. Questo non è compatibile con un refactor mirato: ha tutta l'aria di
@@ -84,27 +84,27 @@ un merge/rebase di una branch lungamente divergente, o di una sincronizzazione
 di massa, etichettato per errore col messaggio dell'ultimo lavoro fatto in
 locale prima di eseguirlo. **Non è stato verificato se altre funzionalità
 oltre a questa siano state perse allo stesso modo da questo stesso commit**
-- fuori scope per questa story, ma segnalato come rischio concreto da
+— fuori scope per questa story, ma segnalato come rischio concreto da
 valutare a parte.
 
 ## Perché nessun test se n'è accorto
 
 `PassportDashboardNewCredentialsTest.php` esiste ancora ed è verde (1
-passed, 2 skipped): ma non protegge da questa regressione:
+passed, 2 skipped) — ma non protegge da questa regressione:
 - L'unico test che gira davvero (`'creates a real client_credentials grant
   client...'`) chiama `ClientRepository::createClientCredentialsGrantClient()`
   **direttamente**, mai tramite `Livewire::test(PassportDashboard::class)`
- : non tocca in nessun modo il bottone/l'azione sulla pagina reale.
+  — non tocca in nessun modo il bottone/l'azione sulla pagina reale.
 - I due test che *avrebbero* rilevato esattamente questa regressione
   (`assertActionHidden('new_credentials')` /
   `assertActionVisible('new_credentials')`) erano già `markTestSkipped()`
   dal 3 settembre, per un problema preesistente e non correlato del DB di
-  test (`profiles.uuid` mancante): il loro corpo reale è commentato, mai
+  test (`profiles.uuid` mancante) — il loro corpo reale è commentato, mai
   eseguito. La cancellazione del giorno dopo è quindi passata inosservata
   per costruzione: l'unico controllo automatico capace di accorgersene era
   già disattivato.
 
-## Correzione 2026-09-17: i commit citati sopra non appartengono al repository vero del modulo
+## Correzione 2026-09-17 — i commit citati sopra non appartengono al repository vero del modulo
 
 Verificato con `git log --all -S "new_credentials"` **dentro
 `Modules/User` come repository a sé** (non dal mono-repo): i commit
@@ -116,7 +116,7 @@ repository reale del modulo: **non vi era mai arrivata**, perché
 implementata e pushata solo nella copia del mono-repo, mai confluita in
 `laraxot/module_user_fila5`. Il file di test
 (`PassportDashboardNewCredentialsTest.php`) invece esiste davvero nella
-storia del modulo: è arrivato per una via diversa.
+storia del modulo — è arrivato per una via diversa.
 
 Questo non cambia la sostanza per l'utente (il bottone non c'era ed è
 stato ripristinato), ma cambia a chi va posta la domanda "accidentale o
@@ -135,14 +135,14 @@ persistente con client_id/secret) e le chiavi di traduzione mancanti
 `messages.credentials_created`) in `Modules/User/lang/{it,en}/
 passport_dashboard.php`. Commit fatto per davvero questa volta
 **nel repository reale del modulo** (`laraxot/module_user_fila5`), non
-solo nella fotografia del mono-repo: non dovrebbe poter sparire di
+solo nella fotografia del mono-repo — non dovrebbe poter sparire di
 nuovo per lo stesso motivo.
 
 Verificato:
 - PHPStan pulito
 - Test esistente `PassportDashboardNewCredentialsTest.php`: il test reale
   (AC7a) passa; i 2 test skippati restano skippati per il blocco
-  preesistente e non correlato del DB di test (`profiles.uuid`): non
+  preesistente e non correlato del DB di test (`profiles.uuid`) — non
   riguarda questo ripristino
 - Verifica diretta (reflection su `getHeaderActions()`, senza passare dal
   DB di test bloccato): tutte e 5 le azioni sono registrate,
@@ -151,7 +151,7 @@ Verificato:
 ## Cosa NON è stato fatto
 
 Non ancora chiarito con il team se la mancata propagazione al repository
-del modulo sia stata accidentale o voluta (vedi correzione sopra): resta
+del modulo sia stata accidentale o voluta (vedi correzione sopra) — resta
 da chiedere, ma non blocca più il ripristino del bottone, già fatto.
 
 ## Bug correlato scoperto e corretto 2026-09-17 (non su questa action)
@@ -162,7 +162,7 @@ Testando altre azioni della stessa pagina (`passport_install`,
 `ArtisanCommandsManager` (modulo Xot): `ExecuteArtisanCommandAction`
 segnalava l'esito tramite `Event::dispatch()` (Laravel, server-side), che
 `PassportDashboard` intercettava via `#[On(...)]` (bus eventi di Livewire,
-un canale diverso che non riceve mai eventi Laravel): nessun listener
+un canale diverso che non riceve mai eventi Laravel) — nessun listener
 riceveva mai davvero questi eventi, quindi `isRunning`/`status`/`output`
 restavano bloccati sui valori iniziali anche a comando riuscito. La
 `newCredentialsAction()` di questa story **non è interessata** (è
@@ -181,17 +181,17 @@ issue https://github.com/laraxot/module_xot_fila5/issues/131.
    `getHeaderActions()`, test AC7a verde).
 2. **[APERTO]** Verificato con il team se la mancata propagazione al
    repository del modulo (vedi correzione sopra) sia stata accidentale o
-   voluta: non blocca più il ripristino, ma resta utile capirlo per
+   voluta — non blocca più il ripristino, ma resta utile capirlo per
    evitare che si ripeta con altre feature.
-3. N/A: non era mai stata rimossa dalla storia del modulo, quindi non
+3. N/A — non era mai stata rimossa dalla storia del modulo, quindi non
    c'è nessuna decisione "intenzionale" da riflettere in
    `user-passport-create-client-credentials-button.md`.
 4. **[APERTO]** I due test skippati in `PassportDashboardNewCredentialsTest.php`
    restano skippati per il blocco preesistente del DB di test
-   (`profiles.uuid`): non risolto da questa story, resta un rischio
+   (`profiles.uuid`) — non risolto da questa story, resta un rischio
    strutturale (una feature UI intera può sparire senza che nessun test
    se ne accorga, come successo qui).
-5. (Opzionale, fuori scope stretto ma segnalato): valutare se altre
+5. (Opzionale, fuori scope stretto ma segnalato) — valutare se altre
    funzionalità siano rimaste "solo nella fotografia" del mono-repo senza
    mai confluire nei repository reali dei moduli, dato quanto scoperto
    sulla doppia tracciatura.

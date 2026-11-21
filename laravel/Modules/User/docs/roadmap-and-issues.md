@@ -8,19 +8,14 @@ qmd: "roadmap-and-issues user module - roadmap, issues & optimization"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - Roadmap, Issues & Optimization
@@ -396,8 +391,6 @@ php artisan queue:prune-failed --hours=48
 
 - [← User Module README](./README.md)
 - [← PHPStan Fixes 2025-10-01](./phpstan-fixes.md)
-- [← Project Roadmap](../../../docs/project-analysis-and-roadmap.md)
-- [← Root Documentation](../../../../docs/index.md)
 - [← Project Roadmap](../../../../docs/project-analysis-and-roadmap.md)
 - [← Root Documentation](../../../../docs/index.md)
 

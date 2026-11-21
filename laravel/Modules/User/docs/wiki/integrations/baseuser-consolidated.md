@@ -1,15 +1,13 @@
 ---
-title: "baseuser: Consolidated Documentation"
+title: "baseuser — Consolidated Documentation"
 module: user
 type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "baseuser   consolidated documentation user"
 ---
 
-# baseuser: Consolidated Documentation
+# baseuser — Consolidated Documentation
 
 Consolidated from **12** individual files.
 
@@ -43,14 +41,11 @@ qmd: "baseuser-conflicts risoluzione conflitti in baseuser.php"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -168,14 +163,11 @@ qmd: "baseuser-dry-violation-analysis baseuser - analisi violazione principio dr
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -606,10 +598,9 @@ test('hasRole works with guard parameter', function () {
 ## Collegamenti
 
 ### Documentazione Locale
-- [BaseUser Model](../../models/baseuser.md)
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
-- [DRY Kiss Analysis](../../dry-kiss-analysis.md)
+- [DRY Kiss Analysis](./dry-kiss-analysis.md)
 
 ### Documentazione Spatie
 - [Laravel Permission - HasRoles](https://spatie.be/docs/laravel-permission/v6/basic-usage/role-permissions)
@@ -617,7 +608,6 @@ test('hasRole works with guard parameter', function () {
 
 ### Root Progetto
 - [DRY Violations](../../../../docs/dry-violations-analysis.md)
-- [Code Quality](../../code-quality-analysis.md)
 - [Code Quality](../../code-quality-analysis.md)
 
 ## Conclusioni
@@ -658,14 +648,11 @@ qmd: "baseuser-refactoring-completed-2025-10-15.deprecated baseuser refactoring 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -905,20 +892,11 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 ## Documentazione Collegata
 
 ### Analisi Pre-Refactoring
-- [DRY Violation Analysis](../../baseuser-dry-violation-analysis.md) - Analisi completa del problema
-- [Refactoring Plan](../../../../../docs/baseuser-dry-violation.md) - Piano esecutivo
+- [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
+- [Refactoring Plan](../../docs/baseuser-dry-violation-2025-10-15.md) - Piano esecutivo
 
 ### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
-- [Roles & Permissions](./roles-permissions.md)
-- [User Module README](./readme.md)
-
-### Root Progetto
-- [Code Quality](../../code-quality-analysis.md)
-- [Refactoring Plan](../../docs/baseuser-dry-violation-analisi-refactoring.md) - Piano esecutivo
-
-### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
 - [User Module README](./readme.md)
 
@@ -1041,14 +1019,11 @@ qmd: "baseuser-refactoring-completed- baseuser refactoring - completato"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1288,15 +1263,11 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 ## Documentazione Collegata
 
 ### Analisi Pre-Refactoring
-- [DRY Violation Analysis](../../baseuser-dry-violation-analysis.md) - Analisi completa del problema
-- [Refactoring Plan](../../../../../docs/baseuser-dry-violation.md) - Piano esecutivo
+- [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
+- [Refactoring Plan](../../../docs/baseuser-dry-violation-2025-10-15.md) - Piano esecutivo
 
 ### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
-- [Refactoring Plan](../../../docs/baseuser-dry-violation-analisi-refactoring.md) - Piano esecutivo
-
-### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
 - [User Module README](./readme.md)
 
@@ -1407,8 +1378,7 @@ Il refactoring di `BaseUser` è stato un **successo completo**:
 
 ## baseuser-refactoring-completed-3
 
-*Consolidated from: `baseuser-refactoring-completed.md`*
-*Consolidated from: `baseuser-refactoring-completed-stato-rinominato.md`*
+*Consolidated from: `baseuser-refactoring-completed-3.md`*
 
 title: "baseuser-refactoring-completed-2025-10-15"
 type: concept
@@ -1418,24 +1388,17 @@ updated: 2026-07-14
 qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
----
-
-> Questo file è stato rinominato in [baseuser-refactoring-completed-3.md](baseuser-refactoring-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [baseuser-refactoring-completed-3.md](../../baseuser-refactoring-completed-stato-rinominato.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [baseuser-refactoring-completed-3.md](baseuser-refactoring-completed-3.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -1451,24 +1414,17 @@ updated: 2026-07-14
 qmd: "baseuser-refactoring-completed-2025-10-15.deprecated deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
----
-
-> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](../../baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](../../baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -1485,14 +1441,11 @@ qmd: "baseuser-refactoring-completed baseuser refactoring - completato"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1732,15 +1685,11 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 ## Documentazione Collegata
 
 ### Analisi Pre-Refactoring
-- [DRY Violation Analysis](../../baseuser-dry-violation-analysis.md) - Analisi completa del problema
-- [Refactoring Plan](../../../../../docs/baseuser-dry-violation.md) - Piano esecutivo
+- [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
+- [Refactoring Plan](../../../docs/baseuser-dry-violation-2025-10-15.md) - Piano esecutivo
 
 ### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
-- [Refactoring Plan](../../../docs/baseuser-dry-violation-analisi-refactoring.md) - Piano esecutivo
-
-### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
 - [User Module README](./readme.md)
 
@@ -1863,14 +1812,11 @@ qmd: "baseuser-refactoringd baseuser refactoring - completato"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2109,12 +2055,11 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 ## Documentazione Collegata
 
 ### Analisi Pre-Refactoring
-- [DRY Violation Analysis](../../baseuser-dry-violation-analysis.md) - Analisi completa del problema
+- [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
 - [Refactoring Plan](../../../docs/baseuser-dry-violation-[date].md) - Piano esecutivo
 
 ### Modulo User
-- [BaseUser Model](../../models/baseuser.md)
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
 - [User Module README](./readme.md)
 
@@ -2237,14 +2182,11 @@ qmd: "baseuser-spatieuplicates analisi metodi duplicati in baseuser.php"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2504,14 +2446,11 @@ qmd: "baseuser baseuser model in laravel modules"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2571,9 +2510,6 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - [Profile Management](./profile-management.md)
 - [Routing Best Practices](./routing-best-practices.md)
 - [Session Management](./session-management.md)
-- [Profile Management](../../profile-management-laravel-modules.md)
-- [Routing Best Practices](../../routing-best-practices-architettura-volt-folio-filament.md)
-- [Session Management](../../session-management-gestione-sessioni.md)
 - [[HasTeamsContract]]
 - [[UserContract]]
 - [[Team]]
@@ -2598,14 +2534,11 @@ qmd: "baseuserry-violation baseuser - analisi violazione principio dry"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3035,10 +2968,9 @@ test('hasRole works with guard parameter', function () {
 ## Collegamenti
 
 ### Documentazione Locale
-- [BaseUser Model](../../models/baseuser.md)
-- [BaseUser Model](../../models/baseuser.md)
+- [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
-- [DRY Kiss Analysis](../../dry-kiss-analysis.md)
+- [DRY Kiss Analysis](./dry-kiss-analysis.md)
 
 ### Documentazione Spatie
 - [Laravel Permission - HasRoles](https://spatie.be/docs/laravel-permission/v6/basic-usage/role-permissions)
@@ -3046,7 +2978,6 @@ test('hasRole works with guard parameter', function () {
 
 ### Root Progetto
 - [DRY Violations](../../../../docs/dry-violations-analysis.md)
-- [Code Quality](../../code-quality-analysis.md)
 - [Code Quality](../../code-quality-analysis.md)
 
 ## Conclusioni
@@ -3087,14 +3018,11 @@ qmd: "baseusers risoluzione conflitti in baseuser.php"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

@@ -7,5 +7,5 @@ declare(strict_types=1);
 // Canon: Modules/User/docs/wiki/concepts/claude-audit-static.md
 // File: lang/it/user_label.php
 return [
-    'label' => 'user',
+    'label' => 'Utente',
 ];

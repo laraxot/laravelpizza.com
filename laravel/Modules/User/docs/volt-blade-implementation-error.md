@@ -1,16 +1,7 @@
----
-title: "Analisi dell'Errore di Implementazione Volt/Blade"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "analisi dell'errore di implementazione volt/blade user"
----
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path_conventions.md)
 - [Convenzioni Path](./path_conventions.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
 
@@ -105,14 +96,11 @@ module: theme
 topic: volt-blade-implementation-error
 canonical: ../../../Themes/docs/shared-components/volt-blade-implementation-error.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

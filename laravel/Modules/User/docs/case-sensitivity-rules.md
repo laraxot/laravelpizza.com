@@ -8,19 +8,14 @@ qmd: "case-sensitivity-rules case sensitivity rules - user module"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Case Sensitivity Rules - User Module
@@ -45,6 +40,16 @@ Questo include la rimozione completa di:
 - Database/Migrations/ (tutti i migration files)
 - Database/seeders/ (tutti i seeder files)
 ```
+
+### Test della sintassi delle migrazioni (2026-11-19)
+```
+✗ Removed: tests/Feature/Database/migrations/
+✓ Kept:    tests/Feature/Database/Migrations/   (namespace ...\Database\Migrations, PSR-4)
+```
+La versione più ricca (namespace, `describe`, proprietario unico di `users` e `socialite_users`)
+è stata fusa in `Migrations/UserMigrationSyntaxTest.php`. Il controllo sul proprietario unico di
+`users` è ancora rosso finché esistono le migrazioni di repair e la seconda `create_users_table`:
+vedi [story Xot](../../Xot/docs/stories/case-only-duplicate-directories.story.md).
 
 ## Convenzioni
 

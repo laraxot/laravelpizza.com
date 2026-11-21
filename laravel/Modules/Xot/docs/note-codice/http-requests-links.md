@@ -1,3 +1,10 @@
+---
+title: "http requests links"
+qmd: "xot note codice http requests links md"
+type: note
+tags: [documentation]
+---
+
 https://webdevetc.com/blog/laravel-features-you-may-not-know-about
 
 

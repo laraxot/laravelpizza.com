@@ -8,8 +8,6 @@ tags: [migrato-da-txt, user]
 converted_from: fix01.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "fix01 user"
 ---
 
 in /home/ploi/sottana.com/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php

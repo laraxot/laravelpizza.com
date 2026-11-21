@@ -1,3 +1,10 @@
+---
+title: "Story: triage dei log di errore dopo l'azzeramento dei file (2026-11-12)"
+qmd: "xot stories xot log triage after log wipe story md"
+type: note
+tags: [documentation]
+---
+
 # Story: triage dei log di errore dopo l'azzeramento dei file (2026-11-12)
 
 **Modulo owner:** Xot (tooling e log; i fix toccano il tema Sixteen)

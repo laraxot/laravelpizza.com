@@ -1,11 +1,10 @@
 ---
+qmd: "xot wiki charts readme md"
 title: "Readme"
 type: reference
 tags: [wiki, no-frontmatter-fix]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "xot charts - shared actions & utilities xot"
 ---
 
 # 📊 Xot Charts - Shared Actions & Utilities

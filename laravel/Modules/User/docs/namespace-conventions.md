@@ -1,11 +1,3 @@
----
-title: "Convenzioni di Namespace nel Modulo User"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "convenzioni di namespace nel modulo user user"
----
 # Convenzioni di Namespace nel Modulo User
 
 ## Principi Fondamentali
@@ -209,14 +201,11 @@ module: theme
 topic: namespace-conventions
 canonical: ../../../Themes/docs/shared-components/namespace-conventions.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

@@ -28,7 +28,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
 
 # Copy to public web directory
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ### What Happens
@@ -73,7 +73,7 @@ Themes/Meetup/public/
 
 **CRITICAL**: Vite outputs to `./public/` NOT `resources/html/dist/`
 
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+#### 2. `npm run copy`
 
 **Script**: `cp -r ./public/* ../../../public_html/themes/Meetup`
 
@@ -117,7 +117,7 @@ npm run dev  # Runs on port 5173
 npm run build
 
 # Copy to public directory
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 **Result**: Static site available at `/themes/Meetup/`
@@ -168,7 +168,7 @@ Themes/Meetup/
 - `resources/css/` and `resources/js/` = SOURCE files
 - `public/` = BUILD OUTPUT (compiled, minified, hashed)
 - `npm run build` reads SOURCE, writes to OUTPUT
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- `npm run copy` deploys OUTPUT to web server
 
 ## NPM Scripts Reference
 
@@ -198,7 +198,7 @@ Themes/Meetup/
 - **Output**: Optimized, minified files
 - **Source maps**: Production mode
 
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+### `npm run copy`
 - **Use when**: Deploying static HTML to web server
 - **Requires**: `npm run build` must be run first
 - **Copies**: All files from `./public/` to public web directory
@@ -220,7 +220,7 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 **Solution**:
 ```bash
 mkdir -p /var/www/_bases/base_laravelpizza/public_html/themes/Meetup
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ### Issue: Build Fails
@@ -289,7 +289,7 @@ npm run dev
 
 **Staging** (static preview):
 ```bash
-npm run build
+npm run build && npm run copy
 ```
 
 **Production** (Laravel):
@@ -315,7 +315,7 @@ npm run build (Vite processes and compiles)
     ↓
 public/assets/app-[hash].css + app-[hash].js  (OUTPUT)
     ↓
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy (Deploys to web server)
     ↓
 ../../../public_html/themes/Meetup/  (DEPLOYED)
 ```
@@ -332,7 +332,7 @@ public/assets/app-[hash].css + app-[hash].js  (OUTPUT)
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build      # Compiles resources/* → public/
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy       # Deploys public/* → web server
 ```
 
 **Laravel Integration** (separate build):

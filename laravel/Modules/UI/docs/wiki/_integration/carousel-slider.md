@@ -10,13 +10,12 @@ discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./api.md"
   - "./blocks.md"
-  - "./carousel-slider.md"
+  - "./carousel-slider-1.md"
   - "./chunk.md"
   - "./ci.md"
+  - "./custom-firm-fields-1.md"
   - "./custom-firm-fields.md"
-  - "./custom-firm-fields.md"
-  - "./custom-theme.md"
-status: draft
+  - "./custom-theme-1.md"
 ---
 
 # carousel_slider

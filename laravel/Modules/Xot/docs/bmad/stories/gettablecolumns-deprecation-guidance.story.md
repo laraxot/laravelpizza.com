@@ -1,6 +1,6 @@
 ---
 qmd: "gettablecolumns deprecation guidance.story"
-title: "STORY-492 (Xot/bmad/stories): `getTableColumns()`: che cosa usare al suo posto (guida + drift doc↔codice)"
+title: "STORY-492 (Xot/bmad/stories) — `getTableColumns()`: che cosa usare al suo posto (guida + drift doc↔codice)"
 type: story
 status: in_progress
 tags: [filament, deprecation, xot, phpstan, bmad, second-brain]
@@ -21,7 +21,7 @@ related:
   - ../../laravel/Modules/Xot/docs/stories/table-setter-deprecation-handling.story.md
 ---
 
-# STORY-492 (Xot/bmad/stories): `getTableColumns()`: che cosa usare al suo posto
+# STORY-492 (Xot/bmad/stories) — `getTableColumns()`: che cosa usare al suo posto
 
 **Epic:** EPIC-INF
 **Priority:** Should Have
@@ -44,7 +44,7 @@ related:
 > «NON è deprecata, io la USO, ripeto non è deprecata io la USO, cmq documenta quale
 > consiglieresti usare al suo posto»
 
-## Verifica: la premessa è corretta, il dubbio no
+## Verifica — la premessa è corretta, il dubbio no
 
 Eseguito, non dichiarato:
 
@@ -87,7 +87,7 @@ Inoltre è soft deprecation: Filament la chiama ancora
 
 ## Risposta alla domanda: che cosa usare al suo posto
 
-Dipende dalla base class: tabella completa in
+Dipende dalla base class — tabella completa in
 [`docs/wiki/memories/filament-gettablecolumns-deprecation.md`](../wiki/memories/filament-gettablecolumns-deprecation.md).
 
 | Base class | Cosa scrivere | `getTableColumns()` |
@@ -139,7 +139,7 @@ Feature: guida getTableColumns
 
 | File | Azione |
 |------|--------|
-| `docs/wiki/memories/filament-gettablecolumns-deprecation.md` | nuova: risposta canonica |
+| `docs/wiki/memories/filament-gettablecolumns-deprecation.md` | nuova — risposta canonica |
 | `laravel/Modules/Xot/docs/forbidden-methods.md` | ambiguità rimossa + link |
 | `laravel/Modules/Xot/docs/stories/table-setter-deprecation-handling.story.md` | drift e AC allineati |
 | `docs/wiki/memories/INDEX.md` | index |
@@ -155,5 +155,5 @@ Feature: guida getTableColumns
 
 ## Change Log
 
-- **2026-09-26**: creazione story; premessa utente verificata e **smentita** con
+- **2026-09-26** — creazione story; premessa utente verificata e **smentita** con
   evidenza vendor; tabella per base class scritta; drift doc↔codice registrato.

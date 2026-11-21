@@ -1,3 +1,5 @@
+# Project context — SuperAdmin nel user menu
+
 ---
 title: "Project context: SuperAdmin nel user menu"
 type: note
@@ -66,8 +68,8 @@ Solo `Modules/User/resources/svg/`. Prefisso auto-registrato: `user`. Non `publi
 
 | Stato | File | Nome Filament (`icon=`) | Colore |
 |-------|------|-------------------------|--------|
-| attivo | `resources/svg/superman.svg` | `user-superman` | `warning` |
-| negato | `resources/svg/clark-kent.svg` | `user-clark-kent` | `danger` |
+| attivo | `resources/svg/superman.svg` | `user::superman` | `warning` |
+| negato | `resources/svg/clark-kent.svg` | `user::clark-kent` | `danger` |
 
 Archivio (non cancellare, non usare nel bottone): `superadmin.svg`, `negate-superadmin.svg`, `user-super-admin.svg`, `user-negate-super-admin.svg`. Un file `user-superman.svg` si registra come `user-user-superman`.
 
@@ -83,6 +85,8 @@ Markup: `x-filament::icon-button`. Stroke `currentColor` sul root. Outline origi
 - `mount()`: profilo corrente + URL corrente (stesso del Livewire).
 - `toggleSuperAdmin()`: `$this->profile->toggleSuperAdmin()` + `redirect($this->url, 303)`.
 - `getViewData()`: `profile`.
+- `protected static bool $isDiscovered = false` — **obbligatorio** perché `discoverWidgets` scansiona `Filament/Widgets`.
+
 - `protected static bool $isDiscovered = false`: **obbligatorio** perché `discoverWidgets` scansiona `Filament/Widgets`.
 - Non dichiarare `$view` se la vista esiste al path convenzionale; altrimenti `user::filament.widgets.profile.super-admin`.
 
@@ -98,6 +102,8 @@ Copiare il markup attuale di `livewire/profile/super-admin.blade.php` (due `x-fi
 - `user::super_admin_widget.tooltip.negated`
 
 (file lang da creare, struttura espansa).
+
+### AdminPanelProvider — modifiche (9.2)
 
 ### AdminPanelProvider: modifiche (9.2)
 
@@ -122,6 +128,8 @@ FilamentView::registerRenderHook(
 ```
 
 - Non toccare `team.change`, `socialite.buttons`, `terms-of-service`, `database-notifications`.
+- Non modificare `XotBasePanelProvider` — solo il file `AdminPanelProvider.php`.
+
 - Non modificare `XotBasePanelProvider`: solo il file `AdminPanelProvider.php`.
 - Non aggiungere widget alla griglia dashboard (`discoverWidgets`).
 - Non cambiare `$panel->default()` o `pages()`.

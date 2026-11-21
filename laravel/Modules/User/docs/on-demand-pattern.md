@@ -9,8 +9,9 @@ related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 qmd: "on-demand pattern   module **user** user"
+status: superseded
+superseded_by: on-demand-pattern.md
 ---
 
 # On-Demand Pattern: Module **User**
@@ -61,10 +62,10 @@ qmd search "<topic>"
 \`\`\`
 ./laravel/Modules/User/docs/
 └── wiki/                    # Knowledge base locale
-    ├── rules/INDEX.md      # Indice rules modulo-specifiche
-    ├── skills/INDEX.md     # Indice skills modulo-specifiche
-    ├── commands/INDEX.md   # Indici commands
-    └── memories/INDEX.md   # Indice memories
+    ├── rules/index.md      # Indice rules modulo-specifiche
+    ├── skills/index.md     # Indice skills modulo-specifiche
+    ├── commands/index.md   # Indici commands
+    └── memories/index.md   # Indice memories
 \`\`\`
 
 ## Quick Reference

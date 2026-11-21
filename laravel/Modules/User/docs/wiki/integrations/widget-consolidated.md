@@ -1,15 +1,13 @@
 ---
-title: "widget: Consolidated Documentation"
+title: "widget — Consolidated Documentation"
 module: user
 type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "widget   consolidated documentation user"
 ---
 
-# widget: Consolidated Documentation
+# widget — Consolidated Documentation
 
 Consolidated from **12** individual files.
 
@@ -43,14 +41,11 @@ qmd: "widget-rendering-analysis-3 🔍 analisi rendering loginwidget - docs.ital
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -480,14 +475,11 @@ qmd: "widget-rendering-analysis-4 🔍 analisi rendering loginwidget - docs.ital
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -917,14 +909,11 @@ qmd: "widget-rendering-analysis-5 🔍 analisi rendering loginwidget - docs.ital
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1354,14 +1343,11 @@ qmd: "widget-rendering-analysis 🔍 analisi rendering loginwidget - docs.italia
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1791,14 +1777,11 @@ qmd: "widget-rendering 🔍 analisi rendering loginwidget - docs.italia.it style
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2217,8 +2200,7 @@ return [
 
 ## widget-translation-rules-3
 
-*Consolidated from: `widget-translation-rules.md`*
-*Consolidated from: `widget-translation-rules-memory-integration.md`*
+*Consolidated from: `widget-translation-rules-3.md`*
 
 title: "Widget Translation Rules 3"
 type: rule
@@ -2229,30 +2211,20 @@ qmd: "widget-translation-rules-3 widget translation rules 3"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
----
-
-- [User Module Widget Structure](../Modules/User/docs/widgets-structure.md)
-- [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
-- [User Module Widget Structure](../../widgets-structure-user.md)
+- [User Module Widget Structure](../Modules/User/docs/widgets-structure-user.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../../best-practices/filament-widgets.md)
+- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
 
 ## Memory Integration
 
@@ -2266,14 +2238,10 @@ All widget development should follow these rules to maintain consistency and qua
 ---
 module: theme
 topic: widget_translation_rules
-canonical: ../../../Themes/docs/shared-components/widget-translation-rules.md
+canonical: ../../../Themes/docs/shared-components/widget-translation-rules-3.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/widget-translation-rules.md
-canonical: ../../../Themes/docs/shared-components/widget-translation-rules-memory-integration.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/widget-translation-rules-memory-integration.md
+See canonical documentation: ../../../Themes/docs/shared-components/widget-translation-rules-3.md
 ---
 
 ## widget-translation-rules
@@ -2284,14 +2252,11 @@ module: theme
 topic: widget-translation-rules
 canonical: ../../../Themes/docs/shared-components/widget-translation-rules-Modules.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2314,14 +2279,11 @@ qmd: "widget-translation widget translation rules - <nome progetto> project"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2462,16 +2424,11 @@ protected static string $view = 'user::widgets.edit-user';
 - Check responsive design and accessibility
 - Validate form submission and error handling
 ## Related Documentation
-- [User Module Widget Structure](../modules/user/project_docs/widgets-structure.md)
+- [User Module Widget Structure](../modules/user/project_docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
-- [User Module Widget Structure](../modules/user/docs/widgets-structure.md)
-- [User Module Widget Structure](../modules/user/project_docs/widgets-structure-user.md)
-- [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
-- [User Module Widget Structure](../modules/user/docs/widgets-structure-user.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
@@ -2669,14 +2626,10 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-- [User Module Widget Structure](../modules/user/docs/widgets-structure.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-- [User Module Widget Structure](../../widgets-structure-user.md)
-- [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
-- [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../../best-practices/filament-widgets.md)
 
 ## Memory Integration
 
@@ -3296,7 +3249,6 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
-- [Filament Widget Conventions](../../best-practices/filament-widgets.md)
 
 ## Memory Integration
 
@@ -3318,14 +3270,11 @@ module: theme
 topic: widgets-structure
 canonical: ../../../Themes/docs/shared-components/widgets-structure.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

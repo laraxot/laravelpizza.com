@@ -43,7 +43,7 @@ class RolesRelationManager extends XotBaseRelationManager
     {
         return [
             'id' => IDColumn::make('id'),
-            'name' => TextColumn::make('name'),
+            'name' => TextColumn::make('name')->formatStateUsing(static fn (string $state): string => \Modules\User\Models\Role::displayName($state)),
             'team_id' => TextColumn::make('team_id'),
         ];
     }
@@ -80,7 +80,7 @@ class RolesRelationManager extends XotBaseRelationManager
         return [
             'edit' => EditAction::make()
                 ->iconButton()
-                ->tooltip(trans('user::user.actions.edit.tooltip'))
+                ->tooltip(trans('user::user.actions.edit_tooltip'))
                 ->visible(static function (?Model $record) use ($me): bool {
                     if ($record === null) {
                         return false;
@@ -90,7 +90,7 @@ class RolesRelationManager extends XotBaseRelationManager
                 }),
             'detach' => DetachAction::make()
                 ->iconButton()
-                ->tooltip(trans('user::user.actions.detach.tooltip'))
+                ->tooltip(trans('user::user.actions.detach_tooltip'))
                 ->visible(static function (?Model $record) use ($me): bool {
                     if ($record === null) {
                         return false;

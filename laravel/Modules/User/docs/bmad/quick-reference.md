@@ -1,18 +1,13 @@
 ---
-title: "User: BMAD Quick Reference"
+title: "User — BMAD Quick Reference"
 description: "Comandi rapidi BMAD per il modulo User"
 module: "User"
 alias: "user"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "user   bmad quick reference user"
 ---
 
-# User: BMAD Quick Reference
+# User — BMAD Quick Reference
 
 ## Comandi Rapidi
 

@@ -1,4 +1,5 @@
 ---
+qmd: "ui bmad readme md"
 bmad_status: active
 scope: ui-docs
 updated: 2026-10-06
@@ -144,10 +145,10 @@ MIT
 
 ## Documentation
 
-- [On-Demand Pattern](./on-demand-pattern.md): Pattern per caricamento efficiente
-- [QMD Setup](./qmd-setup.md): Configurazione ricerca locale
-- [Performance](./performance-optimization.md): Metriche e best practice
-- [Project Structure](./project-structure.md): Directory layout
+- [On-Demand Pattern](../on-demand-pattern.md) — Pattern per caricamento efficiente
+- [QMD Setup](../qmd-setup.md) — Configurazione ricerca locale
+- [Performance](../performance-optimization.md) — Metriche e best practice
+- [Project Structure](../project-structure.md) — Directory layout
 
     public function getTableContentGrid(): array
     {
@@ -176,7 +177,7 @@ MIT
 - **Type Safety**: 100% sui componenti principali
 - **Runtime Safety**: 100% con error handling robusto
 - **Template Types**: Risolti tutti i problemi Collection generics
-- **Bugfix Recenti**: [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md), [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md), [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md), [PHPStan Level 10 Comprehensive Fixes](phpstan-level10-bugfixes-comprehensive.md)
+- **Bugfix Recenti**: [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md), [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md), [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md), [PHPStan Level 10 Comprehensive Fixes](../phpstan-level10-bugfixes-comprehensive.md)
 
 ### ✅ **Translation Standards Compliance**
 - **Helper Text**: 100% corretti (vuoti quando uguali alla chiave)
@@ -246,7 +247,7 @@ php artisan ui:test-components
 ### 🏗️ **Architettura**
 - [Components Guide](components.md) - Guida completa componenti
 - [Design System](design-system.md) - Sistema design modulare
-- [Architecture Rules](architecture_rules.md) - Regole architetturali
+- [Architecture Rules](../archive/architecture_rules.md) - Regole architetturali
 - [Best Practices](best-practices.md) - Linee guida sviluppo
 
 ### 🔗 **Collegamenti Moduli**
@@ -260,7 +261,7 @@ php artisan ui:test-components
 - [Blade Components](blade-components.md) - Componenti Blade riutilizzabili
 - [Form Components](form-components.md) - Componenti form avanzati
 - [Table Components](table-components.md) - Componenti tabella
-- [Navigation Components](navigation-components.md) - Componenti navigazione
+- [Navigation Components](../archive/navigation-components.md) - Componenti navigazione
 
 ### 🎨 **Filament Integration**
 - [Filament Components](filament-components.md) - Componenti Filament
@@ -567,10 +568,10 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 - [Regole Traduzioni](translation_rules.md)
 - [Best Practices Filament](filament_best_practices.md)
 - [Componenti UI](components.md)
-- [TableLayoutEnum Analysis](table_layout_enum_analysis.md)
+- [TableLayoutEnum Analysis](../archive/table_layout_enum_analysis.md)
 - [TableLayoutEnum Usage](table-layout-enum-usage.md)
-- **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
-- **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
+- **[REGOLA CRITICA: MAI usare ->label()](../archive/never_use_label_rule.md)**
+- **[REGOLA CRITICA: SEMPRE usa transClass()](../archive/transclass_rule.md)**
 
 *Ultimo aggiornamento: gennaio 2025*
 
@@ -681,9 +682,9 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 - `table-layout.php` - **NUOVO**: Traduzioni per TableLayoutEnum (IT/EN/DE)
 
 ### Fix Implementati
-- [Fix Traduzioni Opening Hours Field](opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
+- [Fix Traduzioni Opening Hours Field](../archive/opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
 - [Fix Traduzioni Opening Hours](opening_hours_translation_improvement.md) - Miglioramento traduzioni orari
-- [Analisi TableLayoutEnum](table_layout_enum_analysis.md) - **NUOVO**: Documentazione completa enum layout tabelle
+- [Analisi TableLayoutEnum](../archive/table_layout_enum_analysis.md) - **NUOVO**: Documentazione completa enum layout tabelle
 
 ## Regole Critiche
 
@@ -744,7 +745,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 - **Type Safety**: 100% sui componenti principali
 - **Runtime Safety**: 100% con error handling robusto
 - **Template Types**: Risolti tutti i problemi Collection generics
-- **Bugfix Recenti**: [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md), [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md), [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md), [PHPStan Level 10 Comprehensive Fixes](phpstan-level10-bugfixes-comprehensive.md)
+- **Bugfix Recenti**: [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md), [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md), [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md), [PHPStan Level 10 Comprehensive Fixes](../phpstan-level10-bugfixes-comprehensive.md)
 
 ### ✅ **Translation Standards Compliance**
 - **Helper Text**: 100% corretti (vuoti quando uguali alla chiave)
@@ -1104,8 +1105,8 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 **🚀 Performance**: 97/100 score 
 ## Collegamenti
 
-- **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
-- **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
+- **[REGOLA CRITICA: MAI usare ->label()](../archive/never_use_label_rule.md)**
+- **[REGOLA CRITICA: SEMPRE usa transClass()](../archive/transclass_rule.md)**
 
 *Ultimo aggiornamento: gennaio 2025* 
 *Ultimo aggiornamento: gennaio 2025* 

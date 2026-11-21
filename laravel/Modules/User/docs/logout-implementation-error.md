@@ -1,20 +1,8 @@
----
-title: "Analisi dell'Errore nell'Implementazione del Logout"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "analisi dell'errore nell'implementazione del logout user"
----
 # Analisi dell'Errore nell'Implementazione del Logout
 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Auth Pages](auth_pages_implementation.md)
-- [Implementazione Logout](logout_blade_implementation.md)
-- [Analisi Logout](logout_blade_analysis.md)
-- [Conclusioni Logout](logout_blade_conclusions.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Implementazione Logout](logout_blade_implementation.md)
 - [Analisi Logout](logout_blade_analysis.md)
@@ -86,14 +74,11 @@ module: theme
 topic: logout-implementation-error
 canonical: ../../../Themes/docs/shared-components/logout-implementation-error.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

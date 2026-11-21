@@ -1,12 +1,3 @@
----
-title: "Laravel Passport Implementation Summary - User Module"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "laravel passport implementation summary - user module user"
-status: superseded
-superseded_by: passport-implementation.md
----
 # Laravel Passport Implementation Summary - User Module
 
 ## Overview

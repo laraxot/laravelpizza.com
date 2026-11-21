@@ -1,5 +1,5 @@
 ---
-title: "Epic 1: Superficie pubblica di identità: login, logout, creazione utente, Passport"
+title: "Epic 1 — Superficie pubblica di identità: login, logout, creazione utente, Passport"
 type: epic
 tags: [bmad, user, epic, auth, passport, socialite]
 created: 2026-09-28
@@ -15,13 +15,13 @@ related:
   - ../../../Xot/docs/bmad-method.md
 ---
 
-# Epic 1: Superficie pubblica di identità
+# Epic 1 — Superficie pubblica di identità
 
 > **SUMMARY**: epic che porta a una sola sorgente i punti d'ingresso autenticazione e creazione utente del modulo User (login, logout, `CreateUserAction`, `GetPermissionModelAction`), allinea le Resource OAuth2 del cluster `Passport` alle Action esistenti e rende unica la sorgente delle migrazioni. Scope limitato a `Modules/User`.
 
 ## Numero e nome
 
-Epic 1: "User public surface: un solo login, un solo logout, una sola creazione utente".
+Epic 1 — "User public surface: un solo login, un solo logout, una sola creazione utente".
 
 ## Perché ora
 
@@ -65,7 +65,7 @@ L'epic nasce dalle duplicazioni elencate in [../brainstorming.md](../brainstormi
 
 ## Tracciabilità
 
-- Epiche di roadmap: [module-roadmap.md](module-roadmap.md): "Epic A: Contratto e architettura", "Epic C: UX e integrazione".
+- Epiche di roadmap: [module-roadmap.md](module-roadmap.md) — "Epic A — Contratto e architettura", "Epic C — UX e integrazione".
 - Requisiti: [../prd.md](../prd.md), contesto: [../project-context.md](../project-context.md).
 - Metodo: [bmad-method.md](../../../Xot/docs/bmad-method.md).
 - Stato di avanzamento: story in `../stories/` (non create in questa campagna).

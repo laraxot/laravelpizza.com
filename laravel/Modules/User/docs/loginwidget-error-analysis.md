@@ -8,18 +8,14 @@ qmd: "loginwidget-error-analysis analisi errore loginwidget: problema logico e s
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Analisi Errore LoginWidget: Problema Logico e Soluzione
@@ -200,7 +196,5 @@ class LoginWidget extends XotBaseWidget
 ## Riferimenti
 
 - [XotBaseWidget](Modules/Xot/app/Filament/Widgets/XotBaseWidget.php)
-- [Documentazione Widget Structure](modules/user/widgets-structure.md)
+- [Documentazione Widget Structure](modules/user/widgets-structure-2.md)
 - [Best Practices Widget Filament](modules/user/best-practices/filament-widgets.md) 
-- [Documentazione Widget Structure](widgets-structure-user.md)
-- [Best Practices Widget Filament](best-practices/filament-widgets.md) 

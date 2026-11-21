@@ -1,11 +1,6 @@
 ---
 title: team-permissions-sqlite-migration.story
 module: User
-type: story
-status: draft
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "story: team_permissions migration on sqlite user"
 ---
 
 # Story: team_permissions migration on SQLite

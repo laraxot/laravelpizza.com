@@ -20,18 +20,18 @@
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition-colors" data-nav-link>Home</a>
+                <a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition-colors" data-nav-link>{{ __('pub_theme::navigation.home') }}</a>
                 <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center" data-nav-link>
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    Events
+                    {{ __('pub_theme::navigation.sections.events.label') }}
                 </a>
                 <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center" data-nav-link>
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                     </svg>
-                    Community Chat
+                    {{ __('pub_theme::navigation.sections.community_chat.label') }}
                 </a>
                 <!-- Language Dropdown -->
                 <div class="relative" x-data="{ open: false }" @click.away="open = false">
@@ -86,8 +86,8 @@
             <!-- Auth Buttons / User Dropdown -->
             <div class="hidden md:flex items-center space-x-4">
                 @guest
-                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white transition-colors">Login</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">Sign Up</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white transition-colors">{{ __('pub_theme::navigation.auth.login.label') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">{{ __('pub_theme::navigation.auth.register.label') }}</a>
                 @else
                     @php
                         $user = Auth::user();
@@ -113,23 +113,23 @@
                                 @can('access-dashboard')
                                     <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                         <x-heroicon-o-home class="w-4 h-4 mr-2" />
-                                        <span>Dashboard</span>
+                                        <span>{{ __('pub_theme::navigation.user_menu.dashboard.label') }}</span>
                                     </a>
                                 @endcan
 
                                 <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                     <x-heroicon-o-calendar-days class="w-4 h-4 mr-2" />
-                                    <span>I miei eventi</span>
+                                    <span>{{ __('pub_theme::navigation.user_menu.my_events.label') }}</span>
                                 </a>
 
                                 <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                     <x-heroicon-o-map-pin class="w-4 h-4 mr-2" />
-                                    <span>Eventi vicini</span>
+                                    <span>{{ __('pub_theme::navigation.user_menu.nearby_events.label') }}</span>
                                 </a>
 
                                 <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                     <x-heroicon-o-user class="w-4 h-4 mr-2" />
-                                    <span>Profilo</span>
+                                    <span>{{ __('pub_theme::navigation.user_menu.my_profile.label') }}</span>
                                 </a>
                             </div>
 
@@ -139,7 +139,7 @@
                                 @csrf
                                 <button type="submit" class="w-full text-left flex items-center px-4 py-2 text-sm text-red-300 hover:text-red-200 hover:bg-slate-800">
                                     <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4 mr-2" />
-                                    <span>Logout</span>
+                                    <span>{{ __('pub_theme::navigation.user_menu.logout.label') }}</span>
                                 </button>
                             </form>
                         </div>
@@ -158,38 +158,38 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
             <div class="flex flex-col space-y-3">
-                <a href="{{ route('home') }}" class="text-gray-300 hover:text-white" data-nav-link>Home</a>
-                <a href="#" class="text-gray-300 hover:text-white" data-nav-link>Events</a>
-                <a href="#" class="text-gray-300 hover:text-white" data-nav-link>Community Chat</a>
+                <a href="{{ route('home') }}" class="text-gray-300 hover:text-white" data-nav-link>{{ __('pub_theme::navigation.home') }}</a>
+                <a href="#" class="text-gray-300 hover:text-white" data-nav-link>{{ __('pub_theme::navigation.sections.events.label') }}</a>
+                <a href="#" class="text-gray-300 hover:text-white" data-nav-link>{{ __('pub_theme::navigation.sections.community_chat.label') }}</a>
                 @guest
-                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white">Login</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 text-white px-4 py-2 rounded-lg text-center">Sign Up</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white">{{ __('pub_theme::navigation.auth.login.label') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 text-white px-4 py-2 rounded-lg text-center">{{ __('pub_theme::navigation.auth.register.label') }}</a>
                 @else
                     <div class="space-y-1">
                         @can('access-dashboard')
                             <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-gray-300 hover:text-white flex items-center">
                                 <x-heroicon-o-home class="w-4 h-4 mr-2" />
-                                Dashboard
+                                {{ __('pub_theme::navigation.user_menu.dashboard.label') }}
                             </a>
                         @endcan
                         <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="text-gray-300 hover:text-white flex items-center">
                             <x-heroicon-o-calendar-days class="w-4 h-4 mr-2" />
-                            I miei eventi
+                            {{ __('pub_theme::navigation.user_menu.my_events.label') }}
                         </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="text-gray-300 hover:text-white flex items-center">
                             <x-heroicon-o-map-pin class="w-4 h-4 mr-2" />
-                            Eventi vicini
+                            {{ __('pub_theme::navigation.user_menu.nearby_events.label') }}
                         </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="text-gray-300 hover:text-white flex items-center">
                             <x-heroicon-o-user class="w-4 h-4 mr-2" />
-                            Profilo
+                            {{ __('pub_theme::navigation.user_menu.my_profile.label') }}
                         </a>
 
                         <form method="POST" action="{{ route('logout') }}" class="pt-2">
                             @csrf
                             <button type="submit" class="text-red-300 hover:text-red-200 flex items-center">
                                 <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4 mr-2" />
-                                Logout
+                                {{ __('pub_theme::navigation.user_menu.logout.label') }}
                             </button>
                         </form>
                     </div>

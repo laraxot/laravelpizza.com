@@ -1,9 +1,14 @@
 ---
-title: "Xot - architecture-best-practices.md"
-module: Xot
-bmad: true
-status: active
+title: "architecture best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture best practices"
+issues: []
+discussions: []
 ---
+
 ## Convenzioni di naming per le azioni (Actions)
 
 Per tutte le azioni che operano su chiavi di aggregazione specifiche (es. stabi, valutatore_id, ecc.), si raccomanda l'uso esplicito del suffisso `By<Chiave>` nel nome della classe. Esempio:

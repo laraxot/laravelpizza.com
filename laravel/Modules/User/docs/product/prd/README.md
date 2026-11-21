@@ -1,11 +1,3 @@
----
-title: "User Module - Product Requirements Document (PRD)"
-type: index
-status: draft
-updated: 2026-10-07
-tags: [docs, user, product]
-qmd: "user module - product requirements document (prd) user"
----
 # User Module - Product Requirements Document (PRD)
 
 ## Document Information

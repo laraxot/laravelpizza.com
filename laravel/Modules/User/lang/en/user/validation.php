@@ -7,8 +7,8 @@ declare(strict_types=1);
 // Canon: Modules/User/docs/wiki — domain i18n only.
 // File: lang/en/user/validation.php
 return [
-    'email_unique' => 'Questa email è già in uso',
-    'password_min' => 'La password deve essere di almeno :min caratteri',
-    'password_confirmed' => 'Le password non coincidono',
-    'current_password' => 'La password attuale non è corretta',
+    'email_unique' => 'This email is already in use',
+    'password_min' => 'The password must be at least :min characters',
+    'password_confirmed' => 'The passwords do not match',
+    'current_password' => 'The current password is incorrect',
 ];

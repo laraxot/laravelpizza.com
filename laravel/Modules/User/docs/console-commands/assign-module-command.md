@@ -12,7 +12,6 @@ related:
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-status: draft
 ---
 
 # AssignModuleCommand - Gestione Moduli Utente
@@ -172,7 +171,7 @@ Result: No changes made to user modules.
 
 ## Collegamenti
 - [Console Commands Philosophy](console-commands-philosophy.md)
-- [User Models](models/readme.md)
+- [User Models](models/README.md)
 - [Role Management](models/role-management.md)
 - [README.md](../README.md)
 

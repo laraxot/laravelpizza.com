@@ -1,5 +1,5 @@
 ---
-title: "Socialite provider boundary: PRD"
+title: "Socialite provider boundary — PRD"
 type: prd
 module: User
 status: done
@@ -9,11 +9,9 @@ related:
   - ./socialite-provider-boundary-product-brief.md
   - ./socialite-provider-boundary-architecture.md
   - ./stories/socialite-provider-boundary.story.md
-tags: [docs, user, bmad]
-qmd: "socialite provider boundary   prd user"
 ---
 
-# Socialite provider boundary: PRD
+# Socialite provider boundary — PRD
 
 ## Requisiti funzionali
 

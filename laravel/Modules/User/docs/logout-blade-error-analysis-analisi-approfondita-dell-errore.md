@@ -16,18 +16,17 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Analisi Approfondita dell'Errore nell'Implementazione del Logout
 
 ## Collegamenti correlati
-- [Documentazione centrale](/docs/readme.md)
+- [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
-- [Implementazione Logout](logout-blade-implementation-posizione-corretta.md)
-- [Analisi Logout](logout-blade-analysis-panoramica.md)
-- [Conclusioni Logout](logout-blade-conclusions-sintesi-dell.md)
+- [Implementazione Logout](logout-blade-implementation-2.md)
+- [Analisi Logout](logout-blade-analysis-3.md)
+- [Conclusioni Logout](logout-blade-conclusions-2.md)
 - [Documentazione Auth Tema One](/laravel/themes/one/docs/auth.md)
 
 ## Errore Fondamentale Identificato

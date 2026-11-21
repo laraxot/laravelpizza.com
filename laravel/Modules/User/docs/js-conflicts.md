@@ -8,20 +8,14 @@ qmd: "js-conflicts risoluzione dei conflitti nei file javascript del modulo user
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: jss.md
 ---
 
 # Risoluzione dei Conflitti nei File JavaScript del Modulo User
@@ -123,6 +117,6 @@ Dopo la risoluzione, sono state eseguite le seguenti verifiche:
 
 ## Collegamenti
 
-- [Documentazione Modulo User](module-user.md)
+- [Documentazione Modulo User](module_user.md)
 - [Best Practices per la Gestione dei Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
-- [Alpine.js](https://alpinejs.dev/)
+- [Alpine.js](https://alpinejs.dev/) 

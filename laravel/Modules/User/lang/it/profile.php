@@ -92,11 +92,54 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Foto',
         ],
         'user' => [
             'name' => [
-                'label' => 'user.name',
+                'label' => 'Utente',
             ],
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'password',
+            'helper_text' => 'password',
+            'description' => 'password',
+        ],
+        'passwordConfirmation' => [
+            'label' => 'passwordConfirmation',
+            'placeholder' => 'passwordConfirmation',
+            'helper_text' => 'passwordConfirmation',
+            'description' => 'passwordConfirmation',
+        ],
+        'currentPassword' => [
+            'label' => 'currentPassword',
+            'placeholder' => 'currentPassword',
+            'helper_text' => 'currentPassword',
+            'description' => 'currentPassword',
+        ],
+        'email_verified_at' => [
+            'label' => 'E-mail verificata il',
+            'placeholder' => 'email_verified_at',
+            'helper_text' => 'email_verified_at',
+            'description' => 'email_verified_at',
+        ],
+        'password_confirmation' => [
+            'label' => 'Conferma password',
+            'placeholder' => 'password_confirmation',
+            'helper_text' => 'password_confirmation',
+            'description' => 'password_confirmation',
+        ],
+        'updated_at' => [
+            'label' => 'Modificato il',
         ],
     ],
     'actions' => [

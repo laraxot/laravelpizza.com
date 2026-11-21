@@ -8,19 +8,14 @@ qmd: "git-path-does-not-have-our-version-fix fix: path does not have our version
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Fix: path does not have our version (rebase/merge)
@@ -104,5 +99,5 @@ git -c core.editor="echo" rebase --continue
 
 ## Riferimenti
 
-- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix-2026-03-17.md)
+- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix.md)
 - [oauth-access-token-removal](oauth-access-token-removal.md)

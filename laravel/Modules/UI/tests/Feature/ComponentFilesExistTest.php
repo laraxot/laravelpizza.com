@@ -94,15 +94,25 @@ describe('Component Files Exist', function (): void {
             '/dropdown.blade.php',
         ];
 
+        // Debito noto (2026-11-17): questi componenti radice sono ancora in Sixteen.
+        // Il tetto puo' solo scendere: togliere la voce quando il file viene rimosso.
+        $knownLegacy = [
+            '/input.blade.php',
+            '/button.blade.php',
+            '/modal.blade.php',
+            '/dropdown.blade.php',
+        ];
+
         $legacyPresent = array_values(array_filter(
             $legacyFiles,
             static fn (string $relativePath): bool => file_exists($themeBasePath.$relativePath),
         ));
 
-        if ($legacyPresent !== []) {
-            Assert::markTestSkipped('Legacy root components still present: '.implode(', ', $legacyPresent));
-        }
-
+        Assert::assertSame(
+            [],
+            array_values(array_diff($legacyPresent, $knownLegacy)),
+            'Componenti radice legacy ricomparsi in Sixteen: usare quelli in forms/, utilities/, data-display/.'
+        );
     });
 
     test('component files contain proper blade syntax', function (): void {

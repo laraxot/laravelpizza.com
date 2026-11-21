@@ -10,18 +10,16 @@ related:
   - ../../bugfix-permission-table-names-singular.md
   - ./spatie-permission-migration-no-table-name.md
   - ../../../../../config/permission.php
-  - ../../spatie-permission-philosophy.md
-status: draft
-qmd: "spatie permission   config `table_names` immutabile user"
+  - ../../../Themes/docs/shared-components/spatie-permission-philosophy.md
 ---
 
-# Spatie Permission: config `table_names` immutabile
+# Spatie Permission — config `table_names` immutabile
 
 ## Regola assoluta (maintainer)
 
 **`laravel/config/permission.php` → `table_names` non si modifica mai dagli agenti.**
 
-Le query, Spatie, i modelli pivot e le migrazioni (`Model*::getTable()`) **seguono** la config: **mai** il contrario.
+Le query, Spatie, i modelli pivot e le migrazioni (`Model*::getTable()`) **seguono** la config — **mai** il contrario.
 
 Overlay `config/local/{tenant}/permission.php`: **no** `table_names` (solo `models` se serve).
 
@@ -42,7 +40,7 @@ config/permission.php (fissa)
   → Spatie HasRoles / HasPermissions
 ```
 
-## Errore 1146: fix corretto
+## Errore 1146 — fix corretto
 
 1. `php artisan config:show permission.table_names`
 2. `SHOW TABLES` sul DB modulo User

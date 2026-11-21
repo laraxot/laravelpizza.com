@@ -83,7 +83,7 @@ npm install
 npm run build
 
 # Copiare asset in public_html
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ### **3. Verifica nel Browser**
@@ -103,7 +103,7 @@ npm run build
 ### **✅ Obbligatorio**
 - **SEMPRE** usare `laravel/Themes/Meetup/docs/` per documentazione
 - **SEMPRE** eseguire `npm run build` dopo modifiche CSS/JS
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- **SEMPRE** eseguire `npm run copy` per pubblicare asset
 - **SEMPRE** verificare con PHPStan livello 10
 - **SEMPRE** seguire pattern DRY + KISS
 
@@ -112,7 +112,7 @@ npm run build
 ## 📊 **Workflow Completo**
 
 ```
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+Modifica File → PHPStan L10 → npm run build → npm run copy → Test Browser
      ↓           ↓              ↓              ↓              ↓
    Codice      Qualità        Compilazione    Pubblicazione    Visibilità
    Corretto    ✅             ✅             ✅             ✅
@@ -132,7 +132,7 @@ Le modifiche non sono visibili
 # ✅ CORRETTO
 cd laravel/Themes/Meetup/
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 Vado su http://127.0.0.1:8000/it
 Le modifiche sono visibili
 ```
@@ -148,7 +148,7 @@ Vado direttamente a testare
 composer update -W
 npm install
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ---
@@ -199,9 +199,9 @@ php artisan tinker
 
 ## 📚 **Documentazione Correlata**
 
-- [development-workflow-css-js-changes.md](./development-workflow-css-js-changes.md)
-- [folio-volt-json-system-complete.md](./folio-volt-json-system-complete.md)
-- [laravelpizza-com-conversion-architecture.md](./laravelpizza-com-conversion-architecture.md)
+- [development-workflow-css-js-changes.md](../development-workflow-css-js-changes.md)
+- [folio-volt-json-system-complete.md](../folio-volt-json-system-complete.md)
+- [laravelpizza-com-conversion-architecture.md](../laravelpizza-com-conversion-architecture.md)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "XotBaseResourceTable Columns Enforcement: User Module"
+title: "XotBaseResourceTable Columns Enforcement — User Module"
 type: concept
 sources: []
 confidence: high
@@ -15,8 +15,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
-qmd: "user module: xotbaseresourcetable columns user"
 ---
 
 # User Module: XotBaseResourceTable Columns

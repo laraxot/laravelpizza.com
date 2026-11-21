@@ -124,6 +124,9 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
             'description' => '',
         ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
         'create' => [

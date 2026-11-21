@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 return [
-    'delete' => 'elimina',
-    'edit' => 'modifica',
+    'delete' => 'delete',
+    'edit' => 'edit',
     'view' => 'vedi',
     'note' => 'note',
     'navigation' => [

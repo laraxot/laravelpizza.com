@@ -12,7 +12,6 @@ related:
   - "./git-conflicts-resolution.md"
   - "./gits-resolution.md"
   - "./multiple-bugs-resolution.md"
-status: draft
 ---
 
 # Bugfix: DeviceUser e HasXotFactory

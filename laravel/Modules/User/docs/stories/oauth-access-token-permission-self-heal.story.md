@@ -19,7 +19,7 @@ l'accesso (comportamento sicuro di default) e potersi auto-riparare dove esplici
 letterale (convenzione kebab-case + dot, es. `oauth-access-token.view.any`). Ogni User model passa da
 `Modules\User\Models\BaseUser` -> trait `HasSpatiePermission`.
 
-**A (alternative valutate, in ordine cronologico reale: l'implementazione e' cambiata piu' volte nel corso del
+**A (alternative valutate, in ordine cronologico reale — l'implementazione e' cambiata piu' volte nel corso del
 task, sessioni concorrenti sullo stesso repo)**:
 
 1. Solo seeding (`PermissionSeeder::run()`): risolve solo il permesso mancante oggi, non previene la prossima
@@ -76,7 +76,7 @@ task, sessioni concorrenti sullo stesso repo)**:
 Test: `Modules/User/tests/Feature/HasSpatiePermissionAutoCreateTest.php` (5 casi):
 1. Permesso esistente: comportamento identico a Spatie standard.
 2. Permesso mancante via `hasPermissionToOrCreate()`: non esplode, viene creato, accesso negato.
-3. `hasPermissionTo()` standard (senza opt-in): continua a esplodere su permesso mancante: conferma che il
+3. `hasPermissionTo()` standard (senza opt-in): continua a esplodere su permesso mancante — conferma che il
    blast radius resta contenuto al solo `hasPermissionToOrCreate()`.
 4. Permesso auto-creato: assegnabile via ruolo dopo, funziona normalmente.
 5. `OauthAccessTokenPolicy::viewAny()` end-to-end: non esplode piu' su permesso mancante.
@@ -104,19 +104,19 @@ volte, stato finale stabile e confermato per iscritto qui.
    se vuole che venga sistemato.
 
    **RISOLTO 2026-09-21** (stessa giornata, follow-up separato): fix applicato in `phpunit.xml`
-   (`<env name="CACHE_STORE" value="array" />` aggiunta, `.env.testing` NON toccato: evita il
+   (`<env name="CACHE_STORE" value="array" />` aggiunta, `.env.testing` NON toccato — evita il
    problema del file generato). `<env>` di phpunit.xml vince su `.env.testing` a boot time. Verificato
    `.env.sqlite` (cercato per primo da `app/Application.php::environmentFile()`) non esiste su disco
    in questo repo, quindi si cade sempre su `.env.testing`. Test rieseguiti senza override CLI:
    5 passed (9 assertions). Dettagli:
-   `Modules/User/docs/stories/cache-store-env-var-test-infra.story.md`.
+   `Modules/User/docs/stories/cache-store-env-var-test-infra-2026-09-21.story.md`.
 2. `Modules/Lang/tests/Unit/Models/BaseModelTest.php` vs `Modules/Lang/tests/unit/models/BaseModelTest.php`
    (case-variant duplicate): rompe qualunque `--filter` che carichi l'intera suite configurata. Pre-esistente,
    non correlato a questo fix.
 3. Permessi `oauth-access-token.*` non assegnati a nessun ruolo sull'ambiente 192.168.1.35:8000 (solo creati
    vuoti dal self-heal al primo accesso): accesso resta negato finche' un admin non li assegna esplicitamente
    a un ruolo. Decisione di business, non presa qui.
-4. Le altre ~230 Policy del repo NON sono state convertite a `hasPermissionToOrCreate()`: solo
+4. Le altre ~230 Policy del repo NON sono state convertite a `hasPermissionToOrCreate()` — solo
    `OauthAccessTokenPolicy` (quella del bug report). Ogni altra Policy che incontri lo stesso 500 va convertita
    caso per caso, di proposito (e' il compromesso scelto: blast radius contenuto invece di copertura totale
    automatica).

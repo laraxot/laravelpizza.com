@@ -51,6 +51,8 @@ Risorse presenti sia in `Filament/Resources/` sia in `Filament/Clusters/Passport
 ## P1: composer.json nel tree views
 
 `resources/views/composer.json` con name `laraxot/theme-one`: **anomalia**; non appartiene al modulo User.
+**Stato 2026-11-16:** file `resources/views/composer.json` (tema One spuri) **rimosso** — SSoT resta `laravel/Themes/One/composer.json`.
+
 
 ## P2: documentazione
 

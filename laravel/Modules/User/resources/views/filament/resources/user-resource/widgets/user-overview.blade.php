@@ -13,6 +13,6 @@ declare(strict_types=1);
             //     'get_class_methods' => get_class_methods($this),
             // ]);
         @endphp
-        {{ $record->name ?? 'Utente' }}
+        {{ $record->name ?? 'User' }}
     </x-filament::card>
 </x-filament::widget>

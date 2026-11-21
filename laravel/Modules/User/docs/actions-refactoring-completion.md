@@ -3,9 +3,6 @@ title: "User Module: Support → QueueableActions Refactoring Complete"
 type: documentation
 date: 2026-07-21
 status: COMPLETED
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module: support → queueableactions refactoring user"
 ---
 
 # User Module: Support → QueueableActions Refactoring
@@ -59,7 +56,7 @@ Completed decomposition of legacy `Support\Utils` into 6 granular QueueableActio
 
 ### Retained Actions
 
-- **GetPermissionModelAction**: Already valid QueueableAction with execute() contract
+- **GetPermissionModelAction** — Already valid QueueableAction with execute() contract
   - Used by: `app/Filament/Resources/RoleResource/Pages/EditRole.php`
   - Status: ✅ No changes (already follows pattern)
 
@@ -99,7 +96,7 @@ Completed decomposition of legacy `Support\Utils` into 6 granular QueueableActio
 ### PHPStan L10
 - **Before**: 83 errors (Assert imports, external class refs, mixed property access)
 - **After**: 28 errors (FilamentShieldData::make() discovery issues)
-- **Verdict**: ✅ ACCEPTABLE: Remaining errors are external library discovery, not code logic
+- **Verdict**: ✅ ACCEPTABLE — Remaining errors are external library discovery, not code logic
 
 ### PHPMD / PHP Insights
 - Not available in project root
@@ -150,7 +147,7 @@ Spatie QueueableAction uses `app()` internally for dependencies, not constructor
 
 ## Migration Path for Existing Code
 
-If any code was using `Support\Utils` methods (unlikely: already backed up):
+If any code was using `Support\Utils` methods (unlikely — already backed up):
 
 ```php
 // OLD (no longer works)

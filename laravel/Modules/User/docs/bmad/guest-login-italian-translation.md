@@ -1,5 +1,5 @@
 ---
-title: "Login guest IT: catalogo traduzioni"
+title: "Login guest IT — catalogo traduzioni"
 type: bugfix
 status: fixed
 created: 2026-09-27
@@ -16,7 +16,7 @@ related:
   - ../../../../Themes/Sixteen/resources/views/pages/auth/login.blade.php
 ---
 
-# Login guest in italiano: correzione
+# Login guest in italiano — correzione
 
 ## Comportamento atteso e osservato
 
@@ -26,7 +26,7 @@ Il visitatore guest che apre `/it/auth/login`, o viene reindirizzato al login da
 
 - Aggiunto il catalogo italiano `fields/actions/messages` e le etichette usate dalla pagina Sixteen.
 - `AuthComponentsTest` verifica 200, etichetta “Ricordami”, CTA di registrazione e redirect guest della pagina profilo al login. I riferimenti alle view sono qualificati col namespace owner `user::`.
-- Verifica: `APP_ENV=testing FIXCITY_TEST_SQLITE=1 vendor/bin/pest Modules/User/tests/Feature/AuthComponentsTest.php --filter='login page loads correctly'`: 1 test / 4 asserzioni passati.
+- Verifica: `APP_ENV=testing FIXCITY_TEST_SQLITE=1 vendor/bin/pest Modules/User/tests/Feature/AuthComponentsTest.php --filter='login page loads correctly'` — 1 test / 4 asserzioni passati.
 - Suite auth mirata: 8 test / 19 asserzioni passati, nessuno skip.
 - Smoke browser guest: `/it/auth/login` e `/it/auth/register` 200; `/it/segnalazioni/create`, `/it/area-personale/pratiche` e `/it/area-personale/seguite` arrivano al login senza errori JS.
 

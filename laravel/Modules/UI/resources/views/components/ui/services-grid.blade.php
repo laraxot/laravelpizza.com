@@ -13,8 +13,8 @@ declare(strict_types=1);
     Utilizzo:
     <x-ui.services-grid 
         :services="[
-            ['title' => 'Servizio 1', 'description' => 'Descrizione', 'category' => 'anagrafe', 'status' => 'active'],
-            ['title' => 'Servizio 2', 'description' => 'Descrizione', 'category' => 'tributi', 'status' => 'active'],
+            ['title' => 'Service 1', 'description' => 'Description', 'category' => 'anagrafe', 'status' => 'active'],
+            ['title' => 'Service 2', 'description' => 'Description', 'category' => 'tributi', 'status' => 'active'],
         ]"
         :columns="2"
         gap="md"

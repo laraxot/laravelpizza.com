@@ -16,8 +16,6 @@ related:
   - "./payment.md"
   - "./phpstan.md"
   - "./profile.md"
-status: superseded
-superseded_by: ../-integration/filament.md
 ---
 
 # filament

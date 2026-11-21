@@ -20,4 +20,18 @@ return [
             'icon' => 'edit',
         ],
     ],
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'email' => [
+            'label' => 'E-mail',
+        ],
+        'token' => [
+            'label' => 'Token',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+    ],
 ];

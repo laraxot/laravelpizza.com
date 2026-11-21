@@ -1,11 +1,6 @@
 ---
 title: story-user-audit-improvements
 module: User
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user, wiki]
-qmd: "bmad story: user module audit improvements user"
 ---
 
 # BMAD Story: User Module Audit Improvements
@@ -13,7 +8,7 @@ qmd: "bmad story: user module audit improvements user"
 **Story ID**: USER-2026-AUDIT-001  
 **Status**: Ready for Backlog  
 **Priority**: High  
-**Epic**: Technical Debt: Code Quality & Performance  
+**Epic**: Technical Debt — Code Quality & Performance  
 **Team**: Backend + Infrastructure  
 
 ---
@@ -83,12 +78,12 @@ This story addresses the critical and high-severity findings via a structured, p
 
 ### Phase 3: Migration DRY Consolidation ✓
 - [ ] **AC3.1**: Create `UserMigrationHelpers` trait
-  - `safeAddColumn()`: conditional column addition
-  - `addUserProfileColumns()`: first_name, last_name, avatar, bio
-  - `addAuthColumns()`: 2FA, password expiry fields
-  - `addLocalizationColumns()`: lang, timezone
-  - `addStatusColumns()`: is_active, is_verified, email_verified_at
-  - `addUuidSupport()`: UUID migration logic
+  - `safeAddColumn()` — conditional column addition
+  - `addUserProfileColumns()` — first_name, last_name, avatar, bio
+  - `addAuthColumns()` — 2FA, password expiry fields
+  - `addLocalizationColumns()` — lang, timezone
+  - `addStatusColumns()` — is_active, is_verified, email_verified_at
+  - `addUuidSupport()` — UUID migration logic
   
 - [ ] **AC3.2**: Create `UserBaseMigration` class
   - Extends `XotBaseMigration` + uses `UserMigrationHelpers`
@@ -214,7 +209,7 @@ This story addresses the critical and high-severity findings via a structured, p
 
 ## Dependencies & Blockers
 
-**No blocking dependencies**: All work is self-contained within User module.
+**No blocking dependencies** — All work is self-contained within User module.
 
 **Requires**:
 - Knowledge of Laraxot migration patterns
@@ -225,10 +220,10 @@ This story addresses the critical and high-severity findings via a structured, p
 
 ## Related Documentation
 
-- `/laravel/Modules/User/ANALYST_REPORT.md`: Detailed audit findings
-- `/laravel/Modules/User/docs/code-quality-analysis.md`: Code quality baseline
-- `/laravel/Modules/User/docs/dry-kiss-improvements.md`: DRY pattern reference
-- `/laravel/Modules/User/docs/phpstan-dry-kiss-improvements.md`: Type compliance
+- `/laravel/Modules/User/ANALYST_REPORT.md` — Detailed audit findings
+- `/laravel/Modules/User/docs/code-quality-analysis-2.md` — Code quality baseline
+- `/laravel/Modules/User/docs/dry-kiss-improvements.md` — DRY pattern reference
+- `/laravel/Modules/User/docs/phpstan-dry-kiss-improvements.md` — Type compliance
 
 ---
 

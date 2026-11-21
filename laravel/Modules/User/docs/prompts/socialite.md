@@ -1,5 +1,5 @@
 ---
-title: 'Socialite: risorse esterne'
+title: 'Socialite — risorse esterne'
 module: User
 type: reference
 slug: socialite
@@ -8,11 +8,9 @@ tags: [migrato-da-txt, user]
 converted_from: socialite.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "socialite   risorse esterne user"
 ---
 
-# Socialite: risorse esterne
+# Socialite — risorse esterne
 
 > Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
 > collega a un punto del codice: leggila, poi trova dove è già applicata.

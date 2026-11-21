@@ -2,4 +2,15 @@
 
 declare(strict_types=1);
 
-return [];
+return [
+    'sections' => [
+        'empty' => [
+            'heading' => 'empty',
+            'label' => '',
+        ],
+        'worker' => [
+            'label' => 'Operatore',
+            'heading' => 'worker',
+        ],
+    ],
+];

@@ -1,15 +1,13 @@
 ---
-title: "passport: Consolidated Documentation"
+title: "passport — Consolidated Documentation"
 module: user
 type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "passport   consolidated documentation user"
 ---
 
-# passport: Consolidated Documentation
+# passport — Consolidated Documentation
 
 Consolidated from **34** individual files.
 
@@ -60,14 +58,11 @@ module: theme
 topic: passport-admin-actions
 canonical: ../../../Themes/docs/shared-components/passport-admin-actions.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -85,14 +80,11 @@ module: theme
 topic: passport-cluster-completion-status
 canonical: ../../../Themes/docs/shared-components/passport-cluster-completion-status.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -115,14 +107,11 @@ qmd: "passport-cluster-completion passport cluster - status completamento"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -337,14 +326,11 @@ module: theme
 topic: passport-cluster-current-status
 canonical: ../../../Themes/docs/shared-components/passport-cluster-current-status.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -367,14 +353,11 @@ qmd: "passport-cluster-current passport cluster - status attuale e lavoro necess
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -384,7 +367,7 @@ related:
 
 **Status**: ✅ COMPLETATO
 **Metodologia**: Super Mucca
-**Vedi**: [passport-cluster-implementation-completed.md](../../passport-cluster-implementation-completed.md)
+**Vedi**: [passport-cluster-implementation-completed.md](./passport-cluster-implementation-completed.md)
 
 ---
 
@@ -493,14 +476,11 @@ module: theme
 topic: passport-cluster-implementation-completed
 canonical: ../../../Themes/docs/shared-components/passport-cluster-implementation-completed.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -523,14 +503,11 @@ qmd: "passport-cluster-implementation-needed passport cluster - implementazione 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -726,9 +703,8 @@ class ListOauthClients extends XotBaseListRecords
 
 ## 📚 Riferimenti
 
-- [Passport Cluster Resources Pattern](../../passport-cluster-resources-pattern.md)
-- [Passport Cluster Summary](../../passport-cluster-summary.md)
-- [Passport Cluster Summary](../../passport-cluster-summary.md)
+- [Passport Cluster Resources Pattern](./passport-cluster-resources-pattern.md)
+- [Passport Cluster Summary](./passport-cluster-summary.md)
 - [Filament Class Extension Rules](../../xot/docs/filament-class-extension-rules.md)
 
 ---
@@ -747,14 +723,11 @@ module: theme
 topic: passport-cluster-implementation-status
 canonical: ../../../Themes/docs/shared-components/passport-cluster-implementation-status.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -777,14 +750,11 @@ qmd: "passport-cluster-implementation passport cluster - implementation status"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -954,9 +924,9 @@ cd laravel
 
 ## References
 
-- [Passport Cluster Proposal](../../passport-cluster-proposal.md)
-- [Passport Cluster Philosophy](../../passport-cluster-philosophy.md)
-- [Passport Cluster Inner Debate](../../passport-cluster-inner-debate.md)
+- [Passport Cluster Proposal](./passport-cluster-proposal.md)
+- [Passport Cluster Philosophy](./passport-cluster-philosophy.md)
+- [Passport Cluster Inner Debate](./passport-cluster-inner-debate.md)
 - [Xot Filament Extension Rules](../../xot/docs/filament-class-extension-rules.md)
 - [PHPStan Quality Guide](../../xot/docs/phpstan-code-quality-guide.md)
 
@@ -981,14 +951,11 @@ qmd: "passport-cluster-implementationd passport cluster - implementazione comple
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1197,14 +1164,11 @@ qmd: "passport-cluster-inner-debate discussione interiore: pro e contro cluster 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1256,14 +1220,11 @@ module: theme
 topic: passport-cluster-innerebate
 canonical: ../../../Themes/docs/shared-components/passport-cluster-inner-debate.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1281,14 +1242,11 @@ module: theme
 topic: passport-cluster-litigation
 canonical: ../../../Themes/docs/shared-components/passport-cluster-litigation.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1306,14 +1264,11 @@ module: theme
 topic: passport-cluster-namespace-fix
 canonical: ../../../Themes/docs/shared-components/passport-cluster-namespace-fix.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1336,14 +1291,11 @@ qmd: "passport-cluster-namespace passport cluster - namespace fix"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1579,8 +1531,8 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*.php" -type f
 
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 - [Composer Autoload Documentation](https://getcomposer.org/doc/04-schema.md#psr-4)
-- [Laraxot Module Structure](../../../../Xot/docs/module-structure.md)
-- [Previous Implementation Doc](../../passport-cluster-implementation-status.md)
+- [Laraxot Module Structure](../../xot/docs/module-structure.md)
+- [Previous Implementation Doc](./passport-cluster-implementation-status.md)
 
 ---
 
@@ -1598,14 +1550,11 @@ module: theme
 topic: passport-cluster-philosophy
 canonical: ../../../Themes/docs/shared-components/passport-cluster-philosophy.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1623,14 +1572,11 @@ module: theme
 topic: passport-cluster-proposal
 canonical: ../../../Themes/docs/shared-components/passport-cluster-proposal.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1653,14 +1599,11 @@ qmd: "passport-cluster-resources-only-rule regola critica: cluster passport - so
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1767,9 +1710,8 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*Resource.php"
 
 ## 📚 Riferimenti
 
-- [Passport Cluster Summary](../../passport-cluster-summary.md)
-- [Passport Cluster Summary](../../passport-cluster-summary.md)
-- [Passport Cluster Implementation](../../passport-cluster-implementation-completed.md)
+- [Passport Cluster Summary](./passport-cluster-summary.md)
+- [Passport Cluster Implementation](./passport-cluster-implementation-completed.md)
 - [Filament Clusters Documentation](../../xot/docs/filament-class-extension-rules.md)
 
 ---
@@ -1793,14 +1735,11 @@ qmd: "passport-cluster-resources passport cluster resources pattern"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1967,14 +1906,11 @@ qmd: "passport-cluster-summary passport cluster - riepilogo completo"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2147,14 +2083,11 @@ qmd: "passport-cluster-verification passport cluster - verifica risorse"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2231,10 +2164,9 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*Resource.php"
 
 ## 📚 Riferimenti
 
-- [Passport Cluster Resources Only Rule](../../passport-cluster-resources-only-rule.md) - Regola critica
-- [Passport Cluster Implementation](../../passport-cluster-implementation-completed.md) - Implementazione
-- [Passport Cluster Summary](../../passport-cluster-summary.md) - Riepilogo
-- [Passport Cluster Summary](../../passport-cluster-summary.md) - Riepilogo
+- [Passport Cluster Resources Only Rule](./passport-cluster-resources-only-rule.md) - Regola critica
+- [Passport Cluster Implementation](./passport-cluster-implementation-completed.md) - Implementazione
+- [Passport Cluster Summary](./passport-cluster-summary.md) - Riepilogo
 
 ---
 
@@ -2257,14 +2189,11 @@ qmd: "passport-cluster-work-completion passport cluster - completamento lavoro"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2458,14 +2387,11 @@ qmd: "passport-cluster filosofia e politica: implementazione del cluster passpor
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2519,14 +2445,11 @@ module: theme
 topic: passport-complete-implementation
 canonical: ../../../Themes/docs/shared-components/passport-complete-implementation.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2544,14 +2467,11 @@ module: theme
 topic: passport-complete-management-debate
 canonical: ../../../Themes/docs/shared-components/passport-complete-management-debate.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2574,14 +2494,11 @@ qmd: "passport-implementation-summary laravel passport implementation summary - 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2700,14 +2617,11 @@ qmd: "passport-implementation laravel passport implementation summary - user mod
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2826,14 +2740,11 @@ qmd: "passport-integration laravel passport integration - architettura completa"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3385,14 +3296,11 @@ qmd: "passport-managementebate passport complete management - internal debate & 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3641,14 +3549,11 @@ qmd: "passport-model-wrappers passport model wrappers"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3706,14 +3611,11 @@ qmd: "passport-vs-socialite-clarification passport vs socialite - distinzione cr
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3808,7 +3710,7 @@ find Modules/User/app/Filament/Resources -name "SocialProviderResource.php"
 
 ## 📚 Riferimenti
 
-- [Passport Cluster Resources Only Rule](../../passport-cluster-resources-only-rule.md)
+- [Passport Cluster Resources Only Rule](./passport-cluster-resources-only-rule.md)
 - [Filosofia Modulo User](./filosofia-modulo-user.md)
 - [Laravel Passport Documentation](https://laravel.com/docs/passport)
 - [Laravel Socialite Documentation](https://laravel.com/docs/socialite)
@@ -3829,14 +3731,11 @@ module: theme
 topic: passport
 canonical: ../../../Themes/docs/shared-components/passport-Modules.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

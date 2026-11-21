@@ -12,7 +12,6 @@ related:
   - "./edit-user-widget.md"
   - "./registration-widget-fileupload.md"
   - "./registration-widget.md"
-status: draft
 ---
 
 # RegistrationWidget FileUpload Error Fix

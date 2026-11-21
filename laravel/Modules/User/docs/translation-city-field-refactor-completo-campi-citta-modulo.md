@@ -1,12 +1,3 @@
----
-title: "Refactor Completo Campi 'Città' - Modulo User"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "refactor completo campi 'città' - modulo user user"
-status: superseded
-superseded_by: translation-city-field-refactor-.deprecated.md
----
 # Refactor Completo Campi "Città" - Modulo User
 
 ## Riepilogo Intervento

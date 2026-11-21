@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 https://ajaxray.com/blog/lets-beautify-filament-3-login-page/
@@ -34,7 +33,7 @@ https://v2.filamentphp.com/tricks/customizing-filament-breezy-registration-profi
 > - [Socialite Integration](socialite.txt) - Integrazione con provider social
 > - [Two Factor Authentication](two_factor.txt) - Autenticazione a due fattori
 > - [Filament Best Practices](filament_best_practices.md) - Best practices Filament
-> - [User Profile Models](user-profile-models.md) - Modelli del profilo utente
+> - [User Profile Models](user_profile_models.md) - Modelli del profilo utente
 
 ## Implementazione con Filament
 
@@ -98,7 +97,7 @@ class LoginWidget extends XotBaseWidget
 
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices Filament](filament_best_practices.md)
-- [User Profile Models](user-profile-models.md)
+- [User Profile Models](user_profile_models.md)
 
 ### Versione Incoming
 

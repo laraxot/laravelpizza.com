@@ -1,5 +1,5 @@
 ---
-title: "Code Quality Improvement Report: User"
+title: "Code Quality Improvement Report — User"
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "User"
@@ -13,10 +13,9 @@ discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/47"
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
-status: draft
 ---
 
-# Code Quality Improvement Report: User
+# Code Quality Improvement Report — User
 
 > Baseline statica riproducibile per orientare il miglioramento. I conteggi sono segnali, non sostituiscono PHPStan, Pest o la review del flusso reale.
 
@@ -46,34 +45,34 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
-### P0: baseline affidabile
+### P0 — baseline affidabile
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
-### P1: rischio di regressione
+### P1 — rischio di regressione
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
-### P2: manutenibilità
+### P2 — manutenibilità
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
-### P3: continuità
+### P3 — continuità
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.
 - Aggiornare il report solo con metriche ripetibili e tracciamento pertinente.
 
 ## Modifiche effettive da fare
 
-2. **app/Http/Controllers/Api/LogoutController.php:43:        // TODO: Implement token cleanup logic here: debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
-3. **app/Http/Controllers/UpgradeController.php: confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
-4. **resources/views/node_modules/tailwindcss/peers/index.js: file da 4501254 byte.** Prima verificare se è sorgente, fixture o artefatto generato. Gli artefatti generati vanno rimossi dal source tree e rigenerati dal build; per sorgenti reali separare per responsabilità mantenendo un solo entrypoint e aggiungere un test/smoke build.
+2. **app/Http/Controllers/Api/LogoutController.php:43:        // TODO: Implement token cleanup logic here — debito eseguibile.** Verificare il caller e scegliere una sola uscita: implementare il comportamento con un test che fallisce prima della patch, oppure eliminare ramo e marker se non raggiungibili. Non lasciare il TODO come documentazione.
+3. **app/Http/Controllers/UpgradeController.php — confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
+4. **resources/views/node_modules/tailwindcss/peers/index.js — file da 4501254 byte.** Prima verificare se è sorgente, fixture o artefatto generato. Gli artefatti generati vanno rimossi dal source tree e rigenerati dal build; per sorgenti reali separare per responsabilità mantenendo un solo entrypoint e aggiungere un test/smoke build.
 6. **resources/views/node_modules.** Rimuovere dipendenze vendorizzate dall’albero delle view, dichiararle nel package.json owner e aggiungere la directory al gitignore; rigenerare gli asset con Vite. Questo elimina megabyte non revisionabili e falsi positivi di audit.
 
 

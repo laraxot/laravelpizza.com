@@ -1,12 +1,6 @@
 ---
 title: pest-test-report-2
 module: User
-type: note
-updated: 2026-10-08
-tags: [docs, user, wiki]
-qmd: "<nome progetto> user module - pest test implementation report user"
-status: superseded
-superseded_by: ../../pest-test-report.md
 ---
 
 # <nome progetto> User Module - Pest Test Implementation Report

@@ -8,7 +8,6 @@ qmd: "class-page-not-found errore: class page not found in cluster pages"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-status: draft
 ---
 
 # Errore: Class Page Not Found in Cluster Pages
@@ -353,7 +352,6 @@ class MyPage extends XotBasePage
 - [Standalone vs Resource Pages](../../xot/docs/filament/standalone-vs-resource-pages.md)
 
 ### Clusters in Xot
-- [XotBaseCluster](../../../Xot/app/Filament/Clusters/XotBaseCluster.php)
 - [XotBaseCluster](../../../Xot/app/Filament/Clusters/XotBaseCluster.php)
 - [Cluster Best Practices](../../xot/docs/filament/clusters.md)
 

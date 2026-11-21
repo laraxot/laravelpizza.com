@@ -13,7 +13,7 @@ related:
   - "./changelog-3.md"
   - "./changelog-4.md"
   - "./changelog-5.md"
-  - "./changelog.md"
+  - "./CHANGELOG.md"
   - "./git-reset-1.md"
   - "./pest-test-report-1.md"
 ---

@@ -8,7 +8,7 @@ return [
         'plural' => 'Comandi Artisan',
         'group' => [
             'name' => 'Sistema',
-            'description' => 'Gestione dei comandi Artisan',
+            'description' => 'Artisan command management',
         ],
         'sort' => '28',
         'label' => 'Comandi Artisan',
@@ -16,25 +16,25 @@ return [
     ],
     'pages' => [
         'artisan-commands' => [
-            'title' => 'Gestione Comandi Artisan',
-            'description' => 'Esegui e gestisci i comandi Artisan',
+            'title' => 'Artisan Commands Manager',
+            'description' => 'Run and manage Artisan commands',
             'commands' => [
                 'migrate' => [
                     'label' => 'Migrazione Database',
-                    'description' => 'Esegue le migrazioni del database',
+                    'description' => 'Runs the database migrations',
                 ],
                 'optimize' => [
                     'label' => 'Ottimizzazione',
-                    'description' => 'Ottimizza le prestazioni dell\'applicazione',
+                    'description' => 'Optimizes application performance',
                 ],
                 'cache' => [
-                    'label' => 'Gestione Cache',
-                    'description' => 'Comandi per la gestione della cache',
+                    'label' => 'Cache Management',
+                    'description' => 'Commands for managing the cache',
                 ],
             ],
             'notifications' => [
-                'success' => 'Comando eseguito con successo',
-                'error' => 'Errore nell\'esecuzione del comando',
+                'success' => 'Command executed successfully',
+                'error' => 'Error while running the command',
             ],
         ],
     ],

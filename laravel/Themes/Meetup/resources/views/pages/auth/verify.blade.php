@@ -1,53 +1,34 @@
 <?php
 
-declare(strict_types=1);
-
-use Livewire\Volt\Component;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-
+use Illuminate\Auth\Events\Verified;
+use Illuminate\Support\Facades\Auth;
 use function Laravel\Folio\{middleware, name};
+use Livewire\Volt\Component;
 
-/*
- * Avviso "verifica la tua email" con il pulsante per riceverne un'altra.
- * Rimandare il link NON segna l'email come verificata (prima partiva l'evento Verified a ogni invio).
- */
 middleware(['auth', 'throttle:6,1']);
 name('verification.notice');
 
 new class extends Component
 {
-    public bool $resent = false;
-
-    public function mount(): void
-    {
-        // Email già verificata: niente da fare qui, si va all'area personale.
-        if (auth()->user()?->hasVerifiedEmail() === true) {
-            $path = config('xra.post_login_path', '/');
-            $this->redirect(LaravelLocalization::localizeUrl(is_string($path) ? $path : '/'));
-        }
-    }
-
     public function resend(): void
     {
         $user = auth()->user();
-        if ($user === null) {
-            return;
-        }
-
         if ($user->hasVerifiedEmail()) {
-            $path = config('xra.post_login_path', '/');
-            $this->redirect(LaravelLocalization::localizeUrl(is_string($path) ? $path : '/'));
-
-            return;
+            redirect('/');
         }
 
         $user->sendEmailVerificationNotification();
-        $this->resent = true;
+
+        event(new Verified($user));
+
+        $this->dispatch('resent');
+        session()->flash('resent');
     }
 };
 
 ?>
 
+<<<<<<< .merge_file_wXnziN
 <x-layouts.app :title="__('pub_theme::auth.verify.title')">
     <x-ui.auth-card :title="__('pub_theme::auth.verify.title')" :subtitle="__('pub_theme::auth.verify.subtitle')">
         @volt('meetup.auth.verify')
@@ -60,13 +41,54 @@ new class extends Component
                 @endif
                 <button type="button" wire:click="resend" wire:loading.attr="disabled" class="flex w-full items-center justify-center rounded-xl bg-red-600 px-4 py-3 font-bold text-white shadow-lg shadow-red-900/30 transition hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 disabled:opacity-60">
                     {{ __('pub_theme::auth.verify.resend') }}
-                </button>
-            </div>
-        @endvolt
+=======
+<x-layouts.main>
 
-        <form method="POST" action="{{ route('logout') }}" class="mt-8 border-t border-slate-700 pt-6 text-center">
-            @csrf
-            <button type="submit" class="text-sm font-semibold text-slate-300 underline-offset-4 hover:text-white hover:underline">{{ __('pub_theme::auth.verify.logout') }}</button>
-        </form>
-    </x-ui.auth-card>
-</x-layouts.app>
+    <div class="flex flex-col items-stretch justify-center w-screen min-h-screen py-10 sm:items-center">
+
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <x-ui.link href="{{ route('home') }}">
+                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
+                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
+            </x-ui.link>
+
+            <h2 class="mt-6 text-2xl font-extrabold leading-9 text-center text-gray-700 dark:text-gray-200">
+                {{ __('pub_theme::auth.sections.verify.title') }}
+            </h2>
+
+            <div class="mt-2 text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
+                <span>{{ __('pub_theme::auth.verify.or.label') }}</span>
+                <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-gray-500 underline cursor-pointer dark:text-gray-400 dark:hover:text-gray-300 hover:text-gray-800">
+                    {{ __('pub_theme::auth.verify.sign_out.label') }}
+>>>>>>> .merge_file_yZV5u1
+                </button>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+
+            @volt('auth.verify')
+            <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
+                @if (session('resent'))
+                <div class="flex items-center px-4 py-3 mb-6 text-sm text-white bg-green-500 rounded shadow" role="alert">
+                    <svg class="w-4 h-4 mr-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+
+                    <p>{{ __('pub_theme::auth.verify.resent.message') }}</p>
+                </div>
+                @endif
+
+                <div class="text-sm leading-6 text-gray-700 dark:text-gray-400">
+                    <p>{{ __('pub_theme::auth.verify.instructions.message') }} <a wire:click="resend" class="text-gray-700 underline transition duration-150 ease-in-out cursor-pointer dark:text-gray-300 hover:text-gray-600 focus:outline-none focus:underline">{{ __('pub_theme::auth.verify.request_another.label') }}</a>.</p>
+                </div>
+            </div>
+            @endvolt
+
+        </div>
+    </div>
+
+</x-layouts.main>

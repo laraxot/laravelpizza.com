@@ -5,8 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "raccomandazioni di ottimizzazione - modulo user user"
 ---
 
 # Raccomandazioni di Ottimizzazione - Modulo User

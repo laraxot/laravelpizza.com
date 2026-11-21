@@ -1,11 +1,3 @@
----
-title: "Convenzione Metodo getTableColumns per Filament Table"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, filament]
-qmd: "convenzione metodo gettablecolumns per filament table user"
----
 # Convenzione Metodo getTableColumns per Filament Table
 
 ## Motivazione della Modifica

@@ -10,13 +10,11 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./assign-module-command.md"
   - "./change-password-command.md"
-  - "./console-commands-philosophy.md"
+  - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-status: superseded
-superseded_by: ../commands/console-commands-philosophy.md
 ---
 
 # Filosofia dei Comandi Console - Modulo User

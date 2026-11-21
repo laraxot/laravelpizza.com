@@ -9,7 +9,6 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
-  - "./00-index-roadmap-user.md"
   - "./00-index.md"
   - "./00-overview.md"
   - "./01-current-state.md"
@@ -17,7 +16,6 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
-status: draft
 ---
 
 # User Module Roadmap (2025 Q4)

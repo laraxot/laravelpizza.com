@@ -1,36 +1,36 @@
 ---
-id: UI/module-bmad-audit-20260928
-title: "UI: baseline BMAD e analisi completa"
-status: ready-for-dev
-module: UI
-epic: module-governance
-priority: P1
-created: 2026-09-28
-references:
-  - ../architecture/module-boundary.md
-  - ../brainstorming/module-opportunities.md
-  - ../epics/module-roadmap.md
+title: "Module BMAD audit — UI"
 type: story
-updated: 2026-10-07
-tags: [docs, ui, bmad]
-qmd: "story   ui: baseline bmad ui"
+status: review
+updated: 2026-11-16
+module: UI
+bmad: true
+qmd: "story BMAD audit modulo UI inventario gate finding P0 P1"
 ---
-# Story: UI: baseline BMAD
 
-Come manutentore del modulo UI, voglio una baseline BMAD verificabile, così da poter pianificare lavoro senza confondere ipotesi, WIP e comportamento osservato.
+# Story: audit BMAD ed ECC del modulo UI
 
-## Acceptance criteria
+## Perché
 
-- [ ] Confermare API pubblica e confini con riferimenti a codice reale.
-- [ ] Inventariare i flussi critici e collegarli a test Pest.
-- [ ] Misurare PHPStan/Pest nel contesto stabile del modulo.
-- [ ] Registrare dipendenze, rischi e decisioni nel modulo.
-- [ ] Aggiornare lo stato reale in `docs/sprint-status.yaml`.
+Rendere verificabile lo stato di UI: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli. Senza baseline misurata ogni fix successivo è ad hoc.
 
-## Task
+## Acceptance
 
-- [ ] Revisione architettura.
-- [ ] Brainstorming con stakeholder.
-- [ ] Decomposizione epic in story più piccole.
-- [ ] Quality gate e second-brain write-back.
+- [x] Inventario source-first misurato (2026-11-16).
+- [x] Audit approfondito con finding P0/P1/P2 e path: [audits/ui-audit.md](../audits/ui-audit.md).
+- [x] Pack: [audit](../audit.md), [decision-log](../decision-log.md), [epics](../epics.md), [brainstorming](../brainstorming.md), [ECC](../../ecc/ui-ecc-audit.md), [piano](../piano-miglioramento.md).
+- [x] PHPStan `Modules/UI`: 0 errori.
+- [ ] Pest modulo eseguito su DB `*_test` raggiungibile (oggi: skip documentato).
+- [ ] Finding P1 chiusi con regressione Pest.
 
+## Story figlie (da creare, vedi [epics](../epics.md))
+
+- `ui-dashboard-real-widgets`
+- `ui-remove-phantom-model-tests`
+- `ui-personform-lang-or-delete`
+- `ui-policy-base-xot`
+- `ui-cleanup-stray-files`
+
+## Esito (2026-11-16)
+
+Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).

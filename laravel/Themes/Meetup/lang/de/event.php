@@ -112,6 +112,24 @@ return [
             'icon' => 'heroicon-o-envelope',
             'color' => 'primary',
         ],
+        'attendance_mode' => [
+            'label' => 'Veranstaltungsart',
+        ],
+        'event_details' => [
+            'label' => 'Veranstaltungsdetails',
+        ],
+        'organizer' => [
+            'label' => 'Veranstaltet von',
+        ],
+        'registration_opens_at' => [
+            'label' => 'Anmeldung geöffnet ab',
+        ],
+        'audience' => [
+            'label' => 'Zielgruppe',
+        ],
+        'typical_age_range' => [
+            'label' => 'Altersgruppe',
+        ],
     ],
     'actions' => [
         'share_event' => [
@@ -208,6 +226,21 @@ return [
         'location_tba' => [
             'label' => 'Ort noch nicht bekannt',
             'description' => 'Wird angezeigt wenn der Ort der Veranstaltung noch nicht bekannt ist',
+        ],
+        'no_one_joined_yet' => [
+            'label' => 'Bisher keine bestätigten Teilnehmer',
+        ],
+        'be_the_first_to_join' => [
+            'label' => 'Sie können als Erste oder Erster Ihren Platz reservieren.',
+        ],
+        'registration_open_soon' => [
+            'label' => 'Online-Anmeldung demnächst verfügbar',
+        ],
+        'sold_out' => [
+            'label' => 'Diese Veranstaltung ist ausgebucht.',
+        ],
+        'spots_available_regular' => [
+            'label' => 'Es sind noch viele Plätze frei',
         ],
     ],
 ];

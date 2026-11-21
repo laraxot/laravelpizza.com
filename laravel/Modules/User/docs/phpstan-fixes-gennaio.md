@@ -8,15 +8,14 @@ qmd: "phpstan-fixes-gennaio- 🔧 phpstan fixes - modulo user - gennaio 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
@@ -255,26 +254,14 @@ module: theme
 topic: phpstan-fixes-gennaio
 canonical: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio.md
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio.md
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-title: "phpstan fixes gennaio 2025"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "phpstan fixes gennaio 2025 user"
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025.md

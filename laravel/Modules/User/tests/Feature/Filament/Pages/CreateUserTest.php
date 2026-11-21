@@ -14,7 +14,11 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+<<<<<<< .merge_file_RflM7A
     $this->page = new CreateUser;
+=======
+    $this->page = new CreateUser();
+>>>>>>> .merge_file_7DXs8L
 });
 
 test('create user page has correct resource', function (): void {

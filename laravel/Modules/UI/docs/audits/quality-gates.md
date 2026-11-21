@@ -1,4 +1,5 @@
 ---
+qmd: "ui audits quality gates md"
 title: "UI quality gate audit 2026-11-05"
 type: audit
 module: UI

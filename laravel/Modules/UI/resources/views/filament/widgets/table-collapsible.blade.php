@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 ?>
 <x-filament::widget>
     <x-filament::section collapsible collapsed wire:key="section-{{ $guid }}">
