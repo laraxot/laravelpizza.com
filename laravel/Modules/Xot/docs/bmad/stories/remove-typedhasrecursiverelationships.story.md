@@ -1,4 +1,5 @@
 ---
+qmd: "xot bmad stories remove typedhasrecursiverelationships story md"
 title: "Remove TypedHasRecursiveRelationships wrapper - use vendor HasRecursiveRelationships directly"
 type: story
 module: Xot
@@ -7,10 +8,7 @@ story_id: "2026-10-06-remove-typedhasrecursiverelationships"
 status: done
 track: quality/refactor
 related:
-  - phpstan-modules-level10.story.md
-updated: 2026-10-21
-tags: [docs, xot, bmad]
-qmd: "remove typedhasrecursiverelationships wrapper xot"
+  - 2026-10-06-phpstan-modules-level10.story.md
 ---
 
 # Remove TypedHasRecursiveRelationships wrapper

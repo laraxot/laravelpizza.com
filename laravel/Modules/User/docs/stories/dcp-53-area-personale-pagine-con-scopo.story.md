@@ -10,7 +10,7 @@ module: User
 created: 2026-10-13
 updated: 2026-10-13
 tags: [area-personale, ux, i18n, mobile]
-related: [Themes/Sixteen/docs/bmad/stories/dcp-52-header-accesso-e-menu-utente.story.md]
+related: [Themes/Sixteen/docs/bmad/stories/2026-10-13-dcp-52-header-accesso-e-menu-utente.story.md]
 qmd: "dcp-53 Area personale: ogni pagina ha uno scopo e una funzione"
 ---
 

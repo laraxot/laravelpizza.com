@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Feature;
 
 use Modules\UI\Filament\Forms\Components\OrderColumn;
-use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 describe('OrderColumn (Form) — order_column badge with move up/down arrows', function (): void {
     it('can be instantiated with make() using the default name', function (): void {
         $field = OrderColumn::make();

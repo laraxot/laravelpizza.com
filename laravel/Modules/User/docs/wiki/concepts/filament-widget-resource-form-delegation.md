@@ -1,5 +1,5 @@
 ---
-title: "Filament widget: delega schema a *ResourceForm"
+title: "Filament widget — delega schema a *ResourceForm"
 type: concept
 confidence: high
 created: 2026-06-04
@@ -16,8 +16,6 @@ related:
   - "./folio-pages-owner-pattern.md"
   - "../../../../../../docs/wiki/concepts/filament-v5-form-in-blade.md"
   - "../../../../../../docs/wiki/memories/view-cache-gate-mandatory.md"
-status: draft
-qmd: "widget filament → schema in `*form` (ssot) user"
 ---
 
 # Widget Filament → schema in `*Form` (SSoT)
@@ -53,7 +51,7 @@ I widget FO (auth, wizard, registrazione) **non** definiscono campi `TextInput` 
 ## Esempi (User)
 
 ```php
-// RegisterWidget: delega via formClass (canonico)
+// RegisterWidget — delega via formClass (canonico)
 class RegisterWidget extends XotBaseSchemaWidget
 {
     protected static function formClass(): string
@@ -72,10 +70,10 @@ class RegisterWidget extends XotBaseSchemaWidget
 
 ## Perché
 
-1. **DRY**: Un solo posto per regole password, unique email, autocomplete, validazione
-2. **KISS**: Il widget resta orchestrazione Livewire (submit, redirect, log)
-3. **Allineamento Filament v5**: `XotBaseResourceForm` + pattern Fixcity `TicketForm`
-4. **Scalabilità**: Quando una regola di validazione cambia, si aggiorna IN UN SOLO POSTO
+1. **DRY** — Un solo posto per regole password, unique email, autocomplete, validazione
+2. **KISS** — Il widget resta orchestrazione Livewire (submit, redirect, log)
+3. **Allineamento Filament v5** — `XotBaseResourceForm` + pattern Fixcity `TicketForm`
+4. **Scalabilità** — Quando una regola di validazione cambia, si aggiorna IN UN SOLO POSTO
 
 ## Vietato
 
@@ -99,22 +97,22 @@ public function getFormSchema(): array
 ## Base class corretta: XotBaseSchemaWidget
 
 ```php
-// ✅ SI: formClass + schemaMethod (preferito)
+// ✅ SI — formClass + schemaMethod (preferito)
 class RegisterWidget extends XotBaseSchemaWidget
 {
     protected static function formClass(): string { return UserForm::class; }
     protected static function schemaMethod(): string { return 'getRegisterFormSchema'; }
 }
 
-// ❌ NO: Widgets/Auth/Schemas/UserForm.php (duplicato; SSoT solo in Resource)
-// ❌ NO: XotBaseWidget senza schema
-// ❌ NO: TextInput inline in getFormSchema()
+// ❌ NO — Widgets/Auth/Schemas/UserForm.php (duplicato; SSoT solo in Resource)
+// ❌ NO — XotBaseWidget senza schema
+// ❌ NO — TextInput inline in getFormSchema()
 ```
 
 ## Gerarchia
 
 ```text
-XotBaseWidget              (azioni, viste, traduzioni: SENZA schema)
+XotBaseWidget              (azioni, viste, traduzioni — SENZA schema)
   └── XotBaseSchemaWidget  (InteractsWithSchemas, form, save)
         └── auth widgets   (RegisterWidget, LoginWidget, …)
         └── XotBaseWizardWidget  (Wizard + Step)
@@ -124,7 +122,6 @@ XotBaseWidget              (azioni, viste, traduzioni: SENZA schema)
 
 - [UserForm.php](../../../app/Filament/Resources/UserResource/Schemas/UserForm.php)
 - [RegisterWidget.php](../../../app/Filament/Widgets/Auth/RegisterWidget.php)
-- ADR root: [filament-widget-resource-form-delegation.md](../../../../../../docs/wiki/decisions/filament-widget-resource-form-delegation.md)
 - ADR root: [filament-widget-resource-form-delegation.md](../../../../../../docs/wiki/decisions/filament-widget-resource-form-delegation.md)
 - Rule: `.cursor/rules/filament-widget-resource-form.mdc`
 - Rule: `.cursor/rules/xotbase-schemawidget.mdc`

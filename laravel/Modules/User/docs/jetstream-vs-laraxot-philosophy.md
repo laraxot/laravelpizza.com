@@ -8,20 +8,14 @@ qmd: "jetstream-vs-laraxot-philosophy jetstream vs laraxot: filosofia, religione
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: jetstream-vs-laraxot.md
 ---
 
 # Jetstream vs Laraxot: Filosofia, Religione e Politica dei Team

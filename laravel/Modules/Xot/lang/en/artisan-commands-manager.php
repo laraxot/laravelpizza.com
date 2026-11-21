@@ -14,19 +14,19 @@ return [
             'label' => 'Migrazione Database',
         ],
         'filament_upgrade' => [
-            'label' => 'Aggiorna Filament',
+            'label' => 'Update Filament',
         ],
         'filament_optimize' => [
             'label' => 'Ottimizza Filament',
         ],
         'view_cache' => [
-            'label' => 'Cache delle View',
+            'label' => 'View cache',
         ],
         'config_cache' => [
-            'label' => 'Cache della Configurazione',
+            'label' => 'Config cache',
         ],
         'route_cache' => [
-            'label' => 'Cache delle Route',
+            'label' => 'Route cache',
         ],
         'event_cache' => [
             'label' => 'Cache degli Eventi',
@@ -49,12 +49,12 @@ return [
         'running' => 'Running...',
     ],
     'messages' => [
-        'command_started' => 'Comando Avviato',
-        'command_started_desc' => 'Il comando :command è stato avviato. L\'output apparirà in tempo reale.',
-        'command_completed' => 'Comando Completato',
-        'command_completed_desc' => 'Il comando :command è stato completato con successo',
-        'command_failed' => 'Comando Fallito',
-        'command_failed_desc' => 'Il comando :command è fallito. Controlla l\'output per i dettagli.',
+        'command_started' => 'Command started',
+        'command_started_desc' => 'The :command command has started. Output will appear in real time.',
+        'command_completed' => 'Command completed',
+        'command_completed_desc' => 'The :command command completed successfully',
+        'command_failed' => 'Command failed',
+        'command_failed_desc' => 'The :command command failed. Check the output for details.',
         'running_command' => [
             'message' => 'Running command: :command',
         ],

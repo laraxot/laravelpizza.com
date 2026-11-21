@@ -1,4 +1,13 @@
-# Module Quality Blockers Impact On Theme - 2026-03-10
+---
+title: "Module quality blockers impact on theme"
+type: note
+theme: Meetup
+tags: [phpstan, module-blockers, quality-gate]
+created: 2026-03-10
+updated: 2026-03-10
+---
+
+# Module Quality Blockers Impact On Theme
 
 ## Perche' questa nota esiste
 

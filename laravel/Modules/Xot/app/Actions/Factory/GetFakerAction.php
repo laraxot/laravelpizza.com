@@ -82,7 +82,7 @@ class GetFakerAction
             return $fakeableNames[$name];
         }
 
-        if (isset($fakeableTypes[$type])) {
+        if ($type !== null && isset($fakeableTypes[$type])) {
             return $fakeableTypes[$type];
         }
 

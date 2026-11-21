@@ -4,7 +4,7 @@ type: decision
 module: Xot
 tags: [security, csrf, middleware, login, filament]
 created: 2026-11-09
-updated: 2026-11-11
+updated: 2026-11-09
 status: accepted
 qmd: "SecurityMiddleware enhanceCSRFProtection validateInputs prima di next 419 page expired login filament"
 related:

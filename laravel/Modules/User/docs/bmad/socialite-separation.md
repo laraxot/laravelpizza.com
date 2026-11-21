@@ -6,9 +6,6 @@ status: active
 related:
   - ./decision-log.md
   - ./architecture.md
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "decision: separate socialite logic user"
 ---
 
 # Decision: Separate Socialite logic

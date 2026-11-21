@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: terms-and-conditions
-canonical: ../../../../Themes/docs/shared-components/terms-and-conditions.md
+canonical: ../../../../Themes/docs/shared-components/terms-and-conditions-2.md
 related:
   - "./eav.md"
   - "./filament.md"
@@ -11,15 +11,9 @@ related:
   - "./passport.md"
   - "./payment.md"
   - "./phpstan.md"
-title: "terms_and_conditions"
-type: note
-status: stub
-updated: 2026-10-07
-tags: [docs, user, _integration]
-qmd: "terms_and_conditions user"
 ---
 
-See canonical documentation: ../../../../Themes/docs/shared-components/terms-and-conditions.md
+See canonical documentation: ../../../../Themes/docs/shared-components/terms-and-conditions-2.md
 # terms_and_conditions
 
 <!-- Contenuto migrato da _docs/terms_and_conditions.txt -->

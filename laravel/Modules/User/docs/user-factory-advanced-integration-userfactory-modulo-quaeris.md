@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # UserFactory Advanced Integration - Modulo User & Quaeris
@@ -307,8 +306,8 @@ public function run(): void
 - [Model States](../../Quaeris/docs/models/states.md)
 
 ### User Module
-- [User Factory Integration](./user-factory-integration-module.md)
-- [Traits Complete Guide](./traits-complete-guide-aggiornato-post.md)
+- [User Factory Integration](./user-factory-integration-2.md)
+- [Traits Complete Guide](./traits-complete-guide-2.md)
 - [BaseUser Architecture](./parental-inheritance.md)
 
 ### Root Documentation  

@@ -317,9 +317,9 @@ return [
 
 ## Risorse
 
-- [Analisi Dettagliata Differenze](../event-detail-alignment-analysis.md)
-- [Volt Component Pattern](../volt-component-pattern.md)
-- [Social Share Docs](../social-share.md)
+- [Analisi Dettagliata Differenze](event-detail-alignment-analysis.md)
+- [Volt Component Pattern](volt-component-pattern.md)
+- [Social Share Docs](social-share.md)
 - [Seo Module - Social Share](../../modules/seo/docs/social-share-component.md)
 
 ---

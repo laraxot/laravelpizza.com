@@ -1,11 +1,3 @@
----
-title: "Debug: Perché logout.blade.php non funziona (Volt + Folio)"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "debug: perché logout.blade.php non funziona (volt + folio) user"
----
 # Debug: Perché logout.blade.php non funziona (Volt + Folio)
 
 ## Analisi del problema
@@ -84,14 +76,11 @@ module: theme
 topic: volt-folio-logout-debug
 canonical: ../../../Themes/docs/shared-components/volt-folio-logout-debug.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

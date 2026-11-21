@@ -1,4 +1,6 @@
 ---
+title: "Architecture — Audit UI/Filament modulo User (epic 12)"
+
 title: "Architecture: Audit UI/Filament modulo User (epic 12)"
 type: architecture
 module: User
@@ -12,9 +14,12 @@ related:
   - ./livewire-widget-architecture.md
   - ./architecture.md
   - docs/wiki/rules pers. XotBase / lang
+---
+
+# Architecture: epic 12 — gap UI/Filament modulo User
+
 tags: [docs, user, bmad]
 qmd: "architecture: epic 12   gap ui/filament modulo user user"
----
 
 # Architecture: epic 12: gap UI/Filament modulo User
 
@@ -41,6 +46,8 @@ resource dichiara la propria policy.
 
 ## 3. ADR
 
+### ADR-001 — `BaseEditUser extends XotBaseEditRecord`
+
 ### ADR-001: `BaseEditUser extends XotBaseEditRecord`
 
 SSoT: `Modules/Xot/app/Filament/Resources/Pages/XotBaseEditRecord.php`. Allinea i 4 Base*
@@ -48,16 +55,22 @@ della `UserResource` (`BaseCreateUser`→XotBaseCreateRecord già ok, `BaseListU
 `BaseViewUser`→XotBaseViewRecord già ok). `UserColumn extends XotBaseColumnGroup`
 (`Modules/Xot/app/Filament/Tables/Columns/XotBaseColumnGroup.php`).
 
+### ADR-002 — Label in lang, mai in linea
+
 ### ADR-002: Label in lang, mai in linea
 
 Ogni `->label(...)`, `helperText`, `placeholder` e `tooltip` diventa `__('user::<file>.<key>')`
 nell'albero lang esistente (additivo, nessun file lang nuovo se esiste già il tema).
+
+### ADR-003 — Zero `dddx()` in produzione
 
 ### ADR-003: Zero `dddx()` in produzione
 
 Rimozione dead-code nei punti elencati. Dove il `dddx` era "debug provvisorio" (Appearance
 pages) la logica resta invariata, senza output accidentale. `Http/Livewire/TermsOfService.php`
 è da ritirare (10.4), non da "riparare".
+
+### ADR-004 — Passport SSoT nel cluster
 
 Nota 2026-10-20: per le pagine Appearance "la logica resta invariata" non era vero: il salvataggio non e' mai stato scritto, il `dddx` lo
 sostituiva. Ora `updateData()` lancia `LogicException` finche' la persistenza non c'e' (vedi
@@ -71,11 +84,15 @@ doppioni radice: `Resources/OauthClientResource`, `Resources/OauthPersonalAccess
 unico `OauthClientForm`: tabella `oauth_clients` (verificata col modello), `secret`
 criptorilasciabile, campi booleani coerenti col modello reale.
 
+### ADR-005 — Igiene: niente dipendenze né file tooling nel modulo
+
 ### ADR-005: Igiene: niente dipendenze né file tooling nel modulo
 
 `resources/views/node_modules/` cancellato (92 MB); `lang/it/*.backup_*` cancellati (98 file);
 `.php-cs-fixer.dist.php` nel namespace applicativo cancellati; artefatti `.wip/.no/.test/.corrected`
 e `@components.json` rimossi (quelli ancora tracciati da 10.3/10.4 restano programmati lì).
+
+### ADR-006 — Policies collegate via `getPolicy()`
 
 ### ADR-006: Policies collegate via `getPolicy()`
 
@@ -110,6 +127,8 @@ fs module/
 ## 5. Data model
 
 Invariato. Attenzione: il fix `unique()` su `oauth_clients` cambia *comportamento di validazione*
+su tabella esistente — nessuna migrazione, ma verifica che `oauth_clients.name` abbia già unique
+
 su tabella esistente: nessuna migrazione, ma verifica che `oauth_clients.name` abbia già unique
 constraint (in tal caso la UI era solo "più permissiva" di prima).
 

@@ -1,11 +1,3 @@
----
-title: "Fix Binding Team Models nel Modulo User"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "fix binding team models nel modulo user user"
----
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica
@@ -185,14 +177,11 @@ module: theme
 topic: team-bindings-fix
 canonical: ../../../Themes/docs/shared-components/team-bindings-fix.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

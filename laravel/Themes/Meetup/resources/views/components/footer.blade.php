@@ -14,32 +14,32 @@
                     <span class="text-xl font-bold text-white">Laravel Pizza Meetups</span>
                 </div>
                 <p class="text-gray-400 text-sm">
-                    Community of Laravel developers passionate about code and pizza.
+                    {{ __('pub_theme::navigation.footer.community.description') }}
                 </p>
             </div>
 
             <div>
-                <h4 class="font-bold text-white mb-4">Community</h4>
+                <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.community.label') }}</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
-                    <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Community Chat</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Code of Conduct</a></li>
-                    <li><a href="{{ route('home') }}" class="hover:text-white transition-colors">Join Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">{{ __('pub_theme::navigation.sections.events.label') }}</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">{{ __('pub_theme::navigation.footer.community_chat.label') }}</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">{{ __('pub_theme::navigation.footer.code_of_conduct.label') }}</a></li>
+                    <li><a href="{{ route('home') }}" class="hover:text-white transition-colors">{{ __('pub_theme::footer.links.join_us.label') }}</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="font-bold text-white mb-4">Resources</h4>
+                <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.resources.label') }}</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
                     <li><a href="https://laravel.com/docs" target="_blank" class="hover:text-white transition-colors">Laravel Docs</a></li>
                     <li><a href="https://filamentphp.com/docs" target="_blank" class="hover:text-white transition-colors">Filament Docs</a></li>
                     <li><a href="https://livewire.laravel.com/docs" target="_blank" class="hover:text-white transition-colors">Livewire Docs</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">{{ __('pub_theme::navigation.footer.blog.label') }}</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="font-bold text-white mb-4">Follow Us</h4>
+                <h4 class="font-bold text-white mb-4">{{ __('pub_theme::navigation.footer.follow_us.label') }}</h4>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="border-t border-slate-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; {{ date('Y') }} Laravel Pizza Meetups. Built with Laravel, Filament, and Livewire.</p>
+            <p>&copy; {{ date('Y') }} Laravel Pizza Meetups. {{ __('pub_theme::footer.credits.built_with.message') }}</p>
         </div>
     </div>
 </footer>

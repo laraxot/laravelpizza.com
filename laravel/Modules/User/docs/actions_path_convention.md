@@ -1,11 +1,3 @@
----
-title: "Convenzione dei Percorsi per le Actions"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "convenzione dei percorsi per le actions user"
----
 # Convenzione dei Percorsi per le Actions
 
 ## Regola Fondamentale
@@ -69,8 +61,6 @@ fi
 ```
 
 ## Collegamenti
-- [Convenzioni Path nei Moduli Laravel](./path_conventions.md)
-- [Checklist per la Struttura delle Directory](./directory_structure_checklist.md)
 - [Convenzioni Path nei Moduli Laravel](./path_conventions.md)
 - [Checklist per la Struttura delle Directory](./directory_structure_checklist.md)
 - [Analisi Errore: Gestione Percorsi](../../../docs/error_analysis/path_management.md)

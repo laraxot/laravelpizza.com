@@ -117,7 +117,7 @@ declare(strict_types=1);
 @push('scripts')
 <script>
 function confirmCancel(appointmentId) {
-    if (confirm('Sei sicuro di voler cancellare questo appuntamento?')) {
+    if (confirm('Are you sure you want to cancel this appointment?')) {
         // Implementa la logica di cancellazione
         window.location.href = `/appointments/${appointmentId}/cancel`;
     }

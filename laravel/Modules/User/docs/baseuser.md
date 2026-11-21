@@ -8,19 +8,14 @@ qmd: "baseuser baseuser model in laravel modules"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # BaseUser Model in Laravel Modules
@@ -77,9 +72,6 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - [Profile Management](./profile-management.md)
 - [Routing Best Practices](./routing-best-practices.md)
 - [Session Management](./session-management.md)
-- [Profile Management](./profile-management-laravel-modules.md)
-- [Routing Best Practices](./routing-best-practices-architettura-volt-folio-filament.md)
-- [Session Management](./session-management-gestione-sessioni.md)
 - [[HasTeamsContract]]
 - [[UserContract]]
 - [[Team]]

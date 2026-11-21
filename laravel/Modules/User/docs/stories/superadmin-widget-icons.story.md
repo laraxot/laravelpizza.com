@@ -15,7 +15,7 @@ created_at: 2026-09-21
 updated_at: 2026-09-21
 tags: [filament, widget, icons, ux, super-admin]
 related:
-  - Modules/User/docs/stories/oauth-access-token-permission-self-heal.story.md
+  - Modules/User/docs/stories/oauth-access-token-permission-self-heal-2026-09-21.story.md
   - Modules/User/docs/bmad/tech-spec-superadmin-widget.md
 github:
   repository: null
@@ -27,7 +27,7 @@ github:
 ## Richiesta
 
 "sul filament widget superuser devi migliorare le 2 icone .. magari qualcosa di piu'
-adeguato": icone originali (`git diff` verso HEAD): `fas-chess-king` (FontAwesome)
+adeguato" — icone originali (`git diff` verso HEAD): `fas-chess-king` (FontAwesome)
 usata due volte, seconda copia ruotata 180 gradi via CSS (`rotate-180`) per
 rappresentare lo stato "negato". Design fragile: stessa icona, trucco CSS, nessun
 significato visivo immediato.
@@ -38,12 +38,12 @@ significato visivo immediato.
 stato riscritto da una sessione concorrente mentre lavoravo, in sequenza:
 
 1. `user-superadmin` / `user-negate-superadmin` (icon set custom, mai registrato in
-   `config/blade-icons.php`: nomi morti, probabile 404 icona)
+   `config/blade-icons.php` — nomi morti, probabile 404 icona)
 2. `heroicon-o-shield-check` / `heroicon-o-user-minus` (famiglie diverse: shield vs
    user, incoerente)
 3. Mio intervento: `heroicon-o-shield-check` / `heroicon-o-shield-exclamation`
    (stessa famiglia shield)
-4. Sovrascritto da concorrente: `heroicon-o-crown` / `heroicon-o-no-symbol` -
+4. Sovrascritto da concorrente: `heroicon-o-crown` / `heroicon-o-no-symbol` —
    **`heroicon-o-crown` non esiste** in Heroicons (verificato: zero file `*crown*`
    in `vendor/blade-ui-kit/blade-heroicons/resources/svg/`). Con `fallback` vuoto in
    `config/blade-icons.php`, avrebbe lanciato `SvgNotFound` per ogni super-admin che
@@ -82,7 +82,7 @@ confermate esistenti in `vendor/blade-ui-kit/blade-heroicons/resources/svg/`.
 
 Nella stessa working tree condivisa un file puo' cambiare 5 volte in pochi minuti.
 Una di quelle versioni intermedie (`heroicon-o-crown`) era un bug reale (icona
-inesistente, 500 potenziale) mai arrivato a HEAD: trovato e corretto solo perche'
+inesistente, 500 potenziale) mai arrivato a HEAD — trovato e corretto solo perche'
 ogni riscrittura e' stata riletta e verificata (`ls` sul file svg vendor), non data
 per buona a occhio. Vedi [[multi-agent-same-repo-race]],
 [[xotbasemanagerelatedrecords-final-methods-and-shared-worktree]].

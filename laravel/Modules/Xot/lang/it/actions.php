@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 return [
+    'back' => [
+        'label' => 'Torna all\'elenco',
+    ],
     'export_xls' => 'Esporta Dati',
     'label' => 'Actions',
     'plural_label' => 'Actions (Plurale)',

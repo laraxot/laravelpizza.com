@@ -1,11 +1,3 @@
----
-title: "UserFactory Advanced Integration - Modulo User & SaluteOra"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "userfactory advanced integration - modulo user & saluteora user"
----
 # UserFactory Advanced Integration - Modulo User & SaluteOra
 
 ## Post Deep-Study Analysis 
@@ -296,8 +288,8 @@ public function run(): void
 ### User Module
 - [User Factory Integration](./user_factory_integration.md)
 - [Traits Complete Guide](./traits_complete_guide.md)
-- [BaseUser Architecture](./parental-inheritance.md)
+- [BaseUser Architecture](./parental_inheritance.md)
 
 ### Root Documentation  
 - [UserFactory SaluteOra Integration](../../../../docs/userfactory_saluteora_integration.md)
-- [Testing Standards](../../../../docs/testing_standards.md)
+- [Testing Standards](../../../../docs/testing_standards.md) 

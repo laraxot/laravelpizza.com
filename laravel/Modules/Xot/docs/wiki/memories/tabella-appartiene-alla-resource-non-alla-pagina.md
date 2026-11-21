@@ -11,12 +11,11 @@ discussions: []
 related:
   - "./merge-marker-spazzatura-worktree.md"
   - "./xot-table-filters-method-name.md"
-status: draft
 ---
 
 # La tabella appartiene alla Resource, non alla pagina List
 
-> **SUMMARY**: In Laraxot la tabella di una List page la costruisce la **Resource**, non la
+> **SUMMARY** — In Laraxot la tabella di una List page la costruisce la **Resource**, non la
 > pagina. Un `getTableColumns()` scritto su una `Pages/List*.php` non viene neanche chiamato, e
 > su `XotBaseListRecords` è un **fatal**, non un warning. Prima della guardia era un difetto
 > **silenzoso**: tabella vuota, nessun errore, nessun log.
@@ -25,12 +24,12 @@ status: draft
 
 | # | Punto | Cosa fa |
 |---|-------|---------|
-| 1 | `InteractsWithTable::bootedInteractsWithTable()`: `tables/src/Concerns/InteractsWithTable.php:45-47` | `$this->table = $this->table($this->makeTable());` |
-| 2 | `ListRecords::makeTable()`: `filament/src/Resources/Pages/ListRecords.php:213` | `static::getResource()::configureTable($table)` |
-| 3 | `Resource::configureTable()`: `filament/src/Filament/Resources/Resource.php:81` | `static::table($table)`: **il valore di ritorno è IGNORATO** (`@phpstan-ignore staticMethod.resultUnused`) |
-| 4 | `XotBaseResource::table()`: `Modules/Xot/app/Filament/Resources/XotBaseResource.php:202` | `$class::configure($table)` |
+| 1 | `InteractsWithTable::bootedInteractsWithTable()` — `tables/src/Concerns/InteractsWithTable.php:45-47` | `$this->table = $this->table($this->makeTable());` |
+| 2 | `ListRecords::makeTable()` — `filament/src/Resources/Pages/ListRecords.php:213` | `static::getResource()::configureTable($table)` |
+| 3 | `Resource::configureTable()` — `filament/src/Filament/Resources/Resource.php:81` | `static::table($table)` — **il valore di ritorno è IGNORATO** (`@phpstan-ignore staticMethod.resultUnused`) |
+| 4 | `XotBaseResource::table()` — `Modules/Xot/app/Filament/Resources/XotBaseResource.php:202` | `$class::configure($table)` |
 | 5 | `XotBaseResourceTable::configure()` | `app(static::class)` e `$instance->table($table)` (da `HasXotTable`) |
-| 6 | `HasXotTable::table()`: `Modules/Xot/app/Filament/Traits/HasXotTable.php:222+` | applica colonne, filtri, azioni, header actions |
+| 6 | `HasXotTable::table()` — `Modules/Xot/app/Filament/Traits/HasXotTable.php:222+` | applica colonne, filtri, azioni, header actions |
 
 Il passo 2 è **il** punto in cui la Resource prende il controllo della tabella. Da lì in
 giù nessun hook della pagina viene consultato.
@@ -52,7 +51,7 @@ giù nessun hook della pagina viene consultato.
 
 Deduce `{PluralStudly}Table` da `Str::plural(class_basename(static::getModel()))` cercando
 `{Resource}\Tables\{Plural}Table`. Se non esiste, risolve via
-`GetResourceClassNameByModelClassAction`: cioè la Resource può trovarsi anche in un altro
+`GetResourceClassNameByModelClassAction` — cioè la Resource può trovarsi anche in un altro
 modulo. Da qui i pattern `Base*Resource/Tables/Base*Table` (tabella condivisa da più Resource
 concrete): sono legittimi e voluti.
 
@@ -77,7 +76,7 @@ Documentato in `XotBaseManageRelatedRecords.php:253-270`.
   - test 2: `getTableColumns()` è `final` (Reflection);
   - test 3: la guardia vede davvero delle List page (`count > 100`), per non essere verde per
     il motivo sbagliato.
-- `Modules/Xot/tests/Unit/ListPageHasTableClassTest.php:23`: ogni List page concreta
+- `Modules/Xot/tests/Unit/ListPageHasTableClassTest.php:23` — ogni List page concreta
   risolve la sua `Table` class.
 
 Entrambe scansionano `base_path('Modules')` **e** `base_path('Themes')`.
@@ -88,7 +87,7 @@ Entrambe scansionano `base_path('Modules')` **e** `base_path('Themes')`.
    `token_get_all` + `T_FUNCTION` + `T_STRING`. Con `grep -n "function getTable"` si
    ottengono **42 falsi positivi** (blocchi `/* ... */` attorno a metodi morti, metodi con
    prefisso custom come `notificationTableColumns`). Peggio: un `preg_match` su un blocco di
-   commento farebbe scattare la guardia **disattivandola** invece di farla rispettare: la
+   commento farebbe scattare la guardia **disattivandola** invece di farla rispettare — la
    guardia verde per il motivo sbagliato. Caso reale:
    `Performance/.../ListOrganizzativas.php` ha un `/* ... */` attorno a un vecchio
    `getTableColumns()`.

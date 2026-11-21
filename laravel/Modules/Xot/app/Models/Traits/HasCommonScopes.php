@@ -29,9 +29,9 @@ use Illuminate\Support\Carbon;
  *
  * @see docs/METODI_DUPLICATI_ANALISI.md - Proposta 4: Model Traits
  *
- * @phpstan-ignore trait.unused
+ * Trait di piattaforma riusabile: consumer nei modelli dominio / probe di test.
  */
-trait HasCommonScopes // @phpstan-ignore trait.unused
+trait HasCommonScopes
 {
     /**
      * Scope query to only active records.

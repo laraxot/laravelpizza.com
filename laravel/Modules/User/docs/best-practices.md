@@ -3,24 +3,14 @@ description:
 globs:
 alwaysApply: false
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-title: "Best Practices Migrazioni XotBaseMigration"
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "best practices migrazioni xotbasemigration user"
 ---
 # Best Practices Migrazioni XotBaseMigration
 
@@ -70,11 +60,11 @@ public function addMember(Team $team, User $user)
 - [ ] Tutti i type hint su TeamContract
 
 **Vedi anche:**
-- [README User](mdc:readme.md)
+- [README User](mdc:README.md)
 - [TeamContract](mdc:../app/Contracts/TeamContract.php)
 
 ## Collegamenti correlati
-- [README User](mdc:readme.md)
+- [README User](mdc:README.md)
 - [Linee guida Actions](mdc:actions.mdc)
 - [Linee guida Activitylog](mdc:activitylog.mdc)
 - [Testing](mdc:testing.md)
@@ -97,11 +87,10 @@ public function addMember(Team $team, User $user)
 - [ ] Tutte le migration modulari sono nella cartella del modulo
 
 **Vedi anche:**
-- [README User](mdc:readme.md)
+- [README User](mdc:README.md)
 
 ## Regola fondamentale sulle migration
 
 - Tutte le migration devono essere nella cartella `database/migrations` del modulo di riferimento.
 - Mai mettere migration custom in `laravel/database/migrations`.
-- Vedi motivazione e checklist in [PATH_CONVENTIONS.md](./path-conventions.md).
 - Vedi motivazione e checklist in [PATH_CONVENTIONS.md](./path-conventions-user.md).

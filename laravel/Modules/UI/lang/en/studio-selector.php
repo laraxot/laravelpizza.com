@@ -5,24 +5,24 @@ declare(strict_types=1);
 return [
     'actions' => [
         'select' => [
-            'label' => 'Seleziona',
-            'description' => 'Scegli questo studio',
+            'label' => 'Select',
+            'description' => 'Choose this studio',
         ],
     ],
     'empty' => [
-        'title' => 'Nessuno studio trovato',
-        'description' => 'Non ci sono studi disponibili per la zona selezionata.',
+        'title' => 'No studio found',
+        'description' => 'There are no studios available for the selected area.',
     ],
     'fields' => [
         'distance' => [
             'label' => 'Distanza',
-            'helper_text' => 'Distanza approssimativa dalla tua posizione',
+            'helper_text' => 'Approximate distance from your location',
             'tooltip' => '',
             'description' => '',
         ],
         'phone' => [
-            'label' => 'Telefono',
-            'helper_text' => 'Numero di telefono dello studio',
+            'label' => 'Phone',
+            'helper_text' => 'Studio phone number',
             'tooltip' => '',
             'description' => '',
         ],
@@ -34,9 +34,9 @@ return [
         ],
     ],
     'accessibility' => [
-        'studio_card' => 'Scheda studio, clicca per selezionare',
-        'selected_studio' => 'Studio selezionato',
-        'select_studio' => 'Premi spazio o invio per selezionare questo studio',
+        'studio_card' => 'Studio card, click to select',
+        'selected_studio' => 'Selected studio',
+        'select_studio' => 'Press space or enter to select this studio',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

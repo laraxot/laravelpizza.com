@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - Authentication & Authorization
@@ -944,7 +943,7 @@ test('user can switch teams', function () {
 - [User Model Architecture](./architecture/user-model.md) - User model design
 - [Permission System](./architecture/permission-system.md) - RBAC architecture
 - [Multi-Tenancy](./architecture/multi-tenancy.md) - Tenant isolation
-- [Team System](./teams.md) - Team collaboration
+- [Team System](./architecture/teams.md) - Team collaboration
 
 ### Authentication
 - [Authentication Flow](./auth/authentication-flow.md) - Login/logout process
@@ -963,7 +962,7 @@ test('user can switch teams', function () {
 - [API Integration](./development/api.md) - API usage guide
 
 ### Security
-- [Security Best Practices](./best-practices.md) - Security guidelines
+- [Security Best Practices](./security/best-practices.md) - Security guidelines
 - [Password Policies](./security/passwords.md) - Password requirements
 - [Audit Logging](./security/audit-log.md) - Security audit trail
 
@@ -988,7 +987,7 @@ test('user can switch teams', function () {
 - **Fixed**: File locking pattern implementation
 - **Improved**: Security alert widgets
 
-See [CHANGELOG.md](./changelog.md) for full history.
+See [CHANGELOG.md](./CHANGELOG.md) for full history.
 
 ---
 
@@ -1006,7 +1005,7 @@ See [CHANGELOG.md](./changelog.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
-See [ROADMAP.md](./roadmap.md) for details.
+See [roadmap.md](./roadmap.md) for details.
 
 ---
 
@@ -1019,8 +1018,8 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../CLAUDE.md) - Project architecture
-- [Security Guidelines](../../../../docs/security.md)
+- [CLAUDE.md](../../../claude.md) - Project architecture
+- [Security Guidelines](../../../../docs/SECURITY.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)

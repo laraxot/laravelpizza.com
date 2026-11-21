@@ -3,7 +3,7 @@ title: "Risoluzione conflitto trait teams() su BaseUser"
 type: concept
 tags: [phpstan, user, trait, spatie-permission]
 created: 2026-06-05
-updated: 2026-10-25
+updated: 2026-06-30
 qmd: "conflitto teams HasSpatiePermission HasRoles HasTeams BaseUser Spatie standard membershipTeams"
 issues: []
 discussions: []
@@ -16,19 +16,34 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: active
 ---
 
-# Trait conflict: `teams()` Spatie vs Laraxot
+# Trait conflict — `teams()` Spatie vs Laraxot
 
-`BaseUser` combina due trait che dichiarano entrambi `teams()`:
+## Problema
 
-| Trait | `teams()` | Scopo |
-|-------|-----------|-------|
-| `HasSpatiePermission` (usa `HasRoles`) | `morphToMany` sui ruoli team-scoped del package | precedenza: vince Spatie |
-| `Modules\User\Models\Traits\HasTeams` | `belongsToManyX(Team)`: membership Laraxot | esposta come alias `membershipTeams()` |
+`BaseUser` usa `HasSpatiePermission` → `HasRoles::teams()` (standard Spatie) e `HasTeams` (membership Laraxot/Jetstream). Stesso nome `teams()` → fatal PHP.
 
-## Forma canonica
+## Soluzione canonica — standard Spatie rigido
+
+**Non** aliasare o nascondere `teams()` Spatie. Il package resta API-first.
+
+| Metodo | Origine | Scopo |
+|--------|---------|--------|
+| `teams()` | Spatie `HasRoles` | Pivot permission team-scoped roles |
+| `membershipTeams()` | `HasTeams` | Membership Laraxot (`belongsToManyX` su Team) |
+
+### `HasSpatiePermission` — nessun wrapper
+
+```php
+trait HasSpatiePermission
+{
+    use HasPermissions;
+    use HasRoles;
+}
+```
+
+### `BaseUser` — `insteadof` Spatie-first (standard rigido)
 
 ```php
 use HasSpatiePermission, HasTeams {
@@ -37,48 +52,28 @@ use HasSpatiePermission, HasTeams {
 }
 ```
 
-Il `docblock` di `HasTeams::teams()` dice lo stesso: *«Su `BaseUser` esposto come
-`membershipTeams()`: `HasRoles::teams()` resta Spatie»*. Chi scrive la regola di
-precedenza deve quindi verificare che **entrambi** i trait dichiarino `teams()` nella
-versione installata.
+- `teams()` sul modello = **solo** Spatie `HasRoles::teams()`
+- membership Laraxot = `membershipTeams()` (alias del metodo nel trait `HasTeams`)
 
-## Storia delle versioni (importante)
-
-- `spatie/laravel-permission` **6.x**: `HasRoles` **non** dichiara `teams()` → la regola
-  `HasSpatiePermission::teams insteadof HasTeams` provocava un fatal all'avvio
-  (*"A precedence rule was defined for ...::teams but this method does not exist"*).
-- `spatie/laravel-permission` **8.x** (installata): `HasRoles::teams()` esiste e i mutatori
-  `assignRole()`, `removeRole()`, `syncRoles()` dichiarano `: static`: la forma canonica
-  qui sopra torna valida **senza wrapper**.
-
-Prima di introdurre alias o wrapper, quindi: `grep -n "function teams" vendor/spatie/laravel-permission/src/Traits/HasRoles.php`.
-Se il metodo c'e', la forma canonica basta; se manca, si documenta la versione e si
-adatta la precedenza: mai lasciare wrapper "per sicurezza" (duplicano package: pivot,
-eventi, reload relazioni).
+### `HasTeams` — metodo interno `teams()`, call site `membershipTeams()`
 
 ## Anti-pattern
 
-❌ Copiare `assignRole()` / `syncRoles()` / `removeRole()` in un wrapper quando il package
-li dichiara gia' `: static`: duplica la logica e diverge al primo update.
+❌ `HasSpatiePermission::teams as spatieTeams` su `BaseUser` — viola lo standard Spatie (`teams()` deve restare quello del package).
 
-❌ `use HasSpatiePermission, HasTeams;` senza `insteadof`: fatal "trait method teams has
-not been applied, because there are collisions".
+❌ `HasTeams::teams insteadof HasSpatiePermission` — togliere `teams()` a Spatie (viola standard package).
 
-❌ Ridefinire `teams()` nel modello per "unire" i due significati: sono due relazioni
-diverse e i call site vanno letti (`$user->teams()` = ruoli Spatie, `$user->membershipTeams()`
-= membership Laraxot).
+❌ Wrapper `spatieTeams()` in `HasSpatiePermission` — non serve con `insteadof` + alias `membershipTeams`.
 
 ## Migrazione call site
 
-Codice Laraxot che intendeva la membership usa `$user->membershipTeams()->attach()`;
-`$user->teams()` resta la relazione del package.
+Codice Laraxot che faceva `$user->teams()->attach()` → `$user->membershipTeams()->attach()`.
 
 ## Verifica
 
 ```bash
 cd laravel
-php -l Modules/User/app/Models/BaseUser.php
-timeout 120 php artisan --version   # un fatal di trait o di firma emerge qui
+php -r "require 'vendor/autoload.php'; class_exists(Modules\User\Models\BaseUser::class);"
 ./vendor/bin/phpstan analyse Modules --no-progress
 ```
 

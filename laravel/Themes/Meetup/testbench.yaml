@@ -1,0 +1,2 @@
+providers:
+  - Themes\Meetup\Providers\ThemeServiceProvider

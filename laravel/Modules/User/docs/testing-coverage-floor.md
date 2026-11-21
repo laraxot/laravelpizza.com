@@ -1,5 +1,5 @@
 ---
-title: "Coverage floor 50%: perimetro offline User"
+title: "Coverage floor 50% — perimetro offline User"
 module: User
 type: concept
 status: approved
@@ -10,10 +10,9 @@ qmd: "coverage floor 50 user phpunit exclude filament socialite console http vie
 related:
   - ../../Xot/docs/testing-coverage-floor.md
   - ./testing.md
-tags: [docs, user]
 ---
 
-# Coverage floor 50%: perimetro offline User
+# Coverage floor 50% — perimetro offline User
 
 Esclusioni in `Modules/User/phpunit.xml` (solo path non eseguibili offline):
 

@@ -101,6 +101,9 @@ return [
             'helper_text' => 'Applica i filtri selezionati',
             'description' => 'Azione per applicare i filtri',
         ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
         'import' => [

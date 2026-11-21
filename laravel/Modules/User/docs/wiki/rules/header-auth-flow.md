@@ -11,11 +11,6 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
-title: "header auth flow"
-status: draft
-updated: 2026-10-07
-tags: [docs, user, wiki]
-qmd: "header auth flow user"
 ---
 
 ## Rule Overview

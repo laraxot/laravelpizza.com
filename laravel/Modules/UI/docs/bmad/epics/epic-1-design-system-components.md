@@ -1,4 +1,9 @@
 ---
+title: "Epic 1 — Consolidamento primitive Form/Table del modulo UI"
+type: epic
+tags: [bmad, ui, epic, design-system, form, table]
+created: 2026-09-28
+updated: 2026-09-28
 title: "Epic 1 - Consolidamento primitive Form/Table del modulo UI"
 type: epic
 tags: [bmad, ui, epic, design-system, form, table]
@@ -14,7 +19,7 @@ related:
   - ../../../Xot/docs/bmad-method.md
 ---
 
-# Epic 1: Consolidamento primitive Form/Table
+# Epic 1 — Consolidamento primitive Form/Table
   - ../../../../Xot/docs/bmad-method.md
 ---
 
@@ -24,7 +29,7 @@ related:
 
 ## Numero e nome
 
-Epic 1: "UI primitives: un SSoT per layout, enum, fallback e data".
+Epic 1 — "UI primitives: un SSoT per layout, enum, fallback e data".
 
 ## Perché ora
 
@@ -85,7 +90,7 @@ File (verificati il 2026-10-07): `app/Filament/Forms/Components/{Person,Organiza
 3. **Un solo fallback Map/Geocoding**: `Services/Map` o `Adapters/Map` è dichiarato SSoT; l'altra coppia è rimossa e i binding del provider puntano all'unico set.
 4. **Un solo `UserData`**: `app/Data` o `app/Datas` è la directory canonica; il riferimento duplicato è rimosso e i test `tests/Unit/Datas/UIDatasCoverageTest.php` restano verdi.
 5. **Un solo config localization**: il file effettivamente letto dal provider è identificato con `grep` su `UIServiceProvider.php`; l'altro è rimosso o documentato come alias.
-6. **Parità Form/Table**: ogni colonna in `app/Filament/Tables/Columns/` che ha un campo Form gemello mantiene comportamento coerente: coperto da test Pest, non da ispezione manuale.
+6. **Parità Form/Table**: ogni colonna in `app/Filament/Tables/Columns/` che ha un campo Form gemello mantiene comportamento coerente — coperto da test Pest, non da ispezione manuale.
 7. **Qualità**: `./vendor/bin/pint` pulito e `./vendor/bin/pest --filter` sui test toccati verde in ambiente non produzione (host `10.100.200.15` escluso).
 8. **Documentazione allineata**: [../architecture.md](../architecture.md) e [../brainstorming.md](../brainstorming.md) aggiornati con la scelta presa per D1–D5, e AC chiuse riportate in `docs/sprint-status.yaml`.
 2. **Un solo enum per il layout**: i consumer di `TableLayout` e `TableLayoutEnum` sono elencati con `grep` e migrati all'unico enum rimasto; le label passano da `lang/{it,en}` senza stringhe hardcoded.
@@ -104,7 +109,7 @@ File (verificati il 2026-10-07): `app/Filament/Forms/Components/{Person,Organiza
 
 ## Tracciabilità
 
-- Epica di roadmap: [module-roadmap.md](module-roadmap.md), sezione "Epic A: Contratto e architettura" e "Epic B: Qualità verificabile".
+- Epica di roadmap: [module-roadmap.md](module-roadmap.md), sezione "Epic A — Contratto e architettura" e "Epic B — Qualità verificabile".
 - Metodo: [bmad-method.md](../../../Xot/docs/bmad-method.md).
 - Epica di roadmap: [module-roadmap.md](module-roadmap.md), sezione "Epic A - Contratto e architettura" e "Epic B - Qualità verificabile".
 - Metodo: [bmad-method.md](../../../../Xot/docs/bmad-method.md).

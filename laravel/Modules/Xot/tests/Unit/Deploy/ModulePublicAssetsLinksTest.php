@@ -29,6 +29,10 @@ it('lists every module public folder in public_html/assets/.gitignore', function
 });
 
 it('creates the module asset links in deploy.sh instead of copying', function (): void {
+    // Non ogni progetto ha deploy.sh (alcuni creano i link con `php artisan xot:module-link`).
+    if (! is_file(base_path('../deploy.sh'))) {
+        $this->markTestSkipped('deploy.sh non presente in questo progetto');
+    }
     $deploy = file_get_contents(base_path('../deploy.sh'));
     // Contano i soli comandi: un commento che spiega «niente npm run copy» non e' una copia.
     $commands = implode("\n", array_filter(
@@ -42,6 +46,9 @@ it('creates the module asset links in deploy.sh instead of copying', function ()
 });
 
 it('builds the Geo assets inside the module', function (): void {
+    if (! is_file(base_path('Modules/Geo/vite.config.js'))) {
+        $this->markTestSkipped('Modulo Geo non presente in questo progetto');
+    }
     $vite = file_get_contents(base_path('Modules/Geo/vite.config.js'));
 
     // L'output resta in Modules/Geo/public: vale sia la forma letterale sia resolve(__dirname, 'public').

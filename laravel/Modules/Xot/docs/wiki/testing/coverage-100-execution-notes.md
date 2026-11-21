@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "coverage 100 execution notes"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../../bmad/coverage-100-execution-notes.md
 ---
 
 # Coverage 100 - Execution Notes

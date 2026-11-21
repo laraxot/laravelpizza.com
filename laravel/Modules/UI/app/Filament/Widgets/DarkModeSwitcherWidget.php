@@ -17,7 +17,16 @@ final class DarkModeSwitcherWidget extends XotBaseSchemaWidget
     public bool $darkMode = false;
 
     /** @var view-string */
-    protected string $view = 'ui::filament.widgets.dark-mode-switcher';
+    protected string $view;
+
+    public function __construct()
+    {
+        /** @var view-string $view */
+        $view = 'ui::filament.widgets.dark-mode-switcher';
+        $this->view = $view;
+
+        parent::__construct();
+    }
 
     public function mount(): void
     {

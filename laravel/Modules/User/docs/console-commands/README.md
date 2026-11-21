@@ -1,11 +1,3 @@
----
-title: "Comandi Console - Modulo User"
-type: index
-status: draft
-updated: 2026-10-08
-tags: [docs, user, console-commands]
-qmd: "comandi console - modulo user user"
----
 # Comandi Console - Modulo User
 
 ## Panoramica
@@ -255,7 +247,7 @@ Modules/User/
 
 ---
 
-<!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Comandi Console - Modulo User"

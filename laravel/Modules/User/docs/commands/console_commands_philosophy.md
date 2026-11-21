@@ -1,11 +1,3 @@
----
-title: "Filosofia dei Comandi Console - Modulo User"
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user, commands]
-qmd: "filosofia dei comandi console - modulo user user"
----
 # Filosofia dei Comandi Console - Modulo User
 
 ## Principi Fondamentali

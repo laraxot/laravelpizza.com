@@ -85,10 +85,21 @@ class LoginWidget extends ChartWidget
         $readings = $graphs?->get('all')
             ?->get('user_login') ?? collect();
 
-        return $this->chartData(
-            array_values($readings->values()->all()),
-            array_values($readings->keys()->all()),
-        );
+        $chartValues = [];
+        foreach (array_values($readings->values()->all()) as $value) {
+            if (is_int($value) || is_float($value) || $value === null) {
+                $chartValues[] = $value;
+            }
+        }
+
+        $chartLabels = [];
+        foreach (array_values($readings->keys()->all()) as $label) {
+            if (is_string($label)) {
+                $chartLabels[] = $label;
+            }
+        }
+
+        return $this->chartData($chartValues, $chartLabels);
     }
 
     private function pulseStorage(): Storage

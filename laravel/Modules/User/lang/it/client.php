@@ -86,16 +86,22 @@ return [
         ],
         'client_id' => [
             'tooltip' => '',
+            'description' => 'client_id',
+            'helper_text' => 'client_id',
+            'placeholder' => 'client_id',
+            'label' => 'Client ID',
         ],
         'secret' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Segreto',
         ],
         'id' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'ID',
         ],
     ],
     'plural' => [

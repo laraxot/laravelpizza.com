@@ -1,4 +1,5 @@
 ---
+qmd: "ui stories cookiebar visual audit story md"
 type: ui-audit-story
 title: Cookiebar visual audit and accessibility compliance
 status: todo
@@ -7,7 +8,7 @@ links:
   module: UI
   related_stories:
     - ui-module-bmad-setup.story.md
-    - phpstan-cleanup-ui.story.md
+    - 2026-10-06-phpstan-cleanup-ui.story.md
 created: 2026-10-14T13:36:00Z
 updated: 2026-10-14T13:36:00Z
 ---
@@ -34,13 +35,13 @@ Issues identified:
 
 ## Actors Affected
 
-- **All visitors**: First thing seen on the front-of-house web properties (customer QR menu, waiter portal, public pages)
-- **Privacy officers**: Must verify GDPR/LDMA compliance before go-live
+- **All visitors** — First thing seen on the front-of-house web properties (customer QR menu, waiter portal, public pages)
+- **Privacy officers** — Must verify GDPR/LDMA compliance before go-live
 
 ## Acceptance Criteria
 
-- [ ] Remove inline `<script>`: move to a dedicated JS module or Livewire `wire:ignore`
-- [ ] Remove inline `<style>`: use Tailwind classes (already mostly done) with `@layer components`
+- [ ] Remove inline `<script>` — move to a dedicated JS module or Livewire `wire:ignore`
+- [ ] Remove inline `<style>` — use Tailwind classes (already mostly done) with `@layer components`
 - [ ] Add `prefers-reduced-motion: reduce` to the scroll hide/show animation
 - [ ] Add `role="dialog" aria-live="polite"` and `aria-label` for screen readers
 - [ ] Ensure all buttons are reachable via Tab and have visible focus rings (`focus:ring-2`)

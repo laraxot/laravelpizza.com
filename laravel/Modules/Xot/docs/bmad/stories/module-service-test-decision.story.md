@@ -4,10 +4,9 @@ type: story
 status: review
 priority: medium
 created: 2026-10-09
-updated: 2026-10-28
+updated: 2026-10-09
 module: Xot
 tags: [bmad, xot, module-service, test-cleanup]
-qmd: "[story] adeguamento test dopo rimozione moduleservice xot"
 ---
 
 # [STORY] Adeguamento test dopo rimozione ModuleService
@@ -45,7 +44,3 @@ dell'Action, senza ripristinare il Service né duplicare la logica.
 - Pest mirato su `ModuleServiceTest.php`: timeout di 60 secondi senza output; il DB
   configurato (`10.100.200.53`) non risponde. Da rilanciare quando il database di test
   è disponibile.
-
-## Aggiornamento 2026-10-28
-
-Il merge `ae2239de0`/`3bfdfff16` ha riportato la vecchia versione del test (riflessione su `Services\ModuleService`, classe inesistente: 27 errori PHPStan). Riscritto di nuovo sul contratto di `GetAllModelsByModuleNameAction` (modulo inesistente -> `[]`; chiave = snake_case del basename; classi astratte escluse). Il nome del file resta `ModuleServiceTest.php` (rinominarlo in `GetAllModelsByModuleNameActionTest.php` e' un `git mv` che il brief dello swarm non permetteva). Vedi `../../stories/phpstan-zero-errors-xot.story.md`.

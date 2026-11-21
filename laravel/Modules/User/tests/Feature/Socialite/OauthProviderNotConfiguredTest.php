@@ -30,6 +30,7 @@ beforeEach(function (): void {
 });
 
 test('without credentials the entry point never reaches Google and returns to the login of the same language', function (string $lang): void {
+    oauthSkipUnsupportedLocale($lang);
     $response = get('/'.$lang.'/auth/login/google');
 
     $response->assertRedirect('/'.$lang.'/auth/login');
@@ -58,6 +59,7 @@ test('in debug the error says what is missing, where to create the keys and wher
 });
 
 test('without debug the error is friendly and leaks no infrastructure detail', function (string $lang): void {
+    oauthSkipUnsupportedLocale($lang);
     config(['app.debug' => false]);
 
     get('/'.$lang.'/auth/login/google')->assertRedirect('/'.$lang.'/auth/login');

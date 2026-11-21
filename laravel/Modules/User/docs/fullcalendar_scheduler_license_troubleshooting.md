@@ -1,11 +1,3 @@
----
-title: "FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "fullcalendar scheduler license - troubleshooting e configurazione avanzata user"
----
 # FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata
 
 ## Panoramica

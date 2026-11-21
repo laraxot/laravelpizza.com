@@ -74,9 +74,15 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     }
 
     /**
+<<<<<<< .merge_file_lyrqx2
      * @param  Builder<Model>|Model  $query
      * @param  string|int  $value
      * @param  string|null  $field
+=======
+     * @param Builder<Model>|Model $query
+     * @param string|int $value
+     * @param string|null $field
+>>>>>>> .merge_file_TsnKCP
      * @return Builder<Model>
      */
     public function resolveRouteBindingQuery($query, $value, $field = null): Builder

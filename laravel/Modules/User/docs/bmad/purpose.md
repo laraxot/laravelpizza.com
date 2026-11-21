@@ -1,5 +1,5 @@
 ---
-title: "User: scopo del modulo e come raggiungerlo meglio"
+title: "User — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-10-06
@@ -12,7 +12,7 @@ discussions:
   - "https://github.com/laraxot/module_user_fila5/discussions/104"
 ---
 
-# User: perche' esiste
+# User — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -22,7 +22,7 @@ discussions:
 
 - `User`, `Team`, `Tenant`: modelli base per identity, gruppi, isolamento
 - `HasTeams`, `HasTenants`, `HasAuthenticationLog`: trait di autenticazione e autorizzazione
-- 666 file PHP, 57 Action, 26 Widget: qui l'interfaccia conta: login, profilo, gestione team sono superfici che l'utente tocca davvero
+- 666 file PHP, 57 Action, 26 Widget: qui l'interfaccia conta — login, profilo, gestione team sono superfici che l'utente tocca davvero
 - OAuth completo (`OauthClient`, `OauthAccessToken`, `OauthRefreshToken`, `OauthAuthCode`, `OauthPersonalAccessClient`)
 - `AuthenticationLog`, `Device`: tracciamento accessi e dispositivi
 - `Feature` (Pennant): funzionalita' attivabili per utente o contesto
@@ -66,7 +66,7 @@ Badge e versioni riportano: Laravel `^13.0`, PHP `^8.3`, Filament `^5.0`, PHPSta
 
 Dati di accesso e dispositivi esistono gia' in UI (`AuthenticationLogResource`, `RecentLoginsWidget`, `DeviceResource`). Manca euristica di anomalia (nuovo dispositivo, orario inusuale).
 
-## Confini: cosa **non** appartiene a User
+## Confini — cosa **non** appartiene a User
 
 - I **dati di servizio** del dipendente (matricola, categoria, struttura): Sigma
 - Le **valutazioni**: moduli di dominio
@@ -75,7 +75,7 @@ Dati di accesso e dispositivi esistono gia' in UI (`AuthenticationLogResource`, 
 
 ## Collegamenti
 
-- `laravel/Modules/Tenant/docs/purpose.md`: l'altro asse di separazione
-- `laravel/Modules/Xot/docs/purpose.md`: `ProfileContract` e le classi base
-- `docs/bmad/module-excellence-prd.md`: gap verso "perfezione assoluta" (Epic 12/13/14)
-- `docs/bmad/decision-log.md`: correzioni e aggiornamenti (2026-09-22)
+- `laravel/Modules/Tenant/docs/purpose.md` — l'altro asse di separazione
+- `laravel/Modules/Xot/docs/purpose.md` — `ProfileContract` e le classi base
+- `docs/bmad/module-excellence-prd.md` — gap verso "perfezione assoluta" (Epic 12/13/14)
+- `docs/bmad/decision-log.md` — correzioni e aggiornamenti (2026-09-22)

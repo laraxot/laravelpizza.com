@@ -96,7 +96,7 @@
                         href="{{ LaravelLocalization::localizeUrl('/events') }}"
                         class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                     >
-                        {{ __('Vedi Eventi') }}
+                        {{ __('pub_theme::common.actions.view_events.label') }}
                     </a>
                 @endguest
 

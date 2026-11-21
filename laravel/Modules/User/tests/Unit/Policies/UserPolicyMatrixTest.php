@@ -23,7 +23,7 @@ uses(TestCase::class);
 /**
  * Ruoli che amministrano gli utenti: tutti e soli quelli gia' definiti dal progetto (super-admin passa da before() della policy).
  */
-const DCP285_ADMIN_ROLES = ['super-admin', 'admin', 'user::admin'];
+const DCP285_ADMIN_ROLES = ['super-admin', 'admin', 'user::admin', 'restaurant::admin'];
 
 /**
  * Ruoli che esistono nel progetto ma non amministrano gli utenti. `null` = cittadino senza ruoli.

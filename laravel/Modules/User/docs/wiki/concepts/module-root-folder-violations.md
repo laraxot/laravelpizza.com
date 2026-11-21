@@ -1,5 +1,5 @@
 ---
-title: "Violazioni struttura root: modulo User (risolto)"
+title: "Violazioni struttura root — modulo User (risolto)"
 type: concept
 module: User
 status: deprecated
@@ -18,13 +18,13 @@ related:
   - "./filament-widget-resource-form-delegation.md"
 ---
 
-# Violazioni struttura root: modulo User (risolto)
+# Violazioni struttura root — modulo User (risolto)
 
 > **Stato:** ✅ Bonifica completata 2026-06-18. Cartelle root `Actions/`, `Application/`, `Database/`, `Events/`, `Listeners/` rimosse.
 
 ## Regola (canon)
 
-[architecture-module-directory-structure.md](../../../../../../docs/wiki/bmad/architecture-module-directory-structure.md): tutto il PHP sotto `app/`, DB sotto `database/` minuscolo.
+[architecture-module-directory-structure.md](../../../../../../docs/wiki/bmad/architecture-module-directory-structure.md) — tutto il PHP sotto `app/`, DB sotto `database/` minuscolo.
 
 ## Storico
 

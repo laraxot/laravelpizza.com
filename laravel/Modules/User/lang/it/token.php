@@ -19,6 +19,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Nome',
         ],
         'create' => [
             'tooltip' => '',

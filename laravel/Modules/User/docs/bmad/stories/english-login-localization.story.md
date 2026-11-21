@@ -8,10 +8,6 @@ issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/572"
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/573"
-type: story
-updated: 2026-10-08
-tags: [docs, user, bmad]
-qmd: "login inglese senza fallback italiano user"
 ---
 
 # Login inglese senza fallback italiano

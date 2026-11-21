@@ -1,18 +1,47 @@
 ---
-title: "UI: Architettura BMAD"
+qmd: "ui bmad architecture md"
+title: "UI — Architettura BMAD"
 type: architecture
+scope: UI
+epic: 5.124-bmad-user-module-perfection-study
+bmad_version: v3.30.1
+updated_at: '2026-09-22'
+status: done
+related:
+  - ../stories/continuazione-domani.md
+---
+
+# UI — Architettura
+
+## Scopo
+Componenti UI / Tema.
+
+## Componenti
+- `UI/Filament/` — interfacce Filament 5 (se applicabile)
+- `UI/Actions/` — azioni (Spatie Queueable se richiesto)
+- `UI/Models/` — estende XotBase (se applicabile)
+
+## Qualità
+- PHPStan: OK (0 errori)
+- Conflicts: 0
+- Lock: 0 attivi
+
+## Milestones Domani
+1. Verificare conformità con XotBase
+2. Aggiornare `docs/bmad/stories/continuazione-domani.md` se chiuso
+3. Indicare stato concluso in `docs/sprint-status.yaml`
+
+title: "UI: Architettura BMAD"
 tags: [bmad, ui, architecture, design-system]
 created: 2026-09-26
 updated: 2026-09-28
 qmd: "UI architettura mappa reale modelli colonne form azioni provider"
 module: UI
-related:
   - ./architecture/module-boundary.md
   - ./brainstorming.md
   - ./README.md
   - ./epics/epic-1-design-system-components.md
 status: draft
----
 
 # UI: Architettura
 
@@ -68,7 +97,7 @@ Relazioni autoreferenziate: il modello non dichiara metodi `children`/`parent`; 
 
 ### Widget Filament (`app/Filament/Widgets/`)
 
-`DarkModeSwitcherWidget`, `GroupWidget`, `HeroWidget`, `OverlookWidget`, `RedirectWidget`, `RowWidget`, `StatWithIconWidget`, `StatsOverviewWidget`, `TestChartWidget`, `TestWidget`, `UserCalendarWidget`. Varianti non attive presenti come file disabilitati: `UserCalendarWidget.php.disabled`, `.disabled2`, `.fila3`.
+`DarkModeSwitcherWidget`, `GroupWidget`, `HeroWidget`, `OverlookWidget`, `RedirectWidget`, `RowWidget`, `StatWithIconWidget`, `StatsOverviewWidget`, `TestChartWidget`, `TestWidget`, `UserCalendarWidget`. Varianti non attive presenti come file disabilitati: `UserCalendarWidget.php.disabled`, `.disabled2`, `.fila5`.
 
 ### Azioni di tabella
 
@@ -145,3 +174,9 @@ Confronto di questa mappa con `laravel/Modules/UI`; il testo sopra non e' stato 
 | Pest "da eseguire in ambiente non produzione" | eseguito con sqlite in memoria: 218 passati, 16 falliti, 1 risky, 109 saltati |
 
 Il frontmatter di questo file ha la chiave `title` ripetuta due volte.
+
+## Confini e autorizzazione verificati (2026-11-16)
+
+- UI è una **libreria**: nessuna Resource, 1 policy astratta (`UiBasePolicy`, solo `before()`), 4 modelli (`Category`, `Collection`, `FieldOption`, `BaseModel`).
+- Dipendenza circolare di fatto: Xot importa da UI (`IDColumn`, `TableLayoutEnum`, `TableLayoutToggleTableAction`, 11 `use`) mentre UI estende le classi base Xot. Il lato corretto è UI → Xot; vedi [Xot audit P1-X1](../../../Xot/docs/bmad/audits/xot-audit.md).
+- Il pannello `ui::admin` ha una dashboard demo (dati finti): finding P1-UI1 in [audit](./audits/ui-audit.md).

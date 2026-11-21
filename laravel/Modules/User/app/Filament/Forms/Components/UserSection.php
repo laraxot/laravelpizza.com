@@ -23,7 +23,6 @@ class UserSection extends XotBaseSection
                 // TextInput::make('matr'),
                 TextInput::make('first_name'),
                 TextInput::make('last_name'),
-                TextInput::make('email'),
             ]),
         ]);
     }

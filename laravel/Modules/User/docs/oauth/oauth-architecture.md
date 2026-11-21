@@ -9,7 +9,6 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./github.md"
-status: draft
 ---
 
 # OAuth Architecture - User Module
@@ -208,7 +207,7 @@ test('client can have permissions', function () {
 
 - [Laravel Passport Docs](https://laravel.com/docs/passport)
 - [Spatie Permission](https://spatie.be/docs/laravel-permission)
-- [User Module Architecture](../ARCHITECTURE.md)
+- [User Module Architecture](../architecture.md)
 - [OAuth Actions](../actions/oauth-actions.md)
 
 ---

@@ -1,4 +1,6 @@
 ---
+title: "Puntatore — consolidation inventory"
+
 title: "Puntatore: consolidation inventory"
 canonical: ./livewire-inventory.md
 superseded: true

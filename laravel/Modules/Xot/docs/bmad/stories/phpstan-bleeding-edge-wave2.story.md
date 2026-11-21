@@ -1,4 +1,5 @@
 ---
+qmd: "xot bmad stories phpstan bleeding edge wave2 story md"
 epic: code-quality
 type: story
 status: done

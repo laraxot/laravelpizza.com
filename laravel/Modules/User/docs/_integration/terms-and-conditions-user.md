@@ -16,7 +16,6 @@ related:
   - "./passport.md"
   - "./payment.md"
   - "./phpstan.md"
-status: draft
 ---
 
 # terms_and_conditions - User

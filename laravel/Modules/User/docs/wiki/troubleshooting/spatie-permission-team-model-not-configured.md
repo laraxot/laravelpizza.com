@@ -9,19 +9,12 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./filament-user-creation-pty-error.md"
-  - "./git-merge-conflict-inventory.md"
-  - "./git-merge-conflict-inventory.md"
-  - "./git-push-lfs-missing-objects.md"
-  - "./phpstan-module-analysis-memory.md"
-  - "./phpstan-widget-property-types.md"
-  - "./phpstan-widget-property-types.md"
-  - "./git-merge-conflict-inventory-stato-rinominato.md"
+  - "./git-merge-conflict-inventory-1.md"
   - "./git-merge-conflict-inventory.md"
   - "./git-push-lfs-missing-objects.md"
   - "./phpstan-module-analysis-memory.md"
-  - "./phpstan-widget-property-types-stato-rinominato.md"
+  - "./phpstan-widget-property-types-1.md"
   - "./phpstan-widget-property-types.md"
-status: draft
 ---
 
 # Spatie Permission Team Model Not Configured

@@ -1,33 +1,37 @@
 ---
-title: "Git: inventario conflitti merge (User)"
+title: "Git — inventario conflitti merge (User)"
 type: troubleshooting
 module: User
 tags: [git, merge, conflict, user]
 created: 2026-04-28
-updated: 2026-07-08
+updated: 2026-11-16
 qmd: "git merge conflict markers User docs inventory rebase"
 related:
   - "./filament-user-creation-pty-error.md"
-  - "./git-merge-conflict-inventory.md"
+  - "./git-merge-conflict-inventory-1.md"
   - "./git-push-lfs-missing-objects.md"
   - "./phpstan-module-analysis-memory.md"
-  - "./phpstan-widget-property-types.md"
   - "./phpstan-widget-property-types.md"
   - "./spatie-permission-team-model-not-configured.md"
   - "./git-merge-conflict-inventory-stato-rinominato.md"
-  - "./git-push-lfs-missing-objects.md"
-  - "./phpstan-module-analysis-memory.md"
   - "./phpstan-widget-property-types-stato-rinominato.md"
-  - "./phpstan-widget-property-types.md"
-  - "./spatie-permission-team-model-not-configured.md"
+  - "../../bmad/stories/phpstan-conflict-markers-bootstrap.story.md"
+  - "../../bmad/stories/committed-conflict-markers.story.md"
 status: draft
 ---
 
-# Git: inventario conflitti merge (User)
+# Git — inventario conflitti merge (User)
+
+## Stato 2026-11-16
+
+- Marker PHP User risolti (bootstrap `UserServiceProvider` + BaseUser/BaseTenant/Socialite/UserForm):
+  [phpstan-conflict-markers-bootstrap](../../bmad/stories/phpstan-conflict-markers-bootstrap.story.md).
+- Scan marker su `*.php` / `*.blade.php` → **NONE**.
+- Aggiorna (non sostituisce) lo storico 2026-07; link da story BMAD e `git-conflicts-resolution.md`.
 
 ## Stato 2026-07-08
 
-- **Rebase abortito** su `dev` (328 pick, 623 file `AA`): causa: tentativo rebase sopra `laraxot/dev` con storico LFS corrotto.
+- **Rebase abortito** su `dev` (328 pick, 623 file `AA`) — causa: tentativo rebase sopra `laraxot/dev` con storico LFS corrotto.
 - Dopo `git rebase --abort`: **0** marker `<<<<<<<` nei `.md` tracciati (`git grep`).
 - Push risolto con squash → [git-push-lfs-missing-objects](./git-push-lfs-missing-objects.md).
 

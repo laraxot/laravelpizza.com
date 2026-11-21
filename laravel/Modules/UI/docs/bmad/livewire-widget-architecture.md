@@ -1,4 +1,6 @@
 ---
+title: "Architecture — UI widget"
+
 title: "Architecture: UI widget"
 type: architecture
 module: UI

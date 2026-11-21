@@ -7,8 +7,8 @@
 --}}
 <nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" aria-label="{{ __('pub_theme::navigation.main') }}" id="main-navigation">
     @php
-        $loginLabel = __('pub_theme::navigation.auth.login');
-        $registerLabel = __('pub_theme::navigation.auth.register');
+        $loginLabel = __('pub_theme::navigation.auth.login.label');
+        $registerLabel = __('pub_theme::navigation.auth.register.label');
     @endphp
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
@@ -30,12 +30,11 @@
                 </a>
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
                     <x-filament::icon icon="meetup-icon-calendar" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('pub_theme::navigation.events') }}</span>
+                    <span>{{ __('pub_theme::navigation.sections.events.label') }}</span>
                 </a>
-                {{-- La chat della community non esiste ancora: il link portava a "#" (e /chat dava 404) --}}
-                <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
-                    <x-filament::icon icon="meetup-icon-community" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('pub_theme::navigation.about') }}</span>
+                <a href="#" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
+                    <x-filament::icon icon="meetup-icon-chat" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
+                    <span>{{ __('pub_theme::navigation.sections.community_chat.label') }}</span>
                 </a>
                 
                 {{-- Language Switcher Component --}}
@@ -62,7 +61,7 @@
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     x-data="{ mobileMenuOpen: false }"
                     class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" 
-                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('pub_theme::navigation.toggle_menu') }}">
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('pub_theme::navigation.sections.toggle_mobile_menu.label') }}">
                 <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" aria-hidden="true" />
             </button>
         </div>
@@ -73,13 +72,9 @@
                 <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium" data-nav-link>{{ __('pub_theme::navigation.home') }}</a>
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>
                     <x-filament::icon icon="meetup-icon-calendar" class="w-5 h-5 text-red-500" />
-                    <span>{{ __('pub_theme::navigation.events') }}</span>
+                    <span>{{ __('pub_theme::navigation.sections.events.label') }}</span>
                 </a>
-                <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>
-                    <x-filament::icon icon="meetup-icon-community" class="w-5 h-5 text-red-500" />
-                    <span>{{ __('pub_theme::navigation.about') }}</span>
-                </a>
-
+                
                 <div class="px-4 py-4 border-t border-slate-700/30 mt-2">
                     <x-ui.language-switcher mobile />
                 </div>
@@ -93,42 +88,39 @@
                     <div class="px-4 py-2 space-y-1">
                         <div class="flex items-center space-x-3 px-2 py-4 border-b border-slate-700/30 mb-4">
                             @php
-                                $authUser = Auth::user();
-                                // Foto del profilo se caricata; altrimenti le iniziali (niente Gravatar: nessuna richiesta a terzi).
-                                $avatarUrl = (string) ($authUser?->profile?->getAvatarUrl() ?? '');
-                                $initials = \Illuminate\Support\Str::of((string) $authUser?->name)->squish()->explode(' ')
-                                    ->filter()->take(2)->map(fn (string $word): string => mb_strtoupper(mb_substr($word, 0, 1)))->implode('');
+                                $profile = Auth::user()->profile;
+                                $avatarUrl = $profile?->getAvatarUrl() ?? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
                             @endphp
-                            @if($avatarUrl !== '')
-                                <img src="{{ $avatarUrl }}" class="h-12 w-12 rounded-full border-2 border-slate-700 object-cover" alt="">
-                            @else
-                                <span class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-slate-700 bg-gradient-to-br from-red-500 to-orange-500 font-bold text-white" aria-hidden="true">{{ $initials !== '' ? $initials : '?' }}</span>
-                            @endif
+                            <img src="{{ $avatarUrl }}" class="h-12 w-12 rounded-full border-2 border-slate-700" alt="{{ Auth::user()->name }}">
                             <div>
                                 <p class="text-white font-bold">{{ Auth::user()->name }}</p>
                                 <p class="text-xs text-slate-400 font-medium">{{ Auth::user()->email }}</p>
                             </div>
                         </div>
-                        {{-- "Dashboard" rimossa: la dashboard pubblica non esiste (pagina vuota, ora 404). L'area personale è "I miei eventi". --}}
-                        <a href="{{ LaravelLocalization::localizeUrl('/events/my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                        <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('pub_theme::navigation.user_menu.dashboard.label') }}</span>
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('pub_theme::navigation.user_menu.my_events') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.my_events.label') }}</span>
                         </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/profile/'.auth()->id()) }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                        <a href="{{ LaravelLocalization::localizeUrl('/events-near-me') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('pub_theme::navigation.user_menu.nearby_events.label') }}</span>
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>
-                        </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/profile/edit') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
-                            <x-heroicon-o-pencil-square class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('pub_theme::navigation.user_menu.edit_profile') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.my_profile.label') }}</span>
                         </a>
                         
-                        {{-- Logout: POST alla rotta "logout" del modulo User (prima puntava alla home e non disconnetteva) --}}
-                        <form method="POST" action="{{ route('logout') }}" class="pt-4 mt-4 border-t border-slate-700/30">
+                        {{-- In Folio projects, we redirect to localized paths, not named routes --}}
+                        <form method="POST" action="/{{ app()->getLocale() }}" class="pt-4 mt-4 border-t border-slate-700/30">
                             @csrf
+                            <input type="hidden" name="_method" value="POST"> {{-- logout often needs a form --}}
                             <button type="submit" class="flex w-full items-center space-x-3 text-red-400 hover:text-red-300 px-4 py-3 hover:bg-red-500/10 rounded-xl transition-colors font-bold block">
                                 <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5" />
-                                <span>{{ __('pub_theme::navigation.user_menu.logout') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.logout.label') }}</span>
                             </button>
                         </form>
                     </div>

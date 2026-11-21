@@ -1,5 +1,6 @@
 ---
-title: "Story: trait.unused EnsuresUiDatabaseSchema (delete)"
+qmd: "ui bmad stories ensures ui database schema trait unused story md"
+title: "Story — trait.unused EnsuresUiDatabaseSchema (delete)"
 type: story
 module: UI
 epic: phpstan-modules-2026-09-24
@@ -7,10 +8,7 @@ status: done
 related:
   - ../../../../Xot/docs/stories/17.1.phpstan-modules-202-errors-fix.story.md
   - ../../wiki/concepts/testing.md
-  - ../../../../../../docs/wiki/memories/ensures-ui-database-schema-trait-deleted.md
-updated: 2026-10-15
-tags: [docs, ui, bmad]
-qmd: "ensures-ui-database-schema-trait-unused ui"
+  - ../../../../../docs/wiki/memories/ensures-ui-database-schema-trait-deleted.md
 ---
 
 # ensures-ui-database-schema-trait-unused
@@ -30,7 +28,7 @@ Non **wire**. Motivazioni:
    (`use EnsuresUiDatabaseSchema` + `ensureUiSchema()`), poi rimosso in
    `e4d16be2d` (2026-08-19) insieme all'uso in `TestCase`.
 4. Pattern attuale: skip offline via `TestCase::uiDbUnavailable()` /
-   gruppi Pest `ui-db` / `no-ui-db`: **non** bootstrap DDL in-test
+   gruppi Pest `ui-db` / `no-ui-db` — **non** bootstrap DDL in-test
    (allineato a dati sacri / sqlite condiviso).
 5. `tests/Pest.php` vieta `tests/Support/` (ADR-002).
 
@@ -55,4 +53,4 @@ PHPUnit/Pest non applicabile a file già assente.
 
 ## Status
 
-**done**: 2026-09-24, agent `cursor-swarm-ui`.
+**done** — 2026-09-24, agent `cursor-swarm-ui`.

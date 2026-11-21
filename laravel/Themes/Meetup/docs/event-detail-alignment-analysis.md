@@ -262,8 +262,8 @@ public function organizer(): BelongsTo
 ## Riferimenti
 
 - [Screenshot Documentation](./screenshots/readme.md)
-- [Volt Component Pattern](../volt-component-pattern.md)
-- [Social Share Documentation](../social-share.md)
+- [Volt Component Pattern](volt-component-pattern.md)
+- [Social Share Documentation](social-share.md)
 - [Seo Module - Social Share](../../modules/seo/docs/social-share-component.md)
 
 ---

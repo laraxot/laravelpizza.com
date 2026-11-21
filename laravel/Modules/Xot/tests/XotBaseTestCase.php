@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Process;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Translation\ArrayLoader;
 use Illuminate\Translation\Translator;
@@ -188,6 +189,13 @@ abstract class XotBaseTestCase extends BaseTestCase
         // Nei test non esiste una build Vite (public_html/build/manifest.json):
         // i blade con @vite renderizzano senza asset invece di lanciare ViewException.
         $this->withoutVite();
+
+        // I test di copertura chiamano execute() su tutte le Action, anche ExecuteComposerDumpAutoloadAction:
+        // un composer vero riscrive vendor/composer/autoload_psr4.php e i test dei moduli successivi non trovano
+        // piu' il proprio TestCase. Nei test composer non parte mai: solo quel comando e' finto, gli altri restano veri.
+        Process::fake([
+            'composer *' => Process::result('composer finto nei test'),
+        ]);
 
         if (! $this->app->bound('translator')) {
             $this->app->singleton('translator', function (Application $app) {

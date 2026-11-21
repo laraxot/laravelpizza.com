@@ -5,8 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "integrazione dei server mcp con il modulo user user"
 ---
 
 # Integrazione dei Server MCP con il Modulo User

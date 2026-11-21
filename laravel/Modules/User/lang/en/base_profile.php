@@ -4,16 +4,20 @@ declare(strict_types=1);
 
 return [
     'model' => [
-        'label' => 'Profilo Base',
+        'label' => 'Base Profile',
     ],
     'navigation' => [
-        'name' => 'Profilo',
-        'plural' => 'Profili',
+        'name' => 'Profile',
+        'plural' => 'Profiles',
         'group' => [
             'name' => 'User management',
+<<<<<<< .merge_file_f3HVlU
             'description' => 'Gestione dei profili',
+=======
+            'description' => 'Manage profiles',
+>>>>>>> .merge_file_PtPCrc
         ],
-        'label' => 'profili',
+        'label' => 'profiles',
         'sort' => '31',
         'icon' => 'user-user-permission',
     ],

@@ -1,15 +1,11 @@
 ---
-title: "Git Push Issue: LFS Objects Missing on Remote"
+title: "Git Push Issue — LFS Objects Missing on Remote"
 date: 2026-07-28
 author: claude-ai
 status: BLOCKED_ON_SERVER_STATE
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module   git push & lfs issue (2026-07-28) user"
 ---
 
-# User Module: Git Push & LFS Issue (2026-07-28)
+# User Module — Git Push & LFS Issue (2026-07-28)
 
 ## Problem
 
@@ -113,7 +109,7 @@ git push laraxot dev
 
 ## Recommendation
 
-**Proceed with Option A**: Remove image files from git tracking:
+**Proceed with Option A** — Remove image files from git tracking:
 
 ```bash
 cd /var/www/_bases/<nome repository>/laravel/Modules/User
@@ -139,7 +135,7 @@ This maintains forward-only git discipline (no reset/revert) and allows the code
 
 ---
 
-## Resolution Attempt A: Executed Cleanup Commit
+## Resolution Attempt A — Executed Cleanup Commit
 
 **Commit:** bdf5c64 `fix(User): remove LFS-tracked images blocking push to remote`
 
@@ -159,17 +155,17 @@ remote: error: GH008: Your push referenced at least 11 unknown Git LFS objects:
 
 When pushing commits 4547061..bdf5c64, server pre-receive hook validates ALL commits in the range:
 
-1. ✅ bdf5c64: removes LFS pointers (clean)
-2. ❌ 4547061: **contains LFS pointers for objects unknown to server** ← blocks push
+1. ✅ bdf5c64 — removes LFS pointers (clean)
+2. ❌ 4547061 — **contains LFS pointers for objects unknown to server** ← blocks push
 
 **Why standard forward-only approaches fail:**
-- `git push provtv dev`: server rejects at pre-receive
-- `git push --force-with-lease`: server still rejects (server-side enforcement)
-- `git pull laraxot`: histories are unrelated (disjoint)
-- `git rebase -i` to remove commit 4547061: violates forward-only
-- `git filter-branch`: violates forward-only
+- `git push provtv dev` — server rejects at pre-receive
+- `git push --force-with-lease` — server still rejects (server-side enforcement)
+- `git pull laraxot` — histories are unrelated (disjoint)
+- `git rebase -i` to remove commit 4547061 — violates forward-only
+- `git filter-branch` — violates forward-only
 
-## Infrastructure Blocker: Escalation Required
+## Infrastructure Blocker — Escalation Required
 
 **Problem:** Git LFS object storage on provtv is either:
 1. Not initialized/configured for this repository

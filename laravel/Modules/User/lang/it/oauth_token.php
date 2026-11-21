@@ -52,26 +52,31 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Nome',
         ],
         'scopes' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Ambiti',
         ],
         'revoked' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Revocato',
         ],
         'created_at' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Creato il',
         ],
         'expires_at' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Scade il',
         ],
     ],
     'navigation' => [

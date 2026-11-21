@@ -112,6 +112,26 @@ return [
         'settings' => 'Settings',
         'reports' => 'Report',
     ],
+<<<<<<< .merge_file_isbRQg
+=======
+    // Display names of the role codes (spatie role `name`). The code stays the stored value.
+    'labels' => [
+        'super-admin' => 'Super admin',
+        'restaurant__admin' => 'Owner',
+        'restaurant__restaurateur' => 'Restaurateur',
+        'admin' => 'Administrator',
+        'moderator' => 'Moderator',
+        'editor' => 'Editor',
+        'manager' => 'Manager',
+        'user' => 'User',
+        'guest' => 'Guest',
+        'bar' => 'Bar',
+        'kitchen' => 'Kitchen',
+        'cashier' => 'Cashier',
+        'waiter' => 'Waiter',
+        'respHACCP' => 'HACCP manager',
+    ],
+>>>>>>> .merge_file_VHLCIL
     'label' => 'Role',
     'plural_label' => 'Roles',
 ];

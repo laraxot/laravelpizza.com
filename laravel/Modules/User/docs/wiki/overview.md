@@ -5,17 +5,14 @@ type: overview
 created: "2026-04-15T08:28:51Z"
 updated: "2026-04-15T08:28:51Z"
 related:
-  - "./agents.md"
-  - "./Architecture.md"
+  - "./AGENTS.md"
+  - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"
   - "./context-compression.md"
   - "./index.md"
   - "./log.md"
   - "./socialite-architecture.md"
-status: draft
-tags: [docs, user, wiki]
-qmd: "user wiki overview user"
 ---
 
 # User Wiki Overview

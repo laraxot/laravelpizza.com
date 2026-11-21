@@ -30,6 +30,18 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'name' => [
+            'label' => 'Nome',
+        ],
+        'display_name' => [
+            'label' => 'Nome visualizzato',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+        ],
+        'is_active' => [
+            'label' => 'Attivo',
+        ],
     ],
     'actions' => [
         'create' => [

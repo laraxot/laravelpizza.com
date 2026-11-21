@@ -7,5 +7,5 @@ declare(strict_types=1);
 // Canon: Modules/User/docs/wiki — domain i18n only.
 // File: lang/en/user/model.php
 return [
-    'label' => 'Utente',
+    'label' => 'User',
 ];

@@ -15,7 +15,10 @@ use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
+<<<<<<< .merge_file_KARulb
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+=======
+>>>>>>> .merge_file_Yx4Lwn
 
 uses(TestCase::class);
 
@@ -285,7 +288,11 @@ describe('User Permission System', function () {
 describe('User Media Management', function () {
     it('can have media attached', function () {
         // Il modello media del progetto e' Modules\\Media\\Models\\Media (estende quello di Spatie).
+<<<<<<< .merge_file_KARulb
         expect((new User)->media()->getMorphType())->toBe('model_type');
+=======
+        expect((new User())->media()->getMorphType())->toBe('model_type');
+>>>>>>> .merge_file_Yx4Lwn
     });
 });
 

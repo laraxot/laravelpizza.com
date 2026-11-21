@@ -3,7 +3,7 @@
 - Stato: done (2026-10-07), con aperti elencati sotto
 - Fase BMAD: Quick Flow (analisi, fix, verifica a browser e test)
 - Owner: Modules/User (lang), Themes/Sixteen (view)
-- Collegata a: [login-page-it-translations-fix-2026-10-07.story.md](./login-page-it-translations-fix.story.md)
+- Collegata a: [login-page-it-translations-fix-2026-10-07.story.md](./login-page-it-translations-fix-2026-10-07.story.md)
   (la sua voce "Aperto" sui locali non italiani e' chiusa qui)
 
 ## Problema
@@ -49,7 +49,7 @@ grezze minuscole (`email*`, `password*`, `remember` due volte). `de` e `es` avev
 
 - Sweep delle pagine pubbliche (`/en`, `/de`, `/es`, `/{lang}/tickets`, `/en/auth/password/reset`): chiusi i residui
   "Contatta il comune"/"Richiedi assistenza" (blocco contatti), `breadcrumb` e `Cerca` (controlli mappa, vedi
-  [map-controls-i18n-it-en-de-es-2026-10-07.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es.story.md)).
+  [map-controls-i18n-it-en-de-es.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es.story.md)).
 - Pulsante di login in inglese: "Login", mentre il titolo dice "Sign in".
 - Docblock di `LoginWidget` da correggere: le etichette vengono da `user_form`.
 - Le chiavi morte `register_cta_*` vanno rimosse dalla view o create in tutte le lingue.

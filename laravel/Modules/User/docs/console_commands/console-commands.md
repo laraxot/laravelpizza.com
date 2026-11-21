@@ -5,17 +5,11 @@ canonical: ../../../../Themes/docs/shared-components/console-commands-philosophy
 related:
   - "./assign-module-command.md"
   - "./change-password-command.md"
-  - "./console-commands-philosophy.md"
+  - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./README.md"
-title: "console commands"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, user, console_commands]
-qmd: "console commands user"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/console-commands-philosophy.md

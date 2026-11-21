@@ -1,11 +1,3 @@
----
-title: "Testing del Bug Fix: Infinite Loop in make:filament-user"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, bugs]
-qmd: "testing del bug fix: infinite loop in make:filament-user user"
----
 # Testing del Bug Fix: Infinite Loop in make:filament-user
 
 ## Overview
@@ -240,8 +232,7 @@ Verificare:
 
 ## Riferimenti
 
-- **Bug Report**: `BUGFIX_REPORT.md`
-- **Bug Report**: `BUGFIX_REPORT-bug-fix.md`
+- **Bug Report**: `BUGFIX_REPORT_2025-01-14.md`
 - **Documentazione Dettagliata**: `make-filament-user-infinite-loop.md`
 - **Codice Sorgente**: `Modules/User/app/Models/Traits/HasTeams.php`
 

@@ -7,7 +7,6 @@ type: reference
 tags: [wiki, no-frontmatter-fix]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Xot Module - Complete Architecture Guide (2025)
@@ -281,7 +280,7 @@ Each action encapsulates a single, focused operation using the QueueableAction p
 **HasCommonScopes**
 - Query scope helpers
 - Common filtering patterns
-- Date scopes (`createdAfter` / `createdBefore` / `updatedAfter`): `Carbon|string|\DateTimeInterface`: è il tipo reale di un filtro su `created_at`/`updated_at`, non `mixed`
+- Date scopes (`createdAfter` / `createdBefore` / `updatedAfter`): `Carbon|string|\DateTimeInterface` — è il tipo reale di un filtro su `created_at`/`updated_at`, non `mixed`
 
 **TypedHasRecursiveRelationships**
 - Tree/hierarchical structure support

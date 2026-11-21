@@ -1,9 +1,14 @@
 ---
-title: "Xot - architecture-violations-and-fixes.md"
-module: Xot
-bmad: true
-status: active
+title: "architecture violations and fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture violations and fixes"
+issues: []
+discussions: []
 ---
+
 # Violazioni Architetturali e Correzioni - Pattern XotData
 
 ## 🚨 **Violazioni Architetturali Critiche**
@@ -347,6 +352,15 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
 
 ---
+
+title: "architecture violations and fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture violations and fixes"
+issues: []
+discussions: []
 **Ultimo Aggiornamento**: Gennaio 2025
 **Stato**: ✅ Pattern Documentato e Implementato
 ---

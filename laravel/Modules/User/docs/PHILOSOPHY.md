@@ -1,5 +1,5 @@
 ---
-title: "User: Philosophy: The Identity Foundation"
+title: "User — Philosophy: The Identity Foundation"
 type: philosophy
 module: User
 status: active
@@ -9,17 +9,17 @@ tags: [philosophy, identity, authentication, authorization, architecture, vision
 qmd: "user philosophy identity foundation authentication authorization sti multi-tenancy"
 ---
 
-# User: Philosophy: The Identity Foundation
+# User — Philosophy: The Identity Foundation
 
-**The Grand Vision**: User is not a user management system. It is the identity spine of FixCity: the answer to three questions and only three: **who are you, what are you allowed to do, and for which organization.** Everything else belongs elsewhere.
+**The Grand Vision**: User is not a user management system. It is the identity spine of FixCity — the answer to three questions and only three: **who are you, what are you allowed to do, and for which organization.** Everything else belongs elsewhere.
 
 ---
 
-## RELIGIONE: The Non-Negotiable Commandments
+## RELIGIONE — The Non-Negotiable Commandments
 
 ### 1. Single Table Inheritance is Sacred
 
-All user types: User, Doctor, Patient, Client, Admin: live in one `users` table with a `type` column. STI via `Parental\HasChildren` is not optional; it's the foundational pattern.
+All user types — User, Doctor, Patient, Client, Admin — live in one `users` table with a `type` column. STI via `Parental\HasChildren` is not optional; it's the foundational pattern.
 
 ```php
 class BaseUser extends Authenticatable {
@@ -45,7 +45,7 @@ Do not mix these. A user can authenticate without a profile (system account). A 
 
 ### 3. The User Connection is Dedicated
 
-`BaseModel::$connection = 'user'` points to the `ptv_user` database: declared by hand in `config/local/ptvx/database.php`. Identity is separate infrastructure. This is not a performance optimization; it is a domain boundary.
+`BaseModel::$connection = 'user'` points to the `ptv_user` database — declared by hand in `config/local/ptvx/database.php`. Identity is separate infrastructure. This is not a performance optimization; it is a domain boundary.
 
 ### 4. Contracts Over Concrete Classes
 
@@ -70,7 +70,7 @@ Document every permission in a seed or migration. Define them in code before the
 
 ---
 
-## FILOSOFIA: The Design Philosophy
+## FILOSOFIA — The Design Philosophy
 
 ### The Three Questions
 
@@ -121,7 +121,7 @@ When a Doctor logs in, `Filament::getTenant()` returns their Clinic. All queries
 
 ---
 
-## POLITICA: The Rules, Constraints, and Best Practices
+## POLITICA — The Rules, Constraints, and Best Practices
 
 ### Architecture Decisions
 
@@ -135,7 +135,7 @@ When a Doctor logs in, `Filament::getTenant()` returns their Clinic. All queries
 
 ### Invariants
 
-1. **BaseUser and BaseProfile are abstract.** They define the interface for all user types. Concrete classes live in child modules (Ptv, Employee, etc.): not in User itself.
+1. **BaseUser and BaseProfile are abstract.** They define the interface for all user types. Concrete classes live in child modules (Ptv, Employee, etc.) — not in User itself.
 
 2. **No User-specific Filament panels.** Filament::auth() uses User by reference, not by class name. This allows any concrete User subclass to authenticate. Keep it that way.
 
@@ -149,7 +149,7 @@ When a Doctor logs in, `Filament::getTenant()` returns their Clinic. All queries
 
 1. No import of `Modules\Ptv\` in `Modules\User\app\` (except contracts).
 2. No `app/Services` directory.
-3. No file in `app/` larger than 500 lines (currently violated by `BaseUser.php:514` and `HasTeams.php:621`: a technical debt).
+3. No file in `app/` larger than 500 lines (currently violated by `BaseUser.php:514` and `HasTeams.php:621` — a technical debt).
 4. All Filament resources extend `XotBase*`, not `Filament\` directly.
 5. Contracts are single-source: if it exists in `Modules\Xot\Contracts\`, delete the User version.
 
@@ -172,7 +172,7 @@ When a Doctor logs in, `Filament::getTenant()` returns their Clinic. All queries
 
 ---
 
-## SCOPO: What Problem It Solves in FixCity
+## SCOPO — What Problem It Solves in FixCity
 
 FixCity is a city administration platform. Its identity needs are:
 
@@ -201,7 +201,7 @@ This separation is sacred. Do not leak domain logic into User.
 
 ---
 
-## ZEN: The Essence and the Magic
+## ZEN — The Essence and the Magic
 
 ### The Paradox of Identity
 
@@ -240,7 +240,7 @@ Beyond these two, the system is elegantly simple.
 
 ---
 
-## LIBRERIE DA INSTALLARE: Proposed New Dependencies
+## LIBRERIE DA INSTALLARE — Proposed New Dependencies
 
 ### Short Term (0-3 months)
 
@@ -280,7 +280,7 @@ Beyond these two, the system is elegantly simple.
 
 ---
 
-## FUTURE IMPLEMENTAZIONI: Roadmap
+## FUTURE IMPLEMENTAZIONI — Roadmap
 
 ### Version 2.6 (Next Release)
 
@@ -522,7 +522,7 @@ Password::sendResetLink($user->email);
 
 ---
 
-## FALSE FRIENDS: Common Gotchas
+## FALSE FRIENDS — Common Gotchas
 
 ### 1. The Permission That Does Not Exist
 
@@ -618,7 +618,7 @@ expect(config('database.connections.user'))->toBeArray();
 
 ---
 
-## COME USARLO: Practical Examples
+## COME USARLO — Practical Examples
 
 ### Creating a New User
 
@@ -729,7 +729,7 @@ Activity::where('subject_type', User::class)
 
 ---
 
-## COME INSTALLARLO: Setup Guide
+## COME INSTALLARLO — Setup Guide
 
 ### Prerequisites
 
@@ -829,7 +829,7 @@ class YourUserType extends \Modules\User\Models\User {
 
 ---
 
-## COVERAGE ANALYSIS: Based on the Test Suite
+## COVERAGE ANALYSIS — Based on the Test Suite
 
 ### Overview
 
@@ -938,12 +938,12 @@ Everything else belongs elsewhere.
 
 ## References
 
-- [scopo.md](./scopo.md): Scope, boundaries, and improvement roadmap
-- [README.md](../README.md): Module overview
-- [authentication.md](./authentication.md): Authentication flow details
-- [permissions.md](./permissions.md): Spatie permissions deep dive
-- [passport-integration.md](./passport-integration.md): OAuth2 and API token handling
-- [2fa-guide.md](./2fa-guide.md): Two-factor authentication setup
+- [scopo.md](./scopo.md) — Scope, boundaries, and improvement roadmap
+- [README.md](../README.md) — Module overview
+- [authentication.md](./authentication.md) — Authentication flow details
+- [permissions.md](./permissions.md) — Spatie permissions deep dive
+- [passport-integration.md](./passport-integration.md) — OAuth2 and API token handling
+- [2fa-guide.md](./2fa-guide.md) — Two-factor authentication setup
 
 ---
 

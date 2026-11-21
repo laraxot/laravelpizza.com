@@ -81,6 +81,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
             return [];
         }
 
+<<<<<<< .merge_file_NcJnVF
         $create = CreateAction::make()
             ->icon('heroicon-o-plus')
             ->url(fn (): string => RecordAnchor::appendReturnTo(
@@ -108,6 +109,17 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
         // Chiave mancante: trans() restituisce la chiave stessa (contiene "::") o un segnaposto "fix:".
         return $label === '' || str_contains($label, '::') || str_starts_with($label, 'fix:') ? null : $label;
+=======
+        return [
+            'create' => CreateAction::make()
+                ->icon('heroicon-o-plus')
+                ->visible(fn (): bool => static::getResource()::canCreate())
+                ->url(fn (): string => RecordAnchor::appendReturnTo(
+                    static::getResource()::getUrl('create'),
+                    RecordAnchor::currentUrl(),
+                )),
+        ];
+>>>>>>> .merge_file_Yo3WSk
     }
 
     /**

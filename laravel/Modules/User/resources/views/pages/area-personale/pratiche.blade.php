@@ -5,13 +5,13 @@ declare(strict_types=1);
 use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Volt\Component;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Fixcity\Actions\BuildAuthenticatedUserTicketsQueryAction;
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
 
 name('area-personale.pratiche');
-middleware(PageSlugMiddleware::class);
+// PTVX: Cms assente — auth standard, nessun middleware del modulo Cms.
+middleware(['auth']);
 
 new class extends Component {
     /** @var LengthAwarePaginator<int, \Modules\Fixcity\Models\Ticket> */
@@ -42,13 +42,13 @@ new class extends Component {
     <main id="main-container" class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
         <header class="mb-8 max-w-3xl">
             <h1 class="text-3xl font-bold tracking-tight text-slate-950">{{ __('pub_theme::ui.header_area_personale.my_practices.label') }}</h1>
-            <p class="mt-2 text-lg text-slate-700">{{ __('pub_theme::ui.header_area_personale.my_practices.description', ['default' => 'Elenco delle pratiche in corso']) }}</p>
+            <p class="mt-2 text-lg text-slate-700">{{ __('pub_theme::ui.header_area_personale.my_practices.description', ['default' => 'List of open requests']) }}</p>
         </header>
         @volt('area-personale.pratiche')
             @if ($tickets->isEmpty())
                 <div class="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-                    <p class="text-slate-700">{{ __('pub_theme::ui.header_area_personale.my_practices.empty', ['default' => 'Non hai ancora inviato nessuna segnalazione.']) }}</p>
-                    <a href="{{ LaravelLocalization::localizeURL('/tickets/create') }}" class="mt-5 inline-flex min-h-11 items-center rounded-lg bg-sky-900 px-5 py-3 font-semibold text-white hover:bg-sky-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-800 focus-visible:ring-offset-2">{{ __('pub_theme::ui.header_area_personale.my_practices.new_report', ['default' => 'Invia una nuova segnalazione']) }}</a>
+                    <p class="text-slate-700">{{ __('pub_theme::ui.header_area_personale.my_practices.empty', ['default' => 'You have not submitted any reports yet.']) }}</p>
+                    <a href="{{ LaravelLocalization::localizeURL('/tickets/create') }}" class="mt-5 inline-flex min-h-11 items-center rounded-lg bg-sky-900 px-5 py-3 font-semibold text-white hover:bg-sky-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-800 focus-visible:ring-offset-2">{{ __('pub_theme::ui.header_area_personale.my_practices.new_report', ['default' => 'Submit a new report']) }}</a>
                 </div>
             @else
                 <div class="divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" role="list">

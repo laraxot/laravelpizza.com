@@ -1,11 +1,3 @@
----
-title: "Comandi Console - Modulo User"
-type: index
-status: draft
-updated: 2026-10-07
-tags: [docs, user, commands]
-qmd: "comandi console - modulo user user"
----
 # Comandi Console - Modulo User
 
 ## Panoramica
@@ -269,7 +261,7 @@ discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./assign-module-command.md"
   - "./change-password-command.md"
-  - "./console-commands-philosophy-1-1.md"
+  - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"

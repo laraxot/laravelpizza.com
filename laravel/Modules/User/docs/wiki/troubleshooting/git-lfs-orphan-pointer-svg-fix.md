@@ -3,12 +3,6 @@ name: git-lfs-orphan-pointer-svg-fix
 description: How push to laraxot/dev was blocked by 33 SVG files turned into orphan Git LFS pointers, and how it was fixed forward-only
 metadata:
   type: troubleshooting
-title: "Git LFS Orphan Pointer SVG Fix"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, wiki]
-qmd: "git lfs orphan pointer svg fix user"
 ---
 
 # Git LFS Orphan Pointer SVG Fix
@@ -53,7 +47,7 @@ CHANGELOG.md export-ignore
 ```
 
 So the LFS filter never actually ran to store the real binary/text content anywhere
-- the pointer text was committed as if it were the file content itself. The real
+— the pointer text was committed as if it were the file content itself. The real
 SVG content only existed in the previously-pushed remote history
 (`laraxot/dev` @ `44ff84cd`).
 
@@ -77,14 +71,14 @@ history-divergence issue.
    intermediate commits were verified with `git branch -r --contains <sha>` /
    `git merge-base --is-ancestor` to be **100% local and unpublished** (absent
    from both `laraxot/dev` and `provtv/dev`), they were safely squashed via
-   `git reset --soft laraxot/dev` + a single clean commit: this is not a
+   `git reset --soft laraxot/dev` + a single clean commit — this is not a
    violation of the forward-only rule, because nothing published was rewritten
    or discarded; only local, never-pushed commits were consolidated.
 5. Re-ran the pointer-blob check on the new commit's tree (empty result) before
    pushing.
 6. `git push laraxot dev` succeeded as a fast-forward: `44ff84cd..3ea7273a`.
 
-## `provtv` remote: push intentionally skipped
+## `provtv` remote — push intentionally skipped
 
 `git push provtv dev` was rejected as non-fast-forward. Investigation showed
 `provtv/dev` (`d2b107e0`) and this module's `dev` branch share **no common
@@ -105,7 +99,7 @@ here for follow-up instead of silently discarding either side.
   that the filter actually captured the objects.
 - If LFS is not actually wanted for this module, never let any tool/agent write
   literal `version https://git-lfs.github.com/spec/v1` pointer text into a file
-  as if it were real content: always verify a diff's line count / content type
+  as if it were real content — always verify a diff's line count / content type
   before committing when a large content file suddenly shrinks to 2-3 lines.
 - Before any push, if `git lfs fsck` or a push is rejected with `GH008`, check
   `.gitattributes` and `git lfs ls-files` first, rather than assuming the fix is

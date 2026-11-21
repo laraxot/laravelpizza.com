@@ -1,11 +1,3 @@
----
-title: "Aggiornamento relativo a DoctorResource.php"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "aggiornamento relativo a doctorresource.php user"
----
 # Aggiornamento relativo a DoctorResource.php
 
 ## Nota del 2025-05-15

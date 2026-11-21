@@ -1,5 +1,5 @@
 ---
-title: "User: one migration consolidamento wave 2"
+title: "User — one migration consolidamento wave 2"
 type: concept
 status: canonical
 module: User
@@ -11,10 +11,9 @@ related:
   - ./migrations-users-inventory.md
   - ../../../Xot/docs/wiki/concepts/one-migration-per-model.md
   - ../../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md
-  - ../../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md
 ---
 
-# User: consolidamento migrazioni
+# User — consolidamento migrazioni
 
 Wave 2: un solo `create_*` top-level per tabella (`users`, `profiles`, `teams`, …).
 Duplicati e `add_*`: **`git rm`**. Nessuna cartella `_archive_redundant` / `_bak`.

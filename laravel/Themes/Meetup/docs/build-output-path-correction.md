@@ -48,7 +48,7 @@ resources/css/app.css    →    npm run build    →    public/assets/app-[hash]
 resources/js/app.js                                 public/assets/app-[hash].js
                                                     public/manifest.json
 
-                         niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+                         →    npm run copy     →    public_html/themes/Meetup/
 ```
 
 ### 3. Standard Convention
@@ -122,7 +122,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
 
 # Deploy assets (copies public/* → web server)
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ### Verify Build Output

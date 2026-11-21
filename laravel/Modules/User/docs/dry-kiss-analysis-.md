@@ -1,33 +1,8 @@
----
-title: "DRY & KISS Analysis - Modulo User"
-type: concept
-tags: [dry, kiss, analysis]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "dry-kiss-analysis- dry & kiss analysis - modulo user"
-issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
-discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
-related:
-  - "./00-index.md"
-  - "./00-index-indice-documentazione-modulo-user.md"
-  - "./00-index.md"
-  - "./2fa-guide.md"
-  - "./2fa.md"
-  - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-status: draft
----
-
 # DRY & KISS Analysis - Modulo User
 
-**Data:** 15 Ottobre 2025
-**Modulo:** User
-**DRY Score:** ✅ 95%
+**Data:** 15 Ottobre 2025  
+**Modulo:** User  
+**DRY Score:** ✅ 95%  
 **KISS Score:** ✅ 92%
 
 ## 📊 Stato Attuale
@@ -39,7 +14,7 @@ status: draft
 abstract class BaseModel extends XotBaseModel
 {
     protected $connection = 'user';  // SOLO questa proprietà!
-
+    
     protected function casts(): array
     {
         return array_merge(parent::casts(), [
@@ -49,7 +24,7 @@ abstract class BaseModel extends XotBaseModel
 }
 ```
 
-**Righe:** 12
+**Righe:** 12  
 **DRY Level:** ✅ 98%
 
 #### 2. **BasePivot Perfetto**
@@ -60,7 +35,7 @@ abstract class BasePivot extends XotBasePivot
 }
 ```
 
-**Righe:** 7
+**Righe:** 7  
 **DRY Level:** ✅ 99%
 
 #### 3. **BaseMorphPivot Pulito**
@@ -137,23 +112,11 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 ## 🔗 Collegamenti
 
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
-- [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
-- [Architecture](./core/architecture.md)
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-- [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-2025-10-15.md)
-- [Base Classes Corrections](./fixes/base-classes-corrections-correzione-estensioni-classi-modulo.md)
 - [Architecture](./core/architecture.md)
-- [DRY/KISS Global](../../docs/dry_kiss_analysis_2025-10-15.md)
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 
 ---
 
 **Conclusione:** Modulo User ha architettura solida, DRY eccellente, e complessità giustificata.
-- [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
-- [Architecture](./core/architecture.md)
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-- [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
 
----
-
-**Conclusione:** Modulo User ha architettura solida, DRY eccellente, e complessità giustificata.

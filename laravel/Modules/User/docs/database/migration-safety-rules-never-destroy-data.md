@@ -9,9 +9,8 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./migration-safety-rules.md"
-  - "./profile-uuid-philosophy-zen-approach.md"
   - "./profile-uuid-philosophy.md"
-status: draft
+  - "./profile-uuid-philosophy.md"
 ---
 
 # Migration Safety Rules - NEVER Destroy Data

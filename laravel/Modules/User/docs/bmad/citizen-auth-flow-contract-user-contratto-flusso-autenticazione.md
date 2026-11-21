@@ -1,5 +1,5 @@
 ---
-title: "User: contratto flusso autenticazione cittadino"
+title: "User — contratto flusso autenticazione cittadino"
 type: bmad-flow-contract
 status: static-audit-complete-runtime-pending
 module: User
@@ -12,8 +12,7 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/573"
 related:
   - ../../../Fixcity/docs/bmad/citizen-journey-audit-2026-10-07.md
-  - ../../../Themes/Sixteen/docs/bmad/citizen-journey-presentation-contract-2026-10-07.md
-qmd: "contratto auth cittadino user"
+  - ../../../../Themes/Sixteen/docs/bmad/citizen-journey-presentation-contract-2026-10-07.md
 ---
 
 # Contratto auth cittadino

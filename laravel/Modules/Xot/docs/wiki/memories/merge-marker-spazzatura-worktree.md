@@ -11,7 +11,6 @@ related:
   - ./index.md
 issues: []
 discussions: []
-status: draft
 ---
 
 # Marker di merge: spazzatura nel worktree, non in HEAD

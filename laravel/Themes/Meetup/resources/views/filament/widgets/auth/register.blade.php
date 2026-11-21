@@ -93,7 +93,11 @@
                             type="button"
                             wire:click="$toggle('show_password')"
                             class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+<<<<<<< .merge_file_rv8ZFc
                             aria-label="{{ $show_password ? __('gdpr::register.form.hide_password') : __('gdpr::register.form.show_password') }}"
+=======
+                            aria-label="{{ __('pub_theme::auth.register.toggle_password.label') }}"
+>>>>>>> .merge_file_lRUS2E
                         >
                             <svg wire:if="!$show_password" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -169,7 +173,11 @@
                                 <span class="text-sm font-semibold text-gray-900 dark:text-white">
                                     {{ __('gdpr::register.consents.privacy_policy_label') }}
                                 </span>
+<<<<<<< .merge_file_rv8ZFc
                                 <span class="text-red-500" aria-hidden="true">*</span>
+=======
+                                <span class="text-red-500" aria-label="{{ __('pub_theme::auth.register.required.label') }}">*</span>
+>>>>>>> .merge_file_lRUS2E
                             </div>
                             <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                                 {{ __('gdpr::register.consents.privacy_policy_hint') }}
@@ -218,7 +226,11 @@
                                 <span class="text-sm font-semibold text-gray-900 dark:text-white">
                                     {{ __('gdpr::register.consents.terms_label') }}
                                 </span>
+<<<<<<< .merge_file_rv8ZFc
                                 <span class="text-red-500" aria-hidden="true">*</span>
+=======
+                                <span class="text-red-500" aria-label="{{ __('pub_theme::auth.register.required.label') }}">*</span>
+>>>>>>> .merge_file_lRUS2E
                             </div>
                             <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                                 {{ __('gdpr::register.consents.terms_hint') }}

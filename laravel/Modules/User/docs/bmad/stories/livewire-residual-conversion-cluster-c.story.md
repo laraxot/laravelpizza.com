@@ -1,4 +1,6 @@
 ---
+title: "Story — conversione residui Livewire Cluster C a Filament"
+
 title: "Story: conversione residui Livewire Cluster C a Filament"
 type: story
 module: User
@@ -8,28 +10,40 @@ status: blocked
 track: feature/filament-widgets
 qmd: "DeleteAccount TermsOfService PrivacyPolicy Logout Livewire conversione Filament widget Cluster C residui"
 related:
+  - ../../docs/bmad/livewire-inventory.md
+  - ../../docs/bmad/advantages-filament-only.md
+  - ../../docs/bmad/livewire-widget-admin-panel-provider.md
+---
+
+# 10.4 — residui Livewire Cluster C
+
   - ../livewire-inventory.md
   - ../advantages-filament-only.md
   - ../livewire-widget-admin-panel-provider.md
 updated: 2026-10-13
 tags: [docs, user, bmad]
----
 
 # 10.4: residui Livewire Cluster C
 
 ## Perche'
 
 Epic 9 done (SuperAdmin widget ecc.), ma restano componenti HTTP Livewire
+da convertire/eliminare verso il target "solo Filament widget" — vantaggi
+
 da convertire/eliminare verso il target "solo Filament widget": vantaggi
 documentati in `advantages-filament-only.md` (SPOF 500 su /admin, doppia
 manutenzione, no `canView()`/lazy).
 
 ## Residui in User
 
-- `Livewire/Profile/DeleteAccount` (o equivalente): flusso distruttivo,
+- `Livewire/Profile/DeleteAccount` (o equivalente) — flusso distruttivo,
   richiede conferma password: candidato a Filament Action con modal, non widget
-- `TermsOfService`, `PrivacyPolicy`: pagine blade statiche: valutare
+- `TermsOfService`, `PrivacyPolicy` — pagine blade statiche: valutare
   `XotBasePage` semplice o route blade puro (forse NON Filament: sono pubbliche)
+- `Livewire/Logout` — verificare se sostituibile da route POST semplice
+
+- `Livewire/Profile/DeleteAccount` (o equivalente): flusso distruttivo,
+- `TermsOfService`, `PrivacyPolicy`: pagine blade statiche: valutare
 - `Livewire/Logout`: verificare se sostituibile da route POST semplice
 
 ## Task

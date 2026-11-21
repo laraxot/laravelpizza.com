@@ -10,12 +10,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "User vs Xot Policy Structure"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, wiki]
-qmd: "user vs xot policy structure user"
 ---
 # User vs Xot Policy Structure
 

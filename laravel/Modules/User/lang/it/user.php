@@ -318,6 +318,39 @@ return [
         'user' => [
             'label' => 'Utente',
         ],
+        'matr' => [
+            'description' => 'matr',
+            'label' => 'matr',
+            'placeholder' => 'matr',
+            'helper_text' => 'matr',
+        ],
+        'ente' => [
+            'label' => 'ente',
+            'placeholder' => 'ente',
+            'helper_text' => 'ente',
+            'description' => 'ente',
+        ],
+        'state' => [
+            'label' => 'Stato',
+        ],
+        'device' => [
+            'label' => 'Dispositivo',
+            'placeholder' => 'device',
+            'helper_text' => 'device',
+            'description' => 'device',
+        ],
+        'created_from' => [
+            'label' => 'Creato dal',
+            'placeholder' => 'created_from',
+            'helper_text' => 'created_from',
+            'description' => 'created_from',
+        ],
+        'created_until' => [
+            'label' => 'Creato fino al',
+            'placeholder' => 'created_until',
+            'helper_text' => 'created_until',
+            'description' => 'created_until',
+        ],
     ],
     'actions' => [
         'change_password' => 'Cambia password',
@@ -422,6 +455,8 @@ return [
         ],
         'export' => [
             'icon' => 'export',
+            'label' => 'Esporta',
+            'tooltip' => 'export',
         ],
         'changePassword' => [
             'icon' => 'changePassword',
@@ -733,6 +768,7 @@ return [
         ],
     ],
     'label' => 'Utente',
+<<<<<<< .merge_file_OcAvtL
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -743,5 +779,7 @@ return [
             'heading' => 'worker',
         ],
     ],
+=======
+>>>>>>> .merge_file_KHrFEM
     'plural_label' => 'User (Plurale)',
 ];

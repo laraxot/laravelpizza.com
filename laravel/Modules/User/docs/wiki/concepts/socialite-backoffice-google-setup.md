@@ -13,10 +13,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "socialite backoffice google setup"
-status: draft
-tags: [docs, user, wiki]
-qmd: "socialite backoffice google setup user"
 ---
 
 # socialite backoffice google setup

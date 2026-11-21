@@ -2,7 +2,7 @@
 type: concept
 module: User
 confidence: high
-updated: 2026-10-27
+updated: 2026-06-18
 sources:
 related:
   - "./ai-harness-user-discipline.md"
@@ -13,10 +13,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "socialite provider governance"
-status: draft
-tags: [docs, user, wiki]
-qmd: "socialite provider governance user"
 ---
 
 # socialite provider governance
@@ -35,18 +31,16 @@ Questa scelta evita coupling dello schema `users` con singoli vendor OAuth e man
 
 ## flusso tecnico attuale
 
-1. il pulsante social punta alla route localizzata di redirect del front office
+1. il pulsante social punta alla route di redirect appropriata (FO o BO)
 2. `RedirectToProviderController` valida provider + scopes e invia redirect OAuth
-3. il callback arriva alla pagina Folio+Volt del tema Sixteen
-4. `ProcessCallbackAction` recupera l'utente OAuth, collega o registra `SocialiteUser`, applica i ruoli predefiniti e fa login
+3. callback su `socialite.oauth.callback`
+4. `ProcessCallbackController` recupera oauth user, collega o registra `SocialiteUser`, applica ruoli default e fa login
 
 Route:
 
-- `/{lang}/auth/login/{provider}` (`oauth.redirect`): entrypoint FO localizzato
-- `/{lang}/auth/login/{provider}/callback` (`oauth.callback`): pagina Folio+Volt redirect-only
-
-Il modulo `User` mantiene la policy OAuth nelle Action; il tema possiede il guscio HTTP della callback. Non esistono una route callback
-classica in `routes/socialite.php`, né un `ProcessCallbackController`.
+- `/admin/login/{provider}` (`socialite.oauth.redirect`) — BO operatori
+- `/auth/social/{provider}` (`socialite.oauth.fo.redirect`) — FO cittadini *(aggiunto STORY-478, 2026-06-18)*
+- `/sso/{provider}/callback` (`socialite.oauth.callback`) — callback condivisa FO e BO
 
 ## confini dei modelli
 

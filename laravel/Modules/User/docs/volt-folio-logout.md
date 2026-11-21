@@ -8,29 +8,22 @@ qmd: "volt-folio-logout implementazione corretta del logout con volt e folio"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Implementazione Corretta del Logout con Volt e Folio
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions.md)
-- [Analisi Logout Blade](./logout-blade-analysis.md)
 - [Convenzioni Path](./path-conventions-user.md)
-- [Analisi Logout Blade](./logout-blade-analysis-panoramica.md)
+- [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 
 ## Panoramica
@@ -213,10 +206,8 @@ Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions.md)
-- [Analisi Logout Blade](./logout-blade-analysis.md)
 - [Convenzioni Path](./path-conventions-user.md)
-- [Analisi Logout Blade](./logout-blade-analysis-panoramica.md)
+- [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 
 ## Panoramica

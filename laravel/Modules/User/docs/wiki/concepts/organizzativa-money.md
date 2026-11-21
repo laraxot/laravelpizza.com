@@ -11,12 +11,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "organizzativa money"
-type: note
-status: stub
-updated: 2026-10-07
-tags: [docs, user, wiki]
-qmd: "organizzativa money user"
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/organizzativa-money-Modules.md

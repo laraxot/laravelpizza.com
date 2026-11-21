@@ -1,4 +1,6 @@
 ---
+title: "AdminPanelProvider — mappa render hook → widget Filament"
+
 title: "AdminPanelProvider: mappa render hook → widget Filament"
 type: tech-spec
 module: User
@@ -59,14 +61,19 @@ file assenti; `RetiredChromeLivewireTest` fissa l’assenza).
 
 ### 1. `AUTH_LOGIN_FORM_AFTER` → `SocialLoginWidget` (story 10.2)
 
-- Widget: `Modules/User/app/Filament/Widgets/Auth/SocialLoginWidget.php`: `extends XotBaseSchemaWidget` (r. 21).
+- Widget: `Modules/User/app/Filament/Widgets/Auth/SocialLoginWidget.php` — `extends XotBaseSchemaWidget` (r. 21).
 - **Nessun widget nuovo creato** (ADR-C002): il gemello esisteva già; lo switch ha richiesto solo
   l’allineamento del gap config/route documentato in
+  [livewire-inventory.md](./livewire-inventory.md) — `$redirectRoute` default `socialite.oauth.redirect`
+
+- Widget: `Modules/User/app/Filament/Widgets/Auth/SocialLoginWidget.php`: `extends XotBaseSchemaWidget` (r. 21).
   [livewire-inventory.md](./livewire-inventory.md): `$redirectRoute` default `socialite.oauth.redirect`
   (panel), FO usa `socialite.oauth.fo.redirect`.
 - Classe HTTP `Socialite\Buttons` + vista `livewire/socialite/buttons` eliminate.
 
 ### 2. `USER_MENU_BEFORE` → `TeamChangeWidget` (story 10.1)
+
+- Widget: `Modules/User/app/Filament/Widgets/Team/TeamChangeWidget.php` — `extends XotBaseWidget` (r. 27),
 
 - Widget: `Modules/User/app/Filament/Widgets/Team/TeamChangeWidget.php`: `extends XotBaseWidget` (r. 27),
   `$isDiscovered = false` (r. 29), vista `user::filament.widgets.team.change` (r. 31).
@@ -75,6 +82,8 @@ file assenti; `RetiredChromeLivewireTest` fissa l’assenza).
 - Classe HTTP `Team\Change` eliminata.
 
 ### 3. `USER_MENU_BEFORE` → `SuperAdminWidget` (story 9.2)
+
+- Widget: `Modules/User/app/Filament/Widgets/Profile/SuperAdminWidget.php` — `extends XotBaseWidget` (r. 18),
 
 - Widget: `Modules/User/app/Filament/Widgets/Profile/SuperAdminWidget.php`: `extends XotBaseWidget` (r. 18),
   `$isDiscovered = false` (r. 20), `mount()` risolve `ProfileContract` via `XotData` (rr. 25-28),
@@ -119,6 +128,8 @@ provider: documentati qui perché restano la decisione architetturale.
 
 ```bash
 grep -n "registerRenderHook\|@livewire" Modules/User/app/Providers/Filament/AdminPanelProvider.php
+# atteso: 3 hook, solo FQCN ::class — zero alias stringa
+
 # atteso: 3 hook, solo FQCN ::class: zero alias stringa
 grep -rn "socialite.buttons\|team.change\|profile.super-admin" Modules/User/app Modules/User/resources
 # atteso: solo app/Http/Livewire/_components.json (cache stale, da eliminare con la cartella)

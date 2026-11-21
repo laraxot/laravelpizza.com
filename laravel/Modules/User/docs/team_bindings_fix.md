@@ -1,11 +1,3 @@
----
-title: "Fix Binding Team Models nel Modulo User"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "fix binding team models nel modulo user user"
----
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica

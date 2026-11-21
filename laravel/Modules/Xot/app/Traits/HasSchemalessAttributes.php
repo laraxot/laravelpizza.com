@@ -19,9 +19,9 @@ use function Safe\json_encode;
  *
  * @see https://github.com/spatie/laravel-schemaless-attributes
  *
- * @phpstan-ignore trait.unused
+ * Trait di piattaforma per extra_attributes schemaless (Spatie).
  */
-trait HasSchemalessAttributes // @phpstan-ignore trait.unused
+trait HasSchemalessAttributes
 {
     /**
      * Aggiunge extra_attributes al fillable.

@@ -6,11 +6,9 @@ epic: "DOCUMENTATION-2026"
 module: Xot
 created: 2026-09-28
 updated: 2026-09-28
-tags: [docs, xot, bmad]
-qmd: "story   readme root dei moduli xot"
 ---
 
-# Story: README root dei moduli
+# Story — README root dei moduli
 
 ## Obiettivo
 

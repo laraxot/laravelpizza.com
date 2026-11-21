@@ -1,17 +1,9 @@
----
-title: "Best Practices per i Componenti di Autenticazione"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "best practices per i componenti di autenticazione user"
----
 # Best Practices per i Componenti di Autenticazione 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

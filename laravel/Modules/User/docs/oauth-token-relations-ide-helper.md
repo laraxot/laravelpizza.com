@@ -11,24 +11,14 @@ metadata:
   last_run: 2026-07-15
   relates_to: passport, oauth
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-title: "OAuth Token: Relazioni Nullable e IDE Helper"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "oauth token: relazioni nullable e ide helper user"
 ---
 
 # OAuth Token: Relazioni Nullable e IDE Helper
@@ -66,7 +56,7 @@ public function user(): BelongsTo
 3. Esecuzione logica `user()` con `$this->client === null`
 4. `null->provider` → `Error resolving relation model`
 
-Nota: il messaggio cita `user()`: non è obbligatoriamente il `__construct` parent; è la **risoluzione della relazione** durante analisi.
+Nota: il messaggio cita `user()` — non è obbligatoriamente il `__construct` parent; è la **risoluzione della relazione** durante analisi.
 
 ## Filosofia: Relazioni Lazy vs. Eager
 
@@ -172,10 +162,10 @@ php artisan ide-helper:models --exclude="OauthAccessToken,OauthToken"
 
 ### Modelli dovrebbero comportarsi così:
 
-1. **Costruzione minima**: `new Model()` non accede a relazioni
-2. **Relazioni lazy-loaded**: `$model->relation` carica solo se necessario
-3. **Relazioni fallible**: Se non populated, ritorna default o null
-4. **Guard espliciti**: `if ($this->relationLoaded('relation'))` prima di accedere
+1. **Costruzione minima** — `new Model()` non accede a relazioni
+2. **Relazioni lazy-loaded** — `$model->relation` carica solo se necessario
+3. **Relazioni fallible** — Se non populated, ritorna default o null
+4. **Guard espliciti** — `if ($this->relationLoaded('relation'))` prima di accedere
 
 ### Passport viola questi principi
 
@@ -208,6 +198,6 @@ Dovrebbe passare senza errori e generare `_ide_helper_models.php`.
 ---
 
 **Vedi anche:**
-- [ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md): Filosofia generale
-- [fix-ide-helper-relation-errors](./fix-ide-helper-relation-errors.md): Regole fix User
-- [user-module-architecture](./passport-model-wrappers.md): Wrapper Passport
+- [ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md) — Filosofia generale
+- [fix-ide-helper-relation-errors](./fix-ide-helper-relation-errors.md) — Regole fix User
+- [user-module-architecture](./passport-model-wrappers.md) — Wrapper Passport

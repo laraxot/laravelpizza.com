@@ -16,7 +16,6 @@ related:
   - "./structure.md"
   - "./user-gdpr-decoupling.md"
   - "./user-gdpr-oupling.md"
-status: draft
 ---
 
 # Struttura dei Tests del Modulo User
@@ -308,7 +307,7 @@ dump($variable);
 
 - [README Modulo User](../README.md)
 - [Best Practices Testing](../../../project_docs/testing-best-practices.md)
-- [Architettura Modulo User](README.md)
+- [Architettura Modulo User](../architecture/README.md)
 - [Factory e Seeder](../models/factory-seeder-status.md)
 
 ---

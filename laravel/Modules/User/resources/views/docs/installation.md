@@ -79,10 +79,17 @@ npm run build
 
 ### 8. Assets pubblici
 
+<<<<<<< .merge_file_QvXPRr
+=======
+Copia gli assets compilati nella directory pubblica:
+
+>>>>>>> .merge_file_9xtI1i
 ```bash
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
+<<<<<<< .merge_file_QvXPRr
 Nessuna copia: gli asset sono serviti tramite symlink da `public_html/` (`php artisan xot:theme-link`): `npm run copy` non serve più.
+=======
+>>>>>>> .merge_file_9xtI1i
 
 ## Configurazione
 

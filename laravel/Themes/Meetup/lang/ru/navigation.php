@@ -3,43 +3,76 @@
 declare(strict_types=1);
 
 return [
-    'select_language' => 'сменить язык',
-    'skip_to_content' => 'Перейти к основному содержимому',
-    'toggle_menu' => 'Открыть или закрыть меню',
     'main' => 'Основная навигация',
     'site_title' => 'Laravel Pizza Meetups',
     'home' => 'Главная',
     'about' => 'О нас',
     'contact' => 'Контакты',
-    'events' => 'События',
-    'community_chat' => 'Чат сообщества',
-    'toggle_mobile_menu' => 'Переключить мобильное меню',
+    'sections' => [
+        'events' => [
+            'label' => 'События',
+        ],
+        'community_chat' => [
+            'label' => 'Чат сообщества',
+        ],
+        'toggle_mobile_menu' => [
+            'label' => 'Переключить мобильное меню',
+        ],
+    ],
     'user_menu' => [
-        'dashboard' => 'Панель управления',
-        'my_events' => 'Мои события',
-        'nearby_events' => 'События рядом',
-        'my_profile' => 'Профиль',
-        'edit_profile' => 'Редактировать профиль',
-        'settings' => 'Настройки',
-        'logout' => 'Выйти',
+        'dashboard' => [
+            'label' => 'Панель управления',
+        ],
+        'my_events' => [
+            'label' => 'Мои события',
+        ],
+        'nearby_events' => [
+            'label' => 'События рядом',
+        ],
+        'my_profile' => [
+            'label' => 'Профиль',
+        ],
+        'settings' => [
+            'label' => 'Настройки',
+        ],
+        'logout' => [
+            'label' => 'Выйти',
+        ],
     ],
     'auth' => [
-        'login' => 'Войти',
-        'register' => 'Регистрация',
+        'login' => [
+            'label' => 'Войти',
+        ],
+        'register' => [
+            'label' => 'Регистрация',
+        ],
     ],
     'footer' => [
-        'privacy' => 'Конфиденциальность',
-        'terms' => 'Условия использования',
-        'events' => 'События',
-        'community' => 'Сообщество',
-        'community_chat' => 'Чат сообщества',
-        'code_of_conduct' => 'Кодекс поведения',
-        'resources' => 'Ресурсы',
-        'blog' => 'Блог',
-        'follow_us' => 'Подписывайтесь на нас',
-        'all_rights_reserved' => 'Все права защищены.',
-        'community_description' => 'Сообщество разработчиков Laravel, увлеченных кодом и пиццей.',
-        'opens_in_new_tab' => 'открывается в новой вкладке',
+        'community' => [
+            'label' => 'Сообщество',
+            'description' => 'Сообщество разработчиков Laravel, увлеченных кодом и пиццей.',
+        ],
+        'community_chat' => [
+            'label' => 'Чат сообщества',
+        ],
+        'code_of_conduct' => [
+            'label' => 'Кодекс поведения',
+        ],
+        'resources' => [
+            'label' => 'Ресурсы',
+        ],
+        'blog' => [
+            'label' => 'Блог',
+        ],
+        'follow_us' => [
+            'label' => 'Подписывайтесь на нас',
+        ],
+        'all_rights_reserved' => [
+            'label' => 'Все права защищены.',
+        ],
+        'opens_in_new_tab' => [
+            'label' => 'открывается в новой вкладке',
+        ],
     ],
     'navigation' => [
         'label' => 'Навигация',
@@ -50,8 +83,4 @@ return [
     ],
     'label' => 'Навигация',
     'plural_label' => 'Навигации',
-    'fields' => [
-    ],
-    'actions' => [
-    ],
 ];

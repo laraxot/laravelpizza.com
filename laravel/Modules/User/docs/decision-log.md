@@ -1,13 +1,9 @@
 ---
 type: decision-log
-title: "Decision Log: User"
-links: {github_issue: "#XXX", discussion: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "decision log   user user"
+title: "Decision Log — User"
+links: {github_issue: #XXX, discussion: #XXX}
 ---
-# Decision Log: User
+# Decision Log — User
 
 ## Decisions
 
@@ -43,9 +39,3 @@ qmd: "decision log   user user"
 
 ## Open Questions
 
-## 2026-10-26: Google OAuth front-office
-
-- Il flusso esistente viene attivato tramite `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` e `GOOGLE_REDIRECT_URI`; non viene introdotto un secondo controller o un secondo pulsante.
-- Il callback effettivo resta quello italiano autorizzato, mentre la lingua di ingresso viene ripristinata dalla sessione per mantenere il contratto multilingua già testato.
-- Le credenziali restano fuori dal repository; il secret fornito in chat deve essere rigenerato prima della produzione.
-- Il ritorno da Google (`/{lingua}/auth/login/{provider}/callback`) e' una pagina Folio+Volt del tema (`name('oauth.callback')`), non un controller con rotta a mano (DCP-360). Logica in `ProcessCallbackAction`, lingua d'ingresso in `ProcessCallbackSession::KEY`; `ProcessCallbackController` rimosso e un test ne vieta il ritorno. Non provato da dev il giro con un `code` vero: gli URI registrati in Google sono solo quelli di `www.fixcity.eu`.

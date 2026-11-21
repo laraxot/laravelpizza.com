@@ -15,7 +15,7 @@ created_at: 2026-09-21
 updated_at: 2026-09-21
 tags: [filament, widget, icons, ux, super-admin, blade-icons]
 related:
-  - Modules/User/docs/stories/superadmin-widget-icons.story.md
+  - Modules/User/docs/stories/superadmin-widget-icons-2026-09-21.story.md
 github:
   repository: null
   issues: []
@@ -26,8 +26,8 @@ github:
 ## Richiesta
 
 "metti una icona stile marvel per superadmin, qualcosa se vuoi divertente elegante
-stile outline, con leggera animazione fatti i 2 svg": evoluzione della story
-precedente (`superadmin-widget-icons.story.md`).
+stile outline, con leggera animazione fatti i 2 svg" — evoluzione della story
+precedente (`superadmin-widget-icons-2026-09-21.story.md`).
 
 Nota copyright: nessun logo Marvel riprodotto (rischio trademark). Direzione presa:
 corona outline generica (tema "super"-admin), non un personaggio specifico.
@@ -51,7 +51,7 @@ $set = $this->getSetByPrefix($prefix);
 ```
 
 Con `'user::svg.super-admin'` il prefix calcolato e' `'user::svg.super'`
-(prima del primo `-`, dentro "super-admin"): nessun set con quel nome esiste,
+(prima del primo `-`, dentro "super-admin") — nessun set con quel nome esiste,
 la Factory ripiega sul set `'default'` con l'intera stringa come nome file,
 **mai trovato -> `SvgNotFound` -> 500** per ogni utente super-admin che apre un
 pannello Filament.
@@ -79,10 +79,10 @@ Entrambe risolvono senza eccezioni (prima del fix: `SvgNotFound`).
 
 ## Design finale (non scritto da me, verificato da me)
 
-- `Modules/User/resources/svg/superadmin.svg`: corona outline (`viewBox 0 0 24 24`,
+- `Modules/User/resources/svg/superadmin.svg` — corona outline (`viewBox 0 0 24 24`,
   `stroke-width 2`), gemma centrale (`circle.gem`); su hover: corona scala 1.1x,
   gemma "twinkle" (scale pulse via `@keyframes`).
-- `Modules/User/resources/svg/negate-superadmin.svg`: stessa corona (scale 0.92x su
+- `Modules/User/resources/svg/negate-superadmin.svg` — stessa corona (scale 0.92x su
   hover, sottotono), diagonale "slash" che lampeggia (`opacity` flash) su hover.
   Animazione SOLO on-hover: elegante, non distrae quando il widget e' inattivo.
 

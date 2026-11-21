@@ -9,20 +9,12 @@ issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./assign-module-command.md"
-  - "./console-commands-philosophy-1-1.md"
-  - "./console-commands-philosophy.md"
-  - "./console-commands-philosophy.md"
-  - "./console-commands-philosophy.md"
-  - "./console-commands.md"
-  - "./README.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
-  - "./README.md"
-status: superseded
-superseded_by: ../console-commands/change-password-command.md
+  - "./readme.md"
 ---
 
 # ChangePasswordCommand
@@ -390,3 +382,5 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 - ✅ **Interfaccia Console**: Input interattivo
 - ✅ **Gestione Password**: Hash e scadenza
 - ✅ **Eventi**: Dispatched NewPasswordSet
+
+

@@ -1,27 +1,20 @@
 ---
-title: User Module: Migrations & Schema
+title: User Module — Migrations & Schema
 created: 2026-07-15
 updated: 2026-07-15
 type: module-documentation
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
-tags: [docs, user]
-qmd: "user module   migrations & schema parity user"
 ---
 
-# User Module: Migrations & Schema Parity
+# User Module — Migrations & Schema Parity
 
 ## Philosophy
 
@@ -76,37 +69,37 @@ All models in User module must maintain 1:1:1:1 parity with migrations, seeders,
 - **Auth**: Jetstream with 2FA support
 - **Columns**: id, email, password, name, avatar, phone_verified_at, email_verified_at, two_factor_secret, two_factor_recovery_codes
 - **Relations**: 
-  - `hasMany(Team)`: Teams user owns
-  - `hasMany(Profile)`: User profiles
-  - `belongsToMany(Team)` via `team_user`: Team memberships
-  - `belongsToMany(Role)`: Direct roles (RBAC)
-  - `hasManyThrough(Permission)`: Via roles
+  - `hasMany(Team)` — Teams user owns
+  - `hasMany(Profile)` — User profiles
+  - `belongsToMany(Team)` via `team_user` — Team memberships
+  - `belongsToMany(Role)` — Direct roles (RBAC)
+  - `hasManyThrough(Permission)` — Via roles
 
 ### Team  
 - **Table**: `teams`
 - **Pivot column**: `owner_id` → User who created team
 - **Columns**: id, owner_id, name, personal_team, code, uuid
 - **Relations**:
-  - `belongsTo(User, owner_id)`: Team owner
-  - `belongsToMany(User)` via `team_user`: Members
-  - `hasMany(TeamInvitation)`: Pending invites
+  - `belongsTo(User, owner_id)` — Team owner
+  - `belongsToMany(User)` via `team_user` — Members
+  - `hasMany(TeamInvitation)` — Pending invites
 
 ### Profile
 - **Table**: `profiles`
 - **Purpose**: Extended user info (addresses, phone numbers, social media)
 - **Relations**:
-  - `belongsTo(User)`: Associated user
-  - `belongsToMany(Tenant)` via `profile_team`: Tenant access
+  - `belongsTo(User)` — Associated user
+  - `belongsToMany(Tenant)` via `profile_team` — Tenant access
 
 ### Pivot Tables
 All pivot tables follow naming convention `<model1>_<model2>_table.php`:
-- `team_user`: Team ↔ User membership
-- `device_user`: Device ↔ User mapping
-- `tenant_user`: Tenant ↔ User access
-- `profile_team`: Profile ↔ Tenant access
-- `model_has_roles`: Model ↔ Role assignment
-- `model_has_permissions`: Model ↔ Permission grant
-- `role_has_permissions`: Role ↔ Permission mapping
+- `team_user` — Team ↔ User membership
+- `device_user` — Device ↔ User mapping
+- `tenant_user` — Tenant ↔ User access
+- `profile_team` — Profile ↔ Tenant access
+- `model_has_roles` — Model ↔ Role assignment
+- `model_has_permissions` — Model ↔ Permission grant
+- `role_has_permissions` — Role ↔ Permission mapping
 
 ---
 
@@ -152,10 +145,10 @@ $this->updateTimestamps($table, $softDeletes = false);
 ```
 
 **Added columns:**
-- `created_at`: When record was created
-- `updated_at`: When record was last updated
-- `created_by`: User ID who created it
-- `updated_by`: User ID who updated it
+- `created_at` — When record was created
+- `updated_at` — When record was last updated
+- `created_by` — User ID who created it
+- `updated_by` — User ID who updated it
 
 **With soft deletes** (`SoftDeletes` trait):
 ```php
@@ -163,8 +156,8 @@ $this->updateTimestamps($table, true);
 ```
 
 **Additional columns:**
-- `deleted_at`: When record was soft-deleted
-- `deleted_by`: User ID who deleted it
+- `deleted_at` — When record was soft-deleted
+- `deleted_by` — User ID who deleted it
 
 ---
 
@@ -317,4 +310,4 @@ done
 
 **Last updated:** 2026-07-15  
 **Maintainer:** Marco (marco76tv)  
-**Status:** ✅ Active: All migrations conform to XotBaseMigration standard
+**Status:** ✅ Active — All migrations conform to XotBaseMigration standard

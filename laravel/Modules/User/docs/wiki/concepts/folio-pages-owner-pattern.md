@@ -1,5 +1,5 @@
 ---
-title: "Modulo User: owner pagine Folio, zero web.php"
+title: "Modulo User — owner pagine Folio, zero web.php"
 type: concept
 tags: [user, folio, pages, frontoffice, ownership]
 created: 2026-06-10
@@ -15,10 +15,9 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
-# Modulo User: owner pagine Folio, zero web.php
+# Modulo User — owner pagine Folio, zero web.php
 
 ## Religione
 
@@ -26,7 +25,7 @@ status: draft
 |-------|--------|---------|
 | **Owner pagine** | **User** | File in `resources/views/pages/` + `name()` + `middleware()` |
 | **Mount rotte** | **Cms** | `FolioVoltServiceProvider` → `Folio::path()->uri($locale)` |
-| **Link UI** | **Sixteen** | `route('<name>')` nel dropdown: non registra rotte |
+| **Link UI** | **Sixteen** | `route('<name>')` nel dropdown — non registra rotte |
 
 Il modulo User **non** aggiunge `Route::get()` in `routes/web.php` per il FO.
 
@@ -38,18 +37,13 @@ Il modulo User **non** aggiunge `Route::get()` in `routes/web.php` per il FO.
 | `notifications/index.blade.php` | `notifications` | `/it/notifications` |
 | `profile/edit.blade.php` | `profile.edit` | `/it/profile/edit` |
 
-The Sixteen theme must not duplicate this path. Theme-level Folio pages are registered
-before module paths; a duplicate would shadow the User Volt component and change a
-profile-edit action into an unrelated redirect. Sixteen may style the shared layout
-and links, while the User module remains the sole owner of the page and its behavior.
-
 Pagine auth/login spesso nel tema Sixteen; dominio profilo/notifiche resta User.
 
 ## Workflow nuova pagina User
 
 1. `php artisan folio:page <path>` sotto `Modules/User/resources/views/pages/`
 2. Blocco PHP: `name('english.name')`, `middleware(['web', 'auth'])` se serve
-3. `php artisan folio:list`: verifica nome e path
+3. `php artisan folio:list` — verifica nome e path
 4. Tema: `route('english.name')` solo se presente in `folio:list`
 
 ## Anti-pattern documentato
@@ -63,5 +57,4 @@ Pagine auth/login spesso nel tema Sixteen; dominio profilo/notifiche resta User.
 ## Collegamenti
 
 - [notifications-folio-page.md](notifications-folio-page.md)
-- [folio-list-vs-route-list.md](../../../../Cms/docs/wiki/concepts/folio-list-vs-route-list.md)
 - [folio-list-vs-route-list.md](../../../../Cms/docs/wiki/concepts/folio-list-vs-route-list.md)

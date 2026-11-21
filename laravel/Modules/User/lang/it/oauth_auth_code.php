@@ -63,6 +63,9 @@ return [
                 'label' => 'client.name',
             ],
         ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
         'revoke' => [

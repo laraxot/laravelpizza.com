@@ -8,6 +8,10 @@ use Modules\User\Models\Tenant;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
+<<<<<<< .merge_file_zLU5yw
+=======
+use Modules\User\Tests\TestCase;
+>>>>>>> .merge_file_ClkUuk
 
 uses(TestCase::class);
 

@@ -16,18 +16,17 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Analisi del File logout.blade.php
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Volt Folio Logout](./volt-folio-logout-panoramica.md)
+- [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Auth Pages Implementation](./auth-pages-implementation.md)
-- [Logout Blade Implementation](./logout-blade-implementation-posizione-corretta.md)
+- [Logout Blade Implementation](./logout-blade-implementation-2.md)
 - [Convenzioni Path](./path-conventions-user.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
+- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 
 ## Panoramica
 

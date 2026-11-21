@@ -1,4 +1,13 @@
-# IDE Helper Models Wave Impact On Theme - 2026-03-10
+---
+title: "IDE Helper models wave impact on theme"
+type: note
+theme: Meetup
+tags: [ide-helper, phpdoc, contract-first]
+created: 2026-03-10
+updated: 2026-03-10
+---
+
+# IDE Helper Models Wave Impact On Theme
 
 ## Perche' interessa il tema
 

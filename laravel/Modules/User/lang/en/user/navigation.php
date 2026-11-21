@@ -11,7 +11,11 @@ return [
     'plural' => 'Users',
     'group' => [
         'name' => 'User management',
+<<<<<<< .merge_file_i2WY7R
         'description' => 'Gestione degli utenti e dei loro permessi',
+=======
+        'description' => 'Management of users and their permissions',
+>>>>>>> .merge_file_LfYekK
     ],
     'label' => 'Users',
     'sort' => '26',

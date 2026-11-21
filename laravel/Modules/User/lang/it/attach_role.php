@@ -14,6 +14,10 @@ return [
             'label' => 'Team',
             'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
             'tooltip' => '',
+            'label' => 'Team',
+            'placeholder' => 'team_id',
+            'helper_text' => 'team_id',
+            'description' => 'team_id',
         ],
     ],
     'actions' => [

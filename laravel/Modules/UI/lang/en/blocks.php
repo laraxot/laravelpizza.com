@@ -6,7 +6,7 @@ return [
     'navigation' => [
         'fields' => [
             'items' => [
-                'label' => 'Voci di navigazione',
+                'label' => 'Navigation items',
             ],
             'text' => [
                 'label' => 'Testo link',
@@ -19,20 +19,20 @@ return [
     'category' => [
         'fields' => [
             'name' => [
-                'label' => 'Nome',
+                'label' => 'Name',
             ],
             'slug' => [
                 'label' => 'Slug',
             ],
             'parent' => [
-                'label' => 'Categoria padre',
+                'label' => 'Parent category',
             ],
         ],
     ],
     'post' => [
         'fields' => [
             'title' => [
-                'label' => 'Titolo',
+                'label' => 'Title',
             ],
             'content' => [
                 'label' => 'Contenuto',
@@ -45,13 +45,13 @@ return [
     'contact' => [
         'fields' => [
             'name' => [
-                'label' => 'Nome',
+                'label' => 'Name',
             ],
             'email' => [
                 'label' => 'Email',
             ],
             'phone' => [
-                'label' => 'Telefono',
+                'label' => 'Phone',
             ],
         ],
     ],

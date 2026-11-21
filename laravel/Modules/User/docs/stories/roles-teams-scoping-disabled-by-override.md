@@ -96,8 +96,8 @@ Due conseguenze, opposte fra loro:
 
 1. **Sicurezza, adesso**: un ruolo assegnato per il team 1 vale in *tutti* i tenant.
    Chi assegna un ruolo dentro un cliente lo sta assegnando ovunque.
-2. **Fragilita', domani**: il giorno in cui qualcuno allinea il team id al tenant -
-   che e' la cosa corretta con `teams => true`: tutti i controlli di ruolo
+2. **Fragilita', domani**: il giorno in cui qualcuno allinea il team id al tenant —
+   che e' la cosa corretta con `teams => true` — tutti i controlli di ruolo
    iniziano a rispondere `false` senza sollevare errori. Le funzioni protette da
    `hasRole()` spariscono dalla UI in silenzio. Il primo sintomo osservato sara'
    un pulsante che non c'e' piu', non un messaggio di errore.
@@ -118,7 +118,7 @@ Due conseguenze, opposte fra loro:
    Non e' una scelta tecnica, e oggi non e' dichiarata da nessuna parte.
 2. Se sono **per team**: rimuovere l'override di `roles()` (o riscriverlo
    includendo il vincolo sul team, se `belongsToManyX` serve per altro), e
-   impostare `setPermissionsTeamId()` nel punto in cui il tenant viene risolto -
+   impostare `setPermissionsTeamId()` nel punto in cui il tenant viene risolto —
    middleware del panel o listener sull'evento di cambio tenant.
 3. Prevedere il **ruolo trasversale**: `super-admin` deve valere ovunque. Con Spatie
    si ottiene con `team_id = null` sulla riga del pivot, che il vincolo

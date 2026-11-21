@@ -43,11 +43,11 @@
                 @endif
                 <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" 
                    class="backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 px-6 rounded-full transition-all duration-300 font-medium">
-                    {{ __('pub_theme::navigation.auth.login') }}
+                    {{ __('pub_theme::navigation.auth.login.label') }}
                 </a>
                 <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" 
                    class="bg-red-600 hover:bg-red-500 text-white py-2 px-6 rounded-full transition-all duration-300 font-bold hover:scale-105 shadow-lg shadow-red-900/40">
-                    {{ __('pub_theme::navigation.auth.register') }}
+                    {{ __('pub_theme::navigation.auth.register.label') }}
                 </a>
             @else
                 @php
@@ -74,28 +74,28 @@
                             @can('access-dashboard')
                                 <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                     <x-filament::icon icon="heroicon-o-home" class="w-4 h-4 mr-2" />
-                                    <span>{{ __('pub_theme::navigation.user_menu.dashboard') }}</span>
+                                    <span>{{ __('pub_theme::navigation.user_menu.dashboard.label') }}</span>
                                 </a>
                             @endcan
 
                             <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                 <x-filament::icon icon="heroicon-o-calendar-days" class="w-4 h-4 mr-2" />
-                                <span>{{ __('pub_theme::navigation.user_menu.my_events') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.my_events.label') }}</span>
                             </a>
 
                             <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                 <x-filament::icon icon="heroicon-o-map-pin" class="w-4 h-4 mr-2" />
-                                <span>{{ __('pub_theme::navigation.user_menu.nearby_events') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.nearby_events.label') }}</span>
                             </a>
 
                             <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                 <x-filament::icon icon="heroicon-o-user" class="w-4 h-4 mr-2" />
-                                <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.my_profile.label') }}</span>
                             </a>
 
                             <a href="{{ LaravelLocalization::localizeUrl('/settings') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
                                 <x-filament::icon icon="heroicon-o-cog-6-tooth" class="w-4 h-4 mr-2" />
-                                <span>{{ __('pub_theme::navigation.user_menu.settings') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.settings.label') }}</span>
                             </a>
                         </div>
 
@@ -105,7 +105,7 @@
                             @csrf
                             <button type="submit" class="w-full text-left flex items-center px-4 py-2 text-sm text-red-300 hover:text-red-200 hover:bg-slate-800">
                                 <x-filament::icon icon="heroicon-o-arrow-left-on-rectangle" class="w-4 h-4 mr-2" />
-                                <span>{{ __('pub_theme::navigation.user_menu.logout') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.logout.label') }}</span>
                             </button>
                         </form>
                     </div>
@@ -136,32 +136,32 @@
         @guest
             <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" 
                class="backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 text-white py-3 px-4 rounded-xl text-center transition-all duration-300 font-medium">
-                {{ __('pub_theme::navigation.auth.login') }}
+                {{ __('pub_theme::navigation.auth.login.label') }}
             </a>
             <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" 
                class="bg-red-600 hover:bg-red-500 text-white py-3 px-4 rounded-xl text-center transition-all duration-300 font-bold shadow-lg">
-                {{ __('pub_theme::navigation.auth.register') }}
+                {{ __('pub_theme::navigation.auth.register.label') }}
             </a>
         @else
             @can('access-dashboard')
                 <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center gap-2 hover:text-red-400">
-                    <x-heroicon-o-home class="w-4 h-4" /> Dashboard
+                    <x-heroicon-o-home class="w-4 h-4" /> {{ __('pub_theme::navigation.user_menu.dashboard.label') }}
                 </a>
             @endcan
             <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="flex items-center gap-2 hover:text-red-400">
-                <x-heroicon-o-calendar-days class="w-4 h-4" /> I miei eventi
+                <x-heroicon-o-calendar-days class="w-4 h-4" /> {{ __('pub_theme::navigation.user_menu.my_events.label') }}
             </a>
             <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="flex items-center gap-2 hover:text-red-400">
-                <x-heroicon-o-map-pin class="w-4 h-4" /> Eventi vicini
+                <x-heroicon-o-map-pin class="w-4 h-4" /> {{ __('pub_theme::navigation.user_menu.nearby_events.label') }}
             </a>
             <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center gap-2 hover:text-red-400">
-                <x-heroicon-o-user class="w-4 h-4" /> Profilo
+                <x-heroicon-o-user class="w-4 h-4" /> {{ __('pub_theme::navigation.user_menu.my_profile.label') }}
             </a>
 
             <form method="POST" action="{{ route('logout') }}" class="pt-2">
                 @csrf
                 <button type="submit" class="flex items-center gap-2 text-red-200 hover:text-red-100">
-                    <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4" /> Logout
+                    <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4" /> {{ __('pub_theme::navigation.user_menu.logout.label') }}
                 </button>
             </form>
         @endguest

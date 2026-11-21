@@ -1,11 +1,3 @@
----
-title: "User Module - Architecture Documentation"
-type: index
-status: draft
-updated: 2026-10-07
-tags: [docs, user, architecture]
-qmd: "user module - architecture documentation user"
----
 # User Module - Architecture Documentation
 
 Architettura tecnica del modulo User, inclusi pattern, componenti e integrazioni.
@@ -404,7 +396,7 @@ php artisan vendor:publish --tag=user-assets
 
 ---
 
-<!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "User Module - Architecture Documentation"

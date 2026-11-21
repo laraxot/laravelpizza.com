@@ -41,7 +41,7 @@ sezioni "quinta direzione". Story reale: [xotbasemanagerelatedrecords-convention
 
 **ERRORE CRITICO TROVATO (2026-09-11)**: GetRelatedResourceClassAction fallisce
 con "Nessuna Resource correlata risolvibile per ManageContacts". Probabile
-causa: ambiguità tra le due ContactResource (Quaeris e Notify) o mancanza
+causa: ambiguità tra le due ContactResource (<nome progetto> e Notify) o mancanza
 di form/table class. Analisi completa in
 [XotBaseManageRelatedRecords.php.md](../app/Filament/Resources/Pages/XotBaseManageRelatedRecords.php.md)
 sezione "ERRORE CRITICO TROVATO". Story riaperta come 'needs-followup'.

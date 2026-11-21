@@ -9,7 +9,6 @@ updated: 2026-10-05
 tags: [quality, bmad, pest, swarm]
 related:
   - ./5.260-phpstan-modules-current-remediation.story.md
-qmd: "qualità progetto: verifica e correzioni prioritarie xot"
 ---
 
 # Qualità progetto: verifica e correzioni prioritarie

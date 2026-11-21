@@ -1,4 +1,5 @@
 ---
+qmd: "xot consolidated architecture architecture md"
 title: "Xot - architecture.md"
 module: Xot
 bmad: true

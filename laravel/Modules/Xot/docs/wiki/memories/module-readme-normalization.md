@@ -1,4 +1,5 @@
 ---
+qmd: "xot wiki memories module readme normalization md"
 title: "README moduli: contratto di ingresso"
 type: memory
 status: active
@@ -13,8 +14,6 @@ evidence:
 related:
   - "../../README.md"
   - "../../../../../../bashscripts/ai/wiki/concepts/second-brain-canonical-operating-model.md"
-tags: [docs, xot, wiki]
-qmd: "readme moduli: contratto di ingresso xot"
 ---
 
 # README moduli: contratto di ingresso

@@ -1,5 +1,5 @@
 ---
-title: "Xot: scopo del modulo e come raggiungerlo meglio"
+title: "Xot — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-10-06
@@ -12,7 +12,7 @@ discussions:
   - "https://github.com/laraxot/module_xot_fila5/discussions/"
 ---
 
-# Xot: perche' esiste
+# Xot — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -24,8 +24,8 @@ Nessun modulo estende Filament direttamente. Si estende `XotBaseResource`, `XotB
 
 - `XotBaseModel`, `XotBaseResource`, `XotBasePage`, `XotBaseTable`: classi base per estensione
 - `Contracts`: interfacce per type-safety obbligatoria
-- **220 Action**: la più grande concentrazione del progetto. Non è logica di dominio: sono operazioni trasversali che tutti riusano (cast, export, file, moduli, traduzioni)
-- 621 file PHP, 5562 documenti in `docs/`: il modulo più documentato
+- **220 Action** — la più grande concentrazione del progetto. Non è logica di dominio: sono operazioni trasversali che tutti riusano (cast, export, file, moduli, traduzioni)
+- 621 file PHP, 5562 documenti in `docs/` — il modulo più documentato
 - **Nessun modulo deve estendere Filament/Laravel direttamente**: passa sempre da Xot
 
 ## Perche' l'ereditarieta' e non la composizione
@@ -44,7 +44,7 @@ La regola "mai estendere Filament direttamente" oggi vive nella documentazione e
 
 ### 2. 5562 documenti sono troppi per essere una guida
 
-`docs/` di Xot è cresciuto fino a diventare un archivio in cui la risposta esiste ma non si trova. Il progetto ha già la cura: il pattern on-demand: bridge corti, canonico lungo, ricerca via `qmd`: ma dentro Xot non è applicata con rigore.
+`docs/` di Xot è cresciuto fino a diventare un archivio in cui la risposta esiste ma non si trova. Il progetto ha già la cura — il pattern on-demand: bridge corti, canonico lungo, ricerca via `qmd` — ma dentro Xot non è applicata con rigore.
 
 **Azione:** un `docs/index.md` che sia una mappa a una schermata (dieci voci, non cento), e per ogni argomento **un solo** documento canonico.
 
@@ -67,7 +67,7 @@ Xot è condiviso fra progetti diversi (`_bases/*`). Un riferimento a questa ammi
 
 **Azione:** un test che cerchi nomi di progetto e di ente dentro `Modules/Xot`.
 
-## Confini: cosa **non** appartiene a Xot
+## Confini — cosa **non** appartiene a Xot
 
 - La **logica di business** di alcun dominio: ogni modulo implementa il suo
 - L'**estensione di laraxot/framework**: rimane nel repository laraxot/module_xot_fila5
@@ -76,8 +76,8 @@ Xot è condiviso fra progetti diversi (`_bases/*`). Un riferimento a questa ammi
 
 ## Collegamenti
 
-- `docs/wiki/patterns/`: pattern architetturali
-- `docs/bmad/`: decisioni di design framework
-- `docs/wiki/rules/fundamental-xotbase-rule.md`: mai estendere Filament direttamente
-- `docs/wiki/rules/final-method-override.md`: perche' niente `final`
+- `docs/wiki/patterns/` — pattern architetturali
+- `docs/bmad/` — decisioni di design framework
+- `docs/wiki/rules/fundamental-xotbase-rule.md` — mai estendere Filament direttamente
+- `docs/wiki/rules/final-method-override.md` — perche' niente `final`
 - `docs/wiki/memories/public-path-is-public-html.md`

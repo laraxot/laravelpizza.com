@@ -8,19 +8,14 @@ qmd: "navigation-translationses correzioni traduzioni navigation - modulo user"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Correzioni Traduzioni Navigation - Modulo User
@@ -101,7 +96,7 @@ status: draft
 ## Collegamenti
 
 - [Audit Generale Traduzioni Navigation](../../../docs/navigation-translations-audit.md)
-- [Regole Traduzioni Laraxot](../../Xot/docs/translation-rules.md)
+- [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
 - [Documentazione Modulo User](README.md)
 

@@ -1,12 +1,8 @@
 ---
 title: "Risoluzione Conflitti in TableLayoutTrait"
+qmd: "ui risoluzione conflitti tablelayouttrait md"
 type: note
-created: 2026-01-20
-updated: 2026-10-18
-module: UI
-tags: [docs, ui]
-status: superseded
-superseded_by: resolution-conflitti-tablelayouttrait.md
+tags: [documentation]
 ---
 
 # Risoluzione Conflitti in TableLayoutTrait

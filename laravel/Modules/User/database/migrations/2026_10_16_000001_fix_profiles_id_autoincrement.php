@@ -15,21 +15,21 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
  * `MODIFY ... AUTO_INCREMENT` exists only on MySQL/MariaDB: on other drivers (sqlite used by
  * the test suites and CI) the migration does nothing instead of failing the whole migrate.
  */
+<<<<<<< .merge_file_3k3Jyi
 return new class extends Migration
 {
     protected $connection = 'user';
 
+=======
+return new class() extends Migration
+{
+>>>>>>> .merge_file_6laCSD
     public function up(): void
     {
         $connection = $this->connectionName();
         $schema = Schema::connection($connection);
 
         if (! in_array(DB::connection($connection)->getDriverName(), ['mysql', 'mariadb'], true)) {
-            return;
-        }
-
-        // `MODIFY ... AUTO_INCREMENT` esiste solo in MySQL/MariaDB (SQLite dei test: niente da convertire).
-        if (! in_array(DB::connection('user')->getDriverName(), ['mysql', 'mariadb'], true)) {
             return;
         }
 

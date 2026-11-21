@@ -15,8 +15,8 @@
 @php
     $showLabels = $showLabels ?? true;
     $size = $size ?? 'md';
-    $loginLabel = __('pub_theme::navigation.auth.login');
-    $registerLabel = __('pub_theme::navigation.auth.register');
+    $loginLabel = __('pub_theme::navigation.auth.login.label');
+    $registerLabel = __('pub_theme::navigation.auth.register.label');
     
     $padding = match($size) {
         'sm' => 'px-3 py-2',

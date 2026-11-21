@@ -1,4 +1,6 @@
 ---
+title: "Project context — solo Filament widget"
+
 title: "Project context: solo Filament widget"
 type: constitution
 module: User
@@ -9,10 +11,13 @@ related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
   - ./decision-log.md
+---
+
+# Project context — campagna Livewire HTTP → widget
+
 updated: 2026-10-07
 tags: [docs, user, bmad]
 qmd: "project context   campagna livewire http → widget user"
----
 
 # Project context: campagna Livewire HTTP → widget
 
@@ -23,6 +28,10 @@ Costituzione della **campagna**, non del solo slice SuperAdmin. Lo slice SuperAd
 Il panel Filament è la porta dell’identità. L’UI di quella porta deve vivere nel namespace Filament (`XotBaseWidget`), non in `Http\Livewire`. Due stack UI sullo stesso chrome hanno già spento `/admin`.
 
 ## Utenti
+
+- Operatore panel (`/admin`) — menu, team, login social.
+- Utente FO auth — login/register/password: già coperti da widget; gli HTTP sono gemelli orfani.
+- Maintainer User — un solo albero da far passare a PHPStan e agli upgrade Filament.
 
 - Operatore panel (`/admin`): menu, team, login social.
 - Utente FO auth: login/register/password: già coperti da widget; gli HTTP sono gemelli orfani.

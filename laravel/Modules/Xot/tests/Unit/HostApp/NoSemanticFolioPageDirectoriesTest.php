@@ -15,6 +15,15 @@ use PHPUnit\Framework\Assert;
  */
 test('ptvx theme pages non contiene directory semantiche vietate', function (): void {
     $themesRoot = dirname(__DIR__, 5).'/Themes';
+
+    // Contratto specifico ptvx: gli host con altri temi (restaurant, ...)
+    // non hanno Themes/One e saltano invece di fallire.
+    foreach (['One', 'Zero'] as $theme) {
+        if (! is_dir($themesRoot.'/'.$theme.'/resources/views/pages')) {
+            $this->markTestSkipped("Host app senza Themes/{$theme}: test specifico ptvx.");
+        }
+    }
+
     $forbidden = [
         'administration', 'ambiente', 'article', 'articles', 'categories', 'cultura',
         'dashboard', 'eventi', 'famiglia', 'genesis', 'lavoro', 'learn', 'mobilita',

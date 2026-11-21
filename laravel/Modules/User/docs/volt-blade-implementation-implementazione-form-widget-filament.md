@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Implementazione dei Form con Widget Filament
@@ -25,7 +24,7 @@ status: draft
 - [README modulo User](./README.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
+- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 
 ## Introduzione
 
@@ -304,5 +303,5 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
-- [Gestione Sessione](./session-management-gestione-sessioni.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md) 
+- [Gestione Sessione](./session-management.md)
+- [Tema One Documentation](../../themes/one/docs/README.md) 

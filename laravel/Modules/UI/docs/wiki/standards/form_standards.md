@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "form standards"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard Form nei Temi

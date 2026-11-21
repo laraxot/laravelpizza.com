@@ -8,15 +8,14 @@ qmd: "login-widget-translation-audit loginwidget translation audit - gennaio 202
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # LoginWidget Translation Audit - Gennaio 2025
@@ -222,15 +221,3 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
 **LoginWidget status**: ✅ Fully functional in all languages
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-title: "login widget translation audit 2025"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "login widget translation audit 2025 user"
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/login-widget-translation-audit-2025.md

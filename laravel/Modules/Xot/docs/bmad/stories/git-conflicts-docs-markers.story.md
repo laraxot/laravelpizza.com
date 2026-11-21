@@ -4,7 +4,7 @@ created: 2026-09-26
 updated: 2026-09-26
 issues: []
 discussions: []
-title: "Story: marker di conflitto committati nei docs modulo (2026-09-24)"
+title: "Story — marker di conflitto committati nei docs modulo (2026-09-24)"
 type: story
 module: Xot
 epic: quality

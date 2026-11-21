@@ -8,7 +8,7 @@ return [
         'plural' => 'Moduli',
         'group' => [
             'name' => 'Sistema',
-            'description' => 'Gestione dei moduli e delle estensioni',
+            'description' => 'Module and extension management',
         ],
         'label' => 'Module',
         'sort' => '17',
@@ -17,28 +17,28 @@ return [
     'fields' => [
         'basic' => [
             'name' => [
-                'label' => 'Nome',
-                'placeholder' => 'Inserisci il nome del modulo',
-                'help' => 'Nome identificativo del modulo',
+                'label' => 'Name',
+                'placeholder' => 'Enter the module name',
+                'help' => 'Module identifier name',
             ],
             'description' => [
-                'label' => 'Descrizione',
-                'placeholder' => 'Inserisci la descrizione del modulo',
-                'help' => 'Descrizione dettagliata delle funzionalità',
+                'label' => 'Description',
+                'placeholder' => 'Enter the module description',
+                'help' => 'Detailed description of the features',
             ],
             'version' => [
                 'label' => 'Versione',
-                'placeholder' => 'Inserisci la versione (es. 1.0.0)',
-                'help' => 'Versione semantica del modulo',
+                'placeholder' => 'Enter the version (e.g. 1.0.0)',
+                'help' => 'Semantic version of the module',
             ],
             'status' => [
-                'label' => 'Stato',
-                'help' => 'Stato attuale del modulo',
+                'label' => 'Status',
+                'help' => 'Current status of the module',
                 'options' => [
-                    'enabled' => 'Abilitato',
-                    'disabled' => 'Disabilitato',
+                    'enabled' => 'Enabled',
+                    'disabled' => 'Disabled',
                     'pending' => 'In attesa',
-                    'error' => 'Errore',
+                    'error' => 'Error',
                 ],
             ],
             'label' => '',
@@ -48,18 +48,18 @@ return [
         'details' => [
             'dependencies' => [
                 'label' => 'Dipendenze',
-                'placeholder' => 'Seleziona le dipendenze richieste',
-                'help' => 'Altri moduli necessari per il funzionamento',
+                'placeholder' => 'Select the required dependencies',
+                'help' => 'Other modules required to run',
             ],
             'author' => [
                 'label' => 'Autore',
-                'placeholder' => 'Inserisci l\'autore del modulo',
+                'placeholder' => 'Enter the module author',
                 'help' => 'Sviluppatore o organizzazione',
             ],
             'license' => [
                 'label' => 'Licenza',
-                'placeholder' => 'Inserisci la licenza',
-                'help' => 'Tipo di licenza del modulo',
+                'placeholder' => 'Enter the license',
+                'help' => 'Module license type',
                 'options' => [
                     'mit' => 'MIT',
                     'apache' => 'Apache 2.0',
@@ -69,8 +69,8 @@ return [
             ],
             'homepage' => [
                 'label' => 'Homepage',
-                'placeholder' => 'URL della documentazione',
-                'help' => 'Pagina web del modulo',
+                'placeholder' => 'Documentation URL',
+                'help' => 'Module web page',
             ],
             'label' => '',
             'tooltip' => '',
@@ -80,16 +80,16 @@ return [
         'system' => [
             'order' => [
                 'label' => 'Ordine',
-                'placeholder' => 'Inserisci l\'ordine di caricamento',
-                'help' => 'Priorità di caricamento del modulo',
+                'placeholder' => 'Enter the load order',
+                'help' => 'Module load priority',
             ],
             'path' => [
-                'label' => 'Percorso',
-                'help' => 'Percorso di installazione del modulo',
+                'label' => 'Path',
+                'help' => 'Module installation path',
             ],
             'namespace' => [
                 'label' => 'Namespace',
-                'help' => 'Namespace PHP del modulo',
+                'help' => 'Module PHP namespace',
             ],
             'label' => '',
             'tooltip' => '',
@@ -99,11 +99,11 @@ return [
         'timestamps' => [
             'created_at' => [
                 'label' => 'Data Creazione',
-                'help' => 'Data di installazione del modulo',
+                'help' => 'Module installation date',
             ],
             'updated_at' => [
-                'label' => 'Ultimo Aggiornamento',
-                'help' => 'Data dell\'ultimo aggiornamento',
+                'label' => 'Last Updated',
+                'help' => 'Date of the last update',
             ],
             'label' => '',
             'tooltip' => '',
@@ -114,60 +114,60 @@ return [
     'actions' => [
         'install' => [
             'label' => 'Installa',
-            'success' => 'Modulo installato con successo',
-            'error' => 'Errore durante l\'installazione',
+            'success' => 'Module installed successfully',
+            'error' => 'Error during installation',
         ],
         'uninstall' => [
             'label' => 'Disinstalla',
-            'success' => 'Modulo disinstallato con successo',
-            'error' => 'Errore durante la disinstallazione',
-            'confirm' => 'Sei sicuro di voler disinstallare questo modulo?',
+            'success' => 'Module uninstalled successfully',
+            'error' => 'Error during uninstallation',
+            'confirm' => 'Are you sure you want to uninstall this module?',
         ],
         'enable' => [
             'label' => 'Abilita',
-            'success' => 'Modulo abilitato con successo',
-            'error' => 'Errore durante l\'abilitazione',
+            'success' => 'Module enabled successfully',
+            'error' => 'Error during enabling',
         ],
         'disable' => [
             'label' => 'Disabilita',
-            'success' => 'Modulo disabilitato con successo',
-            'error' => 'Errore durante la disabilitazione',
+            'success' => 'Module disabled successfully',
+            'error' => 'Error during disabling',
         ],
         'update' => [
-            'label' => 'Aggiorna',
-            'success' => 'Modulo aggiornato con successo',
-            'error' => 'Errore durante l\'aggiornamento',
+            'label' => 'Refresh',
+            'success' => 'Module updated successfully',
+            'error' => 'Error during update',
         ],
         'migrate' => [
             'label' => 'Migra Database',
-            'success' => 'Migrazione completata con successo',
-            'error' => 'Errore durante la migrazione',
+            'success' => 'Migration completed successfully',
+            'error' => 'Error during migration',
         ],
         'rollback' => [
             'label' => 'Ripristina Database',
-            'success' => 'Ripristino completato con successo',
-            'error' => 'Errore durante il ripristino',
+            'success' => 'Restore completed successfully',
+            'error' => 'Error during restore',
         ],
         'publish' => [
             'label' => 'Pubblica Risorse',
-            'success' => 'Risorse pubblicate con successo',
-            'error' => 'Errore durante la pubblicazione',
+            'success' => 'Resources published successfully',
+            'error' => 'Error during publishing',
         ],
     ],
     'messages' => [
         'validation' => [
             'name' => [
                 'required' => 'The name is required',
-                'unique' => 'Questo nome è già in uso',
-                'regex' => 'Il nome può contenere solo lettere, numeri e trattini',
+                'unique' => 'This name is already in use',
+                'regex' => 'The name may only contain letters, numbers and dashes',
             ],
             'version' => [
-                'required' => 'La versione è obbligatoria',
-                'regex' => 'Il formato deve essere X.Y.Z',
+                'required' => 'The version is required',
+                'regex' => 'The format must be X.Y.Z',
             ],
             'dependencies' => [
-                'exists' => 'Uno o più moduli dipendenti non esistono',
-                'enabled' => 'Uno o più moduli dipendenti non sono abilitati',
+                'exists' => 'One or more dependent modules do not exist',
+                'enabled' => 'One or more dependent modules are not enabled',
             ],
         ],
         'errors' => [
@@ -178,14 +178,14 @@ return [
             'system_incompatible' => 'Sistema incompatibile: richiede :requirement',
         ],
         'warnings' => [
-            'disable_core' => 'Attenzione: stai per disabilitare un modulo core',
-            'uninstall_dependencies' => 'Attenzione: questo modulo ha delle dipendenze',
-            'update_available' => 'È disponibile la versione :version',
-            'backup_recommended' => 'Si consiglia di effettuare un backup prima di procedere',
+            'disable_core' => 'Warning: you are about to disable a core module',
+            'uninstall_dependencies' => 'Warning: this module has dependencies',
+            'update_available' => 'Version :version is available',
+            'backup_recommended' => 'We recommend making a backup before proceeding',
         ],
         'info' => [
-            'dependencies_ok' => 'Tutte le dipendenze sono soddisfatte',
-            'system_compatible' => 'Il sistema è compatibile',
+            'dependencies_ok' => 'All dependencies are satisfied',
+            'system_compatible' => 'The system is compatible',
             'migrations_pending' => 'Ci sono migrazioni in sospeso',
         ],
     ],

@@ -29,7 +29,7 @@ class DeleteUserAction
         if (! is_string($hashedPassword) || ! $this->hasher->check($confirmPassword, $hashedPassword)) {
             return [
                 'success' => false,
-                'message' => 'La password inserita non è corretta',
+                'message' => 'The password you entered is incorrect',
             ];
         }
 
@@ -39,12 +39,12 @@ class DeleteUserAction
 
             return [
                 'success' => true,
-                'message' => 'Account eliminato con successo',
+                'message' => 'Account deleted successfully',
             ];
         } catch (\Exception $e) {
             return [
                 'success' => false,
-                'message' => 'Si è verificato un errore durante l\'eliminazione dell\'account',
+                'message' => 'An error occurred while deleting the account',
             ];
         }
     }

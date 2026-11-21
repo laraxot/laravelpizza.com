@@ -71,5 +71,23 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'ip_address' => [
+            'label' => 'Indirizzo IP',
+        ],
+        'user_agent' => [
+            'label' => 'Browser (user agent)',
+        ],
+        'login_successful' => [
+            'label' => 'Accesso riuscito',
+        ],
+        'login_at' => [
+            'label' => 'Accesso il',
+        ],
+        'logout_at' => [
+            'label' => 'Uscita il',
+        ],
+        'location' => [
+            'label' => 'Luogo',
+        ],
     ],
 ];

@@ -1,14 +1,13 @@
 ---
-title: "UI: brainstorming BMAD"
+title: "UI — brainstorming BMAD"
 type: brainstorming
 status: active
 module: UI
 created: 2026-09-28
 updated: 2026-09-28
 qmd: "UI brainstorming rischi opportunità domande aperte"
-tags: [docs, ui, bmad]
 ---
-# UI: brainstorming
+# UI — brainstorming
 
 ## Punto di partenza
 

@@ -16,7 +16,6 @@ related:
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"
   - "./user-gdpr-oupling.md"
-status: draft
 ---
 
 # Architectural Rules & Guidelines

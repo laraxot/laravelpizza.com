@@ -59,7 +59,7 @@ I conteggi sono una fotografia del repository, non obiettivi architetturali. Pri
 
 ## Collegamenti
 
-- [architecture](./ARCHITECTURE.md)
+- [architecture](./architecture.md)
 - [index](./index.md)
 - [module](./module.md)
 - [philosophy](./philosophy.md)

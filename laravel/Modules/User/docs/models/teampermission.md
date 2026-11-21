@@ -14,7 +14,6 @@ related:
   - "./team.md"
   - "./xotbaivot-migration.md"
   - "./xotbasepivot-migration.md"
-status: draft
 ---
 
 # TeamPermission

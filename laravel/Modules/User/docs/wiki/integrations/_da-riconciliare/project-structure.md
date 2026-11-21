@@ -1,30 +1,21 @@
 ---
-title: "Project Structure: Module User"
+title: "Project Structure — Module User"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
 related:
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
-  - "./00-index.md"
-  - "../../../2fa-guide.md"
+  - "./2fa-guide.md"
   - "./2fa.md"
-  - "../../../accessor-delegation-pattern.md"
+  - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "../../../00-index-indice-documentazione-modulo-user.md"
-  - "./00-index.md"
-  - "../../../2fa-guide.md"
-  - "./2fa.md"
-  - "../../../accessor-delegation-pattern.md"
-  - "../../../actions-path-convention.md"
-  - "../../../actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-status: draft
-qmd: "project structure   module **user** user"
 ---
 
-# Project Structure: Module **User**
+# Project Structure — Module **User**
 
 ## Directory Structure
 
@@ -45,7 +36,7 @@ At module root level, these folders MUST NOT exist:
 │   ├── concepts/                 # Topic/theme pages
 │   ├── entities/                 # Organization/person pages
 │   ├── rules/                    # ⚠️ 151+ regole progettuali
-│   │   ├── 00-index.md          # Indice regole
+│   │   ├── 00-index-1.md          # Indice regole
 │   │   ├── 00-TRIGGER_MAP.md    # Trigger map (link a globale)
 │   │   └── *.md                 # Regole specifiche modulo
 │   ├── skills/                   # Skill progettuali
@@ -59,10 +50,10 @@ At module root level, these folders MUST NOT exist:
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── on-demand-pattern.md          # 🌟 QUESTO FILE: Pattern on-demand
+├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
-├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
 \`\`\`
 
@@ -74,7 +65,7 @@ At module root level, these folders MUST NOT exist:
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `on-demand-pattern.md` | **Leggi prima**: pattern da seguire |
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
 
@@ -121,11 +112,6 @@ graph TD
 
 ## Riferimenti Globali
 
-- [Project Wiki Root](../..)
-- [Global Rules](../../rules)
-- [Global Skills](../../skills)
-- [Global Commands](../../commands)
-- [Global Memories](../../memories)
 - [Project Wiki Root](../..)
 - [Global Rules](../../rules)
 - [Global Skills](../../skills)
@@ -155,11 +141,17 @@ git commit -m "docs: add wiki structure for User"
 
 ---
 
-<!-- Merged from PROJECT-STRUCTURE.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from project-structure.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+title: "Project Structure — Module User"
+type: documentation
+created: 2026-05-11
+updated: 2026-05-11
+tags: [structure, architecture, module]
+---
 
-# Project Structure: Module **User**
+# Project Structure — Module **User**
 
 ## Directory Structure
 
@@ -194,10 +186,10 @@ At module root level, these folders MUST NOT exist:
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE: Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
-├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
-├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── qmd-setup.md                  # Configurazione QMD
+├── performance-optimization.md    # Metriche e best practice
+├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
 \`\`\`
 
@@ -209,7 +201,7 @@ At module root level, these folders MUST NOT exist:
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `ON-DEMAND-PATTERN.md` | **Leggi prima**: pattern da seguire |
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
 
@@ -256,11 +248,6 @@ graph TD
 
 ## Riferimenti Globali
 
-- [Project Wiki Root](../..)
-- [Global Rules](../../rules)
-- [Global Skills](../../skills)
-- [Global Commands](../../commands)
-- [Global Memories](../../memories)
 - [Project Wiki Root](../..)
 - [Global Rules](../../rules)
 - [Global Skills](../../skills)

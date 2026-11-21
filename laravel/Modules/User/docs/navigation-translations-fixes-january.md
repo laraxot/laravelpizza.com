@@ -8,15 +8,14 @@ qmd: "navigation-translations-fixes-january correzioni traduzioni navigation - g
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-status: draft
 ---
 
 # Correzioni Traduzioni Navigation - Gennaio 2026
@@ -208,7 +207,7 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 - [Standard Traduzioni](../../Xot/docs/translation-standards.md)
 - [Documentazione Modulo User](./README.md)
 - [Filosofia Traduzioni Laraxot](../../xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
+- [Standard Traduzioni](../../xot/docs/translation-standards.md)
 - [Documentazione Modulo User](./README.md)
 
 ## Note Tecniche

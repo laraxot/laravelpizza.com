@@ -87,13 +87,13 @@ class TokensRelationManager extends XotBaseRelationManager
     {
         return [
             'revoked' => Filter::make('revoked')
-                ->label('Revocati')
+                ->label('Revoked')
                 ->query(fn (Builder $query) => $query->where('revoked', true)),
             'expired' => Filter::make('expired')
-                ->label('Scaduti')
+                ->label('Expired')
                 ->query(fn (Builder $query) => $query->where('expires_at', '<', now())),
             'valid' => Filter::make('valid')
-                ->label('Validi')
+                ->label('Valid')
                 ->query(fn (Builder $query) => $query->where('revoked', false)->where('expires_at', '>', now())),
         ];
     }
@@ -106,18 +106,18 @@ class TokensRelationManager extends XotBaseRelationManager
     {
         return [
             'view' => Action::make('view')
-                ->label('Visualizza')
+                ->label('View')
                 ->icon('heroicon-o-eye')
                 ->url(fn (OauthToken $record): string => OauthAccessTokenResource::getUrl('view', ['record' => $record])),
             'revoke' => Action::make('revoke')
-                ->label('Revoca')
+                ->label('Revoke')
                 ->icon('heroicon-o-x-circle')
                 ->color('danger')
                 ->requiresConfirmation()
                 ->action(function (OauthToken $record): void {
                     if (app(RevokeTokenAction::class)->execute($record)) {
                         Notification::make()
-                            ->title('Token revocato')
+                            ->title('Token revoked')
                             ->success()
                             ->send();
                     }

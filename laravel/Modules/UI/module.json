@@ -2,11 +2,26 @@
     "name": "UI",
     "alias": "ui",
     "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
-    "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
+    "keywords": [
+        "ui",
+        "components",
+        "design-system",
+        "frontend",
+        "tailwind"
+    ],
     "priority": 0,
+    "active": 1,
+    "order": 4,
     "providers": [
         "Modules\\UI\\Providers\\UIServiceProvider",
         "Modules\\UI\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "files": []
+    "aliases": {},
+    "files": [],
+    "requires": [
+        "Xot",
+        "User"
+    ],
+    "minimumCoreVersion": "10.0",
+    "phpVersion": "^8.3"
 }

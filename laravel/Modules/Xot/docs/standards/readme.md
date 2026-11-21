@@ -1,9 +1,14 @@
 ---
-title: "Xot - readme.md"
-module: Xot
-bmad: true
-status: active
+title: "readme"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme"
+issues: []
+discussions: []
 ---
+
 # Standard di Codice
 
 Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel progetto.
@@ -28,7 +33,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](docs/moduli/installati/README.md)
 * [README.md](docs/moduli/comandi/README.md)
 * [README.md](docs/phpstan/README.md)
-* [README.md](docs/README.md)
+* [README.md](../README.md)
 * [README.md](docs/module-links/README.md)
 * [README.md](docs/troubleshooting/git-conflicts/README.md)
 * [README.md](docs/tecnico/laraxot/README.md)

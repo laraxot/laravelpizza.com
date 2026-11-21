@@ -6,10 +6,6 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
-type: note
-status: draft
-updated: 2026-10-07
-qmd: "wiki schema - user user"
 ---
 
 # Wiki Schema - User
@@ -23,7 +19,7 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema.md          # Questo file
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna

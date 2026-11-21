@@ -91,24 +91,31 @@ class AssetAction
             $module_path = Str::beforeLast($module_path, '/');
         }
 
-        $filename_from = app(FixPathAction::class)->execute($module_path.'/resources/'.$ns_after);
+        // Asset statici del modulo in Modules/<Modulo>/public: serviti dal symlink
+        // public_html/assets/<modulo> -> ../../laravel/Modules/<Modulo>/public
+        // (deploy.sh / xot:module-link). Niente copia.
         $filename_public = app(FixPathAction::class)->execute($module_path.'/public/'.$ns_after);
+        if (File::exists($filename_public)) {
+            // Link e URL sempre minuscoli (su Linux assets/Xot ≠ assets/xot).
+            return $this->publicUrl('assets/'.Str::lower($ns).'/'.$ns_after);
+        }
 
-        if (! File::exists($filename_public) && ! File::exists($filename_from)) {
+        // Ripiego storico: file in resources/ — URL ancora via symlink assets/<modulo>.
+        $filename_from = app(FixPathAction::class)->execute($module_path.'/resources/'.$ns_after);
+
+        if (! File::exists($filename_from)) {
             if (isRunningTestBench()) {
                 return $originalPath;
             }
             throw new Exception('file ['.$filename_public.'] not Exists , path ['.$originalPath.']');
         }
 
-        // public_html/assets/<modulo in minuscolo> -> ../../laravel/Modules/<Modulo>/public (deploy.sh, regola in CLAUDE.md):
-        // il nome del link e' sempre minuscolo, quindi anche l'URL (su Linux `assets/Xot` e `assets/xot` sono cartelle diverse).
         return $this->publicUrl('assets/'.Str::lower($ns).'/'.$ns_after);
     }
 
     /**
      * Nothing is copied: public_html/assets/<module> and public_html/themes/<Theme> are symlinks
-     * (created by deploy.sh) to the module/theme `public` folder, so the URL is
+     * (deploy.sh / xot:module-link, xot:theme-link) to the module/theme `public` folder, so the URL is
      * served straight from there. The old per-request copy wrote through the symlink and failed
      * with "Failed to open stream" whenever the link was missing or broken.
      */

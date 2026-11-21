@@ -5,8 +5,6 @@ module: User
 status: review
 created: 2026-10-06
 updated: 2026-10-06
-tags: [docs, user, bmad]
-qmd: "claim ed esito user"
 ---
 
 # Claim ed esito

@@ -8,19 +8,14 @@ qmd: "factory-creation-status factory creation status - user module"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Factory Creation Status - User Module
@@ -124,7 +119,7 @@ Questo errore è **GRAVISSIMO** perché:
 - [Factory Audit Complete Analysis](../../../../docs/project/factory-audit-complete-analysis.md)
 - [User Module README](./README.md)
 - [Factory PHPStan Fixes](./phpstan/factory-fixes.md)
-- [Database Documentation](./database/readme.md)
+- [Database Documentation](./database/README.md)
 
 ## PROSSIMI PASSI
 

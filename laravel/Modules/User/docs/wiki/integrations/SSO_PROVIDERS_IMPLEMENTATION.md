@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "user module - sso providers implementation user"
-status: superseded
-superseded_by: SSO-PROVIDERS-IMPLEMENTATION.md
 ---
 
 # User Module - SSO Providers Implementation

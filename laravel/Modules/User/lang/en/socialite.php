@@ -28,4 +28,7 @@ return [
         'title' => 'Security notice',
         'description' => 'Credentials are stored securely. Never share them or commit them to public repositories.',
     ],
+    'messages' => [
+        'config_saved' => 'Settings saved',
+    ],
 ];

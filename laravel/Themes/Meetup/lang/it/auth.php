@@ -3,43 +3,88 @@
 declare(strict_types=1);
 
 return [
-    'login' => [
-        'title' => 'Bentornato su Laravel Pizza Meetups! 🍕',
-        'subtitle' => 'Accedi per iscriverti ai meetup e gestire le tue prenotazioni.',
-        'page_title' => 'Accedi',
+    'layout' => [
+        'privacy' => [
+            'label' => 'Privacy',
+        ],
+        'legal_notes' => [
+            'label' => 'Note legali',
+        ],
+        'accessibility' => [
+            'label' => 'Dichiarazione di accessibilità',
+        ],
+        'support' => [
+            'title' => 'Assistenza',
+        ],
+        'guide' => [
+            'label' => 'Guida',
+        ],
+        'agid_compliance' => [
+            'message' => 'Conforme alle linee guida AGID per i servizi digitali della Pubblica Amministrazione',
+        ],
+    ],
+    'register' => [
+        'toggle_password' => [
+            'label' => 'Mostra o nascondi la password',
+        ],
+        'required' => [
+            'label' => 'Obbligatorio',
+        ],
     ],
     'logout' => [
-        'in_progress' => 'Disconnessione in corso…',
+        'goodbye' => [
+            'message' => 'Arrivederci',
+        ],
     ],
     'password' => [
-        'request' => [
-            'title' => 'Password dimenticata?',
-            'subtitle' => 'Scrivi l\'email del tuo account: ti mandiamo un link per sceglierne una nuova.',
-            'email' => 'Email',
-            'submit' => 'Inviami il link',
-            'back_to_login' => 'Torna all\'accesso',
-        ],
         'reset' => [
-            'title' => 'Scegli una nuova password',
-            'subtitle' => 'Almeno 8 caratteri. Dopo il salvataggio entri subito nel sito.',
-            'email' => 'Email',
-            'password' => 'Nuova password',
-            'password_confirmation' => 'Ripeti la nuova password',
-            'submit' => 'Salva la password',
+            'title' => 'Reimposta la password',
+            'label' => 'Reimposta la password',
+        ],
+        'email' => [
+            'label' => 'Indirizzo email',
+        ],
+        'confirm_field' => [
+            'label' => 'Conferma password',
         ],
         'confirm' => [
-            'title' => 'Conferma la password',
-            'subtitle' => 'È una zona protetta: per continuare scrivi di nuovo la tua password.',
-            'password' => 'Password',
-            'submit' => 'Conferma',
-            'forgot' => 'Password dimenticata?',
+            'title' => 'Conferma la tua password',
+            'message' => 'Conferma la tua password prima di continuare',
+            'label' => 'Conferma password',
+        ],
+        'forgot' => [
+            'label' => 'Hai dimenticato la password?',
+        ],
+        'send_link' => [
+            'label' => 'Invia il link per reimpostare la password',
+        ],
+        'or' => [
+            'label' => 'Oppure',
+        ],
+        'back_to_login' => [
+            'label' => 'torna al login',
+        ],
+    ],
+    'sections' => [
+        'verify' => [
+            'title' => 'Verifica il tuo indirizzo email',
         ],
     ],
     'verify' => [
-        'title' => 'Controlla la tua email',
-        'subtitle' => 'Ti abbiamo mandato un link per confermare l\'indirizzo email. Aprilo per completare la registrazione.',
-        'resent' => 'Ti abbiamo mandato un nuovo link di conferma.',
-        'resend' => 'Non è arrivata? Mandamene un\'altra',
-        'logout' => 'Esci',
+        'or' => [
+            'label' => 'Oppure',
+        ],
+        'sign_out' => [
+            'label' => 'esci',
+        ],
+        'resent' => [
+            'message' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+        ],
+        'instructions' => [
+            'message' => 'Prima di procedere, controlla la tua email per trovare il link di verifica. Se non hai ricevuto l\'email,',
+        ],
+        'request_another' => [
+            'label' => 'clicca qui per richiederne un altro',
+        ],
     ],
 ];

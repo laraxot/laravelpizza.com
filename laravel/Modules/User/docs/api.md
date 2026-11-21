@@ -4,8 +4,9 @@ type: reference
 tags: [user, api, actions]
 created: 2026-07-28
 updated: 2026-07-28
-status: draft
 qmd: "user module   api reference user"
+status: superseded
+superseded_by: api.md
 ---
 
 # User Module: API Reference

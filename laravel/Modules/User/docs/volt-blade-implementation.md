@@ -8,31 +8,23 @@ qmd: "volt-blade-implementation implementazione dei form con widget filament"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions.md)
-- [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
+- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 
 ## Introduzione
 
@@ -312,18 +304,14 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Gestione Sessione](./session-management.md)
-- [Gestione Sessione](./session-management-gestione-sessioni.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md)
+- [Tema One Documentation](../../themes/one/docs/README.md)
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions.md)
-- [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
+- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 
 ## Introduzione
 
@@ -603,11 +591,7 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Gestione Sessione](./session-management.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md)
-- [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Gestione Sessione](./session_management.md)
-- [Gestione Sessione](./session-management-gestione-sessioni.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md)
+- [Tema One Documentation](../../themes/one/docs/README.md)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Gestione Sessione](./session_management.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 

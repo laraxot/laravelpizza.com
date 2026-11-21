@@ -74,6 +74,7 @@ return [
     'timezone' => 'El campo :attribute debe contener una zona horaria válida.',
     'unique' => 'El campo :attribute ya está en uso.',
     'url' => 'El enlace :attribute debe tener un formato válido.',
+    'uploaded' => 'No se pudo subir el archivo: puede que sea demasiado grande. Inténtalo con un archivo más pequeño.',
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'mensaje-personalizado',

@@ -1,12 +1,3 @@
----
-title: "Componente di Logout"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "componente di logout user"
-status: superseded
-superseded_by: auth-logout.md
----
 # Componente di Logout
 
 ## Problemi Identificati

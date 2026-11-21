@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "boost skill fix summary - user module user"
-status: superseded
-superseded_by: boost-skill-fix-summary.md
 ---
 
 # Boost Skill Fix Summary - User Module
@@ -57,7 +54,7 @@ Critical dependencies for User module:
 
 - `/docs/BOOST_SKILL_INSTALLATION_ERROR.md` - Issue analysis
 - `/docs/BOOST_SKILL_SOLUTION_PLAN.md` - Solution plan
-- `Modules/Xot/docs/BOOST_SKILL_FIX_SUMMARY.md` - Core module fix
+- `Modules/Xot/docs/boost_skill_fix_summary.md` - Core module fix
 
 ## Lessons Learned
 

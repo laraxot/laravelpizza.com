@@ -1,5 +1,5 @@
 ---
-title: "User: teams owner_id in create, no add_*"
+title: "User — teams owner_id in create, no add_*"
 type: concept
 module: User
 tags: [user, teams, migrations, xot-base-migration, owner_id, naming]
@@ -14,11 +14,9 @@ related:
   - ./migration-naming-religion-user.md
   - ../../../../Xot/docs/wiki/concepts/xotbase-migration-religion.md
   - ../../../../../../docs/wiki/concepts/xotbase-migration-religion.md
-  - ../../../../../../docs/wiki/concepts/xotbase-migration-religion.md
-status: draft
 ---
 
-# Teams: `owner_id` nella create (non in `add_*`)
+# Teams — `owner_id` nella create (non in `add_*`)
 
 ## Anti-pattern rimosso (2026-07-27)
 
@@ -28,7 +26,7 @@ status: draft
 |------------|-----------|
 | Naming | `add_*_to_*` invece di `create_{table}_table` |
 | One-model-one-migration | secondo file sulla stessa tabella owner |
-| FK errata | `foreignIdFor(Team::class, 'owner_id')`: self-FK; owner è **User** |
+| FK errata | `foreignIdFor(Team::class, 'owner_id')` — self-FK; owner è **User** |
 | `$connection` | vietato (non serviva, ma pattern sbagliato) |
 
 ## Canon attuale
@@ -47,6 +45,6 @@ File unico: `database/migrations/2026_07_27_102200_create_teams_table.php`
 {YYYY_MM_DD_HHMMSS}_create_{table_snake}_table.php
 ```
 
-Evoluzione schema → edit questo file + **bump timestamp** nel nome: mai nuovo `add_*`.
+Evoluzione schema → edit questo file + **bump timestamp** nel nome — mai nuovo `add_*`.
 
 Vedi [migration-naming-religion-user.md](./migration-naming-religion-user.md).

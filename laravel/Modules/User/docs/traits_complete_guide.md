@@ -1,11 +1,3 @@
----
-title: "Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE"
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "guida completa ai trait del modulo user - aggiornato post-implementazione user"
----
 # Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
 
 ## Stato Implementazione ✅ COMPLETATO

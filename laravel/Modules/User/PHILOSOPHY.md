@@ -99,8 +99,8 @@ If you think a rule is wrong:
 
 ## See Also
 
-- `ARCHITECTURE.md` — multi-tenant identity design
-- `TESTING.md` — auth testing strategies
+- `architecture.md` — multi-tenant identity design
+- `testing.md` — auth testing strategies
 - `docs/oauth2-flows.md` — Passport configuration
 - `docs/spatie-permissions-per-team.md` — role scoping rules
 - `docs/socialite-providers.md` — adding new social login providers

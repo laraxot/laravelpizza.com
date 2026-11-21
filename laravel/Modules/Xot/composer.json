@@ -71,7 +71,7 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "nunomaduro/phpinsights": "*",
-        "orchestra/testbench": "*",
+        "orchestra/testbench": "^11.0",
         "pestphp/pest": "*",
         "pestphp/pest-plugin": "*",
         "pestphp/pest-plugin-arch": "*",
@@ -120,6 +120,10 @@
         "psr-4": {
             "Modules\\Xot\\Tests\\": "tests/"
         },
+<<<<<<< .merge_file_0AapA0
+=======
+        "classmap": ["tests/"],
+>>>>>>> .merge_file_iyrFk8
         "files": [
             "tests/Support/helpers.php"
         ]

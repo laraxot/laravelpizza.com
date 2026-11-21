@@ -1,5 +1,5 @@
 ---
-title: "Filament register widget: getState and userClass create"
+title: "Filament register widget — getState and userClass create"
 type: concept
 sources:
 confidence: high
@@ -7,8 +7,6 @@ created: 2026-06-04
 updated: 2026-06-04
 tags: [user, filament, register, kiss]
 related:
-status: draft
-qmd: "registerwidget kiss persist user"
 ---
 
 # RegisterWidget KISS persist

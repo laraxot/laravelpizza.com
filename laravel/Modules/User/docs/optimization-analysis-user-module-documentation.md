@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # user module documentation optimization analysis
@@ -85,7 +84,7 @@ docs/
 │   ├── filament-errors.md
 │   └── phpstan_errors.md
 └── integrations/
-    ├── spatie-permissions-documentation-themes.md
+    ├── spatie-permissions-2.md
     ├── socialite_integration.md
     └── passport_integration.md
 ```

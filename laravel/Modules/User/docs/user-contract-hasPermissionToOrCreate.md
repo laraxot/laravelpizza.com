@@ -1,17 +1,23 @@
 ---
-title: "UserContract: hasPermissionToOrCreate"
+title: "UserContract — hasPermissionToOrCreate"
 module: User / Predict
 type: concept
+status: resolved
+
+title: "UserContract: hasPermissionToOrCreate"
 tags: [user-contract, permission, bmad, second-brain]
 created: 2026-09-24
 related:
   - ../BMAD-SECOND-BRAIN.md
   - ../../Xot/app/Contracts/UserContract.php
+---
+
+# hasPermissionToOrCreate — implementazione
+
 updated: 2026-10-08
 qmd: "haspermissiontoorcreate   implementazione user"
 status: superseded
 superseded_by: user-contract-has-permission-to-or-create.md
----
 
 # hasPermissionToOrCreate: implementazione
 

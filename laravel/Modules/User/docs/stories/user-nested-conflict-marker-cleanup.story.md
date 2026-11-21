@@ -32,31 +32,31 @@ branch **diverged da laraxot/dev: 58 commit avanti, 79 indietro**.
 
 Firma nota (memoria second brain `project-local-autocommit-daemon-per-module.md`):
 uno script della famiglia `merge_remote_repo_2.sh`/`dummy_push()` ha eseguito merge
-automatici che hanno committato marker letterali non risolti: **gia' presenti anche
+automatici che hanno committato marker letterali non risolti — **gia' presenti anche
 sul remote `laraxot/dev`** (verificato con `git show laraxot/dev:<path>`, non solo
 locale). Commit-hash ricorrenti nei marker: `87273113 (.)` (quasi tutti i file),
-piu' `f548be94 (.)` e `2024e2e7 (.)` annidati in `.github/contributing.md`.
+piu' `f548be94 (.)` e `2024e2e7 (.)` annidati in `.github/CONTRIBUTING.md`.
 
 Un agente precedente (`9fceb9ac fix(user): rimuovi marker di conflitto Git committati
 in app, test e docs`, 2026-09-21) aveva gia' ripulito gran parte dell'albero ma
 **non tutto**: 23 file con marker residui trovati da
 `grep -rlE '^(<{7}|={7}|>{7})' . | grep -vE '/(vendor|node_modules|graphify-out)/'`.
 
-## Inventario marker (23 file, tutti confermati reali: nessun falso positivo
-doc-che-parla-di-conflitti; anche `docs/git-conflicts-resolution.md`,
+## Inventario marker (23 file, tutti confermati reali — nessun falso positivo
+doc-che-parla-di-conflitti; anche `docs/git-conflicts-resolution-.md`,
 che tratta l'argomento, ha marker reali fuori da blocchi di esempio)
 
 Contati per categoria (memoria `feedback-conflict-count-blocks-before-resolving`):
 
-- **7 file: blocco "entrambi vuoti" (4 righe: `<<<<<<< HEAD` / `>>>>>>> 87273113 (.)` /
+- **7 file — blocco "entrambi vuoti" (4 righe: `<<<<<<< HEAD` / `>>>>>>> 87273113 (.)` /
   `=======` / `>>>>>>> laraxot/dev`, nessun contenuto reale tra i marker su nessun lato)**:
-  `docs/quality-status-activity-module-november.md`, `docs/phpstan-fixes-gennaio-2025-complete.md`,
-  `docs/baseuser-refactoring-completed.md`, `docs/phpstan-fixes-user-module-session.md`,
-  `docs/dry-kiss-analysis.md`, `docs/phpstan-dry-kiss-improvements.md`,
-  `docs/git-conflicts-resolution.md`.
+  `docs/quality-status.md`, `docs/phpstan-fixes-gennaio-complete.md`,
+  `docs/baseuser-refactoring-completed-2025-10-15.md`, `docs/phpstan-fixes-2025-10-01.md`,
+  `docs/dry-kiss-analysis-2025-10-15.md`, `docs/phpstan-dry-kiss-improvements-2025-10-17.md`,
+  `docs/git-conflicts-resolution-.md`.
   Risoluzione: eliminazione delle 4 righe marker (nessuna decisione di contenuto, i due lati
   erano gia' vuoti).
-- **14 file: riga orfana singola `>>>>>>> 87273113 (.)`** (nessun `<<<<<<<`/`=======`
+- **14 file — riga orfana singola `>>>>>>> 87273113 (.)`** (nessun `<<<<<<<`/`=======`
   accoppiato: firma nota, vedi memoria `feedback-orphan-merge-markers-hide-from-grep`):
   `resources/views/vite.config.js`, `resources/views/README.md`,
   `resources/views/docs/folio-pages.md`, `resources/views/docs/architecture-rules.md`,
@@ -66,23 +66,23 @@ Contati per categoria (memoria `feedback-conflict-count-blocks-before-resolving`
   `app/Filament/Resources/UserResource/RelationManagers/ModulesRelationManager.wip`.
   Risoluzione: rimozione della singola riga marker (nessun contenuto in conflitto,
   solo rumore residuo).
-- **1 file: nesting a 3 livelli con 3 commit-hash diversi**: `.github/contributing.md`
+- **1 file — nesting a 3 livelli con 3 commit-hash diversi**: `.github/CONTRIBUTING.md`
   (righe 43-58). Tutte le varianti annidate portano allo stesso bullet PSR-2, differiscono
   solo per maiuscole/minuscole nell'URL (`psr-2-coding-style-guide.md` vs
-  `PSR-2-coding-style-guide.md`). Verificato con `git log --oneline -- .github/contributing.md`
-  + `git show <sha>:.github/contributing.md` sui commit pre-corruzione (`1d6d8dfc`, `6770b609`,
+  `PSR-2-coding-style-guide.md`). Verificato con `git log --oneline -- .github/CONTRIBUTING.md`
+  + `git show <sha>:.github/CONTRIBUTING.md` sui commit pre-corruzione (`1d6d8dfc`, `6770b609`,
   entrambi 0 marker): il contenuto originale, **mai corrotto**, usa l'URL minuscolo
   (`psr-2-coding-style-guide.md`). Risoluzione: ripristino identico da quei commit
   (memoria `feedback-restore-never-reinvent-signature`), non invenzione di una quarta
   variante.
 - **1 file gestito separatamente (non un marker da "risolvere" ma una decisione
-  wip/corrected)**: `app/Filament/Widgets/LogoutWidget.php.corrected`: vedi sezione
+  wip/corrected)**: `app/Filament/Widgets/LogoutWidget.php.corrected` — vedi sezione
   dedicata sotto.
 
 ## Decisione `.wip` / `.corrected`
 
 Entrambi i file erano gia' elencati come artefatti da smaltire nella story
-**12.5 `filament-artifacts-cleanup`** (status `backlog`, non ancora eseguita): conferma
+**12.5 `filament-artifacts-cleanup`** (status `backlog`, non ancora eseguita) — conferma
 indipendente della stessa diagnosi.
 
 ### `ModulesRelationManager.wip` → **resta `.wip`, non rinominato, non cancellato**
@@ -92,7 +92,7 @@ indipendente della stessa diagnosi.
 - **Non referenziata da nessuna parte** (`grep -rn ModulesRelationManager app/` → 0 hit).
 - `XotBaseResource::getRelationsFromDirectory()` (Xot/app/Filament/Resources/
   XotBaseResource.php:337) fa auto-discovery con
-  `glob($path.'/*RelationManager.php')`: **richiede letteralmente estensione `.php`**:
+  `glob($path.'/*RelationManager.php')` — **richiede letteralmente estensione `.php`**:
   finche' resta `.wip` non viene mai caricata, quindi non e' un difetto attivo.
 - Il model `User` **non ha alcun metodo/relazione `modules()`** (`grep -rn "function
   modules" app/` → 0 hit) e l'unico `Module` esistente nel progetto
@@ -102,7 +102,7 @@ indipendente della stessa diagnosi.
   **romperebbe a runtime** (chiamata a relazione inesistente) alla prima apertura
   della UserResource con tab relation manager.
 - Nessuna prova che la relazione `modules()` sia mai esistita ed e' stata rimossa
-  (nessun hit `git log -S 'function modules'` in User): quindi non e' un caso di
+  (nessun hit `git log -S 'function modules'` in User) — quindi non e' un caso di
   "ripristina l'originale" (`feedback-restore-never-reinvent-signature`): non c'e'
   un originale da ripristinare, e' lavoro incompleto mai attivato.
 - **Verdetto**: lasciato `.wip` cosi' com'e' (solo marker di conflitto rimosso
@@ -113,7 +113,7 @@ indipendente della stessa diagnosi.
 ### `LogoutWidget.php.corrected` → **rimosso (`git rm`)**
 
 Confronto riga per riga con il vivo `LogoutWidget.php` (memoria
-`feedback-verify-before-deleting-a-copy`, tasso di sorpresa 28%: verificato qui, non
+`feedback-verify-before-deleting-a-copy`, tasso di sorpresa 28% — verificato qui, non
 presunto):
 
 | Aspetto | `.php` (vivo) | `.corrected` |
@@ -130,7 +130,7 @@ Il `.corrected` e' una snapshot **piu' vecchia e meno completa** del file vivo
 la creazione del `.corrected`), non un fix non ancora applicato. Nessun elemento
 del `.corrected` manca nel vivo. Sicuro da rimuovere.
 
-## Divergenza remoto: NON risolta in questa story
+## Divergenza remoto — NON risolta in questa story
 
 `git branch -vv`: `dev` **ahead 58, behind 79** rispetto a `laraxot/dev`. Non e'
 nell'ordine delle centinaia/migliaia visto in altri moduli oggi, ma e' comunque
@@ -143,19 +143,19 @@ aggiuntiva vista la storia di reset distruttivi concorrenti su questo repo.
 
 Tutti i 23 file con marker risolti (grep finale: 0 marker in tutto l'albero, esclusi
 vendor/node_modules/graphify-out). `.wip` lasciato `.wip` (motivazione sopra, riga
-marker interna rimossa). `.corrected` rimosso (`git rm`). `.github/contributing.md`
+marker interna rimossa). `.corrected` rimosso (`git rm`). `.github/CONTRIBUTING.md`
 ripristinato dal contenuto pre-corruzione (URL PSR-2 minuscolo).
 
 Deletion staged pre-esistente in `Application/UseCases/Owners/
 GetAllOwnersRelationshipUseCaseContract.php`: verificata come lavoro legittimo di
 un'altra story (`docs/bmad/stories/uppercase-application-dir.story.md`, duplicato di
-`app/Application/UseCases/Owners/...`, zero riferimenti nel codice): inclusa nel
+`app/Application/UseCases/Owners/...`, zero riferimenti nel codice) — inclusa nel
 commit, non e' scope creep.
 
 **Nota tecnica**: il monitor background per PHPMD (`until ... pgrep -f "phpmd.phar
 Modules/User" ...`) e' rimasto bloccato per self-match (la stringa di pattern del
 `pgrep -f` compare nella command line del wrapper stesso, quindi il processo trova
-sempre se stesso e il loop non termina mai: memoria second brain
+sempre se stesso e il loop non termina mai — memoria second brain
 `feedback-pgrep-f-matches-its-own-wrapper.md`, istanza confermata qui). Killato
 manualmente; il vero risultato di phpmd (crash fatale pre-esistente, non un timeout)
 era gia' nel log da minuti. Vedi `docs/coverage.md`.
@@ -168,12 +168,12 @@ era gia' nel log da minuti. Vedi `docs/coverage.md`.
 - Pest: bloccato, DB 10.100.200.53 irraggiungibile (pre-esistente).
 
 **Divergenza `ahead58/behind79` vs `laraxot/dev`**: NON toccata in questa story
-(fuori scope, vedi sezione dedicata sopra): push semplice tentato comunque per i
+(fuori scope, vedi sezione dedicata sopra) — push semplice tentato comunque per i
 commit di questa sessione, vedi risultato sotto.
 
-**Commit e push**: commit `6635376b` (locale, dev). Push a `laraxot` **rifiutato** (non-fast-forward): `laraxot/dev` behind 80 / ahead 59 rispetto a `dev` locale dopo il fetch. Nessun force-push, nessun pull/rebase tentato (fuori scope sicurezza, vedi sezione divergenza sopra): commit resta locale, in attesa di reconciliation dedicata.
+**Commit e push**: commit `6635376b` (locale, dev). Push a `laraxot` **rifiutato** (non-fast-forward): `laraxot/dev` behind 80 / ahead 59 rispetto a `dev` locale dopo il fetch. Nessun force-push, nessun pull/rebase tentato (fuori scope sicurezza, vedi sezione divergenza sopra) — commit resta locale, in attesa di reconciliation dedicata.
 
-## Addendum: riconciliazione divergenza completata (2026-09-22, stessa giornata)
+## Addendum — riconciliazione divergenza completata (2026-09-22, stessa giornata)
 
 Dopo il push rifiutato riportato sopra (`ahead 59, behind 80`), la divergenza e'
 stata riconciliata in un secondo intervento nella stessa sessione:
@@ -181,7 +181,7 @@ stata riconciliata in un secondo intervento nella stessa sessione:
 - `git fetch laraxot` → `ahead 60, behind 80`.
 - Primo tentativo `git rebase laraxot/dev`: **abortito** (`git rebase --abort`).
   Conflitti massicci su decine di file in `tests/Unit/**` a partire dal primo commit
-  rigiocato (`33b23e02`): il rebase replica ogni commit locale singolarmente contro
+  rigiocato (`33b23e02`) — il rebase replica ogni commit locale singolarmente contro
   la nuova base, producendo conflitti molto piu' estesi del necessario dato che
   locale e remoto hanno toccato in gran parte file disgiunti su commit diversi.
   Nessun dato perso (branch di backup `backup-user-2026-09-22` gia' presente come
@@ -191,7 +191,7 @@ stata riconciliata in un secondo intervento nella stessa sessione:
   `0f61236`, non commit-per-commit).
 - Risoluzione dei 36 conflitti:
   - `docs/coverage.md` (`UD` anomalo): diagnosticato come **falso conflitto da
-    rename-detection**: lo stage 1 (blob `04b5c440...`) non esiste ne' nel
+    rename-detection** — lo stage 1 (blob `04b5c440...`) non esiste ne' nel
     merge-base ne' in `laraxot/dev` tip (verificato con `git cat-file -e` e
     `git ls-tree -r` su entrambi), quindi e' un fantasma prodotto dall'euristica
     di rename-pairing di `git merge`, non un vero conflitto di contenuto.
@@ -201,14 +201,14 @@ stata riconciliata in un secondo intervento nella stessa sessione:
     confermata (vedi sopra + `docs/bmad/stories/uppercase-application-dir.story.md`),
     risolti con `git rm`.
   - `app/Http/Livewire/_components.json` (`UU` ma 0 marker): ours e theirs
-    identici a livello di contenuto (differiva solo il newline finale): tenuto ours.
+    identici a livello di contenuto (differiva solo il newline finale) — tenuto ours.
   - `.gitignore` (`UU` ma 0 marker): verificato con `comm -23` che ours e' superset
-    esatto di theirs (nessuna riga persa): tenuto ours.
+    esatto di theirs (nessuna riga persa) — tenuto ours.
   - Restanti 29 file `UU`: tutti confermati con marker di conflitto reali lato
     `laraxot/dev` (residuo daemon non ancora ripulito sul remoto) e 0 marker lato
-    `dev` (gia' pulito dal cleanup sopra): risolti sistematicamente con
+    `dev` (gia' pulito dal cleanup sopra) — risolti sistematicamente con
     `git checkout --ours` dopo verifica puntuale del pattern su un campione
-    rappresentativo (`.github/contributing.md`, `docs/bmad/README.md`,
+    rappresentativo (`.github/CONTRIBUTING.md`, `docs/bmad/README.md`,
     `docs/purpose.md`, `tests/Unit/Datas/UserDatasAndEnumsCoverageTest.php`,
     `ModulesRelationManager.wip`).
   - `git grep` post-merge: 0 marker reali residui in tutto l'albero (15 falsi

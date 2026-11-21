@@ -1,9 +1,14 @@
 ---
-title: "Xot - xot-base-section-rule.md"
-module: Xot
-bmad: true
-status: active
+title: "xot base section rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xot base section rule"
+issues: []
+discussions: []
 ---
+
 # Regola XotBaseSection - Politica, Filosofia, Religione, Zen
 
 ## Scopo (Purpose)
@@ -163,6 +168,15 @@ class CompanySection extends XotBaseSection
 - Filament v4 Documentation: https://filamentphp.com/docs/4.x/forms/layout/section
 
 ---
+
+title: "xot base section rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xot base section rule"
+issues: []
+discussions: []
 **Data creazione**: 2025-12-12
 **Status**: ✅ Regola attiva e obbligatoria
 **Priorità**: CRITICA - Violazioni bloccano il codice

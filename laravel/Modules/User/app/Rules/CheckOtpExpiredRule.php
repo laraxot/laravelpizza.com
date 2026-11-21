@@ -15,7 +15,7 @@ use Modules\Xot\Contracts\UserContract;
  */
 class CheckOtpExpiredRule implements ValidationRule
 {
-    private string $message = 'Il codice OTP è scaduto. Richiedi un nuovo codice.';
+    private string $message = 'The OTP code has expired. Request a new code.';
 
     public function __construct(
         private UserContract $user,

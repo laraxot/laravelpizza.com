@@ -1,5 +1,5 @@
 ---
-title: "User Module: Context-Mode Discipline"
+title: "User Module — Context-Mode Discipline"
 type: "rule"
 tags: [user, context-mode, atomic-wiki, filament-translations]
 created: 2026-05-12
@@ -13,11 +13,9 @@ related:
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
   - "./folio-pages-owner-pattern.md"
-status: draft
-qmd: "user module   context-mode discipline user"
 ---
 
-# User Module: Context-Mode Discipline
+# User Module — Context-Mode Discipline
 
 > User module context-mode per traduzioni Filament e LangServiceProvider.
 
@@ -27,10 +25,10 @@ qmd: "user module   context-mode discipline user"
 laravel/Modules/User/docs/wiki/
 ├── index.md                           # ≤30 righe
 ├── rules/
-│   ├── INDEX.md                       # ≤20 righe → root trigger map
+│   ├── index.md                       # ≤20 righe → root trigger map
 │   └── filament-user-labels.md        # ≤150 righe
 ├── skills/
-│   ├── INDEX.md                       # ≤20 righe
+│   ├── index.md                       # ≤20 righe
 │   └── filament-translation-audit.md  # ≤100 righe
 └── concepts/
     └── langserviceprovider-pattern.md  # ≤150 righe

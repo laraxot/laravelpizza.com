@@ -1,15 +1,9 @@
 ---
+qmd: "ui investigation ui investigation md"
 type: investigation
 title: "Investigation UI Component System"
-links: {github_issue: "#XXX"}
-updated: 2026-10-08
-tags: [docs, ui, investigation]
-qmd: "investigation: ui component system ui"
-status: stale
+links: {github_issue: #XXX}
 ---
-
-> Nota 2026-10-14 (docs-audit): numeri e proposte superati: dice 33 stories (stories/ ne ha 7, bmad/stories 13) e propone di rimuovere il layer Services, che non esiste piu' (app/Services assente, spostato in Actions il 2026-10-08); nei test del modulo non c'e' alcun controllo APCA ne' di prefers-reduced-motion (solo `DarkModeToggleTest` ha un test sul contrasto in dark mode). Contenuto non riscritto, verificare prima di usarlo.
-
 # Investigation: UI Component System
 
 ## Problem Statement

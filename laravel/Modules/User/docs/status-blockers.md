@@ -3,20 +3,16 @@ title: "User Module Status & Blockers"
 date: 2026-07-28
 author: claude-ai
 status: BLOCKED_AWAITING_INFRASTRUCTURE
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module   status & critical blockers (2026-07-28) user"
 ---
 
-# User Module: Status & Critical Blockers (2026-07-28)
+# User Module — Status & Critical Blockers (2026-07-28)
 
 ## Executive Summary
 
 User module has **2 critical infrastructure blockers** preventing completion of quality gates:
 
-1. **Git Push Blocked**: Git LFS infrastructure inconsistency between remotes
-2. **PHPStan L10 Incomplete**: 48 type errors require deeper investigation or framework updates
+1. **Git Push Blocked** — Git LFS infrastructure inconsistency between remotes
+2. **PHPStan L10 Incomplete** — 48 type errors require deeper investigation or framework updates
 
 Both require escalation beyond forward-only git discipline.
 
@@ -60,10 +56,10 @@ GH008: Your push referenced at least 11 unknown Git LFS objects:
 
 Standard forward-only approaches unavailable:
 
-1. ❌ **`git rebase -i`** to remove/squash 4547061: violates forward-only discipline
-2. ❌ **`git filter-branch`** to rewrite history: violates forward-only discipline
-3. ❌ **`git reset --hard`** to undo commits: explicitly forbidden by user constraint
-4. ❌ **`git push --force-with-lease`**: server pre-receive hook overrides
+1. ❌ **`git rebase -i`** to remove/squash 4547061 — violates forward-only discipline
+2. ❌ **`git filter-branch`** to rewrite history — violates forward-only discipline
+3. ❌ **`git reset --hard`** to undo commits — explicitly forbidden by user constraint
+4. ❌ **`git push --force-with-lease`** — server pre-receive hook overrides
 
 ### Resolution Path
 
@@ -93,17 +89,17 @@ Contact infrastructure/repository administrator to:
 
 ### Error Categories Remaining
 
-1. **cast.string (46 errors)**: `mixed` → string casts without type guards
+1. **cast.string (46 errors)** — `mixed` → string casts without type guards
    - Root cause: config(), env(), object properties return mixed
    - Attempted fix: Added is_string() type guards
    - Status: ❌ Unclear if corrections applied correctly (PHPStan may be caching)
 
-2. **method.childReturnType (1 error)**: Trait method return type mismatch
+2. **method.childReturnType (1 error)** — Trait method return type mismatch
    - File: app/Models/Traits/HasTeams.php:494
    - Issue: `teams()` method return type incompatible with UserContract interface
    - Status: ❌ Requires deeper trait/interface alignment
 
-3. **function.impossibleType (1 error)**: New error discovered after initial fixes
+3. **function.impossibleType (1 error)** — New error discovered after initial fixes
    - Status: ⚠️ Likely side effect of type narrowing corrections
 
 ### Attempted Solutions
@@ -149,8 +145,7 @@ Contact infrastructure/repository administrator to:
 ### Documentation
 
 - Analysis: [phpstan-l10-analysis-2026-07-28.md](phpstan-l10-analysis-2026-07-28.md)
-- Code quality: [QUALITY_GATES_2026_07_28.md](QUALITY_GATES-analysis-user-module.md)
-- Code quality: [QUALITY_GATES_2026_07_28.md](QUALITY_GATES.md)
+- Code quality: [QUALITY_GATES_2026_07_28.md](QUALITY_GATES_2026_07_28.md)
 
 ---
 
@@ -158,10 +153,10 @@ Contact infrastructure/repository administrator to:
 
 ### Session Commits
 
-1. **bdf5c64**: LFS cleanup attempt (removed image files from tracking)
+1. **bdf5c64** — LFS cleanup attempt (removed image files from tracking)
    - Result: Failed to unblock push due to upstream commit reference
 
-2. **cc19f4452**: Type narrowing corrections (19 locations across 8 files)
+2. **cc19f4452** — Type narrowing corrections (19 locations across 8 files)
    - Result: Partial progress; error count unchanged or increased
 
 ### Commits Awaiting Push

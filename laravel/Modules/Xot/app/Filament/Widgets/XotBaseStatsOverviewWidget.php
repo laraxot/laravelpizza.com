@@ -19,7 +19,7 @@ abstract class XotBaseStatsOverviewWidget extends FilamentStatsOverviewWidget
 
     /*
      * Filament aggiorna gli StatsOverview ogni 5 secondi di default: ogni scheda aperta riesegue i conteggi
-     * del widget a ogni giro (per `Quaeris\StatsOverviewWidget`: 4 aggregati sulla tabella Lime piu' un
+     * del widget a ogni giro (per `<nome progetto>\StatsOverviewWidget`: 4 aggregati sulla tabella Lime piu' un
      * caricamento di SurveyPdf). Come in XotBaseChartWidget il polling e' spento; chi vuole un contatore
      * "live" lo dichiara nella propria classe.
      */

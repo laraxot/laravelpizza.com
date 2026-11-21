@@ -1,6 +1,7 @@
 ---
+qmd: "xot bmad stories phpstan analyse modules story md"
 id: "Xot/phpstan-analyse-modules-2026-09-24"
-title: "PHPStan analyse Modules: verifica corrente e remediation swarm"
+title: "PHPStan analyse Modules — verifica corrente e remediation swarm"
 type: story
 module: Xot
 epic: "5"
@@ -18,7 +19,7 @@ references:
   sprint_status: "Xot/phpstan-analyse-modules-2026-09-24"
 ---
 
-# PHPStan `analyse Modules`: verifica corrente e remediation swarm
+# PHPStan `analyse Modules` — verifica corrente e remediation swarm
 
 ## Richiesta
 
@@ -144,16 +145,16 @@ nessun file PHP modificato dal presente swarm.
   nessun marker `<<<<<<<` in file `.php`. I marker nei `.md` sono esempi
   di documentazione (non conflitti reali).
 - `cd laravel && php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules`
-  → **`[OK] No errors`: EXIT 0** su tutto il tree `Modules/` (10.134+ file).
+  → **`[OK] No errors` — EXIT 0** su tutto il tree `Modules/` (10.134+ file).
 - Zero segnalazioni PHPStan da sistemare. Nessun fix applicato.
 - Nessun file PHP modificato → `php -l`, PHPMD, PHPInsights gate non
   richiesti (scope PHPStan = 0).
-- Pest: **skippato**: DB `10.100.200.53:3306` irraggiungibile (stesso
+- Pest: **skippato** — DB `10.100.200.53:3306` irraggiungibile (stesso
   problema noto documentato nella story); skip documentato, non un difetto.
 - Lock rilasciati, second brain aggiornato (questa voce). `qmd update` non
   disponibile in ambiente, documentato come skip.
 
-## Riapertura 2026-09-24: richiesta reiterata e run corrente
+## Riapertura 2026-09-24 — richiesta reiterata e run corrente
 
 - Tree condiviso ancora molto sporco; il run iniziale lanciato in questa sessione
   (`analyse Modules --error-format=json`) ha riportato **1.316 `file_errors` in

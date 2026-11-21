@@ -20,9 +20,11 @@ use Filament\Tables\Columns\Layout\Component as LayoutComponent;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
+use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasRelationshipModelClass;
 use Modules\Xot\Filament\Traits\HasXotTable;
@@ -140,6 +142,24 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     #[\Override]
     protected function getTableColumns(): array
     {
+        /*
+         * Le Resource costruiscono la tabella da una `{Model}sTable` (XotBaseResourceTable): le pagine
+         * index non hanno più colonne proprie, quindi la ricerca sotto restituiva [] e il relation
+         * manager mostrava righe vuote (es. Chiamate nella scheda cliente, 2026-11-05). Prima la classe
+         * Table della Resource, poi il percorso storico tramite la pagina index.
+         */
+        $resource = $this->getResource();
+        if (method_exists($resource, 'getTableClass')) {
+            $tableClass = $resource::getTableClass();
+            $table = \is_string($tableClass) && $tableClass !== XotBaseResourceTable::class ? app($tableClass) : null;
+            if ($table instanceof XotBaseResourceTable) {
+                $columns = $table->getTableColumns();
+                if ($columns !== []) {
+                    return $columns;
+                }
+            }
+        }
+
         $index = Arr::get($this->getResource()::getPages(), 'index');
         if (! $index) {
             // throw new \Exception('Index page not found');
@@ -221,15 +241,19 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
                 return $me->canEdit($record);
             });
 
-        $actions['detach'] = DetachAction::make()
-            ->iconButton()
-            ->visible(static function (?Model $record) use ($me): bool {
-                if ($record === null) {
-                    return false;
-                }
+        // «Scollega» ha senso solo per le relazioni molti-a-molti: su una HasMany (es. le chiamate di un
+        // cliente) compariva una X rossa che non poteva funzionare.
+        if ($this->getRelationship() instanceof BelongsToMany) {
+            $actions['detach'] = DetachAction::make()
+                ->iconButton()
+                ->visible(static function (?Model $record) use ($me): bool {
+                    if ($record === null) {
+                        return false;
+                    }
 
-                return $me->canDetach($record);
-            });
+                    return $me->canDetach($record);
+                });
+        }
 
         return $actions;
     }
@@ -251,9 +275,11 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
             ->iconButton()
             ->visible(fn (?Model $record): bool => $this->canDeleteBulk($record));
 
-        $actions['detach_bulk'] = DetachBulkAction::make()
-            ->iconButton()
-            ->visible(fn (?Model $record): bool => $this->canDetachBulk($record));
+        if ($this->getRelationship() instanceof BelongsToMany) {
+            $actions['detach_bulk'] = DetachBulkAction::make()
+                ->iconButton()
+                ->visible(fn (?Model $record): bool => $this->canDetachBulk($record));
+        }
 
         return $actions;
     }
@@ -271,11 +297,14 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     {
         $actions = [];
         $me = $this;
-        $actions['attach'] = AttachAction::make()
-            ->icon('heroicon-o-link')
-            ->iconButton()
-            ->tooltip(__('user::actions.attach.label'))
-            ->visible(static fn (?Model $_record): bool => $me->canAttach());
+        // «Collega un record esistente» solo per le molti-a-molti (come detach).
+        if ($this->getRelationship() instanceof BelongsToMany) {
+            $actions['attach'] = AttachAction::make()
+                ->icon('heroicon-o-link')
+                ->iconButton()
+                ->tooltip(__('user::actions.attach.label'))
+                ->visible(static fn (?Model $_record): bool => $me->canAttach());
+        }
         $actions['create'] = CreateAction::make()
             ->icon('heroicon-o-plus')
             ->iconButton()

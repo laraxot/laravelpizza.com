@@ -1,12 +1,3 @@
----
-title: "Testing Rules & Strategy"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "testing rules & strategy user"
-status: superseded
-superseded_by: testing-rules-strategy.md
----
 # Testing Rules & Strategy
 
 ## Strict Guidelines (Super Mucca / Laraxot)
