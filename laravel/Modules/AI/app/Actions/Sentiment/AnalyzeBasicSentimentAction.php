@@ -40,6 +40,9 @@ final class AnalyzeBasicSentimentAction
     }
 
     /**
+     * @param  list<string>  $words
+     */
+    /**
      * Counts sentiment words, flipping the polarity of a word preceded by a negation
      * within the previous three words ("not a good product" counts as negative).
      *
@@ -52,7 +55,16 @@ final class AnalyzeBasicSentimentAction
         $negations = ['not', 'no', 'never', 'nor', "isn't", "aren't", "wasn't", "don't", "doesn't", "didn't", "can't", "won't"];
         $matches = [];
         preg_match_all("/[a-z']+/", mb_strtolower($text), $matches);
-        $tokens = $matches[0];
+        if (! isset($matches[0]) || ! is_array($matches[0])) {
+            return [0, 0];
+        }
+
+        $tokens = [];
+        foreach ($matches[0] as $token) {
+            if (is_string($token)) {
+                $tokens[] = $token;
+            }
+        }
         $positive = 0;
         $negative = 0;
 

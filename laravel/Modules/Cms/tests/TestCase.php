@@ -12,9 +12,9 @@ use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
-use Modules\Xot\Tests\XotBaseTestCase;
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;

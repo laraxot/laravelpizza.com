@@ -145,10 +145,7 @@ npm install
 npm run build
 
 # Copy assets to public_html
-<<<<<<< .merge_file_ztGBCe
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_2vWxrx
 
 # Test in browser
 open http://127.0.0.1:8000/it/tests/

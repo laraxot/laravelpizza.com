@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Profilo',
+        'label' => 'Profiles',
         'plural' => 'Profili',
         'group' => [
-            'label' => 'Gestione Utenti',
+            'label' => 'User management',
             'description' => 'Gestione dei profili utente',
         ],
         'icon' => 'user-profile-animated',
@@ -71,17 +71,17 @@ return [
     'actions' => [
         'edit' => [
             'label' => 'Modifica',
-            'success' => 'Profilo aggiornato con successo!',
+            'success' => 'Profile updated.',
             'error' => 'Errore durante l\'aggiornamento del profilo',
         ],
         'delete' => [
             'label' => 'Elimina',
-            'success' => 'Profilo eliminato con successo!',
+            'success' => 'Profile deleted.',
             'error' => 'Errore durante l\'eliminazione del profilo',
         ],
     ],
     'messages' => [
-        'update_success' => 'Profilo aggiornato con successo!',
+        'update_success' => 'Profile updated.',
         'no_permission' => 'Non hai i permessi per modificare questo profilo.',
     ],
     'privacy_policy' => [
@@ -97,4 +97,6 @@ return [
         'button' => 'Delete Account',
         'delete' => 'Delete Account',
     ],
+    'my_profile' => 'My profile',
+    'subheading' => 'Your personal details and password',
 ];

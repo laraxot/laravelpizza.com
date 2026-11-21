@@ -54,8 +54,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'New',
-            'tooltip' => 'New',
+            'label' => 'New event',
+            'tooltip' => 'New event',
         ],
         'edit' => [
             'label' => 'Edit',

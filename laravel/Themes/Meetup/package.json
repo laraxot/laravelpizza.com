@@ -13,9 +13,11 @@
         "screenshots:footer": "node scripts/capture-footer-screenshots.mjs",
         "a11y": "node scripts/a11y-audit.mjs",
         "audit:fo": "node scripts/front-office-audit.cjs",
+        "audit:bo": "node scripts/back-office-audit.cjs",
         "postbuild": "node scripts/clean-stale-assets.mjs"
     },
     "devDependencies": {
+        "@ag-ui/client": "^1.0.5",
         "@fontsource-variable/inter": "^5.3.0",
         "@tailwindcss/forms": "^0.5.10",
         "@tailwindcss/typography": "^0.5.19",

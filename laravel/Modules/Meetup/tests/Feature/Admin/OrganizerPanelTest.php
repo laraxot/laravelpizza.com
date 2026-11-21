@@ -120,3 +120,19 @@ test('the organizer sees who registered and can cancel a registration', function
     expect(EventUser::query()->whereKey($registration->getKey())->exists())->toBeFalse()
         ->and($event->fresh()?->attendees_count)->toBe(0);
 });
+
+test('the panel follows the preferred language of the user (users.lang)', function (?string $lang, string $htmlLang, string $label): void {
+    $user = organizer();
+    $user->forceFill(['lang' => $lang])->save();
+
+    $this->actingAs($user)
+        ->get('/meetup/admin/events')
+        ->assertOk()
+        ->assertSee('lang="'.$htmlLang.'"', false)
+        ->assertSee($label);
+})->with([
+    'inglese' => ['en', 'en', 'When'],
+    'italiano' => ['it', 'it', 'Quando'],
+    'lingua non supportata: resta quella del sito' => ['xx', 'it', 'Quando'],
+    'nessuna preferenza' => [null, 'it', 'Quando'],
+]);

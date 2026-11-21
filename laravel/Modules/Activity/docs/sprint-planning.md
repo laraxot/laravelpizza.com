@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_Kz98Hn
-<<<<<<< HEAD
 # Activity Module - Sprint Planning
 
 **Module:** Activity  
@@ -81,10 +79,6 @@ Complete core activity tracking infrastructure with admin dashboard for viewing 
 ---
 
 *Last Updated: March 12, 2026*
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ---
 title: "Activity Module - Sprint Planning"
 type: note
@@ -93,7 +87,6 @@ updated: 2026-10-08
 tags: [docs, activity]
 qmd: "activity module - sprint planning activity"
 ---
->>>>>>> .merge_file_N35a7a
 # Activity Module - Sprint Planning
 
 **Module:** Activity  
@@ -174,23 +167,12 @@ Complete core activity tracking infrastructure with admin dashboard for viewing 
 
 ---
 
-<<<<<<< .merge_file_Kz98Hn
 *Last Updated: March 12, 2026*
-=======
-=======
->>>>>>> 35d8cf69 (Initial commit)
 # Sprint Planning: Activity Module
 
 ## 🏁 Sprint Goal
 Finalize documentation and validation for Activity.
-<<<<<<< HEAD
->>>>>>> 0a02158a (.)
-=======
->>>>>>> 35d8cf69 (Initial commit)
->>>>>>> laraxot/dev
-=======
 *Last Updated: March 12, 2026*# Sprint Planning: Activity Module
 
 ## 🏁 Sprint Goal
 Finalize documentation and validation for Activity.
->>>>>>> .merge_file_N35a7a

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "generate predictions action"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module - Generate Predictions Action
@@ -452,6 +451,15 @@ Log::info('AI Prediction generated', [
 - **Laravel Data**: https://spatie.be/docs/laravel-data
 
 ---
+
+title: "generate predictions action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "generate predictions action"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2026-03-12  
 **Versione**: 1.0  
 **Stato**: In sviluppo

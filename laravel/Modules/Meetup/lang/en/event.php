@@ -110,6 +110,11 @@ return [
         ],
     ],
     'actions' => [
+        'create' => [
+            'label' => 'New event',
+            'icon' => 'create',
+            'tooltip' => 'New event',
+        ],
     ],
     'delete_confirmation' => [
         'with_attendees' => 'This event has :count active registrations that will be lost. Do you want to delete it?',
@@ -122,6 +127,15 @@ return [
         ],
     ],
     'event' => [
+        'actions' => [
+            'seed_events' => [
+                'label' => 'Import sample events',
+                'notification' => [
+                    'title' => 'Import completed',
+                    'body' => ':count events imported successfully.',
+                ],
+            ],
+        ],
         'filters' => [
             'status' => [
                 'label' => 'Status',
@@ -144,4 +158,6 @@ return [
             ],
         ],
     ],
+    'create_title' => 'New event',
+    'edit_title' => 'Edit event',
 ];

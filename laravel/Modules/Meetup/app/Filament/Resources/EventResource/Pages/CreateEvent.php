@@ -23,4 +23,13 @@ class CreateEvent extends XotBaseCreateRecord
     {
         return app(CreateEventAction::class)->execute($data);
     }
+
+    /**
+     * "Nuova sede", "Nuovo evento": il titolo predefinito di Filament ("Nuovo :label") sbaglia il genere.
+     */
+    #[\Override]
+    public function getTitle(): string
+    {
+        return (string) __('meetup::event.create_title');
+    }
 }

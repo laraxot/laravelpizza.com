@@ -22,8 +22,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Nuovo',
-            'tooltip' => 'Nuovo',
+            'label' => 'Nuova sede',
+            'tooltip' => 'Nuova sede',
         ],
         'edit' => [
             'label' => 'Modifica',

@@ -8,9 +8,8 @@ tags: [ai, phpstan, types, compliance, quality, static-analysis]
 created: 2026-06-10
 updated: 2026-06-10
 related:
-  - ../../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
+  - ../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
   - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md
-status: draft
 ---
 
 # AI Module — PHPStan Type Compliance

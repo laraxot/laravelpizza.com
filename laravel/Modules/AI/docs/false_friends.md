@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "false friends"
 issues: []
 discussions: []
-status: superseded
-superseded_by: false-friends.md
 ---
 
 # False Friends – AI

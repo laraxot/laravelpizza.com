@@ -33,7 +33,7 @@ class AiActionProposalsTable extends XotBaseResourceTable
                 static fn (AiActionProposal $record): bool => $record->status->canBeConfirmed()
             )
             ->action(function (AiActionProposal $record): void {
-                app(ConfirmAiActionProposalAction::class)->execute($record, (int) Auth::id());
+                app(ConfirmAiActionProposalAction::class)->execute($record, (string) Auth::id());
             });
 
         $actions['cancel'] = Action::make('cancel')

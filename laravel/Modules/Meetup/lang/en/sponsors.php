@@ -23,8 +23,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'New',
-            'tooltip' => 'New',
+            'label' => 'New sponsor',
+            'tooltip' => 'New sponsor',
         ],
         'edit' => [
             'label' => 'Edit',

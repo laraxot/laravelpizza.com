@@ -15,7 +15,7 @@ use Modules\Geo\Traits\HasAddresses;
  * Probe hosts so PHPStan analyses Geo traits used cross-module (SushiToJsons, HasAddresses, …).
  *
  * @property int|string|null $id
- * @property mixed|null      $address
+ * @property mixed|null $address
  */
 abstract class GeoPhpstanProbeModel extends BaseModel
 {

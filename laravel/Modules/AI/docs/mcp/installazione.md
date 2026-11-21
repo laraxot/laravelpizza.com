@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "installazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Installazione dei Server MCP per Progetti Laravel
@@ -28,7 +27,7 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
 
 ## Panoramica
 
-Questa guida fornisce istruzioni dettagliate per l'installazione dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa guida fornisce istruzioni dettagliate per l'installazione dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## Prerequisiti
 
@@ -55,10 +54,10 @@ Prima di procedere con l'installazione dei server MCP, assicurati di avere:
    ```bash
    # Per Windsurf
    mkdir -p ~/.codeium/windsurf
-   
+
    # Per Cursor
    mkdir -p ~/.cursor
-   
+
    # Per il progetto locale
    mkdir -p /path/to/your/project/bashscripts/mcp
    ```
@@ -292,4 +291,13 @@ npm install -g @modelcontextprotocol/server-sequential-thinking
 Hai completato con successo l'installazione dei server MCP per il tuo progetto Laravel. Ora puoi procedere con la configurazione seguendo la guida nella sezione successiva.
 
 ---
-Continua con la sezione [Configurazione](./02_configurazione.md) per configurare i server MCP per il tuo progetto Laravel.
+
+title: "installazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "installazione"
+issues: []
+discussions: []
+Continua con la sezione [Configurazione](02_configurazione.md) per configurare i server MCP per il tuo progetto Laravel.

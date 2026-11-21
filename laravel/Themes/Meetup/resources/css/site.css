@@ -1,0 +1,11 @@
+/*
+ * CSS delle pagine pubbliche per chi non ha fatto l'accesso: senza Filament (circa 650 KB in meno).
+ * Le pagine che usano componenti Filament (login, registrazione) e gli utenti loggati (menu utente) usano app.css.
+ * La scelta la fa il layout (components/layouts/main.blade.php). Issue #584: prestazioni = segnale di ranking.
+ */
+@import 'tailwindcss';
+
+/* Inter servito dal sito stesso (niente Google Fonts: nessuna richiesta a terzi prima del consenso, R-10) */
+@import '@fontsource-variable/inter/wght.css';
+
+@import './custom.css';

@@ -1,3 +1,21 @@
+# Prestazioni (issue #584, Core Web Vitals): testi compressi e cache lunga per i file con l'hash nel nome.
+# Senza i moduli Apache non succede nulla (IfModule). Con nginx: vedi docs/seo/performance.md.
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml application/xml application/javascript application/json image/svg+xml application/manifest+json
+</IfModule>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript application/json image/svg+xml application/manifest+json
+</IfModule>
+<IfModule mod_headers.c>
+    # CSS, JS e font di Vite hanno l'hash nel nome: cambiano nome a ogni build, quindi possono restare in cache un anno.
+    <FilesMatch "\.(css|js|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_URI} =~ m#/themes/[^/]+/assets/#"
+    </FilesMatch>
+    <FilesMatch "\.(jpe?g|png|webp|avif|svg|ico)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

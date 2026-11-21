@@ -47,7 +47,7 @@ test('the event page has the event title in <title> and never shows the organize
 
     $this->get('/it/events/'.$event->slug)
         ->assertOk()
-        ->assertSee('<title>'.e($event->title).' - ', false)
+        ->assertSee('<title>'.e($event->title).' — ', false)
         ->assertSee('Una serata per controllare il front office.', false)
         ->assertSee('Organizzatrice Audit')
         ->assertDontSee($organizer->email);
@@ -56,12 +56,12 @@ test('the event page has the event title in <title> and never shows the organize
 test('cms pages use their own title and a description taken from the hero block', function (): void {
     $this->get('/it/about')
         ->assertOk()
-        ->assertSee('<title>Chi siamo - Laravel Pizza Meetups</title>', false)
+        ->assertSee('<title>Chi siamo — Laravel Pizza Meetups</title>', false)
         ->assertDontSee('Gestione meta tag e SEO del sito web');
 
     $this->get('/en/events')
         ->assertOk()
-        ->assertSee('<title>Upcoming events - Laravel Pizza Meetups</title>', false);
+        ->assertSee('<title>Upcoming events — Laravel Pizza Meetups</title>', false);
 });
 
 test('a public profile hides email and address from other visitors, also in JSON-LD', function (): void {
@@ -69,7 +69,7 @@ test('a public profile hides email and address from other visitors, also in JSON
 
     $this->get('/it/profile/'.$person->getKey())
         ->assertOk()
-        ->assertSee('<title>Organizzatrice Audit - ', false)
+        ->assertSee('<title>Organizzatrice Audit — ', false)
         ->assertDontSee($person->email)
         ->assertDontSee('gravatar.com');
 
@@ -86,7 +86,7 @@ test('an unknown profile id is a 404, not an anonymous profile page', function (
 test('the 404 page is translated and keeps the site navigation', function (): void {
     $this->get('/it/pagina-che-non-esiste')
         ->assertNotFound()
-        ->assertSee('<title>Pagina non trovata - Laravel Pizza Meetups</title>', false)
+        ->assertSee('<title>Pagina non trovata — Laravel Pizza Meetups</title>', false)
         ->assertSee('Guarda i prossimi eventi');
 
     $this->get('/en/page-that-does-not-exist')

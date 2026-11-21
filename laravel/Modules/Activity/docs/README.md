@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_2UWizJ
-<<<<<<< HEAD
 # Activity
 
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()
@@ -34,9 +32,6 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
-=======
-<<<<<<< HEAD
-=======
 # Modulo Activity - Documentazione Completa
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -46,7 +41,6 @@ Core module for the FixCity Platform.
 [![Event Sourcing](https://img.shields.io/badge/Event-Sourcing%20Ready-orange.svg)](https://martinfowler.com/eaaDev/EventSourcing.html)
 [![Audit Trail](https://img.shields.io/badge/Audit-Trail%20Ready-yellow.svg)](https://en.wikipedia.org/wiki/Audit_trail)
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
-=======
 ---
 title: "Activity: documentazione del modulo (docs)"
 type: readme
@@ -60,7 +54,6 @@ related:
   - ./00-index.md
   - ./stories/docs-ingressi-activity.story.md
 ---
->>>>>>> .merge_file_YsBaIo
 
 # Activity: docs del modulo
 
@@ -104,7 +97,6 @@ use Modules\Activity\Actions\LogActivityAction;
 ))->execute();
 ```
 
-<<<<<<< .merge_file_2UWizJ
 ### 🎯 **Event Sourcing**
 ```php
 // Eventi di dominio
@@ -153,12 +145,9 @@ class ActivityStatsWidget extends XotBaseWidget
     }
 }
 ```
-=======
 Controllare la qualita' del modulo (eseguito il 2026-10-14 con `laravel/phpstan.neon`: uscita 0, nessun errore):
->>>>>>> .merge_file_YsBaIo
 
 ```bash
-<<<<<<< .merge_file_2UWizJ
 # Abilitare il modulo
 php artisan module:enable Activity
 
@@ -211,21 +200,12 @@ php artisan test --testsuite=Activity
 php artisan activity:test-events
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4fb998e0 (.)
 ## 🎛️ **Filament Integration**
 
 - **ListLogActivitiesAction** - Action per visualizzare lo storico attività da tabella Resource
 - **ListLogActivities** - Pagina dettaglio log con paginazione custom
 - **ActivityServiceProvider** - Registrazione moduli, route, view, traduzioni
 
-<<<<<<< HEAD
-=======
->>>>>>> 77d3d692 (.)
-=======
->>>>>>> 4fb998e0 (.)
 ## 📚 **Documentazione Completa**
 
 ### 🏗️ **Architettura**
@@ -587,7 +567,6 @@ Elimina un'attività (soft delete).
 - [Deployment](./deployment.md)
 
 *Ultimo aggiornamento: gennaio 2025*
->>>>>>> 35d8cf69 (Initial commit)
 ---
 title: "Activity Module Documentation"
 type: documentation
@@ -604,15 +583,9 @@ Il modulo **Activity** fa parte dell'ecosistema Laraxot PTVX.
 
 ## Scopo
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Fornisce audit trail e activity logging basato su `spatie/laravel-activitylog` ed `spatie/laravel-event-sourcing`. Espone `LogActivityAction` (`app/Actions/LogActivityAction.php`) come entrypoint per registrare eventi (type, causer, subject, properties) e risorse Filament per consultare/analizzare i log.
-=======
 Questo modulo gestisce [DESCRIZIONE SPECIFICA DA COMPLETARE].
->>>>>>> 0a02158a (.)
-=======
 Questo modulo gestisce [DESCRIZIONE SPECIFICA DA COMPLETARE].
->>>>>>> 35d8cf69 (Initial commit)
 
 ## Struttura
 
@@ -643,19 +616,14 @@ Activity/
 - [Indice Moduli](../README.md)
 
 ## TODO
-=======
 cd laravel
 ./vendor/bin/phpstan analyse Modules/Activity --memory-limit=3G
 ```
->>>>>>> .merge_file_YsBaIo
 
 I test Pest non sono stati rieseguiti in questa sessione: non verificato che passino.
 
-<<<<<<< .merge_file_2UWizJ
 ## AI Workflows
 - [AI Methodologies](./ai-methodologies.md)
->>>>>>> laraxot/dev
-=======
 ## Limiti noti
 
 - Con `user` nullo `LogActivityAction` imposta `causer_id` a `Auth::id()` ma lascia `causer_type` nullo (codice di `execute()`): l'attivita' risulta senza causer risolvibile come relazione.
@@ -663,4 +631,3 @@ I test Pest non sono stati rieseguiti in questa sessione: non verificato che pas
 - In `database/migrations` restano altre quattro migrazioni `create_activity_table` (`2023_03_31_103350`, `2023_03_31_103351`, `2024_01_01_000001`, `2024_01_01_000002`) oltre a quella del 2026-06-10. Se siano innocue non e' verificato.
 - La connessione `activity` e' dichiarata nei modelli (`$connection = 'activity'`) ma non e' definita in `laravel/config/database.php`: dove venga creata non e' verificato.
 - Documenti che non descrivono il codice: [ARCHITECTURE.md](./ARCHITECTURE.md) (Repositories, Services, Projections inesistenti), [API.md](./api.md) (firma `execute(array $data)` inesistente), [readme.md](./readme.md) (`ActivityStatsWidget`, `EventStore`, monitoraggio in tempo reale inesistenti). Sono marcati `stale`.
->>>>>>> .merge_file_YsBaIo

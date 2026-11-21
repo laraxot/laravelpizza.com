@@ -7,6 +7,7 @@ namespace Modules\Geo\Tests\Unit\Actions;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Promise\Create;
+use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;
@@ -36,7 +37,7 @@ it('executes without throwing error for basic call', function (): void {
     Http::fake(['*' => Http::response([], 503)]);
     app()->instance(Client::class, new Client([
         'handler' => HandlerStack::create(
-            static fn (): \GuzzleHttp\Promise\PromiseInterface => Create::promiseFor(new Response(503)),
+            static fn (): PromiseInterface => Create::promiseFor(new Response(503)),
         ),
     ]));
     config([

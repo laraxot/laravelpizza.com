@@ -66,11 +66,8 @@ status: draft
 
 - `/laravel/Themes/Sixteen/resources/css/homepage-visual-fix.css`
 - Run `npm run build` after changes
-<<<<<<< .merge_file_LK3UEt
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 - Run `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`) after build
->>>>>>> .merge_file_AzyO9d
 
 ## Last Screenshots
 

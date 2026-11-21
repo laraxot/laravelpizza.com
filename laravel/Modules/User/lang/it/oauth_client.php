@@ -74,6 +74,15 @@ return [
             'description' => 'Azione di logout',
             'icon' => 'heroicon-o-arrow-right-on-rectangle',
         ],
+        'create_personal' => [
+            'label' => 'Nuovo client di accesso personale',
+        ],
+        'create_password' => [
+            'label' => 'Nuovo client password grant',
+        ],
+        'create_client_credentials' => [
+            'label' => 'Nuovo client credenziali',
+        ],
     ],
     'messages' => [
         'created' => 'Client creato con successo',

@@ -28,7 +28,7 @@
     "src": "node_modules/@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CL9O27TU.css",
+    "file": "assets/app-3ex-0oli.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -36,10 +36,28 @@
       "app.css"
     ]
   },
+  "resources/css/site.css": {
+    "file": "assets/site-D6PE46J3.css",
+    "src": "resources/css/site.css",
+    "isEntry": true,
+    "name": "site",
+    "names": [
+      "site.css"
+    ]
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DoPz8coY.js",
+    "file": "assets/app-BbTkBIaX.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/assistant.js"
+    ]
+  },
+  "resources/js/assistant.js": {
+    "file": "assets/assistant-DX2LRiQL.js",
+    "name": "assistant",
+    "src": "resources/js/assistant.js",
+    "isDynamicEntry": true
   }
 }

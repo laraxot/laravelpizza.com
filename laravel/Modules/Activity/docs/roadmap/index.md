@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_cvkeGi
-=======
 ---
 title: "Roadmap Index - Activity"
 type: index
@@ -8,7 +6,6 @@ updated: 2026-10-07
 tags: [docs, activity, roadmap]
 qmd: "roadmap index - activity activity"
 ---
->>>>>>> .merge_file_Mjfzar
 # Roadmap Index - Activity
 
 ## Scope

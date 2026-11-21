@@ -10,7 +10,6 @@ type: decision-log
 module: AI
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Decision log AI

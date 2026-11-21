@@ -8,8 +8,6 @@ use Illuminate\Support\Str;
 use Modules\Cms\Models\Page;
 use Spatie\QueueableAction\QueueableAction;
 
-use function Safe\preg_replace;
-
 /**
  * Descrizione di una pagina CMS, ricavata dal suo stesso testo: il primo `subtitle` (o `description`) dei blocchi
  * nella lingua richiesta, di solito quello dell'hero. Non si inventa nulla e non si ripiega su un'altra lingua:

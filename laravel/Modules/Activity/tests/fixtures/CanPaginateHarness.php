@@ -41,6 +41,7 @@ final class CanPaginateHarness
 
     /**
      * @template TModel of \Illuminate\Database\Eloquent\Model
+     *
      * @param  Builder<TModel>  $query
      * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
      */

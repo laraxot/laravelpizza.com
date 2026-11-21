@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Actions;
 
-<<<<<<< .merge_file_NFTOah
-=======
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
->>>>>>> .merge_file_kcjJsT
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
@@ -23,17 +20,6 @@ class LogUserLoginAction
     use QueueableAction;
 
     public function __construct(
-<<<<<<< .merge_file_NFTOah
-        public User $user
-    ) {}
-
-    public function execute(): Activity
-    {
-        $action = new LogActivityAction(
-            type: 'login',
-            user: $this->user,
-            subject: $this->user,
-=======
         public ?UserContract $user = null
     ) {}
 
@@ -48,7 +34,6 @@ class LogUserLoginAction
             type: 'login',
             user: $user,
             subject: $user,
->>>>>>> .merge_file_kcjJsT
             description: 'User logged in'
         );
 

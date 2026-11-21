@@ -9,7 +9,6 @@ declare(strict_types=1);
                 <span class="overflow-hidden" >
                 <x-filament::icon
                                 icon="fas-futbol"
-                                size="24"
                                 class="w-auto h-12"
                             />
                 </span>
@@ -42,7 +41,7 @@ declare(strict_types=1);
 
                             <x-filament::icon
                                 icon="fas-futbol"
-                                :size="24"
+                               
                                 class="w-auto h-24 absolute left-0 top-8 text-primary-500 opacity-20 dark:opacity-20 transition group-hover:scale-110 group-hover:-rotate-12 group-hover:opacity-40 dark:group-hover:opacity-80"
                             />
                             <span class="overlook-name">AAA</span>

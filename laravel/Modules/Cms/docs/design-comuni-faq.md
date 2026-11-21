@@ -149,10 +149,7 @@ Universal Blocks Renderer
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Compila CSS/JS
-<<<<<<< .merge_file_jF3tFw
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_MjumZN
 ```
 
 ## Testing

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Widgets;
 
-use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\Meetup\Models\Event;
+use Modules\Xot\Filament\Widgets\XotBaseStatsOverviewWidget;
 
-class MeetupStatsOverviewWidget extends BaseWidget
+class MeetupStatsOverviewWidget extends XotBaseStatsOverviewWidget
 {
     protected function getStats(): array
     {

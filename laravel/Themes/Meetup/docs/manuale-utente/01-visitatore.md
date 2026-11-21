@@ -2,7 +2,7 @@
 
 [← Torna all'indice](readme.md)
 
-Sei un **visitatore** quando apri il sito senza aver fatto l'accesso. Puoi guardare tutto, cercare gli eventi e scrivere agli organizzatori. Per prenotare un posto serve un account (vedi il [capitolo 2](02-partecipante.md)).
+Sei un **visitatore** quando apri il sito senza aver fatto l'accesso. Puoi guardare tutto, cercare gli eventi e scrivere agli organizzatori. Per prenotare un posto serve un account, ma puoi crearlo **nello stesso momento in cui ti iscrivi**, direttamente dalla pagina dell'evento (punto 1.5 e [capitolo 2](02-partecipante.md#21-iscriversi-a-un-evento-in-un-solo-passo)).
 
 ## 1.1 La pagina iniziale
 
@@ -61,10 +61,10 @@ La pagina dell'evento racconta di cosa si parla, dove e quando.
 ![Dettaglio di un evento con data, iscrizione e calendario](img/v03-dettaglio.jpg)
 
 1. Qui trovi **data, ora, luogo** e la modalità (in presenza o online).
-2. Il pulsante **Accedi per iscriverti**: da visitatore non puoi ancora prenotare. Cliccandolo arrivi alla pagina di accesso; dopo l'accesso il sito ti riporta proprio qui.
+2. Il riquadro **Partecipa ora**: da visitatore puoi iscriverti subito scrivendo solo **email e password**. Se non hai un account il sito lo crea in quel momento; se ce l'hai già, usa la tua email e la tua password di sempre. Passo per passo: [capitolo 2, punto 2.1](02-partecipante.md#21-iscriversi-a-un-evento-in-un-solo-passo). Preferisci entrare prima? Clicca **Accedi** sotto il riquadro: dopo l'accesso il sito ti riporta proprio qui.
 3. **Aggiungi al calendario**: scarica un piccolo file (formato `.ics`). Aprilo e l'evento finisce nel calendario del telefono o del computer (Google Calendar, Outlook, Calendario di Apple).
 
-Sopra il pulsante vedi quanti **posti** sono ancora liberi.
+In cima al riquadro vedi quanti **posti** sono ancora liberi.
 
 ## 1.6 Cambiare lingua
 
@@ -79,6 +79,8 @@ La stessa pagina si riapre nella nuova lingua:
 ![La pagina eventi in inglese](img/v05-english.jpg)
 
 > Nota: il contenuto degli eventi (titolo, descrizione) resta nella lingua in cui l'organizzatore lo ha scritto. Cambiano menu, pulsanti, date e messaggi.
+
+> Se apri un indirizzo senza la lingua (per esempio `/events`), il sito ti porta alla stessa pagina nella lingua del tuo browser, se è una di quelle disponibili; altrimenti in italiano.
 
 ## 1.7 Scrivere agli organizzatori
 
@@ -95,4 +97,4 @@ Hai una domanda, vuoi proporre un talk o ospitare un meetup? In fondo a ogni pag
 
 ## Cosa fare adesso?
 
-Vuoi partecipare a un evento? Crea un account: continua con il [capitolo 2 – Partecipante](02-partecipante.md).
+Vuoi partecipare a un evento? Continua con il [capitolo 2 – Partecipante](02-partecipante.md): il primo punto spiega come iscriversi in un solo passo.

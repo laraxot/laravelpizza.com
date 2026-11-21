@@ -2,37 +2,31 @@
 
 declare(strict_types=1);
 
+// Finestra "Assegna un ruolo" (Utenti → modifica → Organizzazione → icona catena): AttachRoleAction.
 return [
+    'heading' => 'Assegna un ruolo',
     'fields' => [
         'recordId' => [
+            'label' => 'Ruolo',
             'tooltip' => '',
         ],
         'team_id' => [
+            'label' => 'Team',
+            'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
             'tooltip' => '',
         ],
     ],
     'actions' => [
         'submit' => [
-            'icon' => 'submit',
+            'label' => 'Collega',
         ],
         'attachAnother' => [
-            'icon' => 'attachAnother',
+            'label' => 'Collega e aggiungine un altro',
         ],
         'cancel' => [
-            'icon' => 'cancel',
+            'label' => 'Annulla',
         ],
     ],
-    'navigation' => [
-        'name' => 'Attach Role',
-        'plural' => 'Attach Role',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Attach Role',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'label' => 'Attach Role',
-    'plural_label' => 'Attach Role (Plurale)',
+    'label' => 'Assegna un ruolo',
+    'plural_label' => 'Assegna un ruolo',
 ];

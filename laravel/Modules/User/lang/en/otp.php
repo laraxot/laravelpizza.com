@@ -89,7 +89,7 @@ return [
         'name' => 'OTP',
         'plural' => 'OTPs',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione delle password usa e getta',
         ],
         'label' => 'OTP',

@@ -1,56 +1,64 @@
+---
+id: module-ai-readme
+title: "AI — Integrazioni LLM e Agenti"
+type: module-readme
+category: module-documentation
+module: AI
+status: active
+tags: [ai, llm, mcp, actions, agents]
+created: 2026-09-14
+updated: 2026-09-14
+qmd: "AI MCP LLM actions agents prompt context module documentation"
+issues:
+  - "https://github.com/laraxot/module_ai_fila5/issues/23"
+discussions:
+  - "https://github.com/laraxot/module_ai_fila5/discussions/24"
+related:
+  - "./docs/"
+sources: []
+---
+
 # 🤖 AI
 
-[![Domain-AI](https://img.shields.io/badge/Domain-AI%20Integration-512DA8.svg)](#)
-[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
-[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
-[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
-[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
-[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
-[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
-[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
+> **Integrazioni AI, MCP e automazioni assistite.**
 
-> **AI che assiste, non che sostituisce il comune.** Integrazioni LLM on-demand, workflow BMAD, tooling agenti.
+Connettori, Actions AI, prompt e tooling con guardrail espliciti.
 
----
+## Cosa offre
 
-## Perché esiste
+- **MCP e connettori**
+- **Actions in app/Actions**
+- **prompt e contesto**
+- **Notify/Xot**
 
-Accelerare sviluppo e supporto operatori con guardrail.
+## Confini architetturali
 
-## Superpoteri
+Questo modulo possiede le responsabilità elencate sopra e pubblica contratti riusabili agli altri moduli. La logica applicativa vive in Actions del modulo; l’interfaccia amministrativa segue le basi Laraxot/XotBase. Le dipendenze verso altri moduli devono restare esplicite e orientate verso contratti stabili.
 
-- Connettori servizi AI
-- Skill e prompt documentati
-- Integrazione Notify/Xot
-- Policy uso responsabile
+## Integrazione rapida
 
-## Certificazioni
+Il modulo è caricato dall’architettura modulare Laraxot. Per verificarne lo stato:
 
-| Certificazione | Stato |
-|----------------|-------|
-| PHPStan livello 10 | Target progetto |
-| `declare(strict_types=1)` | Su nuovo codice PHP |
-| Filament 5 + XotBase | Admin enterprise |
-| Test PHPUnit / Pest | Suite modulo |
-| Documentazione wiki | Cartella `docs/` |
+````bash
+cd laravel
+php artisan module:list
+./vendor/bin/phpstan analyse Modules/AI
+````
 
-## Vuoi entrare nel team?
-
-Il futuro è **augmented** — costruiamolo con etica.
-
-Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
-
----
+Per i test e le convenzioni operative, consultare la documentazione locale prima di introdurre nuove integrazioni.
 
 ## Documentazione
 
-| Lingua | Link |
-|--------|------|
-| 🇮🇹 Presentazione | Questo file (`README.md`) |
-| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
-| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+La mappa tecnica è in [docs/README.md](./docs/README.md).
+
+- [Story BMAD del modulo](./docs/stories/)
+- [Regole del progetto](../../../docs/wiki/)
+- [README del progetto](../../README.md)
+
+## Qualità e manutenzione
+
+Le modifiche devono mantenere `declare(strict_types=1);` nel codice PHP, rispettare PHPStan configurato dal progetto e aggiornare la documentazione tecnica quando cambiano contratti, dipendenze o flussi. Le story BMAD restano accanto al codice del modulo per conservare ownership e contesto.
 
 ---
 
-**Modulo** `ai` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+**Modulo** `ai` · **Laraxot ecosystem** · **Project-agnostic**

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ollama strategy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Ollama & Local-First AI Strategy: The "Super Mucca" Philosophy
@@ -70,5 +69,13 @@ Companion commands are registered alongside the main command in the same client-
 *   **Fast Text/Summary:** `mistral:7b`
 
 ---
+title: "ollama strategy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama strategy"
+issues: []
+discussions: []
 *Created by Gemini CLI Agent - 2026-03-11*
 *Part of the Laraxot/Super Mucca Methodology*

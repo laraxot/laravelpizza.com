@@ -7,7 +7,7 @@ return [
         'name' => 'Token',
         'plural' => 'Tokens',
         'group' => [
-            'name' => 'Gestione Utenti',
+            'name' => 'User management',
             'description' => 'Gestione dei token di accesso',
         ],
         'label' => 'Token',

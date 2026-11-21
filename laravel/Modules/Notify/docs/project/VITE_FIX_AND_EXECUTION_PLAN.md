@@ -68,10 +68,7 @@ npm install
 npm run build
 
 # 4. Copy assets to public_html
-<<<<<<< .merge_file_QgraBp
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_6F59CA
 
 # Verify manifest exists
 ls -la public_html/themes/Sixteen/manifest.json
@@ -81,11 +78,8 @@ ls -la public_html/themes/Sixteen/manifest.json
 - `composer update -W`: Updates PHP dependencies with wide dependencies
 - `npm install`: Installs correct Node packages from package.json
 - `npm run build`: Vite builds assets → generates manifest.json
-<<<<<<< .merge_file_QgraBp
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 - `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public` (`npm run copy` dismesso): asset serviti via symlink, nessuna copia.
->>>>>>> .merge_file_6F59CA
 
 **AI Tool Assignment**:
 - **Ralph Loop**: Autonomous execution for both themes
@@ -152,10 +146,7 @@ cd laravel/Themes/Sixteen
 composer update -W    # ~5min
 npm install           # ~2min
 npm run build         # ~3min
-<<<<<<< .merge_file_QgraBp
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_6F59CA
 
 # Verify
 ls -la public_html/themes/Sixteen/manifest.json
@@ -166,10 +157,7 @@ cd ../TwentyOne
 composer update -W
 npm install
 npm run build
-<<<<<<< .merge_file_QgraBp
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_6F59CA
 
 # Verify
 ls -la public_html/themes/TwentyOne/manifest.json

@@ -9,7 +9,6 @@ discussions: []
 name: context-compression-plugin
 description: Installazione e configurazione del plugin context-compression con context-mode MCP.
 type: concept
-status: draft
 ---
 
 # Context Compression Plugin (context-mode)

@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_czjU0I
-=======
 ---
 title: "Best Practices – Activity"
 type: note
@@ -9,7 +7,6 @@ qmd: "best practices   activity activity"
 status: superseded
 superseded_by: wiki/rules/best-practices.md
 ---
->>>>>>> .merge_file_9YnEPI
 # Best Practices – Activity
 
 ## Principi DRY/KISS

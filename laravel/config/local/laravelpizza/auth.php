@@ -105,4 +105,9 @@ return [
             'connection' => 'user',
         ],
     ],
+
+    // Pagina d'arrivo dopo accesso e registrazione (Modules\User\Actions\Auth\GetPostLoginUrlAction legge
+    // auth.post_login_path; senza, il modulo usa /area-personale, che qui non esiste: 404 dopo ogni accesso).
+    // Tenere uguale a xra.post_login_path, usato da reset password e verifica email.
+    'post_login_path' => '/events/my',
 ];

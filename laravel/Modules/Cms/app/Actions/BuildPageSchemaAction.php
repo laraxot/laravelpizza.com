@@ -59,9 +59,10 @@ final class BuildPageSchemaAction
             && is_string($routeParameters['slug0'])
             && $routeParameters['slug0'] !== ''
         ) {
+            // Solo il riferimento: l'evento completo (nome, date, luogo) lo pubblica la pagina con lo stesso @id.
+            // Un Event con il solo URL sarebbe un evento incompleto per Google (campi obbligatori mancanti).
             $schema['mainEntity'] = [
-                '@type' => 'Event',
-                'url' => $this->localizedUrl('/events/'.$routeParameters['slug0']),
+                '@id' => $this->localizedUrl('/events/'.$routeParameters['slug0']).'#event',
             ];
         }
 

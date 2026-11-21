@@ -50,7 +50,7 @@ new class extends Component
 
 <x-layouts.app :title="__('pub_theme::auth.verify.title')">
     <x-ui.auth-card :title="__('pub_theme::auth.verify.title')" :subtitle="__('pub_theme::auth.verify.subtitle')">
-        @volt('auth.verify')
+        @volt('meetup.auth.verify')
             <div class="space-y-6">
                 @if ($resent)
                     <div class="flex items-start gap-3 rounded-xl border border-green-500/30 bg-green-500/10 p-4 text-sm text-green-200" role="status">

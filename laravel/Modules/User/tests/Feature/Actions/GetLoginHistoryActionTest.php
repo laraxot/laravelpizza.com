@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\DB;
-use InvalidArgumentException;
 use Modules\User\Actions\Login\GetLoginHistoryAction;
 use Modules\User\Tests\TestCase;
 

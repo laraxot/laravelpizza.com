@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_2EloWs
-=======
 ---
 title: "Activity Log Optimization - Activity Module"
 type: note
@@ -8,7 +6,6 @@ updated: 2026-10-23
 tags: [docs, activity, performance]
 qmd: "activity log optimization - activity module activity"
 ---
->>>>>>> .merge_file_MK3VGw
 # Activity Log Optimization - Activity Module
 
 ## 🚨 Critical Issues Identified

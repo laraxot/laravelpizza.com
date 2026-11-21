@@ -65,7 +65,7 @@ class CalculateTravelTimeAction
     private function validateInput(LocationData $origin, LocationData $destination): void
     {
         $apiKey = config('services.google.maps_api_key');
-        if (! \is_string($apiKey) || '' === $apiKey) {
+        if (! \is_string($apiKey) || $apiKey === '') {
             throw new \RuntimeException('Google Maps API key not configured');
         }
         Assert::notSame(
@@ -105,37 +105,16 @@ class CalculateTravelTimeAction
     {
         $data = json_decode($response, true);
 
-<<<<<<< .merge_file_j6dVdl
         if (! \is_array($data) || ! \is_string($data['status'] ?? null)) {
             return TravelTimeData::error('INVALID_RESPONSE');
         }
 
         /** @var string $status */
         $status = $data['status'];
-        if ('OK' !== $status) {
+        if ($status !== 'OK') {
             return TravelTimeData::error($status);
         }
 
-=======
-<<<<<<< .merge_file_6f9sEl
-        if ($data['status'] !== 'OK') {
-            return TravelTimeData::error($data['status']);
-        }
-
-        $element = $data['rows'][0]['elements'][0];
-        if (! $element || $element['status'] !== 'OK') {
-=======
-        if (! \is_array($data) || ! \is_string($data['status'] ?? null)) {
-            return TravelTimeData::error('INVALID_RESPONSE');
-        }
-
-        /** @var string $status */
-        $status = $data['status'];
-        if ('OK' !== $status) {
-            return TravelTimeData::error($status);
-        }
-
->>>>>>> .merge_file_AJUf8V
         $rows = $data['rows'] ?? null;
         $firstRow = \is_array($rows) ? ($rows[0] ?? null) : null;
         $elements = \is_array($firstRow) ? ($firstRow['elements'] ?? null) : null;
@@ -145,11 +124,7 @@ class CalculateTravelTimeAction
             return TravelTimeData::error('INVALID_RESPONSE');
         }
 
-        if ('OK' !== $element['status']) {
-<<<<<<< .merge_file_j6dVdl
-=======
->>>>>>> .merge_file_7pIkDx
->>>>>>> .merge_file_AJUf8V
+        if ($element['status'] !== 'OK') {
             return TravelTimeData::error($element['status']);
         }
 

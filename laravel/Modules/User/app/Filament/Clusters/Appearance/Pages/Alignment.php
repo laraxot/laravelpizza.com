@@ -83,10 +83,11 @@ class Alignment extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
-        $data = [];
+        $this->form->fill();
 
-        $this->form->fill($data);
+        // heading e container non sono campi del form ma li usa l'anteprima della vista (@entangle('data.heading')):
+        // senza un valore iniziale Livewire segnala "property data.heading cannot be found".
+        $this->data = [...$this->data, ...$this->getViewData()];
     }
 
     /**

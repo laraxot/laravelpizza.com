@@ -25,6 +25,7 @@ use Modules\Xot\Actions\Filament\GetSidebarStateScriptAction;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
 use Modules\Xot\Filament\AvatarProviders\InitialsAvatarProvider;
 use Modules\Xot\Filament\Pages\MainDashboard;
+use Modules\Xot\Http\Middleware\SetPanelLocaleFromUserMiddleware;
 
 abstract class XotBaseMainPanelProvider extends PanelProvider
 {
@@ -103,6 +104,10 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
+            // Lingua preferita dell'utente (users.lang): persistente, vale anche per le richieste Livewire.
+            ->authMiddleware([
+                SetPanelLocaleFromUserMiddleware::class,
+            ], isPersistent: true)
             // Fix "This page has expired" (Livewire) sulla pagina di login del
             // panel admin principale: vedi spiegazione e riproduzione in
             // Modules/Xot/docs/stories/login-page-expired-investigation-2026-09-11.story.md

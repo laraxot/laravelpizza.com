@@ -90,8 +90,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'tooltip' => 'Nuovo',
-            'label' => 'Nuovo',
+            'tooltip' => 'Nuovo relatore',
+            'label' => 'Nuovo relatore',
             'icon' => 'create',
         ],
         'createAnother' => [
@@ -118,4 +118,6 @@ return [
             'tooltip' => 'reorderRecords',
         ],
     ],
+    'create_title' => 'Nuovo relatore',
+    'edit_title' => 'Modifica relatore',
 ];

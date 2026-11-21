@@ -5,17 +5,18 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Forms\Components\Support;
 
 use Illuminate\Support\Facades\Http;
+use Modules\Geo\Filament\Forms\Components\XotBaseCoordinateField;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 /**
- * Typed helpers for {@see \Modules\Geo\Filament\Forms\Components\XotBaseCoordinateField}.
+ * Typed helpers for {@see XotBaseCoordinateField}.
  *
  * ponytail: extracted from trait so PHPStan L10 sees array generics on a concrete class.
  */
 final class CoordinatePickerHelpers
 {
     /**
-     * @param array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string} $center
+     * @param  array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string}  $center
      */
     public static function resolveCenterLatitude(array $center, float $default): float
     {
@@ -25,7 +26,7 @@ final class CoordinatePickerHelpers
     }
 
     /**
-     * @param array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string} $center
+     * @param  array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string}  $center
      */
     public static function resolveCenterLongitude(array $center, float $default): float
     {
@@ -159,8 +160,7 @@ final class CoordinatePickerHelpers
     }
 
     /**
-     * @param array<string, mixed> $data
-     *
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
      */
     public static function extractCoordinates(array $data, string $field = 'coordinates', string $latColumn = 'latitude', string $lngColumn = 'longitude'): array
@@ -176,7 +176,7 @@ final class CoordinatePickerHelpers
 
     public static function normalizeCoordinate(mixed $value): ?float
     {
-        if (null === $value || '' === $value) {
+        if ($value === null || $value === '') {
             return null;
         }
 
@@ -184,8 +184,8 @@ final class CoordinatePickerHelpers
     }
 
     /**
-     * @param array<string, mixed> $data
-     * @param list<string>         $keys
+     * @param  array<string, mixed>  $data
+     * @param  list<string>  $keys
      */
     private static function firstString(array $data, array $keys): string
     {
@@ -195,7 +195,7 @@ final class CoordinatePickerHelpers
             }
 
             $value = $data[$key] ?? null;
-            if (\is_string($value) && '' !== trim($value)) {
+            if (\is_string($value) && trim($value) !== '') {
                 return $value;
             }
         }

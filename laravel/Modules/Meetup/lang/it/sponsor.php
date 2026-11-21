@@ -85,8 +85,8 @@ return [
     ],
     'actions' => [
         'create' => [
-            'tooltip' => 'Nuovo',
-            'label' => 'Nuovo',
+            'tooltip' => 'Nuovo sponsor',
+            'label' => 'Nuovo sponsor',
             'icon' => 'create',
         ],
         'logout' => [
@@ -110,4 +110,6 @@ return [
             'tooltip' => 'profile',
         ],
     ],
+    'create_title' => 'Nuovo sponsor',
+    'edit_title' => 'Modifica sponsor',
 ];

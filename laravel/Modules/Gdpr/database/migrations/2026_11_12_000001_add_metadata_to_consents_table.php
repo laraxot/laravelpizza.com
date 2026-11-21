@@ -12,7 +12,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * su un database nuovo ogni registrazione falliva con "Unknown column 'metadata'". Additiva e idempotente; il nome datato
  * la tiene distinta dalle `create_consents_table` storiche.
  */
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = Consent::class;
 
     public function up(): void

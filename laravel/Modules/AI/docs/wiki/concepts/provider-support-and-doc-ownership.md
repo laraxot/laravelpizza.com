@@ -14,7 +14,6 @@ related:
   - ./second-brain-local-discipline.md
   - ../../../../Xot/docs/wiki/concepts/module-dashboard-page-mandatory.md
   - ../../../../../Themes/docs/wiki/concepts/ai-harness-theme-discipline.md
-status: draft
 ---
 
 # AI provider support and documentation ownership
@@ -25,7 +24,7 @@ paths listed here and was checked on 2026-09-25.
 
 | Provider / family | Status in `Modules/AI` | Evidence |
 |---|---|---|
-| OpenAI / GPT | Implemented in several actions | `CompletionAction`, `GeneratePredictionsAction`, `Predict/GeneratePredictionDraftsAction`, `Support/MakeAIRequestAction` |
+| OpenAI / GPT | Implemented in several actions | `CompletionAction`, `GeneratePredictionsAction`, `Predict/GeneratePredictionDraftsAction`, `MakeAIRequestAction` |
 | Ollama | Implemented local HTTP actions | `Actions/Ollama/ChatOllamaAction` and `GenerateOllamaAction` |
 | DS4 / DeepSeek-compatible endpoint | Implemented as an OpenAI-compatible chat-completions request | `Actions/Ds4/ChatDs4Action` and `GenerateDs4Action`; endpoint comes from `services.ds4` config |
 | Anthropic / Claude | No direct provider adapter found in `Modules/AI/app` | Do not describe the module as having a Claude integration without a new code-backed audit |

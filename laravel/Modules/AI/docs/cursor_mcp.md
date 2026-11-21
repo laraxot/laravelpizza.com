@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: cursor_mcp
 canonical: ../../../Themes/docs/shared-components/cursor-mcp.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/cursor-mcp.md

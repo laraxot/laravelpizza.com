@@ -35,6 +35,10 @@ MAIL_MAILER=smtp              # credenziali del provider reale
 MAIL_FROM_ADDRESS=...  MAIL_FROM_NAME="Laravel Pizza Meetups"
 CONTACT_EMAIL=...             # riceve i messaggi della pagina Contatti
 HEALTH_NOTIFY_EMAIL=...       # riceve gli avvisi dei controlli di salute
+
+# Assistente AI nel sito (facoltativo): basta una chiave; senza chiavi il pulsante non compare.
+GROQ_API_KEY=                 # primo fornitore provato (modelli gratuiti)
+OPENROUTER_API_KEY=           # alternativa, modelli ":free"
 ```
 
 Mai committare `.env`. I file `.env.*` presenti nel repository sono solo per sviluppo e test: la chiave di `.env.latest` è stata tolta; se in passato è stata usata su un server, **rigenerarla** (`php artisan key:generate --force`) invalida sessioni e dati cifrati con la vecchia.
@@ -137,9 +141,23 @@ php artisan optimize:clear && php artisan optimize && php artisan up
 - [ ] DevTools → Rete: nessuna richiesta a domini terzi al primo caricamento (niente Google Fonts)
 - [ ] Accessibilità: `cd laravel/Themes/Meetup && BASE_URL=https://laravelpizza.com npm run a11y` → 0 violazioni WCAG 2.1 AA
 - [ ] Audit del front office (ospite e loggato, desktop e mobile): `BASE_URL=https://laravelpizza.com USER_EMAIL=... USER_PASSWORD=... npm run audit:fo` → "Nessun problema trovato" (`laravel/Themes/Meetup/docs/front-office-audit.md`)
+- [ ] Passport (API e server MCP `/api/mcp`): `php artisan passport:keys` (oppure `PASSPORT_PRIVATE_KEY`/`PASSPORT_PUBLIC_KEY` nell'ambiente) e, una volta, `php artisan passport:client --personal --name="Laravel Pizza MCP" --provider=users`. Senza chiavi ogni richiesta con `auth:api` risponde 500 invece di 401. Verifica: `curl -X POST https://<dominio>/api/mcp` → 401
+- [ ] Assistente AI (solo se è impostata `GROQ_API_KEY` o `OPENROUTER_API_KEY`): il modulo `AI` è attivo in `modules_statuses.json`, `php artisan migrate --force` ha creato `ai_agent_messages` e `ai_agent_runs`; da loggato compare "Chiedi all'assistente" in basso a destra, la domanda "Che meetup ci sono a Bologna?" mostra le schede, "Iscrivimi" chiede conferma prima di iscrivere (`laravel/Modules/Meetup/docs/assistant.md`)
+- [ ] Audit del back office (tutte le pagine dei pannelli Filament come super-admin): `PHP_BIN=php ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run audit:bo` → "0 con problemi". In locale, dopo l'audit, ripristinare i file lang (vedi l'intestazione di `scripts/back-office-audit.cjs`)
 
 ## 10. Test e CI
 
 - Bloccanti: `vendor/bin/pest --testsuite=Project` (modulo Meetup, che contiene anche i test di app e tema: ogni modulo tiene i suoi test, niente `laravel/tests`), PHPStan livello 10 su `Modules`, Pint, build del tema.
 - Informativi: le suite dei moduli Laraxot condivisi (Xot, User, Cms, …), pubblicate nel riepilogo del job CI. Contengono test scritti per altri progetti; vanno sistemate nei rispettivi repository dei moduli.
 - Attenzione: in locale alcune suite di Xot eseguono comandi composer sul progetto reale (`storage/framework/composer-home`) e possono riscrivere `vendor/composer/autoload_*`. Lanciarle solo in CI o su una copia; se succede, `composer dump-autoload` ripristina.
+
+## 11. Dopo un sync dei moduli Laraxot condivisi
+
+1. `git grep -nE '^(<<<<<<< |>>>>>>> )'` deve essere vuoto (lo controlla anche `NoMergeConflictMarkersTest`).
+2. `composer validate && composer install`, poi PHPStan livello 10 su `Modules` e Pint.
+3. Migrare un **database vuoto**, non solo quello locale: un database già migrato nasconde l'ordine sbagliato delle
+   migrazioni (è successo con `users` il 18/11/2026).
+4. Suite `Project`, `npm run build`, `npm run audit:fo` e `npm run audit:bo`.
+5. Le pagine Folio dei moduli non devono usare nomi `@volt(...)` del tema (`UniqueVoltFragmentNamesTest`).
+
+Storia dei problemi trovati: `laravel/Modules/Xot/docs/lessons/module-sync-merge-conflicts.md`.

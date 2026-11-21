@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: 07_best_practices
 canonical: ../../../../Themes/docs/shared-components/07-best-practices.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/07-best-practices.md

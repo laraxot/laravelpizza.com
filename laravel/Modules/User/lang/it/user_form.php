@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+        'name' => [
+            'label' => 'Nome visualizzato',
+            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
         'first_name' => [
             'label' => 'Nome',
             'placeholder' => 'Mario',
@@ -55,7 +62,6 @@ return [
             'tooltip' => 'Nascondi password',
         ],
     ],
-<<<<<<< .merge_file_T3WJVU
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -66,6 +72,4 @@ return [
             'heading' => 'worker',
         ],
     ],
-=======
->>>>>>> .merge_file_iPwtsu
 ];

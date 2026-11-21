@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+        'name' => [
+            'label' => 'Display name',
+            'helper_text' => 'The name shown on the site and in the panels.',
+        ],
+        'created_at' => [
+            'label' => 'Created on',
+        ],
         'email' => [
             'label' => 'Email address',
             'placeholder' => 'name@example.com',

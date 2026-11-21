@@ -117,13 +117,10 @@ supermemory add --tag ptv --content "Fixcity module: Ticket model extends XotBas
 ### 3. Theme Conventions
 Store theme development patterns:
 ```bash
-<<<<<<< .merge_file_obIJGP
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 supermemory add --tag fixcity --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
 supermemory add --tag ptv --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
->>>>>>> .merge_file_iA2lbB
 ```
 
 ### 4. Development Workflows

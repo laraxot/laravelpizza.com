@@ -38,10 +38,7 @@ cd laravel/Themes/Meetup
 composer update -W
 npm install
 npm run build
-<<<<<<< .merge_file_Z4UoV3
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_l6nxsB
 ```
 
 ---

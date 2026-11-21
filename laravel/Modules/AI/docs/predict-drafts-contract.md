@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "predict drafts contract"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Contratto Draft AI Per Predict

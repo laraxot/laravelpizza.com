@@ -5,9 +5,9 @@ declare(strict_types=1);
 use Illuminate\Http\Request;
 use Modules\Seo\Http\Middleware\RedirectToCanonicalPath;
 use Modules\Seo\Tests\Support\FakeTenantSeoConfig;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
-use Modules\Seo\Tests\TestCase;
 
 uses(TestCase::class);
 

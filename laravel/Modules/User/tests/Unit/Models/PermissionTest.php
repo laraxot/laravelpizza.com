@@ -7,7 +7,7 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Permission;
 use Modules\User\Tests\TestCase;
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 class PermissionTest extends TestCase
 {

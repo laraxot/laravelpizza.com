@@ -11,7 +11,7 @@ use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('Activity Policy', function (): void {
     test('user with permission can view', function (): void {
@@ -20,7 +20,7 @@ describe('Activity Policy', function (): void {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('hasPermissionTo')->with('activity.view')->andReturn(true);
 
-        $policy = new ActivityPolicy();
+        $policy = new ActivityPolicy;
         $result = $policy->view($user);
 
         Assert::assertTrue($result);
@@ -32,7 +32,7 @@ describe('Activity Policy', function (): void {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('hasPermissionTo')->with('activity.view')->andReturn(false);
 
-        $policy = new ActivityPolicy();
+        $policy = new ActivityPolicy;
         $result = $policy->view($user);
 
         Assert::assertFalse($result);

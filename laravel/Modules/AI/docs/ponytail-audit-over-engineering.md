@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ponytail audit over engineering"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Ponytail audit — AI (over-engineering)

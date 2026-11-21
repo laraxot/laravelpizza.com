@@ -23,11 +23,11 @@ class ConfirmAiActionProposalAction
 
     public function __construct(private readonly AiActionHandlerRegistry $registry) {}
 
-    public function execute(AiActionProposal $proposal, int $confirmedByUserId): AiActionProposal
+    public function execute(AiActionProposal $proposal, int|string $confirmedByUserId): AiActionProposal
     {
         $proposal->forceFill([
             'status' => AiActionProposalStatusEnum::CONFIRMED,
-            'confirmed_by_user_id' => $confirmedByUserId,
+            'confirmed_by_user_id' => (string) $confirmedByUserId,
             'confirmed_at' => Carbon::now(),
         ])->save();
 
