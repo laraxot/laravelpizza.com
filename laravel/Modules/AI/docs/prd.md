@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prd"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI - Product Requirements Document (PRD)

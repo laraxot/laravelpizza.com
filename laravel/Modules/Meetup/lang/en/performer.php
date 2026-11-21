@@ -88,4 +88,6 @@ return [
             'tooltip' => '',
         ],
     ],
+    'create_title' => 'New speaker',
+    'edit_title' => 'Edit speaker',
 ];

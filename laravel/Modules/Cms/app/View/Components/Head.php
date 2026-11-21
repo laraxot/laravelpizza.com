@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
-use Illuminate\Support\Str;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Laravel\Head\Facades\Head as HeadManager;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -19,11 +19,12 @@ use Modules\Cms\Actions\Head\ResolveHreflangAlternatesAction;
 use Modules\Cms\Actions\Head\ResolvePageDescriptionAction;
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
 use Modules\Cms\Actions\Head\ResolveWrittenLocalesAction;
+use Modules\Cms\Actions\ResolvePageMetaAction;
 use Modules\Cms\Models\Page;
+use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
 use Modules\Xot\Datas\MetatagData;
 
 use function Safe\parse_url;
-use function Safe\preg_replace;
 
 /**
  * Il `<head>` del front office: la vista emette `<head>…</head>`, i layout non lo avvolgono.
@@ -49,6 +50,8 @@ final class Head extends Component
         public readonly ?string $description = null,
         public readonly ?bool $homepage = null,
         public readonly ?string $themeColor = null,
+        // Entry Vite del CSS del tema: un tema può servire un foglio più leggero dove non servono i componenti Filament.
+        public readonly string $stylesheet = 'resources/css/app.css',
     ) {}
 
     public function render(): ViewContract
@@ -104,6 +107,7 @@ final class Head extends Component
 
         return view('cms::components.head', [
             'pubTheme' => $meta->getPubTheme(),
+            'stylesheet' => $this->stylesheet,
         ]);
     }
 
@@ -139,6 +143,12 @@ final class Head extends Component
             return trim($this->description);
         }
 
+        // Pagine con un modello (evento, profilo); la home tiene la descrizione curata del sito, non il sottotitolo dell'hero.
+        $fromRequest = $isHome ? '' : $this->requestMeta(ResolvePageMetaAction::DESCRIPTION);
+        if ($fromRequest !== '') {
+            return Str::limit($fromRequest, 160);
+        }
+
         $key = 'pub_theme::seo.site.description';
         $siteDescription = Lang::has($key) ? trim((string) __($key)) : '';
 
@@ -151,6 +161,12 @@ final class Head extends Component
 
         if ($siteDescription !== '') {
             return $siteDescription;
+        }
+
+        // Descrizione del sito curata dal tenant (config/local/{tenant}/lang/{lingua}/metatag.php), nella lingua corrente.
+        $tenantDescription = trim(app(TranslateTenantKeyAction::class)->execute('metatag.description'));
+        if ($tenantDescription !== '' && $tenantDescription !== 'metatag.description') {
+            return $tenantDescription;
         }
 
         $fallback = trim($meta->getDescription(limit: 160));
@@ -207,11 +223,22 @@ final class Head extends Component
     private function resolvePageTitle(?Page $page): string
     {
         $pageTitle = trim((string) $this->title);
+        if ($pageTitle === '') {
+            // Pagine con un modello (evento, profilo): ResolvePageMetaAction mette titolo e descrizione nella richiesta.
+            $pageTitle = $this->requestMeta(ResolvePageMetaAction::TITLE);
+        }
         if ($pageTitle !== '' || $page === null) {
             return $pageTitle;
         }
 
         return trim($this->stringAttribute($page, 'title'));
+    }
+
+    private function requestMeta(string $attribute): string
+    {
+        $value = request()->attributes->get($attribute);
+
+        return is_string($value) ? Str::of(strip_tags($value))->squish()->toString() : '';
     }
 
     private function stringAttribute(Page $page, string $attribute): string

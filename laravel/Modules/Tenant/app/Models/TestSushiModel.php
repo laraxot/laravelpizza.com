@@ -28,21 +28,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
-<<<<<<< .merge_file_sW47xN
- * @method static \Modules\Tenant\Database\Factories\TestSushiModelFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereMetadata($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TestSushiModel whereUpdatedBy($value)
-=======
  * @method static TestSushiModelFactory factory($count = null, $state = [])
  * @method static Builder<static>|TestSushiModel newModelQuery()
  * @method static Builder<static>|TestSushiModel newQuery()
@@ -60,7 +45,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read ProfileContract|null $updater
  *
  * @mixin \Eloquent
->>>>>>> .merge_file_itczHe
  */
 class TestSushiModel extends BaseModel implements HasSushiToJson
 {

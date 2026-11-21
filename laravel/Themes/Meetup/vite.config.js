@@ -12,6 +12,8 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
+                // Pagine pubbliche senza Filament (issue #584): il layout sceglie quale dei due caricare.
+                'resources/css/site.css',
                 'resources/js/app.js',
             ],
             refresh: true,

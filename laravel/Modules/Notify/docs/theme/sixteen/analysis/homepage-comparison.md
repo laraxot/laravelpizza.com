@@ -187,10 +187,7 @@ This document analyzes the HTML structure differences between:
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Build CSS/JS
-<<<<<<< .merge_file_dgugEt
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_KOi4bA
 ```
 
 ---

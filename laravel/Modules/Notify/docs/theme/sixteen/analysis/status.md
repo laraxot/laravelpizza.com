@@ -27,10 +27,7 @@ status: draft
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # ✓ Completato
-<<<<<<< .merge_file_eWXgwE
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_FRMK1U
 ```
 
 ### Output Build

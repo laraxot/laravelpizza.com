@@ -19,13 +19,13 @@ class SponsorsTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'level' => TextColumn::make('level')
+            'name' => TextColumn::make('name')->placeholder('—')->searchable()->sortable(),
+            'level' => TextColumn::make('level')->placeholder('—')
                 ->badge()
                 ->formatStateUsing(static fn (?string $state): string => $state === null ? '' : (string) __('meetup::sponsor_form.fields.level.options.'.$state)),
-            'website' => TextColumn::make('website')->toggleable(),
-            'order' => TextColumn::make('order')->numeric()->sortable(),
-            'events_count' => TextColumn::make('events_count')->counts('events')->sortable(),
+            'website' => TextColumn::make('website')->placeholder('—')->toggleable(),
+            'order' => TextColumn::make('order')->placeholder('—')->numeric()->sortable(),
+            'events_count' => TextColumn::make('events_count')->placeholder('—')->counts('events')->sortable(),
         ];
     }
 

@@ -6,7 +6,6 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
 use Modules\Notify\Models\Traits\MailTemplateVersionRelations;

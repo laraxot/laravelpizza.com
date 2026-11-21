@@ -41,7 +41,9 @@ test('profile has expected fillable fields', function () {
 test('profile casts attributes correctly', function () {
     $profile = Profile::factory()->create();
 
-    expect($profile->id)->toBeInt()
+    // L'id è un UUID (HasUuids): prima il cast 'integer' del modulo User lo riduceva a 1 e i link admin davano 404.
+    expect($profile->id)->toBeString()
+        ->and(Profile::query()->find($profile->id)?->is($profile))->toBeTrue()
         ->and($profile->created_at)->toBeInstanceOf(Carbon::class)
         ->and($profile->updated_at)->toBeInstanceOf(Carbon::class);
 });

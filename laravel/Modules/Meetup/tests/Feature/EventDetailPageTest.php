@@ -56,7 +56,9 @@ test(
             ->assertSee('Vedi sulla mappa')
             ->assertSee('Nessun partecipante confermato per ora')
             // Evento pubblicato senza registration_url: iscrizione sulla piattaforma (FR-9)
-            ->assertSee('Accedi per iscriverti')
+            // FR-9: il visitatore si iscrive qui con email e password
+            ->assertSee('Bastano email e password')
+            ->assertSee('Iscriviti all\'evento')
             ->assertDontSee('Iscrizione online in arrivo')
             ->assertSee('Ci sono ancora molti posti disponibili')
             ->assertDontSee('Undefined variable $pageSlug')

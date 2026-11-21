@@ -64,7 +64,7 @@ class GeoDataValidator
     /**
      * Valida i dati geografici.
      *
-     * @param array<string, mixed> $data Dati da validare
+     * @param  array<string, mixed>  $data  Dati da validare
      */
     public function validate(array $data): bool
     {
@@ -76,8 +76,7 @@ class GeoDataValidator
     /**
      * Ottiene gli errori di validazione.
      *
-     * @param array<string, mixed> $data Dati da validare
-     *
+     * @param  array<string, mixed>  $data  Dati da validare
      * @return array<string, array<int, string>>
      */
     public function getErrors(array $data): array
@@ -93,7 +92,7 @@ class GeoDataValidator
     /**
      * Verifica l'integrità dei dati.
      *
-     * @param array<string, mixed> $data Dati da verificare
+     * @param  array<string, mixed>  $data  Dati da verificare
      */
     public function checkIntegrity(array $data): bool
     {
@@ -121,8 +120,8 @@ class GeoDataValidator
     }
 
     /**
-     * @param array<mixed, mixed> $region
-     * @param list<string>        $regionCodes
+     * @param  array<mixed, mixed>  $region
+     * @param  list<string>  $regionCodes
      *
      * @param-out list<string> $regionCodes
      */
@@ -154,8 +153,8 @@ class GeoDataValidator
     }
 
     /**
-     * @param array<mixed, mixed> $province
-     * @param list<string>        $provinceCodes
+     * @param  array<mixed, mixed>  $province
+     * @param  list<string>  $provinceCodes
      *
      * @param-out list<string> $provinceCodes
      */
@@ -196,8 +195,8 @@ class GeoDataValidator
     }
 
     /**
-     * @param array<mixed, mixed> $city
-     * @param list<string>        $cityCodes
+     * @param  array<mixed, mixed>  $city
+     * @param  list<string>  $cityCodes
      *
      * @param-out list<string> $cityCodes
      */

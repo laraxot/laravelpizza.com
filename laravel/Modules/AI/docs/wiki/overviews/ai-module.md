@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ai module"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module Overview
@@ -23,7 +22,7 @@ status: draft
 | Coverage | [#12](https://github.com/laraxot/module_ai_fila5/issues/12) |
 
 - Testing: [concepts/testing.md](../concepts/testing.md)
-- Hub: [platform-completion-roadmap](../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
+- Hub: [platform-completion-roadmap](../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
 
 ## Summary
 

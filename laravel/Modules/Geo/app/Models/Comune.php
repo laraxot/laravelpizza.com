@@ -132,7 +132,7 @@ class Comune extends BaseModel
     {
         $path = config('geo.comuni_json_path');
 
-        return \is_string($path) && '' !== $path
+        return \is_string($path) && $path !== ''
             ? $path
             : module_path('Geo', 'resources/json/comuni.json');
     }

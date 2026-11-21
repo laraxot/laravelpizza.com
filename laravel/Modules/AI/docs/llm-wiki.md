@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "llm wiki"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module LLM Wiki

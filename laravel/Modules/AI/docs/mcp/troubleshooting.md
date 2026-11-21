@@ -7,14 +7,13 @@ updated: 2026-09-26
 qmd: "troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione dei Problemi dei Server MCP
 
 ## Panoramica
 
-Questa guida fornisce informazioni dettagliate per la risoluzione dei problemi comuni che possono verificarsi durante l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa guida fornisce informazioni dettagliate per la risoluzione dei problemi comuni che possono verificarsi durante l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## ⚠️ ATTENZIONE: PROBLEMI DI MIGRAZIONE DATABASE
 
@@ -50,6 +49,15 @@ Se hai problemi con le migrazioni:
 Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del progetto.
 
 ---
+
+title: "troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "troubleshooting"
+issues: []
+discussions: []
 ## Problemi Comuni e Soluzioni
 
 ### 1. Server MCP non Disponibile
@@ -93,7 +101,7 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
        $result = $mcpService->sequentialThinking()->generateThought(...);
    } catch (\Exception $e) {
        Log::error('Server MCP non disponibile: ' . $e->getMessage());
-       
+
        // Fallback
        $result = [
            'thought' => 'Pensiero generato localmente',
@@ -131,7 +139,7 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
    $maxRetries = 3;
    $retryCount = 0;
    $delay = 1;
-   
+
    while ($retryCount < $maxRetries) {
        try {
            $response = $mcpService->fetch()->get('https://api.example.com/data');
@@ -140,7 +148,7 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
            $retryCount++;
            $delay *= 2; // Backoff esponenziale
            Log::warning("Retry {$retryCount}/{$maxRetries}: " . $e->getMessage());
-           
+
            if ($retryCount < $maxRetries) {
                sleep($delay);
            } else {
@@ -213,7 +221,7 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
        $results = $mcpService->mysql()->executeQuery('SELECT * FROM users');
    } catch (\Exception $e) {
        Log::error('Errore MySQL: ' . $e->getMessage());
-       
+
        // Fallback: utilizza Eloquent
        $results = \App\Models\User::all()->toArray();
    }
@@ -319,30 +327,30 @@ Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del prog
    class MCPRateLimiter
    {
        private RateLimiter $limiter;
-       
+
        public function __construct(RateLimiter $limiter)
        {
            $this->limiter = $limiter;
        }
-       
+
        public function attempt(string $key, int $maxAttempts, \Closure $callback, int $decaySeconds = 60)
        {
            if ($this->limiter->tooManyAttempts($key, $maxAttempts)) {
                $seconds = $this->limiter->availableIn($key);
                throw new \Exception("Troppe richieste. Riprova tra {$seconds} secondi.");
            }
-           
+
            $result = $callback();
-           
+
            $this->limiter->hit($key, $decaySeconds);
-           
+
            return $result;
        }
    }
-   
+
    // Utilizzo
    $rateLimiter = app(MCPRateLimiter::class);
-   
+
    try {
        $result = $rateLimiter->attempt(
            'mcp_sequential_thinking',
@@ -393,7 +401,7 @@ use Illuminate\Http\Client\RequestException;
 class SequentialThinkingServer implements SequentialThinkingServerContract
 {
     // ...
-    
+
     /**
      * {@inheritdoc}
      */
@@ -409,10 +417,10 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
             'totalThoughts' => $totalThoughts,
             'nextThoughtNeeded' => $nextThoughtNeeded
         ]);
-        
+
         try {
             $startTime = microtime(true);
-            
+
             $response = Http::timeout($this->config['timeout'] ?? 30)
                 ->post('http://localhost:3000/api/v1/sequential-thinking', [
                     'thought' => $thought,
@@ -420,24 +428,24 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
                     'totalThoughts' => $totalThoughts,
                     'nextThoughtNeeded' => $nextThoughtNeeded
                 ]);
-            
+
             $duration = microtime(true) - $startTime;
-            
+
             Log::debug('Thought generated', [
                 'duration' => $duration,
                 'status' => $response->status()
             ]);
-            
+
             if ($response->successful()) {
                 return $response->json();
             }
-            
+
             Log::error('Sequential Thinking Server Error', [
                 'status' => $response->status(),
                 'body' => $response->body(),
                 'duration' => $duration
             ]);
-            
+
             return [
                 'thought' => $thought,
                 'thoughtNumber' => $thoughtNumber,
@@ -451,7 +459,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
                 'response' => $e->response?->body(),
                 'status' => $e->response?->status()
             ]);
-            
+
             return [
                 'thought' => $thought,
                 'thoughtNumber' => $thoughtNumber,
@@ -464,7 +472,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
                 'message' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
+
             return [
                 'thought' => $thought,
                 'thoughtNumber' => $thoughtNumber,
@@ -474,7 +482,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
             ];
         }
     }
-    
+
     // ...
 }
 ```
@@ -507,11 +515,11 @@ class MCPTelemetryMiddleware
     public function handle(Request $request, Closure $next): mixed
     {
         $startTime = microtime(true);
-        
+
         $response = $next($request);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         // Registra la telemetria solo per le richieste MCP
         if (strpos($request->path(), 'api/mcp') === 0) {
             Log::channel('telemetry')->info('MCP Request', [
@@ -522,7 +530,7 @@ class MCPTelemetryMiddleware
                 'server' => $request->route('server') ?? 'unknown'
             ]);
         }
-        
+
         return $response;
     }
 }
@@ -554,7 +562,7 @@ class MCPHealthController extends Controller
         private readonly MCPServiceContract $mcpService
     ) {
     }
-    
+
     /**
      * Verifica lo stato di tutti i server MCP.
      *
@@ -574,13 +582,13 @@ class MCPHealthController extends Controller
             'puppeteer' => 'http://localhost:3006/api/v1/health',
             'mysql' => 'http://localhost:3007/api/v1/health'
         ];
-        
+
         $results = [];
-        
+
         foreach ($servers as $name => $url) {
             try {
                 $response = Http::timeout(5)->get($url);
-                
+
                 $results[$name] = [
                     'status' => $response->successful() ? 'up' : 'down',
                     'code' => $response->status(),
@@ -594,9 +602,9 @@ class MCPHealthController extends Controller
                 ];
             }
         }
-        
+
         $allUp = count(array_filter($results, fn($r) => $r['status'] === 'up')) === count($servers);
-        
+
         return response()->json([
             'status' => $allUp ? 'healthy' : 'degraded',
             'timestamp' => now()->toIso8601String(),
@@ -649,38 +657,38 @@ class CheckMCPServersCommand extends Command
             'puppeteer' => 'http://localhost:3006/api/v1/health',
             'mysql' => 'http://localhost:3007/api/v1/health'
         ];
-        
+
         $results = [];
         $hasErrors = false;
-        
+
         foreach ($servers as $name => $url) {
             $this->output->write("Checking {$name}... ");
-            
+
             try {
                 $response = Http::timeout(5)->get($url);
-                
+
                 if ($response->successful()) {
                     $this->output->writeln('<info>OK</info>');
-                    
+
                     $results[$name] = [
                         'status' => 'up',
                         'code' => $response->status(),
                         'message' => 'OK'
                     ];
-                    
+
                     if ($this->option('detailed')) {
                         $this->output->writeln("  Response: " . $response->body());
                     }
                 } else {
                     $this->output->writeln('<error>FAIL</error>');
                     $hasErrors = true;
-                    
+
                     $results[$name] = [
                         'status' => 'down',
                         'code' => $response->status(),
                         'message' => $response->body()
                     ];
-                    
+
                     if ($this->option('detailed')) {
                         $this->output->writeln("  Error: " . $response->body());
                     }
@@ -688,21 +696,21 @@ class CheckMCPServersCommand extends Command
             } catch (\Exception $e) {
                 $this->output->writeln('<error>ERROR</error>');
                 $hasErrors = true;
-                
+
                 $results[$name] = [
                     'status' => 'down',
                     'code' => 500,
                     'message' => $e->getMessage()
                 ];
-                
+
                 if ($this->option('detailed')) {
                     $this->output->writeln("  Exception: " . $e->getMessage());
                 }
             }
         }
-        
+
         $this->newLine();
-        
+
         $tableData = [];
         foreach ($results as $name => $result) {
             $tableData[] = [
@@ -712,9 +720,9 @@ class CheckMCPServersCommand extends Command
                 $result['message']
             ];
         }
-        
+
         $this->table(['Server', 'Status', 'Code', 'Message'], $tableData);
-        
+
         return $hasErrors ? 1 : 0;
     }
 }

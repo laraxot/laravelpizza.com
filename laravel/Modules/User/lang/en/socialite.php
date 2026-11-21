@@ -3,6 +3,13 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Social login',
+        'plural_label' => 'Social login',
+        'group' => 'Authentication',
+        'icon' => 'heroicon-o-share',
+        'sort' => 90,
+    ],
     'actions' => [
         'save' => 'Save',
     ],

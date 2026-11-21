@@ -10,8 +10,8 @@ use Modules\User\Filament\Actions\Header\AttachRoleAction;
 use Modules\User\Filament\Resources\UserResource\Actions\VerifyEmailAction;
 use Modules\User\Filament\Resources\UserResource\Tables\UsersTable;
 use Modules\User\Models\Role;
-use PHPUnit\Framework\Assert;
 use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Safe\file_get_contents;
 

@@ -80,7 +80,6 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     use HasFactory;
 
     use HasSlug;
-
     use HasTranslations;
 
     /** @var list<string> */

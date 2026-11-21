@@ -7,15 +7,13 @@ updated: 2026-09-26
 qmd: "07 best practices"
 issues: []
 discussions: []
-status: superseded
-superseded_by: best-practices.md
 ---
 
 # Best Practices per l'Utilizzo dei Server MCP
 
 ## Panoramica
 
-Questa guida fornisce le migliori pratiche per l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa guida fornisce le migliori pratiche per l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## ⚠️ SICUREZZA DEL DATABASE
 
@@ -47,6 +45,15 @@ Se hai eseguito accidentalmente un comando di migrazione pericoloso:
 Per ulteriori dettagli, vedi il file `AVVISO_MIGRAZIONI.mdc` nella root del progetto.
 
 ---
+
+title: "07 best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "07 best practices"
+issues: []
+discussions: []
 ## Principi Generali
 
 ### 1. Struttura Modulare
@@ -136,7 +143,7 @@ try {
         'message' => $e->getMessage(),
         'trace' => $e->getTraceAsString()
     ]);
-    
+
     // Fallback
     $result = $this->generateLocalThought(...);
 }
@@ -179,16 +186,16 @@ public function test_analyze_post_content_action()
     $mcpService = $this->mock(MCPServiceContract::class);
     $sequentialThinkingServer = $this->mock(SequentialThinkingServerContract::class);
     $memoryServer = $this->mock(MemoryServerContract::class);
-    
+
     // Configurazione dei mock
     $mcpService->shouldReceive('sequentialThinking')
         ->once()
         ->andReturn($sequentialThinkingServer);
-    
+
     $mcpService->shouldReceive('memory')
         ->once()
         ->andReturn($memoryServer);
-    
+
     $sequentialThinkingServer->shouldReceive('analyze')
         ->once()
         ->with('Test content', ['readability', 'seo', 'sentiment', 'keywords'])
@@ -198,20 +205,20 @@ public function test_analyze_post_content_action()
             'sentiment' => ['value' => 'positive'],
             'keywords' => ['test', 'content']
         ]);
-    
+
     $memoryServer->shouldReceive('store')
         ->once()
         ->andReturn(true);
-    
+
     // Creazione del post di test
     $post = Post::factory()->create([
         'content' => 'Test content'
     ]);
-    
+
     // Esecuzione dell'action
     $action = new AnalyzePostContentAction($mcpService);
     $result = $action->execute($post);
-    
+
     // Asserzioni
     $this->assertEquals(85, $result->readabilityScore);
     $this->assertEquals(78, $result->seoScore);
@@ -236,12 +243,12 @@ public function analyze(Request $request): JsonResponse
         'aspects' => 'required|array|min:1',
         'aspects.*' => 'string|in:readability,seo,sentiment,keywords'
     ]);
-    
+
     $result = $this->mcpService->sequentialThinking()->analyze(
         $validated['text'],
         $validated['aspects']
     );
-    
+
     return response()->json([
         'success' => true,
         'data' => $result
@@ -363,12 +370,12 @@ class MCPService implements MCPServiceContract
      * @var array<string, mixed>
      */
     private array $config;
-    
+
     /**
      * @var array<string, object>
      */
     private array $instances = [];
-    
+
     /**
      * @param array<string, mixed> $config
      */
@@ -377,7 +384,7 @@ class MCPService implements MCPServiceContract
         $this->config = $config;
         Log::debug('MCPService initialized', ['servers' => array_keys($config)]);
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -389,10 +396,10 @@ class MCPService implements MCPServiceContract
             );
             Log::debug('SequentialThinkingServer initialized');
         }
-        
+
         return $this->instances['sequential-thinking'];
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -404,10 +411,10 @@ class MCPService implements MCPServiceContract
             );
             Log::debug('MemoryServer initialized');
         }
-        
+
         return $this->instances['memory'];
     }
-    
+
     // Altri metodi per gli altri server...
 }
 ```
@@ -438,7 +445,7 @@ class ContentAnalysisData extends Data
         public readonly array $keywords
     ) {
     }
-    
+
     /**
      * Crea un'istanza da un array di analisi.
      *
@@ -493,21 +500,21 @@ class AnalyzePostContentAction
     public function execute(Post $post): ContentAnalysisData
     {
         $cacheKey = "post_analysis_{$post->id}";
-        
+
         // Verifica se l'analisi è già in cache
         $cachedAnalysis = Cache::get($cacheKey);
         if ($cachedAnalysis !== null) {
             Log::info('Using cached analysis', ['post_id' => $post->id]);
             return ContentAnalysisData::from($cachedAnalysis);
         }
-        
+
         try {
             Log::info('Analyzing post content', [
                 'post_id' => $post->id,
                 'title' => $post->title,
                 'content_length' => strlen($post->content)
             ]);
-            
+
             $analysis = $this->mcpService->sequentialThinking()->analyze(
                 $post->content,
                 [
@@ -517,22 +524,22 @@ class AnalyzePostContentAction
                     'keywords'
                 ]
             );
-            
+
             // Memorizza l'analisi per riferimento futuro
             $this->mcpService->memory()->store(
                 "post_analysis_{$post->id}",
                 $analysis
             );
-            
+
             // Memorizza l'analisi in cache
             Cache::put($cacheKey, $analysis, now()->addDay());
-            
+
             Log::info('Post analysis completed', [
                 'post_id' => $post->id,
                 'readability_score' => $analysis['readability']['score'] ?? 0,
                 'seo_score' => $analysis['seo']['score'] ?? 0
             ]);
-            
+
             return ContentAnalysisData::fromAnalysis($analysis);
         } catch (\Exception $e) {
             Log::error('Error analyzing post content', [
@@ -540,7 +547,7 @@ class AnalyzePostContentAction
                 'message' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
+
             // Fallback: analisi locale semplice
             return new ContentAnalysisData(
                 readabilityScore: $this->calculateReadabilityScore($post->content),
@@ -550,7 +557,7 @@ class AnalyzePostContentAction
             );
         }
     }
-    
+
     /**
      * Calcola un punteggio di leggibilità semplice.
      *
@@ -563,7 +570,7 @@ class AnalyzePostContentAction
         // Implementazione semplice...
         return 70;
     }
-    
+
     /**
      * Calcola un punteggio SEO semplice.
      *
@@ -577,7 +584,7 @@ class AnalyzePostContentAction
         // Implementazione semplice...
         return 65;
     }
-    
+
     /**
      * Analizza il sentimento del testo.
      *
@@ -590,7 +597,7 @@ class AnalyzePostContentAction
         // Implementazione semplice...
         return 'neutral';
     }
-    
+
     /**
      * Estrae le parole chiave dal testo.
      *
@@ -608,6 +615,6 @@ class AnalyzePostContentAction
 
 ## Conclusione
 
-Seguendo queste best practices, è possibile creare integrazioni robuste e manutenibili con i server MCP nei progetti Laravel. Queste pratiche garantiscono che il codice sia tipizzato, testabile e conforme alle regole di sviluppo stabilite per i progetti base_predict_fila5_mono.
+Seguendo queste best practices, è possibile creare integrazioni robuste e manutenibili con i server MCP nei progetti Laravel. Queste pratiche garantiscono che il codice sia tipizzato, testabile e conforme alle regole di sviluppo stabilite per i progetti base_predict_fila5.
 
 Per ulteriori informazioni e supporto, consultare la documentazione ufficiale dei server MCP o contattare il team di sviluppo.

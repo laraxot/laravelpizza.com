@@ -19,13 +19,13 @@ class PerformersTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'type' => TextColumn::make('type')
+            'name' => TextColumn::make('name')->placeholder('—')->searchable()->sortable(),
+            'type' => TextColumn::make('type')->placeholder('—')
                 ->badge()
                 ->formatStateUsing(static fn (?string $state): string => $state === null ? '' : (string) __('meetup::performer_form.fields.type.options.'.$state)),
-            'company' => TextColumn::make('company')->searchable()->toggleable(),
-            'email' => TextColumn::make('email')->searchable()->toggleable(),
-            'events_count' => TextColumn::make('events_count')->counts('events')->sortable(),
+            'company' => TextColumn::make('company')->placeholder('—')->searchable()->toggleable(),
+            'email' => TextColumn::make('email')->placeholder('—')->searchable()->toggleable(),
+            'events_count' => TextColumn::make('events_count')->placeholder('—')->counts('events')->sortable(),
         ];
     }
 

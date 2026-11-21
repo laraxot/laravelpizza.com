@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan remediation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Remediation Plan – 2025-12-23

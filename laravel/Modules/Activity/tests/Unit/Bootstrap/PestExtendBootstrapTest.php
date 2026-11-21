@@ -11,7 +11,7 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\file_get_contents;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 /*
  * Il bootstrap Pest del modulo non lega cartelle a TestCase: ogni file
@@ -21,9 +21,9 @@ uses(\Modules\Activity\Tests\TestCase::class);
  */
 
 test('activity models declare activity connection without database', function (): void {
-    Assert::assertSame('activity', (new Activity())->getConnectionName());
-    Assert::assertSame('activity', (new Snapshot())->getConnectionName());
-    Assert::assertSame('activity', (new StoredEvent())->getConnectionName());
+    Assert::assertSame('activity', (new Activity)->getConnectionName());
+    Assert::assertSame('activity', (new Snapshot)->getConnectionName());
+    Assert::assertSame('activity', (new StoredEvent)->getConnectionName());
 });
 
 test('pest bootstrap binds no folder and requires no stub file', function (): void {

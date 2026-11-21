@@ -5,21 +5,12 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 // --- traits ---
 // use Laravel\Scout\Searchable;
-<<<<<<< .merge_file_nMh06h
-=======
-use Illuminate\Support\Str;
 use Modules\Lang\Models\Traits\PostMutators;
 use Modules\Lang\Models\Traits\PostRelations;
-<<<<<<< .merge_file_qSpGp0
-=======
->>>>>>> .merge_file_mZHXKu
->>>>>>> .merge_file_V78D33
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -27,48 +18,48 @@ use Spatie\Sluggable\SlugOptions;
 /**
  * Colonne allineate a `2026_01_21_211814_create_posts_table`.
  *
- * @property string                     $id
- * @property int|null                   $user_id
- * @property string|int|null            $post_id
- * @property string|null                $lang
- * @property string|null                $guid
- * @property string|null                $title
- * @property string|null                $subtitle
- * @property string|null                $post_type
- * @property string|null                $txt
- * @property string|null                $content
- * @property string|null                $excerpt
- * @property string|null                $slug
- * @property string|null                $status
- * @property Carbon|null                $published_at
- * @property string|null                $locale
- * @property string|null                $category
- * @property string|null                $image_src
- * @property string|null                $image_alt
- * @property string|null                $image_title
- * @property string|null                $meta_title
- * @property string|null                $meta_description
- * @property string|null                $meta_keywords
- * @property int|null                   $author_id
- * @property string|null                $url
+ * @property string $id
+ * @property int|null $user_id
+ * @property string|int|null $post_id
+ * @property string|null $lang
+ * @property string|null $guid
+ * @property string|null $title
+ * @property string|null $subtitle
+ * @property string|null $post_type
+ * @property string|null $txt
+ * @property string|null $content
+ * @property string|null $excerpt
+ * @property string|null $slug
+ * @property string|null $status
+ * @property Carbon|null $published_at
+ * @property string|null $locale
+ * @property string|null $category
+ * @property string|null $image_src
+ * @property string|null $image_alt
+ * @property string|null $image_title
+ * @property string|null $meta_title
+ * @property string|null $meta_description
+ * @property string|null $meta_keywords
+ * @property int|null $author_id
+ * @property string|null $url
  * @property array<string, string>|null $url_lang
- * @property string|null                $image_resize_src
- * @property Carbon|null                $created_at
- * @property Carbon|null                $updated_at
- * @property int|null                   $category_id
- * @property string|null                $image
- * @property int|null                   $published
- * @property string|null                $created_by
- * @property string|null                $updated_by
- * @property string|null                $linked_count
- * @property string|null                $related_count
- * @property string|null                $relatedrev_count
- * @property string|null                $linkable_type
- * @property int|null                   $views_count
- * @property ProfileContract|null       $creator
- * @property ProfileContract|null       $deleter
- * @property Model|null                 $linkable
- * @property ProfileContract|null       $updater
+ * @property string|null $image_resize_src
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property int|null $category_id
+ * @property string|null $image
+ * @property int|null $published
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $linked_count
+ * @property string|null $related_count
+ * @property string|null $relatedrev_count
+ * @property string|null $linkable_type
+ * @property int|null $views_count
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $deleter
+ * @property Model|null $linkable
+ * @property ProfileContract|null $updater
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Post newQuery()
@@ -219,57 +210,6 @@ class Post extends BaseModel
     // end function
     // -------------- MUTATORS ------------------
 
-<<<<<<< .merge_file_qSpGp0
-=======
-<<<<<<< .merge_file_nMh06h
-    public function setTitleAttribute(string $value): void
-    {
-        $this->attributes['title'] = $value;
-        $this->attributes['guid'] = Str::slug($value);
-    }
-
-    public function getTitleAttribute(?string $value): ?string
-    {
-        if ($value !== null) {
-            return $value;
-        }
-
-        $postType = is_string($this->attributes['post_type'] ?? null) ? $this->attributes['post_type'] : '';
-        $postId = is_scalar($this->attributes['post_id'] ?? null) ? $this->attributes['post_id'] : '';
-        $value = $postType.' '.$postId;
-        $this->title = $value;
-
-        if ($this->getKey() !== null) {
-            $this->update(['title' => $value]);
-        }
-
-        return $value;
-    }
-
-    public function getGuidAttribute(?string $value): ?string
-    {
-        if (is_string($value) && $value !== '' && ! str_contains($value, ' ')) {
-            return $value;
-        }
-
-        $value = Str::slug($this->title ?? '');
-        $this->guid = $value;
-
-        if ($this->getKey() !== null) {
-            $this->update(['guid' => $value]);
-        }
-
-        return $value;
-    }
-
-    public function getTxtAttribute(?string $value): ?string
-    {
-        return $value ?? '';
-    }
-
-=======
->>>>>>> .merge_file_mZHXKu
->>>>>>> .merge_file_V78D33
     /**
      * @return array<string, mixed>
      */

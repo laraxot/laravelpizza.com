@@ -14,7 +14,6 @@ use Modules\Cms\Datas\BlockData;
 use Modules\Xot\Datas\XotData;
 
 use function Safe\preg_match;
-use function Safe\preg_replace_callback;
 
 /**
  * Trait for Models that have blocks.

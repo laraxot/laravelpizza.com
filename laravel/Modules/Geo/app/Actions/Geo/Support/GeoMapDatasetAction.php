@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Actions\Geo\Support;
 
-use function Safe\file_get_contents;
-
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\file_get_contents;
 
 /**
  * @phpstan-type GeoProperties array<string, scalar|null>
@@ -34,8 +34,7 @@ final class GeoMapDatasetAction
 
     public function __construct(
         private readonly string $path,
-    ) {
-    }
+    ) {}
 
     /**
      * @return GeoDataset
@@ -62,7 +61,7 @@ final class GeoMapDatasetAction
 
             $category = $feature['properties']['p'] ?? $feature['properties']['category'] ?? null;
 
-            if (is_string($category) && '' !== $category) {
+            if (is_string($category) && $category !== '') {
                 $categories[] = $category;
             }
         }
@@ -84,12 +83,12 @@ final class GeoMapDatasetAction
         foreach ($this->getFeatures() as $feature) {
             $geometryType = $feature['geometry']['type'];
 
-            if ('Point' === $geometryType) {
-                ++$points;
+            if ($geometryType === 'Point') {
+                $points++;
             }
 
-            if ('Polygon' === $geometryType || 'MultiPolygon' === $geometryType) {
-                ++$zones;
+            if ($geometryType === 'Polygon' || $geometryType === 'MultiPolygon') {
+                $zones++;
             }
         }
 
@@ -106,7 +105,7 @@ final class GeoMapDatasetAction
      */
     private function getFeatures(): array
     {
-        if (null !== $this->features) {
+        if ($this->features !== null) {
             return $this->features;
         }
 
@@ -132,8 +131,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $decoded
-     *
+     * @param  array<array-key, mixed>  $decoded
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -141,7 +139,7 @@ final class GeoMapDatasetAction
         $type = $decoded['type'] ?? null;
         $features = $decoded['features'] ?? null;
 
-        if ('FeatureCollection' !== $type || ! is_array($features)) {
+        if ($type !== 'FeatureCollection' || ! is_array($features)) {
             throw new \RuntimeException('GeoMapWidget dataset is not a valid FeatureCollection.');
         }
 
@@ -154,7 +152,7 @@ final class GeoMapDatasetAction
 
             $normalizedFeature = $this->normalizeFeature($feature);
 
-            if (null !== $normalizedFeature) {
+            if ($normalizedFeature !== null) {
                 $normalized[] = $normalizedFeature;
             }
         }
@@ -163,8 +161,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $feature
-     *
+     * @param  array<array-key, mixed>  $feature
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -186,7 +183,7 @@ final class GeoMapDatasetAction
 
         $normalizedProperties = $this->normalizeProperties($properties);
 
-        if (null === $normalizedProperties) {
+        if ($normalizedProperties === null) {
             return null;
         }
 
@@ -201,8 +198,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $properties
-     *
+     * @param  array<array-key, mixed>  $properties
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array
@@ -210,7 +206,7 @@ final class GeoMapDatasetAction
         $normalized = [];
 
         foreach ($properties as $key => $value) {
-            if (! is_string($key) || (! is_scalar($value) && null !== $value)) {
+            if (! is_string($key) || (! is_scalar($value) && $value !== null)) {
                 return null;
             }
 

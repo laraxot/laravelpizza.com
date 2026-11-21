@@ -16,14 +16,14 @@ related:
   - ./livewire-widget-epics.md
   - ./livewire-widget-prd.md
   - ../../Xot/docs/bmad/livewire-widget-project-context.md
-  - ../../../Cms/docs/bmad/livewire-inventory.md
+  - ../../Cms/docs/bmad/livewire-inventory.md
 ---
 
 # Inventario: Livewire HTTP → Filament — modulo AI
 
 **Solo documentazione. Nessun PHP toccato in questo audit.**
 
-Questo file è la SSoT del modulo AI per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../../Cms/docs/bmad/livewire-inventory.md), con la differenza che qui non esiste nemmeno una classe da classificare: il risultato verificato è **zero componenti Livewire**.
+Questo file è la SSoT del modulo AI per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](livewire-inventory.md), con la differenza che qui non esiste nemmeno una classe da classificare: il risultato verificato è **zero componenti Livewire**.
 
 ## Metodo (codice, non assunzione)
 

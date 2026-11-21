@@ -58,13 +58,10 @@ qmd: "activity module - roadmap & optimization activity"
 ## 🔗 Collegamenti
 
 - [← Activity Module README](../README.md)
-<<<<<<< .merge_file_82TL3g
 - [← Activity Module README](../readme.md)
 - [← Root Documentation](../../../docs/index.md)
-=======
 - [← Activity Module README](../README.md)
 - [← Root Documentation](../../../../docs/index.md)
->>>>>>> .merge_file_FpN415
 
 ---
 

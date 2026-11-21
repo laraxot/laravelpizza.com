@@ -15,6 +15,7 @@ return [
         'spots_left' => '{0} No spots left|{1} :count spot left|[2,*] :count spots left',
     ],
     'messages' => [
+        'registered_new_account' => 'Account created and registration confirmed! We sent you a summary and a link to verify your email.',
         'registered' => 'You are in! We sent you a confirmation email.',
         'unregistered' => 'Your registration has been cancelled.',
         'full' => 'Sorry, this event is full.',
@@ -22,6 +23,20 @@ return [
         'not_registered' => 'You are not registered for this event.',
         'started' => 'This event has already started: registrations are closed.',
         'closed' => 'Registrations for this event are not open.',
+    ],
+    'signup' => [
+        'intro' => 'Just an email and a password: if you don\'t have an account, we create it now.',
+        'email' => 'Email',
+        'password' => 'Password',
+        'password_hint' => 'For a new account: at least :min characters, with upper and lower case letters, a number and a symbol.',
+        'consents' => 'I accept the :privacy and the :terms.',
+        'privacy' => 'privacy policy',
+        'terms' => 'terms of service',
+        'consents_required' => 'To create the account you must accept the privacy policy and the terms.',
+        'email_taken' => 'This email already has an account and the password does not match. Try again or log in.',
+        'have_account' => 'Already have an account?',
+        'login' => 'Log in',
+        'throttle' => 'Too many attempts. Try again in :seconds seconds.',
     ],
     'mail' => [
         'subject' => 'Registration confirmed: :title',

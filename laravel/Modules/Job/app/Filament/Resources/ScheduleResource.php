@@ -85,14 +85,15 @@ class ScheduleResource extends XotBaseResource
                         $set('options_with_value', $options_with_value);
                     }),
                 Repeater::make('params')
+                    ->defaultItems(0)
                     ->schema([
                         Hidden::make('name'),
                         TextInput::make('value')
                             ->label(function (Get $get): string {
                                 $name = $get('name');
-                                Assert::string($name);
 
-                                return $name;
+                                // Un elemento ancora vuoto (prima di scegliere il comando) non ha nome: etichetta vuota, non un errore 500.
+                                return is_string($name) ? $name : '';
                             })
                             ->required(function (Get $get): bool {
                                 $required = $get('required');
@@ -104,15 +105,16 @@ class ScheduleResource extends XotBaseResource
                     ->deletable(false)
                     ->reorderable(false),
                 Repeater::make('options_with_value')
+                    ->defaultItems(0)
                     ->schema([
                         Hidden::make('name'),
                         Hidden::make('type')->default('string'),
                         TextInput::make('value')
                             ->label(function (Get $get): string {
                                 $name = $get('name');
-                                Assert::string($name);
 
-                                return $name;
+                                // Un elemento ancora vuoto (prima di scegliere il comando) non ha nome: etichetta vuota, non un errore 500.
+                                return is_string($name) ? $name : '';
                             })
                             ->required(function (Get $get): bool {
                                 $required = $get('required');

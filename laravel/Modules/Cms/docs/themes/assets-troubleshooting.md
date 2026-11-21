@@ -69,10 +69,7 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 
 3. **Ambiente di Sviluppo**
    - In sviluppo: utilizzare `npm run dev`
-<<<<<<< .merge_file_vleQnk
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
    - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
->>>>>>> .merge_file_5Zq2H6
 
 Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

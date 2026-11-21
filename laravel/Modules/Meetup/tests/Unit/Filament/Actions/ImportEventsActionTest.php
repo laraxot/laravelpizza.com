@@ -6,7 +6,6 @@ namespace Modules\Meetup\Tests\Unit\Filament\Actions;
 
 use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Filament\Actions\ImportEventsAction;
-use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 
 uses(TestCase::class);
@@ -26,14 +25,12 @@ test('it has the correct configuration', function () {
         ->and($action->isConfirmationRequired())->toBeTrue();
 });
 
-test('it has a badge showing event count', function () {
-    $initialCount = Event::query()->count();
-    Event::factory()->count(3)->create();
-
+test('it has no badge and is shown only in the local environment', function () {
+    // Importa eventi DI ESEMPIO: in produzione non deve comparire, e il conteggio eventi sul pulsante confondeva.
     $action = ImportEventsAction::make();
 
-    // Filament restituisce il badge come stringa: conta il valore.
-    expect((int) $action->getBadge())->toBe($initialCount + 3);
+    expect($action->getBadge())->toBeNull()
+        ->and($action->isVisible())->toBe(app()->environment('local'));
 });
 
 test('it executes the import action and sends notification', function () {

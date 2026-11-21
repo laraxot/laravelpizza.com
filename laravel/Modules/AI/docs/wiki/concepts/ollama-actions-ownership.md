@@ -15,7 +15,6 @@ related:
   - ../../../../../../docs/wiki/rules/domain-actions-belong-to-domain-module.md
   - ../../../../../../docs/wiki/concepts/xot-is-framework-base-not-domain-owner.md
   - ../../../../../../docs/wiki/skills/xot-is-framework-base.md
-status: draft
 ---
 
 # Ollama Actions — vivono in AI, non in Xot

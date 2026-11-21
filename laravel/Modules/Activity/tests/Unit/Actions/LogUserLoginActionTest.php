@@ -8,7 +8,7 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('LogUserLoginAction can be instantiated', function () {
     $user = UserFactory::new()->createOne();

@@ -95,7 +95,7 @@ abstract class TestCase extends XotBaseTestCase
      */
     public static function makeListLogActivitiesPage(): ListLogActivities
     {
-        return new class() extends ListLogActivities
+        return new class extends ListLogActivities
         {
             public static function getResource(): string
             {

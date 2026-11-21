@@ -433,7 +433,24 @@ class MetatagData extends Data implements Wireable
      */
     public function getFilamentColors(): array
     {
-        return app(PaDesignColorsAction::class)->filamentPalette();
+        $palette = app(PaDesignColorsAction::class)->filamentPalette();
+
+        // Un progetto con un proprio marchio può cambiare il colore primario dei pannelli senza toccare la palette PA:
+        // config/local/<tenant>/metatag.php => 'filament_primary' => 'red' (palette Tailwind, consigliata: tonalità
+        // calibrate per il contrasto dei pulsanti) oppure un esadecimale '#dc2626'.
+        $primary = config('metatag.filament_primary');
+        if (\is_string($primary) && $primary !== '') {
+            $constant = Color::class.'::'.ucfirst(strtolower($primary));
+            if (\defined($constant)) {
+                /** @var array<int, string> $shades */
+                $shades = \constant($constant);
+                $palette['primary'] = $shades;
+            } elseif (\Safe\preg_match('/^#[0-9a-fA-F]{6}$/', $primary) === 1) {
+                $palette['primary'] = Color::hex($primary);
+            }
+        }
+
+        return $palette;
     }
 
     /**

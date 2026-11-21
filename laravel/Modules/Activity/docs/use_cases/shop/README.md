@@ -31,13 +31,11 @@ Core module for the FixCity Platform.
 
 ## Documentazione
 
-<<<<<<< .merge_file_BA6pKm
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
 | 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
-=======
 ## Best Practice
 - Eventi immutabili e atomici
 - Aggregate root come unico punto di logica di dominio
@@ -79,7 +77,6 @@ Core module for the FixCity Platform.
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
 | 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](../..) |
->>>>>>> .merge_file_lVYvUq
 
 ---
 

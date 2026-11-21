@@ -20,7 +20,10 @@ docs/workbench
 .kilocode
 .kiro
 .ralph
-scripts
+/scripts/*
+# Gli script npm del tema (postbuild, audit) sono sorgente: vanno in git, altrimenti la CI non trova clean-stale-assets.mjs
+!/scripts/*.mjs
+!/scripts/*.cjs
 test-results
 tests/.claude-audit
 # Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)

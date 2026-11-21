@@ -7,15 +7,13 @@ updated: 2026-09-26
 qmd: "09 sicurezza"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sicurezza.md
 ---
 
 # Sicurezza dei Server MCP
 
 ## Panoramica
 
-Questa guida fornisce le migliori pratiche di sicurezza per l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5_mono.
+Questa guida fornisce le migliori pratiche di sicurezza per l'utilizzo dei server MCP (Model Context Protocol) in progetti Laravel, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
 
 ## Gestione delle Credenziali
 
@@ -101,7 +99,7 @@ class SequentialThinkingController extends Controller
         private readonly MCPServiceContract $mcpService
     ) {
     }
-    
+
     /**
      * Analizza un testo utilizzando il server MCP sequential-thinking.
      *
@@ -116,12 +114,12 @@ class SequentialThinkingController extends Controller
             'aspects' => 'required|array|min:1',
             'aspects.*' => 'string|in:readability,seo,sentiment,keywords'
         ]);
-        
+
         $result = $this->mcpService->sequentialThinking()->analyze(
             $validated['text'],
             $validated['aspects']
         );
-        
+
         return response()->json([
             'success' => true,
             'data' => $result
@@ -174,20 +172,20 @@ class AnalyzePostContentAction
                 'keywords'
             ]
         );
-        
+
         // Sanitizzazione dell'output
-        $readabilityScore = isset($analysis['readability']['score']) ? 
+        $readabilityScore = isset($analysis['readability']['score']) ?
             max(0, min(100, (int) $analysis['readability']['score'])) : 0;
-        
-        $seoScore = isset($analysis['seo']['score']) ? 
+
+        $seoScore = isset($analysis['seo']['score']) ?
             max(0, min(100, (int) $analysis['seo']['score'])) : 0;
-        
-        $sentiment = isset($analysis['sentiment']['value']) ? 
+
+        $sentiment = isset($analysis['sentiment']['value']) ?
             Str::lower(trim($analysis['sentiment']['value'])) : 'neutral';
-        
-        $keywords = isset($analysis['keywords']) && is_array($analysis['keywords']) ? 
+
+        $keywords = isset($analysis['keywords']) && is_array($analysis['keywords']) ?
             array_map(fn($k) => Str::lower(trim($k)), $analysis['keywords']) : [];
-        
+
         return new ContentAnalysisData(
             readabilityScore: $readabilityScore,
             seoScore: $seoScore,
@@ -244,7 +242,7 @@ class MCPServicePolicy
         // Verifica se l'utente ha il ruolo o il permesso necessario
         return $user->hasRole('admin') || $user->hasPermission('use-mcp-services');
     }
-    
+
     /**
      * Determina se l'utente può utilizzare il server sequential-thinking.
      *
@@ -256,7 +254,7 @@ class MCPServicePolicy
     {
         return $user->hasRole('admin') || $user->hasPermission('use-sequential-thinking');
     }
-    
+
     // Altri metodi per gli altri server...
 }
 ```
@@ -353,7 +351,7 @@ use Illuminate\Support\Facades\Log;
 class SequentialThinkingServer implements SequentialThinkingServerContract
 {
     // ...
-    
+
     /**
      * {@inheritdoc}
      */
@@ -369,7 +367,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
             'thought_number' => $thoughtNumber,
             'total_thoughts' => $totalThoughts
         ]);
-        
+
         try {
             $response = Http::timeout($this->config['timeout'] ?? 30)
                 ->post('http://localhost:3000/api/v1/sequential-thinking', [
@@ -378,24 +376,24 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
                     'totalThoughts' => $totalThoughts,
                     'nextThoughtNeeded' => $nextThoughtNeeded
                 ]);
-            
+
             if ($response->successful()) {
                 Log::info('Thought generated successfully', [
                     'server' => 'sequential-thinking',
                     'user_id' => auth()->id(),
                     'thought_number' => $thoughtNumber
                 ]);
-                
+
                 return $response->json();
             }
-            
+
             Log::error('Sequential Thinking Server Error', [
                 'server' => 'sequential-thinking',
                 'user_id' => auth()->id(),
                 'status' => $response->status(),
                 'body' => $response->body()
             ]);
-            
+
             return [
                 'thought' => $thought,
                 'thoughtNumber' => $thoughtNumber,
@@ -410,7 +408,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
                 'message' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
+
             return [
                 'thought' => $thought,
                 'thoughtNumber' => $thoughtNumber,
@@ -420,7 +418,7 @@ class SequentialThinkingServer implements SequentialThinkingServerContract
             ];
         }
     }
-    
+
     // ...
 }
 ```
@@ -453,11 +451,11 @@ class MCPMonitoringMiddleware
     public function handle(Request $request, Closure $next): mixed
     {
         $startTime = microtime(true);
-        
+
         $response = $next($request);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         // Registra le metriche di prestazione
         Log::channel('performance')->info('MCP Request', [
             'path' => $request->path(),
@@ -467,7 +465,7 @@ class MCPMonitoringMiddleware
             'user_id' => auth()->id(),
             'server' => $request->route('server') ?? 'unknown'
         ]);
-        
+
         return $response;
     }
 }
@@ -508,11 +506,11 @@ $validated = $request->validate([
             if (preg_match('/\b(?:\d[ -]*?){13,16}\b/', $value)) {
                 $fail('Il testo non deve contenere numeri di carte di credito.');
             }
-            
+
             if (preg_match('/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/', $value)) {
                 $fail('Il testo non deve contenere indirizzi email.');
             }
-            
+
             if (preg_match('/\b(?:\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/', $value)) {
                 $fail('Il testo non deve contenere numeri di telefono.');
             }
@@ -579,6 +577,6 @@ protected $middlewareAliases = [
 
 ## Conclusione
 
-Questa guida ha fornito le migliori pratiche di sicurezza per l'utilizzo dei server MCP in progetti Laravel. Seguendo queste linee guida, è possibile garantire che le integrazioni con i server MCP siano sicure e conformi alle regole di sviluppo stabilite per i progetti base_predict_fila5_mono.
+Questa guida ha fornito le migliori pratiche di sicurezza per l'utilizzo dei server MCP in progetti Laravel. Seguendo queste linee guida, è possibile garantire che le integrazioni con i server MCP siano sicure e conformi alle regole di sviluppo stabilite per i progetti base_predict_fila5.
 
 Per ulteriori informazioni e supporto, consultare la documentazione ufficiale dei server MCP o contattare il team di sviluppo.

@@ -13,7 +13,7 @@ class EventStartDateFilter extends Filter
     public static function make(?string $name = 'start_date'): static
     {
         return parent::make($name)
-            ->schema([
+            ->form([
                 DatePicker::make('from'),
                 DatePicker::make('until'),
             ])

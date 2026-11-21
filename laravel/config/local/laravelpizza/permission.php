@@ -3,6 +3,7 @@
 declare(strict_types=1);
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
+use Modules\User\Models\Team;
 
 return [
     'models' => [
@@ -27,6 +28,12 @@ return [
          */
 
         'role' => Role::class,
+
+        /*
+         * Con 'teams' => true (sotto) spatie/laravel-permission vuole anche il modello del team: senza, la modifica di un
+         * utente nel pannello admin andava in errore 500 (TeamModelNotConfigured).
+         */
+        'team' => Team::class,
     ],
 
     'table_names' => [

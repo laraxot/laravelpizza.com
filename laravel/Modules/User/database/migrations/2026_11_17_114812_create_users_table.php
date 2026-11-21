@@ -1,0 +1,170 @@
+<?php
+
+declare(strict_types=1);
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/*
+ * Canonical owner migration for `User::users` (consolidated 2026-11-12).
+ * The tableUpdate block is also the forward-only repair path for legacy schemas.
+ * 2026-11-17: absorbed add_lang_column, repair_users_type_state_columns and
+ * add_digital_identity_columns_to_users_table (removed: one model = one migration).
+ */
+return new class extends XotBaseMigration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        // -- CREATE --
+        $this->tableCreate(static function (Blueprint $table): void {
+            // $table->uuid('id')->primary();
+            $table->string('id', 36)->primary();
+            $table->string('name')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password')->nullable(); // se entra con sso
+            $table->text('two_factor_secret')->nullable();
+            $table->text('two_factor_recovery_codes')->nullable();
+            $table->timestamp('two_factor_confirmed_at')->nullable();
+            $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('lang', 3)->nullable();
+            $table->string('type')->index()->nullable();
+            $table->string('state')->index()->nullable();
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_otp')->default(false);
+            $table->timestamp('password_expires_at')->nullable();
+        });
+        // -- UPDATE --
+        $this->tableUpdate(function (Blueprint $table): void {
+            // Schema parziale: una vecchia migrazione add_*/repair_* eseguita prima di questa
+            // ha creato `users` senza le colonne base. Solo aggiunte idempotenti, nessun drop.
+            if (! $this->hasColumn('id')) {
+                $table->string('id', 36)->primary()->first();
+            }
+
+            if (! $this->hasColumn('name')) {
+                $table->string('name')->nullable();
+            }
+
+            if (! $this->hasColumn('email')) {
+                $table->string('email')->unique();
+            }
+
+            if (! $this->hasColumn('email_verified_at')) {
+                $table->timestamp('email_verified_at')->nullable();
+            }
+
+            if (! $this->hasColumn('password')) {
+                $table->string('password')->nullable();
+            }
+
+            if (! $this->hasColumn('remember_token')) {
+                $table->rememberToken();
+            }
+
+            // after('name') solo se la colonna name esiste: schemi parziali (migrazioni
+            // precedenti alla create canonica) non devono far fallire l'alter.
+            if (! $this->hasColumn('first_name')) {
+                $col = $table->string('first_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
+            } else {
+                $table->string('first_name')->nullable()->change();
+            }
+
+            if (! $this->hasColumn('last_name')) {
+                $col = $table->string('last_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
+            } else {
+                $table->string('last_name')->nullable()->change();
+            }
+
+            if (! $this->hasColumn('current_team_id')) {
+                $table->foreignId('current_team_id')->nullable();
+            }
+
+            if (! $this->hasColumn('profile_photo_path')) {
+                $table->string('profile_photo_path', 2048)->nullable();
+            }
+
+            if (! $this->hasColumn('lang')) {
+                $table->string('lang', 3)->nullable();
+            }
+
+            if (! $this->hasColumn('type')) {
+                $table->string('type')->index()->nullable();
+            }
+
+            if (! $this->hasColumn('state')) {
+                $table->string('state')->index()->nullable();
+            }
+
+            if (! $this->hasColumn('is_active')) {
+                $table->boolean('is_active')->default(true);
+            }
+
+            if (! $this->hasColumn('is_otp')) {
+                $table->boolean('is_otp')->default(false);
+            }
+
+            if (! $this->hasColumn('password_expires_at')) {
+                $table->timestamp('password_expires_at')->nullable();
+            }
+
+            if (! $this->hasColumn('two_factor_secret')) {
+                $col = $table->text('two_factor_secret')->nullable();
+                if ($this->hasColumn('password')) {
+                    $col->after('password');
+                }
+            }
+            if (! $this->hasColumn('two_factor_recovery_codes')) {
+                $table->text('two_factor_recovery_codes')->nullable()->after('two_factor_secret');
+            }
+            if (! $this->hasColumn('two_factor_confirmed_at')) {
+                $table->timestamp('two_factor_confirmed_at')->nullable()->after('two_factor_recovery_codes');
+            }
+
+            if (! $this->hasColumn('fiscal_code')) {
+                $table->string('fiscal_code', 16)->nullable()->unique();
+            }
+
+            if (! $this->hasColumn('auth_method')) {
+                $table->string('auth_method', 20)->nullable()->index();
+            }
+
+            if (! $this->hasColumn('identity_provider')) {
+                $table->string('identity_provider', 50)->nullable();
+            }
+
+            if (! $this->hasColumn('last_login_at')) {
+                $table->timestamp('last_login_at')->nullable();
+            }
+
+            if ($this->hasColumn('password')) {
+                $table->string('password')->nullable()->change();
+            }
+
+            if ($this->getColumnType('id') === 'uuid') {
+                Schema::disableForeignKeyConstraints();
+
+                $table->dropPrimary(['id']);
+                $table->string('id', 36)->nullable()->change();
+                $table->primary('id');
+
+                Schema::enableForeignKeyConstraints();
+            }
+            // $this->updateUser($table);
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+        });
+    }
+};

@@ -218,10 +218,7 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
-<<<<<<< .merge_file_MNaw3h
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_kWNSxu
 ```
 
 ## Troubleshooting

@@ -19,11 +19,7 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
 
-<<<<<<< .merge_file_0rCMxo
-uses(\Modules\Activity\Tests\TestCase::class);
-=======
 uses(TestCase::class);
->>>>>>> .merge_file_ltztkO
 
 test('activity module models work together in integrated scenarios', function () {
     $user = UserFactory::new()->createOne();

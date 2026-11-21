@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_QxJk8y
-=======
 ---
 title: "PRD - Activity Module"
 type: note
@@ -8,7 +6,6 @@ updated: 2026-10-07
 tags: [docs, activity]
 qmd: "prd - activity module activity"
 ---
->>>>>>> .merge_file_jKP3fB
 # PRD - Activity Module
 
 ## 1. Executive Summary
@@ -38,8 +35,6 @@ The Activity module is responsible for tracking and logging all system actions, 
 - 100% PHPStan Level 10 compliance.
 - Test coverage > 80% for logging logic.
 - API documentation completed.
-<<<<<<< .merge_file_QxJk8y
-=======
 ## 4. Technical Specifications
 
 ### Agnostic Design
@@ -75,4 +70,3 @@ The Activity module is responsible for tracking and logging all system actions, 
 - **Performance:** Logging must be asynchronous to avoid blocking main requests.
 - **Observability:** Must expose metrics for logging rate and failure rate.
 - **Security:** Logs must be immutable and access-controlled.
->>>>>>> .merge_file_jKP3fB

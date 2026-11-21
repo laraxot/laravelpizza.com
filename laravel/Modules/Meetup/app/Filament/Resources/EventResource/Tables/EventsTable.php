@@ -34,24 +34,24 @@ class EventsTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'title' => TextColumn::make('title')
+            'title' => TextColumn::make('title')->placeholder('—')
                 ->searchable()
                 ->sortable()
                 ->limit(50),
-            'start_date' => TextColumn::make('start_date')
+            'start_date' => TextColumn::make('start_date')->placeholder('—')
                 ->dateTime('d/m/Y H:i')
                 ->sortable(),
-            'end_date' => TextColumn::make('end_date')
+            'end_date' => TextColumn::make('end_date')->placeholder('—')
                 ->dateTime('d/m/Y H:i')
                 ->toggleable(isToggledHiddenByDefault: true),
-            'location' => TextColumn::make('location')
+            'location' => TextColumn::make('location')->placeholder('—')
                 ->searchable()
                 ->limit(30)
                 ->toggleable(),
-            'venue.name' => TextColumn::make('venue.name')
+            'venue.name' => TextColumn::make('venue.name')->placeholder('—')
                 ->searchable()
                 ->toggleable(),
-            'status' => TextColumn::make('status')
+            'status' => TextColumn::make('status')->placeholder('—')
                 ->badge()
                 ->formatStateUsing(static fn (string $state): string => (string) __('meetup::event_form.fields.status.options.'.$state))
                 ->color(static fn (string $state): string => match ($state) {
@@ -60,17 +60,17 @@ class EventsTable extends XotBaseResourceTable
                     'cancelled' => 'danger',
                     default => 'gray',
                 }),
-            'event_status' => TextColumn::make('event_status')
+            'event_status' => TextColumn::make('event_status')->placeholder('—')
                 ->badge()
                 ->toggleable(isToggledHiddenByDefault: true),
-            'event_attendance_mode' => TextColumn::make('event_attendance_mode')
+            'event_attendance_mode' => TextColumn::make('event_attendance_mode')->placeholder('—')
                 ->badge()
                 ->toggleable(isToggledHiddenByDefault: true),
             // "12 / 40": iscritti sui posti disponibili, a colpo d'occhio.
-            'attendees_count' => TextColumn::make('attendees_count')
+            'attendees_count' => TextColumn::make('attendees_count')->placeholder('—')
                 ->formatStateUsing(static fn (int $state, Event $record): string => $state.' / '.$record->max_attendees)
                 ->sortable(),
-            'in_language' => TextColumn::make('in_language')
+            'in_language' => TextColumn::make('in_language')->placeholder('—')
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {
                     'it' => 'primary',
@@ -78,7 +78,7 @@ class EventsTable extends XotBaseResourceTable
                     default => 'gray',
                 })
                 ->toggleable(isToggledHiddenByDefault: true),
-            'created_at' => TextColumn::make('created_at')
+            'created_at' => TextColumn::make('created_at')->placeholder('—')
                 ->dateTime('d/m/Y')
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),

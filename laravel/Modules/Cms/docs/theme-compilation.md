@@ -107,10 +107,7 @@ Per pubblicare il tema compilato, è necessario eseguire il seguente comando:
 
 ```bash
 cd /var/www/html/<nome progetto>/laravel/Themes/One
-<<<<<<< .merge_file_OiTaZm
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_CuFCo3
 ```
 
 Questo comando copia tutti i file dalla directory `resources/dist` alla directory pubblica `public_html/themes/One`:

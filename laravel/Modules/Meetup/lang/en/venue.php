@@ -90,4 +90,6 @@ return [
             'tooltip' => '',
         ],
     ],
+    'create_title' => 'New venue',
+    'edit_title' => 'Edit venue',
 ];

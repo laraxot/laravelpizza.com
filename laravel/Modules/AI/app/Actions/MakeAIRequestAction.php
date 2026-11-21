@@ -6,6 +6,7 @@ namespace Modules\AI\Actions;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Sleep;
 use Modules\AI\Datas\AIConfigData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -20,11 +21,15 @@ final class MakeAIRequestAction
 {
     use QueueableAction;
 
+    public const string DEFAULT_SYSTEM_PROMPT = 'Sei un assistente AI specializzato nella gestione di ticket per amministrazioni pubbliche italiane. Rispondi sempre in formato JSON valido.';
+
     /**
-     * @param  array{title?: string, description?: string, category?: string}  $context  Metadati di log contestuali
+     * @param  array<string, string>  $context  Metadati di log contestuali
+     * @param  string|null  $systemPrompt  null = prompt di sistema storico (ticket PA), invariato per compatibilita'
      */
-    public function execute(string $prompt, string $type, array $context = []): string
+    public function execute(string $prompt, string $type, array $context = [], ?string $systemPrompt = null): string
     {
+        $systemPrompt ??= self::DEFAULT_SYSTEM_PROMPT;
         $apiKey = config('ai.openai_api_key') ?: config('services.openai.api_key', '');
         $settings = AIConfigData::make();
         $baseUrl = $settings->openai_base_url;
@@ -50,7 +55,7 @@ final class MakeAIRequestAction
                         'messages' => [
                             [
                                 'role' => 'system',
-                                'content' => 'Sei un assistente AI specializzato nella gestione di ticket per amministrazioni pubbliche italiane. Rispondi sempre in formato JSON valido.',
+                                'content' => $systemPrompt,
                             ],
                             [
                                 'role' => 'user',
@@ -93,9 +98,11 @@ final class MakeAIRequestAction
             }
 
             $attempt++;
-            // Exponential backoff (2, 4, 8, ... secondi)
+            // Exponential backoff (2, 4, 8, ... secondi).
+            // Sleep:: e non sleep(): nei test e' falsificabile, mentre un
+            // sleep() nudo fa aspettare davvero la suite a ogni tentativo.
             if ($attempt < $retryAttempts) {
-                sleep((int) pow(2, $attempt));
+                Sleep::sleep((int) pow(2, $attempt));
             }
         }
 

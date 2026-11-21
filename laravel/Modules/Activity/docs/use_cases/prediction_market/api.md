@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_BxHN3b
-=======
 ---
 title: "Linee Guida API <nome progetto>ion Market"
 type: note
@@ -8,7 +6,6 @@ updated: 2026-10-07
 tags: [docs, activity, use_cases]
 qmd: "linee guida api <nome progetto>ion market activity"
 ---
->>>>>>> .merge_file_AtZD3U
 # Linee Guida API <nome progetto>ion Market
 
 ## Endpoints Principali

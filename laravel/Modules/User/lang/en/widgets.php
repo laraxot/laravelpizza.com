@@ -179,4 +179,15 @@ return [
             'label' => 'End date:',
         ],
     ],
+    'users_chart' => [
+        'heading' => 'New users',
+    ],
+    'recent_logins' => [
+        'columns' => [
+            'user' => 'User',
+            'login_at' => 'Signed in',
+            'ip_address' => 'IP address',
+            'user_agent' => 'Browser',
+        ],
+    ],
 ];

@@ -10,16 +10,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
 use Mockery\MockInterface;
-<<<<<<< .merge_file_TfCeRB
-use Modules\User\Models\Tenant;
-use Tests\TestCase;
-
-use function Safe\json_encode;
-=======
 use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_3XWeQG
 
-uses(\Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 class TenantTest extends TestCase
 {

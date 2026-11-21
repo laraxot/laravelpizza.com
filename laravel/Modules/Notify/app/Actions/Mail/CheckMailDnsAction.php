@@ -25,7 +25,7 @@ class CheckMailDnsAction
 {
     use QueueableAction;
 
-    private const DMARC_PREFIX = 'v=dmarc1';
+    private const string DMARC_PREFIX = 'v=dmarc1';
 
     /**
      * @param  array<string, string>  $expectedCnames  label (relative to the domain) => expected target

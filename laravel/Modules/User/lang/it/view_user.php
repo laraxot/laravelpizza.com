@@ -28,15 +28,12 @@ return [
             'tooltip' => '',
         ],
     ],
-<<<<<<< .merge_file_szAFJk
     'sections' => [
         'empty' => [
             'heading' => '',
             'label' => '',
         ],
     ],
-=======
->>>>>>> .merge_file_xPLZFs
     'navigation' => [
         'name' => 'View User',
         'plural' => 'View User',

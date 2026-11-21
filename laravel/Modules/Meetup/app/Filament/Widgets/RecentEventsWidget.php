@@ -29,14 +29,14 @@ class RecentEventsWidget extends XotBaseTableWidget
                     ->limit(8)
             )
             ->columns([
-                Tables\Columns\TextColumn::make('title')
+                Tables\Columns\TextColumn::make('title')->placeholder('—')
                     ->searchable()
                     ->url(static fn (Event $record): string => EventResource::getUrl('edit', ['record' => $record])),
-                Tables\Columns\TextColumn::make('start_date')
+                Tables\Columns\TextColumn::make('start_date')->placeholder('—')
                     ->dateTime('d/m/Y H:i'),
-                Tables\Columns\TextColumn::make('location')
+                Tables\Columns\TextColumn::make('location')->placeholder('—')
                     ->state(static fn (Event $record): string => $record->venue !== null ? $record->venue->name : $record->location),
-                Tables\Columns\TextColumn::make('status')
+                Tables\Columns\TextColumn::make('status')->placeholder('—')
                     ->badge()
                     ->formatStateUsing(static fn (string $state): string => (string) __('meetup::event_form.fields.status.options.'.$state))
                     ->color(static fn (string $state): string => match ($state) {
@@ -45,7 +45,7 @@ class RecentEventsWidget extends XotBaseTableWidget
                         'cancelled' => 'danger',
                         default => 'gray',
                     }),
-                Tables\Columns\TextColumn::make('attendees_count')
+                Tables\Columns\TextColumn::make('attendees_count')->placeholder('—')
                     ->formatStateUsing(static fn (int $state, Event $record): string => $state.' / '.$record->max_attendees)
                     ->badge()
                     ->color(static fn (int $state, Event $record): string => match (true) {

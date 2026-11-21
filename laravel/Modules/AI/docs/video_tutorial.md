@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: video_tutorial
 canonical: ../../../Themes/docs/shared-components/video-tutorial.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/video-tutorial.md

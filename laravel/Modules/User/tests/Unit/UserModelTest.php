@@ -2,18 +2,13 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_CjLNX8
-=======
-use Modules\User\Tests\TestCase;
-
->>>>>>> .merge_file_CwODSN
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

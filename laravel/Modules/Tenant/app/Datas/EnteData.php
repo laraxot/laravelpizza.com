@@ -8,8 +8,6 @@ use Illuminate\Support\Str;
 use Modules\Tenant\Actions\Ente\GetEnteDataAction;
 use Spatie\LaravelData\Data;
 
-use function Safe\preg_replace;
-
 /**
  * Dati dell'ente titolare del tenant (DCP-289). Si ottiene SEMPRE da {@see GetEnteDataAction},
  * che li normalizza: stringhe tagliate, telefoni numerici, email e URL validi, social di una lista chiusa. Un campo vuoto vuol dire

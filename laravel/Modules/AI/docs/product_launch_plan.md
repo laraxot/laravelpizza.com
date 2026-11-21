@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "product launch plan"
 issues: []
 discussions: []
-status: superseded
-superseded_by: product-launch-plan.md
 ---
 
 # AI Module - Product Launch Plan
@@ -18,6 +16,15 @@ superseded_by: product-launch-plan.md
 **Owner:** Product Team
 
 ---
+
+title: "product launch plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product launch plan"
+issues: []
+discussions: []
 ## Launch Objectives
 
 1. **Product:** Deploy AI content generation for markets
