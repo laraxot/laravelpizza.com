@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email analytics"
 issues: []
 discussions: []
-status: superseded
-superseded_by: email-analytics.md
 ---
 
 # Analytics Email - il progetto

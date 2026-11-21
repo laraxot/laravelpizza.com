@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Testing Coverage Policy"
+qmd: "activity testing coverage policy md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "activity module - testing coverage policy activity"
+tags: [documentation]
 ---
+
 # Activity Module - Testing Coverage Policy
 
 ## Obiettivo
@@ -22,6 +21,7 @@ Raggiungere e mantenere **100% coverage** con Pest sul modulo Activity.
 
 ### 2. .env.testing
 
+<<<<<<< .merge_file_oIBVef
 - `.env.testing` è uguale a `.env` tranne per i nomi database
 - I database di test hanno suffisso `_test` (es. `<nome progetto>_data_test`)
 - I database di test hanno suffisso `_test` (es. `techplanner_data_test`)
@@ -130,3 +130,6 @@ tests/
 - [testing-strategy-implementation](testing-strategy-implementation.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
+=======
+- `.env.testing` è uguale a `.env` tranne per i nomi database
+>>>>>>> .merge_file_pfhA9v

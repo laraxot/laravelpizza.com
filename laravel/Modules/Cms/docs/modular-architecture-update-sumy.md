@@ -13,4 +13,4 @@ status: merged
 
 # Documento unificato
 
-Questo file era un duplicato esatto. Il contenuto canonico si trova in [modular_architecture_update_summary.md](./modular-architecture-update-summary.md).
+Questo file era un duplicato esatto. Il contenuto canonico si trova in [modular_architecture_update_summary.md](./modular_architecture_update_summary.md).

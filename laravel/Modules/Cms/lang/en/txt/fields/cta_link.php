@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/cta_link.php
 // Cms txt.fields.cta_link — LangServiceProvider SSoT.
 return [
-    'label' => 'Collegamento CTA',
-    'placeholder' => 'https://esempio.com',
-    'help' => 'URL di destinazione per la call-to-action',
-    'helper_text' => 'URL della pagina di destinazione per la CTA',
+    'label' => 'CTA link',
+    'placeholder' => 'https://example.com',
+    'help' => 'Destination URL for the call-to-action',
+    'helper_text' => 'Landing page URL for the CTA',
     'tooltip' => '',
     'description' => '',
 ];

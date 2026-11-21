@@ -1,15 +1,14 @@
 ---
-qmd: "qmd setup"
+qmd: "Qmd Setup"
 issues: []
 discussions: []
-title: "QMD Setup — Module Cms"
+title: "Qmd Setup"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [qmd, search, docs, performance]
 related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 ---
 
 # QMD Setup per Module **Cms**

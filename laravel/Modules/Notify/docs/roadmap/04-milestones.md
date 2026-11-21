@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "04 milestones"
 issues: []
 discussions: []
-status: superseded
-superseded_by: milestones.md
 ---
 
 # Milestones - Notify

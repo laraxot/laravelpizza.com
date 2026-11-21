@@ -20,9 +20,9 @@ status: draft
 ## 🎯 Quick Navigation
 
 ### Per Nuovi Arrivati
-1. [Zen of Documentation](./ZEN_OF_DOCUMENTATION.md) - Filosofia e principi
-2. [Documentation Governance](./DOCUMENTATION_GOVERNANCE.md) - Regole e standard
-3. [Multi-Agent Collaboration](./MULTI_AGENT_COLLABORATION.md) - Come lavorare con AI agents
+1. [Zen of Documentation](./zen_of_documentation.md) - Filosofia e principi
+2. [Documentation Governance](./documentation_governance.md) - Regole e standard
+3. [Multi-Agent Collaboration](./multi_agent_collaboration.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
@@ -31,7 +31,7 @@ status: draft
 
 ### Per AI Agents
 - [Project Context](./project/PROJECT.md)
-- [Agent Coordination](./MULTI_AGENT_COLLABORATION.md)
+- [Agent Coordination](./multi_agent_collaboration.md)
 - [OpenViking Context](../bashscripts/ai/openviking.md)
 
 ---
@@ -52,12 +52,12 @@ status: draft
 
 ### 📋 Standards
 - [Coding Conventions](./conventions/README.md)
-- [Documentation Standards](./DOCUMENTATION_GOVERNANCE.md)
+- [Documentation Standards](./documentation_governance.md)
 - [Git Workflow](./conventions/git-workflow.md)
 - [Naming Conventions](./conventions/naming.md)
 
 ### 🤖 AI Tools
-- [Multi-Agent Guide](./MULTI_AGENT_COLLABORATION.md)
+- [Multi-Agent Guide](./multi_agent_collaboration.md)
 - [BMAD Framework](./bmad/README.md)
 - [GSD Workflow](./gsd/README.md)
 - [NotebookLM](./notebooklm/README.md)
@@ -65,7 +65,7 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
-- [Quality Reports](./reports/quality.md)
+- [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 - [Performance Reports](./reports/performance.md)
 
@@ -151,7 +151,7 @@ find docs -name "*.md" | xargs grep -l "keyword"
 ### 1. Zen of Documentation
 - **Goal**: Ridurre duplicazione e migliorare qualità
 - **Status**: 🟡 In Progress
-- **Docs**: [ZEN_OF_DOCUMENTATION.md](./ZEN_OF_DOCUMENTATION.md)
+- **Docs**: [ZEN_OF_DOCUMENTATION.md](./zen_of_documentation.md)
 - **Owner**: Multi-Agent Team
 
 ### 2. Multi-Block JSON Conversion
@@ -203,8 +203,8 @@ openviking get-context --query="documentation"
 4. Coordina tramite BMAD threads
 
 ### Per Contribuire
-1. Leggi [Documentation Governance](./DOCUMENTATION_GOVERNANCE.md)
-2. Segui [Zen of Documentation](./ZEN_OF_DOCUMENTATION.md)
+1. Leggi [Documentation Governance](./documentation_governance.md)
+2. Segui [Zen of Documentation](./zen_of_documentation.md)
 3. Aggiorna questo indice
 4. Esegui quality checks
 

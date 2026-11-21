@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "file placement rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # File placement rules

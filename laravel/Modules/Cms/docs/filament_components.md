@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: filament_components
 canonical: ../../../Themes/docs/shared-components/filament-components.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/filament-components.md

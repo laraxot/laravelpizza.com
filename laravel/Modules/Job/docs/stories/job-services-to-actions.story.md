@@ -21,7 +21,7 @@ related:
   - "../../../../docs/chat/module-job-sync.md"
 ---
 
-# JOB: Services → Actions
+# JOB — Services → Actions
 
 ## Contesto
 
@@ -43,14 +43,14 @@ lavorando esattamente sullo stesso file (`ScheduleService.php`) in tempo reale:
 
 1. Al primo `find`/`cat`, `app/Services/ScheduleService.php` esisteva ancora con contenuto
    completo (statico, non-QueueableAction).
-2. Un minuto dopo, `git status --short` lo mostrava `D` (deleted): l'altra sessione lo
+2. Un minuto dopo, `git status --short` lo mostrava `D` (deleted) — l'altra sessione lo
    aveva rimosso mentre verificavo i call site.
 3. Al `git log`, la coppia `app/Actions/Schedule/GetActiveSchedulesAction.php` +
    `app/Actions/Schedule/ClearScheduleCacheAction.php` risultava **gia' committata** in
    HEAD (`634d334 chore: checkpoint repository cleanup`), con trait `QueueableAction` e
    `execute()` corretti, praticamente identica (a meno di stile: costruttore vs metodo
    privato `getModel()`) a `app/Actions/GetActiveSchedulesAction.php` /
-   `ClearScheduleCacheAction.php` (flat, root di `Actions/`): **anch'esse gia' committate
+   `ClearScheduleCacheAction.php` (flat, root di `Actions/`) — **anch'esse gia' committate
    in HEAD**, insieme ai relativi test in `tests/Unit/Actions/*Test.php` E
    `tests/Unit/Actions/Schedule/ScheduleActionsTest.php`.
 
@@ -71,7 +71,7 @@ corretta e' `app/Actions/Schedule/*`, non la copia flat in `app/Actions/`.
 | `ScheduleService::getActives()` | A | → `Modules\Job\Actions\Schedule\GetActiveSchedulesAction::execute()` | Un metodo = una Action, stessa logica (cache-aware get), grouped by context |
 | `ScheduleService::clearCache()` | A | → `Modules\Job\Actions\Schedule\ClearScheduleCacheAction::execute()` | idem |
 | `app/Actions/GetActiveSchedulesAction.php` (flat, duplicato) | n/a | **Rimosso** | Duplicato non raggruppato di `Actions/Schedule/GetActiveSchedulesAction.php`; zero call site reali oltre al proprio test |
-| `app/Actions/ClearScheduleCacheAction.php` (flat, duplicato) | n/a | **Rimosso**, caller aggiornati | Duplicato non raggruppato di `Actions/Schedule/ClearScheduleCacheAction.php`; era l'unica versione con call site reali (`ScheduleClearCacheCommand`, `ScheduleObserver`): migrati alla versione raggruppata |
+| `app/Actions/ClearScheduleCacheAction.php` (flat, duplicato) | n/a | **Rimosso**, caller aggiornati | Duplicato non raggruppato di `Actions/Schedule/ClearScheduleCacheAction.php`; era l'unica versione con call site reali (`ScheduleClearCacheCommand`, `ScheduleObserver`) — migrati alla versione raggruppata |
 | `tests/Unit/Actions/GetActiveSchedulesActionTest.php` | n/a | **Rimosso** | Ridondante con `tests/Unit/Actions/Schedule/ScheduleActionsTest.php` (stessa asserzione: instantiable + `execute()` + trait `QueueableAction`) |
 | `tests/Unit/Actions/ClearScheduleCacheActionTest.php` | n/a | **Rimosso** | idem |
 | `tests/Unit/Services/ScheduleServiceTest.php` | n/a | Rimosso (gia' rimosso dalla sessione concorrente) | Testava la classe ormai retired |
@@ -103,7 +103,7 @@ dell'intervento: la Service era gia' de facto morta, zero caller oltre se stessa
   file e' cambiato).
 - `./vendor/bin/pest Modules/Job/tests -c Modules/Job/phpunit.xml --no-coverage`: fallisce
   al bootstrap (`Cannot open bootstrap script
-  ".../Modules/Job/vendor/autoload.php"`): causa pre-esistente e non correlata
+  ".../Modules/Job/vendor/autoload.php"`) — causa pre-esistente e non correlata
   (`phpunit.xml` fa parte del WIP non committato di un'altra sessione, gia' documentato in
   `docs/coverage.md` § 2026-09-04 mixed-type-reduction). Non risolto, non nello scope di
   questa story.
@@ -111,7 +111,7 @@ dell'intervento: la Service era gia' de facto morta, zero caller oltre se stessa
 ## Perche' non e' stata forzata una Action anche per le classi Kind B
 
 Il modulo Job ha altre classi sotto `app/Actions/**` che sono Strategy/Handler (es.
-`app/Actions/Console/GetScheduleStatusCommandsAction.php`, che ha gia' `execute()`: non
+`app/Actions/Console/GetScheduleStatusCommandsAction.php`, che ha gia' `execute()` — non
 sotto scrutinio qui) ma **nessuna** di queste viveva sotto `app/Services/`: il censimento
 iniziale ha trovato un solo file, gia' classificato sopra. Non c'era quindi nessun caso
 Kind B da valutare in questa story.

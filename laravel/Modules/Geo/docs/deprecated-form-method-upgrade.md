@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "deprecated form method upgrade"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Deprecated Form Method Upgrade

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes renamed"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-fixes-renamed.md
 ---
 
 # 🔧 PHPStan Fixes - Modulo Geo - Gennaio 2025
@@ -153,6 +151,15 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 - [Laravel Best Practices](https://laravel.com/docs/best-practices)
 
 ---
+
+title: "phpstan fixes renamed"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes renamed"
+issues: []
+discussions: []
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 2.2.0  
 **🐛 PHPStan Level**: 9 ✅  

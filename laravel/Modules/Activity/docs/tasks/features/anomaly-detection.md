@@ -1,3 +1,10 @@
+---
+title: "Anomaly Detection - Activity"
+qmd: "activity tasks features anomaly detection md"
+type: note
+tags: [documentation]
+---
+
 # Anomaly Detection - Activity
 
 **Task ID**: ACTIVITY-FEATURE-013

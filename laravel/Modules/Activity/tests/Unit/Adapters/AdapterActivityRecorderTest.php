@@ -22,9 +22,9 @@ test('ActivityRecorder record delega a RecordSubjectActivityAction', function ()
     $activity = new Activity;
 
     $mock = Mockery::mock(RecordSubjectActivityAction::class);
-    mockeryExpect($mock->shouldReceive('execute'))
+    TestCase::mockeryExpect($mock->shouldReceive('execute'))
         ->once()
-        ->with('Modules\\User\\Models\\User', 42, 'updated', ['name' => 'old'], null)
+        ->with('Modules\\User\\Models\\User', 42, 'updated', ['name' => 'old'])
         ->andReturn($activity);
     app()->instance(RecordSubjectActivityAction::class, $mock);
 
@@ -40,7 +40,7 @@ test('ActivityRecorder getLog delega a GetSubjectActivityLogAction', function ()
     $logEntries = [['id' => 1, 'event' => 'updated']];
 
     $mock = Mockery::mock(GetSubjectActivityLogAction::class);
-    mockeryExpect($mock->shouldReceive('execute'))
+    TestCase::mockeryExpect($mock->shouldReceive('execute'))
         ->once()
         ->with('Modules\\User\\Models\\User', 7)
         ->andReturn($logEntries);

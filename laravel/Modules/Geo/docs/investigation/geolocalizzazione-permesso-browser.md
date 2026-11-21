@@ -2,10 +2,6 @@
 type: investigation
 title: "Geolocalizzazione — permesso browser e requisito HTTPS"
 links: {github_issue: "#530"}
-status: draft
-updated: 2026-10-14
-tags: [docs, geo, investigation]
-qmd: "geolocalizzazione permesso browser geo"
 ---
 
 ## Problema

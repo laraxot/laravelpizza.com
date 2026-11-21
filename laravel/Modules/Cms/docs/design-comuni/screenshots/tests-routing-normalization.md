@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "tests routing normalization"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Tests Routing Normalization

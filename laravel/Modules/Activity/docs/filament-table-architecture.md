@@ -57,7 +57,10 @@ class non verrebbe mai eseguita. E' esattamente quello che succedeva fino al 1 s
 Si chiamano `getTableColumns()`, `getTableFilters()`, `getTableActions()`,
 `getTableBulkActions()`, `getTableHeaderActions()`, `getTableHeading()`,
 `getTableEmptyStateActions()`, `getTableFiltersLayout()`,
+<<<<<<< .merge_file_HUj51u
 `getTableRecordActionsPosition()`, e — sulla sola `XotBaseResourceTable` —
+=======
+>>>>>>> .merge_file_ysVubM
 `getTableRecordActionsPosition()`, e: sulla sola `XotBaseResourceTable` -
 `getTableSortColumn()` / `getTableSortDirection()`.
 
@@ -89,8 +92,11 @@ ripetuto a ogni riga.
 
 **`getXotTableFilters()` e i suoi fratelli non esistono piu'.** Erano nati per non
 collidere con i metodi omonimi e deprecati di `Filament\Resources\Pages\ListRecords`,
+<<<<<<< .merge_file_HUj51u
 quando il trait stava sulla pagina. Da quando sta solo su `XotBaseResourceTable` — che e'
 una classe normale, non una pagina Filament — la collisione non c'e' e il prefisso non ha
+=======
+>>>>>>> .merge_file_ysVubM
 quando il trait stava sulla pagina. Da quando sta solo su `XotBaseResourceTable`: che e'
 una classe normale, non una pagina Filament: la collisione non c'e' e il prefisso non ha
 piu' ragione di esistere.
@@ -131,6 +137,7 @@ sbagliato.
 
 ## Storia, per non ripeterla
 
+<<<<<<< .merge_file_HUj51u
 - **19 agosto 2026** — rename da `getTableX()` a `getXotTableX()` per schivare la
   deprecazione Filament. Fatto solo dentro `table()`: le sottoclassi restano al nome
   vecchio e diventano mute. `getTableColumns` fu l'unico salvato, con un adapter a
@@ -139,6 +146,8 @@ sbagliato.
   `/indennitaresponsabilita/admin/scheda-dips`. La catena reale passava per
   `BaseListSchedas::getTableFilters()`, col nome vecchio.
 - **1 settembre 2026** — `use HasXotTable;` tolto da `XotBaseListRecords`, prefisso `Xot`
+=======
+>>>>>>> .merge_file_ysVubM
 - **19 agosto 2026**: rename da `getTableX()` a `getXotTableX()` per schivare la
   deprecazione Filament. Fatto solo dentro `table()`: le sottoclassi restano al nome
   vecchio e diventano mute. `getTableColumns` fu l'unico salvato, con un adapter a

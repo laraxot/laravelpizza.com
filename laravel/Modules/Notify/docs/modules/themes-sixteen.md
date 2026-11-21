@@ -34,8 +34,8 @@ Segui questi passaggi per risolvere:
 
 1. Vai nella cartella del tema:
    ```bash
-   cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
-   cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
+   cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
+   cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
    ```
 2. Esegui il comando:
    ```bash

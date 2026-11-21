@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "testing psr4 standards"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../testing-psr4-standards.md
 ---
 
 # Standard PSR-4 per i Test in Laraxot <nome progetto>
@@ -275,4 +273,13 @@ Prima di committare file di test:
 - [Testing Guide - Modulo <nome modulo>](../modules/<nome modulo>/docs/testing.md)
 
 ---
+
+title: "testing psr4 standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing psr4 standards"
+issues: []
+discussions: []
 *Standard: PSR-4, PHPStan livello 9+, Laraxot conventions*

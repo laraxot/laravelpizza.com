@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "naming conventions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Naming Conventions - Database Folders

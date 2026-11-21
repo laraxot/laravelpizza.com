@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "critical architecture rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 4. Critical Architecture Rules
@@ -397,3 +396,12 @@ url('/en/path')
 ```
 
 ---
+
+title: "critical architecture rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "critical architecture rules"
+issues: []
+discussions: []

@@ -14,10 +14,12 @@ test('action has correct default name', function (): void {
     Assert::assertSame('list_log_activities', ListLogActivitiesAction::getDefaultName());
 });
 
-test('action tooltip is translated correctly', function () {
+test('action tooltip is not hardcoded (auto-translated via Lang)', function () {
     $action = ListLogActivitiesAction::make();
 
-    Assert::assertSame('list_log_activities', $action->getTooltip());
+    // Regola no-filament-labels: niente ->tooltip() hardcoded, la traduzione
+    // arriva da LangServiceProvider a runtime. getTooltip() resta null.
+    Assert::assertNull($action->getTooltip());
 });
 
 test('action is configured correctly', function (): void {

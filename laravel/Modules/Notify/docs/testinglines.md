@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testinglines"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Module - Testing Guidelines

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bugfix guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida Completa per Bug Fixing - Laraxot
@@ -197,6 +196,15 @@ Un errore `ParseError: syntax error, unexpected token "protected", expecting end
 - **Miglioramento continuo**: Utilizzare informazioni per miglioramento continuo
 
 ---
+
+title: "bugfix guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bugfix guide"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2025-08-04*
 *Versione: 2.0*
 *Compatibilità: Laraxot <nome progetto>, PHP 8.2+, Laravel 12+, Filament 3.4+*

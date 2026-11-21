@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/reorderRecords.php
 // Cms section.fields.reorderRecords — LangServiceProvider SSoT.
 return [
-    'label' => 'Riordina Record',
+    'label' => 'Reorder Records',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

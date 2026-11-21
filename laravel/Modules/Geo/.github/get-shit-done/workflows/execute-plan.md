@@ -10,7 +10,7 @@ discussions: []
 ---
 
 <purpose>
-Execute a phase prompt (PLAN.md) and create the outcome summary (SUMMARY.md).
+Execute a phase prompt (plan.md) and create the outcome summary (summary.md).
 </purpose>
 
 <required_reading>
@@ -112,7 +112,7 @@ Pattern B only (verify-only checkpoints). Skip for A/C.
 2. Per segment:
    - Subagent route: spawn gsd-executor for assigned tasks only. Prompt: task range, plan path, read full plan for context, execute assigned tasks, track deviations, NO SUMMARY/commit. Track via agent protocol.
    - Main route: execute tasks using standard flow (step name="execute")
-3. After ALL segments: aggregate files/deviations/decisions → create SUMMARY.md → commit → self-check:
+3. After ALL segments: aggregate files/deviations/decisions → create summary.md → commit → self-check:
    - Verify key-files.created exist on disk with `[ -f ]`
    - Check `git log --oneline --all --grep="{phase}-{plan}"` returns ≥1 commit
    - Append `## Self-Check: PASSED` or `## Self-Check: FAILED` to SUMMARY
@@ -329,7 +329,7 @@ If user_setup exists: create `{phase}-USER-SETUP.md` using template `.github/get
 <step name="create_summary">
 Create `{phase}-{plan}-SUMMARY.md` at `.planning/phases/XX-name/`. Use `.github/get-shit-done/templates/summary.md`.
 
-**Frontmatter:** phase, plan, subsystem, tags | requires/provides/affects | tech-stack.added/patterns | key-files.created/modified | key-decisions | requirements-completed (**MUST** copy `requirements` array from PLAN.md frontmatter verbatim) | duration ($DURATION), completed ($PLAN_END_TIME date).
+**Frontmatter:** phase, plan, subsystem, tags | requires/provides/affects | tech-stack.added/patterns | key-files.created/modified | key-decisions | requirements-completed (**MUST** copy `requirements` array from plan.md frontmatter verbatim) | duration ($DURATION), completed ($PLAN_END_TIME date).
 
 Title: `# Phase [X] Plan [Y]: [Name] Summary`
 
@@ -395,7 +395,7 @@ Counts PLAN vs SUMMARY files on disk. Updates progress table row with correct co
 </step>
 
 <step name="update_requirements">
-Mark completed requirements from the PLAN.md frontmatter `requirements:` field:
+Mark completed requirements from the plan.md frontmatter `requirements:` field:
 
 ```bash
 node .github/get-shit-done/bin/gsd-tools.cjs requirements mark-complete ${REQ_IDS}
@@ -408,7 +408,7 @@ Extract requirement IDs from the plan's frontmatter (e.g., `requirements: [AUTH-
 Task code already committed per-task. Commit plan metadata:
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-SUMMARY.md .planning/STATE.md .planning/ROADMAP.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-SUMMARY.md .planning/STATE.md .planning/roadmap.md .planning/REQUIREMENTS.md
 ```
 </step>
 
@@ -448,12 +448,12 @@ All routes: `/clear` first for fresh context.
 
 <success_criteria>
 
-- All tasks from PLAN.md completed
+- All tasks from plan.md completed
 - All verifications pass
 - USER-SETUP.md generated if user_setup in frontmatter
-- SUMMARY.md created with substantive content
+- summary.md created with substantive content
 - STATE.md updated (position, decisions, issues, session)
-- ROADMAP.md updated
+- roadmap.md updated
 - If codebase map exists: map updated with execution changes (or skipped if no significant changes)
 - If USER-SETUP.md created: prominently surfaced in completion output
 </success_criteria>

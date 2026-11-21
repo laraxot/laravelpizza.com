@@ -11,7 +11,6 @@ created: 2026-06-15
 related:
   - ../../laravel/Modules/Sigma/docs/wiki/concepts/sto00f-date-range.md
   - ../wiki/rules/eloquent-basemodel-hierarchy.md
-status: draft
 ---
 
 # Sto00f → BaseDateRangeModel

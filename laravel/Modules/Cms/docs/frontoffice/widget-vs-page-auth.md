@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "widget vs page auth"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Widget vs Page per l'Autenticazione

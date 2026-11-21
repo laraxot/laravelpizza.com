@@ -24,10 +24,17 @@ use Modules\Xot\Datas\MetatagData;
  */
 final class Foot extends Component
 {
+    /**
+     * @param  bool  $panelAssets  false: niente notifiche ne' script Filament (~250 KB di JS e una richiesta
+     *                             Livewire a ogni pagina) per i siti pubblici che non usano componenti Filament.
+     */
+    public function __construct(public readonly bool $panelAssets = true) {}
+
     public function render(): ViewContract
     {
         return view('cms::components.foot', [
             'pubTheme' => MetatagData::make()->getPubTheme(),
+            'panelAssets' => $this->panelAssets,
         ]);
     }
 }

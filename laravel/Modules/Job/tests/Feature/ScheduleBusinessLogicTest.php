@@ -21,6 +21,12 @@ describe('Schedule Business Logic', function (): void {
             'log_filename' => 'backup.log',
         ]);
 
+        $this->assertDatabaseHasRow('schedules', [
+            'id' => $schedule->id,
+            'command' => 'inspire',
+            'expression' => '0 2 * * *',
+        ]);
+
         Assert::assertSame('inspire', $schedule->command);
         Assert::assertSame('0 2 * * *', $schedule->expression);
         Assert::assertSame(Status::Active, $schedule->status);

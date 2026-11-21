@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "test 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # PDF Translation Guide - HTML2PDF Integration
 

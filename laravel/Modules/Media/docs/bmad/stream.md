@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad stream md"
 title: 'Stream'
 module: Media
 type: reference
@@ -8,8 +9,6 @@ tags: [migrato-da-txt, media]
 converted_from: __stream.txt
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "stream media"
 ---
 
 https://laravel-news.com/temporary-directory

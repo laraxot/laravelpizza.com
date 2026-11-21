@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "STATE"
 issues: []
 discussions: []
-status: draft
 ---
 
 # STATE: FixCity Platform

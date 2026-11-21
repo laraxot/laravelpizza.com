@@ -1,11 +1,7 @@
 ---
 type: decision-log
 title: "Decision Log — Gdpr"
-links: {github_issue: "#XXX", discussion: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, gdpr]
-qmd: "decision log   gdpr gdpr"
+links: {github_issue: #XXX, discussion: #XXX}
 ---
 # Decision Log — Gdpr
 

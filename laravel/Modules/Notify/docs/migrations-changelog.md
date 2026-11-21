@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migrations changelog"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Changelog Migrazioni Notify Module

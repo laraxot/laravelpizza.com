@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "no orphan http controllers"
 issues: []
 discussions: []
-status: draft
 ---
 
 # No Orphan Http Controllers

@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "ottimizzazioni correzioni"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Composer Merge Plugin nel Modulo Lang
 
@@ -65,8 +63,3 @@ Il modulo Lang gestisce localizzazione e traduzioni; i pacchetti locali consento
 - [Regole architetturali](architecture-rules.md)
 - [Convenzioni link documentazione](documentation-link-conventions.md)
 - [Modulo Lang](module-lang.md)
-- [Pacchetti del modulo](../packages.md)
-- [Installazione](../installation.md)
-- [Regole architetturali](architecture-rules.md)
-- [Convenzioni link documentazione](documentation-link-conventions.md)
-- [Modulo Lang](../module-lang.md)

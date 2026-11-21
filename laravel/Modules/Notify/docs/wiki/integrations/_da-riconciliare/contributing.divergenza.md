@@ -1,14 +1,13 @@
 ---
-qmd: "contributing.divergenza"
+qmd: "Contributing.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: CONTRIBUTING.md"
+title: "Contributing.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `CONTRIBUTING.md`

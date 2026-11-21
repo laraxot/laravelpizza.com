@@ -10,8 +10,6 @@ title: Configurazione progetti
 description: Configurazione progetti
 extends: _layouts.documentation
 section: content
-status: superseded
-superseded_by: project-configurations.md
 ---
 
 # Configurazione progetti {#configurazione-progetti}

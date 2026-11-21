@@ -48,6 +48,6 @@ return [
     'policy_how_text' => 'Sie können die Einstellungen jederzeit über den Link „Cookies verwalten“ am Ende jeder Seite erneut öffnen oder die Cookies in Ihrem Browser löschen.',
     'policy_manage_button' => 'Cookie-Einstellungen öffnen',
     'policy_external_title' => 'Karten und externe Dienste',
-    'policy_external_text' => 'Um Karten anzuzeigen und Adressen zu suchen, kontaktiert Ihr Browser direkt OpenStreetMap. Diese Anfragen setzen keine Cookies, aber der Dienst erhält Ihre IP-Adresse.',
+    'policy_external_text' => 'Karten und Adresssuche nutzen Daten von OpenStreetMap, laufen aber über den Server dieser Website: Ihr Browser kontaktiert OpenStreetMap nicht, und kein externer Dienst erhält Ihre IP-Adresse. Nur wenn Sie die Satelliten-, topografische oder humanitäre Kartenansicht wählen, fordert Ihr Browser die Bilder direkt bei Esri oder OpenStreetMap France an.',
     'policy_privacy_link' => 'Lesen Sie auch die Datenschutzerklärung',
 ];

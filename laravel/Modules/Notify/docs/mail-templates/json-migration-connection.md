@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "json migration connection"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Connessione Database nelle Migrazioni JSON

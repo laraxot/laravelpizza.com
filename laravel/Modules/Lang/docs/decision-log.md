@@ -1,13 +1,10 @@
 ---
+qmd: "lang decision log md"
 type: decision-log
-title: "Decision Log: Lang"
-links: {github_issue: "#XXX", discussion: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, lang]
-qmd: "decision log   lang lang"
+title: "Decision Log — Lang"
+links: {github_issue: #XXX, discussion: #XXX}
 ---
-# Decision Log: Lang
+# Decision Log — Lang
 
 ## Decisions
 

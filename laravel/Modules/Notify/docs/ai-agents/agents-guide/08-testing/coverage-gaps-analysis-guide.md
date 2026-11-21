@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coverage gaps analysis guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Coverage Gaps Analysis & Test Implementation Guide

@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_4hlltK
 # Activity Module - Product Strategy
 
 **Module:** Activity  
@@ -207,6 +208,8 @@ Transform raw activity data into actionable intelligence.
 - Action-first: niente generic `Services` per la business logic
 - Standard operativo: `spatie/laravel-queueable-action`
 - Convenzione: Action con metodo `execute()` e dispatch tramite container
+=======
+>>>>>>> .merge_file_1iDix3
 ---
 title: "Activity Module - Product Strategy# Activity - Product Strategy"
 type: note
@@ -317,4 +320,9 @@ Transform raw activity data into actionable intelligence.
 
 ---
 
+*Last Updated: March 12, 2026*=======
 *Last Updated: March 12, 2026*
+<<<<<<< .merge_file_4hlltK
+=======
+=======
+>>>>>>> .merge_file_1iDix3

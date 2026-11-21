@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Modulo Notify
 
@@ -59,8 +58,6 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 **Collegamenti:**
 - [database-mail.md](database-mail.md#regola-sulle-rotte)
 - [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
-- [database-mail.md](../database-mail.md#regola-sulle-rotte)
-- [grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 
 ## Struttura delle directory
 
@@ -451,8 +448,6 @@ tests/Unit
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in database-mail.md](database-mail.md#regola-sulle-rotte)
 - [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in database-mail.md](../database-mail.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 ### Versione HEAD
 
 
@@ -461,21 +456,6 @@ tests/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
-* [structure.md](../../../gdpr/docs/structure.md)
-* [structure.md](../../../notify/docs/structure.md)
-* [structure.md](../../../xot/docs/structure.md)
-* [structure.md](../../../xot/docs/base/structure.md)
-* [structure.md](../../../xot/docs/config/structure.md)
-* [structure.md](../../../user/docs/structure.md)
-* [structure.md](../../../ui/docs/structure.md)
-* [structure.md](../../../lang/docs/structure.md)
-* [structure.md](../../../job/docs/structure.md)
-* [structure.md](../../../media/docs/structure.md)
-* [structure.md](../../../tenant/docs/structure.md)
-* [structure.md](../../../activity/docs/structure.md)
-* [structure.md](../../../cms/docs/structure.md)
-* [structure.md](../../../cms/docs/themes/structure.md)
-* [structure.md](../../../cms/docs/components/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../structure.md)
 * [structure.md](../../../xot/docs/structure.md)

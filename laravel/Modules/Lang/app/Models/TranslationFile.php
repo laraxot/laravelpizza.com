@@ -25,14 +25,14 @@ use Sushi\Sushi;
  * @property ProfileContract|null $updater
  *
  * @method static TranslationFileFactory factory($count = null, $state = [])
- * @method static Builder<static>|TranslationFile newModelQuery()
- * @method static Builder<static>|TranslationFile newQuery()
- * @method static Builder<static>|TranslationFile query()
- * @method static Builder<static>|TranslationFile whereContent($value)
- * @method static Builder<static>|TranslationFile whereId($value)
- * @method static Builder<static>|TranslationFile whereKey($value)
- * @method static Builder<static>|TranslationFile whereName($value)
- * @method static Builder<static>|TranslationFile wherePath($value)
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> query()
+ * @method static Builder<static> whereContent($value)
+ * @method static Builder<static> whereId($value)
+ * @method static Builder<static> whereKey($value)
+ * @method static Builder<static> whereName($value)
+ * @method static Builder<static> wherePath($value)
  *
  * @property ProfileContract|null $deleter
  *
@@ -56,6 +56,20 @@ class TranslationFile extends BaseModel
         'name',
         'path',
         'content',
+    ];
+
+    /**
+     * Colonne della tabella Sushi quando getRows() e' vuoto (nessun file o lettura fallita): senza schema
+     * Sushi crea `create table "translation_files" ()` e l'elenco va in errore SQL invece di mostrarsi vuoto.
+     *
+     * @var array<string, string>
+     */
+    protected $schema = [
+        'id' => 'string',
+        'key' => 'string',
+        'name' => 'string',
+        'path' => 'string',
+        'content' => 'text',
     ];
 
     /** @var array<string, string> */

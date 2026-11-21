@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "appointment notifications"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/appointment-notifications.md
 ---
 
 # Sistema di Notifica Appuntamenti - il progetto

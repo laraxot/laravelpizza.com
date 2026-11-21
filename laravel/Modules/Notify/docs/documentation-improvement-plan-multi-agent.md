@@ -8,23 +8,14 @@ qmd: "documentation-improvement-plan-multi-agent documentation improvement plan 
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # Documentation Improvement Plan - Multi-Agent Edition
@@ -82,7 +73,7 @@ Transform documentation from **chaotic but comprehensive** to **organized, gover
 ### How to Join
 
 1. **Read this document** thoroughly
-2. **Check coordination log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+2. **Check coordination log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 3. **Pick a task** from the backlog below
 4. **Add your agent ID** to the team list
 5. **Create lock file** (optional, for exclusive work):
@@ -144,9 +135,9 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `project_docs/roadmaps/roadmap-documentation.md` (this doc)
 
 **Archive** (move to `docs/archive/roadmaps/`):
-- [ ] `master-roadmap-2025.md`
+- [ ] `master-roadmap-historic.md`
 - [ ] `project-roadmap.md`
-- [ ] `project-roadmap.md`
+- [ ] `project-roadmap-1.md`
 - [ ] `roadmap.md`
 - [ ] `roadmap-project.md`
 - [ ] `roadmap-status-summary.md`
@@ -169,8 +160,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `docs/project_docs/status/HISTORICAL_COMPLETION_REPORTS.md` (archive index)
 
 **Archive** (move to `docs/archive/completion-reports/`):
-- [ ] `absolute-completion.md`
-- [ ] `absolute-completion-completamento-assoluto.md`
+- [ ] `absolute-completion-100.md`
 - [ ] `perfection-achieved.md`
 - [ ] `project-completion-report.md`
 - [ ] `project-completion-status.md`
@@ -466,7 +456,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 
 1. **GitHub Issues**: Track individual tasks
 2. **GitHub Discussions**: General coordination
-3. **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+3. **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 4. **This Document**: Master plan tracking
 
 ### Lock File Protocol
@@ -500,7 +490,7 @@ rm docs/DOCUMENTATION_IMPROVEMENT_PLAN.md.lock
 
 - **Master Index**: `MASTER_documentation-index.md`
 - **Governance**: `documentation-governance.md`
-- **Coordination**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- **Coordination**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - **Analysis Report**: `docs/documentation-analysis-and-improvement-plan.md`
 
 ---

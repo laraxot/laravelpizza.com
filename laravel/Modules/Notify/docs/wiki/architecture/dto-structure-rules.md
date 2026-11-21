@@ -16,10 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-  - ../../conventions/README.md
-  - ../../rules/README.md
-  - ../../best-practices/naming-conventions.md
-status: draft
 ---
 # Regole per la Struttura dei DTO
 

@@ -1,12 +1,10 @@
 ---
 title: "Roadmap overview (Module Activity)"
+qmd: "activity roadmap 00 overview md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "roadmap overview (module activity) activity"
-status: superseded
-superseded_by: overview.md
+tags: [documentation]
 ---
+
 # Roadmap overview (Module Activity)
 
 ## Scope

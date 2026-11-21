@@ -876,8 +876,8 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ## 📚 TUTTA LA DOCUMENTAZIONE
 
 ### 📊 Reports & Analysis
-- **[Master Roadmap Index](./roadmap-master-index.md)** ⭐ START HERE
-- **[Project Analysis & Roadmap](./project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
+- **[Master Roadmap Index](../../roadmap-master-index.md)** ⭐ START HERE
+- **[Project Analysis & Roadmap](../../project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
 - **[Master Roadmap Index](../../roadmap-master-index.md)** ⭐ START HERE
 - **[Project Analysis & Roadmap](../../project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
 - **[Session Summary 2025-10-01](./phpstan/session-summary-.md.md)** ⭐ TECHNICAL
@@ -914,7 +914,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 ### 📖 Main Docs
 - [Index Principale](./index.md)
-- [PHPStan Analysis](./phpstan/phpstan.md)
+- [PHPStan Analysis](../../phpstan.md)
 
 ---
 
@@ -13104,7 +13104,7 @@ class TemplatePreview extends Component
 ---
 
 ### 2. 📖 Documento Originale Completo
-📄 **File:** [analisi-metodi-duplicati.md](./analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 
 **Contenuto:**
@@ -13124,43 +13124,43 @@ class TemplatePreview extends Component
 ### Moduli Core
 
 #### Xot (Modulo Base)
-📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../Modules/Xot/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 80 LOC, 87% riduzione possibile  
 🎯 **Priorità:** ALTA - Implementare XotBaseModel qui  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md) (dettagli Filament methods)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Xot/docs/metodi_duplicati_analisi.md) (dettagli Filament methods)
 
 ---
 
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
-📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
 ⚠️ **Note:** Testing intensivo necessario (auth)
 
 #### App (Gestione Segnalazioni)
-📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../Modules/App/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 72 LOC, 79% riduzione  
 🎯 **Priorità:** ALTA - Business core  
 ⚠️ **Note:** Usa SoftDeletes (trait specifico da mantenere)  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/App/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/App/docs/metodi_duplicati_analisi.md)
 #### <nome progetto> (Gestione Segnalazioni)
 📄 **File:** [../Modules/<nome progetto>/docs/analisi-metodi-duplicati.md](../Modules/<nome progetto>/docs/analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 72 LOC, 79% riduzione  
 🎯 **Priorità:** ALTA - Business core  
 ⚠️ **Note:** Usa SoftDeletes (trait specifico da mantenere)  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/<nome progetto>/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/<nome progetto>/docs/metodi_duplicati_analisi.md)
 
 #### Cms (Content Management)
-📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../Modules/Cms/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 86% riduzione  
 🎯 **Priorità:** MEDIA - Gestisce temi  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/Cms/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Cms/docs/metodi_duplicati_analisi.md)
 
 ---
 
@@ -13171,27 +13171,27 @@ class TemplatePreview extends Component
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 85% riduzione  
 🎯 **Priorità:** BASSA - Semplice  
 ✅ **Candidato:** Primo per migration test  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/Activity/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Activity/docs/metodi_duplicati_analisi.md)
 
 #### Comment (Commenti)
 📄 **File:** (da creare)  
 📊 **Dati:** 7 proprietà duplicate, 65 LOC, 80% riduzione  
 🎯 **Priorità:** BASSA - Più semplice  
 ✅ **Candidato:** PRIMO per migration (meno rischi)  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Comment/docs/metodi_duplicati_analisi.md)
 
 #### Blog (Blog Engine)
 📄 **File:** (da creare)  
 📊 **Dati:** 8 proprietà duplicate, 76 LOC, 85% riduzione  
 🎯 **Priorità:** MEDIA  
 ⚠️ **Note:** Usa InteractsWithMedia trait  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/Blog/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Blog/docs/metodi_duplicati_analisi.md)
 
 #### AI (Artificial Intelligence)
 📄 **File:** (da creare)  
 📊 **Dati:** TBD  
 🎯 **Priorità:** BASSA  
-📝 **Alternative:** [METODI_DUPLICATI_ANALISI.md](../Modules/AI/docs/METODI_DUPLICATI_ANALISI.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/AI/docs/metodi_duplicati_analisi.md)
 
 ---
 
@@ -13215,14 +13215,14 @@ class TemplatePreview extends Component
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
-📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
-📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
@@ -13234,9 +13234,9 @@ class TemplatePreview extends Component
 
 ### Per Developer che Inizia il Refactoring
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-MASTER.md) - Leggere TUTTO (2-3 ore)
-2. 📖 [Xot Module](../Modules/Xot/docs/analisi-metodi-duplicati.md) - Capire modulo base
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
-3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md) - Primo test migration
+2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
+3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi_duplicati_analisi.md) - Primo test migration
 4. 🚀 Iniziare implementazione seguendo MASTER guide
 
 ### Per Project Manager / Stakeholder
@@ -13248,9 +13248,9 @@ class TemplatePreview extends Component
 ### Per Tech Lead / Architect
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-MASTER.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-MASTER.md#script-utili) (30 min)
-3. 📖 [Xot Module - Dettagli](../Modules/Xot/docs/analisi-metodi-duplicati.md) (30 min)
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
-4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md) (1 ora)
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi_duplicati_analisi.md) (1 ora)
 5. 🎯 Architecture review e planning
 
 ### Per QA / Tester
@@ -13293,7 +13293,7 @@ class TemplatePreview extends Component
 **Target:** Tutti (START HERE!)  
 **Dettaglio:** 📊📊📊📊📊 Altissimo
 
-### 3. `METODI_DUPLICATI_ANALISI.md`
+### 3. `metodi_duplicati_analisi.md`
 **Scopo:** Focus su Filament methods (getTableColumns, getTableActions, ecc.)  
 **Target:** Filament developers  
 **Dettaglio:** 📊📊📊📊 Alto (specifico Filament)
@@ -13307,7 +13307,7 @@ class TemplatePreview extends Component
 
 ### "Voglio ridurre codice duplicato in Filament Resources"
 ➡️ [MASTER - Parte 2: Filament Methods](./analisi-metodi-duplicati-MASTER.md#parte-2-filament-methods---analisi-profonda)  
-➡️ [Xot METODI_DUPLICATI_ANALISI](../Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md)
+➡️ [Xot METODI_DUPLICATI_ANALISI](../Modules/Xot/docs/metodi_duplicati_analisi.md)
 
 ### "Voglio codice pronto da usare"
 ➡️ [MASTER - Parte 3: Implementazioni Concrete](./analisi-metodi-duplicati-MASTER.md#parte-3-implementazione-concreta-pronta-all-uso)
@@ -13511,7 +13511,7 @@ protected function casts(): array
 
 ### 2.1 Distribuzione ESATTA per Modulo
 
-**Dati Reali dai METODI_DUPLICATI_ANALISI.md:**
+**Dati Reali dai metodi_duplicati_analisi.md:**
 
 | Modulo | getTableColumns | getTableFilters | getTableActions | getTableBulkActions | getHeaderActions | TOTALE |
 |--------|-----------------|-----------------|-----------------|---------------------|------------------|--------|
@@ -14588,7 +14588,7 @@ related:
 ---
 
 ### 2. 📖 Documento Originale Completo
-📄 **File:** [analisi-metodi-duplicati.md](./analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 
 **Contenuto:**
@@ -14608,7 +14608,7 @@ related:
 ### Moduli Core
 
 #### Xot (Modulo Base)
-📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../Modules/Xot/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 80 LOC, 87% riduzione possibile  
 🎯 **Priorità:** ALTA - Implementare XotBaseModel qui  
 📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/Xot/docs/metodi-duplicati-analisi.md) (dettagli Filament methods)
@@ -14622,7 +14622,7 @@ related:
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
-📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
@@ -14636,7 +14636,7 @@ related:
 📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/<nome progetto>/docs/metodi-duplicati-analisi.md)
 
 #### Cms (Content Management)
-📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../Modules/Cms/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 86% riduzione  
 🎯 **Priorità:** MEDIA - Gestisce temi  
 📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/Cms/docs/metodi-duplicati-analisi.md)
@@ -14701,14 +14701,14 @@ related:
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
-📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
-📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
@@ -14720,7 +14720,7 @@ related:
 
 ### Per Developer che Inizia il Refactoring
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master.md) - Leggere TUTTO (2-3 ore)
-2. 📖 [Xot Module](../Modules/Xot/docs/analisi-metodi-duplicati.md) - Capire modulo base
+2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi.md) - Primo test migration
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi.md) - Primo test migration
@@ -14735,7 +14735,7 @@ related:
 ### Per Tech Lead / Architect
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-master.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-master.md#script-utili) (30 min)
-3. 📖 [Xot Module - Dettagli](../Modules/Xot/docs/analisi-metodi-duplicati.md) (30 min)
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi.md) (1 ora)
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi.md) (1 ora)

@@ -1,3 +1,10 @@
+---
+title: "Advanced Analytics - Activity"
+qmd: "activity tasks features advanced analytics md"
+type: note
+tags: [documentation]
+---
+
 # Advanced Analytics - Activity
 
 **Task ID**: ACTIVITY-FEATURE-008

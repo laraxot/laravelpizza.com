@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: componenti_header
 canonical: ../../../Themes/docs/shared-components/componenti-header.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/componenti-header.md

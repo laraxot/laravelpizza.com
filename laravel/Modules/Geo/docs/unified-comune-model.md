@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: unified-comune-model
 canonical: ../../../Themes/docs/shared-components/unified-comune-model-analysis.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/unified-comune-model-analysis.md

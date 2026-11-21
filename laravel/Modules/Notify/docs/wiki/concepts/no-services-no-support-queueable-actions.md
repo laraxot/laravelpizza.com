@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "No Services / No Support: QueueableAction only"
+title: "No Services / No Support — QueueableAction only"
 type: concept
 module: Notify
 tags: [notify, services, support, actions, queueable-action, migration]
@@ -17,10 +17,9 @@ related:
   - "./llm-wiki-governance.md"
   - "./method-name-homonyms.md"
   - "./module-root-uppercase-folders-archive.md"
-status: draft
 ---
 
-# Notify: Services/Support vietati: solo Actions
+# Notify — Services/Support vietati: solo Actions
 
 ## Regola
 

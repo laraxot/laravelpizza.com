@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Modules\Gdpr\Actions\Registration\HandleRegistrationErrorAction;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionMethod;
+
+uses(TestCase::class);
 
 test('HandleRegistrationErrorAction exposes execute for registration failure handling', function (): void {
     $action = new HandleRegistrationErrorAction;

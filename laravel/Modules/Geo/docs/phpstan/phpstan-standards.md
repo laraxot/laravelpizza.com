@@ -7,8 +7,6 @@ tags: [phpstan, geo, models, getOptions]
 created: 2026-06-10
 updated: 2026-06-10
 qmd: docs/wiki/phpstan-geo-module.md
-status: superseded
-superseded_by: ../phpstan-standards.md
 ---
 
 # PHPStan Level 10 Standards - Geo Module

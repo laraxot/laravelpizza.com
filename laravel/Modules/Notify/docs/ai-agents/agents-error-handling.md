@@ -91,9 +91,9 @@ try {
 ## 🔗 Link
 
 - [Indice AGENTS](./agents-split-index.md)
-- [phpstan.md](./phpstan.md) - Analisi statica
+- [phpstan.md](../phpstan.md) - Analisi statica
 - [AGENTS.md originale](../../AGENTS.md)
-- [agents.md originale](../../agents.md)
-- [AGENTS.md originale](../AGENTS.md)
-- [agents.md originale](../agents.md)
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../agents.md)
+- [AGENTS.md originale](../agents.md)
 - [Index principale](./index.md)

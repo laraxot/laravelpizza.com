@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "quality gate closure 2026 09 04.story"
 issues: []
 discussions: []
+date_originale_nome_file: 2026-09-04
 ---
 
 # Story: Quality-gate closure — Modules/Geo (2026-09-04)
@@ -87,7 +88,11 @@ oggi assenti.
 - `app/Models/Locality.php`
 - `app/Models/Policies/GeoBasePolicy.php`
 - `docs/coverage.md`
+<<<<<<<< HEAD:laravel/Modules/Geo/docs/stories/quality-gate-closure-.story.md
+- `docs/stories/quality-gate-closure-.story.md` (questo file)
+========
 - `docs/stories/quality-gate-closure.story.md` (questo file)
+>>>>>>>> 89a7b91a9c (pull moduli e sync):laravel/Modules/Geo/docs/stories/quality-gate-closure.story.md
 
 Non aggiunti (drift di sessioni concorrenti, non toccato da questa sessione): `app/Datas/RouteData.php`,
 `app/Datas/Routing/RouteData.php`, `app/Filament/Forms/Components/AddressInput.php`,

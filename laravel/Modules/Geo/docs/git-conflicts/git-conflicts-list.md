@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflicts list"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Git Conflicts Resolution Log
@@ -74,4 +73,12 @@ All conflicts are in the Geo module (`laravel/Modules/Geo/`):
 - [ ] Update any affected integration documentation
 
 ---
+title: "git conflicts list"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts list"
+issues: []
+discussions: []
 *Created: 2025-07-31T09:09:37+02:00*

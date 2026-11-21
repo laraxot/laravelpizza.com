@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "aws"
 related:
   - "./webm.md"
-status: draft
 ---
 # aws
 

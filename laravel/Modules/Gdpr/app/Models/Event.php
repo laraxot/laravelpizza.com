@@ -8,13 +8,16 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
 use Modules\Xot\Contracts\ProfileContract;
+use Safe\Exceptions\JsonException;
 
+use function Safe\json_decode;
 use function Safe\json_encode;
 
 /**
@@ -155,6 +158,9 @@ class Event extends BaseModel
         'consent_id',
         'subject_id',
         'payload',
+        // Senza 'ip' l'indirizzo passato a create() (anche dal form del pannello, dove e' obbligatorio) veniva
+        // scartato e l'insert falliva: la colonna e' NOT NULL. Si salva cifrato (setIpAttribute).
+        'ip',
     ];
 
     protected $table = 'gdpr_events';
@@ -172,8 +178,51 @@ class Event extends BaseModel
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
+    /** Inverso di setPayloadAttribute: decifra e restituisce il testo salvato (di solito JSON). */
+    public function getPayloadAttribute(?string $value): ?string
+    {
+        if ($value === null || $value === '') {
+            return $value;
+        }
+
+        try {
+            $decrypted = Crypt::decrypt($value);
+        } catch (DecryptException) {
+            return $value;
+        }
+        if (! is_string($decrypted)) {
+            return null;
+        }
+        try {
+            $decoded = json_decode($decrypted, true);
+        } catch (JsonException) {
+            return $decrypted;
+        }
+
+        return is_string($decoded) ? $decoded : $decrypted;
+    }
+
     public function setIpAttribute(?string $value): void
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
+    }
+
+    /**
+     * L'indirizzo si salva cifrato: senza questo accessor il pannello (elenco e dettaglio eventi) mostrava il testo
+     * cifrato. Un valore non decifrabile (chiave cambiata, riga vecchia in chiaro) si mostra com'e'.
+     */
+    public function getIpAttribute(?string $value): ?string
+    {
+        if ($value === null || $value === '') {
+            return $value;
+        }
+
+        try {
+            $decrypted = Crypt::decrypt($value);
+        } catch (DecryptException) {
+            return $value;
+        }
+
+        return is_string($decrypted) ? $decrypted : null;
     }
 }

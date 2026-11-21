@@ -7,12 +7,20 @@ updated: 2026-09-26
 qmd: "troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Troubleshooting iFlow CLI per PTVX
 
 ---
+
+title: "troubleshooting"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "troubleshooting"
+issues: []
+discussions: []
 ## Problemi Comuni
 
 Stessi problemi di Claude Code e Gemini. Vedi [Troubleshooting Claude](../claude/troubleshooting.md) per dettagli.

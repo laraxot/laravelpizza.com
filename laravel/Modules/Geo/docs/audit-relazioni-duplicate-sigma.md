@@ -12,7 +12,6 @@ tags:
   - relationships
   - dry
 date: 2026-06-15
-status: draft
 ---
 
 # Audit Metodi Relazioni Duplicate - Modulo Sigma

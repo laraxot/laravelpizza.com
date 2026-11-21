@@ -1,13 +1,12 @@
 ---
-qmd: "tech spec"
+qmd: "Tech Spec"
 issues: []
 discussions: []
-title: "Technical Specification - Lang Module"
+title: "Tech Spec"
 type: technical_spec
 tags: [tech spec, lang, implementation]
 created: 2026-08-04
 updated: 2026-08-04
-status: draft
 ---
 # Technical Specification - Lang Module
 

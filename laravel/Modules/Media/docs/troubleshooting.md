@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "troubleshooting"
 related:
   - "./webm.md"
-status: draft
 ---
 # Troubleshooting
 
@@ -19,13 +18,14 @@ status: draft
 <!-- Merged from TROUBLESHOOTING.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+title: "Troubleshooting Guide — Media Module"
 module: "Media"
 type: operations
 tags: [troubleshooting, errors, debugging]
 last_updated: 2026-07-28
 ---
 
-# Troubleshooting Guide: Media Module
+# Troubleshooting Guide — Media Module
 
 **Last updated:** 2026-07-28
 
@@ -558,6 +558,6 @@ Systematic error resolution for file upload, storage, processing, and permission
 
 ---
 
-**Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
+**Related:** [Patterns](./patterns.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
 ---
 # Troubleshooting

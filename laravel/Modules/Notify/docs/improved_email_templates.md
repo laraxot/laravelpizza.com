@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "improved email templates"
 issues: []
 discussions: []
-status: superseded
-superseded_by: improved-email-templates.md
 ---
 
 # Versione Migliorata: Filament Email Templates In-House

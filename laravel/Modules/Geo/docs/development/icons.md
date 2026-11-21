@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "icons"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Icone e SVG nei Moduli

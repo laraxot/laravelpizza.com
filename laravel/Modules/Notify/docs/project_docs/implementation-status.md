@@ -9,9 +9,9 @@ updated: 2026-07-14
 qmd: "implementation_status_2025-10-02 deprecated"
 status: deprecated
 related:
-  - "./2025-excellence-achievement.md"
+  - "./excellence-achievement.md"
   - "./agid-implementation-guide.md"
-  - "./ARCHITECTURE.md"
+  - "./architecture.md"
   - "./complete-refactoring-analysis.md"
   - "./documentation-status.md"
   - "./final-implementation-report-.md"

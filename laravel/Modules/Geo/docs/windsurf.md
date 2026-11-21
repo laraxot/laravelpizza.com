@@ -10,7 +10,6 @@ discussions: []
 description:
 globs:
 alwaysApply: false
-status: draft
 ---
 # Entità Geografiche - Windsurf
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "token efficiency"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Token Efficiency

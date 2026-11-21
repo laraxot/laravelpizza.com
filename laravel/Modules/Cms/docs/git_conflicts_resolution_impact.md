@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflicts resolution impact"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Impatto Risoluzione Conflitti Git - Modulo Cms
@@ -158,14 +157,14 @@ php artisan lang:check
 ## Documentazione Correlata
 
 ### Moduli Correlati
-- [Geo Conflict Resolution](../../Geo/docs/conflict-resolution.md)
-- [User Theme Conflicts](../../User/docs/theme-translation-conflicts-resolution.md)
+- [Geo Conflict Resolution](../../geo/project_docs/conflict-resolution.md)
+- [User Theme Conflicts](../../user/project_docs/theme-translation-conflicts-resolution.md)
 - [Xot Git Conflicts](../../xot/project_docs/git-conflicts-resolution-2025-01-06.md)
 
 ### Documentazione Cms
 - [Content Management](content-management.md)
 - [Filament Integration](filament-integration.md)
-- [Architecture](frontoffice/architecture.md)
+- [Architecture](architecture.md)
 
 ## Note per Sviluppatori Cms
 
@@ -200,16 +199,25 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
-- [Geo Conflict Resolution](../../Geo/docs/conflict-resolution.md)
-- [User Theme Conflicts](../../User/docs/theme-translation-conflicts-resolution.md)
+- [Geo Conflict Resolution](../../geo/project_docs/conflict-resolution.md)
+- [User Theme Conflicts](../../user/project_docs/theme-translation-conflicts-resolution.md)
 - [Xot Git Conflicts](../../xot/project_docs/git-conflicts-resolution-2025-01-06.md)
 
 ### Documentazione Cms
 - [Content Management](content-management.md)
 - [Filament Integration](filament-integration.md)
-- [Architecture](frontoffice/architecture.md)
+- [Architecture](architecture.md)
 
 ---
+
+title: "git conflicts resolution impact"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts resolution impact"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "translation keys best practices"
 issues: []
 discussions: []
-status: superseded
-superseded_by: translation-keys-best-practices.md
 ---
 
 # Best Practices per le Chiavi di Traduzione

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database seeding"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Database Seeding - Moduli <nome modulo> e <nome progetto>
@@ -234,7 +233,7 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 
 ## Collegamenti e Riferimenti
 
-- [README BashScripts](../../../../bashscripts/README.md)
+- [README BashScripts](../bashscripts/README.md)
 - [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)
 - [Documentazione Modulo <nome modulo>](../laravel/Modules/<nome modulo>/docs/)
@@ -242,6 +241,15 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)
 
 ---
+
+title: "database seeding"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database seeding"
+issues: []
+discussions: []
 **Versione**: 2.0
 **Compatibilità**: Laravel 10+, Moduli <nome progetto>/<nome modulo>
 **Compatibilità**: Laravel 10+, Moduli <nome progetto>/<nome progetto>

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "readme.es"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 <div align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup.png" alt="Laraxot PTVX" width="350"/>
@@ -58,10 +56,10 @@ status: draft
 
 ## 📚 Estructura del Proyecto
 
-- `laravel/Modules/`: Toda la lógica de negocio, agrupada por módulo
-- `laravel/Themes/`: Assets frontend tematizables
-- `laravel/project_docs/`: Documentación core y de los módulos
-- `docs/`: Documentación de proyecto, workflows y traducciones
+- `laravel/Modules/` — Toda la lógica de negocio, agrupada por módulo
+- `laravel/Themes/` — Assets frontend tematizables
+- `laravel/project_docs/` — Documentación core y de los módulos
+- `docs/` — Documentación de proyecto, workflows y traducciones
 
 ---
 
@@ -79,7 +77,7 @@ status: draft
 
 ## 📚 Documentación
 
-- [Índice del Proyecto](../INDEX.md)
+- [Índice del Proyecto](../index.md)
 - [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
 - [Panorama de los Módulos](../MODULES.md)
 - [Arquitectura](architecture.md)

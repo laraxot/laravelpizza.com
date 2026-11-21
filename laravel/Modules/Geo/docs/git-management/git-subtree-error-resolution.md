@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git subtree error resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 Gestione Errori Git Subtree
@@ -245,6 +244,15 @@ fi
 - [Git Subtree vs Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 ---
+
+title: "git subtree error resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git subtree error resolution"
+issues: []
+discussions: []
 <div align="center">
   <sub>Built with ❤️ by the development team</sub>
 </div>

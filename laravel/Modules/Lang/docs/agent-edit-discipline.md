@@ -4,10 +4,9 @@ created: 2026-09-26
 qmd: "agent edit discipline"
 issues: []
 discussions: []
-title: agent edit discipline: puntatore
+title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-21
-status: draft
 ---
 
 # Disciplina edit e qualità (puntatore)

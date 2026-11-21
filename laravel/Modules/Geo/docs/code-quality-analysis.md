@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "code quality analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🌍 Geo Module - Code Quality Analysis Report
@@ -114,6 +113,15 @@ PHPStan analysis was blocked by a syntax error in the Cms module, but PHPMD anal
 4. **Update Documentation**: Document the improvements and patterns
 
 ---
+
+title: "code quality analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality analysis"
+issues: []
+discussions: []
 **Report Generated**: 2025-11-11
 **Next Review**: After fixing Cms module syntax error
 **Target Completion**: 2025-11-20

@@ -1,17 +1,16 @@
 ---
 issues: []
 discussions: []
-title: "Quality Report: Tenant"
+title: "Quality Report — Tenant"
 type: report
 tags: [quality, phpstan, pest, coverage]
 module: Tenant
 created: 2026-08-24
 updated: 2026-08-24
 qmd: "Tenant quality report phpstan pest coverage test ratio"
-status: draft
 ---
 
-# Quality Report: Tenant
+# Quality Report — Tenant
 
 Aggiornato: 2026-08-24. Rigenera con: `bashscripts/tools/quality-report.sh Tenant`
 

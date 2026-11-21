@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Modules\Gdpr\Models\BaseModel;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 function makeGdprBaseModel(): BaseModel
 {

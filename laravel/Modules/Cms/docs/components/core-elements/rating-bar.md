@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "rating bar"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Rating Bar

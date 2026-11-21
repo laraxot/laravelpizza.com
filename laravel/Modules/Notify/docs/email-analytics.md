@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email analytics"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analytics Email - il progetto

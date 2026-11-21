@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit;
 
+<<<<<<< .merge_file_7XFpoX
+=======
+use Modules\Geo\Actions\FilterCoordinatesAction;
+>>>>>>> .merge_file_Nd9yDG
 use Modules\Geo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -345,12 +349,16 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates proximity search radius', function () {
-            $searchRadius = 10;
-            $maxReasonableRadius = 100;
-            $minReasonableRadius = 0.1;
+            $milan = ['latitude' => 45.4642, 'longitude' => 9.19];
+            $action = new FilterCoordinatesAction;
 
-            Assert::assertGreaterThan($minReasonableRadius, $searchRadius);
-            Assert::assertLessThan($maxReasonableRadius, $searchRadius);
+            $nearby = $action->execute([$milan], 45.4642, 9.19, 10.0);
+            Assert::assertCount(1, $nearby);
+
+            expect(fn () => $action->execute([$milan], 45.4642, 9.19, 0.0))
+                ->toThrow(\InvalidArgumentException::class)
+                ->and(fn () => $action->execute([$milan], 45.4642, 9.19, 20000.0))
+                ->toThrow(\InvalidArgumentException::class);
         });
     });
 

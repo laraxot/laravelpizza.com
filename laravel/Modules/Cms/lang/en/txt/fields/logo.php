@@ -8,8 +8,8 @@ declare(strict_types=1);
 // Cms txt.fields.logo — LangServiceProvider SSoT.
 return [
     'label' => 'Logo',
-    'placeholder' => 'Carica logo aziendale',
-    'helper_text' => 'Logo rappresentativo dell\'azienda o brand',
+    'placeholder' => 'Upload company logo',
+    'helper_text' => 'Logo representing the company or brand',
     'tooltip' => '',
     'description' => '',
 ];

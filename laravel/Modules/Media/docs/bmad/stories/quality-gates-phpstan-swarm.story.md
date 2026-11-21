@@ -11,12 +11,10 @@ created: 2026-09-23
 updated: 2026-09-23
 tags: [bmad, story, phpstan, quality-gate, media, phpstan-swarm]
 related:
-  - ./cleanup-media.story.md
+  - ./cleanup-media-2026-09-22.story.md
   - ../../stories/01.Media-phpstan-fix.story.md
-  - ../../stories/media-phpstan-swarm-pest-uses-group.story.md
-  - ../../stories/media-quality-gate.story.md
-type: story
-qmd: "phpstan swarm 2026-09-23: verifica modules/media media"
+  - ../../stories/media-phpstan-swarm-2026-09-15-pest-uses-group.story.md
+  - ../../stories/media-quality-gate-2026-09-04.story.md
 ---
 
 # PHPStan swarm 2026-09-23: verifica Modules/Media
@@ -80,7 +78,7 @@ Nessuna modifica al codice o ai file del modulo in questo intervento.
 Nulla nello scope PHPStan. Fuori scope (non toccato, per policy del
 coordinatore): eventuali file `docs/**` con marker di conflitto residui
 segnalati da story precedenti (`readme-changelog-conflict-markers.story.md`,
-`media-docs-conflict-marker-cleanup.story.md`): non riguardano
+`media-docs-conflict-marker-cleanup-2026-09-22.story.md`) — non riguardano
 PHPStan e non sono stati riverificati in questo task.
 
 ## Verifica reale finale

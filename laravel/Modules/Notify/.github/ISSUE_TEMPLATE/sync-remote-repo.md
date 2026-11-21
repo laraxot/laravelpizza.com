@@ -121,7 +121,7 @@ ls -la bashscripts/git/subtrees/sync_remote_repo.sh
 ## 📚 Related Documentation
 
 - [ ] I've read `bashscripts/docs/git/sync-remote-repo-guide.md`
-- [ ] I've checked `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- [ ] I've checked `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - [ ] I've searched existing issues
 
 ## 🔗 Related Issues/PRs

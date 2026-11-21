@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/width.php
 // Cms txt.fields.width — LangServiceProvider SSoT.
 return [
-    'label' => 'Larghezza',
+    'label' => 'Width',
     'placeholder' => '100%, 500px, auto',
-    'helper_text' => 'Larghezza dell\'elemento in pixel, percentuale o auto',
+    'helper_text' => 'Element width in pixels, percentage or auto',
     'tooltip' => '',
     'description' => '',
 ];

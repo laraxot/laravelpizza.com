@@ -1,5 +1,5 @@
 ---
-title: "Audit traduzioni .navigation: modulo Media"
+title: "Audit traduzioni .navigation — modulo Media"
 type: story
 module: Media
 epic: quality
@@ -14,11 +14,9 @@ related:
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md
 issues: []
 discussions: []
-tags: [docs, media, bmad]
-qmd: "audit traduzioni `.navigation`   modulo media media"
 ---
 
-# Audit traduzioni `.navigation`: modulo Media
+# Audit traduzioni `.navigation` — modulo Media
 
 Task utente 2026-09-29: trovare tutti i file di traduzione con la sottostringa
 `.navigation` o una chiave `'navigation'`, completare/migliorare per ogni
@@ -49,4 +47,4 @@ add_attachment_action.php`: `navigation.label` da inglese non tradotto
 
 Confermato: `qmd://concepts/translation-discipline-rule.md`. Pattern nuovo
 scoperto (falso positivo euristica case-insensitive su valori Title Case) da
-consolidare in una memoria Xot condivisa: vedi sintesi cross-modulo §6.
+consolidare in una memoria Xot condivisa — vedi sintesi cross-modulo §6.

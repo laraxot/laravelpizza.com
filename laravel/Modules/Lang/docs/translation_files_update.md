@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "readme.es 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: translation-files-update-2025.md
 ---
 # Aggiornamento File di Traduzione - Gennaio 2025
 

@@ -20,7 +20,7 @@ LaravelPizza is a modular meetup/community platform built on Laravel + Filament 
 
 - [Overview](./overview.md)
 - [Workflow](./workflow.md)
-- [PHPStan](./phpstan.md)
+- [PHPStan](../phpstan.md)
 - [Filament](./filament.md)
 - [MCP](./mcp.md)
 - [Chaos Monkey Readiness](./chaos-monkey-readiness.md)

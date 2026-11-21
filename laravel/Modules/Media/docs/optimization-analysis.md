@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "optimization analysis"
 related:
   - "./webm.md"
-status: draft
 ---
 # Analisi di Ottimizzazione - Modulo Media
 

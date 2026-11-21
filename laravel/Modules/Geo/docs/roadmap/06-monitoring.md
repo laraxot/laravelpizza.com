@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "06 monitoring"
 issues: []
 discussions: []
-status: draft
 ---
 
 

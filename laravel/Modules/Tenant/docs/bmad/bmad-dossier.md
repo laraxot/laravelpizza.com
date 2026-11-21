@@ -1,5 +1,5 @@
 ---
-title: "Tenant: BMAD dossier"
+title: "Tenant — BMAD dossier"
 type: bmad-dossier
 module: Tenant
 updated: 2026-10-07
@@ -7,9 +7,8 @@ tags: [bmad, tenant, isolation]
 qmd: "Tenant module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
-status: draft
 ---
-# Tenant: BMAD dossier
+# Tenant — BMAD dossier
 ## Product brief / PRD
 Isolate municipality identity, content, policies and provider configuration.
 ## Architecture / UX / security

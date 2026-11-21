@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_DQ9Qbm
 # 📚 **Indice Documentazione Modulo Activity**
 ---
 title: Activity Module - Documentation Index
@@ -48,6 +49,8 @@ updated: 2026-07-23
 | QUERY_OPTIMIZATION_ANALYSIS.md | Query optimization |
 
 # 📚 **Indice Documentazione Modulo Activity**
+=======
+>>>>>>> .merge_file_V8Scqn
 ---
 title: "**Indice Documentazione Modulo Activity**"
 type: index
@@ -57,6 +60,7 @@ qmd: "**indice documentazione modulo activity** activity"
 status: stale
 ---
 
+<<<<<<< .merge_file_DQ9Qbm
 > Nota 2026-10-14 (docs-audit): Copia con contenuto raddoppiato di 00-INDEX.md (varianti di sola maiuscola) con link a file inesistenti; l'indice canonico e' 00-INDEX.md. Contenuto non riscritto, verificare prima di usarlo.
 
 # 📚 **Indice Documentazione Modulo Activity**
@@ -161,6 +165,10 @@ status: stale
 // Pattern di utilizzo
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
+=======
+> Nota 2026-10-14 (docs-audit): Copia con contenuto raddoppiato di 00-index.md (varianti di sola maiuscola) con link a file inesistenti; l'indice canonico e' 00-index.md. Contenuto non riscritto, verificare prima di usarlo.
+
+>>>>>>> .merge_file_V8Scqn
 app(LogActivityAction::class)->execute(
     type: 'user.login',
     user: $user,
@@ -172,13 +180,18 @@ app(LogActivityAction::class)->execute(
 
 ## 📦 Pacchetti Composer
 - [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
+<<<<<<< .merge_file_DQ9Qbm
+=======
+## 📦 Pacchetti Composer
+- [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
+>>>>>>> .merge_file_V8Scqn
 - `spatie/laravel-activitylog` - Audit trail
 - `spatie/laravel-event-sourcing` - Event sourcing, CQRS
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../xot/docs/readme.md) - Core framework.
-- [Tenant](../../tenant/docs/readme.md) - Isolamento dati per tenant.
-- [User](../../user/docs/readme.md) - Autenticazione e causer activity.
+- [Xot](../../Xot/docs/README.md) - Core framework.
+- [Tenant](../../Tenant/docs/README.md) - Isolamento dati per tenant.
+- [User](../../User/docs/readme.md) - Autenticazione e causer activity.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
@@ -284,6 +297,7 @@ Il modulo Activity serve da **riferimento** per compliance nativa:
 - Prima di modificare codice: ragionare, studiare i docs del modulo/tema, aggiornare docs/rules/memory/skills.
 - Riferimento globale: [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
 - Memory: [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
+<<<<<<< .merge_file_DQ9Qbm
 - Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
 - Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
 - Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
@@ -291,3 +305,6 @@ Il modulo Activity serve da **riferimento** per compliance nativa:
 ## Cosa manca per completare
 
 [completion-status.md](./completion-status.md): indicatori misurati, problemi noti e story aperte (2026-10-28).
+=======
+- Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+>>>>>>> .merge_file_V8Scqn

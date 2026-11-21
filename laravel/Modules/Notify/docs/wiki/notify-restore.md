@@ -9,7 +9,7 @@ updated: 2026-07-14
 qmd: "notify-restore-2026-04-21 deprecated"
 status: deprecated
 related:
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./bmad-method.md"
   - "./index.md"
   - "./log.md"

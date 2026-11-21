@@ -11,6 +11,7 @@ created: 2026-10-13
 updated: 2026-10-13
 qmd: "retention conservazione log rotazione laravel.log email negli errori exif foto gps prune minimizzazione art 5 lettera e"
 related: [dcp-112, dcp-140, dcp-142]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-141: quanto si conserva, per quanto, e che cosa finisce nei log

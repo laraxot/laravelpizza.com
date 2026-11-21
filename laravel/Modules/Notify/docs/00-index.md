@@ -34,7 +34,7 @@ status: draft
 - 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Analysis](./phpstan-fixes.md)** - Report di conformità Level 10.
+- ✅ **[PHPStan Analysis](./PHPSTAN-FIXES.md)** - Report di conformità Level 10.
 - 🚨 **[PHPStan Cluster 2026-03-10](./phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](./no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
@@ -48,6 +48,7 @@ status: draft
 - 🧾 **[SMS Actions consolidation decision](./wiki/decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
 
 ## 🧹 **Manutenzione**
+- 🔄 **[Services → Actions debt](./wiki/concepts/notify-services-support-to-actions.md)** · [services.md](./services.md) · [merge bootstrap story](./stories/phpstan-merge-bootstrap.story.md)
 - 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
 - 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
 

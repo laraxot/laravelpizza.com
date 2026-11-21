@@ -3,18 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕',
-    'subtitle' => 'Schließen Sie sich unserer wachsenden Community von Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
-    'submit' => 'Community jetzt beitreten',
-    'submitting' => 'Wir bereiten Ihren Ofen vor...',
-    'stats' => [
-        'active_developers' => 'Wachsende Community',
-        'monthly_meetups' => 'Kommende Events',
-        'community_support' => '24/7 Support',
+    'title' => 'Konto erstellen',
+    'subtitle' => 'Füllen Sie das Formular aus, um Ihr persönliches Konto zu erstellen.',
+    'submit' => 'Konto erstellen',
+    'submitting' => 'Ihr Konto wird erstellt...',
+    'register' => [
+        'submit' => 'Konto erstellen',
+        'submitting' => 'Ihr Konto wird erstellt...',
     ],
     'form' => [
-        'cta_title' => 'Erstelle dein KOSTENLOSES Konto',
-        'cta_subtitle' => 'Keine Kreditkarte erforderlich - 100% KOSTENLOS!',
+        'cta_title' => 'Konto erstellen',
+        'cta_subtitle' => 'Geben Sie Ihre Daten ein und akzeptieren Sie die erforderlichen Einwilligungen.',
         'terms_notice' => 'Mit der Registrierung akzeptierst du unsere AGB und Datenschutzerklärung',
         'first_name' => 'Vorname',
         'last_name' => 'Nachname',
@@ -25,24 +24,6 @@ return [
         'password_confirmation' => 'Passwort bestätigen',
         'submit' => 'Konto erstellen',
     ],
-    'benefits' => [
-        'community' => [
-            'title' => 'Entdecke die Entwickler-Community',
-            'description' => 'Verbinden Sie sich mit Laravel-Professionals und -Enthusiasten weltweit',
-            'cta' => 'KOSTENLOSER Zugang sofort nach Anmeldung',
-        ],
-        'tutorials' => [
-            'title' => 'Exklusive Tutorials & Workshops',
-            'description' => 'Priorisierter Zugang zu Premium-Inhalten und Schulungen',
-            'cta' => 'Exklusiven Zugang erhalten',
-        ],
-        'networking' => [
-            'title' => 'Networking & Karriere',
-            'description' => 'Kollaborationsmöglichkeiten und professionelles Wachstum',
-            'cta' => 'Werde von Top-Laravel-Unternehmen eingestellt',
-        ],
-    ],
-    'social_proof' => 'Werden Sie Teil der <nome progetto> Community',
     'fields' => [
         'first_name' => [
             'label' => 'Vorname',
@@ -87,9 +68,7 @@ return [
         'required_consents_description' => 'Um mit der Registrierung fortzufahren, müssen Sie die folgenden Bedingungen für die Verarbeitung Ihrer persönlichen Daten akzeptieren',
         'optional_consents' => 'Optionale Zustimmung',
         'optional_consents_description' => 'Diese Zustimmungen sind optional und beeinflussen Ihre Registrierung nicht. Sie können diese jederzeit in Ihrem Profil ändern.',
-        'trust_badges' => 'Vertrauenssiegel',
         'registration_form' => 'Registrierungsformular',
-        'benefits' => 'Vorteile',
     ],
     'consents' => [
         'title' => 'Datenschutz-Zustimmungen',
@@ -121,33 +100,11 @@ return [
     'already_registered' => 'Haben Sie bereits ein Konto?',
     'login' => 'Anmelden',
     'required_consent_missing' => 'Sie müssen alle erforderlichen Zustimmungen akzeptieren, um mit der Registrierung fortzufahren.',
-    'success' => 'Registrierung erfolgreich abgeschlossen! Ihr Konto wurde DSGVO-konform erstellt.',
+    'success' => 'Registrierung erfolgreich abgeschlossen.',
     'throttle' => 'Zu viele Registrierungsversuche. Versuchen Sie es in :seconds Sekunden erneut.',
-    'success_message' => 'Ihr Konto ist bereit. Wir haben Ihnen eine E-Mail gesendet: Öffnen Sie den Link, um Ihre Adresse zu bestätigen, bevor Sie eine Meldung senden.',
+    'success_message' => 'Ihr Konto ist bereit. Wir haben Ihnen eine E-Mail gesendet: Öffnen Sie den Link, um Ihre Adresse zu bestätigen.',
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
-    'clickbait' => [
-        'active_developers' => 'Aktive Entwickler',
-        'monthly_meetups' => 'Monatliche Meetups',
-        'community_support' => 'Community-Support',
-        'free_access' => 'KOSTENLOSER Zugriff sofort nach der Registrierung',
-        'worth_free' => 'Exklusiven Zugang erhalten',
-        'get_hired' => 'Wirst du von den besten Laravel-Unternehmen eingestellt',
-        'join_now' => 'JETZT beitreten, bevor die Registrierung schließt!',
-        'create_account' => 'Erstelle dein KOSTENLOSES Konto',
-        'no_card_required' => 'Keine Kreditkarte erforderlich - 100% KOSTENLOS für immer!',
-        'by_registering' => 'Durch die Registrierung stimmen Sie unseren Geschäftsbedingungen und der Datenschutzerklärung zu',
-    ],
-    'seo' => [
-        'description' => 'Werden Sie Teil der <nome progetto> Community für exklusive Meetups, Premium-Tutorials und Networking. Kostenloser Zugang zu Workshops und Community-Events.',
-        'laravel_meetup' => 'Laravel-Meetup',
-        'laravel_community' => 'Laravel-Community',
-        'php_developer_community' => 'PHP-Entwickler-Community',
-        'laravel_tutorials' => 'Laravel-Tutorials',
-        'laravel_workshops' => 'Laravel-Workshops',
-        'laravel_networking' => 'Laravel-Networking',
-        '<nome progetto>' => '<nome progetto>',
-    ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',

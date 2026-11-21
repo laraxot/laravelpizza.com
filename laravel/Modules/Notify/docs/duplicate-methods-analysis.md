@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "duplicate methods analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Metodi Duplicati - Modulo Notify
@@ -64,6 +63,15 @@ public function linkable(): void
 **Procedere con refactoring** - Alta confidenza e bassa complessità rendono questa ottimizzazione sicura.
 
 ---
+
+title: "duplicate methods analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods analysis"
+issues: []
+discussions: []
 ### 2. Metodo: `make`
 
 **Tipo Refactoring**: `Trait` | **Complessità**: 🟢 Low | **Confidenza**: ✅ 100%

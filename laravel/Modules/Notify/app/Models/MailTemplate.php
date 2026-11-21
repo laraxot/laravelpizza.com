@@ -112,7 +112,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
      * impostato a mano (es. `survey-pdf-44-invito` dalla scheda "Inviti" o dallo
      * script di migrazione) veniva silenziosamente sovrascritto col
      * subject-slug, e il lookup successivo `findForMailable()` non lo trovava più
-     * (story quaeris-send-invite-migrate-to-record-notification.md, Difetto 10).
+     * (story <nome progetto>-send-invite-migrate-to-record-notification.md, Difetto 10).
      * Con `preventOverwrite()` lo slug si genera solo se il campo è vuoto.
      */
     public function getSlugOptions(): SlugOptions

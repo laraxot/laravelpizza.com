@@ -42,7 +42,7 @@ discussions: []
 - ✅ .github/ISSUE_TEMPLATE/documentation-request.md
 
 ### 6. Indici
-- ✅ docs/MODULES_INDEX.md
+- ✅ docs/modules_index.md
 
 ## Struttura Standard
 

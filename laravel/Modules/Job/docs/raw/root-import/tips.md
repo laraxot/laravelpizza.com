@@ -1,13 +1,12 @@
 ---
 title: "tips"
-type: alias
-status: superseded
-canonical: "tips.md"
-qmd: "tips alias superseded"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "tips"
+issues: []
+discussions: []
 ---
 
-# tips
-
-Documento identico al canonico: [tips.md](../../tips.md).
-
-Canonico: `laravel/Modules/Job/docs/tips.md`. Qui non ci sono istruzioni: seguire il file collegato.
+https://dudi.dev/optimize-laravel-database-queries/

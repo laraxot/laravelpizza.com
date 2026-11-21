@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "charts complete guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📊 Charts & Visualizzazioni - Guida PTVX
@@ -15,6 +14,15 @@ status: draft
 > **DATA VISUALIZATION**: Sistema completo per grafici interattivi con esportazione avanzata.
 
 ---
+
+title: "charts complete guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "charts complete guide"
+issues: []
+discussions: []
 ## 🎯 **Panoramica Charts in PTVX**
 
 Il sistema di visualizzazione dati PTVX integra:

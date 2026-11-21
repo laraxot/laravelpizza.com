@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "folio localization architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Folio + Laravel Localization Architecture

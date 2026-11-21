@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "agents gsd bmad"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 GSD + BMAD Workflow
@@ -17,6 +16,15 @@ status: draft
 **Stato**: ✅ IMPLEMENTATO
 
 ---
+
+title: "agents gsd bmad"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents gsd bmad"
+issues: []
+discussions: []
 ## 🎯 GSD (Get Shit Done)
 
 ### Comandi Principali
@@ -135,7 +143,7 @@ docs/project/
 - [ ] **1. Leggi Documentazione Esistente**
   - [ ] `docs/project/` per architettura
   - [ ] `.agents/docs/` per regole AI
-  - [ ] `QWEN.md`, `AGENTS.md` per contesto
+  - [ ] `qwen.md`, `AGENTS.md` per contesto
 
 - [ ] **2. Apri GitHub Issue**
   - [ ] Descrivi problema/feature
@@ -243,7 +251,7 @@ jobs:
 - `docs/project/gsd-and-bmad-workflow.md`
 - `docs/project/gsd-agent-coordination.md`
 - `AGENTS.md`
-- `QWEN.md`
+- `qwen.md`
 
 ### Risorse Esterne
 - [GSD GitHub](https://github.com/gsd-build/get-shit-done)

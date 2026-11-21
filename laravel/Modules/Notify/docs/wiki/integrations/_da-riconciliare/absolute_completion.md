@@ -8,8 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: absolute-completion-notify-completamento-assoluto.md
 ---
 
 # 🏆 NOTIFY - COMPLETAMENTO ASSOLUTO 100%

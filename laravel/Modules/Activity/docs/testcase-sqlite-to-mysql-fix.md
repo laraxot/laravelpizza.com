@@ -1,11 +1,10 @@
 ---
 title: "TestCase SQLite to MySQL Fix - Activity Module"
+qmd: "activity testcase sqlite to mysql fix md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "testcase sqlite to mysql fix - activity module activity"
+tags: [documentation]
 ---
+
 # TestCase SQLite to MySQL Fix - Activity Module
 
 ## Problema Identificato

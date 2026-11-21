@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+use Modules\Cms\Tests\TestCase;
+
+uses(TestCase::class);
 
 it('GET /it/dashboard acceptable for unauthenticated (redirect/401/403)', function (): void {
     $res = $this->get('/it/dashboard');

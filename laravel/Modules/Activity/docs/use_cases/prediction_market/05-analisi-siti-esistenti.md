@@ -1,12 +1,10 @@
 ---
 title: "Analisi dei Principali <nome progetto>ion Market (2024-2025)"
+qmd: "activity use cases prediction market 05 analisi siti esistenti md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "analisi dei principali <nome progetto>ion market (2024-2025) activity"
-status: superseded
-superseded_by: analisi-siti-esistenti.md
+tags: [documentation]
 ---
+
 # Analisi dei Principali <nome progetto>ion Market (2024-2025)
 
 ## Polymarket

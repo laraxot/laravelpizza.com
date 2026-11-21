@@ -16,14 +16,14 @@ related:
   - ./livewire-widget-decision-log.md
   - ./livewire-widget-epics.md
   - ../stories/12.1.gdpr-owns-legal-pages.story.md
-  - ../../../User/docs/bmad/livewire-inventory.md
+  - ../../User/docs/bmad/livewire-inventory.md
 ---
 
 # Inventario: Livewire HTTP → Filament — modulo Gdpr
 
 **Solo documentazione. Nessun PHP toccato in questo audit.**
 
-Questo file è la SSoT del modulo Gdpr per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../../Cms/docs/bmad/livewire-inventory.md) e [Modules/User/docs/bmad/livewire-inventory.md](../../../User/docs/bmad/livewire-inventory.md).
+Questo file è la SSoT del modulo Gdpr per la campagna di conversione Livewire → Filament widget. Formato e metodo sono ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../Cms/docs/bmad/livewire-inventory.md) e [Modules/User/docs/bmad/livewire-inventory.md](../../User/docs/bmad/livewire-inventory.md).
 
 ## Metodo (codice, non assunzione)
 
@@ -79,8 +79,8 @@ Entrambi sono **già** Filament widget (cioè componenti Livewire nel senso Fila
 | Meccanismo | Dove si cerca | Esito |
 |---|---|---|
 | `@livewire(...)` / `<livewire:` nelle viste del modulo | `grep -rn "@livewire" Modules/Gdpr/resources/views` e `grep -rln "<livewire:"` | Zero hit in entrambi i casi |
-| Riferimenti ai due widget fuori dai test | `grep -rn 'RegisterWidget\|GdprConsentForm'` | I test Livewire restano in `Modules/Gdpr/tests/Feature/Auth/`. In produzione `RegisterWidget` è montato da `Themes/Sixteen/resources/views/components/pages/auth-register.blade.php` |
-| Pagina pubblica register | `Themes/Sixteen/resources/views/components/pages/auth-register.blade.php` | Monta `RegisterWidget`. Il JSON tenant `pages/auth/auth.register.json` è il blocco CMS dello slug `auth.register`. La pagina Folio User non monta più `UserForm` (classe inesistente). |
+| Riferimenti ai due widget fuori dai test | `grep -rn 'RegisterWidget\|GdprConsentForm' Modules app` | Solo test: `Modules/Gdpr/tests/Feature/Auth/RegisterPageTest.php:26` (`Livewire::test(RegisterWidget::class)`), `RegisterPageComprehensiveTest.php:7,340,345`, `RegisterFormValidationTest.php`, `RegistrationTest.php:26`. Nessun blade/provider/rotta di produzione li monta |
+| Pagina Folio register | `Modules/User/resources/views/pages/auth/register.blade.php:70` | Monta `@livewire(\Modules\Gdpr\Filament\Widgets\Auth\UserForm::class)` — **classe inesistente**: in `Modules/Gdpr/app/Filament/Widgets/Auth/` ci sono solo `RegisterWidget.php` e `GdprConsentForm.php`, nessun `UserForm`. Riferimento stantio, da correggere quando si interverrà sulla pagina register FO (fuori scope docs) |
 | Render hook nel chrome Filament | Lettura integrale di `Modules/Gdpr/app/Providers/Filament/AdminPanelProvider.php` | Nessun hook (solo asset CSS, righe 20-26) |
 | Rotta esplicita | `Modules/Gdpr/routes/web.php` (7 righe), `routes/api.php` (7 righe) | Entrambi solo commenti, nessuna rotta |
 | Pagina Folio/Volt del modulo | `ls Modules/Gdpr/resources/views/pages` | Cartella assente: nessuna rotta Folio contribuita da Gdpr |

@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/cta_color.php
 // Cms txt.fields.cta_color — LangServiceProvider SSoT.
 return [
-    'label' => 'Colore CTA',
-    'placeholder' => '#007BFF, blu, primary',
-    'helper_text' => 'Colore dei pulsanti call-to-action',
+    'label' => 'CTA color',
+    'placeholder' => '#007BFF, blue, primary',
+    'helper_text' => 'Color of the call-to-action buttons',
     'tooltip' => '',
     'description' => '',
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "boost rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 === boost rules ===
@@ -52,11 +51,20 @@ status: draft
 
 
 ---
+
+title: "boost rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "boost rules"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [GEMINI Index](INDEX.md): All Gemini guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [GEMINI Index](index.md): All Gemini guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../laravel/GEMINI.md](../../../../laravel/../../../../laravel/GEMINI.md): Original source
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
 

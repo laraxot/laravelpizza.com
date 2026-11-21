@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gestione dati geografici compendio"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Compendio sulla Gestione dei Dati Geografici in <main module>
@@ -213,6 +212,15 @@ Per facilitare la navigazione nella documentazione esistente, ecco una mappa org
 - [squire-integration.md](squire-integration.md) - Integrazione con Squire
 
 ---
+
+title: "gestione dati geografici compendio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gestione dati geografici compendio"
+issues: []
+discussions: []
 ## Conclusione
 
 La gestione dei dati geografici in <main module> presenta diverse strategie implementative, ognuna con vantaggi e svantaggi specifici. La scelta della strategia ottimale dipende dal caso d'uso specifico, dai requisiti di performance e dalle preferenze del team di sviluppo.

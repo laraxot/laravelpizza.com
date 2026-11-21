@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧭 Navigation Guide - Trova Quello Che Ti Serve
@@ -80,7 +79,7 @@ docs/
 ### Per Task
 - **Nuovo Modulo** → [Module Structure](../claude/module-structure.md#new-module)
 - **Fix Bug** → [Common Pitfalls](../claude/common-pitfalls.md), [Troubleshooting](../troubleshooting/)
-- **Code Review** → [Code Quality](../claude/code-quality.md), [Conventions](../development/conventions.md)
+- **Code Review** → [Code Quality](../claude/code-quality.md), [Conventions](../claude/conventions.md)
 - **Deploy** → [Development Tasks](../claude/development-tasks.md#deployment)
 
 ## 🔍 Ricerca Avanzata
@@ -120,6 +119,15 @@ docs/
 3. **Esempi** → [Patterns](../patterns/) o [Best Practices](../best-practices/)
 
 ---
+
+title: "guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "guide"
+issues: []
+discussions: []
 **💡 Suggerimento**: Usa [Quick Reference](../quick-reference/errors.md) per problemi urgenti!
 
 *Ultimo aggiornamento: Dicembre 2025*

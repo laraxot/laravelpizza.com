@@ -1,3 +1,10 @@
+---
+title: "Performance Optimization - Activity"
+qmd: "activity tasks refactoring performance optimization md"
+type: note
+tags: [documentation]
+---
+
 # Performance Optimization - Activity
 
 **Task ID**: ACTIVITY-REFACTOR-001

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "visual analysis report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Visual Analysis Report
@@ -15,6 +14,15 @@ status: draft
 **📊 Complete Visual Documentation Audit with Diagrams**
 
 ---
+
+title: "visual analysis report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "visual analysis report"
+issues: []
+discussions: []
 ## Executive Summary
 
 This project now has comprehensive visual documentation with:
@@ -254,7 +262,7 @@ MODULE INDEX        THEME INDEX      ARCHITECTURE
               ▼                ▼
         Individual            Individual
         Module Docs           Theme Docs
-        (00-INDEX.md)         (00-INDEX.md)
+        (00-index.md)         (00-index.md)
         (00-index.md)         (00-index.md)
         ├─ architecture/      ├─ architecture/
         ├─ guides/            ├─ guides/
@@ -338,14 +346,14 @@ VISUAL COMPONENTS
 METRIC                          STATUS      SCORE
 ────────────────────────────────────────────────────
 Module Documentation Completeness    ✅      100%
-├─ 00-INDEX.md                       ✅      19/19
+├─ 00-index.md                       ✅      19/19
 ├─ 00-index.md                       ✅      19/19
 ├─ Architecture files                ✅      19/19
 ├─ Guide files                       ✅      19/19
 └─ Reference files                   ✅      19/19
 
 Theme Documentation Completeness     ✅      100%
-├─ 00-INDEX.md                       ✅      2/2
+├─ 00-index.md                       ✅      2/2
 ├─ 00-index.md                       ✅      2/2
 ├─ Architecture files                ✅      2/2
 ├─ Guide files                       ✅      2/2
@@ -387,7 +395,7 @@ TASK: "Add a new content block"
     ▼
   docs/THEMES_DOCUMENTATION_INDEX.md
     ▼
-  laravel/Themes/Sixteen/docs/00-INDEX.md
+  laravel/Themes/Sixteen/docs/00-index.md
   laravel/Themes/Sixteen/docs/00-index.md
     ▼
   guides/adding-components.md
@@ -426,7 +434,7 @@ TASK: "Understand system architecture"
     ▼
   .github/copilot-instructions.md
     ▼
-  docs/ARCHITECTURE-DIAGRAMS.md
+  docs/architecture-diagrams.md
     ▼
   docs/DOCUMENTATION_ECOSYSTEM.md
     ▼
@@ -513,7 +521,7 @@ Memory Server
 | File | Purpose | Size | Lines |
 |------|---------|------|-------|
 | `.github/copilot-instructions.md` | Copilot guide | 12 KB | 409 |
-| `docs/ARCHITECTURE-DIAGRAMS.md` | System diagrams | 12.5 KB | 500+ |
+| `docs/architecture-diagrams.md` | System diagrams | 12.5 KB | 500+ |
 | `docs/MODULE_DOCS_INDEX.md` | Module hub | 25 KB | 800+ |
 | `docs/THEMES_DOCUMENTATION_INDEX.md` | Theme hub | 12.5 KB | 500+ |
 | `docs/DOCUMENTATION_ECOSYSTEM.md` | Complete map | 17 KB | 650+ |

@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Bug Fix: Duplicate Widget Instantiation in LanguageSwitcher
 
@@ -158,9 +156,6 @@ public function __construct()
 - [LanguageSwitcher Component](../app/View/Components/LanguageSwitcher.php)
 - [LanguageSwitcherWidget](../app/Filament/Widgets/LanguageSwitcherWidget.php)
 - [Widgets Documentation](./widgets.md)
-- [LanguageSwitcher Component](../../../app/View/Components/LanguageSwitcher.php)
-- [LanguageSwitcherWidget](../../../app/Filament/Widgets/LanguageSwitcherWidget.php)
-- [Widgets Documentation](../../widgets.md)
 - [Super Mucca Workflow](../../Xot/docs/super-mucca-workflow.md)
 - [Super Mucca Workflow](../../xot/docs/super-mucca-workflow.md)
 

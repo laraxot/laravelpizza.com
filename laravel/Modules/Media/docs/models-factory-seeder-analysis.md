@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "models factory seeder analysis"
 related:
   - "./webm.md"
-status: draft
 ---
 # Analisi Modelli, Factory e Seeder - Modulo Media
 

@@ -1,10 +1,10 @@
 ---
-title: "sync remote repo test report"
+title: "Sync Remote Repo Test Report"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo test report"
+qmd: "Sync Remote Repo Test Report"
 issues: []
 discussions: []
 ---
@@ -19,12 +19,12 @@ discussions: []
 
 ---
 
-title: "sync remote repo test report"
+title: "SYNC REMOTE REPO TEST REPORT"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo test report"
+qmd: "SYNC REMOTE REPO TEST REPORT"
 issues: []
 discussions: []
 ## Executive Summary
@@ -249,8 +249,8 @@ Same as above.
 
 ### Files Created
 
-- `docs/SYNC_REMOTE_REPO_TEST_PLAN.md` - Test plan
-- `docs/SYNC_REMOTE_REPO_TEST_REPORT.md` - This report
+- `docs/sync_remote_repo_test_plan.md` - Test plan
+- `docs/sync_remote_repo_test_report.md` - This report
 - `.github/ISSUE_TEMPLATE/sync-remote-repo.md` - Issue template
 - `.github/ISSUE_TEMPLATE/agent-coordination.md` - Coordination template
 

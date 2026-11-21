@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "removal christmasgreetingmailable"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Rimozione ChristmasGreetingMailable - Report Completo
@@ -195,5 +194,14 @@ Una sola classe (`SpatieEmail`) per tutte le email stagionali, non una per ogni 
 - [seasonal-email-templates.md](./seasonal-email-templates.md) - Guida completa template stagionali
 
 ---
+
+title: "removal christmasgreetingmailable"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "removal christmasgreetingmailable"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Genericity first, simplicity second, DRY always, KISS forever"*

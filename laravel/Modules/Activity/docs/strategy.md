@@ -1,11 +1,10 @@
 ---
 title: "Product Strategy: Activity Module"
+qmd: "activity strategy md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "product strategy: activity module activity"
+tags: [documentation]
 ---
+
 # Product Strategy: Activity Module
 
 ## 🌍 Market Context

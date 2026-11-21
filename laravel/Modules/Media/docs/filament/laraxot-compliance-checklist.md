@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "laraxot compliance checklist"
 related:
   - "./webm.md"
-status: draft
 ---
 # Checklist Conformità Laraxot - Modulo Media
 

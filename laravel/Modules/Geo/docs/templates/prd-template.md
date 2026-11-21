@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prd template"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PRD Template (Product Requirements Document)
@@ -22,6 +21,15 @@ status: draft
 > **Owner:** {Product Manager/Team}
 
 ---
+
+title: "prd template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prd template"
+issues: []
+discussions: []
 ## Executive Summary
 
 ### Panoramica Prodotto
@@ -385,11 +393,11 @@ status: draft
 
 ### Related Documents
 
-- [Product Roadmap](../product-roadmap.md)
-- [Product Strategy](../product-strategy.md)
+- [Product Roadmap](./product-roadmap.md)
+- [Product Strategy](./product-strategy.md)
 - [User Research](./user-research.md)
 - [Sprint Planning](./sprint-planning-meeting.md)
-- [Product Launch Plan](../product-launch-plan.md)
+- [Product Launch Plan](./product-launch-plan.md)
 - {Additional relevant documents}
 
 ### Glossary

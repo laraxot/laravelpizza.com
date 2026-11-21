@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "register page color system"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Register Page Color System

@@ -1,11 +1,7 @@
 ---
 type: decision-log
 title: "Decision Log — Cms Homepage Audit"
-links: {github_issue: "#500", discussion: "#501"}
-status: draft
-updated: 2026-10-08
-tags: [docs, cms]
-qmd: "decision log   cms homepage audit cms"
+links: {github_issue: #500, discussion: #501}
 ---
 # Decision Log — Cms Homepage Audit
 

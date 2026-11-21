@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "web design rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole di Web Design UI/UX

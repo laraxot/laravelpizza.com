@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "guidelines"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PTVX Architecture Guidelines

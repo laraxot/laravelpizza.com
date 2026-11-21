@@ -10,7 +10,6 @@ title: Configurazione Modulo
 description: Configurazione Modulo
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Configurazione Modulo {#configurazione modulo}

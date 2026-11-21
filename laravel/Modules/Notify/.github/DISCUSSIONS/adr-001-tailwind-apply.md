@@ -260,7 +260,7 @@ How will we know if this decision was correct?
 - #10 - Achieve HTML parity for homepage
 
 ### Related Docs
-- **Roadmap**: `.planning/ROADMAP.md`
+- **Roadmap**: `.planning/roadmap.md`
 - **Research**: `.planning/research/design-comuni-pages.md`
 - **Style Guide**: `Themes/Sixteen/docs/style-guide.md` (to be created)
 

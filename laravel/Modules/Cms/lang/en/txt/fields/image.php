@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/image.php
 // Cms txt.fields.image — LangServiceProvider SSoT.
 return [
-    'label' => 'Immagine',
-    'help' => 'Carica un\'immagine',
-    'placeholder' => 'Seleziona o carica immagine',
-    'helper_text' => 'Immagine principale associata al contenuto',
+    'label' => 'Image',
+    'help' => 'Upload an image',
+    'placeholder' => 'Select or upload image',
+    'helper_text' => 'Main image associated with the content',
     'tooltip' => '',
     'description' => '',
 ];

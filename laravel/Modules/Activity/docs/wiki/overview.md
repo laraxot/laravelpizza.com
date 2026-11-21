@@ -1,12 +1,10 @@
 ---
+qmd: "activity wiki overview md"
 title: "Wiki Overview"
 module: "Activity"
 type: overview
 created: "2026-04-15T08:28:40Z"
 updated: "2026-04-15T08:28:40Z"
-status: draft
-tags: [docs, activity, wiki]
-qmd: "activity wiki overview activity"
 ---
 
 # Activity Wiki Overview

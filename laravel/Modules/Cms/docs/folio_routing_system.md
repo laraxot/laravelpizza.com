@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "folio routing system"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Routing e Localizzazione con Laravel Folio + Volt
@@ -22,7 +21,7 @@ status: draft
 - [Gestione Route Folio](/laravel/modules/cms/project_docs/gestione-route-folio.md)
 - [Frontoffice Flow](/laravel/modules/cms/project_docs/frontoffice-flow.md)
 - [Volt Folio Structure](/laravel/modules/cms/project_docs/volt_folio_structure.md)
-- [Documentazione generale progetto](/project_docs/readme.md)
+- [Documentazione generale progetto](/project_docs/README.md)
 
 ## Panoramica
 

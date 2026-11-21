@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Best Practices per l'Utilizzo dei Componenti Filament
@@ -220,12 +219,12 @@ it('renders filament icon buttons for social links', function () {
 - [Best Practices Filament](https://filamentphp.com/docs/3.x/support/overview)
 
 ## Collegamenti Interni
-- [Guida ai Temi](/laravel/themes/one/docs/readme.md)
-- [Componenti UI](/laravel/modules/cms/docs/components/readme.md)
+- [Guida ai Temi](/laravel/themes/one/docs/README.md)
+- [Componenti UI](/laravel/Modules/Cms/docs/components/README.md)
 - [Testing Components](/laravel/modules/cms/docs/testing/components.md)
 
 ## Collegamenti tra versioni di filament-components.md
-* [filament-components.md](../../../User/docs/best-practices/filament-components.md)
+* [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
-* [filament-components.md](../filament-components.md)
+* [filament-components.md](laravel/modules/cms/docs/filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)

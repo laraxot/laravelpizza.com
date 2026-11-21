@@ -10,10 +10,9 @@ issues:
   - "https://github.com/provtv/module_media_fila5/issues/13"
 discussions:
   - "https://github.com/provtv/base_ptv_fila5/discussions/204"
-status: draft
 ---
 
-# Handoff: multi-org sync (STORY-003)
+# Handoff — multi-org sync (STORY-003)
 
 ## Scopo
 
@@ -37,7 +36,7 @@ Un tree dirty o un remote dietro/avanti **non** è sincronizzato, anche se l’a
 
 1. `cd` owner → `git remote -v` → fetch tutti → merge senza force → push tutti
 2. Dopo edit PHP: phpstan/phpmd/phpinsights scoped (prompt `02-gitmodules-sync.md`)
-3. Mai `git restore`: forward-only
+3. Mai `git restore` — forward-only
 4. UI: non reintrodurre `InteractiveMap` (dominio Geo)
 
 ## Note owner
@@ -48,7 +47,7 @@ Sync multi-org verificato (dirty tree + env S3/Intervention v4 nella sessione).
 
 - Remotes: `laraxot` + `provtv` (entrambi `git@github.com:.../module_media_fila5.git`), entrambi **reachable**.
 - Working tree già pulito al check (nessun commit locale da fare in questo giro).
-- `laraxot/dev`: **0 avanti / 0 dietro**: già allineato.
+- `laraxot/dev`: **0 avanti / 0 dietro** — già allineato.
 - `provtv/dev`: eravamo **3 commit avanti** (`688021b` merge da laraxot, `d0a6177`, `d7f0ecc` release 0.0.3-dev.10), merge-base presente (storia correlata, non unrelated) → `git push provtv dev` fast-forward `ee8c47f..688021b`, nessun conflitto.
 - Nessun merge/rebase necessario, nessuna risoluzione di conflitti.
 - Nota: una sessione precedente (2026-07-22 ~23:05, vedi `docs/chat/multi-agent-standing-coordination.md`) aveva segnalato Media come `DIVERGE`; al check odierno la situazione risultava già risolta/allineata (probabile fix di un'altra sessione nel frattempo).

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notification errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errori Comuni nelle Notifiche

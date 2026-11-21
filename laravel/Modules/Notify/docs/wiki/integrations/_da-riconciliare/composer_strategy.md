@@ -8,8 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: composer-strategy.md
 ---
 
 # 🎯 Laravel-Modules Composer Strategy
@@ -277,7 +275,7 @@ Composer vede:
 - [Composer Documentation](https://getcomposer.org/doc/)
 
 ### Project Documentation
-- [COMPOSER_STRATEGY.md](COMPOSER_STRATEGY.md) - Questo file
+- [COMPOSER_STRATEGY.md](composer_strategy.md) - Questo file
 - [MODULES_ARCHITECTURE.md](MODULES_ARCHITECTURE.md) - Architettura moduli
 
 ---

@@ -1,9 +1,8 @@
 ---
 title: "Data Models"
+qmd: "activity data models md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "data models activity"
+tags: [documentation]
 ---
+
 # Data Models

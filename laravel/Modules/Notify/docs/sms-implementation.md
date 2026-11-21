@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione SMS in Laravel

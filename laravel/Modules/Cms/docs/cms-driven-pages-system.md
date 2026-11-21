@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "cms driven pages system"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CMS-Driven Pages System

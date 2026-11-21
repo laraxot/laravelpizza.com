@@ -1,7 +1,7 @@
 ---
 type: note
 updated: 2026-09-26
-qmd: "schema"
+qmd: "Schema"
 issues: []
 discussions: []
 title: Wiki Schema
@@ -11,7 +11,6 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
-status: draft
 ---
 
 # Wiki Schema - Lang

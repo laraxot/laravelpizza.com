@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "repos"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../-integration/repos.md
 ---
 
 # _repos

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "routing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Routing e Pagine nel Modulo CMS

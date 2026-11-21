@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database mail system"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Gestione Email Basato su Database - il progetto
@@ -314,7 +313,6 @@ php artisan notify:mail-template:test
    - Monitorare tempi
 
 ## Collegamenti
-- [Notify Module](../readme.md)
 - [Notify Module](../README.md)
 - [Email Templates](email-templates.md)
 - [Mail Queue](mail-queue.md)

@@ -12,7 +12,7 @@ status: draft
 
 # Disciplina edit e qualità (puntatore)
 
-Stub **DRY**: policy nella wiki di progetto; discussione e ragionamenti in GitHub issue [#124](https://github.com/provtv/base_ptv_fila5_mono/issues/124).
+Stub **DRY**: policy nella wiki di progetto; discussione e ragionamenti in GitHub issue [#124](https://github.com/provtv/base_ptv_fila5/issues/124).
 
 ## Link operativi (relativi al repo)
 

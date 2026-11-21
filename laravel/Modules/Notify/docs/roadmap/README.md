@@ -16,7 +16,6 @@ related:
   - ../notifications/README.md
   - ../integrations/README.md
   - ../templates/README.md
-status: draft
 ---
 # Notify Module Roadmap
 

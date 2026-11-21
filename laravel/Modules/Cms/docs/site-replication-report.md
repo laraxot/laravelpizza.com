@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "site replication report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Site Replication Report: Marco Sottana TechPlanner
@@ -15,6 +14,15 @@ status: draft
 ## Status: COMPLETED
 
 ---
+
+title: "site replication report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "site replication report"
+issues: []
+discussions: []
 ## Objective
 
 Replicate the target website https://lightseagreen-dogfish-560272.hostingersite.com/ into our local Laravel environment at http://127.0.0.1:8000/it with improvements in SEO, GDPR compliance, and inbound marketing capabilities.

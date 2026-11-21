@@ -10,7 +10,6 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Log;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;
-use Modules\Cms\Tests\TestCase;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283NoHandleMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ProbeMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ReturnsNothingMiddleware;
@@ -20,8 +19,6 @@ use Monolog\Logger as Monolog;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-
-uses(TestCase::class);
 
 /*
  * DCP-283 (C-03): PageSlugMiddleware deve essere fail-closed. Una pagina la cui protezione non si riesce a determinare

@@ -8,10 +8,9 @@ type: report
 module: Tenant
 updated: 2026-09-01
 qmd: "cosa migliorare tenant phpstan phpmd phpinsights coverage debito priorita"
-status: draft
 ---
 
-# Cosa migliorare: modulo Tenant
+# Cosa migliorare — modulo Tenant
 
 Ogni affermazione qui sotto viene da un comando eseguito il 1 settembre 2026, dopo il
 ripristino di `vendor/` a 330 pacchetti. Le misure precedenti a quella data giravano su
@@ -23,9 +22,9 @@ un autoloader dimezzato e non valgono.
 |---|---:|
 | Errori PHPStan (modulo isolato) | 0 |
 | Rilievi PHPMD su `app/` | 4 |
-| PHPInsights: Code | 91.8 % |
-| PHPInsights: Architecture | 85.7 % |
-| PHPInsights: Style | 90.1 % |
+| PHPInsights — Code | 91.8 % |
+| PHPInsights — Architecture | 85.7 % |
+| PHPInsights — Style | 90.1 % |
 | File PHP | 141 |
 | Casi di test | 173 |
 | Casi di test per file | 1.23 |
@@ -56,5 +55,4 @@ php -r 'echo count(require "vendor/composer/autoload_classmap.php");'   # ~25358
 ```
 
 Quadro comparativo di tutte le unità: [`docs/quality-audit.md`](../../../../docs/quality-audit.md).
-Quadro comparativo di tutte le unità: [`docs/quality-audit.md`](quality-audit.md).
 

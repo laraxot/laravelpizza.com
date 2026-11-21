@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ux ui design"
 issues: []
 discussions: []
-status: draft
 ---
 
 # UX/UI Design: Un Approccio Olistico

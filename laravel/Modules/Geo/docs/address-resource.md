@@ -9,8 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: address-resource
-canonical: ../../../Themes/docs/shared-components/address-resource-risorsa-filament.md
-status: stub
+canonical: ../../../Themes/docs/shared-components/address-resource-1.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/address-resource-risorsa-filament.md
+See canonical documentation: ../../../Themes/docs/shared-components/address-resource-1.md

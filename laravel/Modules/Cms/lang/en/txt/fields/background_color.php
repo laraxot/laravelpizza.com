@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/background_color.php
 // Cms txt.fields.background_color — LangServiceProvider SSoT.
 return [
-    'label' => 'Colore di sfondo',
-    'help' => 'Seleziona un colore di sfondo',
-    'placeholder' => '#FFFFFF, bianco, transparent',
-    'helper_text' => 'Colore di sfondo dell\'elemento',
+    'label' => 'Background color',
+    'help' => 'Select a background color',
+    'placeholder' => '#FFFFFF, white, transparent',
+    'helper_text' => 'Element background color',
     'tooltip' => '',
     'description' => '',
 ];

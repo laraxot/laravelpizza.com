@@ -1,3 +1,10 @@
+---
+title: "Batch Processing - Activity"
+qmd: "activity tasks refactoring batch processing md"
+type: note
+tags: [documentation]
+---
+
 # Batch Processing - Activity
 
 **Task ID**: ACTIVITY-REFACTOR-002

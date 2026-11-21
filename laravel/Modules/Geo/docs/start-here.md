@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "start here"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎯 START HERE - PTVX Project Documentation
@@ -15,6 +14,15 @@ status: draft
 **Welcome!** This is your entry point to comprehensive PTVX documentation.
 
 ---
+
+title: "start here"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "start here"
+issues: []
+discussions: []
 ## 🚀 Quick Navigation (Choose Your Path)
 
 ### 👨‍💻 I'm a New Developer
@@ -22,7 +30,7 @@ status: draft
 **Read This**:
 1. **[📖 Root README](./README.md)** (10 min) - Project overview
 2. **[🏗️ Architecture Rules](./claude/architecture-rules.md)** (15 min) - ⚠️ MUST READ
-3. **[📝 Conventions](./development/conventions.md)** (10 min) - Coding standards
+3. **[📝 Conventions](./claude/conventions.md)** (10 min) - Coding standards
 4. **[🚫 Common Pitfalls](./claude/common-pitfalls.md)** (10 min) - Avoid these
 
 **Time**: 45 minutes → Ready to code!
@@ -32,7 +40,7 @@ status: draft
 ### 🔍 I Need to Understand the Code Quality Issues
 
 **Start Here**:
-1. **[✅ Analysis Complete](./raw/history/analysis-complete.md)** (5 min) - What was done
+1. **[✅ Analysis Complete](./ANALYSIS-COMPLETE.md)** (5 min) - What was done
 2. **[📊 IndennitaResponsabilita Analysis](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)** (15 min) - Key findings
 3. **[🔧 Rating Module Fix](../laravel/Modules/Rating/docs/schemaless-scope-fix.md)** (10 min) - What was fixed
 
@@ -45,7 +53,7 @@ status: draft
 **Your Guide**:
 1. **[📋 Refactoring Action Plan](../laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md)** (30 min) - Detailed tasks
 2. **[✅ Best Practices](../laravel/Modules/IndennitaResponsabilita/docs/best-practices.md)** (20 min) - How to implement
-3. **[🚀 Quick Start](../laravel/Modules/IndennitaResponsabilita/docs/QUICK-START.md)** (10 min) - Get started fast
+3. **[🚀 Quick Start](../laravel/Modules/IndennitaResponsabilita/docs/quick-start.md)** (10 min) - Get started fast
 
 **Time**: 60 minutes → Ready to refactor!
 
@@ -80,9 +88,9 @@ status: draft
 | Document | Topic | Time | Priority |
 |----------|-------|------|----------|
 | [Root README](./README.md) | Navigation hub | 10 min | 🔴 |
-| [Master Index](./raw/history/master-index.md) | Complete map | 5 min | 🔴 |
+| [Master Index](./MASTER-INDEX.md) | Complete map | 5 min | 🔴 |
 | [Claude Architecture](./claude/architecture-rules.md) | Core rules | 15 min | 🔴 |
-| [Analysis Complete](./raw/history/analysis-complete.md) | Recent work | 5 min | 🟡 |
+| [Analysis Complete](./ANALYSIS-COMPLETE.md) | Recent work | 5 min | 🟡 |
 
 ### Tier 2: Module Specific
 
@@ -99,7 +107,7 @@ status: draft
 | Code Quality | [Quality Analysis](../laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md) | Deep dive needed |
 | Testing | [Testing Guide](./testing/README.md) | Writing tests |
 | Performance | [Performance](./performance-optimization.md) | Optimization needed |
-| Security | [Security](./security.md) | Security review |
+| Security | [Security](./SECURITY.md) | Security review |
 
 ---
 
@@ -201,8 +209,8 @@ class MyPage extends Modules\Xot\Filament\Pages\XotBasePage { }
 
 | Category | Link |
 |----------|------|
-| **Master Index** | [Complete Map](./raw/history/master-index.md) |
-| **Analysis** | [Complete 2025](./raw/history/analysis-complete.md) |
+| **Master Index** | [Complete Map](./MASTER-INDEX.md) |
+| **Analysis** | [Complete 2025](./ANALYSIS-COMPLETE.md) |
 | **Claude AI** | [Guidelines](./claude/README.md) |
 | **Architecture** | [Rules](./claude/architecture-rules.md) |
 | **Module Index** | [All Modules](./claude/module-list.md) |
@@ -229,8 +237,8 @@ cat README-ANALYSIS.md
 
 ## 💡 Pro Tips
 
-1. **Use Master Index**: All docs are linked from [MASTER-INDEX.md](./raw/history/master-index.md)
-2. **Check Analysis First**: [ANALYSIS-COMPLETE.md](./raw/history/analysis-complete.md) has the summary
+1. **Use Master Index**: All docs are linked from [MASTER-INDEX.md](./MASTER-INDEX.md)
+2. **Check Analysis First**: [ANALYSIS-COMPLETE.md](./ANALYSIS-COMPLETE.md) has the summary
 3. **Follow Action Plan**: [Refactoring Plan](../laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) has step-by-step tasks
 4. **PHPStan is King**: Always run Level 10 before commit
 5. **Documentation Matters**: Update docs when you change code

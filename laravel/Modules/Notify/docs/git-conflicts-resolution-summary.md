@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflicts resolution summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Conflitti Git - Modulo Notify
@@ -81,4 +80,12 @@ Tutti i file risolti rispettano:
 - [Notification Channels](./notification_channels_implementation.md)
 
 ---
+title: "git conflicts resolution summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts resolution summary"
+issues: []
+discussions: []
 *Aggiornato automaticamente dopo risoluzione conflitti Git*

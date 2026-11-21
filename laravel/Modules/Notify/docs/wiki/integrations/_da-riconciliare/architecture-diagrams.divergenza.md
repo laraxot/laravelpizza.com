@@ -1,22 +1,21 @@
 ---
-qmd: "architecture diagrams.divergenza"
+qmd: "Architecture Diagrams.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: ARCHITECTURE-DIAGRAMS.md"
+title: "Architecture Diagrams.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Divergenza: `ARCHITECTURE-DIAGRAMS.md`
+# Divergenza: `architecture-diagrams.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/ARCHITECTURE-DIAGRAMS.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/architecture-diagrams.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/ARCHITECTURE-DIAGRAMS.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/ARCHITECTURE-DIAGRAMS.md`
+- versione del modulo: `laravel/Modules/Notify/docs/architecture-diagrams.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/architecture-diagrams.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

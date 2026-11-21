@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "semantic css"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎨 Semantic CSS - AI Agents Documentation
@@ -18,6 +17,15 @@ status: draft
 **Version**: 1.0
 
 ---
+
+title: "semantic css"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic css"
+issues: []
+discussions: []
 ## 🎯 Core Principle
 
 > **"Name classes based on what an element *is*, not what it *looks like*."**
@@ -104,13 +112,12 @@ class OutcomesTableWidget extends XotBaseTableWidget
 
 ### For Theme Developers
 
-- [TwentyOne Semantic CSS Guide](../../../../laravel/Themes/TwentyOne/docs/semantic-css-guide.md) - Theme-specific guide
-- [TwentyOne Semantic CSS Guide](../../../../../Themes/TwentyOne/docs/semantic-css-guide.md) - Theme-specific guide
+- [TwentyOne Semantic CSS Guide](../../../../laravel/Themes/TwentyOne/docs/SEMANTIC_CSS_GUIDE.md) - Theme-specific guide
 
 ### Rules & Enforcement
 
 - [Semantic CSS Rule](../../rules/frontend/semantic-css-rule.md) - **MANDATORY** rule
-- [Frontend Rules Index](../../rules/frontend/00-INDEX.md) - All frontend rules
+- [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
 - [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
 
 ---

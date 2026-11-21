@@ -3,7 +3,7 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "troubleshooting"
+qmd: "TROUBLESHOOTING"
 issues: []
 discussions: []
 title: Tenant Module Troubleshooting Guide
@@ -484,11 +484,13 @@ php artisan migrate --database=tenant_123
 
 ## Related Documentation
 
-- [Patterns](patterns.md): Design patterns to follow
-- [Architecture](bmad/architecture-tenant.md): System design
-- [README](README.md): Overview and usage
-- [API Reference](api.md): Model and service signatures
+- [Patterns](patterns.md) — Design patterns to follow
+- [Architecture](architecture.md) — System design
+- [README](README.md) — Overview and usage
+- [API Reference](api.md) — Model and service signatures
 
 ---
 
+Navigation: [Documentation Index](index.md) | [README](README.md) | [Patterns](patterns.md)
+---
 Navigation: [Documentation Index](index.md) | [README](README.md) | [Patterns](patterns.md)

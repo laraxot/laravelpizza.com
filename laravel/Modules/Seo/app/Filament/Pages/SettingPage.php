@@ -8,6 +8,7 @@ use Closure;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Modules\Seo\Datas\SeoConfigData;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\BaseSettingPage;
 
 /**
@@ -18,11 +19,16 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
-     * @return array<string, Repeater>
+     * @see Modules/Seo/docs/adr/search-engine-presence.md (indexnow_key)
+     *
+     * @return array<string, Repeater|TextInput>
      */
     protected function getFormSchema(): array
     {
         return [
+            'indexnow_key' => TextInput::make('indexnow_key')
+                ->maxLength(128)
+                ->regex('/^[A-Za-z0-9-]{8,128}$/'),
             'path_aliases' => Repeater::make('path_aliases')
                 ->schema([
                     TextInput::make('alias')
@@ -45,7 +51,7 @@ class SettingPage extends BaseSettingPage
     protected function pathAliasesRule(string $attribute, mixed $value, Closure $fail): void
     {
         if (SeoConfigData::from(['path_aliases' => $value])->hasRejectedAliases()) {
-            $fail(__('seo::setting.errors.path_aliases'));
+            $fail(SafeStringCastAction::cast(__('seo::setting.errors.path_aliases')));
         }
     }
 }

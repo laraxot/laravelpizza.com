@@ -8,6 +8,7 @@ qmd: "Activity module doctrine BMAD analysis purpose religion philosophy policy 
 related:
   - "../../Xot/docs/module.md"
   - "../../Tenant/docs/module.md"
+<<<<<<< .merge_file_BecSFV
 ---
 
 # Activity Module — Doctrine
@@ -65,12 +66,10 @@ Activity è una preoccupazione trasversale troppo complessa per essere distribui
 **Mantenere come-is.** Le preoccupazioni (activity, event sourcing) sono interconnesse. Separare sarebbe controproducente.
 
 ## Future Enhancements
+=======
+>>>>>>> .merge_file_0NeZBa
 status: draft
 ---
 
-1. **Real-time audit dashboard**: visualizzazione live
-2. **Compliance reporting**: report automatici
-3. **Anomaly detection**: identificazione attività sospette
-4. **Audit query API**: API per query
-5. **Data retention automation**: archiviazione/eliminazione automatica
-6. **User behavior analytics**: pattern di utilizzo
+**Versione**: v2.5.0-beta  
+**Stato**: Production Ready with Compliance Enhancement

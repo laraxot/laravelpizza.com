@@ -8,10 +8,7 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): Cita TrackNotificationEventAction, che non esiste in app/ (verificato 2026-10-14); il resto delle metriche non e' stato verificato. Contenuto non riscritto, verificare prima di usarlo.
 
 # Monitoraggio del Modulo Notify
 

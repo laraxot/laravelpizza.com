@@ -8,7 +8,6 @@ type: guideline
 module: Notify
 updated: 2026-09-01
 qmd: "tabella filament resource table class getTableFilters XotBaseResourceTable HasXotTable list page notify"
-status: draft
 ---
 
 # La tabella si configura nella Table class, non nella pagina
@@ -60,7 +59,7 @@ class non verrebbe mai eseguita. E' esattamente quello che succedeva fino al 1 s
 Si chiamano `getTableColumns()`, `getTableFilters()`, `getTableActions()`,
 `getTableBulkActions()`, `getTableHeaderActions()`, `getTableHeading()`,
 `getTableEmptyStateActions()`, `getTableFiltersLayout()`,
-`getTableRecordActionsPosition()`, e: sulla sola `XotBaseResourceTable` -
+`getTableRecordActionsPosition()`, e — sulla sola `XotBaseResourceTable` —
 `getTableSortColumn()` / `getTableSortDirection()`.
 
 **Il nome dell'hook decide quanta impalcatura serve.** Tre casi:
@@ -91,8 +90,8 @@ ripetuto a ogni riga.
 
 **`getXotTableFilters()` e i suoi fratelli non esistono piu'.** Erano nati per non
 collidere con i metodi omonimi e deprecati di `Filament\Resources\Pages\ListRecords`,
-quando il trait stava sulla pagina. Da quando sta solo su `XotBaseResourceTable`: che e'
-una classe normale, non una pagina Filament: la collisione non c'e' e il prefisso non ha
+quando il trait stava sulla pagina. Da quando sta solo su `XotBaseResourceTable` — che e'
+una classe normale, non una pagina Filament — la collisione non c'e' e il prefisso non ha
 piu' ragione di esistere.
 
 Il prefisso non era neutro: `table()` chiamava il nome prefissato mentre le sottoclassi
@@ -131,12 +130,12 @@ sbagliato.
 
 ## Storia, per non ripeterla
 
-- **19 agosto 2026**: rename da `getTableX()` a `getXotTableX()` per schivare la
+- **19 agosto 2026** — rename da `getTableX()` a `getXotTableX()` per schivare la
   deprecazione Filament. Fatto solo dentro `table()`: le sottoclassi restano al nome
   vecchio e diventano mute. `getTableColumns` fu l'unico salvato, con un adapter a
   reflection.
-- **1 settembre 2026**: segnalazione utente: i filtri non compaiono su
+- **1 settembre 2026** — segnalazione utente: i filtri non compaiono su
   `/indennitaresponsabilita/admin/scheda-dips`. La catena reale passava per
   `BaseListSchedas::getTableFilters()`, col nome vecchio.
-- **1 settembre 2026**: `use HasXotTable;` tolto da `XotBaseListRecords`, prefisso `Xot`
+- **1 settembre 2026** — `use HasXotTable;` tolto da `XotBaseListRecords`, prefisso `Xot`
   rimosso dai nomi, candidato per-Resource in `getTableClass()`, test di regressione.

@@ -10,13 +10,12 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
   - "./docs-governance.md"
-status: draft
 ---
 
 # 🤖 AI Agent Lessons Learned - 2026-03-13
@@ -37,7 +36,7 @@ Create GitHub Action to sync git subtrees automatically on push to `dev` branch.
 
 1. ✅ Created workflow file: `.github/workflows/sync-subtrees.yml`
 2. ✅ Created documentation: 3 files
-3. ✅ Updated agents.md
+3. ✅ Updated AGENTS.md
 4. ✅ Committed and pushed to dev
 5. ❌ **Did NOT verify on GitHub**
 6. ❌ **Marked task as complete without testing**
@@ -206,7 +205,7 @@ Documentation should reflect **reality**, not what we wish was true.
 |------|-------|--------|
 | 11:25 | Created workflow | ✅ Done |
 | 11:27 | Created docs | ✅ Done |
-| 11:28 | Updated agents.md | ✅ Done |
+| 11:28 | Updated AGENTS.md | ✅ Done |
 | 11:29 | Pushed to dev | ✅ Done |
 | 11:30 | Said "task complete" | ❌ WRONG |
 | 11:35 | User asked to test | ✅ Right |

@@ -11,6 +11,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 
+<<<<<<< .merge_file_pbReho
 use function Safe\class_uses;
 
 uses(TestCase::class);
@@ -59,3 +60,5 @@ final class SnapshotBusinessLogicTest extends TestCase
         Assert::assertInstanceOf(Builder::class, Snapshot::whereAggregateVersion(1));
     }
 }
+=======
+>>>>>>> .merge_file_Akrlz7

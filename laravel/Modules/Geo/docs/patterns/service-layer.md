@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "service layer"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔧 Service Layer Pattern - Business Logic PTVX
@@ -452,6 +451,15 @@ class OrderService
 - Implementazioni intercambiabili
 
 ---
+
+title: "service layer"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "service layer"
+issues: []
+discussions: []
 **📖 Vedi anche**: [Repository Pattern](./repository.md), [SOLID Principles](../claude/solid-principles.md)
 
 *Ultimo aggiornamento: Dicembre 2025*

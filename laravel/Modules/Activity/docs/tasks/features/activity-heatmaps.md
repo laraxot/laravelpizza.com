@@ -1,3 +1,10 @@
+---
+title: "Activity Heatmaps - Activity"
+qmd: "activity tasks features activity heatmaps md"
+type: note
+tags: [documentation]
+---
+
 # Activity Heatmaps - Activity
 
 **Task ID**: ACTIVITY-FEATURE-010

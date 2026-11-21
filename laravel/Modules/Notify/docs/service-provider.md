@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "service provider"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Service Provider del Modulo Notify

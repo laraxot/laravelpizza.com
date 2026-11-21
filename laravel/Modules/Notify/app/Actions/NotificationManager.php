@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use Exception;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Exceptions\NotificationTemplateNotFoundException;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Spatie\QueueableAction\QueueableAction;
@@ -39,9 +39,23 @@ class NotificationManager
     /**
      * Invia una notifica a un destinatario risolvendo il template attivo.
      *
+     * ## Perche' qui non si cerca piu' il template
+     *
+     * C'era un `getTemplate()` seguito da `throw new Exception("Template not
+     * found: ...")`, e subito dopo la chiamata a `SendNotificationAction` con
+     * lo **stesso codice**: l'action rifa' la stessa identica query. Quindi
+     * ogni invio costava due interrogazioni, e il template trovato qui veniva
+     * buttato via. L'unico effetto del doppio controllo era un messaggio di
+     * errore diverso per lo stesso guasto (base_quaeris_fila5#103, #112).
+     *
+     * Ora il template lo risolve un punto solo — l'action — che lancia
+     * {@see NotificationTemplateNotFoundException}.
+     *
      * @param  array<string, mixed>  $data
      * @param  list<string>  $channels
      * @param  array<string, mixed>  $options
+     *
+     * @throws NotificationTemplateNotFoundException se il template non esiste o non e' attivo
      */
     public function send(
         Model $recipient,
@@ -50,12 +64,6 @@ class NotificationManager
         array $channels = [],
         array $options = [],
     ): ?Notification {
-        $template = $this->getTemplate($templateCode);
-
-        if (! $template instanceof NotificationTemplate) {
-            throw new Exception("Template not found: {$templateCode}");
-        }
-
         $action = app(SendNotificationAction::class);
         $channelList = array_values($channels);
         $notification = $action->handle($recipient, $templateCode, $data, $channelList, $options);
@@ -128,61 +136,15 @@ class NotificationManager
         return NotificationTemplate::forChannel($channel)->where('is_active', true)->get();
     }
 
-    /**
-     * Recupera le statistiche di invio per un template.
+    /*
+     * `getTemplateStats()` e `getRecipientStats()` non ci sono piu'.
      *
-     * @param  NotificationTemplate  $_template  Template delle notifiche Il template
-     * @return array<string, mixed>
-     */
-    public function getTemplateStats(NotificationTemplate $_template): array
-    {
-        // $logs = $template->logs();
-
-        // return [
-        //     'total' => $logs->count(),
-        //     'sent' => $logs->where('status', NotificationLogStatusEnum::SENT->value)->count(),
-        //     'delivered' => $logs->where('status', NotificationLogStatusEnum::DELIVERED->value)->count(),
-        //     'failed' => $logs->where('status', NotificationLogStatusEnum::FAILED->value)->count(),
-        //     'opened' => $logs->where('status', NotificationLogStatusEnum::OPENED->value)->count(),
-        //     'clicked' => $logs->where('status', NotificationLogStatusEnum::CLICKED->value)->count(),
-        // ];
-
-        return [
-            'total' => 0,
-            'sent' => 0,
-            'delivered' => 0,
-            'failed' => 0,
-            'opened' => 0,
-            'clicked' => 0,
-        ];
-    }
-
-    /**
-     * Recupera le statistiche di invio per un destinatario.
+     * Erano due metodi pubblici il cui corpo era commentato per intero e che
+     * restituivano sei zeri fissi: chi li chiamava riceveva un cruscotto che
+     * diceva «nessuna notifica inviata» qualunque fosse la realta' — peggio di
+     * un metodo assente, perche' un metodo assente si nota (base_quaeris_fila5#103).
      *
-     * @param  Model  $_recipient  Il destinatario
-     * @return array<string, mixed>
+     * Il conteggio vero si fa sui log delle notifiche; quando servira', andra'
+     * scritto contro quelli, con un test che lo dimostri.
      */
-    public function getRecipientStats(Model $_recipient): array
-    {
-        // $logs = NotificationLog::forNotifiable($recipient)->get();
-
-        // return [
-        //     'total' => $logs->count(),
-        //     'sent' => $logs->where('status', NotificationLogStatusEnum::SENT->value)->count(),
-        //     'delivered' => $logs->where('status', NotificationLogStatusEnum::DELIVERED->value)->count(),
-        //     'failed' => $logs->where('status', NotificationLogStatusEnum::FAILED->value)->count(),
-        //     'opened' => $logs->where('status', NotificationLogStatusEnum::OPENED->value)->count(),
-        //     'clicked' => $logs->where('status', NotificationLogStatusEnum::CLICKED->value)->count(),
-        // ];
-
-        return [
-            'total' => 0,
-            'sent' => 0,
-            'delivered' => 0,
-            'failed' => 0,
-            'opened' => 0,
-            'clicked' => 0,
-        ];
-    }
 }

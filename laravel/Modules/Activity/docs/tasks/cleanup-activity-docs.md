@@ -1,3 +1,10 @@
+---
+title: "Task: Cleanup Documentazione Activity"
+qmd: "activity tasks cleanup activity docs md"
+type: note
+tags: [documentation]
+---
+
 # Task: Cleanup Documentazione Activity
 
 **Modulo**: Activity  

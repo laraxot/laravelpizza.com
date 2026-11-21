@@ -1,13 +1,12 @@
 ---
-title: "translation process"
+title: "Translation Process"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "translation process"
+qmd: "Translation Process"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Processo di Traduzione: Da Sviluppatore a Traduttore

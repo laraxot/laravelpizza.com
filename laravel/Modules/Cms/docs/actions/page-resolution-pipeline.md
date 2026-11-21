@@ -5,23 +5,15 @@ discussions: []
 title: "Page Resolution Pipeline — Cms Module"
 type: documentation
 created: 2026-07-20
-updated: 2026-10-20
+updated: 2026-07-20
 confidence: high
 tags: [folio, actions, page-resolution, cms, schema-org]
 related:
-  - ../00-index.md
-  - ../scopo.md
-  - ../content-blocks-architecture.md
   - ../queueable-actions.md
   - ../actions/view/get-cms-view-action.md
-status: active
 ---
 
 # Page Resolution Pipeline — Cms Module
-
-**Perché:** le pagine pubbliche non hanno controller; Folio del tema passa `(container0, slug0)` e Cms decide *cosa* renderizzare (modello, pagina JSON, fallback). Senza questa pipeline il tema dovrebbe conoscere il dominio.
-
-Indice: [../00-INDEX.md](../00-index.md) · scopo: [../scopo.md](../scopo.md).
 
 Questo modulo non usa `web.php` né `Http\Controllers` per servire pagine pubbliche: le rotte
 `[container0]/[slug0]` sono Folio pages nel tema attivo. Le Actions qui documentate sono
@@ -35,14 +27,12 @@ renderizzato.
 Data la coppia `(container0, slug0)` di una rotta Folio, decide **cosa** renderizzare,
 in ordine di priorità:
 
-1. **Modello dinamico**: prova a caricare un Eloquent model associato al `container0`.
-   `profile` ha una risoluzione dedicata (`resolvePublicProfileItem`: `User` e poi profili di
-   modulo). `blog` e `events` chiedono al `ThemeComposer` del modulo Blog solo i contenuti
-   pubblicati del tipo giusto (`findPublishedPostBySlug`, `findPublishedEventBySlug`), mai
-   post per events o viceversa; se il modulo Blog non e' installato (come in Quaeris) si passa
-   oltre senza errore. Poi `config('xra.container0_model_map')` e infine la convenzione
-   (`Modules\{Container}\Models\{Singular}`, `App\Models\{Singular}`). La vecchia mappa
-   hard-coded `$knownMappings` (`events` -> `Modules\Meetup\Models\Event`) non esiste piu'.
+1. **Modello dinamico**: prova a caricare un Eloquent model associato al `container0`
+   (es. `events` → `Modules\Meetup\Models\Event`). La mappa dei container noti è
+   hard-coded (`$knownMappings`) più un fallback via `config('xra.container0_model_map')`
+   e infine un tentativo per convenzione (`Modules\{Container}\Models\{Singular}`,
+   `App\Models\{Singular}`). Il caso `container0 === 'profile'` ha una risoluzione
+   dedicata (`resolvePublicProfileItem`) che prova `User` e poi profili di modulo.
 2. **Pagina CMS con slug esatto**: se non c'è un modello dinamico, cerca
    `Page::where('slug', "{container0}.{slug0}")`.
 3. **Pagina CMS generica del container**: fallback su `Page::where('slug', "{container0}.view")`.
@@ -97,10 +87,3 @@ multilingua.
   `execute()`, nessun repository — vedi [queueable-actions.md](../queueable-actions.md).
 - Nessuna di queste Action tocca `web.php`: sono chiamate dalle Folio page del tema
   attivo (`Themes/*/resources/views/pages/...`) o da componenti Blade.
-
-## See also
-
-- [content-blocks-architecture.md](../content-blocks-architecture.md) — composizione blocchi
-- [safe.md](../safe.md) — I/O tipizzato su JSON/filesystem
-- [Lang — ResolveLocalizedBlockData / i18n](../../../Lang/docs/scopo.md)
-

@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: sushi-implementation
 canonical: ../../../Themes/docs/shared-components/sushi-implementation-analysis.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/sushi-implementation-analysis.md

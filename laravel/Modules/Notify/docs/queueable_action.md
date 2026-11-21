@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "queueable action"
 issues: []
 discussions: []
-status: superseded
-superseded_by: queueable-action.md
 ---
 
 # Spatie Laravel Queueable Action

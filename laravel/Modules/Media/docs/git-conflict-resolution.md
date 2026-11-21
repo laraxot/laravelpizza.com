@@ -8,7 +8,6 @@ qmd: "git conflict resolution"
 issues: []
 discussions: []
 created_at: '2026-07-31'
-status: draft
 ---
 
 # Audit collisioni Git committate in bashscripts

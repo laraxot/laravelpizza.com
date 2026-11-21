@@ -58,7 +58,7 @@ discussions: []
 - ✅ **15 documents** created (~6,000 lines)
 - ✅ **PHPMD** confirms analysis accuracy (95%+)
 
-**Master Summary**: [Analysis Complete](./ANALYSIS-COMPLETE.md)
+**Master Summary**: [Analysis Complete](./analysis-complete.md)
 
 ---
 
@@ -222,7 +222,7 @@ TextInput::make('name') // Auto-translated
 
 1. **[Root README](./README.md)** - Navigation hub
 2. **[Claude Architecture Rules](./claude/architecture-rules.md)** - ⚠️ CRITICAL rules
-3. **[Analysis Complete 2025](./ANALYSIS-COMPLETE.md)** - Recent analysis summary
+3. **[Analysis Complete 2025](./analysis-complete.md)** - Recent analysis summary
 4. **[Schemaless Final](./claude/schemaless-attributes-final.md)** - Correct schemaless usage
 5. **[Eloquent Properties](./claude/eloquent-properties.md)** - property_exists issue
 6. **[IndennitaResponsabilita Analysis](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)** - Module analysis

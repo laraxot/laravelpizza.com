@@ -51,7 +51,7 @@ grep -E "^| ${phase_number}" .planning/REQUIREMENTS.md 2>/dev/null
 ls "$phase_dir"/*-SUMMARY.md "$phase_dir"/*-PLAN.md 2>/dev/null
 ```
 
-Extract **phase goal** from ROADMAP.md (the outcome to verify, not tasks) and **requirements** from REQUIREMENTS.md if it exists.
+Extract **phase goal** from roadmap.md (the outcome to verify, not tasks) and **requirements** from REQUIREMENTS.md if it exists.
 </step>
 
 <step name="establish_must_haves">
@@ -70,7 +70,7 @@ Returns JSON: `{ truths: [...], artifacts: [...], key_links: [...] }`
 
 Aggregate all must_haves across plans for phase-level verification.
 
-**Option B: Use Success Criteria from ROADMAP.md**
+**Option B: Use Success Criteria from roadmap.md**
 
 If no must_haves in frontmatter (MUST_HAVES returns error or empty), check for Success Criteria:
 
@@ -84,12 +84,12 @@ Parse the `success_criteria` array from the JSON output. If non-empty:
 3. Derive **key links** (critical wiring where stubs hide)
 4. Document the must-haves before proceeding
 
-Success Criteria from ROADMAP.md are the contract — they override PLAN-level must_haves when both exist.
+Success Criteria from roadmap.md are the contract — they override PLAN-level must_haves when both exist.
 
 **Option C: Derive from phase goal (fallback)**
 
 If no must_haves in frontmatter AND no Success Criteria in ROADMAP:
-1. State the goal from ROADMAP.md
+1. State the goal from roadmap.md
 2. Derive **truths** (3-7 observable behaviors, each testable)
 3. Derive **artifacts** (concrete file paths for each truth)
 4. Derive **key links** (critical wiring where stubs hide)
@@ -177,7 +177,7 @@ For each requirement: parse description → identify supporting truths/artifacts
 </step>
 
 <step name="scan_antipatterns">
-Extract files modified in this phase from SUMMARY.md, scan each:
+Extract files modified in this phase from summary.md, scan each:
 
 | Pattern | Search | Severity |
 |---------|--------|----------|

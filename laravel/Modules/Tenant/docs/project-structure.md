@@ -1,16 +1,15 @@
 ---
-qmd: "project structure"
+qmd: "PROJECT STRUCTURE"
 issues: []
 discussions: []
-title: "Project Structure: Module Tenant"
+title: "Project Structure — Module Tenant"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
-status: draft
 ---
 
-# Project Structure: Module **Tenant**
+# Project Structure — Module **Tenant**
 
 ## Directory Structure
 
@@ -22,24 +21,24 @@ status: draft
 │   ├── concepts/                 # Topic/theme pages
 │   ├── entities/                 # Organization/person pages
 │   ├── rules/                    # ⚠️ 151+ regole progettuali
-│   │   ├── 00-INDEX.md          # Indice regole
+│   │   ├── 00-index.md          # Indice regole
 │   │   ├── 00-TRIGGER_MAP.md    # Trigger map (link a globale)
 │   │   └── *.md                 # Regole specifiche modulo
 │   ├── skills/                   # Skill progettuali
-│   │   ├── INDEX.md
+│   │   ├── index.md
 │   │   └── *.md
 │   ├── commands/                 # Comandi progettuali
-│   │   ├── INDEX.md
+│   │   ├── index.md
 │   │   └── *.md
 │   ├── memories/                 # Memorie progettuali
-│   │   ├── INDEX.md
+│   │   ├── index.md
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE: Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
-├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
-├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── qmd-setup.md                  # Configurazione QMD
+├── performance-optimization.md    # Metriche e best practice
+├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
 \`\`\`
 
@@ -51,7 +50,7 @@ status: draft
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `ON-DEMAND-PATTERN.md` | **Leggi prima**: pattern da seguire |
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
 
@@ -103,10 +102,6 @@ graph TD
 - [Global Skills](../../docs/wiki/skills/)
 - [Global Commands](../../docs/wiki/commands/)
 - [Global Memories](../../docs/wiki/memories/)
-- [Global Rules](wiki/rules)
-- [Global Skills](wiki/skills)
-- [Global Commands](wiki/commands)
-- [Global Memories](wiki/memories)
 
 ## Setup Iniziale (per nuovi moduli)
 
@@ -115,7 +110,7 @@ graph TD
 mkdir -p docs/wiki/{rules,skills,commands,memories,concepts,entities,decisions,troubleshooting}
 
 # 2. Crea INDEX files (già creati)
-cp docs/wiki/rules/INDEX.md docs/wiki/rules/
+cp docs/wiki/rules/index.md docs/wiki/rules/
 # ... etc
 
 # 3. Aggiungi a QMD collection (opzionale, già incluso global)

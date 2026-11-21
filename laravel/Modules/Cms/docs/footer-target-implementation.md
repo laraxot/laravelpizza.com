@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "footer target implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Footer Target Implementation - Cms Module

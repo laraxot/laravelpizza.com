@@ -7,11 +7,19 @@ updated: 2026-09-26
 qmd: "test v1"
 issues: []
 discussions: []
-status: draft
 ---
 
 
 ---
+
+title: "test v1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test v1"
+issues: []
+discussions: []
 # Pagina 1
 
 EVENT SOURCING

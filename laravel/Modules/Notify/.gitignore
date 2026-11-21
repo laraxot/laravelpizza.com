@@ -119,3 +119,11 @@ notify.code-workspace
 docs/graphify
 resources/lang
 .github/issue_content/
+
+# Tooling/configurazione locale (module-theme-root-hygiene)
+.agents/
+.codex/
+.opencode/
+.qwen/
+.php-cs-fixer.php
+.php-cs-fixer.dist.php

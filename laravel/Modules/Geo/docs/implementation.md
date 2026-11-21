@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: implementation
 canonical: ../../../Themes/docs/shared-components/implementation-sumy.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/implementation-sumy.md

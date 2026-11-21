@@ -10,7 +10,6 @@ type: prd
 module: Geo
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # PRD Geo

@@ -1,5 +1,5 @@
 ---
-title: "GetTenantNameAction: path safety typo fix"
+title: "GetTenantNameAction — path safety typo fix"
 type: troubleshooting
 tags: [tenant, pageslugmiddleware, sushi, cms]
 created: 2026-07-13
@@ -12,10 +12,9 @@ discussions:
 related:
   - ../concepts/cms-page-middleware-json-ssot.md
   - ../../../../Fixcity/docs/wiki/concepts/ticket-crea-url-routing-chain.md
-status: draft
 ---
 
-# Tenant name: Page Sushi vuoto → auth JSON ignorato
+# Tenant name — Page Sushi vuoto → auth JSON ignorato
 
 ## Sintomo
 

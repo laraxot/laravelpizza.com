@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "stream"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../../_integration/stream.md
 ---
 
 # __stream

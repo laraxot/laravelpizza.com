@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product launch plan template"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Product Launch Plan Template
@@ -23,6 +22,15 @@ status: draft
 > **Launch Manager:** {Name}
 
 ---
+
+title: "product launch plan template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product launch plan template"
+issues: []
+discussions: []
 ## Obiettivo del Lancio
 
 ### Panoramica

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: resolution-permessi-lang-service.md
 ---
 # Troubleshooting definitivo permessi file_put_contents su lang_service.php
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "multilingual support"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Supporto Multilingua CMS

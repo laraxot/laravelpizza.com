@@ -10,7 +10,6 @@ updated: 2026-06-03
 related:
   - ../wiki/concepts/ui-ai-tooling-on-demand.md
   - ../../bashscripts/tools/prompts/llm-wiki.txt
-status: draft
 ---
 
 # Story 166 — second brain UI/UX MCP on-demand

@@ -16,8 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - naming-conventions.md
-status: superseded
-superseded_by: ../filament-naming-conventions.md
 ---
 # Convenzioni di Naming per Filament 
 

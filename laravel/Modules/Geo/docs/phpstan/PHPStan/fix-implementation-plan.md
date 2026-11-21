@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "fix implementation plan"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../fix-implementation-plan.md
 ---
 
 # PHPStan Level 10 Fix Implementation Plan

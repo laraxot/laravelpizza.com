@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan error resolution roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Error Resolution Roadmap - Modulo Geo - Gennaio 2026
@@ -138,5 +137,13 @@ Dopo ogni correzione:
 - **Totale stimato**: 3-4 giorni
 
 ---
+title: "phpstan error resolution roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan error resolution roadmap"
+issues: []
+discussions: []
 **Responsabile**: iFlow CLI
 **Status**: In pianificazione

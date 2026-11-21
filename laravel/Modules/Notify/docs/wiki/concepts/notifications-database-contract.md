@@ -1,16 +1,15 @@
 ---
 issues: []
 discussions: []
-title: "notifications: schema Notify, runtime User"
+title: "notifications — schema Notify, runtime User"
 type: concept
 tags: [notify, notifications, migration, database, user-connection, xotbasemigration]
 created: 2026-06-10
 updated: 2026-06-10
 qmd: notifications database notify owner xotbasemigration user forbidden
-status: draft
 ---
 
-# notifications: schema Notify, runtime User
+# notifications — schema Notify, runtime User
 
 ## Religione (boundary)
 
@@ -60,16 +59,13 @@ php artisan migrate
 
 ## Runtime guard
 
-`Modules\User\Support\NotificationSchema::isReadable()`: header FO e widget non queryano pre-migrate.
+`Modules\User\Support\NotificationSchema::isReadable()` — header FO e widget non queryano pre-migrate.
 
 ## Collegamenti
 
 - [no-notifications-migration-in-user-module](../../User/docs/wiki/rules/no-notifications-migration-in-user-module.md)
 - [notifications-runtime-model](../../User/docs/wiki/concepts/notifications-runtime-model.md)
 - [one-migration-per-model](../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md)
-- [no-notifications-migration-in-user-module](../../../../User/docs/wiki/rules/no-notifications-migration-in-user-module.md)
-- [notifications-runtime-model](../../../../User/docs/wiki/concepts/notifications-runtime-model.md)
-- [one-migration-per-model](../../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md)
 
 
 ## Pagina FO collegata (User + Sixteen)
@@ -85,5 +81,3 @@ La migrazione Notify abilita il DB; la **pagina** e il **link header** sono altr
 
 - [notifications-folio-page.md](../../User/docs/wiki/concepts/notifications-folio-page.md)
 - [folio-list-vs-route-list.md](../../Cms/docs/wiki/concepts/folio-list-vs-route-list.md)
-- [notifications-folio-page.md](../../../../User/docs/wiki/concepts/notifications-folio-page.md)
-- [folio-list-vs-route-list.md](../../../../Cms/docs/wiki/concepts/folio-list-vs-route-list.md)

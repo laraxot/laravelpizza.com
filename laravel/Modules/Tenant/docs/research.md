@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "research"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # User Research - Tenant Module
 

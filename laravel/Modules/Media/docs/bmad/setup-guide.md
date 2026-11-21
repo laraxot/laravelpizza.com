@@ -17,7 +17,6 @@ related:
   - ./epics/module-roadmap.md
   - ../../composer.json
   - ../../config/config.php
-status: draft
 ---
 
 # Media - setup guide
@@ -170,7 +169,7 @@ In questo modulo BMAD serve a:
 - **`app/Models/`**: `Media`, `MediaConvert`, `TemporaryUpload`
 - **`app/Filament/`**: Resource + `Clusters/`, `RelationManagers/`, `Infolists/`
 - **`app/Conversions/`**: generatori immagine/video (le directory `conversions/` in minuscolo sono residui)
-- **`app/Actions/Ffmpeg/`** (`ResolveMediaExporterAction`), **`app/Exceptions/`**: runtime (niente `app/Support/`)
+- **`app/Support/Ffmpeg/`, `app/Exceptions/`**: supporto runtime
 - **`docs/bmad/`**: questa documentazione
 
 ## Vedi anche

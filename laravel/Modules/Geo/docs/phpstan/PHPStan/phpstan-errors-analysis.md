@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan errors analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-errors-analysis.md
 ---
 
 # Analisi degli Errori PHPStan (Livello 9)

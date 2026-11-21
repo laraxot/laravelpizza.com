@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "mixed type ultima spiaggia"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Mixed (tipo di dato) - Solo come Ultima Spiaggia
@@ -20,7 +19,7 @@ PHPStan a livello max non ragiona su `mixed`: ogni `(int)` / `->email` a valle �
 
 ## Preferenze (in ordine)
 
-1. **Proprietà già tipizzate**: `$this->total_jobs`, non `$this->attributes['total_jobs']`
+1. **Proprietà già tipizzate** — `$this->total_jobs`, non `$this->attributes['total_jobs']`
 2. **Union types** - `string|int|null`
 3. **Generics** - `Collection<int, User>`, `array<string, Component>`
 4. **Interfacce / classi** - `ArrayAccess`, `Model`

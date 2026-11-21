@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "title with slug analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: title-with-slug-analysis.md
 ---
 
 # Analisi del Pacchetto Filament Title With Slug

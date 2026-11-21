@@ -15,7 +15,6 @@ related:
   - "./issue-subtree-sync-test.md"
   - "./sync-remote-repo-docs-summary.md"
   - "./sync-remote-repo-test-plan.md"
-status: draft
 ---
 
 # 🤖 GitHub Actions & Discussions - Final Report
@@ -136,7 +135,7 @@ comply with psr-4 autoloading standard
 ```
 5a34cd9c (HEAD -> dev) Fix GitHub Actions issues
 236c2218 Update AGENTS.md and add git commit/push rules
-236c2218 Update agents.md and add git commit/push rules
+236c2218 Update AGENTS.md and add git commit/push rules
 55d23201 Add task complete report - all files pushed
 99974315 Add CRITICAL AI rules for git commit/push
 ae920e7c Add AI lessons learned and GitHub Action setup guide
@@ -254,7 +253,7 @@ nothing to commit, working tree clean
 $ git log -n 5 --oneline
 5a34cd9c (HEAD -> dev, origin/dev) Fix GitHub Actions issues
 236c2218 Update AGENTS.md and add git commit/push rules
-236c2218 Update agents.md and add git commit/push rules
+236c2218 Update AGENTS.md and add git commit/push rules
 55d23201 Add task complete report - all files pushed
 99974315 Add CRITICAL AI rules for git commit/push
 ae920e7c Add AI lessons learned and GitHub Action setup guide

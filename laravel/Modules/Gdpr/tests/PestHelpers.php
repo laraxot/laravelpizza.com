@@ -60,6 +60,18 @@ function gdprSkipTest(string $message = ''): void
 }
 
 /**
+ * Salta il test se il progetto non offre questa lingua (laravellocalization.supportedLocales): il modulo Gdpr
+ * e' condiviso e non ogni sito ha de/fr/ru.
+ */
+function gdprSkipUnlessLocaleSupported(string $locale): void
+{
+    $supported = config('laravellocalization.supportedLocales');
+    if (! is_array($supported) || ! array_key_exists($locale, $supported)) {
+        gdprSkipTest('Lingua '.$locale.' non offerta da questo progetto');
+    }
+}
+
+/**
  * @param  array<string, mixed>  $where
  */
 function assertGdprTableHas(string $table, array $where, ?string $connection = 'gdpr'): void

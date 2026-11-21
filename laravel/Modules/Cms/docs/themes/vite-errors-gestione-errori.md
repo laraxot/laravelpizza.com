@@ -127,6 +127,10 @@ npm cache clean --force
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
 npm install
+<<<<<<< .merge_file_8yQBK7
+=======
+
+>>>>>>> .merge_file_qdi3wG
 npm install && npm run build
 ```
 

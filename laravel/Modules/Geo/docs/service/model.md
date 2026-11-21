@@ -10,7 +10,6 @@ title: ModelService
 description: Handle models with ModelService
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # ModelService

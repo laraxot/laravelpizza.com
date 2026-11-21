@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email backup"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-backup.md
 ---
 
 # Sistema Backup Email 

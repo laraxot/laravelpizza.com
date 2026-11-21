@@ -55,7 +55,7 @@ quality-gate-2026-09-04 agent-Media` → acquisito senza conflitti.
   snake_case che rispecchiano chiavi config/DB come `$disk_mp4`;
   `$s3` come nome idiomatico per un client AWS SDK).
 - PHPInsights: `vendor/bin/phpinsights` non installato nel progetto (rimosso,
-  incompatibile con Pest 5: memoria second brain
+  incompatibile con Pest 5 — memoria second brain
   `pest5-incompatibile-con-phpinsights`). Step saltato, nessun punteggio
   misurabile prima/dopo.
 - Pest: ambiente sotto carico pesante da piu' sessioni concorrenti (Activity,
@@ -69,7 +69,7 @@ quality-gate-2026-09-04 agent-Media` → acquisito senza conflitti.
   del monorepo: `Modules/Xot/app/View/Components/_components.json` (file
   **committato**, non di un'altra sessione WIP) usa ancora lo schema legacy
   di `ComponentFileData` (`class_name`/`comp_name`/`comp_ns` invece di
-  `name`/`class`/`ns`): stessa classe di bug gia' documentata in
+  `name`/`class`/`ns`) — stessa classe di bug gia' documentata in
   `docs/chat/xot-blade-component-bootstrap-crash-wip.md` per un file
   analogo di Cms (li' gia' corretto), ma questa istanza dentro Xot stesso
   non era stata trovata. Fuori dal lock/scope di questo task (modulo Xot,
@@ -77,7 +77,7 @@ quality-gate-2026-09-04 agent-Media` → acquisito senza conflitti.
 - `Modules/Media/README.md` ha 3 blocchi di marker di merge reali
   (`<<<<<<< .merge_file_...` / `=======` / `>>>>>>> .merge_file_...`) nel
   working tree, non committati da me (`HEAD` e' pulito, `git status` segna
-  `M`): presumibilmente lavoro di un'altra sessione in corso. Non toccato,
+  `M`) — presumibilmente lavoro di un'altra sessione in corso. Non toccato,
   segnalato come bloccante.
 - `git status --short` su `Modules/Media` mostrava **122 file gia' modificati
   o non committati** prima di qualunque mio edit (docs, lang, test, Actions),
@@ -89,18 +89,18 @@ quality-gate-2026-09-04 agent-Media` → acquisito senza conflitti.
 Fix minimi, root-cause, verificati (nessuna @phpstan-ignore, nessuna
 soppressione phpmd):
 
-1. `app/Filament/Actions/Table/ConvertAction.php`: `MissingImport`
+1. `app/Filament/Actions/Table/ConvertAction.php` — `MissingImport`
    (PHPMD): la `\RuntimeException` lanciata usava il leading-backslash
    invece di un `use` statement. Aggiunto `use RuntimeException;`, tolto il
    backslash dall'uso.
-2. `app/Filament/Clusters/Test/Pages/AwsTest.php`: 3x
+2. `app/Filament/Clusters/Test/Pages/AwsTest.php` — 3x
    `UnusedLocalVariable` (PHPMD): `$result = $s3->headBucket(...)` /
    `listObjectsV2(...)` / `getObject(...)` in `test_s3_connection()`,
    `test_s3_permissions()`, `test_s3_file_operations()`. Il valore di
    ritorno non veniva mai letto (la chiamata serve solo a innescare
    `AwsException` in caso di errore, gestita nel `catch`). Rimossa
    l'assegnazione, mantenuta la chiamata per l'effetto collaterale.
-3. `app/Models/Policies/MediaBasePolicy.php`: `UnusedLocalVariable`
+3. `app/Models/Policies/MediaBasePolicy.php` — `UnusedLocalVariable`
    (PHPMD): `$xotData = XotData::make()` in `before()` non era mai
    referenziato. `XotData::make()` e' un singleton cacheato (`self::$instance`)
    senza side-effect osservabile qui. Rimossa riga e `use
@@ -113,23 +113,23 @@ regressione, verificato con `clear-result-cache` prima e dopo).
 
 - ~40 finding `CamelCase*Name` su nomi snake_case che rispecchiano
   config/DB o la convenzione repo-wide del prefisso `_` per parametri Policy
-  volutamente inutilizzati: non sono difetti, sono conformi alla
+  volutamente inutilizzati — non sono difetti, sono conformi alla
   convenzione osservata in `Modules/User`, `Modules/Notify` e altri.
-- 15 `ShortVariable $s3`: nome idiomatico per un client SDK AWS, non un
+- 15 `ShortVariable $s3` — nome idiomatico per un client SDK AWS, non un
   problema di leggibilita' reale.
 - `ExcessiveClassComplexity`/`CouplingBetweenObjects`/`TooManyFields` su
   `S3Test.php` (825 righe) e `VideoEntry.php` (446 righe, gia' annotato in
   testa al file con un commento che riconosce esplicitamente questi
-  finding come accettati): refactor strutturale reale, fuori dal
+  finding come accettati) — refactor strutturale reale, fuori dal
   minimal-impact di una chiusura gate.
 - Duplicazione confermata tra `app/Filament/Actions/AddAttachmentAction.php`
   e `app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
-  (quasi identiche, usate da due `RelationManager` diversi): consolidamento
+  (quasi identiche, usate da due `RelationManager` diversi) — consolidamento
   e' una decisione di ownership, non un fix minimale.
-- `README.md` con marker di merge reali: non mio, non toccato, segnalato.
-- Bug bootstrap in `Modules/Xot/app/View/Components/_components.json`: fuori
+- `README.md` con marker di merge reali — non mio, non toccato, segnalato.
+- Bug bootstrap in `Modules/Xot/app/View/Components/_components.json` — fuori
   modulo/lock, non toccato.
-- PHPInsights: non installato nel repo, step non eseguibile.
+- PHPInsights — non installato nel repo, step non eseguibile.
 - Coverage `--coverage-clover` non ri-misurato in questa sessione: due run
   Pest completi (senza coverage) hanno gia' richiesto rispettivamente
   ~40s (bootstrap-crash, non valido) e 260.88s (valido) sotto il carico
@@ -155,17 +155,17 @@ regressione, verificato con `clear-result-cache` prima e dopo).
   confermare che il bootstrap-crash e' pre-esistente e non legato al mio
   diff.
 - Dettagli completi: `Modules/Media/docs/coverage.md`, sezione "2026-09-04
- : quality-gate closure".
+  — quality-gate closure".
 
 ## Bloccanti
 
-1. `Modules/Xot/app/View/Components/_components.json`: schema legacy di
+1. `Modules/Xot/app/View/Components/_components.json` — schema legacy di
    `ComponentFileData`, rompe il bootstrap dell'intera app in modo
    intermittente sotto carico concorrente. Fuori scope/lock (modulo Xot).
-2. `Modules/Media/README.md`: 3 blocchi di marker di merge reali, non
+2. `Modules/Media/README.md` — 3 blocchi di marker di merge reali, non
    committati, non miei.
 3. Ambiente sotto carico pesante da sessioni concorrenti (Activity, AI,
-   altri moduli + WIP su Xot) durante l'intera sessione: ha reso ogni
+   altri moduli + WIP su Xot) durante l'intera sessione — ha reso ogni
    misura Pest instabile e ha richiesto piu' tentativi per ottenere un
    numero affidabile.
 

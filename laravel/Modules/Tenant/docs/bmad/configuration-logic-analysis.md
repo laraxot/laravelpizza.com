@@ -7,9 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "configuration logic analysis"
 related:
-  - "../phpstan-corrections-january.md"
-status: superseded
-superseded_by: ../configuration-logic-analysis.md
+  - "./phpstan-corrections-january.md"
 ---
 # Configuration System Architecture - Tenant Module
 

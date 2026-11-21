@@ -12,12 +12,10 @@ discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
   - ../../../README.md
-  - ../../../index.md
-  - ../../../../notifications/readme.md
-  - ../../../../integrations/readme.md
-  - ../../../../templates/readme.md
-status: superseded
-superseded_by: ../../../../theme/sixteen/analysis/index.md
+  - ../../../wiki/index.md
+  - ../../../notifications/README.md
+  - ../../../integrations/README.md
+  - ../../../templates/README.md
 ---
 # Theme Sixteen Analysis Index
 

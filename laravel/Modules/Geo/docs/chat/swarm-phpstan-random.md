@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "swarm phpstan random"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Swarm PHPStan Random Analysis — 2026-06-16
@@ -17,6 +16,15 @@ status: draft
 **Durata stimata:** 60-90 min (dipende da errori da fixare).  
 
 ---
+
+title: "swarm phpstan random"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "swarm phpstan random"
+issues: []
+discussions: []
 ## Ordine Random dei Moduli (34 totali)
 
 ```

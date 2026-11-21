@@ -6,6 +6,8 @@
 
     Due modi, decisi da GetCookieInventoryAction e non da un flag:
     - solo cookie tecnici (oggi): barra informativa con "Ho capito"; nessuna scelta da fare, quindi nessun "Rifiuta";
+      Con info_banner = false (GdprConfigData) la barra informativa non compare: per i soli cookie tecnici basta l'informativa,
+      anche dentro quella generale (provv. 10.6.2021). Con cookie non tecnici la barra del consenso compare comunque.
     - almeno un cookie non tecnico dichiarato in gdpr.config.cookie.extra: "Accetta tutti" e "Rifiuta tutti" con lo stesso peso, "Personalizza",
       chiusura con la X = rifiuto. Nessuna casella preselezionata.
     Il markup della barra segue il contratto di Bootstrap Italia (regione con aria-label, due controlli), senza Bootstrap.
@@ -28,6 +30,7 @@
         ['id' => 'marketing', 'case' => CookieCategory::Marketing, 'label' => 'setting_marketing', 'text' => 'setting_marketing_text'],
     ];
 @endphp
+@if ($withConsent || $settings->info_banner)
 <style>
     .gdpr-cookiebar, .gdpr-cookiedialog { font-family: inherit; font-size: 1rem; line-height: 1.5; color: #1a1a1a; }
     .gdpr-cookiebar { --gdpr-pad-y: 1rem; --gdpr-pad-x: 1rem; position: fixed; z-index: 2147483000; left: 0; right: 0; bottom: 0; background: #fff; border-top: 3px solid var(--bs-primary, #0057ad); box-shadow: 0 -2px 12px rgba(0, 0, 0, .15); /* area sicura (notch, barra dei gesti) solo con viewport-fit=cover: altrimenti env() vale 0 */ padding: var(--gdpr-pad-y) max(var(--gdpr-pad-x), env(safe-area-inset-right, 0px)) calc(var(--gdpr-pad-y) + env(safe-area-inset-bottom, 0px)) max(var(--gdpr-pad-x), env(safe-area-inset-left, 0px)); }
@@ -217,3 +220,4 @@
     }
 })();
 </script>
+@endif

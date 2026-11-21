@@ -115,3 +115,34 @@ test('the first breadcrumb falls back to the brand and an existing isPartOf is k
     Assert::assertSame('Example', breadcrumbItems($schemas[1])[0]['name']);
     Assert::assertSame(['@id' => 'https://other.test/#website'], schemaArray($schemas[0])['isPartOf']);
 });
+
+/**
+ * @param  list<string>  $sameAs
+ * @return array<string, mixed>
+ */
+function homeOrganization(?string $description, array $sameAs): array
+{
+    return schemaArray((new BuildHeadSchemaAction)->execute(
+        isHome: true,
+        brand: 'Example',
+        homeUrl: 'https://example.test/it',
+        pageTitle: 'Example',
+        pageUrl: 'https://example.test/it',
+        locale: 'it',
+        logoUrl: null,
+        page: [],
+        rootUrl: 'https://example.test',
+        description: $description,
+        sameAs: $sameAs,
+    )[0]);
+}
+
+test('home organization carries description and official profiles only when the tenant has them', function (): void {
+    $full = homeOrganization('  Segnala un disservizio al Comune.  ', ['https://www.linkedin.com/company/example', 'https://github.com/example']);
+    Assert::assertSame('Segnala un disservizio al Comune.', $full['description']);
+    Assert::assertSame(['https://www.linkedin.com/company/example', 'https://github.com/example'], $full['sameAs']);
+
+    $bare = homeOrganization(' ', []);
+    Assert::assertArrayNotHasKey('description', $bare);
+    Assert::assertArrayNotHasKey('sameAs', $bare);
+});

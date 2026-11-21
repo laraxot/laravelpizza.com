@@ -8,20 +8,14 @@ qmd: "zen-of-documentation 🧘 zen of documentation - filosofia unificata"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🧘 Zen of Documentation - Filosofia Unificata
@@ -394,8 +388,6 @@ python scripts/run.py ask_question.py \
 
 - [Documentation Governance](../../docs/documentation-governance.md)
 - [Multi-Agent Collaboration](../../docs/multi-agent-collaboration.md)
-- [Documentation Governance](documentation-governance.md)
-- [Multi-Agent Collaboration](multi-agent-collaboration.md)
 - [Filament Blocks System](../blocks/content-blocks-system.md)
 - [OpenViking Global Context](../../bashscripts/ai/openviking.md)
 

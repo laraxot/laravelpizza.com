@@ -10,7 +10,7 @@ discussions: []
 ---
 
 <purpose>
-Generate unit and E2E tests for a completed phase based on its SUMMARY.md, CONTEXT.md, and implementation. Classifies each changed file into TDD (unit), E2E (browser), or Skip categories, presents a test plan for user approval, then generates tests following RED-GREEN conventions.
+Generate unit and E2E tests for a completed phase based on its summary.md, CONTEXT.md, and implementation. Classifies each changed file into TDD (unit), E2E (browser), or Skip categories, presents a test plan for user approval, then generates tests following RED-GREEN conventions.
 
 Users currently hand-craft `/gsd-quick` prompts for test generation after each phase. This workflow standardizes the process with proper classification, quality gates, and gap reporting.
 </purpose>
@@ -61,9 +61,9 @@ Read the phase artifacts (in order of priority):
 2. `${phase_dir}/CONTEXT.md` — acceptance criteria, decisions
 3. `${phase_dir}/*-VERIFICATION.md` — user-verified scenarios (if UAT was done)
 
-If no SUMMARY.md exists:
+If no summary.md exists:
 ```
-ERROR: No SUMMARY.md found for phase ${PHASE_ARG}
+ERROR: No summary.md found for phase ${PHASE_ARG}
 This command works on completed phases. Run /gsd-execute-phase first.
 ```
 Exit.
@@ -77,7 +77,7 @@ Present banner:
 </step>
 
 <step name="analyze_implementation">
-Extract the list of files modified by the phase from SUMMARY.md ("Files Changed" or equivalent section).
+Extract the list of files modified by the phase from summary.md ("Files Changed" or equivalent section).
 
 For each file, classify into one of three categories:
 
@@ -354,7 +354,7 @@ discussions: []
 </process>
 
 <success_criteria>
-- [ ] Phase artifacts loaded (SUMMARY.md, CONTEXT.md, optionally VERIFICATION.md)
+- [ ] Phase artifacts loaded (summary.md, CONTEXT.md, optionally VERIFICATION.md)
 - [ ] All changed files classified into TDD/E2E/Skip categories
 - [ ] Classification presented to user and approved
 - [ ] Project test structure discovered (directories, conventions, runners)

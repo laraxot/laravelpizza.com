@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: sprint-planning
 canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md

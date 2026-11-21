@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email templates laravel mailables notifications"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Approfondimento: Mailables & Notifications Laravel

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architecture rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architecture Rules
@@ -96,5 +95,14 @@ Before every commit, verify:
 - [ ] Translation files properly structured
 
 ---
+
+title: "architecture rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture rules"
+issues: []
+discussions: []
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: architecture-rules.md - Critical architecture rules

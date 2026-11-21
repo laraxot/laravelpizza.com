@@ -1,17 +1,47 @@
 ---
-title: "Lang: alias ARCHITECTURE (UPPERCASE)"
-type: alias
-module: Lang
-status: superseded
-superseded_by: bmad/architecture.md
-canonical: ./bmad/architecture.md
-updated: 2026-10-20
-qmd: "alias ARCHITECTURE uppercase lang verso bmad architecture"
-tags: [docs, lang]
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
+title: "Lang Module Architecture"
+type: architecture
+tags: [module, architecture, lang]
+created: 2026-08-04
+updated: 2026-08-04
 ---
+# Lang Module — Architecture
 
-<!-- gateguard: rewrite existing UPPERCASE ARCHITECTURE.md as stub. Supersedes root draft; body fused in bmad/architecture.md. Linked from PRD.md. Why stub not new topic: Fix UPPERCASE md. User: "Fix UPPERCASE md except README in those trees if easy" -->
+## Purpose
+Translation and localization management module
 
-# Alias: ARCHITECTURE Lang
+## Core Components
 
-Canonico: [bmad/architecture.md](./bmad/architecture.md). Regole brevi: [architecture.md](./architecture.md). Indice: [00-INDEX.md](./00-INDEX.md).
+**Models:**
+- `BaseModelLang` —
+- `LanguageLine` —
+- `Translation` —
+
+**Actions:**
+- `SyncTranslationsAction` —
+- `ValidateTranslationsAction` —
+
+**Filament Resources:**
+- `LangResource` — Main admin resource
+
+## Database Schema
+- `lang_table` — Primary table with standard Laravel columns (id, timestamps)
+
+## Design Decisions
+| Decision | Rationale |
+|----------|-----------|
+| XotBaseModel | Consistent base across all modules |
+| Filament v5 | Standard admin interface |
+| Laravel Queues | Background processing for heavy operations |
+
+## Integration Points
+**Depends On:** Xot
+**Depended On By:** Activity, Notify (logging)
+
+## Quality Gates
+- **PHPStan L10**: Pending execution
+- **PHPMD**: Pending analysis
+- **Test Coverage**: Needs Pest test suite

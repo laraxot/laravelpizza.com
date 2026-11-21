@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "tests pages block bridge"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Tests Pages Block Bridge

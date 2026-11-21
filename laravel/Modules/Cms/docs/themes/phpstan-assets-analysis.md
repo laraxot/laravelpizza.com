@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan assets analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi PHPStan - Gestione Assets dei Temi
@@ -159,7 +158,7 @@ php artisan phpstan:incremental Modules/Theme
 ## Riferimenti
 
 - [Documentazione PHPStan](../phpstan.md)
-- [Issues PHPStan](../phpstan-issues.md)
+- [Issues PHPStan](../phpstan_issues.md)
 - [Analisi Incrementale](../phpstan-incremental.md)
 
 ## Note di Manutenzione

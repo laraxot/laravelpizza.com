@@ -5,7 +5,7 @@ updated: 2026-09-26
 qmd: "continuazione domani"
 issues: []
 discussions: []
-title: "Continuazione BMAD: Domani (Lang)"
+title: "Continuazione BMAD — Domani (Lang)"
 type: module-fix
 scope: Lang
 epic: "12"
@@ -19,7 +19,7 @@ related:
   - ../livewire-widget-epics.md
 ---
 
-# Lang: Continuazione Domani
+# Lang — Continuazione Domani
 
 ## Stato verificato ora (sessione 2026-09-22, verifica su codice, non sulla doc)
 
@@ -34,14 +34,14 @@ related:
     riga per riga il 21/09), che dichiara "Campagna Lang **chiusa**".
 - **Le doc `docs/bmad/livewire-widget-decision-log.md` e
   `docs/bmad/livewire-widget-epics.md` sono STALE** (stub generici da ~450-800
-  byte, non il file SSoT): dicono ancora "12.1 **blocked**: Switcher ritirato,
+  byte, non il file SSoT): dicono ancora "12.1 **blocked** — Switcher ritirato,
   Change ancora montato (`UI headernav:60`), widget pronto ma non agganciato" e
   "migrazione dei 3 test che importano `Switcher` (ora rotti)". Verificato oggi:
-  falso su entrambi i punti: `UI headernav:60` monta gia' il widget (sopra),
+  falso su entrambi i punti — `UI headernav:60` monta gia' il widget (sopra),
   e i 3 test citati (`tests/Unit/LangCoverageGapsTest.php`,
   `tests/Unit/Filament/LocaleSwitcherRefreshTest.php`, ecc.) importano
   `LocaleSwitcherRefresh`/`LanguageSwitcherWidget`, non la classe HTTP ritirata
- : falso positivo sul nome "Switcher".
+  — falso positivo sul nome "Switcher".
 - `git log`: ultimo commit di codice reale e' `1cfd45f1` (refactor
   `LanguageSwitcherWidget` config-driven), poi solo commit "." e cleanup
   doc/gitignore fino a `09ad0b16` (`.gitignore` per `graphify-out/`).
@@ -51,9 +51,9 @@ related:
 
 1. **Correggere lo stato stale** in `docs/bmad/livewire-widget-decision-log.md`
    e `docs/bmad/livewire-widget-epics.md`: Epic 12.1 e' `done`, non `blocked`
-   (verificato sul codice oggi, vedi sopra): allineare a
+   (verificato sul codice oggi, vedi sopra) — allineare a
    `docs/bmad/livewire-inventory.md`, che resta la SSoT.
-2. **`app/Actions/SaveTransAction.php:48`**: `dddx([...])` **live** (non
+2. **`app/Actions/SaveTransAction.php:48`** — `dddx([...])` **live** (non
    commentato) dentro un `catch (\Exception $e)`: qualsiasi eccezione nel
    caricamento di un file di traduzione fa dump-and-die invece di un log/throw
    gestito. Rischio reale in produzione se un file trans e' corrotto o
@@ -64,10 +64,10 @@ related:
    (`// BladeService::registerComponents(...)`) e alias assente da
    `_components.json`. Decidere: eliminarlo (dead code, il widget Filament e'
    l'unico switcher vivo per verdetto di `livewire-inventory.md`) o riattivarlo
-   con uno scopo esplicito: non lasciarlo ambiguo.
+   con uno scopo esplicito — non lasciarlo ambiguo.
 4. **2 `@phpstan-ignore trait.unused` residui**: `app/Models/Traits/
    HasStrictTranslations.php:12` e `app/Providers/Traits/TranslatorTrait.php:11`.
-   Non indagati oggi: verificare con una run PHPStan a modulo intero (non
+   Non indagati oggi — verificare con una run PHPStan a modulo intero (non
    isolata) se sono davvero trait morti o falsi positivi cross-modulo (memoria
    second brain: `trait.unused` puo' essere un artefatto di scope quando il
    trait e' usato solo da un altro modulo).
@@ -76,7 +76,7 @@ related:
    vivono in `docs/stories/`. Verificare se vanno consolidate sotto
    `docs/bmad/stories/` per coerenza con la standing order del repo
    ("story BMAD sempre in `laravel/Modules/<Mod>/docs/bmad/...`") o se
-   `docs/stories/` resta la posizione canonica per Lang: non duplicare,
+   `docs/stories/` resta la posizione canonica per Lang — non duplicare,
    decidere e basta.
 
 ## Second brain

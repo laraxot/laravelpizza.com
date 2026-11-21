@@ -7,19 +7,27 @@ updated: 2026-09-26
 qmd: "architecture diagrams"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architecture Diagrams & Visual Reference
 
 **📍 Cross-References:**
-- [← Back to Master Index](MASTER_DOCUMENTATION_INDEX.md)
+- [← Back to Master Index](master_documentation_index.md)
 - [Code Quality Analysis](CODE_QUALITY_ANALYSIS.md)
 - [Module Dependencies](#module-dependencies)
 - [Theme Architecture](#theme-architecture)
 - [Data Flow](#data-flow)
 
 ---
+
+title: "architecture diagrams"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture diagrams"
+issues: []
+discussions: []
 ## System Architecture Overview
 
 ```
@@ -133,7 +141,7 @@ themes/
 │
 ├── Sixteen/  ← ACTIVE THEME
 │   ├── docs/
-│   │   ├── 00-INDEX.md ◄────────────────┐
+│   │   ├── 00-index.md ◄────────────────┐
 │   │   ├── architecture/                │
 │   │   │   ├── layout-hierarchy.md      │
 │   │   │   └── component-structure.md   │
@@ -414,7 +422,7 @@ Modules/ModuleName/
 │       └── XxxSeeder.php
 │
 ├── docs/
-│   ├── 00-INDEX.md
+│   ├── 00-index.md
 │   ├── architecture/
 │   ├── guides/
 │   └── reference/
@@ -434,11 +442,10 @@ Modules/ModuleName/
 
 ## See Also
 
-- [→ Module Documentation Index](MODULE_DOCS_INDEX.md)
-- [→ Theme Documentation Index](THEMES_DOCUMENTATION_INDEX.md)
+- [→ Module Documentation Index](module_docs_index.md)
+- [→ Theme Documentation Index](themes_documentation_index.md)
 - [→ Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
 - [→ Filament Integration Guide](../laravel/Themes/Sixteen/docs/filament-integration.md)
-- [→ Filament Integration Guide](../../../Themes/Sixteen/docs/filament-integration.md)
 - [→ Data Flow Analysis](COMPREHENSIVE_CODE_ANALYSIS.md#data-flow)
 
 ---

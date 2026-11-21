@@ -1,13 +1,12 @@
 ---
-title: "AGENTS"
+title: "Agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "AGENTS"
+qmd: "Agents"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Agent Instructions for LLM Wiki Management

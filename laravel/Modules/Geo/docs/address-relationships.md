@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address relationships"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Relazioni del Modello Address

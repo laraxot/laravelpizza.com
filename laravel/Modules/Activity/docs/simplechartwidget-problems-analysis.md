@@ -1,11 +1,10 @@
 ---
 title: "SimpleChartWidget - Analisi Problemi e Miglioramenti UI/UX"
+qmd: "activity simplechartwidget problems analysis md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "simplechartwidget - analisi problemi e miglioramenti ui/ux activity"
+tags: [documentation]
 ---
+
 # SimpleChartWidget - Analisi Problemi e Miglioramenti UI/UX
 
 ## Panoramica

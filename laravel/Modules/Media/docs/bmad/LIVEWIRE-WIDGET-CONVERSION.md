@@ -1,17 +1,12 @@
 ---
-title: "Puntatore: Media Livewire → Filament widget"
+title: "Puntatore — Media Livewire → Filament widget"
 canonical: ./livewire-inventory.md
 superseded: true
 related:
   - ./livewire-inventory.md
-type: note
-status: stub
-updated: 2026-10-07
-tags: [docs, media, bmad]
-qmd: "media module   livewire → filament widget (superato) media"
 ---
 
-# Media module: Livewire → Filament widget (superato)
+# Media module — Livewire → Filament widget (superato)
 
 **Canone:** [livewire-inventory.md](./livewire-inventory.md).
 

@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/level.php
 // Cms txt.fields.level — LangServiceProvider SSoT.
 return [
-    'label' => 'Livello',
-    'placeholder' => 'Livello gerarchico (1-6)',
-    'helper_text' => 'Livello di importanza nella gerarchia del contenuto',
+    'label' => 'Level',
+    'placeholder' => 'Hierarchy level (1-6)',
+    'helper_text' => 'Level of importance in the content hierarchy',
     'tooltip' => '',
     'description' => '',
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "theme"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://fly.io/laravel-bytes/filamentphp-adding-some-style/

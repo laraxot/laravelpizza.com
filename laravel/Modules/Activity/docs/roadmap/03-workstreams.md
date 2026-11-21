@@ -1,12 +1,10 @@
 ---
 title: "Workstreams - Activity"
+qmd: "activity roadmap 03 workstreams md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "workstreams - activity activity"
-status: superseded
-superseded_by: workstreams.md
+tags: [documentation]
 ---
+
 # Workstreams - Activity
 
 ## WS1 Architecture

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "zen strategy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 Zen Seasonal Strategy - Notify & Xot

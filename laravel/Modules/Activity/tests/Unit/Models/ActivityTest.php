@@ -7,8 +7,22 @@ use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< .merge_file_hkuP8x
 uses(TestCase::class);
 
+=======
+uses(\Modules\Activity\Tests\TestCase::class);
+
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: '.$e->getMessage());
+    }
+});
+
+>>>>>>> .merge_file_encxCD
 test('activity model can be created', function () {
     $activity = ActivityFactory::new()->make();
 

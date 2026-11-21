@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translation implementation plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Piano di Implementazione per la Standardizzazione delle Traduzioni

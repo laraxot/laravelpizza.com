@@ -1,14 +1,13 @@
 ---
-qmd: "merge conflict files list.divergenza"
+qmd: "Merge Conflict Files List.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: merge-conflict-files-list.md"
+title: "Merge Conflict Files List.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `merge-conflict-files-list.md`

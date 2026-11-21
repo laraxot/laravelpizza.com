@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/cta_text.php
 // Cms txt.fields.cta_text — LangServiceProvider SSoT.
 return [
-    'label' => 'Testo Call-to-Action',
-    'placeholder' => 'Inizia ora, Contattaci oggi',
-    'helper_text' => 'Testo persuasivo per invitare all\'azione',
+    'label' => 'Call-to-Action Text',
+    'placeholder' => 'Get started now, Contact us today',
+    'helper_text' => 'Persuasive text inviting action',
     'tooltip' => '',
     'description' => '',
 ];

@@ -1,11 +1,10 @@
 ---
 title: "Consigli e Best Practice - <nome progetto>ion Market"
+qmd: "activity use cases prediction market tips md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "consigli e best practice - <nome progetto>ion market activity"
+tags: [documentation]
 ---
+
 # Consigli e Best Practice - <nome progetto>ion Market
 
 ## Refactoring e Miglioramenti

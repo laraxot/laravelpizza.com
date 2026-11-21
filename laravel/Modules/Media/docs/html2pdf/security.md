@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "security"
 related:
   - "./webm.md"
-status: draft
 ---
 # Configurazione della Sicurezza
 

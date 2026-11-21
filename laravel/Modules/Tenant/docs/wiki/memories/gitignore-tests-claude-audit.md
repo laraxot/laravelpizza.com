@@ -1,5 +1,5 @@
 ---
-title: "gitignore Tests vs tests: claude-audit"
+title: "gitignore Tests vs tests — claude-audit"
 type: memory
 module: Tenant
 tags: [tenant, gitignore, claude-audit, pest]
@@ -12,7 +12,6 @@ discussions:
   - "https://github.com/laraxot/platform/discussions/304"
 related:
   - ../../Xot/docs/wiki/concepts/claude-audit-static-all-modules.md
-status: draft
 ---
 
 # `Tests/` in .gitignore e claude-audit

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sushi to jsons analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sushi-to-jsons-analysis.md
 ---
 
 # Analisi di SushiToJsons per il Modello Comune
@@ -387,5 +385,14 @@ Dopo un'analisi approfondita del trait `SushiToJsons` e delle sue potenziali app
 Questo approccio offre il miglior equilibrio tra performance, flessibilità e manutenibilità per il caso specifico del modello `Comune` nel modulo Geo.
 
 ---
+
+title: "sushi to jsons analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sushi to jsons analysis"
+issues: []
+discussions: []
 *Documento creato il: 28/05/2025*  
 *Autore: Team <main module>*

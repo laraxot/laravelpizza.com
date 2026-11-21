@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "roadmap vision"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module Roadmap 2026
@@ -25,6 +24,15 @@ Transform geographical data from a technical necessity into a **spatial intellig
 - **Spatial Analytics**: Location-based insights and geographical intelligence
 
 ---
+
+title: "roadmap vision"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap vision"
+issues: []
+discussions: []
 ## 📊 Current Architecture Assessment
 
 ### ✅ Architectural Strengths

@@ -57,11 +57,11 @@ class SendTelegramPage extends XotBasePage
     public function getTelegramFormSchema(): array
     {
         return [
-            'chat_id' => TextInput::make('chat_id')->required()->helperText('ID della chat o username del canale'),
+            'chat_id' => TextInput::make('chat_id')->required()->helperText('Chat ID or channel username'),
             'text' => TextInput::make('text')
                 ->required()
                 ->maxLength(4096)
-                ->helperText('Il messaggio non può superare i 4096 caratteri'),
+                ->helperText('The message cannot exceed 4096 characters'),
             'driver' => Select::make('driver')
                 ->options([
                     'bot' => 'Bot API',
@@ -75,7 +75,7 @@ class SendTelegramPage extends XotBasePage
                     'MarkdownV2' => 'MarkdownV2'])
                 ->helperText('Formato del testo (opzionale)'),
             'disable_web_page_preview' => Toggle::make('disable_web_page_preview')->helperText('Disabilita l\'anteprima dei link'),
-            'disable_notification' => Toggle::make('disable_notification')->helperText('Invia il messaggio silenziosamente'),
+            'disable_notification' => Toggle::make('disable_notification')->helperText('Send the message silently'),
             'reply_to_message_id' => TextInput::make('reply_to_message_id')
                 ->numeric()
                 ->helperText('ID del messaggio a cui rispondere'),
@@ -112,14 +112,14 @@ class SendTelegramPage extends XotBasePage
 
             FilamentNotification::make()
                 ->success()
-                ->title('Messaggio Telegram inviato con successo')
+                ->title('Telegram message sent successfully')
                 ->send();
         } catch (Exception $e) {
             Log::error('Errore nell\'invio Telegram: '.$e->getMessage());
 
             FilamentNotification::make()
                 ->danger()
-                ->title('Errore nell\'invio Telegram')
+                ->title('Error sending Telegram message')
                 ->body($e->getMessage())
                 ->send();
         }

@@ -1,11 +1,10 @@
 ---
 title: "Casi d'Uso del <nome progetto>ion Market"
+qmd: "activity use cases prediction market use cases md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "casi d'uso del <nome progetto>ion market activity"
+tags: [documentation]
 ---
+
 # Casi d'Uso del <nome progetto>ion Market
 
 ## 1. Previsioni Economiche

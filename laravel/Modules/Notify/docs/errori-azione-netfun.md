@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "errori azione netfun"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi degli Errori in SendNetfunSMSAction

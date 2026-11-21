@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "cleanup log"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cms Module Cleanup - 2025-12-18

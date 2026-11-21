@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sms integration"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../../../sms-integration.md
 ---
 
 # SMS Integration

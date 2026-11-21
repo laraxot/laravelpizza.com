@@ -1,13 +1,9 @@
 ---
-title: "Brainstorming: Job Artisan in widget"
+title: "Brainstorming — Job Artisan in widget"
 type: brainstorming
 module: Job
 related:
   - ./livewire-inventory.md
-status: draft
-updated: 2026-10-07
-tags: [docs, job, bmad]
-qmd: "brainstorming job"
 ---
 
 # Brainstorming

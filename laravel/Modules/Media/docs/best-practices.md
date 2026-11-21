@@ -10,6 +10,5 @@ updated: 2026-07-14
 qmd: "best practices"
 related:
   - "./webm.md"
-status: draft
 ---
 # Best Practices

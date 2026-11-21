@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "q4 roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GDPR Module Roadmap (2025 Q4)

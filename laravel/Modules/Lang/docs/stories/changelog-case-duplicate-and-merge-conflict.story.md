@@ -9,7 +9,7 @@ issues: []
 discussions: []
 ---
 
-# Story: Lang: CHANGELOG.MD duplicato + conflitto di merge non risolto in CHANGELOG.md
+# Story: Lang — CHANGELOG.MD duplicato + conflitto di merge non risolto in CHANGELOG.md
 
 ## Status
 Done.
@@ -50,6 +50,6 @@ voci gia' presenti sotto (dev.12, dev.11, ...), invece di scartarne una.
 ```bash
 grep -n '^<<<<<<<\|^=======\|^>>>>>>>' laravel/Modules/Lang/CHANGELOG.md
 # atteso: nessun output
-find laravel/Modules/Lang -maxdepth 1 -iname 'changelog.md' | wc -l
+find laravel/Modules/Lang -maxdepth 1 -iname 'CHANGELOG.md' | wc -l
 # atteso: 1
 ```

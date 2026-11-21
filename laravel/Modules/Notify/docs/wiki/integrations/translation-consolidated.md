@@ -218,11 +218,11 @@ Questo documento descrive il piano di pulizia e standardizzazione delle traduzio
 ## Analisi della Situazione Attuale
 
 Dall'analisi dei file di traduzione nella cartella `/var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Quaeris.
+Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
 
-Dall'analisi dei file di traduzione nella cartella `/var/www/html/Quaeris/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
+Dall'analisi dei file di traduzione nella cartella `/var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
 
 ### 1. File con Nomi Errati
 - `send_s_m_s.php` invece di `send_sms.php`
@@ -3284,7 +3284,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -3306,7 +3306,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -3387,12 +3387,12 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation-keys-rules.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation-keys-rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md)
 ---
 
 ## translation-keys-rules
@@ -3447,9 +3447,9 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 ---
 
 ## translation-keys
@@ -3504,9 +3504,9 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation-keys-best-practices.md)
 ---
 
 ## translation-namespace-religion
@@ -3514,10 +3514,10 @@ return [
 *Consolidated from: `translation-namespace-religion.md`*
 
 
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Religion / i18n  
+**Status**: Active
+**Created**: 2026-04-14
+**Last Updated**: 2026-04-14
+**Category**: Architecture / Religion / i18n
 **Audience**: All developers + AI agents
 
 ---
@@ -3526,7 +3526,7 @@ return [
 
 **Le traduzioni sono organizzate per DOMINIO, non per componente UI.**
 
-**DOMINIO** = `ticket`, `user`, `order` (cosa fa il business)  
+**DOMINIO** = `ticket`, `user`, `order` (cosa fa il business)
 **NON COMPONENTE** = `create_ticket_wizard`, `edit_form`, `list_view` (come lo mostri)
 
 ---
@@ -3773,7 +3773,7 @@ Section::make(__('<nome progetto>::ticket.sections.images.label'))
 
 #### 1. Dominio, Non UI
 
-**Dominio** = cosa fa il business (ticket, user, order)  
+**Dominio** = cosa fa il business (ticket, user, order)
 **UI** = come lo mostri (wizard, form, page)
 
 **Regola**: Namespace segue dominio, NON UI.
@@ -3782,7 +3782,7 @@ Section::make(__('<nome progetto>::ticket.sections.images.label'))
 
 #### 2. Unica Fonte di Verita
 
-Ogni concetto ha UNA traduzione nel file dominio.  
+Ogni concetto ha UNA traduzione nel file dominio.
 Niente duplicati, niente incoerenze.
 
 ---
@@ -3801,14 +3801,14 @@ Sotto il dominio, usa categorie che hanno senso:
 
 #### 4. Scalabilita
 
-Aggiungere nuovo widget?  
+Aggiungere nuovo widget?
 → Usa chiavi dominio esistenti, NON crearne di nuove.
 
 ---
 
 #### 5. Manutenzione
 
-Cambio traduzione?  
+Cambio traduzione?
 → 1 file, 1 modifica, tutti i widget aggiornano.
 
 ---
@@ -3817,8 +3817,8 @@ Cambio traduzione?
 
 ### Il Credo
 
-> "Dominio e il namespace, UI e solo il consumatore.  
-> Una traduzione per concetto, mai duplicati.  
+> "Dominio e il namespace, UI e solo il consumatore.
+> Una traduzione per concetto, mai duplicati.
 > Regole nel dominio, non nel widget."
 
 ### La Preghiera
@@ -3838,7 +3838,7 @@ Amen.
 - [ticket.php (dominio corretto)](../../Modules/App/lang/it/ticket.php)
 - [ticket.php (dominio corretto)](../../Modules/<nome progetto>/lang/it/ticket.php)
 - [Laravel Localization](https://laravel.com/docs/localization)
-- [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
+- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
 - [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
 
 ---
@@ -4585,7 +4585,7 @@ Modules/Notify/lang/it/create_mail_template.php
 
 
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di App, con particolare attenzione al modulo Notify.
-Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di Quaeris, con particolare attenzione al modulo Notify.
+Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
 
 ## Struttura delle Cartelle
 
@@ -4610,9 +4610,9 @@ Le traduzioni devono essere organizzate nelle seguenti cartelle:
 
 ### Esempi Corretti
 
-✅ `send_sms.php` (non `send_s_m_s.php`)  
-✅ `send_aws_email.php` (non `send_a_w_s_email.php`)  
-✅ `send_whatsapp.php` (non `send_whats_app.php`)  
+✅ `send_sms.php` (non `send_s_m_s.php`)
+✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
+✅ `send_whatsapp.php` (non `send_whats_app.php`)
 
 ## Struttura dei File di Traduzione
 
@@ -5196,7 +5196,7 @@ touch /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it/nome_corretto
 touch [project-root]/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_corretto.php
-touch /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
+touch /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
 
@@ -5219,10 +5219,10 @@ grep -r "nome_errato" /var/www/html/saluteora/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
 rm /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_errato.php
-grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify
+grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
-rm /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_errato.php
+rm /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_errato.php
 ```
 
 ## Passo 3: Correzione della Struttura del File
@@ -5273,7 +5273,7 @@ ls /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/en/nome_file.php
 ls [project-root]/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/html/saluteora/laravel/Modules/Notify/lang/en/nome_file.php
-ls /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/en/nome_file.php
+ls /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura
 
@@ -5665,13 +5665,13 @@ rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_s_m_s.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_whats_app.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/.php
 
 # Rimozione dei file con nomi errati dopo aver verificato che esistano le versioni corrette
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_s_m_s.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_whats_app.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_whats_app.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
 ```
 
 ### Template Standard per i File di Traduzione
@@ -5738,7 +5738,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -5794,9 +5794,9 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 
 ---
 
@@ -5807,7 +5807,7 @@ return [
 # Standard per le Traduzioni
 
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
-# Standard per le Traduzioni 
+# Standard per le Traduzioni
 
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di SaluteOra, con particolare attenzione al modulo Notify.
 
@@ -5837,9 +5837,9 @@ Le traduzioni devono essere organizzate nelle seguenti cartelle:
 ✅ `send_sms.php` (non `send_s_m_s.php`)
 ✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
 ✅ `send_whatsapp.php` (non `send_whats_app.php`)
-✅ `send_sms.php` (non `send_s_m_s.php`)  
-✅ `send_aws_email.php` (non `send_a_w_s_email.php`)  
-✅ `send_whatsapp.php` (non `send_whats_app.php`)  
+✅ `send_sms.php` (non `send_s_m_s.php`)
+✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
+✅ `send_whatsapp.php` (non `send_whats_app.php`)
 
 ## Struttura dei File di Traduzione
 

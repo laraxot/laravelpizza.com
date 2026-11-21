@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "content management"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Gestione Contenuti
@@ -106,18 +105,18 @@ Questa documentazione è parte del sistema di documentazione di il progetto. Per
 
 ## Collegamenti Bidirezionali
 - [README](README.md) - Documentazione principale del modulo
-- [Architettura](frontoffice/architecture.md) - Architettura del sistema CMS
+- [Architettura](architecture.md) - Architettura del sistema CMS
 - [Gestione Pagine](page-management.md) - Sistema di gestione pagine
 - [Storage](content-storage.md) - Archiviazione contenuti
-- [Mapping JSON](content-json-mapping.md) - Mappatura JSON
+- [Mapping JSON](content_json_mapping.md) - Mappatura JSON
 - [Filament](filament-integration.md) - Integrazione con Filament
 - [Performance](performance.md) - Ottimizzazione performance
 
 ## Vedi Anche
-- [Modulo UI](../ui/project_docs/readme.md) - Componenti di interfaccia
-- [Modulo Lang](../lang/project_docs/readme.md) - Gestione traduzioni
-- [Modulo Theme](../theme/project_docs/readme.md) - Gestione temi
-- [Modulo Xot](../xot/project_docs/readme.md) - Classi base e utilities
+- [Modulo UI](../ui/project_docs/README.md) - Componenti di interfaccia
+- [Modulo Lang](../lang/project_docs/README.md) - Gestione traduzioni
+- [Modulo Theme](../theme/project_docs/README.md) - Gestione temi
+- [Modulo Xot](../xot/project_docs/README.md) - Classi base e utilities
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 - [Best Practices Laravel](https://laravel.com/project_docs/11.x/best-practices) - Best practices 
 Questa documentazione è parte del sistema di documentazione di <main module>. Per dettagli specifici sui singoli componenti, consultare la documentazione dei rispettivi moduli. 

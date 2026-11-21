@@ -10,12 +10,13 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-test('ListLogActivities toTranslationString normalizza stringhe e array', function (): void {
+test('ListLogActivities stringifyTranslationValue normalizza stringhe e array', function (): void {
     $page = new ListLogActivitiesTranslationHarness;
 
-    Assert::assertSame('Titolo semplice', $page->exposeToTranslationString('Titolo semplice'));
-    Assert::assertSame('parte uno parte due', $page->exposeToTranslationString(['parte uno', 'parte due']));
-    Assert::assertSame('', $page->exposeToTranslationString(123));
+    Assert::assertSame('Titolo semplice', $page->exposeStringifyTranslationValue('Titolo semplice'));
+    Assert::assertSame('parte uno parte due', $page->exposeStringifyTranslationValue(['parte uno', 'parte due']));
+    // Gli scalari diventano stringa: le label di traduzione possono essere numeri (es. 'sort').
+    Assert::assertSame('123', $page->exposeStringifyTranslationValue(123));
 });
 
 test('ListLogActivities getFieldLabel usa fallback per chiavi sconosciute', function (): void {

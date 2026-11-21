@@ -1,10 +1,10 @@
 ---
-title: "file location rules"
+title: "File Location Rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "file location rules"
+qmd: "File Location Rules"
 issues: []
 discussions: []
 ---
@@ -19,12 +19,12 @@ discussions: []
 
 ---
 
-title: "file location rules"
+title: "FILE LOCATION RULES"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "file location rules"
+qmd: "FILE LOCATION RULES"
 issues: []
 discussions: []
 ## Project Root Rules
@@ -36,7 +36,7 @@ Only these files are allowed in the project root:
 | File Pattern | Examples | Purpose |
 |--------------|----------|---------|
 | **Config Files** | `.editorconfig`, `.gitattributes`, `.gitignore` | Project configuration |
-| **AI Agent Files** | `AGENTS.md`, `AGENT_MEMORY.md`, `GEMINI.md`, `CLAUDE.md` | AI instructions |
+| **AI Agent Files** | `AGENTS.md`, `AGENT_MEMORY.md`, `gemini.md`, `CLAUDE.md` | AI instructions |
 | **README** | `README.md` | Project documentation |
 | **Workspace Files** | `*_ptvx_fila5.code-workspace` | Project-level VSCode workspace |
 | **Package Files** | `composer.json`, `package.json` | Dependencies (if monorepo root) |
@@ -249,7 +249,7 @@ When you create a file:
 - [Workspace Naming](docs/conventions/workspace-naming.md)
 - [Backup Files Cleanup](laravel/Modules/Xot/docs/backup-copy-files-cleanup-rule.md)
 - [Module Directory Structure](laravel/Modules/Xot/docs/module-directory-structure-rule.md)
-- [Multi-Agent Coordination](docs/MULTI_AGENT_COORDINATION.md)
+- [Multi-Agent Coordination](docs/multi_agent_coordination.md)
 
 ---
 

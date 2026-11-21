@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "error mailer"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/error-mailer.md
 ---
 
 # Error Mailer System

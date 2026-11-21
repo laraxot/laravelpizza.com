@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "theme vite manifest workflow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Theme Vite Manifest Workflow

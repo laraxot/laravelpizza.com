@@ -24,7 +24,11 @@ test('LogActivityAction execute rifiuta user non User', function (): void {
     );
 
     expect(fn (): Activity => $action->execute())
+<<<<<<< .merge_file_O6LqNj
         ->toThrow(InvalidArgumentException::class, 'User must be an instance of User');
+=======
+        ->toThrow(InvalidArgumentException::class, 'User must implement UserContract');
+>>>>>>> .merge_file_65mq79
 });
 
 test('LogActivityAction execute accetta user null senza persistenza', function (): void {

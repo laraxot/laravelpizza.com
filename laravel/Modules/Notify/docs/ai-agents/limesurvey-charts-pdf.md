@@ -53,7 +53,7 @@ Usare `MakePdf2Action` con `AnswersFilterData`.
 
 ## Chart Types
 
-**Chart.js:** bar, line, doughnut, pie, radar, polarArea  
+**Chart.js:** bar, line, doughnut, pie, radar, polarArea
 **JpGraph:** bar1, bar2, bar3, horizbar1, pie1, pieAvg, lineSubQuestion
 
 ## Database Schema (Key Tables)
@@ -73,7 +73,7 @@ Usare `MakePdf2Action` con `AnswersFilterData`.
 - [LimeSurvey Deep Dive](../../laravel/Modules/Limesurvey/docs/limesurvey-deep-dive-architecture.md)
 - [Professional Charts Guide](../../laravel/Modules/Chart/docs/filament-charts-professional-guide.md)
 - [JpGraph 4.4.3 Reference](../../laravel/Modules/Chart/docs/jpgraph-4-4-3-reference.md)
-- [PDF Generation Guide](../../laravel/Modules/Quaeris/docs/pdf-generation-with-charts.md)
+- [PDF Generation Guide](../../laravel/Modules/<nome progetto>/docs/pdf-generation-with-charts.md)
 - [PDF Generation Guide](../../laravel/Modules/App/docs/pdf-generation-with-charts.md)
 
 ## Collegamenti

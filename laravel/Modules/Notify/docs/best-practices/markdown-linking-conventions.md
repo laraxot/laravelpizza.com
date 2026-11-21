@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - naming-conventions.md
-status: draft
 ---
 # Convenzioni per i Collegamenti nei File Markdown
 

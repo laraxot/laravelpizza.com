@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../dry-kiss-analysis.md
 ---
 
 # DRY & KISS Analysis - Modulo Gdpr
@@ -43,5 +41,13 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+title: "dry kiss analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry kiss analysis"
+issues: []
+discussions: []
+[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 

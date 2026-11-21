@@ -23,10 +23,8 @@ Rules, skills, memories live only in wiki. Load on-demand.
 - [GitHub issue ↔ wiki (audit — obbligatorio)](docs/wiki/how-to/github-issue-agent-discipline.md)
 - [Trigger Map](docs/wiki/rules/00-TRIGGER_MAP.md) — **prima** la riga **BOOTSTRAP SESSIONE AGENTE**, poi il trigger specifico del task
 - [Standard Markdown (obbligatorio per `.md`)](docs/wiki/rules/markdown-documentation-standard.md)
-- [Skills Index](docs/wiki/skills/INDEX.md)
-- **Coordinamento operativo:** aggiornare la BMAD story canonica dell’owner in
-  `docs/stories/`; registrare lì scope, handoff, decisioni, lock e verifiche.
-  `docs/chat/` è solo archivio storico e non riceve nuove note operative.
+- [Skills Index](docs/wiki/skills/index.md)
+- [Agent handoff / chat](docs/chat/README.md) — messaggi tra agenti AI e stato sessione (creare/aggiornare file qui durante il lavoro multi-turno)
 - **Naming dominio:** vietato `persist*` su model/contratti — [domain-method-naming-no-persist](docs/wiki/patterns/domain-method-naming-no-persist.md)
 
 *Updated: 2026*

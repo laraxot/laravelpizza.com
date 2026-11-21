@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "workflow errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GitHub Workflow Errors

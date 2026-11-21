@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Chiarimento sulla Struttura delle Interfacce 
 

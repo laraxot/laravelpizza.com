@@ -40,7 +40,7 @@ status: COMPLETED
   - Top-level: SendNotificationAction, NotificationManager, BuildMailMessageAction, etc.
 
 - **Tests/Unit/Services/**: Legacy test directory using old namespace
-  - `NotificationManagerTest.php`: Mocking old Services\ namespace
+  - `NotificationManagerTest.php` — Mocking old Services\ namespace
 
 ### Key Learnings
 
@@ -48,7 +48,7 @@ status: COMPLETED
 The refactoring was already done, but:
 - **Services.bak/** remained as backup (dead code, source of confusion)
 - **Legacy tests** still referenced old `Services\` namespace
-- **No cleanup documentation**: unclear that refactoring was complete
+- **No cleanup documentation** — unclear that refactoring was complete
 
 **Decision**: Treat cleanup phase as completion verification.
 
@@ -88,7 +88,7 @@ Notify's action organization follows a **platform/channel strategy**:
 - **By Driver Within Channel**: SendTwilioSMSAction, SendNexmoSMSAction, SendNetfunSMSAction, etc.
 - **Composition Pattern**: Factories (SmsActionFactory, TelegramActionFactory, WhatsAppActionFactory) select the right action based on config
 
-This is a **good pattern**: avoid mixing platform concerns.
+This is a **good pattern** — avoid mixing platform concerns.
 
 #### 4. Type Hints Inconsistency (Not Our Problem)
 PHPStan L10 reports 1000+ errors across Notify, primarily:
@@ -96,7 +96,7 @@ PHPStan L10 reports 1000+ errors across Notify, primarily:
 - Missing class stubs (Webmozart\Assert\Assert)
 - Pre-existing type coverage gaps in Actions/
 
-**Status**: Not caused by this refactoring: these are pre-existing infrastructure issues.
+**Status**: Not caused by this refactoring — these are pre-existing infrastructure issues.
 
 ---
 
@@ -146,20 +146,20 @@ rm laravel/Modules/Notify/app/Facades/NotificationFacade.php.bak
 
 **By responsibility**:
 1. **Core coordination** (3 files)
-   - NotificationManager: Routes to template-specific senders
-   - SendNotificationAction: Main dispatcher (calls templates)
-   - SendNotificationToRecipientAction: Single recipient handler
+   - NotificationManager — Routes to template-specific senders
+   - SendNotificationAction — Main dispatcher (calls templates)
+   - SendNotificationToRecipientAction — Single recipient handler
 
 2. **Mail subsystem** (4+ files + Engines/)
-   - SendMailAction: Main mail router
-   - GetMailLayoutAction: Template resolution
-   - SendMailtrapMailAction: Mailtrap driver
-   - SmtpMailSendAction: SMTP driver
-   - Mail/Engines/Duocircle/: Duocircle integration
+   - SendMailAction — Main mail router
+   - GetMailLayoutAction — Template resolution
+   - SendMailtrapMailAction — Mailtrap driver
+   - SmtpMailSendAction — SMTP driver
+   - Mail/Engines/Duocircle/ — Duocircle integration
 
 3. **Push subsystem** (8 files)
    - SendPushToDeviceAction, SendPushToPlatformAction, SendPushToTopicAction
-   - SchedulePushNotificationAction: Job-queued push
+   - SchedulePushNotificationAction — Job-queued push
    - SendPushWithTemplateAction, SendPushWithTargetingAction
 
 4. **SMS subsystem** (10 files)
@@ -173,8 +173,8 @@ rm laravel/Modules/Notify/app/Facades/NotificationFacade.php.bak
    - SendTwilioWhatsAppAction, SendFacebookWhatsAppAction, Send360dialogWhatsAppAction, SendVonageWhatsAppAction
 
 7. **Utilities** (3+ files)
-   - BuildMailMessageAction: Message assembly
-   - DetermineSeasonalContentViewPathAction: Path resolution
+   - BuildMailMessageAction — Message assembly
+   - DetermineSeasonalContentViewPathAction — Path resolution
    - NormalizePhoneNumberAction (also in SMS)
 
 ### Why This Works
@@ -203,18 +203,18 @@ rm laravel/Modules/Notify/app/Facades/NotificationFacade.php.bak
 ## Key Files (Post-Refactoring)
 
 **Entry points**:
-- `app/Actions/NotificationManager.php`: QueueableAction facade
-- `app/Actions/SendNotificationAction.php`: Main dispatcher
+- `app/Actions/NotificationManager.php` — QueueableAction facade
+- `app/Actions/SendNotificationAction.php` — Main dispatcher
 
 **By channel**:
-- `app/Actions/Mail/`: Email notifications
-- `app/Actions/SMS/`: SMS notifications
-- `app/Actions/Push/`: Push notifications
-- `app/Actions/Telegram/`: Telegram notifications
-- `app/Actions/WhatsApp/`: WhatsApp notifications
+- `app/Actions/Mail/` — Email notifications
+- `app/Actions/SMS/` — SMS notifications
+- `app/Actions/Push/` — Push notifications
+- `app/Actions/Telegram/` — Telegram notifications
+- `app/Actions/WhatsApp/` — WhatsApp notifications
 
 **Configuration**:
-- `config/notify.php`: Driver/channel configuration
+- `config/notify.php` — Driver/channel configuration
 
 ---
 

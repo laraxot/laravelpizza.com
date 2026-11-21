@@ -1,3 +1,14 @@
+---
+title: "gdpr module overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gdpr module overview"
+issues: []
+discussions: []
+---
+
 # GDPR Module - Overview e Business Logic
 
 **Status**: PHPStan Level 10 ✅ (82 files, 0 errori)
@@ -5,6 +16,14 @@
 
 ---
 
+title: "gdpr module overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gdpr module overview"
+issues: []
+discussions: []
 ## 🎯 Scopo Business
 
 Il modulo **GDPR** fornisce gestione completa della conformità al Regolamento Generale sulla Protezione dei Dati (GDPR/RGPD).
@@ -203,7 +222,6 @@ $consent->delete();
 ### Guide Principali
 
 - [README.md](./README.md) - Overview modulo
-- [README.md](./readme.md) - Overview modulo
 - [implementation-guide.md](./implementation-guide.md) - Guida implementazione
 - [api.md](./api.md) - API reference
 - [testing.md](./testing.md) - Testing guide
@@ -211,7 +229,7 @@ $consent->delete();
 ### Best Practices
 
 - [best-practices.md](./best-practices.md) - Best practices GDPR
-- [security.md](./security.md) - Sicurezza dati
+- [SECURITY.md](./security.md) - Sicurezza dati
 - [cookie-consent.md](./cookie-consent.md) - Cookie management
 
 ### Architettura
@@ -226,7 +244,7 @@ $consent->delete();
 
 **16 Dicembre 2025**:
 - ✅ Verificato PHPStan Level 10 (82 files, 0 errori)
-- ✅ Rimosso readme.md duplicato
+- ✅ Rimosso README.md duplicato
 - ✅ Fix nomenclatura file con date
 - ✅ Aggiornato README con overview business logic
 - ✅ Creato gdpr-module-overview.md

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email wysiwyg editor tests"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-wysiwyg-editor-tests.md
 ---
 
 # Test Editor WYSIWYG Email - il progetto

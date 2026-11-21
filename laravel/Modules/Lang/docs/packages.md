@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "migration filament 4"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Pacchetti del Modulo Lang
 
@@ -26,13 +25,6 @@ status: draft
 - [laraxot/module_xot_fila5](../Xot/docs/packages.md) - Modulo base per funzionalità comuni
 - [laraxot/module_ui](../UI/docs/packages.md) - Componenti UI e temi
 - [laraxot/module_tenant_fila5](../Tenant/docs/packages.md) - Gestione multi-tenant
-- [laraxot/module_tenant_fila3](../../Tenant/docs/packages.md) - Gestione multi-tenant
-- [laraxot/module_xot_fila5](../Xot/docs/packages.md) - Modulo base per funzionalità comuni
-- [laraxot/module_ui](../UI/docs/packages.md) - Componenti UI e temi
-- [laraxot/module_tenant_fila3](../../Tenant/docs/packages.md) - Gestione multi-tenant
-- [laraxot/module_xot_fila5](../Xot/docs/packages.md) - Modulo base per funzionalità comuni
-- [laraxot/module_ui](../UI/docs/packages.md) - Componenti UI e temi
-- [laraxot/module_tenant_fila5](../../Tenant/docs/packages.md) - Gestione multi-tenant
 
 ### Localizzazione
 - [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
@@ -98,15 +90,6 @@ status: draft
 * [packages.md](../../../Job/docs/packages.md)
 * [packages.md](../../../Media/docs/packages.md)
 * [packages.md](../../../Tenant/docs/packages.md)
-* [packages.md](../../Gdpr/docs/packages.md)
-* [packages.md](../../Notify/docs/packages.md)
-* [packages.md](../../../Xot/docs/packages.md)
-* [packages.md](../../User/docs/packages.md)
-* [packages.md](../../../UI/docs/packages.md)
-* [packages.md](../../../Lang/docs/packages.md)
-* [packages.md](../../Job/docs/packages.md)
-* [packages.md](../../Media/docs/packages.md)
-* [packages.md](../../Tenant/docs/packages.md)
 
 ### Versione Incoming
 

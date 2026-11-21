@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "confidence guidelines"
 related:
-  - "./phpstan-fixes-archive-2.md"
-status: draft
+  - "./phpstan-fixes-archive-gennaio.md"
 ---
 # Massimizzare il livello di confidenza
 

@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/class.php
 // Cms txt.fields.class — LangServiceProvider SSoT.
 return [
-    'label' => 'Classe CSS',
+    'label' => 'CSS Class',
     'placeholder' => 'custom-class another-class',
-    'helper_text' => 'Classi CSS personalizzate per styling avanzato',
+    'helper_text' => 'Custom CSS classes for advanced styling',
     'tooltip' => '',
     'description' => '',
 ];

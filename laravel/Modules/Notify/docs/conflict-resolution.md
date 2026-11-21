@@ -7,10 +7,9 @@ updated: 2026-09-26
 qmd: "conflict resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Conflict Resolution: Module Notify
+# Conflict Resolution — Module Notify
 
 ## Summary
 - **Files resolved**: 44
@@ -54,9 +53,9 @@ status: draft
 - docs/notifications/sms-implementation-details.md
 - docs/notifications/sms-provider-configuration.md
 - docs/notifications/telegram-notifications-guide.md
-- docs/phpstan-fixes-gennaio.md
+- docs/phpstan-fixes-early-cycle.md
 - docs/provider-actions-architecture.md
-- docs/readme.md
+- docs/README.md
 - docs/reusabilitylines.md
 - docs/roadmap.md
 - docs/sms-provider-configuration-best-practices.md

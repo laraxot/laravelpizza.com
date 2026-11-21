@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "merge conflict task list"
 related:
   - "./webm.md"
-status: draft
 ---
 # Documentation Merge Conflict Task List
 
@@ -24,8 +23,8 @@ status: draft
 
 ## COMPLETE (12 DOCS)
 - [x] `Modules/Sixteen/docs/html-parity-body-policy.md` - Added lint rule
-- [x] `Modules/Notify/Modules/Xot/docs/INDEX.md` - Added missing index references
-- [x] `Modules/Fixcity/docs/docs/INDEX.md` - Added DRY/KISS requirements
+- [x] `Modules/Notify/Modules/Xot/docs/index.md` - Added missing index references
+- [x] `Modules/LegacyDomain/docs/docs/index.md` - Added DRY/KISS requirements
 
 ## BOUNDARY CASES (0)
 ---

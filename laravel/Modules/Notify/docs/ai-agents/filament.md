@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament (Claude)
@@ -60,5 +59,5 @@ When working with protected Filament files:
 ## Links
 
 - [Claude docs index](./context.md)
-- [Filament rules prompt](../../../../../bashscripts/tools/prompts/filament-rules.md)
+- [Filament rules prompt](../../bashscripts/tools/prompts/filament-rules.md)
 - [General docs](../../docs/README.md)

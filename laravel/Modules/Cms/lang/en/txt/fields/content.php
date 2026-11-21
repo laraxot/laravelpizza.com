@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/content.php
 // Cms txt.fields.content — LangServiceProvider SSoT.
 return [
-    'label' => 'Contenuto',
-    'placeholder' => 'Scrivi il contenuto principale qui...',
-    'helper_text' => 'Contenuto principale dell\'articolo o pagina',
+    'label' => 'Content',
+    'placeholder' => 'Write the main content here...',
+    'helper_text' => 'Main content of the article or page',
     'tooltip' => '',
     'description' => '',
 ];

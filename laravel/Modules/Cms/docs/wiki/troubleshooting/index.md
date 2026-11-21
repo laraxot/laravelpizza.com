@@ -1,13 +1,12 @@
 ---
-qmd: "index"
+qmd: "Index"
 issues: []
 discussions: []
-title: "troubleshooting index — Cms"
+title: "Index"
 type: index
 tags: [cms, troubleshooting]
 created: 2026-06-10
 updated: 2026-06-10
-status: draft
 ---
 
 # Troubleshooting — Cms

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "google translate"
 related:
   - "./italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: mcaa-implementation.md
 ---
 # Guida all'Implementazione di mcamara/laravel-localization
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "logging best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Logging Best Practices - Performance Critical
@@ -19,6 +18,15 @@ status: draft
 **Action Required:** Remove all routine logging. Use only for errors/warnings.
 
 ---
+
+title: "logging best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "logging best practices"
+issues: []
+discussions: []
 ## The Problem
 
 ### Performance Impact

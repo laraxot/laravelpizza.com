@@ -1,16 +1,15 @@
 ---
-title: "frameworks"
+title: "FRAMEWORKS"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "frameworks"
+qmd: "FRAMEWORKS"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Media: Framework Integration Notes
+# Media — Framework Integration Notes
 
 Integration guidelines for caveman, graphify, bmad-method, headroom, ponytail.
 
@@ -26,7 +25,7 @@ Surgical editing patterns:
 ## Architecture (graphify)
 
 Dependency analysis:
-- Module dependencies: [TBD: graphify analysis]
+- Module dependencies: [TBD — graphify analysis]
 - Circular deps: [TBD]
 - Cross-theme usage: [TBD]
 
@@ -45,4 +44,12 @@ Efficiency principles:
 - Simplification opportunities: [TBD]
 
 ---
+title: "FRAMEWORKS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FRAMEWORKS"
+issues: []
+discussions: []
 *Generated: 2026-08-04*

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "setup guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # bmad method: setup e configurazione (fixcity)

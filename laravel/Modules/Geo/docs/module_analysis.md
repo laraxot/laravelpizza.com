@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modulo Geo - Geolocalizzazione e Mappe
@@ -349,6 +348,15 @@ $contained = SpatialQueryService::withinPolygon($polygon);
 - [Geocoding Best Practices](https://geocode.earth/guidelines)
 
 ---
+
+title: "module analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module analysis"
+issues: []
+discussions: []
 **Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v1.8.0-beta  
 **Stato**: Production Ready with Real-time Enhancement

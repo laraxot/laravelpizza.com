@@ -11,7 +11,7 @@ tags: [mail-template, slug, sluggable, spatie-email, gotcha]
 qmd: "mail template slug preventOverwrite hasSlug regenerate subject spatieemail counter update missingmailtemplate"
 related:
   - ./one-migration-consolidamento-wave2.md
-  - ../../../../Quaeris/docs/stories/quaeris-send-invite-migrate-to-record-notification.md
+  - ../../../../<nome progetto>/docs/stories/<nome progetto>-send-invite-migrate-to-record-notification.md
 ---
 
 # `MailTemplate::getSlugOptions()` deve avere `->preventOverwrite()`
@@ -48,7 +48,7 @@ valore già presente sopravvive a qualunque save.
 
 ## Storia
 
-- Il comando di migrazione (story `quaeris-send-invite-migrate-to-record-notification.md`,
+- Il comando di migrazione (story `<nome progetto>-send-invite-migrate-to-record-notification.md`,
   Task 4) avvolgeva le scritture in `MailTemplate::withoutEvents(...)` proprio per
   aggirare questo (Difetto 6). Sintomo curato lì, causa non rimossa.
 - Difetto 10 (2026-09-10): l'impatto sul flusso di invio reale è emerso solo

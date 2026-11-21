@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "optimization sumy report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Report di Sintesi - Analisi e Ottimizzazioni Moduli

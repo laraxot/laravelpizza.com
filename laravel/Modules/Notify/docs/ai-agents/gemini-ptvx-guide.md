@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gemini ptvx guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Utilizzo di Gemini con il Progetto LaravelPizza

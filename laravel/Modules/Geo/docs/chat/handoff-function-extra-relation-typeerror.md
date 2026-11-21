@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "handoff function extra relation typeerror"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Handoff: FunctionExtra TypeError + disciplina bugfix

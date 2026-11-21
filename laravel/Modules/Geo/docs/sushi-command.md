@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "sushi command"
 issues: []
 discussions: []
-status: draft
 ---

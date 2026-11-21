@@ -8,8 +8,6 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: enum-config-usage.divergenza.md
 ---
 
 # Divergenza: `enum_config_usage.md`

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "queueable action"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard <nome progetto>: spatie/laravel-queueable-action
@@ -43,4 +42,4 @@ class SendWelcomeEmailAction
 ## Collegamenti
 
 - [Documentazione ufficiale](https://github.com/spatie/laravel-queueable-action)
-- [README Notify](../../Notify/docs/README.md)
+- [README Notify](../laravel/modules/notify/docs/README.md)

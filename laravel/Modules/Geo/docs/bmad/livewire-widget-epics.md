@@ -11,7 +11,6 @@ module: Geo
 related:
   - ../stories/12.1.retire-geo-test-livewire.story.md
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Epic 12

@@ -376,7 +376,7 @@ Factory per ogni modello per testing e fake data generation.
 | laravel.md | Integrazione Laravel |
 | advanced.md | Funzioni avanzate |
 | styling.md | Styling CSS |
-| security.md | Considerazioni security |
+| SECURITY.md | Considerazioni security |
 
 ### Sottodirectory: models/
 | File | Descrizione |

@@ -9,6 +9,7 @@ tags: [cms, phpstan, tests, enum, lang, bmad]
 related:
   - ./phpstan-cleanup-cms.dev.md
   - ../actions/page-resolution-pipeline.md
+date_originale_nome_file: 2026-10-06
 ---
 
 # [STORY] PHPStan cleanup modulo Cms

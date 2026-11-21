@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "handoff xot git conflicts phpstan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Handoff — conflitti Git Xot + PHPStan
@@ -45,5 +44,5 @@ cd laravel && ./vendor/bin/phpstan analyse Modules/Xot
 
 ## Canon
 
-- [conflict-resolution-progress](../../../Xot/docs/git/logs/conflict-resolution-progress.md)
+- [conflict-resolution-progress](../../laravel/Modules/Xot/docs/git/logs/conflict-resolution-progress.md)
 - [git-merge-conflict-inventory](../../laravel/Modules/Xot/docs/wiki/troubleshooting/git-merge-conflict-inventory.md)

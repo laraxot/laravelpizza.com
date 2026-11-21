@@ -1,14 +1,13 @@
 ---
-qmd: "project structure.divergenza"
+qmd: "Project Structure.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: project-structure.md"
+title: "Project Structure.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `project-structure.md`

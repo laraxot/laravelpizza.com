@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "addressitemenum translations complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AddressItemEnum Translations - Complete Implementation

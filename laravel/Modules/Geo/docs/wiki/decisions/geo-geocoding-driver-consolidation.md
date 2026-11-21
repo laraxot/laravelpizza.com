@@ -7,7 +7,6 @@ updated: 2026-06-30
 qmd: false
 issues: https://github.com/laraxot/base_predict_fila5/issues/221
 discussions: https://github.com/laraxot/base_predict_fila5/discussions/222
-status: draft
 ---
 
 # ADR: Geocoding driver configurabile + pulizia duplicati orfani

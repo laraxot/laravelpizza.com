@@ -2,7 +2,7 @@
 qmd: "xotbase table columns enforcement"
 issues: []
 discussions: []
-title: "XotBaseResourceTable Columns Enforcement: Job Module"
+title: "XotBaseResourceTable Columns Enforcement — Job Module"
 type: concept
 sources: []
 confidence: high
@@ -12,7 +12,6 @@ tags: [xotbase, filament, tables, enforcement]
 related:
   - phpstan-schedule-schema-return-type.md
   - ../../../../../../docs/wiki/concepts/xotbase-table-columns-enforcement.md
-status: draft
 ---
 
 # Job Module: XotBaseResourceTable Columns
@@ -21,4 +20,4 @@ status: draft
 
 Resources: Export, FailedImportRow, FailedJob, Import, JobBatch, JobManager, Job, JobsWaiting, Schedule
 
-Reference implementation: `FailedJobsTable.php` with `id`, `connection`, `queue`, `failed_at`: all Job Table files follow this pattern.
+Reference implementation: `FailedJobsTable.php` with `id`, `connection`, `queue`, `failed_at` — all Job Table files follow this pattern.

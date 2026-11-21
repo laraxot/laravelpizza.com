@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: poligon
 canonical: ../../../Themes/docs/shared-components/poligon.txt
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/poligon.txt

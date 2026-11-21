@@ -1,5 +1,5 @@
 ---
-title: "Epic 5.249: Tenant: risoluzione config, morph map e isolamento DB verificabili"
+title: "Epic 5.249 — Tenant: risoluzione config, morph map e isolamento DB verificabili"
 type: epic
 module: Tenant
 status: active
@@ -17,9 +17,9 @@ related:
   - ../quick-reference.md
 ---
 
-# Epic 5.249: Tenant: risoluzione config, morph map e isolamento DB verificabili
+# Epic 5.249 — Tenant: risoluzione config, morph map e isolamento DB verificabili
 
-> **SUMMARY**: Epic di completamento del modulo `Tenant`: rendere la catena
+> **SUMMARY** — Epic di completamento del modulo `Tenant`: rendere la catena
 > config → resolver → connessione DB → morph map interamente tracciata a file e simboli,
 > e chiudere il buco sulla provenienza della tabella `tenants`.
 

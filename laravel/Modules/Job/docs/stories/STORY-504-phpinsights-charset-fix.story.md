@@ -1,5 +1,5 @@
 ---
-title: "STORY-504: PHPInsights crash su charset iso-8859-1 in lang it"
+title: "STORY-504 — PHPInsights crash su charset iso-8859-1 in lang it"
 type: story
 status: draft
 tags: [phpinsights, charset, encoding, quality-gate, job, bmad]
@@ -17,7 +17,7 @@ related:
   - ../../docs/phpstan-corrections.md
 ---
 
-# STORY-504: PHPInsights crash su charset iso-8859-1 in lang it
+# STORY-504 — PHPInsights crash su charset iso-8859-1 in lang it
 
 ## User story
 
@@ -34,7 +34,7 @@ byte UTF-8. PHPInsights (PHP-CS-Finder + `iconv_strlen`) va in errore su
 con exit-code ≠ 0, bloccando il gate.
 
 PHPStan non è interessato (analizza AST, non encoding), quindi la issue
-si vede solo con PHPInsights: costringe a `SKIP_ENV` (regola qualità gate).
+si vede solo con PHPInsights — costringe a `SKIP_ENV` (regola qualità gate).
 
 ## Acceptance criteria
 

@@ -13,10 +13,9 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - ../notifications/readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
-status: draft
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 ---
 # Architettura Progetto - Indice
 
@@ -51,12 +50,12 @@ e
    - Success metrics
 
 3. **Documentazione Moduli Specifici:**
-   - **[User Module](../../../User/docs/models/xotbasepivot-migration.md)** 🔴 Priorità ALTA
+   - **[User Module](../../Modules/User/docs/models/xotbasepivot-migration.md)** 🔴 Priorità ALTA
      - 7 Pivot concreti
      - 45 minuti effort
      - Permission system, Teams, Devices
    
-   - **[Blog Module](../../../Blog/docs/models/xotbasepivot-migration.md)** 🟡 Priorità MEDIA
+   - **[Blog Module](../../Modules/Blog/docs/models/xotbasepivot-migration.md)** 🟡 Priorità MEDIA
      - 3 Pivot concreti
      - ⚠️ Caso speciale: SoftDeletes
      - Pattern a 3 livelli
@@ -111,7 +110,7 @@ e
 Leggere in ordine:
 1. [xotbasepivot-analysis.md](./xotbasepivot-analysis.md) - Capire il WHY
 2. [xotbasepivot-strategy.md](./xotbasepivot-strategy.md) - Capire il HOW
-3. [User/xotbasepivot-migration.md](../../../User/docs/models/xotbasepivot-migration.md) - Vedere esempio pratico
+3. [User/xotbasepivot-migration.md](../../Modules/User/docs/models/xotbasepivot-migration.md) - Vedere esempio pratico
 
 ### 2. Team Alignment (30 min)
 

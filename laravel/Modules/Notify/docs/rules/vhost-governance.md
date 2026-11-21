@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # 🌐 VHost Governance Rules
 

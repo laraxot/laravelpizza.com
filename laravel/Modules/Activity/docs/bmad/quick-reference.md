@@ -1,14 +1,20 @@
 ---
+<<<<<<< .merge_file_QkJwD4
 title: "Activity — BMAD Quick Reference"
+=======
+>>>>>>> .merge_file_sXbJ2m
 title: "Activity: BMAD Quick Reference"
 description: "Comandi rapidi BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
+<<<<<<< .merge_file_QkJwD4
 ---
 
 # Activity — BMAD Quick Reference
+=======
+>>>>>>> .merge_file_sXbJ2m
 type: note
 status: draft
 updated: 2026-10-07

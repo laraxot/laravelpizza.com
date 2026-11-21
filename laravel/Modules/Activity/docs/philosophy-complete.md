@@ -1,11 +1,10 @@
 ---
 title: "Activity - Filosofia Completa: Logica, Religione, Politica, Zen"
+qmd: "activity philosophy complete md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "activity - filosofia completa: logica, religione, politica, zen activity"
+tags: [documentation]
 ---
+
 # Activity - Filosofia Completa: Logica, Religione, Politica, Zen
 
 **Data Creazione**: 2025-12-23
@@ -103,10 +102,17 @@ class Activity extends ActivityLog
 
 Il modulo Activity **è utilizzato da** tutti i moduli business:
 - **<nome progetto>**: Traccia modifiche clienti, appuntamenti, dispositivi
+<<<<<<< .merge_file_yLWDNF
 - **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
 - **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
 - **<nome progetto>**: Traccia modifiche clienti, appuntamenti, dispositivi=======
 - **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
+=======
+
+- **TechPlanner**: Traccia modifiche clienti, appuntamenti, dispositivi
+
+- **<nome progetto>**: Traccia modifiche clienti, appuntamenti, dispositivi=======
+>>>>>>> .merge_file_KOOSHD
 - **User**: Traccia azioni utente, login, cambi ruoli
 - **Employee**: Traccia timbrature, modifiche dipendenti
 - **Notify**: Traccia invii notifiche

@@ -10,7 +10,6 @@ type: prd
 module: Cms
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # PRD Cms

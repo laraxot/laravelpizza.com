@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "block data flow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Block Data Flow Architecture

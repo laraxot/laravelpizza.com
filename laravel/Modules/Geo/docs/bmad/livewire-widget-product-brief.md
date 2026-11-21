@@ -10,7 +10,6 @@ type: product-brief
 module: Geo
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Brief

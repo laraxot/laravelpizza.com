@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "paragraph"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Paragraph Block
@@ -80,5 +79,5 @@ Builder::make('content')
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [Best Practices SEO](../packages/seo.md)
+- [Best Practices SEO](../best-practices/seo.md)
 - [Accessibilità](../ui/accessibility.md)

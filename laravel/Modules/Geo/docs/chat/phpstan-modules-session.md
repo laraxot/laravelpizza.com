@@ -7,7 +7,6 @@ tags: [phpstan, type-hints, modules, session]
 created: 2026-07-07
 updated: 2026-07-07
 qmd: phpstan modules session type hints fixes completed
-status: draft
 ---
 
 # PHPStan Modules Type Hints Session

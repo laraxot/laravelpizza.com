@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "volt folio structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Volt con Folio: Struttura Corretta

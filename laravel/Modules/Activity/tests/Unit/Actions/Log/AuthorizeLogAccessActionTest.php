@@ -1,13 +1,20 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_eXKvus
 
+=======
+>>>>>>> .merge_file_V5NQXp
 use Illuminate\Contracts\Auth\Authenticatable;
 use Mockery\MockInterface;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+<<<<<<< .merge_file_eXKvus
+=======
+use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_V5NQXp
 
 uses(TestCase::class);
 

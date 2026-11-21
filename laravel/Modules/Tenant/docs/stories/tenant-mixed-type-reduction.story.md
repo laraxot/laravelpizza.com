@@ -24,7 +24,7 @@ related:
 ## Contesto
 
 Convenzione di progetto: "cerchiamo di non usare mixed, quando lo troviamo cerchiamo di
-sostituirlo con qualcosa di adeguato": best-effort, non copertura al 100%.
+sostituirlo con qualcosa di adeguato" — best-effort, non copertura al 100%.
 
 Al `git status --short` di apertura, `Modules/Tenant` risultava gia' con ~80 file
 modificati da una sessione concorrente (riordino docs/README, whitespace, non tipizzazione).
@@ -36,11 +36,11 @@ all'apertura del task.
 
 - Censiti 207 usi di `mixed` su 44 file (`app`, `tests`, `database`, `config`).
 - Di 32 file sotto `app/config/database` con `mixed`, 16 erano gia' sporchi (incluse tutte
-  le 4 occorrenze di `mixed` nativo: parametri/return type-hintati, non solo docblock) e
+  le 4 occorrenze di `mixed` nativo — parametri/return type-hintati, non solo docblock) e
   sono stati lasciati intatti per non mischiare il commit con il WIP altrui.
 - Sui 16 file puliti, revisionati tutti: la maggioranza usa gia' `array<string, mixed>` per
   payload di configurazione genuinamente polimorfici (verificato leggendo il body, non
-  assunto): lasciati cosi'.
+  assunto) — lasciati cosi'.
 - Un solo cambio applicato: `app/Actions/Config/FilterConfigStringKeysAction.php`,
   `@param array<mixed, mixed> $config` → `@param array<array-key, mixed> $config` (le chiavi
   di un array PHP sono sempre `int|string`, mai `mixed`; coerente col foreach che filtra
@@ -49,11 +49,11 @@ all'apertura del task.
   `array<string, mixed>` **revertito**: PHPStan segnalava `return.type` reale perche' la
   action delegata (`ResolveTenantConfigValueAction`, file sporco/non toccabile) resta
   tipizzata `array<mixed>`. Restringere solo il chiamante sarebbe stato un typing non
-  onesto: vedi nota `var-override-before-git-log-check` sul non forzare narrowing che il
+  onesto — vedi nota `var-override-before-git-log-check` sul non forzare narrowing che il
   runtime non garantisce.
 
 Dettaglio completo, elenco file lasciati con motivazione, prima del/dopo PHPStan e risultati
-pest/phpmd: `laravel/Modules/Tenant/docs/coverage.md`, sezione "2026-09-04: Mixed type
+pest/phpmd: `laravel/Modules/Tenant/docs/coverage.md`, sezione "2026-09-04 — Mixed type
 reduction (best-effort)".
 
 ## Verifica
@@ -94,5 +94,5 @@ tutti e 4:
 In tutti e 4 i casi il corpo della funzione fa immediatamente narrowing a runtime
 (`is_int`/`is_string`/`Assert::scalar`/`is_numeric`) prima di restituire un tipo specifico:
 e' esattamente il pattern raccomandato per confinare un `mixed` di provenienza framework, non
-un caso di "mixed non ancora sostituito". Nessun cambio applicato: follow-up chiuso come
+un caso di "mixed non ancora sostituito". Nessun cambio applicato — follow-up chiuso come
 "confermato corretto", non come "da fare".

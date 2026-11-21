@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "xot base classes convention"
 issues: []
 discussions: []
-status: superseded
-superseded_by: xot-base-classes-convention.md
 ---
 
 # Convenzioni per le Classi Base Xot

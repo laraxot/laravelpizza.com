@@ -17,36 +17,24 @@ return [
     'fields' => [
         'model_type' => [
             'label' => 'Tipo Modello',
-            'help' => 'Classe del modello a cui appartiene lo snapshot',
             'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'model_id' => [
             'label' => 'ID Modello',
-            'help' => 'Identificativo del record del modello',
             'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'state' => [
             'label' => 'Stato',
-            'help' => 'Stato corrente dello snapshot',
             'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'created_by_type' => [
             'label' => 'Tipo Creatore',
-            'help' => 'Classe dell\'entità che ha creato lo snapshot',
             'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
         ],
         'created_by_id' => [
             'label' => 'ID Creatore',
-            'help' => 'Identificativo dell\'entità che ha creato lo snapshot',
             'tooltip' => '',
+<<<<<<< .merge_file_aUTwQh
             'helper_text' => '',
             'description' => '',
         ],
@@ -102,6 +90,10 @@ return [
             'label' => 'Elimina',
             'icon' => 'delete',
             'tooltip' => 'Elimina questo snapshot',
+=======
+>>>>>>> .merge_file_zBIv4s
         ],
     ],
+    'label' => 'Snapshot',
+    'plural_label' => 'Snapshot',
 ];

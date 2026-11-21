@@ -1,8 +1,18 @@
+---
+title: "Story: file di lingua corrotti da una pipe prima di ogni carattere"
+qmd: "activity stories lang files pipe corruption story md"
+type: note
+tags: [documentation]
+---
+
 # Story: file di lingua corrotti da una pipe prima di ogni carattere
 
 Status: done
 
+<<<<<<< .merge_file_48hwcn
 ## GitHub (tracciamento) — OBBLIGATORIO
+=======
+>>>>>>> .merge_file_2KqhCv
 ## GitHub (tracciamento): OBBLIGATORIO
 
 | Tipo | Repo | # | URL |
@@ -34,6 +44,7 @@ e quindi per costruzione non la vede.
 
 ## Tasks / Subtasks
 
+<<<<<<< .merge_file_48hwcn
 - [x] Task 1 — Misurare il difetto (AC: 1, 2)
   - [x] Eseguire il preflight di `03-quality-gates.md` (step 1c) e leggerne l'esito
   - [x] Estendere lo stesso controllo agli 11.201 `.php` tracciati
@@ -50,6 +61,8 @@ e quindi per costruzione non la vede.
 - [x] Task 5 — Lasciare la guardia (AC: 5)
   - [x] Step 1d (`QG_SCAN_ALL=1`) nel prompt, portato a 3.24.0
 - [x] Task 6 — Tracciamento (AC: tutti)
+=======
+>>>>>>> .merge_file_2KqhCv
 - [x] Task 1: Misurare il difetto (AC: 1, 2)
   - [x] Eseguire il preflight di `03-quality-gates.md` (step 1c) e leggerne l'esito
   - [x] Estendere lo stesso controllo agli 11.201 `.php` tracciati
@@ -98,7 +111,10 @@ ignorato, ma cinque strumenti che dicono verde su un file svuotato del suo conte
 
 ### Due corruzioni sovrapposte, non una
 
+<<<<<<< .merge_file_48hwcn
 1. **La pipe.** L'inverso e' deterministico — togliere il byte in posizione pari — e la
+=======
+>>>>>>> .merge_file_2KqhCv
 1. **La pipe.** L'inverso e' deterministico: togliere il byte in posizione pari: e la
    verifica non e' «sembra giusto»: i due `en/` cosi' ricostruiti sono **byte-identici**
    alla copia pulita di `base_fixcity_fila5`. Non e' una ricostruzione plausibile, e' la
@@ -119,7 +135,10 @@ dove c'erano gli accenti: e' piu' piccolo perche' e' mutilato, non perche' e' pi
 | clone | file corrotti | accenti |
 |---|---:|---|
 | `base_ptvx_fila5` | 4 | persi |
+<<<<<<< .merge_file_48hwcn
 | `base_quaeris_fila5` | 4 | persi (11 `U+FFFD`) — **ancora rotto** |
+=======
+>>>>>>> .merge_file_2KqhCv
 | `base_quaeris_fila5` | 4 | persi (11 `U+FFFD`): **ancora rotto** |
 | `base_fixcity_fila5` | 0 | righe `tooltip` cancellate |
 | `base_techplanner_fila5` | 0 | altra versione |
@@ -142,7 +161,10 @@ Pest che rileggerebbe gli stessi byte.
 
 ### References
 
+<<<<<<< .merge_file_48hwcn
 - [Source: bashscripts/docs/prompts/03-quality-gates.md#preflight] — step 1c e nuovo 1d
+=======
+>>>>>>> .merge_file_2KqhCv
 - [Source: bashscripts/docs/prompts/03-quality-gates.md#preflight]: step 1c e nuovo 1d
 - [Source: laravel/Modules/Rating/docs/stories/ratings-column-section-filter.story.md#Il-predecessore]
 - [Source: docs/chat/quality-gates-preflight-file-corrotti.md]
@@ -152,6 +174,7 @@ Pest che rileggerebbe gli stessi byte.
 
 ### Agent Model Used
 
+<<<<<<< .merge_file_48hwcn
 claude-opus-5[1m] — sessione `c21fdd4e`
 
 ### Debug Log References
@@ -159,6 +182,8 @@ claude-opus-5[1m] — sessione `c21fdd4e`
 - `laravel/build/phpstan-c21fdd4e.txt` — 4 errori, tutti in `Modules/Rating/tests/`
 - `laravel/build/pest-c21fdd4e.txt` — 35 rossi / 3 rischiosi / 64 verdi, tutti preesistenti
 - `laravel/build/pint-c21fdd4e.txt` — 1 rosso, WIP di un'altra sessione
+=======
+>>>>>>> .merge_file_2KqhCv
 claude-opus-5[1m]: sessione `c21fdd4e`
 
 ### Debug Log References
@@ -180,6 +205,7 @@ claude-opus-5[1m]: sessione `c21fdd4e`
 
 ### File List
 
+<<<<<<< .merge_file_48hwcn
 - `laravel/Modules/Activity/resources/lang/en/activity-resource.php` — riparato
 - `laravel/Modules/Activity/resources/lang/en/snapshot-resource.php` — riparato
 - `laravel/Modules/Activity/resources/lang/it/activity-resource.php` — riparato
@@ -189,6 +215,8 @@ claude-opus-5[1m]: sessione `c21fdd4e`
 - `laravel/Modules/Rating/tests/Unit/BaseRatingModelTest.php` — rimosso il test su `linkedTo()` inesistente
 - `laravel/Modules/IndennitaResponsabilita/app/Models/Rating.php` — `@property int|null $parent_id`
 - `bashscripts/docs/prompts/03-quality-gates.md` — 3.24.0
+=======
+>>>>>>> .merge_file_2KqhCv
 - `laravel/Modules/Activity/resources/lang/en/activity-resource.php`: riparato
 - `laravel/Modules/Activity/resources/lang/en/snapshot-resource.php`: riparato
 - `laravel/Modules/Activity/resources/lang/it/activity-resource.php`: riparato

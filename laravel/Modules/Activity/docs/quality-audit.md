@@ -4,9 +4,12 @@ type: report
 module: Activity
 updated: 2026-09-01
 qmd: "audit qualita activity phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
+<<<<<<< .merge_file_cMmbiS
 ---
 
 # Audit di qualita — modulo Activity
+=======
+>>>>>>> .merge_file_OVvxcE
 status: draft
 tags: [docs, activity]
 ---
@@ -28,10 +31,13 @@ rifare e contestare.
 | Casi di test per file PHP | 1.53 |
 | `@phpstan-ignore` nel codice | 1 |
 | Rilievi PHPMD su `app/` | 2 |
+<<<<<<< .merge_file_cMmbiS
 | PHPInsights — Code | 94.1 % |
 | PHPInsights — Complexity | 100.0 % |
 | PHPInsights — Architecture | 92.9 % |
 | PHPInsights — Style | 86.4 % |
+=======
+>>>>>>> .merge_file_OVvxcE
 | PHPInsights: Code | 94.1 % |
 | PHPInsights: Complexity | 100.0 % |
 | PHPInsights: Architecture | 92.9 % |
@@ -78,11 +84,11 @@ nemmeno raccolto: due file con lo stesso basename generano la stessa classe.
 Percorsi coinvolti:
 
 - `.github/SECURITY.md`
-- `.github/contributing.md`
+- `.github/CONTRIBUTING.md`
 
 ### 25 collisioni di case nei docs
 
-Coppie tipo `INDEX.md` e `index.md`. Sono documenti che divergono in silenzio:
+Coppie tipo `index.md` e `index.md`. Sono documenti che divergono in silenzio:
 nessun linter le segnala e chi legge non sa quale delle due e la buona.
 
 ## Coverage

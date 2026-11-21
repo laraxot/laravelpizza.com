@@ -1,11 +1,10 @@
 ---
 title: "Activity Model: Testing Connection Hack"
+qmd: "activity testing testing connection hack md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, testing]
-qmd: "activity model: testing connection hack activity"
+tags: [documentation]
 ---
+
 # Activity Model: Testing Connection Hack
 
 ## Cosa (STORICO – HACK RIMOSSO)

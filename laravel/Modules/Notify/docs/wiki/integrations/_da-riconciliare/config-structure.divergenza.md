@@ -1,14 +1,13 @@
 ---
-qmd: "config structure.divergenza"
+qmd: "Config Structure.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: config_structure.md"
+title: "Config Structure.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `config_structure.md`

@@ -1,13 +1,12 @@
 ---
-title: "design conversion roadmap"
+title: "DESIGN CONVERSION ROADMAP"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "design conversion roadmap"
+qmd: "DESIGN CONVERSION ROADMAP"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Conversion Roadmap
@@ -23,6 +22,15 @@ status: draft
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
 
 ---
+
+title: "DESIGN CONVERSION ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DESIGN CONVERSION ROADMAP"
+issues: []
+discussions: []
 ## 📊 Executive Summary
 
 ### Current State
@@ -128,8 +136,8 @@ status: draft
 ### For Every Page (Automated)
 ```
 laravel/Themes/Sixteen/docs/pages/<page-name>/
-├── detailed-analysis.md           # Metrics and recommendations
-├── html-structure-diff.md         # Element comparison
+├── DETAILED-ANALYSIS.md           # Metrics and recommendations
+├── HTML-STRUCTURE-DIFF.md         # Element comparison
 ├── VISUAL-COMPARISON.md           # Screenshots
 ├── local-full.png                 # Full page local
 ├── reference-full.png             # Full page reference
@@ -142,19 +150,19 @@ laravel/Themes/Sixteen/docs/pages/<page-name>/
 ### Theme-Level
 ```
 laravel/Themes/Sixteen/docs/
-├── INDEX.md                                    # Main index
-├── complete-visual-parity-report.md          # All 54 pages
+├── index.md                                    # Main index
+├── COMPLETE-VISUAL-PARITY-REPORT.md          # All 54 pages
 ├── PRIORITY-MATRIX.json                       # Workload planning
 ├── visual-parity-data.json                    # Machine-readable data
-├── container-width-resolution.md              # Technical docs
-├── section-structure-diff.md                  # Historical
+├── CONTAINER-WIDTH-RESOLUTION.md              # Technical docs
+├── SECTION-STRUCTURE-DIFF.md                  # Historical
 └── GITHUB-ISSUES-MAPPING.json                 # Issue tracking
 ```
 
 ### Bash Scripts
 ```
 bashscripts/docs/
-├── INDEX.md                    # Tools overview
+├── index.md                    # Tools overview
 └── github-issues-batch.md      # GitHub CLI guide
 ```
 
@@ -187,7 +195,7 @@ npm run build
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 # View reports
-cat laravel/Themes/Sixteen/docs/complete-visual-parity-report.md
+cat laravel/Themes/Sixteen/docs/COMPLETE-VISUAL-PARITY-REPORT.md
 cat laravel/Themes/Sixteen/docs/visual-parity-data.json
 ```
 
@@ -262,7 +270,7 @@ npm run build    # ~2 seconds
 ```bash
 # 1. Review the analysis
 cd /var/www/_bases/base_fixcity_fila5
-cat laravel/Themes/Sixteen/docs/complete-visual-parity-report.md
+cat laravel/Themes/Sixteen/docs/COMPLETE-VISUAL-PARITY-REPORT.md
 
 # 2. Create GitHub issues
 node bashscripts/github/create-design-issues.mjs
@@ -325,7 +333,7 @@ open laravel/Themes/Sixteen/docs/pages/persona/DETAILED-ANALYSIS.md
 ### Real-Time Metrics
 ```bash
 # Current status
-cat laravel/Themes/Sixteen/docs/complete-visual-parity-report.md | grep "Parity"
+cat laravel/Themes/Sixteen/docs/COMPLETE-VISUAL-PARITY-REPORT.md | grep "Parity"
 
 # JSON for dashboards
 cat laravel/Themes/Sixteen/docs/visual-parity-data.json
@@ -343,8 +351,8 @@ cat laravel/Themes/Sixteen/docs/visual-parity-data.json
 - **Design Comuni**: https://italia.github.io/design-comuni-pagine-statiche/
 - **Tailwind CSS**: https://tailwindcss.com/
 - **Alpine.js**: https://alpinejs.dev/
-- **Internal Docs**: `laravel/Themes/Sixteen/docs/INDEX.md`
-- **Tools Guide**: `bashscripts/docs/INDEX.md`
+- **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
+- **Tools Guide**: `bashscripts/docs/index.md`
 
 ---
 

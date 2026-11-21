@@ -10,7 +10,6 @@ title: Ripristinare cartella vendor
 description: Ripristinare cartella vendor
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Ripristinare la cartella vendor

@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Job: ScheduleService → Actions"
+title: "Job — ScheduleService → Actions"
 type: concept
 tags: [job, actions, queueable-action, schedule, migration]
 created: 2026-07-13
@@ -9,11 +9,10 @@ updated: 2026-07-13
 qmd: "Job module ScheduleService to QueueableAction schedule cache active schedules"
 related:
   - ../../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
-  - ../../../../User/docs/wiki/concepts/no-app-support-queueable-actions.md
-status: draft
+  - ../../../User/docs/wiki/concepts/no-app-support-queueable-actions.md
 ---
 
-# Job: `ScheduleService` → Actions
+# Job — `ScheduleService` → Actions
 
 ## Mapping
 

@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_Z0U7Y8
+=======
+
+>>>>>>> .merge_file_zKjDtL
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
 use Modules\Activity\Enums\LogLevelEnum;
@@ -9,6 +13,7 @@ use Modules\Activity\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+    /** @var TestCase $this */
     $this->originalStorage = storage_path();
     $this->tempStorage = $this->originalStorage.'/framework/testing/log-state-'.uniqid('', true);
     File::makeDirectory($this->tempStorage.'/logs/reports/252', 0777, true);

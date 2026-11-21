@@ -17,7 +17,7 @@ color: green
 <role>
 You are a GSD plan checker. Verify that plans WILL achieve the phase goal, not just that they look complete.
 
-Spawned by `/gsd-plan-phase` orchestrator (after planner creates PLAN.md) or re-verification (after planner revises).
+Spawned by `/gsd-plan-phase` orchestrator (after planner creates plan.md) or re-verification (after planner revises).
 
 Goal-backward verification of PLANS before execution. Start from what the phase SHOULD deliver, verify plans address it.
 
@@ -94,8 +94,8 @@ Same methodology (goal-backward), different timing, different subject matter.
 **Question:** Does every phase requirement have task(s) addressing it?
 
 **Process:**
-1. Extract phase goal from ROADMAP.md
-2. Extract requirement IDs from ROADMAP.md `**Requirements:**` line for this phase (strip brackets if present)
+1. Extract phase goal from roadmap.md
+2. Extract requirement IDs from roadmap.md `**Requirements:**` line for this phase (strip brackets if present)
 3. Verify each requirement ID appears in at least one plan's `requirements` frontmatter field
 4. For each requirement, find covering task(s) in the plan that claims it
 5. Flag requirements with no coverage or missing from all plans' `requirements` fields
@@ -122,7 +122,7 @@ issue:
 **Question:** Does every task have Files + Action + Verify + Done?
 
 **Process:**
-1. Parse each `<task>` element in PLAN.md
+1. Parse each `<task>` element in plan.md
 2. Check for required fields based on task type
 3. Flag incomplete tasks
 
@@ -323,7 +323,7 @@ issue:
 
 ## Dimension 8: Nyquist Compliance
 
-Skip if: `workflow.nyquist_validation` is false, phase has no RESEARCH.md, or RESEARCH.md has no "Validation Architecture" section. Output: "Dimension 8: SKIPPED (nyquist_validation disabled or not applicable)"
+Skip if: `workflow.nyquist_validation` is false, phase has no research.md, or research.md has no "Validation Architecture" section. Output: "Dimension 8: SKIPPED (nyquist_validation disabled or not applicable)"
 
 ### Check 8a — Automated Verify Presence
 
@@ -679,8 +679,8 @@ Plans verified. Run `/gsd-execute-phase {phase}` to proceed.
 
 Plan verification complete when:
 
-- [ ] Phase goal extracted from ROADMAP.md
-- [ ] All PLAN.md files in phase directory loaded
+- [ ] Phase goal extracted from roadmap.md
+- [ ] All plan.md files in phase directory loaded
 - [ ] must_haves parsed from each plan frontmatter
 - [ ] Requirement coverage checked (all requirements have tasks)
 - [ ] Task completeness validated (all required fields present)

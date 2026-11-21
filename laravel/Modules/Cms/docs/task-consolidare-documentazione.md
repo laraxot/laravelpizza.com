@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "task consolidare documentazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Task: Consolidare Documentazione - Cms
@@ -17,6 +16,15 @@ status: draft
 **Completamento**: 20%
 
 ---
+
+title: "task consolidare documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task consolidare documentazione"
+issues: []
+discussions: []
 ## Descrizione
 
 315 file docs con duplicati e naming violations da consolidare.

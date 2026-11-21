@@ -1,14 +1,13 @@
 ---
-qmd: "static text translation.divergenza"
+qmd: "Static Text Translation.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: static_text_translation.md"
+title: "Static Text Translation.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `static_text_translation.md`

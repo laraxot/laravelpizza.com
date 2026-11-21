@@ -9,7 +9,6 @@ updated: 2026-07-08
 qmd: "Media git commit push dopo modifiche regola"
 related:
   - index.md
-status: draft
 ---
 
 # Commit & push dopo modifiche al modulo

@@ -10,11 +10,7 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): Descrive la registrazione automatica di comandi Artisan del modulo, ma Modules/Lang non ha app/Console ne' comandi (php artisan list 2026-10-14: solo lang:publish, del framework). Contenuto non riscritto, verificare prima di usarlo.
-
 # Autoregistrazione dei Comandi da Console
 
 ## Introduzione

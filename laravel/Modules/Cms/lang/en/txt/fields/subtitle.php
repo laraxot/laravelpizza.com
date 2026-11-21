@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/subtitle.php
 // Cms txt.fields.subtitle — LangServiceProvider SSoT.
 return [
-    'label' => 'Sottotitolo',
-    'placeholder' => 'Inserisci un sottotitolo',
-    'help' => 'Sottotitolo opzionale',
-    'helper_text' => 'Testo secondario che accompagna il titolo principale',
+    'label' => 'Subtitle',
+    'placeholder' => 'Enter a subtitle',
+    'help' => 'Optional subtitle',
+    'helper_text' => 'Secondary text accompanying the main title',
     'tooltip' => '',
     'description' => '',
 ];

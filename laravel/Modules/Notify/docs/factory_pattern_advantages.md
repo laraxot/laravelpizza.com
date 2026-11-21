@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "factory pattern advantages"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/factory-pattern-advantages.md
 ---
 
 # Analisi del Pattern Factory per la Selezione dei Provider SMS

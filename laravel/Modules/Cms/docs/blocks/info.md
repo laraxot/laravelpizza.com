@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "info"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Info Block
@@ -122,6 +121,6 @@ Il blocco può essere utilizzato in vari contesti:
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../components.md)
+- [UI Components](../ui/components.md)
 - [Branding Guidelines](../design/branding.md)
 - [Legal Requirements](../legal/requirements.md)

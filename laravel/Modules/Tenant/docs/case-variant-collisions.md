@@ -3,11 +3,10 @@ title: "case variant collisions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-20
+updated: 2026-09-26
 qmd: "case variant collisions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collisioni di nome per sola differenza di maiuscole
@@ -41,19 +40,6 @@ riconciliati a mano, mai cancellati a colpo d'occhio.
 Modules/Tenant/tests/Unit/domaintest.php
 Modules/Tenant/tests/Unit/DomainTest.php
 ```
-
-## Esito 2026-10-20
-
-La coppia divergente `tests/Unit/domaintest.php` / `tests/Unit/DomainTest.php` e' chiusa.
-Le due versioni testavano la stessa cosa (`Domain` istanziabile, `getRows()` che passa da
-`GetDomainsArrayAction`). `DomainTest.php` e' tornato alla forma Pest tipizzata
-(`Mockery::mock` + `app()->instance`, nessuna classe PHPUnit ne' `Tests\TestCase` di root);
-`domaintest.php` non aveva nulla di piu' ed e' stato rimosso. Il corpo resta in git:
-`git -C laravel/Modules/Tenant show HEAD:tests/Unit/domaintest.php`. La storia precedente
-l'aveva gia' messo da parte come `domaintest.php.old`.
-
-Restano due coppie nei seeder (`database/seeders/`), fuori dal perimetro di quella correzione:
-il comando di riproduzione qui sopra le elenca ancora.
 
 ## Come si chiude
 

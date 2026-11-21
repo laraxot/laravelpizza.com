@@ -10,6 +10,5 @@ updated: 2026-07-14
 qmd: "project configurations"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 

@@ -7,13 +7,13 @@ declare(strict_types=1);
 // File: lang/en/txt/validation.php
 return [
     'title_required' => 'The title is required',
-    'slug_unique' => 'Questo slug è già in uso',
-    'email_format' => 'Inserisci un indirizzo email valido',
-    'url_format' => 'Inserisci un URL valido',
-    'phone_format' => 'Inserisci un numero di telefono valido',
-    'image_size' => 'L\'immagine deve essere inferiore a 5MB',
-    'video_format' => 'Formato video non supportato',
+    'slug_unique' => 'This slug is already in use',
+    'email_format' => 'Enter a valid email address',
+    'url_format' => 'Enter a valid URL',
+    'phone_format' => 'Enter a valid phone number',
+    'image_size' => 'The image must be smaller than 5MB',
+    'video_format' => 'Unsupported video format',
     'required_field' => 'This field is required',
-    'max_length' => 'Il testo è troppo lungo (massimo :max caratteri)',
-    'min_length' => 'Il testo è troppo corto (minimo :min caratteri)',
+    'max_length' => 'The text is too long (maximum :max characters)',
+    'min_length' => 'The text is too short (minimum :min characters)',
 ];

@@ -2,6 +2,7 @@
 module: Activity
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< .merge_file_hhJKIu
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
 ---
 
@@ -88,6 +89,9 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 **File in Activity:**
 
 - `./laravel/Modules/Activity/app/Actions/ActivityLogger.php`
+=======
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+>>>>>>> .merge_file_orGXvO
 title: "Metodi Duplicati — Analisi Activity"
 type: note
 status: stub
@@ -95,10 +99,13 @@ updated: 2026-10-07
 qmd: "metodi duplicati   analisi activity activity"
 ---
 
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+**Powered by**: Super Mucca AI 🐄✨  
+**Versione**: 2.0 ULTIMATE  
+**Confidenza**: 99.9% (Dati Reali dal Codice)
 
 ---
 
+<<<<<<< .merge_file_hhJKIu
 ## Metodo: `withVersion` (2 occorrenze)
 
 **Moduli coinvolti:** Activity
@@ -200,3 +207,6 @@ qmd: "metodi duplicati   analisi activity activity"
 ---
 _Report generato automaticamente — fonte: `/tmp/metodi_duplicati_domain_report.md`_
 See canonical documentation: ../../../Themes/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/metodi_duplicati_analisi.md
+>>>>>>> .merge_file_orGXvO

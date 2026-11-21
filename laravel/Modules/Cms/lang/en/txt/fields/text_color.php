@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/text_color.php
 // Cms txt.fields.text_color — LangServiceProvider SSoT.
 return [
-    'label' => 'Colore Testo',
-    'placeholder' => '#000000, nero, inherit',
-    'helper_text' => 'Colore del testo dell\'elemento',
+    'label' => 'Text Color',
+    'placeholder' => '#000000, black, inherit',
+    'helper_text' => 'Element text color',
     'tooltip' => '',
     'description' => '',
 ];

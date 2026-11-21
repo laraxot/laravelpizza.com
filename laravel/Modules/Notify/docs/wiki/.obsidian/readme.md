@@ -13,14 +13,9 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - ../notifications/readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
-  - ../index.md
-  - ../../notifications/readme.md
-  - ../../integrations/readme.md
-  - ../../templates/readme.md
-status: draft
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 ---
 # Obsidian Setup Guide
 
@@ -197,6 +192,3 @@ LIMIT 10
 - [LLM Wiki Integration Guide](../wiki/README.md)
 - [Agent Instructions](../wiki/AGENTS.md)
 - [Wiki Overview](../wiki/overview.md)
-- [LLM Wiki Integration Guide](../README.md)
-- [Agent Instructions](../AGENTS.md)
-- [Wiki Overview](../overview.md)

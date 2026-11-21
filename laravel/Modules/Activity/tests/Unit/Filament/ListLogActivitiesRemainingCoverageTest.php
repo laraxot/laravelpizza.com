@@ -19,6 +19,7 @@ use Modules\Activity\Tests\Fixtures\ListLogActivitiesMountablePage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesNestedFormPage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesNonSchemaFormPage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesPageHarness;
+<<<<<<< .merge_file_xXWg9S
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionProperty;
@@ -112,3 +113,5 @@ test('ListLogActivities resolveActivity Invalid record non-Model', function (): 
     expect(fn (): Activity => $page->exposeResolveActivity(1))
         ->toThrow(\Exception::class, 'Invalid record');
 });
+=======
+>>>>>>> .merge_file_1ia3bB

@@ -12,6 +12,7 @@ use Modules\Geo\Models\Traits\HasAddress;
  */
 class TestModel extends Model
 {
+    /** @use HasAddress<TestModel> */
     use HasAddress;
 
     protected $fillable = ['name'];

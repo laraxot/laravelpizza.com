@@ -6,10 +6,13 @@ namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
 use Modules\Gdpr\Filament\Resources\TreatmentResource;
 use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_parents;
+
+uses(TestCase::class);
 
 test('treatment_resource_extends_xot_base_resource', function (): void {
     Assert::assertArrayHasKey(XotBaseResource::class, class_parents(TreatmentResource::class));

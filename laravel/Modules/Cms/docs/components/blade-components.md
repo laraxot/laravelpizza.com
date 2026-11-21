@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "blade components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Blade Components Best Practices

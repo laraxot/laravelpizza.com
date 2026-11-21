@@ -12,9 +12,9 @@ status: draft
 
 # 📊 FIXCITY - RIEPILOGO FINALE COMPLETAMENTO
 
-**Data Completamento**: 2025-10-01  
-**Sessione**: Aggiornamento Roadmap & Documentazione Completa  
-**Status**: ✅ FASE COMPLETATA CON SUCCESSO  
+**Data Completamento**: 2025-10-01
+**Sessione**: Aggiornamento Roadmap & Documentazione Completa
+**Status**: ✅ FASE COMPLETATA CON SUCCESSO
 
 ---
 ## 🎯 OBIETTIVO RAGGIUNTO
@@ -43,7 +43,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ### 👥 Modulo User (3)
 11. ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (TOTP, recovery codes, testing)
 12. ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (Azure AD, Google, Okta)
-13. ✅ **ROADMAP.md** - Aggiornata Q4 2025-Q1 2026
+13. ✅ **roadmap.md** - Aggiornata Q4 2025-Q1 2026
 
 ### 🎨 Tema Sixteen (1)
 14. ✅ **ROADMAP_2025.md** - Aggiornata Q4 2025-Q2 2026
@@ -111,8 +111,8 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ## 🏗️ STRUTTURA DOCUMENTAZIONE FINALE
 
 ```
-base_fixcity_fila5_mono/
-base_ptv_fila5_mono/
+base_fixcity_fila5/
+base_ptv_fila5/
 │
 ├── 📊 ROOT LEVEL (11 docs strategici)
 │   ├── DOCUMENTATION_INDEX.md          ✅ Indice generale
@@ -139,7 +139,7 @@ base_ptv_fila5_mono/
     │
     ├── Modules/User/docs/              ✅ 92% COMPLETO
     │   ├── README.md                   ✅ Completo
-    │   ├── ROADMAP.md                  ✅ Aggiornato
+    │   ├── roadmap.md                  ✅ Aggiornato
     │   ├── 2FA_GUIDE.md                ✅ NEW - Implementazione completa
     │   ├── SSO_GUIDE.md                ✅ NEW - SAML + OIDC
     │   └── API.md                      📋 TODO
@@ -205,7 +205,7 @@ base_ptv_fila5_mono/
 ### Roadmap (4 aggiornate)
 - ✅ **ROADMAP_STATUS_SUMMARY.md** - Master status
 - ✅ **Fixcity/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
-- ✅ **User/ROADMAP.md** - Timeline Q4 2025-Q1 2026
+- ✅ **User/roadmap.md** - Timeline Q4 2025-Q1 2026
 - ✅ **Sixteen/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 
 ---
@@ -282,8 +282,8 @@ base_ptv_fila5_mono/
 ## 📞 SUPPORTO E COMMUNITY
 
 ### Per Sviluppatori
-- **Quick Start**: [QUICK_START.md](./QUICK_START.md)
-- **Documentation Index**: [DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md)
+- **Quick Start**: [QUICK_START.md](./quick_start.md)
+- **Documentation Index**: [DOCUMENTATION_INDEX.md](./documentation_index.md)
 - **Slack**: #fixcity-dev
 - **Slack**: #ptv-dev
 
@@ -304,12 +304,12 @@ base_ptv_fila5_mono/
 
 Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione eccellente:
 
-✅ **15 documenti** creati/aggiornati  
-✅ **400+ pagine** di documentazione  
-✅ **100+ esempi** di codice  
-✅ **6 roadmap** sincronizzate  
-✅ **75% coverage** documentazione  
-✅ **92% moduli core** documentati  
+✅ **15 documenti** creati/aggiornati
+✅ **400+ pagine** di documentazione
+✅ **100+ esempi** di codice
+✅ **6 roadmap** sincronizzate
+✅ **75% coverage** documentazione
+✅ **92% moduli core** documentati
 
 **Il progetto è pronto per il completamento delle implementazioni secondo la roadmap Q4 2025! 🚀**
 
@@ -334,7 +334,7 @@ Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione e
 ### Modulo User
 - [x] 2FA_GUIDE.md creato
 - [x] SSO_GUIDE.md creato
-- [x] ROADMAP.md aggiornato
+- [x] roadmap.md aggiornato
 - [ ] API.md da creare
 
 ### Tema Sixteen
@@ -402,12 +402,12 @@ php artisan test --coverage
 
 ---
 
-**Completato da**: Cascade AI  
-**Data**: 2025-10-01  
-**Durata Sessione**: ~3 ore  
-**Documenti Creati**: 15  
-**Pagine Scritte**: ~150  
-**Status**: ✅ ECCELLENZA RAGGIUNTA  
+**Completato da**: Cascade AI
+**Data**: 2025-10-01
+**Durata Sessione**: ~3 ore
+**Documenti Creati**: 15
+**Pagine Scritte**: ~150
+**Status**: ✅ ECCELLENZA RAGGIUNTA
 
 ---
 

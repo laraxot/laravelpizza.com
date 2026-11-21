@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura Frontend
@@ -17,7 +16,7 @@ status: draft
 - [Struttura della Homepage](../frontend-architecture/struttura-homepage.md)
 - [Componenti Disponibili](../blocks.md)
 - [Come Funziona](../frontend-architecture/come-funziona.md)
-- [Best Practices](../best-practices.md)
+- [Best Practices](../frontend-architecture/best-practices.md)
 - [Esempio di Configurazione](../frontend-architecture/esempio-configurazione.md)
 - [Manutenzione](../frontend-architecture/debugging.md)
 

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "telegram sending standard"
 issues: []
 discussions: []
-status: superseded
-superseded_by: telegram-sending-standard.md
 ---
 
 # Standard per Invio Messaggi Telegram nel Modulo Notify

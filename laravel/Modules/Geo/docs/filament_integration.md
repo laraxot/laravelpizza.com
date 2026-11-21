@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "filament integration"
 issues: []
 discussions: []
-status: superseded
-superseded_by: filament-integration.md
 ---
 
 # Integrazione con Filament

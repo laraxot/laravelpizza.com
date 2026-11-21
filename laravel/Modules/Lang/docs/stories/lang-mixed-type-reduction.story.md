@@ -29,13 +29,13 @@ owned_scope:
   - laravel/Modules/Lang/docs/stories/lang-mixed-type-reduction.story.md
 ---
 
-# LANG: riduzione uso di `mixed`
+# LANG — riduzione uso di `mixed`
 
 ## Story
 
 Come manutentore del gate statico, voglio che il modulo Lang usi `mixed` solo dove il
 tipo reale non e' desumibile (payload eterogenei, contratti vendor), non come scorciatoia
-generica: per la convenzione di progetto ("cerchiamo di non usare mixed, quando lo
+generica — per la convenzione di progetto ("cerchiamo di non usare mixed, quando lo
 troviamo cerchiamo di sostituirlo con qualcosa di adeguato", best-effort).
 
 ## Evidenza misurata (2026-09-04)
@@ -52,7 +52,7 @@ indicazione del task.
 ## Acceptance Criteria
 
 1. `./vendor/bin/phpstan analyse Modules/Lang` resta a **0 errori** (baseline gia' 0
-   prima di questo lavoro): nessuna regressione, nessun nuovo `@phpstan-ignore`.
+   prima di questo lavoro) — nessuna regressione, nessun nuovo `@phpstan-ignore`.
 2. Ogni sostituzione di `mixed` e' giustificata dal codice circostante (uso con
    `is_array()`/narrowing gia' presente, o tipo noto dal chiamante), non da
    un'assunzione.
@@ -66,10 +66,10 @@ indicazione del task.
 - [x] Censire tutte le occorrenze di `mixed`, native vs docblock-only.
 - [x] Sostituire i native type-hint sicuri (`AutoLabelAction`, `TranslationFile`).
 - [x] Migliorare due docblock impropri `array<mixed, mixed>` → `array<array-key, mixed>`
-      (`HasStrictTranslations`, `SyncTranslationsAction`): le chiavi PHP non sono mai
+      (`HasStrictTranslations`, `SyncTranslationsAction`) — le chiavi PHP non sono mai
       "mixed" arbitrario.
 - [x] Verificare che il narrowing su `TranslationFile::loadTranslationDataWithErrorHandling()`
-      non introduca `function.alreadyNarrowedType`: rimosso il check `is_array()` divenuto
+      non introduca `function.alreadyNarrowedType` — rimosso il check `is_array()` divenuto
       morto, non ignorato.
 - [x] Lasciare esplicitamente `mixed` sugli override di `Illuminate\Translation\Translator::get()`
       (`TranslatorAction`, `TranslatorAdapter`, `TranslatorService`), sull'interfaccia
@@ -94,12 +94,12 @@ indicazione del task.
 - Effetto collaterale scoperto durante la verifica Pest: la suite scrive per davvero su
   `lang/en/*.php`/`lang/it/*.php` (side effect di test come `SaveTransActionTest`/
   `AutoLabelAction`-correlati). Ripristinato con `git checkout -- lang/ && git clean -fd
-  lang/` prima del commit: nessuna di queste modifiche appartiene a questa story.
+  lang/` prima del commit — nessuna di queste modifiche appartiene a questa story.
 - Durante la sessione, un conflitto Git non ancora risolto in
   `Modules/Cms/app/Providers/RouteServiceProvider.php:103` bloccava l'intera suite Pest
   (bootstrap condiviso via `XotBaseServiceProvider`); risolto da un'altra sessione in
   parallelo mentre questa story era in corso (commit "Reduce mixed type usage in Cms
-  module"): non e' stato necessario intervenire.
+  module") — non e' stato necessario intervenire.
 
 ## Testing
 
@@ -112,7 +112,7 @@ indicazione del task.
 
 ## Dev Agent Record
 
-### Esecuzione 2026-09-04: Claude (Sonnet 5)
+### Esecuzione 2026-09-04 — Claude (Sonnet 5)
 
 4 file modificati, 4 sostituzioni native/docblock mirate, 0 regressioni PHPStan. Dettaglio
 completo in `docs/coverage.md#2026-09-04-mixed-type-reduction`.

@@ -222,4 +222,4 @@ status: draft
 - [Epic channels](./epics/notification-channels.epic.md)
 - [Quick reference](./quick-reference.md)
 - [Setup guide](./setup-guide.md)
-- [BMAD method (Xot)](../../Xot/docs/bmad-method.md)
+- [BMAD method (Xot)](../wiki/bmad-method.md)

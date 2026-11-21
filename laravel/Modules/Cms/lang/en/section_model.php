@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section_model.php
 return [
     'model' => [
-        'label' => 'Sezione',
-        'plural' => 'Sezioni',
+        'label' => 'Section',
+        'plural' => 'Sections',
     ],
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "netfun sms implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione Netfun SMS 

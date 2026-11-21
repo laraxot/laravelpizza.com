@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "unified ai workflow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Unified AI Workflow: OpenViking + BMAD + GSD + Ralph Loop
@@ -216,7 +215,7 @@ openviking add-memory \
 - Creates detailed task breakdown
 - Defines verification criteria
 - Estimates effort
-- Output: `.planning/phases/001/PLAN.md`
+- Output: `.planning/phases/001/plan.md`
 
 **Store in OpenViking:**
 ```bash
@@ -234,7 +233,7 @@ openviking add-memory \
 cp _bmad/bmm/2-plan/prd.json .ralph/prd.json
 
 # Add GSD plan context
-cat .planning/phases/001/PLAN.md >> .ralph/context.md
+cat .planning/phases/001/plan.md >> .ralph/context.md
 
 # Review and adjust stories if needed
 jq '.stories' .ralph/prd.json
@@ -559,7 +558,7 @@ ls -la .planning/
 /gsd-help
 
 # Review AGENTS.md for GSD commands
-# Review agents.md for GSD commands
+# Review AGENTS.md for GSD commands
 ```
 
 ### Ralph Loop Issues
@@ -583,9 +582,7 @@ cat .ralph/iteration-log.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
 - [AGENTS.md](../AGENTS.md)
-- [agents.md](../agents.md)
-- [AGENTS.md](../../../AGENTS.md)
-- [agents.md](../../../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`
@@ -652,6 +649,15 @@ After each feature, ask:
 Document answers in retrospectives and store in OpenViking.
 
 ---
+
+title: "unified ai workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "unified ai workflow"
+issues: []
+discussions: []
 **Version**: 1.0.0  
 **Last Updated**: 2026-03-30  
 **Status**: Initial Implementation  

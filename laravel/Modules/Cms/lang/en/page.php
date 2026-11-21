@@ -174,7 +174,7 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Pagina',
+            'label' => 'Create Page',
         ],
         'edit' => 'Edit Page',
         'delete' => 'Delete Page',

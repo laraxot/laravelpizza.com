@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "common phpstan errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Common PHPStan Errors in Cms Module

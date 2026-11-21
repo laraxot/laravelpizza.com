@@ -17,7 +17,7 @@ updated: 2026-09-03
 
 ## Cosa e' stato trovato
 
-`Modules/Cms/docs/` contiene 1166 file `.md` (570 in radice, ~596 nelle sottocartelle). La radice e' fortemente inquinata da duplicati: 136 cluster di varianti dello stesso contenuto (differenze di case, `_` vs `-`, suffissi `-1`/`_1`/`-old`/`-old2`/`-renamed`, date nel nome, e alcuni nomi corrotti da un probabile bug di script di rinomina passato, es. `filament-resourcelines.md`, `iconesign.md`, `phpstanes.md`). `docs/index.md` e `docs/INDEX.md` erano stub placeholder auto-generati vuoti.
+`Modules/Cms/docs/` contiene 1166 file `.md` (570 in radice, ~596 nelle sottocartelle). La radice e' fortemente inquinata da duplicati: 136 cluster di varianti dello stesso contenuto (differenze di case, `_` vs `-`, suffissi `-1`/`_1`/`-old`/`-old2`/`-renamed`, date nel nome, e alcuni nomi corrotti da un probabile bug di script di rinomina passato, es. `filament-resourcelines.md`, `iconesign.md`, `phpstanes.md`). `docs/index.md` e `docs/index.md` erano stub placeholder auto-generati vuoti.
 
 ## Cosa e' stato fatto
 

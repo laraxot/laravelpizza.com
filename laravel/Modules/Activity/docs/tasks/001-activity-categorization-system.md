@@ -1,3 +1,10 @@
+---
+title: "Task 001: Implement Complete Activity Categorization System"
+qmd: "activity tasks 001 activity categorization system md"
+type: note
+tags: [documentation]
+---
+
 # Task 001: Implement Complete Activity Categorization System
 
 ## Description

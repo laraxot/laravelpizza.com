@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product docs index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Product Documentation Index
@@ -21,6 +20,15 @@ status: draft
 > **Owner:** Product Development Team
 
 ---
+
+title: "product docs index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product docs index"
+issues: []
+discussions: []
 ## Overview
 
 This index centralizes all product documentation across the project's modules and themes, following Notion's 6 core product template categories:

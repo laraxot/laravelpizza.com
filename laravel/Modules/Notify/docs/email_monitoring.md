@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email monitoring"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-monitoring.md
 ---
 
 # Sistema Monitoraggio Email 

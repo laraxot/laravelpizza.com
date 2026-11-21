@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 return [
     'resource' => [
-        'name' => 'Invio Notifica Push',
+        'name' => 'Send Push Notification',
     ],
     'navigation' => [
-        'name' => 'Invio Notifica Push',
-        'plural' => 'Invio Notifiche Push',
+        'name' => 'Send Push Notification',
+        'plural' => 'Send Push Notifications',
         'group' => [
             'name' => 'Sistema',
-            'description' => 'Funzionalità per l\'invio di notifiche push tramite Firebase',
+            'description' => 'Send push notifications via Firebase',
         ],
-        'label' => 'Invio Notifiche Push',
+        'label' => 'Send Push Notifications',
         'icon' => 'notify-push-animated',
         'sort' => '51',
     ],
@@ -27,7 +27,7 @@ return [
         'type' => [
             'label' => 'Tipo',
             'options' => [
-                'notification' => 'Notifica',
+                'notification' => 'Notification',
                 'data' => 'Dati',
                 'both' => 'Entrambi',
             ],
@@ -49,16 +49,16 @@ return [
         ],
         'data' => [
             'label' => 'Dati Aggiuntivi',
-            'description' => 'Dati in formato JSON da inviare con la notifica',
+            'description' => 'JSON data to send with the notification',
             'tooltip' => '',
             'helper_text' => '',
         ],
     ],
     'actions' => [
         'send' => [
-            'label' => 'Invia Notifica',
-            'success' => 'Notifica push inviata con successo',
-            'error' => 'Errore durante l\'invio della notifica push',
+            'label' => 'Send Notification',
+            'success' => 'Push notification sent successfully',
+            'error' => 'Error while sending the push notification',
         ],
         'preview' => [
             'label' => 'Anteprima',

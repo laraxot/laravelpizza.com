@@ -27,5 +27,5 @@ La cartella `bashscripts/` contiene script organizzati per categoria:
 ## Chaos readiness
 
 - Script operativo: `bashscripts/ai/chaos-readiness-check.sh`
-- Comando documentato: [chaos-readiness](../commands/chaos-readiness.md)
+- Comando documentato: [chaos-readiness](../chaos-readiness.md)
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)

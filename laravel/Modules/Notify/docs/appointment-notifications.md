@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "appointment notifications"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Notifica Appuntamenti - il progetto

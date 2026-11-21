@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "tenant config path philosophy debate"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Tenant Config Path Philosophy - THE FURIOUS DEBATE
 
@@ -131,7 +130,7 @@ I file in `config/<nome progetto>.local/` sono **copie** (forse per backup o esp
 
 **Java Package Naming Convention** (Oracle):
 > "Package names are written in all lowercase to avoid conflict with the names of classes or interfaces.
-> Companies use their reversed Internet domain name to begin their package names-
+> Companies use their reversed Internet domain name to begin their package names—
 > for example, com.example.mypackage"
 
 **Android Package Naming** (Google):

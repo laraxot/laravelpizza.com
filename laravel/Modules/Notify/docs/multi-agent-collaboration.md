@@ -8,20 +8,14 @@ qmd: "multi-agent-collaboration 🤖 multi-agent collaboration guide"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🤖 Multi-Agent Collaboration Guide
@@ -101,7 +95,7 @@ _bmad/threads/zen-documentation.md
 ```
 .planning/phases/
 ├── 01-doc-audit/
-│   ├── PLAN.md
+│   ├── plan.md
 │   ├── EXECUTION_LOG.md
 │   └── VERIFICATION.md
 ├── 02-deduplication/
@@ -456,8 +450,6 @@ ralph-loop stop \
 
 - [Zen of Documentation](docs/zen-of-documentation.md)
 - [Documentation Governance](docs/documentation-governance.md)
-- [Zen of Documentation](zen-of-documentation.md)
-- [Documentation Governance](documentation-governance.md)
 - [OpenViking Context](.qwen/openviking-context.md)
 - [BMAD Thread]( _bmad/threads/zen-documentation.md)
 - [GSD Phases](.planning/phases/)

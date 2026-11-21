@@ -13,7 +13,6 @@ discussions:
   - "https://github.com/laraxot/module_xot_fila5/discussions/40"
 related:
   - ../../Xot/docs/recursive-relationships-vendor-direct.md
-status: draft
 ---
 
 # NestedSet Migration Best Practices - CMS Module

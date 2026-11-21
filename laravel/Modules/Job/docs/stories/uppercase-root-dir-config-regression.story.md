@@ -10,7 +10,7 @@ id: story-uppercase-root-dir-config-regression
 slug: uppercase-root-dir-config-regression
 status: investigated
 priority: medium
-title: Regressione: Modules/Job/Config (maiuscolo) ricomparso nella root del modulo
+title: Regressione — Modules/Job/Config (maiuscolo) ricomparso nella root del modulo
 created_at: 2026-09-22
 updated_at: 2026-09-22
 bmad_phase: analysis
@@ -22,7 +22,7 @@ module: Job
 ## Contesto
 
 Audit trasversale (2026-09-22, swarm parallelo su tutti i Moduli/Temi) per la
-regola "nessuna cartella con maiuscole nella root di un modulo": SSoT:
+regola "nessuna cartella con maiuscole nella root di un modulo" — SSoT:
 `Modules/Xot/docs/case-sensitivity-rules.md`. Trovata `Modules/Job/Config/`
 (maiuscolo) nella root, accanto alla `Modules/Job/config/` (minuscolo) già
 corretta.
@@ -45,9 +45,9 @@ corretta.
 
 ## Stato attuale
 
-- `Modules/Job/config/config.php`: **canonico**, contenuto reale
+- `Modules/Job/config/config.php` — **canonico**, contenuto reale
   (`'name' => 'Job', 'icon' => 'job-icon'`), nessun riferimento rotto.
-- `Modules/Job/Config/config.php`: **stub vuoto** (`return [];`), nessun
+- `Modules/Job/Config/config.php` — **stub vuoto** (`return [];`), nessun
   riferimento nel codice (grep su `Modules/Job` e su `composer.json` /
   `module.json`: zero hit), quasi certamente scaffolding morto rigenerato per
   errore.
@@ -63,7 +63,7 @@ modulo prima di committare, per escludere autoload cache stantio.
 ## Follow-up non in scope (annotato, non eseguito)
 
 `Modules/Job/docs/` ha ~5 varianti quasi duplicate di indice
-(`00-INDEX.md`, `00-index.md`, `INDEX.md`, `INDEX_GENERATED.md`,
+(`00-index.md`, `00-index.md`, `index.md`, `INDEX_GENERATED.md`,
 `index-generated.md`, `index.md`, `index_generated.md`, `rules-index.md`):
 candidato per una story di consolidamento dedicata (pattern già visto in
 `docs-index-audit.story.md`, 2026-09-03).

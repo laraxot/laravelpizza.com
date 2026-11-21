@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email notifications"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-notifications.md
 ---
 
 # Sistema Notifiche Email - il progetto

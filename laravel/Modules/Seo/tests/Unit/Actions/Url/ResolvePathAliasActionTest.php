@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Modules\Seo\Actions\Url\ResolvePathAliasAction;
 use Modules\Seo\Datas\SeoConfigData;
 use Modules\Seo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -17,35 +18,32 @@ function aliasTarget(string $path): ?string
     return (new ResolvePathAliasAction)->execute($path, ['it', 'en'], ['faqs' => 'faq', 'home' => '', 'services/old' => 'services/radioprotezione']);
 }
 
-it('sends an alias to the canonical page in the same language', function (string $path, string $canonical): void {
-    expect(aliasTarget($path))->toBe($canonical);
-})->with([
-    'it' => ['/it/faqs', '/it/faq'],
-    'en' => ['/en/faqs', '/en/faq'],
-    'home alias goes to the language root' => ['/it/home', '/it'],
-    'nested alias' => ['/en/services/old', '/en/services/radioprotezione'],
-]);
+it('sends an alias to the canonical page in the same language', function (): void {
+    $cases = [
+        ['/it/faqs', '/it/faq'],
+        ['/en/faqs', '/en/faq'],
+        ['/it/home', '/it'],
+        ['/en/services/old', '/en/services/radioprotezione'],
+    ];
+    foreach ($cases as [$path, $canonical]) {
+        Assert::assertSame($canonical, aliasTarget($path));
+    }
+});
 
-it('leaves everything else alone', function (string $path): void {
-    expect(aliasTarget($path))->toBeNull();
-})->with([
-    'canonical page' => ['/it/faq'],
-    'language root' => ['/it'],
-    'root' => ['/'],
-    'language that is not active' => ['/de/faqs'],
-    'not a language' => ['/livewire/faqs'],
-    'case of the rest is kept (it is a different page)' => ['/it/FAQS'],
-    'alias as the child of another page' => ['/it/blog/faqs'],
-]);
+it('leaves everything else alone', function (): void {
+    foreach (['/it/faq', '/it', '/', '/de/faqs', '/livewire/faqs', '/it/FAQS', '/it/blog/faqs'] as $path) {
+        Assert::assertNull(aliasTarget($path));
+    }
+});
 
 it('declares aliases that end on a final page, never on another alias', function (): void {
     $data = SeoConfigData::from([]);
     $aliases = $data->pathAliases();
 
-    expect($aliases)->not->toBeEmpty()
-        ->and($data->hasRejectedAliases())->toBeFalse();
+    Assert::assertNotEmpty($aliases);
+    Assert::assertFalse($data->hasRejectedAliases());
     foreach ($aliases as $alias => $target) {
-        expect(array_key_exists($target, $aliases))->toBeFalse("{$alias} -> {$target} is a chain");
+        Assert::assertFalse(array_key_exists($target, $aliases), "{$alias} -> {$target} is a chain");
     }
 });
 
@@ -53,8 +51,8 @@ it('keeps the JSON of every alias and of every canonical page', function (): voi
     $pages = dirname(__DIR__, 5).'/TechPlanner/config/database/content/pages/';
 
     foreach (SeoConfigData::from([])->pathAliases() as $alias => $target) {
-        expect(is_file($pages.$alias.'.json'))->toBeTrue("{$alias}.json is missing: aliases are never deleted");
+        Assert::assertFileExists($pages.$alias.'.json', "{$alias}.json is missing: aliases are never deleted");
         $canonical = $target === '' ? 'home' : $target;
-        expect(is_file($pages.$canonical.'.json'))->toBeTrue("{$canonical}.json is missing: the canonical page must exist");
+        Assert::assertFileExists($pages.$canonical.'.json', "{$canonical}.json is missing: the canonical page must exist");
     }
 });

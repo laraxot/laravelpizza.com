@@ -1,14 +1,13 @@
 ---
-qmd: "translating validation messages.divergenza"
+qmd: "Translating Validation Messages.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: translating_validation_messages.md"
+title: "Translating Validation Messages.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `translating_validation_messages.md`

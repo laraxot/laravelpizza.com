@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email notifications"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema Notifiche Email - il progetto

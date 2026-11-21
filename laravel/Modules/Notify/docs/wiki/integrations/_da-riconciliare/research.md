@@ -42,6 +42,6 @@ status: draft
 - Usability test sul nuovo pannello Filament 5.
 
 ## 6. References
-- [strategy.md](strategy.md)
+- [strategy.md](../../../strategy.md)
 - [strategy.md](../../../strategy.md)
 - [prd.md](prd.md)

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpinsights report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHP Insights Report (CMS)

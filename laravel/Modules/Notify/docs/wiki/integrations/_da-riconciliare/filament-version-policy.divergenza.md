@@ -1,14 +1,13 @@
 ---
-qmd: "filament version policy.divergenza"
+qmd: "Filament Version Policy.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: FILAMENT_VERSION_POLICY.md"
+title: "Filament Version Policy.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `FILAMENT_VERSION_POLICY.md`

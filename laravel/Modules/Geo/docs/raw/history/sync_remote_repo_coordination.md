@@ -1,10 +1,10 @@
 ---
-title: "sync remote repo coordination"
+title: "Sync Remote Repo Coordination"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo coordination"
+qmd: "Sync Remote Repo Coordination"
 issues: []
 discussions: []
 ---
@@ -21,12 +21,12 @@ discussions: []
 
 ---
 
-title: "sync remote repo coordination"
+title: "SYNC REMOTE REPO COORDINATION"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo coordination"
+qmd: "SYNC REMOTE REPO COORDINATION"
 issues: []
 discussions: []
 ## 🚀 Quick Start for AI Agents

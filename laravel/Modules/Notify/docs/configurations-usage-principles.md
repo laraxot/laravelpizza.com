@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "configurations usage principles"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Principi di Utilizzo delle Configurazioni 

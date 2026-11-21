@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: xot_link
 canonical: ../../../Themes/docs/shared-components/xot-link.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/xot-link.md

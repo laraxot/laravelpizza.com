@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Critical Architecture Rules
@@ -222,6 +221,15 @@ Questo pattern si applica a:
 Il modulo PTV funziona come base/core da cui altri moduli specifici ereditano funzionalità comuni.
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 📚 Documentation Structure
 
 ### 🛡️ Critical Rules

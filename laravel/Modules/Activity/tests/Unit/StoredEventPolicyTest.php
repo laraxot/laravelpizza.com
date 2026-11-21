@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit;
 
-use Mockery;
-use Mockery\MockInterface;
 use Modules\Activity\Models\Policies\StoredEventPolicy;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\Policies\UserBasePolicy;
@@ -19,24 +17,25 @@ test('policy extends user base policy', function (): void {
 });
 
 test('user with permission can view', function (): void {
-    /** @var MockInterface&User $user */
-    $user = Mockery::mock(User::class);
-    $user->shouldReceive('hasPermissionTo')->with('stored_event.view')->andReturn(true);
+    /** @var TestCase $this */
+    $user = $this->createUnitMock(User::class);
+    $user->method('hasPermissionTo')->willReturn(true);
 
     $policy = new StoredEventPolicy;
     Assert::assertTrue($policy->view($user));
 });
 
 test('user without permission cannot view', function (): void {
-    /** @var MockInterface&User $user */
-    $user = Mockery::mock(User::class);
-    $user->shouldReceive('hasPermissionTo')->with('stored_event.view')->andReturn(false);
+    /** @var TestCase $this */
+    $user = $this->createUnitMock(User::class);
+    $user->method('hasPermissionTo')->willReturn(false);
 
     $policy = new StoredEventPolicy;
     Assert::assertFalse($policy->view($user));
 });
 
 test('policy create update delete restore force delete methods check permissions', function (): void {
+    /** @var TestCase $this */
     $permissions = [
         'stored_event.create',
         'stored_event.update',
@@ -45,9 +44,8 @@ test('policy create update delete restore force delete methods check permissions
         'stored_event.forceDelete',
     ];
 
-    /** @var MockInterface&User $user */
-    $user = Mockery::mock(User::class);
-    $user->shouldReceive('hasPermissionTo')->andReturnUsing(
+    $user = $this->createUnitMock(User::class);
+    $user->method('hasPermissionTo')->willReturnCallback(
         static fn (string $permission): bool => in_array($permission, $permissions, true)
     );
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "implementation guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida all'Implementazione dei Template Email

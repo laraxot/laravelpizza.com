@@ -8,7 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # 🚨 CRITICAL: bashscripts/ in .gitignore
@@ -159,7 +158,7 @@ gh run list --repo laraxot/<nome repitory>
 ## 📚 Related Documentation
 
 - [Multi-Agent Collaboration Guide](MULTI_AGENT_COLLABORATION_GUIDE.md)
-- [GitHub Sync Rule](GITHUB_SYNC_RULE.md)
+- [GitHub Sync Rule](github_sync_rule.md)
 - [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
 
 ---

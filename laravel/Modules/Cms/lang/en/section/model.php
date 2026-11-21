@@ -6,6 +6,6 @@ declare(strict_types=1);
 // Canon: Modules/Cms/docs/wiki — domain i18n only.
 // File: lang/en/section/model.php
 return [
-    'label' => 'Sezione',
-    'plural' => 'Sezioni',
+    'label' => 'Section',
+    'plural' => 'Sections',
 ];

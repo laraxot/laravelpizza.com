@@ -18,6 +18,13 @@ return [
             'tooltip' => '',
             'description' => '',
         ],
+        'info_banner' => [
+            'label' => 'Information bar for technical cookies',
+            'placeholder' => '',
+            'helper_text' => 'With technical cookies only the bar is not required: the cookie policy is enough. If off, the site opens without a bar. With analytics or marketing cookies the consent bar always appears.',
+            'tooltip' => '',
+            'description' => '',
+        ],
         'policy_path' => [
             'label' => 'Cookie policy page',
             'placeholder' => '/cookie-policy',

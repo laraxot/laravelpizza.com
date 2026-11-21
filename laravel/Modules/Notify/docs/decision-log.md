@@ -21,7 +21,7 @@ qmd: "decision log   notify notify"
   - 34 con lavoro nuovo (`5db42bf06` di Marco, `6b444a296` del ripristino di stamattina): merge a tre vie, base = versione prima del commit nuovo, conflitti risolti a favore della versione più recente. `5db42bf06` rifaceva sulla copia vecchia lo stesso lavoro di `ad85f0b08` (enum, stati, targeting push).
   - Eccezione: `TestSmtpPage`, `NotifyThemeableBusinessLogicTest`, `MailTemplateTest` presi interi da `ad85f0b08`. `5db42bf06` toglieva solo variabili inutilizzate nella copia vecchia, che in `ad85f0b08` sono usate: il merge le lasciava non definite (22 errori PHPStan).
 - **Restano**: `getRecord()`, guard SMS vuoti, `SmsChannel` con `toSms()` nullo; `SmsChannelSendTest` di `ad85f0b08` si aspetta proprio il salto del `null`.
-- **Verifica**: `php -l` pulito, nessun marcatore di conflitto; PHPStan su `Modules/Notify` senza errori. Suite Notify + test Quaeris di listener e `SendInviteAction`, prima e dopo, confronto JUnit test per test: 0 peggiorati, 1 migliorato, 5 test nuovi. I 401 fallimenti presenti in entrambi gli stati sono di bootstrap (*Target class [config] does not exist*: `tests/Pest.php` del modulo non viene caricato lanciando dalla root).
+- **Verifica**: `php -l` pulito, nessun marcatore di conflitto; PHPStan su `Modules/Notify` senza errori. Suite Notify + test <nome progetto> di listener e `SendInviteAction`, prima e dopo, confronto JUnit test per test: 0 peggiorati, 1 migliorato, 5 test nuovi. I 401 fallimenti presenti in entrambi gli stati sono di bootstrap (*Target class [config] does not exist*: `tests/Pest.php` del modulo non viene caricato lanciando dalla root).
 
 ### 2026-10-08: Ripristino traduzioni e SendNetfunSMSAction regrediti dal re-import del 07/10
 - **Choose**: Ripristinare dallo stato del monorepo al 06/10 `lang/it/{send_push_notification,send_whats_app,send_spatie_email,send_aws_email}.php` e `Actions/SMS/SendNetfunSMSAction.php` (torna `isSuccessfulResponse()`).
@@ -31,13 +31,13 @@ qmd: "decision log   notify notify"
 
 ### 2026-10-08: Ripristino fix inviti/SMS persi nel re-import del 07/10
 - **Choose**: Ripristinare verbatim `Notifications/RecordNotification.php` da `db4fc2482` (06/10) e `Channels/SmsChannel.php` da `b265a033c` (24/09), le ultime versioni con i fix.
-- **Over**: Riscrivere i fix a mano, o adattare `UpdateContactInviteCountersListener` (Quaeris) a una firma senza `getRecord()`.
+- **Over**: Riscrivere i fix a mano, o adattare `UpdateContactInviteCountersListener` (<nome progetto>) a una firma senza `getRecord()`.
 - **Because**: Il re-import `89ae0b10a` (07/10, nuovo commit radice, 4875 file) partiva da una copia vecchia e ha tolto:
-  - `RecordNotification::getRecord()`: il listener Quaeris su `NotificationSent` andava in errore fatale *dopo* l'invio. Contatori `mail_count`/`sms_count`/`*_sent_at` mai scritti, filtro anti-doppio-invio di `SendInviteAction` cieco, job fallito con email già partita.
-  - Il guard `trim($smsBody) === ''` in `toSms()`: un survey senza `sms_template` spediva un SMS vuoto al gateway (Difetto 17/AC7, story Quaeris `quaeris-send-invite-migrate-to-record-notification.md`).
+  - `RecordNotification::getRecord()`: il listener <nome progetto> su `NotificationSent` andava in errore fatale *dopo* l'invio. Contatori `mail_count`/`sms_count`/`*_sent_at` mai scritti, filtro anti-doppio-invio di `SendInviteAction` cieco, job fallito con email già partita.
+  - Il guard `trim($smsBody) === ''` in `toSms()`: un survey senza `sms_template` spediva un SMS vuoto al gateway (Difetto 17/AC7, story <nome progetto> `<nome progetto>-send-invite-migrate-to-record-notification.md`).
 - **Nota**: la metà `SmsChannel` dello stesso Difetto 17 (`$smsData === null` → `return null`) mancava già dal 24/09, anche in `db4fc2482`: con il solo guard, l'SMS vuoto non partiva ma il job lanciava *toSms method must return an instance of SmsData*. Vanno insieme.
 - **Rispetto al file corrente**: in `RecordNotification` torna anche `$fallbackTo` (camelCase del 21/09); in `SmsChannel` il diff è solo il blocco `null`.
-- **Verifica**: `php -l` e PHPStan puliti, sparito il `method.notFound` del listener Quaeris; `SmsChannel::send()` con `toSms()` = `null` restituisce `null` senza eccezione; test Quaeris del listener e di `SendInviteAction` verdi. I test Unit di Notify lanciati dalla root falliscono per bootstrap (*Target class [config] does not exist*): `tests/Pest.php` del modulo non viene caricato, indipendente da questo fix.
+- **Verifica**: `php -l` e PHPStan puliti, sparito il `method.notFound` del listener <nome progetto>; `SmsChannel::send()` con `toSms()` = `null` restituisce `null` senza eccezione; test <nome progetto> del listener e di `SendInviteAction` verdi. I test Unit di Notify lanciati dalla root falliscono per bootstrap (*Target class [config] does not exist*): `tests/Pest.php` del modulo non viene caricato, indipendente da questo fix.
 - **Rischio aperto**: il fix vive nel working tree finché non arriva su `laraxot/module_notify_fila5`; un nuovo pull lo ricancella. È la terza perdita (29/09 e 07/10 le precedenti). Il resto del re-import non è stato verificato.
 
 ## Open Questions

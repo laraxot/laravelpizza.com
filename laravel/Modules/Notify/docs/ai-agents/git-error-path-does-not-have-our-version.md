@@ -12,9 +12,9 @@ status: draft
 
 # Git Error: "path does not have our version"
 
-**Severity**: HIGH ⚠️  
-**Category**: Git Merge/Rebase Issues  
-**Last Updated**: 2026-03-17  
+**Severity**: HIGH ⚠️
+**Category**: Git Merge/Rebase Issues
+**Last Updated**: 2026-03-17
 **Status**: ✅ Resolved
 
 ---
@@ -333,7 +333,7 @@ git merge --abort   # No merge in progress
 # 2. Check current status
 git status --short
 # M docs/custom-charts-session-summary.md
-# M laravel/Modules/Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate.php
+# M laravel/Modules/<nome progetto>/app/Actions/QuestionChart/Custom/SmsResponseRate.php
 # M laravel/Modules/App/app/Actions/QuestionChart/Custom/SmsResponseRate.php
 # ...
 
@@ -509,7 +509,7 @@ git rebase --continue
 
 ---
 
-**Last Review**: 2026-03-17  
-**Next Review**: As needed  
-**Maintainer**: Development Team  
+**Last Review**: 2026-03-17
+**Next Review**: As needed
+**Maintainer**: Development Team
 **Status**: ✅ Complete Reference

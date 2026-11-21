@@ -66,7 +66,7 @@ describe('Tenant coverage boost — Config actions', function (): void {
 
 describe('Tenant coverage boost — Domain sushi', function (): void {
     test('Domain getRows loads from GetDomainsArrayAction', function (): void {
-        TestCase::mockAppService(GetDomainsArrayAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetDomainsArrayAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => [
                 ['id' => 1, 'name' => 'tenant.example.com'],
             ]]);
@@ -91,7 +91,7 @@ describe('Tenant coverage boost — Models and resolvers', function (): void {
 
 describe('Tenant coverage boost — tenant-aware Actions', function (): void {
     test('file path, config path and config value derive from the current tenant name', function (): void {
-        TestCase::mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => 'tenant/a']);
         });
         config(['app' => ['name' => 'Base App'], 'tenant.a.app' => ['name' => 'Tenant App']]);
@@ -122,13 +122,13 @@ describe('Tenant coverage boost — Filament and policy surface', function (): v
     test('tenant policies enforce business rules', function (): void {
         /** @var MockInterface&UserContract $superAdmin */
         $superAdmin = Mockery::mock(UserContract::class);
-        TestCase::expectMockery($superAdmin, 'hasRole')->with('super-admin')->andReturn(true);
-        TestCase::expectMockery($superAdmin, 'hasPermissionTo')->andReturn(false);
+        $superAdmin->shouldReceive('hasRole')->with('super-admin')->andReturn(true);
+        $superAdmin->shouldReceive('hasPermissionTo')->andReturn(false);
 
         /** @var MockInterface&UserContract $editor */
         $editor = Mockery::mock(UserContract::class);
-        TestCase::expectMockery($editor, 'hasRole')->with('super-admin')->andReturn(false);
-        TestCase::expectMockery($editor, 'hasPermissionTo')->andReturnUsing(
+        $editor->shouldReceive('hasRole')->with('super-admin')->andReturn(false);
+        $editor->shouldReceive('hasPermissionTo')->andReturnUsing(
             static fn (string $permission): bool => in_array($permission, ['domain.view', 'domain.update'], true),
         );
 
@@ -156,8 +156,8 @@ describe('Tenant coverage boost — Sushi file traits', function (): void {
         File::ensureDirectoryExists($baseDir.'/database/content/catalog');
         File::put($baseDir.'/database/content/catalog/1.json', json_encode(['name' => 'Alpha', 'meta' => ['x' => 1]]));
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($baseDir): void {
-            TestCase::expectMockery($mock, 'execute')->andReturnUsing(
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($baseDir): void {
+            $mock->shouldReceive('execute')->andReturnUsing(
                 static fn (string $path): string => $baseDir.'/'.ltrim($path, '/'),
             );
         });
@@ -177,8 +177,8 @@ describe('Tenant coverage boost — Sushi file traits', function (): void {
         File::ensureDirectoryExists($baseDir);
         File::put($baseDir.'/catalog.csv', "id,name\n1,Alpha\n2,Beta\n");
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($baseDir): void {
-            TestCase::expectMockery($mock, 'execute')->andReturnUsing(
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($baseDir): void {
+            $mock->shouldReceive('execute')->andReturnUsing(
                 static fn (string $path): string => $baseDir.'/'.basename($path),
             );
         });
@@ -191,7 +191,7 @@ describe('Tenant coverage boost — Sushi file traits', function (): void {
     });
 
     test('sushi to php array normalizes tenant config rows', function (): void {
-        TestCase::mockAppService(GetTenantConfigArrayAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantConfigArrayAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => [
                 ['name' => 'Alpha', 'meta' => null, 0 => 'skip'],
                 ['name' => 'Beta', 'meta' => '{"x":1}'],

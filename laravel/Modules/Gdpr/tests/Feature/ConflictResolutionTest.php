@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     $treatment = new Treatment;

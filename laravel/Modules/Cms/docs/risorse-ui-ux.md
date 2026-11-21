@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "risorse ui ux"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risorse per UI/UX e Frontend Development in il progetto

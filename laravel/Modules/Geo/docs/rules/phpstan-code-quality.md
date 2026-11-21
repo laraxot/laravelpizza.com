@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan code quality"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Code Quality Guide - base_ptvx_fila5_mono
@@ -17,6 +16,15 @@ status: draft
 **Obiettivo**: 0 errori PHPStan Level 10 + Complexity < 10 + Quality > 90%
 
 ---
+
+title: "phpstan code quality"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan code quality"
+issues: []
+discussions: []
 ## 🚨 Regole Assolute
 
 ### Configurazione

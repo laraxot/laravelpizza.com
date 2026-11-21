@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "nestedset migration best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # NestedSet Migration Best Practices - Notify Module

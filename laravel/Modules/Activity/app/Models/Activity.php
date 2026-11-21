@@ -6,7 +6,6 @@ namespace Modules\Activity\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Carbon;
@@ -20,7 +19,8 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 /**
  * Class Activity.
  *
- * This class extends the BaseActivity model to represent activities in the application.
+ * Modello audit log del modulo: estende Spatie Activitylog sulla connessione `activity`.
+ * Scopo: tracciare eventi (created/updated/deleted/login/…) con subject, causer e properties.
  *
  * @property int $id
  * @property string|null $log_name
@@ -43,17 +43,24 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @property-read Collection<int, mixed> $changes
  * @property-read Model|null $subject
  *
+<<<<<<< .merge_file_G29uvb
  * @method static ActivityFactory factory($count = null, $state = [])
  * @method static Builder<static> newModelQuery()
  * @method static Builder<static> newQuery()
  * @method static Builder<static> query()
  * @method static static create(array<string, mixed> $attributes = [])
+=======
+ * @mixin \Eloquent
+>>>>>>> .merge_file_yUCxCF
  */
 class Activity extends SpatieActivity
 {
     use ActivityScopes;
+<<<<<<< .merge_file_G29uvb
 
     /** > */
+=======
+>>>>>>> .merge_file_yUCxCF
     use HasXotFactory;
 
     /** @var string */
@@ -62,10 +69,7 @@ class Activity extends SpatieActivity
     protected $table = 'activity_log';
 
     /**
-     * Typed query entry point for actions that operate on this concrete model.
-     *
-     * The upstream activity model exposes a broad builder type; this keeps the
-     * module's action contracts tied to Activity without weakening them.
+     * Entry point tipizzato per le Action del modulo (evita builder troppo larghi di Spatie).
      *
      * @return Builder<Activity>
      */
@@ -106,8 +110,6 @@ class Activity extends SpatieActivity
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
      * @return array<string, string>
      */
     protected function casts(): array
@@ -117,14 +119,4 @@ class Activity extends SpatieActivity
             'attribute_changes' => 'collection',
         ];
     }
-
-    // NOTE
-    // ----
-    // We intentionally do not override static query helper methods here
-    // (query, whereDate, whereMonth, whereYear, whereBetween, selectRaw,
-    // latest, limit, with, count, clone). The underlying
-    // Spatie\Activitylog\Models\Activity base model already exposes the
-    // appropriate fluent Eloquent API, and PHPStan understands these via
-    // the @method annotations declared in this PHPDoc. Keeping only the
-    // annotations avoids return.type conflicts while preserving behaviour.
 }

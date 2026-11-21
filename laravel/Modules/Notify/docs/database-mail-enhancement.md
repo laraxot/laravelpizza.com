@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database mail enhancement"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Database Mail Enhancement (Open Source)
@@ -98,6 +97,15 @@ testable class SendEmailTemplateAction {
 - Allineato alle convenzioni di progetto
 
 ---
+
+title: "database mail enhancement"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database mail enhancement"
+issues: []
+discussions: []
 **Collegamenti**:
 
 - [martin-petricko Database Mail](https://filamentphp.com/plugins/martin-petricko-database-mail)

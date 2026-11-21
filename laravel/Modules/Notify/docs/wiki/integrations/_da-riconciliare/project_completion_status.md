@@ -8,7 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # 🎯 NOTIFY - STATO COMPLETAMENTO PROGETTO
@@ -37,7 +36,7 @@ status: draft
 - ✅ **ADMIN_GUIDE.md** - Guida amministratori completa (NEW)
 
 ### 👥 Modulo User (90% → 92%)
-- ✅ **ROADMAP.md** - Aggiornato Q4 2025-Q1 2026
+- ✅ **roadmap.md** - Aggiornato Q4 2025-Q1 2026
 
 ### 🎨 Tema Sixteen (75% → 78%)
 - ✅ **ROADMAP_2025.md** - Aggiornato Q4 2025-Q2 2026
@@ -183,7 +182,7 @@ status: draft
 1. **ROADMAP_STATUS_SUMMARY.md** - Master roadmap
 2. **App/ROADMAP_2025.md** - Roadmap modulo
 2. **<nome progetto>/ROADMAP_2025.md** - Roadmap modulo
-3. **User/ROADMAP.md** - Roadmap modulo
+3. **User/roadmap.md** - Roadmap modulo
 4. **Sixteen/ROADMAP_2025.md** - Roadmap tema
 
 **Totale**: 11 documenti creati/aggiornati
@@ -216,7 +215,7 @@ status: draft
     │   │
     │   ├── User/docs/
     │   │   ├── README.md           # ✅ Completo
-    │   │   ├── ROADMAP.md          # ✅ Aggiornato
+    │   │   ├── roadmap.md          # ✅ Aggiornato
     │   │   ├── 2FA_GUIDE.md        # 📋 TODO
     │   │   ├── SSO_GUIDE.md        # 📋 TODO
     │   │   └── API.md              # 📋 TODO

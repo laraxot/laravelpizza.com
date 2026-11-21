@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translations structure template"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Template di Struttura per le Traduzioni

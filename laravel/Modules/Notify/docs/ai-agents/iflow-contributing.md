@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "iflow contributing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # IFLOW Contributing
@@ -21,6 +20,15 @@ status: draft
 Come contribuire al progetto.
 
 ---
+
+title: "iflow contributing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow contributing"
+issues: []
+discussions: []
 ## 🤝 Come Contribuire
 
 > Anche se è la tua prima volta, il tuo contributo è benvenuto!

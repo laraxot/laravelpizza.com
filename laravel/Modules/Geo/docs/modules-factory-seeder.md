@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "modules factory seeder"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Completa Modelli, Factory e Seeder - Sistema <nome progetto>
@@ -160,5 +159,13 @@ Il sistema <nome progetto> ha una **copertura factory del 100%** per tutti i mod
 - 🔄 Completamento analisi User/Xot
 
 ---
+title: "modules factory seeder"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules factory seeder"
+issues: []
+discussions: []
 *Analisi completa sistema: 12/14 moduli (86% completato)*
 *Analizzato da: Sistema di analisi automatica moduli*

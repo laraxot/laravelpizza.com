@@ -9,8 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: comprehensive
-canonical: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
-status: stub
+canonical: ../../../Themes/docs/shared-components/comprehensive_guide.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive_guide.md

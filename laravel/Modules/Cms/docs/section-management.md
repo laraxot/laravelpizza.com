@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "section management"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Sezioni
@@ -131,7 +130,7 @@ Ogni sezione può contenere diversi tipi di blocchi:
 
 ## Collegamenti
 - [Documentazione Blocchi](blocks/README.md)
-- [Documentazione UI](../../UI/docs/README.md)
+- [Documentazione UI](../../ui/project_docs/README.md)
 - [Documentazione Root](../../../../docs/project/README.md)
 - [Documentazione Root – Sezioni](../../../../../docs/project/sections.md)
 - [Panoramica Gestione Pagine (Root)](../../../../../docs/project/page-content-management.md)

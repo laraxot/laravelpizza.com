@@ -11,28 +11,6 @@ status: merged
 tags: [merge, duplicato, case-only]
 ---
 
-# Wiki Schema - Media
+# Documento unificato
 
-Istruzioni per l'LLM su come mantenere questa wiki.
-
-## Struttura
-
-```
-docs/
-├── wiki/
-│   ├── index.md           # Catalogo
-│   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
-│   ├── concepts/          # Pattern, architettura
-│   ├── entities/          # Modelli, azioni
-│   ├── sources/           # Doc esterna
-│   └── comparisons/       # Tabelle comparative
-└── raw/                   # Sorgenti immutable
-```
-
-## Convenzioni
-
-- File: kebab-case (es. `entity-user.md`)
-- Frontmatter: title, description, tags, created
-- Cross-ref: `[Link](../concepts/name.md)`
-- NON modificare mai `docs/raw/`
+Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [schema.md](./schema.md).

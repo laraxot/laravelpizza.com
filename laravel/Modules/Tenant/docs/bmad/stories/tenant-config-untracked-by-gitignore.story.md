@@ -10,9 +10,6 @@ related:
   - ../../../../Xot/docs/bmad/stories/domain-config-detracked-by-gitignore-cleanup.story.md
   - ../../../../Xot/docs/bmad/stories/module-root-hygiene.story.md
   - ../../../../Rating/docs/stories/18.35.rating-morph-type-doppia-forma.story.md
-updated: 2026-10-07
-tags: [docs, tenant, bmad]
-qmd: "config/local untracciata applicando il .gitignore ai file tracciati tenant"
 ---
 tags: [docs, tenant, bmad]
 

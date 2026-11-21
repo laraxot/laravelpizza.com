@@ -15,10 +15,7 @@ related:
   - ../troubleshooting/folio-route-not-found.md
   - ../../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md
   - ../../../../../../docs/wiki/memories/folio-no-web-routes-religion.md
-status: draft
 ---
-
-> **Correzione 2026-10-30.** Gli esempi `route('notifications')` e `pages/notifications/` di questo documento sono superati: le pagine CMS (area personale, ticket, FAQ) si linkano con `route('container0.view', ['container0' => 'area-personale', 'slug0' => 'notifiche'])` e `route('container0.index', ['container0' => '...'])` (nome generico, valori nei parametri). Vedi `docs/wiki/memories/translation-protocol-memory-aid.md` §2 e `docs/wiki/rules/folio-named-routes-route-helper.md` nel repo root.
 
 # Folio — routing filesystem, mai web.php FO
 
@@ -47,7 +44,7 @@ Riferimento: [Laravel Folio 13.x](https://laravel.com/docs/13.x/folio)
 | Dove **nasce** la rotta | File in `pages/` montato da `Folio::path()` | `Route::get()` in `web.php` |
 | Cosa fa `route('notifications')` | **Genera URL** verso pagina con `name('notifications')` | «Registra» la rotta |
 | Cosa fa `name('notifications')` | **Registra** il nome Folio sul file | Opzionale ma obbligatorio per `route()` |
-| Chi monta le cartelle | `FolioVoltServiceProvider` (Cms) | Ogni modulo con `web.php` |
+| Chi monta le cartelle | `FolioVoltServiceProvider` (Cms) — mai `App\Providers\FolioServiceProvider` | Ogni modulo/`App` con `Folio::path` o `web.php` |
 | Nome route | Inglese, allineato al path file | Italiano (`area-personale.*`) |
 
 **Zen:** il filesystem è il router. `web.php` è un secondo router — nel FO crea doppia verità, nomi fantasma e `RouteNotFoundException`.

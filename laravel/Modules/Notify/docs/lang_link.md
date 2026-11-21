@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "lang link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collegamento alle Traduzioni del Modulo Notify

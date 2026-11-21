@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sprint planning meeting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify - Sprint Planning Meeting

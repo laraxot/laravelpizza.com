@@ -1,5 +1,5 @@
 ---
-title: "claude-audit static: modulo Lang"
+title: "claude-audit static — modulo Lang"
 type: concept
 module: Lang
 tags: [lang, quality, claude-audit, testing]
@@ -13,7 +13,6 @@ discussions:
 related:
   - ../../../../../../bashscripts/tools/run-claude-audit-module-static.sh
   - ../../../../../../bashscripts/tools/claude-audit-module-static-boost.sh
-status: draft
 ---
 
 # claude-audit static (Lang)
@@ -29,7 +28,7 @@ cd laravel && npx claude-audit --static Modules/Lang/ --output json --output-dir
 
 | Area | Intervento |
 |------|------------|
-| `LangServiceProvider` | `applyUserValidationMessages()` + `configureActionAsButtonWhenNoRecord()`: nesting ≤3 |
+| `LangServiceProvider` | `applyUserValidationMessages()` + `configureActionAsButtonWhenNoRecord()` — nesting ≤3 |
 | `docs/*.php` script legacy | Spostati/rimossi dalla scan (es. `italian-text-validation-refined.php`) |
 | Boost | bridge test + doc ratio |
 

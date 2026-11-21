@@ -19,6 +19,11 @@ final class LogModelCreatedActionTestModel extends Model
     /** @var string */
     protected $table = 'test_models';
 
-    /** @var list<string> */
+    /** @var bool */
+    public $incrementing = false;
+
+    /** @var string */
+    protected $keyType = 'string';
+
     protected $fillable = ['name'];
 }

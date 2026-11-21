@@ -37,11 +37,11 @@ status: draft
 ### Per Nuovi Arrivati
 1. [Zen of Documentation](./zen-of-documentation.md) - Filosofia e principi
 2. [Documentation Governance](./documentation-governance.md) - Regole e standard
-3. [Multi-Agent Collaboration](./multi-agent-collaboration.md) - Come lavorare con AI agents
+3. [Multi-Agent Collaboration](../../../multi-agent-collaboration.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
-- [Getting Started](./GETTING_STARTED.md)
+- [Getting Started](../../../GETTING_STARTED.md)
 3. [Multi-Agent Collaboration](../../../multi-agent-collaboration.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
@@ -51,7 +51,7 @@ status: draft
 
 ### Per AI Agents
 - [Project Context](./project/project.md)
-- [Agent Coordination](./multi-agent-collaboration.md)
+- [Agent Coordination](../../../multi-agent-collaboration.md)
 - [Agent Coordination](../../../multi-agent-collaboration.md)
 - [OpenViking Context](../bashscripts/ai/openviking.md)
 
@@ -78,7 +78,7 @@ status: draft
 - [Naming Conventions](./conventions/naming.md)
 
 ### 🤖 AI Tools
-- [Multi-Agent Guide](./multi-agent-collaboration.md)
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
 - [Multi-Agent Guide](../../../multi-agent-collaboration.md)
 - [BMAD Framework](./bmad/README.md)
 - [GSD Workflow](./gsd/README.md)
@@ -87,7 +87,7 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
-- [Quality Reports](./reports/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
 - [Quality Reports](../../../roadmap/quality.md)
 - [Performance Reports](./reports/performance.md)
 

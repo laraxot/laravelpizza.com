@@ -7,8 +7,8 @@ declare(strict_types=1);
 // File: lang/en/section/fields/blocks.php
 // Cms section.fields.blocks — LangServiceProvider SSoT.
 return [
-    'label' => 'Blocchi',
-    'placeholder' => 'Aggiungi blocchi alla sezione',
+    'label' => 'Blocks',
+    'placeholder' => 'Add blocks to the section',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

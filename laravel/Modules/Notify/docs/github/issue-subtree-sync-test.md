@@ -15,7 +15,6 @@ related:
   - "./issue-multi-agent-collaboration.md"
   - "./sync-remote-repo-docs-summary.md"
   - "./sync-remote-repo-test-plan.md"
-status: draft
 ---
 
 # 🧪 Test: Git Subtree Synchronization

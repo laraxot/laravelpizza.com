@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translation structure expanded"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura Traduzioni Espansa - Modulo Geo
@@ -191,6 +190,15 @@ I file di traduzione non italiani (en, de) contengono testo italiano invece dell
 - [ ] Validazione accessibilità
 
 ---
+
+title: "translation structure expanded"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure expanded"
+issues: []
+discussions: []
 **Stato**: Implementazione in corso
 **Priorità**: Alta
 **Responsabile**: Sistema automatico DRY/KISS

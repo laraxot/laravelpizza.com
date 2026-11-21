@@ -8,10 +8,9 @@ type: report
 module: Notify
 updated: 2026-09-01
 qmd: "audit qualita notify phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
-status: draft
 ---
 
-# Audit di qualita: modulo Notify
+# Audit di qualita — modulo Notify
 
 Misurato il 1 settembre 2026 a tree fermo. Ogni numero viene da un comando
 eseguito, non da una stima; i comandi sono in fondo, cosi la misura si puo
@@ -28,10 +27,10 @@ rifare e contestare.
 | Casi di test per file PHP | 1.14 |
 | `@phpstan-ignore` nel codice | 1 |
 | Rilievi PHPMD su `app/` | 191 |
-| PHPInsights: Code | 91.8 % |
-| PHPInsights: Complexity | 100.0 % |
-| PHPInsights: Architecture | 85.7 % |
-| PHPInsights: Style | 87.7 % |
+| PHPInsights — Code | 91.8 % |
+| PHPInsights — Complexity | 100.0 % |
+| PHPInsights — Architecture | 85.7 % |
+| PHPInsights — Style | 87.7 % |
 | File `.md` sotto `docs/` | 4545 |
 | `TODO`/`FIXME`/`HACK` | 7 |
 | Test con casi che non girano (senza suffisso `Test.php`) | 0 |
@@ -51,7 +50,7 @@ da `ignoreErrors` e non vengono contate da nessun gate.
 ### 4543 file .md sotto docs/, con 80 collisioni di case fra loro
 
 E' la seconda superficie documentale del progetto dopo Xot, ed e' 6 volte il numero di
-file PHP del modulo. Le 80 collisioni sono coppie tipo `ARCHITECTURE-DIAGRAMS.md` /
+file PHP del modulo. Le 80 collisioni sono coppie tipo `architecture-diagrams.md` /
 `architecture-diagrams.md`: su un filesystem case-sensitive sono due documenti che
 divergono, su macOS o Windows sono un conflitto.
 

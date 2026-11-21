@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "business logic report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Business Logic Analysis Report - SaluteOra Project

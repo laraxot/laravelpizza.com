@@ -1,11 +1,10 @@
 ---
-title: "Bad Practices – Activity"
+title: "bad practices"
+qmd: "activity bad practices md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "bad practices   activity activity"
+tags: [documentation]
 ---
+<<<<<<< .merge_file_IAyvHh
 # Bad Practices – Activity
 
 ## ❌ Log delle attività senza livello di severità
@@ -33,3 +32,6 @@ canonical: ../../../Themes/docs/shared-components/BAD_PRACTICES.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/BAD_PRACTICES.md
+=======
+
+>>>>>>> .merge_file_cAgzeW

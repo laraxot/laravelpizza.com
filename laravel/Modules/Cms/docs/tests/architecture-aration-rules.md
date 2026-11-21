@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architecture aration rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architecture Separation Rules - Test Strategy
@@ -211,6 +210,15 @@ function mockXotData(): void {
 - [Registration Widget Strategy](registration-widget-test-strategy.md)
 
 ---
+
+title: "architecture aration rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture aration rules"
+issues: []
+discussions: []
 **Status**: ✅ Regole Stabilite e Validate
 **Enforcement**: Obbligatorio per tutti i nuovi test
 **Review**: Required in code review process

@@ -1,11 +1,17 @@
 {
     "name": "Seo",
     "alias": "seo",
-    "description": "",
+    "description": "Modulo SEO: meta tag, robots, sitemap e link di condivisione social",
     "keywords": [],
     "priority": 0,
+    "active": 1,
+    "order": 10,
     "providers": [
-        "Modules\\Seo\\Providers\\SeoServiceProvider"
+        "Modules\\Seo\\Providers\\SeoServiceProvider",
+        "Modules\\Seo\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "files": []
+    "aliases": {},
+    "files": [],
+    "requires": ["Xot", "Cms"],
+    "phpVersion": "^8.3"
 }

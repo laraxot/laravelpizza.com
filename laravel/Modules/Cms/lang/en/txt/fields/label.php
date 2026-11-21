@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/label.php
 // Cms txt.fields.label — LangServiceProvider SSoT.
 return [
-    'label' => 'Etichetta',
-    'placeholder' => 'Testo dell\'etichetta',
-    'helper_text' => 'Testo visibile per link, pulsanti o elementi interattivi',
+    'label' => 'Label',
+    'placeholder' => 'Label text',
+    'helper_text' => 'Visible text for links, buttons or interactive elements',
     'tooltip' => '',
     'description' => '',
 ];

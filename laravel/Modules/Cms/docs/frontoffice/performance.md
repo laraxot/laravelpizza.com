@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "performance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Performance e Ottimizzazione
@@ -171,7 +170,7 @@ return [
 * [performance.md](laravel/modules/xot/docs/features/performance.md)
 * [performance.md](laravel/modules/xot/docs/packages/performance.md)
 * [performance.md](laravel/modules/xot/docs/roadmap/architecture/performance.md)
-* [performance.md](../../../UI/docs/standards/performance.md)
-* [performance.md](../../../Lang/docs/packages/performance.md)
-* [performance.md](../../../Job/docs/packages/performance.md)
+* [performance.md](laravel/modules/ui/docs/standards/performance.md)
+* [performance.md](laravel/modules/lang/docs/packages/performance.md)
+* [performance.md](laravel/modules/job/docs/packages/performance.md)
 * [performance.md](laravel/modules/cms/docs/frontoffice/performance.md)

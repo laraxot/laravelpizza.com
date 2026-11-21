@@ -1,11 +1,10 @@
 ---
 title: "Confronto tra Struttura a Domain e Struttura a Moduli"
+qmd: "activity use cases shop domain vs modules md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "confronto tra struttura a domain e struttura a moduli activity"
+tags: [documentation]
 ---
+
 # Confronto tra Struttura a Domain e Struttura a Moduli
 
 ## Introduzione

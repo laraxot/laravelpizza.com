@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "json migration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errore di Migrazione JSON e Soluzione

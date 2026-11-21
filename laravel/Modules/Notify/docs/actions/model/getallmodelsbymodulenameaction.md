@@ -12,14 +12,14 @@ status: draft
 
 # GetAllModelsByModuleNameAction
 
-Per la documentazione completa, consulta il file originale in [Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md](../../Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md)
+Per la documentazione completa, consulta il file originale in [Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md](getallmodelsbymodulenameaction.md)
 
 ## Collegamenti rapidi
 - [Implementazione](../../Modules/Xot/app/Actions/Model/GetAllModelsByModuleNameAction.php)
-- [Documentazione completa](../../Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md)
-- [Esempi di utilizzo](../../Modules/Xot/docs/actions/model/examples.md)
+- [Documentazione completa](getallmodelsbymodulenameaction.md)
+- [Esempi di utilizzo](../../ai-agents/examples.md)
 - [Implementazione](../../../../Xot/app/Actions/Model/GetAllModelsByModuleNameAction.php)
-- [Documentazione completa](../../Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md)
+- [Documentazione completa](getallmodelsbymodulenameaction.md)
 - [Esempi di utilizzo](../../ai-agents/examples.md)
 
 ## Note importanti

@@ -1,13 +1,32 @@
 ---
 title: "services"
 type: note
-tags: [documentation]
+tags: [documentation, notify, debt]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-17
 qmd: "services"
 issues: []
 discussions: []
 status: draft
+related:
+  - ./wiki/concepts/notify-services-support-to-actions.md
+  - ./stories/phpstan-merge-bootstrap.story.md
+  - ./stories/4.29.notify-services-to-actions.story.md
+  - ./00-index.md
+---
+
+# Services vs Actions (debito Notify)
+
+**Perché esistono ancora `app/Services/*`:** un merge ha riesumato
+`SmsService`, `PushNotificationService`, `NotificationManager`,
+`MailEngines\MailtrapEngine` accanto alle Action già migrate. Servono ancora
+a Job/test legacy; la religione del repo è **Actions + QueueableAction**.
+
+**Next step:** caller → Actions (`Actions\NotificationManager`,
+`Actions\SMS\*`, `Actions\Push\*`); poi rimuovere Services e Job wrapper.
+Vedi [notify-services-support-to-actions](./wiki/concepts/notify-services-support-to-actions.md)
+e [phpstan-merge-bootstrap.story.md](./stories/phpstan-merge-bootstrap.story.md).
+
 ---
 
 # Queueable Actions del Modulo Notify

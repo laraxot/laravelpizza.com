@@ -14,11 +14,16 @@ related:
   - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
   - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+related:
+  - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
+  - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
+  - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
-status: draft
 ---
 
-# Contratto wiki locale: stub Notify
+# Contratto wiki locale — stub Notify
 
 | Risorsa | Link |
 |---------|------|

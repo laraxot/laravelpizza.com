@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "task aumentare copertura test"
 related:
   - "./webm.md"
-status: draft
 ---
 # Task: Aumentare Copertura Test - Media
 

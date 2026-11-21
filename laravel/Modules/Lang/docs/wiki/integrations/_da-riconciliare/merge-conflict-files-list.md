@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "guida migrazione step by step"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../../../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Merge Conflict Files List
 
@@ -49,10 +47,10 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 
 ### Geo Module (5 files)
 - ./laravel/Modules/Geo/resources/js/components/coordinate-picker-styles.js
-- ./laravel/Modules/Geo/docs/wiki/agents.md
+- ./laravel/Modules/Geo/docs/wiki/AGENTS.md
 - ./laravel/Modules/Geo/docs/wiki/index.md
 - ./laravel/Modules/Geo/docs/wiki/log.md
-- ./laravel/Modules/Geo/docs/wiki/agents.md
+- ./laravel/Modules/Geo/docs/wiki/AGENTS.md
 
 ### <nome progetto> Module (4 files)
 - ./laravel/Modules/<nome progetto>/docs/wiki/index.md
@@ -69,7 +67,6 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 - ./laravel/Modules/Notify/docs/wiki/index.md
 - ./laravel/Modules/Notify/docs/wiki/log.md
 - ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
-- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-obiettivo.md
 
 ### Other Files (62 files)
 - Various agent session files, todo files, and system files

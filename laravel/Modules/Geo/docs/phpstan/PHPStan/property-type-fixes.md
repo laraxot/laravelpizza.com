@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "property type fixes"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../property-type-fixes.md
 ---
 
 # Property Type Fixes for Xot Module

@@ -24,6 +24,7 @@ use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 use Webmozart\Assert\InvalidArgumentException as AssertInvalidArgumentException;
 
+<<<<<<< .merge_file_zoxEO8
 uses(TestCase::class);
 
 describe('Query Actions validation', function (): void {
@@ -137,3 +138,5 @@ describe('RestoreActivityAction validation', function (): void {
             ->toThrow(AssertInvalidArgumentException::class);
     });
 });
+=======
+>>>>>>> .merge_file_mH44TI

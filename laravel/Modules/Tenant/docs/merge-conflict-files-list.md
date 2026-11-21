@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "merge conflict files list"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Merge Conflict Files List
 
@@ -46,10 +45,10 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 
 ### Geo Module (5 files)
 - ./laravel/Modules/Geo/resources/js/components/coordinate-picker-styles.js
-- ./laravel/Modules/Geo/docs/wiki/agents.md
+- ./laravel/Modules/Geo/docs/wiki/AGENTS.md
 - ./laravel/Modules/Geo/docs/wiki/index.md
 - ./laravel/Modules/Geo/docs/wiki/log.md
-- ./laravel/Modules/Geo/docs/wiki/agents.md
+- ./laravel/Modules/Geo/docs/wiki/AGENTS.md
 
 ### progetto corrente Module (4 files)
 - ./laravel/Modules/Project/docs/wiki/index.md

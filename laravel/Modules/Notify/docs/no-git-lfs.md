@@ -8,7 +8,6 @@ type: guideline
 module: Notify
 updated: 2026-09-01
 qmd: "git lfs vietato gitattributes prototipo binari blob normali notify puntatori immagini"
-status: draft
 ---
 
 # Git LFS non si usa in questo progetto
@@ -18,7 +17,7 @@ eccezione.
 
 ## La regola
 
-I binari: immagini, font, PDF, archivi: si versionano come **blob git normali**.
+I binari — immagini, font, PDF, archivi — si versionano come **blob git normali**.
 
 Vietato:
 
@@ -64,7 +63,7 @@ bash bashscripts/templates/sync-gitattributes-modules.sh
 *.js linguist-vendored
 CHANGELOG.md export-ignore
 
-# Binari come blob git normali: NIENTE git-lfs.
+# Binari come blob git normali — NIENTE git-lfs.
 # `binary` disattiva diff e normalizzazione di fine riga.
 # `!filter` annulla un eventuale filter.lfs ereditato dalla configurazione di sistema:
 # e' questa la protezione vera, perche' filter.lfs.* puo' restare installato sulla
@@ -96,7 +95,7 @@ CHANGELOG.md export-ignore
 LFS di intervenire. `!filter` annulla per path qualunque `filter.lfs` ereditato.
 
 Serve davvero: su questa macchina `filter.lfs.*` e' installato a livello **system**
-(`git config --system`) e serve ad altri progetti: `base_predict_fila5` ha 38 file
+(`git config --system`) e serve ad altri progetti — `base_predict_fila5` ha 38 file
 legittimamente in LFS. Non si disinstalla il pacchetto. Cio' che tiene questo monorepo
 fuori da LFS non e' l'assenza del filtro, e' il `!filter` del prototipo.
 
@@ -178,5 +177,5 @@ problema.
 
 ## Canone
 
-`bashscripts/ai/wiki/rules/no-git-lfs.md`: regola completa, storico degli incidenti e
+`bashscripts/ai/wiki/rules/no-git-lfs.md` — regola completa, storico degli incidenti e
 procedura per gli oggetti mancanti in push.

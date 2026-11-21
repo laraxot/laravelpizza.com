@@ -58,7 +58,7 @@ status: draft
 
 ### Documentazione Architetturale
 - [Design Patterns](./architecture.md) - Pattern architetturali
-- [Database Schema](./database/schema.md) - Schema database
+- [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
@@ -234,13 +234,13 @@ status: draft
 ## 🛠️ Guide Sviluppo
 
 ### Development Setup
-- [Environment Setup](./development/setup.md) - Configurazione ambiente
+- [Environment Setup](ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
-- [Database Setup](./database/setup.md) - Setup database
+- [Database Setup](ai-agents/setup.md) - Setup database
 
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
-- [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
+- [Laravel Best Practices](html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](./ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
 - [Database Setup](./ai-agents/setup.md) - Setup database
@@ -253,7 +253,7 @@ status: draft
 
 ### Quality Assurance
 - [PHPStan Configuration](./phpstan/README.md) - Analisi statica
-- [Testing Strategy](./testing/strategy.md) - Strategia testing
+- [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
@@ -295,7 +295,7 @@ status: draft
 - [Error Tracking](./monitoring/errors.md) - Tracking errori
 
 ### Analytics
-- [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
+- [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
 - [Business Metrics](./analytics/business.md) - Metriche business
 
@@ -304,7 +304,7 @@ status: draft
 ## 🔒 Security
 
 ### Security Documentation
-- [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
+- [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione
@@ -315,7 +315,7 @@ status: draft
 ## 📝 Changelog & Versioning
 
 ### Version History
-- [Changelog](./CHANGELOG.md) - Storico modifiche
+- [Changelog](./CHANGELOG.MD) - Storico modifiche
 - [Versioning Strategy](./versioning.md) - Strategia versioning
 - [Migration Guides](./migrations/README.md) - Guide migrazione
 

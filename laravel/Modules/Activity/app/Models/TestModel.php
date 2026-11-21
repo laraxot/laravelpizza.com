@@ -24,6 +24,11 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereUpdatedAt($value)
+<<<<<<< .merge_file_4SB2tm
+=======
+ *
+ * @mixin \Eloquent
+>>>>>>> .merge_file_yX3FSX
  */
 final class TestModel extends Model
 {

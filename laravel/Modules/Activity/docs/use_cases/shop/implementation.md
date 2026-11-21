@@ -1,11 +1,10 @@
 ---
 title: "Implementazione di un Carrello della Spesa"
+qmd: "activity use cases shop implementation md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "implementazione di un carrello della spesa activity"
+tags: [documentation]
 ---
+
 # Implementazione di un Carrello della Spesa
 
 ## Introduzione

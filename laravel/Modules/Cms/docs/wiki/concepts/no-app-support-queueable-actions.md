@@ -11,7 +11,6 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
   - ../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
-status: draft
 ---
 
 # no `app/Support/` — business logic in QueueableAction

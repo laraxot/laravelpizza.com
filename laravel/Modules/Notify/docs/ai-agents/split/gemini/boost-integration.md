@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "boost integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 <laravel-boost-guidelines>
@@ -151,11 +150,20 @@ Laravel Boost is currently in beta and receives frequent updates. Always leverag
 
 
 ---
+
+title: "boost integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "boost integration"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [GEMINI Index](INDEX.md): All Gemini guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [GEMINI Index](index.md): All Gemini guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../laravel/GEMINI.md](../../../../laravel/../../../../laravel/GEMINI.md): Original source
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
 

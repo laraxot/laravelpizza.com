@@ -7,6 +7,7 @@ namespace Modules\Notify\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Throwable;
 
 /**
@@ -27,8 +28,8 @@ class TestSendmail extends Command
 
     public function handle(): int
     {
-        $to = (string) $this->argument('to');
-        $mailer = (string) $this->option('mailer');
+        $to = SafeStringCastAction::cast($this->argument('to'));
+        $mailer = SafeStringCastAction::cast($this->option('mailer'));
 
         if (filter_var($to, FILTER_VALIDATE_EMAIL) === false) {
             $this->error("Indirizzo non valido: {$to}");

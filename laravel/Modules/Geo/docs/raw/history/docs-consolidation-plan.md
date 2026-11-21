@@ -56,7 +56,7 @@ enum-translation-pattern.md
 #### 2. UPPERCASE Files (241 files, excluding README.md)
 **Anti-pattern**: Inconsistent naming conventions
 ```
-BUSINESS_LOGIC_ANALYSIS.md
+business_logic_analysis.md
 QUERY_OPTIMIZATION_ANALYSIS.md
 XOTBASE_EXTENSION_RULES.md
 FILAMENT_RESOURCE_GUIDELINES.md
@@ -108,7 +108,7 @@ Modules/ModuleName/
   ├── strategies.md                # Translation strategies
   ├── mcamara-integration.md       # MCamara integration guide
   ├── troubleshooting.md           # Common issues
-  └── changelog.md                 # Version history
+  └── CHANGELOG.md                 # Version history
   ```
 
 **Xot Module** (150+ docs → ~10 docs)
@@ -125,7 +125,7 @@ Modules/ModuleName/
   ├── service-providers.md         # Service provider architecture
   ├── testing.md                   # Testing guidelines
   ├── troubleshooting.md           # Common issues
-  └── changelog.md                 # Version history
+  └── CHANGELOG.md                 # Version history
   ```
 
 **Activity Module** (50+ docs → ~8 docs)
@@ -268,7 +268,7 @@ mv translation-refactor-complete-summary.md translation-refactor-summary.md
 **Files with UPPERCASE** (241 files):
 ```bash
 # Example conversions
-mv BUSINESS_LOGIC_ANALYSIS.md business-logic-analysis.md
+mv business_logic_analysis.md business-logic-analysis.md
 mv QUERY_OPTIMIZATION_ANALYSIS.md query-optimization-analysis.md
 mv XOTBASE_EXTENSION_RULES.md xotbase-extension-rules.md
 ```
@@ -419,7 +419,7 @@ Modules/Xot/docs/phpstan-level-10-dry-kiss-analysis.md
 
 ### UPPERCASE Files (241 total - top priority samples)
 ```
-Modules/Activity/docs/BUSINESS_LOGIC_ANALYSIS.md
+Modules/Activity/docs/business_logic_analysis.md
 Modules/Activity/docs/CODE_QUALITY_ANALYSIS.md
 Modules/Activity/docs/FILAMENT_RESOURCE_GUIDELINES.md
 Modules/Activity/docs/QUERY_OPTIMIZATION_ANALYSIS.md
@@ -430,7 +430,7 @@ Modules/Lang/docs/TRANSLATION_PROCESS.md
 Modules/Lang/docs/TRANSLATION_STRATEGIES.md
 Modules/Notify/docs/COMMUNICATION_SYSTEMS_ARCHITECTURE.md
 Modules/Notify/docs/CORREZIONI_PHPSTAN_COMPLETATE.md
-Modules/User/docs/BUSINESS_LOGIC_ANALYSIS.md
+Modules/User/docs/business_logic_analysis.md
 Modules/User/docs/BUSINESS_LOGIC_DEEP_DIVE.md
 Modules/User/docs/CODE_QUALITY_ANALYSIS.md
 Modules/User/docs/MODEL_INHERITANCE_ANALYSIS.md

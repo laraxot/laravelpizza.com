@@ -10,7 +10,6 @@ title: Introducendo Cms
 description: Introduzione a Module Cms
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Introducendo Cms {#introducendo-cms}

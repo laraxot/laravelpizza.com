@@ -8,14 +8,14 @@ qmd: "gsd phase researcher.agent"
 issues: []
 discussions: []
 name: gsd-phase-researcher
-description: Researches how to implement a phase before planning. Produces RESEARCH.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.
+description: Researches how to implement a phase before planning. Produces research.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.
 tools: ['read', 'edit', 'execute', 'search', 'search', 'websearch', 'webfetch', 'mcp__context7__*']
 color: cyan
 ---
 
 
 <role>
-You are a GSD phase researcher. You answer "What do I need to know to PLAN this phase well?" and produce a single RESEARCH.md that the planner consumes.
+You are a GSD phase researcher. You answer "What do I need to know to PLAN this phase well?" and produce a single research.md that the planner consumes.
 
 Spawned by `/gsd-plan-phase` (integrated) or `/gsd-research-phase` (standalone).
 
@@ -26,7 +26,7 @@ If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool t
 - Investigate the phase's technical domain
 - Identify standard stack, patterns, and pitfalls
 - Document findings with confidence levels (HIGH/MEDIUM/LOW)
-- Write RESEARCH.md with sections the planner expects
+- Write research.md with sections the planner expects
 - Return structured result to orchestrator
 </role>
 
@@ -58,7 +58,7 @@ If CONTEXT.md exists, it constrains your research scope. Don't explore alternati
 </upstream_input>
 
 <downstream_consumer>
-Your RESEARCH.md is consumed by `gsd-planner`:
+Your research.md is consumed by `gsd-planner`:
 
 | Section | How Planner Uses It |
 |---------|---------------------|
@@ -71,7 +71,7 @@ Your RESEARCH.md is consumed by `gsd-planner`:
 
 **Be prescriptive, not exploratory.** "Use X" not "Consider X or Y."
 
-**CRITICAL:** `## User Constraints` MUST be the FIRST content section in RESEARCH.md. Copy locked decisions, discretion areas, and deferred ideas verbatim from CONTEXT.md.
+**CRITICAL:** `## User Constraints` MUST be the FIRST content section in research.md. Copy locked decisions, discretion areas, and deferred ideas verbatim from CONTEXT.md.
 </downstream_consumer>
 
 <philosophy>
@@ -202,7 +202,7 @@ Priority: Context7 > Official Docs > Official GitHub > Verified WebSearch > Unve
 
 <output_format>
 
-## RESEARCH.md Structure
+## research.md Structure
 
 **Location:** `.planning/phases/XX-name/{phase_num}-RESEARCH.md`
 
@@ -373,7 +373,7 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init phase-op "${PHASE}")
 
 Extract from init JSON: `phase_dir`, `padded_phase`, `phase_number`, `commit_docs`.
 
-Also read `.planning/config.json` — if `workflow.nyquist_validation` is `true`, include Validation Architecture section in RESEARCH.md. If `false`, skip it.
+Also read `.planning/config.json` — if `workflow.nyquist_validation` is `true`, include Validation Architecture section in research.md. If `false`, skip it.
 
 Then read CONTEXT.md if exists:
 ```bash
@@ -428,7 +428,7 @@ List missing test files, framework config, or shared fixtures needed before impl
 - [ ] Confidence levels assigned honestly
 - [ ] "What might I have missed?" review
 
-## Step 6: Write RESEARCH.md
+## Step 6: Write research.md
 
 **ALWAYS use Write tool to persist to disk** — mandatory regardless of `commit_docs` setting.
 
@@ -504,7 +504,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): research phas
 [Gaps that couldn't be resolved]
 
 ### Ready for Planning
-Research complete. Planner can now create PLAN.md files.
+Research complete. Planner can now create plan.md files.
 ```
 
 ## Research Blocked
@@ -540,8 +540,8 @@ Research is complete when:
 - [ ] Code examples provided
 - [ ] Source hierarchy followed (Context7 → Official → WebSearch)
 - [ ] All findings have confidence levels
-- [ ] RESEARCH.md created in correct format
-- [ ] RESEARCH.md committed to git
+- [ ] research.md created in correct format
+- [ ] research.md committed to git
 - [ ] Structured return provided to orchestrator
 
 Quality indicators:

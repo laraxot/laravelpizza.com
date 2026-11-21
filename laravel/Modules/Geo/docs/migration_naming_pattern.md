@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "migration naming pattern"
 issues: []
 discussions: []
-status: superseded
-superseded_by: migration-naming-pattern-convenzione-gestione.md
 ---
 
 # Convenzione di Naming e Gestione delle Migrazioni

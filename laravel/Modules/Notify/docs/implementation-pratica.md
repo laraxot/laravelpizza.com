@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "implementation pratica"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione Pratica del Modulo Notify

@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_gvP3kH
+=======
+
+>>>>>>> .merge_file_8YHXS7
 use Modules\Activity\Actions\Log\BuildLogFileTreeAction;
 use Modules\Activity\Datas\LogFileData;
 use Modules\Activity\Datas\LogTreeData;

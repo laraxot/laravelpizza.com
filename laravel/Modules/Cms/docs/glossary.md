@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "glossary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Glossario Tecnico
@@ -115,7 +114,7 @@ Elemento interattivo che:
 
 ## Collegamenti
 - [Documentazione Componenti](./components/README.md)
-- [Guida allo Stile](./style/readme.md)
-- [Convenzioni Layout](./layout/readme.md)
+- [Guida allo Stile](./style/README.md)
+- [Convenzioni Layout](./layout/README.md)
 
 [Fonte: sopralerighe.org](https://www.sopralerighe.org/sito-web-glossario-tecnico/)

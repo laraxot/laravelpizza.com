@@ -14,7 +14,6 @@ updated: 2026-05-04
 tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, Cms]
 related:
   - playwright-testing-policy
-status: draft
 ---
 
 # Visual Testing con Playwright e Puppeteer — Modulo Cms

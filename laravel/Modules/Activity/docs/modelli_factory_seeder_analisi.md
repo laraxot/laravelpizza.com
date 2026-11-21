@@ -1,11 +1,10 @@
 ---
 title: "Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, SaluteMo, Xot"
+qmd: "activity modelli factory seeder analisi md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "analisi modelli, factory e seeder - moduli activity, gdpr, tenant, ui, salutemo, xot activity"
+tags: [documentation]
 ---
+
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, SaluteMo, Xot
 
 ## Modulo Activity

@@ -94,7 +94,7 @@ Errors: N | Warnings: N | Info: N
 ```
 ## Info
 
-- [I001] 02-implementation/02-01-PLAN.md has no SUMMARY.md
+- [I001] 02-implementation/02-01-PLAN.md has no summary.md
   Note: May be in progress
 ```
 
@@ -145,7 +145,7 @@ Report final status.
 |------|----------|-------------|------------|
 | E001 | error | .planning/ directory not found | No |
 | E002 | error | PROJECT.md not found | No |
-| E003 | error | ROADMAP.md not found | No |
+| E003 | error | roadmap.md not found | No |
 | E004 | error | STATE.md not found | Yes |
 | E005 | error | config.json parse error | Yes |
 | W001 | warning | PROJECT.md missing required section | No |
@@ -168,7 +168,7 @@ Report final status.
 | regenerateState | Create STATE.md from ROADMAP structure | Loses session history |
 
 **Not repairable (too risky):**
-- PROJECT.md, ROADMAP.md content
+- PROJECT.md, roadmap.md content
 - Phase directory renaming
 - Orphaned plan cleanup
 

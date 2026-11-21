@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "telegram channel"
 issues: []
 discussions: []
-status: superseded
-superseded_by: telegram-channel.md
 ---
 
 # Implementazione Canale Telegram

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PTVX Laraxot Development Guide
@@ -273,6 +272,15 @@ php artisan docs:generate
 | 2.0 | Aug 2025 | Laraxot framework introduction |
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 **Version**: 4.0
 **Last Updated**: December 2025
 **Architecture**: Laraxot Modular Monolith

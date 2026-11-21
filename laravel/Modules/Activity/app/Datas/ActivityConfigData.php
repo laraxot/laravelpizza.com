@@ -8,13 +8,22 @@ use Modules\Xot\Datas\Concerns\MakesFromTenantConfig;
 use Spatie\LaravelData\Data;
 
 /**
- * Impostazioni di Activity del tenant corrente: `config/{tenant}/activity.php`.
+ * Impostazioni di Activity del tenant corrente: `config/{tenant}/activitylog.php`.
+ *
+ * Il nome `activitylog` (non `activity`) e' voluto: e' il file che il package
+ * `spatie/laravel-activitylog` legge, quindi `ApplyActivityConfigAction` copia in
+ * `config('activitylog.*')` esattamente le chiavi salvate qui.
  *
  * Si modificano dalla SettingPage del modulo (solo super-admin).
  */
 class ActivityConfigData extends Data
 {
     use MakesFromTenantConfig;
+
+    public static function tenantConfigName(): string
+    {
+        return 'activitylog';
+    }
 
     /** Abilita la registrazione delle attività (prima ACTIVITY_LOGGER_ENABLED). */
     public bool $enabled = true;
@@ -25,6 +34,6 @@ class ActivityConfigData extends Data
     /** Nome del log predefinito quando non specificato. */
     public string $default_log_name = 'default';
 
-    /** Mostra i soggetti cancellati con soft delete. */
-    public bool $include_soft_deleted_subjects = true;
+    /** Mostra i soggetti cancellati con soft delete (default del package: false). */
+    public bool $include_soft_deleted_subjects = false;
 }

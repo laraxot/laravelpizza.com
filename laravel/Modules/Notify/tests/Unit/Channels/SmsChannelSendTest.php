@@ -13,7 +13,7 @@ use stdClass;
 
 uses(TestCase::class);
 /**
- * Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 17
+ * Story <nome progetto>-send-invite-migrate-to-record-notification.md, Difetto 17
  * (2026-09-15): `toSms()` e' tipizzato `?SmsData` proprio per poter dire
  * "niente da inviare" (nessun destinatario, o corpo vuoto) senza che sia un
  * errore di programmazione — refactoring Zen Delegation, dicembre 2025

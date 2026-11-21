@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/applyFilters.php
 // Cms section.fields.applyFilters — LangServiceProvider SSoT.
 return [
-    'label' => 'Applica Filtri',
+    'label' => 'Apply Filters',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

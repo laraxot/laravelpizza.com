@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ponytail audit github discussion"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Ponytail audit — refresh 2026-07-01
@@ -25,6 +24,15 @@ Audit repo-wide (modalità `/ponytail-audit`): solo over-engineering e complessi
 - [ponytail-setup.md](../wiki/how-to/ponytail-setup.md)
 
 ---
+
+title: "ponytail audit github discussion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ponytail audit github discussion"
+issues: []
+discussions: []
 ## Scope e vincoli (non negoziabili)
 
 | Voce | Decisione |

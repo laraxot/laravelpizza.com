@@ -36,5 +36,5 @@ status: draft
 ```bash
 cd laravel
 php artisan optimize:clear
-vendor/bin/phpstan analyse Modules/Xot Modules/Quaeris
+vendor/bin/phpstan analyse Modules/Xot Modules/<nome progetto>
 ```

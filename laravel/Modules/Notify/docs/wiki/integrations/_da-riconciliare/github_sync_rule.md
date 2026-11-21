@@ -8,8 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: github-sync-rule.md
 ---
 
 # 🔄 Sync .github with bashscripts/ai/.github
@@ -80,7 +78,7 @@ echo "Synced .github with bashscripts/ai/.github on $(date)" >> bashscripts/ai/.
 | `.github/CONTRIBUTING.md` | `bashscripts/ai/.github/` | Contribution guide |
 | `.github/pull_request_template.md` | `bashscripts/ai/.github/` | PR template |
 | `.github/dependabot.yml` | `bashscripts/ai/.github/` | Dependabot config |
-| `.github/security.md` | `bashscripts/ai/.github/` | Security policy |
+| `.github/SECURITY.md` | `bashscripts/ai/.github/` | Security policy |
 
 ---
 

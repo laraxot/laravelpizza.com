@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sms driver enum translations"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/sms-driver-enum-translations.md
 ---
 
 # Traduzioni SmsDriverEnum - Modulo Notify

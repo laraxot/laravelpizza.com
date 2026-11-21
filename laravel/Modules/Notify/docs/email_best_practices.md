@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email best practices"
 issues: []
 discussions: []
-status: superseded
-superseded_by: email-best-practices.md
 ---
 
 # Best Practices per il Sistema Email

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "theme reusability"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Best Practices per la Riusabilità dei Temi
@@ -190,7 +189,7 @@ Prima di committare modifiche a un tema, verificare che:
 
 ## Collegamenti
 
-- [Documentazione Temi](/laravel/modules/cms/docs/themes/readme.md)
+- [Documentazione Temi](/laravel/modules/cms/docs/themes/README.md)
 - [Configurazione Temi](/laravel/modules/cms/docs/themes/configuration.md)
 - [Testing dei Temi](/laravel/modules/cms/docs/themes/testing.md)
 

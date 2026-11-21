@@ -31,7 +31,7 @@ class LocaleSwitcherRefresh extends XotBaseAction
         $this->label($this->lang)
             ->schema([
                 Select::make('locale')
-                    ->label('Seleziona lingua')
+                    ->label('Select language')
                     ->options($languageOptions)
                     ->default($this->lang)
                     ->live()

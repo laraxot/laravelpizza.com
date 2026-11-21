@@ -354,7 +354,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ ANALISI COMPLETA](./analisi-completa.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
-**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 
 ### 📊 TECHNICAL
@@ -574,7 +574,7 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
-- [← Master Roadmap](./roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](./analisi-completa.md)
 
@@ -938,7 +938,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ ANALISI COMPLETA](./ANALISI-COMPLETA.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
-**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ ANALISI COMPLETA](../../../analisi-completa-ottobre-data.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
@@ -1165,7 +1165,7 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
-- [← Master Roadmap](./roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](./ANALISI-COMPLETA.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan analysis pattern"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-analysis-pattern.md
 ---
 
 # PHPStan Analysis Pattern — Lock & Dispatch
@@ -26,6 +24,15 @@ PHPStan analysis è costoso (5-15 min per modulo). Per evitare duplicati:
 5. ✅ **Chiudere issue** quando fatto
 
 ---
+
+title: "phpstan analysis pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan analysis pattern"
+issues: []
+discussions: []
 ## Processo
 
 ### Step 1: Identifica remote del modulo/tema

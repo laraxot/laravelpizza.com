@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "test 1"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Aggiornamento File di Traduzione Lang Service - 2025-01-06
 # Aggiornamento File di Traduzione Lang Service - 2025-01-06

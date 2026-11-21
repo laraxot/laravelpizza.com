@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "docs naming convention fix duplicate"
 issues: []
 discussions: []
-status: draft
 ---
 title: "Correzione Convenzione Naming Cartelle Docs - Gennaio 2025"
 module: "Lang"
@@ -43,7 +42,7 @@ Le cartelle `docs` contenevano file e sottocartelle con caratteri maiuscoli, vio
 - ✅ `filament/infinite-loop-getStepByName-fix.md` → `filament/infinite-loop-getstepbyname-fix.md`
 
 ### Modulo Geo
-- ✅ `MCP_SERVER_RECOMMENDED.md` → `mcp-server-recommended-uppercase.md`
+- ✅ `mcp_server_recommended.md` → `mcp-server-recommended-uppercase.md`
 - ✅ `phpstan_fixes.md` → `phpstan-fixes-uppercase.md`
 
 ### Modulo UI

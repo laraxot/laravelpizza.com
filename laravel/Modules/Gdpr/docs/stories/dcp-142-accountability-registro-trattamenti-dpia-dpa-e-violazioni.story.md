@@ -11,6 +11,7 @@ created: 2026-10-13
 updated: 2026-10-13
 qmd: "registro trattamenti art 30 dpia art 35 dpa art 28 data breach 72 ore dpo art 37 treatment seeder accountability"
 related: [dcp-112, dcp-130, dcp-141]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-142: l'ente puo' dimostrare cio' che fa

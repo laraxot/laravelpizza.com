@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "working with claude"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Working with Claude

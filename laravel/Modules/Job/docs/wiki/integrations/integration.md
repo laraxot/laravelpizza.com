@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "integration"
 related:
-  - "./phpstan-fixes-archive-2.md"
-status: draft
+  - "./phpstan-fixes-archive-gennaio.md"
 ---
 # Integrazione Documentazione
 
@@ -83,9 +82,9 @@ status: draft
 ### Versione HEAD
 
 ## Collegamenti tra versioni di integration.md
-* [integration.md](../../../../Gdpr/docs/integration.md)
+* [integration.md](../../../gdpr/docs/integration.md)
 * [integration.md](../../../xot/docs/integration.md)
-* [integration.md](../../integration.md)
+* [integration.md](../../../job/docs/integration.md)
 
 ### Versione Incoming
 

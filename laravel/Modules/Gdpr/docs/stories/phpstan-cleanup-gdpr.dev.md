@@ -7,6 +7,7 @@ status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, gdpr]
+date_originale_nome_file: 2026-10-06
 ---
 
 # [DEV] PHPStan cleanup — Gdpr

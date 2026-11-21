@@ -4,17 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-it('renders the English register page with hero and form texts', function (): void {
+uses(TestCase::class);
+
+it('renders the English register page with the texts of the registration form', function (): void {
+    // Titolo, sottotitolo e vantaggi della pagina sono del tema ospite; il modulo possiede etichette e consensi del form.
     $response = gdprGet('/en/auth/register');
 
     $response->assertStatus(200);
-    $response->assertSee(__('gdpr::register.title'), false);
-    $response->assertSee(__('gdpr::register.subtitle'), false);
-    $response->assertSee(__('gdpr::register.form.cta_title'), false);
-    $response->assertSee(__('gdpr::register.form.cta_subtitle'), false);
-    $response->assertSee(__('gdpr::register.form.terms_notice'), false);
+    $response->assertSee(e(__('gdpr::register.fields.first_name.label')), false);
+    $response->assertSee(e(__('gdpr::register.fields.email.label')), false);
+    $response->assertSee(e(__('gdpr::register.consents.privacy_policy_label')), false);
+    $response->assertSee(e(__('gdpr::register.consents.terms_label')), false);
+    $response->assertSee(e(__('gdpr::register.consents.marketing_label')), false);
 });
 
 it('uses the localized login link on the register page', function (): void {
@@ -31,16 +35,7 @@ it('has all required translation keys used by the register page', function (): v
         'gdpr::register.form.cta_title',
         'gdpr::register.form.cta_subtitle',
         'gdpr::register.form.terms_notice',
-        'gdpr::register.sections.trust_badges',
         'gdpr::register.sections.registration_form',
-        'gdpr::register.sections.benefits',
-        'gdpr::register.benefits.community.title',
-        'gdpr::register.benefits.community.cta',
-        'gdpr::register.benefits.tutorials.title',
-        'gdpr::register.benefits.tutorials.cta',
-        'gdpr::register.benefits.networking.title',
-        'gdpr::register.benefits.networking.cta',
-        'gdpr::register.social_proof',
         'gdpr::register.already_registered',
         'gdpr::register.login',
     ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email template landscape"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Panoramica e Analisi dei Template Email in Laravel
@@ -15,6 +14,14 @@ status: draft
 Questo documento raggruppa e analizza le principali risorse, pacchetti e tutorial per la gestione dei template email in Laravel, con vantaggi e svantaggi di ciascuna soluzione.
 
 ---
+title: "email template landscape"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email template landscape"
+issues: []
+discussions: []
 ## 1. Pacchetti GitHub Principali
 
 ### 1.1 laravel-email-templates (simplepleb)

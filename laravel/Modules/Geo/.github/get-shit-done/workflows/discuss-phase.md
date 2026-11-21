@@ -52,7 +52,7 @@ Ask about vision and implementation choices. Capture decisions for downstream ag
 <scope_guardrail>
 **CRITICAL: No scope creep.**
 
-The phase boundary comes from ROADMAP.md and is FIXED. Discussion clarifies HOW to implement what's scoped, never WHETHER to add new capabilities.
+The phase boundary comes from roadmap.md and is FIXED. Discussion clarifies HOW to implement what's scoped, never WHETHER to add new capabilities.
 
 **Allowed (clarifying ambiguity):**
 - "How should posts be displayed?" (layout, density, info shown)
@@ -82,7 +82,7 @@ Gray areas are **implementation decisions the user cares about** — things that
 
 **How to identify gray areas:**
 
-1. **Read the phase goal** from ROADMAP.md
+1. **Read the phase goal** from roadmap.md
 2. **Understand the domain** — What kind of thing is being built?
    - Something users SEE → visual presentation, interactions, states matter
    - Something users CALL → interface contracts, responses, errors matter
@@ -182,7 +182,7 @@ If "Cancel": Exit workflow.
 <step name="analyze_phase">
 Analyze the phase to identify gray areas worth discussing.
 
-**Read the phase description from ROADMAP.md and determine:**
+**Read the phase description from roadmap.md and determine:**
 
 1. **Domain boundary** — What capability is this phase delivering? State it clearly.
 
@@ -414,7 +414,7 @@ Created: .planning/phases/${PADDED_PHASE}-${SLUG}/${PADDED_PHASE}-CONTEXT.md
 
 ## ▶ Next Up
 
-**Phase ${PHASE}: [Name]** — [Goal from ROADMAP.md]
+**Phase ${PHASE}: [Name]** — [Goal from roadmap.md]
 
 `/gsd-plan-phase ${PHASE}`
 

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan solutions"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-solutions.md
 ---
 
 # Soluzioni per Errori PHPStan di Livello 9

@@ -1,12 +1,7 @@
 ---
+qmd: "activity wiki testing coverage coordination workflow md"
 title: Coverage coordination workflow
 module: Activity
-type: note
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "activity coverage coordination workflow activity"
-status: superseded
-superseded_by: ../../coverage-coordination-workflow.md
 ---
 
 # Activity Coverage Coordination Workflow

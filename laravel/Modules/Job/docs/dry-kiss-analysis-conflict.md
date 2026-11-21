@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "dry kiss analysis conflict"
 issues: []
 discussions: []
-status: superseded
-superseded_by: dry-kiss.md
 ---
 
 # DRY & KISS Analysis - Modulo Job

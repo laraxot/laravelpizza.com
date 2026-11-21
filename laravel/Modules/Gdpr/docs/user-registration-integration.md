@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "user registration integration"
 issues: []
 discussions: []
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): Descrive il RegisterWidget di Modules/User che dispatcha UserRegistered e un GdprRegistrationListener registrato in User; nel codice la registrazione e' gestita da Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php, che chiama direttamente le Actions; nessun codice dispatcha UserRegistered e GdprRegistrationListener non esiste (verificato 2026-10-14). Contenuto non riscritto, verificare prima di usarlo.
 
 # Integrazione con Registrazione Utenti (User Module)
 
@@ -591,6 +588,15 @@ test('user registration saves gdpr consents', function () {
 - [Xot Module - Traits](../../xot/docs/traits.md)
 
 ---
+
+title: "user registration integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user registration integration"
+issues: []
+discussions: []
 **Document Version**: 1.0.0  
 
 **Responsible**: GDPR Compliance Team  

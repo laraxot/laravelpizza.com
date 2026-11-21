@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architecture structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura e Struttura (Claude Context)

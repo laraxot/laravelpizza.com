@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "agents gsd bmad"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AGENTS GSD BMAD Workflow
@@ -41,6 +40,15 @@ $gsd-quick "task"
 - [GSD Docs](https://gsd-build-get-shit-done.mintlify.app/)
 
 ---
+
+title: "agents gsd bmad"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents gsd bmad"
+issues: []
+discussions: []
 ## BMAD (Breakthrough Method for Agile AI-Driven Development)
 
 **Path**: `_bmad/` (installato localmente)
@@ -108,8 +116,8 @@ bmad-verify-work [N]         # Verifica
 
 1. **Leggere prima** [gsd-and-bmad-workflow.md](../../docs/project/gsd-and-bmad-workflow.md)
 2. **Verificare** `.planning/STATE.md` per stato corrente
-3. **Non duplicare**: se un agente ha già iniziato, continua da lì
-4. **Commit atomici**: un commit per task
+3. **Non duplicare** — se un agente ha già iniziato, continua da lì
+4. **Commit atomici** — un commit per task
 5. **Aggiornare** `STATE.md` e coordination doc
 
 ---
@@ -119,9 +127,7 @@ bmad-verify-work [N]         # Verifica
 - [Indice AGENTS](./agents-split-index.md)
 - [gsd-bmad-comprehensive-guide.md](./gsd-bmad-comprehensive-guide.md)
 - [AGENTS.md originale](../../AGENTS.md)
-- [agents.md originale](../../agents.md)
-- [AGENTS.md originale](../AGENTS.md)
-- [agents.md originale](../agents.md)
+- [AGENTS.md originale](../../AGENTS.md)
 - [Index principale](./index.md)
 
 ## Differenze vs Originale

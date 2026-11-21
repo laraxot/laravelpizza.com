@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan session"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Session 2026-03-02 - Correzioni Cms, UI, Tenant, Geo, Blog

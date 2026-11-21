@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laravel folio governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Laravel Folio Governance
@@ -32,15 +31,11 @@ Nel progetto il frontoffice CMS e i temi pubblici usano Laravel Folio come route
 
 ## Dynamic Theme Paths
 
-Per supportare l'architettura modulare di Laraxot, il mount point di Folio non deve essere hardcoded. 
-In `FolioServiceProvider`, il percorso viene risolto dinamicamente usando `XotData::make()->pub_theme`:
-
-```php
-$themePath = base_path('Themes/'.$pub_theme.'/resources/views/pages');
-Folio::path($themePath)->middleware([...]);
-```
-
-Questo assicura che il router file-based punti sempre alle pagine del tema attivo (es. `TwentyOne`, `Meetup`, ecc.), evitando `ViewNotFoundException` o caricamenti di temi errati.
+Per supportare l'architettura modulare di Laraxot, il mount point di Folio non deve essere hardcoded.
+L'unico owner è `Modules\Cms\Providers\FolioVoltServiceProvider` — **non** `App\Providers\FolioServiceProvider`
+(istruizione: scomodare `laravel/app/Providers/FolioServiceProvider.php` è sbagliato; basta Cms).
+Il path tema si risolve con `XotData::make()->getPubThemeViewPath('pages')`; i moduli abilitati espongono
+`resources/views/pages` (+ `pages/api` → `/api`). SSoT: [bmad/folio-volt-sole-owner.md](./bmad/folio-volt-sole-owner.md).
 
 ## Testing
 

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "bad practices"
 related:
   - "./webm.md"
-status: draft
 ---
 # Bad Practices – Media Module
 
@@ -27,4 +26,5 @@ status: draft
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
+---
 ```

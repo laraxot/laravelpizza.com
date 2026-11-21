@@ -22,7 +22,7 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Progetto Design Comuni](./.agents/docs/main-rules/qwen-design-comuni.md)
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
-- [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
+- [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/App/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/App/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
@@ -36,8 +36,8 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 ---
 **See also:**
 - [CLAUDE.md](./CLAUDE.md)
-- [agents.md](./agents.md)
-- [GEMINI.md](./GEMINI.md)
+- [AGENTS.md](./AGENTS.md)
+- [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
 
@@ -61,7 +61,7 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - Design Comuni Wizard Parity: Widget uses Section->aside()->compact() for Design Comuni card-like sections. Blade view has .cmp-wizard-widget wrapper. CSS parity file at Themes/Sixteen/resources/css/components/wizard-parity.css. Translation keys use laraxot::segnalazione.sections.* for section labels. Rebuild: cd Themes/Sixteen && npm run build. Docs: docs/design-comuni-wizard-parity.md
 - Design Comuni Wizard Parity: Widget uses Section->aside()->compact() for Design Comuni card-like sections. Blade view has .cmp-wizard-widget wrapper. CSS parity file at Themes/Sixteen/resources/css/components/wizard-parity.css. Translation keys use <nome progetto>::segnalazione.sections.* for section labels. Rebuild: cd Themes/Sixteen && npm run build. Docs: docs/design-comuni-wizard-parity.md
 - WORKFLOW POST-MODIFICA OBBLIGATORIO: Dopo OGNI modifica file: 1) Aggiornare docs moduli/temi (prima del codice), 2) Aggiornare indici docs, 3) Aggiornare rules/memories/skills (prevenire duplicati), 4) phpstan analyse sul file/modulo, 5) phpmd analyse, 6) phpinsights analyse, 7) pest tests, 8) Commit atomico. SEMPRE in questo ordine. DRY + KISS + anti-ridondanze. Task paralleli: coordinare con altri agenti AI, unire forze, non duplicare lavoro.
-- LLM WIKI RELIGION: Karpathy-style persistent knowledge base. raw/ = IMMUTABLE (never modify), wiki/ = WRITE-ALLOWED (LLM-generated), agents.md = schema file. Workflows: ingest (source→wiki pages), query (synthesize with citations), lint (resolve contradictions/orphans/stale). All pages MUST use frontmatter schema. DRY knowledge (one concept = one page). Link heavily (3+ incoming, 3+ outgoing). Atomic commits (one ingestion = one commit). Module wikis in Modules/{Name}/docs/llm-wiki/. Project wiki in ./docs/wiki/. Docs: docs/wiki/README.md, docs/wiki/agents.md, docs/wiki/QUICK-REFERENCE.md
+- LLM WIKI RELIGION: Karpathy-style persistent knowledge base. raw/ = IMMUTABLE (never modify), wiki/ = WRITE-ALLOWED (LLM-generated), AGENTS.md = schema file. Workflows: ingest (source→wiki pages), query (synthesize with citations), lint (resolve contradictions/orphans/stale). All pages MUST use frontmatter schema. DRY knowledge (one concept = one page). Link heavily (3+ incoming, 3+ outgoing). Atomic commits (one ingestion = one commit). Module wikis in Modules/{Name}/docs/llm-wiki/. Project wiki in ./docs/wiki/. Docs: docs/wiki/README.md, docs/wiki/AGENTS.md, docs/wiki/quick-reference.md
 
 ---
 
@@ -103,7 +103,7 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Progetto Design Comuni](./.agents/docs/main-rules/qwen-design-comuni.md)
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
-- [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
+- [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/<nome progetto>/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/<nome progetto>/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
 - [Token Efficiency](./docs/token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
@@ -116,8 +116,8 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 
 ---
 **See also:**
-- [claude.md](./claude.md)
-- [agents.md](./agents.md)
+- [CLAUDE.md](./CLAUDE.md)
+- [AGENTS.md](./AGENTS.md)
 - [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
@@ -135,4 +135,4 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - CONTAINER LOOP PREVENTION: Corrupted compiled view cache (null bytes). Fix: `php artisan view:clear && php artisan optimize:clear`. Doc: laravel/Modules/Xot/docs/filament/widgets/container-loop-prevention.md
 - Design Comuni Wizard Parity: Widget uses Section->aside()->compact() for Design Comuni card-like sections. Blade view has .cmp-wizard-widget wrapper. CSS parity file at Themes/Sixteen/resources/css/components/wizard-parity.css. Translation keys use <nome progetto>::segnalazione.sections.* for section labels. Rebuild: cd Themes/Sixteen && npm run build. Docs: docs/design-comuni-wizard-parity.md
 - WORKFLOW POST-MODIFICA OBBLIGATORIO: Dopo OGNI modifica file: 1) Aggiornare docs moduli/temi (prima del codice), 2) Aggiornare indici docs, 3) Aggiornare rules/memories/skills (prevenire duplicati), 4) phpstan analyse sul file/modulo, 5) phpmd analyse, 6) phpinsights analyse, 7) pest tests, 8) Commit atomico. SEMPRE in questo ordine. DRY + KISS + anti-ridondanze. Task paralleli: coordinare con altri agenti AI, unire forze, non duplicare lavoro.
-- LLM WIKI RELIGION: Karpathy-style persistent knowledge base. raw/ = IMMUTABLE (never modify), wiki/ = WRITE-ALLOWED (LLM-generated), agents.md = schema file. Workflows: ingest (source→wiki pages), query (synthesize with citations), lint (resolve contradictions/orphans/stale). All pages MUST use frontmatter schema. DRY knowledge (one concept = one page). Link heavily (3+ incoming, 3+ outgoing). Atomic commits (one ingestion = one commit). Module wikis in Modules/{Name}/docs/llm-wiki/. Project wiki in ./docs/wiki/. Docs: docs/wiki/README.md, docs/wiki/agents.md, docs/wiki/quick-reference.md
+- LLM WIKI RELIGION: Karpathy-style persistent knowledge base. raw/ = IMMUTABLE (never modify), wiki/ = WRITE-ALLOWED (LLM-generated), AGENTS.md = schema file. Workflows: ingest (source→wiki pages), query (synthesize with citations), lint (resolve contradictions/orphans/stale). All pages MUST use frontmatter schema. DRY knowledge (one concept = one page). Link heavily (3+ incoming, 3+ outgoing). Atomic commits (one ingestion = one commit). Module wikis in Modules/{Name}/docs/llm-wiki/. Project wiki in ./docs/wiki/. Docs: docs/wiki/README.md, docs/wiki/AGENTS.md, docs/wiki/quick-reference.md

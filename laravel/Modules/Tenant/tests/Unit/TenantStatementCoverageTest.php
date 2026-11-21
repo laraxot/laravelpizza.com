@@ -55,7 +55,7 @@ describe('Tenant statement coverage — actions', function (): void {
         $path = $dir.'/mail.php';
         File::put($path, "<?php\nreturn ['driver' => 'smtp', 'from' => ['address' => 'a@b.c']];\n");
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($path): void {
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($path): void {
             $mock->allows(['execute' => $path]);
         });
 
@@ -80,7 +80,7 @@ describe('Tenant statement coverage — actions', function (): void {
         expect(fn (): string => app(GetTenantFilePathAction::class)->execute('/abs'))
             ->toThrow(\InvalidArgumentException::class);
 
-        TestCase::mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => 'acme']);
         });
 
@@ -92,7 +92,7 @@ describe('Tenant statement coverage — actions', function (): void {
         $cfgRoot = base_path('config');
         File::ensureDirectoryExists($cfgRoot.'/com/example');
 
-        TestCase::setServerNameForTenantTest('www.foo.example.com');
+        $this->setServerNameForTenantTest('www.foo.example.com');
         Assert::assertSame('com/example', app(GetTenantNameAction::class)->execute());
 
         // solo la cartella creata dal test: config/com contiene configurazioni tenant reali
@@ -101,7 +101,7 @@ describe('Tenant statement coverage — actions', function (): void {
         $defaultHost = 'defaulthost.test';
         File::ensureDirectoryExists($cfgRoot.'/test/defaulthost');
         config(['app.url' => 'https://'.$defaultHost]);
-        TestCase::setServerNameForTenantTest(null);
+        $this->setServerNameForTenantTest(null);
         putenv('SERVER_NAME=');
         unset($_SERVER['SERVER_NAME']);
         Assert::assertSame('test/defaulthost', app(GetTenantNameAction::class)->execute());
@@ -114,8 +114,8 @@ describe('Tenant statement coverage — actions', function (): void {
         File::ensureDirectoryExists($dir.'/lang/it');
         File::put($dir.'/lang/it/messages.php', "<?php\nreturn ['hello' => ['nested' => true], 'ok' => 'Ciao'];\n");
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
-            TestCase::expectMockery($mock, 'execute')->andReturnUsing(
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
+            $mock->shouldReceive('execute')->andReturnUsing(
                 static fn (string $path): string => $dir.'/'.$path,
             );
         });
@@ -130,7 +130,7 @@ describe('Tenant statement coverage — actions', function (): void {
         File::ensureDirectoryExists($dir);
         File::put($dir.'/modules_statuses.json', 'null');
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
             $mock->allows(['execute' => $dir.'/modules_statuses.json']);
         });
         Assert::assertSame([], app(GetTenantModulesAction::class)->execute());
@@ -146,7 +146,7 @@ describe('Tenant statement coverage — actions', function (): void {
         File::ensureDirectoryExists($dir);
         File::put($dir.'/odd.php', "<?php\nreturn 'nope';\n");
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($dir): void {
             $mock->allows(['execute' => $dir.'/odd.php']);
         });
 
@@ -155,7 +155,7 @@ describe('Tenant statement coverage — actions', function (): void {
 
     test('ResolveTenantConfigValueAction rejects invalid value types', function (): void {
         config(['app' => ['flag' => true]]);
-        TestCase::mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => 'localhost']);
         });
 
@@ -164,7 +164,7 @@ describe('Tenant statement coverage — actions', function (): void {
     });
 
     test('ResolveTenantModelInstanceAction instantiates the resolved model class', function (): void {
-        TestCase::mockAppService(ResolveTenantModelClassAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(ResolveTenantModelClassAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => Tenant::class]);
         });
 
@@ -173,11 +173,11 @@ describe('Tenant statement coverage — actions', function (): void {
     });
 
     test('artisan tenant:test command prints tenant name', function (): void {
-        TestCase::mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => 'cli-tenant']);
         });
 
-        Assert::assertSame(0, TestCase::runArtisanCommand('tenant:test'));
+        Assert::assertSame(0, $this->runArtisanCommand('tenant:test'));
     });
 });
 
@@ -195,7 +195,7 @@ describe('Tenant statement coverage — models and policies', function (): void 
     });
 
     test('TenantDomain TenantSetting TenantSubscription relation helpers', function (): void {
-        TestCase::mockAppService(GetDomainsArrayAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetDomainsArrayAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => [['id' => '1', 'name' => 'a.test']]]);
         });
 
@@ -206,8 +206,8 @@ describe('Tenant statement coverage — models and policies', function (): void 
     test('DomainPolicy covers all abilities and TenantBasePolicy null branch', function (): void {
         /** @var MockInterface&UserContract $user */
         $user = Mockery::mock(UserContract::class);
-        TestCase::expectMockery($user, 'hasRole')->with('super-admin')->andReturn(false);
-        TestCase::expectMockery($user, 'hasPermissionTo')->andReturn(true);
+        $user->shouldReceive('hasRole')->with('super-admin')->andReturn(false);
+        $user->shouldReceive('hasPermissionTo')->andReturn(true);
 
         $policy = new DomainPolicy;
         $domain = new Domain;
@@ -233,7 +233,7 @@ describe('Tenant statement coverage — models and policies', function (): void 
         $app['env'] = 'local';
 
         try {
-            TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
+            $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
                 $mock->allows(['execute' => '/tmp/tenant_test_sushi.json']);
             });
             Assert::assertSame('/tmp/tenant_test_sushi.json', (new TestSushiModel)->getJsonFile());
@@ -270,7 +270,7 @@ describe('Tenant statement coverage — TenantServiceProvider private paths', fu
         $load->setAccessible(true);
         $databaseConnections = config('database.connections');
         Assert::assertIsArray($databaseConnections);
-        TestCase::mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock) use ($databaseDefault, $databaseConnections): void {
+        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock) use ($databaseDefault, $databaseConnections): void {
             $mock->allows(['execute' => [
                 'default' => $databaseDefault,
                 'connections' => $databaseConnections,
@@ -293,22 +293,22 @@ describe('Tenant statement coverage — TenantServiceProvider private paths', fu
 
         $mergeConfigs = new ReflectionMethod($provider, 'mergeConfigs');
         $mergeConfigs->setAccessible(true);
-        TestCase::mockAppService(GetTenantConfigNamesAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantConfigNamesAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => [
                 ['id' => 1, 'name' => 'app'],
                 'skip-me',
                 ['id' => 2],
             ]]);
         });
-        TestCase::mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
-            TestCase::expectMockery($mock, 'execute')->andReturn('ok');
+        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+            $mock->shouldReceive('execute')->andReturn('ok');
         });
         $mergeConfigs->invoke($provider);
 
         $registerMorph = new ReflectionMethod($provider, 'registerMorphMap');
         $registerMorph->setAccessible(true);
-        TestCase::mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
-            TestCase::expectMockery($mock, 'execute')->with('morph_map')->andReturn('not-array');
+        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+            $mock->shouldReceive('execute')->with('morph_map')->andReturn('not-array');
         });
         $registerMorph->invoke($provider);
     });
@@ -320,8 +320,8 @@ describe('Tenant statement coverage — SushiToJson named model', function (): v
         File::ensureDirectoryExists($base.'/database/content');
         $jsonPath = $base.'/database/content/sushi_json_coverage.json';
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($base): void {
-            TestCase::expectMockery($mock, 'execute')->andReturnUsing(
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($base): void {
+            $mock->shouldReceive('execute')->andReturnUsing(
                 static fn (string $path): string => $base.'/'.ltrim($path, '/'),
             );
         });
@@ -402,8 +402,8 @@ describe('Tenant statement coverage — SushiToJson named model', function (): v
         Assert::assertTrue(File::isDirectory(dirname($nested)));
 
         $broken = new SushiToJsonCoverageModel;
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
-            TestCase::expectMockery($mock, 'execute')->andThrow(new Exception('boom'));
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
+            $mock->shouldReceive('execute')->andThrow(new Exception('boom'));
         });
         Assert::assertFalse($broken->saveToJson([['id' => 1]]));
 
@@ -418,7 +418,7 @@ describe('Tenant statement coverage — SushiToCsv named model', function (): vo
         $csvPath = $base.'/sushi_csv_coverage.csv';
         File::put($csvPath, "id,name,updated_at,updated_by,created_at,created_by\n1,Alpha,,,,\n");
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($csvPath): void {
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($csvPath): void {
             $mock->allows(['execute' => $csvPath]);
         });
 
@@ -486,8 +486,8 @@ describe('Tenant statement coverage — SushiToJsons named model', function (): 
         ], JSON_THROW_ON_ERROR));
         File::put($base.'/database/content/sushi_jsons_coverage/bad.json', 'null');
 
-        TestCase::mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($base): void {
-            TestCase::expectMockery($mock, 'execute')->andReturnUsing(
+        $this->mockAppService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($base): void {
+            $mock->shouldReceive('execute')->andReturnUsing(
                 static fn (string $path): string => $base.'/'.ltrim($path, '/'),
             );
         });
@@ -556,7 +556,7 @@ describe('Tenant statement coverage — SushiToJsons named model', function (): 
 
 describe('Tenant statement coverage — SushiToPhpArray named model', function (): void {
     test('php array trait normalizes rows and boots listeners', function (): void {
-        TestCase::mockAppService(GetTenantConfigArrayAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantConfigArrayAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => [
                 ['name' => 'A', 'meta' => null],
                 'not-array',

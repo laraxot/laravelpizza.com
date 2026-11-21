@@ -1,14 +1,13 @@
 ---
-qmd: "prd.divergenza"
+qmd: "Prd.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: prd.md"
+title: "Prd.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `prd.md`

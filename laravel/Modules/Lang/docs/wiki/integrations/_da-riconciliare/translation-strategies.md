@@ -1,13 +1,12 @@
 ---
-title: "translation strategies"
+title: "Translation Strategies"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "translation strategies"
+qmd: "Translation Strategies"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Strategie di Gestione delle Traduzioni in Laravel

@@ -1,16 +1,14 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
 status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
 updated: 2026-10-06
-tags: [docs, notify, bmad]
-qmd: "notify   english presentation notify"
 ---
 
-# 📬 Notify: English presentation
+# 📬 Notify — English presentation
 
 [![Domain-Notify](https://img.shields.io/badge/Domain-Notifications-E65100.svg)](#)
 [![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
@@ -22,7 +20,7 @@ qmd: "notify   english presentation notify"
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
 [![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
-> **Citizens know what happens to their report.** Email, templates, channels: enterprise notification orchestration.
+> **Citizens know what happens to their report.** Email, templates, channels — enterprise notification orchestration.
 
 ---
 
@@ -51,7 +49,7 @@ Closes the feedback loop: state changes become traceable messages.
 
 Reliable **communication** builds institutional trust. Build it here.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5**: see [STORY-133](../../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

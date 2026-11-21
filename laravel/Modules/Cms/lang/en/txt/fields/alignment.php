@@ -7,16 +7,16 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/alignment.php
 // Cms txt.fields.alignment — LangServiceProvider SSoT.
 return [
-    'label' => 'Allineamento',
-    'help' => 'Allineamento del testo',
+    'label' => 'Alignment',
+    'help' => 'Text alignment',
     'options' => [
-        'left' => 'Sinistra',
-        'center' => 'Centro',
-        'right' => 'Destra',
-        'justify' => 'Giustificato',
+        'left' => 'Left',
+        'center' => 'Center',
+        'right' => 'Right',
+        'justify' => 'Justified',
     ],
-    'placeholder' => 'Sinistra, Centro, Destra',
-    'helper_text' => 'Allineamento del contenuto all\'interno dell\'elemento',
+    'placeholder' => 'Left, Center, Right',
+    'helper_text' => 'Alignment of the content inside the element',
     'tooltip' => '',
     'description' => '',
 ];

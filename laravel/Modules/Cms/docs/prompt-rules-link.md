@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prompt rules link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole per i Prompt

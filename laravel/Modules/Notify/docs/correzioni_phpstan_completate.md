@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "correzioni phpstan completate"
 issues: []
 discussions: []
-status: superseded
-superseded_by: correzioni-phpstan-completate.md
 ---
 
 # ✅ CORREZIONI PHPSTAN COMPLETATE - Modulo Notify

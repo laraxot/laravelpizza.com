@@ -1485,7 +1485,7 @@ related:
    - Vantaggi/svantaggi dettagliati
    - Alternative considerate
    
-4. **[Strategia Implementazione](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
+4. **[Strategia Implementazione](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
    - Step-by-step guide
    - Script automatici
    - Testing strategy
@@ -1527,7 +1527,7 @@ related:
 ### Implementation (3-4 ore)
 
 4. **[ ] Execute Migration**
-   - Seguire [strategia implementazione](./architecture/xotbasepivot-strategy.md)
+   - Seguire [strategia implementazione](../../architecture/xotbasepivot-strategy.md)
    - Testing continuo
    - Progress updates
 
@@ -1634,7 +1634,7 @@ Se hai domande prima dell'approvazione:
 
 ### During Implementation
 
-Seguire [Strategia Implementazione](./architecture/xotbasepivot-strategy.md) step-by-step.
+Seguire [Strategia Implementazione](../../architecture/xotbasepivot-strategy.md) step-by-step.
 
 ### After Implementation
 

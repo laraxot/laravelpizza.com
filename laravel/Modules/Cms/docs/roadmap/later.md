@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: later
 canonical: ../../../../Themes/docs/shared-components/03-later.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/03-later.md

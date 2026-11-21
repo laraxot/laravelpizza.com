@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "acronym naming conventions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni di Naming per Acronimi 

@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "test02"
 issues: []
 discussions: []
-status: draft
 ---

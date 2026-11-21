@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: namespace_modules
 canonical: ../../../Themes/docs/shared-components/namespace-modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/namespace-modules.md

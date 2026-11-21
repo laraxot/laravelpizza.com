@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "address autocomplete"
 issues: []
 discussions: []
-status: superseded
-superseded_by: address-autocomplete.md
 ---
 
 https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform?hl=it#maps_places_autocomplete_addressform-css

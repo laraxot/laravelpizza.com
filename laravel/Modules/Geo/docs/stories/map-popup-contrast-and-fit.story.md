@@ -1,3 +1,15 @@
+---
+title: "Map Popup Contrast and Fit .story"
+type: note
+tags: [documentation]
+created: 2026-10-07
+updated: 2026-11-19
+qmd: "Map Popup Contrast and Fit .story"
+date_originale_nome_file: 2026-10-07
+issues: [122]
+discussions: []
+---
+
 # Popup dei marker: testo bianco su bianco, popup tagliato, azioni fuori vista
 
 - Stato: done (2026-10-07)

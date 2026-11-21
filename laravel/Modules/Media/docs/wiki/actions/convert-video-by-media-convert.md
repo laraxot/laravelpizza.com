@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "convert video by media convert"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../../actions/convert-video-by-media-convert.md
 ---
 # ConvertVideoByMediaConvertAction
 

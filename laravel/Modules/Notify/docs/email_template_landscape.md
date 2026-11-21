@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email template landscape"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-template-landscape.md
 ---
 
 # Panoramica e Analisi dei Template Email in Laravel

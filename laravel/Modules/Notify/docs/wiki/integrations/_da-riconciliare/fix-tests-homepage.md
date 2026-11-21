@@ -1,14 +1,13 @@
 ---
-qmd: "fix tests homepage"
+qmd: "Fix Tests Homepage"
 issues: []
 discussions: []
-title: "Fix Applicati - Tests Homepage"
+title: "Fix Tests Homepage"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # ✅ Fix Applicati - Tests Homepage

@@ -80,7 +80,7 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
-- [Quality Reports](./reports/quality.md)
+- [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 - [Performance Reports](./reports/performance.md)
 

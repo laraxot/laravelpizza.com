@@ -42,7 +42,7 @@ The models exist in layers:
 **Execution Layer (Job, JobBatch, FailedJob, JobsWaiting):**
 - Job: Single queued job (Laravel queue native)
 - JobBatch: Atomic group of related jobs with progress tracking
-- FailedJob: Dead letter queue-jobs that exhausted retries
+- FailedJob: Dead letter queue—jobs that exhausted retries
 - JobsWaiting: Advisory queue state for monitoring
 
 **History & Results Layer (Result, ScheduleHistory, ScheduleHistory):**
@@ -287,7 +287,7 @@ The Job module enables FixCity to scale beyond single-threaded HTTP requests.
 
 **Development (Default):**
 ```bash
-# Database driver: no external service
+# Database driver — no external service
 php artisan queue:table
 php artisan migrate
 # Jobs stored in jobs table
@@ -329,15 +329,15 @@ php artisan pulse:install
 **Custom Filament Integration** (This module):
 ```bash
 # Built-in: Filament resources for Job, Task, Result
-# No extra install needed: configure in Job module
+# No extra install needed — configure in Job module
 ```
 
 ### Supporting Services
 
-- **Spatie Activity Log**: Audit trail for Task changes
-- **Filament Notifications**: Real-time alerts in admin
-- **Laravel Sanctum**: Rate limiting on API endpoints
-- **Laravel Pulse** (optional): Queue depth metrics
+- **Spatie Activity Log** — Audit trail for Task changes
+- **Filament Notifications** — Real-time alerts in admin
+- **Laravel Sanctum** — Rate limiting on API endpoints
+- **Laravel Pulse** (optional) — Queue depth metrics
 
 ---
 
@@ -418,10 +418,10 @@ php artisan pulse:install
 
 ### External World
 
-- **Bull.js** (Node.js job queue): Rate limiting, prioritized queues
-- **Celery** (Python): Chains, chords, workflows
-- **Apache Kafka**: Event streaming (different use case)
-- **AWS SQS/Lambda**: Serverless execution
+- **Bull.js** (Node.js job queue) — Rate limiting, prioritized queues
+- **Celery** (Python) — Chains, chords, workflows
+- **Apache Kafka** — Event streaming (different use case)
+- **AWS SQS/Lambda** — Serverless execution
 
 **Philosophy difference:** We focus on *reliability* and *observability* over raw throughput. Celery-style workflows planned.
 
@@ -502,7 +502,7 @@ Bus::batch(
 
 ```php
 public function backoff(): array {
-    // 2s, 4s, 8s, 16s, 32s: reduces API strain
+    // 2s, 4s, 8s, 16s, 32s — reduces API strain
     return array_map(fn($i) => 2 ** $i, range(1, $this->tries));
 }
 ```
@@ -942,11 +942,11 @@ php artisan queue:work --sleep=3 --tries=3
 ```
 
 Options:
-- `--sleep=3`: Check queue every 3 seconds (prevent CPU spinning)
-- `--tries=3`: Max 3 attempts before moving to failed_jobs
-- `--timeout=120`: Kill job if exceeds 120s
-- `--max-jobs=1000`: Restart worker after 1000 jobs (memory leak prevention)
-- `--max-time=3600`: Restart worker after 1 hour (memory leak prevention)
+- `--sleep=3` — Check queue every 3 seconds (prevent CPU spinning)
+- `--tries=3` — Max 3 attempts before moving to failed_jobs
+- `--timeout=120` — Kill job if exceeds 120s
+- `--max-jobs=1000` — Restart worker after 1000 jobs (memory leak prevention)
+- `--max-time=3600` — Restart worker after 1 hour (memory leak prevention)
 
 ### 5. (Optional) Redis Setup
 

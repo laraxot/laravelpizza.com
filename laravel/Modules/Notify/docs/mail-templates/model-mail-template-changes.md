@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "model mail template changes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modifiche Tecniche al Modello MailTemplate

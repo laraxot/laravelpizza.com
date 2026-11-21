@@ -4,34 +4,34 @@ declare(strict_types=1);
 
 return [
     'create' => [
-        'label' => 'Crea Sezione',
+        'label' => 'Create Section',
         'modal' => [
-            'heading' => 'Crea Nuova Sezione',
-            'submit' => 'Crea',
-            'cancel' => 'Annulla',
+            'heading' => 'Create New Section',
+            'submit' => 'Create',
+            'cancel' => 'Cancel',
         ],
     ],
     'edit' => [
-        'label' => 'Modifica Sezione',
+        'label' => 'Edit Section',
         'modal' => [
-            'heading' => 'Modifica Sezione',
-            'submit' => 'Salva',
-            'cancel' => 'Annulla',
+            'heading' => 'Edit Section',
+            'submit' => 'Save',
+            'cancel' => 'Cancel',
         ],
     ],
     'delete' => [
-        'label' => 'Elimina Sezione',
+        'label' => 'Delete Section',
         'modal' => [
-            'heading' => 'Elimina Sezione',
-            'description' => 'Sei sicuro di voler eliminare questa sezione?',
-            'submit' => 'Elimina',
-            'cancel' => 'Annulla',
+            'heading' => 'Delete Section',
+            'description' => 'Are you sure you want to delete this section?',
+            'submit' => 'Delete',
+            'cancel' => 'Cancel',
         ],
     ],
     'view' => [
-        'label' => 'Visualizza Sezione',
+        'label' => 'View Section',
     ],
     'activeLocale' => [
-        'label' => 'Lingua Attiva',
+        'label' => 'Active Language',
     ],
 ];

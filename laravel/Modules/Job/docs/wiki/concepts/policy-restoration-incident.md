@@ -13,10 +13,9 @@ related:
   - ../../ponytail-audit-over-engineering.md
   - ../../../../../../docs/wiki/concepts/model-policy-laravel-contract.md
   - ../../../../../../docs/wiki/concepts/sacred-artifacts-never-delete.md
-status: draft
 ---
 
-# Ripristino policy Job: incidente ponytail
+# Ripristino policy Job — incidente ponytail
 
 ## Cosa è successo
 
@@ -39,7 +38,7 @@ Stato attuale: **16** file in `app/Models/Policies/` (15 modello + `JobBasePolic
 
 ## Forma canonica accettata
 
-`ExportPolicy` può restare minima (`class ExportPolicy extends JobBasePolicy {}`): confermato dal team.
+`ExportPolicy` può restare minima (`class ExportPolicy extends JobBasePolicy {}`) — confermato dal team.
 
 ## Prevenzione
 

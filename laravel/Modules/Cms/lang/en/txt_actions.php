@@ -8,19 +8,19 @@ declare(strict_types=1);
 return [
     'actions' => [
         'save' => [
-            'label' => 'Salva',
-            'success' => 'Contenuto salvato con successo',
-            'error' => 'Errore durante il salvataggio del contenuto',
-            'confirmation' => 'Vuoi salvare le modifiche apportate?',
+            'label' => 'Save',
+            'success' => 'Content saved successfully',
+            'error' => 'Error while saving the content',
+            'confirmation' => 'Do you want to save the changes?',
         ],
         'cancel' => [
-            'label' => 'Annulla',
-            'confirmation' => 'Sei sicuro di voler annullare? Tutte le modifiche non salvate andranno perse.',
+            'label' => 'Cancel',
+            'confirmation' => 'Are you sure you want to cancel? All unsaved changes will be lost.',
         ],
         'activeLocale' => [
-            'label' => 'Lingua Attiva',
-            'description' => 'Seleziona la lingua per la traduzione del contenuto',
-            'help' => 'Modifica la lingua di editing per contenuti multilingua',
+            'label' => 'Active Language',
+            'description' => 'Select the language for the content translation',
+            'help' => 'Change the editing language for multilingual content',
         ],
     ],
 ];

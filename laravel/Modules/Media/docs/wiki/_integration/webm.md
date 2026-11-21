@@ -7,9 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "webm"
 related:
-  - "../../migrazione-filament.md"
-status: superseded
-superseded_by: ../../_integration/webm.md
+  - "./migrazione-filament.md"
 ---
 # webm
 

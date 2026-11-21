@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_sOmqpk
 use Mockery\CompositeExpectation;
 use Mockery\Expectation;
 use Modules\Activity\Database\Factories\ActivityFactory;
@@ -55,3 +56,5 @@ function mockeryExpect(object $expectation): Expectation
 
     return $expectation;
 }
+=======
+>>>>>>> .merge_file_52V9o0

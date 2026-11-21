@@ -10,13 +10,12 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
-status: draft
 ---
 
 # NotebookLM Skill - Configuration & Usage Guide
@@ -132,8 +131,8 @@ notebooklm/
 ```
 Notebook Name: "Notify Documentation"
 Sources:
-  - agents.md
-  - laravel/agents.md
+  - AGENTS.md
+  - laravel/AGENTS.md
   - docs/**/*.md
   - .planning/**/*.md
   - laravel/Modules/docs/README.md
@@ -209,8 +208,8 @@ Result: Gemini connects info from multiple docs
 **Notebook 1: Notify Core**
 ```
 Sources:
-  - agents.md
-  - laravel/agents.md
+  - AGENTS.md
+  - laravel/AGENTS.md
   - .planning/project.md
   - .planning/config.json
   - laraxot-improvement-plan.md
@@ -427,7 +426,7 @@ claude
 "Set up NotebookLM authentication"
 
 # 4. Crea notebook su notebooklm.google.com
-#    - Upload agents.md, docs/**/*.md
+#    - Upload AGENTS.md, docs/**/*.md
 #    - Share → Copy link
 
 # 5. Aggiungi a library
@@ -465,7 +464,7 @@ claude
 - [x] Skill installato (`~/.claude/skills/notebooklm/`)
 - [ ] Autenticazione completata
 - [ ] Notebook creato su notebooklm.google.com
-- [ ] Documenti uploadati (agents.md, docs/, etc.)
+- [ ] Documenti uploadati (AGENTS.md, docs/, etc.)
 - [ ] Notebook condiviso pubblicamente
 - [ ] Link aggiunto a Claude library
 - [ ] Prima query testata

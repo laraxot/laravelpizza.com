@@ -17,13 +17,13 @@ Questo documento descriveva una pagina di login basata su
 `Themes/Sixteen/resources/views/pages/auth/login.blade.php` e URL
 `http://127.0.0.1:8000/it/auth/login`.
 
-**Non e' pertinente a questo repository.** Questo progetto (`base_quaeris_fila5`)
+**Non e' pertinente a questo repository.** Questo progetto (`base_<nome progetto>_fila5`)
 usa il tema "Zero", non "Sixteen", e la pagina di login reale e' la classe
 nativa Filament `Filament\Auth\Pages\Login` servita dai panel Filament
 (`/admin/login`, `/{modulo}/admin/login`, vedi `php artisan route:list --path=login`),
 non un widget Livewire custom in un tema Blade. Con ogni probabilita' e' stato
 copiato da un progetto sibling dello stesso ecosistema mono-repo
-(`base_fixcity_fila5_mono` o `base_ptv_fila5_mono`).
+(`base_fixcity_fila5` o `base_ptv_fila5`).
 
 Trovato e segnalato durante l'investigazione del bug Livewire "This page has
 expired" al login: vedi

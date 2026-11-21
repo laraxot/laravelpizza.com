@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "implementazione refactoring basemodel"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐄✨ IMPLEMENTAZIONE REFACTORING BASEMODEL - REPORT
@@ -17,6 +16,15 @@ status: draft
 **Status:** ✅ IN CORSO - 10/16 moduli completati
 
 ---
+
+title: "implementazione refactoring basemodel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementazione refactoring basemodel"
+issues: []
+discussions: []
 ## 📊 MODULI COMPLETATI
 
 ### ✅ Moduli Refactorati (10)

@@ -4,7 +4,7 @@ title: "Notify Services/Support -> Actions migration"
 type: concept
 tags: [notify, actions, queueable-action, services, refactor]
 created: 2026-07-13
-updated: 2026-10-08
+updated: 2026-11-17
 qmd: "Notify app Services Support converted to QueueableAction migration mapping"
 issues:
 related:
@@ -21,12 +21,29 @@ status: draft
 
 # Notify `app/Services` -> `app/Actions` migration
 
-## Stato
+## Stato (post-merge 2026-11)
+
+Un merge ha **riesumato** `app/Services/*` con marker di conflitto. Priorità:
+codice parseable, senza cancellare funzionalità ancora referenziata.
+
+| Legacy ancora presente | Perché esiste | Next step |
+|------------------------|---------------|-----------|
+| `Services\NotificationManager` | Caller/test legacy; API allineata a `Actions\NotificationManager` + `SendNotificationAction::handle` | Deprecare Services; usare solo Actions |
+| `Services\SmsService` | Facade fluente legacy; SMS reale via `Actions\SMS\*` / factory | Rimuovere dopo audit caller |
+| `Services\PushNotificationService` | Usato da `Jobs\SendScheduledPushNotification` | Migrare Job → `Actions\Push\*` (vedi story 4.27) |
+| `Services\MailEngines\MailtrapEngine` | WIP mail engine | `Actions\Mail\SendMailtrapMailAction` |
+
+Religione: **Actions + QueueableAction**, non Services. Mapping sotto resta
+valido; la pulizia "Services non esiste più" è stata **annullata dal merge** e
+va rifatta dopo zero caller.
+
+`Modules/Notify/app/Support` resta vuoto (vedi `no-app-support-queueable-actions.md`).
+
+## Stato storico (pre-merge)
 
 `Modules/Notify/app/Services` non conteneva piu` codice autoloadabile attivo al
 momento della migrazione: ogni logica era gia` stata spostata in `app/Actions`
-da un passaggio precedente. `Modules/Notify/app/Support` era gia` vuoto
-(eliminato monorepo-wide, vedi `no-app-support-queueable-actions.md`).
+da un passaggio precedente.
 
 ## Mapping
 

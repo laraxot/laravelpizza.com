@@ -1,5 +1,5 @@
 ---
-title: "Translator: Adapter invece di Service"
+title: "Translator — Adapter invece di Service"
 type: concept
 tags: [lang, translation, adapter, migration]
 created: 2026-07-13
@@ -11,12 +11,10 @@ discussions:
   - "https://github.com/laraxot/base_ptvx_fila5/discussions/273"
 related:
   - ../../../../docs/wiki/rules/no-services-rule.md
-  - ../../../../../../docs/wiki/rules/no-services-rule.md
   - lang-services-to-actions.md
-status: draft
 ---
 
-# Lang: `TranslatorService` → `TranslatorAction`
+# Lang — `TranslatorService` → `TranslatorAction`
 
 > **2026-10-08 (superata).** `app/Actions/TranslatorAction.php` e' stata eliminata: era la terza copia di
 > `Adapters/TranslatorAdapter` (stesso `get()`, nessun chiamante di produzione, solo tre test che la istanziavano e che ora
@@ -28,7 +26,7 @@ status: draft
 
 ## Perché non è una QueueableAction di dominio
 
-`TranslatorAction` **estende** `Illuminate\Translation\Translator`. È un adapter framework registrato come singleton `translator`: non ha un singolo `execute()` di dominio, ha `get()` per soddisfare il contratto del translator di Laravel.
+`TranslatorAction` **estende** `Illuminate\Translation\Translator`. È un adapter framework registrato come singleton `translator` — non ha un singolo `execute()` di dominio, ha `get()` per soddisfare il contratto del translator di Laravel.
 
 ## Path
 

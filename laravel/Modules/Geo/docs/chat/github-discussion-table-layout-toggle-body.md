@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "github discussion table layout toggle body"
 issues: []
 discussions: []
-status: draft
 ---
 
 ## Contesto

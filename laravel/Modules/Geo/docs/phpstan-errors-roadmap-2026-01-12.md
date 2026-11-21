@@ -1,3 +1,14 @@
+---
+title: "phpstan errors roadmap 2026 01 12"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors roadmap 2026 01 12"
+issues: []
+discussions: []
+---
+
 # PHPStan Level Max Errors Roadmap - Geo Module
 
 **Data**: 2026-01-12
@@ -7,6 +18,14 @@
 
 ---
 
+title: "phpstan errors roadmap 2026 01 12"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors roadmap 2026 01 12"
+issues: []
+discussions: []
 ## 📊 Errori Identificati
 
 ### Totale Errori: 8

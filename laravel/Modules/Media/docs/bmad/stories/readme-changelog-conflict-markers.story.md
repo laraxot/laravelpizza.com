@@ -9,11 +9,9 @@ qmd: "media readme changelog committed conflict markers frontmatter"
 related:
   - ../../README.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
-type: story
-tags: [docs, media, bmad]
 ---
 
-# Media: marker in README/CHANGELOG a git status pulito
+# Media — marker in README/CHANGELOG a git status pulito
 
 **Perché.** HEAD README era un unico hunk (frontmatter canonico vs README datato 2026-07-28). CHANGELOG: HEAD aveva `[0.0.3-dev.12]`, theirs vuoto.
 
@@ -21,7 +19,7 @@ tags: [docs, media, bmad]
 
 README: lato frontmatter `id: module-media-readme`. CHANGELOG: tenere la versione extra HEAD.
 
-`.gitignore` `graphify-out/` è claim di `graphify-out-gitignore-all-modules`: non toccato qui.
+`.gitignore` `graphify-out/` è claim di `graphify-out-gitignore-all-modules` — non toccato qui.
 
 ## Gate
 

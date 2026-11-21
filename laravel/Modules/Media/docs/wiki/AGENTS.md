@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "agents"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../llm-wiki/AGENTS.md
 ---
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
@@ -156,7 +154,7 @@ Related:
 
 ---
 
-<!-- Merged from agents.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Agent instructions"

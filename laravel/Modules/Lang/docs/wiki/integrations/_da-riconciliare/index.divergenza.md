@@ -1,22 +1,21 @@
 ---
-qmd: "index.divergenza"
+qmd: "Index.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: INDEX.md"
+title: "Index.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Divergenza: `INDEX.md`
+# Divergenza: `index.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/lang/INDEX.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/lang/index.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/INDEX.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/INDEX.md`
+- versione del modulo: `laravel/Modules/Lang/docs/index.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/index.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

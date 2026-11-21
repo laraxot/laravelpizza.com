@@ -200,7 +200,7 @@ $ratings = Rating::where('extra_attributes->anno', 2025)->get();
 
 ## 🔗 Documentazione Corretta
 
-- [CORRECT-SCHEMALESS-SOLUTION.md](./CORRECT-SCHEMALESS-SOLUTION.md)
+- [CORRECT-SCHEMALESS-SOLUTION.md](./correct-schemaless-solution.md)
 - [COLLATION-FIX-DATABASE-SOLUTION.md](../laravel/Modules/Rating/docs/COLLATION-FIX-DATABASE-SOLUTION.md)
 - Migration: `2025_01_02_000001_fix_ratings_collation.php`
 

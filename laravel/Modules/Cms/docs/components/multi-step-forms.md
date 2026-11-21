@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "multi step forms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Form Multi-Step nel Modulo CMS
@@ -414,5 +413,5 @@ public function mount()
 - [Filament Forms Documentation](https://filamentphp.com/docs/forms)
 
 ## Collegamenti tra versioni di multi-step-forms.md
-* [multi-step-forms.md](../multi-step-forms.md)
+* [multi-step-forms.md](laravel/modules/cms/docs/multi-step-forms.md)
 * [multi-step-forms.md](laravel/modules/cms/docs/components/multi-step-forms.md)

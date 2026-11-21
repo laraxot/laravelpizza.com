@@ -1,11 +1,10 @@
 ---
 title: "Git Conflict Inventory"
+qmd: "activity wiki troubleshooting git merge conflict inventory md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, wiki]
-qmd: "git conflict inventory activity"
+tags: [documentation]
 ---
+
 # Git Conflict Inventory
 
 - Date: 2026-04-28
@@ -16,7 +15,7 @@ qmd: "git conflict inventory activity"
 
 - docs/anti-pattern-model-env-hack.md
 - docs/archive/module-analysis.md
-- docs/business-logic-analysis-activity-module.md
+- docs/business-logic-analysis-1.md
 - docs/business-logic-analysis.md
 - docs/business-logic.md
 - docs/coverage-full.md

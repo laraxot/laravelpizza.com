@@ -1,3 +1,10 @@
+---
+title: "Security Alerts - Activity"
+qmd: "activity tasks features security alerts md"
+type: note
+tags: [documentation]
+---
+
 # Security Alerts - Activity
 
 **Task ID**: ACTIVITY-FEATURE-012

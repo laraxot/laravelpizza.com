@@ -44,11 +44,11 @@ database/Seeders/
 
 Ho creato questi documenti:
 
-1. **[Database Naming Convention](docs/conventions/database-naming.md)** - Guida completa
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
 1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
 2. **[AGENTS.md Update](AGENTS.md)** - Rule aggiunta alle regole architetturali
 3. **[GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)** - Tracking delle correzioni
-2. **[agents.md Update](agents.md)** - Rule aggiunta alle regole architetturali
+2. **[AGENTS.md Update](AGENTS.md)** - Rule aggiunta alle regole architetturali
 3. **[GitHub Issue #5](https://github.com/laraxot/platform/issues/5)** - Tracking delle correzioni
 
 ## 🔍 Perché è Importante

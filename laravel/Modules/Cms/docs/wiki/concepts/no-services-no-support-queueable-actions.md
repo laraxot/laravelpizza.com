@@ -11,7 +11,6 @@ qmd: "Cms module Services and Support banned use app Actions QueueableAction pol
 related:
   - no-app-support-queueable-actions.md
   - ../../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
-status: draft
 ---
 
 # Cms — Services/Support vietati: solo Actions

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ROADMAP"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ROADMAP: FixCity Platform

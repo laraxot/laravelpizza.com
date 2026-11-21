@@ -1,10 +1,10 @@
 ---
-title: "phpstan xot errors"
+title: "Phpstan Xot Errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "phpstan xot errors"
+qmd: "Phpstan Xot Errors"
 issues: []
 discussions: []
 ---

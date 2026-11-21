@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "quick commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Quick Commands
@@ -52,5 +51,12 @@ composer go
 ```
 
 ---
+title: "quick commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quick commands"
+issues: []
+discussions: []
 [Back to index](../index.md)
-[Back to index](../../../index.md)

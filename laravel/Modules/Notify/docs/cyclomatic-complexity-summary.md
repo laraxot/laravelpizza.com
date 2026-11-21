@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "cyclomatic complexity summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cyclomatic Complexity - Project Summary Report
@@ -16,6 +15,15 @@ status: draft
 **Analyzer:** Super Mucca 🐮
 
 ---
+
+title: "cyclomatic complexity summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cyclomatic complexity summary"
+issues: []
+discussions: []
 ## 📊 Global Statistics
 
 | Metric | Value |
@@ -153,22 +161,6 @@ Keep nesting levels below 3-4 levels.
 - [Rating](../Modules/Rating/docs/cyclomatic-complexity-report.md)
 - [Seo](../Modules/Seo/docs/cyclomatic-complexity-report.md)
 - [Tenant](../Modules/Tenant/docs/cyclomatic-complexity-report.md)
-- [User](../../User/docs/cyclomatic-complexity-report.md)
-- [Blog](../../Blog/docs/cyclomatic-complexity-report.md)
-- [Geo](../../Geo/docs/cyclomatic-complexity-report.md)
-- [Notify](cyclomatic-complexity-report.md)
-- [AI](../../AI/docs/cyclomatic-complexity-report.md)
-- [Activity](../../Activity/docs/cyclomatic-complexity-report.md)
-- [Cms](../../Cms/docs/cyclomatic-complexity-report.md)
-- [Comment](../../Comment/docs/cyclomatic-complexity-report.md)
-- [Fixcity](../Modules/Fixcity/docs/cyclomatic-complexity-report.md)
-- [Gdpr](../../Gdpr/docs/cyclomatic-complexity-report.md)
-- [Job](../../Job/docs/cyclomatic-complexity-report.md)
-- [Lang](../../Lang/docs/cyclomatic-complexity-report.md)
-- [Media](../../Media/docs/cyclomatic-complexity-report.md)
-- [Rating](../../Rating/docs/cyclomatic-complexity-report.md)
-- [Seo](../../Seo/docs/cyclomatic-complexity-report.md)
-- [Tenant](../../Tenant/docs/cyclomatic-complexity-report.md)
 - [UI](../Modules/UI/docs/cyclomatic-complexity-report.md)
 
 ---

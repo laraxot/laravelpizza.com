@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "coordinate picker"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CoordinatePicker: Architectural Core

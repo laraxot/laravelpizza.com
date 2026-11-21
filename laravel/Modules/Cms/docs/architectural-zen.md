@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architectural zen"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architectural Zen: Content and Workflow
@@ -47,6 +46,10 @@ To see changes in the browser, follow this strict sequence:
 2.  **Install** dependencies: `npm install`
 3.  **Build** assets: `npm run build`
 4.  niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_JEPUMB
+=======
+
+>>>>>>> .merge_file_Fi8OY8
 4.  **Deploy** to public root: `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`) (Deploys compiled assets to `public_html/themes/Meetup`)
 
 ## 5. Tenant Resolution
@@ -55,5 +58,14 @@ To see changes in the browser, follow this strict sequence:
 - **Console Robustness**: It fallback to `config('app.url')` when `$_SERVER['SERVER_NAME']` is unavailable, ensuring Artisan commands and queue workers are tenant-aware.
 
 ---
+
+title: "architectural zen"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architectural zen"
+issues: []
+discussions: []
 > [!IMPORTANT]
 > This site is a high-fidelity conversion of `laravelpizza.com`. Every block in the JSON content must align with the visual and functional requirements of the original site.

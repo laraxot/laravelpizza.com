@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 uses(TestCase::class);
 

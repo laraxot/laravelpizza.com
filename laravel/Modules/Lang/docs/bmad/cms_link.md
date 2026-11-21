@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Collegamento al Modulo Cms
 
@@ -22,11 +20,6 @@ Il modulo Lang fornisce il sistema di traduzione utilizzato dal modulo Cms nei s
 ## Convenzioni di Namespace e Struttura
 
 Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
-Il modulo Lang fornisce il sistema di traduzione utilizzato dal modulo Cms nei suoi componenti Filament. È fondamentale seguire le [regole per le traduzioni in Filament](../filament-translations.md) quando si lavora con i componenti nel modulo Cms.
-
-## Convenzioni di Namespace e Struttura
-
-Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
 
 ## Punti di Integrazione
 
@@ -38,8 +31,6 @@ Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzi
 
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md)
 - [Lang Link nel modulo Cms](../../Cms/docs/lang-link.md)
-- [Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md)
-- [Lang Link nel modulo Cms](../../../Cms/docs/lang-link.md)
 
 ---
 

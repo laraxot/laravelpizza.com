@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "resource table columns"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Resource table columns

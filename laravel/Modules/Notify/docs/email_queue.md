@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "email queue"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-queue.md
 ---
 
 # Sistema Code Email - il progetto

@@ -64,7 +64,7 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Screenshots Argomenti** | [screenshots/argomenti/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/argomenti/) | Screenshots argomenti |
 | **Screenshots All Pages** | [screenshots/all-pages/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/all-pages/) | Screenshots tutte 54 pagine |
 | **All Pages Analysis** | [ALL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/ALL_PAGES_analysis.md) | Analisi completa 54 pagine |
-| **Progress Report** | [progress-report.md](../laravel/Themes/Sixteen/docs/design-comuni/progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 | **Fail Pages Analysis** | [FAIL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/FAIL_PAGES_analysis.md) | Analisi pagine fail |
 | **Skills & Rules** | [SKILLS_RULES.md](../laravel/Themes/Sixteen/docs/design-comuni/skills-rules.md) | Skills, rules e best practices |

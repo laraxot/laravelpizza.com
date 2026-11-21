@@ -22,7 +22,11 @@ use Stringable;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
+<<<<<<< .merge_file_W4LPSh
  * @see HasGdprTraitTest
+=======
+ * Test: tests/Unit/Traits/HasGdprTraitTest.php
+>>>>>>> .merge_file_mOEKGV
  */
 trait HasGdpr
 {

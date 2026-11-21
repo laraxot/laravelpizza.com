@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "duplicate methods"
 issues: []
 discussions: []
-status: superseded
-superseded_by: analysis/duplicate-methods.md
 ---
 
 # Metodi duplicati — Gdpr

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "module analysis"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module - Comprehensive Analysis
 

@@ -8,7 +8,10 @@ use Filament\Forms\Components\Field;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Schemas\TreatmentForm;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 /*
  * Il form vero del trattamento e' `TreatmentForm` (`XotBaseResource::form()` usa solo lui). Il DPO deve poter

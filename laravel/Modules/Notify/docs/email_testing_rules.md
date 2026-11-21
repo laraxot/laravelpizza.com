@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "email testing rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole per il Testing delle Email

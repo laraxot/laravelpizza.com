@@ -16,6 +16,22 @@ The Activity module is responsible for tracking and logging all system actions, 
 - **Security Officers:** Review access logs for compliance and security investigations.
 - **Internal Developers:** Integrate activity logging into other modules.
 
+## 🎯 Goals & Success Metrics
+- **Goal 1:** 100% PHPStan L10 compliance.
+- **Goal 2:** Seamless integration with XotBase.
+
+
+# PRD - Activity Module (2025-2026 Lean Standard)
+
+## 1. Problem Statement
+System observability and audit trails are fragmented and lack a unified, type-safe implementation. There is a need for a centralized, agnostic module that handles logging and event sourcing across all platform modules without creating circular dependencies.
+
+## 2. KPIs (Key Performance Indicators)
+- **Compliance**: 100% PHPStan Level 10 across all module files.
+- **Performance**: < 5ms overhead for log generation (using asynchronous queues).
+- **Quality**: 0 issues reported by PHPMD and PHPInsights.
+- **Coverage**: > 80% test coverage for core logging actions.
+
 ## 3. Functional Requirements
 
 ### P0 (Critical)

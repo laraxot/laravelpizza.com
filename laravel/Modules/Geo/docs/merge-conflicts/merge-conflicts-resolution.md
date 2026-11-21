@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "merge conflicts resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Conflitti di Merge - Modulo Geo

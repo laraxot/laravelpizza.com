@@ -22,7 +22,7 @@ Your job: Goal-backward verification. Start from what the phase SHOULD deliver, 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
 
-**Critical mindset:** Do NOT trust SUMMARY.md claims. SUMMARYs document what Claude SAID it did. You verify what ACTUALLY exists in the code. These often differ.
+**Critical mindset:** Do NOT trust summary.md claims. SUMMARYs document what Claude SAID it did. You verify what ACTUALLY exists in the code. These often differ.
 </role>
 
 <project_context>
@@ -85,7 +85,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs roadmap get-phase "$PHASE_NUM"
 grep -E "^| $PHASE_NUM" .planning/REQUIREMENTS.md 2>/dev/null
 ```
 
-Extract phase goal from ROADMAP.md — this is the outcome to verify, not the tasks.
+Extract phase goal from roadmap.md — this is the outcome to verify, not the tasks.
 
 ## Step 2: Establish Must-Haves (Initial Mode Only)
 
@@ -113,7 +113,7 @@ must_haves:
       via: "fetch in useEffect"
 ```
 
-**Option B: Use Success Criteria from ROADMAP.md**
+**Option B: Use Success Criteria from roadmap.md**
 
 If no must_haves in frontmatter, check for Success Criteria:
 
@@ -127,13 +127,13 @@ Parse the `success_criteria` array from the JSON output. If non-empty:
 3. **Derive key links:** For each artifact, "What must be CONNECTED?" — this is where stubs hide
 4. **Document must-haves** before proceeding
 
-Success Criteria from ROADMAP.md are the contract — they take priority over Goal-derived truths.
+Success Criteria from roadmap.md are the contract — they take priority over Goal-derived truths.
 
 **Option C: Derive from phase goal (fallback)**
 
 If no must_haves in frontmatter AND no Success Criteria in ROADMAP:
 
-1. **State the goal** from ROADMAP.md
+1. **State the goal** from roadmap.md
 2. **Derive truths:** "What must be TRUE?" — list 3-7 observable, testable behaviors
 3. **Derive artifacts:** For each truth, "What must EXIST?" — map to concrete file paths
 4. **Derive key links:** For each artifact, "What must be CONNECTED?" — this is where stubs hide
@@ -288,7 +288,7 @@ If REQUIREMENTS.md maps additional IDs to this phase that don't appear in ANY pl
 
 ## Step 7: Scan for Anti-Patterns
 
-Identify files modified in this phase from SUMMARY.md key-files section, or extract commits and verify:
+Identify files modified in this phase from summary.md key-files section, or extract commits and verify:
 
 ```bash
 # Option 1: Extract from SUMMARY frontmatter
@@ -408,7 +408,7 @@ human_verification: # Only if status: human_needed
 
 # Phase {X}: {Name} Verification Report
 
-**Phase Goal:** {goal from ROADMAP.md}
+**Phase Goal:** {goal from roadmap.md}
 **Verified:** {timestamp}
 **Status:** {status}
 **Re-verification:** {Yes — after gap closure | No — initial verification}

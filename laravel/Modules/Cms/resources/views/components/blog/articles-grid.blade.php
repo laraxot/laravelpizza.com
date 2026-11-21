@@ -1,5 +1,5 @@
 @props([
-    'title' => 'Tutti gli Articoli',
+    'title' => 'All Articles',
     'subtitle' => '',
     'layout' => 'grid',
     'columns' => 3,

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "componenti blade"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componenti Blade di Filament

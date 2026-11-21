@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - naming-conventions.md
-status: draft
 ---
 # Schema Conventions in Notify Module
 
@@ -76,7 +75,6 @@ Here's a complete example of a properly formatted schema:
 ```
 ## Collegamenti tra versioni di schema-conventions.md
 * [schema-conventions.md](docs/schema-conventions.md)
-* [schema-conventions.md](../schema-conventions.md)
 * [schema-conventions.md](../../../Notify/docs/schema-conventions.md)
 
 

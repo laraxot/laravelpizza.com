@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/children.php
 // Cms txt.fields.children — LangServiceProvider SSoT.
 return [
-    'label' => 'Elementi Figli',
-    'placeholder' => 'Elementi nested o subordinati',
-    'helper_text' => 'Elementi contenuti o dipendenti da questo elemento',
+    'label' => 'Child Items',
+    'placeholder' => 'Nested or subordinate items',
+    'helper_text' => 'Items contained in or dependent on this item',
     'tooltip' => '',
     'description' => '',
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "storage server"
 issues: []
 discussions: []
-status: draft
 ---
 
 Wasabi Hot Cloud Storage

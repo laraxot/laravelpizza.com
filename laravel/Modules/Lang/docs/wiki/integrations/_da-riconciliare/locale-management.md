@@ -1,13 +1,12 @@
 ---
-title: "locale management"
+title: "Locale Management"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "locale management"
+qmd: "Locale Management"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione delle Lingue in Laravel

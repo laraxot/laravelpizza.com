@@ -42,7 +42,7 @@ discussions: []
 <domain>
 ## Phase Boundary
 
-[Clear statement of what this phase delivers — the scope anchor. This comes from ROADMAP.md and is fixed. Discussion clarifies implementation within this boundary.]
+[Clear statement of what this phase delivers — the scope anchor. This comes from roadmap.md and is fixed. Discussion clarifies implementation within this boundary.]
 
 </domain>
 

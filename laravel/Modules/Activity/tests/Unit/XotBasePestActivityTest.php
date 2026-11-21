@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_ugLPgP
+=======
+
+>>>>>>> .merge_file_ZO7bEu
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 
@@ -29,7 +33,9 @@ it('XotBasePest::assertFreshModel signature validation', function () {
     $this->assertCount(2, $parameters);
     $modelParam = $parameters[0];
     $type = $modelParam->getType();
-    $this->assertInstanceOf(ReflectionNamedType::class, $type);
+    if (! $type instanceof ReflectionNamedType) {
+        $this->fail('Expected ReflectionNamedType for assertFreshModel $model');
+    }
     $this->assertSame('Illuminate\Database\Eloquent\Model', $type->getName());
 });
 

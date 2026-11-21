@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_dH8S27
 # Activity Module - Product Launch Plan
 
 **Module:** Activity  
@@ -309,3 +310,12 @@ qmd: "activity module - product launch plan# activity - product launch plan acti
 - [User Research](user-research.md)
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
 *Last Updated: March 12, 2026*
+=======
+---
+title: "product launch plan"
+qmd: "activity product launch plan md"
+type: note
+tags: [documentation]
+---
+
+>>>>>>> .merge_file_Y3kvy0

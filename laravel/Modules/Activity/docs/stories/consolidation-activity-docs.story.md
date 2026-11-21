@@ -24,7 +24,7 @@ Organize 41 orphaned `.md` files in Activity module into structured BMAD hierarc
 Activity module `docs/` contained 155 .md files with:
 - 41 orphaned files in root directory
 - 5+ duplicate event-sourcing pattern files
-- 3 variant index files (`00-index.md`, `00-index.md`, `00-INDEX.md`)
+- 3 variant index files (`00-index.md`, `00-index-1.md`, `00-index.md`)
 - 2 API documentation files (`api.md`, `API.md`)
 - Scattered coverage, analysis, and feature docs
 - Unclear categorization and file relationships
@@ -48,7 +48,7 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 #### Consolidated & Deduplicated (4 files)
 - **event-sourcing patterns**: 5 variants → 1 canonical file
 - **API documentation**: 2 files → 1 canonical (API.md)
-- **Index files**: 3 variants → 1 canonical (00-INDEX.md)
+- **Index files**: 3 variants → 1 canonical (00-index.md)
 - **README updates**: 5 old variants → archived
 
 #### Archived for Reference (8 files)
@@ -61,8 +61,8 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 5 canonical files remain in `docs/`:
 - ✓ `README.md` (644 lines) — Module overview
 - ✓ `API.md` (30 lines) — Public API documentation
-- ✓ `ARCHITECTURE.md` (269 lines) — Architecture overview
-- ✓ `00-INDEX.md` (69 lines) — Index
+- ✓ `architecture.md` (269 lines) — Architecture overview
+- ✓ `00-index.md` (69 lines) — Index
 - ✓ `purpose.md` (98 lines) — Module purpose statement
 
 ### New Structure
@@ -71,8 +71,8 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 Activity/docs/
   README.md               (main overview)
   API.md                  (public APIs)
-  ARCHITECTURE.md         (architecture)
-  00-INDEX.md             (index)
+  architecture.md         (architecture)
+  00-index.md             (index)
   purpose.md              (module purpose)
   
   bmad/
@@ -111,9 +111,9 @@ Activity/docs/
 
 ### Deleted
 - `api.md` (duplicate, kept API.md)
-- `00-index.md` (duplicate, kept 00-INDEX.md)
-- `00-index.md` (duplicate, kept 00-INDEX.md)
-- `architecture.md` (duplicate, kept ARCHITECTURE.md)
+- `00-index.md` (duplicate, kept 00-index.md)
+- `00-index-1.md` (duplicate, kept 00-index.md)
+- `architecture.md` (duplicate, kept architecture.md)
 - `readme-*.md`, `readme_*.md` (old variants, archived)
 - `ai-methodologies.md` (unclear, archived)
 
@@ -144,13 +144,13 @@ Activity/docs/
 1. **Review consolidated canonical files**
    - [ ] README.md — does it reflect new structure?
    - [ ] API.md — complete coverage?
-   - [ ] ARCHITECTURE.md — current?
+   - [ ] architecture.md — current?
 
 2. **Consider promoting wiki files** — if any should be back at root
 
 3. **Archive cleanup** — periodic review for safe deletion
 
-4. **Update 00-INDEX.md** — verify it still indexes correctly with new structure
+4. **Update 00-index.md** — verify it still indexes correctly with new structure
 
 5. **Cross-reference in wiki/index.md** — link to testing/, analysis/, concepts/ directories
 

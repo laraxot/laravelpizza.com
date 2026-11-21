@@ -14,11 +14,8 @@ related:
   - "./interface-structure-clarification.md"
   - "./mail-templates-structure.md"
   - "./queueable-action-pattern.md"
-  - "../../architecture/queueable-action-pattern.md"
   - "./sms-config-structure.md"
   - "./standardized-sms-config-structure.md"
-status: superseded
-superseded_by: ../../architecture/document-root-architecture.md
 ---
 
 # Document Root Architecture

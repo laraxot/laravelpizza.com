@@ -33,9 +33,9 @@ qmd: "gemini"
 issues: []
 discussions: []
 **See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [AGENTS.md](./AGENTS.md)
-- [agents.md](./agents.md)
-- [QWEN.md](./QWEN.md)
+- [CLAUDE.md](./claude.md)
+- [AGENTS.md](./agents.md)
+- [AGENTS.md](./agents.md)
+- [qwen.md](./qwen.md)
 
 *Ultimo aggiornamento: Aprile 2026*

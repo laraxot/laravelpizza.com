@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "redundancy report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi di Codice Ridondante
@@ -16,6 +15,15 @@ status: draft
 Questo documento riassume le principali ridondanze rilevate nei **moduli** e **temi** del progetto, offre consigli pratici per la loro rimozione e include riflessioni più ampie (zen, politica, religione, filosofia, scopo) sul valore della **pulizia** e della **condivisione** del codice.
 
 ---
+
+title: "redundancy report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "redundancy report"
+issues: []
+discussions: []
 ## 1. Classi Duplicate più Frequenti
 | Classe | Numero di occorrenze | Percorsi (esempi) |
 |--------|----------------------|-------------------|

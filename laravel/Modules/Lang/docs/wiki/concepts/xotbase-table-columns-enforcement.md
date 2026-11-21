@@ -2,7 +2,7 @@
 qmd: "xotbase table columns enforcement"
 issues: []
 discussions: []
-title: "XotBaseResourceTable Columns Enforcement: Lang Module"
+title: "XotBaseResourceTable Columns Enforcement — Lang Module"
 type: concept
 sources: []
 confidence: high
@@ -11,7 +11,6 @@ updated: 2026-05-07
 tags: [xotbase, filament, tables, enforcement]
 related:
   - ../../../../../../docs/wiki/concepts/xotbase-table-columns-enforcement.md
-status: draft
 ---
 
 # Lang Module: XotBaseResourceTable Columns
@@ -20,4 +19,4 @@ status: draft
 
 Resources: TranslationFile
 
-- **TranslationFilesTable**: id, name, path, content (Sushi model: columns from `getRows()` or `$fillable`)
+- **TranslationFilesTable**: id, name, path, content (Sushi model — columns from `getRows()` or `$fillable`)

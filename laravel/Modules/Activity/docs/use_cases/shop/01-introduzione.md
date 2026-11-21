@@ -1,12 +1,10 @@
 ---
 title: "Introduzione: Lo Shop Event Sourced Definitivo"
+qmd: "activity use cases shop 01 introduzione md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "introduzione: lo shop event sourced definitivo activity"
-status: superseded
-superseded_by: introduzione.md
+tags: [documentation]
 ---
+
 # Introduzione: Lo Shop Event Sourced Definitivo
 
 ## Visione e Filosofia

@@ -128,8 +128,8 @@ If you think a rule is wrong:
 
 ## See Also
 
-- `ARCHITECTURE.md` — database isolation patterns
-- `TESTING.md` — tenant testing strategies
+- `architecture.md` — database isolation patterns
+- `testing.md` — tenant testing strategies
 - `docs/feature-flags.md` — AccountFeatures workflow
 - `docs/json-config.md` — JSON configuration format
 - `docs/tenant-migration.md` — moving tenants between hosts

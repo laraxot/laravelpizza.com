@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Conflict Resolution: Module Media"
+title: "Conflict Resolution — Module Media"
 module: "Media"
 type: concept
 tags: [conflict, resolution]
@@ -10,9 +10,8 @@ updated: 2026-07-14
 qmd: "conflict resolution"
 related:
   - "./webm.md"
-status: draft
 ---
-# Conflict Resolution: Module Media
+# Conflict Resolution — Module Media
 
 ## Summary
 - **Files resolved**: 9

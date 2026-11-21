@@ -78,10 +78,10 @@ Rimosse in questo modulo: `_docs/`, `scripts/`, `bashscripts/`, `docs/archive|ar
 *Consolidated from: `no-hardcoded-language-religion.md`*
 
 
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Religion / i18n  
+**Status**: Active
+**Created**: 2026-04-14
+**Last Updated**: 2026-04-14
+**Category**: Architecture / Religion / i18n
 **Audience**: All developers + AI agents
 
 ---
@@ -90,12 +90,12 @@ Rimosse in questo modulo: `_docs/`, `scripts/`, `bashscripts/`, `docs/archive|ar
 
 **NON scriverai MAI parole in italiano (o qualsiasi lingua) nel codice PHP.**
 
-**MAI.**  
-**Senza eccezioni.**  
-**Senza scuse.**  
+**MAI.**
+**Senza eccezioni.**
+**Senza scuse.**
 **SENZA DISCUSSIONE.**
 
-**Il sito e' multilingua.**  
+**Il sito e' multilingua.**
 **Ogni stringa hardcoded in italiano e un insulto agli utenti non italiani.**
 
 ---
@@ -557,8 +557,8 @@ bash bashscripts/check-hardcoded-language.sh
 
 ### Il Credo
 
-> "Codice in inglese, UI nella lingua dell'utente.  
-> Mai hardcoded, sempre translation keys.  
+> "Codice in inglese, UI nella lingua dell'utente.
+> Mai hardcoded, sempre translation keys.
 > i18n non e optional, e rispetto."
 
 ### La Preghiera
@@ -776,8 +776,8 @@ related:
 
 # NotebookLM Skill - Installation & Integration Summary
 
-**Date**: 2026-03-30  
-**Status**: ✅ Installed & Integrated  
+**Date**: 2026-03-30
+**Status**: ✅ Installed & Integrated
 **Workflow**: BMAD + GSD + Ralph + OpenViking + NotebookLM
 
 ## Installation Summary
@@ -802,7 +802,7 @@ ls -la ~/.claude/skills/notebooklm/
 # - scripts/ (automation scripts)
 # - data/ (authentication + library)
 # - requirements.txt
-# - README.md, changelog.md, LICENSE
+# - README.md, CHANGELOG.md, LICENSE
 ```
 
 ## What is NotebookLM Skill?
@@ -1000,7 +1000,7 @@ Every NotebookLM answer ends with: **"Is that ALL you need to know?"**
 Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
-- **Upload**: Laraxot documentation, agents.md, .windsurfrules
+- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 
@@ -1134,8 +1134,8 @@ DEFAULT_NOTEBOOK_ID=<nome progetto>-project-docs
 
 ---
 
-**Status**: ✅ Ready for authentication and notebook creation  
-**Last Updated**: 2026-03-30  
+**Status**: ✅ Ready for authentication and notebook creation
+**Last Updated**: 2026-03-30
 **Integrated By**: AI Agent (BMAD + GSD + Ralph Workflow)
 
 ---
@@ -1251,7 +1251,7 @@ Once authenticated, you can ask Claude Code to:
 
 Recommended notebooks to create:
 
-1. **Notify Architecture** - agents.md, docs/architecture/*
+1. **Notify Architecture** - AGENTS.md, docs/architecture/*
 2. **Notify Modules** - laravel/Modules/*/docs/README.md
 3. **Notify API** - API documentation, Swagger specs
 "NotebookLM: What's in my <nome progetto> Research notebook?"
@@ -1262,7 +1262,7 @@ Recommended notebooks to create:
 
 Recommended notebooks to create:
 
-1. **<nome progetto> Architecture** - agents.md, docs/architecture/*
+1. **<nome progetto> Architecture** - AGENTS.md, docs/architecture/*
 2. **<nome progetto> Modules** - laravel/Modules/*/docs/README.md
 3. **<nome progetto> API** - API documentation, Swagger specs
 
@@ -1468,7 +1468,7 @@ L'utilizzo di Queueable Actions e componenti Blade di Filament garantisce:
 - Operazioni asincrone efficienti
 - UI/UX moderna e responsive
 - Integrazione nativa con Filament
-- Facilità di manutenzione 
+- Facilità di manutenzione
 
 ---
 
@@ -1539,7 +1539,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -1556,15 +1556,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -1628,7 +1628,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -1645,15 +1645,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -1680,10 +1680,10 @@ public function via($notifiable)
 *Consolidated from: `notification-bulk-action-implementation.md`*
 
 
-**Date**: 18 Dicembre 2025  
-**Status**: ✅ Completed  
-**Module**: App → Notify  
-**Module**: TechPlanner → Notify  
+**Date**: 18 Dicembre 2025
+**Status**: ✅ Completed
+**Module**: App → Notify
+**Module**: TechPlanner → Notify
 **Implementation Type**: Feature Addition
 
 ## Overview
@@ -1702,7 +1702,7 @@ The implementation leverages existing architecture components:
    - Provides comprehensive error handling and logging
    - Uses proper phone number normalization
 
-2. **FilamentAction**: `Modules\Notify\Filament\Actions\SendNotificationBulkAction`  
+2. **FilamentAction**: `Modules\Notify\Filament\Actions\SendNotificationBulkAction`
    - Provides the UI modal with template selection
    - Offers channel selection via checkboxes
    - Handles form validation and user notifications
@@ -1763,10 +1763,10 @@ This implementation aligns with:
 
 ## Code Quality Verification
 
-✅ **PHPStan Level 10**: All files pass static analysis  
-✅ **Type Safety**: Proper return types and parameter validation  
-✅ **Architecture Compliance**: Follows XotBase extension rules  
-✅ **Documentation**: Updated with new implementation details  
+✅ **PHPStan Level 10**: All files pass static analysis
+✅ **Type Safety**: Proper return types and parameter validation
+✅ **Architecture Compliance**: Follows XotBase extension rules
+✅ **Documentation**: Updated with new implementation details
 
 ## Usage Pattern
 
@@ -1974,7 +1974,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Panoramica dell'Architettura](./architecture.md)
 - [Modelli di Email](./EMAIL_TEMPLATES.md)
 - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
 - [Modelli di Email](../../email_templates.md)
@@ -2011,7 +2011,7 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-# Implementazione dei Canali di Notifica 
+# Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto App, con particolare attenzione al pattern Factory utilizzato.
 
@@ -2060,7 +2060,7 @@ Il pattern Factory è stato implementato per centralizzare la logica di selezion
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -2091,7 +2091,7 @@ class AppointmentReminder extends Notification
     {
         return [SmsChannel::class];
     }
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -2229,7 +2229,7 @@ Il pattern Factory è stato implementato per centralizzare la logica di selezion
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -2260,7 +2260,7 @@ class AppointmentReminder extends Notification
     {
         return [SmsChannel::class];
     }
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -2462,7 +2462,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -2532,7 +2532,7 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification-errors
@@ -2631,7 +2631,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -2701,7 +2701,7 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification-implementation
@@ -3158,9 +3158,9 @@ use Spatie\QueueableAction\QueueableAction;
 final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 {
     use QueueableAction;
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3175,7 +3175,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 // config/{type}.php
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3184,7 +3184,7 @@ return [
             // Configurazione specifica
         ],
     ],
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3246,7 +3246,7 @@ Per implementazioni specifiche, vedere i documenti:
 
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di App.
-Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di Quaeris.
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
 ## Principi Architetturali per Tutti i Provider
 
@@ -3304,9 +3304,9 @@ use Spatie\QueueableAction\QueueableAction;
 final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 {
     use QueueableAction;
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3321,7 +3321,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 // config/{type}.php
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3330,7 +3330,7 @@ return [
             // Configurazione specifica
         ],
     ],
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3435,7 +3435,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -3452,15 +3452,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -3489,7 +3489,7 @@ public function via($notifiable)
 # Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
-# Implementazione dei Canali di Notifica 
+# Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto SaluteOra, con particolare attenzione al pattern Factory utilizzato.
 
@@ -3539,7 +3539,7 @@ public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
 
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -3571,7 +3571,7 @@ class AppointmentReminder extends Notification
         return [SmsChannel::class];
     }
 
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -3642,7 +3642,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Panoramica dell'Architettura](./architecture.md)
 - [Modelli di Email](./EMAIL_TEMPLATES.md)
 - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
 - [Modelli di Email](../../email_templates.md)
@@ -3748,7 +3748,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -3818,7 +3818,7 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification_providers_guide
@@ -3828,7 +3828,7 @@ class YourNotification extends Notification
 # Guida Completa ai Provider di Notifiche
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
-# Guida Completa ai Provider di Notifiche 
+# Guida Completa ai Provider di Notifiche
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di SaluteOra.
 
@@ -3891,9 +3891,9 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 
     // Costruttore con configurazione
 
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3909,7 +3909,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
 
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3919,7 +3919,7 @@ return [
         ],
     ],
 
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -4116,13 +4116,13 @@ return [
 - [Documentazione API](./api.md)
 - [Template Email](./templates.md)
 - [Template Email](../../templates.md)
-- [Guida Contribuzione](./contributing.md)
+- [Guida Contribuzione](./CONTRIBUTING.md)
 
 ## Note
 - Testare le notifiche in ambiente di sviluppo
 - Monitorare i tassi di consegna
 - Aggiornare i template regolarmente
-- Mantenere le traduzioni aggiornate 
+- Mantenere le traduzioni aggiornate
 
 ---
 
@@ -4276,7 +4276,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 // ✅ Convenzioni coerenti
 'navigation' => [          // Navigazione principale
 'fields' => [             // Campi form
-'actions' => [            // Azioni utente  
+'actions' => [            // Azioni utente
 'messages' => [           // Messaggi sistema
 'validation' => [         // Regole validazione
 ```
@@ -4324,7 +4324,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 ```php
 'tracking' => [
     'opened' => 'Email opened',
-    'clicked' => 'Link clicked', 
+    'clicked' => 'Link clicked',
     'device' => 'Device',
     'location' => 'Location',
     'open_count' => 'Times opened',
@@ -4371,7 +4371,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 // ✅ Sempre aggiungere in tutte e 3 le lingue
 'new_feature' => [
     'label' => 'EN: New Feature',      // en/send_email.php
-    'label' => 'IT: Nuova Funzione',   // it/send_email.php  
+    'label' => 'IT: Nuova Funzione',   // it/send_email.php
     'label' => 'DE: Neue Funktion',    // de/send_email.php
 ],
 ```
@@ -4390,7 +4390,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 
 La sistemazione del file `send_email.php` ha risolto problemi critici e implementato un sistema di traduzioni robusto e completo. L'applicazione di best practices e la standardizzazione della struttura garantiscono un'esperienza utente coerente e facilita la manutenzione futura del sistema.
 
-**Risultato**: Sistema di invio email completamente localizzato e funzionale in italiano, inglese e tedesco con oltre 100 chiavi di traduzione per ogni lingua e funzionalità avanzate per tracking, programmazione e gestione allegati. 
+**Risultato**: Sistema di invio email completamente localizzato e funzionale in italiano, inglese e tedesco con oltre 100 chiavi di traduzione per ogni lingua e funzionalità avanzate per tracking, programmazione e gestione allegati.
 ---
 
 ## notify-translation-guide-1

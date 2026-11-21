@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bashscripts gitignore workaround"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚨 CRITICAL: bashscripts/ in .gitignore
@@ -17,6 +16,15 @@ status: draft
 > **Priority**: CRITICAL
 
 ---
+
+title: "bashscripts gitignore workaround"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bashscripts gitignore workaround"
+issues: []
+discussions: []
 ## 🎯 Problem
 
 **bashscripts/ è nel .gitignore del repository principale**
@@ -156,10 +164,9 @@ gh run list --repo laraxot/base_ptv_fila5
 
 ## 📚 Related Documentation
 
-- [Multi-Agent Collaboration Guide](MULTI_AGENT_COLLABORATION_GUIDE.md)
-- [GitHub Sync Rule](GITHUB_SYNC_RULE.md)
+- [Multi-Agent Collaboration Guide](multi_agent_collaboration_guide.md)
+- [GitHub Sync Rule](github_sync_rule.md)
 - [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
-- [AI Rules](../../../../.qwen/AI_RULES_CRITICAL.md)
 
 ---
 

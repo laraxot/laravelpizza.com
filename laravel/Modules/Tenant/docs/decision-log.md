@@ -1,21 +1,11 @@
 ---
 type: decision-log
-title: "Decision Log: Tenant"
-links: {github_issue: "#XXX", discussion: "#XXX"}
-status: draft
-updated: 2026-10-26
-tags: [docs, tenant]
-qmd: "decision log   tenant tenant"
+title: "Decision Log — Tenant"
+links: {github_issue: #XXX, discussion: #XXX}
 ---
-# Decision Log: Tenant
+# Decision Log — Tenant
 
 ## Decisions
-
-### 2026-10-26: DCP-289, i dati dell'ente hanno una sola sorgente (`config('ente')`) e il front office nasconde il blocco che non ha il suo dato
-- **Choose**: file `config/<tenant>/ente.php` con tutte le chiavi vuote, letto da `Modules\Tenant\Actions\Ente\GetEnteDataAction` che restituisce `Modules\Tenant\Datas\EnteData` normalizzato (telefono numerico, email e URL validi, social da lista chiusa). I blocchi del tema leggono solo quello; un dato vuoto nasconde il blocco. Nel JSON dei contenuti una voce dichiara `"ente": "toll_free"` e un'etichetta con `:value`.
-- **Over**: i valori finti nei JSON e nei lang ("Demo", "05 0505", `tel:050505`, `comune.regione`); riusare `config/comune.php` (default finti che sembrano veri), `metatag.nome_*` (dato SEO) o `gdpr.config.dpo` (una voce di dodici, letta da nessuno); nascondere l'intera barra alta (porta lingua e accesso).
-- **Because**: l'audit del 2026-10-26 (FO-1-02/03/04/23/27, FO-4-05/07/23/27, FO-6-02, FO-2-29) ha misurato segnaposto su tutte le pagine in 4 lingue. Un dato mancante deve sparire, non essere inventato; il proprietario e' Tenant per dominio (contesto del tenant) e per dipendenza (Tenant non dipende da Cms, Fixcity, Sixteen).
-- **Verifica**: Pest Tenant 31 verdi, tema 7 + 7 + 50 verdi, pagina impostazioni 29 verdi; sweep su :8091 (21 pagine x 4 lingue): "Demo" 21 -> 0, nome regione finto 63 -> 0, `tel:050505` 6 -> 0, `href="#"` 20 -> 0, "Seguici su" vuoto 168 -> 0, landmark Secondaria vuoto 84 -> 0, h4 Contatti senza dati 84 -> 0. PHPStan a zero sui file toccati. Story: `stories/dcp-289-dati-dell-ente-unica-sorgente-e-blocchi-che-si-nascondono.story.md`.
 
 ### 2026-10-08: Riallineamento dell'intero modulo all'ultimo commit buono `90acbda`, piu' tre correzioni al trait SushiToJson
 - **Choose**: Confronto a tre vie dell'intero modulo (app, config, routes, resources, lang, database, tests) con `90acbda` (07/10 06:40), l'ultimo commit prima del merge `2edad8e` (07/10 11:17) che ha ripreso una copia del 04/09.

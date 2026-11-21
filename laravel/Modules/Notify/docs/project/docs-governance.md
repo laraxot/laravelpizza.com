@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "docs governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Governance
@@ -34,7 +33,7 @@ For every active documentation root, prefer exactly one canonical entrypoint:
 - lowercase, date-free filenames for topic documents
 - `CHANGELOG.md` only when a changelog is truly needed
 
-Do not create new parallel entry files such as `INDEX.md`, `00-INDEX.md`, `00-index.md`, or `index.md`
+Do not create new parallel entry files such as `index.md`, `00-index.md`, `00-index.md`, or `index.md`
 when `README.md` already plays the same role. Existing variants may remain temporarily, but new work must
 link to the canonical file instead of multiplying entrypoints.
 
@@ -61,7 +60,7 @@ Treat these as non-canonical or supporting unless explicitly justified:
 - Use hyphens, not spaces or underscores, for new topic filenames.
 - Do not encode dates in filenames.
 - Keep `README.md` and `CHANGELOG.md` uppercase.
-- If both `README.md` and `readme.md` exist, `README.md` is canonical.
+- If both `README.md` and `README.md` exist, `README.md` is canonical.
 
 ## Duplication Policy
 
@@ -102,7 +101,7 @@ bash bashscripts/docs/audit-docs-governance.sh
 The script surfaces:
 
 - nested `docs/docs`
-- lowercase `readme.md` duplicates
+- lowercase `README.md` duplicates
 - non-canonical documentation directories
 - multiple index entrypoints inside the same active docs root
 

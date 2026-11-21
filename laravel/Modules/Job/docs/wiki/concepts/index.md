@@ -1,11 +1,3 @@
----
-title: "Job Module - concepts Index"
-type: index
-status: draft
-updated: 2026-10-07
-tags: [docs, job, wiki]
-qmd: "job module - concepts index job"
----
 # Job Module - concepts Index
 
 ## Purpose

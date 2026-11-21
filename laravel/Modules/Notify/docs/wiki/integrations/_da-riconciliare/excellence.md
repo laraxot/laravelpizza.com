@@ -1,27 +1,23 @@
 ---
+title: "🏆 NOTIFY - ECCELLENZA 2025"
 title: "🏆 <nome progetto> - ECCELLENZA 2025"
 type: concept
 tags: [excellence, 2025]
 created: 2026-07-14
 updated: 2026-07-14
+qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
 qmd: "excellence-2025 🏆 <nome progetto> - eccellenza 2025"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🏆 NOTIFY - ECCELLENZA 2025
@@ -52,7 +48,7 @@ Notify è la piattaforma enterprise leader per la gestione delle segnalazioni ur
 2. ✅ **documentation-index.md** - Indice navigabile 400+ pagine
 3. ✅ **quick-start.md** - Onboarding sviluppatori < 30 minuti
 4. ✅ **project-completion-status.md** - Tracking avanzamento
-5. ✅ **excellence-2025.md** - Questo documento
+5. ✅ **excellence-year-note-snake.md** - Questo documento
 
 ### 🎫 Modulo App - ECCELLENZA (90%)
 ### 🎫 Modulo <nome progetto> - ECCELLENZA (90%)

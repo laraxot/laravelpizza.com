@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan xot user analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Analysis: Xot + User — 2026-06-15
@@ -36,4 +35,13 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse -c phpstan.neon --level=max 
 Entrambi i moduli sono **CLEAN** a PHPStan `level=max`. Nessun lavoro richiesto.
 
 ---
+
+title: "phpstan xot user analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan xot user analysis"
+issues: []
+discussions: []
 *Analisi: 2026-06-15 · Memory: 2GB · Tempo: ~2min per modulo*

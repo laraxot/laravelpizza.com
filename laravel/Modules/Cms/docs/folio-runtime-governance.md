@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "folio runtime governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Folio Runtime Governance
@@ -20,7 +19,7 @@ Nel progetto il frontoffice tema viene servito da `laravel/folio` e il modulo `C
 
 Prima di modificare una pagina pubblica servita da Folio bisogna verificare:
 
-- mount path registrato in `App\\Providers\\FolioServiceProvider`;
+- mount path registrato **solo** in `Modules\Cms\Providers\FolioVoltServiceProvider` (mai `App\Providers\FolioServiceProvider`; SSoT: [bmad/folio-volt-sole-owner.md](./bmad/folio-volt-sole-owner.md));
 - middleware mount-level (`SetFolioLocale`);
 - middleware inline dichiarati nel file pagina (`middleware(...)`);
 - route name dichiarato con `name(...)`;

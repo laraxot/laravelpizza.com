@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: risorse_ui_ux
 canonical: ../../../Themes/docs/shared-components/risorse-ui-ux.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/risorse-ui-ux.md

@@ -559,7 +559,7 @@ function useVehicleControls(rigidBodyRef) {
 - Sources: Mark confidence levels honestly
 
 **Integration with planning:**
-- RESEARCH.md loaded as @context reference in PLAN.md
+- research.md loaded as @context reference in plan.md
 - Standard stack informs library choices
 - Don't hand-roll prevents custom solutions
 - Pitfalls inform verification criteria

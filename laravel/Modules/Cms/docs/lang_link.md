@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: lang_link
 canonical: ../../../Themes/docs/shared-components/lang-link-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/lang-link-Modules.md

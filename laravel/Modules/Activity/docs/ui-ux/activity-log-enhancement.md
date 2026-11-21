@@ -1,11 +1,10 @@
 ---
 title: "Activity Log UI/UX Enhancement"
+qmd: "activity ui ux activity log enhancement md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, ui-ux]
-qmd: "activity log ui/ux enhancement activity"
+tags: [documentation]
 ---
+
 # Activity Log UI/UX Enhancement
 
 ## Overview

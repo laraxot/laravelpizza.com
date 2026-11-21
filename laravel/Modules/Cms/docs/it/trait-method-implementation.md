@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "trait method implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Trait Method Implementation Rules

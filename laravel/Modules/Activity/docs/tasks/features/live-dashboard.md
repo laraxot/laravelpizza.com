@@ -1,3 +1,10 @@
+---
+title: "Live Dashboard - Activity"
+qmd: "activity tasks features live dashboard md"
+type: note
+tags: [documentation]
+---
+
 # Live Dashboard - Activity
 
 **Task ID**: ACTIVITY-FEATURE-005

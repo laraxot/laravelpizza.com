@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "seasonal email zen"
 issues: []
 discussions: []
-status: superseded
-superseded_by: seasonal-email-zen.md
 ---
 
 # The Zen of Seasonal Emails
@@ -52,7 +50,7 @@ Data must flow transparently to the view.
 ### The "Elegant" Variant
 
 We introduced `christmas-elegant.html` to serve a specific need: **Professional Festivity**.
-Not all brands want red/green and cartoons. Some want "Silent Night": deep blues, gold, serif fonts.
+Not all brands want red/green and cartoons. Some want "Silent Night" — deep blues, gold, serif fonts.
 This demonstrates the flexibility of the system: multiple "skins" for the same context.
 
 ## Reflections & Future

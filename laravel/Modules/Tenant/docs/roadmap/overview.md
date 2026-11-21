@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "00 overview"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Roadmap overview (Module Tenant)
 

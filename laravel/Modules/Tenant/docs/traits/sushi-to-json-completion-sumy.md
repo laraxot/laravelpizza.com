@@ -10,7 +10,5 @@ updated: 2026-07-14
 qmd: "sushi to json completion sumy"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 

@@ -11,7 +11,6 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
-status: draft
 ---
 
 # Wiki Schema - Media
@@ -25,7 +24,7 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema.md          # Questo file
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna
@@ -42,9 +41,10 @@ docs/
 
 ---
 
-<!-- Merged from SCHEMA.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from schema.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+title: "Rimando a schema.md"
 description: "Documento unificato: il contenuto canonico vive in schema.md."
 status: merged
 tags: [merge, duplicato, case-only]

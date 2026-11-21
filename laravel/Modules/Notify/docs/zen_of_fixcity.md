@@ -1,13 +1,12 @@
 ---
-title: "zen of fixcity"
+title: "ZEN OF FIXCITY"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "zen of fixcity"
+qmd: "ZEN OF FIXCITY"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 Zen of FixCity - Complete Philosophy
@@ -18,6 +17,15 @@ status: draft
 **Owner**: Multi-Agent Team
 
 ---
+
+title: "ZEN OF FIXCITY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ZEN OF FIXCITY"
+issues: []
+discussions: []
 ## 🎯 The Five Pillars
 
 ### 1. **Git Forward-Only** 🚀
@@ -25,21 +33,18 @@ status: draft
 > **Non si torna mai indietro. Si studia il passato per migliorare.**
 
 **Principi**:
-- ✅ Git forward-only: un cambiamento si corregge scrivendo un nuovo commit in avanti
-- ✅ Mai `git reset`, `git revert`, `git checkout`/`git restore`, `git stash`, `git rebase`
+- ✅ `git rebase` invece di `git reset`
+- ✅ `git revert` invece di `git checkout <old-commit>`
 - ✅ Studiare commit history per capire decisioni
 - ✅ Documentare lezioni apprese
 - ✅ Mai force-push su branch condivisi
 
 **Comandi**:
 ```bash
-# ✅ CORRETTO: correggi il file e registra la correzione con un nuovo commit
-git commit -m "fix: correggi il comportamento"
-
-# ❌ SBAGLIATO: riscrive la history
+# ✅ CORRETTO: Rebase per pulire history
 git rebase -i HEAD~5
 
-# ❌ SBAGLIATO: annulla con un commit inverso
+# ✅ CORRETTO: Revert per annullare cambiamenti
 git revert <commit-hash>
 
 # ❌ SBAGLIATO: Reset che distrugge history

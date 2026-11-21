@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sail"
 issues: []
 discussions: []
-status: draft
 ---
 
  Bind for 0.0.0.0:3306 failed: port is already allocated

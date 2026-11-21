@@ -10,7 +10,6 @@ title: Updaet Action
 description: Update Model with Queuable Action
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 # Update Action {#update-action}
 

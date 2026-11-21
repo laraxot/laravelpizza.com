@@ -11,6 +11,13 @@ return [
     ],
     'title' => 'Impostazioni',
     'fields' => [
+        'indexnow_key' => [
+            'label' => 'Chiave IndexNow',
+            'placeholder' => '',
+            'helper_text' => 'Chiave pubblica (8-128 lettere, cifre o trattini) servita in /{chiave}.txt: Bing, Yandex, Seznam e Naver ricevono subito le pagine nuove della sitemap (php artisan seo:indexnow, a ogni deploy). Vuota = IndexNow spento.',
+            'tooltip' => '',
+            'description' => '',
+        ],
         'path_aliases' => [
             'label' => 'Pagine doppie (alias)',
             'placeholder' => '',

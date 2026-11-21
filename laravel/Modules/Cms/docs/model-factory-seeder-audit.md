@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "model factory seeder audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Model/Factory/Seeder Audit

@@ -1,11 +1,10 @@
 ---
 title: "StoredEvent Business Logic Test Fix"
+qmd: "activity stored event test fix md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "storedevent business logic test fix activity"
+tags: [documentation]
 ---
+
 # StoredEvent Business Logic Test Fix
 
 ## Problema Identificato

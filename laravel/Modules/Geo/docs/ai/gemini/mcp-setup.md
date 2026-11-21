@@ -7,12 +7,20 @@ updated: 2026-09-26
 qmd: "mcp setup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Setup MCP per Gemini Code Assist - PTVX
 
 ---
+
+title: "mcp setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp setup"
+issues: []
+discussions: []
 ## Panoramica MCP
 
 Model Context Protocol (MCP) permette a Gemini Code Assist di interagire con strumenti esterni, database, API e servizi.

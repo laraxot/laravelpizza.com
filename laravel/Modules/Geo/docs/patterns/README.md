@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🏗️ Design Patterns PTVX
@@ -32,4 +31,12 @@ status: draft
 | **Checklist** | Standard di qualità | [checklist.md](./checklist.md) |
 
 ---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 **Torna a**: [Documentazione Principale](../claude/README.md)

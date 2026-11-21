@@ -10,7 +10,6 @@ title: Nested Resource
 description: Nested Resource
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Nested Resource {#nested-resource}

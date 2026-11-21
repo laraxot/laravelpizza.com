@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "documentation audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Audit Report
@@ -17,6 +16,15 @@ status: draft
 **Scope:** All modules, themes, and project documentation
 
 ---
+
+title: "documentation audit"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation audit"
+issues: []
+discussions: []
 ## Executive Summary
 
 ### Key Findings
@@ -100,7 +108,7 @@ DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/archi
 /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/00-index.md
 /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/00-index.md
 /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/README.md
-/var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/readme.md
+/var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/README.md
 ```
 
 **Recommendation:** Enforce lowercase filenames with hyphens as word separators.
@@ -164,7 +172,7 @@ docs/roadmap/
 **Problem:** Each module has identical structure with minimal content differences.
 
 **Recommendation:** 
-- Create master roadmap in `docs/project/ROADMAP.md`
+- Create master roadmap in `docs/project/roadmap.md`
 - Module-specific roadmaps should only contain module-unique items
 - Use OpenViking URIs for cross-references
 
@@ -222,7 +230,7 @@ Xot/docs/
 
 **Multiple index files serving same purpose:**
 ```
-Xot/docs/00-INDEX.md
+Xot/docs/00-index.md
 Xot/docs/00-index.md
 Xot/docs/00-index.md
 Xot/docs/index.md
@@ -235,7 +243,7 @@ Xot/docs/README.md
 
 **Same pattern documented multiple times:**
 - `naming-conventions.md` / `naming_conventions.md` / `naming-rules.md`
-- `phpstan-fixes.md` / `phpstan-fixes-.md` / `phpstan-fixes-gennaio.md`
+- `phpstan-fixes.md` / `phpstan-fixes-.md` / `phpstan-fixes-early-cycle.md`
 - `conflict-resolution.md` appears in 10+ modules with identical content
 
 ---
@@ -288,8 +296,7 @@ docs/master/
 - `kebab-case.md` (e.g., `phpstan-fixes.md`)
 - `PascalCase.md` (e.g., `PHPStanFixes.md`)
 - `UPPERCASE.md` (e.g., `README.md`)
-- Mixed with suffixes: `phpstan-fixes-.md`, `phpstan-fixes.md`
-- Mixed with suffixes: `phpstan-fixes-.md`, `phpstan-fixes-documentation-themes.md`
+- Mixed with suffixes: `phpstan-fixes-.md`, `phpstan-fixes-1.md`
 
 **Recommended Standard:**
 - Lowercase kebab-case: `topic-subtopic.md`
@@ -301,8 +308,6 @@ docs/master/
 **Examples:**
 - `phpstan-analysis-2026-03-02.md`
 - `documentation-improvement-summary-2026-03-13.md`
-- `phpstan-analysis-level-report.md`
-- `documentation-improvement-summary-executive.md`
 - `bugfix-report-2025-01-14.md`
 
 **Problem:** Dates in filenames become stale immediately.

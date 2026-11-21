@@ -8,20 +8,14 @@ qmd: "phase-1-execution-dashboard 🎯 phase 1 execution dashboard"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🎯 PHASE 1 EXECUTION DASHBOARD
@@ -85,10 +79,10 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 **Status**: 🟢 ACTIVE (Coordination phase)
 
 **Current Tasks**:
-- ✅ Created phase-1-findings-template.md
+- ✅ Created PHASE-1-FINDINGS-TEMPLATE.md
 - ✅ Created SUBTASK-2-ANALYSIS-WORKFLOW.md
 - ✅ Created EXECUTOR-2-SUBTASKS-3-4.md
-- ✅ Created phase-1-execution-status.md
+- ✅ Created PHASE-1-EXECUTION-STATUS.md
 - ⏳ Monitoring Subtask 1 progress
 - ⏳ Preparing analysis framework
 
@@ -135,8 +129,8 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 - Duration: 15-20 minutes
 
 **Preparation Checklist**:
-- [ ] Read phase-1-strategy.md
-- [ ] Read gsd-phase-1-execution.md
+- [ ] Read PHASE-1-STRATEGY.md
+- [ ] Read GSD-PHASE-1-EXECUTION.md
 - [ ] Read EXECUTOR-2-SUBTASKS-3-4.md
 - [ ] Understand translation pattern: `<nome progetto>::segnalazione.fields.title.label`
 - [ ] Know NOT to create separate segnalazioni-elenco.blade.php
@@ -326,7 +320,7 @@ Phase 2 planning can begin
 - [ ] PHASE-1-COMPLETION-REPORT.md created
 - [ ] Metrics documented
 - [ ] Lessons learned captured
-- [ ] 00-index.md updated
+- [ ] 00-index-1.md updated
 - [ ] Phase 2 strategy outlined
 
 ---
@@ -354,11 +348,11 @@ Phase 2 planning can begin
 
 **Quick Start** (5 min read):
 - phase-1-research-complete.md
-- phase-1-execution-status.md
+- PHASE-1-EXECUTION-STATUS.md
 
 **In-Depth** (20-30 min read):
-- phase-1-strategy.md (strategy & analysis)
-- gsd-phase-1-execution.md (execution plan)
+- PHASE-1-STRATEGY.md (strategy & analysis)
+- GSD-PHASE-1-EXECUTION.md (execution plan)
 
 **Task-Specific** (10-15 min per task):
 - SUBTASK-2-ANALYSIS-WORKFLOW.md (for Researcher)
@@ -500,10 +494,10 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 **Status**: 🟢 ACTIVE (Coordination phase)
 
 **Current Tasks**:
-- ✅ Created phase-1-findings-template.md
+- ✅ Created PHASE-1-FINDINGS-TEMPLATE.md
 - ✅ Created SUBTASK-2-ANALYSIS-WORKFLOW.md
 - ✅ Created EXECUTOR-2-SUBTASKS-3-4.md
-- ✅ Created phase-1-execution-status.md
+- ✅ Created PHASE-1-EXECUTION-STATUS.md
 - ⏳ Monitoring Subtask 1 progress
 - ⏳ Preparing analysis framework
 
@@ -551,8 +545,8 @@ laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/
 - Duration: 15-20 minutes
 
 **Preparation Checklist**:
-- [ ] Read phase-1-strategy.md
-- [ ] Read gsd-phase-1-execution.md
+- [ ] Read PHASE-1-STRATEGY.md
+- [ ] Read GSD-PHASE-1-EXECUTION.md
 - [ ] Read EXECUTOR-2-SUBTASKS-3-4.md
 - [ ] Understand translation pattern: `laraxot::segnalazione.fields.title.label`
 - [ ] Understand translation pattern: `<nome progetto>::segnalazione.fields.title.label`
@@ -772,11 +766,11 @@ Phase 2 planning can begin
 
 **Quick Start** (5 min read):
 - PHASE-1-RESEARCH-COMPLETE.md
-- phase-1-execution-status.md
+- PHASE-1-EXECUTION-STATUS.md
 
 **In-Depth** (20-30 min read):
-- phase-1-strategy.md (strategy & analysis)
-- gsd-phase-1-execution.md (execution plan)
+- PHASE-1-STRATEGY.md (strategy & analysis)
+- GSD-PHASE-1-EXECUTION.md (execution plan)
 
 **Task-Specific** (10-15 min per task):
 - SUBTASK-2-ANALYSIS-WORKFLOW.md (for Researcher)

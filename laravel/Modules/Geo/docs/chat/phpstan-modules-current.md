@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan modules current"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Modules corrente

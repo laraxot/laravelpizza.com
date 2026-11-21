@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "SPRINT PLANNING"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gdpr Module - Sprint Planning
@@ -17,6 +16,15 @@ status: draft
 **Version:** 1.0.0
 
 ---
+
+title: "SPRINT PLANNING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SPRINT PLANNING"
+issues: []
+discussions: []
 ## Sprint Goal
 
 Implement core GDPR consent management and data subject request workflows.

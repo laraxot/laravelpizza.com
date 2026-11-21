@@ -1,11 +1,10 @@
 ---
 title: "Filament Actions nel Modulo Activity"
+qmd: "activity filament actions usage md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity]
-qmd: "filament actions nel modulo activity activity"
+tags: [documentation]
 ---
+
 # Filament Actions nel Modulo Activity
 
 ## Panoramica
@@ -363,7 +362,7 @@ class ListMyModelActivities extends ListLogActivities
 
 ### Moduli Correlati
 - [IndennitaResponsabilita - Activity Log Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
-- [Xot - Filament Base Components](../../xot/docs/filament/readme.md)
+- [Xot - Filament Base Components](../../xot/docs/filament/README.md)
 - [Translation Best Practices](../../Xot/docs/translation-best-practices.md)
 - [Service Provider Architecture](../../Xot/docs/service-provider-architecture.md)
 
@@ -372,6 +371,7 @@ class ListMyModelActivities extends ListLogActivities
 - [Xot - Filament Base Components](../../Xot/docs/filament/README.md)
 
 ---
+<<<<<<< .merge_file_mON6Zu
 
 **
 **Ultimo aggiornamento**: 27 Ottobre 2025
@@ -379,3 +379,5 @@ class ListMyModelActivities extends ListLogActivities
 **Ultimo aggiornamento**: 27 Ottobre 2025
 **Pattern**: DRY + KISS per Actions riutilizzabili
 **Conformità**: ✅ PHPStan livello 9+, ✅ Pint, ✅ Test Suite
+=======
+>>>>>>> .merge_file_EWDDJi

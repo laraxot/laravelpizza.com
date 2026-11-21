@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "volt introduction"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Introduzione a Laravel Volt
@@ -183,5 +182,5 @@ class CounterTest extends TestCase
 
 ## Collegamenti tra versioni di volt-introduction.md
 * [volt-introduction.md](laravel/modules/cms/project_docs/volt-introduction.md)
-* [volt-introduction.md](components/volt-introduction.md)
+* [volt-introduction.md](laravel/modules/cms/project_docs/components/volt-introduction.md)
 

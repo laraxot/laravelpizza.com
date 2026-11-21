@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: class-not-founds
 canonical: ../../../Themes/docs/shared-components/class-not-found-errors.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/class-not-found-errors.md

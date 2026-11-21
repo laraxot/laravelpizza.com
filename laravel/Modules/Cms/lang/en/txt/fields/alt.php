@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/alt.php
 // Cms txt.fields.alt — LangServiceProvider SSoT.
 return [
-    'label' => 'Testo Alternativo',
-    'placeholder' => 'Descrizione immagine per accessibilità',
-    'helper_text' => 'Testo letto dagli screen reader per utenti non vedenti',
+    'label' => 'Alternative Text',
+    'placeholder' => 'Image description for accessibility',
+    'helper_text' => 'Text read by screen readers for visually impaired users',
     'tooltip' => '',
     'description' => '',
 ];

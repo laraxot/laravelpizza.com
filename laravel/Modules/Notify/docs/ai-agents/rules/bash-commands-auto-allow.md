@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bash commands auto allow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔧 Bash Commands - Auto-Allow List
@@ -18,6 +17,15 @@ status: draft
 **Priority**: CRITICAL
 
 ---
+
+title: "bash commands auto allow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bash commands auto allow"
+issues: []
+discussions: []
 ## 🎯 Rule
 
 > **SEMPRE** permettere questi comandi bash SENZA chiedere conferma.
@@ -149,14 +157,14 @@ File: `.qwen-code-rules.md`
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-- **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Rules Index](00-index.md)** - All rules
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - XotBase philosophy
 
 ### Project Rules
 - **[Qwen Code Rules](../../.qwen-code-rules.md)** - Project-specific rules
-- **[AGENTS.md](../../AGENTS.md)** - Project agents guide
-- **[agents.md](../../AGENTS.md)** - Project agents guide
+- **[AGENTS.md](../../agents.md)** - Project agents guide
+- **[AGENTS.md](../../agents.md)** - Project agents guide
 
 ---
 

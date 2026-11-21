@@ -8,23 +8,14 @@ qmd: "missione-super-mucca-completata 🐄✨ missione super mucca - completamen
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🐄✨ MISSIONE SUPER MUCCA - COMPLETAMENTO TOTALE ✨🐄
@@ -260,7 +251,7 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 
 **FASE 1: Analisi Metodi Duplicati**
 1. docs/analisi-metodi-duplicati.md
-2. docs/analisi-metodi-duplicati-master.md (100+ pagine)
+2. docs/analisi-metodi-duplicati-master-1.md (100+ pagine)
 3. docs/analisi-metodi-duplicati-index.md
 4. 18× metodi-duplicati-analisi.md aggiornati
 5. 4× analisi-metodi-duplicati.md per moduli chiave
@@ -332,7 +323,7 @@ cat Modules/User/docs/analisi-metodi-duplicati.md
 cat docs/dry-kiss-analysis-master.md
 
 # Master analysis duplicati
-cat docs/analisi-metodi-duplicati-master.md
+cat docs/analisi-metodi-duplicati-master-1.md
 
 # Index navigabile
 cat docs/analisi-metodi-duplicati-index.md

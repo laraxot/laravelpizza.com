@@ -1231,12 +1231,12 @@ Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email 
 
 ## Collegamenti correlati
 
-- [README del modulo Notify](./readme.md)
+- [README del modulo Notify](./README.md)
 - [Documentazione Email Templates](./email_templates.md)
 - [Email Specifiche per Dottori](./doctor-emails.md)
 - [Implementazione Database Mail](./database-mail.md)
 - [Documentazione Centrale](../../../../../docs/collegamenti-documentazione.md)
-- [Modulo Xot](../../../xot/docs/readme.md)
+- [Modulo Xot](../../../xot/docs/README.md)
 - [Documentazione Email Templates](../../email_templates.md)
 - [Email Specifiche per Dottori](../../doctor-emails.md)
 - [Implementazione Database Mail](../../database-mail.md)
@@ -1639,7 +1639,7 @@ Nel form di edit/create:
 ### Errore: Plugin Not Registered
 
 **Causa**: Plugin non registrato nel panel  
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](./errori/plugin-spatie-translatable-not-registered.md)
+**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
 **Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
 
 ### Errore: Undefined Method `getTranslation()`
@@ -1764,10 +1764,10 @@ Schema::table('mail_templates', function (Blueprint $table) {
 - [Spatie Laravel Translatable Docs](https://spatie.be/docs/laravel-translatable/v6/introduction)
 
 ### Documentazione Interna
-- [Errore Plugin Not Registered](./errori/plugin-spatie-translatable-not-registered.md)
-- [Lang Module README](../../lang/docs/readme.md)
 - [Errore Plugin Not Registered](../../errori/plugin-spatie-translatable-not-registered.md)
-- [Lang Module README](../../../../Lang/docs/readme.md)
+- [Lang Module README](../../lang/docs/README.md)
+- [Errore Plugin Not Registered](../../errori/plugin-spatie-translatable-not-registered.md)
+- [Lang Module README](../../../../Lang/docs/README.md)
 - [Filament Panels Configuration](../../xot/docs/filament/panel-configuration.md)
 
 ---

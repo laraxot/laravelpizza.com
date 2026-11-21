@@ -1,3 +1,10 @@
+---
+title: "Task 004: Implement Activity Notification System"
+qmd: "activity tasks 004 activity notification system md"
+type: note
+tags: [documentation]
+---
+
 # Task 004: Implement Activity Notification System
 
 ## Description

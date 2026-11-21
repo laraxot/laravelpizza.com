@@ -1,11 +1,10 @@
 ---
 title: "CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH"
+qmd: "activity rules testing no migrate fresh md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "critical architecture rule: no migrate:fresh activity"
+tags: [documentation]
 ---
+
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 
 ## Rule

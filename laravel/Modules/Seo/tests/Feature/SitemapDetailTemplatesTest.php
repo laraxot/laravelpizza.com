@@ -56,9 +56,9 @@ it('leaves the detail templates out of the sitemap', function (): void {
     /** @var TestCase $this */
     $locs = seoSitemapLocs($this);
 
-    expect($locs)->not->toBeEmpty();
+    Assert::assertNotEmpty($locs);
     foreach ($locs as $loc) {
-        expect($loc)->not->toMatch('#/(blog|events|services)/view$#');
+        Assert::assertDoesNotMatchRegularExpression('#/(blog|events|services)/view$#', (string) $loc);
     }
 });
 
@@ -70,8 +70,7 @@ it('lists the published posts and events in every language', function (): void {
     $locs = seoSitemapLocs($this);
 
     foreach (['it', 'en'] as $lang) {
-        expect($locs)
-            ->toContain(url('/'.$lang.'/blog/'.$post))
-            ->toContain(url('/'.$lang.'/events/'.$event));
+        Assert::assertContains(url('/'.$lang.'/blog/'.$post), $locs);
+        Assert::assertContains(url('/'.$lang.'/events/'.$event), $locs);
     }
 });

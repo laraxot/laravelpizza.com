@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "smtp testing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # SMTP Testing Guide

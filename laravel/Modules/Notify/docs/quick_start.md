@@ -12,9 +12,9 @@ status: draft
 
 # 🚀 FIXCITY - GUIDA RAPIDA SVILUPPATORI
 
-**Versione**: 1.0  
-**Data**: 2025-10-01  
-**Target**: Sviluppatori che iniziano a lavorare su FixCity  
+**Versione**: 1.0
+**Data**: 2025-10-01
+**Target**: Sviluppatori che iniziano a lavorare su FixCity
 
 ---
 ## 📋 PREREQUISITI
@@ -144,7 +144,7 @@ class MyResource extends XotBaseResource
             // schema fields
         ];
     }
-    
+
     // NON definire table() method
 }
 ```
@@ -182,7 +182,7 @@ class MyServiceProvider extends XotBaseServiceProvider
 {
     protected string $moduleName = 'ModuleName';
     protected string $moduleNameLower = 'modulename';
-    
+
     public function boot(): void
     {
         parent::boot(); // SEMPRE chiamare parent
@@ -240,8 +240,8 @@ return [
 ## 📁 STRUTTURA PROGETTO
 
 ```
-base_fixcity_fila5_mono/
-base_ptv_fila5_mono/
+base_fixcity_fila5/
+base_ptv_fila5/
 ├── laravel/                    # Applicazione Laravel
 │   ├── Modules/               # Moduli Nwidart
 │   │   ├── Fixcity/          # Core business logic
@@ -388,7 +388,7 @@ class TicketTest extends TestCase
     public function test_can_create_ticket(): void
     {
         $ticket = Ticket::factory()->create();
-        
+
         $this->assertDatabaseHas('tickets', [
             'id' => $ticket->id,
         ]);
@@ -405,9 +405,9 @@ class TicketResourceTest extends TestCase
     public function test_can_list_tickets(): void
     {
         $this->actingAs($user = User::factory()->create());
-        
+
         $response = $this->get(route('filament.admin.resources.tickets.index'));
-        
+
         $response->assertSuccessful();
     }
 }
@@ -490,9 +490,9 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 ## 🔗 LINK UTILI
 
 ### Documentazione
-- **[Indice Documentazione](./DOCUMENTATION_INDEX.md)**
-- **[Roadmap Status](./ROADMAP_STATUS_SUMMARY.md)**
-- **[Documentation Status](./project_docs/DOCUMENTATION_STATUS.md)**
+- **[Indice Documentazione](./documentation_index.md)**
+- **[Roadmap Status](./roadmap_status_summary.md)**
+- **[Documentation Status](./project_docs/documentation_status.md)**
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**
@@ -501,7 +501,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
-- **[Code Quality](./.windsurf/rules/code-quality.md)**
+- **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
@@ -519,7 +519,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 **Soluzione**: Verifica di estendere XotBaseMigration e non Migration standard
 
 ### Problema: Assets non caricati
-**Soluzione**: 
+**Soluzione**:
 ```bash
 npm run build
 php artisan optimize:clear

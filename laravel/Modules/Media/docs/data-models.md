@@ -10,6 +10,5 @@ updated: 2026-07-14
 qmd: "data models"
 related:
   - "./webm.md"
-status: draft
 ---
 # Data Models

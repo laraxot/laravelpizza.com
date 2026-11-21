@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "test 1"
 related:
-  - "../italian-text-refined-audit-report.md"
-status: draft
+  - "./italian-text-refined-audit-report.md"
 ---
 # Struttura Espansa per File di Traduzione - Progetto <nome progetto>
 

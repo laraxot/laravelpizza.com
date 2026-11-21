@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prd"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Cms - Product Requirements Document (PRD)

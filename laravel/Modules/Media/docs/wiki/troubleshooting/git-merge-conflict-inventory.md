@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "git merge conflict inventory"
 related:
   - "./webm.md"
-status: draft
 ---
 # Git Conflict Inventory
 

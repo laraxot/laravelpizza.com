@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "optimization summary report"
 issues: []
 discussions: []
-status: superseded
-superseded_by: optimization-sumy-report.md
 ---
 
 # Report di Sintesi - Analisi e Ottimizzazioni Moduli

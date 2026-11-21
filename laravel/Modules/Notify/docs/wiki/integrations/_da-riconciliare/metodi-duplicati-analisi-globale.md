@@ -8,20 +8,14 @@ qmd: "metodi-duplicati-analisi-globale 🐮 analisi globale metodi duplicati"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🐮 ANALISI GLOBALE METODI DUPLICATI
@@ -69,25 +63,25 @@ status: draft
 
 | Modulo | Opportunità | ROI Medio | Linee | Effort | Report |
 |--------|-------------|-----------|-------|--------|--------|
-| Comment | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Comment/docs/metodi-duplicati-analisi.md) |
-| Gdpr | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Gdpr/docs/metodi-duplicati-analisi.md) |
-| Job | 30 | 244452.3% | 708 | 31h | [📄 Vedi](Modules/Job/docs/metodi-duplicati-analisi.md) |
-| Notify | 32 | 206375.1% | 914 | 38h | [📄 Vedi](Modules/Notify/docs/metodi-duplicati-analisi.md) |
-| Cms | 27 | 200851.8% | 914 | 25h | [📄 Vedi](Modules/Cms/docs/metodi-duplicati-analisi.md) |
-| Rating | 8 | 194434.5% | 151 | 12h | [📄 Vedi](Modules/Rating/docs/metodi-duplicati-analisi.md) |
-| Lang | 20 | 180360.0% | 636 | 16h | [📄 Vedi](Modules/Lang/docs/metodi-duplicati-analisi.md) |
-| Tenant | 10 | 175068.1% | 299 | 14h | [📄 Vedi](Modules/Tenant/docs/metodi-duplicati-analisi.md) |
-| Blog | 28 | 171872.2% | 633 | 49h | [📄 Vedi](Modules/Blog/docs/metodi-duplicati-analisi.md) |
+| Comment | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Comment/docs/metodi-duplicati-analisi-1.md) |
+| Gdpr | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Gdpr/docs/metodi-duplicati-analisi-1.md) |
+| Job | 30 | 244452.3% | 708 | 31h | [📄 Vedi](Modules/Job/docs/metodi-duplicati-analisi-1.md) |
+| Notify | 32 | 206375.1% | 914 | 38h | [📄 Vedi](Modules/Notify/docs/metodi-duplicati-analisi-1.md) |
+| Cms | 27 | 200851.8% | 914 | 25h | [📄 Vedi](Modules/Cms/docs/metodi-duplicati-analisi-1.md) |
+| Rating | 8 | 194434.5% | 151 | 12h | [📄 Vedi](Modules/Rating/docs/metodi-duplicati-analisi-1.md) |
+| Lang | 20 | 180360.0% | 636 | 16h | [📄 Vedi](Modules/Lang/docs/metodi-duplicati-analisi-1.md) |
+| Tenant | 10 | 175068.1% | 299 | 14h | [📄 Vedi](Modules/Tenant/docs/metodi-duplicati-analisi-1.md) |
+| Blog | 28 | 171872.2% | 633 | 49h | [📄 Vedi](Modules/Blog/docs/metodi-duplicati-analisi-1.md) |
 | User | 54 | 166896.5% | 1173 | 69h | [📄 Vedi](Modules/User/docs/metodi-duplicati-analisi.md) |
-| Xot | 28 | 143763.5% | 899 | 33h | [📄 Vedi](Modules/Xot/docs/metodi-duplicati-analisi.md) |
-| Activity | 10 | 142835.9% | 261 | 9h | [📄 Vedi](Modules/Activity/docs/metodi-duplicati-analisi.md) |
-| Media | 11 | 121938.0% | 278 | 20h | [📄 Vedi](Modules/Media/docs/metodi-duplicati-analisi.md) |
-| Geo | 38 | 95132.2% | 873 | 55h | [📄 Vedi](Modules/Geo/docs/metodi-duplicati-analisi.md) |
-| UI | 2 | 75641.9% | 31 | 4h | [📄 Vedi](Modules/UI/docs/metodi-duplicati-analisi.md) |
-| AI | 4 | 75640.0% | 62 | 4h | [📄 Vedi](Modules/AI/docs/metodi-duplicati-analisi.md) |
-| App | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/App/docs/metodi-duplicati-analisi.md) |
-| <nome progetto> | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/<nome progetto>/docs/metodi-duplicati-analisi.md) |
-| Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/metodi-duplicati-analisi.md) |
+| Xot | 28 | 143763.5% | 899 | 33h | [📄 Vedi](Modules/Xot/docs/metodi-duplicati-analisi-1.md) |
+| Activity | 10 | 142835.9% | 261 | 9h | [📄 Vedi](Modules/Activity/docs/metodi-duplicati-analisi-1.md) |
+| Media | 11 | 121938.0% | 278 | 20h | [📄 Vedi](Modules/Media/docs/metodi-duplicati-analisi-1.md) |
+| Geo | 38 | 95132.2% | 873 | 55h | [📄 Vedi](Modules/Geo/docs/metodi-duplicati-analisi-1.md) |
+| UI | 2 | 75641.9% | 31 | 4h | [📄 Vedi](Modules/UI/docs/metodi-duplicati-analisi-1.md) |
+| AI | 4 | 75640.0% | 62 | 4h | [📄 Vedi](Modules/AI/docs/metodi-duplicati-analisi-1.md) |
+| App | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/App/docs/metodi-duplicati-analisi-1.md) |
+| <nome progetto> | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/<nome progetto>/docs/metodi-duplicati-analisi-1.md) |
+| Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/metodi-duplicati-analisi-1.md) |
 
 ## 🎨 Distribuzione Strategie
 

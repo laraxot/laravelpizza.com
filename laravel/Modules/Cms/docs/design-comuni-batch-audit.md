@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "design comuni batch audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Batch CMS Audit
@@ -69,4 +68,4 @@ Questo report riassume quali pagine `tests.<slug>` sono pronte per parity visual
 - segnalazione-04-conferma: json=yes, runtime=ok, overall=11%, gate=BLOCK
 - segnalazione-area-personale: json=yes, runtime=ok, overall=6%, gate=BLOCK
 
-- Theme summary: [laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit.md)
+- Theme summary: [laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit-2026-04-03.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit-2026-04-03.md)

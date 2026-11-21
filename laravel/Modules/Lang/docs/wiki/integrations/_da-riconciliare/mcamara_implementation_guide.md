@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "mcamara implementation guide"
 issues: []
 discussions: []
-status: superseded
-superseded_by: mcamara-implementation-guide.md
 ---
 
 # Guida all'Implementazione di mcamara/laravel-localization

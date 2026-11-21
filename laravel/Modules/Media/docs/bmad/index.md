@@ -1,22 +1,20 @@
 ---
-title: Media: indice BMAD
+title: Media — indice BMAD
 type: index
 tags: [docs, bmad, media]
 qmd: "Media indice BMAD documentazione"
-status: draft
-updated: 2026-10-21
 ---
 
-# Media: indice BMAD
+# Media — indice BMAD
 
 ## Canonico
 
+- [Entry point audit 2026-11-16](./00-index.md): [purpose](./purpose.md), [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [audit](./audit.md), [piano](./piano-miglioramento.md), [story](./stories/module-bmad-audit.story.md)
 - [README BMAD](./README.md)
 - [Architettura](./architecture/)
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
-  - [PHPStan cluster A 2026-10-21](./stories/phpstan-clusterA.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere

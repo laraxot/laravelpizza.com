@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/orientation.php
 // Cms txt.fields.orientation — LangServiceProvider SSoT.
 return [
-    'label' => 'Orientamento',
-    'placeholder' => 'Orizzontale, Verticale',
-    'helper_text' => 'Orientamento del layout o degli elementi',
+    'label' => 'Orientation',
+    'placeholder' => 'Horizontal, Vertical',
+    'helper_text' => 'Orientation of the layout or elements',
     'tooltip' => '',
     'description' => '',
 ];

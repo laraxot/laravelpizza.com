@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Metatag"
+module: "Tenant"
+type: concept
+tags: [metatag]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "metatag"
+related:
+  - "./phpstan-corrections-january.md"
+---
 <?php
 
 declare(strict_types=1);
@@ -35,8 +48,6 @@ return [
 
 ];
 ## Collegamenti tra versioni di metatag.md
-* [metatag.md](../../../Xot/docs/install/metatag.md)
-* [metatag.md](../../../Tenant/docs/it/config/metatag.md)
 * [metatag.md](../../../xot/docs/install/metatag.md)
 * [metatag.md](../../../tenant/docs/it/config/metatag.md)
 

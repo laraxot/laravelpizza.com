@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bmad gsd ralph integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # BMAD + GSD + Ralph Loop Integration Guide
@@ -111,7 +110,7 @@ openviking add --type=requirement \
 /gsd-plan-phase 1
 
 # This creates:
-# - .planning/phases/001/PLAN.md
+# - .planning/phases/001/plan.md
 # - Detailed task breakdown
 # - Verification criteria
 ```
@@ -126,7 +125,7 @@ openviking add --type=phase \
 # Store Plan
 openviking add --type=phase \
   --title="Phase 1 Plan" \
-  --file=".planning/phases/001/PLAN.md"
+  --file=".planning/phases/001/plan.md"
 ```
 
 ### Phase 3: Implementation (Ralph Loop)
@@ -136,7 +135,7 @@ openviking add --type=phase \
 cp _bmad/bmm/2-plan/prd.json .ralph/prd.json
 
 # Step 2: Add GSD plan context
-cat .planning/phases/001/PLAN.md >> .ralph/context.md
+cat .planning/phases/001/plan.md >> .ralph/context.md
 
 # Step 3: Run Ralph Loop
 ./.ralph/ralph-loop.sh 20 true
@@ -246,7 +245,7 @@ openviking add --type=adr --title="LMSR Algorithm" \
 
 # Store in OpenViking
 openviking add --type=phase --title="Phase 1 Plan" \
-  --file=".planning/phases/001/PLAN.md"
+  --file=".planning/phases/001/plan.md"
 
 # ============================================
 # PHASE 3: Ralph Loop (Implementation)
@@ -254,7 +253,7 @@ openviking add --type=phase --title="Phase 1 Plan" \
 
 # Prepare Ralph PRD
 cp _bmad/bmm/2-plan/prd.json .ralph/prd.json
-cat .planning/phases/001/PLAN.md >> .ralph/context.md
+cat .planning/phases/001/plan.md >> .ralph/context.md
 
 # Run Ralph Loop (20 iterations, auto-approve)
 ./.ralph/ralph-loop.sh 20 true
@@ -347,7 +346,7 @@ git push origin dev
 openviking add --type=requirement --file="_bmad/bmm/2-plan/prd.json"
 
 # After GSD planning
-openviking add --type=phase --file=".planning/phases/001/PLAN.md"
+openviking add --type=phase --file=".planning/phases/001/plan.md"
 
 # After Ralph
 openviking add --type=ralph-outcome --file=".ralph/iteration-log.md"
@@ -450,7 +449,7 @@ openviking add --type=test --title="Test" --content="Test content"
 ls -la .planning/phases/001/
 
 # Review verification criteria
-cat .planning/phases/001/PLAN.md
+cat .planning/phases/001/plan.md
 
 # Run manual verification
 php artisan test
@@ -474,6 +473,15 @@ vendor/bin/phpstan analyse --level=10
 6. ✅ Link documentation with viking:// URIs
 
 ---
+
+title: "bmad gsd ralph integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad gsd ralph integration"
+issues: []
+discussions: []
 **Version**: 1.0.0  
 **Last Updated**: 2026-03-30  
 **Status**: Initial Implementation

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "factory phpstan fixes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Factory PHPStan Fixes - Geo Module

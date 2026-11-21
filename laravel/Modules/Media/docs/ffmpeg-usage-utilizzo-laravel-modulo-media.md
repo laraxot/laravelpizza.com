@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "ffmpeg usage 1"
 related:
   - "./webm.md"
-status: draft
 ---
 # Utilizzo di Laravel-FFMpeg nel Modulo Media
 

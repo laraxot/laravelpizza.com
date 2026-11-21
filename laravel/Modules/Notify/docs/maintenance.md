@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "maintenance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Manutenzione del Modulo Notify

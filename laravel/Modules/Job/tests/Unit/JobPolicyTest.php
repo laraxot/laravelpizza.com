@@ -20,7 +20,6 @@ use Modules\Job\Models\ScheduleHistory;
 use Modules\Job\Models\Task;
 use Modules\Job\Models\TaskComment;
 use Modules\Job\Tests\TestCase;
-use Modules\User\Models\Team;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 
@@ -85,21 +84,28 @@ test('TaskCommentPolicy espone CRUD', function (): void {
     Assert::assertTrue($policy->update(jobFakeUser(['task_comment.update']), $comment));
 });
 
-test('JobPolicy delega su Team', function (): void {
+test('JobPolicy deny-default su jobs', function (): void {
     $policy = new JobPolicy;
-    $team = new Team;
+    $job = new \Modules\Job\Models\Job;
 
     Assert::assertFalse($policy->viewAny(jobFakeUser()));
-    Assert::assertTrue($policy->view(jobFakeUser(belongsToTeam: true), $team));
-    Assert::assertTrue($policy->create(jobFakeUser()));
-    Assert::assertTrue($policy->delete(jobFakeUser(ownsTeam: true), $team));
+    Assert::assertFalse($policy->create(jobFakeUser()));
+    Assert::assertFalse($policy->view(jobFakeUser(), $job));
+    Assert::assertFalse($policy->delete(jobFakeUser(), $job));
+    Assert::assertTrue($policy->before(jobFakeUser(roles: ['super-admin']), 'create'));
 });
 
-test('FailedJobPolicy e JobBatchPolicy espongono metodi team', function (): void {
-    foreach ([new FailedJobPolicy, new JobBatchPolicy] as $policy) {
-        $team = new Team;
+test('FailedJobPolicy e JobBatchPolicy deny-default', function (): void {
+    $failed = new \Modules\Job\Models\FailedJob;
+    $batch = new \Modules\Job\Models\JobBatch;
+    foreach ([
+        [new FailedJobPolicy, $failed],
+        [new JobBatchPolicy, $batch],
+    ] as [$policy, $model]) {
         Assert::assertFalse($policy->viewAny(jobFakeUser()));
-        Assert::assertTrue($policy->addTeamMember(jobFakeUser(ownsTeam: true), $team));
+        Assert::assertFalse($policy->create(jobFakeUser()));
+        Assert::assertFalse($policy->view(jobFakeUser(), $model));
+        Assert::assertTrue($policy->before(jobFakeUser(roles: ['job::admin']), 'create'));
     }
 });
 

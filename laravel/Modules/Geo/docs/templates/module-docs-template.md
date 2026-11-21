@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module docs template"
 issues: []
 discussions: []
-status: draft
 ---
 
 # {ModuleName} Module
@@ -80,7 +79,7 @@ After every change:
 
 ## Roadmap
 
-See `.planning/ROADMAP.md` for phases that affect this module.
+See `.planning/roadmap.md` for phases that affect this module.
 
 ## Changelog
 

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "path and interface rules"
 issues: []
 discussions: []
-status: superseded
-superseded_by: path-and-interface.md
 ---
 
 # Regole di Percorso e Interfacce nel Modulo Notify

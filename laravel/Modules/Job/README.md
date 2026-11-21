@@ -28,7 +28,7 @@ sources: []
 Gestione dei lavori asincroni: monitor delle code Laravel e scheduler di task
 persistiti su database, con UI Filament.
 
----
+## Cosa offre
 
 - **Monitor delle code**: viste Filament sulle tabelle `jobs`, `failed_jobs`,
   `job_batches`, job in attesa e `JobManager` (tracciamento delle esecuzioni).
@@ -40,7 +40,7 @@ persistiti su database, con UI Filament.
   `QueueListenWidget`, `ClockWidget` e pagina `JobMonitor`.
 - **Integrazione** con Activity e Notify per log di esecuzione e notifiche di fallimento.
 
-Geocoding, export, notifiche bulk non devono bloccare l’utente.
+## Confini architetturali
 
 - Connessione database dedicata `job` (`Modules\Job\Models\BaseModel::$connection`).
 - Tabella e form di una Resource vivono nelle classi `Tables/<Plurale>Table` e

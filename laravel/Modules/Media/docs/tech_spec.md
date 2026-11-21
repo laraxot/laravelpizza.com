@@ -1,5 +1,5 @@
 ---
-qmd: "tech spec"
+qmd: "TECH SPEC"
 issues: []
 discussions: []
 title: "Technical Specification - Media Module"
@@ -7,8 +7,6 @@ type: technical_spec
 tags: [tech spec, media]
 created: 2026-08-04
 updated: 2026-08-04
-status: superseded
-superseded_by: tech-spec.md
 ---
 # Technical Specification - Media Module
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament nesting opportunities"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament 5.x Nested Resources - Opportunità di Applicazione
@@ -287,4 +286,13 @@ Nessuna funzionalità critica - il modulo Cms funziona bene con relation manager
 - [Page Management](./homepage-management.md)
 
 ---
+
+title: "filament nesting opportunities"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament nesting opportunities"
+issues: []
+discussions: []
 **Prossima Revisione**: [DATE]

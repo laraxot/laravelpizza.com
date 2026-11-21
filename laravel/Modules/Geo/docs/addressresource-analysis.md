@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "addressresource analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi AddressResource.php

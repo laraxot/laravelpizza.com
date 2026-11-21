@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Model Classification"
+qmd: "activity model classification md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - model classification activity"
+tags: [documentation]
 ---
+
 # Activity Module - Model Classification
 
 ## Business-Relevant Models (Require Factories/Seeders)

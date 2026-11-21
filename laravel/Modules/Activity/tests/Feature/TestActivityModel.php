@@ -6,6 +6,10 @@ namespace Modules\Activity\Tests\Feature;
 
 use Illuminate\Support\Carbon;
 use Modules\Activity\Models\BaseModel;
+<<<<<<< .merge_file_7i9P0v
+=======
+use Modules\Xot\Models\Traits\HasXotFactory;
+>>>>>>> .merge_file_aMcXD2
 
 /**
  * Classe concreta di test per BaseModel.
@@ -29,6 +33,21 @@ class TestActivityModel extends BaseModel
     /**
      * @use HasFactory<Factory<self>>
      *
+<<<<<<< .merge_file_7i9P0v
+=======
+        HasXotFactory::factory insteadof HasFactory;
+    }
+
+    /** @var string */
+    protected $table = 'test_models';
+
+    /** @var list<string> */
+    protected $fillable = ['name', 'value', 'uuid', 'published_at', 'created_by', 'updated_by', 'deleted_by'];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+>>>>>>> .merge_file_aMcXD2
      * @return array<string, string>
      */
     protected function casts(): array

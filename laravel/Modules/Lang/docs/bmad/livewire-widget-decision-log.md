@@ -5,12 +5,11 @@ updated: 2026-09-26
 qmd: "livewire widget decision log"
 issues: []
 discussions: []
-title: "Decision log: Lang"
+title: "Decision log — Lang"
 type: decision-log
 module: Lang
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Decision log

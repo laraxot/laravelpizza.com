@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: principi-migrazioni-laraxot-uuid-polimorfismo
 canonical: ../../../Themes/docs/shared-components/laraxot-migration-principles-uuid-polymorphism.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/laraxot-migration-principles-uuid-polymorphism.md

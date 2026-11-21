@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module notify"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modulo Notify
@@ -136,3 +135,12 @@ Le modifiche vengono tracciate nel repository GitHub.
 Le modifiche vengono tracciate nel repository GitHub. 
 
 ---
+
+title: "module notify"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module notify"
+issues: []
+discussions: []

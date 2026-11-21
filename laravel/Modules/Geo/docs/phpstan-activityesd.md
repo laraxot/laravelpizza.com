@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: phpstan-activityesd
 canonical: ../../../Themes/docs/shared-components/phpstan-activity-fixes-completed.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-activity-fixes-completed.md

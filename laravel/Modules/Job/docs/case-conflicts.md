@@ -7,14 +7,13 @@ updated: 2026-09-26
 qmd: "case conflicts"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Case-Insensitive File Conflicts
 
 File duplicati nel modulo `Job` che differiscono solo per la capitalizzazione:
 
-- `Modules/Job/.github`: `CONTRIBUTING.md`, `contributing.md`
-- `Modules/Job/.github`: `SECURITY.md`, `security.md`
+- `Modules/Job/.github`: `CONTRIBUTING.md`, `CONTRIBUTING.md`
+- `Modules/Job/.github`: `SECURITY.md`, `SECURITY.md`
 
 Uniformare i nomi (preferibilmente tutto maiuscolo come nello standard GitHub) e aggiornare eventuali riferimenti.

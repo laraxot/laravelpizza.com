@@ -1,11 +1,10 @@
 ---
 title: "Activity Module Filament Resource Guidelines"
+qmd: "activity filament resource guidelines md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "activity module filament resource guidelines activity"
+tags: [documentation]
 ---
+
 # Activity Module Filament Resource Guidelines
 
 ## Extension Patterns
@@ -183,6 +182,10 @@ public static function table(Table $table): Table { ... }
 
 #### ❌ StoredEventResource - NEEDS REFACTORING  
 #### ❌ StoredEventResource - NEEDS REFACTORING
+<<<<<<< .merge_file_KPEnv6
+=======
+#### ❌ StoredEventResource - NEEDS REFACTORING
+>>>>>>> .merge_file_BykiIH
 - Extends XotBaseResource ✓
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed
@@ -231,6 +234,7 @@ All resources must be tested to ensure:
 - [XotBaseResource Documentation](../../xot/project_docs/filament/resources/xot-base-resource.md)
 - [Filament Best Practices](../../xot/project_docs/filament-best-practices.md)
 - [Laraxot Extension Patterns](../../xot/project_docs/base-classes.md)
+- [Laraxot Extension Patterns](../../xot/project_docs/base-classes.md)
 # Activity Module Filament Resource Guidelines
 
 ## Extension Patterns
@@ -247,7 +251,7 @@ class ActivityResource extends XotBaseResource
 {
     protected static ?string $model = Activity::class;
 
-    public function getFormSchema(): array
+    public static function getFormSchema(): array
     {
         return [
             // Form schema components only

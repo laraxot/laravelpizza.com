@@ -1,3 +1,16 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
+> **Superseded: vedi [index.md](./index.md).** Questo file resta per cronologia e non viene aggiornato.
+
 # Geo Module — Documentation Index
 
 ## Architecture
@@ -29,6 +42,7 @@
 ## Actions
 
 - [Da Services a Queueable Actions](./wiki/concepts/no-app-support-queueable-actions.md) — contratto `QueueableAction`, `execute()` e composizione tra use case.
+- [Geo no-services architecture](./wiki/concepts/geo-no-services-migration.md) — responsabilità migrate da `app/Services` ad Actions e Adapters.
 
 
 | Action | Path | Descrizione |
@@ -80,11 +94,19 @@
 
 | Documento | Descrizione |
 |-----------|-------------|
-| **[DAISYUI.md](./DAISYUI.md)** | DaisyUI nel modulo Geo: perché non è installato, pro/contro, metriche |
+| **[daisyui.md](./daisyui.md)** | DaisyUI nel modulo Geo: perché non è installato, pro/contro, metriche |
 | **[Sixteen/docs/DAISYUI-APPLY.md](../Sixteen/docs/DAISYUI-APPLY.md)** | DaisyUI + `@apply` nel tema Sixteen: guida pratica, percentuali, opinione |
 
 ---
 
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 ## Zen: Domain-Driven Design
 
 **Geo possiede tutto ciò che è geo-spaziale.** I moduli consumatori (Fixcity, Municipal, User, etc.) importano i componenti da Geo.

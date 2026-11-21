@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "migrazione filament"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: migration-filament.md
 ---
 ---
 ---

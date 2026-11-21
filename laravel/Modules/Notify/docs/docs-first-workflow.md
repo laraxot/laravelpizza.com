@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "docs first workflow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Docs-First Workflow (Notify)

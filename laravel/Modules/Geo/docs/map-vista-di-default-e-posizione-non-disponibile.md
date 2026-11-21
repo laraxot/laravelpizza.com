@@ -5,12 +5,10 @@ type: how-to
 module: Geo
 created: 2026-10-13
 updated: 2026-10-13
-story: Modules/Fixcity/docs/stories/dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md
+story: Modules/Fixcity/docs/stories/2026-10-13-dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md
 related:
   - Themes/Sixteen/docs/decision-log/D19-coordinate-dynamic.md
 qmd: "geo map default_view territorio ente vista di default centratura picker posizione non disponibile aria-live"
-status: draft
-tags: [docs, geo]
 ---
 
 # Mappa del picker: vista di default e posizione non disponibile

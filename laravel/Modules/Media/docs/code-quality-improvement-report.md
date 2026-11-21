@@ -1,5 +1,5 @@
 ---
-title: "Code Quality Improvement Report: Media"
+title: "Code Quality Improvement Report — Media"
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "Media"
@@ -7,17 +7,16 @@ created: 2026-07-17
 updated: 2026-07-27
 qmd: "code quality baseline PHPStan Pest strict types Laraxot Media git remote"
 story: STORY-001
-# GRAVE: issue/discussion del modulo: mai base_legacy_project / base_workorder / mono.
+# GRAVE: issue/discussion del modulo — mai base_legacy_project / base_workorder / mono.
 # Resolve: cd laravel/Modules/Media && git remote -v → laraxot/module_media_fila5
 issues: []
 discussions: []
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
   - "../../../../docs/wiki/memories/module-github-remote-discipline.md"
-status: draft
 ---
 
-# Code Quality Improvement Report: Media
+# Code Quality Improvement Report — Media
 
 > Baseline statica riproducibile per orientare il miglioramento. I conteggi sono segnali, non sostituiscono PHPStan, Pest o la review del flusso reale.
 
@@ -57,33 +56,33 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
-### P0: baseline affidabile
+### P0 — baseline affidabile
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
-### P1: rischio di regressione
+### P1 — rischio di regressione
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
-### P2: manutenibilità
+### P2 — manutenibilità
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
-### P3: continuità
+### P3 — continuità
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.
 - Aggiornare il report solo con metriche ripetibili e tracciamento pertinente.
 
 ## Modifiche effettive da fare
 
-1. **app/Filament/Clusters/极est/Pages/AwsTest.php: strict types e firme.** Inserire declare(strict_types=1) subito dopo l’apertura PHP; eseguire PHPStan e sostituire i tipi impliciti o mixed emersi con tipi concreti. Verifica: PHPStan scoped e test che esercita la prima API pubblica del file.
-3. **app/Http/Controllers/BaseController.php: confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
+1. **app/Filament/Clusters/极est/Pages/AwsTest.php — strict types e firme.** Inserire declare(strict_types=1) subito dopo l’apertura PHP; eseguire PHPStan e sostituire i tipi impliciti o mixed emersi con tipi concreti. Verifica: PHPStan scoped e test che esercita la prima API pubblica del file.
+3. **app/Http/Controllers/BaseController.php — confine HTTP.** Cercare route e caller. Se serve il front office, sostituire il controller con pagina Folio/Volt e spostare la logica in una Action owner; se è API/back office, mantenere solo validazione e delega alla Action. Aggiungere un test HTTP della route reale.
 6. **app/Conversions/VideoGenerators/Webm.php:15.** Correggere il suffisso .webmXXX in .webm e aggiungere un test unitario sul path risultante, inclusi filename con più punti.
 
 
@@ -99,7 +98,7 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 ## Gate PHPStan (2026-07-27)
 
 - `cd laravel && ./vendor/bin/phpstan analyse Modules --memory-limit=-1` → **0 errori**.
-- Themes: solo insieme a Modules: [phpstan-stale-ignore-pattern](../../../../docs/wiki/troubleshooting/phpstan-stale-ignore-pattern.md).
+- Themes: solo insieme a Modules — [phpstan-stale-ignore-pattern](../../../../docs/wiki/troubleshooting/phpstan-stale-ignore-pattern.md).
 
 ## Verifica
 

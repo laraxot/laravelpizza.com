@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "index"
 related:
   - "./webm.md"
-status: draft
 ---
 # Html2Pdf - Panoramica e Installazione
 

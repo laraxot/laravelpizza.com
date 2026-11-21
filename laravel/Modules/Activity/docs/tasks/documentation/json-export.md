@@ -1,3 +1,10 @@
+---
+title: "JSON Export - Activity"
+qmd: "activity tasks documentation json export md"
+type: note
+tags: [documentation]
+---
+
 # JSON Export - Activity
 
 **Task ID**: ACTIVITY-FEATURE-017

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "technology stack"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Technology Stack

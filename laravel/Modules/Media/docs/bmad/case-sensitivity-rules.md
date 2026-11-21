@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "case sensitivity rules"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../wiki/case-sensitivity-rules.md
 ---
 # Case Sensitivity Rules - Media Module
 

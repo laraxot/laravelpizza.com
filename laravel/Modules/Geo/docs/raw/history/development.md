@@ -526,7 +526,7 @@ Modules/{ModuleName}/docs/
 ├── architecture.md        # Technical details
 ├── api.md                # API documentation
 ├── examples.md           # Usage examples
-└── changelog.md          # Version history
+└── CHANGELOG.md          # Version history
 ```
 
 ---

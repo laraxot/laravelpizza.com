@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "duplicate method analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: duplicate-method-analysis.md
 ---
 
 # Analisi delle duplicazioni di metodi PHP nel codebase
@@ -24,6 +22,15 @@ Durante l'esplorazione del repository Laravel (moduli e temi) è stato identific
 > **Nota**: la maggior parte dei duplicati riguarda nomi molto generici (es. `__construct`, `up`, `definition`) che sono spesso usati come hook o convenience methods. Tuttavia, alcuni nomi più specifici appaiono comunque più volte e meritano attenzione per evitare potenziali conflitti o ambiguità.
 
 ---
+
+title: "duplicate method analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate method analysis"
+issues: []
+discussions: []
 ## Metodi duplicati più frequenti
 
 | Metodo | Occorrenze totali | Classi coinvolte | Commenti generali |

@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/items.php
 // Cms txt.fields.items — LangServiceProvider SSoT.
 return [
-    'label' => 'Elementi',
-    'help' => 'Elenco di elementi',
-    'placeholder' => 'Aggiungi elementi alla lista',
-    'helper_text' => 'Lista di elementi che compongono menu o collezioni',
+    'label' => 'Items',
+    'help' => 'List of items',
+    'placeholder' => 'Add items to the list',
+    'helper_text' => 'List of items that make up menus or collections',
     'tooltip' => '',
     'description' => '',
 ];

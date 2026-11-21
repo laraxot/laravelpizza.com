@@ -8,8 +8,8 @@ declare(strict_types=1);
 // Cms txt.fields.copyright — LangServiceProvider SSoT.
 return [
     'label' => 'Copyright',
-    'placeholder' => '2024 Nome Azienda. Tutti i diritti riservati.',
-    'helper_text' => 'Testo di copyright da visualizzare nel footer',
+    'placeholder' => '2024 Company Name. All rights reserved.',
+    'helper_text' => 'Copyright text to display in the footer',
     'tooltip' => '',
     'description' => '',
 ];

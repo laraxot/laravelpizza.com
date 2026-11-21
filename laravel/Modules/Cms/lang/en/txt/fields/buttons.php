@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/buttons.php
 // Cms txt.fields.buttons — LangServiceProvider SSoT.
 return [
-    'label' => 'Pulsanti',
-    'placeholder' => 'Pulsanti di azione per l\'utente',
-    'helper_text' => 'Collezione di pulsanti per interazioni utente',
+    'label' => 'Buttons',
+    'placeholder' => 'Action buttons for the user',
+    'helper_text' => 'Collection of buttons for user interactions',
     'tooltip' => '',
     'description' => '',
 ];

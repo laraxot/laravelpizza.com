@@ -70,7 +70,7 @@ discussions: []
 |----------|---------|--------|
 | `replikate.txt` | Execution protocol | ✅ Complete |
 | `homepage-structure-diff.md` | Detailed analysis + fixes | ✅ Complete |
-| `00-INDEX.md` | Navigation hub | ✅ Complete |
+| `00-index.md` | Navigation hub | ✅ Complete |
 
 #### Automation
 | Script | Purpose | Status |
@@ -158,7 +158,7 @@ laravel/Themes/Sixteen/
 │   ├── prompts/
 │   │   └── replikate.txt              ← PROTOCOL
 │   └── design-comuni/
-│       ├── 00-INDEX.md                ← HUB
+│       ├── 00-index.md                ← HUB
 │       ├── 00-index.md                ← HUB
 │       ├── pages/
 │       │   └── homepage-structure-diff.md
@@ -272,7 +272,7 @@ Next AI agent can immediately:
 
 - **Protocol**: `laravel/Themes/Sixteen/docs/prompts/replikate.txt`
 - **Analysis**: `laravel/Themes/Sixteen/docs/design-comuni/pages/homepage-structure-diff.md`
-- **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-INDEX.md`
+- **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-index.md`
 - **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-index.md`
 - **Automation**: `bashscripts/design-analysis/replikate-workflow.sh`
 

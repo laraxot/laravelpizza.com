@@ -27,4 +27,4 @@ composer dev
 - [ ] Code style (Pint) applied
 - [ ] Documentation updated
 
-See ARCHITECTURE.md for design decisions.
+See architecture.md for design decisions.

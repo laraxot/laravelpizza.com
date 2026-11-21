@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Indice della Documentazione - Blocchi CMS

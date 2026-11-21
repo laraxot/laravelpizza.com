@@ -1,4 +1,27 @@
+---
+title: "INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "INDEX"
+issues: []
+discussions: []
+---
+
 # Geo Module Documentation Index
+
+<!-- p4-docs-geo: ingresso unico -->
+**Punto d'ingresso unico della documentazione del modulo Geo.** `00-index.md` e `00-index.md` sono superseded da questo file (restano per cronologia, non vengono aggiornati).
+
+## Navigazione rapida
+
+- [Mappa di migrazione della radice](./DOCS-MIGRATION-MAP.md) - dove andrebbe ognuno dei 622 file della radice di `docs/` (proposta, nessuno spostamento eseguito)
+- [Story BMAD](./stories/index.md) - cronologia e backlog delle story del modulo
+- [Wiki del modulo](./wiki/index.md) - concept, regole e troubleshooting; indice dei concept in [wiki/concepts/index.md](./wiki/concepts/index.md)
+- [Log del wiki](./wiki/log.md) - cronologia dei cambiamenti alla conoscenza del modulo
+- [Registro decisioni](./decision-log.md) - decisioni di struttura e di allineamento
+- [Panoramica del modulo](./README.md)
 
 ## Documentation Structure
 
@@ -6,23 +29,24 @@
 
 - [**Architecture Overview**](./architecture.md) - Technical architecture and system design
 - [**Component Analysis**](./story-map-component-analysis.md) - Deep dive on map component philosophy and best practices
-- [**Project Strategy**](./PRODUCT_STRATEGY.md) - Strategic vision and roadmap
+- [**Project Strategy**](./product_strategy.md) - Strategic vision and roadmap
 - [**Technical Implementation**](./TECHNICAL.md) - Technical guidelines and patterns
 
 ### 🚀 Features & Capabilities
 
 - [**Address Implementation**](./address-implementation.md) - Address handling and validation
 - [**Address Autocomplete**](./address-autocomplete.md) - Smart address suggestions
-- [**Map Components**](./leaflet_marker_map_input.md) - Interactive map components
-- [**Advanced Features**](./ADVANCED_FEATURES.md) - Power user features
-- [**Product Roadmap**](./PRODUCT_ROADMAP.md) - Future development plans
+- [**Map Components**](./leaflet-marker-map-input.md) - Interactive map components
+- [**Advanced Features**](./advanced_features.md) - Power user features
+- [**Product Roadmap**](./product_roadmap.md) - Future development plans
 
 ### 🔧 Integration & Usage
 
 - [**Coordinate Picker Purpose & Architecture**](./coordinate-picker-purpose.md) - Scopo, utilità e implementazione del componente mappa per wizard ticket
+- [**Mappa di sola lettura (`<x-geo::point-map>`, `CoordinatePicker::readOnly()`)**](./wiki/concepts/point-map-readonly.md) - Mostrare un punto senza poterlo modificare (riepilogo wizard, DCP-33)
 - [**SVG Icon Architecture**](./coordinate-picker-purpose.md#-svg-icon-architecture-no-hardcoded-svg) - Regola DRY: SVG separati in `resources/svg/`, no inline hardcoded
 - [**Filament Components**](./filament-forms-components.md) - Filament forms components, web components (Lit.dev), and integration patterns
-- [**Filament Integration**](./FILAMENT_EXTENSION_RULES.md) - Filament PHP integration patterns
+- [**Filament Integration**](./filament_extension_rules.md) - Filament PHP integration patterns
 
 ### 🎨 Assets & Icons
 
@@ -34,7 +58,7 @@
 - `arrows-pointing-out.svg` / `arrows-pointing-in.svg` - Fullscreen toggle
 - `map-icon-plus.svg` / `map-icon-minus.svg` - Zoom controls
 - [**Web Components & Build Architecture**](./filament-forms-components.md#web-components--litdev) - Lit.dev web component pattern, module vs theme asset separation
-- [**MCP Servers**](./MCP_SERVER_RECOMMENDED.md) - Recommended Model Context Protocol servers
+- [**MCP Servers**](./mcp_server_recommended.md) - Recommended Model Context Protocol servers
 - [**App Integration**](./app-integration.md) - Integration with main application
 - [**Address Migration**](./address_migration_guide.md) - Migration guides and patterns
 
@@ -42,16 +66,16 @@
 
 - [**Model Analysis**](./analisi-modelli-doppi.md) - Duplicate models analysis and recommendations
 - [**Code Quality Analysis**](./analysis/code-quality-analysis.md) - Code quality metrics and improvements
-- [**User Research**](./USER_RESEARCH.md) - User experience research findings
+- [**User Research**](./user_research.md) - User experience research findings
 - [**Domain Research**](./_integration/archive/here-com.md) - Geographic domain research
 
 ### 🛠️ Development & Tools
 
-- [**Sprint Planning**](./SPRINT_PLANNING.md) - Sprint planning and tracking
+- [**Sprint Planning**](./sprint_planning.md) - Sprint planning and tracking
 - [**Project Management**](./PROJECT.md) - Project management documentation
-- [**PHPStan Fixes**](./PHPSTAN_FIXES.md) - Code quality fixes and improvements
+- [**PHPStan Fixes**](./phpstan_fixes.md) - Code quality fixes and improvements
 - [**Vite Build Configuration**](./vite-build-configuration.md) - Vite 7.x + Tailwind 4.x setup per moduli
-- [**Configuration**](./config/config.php) - Module configuration
+- [**Configuration**](../config/config.php) - Module configuration
 
 ### 📁 Stories & Tasks
 
@@ -60,7 +84,7 @@
 
 ### 📋 Guidelines & Best Practices
 
-- [**Design Rules**](./FILAMENT_EXTENSION_RULES.md) - Filament component design rules
+- [**Design Rules**](./filament_extension_rules.md) - Filament component design rules
 - [**Consolidation Analysis**](./analisi-moduli-ottimizzazioni.md) - Module consolidation guidelines
 - [**Performance Guidelines**](./TECHNICAL.md#performance) - Performance optimization patterns
 
@@ -78,7 +102,7 @@
 | **Location Spinner UX** | [location-spinner-ux.md](./location-spinner-ux.md) | ✅ Active |
 | AddressField Component (legacy) | [address-field-component.md](./address-field-component.md) | ⚠️ Legacy |
 | AddressResource | [address-resource.md](./filament/address-resource.md) | ✅ Active |
-| Module Boundary Philosophy | [../Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md](../Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md) | ✅ Active |
+| Module Boundary Philosophy | [../Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md](../../Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md) | ✅ Active |
 | README / Overview | [README.md](./README.md) | ✅ Active |
 
 ## Filament Components
@@ -152,21 +176,21 @@ This module has many duplicate files in docs/. Key actions taken:
 
 1. **Architecture**: Start with [architecture overview](./architecture.md)
 2. **Components**: Learn about [address components](./address-implementation.md) and [map components](./story-map-component-analysis.md)
-3. **Integration**: Follow [Filament integration guide](./FILAMENT_EXTENSION_RULES.md)
+3. **Integration**: Follow [Filament integration guide](./filament_extension_rules.md)
 4. **Examples**: Check [app integration](./app-integration.md)
 
 ### 🤝 Contributing
 
 - Follow the [BMad methodology](../../../_bmad/README.md) for development
 - Maintain [design system compliance](../../DesignComuni/README.md)
-- Ensure [accessibility standards](./USER_RESEARCH.md#accessibility) are met
-- Run quality checks with [PHPStan](./PHPSTAN_FIXES.md)
+- Ensure [accessibility standards](./user_research.md#accessibility) are met
+- Run quality checks with [PHPStan](./phpstan_fixes.md)
 
 ### 📞 Support
 
 - For technical questions: Check [architecture](./architecture.md) and [technical docs](./TECHNICAL.md)
 - For implementation issues: Review [code quality analysis](./analysis/code-quality-analysis.md)
-- For integration help: See [app integration](./app-integration.md) and [Filament rules](./FILAMENT_EXTENSION_RULES.md)
+- For integration help: See [app integration](./app-integration.md) and [Filament rules](./filament_extension_rules.md)
 ---
 
 ## ⚠️ Architectural Rules

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "current progress"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Stato Attuale del Progetto (15 marzo 2024)

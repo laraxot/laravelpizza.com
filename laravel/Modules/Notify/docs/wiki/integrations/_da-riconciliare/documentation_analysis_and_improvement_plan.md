@@ -8,8 +8,6 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: documentation-analysis-and-improvement-plan.md
 ---
 
 # Documentation Analysis and Improvement Plan
@@ -61,7 +59,7 @@ The <nome progetto> platform has extensive documentation across modules and them
 ❌ **Problems**:
 - 15 files with temporal strings ("Last Updated: March 12, 2026")
 - Duplicate files: `prd.md`, `PRD.md`, `prd.json`
-- Inconsistent naming: `product-strategy.md` vs `PRODUCT_STRATEGY.md`
+- Inconsistent naming: `product-strategy.md` vs `product_strategy.md`
 - Orphaned files: `to-study.md`, `blocks-react.md`
 
 #### Recommended Actions
@@ -169,7 +167,7 @@ The <nome progetto> platform has extensive documentation across modules and them
 
 3. **Update Governance**
    - Finalize documentation governance
-   - Add to agents.md
+   - Add to AGENTS.md
    - Add to .windsurfrules
 
 ### Priority 3: Medium (Week 4)
@@ -257,7 +255,7 @@ done
 
 #### Day 15-16: Update Rules
 
-1. Update agents.md
+1. Update AGENTS.md
 2. Update .windsurfrules
 3. Create skills
 
@@ -406,8 +404,8 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 
 ## 📚 Related Documents
 
-- [DOCUMENTATION_GOVERNANCE.md](DOCUMENTATION_GOVERNANCE.md) - Governance framework
-- [agents.md](../../../AGENTS.md) - Agent guidelines
+- [DOCUMENTATION_GOVERNANCE.md](documentation_governance.md) - Governance framework
+- [AGENTS.md](../../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 
 ---

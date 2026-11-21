@@ -1,3 +1,10 @@
+---
+title: "Task 002: Implement Advanced Activity Filtering and Search"
+qmd: "activity tasks 002 advanced activity filtering md"
+type: note
+tags: [documentation]
+---
+
 # Task 002: Implement Advanced Activity Filtering and Search
 
 ## Description

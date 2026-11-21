@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Errori Rilevati e Soluzioni"
+qmd: "activity errors and fixes md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "activity module - errori rilevati e soluzioni activity"
+tags: [documentation]
 ---
+
 # Activity Module - Errori Rilevati e Soluzioni
 
 ## Stato Test Attuale
@@ -26,10 +25,17 @@ Tests:    28 failed, 2 skipped, 203 passed (831 assertions)
 ```
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)
+<<<<<<< .merge_file_Yjo4Hu
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)=======
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
+=======
+
+(Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
+
+(Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)=======
+>>>>>>> .merge_file_kEQul7
 ```
 
 **Causa:**
@@ -58,10 +64,17 @@ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
 ```
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)
+<<<<<<< .merge_file_Yjo4Hu
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)=======
 (Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
+=======
+
+(Connection: user, Host: 127.0.0.1, Port: 3306, Database: techplanner_data)
+
+(Connection: user, Host: 127.0.0.1, Port: 3306, Database: <nome progetto>_data)=======
+>>>>>>> .merge_file_kEQul7
 ```
 
 **Causa:**

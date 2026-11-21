@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament naming conventions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni di Naming per Filament 

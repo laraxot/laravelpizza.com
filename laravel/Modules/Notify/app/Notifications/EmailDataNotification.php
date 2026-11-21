@@ -54,7 +54,9 @@ class EmailDataNotification extends Notification
             ->line($this->emailData->body);
 
         if (! empty($this->emailData->body_html)) {
-            $mailMessage->view('notify::emails.template', [
+            /** @var view-string $view */
+            $view = 'notify::emails.template';
+            $mailMessage->view($view, [
                 'content' => $this->emailData->body_html]);
         }
 

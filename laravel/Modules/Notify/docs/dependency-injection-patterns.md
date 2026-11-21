@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "dependency injection patterns"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Dependency Injection Pattern in QueueableActions
@@ -102,4 +101,13 @@ This approach aligns with:
 - **Project Preferences**: Following established patterns in the codebase
 
 ---
+
+title: "dependency injection patterns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dependency injection patterns"
+issues: []
+discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*

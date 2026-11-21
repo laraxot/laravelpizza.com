@@ -2,60 +2,60 @@
 
 return [
     'value' => [
-        'label' => 'Valore',
-        'placeholder' => 'Inserisci il valore',
+        'label' => 'Value',
+        'placeholder' => 'Enter the value',
     ],
     'values-list' => [
-        'label' => 'Lista valori',
-        'placeholder' => 'Inserisci la lista dei valori',
+        'label' => 'Value list',
+        'placeholder' => 'Enter the list of values',
     ],
     'user_id' => [
-        'label' => 'ID Utente',
-        'placeholder' => 'Seleziona l\'utente',
+        'label' => 'User ID',
+        'placeholder' => 'Select the user',
     ],
     'name' => [
-        'label' => 'Nome',
-        'placeholder' => 'Inserisci il nome',
+        'label' => 'Name',
+        'placeholder' => 'Enter the name',
     ],
     'slug' => [
         'label' => 'Slug',
-        'placeholder' => 'Inserisci lo slug',
+        'placeholder' => 'Enter the slug',
     ],
     'category_id' => [
-        'label' => 'ID Categoria',
-        'placeholder' => 'Seleziona la categoria',
+        'label' => 'Category ID',
+        'placeholder' => 'Select the category',
     ],
     'description' => [
-        'label' => 'Descrizione',
-        'placeholder' => 'Inserisci la descrizione',
+        'label' => 'Description',
+        'placeholder' => 'Enter the description',
     ],
     'details' => [
-        'label' => 'Dettagli',
-        'placeholder' => 'Inserisci i dettagli',
+        'label' => 'Details',
+        'placeholder' => 'Enter the details',
     ],
     'is_active' => [
         'label' => 'Attivo',
-        'placeholder' => 'Seleziona lo stato',
+        'placeholder' => 'Select the status',
     ],
     'ordering' => [
         'label' => 'Ordine',
-        'placeholder' => 'Inserisci l\'ordine',
+        'placeholder' => 'Enter the order',
     ],
     'start_date' => [
-        'label' => 'Data inizio',
-        'placeholder' => 'Seleziona la data di inizio',
+        'label' => 'Start date',
+        'placeholder' => 'Select the start date',
     ],
     'end_date' => [
-        'label' => 'Data fine',
-        'placeholder' => 'Seleziona la data di fine',
+        'label' => 'End date',
+        'placeholder' => 'Select the end date',
     ],
     'extensions' => [
         'label' => 'Estensioni',
-        'placeholder' => 'Inserisci le estensioni',
+        'placeholder' => 'Enter the extensions',
     ],
     'sections' => [
         'label' => 'Sezioni',
-        'placeholder' => 'Inserisci le sezioni',
+        'placeholder' => 'Enter the sections',
     ],
     'fields' => [
         'label' => [
@@ -65,59 +65,59 @@ return [
             'description' => '',
         ],
         'placeholder' => [
-            'label' => 'Inserisci i campi',
+            'label' => 'Enter the fields',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
     ],
     'type' => [
-        'label' => 'Tipo',
-        'placeholder' => 'Seleziona il tipo',
+        'label' => 'Type',
+        'placeholder' => 'Select the type',
     ],
     'compact' => [
         'label' => 'Compatto',
-        'placeholder' => 'Seleziona la modalità',
+        'placeholder' => 'Select the mode',
     ],
     'aside' => [
         'label' => 'Barra laterale',
-        'placeholder' => 'Seleziona la posizione',
+        'placeholder' => 'Select the position',
     ],
     'borderless' => [
         'label' => 'Senza bordi',
-        'placeholder' => 'Seleziona lo stile',
+        'placeholder' => 'Select the style',
     ],
     'icon' => [
         'label' => 'Icona',
-        'placeholder' => 'Seleziona l\'icona',
+        'placeholder' => 'Select the icon',
     ],
     'columns' => [
         'label' => 'Colonne',
-        'placeholder' => 'Inserisci il numero di colonne',
+        'placeholder' => 'Enter the number of columns',
     ],
     'item_is_default' => [
         'label' => 'Elemento predefinito',
-        'placeholder' => 'Seleziona se predefinito',
+        'placeholder' => 'Select whether default',
     ],
     'status' => [
-        'label' => 'Stato',
-        'placeholder' => 'Seleziona lo stato',
+        'label' => 'Status',
+        'placeholder' => 'Select the status',
     ],
     'notes' => [
         'label' => 'Note',
-        'placeholder' => 'Inserisci le note',
+        'placeholder' => 'Enter the notes',
     ],
     'responses_count' => [
-        'label' => 'Numero risposte',
-        'placeholder' => 'Inserisci il numero di risposte',
+        'label' => 'Number of answers',
+        'placeholder' => 'Enter the number of answers',
     ],
     'item_key' => [
         'label' => 'Chiave elemento',
-        'placeholder' => 'Inserisci la chiave',
+        'placeholder' => 'Enter the key',
     ],
     'forms_count' => [
-        'label' => 'Numero form',
-        'placeholder' => 'Inserisci il numero di form',
+        'label' => 'Number of forms',
+        'placeholder' => 'Enter the number of forms',
     ],
     'responses_exists' => [
         'label' => 'Risposte esistenti',
@@ -125,23 +125,23 @@ return [
     ],
     'logo' => [
         'label' => 'Logo',
-        'placeholder' => 'Seleziona il logo',
+        'placeholder' => 'Select the logo',
     ],
     'category' => [
         'name' => [
-            'label' => 'Nome Categoria',
-            'placeholder' => 'Inserisci nome categoria',
+            'label' => 'Category Name',
+            'placeholder' => 'Enter category name',
         ],
     ],
     'test_date' => [
-        'label' => 'Data Test',
-        'placeholder' => 'Seleziona data test',
-        'help' => 'Data per il test del sistema',
+        'label' => 'Test Date',
+        'placeholder' => 'Select test date',
+        'help' => 'Date for system testing',
     ],
     'test' => [
         'label' => 'Test',
-        'placeholder' => 'Inserisci valore test',
-        'help' => 'Campo per test del sistema',
+        'placeholder' => 'Enter test value',
+        'help' => 'Field for system testing',
     ],
     'label' => 'Fields',
     'plural_label' => 'Fields (Plurale)',
@@ -158,13 +158,13 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Fields',
+            'label' => 'Create Fields',
         ],
         'edit' => [
-            'label' => 'Modifica Fields',
+            'label' => 'Edit Fields',
         ],
         'delete' => [
-            'label' => 'Elimina Fields',
+            'label' => 'Delete Fields',
         ],
     ],
 ];

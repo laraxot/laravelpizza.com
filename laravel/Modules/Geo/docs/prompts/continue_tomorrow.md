@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "continue tomorrow"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Continue Tomorrow

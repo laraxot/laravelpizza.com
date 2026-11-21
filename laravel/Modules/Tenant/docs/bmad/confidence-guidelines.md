@@ -7,9 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "confidence guidelines"
 related:
-  - "../phpstan-corrections-january.md"
-status: superseded
-superseded_by: ../confidence-guidelines.md
+  - "./phpstan-corrections-january.md"
 ---
 # Massimizzare il livello di confidenza
 

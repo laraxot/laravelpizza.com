@@ -16,7 +16,6 @@ related:
   - "./queueable-action-pattern.md"
   - "./sms-config-structure.md"
   - "./standardized-sms-config-structure.md"
-status: draft
 ---
 
 # Document Root Architecture

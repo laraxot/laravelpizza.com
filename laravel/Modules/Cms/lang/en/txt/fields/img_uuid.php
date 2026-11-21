@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/img_uuid.php
 // Cms txt.fields.img_uuid — LangServiceProvider SSoT.
 return [
-    'label' => 'ID Immagine',
-    'placeholder' => 'UUID dell\'immagine',
-    'helper_text' => 'Identificatore univoco dell\'immagine nel sistema',
+    'label' => 'Image ID',
+    'placeholder' => 'Image UUID',
+    'helper_text' => 'Unique image identifier in the system',
     'tooltip' => '',
     'description' => '',
 ];

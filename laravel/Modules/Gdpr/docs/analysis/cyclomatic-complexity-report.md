@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "cyclomatic complexity report"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../cyclomatic-complexity-report.md
 ---
 
 # Cyclomatic Complexity Report - Module: Gdpr
@@ -16,6 +14,15 @@ superseded_by: ../cyclomatic-complexity-report.md
 **Analyzer:** Super Mucca 🐮
 
 ---
+
+title: "cyclomatic complexity report"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "cyclomatic complexity report"
+issues: []
+discussions: []
 ## 📊 Summary Statistics
 
 | Metric | Value |

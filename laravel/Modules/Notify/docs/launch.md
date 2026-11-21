@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "launch"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Product Launch Plan - FixCity Platform
@@ -28,7 +27,7 @@ Ogni rilascio di modulo o feature core deve seguire questa checklist non negozia
 
 ### Documentation
 - [ ] `prd.md` aggiornato con le nuove funzionalità.
-- [ ] `changelog.md` aggiornato.
+- [ ] `CHANGELOG.md` aggiornato.
 - [ ] Roadmap aggiornata con lo stato 'Completed'.
 
 ## 2. Release Phases
@@ -52,4 +51,4 @@ Ogni rilascio di modulo o feature core deve seguire questa checklist non negozia
 ## 4. References
 - [prd.md](prd.md)
 - [roadmap.md](roadmap.md)
-- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [CONTRIBUTING.md](contributing.md)

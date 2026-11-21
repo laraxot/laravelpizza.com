@@ -9,9 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: comprehensive-backup
-canonical: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
-status: superseded
-superseded_by: comprehensive.md
+canonical: ../../../Themes/docs/shared-components/comprehensive_guide.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive_guide.md

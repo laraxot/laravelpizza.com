@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Errori di Test e Correzioni"
+qmd: "activity testing errors fixes md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - errori di test e correzioni activity"
+tags: [documentation]
 ---
+
 # Activity Module - Errori di Test e Correzioni
 
 ## Obiettivo

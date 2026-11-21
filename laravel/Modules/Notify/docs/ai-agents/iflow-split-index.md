@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "iflow split index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # IFLOW.md Split Index

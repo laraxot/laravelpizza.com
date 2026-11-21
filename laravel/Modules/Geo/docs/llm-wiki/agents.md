@@ -9,10 +9,9 @@ issues: []
 discussions: []
 related:
   - ./coding-agent-manifests.md
-status: draft
 ---
 
-# Geo Module LLM Wiki Agent Instructions
+# Geo {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Geo
 > **Scope:** Geo-specific knowledge only

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user analytics"
 issues: []
 discussions: []
-status: draft
 ---
 
 # User Analytics

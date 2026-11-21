@@ -1,11 +1,10 @@
 ---
 title: "Convenzione Naming File Test - Activity Module"
+qmd: "activity testing test naming convention md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, testing]
-qmd: "convenzione naming file test - activity module activity"
+tags: [documentation]
 ---
+
 # Convenzione Naming File Test - Activity Module
 
 **Modulo:** Activity

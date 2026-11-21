@@ -4,8 +4,6 @@ type: concept
 tags: [geo, trait, distance, address, phpstan]
 updated_at: '2026-10-06'
 qmd: geotrait distance haversine address latitude longitude scope
-status: draft
-updated: 2026-10-08
 ---
 
 # Trait GeoTrait

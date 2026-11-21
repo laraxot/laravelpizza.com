@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "fix is ci context not found"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix Risolto: Errore `is_ci_context: command not found`
@@ -18,6 +17,15 @@ status: draft
 > **Priorità**: Critica
 
 ---
+
+title: "fix is ci context not found"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "fix is ci context not found"
+issues: []
+discussions: []
 ## 🚨 Problema
 
 ### Errori Segnalati
@@ -190,7 +198,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
-| [SYNC_REMOTE_REPO_COORDINATION.md](bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md) | Coordineamento agenti |
+| [sync_remote_repo_coordination.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
 
 ### Se gli Errori Persistono
 
@@ -236,7 +244,7 @@ Creare documenti per:
 
 ### Prima di Lavorare su Questo Script
 
-1. ✅ Leggi `SYNC_REMOTE_REPO_COORDINATION.md`
+1. ✅ Leggi `sync_remote_repo_coordination.md`
 2. ✅ Verifica path corretto: `bashscripts/git/subtrees/`
 3. ✅ Controlla che `bashscripts/subtrees/` sia eliminato
 4. ✅ Testa con `bash -n script.sh`

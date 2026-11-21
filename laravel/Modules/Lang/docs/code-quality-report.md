@@ -7,17 +7,16 @@ updated: 2026-09-26
 qmd: "code quality report"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Code quality: modulo Lang
+# Code quality — modulo Lang
 
 Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (ruleset codesize+unusedcode), grep mirati (TODO/FIXME/@deprecated, dd()/dump(), facade in app/Actions, extends Filament diretto), rapporto file test/app.
 
 ## Numeri
 
 - File in `app/`: 60
-- File di test: 18: rapporto test/app: 30%
+- File di test: 18 — rapporto test/app: 30%
 - File con TODO/FIXME/@deprecated: 1
 - PHPStan: 0 errori (livello max, sweep repo-wide 2026-07-16/17)
 - Violazioni PHPMD (codesize+unusedcode): 15
@@ -76,11 +75,11 @@ Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (rule
 
 
 
-## Come migliorare: modifiche effettive da fare
+## Come migliorare — modifiche effettive da fare
 
 ### 1. Rimuovere le Facade da `app/Actions/`
 
-Regola del progetto (skill `queueable-action-trait`): nelle Action **niente Facade**, le dipendenze si iniettano nel costruttore: il container le risolve automaticamente quando l'Action viene chiamata con `app(XxxAction::class)->execute(...)`.
+Regola del progetto (skill `queueable-action-trait`): nelle Action **niente Facade**, le dipendenze si iniettano nel costruttore — il container le risolve automaticamente quando l'Action viene chiamata con `app(XxxAction::class)->execute(...)`.
 
 Facade usate in questo modulo e relativa dipendenza da iniettare al loro posto:
 
@@ -88,7 +87,7 @@ Facade usate in questo modulo e relativa dipendenza da iniettare al loro posto:
 |---|---|
 | `File::` | `Illuminate\Filesystem\Filesystem` |
 
-**Esempio concreto**: `Modules/Lang/app/Actions/SaveTransAction.php`:
+**Esempio concreto** — `Modules/Lang/app/Actions/SaveTransAction.php`:
 
 ```php
 // PRIMA
@@ -124,7 +123,7 @@ class XxxAction
 }
 ```
 
-Vantaggio pratico: l'Action diventa testabile senza `Http::fake()` globale: nei test Pest si passa un mock/fake del client via `app()->instance(HttpFactory::class, $fakeClient)` o via binding nel service provider di test.
+Vantaggio pratico: l'Action diventa testabile senza `Http::fake()` globale — nei test Pest si passa un mock/fake del client via `app()->instance(HttpFactory::class, $fakeClient)` o via binding nel service provider di test.
 
 File da convertire in questo modulo (elenco sopra in "Numeri"), uno alla volta, con `php -l` + PHPStan L max sul singolo file dopo ogni modifica.
 
@@ -142,7 +141,7 @@ Metodi/classi oltre soglia (10 per metodo, 50 per classe) in questo modulo:
 Tecnica di refactoring consigliata: **estrarre ogni ramo condizionale in un metodo privato dedicato**, o sostituire lunghe catene if/elseif con una `match()` che delega a metodi/Action più piccoli. Esempio:
 
 ```php
-// PRIMA: un metodo con 15+ rami
+// PRIMA — un metodo con 15+ rami
 public function resolveType(string $type): string
 {
     if ($type === "a") { /* ... */ }
@@ -150,7 +149,7 @@ public function resolveType(string $type): string
     // ... altri 10+ rami
 }
 
-// DOPO: dispatch table, ogni ramo è un metodo testabile singolarmente
+// DOPO — dispatch table, ogni ramo è un metodo testabile singolarmente
 public function resolveType(string $type): string
 {
     return match ($type) {

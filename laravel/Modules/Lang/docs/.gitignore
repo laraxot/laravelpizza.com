@@ -27,22 +27,10 @@ package-lock.json
 docs/phpstan/
 
 # Other
-/build_*/
-/node_modules/
-/vendor/
-/source/assets/build/
-.env
-npm-debug.log
-*.cache
-*.phar
-*.lock
-package-lock.json
 
 # Backup files
-*.bak
 
 # PHPStan documentation
-docs/phpstan/
 
 _docs/
 

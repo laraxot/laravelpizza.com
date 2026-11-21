@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "links"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Gestione Permessi e Proprietà per File di Lingua (`lang/it/`)
 
@@ -54,7 +53,6 @@ Il file o la cartella di destinazione non è scrivibile dall’utente che esegue
 ## Collegamenti
 - [Documentazione ufficiale PHP file_put_contents](https://www.php.net/manual/en/function.file-put-contents.php)
 - [Documentazione Laraxot gestione permessi](../../../../../docs/links.md)
-- [Documentazione Laraxot gestione permessi](../../../../docs/links.md)
 - [Documentazione Laraxot gestione permessi](../../../../docs/links.md)
 - [Documentazione Laraxot gestione permessi](../../../../docs/links.md)
 - [Documentazione Laraxot gestione permessi](../../../../docs/links.md)
@@ -104,7 +102,6 @@ Il file o la cartella di destinazione non è scrivibile dall’utente che esegue
 ## Collegamenti
 - [Documentazione ufficiale PHP file_put_contents](https://www.php.net/manual/en/function.file-put-contents.php)
 - [Documentazione Laraxot gestione permessi](../../../../../docs/links.md)
-- [Documentazione Laraxot gestione permessi](../../../../docs/links.md)
 
 ---
 

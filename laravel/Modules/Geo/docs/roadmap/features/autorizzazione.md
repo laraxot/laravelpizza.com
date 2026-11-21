@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "autorizzazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Autorizzazione

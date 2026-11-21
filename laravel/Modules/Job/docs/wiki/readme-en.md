@@ -1,5 +1,5 @@
 ---
-title: "⚙️ Job: English presentation"
+title: "⚙️ Job — English presentation"
 module: "Job"
 type: concept
 tags: [readme, en]
@@ -7,10 +7,9 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "readme en"
 related:
-  - "./phpstan-fixes-archive-2.md"
-status: draft
+  - "./phpstan-fixes-archive-gennaio.md"
 ---
-# ⚙️ Job: English presentation
+# ⚙️ Job — English presentation
 
 [![Domain-Queue](https://img.shields.io/badge/Domain-Queues%20%26%20Jobs-5D4037.svg)](#)
 [![Laravel 13](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
@@ -22,7 +21,7 @@ status: draft
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
 [![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
-> **Heavy work off the request.** Queues, batches, retries: fast UX under load.
+> **Heavy work off the request.** Queues, batches, retries — fast UX under load.
 
 ---
 
@@ -49,9 +48,9 @@ Geocoding, exports, bulk notifications must not block users.
 
 ## Join the team
 
-Scale **without fear**: async done right.
+Scale **without fear** — async done right.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5**: see [STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

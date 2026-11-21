@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "seasonal email templates report"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/seasonal-email-templates-report.md
 ---
 
 # Seasonal Email Templates Implementation Report

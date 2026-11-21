@@ -1,12 +1,10 @@
 ---
 title: "Risks and dependencies (Module Activity)"
+qmd: "activity roadmap 04 risks md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "risks and dependencies (module activity) activity"
-status: superseded
-superseded_by: risks.md
+tags: [documentation]
 ---
+
 # Risks and dependencies (Module Activity)
 
 ## Risks

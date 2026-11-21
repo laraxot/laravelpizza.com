@@ -1,5 +1,5 @@
 ---
-title: "Tenant: risoluzione della configurazione (config resolver + morph map + DB)"
+title: "Tenant — risoluzione della configurazione (config resolver + morph map + DB)"
 type: note
 module: Tenant
 tags:
@@ -12,15 +12,14 @@ created: 2026-09-28
 updated: 2026-09-28
 qmd: "tenant config resolver morph map database isolation connection"
 related:
-  - ../../ARCHITECTURE.md
+  - ../architecture.md
   - module-boundary.md
   - ../quick-reference.md
-status: draft
 ---
 
-# Tenant: risoluzione della configurazione
+# Tenant — risoluzione della configurazione
 
-> **SUMMARY**: Il provider `TenantServiceProvider` è l'unico punto del modulo che decide
+> **SUMMARY** — Il provider `TenantServiceProvider` è l'unico punto del modulo che decide
 > connessione DB di default e morph map. Tutte le decisioni passano dai resolver in
 > `app/Services/Config/Resolvers/`; nessuna decisione è hardcoded nel provider.
 

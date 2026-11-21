@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Lang Module Roadmap
 

@@ -13,8 +13,8 @@ status: draft
 
 # Analisi Funzionalità Mancanti - Modulo Notify
 
-**Data Analisi**: [DATE]  
-**Versione LimeSurvey Upstream**: 5.4.x+  
+**Data Analisi**: [DATE]
+**Versione LimeSurvey Upstream**: 5.4.x+
 **Repository Upstream**: https://github.com/LimeSurvey/LimeSurvey
 
 ## Scopo del Modulo
@@ -29,7 +29,7 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 - Sistema template modulare e riutilizzabile
 
 **Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da App per distribuzione survey.
-**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da Quaeris per distribuzione survey.
+**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da <nome progetto> per distribuzione survey.
 
 ## Stato Attuale Implementazione
 
@@ -242,10 +242,10 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 
 ## Collegamenti
 
-- [Modulo App](../App/docs/readme.md)
-- [Modulo Quaeris](../Quaeris/docs/readme.md)
-- [Modulo Limesurvey](../limesurvey/docs/readme.md)
-- [Notify README](./readme.md)
+- [Modulo App](../App/docs/README.md)
+- [Modulo <nome progetto>](../<nome progetto>/docs/README.md)
+- [Modulo Limesurvey](../limesurvey/docs/README.md)
+- [Notify README](./README.md)
 
 ---
 

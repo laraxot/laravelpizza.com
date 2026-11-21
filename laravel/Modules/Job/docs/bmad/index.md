@@ -1,16 +1,15 @@
 ---
-title: Job: indice BMAD
+title: Job — indice BMAD
 type: index
 tags: [docs, bmad, job]
 qmd: "Job indice BMAD documentazione"
-status: draft
-updated: 2026-10-09
 ---
 
-# Job: indice BMAD
+# Job — indice BMAD
 
 ## Canonico
 
+- [Entry point audit 2026-11-16](./00-index.md): [purpose](./purpose.md), [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [audit](./audit.md), [piano](./piano-miglioramento.md), [story](./stories/module-bmad-audit.story.md)
 - [README BMAD](./README.md)
 - [Architettura](./architecture/)
 - [Brainstorming](./brainstorming/)

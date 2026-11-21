@@ -7,7 +7,6 @@ updated: 2026-10-07
 qmd: "postfix locale mail laravel verify-email spatie mail template mustache gmail spf dkim relay"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Posta in uscita: Postfix locale

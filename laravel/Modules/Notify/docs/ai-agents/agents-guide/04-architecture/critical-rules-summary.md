@@ -27,5 +27,5 @@ status: draft
 13. **Source code in `app/` only**: Data Objects, Actions, Models, Services MUST be in `app/`, NEVER in module root.
 
 ---
-[Back to index](../index.md) | [Full Rules](../critical-rules.md)
+[Back to index](../index.md) | [Full Rules](../../critical-rules.md)
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)

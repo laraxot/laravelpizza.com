@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/version.php
 // Cms txt.fields.version — LangServiceProvider SSoT.
 return [
-    'label' => 'Versione',
+    'label' => 'Version',
     'placeholder' => '1.0.0, v2.1, beta',
-    'helper_text' => 'Versione del contenuto o componente',
+    'helper_text' => 'Content or component version',
     'tooltip' => '',
     'description' => '',
 ];

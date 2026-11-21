@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "log"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Tenant Activity Log
 

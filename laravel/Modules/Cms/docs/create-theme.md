@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "create theme"
 issues: []
 discussions: []
-status: draft
 ---
 
 {

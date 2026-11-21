@@ -16,7 +16,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Struttura Template Email
 
@@ -141,7 +140,6 @@ $attachments = [
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Best Practices Email HTML](./EMAIL_HTML_BEST_PRACTICES.md)
-- [Best Practices Email HTML](../email_html_best_practices.md)
 - [Guida Testing](./EMAIL_TESTING.md)
 
 ## Supporto

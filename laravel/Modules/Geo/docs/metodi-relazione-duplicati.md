@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "metodi relazione duplicati"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Metodi Relazione Duplicati
@@ -420,6 +419,15 @@ status: draft
 [Riflessione: Metodo definito in 2 file dello stesso modulo (Incentivi). Potrebbe essere estratto in un trait per DRY.]
 
 ---
+
+title: "metodi relazione duplicati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "metodi relazione duplicati"
+issues: []
+discussions: []
 ## Statistiche per Modulo
 
 - **Performance**: 36 occorrenze

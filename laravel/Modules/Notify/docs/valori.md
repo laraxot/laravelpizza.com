@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "valori"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Politica, Filosofia, Religione, Etica, Zen – Modulo Notify

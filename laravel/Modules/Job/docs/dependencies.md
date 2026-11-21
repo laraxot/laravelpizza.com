@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "dependencies"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Dependencies (Module Job)

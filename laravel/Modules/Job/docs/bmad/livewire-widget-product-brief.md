@@ -1,13 +1,9 @@
 ---
-title: "Product brief: Job HTTP fuori"
+title: "Product brief — Job HTTP fuori"
 type: product-brief
 module: Job
 related:
   - ./livewire-inventory.md
-status: draft
-updated: 2026-10-07
-tags: [docs, job, bmad]
-qmd: "brief job"
 ---
 
 # Brief

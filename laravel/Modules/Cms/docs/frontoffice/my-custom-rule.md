@@ -10,5 +10,4 @@ discussions: []
 description: 
 globs: 
 alwaysApply: false
-status: draft
 ---

@@ -162,7 +162,7 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
-4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
+4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User
 
@@ -426,7 +426,7 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
-4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
+4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](./ANALISI-COMPLETA.md)** - Executive summary
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User

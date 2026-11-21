@@ -231,7 +231,7 @@ docs/design-comuni/master-index.md
 
 ### Per Sviluppatori
 
-1. **Iniziare**: [Master Index](../master-index.md)
+1. **Iniziare**: [Master Index](master-index.md)
 1. **Iniziare**: [Master Index](master-index.md)
 2. **Architettura**: [Cms FAQ Architecture](../laravel/Modules/Cms/docs/design-comuni-faq.md)
 3. **Componenti**: [UI FAQ Components](../laravel/Modules/UI/docs/design-comuni-faq-components.md)
@@ -247,7 +247,7 @@ docs/design-comuni/master-index.md
 
 ### Per Project Managers
 
-1. **Stato**: [Master Index](../master-index.md) (sezione Stato Globale)
+1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
 1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
 2. **Dettaglio**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_report-finale.md)
 3. **Visivo**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_analisi-visiva.md)
@@ -302,7 +302,7 @@ docs/design-comuni/master-index.md
 
 ## 📞 Riferimenti
 
-- **Master Index**: [docs/design-comuni/master-index.md](../master-index.md)
+- **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
 - **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
 - **Tema Sixteen**: [laravel/Themes/Sixteen/docs/design-comuni/](../laravel/Themes/Sixteen/docs/design-comuni/)
 - **Modulo Cms**: [laravel/Modules/Cms/docs/](../laravel/Modules/Cms/docs/)

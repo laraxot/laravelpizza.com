@@ -10,7 +10,6 @@ type: ux-design
 module: Geo
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # UX

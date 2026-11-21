@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: technical
 canonical: ../../../Themes/docs/shared-components/TECHNICAL.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/TECHNICAL.md

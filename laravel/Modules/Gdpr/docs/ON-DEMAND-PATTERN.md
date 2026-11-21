@@ -8,14 +8,13 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
-  - ../../../../docs/wiki/rules/on-demand-pattern.md
-  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
+  - ../../docs/wiki/rules/on-demand-pattern.md
+  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 ---
 
 # On-Demand Pattern — Module **Gdpr**
 
-**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
 
 ## Principio
 
@@ -60,11 +59,11 @@ qmd search "<topic>"
 ```
 ./laravel/Modules/Gdpr/docs/
 ├── wiki/                    # Knowledge base locale
-│   ├── rules/INDEX.md      # Indice rules modulo-specifiche
-│   ├── skills/INDEX.md     # Indice skills modulo-specifiche
-│   ├── commands/INDEX.md   # Indici commands
-│   └── memories/INDEX.md   # Indice memories
-└── ON-DEMAND-PATTERN.md     # Questo file
+│   ├── rules/index.md      # Indice rules modulo-specifiche
+│   ├── skills/index.md     # Indice skills modulo-specifiche
+│   ├── commands/index.md   # Indici commands
+│   └── memories/index.md   # Indice memories
+└── on-demand-pattern.md     # Questo file
 ```
 
 ## Quick Reference
@@ -90,9 +89,9 @@ qmd search "<topic>"
 
 ## Riferimenti
 
-- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
-- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Module Wiki Index](./wiki/index.md)
 
 ---

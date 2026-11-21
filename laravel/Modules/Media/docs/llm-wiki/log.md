@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "log"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Activity Log
 

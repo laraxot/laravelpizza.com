@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "testing"
 related:
   - "./webm.md"
-status: draft
 ---
 # Testing Documentation
 
@@ -283,7 +282,7 @@ protected function createApplication()
 
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
+- [Troubleshooting Guide](../../../docs/troubleshooting.md)
 
 ## Testing Examples
 
@@ -395,3 +394,68 @@ Remember: Good tests are the foundation of reliable software development.
 ---
 
 *
+
+## Baseline coverage e helper di test — 2026-08-19
+
+Comando (la sola variabile `XDEBUG_MODE` non basta: Pest esce
+`Unable to get coverage using Xdebug`):
+
+```bash
+cd laravel
+php -d xdebug.mode=coverage ./vendor/bin/pest -c Modules/Media/phpunit.xml --coverage --min=0
+```
+
+| Misura | test passati | test falliti | `Call to undefined function` | coverage |
+|---|---:|---:|---:|---:|
+| prima | 163 | 62 | 23 | non stampata |
+| dopo | **186** | **39** | **0** | non stampata |
+
+Pest stampa la tabella di coverage **solo a exit 0**: finché la suite è rossa il numero non
+esiste. I 39 rossi residui sono tutti `SQLSTATE[HY000] … no such table` su SQLite — blocco
+d'ambiente, non difetto di codice: il MySQL di progetto `10.100.200.53` è irraggiungibile e
+`XotBaseTestCase` ricade su `ptv_data.sqlite`, che non ha lo schema.
+
+### Dove stanno gli helper, e perché non in `tests/Pest.php`
+
+`Pest\Bootstrappers\BootFiles` carica `Helpers.php`, `Pest.php` ed `Expectations.php` da un
+solo percorso per run — quello della root. Le funzioni dichiarate in
+`Modules/Media/tests/Pest.php` non venivano mai caricate: erano 12, e le due usate dai test
+di reflection producevano 23 fallimenti.
+
+Regola attuale:
+
+| Serve | Dove sta |
+|---|---|
+| assert condiviso fra moduli | `Modules\Xot\Tests\XotBasePest::` (metodo statico, PSR-4) |
+| helper di dominio Media | `Modules\Media\Tests\TestCase::` (metodo statico) |
+| funzione libera in `tests/Pest.php` | **mai** — `grep -c '^function '` deve dare `0` |
+
+Cancellati perché duplicavano `XotBasePest`: `assertMediaTableHas`, `assertMediaTableMissing`,
+`assertMediaListContains`, `assertMediaReflectionFilename`, `mediaReflectionSource`.
+Spostati come statici su `TestCase`: `mediaTableColumns`, `mediaPayloadSet`,
+`assertMediaUsesQueueableAction`, `assertMediaDeclaresStrictTypes`.
+
+## Story 5.26 — progress verso 100% (2026-08-20)
+
+Gate: `XDEBUG_MODE=coverage ./vendor/bin/pest -c Modules/Media/phpunit.xml --coverage --min=100`.
+
+| Voce | Valore |
+|------|--------|
+| Baseline clover batch mattina | vedi tabella sotto |
+| Skip offline | pattern Activity: Feature/`media-db` skip se schema assente; Unit eseguiti |
+| Nuovi test | `*MassExecuteCoverageTest`, `*GapCloserCoverageTest` |
+| Esclusioni `<source>` | nessuna (AC-3: perimetro = tutto `app/`) |
+
+### Misura intermedia (pre–gap closer massivo)
+
+| Coverage | Suite | Gate `--min=100` |
+|---:|---|---|
+| 59.0% | 252 pass / 34 skip / 0 fail (2 risky) | FAIL gate --min=100 (suite verde) |
+
+Interventi 2026-08-20:
+- `tests/TestCase.php`: skip offline allineato ad Activity (`$__filename` Pest).
+- Unit puri / gap closer su file a 0% (Support, Rules, Columns, Widgets instantiate).
+- Vietato `RefreshDatabase`; helper statici su `TestCase` (no funzioni in `tests/Support`).
+
+Prossimo step: coprire Filament Pages/Widgets/Livewire e Actions S3/Video rimanenti con mock; rieseguire gate in **sequenza** (sqlite condiviso si locka in parallelo).
+

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laravel"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione con Laravel e Best Practices
@@ -22,6 +21,15 @@ Questa guida si concentra su come integrare e utilizzare `Html2Pdf` in un'applic
 *   [Configurazione della Sicurezza](./security.md)
 
 ---
+
+title: "laravel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel"
+issues: []
+discussions: []
 ## 🔗 Integrazione con Laravel
 
 ### Service Provider

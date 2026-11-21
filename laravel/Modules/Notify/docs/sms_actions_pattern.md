@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sms actions pattern"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Pattern per le Azioni SMS 
@@ -262,4 +261,13 @@ Seguire questo pattern garantisce:
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
 
 ---
+
+title: "sms actions pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms actions pattern"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2023-05-12*

@@ -1,13 +1,14 @@
 ---
+issues: []
+discussions: []
 title: "REDUNDANCY ANALYSIS"
-type: alias
-status: superseded
-canonical: "REDUNDANCY_ANALYSIS.md"
-qmd: "redundancy_analysis alias superseded"
+module: "Lang"
+type: concept
+tags: [REDUNDANCY, ANALYSIS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "redundancy analysis"
+related:
+  - "./italian-text-refined-audit-report.md"
 ---
-
-# REDUNDANCY ANALYSIS
-
-Documento identico al canonico: [REDUNDANCY_ANALYSIS.md](REDUNDANCY_ANALYSIS.md).
-
-Canonico: `laravel/Modules/Lang/docs/REDUNDANCY_ANALYSIS.md`. Qui non ci sono istruzioni: seguire il file collegato.
+Redundancy analysis available: docs/analysis/redundancies/summary.md

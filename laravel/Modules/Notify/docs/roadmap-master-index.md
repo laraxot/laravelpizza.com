@@ -242,7 +242,7 @@ status: draft
 ### Project Overview
 - [🎯 Project Analysis & Roadmap](./project-analysis-and-roadmap.md)
 - [🏗️ Architecture](./index.md)
-- [📖 PHPStan Index](./phpstan/phpstan.md)
+- [📖 PHPStan Index](phpstan.md)
 
 ### Module Roadmaps (Dettagliate)
 - [🎯 Fixcity Roadmap](../Modules/Fixcity/docs/roadmap-and-issues.md) ⭐ CORE

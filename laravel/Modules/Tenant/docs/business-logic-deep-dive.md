@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Tenant Module - Business Logic Deep Dive"
+module: "Tenant"
+type: concept
+tags: [business, logic, deep, dive]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "business logic deep dive"
+related:
+  - "./phpstan-corrections-january.md"
+---
 # Tenant Module - Business Logic Deep Dive
 
 ## 🎯 Module Overview
@@ -276,7 +289,7 @@ config('app.name');  // ← NO! Non tenant-aware!
 
 ---
 
-## 🚀 Modern Laravel 12 + PHP 8.3 Patterns
+## 🚀 Modern Laravel 13 + PHP 8.3 Patterns
 
 ### 1. Connection Property Typed
 
@@ -718,6 +731,5 @@ chown www-data:tenant_acme config/tenant_acme/
 ---
 
 **Document Version**: 1.0
-**Last Updated**: 5 Novembre 2025
 
 **Status**: 📘 Authoritative Reference

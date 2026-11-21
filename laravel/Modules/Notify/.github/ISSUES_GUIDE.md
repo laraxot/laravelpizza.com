@@ -239,7 +239,7 @@ Priority: P1
 ## Integration with Other Tools
 
 ### GSD Workflow
-- Issues link to `.planning/ROADMAP.md` phases
+- Issues link to `.planning/roadmap.md` phases
 - State tracked in `.planning/STATE.md`
 - Progress tracked in `.planning/PROJECT.md`
 
