@@ -6,10 +6,7 @@ namespace Modules\Xot\Actions\Trend\Format;
 
 /**
  * @see docs/contracts/my-sql-format-action.md
-<<<<<<< .merge_file_BcS165
  *
-=======
->>>>>>> .merge_file_YHTrnI
  * @contract docs/contracts/my-sql-format-action.md
  */
 class MySqlFormatAction extends BaseFormatAction

@@ -15,10 +15,7 @@ use function Safe\json_decode;
 
 /**
  * @see docs/contracts/chat-ollama-action.md
-<<<<<<< .merge_file_9Ne0Lf
  *
-=======
->>>>>>> .merge_file_ANAoMs
  * @contract docs/contracts/chat-ollama-action.md
  */
 class ChatOllamaAction

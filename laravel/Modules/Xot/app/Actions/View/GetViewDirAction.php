@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-view-dir-action.md
-<<<<<<< .merge_file_RjWSIK
  *
-=======
->>>>>>> .merge_file_jeTR1V
  * @contract docs/contracts/get-view-dir-action.md
  */
 class GetViewDirAction

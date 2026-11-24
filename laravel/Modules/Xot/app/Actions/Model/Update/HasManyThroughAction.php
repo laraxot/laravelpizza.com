@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/update-has-many-through-action.md
-<<<<<<< .merge_file_zCs5wE
  *
-=======
->>>>>>> .merge_file_XzohNx
  * @contract docs/contracts/update-has-many-through-action.md
  */
 class HasManyThroughAction

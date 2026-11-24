@@ -9,10 +9,7 @@ tags: [phpstan, modules, fix, safe-functions, type-declarations]
 related:
   - concepts/phpstan-cluster-map-and-false-friends.md
   - concepts/why-xotbaseresourceform-superior.md
-<<<<<<< .merge_file_PbqfCv
 qmd: "phpstan modules fix 20260505"
-=======
->>>>>>> .merge_file_t4ayN1
 ---
 
 # PHPStan Modules Fix - 2026-05-05

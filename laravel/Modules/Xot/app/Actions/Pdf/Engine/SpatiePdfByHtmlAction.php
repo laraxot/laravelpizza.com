@@ -11,10 +11,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/spatie-pdf-by-html-action.md
-<<<<<<< .merge_file_7OWDgF
  *
-=======
->>>>>>> .merge_file_fJAAD3
  * @contract docs/contracts/spatie-pdf-by-html-action.md
  */
 class SpatiePdfByHtmlAction

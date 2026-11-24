@@ -14,10 +14,7 @@ use function Safe\json_decode;
 
 /**
  * @see docs/contracts/store-morph-one-action.md
-<<<<<<< .merge_file_voVPRk
  *
-=======
->>>>>>> .merge_file_uJu0av
  * @contract docs/contracts/store-morph-one-action.md
  */
 class MorphOneAction

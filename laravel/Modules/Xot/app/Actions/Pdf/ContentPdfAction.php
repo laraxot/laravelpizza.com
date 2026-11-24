@@ -13,13 +13,9 @@ use Webmozart\Assert\Assert;
  *
  * This action is similar to StreamDownloadPdfAction but returns raw PDF content
  * instead of a download response, making it suitable for email attachments.
-<<<<<<< .merge_file_keEZw8
  *
  * @see docs/contracts/content-pdf-action.md
  *
-=======
- * @see docs/contracts/content-pdf-action.md
->>>>>>> .merge_file_hUxGSo
  * @contract docs/contracts/content-pdf-action.md
  */
 class ContentPdfAction

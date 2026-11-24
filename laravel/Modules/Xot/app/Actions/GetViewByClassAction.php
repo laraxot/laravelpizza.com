@@ -11,13 +11,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per ottenere una vista basata su una classe.
-<<<<<<< .merge_file_qC4AXB
  *
  * @see docs/contracts/get-view-by-class-action.md
  *
-=======
- * @see docs/contracts/get-view-by-class-action.md
->>>>>>> .merge_file_AcTnzG
  * @contract docs/contracts/get-view-by-class-action.md
  */
 class GetViewByClassAction

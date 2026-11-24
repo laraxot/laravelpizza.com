@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/safe-array-by-model-cast-action.md
-<<<<<<< .merge_file_Qm8n8O
  *
-=======
->>>>>>> .merge_file_LXIGMr
  * @contract docs/contracts/safe-array-by-model-cast-action.md
  */
 class SafeArrayByModelCastAction

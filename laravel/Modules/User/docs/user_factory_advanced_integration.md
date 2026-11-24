@@ -1,11 +1,11 @@
-<<<<<<< .merge_file_dRCBQi
+<<<<<<< .merge_file_WMV6lO
 ---
 title: "UserFactory Advanced Integration - Modulo User & SaluteOra"
 type: note
 qmd: "user factory advanced integration userfactory saluteora"
 ---
 =======
->>>>>>> .merge_file_8UpMIA
+>>>>>>> .merge_file_WIw8pO
 # UserFactory Advanced Integration - Modulo User & SaluteOra
 
 ## Post Deep-Study Analysis 

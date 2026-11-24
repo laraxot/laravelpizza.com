@@ -20,10 +20,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< .merge_file_7hfZBT
 qmd: "superadmin widget icons 21 story superadminwidget"
-=======
->>>>>>> .merge_file_fHYi4w
 ---
 
 # SuperAdminWidget: icone piu' adeguate

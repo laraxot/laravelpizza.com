@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [Xot, Lang]
 issues: []
-<<<<<<< .merge_file_URVZ8k
 qmd: "translation key protocol protocollo chiavi traduzione"
-=======
->>>>>>> .merge_file_qzLCqy
 ---
 
 # ADR: protocollo delle chiavi di traduzione

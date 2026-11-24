@@ -9,39 +9,15 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
-<<<<<<< .merge_file_y4MeFY
-<<<<<<< .merge_file_nKI3fM
-<<<<<<< .merge_file_0MxnHO
-<<<<<<< .merge_file_hUOF3N
- * SUPERSEDED — duplicato flat. Usare {@see Schedule\ClearScheduleCacheAction}.
+ * SUPERSEDED — duplicato flat. Usare {@see \Modules\Job\Actions\Schedule\ClearScheduleCacheAction}.
  *
  * Caller di produzione migrati (Observer + Command). Residuo on-disk finché
  * non arriva autorizzazione a cancellare i doppioni root di Actions/.
  *
  * @deprecated Prefer Modules\Job\Actions\Schedule\ClearScheduleCacheAction
+ *
  * @see docs/contracts/root-clear-schedule-cache-action.md
- *
  * @contract docs/contracts/root-clear-schedule-cache-action.md
-=======
- * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
- *
- * @contract docs/contracts/clear-schedule-cache-action.md
->>>>>>> .merge_file_lZRo9l
-=======
- * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
- *
- * @contract docs/contracts/clear-schedule-cache-action.md
->>>>>>> .merge_file_QPztDs
-=======
- * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
- *
- * @contract docs/contracts/clear-schedule-cache-action.md
->>>>>>> .merge_file_1Ak4jO
-=======
- * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
- *
- * @contract docs/contracts/clear-schedule-cache-action.md
->>>>>>> .merge_file_L5UZiV
  */
 class ClearScheduleCacheAction
 {
@@ -55,3 +31,4 @@ class ClearScheduleCacheAction
         Cache::store($store)->forget($key);
     }
 }
+

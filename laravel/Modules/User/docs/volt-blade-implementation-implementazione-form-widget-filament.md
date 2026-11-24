@@ -17,11 +17,16 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
+<<<<<<< .merge_file_yZed7Q
+status: draft
+=======
+=======
 =======
 <<<<<<< .merge_file_DuX5ID
 status: draft
 =======
 >>>>>>> .merge_file_Bog6RG
+>>>>>>> .merge_file_uEnnpf
 >>>>>>> laraxot/dev
 ---
 
@@ -30,10 +35,13 @@ status: draft
 ## Collegamenti correlati
 <<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+- [README modulo User](./readme.md)
+>>>>>>> laraxot/dev
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
-<<<<<<< .merge_file_lubzWo
+<<<<<<< .merge_file_yZed7Q
 =======
 =======
 <<<<<<< HEAD
@@ -52,7 +60,7 @@ status: draft
 >>>>>>> .merge_file_Bog6RG
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_REc99a
+>>>>>>> .merge_file_uEnnpf
 
 ## Introduzione
 
@@ -71,10 +79,12 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
-<<<<<<< .merge_file_lubzWo
+<<<<<<< HEAD
+<<<<<<< .merge_file_yZed7Q
 /var/www/html/<nome progetto>/laravel/
 =======
-<<<<<<< HEAD
+/var/www/html/Quaeris/laravel/
+=======
 /var/www/html/Quaeris/laravel/
 =======
 <<<<<<< .merge_file_DuX5ID
@@ -82,8 +92,8 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 =======
 /var/www/html/Quaeris/laravel/
 >>>>>>> .merge_file_Bog6RG
+>>>>>>> .merge_file_uEnnpf
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_REc99a
 ├── Modules/
 │   └── User/
 │       └── app/
@@ -276,8 +286,11 @@ class LoginFormWidget extends XotBaseWidget
             ->statePath('data');
     }
 <<<<<<< HEAD
+<<<<<<< .merge_file_yZed7Q
+=======
 =======
 <<<<<<< .merge_file_DuX5ID
+>>>>>>> .merge_file_uEnnpf
 
     public function login(): void
     {
@@ -391,8 +404,11 @@ class RegisterFormWidget extends XotBaseWidget
             ->statePath('data');
     }
 <<<<<<< HEAD
+<<<<<<< .merge_file_yZed7Q
+=======
 =======
 <<<<<<< .merge_file_DuX5ID
+>>>>>>> .merge_file_uEnnpf
 
     public function register(): void
     {
@@ -465,7 +481,7 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
-<<<<<<< .merge_file_lubzWo
+<<<<<<< .merge_file_yZed7Q
 - [Gestione Sessione](./session-management.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
 =======
@@ -481,4 +497,4 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 - [Tema One Documentation](../../themes/one/docs/README.md) 
 >>>>>>> .merge_file_Bog6RG
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_REc99a
+>>>>>>> .merge_file_uEnnpf

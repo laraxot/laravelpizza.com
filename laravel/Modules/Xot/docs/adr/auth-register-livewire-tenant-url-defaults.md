@@ -1,10 +1,7 @@
 ---
 title: "Auth register Livewire tenant URL defaults"
 status: accepted
-<<<<<<< .merge_file_RUZt3o
 qmd: "auth register livewire tenant url defaults"
-=======
->>>>>>> .merge_file_5MjhV4
 ---
 
 # Auth register Livewire tenant URL defaults

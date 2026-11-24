@@ -18,15 +18,12 @@ it('has routes/web.php and routes/api.php in every module that uses XotBaseRoute
     $missing = [];
 
     foreach (glob($laravelPath.'/Modules/*/app/Providers/RouteServiceProvider.php') as $provider) {
-<<<<<<< .merge_file_x2d3nT
         if (! is_string($provider)) {
             $missing[] = 'non-string glob entry';
 
             continue;
         }
 
-=======
->>>>>>> .merge_file_9UFmVC
         $module = dirname($provider, 3);
         $class = 'Modules\\'.basename($module).'\\Providers\\RouteServiceProvider';
 
@@ -41,7 +38,6 @@ it('has routes/web.php and routes/api.php in every module that uses XotBaseRoute
         }
 
         $checked++;
-<<<<<<< .merge_file_x2d3nT
         $moduleDir = (new ReflectionClass($class))->getDefaultProperties()['module_dir'] ?? null;
 
         if (! is_string($moduleDir)) {
@@ -51,9 +47,6 @@ it('has routes/web.php and routes/api.php in every module that uses XotBaseRoute
         }
 
         $loadedModule = dirname($moduleDir, 2);
-=======
-        $loadedModule = dirname((string) (new ReflectionClass($class))->getDefaultProperties()['module_dir'], 2);
->>>>>>> .merge_file_9UFmVC
 
         foreach (['web', 'api'] as $file) {
             foreach (array_unique([$module, $loadedModule]) as $root) {

@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
-<<<<<<< .merge_file_XfItj8
 qmd: "0003 pest as test runner formato"
-=======
->>>>>>> .merge_file_yghmYu
 ---
 
 # Pest è il formato e il runner dei test applicativi

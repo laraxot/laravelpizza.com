@@ -10,10 +10,7 @@ related:
   - ./2026-10-06-phpstan-cleanup-xot-rest.story.md
   - ./2026-10-06-phpstan-cleanup-xot-app.dev.md
   - ../bmad/phpstan-status.md
-<<<<<<< .merge_file_80EaMY
 qmd: "06 phpstan cleanup xot rest dev"
-=======
->>>>>>> .merge_file_Gbsi4b
 ---
 
 # [DEV] PHPStan cleanup Xot (tests, helpers, stub)

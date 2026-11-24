@@ -25,10 +25,7 @@ use function Safe\preg_replace;
  *
  * @see https://github.com/mpociot/laravel-test-factory-helper/blob/master/src/Console/GenerateCommand.php#L213
  * @see docs/contracts/get-properties-from-methods-by-model-action.md
-<<<<<<< .merge_file_IolVtf
  *
-=======
->>>>>>> .merge_file_wuSP61
  * @contract docs/contracts/get-properties-from-methods-by-model-action.md
  */
 class GetPropertiesFromMethodsByModelAction

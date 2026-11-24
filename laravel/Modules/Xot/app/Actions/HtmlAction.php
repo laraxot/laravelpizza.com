@@ -11,13 +11,9 @@ use Spipu\Html2Pdf\Html2Pdf;
 
 /**
  * Class HtmlAction.
-<<<<<<< .merge_file_k6SWZz
  *
  * @see docs/contracts/html-action.md
  *
-=======
- * @see docs/contracts/html-action.md
->>>>>>> .merge_file_QFD8lH
  * @contract docs/contracts/html-action.md
  */
 class HtmlAction

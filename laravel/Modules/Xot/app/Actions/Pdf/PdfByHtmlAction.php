@@ -10,10 +10,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/pdf-pdf-by-html-action.md
-<<<<<<< .merge_file_FOyOTc
  *
-=======
->>>>>>> .merge_file_QCGXXO
  * @contract docs/contracts/pdf-pdf-by-html-action.md
  */
 class PdfByHtmlAction

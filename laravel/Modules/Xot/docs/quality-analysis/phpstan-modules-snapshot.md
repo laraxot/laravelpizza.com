@@ -1,9 +1,6 @@
 ---
 created: 2026-05-13
-<<<<<<< .merge_file_aQ89Ih
 qmd: "phpstan modules snapshot analysis legacy cleanup"
-=======
->>>>>>> .merge_file_7UIxib
 ---
 
 # PHPStan Analysis and Legacy Cleanup (2026-05-13)

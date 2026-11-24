@@ -5,10 +5,7 @@ status: proposed
 created: 2026-11-23
 updated: 2026-11-24
 issues: []
-<<<<<<< .merge_file_P0r8cr
 qmd: "laravel bootstrap provider registry minimale discovery"
-=======
->>>>>>> .merge_file_asLxJM
 ---
 
 # ADR: Bootstrap Laravel 13 minimale e discovery dei moduli

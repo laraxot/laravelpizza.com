@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-tenant-config-array-action.md
-<<<<<<< .merge_file_UNZoNk
  *
-=======
->>>>>>> .merge_file_f9S4ri
  * @contract docs/contracts/get-tenant-config-array-action.md
  */
 class GetTenantConfigArrayAction

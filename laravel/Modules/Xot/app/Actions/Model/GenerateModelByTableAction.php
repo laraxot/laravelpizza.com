@@ -12,10 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/generate-model-by-table-action.md
-<<<<<<< .merge_file_w4ReTq
  *
-=======
->>>>>>> .merge_file_am2AAz
  * @contract docs/contracts/generate-model-by-table-action.md
  */
 class GenerateModelByTableAction

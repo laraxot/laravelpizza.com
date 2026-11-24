@@ -11,10 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-action-url-action.md
-<<<<<<< .merge_file_ZmPmjZ
  *
-=======
->>>>>>> .merge_file_f4QSaX
  * @contract docs/contracts/build-action-url-action.md
  */
 class BuildActionUrlAction

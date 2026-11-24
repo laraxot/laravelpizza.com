@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_q1Ufes
 ---
 title: "SuperAdminWidget: icona \"negato\" ambigua, ripristinata a simbolo di divieto standard"
 type: story
 qmd: "superadmin widget negate icon fix story"
 ---
-=======
->>>>>>> .merge_file_zjX8bg
 # SuperAdminWidget: icona "negato" ambigua, ripristinata a simbolo di divieto standard
 
 Status: done

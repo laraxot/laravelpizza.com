@@ -20,10 +20,7 @@ use function Safe\preg_match;
  * - Robustezza: Gestisce tutti i casi edge e mantiene la type safety
  *
  * @see docs/contracts/safe-int-cast-action.md
-<<<<<<< .merge_file_4UWDG1
  *
-=======
->>>>>>> .merge_file_Hdn3DR
  * @contract docs/contracts/safe-int-cast-action.md
  */
 class SafeIntCastAction

@@ -9,13 +9,8 @@ use App\View\Components\Header;
 use App\View\Components\Input;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\View;
-<<<<<<< .merge_file_GTBAC1
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-=======
-use PHPUnit\Framework\Assert;
-use Modules\Xot\Tests\TestCase;
->>>>>>> .merge_file_z9SDTE
 
 /*
  * Contratto dei componenti Blade di App\View\Components: quale vista sceglie

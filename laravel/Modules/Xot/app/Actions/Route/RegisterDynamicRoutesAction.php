@@ -26,10 +26,7 @@ use function Safe\preg_replace;
  * methods of this single execute() entrypoint instead.
  *
  * @see docs/contracts/register-dynamic-routes-action.md
-<<<<<<< .merge_file_PXsiOR
  *
-=======
->>>>>>> .merge_file_8OJFGZ
  * @contract docs/contracts/register-dynamic-routes-action.md
  */
 class RegisterDynamicRoutesAction

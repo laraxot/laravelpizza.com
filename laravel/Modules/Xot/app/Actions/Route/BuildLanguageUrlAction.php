@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-language-url-action.md
-<<<<<<< .merge_file_BGoOwN
  *
-=======
->>>>>>> .merge_file_i5HkRO
  * @contract docs/contracts/build-language-url-action.md
  */
 class BuildLanguageUrlAction

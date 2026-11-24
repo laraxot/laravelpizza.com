@@ -9,10 +9,7 @@ use Override;
 
 /**
  * @see docs/contracts/my-sql-adapter.md
-<<<<<<< .merge_file_Yb11Sg
  *
-=======
->>>>>>> .merge_file_TarsSk
  * @contract docs/contracts/my-sql-adapter.md
  */
 class MySqlAdapter extends AbstractAdapter

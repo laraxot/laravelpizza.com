@@ -7,10 +7,7 @@ owner: module:Xot
 created: 2026-11-23
 updated: 2026-11-23
 tags: [docs, manuals, roles, permissions, bmad, second-brain]
-<<<<<<< .merge_file_88j2Im
 qmd: "actor user manuals story manuali duso"
-=======
->>>>>>> .merge_file_g6vq0l
 ---
 
 # Manuali d'uso per attori di moduli e temi

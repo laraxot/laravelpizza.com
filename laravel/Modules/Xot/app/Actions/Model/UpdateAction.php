@@ -14,10 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/update-action.md
-<<<<<<< .merge_file_BkOLbX
  *
-=======
->>>>>>> .merge_file_4cEekr
  * @contract docs/contracts/update-action.md
  */
 class UpdateAction

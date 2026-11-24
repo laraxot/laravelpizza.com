@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-pronounceable-password-action.md
-<<<<<<< .merge_file_O8s8in
  *
-=======
->>>>>>> .merge_file_CPBzIA
  * @contract docs/contracts/get-pronounceable-password-action.md
  */
 class GetPronounceablePasswordAction

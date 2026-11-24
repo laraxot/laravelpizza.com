@@ -5,10 +5,7 @@ status: accepted
 created: 2026-11-23
 updated: 2026-11-24
 issues: []
-<<<<<<< .merge_file_Hy8pEB
 qmd: "no ticket logic page slug middleware"
-=======
->>>>>>> .merge_file_ajMq0f
 ---
 
 # ADR: niente logica ticket in PageSlugMiddleware

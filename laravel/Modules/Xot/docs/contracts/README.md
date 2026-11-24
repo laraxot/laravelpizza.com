@@ -4,10 +4,7 @@ type: index
 tags: [contracts, actions, interfaces]
 created: 2026-11-18
 updated: 2026-11-23
-<<<<<<< .merge_file_XUOBkX
 qmd: "contratti"
-=======
->>>>>>> .merge_file_qskF2R
 ---
 
 # Contratti

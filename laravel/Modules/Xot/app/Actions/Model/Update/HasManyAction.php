@@ -15,10 +15,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/update-has-many-action.md
-<<<<<<< .merge_file_089c8L
  *
-=======
->>>>>>> .merge_file_3SvhTR
  * @contract docs/contracts/update-has-many-action.md
  */
 class HasManyAction

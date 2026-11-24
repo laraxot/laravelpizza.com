@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-24
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/ADR-0011"
-<<<<<<< .merge_file_nOQ7dy
 qmd: "0011 contract docblock reference actions"
-=======
->>>>>>> .merge_file_zzy8Y9
 ---
 
 # ADR 0011: @contract docblock reference su Actions

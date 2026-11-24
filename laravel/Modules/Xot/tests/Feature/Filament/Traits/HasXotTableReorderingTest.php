@@ -9,10 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
-<<<<<<< .merge_file_r3roKY
-=======
-use Modules\Xot\Tests\TestCase;
->>>>>>> .merge_file_0FMzzI
 
 /**
  * Story 5.93 (Modules/Xot/docs/stories/5.93-filament-table-reordering-implementation.story.md)

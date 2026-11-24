@@ -13,10 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/asset-action.md
-<<<<<<< .merge_file_PxABts
  *
-=======
->>>>>>> .merge_file_1Ix97z
  * @contract docs/contracts/asset-action.md
  */
 class AssetAction

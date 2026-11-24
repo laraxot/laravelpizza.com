@@ -14,13 +14,9 @@ use function Safe\preg_match_all;
  * Parses a print page string into an array of page numbers.
  *
  * @example "1-4,6,7,8,11-14" becomes [1,2,3,4,6,7,8,11,12,13,14]
-<<<<<<< .merge_file_GwCXE1
  *
  * @see docs/contracts/parse-print-page-string-action.md
  *
-=======
- * @see docs/contracts/parse-print-page-string-action.md
->>>>>>> .merge_file_KztOOu
  * @contract docs/contracts/parse-print-page-string-action.md
  */
 class ParsePrintPageStringAction

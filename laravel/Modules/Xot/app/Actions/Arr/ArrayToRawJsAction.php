@@ -16,13 +16,9 @@ use function Safe\preg_match;
  * Usa virgolette singole per stringhe e chiavi non-identificatore, così l'output
  * può essere usato dentro x-data="..." senza spezzare l'attributo.
  * I valori RawJs vengono emessi raw (es. formatter function per Chart.js).
-<<<<<<< .merge_file_D0fLcT
  *
  * @see docs/contracts/array-to-raw-js-action.md
  *
-=======
- * @see docs/contracts/array-to-raw-js-action.md
->>>>>>> .merge_file_43N4UQ
  * @contract docs/contracts/array-to-raw-js-action.md
  */
 class ArrayToRawJsAction

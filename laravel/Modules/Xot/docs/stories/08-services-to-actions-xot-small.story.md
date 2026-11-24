@@ -11,10 +11,7 @@ related:
   - ../../../../../bmad-output/epic-code-standards-services-mixed-const.md
   - ../../../../../bashscripts/ai/wiki/rules/no-services-rule.md
   - ../services.md
-<<<<<<< .merge_file_V04ZLL
 qmd: "08 services to actions xot small"
-=======
->>>>>>> .merge_file_hginVm
 ---
 
 # [STORY] Services piccoli di Xot verso Actions, const verso tipi adatti

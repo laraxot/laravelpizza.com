@@ -20,6 +20,10 @@ related:
   - ../../laravel/Modules/User/app/Models/User.php
 <<<<<<< HEAD
   - ../../laravel/Modules/Quaeris/app/Models/User.php
+<<<<<<< .merge_file_660MKt
+<<<<<<< HEAD
+  - ../../laravel/Modules/<nome progetto>/app/Models/User.php
+=======
 =======
 <<<<<<< HEAD
   - ../../laravel/Modules/Quaeris/app/Models/User.php
@@ -27,10 +31,16 @@ related:
   - ../../laravel/Modules/<nome progetto>/app/Models/User.php
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_pD4I5x
+github:
+  repository: https://github.com/laraxot/module_user_fila5
+  issues: https://github.com/laraxot/module_user_fila5/issues
+=======
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
 qmd: "user profile volt instanceof wrong class"
+>>>>>>> laraxot/dev
 ---
 
 # STORY — ProfileEditVoltComponent controllava instanceof contro la classe User sbagliata
@@ -57,13 +67,20 @@ errori `cast.string` / `argument.type` / `method.nonObject` su
 
 Il model di auth reale e' `Modules\Quaeris\Models\User`, non
 <<<<<<< HEAD
+<<<<<<< .merge_file_660MKt
 =======
 =======
+=======
+>>>>>>> .merge_file_pD4I5x
 'model' => Modules\<nome progetto>\Models\User::class,
 ```
 
 Il model di auth reale e' `Modules\<nome progetto>\Models\User`, non
+<<<<<<< .merge_file_660MKt
+=======
+=======
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_pD4I5x
 >>>>>>> laraxot/dev
 `Modules\User\Models\User`. Le due classi sono **sorelle**, entrambe
 `extends Modules\User\Models\BaseUser` — non genitore/figlio.
@@ -127,12 +144,18 @@ presente:
   vedi [[env-sqlite-manca-suite-non-eseguibile]]): un test Pest end-to-end
 <<<<<<< HEAD
   che autentica un utente reale (`Modules\Quaeris\Models\User`) e chiama
+<<<<<<< .merge_file_660MKt
+<<<<<<< HEAD
+  che autentica un utente reale (`Modules\<nome progetto>\Models\User`) e chiama
+=======
+=======
 =======
 <<<<<<< HEAD
   che autentica un utente reale (`Modules\Quaeris\Models\User`) e chiama
 =======
   che autentica un utente reale (`Modules\<nome progetto>\Models\User`) e chiama
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_pD4I5x
 >>>>>>> laraxot/dev
   `updateProfile()`/`updatePassword()`/`deleteAccount()` deve passare senza
   finire nel catch generico.
@@ -209,9 +232,15 @@ Claude Sonnet 5
 =======
 <<<<<<< HEAD
 ## Aggiornamento 2026-09-10 (subagent-quaeris-user, terza occorrenza indipendente)
+<<<<<<< .merge_file_660MKt
+<<<<<<< HEAD
+## Aggiornamento 2026-09-10 (subagent-<nome progetto>-user, terza occorrenza indipendente)
+=======
+=======
 =======
 ## Aggiornamento 2026-09-10 (subagent-<nome progetto>-user, terza occorrenza indipendente)
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_pD4I5x
 >>>>>>> laraxot/dev
 
 Task assegnato come "4 errori PHPStan cast.string/argument.type/method.nonObject

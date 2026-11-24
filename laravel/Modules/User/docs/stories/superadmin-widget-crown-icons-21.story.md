@@ -19,10 +19,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< .merge_file_456ZdD
 qmd: "superadmin widget crown icons 21 story"
-=======
->>>>>>> .merge_file_TCpZrC
 ---
 
 # SuperAdminWidget: icone corona + fix bug reale @svg()

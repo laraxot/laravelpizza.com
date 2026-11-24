@@ -4,20 +4,13 @@ type: story
 module: Xot
 status: review
 created: 2026-11-16
-<<<<<<< .merge_file_6fTQ34
 updated: 2026-11-24
-=======
-updated: 2026-11-23
->>>>>>> .merge_file_Yfvh9G
 tags: [bmad, prompts, standing-order, phpstan, pest, public_html, second-brain]
 qmd: "prompts standing order alignment phpstan wave BMAD second brain swarm pest public_html mixed anti-thrashing"
 related:
   - ./docs-prompts-reorganization.story.md
   - ./docs-md-filename-date-debt.story.md
-<<<<<<< .merge_file_6fTQ34
   - ./prompts-boy-scout-standing-order.story.md
-=======
->>>>>>> .merge_file_Yfvh9G
 ---
 
 # prompts-standing-order-alignment-phpstan-wave
@@ -71,13 +64,10 @@ Vedi [docs-md-filename-date-debt.story.md](./docs-md-filename-date-debt.story.md
 
 ## Diario
 
-<<<<<<< .merge_file_6fTQ34
 ### 2026-11-24
 
 - Lane docs-guardian boy-scout: vedi [prompts-boy-scout-standing-order.story.md](./prompts-boy-scout-standing-order.story.md). Flock path unificato; Filament 5 Schema; `wiki-hygiene.py` rimosso dai prompt.
 
-=======
->>>>>>> .merge_file_Yfvh9G
 ### 2026-11-23
 
 - Audit prioritario: `00`, `04`, `05`, `36`, `37`. Gap: path story legacy in `36`; pest/anti-thrashing/mixed/public_html incompleti in swarm/second-brain/phpstan.

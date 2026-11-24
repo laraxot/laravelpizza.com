@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
-<<<<<<< .merge_file_AdzzqG
 qmd: "0006 xot base extension points moduli"
-=======
->>>>>>> .merge_file_DAyh7A
 ---
 
 # I moduli estendono i punti base Xot del framework

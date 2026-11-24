@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/destroy-action.md
-<<<<<<< .merge_file_otRl5y
  *
-=======
->>>>>>> .merge_file_k7s3Vd
  * @contract docs/contracts/destroy-action.md
  */
 class DestroyAction

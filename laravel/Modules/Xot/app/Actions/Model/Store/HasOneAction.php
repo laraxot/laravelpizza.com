@@ -13,10 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/store-has-one-action.md
-<<<<<<< .merge_file_lq3Bf6
  *
-=======
->>>>>>> .merge_file_SS7zJq
  * @contract docs/contracts/store-has-one-action.md
  */
 class HasOneAction

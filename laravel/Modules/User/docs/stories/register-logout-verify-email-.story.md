@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_Xh5J6Y
 ---
 title: "Registrazione, logout e verifica email (FO)"
 type: story
 qmd: "register logout verify email story registrazione"
 ---
-=======
->>>>>>> .merge_file_rdHF5L
 # Registrazione, logout e verifica email (FO)
 
 - Stato: done (2026-10-07)

@@ -13,13 +13,9 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
  *
  * Usa spipu/html2pdf per la generazione. Pensato per export da ListRecords
  * (es. ExportPdfAction) dove la view riceve `rows` e altri parametri.
-<<<<<<< .merge_file_RUg989
  *
  * @see docs/contracts/download-pdf-by-view-action.md
  *
-=======
- * @see docs/contracts/download-pdf-by-view-action.md
->>>>>>> .merge_file_A8uViY
  * @contract docs/contracts/download-pdf-by-view-action.md
  */
 class DownloadPdfByViewAction

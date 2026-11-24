@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/store-pivot-action.md
-<<<<<<< .merge_file_pQ821o
  *
-=======
->>>>>>> .merge_file_GqAjnN
  * @contract docs/contracts/store-pivot-action.md
  */
 class PivotAction

@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team Laraxot]
 issues: []
-<<<<<<< .merge_file_mmumdb
 qmd: "owner local decisioni vivono nella dellowner"
-=======
->>>>>>> .merge_file_2JknEo
 ---
 
 # Le decisioni vivono nella documentazione dell'owner

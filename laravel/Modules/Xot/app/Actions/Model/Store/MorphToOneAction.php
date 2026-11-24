@@ -12,10 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/store-morph-to-one-action.md
-<<<<<<< .merge_file_oUhdyH
  *
-=======
->>>>>>> .merge_file_Jwi3gC
  * @contract docs/contracts/store-morph-to-one-action.md
  */
 class MorphToOneAction

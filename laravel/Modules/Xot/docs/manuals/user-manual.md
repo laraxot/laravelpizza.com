@@ -4,10 +4,7 @@ type: user-manual
 status: active
 module: Xot
 updated: 2026-11-23
-<<<<<<< .merge_file_8nvKYO
 qmd: "user manual manuale utente"
-=======
->>>>>>> .merge_file_8RXZ1z
 ---
 
 # Manuale utente Xot

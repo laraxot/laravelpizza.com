@@ -17,13 +17,9 @@ use Spipu\Html2Pdf\Html2Pdf;
  * currently has its own unrelated PdfEngineEnum duplication issue
  * (Actions/Pdf/PdfEngineEnum.php vs Enums/PdfEngineEnum.php) that needs its
  * own dedicated fix before other code can safely depend on it.
-<<<<<<< .merge_file_EwhI2U
  *
  * @see docs/contracts/html-to-pdf-action.md
  *
-=======
- * @see docs/contracts/html-to-pdf-action.md
->>>>>>> .merge_file_VaBtoK
  * @contract docs/contracts/html-to-pdf-action.md
  */
 class HtmlToPdfAction

@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-view-by-model-class-action.md
-<<<<<<< .merge_file_RpcnJx
  *
-=======
->>>>>>> .merge_file_R5KdKw
  * @contract docs/contracts/get-view-by-model-class-action.md
  */
 class GetViewByModelClassAction

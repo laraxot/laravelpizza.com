@@ -13,13 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  * - `Modulo::file` -> `Modules/<Modulo>/resources/<file>`
  * - percorso pubblico (`/themes/Trattoria/images/logo.svg`, anche con `?v=...`) -> file sotto la document root,
  *   cosi' i logo configurati come URL (metatag.logo_header) funzionano anche nelle email che li allegano.
-<<<<<<< .merge_file_7rt7bx
  *
  * @see docs/contracts/asset-path-action.md
  *
-=======
- * @see docs/contracts/asset-path-action.md
->>>>>>> .merge_file_PD4Mtr
  * @contract docs/contracts/asset-path-action.md
  */
 class AssetPathAction

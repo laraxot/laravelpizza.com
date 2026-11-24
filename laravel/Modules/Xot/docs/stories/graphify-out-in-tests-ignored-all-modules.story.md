@@ -7,10 +7,7 @@ created: 2026-11-24
 updated: 2026-11-24
 module: Xot
 tags: [gitignore, graphify, activity, sync, multi-progetto]
-<<<<<<< .merge_file_cHPRsc
 qmd: "graphify out tests ignored all modules"
-=======
->>>>>>> .merge_file_vMpedp
 ---
 
 # [STORY] tests/graphify-out/ ignorata in tutti i moduli e temi, cartella Activity rimossa

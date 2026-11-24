@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/render-context-navigation.md
-<<<<<<< .merge_file_bd08aC
  *
-=======
->>>>>>> .merge_file_JObq6m
  * @contract docs/contracts/render-context-navigation.md
  */
 class RenderContextNavigation

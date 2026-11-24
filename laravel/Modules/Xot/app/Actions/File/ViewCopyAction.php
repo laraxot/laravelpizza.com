@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/view-copy-action.md
-<<<<<<< .merge_file_nPbYz8
  *
-=======
->>>>>>> .merge_file_JnB0xi
  * @contract docs/contracts/view-copy-action.md
  */
 class ViewCopyAction

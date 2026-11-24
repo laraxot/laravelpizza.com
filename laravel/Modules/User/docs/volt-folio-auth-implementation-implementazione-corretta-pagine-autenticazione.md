@@ -17,11 +17,16 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
+<<<<<<< .merge_file_QCkHp6
+status: draft
+=======
+=======
 =======
 <<<<<<< .merge_file_zK151y
 status: draft
 =======
 >>>>>>> .merge_file_VoiMkm
+>>>>>>> .merge_file_tQYyKC
 >>>>>>> laraxot/dev
 ---
 
@@ -30,10 +35,13 @@ status: draft
 ## Collegamenti correlati
 <<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+- [README modulo User](./readme.md)
+>>>>>>> laraxot/dev
 - [Convenzioni Path](./path-conventions-user.md)
 - [Volt Errors](./volt-errors.md)
 - [Volt Folio Logout](./volt-folio-logout-2.md)
-<<<<<<< .merge_file_0lbIGD
+<<<<<<< .merge_file_QCkHp6
 =======
 =======
 <<<<<<< HEAD
@@ -52,7 +60,7 @@ status: draft
 >>>>>>> .merge_file_VoiMkm
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lIJX1r
+>>>>>>> .merge_file_tQYyKC
 
 ## Introduzione
 
@@ -564,10 +572,12 @@ new class extends Component {
 3. **Struttura del Codice**
    - Separa la logica PHP dal template Blade
    - Usa l'approccio funzionale o la classe anonima in base alla complessità
-<<<<<<< .merge_file_0lbIGD
+<<<<<<< HEAD
+<<<<<<< .merge_file_QCkHp6
 - Segui le convenzioni di naming e struttura di <nome progetto>
 =======
-<<<<<<< HEAD
+- Segui le convenzioni di naming e struttura di Quaeris
+=======
 - Segui le convenzioni di naming e struttura di Quaeris
 =======
 <<<<<<< .merge_file_zK151y
@@ -575,8 +585,8 @@ new class extends Component {
 =======
 - Segui le convenzioni di naming e struttura di Quaeris
 >>>>>>> .merge_file_VoiMkm
+>>>>>>> .merge_file_tQYyKC
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lIJX1r
 
 4. **Sicurezza**
    - Invalida e rigenera sempre la sessione dopo il logout
@@ -620,10 +630,12 @@ new class extends Component {
 
 ## Conclusione
 
-<<<<<<< .merge_file_0lbIGD
+<<<<<<< HEAD
+<<<<<<< .merge_file_QCkHp6
 Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di <nome progetto>, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 =======
-<<<<<<< HEAD
+Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di Quaeris, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
+=======
 Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di Quaeris, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 =======
 <<<<<<< .merge_file_zK151y
@@ -631,8 +643,8 @@ Seguendo queste linee guida per l'implementazione delle pagine di autenticazione
 =======
 Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di Quaeris, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 >>>>>>> .merge_file_VoiMkm
+>>>>>>> .merge_file_tQYyKC
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lIJX1r
 
 ## Riferimenti
 

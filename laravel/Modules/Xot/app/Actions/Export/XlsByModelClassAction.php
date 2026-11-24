@@ -17,10 +17,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/xls-by-model-class-action.md
-<<<<<<< .merge_file_GGCl6J
  *
-=======
->>>>>>> .merge_file_xDmYKI
  * @contract docs/contracts/xls-by-model-class-action.md
  */
 class XlsByModelClassAction

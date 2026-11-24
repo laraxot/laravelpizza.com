@@ -30,10 +30,7 @@ use function Safe\mb_convert_encoding;
  * Windows-1252, e con ISO-8859-1 il testo resterebbe rovinato.
  *
  * @see docs/contracts/fix-double-encoded-utf8-action.md
-<<<<<<< .merge_file_dRzX2C
  *
-=======
->>>>>>> .merge_file_zFP6gc
  * @contract docs/contracts/fix-double-encoded-utf8-action.md
  */
 class FixDoubleEncodedUtf8Action

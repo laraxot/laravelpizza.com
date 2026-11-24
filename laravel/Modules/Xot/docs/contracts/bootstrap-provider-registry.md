@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_8EoK5V
 ---
 title: "Bootstrap provider registry contract"
 type: contract
 qmd: "bootstrap provider registry contract"
 ---
-=======
->>>>>>> .merge_file_BTyisc
 # Bootstrap provider registry contract
 
 ```yaml

@@ -6,10 +6,7 @@ namespace Modules\Xot\Actions\Trend\Format;
 
 /**
  * @see docs/contracts/sqlite-format-action.md
-<<<<<<< .merge_file_0jQdH7
  *
-=======
->>>>>>> .merge_file_jxln6U
  * @contract docs/contracts/sqlite-format-action.md
  */
 class SqliteFormatAction extends BaseFormatAction

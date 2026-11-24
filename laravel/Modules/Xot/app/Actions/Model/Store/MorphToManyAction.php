@@ -13,10 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/store-morph-to-many-action.md
-<<<<<<< .merge_file_nxzA8F
  *
-=======
->>>>>>> .merge_file_IDCNXb
  * @contract docs/contracts/store-morph-to-many-action.md
  */
 class MorphToManyAction

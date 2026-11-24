@@ -16,10 +16,7 @@ use function Safe\json_encode;
 
 /**
  * @see docs/contracts/get-components-action.md
-<<<<<<< .merge_file_xFIQz0
  *
-=======
->>>>>>> .merge_file_6U2mPU
  * @contract docs/contracts/get-components-action.md
  */
 class GetComponentsAction

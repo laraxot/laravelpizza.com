@@ -15,10 +15,7 @@ use function Safe\preg_replace;
  * per evitare duplicazione di codice e garantire consistenza in tutta l'applicazione.
  *
  * @see docs/contracts/normalize-driver-name-action.md
-<<<<<<< .merge_file_6ygJV6
  *
-=======
->>>>>>> .merge_file_2qihz5
  * @contract docs/contracts/normalize-driver-name-action.md
  */
 class NormalizeDriverNameAction

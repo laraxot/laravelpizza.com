@@ -1,5 +1,10 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+title: "UserFactory Advanced Integration - Modulo User & <nome progetto>"
+=======
+title: "UserFactory Advanced Integration - Modulo User & Quaeris"
+=======
 title: "UserFactory Advanced Integration - Modulo User & Quaeris"
 =======
 <<<<<<< .merge_file_SwWRVN
@@ -7,12 +12,18 @@ title: "UserFactory Advanced Integration - Modulo User & <nome progetto>"
 =======
 title: "UserFactory Advanced Integration - Modulo User & Quaeris"
 >>>>>>> .merge_file_AWMHta
+>>>>>>> .merge_file_hT7eJz
 >>>>>>> laraxot/dev
 type: concept
 tags: [user, factory, advanced, integration]
 created: 2026-07-14
 updated: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & <nome progetto>"
+=======
+qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & quaeris"
+=======
 qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & quaeris"
 =======
 <<<<<<< .merge_file_SwWRVN
@@ -20,6 +31,7 @@ qmd: "user-factory-advanced-integration-2 userfactory advanced integration - mod
 =======
 qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & quaeris"
 >>>>>>> .merge_file_AWMHta
+>>>>>>> .merge_file_hT7eJz
 >>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -33,8 +45,11 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 status: draft
 ---
 
@@ -61,11 +76,14 @@ Dopo uno studio approfondito dei modelli User, Patient, Doctor e Admin, l'integr
 ```
 BaseUser (User Module)
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 ├── User (Quaeris) - STI Base + Business Logic
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider  
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 ├── User (<nome progetto>) - STI Base + Business Logic
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider
@@ -73,7 +91,10 @@ BaseUser (User Module)
 ├── User (Quaeris) - STI Base + Business Logic
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider  
+<<<<<<< .merge_file_VgCRaa
+=======
 >>>>>>> .merge_file_AWMHta
+>>>>>>> .merge_file_hT7eJz
 >>>>>>> laraxot/dev
     └── Admin (HasParent) - System Administrator
 ```
@@ -81,6 +102,11 @@ BaseUser (User Module)
 ### Cross-Module Compatibility Matrix
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+| BaseUser Field | <nome progetto> User | Business Logic | Factory Support |
+=======
+| BaseUser Field | Quaeris User | Business Logic | Factory Support |
+=======
 | BaseUser Field | Quaeris User | Business Logic | Factory Support |
 =======
 <<<<<<< .merge_file_SwWRVN
@@ -88,6 +114,7 @@ BaseUser (User Module)
 =======
 | BaseUser Field | Quaeris User | Business Logic | Factory Support |
 >>>>>>> .merge_file_AWMHta
+>>>>>>> .merge_file_hT7eJz
 >>>>>>> laraxot/dev
 |----------------|----------------|----------------|-----------------|
 | `name` | `name` | Full name concat | ✅ Complete |
@@ -169,8 +196,11 @@ User::factory()->gdprCompliant()->create();
 ### Connection Strategy Perfezionata
 ```php
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 // BaseUser (User Module)
 protected $connection = 'user';
 
@@ -210,8 +240,11 @@ public function test_cross_module_compatibility()
 {
     $user = User::factory()->create();
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 
     // BaseUser contracts respected
     expect($user)->toHaveProperty('email');
@@ -277,8 +310,11 @@ public function test_bulk_sti_performance()
         ...User::factory()->admin()->count(5)->make(),
     ]);
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 
     User::insert($users->toArray()); // Single query
 
@@ -336,8 +372,11 @@ public function run(): void
     User::factory()->patient()->pregnant()->count(50)->create();
     User::factory()->patient()->eligibleForFreeServices()->count(200)->create();
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 
     // Professional doctor network
     User::factory()->doctorWithStudio()->count(50)->create();
@@ -438,6 +477,11 @@ public function run(): void
 - **Testability**: Comprehensive user scenario testing
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+### For <nome progetto> Module
+=======
+### For Quaeris Module
+=======
 ### For Quaeris Module
 =======
 <<<<<<< .merge_file_SwWRVN
@@ -445,6 +489,7 @@ public function run(): void
 =======
 ### For Quaeris Module
 >>>>>>> .merge_file_AWMHta
+>>>>>>> .merge_file_hT7eJz
 >>>>>>> laraxot/dev
 - **Domain Focus**: Healthcare-specific data generation
 - **Business Logic**: Real-world scenario testing
@@ -477,8 +522,11 @@ public function run(): void
 ## Link Documentazione
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_VgCRaa
+=======
 =======
 <<<<<<< .merge_file_SwWRVN
+>>>>>>> .merge_file_hT7eJz
 ### <nome progetto> Module
 - [Advanced Improvements Analysis](../../<nome progetto>/docs/factories/userfactory-advanced-improvements-analysis.md)
 - [Implementation Completed](../../<nome progetto>/docs/factories/userfactory_implementation_completed.md)
@@ -506,7 +554,7 @@ public function run(): void
 
 ### Root Documentation  
 - [UserFactory Quaeris Integration](../../../../../docs/userfactory_Quaeris_integration.md)
-<<<<<<< .merge_file_EJtmHw
+<<<<<<< .merge_file_VgCRaa
 - [Testing Standards](../../../../../docs/testing_standards.md) 
 =======
 <<<<<<< HEAD
@@ -515,4 +563,4 @@ public function run(): void
 - [Testing Standards](../../../../../docs/testing_standards.md) 
 >>>>>>> .merge_file_AWMHta
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_bNiWNY
+>>>>>>> .merge_file_hT7eJz

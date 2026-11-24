@@ -16,10 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * non si puo' ricavare nulla, quindi si lancia invece di restituire `Closure`.
  *
  * @see docs/contracts/get-current-route-handler-action.md
-<<<<<<< .merge_file_CSe5tS
  *
-=======
->>>>>>> .merge_file_nSwibi
  * @contract docs/contracts/get-current-route-handler-action.md
  */
 class GetCurrentRouteHandlerAction

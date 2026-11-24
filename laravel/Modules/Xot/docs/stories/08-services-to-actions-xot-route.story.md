@@ -12,10 +12,7 @@ related:
   - ./2026-10-08-phpstan-xot-app-regressions.story.md
   - ../wiki/decisions/services-to-actions-migration.md
   - ../../../../bmad-output/epic-code-standards-services-mixed-const.md
-<<<<<<< .merge_file_R0QwUG
 qmd: "08 services to actions xot route"
-=======
->>>>>>> .merge_file_s5kjMj
 ---
 
 # [STORY] Services verso Actions: RouteService e RouteDynService

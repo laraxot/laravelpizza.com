@@ -11,10 +11,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/download-zip-by-paths-disk-action.md
-<<<<<<< .merge_file_z4vNGq
  *
-=======
->>>>>>> .merge_file_af0Jz0
  * @contract docs/contracts/download-zip-by-paths-disk-action.md
  */
 class DownloadZipByPathsDiskAction

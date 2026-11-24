@@ -41,10 +41,6 @@ abstract class XotBasePage extends Page implements HasForms
     use InteractsWithForms {
         form as protected interactsWithFormsForm;
     }
-<<<<<<< .merge_file_zfTODl
-=======
-    use InteractsWithForms;
->>>>>>> .merge_file_XLSs15
     use TransTrait;
 
     /**

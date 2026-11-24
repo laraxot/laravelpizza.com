@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_rfq70u
 ---
 title: "Registrazione FO /it/auth/register: traduzioni, struttura card, mobile"
 type: story
 qmd: "register page ui ux 07 story"
 ---
-=======
->>>>>>> .merge_file_6lyWrR
 # Registrazione FO /it/auth/register: traduzioni, struttura card, mobile
 
 - Stato: done (2026-10-07). Parte posta: vedi `../auth-register-email.md`

@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/save-array-action.md
-<<<<<<< .merge_file_eV6sZG
  *
-=======
->>>>>>> .merge_file_xRpU5y
  * @contract docs/contracts/save-array-action.md
  */
 class SaveArrayAction

@@ -11,10 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/register-blade-components-action.md
-<<<<<<< .merge_file_j7QliE
  *
-=======
->>>>>>> .merge_file_l0v4Ho
  * @contract docs/contracts/register-blade-components-action.md
  */
 class RegisterBladeComponentsAction

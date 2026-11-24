@@ -12,10 +12,7 @@ use function Safe\file;
 
 /**
  * @see docs/contracts/get-method-body-action.md
-<<<<<<< .merge_file_dmTPTo
  *
-=======
->>>>>>> .merge_file_BwkosH
  * @contract docs/contracts/get-method-body-action.md
  */
 class GetMethodBodyAction

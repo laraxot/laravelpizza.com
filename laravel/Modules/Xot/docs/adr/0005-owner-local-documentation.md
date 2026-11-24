@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
-<<<<<<< .merge_file_gmorTu
 qmd: "0005 owner local decisioni vivono nella"
-=======
->>>>>>> .merge_file_V2wULb
 ---
 
 # Le decisioni vivono nella documentazione dell'owner

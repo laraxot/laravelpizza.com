@@ -13,10 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-all-models-action.md
-<<<<<<< .merge_file_bkeS59
  *
-=======
->>>>>>> .merge_file_rXXxYF
  * @contract docs/contracts/get-all-models-action.md
  */
 class GetAllModelsAction

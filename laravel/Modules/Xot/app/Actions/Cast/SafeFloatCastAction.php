@@ -34,10 +34,7 @@ use function Safe\preg_replace;
  * $percentage = SafeFloatCastAction::castWithRange($mixedValue, 0.0, 100.0);
  *
  * @see docs/contracts/safe-float-cast-action.md
-<<<<<<< .merge_file_AvpAMp
  *
-=======
->>>>>>> .merge_file_mNJnwt
  * @contract docs/contracts/safe-float-cast-action.md
  */
 class SafeFloatCastAction

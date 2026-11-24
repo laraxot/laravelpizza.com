@@ -11,10 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/apply-metatag-to-panel-action.md
-<<<<<<< .merge_file_QFiaHR
  *
-=======
->>>>>>> .merge_file_v5rvWb
  * @contract docs/contracts/apply-metatag-to-panel-action.md
  */
 class ApplyMetatagToPanelAction

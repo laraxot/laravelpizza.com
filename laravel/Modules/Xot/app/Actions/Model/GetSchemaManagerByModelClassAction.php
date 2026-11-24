@@ -12,10 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-schema-manager-by-model-class-action.md
-<<<<<<< .merge_file_zj9Ket
  *
-=======
->>>>>>> .merge_file_R70EeB
  * @contract docs/contracts/get-schema-manager-by-model-class-action.md
  */
 class GetSchemaManagerByModelClassAction

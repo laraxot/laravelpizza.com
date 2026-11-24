@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/view-get-view-name-space-path-action.md
-<<<<<<< .merge_file_l9PeCB
  *
-=======
->>>>>>> .merge_file_w6XsQb
  * @contract docs/contracts/view-get-view-name-space-path-action.md
  */
 class GetViewNameSpacePathAction

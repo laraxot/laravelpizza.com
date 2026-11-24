@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/store-morphed-by-many-action.md
-<<<<<<< .merge_file_KsalTb
  *
-=======
->>>>>>> .merge_file_kP8YUg
  * @contract docs/contracts/store-morphed-by-many-action.md
  */
 class MorphedByManyAction

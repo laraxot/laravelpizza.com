@@ -11,13 +11,9 @@ use Illuminate\Support\Facades\App;
  * Verifica l'esistenza di un SVG registrato utilizzando BladeUI Icons.
  *
  * @method bool execute(string $svgName)
-<<<<<<< .merge_file_0iX1ap
  *
  * @see docs/contracts/svg-exists-action.md
  *
-=======
- * @see docs/contracts/svg-exists-action.md
->>>>>>> .merge_file_9897pT
  * @contract docs/contracts/svg-exists-action.md
  */
 class SvgExistsAction

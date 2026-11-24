@@ -14,10 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/update-belongs-to-many-action.md
-<<<<<<< .merge_file_6DkItX
  *
-=======
->>>>>>> .merge_file_GIOG21
  * @contract docs/contracts/update-belongs-to-many-action.md
  */
 class BelongsToManyAction

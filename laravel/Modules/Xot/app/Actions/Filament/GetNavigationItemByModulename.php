@@ -22,13 +22,9 @@ use function Safe\json_encode;
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
  * Ottimizzata per ridurre memory usage.
-<<<<<<< .merge_file_trhLY4
  *
  * @see docs/contracts/get-navigation-item-by-modulename.md
  *
-=======
- * @see docs/contracts/get-navigation-item-by-modulename.md
->>>>>>> .merge_file_5KKkYV
  * @contract docs/contracts/get-navigation-item-by-modulename.md
  */
 class GetNavigationItemByModulename

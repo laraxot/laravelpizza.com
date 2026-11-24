@@ -5,10 +5,7 @@ contract: Modules\\Xot
 tags: [xot, xotbase, contratti, ereditarieta, filament, phpstan]
 created: 2026-11-19
 updated: 2026-11-19
-<<<<<<< .merge_file_h6Wum4
 qmd: "xotbase classes contratto classi"
-=======
->>>>>>> .merge_file_taIZCI
 ---
 
 # Contratto delle classi XotBase

@@ -40,10 +40,6 @@ use Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck;
 class HealthPage extends XotBasePage
 {
     use NavigationPageLabelTrait;
-<<<<<<< .merge_file_LaBitB
-=======
-
->>>>>>> .merge_file_QZgaaJ
     use SuperAdminOnlyTrait;
 
     /**

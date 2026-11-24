@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-route-parameters-action.md
-<<<<<<< .merge_file_Ntogg6
  *
-=======
->>>>>>> .merge_file_9nM2bd
  * @contract docs/contracts/get-route-parameters-action.md
  */
 class GetRouteParametersAction

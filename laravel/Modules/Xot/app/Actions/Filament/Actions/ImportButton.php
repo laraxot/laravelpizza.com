@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/import-button.md
-<<<<<<< .merge_file_6oOVpD
  *
-=======
->>>>>>> .merge_file_rr55cm
  * @contract docs/contracts/import-button.md
  */
 class ImportButton

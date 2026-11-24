@@ -10,10 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/view-path-action.md
-<<<<<<< .merge_file_MCF7Nd
  *
-=======
->>>>>>> .merge_file_T0ERAS
  * @contract docs/contracts/view-path-action.md
  */
 class ViewPathAction

@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/base-translate-action.md
-<<<<<<< .merge_file_IG8OOj
  *
-=======
->>>>>>> .merge_file_WMEHjm
  * @contract docs/contracts/base-translate-action.md
  */
 abstract class BaseTranslateAction

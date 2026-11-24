@@ -1,11 +1,11 @@
-<<<<<<< .merge_file_QpZITZ
+<<<<<<< .merge_file_0jt88Q
 ---
 title: "Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE"
 type: guide
 qmd: "traits complete guide guida completa trait"
 ---
 =======
->>>>>>> .merge_file_zDt0I7
+>>>>>>> .merge_file_xvEGoV
 # Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
 
 ## Stato Implementazione ✅ COMPLETATO

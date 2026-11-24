@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/copy-from-last-year-button.md
-<<<<<<< .merge_file_d8zMFN
  *
-=======
->>>>>>> .merge_file_4UGpTQ
  * @contract docs/contracts/copy-from-last-year-button.md
  */
 class CopyFromLastYearButton

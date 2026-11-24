@@ -9,10 +9,7 @@ created: 2026-10-09
 updated: 2026-10-09
 related:
   - ./5.260-phpstan-modules-current-remediation.story.md
-<<<<<<< .merge_file_dvPZRD
 qmd: "09 phpstan modules remediation story funzionale"
-=======
->>>>>>> .merge_file_yoqJya
 ---
 
 # Scopo

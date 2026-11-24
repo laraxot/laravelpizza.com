@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
-use Exception;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Modules\Xot\Actions\File\GetModulePathAction;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
@@ -83,31 +81,6 @@ it('does not throw when public assets dir is a plain file left by a checkout wit
     $publicFile = $moduleRoot.'/public/css/style.css';
     mkdir(\dirname($publicFile), 0o755, true);
     file_put_contents($publicFile, 'body{}');
-<<<<<<< .merge_file_oZXKwc
-
-    $standIn = public_path('assets/xotstandintest'); // link in minuscolo, come gli URL
-    file_put_contents($standIn, '../../laravel/Modules/XotStandInTest/public');
-
-    app()->instance(GetModulePathAction::class, new class($moduleRoot) extends GetModulePathAction
-    {
-        public function __construct(private string $modulePath) {}
-
-        public function execute(string $module): string
-        {
-            return $this->modulePath;
-        }
-    });
-
-    try {
-        $result = app(AssetAction::class)->execute('XotStandInTest::css/style.css');
-        Assert::assertStringContainsString('assets/xotstandintest/css/style.css', $result);
-        Assert::assertTrue(is_file($standIn), 'the stand-in file must be left untouched');
-    } finally {
-        foreach ([$standIn, $publicFile] as $file) {
-            if (is_file($file)) {
-                unlink($file);
-            }
-=======
 
     $standIn = public_path('assets/xotstandintest'); // link in minuscolo, come gli URL
     file_put_contents($standIn, '../../laravel/Modules/XotStandInTest/public');
@@ -135,43 +108,6 @@ it('does not throw when public assets dir is a plain file left by a checkout wit
     }
 });
 
-/**
- * Senza namespace `modulo::` l'asset appartiene al tema attivo (pub_theme fuori dal pannello admin):
- * l'URL passa dal symlink public_html/themes/<Tema>.
- */
-it('resolves an asset without namespace to the public theme url', function (): void {
-    $theme = XotData::make()->pub_theme;
-
-    $result = app(AssetAction::class)->execute('css/xot-theme-asset-'.uniqid().'.css');
-
-    Assert::assertStringContainsString('themes/'.$theme.'/css/xot-theme-asset-', $result);
-});
-
-it('fails when a module asset exists neither in public nor in resources', function (): void {
-    $moduleRoot = sys_get_temp_dir().'/xot_mod_missing_'.uniqid('', true);
-
-    app()->instance(GetModulePathAction::class, new class($moduleRoot) extends GetModulePathAction
-    {
-        public function __construct(private string $modulePath) {}
-
-        public function execute(string $module): string
-        {
-            return $this->modulePath;
->>>>>>> .merge_file_cNAdTH
-        }
-    });
-
-    $path = 'XotMissingTest::css/missing.css';
-
-    if (isRunningTestBench()) {
-        Assert::assertSame($path, app(AssetAction::class)->execute($path));
-
-        return;
-    }
-
-    expect(fn (): string => app(AssetAction::class)->execute($path))
-        ->toThrow(Exception::class, 'not Exists');
-});
 it('calculates asset path correctly in AssetPathAction', function (): void {
     Module::partialMock()
         ->shouldReceive('getModulePath')

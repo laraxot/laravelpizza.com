@@ -10,10 +10,7 @@ discussions: []
 related:
   - docs/contracts/action-behavioral-contract.md
   - laravel/Modules/Xot/docs/adr/0001-actions-over-services.md
-<<<<<<< .merge_file_M3iACb
 qmd: "adr 0011 contract docblock reference story"
-=======
->>>>>>> .merge_file_voatTz
 ---
 
 # Story: @contract docblock reference on Actions — ADR 0011

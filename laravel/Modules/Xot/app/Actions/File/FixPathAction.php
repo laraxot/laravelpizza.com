@@ -11,10 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/fix-path-action.md
-<<<<<<< .merge_file_TcPtr9
  *
-=======
->>>>>>> .merge_file_Rn1v1d
  * @contract docs/contracts/fix-path-action.md
  */
 class FixPathAction

@@ -15,13 +15,9 @@ use Spatie\QueueableAction\QueueableAction;
  * `XotBaseExportAction` nativa): stessa lista, stessi filtri, stesso nome file.
  * L'estensione la aggiunge il chiamante (`.xlsx` in `ExportXlsAction`) o il
  * downloader Filament.
-<<<<<<< .merge_file_CSyMyg
  *
  * @see docs/contracts/get-export-file-name-action.md
  *
-=======
- * @see docs/contracts/get-export-file-name-action.md
->>>>>>> .merge_file_6sWj8k
  * @contract docs/contracts/get-export-file-name-action.md
  */
 class GetExportFileNameAction

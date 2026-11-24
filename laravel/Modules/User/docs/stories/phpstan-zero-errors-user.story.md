@@ -11,10 +11,7 @@ related:
   - "./phpstan-zero-errors-user.dev.md"
   - "../../../../../docs/stories/all-modules-phpstan-zero-errors.story.md"
   - "../phpstan-fixes.md"
-<<<<<<< .merge_file_8I1sEP
 qmd: "phpstan zero errors user story errori"
-=======
->>>>>>> .merge_file_d1vIoC
 ---
 
 # Story: PHPStan zero errori: modulo User

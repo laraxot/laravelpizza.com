@@ -7,10 +7,6 @@ namespace Modules\Xot\Tests\Unit;
 use Illuminate\Support\Facades\Validator;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_Sj8dde
-=======
-use Modules\Xot\Tests\TestCase;
->>>>>>> .merge_file_2P4znC
 
 use function Safe\preg_match;
 

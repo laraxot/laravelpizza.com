@@ -12,10 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-trans-key-action.md
-<<<<<<< .merge_file_BPLLLr
  *
-=======
->>>>>>> .merge_file_YKVoIo
  * @contract docs/contracts/get-trans-key-action.md
  */
 class GetTransKeyAction

@@ -11,13 +11,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Class ModuleAction.
-<<<<<<< .merge_file_edKHBS
  *
  * @see docs/contracts/module-action.md
  *
-=======
- * @see docs/contracts/module-action.md
->>>>>>> .merge_file_S9MsIS
  * @contract docs/contracts/module-action.md
  */
 class ModuleAction

@@ -19,10 +19,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< .merge_file_TiOW4U
 qmd: "user nested conflict marker cleanup 22"
-=======
->>>>>>> .merge_file_LBTDLo
 ---
 
 # User: marker di conflitto annidati residui + disposizione .wip/.corrected

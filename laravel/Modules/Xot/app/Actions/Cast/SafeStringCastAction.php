@@ -11,10 +11,7 @@ namespace Modules\Xot\Actions\Cast;
  * di codice (principio DRY) e garantire comportamento consistente in tutto il codebase.
  *
  * @see docs/contracts/safe-string-cast-action.md
-<<<<<<< .merge_file_WRh4Vt
  *
-=======
->>>>>>> .merge_file_wqixDC
  * @contract docs/contracts/safe-string-cast-action.md
  */
 class SafeStringCastAction

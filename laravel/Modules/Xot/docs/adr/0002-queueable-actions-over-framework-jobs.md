@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
-<<<<<<< .merge_file_EXgEPj
 qmd: "0002 queueable actions over framework jobs"
-=======
->>>>>>> .merge_file_VZILws
 ---
 
 # Le unità di business usano Spatie Queueable Actions

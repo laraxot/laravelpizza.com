@@ -8,13 +8,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Undocumented class.
-<<<<<<< .merge_file_G54irB
  *
  * @see docs/contracts/url-action.md
  *
-=======
- * @see docs/contracts/url-action.md
->>>>>>> .merge_file_x4BZUh
  * @contract docs/contracts/url-action.md
  */
 class UrlAction

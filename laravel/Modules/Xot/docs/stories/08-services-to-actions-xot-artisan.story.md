@@ -12,10 +12,7 @@ related:
   - ./2026-10-06-phpstan-cleanup-xot-app.story.md
   - ../refactoring/artisan-service-refactoring-report.md
   - ../../../../bmad-output/epic-code-standards-services-mixed-const.md
-<<<<<<< .merge_file_gzsrTI
 qmd: "08 services to actions xot artisan"
-=======
->>>>>>> .merge_file_E7yHRT
 ---
 
 # [STORY] Xot: ArtisanService e Services/Artisan verso Actions

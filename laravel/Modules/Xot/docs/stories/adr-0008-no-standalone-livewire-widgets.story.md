@@ -9,10 +9,7 @@ issues: []
 discussions: []
 related:
   - docs/wiki/rules/no-standalone-livewire-classes.md
-<<<<<<< .merge_file_CvuE5M
 qmd: "adr 0008 no standalone livewire widgets"
-=======
->>>>>>> .merge_file_rQ242o
 ---
 
 # Story: No standalone Livewire, usare Filament widget

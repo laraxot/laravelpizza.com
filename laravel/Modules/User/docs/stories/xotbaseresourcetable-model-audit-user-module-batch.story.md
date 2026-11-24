@@ -31,7 +31,10 @@ owned_scope:
   - "laravel/Modules/User/app/Filament/Resources/TenantUserResource/Tables/TenantUsersTable.php"
   - "laravel/Modules/User/app/Filament/Resources/UserResource/Tables/UsersTable.php"
 related: []
+<<<<<<< HEAD
+=======
 qmd: "xotbaseresourcetable model audit user batch story"
+>>>>>>> laraxot/dev
 ---
 
 # XotBaseResourceTable: audit $model + verifica colonne (batch modulo User)
@@ -55,12 +58,18 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 `TenantResource` che risolve dinamicamente `XotData::getTenantClass()` →
 <<<<<<< HEAD
 `config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
+<<<<<<< .merge_file_XQTHv5
+<<<<<<< HEAD
+`config('xot.tenant_class')` → in questo progetto `Modules\<nome progetto>\Models\Customer`
+=======
+=======
 =======
 <<<<<<< HEAD
 `config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
 =======
 `config('xot.tenant_class')` → in questo progetto `Modules\<nome progetto>\Models\Customer`
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
 (non `Modules\User\Models\Tenant`, che pure esiste con una propria migration
 "tenants" mai attivata da config).
@@ -80,10 +89,17 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 <<<<<<< HEAD
    dichiarano `protected $connection = 'user'`, DB fisico `quaeris_user`
    diverso dal default `quaeris_data`).
+<<<<<<< .merge_file_XQTHv5
+<<<<<<< HEAD
+   dichiarano `protected $connection = 'user'`, DB fisico `<nome progetto>_user`
+   diverso dal default `<nome progetto>_data`).
+=======
+=======
 =======
    dichiarano `protected $connection = 'user'`, DB fisico `<nome progetto>_user`
    diverso dal default `<nome progetto>_data`).
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
 3. Colonne non verificabili (chiavi con relazione, es. `x.y`) saltate.
 4. Colonne sospette segnalate con file:riga, NON rimosse salvo typo certo al
@@ -130,9 +146,15 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 =======
 <<<<<<< HEAD
 | UsersTable.php | `Modules\Quaeris\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\Quaeris\Models\User` |
+<<<<<<< .merge_file_XQTHv5
+<<<<<<< HEAD
+| UsersTable.php | `Modules\<nome progetto>\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\<nome progetto>\Models\User` |
+=======
+=======
 =======
 | UsersTable.php | `Modules\<nome progetto>\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\<nome progetto>\Models\User` |
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
 
 ### Colonne verificate — esito per file
@@ -162,6 +184,13 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    nativo del modulo, poi il config è cambiato verso `Customer` (Quaeris) senza
    aggiornare le colonne. Verificato via `Schema::connection('quaeris_data')`
 <<<<<<< HEAD
+<<<<<<< .merge_file_XQTHv5
+   (`Modules\<nome progetto>\Models\Customer` / tabella `customers`, migration
+   `Modules/<nome progetto>/database/migrations/2023_01_01_000012_create_customers_table.php`:
+   nativo del modulo, poi il config è cambiato verso `Customer` (<nome progetto>) senza
+   aggiornare le colonne. Verificato via `Schema::connection('<nome progetto>_data')`
+=======
+=======
 =======
 =======
    (`Modules\<nome progetto>\Models\Customer` / tabella `customers`, migration
@@ -172,6 +201,7 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    nativo del modulo, poi il config è cambiato verso `Customer` (<nome progetto>) senza
    aggiornare le colonne. Verificato via `Schema::connection('<nome progetto>_data')`
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
    diretto sulla tabella `customers` (esiste live, colonne confermate assenti).
 2. `TenantUsersTable.php:27` (`role`) e `:29` (`uuid`) — nessuna migration di
@@ -182,12 +212,18 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    `Schema::connection('user')->getColumnListing('tenant_user')` (DB fisico
 <<<<<<< HEAD
    `quaeris_user`, che è la connection dichiarata dal model `TenantUser`):
+<<<<<<< .merge_file_XQTHv5
+<<<<<<< HEAD
+   `<nome progetto>_user`, che è la connection dichiarata dal model `TenantUser`):
+=======
+=======
 =======
 <<<<<<< HEAD
    `quaeris_user`, che è la connection dichiarata dal model `TenantUser`):
 =======
    `<nome progetto>_user`, che è la connection dichiarata dal model `TenantUser`):
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
    `id,tenant_id,user_id,created_at,updated_at,updated_by,created_by,deleted_at,deleted_by`
    — né `role` né `uuid` presenti.
@@ -218,9 +254,15 @@ TeamPermissionsTable, CustomersTable, UsersTable.
 =======
 <<<<<<< HEAD
 `quaeris_data` + connection `user` = `quaeris_user`, entrambe su
+<<<<<<< .merge_file_XQTHv5
+<<<<<<< HEAD
+`<nome progetto>_data` + connection `user` = `<nome progetto>_user`, entrambe su
+=======
+=======
 =======
 `<nome progetto>_data` + connection `user` = `<nome progetto>_user`, entrambe su
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_aBuLSa
 >>>>>>> laraxot/dev
 `127.0.0.1`) risulta significativamente indietro rispetto alle migration più
 recenti su più tabelle (`teams`, `team_invitations`, `roles`, `profiles`

@@ -9,10 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/create-directory-for-filename-action.md
-<<<<<<< .merge_file_qD8A0u
  *
-=======
->>>>>>> .merge_file_NHthUf
  * @contract docs/contracts/create-directory-for-filename-action.md
  */
 class CreateDirectoryForFilenameAction

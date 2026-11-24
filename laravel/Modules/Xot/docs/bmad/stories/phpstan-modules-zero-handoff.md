@@ -1,6 +1,6 @@
 ---
 title: "PHPStan Modules zero — handoff nuova chat"
-status: verified-zero-fragile-sync
+status: commit-wave-partial-sync-fragile
 updated: 2026-11-24
 qmd: "phpstan modules zero handoff standing swarm bmad sync markers"
 ---
@@ -41,6 +41,27 @@ senza attendere conferma. Migliorare docs moduli/temi e `bashscripts/docs/prompt
 - bashscripts md wave: ~12890 → **12450**; lane A/B/C/D done (00-INDEX, links, path refs,
   Notify slim). Commit bashscripts ancora staged/pending se non fatto.
 
+
+## 3b. Git wave 2026-11-24 (BMAD + second brain)
+
+Pushed to `laraxot` `dev` (FF):
+- Meetup `c104fac` — marker fix docs/tests
+- Xot `1ea12b5f7` — standing story
+- Cms `26d0618b` — app PHP marker strip (7 files)
+- Notify `a6b7319` — app tree marker strip (shallow `.git` ~15M; docs ancora marcati in WT)
+- UI `faf59e13` — UIService clean delta
+
+Side branch `dev-laravelpizza-wave-20261124` (remote `dev` force-rewrote → unrelated / non-FF; **no** force-push):
+- Lang `4d83c866`
+- Activity `a9979fd2`
+
+Skipped / blocked:
+- Root monorepo: ahead/behind + thousands dirty — no commit (merge_file noise / submodule pointers)
+- Xot/User: sync re-injects `<<<<<<<` into WT — do not commit marked files; restore from clean HEAD or ptvx/quaeris
+- Notify `docs/`: 2.9k marker files still on remote history — app fixed only
+- Rebase: aborted User mid-rebase; prefer **merge** over rebase on shared `dev`; never force
+
+
 ## 4. Dati / punti fermi
 
 ```bash
@@ -64,13 +85,11 @@ cd laravel && composer dump-autoload -o && ./vendor/bin/phpstan clear-result-cac
 
 ## 5. Prossimo passo
 
-1. Sync ancora attivo (ultimo check cwd poteva essere **User** o **UI**): se rimette
-   marker, **non** riparare sotto cwd; dopo uscita, `rg` + restore ptvx + cold analyse.
-2. Commit/push moduli toccati (Xot HasCommonScopes + empty.php rm; User/UI restore) nei
-   **repo owner**, non solo monorepo.
-3. Opzionale: commit bashscripts staged (43× `00-INDEX` + docs); rewrite path docs su
-   copie private (fixcity/… 207 ref) quando sync porta layout nuovo.
-4. Se gate rosso: prima `clear-result-cache` + `dump-autoload -o`; poi marker; poi tipi.
+1. Se sync `merge_remote_repo_*` cwd su un modulo: **non** riparare sotto cwd; dopo uscita `rg '^<<<<<<<' app` + restore da HEAD/ptvx/quaeris.
+2. Xot/User: ripulire WT dai marker (checkout HEAD se HEAD clean) poi cold `analyse Modules`.
+3. Lang/Activity: aprire PR da `dev-laravelpizza-wave-20261124` → `dev` (remote history rewrite).
+4. Notify docs markers: wave dedicata o restore da sibling clean (techplanner ha meno docs sporchi).
+5. Root: merge `laraxot/dev` solo quando dirty scende e senza `.merge_file_*`.
 
 ## Related
 

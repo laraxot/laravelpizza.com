@@ -11,13 +11,9 @@ use Composer\Autoload\ClassLoader;
  *
  * Il root skeleton mantiene solo App\\ e Tests\\; i namespace qui non devono
  * comparire in laravel/composer.json.
-<<<<<<< .merge_file_2UcfEB
  *
  * @see docs/contracts/register-runtime-psr4-namespaces-action.md
  *
-=======
- * @see docs/contracts/register-runtime-psr4-namespaces-action.md
->>>>>>> .merge_file_2voRQ1
  * @contract docs/contracts/register-runtime-psr4-namespaces-action.md
  */
 final class RegisterRuntimePsr4NamespacesAction

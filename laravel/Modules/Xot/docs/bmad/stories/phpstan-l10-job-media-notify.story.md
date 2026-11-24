@@ -3,13 +3,10 @@ title: "Xot - phpstan-l10-job-media-notify.story.md"
 module: Xot
 bmad: true
 status: active
-<<<<<<< .merge_file_vfJ5pZ
 type: story
 qmd: "xot phpstan l10 job media notify story"
 ---
 
-=======
->>>>>>> .merge_file_EBJUEK
 # BMAD Story: PHPStan L10 Job, Media, Notify
 
 **Epic**: 8.26  

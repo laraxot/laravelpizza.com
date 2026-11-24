@@ -8,13 +8,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Replaces Modules\Xot\Services\UrlService::checkValidUrl() (archived to .bak).
-<<<<<<< .merge_file_68gAwc
  *
  * @see docs/contracts/is-valid-url-action.md
  *
-=======
- * @see docs/contracts/is-valid-url-action.md
->>>>>>> .merge_file_hecs37
  * @contract docs/contracts/is-valid-url-action.md
  */
 class IsValidUrlAction

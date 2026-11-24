@@ -3,10 +3,7 @@ title: "Xot - phpstan-status.md"
 module: Xot
 bmad: true
 status: active
-<<<<<<< .merge_file_rLF547
 qmd: "phpstan status phpstanstatusmd"
-=======
->>>>>>> .merge_file_9F9c8l
 ---
 # PHPStan Status — Xot
 

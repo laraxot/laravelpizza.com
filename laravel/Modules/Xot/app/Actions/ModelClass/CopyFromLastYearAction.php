@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/model-class-copy-from-last-year-action.md
-<<<<<<< .merge_file_ARMvAF
  *
-=======
->>>>>>> .merge_file_oPGWAO
  * @contract docs/contracts/model-class-copy-from-last-year-action.md
  */
 class CopyFromLastYearAction

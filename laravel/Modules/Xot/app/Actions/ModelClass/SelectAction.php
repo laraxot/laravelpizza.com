@@ -10,10 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/select-action.md
-<<<<<<< .merge_file_bpJECB
  *
-=======
->>>>>>> .merge_file_G25a9O
  * @contract docs/contracts/select-action.md
  */
 class SelectAction

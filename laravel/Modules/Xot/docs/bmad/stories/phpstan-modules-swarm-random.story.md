@@ -10,11 +10,7 @@ acceptance_criteria:
 references:
   - bashscripts/ai/wiki/memories/agent-standing-order.md
   - docs/sprint-status.yaml
-<<<<<<< .merge_file_EIoMxJ
 qmd: "phpstan modules swarm random story modulitemi"
-=======
-
->>>>>>> .merge_file_9SYFVp
 ---
 
 # PHPStan Modules swarm random + docs moduli/temi

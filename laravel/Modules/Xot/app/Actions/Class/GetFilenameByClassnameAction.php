@@ -8,10 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/class-get-filename-by-classname-action.md
-<<<<<<< .merge_file_n4m0Uk
  *
-=======
->>>>>>> .merge_file_hUvpcS
  * @contract docs/contracts/class-get-filename-by-classname-action.md
  */
 class GetFilenameByClassnameAction

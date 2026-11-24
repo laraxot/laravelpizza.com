@@ -7,10 +7,7 @@ updated: 2026-11-24
 issues:
   - "https://github.com/laraxot/module_cms_fila5/issues/ADR-00010"
 superseded_by: 0010-no-ticket-logic-in-page-slug-middleware.md
-<<<<<<< .merge_file_c68KmD
 qmd: "00010 no ticket logic page slug"
-=======
->>>>>>> .merge_file_dPFoLb
 ---
 
 > Superseded da [0010-no-ticket-logic-in-page-slug-middleware.md](0010-no-ticket-logic-in-page-slug-middleware.md): numerazione malformata a cinque cifre della stessa decisione. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

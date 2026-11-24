@@ -14,10 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-all-models-by-module-name-action.md
-<<<<<<< .merge_file_M4RPAn
  *
-=======
->>>>>>> .merge_file_CVcWdh
  * @contract docs/contracts/get-all-models-by-module-name-action.md
  */
 class GetAllModelsByModuleNameAction

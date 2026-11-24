@@ -87,7 +87,6 @@ database — e questa copia va cancellata, non tenuta come riserva.
 sopra: sono stati spostati, non giudicati. Prima di copiarne uno nel codice
 vivo, confrontalo con quello che c'e' adesso.
 
-<<<<<<< .merge_file_SiwZN7
 
 ---
 
@@ -106,5 +105,3 @@ del modulo, copiati qui con suffisso `.zero_used`.
 | `public/header-actions-wrap.css` | 32 | copia identica di `public/css/header-actions-wrap.css`, quella che carica `AdminPanelProvider` (`xot::css/header-actions-wrap.css`) |
 
 Il prossimo sync li riporta finche' il repository del modulo non li toglie.
-=======
->>>>>>> .merge_file_oWYNQH

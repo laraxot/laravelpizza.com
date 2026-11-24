@@ -11,10 +11,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/export-pdf-by-html-action.md
-<<<<<<< .merge_file_nBzDDL
  *
-=======
->>>>>>> .merge_file_Be3hul
  * @contract docs/contracts/export-pdf-by-html-action.md
  */
 class PdfByHtmlAction
