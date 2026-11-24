@@ -3,7 +3,15 @@ title: "git merge conflict inventory 2026 04 28"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_LxXxoa
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ItecgZ
 qmd: "git merge conflict inventory 2026 04 28"
 issues: []
 discussions: []
@@ -29,5 +37,16 @@ discussions: []
 
 ## Notes
 
+<<<<<<< HEAD
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+<<<<<<< .merge_file_LxXxoa
+=======
+=======
+<<<<<<< HEAD
+- Inventory generated from `rg -l "^(CONFLICT_START|-------|CONFLICT_END)"`.
+=======
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ItecgZ
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.

@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_ZgQlhf
 title: "Epics — Activity"
+=======
+<<<<<<< HEAD
+title: "Epics: Activity"
+=======
+<<<<<<< HEAD
+title: "Epics — Activity"
+=======
+title: "Epics: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xPC9x3
 type: epics
 module: Activity
 related:

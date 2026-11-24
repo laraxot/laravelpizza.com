@@ -3,7 +3,15 @@ title: "vite errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_N9UVFI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KZ3B8M
 qmd: "vite errors"
 issues: []
 discussions: []
@@ -61,7 +69,19 @@ cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
+<<<<<<< .merge_file_N9UVFI
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KZ3B8M
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -86,8 +106,23 @@ ls -la dist/
 - Verifica dell'integrità dei file compilati
 
 ## Collegamenti Correlati
+<<<<<<< .merge_file_N9UVFI
 - [Documentazione Generale Errori](/project_docs/errors/README.md)
 - [Gestione Temi CMS](../themes/README.md)
+=======
+<<<<<<< HEAD
+- [Documentazione Generale Errori](/project_docs/errors/README.md)
+- [Gestione Temi CMS](../themes/README.md)
+=======
+<<<<<<< .merge_file_7vScen
+- [Documentazione Generale Errori](/project_docs/errors/readme.md)
+- [Gestione Temi CMS](../../../../Themes/README.md)
+=======
+- [Documentazione Generale Errori](/project_docs/errors/README.md)
+- [Gestione Temi CMS](../themes/README.md)
+>>>>>>> .merge_file_QXiiK6
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KZ3B8M
 - [Processo di Deploy](../../project_docs/deployment/themes.md)
 
 ## Note Tecniche
@@ -126,6 +161,13 @@ npm cache clean --force
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
 npm install
+<<<<<<< .merge_file_N9UVFI
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KZ3B8M
 npm install && npm run build
 ```
 

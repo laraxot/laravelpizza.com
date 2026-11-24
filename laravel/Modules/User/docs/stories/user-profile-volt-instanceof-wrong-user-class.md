@@ -19,17 +19,10 @@ related:
   - ../../laravel/Modules/User/app/Models/BaseUser.php
   - ../../laravel/Modules/User/app/Models/User.php
   - ../../laravel/Modules/Quaeris/app/Models/User.php
-<<<<<<< HEAD
-  - ../../laravel/Modules/<nome progetto>/app/Models/User.php
-github:
-  repository: https://github.com/laraxot/module_user_fila5
-  issues: https://github.com/laraxot/module_user_fila5/issues
-=======
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
 qmd: "user profile volt instanceof wrong class"
->>>>>>> laraxot/dev
 ---
 
 # STORY — ProfileEditVoltComponent controllava instanceof contro la classe User sbagliata
@@ -51,13 +44,6 @@ errori `cast.string` / `argument.type` / `method.nonObject` su
 ```
 
 Il model di auth reale e' `Modules\Quaeris\Models\User`, non
-<<<<<<< HEAD
-'model' => Modules\<nome progetto>\Models\User::class,
-```
-
-Il model di auth reale e' `Modules\<nome progetto>\Models\User`, non
-=======
->>>>>>> laraxot/dev
 `Modules\User\Models\User`. Le due classi sono **sorelle**, entrambe
 `extends Modules\User\Models\BaseUser` — non genitore/figlio.
 
@@ -119,10 +105,6 @@ presente:
 - AC5 (non verificato in questa sessione — DB di test con nota separata,
   vedi [[env-sqlite-manca-suite-non-eseguibile]]): un test Pest end-to-end
   che autentica un utente reale (`Modules\Quaeris\Models\User`) e chiama
-<<<<<<< HEAD
-  che autentica un utente reale (`Modules\<nome progetto>\Models\User`) e chiama
-=======
->>>>>>> laraxot/dev
   `updateProfile()`/`updatePassword()`/`deleteAccount()` deve passare senza
   finire nel catch generico.
 
@@ -194,10 +176,6 @@ Claude Sonnet 5
   `Carbon|null`)
 
 ## Aggiornamento 2026-09-10 (subagent-quaeris-user, terza occorrenza indipendente)
-<<<<<<< HEAD
-## Aggiornamento 2026-09-10 (subagent-<nome progetto>-user, terza occorrenza indipendente)
-=======
->>>>>>> laraxot/dev
 
 Task assegnato come "4 errori PHPStan cast.string/argument.type/method.nonObject
 su `ProfileEditVoltComponent.php`" (righe 142/348/353/362), senza riferimento a

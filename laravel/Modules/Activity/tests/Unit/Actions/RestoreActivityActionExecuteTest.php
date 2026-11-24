@@ -20,7 +20,7 @@ test('RestoreActivityAction aggiorna il record con le vecchie proprietà', funct
     (new RestoreActivityAction)->execute($model, ['name' => 'Ripristinato', 'status' => 'active']);
 
     expect($model->updatedAttributes)->toBe(['name' => 'Ripristinato', 'status' => 'active']);
-});
+})->group('ACTIVITY-RESTORE-INV-1');
 
 test('RestoreActivityAction incapsula eccezioni di update', function (): void {
     $model = new RestoreActivityFailingUpdateModel;
@@ -28,7 +28,7 @@ test('RestoreActivityAction incapsula eccezioni di update', function (): void {
     expect(function () use ($model): void {
         (new RestoreActivityAction)->execute($model, ['name' => 'x']);
     })->toThrow(Exception::class);
-});
+})->group('ACTIVITY-RESTORE-INV-3');
 
 test('RestoreActivityAction rifiuta oldProperties vuote', function (): void {
     $model = new RestoreActivityEmptyModel;
@@ -36,4 +36,4 @@ test('RestoreActivityAction rifiuta oldProperties vuote', function (): void {
     expect(function () use ($model): void {
         (new RestoreActivityAction)->execute($model, []);
     })->toThrow(AssertInvalidArgumentException::class);
-});
+})->group('ACTIVITY-RESTORE-INV-2');

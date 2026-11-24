@@ -237,7 +237,23 @@ class ClientObserver
 - [Business Logic Overview](./README.md)
 - [Business Logic Analysis](./business-logic-analysis.md)
 - [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
+<<<<<<< .merge_file_tlV3k3
 - [Business Logic Overview](./readme.md)
+=======
+<<<<<<< HEAD
+- [Business Logic Overview](./README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Business Logic Overview](./readme.md)
+=======
+- [Business Logic Overview](./README.md)
+>>>>>>> laraxot/dev
+=======
+- [Business Logic Overview](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_klDFPh
 - [Business Logic Analysis](./business-logic-analysis.md)
 - [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
 

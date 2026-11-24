@@ -1,5 +1,14 @@
 ---
+<<<<<<< .merge_file_ihS3Oq
 created: 2026-10-07
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_pK6kYa
+created: 2026-10-07
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KPMKuA
 title: "Map Controls I18n It En De Es .story"
 type: note
 tags: [documentation]
@@ -9,6 +18,13 @@ qmd: "Map Controls I18n It En De Es .story"
 date_originale_nome_file: 2026-10-07
 issues: [122]
 discussions: []
+<<<<<<< .merge_file_ihS3Oq
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_oaUIXM
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KPMKuA
 ---
 
 # Controlli e popup della mappa tradotti in it, en, de, es

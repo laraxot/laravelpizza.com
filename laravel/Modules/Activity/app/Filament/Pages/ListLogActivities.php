@@ -25,7 +25,6 @@ use Modules\Activity\Models\Activity;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 use Stringable;
 
-use function Safe\json_encode;
 
 /**
  * Classe base per visualizzare lo storico delle attività di un record.
@@ -61,21 +60,7 @@ abstract class ListLogActivities extends XotBasePage
 
     public function getBreadcrumb(): string
     {
-        $breadcrumb = static::$breadcrumb ?? __('activity::activities.breadcrumb');
-
-        // Convert to string (__() returns string|array|null)
-        if (is_array($breadcrumb)) {
-            return implode(' ', array_map(
-                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
-                $breadcrumb,
-            ));
-        }
-
-        if (is_string($breadcrumb)) {
-            return $breadcrumb;
-        }
-
-        return '';
+        return self::stringifyTranslationValue(static::$breadcrumb ?? __('activity::activities.breadcrumb'));
     }
 
     public function getTitle(): string
@@ -88,21 +73,7 @@ abstract class ListLogActivities extends XotBasePage
             ? $recordTitle->toHtml()
             : (string) $recordTitle;
 
-        $title = __('activity::activities.title', ['record' => $titleString]);
-
-        // __() returns string|array|null
-        if (is_array($title)) {
-            return implode(' ', array_map(
-                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
-                $title,
-            ));
-        }
-
-        if (is_string($title)) {
-            return $title;
-        }
-
-        return '';
+        return self::stringifyTranslationValue(__('activity::activities.title', ['record' => $titleString]));
     }
 
     /**
@@ -222,13 +193,7 @@ abstract class ListLogActivities extends XotBasePage
 
     protected function sendRestoreSuccessNotification(): Notification
     {
-        $title = __('activity::activities.events.restore_successful');
-        $titleString = is_array($title)
-            ? implode(' ', array_map(
-                static fn (mixed $value): string => self::stringifyTranslationValue($value),
-                $title,
-            ))
-            : (is_string($title) ? $title : '');
+        $titleString = self::stringifyTranslationValue(__('activity::activities.events.restore_successful'));
 
         return Notification::make()
             ->title($titleString)
@@ -238,13 +203,7 @@ abstract class ListLogActivities extends XotBasePage
 
     protected function sendRestoreFailureNotification(?string $message = null): Notification
     {
-        $title = __('activity::activities.events.restore_failed');
-        $titleString = is_array($title)
-            ? implode(' ', array_map(
-                fn (mixed $v): string => is_scalar($v) ? (string) $v : json_encode($v),
-                $title,
-            ))
-            : (is_string($title) ? $title : '');
+        $titleString = self::stringifyTranslationValue(__('activity::activities.events.restore_failed'));
 
         $notification = Notification::make()
             ->title($titleString)
@@ -257,6 +216,10 @@ abstract class ListLogActivities extends XotBasePage
         return $notification->send();
     }
 
+    /**
+     * Converte il risultato di `__()` (string|array|null) o un suo elemento in stringa:
+     * gli array vengono appiattiti e uniti con uno spazio.
+     */
     private static function stringifyTranslationValue(mixed $value): string
     {
         if (is_string($value)) {

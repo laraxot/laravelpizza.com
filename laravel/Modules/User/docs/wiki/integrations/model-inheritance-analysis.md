@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "model inheritance analysis analisi ereditarietà modelli"
->>>>>>> laraxot/dev
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -154,11 +151,7 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [Regole Qualità Codice](../../code-quality.md)
-=======
-- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
->>>>>>> laraxot/dev
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

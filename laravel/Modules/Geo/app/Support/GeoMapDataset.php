@@ -127,7 +127,12 @@ final class GeoMapDataset
     }
 
     /**
+<<<<<<< .merge_file_N5HhdG
      * @param  array<array-key, mixed>  $decoded
+=======
+     * @param array<array-key, mixed> $decoded
+     *
+>>>>>>> .merge_file_uxjzZx
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -157,7 +162,12 @@ final class GeoMapDataset
     }
 
     /**
+<<<<<<< .merge_file_N5HhdG
      * @param  array<array-key, mixed>  $feature
+=======
+     * @param array<array-key, mixed> $feature
+     *
+>>>>>>> .merge_file_uxjzZx
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -194,7 +204,12 @@ final class GeoMapDataset
     }
 
     /**
+<<<<<<< .merge_file_N5HhdG
      * @param  array<array-key, mixed>  $properties
+=======
+     * @param array<array-key, mixed> $properties
+     *
+>>>>>>> .merge_file_uxjzZx
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array

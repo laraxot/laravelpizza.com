@@ -25,10 +25,7 @@ related:
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
-<<<<<<< HEAD
-=======
 qmd: "assert isinstanceof usercontract audit story assertisinstanceof"
->>>>>>> laraxot/dev
 ---
 
 # STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
@@ -36,13 +33,6 @@ qmd: "assert isinstanceof usercontract audit story assertisinstanceof"
 ## Contesto
 
 Utente, mid-turn su un altro task: "fare Assert::isInstanceOf($user,
-<<<<<<< HEAD
-User::class); e' sbagliato meglio confrontare con UserContract!": stesso
-principio architetturale gia' documentato in
-`user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):
-`config/auth.php` usa `Modules\<nome progetto>\Models\User` come auth model reale,
-=======
->>>>>>> laraxot/dev
 User::class); e' sbagliato meglio confrontare con UserContract!" — stesso
 principio architetturale gia' documentato in
 `user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):

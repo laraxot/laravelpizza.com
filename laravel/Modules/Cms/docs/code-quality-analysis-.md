@@ -3,11 +3,18 @@ title: "code quality analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_LKJBkT
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ErWDVV
 qmd: "code quality analysis cms 2025-11-24"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Code Quality Analysis - CMS Module - November 2025
@@ -23,6 +30,25 @@ status: draft
 
 ---
 
+<<<<<<< .merge_file_LKJBkT
+=======
+<<<<<<< HEAD
+title: "code quality analysis"
+=======
+<<<<<<< HEAD
+title: "code quality analysis "
+=======
+title: "code quality analysis"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality analysis cms 2025-11-24"
+issues: []
+discussions: []
+>>>>>>> .merge_file_ErWDVV
 ## 🚨 Status Critico
 
 ### ❌ PHPStan Errors (6)

@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_MGv2PP
+=======
+<<<<<<< HEAD
+title: "Design Comuni Index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Design Comuni Index"
+=======
+>>>>>>> .merge_file_xMflzU
 title: "design comuni index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "design comuni index"
+<<<<<<< .merge_file_MGv2PP
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xMflzU
 issues: []
 discussions: []
 ---
@@ -102,6 +117,33 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 
 ---
 
+<<<<<<< .merge_file_MGv2PP
+=======
+<<<<<<< HEAD
+title: "DESIGN COMUNI INDEX"
+=======
+<<<<<<< HEAD
+title: "design comuni index"
+=======
+title: "DESIGN COMUNI INDEX"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "DESIGN COMUNI INDEX"
+=======
+<<<<<<< HEAD
+qmd: "design comuni index"
+=======
+qmd: "DESIGN COMUNI INDEX"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_xMflzU
 **Data**: 2026-04-03  
 **Stato**: ✅ 63.0% OK  
 **Modulo**: Cms - Content Management System

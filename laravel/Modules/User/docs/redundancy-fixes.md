@@ -11,15 +11,11 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
+qmd: "redundancy fixes"
+status: draft
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
-status: draft
----
 
 # Correzioni Ridondanze - Gennaio 2026
 
@@ -128,23 +124,8 @@ Prima di committare, verifica:
 
 ## Collegamenti
 
-- [Redundancy Rules](../../xot/docs/filament/redundancy-rules.md)
-- [Service Provider Architecture](./service-provider-architecture.md)
-- [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
-
 - [Redundancy Rules](../../Xot/docs/filament/redundancy-rules.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
 *Ultimo aggiornamento: Gennaio 2026*
-*Ultimo aggiornamento: Gennaio 2026*
-- [Service Provider Architecture](./service_provider_architecture.md)
-- [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
-
-*Ultimo aggiornamento: Gennaio 2026*
-=======
-qmd: "redundancy fixes"
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
->>>>>>> laraxot/dev

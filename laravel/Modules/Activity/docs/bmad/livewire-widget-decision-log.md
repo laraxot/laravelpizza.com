@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_KgoRZN
 title: "Decision log — Activity"
+=======
+<<<<<<< HEAD
+title: "Decision log: Activity"
+=======
+<<<<<<< HEAD
+title: "Decision log — Activity"
+=======
+title: "Decision log: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_mXCym5
 type: decision-log
 module: Activity
 related:

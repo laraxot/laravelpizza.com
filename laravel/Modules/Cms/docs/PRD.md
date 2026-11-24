@@ -3,7 +3,15 @@ title: "PRD"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_8w9AL4
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_2QMBBc
 qmd: "PRD"
 issues: []
 discussions: []
@@ -18,6 +26,17 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_8w9AL4
+=======
+title: "PRD"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PRD"
+issues: []
+discussions: []
+>>>>>>> .merge_file_2QMBBc
 ## Document Control
 
 | Version | Date | Author | Changes |
@@ -509,7 +528,19 @@ CREATE TABLE cms_navigation (
 
 ### 12.3 Related PRDs
 - [Blog Module PRD](../../Blog/docs/PRD.md)
+<<<<<<< .merge_file_8w9AL4
 - [Media Module PRD](../../Media/docs/prd.md)
+=======
+<<<<<<< HEAD
+- [Media Module PRD](../../Media/docs/prd.md)
+=======
+<<<<<<< HEAD
+- [Media Module PRD](../../Media/docs/PRD.md)
+=======
+- [Media Module PRD](../../Media/docs/prd.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_2QMBBc
 - [Seo Module PRD](../../Seo/docs/PRD.md)
 - [Lang Module PRD](../../Lang/docs/PRD.md)
 

@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "create theme react"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Creazione di un Tema con React
@@ -238,7 +241,19 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
+<<<<<<< .merge_file_hbLw0m
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_VgEsJr
 ```
 
 ## Troubleshooting
@@ -276,6 +291,18 @@ npm run preview
 ## Alternative
 
 Se preferisci utilizzare un altro approccio, puoi consultare le guide per:
+<<<<<<< HEAD
+- [Creazione di un tema con Volt, Folio e Filament](create_theme_volt_folio_filament.md)
+- [Creazione di un tema con Vue.js](create_theme_vue.md)
+- [Creazione di un tema con Laravel](create_theme.md)
+=======
+<<<<<<< .merge_file_OoFTf0
 - [Creazione di un tema con Volt, Folio e Filament](create-theme-volt-folio-filament.md)
 - [Creazione di un tema con Vue.js](create-theme-vue.md)
 - [Creazione di un tema con Laravel](../create_theme.md)
+=======
+- [Creazione di un tema con Volt, Folio e Filament](create_theme_volt_folio_filament.md)
+- [Creazione di un tema con Vue.js](create_theme_vue.md)
+- [Creazione di un tema con Laravel](create_theme.md)
+>>>>>>> .merge_file_moYd0T
+>>>>>>> laraxot/dev

@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_FCOViZ
 title: "Product brief — Activity"
+=======
+<<<<<<< HEAD
+title: "Product brief: Activity"
+=======
+<<<<<<< HEAD
+title: "Product brief — Activity"
+=======
+title: "Product brief: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_McN1p7
 type: product-brief
 module: Activity
 related:

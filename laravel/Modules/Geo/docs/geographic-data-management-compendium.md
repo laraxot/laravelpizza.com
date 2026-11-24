@@ -180,7 +180,19 @@ Indipendentemente dalla strategia scelta, le seguenti best practices dovrebbero 
 Per facilitare la navigazione nella documentazione esistente, ecco una mappa organizzata per argomento:
 
 ### Analisi Generali
+<<<<<<< .merge_file_jhtAUs
 - [module_geo.md](module-geo.md) - Panoramica del modulo Geo
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md) - Panoramica del modulo Geo
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md) - Panoramica del modulo Geo
+=======
+- [module_geo.md](module-geo.md) - Panoramica del modulo Geo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xGbGfB
 - [architecture.md](architecture.md) - Architettura del modulo
 
 ### GeoJsonModel

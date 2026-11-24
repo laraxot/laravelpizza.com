@@ -39,7 +39,7 @@ it('returns a streamed download of the requested log file', function (): void {
     /** @var Symfony\Component\HttpFoundation\File\File $file */
     $file = $response->getFile();
     expect(File::get($file->getPathname()))->toBe("contenuto del report\n");
-});
+})->group('ACTIVITY-LOGDOWNLOAD-INV-1');
 
 it('refuses files outside the log directory, missing files and non-log files', function (): void {
     $action = new DownloadLogFileAction;
@@ -47,4 +47,4 @@ it('refuses files outside the log directory, missing files and non-log files', f
     foreach (['../framework/testing/segreto-download.log', 'non-esiste.log', '', 'laravel.log/../../.env', '/etc/passwd'] as $file) {
         expect(fn () => $action->execute($file))->toThrow(InvalidLogFileException::class);
     }
-});
+})->group('ACTIVITY-LOGDOWNLOAD-INV-2');

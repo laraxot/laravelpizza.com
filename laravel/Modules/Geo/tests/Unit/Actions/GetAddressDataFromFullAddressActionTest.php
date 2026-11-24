@@ -20,11 +20,19 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 it('returns AddressData when first service succeeds', function (): void {
+<<<<<<< .merge_file_gfGhnE
     Assert::assertCount(0, (new GetAddressDataFromFullAddressAction)->getErrors());
 });
 
 it('initializes with empty errors collection', function (): void {
     Assert::assertCount(0, (new GetAddressDataFromFullAddressAction)->getErrors());
+=======
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
+});
+
+it('initializes with empty errors collection', function (): void {
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
+>>>>>>> .merge_file_2w84DZ
 });
 
 it('executes without throwing error for basic call', function (): void {
@@ -43,6 +51,7 @@ it('executes without throwing error for basic call', function (): void {
         'services.mapbox.access_token' => 'test-key',
         'services.opencage.key' => 'test-key',
     ]);
+<<<<<<< .merge_file_gfGhnE
 
     $action = new GetAddressDataFromFullAddressAction;
     Assert::assertNull($action->execute('Test Address'));
@@ -68,6 +77,33 @@ function geocodeProviderStub(?AddressData $result, ?string $failure = null): obj
                 throw new \RuntimeException($this->failure);
             }
 
+=======
+
+    $action = new GetAddressDataFromFullAddressAction();
+    Assert::assertNull($action->execute('Test Address'));
+    Assert::assertNotEmpty($action->getErrors());
+})->group('GEO-GEOCODE-INV-2', 'GEO-GEOCODE-INV-3');
+
+/**
+ * @return object{calls: list<string>}
+ */
+function geocodeProviderStub(?AddressData $result, ?string $failure = null): object
+{
+    return new class($result, $failure)
+    {
+        /** @var list<string> */
+        public array $calls = [];
+
+        public function __construct(private readonly ?AddressData $result, private readonly ?string $failure) {}
+
+        public function execute(string $address): ?AddressData
+        {
+            $this->calls[] = $address;
+            if ($this->failure !== null) {
+                throw new \RuntimeException($this->failure);
+            }
+
+>>>>>>> .merge_file_2w84DZ
             return $this->result;
         }
     };
@@ -80,7 +116,11 @@ it('asks the provider chosen in geo.driver first and stops at its answer', funct
     app()->instance(GetAddressFromGoogleMapsAction::class, $google);
     config(['geo.driver' => 'photon']);
 
+<<<<<<< .merge_file_gfGhnE
     $result = (new GetAddressDataFromFullAddressAction)->execute('Piazza della Signoria, Firenze');
+=======
+    $result = (new GetAddressDataFromFullAddressAction())->execute('Piazza della Signoria, Firenze');
+>>>>>>> .merge_file_2w84DZ
 
     Assert::assertSame('Firenze', $result?->city);
     Assert::assertSame(['Piazza della Signoria, Firenze'], $photon->calls);
@@ -94,7 +134,11 @@ it('moves to the next provider when one throws, and keeps its message', function
     app()->instance(GetAddressFromGoogleMapsAction::class, $google);
     config(['geo.driver' => 'photon']);
 
+<<<<<<< .merge_file_gfGhnE
     $action = new GetAddressDataFromFullAddressAction;
+=======
+    $action = new GetAddressDataFromFullAddressAction();
+>>>>>>> .merge_file_2w84DZ
     $result = $action->execute('Via Roma 1, Milano');
 
     Assert::assertSame('Milano', $result?->city);

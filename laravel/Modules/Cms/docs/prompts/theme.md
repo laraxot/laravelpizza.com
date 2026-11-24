@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "theme"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Theme
@@ -28,6 +31,18 @@ cd laravel/Themes/<nome tem>
 composer update -W 
 npm install
 npm run build
+<<<<<<< .merge_file_qjNdli
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_FaApti
 capisci te i perche' 
 utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm

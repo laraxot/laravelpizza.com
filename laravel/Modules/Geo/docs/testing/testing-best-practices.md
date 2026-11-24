@@ -605,7 +605,19 @@ describe('Edge Cases', function () {
 
 ## Collegamenti
 
+<<<<<<< .merge_file_G37oXM
 - [Architettura Testing Principale](../testing-architecture-overview.md)
+=======
+<<<<<<< HEAD
+- [Architettura Testing Principale](./testing-architecture-overview.md)
+=======
+<<<<<<< HEAD
+- [Architettura Testing Principale](./testing-architecture-overview.md)
+=======
+- [Architettura Testing Principale](../testing-architecture-overview.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_9MOuO1
 - [Guida Risoluzione Conflitti](../git/git-conflicts-resolution-guide.md)
 - [Best Practices Modulo <nome modulo>](../../laravel/modules/<nome modulo>/docs/testing-best-practices.md)
 - [Best Practices Modulo <nome progetto>](../../laravel/modules/<nome progetto>/docs/testing-best-practices.md)

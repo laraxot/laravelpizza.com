@@ -8,3 +8,11 @@ qmd: "test"
 issues: []
 discussions: []
 ---
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -144,4 +144,16 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
 - [`phpstan.md`](#phpstan) - PHPStan security configuration
 - [`CODE_QUALITY_ANALYSIS.md`](code_quality_analysis.md) - Code quality standards
+<<<<<<< .merge_file_r4rcuz
 - [`testing.md`](#testing) - Testing procedures
+=======
+<<<<<<< HEAD
+- [`testing.md`](#testing) - Testing procedures
+=======
+<<<<<<< HEAD
+- [`testing.md`](#testing) - Testing procedures
+=======
+- [`testing.md`](#testing) - Testing procedures
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_tcjHI6

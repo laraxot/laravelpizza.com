@@ -16,20 +16,13 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
 status: draft
-=======
->>>>>>> laraxot/dev
 ---
 
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
-<<<<<<< HEAD
 - [README modulo User](./README.md)
-=======
-- [README modulo User](./readme.md)
->>>>>>> laraxot/dev
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
@@ -51,11 +44,7 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
-<<<<<<< HEAD
 /var/www/html/<nome progetto>/laravel/
-=======
-/var/www/html/Quaeris/laravel/
->>>>>>> laraxot/dev
 ├── Modules/
 │   └── User/
 │       └── app/
@@ -195,24 +184,6 @@ class LoginFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-<<<<<<< HEAD
-
-    public function login(): void
-    {
-        $data = $this->form->getState();
-
-        if (Auth::attempt([
-            'email' => $data['email'],
-            'password' => $data['password']
-        ], $data['remember'] ?? false)) {
-            session()->regenerate();
-
-            $locale = app()->getLocale();
-            redirect('/' . $locale . '/dashboard');
-        }
-
-=======
->>>>>>> laraxot/dev
     
     public function login(): void
     {
@@ -284,14 +255,6 @@ class RegisterFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-<<<<<<< HEAD
-
-    public function register(): void
-    {
-        $data = $this->form->getState();
-
-=======
->>>>>>> laraxot/dev
     
     public function register(): void
     {

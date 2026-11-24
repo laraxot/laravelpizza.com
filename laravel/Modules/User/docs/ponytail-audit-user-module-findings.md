@@ -1,15 +1,10 @@
 ---
 title: "Ponytail-audit 2026-07-02: User module findings"
-<<<<<<< HEAD
-type: note
+type: audit
 status: draft
 updated: 2026-10-07
 tags: [docs, user]
 qmd: "ponytail-audit 2026-07-02: user module findings user"
-=======
-type: audit
-qmd: "ponytail audit user findings ponytailaudit 20260702"
->>>>>>> laraxot/dev
 ---
 # Ponytail-audit 2026-07-02: User module findings
 
@@ -39,20 +34,6 @@ drafts provides no value over deletion.
 
 ## Verification performed
 
-<<<<<<< HEAD
-- `grep -rln "UserContract" Modules/ --include="*.php"`: only real hits are the
-  active `Modules/User/app/Contracts/UserContract.php` (aliasing
-  `Modules\Xot\Contracts\UserContract`) and its ~900 legitimate repo-wide references;
-  nothing references the `.to_xot` file by path or string.
-- `find Modules -name "*.to_xot"`: three other unrelated `.to_xot` files exist
-  (`Modules/<nome progetto>/database/factories/ExtraFactory.to_xot`,
-  `Modules/<nome progetto>/app/Models/Extra.to_xot`,
-  `Modules/Media/app/Actions/Image/SvgExistsAction.to_xot`) in different modules;
-  out of scope for this module's repo and left untouched.
-- `git status` in `Modules/User` was clean before the delete and showed exactly one
-  `D app/Contracts/UserContract.php.to_xot` after: no collateral deletions.
-=======
->>>>>>> laraxot/dev
 - `grep -rln "UserContract" Modules/ --include="*.php"` — only real hits are the
   active `Modules/User/app/Contracts/UserContract.php` (aliasing
   `Modules\Xot\Contracts\UserContract`) and its ~900 legitimate repo-wide references;
@@ -89,9 +70,5 @@ real `UserContract.php` is untouched.
 - `Modules/User/docs/wiki/decisions/contracts-and-lang-backup-archival-2026-06-30.md`:
   prior session that first identified this file and intended (but never committed)
   an archive-as-`.bak` rename.
-<<<<<<< HEAD
 - `Modules/Xot/docs/ponytail-audit-user-module-findings.md`, `Modules/Notify/docs/ponytail-audit-user-module-findings.md`:
-=======
-- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
->>>>>>> laraxot/dev
   sibling module findings from the same repo-wide audit pass.

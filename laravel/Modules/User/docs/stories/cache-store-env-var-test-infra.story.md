@@ -16,18 +16,11 @@ updated_at: 2026-09-21
 tags: [testing, cache, phpunit, spatie-permission, env]
 related:
   - Modules/User/docs/stories/10.3.retire-auth-livewire-twins.story.md
-<<<<<<< HEAD
   - Modules/User/docs/stories/dashboard-lang-collateral-damage.story.md
 github:
   repository: null
   issues: []
-=======
-  - Modules/User/docs/stories/dashboard-lang-collateral-damage-2026-09-21.story.md
-github:
-  repository: null
-  issues: []
 qmd: "cache store env var test infra"
->>>>>>> laraxot/dev
 ---
 
 # phpunit.xml: CACHE_DRIVER non ha effetto, serve CACHE_STORE
@@ -40,11 +33,7 @@ Durante verifica del fix concorrente su `HasSpatiePermission::hasPermissionToOrC
 
 ```
 QueryException: SQLSTATE[42S02]: Base table or view not found:
-<<<<<<< HEAD
 1146 Table '<nome progetto>_data_test.cache' doesn't exist
-=======
-1146 Table 'quaeris_data_test.cache' doesn't exist
->>>>>>> laraxot/dev
 ```
 
 ## Causa radice
@@ -56,17 +45,10 @@ QueryException: SQLSTATE[42S02]: Base table or view not found:
 - `APP_ENV=testing` → `app/Application.php::environmentFile()` cerca prima `.env.sqlite`
   poi `.env.testing`. Verificato: **`.env.sqlite` non esiste** su disco (`ls` → No such
   file or directory). Carica quindi `.env.testing`, che a sua volta ha
-<<<<<<< HEAD
   `CACHE_DRIVER=array` (riga 48): stesso bug, stesso nome sbagliato.
 - Risultato: nessuna delle due fonti setta `CACHE_STORE`. Laravel ripiega sul default
   `'database'`, che richiede la tabella `cache` (migration standard Laravel): assente
   da `<nome progetto>_data_test`.
-=======
->>>>>>> laraxot/dev
-  `CACHE_DRIVER=array` (riga 48) — stesso bug, stesso nome sbagliato.
-- Risultato: nessuna delle due fonti setta `CACHE_STORE`. Laravel ripiega sul default
-  `'database'`, che richiede la tabella `cache` (migration standard Laravel) — assente
-  da `quaeris_data_test`.
 - Impatto: non solo questo test. **Qualsiasi test che tocchi `Cache::` fallisce** allo
   stesso modo (Spatie Permission usa la cache internamente per `hasPermissionTo()`).
 
@@ -107,13 +89,6 @@ tutti e 7 i metodi di `OauthAccessTokenPolicy`. Codice e uso confermati corretti
 
 ## Reperto collaterale: dead code già rimosso
 
-<<<<<<< HEAD
-`Modules/User/app/Actions/Permission/EnsurePermissionExistsAction.php`: Action ormai
-bypassata dal refactor sopra (che chiama `Permission::findOrCreate()` diretto). Grep
-repo-wide conferma zero riferimenti. Il file risulta già `D` (deleted, non committato)
-in `git status`: cancellato dalla sessione concorrente, non da me. Nessuna azione
-=======
->>>>>>> laraxot/dev
 `Modules/User/app/Actions/Permission/EnsurePermissionExistsAction.php` — Action ormai
 bypassata dal refactor sopra (che chiama `Permission::findOrCreate()` diretto). Grep
 repo-wide conferma zero riferimenti. Il file risulta già `D` (deleted, non committato)

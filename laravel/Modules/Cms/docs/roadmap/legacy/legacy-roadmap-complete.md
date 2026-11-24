@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "legacy roadmap complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🗺️ ROADMAP COMPLETA - Modulo CMS
@@ -25,6 +24,17 @@ Il modulo **CMS** (Content Management System) gestisce tutti i contenuti dinamic
 
 ---
 
+<<<<<<< .merge_file_J8y1TF
+=======
+title: "legacy roadmap complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "legacy roadmap complete"
+issues: []
+discussions: []
+>>>>>>> .merge_file_mxI7uc
 ## 🎯 Funzionalità Implementate
 
 ### ✅ Core Content Management
@@ -390,7 +400,15 @@ La cartella `docs/` è ben organizzata con:
 ### Documentazione Correlata
 - [Roadmap Progetto](../../../../../../docs/roadmap_project.md)
 - [Modulo User](../../user/docs/roadmap_complete.md)
+<<<<<<< HEAD
 - [Modulo Media](../../../../Media/docs/README.md)
+=======
+<<<<<<< HEAD
+- [Modulo Media](../../../../Media/docs/readme.md)
+=======
+- [Modulo Media](../../../../Media/docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Theme Sixteen](../../../../../Themes/Sixteen/docs/README.md)
 
 ### Resources

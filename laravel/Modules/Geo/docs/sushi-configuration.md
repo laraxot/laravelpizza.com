@@ -144,4 +144,16 @@ Gli attributi fillable definiscono quali campi possono essere assegnati in massa
 ## Documentazione Correlata
 - [Sushi Documentation](https://github.com/calebporzio/sushi)
 - [Comune Model](comune-model.md)
+<<<<<<< .merge_file_sekRtG
 - [Sushi Command](sushi-command.md) 
+=======
+<<<<<<< HEAD
+- [Sushi Command](sushi-command.md) 
+=======
+<<<<<<< HEAD
+- [Sushi Command](sushi-command.md) 
+=======
+- Sushi Command 
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3mIaWG

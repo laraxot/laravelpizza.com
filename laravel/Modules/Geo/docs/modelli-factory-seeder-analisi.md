@@ -185,8 +185,23 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Documentazione Correlata
 - [Geo JSON Model](./geo_json_model.md)
+<<<<<<< .merge_file_WfWAhF
 - [Comune Unificazione](comune-unificazione-analisi.md)
 - [Consolidamento Modelli](consolidamento-modelli-geografici.md)
+=======
+<<<<<<< HEAD
+- [Comune Unificazione](./comune_unificazione_analisi.md)
+- [Consolidamento Modelli](./consolidamento_modelli_geografici.md)
+=======
+<<<<<<< HEAD
+- [Comune Unificazione](./comune_unificazione_analisi.md)
+- [Consolidamento Modelli](./consolidamento_modelli_geografici.md)
+=======
+- [Comune Unificazione](comune-unificazione-analisi.md)
+- [Consolidamento Modelli](consolidamento-modelli-geografici.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_V74x8S
 - [Cache Strategy](./cache_strategy.md)
 
 ### Moduli Collegati

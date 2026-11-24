@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Geo\Models\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
+<<<<<<< .merge_file_MwVQx9
 
+=======
+>>>>>>> .merge_file_BMiXWR
 trait GeographicalScopes
 {
     /**

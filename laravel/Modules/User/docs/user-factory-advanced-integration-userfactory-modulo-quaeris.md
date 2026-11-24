@@ -1,18 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "UserFactory Advanced Integration - Modulo User & <nome progetto>"
-=======
 title: "UserFactory Advanced Integration - Modulo User & Quaeris"
->>>>>>> laraxot/dev
 type: concept
 tags: [user, factory, advanced, integration]
 created: 2026-07-14
 updated: 2026-07-14
-<<<<<<< HEAD
-qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & <nome progetto>"
-=======
 qmd: "user-factory-advanced-integration-2 userfactory advanced integration - modulo user & quaeris"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -24,15 +16,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
 status: draft
----
-
-# UserFactory Advanced Integration - Modulo User & <nome progetto>
-
-## Post Deep-Study Analysis
-=======
->>>>>>> laraxot/dev
 ---
 
 # UserFactory Advanced Integration - Modulo User & Quaeris
@@ -46,25 +30,15 @@ Dopo uno studio approfondito dei modelli User, Patient, Doctor e Admin, l'integr
 ### Hierarchy Mapping
 ```
 BaseUser (User Module)
-<<<<<<< HEAD
-├── User (<nome progetto>) - STI Base + Business Logic
-    ├── Patient (HasParent) - Healthcare Consumer
-    ├── Doctor (HasParent) - Healthcare Provider
-=======
 ├── User (Quaeris) - STI Base + Business Logic
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider  
->>>>>>> laraxot/dev
     └── Admin (HasParent) - System Administrator
 ```
 
 ### Cross-Module Compatibility Matrix
 
-<<<<<<< HEAD
-| BaseUser Field | <nome progetto> User | Business Logic | Factory Support |
-=======
 | BaseUser Field | Quaeris User | Business Logic | Factory Support |
->>>>>>> laraxot/dev
 |----------------|----------------|----------------|-----------------|
 | `name` | `name` | Full name concat | ✅ Complete |
 | `email` | `email` | Authentication | ✅ Complete |
@@ -128,13 +102,6 @@ User::factory()->gdprCompliant()->create();
 
 ### Connection Strategy Perfezionata
 ```php
-<<<<<<< HEAD
-// BaseUser (User Module)
-protected $connection = 'user';
-
-// <nome progetto> User (Healthcare Domain)
-=======
->>>>>>> laraxot/dev
 // BaseUser (User Module) 
 protected $connection = 'user';
 
@@ -163,16 +130,6 @@ $address = $doctor->address; // Cross-module morph relation
 public function test_cross_module_compatibility()
 {
     $user = User::factory()->create();
-<<<<<<< HEAD
-
-    // BaseUser contracts respected
-    expect($user)->toHaveProperty('email');
-    expect($user)->toHaveProperty('password');
-    expect($user->email_verified_at)->toBeInstanceOf(Carbon::class);
-
-// <nome progetto> domain contracts
-=======
->>>>>>> laraxot/dev
     
     // BaseUser contracts respected
     expect($user)->toHaveProperty('email');
@@ -208,14 +165,6 @@ public function test_bulk_sti_performance()
         ...User::factory()->doctor()->count(30)->make(),
         ...User::factory()->admin()->count(5)->make(),
     ]);
-<<<<<<< HEAD
-
-    User::insert($users->toArray()); // Single query
-
-    expect(Patient::count())->toBe(100);
-    expect(Doctor::count())->toBe(30);
-=======
->>>>>>> laraxot/dev
     
     User::insert($users->toArray()); // Single query
     
@@ -261,14 +210,6 @@ public function run(): void
     User::factory()->patient()->count(500)->create();
     User::factory()->patient()->pregnant()->count(50)->create();
     User::factory()->patient()->eligibleForFreeServices()->count(200)->create();
-<<<<<<< HEAD
-
-    // Professional doctor network
-    User::factory()->doctorWithStudio()->count(50)->create();
-    User::factory()->doctor()->specialist()->count(20)->create();
-
-=======
->>>>>>> laraxot/dev
     
     // Professional doctor network
     User::factory()->doctorWithStudio()->count(50)->create();
@@ -341,11 +282,7 @@ public function run(): void
 - **Reusability**: Base authentication contracts preserved
 - **Testability**: Comprehensive user scenario testing
 
-<<<<<<< HEAD
-### For <nome progetto> Module
-=======
 ### For Quaeris Module
->>>>>>> laraxot/dev
 - **Domain Focus**: Healthcare-specific data generation
 - **Business Logic**: Real-world scenario testing
 - **Compliance**: GDPR and healthcare regulation support
@@ -364,22 +301,6 @@ public function run(): void
 
 ## Link Documentazione
 
-<<<<<<< HEAD
-### <nome progetto> Module
-- [Advanced Improvements Analysis](../../<nome progetto>/docs/factories/userfactory-advanced-improvements-analysis.md)
-- [Implementation Completed](../../<nome progetto>/docs/factories/userfactory_implementation_completed.md)
-- [Model States](../../<nome progetto>/docs/models/states.md)
-
-### User Module
-- [User Factory Integration](./user-factory-integration-module.md)
-- [Traits Complete Guide](./traits-complete-guide-aggiornato-post.md)
-- [BaseUser Architecture](./parental-inheritance.md)
-
-### Root Documentation
-- [UserFactory <nome progetto> Integration](../../../../../docs/userfactory_<nome progetto>_integration.md)
-- [Testing Standards](../../../../../docs/testing_standards.md)
-=======
->>>>>>> laraxot/dev
 ### Quaeris Module
 - [Advanced Improvements Analysis](../../Quaeris/docs/factories/userfactory-advanced-improvements-analysis.md)
 - [Implementation Completed](../../Quaeris/docs/factories/userfactory_implementation_completed.md)

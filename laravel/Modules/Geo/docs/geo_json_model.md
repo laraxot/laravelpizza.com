@@ -231,7 +231,19 @@ class Comune extends GeoJsonModel
 ```
 
 - Tutti i filtri e le select dinamiche ora usano solo il modello Comune.
+<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+=======
+- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JBHY8i
 
 ## Analisi: Comune come modello Sushi
 
@@ -310,7 +322,19 @@ updated: 2026-09-26
 qmd: "geo json model"
 issues: []
 discussions: []
+<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+=======
+- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JBHY8i
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
 
@@ -387,7 +411,19 @@ class ComuneSushi extends Model
 - [Sito ufficiale Sushi](https://usesushi.dev/)
 - [GitHub Sushi](https://github.com/calebporzio/sushi)
 - [Esempi avanzati](https://jasonlbeggs.com/blog/laravel-sushi)
+<<<<<<< .merge_file_ZN5XwD
 - [geo_entities.md](geo-entities.md)
+=======
+<<<<<<< HEAD
+- [geo_entities.md](./geo_entities.md)
+=======
+<<<<<<< HEAD
+- [geo_entities.md](./geo_entities.md)
+=======
+- [geo_entities.md](geo-entities.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JBHY8i
 
 ---
 
@@ -426,7 +462,19 @@ class ComuneSushi extends Model
 
 ---
 
+<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JBHY8i
 
 ## Approccio avanzato: SushiToJsons (CRUD, multi-tenant, Eloquent + JSON)
 
@@ -510,4 +558,16 @@ trait SushiToJsons
 
 ---
 
+<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+<<<<<<< HEAD
+- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+=======
+- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JBHY8i

@@ -23,4 +23,25 @@ Entry point del pack. Indice storico/legacy: [index.md](./index.md).
 | [piano-miglioramento.md](./piano-miglioramento.md) | piano P1/P2 |
 | [stories/module-bmad-audit.story.md](./stories/module-bmad-audit.story.md) | story dell'audit |
 | [ECC](../ecc/00-index.md) | checklist e stato controlli |
+<<<<<<< .merge_file_5EsZFo
 | [purpose.md (root docs)](../purpose.md) | scopo del modulo nella documentazione generale |
+=======
+<<<<<<< HEAD
+| [purpose.md (root docs)](../purpose.md) | scopo del modulo nella documentazione generale |
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+| [purpose.md (root docs)](../purpose.md) | scopo del modulo nella documentazione generale |
+=======
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_ECz6fH
+=======
+| [purpose.md (root docs)](../purpose.md) | scopo del modulo nella documentazione generale |
+>>>>>>> .merge_file_tknTpt
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_FtXDmg

@@ -3,7 +3,15 @@ title: "workflow init"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_R6a9Ze
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EUnGfN
 qmd: "workflow init"
 issues: []
 discussions: []
@@ -176,16 +184,31 @@ Crea lo script di inizializzazione `bashscripts/bmad/workflow-init.sh`:
 ```bash
 #!/bin/bash
 
+<<<<<<< .merge_file_R6a9Ze
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_EUnGfN
 # -----------------------------------------------------------------------------
 # BMAD Workflow Init
 # -----------------------------------------------------------------------------
 # Configura BMAD Method per il progetto PTVX
 # -----------------------------------------------------------------------------
+<<<<<<< .merge_file_R6a9Ze
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EUnGfN
 # =============================================================================
 # BMAD Workflow Init
 # =============================================================================
 # Configura BMAD Method per il progetto PTVX
 # =============================================================================
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 set -e
 

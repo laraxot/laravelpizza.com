@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_GSYmLF
 title: "Project context — Activity"
+=======
+<<<<<<< HEAD
+title: "Project context: Activity"
+=======
+<<<<<<< HEAD
+title: "Project context — Activity"
+=======
+title: "Project context: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_oKic8N
 type: constitution
 module: Activity
 related:

@@ -43,7 +43,7 @@ class LogModelDeletedAction
             type: 'deleted',
             user: $user,
             subject: $model,
-            properties: ['attributes' => $model->getAttributes()],
+            properties: ['attributes' => app(RedactModelAttributesAction::class)->execute($model->getAttributes())], // senza password, token e segreti 2FA
             description: sprintf('%s deleted', class_basename($model))
         );
 

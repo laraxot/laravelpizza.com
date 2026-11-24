@@ -3,11 +3,18 @@ title: "architecture aration rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_iE4Xgx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OzFe11
 qmd: "architecture aration rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architecture Separation Rules - Test Strategy
@@ -138,9 +145,21 @@ use function Pest\Laravel\{get, actingAs};
 
 uses(\Modules\Xot\Tests\TestCase::class);
 
+<<<<<<< HEAD
 // =============================================================================
 // {PAGE_NAME} PAGE TESTS - Laravel Folio Page
 // =============================================================================
+=======
+<<<<<<< HEAD
+// -----------------------------------------------------------------------------
+// {PAGE_NAME} PAGE TESTS - Laravel Folio Page
+// -----------------------------------------------------------------------------
+=======
+// =============================================================================
+// {PAGE_NAME} PAGE TESTS - Laravel Folio Page
+// =============================================================================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 test('page can be rendered', function () {
     get('/route')
@@ -168,9 +187,21 @@ beforeEach(function (): void {
     mockXotData();
 });
 
+<<<<<<< HEAD
 // =============================================================================
 // {WIDGET_NAME} WIDGET TESTS - Filament Component
 // =============================================================================
+=======
+<<<<<<< HEAD
+// -----------------------------------------------------------------------------
+// {WIDGET_NAME} WIDGET TESTS - Filament Component
+// -----------------------------------------------------------------------------
+=======
+// =============================================================================
+// {WIDGET_NAME} WIDGET TESTS - Filament Component
+// =============================================================================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 test('widget can be rendered', function () {
     Livewire::test({Widget}::class)
@@ -212,6 +243,17 @@ function mockXotData(): void {
 
 ---
 
+<<<<<<< .merge_file_iE4Xgx
+=======
+title: "architecture aration rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture aration rules"
+issues: []
+discussions: []
+>>>>>>> .merge_file_OzFe11
 **Status**: ✅ Regole Stabilite e Validate
 **Enforcement**: Obbligatorio per tutti i nuovi test
 **Review**: Required in code review process

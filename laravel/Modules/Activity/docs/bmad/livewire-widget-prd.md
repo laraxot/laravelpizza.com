@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_619QPc
 title: "PRD — Activity"
+=======
+<<<<<<< HEAD
+title: "PRD: Activity"
+=======
+<<<<<<< HEAD
+title: "PRD — Activity"
+=======
+title: "PRD: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_85VSVR
 type: prd
 module: Activity
 related:

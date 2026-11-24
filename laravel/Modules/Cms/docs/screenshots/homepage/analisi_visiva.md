@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_ufqS07
+=======
+<<<<<<< HEAD
+title: "Analisi Visiva"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Analisi Visiva"
+=======
+>>>>>>> .merge_file_r9h7yE
 title: "analisi visiva"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "analisi visiva"
+<<<<<<< .merge_file_ufqS07
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_r9h7yE
 issues: []
 discussions: []
 ---
@@ -19,6 +34,25 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_ufqS07
+=======
+<<<<<<< HEAD
+title: "ANALISI VISIVA"
+=======
+title: "analisi visiva"
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "ANALISI VISIVA"
+=======
+qmd: "analisi visiva"
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_r9h7yE
 ## 1. Header Structure
 
 ### Bootstrap Italia

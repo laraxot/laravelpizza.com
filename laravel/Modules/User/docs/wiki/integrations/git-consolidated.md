@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "git consolidated"
->>>>>>> laraxot/dev
 ---
 
 # git — Consolidated Documentation
@@ -975,10 +972,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
-<<<<<<< HEAD
-5. Implementare test automatizzati
-=======
->>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
 
@@ -1293,10 +1286,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
-<<<<<<< HEAD
-5. Implementare test automatizzati
-=======
->>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
 
@@ -2685,10 +2674,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
-<<<<<<< HEAD
-5. Implementare test automatizzati
-=======
->>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
 
@@ -3034,10 +3019,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
-<<<<<<< HEAD
-5. Implementare test automatizzati
-=======
->>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
 
@@ -3069,10 +3050,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Creare test di regressione per prevenire conflitti futuri
 
 ---
-<<<<<<< HEAD
----
-=======
->>>>>>> laraxot/dev
 
 ## git-conflicts-resolution-local-swarm-backup
 
@@ -4340,11 +4317,7 @@ git -c core.editor="echo" rebase --continue
 
 ## Riferimenti
 
-<<<<<<< HEAD
 - [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix.md)
-=======
-- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix-2026-03-17.md)
->>>>>>> laraxot/dev
 - [oauth-access-token-removal](oauth-access-token-removal.md)
 
 ---
@@ -5270,10 +5243,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
-<<<<<<< HEAD
-5. Implementare test automatizzati
-=======
->>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - [DATE] 15:30**
 

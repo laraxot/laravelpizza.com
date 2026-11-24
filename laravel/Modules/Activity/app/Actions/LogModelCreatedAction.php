@@ -43,7 +43,7 @@ class LogModelCreatedAction
             type: 'created',
             user: $user,
             subject: $model,
-            properties: ['attributes' => $model->getAttributes()],
+            properties: ['attributes' => app(RedactModelAttributesAction::class)->execute($model->getAttributes())], // senza password, token e segreti 2FA
             description: sprintf('%s created', class_basename($model))
         );
 

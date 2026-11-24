@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "theme build process"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Processo di Build del Tema in il progetto
@@ -34,7 +37,19 @@ npm run build
 2. **Pubblicazione degli asset** - Copia i file compilati nella directory pubblica:
 
 ```bash
+<<<<<<< .merge_file_7nSiXX
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3nFuHq
 ```
 
 È fondamentale eseguire entrambi i comandi per vedere le modifiche nel frontend dell'applicazione.

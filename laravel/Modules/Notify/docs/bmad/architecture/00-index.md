@@ -5,28 +5,10 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-10-06
-tags: [docs, notify, bmad]
-qmd: "**indice documentazione modulo notify** notify"
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 updated: 2026-11-23
 tags: [docs, notify, bmad]
 qmd: "**indice documentazione modulo notify** notify"
 created: 2026-11-23
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 # 📚 **Indice Documentazione Modulo Notify**
@@ -36,87 +18,28 @@ created: 2026-11-23
 
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./readme.md) - Panoramica completa e Quick Start.
-2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
-3. [philosophy.md](./philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
+2. [roadmap.md](../../roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
+3. [philosophy.md](../../philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
 ## 🏗️ **Architettura & Canali**
-- 📧 **[Email System](./email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
-- 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
-- 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
-- 🧱 **[Base Templates](./base-templates.md)** - Struttura HTML responsive per messaggi transazionali.
-
-## ⚙️ **Configurazione Avanzata**
-- 📦 **[Composer Dependencies](../../composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
-- 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
-- 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
-- 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_xgceWH
->>>>>>> laraxot/dev
-- 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
-
-## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Analysis](./phpstan-fixes.md)** - Report di conformità Level 10.
-- 🚨 **[PHPStan Cluster 2026-03-10](./phpstan-cluster-2026-03-10.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
-- 🧭 **[No Orphan Http Controllers](./no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
-- 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-- 🔄 **[Queue Management](../../monitoring.md)** - Monitoraggio delle code e dei fallback.
 - 📧 **[Email System](../../email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
-- 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
-- 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
+- 💬 **[SMS & WhatsApp](../../whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
+- 🚀 **[Bulk Notifications](../../send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
 - 🧱 **[Base Templates](../../base-templates.md)** - Struttura HTML responsive per messaggi transazionali.
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](../../composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](../../provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
-- 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
+- 🏷️ **[Acronym Naming](../../acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
 - 🔄 **[Queue Management](../../monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Analysis](../../phpstan-fixes.md)** - Report di conformità Level 10.
+- ✅ **[PHPStan Analysis](./phpstan-fixes.md)** - Report di conformità Level 10.
 - 🚨 **[PHPStan Cluster 2026-03-10](../../phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](../../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](../../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_5ZhVKt
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-- 🔬 **[Testing Guidelines](./testing.md)** - Mocking dei canali e verifica invio.
-- 📘 **[Docs-First Workflow](../../docs-first-workflow.md)** - Sequenza obbligatoria docs -> codice -> tracking GitHub.
-- 🧪 **PSR-4 Test Helpers** - Nei file Pest usare helper anonimi o support file dedicati; evitare classi top-level extra che rompono `composer dump-autoload`.
-
-## 🪮 **Ponytail audit**
-- 📋 **[Over-engineering audit](../../ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
-- 🧾 **[SMS Actions consolidation decision](../../wiki/decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
-
-## 🧹 **Manutenzione**
-- 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
-- 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
-
-## 🔗 **Moduli Correlati**
-- [Xot](../../xot/docs/readme.md) - Dispatcher centrale.
-- [User](../../user/docs/readme.md) - Definizione dei destinatari e preferenze.
-- 🧭 **[No Orphan Http Controllers](../../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
-- 🚫 **[No NotificationTrackingController](../../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
-- 🔬 **[Testing Guidelines](./testing.md)** - Mocking dei canali e verifica invio.
+- 🔬 **[Testing Guidelines](../../testing.md)** - Mocking dei canali e verifica invio.
 - 📘 **[Docs-First Workflow](../../docs-first-workflow.md)** - Sequenza obbligatoria docs -> codice -> tracking GitHub.
 - 🧪 **PSR-4 Test Helpers** - Nei file Pest usare helper anonimi o support file dedicati; evitare classi top-level extra che rompono `composer dump-autoload`.
 
@@ -137,23 +60,4 @@ created: 2026-11-23
 
 ## Dependency Intelligence
 
-<<<<<<< HEAD
 - [Dependency intelligence](../../dependency-intelligence.md)
-- [Dependency intelligence](../../dependency-intelligence.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Dependency intelligence](../../dependency-intelligence.md)
-- [Dependency intelligence](../../dependency-intelligence.md)
-=======
-<<<<<<< .merge_file_xgceWH
-- [Dependency intelligence](dependency-intelligence.md)
-=======
-- [Dependency intelligence](../../dependency-intelligence.md)
-- [Dependency intelligence](../../dependency-intelligence.md)
->>>>>>> .merge_file_5ZhVKt
->>>>>>> laraxot/dev
-=======
-- [Dependency intelligence](../../dependency-intelligence.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

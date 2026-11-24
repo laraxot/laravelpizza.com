@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_VkgGbG
+=======
+<<<<<<< HEAD
+title: "User Research"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "User Research"
+=======
+>>>>>>> .merge_file_3lhvq1
 title: "user research"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "user research"
+<<<<<<< .merge_file_VkgGbG
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3lhvq1
 issues: []
 discussions: []
 ---
@@ -17,6 +32,33 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_VkgGbG
+=======
+<<<<<<< HEAD
+title: "USER RESEARCH"
+=======
+<<<<<<< HEAD
+title: "user research"
+=======
+title: "USER RESEARCH"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "USER RESEARCH"
+=======
+<<<<<<< HEAD
+qmd: "user research"
+=======
+qmd: "USER RESEARCH"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_3lhvq1
 ## Research Goals
 
 1. Understand content creator workflows
@@ -94,3 +136,7 @@ Non-technical users need onboarding.
 - Add content analytics
 
 ---
+<<<<<<< .merge_file_VkgGbG
+=======
+
+>>>>>>> .merge_file_3lhvq1

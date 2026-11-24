@@ -3,7 +3,15 @@ title: "business logic consolidated"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Yh5lF0
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_sZfPRr
 qmd: "business logic consolidated"
 issues: []
 discussions: []
@@ -250,13 +258,28 @@ User (base)
 
 ### Documentazione Moduli
 - [<nome progetto>](../modules/<nome progetto>/docs/README.md)
+<<<<<<< .merge_file_Yh5lF0
 - [User](../../User/docs/README.md)
 - [Geo](README.md)
 - [Media](../../Media/docs/readme.md)
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [User](../../User/docs/README.md)
+- [Geo](README.md)
+- [Media](../../Media/docs/readme.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_sZfPRr
 - [<nome progetto>](../modules/<nome progetto>/docs/README.md)
 - [User](../../User/docs/README.md)
 - [Geo](README.md)
 - [Media](../../Media/docs/README.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [UI](../../UI/docs/README.md)
 - [Xot](../../Xot/docs/README.md)
 

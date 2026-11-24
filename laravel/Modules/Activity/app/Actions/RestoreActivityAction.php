@@ -10,9 +10,13 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
+<<<<<<< .merge_file_NPvVmJ
  * RestoreActivityAction.
  *
  * @see docs/contracts/restore-activity-action.md
+=======
+ * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
+>>>>>>> .merge_file_i2PsfK
  *
  * @contract docs/contracts/restore-activity-action.md
  */

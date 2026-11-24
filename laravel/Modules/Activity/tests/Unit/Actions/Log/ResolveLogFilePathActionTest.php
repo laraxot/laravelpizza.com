@@ -5,8 +5,18 @@ use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ResolveLogDirectoryAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
+<<<<<<< .merge_file_9PE8Di
 use Modules\Activity\Tests\TestCase;
 use Safe\Exceptions\FilesystemException;
+=======
+<<<<<<< HEAD
+use Safe\Exceptions\FilesystemException;
+use Modules\Activity\Tests\TestCase;
+=======
+use Modules\Activity\Tests\TestCase;
+use Safe\Exceptions\FilesystemException;
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NKWJiY
 
 use function Safe\realpath;
 use function Safe\symlink;
@@ -14,10 +24,22 @@ use function Safe\symlink;
 uses(TestCase::class);
 
 /*
+<<<<<<< .merge_file_9PE8Di
+=======
+<<<<<<< HEAD
+ * Usa Tests\TestCase (root) e non Modules\Activity\Tests\TestCase: queste azioni lavorano solo sul
+ * filesystem e la seconda richiede un file sqlite condiviso non presente in ogni ambiente
+ * (stesso motivo dei test di Modules/Xot/tests/Feature/Filament/Widgets/EnvWidgetTest.php).
+=======
+>>>>>>> .merge_file_NKWJiY
  * Usa Modules\Activity\Tests\TestCase. Il commento precedente diceva "Tests\TestCase (root)":
  * era rimasto dal tempo in cui esisteva laravel/tests/, sciolta nel commit 63f7bebfe ("ogni
  * modulo ha la sua cartella"). Il TestCase del modulo prepara lo sqlite condiviso e apre le
  * transazioni: queste azioni non toccano il database, ma il setup non le disturba.
+<<<<<<< .merge_file_9PE8Di
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NKWJiY
  *
  * Ogni test lavora in una cartella temporanea dentro storage/framework/testing, mai in storage/logs.
  * `$this->root` contiene `logs/` (la cartella base) e, accanto, un `secret.log` FUORI dalla base:
@@ -48,20 +70,20 @@ it('resolves a log file at the top level and in a nested folder', function (): v
     $nested = $action->execute('reports/rejected/daily_2026-09-20.log', $this->base);
     expect($nested->absolutePath)->toBe($base.'/reports/rejected/daily_2026-09-20.log');
     expect($nested->relativePath)->toBe('reports/rejected/daily_2026-09-20.log');
-});
+})->group('ACTIVITY-LOGFILE-INV-4');
 
 it('rejects path traversal that would reach a file outside the log directory', function (): void {
     $action = new ResolveLogFilePathAction;
 
     expect(fn () => $action->execute('../secret.log', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('reports/../../secret.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-1');
 
 it('rejects an absolute path even if it points to a real log file', function (): void {
     $action = new ResolveLogFilePathAction;
 
     expect(fn () => $action->execute($this->root.'/secret.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-1');
 
 it('rejects files that are not .log, missing files, empty paths and null bytes', function (): void {
     $action = new ResolveLogFilePathAction;
@@ -71,7 +93,7 @@ it('rejects files that are not .log, missing files, empty paths and null bytes',
     expect(fn () => $action->execute('reports', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute("laravel.log\0.txt", $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-2');
 
 it('rejects a symlink inside the log directory that points outside of it', function (): void {
     try {
@@ -83,7 +105,7 @@ it('rejects a symlink inside the log directory that points outside of it', funct
     $action = new ResolveLogFilePathAction;
 
     expect(fn () => $action->execute('link.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-3');
 
 it('rejects a symlink named .log whose target is not a .log file', function (): void {
     try {
@@ -95,13 +117,13 @@ it('rejects a symlink named .log whose target is not a .log file', function (): 
     $action = new ResolveLogFilePathAction;
 
     expect(fn () => $action->execute('finto.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-2');
 
 it('fails clearly when the base directory does not exist', function (): void {
     $action = new ResolveLogFilePathAction;
 
     expect(fn () => $action->execute('laravel.log', $this->root.'/non-esiste'))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-5');
 
 it('resolves the log directory to its real path and fails when it is missing', function (): void {
     $action = new ResolveLogDirectoryAction;

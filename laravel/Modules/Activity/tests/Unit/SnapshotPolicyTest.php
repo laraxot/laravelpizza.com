@@ -10,7 +10,11 @@ use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
+uses(\Modules\Activity\Tests\TestCase::class);
+=======
 uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 describe('Snapshot Policy', function (): void {
     test('policy extends user base policy', function (): void {
@@ -27,20 +31,36 @@ describe('Snapshot Policy', function (): void {
     });
 
     test('user with permission can view', function (): void {
+<<<<<<< HEAD
+        $user = $this->createUnitMock(User::class);
+        $user->method('hasPermissionTo')->willReturn(true);
+
+        $policy = new SnapshotPolicy();
+=======
+        /** @var TestCase $this */
         $user = $this->createUnitMock(User::class);
         $user->method('hasPermissionTo')->willReturn(true);
 
         $policy = new SnapshotPolicy;
+>>>>>>> laraxot/dev
         $result = $policy->view($user);
 
         Assert::assertTrue($result);
     });
 
     test('user without permission cannot view', function (): void {
+<<<<<<< HEAD
+        $user = $this->createUnitMock(User::class);
+        $user->method('hasPermissionTo')->willReturn(false);
+
+        $policy = new SnapshotPolicy();
+=======
+        /** @var TestCase $this */
         $user = $this->createUnitMock(User::class);
         $user->method('hasPermissionTo')->willReturn(false);
 
         $policy = new SnapshotPolicy;
+>>>>>>> laraxot/dev
         $result = $policy->view($user);
 
         Assert::assertFalse($result);

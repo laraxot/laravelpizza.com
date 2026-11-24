@@ -45,6 +45,7 @@ class GoogleMapsService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
+<<<<<<< .merge_file_RwJbAU
      * @param  string  $method  Metodo HTTP (GET, POST, etc.)
      * @param  string  $url  URL della richiesta
      * @param  array<string, mixed>  $params  Parametri della richiesta
@@ -52,6 +53,16 @@ class GoogleMapsService
      * @return array<string, mixed>
      *
      * @throws \RuntimeException Se la richiesta fallisce
+=======
+     * @param string               $method   Metodo HTTP (GET, POST, etc.)
+     * @param string               $url      URL della richiesta
+     * @param array<string, mixed> $params   Parametri della richiesta
+     * @param bool                 $useCache Se utilizzare la cache
+     *
+     * @throws \RuntimeException Se la richiesta fallisce
+     *
+     * @return array<string, mixed>
+>>>>>>> .merge_file_kB3QPO
      */
     private function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {
@@ -169,11 +180,20 @@ class GoogleMapsService
     /**
      * Calcola la matrice delle distanze.
      *
+<<<<<<< .merge_file_RwJbAU
      * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
      * @return array<string, mixed>
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
+     * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
+     * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+     *
+     * @return array<string, mixed>
+>>>>>>> .merge_file_kB3QPO
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {

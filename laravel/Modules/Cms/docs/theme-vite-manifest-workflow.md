@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "theme vite manifest workflow"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Theme Vite Manifest Workflow
@@ -35,7 +38,19 @@ Per i temi con build separata il contratto operativo e':
 ```bash
 npm install
 npm run build
+<<<<<<< .merge_file_RRqiVP
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XVsOBI
 ```
 
 `build` genera il manifest del tema.

@@ -79,7 +79,6 @@ trait CanPaginate
 
     /**
      * @template TModel of Model
-     *
      * @param  Builder<TModel>  $query
      * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
      */

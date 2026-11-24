@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_ZpktZi
+=======
+<<<<<<< HEAD
+title: "Product Roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Product Roadmap"
+=======
+>>>>>>> .merge_file_ehCZuf
 title: "product roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "product roadmap"
+<<<<<<< .merge_file_ZpktZi
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ehCZuf
 issues: []
 discussions: []
 ---
@@ -18,6 +33,33 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_ZpktZi
+=======
+<<<<<<< HEAD
+title: "PRODUCT ROADMAP"
+=======
+<<<<<<< HEAD
+title: "product roadmap"
+=======
+title: "PRODUCT ROADMAP"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "PRODUCT ROADMAP"
+=======
+<<<<<<< HEAD
+qmd: "product roadmap"
+=======
+qmd: "PRODUCT ROADMAP"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_ehCZuf
 ## Vision Statement
 
 To provide a **flexible content management system** that empowers non-technical users to create, manage, and publish content across the platform without developer intervention.
@@ -110,3 +152,7 @@ To provide a **flexible content management system** that empowers non-technical 
 | **Content Reuse** | 10% | 25% | 40% | 60% |
 
 ---
+<<<<<<< .merge_file_ZpktZi
+=======
+
+>>>>>>> .merge_file_ehCZuf

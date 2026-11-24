@@ -49,14 +49,14 @@ describe('Save Php Array Action', function () use (&$tempDir): void {
         Assert::assertTrue($result);
         $loaded = require $path;
         Assert::assertSame($data, $loaded);
-    });
+    })->group('XOT-SAVE-PHP-INV-1');
 
     test('saved file has strict types', function () use (&$tempDir): void {
         $path = $tempDir.'/strict.php';
         app(SavePhpArrayAction::class)->execute(['x' => 1], $path);
 
         Assert::assertStringContainsString('declare(strict_types=1)', file_get_contents($path));
-    });
+    })->group('XOT-SAVE-PHP-INV-2');
 
     test('nested arrays are written one key per line never inline', function () use (&$tempDir): void {
         // Ordine utente 2026-09-16: mai 'nav' => ['a' => 1, 'b' => 2] su una riga.
@@ -91,5 +91,5 @@ describe('Save Php Array Action', function () use (&$tempDir): void {
             ],
             require $path,
         );
-    });
+    })->group('XOT-SAVE-PHP-INV-1', 'XOT-SAVE-PHP-INV-3');
 });

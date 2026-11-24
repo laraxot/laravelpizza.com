@@ -143,13 +143,6 @@ All widget text follows the expanded translation structure:
 ## Related Documentation
 * [User Module Widget Structure](../widgets-structure-user.md)
 * [Widget Translation Guidelines](./translation-guidelines.md)
-<<<<<<< HEAD
 * [Filament Widget Conventions](../best-practices/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)
-* [Filament Widget Conventions](../best-practices/filament-widgets.md)
-=======
-* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
-* [Translation System Overview](../../xot/docs/translations.md)
-* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
->>>>>>> laraxot/dev
 * [Translation System Overview](../../xot/project_docs/translations.md)

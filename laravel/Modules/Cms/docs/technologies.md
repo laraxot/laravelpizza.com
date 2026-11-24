@@ -3,7 +3,15 @@ title: "technologies"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_JxXolF
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XXeCLU
 qmd: "technologies"
 issues: []
 discussions: []
@@ -121,7 +129,19 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 ## Collegamenti
 
 - [Architettura](architecture.md)
+<<<<<<< .merge_file_JxXolF
 - [API](api/README.md)
+=======
+<<<<<<< HEAD
+- [API](api/README.md)
+=======
+<<<<<<< HEAD
+- [API](api/readme.md)
+=======
+- [API](api/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XXeCLU
 - [Frontend](frontoffice/README.md)
 - [Sviluppo](developer/README.md)
 - [Utente](user/README.md)

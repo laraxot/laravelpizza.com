@@ -292,7 +292,23 @@ workbench/routes
 ## Collegamenti
 
 - [Torna a README](./README.md)
+<<<<<<< .merge_file_MWEf2t
 - [Torna a README](./readme.md)
+=======
+<<<<<<< HEAD
+- [Torna a README](./README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Torna a README](./readme.md)
+=======
+- [Torna a README](./README.md)
+>>>>>>> laraxot/dev
+=======
+- [Torna a README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xm93TP
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 

@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_RxgkMc
 title: "Brainstorming — Activity"
+=======
+<<<<<<< HEAD
+title: "Brainstorming: Activity"
+=======
+<<<<<<< HEAD
+title: "Brainstorming — Activity"
+=======
+title: "Brainstorming: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_YQoOWU
 type: brainstorming
 module: Activity
 related:

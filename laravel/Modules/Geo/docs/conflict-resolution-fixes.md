@@ -3,7 +3,15 @@ title: "conflict resolution fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_n2A5Rp
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EPM9q5
 qmd: "conflict resolution fixes"
 issues: []
 discussions: []
@@ -45,7 +53,15 @@ use Filament\Tables\Table;
 
 ## Metodologia di Risoluzione
 1. **Identificazione**: Script automatico per trovare tutti i marker 
+<<<<<<< HEAD
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
+=======
+<<<<<<< HEAD
+2. **Selezione**: Sempre "current change" (contenuto tra `-------` e `CONFLICT_END`)
+=======
+2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 3. **Backup**: Backup automatico prima delle modifiche
 4. **Verifica**: Controllo che non rimangano marker di conflitto
 

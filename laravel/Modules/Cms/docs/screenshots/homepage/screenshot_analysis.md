@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_uO8q5w
+=======
+<<<<<<< HEAD
+title: "Screenshot Analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Screenshot Analysis"
+=======
+>>>>>>> .merge_file_yRJ1pg
 title: "screenshot analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "screenshot analysis"
+<<<<<<< .merge_file_uO8q5w
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_yRJ1pg
 issues: []
 discussions: []
 ---
@@ -36,6 +51,25 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 
 ---
 
+<<<<<<< .merge_file_uO8q5w
+=======
+<<<<<<< HEAD
+title: "SCREENSHOT ANALYSIS"
+=======
+title: "screenshot analysis"
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "SCREENSHOT ANALYSIS"
+=======
+qmd: "screenshot analysis"
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_yRJ1pg
 ### 2. Hero Section
 ```
 Screenshot: hero_bootstrap_italia.png

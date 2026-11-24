@@ -1,5 +1,17 @@
 ---
+<<<<<<< .merge_file_DwqFkC
 title: "Inventario Http/Livewire → Filament widget — Activity"
+=======
+<<<<<<< HEAD
+title: "Inventario Http/Livewire → Filament widget: Activity"
+=======
+<<<<<<< HEAD
+title: "Inventario Http/Livewire → Filament widget — Activity"
+=======
+title: "Inventario Http/Livewire → Filament widget: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OsgfOC
 type: inventory
 module: Activity
 status: approved
@@ -40,7 +52,23 @@ Il primo comando (`extends Component|Livewire` su tutti i `.php` del modulo, ven
 
 | Posizione | Esito |
 |---|---|
+<<<<<<< .merge_file_DwqFkC
 | `Modules/Activity/app/Http/Livewire/` | La directory esiste ma contiene solo `_components.json` (contenuto: `[]`, cioè zero alias registrati) e `.gitkeep` — nessun `.php` |
+=======
+<<<<<<< HEAD
+| `Modules/Activity/app/Http/Livewire/` | La directory esiste ma contiene solo `_components.json` (contenuto: `[]`, cioè zero alias registrati) e `.gitkeep`: nessun `.php` |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `Modules/Activity/app/Http/Livewire/` | La directory esiste ma contiene solo `_components.json` (contenuto: `[]`, cioè zero alias registrati) e `.gitkeep` — nessun `.php` |
+=======
+| `Modules/Activity/app/Http/Livewire/` | La directory esiste ma contiene solo `_components.json` (contenuto: `[]`, cioè zero alias registrati) e `.gitkeep`: nessun `.php` |
+>>>>>>> laraxot/dev
+=======
+| `Modules/Activity/app/Http/Livewire/` | La directory esiste ma contiene solo `_components.json` (contenuto: `[]`, cioè zero alias registrati) e `.gitkeep`: nessun `.php` |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OsgfOC
 | `Modules/Activity/app/Livewire/` | Non esiste |
 | `find -iname '*livewire*'` | Unici hit: i file di questa campagna in `docs/bmad/` e la directory vuota `app/Http/Livewire`. Nessuna classe, nessuna vista `livewire/` |
 
@@ -55,9 +83,33 @@ Il modulo può comunque *montare* componenti altrui senza possederne. Verificato
 | `@livewire(...)` | `grep -rn "@livewire" Modules/Activity --include="*.blade.php"` | **0 hit** |
 | `<livewire:... />` | `grep -rn "<livewire:" Modules/Activity --include="*.blade.php"` | **0 hit** |
 | Pagina Folio/Volt | `ls Modules/Activity/resources/views/pages` + lettura del file | Esiste `pages/api/log-download.blade.php` (36 righe): pagina Folio con `render()` closure che streama un file di log via `DownloadLogFileAction` (riga 31). Non è un componente Volt, non monta Livewire: è una risposta binaria |
+<<<<<<< .merge_file_DwqFkC
 | Render hook / widget in provider Filament | `find Modules/Activity/app/Filament -iname '*widget*'` | **0 hit**: sotto `app/Filament/` esistono solo `Actions, Forms, Pages, Resources` — nessuna directory `Widgets` |
 
 Conclusione verificata: Activity non monta nessun componente Livewire, proprio o altrui. Il suo contributo HTTP è una pagina Folio di download log — forma "endpoint", non frammento di chrome.
+=======
+<<<<<<< HEAD
+| Render hook / widget in provider Filament | `find Modules/Activity/app/Filament -iname '*widget*'` | **0 hit**: sotto `app/Filament/` esistono solo `Actions, Forms, Pages, Resources`: nessuna directory `Widgets` |
+
+Conclusione verificata: Activity non monta nessun componente Livewire, proprio o altrui. Il suo contributo HTTP è una pagina Folio di download log: forma "endpoint", non frammento di chrome.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| Render hook / widget in provider Filament | `find Modules/Activity/app/Filament -iname '*widget*'` | **0 hit**: sotto `app/Filament/` esistono solo `Actions, Forms, Pages, Resources` — nessuna directory `Widgets` |
+
+Conclusione verificata: Activity non monta nessun componente Livewire, proprio o altrui. Il suo contributo HTTP è una pagina Folio di download log — forma "endpoint", non frammento di chrome.
+=======
+| Render hook / widget in provider Filament | `find Modules/Activity/app/Filament -iname '*widget*'` | **0 hit**: sotto `app/Filament/` esistono solo `Actions, Forms, Pages, Resources`: nessuna directory `Widgets` |
+
+Conclusione verificata: Activity non monta nessun componente Livewire, proprio o altrui. Il suo contributo HTTP è una pagina Folio di download log: forma "endpoint", non frammento di chrome.
+>>>>>>> laraxot/dev
+=======
+| Render hook / widget in provider Filament | `find Modules/Activity/app/Filament -iname '*widget*'` | **0 hit**: sotto `app/Filament/` esistono solo `Actions, Forms, Pages, Resources`: nessuna directory `Widgets` |
+
+Conclusione verificata: Activity non monta nessun componente Livewire, proprio o altrui. Il suo contributo HTTP è una pagina Folio di download log: forma "endpoint", non frammento di chrome.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OsgfOC
 
 ## Widget Filament esistenti nel modulo Activity: nessuno
 
@@ -67,7 +119,23 @@ Conclusione verificata: Activity non monta nessun componente Livewire, proprio o
 
 | Classe | Alias/hook | Gemello widget | Cluster | Nota |
 |---|---|---|---|---|
+<<<<<<< .merge_file_DwqFkC
 | — | — | — | — | Tabella vuota: zero classi da classificare |
+=======
+<<<<<<< HEAD
+|: |: |: |: | Tabella vuota: zero classi da classificare |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| — | — | — | — | Tabella vuota: zero classi da classificare |
+=======
+|: |: |: |: | Tabella vuota: zero classi da classificare |
+>>>>>>> laraxot/dev
+=======
+|: |: |: |: | Tabella vuota: zero classi da classificare |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OsgfOC
 
 **Cluster A: zero candidati.** Non esistono componenti Livewire in Activity, quindi nessuno può essere montato nel chrome di un panel Filament.
 

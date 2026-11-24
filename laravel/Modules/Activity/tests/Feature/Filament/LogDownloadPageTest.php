@@ -59,8 +59,17 @@ beforeEach(function (): void {
     $this->user = function (bool $isSuperAdmin, bool $hasPermission = false): UserContract&Authenticatable {
         /** @var MockInterface&UserContract&Authenticatable $user */
         $user = Mockery::mock(UserContract::class, Authenticatable::class);
+<<<<<<< HEAD
         $user->shouldReceive('hasRole')->with('super-admin')->andReturn($isSuperAdmin);
         $user->shouldReceive('hasPermissionTo')->with('log.viewAny')->andReturn($hasPermission);
+=======
+        TestCase::mockeryExpect($user->shouldReceive('hasRole'))
+            ->with('super-admin')
+            ->andReturn($isSuperAdmin);
+        TestCase::mockeryExpect($user->shouldReceive('hasPermissionTo'))
+            ->with('log.viewAny')
+            ->andReturn($hasPermission);
+>>>>>>> laraxot/dev
 
         return $user;
     };

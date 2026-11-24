@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_wKmp4G
+=======
+<<<<<<< HEAD
+title: "Sprint Planning"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Sprint Planning"
+=======
+>>>>>>> .merge_file_wfONff
 title: "sprint planning"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "sprint planning"
+<<<<<<< .merge_file_wKmp4G
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_wfONff
 issues: []
 discussions: []
 ---
@@ -17,6 +32,33 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_wKmp4G
+=======
+<<<<<<< HEAD
+title: "SPRINT PLANNING"
+=======
+<<<<<<< HEAD
+title: "sprint planning"
+=======
+title: "SPRINT PLANNING"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "SPRINT PLANNING"
+=======
+<<<<<<< HEAD
+qmd: "sprint planning"
+=======
+qmd: "SPRINT PLANNING"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_wfONff
 ## Sprint Goal
 
 Launch core CMS page builder with content creation and publishing capabilities.
@@ -74,3 +116,7 @@ Launch core CMS page builder with content creation and publishing capabilities.
 | Performance | Lazy loading, caching |
 
 ---
+<<<<<<< .merge_file_wKmp4G
+=======
+
+>>>>>>> .merge_file_wfONff

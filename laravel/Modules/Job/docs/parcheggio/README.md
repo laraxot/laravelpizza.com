@@ -35,6 +35,7 @@ che c'e' adesso: in uno di questi, a ottobre, c'erano 135 righe di lavoro non
 fuso che per poco non sono state cancellate. Quando il lavoro e' finito,
 cancella il file parcheggiato.
 
+<<<<<<< .merge_file_mSfd3O
 ## Tornati col sync del 21/11 e ritirati di nuovo (24/11/2026)
 
 Il sync dei moduli (nessun marcatore) ha rimesso file che il progetto aveva cancellato il 06/11 (commit root
@@ -64,5 +65,7 @@ Lasciati dove sono: `app/Services/ScheduleService.php` (root l'aveva cancellato,
 e `tests/Arch/debt.php` lo richiedono) e `resources/views/livewire/job/status.blade.php.backup_20251210_092150`
 (estensione finta, non esaminato). Finche' il repository del modulo non li toglie, il prossimo sync li riporta.
 
+=======
+>>>>>>> .merge_file_YcxFY2
 Tracciato in
 [module_quaeris_fila5#61](https://github.com/laraxot/module_quaeris_fila5/issues/61).

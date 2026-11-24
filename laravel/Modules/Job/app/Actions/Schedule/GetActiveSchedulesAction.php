@@ -10,11 +10,14 @@ use Modules\Job\Models\Schedule;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+<<<<<<< .merge_file_LBmNpI
 /**
  * @see docs/contracts/get-active-schedules-action.md
  *
  * @contract docs/contracts/get-active-schedules-action.md
  */
+=======
+>>>>>>> .merge_file_IUaGPU
 class GetActiveSchedulesAction
 {
     use QueueableAction;

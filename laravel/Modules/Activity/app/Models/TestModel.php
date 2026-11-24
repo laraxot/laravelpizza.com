@@ -11,15 +11,12 @@ use Illuminate\Support\Carbon;
  * Test model for Activity module tests.
  *
  * @property string|null $name
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel query()
- *
  * @property int $id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TestModel whereName($value)

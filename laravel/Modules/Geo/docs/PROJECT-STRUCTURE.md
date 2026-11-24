@@ -98,6 +98,12 @@ graph TD
 ## Riferimenti Globali
 
 - [Project Wiki Root](../../docs/wiki/)
+<<<<<<< .merge_file_lQUESn
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PzcY22
+>>>>>>> .merge_file_ejk0I1
 - [Global Rules](wiki/rules)
 - [Global Skills](wiki/skills)
 - [Global Commands](wiki/commands)
@@ -106,11 +112,23 @@ graph TD
 - [Global Skills](../../docs/wiki/skills/)
 - [Global Commands](../../docs/wiki/commands/)
 - [Global Memories](../../docs/wiki/memories/)
+<<<<<<< .merge_file_lQUESn
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ejk0I1
 - [Global Rules](../../../../docs/wiki/rules/)
 - [Global Skills](../../../../bashscripts/ai/wiki/skills/)
 - [Global Commands](../../../../bashscripts/ai/wiki/commands/)
 - [Global Memories](../../../../docs/wiki/memories/)
 - Indici locali del modulo: [rules](wiki/rules) · [skills](wiki/skills) · [commands](wiki/commands) · [memories](wiki/memories)
+<<<<<<< .merge_file_lQUESn
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hfUKHm
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ejk0I1
 
 ## Setup Iniziale (per nuovi moduli)
 

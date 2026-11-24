@@ -15,6 +15,10 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
+<<<<<<< .merge_file_frqGb8
+=======
+use Modules\Xot\Tests\XotBaseTestCase;
+>>>>>>> .merge_file_cwtmvk
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;

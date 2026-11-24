@@ -22,7 +22,10 @@ use Modules\Cms\Models\Page as PageModel;
  *
  * @see Modules/Cms/docs/page-title-and-description.md
  * @see Modules/Cms/docs/contracts/page-meta-resolution-action.md
+<<<<<<< .merge_file_aEt35h
  *
+=======
+>>>>>>> .merge_file_rJVCUW
  * @contract docs/contracts/page-meta-resolution-action.md
  */
 final class ResolvePageMetaAction

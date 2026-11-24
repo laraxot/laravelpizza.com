@@ -15,7 +15,7 @@ uses(TestCase::class);
 test('LogActivityAction rifiuta type vuoto nel costruttore', function (): void {
     expect(fn (): LogActivityAction => new LogActivityAction(type: ''))
         ->toThrow(InvalidArgumentException::class, 'Type cannot be empty');
-});
+})->group('ACTIVITY-LOG-INV-1');
 
 test('LogActivityAction accetta parametri opzionali nel costruttore', function (): void {
     $model = new class extends Model

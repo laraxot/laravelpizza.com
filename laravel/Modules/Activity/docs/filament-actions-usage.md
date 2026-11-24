@@ -351,7 +351,23 @@ class ListMyModelActivities extends ListLogActivities
 
 ### Documentazione Interna
 - [README Activity Module](../README.md)
+<<<<<<< .merge_file_0WDeVA
 - [README Activity Module](../readme.md)
+=======
+<<<<<<< HEAD
+- [README Activity Module](../README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [README Activity Module](../readme.md)
+=======
+- [README Activity Module](../README.md)
+>>>>>>> laraxot/dev
+=======
+- [README Activity Module](../README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Eg9rXM
 - [ListLogActivitiesAction Details](./actions/list-log-activities-action.md)
 - [ListLogActivities Page](./pages/list-log-activities.md)
 

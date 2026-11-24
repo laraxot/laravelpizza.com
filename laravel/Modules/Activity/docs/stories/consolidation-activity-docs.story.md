@@ -165,3 +165,11 @@ Activity/docs/
 
 **Author**: Marco Xot  
 **Co-Authored-By**: Claude Haiku 4.5 <noreply@anthropic.com>
+
+---
+
+## Contenuto unito da `consolidation-activity-docs.story.md`
+
+# consolidation activity docs
+
+Stub alias post-strip data/timestamp. Canonico: [./consolidation-activity-docs.story.md](./consolidation-activity-docs.story.md).

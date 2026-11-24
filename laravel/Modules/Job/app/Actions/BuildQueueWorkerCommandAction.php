@@ -11,8 +11,11 @@ use Spatie\QueueableAction\QueueableAction;
  * Riga di shell con cui `worker:check` avvia `queue:work`. Solo interi: nulla di scelto da un
  * utente arriva alla shell se non come numero.
  *
+<<<<<<< .merge_file_XCPojt
  * @see docs/contracts/build-queue-worker-command-action.md
  *
+=======
+>>>>>>> .merge_file_9IQ6Sj
  * @contract docs/contracts/build-queue-worker-command-action.md
  */
 class BuildQueueWorkerCommandAction

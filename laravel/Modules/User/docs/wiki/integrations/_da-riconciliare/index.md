@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "user integrations"
->>>>>>> laraxot/dev
 ---
 
 # user — integrations
@@ -18,10 +15,6 @@ Documentation for `user` module categorized as **integrations**.
 ## Files
 
 - [`00-index.md`](./00-index.md)
-<<<<<<< HEAD
-- [`00-index.md`](./00-index.md)
-=======
->>>>>>> laraxot/dev
 - [`2fa-guide.md`](./2fa-guide.md)
 - [`2fa.md`](./2fa.md)
 - [`API.md`](./API.md)
@@ -67,10 +60,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`SSO-PROVIDERS-IMPLEMENTATION.md`](./SSO-PROVIDERS-IMPLEMENTATION.md)
 - [`SSO_PROVIDERS_IMPLEMENTATION.md`](./SSO_PROVIDERS_IMPLEMENTATION.md)
 - [`testing.md`](./testing.md)
-<<<<<<< HEAD
 - [`TESTING.md`](../../../TESTING.md)
-=======
->>>>>>> laraxot/dev
 - [`TIMESTAMPS_RULE.md`](./TIMESTAMPS_RULE.md)
 - [`TRANSLATION_KEY_PROTOTYPE.md`](./TRANSLATION_KEY_PROTOTYPE.md)
 - [`user_research.md`](./user_research.md)
@@ -119,12 +109,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`business-logic-analysis-5.md`](./business-logic-analysis-5.md)
 - [`business-logic-analysis.md`](./business-logic-analysis.md)
 - [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-<<<<<<< HEAD
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-=======
->>>>>>> laraxot/dev
 - [`business-logic.md`](./business-logic.md)
 - [`business-logiceepive.md`](./business-logiceepive.md)
 - [`business_logic_analysis.md`](./business_logic_analysis.md)
@@ -142,10 +126,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`code-optimization-analysis.md`](./code-optimization-analysis.md)
 - [`code-optimization.md`](./code-optimization.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
-<<<<<<< HEAD
 - [`code-conventions.md`](../../../code-conventions.md)
-=======
->>>>>>> laraxot/dev
 - [`code-quality-tools.md`](./code-quality-tools.md)
 - [`code-quality.md`](./code-quality.md)
 - [`code_conventions.md`](./code_conventions.md)
@@ -154,10 +135,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`codebase-overview.md`](./codebase-overview.md)
 - [`codex-error-fix.md`](./codex-error-fix.md)
 - [`component-verification-rules.md`](./component-verification-rules.md)
-<<<<<<< HEAD
-- [`component-verification-rules.md`](./component-verification-rules.md)
-=======
->>>>>>> laraxot/dev
 - [`component-verification.md`](./component-verification.md)
 - [`component_verification_rules.md`](./component_verification_rules.md)
 - [`composer-dependencies.md`](./composer-dependencies.md)
@@ -237,10 +214,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`fullcalendar-scheduler-documentation-summary-3.md`](./fullcalendar-scheduler-documentation-summary-3.md)
 - [`fullcalendar-scheduler-documentation-summary.md`](./fullcalendar-scheduler-documentation-summary.md)
 - [`fullcalendar-scheduler-license-key-invalid.md`](./fullcalendar-scheduler-license-key-invalid.md)
-<<<<<<< HEAD
 - [`fullcalendar-scheduler-license-key-invalid.md`](../../../fullcalendar-scheduler-license-key-invalid.md)
-=======
->>>>>>> laraxot/dev
 - [`fullcalendar-scheduler-license-troubleshooting.md`](./fullcalendar-scheduler-license-troubleshooting.md)
 - [`fullcalendar-scheduler-license.md`](./fullcalendar-scheduler-license.md)
 - [`fullcalendar-scheduler-quick-reference-3.md`](./fullcalendar-scheduler-quick-reference-3.md)
@@ -264,10 +238,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
 - [`git-conflicts-resolution-4.md`](./git-conflicts-resolution-4.md)
 - [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
-<<<<<<< HEAD
-- [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
-=======
->>>>>>> laraxot/dev
 - [`git-conflicts-resolution-conflict-06cb77.md`](./git-conflicts-resolution-conflict-06cb77.md)
 - [`git-conflicts-resolution-conflict.md`](./git-conflicts-resolution-conflict.md)
 - [`git-conflicts-resolution-local-swarm-backup.md`](./git-conflicts-resolution-local-swarm-backup.md)
@@ -317,10 +287,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`label-hardcoded-prevention.md`](./label-hardcoded-prevention.md)
 - [`label_hardcoded_prevention.md`](./label_hardcoded_prevention.md)
 - [`lang-link-3.md`](./lang-link-3.md)
-<<<<<<< HEAD
 - [`lang-link-3.md`](../../../lang-link-3.md)
-=======
->>>>>>> laraxot/dev
 - [`lang-link.md`](./lang-link.md)
 - [`lang_link.md`](./lang-link.md)
 - [`laravel-13-upgrade.md`](./laravel-13-upgrade.md)
@@ -332,11 +299,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`livewire-namespace.md`](./livewire-namespace.md)
 - [`livewire_namespace.md`](./livewire_namespace.md)
 - [`logging-performance.md`](./logging-performance.md)
-<<<<<<< HEAD
-- [`logging-performance.md`](./logging-performance.md)
-- [`logging-performance.md`](./logging-performance.md)
-=======
->>>>>>> laraxot/dev
 - [`logging_performance.md`](./logging_performance.md)
 - [`login-resolution.md`](./login-resolution.md)
 - [`login-widget-analysis.md`](./login-widget-analysis.md)
@@ -408,12 +370,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`merge-conflict-files-list.md`](./merge-conflict-files-list.md)
 - [`merge-conflicts-list.md`](./merge-conflicts-list.md)
 - [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-<<<<<<< HEAD
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-=======
->>>>>>> laraxot/dev
 - [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
 - [`metodiuplicati-analisi.md`](./metodiuplicati-analisi.md)
 - [`metrics-dashboard.md`](./metrics-dashboard.md)
@@ -424,12 +380,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`missing-features.md`](./missing-features.md)
 - [`model-classification.md`](./model-classification.md)
 - [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-<<<<<<< HEAD
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-=======
->>>>>>> laraxot/dev
 - [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
 - [`model-inheritance-fixes-4.md`](./model-inheritance-fixes-4.md)
 - [`model-inheritance-fixes-5.md`](./model-inheritance-fixes-5.md)
@@ -565,12 +515,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`quality-tools.md`](./quality-tools.md)
 - [`quality.md`](./quality.md)
 - [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-<<<<<<< HEAD
-- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-=======
->>>>>>> laraxot/dev
 - [`query-optimization.md`](./query-optimization.md)
 - [`query_optimization_analysis.md`](./query_optimization_analysis.md)
 - [`r1-form-fields-self-validate.md`](./r1-form-fields-self-validate.md)
@@ -605,10 +549,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`resources-corrections-summary.md`](./resources-corrections-summary.md)
 - [`resources-corrections.md`](./resources-corrections.md)
 - [`roles-permissions.md`](./roles-permissions.md)
-<<<<<<< HEAD
-- [`roles-permissions.md`](./roles-permissions.md)
-=======
->>>>>>> laraxot/dev
 - [`roles_permissions.md`](./roles_permissions.md)
 - [`root-file-policy.md`](./root-file-policy.md)
 - [`root-files-hygiene.md`](./root-files-hygiene.md)
@@ -637,17 +577,8 @@ Documentation for `user` module categorized as **integrations**.
 - [`spatie-models-verification.md`](./spatie-models-verification.md)
 - [`spatie-permission-philosophy.md`](./spatie-permission-philosophy.md)
 - [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
-<<<<<<< HEAD
-- [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
 - [`spatie-permission.md`](./spatie-permission.md)
 - [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-=======
-- [`spatie-permission.md`](./spatie-permission.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
->>>>>>> laraxot/dev
 - [`spatie-permissions.md`](./spatie-permissions.md)
 - [`spatie_permissions.md`](./spatie_permissions.md)
 - [`spatie_permissions_methods.md`](./spatie_permissions_methods.md)
@@ -781,12 +712,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`volt_missing_directive.md`](./volt_missing_directive.md)
 - [`volts.md`](./volts.md)
 - [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-<<<<<<< HEAD
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-=======
->>>>>>> laraxot/dev
 - [`widget-rendering.md`](./widget-rendering.md)
 - [`widget-translation-rules-3.md`](./widget-translation-rules-3.md)
 - [`widget-translation-rules.md`](./widget-translation-rules.md)

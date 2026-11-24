@@ -31,7 +31,7 @@ it('executes allowed artisan command correctly', function (): void {
     /** @var array<int, string> $output */
     $output = $result['output'];
     Assert::assertStringContainsString('Migration successful', implode("\n", $output));
-});
+})->group('XOT-ARTISAN-EXEC-INV-2');
 
 it('handles failed artisan command correctly', function (): void {
     Process::fake([
@@ -46,4 +46,17 @@ it('handles failed artisan command correctly', function (): void {
     /** @var array<int, string> $output */
     $output = $result['output'];
     Assert::assertStringContainsString('[ERROR] Migration failed', implode("\n", $output));
-});
+})->group('XOT-ARTISAN-EXEC-INV-2');
+
+it('refuses commands that are not identical to an allowed one and never starts a process', function (string $command): void {
+    Process::fake();
+
+    expect(fn (): array => app(ExecuteArtisanCommandAction::class)->execute($command))
+        ->toThrow(RuntimeException::class, 'Comando non consentito');
+    Process::assertNothingRan();
+})->with([
+    'destructive' => 'migrate:fresh',
+    'allowed plus option' => 'migrate --force',
+    'case change' => 'MIGRATE',
+    'leading space' => ' migrate',
+])->group('XOT-ARTISAN-EXEC-INV-1');

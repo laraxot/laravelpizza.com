@@ -3,7 +3,15 @@ title: "design comuni homepage"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_PtpDPx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Kl1Pn1
 qmd: "design comuni homepage"
 issues: []
 discussions: []
@@ -55,4 +63,16 @@ La homepage di test ` /it/tests/homepage ` e' orchestrata da due livelli distint
 
 - [00-index.md](./00-index.md) - Indice del modulo Cms
 - [architecture/homepage-structure.md](./architecture/homepage-structure.md) - Architettura runtime aggiornata
+<<<<<<< .merge_file_PtpDPx
 - [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+=======
+<<<<<<< HEAD
+- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+=======
+<<<<<<< HEAD
+- [PAGE_COMPONENT_ARCHITECTURE.md](./PAGE_COMPONENT_ARCHITECTURE.md) - Architettura generale dei componenti pagina
+=======
+- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Kl1Pn1

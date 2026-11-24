@@ -3,7 +3,15 @@ title: "section management"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_M6Glgo
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0kNuD4
 qmd: "section management"
 issues: []
 discussions: []
@@ -130,7 +138,19 @@ Ogni sezione può contenere diversi tipi di blocchi:
 
 ## Collegamenti
 - [Documentazione Blocchi](blocks/README.md)
+<<<<<<< .merge_file_M6Glgo
 - [Documentazione UI](../../ui/project_docs/README.md)
+=======
+<<<<<<< HEAD
+- [Documentazione UI](../../ui/project_docs/README.md)
+=======
+<<<<<<< HEAD
+- [Documentazione UI](../../ui/project_docs/readme.md)
+=======
+- [Documentazione UI](../../ui/project_docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0kNuD4
 - [Documentazione Root](../../../../docs/project/README.md)
 - [Documentazione Root – Sezioni](../../../../../docs/project/sections.md)
 - [Panoramica Gestione Pagine (Root)](../../../../../docs/project/page-content-management.md)

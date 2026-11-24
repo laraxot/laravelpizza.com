@@ -8,7 +8,11 @@ use InvalidArgumentException;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< .merge_file_Nt8NZQ
  * @see docs/contracts/assert-allowed-artisan-command-action.md
+=======
+ * Rifiuta ogni comando Artisan che non sia identico a una voce dell'allowlist.
+>>>>>>> .merge_file_y4u5FG
  *
  * @contract docs/contracts/assert-allowed-artisan-command-action.md
  */

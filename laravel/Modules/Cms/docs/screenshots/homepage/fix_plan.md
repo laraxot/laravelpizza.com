@@ -1,10 +1,25 @@
 ---
+<<<<<<< .merge_file_LSFdMh
+=======
+<<<<<<< HEAD
+title: "Fix Plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Fix Plan"
+=======
+>>>>>>> .merge_file_DpXTvF
 title: "fix plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "fix plan"
+<<<<<<< .merge_file_LSFdMh
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_DpXTvF
 issues: []
 discussions: []
 ---
@@ -19,6 +34,25 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 
 ---
 
+<<<<<<< .merge_file_LSFdMh
+=======
+<<<<<<< HEAD
+title: "FIX PLAN"
+=======
+title: "fix plan"
+>>>>>>> laraxot/dev
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "FIX PLAN"
+=======
+qmd: "fix plan"
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+>>>>>>> .merge_file_DpXTvF
 ## Fase 1: Header & Hero (Settimana 1)
 
 ### Task 1.1: Header Slim Component

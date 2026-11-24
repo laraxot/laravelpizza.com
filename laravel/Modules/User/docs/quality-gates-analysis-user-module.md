@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
-title: Quality Gates Analysis: User Module
-=======
 title: "Quality Gates Analysis: User Module"
->>>>>>> laraxot/dev
 date: 2026-07-28
 status: superseded
 superseded_by: quality-gates.md

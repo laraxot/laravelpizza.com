@@ -109,7 +109,19 @@ Schema::create('addresses', function (Blueprint $table) {
 ## Collegamenti
 - [schema.org/PostalAddress](https://schema.org/PostalAddress)
 - [Geo Module Architecture](./architecture.md)
+<<<<<<< .merge_file_BSy7Ez
 - [Entità Geografiche](geo-entities.md)
+=======
+<<<<<<< HEAD
+- [Entità Geografiche](./geo_entities.md)
+=======
+<<<<<<< HEAD
+- [Entità Geografiche](./geo_entities.md)
+=======
+- [Entità Geografiche](geo-entities.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_boqUsO
 - [location-select.md](./location-select.md)
 - [README.md](./README.md)
 

@@ -3,7 +3,15 @@ title: "lavoro completato"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_L7dpJC
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_nQzEHn
 qmd: "lavoro completato"
 issues: []
 discussions: []
@@ -165,7 +173,15 @@ Server Laravel ATTIVO su http://0.0.0.0:8000
 ### Modulo User (3 files)
 
 14. ✅ **EditProfile.php**
+<<<<<<< HEAD
     - Problema: Marker Git (`=======`, `>>>>>>>`) non risolti
+=======
+<<<<<<< HEAD
+    - Problema: Marker Git (`-------`, `CONFLICT_END`) non risolti
+=======
+    - Problema: Marker Git (`=======`, `>>>>>>>`) non risolti
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     - Fix: Marker rimossi
 
 15. ✅ **PasswordResetConfirmWidget.php** ⭐ ENORME

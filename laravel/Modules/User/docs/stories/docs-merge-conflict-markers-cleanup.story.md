@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
 title: "User: marker di conflitto git residui in docs/ (866 file): pulizia + aggiornamento indice"
-=======
-title: "User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice"
->>>>>>> laraxot/dev
 type: story
 module: User
 epic: null
@@ -22,10 +18,7 @@ blocks: []
 supersedes: []
 owned_scope:
   - "laravel/Modules/User/docs/"
-<<<<<<< HEAD
-=======
 qmd: "merge conflict markers cleanup story user"
->>>>>>> laraxot/dev
 ---
 
 # User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice
@@ -50,11 +43,6 @@ qmd: "merge conflict markers cleanup story user"
 Story figlia del follow-up second-brain segnalato (ma non eseguito) in
 `uppercase-root-dirs-database-application.story.md`: "`Modules/User/docs/` ha
 rumore evidente da ripulire in una story dedicata". Task delegato con lock
-<<<<<<< HEAD
-=======
-`laravel/Modules/User:docs` (non l'intero modulo — un'altra sessione lavorava
-
->>>>>>> laraxot/dev
 `laravel/Modules/User:docs` (non l'intero modulo: un'altra sessione lavorava
 in parallelo su `Application/`/`Database/` a root modulo, esplicitamente
 esclusi da questa story).
@@ -192,11 +180,7 @@ di rilevazione (`grep -rlE '^<<<<<<< |^=======$|^>>>>>>> '` al posto di
 
 Lock `laravel/Modules/User:docs` acquisito e rilasciato correttamente
 (scope limitato a `docs/`, non l'intero modulo). Commit unico, 867 file
-<<<<<<< HEAD
 (`git add` con lista esplicita di path, mai `-A`: repo con ~5000
-=======
-(`git add` con lista esplicita di path, mai `-A` — repo con ~5000
->>>>>>> laraxot/dev
 modifiche non correlate di altre sessioni in corso).
 
 ## Follow-up 2026-11-23

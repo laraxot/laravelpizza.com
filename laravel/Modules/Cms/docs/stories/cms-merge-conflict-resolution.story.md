@@ -1,15 +1,33 @@
 ---
 title: "cms merge conflict resolution.story"
 type: note
+<<<<<<< .merge_file_7mPt9d
 tags: [documentation, coordinamento]
 created: 2026-09-26
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+=======
+tags: [documentation, coordinamento]
+created: 2026-09-26
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_iCTGu9
 qmd: "cms merge conflict resolution.story"
 issues: []
 discussions: []
 ---
 
 # Story: Cms module merge conflict resolution + phpstan
+<<<<<<< .merge_file_7mPt9d
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_iCTGu9
 
 Status: docs-markers-done (PHP/test conflicts: vedi anche `6.1.resolve-git-conflicts-and-phpstan.story.md`)
 Module: Modules/Cms
@@ -29,9 +47,18 @@ Module: Modules/Cms
 
 - [x] Marker merge assenti in `docs/**/*.md`
 - [ ] PHPStan 0 / Pest / push — fuori scope di questa sweep docs
+<<<<<<< .merge_file_7mPt9d
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_iCTGu9
 Status: in-progress
 Module: Modules/Cms (independent .git)
 Context: 6 files modified; merge conflict with laraxot/dev on: DownloadAttachmentPlaceHolder.php, PublicProfileRouteTest.php, HeaderNavJsonTest.php, HomepageContentManagementTest.php. Resolve conflicts keeping both modifications, then full quality gate.
 Dependencies: None (already merged from remote)
 Accept Criteria: Merge conflict resolved; PHPStan 0 errors; PHPMD clean; phpinsights passes; pest passes; docs/ updated; git push -u origin dev done.
 Owner: AI Agent (BMAD sprint)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -3,11 +3,18 @@ title: "validate links"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_kQ2ecI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_of7i5n
 qmd: "validate links"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Validazione Link Relativi
@@ -21,7 +28,15 @@ status: draft
 # validate-links.sh - Sistema controllo link relativi
 
 echo "🔍 CONTROLLO LINK ASSOLUTI VIETATI"
+<<<<<<< HEAD
 echo "=================================="
+=======
+<<<<<<< HEAD
+echo "----------------------------------"
+=======
+echo "=================================="
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Controllo 1: Path assoluti /var/www/html
 echo "❌ Cercando path assoluti /var/www/html..."
@@ -54,7 +69,15 @@ else
 fi
 
 echo -e "\n📊 RIEPILOGO CONTROLLI"
+<<<<<<< HEAD
 echo "======================"
+=======
+<<<<<<< HEAD
+echo "----------------------"
+=======
+echo "======================"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 echo "Path assoluti: $ABSOLUTE_PATHS"
 echo "Link errati: $WRONG_RELATIVE"
 echo "Progetti vecchi: $OLD_PROJECTS"
@@ -168,6 +191,17 @@ jobs:
 
 ---
 
+<<<<<<< .merge_file_kQ2ecI
+=======
+title: "validate links"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "validate links"
+issues: []
+discussions: []
+>>>>>>> .merge_file_of7i5n
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 1.0
 **Integrazione**: Sistema CI/CD e pre-commit hooks

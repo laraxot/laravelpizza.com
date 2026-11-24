@@ -3,7 +3,15 @@ title: "handoff xot git conflicts phpstan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_bsvBb0
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_IduRdS
 qmd: "handoff xot git conflicts phpstan"
 issues: []
 discussions: []
@@ -12,7 +20,15 @@ discussions: []
 # Handoff — conflitti Git Xot + PHPStan
 
 **Data:** 2026-07-01  
+<<<<<<< HEAD
 **Scope:** `laravel/Modules/Xot` (marker `<<<<<<<` nel working tree, non merge attivo)
+=======
+<<<<<<< HEAD
+**Scope:** `laravel/Modules/Xot` (marker `CONFLICT_START` nel working tree, non merge attivo)
+=======
+**Scope:** `laravel/Modules/Xot` (marker `<<<<<<<` nel working tree, non merge attivo)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Fatto
 
@@ -36,7 +52,15 @@ discussions: []
 ## Verifica
 
 ```bash
+<<<<<<< HEAD
 find . \( -path ./laravel/vendor -o -path ./.git \) -prune -o -type f -exec grep -l '^<<<<<<< ' {} + 2>/dev/null | wc -l
+=======
+<<<<<<< HEAD
+find . \( -path ./laravel/vendor -o -path ./.git \) -prune -o -type f -exec grep -l '^CONFLICT_START ' {} + 2>/dev/null | wc -l
+=======
+find . \( -path ./laravel/vendor -o -path ./.git \) -prune -o -type f -exec grep -l '^<<<<<<< ' {} + 2>/dev/null | wc -l
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # atteso: 0
 
 cd laravel && ./vendor/bin/phpstan analyse Modules/Xot

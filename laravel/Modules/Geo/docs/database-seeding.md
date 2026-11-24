@@ -3,7 +3,15 @@ title: "database seeding"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_dEecxB
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_GF7aon
 qmd: "database seeding"
 issues: []
 discussions: []
@@ -233,8 +241,23 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 
 ## Collegamenti e Riferimenti
 
+<<<<<<< .merge_file_dEecxB
 - [README BashScripts](../bashscripts/readme.md)
 - [Quick Start Seeding](database/seeding/quick-start.md)
+=======
+<<<<<<< HEAD
+- [README BashScripts](../bashscripts/README.md)
+- [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
+=======
+<<<<<<< .merge_file_owK2Z5
+- [README BashScripts](../bashscripts/readme.md)
+- [Quick Start Seeding](database/seeding/quick-start.md)
+=======
+- [README BashScripts](../bashscripts/README.md)
+- [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
+>>>>>>> .merge_file_cvFYDO
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_GF7aon
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)
 - [Documentazione Modulo <nome modulo>](../laravel/Modules/<nome modulo>/docs/)
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)

@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "themes"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Gestione Temi - Linee Guida e Riflessioni
@@ -54,7 +57,19 @@ laravel/Themes/One/
 npm run build
 
 # Pubblicazione
+<<<<<<< .merge_file_ZR5ORZ
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NdJJhC
 ```
 
 ## Riflessioni e Linee Guida
@@ -135,7 +150,19 @@ npm run build
    ls -la public/themes/One
 
    # Forza copia
+<<<<<<< .merge_file_ZR5ORZ
    # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+=======
+<<<<<<< HEAD
+   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NdJJhC
    ```
 
 3. **Problemi di Cache**
@@ -172,5 +199,13 @@ npm run build
 
 ## Collegamenti tra versioni di themes.md
 * [themes.md](docs/rules/themes.md)
+<<<<<<< HEAD
+* [themes.md](laravel/modules/xot/docs/themes.md)
+=======
+<<<<<<< .merge_file_Y3mFfB
 * [themes.md](../../../Xot/docs/themes.md)
+=======
+* [themes.md](laravel/modules/xot/docs/themes.md)
+>>>>>>> .merge_file_hD5dBj
+>>>>>>> laraxot/dev
 * [themes.md](laravel/modules/cms/docs/frontoffice/themes.md)

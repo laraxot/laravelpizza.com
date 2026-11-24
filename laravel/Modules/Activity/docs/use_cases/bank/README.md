@@ -28,11 +28,20 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - **Projector**: componente che aggiorna proiezioni leggibili a partire dagli eventi
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 - [<nome progetto>ion Market](../<nome progetto>ion_market/readme.md)
 - [Event Sourcing & CQRS](../event_sourcing_cqrs/readme.md)
 - [Audit Log](../audit_log/readme.md)
 - [Workflow Approval](../workflow_approval/readme.md)
 - [Task Management](../task_management/readme.md)
+<<<<<<< .merge_file_PmM8Hy
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3iYUGb
 - [<nome progetto>ion Market](../<nome progetto>ion_market/README.md)
 - [Event Sourcing & CQRS](../event_sourcing_cqrs/README.md)
 - [Audit Log](../audit_log/README.md)

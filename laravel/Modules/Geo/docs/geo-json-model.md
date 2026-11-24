@@ -3,6 +3,11 @@ title: "geo json model"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Wz3KIj
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fmTGtQ
 updated: 2026-11-23
 qmd: "geo json model"
 issues: []
@@ -306,10 +311,20 @@ title: "geo json model"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Wz3KIj
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_fmTGtQ
 updated: 2026-09-26
 qmd: "geo json model"
 issues: []
 discussions: []
+<<<<<<< .merge_file_Wz3KIj
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_fmTGtQ
 - Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
@@ -511,9 +526,21 @@ trait SushiToJsons
 ---
 
 - Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+<<<<<<< .merge_file_Wz3KIj
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_fmTGtQ
 module: theme
 topic: geo-json-model
 canonical: ../../../Themes/docs/shared-components/geo-json-model-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/geo-json-model-1.md
+<<<<<<< .merge_file_Wz3KIj
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_fmTGtQ

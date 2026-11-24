@@ -11,8 +11,18 @@ discussions: []
 
 # GSD (Get Shit Done) - Command Reference
 
+<<<<<<< .merge_file_n9Q7Yx
 **Version**: 1.0.0
 **For**: PTVX fila5
+=======
+<<<<<<< HEAD
+**Version**: 1.0.0  
+**For**: PTVX Fila5 Mono  
+=======
+**Version**: 1.0.0
+**For**: PTVX fila5
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_nDrmDQ
 **Frameworks**: GSD v1.25.1 + BMAD-METHOD v6.2.0
 
 ---

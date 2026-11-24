@@ -14,6 +14,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @head
     <style>[x-cloak] { display: none !important; }</style>
+<<<<<<< .merge_file_3ZlJ1k
+=======
+    <script>
+        if (typeof Storage !== 'undefined' && localStorage.getItem('dark_mode') === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+>>>>>>> .merge_file_rvBUmt
     @if ($panelAssets)
         <script>
             if (typeof Storage !== 'undefined' && localStorage.getItem('dark_mode') === 'true') {
@@ -22,9 +30,15 @@
         </script>
         @filamentStyles
     @endif
+<<<<<<< .merge_file_3ZlJ1k
     @vite([$stylesheet], 'themes/'.$pubTheme)
     {{-- Tag aggiunti dalle pagine e dai layout (@push('head'): JSON-LD dell'evento, JS del tema). --}}
     @stack('head')
+=======
+    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
+    @filamentStyles
+    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
+>>>>>>> .merge_file_rvBUmt
     {{-- Stili dei blocchi della pagina (@push('styles'), per esempio content.simple): senza lo stack non arrivavano mai. --}}
     @stack('styles')
 </head>
