@@ -6,7 +6,10 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team back office]
 issues: [251]
+<<<<<<< .merge_file_RAcIvG
 qmd: "dati sacri migrazioni test sono migratefreshresetrollbackforce"
+=======
+>>>>>>> .merge_file_0G3nfX
 ---
 
 # I dati sono sacri: migrazioni e test girano solo in avanti

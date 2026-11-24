@@ -15,21 +15,6 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
-<<<<<<< HEAD
-/**
- * @see docs/contracts/send-360dialog-whatsapp-action.md
- *
- * @contract docs/contracts/send-360dialog-whatsapp-action.md
- */
-=======
-<<<<<<< HEAD
-=======
-/**
- * @see docs/contracts/send-360dialog-whatsapp-action.md
- * @contract docs/contracts/send-360dialog-whatsapp-action.md
- */
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 final class Send360dialogWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;

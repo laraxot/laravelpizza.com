@@ -3,7 +3,7 @@ title: "module"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Bpje15
+<<<<<<< .merge_file_DvQEA0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_3rMzHG
+>>>>>>> .merge_file_CKm1Zv
 qmd: "module"
 issues: []
 discussions: []

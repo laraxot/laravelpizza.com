@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-year-filter.md
+<<<<<<< .merge_file_uaDtTN
  *
+=======
+>>>>>>> .merge_file_LqIoKT
  * @contract docs/contracts/get-year-filter.md
  */
 class GetYearFilter

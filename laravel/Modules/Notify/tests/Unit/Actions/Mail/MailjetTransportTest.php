@@ -25,11 +25,7 @@ it('sends through the Mailjet Send API v3.1 with sandbox, CustomID and basic aut
 
     $transport = app(CreateMailjetTransportAction::class)->execute('pub', 'priv', sandbox: true, client: $client);
 
-<<<<<<< HEAD
-    $email = (new Email)
-=======
     $email = (new Email())
->>>>>>> laraxot/dev
         ->from('Trattoria <prenotazioni@example.com>')
         ->to('cliente@example.com')
         ->subject('Prenotazione confermata')

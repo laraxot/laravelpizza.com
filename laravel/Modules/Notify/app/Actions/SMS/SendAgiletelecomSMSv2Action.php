@@ -14,18 +14,6 @@ use Spatie\QueueableAction\QueueableAction;
  * Azione per l'invio di SMS tramite Agile Telecom.
  *
  * @see https://agiletelecom.com/docs/protocollo-http-post-e-get/
-<<<<<<< HEAD
- * @see docs/contracts/send-agiletelecom-sms-v2-action.md
- *
- * @contract docs/contracts/send-agiletelecom-sms-v2-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/send-agiletelecom-sms-v2-action.md
- * @contract docs/contracts/send-agiletelecom-sms-v2-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class SendAgiletelecomSMSv2Action implements SmsActionContract
 {

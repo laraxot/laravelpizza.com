@@ -3,7 +3,7 @@ title: "report finale"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_utECDj
+<<<<<<< .merge_file_cZy47B
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_cN28JW
+>>>>>>> .merge_file_Ju1Qw6
 qmd: "report finale"
 issues: []
 discussions: []

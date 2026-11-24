@@ -7,7 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< .merge_file_W68igA
+<<<<<<< .merge_file_MQ50yZ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_RFpl3b
+>>>>>>> .merge_file_1VlF5i
 ---
 
 # Divergenza: `nested-resources.md`

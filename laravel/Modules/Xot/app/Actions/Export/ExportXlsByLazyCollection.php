@@ -12,7 +12,10 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/export-xls-by-lazy-collection.md
+<<<<<<< .merge_file_BTSjsH
  *
+=======
+>>>>>>> .merge_file_NrNxtU
  * @contract docs/contracts/export-xls-by-lazy-collection.md
  */
 class ExportXlsByLazyCollection

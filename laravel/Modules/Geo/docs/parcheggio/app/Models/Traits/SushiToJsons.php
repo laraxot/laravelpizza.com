@@ -37,23 +37,6 @@ trait SushiToJsons
      * Salva i dati nel file JSON.
      *
      * @param  array<int, array<string, mixed>>  $data
-<<<<<<< .merge_file_4DpPFk
-<<<<<<< .merge_file_yCaUnL
-<<<<<<< .merge_file_Fy2VPK
-<<<<<<< .merge_file_t2YAeh
-     * @param  array<int, array<string, mixed>>  $data
-=======
-     * @param array<int, array<string, mixed>> $data
->>>>>>> .merge_file_MpQBbe
-=======
-     * @param array<int, array<string, mixed>> $data
->>>>>>> .merge_file_GXmblf
-=======
-     * @param array<int, array<string, mixed>> $data
->>>>>>> .merge_file_bSqbBc
-=======
-     * @param array<int, array<string, mixed>> $data
->>>>>>> .merge_file_AatTEP
      */
     public function saveToJson(array $data): bool
     {
@@ -74,23 +57,6 @@ trait SushiToJsons
     /**
      * Crea un nuovo record.
      *
-<<<<<<< .merge_file_4DpPFk
-<<<<<<< .merge_file_yCaUnL
-<<<<<<< .merge_file_Fy2VPK
-<<<<<<< .merge_file_t2YAeh
-     * @param  array<string, mixed>  $attributes
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_MpQBbe
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_GXmblf
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_bSqbBc
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_AatTEP
      */
     public function create(array $attributes = []): static
     {
@@ -111,46 +77,13 @@ trait SushiToJsons
     /**
      * Aggiorna un record esistente.
      *
-<<<<<<< .merge_file_4DpPFk
-<<<<<<< .merge_file_yCaUnL
-<<<<<<< .merge_file_Fy2VPK
-<<<<<<< .merge_file_t2YAeh
-     * @param  array<string, mixed>  $attributes
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_MpQBbe
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_GXmblf
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_bSqbBc
-=======
-     * @param array<string, mixed> $attributes
->>>>>>> .merge_file_AatTEP
      */
     public function update(array $attributes = [], array $options = []): bool
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
-<<<<<<< .merge_file_4DpPFk
-<<<<<<< .merge_file_yCaUnL
-<<<<<<< .merge_file_Fy2VPK
-<<<<<<< .merge_file_t2YAeh
         if ($index === null) {
-=======
-        if (null === $index) {
->>>>>>> .merge_file_MpQBbe
-=======
-        if (null === $index) {
->>>>>>> .merge_file_GXmblf
-=======
-        if (null === $index) {
->>>>>>> .merge_file_bSqbBc
-=======
-        if (null === $index) {
->>>>>>> .merge_file_AatTEP
             return false;
         }
 
@@ -173,23 +106,7 @@ trait SushiToJsons
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
-<<<<<<< .merge_file_4DpPFk
-<<<<<<< .merge_file_yCaUnL
-<<<<<<< .merge_file_Fy2VPK
-<<<<<<< .merge_file_t2YAeh
         if ($index === null) {
-=======
-        if (null === $index) {
->>>>>>> .merge_file_MpQBbe
-=======
-        if (null === $index) {
->>>>>>> .merge_file_GXmblf
-=======
-        if (null === $index) {
->>>>>>> .merge_file_bSqbBc
-=======
-        if (null === $index) {
->>>>>>> .merge_file_AatTEP
             return false;
         }
 

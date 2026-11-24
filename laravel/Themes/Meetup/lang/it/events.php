@@ -102,6 +102,7 @@ return [
     'status' => [
         'all' => [
             'label' => 'Tutti gli eventi',
+<<<<<<< .merge_file_aksXS3
             'description' => 'Filtro: tutti gli eventi',
         ],
         'upcoming' => [
@@ -126,4 +127,14 @@ return [
         'show_past' => 'Eventi passati',
         'show_upcoming' => 'Prossimi eventi',
     ],
+=======
+        ],
+        'upcoming' => [
+            'label' => 'In arrivo',
+        ],
+        'past' => [
+            'label' => 'Eventi passati',
+        ],
+    ],
+>>>>>>> .merge_file_kzM1CC
 ];

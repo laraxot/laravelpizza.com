@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_dtimLU
 qmd: "quality consolidated"
+=======
+>>>>>>> .merge_file_q6B4oS
 ---
 
 # quality — Consolidated Documentation

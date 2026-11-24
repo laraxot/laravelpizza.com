@@ -160,7 +160,19 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
+<<<<<<< .merge_file_kkecx6
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_lhwMu2
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards
@@ -356,7 +368,19 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
+<<<<<<< .merge_file_kkecx6
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_lhwMu2
 
 ## Memory Integration
 

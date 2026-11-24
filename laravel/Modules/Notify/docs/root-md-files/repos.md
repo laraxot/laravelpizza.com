@@ -3,7 +3,7 @@ title: "repos"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_PnRa7l
+<<<<<<< .merge_file_mRc0mO
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_U5vXTb
+>>>>>>> .merge_file_VlUvzC
 qmd: "repos"
 issues: []
 discussions: []

@@ -5,7 +5,10 @@ module: Xot
 created: '2026-11-19'
 updated: '2026-11-19'
 status: review
+<<<<<<< .merge_file_7ObqCk
 qmd: "blade icons set from resources svg"
+=======
+>>>>>>> .merge_file_R92wDa
 ---
 
 # Le icone dei moduli si registrano da `resources/svg`

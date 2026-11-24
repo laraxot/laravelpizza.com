@@ -7,7 +7,10 @@ updated: 2026-11-24
 decision-makers: [team]
 issues: []
 superseded_by: 0003-pest-as-test-runner.md
+<<<<<<< .merge_file_m8kES5
 qmd: "pest over phpunit come framework test"
+=======
+>>>>>>> .merge_file_O2R4jJ
 ---
 
 > Superseded da [0003-pest-as-test-runner.md](0003-pest-as-test-runner.md): alias senza numero della stessa decisione. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

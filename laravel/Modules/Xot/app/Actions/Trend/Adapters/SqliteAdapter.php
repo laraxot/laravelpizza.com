@@ -9,7 +9,10 @@ use Override;
 
 /**
  * @see docs/contracts/sqlite-adapter.md
+<<<<<<< .merge_file_osLPxs
  *
+=======
+>>>>>>> .merge_file_RuAm4g
  * @contract docs/contracts/sqlite-adapter.md
  */
 class SqliteAdapter extends AbstractAdapter

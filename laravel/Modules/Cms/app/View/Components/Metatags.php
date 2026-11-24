@@ -30,27 +30,7 @@ final class Metatags extends Component
     public function __construct(
         private ?string $title = null,
         private ?string $description = null,
-<<<<<<< .merge_file_lWP3S1
-<<<<<<< .merge_file_Iobdn4
-<<<<<<< .merge_file_yh09Qt
-<<<<<<< .merge_file_Bti2y2
     ) {}
-=======
-    ) {
-    }
->>>>>>> .merge_file_qA3eIG
-=======
-    ) {
-    }
->>>>>>> .merge_file_D7n1Z8
-=======
-    ) {
-    }
->>>>>>> .merge_file_7wgtlJ
-=======
-    ) {
-    }
->>>>>>> .merge_file_X1o9jp
 
     /**
      * Get the view / contents that represents the component.

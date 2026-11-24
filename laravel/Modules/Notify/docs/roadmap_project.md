@@ -3,7 +3,7 @@ title: "roadmap project"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pvavRy
+<<<<<<< .merge_file_Ac6inP
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_10Nn54
+>>>>>>> .merge_file_cXxKoB
 qmd: "roadmap project"
 issues: []
 discussions: []

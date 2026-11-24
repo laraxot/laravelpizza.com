@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_HHXovf
 qmd: "socialite"
+=======
+>>>>>>> .merge_file_Sw4AT0
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/socialite.md

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_z3gjUt
 ---
 title: "User Module - Product Launch Plan"
 type: note
 qmd: "user product launch plan"
 ---
+=======
+>>>>>>> .merge_file_FIWcWs
 # User Module - Product Launch Plan
 
 ## Launch Overview

@@ -3,7 +3,7 @@ title: "Multi-Agent Collaboration Rules & Guidelines"
 type: guide
 tags: [multi, agent, collaboration, guide]
 created: 2026-07-14
-<<<<<<< .merge_file_78yhCw
+<<<<<<< .merge_file_GObNmZ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_E5V5F1
+>>>>>>> .merge_file_PR4Hbr
 qmd: "multi-agent-collaboration-guide multi-agent collaboration rules & guidelines"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,7 +20,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_78yhCw
+<<<<<<< .merge_file_GObNmZ
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -30,7 +30,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_E5V5F1
+>>>>>>> .merge_file_PR4Hbr
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

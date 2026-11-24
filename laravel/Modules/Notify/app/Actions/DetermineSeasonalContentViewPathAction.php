@@ -8,21 +8,6 @@ use Carbon\Carbon;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-/**
- * @see docs/contracts/determine-seasonal-content-view-path-action.md
- *
- * @contract docs/contracts/determine-seasonal-content-view-path-action.md
- */
-=======
-<<<<<<< HEAD
-=======
-/**
- * @see docs/contracts/determine-seasonal-content-view-path-action.md
- * @contract docs/contracts/determine-seasonal-content-view-path-action.md
- */
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 class DetermineSeasonalContentViewPathAction
 {
     use QueueableAction;

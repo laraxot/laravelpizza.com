@@ -32,13 +32,17 @@ return [
         ],
     ],
     'logout' => [
+<<<<<<< .merge_file_PEw7w5
         'in_progress' => 'Cerrando sesión…',
+=======
+>>>>>>> .merge_file_OWiDYI
         'goodbye' => [
             'message' => 'Hasta pronto',
         ],
     ],
     'password' => [
         'reset' => [
+<<<<<<< .merge_file_PEw7w5
             'title' => 'Elige una nueva contraseña',
             'label' => 'Restablecer contraseña',
             'subtitle' => 'Al menos 8 caracteres. Al guardarla entrarás directamente.',
@@ -46,6 +50,10 @@ return [
             'password' => 'Nueva contraseña',
             'password_confirmation' => 'Repite la nueva contraseña',
             'submit' => 'Guardar contraseña',
+=======
+            'title' => 'Restablecer contraseña',
+            'label' => 'Restablecer contraseña',
+>>>>>>> .merge_file_OWiDYI
         ],
         'email' => [
             'label' => 'Dirección de correo electrónico',
@@ -74,6 +82,7 @@ return [
         'back_to_login' => [
             'label' => 'volver al inicio de sesión',
         ],
+<<<<<<< .merge_file_PEw7w5
         'request' => [
             'title' => '¿Olvidaste tu contraseña?',
             'subtitle' => 'Escribe el email de tu cuenta y te enviaremos un enlace para elegir una nueva.',
@@ -81,6 +90,8 @@ return [
             'submit' => 'Enviar el enlace',
             'back_to_login' => 'Volver a iniciar sesión',
         ],
+=======
+>>>>>>> .merge_file_OWiDYI
     ],
     'sections' => [
         'verify' => [
@@ -94,7 +105,13 @@ return [
         'sign_out' => [
             'label' => 'cerrar sesión',
         ],
+<<<<<<< .merge_file_PEw7w5
         'resent' => 'Te hemos enviado un nuevo enlace de confirmación.',
+=======
+        'resent' => [
+            'message' => 'Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.',
+        ],
+>>>>>>> .merge_file_OWiDYI
         'instructions' => [
             'message' => 'Antes de continuar, revisa tu correo electrónico para encontrar el enlace de verificación. Si no recibiste el correo,',
         ],

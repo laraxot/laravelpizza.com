@@ -7,7 +7,10 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< .merge_file_1PscXv
+<<<<<<< HEAD
+updated: 2026-11-23
+=======
+<<<<<<< .merge_file_Eytxis
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +18,8 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_vaaMtL
+>>>>>>> .merge_file_iyL7oJ
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `openviking-bmad-gsd-ralph-complete.md`

@@ -6,7 +6,10 @@ namespace Modules\Xot\Actions\Trend\Format;
 
 /**
  * @see docs/contracts/pgsql-format-action.md
+<<<<<<< .merge_file_3UY1si
  *
+=======
+>>>>>>> .merge_file_kH29Xf
  * @contract docs/contracts/pgsql-format-action.md
  */
 class PgsqlFormatAction extends BaseFormatAction

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_FbfGPH
 ---
 title: "Manuale d'uso per attori — Xot"
 type: note
 qmd: "manuale uso attori duso"
 ---
+=======
+>>>>>>> .merge_file_RdAtJp
 # Manuale d'uso per attori — Xot
 
 ## Scopo e perimetro

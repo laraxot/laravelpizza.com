@@ -7,7 +7,15 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Profile;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< .merge_file_vP5Lw2
 uses(TestCase::class);
+=======
+<<<<<<< HEAD
+uses(TestCase::class);
+=======
+uses(\Modules\User\Tests\TestCase::class);
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_tQvZBI
 
 class ProfileTest extends TestCase
 {

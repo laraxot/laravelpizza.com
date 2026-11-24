@@ -11,7 +11,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/start-query-log-action.md
+<<<<<<< .merge_file_ZO3QBF
  *
+=======
+>>>>>>> .merge_file_r2Zzk3
  * @contract docs/contracts/start-query-log-action.md
  */
 class StartQueryLogAction

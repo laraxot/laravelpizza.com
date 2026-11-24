@@ -10,7 +10,10 @@ use Spipu\Html2Pdf\Html2Pdf;
 
 /**
  * @see docs/contracts/generate-pdf-action.md
+<<<<<<< .merge_file_SxBE2p
  *
+=======
+>>>>>>> .merge_file_pq6VKc
  * @contract docs/contracts/generate-pdf-action.md
  */
 final class GeneratePdfAction

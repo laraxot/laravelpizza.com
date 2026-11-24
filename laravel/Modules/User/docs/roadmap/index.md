@@ -11,7 +11,10 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
+<<<<<<< .merge_file_HeCG4P
 qmd: "index"
+=======
+>>>>>>> .merge_file_tQjyNG
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md

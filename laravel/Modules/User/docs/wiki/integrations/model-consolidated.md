@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_ERDWGJ
 qmd: "model consolidated"
+=======
+>>>>>>> .merge_file_KcReAK
 ---
 
 # model — Consolidated Documentation
@@ -223,7 +226,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -399,7 +414,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -575,7 +602,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -751,7 +790,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -1171,7 +1222,15 @@ Illuminate\Database\Eloquent\Relations\MorphPivot
 Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
 
@@ -1180,7 +1239,15 @@ grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|Base
 Dopo le modifiche, eseguire:
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
 
@@ -1717,7 +1784,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -2481,7 +2560,19 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_ERDWGJ
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -2661,7 +2752,15 @@ Illuminate\Database\Eloquent\Relations\MorphPivot
 Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
 
@@ -2670,7 +2769,15 @@ grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|Base
 Dopo le modifiche, eseguire:
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
 
@@ -2683,8 +2790,21 @@ cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_ERDWGJ
+=======
+=======
+<<<<<<< HEAD
+- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Analisi Completa](./model-inheritance-analysis.md)
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KcReAK
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

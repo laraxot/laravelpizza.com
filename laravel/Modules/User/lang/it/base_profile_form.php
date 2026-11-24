@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< .merge_file_QkEBb0
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il nome',
             'helper_text' => 'Nome visualizzato del profilo',
             'description' => 'Nome',
         ],
+=======
+>>>>>>> .merge_file_4ssTUG
         'user' => [
             'name' => [
                 'label' => 'Utente',
@@ -18,6 +21,15 @@ return [
                 'description' => 'Nome utente',
             ],
         ],
+<<<<<<< .merge_file_QkEBb0
+=======
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'helper_text' => 'Nome visualizzato del profilo',
+            'description' => 'Nome',
+        ],
+>>>>>>> .merge_file_4ssTUG
         'email' => [
             'label' => 'E-mail',
             'placeholder' => 'Inserisci l\'e-mail',

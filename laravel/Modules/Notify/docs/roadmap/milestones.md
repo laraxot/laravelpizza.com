@@ -3,7 +3,7 @@ title: "milestones"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hsfecX
+<<<<<<< .merge_file_RcDi3y
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Uvhr3I
+>>>>>>> .merge_file_NejjxT
 qmd: "milestones"
 issues: []
 discussions: []

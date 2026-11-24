@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/export-button.md
+<<<<<<< .merge_file_E2JJQ7
  *
+=======
+>>>>>>> .merge_file_deGRBb
  * @contract docs/contracts/export-button.md
  */
 class ExportButton

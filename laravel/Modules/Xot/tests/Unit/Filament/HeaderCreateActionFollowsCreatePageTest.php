@@ -49,12 +49,20 @@ test('senza pagina create la tabella non mostra Nuovo', function (): void {
     {
         use HasXotTable;
 
+<<<<<<< .merge_file_wEpNRV
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public static string $resourceClass = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< .merge_file_wEpNRV
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public static function getResource(): string
         {
             return self::$resourceClass;
@@ -84,12 +92,20 @@ test('con la pagina create la tabella mostra Nuovo', function (): void {
     {
         use HasXotTable;
 
+<<<<<<< .merge_file_wEpNRV
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public static string $resourceClass = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< .merge_file_wEpNRV
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public static function getResource(): string
         {
             return self::$resourceClass;
@@ -119,12 +135,20 @@ test('un getResource d istanza, come nei RelationManager, non nasconde Nuovo', f
     {
         use HasXotTable;
 
+<<<<<<< .merge_file_wEpNRV
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public string $ownerResource = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< .merge_file_wEpNRV
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> .merge_file_CHR7kV
         public function getResource(): string
         {
             return $this->ownerResource;

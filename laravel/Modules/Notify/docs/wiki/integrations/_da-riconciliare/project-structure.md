@@ -6,24 +6,36 @@ title: "Project Structure — Module Notify"
 type: documentation
 created: 2026-05-11
 <<<<<<< HEAD
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 updated: 2026-05-11
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 tags: [structure, architecture, module]
 related:
   - "./00-index-1.md"
@@ -32,10 +44,14 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+<<<<<<< .merge_file_PMWvsb
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
@@ -94,7 +110,10 @@ related:
 ### Naming
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 - **filenames**: lowercase-kebab-case.md
 =======
 <<<<<<< HEAD
@@ -109,6 +128,8 @@ related:
 >>>>>>> laraxot/dev
 =======
 - **filenames**: lowercase-kebab-case.md
+<<<<<<< HEAD
+=======
 =======
 - **Filenames**: lowercase-kebab-case.md
 =======
@@ -116,7 +137,8 @@ related:
 - **filenames**: lowercase-kebab-case.md
 =======
 - **Filenames**: lowercase-kebab-case.md
->>>>>>> .merge_file_lxNHJ1
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - **Directories**: lowercase
@@ -210,6 +232,9 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
 ---
+<<<<<<< HEAD
+
+=======
 title: "Project Structure — Module Notify"
 type: documentation
 created: 2026-05-11
@@ -217,14 +242,18 @@ updated: 2026-05-11
 tags: [structure, architecture, module]
 ---
 
-<<<<<<< .merge_file_arHcxx
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 # Project Structure — Module **Notify**
 
 ## Directory Structure
@@ -253,28 +282,40 @@ tags: [structure, architecture, module]
 │   └── troubleshooting/          # Bug fixes, error resolutions
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
@@ -292,13 +333,19 @@ tags: [structure, architecture, module]
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
 <<<<<<< HEAD
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 =======
 <<<<<<< HEAD
@@ -307,26 +354,38 @@ tags: [structure, architecture, module]
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 =======
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 
 ## Convenzioni
 
 ### Naming
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 - **filenames**: lowercase-kebab-case.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 - **Filenames**: lowercase-kebab-case.md
 =======
 <<<<<<< HEAD
@@ -335,13 +394,19 @@ tags: [structure, architecture, module]
 - **Filenames**: lowercase-kebab-case.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_arHcxx
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PMWvsb
+>>>>>>> laraxot/dev
 =======
 - **filenames**: lowercase-kebab-case.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_lxNHJ1
+=======
+>>>>>>> .merge_file_J6Av0c
+>>>>>>> laraxot/dev
 - **Directories**: lowercase
 - **Titles**: Title Case
 

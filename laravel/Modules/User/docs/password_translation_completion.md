@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_iTYTrO
 ---
 title: "Completamento Traduzioni Password - 2025"
 type: note
 qmd: "password translation completion completamento traduzioni 2025"
 ---
+=======
+>>>>>>> .merge_file_0x3Xi3
 # Completamento Traduzioni Password - 2025
 
 ## Problema Identificato

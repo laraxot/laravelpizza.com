@@ -3,7 +3,6 @@ title: "merge conflict marker cleanup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_mBytFC
 <<<<<<< .merge_file_hEbxvw
 <<<<<<< .merge_file_HcXlkX
 <<<<<<< .merge_file_mdz7yQ
@@ -13,14 +12,11 @@ updated: 2026-11-23
 >>>>>>> .merge_file_mHQnYu
 =======
 >>>>>>> .merge_file_qfhhBs
-=======
->>>>>>> .merge_file_RRqQZr
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_mBytFC
 <<<<<<< .merge_file_hEbxvw
 <<<<<<< .merge_file_HcXlkX
 >>>>>>> .merge_file_7JZ85e
@@ -28,8 +24,6 @@ updated: 2026-11-23
 >>>>>>> .merge_file_mHQnYu
 =======
 >>>>>>> .merge_file_qfhhBs
-=======
->>>>>>> .merge_file_RRqQZr
 qmd: "merge conflict marker cleanup"
 issues: []
 discussions: []
@@ -52,7 +46,6 @@ Risolti ~300 file Cms (PHP + docs). Pattern tipici:
 
 Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 
-<<<<<<< .merge_file_mBytFC
 <<<<<<< .merge_file_hEbxvw
 <<<<<<< .merge_file_HcXlkX
 <<<<<<< .merge_file_mdz7yQ
@@ -71,11 +64,6 @@ Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_qfhhBs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_RRqQZr
 ## Sessione docs Cms+Geo 2026-11-23
 
 - **Cms/docs**: 58 file `.md` ripuliti; preferenza lowercase nei link; FO = sempre Filament styles/scripts.
@@ -89,7 +77,6 @@ Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 /bin/grep -rE '^<{7}|^={7}|^>{7}' laravel/Modules/Cms/docs --include='*.md'
 /bin/grep -rE '^<{7}|^={7}|^>{7}' laravel/Modules/Geo/docs --include='*.md'
 # atteso: 0 righe per entrambi
-<<<<<<< .merge_file_mBytFC
 <<<<<<< .merge_file_hEbxvw
 <<<<<<< .merge_file_HcXlkX
 <<<<<<< .merge_file_mdz7yQ
@@ -105,10 +92,6 @@ Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_qfhhBs
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_RRqQZr
 ## Verification
 
 ```bash
@@ -122,7 +105,6 @@ find Modules/Cms -name '*.php' ! -name '*.blade.php' -print0 | xargs -0 -n1 php 
 
 Vedi anche: [no-conflict-markers-anywhere](../../../../docs/rules/no-conflict-markers-anywhere.md),
 story [ROOT-17.14](../../../../docs/stories/17-14-phpstan-modules-merge-markers-prerequisito.md).
-<<<<<<< .merge_file_mBytFC
 <<<<<<< .merge_file_hEbxvw
 <<<<<<< .merge_file_HcXlkX
 <<<<<<< .merge_file_mdz7yQ
@@ -135,6 +117,3 @@ story [ROOT-17.14](../../../../docs/stories/17-14-phpstan-modules-merge-markers-
 =======
 
 >>>>>>> .merge_file_qfhhBs
-=======
-
->>>>>>> .merge_file_RRqQZr

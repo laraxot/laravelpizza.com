@@ -21,9 +21,13 @@ use Webmozart\Assert\Assert;
  * dalla Resource canonica del model, non da `static::class`.
  *
  * Consumer: `Modules\Xot\Filament\Resources\XotBaseResource`.
+<<<<<<< .merge_file_JjL5qi
  *
  * @see docs/contracts/get-resource-class-name-by-model-class-action.md
  *
+=======
+ * @see docs/contracts/get-resource-class-name-by-model-class-action.md
+>>>>>>> .merge_file_qz1KfI
  * @contract docs/contracts/get-resource-class-name-by-model-class-action.md
  */
 class GetResourceClassNameByModelClassAction

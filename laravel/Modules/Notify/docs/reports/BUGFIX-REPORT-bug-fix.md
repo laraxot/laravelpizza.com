@@ -3,27 +3,27 @@ title: "Bug Fix Report - 2025-01-14"
 type: note
 status: draft
 <<<<<<< HEAD
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 updated: 2026-10-08
 tags: [docs, notify, reports]
 qmd: "bug fix report - 2025-01-14 notify"
 =======
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 updated: 2026-11-23
 tags: [docs, notify, reports]
 qmd: "bug fix report - 2025-01-14 notify"
 created: 2026-11-23
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -31,7 +31,7 @@ created: 2026-11-23
 =======
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 >>>>>>> laraxot/dev
 ---
 # Bug Fix Report - 2025-01-14
@@ -199,24 +199,24 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
 <<<<<<< HEAD
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 | `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 
 ## Testing
 
@@ -317,24 +317,24 @@ $user->initializeCurrentTeam();
    - Testing
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
 3. **Summary Generale**: `docs/bugs/summary.md`
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_Rd5CBE
+<<<<<<< .merge_file_kFEi7A
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_9YE3YD
+>>>>>>> .merge_file_VR4IQm
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

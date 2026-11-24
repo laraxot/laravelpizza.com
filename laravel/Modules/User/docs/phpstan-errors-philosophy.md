@@ -17,7 +17,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_KbeQMG
 qmd: "phpstan errors philosophy"
+=======
+>>>>>>> .merge_file_C1vTvF
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-philosophy.md

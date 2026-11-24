@@ -14,21 +14,6 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
-<<<<<<< HEAD
-/**
- * @see docs/contracts/send-vonage-whatsapp-action.md
- *
- * @contract docs/contracts/send-vonage-whatsapp-action.md
- */
-=======
-<<<<<<< HEAD
-=======
-/**
- * @see docs/contracts/send-vonage-whatsapp-action.md
- * @contract docs/contracts/send-vonage-whatsapp-action.md
- */
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 final class SendVonageWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;

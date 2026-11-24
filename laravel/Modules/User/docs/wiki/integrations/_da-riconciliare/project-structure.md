@@ -13,7 +13,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_uuojqs
 qmd: "project structure user"
+=======
+>>>>>>> .merge_file_ojnTJK
 ---
 
 # Project Structure — Module **User**
@@ -187,10 +190,19 @@ At module root level, these folders MUST NOT exist:
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
+<<<<<<< .merge_file_uuojqs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ojnTJK
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+<<<<<<< .merge_file_uuojqs
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ojnTJK
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -206,7 +218,19 @@ At module root level, these folders MUST NOT exist:
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
+<<<<<<< .merge_file_uuojqs
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+=======
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ojnTJK
 
 ## Convenzioni
 

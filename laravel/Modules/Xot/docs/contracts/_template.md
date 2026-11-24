@@ -2,7 +2,10 @@
 type: contract
 status: proposed
 action: <FQCN>
+<<<<<<< .merge_file_dLSVps
 qmd: "template operazione contratto comportamentale"
+=======
+>>>>>>> .merge_file_ZIC9j8
 ---
 
 # <operazione> — contratto comportamentale

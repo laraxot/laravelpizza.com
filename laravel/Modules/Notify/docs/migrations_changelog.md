@@ -1,0 +1,53 @@
+---
+title: "migrations changelog"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_xzhc3z
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3NGTQQ
+qmd: "migrations changelog"
+issues: []
+discussions: []
+---
+
+# Changelog Migrazioni Notify Module
+
+## 2024-03-20: Aggiunta Campo Slug a Mail Templates
+
+### Modifiche
+- Aggiunto campo `slug` alla tabella `mail_templates`
+- Implementato nella sezione `tableUpdate` della migrazione originale
+- Aggiunto controllo di esistenza colonna
+
+### Motivazioni
+1. **Miglioramento Identificazione Template**
+   - Riferimento stabile e prevedibile ai template
+   - Indipendenza dalla classe Mailable
+   - Facilità di migrazione
+
+2. **Struttura Standardizzata**
+   - Seguito pattern `XotBaseMigration`
+   - Implementato nella sezione `tableUpdate` esistente
+   - Mantenuta retrocompatibilità
+
+3. **Best Practices**
+   - Verifica esistenza colonna prima dell'aggiunta
+   - Utilizzo metodi helper di `XotBaseMigration`
+   - Documentazione completa delle modifiche
+
+### Impatto
+- Miglioramento gestione template
+- Nessun impatto su dati esistenti
+- Mantenuta compatibilità con codice esistente
+
+### Collegamenti Correlati
+- [Proposta Slug](./spatie_email_slug_proposal.md)
+- [Sistema Template Email](./email_templates.md)
+- [Email Dottori](./doctor_emails.md) 

@@ -6,7 +6,10 @@ created: 2025-09-22
 updated: 2026-11-23
 decision-makers: [team back office]
 issues: []
+<<<<<<< .merge_file_UwdqhY
 qmd: "0001 actions over services operazioni business"
+=======
+>>>>>>> .merge_file_7cKuup
 ---
 
 # Le operazioni di business nuove si scrivono come Actions, non come Services

@@ -24,24 +24,6 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  * - `sandbox`: Mailjet valida il messaggio e risponde come per un invio, ma non consegna nulla.
  *
  * @see Modules/Notify/docs/email/mailjet.md
-<<<<<<< .merge_file_rqEUgf
-<<<<<<< .merge_file_q34UE7
-<<<<<<< HEAD
- * @see docs/contracts/create-mailjet-transport-action.md
- *
- * @contract docs/contracts/create-mailjet-transport-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/create-mailjet-transport-action.md
- * @contract docs/contracts/create-mailjet-transport-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_YYZwdG
-=======
->>>>>>> .merge_file_onI76f
  */
 final class CreateMailjetTransportAction
 {

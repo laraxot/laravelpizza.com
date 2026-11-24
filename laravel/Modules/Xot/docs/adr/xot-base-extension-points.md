@@ -6,7 +6,10 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team Laraxot]
 issues: []
+<<<<<<< .merge_file_KMGZ7e
 qmd: "xot base extension points moduli estendono"
+=======
+>>>>>>> .merge_file_Fed88w
 ---
 
 # I moduli estendono i punti base Xot del framework

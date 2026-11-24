@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_i5IVC8
 qmd: "vendor extension"
+=======
+>>>>>>> .merge_file_X8b8FC
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/vendor-extension-pattern.md

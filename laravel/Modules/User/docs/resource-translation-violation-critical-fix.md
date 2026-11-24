@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_vpSrKk
 qmd: "resource translation violation critical fix"
+=======
+>>>>>>> .merge_file_YmmkNU
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/resource-translation-violation-critical-fix.md

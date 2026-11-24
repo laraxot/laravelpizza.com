@@ -8,6 +8,51 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_pEirkb
+/**
+ * Fixture del permesso su cui girano i test di questo file.
+ *
+ * Prima era una proprieta' dinamica assegnata in `beforeEach()` (`$this->permission`), e
+ * questo rompeva due cose insieme:
+ *
+ * - PHP 8.2 ha deprecato le proprieta' dinamiche: la TestCase non dichiara `$permission`,
+ *   quindi l'assegnazione vive solo grazie a una deprecation;
+ * - dentro una closure di Pest `$this` non e' la TestCase del modulo ma
+ *   `Pest\PendingCalls\TestCall`, il cui `@mixin` e' `PHPUnit\Framework\TestCase`. Il valore
+ *   letto era quindi `mixed`, e ogni `->name`, `->getFillable()`, `->assignRole()` su quel
+ *   `mixed` era una segnalazione a sé.
+ *
+ * Una funzione tipizzata da' a ogni test lo stesso oggetto nuovo di `beforeEach()` e un tipo
+ * vero a tutti i chiamanti. `createOne()` e non `create()`: `create()` e' dichiarato
+ * `TModel|Collection<int, TModel>` perche' con `count()` restituisce una collezione, mentre
+ * qui serve — ed e' sempre stato inteso — un singolo model.
+ */
+function userTestPermission(): Permission
+{
+    return Permission::factory()->createOne([
+=======
+<<<<<<< HEAD
+beforeEach(function (): void {
+    $this->permission = Permission::factory()->create([
+>>>>>>> .merge_file_o09hIw
+        'name' => 'test-permission',
+        'guard_name' => 'web',
+    ]);
+}
+
+test('permission can be created', function (): void {
+    $permission = userTestPermission();
+
+    expect($permission->name)->toBe('test-permission');
+    expect($permission->guard_name)->toBe('web');
+});
+
+test('permission has correct fillable attributes', function (): void {
+<<<<<<< .merge_file_pEirkb
+    $fillable = userTestPermission()->getFillable();
+=======
+    $fillable = $this->permission->getFillable();
+=======
 /**
  * Fixture del permesso su cui girano i test di questo file.
  *
@@ -43,6 +88,8 @@ test('permission can be created', function (): void {
 
 test('permission has correct fillable attributes', function (): void {
     $fillable = userTestPermission()->getFillable();
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 
     expect($fillable)->toContain('name');
     expect($fillable)->toContain('guard_name');
@@ -53,13 +100,29 @@ test('permission has correct fillable attributes', function (): void {
 });
 
 test('permission has correct table configuration', function (): void {
+<<<<<<< .merge_file_pEirkb
     $table = userTestPermission()->getTable();
+=======
+<<<<<<< HEAD
+    $table = $this->permission->getTable();
+=======
+    $table = userTestPermission()->getTable();
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 
     expect($table)->not->toBeEmpty();
 });
 
 test('permission has correct casts', function (): void {
+<<<<<<< .merge_file_pEirkb
     $casts = userTestPermission()->getCasts();
+=======
+<<<<<<< HEAD
+    $casts = $this->permission->getCasts();
+=======
+    $casts = userTestPermission()->getCasts();
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 
     // permissions.id e' bigIncrements: il model dichiara solo il cast della chiave intera.
     expect($casts)->toHaveKey('id');
@@ -67,13 +130,43 @@ test('permission has correct casts', function (): void {
 });
 
 test('permission can be updated', function (): void {
+<<<<<<< .merge_file_pEirkb
     $permission = userTestPermission();
 
     $permission->update([
+=======
+<<<<<<< HEAD
+    $this->permission->update([
+=======
+    $permission = userTestPermission();
+
+    $permission->update([
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
         'name' => 'updated-permission',
         'guard_name' => 'api',
     ]);
 
+<<<<<<< .merge_file_pEirkb
+    $permission->refresh();
+=======
+<<<<<<< HEAD
+    $this->permission->refresh();
+>>>>>>> .merge_file_o09hIw
+
+    expect($permission->name)->toBe('updated-permission');
+    expect($permission->guard_name)->toBe('api');
+});
+
+test('permission can be deleted', function (): void {
+    $permission = userTestPermission();
+    $permissionId = $permission->id;
+
+<<<<<<< .merge_file_pEirkb
+    $permission->delete();
+=======
+    $this->permission->delete();
+=======
     $permission->refresh();
 
     expect($permission->name)->toBe('updated-permission');
@@ -85,18 +178,84 @@ test('permission can be deleted', function (): void {
     $permissionId = $permission->id;
 
     $permission->delete();
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 
     expect(Permission::find($permissionId))->toBeNull();
 });
 
 test('permission can be assigned to roles', function (): void {
+<<<<<<< .merge_file_pEirkb
     $permission = userTestPermission();
 
     $role = Role::factory()->createOne([
+=======
+<<<<<<< HEAD
+    $role = Role::factory()->create([
+=======
+    $permission = userTestPermission();
+
+    $role = Role::factory()->createOne([
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
         'name' => 'test-role',
         'guard_name' => 'web',
     ]);
 
+<<<<<<< .merge_file_pEirkb
+    $role->givePermissionTo($permission);
+=======
+<<<<<<< HEAD
+    $role->givePermissionTo($this->permission);
+>>>>>>> .merge_file_o09hIw
+
+    expect($role->hasPermissionTo($permission))->toBeTrue();
+    expect($permission->roles)->toHaveCount(1);
+});
+
+test('permission can be assigned to multiple roles', function (): void {
+    $permission = userTestPermission();
+
+    $role1 = Role::factory()->createOne(['name' => 'role-1']);
+    $role2 = Role::factory()->createOne(['name' => 'role-2']);
+
+    $permission->assignRole($role1);
+    $permission->assignRole($role2);
+
+    expect($permission->roles)->toHaveCount(2);
+    expect($permission->hasRole($role1))->toBeTrue();
+    expect($permission->hasRole($role2))->toBeTrue();
+});
+
+test('permission can be found by name', function (): void {
+    $permission = userTestPermission();
+
+    $foundPermission = Permission::where('name', 'test-permission')->firstOrFail();
+    expect($foundPermission->id)->toBe($permission->id);
+});
+
+test('permission can be found by guard', function (): void {
+    $permission = userTestPermission();
+
+    $webPermissions = Permission::where('guard_name', 'web')->get();
+
+    expect($webPermissions)->toHaveCount(1);
+    expect($webPermissions->firstOrFail()->id)->toBe($permission->id);
+});
+
+test('permission has timestamps', function (): void {
+    $permission = userTestPermission();
+
+    expect($permission->created_at)->not->toBeNull();
+    expect($permission->updated_at)->not->toBeNull();
+});
+
+test('permission can be created with factory', function (): void {
+<<<<<<< .merge_file_pEirkb
+    $permission = Permission::factory()->createOne();
+=======
+    $permission = Permission::factory()->create();
+=======
     $role->givePermissionTo($permission);
 
     expect($role->hasPermissionTo($permission))->toBeTrue();
@@ -142,13 +301,23 @@ test('permission has timestamps', function (): void {
 
 test('permission can be created with factory', function (): void {
     $permission = Permission::factory()->createOne();
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 
     expect($permission->name)->not->toBeEmpty();
     expect($permission->guard_name)->not->toBeEmpty();
 });
 
 test('permission can be created with specific attributes', function (): void {
+<<<<<<< .merge_file_pEirkb
     $permission = Permission::factory()->createOne([
+=======
+<<<<<<< HEAD
+    $permission = Permission::factory()->create([
+=======
+    $permission = Permission::factory()->createOne([
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
         'name' => 'custom-permission',
         'guard_name' => 'custom-guard',
     ]);
@@ -158,6 +327,78 @@ test('permission can be created with specific attributes', function (): void {
 });
 
 test('permission can check if it has role', function (): void {
+<<<<<<< .merge_file_pEirkb
+    $permission = userTestPermission();
+
+    $role = Role::factory()->createOne(['name' => 'test-role']);
+=======
+<<<<<<< HEAD
+    $role = Role::factory()->create(['name' => 'test-role']);
+>>>>>>> .merge_file_o09hIw
+
+    expect($permission->hasRole($role))->toBeFalse();
+
+    $permission->assignRole($role);
+
+    expect($permission->hasRole($role))->toBeTrue();
+});
+
+test('permission can check if it has any roles', function (): void {
+    $permission = userTestPermission();
+
+    expect($permission->hasAnyRole([]))->toBeFalse();
+
+    $role = Role::factory()->createOne(['name' => 'test-role']);
+    $permission->assignRole($role);
+
+    expect($permission->hasAnyRole([$role]))->toBeTrue();
+});
+
+test('permission can check if it has all roles', function (): void {
+    $permission = userTestPermission();
+
+    $role1 = Role::factory()->createOne(['name' => 'role-1']);
+    $role2 = Role::factory()->createOne(['name' => 'role-2']);
+
+    $permission->syncRoles([$role1, $role2]);
+
+    expect($permission->hasAllRoles([$role1, $role2]))->toBeTrue();
+    expect($permission->hasAllRoles([$role1]))->toBeTrue();
+    expect($permission->hasAllRoles([$role1, $role2, 'non-existent']))->toBeFalse();
+});
+
+test('permission can be revoked from role', function (): void {
+    $permission = userTestPermission();
+
+    $role = Role::factory()->createOne(['name' => 'test-role']);
+
+    $permission->assignRole($role);
+    expect($permission->hasRole($role))->toBeTrue();
+
+    $permission->removeRole($role);
+    expect($permission->hasRole($role))->toBeFalse();
+});
+
+test('permission can be synced with roles', function (): void {
+    $permission = userTestPermission();
+
+    $role1 = Role::factory()->createOne(['name' => 'role-1']);
+    $role2 = Role::factory()->createOne(['name' => 'role-2']);
+    $role3 = Role::factory()->createOne(['name' => 'role-3']);
+
+    // Initially assign role1 and role2
+    $permission->syncRoles([$role1, $role2]);
+    expect($permission->roles)->toHaveCount(2);
+
+    // Sync to only role2 and role3
+<<<<<<< .merge_file_pEirkb
+=======
+    $this->permission->syncRoles([$role2, $role3]);
+    expect($this->permission->roles)->toHaveCount(2);
+    expect($this->permission->hasRole($role1))->toBeFalse();
+    expect($this->permission->hasRole($role2))->toBeTrue();
+    expect($this->permission->hasRole($role3))->toBeTrue();
+=======
     $permission = userTestPermission();
 
     $role = Role::factory()->createOne(['name' => 'test-role']);
@@ -217,9 +458,14 @@ test('permission can be synced with roles', function (): void {
     expect($permission->roles)->toHaveCount(2);
 
     // Sync to only role2 and role3
+>>>>>>> .merge_file_o09hIw
     $permission->syncRoles([$role2, $role3]);
     expect($permission->roles)->toHaveCount(2);
     expect($permission->hasRole($role1))->toBeFalse();
     expect($permission->hasRole($role2))->toBeTrue();
     expect($permission->hasRole($role3))->toBeTrue();
+<<<<<<< .merge_file_pEirkb
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_o09hIw
 });

@@ -24,7 +24,10 @@ use Webmozart\Assert\Assert;
  * - Assert: Utilizza webmozart/assert per validazioni robuste
  *
  * @see docs/contracts/safe-attribute-cast-action.md
+<<<<<<< .merge_file_rAmhiI
  *
+=======
+>>>>>>> .merge_file_j9Kx0J
  * @contract docs/contracts/safe-attribute-cast-action.md
  */
 class SafeAttributeCastAction

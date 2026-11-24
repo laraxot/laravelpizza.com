@@ -1,0 +1,34 @@
+---
+title: "Notify — BMAD dossier"
+type: bmad-dossier
+module: Notify
+<<<<<<< .merge_file_6UQRrV
+<<<<<<< .merge_file_Ui26O1
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_1r61iP
+<<<<<<< HEAD
+updated: 2026-10-07
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_6UQRrV
+>>>>>>> .merge_file_Yy9INM
+=======
+>>>>>>> .merge_file_1r61iP
+tags: [bmad, notify, delivery]
+qmd: "Notify module product brief PRD architecture UX security epics gaps release"
+issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
+discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
+created: 2026-11-23
+---
+# Notify — BMAD dossier
+## Product brief / PRD
+Deliver preference-aware mail/SMS/WhatsApp/Telegram/FCM messages with observable outcomes.
+## Architecture / UX / security
+Channel adapters consume common intent; Job dispatches after commit; secrets and verified destinations stay outside docs/logs.
+## Epics and stories
+Channel contract; templates/preferences; retry/failure/monitoring.
+## Gaps / release
+Worker/SMTP sandbox, failed jobs, push tokens, idempotency and provider fallback are not candidate-verified.

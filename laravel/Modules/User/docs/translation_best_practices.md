@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_BcFx9I
 ---
 title: "Best Practices per le Traduzioni"
 type: note
 qmd: "translation best practices traduzioni"
 ---
+=======
+>>>>>>> .merge_file_AlOTIh
 # Best Practices per le Traduzioni
 
 ## Principi Generali

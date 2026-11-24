@@ -3,7 +3,10 @@ title: "Xot - 2026-10-06-phpstan-l10-systematic-resolution.story.md"
 module: Xot
 bmad: true
 status: active
+<<<<<<< .merge_file_KSTE6d
 qmd: "phpstan l10 systematic resolution story 20261006phpstanl10systematicresolutionstorymd"
+=======
+>>>>>>> .merge_file_fHjR19
 ---
 
 # BMAD Story: PHPStan Level 10 Systematic Resolution

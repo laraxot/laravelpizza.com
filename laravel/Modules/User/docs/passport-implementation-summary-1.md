@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_lagX5q
 qmd: "passport implementation summary 1"
+=======
+>>>>>>> .merge_file_ByEgr5
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/passport-implementation-summary.md

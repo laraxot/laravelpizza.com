@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_Wt1Zp4
 qmd: "traits hasteams corretta"
+=======
+>>>>>>> .merge_file_LDAXoJ
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/traits-hasteams-analysis-corretta.md

@@ -1,0 +1,62 @@
+---
+title: "project context"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_80fscd
+<<<<<<< .merge_file_OMz1x4
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_t7JdH1
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_80fscd
+>>>>>>> .merge_file_2KNNFd
+=======
+>>>>>>> .merge_file_t7JdH1
+qmd: "project context"
+issues: []
+discussions: []
+status: draft
+---
+
+# Project Context
+
+> Contesto generale del progetto PTVX fila5.
+
+## 📋 Informazioni Progetto
+
+- **Project**: PTVX fila5
+- **Stack**: Laravel 12 | Filament v5 | Pest v4 | PHPStan Level 10 | PHP 8.3+
+- **Tipo**: Modular HR & Performance evaluation system
+
+## 🎯 Regole Fondamentali
+
+1. **Leggi → Ragiona → Studia → Aggiorna Docs → Migliora**
+2. `declare(strict_types=1);` in ogni file PHP
+3. Short array syntax `[]` - MAI usare `array()`
+4. NEVER use `property_exists()` su modelli Eloquent
+
+## 📁 Documentazione Locations
+
+| Tipo | Percorso |
+|------|----------|
+| Project docs | `docs/` |
+| Module docs | `laravel/Modules/{Module}/docs/` |
+| Bashscripts docs | `bashscripts/docs/` |
+| MCP config | `laravel/.mcp.json` |
+| GitHub workflows | `.github/workflows/` |
+
+## 🔗 Link
+
+**Precedente:** [INDEX](index.md) | **Successivo:** [Module Architecture](module-architecture.md)
+
+**Di ritorno:**
+- [CLAUDE.md](../../CLAUDE.md)
+- [AGENTS.md](../../AGENTS.md)
+- [CLAUDE.md](../claude.md)
+- [AGENTS.md](../agents.md)

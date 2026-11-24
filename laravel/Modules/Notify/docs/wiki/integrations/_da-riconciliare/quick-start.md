@@ -4,24 +4,36 @@ type: concept
 tags: [quick, start]
 created: 2026-07-14
 <<<<<<< HEAD
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_dlLaeK
+=======
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_dlLaeK
+=======
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 qmd: "quick-start 🚀 <nome progetto> - guida rapida sviluppatori"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -535,7 +547,10 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 ### Documentazione
 - **[Indice Documentazione](./documentation-index.md)**
 <<<<<<< HEAD
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 - **[Roadmap Status](./roadmap-status-summary.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
 =======
@@ -554,6 +569,8 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 <<<<<<< .merge_file_ihyH3q
@@ -565,19 +582,26 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
->>>>>>> .merge_file_dlLaeK
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_2Wtrhu
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 =======
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_dlLaeK
+=======
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**
@@ -590,14 +614,20 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 =======
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 =======
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_dlLaeK
+=======
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_ihyH3q
 - **[Code Quality](./.windsurf/rules/code-quality.md)**
 =======
@@ -605,13 +635,19 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 >>>>>>> .merge_file_2Wtrhu
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 =======
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_dlLaeK
+=======
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
 ---
@@ -649,7 +685,10 @@ php artisan optimize:clear
 ---
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_cXFaOS
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_U85485
+>>>>>>> laraxot/dev
 
 =======
 <<<<<<< HEAD
@@ -660,11 +699,14 @@ php artisan optimize:clear
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
 =======
 
 =======
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_dlLaeK
+>>>>>>> .merge_file_iij523
+>>>>>>> laraxot/dev
 ---
 
 *Per contribuire al progetto, leggi attentamente questa guida e le regole Laraxot. In caso di dubbi, consulta la

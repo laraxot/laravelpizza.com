@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-sicure-array-by-model-action.md
+<<<<<<< .merge_file_ddURdQ
  *
+=======
+>>>>>>> .merge_file_dmuCjw
  * @contract docs/contracts/get-sicure-array-by-model-action.md
  */
 class GetSicureArrayByModelAction

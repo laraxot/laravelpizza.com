@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_lCfJA2
 qmd: "model inheritance fixes correzioni ereditarietà modelli"
+=======
+>>>>>>> .merge_file_ZTo1nx
 ---
 
 # Correzioni Ereditarietà Modelli - Modulo User

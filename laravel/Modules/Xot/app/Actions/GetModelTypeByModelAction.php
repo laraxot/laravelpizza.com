@@ -13,7 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-model-type-by-model-action.md
+<<<<<<< .merge_file_ObW9iV
  *
+=======
+>>>>>>> .merge_file_qxnM4N
  * @contract docs/contracts/get-model-type-by-model-action.md
  */
 class GetModelTypeByModelAction

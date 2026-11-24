@@ -10,7 +10,10 @@ references:
   - ../architecture/module-boundary.md
   - ../brainstorming/module-opportunities.md
   - ../epics/module-roadmap.md
+<<<<<<< .merge_file_5X4pKk
 qmd: "bmad audit story baseline analisi completa"
+=======
+>>>>>>> .merge_file_3BSPrO
 ---
 # Story — Xot: baseline BMAD
 

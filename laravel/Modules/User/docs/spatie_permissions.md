@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Rdb8Fx
 ---
 title: "Spatie Permissions"
 type: note
 qmd: "spatie permissions"
 ---
+=======
+>>>>>>> .merge_file_slVqVO
 https://jaydeepamethiya.medium.com/spatie-roles-and-permissions-in-laravel-10-a-comprehensive-guide-536d099d40ae
 
 

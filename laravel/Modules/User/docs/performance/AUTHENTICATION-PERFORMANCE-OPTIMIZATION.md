@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_jWphOB
 ---
 title: "Authentication Performance Optimization - User Module"
 type: note
 qmd: "authentication performance optimization user"
 ---
+=======
+>>>>>>> .merge_file_ht2wI5
 # Authentication Performance Optimization - User Module
 
 ## 🚨 Critical Issues Identified

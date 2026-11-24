@@ -12,7 +12,10 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/pdf-by-model-action.md
+<<<<<<< .merge_file_Z4fQnn
  *
+=======
+>>>>>>> .merge_file_dzUPlD
  * @contract docs/contracts/pdf-by-model-action.md
  */
 class PdfByModelAction

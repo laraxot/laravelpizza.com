@@ -6,7 +6,10 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team back office]
 issues: [250]
+<<<<<<< .merge_file_yTo6wr
 qmd: "0013 dati sacri migrazioni test sono"
+=======
+>>>>>>> .merge_file_Degu9E
 ---
 
 # I dati sono sacri: migrazioni e test girano solo in avanti

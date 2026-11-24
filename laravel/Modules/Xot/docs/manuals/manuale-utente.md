@@ -3,7 +3,10 @@ title: "Manuale utente — Xot"
 type: user-manual
 status: active
 screenshot: assets/front-office-home.png
+<<<<<<< .merge_file_NFIRRI
 qmd: "manuale utente"
+=======
+>>>>>>> .merge_file_yUaHJk
 ---
 
 > Screenshot reale del front office FixCity, verificato il 23 novembre 2026. È una superficie condivisa e non una prova di una UI propria di Xot.

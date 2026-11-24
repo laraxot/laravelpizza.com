@@ -1,0 +1,31 @@
+---
+title: "jpgraph notes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_vwWz0e
+<<<<<<< .merge_file_orM5S0
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_YtJSyS
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_vwWz0e
+>>>>>>> .merge_file_HyYdgs
+=======
+>>>>>>> .merge_file_YtJSyS
+qmd: "jpgraph notes"
+issues: []
+discussions: []
+---
+
+# JpGraph notes
+
+- JpGraph is dual-licensed.
+- Validate licensing constraints before expanding usage.
+
+For interactive dashboards prefer Filament ChartWidgets (Chart.js). For PDF/export, evaluate server-side rendering needs.

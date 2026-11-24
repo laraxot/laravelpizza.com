@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_ypBNPC
 ---
 title: "FullCalendar Scheduler License Key"
 type: note
 qmd: "scheduler license key fullcalendar"
 ---
+=======
+>>>>>>> .merge_file_IiKcTi
 # FullCalendar Scheduler License Key
 
 ## Overview

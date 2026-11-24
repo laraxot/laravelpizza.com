@@ -33,7 +33,10 @@ use Webmozart\Assert\Assert;
  *
  * @property Schema $form
  * @property array<string, mixed>|null $data
+<<<<<<< .merge_file_ngJnxs
  *
+=======
+>>>>>>> .merge_file_9mTkt0
  * @see ../../../docs/bmad/livewire-widget-decision-log.md
  */
 abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
@@ -49,7 +52,10 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
      * FQCN *Form (opzionale). Se presente, `form()` delega a `FormClass::{schemaMethod()}`.
      *
      * @return class-string|null
+<<<<<<< .merge_file_ngJnxs
      *
+=======
+>>>>>>> .merge_file_9mTkt0
      * @see ../../../docs/bmad/livewire-widget-decision-log.md
      */
     protected static function formClass(): ?string
@@ -72,7 +78,10 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
      * Schema form (override nelle sottoclassi). Usato se `formClass()` è vuoto.
      *
      * @return array<int|string, Component>
+<<<<<<< .merge_file_ngJnxs
      *
+=======
+>>>>>>> .merge_file_9mTkt0
      * @see ../../../docs/bmad/livewire-widget-decision-log.md
      */
     public function getFormSchema(): array
@@ -109,7 +118,10 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
      * @param  class-string  $formClass  Es. UserForm::class
      * @param  string  $method  Es. getRegisterFormSchema
      * @return array<int|string, Component>
+<<<<<<< .merge_file_ngJnxs
      *
+=======
+>>>>>>> .merge_file_9mTkt0
      * @see ../../../docs/bmad/livewire-widget-decision-log.md
      */
     protected static function resourceFormSchema(string $formClass, string $method): array

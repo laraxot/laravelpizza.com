@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_P41gqI
 qmd: "session management gestione sessioni"
+=======
+>>>>>>> .merge_file_rHw2go
 ---
 
 # Gestione delle Sessioni
@@ -77,8 +80,23 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - Aggiornare questo documento se vengono identificate nuove strategie di gestione delle sessioni o problemi.
 
 ## Collegamenti a Documentazione Correlata
+<<<<<<< HEAD
 - [Indice del Modulo Utente](./index.md)
+<<<<<<< .merge_file_P41gqI
 - [Indice del Modulo Utente](./README.md)
+=======
+
+- [Indice del Modulo Utente](./index.md)
+=======
+- [Indice del Modulo Utente](./README.md)
+
+<<<<<<< .merge_file_kJt7x3
+- [Indice del Modulo Utente](./README.md)
+=======
+- [Indice del Modulo Utente](./index.md)
+>>>>>>> .merge_file_qv7iAp
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_rHw2go
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth_pages_implementation.md)
 - [Gestione del Profilo](./profile_management.md)

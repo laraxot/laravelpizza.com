@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_DcdxT0
 ---
 title: "User Module - Query Optimization Analysis"
 type: analysis
 qmd: "query optimization analysis user"
 ---
+=======
+>>>>>>> .merge_file_AIDE50
 # User Module - Query Optimization Analysis
 
 ## Overview

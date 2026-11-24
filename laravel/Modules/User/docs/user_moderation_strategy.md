@@ -5,7 +5,10 @@ type: product
 tags: [product, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_37SheE
 qmd: "user moderation strategy"
+=======
+>>>>>>> .merge_file_E0J3eM
 ---
 
 # User Moderation Strategy

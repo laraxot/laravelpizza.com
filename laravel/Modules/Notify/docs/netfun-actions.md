@@ -3,7 +3,7 @@ title: "netfun actions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FEBfrk
+<<<<<<< .merge_file_l7PBxB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_PdLxlV
+>>>>>>> .merge_file_BrOrwj
 qmd: "netfun actions"
 issues: []
 discussions: []
@@ -222,11 +222,11 @@ updated: 2026-09-26
 qmd: "netfun actions"
 issues: []
 discussions: []
-<<<<<<< .merge_file_FEBfrk
+<<<<<<< .merge_file_l7PBxB
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_PdLxlV
+>>>>>>> .merge_file_BrOrwj

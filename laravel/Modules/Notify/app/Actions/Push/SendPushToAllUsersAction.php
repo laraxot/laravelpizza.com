@@ -9,19 +9,6 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Invia una notifica push a tutti i token attivi registrati.
-<<<<<<< HEAD
- *
- * @see docs/contracts/send-push-to-all-users-action.md
- *
- * @contract docs/contracts/send-push-to-all-users-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/send-push-to-all-users-action.md
- * @contract docs/contracts/send-push-to-all-users-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class SendPushToAllUsersAction
 {

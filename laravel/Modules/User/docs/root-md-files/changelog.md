@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_gfSY9Q
 ---
 title: "Changelog"
 type: note
 qmd: "changelog"
 ---
+=======
+>>>>>>> .merge_file_1kbKZj
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.

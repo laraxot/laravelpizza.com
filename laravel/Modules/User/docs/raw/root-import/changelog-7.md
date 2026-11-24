@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_JDXsX8
 ---
 title: "Changelog"
 type: note
 qmd: "changelog 7"
 ---
+=======
+>>>>>>> .merge_file_KD9LEx
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.

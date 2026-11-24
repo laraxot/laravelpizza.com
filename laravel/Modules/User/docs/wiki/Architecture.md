@@ -2,7 +2,10 @@
 module: User
 concept: Architecture
 last_updated: 2026-04-15
+<<<<<<< .merge_file_LIvsA1
 qmd: "architecture user"
+=======
+>>>>>>> .merge_file_qjydAW
 ---
 
 # User Module Architecture

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_G392IB
 ---
 title: "User Module - PHPStan Fixes Session 2025-10-01"
 type: note
 qmd: "phpstan fixes user session 20251001"
 ---
+=======
+>>>>>>> .merge_file_nFH0lf
 # User Module - PHPStan Fixes Session 2025-10-01
 
 ## ⚠️ Stato: IN PROGRESS - 95 errori rimanenti

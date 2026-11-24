@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_GwOf6F
 ---
 title: "Indice task - Modulo User"
 type: note
 qmd: "tasks indice task user"
 ---
+=======
+>>>>>>> .merge_file_2QSvyb
 # Indice task - Modulo User
 
 Lista dei task del modulo con link ai file .md separati. Ogni task è un file nella cartella `tasks/`.

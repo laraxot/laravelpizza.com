@@ -6,7 +6,10 @@ module: "User"
 created: 2026-05-12
 updated: 2026-05-12
 related:
+<<<<<<< .merge_file_UKX4Vm
 qmd: "filament translation audit skill traduzioni user"
+=======
+>>>>>>> .merge_file_wiuSpG
 ---
 
 # Skill — Audit traduzioni Filament User

@@ -1,0 +1,143 @@
+---
+title: "iflow getting started"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_ubEysI
+<<<<<<< .merge_file_5PDP6p
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_ZUZOls
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_ubEysI
+>>>>>>> .merge_file_CYC7kh
+=======
+>>>>>>> .merge_file_ZUZOls
+qmd: "iflow getting started"
+issues: []
+discussions: []
+---
+
+# IFLOW Getting Started
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+Come iniziare a lavorare sul progetto.
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+---
+
+title: "iflow getting started"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow getting started"
+issues: []
+discussions: []
+## 🚀 In 3 Passi
+
+> Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
+
+---
+
+<<<<<<< HEAD
+=======
+=======
+## 🚀 In 3 Passi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+### 1. Leggi le Regole Critiche
+
+- `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
+- `laravel/Modules/Meetup/docs/rules-index.md`
+- `laravel/Themes/Meetup/docs/critical-rules-consolidated.md`
+
+---
+
+### 2. Avvia l'Ambiente
+
+Setup Laravel classico:
+
+```bash
+cd laravel
+composer install
+npm install
+```
+
+Dal tema Meetup:
+
+```bash
+cd Themes/Meetup
+npm install
+npm run build  # OBBLIGATORIO dopo ogni cambio CSS/JS
+```
+
+---
+
+### 3. Visita il Frontoffice
+
+- `http://127.0.0.1:8000/it`
+- `http://127.0.0.1:8000/it/events`
+
+Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
+
+---
+
+## Workflow Critico
+
+### Regole Fondamentali
+
+- **MAI** creare file .md in posizioni sbagliate
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+<<<<<<< .merge_file_ubEysI
+<<<<<<< .merge_file_5PDP6p
+<<<<<<< HEAD
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+=======
+<<<<<<< HEAD
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+>>>>>>> .merge_file_CYC7kh
+=======
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+>>>>>>> .merge_file_ZUZOls
+- **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
+- **SEMPRE** eseguire PHPMD e PHPInsights
+- **MAI** usare `property_exists()` su modelli Eloquent
+- **SEMPRE** verificare con `hasAttribute()` o type safety
+
+---
+
+## Struttura Progetto
+
+- **Root**: `./`
+- **Laravel app**: `laravel/`
+- **Configurazione locale**: `laravel/config/local/laravelpizza/`
+- **Tema corrente**: `laravel/Themes/Meetup/`
+
+---
+
+## 🔗 Link
+
+- [Indice IFLOW](./iflow-split-index.md)
+- [project-setup.md](./project-setup.md)
+- [IFLOW.md originale](../../IFLOW.md)
+- [Index principale](./index.md)

@@ -8,9 +8,13 @@ use Modules\Xot\Traits\EnumTrait;
 
 /**
  * Stub temporaneo per PdfEngineEnum. Da implementare secondo le esigenze reali.
+<<<<<<< .merge_file_PjkTXE
  *
  * @see docs/contracts/pdf-engine-enum.md
  *
+=======
+ * @see docs/contracts/pdf-engine-enum.md
+>>>>>>> .merge_file_4dluov
  * @contract docs/contracts/pdf-engine-enum.md
  */
 enum PdfEngineEnum: string

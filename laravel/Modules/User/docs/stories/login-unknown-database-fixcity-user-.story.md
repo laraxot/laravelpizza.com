@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_BWzI60
 ---
 title: "Login FO: Unknown database 'fixcity_user'"
 type: story
 qmd: "login unknown database fixcity user story"
 ---
+=======
+>>>>>>> .merge_file_lGqaYy
 # Login FO: Unknown database 'fixcity_user'
 
 - Stato: parziale (2026-10-07)

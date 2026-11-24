@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_kZth4D
 qmd: "xotbasemigration laraxot philosophy"
+=======
+>>>>>>> .merge_file_0v5CfL
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/xotbasemigration-laraxot-philosophy.md

@@ -3,7 +3,7 @@ title: "module notify"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Qp7HiM
+<<<<<<< .merge_file_kI3CP5
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_OENvfM
+>>>>>>> .merge_file_J3PoPk
 qmd: "module notify"
 issues: []
 discussions: []
@@ -156,7 +156,7 @@ updated: 2026-09-26
 qmd: "module notify"
 issues: []
 discussions: []
-<<<<<<< .merge_file_Qp7HiM
+<<<<<<< .merge_file_kI3CP5
 <<<<<<< HEAD
 =======
 =======
@@ -166,4 +166,4 @@ Le modifiche vengono tracciate nel repository GitHub.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_OENvfM
+>>>>>>> .merge_file_J3PoPk

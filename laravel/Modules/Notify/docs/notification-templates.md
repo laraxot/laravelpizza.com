@@ -3,7 +3,7 @@ title: "notification templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_s9Xu8T
+<<<<<<< .merge_file_AThcGM
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_fh6GYS
+>>>>>>> .merge_file_mR8qhC
 qmd: "notification templates"
 issues: []
 discussions: []

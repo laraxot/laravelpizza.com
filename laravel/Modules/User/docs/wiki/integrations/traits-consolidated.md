@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_8Tp2kQ
 qmd: "traits consolidated"
+=======
+>>>>>>> .merge_file_0s7mEz
 ---
 
 # traits — Consolidated Documentation

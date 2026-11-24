@@ -13,19 +13,6 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Gli stub di consegna ritornano `success: true` senza chiamare alcuna API: finche' il transport
  * non e' implementato, il log e' l'unico modo per vedere cosa sarebbe stato consegnato e a chi.
-<<<<<<< HEAD
- *
- * @see docs/contracts/log-simulated-push-delivery-action.md
- *
- * @contract docs/contracts/log-simulated-push-delivery-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/log-simulated-push-delivery-action.md
- * @contract docs/contracts/log-simulated-push-delivery-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 final class LogSimulatedPushDeliveryAction
 {

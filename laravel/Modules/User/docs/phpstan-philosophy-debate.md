@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_CyHmGF
 qmd: "phpstan philosophy debate"
+=======
+>>>>>>> .merge_file_ViEXzp
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-philosophy-debate.md

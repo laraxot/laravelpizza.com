@@ -2,7 +2,10 @@
 title: "Inventario documentazione dei moduli"
 module: Xot
 type: audit
+<<<<<<< .merge_file_c3Fq81
 qmd: "inventory inventario moduli"
+=======
+>>>>>>> .merge_file_3dljYk
 ---
 
 # Inventario documentazione dei moduli

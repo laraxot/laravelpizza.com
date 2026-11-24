@@ -2,7 +2,11 @@
 qmd: "xot investigation investigation md"
 type: investigation
 title: "Investigation Core Contract Refactoring"
+<<<<<<< .merge_file_27N04k
 links: {github_issue: "#XXX"}
+=======
+links: {github_issue: #XXX}
+>>>>>>> .merge_file_qJJDBy
 ---
 # Investigation: Core Contract Refactoring
 

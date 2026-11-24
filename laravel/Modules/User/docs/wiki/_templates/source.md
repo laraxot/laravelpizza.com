@@ -9,7 +9,10 @@ tags: [article, paper, documentation]
 related:
   - "./concept.md"
   - "./entity.md"
+<<<<<<< .merge_file_GbeX0Z
 qmd: "source title"
+=======
+>>>>>>> .merge_file_eJHA9b
 ---
 
 # {{title}}

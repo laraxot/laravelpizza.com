@@ -14,9 +14,13 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Serve ai componenti condivisi (filtri anno di Ptv, ...) che non sanno in quale modulo girano:
  * chiedono al modello della tabella e leggono la configurazione di quel modulo.
+<<<<<<< .merge_file_f7RFX3
  *
  * @see docs/contracts/resolve-module-config-data-action.md
  *
+=======
+ * @see docs/contracts/resolve-module-config-data-action.md
+>>>>>>> .merge_file_aOmPdG
  * @contract docs/contracts/resolve-module-config-data-action.md
  */
 class ResolveModuleConfigDataAction

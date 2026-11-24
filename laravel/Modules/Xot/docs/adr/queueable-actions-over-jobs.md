@@ -7,7 +7,10 @@ updated: 2026-11-24
 decision-makers: [team]
 issues: []
 superseded_by: 0002-queueable-actions-over-framework-jobs.md
+<<<<<<< .merge_file_juC2OI
 qmd: "queueable actions over jobs posto duplicati"
+=======
+>>>>>>> .merge_file_Wsf38n
 ---
 
 > Superseded da [0002-queueable-actions-over-framework-jobs.md](0002-queueable-actions-over-framework-jobs.md): alias senza numero della stessa decisione. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

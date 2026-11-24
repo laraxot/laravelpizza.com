@@ -10,9 +10,13 @@ use Webmozart\Assert\Assert;
 
 /**
  * Classe per eseguire comandi Artisan in modo sicuro.
+<<<<<<< .merge_file_xMJrOK
  *
  * @see docs/contracts/execute-artisan-command-action.md
  *
+=======
+ * @see docs/contracts/execute-artisan-command-action.md
+>>>>>>> .merge_file_VyLQzv
  * @contract docs/contracts/execute-artisan-command-action.md
  */
 class ExecuteArtisanCommandAction

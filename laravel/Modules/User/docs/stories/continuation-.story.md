@@ -4,7 +4,10 @@ title: "User Module — Table Audit and $model Property"
 type: continuation
 scope: module:User
 github: {issues: "https://github.com/laraxot/module_xot_fila5/issues/115", discussions: "https://github.com/laraxot/module_xot_fila5/discussions/117"}
+<<<<<<< .merge_file_dgJrrk
 qmd: "continuation story user table audit model"
+=======
+>>>>>>> .merge_file_6dDOdr
 ---
 # User Module — Continuation Task
 

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_FgcMUT
 ---
 title: "Authentication Performance Optimization - User Module"
 type: note
 qmd: "authentication performance optimization user"
 ---
+=======
+>>>>>>> .merge_file_g07D7O
 # Authentication Performance Optimization - User Module
 
 ## 🚨 Critical Issues Identified

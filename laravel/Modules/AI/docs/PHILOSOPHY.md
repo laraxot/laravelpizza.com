@@ -125,11 +125,15 @@ Eloquent models (AiThread, AiMessage, AiActionProposal, AiToolLog) are the sourc
 
 ### Why Prompt Engineering is Centralized
 
+<<<<<<< .merge_file_1lIaGK
 <<<<<<< .merge_file_NLcCKN
 All prompts live in `Prompt/BuildAIPromptAction.php` (private methods of the same Action). This is intentional.
 =======
 All prompts live in `Prompt/BuildAIPromptAction.php` and referenced templates (AIPromptTemplates). This is intentional.
 >>>>>>> .merge_file_ZaHFW6
+=======
+All prompts live in `Prompt/BuildAIPromptAction.php` and referenced templates (AIPromptTemplates). This is intentional.
+>>>>>>> .merge_file_OR0jG7
 
 **Why**:
 - Versioning: if a prompt stops working, you can see the history (git blame, commit message).
@@ -249,11 +253,15 @@ DS4's KV cache (`~/.ds4/kvcache/`) persists between requests. This is good—don
 **Flow**:
 1. Message received (ticket description, comment, etc.).
 2. SentimentAction tries Transformers (local, free).
+<<<<<<< .merge_file_1lIaGK
 <<<<<<< .merge_file_NLcCKN
 3. If Transformers unavailable, uses the word-list `AnalyzeBasicSentimentAction` (see `sentiment-analysis.md`).
 =======
 3. If Transformers unavailable, uses regex-based BasicSentimentAnalyzer.
 >>>>>>> .merge_file_ZaHFW6
+=======
+3. If Transformers unavailable, uses regex-based BasicSentimentAnalyzer.
+>>>>>>> .merge_file_OR0jG7
 4. Returns JSON: sentiment (pos/neg/neutral), emotion, confidence, urgency_level, recommended_tone.
 5. Operator sees urgency flag; high/critical triggers escalation.
 

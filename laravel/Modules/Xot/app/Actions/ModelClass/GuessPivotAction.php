@@ -11,7 +11,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/guess-pivot-action.md
+<<<<<<< .merge_file_sPqk90
  *
+=======
+>>>>>>> .merge_file_oDHY9o
  * @contract docs/contracts/guess-pivot-action.md
  */
 class GuessPivotAction

@@ -10,9 +10,13 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per la traduzione di elementi di una collezione.
+<<<<<<< .merge_file_vtqDUQ
  *
  * @see docs/contracts/trans-collection-action.md
  *
+=======
+ * @see docs/contracts/trans-collection-action.md
+>>>>>>> .merge_file_VNSXzR
  * @contract docs/contracts/trans-collection-action.md
  */
 class TransCollectionAction

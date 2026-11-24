@@ -12,7 +12,15 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< .merge_file_5SJIbm
 uses(TestCase::class);
+=======
+<<<<<<< HEAD
+uses(TestCase::class);
+=======
+uses(\Modules\User\Tests\TestCase::class);
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_joW9n6
 
 class GetCurrentDeviceActionTest extends TestCase
 {

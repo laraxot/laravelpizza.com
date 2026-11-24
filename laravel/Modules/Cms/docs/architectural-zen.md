@@ -49,7 +49,6 @@ To see changes in the browser, follow this strict sequence:
 1.  **Navigate** to the theme directory: `Themes/Meetup/`
 2.  **Install** dependencies: `npm install`
 3.  **Build** assets: `npm run build`
-<<<<<<< .merge_file_jkeQH8
 <<<<<<< .merge_file_GA3R2L
 <<<<<<< .merge_file_CKTY87
 <<<<<<< .merge_file_AHCdbI
@@ -59,8 +58,6 @@ To see changes in the browser, follow this strict sequence:
 >>>>>>> .merge_file_5EwfP1
 =======
 >>>>>>> .merge_file_494gkY
-=======
->>>>>>> .merge_file_enIe8U
 <<<<<<< HEAD
 4.  niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 4.  **Deploy** to public root: `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`) (Deploys compiled assets to `public_html/themes/Meetup`)
@@ -75,7 +72,6 @@ To see changes in the browser, follow this strict sequence:
 4.  **Deploy** to public root: nothing to copy — `public_html/themes/Meetup` is a symlink to `Themes/Meetup/public`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_jkeQH8
 <<<<<<< .merge_file_GA3R2L
 <<<<<<< .merge_file_CKTY87
 >>>>>>> .merge_file_P0MaV9
@@ -83,8 +79,6 @@ To see changes in the browser, follow this strict sequence:
 >>>>>>> .merge_file_5EwfP1
 =======
 >>>>>>> .merge_file_494gkY
-=======
->>>>>>> .merge_file_enIe8U
 
 ## 5. Tenant Resolution
 
@@ -93,7 +87,6 @@ To see changes in the browser, follow this strict sequence:
 
 ---
 
-<<<<<<< .merge_file_jkeQH8
 <<<<<<< .merge_file_GA3R2L
 <<<<<<< .merge_file_CKTY87
 <<<<<<< .merge_file_AHCdbI
@@ -102,8 +95,6 @@ To see changes in the browser, follow this strict sequence:
 >>>>>>> .merge_file_5EwfP1
 =======
 >>>>>>> .merge_file_494gkY
-=======
->>>>>>> .merge_file_enIe8U
 title: "architectural zen"
 type: note
 tags: [documentation]
@@ -112,7 +103,6 @@ updated: 2026-09-26
 qmd: "architectural zen"
 issues: []
 discussions: []
-<<<<<<< .merge_file_jkeQH8
 <<<<<<< .merge_file_GA3R2L
 <<<<<<< .merge_file_CKTY87
 >>>>>>> .merge_file_P0MaV9
@@ -120,7 +110,5 @@ discussions: []
 >>>>>>> .merge_file_5EwfP1
 =======
 >>>>>>> .merge_file_494gkY
-=======
->>>>>>> .merge_file_enIe8U
 > [!IMPORTANT]
 > This site is a high-fidelity conversion of `laravelpizza.com`. Every block in the JSON content must align with the visual and functional requirements of the original site.

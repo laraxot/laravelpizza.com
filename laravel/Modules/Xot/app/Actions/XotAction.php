@@ -10,7 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/xot-action.md
+<<<<<<< .merge_file_QLjJWv
  *
+=======
+>>>>>>> .merge_file_UX5DJh
  * @contract docs/contracts/xot-action.md
  */
 class XotAction

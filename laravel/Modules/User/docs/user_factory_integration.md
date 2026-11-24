@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_yjscsS
 ---
 title: "UserFactory Integration - Modulo User e SaluteOra"
 type: note
 qmd: "user factory integration userfactory saluteora"
 ---
+=======
+>>>>>>> .merge_file_nHDvEW
 # UserFactory Integration - Modulo User e SaluteOra
 
 ## Overview

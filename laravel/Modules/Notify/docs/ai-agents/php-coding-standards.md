@@ -1,0 +1,69 @@
+---
+title: "php coding standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_qIYShW
+<<<<<<< .merge_file_IRoUzx
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_Yz9fOP
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_qIYShW
+>>>>>>> .merge_file_HGf8C9
+=======
+>>>>>>> .merge_file_Yz9fOP
+qmd: "php coding standards"
+issues: []
+discussions: []
+---
+
+# PHP coding standards (strict)
+
+## Always required
+
+```php
+<?php declare(strict_types=1);
+
+public function __construct(
+    public readonly UserService $userService,
+    public string $mode = 'default'
+) {}
+
+public function calculateTotal(array $items): float
+{
+    // implementation
+}
+
+public function processData(string|int $value): string|int
+{
+    return $value;
+}
+```
+
+## Forbidden
+
+- `mixed` parameters/returns (unless unavoidable and explicitly justified)
+- Missing return types
+- Untyped parameters (except variadic)
+- Bare `array` without key/value types in PHPDoc when needed (`array<string, int>` etc.)
+
+## Import ordering
+
+```php
+<?php declare(strict_types=1);
+
+use Filament\Forms;
+use Filament\Tables;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+use Modules\User\Filament\Resources\UserResource;
+
+use function Safe\json_decode;
+```

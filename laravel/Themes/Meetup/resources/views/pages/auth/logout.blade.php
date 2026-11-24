@@ -33,6 +33,7 @@ new class extends Component
 
 ?>
 
+<<<<<<< .merge_file_dtJY8c
 <x-layouts.main>
     @volt('auth.logout')
         <div wire:init="logout" class="flex min-h-screen items-center justify-center">
@@ -40,3 +41,6 @@ new class extends Component
         </div>
     @endvolt
 </x-layouts.main>
+=======
+<h1 wire:init="logout">{{ __('pub_theme::auth.logout.goodbye.message') }}</h1>
+>>>>>>> .merge_file_DAqKC1

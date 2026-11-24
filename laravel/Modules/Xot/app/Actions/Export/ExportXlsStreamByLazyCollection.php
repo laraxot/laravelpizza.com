@@ -17,7 +17,10 @@ use function Safe\fputcsv;
 
 /**
  * @see docs/contracts/export-xls-stream-by-lazy-collection.md
+<<<<<<< .merge_file_KLVNLP
  *
+=======
+>>>>>>> .merge_file_ptzcca
  * @contract docs/contracts/export-xls-stream-by-lazy-collection.md
  */
 class ExportXlsStreamByLazyCollection

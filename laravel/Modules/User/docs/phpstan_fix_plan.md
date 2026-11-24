@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_wORShD
 ---
 title: "User Module - PHPStan Level 10 Fix Plan"
 type: note
 qmd: "phpstan fix plan user level"
 ---
+=======
+>>>>>>> .merge_file_5hhPEM
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date

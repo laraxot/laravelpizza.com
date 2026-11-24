@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_Vc1IUj
 qmd: "registration consolidated"
+=======
+>>>>>>> .merge_file_OrYdVs
 ---
 
 # registration — Consolidated Documentation

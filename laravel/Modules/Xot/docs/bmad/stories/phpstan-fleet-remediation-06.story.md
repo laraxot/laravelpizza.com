@@ -3,10 +3,13 @@ title: "Xot - phpstan-fleet-remediation-2026-10-06.story.md"
 module: Xot
 bmad: true
 status: active
+<<<<<<< .merge_file_zOEkoZ
 type: story
 qmd: "xot phpstan fleet remediation 06 story phpstanfleetremediation20261006storymd"
 ---
 
+=======
+>>>>>>> .merge_file_lpUJ6m
 # PHPStan fleet remediation — 2026-10-06
 
 ## Epic

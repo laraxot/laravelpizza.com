@@ -2,19 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_eU9L0m
-<<<<<<< .merge_file_iiK70t
-<<<<<<< .merge_file_03MZq2
-<<<<<<< .merge_file_IlcxnG
 use Illuminate\Database\Eloquent\Model;
-=======
->>>>>>> .merge_file_JynnHd
-=======
->>>>>>> .merge_file_U5qvm8
-=======
->>>>>>> .merge_file_3y6IIb
-=======
->>>>>>> .merge_file_bibuL3
 use Modules\Activity\Actions\LogModelCreatedAction;
 use Modules\Activity\Actions\LogModelDeletedAction;
 use Modules\Activity\Actions\LogModelUpdatedAction;
@@ -32,23 +20,7 @@ uses(TestCase::class);
  */
 
 test('created, updated and deleted logs never carry passwords or tokens', function (string $action, string $fixture): void {
-<<<<<<< .merge_file_eU9L0m
-<<<<<<< .merge_file_iiK70t
-<<<<<<< .merge_file_03MZq2
-<<<<<<< .merge_file_IlcxnG
     /** @var Model $model */
-=======
-    /** @var \Illuminate\Database\Eloquent\Model $model */
->>>>>>> .merge_file_JynnHd
-=======
-    /** @var \Illuminate\Database\Eloquent\Model $model */
->>>>>>> .merge_file_U5qvm8
-=======
-    /** @var \Illuminate\Database\Eloquent\Model $model */
->>>>>>> .merge_file_3y6IIb
-=======
-    /** @var \Illuminate\Database\Eloquent\Model $model */
->>>>>>> .merge_file_bibuL3
     $model = new $fixture;
     $model->forceFill([
         'id' => 'redact-'.$action,

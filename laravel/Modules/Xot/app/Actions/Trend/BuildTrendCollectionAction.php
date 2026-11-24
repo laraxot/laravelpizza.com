@@ -15,7 +15,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-trend-collection-action.md
+<<<<<<< .merge_file_vyqolQ
  *
+=======
+>>>>>>> .merge_file_IzoDxn
  * @contract docs/contracts/build-trend-collection-action.md
  */
 class BuildTrendCollectionAction

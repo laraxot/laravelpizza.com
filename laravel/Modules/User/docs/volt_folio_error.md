@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_7dvGxt
 ---
 title: "Errore VoltDirectiveMissingException in Folio"
 type: note
 qmd: "volt folio error errore voltdirectivemissingexception"
 ---
+=======
+>>>>>>> .merge_file_mkZgFV
 # Errore VoltDirectiveMissingException in Folio
 
 ## Il Problema

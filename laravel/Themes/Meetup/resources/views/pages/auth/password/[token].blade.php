@@ -75,6 +75,7 @@ new class extends Component
 
 ?>
 
+<<<<<<< .merge_file_OO6f15
 <x-layouts.app :title="__('pub_theme::auth.password.reset.title')">
     <x-ui.auth-card :title="__('pub_theme::auth.password.reset.title')" :subtitle="__('pub_theme::auth.password.reset.subtitle')">
         @volt('auth.password.token')
@@ -89,3 +90,29 @@ new class extends Component
         @endvolt
     </x-ui.auth-card>
 </x-layouts.app>
+=======
+<x-layouts.main>
+    <div class="flex flex-col items-stretch justify-center w-screen min-h-screen py-10 sm:items-center">
+
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <x-ui.link href="{{ route('home') }}">
+                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
+                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
+            </x-ui.link>
+            <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">{{ __('pub_theme::auth.password.reset.title') }}</h2>
+        </div>
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
+                @volt('auth.password.token')
+                <form wire:submit="resetPassword" class="space-y-6">
+                    <x-ui.input :label="__('pub_theme::auth.password.email.label')" type="email" id="email" name="email" wire:model="email" />
+                    <x-ui.input :label="__('pub_theme::common.fields.password.label')" type="password" id="password" name="password" wire:model="password" />
+                    <x-ui.input :label="__('pub_theme::auth.password.confirm_field.label')" type="password" id="password_confirmation" name="password_confirmation" wire:model="passwordConfirmation" />
+                    <x-ui.button type="primary" rounded="md" submit="true">{{ __('pub_theme::auth.password.reset.label') }}</x-ui.button>
+                </form>
+                @endvolt
+            </div>
+        </div>
+    </div>
+</x-layouts.main>
+>>>>>>> .merge_file_VuJdjQ

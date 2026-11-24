@@ -7,22 +7,6 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-<<<<<<< .merge_file_EV8VZI
-<<<<<<< .merge_file_BLn5UC
-<<<<<<< HEAD
-use Modules\Notify\Traits\HasTenantNotifications;
-=======
-<<<<<<< HEAD
-use Modules\Notify\Traits\HasTenantNotifications;
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-use Modules\Notify\Traits\HasTenantNotifications;
->>>>>>> .merge_file_3Gb8Vx
-=======
-use Modules\Notify\Traits\HasTenantNotifications;
->>>>>>> .merge_file_sNZuN1
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseModel;
 
@@ -32,26 +16,6 @@ use Modules\Xot\Models\BaseModel;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *
-<<<<<<< .merge_file_EV8VZI
-<<<<<<< .merge_file_BLn5UC
-<<<<<<< HEAD
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
- *
-=======
-<<<<<<< HEAD
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
- *
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
- *
->>>>>>> .merge_file_3Gb8Vx
-=======
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
- *
->>>>>>> .merge_file_sNZuN1
  * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
  * @method static Builder<static>|Notification newModelQuery()
  * @method static Builder<static>|Notification newQuery()
@@ -95,26 +59,6 @@ use Modules\Xot\Models\BaseModel;
  */
 class Notification extends BaseModel
 {
-<<<<<<< .merge_file_EV8VZI
-<<<<<<< .merge_file_BLn5UC
-<<<<<<< HEAD
-    use HasTenantNotifications;
-
-=======
-<<<<<<< HEAD
-    use HasTenantNotifications;
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-    use HasTenantNotifications;
-
->>>>>>> .merge_file_3Gb8Vx
-=======
-    use HasTenantNotifications;
-
->>>>>>> .merge_file_sNZuN1
     /** La chiave e' un UUID char(36): niente auto-increment, altrimenti dopo l'insert l'id diventa '0'. */
     public $incrementing = false;
 

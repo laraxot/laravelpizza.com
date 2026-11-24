@@ -1,7 +1,10 @@
 ---
 title: Lingua dei pannelli Filament
 updated: 2026-11-19
+<<<<<<< .merge_file_5ftmFh
 qmd: "panel locale lingua pannelli filament"
+=======
+>>>>>>> .merge_file_WfsYya
 ---
 
 # Lingua dei pannelli Filament

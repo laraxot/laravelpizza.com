@@ -1,0 +1,30 @@
+---
+qmd: "Fix Tests Homepage.divergenza"
+issues: []
+discussions: []
+title: "Fix Tests Homepage.divergenza"
+module: Notify
+type: note
+tags: [xot-5.39, riconciliazione, docs-ownership]
+created: 2026-08-24
+<<<<<<< .merge_file_ft1cYG
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KRL4Xk
+---
+
+# Divergenza: `FIX_TESTS_HOMEPAGE.md`
+
+Questo file veniva da `docs/wiki/integrations/modules/notify/FIX_TESTS_HOMEPAGE.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+
+- versione del modulo: `laravel/Modules/Notify/docs/FIX_TESTS_HOMEPAGE.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/FIX_TESTS_HOMEPAGE.md`
+
+Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+
+Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).

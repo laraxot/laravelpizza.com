@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_x2o8H7
 ---
 title: "Implementazione del Logout con Volt"
 type: note
 qmd: "volt logout implementazione"
 ---
+=======
+>>>>>>> .merge_file_IfDFCQ
 # Implementazione del Logout con Volt
 
 ## Il Problema

@@ -1,0 +1,56 @@
+---
+qmd: "html comparison config"
+issues: []
+discussions: []
+title: "HTML Structure Comparison Configuration"
+module: notify
+type: integration
+tags: [integrations, modules, notify]
+created: 2026-08-24
+<<<<<<< .merge_file_WepR0p
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_jId3aA
+---
+
+# HTML Structure Comparison Configuration
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+This file provides project-specific paths for the agnostic bashscripts/html/ tools.
+
+## Reference Files
+
+- **Reference HTML**: `laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/reference_segnalazioni.html`
+- **Local HTML**: `laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/local_segnalazioni.html` (generated)
+- **Output Directory**: `laravel/Themes/Sixteen/docs/body-structure-comparison/`
+
+## Usage
+
+```bash
+# From project root
+bash bashscripts/html/html-structure-compare.sh segnalazioni-elenco \
+  laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/reference_segnalazioni.html \
+  laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/local_segnalazioni.html
+```
+
+## Pages to Compare
+
+| Page | Reference URL | Local URL | Reference File |
+|------|--------------|-----------|----------------|
+| Segnalazioni Elenco | https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazioni-elenco.html | http://127.0.0.1:8000/it/tests/segnalazioni-elenco | `prompts/segnalazione_disservizio/reference_segnalazioni.html` |
+
+## Theme
+
+- **Theme**: Sixteen
+- **Theme Path**: `laravel/Themes/Sixteen/`
+- **Build Command**: `cd laravel/Themes/Sixteen && npm run build`

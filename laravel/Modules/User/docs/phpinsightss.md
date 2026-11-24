@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_87Z5Up
 qmd: "phpinsightss"
+=======
+>>>>>>> .merge_file_qmAMkn
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpinsights-errors.md

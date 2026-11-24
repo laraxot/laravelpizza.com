@@ -3,7 +3,7 @@ title: "links"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gL7LhI
+<<<<<<< .merge_file_gNKjK6
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_LZ6lnc
+>>>>>>> .merge_file_5kDVVD
 qmd: "links"
 issues: []
 discussions: []

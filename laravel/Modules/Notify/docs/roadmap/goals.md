@@ -3,7 +3,7 @@ title: "goals"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_CMvWTP
+<<<<<<< .merge_file_UJ5dzf
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_D0OjWG
+>>>>>>> .merge_file_iWlrLG
 qmd: "goals"
 issues: []
 discussions: []

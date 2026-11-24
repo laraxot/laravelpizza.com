@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-tenant-config-path-action.md
+<<<<<<< .merge_file_Izo1iP
  *
+=======
+>>>>>>> .merge_file_Y9bf0x
  * @contract docs/contracts/get-tenant-config-path-action.md
  */
 class GetTenantConfigPathAction

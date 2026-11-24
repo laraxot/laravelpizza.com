@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_UQe960
 ---
 title: "Correzione PHPStan - Relationship Type Hints"
 type: note
 qmd: "phpstan relationship fix correzione type hints"
 ---
+=======
+>>>>>>> .merge_file_IPq0ML
 # Correzione PHPStan - Relationship Type Hints
 
 ## 🚨 Errore PHPStan Risolto

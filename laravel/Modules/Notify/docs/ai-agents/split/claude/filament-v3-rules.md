@@ -1,0 +1,69 @@
+---
+title: "filament v3 rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_tZc1SC
+<<<<<<< .merge_file_HFe6e8
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_BgxXdK
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_tZc1SC
+>>>>>>> .merge_file_yUDdac
+=======
+>>>>>>> .merge_file_BgxXdK
+qmd: "filament v3 rules"
+issues: []
+discussions: []
+---
+
+=== filament/v3 rules ===
+
+## Filament 3
+
+## Version 3 Changes To Focus On
+- Resources are located in `app/Filament/Resources/` directory.
+- Resource pages (List, Create, Edit) are auto-generated within the resource's directory - e.g., `app/Filament/Resources/PostResource/Pages/`.
+- Forms use the `Forms\Components` namespace for form fields.
+- Tables use the `Tables\Columns` namespace for table columns.
+- A new `Filament\Forms\Components\RichEditor` component is available.
+- Form and table schemas now use fluent method chaining.
+- Added `php artisan filament:optimize` command for production optimization.
+- Requires implementing `FilamentUser` contract for production access control.
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+
+
+---
+
+title: "filament v3 rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v3 rules"
+issues: []
+discussions: []
+## Cross-References
+
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
+
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

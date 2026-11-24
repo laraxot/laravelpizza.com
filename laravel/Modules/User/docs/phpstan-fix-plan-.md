@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_qfGCwY
 ---
 title: "PHPStan Analysis - User Module (Jan 2026)"
 type: note
 qmd: "phpstan fix plan analysis user jan"
 ---
+=======
+>>>>>>> .merge_file_k8bGE5
 # PHPStan Analysis - User Module (Jan 2026)
 
 ## Current Status

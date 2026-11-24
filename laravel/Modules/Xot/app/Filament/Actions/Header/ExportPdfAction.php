@@ -8,8 +8,12 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Actions\Header;
 
 use Filament\Resources\Pages\ListRecords;
-use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Support\Htmlable;
+<<<<<<< .merge_file_exYihY
+use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> .merge_file_ASGASY
 use Illuminate\Support\Facades\Gate;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\Pdf\DownloadPdfByViewAction;

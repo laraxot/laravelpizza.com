@@ -16,22 +16,10 @@ use Spatie\QueueableAction\QueueableAction;
  * Statistiche activity log (totali / per tipo / finestre temporali), cache 5 minuti.
  *
  * Scopo: dashboard audit senza query ripetute; `typedQuery`/`typedGet` tengono il contratto tipizzato.
-<<<<<<< .merge_file_hrF1KT
-<<<<<<< .merge_file_jV0me0
-<<<<<<< .merge_file_bUWouO
-<<<<<<< .merge_file_DFZLoY
  *
  * @see docs/contracts/get-activity-statistics-action.md
  *
  * @contract docs/contracts/get-activity-statistics-action.md
-=======
->>>>>>> .merge_file_PkmNZo
-=======
->>>>>>> .merge_file_UcVpfa
-=======
->>>>>>> .merge_file_Tmneh4
-=======
->>>>>>> .merge_file_ILNa59
  */
 class GetActivityStatisticsAction
 {

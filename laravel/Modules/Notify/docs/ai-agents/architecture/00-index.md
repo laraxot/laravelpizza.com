@@ -1,0 +1,122 @@
+---
+title: "00 index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ
+qmd: "00 index"
+issues: []
+discussions: []
+---
+
+# Architecture Documentation Index
+
+**Path**: `.agents/docs/architecture/`
+**Purpose**: Architectural decisions, patterns, and guidelines
+**Last Updated**: 2026-03-26
+
+## Documents
+
+| File | Description | Priority |
+|------|-------------|----------|
+| [filament-table-vs-blade-component.md](./filament-table-vs-blade-component.md) | LIST-like = Filament table, shell/detail = Blade | CRITICAL |
+
+## Metodologia esecutiva collegata
+
+- [../../../../docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md) — ordine canonico BMAD -> GSD -> Ralph
+<<<<<<< HEAD
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+- [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ
+- [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+=======
+<<<<<<< HEAD
+- [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+=======
+- [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+=======
+- [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ
+
+## Quick Decision Guide
+
+### Building a LIST-like public surface?
+-> Use **Filament Table Widget**
+-> See: [Filament Table vs Blade Component](./filament-table-vs-blade-component.md)
+
+### Building a DETAIL page?
+-> Use **Blade shell + Filament Table dove la sezione e list-like**
+-> See: [Filament Table vs Blade Component](./filament-table-vs-blade-component.md)
+
+## Navigation
+
+- [../00-index.md](../00-index.md)
+<<<<<<< HEAD
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+- [../../../../AGENTS.md](../../../../agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ
+- [../../../../AGENTS.md](../../../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [../../../../AGENTS.md](../../../../agents.md)
+=======
+- [../../../../AGENTS.md](../../../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_IF3iHg
+<<<<<<< .merge_file_EzGgwl
+=======
+- [../../../../AGENTS.md](../../../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0
+=======
+>>>>>>> .merge_file_pTrIaQ

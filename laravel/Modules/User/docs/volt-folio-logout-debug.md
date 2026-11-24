@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_vZTBAc
 ---
 title: "Debug: Perché logout.blade.php non funziona (Volt + Folio)"
 type: note
 qmd: "volt folio logout debug perché logoutbladephp"
 ---
+=======
+>>>>>>> .merge_file_fXQXVb
 # Debug: Perché logout.blade.php non funziona (Volt + Folio)
 
 ## Analisi del problema

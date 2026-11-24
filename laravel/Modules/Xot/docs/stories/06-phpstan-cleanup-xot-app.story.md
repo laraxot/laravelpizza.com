@@ -7,7 +7,10 @@ created: 2026-10-06
 updated: 2026-10-06
 module: Xot
 tags: [phpstan, cleanup, xot, swarm, constants, enum]
+<<<<<<< .merge_file_Xj4aiR
 qmd: "06 phpstan cleanup xot app story"
+=======
+>>>>>>> .merge_file_xxeDm7
 ---
 
 # [STORY] PHPStan cleanup Xot/app (gruppo Xot_app)

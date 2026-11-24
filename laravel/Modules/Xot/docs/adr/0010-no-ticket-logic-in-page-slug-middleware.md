@@ -6,7 +6,10 @@ created: 2026-11-23
 updated: 2026-11-24
 issues:
   - "https://github.com/laraxot/module_fixcity_fila5/issues/ADR-0010"
+<<<<<<< .merge_file_5o6xHu
 qmd: "0010 no ticket logic page slug"
+=======
+>>>>>>> .merge_file_R1puwn
 ---
 
 # ADR 0010: Ticket logic rimossa da PageSlugMiddleware

@@ -14,40 +14,9 @@ use Webmozart\Assert\Assert;
 /**
  * Trait HasTenantNotifications.
  *
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nF23Ad
-=======
->>>>>>> .merge_file_0z74lI
- * Log di notifica multi-tenant (NotificationLog), non le database notifications Laravel.
- * Evitare di combinarlo con Illuminate\Notifications\Notifiable sullo stesso modello
- * (collisioni su notifications() / unreadNotifications()).
- *
- * Generics: MorphMany/Builder usano `$this` (non TModel) perche morphMany()
- * restituisce MorphMany<Related, $this> e TModel concreto diverge da $this in PHPStan.
- *
- * @property string|int|null $tenant_id
- *
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-=======
-=======
  * Fornisce funzionalità per la gestione delle notifiche per tenant.
  *
  * Usato da test/unit helpers (es. NotifyTenantDummyModel); non ignorare trait.unused.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nF23Ad
-=======
->>>>>>> .merge_file_0z74lI
  */
 trait HasTenantNotifications
 {
@@ -76,28 +45,8 @@ trait HasTenantNotifications
     }
 
     /**
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-=======
-<<<<<<< HEAD
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-=======
      * @param  Builder<static>  $query
      * @return Builder<static>
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
->>>>>>> .merge_file_nF23Ad
-=======
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
->>>>>>> .merge_file_0z74lI
      */
     public function scopeForTenant(Builder $query, ?string $tenantId = null): Builder
     {
@@ -111,23 +60,7 @@ trait HasTenantNotifications
      */
     public function belongsToTenant(string $tenantId): bool
     {
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-        return (string) $this->tenant_id === $tenantId;
-=======
-<<<<<<< HEAD
-        return (string) $this->tenant_id === $tenantId;
-=======
         return $this->tenant_id === $tenantId;
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-        return (string) $this->tenant_id === $tenantId;
->>>>>>> .merge_file_nF23Ad
-=======
-        return (string) $this->tenant_id === $tenantId;
->>>>>>> .merge_file_0z74lI
     }
 
     /**
@@ -156,22 +89,6 @@ trait HasTenantNotifications
         });
 
         static::addGlobalScope('tenant', function (Builder $builder): void {
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-            /** @var Builder<static> $builder */
-=======
-<<<<<<< HEAD
-            /** @var Builder<static> $builder */
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-            /** @var Builder<static> $builder */
->>>>>>> .merge_file_nF23Ad
-=======
-            /** @var Builder<static> $builder */
->>>>>>> .merge_file_0z74lI
             $model = $builder->getModel();
 
             if (! $model instanceof static) {
@@ -189,49 +106,11 @@ trait HasTenantNotifications
     /**
      * Relazione morph verso NotificationLog filtrata per tenant corrente.
      *
-<<<<<<< .merge_file_9lqehx
-<<<<<<< .merge_file_f9lqmZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-     * @return MorphMany<NotificationLog, $this>
-     */
-    protected function tenantNotificationLogs(): MorphMany
-    {
-        /** @var MorphMany<NotificationLog, $this> $relation */
-        $relation = $this->morphMany(NotificationLog::class, 'notifiable');
-
-        return $relation->where('tenant_id', $this->getTenantId());
-<<<<<<< HEAD
-=======
-=======
      * @return MorphMany<NotificationLog, static>
      */
     protected function tenantNotificationLogs(): MorphMany
     {
         return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-     * @return MorphMany<NotificationLog, $this>
-     */
-    protected function tenantNotificationLogs(): MorphMany
-    {
-=======
-     * @return MorphMany<NotificationLog, $this>
-     */
-    protected function tenantNotificationLogs(): MorphMany
-    {
->>>>>>> .merge_file_0z74lI
-        /** @var MorphMany<NotificationLog, $this> $relation */
-        $relation = $this->morphMany(NotificationLog::class, 'notifiable');
-
-        return $relation->where('tenant_id', $this->getTenantId());
-<<<<<<< .merge_file_9lqehx
->>>>>>> .merge_file_nF23Ad
-=======
->>>>>>> .merge_file_0z74lI
     }
 
     /**

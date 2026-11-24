@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_loDSu6
 ---
 title: "Analisi Corretta del Trait HasTeams - Filosofia Laraxot"
 type: analysis
 qmd: "traits hasteams analisi corretta trait filosofia"
 ---
+=======
+>>>>>>> .merge_file_n8s9Py
 # Analisi Corretta del Trait HasTeams - Filosofia Laraxot
 
 ## Comprensione della Filosofia `belongsToManyX`

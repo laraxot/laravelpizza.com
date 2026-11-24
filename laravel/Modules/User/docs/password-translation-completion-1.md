@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_2qb9kM
 qmd: "password translation completion 1"
+=======
+>>>>>>> .merge_file_RDjgAd
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/password-translation-completion.md

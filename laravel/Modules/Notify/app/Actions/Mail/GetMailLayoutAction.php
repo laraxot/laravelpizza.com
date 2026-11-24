@@ -17,19 +17,6 @@ use function Safe\file_get_contents;
  *
  * It uses GetThemeContextAction to determine the current season/context
  * and looks for an appropriate layout file in the current theme.
-<<<<<<< HEAD
- *
- * @see docs/contracts/get-mail-layout-action.md
- *
- * @contract docs/contracts/get-mail-layout-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/get-mail-layout-action.md
- * @contract docs/contracts/get-mail-layout-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class GetMailLayoutAction
 {

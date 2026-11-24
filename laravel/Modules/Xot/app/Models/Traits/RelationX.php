@@ -116,7 +116,11 @@ trait RelationX
         Assert::subclassOf($related, Model::class);
         Assert::isInstanceOf($related_model = app($related), Model::class);
 
+<<<<<<< .merge_file_ihdcwY
         $pivot = $pivotClass !== null ? app($pivotClass) : $this->guessMorphPivot($related);
+=======
+        $pivot = null !== $pivotClass ? app($pivotClass) : $this->guessMorphPivot($related);
+>>>>>>> .merge_file_C03YSG
         Assert::isInstanceOf($pivot, MorphPivot::class);
         $table = $this->qualifyPivotTable($pivot, $related_model, $pivot->getTable());
         $pivotFields = $pivot->getFillable();

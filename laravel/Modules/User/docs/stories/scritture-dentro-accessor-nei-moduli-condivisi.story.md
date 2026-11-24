@@ -6,9 +6,22 @@ priority: P2
 created: 2026-11-10
 module: User
 related:
+<<<<<<< .merge_file_LxNvgL
   - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
 tags: [bmad, eloquent, performance, moduli-condivisi]
 qmd: "scritture dentro accessor nei moduli condivisi"
+=======
+<<<<<<< HEAD
+  - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
+=======
+<<<<<<< HEAD
+  - "../../../Quaeris/docs/stories/2026-11-05-token-failure-silently-breaks-invite-chain.story.md"
+=======
+  - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+tags: [bmad, eloquent, performance, moduli-condivisi]
+>>>>>>> .merge_file_InJ1Bz
 ---
 
 # Sei accessor nei moduli condivisi scrivono a database quando vengono letti

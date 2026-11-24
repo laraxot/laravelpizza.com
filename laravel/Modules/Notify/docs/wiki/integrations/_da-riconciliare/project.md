@@ -3,7 +3,10 @@ title: "Base <nome progetto> Fila5 — project.md"
 type: concept
 tags: [project]
 created: 2026-07-14
-<<<<<<< .merge_file_thvUZm
+<<<<<<< HEAD
+updated: 2026-11-23
+=======
+<<<<<<< .merge_file_zzMRUV
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +14,8 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_0eGVin
+>>>>>>> .merge_file_xjYQW0
+>>>>>>> laraxot/dev
 qmd: "project base <nome progetto> fila5 — project.md"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -22,13 +26,19 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_thvUZm
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_zzMRUV
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_0eGVin
+=======
+>>>>>>> .merge_file_xjYQW0
+>>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

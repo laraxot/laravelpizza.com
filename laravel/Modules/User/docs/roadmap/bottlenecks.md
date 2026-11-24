@@ -9,6 +9,10 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
+<<<<<<< .merge_file_S6qrAB
+=======
+  - "./00-index.md"
+>>>>>>> .merge_file_DGk8DA
   - "./00-overview.md"
   - "./01-current-state.md"
   - "./01-now.md"
@@ -164,7 +168,19 @@ related:
 * [bottlenecks.md](../../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/roadmap/bottlenecks.md)
+<<<<<<< .merge_file_S6qrAB
 * [bottlenecks.md](bottlenecks.md)
+=======
+<<<<<<< HEAD
+* [bottlenecks.md](bottlenecks.md)
+=======
+<<<<<<< HEAD
+* [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
+=======
+* [bottlenecks.md](bottlenecks.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_DGk8DA
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)

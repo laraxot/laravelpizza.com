@@ -3,7 +3,7 @@ title: "DESIGN COMUNI PROGRESS 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_W55di5
+<<<<<<< .merge_file_CVUvg2
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_slpbwR
+>>>>>>> .merge_file_BOUsT4
 qmd: "DESIGN COMUNI PROGRESS 1"
 issues: []
 discussions: []

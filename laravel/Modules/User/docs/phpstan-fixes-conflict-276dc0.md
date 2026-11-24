@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_FqhNYP
 qmd: "phpstan fixes conflict 276dc0"
+=======
+>>>>>>> .merge_file_nYYUUZ
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-conflict-276dc0.md

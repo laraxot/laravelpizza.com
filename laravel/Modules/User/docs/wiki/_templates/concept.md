@@ -9,7 +9,10 @@ tags: [tag1, tag2]
 related:
   - "./entity.md"
   - "./source.md"
+<<<<<<< .merge_file_ZZSEJr
 qmd: "concept untitled"
+=======
+>>>>>>> .merge_file_nJxy7f
 ---
 
 # {{title}}

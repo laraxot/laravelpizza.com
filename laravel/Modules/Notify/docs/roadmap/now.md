@@ -3,7 +3,7 @@ title: "now"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cX93Vw
+<<<<<<< .merge_file_PIKyKR
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_SJqurl
+>>>>>>> .merge_file_z8PnSO
 qmd: "now"
 issues: []
 discussions: []

@@ -3,7 +3,7 @@ title: "netfun examples"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ES2R0J
+<<<<<<< .merge_file_MeZBgN
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_hQONKB
+>>>>>>> .merge_file_Ktt7a9
 qmd: "netfun examples"
 issues: []
 discussions: []

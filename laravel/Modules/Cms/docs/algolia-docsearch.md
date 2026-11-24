@@ -1,5 +1,4 @@
 ---
-<<<<<<< .merge_file_tp0Sdk
 <<<<<<< .merge_file_P2EwO1
 <<<<<<< .merge_file_aSoOmI
 <<<<<<< .merge_file_P13CgD
@@ -8,8 +7,6 @@
 >>>>>>> .merge_file_ZhrlEN
 =======
 >>>>>>> .merge_file_0kMT2C
-=======
->>>>>>> .merge_file_hxhGmC
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -118,7 +115,6 @@ status: stub
 module: theme
 topic: algolia-docsearch
 canonical: ../../../Themes/docs/shared-components/algolia-docsearch-old.md
-<<<<<<< .merge_file_tp0Sdk
 <<<<<<< .merge_file_P2EwO1
 <<<<<<< .merge_file_aSoOmI
 >>>>>>> .merge_file_LVwjK1
@@ -199,8 +195,6 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 >>>>>>> .merge_file_ZhrlEN
 =======
 >>>>>>> .merge_file_0kMT2C
-=======
->>>>>>> .merge_file_hxhGmC
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch-old.md

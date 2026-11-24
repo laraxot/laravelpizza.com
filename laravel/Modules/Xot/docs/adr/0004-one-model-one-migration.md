@@ -6,7 +6,10 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
+<<<<<<< .merge_file_JmrnuI
 qmd: "0004 one model migration ogni modello"
+=======
+>>>>>>> .merge_file_zDcZZa
 ---
 
 # Ogni modello persistente ha una migrazione owner

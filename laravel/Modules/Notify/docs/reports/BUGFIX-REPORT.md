@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
 qmd: "BUGFIX REPORT 2025 01 14"
 issues: []
 discussions: []
@@ -193,24 +193,24 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
 <<<<<<< HEAD
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
 | `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
 
 ## Testing
 
@@ -311,24 +311,24 @@ $user->initializeCurrentTeam();
    - Testing
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
 3. **Summary Generale**: `docs/bugs/summary.md`
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_73tnpX
+<<<<<<< .merge_file_VyVmYe
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_ExFuvE
+>>>>>>> .merge_file_gKQGPU
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

@@ -16,6 +16,10 @@ use Modules\Xot\Actions\Model\GetAllModelsAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Attributes\Test;
+<<<<<<< .merge_file_rETzKa
+=======
+use Modules\Xot\Tests\TestCase;
+>>>>>>> .merge_file_I7mY1Z
 
 class GetAllModelsActionTest extends TestCase
 {

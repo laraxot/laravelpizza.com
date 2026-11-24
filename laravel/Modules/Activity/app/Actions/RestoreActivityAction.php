@@ -10,25 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
-<<<<<<< .merge_file_AHF5es
-<<<<<<< .merge_file_dxJC7e
-<<<<<<< .merge_file_AstLHC
-<<<<<<< .merge_file_NPvVmJ
  * RestoreActivityAction.
  *
  * @see docs/contracts/restore-activity-action.md
-=======
- * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
->>>>>>> .merge_file_i2PsfK
-=======
- * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
->>>>>>> .merge_file_NCbyB8
-=======
- * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
->>>>>>> .merge_file_RLF14c
-=======
- * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
->>>>>>> .merge_file_kIP47e
  *
  * @contract docs/contracts/restore-activity-action.md
  */

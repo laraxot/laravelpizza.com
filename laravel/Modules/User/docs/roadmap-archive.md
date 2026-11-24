@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Mf5hhm
 ---
 title: "👥 USER MODULE - ROADMAP 2025"
 type: note
 qmd: "roadmap archive user 2025"
 ---
+=======
+>>>>>>> .merge_file_MaGTqv
 # 👥 USER MODULE - ROADMAP 2025
 
 **Modulo**: User (Authentication & Authorization)  

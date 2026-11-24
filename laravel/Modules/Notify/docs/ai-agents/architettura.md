@@ -1,0 +1,45 @@
+---
+title: "architettura"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_CO978s
+<<<<<<< .merge_file_oeK8Zq
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_w5Tkqb
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_CO978s
+>>>>>>> .merge_file_t86eku
+=======
+>>>>>>> .merge_file_w5Tkqb
+qmd: "architettura"
+issues: []
+discussions: []
+---
+
+# Architettura e Struttura
+
+Il progetto utilizza un'architettura modulare basata su Laravel con il framework Laraxot, seguendo un pattern di estensioni base per tutti i componenti:
+
+## Pattern di Estensione
+
+Il sistema è costruito attorno a una gerarchia di classi base che fornisce funzionalità comuni a tutti i componenti:
+
+- [Regole Critiche Laraxot](./regole-critiche.md) - Approfondimento sulle regole fondamentali
+- [Componenti Chiave](./componenti-chiave.md) - Descrizione dei componenti principali
+
+## Moduli
+
+Il sistema è organizzato in moduli indipendenti che possono essere abilitati/disabilitati secondo necessità. Ogni modulo contiene:
+
+- Modelli (Models)
+- Risorse Filament (Filament Resources)
+- Azioni (Actions)
+- Provider (Service Providers)
+- Configurazioni specifiche

@@ -3,7 +3,6 @@ title: "code quality analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_R9cLat
 <<<<<<< .merge_file_pjBtL3
 <<<<<<< .merge_file_RC219J
 <<<<<<< .merge_file_LKJBkT
@@ -13,14 +12,11 @@ updated: 2026-11-23
 >>>>>>> .merge_file_lDs4jl
 =======
 >>>>>>> .merge_file_j9Ea8T
-=======
->>>>>>> .merge_file_rZOG11
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_R9cLat
 <<<<<<< .merge_file_pjBtL3
 <<<<<<< .merge_file_RC219J
 >>>>>>> .merge_file_ErWDVV
@@ -28,8 +24,6 @@ updated: 2026-11-23
 >>>>>>> .merge_file_lDs4jl
 =======
 >>>>>>> .merge_file_j9Ea8T
-=======
->>>>>>> .merge_file_rZOG11
 qmd: "code quality analysis cms 2025-11-24"
 issues: []
 discussions: []
@@ -48,7 +42,6 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_R9cLat
 <<<<<<< .merge_file_pjBtL3
 <<<<<<< .merge_file_RC219J
 <<<<<<< .merge_file_LKJBkT
@@ -57,8 +50,6 @@ discussions: []
 >>>>>>> .merge_file_lDs4jl
 =======
 >>>>>>> .merge_file_j9Ea8T
-=======
->>>>>>> .merge_file_rZOG11
 <<<<<<< HEAD
 title: "code quality analysis"
 =======
@@ -75,7 +66,6 @@ updated: 2026-09-26
 qmd: "code quality analysis cms 2025-11-24"
 issues: []
 discussions: []
-<<<<<<< .merge_file_R9cLat
 <<<<<<< .merge_file_pjBtL3
 <<<<<<< .merge_file_RC219J
 >>>>>>> .merge_file_ErWDVV
@@ -83,8 +73,6 @@ discussions: []
 >>>>>>> .merge_file_lDs4jl
 =======
 >>>>>>> .merge_file_j9Ea8T
-=======
->>>>>>> .merge_file_rZOG11
 ## 🚨 Status Critico
 
 ### ❌ PHPStan Errors (6)

@@ -2,7 +2,10 @@
 module: User
 concept: Two-Factor Authentication
 last_updated: 2026-04-15
+<<<<<<< .merge_file_OJRF6U
 qmd: "twofactorauthentication twofactor authentication 2fa"
+=======
+>>>>>>> .merge_file_UciV1b
 ---
 
 # Two-Factor Authentication (2FA)

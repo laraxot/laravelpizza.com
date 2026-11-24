@@ -10,7 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/copy-action.md
+<<<<<<< .merge_file_1hQRef
  *
+=======
+>>>>>>> .merge_file_sROp9L
  * @contract docs/contracts/copy-action.md
  */
 class CopyAction

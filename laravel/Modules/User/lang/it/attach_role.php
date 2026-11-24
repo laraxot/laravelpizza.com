@@ -11,9 +11,15 @@ return [
             'tooltip' => '',
         ],
         'team_id' => [
+<<<<<<< .merge_file_vfIBI8
             'tooltip' => '',
             'label' => 'Team',
             'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
+=======
+            'label' => 'Team',
+            'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
+            'tooltip' => '',
+>>>>>>> .merge_file_wPj9Vk
             'placeholder' => 'team_id',
             'description' => 'team_id',
         ],

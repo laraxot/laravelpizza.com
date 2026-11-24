@@ -14,7 +14,10 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/export-xls-by-query.md
+<<<<<<< .merge_file_UVvEB3
  *
+=======
+>>>>>>> .merge_file_9qUFsC
  * @contract docs/contracts/export-xls-by-query.md
  */
 class ExportXlsByQuery

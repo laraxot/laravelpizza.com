@@ -1,0 +1,97 @@
+---
+title: "MCP Server Index - Notify Project"
+type: index
+tags: [notify, docs, mcp]
+module: Notify
+created: 2026-07-20
+<<<<<<< .merge_file_8b3ClN
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0mZyYv
+qmd: "notify documentazione mcp index mcp server index - laraxot project index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
+status: draft
+---
+# MCP Server Index - FixCity Project
+# MCP Server Index - Notify Project
+
+**Purpose**: Central index for all MCP server documentation  
+**Last Updated**: 2026-04-09
+
+---
+
+## 📋 Available Documentation
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| **QMD (local docs search)** | [docs/project/qmd-local-docs-search.md](../project/qmd-local-docs-search.md) | Indice Markdown locale; server MCP opzionale (`qmd mcp`) |
+| **MCP Master Index** | [docs/mcp/README.md](../mcp/README.md) | Complete MCP server documentation |
+| **Supermemory Guide** | [Themes/Sixteen/docs/supermemory-setup.md](../project/supermemory-setup.md) | Supermemory integration guide |
+| **Visual Parity Tool** | [Themes/Sixteen/scripts/visual-parity.mjs](../../laravel/Themes/Sixteen/scripts/visual-parity.mjs) | Playwright-based visual analysis |
+| **Supermemory Script** | [Themes/Sixteen/scripts/supermemory-context.js](../../laravel/Themes/Sixteen/scripts/supermemory-context.js) | AI context indexing |
+| **Visual Parity Tool** | [Themes/Sixteen/scripts/visual-parity.mjs](../../../../Themes/Sixteen/scripts/visual-parity.mjs) | Playwright-based visual analysis |
+| **Supermemory Script** | [Themes/Sixteen/scripts/supermemory-context.js](../../../../Themes/Sixteen/scripts/supermemory-context.js) | AI context indexing |
+
+---
+
+## 🚀 MCP Server Categories
+
+### Development
+- **laravel-boost** - Laravel framework assistance
+- **filament** - FilamentPHP admin panel
+- **filesystem** - File system operations
+
+### Testing & Visual
+- **puppeteer** - Browser automation, screenshots
+- **playwright** (local script) - Visual parity analysis
+
+### Memory & Context
+- **supermemory** - Long-term memory, RAG
+- **memory** - Session persistence
+- **notebooklm** - Research and documentation
+- **qmd** ([tobi/qmd](https://github.com/tobi/qmd)) - Indice locale BM25 + vector su cartelle `docs/`; MCP `query` / `get` / `multi_get`
+
+### Reasoning
+- **sequential-thinking** - Complex problem analysis
+
+---
+
+## 📊 Server Status
+
+| Server | Status | Package | Version |
+|--------|--------|---------|---------|
+| laravel-boost | ✅ Active | PHP artisan | - |
+| filament | ✅ Active | filament-mcp-server | latest |
+| notebooklm | ✅ Active | notebooklm-mcp-cli | latest |
+| sequential-thinking | ✅ Active | @modelcontextprotocol/server-sequential-thinking | latest |
+| filesystem | ✅ Active | @modelcontextprotocol/server-filesystem | latest |
+| puppeteer | ✅ Active | puppeteer-mcp-server | 0.7.2 |
+| memory | ✅ Active | @anthropic-ai/claude-code | latest |
+| supermemory | ✅ Active | supermemory (npm) | latest |
+
+---
+
+## 🔗 Related Documentation
+
+- [Main Docs Index](../README.md)
+- [Project Configuration](../project/configuration.md)
+- [AI Workflow](../project/ai-workflow/)
+
+---
+
+**Maintained By**: AI Agents  
+**Last Updated**: 2026-04-09

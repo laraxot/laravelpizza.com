@@ -22,7 +22,10 @@ related:
   - ../../../../../docs/wiki/memories/phpstan-fleet-fix-2026-09-23.md
 references:
   sprint_status: "Xot/phpstan-analyse-modules-2026-09-24"
+<<<<<<< .merge_file_8HflPf
 ---
+=======
+>>>>>>> .merge_file_pLKylj
 
 # PHPStan `analyse Modules` — verifica corrente e remediation swarm
 

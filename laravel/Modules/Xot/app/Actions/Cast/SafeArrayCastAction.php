@@ -34,7 +34,10 @@ use Spatie\QueueableAction\QueueableAction;
  * $array = SafeArrayCastAction::castWithKeys($mixedValue, ['required_key']);
  *
  * @see docs/contracts/safe-array-cast-action.md
+<<<<<<< .merge_file_2AxQag
  *
+=======
+>>>>>>> .merge_file_uI3ALx
  * @contract docs/contracts/safe-array-cast-action.md
  */
 class SafeArrayCastAction

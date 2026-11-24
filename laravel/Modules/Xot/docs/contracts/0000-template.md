@@ -2,7 +2,10 @@
 title: "Behavioral contract template"
 type: template
 status: proposed
+<<<<<<< .merge_file_NGknTF
 qmd: "0000 template behavioral contract"
+=======
+>>>>>>> .merge_file_8jg8DY
 ---
 
 # `<operation>`

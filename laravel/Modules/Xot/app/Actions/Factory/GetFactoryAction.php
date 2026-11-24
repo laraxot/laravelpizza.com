@@ -21,7 +21,10 @@ use Webmozart\Assert\Assert;
 /**
  * @see https://github.com/mpociot/laravel-test-factory-helper/blob/master/src/Console/GenerateCommand.php#L213
  * @see docs/contracts/get-factory-action.md
+<<<<<<< .merge_file_e7hrMQ
  *
+=======
+>>>>>>> .merge_file_IzaLQZ
  * @contract docs/contracts/get-factory-action.md
  */
 class GetFactoryAction

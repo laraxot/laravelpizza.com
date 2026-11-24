@@ -1,0 +1,30 @@
+---
+qmd: "Migration Plan.divergenza"
+issues: []
+discussions: []
+title: "Migration Plan.divergenza"
+module: Notify
+type: note
+tags: [xot-5.39, riconciliazione, docs-ownership]
+created: 2026-08-24
+<<<<<<< .merge_file_NMvptr
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_jxdP21
+---
+
+# Divergenza: `MIGRATION_PLAN.md`
+
+Questo file veniva da `docs/wiki/integrations/modules/notify/MIGRATION_PLAN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+
+- versione del modulo: `laravel/Modules/Notify/docs/MIGRATION_PLAN.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/MIGRATION_PLAN.md`
+
+Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+
+Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).

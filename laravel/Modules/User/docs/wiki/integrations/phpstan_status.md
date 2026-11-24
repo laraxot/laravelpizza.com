@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_c3bUS2
 qmd: "phpstan status user"
+=======
+>>>>>>> .merge_file_FDabbi
 ---
 
 # PHPStan Status — User Module

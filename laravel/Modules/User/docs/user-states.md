@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_Xaxtn4
 qmd: "user states configurazione stati utente state"
+=======
+>>>>>>> .merge_file_dc2mre
 ---
 # Configurazione Stati Utente (state)
 

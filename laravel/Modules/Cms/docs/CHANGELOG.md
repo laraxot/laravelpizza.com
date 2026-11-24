@@ -1,7 +1,6 @@
 ---
 type: note
 created: 2026-09-26
-<<<<<<< .merge_file_5wL3M8
 <<<<<<< .merge_file_bbyZn9
 <<<<<<< .merge_file_M9OcZX
 <<<<<<< .merge_file_3GqxtN
@@ -11,14 +10,11 @@ updated: 2026-11-23
 >>>>>>> .merge_file_XtYjGn
 =======
 >>>>>>> .merge_file_XiBWWB
-=======
->>>>>>> .merge_file_jawKtA
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_5wL3M8
 <<<<<<< .merge_file_bbyZn9
 <<<<<<< .merge_file_M9OcZX
 >>>>>>> .merge_file_KzfSc7
@@ -26,8 +22,6 @@ updated: 2026-11-23
 >>>>>>> .merge_file_XtYjGn
 =======
 >>>>>>> .merge_file_XiBWWB
-=======
->>>>>>> .merge_file_jawKtA
 qmd: "CHANGELOG"
 issues: []
 discussions: []
@@ -39,7 +33,6 @@ tags: [merge, duplicato, case-only]
 
 # Documento unificato
 
-<<<<<<< .merge_file_5wL3M8
 <<<<<<< .merge_file_bbyZn9
 <<<<<<< .merge_file_M9OcZX
 <<<<<<< .merge_file_3GqxtN
@@ -49,8 +42,6 @@ Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, 
 >>>>>>> .merge_file_XtYjGn
 =======
 >>>>>>> .merge_file_XiBWWB
-=======
->>>>>>> .merge_file_jawKtA
 <<<<<<< HEAD
 Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [CHANGELOG.md](./CHANGELOG.md).
 =======
@@ -60,7 +51,6 @@ Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, 
 Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, in violazione della regola no-case-only-variations. Il contenuto canonico si trova in [CHANGELOG.md](./CHANGELOG.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_5wL3M8
 <<<<<<< .merge_file_bbyZn9
 <<<<<<< .merge_file_M9OcZX
 >>>>>>> .merge_file_KzfSc7
@@ -68,5 +58,3 @@ Questo file era un duplicato esatto che differiva solo per maiuscole/minuscole, 
 >>>>>>> .merge_file_XtYjGn
 =======
 >>>>>>> .merge_file_XiBWWB
-=======
->>>>>>> .merge_file_jawKtA

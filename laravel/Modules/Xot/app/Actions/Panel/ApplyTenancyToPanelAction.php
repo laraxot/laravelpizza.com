@@ -12,7 +12,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/apply-tenancy-to-panel-action.md
+<<<<<<< .merge_file_97W4UB
  *
+=======
+>>>>>>> .merge_file_x8WcnF
  * @contract docs/contracts/apply-tenancy-to-panel-action.md
  */
 class ApplyTenancyToPanelAction

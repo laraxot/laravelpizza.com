@@ -9,9 +9,13 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Replaces Modules\Xot\Services\ArtisanService::debugbarClear().
+<<<<<<< .merge_file_Ig9U8V
  *
  * @see docs/contracts/clear-artisan-debugbar-files-action.md
  *
+=======
+ * @see docs/contracts/clear-artisan-debugbar-files-action.md
+>>>>>>> .merge_file_GhyRA5
  * @contract docs/contracts/clear-artisan-debugbar-files-action.md
  */
 class ClearArtisanDebugbarFilesAction

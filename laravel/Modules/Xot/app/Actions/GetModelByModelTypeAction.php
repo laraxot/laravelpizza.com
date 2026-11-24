@@ -13,7 +13,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-model-by-model-type-action.md
+<<<<<<< .merge_file_Rs3WJp
  *
+=======
+>>>>>>> .merge_file_e0a4Gz
  * @contract docs/contracts/get-model-by-model-type-action.md
  */
 class GetModelByModelTypeAction

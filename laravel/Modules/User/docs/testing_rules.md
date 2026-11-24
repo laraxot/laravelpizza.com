@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_4gDbsi
 ---
 title: "Testing Rules & Strategy"
 type: rule
 qmd: "testing rules strategy"
 ---
+=======
+>>>>>>> .merge_file_EyMh6U
 # Testing Rules & Strategy
 
 ## Strict Guidelines (Super Mucca / Laraxot)

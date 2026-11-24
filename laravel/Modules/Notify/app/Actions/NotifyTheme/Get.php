@@ -12,19 +12,6 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * -- buildmailmessage ha troppi pezzi simili ..
-<<<<<<< HEAD
- *
- * @see docs/contracts/notify-theme-get.md
- *
- * @contract docs/contracts/notify-theme-get.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/notify-theme-get.md
- * @contract docs/contracts/notify-theme-get.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class Get
 {

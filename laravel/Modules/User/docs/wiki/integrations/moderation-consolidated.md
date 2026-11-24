@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_9HaGOE
 qmd: "moderation consolidated"
+=======
+>>>>>>> .merge_file_r5FbkI
 ---
 
 # moderation — Consolidated Documentation

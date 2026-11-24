@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Q2wovH
 ---
 title: "Regole per le Chiavi di Traduzione"
 type: rule
 qmd: "translation keys rules regole chiavi traduzione"
 ---
+=======
+>>>>>>> .merge_file_w9yhNm
 # Regole per le Chiavi di Traduzione
 
 ## Principi Fondamentali

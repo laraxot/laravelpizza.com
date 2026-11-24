@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_rDjWRS
 ---
 title: "BMAD Story: User Module Audit Improvements"
 type: story
 qmd: "story user audit improvements bmad"
 ---
+=======
+>>>>>>> .merge_file_qQELyh
 # BMAD Story: User Module Audit Improvements
 
 **Story ID**: USER-2026-AUDIT-001  

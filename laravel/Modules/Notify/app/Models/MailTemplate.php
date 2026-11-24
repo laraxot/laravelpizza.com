@@ -80,16 +80,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     use HasFactory;
 
     use HasSlug;
-<<<<<<< HEAD
-=======
 
-<<<<<<< .merge_file_VCh8vo
-<<<<<<< .merge_file_3oTdXV
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vlgIHc
-=======
->>>>>>> .merge_file_IeJh5X
     use HasTranslations;
 
     /** @var list<string> */

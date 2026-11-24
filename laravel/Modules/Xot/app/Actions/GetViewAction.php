@@ -10,7 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-view-action.md
+<<<<<<< .merge_file_jIdyGt
  *
+=======
+>>>>>>> .merge_file_bvS85t
  * @contract docs/contracts/get-view-action.md
  */
 class GetViewAction

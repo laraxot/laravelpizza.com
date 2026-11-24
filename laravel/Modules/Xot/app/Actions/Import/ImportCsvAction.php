@@ -18,7 +18,10 @@ use function Safe\ini_set;
 
 /**
  * @see docs/contracts/import-csv-action.md
+<<<<<<< .merge_file_BOFlLt
  *
+=======
+>>>>>>> .merge_file_aMNbFV
  * @contract docs/contracts/import-csv-action.md
  */
 class ImportCsvAction

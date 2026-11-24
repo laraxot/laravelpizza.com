@@ -1,0 +1,31 @@
+---
+title: " todo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_V2fI7O
+<<<<<<< .merge_file_SWnWLG
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_hgU5Zr
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_V2fI7O
+>>>>>>> .merge_file_b20JIS
+=======
+>>>>>>> .merge_file_hgU5Zr
+qmd: " todo"
+issues: []
+discussions: []
+---
+
+# _todo
+
+<!-- Contenuto migrato da _docs/_todo.txt -->
+
+http://laradevsbd.com/story/laravel-notifications-with-database
+

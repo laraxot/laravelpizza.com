@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_bVe5OH
 qmd: "spatie permissions methods user permission reference"
+=======
+>>>>>>> .merge_file_CMLbwd
 ---
 
 # User Module - Spatie Permission Methods Reference

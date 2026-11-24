@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_nvbtiQ
 qmd: "model inheritance analysis analisi ereditarietà modelli"
+=======
+>>>>>>> .merge_file_eup86u
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User

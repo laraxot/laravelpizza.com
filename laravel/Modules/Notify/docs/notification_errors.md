@@ -3,7 +3,7 @@ title: "notification errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Kqd1B0
+<<<<<<< .merge_file_NokCmF
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_HVE5VS
+>>>>>>> .merge_file_JCSUEw
 qmd: "notification errors"
 issues: []
 discussions: []

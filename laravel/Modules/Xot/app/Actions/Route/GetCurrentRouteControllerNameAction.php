@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-current-route-controller-name-action.md
+<<<<<<< .merge_file_rCP7bW
  *
+=======
+>>>>>>> .merge_file_QSh3SN
  * @contract docs/contracts/get-current-route-controller-name-action.md
  */
 class GetCurrentRouteControllerNameAction

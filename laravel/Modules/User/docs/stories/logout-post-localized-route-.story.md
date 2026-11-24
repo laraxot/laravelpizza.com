@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_apvhna
 ---
 title: "Logout: POST /{lang}/auth/logout rispondeva 405"
 type: story
 qmd: "logout post localized route story langauthlogout"
 ---
+=======
+>>>>>>> .merge_file_aTgmLH
 # Logout: POST /{lang}/auth/logout rispondeva 405
 
 - Stato: done (2026-10-07)

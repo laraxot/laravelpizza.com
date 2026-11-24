@@ -3,7 +3,7 @@ title: "DOCUMENT ROOT UPDATE SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_C5hB2P
+<<<<<<< .merge_file_vyZ2kf
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_bPC3Nx
+>>>>>>> .merge_file_Pqahlr
 qmd: "DOCUMENT ROOT UPDATE SUMMARY"
 issues: []
 discussions: []

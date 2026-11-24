@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_rU8nWc
 ---
 title: "Errore VoltDirectiveMissingException"
 type: note
 qmd: "volt missing directive errore voltdirectivemissingexception"
 ---
+=======
+>>>>>>> .merge_file_V75Kp4
 # Errore VoltDirectiveMissingException
 
 ## Descrizione

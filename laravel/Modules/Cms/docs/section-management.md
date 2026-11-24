@@ -3,7 +3,6 @@ title: "section management"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7rbqFE
 <<<<<<< .merge_file_e2i4E1
 <<<<<<< .merge_file_yEtcay
 <<<<<<< .merge_file_M6Glgo
@@ -13,14 +12,11 @@ updated: 2026-11-23
 >>>>>>> .merge_file_PgzUE8
 =======
 >>>>>>> .merge_file_WxTL9y
-=======
->>>>>>> .merge_file_DqUx2V
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_7rbqFE
 <<<<<<< .merge_file_e2i4E1
 <<<<<<< .merge_file_yEtcay
 >>>>>>> .merge_file_0kNuD4
@@ -28,8 +24,6 @@ updated: 2026-11-23
 >>>>>>> .merge_file_PgzUE8
 =======
 >>>>>>> .merge_file_WxTL9y
-=======
->>>>>>> .merge_file_DqUx2V
 qmd: "section management"
 issues: []
 discussions: []
@@ -156,7 +150,6 @@ Ogni sezione può contenere diversi tipi di blocchi:
 
 ## Collegamenti
 - [Documentazione Blocchi](blocks/README.md)
-<<<<<<< .merge_file_7rbqFE
 <<<<<<< .merge_file_e2i4E1
 <<<<<<< .merge_file_yEtcay
 <<<<<<< .merge_file_M6Glgo
@@ -166,8 +159,6 @@ Ogni sezione può contenere diversi tipi di blocchi:
 >>>>>>> .merge_file_PgzUE8
 =======
 >>>>>>> .merge_file_WxTL9y
-=======
->>>>>>> .merge_file_DqUx2V
 <<<<<<< HEAD
 - [Documentazione UI](../../ui/project_docs/README.md)
 =======
@@ -177,7 +168,6 @@ Ogni sezione può contenere diversi tipi di blocchi:
 - [Documentazione UI](../../ui/project_docs/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_7rbqFE
 <<<<<<< .merge_file_e2i4E1
 <<<<<<< .merge_file_yEtcay
 >>>>>>> .merge_file_0kNuD4
@@ -185,8 +175,6 @@ Ogni sezione può contenere diversi tipi di blocchi:
 >>>>>>> .merge_file_PgzUE8
 =======
 >>>>>>> .merge_file_WxTL9y
-=======
->>>>>>> .merge_file_DqUx2V
 - [Documentazione Root](../../../../docs/project/README.md)
 - [Documentazione Root – Sezioni](../../../../../docs/project/sections.md)
 - [Panoramica Gestione Pagine (Root)](../../../../../docs/project/page-content-management.md)

@@ -10,7 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
  * Replaces Modules\Xot\Services\ThemeService::getThemePath() (archived to .bak).
  *
  * @see docs/contracts/get-theme-path-action.md
+<<<<<<< .merge_file_CaCecY
  *
+=======
+>>>>>>> .merge_file_MJYEwx
  * @contract docs/contracts/get-theme-path-action.md
  */
 class GetThemePathAction

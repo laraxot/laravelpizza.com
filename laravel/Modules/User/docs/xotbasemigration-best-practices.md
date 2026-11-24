@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_WhL2tp
 qmd: "xotbasemigration best practices practice"
+=======
+>>>>>>> .merge_file_ubSEIq
 ---
 # Best Practice: XotBaseMigration
 

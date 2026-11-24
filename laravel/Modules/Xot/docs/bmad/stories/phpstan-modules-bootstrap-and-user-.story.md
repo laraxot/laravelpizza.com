@@ -8,7 +8,10 @@ references:
 
 - ./fleet-blocking-merge-conflict-markers-20260929.story.md
   - ../../../../../../bashscripts/ai/wiki/memories/phpstan-bootstrap-merge-file-markers.md
+<<<<<<< .merge_file_IcTv6e
 qmd: "phpstan modules bootstrap and user story"
+=======
+>>>>>>> .merge_file_yrqwnm
 ---
 
 # Obiettivo

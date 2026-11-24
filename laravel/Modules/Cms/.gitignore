@@ -143,7 +143,6 @@ test-results/
 cms.code-workspace
 ruvector.db
 .windsurfrules
-<<<<<<< .merge_file_JZqtZa
 <<<<<<< .merge_file_SsG7Sz
 <<<<<<< .merge_file_VtEhJC
 <<<<<<< .merge_file_9zRAvF
@@ -154,13 +153,10 @@ docs/screenshots/
 >>>>>>> .merge_file_9R878k
 =======
 >>>>>>> .merge_file_f8GEhV
-=======
->>>>>>> .merge_file_JJ7cO3
 
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 tests/coverage-*.*
 tests/graphify-out/
-<<<<<<< .merge_file_JZqtZa
 <<<<<<< .merge_file_SsG7Sz
 <<<<<<< .merge_file_VtEhJC
 >>>>>>> .merge_file_yf6psG
@@ -168,5 +164,3 @@ tests/graphify-out/
 >>>>>>> .merge_file_9R878k
 =======
 >>>>>>> .merge_file_f8GEhV
-=======
->>>>>>> .merge_file_JJ7cO3

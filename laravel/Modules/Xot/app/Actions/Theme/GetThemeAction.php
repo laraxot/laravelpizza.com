@@ -11,7 +11,10 @@ use Spatie\QueueableAction\QueueableAction;
  * Replaces Modules\Xot\Services\ThemeService::getTheme() (archived to .bak).
  *
  * @see docs/contracts/get-theme-action.md
+<<<<<<< .merge_file_KNwSOn
  *
+=======
+>>>>>>> .merge_file_ewYwnK
  * @contract docs/contracts/get-theme-action.md
  */
 class GetThemeAction

@@ -8,7 +8,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-nested-route-name-action.md
+<<<<<<< .merge_file_5dyzD4
  *
+=======
+>>>>>>> .merge_file_ns3Eqm
  * @contract docs/contracts/build-nested-route-name-action.md
  */
 class BuildNestedRouteNameAction

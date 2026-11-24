@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 qmd: "MULTI AGENT FINAL REPORT"
 issues: []
 discussions: []
@@ -236,43 +236,43 @@ fd4c8475 Add multi-agent collaboration issue template and docs
 
 ### GitHub Links
 <<<<<<< HEAD
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 - [Issue Template](docs/github/issue_multi_agent_collaboration.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 - [Issue Template](docs/github/ISSUE_MULTI_AGENT_COLLABORATION.md)
 =======
 - [Issue Template](docs/github/issue_multi_agent_collaboration.md)
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 =======
 - [Issue Template](docs/github/issue_multi_agent_collaboration.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 - [Issue Template](../github/issue_multi_agent_collaboration.md)
 - [Discussion Template](.github/DISCUSSION_TEMPLATE/sync-script-coordination.md)
 - [Actions Tab](https://github.com/laraxot/base_fixcity_fila5/actions)
 
 ### Documentation
 <<<<<<< HEAD
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 - [Multi-Agent Guide](docs/MULTI_AGENT_COLLABORATION_GUIDE.md)
 - [GitHub Sync Rule](docs/GITHUB_SYNC_RULE.md)
 - [Multi-Agent Guide](../multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](../github_sync_rule.md)
 - [AI Rules](.qwen/AI_RULES_CRITICAL.md)
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 <<<<<<< HEAD
 =======
 =======
@@ -281,13 +281,13 @@ fd4c8475 Add multi-agent collaboration issue template and docs
 >>>>>>> laraxot/dev
 =======
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 - [Multi-Agent Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
 - [Multi-Agent Guide](../multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](../github_sync_rule.md)
 - [AI Rules](.qwen/ai_rules_critical.md)
-<<<<<<< .merge_file_J6gXBA
+<<<<<<< .merge_file_XDDMZP
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -295,7 +295,7 @@ fd4c8475 Add multi-agent collaboration issue template and docs
 =======
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_qySzcv
+>>>>>>> .merge_file_YFCgvh
 >>>>>>> laraxot/dev
 
 ---

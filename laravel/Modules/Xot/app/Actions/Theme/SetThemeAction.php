@@ -15,7 +15,10 @@ use Spatie\QueueableAction\QueueableAction;
  * the request lifecycle.
  *
  * @see docs/contracts/set-theme-action.md
+<<<<<<< .merge_file_nY8lTm
  *
+=======
+>>>>>>> .merge_file_Ga6ixZ
  * @contract docs/contracts/set-theme-action.md
  */
 class SetThemeAction

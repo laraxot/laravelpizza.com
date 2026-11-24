@@ -10,7 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-current-route-view-action.md
+<<<<<<< .merge_file_FTVpe5
  *
+=======
+>>>>>>> .merge_file_16jCba
  * @contract docs/contracts/get-current-route-view-action.md
  */
 class GetCurrentRouteViewAction

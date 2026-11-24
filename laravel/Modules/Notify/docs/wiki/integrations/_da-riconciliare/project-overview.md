@@ -1,11 +1,16 @@
 ---
 title: "🏛️ NOTIFY - Civic Engagement Platform"
-<<<<<<< .merge_file_lqQcLJ
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_fHpKSE
+>>>>>>> laraxot/dev
 type: concept
 tags: [project, overview]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-overview 🏛️ laraxot - civic engagement platform"
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 title: "🏛️ <nome progetto> - Civic Engagement Platform"
@@ -22,7 +27,8 @@ created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-overview 🏛️ laraxot - civic engagement platform"
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_w6ZOHT
+>>>>>>> .merge_file_u2hOCQ
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

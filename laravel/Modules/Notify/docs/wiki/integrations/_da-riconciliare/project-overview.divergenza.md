@@ -7,7 +7,10 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< .merge_file_jV436x
+<<<<<<< HEAD
+updated: 2026-11-23
+=======
+<<<<<<< .merge_file_V31RqE
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +18,8 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_ou2w2K
+>>>>>>> .merge_file_f2z8IE
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `project-overview.md`

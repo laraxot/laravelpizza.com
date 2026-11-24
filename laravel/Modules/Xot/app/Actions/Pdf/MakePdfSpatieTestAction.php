@@ -13,7 +13,10 @@ use function Safe\base64_decode;
 
 /**
  * @see docs/contracts/make-pdf-spatie-test-action.md
+<<<<<<< .merge_file_kzcmRG
  *
+=======
+>>>>>>> .merge_file_tATxt9
  * @contract docs/contracts/make-pdf-spatie-test-action.md
  */
 class MakePdfSpatieTestAction

@@ -1,4 +1,14 @@
 ---
+<<<<<<< .merge_file_V8KDID
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_6XOrHS
+qmd: "xot bmad stories theme three docs index refresh story md"
+=======
+>>>>>>> .merge_file_PhtRok
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_RB1lnJ
 title: "Theme Three — indice docs completo e navigazione coerente"
 status: done
 epic: documentation-quality
@@ -12,7 +22,10 @@ references:
   - ../../../../../Themes/Three/docs/index.md
   - ../../../../../Themes/Three/docs/README.md
   - ./phpstan-modules-swarm-random.story.md
+<<<<<<< .merge_file_V8KDID
 qmd: "theme three refresh story indice completo"
+=======
+>>>>>>> .merge_file_RB1lnJ
 ---
 
 # Theme Three — indice docs completo e navigazione coerente

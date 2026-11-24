@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_BcVfHw
 ---
 title: "RegistrationWidget FileUpload Fix"
 type: note
 qmd: "registration widget fileupload fix registrationwidget"
 ---
+=======
+>>>>>>> .merge_file_AaSWbe
 # RegistrationWidget FileUpload Fix
 
 ## Problema Risolto

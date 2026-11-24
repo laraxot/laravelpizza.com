@@ -18,13 +18,10 @@ use function Safe\realpath;
  * Pattern: dominio invertito e slugato (`foo.example.com` → `com/example/foo`), poi lookup
  * in `config/<path>`. Se l'host è un symlink (es. `eu/fixcity` → `local/fixcity`), la chiave
  * di config deve usare il path reale, non l'alias — altrimenti Laravel non trova i file.
-<<<<<<< .merge_file_JRFXjS
  *
  * @see docs/contracts/get-tenant-name-action.md
  *
  * @contract docs/contracts/get-tenant-name-action.md
-=======
->>>>>>> .merge_file_FhLHV5
  */
 class GetTenantNameAction
 {

@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_EPm9Pc
+<<<<<<< .merge_file_1leLj8
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_p94LNF
+>>>>>>> .merge_file_St7fUQ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_EPm9Pc
+<<<<<<< .merge_file_1leLj8
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_p94LNF
+>>>>>>> .merge_file_St7fUQ
 qmd: "roadmap miglioramenti"
 issues: []
 discussions: []
@@ -46,25 +46,25 @@ diretta, senza bisogno di aprirli: nella sola root di `docs/` convivono
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
 =======
 <<<<<<< HEAD
-<<<<<<< .merge_file_EPm9Pc
+<<<<<<< .merge_file_1leLj8
 <<<<<<< HEAD
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
 =======
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_p94LNF
+>>>>>>> .merge_file_St7fUQ
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-INDEX.md` — quattro
 =======
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_EPm9Pc
+<<<<<<< .merge_file_1leLj8
 =======
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-INDEX.md` — quattro
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_p94LNF
+>>>>>>> .merge_file_St7fUQ
 indici per un unico modulo, nessuno dei quattro probabilmente aggiornato
 dopo la nascita degli altri tre. E poi `absolute-completion.md` insieme ad
 `ABSOLUTE_COMPLETION_100.md`: un modulo che si certifica "completo al 100%"

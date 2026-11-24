@@ -13,7 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/fake-seeder-action.md
+<<<<<<< .merge_file_GRadqH
  *
+=======
+>>>>>>> .merge_file_JKMmsa
  * @contract docs/contracts/fake-seeder-action.md
  */
 class FakeSeederAction

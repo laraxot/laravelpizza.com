@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Bosj2W
 ---
 title: "Widget Translation Rules - SaluteOra Project"
 type: rule
 qmd: "widget translation rules saluteora project"
 ---
+=======
+>>>>>>> .merge_file_VTeIOo
 # Widget Translation Rules - SaluteOra Project
 
 ## Core Principles
@@ -191,8 +194,19 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](widgets_structure.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
+<<<<<<< .merge_file_Bosj2W
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
+=======
+<<<<<<< HEAD
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_VTeIOo
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [User Module Widget Structure](widgets_structure.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)

@@ -20,19 +20,6 @@ use Webmozart\Assert\Assert;
  * - Supporto locale personalizzato
  * - Exception handling chiaro
  * - Queueable per bulk operations
-<<<<<<< HEAD
- *
- * @see docs/contracts/send-notification-to-recipient-action.md
- *
- * @contract docs/contracts/send-notification-to-recipient-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/send-notification-to-recipient-action.md
- * @contract docs/contracts/send-notification-to-recipient-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class SendNotificationToRecipientAction
 {

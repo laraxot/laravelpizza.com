@@ -16,9 +16,13 @@ use Spatie\QueueableAction\QueueableAction;
  * l'autoloader dopo un deploy che ha aggiunto nuove classi (sintomo:
  * job in coda falliti con "Job is incomplete class" — story
  * xot-artisan-commands-manager-layout-and-composer-dump-autoload.md).
+<<<<<<< .merge_file_IsrJBw
  *
  * @see docs/contracts/execute-composer-dump-autoload-action.md
  *
+=======
+ * @see docs/contracts/execute-composer-dump-autoload-action.md
+>>>>>>> .merge_file_xeL2xD
  * @contract docs/contracts/execute-composer-dump-autoload-action.md
  */
 class ExecuteComposerDumpAutoloadAction

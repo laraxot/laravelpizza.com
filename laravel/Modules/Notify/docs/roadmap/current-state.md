@@ -3,7 +3,7 @@ title: "current state"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_f3vjOi
+<<<<<<< .merge_file_5T7WLl
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_5blsyb
+>>>>>>> .merge_file_fsNagt
 qmd: "current state"
 issues: []
 discussions: []

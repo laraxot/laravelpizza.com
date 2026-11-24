@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_3uSjU4
 qmd: "sprint planning user"
+=======
+>>>>>>> .merge_file_MRgMpk
 ---
 
 # User Module - Sprint Planning

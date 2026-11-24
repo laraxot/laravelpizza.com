@@ -11,7 +11,10 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
+<<<<<<< .merge_file_ZzUaCy
 qmd: "milestones"
+=======
+>>>>>>> .merge_file_5NGszy
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/04-milestones.md

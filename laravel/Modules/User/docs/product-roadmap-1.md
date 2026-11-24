@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_T8mgN3
 qmd: "product roadmap 1"
+=======
+>>>>>>> .merge_file_VJao7W
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md

@@ -11,7 +11,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/relation-action.md
+<<<<<<< .merge_file_YpREBc
  *
+=======
+>>>>>>> .merge_file_mzzUkf
  * @contract docs/contracts/relation-action.md
  */
 class RelationAction

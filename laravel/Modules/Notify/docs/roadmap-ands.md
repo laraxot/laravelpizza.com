@@ -3,7 +3,7 @@ title: "roadmap ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sbnr76
+<<<<<<< .merge_file_tOyLs5
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_m8DyCq
+>>>>>>> .merge_file_W7s0NS
 qmd: "roadmap ands"
 issues: []
 discussions: []

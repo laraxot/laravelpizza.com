@@ -3,8 +3,18 @@
 declare(strict_types=1);
 
 use Modules\User\Datas\PasswordData;
+<<<<<<< .merge_file_F5GfHZ
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+=======
+<<<<<<< HEAD
+use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+=======
+use PHPUnit\Framework\Assert;
+use Modules\User\Tests\TestCase;
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WmEFaR
 
 use function Safe\file_get_contents;
 

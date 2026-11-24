@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_gZk4jE
 qmd: "baseuser consolidated"
+=======
+>>>>>>> .merge_file_ZORo2V
 ---
 
 # baseuser — Consolidated Documentation

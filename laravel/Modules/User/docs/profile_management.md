@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_uQqNf3
 qmd: "profile management laravel modules"
+=======
+>>>>>>> .merge_file_DmyGk3
 ---
 
 # Profile Management in Laravel Modules
@@ -74,8 +77,23 @@ This document outlines the best practices for managing user profiles within a La
 - Update this document if new profile management functionalities are introduced.
 
 ## Links to Related Documentation
+<<<<<<< HEAD
 - [User Module Index](./index.md)
+<<<<<<< .merge_file_uQqNf3
 - [User Module Index](./README.md)
+=======
+
+- [User Module Index](./index.md)
+=======
+- [User Module Index](./README.md)
+
+<<<<<<< .merge_file_fPm6wF
+- [User Module Index](./README.md)
+=======
+- [User Module Index](./index.md)
+>>>>>>> .merge_file_npXxiw
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_DmyGk3
 - [BaseUser Model](./baseuser.md)
 - [Authentication Pages Implementation](./auth_pages_implementation.md)
 - [Routing Best Practices](./routing_best_practices.md)

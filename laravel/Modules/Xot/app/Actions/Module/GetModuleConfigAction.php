@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-module-config-action.md
+<<<<<<< .merge_file_VI7vlr
  *
+=======
+>>>>>>> .merge_file_YHshps
  * @contract docs/contracts/get-module-config-action.md
  */
 class GetModuleConfigAction

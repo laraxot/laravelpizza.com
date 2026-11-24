@@ -1,0 +1,111 @@
+---
+title: "view pattern"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+<<<<<<< .merge_file_zmMhxb
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_zsq6ho
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_zmMhxb
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zsq6ho
+qmd: "view pattern"
+issues: []
+discussions: []
+---
+
+# Pattern view() — Variabile view-string + Parametri Espliciti
+
+**Regola**: Per ogni chiamata a view() usare variabile tipizzata view-string e parametri espliciti.
+
+## Pattern Preferito
+
+```php
+/** @phpstan-var view-string $viewName */
+$viewName = 'pub_theme::components.layouts.guest';
+$viewParams = [];
+
+return view($viewName, $viewParams);
+```
+
+## Logica
+
+1. **Type safety**: view-string è più preciso di (string) — PHPStan sa che è un path Blade valido
+2. **Estensibilità**: Stessa struttura con 0 o N parametri — aggiungere dati = popolare $viewParams
+3. **Consistenza**: Sempre view($viewName, $viewParams) — nessun default implicito
+4. **Manutenibilità**: View name e params in un blocco, facile modificare
+
+## Con parametri
+
+```php
+/** @phpstan-var view-string $viewName */
+$viewName = 'fixcity::components.blocks.ticket-list';
+$viewName = 'ptv::components.blocks.ticket-list';
+$viewParams = [
+    'tickets' => $this->tickets,
+    'status' => $this->status,
+];
+
+return view($viewName, $viewParams);
+```
+
+## Da evitare
+
+```php
+// ❌ Stringa inline, parametri impliciti
+return view('pub_theme::components.layouts.guest');
+
+// ❌ Cast (string) perde semantica view-string
+return view((string) $view);
+```
+
+## Collegamenti
+
+- [phpstan_critical_rules](../.cursor/rules/phpstan_critical_rules.md)
+<<<<<<< HEAD
+<<<<<<< .merge_file_zmMhxb
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> .merge_file_zsq6ho
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

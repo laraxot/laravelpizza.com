@@ -1,0 +1,178 @@
+---
+title: "conflict resolution smschannel"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+<<<<<<< .merge_file_4NOpWg
+<<<<<<< .merge_file_NdaN6l
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CX0wIT
+=======
+>>>>>>> .merge_file_wQ19HJ
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_4NOpWg
+<<<<<<< .merge_file_NdaN6l
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_CX0wIT
+=======
+>>>>>>> .merge_file_wQ19HJ
+qmd: "conflict resolution smschannel"
+issues: []
+discussions: []
+---
+
+# Risoluzione Conflitti SmsChannel.php
+
+## Contesto del Conflitto
+**File**: `Modules/Notify/app/Channels/SmsChannel.php`
+**Linee**: 55-58
+**Tipo**: Conflitto di formattazione (riga vuota aggiuntiva)
+
+## Descrizione del Conflitto
+Il conflitto è molto semplice e riguarda solo la presenza di una riga vuota aggiuntiva:
+
+### Versione HEAD
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+### Versione Branch
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+## Analisi delle Differenze
+- **HEAD**: Mantiene una riga vuota aggiuntiva dopo `$this->factory->create()`
+- **Branch**: Ha solo una riga vuota standard
+
+## Strategia di Risoluzione: Mantenere Versione HEAD
+
+### Motivazione
+1. **Coerenza con stile esistente**: La versione HEAD mantiene uno stile di spaziatura più consistente
+2. **Leggibilità**: La riga vuota aggiuntiva migliora la separazione visiva tra creazione e esecuzione
+3. **Minimo impatto**: È solo una questione di formattazione, non di logica
+4. **Principio conservativo**: In caso di dubbio su formattazione, mantenere la versione HEAD
+
+### Implementazione
+Rimuovere i marker di conflitto mantenendo la versione HEAD con la riga vuota aggiuntiva.
+
+## Codice Finale
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+## Note Tecniche
+- Nessun impatto sulla funzionalità
+- Nessun impatto su PHPStan o analisi statica
+- Solo miglioramento della leggibilità del codice
+
+## Collegamenti
+<<<<<<< HEAD
+- [Notify Module Documentation](README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< .merge_file_4NOpWg
+<<<<<<< .merge_file_NdaN6l
+<<<<<<< HEAD
+- [Notify Module Documentation](README.md)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CX0wIT
+=======
+>>>>>>> .merge_file_wQ19HJ
+- [Notify Module Documentation](readme.md)
+=======
+- [Notify Module Documentation](README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_4NOpWg
+<<<<<<< .merge_file_NdaN6l
+=======
+- [Notify Module Documentation](readme.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_CX0wIT
+=======
+>>>>>>> .merge_file_wQ19HJ
+- [SMS Channel Architecture](sms_channel_action_resolution.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
+
+*Ultimo aggiornamento: giugno 2025*
+# Risoluzione Conflitti SmsChannel.php
+
+## Contesto del Conflitto
+**File**: `Modules/Notify/app/Channels/SmsChannel.php`
+**Linee**: 55-58
+**Tipo**: Conflitto di formattazione (riga vuota aggiuntiva)
+
+## Descrizione del Conflitto
+Il conflitto è molto semplice e riguarda solo la presenza di una riga vuota aggiuntiva:
+
+### Versione HEAD
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+### Versione Branch
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+## Analisi delle Differenze
+- **HEAD**: Mantiene una riga vuota aggiuntiva dopo `$this->factory->create()`
+- **Branch**: Ha solo una riga vuota standard
+
+## Strategia di Risoluzione: Mantenere Versione HEAD
+
+### Motivazione
+1. **Coerenza con stile esistente**: La versione HEAD mantiene uno stile di spaziatura più consistente
+2. **Leggibilità**: La riga vuota aggiuntiva migliora la separazione visiva tra creazione e esecuzione
+3. **Minimo impatto**: È solo una questione di formattazione, non di logica
+4. **Principio conservativo**: In caso di dubbio su formattazione, mantenere la versione HEAD
+
+### Implementazione
+Rimuovere i marker di conflitto mantenendo la versione HEAD con la riga vuota aggiuntiva.
+
+## Codice Finale
+```php
+$action = $this->factory->create();
+
+return $action->execute($smsData);
+```
+
+## Note Tecniche
+- Nessun impatto sulla funzionalità
+- Nessun impatto su PHPStan o analisi statica
+- Solo miglioramento della leggibilità del codice
+
+## Collegamenti
+- [Notify Module Documentation](README.md)
+- [SMS Channel Architecture](sms_channel_action_resolution.md)
+- [SMS Channel Architecture](sms-channel-action-resolution.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
+
+*Ultimo aggiornamento: giugno 2025*

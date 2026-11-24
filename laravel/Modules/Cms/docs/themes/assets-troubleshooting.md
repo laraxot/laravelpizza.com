@@ -82,7 +82,6 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 
 3. **Ambiente di Sviluppo**
    - In sviluppo: utilizzare `npm run dev`
-<<<<<<< .merge_file_7LnwhZ
 <<<<<<< .merge_file_mgS9w2
 <<<<<<< .merge_file_bI51Jl
 <<<<<<< .merge_file_oe67RT
@@ -92,8 +91,6 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 >>>>>>> .merge_file_7KJtdJ
 =======
 >>>>>>> .merge_file_hHhaEm
-=======
->>>>>>> .merge_file_2DlPPX
 <<<<<<< HEAD
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
@@ -108,7 +105,6 @@ Per maggiori dettagli sul funzionamento interno, consultare:
    - In produzione: `npm run build`; `public_html/themes/<Tema>` è un symlink, niente copia
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_7LnwhZ
 <<<<<<< .merge_file_mgS9w2
 <<<<<<< .merge_file_bI51Jl
 >>>>>>> .merge_file_B3RByp
@@ -116,7 +112,5 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 >>>>>>> .merge_file_7KJtdJ
 =======
 >>>>>>> .merge_file_hHhaEm
-=======
->>>>>>> .merge_file_2DlPPX
 
 Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

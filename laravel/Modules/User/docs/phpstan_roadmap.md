@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_j7hmzR
 ---
 title: "PHPStan Roadmap: User Module"
 type: note
 qmd: "phpstan roadmap user"
 ---
+=======
+>>>>>>> .merge_file_hS61qT
 # PHPStan Roadmap: User Module
 
 **Date**: 2026-01-12

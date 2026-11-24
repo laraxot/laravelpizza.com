@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_DM9Xob
 ---
 title: "Registration Widget Documentation"
 type: note
 qmd: "registration widget"
 ---
+=======
+>>>>>>> .merge_file_8hdAAy
 # Registration Widget Documentation
 
 ## Overview

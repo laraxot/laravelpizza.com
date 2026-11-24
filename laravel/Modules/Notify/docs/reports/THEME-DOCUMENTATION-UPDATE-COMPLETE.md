@@ -3,7 +3,7 @@ title: "THEME DOCUMENTATION UPDATE COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_1jthZK
+<<<<<<< .merge_file_4Yj8c5
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_84azFc
+>>>>>>> .merge_file_HXAfEe
 qmd: "THEME DOCUMENTATION UPDATE COMPLETE"
 issues: []
 discussions: []

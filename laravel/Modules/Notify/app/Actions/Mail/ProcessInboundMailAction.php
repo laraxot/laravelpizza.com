@@ -30,26 +30,8 @@ use function Safe\preg_match;
  * - Mailgun form: sender, recipient, subject, body-plain, body-html, body-mime
  * - Raw MIME: request content-type message/rfc822 o body che inizia con "From:"
  *
-<<<<<<< .merge_file_jBHwe8
-<<<<<<< .merge_file_78Zlgq
-<<<<<<< HEAD
  * @contract docs/contracts/process-inbound-mail-action.md
  *
-=======
-<<<<<<< HEAD
- * @contract docs/contracts/process-inbound-mail-action.md
- *
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
- * @contract docs/contracts/process-inbound-mail-action.md
- *
->>>>>>> .merge_file_ZJIsZv
-=======
- * @contract docs/contracts/process-inbound-mail-action.md
- *
->>>>>>> .merge_file_6xCZmA
  * @phpstan-type InboundMailData array{
  *     message_id: string|null,
  *     from_email: string|null,
@@ -61,25 +43,6 @@ use function Safe\preg_match;
  *     headers: array<array-key, mixed>|null,
  *     payload: array<array-key, mixed>|null
  * }
-<<<<<<< .merge_file_jBHwe8
-<<<<<<< .merge_file_78Zlgq
-<<<<<<< HEAD
- *
- * @see docs/contracts/process-inbound-mail-action.md
- *
- * @contract docs/contracts/process-inbound-mail-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/process-inbound-mail-action.md
- * @contract docs/contracts/process-inbound-mail-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ZJIsZv
-=======
->>>>>>> .merge_file_6xCZmA
  */
 class ProcessInboundMailAction
 {

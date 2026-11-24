@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Seo\Tests\TestCase;
-<<<<<<< .merge_file_IOriSw
-=======
-use PHPUnit\Framework\Assert;
->>>>>>> .merge_file_UHgjRF
 
 use function Pest\Laravel\get;
 

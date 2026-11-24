@@ -7,7 +7,10 @@ created: 2026-10-06
 updated: 2026-10-06
 module: Xot
 tags: [phpstan, cleanup, xot, swarm, tests, pest, stubs]
+<<<<<<< .merge_file_xvxEdS
 qmd: "06 phpstan cleanup xot rest story"
+=======
+>>>>>>> .merge_file_z3o7g7
 ---
 
 # [STORY] PHPStan cleanup Xot (tests, helpers, stub) - gruppo Xot_rest

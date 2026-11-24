@@ -11,7 +11,10 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< .merge_file_YXs4g0
 qmd: "header design colors"
+=======
+>>>>>>> .merge_file_7WZBqX
 ---
 
 ## Rule Overview

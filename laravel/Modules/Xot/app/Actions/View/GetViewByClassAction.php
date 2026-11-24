@@ -11,9 +11,13 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per la conversione di nomi di classi in nomi di viste.
+<<<<<<< .merge_file_5lldis
  *
  * @see docs/contracts/get-view-by-class-action.md
  *
+=======
+ * @see docs/contracts/get-view-by-class-action.md
+>>>>>>> .merge_file_KyZn56
  * @contract docs/contracts/get-view-by-class-action.md
  */
 class GetViewByClassAction

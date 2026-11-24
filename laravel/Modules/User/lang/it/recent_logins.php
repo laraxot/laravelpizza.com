@@ -13,9 +13,9 @@ return [
     'fields' => [
         'authenticatable' => [
             'name' => [
-                'label' => 'authenticatable.name',
+                'label' => 'Utente autenticato',
             ],
-            'label' => '',
+            'label' => 'Utente autenticato',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -24,13 +24,20 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+<<<<<<< .merge_file_jZfwAY
             'label' => 'login_at',
         ],
         'ip_address' => [
             'label' => 'Indirizzo IP',
+=======
+            'label' => 'Ora accesso',
+        ],
+        'ip_address' => [
+>>>>>>> .merge_file_zmCyzQ
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Indirizzo IP',
         ],
         'user_agent' => [
             'label' => 'Browser (user agent)',
@@ -64,15 +71,20 @@ return [
             'description' => '',
         ],
         'user' => [
+<<<<<<< .merge_file_jZfwAY
             'label' => 'Utente',
+=======
+>>>>>>> .merge_file_zmCyzQ
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Utente',
         ],
     ],
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
+<<<<<<< .merge_file_jZfwAY
             'label' => 'reorderRecords',
         ],
         'openColumnManager' => [
@@ -90,26 +102,45 @@ return [
         'applyFilters' => [
             'icon' => 'applyFilters',
             'label' => 'applyFilters',
+=======
+            'label' => 'Riordina',
+        ],
+        'openColumnManager' => [
+            'icon' => 'openColumnManager',
+            'label' => 'Gestisci colonne',
+        ],
+        'applyTableColumnManager' => [
+            'icon' => 'applyTableColumnManager',
+            'label' => 'Applica colonne',
+        ],
+        'resetFilters' => [
+            'icon' => 'resetFilters',
+            'label' => 'Reimposta filtri',
+        ],
+        'applyFilters' => [
+            'icon' => 'applyFilters',
+            'label' => 'Applica filtri',
+>>>>>>> .merge_file_zmCyzQ
         ],
         'openFilters' => [
             'icon' => 'openFilters',
-            'label' => 'openFilters',
+            'label' => 'Apri filtri',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
-            'label' => 'resetColumnManager',
+            'label' => 'Reimposta colonne',
         ],
         'delete' => [
             'icon' => 'delete',
-            'label' => 'delete',
+            'label' => 'Elimina',
         ],
         'layout' => [
             'icon' => 'layout',
-            'label' => 'layout',
+            'label' => 'Layout',
         ],
         'create' => [
             'icon' => 'create',
-            'label' => 'create',
+            'label' => 'Crea',
         ],
     ],
     'navigation' => [

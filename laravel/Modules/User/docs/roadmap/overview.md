@@ -11,7 +11,10 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
+<<<<<<< .merge_file_dqzZ5U
 qmd: "overview"
+=======
+>>>>>>> .merge_file_dVMoJO
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-overview-Modules.md

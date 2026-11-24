@@ -9,7 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-module-name-by-model-class-action.md
+<<<<<<< .merge_file_H2DTkC
  *
+=======
+>>>>>>> .merge_file_D6teE0
  * @contract docs/contracts/get-module-name-by-model-class-action.md
  */
 class GetModuleNameByModelClassAction

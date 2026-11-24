@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_AoOI5X
 ---
 title: "TeamContract Usage Reasoning"
 type: contract
 qmd: "team contract usage reasoning teamcontract"
 ---
+=======
+>>>>>>> .merge_file_mXEZxw
 # TeamContract Usage Reasoning
 
 ## Overview

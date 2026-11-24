@@ -12,7 +12,10 @@ use function Safe\json_encode;
 
 /**
  * @see docs/contracts/save-json-array-action.md
+<<<<<<< .merge_file_BpAekP
  *
+=======
+>>>>>>> .merge_file_EGSW2Z
  * @contract docs/contracts/save-json-array-action.md
  */
 class SaveJsonArrayAction

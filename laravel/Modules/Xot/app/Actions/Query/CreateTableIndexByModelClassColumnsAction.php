@@ -14,9 +14,13 @@ use Webmozart\Assert\Assert;
 
 /**
  * Create an index for a specific table based on a model class and columns.
+<<<<<<< .merge_file_fRzTm1
  *
  * @see docs/contracts/create-table-index-by-model-class-columns-action.md
  *
+=======
+ * @see docs/contracts/create-table-index-by-model-class-columns-action.md
+>>>>>>> .merge_file_DjClOm
  * @contract docs/contracts/create-table-index-by-model-class-columns-action.md
  */
 class CreateTableIndexByModelClassColumnsAction

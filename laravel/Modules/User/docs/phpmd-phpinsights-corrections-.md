@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_9j54xw
 ---
 title: "PHPMD e PHP Insights Corrections - 2025-01-22"
 type: note
 qmd: "phpmd phpinsights corrections insights 20250122"
 ---
+=======
+>>>>>>> .merge_file_MeuOrg
 # PHPMD e PHP Insights Corrections - 2025-01-22
 
 ## Obiettivo

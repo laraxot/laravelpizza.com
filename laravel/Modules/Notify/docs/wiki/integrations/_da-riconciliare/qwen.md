@@ -8,24 +8,18 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 <<<<<<< HEAD
-<<<<<<< .merge_file_TznyE2
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> .merge_file_EvycJA
 updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_TznyE2
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_EvycJA
 status: draft
 ---
 
@@ -41,7 +35,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
 <<<<<<< HEAD
-<<<<<<< .merge_file_TznyE2
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/<nome progetto>/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/<nome progetto>/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
@@ -50,8 +43,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> .merge_file_EvycJA
 =======
 <<<<<<< .merge_file_D5sHh1
 - [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md) — body plain, header parity, stepper responsive, multilingual
@@ -64,11 +55,8 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 =======
 >>>>>>> laraxot/dev
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
-<<<<<<< .merge_file_TznyE2
 =======
 >>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_EvycJA
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/App/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/App/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
@@ -79,7 +67,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Token Efficiency](../../../token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
 - [LLM Wiki Pattern](../../README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
 <<<<<<< HEAD
-<<<<<<< .merge_file_TznyE2
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_L7TYYZ
@@ -87,11 +74,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_L7TYYZ
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EvycJA
 
 ---
 **See also:**
@@ -174,12 +156,9 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_TznyE2
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> .merge_file_EvycJA
 <<<<<<< .merge_file_D5sHh1
 - [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md) — body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/<nome progetto>/docs/filament-wizard-rule.md) — NO Blade step management, use Filament Wizard Schema
@@ -188,11 +167,8 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [LLM Wiki Pattern](./docs/wiki/README.md) — Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
 =======
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_TznyE2
 =======
 >>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_EvycJA
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/<nome progetto>/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/<nome progetto>/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
@@ -206,7 +182,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [LLM Wiki Pattern](../../README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_TznyE2
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -215,10 +190,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_L7TYYZ
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EvycJA
 
 ---
 **See also:**

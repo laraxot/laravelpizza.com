@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_QyDp6c
 ---
 title: "Analisi dell'Errore di Implementazione Volt/Blade"
 type: note
 qmd: "volt blade implementation error analisi dellerrore"
 ---
+=======
+>>>>>>> .merge_file_rQUwB1
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati

@@ -9,21 +9,6 @@ use ReflectionMethod;
 use Spatie\QueueableAction\QueueableAction;
 use UnexpectedValueException;
 
-<<<<<<< HEAD
-/**
- * @see docs/contracts/try-duocircle-mail-action.md
- *
- * @contract docs/contracts/try-duocircle-mail-action.md
- */
-=======
-<<<<<<< HEAD
-=======
-/**
- * @see docs/contracts/try-duocircle-mail-action.md
- * @contract docs/contracts/try-duocircle-mail-action.md
- */
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 class TryDuocircleMailAction
 {
     use QueueableAction;

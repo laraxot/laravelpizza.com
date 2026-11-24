@@ -5,7 +5,10 @@ bmad: true
 status: complete
 owner: module:User
 tags: [user, migration, convention, schema]
+<<<<<<< .merge_file_wgHRku
 qmd: "users migration owner convention story user"
+=======
+>>>>>>> .merge_file_AGRIsL
 ---
 
 # User migration owner convention

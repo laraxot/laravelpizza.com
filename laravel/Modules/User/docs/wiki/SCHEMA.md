@@ -6,7 +6,10 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
+<<<<<<< .merge_file_MAkX6b
 qmd: "schema wiki"
+=======
+>>>>>>> .merge_file_l5URwL
 ---
 
 # Wiki Schema - User

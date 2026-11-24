@@ -4,7 +4,10 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
+<<<<<<< .merge_file_qVNgt1
 qmd: "auth pages i18n en de es"
+=======
+>>>>>>> .merge_file_D52IJC
 ---
 
 # Login e registrazione in inglese, tedesco e spagnolo

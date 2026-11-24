@@ -16,21 +16,6 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
-<<<<<<< HEAD
-/**
- * @see docs/contracts/send-gammu-sms-action.md
- *
- * @contract docs/contracts/send-gammu-sms-action.md
- */
-=======
-<<<<<<< HEAD
-=======
-/**
- * @see docs/contracts/send-gammu-sms-action.md
- * @contract docs/contracts/send-gammu-sms-action.md
- */
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 final class SendGammuSMSAction implements SmsActionContract
 {
     use QueueableAction;

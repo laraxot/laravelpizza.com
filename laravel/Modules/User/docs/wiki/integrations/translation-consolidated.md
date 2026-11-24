@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_bWyrvL
 qmd: "translation consolidated"
+=======
+>>>>>>> .merge_file_IVGYVY
 ---
 
 # translation — Consolidated Documentation

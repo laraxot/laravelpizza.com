@@ -1,19 +1,29 @@
 ---
 title: "Xot — entrypoint route no-op canonico"
 type: decision
+<<<<<<< .merge_file_PByFP1
 status: superseded
+=======
+status: accepted
+>>>>>>> .merge_file_BLTb1b
 module: Xot
 created: 2026-11-23
 updated: 2026-11-24
 issue: "#92"
+<<<<<<< .merge_file_PByFP1
 qmd: "route entrypoints canonical empty entrypoint noop"
 superseded_by: "no-shared-empty-route-file.md"
+=======
+>>>>>>> .merge_file_BLTb1b
 ---
 
 # ADR: entrypoint route no-op canonico
 
+<<<<<<< .merge_file_PByFP1
 > **Superseded** da [no-shared-empty-route-file.md](./no-shared-empty-route-file.md): non creare `Modules/Xot/routes/empty.php`; stub locale minimo per modulo.
 
+=======
+>>>>>>> .merge_file_BLTb1b
 ## Contesto
 
 Alcuni moduli includono `Modules/Xot/routes/empty.php` quando non espongono route proprie. Senza questo file il bootstrap dell'applicazione fallisce prima dei test e delle richieste HTTP.

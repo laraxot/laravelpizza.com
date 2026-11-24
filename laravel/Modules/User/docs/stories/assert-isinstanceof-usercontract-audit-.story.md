@@ -25,7 +25,10 @@ related:
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
+<<<<<<< .merge_file_AJHJcC
 qmd: "assert isinstanceof usercontract audit story assertisinstanceof"
+=======
+>>>>>>> .merge_file_lnbL1F
 ---
 
 # STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide

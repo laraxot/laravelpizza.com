@@ -3,7 +3,7 @@ title: "📊 ROADMAP STATUS SUMMARY - Ottobre 2025"
 type: concept
 tags: [roadmap, status, summary]
 created: 2026-07-14
-<<<<<<< .merge_file_s9Mh7y
+<<<<<<< .merge_file_Tfyhlk
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_mvRgks
+>>>>>>> .merge_file_hMVy8z
 qmd: "roadmap-status-summary 📊 roadmap status summary - ottobre 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,7 +20,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_s9Mh7y
+<<<<<<< .merge_file_Tfyhlk
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -30,7 +30,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_mvRgks
+>>>>>>> .merge_file_hMVy8z
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

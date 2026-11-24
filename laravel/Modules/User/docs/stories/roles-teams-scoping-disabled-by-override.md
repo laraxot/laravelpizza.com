@@ -19,7 +19,19 @@ tags: [bmad, story, user, spatie-permission, teams, multi-tenant, security]
 related:
   - ../../../../config/permission.php
   - ../../app/Models/Traits/HasRoles.php
+<<<<<<< .merge_file_vpNqB9
   - ../../../<nome progetto>/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+=======
+<<<<<<< HEAD
+  - ../../../Quaeris/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+=======
+<<<<<<< HEAD
+  - ../../../Quaeris/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+=======
+  - ../../../<nome progetto>/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_mEfStZ
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
@@ -140,7 +152,19 @@ Due conseguenze, opposte fra loro:
 - `self::class` dentro un trait risolve alla classe che lo usa, quindi il filtro
   `model_type` e' corretto: non e' quello il difetto.
 - Il difetto e' emerso durante la verifica di un guard `hasRole('super-admin')` su
+<<<<<<< .merge_file_vpNqB9
   un widget Filament del modulo <nome progetto> (vedi story correlata): il guard funziona
+=======
+<<<<<<< HEAD
+  un widget Filament del modulo Quaeris (vedi story correlata): il guard funziona
+=======
+<<<<<<< HEAD
+  un widget Filament del modulo Quaeris (vedi story correlata): il guard funziona
+=======
+  un widget Filament del modulo <nome progetto> (vedi story correlata): il guard funziona
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_mEfStZ
   oggi e smetterebbe di funzionare al primo allineamento del team id.
 - Migrazione dati: `roles.team_id` e la colonna team sul pivot `model_has_roles`
   vanno guardate insieme. Il DB non e' in sola lettura qui, a differenza di
@@ -178,7 +202,19 @@ Due conseguenze, opposte fra loro:
 ## Note
 
 - Trovato il 2026-08-07 durante la verifica adversarial di un fix su
+<<<<<<< .merge_file_vpNqB9
   `Modules/<nome progetto>`. Non e' un difetto di <nome progetto>: e' del layer di autorizzazione,
+=======
+<<<<<<< HEAD
+  `Modules/Quaeris`. Non e' un difetto di Quaeris: e' del layer di autorizzazione,
+=======
+<<<<<<< HEAD
+  `Modules/Quaeris`. Non e' un difetto di Quaeris: e' del layer di autorizzazione,
+=======
+  `Modules/<nome progetto>`. Non e' un difetto di <nome progetto>: e' del layer di autorizzazione,
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_mEfStZ
   e per questo la story vive in `module:User`.
 - Il difetto e' del tipo peggiore: oggi non produce sintomi. Si manifesta solo
   quando qualcuno fa la cosa giusta.

@@ -15,20 +15,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Se il permesso non esiste ancora nel database, l'accesso e' negato senza errore.
  * La usano sia la pagina Log sia il download, cosi' la regola e' una sola.
  *
-<<<<<<< .merge_file_7C6oCO
-<<<<<<< .merge_file_j4PhaL
-<<<<<<< .merge_file_Ows5TB
-<<<<<<< .merge_file_4TMqfy
  * @see docs/contracts/authorize-log-access-action.md
  *
-=======
->>>>>>> .merge_file_UPWfKo
-=======
->>>>>>> .merge_file_qfD4G4
-=======
->>>>>>> .merge_file_adSLnZ
-=======
->>>>>>> .merge_file_lhV20s
  * @contract docs/contracts/authorize-log-access-action.md
  */
 class AuthorizeLogAccessAction

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Z44Ogc
 ---
 title: "Correzioni PHPStan - Modulo User"
 type: note
 qmd: "phpstan fixes correzioni user"
 ---
+=======
+>>>>>>> .merge_file_c5DSei
 # Correzioni PHPStan - Modulo User
 
 Questo documento traccia gli errori PHPStan identificati nel modulo User e le relative soluzioni implementate.

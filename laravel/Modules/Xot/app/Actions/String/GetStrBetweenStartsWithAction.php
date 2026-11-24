@@ -8,7 +8,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-str-between-starts-with-action.md
+<<<<<<< .merge_file_wf5A8y
  *
+=======
+>>>>>>> .merge_file_isrHPN
  * @contract docs/contracts/get-str-between-starts-with-action.md
  */
 class GetStrBetweenStartsWithAction

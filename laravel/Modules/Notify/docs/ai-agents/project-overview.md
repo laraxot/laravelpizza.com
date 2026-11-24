@@ -1,0 +1,31 @@
+---
+title: "project overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_Ye1iQY
+<<<<<<< .merge_file_RH3aaZ
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_eZUN2h
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_Ye1iQY
+>>>>>>> .merge_file_u6Rt2S
+=======
+>>>>>>> .merge_file_eZUN2h
+qmd: "project overview"
+issues: []
+discussions: []
+---
+
+# Panoramica del Progetto (Claude Context)
+
+**Nome Progetto**: PTVX - Sistema Gestione Personale PA  
+**Descrizione**: Sistema modulare per la valutazione performance e gestione indennità personale in ambito Pubblica Amministrazione  
+**Stack Tecnologico**: Laravel 12 + Filament 5 + Livewire 4  
+**Filosofia**: Forward-Only, DRY, KISS, SOLID

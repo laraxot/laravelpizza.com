@@ -3,7 +3,7 @@ title: "report finale super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gBLcdz
+<<<<<<< .merge_file_hakqZj
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_yicUGc
+>>>>>>> .merge_file_8rLjqu
 qmd: "report finale super mucca"
 issues: []
 discussions: []

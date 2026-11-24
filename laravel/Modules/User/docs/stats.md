@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_DVTsEM
 qmd: "stats"
+=======
+>>>>>>> .merge_file_FR6Hc0
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/stats.md

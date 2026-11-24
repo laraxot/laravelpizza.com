@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Cocj4g
 ---
 title: "User Module - Spatie Permission Methods Reference"
 type: note
 qmd: "spatie permissions methods user permission reference"
 ---
+=======
+>>>>>>> .merge_file_nVt3lI
 # User Module - Spatie Permission Methods Reference
 
 ## Overview

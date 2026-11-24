@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_obEszu
 ---
 title: "Correzioni Errori di Sintassi nei File di Traduzione - 2025"
 type: note
 qmd: "translation syntax fixes correzioni errori sintassi"
 ---
+=======
+>>>>>>> .merge_file_Ae3CPs
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
 
 ## Data

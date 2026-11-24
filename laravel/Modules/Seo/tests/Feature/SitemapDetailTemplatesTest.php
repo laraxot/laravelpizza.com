@@ -8,11 +8,6 @@ use Illuminate\Support\Str;
 use Modules\Seo\Contracts\SitemapPathsContract;
 use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_4QvZmd
-=======
-use Modules\Seo\Contracts\SitemapPathsContract;
-use Modules\Seo\Tests\TestCase;
->>>>>>> .merge_file_xe0ryZ
 
 use function Safe\simplexml_load_string;
 

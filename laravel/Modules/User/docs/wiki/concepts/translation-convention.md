@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Lnk62d
 ---
 title: "Translation Convention - User Module"
 type: concept
 qmd: "translation convention user"
 ---
+=======
+>>>>>>> .merge_file_V0udny
 # Translation Convention - User Module
 
 ## Regola

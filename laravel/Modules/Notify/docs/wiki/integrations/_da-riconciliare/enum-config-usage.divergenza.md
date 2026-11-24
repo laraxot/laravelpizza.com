@@ -1,0 +1,30 @@
+---
+qmd: "Enum Config Usage.divergenza"
+issues: []
+discussions: []
+title: "Enum Config Usage.divergenza"
+module: Notify
+type: note
+tags: [xot-5.39, riconciliazione, docs-ownership]
+created: 2026-08-24
+<<<<<<< .merge_file_Dlv3bg
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_O6nDmp
+---
+
+# Divergenza: `enum_config_usage.md`
+
+Questo file veniva da `docs/wiki/integrations/modules/notify/enum_config_usage.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+
+- versione del modulo: `laravel/Modules/Notify/docs/enum_config_usage.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/enum_config_usage.md`
+
+Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+
+Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).

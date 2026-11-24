@@ -7,7 +7,10 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_ey93iA
+<<<<<<< HEAD
+updated: 2026-11-23
+=======
+<<<<<<< .merge_file_VGc2hM
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +18,8 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_P4cAUj
+>>>>>>> .merge_file_qIsqfj
+>>>>>>> laraxot/dev
 ---
 
 # 🎯 NOTIFY - STATO COMPLETAMENTO PROGETTO

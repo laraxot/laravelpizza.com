@@ -13,7 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-views-siblings-and-self-action.md
+<<<<<<< .merge_file_9WQOIE
  *
+=======
+>>>>>>> .merge_file_PsgJRn
  * @contract docs/contracts/get-views-siblings-and-self-action.md
  */
 class GetViewsSiblingsAndSelfAction

@@ -1,0 +1,63 @@
+---
+title: "volt rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_Gg9KH2
+<<<<<<< .merge_file_sZN7TH
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_JFfYym
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_Gg9KH2
+>>>>>>> .merge_file_ycI5So
+=======
+>>>>>>> .merge_file_JFfYym
+qmd: "volt rules"
+issues: []
+discussions: []
+---
+
+=== volt/core rules ===
+
+# Livewire Volt
+
+- Single-file Livewire components: PHP logic and Blade templates in one file.
+- Always check existing Volt components to determine functional vs class-based style.
+- IMPORTANT: Always use `search-docs` tool for version-specific Volt documentation and updated code examples.
+- IMPORTANT: Activate `volt-development` every time you're working with a Volt or single-file component-related task.
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+
+---
+
+title: "volt rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt rules"
+issues: []
+discussions: []
+## Cross-References
+
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [GEMINI Index](index.md) — All Gemini guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
+
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

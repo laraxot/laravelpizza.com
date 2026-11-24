@@ -1,11 +1,16 @@
 ---
 title: "🏆 NOTIFY - PERFEZIONE RAGGIUNTA"
-<<<<<<< .merge_file_k7DqpL
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_sCfIn0
+>>>>>>> laraxot/dev
 type: concept
 tags: [perfection, achieved]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "perfection-achieved 🏆 laraxot - perfezione raggiunta"
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 title: "🏆 <nome progetto> - PERFEZIONE RAGGIUNTA"
@@ -22,7 +27,8 @@ created: 2026-07-14
 updated: 2026-11-23
 qmd: "perfection-achieved 🏆 laraxot - perfezione raggiunta"
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_WImHIv
+>>>>>>> .merge_file_BP7RIv
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,13 +38,19 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_k7DqpL
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_sCfIn0
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_WImHIv
+=======
+>>>>>>> .merge_file_BP7RIv
+>>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

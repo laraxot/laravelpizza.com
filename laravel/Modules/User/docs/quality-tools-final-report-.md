@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_KkKvOf
 ---
 title: "Quality Tools Final Report - 2025-01-22"
 type: report
 qmd: "quality tools final report 20250122"
 ---
+=======
+>>>>>>> .merge_file_oNaCxz
 # Quality Tools Final Report - 2025-01-22
 
 ## Obiettivo

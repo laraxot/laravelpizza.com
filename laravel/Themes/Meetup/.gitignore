@@ -112,7 +112,10 @@ phpinsights.php
 *.lock
 .windsurf/
 docs/screenshots/
+<<<<<<< .merge_file_XCYFx0
 
 # local clone/backup artifacts
 repo.bundle
 *.bundle
+=======
+>>>>>>> .merge_file_CvsJLE

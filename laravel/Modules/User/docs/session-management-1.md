@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_IwIMQY
 qmd: "session management 1"
+=======
+>>>>>>> .merge_file_v0yxRu
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/session-management.md

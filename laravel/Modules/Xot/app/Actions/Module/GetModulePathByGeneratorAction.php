@@ -10,7 +10,10 @@ use Nwidart\Modules\Exceptions\ModuleNotFoundException;
 
 /**
  * @see docs/contracts/get-module-path-by-generator-action.md
+<<<<<<< .merge_file_1X1UgX
  *
+=======
+>>>>>>> .merge_file_EjNMJ3
  * @contract docs/contracts/get-module-path-by-generator-action.md
  */
 class GetModulePathByGeneratorAction

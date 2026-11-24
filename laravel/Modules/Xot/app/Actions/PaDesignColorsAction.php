@@ -15,9 +15,13 @@ use Spatie\QueueableAction\QueueableAction;
  * @example
  * $palette = app(PaDesignColorsAction::class)->execute();
  * $filamentColors = app(PaDesignColorsAction::class)->filamentPalette();
+<<<<<<< .merge_file_AhE6gZ
  *
  * @see docs/contracts/pa-design-colors-action.md
  *
+=======
+ * @see docs/contracts/pa-design-colors-action.md
+>>>>>>> .merge_file_LEgDXt
  * @contract docs/contracts/pa-design-colors-action.md
  */
 final class PaDesignColorsAction

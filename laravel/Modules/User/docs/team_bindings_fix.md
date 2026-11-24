@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_ZabNNu
 ---
 title: "Fix Binding Team Models nel Modulo User"
 type: note
 qmd: "team bindings fix binding models user"
 ---
+=======
+>>>>>>> .merge_file_LYeUV6
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica

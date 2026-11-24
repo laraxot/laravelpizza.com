@@ -7,7 +7,10 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_9cshFh
+<<<<<<< HEAD
+updated: 2026-11-23
+=======
+<<<<<<< .merge_file_kSogrk
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +18,8 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_YlqtTZ
+>>>>>>> .merge_file_ISnTGc
+>>>>>>> laraxot/dev
 ---
 
 # OpenViking Integration Guide

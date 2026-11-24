@@ -3,7 +3,7 @@ title: "modularity hardcoded names"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0U85Dx
+<<<<<<< .merge_file_QXXR3t
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_PtuwQ5
+>>>>>>> .merge_file_ihG3Rt
 qmd: "modularity hardcoded names"
 issues: []
 discussions: []

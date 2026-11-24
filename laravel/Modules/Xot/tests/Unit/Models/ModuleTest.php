@@ -17,6 +17,10 @@ use Modules\Xot\Database\Factories\ModuleFactory;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_YwMzHF
+=======
+use Modules\Xot\Tests\TestCase;
+>>>>>>> .merge_file_3kl4i6
 
 class ModuleTest extends TestCase
 {

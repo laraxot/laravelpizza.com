@@ -4,7 +4,10 @@ module: User
 type: quality-gate
 status: complete
 created: 2026-08-02
+<<<<<<< .merge_file_zuAstp
 qmd: "phpstan l10 level compliance user"
+=======
+>>>>>>> .merge_file_5r8hpc
 ---
 
 # PHPStan Level 10 Compliance — User Module

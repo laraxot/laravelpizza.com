@@ -11,7 +11,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/guess-pivot-full-class-action.md
+<<<<<<< .merge_file_sZa2SV
  *
+=======
+>>>>>>> .merge_file_2Zobow
  * @contract docs/contracts/guess-pivot-full-class-action.md
  */
 class GuessPivotFullClassAction

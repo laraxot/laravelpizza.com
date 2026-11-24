@@ -7,7 +7,10 @@ tags: [commands, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+<<<<<<< .merge_file_hB9NpM
 qmd: "commands"
+=======
+>>>>>>> .merge_file_BCpBpW
 ---
 
 # Commands Index

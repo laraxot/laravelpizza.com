@@ -10,9 +10,13 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Class ThemeAction
  * Gestisce il tema dell'applicazione.
+<<<<<<< .merge_file_bnz80M
  *
  * @see docs/contracts/theme-action.md
  *
+=======
+ * @see docs/contracts/theme-action.md
+>>>>>>> .merge_file_Y63f2t
  * @contract docs/contracts/theme-action.md
  */
 class ThemeAction

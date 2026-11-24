@@ -1,7 +1,10 @@
 ---
 title: XotBasePage, form() e vista generica
 updated: 2026-11-18
+<<<<<<< .merge_file_UG9Zny
 qmd: "xotbasepage form and generic view vista"
+=======
+>>>>>>> .merge_file_07tAOI
 ---
 
 # XotBasePage: `form()` e vista generica

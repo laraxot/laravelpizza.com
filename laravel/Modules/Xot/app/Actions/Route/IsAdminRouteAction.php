@@ -8,7 +8,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/is-admin-route-action.md
+<<<<<<< .merge_file_Wp2LOa
  *
+=======
+>>>>>>> .merge_file_Qc4qS8
  * @contract docs/contracts/is-admin-route-action.md
  */
 class IsAdminRouteAction

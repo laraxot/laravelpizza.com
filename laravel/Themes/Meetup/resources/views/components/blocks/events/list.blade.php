@@ -149,11 +149,19 @@
                                 <x-filament::icon icon="meetup-icon-calendar" class="w-16 h-16 text-slate-500 dark:text-gray-400" />
                             </template>
                         </div>
+<<<<<<< .merge_file_U5iEIz
                         <template x-if="event.timing_status === 'upcoming'">
                             <span class="absolute top-4 right-4 bg-green-700 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.upcoming.label') }}</span>
                         </template>
                         <template x-if="event.timing_status !== 'upcoming'">
                             <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::event.status.past.label') }}</span>
+=======
+                        <template x-if="event.status === 'upcoming'">
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::common.badges.upcoming.label') }}</span>
+                        </template>
+                        <template x-if="event.status !== 'upcoming'">
+                            <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::common.badges.past.label') }}</span>
+>>>>>>> .merge_file_1pWqMj
                         </template>
                     </div>
                     <div class="p-6">
@@ -187,6 +195,7 @@
         </div>
 
         <div x-show="filteredEvents.length === 0" x-cloak class="text-center py-12">
+<<<<<<< .merge_file_U5iEIz
             <x-filament::icon icon="meetup-icon-calendar" class="mx-auto h-12 w-12 text-gray-400" />
             @if($hasActiveFilters)
                 <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('pub_theme::events.search.no_results') }}</h3>
@@ -195,6 +204,13 @@
                 <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('pub_theme::event.messages.no_events_found.label') }}</h3>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ __('pub_theme::event.messages.check_back_later.label') }}</p>
             @endif
+=======
+            <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('pub_theme::event.messages.no_events_found.label') }}</h3>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ __('pub_theme::event.messages.check_back_later.label') }}</p>
+>>>>>>> .merge_file_1pWqMj
         </div>
     </div>
 </section>

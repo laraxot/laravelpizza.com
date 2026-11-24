@@ -3,7 +3,7 @@ title: "Gestione asset Vite per il tema Sixteen"
 type: concept
 tags: [themes, sixteen]
 created: 2026-07-14
-<<<<<<< .merge_file_6mXCQr
+<<<<<<< .merge_file_MAbLQh
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_hyLnSu
+>>>>>>> .merge_file_RhtdDZ
 qmd: "themes-sixteen gestione asset vite per il tema sixteen"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

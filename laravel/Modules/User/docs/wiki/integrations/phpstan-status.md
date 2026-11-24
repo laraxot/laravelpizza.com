@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_B1pIF0
 qmd: "phpstan status user"
+=======
+>>>>>>> .merge_file_Qashve
 ---
 
 # PHPStan Status — User Module

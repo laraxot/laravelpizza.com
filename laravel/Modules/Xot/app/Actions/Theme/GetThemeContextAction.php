@@ -17,7 +17,10 @@ use Spatie\QueueableAction\QueueableAction;
  * behavior/visuals accordingly.
  *
  * @see docs/contracts/get-theme-context-action.md
+<<<<<<< .merge_file_HFyEQ9
  *
+=======
+>>>>>>> .merge_file_amtV99
  * @contract docs/contracts/get-theme-context-action.md
  */
 class GetThemeContextAction

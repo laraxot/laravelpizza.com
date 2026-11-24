@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_SvbV8s
 ---
 title: "PHPStan widget property types"
 type: guide
 qmd: "phpstan widget property types 06"
 ---
+=======
+>>>>>>> .merge_file_jyR3eb
 # PHPStan widget property types
 
 ## Contesto

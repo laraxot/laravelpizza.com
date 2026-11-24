@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_ghK5Gt
 ---
 title: "User Module - Spring Planning Meeting"
 type: note
 qmd: "user spring planning meeting"
 ---
+=======
+>>>>>>> .merge_file_pQ933e
 # User Module - Spring Planning Meeting
 
 ## Meeting Overview

@@ -5,7 +5,10 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_JOVY1S
 qmd: "phpinsights errors divergenza riconciliare phpinsightserrorsmd"
+=======
+>>>>>>> .merge_file_LrvLAC
 ---
 
 # Divergenza: `phpinsights-errors.md`

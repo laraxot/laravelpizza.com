@@ -1,7 +1,10 @@
 ---
 title: story-user-audit-improvements
 module: User
+<<<<<<< .merge_file_oKIxU7
 qmd: "story user audit improvements storyuserauditimprovements"
+=======
+>>>>>>> .merge_file_bLXfbn
 ---
 
 # BMAD Story: User Module Audit Improvements

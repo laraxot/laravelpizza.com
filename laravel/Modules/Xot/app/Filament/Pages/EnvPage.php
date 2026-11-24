@@ -7,6 +7,14 @@ namespace Modules\Xot\Filament\Pages;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 use Modules\Xot\Filament\Widgets\EnvWidget;
+<<<<<<< .merge_file_5QckQ9
+=======
+
+/**
+ * Impostazioni dell'ambiente (.env) per il super-admin: la pagina mostra EnvWidget.
+ * Prima usava la vista della dashboard, che chiama getColumns()/getVisibleWidgets() dei Dashboard: errore 500.
+ */
+>>>>>>> .merge_file_wKGLk6
 
 /**
  * Impostazioni dell'ambiente (.env) per il super-admin: la pagina mostra EnvWidget.
@@ -34,4 +42,8 @@ class EnvPage extends XotBasePage
     {
         return 1;
     }
+<<<<<<< .merge_file_5QckQ9
+=======
+    protected string $view = 'xot::filament.pages.dashboard';
+>>>>>>> .merge_file_wKGLk6
 }

@@ -13,9 +13,13 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Elementi di navigazione cross-panel per i moduli Filament.
+<<<<<<< .merge_file_l2RLqZ
  *
  * @see docs/contracts/get-panels-navigation-items.md
  *
+=======
+ * @see docs/contracts/get-panels-navigation-items.md
+>>>>>>> .merge_file_hiScHy
  * @contract docs/contracts/get-panels-navigation-items.md
  */
 class GetPanelsNavigationItems

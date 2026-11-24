@@ -1,0 +1,63 @@
+---
+title: "Raw Sources — Notify"
+type: index
+tags: [notify, docs, raw]
+module: Notify
+created: 2026-07-20
+<<<<<<< .merge_file_3cmtA4
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Qw8kQ1
+qmd: "notify documentazione raw index raw sources — notify index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../README.md
+  - ../wiki/index.md
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
+---
+# Raw Sources — Notify
+
+Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.
+
+## Cosa appartiene al layer raw
+
+Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `docs/wiki/`):
+
+| Cartella / file | Tipo |
+|----------------|------|
+| `docs/*.md` | Documentazione operativa, regole, guide |
+| `docs/stories/` | User stories e specifiche |
+| `docs/archive/` | Documenti superati ma consultabili |
+| `docs/raw/` | Dump HTML, JSON, asset di analisi (questa cartella) |
+| `docs/prompts/` | Prompt e istruzioni agentiche |
+
+## Regola
+
+> **I file raw non vengono riscritti.**
+> Se serve una sintesi, va in `docs/wiki/`, non nella fonte.
+
+## Dove va la sintesi
+
+→ `docs/wiki/index.md` — catalogo dei nodi di conoscenza
+→ `docs/wiki/log.md` — log append-only degli ingest
+→ `docs/wiki/concepts/`, `entities/`, `summaries/` — pagine wiki tematiche
+
+## Schema di riferimento
+
+→ `docs/.schema/wiki_schema.md` (root progetto)
+→ `docs/.schema/wiki-schema.md` (root progetto)
+→ `docs/project/llm-wiki-module-adoption.md` (guida per moduli/temi)
+
+---
+
+*Ultimo aggiornamento: 2026-04-15*

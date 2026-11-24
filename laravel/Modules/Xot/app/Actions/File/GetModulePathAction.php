@@ -13,7 +13,10 @@ use function Safe\scandir;
 
 /**
  * @see docs/contracts/get-module-path-action.md
+<<<<<<< .merge_file_awc90T
  *
+=======
+>>>>>>> .merge_file_6NyePC
  * @contract docs/contracts/get-module-path-action.md
  */
 class GetModulePathAction

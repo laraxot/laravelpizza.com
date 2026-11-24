@@ -15,7 +15,10 @@ use function Safe\json_decode;
 
 /**
  * @see docs/contracts/generate-ollama-action.md
+<<<<<<< .merge_file_uXtfQj
  *
+=======
+>>>>>>> .merge_file_thTN6q
  * @contract docs/contracts/generate-ollama-action.md
  */
 class GenerateOllamaAction

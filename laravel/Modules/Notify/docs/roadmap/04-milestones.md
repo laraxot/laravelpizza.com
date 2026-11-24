@@ -3,7 +3,7 @@ title: "04 milestones"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_BCw1Dh
+<<<<<<< .merge_file_iGRuqa
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_b4upa3
+>>>>>>> .merge_file_WxEF1S
 qmd: "04 milestones"
 issues: []
 discussions: []

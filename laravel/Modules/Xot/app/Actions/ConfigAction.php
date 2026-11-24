@@ -6,9 +6,13 @@ namespace Modules\Xot\Actions;
 
 /**
  * Class ConfigAction.
+<<<<<<< .merge_file_HFKVae
  *
  * @see docs/contracts/config-action.md
  *
+=======
+ * @see docs/contracts/config-action.md
+>>>>>>> .merge_file_9rOkKy
  * @contract docs/contracts/config-action.md
  */
 class ConfigAction

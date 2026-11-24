@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_5Dullc
 ---
 title: "Errori Comuni in Volt e Soluzioni"
 type: note
 qmd: "volt errors errori comuni soluzioni"
 ---
+=======
+>>>>>>> .merge_file_ctzHhb
 # Errori Comuni in Volt e Soluzioni
 
 ## VoltDirectiveMissingException

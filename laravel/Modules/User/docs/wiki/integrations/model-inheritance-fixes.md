@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_SFWegA
 qmd: "model inheritance fixes correzioni ereditarietà modelli"
+=======
+>>>>>>> .merge_file_1sdSeA
 ---
 
 # Correzioni Ereditarietà Modelli - Modulo User
@@ -197,8 +200,23 @@ cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
 
 ## Collegamenti
 
+<<<<<<< .merge_file_SFWegA
 - [Analisi Completa](./model-inheritance-analysis.md)
 - [Regole Qualità Codice](../../code-quality.md)
+=======
+<<<<<<< HEAD
+- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Analisi Completa](./model-inheritance-analysis.md)
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_1sdSeA
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

@@ -1,0 +1,62 @@
+---
+title: "testing commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< .merge_file_vgrcvv
+<<<<<<< .merge_file_lbvI3T
+updated: 2026-11-23
+=======
+=======
+>>>>>>> .merge_file_uaCJar
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_vgrcvv
+>>>>>>> .merge_file_APSDWo
+=======
+>>>>>>> .merge_file_uaCJar
+qmd: "testing commands"
+issues: []
+discussions: []
+---
+
+# Testing commands
+
+## Run all tests
+
+```bash
+cd laravel && php artisan test
+```
+
+## Run a specific test file
+
+```bash
+cd laravel && php artisan test tests/Feature/ExampleTest.php
+```
+
+## Run by filter/name
+
+```bash
+cd laravel && php artisan test --filter=testName
+```
+
+## Run tests for a specific module
+
+```bash
+cd laravel && php artisan test Modules/User/tests
+```
+
+## Create a new test (Pest)
+
+```bash
+cd laravel && php artisan make:test --pest FeatureTestName
+```
+
+## PHPUnit directly
+
+```bash
+cd laravel && vendor/bin/phpunit
+```

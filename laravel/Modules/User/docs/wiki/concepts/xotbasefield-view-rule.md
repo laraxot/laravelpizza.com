@@ -11,7 +11,10 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_GyAb93
 qmd: "xotbasefield view rule calculation"
+=======
+>>>>>>> .merge_file_eGKS2Q
 ---
 
 # XotBaseField View Calculation Rule

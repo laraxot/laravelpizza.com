@@ -3,7 +3,7 @@ title: "notebooklm installation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2LMNwP
+<<<<<<< .merge_file_XNgpAT
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_5Wksj1
+>>>>>>> .merge_file_qrjJxg
 qmd: "notebooklm installation summary"
 issues: []
 discussions: []
@@ -242,7 +242,7 @@ Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
-<<<<<<< .merge_file_2LMNwP
+<<<<<<< .merge_file_XNgpAT
 <<<<<<< HEAD
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
 =======
@@ -253,7 +253,7 @@ Create these NotebookLM notebooks:
 >>>>>>> laraxot/dev
 =======
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
->>>>>>> .merge_file_5Wksj1
+>>>>>>> .merge_file_qrjJxg
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 

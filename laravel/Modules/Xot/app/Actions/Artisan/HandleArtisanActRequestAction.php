@@ -16,9 +16,13 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Gli act ammessi sono {@see ArtisanActEnum}: un act sconosciuto restituisce stringa vuota.
  * Ogni ramo compone una Action dedicata invece di duplicarne la logica.
+<<<<<<< .merge_file_IhM3Ua
  *
  * @see docs/contracts/handle-artisan-act-request-action.md
  *
+=======
+ * @see docs/contracts/handle-artisan-act-request-action.md
+>>>>>>> .merge_file_GwD9Ib
  * @contract docs/contracts/handle-artisan-act-request-action.md
  */
 class HandleArtisanActRequestAction

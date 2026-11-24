@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_uPkqHN
 qmd: "phpstan report initial"
+=======
+>>>>>>> .merge_file_0bQohb
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan_report.txt

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_j63hnp
 ---
 title: "Aggiornamento relativo a DoctorResource.php"
 type: note
 qmd: "registration widget update aggiornamento relativo doctorresourcephp"
 ---
+=======
+>>>>>>> .merge_file_XZm3P5
 # Aggiornamento relativo a DoctorResource.php
 
 ## Nota del 2025-05-15

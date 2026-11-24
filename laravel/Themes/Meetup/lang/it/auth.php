@@ -32,13 +32,17 @@ return [
         ],
     ],
     'logout' => [
+<<<<<<< .merge_file_rNhvIE
         'in_progress' => 'Disconnessione in corso…',
+=======
+>>>>>>> .merge_file_LjkXr6
         'goodbye' => [
             'message' => 'Arrivederci',
         ],
     ],
     'password' => [
         'reset' => [
+<<<<<<< .merge_file_rNhvIE
             'title' => 'Scegli una nuova password',
             'label' => 'Reimposta la password',
             'subtitle' => 'Almeno 8 caratteri. Dopo il salvataggio entri subito nel sito.',
@@ -46,6 +50,10 @@ return [
             'password' => 'Nuova password',
             'password_confirmation' => 'Ripeti la nuova password',
             'submit' => 'Salva la password',
+=======
+            'title' => 'Reimposta la password',
+            'label' => 'Reimposta la password',
+>>>>>>> .merge_file_LjkXr6
         ],
         'email' => [
             'label' => 'Indirizzo email',
@@ -54,7 +62,11 @@ return [
             'label' => 'Conferma password',
         ],
         'confirm' => [
+<<<<<<< .merge_file_rNhvIE
             'title' => 'Conferma la password',
+=======
+            'title' => 'Conferma la tua password',
+>>>>>>> .merge_file_LjkXr6
             'message' => 'Conferma la tua password prima di continuare',
             'label' => 'Conferma password',
             'subtitle' => 'È una zona protetta: per continuare scrivi di nuovo la tua password.',
@@ -74,6 +86,7 @@ return [
         'back_to_login' => [
             'label' => 'torna al login',
         ],
+<<<<<<< .merge_file_rNhvIE
         'request' => [
             'title' => 'Password dimenticata?',
             'subtitle' => 'Scrivi l\'email del tuo account: ti mandiamo un link per sceglierne una nuova.',
@@ -81,6 +94,8 @@ return [
             'submit' => 'Inviami il link',
             'back_to_login' => 'Torna all\'accesso',
         ],
+=======
+>>>>>>> .merge_file_LjkXr6
     ],
     'sections' => [
         'verify' => [
@@ -94,7 +109,13 @@ return [
         'sign_out' => [
             'label' => 'esci',
         ],
+<<<<<<< .merge_file_rNhvIE
         'resent' => 'Ti abbiamo mandato un nuovo link di conferma.',
+=======
+        'resent' => [
+            'message' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+        ],
+>>>>>>> .merge_file_LjkXr6
         'instructions' => [
             'message' => 'Prima di procedere, controlla la tua email per trovare il link di verifica. Se non hai ricevuto l\'email,',
         ],

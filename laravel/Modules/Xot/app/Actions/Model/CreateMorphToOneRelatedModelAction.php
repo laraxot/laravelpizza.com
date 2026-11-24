@@ -11,7 +11,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/create-morph-to-one-related-model-action.md
+<<<<<<< .merge_file_Yg2Gm6
  *
+=======
+>>>>>>> .merge_file_Ifp2Es
  * @contract docs/contracts/create-morph-to-one-related-model-action.md
  */
 class CreateMorphToOneRelatedModelAction

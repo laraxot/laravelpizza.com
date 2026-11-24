@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_FGkSeQ
 qmd: "translation city field refactor 2"
+=======
+>>>>>>> .merge_file_PBbmhP
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor-.md

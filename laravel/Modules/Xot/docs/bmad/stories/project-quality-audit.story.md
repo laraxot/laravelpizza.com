@@ -9,7 +9,10 @@ updated: 2026-10-05
 tags: [quality, bmad, pest, swarm]
 related:
   - ./5.260-phpstan-modules-current-remediation.story.md
+<<<<<<< .merge_file_BTNzKu
 qmd: "project quality audit story qualità progetto"
+=======
+>>>>>>> .merge_file_cqSseQ
 ---
 
 # Qualità progetto: verifica e correzioni prioritarie

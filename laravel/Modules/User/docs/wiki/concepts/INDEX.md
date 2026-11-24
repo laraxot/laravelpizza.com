@@ -5,7 +5,11 @@ tags: [concepts, User]
 created: 2026-05-11
 updated: 2026-08-19
 
+<<<<<<< .merge_file_MXAf1e
 qmd: "concepts user"
+=======
+updated: 2026-07-27
+>>>>>>> .merge_file_o0l3Hr
 ---
 
 # concepts Index — User

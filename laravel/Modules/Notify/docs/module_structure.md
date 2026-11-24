@@ -7,7 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_lGXSb7
+<<<<<<< .merge_file_eWIIe5
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_sAz1JA
+>>>>>>> .merge_file_e286ip
 ---
 
 # Notify Module — Structure & Discipline

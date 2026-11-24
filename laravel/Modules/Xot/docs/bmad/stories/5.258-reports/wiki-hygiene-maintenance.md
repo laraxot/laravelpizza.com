@@ -9,7 +9,10 @@ tags: [bmad, second-brain, wiki, hygiene, qmd]
 sources:
   - "../../../../../../../bashscripts/tools/wiki-hygiene.py"
   - "../../../../../../../bashscripts/ai/wiki/how-to/agent-stack-trade-fila5-operating-model.md"
+<<<<<<< .merge_file_sjjmm2
 qmd: "wiki hygiene maintenance 5258 report bmad"
+=======
+>>>>>>> .merge_file_jn5gV9
 ---
 
 # Wiki hygiene — tranche 1

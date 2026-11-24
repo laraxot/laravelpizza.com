@@ -1,0 +1,268 @@
+---
+title: "interface naming convention"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+<<<<<<< .merge_file_EbnxX0
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_n3loag
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_EbnxX0
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_n3loag
+qmd: "interface naming convention"
+issues: []
+discussions: []
+status: draft
+---
+
+# Convenzione di Naming per le Interfacce
+
+## Regola Fondamentale
+
+, tutte le interfacce **DEVONO** utilizzare il suffisso `Contract` e **MAI** il suffisso `Interface`.
+
+## Esempi Corretti e Incorretti
+
+```php
+// ✅ CORRETTO
+interface SmsActionContract
+interface WhatsAppProviderActionContract
+interface TelegramProviderActionContract
+
+// ❌ ERRATO
+interface SmsActionInterface
+interface WhatsAppProviderActionInterface
+interface TelegramProviderActionInterface
+```
+
+## Motivazione
+
+1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
+2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli .
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli <nome progetto>.
+4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
+
+## Implementazione
+
+Per garantire la conformità a questa convenzione:
+
+1. Tutte le nuove interfacce devono essere create con il suffisso `Contract`.
+2. Le interfacce esistenti con il suffisso `Interface` devono essere rinominate.
+3. I riferimenti alle interfacce rinominate devono essere aggiornati in tutto il codice.
+
+## Verifica
+
+Per verificare la corretta implementazione:
+
+```bash
+
+# Cerca interfacce con naming errato
+grep -r "interface.*Interface" --include="*.php" Modules
+
+# Cerca interfacce con naming corretto
+grep -r "interface.*Contract" --include="*.php" Modules
+grep -r "interface.*Interface" --include="*.php" Modules
+
+# Cerca interfacce con naming corretto
+grep -r "interface.*Contract" --include="*.php" Modules
+grep -r "interface.*Interface" --include="*.php" Modules
+
+# Cerca interfacce con naming corretto
+grep -r "interface.*Contract" --include="*.php" Modules
+```
+
+## Riferimenti
+
+- [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+<<<<<<< HEAD
+<<<<<<< .merge_file_EbnxX0
+- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_n3loag
+=======
+<<<<<<< .merge_file_PPgPBV
+- [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
+=======
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_EbnxX0
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_n3loag
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+<<<<<<< HEAD
+<<<<<<< .merge_file_EbnxX0
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_n3loag
+=======
+>>>>>>> .merge_file_RIdq5K
+>>>>>>> laraxot/dev
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+# Convenzione di Naming per le Interfacce
+
+## Regola Fondamentale
+
+, tutte le interfacce **DEVONO** utilizzare il suffisso `Contract` e **MAI** il suffisso `Interface`.
+
+## Esempi Corretti e Incorretti
+
+```php
+// ✅ CORRETTO
+interface SmsActionContract
+interface WhatsAppProviderActionContract
+interface TelegramProviderActionContract
+
+// ❌ ERRATO
+interface SmsActionInterface
+interface WhatsAppProviderActionInterface
+interface TelegramProviderActionInterface
+```
+
+## Motivazione
+
+1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
+2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli .
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli <nome progetto>.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli <nome progetto>.
+4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
+
+## Implementazione
+
+Per garantire la conformità a questa convenzione:
+
+1. Tutte le nuove interfacce devono essere create con il suffisso `Contract`.
+2. Le interfacce esistenti con il suffisso `Interface` devono essere rinominate.
+3. I riferimenti alle interfacce rinominate devono essere aggiornati in tutto il codice.
+
+## Verifica
+
+Per verificare la corretta implementazione:
+
+```bash
+
+# Cerca interfacce con naming errato
+grep -r "interface.*Interface" --include="*.php" Modules
+
+# Cerca interfacce con naming corretto
+grep -r "interface.*Contract" --include="*.php" Modules
+grep -r "interface.*Interface" --include="*.php" Modules
+
+grep -r "interface.*Contract" --include="*.php" Modules
+grep -r "interface.*Interface" --include="*.php" Modules
+
+grep -r "interface.*Contract" --include="*.php" Modules
+
+```
+
+## Riferimenti
+
+- [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+<<<<<<< .merge_file_EbnxX0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_n3loag
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+<<<<<<< HEAD
+<<<<<<< .merge_file_EbnxX0
+- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_n3loag
+=======
+<<<<<<< .merge_file_PPgPBV
+- [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
+=======
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_EbnxX0
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_n3loag
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+- [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
+- [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
+<<<<<<< HEAD
+<<<<<<< .merge_file_EbnxX0
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_RIdq5K
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_RIdq5K
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_n3loag

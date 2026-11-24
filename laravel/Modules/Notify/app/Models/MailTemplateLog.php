@@ -47,18 +47,7 @@ class MailTemplateLog extends BaseModel
 {
     use MailTemplateLogRelations;
 
-<<<<<<< .merge_file_ps5hnx
-<<<<<<< .merge_file_ugtl5C
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
-=======
-
->>>>>>> .merge_file_PhlrGj
-=======
-
->>>>>>> .merge_file_JbE5xE
     protected $fillable = [
         'template_id',
         'mailable_type',

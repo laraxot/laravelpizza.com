@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_QooD0N
 qmd: "fullcalendar scheduler"
+=======
+>>>>>>> .merge_file_jk4Ivo
 ---
 
 # FullCalendar Scheduler Documentation - README

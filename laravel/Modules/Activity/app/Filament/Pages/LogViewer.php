@@ -7,13 +7,11 @@ namespace Modules\Activity\Filament\Pages;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
-use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
 use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Datas\LogFileData;
-use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Activity\Datas\LogViewerStateData;
 use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -33,23 +31,11 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  * Download: Action Filament + {@see DownloadLogFileAction} (BinaryFileResponse).
  * Nei progetti FO con Cms resta anche la pagina Folio `pages/api/log-download` (FolioVolt);
  * in PTVX Cms e' assente: non si monta Folio da Activity ne' da App FolioServiceProvider.
+ *
+ * @see Modules/Activity/docs/log-viewer.md
  */
 class LogViewer extends XotBasePage
 {
-<<<<<<< .merge_file_Zhi2rk
-<<<<<<< .merge_file_tuTvoj
-<<<<<<< .merge_file_g796dn
-<<<<<<< .merge_file_vRLAFq
-=======
-=======
->>>>>>> .merge_file_sbbD1t
-=======
->>>>>>> .merge_file_m1PPYn
-
->>>>>>> .merge_file_CxVmHC
-=======
-
->>>>>>> .merge_file_YmyDe0
     protected string $view = 'activity::filament.pages.log-viewer';
 
     /** Percorso relativo a storage/logs del file scelto. */

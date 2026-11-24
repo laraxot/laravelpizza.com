@@ -1,5 +1,4 @@
 ---
-<<<<<<< .merge_file_gAspFe
 <<<<<<< .merge_file_O1kALF
 <<<<<<< .merge_file_5lJEV0
 <<<<<<< .merge_file_uO8q5w
@@ -8,8 +7,6 @@
 >>>>>>> .merge_file_nLcton
 =======
 >>>>>>> .merge_file_oncx87
-=======
->>>>>>> .merge_file_XgCnp6
 <<<<<<< HEAD
 title: "Screenshot Analysis"
 type: note
@@ -18,7 +15,6 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Screenshot Analysis"
 =======
-<<<<<<< .merge_file_gAspFe
 <<<<<<< .merge_file_O1kALF
 <<<<<<< .merge_file_5lJEV0
 >>>>>>> .merge_file_yRJ1pg
@@ -26,15 +22,12 @@ qmd: "Screenshot Analysis"
 >>>>>>> .merge_file_nLcton
 =======
 >>>>>>> .merge_file_oncx87
-=======
->>>>>>> .merge_file_XgCnp6
 title: "screenshot analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "screenshot analysis"
-<<<<<<< .merge_file_gAspFe
 <<<<<<< .merge_file_O1kALF
 <<<<<<< .merge_file_5lJEV0
 <<<<<<< .merge_file_uO8q5w
@@ -47,9 +40,6 @@ qmd: "screenshot analysis"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_oncx87
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_XgCnp6
 issues: []
 discussions: []
 ---
@@ -81,7 +71,6 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 
 ---
 
-<<<<<<< .merge_file_gAspFe
 <<<<<<< .merge_file_O1kALF
 <<<<<<< .merge_file_5lJEV0
 <<<<<<< .merge_file_uO8q5w
@@ -90,8 +79,6 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 >>>>>>> .merge_file_nLcton
 =======
 >>>>>>> .merge_file_oncx87
-=======
->>>>>>> .merge_file_XgCnp6
 <<<<<<< HEAD
 title: "SCREENSHOT ANALYSIS"
 =======
@@ -108,7 +95,6 @@ qmd: "screenshot analysis"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
-<<<<<<< .merge_file_gAspFe
 <<<<<<< .merge_file_O1kALF
 <<<<<<< .merge_file_5lJEV0
 >>>>>>> .merge_file_yRJ1pg
@@ -116,8 +102,6 @@ discussions: []
 >>>>>>> .merge_file_nLcton
 =======
 >>>>>>> .merge_file_oncx87
-=======
->>>>>>> .merge_file_XgCnp6
 ### 2. Hero Section
 ```
 Screenshot: hero_bootstrap_italia.png

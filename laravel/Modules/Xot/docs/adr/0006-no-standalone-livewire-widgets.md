@@ -6,7 +6,10 @@ module: Xot
 created: 2026-11-23
 updated: 2026-11-24
 superseded_by: 0008-filament-widgets-over-standalone-livewire.md
+<<<<<<< .merge_file_mODeHB
 qmd: "0006 no standalone livewire widgets nessun"
+=======
+>>>>>>> .merge_file_SAK3qW
 ---
 
 > Superseded da [0008-filament-widgets-over-standalone-livewire.md](0008-filament-widgets-over-standalone-livewire.md): stessa decisione (nessun Livewire standalone, usare Filament Widget), consolidata nel canonico 0008. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

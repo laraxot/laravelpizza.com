@@ -11,11 +11,20 @@ use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+<<<<<<< .merge_file_BAuQfd
 /**
  * Replaces Modules\Xot\Services\ArtisanService::errorShow().
  *
  * @see docs/contracts/show-artisan-error-log-action.md
  *
+=======
+
+use function Safe\preg_match_all;
+
+/**
+ * Replaces Modules\Xot\Services\ArtisanService::errorShow().
+ * @see docs/contracts/show-artisan-error-log-action.md
+>>>>>>> .merge_file_FmLfO1
  * @contract docs/contracts/show-artisan-error-log-action.md
  */
 class ShowArtisanErrorLogAction

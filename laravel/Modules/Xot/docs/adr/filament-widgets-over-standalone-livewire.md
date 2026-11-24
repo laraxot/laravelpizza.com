@@ -5,7 +5,10 @@ status: accepted
 module: Xot
 created: 2026-11-23
 updated: 2026-11-24
+<<<<<<< .merge_file_JajZf6
 qmd: "filament widgets over standalone livewire nessun"
+=======
+>>>>>>> .merge_file_58XobV
 ---
 
 # Nessun Livewire standalone: usare Filament Widget

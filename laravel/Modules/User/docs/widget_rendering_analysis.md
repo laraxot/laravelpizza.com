@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_T4WaGT
 ---
 title: "🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style"
 type: analysis
 qmd: "widget rendering analysis analisi loginwidget docsitaliait"
 ---
+=======
+>>>>>>> .merge_file_7eXwND
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
 
 ## 📋 Problema Analizzato

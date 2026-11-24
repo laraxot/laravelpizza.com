@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_1Lo38l
 qmd: "fullcalendar consolidated"
+=======
+>>>>>>> .merge_file_q1KUz4
 ---
 
 # fullcalendar — Consolidated Documentation

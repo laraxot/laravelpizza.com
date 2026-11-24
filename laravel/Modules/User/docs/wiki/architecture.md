@@ -2,7 +2,10 @@
 module: User
 concept: Architecture
 last_updated: 2026-04-15
+<<<<<<< .merge_file_R9hMvH
 qmd: "architecture user"
+=======
+>>>>>>> .merge_file_jIbBIx
 ---
 
 # User Module Architecture

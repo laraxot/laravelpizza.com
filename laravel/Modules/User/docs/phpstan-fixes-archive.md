@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_dThPpT
 ---
 title: "Correzioni PHPStan - Modulo User"
 type: note
 qmd: "phpstan fixes archive correzioni user"
 ---
+=======
+>>>>>>> .merge_file_NbTyG3
 # Correzioni PHPStan - Modulo User
 
 Questo documento traccia gli errori PHPStan identificati nel modulo User e le relative soluzioni implementate.

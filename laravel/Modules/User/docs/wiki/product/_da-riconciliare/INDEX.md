@@ -5,7 +5,10 @@ type: product
 tags: [product, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_aZJSlj
 qmd: "user product"
+=======
+>>>>>>> .merge_file_sQy1Mc
 ---
 
 # user — product

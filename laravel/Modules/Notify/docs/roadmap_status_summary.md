@@ -3,7 +3,7 @@ title: "ROADMAP STATUS SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_a4SqvZ
+<<<<<<< .merge_file_CG5UrP
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_71fTGe
+>>>>>>> .merge_file_csKosD
 qmd: "ROADMAP STATUS SUMMARY"
 issues: []
 discussions: []

@@ -49,11 +49,19 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 ## Acceptance criteria
 
 - [x] `cd laravel && ./vendor/bin/phpstan analyse Modules` → exit 0, banner `[OK] No errors`, JSON `errors=0` / `file_errors=0` nello stesso run freddo quando possibile
+<<<<<<< .merge_file_cCmvUm
 - [x] Fix **source-first**: capire caller, contratto XotBase/Action/trait, responsabilità di modulo; patch minima alla radice
 - [x] `mixed` / cast / `@phpstan-ignore` / baseline / edit `phpstan.neon` = **last resort** (solo se documentato in story + memoria)
 - [x] Parallelismo: swarm/subagent su file disgiunti + `bashscripts/lock/`; **flock max-3** processi PHPStan concorrenti (no thrashing host)
 - [x] **Pest gate**: test mirati eseguiti e verdi sullo scope toccato, oppure skip documentato (host `10.100.200.15` / DB testing irraggiungibile)
 - [x] Docs solo boy scout nei moduli/temi toccati; niente mass-delete di `.md`
+=======
+- [ ] Fix **source-first**: capire caller, contratto XotBase/Action/trait, responsabilità di modulo; patch minima alla radice
+- [ ] `mixed` / cast / `@phpstan-ignore` / baseline / edit `phpstan.neon` = **last resort** (solo se documentato in story + memoria)
+- [ ] Parallelismo: swarm/subagent su file disgiunti + `bashscripts/lock/`; **flock max-3** processi PHPStan concorrenti (no thrashing host)
+- [ ] **Pest gate**: test mirati eseguiti e verdi sullo scope toccato, oppure skip documentato (host `10.100.200.15` / DB testing irraggiungibile)
+- [ ] Docs solo boy scout nei moduli/temi toccati; niente mass-delete di `.md`
+>>>>>>> .merge_file_OJ3hMY
 
 ## Strategia operativa
 
@@ -75,6 +83,7 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 
 ## Diario
 
+<<<<<<< .merge_file_cCmvUm
 - 2026-11-24b (Composer / orchestratore): gate freddo **VITTORIA** sotto
   `flock /tmp/ptvx-phpstan-modules.flock` → JSON
   `totals.errors=0` / `file_errors=0` EXIT 0
@@ -128,6 +137,8 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   del file `UserForm`; dopo la correzione `php -l` passa, ma non è ancora
   disponibile un risultato freddo definitivo `errors=0/file_errors=0`.
 
+=======
+>>>>>>> .merge_file_OJ3hMY
 - 2026-11-17: aperta campagna Quick Flow standing order; chiave sprint
   `Xot/phpstan-modules-zero-swarm` → `in_progress`. Artefatti BMAD allineati
   (docs-guardian). Nessuna mass-delete docs.
@@ -152,6 +163,14 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 
 ## Dev Agent Record
 
+<<<<<<< .merge_file_cCmvUm
+=======
+<<<<<<< .merge_file_FQygdu
+<<<<<<< .merge_file_yRh4PH
+=======
+=======
+>>>>>>> .merge_file_21TRsz
+>>>>>>> .merge_file_OJ3hMY
 - Status: `review` — cold gate Modules **`[OK] No errors` EXIT 0** (2026-11-17)
 - AC full-tree: spuntato osservato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**
 - Lock session `phpstan-modules-swarm-session` + lane Activity/Ptv unlock
@@ -159,12 +178,27 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   Pest HostApp richiede DB testing raggiungibile; ridurre thrash multi-agente (max-3)
 - Prossimo: boy-scout ridondanza story phpstan datate in Xot/docs/bmad/stories;
   prompts bashscripts/docs/prompts (subagent); qmd update memoria thrash/cache
+<<<<<<< .merge_file_cCmvUm
+=======
+<<<<<<< .merge_file_FQygdu
+>>>>>>> .merge_file_vpfoQ8
+=======
+>>>>>>> .merge_file_21TRsz
+>>>>>>> .merge_file_OJ3hMY
 - Status: `done` — allineato a sprint `Xot/phpstan-modules-zero-swarm` (gate finale
   peer sotto flock: JSON `errors=0`/`file_errors=0` + banner `[OK] No errors`)
 - AC full-tree: spuntato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**;
   FeatureFlagsTest 15 passed; AppMiddlewareTest skip DB documentato
 - Debito fuori gate PHPStan: attivare riga `criteri_esclusione.progressione_verticale`
   in campagna 2026 (owner HR); ridurre thrash multi-agente (max-3)
+<<<<<<< .merge_file_cCmvUm
+=======
+<<<<<<< .merge_file_FQygdu
+<<<<<<< .merge_file_yRh4PH
+=======
+=======
+>>>>>>> .merge_file_21TRsz
+>>>>>>> .merge_file_OJ3hMY
 - Wave corrente (2026-11-21): marker di conflitto Git annidati in PHP/test e Blade
   risolti semanticamente; il gate `./vendor/bin/phpstan analyse Modules --error-format=raw --no-progress`
   ha restituito exit 0. Pest mirato sui file modificati resta da eseguire.
@@ -203,3 +237,10 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   (`setCellValue` con coordinate array); ignore `method.deprecatedClass`
   rimosso da `ImportValutatoriAction`. Commit: padre `c3109b9028`,
   modulo Xot `4c27f652d` (push laraxot/dev entrambi).
+<<<<<<< .merge_file_cCmvUm
+=======
+<<<<<<< .merge_file_FQygdu
+>>>>>>> .merge_file_vpfoQ8
+=======
+>>>>>>> .merge_file_21TRsz
+>>>>>>> .merge_file_OJ3hMY

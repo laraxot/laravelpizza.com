@@ -4,7 +4,10 @@ type: standard
 owner: Xot
 status: accepted
 updated: 2026-11-23
+<<<<<<< .merge_file_zNmgjf
 qmd: "contract authoring standard contratti"
+=======
+>>>>>>> .merge_file_S7DaLE
 ---
 
 # Standard di authoring dei contratti

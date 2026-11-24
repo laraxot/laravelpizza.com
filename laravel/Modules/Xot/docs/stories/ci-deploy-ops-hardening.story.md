@@ -11,7 +11,10 @@ related:
   - ../../../Fixcity/docs/stories/production-hardening-p0.story.md
   - ../ops/production-runbook.md
   - ../ci/ci-pipeline.md
+<<<<<<< .merge_file_RPg1RZ
 qmd: "ci deploy ops hardening story operazioni"
+=======
+>>>>>>> .merge_file_t6kZEy
 ---
 
 # CI, deploy e operazioni pronte per la produzione

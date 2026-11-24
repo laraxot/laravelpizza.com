@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_gJ51w6
 ---
 title: "Passport Administrative Actions in UI"
 type: note
 qmd: "passport admin actions administrative"
 ---
+=======
+>>>>>>> .merge_file_EKiB5L
 # Passport Administrative Actions in UI
 
 This document describes the administrative actions for Laravel Passport available directly within the Filament admin panel, reducing the need for terminal access.

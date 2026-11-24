@@ -15,7 +15,10 @@ related:
   - "./docs-merge-conflict-markers-cleanup.story.md"
   - "./user-nested-conflict-marker-cleanup.story.md"
   - "./phpstan-zero-errors-user.story.md"
+<<<<<<< .merge_file_XKoBuw
 qmd: "phpstan merge bootstrap story user mergemarker"
+=======
+>>>>>>> .merge_file_FbRwkK
 ---
 
 # User: PHP merge-marker bootstrap

@@ -76,12 +76,9 @@ phpmd*
 phpmd.ruleset.xml
 phpmd.ruleset.xml.bak
 phpstan*
-<<<<<<< HEAD
-=======
 # BMAD stories/docs named phpstan-* must remain trackable
 !docs/**/phpstan*.md
 !docs/**/phpstan*.story.md
->>>>>>> laraxot/dev
 .phpstorm.meta.php
 .phpunit.result.cache
 phpunit.xml
@@ -126,50 +123,16 @@ docs/graphify
 resources/lang
 .github/issue_content/
 
-<<<<<<< .merge_file_CKCHaW
-<<<<<<< .merge_file_FifGI9
-<<<<<<< HEAD
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-!docs/**/phpstan*.md
-!docs/**/phpstan*.story.md
-=======
 # Tooling/configurazione locale (module-theme-root-hygiene)
->>>>>>> laraxot/dev
-=======
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-!docs/**/phpstan*.md
-!docs/**/phpstan*.story.md
->>>>>>> .merge_file_ICtv50
-=======
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-!docs/**/phpstan*.md
-!docs/**/phpstan*.story.md
->>>>>>> .merge_file_KA0TRr
 .agents/
 .codex/
 .opencode/
 .qwen/
 .php-cs-fixer.php
-<<<<<<< .merge_file_CKCHaW
-<<<<<<< .merge_file_FifGI9
-<<<<<<< HEAD
-tests/coverage-*.*
-.github/ISSUE_CONTENT/
-tests/graphify-out/
-=======
 .php-cs-fixer.dist.php
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-.git.polluted*
-=======
->>>>>>> laraxot/dev
-=======
 tests/coverage-*.*
+docs/screenshots/
 .github/ISSUE_CONTENT/
+
+# graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
 tests/graphify-out/
->>>>>>> .merge_file_ICtv50
-=======
-tests/coverage-*.*
-.github/ISSUE_CONTENT/
-tests/graphify-out/
->>>>>>> .merge_file_KA0TRr

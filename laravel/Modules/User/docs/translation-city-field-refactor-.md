@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_UZxTmQ
 ---
 title: "Refactor Completo Campi \"Città\" - Modulo User"
 type: note
 qmd: "translation city field refactor completo campi"
 ---
+=======
+>>>>>>> .merge_file_mXonGB
 # Refactor Completo Campi "Città" - Modulo User
 
 ## Riepilogo Intervento

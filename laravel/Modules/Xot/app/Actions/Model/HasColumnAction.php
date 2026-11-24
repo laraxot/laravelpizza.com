@@ -13,7 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/has-column-action.md
+<<<<<<< .merge_file_PTkPhz
  *
+=======
+>>>>>>> .merge_file_NToxCH
  * @contract docs/contracts/has-column-action.md
  */
 class HasColumnAction

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_mTJzUF
 ---
 title: "PHPStan Level 10 + DRY/KISS Improvements - User Module"
 type: note
 qmd: "phpstan dry kiss improvements 17 level"
 ---
+=======
+>>>>>>> .merge_file_AzDULh
 # PHPStan Level 10 + DRY/KISS Improvements - User Module
 
 ## Summary

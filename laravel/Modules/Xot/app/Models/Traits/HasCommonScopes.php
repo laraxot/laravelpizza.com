@@ -29,11 +29,16 @@ use Illuminate\Support\Carbon;
  * ```
  *
  * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md - Proposta 4: Model Traits
+<<<<<<< .merge_file_qOvNKR
  * @see Modules/Meetup/docs/contracts/event-published-scope.md - mai su XotBaseModel (scopePublished)
  * @see Modules/Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md - consumer: NotificationTemplate|Module
  *
  * Trait di piattaforma riusabile: consumer nei modelli dominio.
  * Wire solo su NotificationTemplate e/o Module — mai su XotBaseModel.
+=======
+ *
+ * Trait di piattaforma riusabile: consumer nei modelli dominio.
+>>>>>>> .merge_file_qYjs0B
  */
 trait HasCommonScopes
 {

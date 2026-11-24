@@ -4,22 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Providers;
 
-<<<<<<< .merge_file_L2HspA
-<<<<<<< .merge_file_aHsUUq
-<<<<<<< .merge_file_ZUBNB4
-<<<<<<< .merge_file_2vSA2e
-=======
-use function Safe\json_encode;
->>>>>>> .merge_file_6RwPWS
-=======
-use function Safe\json_encode;
->>>>>>> .merge_file_aVReNO
-=======
-use function Safe\json_encode;
->>>>>>> .merge_file_tGmHWw
-=======
-use function Safe\json_encode;
->>>>>>> .merge_file_11frJ3
 use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;

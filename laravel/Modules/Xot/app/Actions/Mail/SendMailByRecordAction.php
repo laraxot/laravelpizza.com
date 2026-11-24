@@ -13,7 +13,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/send-mail-by-record-action.md
+<<<<<<< .merge_file_Wnx6go
  *
+=======
+>>>>>>> .merge_file_v6WVlv
  * @contract docs/contracts/send-mail-by-record-action.md
  */
 class SendMailByRecordAction

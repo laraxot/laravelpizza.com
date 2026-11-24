@@ -21,7 +21,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/generate-table-columns-by-file-action.md
+<<<<<<< .merge_file_KieB1x
  *
+=======
+>>>>>>> .merge_file_QoULIV
  * @contract docs/contracts/generate-table-columns-by-file-action.md
  */
 class GenerateTableColumnsByFileAction

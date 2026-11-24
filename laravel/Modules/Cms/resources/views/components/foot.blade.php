@@ -9,7 +9,6 @@
 
   @livewireScripts non serve: config('livewire.inject_assets') = true.
   Con :panel-assets="false" i punti 1 e 2 si saltano (siti pubblici senza componenti Filament).
-<<<<<<< .merge_file_7J5x4w
 <<<<<<< .merge_file_nLaNH9
 <<<<<<< .merge_file_6LLP8c
 <<<<<<< .merge_file_sXmCf7
@@ -20,15 +19,12 @@
 >>>>>>> .merge_file_qZe3wq
 =======
 >>>>>>> .merge_file_Iflp0x
-=======
->>>>>>> .merge_file_rRwyhd
 --}}
 @if ($panelAssets)
     @livewire('notifications')
 
     @filamentScripts
 @endif
-<<<<<<< .merge_file_7J5x4w
 <<<<<<< .merge_file_nLaNH9
 <<<<<<< .merge_file_6LLP8c
 <<<<<<< .merge_file_sXmCf7
@@ -37,14 +33,11 @@
 >>>>>>> .merge_file_qZe3wq
 =======
 >>>>>>> .merge_file_Iflp0x
-=======
->>>>>>> .merge_file_rRwyhd
   @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md
 --}}
 @livewire('notifications')
 
 @filamentScripts
-<<<<<<< .merge_file_7J5x4w
 <<<<<<< .merge_file_nLaNH9
 <<<<<<< .merge_file_6LLP8c
 >>>>>>> .merge_file_o0yr35
@@ -52,8 +45,6 @@
 >>>>>>> .merge_file_qZe3wq
 =======
 >>>>>>> .merge_file_Iflp0x
-=======
->>>>>>> .merge_file_rRwyhd
 @vite(['resources/js/app.js'], 'themes/'.$pubTheme)
 
 @stack('scripts')

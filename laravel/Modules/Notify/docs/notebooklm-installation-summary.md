@@ -3,7 +3,7 @@ title: "NotebookLM Skill - Installation & Integration Summary"
 type: concept
 tags: [notebooklm, installation, summary]
 created: 2026-07-14
-<<<<<<< .merge_file_Vid3wj
+<<<<<<< .merge_file_bEiaHo
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_2O3B4B
+>>>>>>> .merge_file_iyzPH6
 qmd: "notebooklm-installation-summary notebooklm skill - installation & integration summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,7 +20,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_Vid3wj
+<<<<<<< .merge_file_bEiaHo
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -30,7 +30,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_2O3B4B
+>>>>>>> .merge_file_iyzPH6
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev
@@ -263,7 +263,7 @@ Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
-<<<<<<< .merge_file_Vid3wj
+<<<<<<< .merge_file_bEiaHo
 <<<<<<< HEAD
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
 =======
@@ -274,7 +274,7 @@ Create these NotebookLM notebooks:
 >>>>>>> laraxot/dev
 =======
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
->>>>>>> .merge_file_2O3B4B
+>>>>>>> .merge_file_iyzPH6
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 

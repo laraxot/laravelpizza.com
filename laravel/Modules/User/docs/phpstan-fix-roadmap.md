@@ -11,7 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_BsIesz
 qmd: "phpstan fix roadmap"
+=======
+>>>>>>> .merge_file_HGCbyO
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-roadmap.md

@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_ZshFCE
 qmd: "terms and conditions"
+=======
+>>>>>>> .merge_file_ZlXES4
 ---
 
 https://github.com/nowendwell/laravel-terms

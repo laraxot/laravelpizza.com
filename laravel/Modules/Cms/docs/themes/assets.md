@@ -47,7 +47,6 @@ status: draft
 ## Best Practices
 
 1. **Sviluppo**
-<<<<<<< .merge_file_DlRvXB
 <<<<<<< .merge_file_nZThWI
 <<<<<<< .merge_file_QGtPr5
 <<<<<<< .merge_file_2PNj75
@@ -57,8 +56,6 @@ status: draft
 >>>>>>> .merge_file_Rcn0VW
 =======
 >>>>>>> .merge_file_wb4kfX
-=======
->>>>>>> .merge_file_szbs2d
 <<<<<<< HEAD
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - Utilizzare `npm run dev`
@@ -71,7 +68,6 @@ status: draft
    - Utilizzare `npm run dev` (il symlink `public_html/themes/<Tema>` rende visibile la build, niente copia)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_DlRvXB
 <<<<<<< .merge_file_nZThWI
 <<<<<<< .merge_file_QGtPr5
 >>>>>>> .merge_file_n9614R
@@ -79,13 +75,10 @@ status: draft
 >>>>>>> .merge_file_Rcn0VW
 =======
 >>>>>>> .merge_file_wb4kfX
-=======
->>>>>>> .merge_file_szbs2d
    - Verificare il corretto caricamento degli assets
    - Mantenere la documentazione aggiornata
 
 2. **Produzione**
-<<<<<<< .merge_file_DlRvXB
 <<<<<<< .merge_file_nZThWI
 <<<<<<< .merge_file_QGtPr5
 <<<<<<< .merge_file_2PNj75
@@ -95,8 +88,6 @@ status: draft
 >>>>>>> .merge_file_Rcn0VW
 =======
 >>>>>>> .merge_file_wb4kfX
-=======
->>>>>>> .merge_file_szbs2d
 <<<<<<< HEAD
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
    - Eseguire `npm run build` (servito via symlink, niente copy)
@@ -109,7 +100,6 @@ status: draft
    - Eseguire `npm run build` (niente `npm run copy`: `public_html/themes/<Tema>` è un symlink)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_DlRvXB
 <<<<<<< .merge_file_nZThWI
 <<<<<<< .merge_file_QGtPr5
 >>>>>>> .merge_file_n9614R
@@ -117,8 +107,6 @@ status: draft
 >>>>>>> .merge_file_Rcn0VW
 =======
 >>>>>>> .merge_file_wb4kfX
-=======
->>>>>>> .merge_file_szbs2d
    - Verificare la presenza e l'accessibilità degli assets
    - Testare il funzionamento completo del tema
 

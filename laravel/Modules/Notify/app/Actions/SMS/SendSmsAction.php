@@ -27,19 +27,6 @@ use Spatie\QueueableAction\QueueableAction;
  * Services → Actions (vedi story `notify-services-to-actions.story.md`).
  *
  * @SuppressWarnings("PHPMD.ShortVariable") Trade-off: la proprietà pubblica `$to` è parte dell'API SMS esistente.
-<<<<<<< HEAD
- *
- * @see docs/contracts/send-sms-action.md
- *
- * @contract docs/contracts/send-sms-action.md
-=======
-<<<<<<< HEAD
-=======
- *
- * @see docs/contracts/send-sms-action.md
- * @contract docs/contracts/send-sms-action.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  */
 class SendSmsAction
 {

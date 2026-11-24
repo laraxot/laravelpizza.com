@@ -3,7 +3,7 @@ title: "ARCHITECTURE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JhhHdH
+<<<<<<< .merge_file_cB1xoD
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_x9dRvc
+>>>>>>> .merge_file_Kc3RYX
 qmd: "ARCHITECTURE"
 issues: []
 discussions: []

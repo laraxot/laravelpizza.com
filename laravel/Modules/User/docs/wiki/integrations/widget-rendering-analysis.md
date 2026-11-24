@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_bvxLjf
 qmd: "widget rendering analysis analisi loginwidget docsitaliait"
+=======
+>>>>>>> .merge_file_ADVEhb
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style

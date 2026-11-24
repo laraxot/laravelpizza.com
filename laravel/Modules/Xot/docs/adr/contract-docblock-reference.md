@@ -5,7 +5,10 @@ status: accepted
 created: 2026-11-23
 updated: 2026-11-24
 issues: []
+<<<<<<< .merge_file_S5lvMI
 qmd: "contract docblock reference action"
+=======
+>>>>>>> .merge_file_ORvmeC
 ---
 
 # ADR: @contract nel docblock delle Action

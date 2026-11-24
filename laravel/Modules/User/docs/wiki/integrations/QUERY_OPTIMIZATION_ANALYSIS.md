@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_BG0C93
 qmd: "query optimization analysis user"
+=======
+>>>>>>> .merge_file_V24OUO
 ---
 
 # User Module - Query Optimization Analysis

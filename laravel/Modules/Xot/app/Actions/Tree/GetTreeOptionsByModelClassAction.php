@@ -14,7 +14,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-tree-options-by-model-class-action.md
+<<<<<<< .merge_file_aQw1Vn
  *
+=======
+>>>>>>> .merge_file_hOiZvo
  * @contract docs/contracts/get-tree-options-by-model-class-action.md
  */
 class GetTreeOptionsByModelClassAction

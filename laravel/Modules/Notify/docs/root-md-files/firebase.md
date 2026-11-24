@@ -3,7 +3,7 @@ title: "firebase"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IHgl20
+<<<<<<< .merge_file_AQCamu
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_i6NM4h
+>>>>>>> .merge_file_vLEJVE
 qmd: "firebase"
 issues: []
 discussions: []

@@ -5,7 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_Y3mhRl
 qmd: "routing best practices architettura volt folio"
+=======
+>>>>>>> .merge_file_duXwVD
 ---
 
 # Best Practices per il Routing in Architettura Volt + Folio + Filament
