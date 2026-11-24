@@ -4,6 +4,9 @@
 ![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)
 ![Livewire 4.x](https://img.shields.io/badge/Livewire-4.x-orange.svg)
 ![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Good first issues](https://img.shields.io/github/issues/laraxot/laravelpizza.com/good%20first%20issue)](https://github.com/laraxot/laravelpizza.com/labels/good%20first%20issue)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/laraxot/laravelpizza.com/badge)](https://securityscorecards.dev/viewer/?uri=github.com/laraxot/laravelpizza.com)
 
 ## 🎯 Missione del Progetto
 
@@ -162,6 +165,8 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
 
 ## 🤝 Come puoi contribuire (anche se è la tua prima volta)
 
+Leggi [CONTRIBUTING.md](CONTRIBUTING.md), il [Code of Conduct](CODE_OF_CONDUCT.md) e scegli un issue con label [`good first issue`](https://github.com/laraxot/laravelpizza.com/labels/good%20first%20issue). **Apri una PR da fork** (è così che contiamo i contributor esterni).
+
 - **Se ami il frontend**:
   - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)
   - Porta nuove idee di sezioni/animazioni, ma sempre nel rispetto di Folio + Volt.
@@ -177,6 +182,8 @@ Ogni contributo che:
 - migliora la qualità,
 - rende più facile per altri capire il progetto,
 è il benvenuto.
+
+Maintainer: playbook candidatura Claude Ultra OSS in [docs/claude-for-open-source-eligibility.md](docs/claude-for-open-source-eligibility.md).
 
 ---
 
