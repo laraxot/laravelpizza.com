@@ -13,5 +13,7 @@ use Modules\UI\Adapters\Map\NullMapServiceAdapter;
  * Residuo on-disk (no-delete senza autorizzazione). Vedi debt.php #247.
  *
  * @deprecated Use NullMapServiceAdapter instead.
+ *
+ * @see Modules/UI/docs/wiki/concepts/ui-services-support-to-actions.md
  */
 final class NullMapService {}

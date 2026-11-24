@@ -10,6 +10,8 @@ updated: 2026-11-24
 
 # ADR: mixed solo come ultima spiaggia
 
+Superseded da [0015-mixed-solo-come-ultima-spiaggia](0015-mixed-solo-come-ultima-spiaggia.md): stessa decisione, riscritta con l'elenco dei due casi ammessi, la scala dei tipi da provare prima e la conferma misurabile. Questo testo resta per la storia; il narrowing con `assert()` nativo che indica qui è vietato dalle regole del progetto (ammesso solo `Webmozart\Assert\Assert`).
+
 ## Contesto
 
 Nel codice applicativo mixed non e' un tipo di comodo per chiudere un errore

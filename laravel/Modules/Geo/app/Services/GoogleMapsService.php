@@ -149,7 +149,6 @@ class GoogleMapsService
     /**
      * Esegue una richiesta di geocodifica inversa.
      *
-     *
      * @return array<string, mixed>
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
@@ -194,7 +193,6 @@ class GoogleMapsService
 
     /**
      * Ottiene l'elevazione per un punto.
-     *
      *
      * @return array<string, mixed>
      *

@@ -10,6 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\glob;
 
 /**
+ * Elenca i file di traduzione di tutti i moduli (`Modules/*\/lang/<locale>/*.php`) per la lingua corrente,
+ * ciascuno con chiave `modulo::file`. Corpo identico a GetAllTranslationAction: il contratto spiega perche'.
+ *
  * @see Modules/Lang/docs/contracts/get-all-module-translation-action.md
  *
  * @contract docs/contracts/get-all-module-translation-action.md

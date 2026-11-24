@@ -33,7 +33,8 @@ Totale: **28** ADR, di cui **20** canonici e **8** superseded (nessun file cance
 | 0012 | Governance dei Behavioral Contract con invarianti verificabili | accepted | canonico | [0012-behavioral-contract-governance.md](0012-behavioral-contract-governance.md) |
 | 0013 | I dati sono sacri: mai migrate:fresh/reset/rollback/force, mai RefreshDatabase, test solo con .env.testing | accepted | canonico | [0013-dati-sacri-migrazioni-e-test.md](0013-dati-sacri-migrazioni-e-test.md) |
 | 0014 | La risoluzione "mista" dei conflitti Git e' l'ultima spiaggia, non la strategia | accepted | canonico | [0014-merge-misto-ultima-spiaggia.md](0014-merge-misto-ultima-spiaggia.md) |
-| — | mixed nei contratti PHP e' ammesso solo come ultima spiaggia | accepted | canonico, senza numero | [mixed-is-last-resort.md](mixed-is-last-resort.md) |
+| 0015 | mixed solo come ultima spiaggia: tipi veri, narrowing al confine, motivazione scritta | accepted | canonico | [0015-mixed-solo-come-ultima-spiaggia.md](0015-mixed-solo-come-ultima-spiaggia.md) |
+| — | mixed nei contratti PHP e' ammesso solo come ultima spiaggia | superseded | superseded → [0015-mixed-solo-come-ultima-spiaggia.md](0015-mixed-solo-come-ultima-spiaggia.md) | [mixed-is-last-resort.md](mixed-is-last-resort.md) |
 | — | Harness minimo per gli agenti: ambiente leggibile, memoria verificabile, guard sulle azioni vietate | accepted | canonico, senza numero | [agent-harness.md](agent-harness.md) |
 | — | Le regole architetturali sulle classi si verificano con PHPArkitect, con baseline | superseded | superseded → [architecture-tests-pest-arch.md](architecture-tests-pest-arch.md) | [architecture-rules-phparkitect.md](architecture-rules-phparkitect.md) |
 | — | Le regole di architettura si verificano con Pest arch(), con ambito esplicito e debito dichiarato | accepted | canonico, senza numero | [architecture-tests-pest-arch.md](architecture-tests-pest-arch.md) |
