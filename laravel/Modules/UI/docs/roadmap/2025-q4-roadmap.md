@@ -1,27 +1,14 @@
 ---
-title: "UI Module Roadmap (2025 Q4)"
-qmd: "ui roadmap 2025 q4 roadmap md"
-type: note
-tags: [documentation]
+title: "2025-q4-roadmap (alias)"
+status: superseded
+superseded_by: "./q4-roadmap.md"
+type: alias
+updated: 2026-11-24
+qmd: "ui 2025 q4 roadmap alias superseded"
 ---
 
-# UI Module Roadmap (2025 Q4)
+# Alias (superseded)
 
-## Vision & Scope
-- Provide reusable UI components and Filament integrations aligned with Laraxot rules and design system.
+Canonico: [`./q4-roadmap.md`](./q4-roadmap.md).
 
-## Key Outcomes
-- PHPStan 0 errors in `Modules/UI/`
-- Filament v4 migration complete (forms, tables, widgets)
-- Theme integration clear: assets, Blade components, translations
-
-## Milestones
-- [ ] Audit Filament v4 changes in components/pages
-- [ ] Replace labels with translations (expanded structure)
-- [ ] Optimize icons/assets; document in `docs/paths_and_assets.md`
-- [ ] Strengthen tests for critical widgets
-
-## Acceptance Criteria
-- No direct Filament base class extensions
-- `getFormSchema()` used consistently
-- 0 PHPStan errors
+Questo path resta solo per link storici; non aggiungere contenuto qui.

@@ -1,0 +1,385 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Media\Models\Media;
+use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
+use Modules\Notify\Enums\NotificationTypeEnum;
+use Modules\Notify\Models\Traits\NotificationTemplateMutators;
+use Modules\Xot\Contracts\ProfileContract;
+<<<<<<< .merge_file_BHcIRo
+<<<<<<< .merge_file_PkxXss
+<<<<<<< HEAD
+use Modules\Xot\Models\Traits\HasCommonScopes;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Models\Traits\HasCommonScopes;
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+use Modules\Xot\Models\Traits\HasCommonScopes;
+>>>>>>> .merge_file_v8IFAw
+=======
+use Modules\Xot\Models\Traits\HasCommonScopes;
+>>>>>>> .merge_file_ME25VG
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\Translatable\HasTranslations;
+
+/**
+ * Class NotificationTemplate.
+ *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+ * Gli scope comuni (active/inactive/...) arrivano da HasCommonScopes: niente copia inline.
+ *
+ * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+ *
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+ * @property string|null $name
+ * @property string|null $code
+ * @property string|null $description
+ * @property string|null $category
+ * @property array<string, mixed>|null $metadata
+ * @property string|null $subject
+ * @property bool $is_active
+ * @property array<string, mixed>|null $variables
+ * @property string|null $body_html
+ * @property string|null $body_text
+ * @property array<int, string>|null $channels
+ * @property array<string, mixed>|null $conditions
+ * @property array<string, mixed>|null $preview_data
+ * @property array<string, mixed>|null $grapesjs_data
+ * @property NotificationTypeEnum $type
+ * @property-read ProfileContract|null $creator
+ * @property-read string $channels_label
+ * @property-read list<string> $translatable_columns_from
+ * @property-read MediaCollection<int, Media> $media
+ * @property-read int|null $media_count
+ * @property-read array<string, array<string, mixed>> $translations
+ * @property-read ProfileContract|null $updater
+ *
+ * @method static Builder<static>|NotificationTemplate active()
+ * @method static Builder<static>|NotificationTemplate forCategory(string $category)
+ * @method static Builder<static>|NotificationTemplate forChannel(string $channel)
+ * @method static Builder<static>|NotificationTemplate newModelQuery()
+ * @method static Builder<static>|NotificationTemplate newQuery()
+ * @method static Builder<static>|NotificationTemplate query()
+ * @method static Builder<static>|NotificationTemplate whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
+ * @method static Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array<int, string> $locales, ?mixed $value, string $operand = '=')
+ * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
+ * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array<int, string> $locales)
+ *
+ * @mixin Model
+ */
+class NotificationTemplate extends BaseModel implements HasMedia
+{
+<<<<<<< .merge_file_BHcIRo
+<<<<<<< .merge_file_PkxXss
+<<<<<<< HEAD
+    use HasCommonScopes;
+=======
+<<<<<<< HEAD
+    use HasCommonScopes;
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+    use HasCommonScopes;
+>>>>>>> .merge_file_v8IFAw
+=======
+    use HasCommonScopes;
+>>>>>>> .merge_file_ME25VG
+    use HasTranslations;
+    use NotificationTemplateMutators;
+
+    /** La chiave e' un UUID char(36): niente auto-increment, altrimenti dopo l'insert l'id diventa '0'. */
+    public $incrementing = false;
+
+    /** @var list<string> */
+    public array $translatable = [
+        'subject',
+        'body_text',
+        'body_html'];
+
+    protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'subject',
+        'body_html',
+        'body_text',
+        'channels',
+        'variables',
+        'conditions',
+        'preview_data',
+        'metadata',
+        'category',
+        'is_active',
+        'version',
+        'tenant_id',
+        'grapesjs_data',
+        'type'];
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('attachments')->singleFile();
+    }
+
+    /*
+     * public function versions(): HasMany
+     * {
+     * return $this->hasMany(NotificationTemplateVersion::class, 'template_id')
+     * ->orderByDesc('version');
+     * }
+     *
+     * public function logs(): HasMany
+     * {
+     * return $this->hasMany(NotificationLog::class, 'template_id');
+     * }
+     */
+    /*
+     * Create a new version of the template.
+     *
+     * @param string $createdBy The user who created the version
+     * @param string|null $notes Optional notes about the changes
+     * @return self
+     *
+     * public function createNewVersion(string $createdBy, ?string $notes = null): self
+     * {
+     * $this->versions()->create([
+     * 'subject' => $this->subject,
+     * 'body_html' => $this->body_html,
+     * 'body_text' => $this->body_text,
+     * 'channels' => $this->channels,
+     * 'variables' => $this->variables,
+     * 'conditions' => $this->conditions,
+     * 'version' => $this->version,
+     * 'created_by' => $createdBy,
+     * 'change_notes' => $notes,
+     * ]);
+     *
+     * $this->increment('version');
+     * return $this;
+     * }
+     */
+    /**
+     * Compile the template with the given data.
+     *
+     * @param  array<string, mixed>  $data  The data to compile the template with
+     * @return array{subject: string, body_html: string|null, body_text: string|null}
+     */
+    public function compile(array $data = []): array
+    {
+        $subject = $this->compileString($this->subject, $data);
+        $bodyHtml = $this->compileString($this->body_html, $data);
+        $bodyText = $this->compileString($this->body_text, $data);
+
+        return [
+            'subject' => $subject ?? '',
+            'body_html' => $bodyHtml,
+            'body_text' => $bodyText];
+    }
+
+    /**
+     * Check if the notification should be sent based on conditions.
+     *
+     * @param  array<string, mixed>  $data  The data to check conditions against
+     */
+    public function shouldSend(array $data = []): bool
+    {
+        if (! $this->conditions) {
+            return true;
+        }
+
+        foreach ($this->conditions as $path => $value) {
+            $actual = data_get($data, $path);
+            if ($actual !== $value) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Preview the template with the given data.
+     *
+     * @param  array<string, mixed>  $data  Additional data to merge with preview data
+     * @return array{subject: string, body_html: string|null, body_text: string|null}
+     */
+    public function preview(array $data = []): array
+    {
+        /** @var array<string, mixed> $previewData */
+        $previewData = $this->preview_data ?? [];
+        /** @var array<string, mixed> $mergedData */
+        $mergedData = array_merge($previewData, $data);
+
+        return $this->compile($mergedData);
+    }
+
+    /**
+<<<<<<< .merge_file_BHcIRo
+<<<<<<< .merge_file_PkxXss
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+     * Scope a query to only include active templates.
+     */
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('is_active', true);
+    }
+
+    /**
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_v8IFAw
+=======
+>>>>>>> .merge_file_ME25VG
+     * Scope a query to only include templates for a specific channel.
+     */
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeForChannel(Builder $query, string $channel): Builder
+    {
+        return $query->whereJsonContains('channels', $channel);
+    }
+
+    /**
+     * Scope a query to only include templates for a specific category.
+     */
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeForCategory(Builder $query, string $category): Builder
+    {
+        return $query->where('category', $category);
+    }
+
+    /**
+     * Get the channels label attribute.
+     */
+
+    /**
+     * Get the GrapesJS data.
+     *
+     * @return array<string, mixed>
+     */
+    public function getGrapesJSData(): array
+    {
+        $data = $this->grapesjs_data ?? [];
+        if (! \is_array($data)) {
+            $data = [];
+        }
+
+        $result = [];
+        foreach ($data as $key => $value) {
+            $result[(string) $key] = $value;
+        }
+
+        /** @var array<string, mixed> $result */
+        return $result;
+    }
+
+    /**
+     * Set the GrapesJS data.
+     *
+     * @param  array<string, mixed>  $data
+     */
+    public function setGrapesJSData(array $data): self
+    {
+        $this->grapesjs_data = $data;
+
+        return $this;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function getPreviewData(): array
+    {
+        return $this->preview_data ?? [];
+    }
+
+    public function getPreviewSubject(): string
+    {
+        $result = $this->getTranslation('subject', app()->getLocale());
+
+        return is_string($result) ? $result : '';
+    }
+
+    public function getPreviewBodyText(): string
+    {
+        $result = $this->getTranslation('body_text', app()->getLocale());
+
+        return is_string($result) ? $result : '';
+    }
+
+    public function getPreviewBodyHtml(): string
+    {
+        $result = $this->getTranslation('body_html', app()->getLocale());
+
+        return is_string($result) ? $result : '';
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'type' => NotificationTypeEnum::class,
+            'preview_data' => 'array',
+            'body_html' => 'string',
+            'body_text' => 'string',
+            'channels' => 'array',
+            'variables' => 'array',
+            'conditions' => 'array',
+            'metadata' => 'array',
+            'is_active' => 'boolean',
+            'grapesjs_data' => 'array'];
+    }
+
+    /**
+     * Compile a string template with the given data.
+     *
+     * I template sono letti dal database: si sostituiscono solo i segnaposto, mai Blade/PHP (DCP-283, C-08).
+     *
+     * @param  string|null  $template  The template to compile
+     * @param  array<string, mixed>  $data  The data to compile with
+     */
+    protected function compileString(?string $template, array $data): ?string
+    {
+        if (! $template) {
+            return null;
+        }
+
+        return app(RenderNotificationTemplateStringAction::class)->execute($template, $data);
+    }
+}

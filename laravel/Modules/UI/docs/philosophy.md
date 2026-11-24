@@ -248,10 +248,19 @@ Modules/UI/
 └── CHANGELOG.md
 ```
 
+<<<<<<< .merge_file_QQ1nTa
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4AQ00W
 (`ARCHITECTURE.md`, `TESTING.md`, `GETTING_STARTED.md` and `PHILOSOPHY.md` were moved from the module root into `docs/root-md-files/` and `docs/` proper; they are inside the collapsed `docs/` entry above.)
 
 ├── ARCHITECTURE.md
 
+<<<<<<< .merge_file_QQ1nTa
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_4AQ00W
 (`architecture.md`, `testing.md`, `GETTING_STARTED.md` and `PHILOSOPHY.md` were moved from the module root into `docs/root-md-files/` and `docs/` proper; they are inside the collapsed `docs/` entry above.)
 
 ├── architecture.md
@@ -1281,11 +1290,31 @@ Core functionality tests pass:
 ### Core Documentation
 
 - [README.md](./README.md) — Module overview
+<<<<<<< .merge_file_QQ1nTa
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_4AQ00W
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
 - [architecture.md](./architecture.md) — System architecture
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
+<<<<<<< .merge_file_QQ1nTa
+=======
+=======
+>>>>>>> laraxot/dev
+- [architecture.md](./architecture.md) — System architecture
+- [architecture.md](./architecture.md) — System architecture
+- [architecture.md](./architecture.md) — System architecture
+- [architecture.md](./architecture.md) — System architecture
+- [architecture.md](./architecture.md) — System architecture
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_4AQ00W
 - [patterns.md](./patterns.md) — Design patterns and workflows
 - [icon-system.md](icons/icon-system.md) — Icon system details
 

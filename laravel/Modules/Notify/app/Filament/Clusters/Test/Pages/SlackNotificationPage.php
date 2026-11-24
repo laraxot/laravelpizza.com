@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Filament\Clusters\Test\Pages;
+
+use Modules\Notify\Filament\Clusters\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
+
+class SlackNotificationPage extends XotBasePage
+{
+    use SuperAdminOnlyTrait;
+
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
+
+    protected string $view = 'notify::filament.clusters.test.pages.slack-notification';
+
+    protected static ?string $cluster = Test::class;
+}

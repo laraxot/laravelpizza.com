@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Helpers;
 
-use Modules\Cms\Actions\ResolveLocalizedBlockDataAction;
-
 /**
  * Helper condivisi per sweep coverage UI (evita redeclare tra file Pest).
+ * Cms opzionale in PTVX: stub via FQCN stringa in ensureCmsStub(), mai import Cms.
  */
 final class UiCoverageMissHelpers
 {
@@ -47,7 +46,8 @@ final class UiCoverageMissHelpers
 
     public static function ensureCmsStub(): void
     {
-        if (class_exists(ResolveLocalizedBlockDataAction::class, false)) {
+        $fqcn = 'Modules\\Cms\\Actions\\ResolveLocalizedBlockDataAction';
+        if (class_exists($fqcn, false)) {
             return;
         }
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Notify Icon">
+    <style>
+        .notify-bell { 
+            animation: ring 4s ease-in-out infinite;
+            transform-origin: 12px 6px;
+        }
+        .notify-badge { 
+            animation: pulse 2s ease-in-out infinite;
+            transform-origin: 18px 6px;
+        }
+        .notify-waves { 
+            animation: ripple 3s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        
+        @keyframes ring {
+            0%, 90%, 100% { transform: rotate(0deg); }
+            5% { transform: rotate(5deg); }
+            10% { transform: rotate(-5deg); }
+            15% { transform: rotate(3deg); }
+            20% { transform: rotate(-3deg); }
+            25% { transform: rotate(0deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes ripple {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+        
+        svg:hover .notify-bell { 
+            animation-duration: 2s; 
+        }
+        svg:hover .notify-badge { 
+            animation-duration: 1s; 
+        }
+        svg:hover .notify-waves { 
+            animation-duration: 1.5s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .notify-badge { opacity: 0.9; }
+            .notify-waves { opacity: 0.4; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .notify-bell, .notify-badge, .notify-waves { animation: none; }
+        }
+    </style>
+    
+    <!-- Bell -->
+    <g class="notify-bell">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+    </g>
+    
+    <!-- Notification badge -->
+    <circle class="notify-badge" cx="18" cy="6" r="2" fill="currentColor" opacity="0.8" />
+    <text x="18" y="7" text-anchor="middle" font-size="3" fill="white" opacity="0.9">3</text>
+    
+    <!-- Sound waves -->
+    <g class="notify-waves">
+        <path stroke-linecap="round" d="M20 8c1 1 1 3 0 4" opacity="0.5" />
+        <path stroke-linecap="round" d="M22 6c2 2 2 6 0 8" opacity="0.3" />
+        <path stroke-linecap="round" d="M4 8c-1 1-1 3 0 4" opacity="0.5" />
+        <path stroke-linecap="round" d="M2 6c-2 2-2 6 0 8" opacity="0.3" />
+    </g>
+    
+    <!-- Notification indicators -->
+    <circle cx="8" cy="20" r="0.5" fill="currentColor" opacity="0.6" />
+    <circle cx="12" cy="20" r="0.5" fill="currentColor" opacity="0.8" />
+    <circle cx="16" cy="20" r="0.5" fill="currentColor" opacity="0.6" />
+    
+    <!-- Alert lines -->
+    <path stroke-linecap="round" d="M12 2v2M6.34 6.34l1.41 1.41M2 12h2M6.34 17.66l1.41-1.41" opacity="0.4" stroke-width="1" />
+</svg>
