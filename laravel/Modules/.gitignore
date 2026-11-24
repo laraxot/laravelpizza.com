@@ -2,3 +2,5 @@
 # Backup files from refactoring
 *.bak
 **/*.bak
+# Local visual-comparison screenshots are generated artifacts.
+docs/project/visual-comparison/

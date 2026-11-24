@@ -15,10 +15,10 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< .merge_file_4LSGj0
+<<<<<<< .merge_file_DWatyo
 qmd: "translation 5 level structure 5level never"
 =======
->>>>>>> .merge_file_87un86
+>>>>>>> .merge_file_3jkk52
 ---
 
 # Translation 5-Level Structure Rule

@@ -8,15 +8,7 @@ use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< .merge_file_YwSYnQ
 uses(TestCase::class);
-=======
-<<<<<<< HEAD
-uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QTlG7r
 
 class TeamTest extends TestCase
 {

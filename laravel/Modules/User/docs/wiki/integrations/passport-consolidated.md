@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_AoWnbe
+<<<<<<< .merge_file_xPF4N0
 qmd: "passport consolidated"
 =======
->>>>>>> .merge_file_f1Meua
+>>>>>>> .merge_file_ONwXXv
 ---
 
 # passport — Consolidated Documentation

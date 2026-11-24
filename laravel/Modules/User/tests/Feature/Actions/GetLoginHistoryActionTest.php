@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\DB;
-<<<<<<< .merge_file_m10CgC
-=======
-use InvalidArgumentException;
->>>>>>> .merge_file_bskPbI
 use Modules\User\Actions\Login\GetLoginHistoryAction;
 use Modules\User\Tests\TestCase;
 

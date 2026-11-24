@@ -32,17 +32,13 @@ return [
         ],
     ],
     'logout' => [
-<<<<<<< .merge_file_8GrEUZ
         'in_progress' => 'Abmeldung läuft…',
-=======
->>>>>>> .merge_file_oclhJa
         'goodbye' => [
             'message' => 'Auf Wiedersehen',
         ],
     ],
     'password' => [
         'reset' => [
-<<<<<<< .merge_file_8GrEUZ
             'title' => 'Neues Passwort wählen',
             'label' => 'Passwort zurücksetzen',
             'subtitle' => 'Mindestens 8 Zeichen. Nach dem Speichern bist du direkt angemeldet.',
@@ -50,10 +46,6 @@ return [
             'password' => 'Neues Passwort',
             'password_confirmation' => 'Neues Passwort wiederholen',
             'submit' => 'Passwort speichern',
-=======
-            'title' => 'Passwort zurücksetzen',
-            'label' => 'Passwort zurücksetzen',
->>>>>>> .merge_file_oclhJa
         ],
         'email' => [
             'label' => 'E-Mail-Adresse',
@@ -62,11 +54,7 @@ return [
             'label' => 'Passwort bestätigen',
         ],
         'confirm' => [
-<<<<<<< .merge_file_8GrEUZ
             'title' => 'Passwort bestätigen',
-=======
-            'title' => 'Bestätigen Sie Ihr Passwort',
->>>>>>> .merge_file_oclhJa
             'message' => 'Bitte bestätigen Sie Ihr Passwort, bevor Sie fortfahren',
             'label' => 'Passwort bestätigen',
             'subtitle' => 'Geschützter Bereich: Gib dein Passwort erneut ein, um fortzufahren.',
@@ -86,7 +74,6 @@ return [
         'back_to_login' => [
             'label' => 'zurück zur Anmeldung',
         ],
-<<<<<<< .merge_file_8GrEUZ
         'request' => [
             'title' => 'Passwort vergessen?',
             'subtitle' => 'Gib die E-Mail-Adresse deines Kontos ein. Wir senden dir einen Link für ein neues Passwort.',
@@ -94,8 +81,6 @@ return [
             'submit' => 'Link senden',
             'back_to_login' => 'Zurück zur Anmeldung',
         ],
-=======
->>>>>>> .merge_file_oclhJa
     ],
     'sections' => [
         'verify' => [
@@ -109,13 +94,7 @@ return [
         'sign_out' => [
             'label' => 'abmelden',
         ],
-<<<<<<< .merge_file_8GrEUZ
         'resent' => 'Wir haben dir einen neuen Bestätigungslink gesendet.',
-=======
-        'resent' => [
-            'message' => 'Ein neuer Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet.',
-        ],
->>>>>>> .merge_file_oclhJa
         'instructions' => [
             'message' => 'Bevor Sie fortfahren, prüfen Sie bitte Ihre E-Mails auf den Bestätigungslink. Wenn Sie die E-Mail nicht erhalten haben,',
         ],

@@ -32,17 +32,13 @@ return [
         ],
     ],
     'logout' => [
-<<<<<<< .merge_file_i6DwZT
         'in_progress' => 'Signing you out…',
-=======
->>>>>>> .merge_file_s6exOf
         'goodbye' => [
             'message' => 'Goodbye',
         ],
     ],
     'password' => [
         'reset' => [
-<<<<<<< .merge_file_i6DwZT
             'title' => 'Choose a new password',
             'label' => 'Reset password',
             'subtitle' => 'At least 8 characters. Once saved, you\'re signed in straight away.',
@@ -50,10 +46,6 @@ return [
             'password' => 'New password',
             'password_confirmation' => 'Repeat the new password',
             'submit' => 'Save password',
-=======
-            'title' => 'Reset password',
-            'label' => 'Reset password',
->>>>>>> .merge_file_s6exOf
         ],
         'email' => [
             'label' => 'Email address',
@@ -82,7 +74,6 @@ return [
         'back_to_login' => [
             'label' => 'return to login',
         ],
-<<<<<<< .merge_file_i6DwZT
         'request' => [
             'title' => 'Forgot your password?',
             'subtitle' => 'Enter your account email and we\'ll send you a link to choose a new one.',
@@ -90,8 +81,6 @@ return [
             'submit' => 'Send me the link',
             'back_to_login' => 'Back to sign in',
         ],
-=======
->>>>>>> .merge_file_s6exOf
     ],
     'sections' => [
         'verify' => [
@@ -105,13 +94,7 @@ return [
         'sign_out' => [
             'label' => 'sign out',
         ],
-<<<<<<< .merge_file_i6DwZT
         'resent' => 'We sent you a new confirmation link.',
-=======
-        'resent' => [
-            'message' => 'A fresh verification link has been sent to your email address.',
-        ],
->>>>>>> .merge_file_s6exOf
         'instructions' => [
             'message' => 'Before proceeding, please check your email for a verification link. If you did not receive the email,',
         ],

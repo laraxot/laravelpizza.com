@@ -15,7 +15,6 @@ use Filament\Schemas\Schema as FilamentSchema;
 use Filament\Widgets\Widget;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -38,8 +37,6 @@ use Modules\User\Models\User;
 use Modules\User\Providers\Filament\AdminPanelProvider;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
-use Mockery\CompositeExpectation;
-use Mockery\Expectation;
 use PHPUnit\Framework\Assert;
 use PragmaRX\Google2FA\Google2FA;
 
@@ -121,15 +118,7 @@ abstract class TestCase extends XotBaseTestCase
             static::$userSchemaMigrated = true;
 
             if (config('database.default') !== 'sqlite') {
-<<<<<<< .merge_file_MiKWbh
                 $this->app?->make(Kernel::class)
-=======
-<<<<<<< HEAD
-                $this->app?->make(Kernel::class)
-=======
-                $this->app?->make(\Illuminate\Contracts\Console\Kernel::class)
->>>>>>> laraxot/dev
->>>>>>> .merge_file_avbHXl
                     ->call('migrate', ['--force' => true]);
             }
         }
@@ -192,17 +181,6 @@ abstract class TestCase extends XotBaseTestCase
     public static ?Collection $users = null;
 
     /**
-<<<<<<< .merge_file_MiKWbh
-=======
-<<<<<<< HEAD
-     * Come `Tests\TestCase`: anche `mariadb` (default in CI) e `fixcity` (Profile del progetto)
-     * vanno in transazione, altrimenti le righe scritte dai test restano nel DB `_test`.
-     *
-     * @var list<string>
-     */
-    protected $connectionsToTransact = ['mysql', 'mariadb', 'user', 'fixcity'];
-=======
->>>>>>> .merge_file_avbHXl
      * Come `Tests\TestCase`: anche `mariadb` (default in CI) va in transazione, altrimenti le
      * righe scritte dai test restano nel DB `_test`.
      *
@@ -217,10 +195,6 @@ abstract class TestCase extends XotBaseTestCase
      * @var list<string>
      */
     protected $connectionsToTransact = ['mysql', 'mariadb', 'user'];
-<<<<<<< .merge_file_MiKWbh
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_avbHXl
 
     public function setupFilamentAdminPanel(): void
     {

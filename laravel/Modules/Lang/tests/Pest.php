@@ -7,14 +7,6 @@ use Modules\Lang\Actions\ReadTranslationFileAction;
 use Modules\Lang\Database\Factories\TranslationFactory;
 use Modules\Lang\Models\BaseModel;
 use Modules\Lang\Models\Translation;
-<<<<<<< .merge_file_s8xNUo
-<<<<<<< .merge_file_mayle4
-use Modules\Lang\Providers\LangServiceProvider;
-use Modules\Lang\Tests\TestCase;
-=======
->>>>>>> .merge_file_y6nfSk
-=======
->>>>>>> .merge_file_K0NyeN
 use PHPUnit\Framework\Assert;
 
 use function Safe\file_put_contents;
@@ -69,21 +61,9 @@ function makeLangBaseModel(): BaseModel
     };
 }
 
-<<<<<<< .merge_file_s8xNUo
-<<<<<<< .merge_file_mayle4
-function makeLangServiceProvider(): LangServiceProvider
-{
-    return TestCase::makeLangServiceProvider();
-=======
 function makeLangServiceProvider(): Modules\Lang\Providers\LangServiceProvider
 {
     return Modules\Lang\Tests\TestCase::makeLangServiceProvider();
->>>>>>> .merge_file_y6nfSk
-=======
-function makeLangServiceProvider(): Modules\Lang\Providers\LangServiceProvider
-{
-    return Modules\Lang\Tests\TestCase::makeLangServiceProvider();
->>>>>>> .merge_file_K0NyeN
 }
 
 /** @return array<string, mixed> */

@@ -36,15 +36,7 @@ beforeEach(function (): void {
 it('takes the label from the translation file of the calling class', function (): void {
     app('translator')->addLines(['autolabelcontract.fields.title.label' => 'Titolo'], 'it', 'lang');
 
-<<<<<<< .merge_file_mLxXFD
-<<<<<<< .merge_file_IvshWs
     $field = (new AutoLabelContractCaller)->apply(TextInput::make('title'), 'label');
-=======
-    $field = (new AutoLabelContractCaller())->apply(TextInput::make('title'), 'label');
->>>>>>> .merge_file_MWKDrc
-=======
-    $field = (new AutoLabelContractCaller())->apply(TextInput::make('title'), 'label');
->>>>>>> .merge_file_ad98WR
 
     Assert::assertSame('Titolo', $field->getLabel());
 })->group('LANG-AUTOLABEL-INV-1');
@@ -52,15 +44,7 @@ it('takes the label from the translation file of the calling class', function ()
 it('asks to save only the missing label, never the auxiliary texts', function (): void {
     $field = TextInput::make('zz_missing');
     foreach (['label', 'placeholder', 'helperText', 'description'] as $type) {
-<<<<<<< .merge_file_mLxXFD
-<<<<<<< .merge_file_IvshWs
         (new AutoLabelContractCaller)->apply($field, $type);
-=======
-        (new AutoLabelContractCaller())->apply($field, $type);
->>>>>>> .merge_file_MWKDrc
-=======
-        (new AutoLabelContractCaller())->apply($field, $type);
->>>>>>> .merge_file_ad98WR
     }
 
     /** @var MockInterface $spy */
@@ -80,18 +64,8 @@ it('does not show an auxiliary text that only repeats the field name', function 
     ], 'it', 'lang');
 
     $field = TextInput::make('route');
-<<<<<<< .merge_file_mLxXFD
-<<<<<<< .merge_file_IvshWs
     (new AutoLabelContractCaller)->apply($field, 'helperText');
     (new AutoLabelContractCaller)->apply($field, 'placeholder');
-=======
-    (new AutoLabelContractCaller())->apply($field, 'helperText');
-    (new AutoLabelContractCaller())->apply($field, 'placeholder');
->>>>>>> .merge_file_MWKDrc
-=======
-    (new AutoLabelContractCaller())->apply($field, 'helperText');
-    (new AutoLabelContractCaller())->apply($field, 'placeholder');
->>>>>>> .merge_file_ad98WR
 
     Assert::assertFalse(autoLabelHelperTextIsSet($field));
     Assert::assertNull($field->getPlaceholder());

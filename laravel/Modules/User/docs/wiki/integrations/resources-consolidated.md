@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_2k9Sxq
+<<<<<<< .merge_file_ffV40m
 qmd: "resources consolidated"
 =======
->>>>>>> .merge_file_rKhujE
+>>>>>>> .merge_file_4DO5H9
 ---
 
 # resources — Consolidated Documentation

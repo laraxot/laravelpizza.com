@@ -10,11 +10,8 @@ use UnexpectedValueException;
 /**
  * Risolve dati block localizzati; delega al modulo Cms se presente.
  *
-<<<<<<< .merge_file_qA5CJF
  * @see docs/contracts/resolve-localized-block-data-action.md
  *
-=======
->>>>>>> .merge_file_JIoxFy
  * @contract docs/contracts/resolve-localized-block-data-action.md
  */
 final class ResolveLocalizedBlockDataAction

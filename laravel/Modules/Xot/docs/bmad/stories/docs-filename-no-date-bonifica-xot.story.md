@@ -39,7 +39,7 @@ gia' incluso in quel conteggio o e' nuovo (creato dopo).
 - `docs/git-conflict-resolution-2026-07-31.md`
 - `docs/BRAINSTORM-TestCase-Hierarchy-XotBase-2026-06-10.md`
 - `docs/session-2026-09-15-lessons-learned.md`
-- `docs/redundancy-audit-2026-05-21.md`
+- `docs/redundancy-audit.md`
 - `docs/phpstan-zero-2026-09-07.md`
 - `docs/phpstan-fixes-summary-2025-08-18.md`
 - `docs/phpstan-analysis-2025-08-18.md`

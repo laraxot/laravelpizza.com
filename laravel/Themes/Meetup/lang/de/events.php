@@ -16,7 +16,6 @@ return [
             'label' => 'Vergangene Events',
         ],
     ],
-<<<<<<< .merge_file_te1pDX
     'search' => [
         'see_all' => 'Alle Events ansehen',
         'label' => 'Events suchen',
@@ -30,6 +29,4 @@ return [
         'show_past' => 'Vergangene Events',
         'show_upcoming' => 'Kommende Events',
     ],
-=======
->>>>>>> .merge_file_EuR4Ka
 ];

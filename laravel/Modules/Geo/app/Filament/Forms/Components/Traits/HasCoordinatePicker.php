@@ -95,19 +95,7 @@ trait HasCoordinatePicker
 
     /**
      * @param  float|array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string}  $latitude
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public function center(float|array $latitude, ?float $longitude = null): static
@@ -194,19 +182,7 @@ trait HasCoordinatePicker
      * Vista di partenza quando non c'e' un punto: `geo.config.map.default_view`, fallback Italia.
      *
      * @return array{lat: float, lng: float, zoom: int}
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public function getMapDefaultView(): array
@@ -280,19 +256,7 @@ trait HasCoordinatePicker
 
     /**
      * @return list<array<string, mixed>>
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     #[Exposed]
@@ -304,19 +268,7 @@ trait HasCoordinatePicker
 
     /**
      * @return array<string, mixed>|null
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     #[Exposed]
@@ -329,19 +281,7 @@ trait HasCoordinatePicker
     /**
      * @param  array<string, mixed>  $data
      * @return array<string, mixed>
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public static function extractCoordinates(array $data, string $field = 'coordinates', string $latColumn = 'latitude', string $lngColumn = 'longitude'): array
@@ -354,19 +294,7 @@ trait HasCoordinatePicker
      *
      * @param  array<string, mixed>  $view
      * @return array{lat: float|int|string, lng: float|int|string, zoom: float|int|string}|null
-<<<<<<< .merge_file_ZdFy7T
-<<<<<<< .merge_file_IzCHoQ
-<<<<<<< .merge_file_PvvYte
-<<<<<<< .merge_file_UT8Zyq
      *
-=======
->>>>>>> .merge_file_5l6Vjl
-=======
->>>>>>> .merge_file_mR1eJ0
-=======
->>>>>>> .merge_file_wpWmQe
-=======
->>>>>>> .merge_file_FMjQRi
      * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     private static function mapDefaultViewInput(array $view): ?array

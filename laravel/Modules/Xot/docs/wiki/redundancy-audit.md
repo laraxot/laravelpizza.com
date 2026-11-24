@@ -10,7 +10,7 @@ related:
   - concepts/code-redundancy-philosophy.md
   - concepts/redundancy-catalog.md
   - redundancy-report.md
-  - redundancy-audit-2026-05-21.md
+  - redundancy-audit.md
 qmd: "redundancy audit ridondanza monorepo 20260526"
 ---
 
@@ -76,4 +76,4 @@ qmd: "redundancy audit ridondanza monorepo 20260526"
 
 ## Storico audit
 
-- [2026-05-21](redundancy-audit-2026-05-21.md) — scan precedente (Fixcity tracker)
+- [2026-05-21](redundancy-audit.md) — scan precedente (Fixcity tracker)

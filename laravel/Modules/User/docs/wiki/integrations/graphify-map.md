@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_zWRgjH
+<<<<<<< .merge_file_XGsJOo
 qmd: "graphify map user mappa"
 =======
->>>>>>> .merge_file_qFjjrh
+>>>>>>> .merge_file_dcogWj
 ---
 
 # User Module — Mappa Graphify

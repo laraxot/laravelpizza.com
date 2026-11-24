@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_gfQ2X4
+<<<<<<< .merge_file_a0cmfY
 qmd: "business logic deep dive user"
 =======
->>>>>>> .merge_file_QjjH9V
+>>>>>>> .merge_file_1vh7Qq
 ---
 
 # User Module - Business Logic Deep Dive

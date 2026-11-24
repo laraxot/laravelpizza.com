@@ -124,3 +124,24 @@ Niente phpstan. Indici README aggiornati (Performance/Progressioni/Ptv + Zero).
 **Lezione:** mai stub-overwriting se `git mv` fallisce su untracked/gitignore — verificare exit code; recover immediato.
 
 Prossimo chunk: User `wiki/archive/**` dated (batch 15–20 stub→canon dove esiste), poi Notify dated root; UPPERCASE solo dove esiste già kebab canonico.
+
+<!-- GateGuard facts: (1) no supersede — append only to existing docs-md-filename-date-debt.story.md; (2) linked-from: docs/sprint-status.yaml Xot/docs-md-filename-date-debt + User companion story; (3) edit existing not new file; (4) user: "Append diario story Xot + companion modulo se esiste + riga docs/sprint-status.yaml Xot/docs-md-filename-date-debt". -->
+
+### Wave 2026-11-24c — Notify/UI tracked + User archive gitignored (docs-guardian)
+
+**Premessa inventario:** Progressioni / Performance / Ptv / Xot = **0** dated ACTIVE.
+Residui reali tracciati pre-wave: solo **7** (`Notify`×4, `Lang`×2, `UI`×1). Il grosso (~45) è **gitignored** (User `wiki/archive`, Notify `project_docs`, Rating `*-[0-9][0-9].md`).
+
+| Scope | Azione | Note |
+|---|---|---|
+| **Notify** (tracked) | 4× `git mv` `*-2026-03.md` → `*-mar-historical.md` + stub dated → canon | D=0; canoni `documentation-improvement-summary.md` ecc. |
+| **UI** (tracked) | 1× `git mv` `roadmap/2025-q4-roadmap.md` → `q4-roadmap-year-historical.md` + stub → `q4-roadmap.md` | |
+| **Lang** (tracked) | 2× rewrite stub (no mv: `*-historical.md` già presenti) → `translation-audit-completion.md` / `translation-errors-correction.md` | |
+| **User** `wiki/archive/**` | 18× filesystem `mv`+stub (path **gitignore** → `git mv` N/A) | stub→canon dove esiste; legacy 2 content-kept in `*-historical.md`; **nessun rm** |
+| **Progressioni/Perf/Ptv/Xot** | 0 | già puliti |
+
+**Post-wave ACTIVE ISO/year (Modules+Themes, excl. `cci-2026*`):** **~27** (pre ~52; story precedente citava ~56). Stub dated residui ~35.
+
+**Residui next:** Notify ignored `project_docs/roadmaps/*-2025-10` (~10) + root `work-completed`/`implementation-summary`; User archive leftovers 7; Rating ignored 6; Job/ICL 1 ciascuno.
+
+**Lezione:** la maggior parte del debito date è fuori da git index; wave “git mv only” sui tracked è piccola — archive va trattato con `mv`+stub senza `rm`, mai force-add di dump interi.

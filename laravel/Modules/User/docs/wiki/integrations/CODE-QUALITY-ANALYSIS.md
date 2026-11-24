@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_fnjbwE
+<<<<<<< .merge_file_5xr2PK
 qmd: "code quality analysis user"
 =======
->>>>>>> .merge_file_1EwYpx
+>>>>>>> .merge_file_Y23vl2
 ---
 
 # Code Quality Analysis - User Module

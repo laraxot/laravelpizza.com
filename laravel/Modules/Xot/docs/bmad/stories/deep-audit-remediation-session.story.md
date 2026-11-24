@@ -32,12 +32,13 @@ portfolio: **Cms assente in PTVX**; pattern imparati dai sibling FO.
 
 ## Aperti (priorità)
 
-1. Dual model Scheda/Progressioni (decisione versionata)
-2. Inverse deps Ptv/Sigma → Progressioni
-3. SoftDeletes dominio Progressioni
+1. ~~Dual model Scheda/Progressioni~~ — **ADR** [dual-model](../../../Progressioni/docs/bmad/dual-model-scheda-progressioni-decision.md): tenere entrambi; canon=`Scheda`; no merge
+2. Inverse deps Ptv/Sigma → Progressioni — **parziale**: Ptv Scheda/`getClassName` + CriteriPrecedenzaService via config; residuo Factory/AssenzaPolicy + Sigma — [inverse-deps](../../../Progressioni/docs/bmad/inverse-deps-ptv-sigma-decision.md)
+3. SoftDeletes Progressioni — **parziale**: claim massivo **smentito** (solo `coeff_progressione` ha `deleted_at` live); `Coeff` SoftDeletes; altri gated — [softdeletes](../../../Progressioni/docs/bmad/softdeletes-schema-first-decision.md)
 4. Feature Pest gap Progressioni + DB testing
-5. PHPStan Media/UI debito (story bootstrap)
+5. ~~PHPStan Media/UI~~ — **STALE** (Modules gate 0, 2026-11-24b)
 6. ~~ZipSchedaBulkAction / ExportXls authorize~~ — **chiusi** (pdfZip + xlsExport deny-default)
+7. ~~Cms residual Mailable + Zero Folio~~ — **chiusi 2026-11-24c** (import Cms off mail; LettIMail PdfData; Zero `[container0]` → `pages_cms_quarantine/`; UI helper no `use Cms`)
 
 
 
@@ -80,7 +81,7 @@ Da audit paralleli ([Progressioni residuali](4f800c8b-3a7e-49ca-a666-5538f255541
 | P1 | refreshed_at prima del job queue | **fix** timestamp in RefreshHaDirittoAction post-Check |
 | P1 | Compila `canEdit` vs `compila` | **fix** solo `Gate::authorize('compila')` |
 | P1 | Giomo Attribute accessor | **fix** getGgCatecoPosfunFuoriSedeAttribute |
-| P2 | Dual Scheda/Progressioni + inverse deps | **aperto** (decisione architetturale) |
+| P2 | Dual Scheda/Progressioni + inverse deps | **ADR + fix parziale** (vedi aperti 1–3 aggiornati 2026-11-24) |
 
 
 ## Follow-up agent closure
@@ -110,3 +111,12 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse \
 Unit policy aggiornato (deny-default). Esecuzione Pest su host con MySQL remoto
 può hangare >45s senza output → **skip documentato**; gate statico = PHPStan 0
 su Progressioni + ExportXlsAction.
+
+### Wave P2 2026-11-24d
+
+- PHPStan lane (Coeff + Ptv inverse-deps files): **0 errors**
+- Pest `CoeffSoftDeletesTest`: **skip** — `TestDatabaseGuard` rifiuta
+  `.env.testing` `DB_HOST=10.100.200.53` (non locale). Gate sostitutivo:
+  `rg -n "use SoftDeletes" Modules/Progressioni/app/Models/Coeff.php` + ADR.
+- ADR: dual-model / softdeletes-schema-first / inverse-deps in
+  `Modules/Progressioni/docs/bmad/`.

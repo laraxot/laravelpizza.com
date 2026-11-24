@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_AJG6Bd
+<<<<<<< .merge_file_KiDG0l
 qmd: "widget consolidated"
 =======
->>>>>>> .merge_file_UIehyz
+>>>>>>> .merge_file_zACJJG
 ---
 
 # widget — Consolidated Documentation
@@ -2435,7 +2435,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
-<<<<<<< .merge_file_AJG6Bd
+<<<<<<< .merge_file_KiDG0l
 - [Filament Widget Conventions](../../best-practices/filament-widgets.md)
 =======
 <<<<<<< HEAD
@@ -2447,7 +2447,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [Filament Widget Conventions](../../best-practices/filament-widgets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_UIehyz
+>>>>>>> .merge_file_zACJJG
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards

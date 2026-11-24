@@ -125,19 +125,7 @@ test('the first breadcrumb falls back to the brand and an existing isPartOf is k
 });
 
 test('business data turn the home organization into a local business', function (): void {
-<<<<<<< .merge_file_8r5c3N
-<<<<<<< .merge_file_uU26I1
-<<<<<<< .merge_file_uEV8l1
     $schemas = (new BuildHeadSchemaAction)->execute(
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_cUJJLs
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_Dz3A7T
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_B8nXsw
         isHome: true,
         brand: 'Example',
         homeUrl: 'https://example.test/it',
@@ -175,19 +163,7 @@ test('business data turn the home organization into a local business', function 
 });
 
 test('without business data the home organization stays a plain Organization', function (): void {
-<<<<<<< .merge_file_8r5c3N
-<<<<<<< .merge_file_uU26I1
-<<<<<<< .merge_file_uEV8l1
     $schemas = (new BuildHeadSchemaAction)->execute(
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_cUJJLs
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_Dz3A7T
-=======
-    $schemas = (new BuildHeadSchemaAction())->execute(
->>>>>>> .merge_file_B8nXsw
         isHome: true,
         brand: 'Example',
         homeUrl: 'https://example.test/it',

@@ -13,17 +13,8 @@ uses(TestCase::class);
 
 /*
  * PRD-02: accesso con SPID e CIE. I controller del tema Sixteen delegano a UpsertUserFromDigitalIdentityAction, che usa le
-<<<<<<< .merge_file_uirQi8
  * colonne dell'identita' digitale, definite nella migrazione owner `2026_11_12_120000_create_users_table` e in
  * `2026_11_11_000001_add_digital_identity_columns_to_users_table` (prima l'accesso falliva con errore SQL).
-=======
-<<<<<<< HEAD
- * colonne aggiunte dalla migrazione owner `2026_11_12_120000_create_users_table` (prima l'accesso falliva con errore SQL).
-=======
- * colonne dell'identita' digitale, definite nella migrazione owner `2026_11_12_120000_create_users_table` e in
- * `2026_11_11_000001_add_digital_identity_columns_to_users_table` (prima l'accesso falliva con errore SQL).
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Po7vTx
  */
 beforeEach(function (): void {
     config(['activitylog.enabled' => false]);
@@ -99,22 +90,8 @@ it('rejects a missing or malformed fiscal code', function (mixed $fiscalCode): v
     'missing' => [null],
     'too short' => ['ABC'],
     'symbols' => ['RSSMRA80A01H50;U'],
-<<<<<<< .merge_file_uirQi8
-=======
-<<<<<<< HEAD
-])->throws(InvalidArgumentException::class);
-
-it('only accepts spid and cie as identity methods', function (): void {
-    app(UpsertUserFromDigitalIdentityAction::class)->execute('password', digitalIdentityAttributes(), emailVerified: true);
-})->throws(InvalidArgumentException::class);
-=======
->>>>>>> .merge_file_Po7vTx
 ])->throws(InvalidArgumentException::class)->group('USER-SPID-UPSERT-INV-2');
 
 it('only accepts spid and cie as identity methods', function (): void {
     app(UpsertUserFromDigitalIdentityAction::class)->execute('password', digitalIdentityAttributes(), emailVerified: true);
 })->throws(InvalidArgumentException::class)->group('USER-SPID-UPSERT-INV-1');
-<<<<<<< .merge_file_uirQi8
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Po7vTx

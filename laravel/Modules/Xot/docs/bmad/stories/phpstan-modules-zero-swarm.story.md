@@ -75,6 +75,33 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 
 ## Diario
 
+- 2026-11-24c (laravel-testing-expert / Pest hang diagnose su 192.168.1.40):
+  **GateGuard facts (edit esistente):** nessun file nuovo; aggiorna diario di
+  questa story già referenziata da `docs/sprint-status.yaml`
+  (`Xot/phpstan-modules-zero-swarm`). Istruzione utente: skip documentato in
+  questa story + sprint-status riga Pest.
+  **Causa:** `.env.testing` `DB_HOST=10.100.200.53:3306` irraggiungibile
+  (tcp timeout 124) → rischio SYN-SENT hang; `TestDatabaseGuard` oggi rifiuta
+  host non-local → FAIL rapidi (~3–5s), non hang silenzioso sulla directory
+  Unit (pipe `| tail` può nascondere output). Unit puro
+  `NoCmsPhantomFolioImportsTest` → **2 passed / 0.45s**. Unlock locale:
+  override `DB_HOST=127.0.0.1` → Access denied `personale` (pwd testing ≠
+  `.env`); `pest-scratch-db.sh` connect ok ma migrate dup-index
+  `activity_log_subject_id_index`. **Esito:** skip strutturato / bloccato;
+  nessun edit PHP; no inventare credenziali.
+- 2026-11-24c (swarm parallelo): lane Pest/docs/deep-audit/boy-scout avviate.
+  Fix orchestratore: `User/resources/views/pages/` ripopolata (merge) con
+  login Volt `authenticate()` e register `@include pub_theme` nudo — viola ADR
+  FO login ownership. `git rm -r` 18 file; `pages_old/` resta SSoT stub.
+  Pest `NoCmsPhantomFolioImportsTest` **2 passed**. SoftDeletes Progressioni
+  ancora assente su Scheda (phpdoc `deleted_at` senza trait) → lane deep-audit.
+- 2026-11-24d (php-backend-agent / boy-scout post-zero): re-verify RAPIDO —
+  `pgrep` 5→0 (≤6); **no** full-tree; cold3 JSON `errors=0`/`file_errors=0`.
+  WT `UserForm`/`BaseProfile`/`InitialsAvatarProvider`: `php -l`+pint OK; fix
+  marker merge in InitialsAvatarProvider (un `use Str`, no `Safe\preg_replace`).
+  Lane flock User+Xot → EXIT 0, `boy-scout-user-xot-wt.json` 0/0. Prompt ECC:
+  `39-boy-scout`+`04-swarm` → BMAD in `Modules/<M>/docs/bmad/stories/`. No commit.
+  Debito: WT PHP uncommitted; Pest User Unit skip DB 192.168.1.40.
 - 2026-11-24b (Composer / orchestratore): gate freddo **VITTORIA** sotto
   `flock /tmp/ptvx-phpstan-modules.flock` → JSON
   `totals.errors=0` / `file_errors=0` EXIT 0
@@ -203,3 +230,23 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   (`setCellValue` con coordinate array); ignore `method.deprecatedClass`
   rimosso da `ImportValutatoriAction`. Commit: padre `c3109b9028`,
   modulo Xot `4c27f652d` (push laraxot/dev entrambi).
+
+- 2026-11-24 (sessione Devin, swarm 5 lane): gate freddo `analyse Modules`
+  → 37 errori in 3 moduli. Lane disgiunte: Rating (test su namespace
+  `HasRatingResource` rimosso apposta → test legacy eliminati, stub
+  `morphToManyX` allineato ai generics del parent), User (chiavi duplicate
+  lang `it` già fixate da lane parallela, verificato 33 lingue 0 dup), Xot
+  (`@use HasCommonScopes<static>` su probe + `Module.php`, narrowing
+  `is_string` in `ModuleRouteEntrypointsExistTest`).
+  **Marker `.merge_file_*` residui** in 8 file Xot (ParseError reale,
+  introdotti dopo il gate da merge_remote_repo): risolti source-first
+  (RelationX → lato pivotClass+TPivot; XotBasePage → alias
+  `interactsWithFormsForm`; EnvPage → niente `$view` dashboard;
+  HasCommonScopes → `@template TModel`+`Builder<TModel>`; import `Safe\preg_*`
+  inutilizzati rimossi; AssetAction docblock IT). InitialsAvatarProvider
+  fixato da lane concorrente (lock rispettato). Pest mirato 4 passed
+  (override DB_HOST=127.0.0.1). Prompts: 15 file corretti. Docs: ~2.400 .md
+  frontmatter/qmd. **GATE FINALE: `phpstan analyse Modules` → EXIT 0,
+  `[OK] No errors`** dopo risoluzione marker. Pest extra: Rating unit
+  174 passed/2 skipped (49s), Xot traits/models 13 passed — tutto con
+  DB_HOST=127.0.0.1.

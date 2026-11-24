@@ -24,16 +24,9 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-<<<<<<< .merge_file_jZfwAY
-            'label' => 'login_at',
-        ],
-        'ip_address' => [
-            'label' => 'Indirizzo IP',
-=======
             'label' => 'Ora accesso',
         ],
         'ip_address' => [
->>>>>>> .merge_file_zmCyzQ
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -71,10 +64,6 @@ return [
             'description' => '',
         ],
         'user' => [
-<<<<<<< .merge_file_jZfwAY
-            'label' => 'Utente',
-=======
->>>>>>> .merge_file_zmCyzQ
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -84,25 +73,6 @@ return [
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
-<<<<<<< .merge_file_jZfwAY
-            'label' => 'reorderRecords',
-        ],
-        'openColumnManager' => [
-            'icon' => 'openColumnManager',
-            'label' => 'openColumnManager',
-        ],
-        'applyTableColumnManager' => [
-            'icon' => 'applyTableColumnManager',
-            'label' => 'applyTableColumnManager',
-        ],
-        'resetFilters' => [
-            'icon' => 'resetFilters',
-            'label' => 'resetFilters',
-        ],
-        'applyFilters' => [
-            'icon' => 'applyFilters',
-            'label' => 'applyFilters',
-=======
             'label' => 'Riordina',
         ],
         'openColumnManager' => [
@@ -120,7 +90,6 @@ return [
         'applyFilters' => [
             'icon' => 'applyFilters',
             'label' => 'Applica filtri',
->>>>>>> .merge_file_zmCyzQ
         ],
         'openFilters' => [
             'icon' => 'openFilters',

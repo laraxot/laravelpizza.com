@@ -13,15 +13,7 @@ use Modules\User\Models\Role;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< .merge_file_dXoSr0
 uses(TestCase::class);
-=======
-<<<<<<< HEAD
-uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
->>>>>>> .merge_file_nUH9we
 
 class UserManagementBusinessLogicTest extends TestCase
 {

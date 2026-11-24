@@ -13,15 +13,7 @@ use Mockery\MockInterface;
 use Modules\User\Models\Tenant;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< .merge_file_GQNjMH
 uses(TestCase::class);
-=======
-<<<<<<< HEAD
-uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
->>>>>>> .merge_file_aXPYuD
 
 class TenantTest extends TestCase
 {

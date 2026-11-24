@@ -6,13 +6,8 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome visualizzato',
-<<<<<<< .merge_file_bK7Fn5
-            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
-            'placeholder' => 'Inserisci il nome visualizzato',
-=======
             'placeholder' => 'Inserisci il nome visualizzato',
             'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
->>>>>>> .merge_file_MDoDRr
             'description' => 'Nome visualizzato',
         ],
         'created_at' => [
@@ -61,13 +56,8 @@ return [
             'placeholder' => 'Incolla il token',
         ],
         'state' => [
-<<<<<<< .merge_file_bK7Fn5
-            'description' => 'Stato corrente',
-            'label' => 'Stato',
-=======
             'label' => 'Stato',
             'description' => 'Stato corrente',
->>>>>>> .merge_file_MDoDRr
             'placeholder' => 'Seleziona lo stato',
             'helper_text' => 'Stato del record',
         ],
@@ -76,7 +66,6 @@ return [
             'placeholder' => 'Seleziona il tipo',
             'helper_text' => 'Tipo di utente o record',
             'description' => 'Tipo',
-<<<<<<< .merge_file_bK7Fn5
         ],
         'roles' => [
             'label' => 'Ruoli',
@@ -86,8 +75,6 @@ return [
         ],
         'updated_at' => [
             'label' => 'Aggiornato il',
-=======
->>>>>>> .merge_file_MDoDRr
         ],
     ],
     'actions' => [

@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_rDP6MG
+<<<<<<< .merge_file_O756hi
 qmd: "ottimizzazioni consolidated"
 =======
->>>>>>> .merge_file_W5xgNU
+>>>>>>> .merge_file_8ObHRc
 ---
 
 # ottimizzazioni — Consolidated Documentation

@@ -7,15 +7,7 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< .merge_file_uu4Syh
 uses(TestCase::class);
-=======
-<<<<<<< HEAD
-uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0QRvVb
 
 class DeviceTest extends TestCase
 {

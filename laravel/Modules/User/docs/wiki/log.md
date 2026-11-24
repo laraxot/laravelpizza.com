@@ -14,13 +14,13 @@ related:
 =======
 <<<<<<< HEAD
   - "./agents.md"
-<<<<<<< .merge_file_WmlQII
+<<<<<<< .merge_file_2RBtzJ
 =======
 =======
   - "./AGENTS.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_90b8j1
+>>>>>>> .merge_file_VNy3bD
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"
@@ -143,7 +143,7 @@ related:
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
 - Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-<<<<<<< .merge_file_WmlQII
+<<<<<<< .merge_file_2RBtzJ
 - Schema: `docs/.schema/wiki_schema.md`
 =======
 <<<<<<< HEAD
@@ -155,7 +155,7 @@ related:
 - Schema: `docs/.schema/wiki_schema.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_90b8j1
+>>>>>>> .merge_file_VNy3bD
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 
 ## [2026-04-20] bugfix | profiles.uuid nella migrazione canonica unica

@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_5jMFLB
+<<<<<<< .merge_file_MLQLVN
 qmd: "business logic analysis user"
 =======
->>>>>>> .merge_file_Yp1BEp
+>>>>>>> .merge_file_2FHB8u
 ---
 
 # User Module - Business Logic Analysis

@@ -5,10 +5,13 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_cedqKN
-qmd: "dry consolidated"
+<<<<<<< .merge_file_L2XRaW
+<<<<<<< HEAD
 =======
->>>>>>> .merge_file_zf5CEL
+qmd: "dry consolidated"
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WkCY6h
 ---
 
 # dry — Consolidated Documentation
@@ -319,19 +322,19 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
-<<<<<<< .merge_file_cedqKN
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
-=======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< .merge_file_L2XRaW
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_WkCY6h
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_zf5CEL
 
 ---
 
@@ -479,19 +482,19 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
-<<<<<<< .merge_file_cedqKN
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
-=======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< .merge_file_L2XRaW
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_WkCY6h
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_zf5CEL
 - [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
 
 ---
@@ -638,19 +641,19 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
-<<<<<<< .merge_file_cedqKN
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
-=======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< .merge_file_L2XRaW
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 =======
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 >>>>>>> laraxot/dev
+>>>>>>> .merge_file_WkCY6h
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_zf5CEL
 
 ---
 

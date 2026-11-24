@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_r197VX
+<<<<<<< .merge_file_6aHwMW
 qmd: "query consolidated"
 =======
->>>>>>> .merge_file_uKN6ny
+>>>>>>> .merge_file_EE04LR
 ---
 
 # query — Consolidated Documentation

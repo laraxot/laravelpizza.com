@@ -15,10 +15,10 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< .merge_file_ND4Qls
+<<<<<<< .merge_file_rJxRnM
 qmd: "socialite admin configuration oauth provider settings"
 =======
->>>>>>> .merge_file_jZpT2m
+>>>>>>> .merge_file_AYqDao
 ---
 
 # Socialite Admin Configuration

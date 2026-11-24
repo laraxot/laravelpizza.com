@@ -1,10 +1,10 @@
 ---
 title: analyst-report
 module: User
-<<<<<<< .merge_file_IPa03y
+<<<<<<< .merge_file_MIUYhp
 qmd: "analyst report analystreport"
 =======
->>>>>>> .merge_file_voFTBS
+>>>>>>> .merge_file_rrcD2t
 ---
 
 # User Module — Analyst Report

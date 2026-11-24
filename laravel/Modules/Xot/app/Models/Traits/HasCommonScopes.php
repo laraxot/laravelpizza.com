@@ -29,11 +29,10 @@ use Illuminate\Support\Carbon;
  * ```
  *
  * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md - Proposta 4: Model Traits
- * @see Modules/Meetup/docs/contracts/event-published-scope.md - mai su XotBaseModel (scopePublished)
- * @see Modules/Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md - consumer: NotificationTemplate|Module
  *
  * Trait di piattaforma riusabile: consumer nei modelli dominio.
- * Wire solo su NotificationTemplate e/o Module — mai su XotBaseModel.
+ *
+ * @template TModel of Model
  */
 trait HasCommonScopes
 {
@@ -42,9 +41,8 @@ trait HasCommonScopes
      *
      * Trovato identico in piu' moduli che condividono questo scope.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeActive(Builder $query): Builder
@@ -55,9 +53,8 @@ trait HasCommonScopes
     /**
      * Scope query to only inactive records.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeInactive(Builder $query): Builder
@@ -70,9 +67,8 @@ trait HasCommonScopes
      *
      * Records with published_at <= now().
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopePublished(Builder $query): Builder
@@ -86,9 +82,8 @@ trait HasCommonScopes
      *
      * Records with published_at = null or > now().
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeDraft(Builder $query): Builder
@@ -102,9 +97,8 @@ trait HasCommonScopes
     /**
      * Scope query to records created after a date.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -115,9 +109,8 @@ trait HasCommonScopes
     /**
      * Scope query to records created before a date.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedBefore(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -128,9 +121,8 @@ trait HasCommonScopes
     /**
      * Scope query to records updated after a date.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeUpdatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -141,9 +133,8 @@ trait HasCommonScopes
     /**
      * Scope query to records created by a specific user.
      *
-     * @param  Builder<$this>  $query
-     * @return Builder<$this>
-     *
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedBy(Builder $query, string|int $userId): Builder

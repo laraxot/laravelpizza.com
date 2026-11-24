@@ -70,7 +70,9 @@ use function Safe\json_encode;
  */
 final class Module extends BaseModel
 {
+    /** @use HasCommonScopes<static> */
     use HasCommonScopes;
+
     use ModuleStatus;
     use Sushi;
 

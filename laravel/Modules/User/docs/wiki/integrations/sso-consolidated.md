@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_2kA5Gt
+<<<<<<< .merge_file_luqfIP
 qmd: "sso consolidated"
 =======
->>>>>>> .merge_file_erjsO5
+>>>>>>> .merge_file_CHxWBa
 ---
 
 # sso — Consolidated Documentation

@@ -5,10 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_vQzIU5
+<<<<<<< .merge_file_OjYowa
 qmd: "business consolidated"
 =======
->>>>>>> .merge_file_hg850K
+>>>>>>> .merge_file_j55Zer
 ---
 
 # business — Consolidated Documentation

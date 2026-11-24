@@ -7,15 +7,7 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Permission;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< .merge_file_7d0ggk
 uses(TestCase::class);
-=======
-<<<<<<< HEAD
-uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GxO4Gq
 
 class PermissionTest extends TestCase
 {
