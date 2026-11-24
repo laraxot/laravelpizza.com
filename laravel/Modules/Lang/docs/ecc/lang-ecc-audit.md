@@ -15,8 +15,11 @@ related:
 
 ## Contratto PTVX
 
+<<<<<<< .merge_file_AQcGPF
 <<<<<<< .merge_file_j4Lbpv
 =======
+=======
+>>>>>>> .merge_file_aK92VK
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_Csg2cc
@@ -37,7 +40,10 @@ PHPStan + Pest, aggiornamento docs/QMD.
 =======
 >>>>>>> .merge_file_u0bqOk
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AQcGPF
 >>>>>>> .merge_file_vksSPE
+=======
+>>>>>>> .merge_file_aK92VK
 ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Dettaglio: [audit profondo](../bmad/audits/lang-audit.md).
 
 ## Checklist (stato misurato 2026-11-16)
@@ -56,8 +62,11 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 | Voce | N |
 |---|---:|
 | app PHP | 72 |
+<<<<<<< .merge_file_AQcGPF
 <<<<<<< .merge_file_j4Lbpv
 =======
+=======
+>>>>>>> .merge_file_aK92VK
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_Csg2cc
@@ -82,7 +91,10 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 =======
 >>>>>>> .merge_file_u0bqOk
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AQcGPF
 >>>>>>> .merge_file_vksSPE
+=======
+>>>>>>> .merge_file_aK92VK
 | test PHP / `*Test.php` | 51 / 29 |
 | Models / Policy / Resource | 7 / 4 / 2 |
 | Pagine Resource / Widget | 9 / 1 |

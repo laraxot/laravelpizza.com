@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 <<<<<<< .merge_file_m7K7wi
@@ -12,6 +13,8 @@ updated: 2026-11-24
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L
 <<<<<<< .merge_file_TBKPCF
 <<<<<<< HEAD
 =======
@@ -33,6 +36,7 @@ updated: 2026-11-23
 =======
 updated: 2026-11-24
 >>>>>>> .merge_file_DT9jxC
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 >>>>>>> .merge_file_qroGvv
@@ -40,6 +44,8 @@ updated: 2026-11-24
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L
 ---
 
 # ADR del modulo Geo
@@ -93,6 +99,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 
 ## Decisioni
 
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 <<<<<<< .merge_file_m7K7wi
@@ -101,6 +108,8 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L
 <<<<<<< .merge_file_TBKPCF
 <<<<<<< HEAD
 - [ADR — Tile e geocoding OpenStreetMap passano dal nostro server](osm-proxy-tile-nominatim.md)
@@ -111,6 +120,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 - [Geocoding e tile OSM passano dal proxy](geo-uses-proxy-for-osm.md)
 >>>>>>> laraxot/dev
 =======
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 >>>>>>> .merge_file_qroGvv
@@ -118,12 +128,15 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L
 - [Tile e geocoding OpenStreetMap passano dal nostro server](osm-proxy-tile-nominatim.md) — il browser parla solo con il nostro dominio; il server rispetta cache, User-Agent e 1 richiesta/s di OSMF.
 - [Geocoding e tile OSM passano dal proxy](geo-uses-proxy-for-osm.md) — versione breve della stessa decisione: throttling, cache, validazione e disattivazione del provider in un punto solo.
 - [Il proxy Geo resta nella cache delle rotte](route-cache-includes-proxy.md) — il deploy rigenera la cache con `route:trans:cache`; un 404 HTML su una tile segnala una cache obsoleta.
 - [Geocodifica: provider preferito da configurazione, poi fallback letterale](geocoding-preferred-provider-with-fallback.md) — `geo.driver` sceglie il primo provider; la mappa resta nel metodo per restare tipizzata.
 - [Componenti mappa Lit in Light DOM con pane Leaflet protetto](map-components-lit-light-dom.md) — `createRenderRoot`, `guard([])` e `ResizeObserver` per mappe che sopravvivono a step, tab e Livewire.
 - [Le integrazioni HTTP geografiche sono Actions, non Services](no-service-geo-integrations.md) — `BaseGeoService` va rimosso; use case solo in Queueable Actions con contratto in `docs/contracts/`.
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 <<<<<<< .merge_file_m7K7wi
@@ -136,11 +149,15 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 =======
 >>>>>>> .merge_file_DT9jxC
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_DT9jxC
+>>>>>>> .merge_file_pSxS9L
 
 ## Decisioni precedenti (formato libero, non ancora ADR)
 
 - [geo-geocoding-driver-consolidation](../wiki/decisions/geo-geocoding-driver-consolidation.md)
 - [standardized-geo-architecture](../wiki/decisions/standardized-geo-architecture.md)
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 <<<<<<< .merge_file_m7K7wi
@@ -149,6 +166,8 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L
 <<<<<<< .merge_file_TBKPCF
 <<<<<<< HEAD
 =======
@@ -182,6 +201,7 @@ nuovo ADR e segna il vecchio `status: superseded`.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_DT9jxC
+<<<<<<< .merge_file_9x8UGw
 <<<<<<< .merge_file_zUzsTW
 <<<<<<< .merge_file_dsCQ58
 >>>>>>> .merge_file_qroGvv
@@ -189,3 +209,5 @@ nuovo ADR e segna il vecchio `status: superseded`.
 >>>>>>> .merge_file_qeyeUr
 =======
 >>>>>>> .merge_file_JF8S6r
+=======
+>>>>>>> .merge_file_pSxS9L

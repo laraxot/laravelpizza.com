@@ -3,7 +3,15 @@ title: "netfun action errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_FB7QYs
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_G74RtM
 qmd: "netfun action errors"
 issues: []
 discussions: []

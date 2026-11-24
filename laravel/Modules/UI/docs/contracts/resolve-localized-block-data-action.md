@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_FTQ5tm
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_K3viOM
 title: "Contratto — ResolveLocalizedBlockDataAction (UI)"
 type: contract
 action: "Modules\UI\Actions\Block\ResolveLocalizedBlockDataAction"
@@ -46,6 +49,7 @@ Sorgente: `app/Actions/Block/ResolveLocalizedBlockDataAction.php`. Perché è fa
 - Non sceglie la vista né controlla che esista (`Render\Block`).
 - Non mette in cache il risultato.
 - Non va "irrobustita" con `use Modules\Cms\...` o con un `require` di Cms in `module.json`: rompe l'indipendenza di UI.
+<<<<<<< .merge_file_FTQ5tm
 =======
 title: "ResolveLocalizedBlockDataAction — contratto"
 type: contract
@@ -89,3 +93,5 @@ Dipendono dal Cms: l'Action stessa non scrive nulla. Eventuali effetti dell'`exe
 - Non dichiara la dipendenza da `Modules\Cms`: il nome è una stringa, il legame è a runtime.
 - I test del modulo usano uno stub della classe Cms (`tests/Unit/Helpers/UiCoverageMissHelpers.php`), non il Cms reale.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_K3viOM

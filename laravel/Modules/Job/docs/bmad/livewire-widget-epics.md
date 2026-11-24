@@ -5,6 +5,7 @@ module: Job
 related:
   - ../stories/12.1.retire-job-http-livewire.story.md
   - ./livewire-inventory.md
+qmd: "livewire widget epics"
 ---
 
 # Epic 12

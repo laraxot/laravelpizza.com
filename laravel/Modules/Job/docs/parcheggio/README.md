@@ -35,6 +35,7 @@ che c'e' adesso: in uno di questi, a ottobre, c'erano 135 righe di lavoro non
 fuso che per poco non sono state cancellate. Quando il lavoro e' finito,
 cancella il file parcheggiato.
 
+<<<<<<< .merge_file_n2kZnV
 <<<<<<< .merge_file_diXikg
 <<<<<<< .merge_file_mSfd3O
 ## Tornati col sync del 21/11 e ritirati di nuovo (24/11/2026)
@@ -70,5 +71,7 @@ e `tests/Arch/debt.php` lo richiedono) e `resources/views/livewire/job/status.bl
 >>>>>>> .merge_file_YcxFY2
 =======
 >>>>>>> .merge_file_Y5NIED
+=======
+>>>>>>> .merge_file_Femi4Q
 Tracciato in
 [module_quaeris_fila5#61](https://github.com/laraxot/module_quaeris_fila5/issues/61).

@@ -4,9 +4,6 @@
 <<<<<<< .merge_file_hRCawF
 status: accepted
 module: Activity
-<<<<<<< HEAD
-qmd: "activity audit is append oriented laudit"
-=======
 =======
 =======
 >>>>>>> .merge_file_jAU5VI
@@ -26,7 +23,6 @@ updated: 2026-11-24
 >>>>>>> .merge_file_jAU5VI
 =======
 >>>>>>> .merge_file_ddqjJg
->>>>>>> 9d535350 (chore(Activity): sync working tree (docs, phpstan fixes, wip))
 ---
 
 # L'audit delle attività è append-oriented

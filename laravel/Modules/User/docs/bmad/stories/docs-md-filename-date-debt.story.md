@@ -70,3 +70,12 @@ I duplicati di un canonico restano come alias `superseded`.
   (`phpstan-fixes-2025`, `phpstan-fixes-gennaio-2025*`, `roadmap-2025`,
   `translation-syntax-fixes-2025`, `git-conflicts-resolution-2025-01-27`).
   Residui ISO/year **attivi** User: **24** (soprattutto `wiki/archive/**`).
+
+<!-- GateGuard facts: (1) no supersede — append only to existing User companion docs-md-filename-date-debt.story.md; (2) linked-from: Xot docs-md-filename-date-debt + sprint-status; (3) edit existing not new file; (4) user: "Append diario story Xot + companion modulo se esiste". -->
+
+- 2026-11-24c (docs-guardian): wave `wiki/archive/**` (+ 2 legacy). Path **gitignored**
+  (`User/docs/.gitignore` → `archive`) → **18 filesystem `mv`+stub**, no `rm`, no force-add.
+  Target `*-historical.md` / `*-dated-historical.md` + stub dated → canon
+  (`baseuser-refactoring-completed`, `phpstan-fixes`, `quality-status`, …).
+  Link min: `docs/index.md` `quality-status-2025-11` → `wiki/archive/…` stub.
+  Residui User ACTIVE dated: **7** (`historical/*` + `old_tasks/*` leftover).

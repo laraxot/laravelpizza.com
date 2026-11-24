@@ -62,6 +62,7 @@ cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
+<<<<<<< .merge_file_d8Tw64
 <<<<<<< .merge_file_89vdWq
 <<<<<<< .merge_file_NUGJRV
 <<<<<<< .merge_file_vi5MRA
@@ -71,6 +72,8 @@ npm install
 >>>>>>> .merge_file_ETQJIX
 =======
 >>>>>>> .merge_file_OaXhNL
+=======
+>>>>>>> .merge_file_DcOGIK
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -80,6 +83,7 @@ npm install
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_d8Tw64
 <<<<<<< .merge_file_89vdWq
 <<<<<<< .merge_file_NUGJRV
 >>>>>>> .merge_file_jlwziP
@@ -87,6 +91,8 @@ npm install
 >>>>>>> .merge_file_ETQJIX
 =======
 >>>>>>> .merge_file_OaXhNL
+=======
+>>>>>>> .merge_file_DcOGIK
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -151,6 +157,7 @@ npm cache clean --force
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
 npm install
+<<<<<<< .merge_file_d8Tw64
 <<<<<<< .merge_file_89vdWq
 <<<<<<< .merge_file_NUGJRV
 <<<<<<< .merge_file_vi5MRA
@@ -159,10 +166,13 @@ npm install
 >>>>>>> .merge_file_ETQJIX
 =======
 >>>>>>> .merge_file_OaXhNL
+=======
+>>>>>>> .merge_file_DcOGIK
 <<<<<<< HEAD
 =======
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_d8Tw64
 <<<<<<< .merge_file_89vdWq
 <<<<<<< .merge_file_NUGJRV
 >>>>>>> .merge_file_jlwziP
@@ -170,6 +180,8 @@ npm install
 >>>>>>> .merge_file_ETQJIX
 =======
 >>>>>>> .merge_file_OaXhNL
+=======
+>>>>>>> .merge_file_DcOGIK
 npm install && npm run build
 ```
 

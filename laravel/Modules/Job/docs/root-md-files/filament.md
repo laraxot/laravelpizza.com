@@ -1,4 +1,8 @@
-
+---
+title: "Filament"
+type: note
+qmd: "filament"
+---
 https://gitlab.com/amvisor/filament-failed-jobs/-/blob/master/src/FilamentFailedJobsServiceProvider.php
 
 https://github.com/croustibat/filament-jobs-monitor

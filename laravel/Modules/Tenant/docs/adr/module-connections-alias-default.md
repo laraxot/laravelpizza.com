@@ -6,7 +6,10 @@ created: 2026-11-24
 updated: 2026-11-24
 related:
   - ../../app/Providers/TenantServiceProvider.php
+<<<<<<< .merge_file_nvLJX0
 qmd: "connections alias default ogni connessione punta"
+=======
+>>>>>>> .merge_file_6jDsDu
 ---
 
 # ADR: ogni modulo ha la sua connessione, alias della default se punta allo stesso database

@@ -1,3 +1,8 @@
+---
+title: "PHPStan Compliance - Job Module"
+type: note
+qmd: "phpstan compliance"
+---
 # PHPStan Compliance - Job Module
 
 ## Status: ✅ FULLY COMPLIANT

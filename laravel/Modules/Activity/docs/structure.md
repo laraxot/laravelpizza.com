@@ -292,6 +292,7 @@ workbench/routes
 ## Collegamenti
 
 - [Torna a README](./README.md)
+<<<<<<< .merge_file_SO2P37
 <<<<<<< .merge_file_BQQyJz
 <<<<<<< .merge_file_89rpI2
 <<<<<<< .merge_file_MWEf2t
@@ -301,6 +302,8 @@ workbench/routes
 >>>>>>> .merge_file_UXNRCg
 =======
 >>>>>>> .merge_file_e6Byrz
+=======
+>>>>>>> .merge_file_BKa6h8
 <<<<<<< HEAD
 - [Torna a README](./README.md)
 =======
@@ -314,6 +317,7 @@ workbench/routes
 - [Torna a README](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_SO2P37
 <<<<<<< .merge_file_BQQyJz
 <<<<<<< .merge_file_89rpI2
 >>>>>>> .merge_file_xm93TP
@@ -321,6 +325,8 @@ workbench/routes
 >>>>>>> .merge_file_UXNRCg
 =======
 >>>>>>> .merge_file_e6Byrz
+=======
+>>>>>>> .merge_file_BKa6h8
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 

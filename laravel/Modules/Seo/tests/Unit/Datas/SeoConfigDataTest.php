@@ -9,6 +9,10 @@ use Modules\Seo\Http\Middleware\RedirectToCanonicalPath;
 use Modules\Seo\Tests\Support\FakeTenantSeoConfig;
 use Modules\Seo\Tests\TestCase;
 use Symfony\Component\HttpFoundation\Response;
+<<<<<<< .merge_file_zgBHcH
+=======
+use Modules\Seo\Tests\TestCase;
+>>>>>>> .merge_file_QXWzvS
 use Webmozart\Assert\Assert;
 
 uses(TestCase::class);

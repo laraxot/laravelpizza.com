@@ -3,7 +3,15 @@ title: "modern email design patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_amtqgP
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_FM8kgc
 qmd: "modern email design patterns"
 issues: []
 discussions: []

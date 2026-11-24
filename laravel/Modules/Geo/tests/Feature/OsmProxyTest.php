@@ -58,6 +58,7 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
     Http::assertSent(fn (Request $request): bool => $request->url() === 'https://tile.openstreetmap.org/13/4350/2985.png'
         && $request->header('User-Agent')[0] === 'CivicApp/osm-proxy (+https://civic.example; ops@civic.example)'
         && $request->header('Referer')[0] === 'https://civic.example/it/tickets');
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -67,6 +68,8 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -80,6 +83,7 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
 =======
 })->group('GEO-TILE-INV-3');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -87,6 +91,8 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('keeps a tile at least 7 days even when OSM says one hour, then revalidates it with a conditional request', function (): void {
     Http::fakeSequence('tile.openstreetmap.org/*')
@@ -105,6 +111,7 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
     expect($response->getContent())->toBe(osmPng());
     Http::assertSentCount(2);
     Http::assertSent(fn (Request $request): bool => $request->hasHeader('If-None-Match', '"v1"'));
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -114,6 +121,8 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -127,6 +136,7 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
 =======
 })->group('GEO-TILE-INV-1', 'GEO-TILE-INV-2', 'GEO-TILE-INV-4');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -134,6 +144,8 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('serves the stale copy when OSM is down', function (): void {
     Http::fakeSequence('tile.openstreetmap.org/*')
@@ -146,6 +158,7 @@ it('serves the stale copy when OSM is down', function (): void {
     $response = $this->get('/api/geo/tiles/osm/3/1/1.png');
     $response->assertOk();
     expect($response->getContent())->toBe(osmPng());
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -155,6 +168,8 @@ it('serves the stale copy when OSM is down', function (): void {
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -168,6 +183,7 @@ it('serves the stale copy when OSM is down', function (): void {
 =======
 })->group('GEO-TILE-INV-5');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -175,6 +191,8 @@ it('serves the stale copy when OSM is down', function (): void {
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('answers 404 outside the tile grid without asking OSM', function (string $path): void {
     Http::fake();
@@ -201,6 +219,7 @@ it('proxies an address search in json, in the page language, and caches it', fun
         && ! isset($request['polygon_geojson'])
         && is_string($userAgent = $request->header('User-Agent')[0] ?? null)
         && str_starts_with($userAgent, 'CivicApp/osm-proxy'));
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -210,6 +229,8 @@ it('proxies an address search in json, in the page language, and caches it', fun
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -223,6 +244,7 @@ it('proxies an address search in json, in the page language, and caches it', fun
 =======
 })->group('GEO-NOMINATIM-INV-2', 'GEO-NOMINATIM-INV-3', 'GEO-NOMINATIM-INV-4', 'GEO-NOMINATIM-INV-6');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -230,6 +252,8 @@ it('proxies an address search in json, in the page language, and caches it', fun
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('rejects invalid geocoding requests without calling Nominatim', function (string $path, int $status): void {
     Http::fake();
@@ -240,6 +264,7 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
     'query too short' => ['/api/geo/nominatim/search?q=ab', 422],
     'latitude out of range' => ['/api/geo/nominatim/reverse?lat=95&lon=11', 422],
     'unknown endpoint' => ['/api/geo/nominatim/lookup?osm_ids=R1', 404],
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -249,6 +274,8 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 ]);
@@ -262,6 +289,7 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
 =======
 ])->group('GEO-NOMINATIM-INV-5');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -269,6 +297,8 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('can be switched off without a software update, as the Nominatim policy requires', function (): void {
     config(['geo.config.osm_proxy.nominatim.enabled' => false]);
@@ -276,6 +306,7 @@ it('can be switched off without a software update, as the Nominatim policy requi
 
     $this->getJson('/api/geo/nominatim/reverse?lat=43.7&lon=11.2')->assertStatus(503);
     Http::assertNothingSent();
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -285,6 +316,8 @@ it('can be switched off without a software update, as the Nominatim policy requi
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -298,6 +331,7 @@ it('can be switched off without a software update, as the Nominatim policy requi
 =======
 })->group('GEO-NOMINATIM-INV-7');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -305,6 +339,8 @@ it('can be switched off without a software update, as the Nominatim policy requi
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 
 it('never sends Nominatim more than one request per second for the whole site', function (): void {
     Http::fake(['nominatim.openstreetmap.org/*' => Http::response([])]);
@@ -315,6 +351,7 @@ it('never sends Nominatim more than one request per second for the whole site', 
 
     Http::assertSentCount(1);
     Sleep::assertSlept(fn (CarbonInterval $duration): bool => $duration->totalSeconds === 1.0, 1);
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 <<<<<<< .merge_file_WNhrmp
@@ -324,6 +361,8 @@ it('never sends Nominatim more than one request per second for the whole site', 
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39
 <<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
@@ -337,6 +376,7 @@ it('never sends Nominatim more than one request per second for the whole site', 
 =======
 })->group('GEO-NOMINATIM-INV-1');
 >>>>>>> .merge_file_Fzv2bh
+<<<<<<< .merge_file_fgTtLF
 <<<<<<< .merge_file_6Zv1Tn
 <<<<<<< .merge_file_bKuHMa
 >>>>>>> .merge_file_G9OGsp
@@ -344,3 +384,5 @@ it('never sends Nominatim more than one request per second for the whole site', 
 >>>>>>> .merge_file_i9aQs0
 =======
 >>>>>>> .merge_file_42kQxI
+=======
+>>>>>>> .merge_file_3eiH39

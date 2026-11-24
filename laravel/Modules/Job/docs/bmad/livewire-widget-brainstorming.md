@@ -4,6 +4,7 @@ type: brainstorming
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget brainstorming artisan"
 ---
 
 # Brainstorming

@@ -65,6 +65,7 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 - 4 varianti di `business-logic-analysis*.md` (compreso uno SCREAMING_CASE)
 <<<<<<< HEAD
 - `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
+<<<<<<< .merge_file_8bj6r4
 <<<<<<< .merge_file_NFMHS4
 <<<<<<< .merge_file_1F4jVM
 <<<<<<< .merge_file_Lo8JKt
@@ -74,6 +75,8 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 >>>>>>> .merge_file_HmmVkm
 =======
 >>>>>>> .merge_file_dsYZKI
+=======
+>>>>>>> .merge_file_iR0N3Q
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

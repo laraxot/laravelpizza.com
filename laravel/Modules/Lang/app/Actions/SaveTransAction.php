@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Scrive una chiave nel file di lingua del modulo: `execute()` per le chiavi mancanti (solo dove l'interruttore lo
  * permette), `persist()` per il salvataggio voluto dal pannello di traduzione.
  *
+<<<<<<< .merge_file_zPGCvK
 <<<<<<< .merge_file_heKIzo
 <<<<<<< .merge_file_gMRW52
  * @see docs/contracts/save-trans-action.md
@@ -23,6 +24,8 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> .merge_file_da0hRw
 =======
 >>>>>>> .merge_file_hCa4fz
+=======
+>>>>>>> .merge_file_Olvq4g
  * @contract docs/contracts/save-trans-action.md
  */
 class SaveTransAction

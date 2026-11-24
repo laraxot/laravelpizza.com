@@ -16,7 +16,10 @@ related:
   - ../../stories/7.1.phpstan-filament-state-components.story.md
   - ../../stories/7.2.phpstan-test-bootstrap-security.story.md
   - ../../stories/7.4.phpstan-business-deep-coverage-contracts.story.md
+<<<<<<< .merge_file_uDgqDC
 qmd: "continuazione domani bmad regressione marker docsarchitecturemd"
+=======
+>>>>>>> .merge_file_mgjP6o
 ---
 
 # UI — Continuazione Domani

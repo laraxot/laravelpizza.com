@@ -7,6 +7,7 @@ status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, job]
+qmd: "phpstan cleanup job dev"
 ---
 
 # [DEV] PHPStan cleanup — Job

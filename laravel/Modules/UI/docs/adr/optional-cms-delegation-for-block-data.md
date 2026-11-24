@@ -8,7 +8,10 @@ module: UI
 tags: [adr, blocks, cms, dependencies, localization]
 related:
   - ../contracts/resolve-localized-block-data-action.md
+<<<<<<< .merge_file_jA3Agz
 qmd: "optional cms delegation for block data"
+=======
+>>>>>>> .merge_file_ayf0sa
 ---
 
 # ADR: delega opzionale a Cms per i dati dei blocchi

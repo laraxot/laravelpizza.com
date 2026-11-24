@@ -15,9 +15,12 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-audit.md](./audits/lang-audit.md).
 
+<<<<<<< .merge_file_KP5ILa
 <<<<<<< .merge_file_FFk0sO
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
 =======
+=======
+>>>>>>> .merge_file_YeWk42
 <<<<<<< HEAD
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
 =======
@@ -27,15 +30,21 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-a
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
 >>>>>>> .merge_file_mrLFNn
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_KP5ILa
 >>>>>>> .merge_file_n7vxIv
+=======
+>>>>>>> .merge_file_YeWk42
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_KP5ILa
 <<<<<<< .merge_file_FFk0sO
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 =======
+=======
+>>>>>>> .merge_file_YeWk42
 <<<<<<< HEAD
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 =======
@@ -60,7 +69,10 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-a
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 >>>>>>> .merge_file_mrLFNn
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_KP5ILa
 >>>>>>> .merge_file_n7vxIv
+=======
+>>>>>>> .merge_file_YeWk42
 | Models / Policy / Resource / Widget | 7 / 4 / 2 / 1 |
 | Actions / Services / Migration / Lang IT | 17 / 0 / 11 / 33 |
 | Marker conflitto / `RefreshDatabase` / `dd()` | 0 / 0 / 0 |

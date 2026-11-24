@@ -1,3 +1,8 @@
+---
+title: "Job Module - commands Index"
+type: note
+qmd: "commands"
+---
 # Job Module - commands Index
 
 ## Purpose

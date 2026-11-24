@@ -10,8 +10,11 @@ use UnexpectedValueException;
 /**
  * Risolve dati block localizzati; delega al modulo Cms se presente.
  *
+<<<<<<< .merge_file_qA5CJF
  * @see docs/contracts/resolve-localized-block-data-action.md
  *
+=======
+>>>>>>> .merge_file_JIoxFy
  * @contract docs/contracts/resolve-localized-block-data-action.md
  */
 final class ResolveLocalizedBlockDataAction
@@ -24,7 +27,7 @@ final class ResolveLocalizedBlockDataAction
      */
     public function execute(array $viewParams): array
     {
-        $cmsAction = 'Modules\Cms\Actions\ResolveLocalizedBlockDataAction';
+        $cmsAction = 'Modules\\Cms\\Actions\\ResolveLocalizedBlockDataAction';
 
         if (! class_exists($cmsAction)) {
             return $viewParams;

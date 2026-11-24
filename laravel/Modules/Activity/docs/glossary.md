@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_w9V5TG
 <<<<<<< .merge_file_ZmqvRH
 <<<<<<< .merge_file_g48Uw3
 <<<<<<< .merge_file_Pfkwr0
@@ -38,6 +39,8 @@ Percorsi relativi a `laravel/Modules/Activity/`.
 >>>>>>> .merge_file_dNKxJG
 =======
 >>>>>>> .merge_file_RLlnHw
+=======
+>>>>>>> .merge_file_bxuABo
 # Glossario di dominio Activity
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -45,6 +48,7 @@ Percorsi relativi a `laravel/Modules/Activity/`.
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_w9V5TG
 <<<<<<< .merge_file_ZmqvRH
 <<<<<<< .merge_file_g48Uw3
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
@@ -55,3 +59,6 @@ Percorsi relativi a `laravel/Modules/Activity/`.
 =======
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 >>>>>>> .merge_file_RLlnHw
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_bxuABo

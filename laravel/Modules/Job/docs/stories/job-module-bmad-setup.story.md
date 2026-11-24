@@ -5,6 +5,7 @@ status: ready-for-dev
 links:
   github_issue: 0
   module: Job
+qmd: "job bmad setup story"
 ---
 
 # Job Module BMAD Setup

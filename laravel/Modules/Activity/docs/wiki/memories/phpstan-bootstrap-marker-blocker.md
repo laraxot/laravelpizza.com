@@ -34,6 +34,7 @@ e nessun writer concorrente.
 
 Verifica finale 2026-09-28: tree stabile, PHPStan verde su 10.179 file. Il blocco di
 bootstrap è superato; il Pest mirato resta non verificato per timeout/blocco ambientale.
+<<<<<<< .merge_file_2f2Kn3
 <<<<<<< .merge_file_EjpMtI
 <<<<<<< .merge_file_r6zfaz
 <<<<<<< .merge_file_1dIZZf
@@ -42,6 +43,8 @@ bootstrap è superato; il Pest mirato resta non verificato per timeout/blocco am
 >>>>>>> .merge_file_xoNLNW
 =======
 >>>>>>> .merge_file_Z6vDzN
+=======
+>>>>>>> .merge_file_Smp3Ru
 
 ---
 
@@ -50,6 +53,7 @@ bootstrap è superato; il Pest mirato resta non verificato per timeout/blocco am
 # phpstan bootstrap marker blocker
 
 Stub alias post-strip data/timestamp. Canonico: [./phpstan-bootstrap-marker-blocker.md](./phpstan-bootstrap-marker-blocker.md).
+<<<<<<< .merge_file_2f2Kn3
 <<<<<<< .merge_file_EjpMtI
 <<<<<<< .merge_file_r6zfaz
 >>>>>>> .merge_file_AnAhX1
@@ -57,3 +61,5 @@ Stub alias post-strip data/timestamp. Canonico: [./phpstan-bootstrap-marker-bloc
 >>>>>>> .merge_file_xoNLNW
 =======
 >>>>>>> .merge_file_Z6vDzN
+=======
+>>>>>>> .merge_file_Smp3Ru

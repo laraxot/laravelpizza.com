@@ -1,3 +1,8 @@
+---
+title: "PHPStan Fixes - Modulo Job"
+type: note
+qmd: "phpstan fixes session"
+---
 # PHPStan Fixes - Modulo Job
 
 ## 🔄 Status: IN PROGRESS - 49 Errori Rimanenti

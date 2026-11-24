@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_y9FWDC
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_jukH9f
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_y9FWDC
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_jukH9f
 qmd: "cms"
 issues: []
 discussions: []
@@ -49,7 +55,10 @@ Per risolvere l'errore "Unable to locate file in Vite manifest", eseguire:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< .merge_file_y9FWDC
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_jukH9f
 cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
 =======
@@ -61,10 +70,13 @@ cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
 >>>>>>> .merge_file_uRkCoT
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_y9FWDC
 =======
 cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_jukH9f
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 

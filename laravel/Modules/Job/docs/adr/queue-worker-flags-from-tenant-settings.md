@@ -8,6 +8,7 @@ module: Job
 tags: [adr, queue, worker, settings, tenant, shell]
 related:
   - ../contracts/build-queue-worker-command-action.md
+qmd: "queue worker flags from tenant settings"
 ---
 
 # ADR: flag del worker dalle impostazioni del tenant

@@ -368,6 +368,7 @@ public function getActivities(array $filters = []): Collection
 
 ## 📚 Related Documentation
 
+<<<<<<< .merge_file_9G04WH
 <<<<<<< .merge_file_UYDGwn
 <<<<<<< .merge_file_g390c1
 <<<<<<< .merge_file_BYx55N
@@ -378,6 +379,8 @@ public function getActivities(array $filters = []): Collection
 >>>>>>> .merge_file_JTRwwK
 =======
 >>>>>>> .merge_file_S9C3bq
+=======
+>>>>>>> .merge_file_OibCpf
 <<<<<<< HEAD
 - [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
@@ -395,6 +398,7 @@ public function getActivities(array $filters = []): Collection
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9G04WH
 <<<<<<< .merge_file_UYDGwn
 <<<<<<< .merge_file_g390c1
 >>>>>>> .merge_file_m9Mllm
@@ -402,6 +406,8 @@ public function getActivities(array $filters = []): Collection
 >>>>>>> .merge_file_JTRwwK
 =======
 >>>>>>> .merge_file_S9C3bq
+=======
+>>>>>>> .merge_file_OibCpf
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.

@@ -1,6 +1,9 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_yvkZh8
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_f7ULmB
 title: "Architecture Decision Records"
 type: index
 tags: [adr, decisioni]
@@ -18,6 +21,7 @@ type: index
 tags: [adr, decisioni, ui]
 created: 2026-11-18
 updated: 2026-11-24
+<<<<<<< .merge_file_yvkZh8
 =======
 title: "ADR — UI"
 type: index
@@ -25,11 +29,16 @@ owner: UI
 updated: 2026-11-24
 qmd: "UI ADR architecture decision record MADR formato blocchi layer condiviso"
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_f7ULmB
 ---
 
 # ADR — UI
 
+<<<<<<< .merge_file_yvkZh8
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_f7ULmB
 UI è un modulo di base usato da Cms, dai temi e dai pannelli: le sue decisioni riguardano soprattutto **i confini** (cosa UI può sapere degli altri moduli, cosa non autorizza) e **i blocchi di contenuto** (come si trovano, come si localizzano, come si disegnano quando sono rotti).
 
 **Quando leggerli**: prima di importare una classe di un altro modulo in UI, di aggiungere o rinominare un blocco del page builder, di cambiare cosa mostra `x-ui::render.block`, o di far decidere a un componente UI chi può vedere un dato di dominio.
@@ -94,6 +103,7 @@ Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferm
 - [Vista mancante: tipo sì, contenuto no](missing-block-view-shows-type-not-content.md) — un blocco rotto mostra un avviso con vista e tipo, mai i suoi dati.
 - [Blocchi UI localizzati dal CMS](ui-blocks-use-cms-localization.md) — la localizzazione passa dal CMS quando c'è, con fallback autonomo; il meccanismo è nell'ADR sulla delega opzionale.
 - [UI è il layer condiviso e non possiede né autorizza il dominio](ui-does-not-authorize-domain-data.md) — contratti mappa/geocoding con fallback Null; query e policy restano al modulo owner (status `proposed`).
+<<<<<<< .merge_file_yvkZh8
 =======
 Un ADR del modulo UI registra una scelta difficile da invertire, sorprendente o frutto di un trade-off reale sul layer di presentazione condiviso. Ogni affermazione ha un file di prova. Template condiviso: [0000-template](../../../Xot/docs/adr/0000-template.md); standard: [Xot ADR](../../../Xot/docs/adr/README.md).
 
@@ -107,3 +117,5 @@ Elenco con stato: [INDEX.md](INDEX.md). Nessun ADR nuovo in questa passata: la s
 
 Policy trasversale su dati sacri e test isolati: [0013-dati-sacri-migrazioni-e-test](../../../Xot/docs/adr/0013-dati-sacri-migrazioni-e-test.md).
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_f7ULmB

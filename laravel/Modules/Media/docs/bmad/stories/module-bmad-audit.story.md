@@ -26,8 +26,11 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 - [x] Audit + piano in `docs/bmad/`; pack ECC in `docs/ecc/`.
 - [x] PHPStan `Modules/Media`: 0 errori.
 - [ ] Pest `Modules/Media`: `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, E3); resto non eseguito.
+<<<<<<< .merge_file_IFTDtL
 <<<<<<< .merge_file_FXG5oL
 =======
+=======
+>>>>>>> .merge_file_JrhMwB
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,7 +52,10 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_IFTDtL
 >>>>>>> .merge_file_L9B3oY
+=======
+>>>>>>> .merge_file_JrhMwB
 - [ ] Pest modulo eseguito per intero in ambiente testing stabile.
 - [ ] E1–E6 (finding P1) chiuse con test di regressione.
 
@@ -61,8 +67,11 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 
 ## Procedura seguita
 
+<<<<<<< .merge_file_IFTDtL
 <<<<<<< .merge_file_FXG5oL
 =======
+=======
+>>>>>>> .merge_file_JrhMwB
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,16 +86,22 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_IFTDtL
 >>>>>>> .merge_file_L9B3oY
+=======
+>>>>>>> .merge_file_JrhMwB
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
 
 ## Esito
 
+<<<<<<< .merge_file_IFTDtL
 <<<<<<< .merge_file_FXG5oL
 Baseline audit aggiornata: PHPStan `Modules/Media` a 0; Pest parziale. 0 P0 dimostrati, 6 P1, P2 elencati. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
 =======
+=======
+>>>>>>> .merge_file_JrhMwB
 <<<<<<< HEAD
 <<<<<<< HEAD
 Baseline audit aggiornata: PHPStan `Modules/Media` a 0; Pest parziale. 0 P0 dimostrati, 6 P1, P2 elencati. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
@@ -110,4 +125,7 @@ Baseline audit aggiornata: PHPStan `Modules/Media` a 0; Pest parziale. 0 P0 dimo
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_IFTDtL
 >>>>>>> .merge_file_L9B3oY
+=======
+>>>>>>> .merge_file_JrhMwB

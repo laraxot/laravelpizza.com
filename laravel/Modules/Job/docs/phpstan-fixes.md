@@ -1,5 +1,6 @@
 ---
 created: 2025
+qmd: "phpstan fixes"
 ---
 
 # PHPStan Fixes — Job

@@ -1,6 +1,7 @@
 ---
 title: "Contratto — LogActivityAction"
 type: contract
+<<<<<<< .merge_file_wHjDGD
 <<<<<<< .merge_file_pm7bk2
 <<<<<<< .merge_file_4dnj5A
 <<<<<<< .merge_file_hbA2rL
@@ -14,6 +15,8 @@ qmd: "contract LogActivityAction activity scrittura singola attivita causer subj
 >>>>>>> .merge_file_1gGMlY
 =======
 >>>>>>> .merge_file_Qh91Hb
+=======
+>>>>>>> .merge_file_iwaFRp
 action: "Modules\Activity\Actions\LogActivityAction"
 tags: [contract, action, activity-log, audit]
 created: 2026-11-24
@@ -23,6 +26,7 @@ related:
   - ../../app/Actions/LogActivityAction.php
   - ../../tests/Unit/Actions/LogActivityActionConstructorTest.php
   - ../../tests/Unit/Actions/LogActivityActionExecuteValidationTest.php
+<<<<<<< .merge_file_wHjDGD
 <<<<<<< .merge_file_pm7bk2
 <<<<<<< .merge_file_4dnj5A
 >>>>>>> .merge_file_Q7WI6W
@@ -30,10 +34,13 @@ related:
 >>>>>>> .merge_file_1gGMlY
 =======
 >>>>>>> .merge_file_Qh91Hb
+=======
+>>>>>>> .merge_file_iwaFRp
 ---
 
 # LogActivityAction
 
+<<<<<<< .merge_file_wHjDGD
 <<<<<<< .merge_file_pm7bk2
 <<<<<<< .merge_file_4dnj5A
 <<<<<<< .merge_file_hbA2rL
@@ -78,6 +85,8 @@ Scrive una riga in `activity_log`. È il punto comune usato da `LogModel*Action`
 >>>>>>> .merge_file_1gGMlY
 =======
 >>>>>>> .merge_file_Qh91Hb
+=======
+>>>>>>> .merge_file_iwaFRp
 Scrive una riga di `activity_log` (modello `Modules\Activity\Models\Activity`, connessione `activity`). È il mattone
 delle Action `LogModelCreated/Updated/Deleted` e `LogUserLogin/Logout` e dell'adapter `Adapters/ActivityLogger`.
 Sorgente: `app/Actions/LogActivityAction.php`. Si costruisce con `new` (parametri nel costruttore), non con `app()`.
@@ -123,6 +132,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/LogActi
   interi (password e token compresi). `RedactModelAttributesAction` esiste ma oggi non la chiama nessuno: debito.
 - Non controlla `activitylog.enabled`.
 - Non accoda: scrive in modo sincrono nella richiesta corrente.
+<<<<<<< .merge_file_wHjDGD
 <<<<<<< .merge_file_pm7bk2
 <<<<<<< .merge_file_4dnj5A
 >>>>>>> .merge_file_Q7WI6W
@@ -130,3 +140,5 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/LogActi
 >>>>>>> .merge_file_1gGMlY
 =======
 >>>>>>> .merge_file_Qh91Hb
+=======
+>>>>>>> .merge_file_iwaFRp

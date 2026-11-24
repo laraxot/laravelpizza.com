@@ -4,7 +4,10 @@ module: Tenant
 type: reference
 tags: [config, settings, customization]
 last_updated: 2026-08-04
+<<<<<<< .merge_file_f2VhOe
 qmd: "configuration tenant reference"
+=======
+>>>>>>> .merge_file_ub43w5
 ---
 
 # Tenant Module Configuration Reference

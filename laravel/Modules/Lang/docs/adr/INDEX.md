@@ -1,7 +1,10 @@
+<<<<<<< .merge_file_DAeV1a
 <<<<<<< .merge_file_cQszOp
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_aSlPvc
+=======
+>>>>>>> .merge_file_R1vO5o
 # Lang ADR index
 
 This is the machine-readable inventory of architecture decisions owned by the **Lang** module.
@@ -16,6 +19,7 @@ An ADR records a difficult-to-reverse or surprising choice with a real trade-off
 ## Authoring
 
 Use the shared template and rules in [Xot ADR standards](../../Xot/docs/adr/README.md). Do not create an ADR for a local implementation detail or an unverified hypothesis.
+<<<<<<< .merge_file_DAeV1a
 <<<<<<< .merge_file_cQszOp
 =======
 ---
@@ -39,3 +43,5 @@ Formato e regole: [README](README.md).
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_aSlPvc
+=======
+>>>>>>> .merge_file_R1vO5o

@@ -12,6 +12,7 @@ use Modules\Geo\Actions\GoogleMapsAction;
 final class GoogleMapsServiceElevationStub extends GoogleMapsAction
 {
     /**
+<<<<<<< .merge_file_Naej9S
 <<<<<<< .merge_file_lLMc0X
 <<<<<<< .merge_file_cC9KCa
 <<<<<<< .merge_file_26RWc6
@@ -25,10 +26,14 @@ final class GoogleMapsServiceElevationStub extends GoogleMapsAction
 =======
      * @param array<string, mixed> $elevationResponse
 >>>>>>> .merge_file_bGwmJ0
+=======
+     * @param array<string, mixed> $elevationResponse
+>>>>>>> .merge_file_pctJY5
      */
     public function __construct(
         private array $elevationResponse = [],
         private ?\Throwable $exception = null,
+<<<<<<< .merge_file_Naej9S
 <<<<<<< .merge_file_lLMc0X
 <<<<<<< .merge_file_cC9KCa
 <<<<<<< .merge_file_26RWc6
@@ -45,12 +50,17 @@ final class GoogleMapsServiceElevationStub extends GoogleMapsAction
     ) {
     }
 >>>>>>> .merge_file_bGwmJ0
+=======
+    ) {
+    }
+>>>>>>> .merge_file_pctJY5
 
     /**
      * @return array<string, mixed>
      */
     public function getElevation(float $latitude, float $longitude): array
     {
+<<<<<<< .merge_file_Naej9S
 <<<<<<< .merge_file_lLMc0X
 <<<<<<< .merge_file_cC9KCa
 <<<<<<< .merge_file_26RWc6
@@ -64,6 +74,9 @@ final class GoogleMapsServiceElevationStub extends GoogleMapsAction
 =======
         if (null !== $this->exception) {
 >>>>>>> .merge_file_bGwmJ0
+=======
+        if (null !== $this->exception) {
+>>>>>>> .merge_file_pctJY5
             throw $this->exception;
         }
 

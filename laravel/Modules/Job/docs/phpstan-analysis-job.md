@@ -1,3 +1,8 @@
+---
+title: "PHPStan Analysis - Job Module"
+type: analysis
+qmd: "phpstan analysis job"
+---
 # PHPStan Analysis - Job Module
 
 ## 📊 Status

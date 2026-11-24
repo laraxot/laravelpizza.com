@@ -5,6 +5,7 @@ module: Job
 related:
   - ./livewire-widget-prd.md
   - ./livewire-inventory.md
+qmd: "livewire widget tech spec ritiro"
 ---
 
 # Tech spec Job

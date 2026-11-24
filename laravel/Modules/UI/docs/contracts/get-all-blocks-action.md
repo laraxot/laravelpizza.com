@@ -1,11 +1,15 @@
 ---
+<<<<<<< .merge_file_NpE5jN
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ku8jmo
 title: "Contratto — GetAllBlocksAction"
 type: contract
 action: "Modules\UI\Actions\Block\GetAllBlocksAction"
 tags: [contract, action, blocks, filament, filesystem]
 created: 2026-11-24
 updated: 2026-11-24
+<<<<<<< .merge_file_NpE5jN
 =======
 title: "GetAllBlocksAction — contratto"
 type: contract
@@ -15,11 +19,16 @@ updated: 2026-11-24
 action: "Modules\\UI\\Actions\\Block\\GetAllBlocksAction"
 qmd: "GetAllBlocksAction elenco blocchi Filament Blocks moduli ComponentFileData glob"
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ku8jmo
 ---
 
 # GetAllBlocksAction
 
+<<<<<<< .merge_file_NpE5jN
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ku8jmo
 Sorgente: `app/Actions/Block/GetAllBlocksAction.php`. Perché è fatta così:
 [ADR scoperta dei blocchi per cartella](../adr/block-discovery-by-filament-blocks-folder.md).
 Chiamanti: `Modules/Cms/app/Filament/Fields/PageContent.php`, `PageContentBuilder.php`.
@@ -56,6 +65,7 @@ Chiamanti: `Modules/Cms/app/Filament/Fields/PageContent.php`, `PageContentBuilde
 - Non filtra per modulo attivo, tenant o permessi: ritorna tutto ciò che è su disco.
 - Non ordina: l'ordine è quello di `glob`.
 - Non legge le cartelle dei temi (`Themes/*`).
+<<<<<<< .merge_file_NpE5jN
 =======
 Elenca i file dei blocchi Filament di tutti i moduli. Codice: `app/Actions/Block/GetAllBlocksAction.php:29-58`.
 
@@ -89,3 +99,5 @@ Nessuno: sola lettura del filesystem (glob e risoluzione del nome classe). Nessu
 - Non verifica che la classe trovata sia un blocco valido o istanziabile.
 - Non usa cache: il glob è ripetuto a ogni chiamata.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ku8jmo

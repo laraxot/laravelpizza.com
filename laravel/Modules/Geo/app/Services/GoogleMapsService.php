@@ -45,6 +45,7 @@ class GoogleMapsService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
+<<<<<<< .merge_file_PfRTVX
 <<<<<<< .merge_file_4DEuAK
 <<<<<<< .merge_file_7v3UnO
 <<<<<<< .merge_file_RwJbAU
@@ -60,6 +61,8 @@ class GoogleMapsService
 >>>>>>> .merge_file_lh6Bi4
 =======
 >>>>>>> .merge_file_LKwAh6
+=======
+>>>>>>> .merge_file_Dhxz5S
      * @param string               $method   Metodo HTTP (GET, POST, etc.)
      * @param string               $url      URL della richiesta
      * @param array<string, mixed> $params   Parametri della richiesta
@@ -68,6 +71,7 @@ class GoogleMapsService
      * @throws \RuntimeException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+<<<<<<< .merge_file_PfRTVX
 <<<<<<< .merge_file_4DEuAK
 <<<<<<< .merge_file_7v3UnO
 >>>>>>> .merge_file_kB3QPO
@@ -75,6 +79,8 @@ class GoogleMapsService
 >>>>>>> .merge_file_lh6Bi4
 =======
 >>>>>>> .merge_file_LKwAh6
+=======
+>>>>>>> .merge_file_Dhxz5S
      */
     private function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {
@@ -192,6 +198,7 @@ class GoogleMapsService
     /**
      * Calcola la matrice delle distanze.
      *
+<<<<<<< .merge_file_PfRTVX
 <<<<<<< .merge_file_4DEuAK
 <<<<<<< .merge_file_7v3UnO
 <<<<<<< .merge_file_RwJbAU
@@ -205,12 +212,15 @@ class GoogleMapsService
 >>>>>>> .merge_file_lh6Bi4
 =======
 >>>>>>> .merge_file_LKwAh6
+=======
+>>>>>>> .merge_file_Dhxz5S
      * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+<<<<<<< .merge_file_PfRTVX
 <<<<<<< .merge_file_4DEuAK
 <<<<<<< .merge_file_7v3UnO
 >>>>>>> .merge_file_kB3QPO
@@ -218,6 +228,8 @@ class GoogleMapsService
 >>>>>>> .merge_file_lh6Bi4
 =======
 >>>>>>> .merge_file_LKwAh6
+=======
+>>>>>>> .merge_file_Dhxz5S
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {

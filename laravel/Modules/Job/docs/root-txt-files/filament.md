@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: filament.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "filament risorse esterne"
 ---
 
 # Filament — risorse esterne

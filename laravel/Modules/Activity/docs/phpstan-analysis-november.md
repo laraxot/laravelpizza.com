@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_zmvtTr
 ---
 title: "PHPStan Analysis - Activity Module - November 2025"
 type: analysis
 qmd: "phpstan analysis november activity 2025"
 ---
+=======
+>>>>>>> .merge_file_8PTD7D
 # PHPStan Analysis - Activity Module - November 2025
 
 ## Risultato Analisi

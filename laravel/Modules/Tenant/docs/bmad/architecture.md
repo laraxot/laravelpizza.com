@@ -1,6 +1,10 @@
 ---
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_20eI1q
+=======
+<<<<<<< .merge_file_FPRgGI
+>>>>>>> .merge_file_Y4az4k
 issues: []
 discussions: []
 scope: Tenant
@@ -11,6 +15,16 @@ related:
   - ../stories/continuazione-domani.md
 title: "Tenant — Architettura BMAD"
 type: architecture
+<<<<<<< .merge_file_20eI1q
+=======
+=======
+title: "Tenant — Architettura BMAD"
+type: architecture
+scope: Tenant
+epic: 5.124-bmad-user-module-perfection-study
+bmad_version: v3.30.1
+>>>>>>> .merge_file_8PRZoL
+>>>>>>> .merge_file_Y4az4k
 status: active
 updated: 2026-11-16
 module: Tenant
@@ -21,11 +35,21 @@ qmd: "architettura Tenant risoluzione tenant host config per ente sushi json pro
 
 ## Scopo
 
+<<<<<<< .merge_file_20eI1q
+=======
+<<<<<<< .merge_file_FPRgGI
+>>>>>>> .merge_file_Y4az4k
 ## Milestones Domani
 1. Verificare conformità con XotBase
 2. Aggiornare `docs/bmad/stories/continuazione-domani.md` se chiuso
 3. Indicare stato concluso in `docs/sprint-status.yaml`
 Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
+<<<<<<< .merge_file_20eI1q
+=======
+=======
+Multi-tenant: più enti da una sola installazione. Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
+>>>>>>> .merge_file_8PRZoL
+>>>>>>> .merge_file_Y4az4k
 
 ## Flusso (verificato sul codice, 2026-11-16)
 

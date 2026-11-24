@@ -1,3 +1,8 @@
+---
+title: "Job Module Documentation Index (Generated)"
+type: note
+qmd: "generated"
+---
 # Job Module Documentation Index (Generated)
 
 **Generated:** 2026-07-28  

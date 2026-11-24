@@ -8,6 +8,7 @@ updated: "2026-05-26"
 related:
   - "../../Xot/docs/wiki/concepts/agent-confidence-discipline.md"
 issue: "152"
+qmd: "agent confidence discipline disciplina agenti massimizzare"
 ---
 
 # Disciplina agenti per massimizzare la confidenza

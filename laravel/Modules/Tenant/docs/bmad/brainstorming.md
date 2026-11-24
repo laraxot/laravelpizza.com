@@ -22,10 +22,23 @@ status: active
 # Tenant — Brainstorming
 
 > **SUMMARY** — Decisioni prese, questioni aperte e opzioni scartate del modulo `Tenant`,
+<<<<<<< .merge_file_CTEWss
+=======
+<<<<<<< .merge_file_OHCtfh
+>>>>>>> .merge_file_bDpRgB
 > ancorate a file e simboli reali. Il brainstorming di dettaglio per area è negli shard.
 > ancorate a file e simboli reali (riverificate il 2026-11-16: le voci su
 > `ConfigResolverRegistry`, `StandardConfigResolver` e `TenantService` erano obsolete e
 > sono state rimosse — `app/Services` non esiste, la logica è in Action).
+<<<<<<< .merge_file_CTEWss
+=======
+=======
+> ancorate a file e simboli reali (riverificate il 2026-11-16: le voci su
+> `ConfigResolverRegistry`, `StandardConfigResolver` e `TenantService` erano obsolete e
+> sono state rimosse — `app/Services` non esiste, la logica è in Action).
+> Il brainstorming di dettaglio per area è negli shard.
+>>>>>>> .merge_file_n0zUrL
+>>>>>>> .merge_file_bDpRgB
 
 ## Shard
 

@@ -33,9 +33,12 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 - 34 blocchi risolti automaticamente (un lato vuoto o sottoinsieme dell'altro).
 - 13 blocchi divergenti risolti a mano, criteri principali: tenuto il lato
   con informazione reale quando l'altro era stub/generico; unite le sezioni
+<<<<<<< .merge_file_vqi8is
 <<<<<<< .merge_file_yvSm7M
   quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
 =======
+=======
+>>>>>>> .merge_file_IIU122
 <<<<<<< HEAD
 <<<<<<< HEAD
   quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
@@ -59,7 +62,10 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vqi8is
 >>>>>>> .merge_file_O2UVxr
+=======
+>>>>>>> .merge_file_IIU122
   Aggiornamento" sia "Dependency Intelligence"); preferita la denominazione
   generica "laraxot" ai nomi di progetti ospiti (FixCity, SaluteOra)
   hardcoded — Media e' un modulo condiviso fra piu' progetti (`git remote

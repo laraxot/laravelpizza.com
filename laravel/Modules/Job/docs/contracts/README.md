@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_hpx7qM
 <<<<<<< .merge_file_mQhdUr
 <<<<<<< .merge_file_am9izU
 title: "Contratti del modulo Job"
@@ -37,6 +38,8 @@ invarianti sono «non coperti» in senso stretto. Dettagli e backlog in [INDEX.m
 =======
 =======
 >>>>>>> .merge_file_jjj0EC
+=======
+>>>>>>> .merge_file_oYykzY
 title: "Contratti — Job"
 type: index
 tags: [contracts, actions, job]
@@ -61,7 +64,10 @@ verifica con `vendor/bin/pest Modules/Job/tests --group=<ID>`; `—` è debito d
 - [AssertAllowedArtisanCommandAction](assert-allowed-artisan-command-action.md) — ammette un comando solo se identico a una voce dell'allowlist.
 - [BuildQueueWorkerCommandAction](build-queue-worker-command-action.md) — la riga `queue:work` di `worker:check`, con i flag interi del tenant.
 - [ClearScheduleCacheAction](clear-schedule-cache-action.md) — dimentica la cache delle schedulazioni attive (legacy, chiavi di config assenti).
+<<<<<<< .merge_file_hpx7qM
 <<<<<<< .merge_file_mQhdUr
 >>>>>>> .merge_file_UD1M4q
 =======
 >>>>>>> .merge_file_jjj0EC
+=======
+>>>>>>> .merge_file_oYykzY

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi metodi duplicati in HasTeams (trait)"
 type: note
 qmd: "hasteams trait duplicate methods analisi metodi"
 ---
->>>>>>> laraxot/dev
 # Analisi metodi duplicati in HasTeams (trait)
 
 ## Introduzione
@@ -81,12 +78,7 @@ Nel trait `HasTeams` sono presenti diversi metodi con lo stesso nome ma implemen
 
 ## Collegamenti correlati
 - [Indice documentazione User](./index.md)
-<<<<<<< HEAD
 - [Indice documentazione User](./README.md)
-=======
-
-- [Indice documentazione User](./INDEX.md)
->>>>>>> laraxot/dev
 - [Modello User](./Models/User.md)
 - [Best practices trait](./best-practices-traits.md)
 - [Refactor checklist](./refactor-checklist.md)

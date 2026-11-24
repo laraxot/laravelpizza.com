@@ -17,9 +17,19 @@ tags: [documentation]
 
 ## 🎯 **Lettura Essenziale**
 <<<<<<< HEAD
+<<<<<<< .merge_file_R9fYyo
 1. [README.md](./README.md) - Design System e overview componenti.
 =======
 1. [README.md](./readme.md) - Design System e overview componenti.
+=======
+1. [README.md](./README.md) - Design System e overview componenti.
+=======
+<<<<<<< HEAD
+1. [README.md](./readme.md) - Design System e overview componenti.
+=======
+1. [README.md](./README.md) - Design System e overview componenti.
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kLJ0IV
 >>>>>>> laraxot/dev
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Tailwind v4 e Flux UI integration.
 3. [philosophy.md](./philosophy.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
@@ -51,8 +61,16 @@ tags: [documentation]
 - [Master Index Tema](../../Themes/Sixteen/docs/design-comuni/00-index.md) - Index tema Sixteen
 
 ### Link Bidirezionali - Modulo Cms
+<<<<<<< .merge_file_R9fYyo
 - [Cms Design Comuni Index](../Cms/docs/DESIGN_COMUNI_INDEX.md) - Index completo modulo Cms
 
+=======
+<<<<<<< HEAD
+=======
+- [Cms Design Comuni Index](../Cms/docs/DESIGN_COMUNI_INDEX.md) - Index completo modulo Cms
+
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kLJ0IV
 - [Cms Design Comuni Index](../Cms/docs/design_comuni_index.md) - Index completo modulo Cms
 - [Cms FAQ](../Cms/docs/design-comuni-faq.md) - Architettura pagina FAQ
 - [Cms Homepage](../Cms/docs/design-comuni-homepage.md) - Analisi homepage
@@ -86,12 +104,19 @@ tags: [documentation]
 
 ## 🔗 **Moduli Correlati**
 <<<<<<< HEAD
+<<<<<<< .merge_file_R9fYyo
 <<<<<<< HEAD
 - [Xot](../../Xot/docs/README.md) - Base framework per i widget.
 - [Cms](../../Cms/docs/README.md) - Layout dei contenuti e blocchi.
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+- [Xot](../../Xot/docs/README.md) - Base framework per i widget.
+- [Cms](../../Cms/docs/README.md) - Layout dei contenuti e blocchi.
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_kLJ0IV
 - [Xot](../../xot/docs/readme.md) - Base framework per i widget.
 - [Cms](../../cms/docs/readme.md) - Layout dei contenuti e blocchi.
 
@@ -121,9 +146,16 @@ tags: [documentation]
 | Hero | ✅ 100% | ✅ 95% | N/A | ✅ 98% |
 | Breadcrumb | ✅ 100% | ✅ 100% | N/A | ✅ 100% |
 | Search | ✅ 100% | ✅ 90% | ⏳ 0% | ⏳ 65% |
+<<<<<<< .merge_file_R9fYyo
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+=======
+- [Xot](../../Xot/docs/README.md) - Base framework per i widget.
+- [Cms](../../Cms/docs/README.md) - Layout dei contenuti e blocchi.
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kLJ0IV
 >>>>>>> laraxot/dev
 
 ---

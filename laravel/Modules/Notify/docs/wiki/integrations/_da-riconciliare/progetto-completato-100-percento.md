@@ -4,18 +4,24 @@ type: concept
 tags: [progetto, completato, 100, percento]
 created: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_w2ETaO
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_RTm8rz
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_w2ETaO
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTm8rz
 qmd: "progetto-completato-100-percento 🏆 progetto <nome progetto> - 100% completato!"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -384,6 +390,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 =======
+<<<<<<< .merge_file_w2ETaO
 <<<<<<< HEAD
 <<<<<<< HEAD
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
@@ -400,6 +407,14 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 >>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_RXS4lp
+**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+>>>>>>> .merge_file_Rid000
+>>>>>>> .merge_file_RTm8rz
 >>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
@@ -623,11 +638,14 @@ php artisan queue:work --queue=high,notifications,default
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 =======
+<<<<<<< .merge_file_w2ETaO
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 =======
+=======
+>>>>>>> .merge_file_RTm8rz
 <<<<<<< .merge_file_RXS4lp
 - [← Master Roadmap](./roadmap-master-index.md)
 =======
@@ -635,10 +653,13 @@ php artisan queue:work --queue=high,notifications,default
 - [← Master Roadmap](../../../roadmap-master-index.md)
 >>>>>>> .merge_file_Rid000
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_w2ETaO
 =======
 - [← Master Roadmap](../../../roadmap-master-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTm8rz
 - [← Analisi Completa](./analisi-completa.md)
 
 ---
@@ -1002,19 +1023,25 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 
 ### 🗺️ ROADMAP
 <<<<<<< HEAD
+<<<<<<< .merge_file_w2ETaO
 <<<<<<< HEAD
 **[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_RTm8rz
 =======
 <<<<<<< .merge_file_RXS4lp
 **[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_w2ETaO
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTm8rz
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ ANALISI COMPLETA](../../../analisi-completa-ottobre-data.md)** - Executive Summary del progetto
 
@@ -1022,6 +1049,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_w2ETaO
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1030,6 +1058,10 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_RTm8rz
 
 ### 📊 TECHNICAL
 **[→ Session Summary](./phpstan/session-summary.md)** - Dettagli tecnici sessione
@@ -1253,24 +1285,31 @@ php artisan queue:work --queue=high,notifications,default
 
 - [← Torna all'Indice](./index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_w2ETaO
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_RTm8rz
 =======
 <<<<<<< .merge_file_RXS4lp
 - [← Master Roadmap](./roadmap-master-index.md)
 - [← Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_w2ETaO
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTm8rz
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](./ANALISI-COMPLETA.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_w2ETaO
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_Rid000
@@ -1278,6 +1317,11 @@ php artisan queue:work --queue=high,notifications,default
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_RTm8rz
 
 ---
 

@@ -19,8 +19,11 @@ related:
 
 ## Metodo
 
+<<<<<<< .merge_file_goqCwG
 <<<<<<< .merge_file_AatgRE
 =======
+=======
+>>>>>>> .merge_file_o9Xq29
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_ng3muP
@@ -82,7 +85,10 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 =======
 >>>>>>> .merge_file_JsV0G2
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_goqCwG
 >>>>>>> .merge_file_djLNIz
+=======
+>>>>>>> .merge_file_o9Xq29
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di `LangServiceProvider`, `AutoLabelAction`, `SaveTransAction`, `WriteTranslationFileAction`, `TranslationFile`, `LocaleSwitcherRefresh`, `config/`; `php artisan tinker` (sola lettura di config); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
 ## Scopo (perché esiste)

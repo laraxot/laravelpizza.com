@@ -3,6 +3,7 @@ title: "migration naming pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_4brC2V
 <<<<<<< .merge_file_4qonzE
 <<<<<<< .merge_file_bVJ8yd
 <<<<<<< .merge_file_SRV5Ky
@@ -21,6 +22,11 @@ created: 2026-09-26
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_1aWCVS
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_1bufT1
 updated: 2026-11-23
 qmd: "migration naming pattern"
 issues: []
@@ -110,6 +116,7 @@ $this->tableUpdate(
 - [XotBaseMigration](../../../Xot/database/migrations/XotBaseMigration.php)
 - [Documentazione Laravel sulle Migrazioni](https://laravel.com/project_docs/migrations)
 - [Xot Module Documentation Standards](../../../xot/project_docs/documentation-standards.md)
+<<<<<<< .merge_file_4brC2V
 <<<<<<< .merge_file_4qonzE
 <<<<<<< .merge_file_bVJ8yd
 <<<<<<< .merge_file_SRV5Ky
@@ -125,6 +132,10 @@ $this->tableUpdate(
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_1aWCVS
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_1bufT1
 updated: 2026-09-26
 qmd: "migration naming pattern"
 issues: []
@@ -135,6 +146,7 @@ canonical: ../../../Themes/docs/shared-components/migration-naming-pattern-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/migration-naming-pattern-1.md
+<<<<<<< .merge_file_4brC2V
 <<<<<<< .merge_file_4qonzE
 <<<<<<< .merge_file_bVJ8yd
 <<<<<<< .merge_file_SRV5Ky
@@ -143,10 +155,13 @@ See canonical documentation: ../../../Themes/docs/shared-components/migration-na
 >>>>>>> .merge_file_11oqV9
 =======
 >>>>>>> .merge_file_1aWCVS
+=======
+>>>>>>> .merge_file_1bufT1
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4brC2V
 <<<<<<< .merge_file_4qonzE
 <<<<<<< .merge_file_bVJ8yd
 >>>>>>> .merge_file_qqz2Nl
@@ -154,3 +169,5 @@ See canonical documentation: ../../../Themes/docs/shared-components/migration-na
 >>>>>>> .merge_file_11oqV9
 =======
 >>>>>>> .merge_file_1aWCVS
+=======
+>>>>>>> .merge_file_1bufT1

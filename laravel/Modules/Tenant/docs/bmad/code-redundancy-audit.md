@@ -7,7 +7,10 @@ created: "2026-05-26"
 updated: "2026-05-26"
 owner: "Tenant"
 issue: "https://github.com/provtv/base_ptv_fila5/issues/150"
+<<<<<<< .merge_file_ewjnnK
 qmd: "code redundancy audit tenant"
+=======
+>>>>>>> .merge_file_qUcf9U
 ---
 
 # Code redundancy audit — Tenant

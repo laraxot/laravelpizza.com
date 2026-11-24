@@ -60,6 +60,7 @@ use Override;
  * @property-read ProfileContract|null $deleter
 =======
  *
+<<<<<<< .merge_file_9gVDUx
 <<<<<<< .merge_file_V6lVId
  * @property-read ProfileContract|null $deleter
  *
@@ -73,6 +74,10 @@ use Override;
  * @property-read ProfileContract|null $deleter
  *
 >>>>>>> .merge_file_TUioKM
+=======
+ * @property-read ProfileContract|null $deleter
+ *
+>>>>>>> .merge_file_Kbyf1j
  */
 class JobManager extends BaseModel
 {

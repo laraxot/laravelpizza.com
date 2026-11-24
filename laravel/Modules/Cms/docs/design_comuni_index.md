@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_hEbgn1
 <<<<<<< .merge_file_GA7zTr
 <<<<<<< .merge_file_vqewGT
 <<<<<<< .merge_file_MGv2PP
@@ -7,6 +8,8 @@
 >>>>>>> .merge_file_OnQdEv
 =======
 >>>>>>> .merge_file_qI33ht
+=======
+>>>>>>> .merge_file_E5qZDo
 <<<<<<< HEAD
 title: "Design Comuni Index"
 type: note
@@ -15,6 +18,7 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Design Comuni Index"
 =======
+<<<<<<< .merge_file_hEbgn1
 <<<<<<< .merge_file_GA7zTr
 <<<<<<< .merge_file_vqewGT
 >>>>>>> .merge_file_xMflzU
@@ -22,12 +26,15 @@ qmd: "Design Comuni Index"
 >>>>>>> .merge_file_OnQdEv
 =======
 >>>>>>> .merge_file_qI33ht
+=======
+>>>>>>> .merge_file_E5qZDo
 title: "design comuni index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "design comuni index"
+<<<<<<< .merge_file_hEbgn1
 <<<<<<< .merge_file_GA7zTr
 <<<<<<< .merge_file_vqewGT
 <<<<<<< .merge_file_MGv2PP
@@ -40,6 +47,9 @@ qmd: "design comuni index"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_qI33ht
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_E5qZDo
 issues: []
 discussions: []
 ---
@@ -137,6 +147,7 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 
 ---
 
+<<<<<<< .merge_file_hEbgn1
 <<<<<<< .merge_file_GA7zTr
 <<<<<<< .merge_file_vqewGT
 <<<<<<< .merge_file_MGv2PP
@@ -145,6 +156,8 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 >>>>>>> .merge_file_OnQdEv
 =======
 >>>>>>> .merge_file_qI33ht
+=======
+>>>>>>> .merge_file_E5qZDo
 <<<<<<< HEAD
 title: "DESIGN COMUNI INDEX"
 =======
@@ -169,6 +182,7 @@ qmd: "DESIGN COMUNI INDEX"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_hEbgn1
 <<<<<<< .merge_file_GA7zTr
 <<<<<<< .merge_file_vqewGT
 >>>>>>> .merge_file_xMflzU
@@ -176,6 +190,8 @@ discussions: []
 >>>>>>> .merge_file_OnQdEv
 =======
 >>>>>>> .merge_file_qI33ht
+=======
+>>>>>>> .merge_file_E5qZDo
 **Data**: 2026-04-03  
 **Stato**: ✅ 63.0% OK  
 **Modulo**: Cms - Content Management System

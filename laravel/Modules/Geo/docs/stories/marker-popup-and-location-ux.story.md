@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_0I7DM7
 <<<<<<< .merge_file_Bahz9V
 <<<<<<< .merge_file_lGZzfN
 <<<<<<< .merge_file_HRE3uW
@@ -8,12 +9,15 @@ created: 2026-10-07
 >>>>>>> .merge_file_Vh36lN
 =======
 >>>>>>> .merge_file_nR7yyg
+=======
+>>>>>>> .merge_file_XbRsVD
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_6LCBgu
 created: 2026-10-07
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0I7DM7
 <<<<<<< .merge_file_Bahz9V
 <<<<<<< .merge_file_lGZzfN
 >>>>>>> .merge_file_1sGxuy
@@ -21,6 +25,8 @@ created: 2026-10-07
 >>>>>>> .merge_file_Vh36lN
 =======
 >>>>>>> .merge_file_nR7yyg
+=======
+>>>>>>> .merge_file_XbRsVD
 title: "Marker Popup and Location UX .story"
 type: note
 tags: [documentation]
@@ -30,6 +36,7 @@ qmd: "Marker Popup and Location UX .story"
 date_originale_nome_file: 2026-10-07
 issues: [122]
 discussions: []
+<<<<<<< .merge_file_0I7DM7
 <<<<<<< .merge_file_Bahz9V
 <<<<<<< .merge_file_lGZzfN
 <<<<<<< .merge_file_HRE3uW
@@ -38,10 +45,13 @@ discussions: []
 >>>>>>> .merge_file_Vh36lN
 =======
 >>>>>>> .merge_file_nR7yyg
+=======
+>>>>>>> .merge_file_XbRsVD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_XD49sI
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0I7DM7
 <<<<<<< .merge_file_Bahz9V
 <<<<<<< .merge_file_lGZzfN
 >>>>>>> .merge_file_1sGxuy
@@ -49,6 +59,8 @@ discussions: []
 >>>>>>> .merge_file_Vh36lN
 =======
 >>>>>>> .merge_file_nR7yyg
+=======
+>>>>>>> .merge_file_XbRsVD
 ---
 
 # Popup marker e posizione: leggibilita e layout

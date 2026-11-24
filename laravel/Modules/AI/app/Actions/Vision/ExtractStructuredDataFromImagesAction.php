@@ -25,11 +25,6 @@ use function Safe\preg_replace;
  * (`ai.vision_providers`): se uno fallisce si passa al successivo. Immagini come `image_url` con
  * data URI, testo prima delle immagini, `response_format` json_schema strict; su OpenRouter anche
  * `provider.require_parameters`, perche' instradi solo verso chi rispetta lo schema.
-<<<<<<< HEAD
- *
- * @see Modules/AI/docs/vision-openrouter.md
-=======
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
  */
 class ExtractStructuredDataFromImagesAction
 {
@@ -45,11 +40,6 @@ class ExtractStructuredDataFromImagesAction
      * @return array<string, mixed>
      *
      * @throws AiRequestException se tutti i fornitori falliscono (messaggio con il motivo di ciascuno)
-<<<<<<< HEAD
-     *
-     * @see Modules/AI/docs/vision-openrouter.md
-=======
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
      */
     public function execute(array $imagePaths, string $instructions, string $schemaName, array $schema, ?array $providers = null): array
     {

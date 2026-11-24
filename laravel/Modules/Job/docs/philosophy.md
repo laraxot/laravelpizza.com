@@ -4,6 +4,7 @@ category: foundation
 owner: Job
 status: active
 updated: 2026-09-06
+qmd: "philosophy"
 ---
 
 # Job Module Philosophy

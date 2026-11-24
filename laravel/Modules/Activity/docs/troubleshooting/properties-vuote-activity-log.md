@@ -351,6 +351,7 @@ $record->update(['stabi' => 999]);
 - [Activity Module - README](../README.md)
 - [BaseScheda Configuration](../../Ptv/docs/models/base-scheda-activity-log.md)
 - [IndennitaResponsabilita Integration](../../IndennitaResponsabilita/docs/activity-log-integration.md)
+<<<<<<< .merge_file_H7WilU
 <<<<<<< .merge_file_0SZMNp
 <<<<<<< .merge_file_vpwV41
 <<<<<<< .merge_file_kXnd7Y
@@ -360,6 +361,8 @@ $record->update(['stabi' => 999]);
 >>>>>>> .merge_file_ezk3mF
 =======
 >>>>>>> .merge_file_VualfE
+=======
+>>>>>>> .merge_file_LNwiEq
 <<<<<<< HEAD
 - [Activity Module - README](../README.md)
 =======
@@ -373,6 +376,7 @@ $record->update(['stabi' => 999]);
 - [Activity Module - README](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_H7WilU
 <<<<<<< .merge_file_0SZMNp
 <<<<<<< .merge_file_vpwV41
 >>>>>>> .merge_file_Jizc34
@@ -380,6 +384,8 @@ $record->update(['stabi' => 999]);
 >>>>>>> .merge_file_ezk3mF
 =======
 >>>>>>> .merge_file_VualfE
+=======
+>>>>>>> .merge_file_LNwiEq
 - [BaseScheda Configuration](../../ptv/docs/models/base-scheda-activity-log.md)
 - [IndennitaResponsabilita Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
 

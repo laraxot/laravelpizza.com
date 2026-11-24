@@ -11,7 +11,11 @@ qmd: "seo docs organization pilot indice canonico index.md frontmatter status su
 related:
   - ../../../../../bmad-output/docs-organization-audit-2026-10-08.md
   - ../index.md
+<<<<<<< .merge_file_fBYgFN
   - ../../../../Themes/Meetup/docs/stories/docs-organization-pilot.story.md
+=======
+  - ../../../../Themes/Meetup/docs/stories/2026-10-08-docs-organization-pilot.story.md
+>>>>>>> .merge_file_yhSwyz
 ---
 
 # [STORY] Docs organization pilot Seo
@@ -30,7 +34,15 @@ Le famiglie, con lo scopo scoperto e non il sintomo:
 
 1. **Blocchi frontmatter spurii (55 file).** Un generatore di frontmatter ha iniettato nel corpo, dopo un `---` (a volte dopo una riga vuota), le 8 righe del template (`title`, `type: note`, `tags: [documentation]`, `created`, `updated`, `qmd`, `issues: []`, `discussions: []`) quando il file aveva gia' frontmatter o una linea orizzontale. Il blocco non contiene informazione: rimuoverlo e' senza perdita. Il rilevatore e' attento ai blocchi di codice, cosi' gli esempi di schema in `PROJECT-STRUCTURE.md` e nei `_templates` restano.
 2. **Copie con altro case o separatore.** I duplicati "byte-identical" dell'indice del 2026-09-26 oggi differiscono solo per `title`/`qmd` auto-generati dal nome file: il confronto va fatto sul corpo senza frontmatter. Canonico scelto con la regola: nome kebab minuscolo, poi minuscolo con underscore, poi maiuscolo; `README.md` batte `readme.md` (regola `theme-module-docs-readme-mandatory`).
+<<<<<<< .merge_file_WD1MUb
 3. **Cinque indici di radice** (`00-INDEX.md`, `00-index.md`, `INDEX.md`, `README.md`, `index.md`). `index.md` era l'unico completo (193 link, regola `docs-index-file`), ma con intestazione corrotta e voci invecchiate: tre file rinominati dalla normalizzazione dei nomi (`redundancy-audit-2026-05-21.md`, `git-merge-conflict-inventory.md`, la cartella `root-md-files/`) e 15 file non elencati.
+=======
+<<<<<<< .merge_file_fBYgFN
+3. **Cinque indici di radice** (`00-INDEX.md`, `00-index.md`, `INDEX.md`, `README.md`, `index.md`). `index.md` era l'unico completo (193 link, regola `docs-index-file`), ma con intestazione corrotta e voci invecchiate: tre file rinominati dalla normalizzazione dei nomi (`redundancy-audit-2026-05-21.md`, `git-merge-conflict-inventory.md`, la cartella `root-md-files/`) e 15 file non elencati.
+=======
+3. **Cinque indici di radice** (`00-INDEX.md`, `00-index.md`, `INDEX.md`, `README.md`, `index.md`). `index.md` era l'unico completo (193 link, regola `docs-index-file`), ma con intestazione corrotta e voci invecchiate: tre file rinominati dalla normalizzazione dei nomi (`redundancy-audit-2026-05-21.md`, `git-merge-conflict-inventory-2026-04-28.md`, la cartella `root-md-files/`) e 15 file non elencati.
+>>>>>>> .merge_file_yhSwyz
+>>>>>>> .merge_file_OPfKhA
 4. **Link rotti per profondita' sbagliata.** I template wiki sono stati copiati a profondita' diversa: `../../docs/wiki/...` doveva essere `../../../../docs/wiki/...`. Il percorso corretto esiste su disco, quindi la correzione e' verificabile. Altre famiglie: case sbagliato nei nomi modulo (`../../xot/docs/readme.md`), link scritti dalla radice del modulo (`./docs/readme-en.md`).
 5. **Stub con puntatore canonico morto.** 33 file `module: theme` con `canonical: ../../../Themes/docs/shared-components/...`: la cartella `Themes/docs` non esiste nel repo. Qui non ho inventato un destinatario: `status: stub` piu' commento sul puntatore.
 6. **Contenuto stantio.** Verificato su disco prima di marcare: `PHILOSOPHY.md` cita 3 file inesistenti; `structure.md` e' un dump del 2025-04-23 (9 file PHP dichiarati); `cyclomatic-complexity-report.md` generato il 2025-10-01; `dry-kiss-analysis.md` ha `[DATE]` non renderizzato; `wiki/agents.md` e `wiki/AGENTS.md` hanno `{{TYPE^}}`; `README.md` e' la concatenazione di due README con badge incoerenti. `decision-log.md` e `investigation/investigation.md` sono template vuoti (`draft`).

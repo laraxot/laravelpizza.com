@@ -1,14 +1,37 @@
 ---
+<<<<<<< .merge_file_Te47zL
+=======
+<<<<<<< .merge_file_pRA6Aa
+>>>>>>> .merge_file_BWFJei
 title: "action sentinel main to module 20260313T132007Z"
 type: note
 tags: [documentation]
 created: 2026-03-13
+<<<<<<< .merge_file_Te47zL
+=======
+=======
+title: "action sentinel main to module"
+sentinel_at: 2026-03-13T13:20:07Z
+type: note
+tags: [documentation]
+created: 2026-09-26
+>>>>>>> .merge_file_HdKsvh
+>>>>>>> .merge_file_BWFJei
 updated: 2026-09-26
 qmd: "action sentinel main to module 20260313T132007Z"
 issues: []
 discussions: []
+<<<<<<< .merge_file_Te47zL
 status: superseded
 superseded_by: action-sentinel-main-to-module-20260313t132007z.md
+=======
+<<<<<<< .merge_file_pRA6Aa
+status: superseded
+superseded_by: action-sentinel-main-to-module-20260313t132007z.md
+=======
+status: active
+>>>>>>> .merge_file_HdKsvh
+>>>>>>> .merge_file_BWFJei
 ---
 
 Action main to module sentinel

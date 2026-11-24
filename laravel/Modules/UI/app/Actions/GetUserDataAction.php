@@ -14,7 +14,11 @@ use Spatie\Permission\Contracts\Permission;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< .merge_file_bq6ZVY
  * @see docs/contracts/get-user-data-action.md
+=======
+ * Dati dell'utente autenticato (identità, ruolo, permessi, impostazioni del profilo).
+>>>>>>> .merge_file_fxvedX
  *
  * @contract docs/contracts/get-user-data-action.md
  */

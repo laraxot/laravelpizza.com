@@ -29,6 +29,7 @@ Definire **access control per pagina** nel JSON CMS (`config/local/.../content/p
 }
 ```
 
+<<<<<<< .merge_file_4ULWnJ
 <<<<<<< .merge_file_g44Hyv
 <<<<<<< .merge_file_7e6s8d
 <<<<<<< .merge_file_J0oLhI
@@ -38,6 +39,8 @@ Alias supportati come su Laravel (`auth`, `guest`, parametri `throttle:60,1`), m
 >>>>>>> .merge_file_aPFfLD
 =======
 >>>>>>> .merge_file_q0KKZU
+=======
+>>>>>>> .merge_file_YiWaZ4
 <<<<<<< HEAD
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
 =======
@@ -47,6 +50,7 @@ Alias supportati come su Laravel (`auth`, `guest`, `verified`, classi FQCN, para
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4ULWnJ
 <<<<<<< .merge_file_g44Hyv
 <<<<<<< .merge_file_7e6s8d
 >>>>>>> .merge_file_k20InM
@@ -54,6 +58,8 @@ Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `th
 >>>>>>> .merge_file_aPFfLD
 =======
 >>>>>>> .merge_file_q0KKZU
+=======
+>>>>>>> .merge_file_YiWaZ4
 
 ## Flusso
 

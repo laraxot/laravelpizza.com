@@ -8,6 +8,7 @@ updated: 2026-07-01
 related:
   - ../../../Xot/docs/wiki/concepts/phpstan-trait-probes.md
   - ../../../../docs/wiki/concepts/nwidart-module-skeleton-contract.md
+qmd: "phpstan format seconds trait probe formatseconds"
 ---
 
 # PHPStan trait probe — FormatSeconds

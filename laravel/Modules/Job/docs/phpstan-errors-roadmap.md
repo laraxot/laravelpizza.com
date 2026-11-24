@@ -1,3 +1,8 @@
+---
+title: "PHPStan Level 10 Errors Roadmap - Job Module"
+type: note
+qmd: "phpstan errors roadmap level"
+---
 # PHPStan Level 10 Errors Roadmap - Job Module
 
 **Modulo**: Job  

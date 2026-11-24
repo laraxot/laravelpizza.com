@@ -4,6 +4,7 @@ category: "architecture"
 owner: "Job"
 status: "active"
 updated: "2026-07-28"
+qmd: "patterns architectural"
 ---
 
 # ⭐ Job Module Architectural Patterns

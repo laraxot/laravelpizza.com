@@ -115,6 +115,7 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 
 ## Collegamenti
 
+<<<<<<< .merge_file_jHoEbL
 <<<<<<< .merge_file_tpT6EZ
 <<<<<<< .merge_file_cnQqNR
 <<<<<<< .merge_file_dDM8lX
@@ -124,6 +125,8 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 >>>>>>> .merge_file_Z7Kqay
 =======
 >>>>>>> .merge_file_l6S8w6
+=======
+>>>>>>> .merge_file_j9jo47
 <<<<<<< HEAD
 - [Documentazione Modulo Geo](module_geo.md)
 =======
@@ -133,6 +136,7 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 - [Documentazione Modulo Geo](module-geo.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jHoEbL
 <<<<<<< .merge_file_tpT6EZ
 <<<<<<< .merge_file_cnQqNR
 >>>>>>> .merge_file_y3cL97
@@ -140,6 +144,8 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 >>>>>>> .merge_file_Z7Kqay
 =======
 >>>>>>> .merge_file_l6S8w6
+=======
+>>>>>>> .merge_file_j9jo47
 - [Convenzioni Laraxot](../../../../docs/project/laraxot_conventions.md)
 - [Regole PHPStan](phpstan_fixes.md)
 

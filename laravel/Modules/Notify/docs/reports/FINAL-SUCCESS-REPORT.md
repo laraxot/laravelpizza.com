@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_E5jFw7
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_suFo0J
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_E5jFw7
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_suFo0J
 qmd: "FINAL SUCCESS REPORT"
 issues: []
 discussions: []
@@ -164,19 +170,25 @@ test -f bashscripts/git/subtrees/sync_remote_repo.sh || { echo "sync_remote_repo
    - bashscripts/ è nel .gitignore
    - Copia manuale required
 <<<<<<< HEAD
+<<<<<<< .merge_file_E5jFw7
    - documenta in sync_log.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_suFo0J
    - Documenta in SYNC_LOG.md
 
 =======
    - documenta in sync_log.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_E5jFw7
 =======
    - documenta in sync_log.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_suFo0J
 2. **MAI dire "task completo" senza**:
    - ✅ Code committed
    - ✅ Pushed to GitHub
@@ -200,12 +212,15 @@ test -f bashscripts/git/subtrees/sync_remote_repo.sh || { echo "sync_remote_repo
 
 ### Documentation
 <<<<<<< HEAD
+<<<<<<< .merge_file_E5jFw7
 - [Bashscripts Gitignore Workaround](docs/bashscripts_gitignore_workaround.md)
 - [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_suFo0J
 - [Bashscripts Gitignore Workaround](docs/BASHSCRIPTS_GITIGNORE_WORKAROUND.md)
 - [Multi-Agent Collaboration Guide](docs/MULTI_AGENT_COLLABORATION_GUIDE.md)
 - [GitHub Sync Rule](docs/GITHUB_SYNC_RULE.md)
@@ -214,12 +229,15 @@ test -f bashscripts/git/subtrees/sync_remote_repo.sh || { echo "sync_remote_repo
 - [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_E5jFw7
 =======
 - [Bashscripts Gitignore Workaround](docs/bashscripts_gitignore_workaround.md)
 - [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_suFo0J
 - [Bashscripts Gitignore Workaround](../bashscripts_gitignore_workaround.md)
 - [Multi-Agent Collaboration Guide](../multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](../github_sync_rule.md)

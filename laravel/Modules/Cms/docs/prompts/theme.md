@@ -31,6 +31,7 @@ cd laravel/Themes/<nome tem>
 composer update -W 
 npm install
 npm run build
+<<<<<<< .merge_file_1axhKn
 <<<<<<< .merge_file_8Ge7g6
 <<<<<<< .merge_file_FxKSAX
 <<<<<<< .merge_file_qjNdli
@@ -40,6 +41,8 @@ npm run build
 >>>>>>> .merge_file_QPShFt
 =======
 >>>>>>> .merge_file_o0S6Y9
+=======
+>>>>>>> .merge_file_4ffoTF
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -49,6 +52,7 @@ npm run build
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1axhKn
 <<<<<<< .merge_file_8Ge7g6
 <<<<<<< .merge_file_FxKSAX
 >>>>>>> .merge_file_FaApti
@@ -56,5 +60,7 @@ npm run build
 >>>>>>> .merge_file_QPShFt
 =======
 >>>>>>> .merge_file_o0S6Y9
+=======
+>>>>>>> .merge_file_4ffoTF
 capisci te i perche' 
 utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm

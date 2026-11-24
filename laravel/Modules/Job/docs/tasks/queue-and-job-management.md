@@ -1,3 +1,8 @@
+---
+title: "Task 001: Implement Queue and Job Management System"
+type: note
+qmd: "queue and job management task 001"
+---
 # Task 001: Implement Queue and Job Management System
 
 ## Description

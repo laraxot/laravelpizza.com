@@ -12,6 +12,7 @@ related:
   - ../roadmap-miglioramenti.md
   - ../livewire-widget-epics.md
   - ../livewire-inventory.md
+qmd: "continuazione domani bmad job"
 ---
 
 # Job — Continuazione Domani

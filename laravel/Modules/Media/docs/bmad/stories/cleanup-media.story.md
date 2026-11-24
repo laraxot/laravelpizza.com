@@ -14,8 +14,11 @@ type: note
 tags: [documentation]
 ---
 
+<<<<<<< .merge_file_CPsY5x
 <<<<<<< .merge_file_5eOzBH
 =======
+=======
+>>>>>>> .merge_file_vJKYu1
 =======
 >>>>>>> .merge_file_4xGazI
 <<<<<<< HEAD
@@ -25,7 +28,10 @@ tags: [documentation]
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CPsY5x
 >>>>>>> .merge_file_pM6Ads
+=======
+>>>>>>> .merge_file_vJKYu1
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied

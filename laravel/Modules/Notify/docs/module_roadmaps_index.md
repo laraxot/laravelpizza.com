@@ -3,7 +3,15 @@ title: "module roadmaps index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_9J6sYm
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_bluyhV
 qmd: "module roadmaps index"
 issues: []
 discussions: []
@@ -265,6 +273,7 @@ This document provides an index of all module roadmaps in the Laraxot ecosystem.
 - [Laraxot Architecture Rules](./laravel/Modules/Xot/docs/laraxot-architecture-rules.md)
 - [Project Roadmap](./project_roadmap.md)
 - [AGENTS.md](./agents.md)
+<<<<<<< .merge_file_9J6sYm
 <<<<<<< HEAD
 - [AGENTS.md](./agents.md)
 =======
@@ -273,6 +282,9 @@ This document provides an index of all module roadmaps in the Laraxot ecosystem.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [AGENTS.md](./agents.md)
+>>>>>>> .merge_file_bluyhV
 - [Getting Started](./quick_start.md)
 
 ## 🤝 Contributing
@@ -308,8 +320,11 @@ qmd: "module roadmaps index"
 issues: []
 discussions: []
 **Maintainer**: Laraxot Team
+<<<<<<< .merge_file_9J6sYm
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bluyhV

@@ -8,18 +8,24 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 <<<<<<< HEAD
+<<<<<<< .merge_file_aZB8bS
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rKytSP
 updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aZB8bS
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rKytSP
 ---
 
 # Notify Module Rules Index
@@ -64,18 +70,24 @@ See: [no-http-controllers.md](./no-http-controllers.md)
 - [README](./README.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_aZB8bS
 <<<<<<< HEAD
 - [README](./README.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rKytSP
 - [README](./readme.md)
 =======
 - [README](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aZB8bS
 =======
 - [README](./readme.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rKytSP
 - [phpstan](./phpstan.md)
 - [No HTTP controllers](./no-http-controllers.md)

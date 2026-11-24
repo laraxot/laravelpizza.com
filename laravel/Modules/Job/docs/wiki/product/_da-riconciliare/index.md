@@ -5,6 +5,7 @@ type: product
 tags: [product, modules, job]
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "product"
 ---
 
 # job — product

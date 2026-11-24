@@ -1,10 +1,10 @@
 ---
-title: "Product Launch Plan"
+title: "product launch plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "Product Launch Plan"
+qmd: "product launch plan"
 issues: []
 discussions: []
 ---
@@ -17,20 +17,12 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "PRODUCT LAUNCH PLAN"
-=======
 title: "product launch plan"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PRODUCT LAUNCH PLAN"
-=======
 qmd: "product launch plan"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## Launch Objectives

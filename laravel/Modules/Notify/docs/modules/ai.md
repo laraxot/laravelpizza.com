@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_nPiGIv
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_zGJRZV
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_nPiGIv
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zGJRZV
 qmd: "ai"
 issues: []
 discussions: []
@@ -44,18 +50,22 @@ Modulo dedicato alle azioni di intelligenza artificiale, sentiment analysis, int
 - [Repository AI](../repositories.md)
 - [Repository AI](../../../AI/docs/repositories.md)
 =======
+<<<<<<< .merge_file_nPiGIv
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Documentazione generale AI](../tutorials.md)
 - [Repository AI](../repositories.md)
 - [Repository AI](../../../AI/docs/repositories.md)
 =======
+=======
+>>>>>>> .merge_file_zGJRZV
 <<<<<<< .merge_file_9XVORe
 - [Documentazione generale AI](../../Modules/AI/docs/tutorials.md)
 - [Repository AI](../../Modules/AI/docs/repositories.md)
 =======
 - [Documentazione generale AI](../tutorials.md)
 - [Repository AI](../repositories.md)
+<<<<<<< .merge_file_nPiGIv
 - [Repository AI](../../../AI/docs/repositories.md)
 >>>>>>> .merge_file_ou3w8x
 >>>>>>> laraxot/dev
@@ -64,4 +74,8 @@ Modulo dedicato alle azioni di intelligenza artificiale, sentiment analysis, int
 - [Repository AI](../repositories.md)
 - [Repository AI](../../../AI/docs/repositories.md)
 >>>>>>> laraxot/dev
+=======
+- [Repository AI](../../../AI/docs/repositories.md)
+>>>>>>> .merge_file_ou3w8x
+>>>>>>> .merge_file_zGJRZV
 >>>>>>> laraxot/dev

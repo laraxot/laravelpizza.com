@@ -1,3 +1,8 @@
+---
+title: "PHPStan Level 10 Compliance Status"
+type: note
+qmd: "phpstan compliance status level"
+---
 # PHPStan Level 10 Compliance Status
 
 

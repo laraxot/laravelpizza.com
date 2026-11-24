@@ -9,7 +9,10 @@ module: Tenant
 related:
   - ../../../Notify/docs/stories/mail-server-send-receive.story.md
 tags: [tenant, config, symlink, regression, database, log, livewire]
+<<<<<<< .merge_file_rkUpjn
 qmd: "symlinked tenant config ignored on web"
+=======
+>>>>>>> .merge_file_0Xysmh
 ---
 
 # Config del tenant ignorata via web e pulizia del log

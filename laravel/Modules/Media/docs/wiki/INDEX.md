@@ -6,9 +6,12 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
+<<<<<<< .merge_file_N37DFh
 <<<<<<< .merge_file_6gWLoF
 - [Rules](rules/index.md)
 =======
+=======
+>>>>>>> .merge_file_00fY0R
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Rules](rules/index.md)
@@ -32,7 +35,10 @@ module: "Media"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_N37DFh
 >>>>>>> .merge_file_AoGx8f
+=======
+>>>>>>> .merge_file_00fY0R
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)

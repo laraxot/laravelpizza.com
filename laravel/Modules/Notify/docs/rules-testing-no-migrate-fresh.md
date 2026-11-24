@@ -3,7 +3,15 @@ title: "rules testing no migrate fresh"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_3FVOrB
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_usAzmn
 qmd: "rules testing no migrate fresh"
 issues: []
 discussions: []

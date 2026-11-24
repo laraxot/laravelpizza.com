@@ -16,7 +16,11 @@ use Webmozart\Assert\Assert;
 use function Safe\realpath;
 
 /**
+<<<<<<< .merge_file_a2S2RU
  * @see docs/contracts/get-all-blocks-action.md
+=======
+ * Blocchi del page builder trovati in app/Filament/Blocks di ogni modulo.
+>>>>>>> .merge_file_tIZskB
  *
  * @contract docs/contracts/get-all-blocks-action.md
  */
@@ -46,7 +50,7 @@ final class GetAllBlocksAction
                 $name = Str::before($name, '_block');
             }
 
-            $module = Str::of($class)->between('Modules\\', '\Filament\\')->toString();
+            $module = Str::of($class)->between('Modules\\', '\\Filament\\')->toString();
 
             return [
                 'name' => $name,

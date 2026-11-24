@@ -1,3 +1,8 @@
+---
+title: "PHPStan Level 10 Fixes - Modulo Job"
+type: note
+qmd: "phpstan level 10 fixes"
+---
 # PHPStan Level 10 Fixes - Modulo Job
 
 ## Data: [DATE]

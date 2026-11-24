@@ -3,7 +3,15 @@ title: "no hardcoded language religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_H6xzXF
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_7AFd3H
 qmd: "no hardcoded language religion"
 issues: []
 discussions: []

@@ -6,7 +6,15 @@ discussions: []
 title: "Git LFS vietato: linea guida e prototipo .gitattributes"
 type: guideline
 module: Notify
+<<<<<<< .merge_file_XQ45NV
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-01
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JiIPo4
 qmd: "git lfs vietato gitattributes prototipo binari blob normali notify puntatori immagini"
 ---
 

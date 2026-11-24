@@ -3,6 +3,7 @@ title: "address resource"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_V8YoEB
 <<<<<<< .merge_file_CX9VbJ
 <<<<<<< .merge_file_nLT592
 <<<<<<< .merge_file_whvg4S
@@ -21,6 +22,11 @@ created: 2026-09-26
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_APGx97
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_BAEKcx
 updated: 2026-11-23
 qmd: "address resource"
 issues: []
@@ -133,6 +139,7 @@ Quando un altro modulo (es. StudioResource) deve gestire indirizzi, è best prac
 - [../../Xot/app/Filament/Resources/XotBaseResource.php](../../Xot/app/Filament/Resources/XotBaseResource.php)
 - [filament.md](./filament.md)
 - [models/address.md](./models/address.md)
+<<<<<<< .merge_file_V8YoEB
 <<<<<<< .merge_file_CX9VbJ
 <<<<<<< .merge_file_nLT592
 <<<<<<< .merge_file_whvg4S
@@ -148,6 +155,10 @@ Quando un altro modulo (es. StudioResource) deve gestire indirizzi, è best prac
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_APGx97
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_BAEKcx
 updated: 2026-09-26
 qmd: "address resource"
 issues: []
@@ -158,6 +169,7 @@ canonical: ../../../Themes/docs/shared-components/address-resource-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/address-resource-1.md
+<<<<<<< .merge_file_V8YoEB
 <<<<<<< .merge_file_CX9VbJ
 <<<<<<< .merge_file_nLT592
 <<<<<<< .merge_file_whvg4S
@@ -166,10 +178,13 @@ See canonical documentation: ../../../Themes/docs/shared-components/address-reso
 >>>>>>> .merge_file_j3JXqI
 =======
 >>>>>>> .merge_file_APGx97
+=======
+>>>>>>> .merge_file_BAEKcx
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_V8YoEB
 <<<<<<< .merge_file_CX9VbJ
 <<<<<<< .merge_file_nLT592
 >>>>>>> .merge_file_oqa2Ib
@@ -177,3 +192,5 @@ See canonical documentation: ../../../Themes/docs/shared-components/address-reso
 >>>>>>> .merge_file_j3JXqI
 =======
 >>>>>>> .merge_file_APGx97
+=======
+>>>>>>> .merge_file_BAEKcx

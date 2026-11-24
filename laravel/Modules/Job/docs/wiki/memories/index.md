@@ -1,3 +1,8 @@
+---
+title: "Job Module - memories Index"
+type: note
+qmd: "memories"
+---
 # Job Module - memories Index
 
 ## Purpose

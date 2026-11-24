@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_9zzdzI
 title: "GetUserDataAction — contratto"
 type: contract
 owner: UI
@@ -8,6 +9,14 @@ created: 2026-11-24
 updated: 2026-11-24
 action: "Modules\\UI\\Actions\\GetUserDataAction"
 qmd: "GetUserDataAction utente autenticato UserData avatar ruolo permessi settings profile"
+=======
+title: "Contratto — GetUserDataAction"
+type: contract
+action: "Modules\UI\Actions\GetUserDataAction"
+tags: [contract, action, user, personal-data]
+created: 2026-11-24
+updated: 2026-11-24
+>>>>>>> .merge_file_gipHSw
 ---
 
 # GetUserDataAction
@@ -23,9 +32,15 @@ produzione, solo test: chi lo collega a una vista o a un'API legge prima «Non f
 ## Output
 
 - `UserData|null`: `null` se nessuno è autenticato o se l'autenticato non implementa `Modules\Xot\Contracts\UserContract`.
+<<<<<<< .merge_file_9zzdzI
 - Altrimenti `id`, `name`, `email` (`getAttribute`, `''` se non stringa), `avatar`, `role` (il **primo** nome di
   ruolo, `null` se non ne ha), `permissions` (nomi di tutti i permessi, anche via ruolo), `settings` (`profile.extra`
   se array, altrimenti `[]`).
+=======
+- Altrimenti `id`, `name`, `email` (`getAttribute`, `''` se non stringa), `avatar` (URL del profilo caricato, poi
+  `profile_photo_path`, poi `null`), `role` (il **primo** nome di ruolo), `permissions` (nomi di tutti i permessi,
+  anche via ruolo), `settings` (`profile.extra` se array).
+>>>>>>> .merge_file_gipHSw
 
 ## Invarianti
 
@@ -34,6 +49,7 @@ produzione, solo test: chi lo collega a una vista o a un'API legge prima «Non f
 | UI-USERDATA-INV-1 | Senza utente autenticato del dominio (`UserContract`) ritorna `null`, mai dati parziali. | `UI-USERDATA-INV-1` |
 | UI-USERDATA-INV-2 | Descrive solo l'utente autenticato: id, nome ed email sono i suoi attributi, non di altri. | `UI-USERDATA-INV-2` |
 | UI-USERDATA-INV-3 | Non carica relazioni: il profilo si usa solo se già caricato (`relationLoaded('profile')`), altrimenti `settings = []`. | `UI-USERDATA-INV-3` |
+<<<<<<< .merge_file_9zzdzI
 | UI-USERDATA-INV-4 | `role` è il primo ruolo, `permissions` sono nomi (stringhe). | `UI-USERDATA-INV-4` |
 | UI-USERDATA-INV-5 | `avatar` è l'URL del profilo se già caricato e non vuoto; altrimenti `profile_photo_path` se stringa non vuota; altrimenti `null`. | `UI-USERDATA-INV-5` |
 
@@ -43,6 +59,14 @@ Gli ID sono stabili: ogni test Pest li usa come `group` (`--group=UI-USERDATA-IN
 
 - Nessuna scrittura, evento o coda. Legge ruoli e permessi tramite Spatie Permission (`getRoleNames()`,
   `getAllPermissions()`), che può interrogare il database se le relazioni non sono caricate.
+=======
+| UI-USERDATA-INV-4 | `role` è il primo ruolo, `permissions` sono nomi (stringhe). | — |
+
+## Effetti collaterali
+
+- Nessuna scrittura. Legge ruoli e permessi tramite Spatie Permission (`getRoleNames()`, `getAllPermissions()`), che
+  può interrogare il database se le relazioni non sono caricate.
+>>>>>>> .merge_file_gipHSw
 
 ## Errori
 
@@ -53,6 +77,7 @@ Gli ID sono stabili: ogni test Pest li usa come `group` (`--group=UI-USERDATA-IN
 - Non accetta un utente come parametro: non usarla per descrivere un utente diverso da quello autenticato.
 - Non filtra i dati per destinatario: il risultato contiene email, permessi e `profile.extra`; non va serializzato
   verso il browser o un'API pubblica senza scegliere i campi.
+<<<<<<< .merge_file_9zzdzI
 - Non filtra i permessi per guard o per team.
 - Non mette in cache.
 
@@ -62,3 +87,9 @@ Gli ID sono stabili: ogni test Pest li usa come `group` (`--group=UI-USERDATA-IN
 sottoclasse anonima di `User` deve rispondere a `relationLoaded()` con il genitore per ogni chiave diversa da
 `profile`, altrimenti Spatie considera `roles` e `permissions` non caricati, li rilegge dal database e i test vedono
 ruolo `null` e permessi vuoti (difetto del test, non dell'azione, corretto il 24 novembre).
+=======
+- Non mette in cache.
+- Debito: i test `prende il primo ruolo, non tutti` e `elenca i permessi per nome` di `tests/Unit/GetUserDataActionTest.php`
+  falliscono nel checkout attuale (ruolo `null`, permessi vuoti con relazioni impostate via `setRelation`): per questo
+  UI-USERDATA-INV-4 non ha group.
+>>>>>>> .merge_file_gipHSw

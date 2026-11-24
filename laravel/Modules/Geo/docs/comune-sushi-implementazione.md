@@ -112,6 +112,7 @@ discussions: []
 - [geo-json-model.md](geo-json-model.md)
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md)
+<<<<<<< .merge_file_iXRPOi
 <<<<<<< .merge_file_rYKQGg
 <<<<<<< .merge_file_kRztZJ
 <<<<<<< .merge_file_FZO7LX
@@ -121,6 +122,8 @@ discussions: []
 >>>>>>> .merge_file_Jj0Nto
 =======
 >>>>>>> .merge_file_aqsUIz
+=======
+>>>>>>> .merge_file_DhuC9C
 <<<<<<< HEAD
 - [module_geo.md](module_geo.md)
 =======
@@ -130,6 +133,7 @@ discussions: []
 - [module_geo.md](module-geo.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iXRPOi
 <<<<<<< .merge_file_rYKQGg
 <<<<<<< .merge_file_kRztZJ
 >>>>>>> .merge_file_SZK4aD
@@ -137,6 +141,8 @@ discussions: []
 >>>>>>> .merge_file_Jj0Nto
 =======
 >>>>>>> .merge_file_aqsUIz
+=======
+>>>>>>> .merge_file_DhuC9C
 
 ---
 

@@ -10,6 +10,7 @@ use Modules\Job\Models\Schedule;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+<<<<<<< .merge_file_QVGhqx
 <<<<<<< .merge_file_9y4rnk
 <<<<<<< .merge_file_iNRugw
 <<<<<<< .merge_file_LBmNpI
@@ -24,6 +25,8 @@ use Webmozart\Assert\Assert;
 >>>>>>> .merge_file_1Eh2Jy
 =======
 >>>>>>> .merge_file_JhCLVz
+=======
+>>>>>>> .merge_file_eGwVis
 class GetActiveSchedulesAction
 {
     use QueueableAction;

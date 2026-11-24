@@ -9,10 +9,13 @@ type: reference
 updated: 2026-05-21
 related:
 <<<<<<< HEAD
+<<<<<<< .merge_file_mb1jru
 <<<<<<< .merge_file_qpye0s
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_StIPYS
+=======
+>>>>>>> .merge_file_HOF8kM
   - "../../../Media/docs/html2pdf/SECURITY.md"
 =======
 <<<<<<< HEAD
@@ -23,6 +26,7 @@ related:
   - "../../../Media/docs/html2pdf/SECURITY.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_mb1jru
 <<<<<<< .merge_file_qpye0s
 =======
   - "../../../Media/docs/html2pdf/security.md"
@@ -31,6 +35,8 @@ related:
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_StIPYS
+=======
+>>>>>>> .merge_file_HOF8kM
 ---
 
 # Html2Pdf — security

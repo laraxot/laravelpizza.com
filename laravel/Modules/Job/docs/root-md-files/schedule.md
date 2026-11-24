@@ -1,3 +1,8 @@
+---
+title: "Schedule"
+type: note
+qmd: "schedule"
+---
 https://healthchecks.io/
 
 Simple and Effective Cron Job Monitoring

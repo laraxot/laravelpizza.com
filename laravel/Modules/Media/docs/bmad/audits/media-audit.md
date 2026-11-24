@@ -4,9 +4,12 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_IN0uPH
 <<<<<<< .merge_file_Nf6uID
 qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
 =======
+=======
+>>>>>>> .merge_file_oBARXr
 <<<<<<< HEAD
 <<<<<<< HEAD
 qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
@@ -30,7 +33,10 @@ qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_IN0uPH
 >>>>>>> .merge_file_xDsCbS
+=======
+>>>>>>> .merge_file_oBARXr
 related:
   - ../audit.md
   - ../piano-miglioramento.md
@@ -45,8 +51,11 @@ related:
 
 ## Metodo
 
+<<<<<<< .merge_file_IN0uPH
 <<<<<<< .merge_file_Nf6uID
 =======
+=======
+>>>>>>> .merge_file_oBARXr
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -120,7 +129,10 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_IN0uPH
 >>>>>>> .merge_file_xDsCbS
+=======
+>>>>>>> .merge_file_oBARXr
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
 ## Scopo (perché esiste)

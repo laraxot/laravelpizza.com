@@ -14,11 +14,15 @@ use function Safe\tempnam;
 use function Safe\unlink;
 
 /**
+<<<<<<< .merge_file_yc0yp3
 <<<<<<< .merge_file_kuh6H7
  * @see docs/contracts/save-attachments-action.md
 =======
  * Copia gli allegati caricati nelle collezioni Media Library del record e ne salva i percorsi sul record.
 >>>>>>> .merge_file_4XdheQ
+=======
+ * Copia gli allegati caricati nelle collezioni Media Library del record e ne salva i percorsi sul record.
+>>>>>>> .merge_file_oXzL8t
  *
  * @contract docs/contracts/save-attachments-action.md
  */

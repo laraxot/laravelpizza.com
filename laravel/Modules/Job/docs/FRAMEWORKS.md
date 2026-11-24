@@ -1,3 +1,8 @@
+---
+title: "Job — Framework Integration Notes"
+type: note
+qmd: "frameworks framework integration notes"
+---
 # Job — Framework Integration Notes
 
 Integration guidelines for caveman, graphify, bmad-method, headroom, ponytail.

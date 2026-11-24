@@ -1,3 +1,8 @@
+---
+title: "Storage Server"
+type: note
+qmd: "storage server"
+---
 Wasabi Hot Cloud Storage
 
 Rabata.io Cloud Storage

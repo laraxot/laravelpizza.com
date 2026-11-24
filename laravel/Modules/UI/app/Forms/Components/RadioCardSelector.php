@@ -34,7 +34,11 @@ class RadioCardSelector extends XotBaseField
     /**
      * Imposta le card disponibili per la selezione.
      *
+<<<<<<< .merge_file_i8uyIo
      * @param  array<int, array<string, mixed>>|\Closure  $cards
+=======
+     * @param array<int, array<string, mixed>>|\Closure $cards
+>>>>>>> .merge_file_ANifcf
      */
     public function cards(array|\Closure $cards): static
     {
@@ -118,7 +122,12 @@ class RadioCardSelector extends XotBaseField
     }
 
     /**
+<<<<<<< .merge_file_i8uyIo
      * @param  array<mixed, mixed>  $item
+=======
+     * @param array<mixed, mixed> $item
+     *
+>>>>>>> .merge_file_ANifcf
      * @return array<string, mixed>
      */
     private static function normalizeCardRow(array $item): array

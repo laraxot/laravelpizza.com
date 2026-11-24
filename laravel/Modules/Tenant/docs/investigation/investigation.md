@@ -1,8 +1,12 @@
 ---
 type: investigation
 title: "Investigation Isolation Strategy"
+<<<<<<< .merge_file_WCgN2i
 links: {github_issue: "#XXX"}
 qmd: "investigation isolation strategy"
+=======
+links: {github_issue: #XXX}
+>>>>>>> .merge_file_gijNPQ
 ---
 # Investigation: Isolation Strategy
 

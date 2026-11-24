@@ -4,6 +4,7 @@ type: guide
 tags: [actions, architecture, queueable]
 created: 2026-07-21
 updated: 2026-07-21
+qmd: "actions queueableactions architecture consolidated"
 ---
 
 # Job Module — QueueableActions Architecture

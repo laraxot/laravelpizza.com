@@ -1,3 +1,8 @@
+---
+title: "📚 Indice Documentazione Modulo Job"
+type: note
+qmd: "00 indice"
+---
 # 📚 **Indice Documentazione Modulo Job**
 
 **Status**: ✅ PHPStan Level 10 Compliant

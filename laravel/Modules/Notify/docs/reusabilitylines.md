@@ -3,7 +3,15 @@ title: "reusabilitylines"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_7p5Xfq
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_tt4002
 qmd: "reusabilitylines"
 issues: []
 discussions: []
@@ -140,6 +148,7 @@ protected function createTestUser(): mixed
 Prima di committare modifiche al modulo Notify:
 
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+<<<<<<< .merge_file_7p5Xfq
 <<<<<<< HEAD
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
 =======
@@ -148,6 +157,9 @@ Prima di committare modifiche al modulo Notify:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+>>>>>>> .merge_file_tt4002
 - [ ] Utilizzo di `XotData::make()->getUserClass()` per la classe User
 - [ ] Configurazioni database dinamiche nei test
 - [ ] Nessun import diretto di modelli da altri progetti

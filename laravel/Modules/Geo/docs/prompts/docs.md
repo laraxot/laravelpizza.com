@@ -593,6 +593,7 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 - [Filament Best Practices](../../docs/filament-best-practices.md)
 - [Translation Rules](../../docs/translation-rules.md)
 - [Frontend Guidelines](../../docs/frontend-guidelines.md)
+<<<<<<< .merge_file_0QKbLC
 <<<<<<< .merge_file_ivIaGK
 <<<<<<< .merge_file_3b13rN
 <<<<<<< .merge_file_4th5og
@@ -602,6 +603,8 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 >>>>>>> .merge_file_SLmt3u
 =======
 >>>>>>> .merge_file_PJ8B6h
+=======
+>>>>>>> .merge_file_nXKaLI
 <<<<<<< HEAD
 - [Database Migrations](../../docs/database-migrations.md)
 =======
@@ -611,6 +614,7 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 - [Database Migrations](../../docs/database-migrations.md)
 >>>>>>> .merge_file_ucuw8k
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0QKbLC
 <<<<<<< .merge_file_ivIaGK
 <<<<<<< .merge_file_3b13rN
 >>>>>>> .merge_file_cm6jvO
@@ -618,6 +622,8 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 >>>>>>> .merge_file_SLmt3u
 =======
 >>>>>>> .merge_file_PJ8B6h
+=======
+>>>>>>> .merge_file_nXKaLI
 - [Enum Management](../../docs/enum-management.md)
 - [HTML2PDF Guidelines](../../docs/html2pdf-guidelines.md)
 

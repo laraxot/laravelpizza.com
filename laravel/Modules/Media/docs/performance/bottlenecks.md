@@ -263,8 +263,11 @@ Implementare:
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](bottlenecks.md)
+<<<<<<< .merge_file_3S6cHg
 <<<<<<< .merge_file_shn1MB
 =======
+=======
+>>>>>>> .merge_file_yz21sk
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -272,7 +275,10 @@ Implementare:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3S6cHg
 >>>>>>> .merge_file_7YY3XN
+=======
+>>>>>>> .merge_file_yz21sk
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming

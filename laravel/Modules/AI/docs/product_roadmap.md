@@ -1,10 +1,10 @@
 ---
-title: "Product Roadmap"
+title: "product roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "Product Roadmap"
+qmd: "product roadmap"
 issues: []
 discussions: []
 ---
@@ -18,20 +18,12 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "PRODUCT ROADMAP"
-=======
 title: "product roadmap"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PRODUCT ROADMAP"
-=======
 qmd: "product roadmap"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## Vision Statement

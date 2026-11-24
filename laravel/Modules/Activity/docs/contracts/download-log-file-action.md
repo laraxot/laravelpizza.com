@@ -1,6 +1,7 @@
 ---
 title: "Contratto — DownloadLogFileAction"
 type: contract
+<<<<<<< .merge_file_KNlbi6
 <<<<<<< .merge_file_buweCp
 <<<<<<< .merge_file_hu8OVZ
 <<<<<<< .merge_file_D81Iwc
@@ -14,6 +15,8 @@ qmd: "contract DownloadLogFileAction activity log download file BinaryFileRespon
 >>>>>>> .merge_file_BXSE7g
 =======
 >>>>>>> .merge_file_2sep6r
+=======
+>>>>>>> .merge_file_QGpZKN
 action: "Modules\Activity\Actions\Log\DownloadLogFileAction"
 tags: [contract, action, log-viewer, download, filesystem]
 created: 2026-11-24
@@ -23,6 +26,7 @@ related:
   - resolve-log-file-path-action.md
   - ../../app/Actions/Log/DownloadLogFileAction.php
   - ../../tests/Unit/Actions/Log/DownloadLogFileActionTest.php
+<<<<<<< .merge_file_KNlbi6
 <<<<<<< .merge_file_buweCp
 <<<<<<< .merge_file_hu8OVZ
 >>>>>>> .merge_file_TUBgGy
@@ -30,10 +34,13 @@ related:
 >>>>>>> .merge_file_BXSE7g
 =======
 >>>>>>> .merge_file_2sep6r
+=======
+>>>>>>> .merge_file_QGpZKN
 ---
 
 # DownloadLogFileAction
 
+<<<<<<< .merge_file_KNlbi6
 <<<<<<< .merge_file_buweCp
 <<<<<<< .merge_file_hu8OVZ
 <<<<<<< .merge_file_D81Iwc
@@ -73,6 +80,8 @@ Risposta HTTP di download per un file di log scelto dall'utente. Il percorso pas
 >>>>>>> .merge_file_BXSE7g
 =======
 >>>>>>> .merge_file_2sep6r
+=======
+>>>>>>> .merge_file_QGpZKN
 Risposta di download per un file di log scelto dall'utente nella pagina `LogViewer` (azione Filament di download).
 Sorgente: `app/Actions/Log/DownloadLogFileAction.php`.
 
@@ -109,6 +118,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Dow
 - Non usa il download di Livewire (`response()->streamDownload` dentro un componente): quello legge tutto il file in
   memoria e lo codifica in base64.
 - Non comprime e non taglia il file: il download è sempre il file intero (la pagina mostra solo la coda).
+<<<<<<< .merge_file_KNlbi6
 <<<<<<< .merge_file_buweCp
 <<<<<<< .merge_file_hu8OVZ
 >>>>>>> .merge_file_TUBgGy
@@ -116,3 +126,5 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Dow
 >>>>>>> .merge_file_BXSE7g
 =======
 >>>>>>> .merge_file_2sep6r
+=======
+>>>>>>> .merge_file_QGpZKN

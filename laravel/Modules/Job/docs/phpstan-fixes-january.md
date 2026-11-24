@@ -1,3 +1,8 @@
+---
+title: "PHPStan Fixes - Gennaio 2025"
+type: note
+qmd: "phpstan fixes january gennaio 2025"
+---
 # PHPStan Fixes - Gennaio 2025
 
 ## Modulo Job - Correzioni Completate

@@ -4,7 +4,10 @@ type: user-manual
 status: active
 module: Activity
 updated: 2026-11-23
+<<<<<<< .merge_file_jPpdz4
 qmd: "user manual manuale utente activity"
+=======
+>>>>>>> .merge_file_b8yApp
 ---
 
 # Manuale utente Activity

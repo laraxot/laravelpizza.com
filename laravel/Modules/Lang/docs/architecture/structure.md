@@ -487,10 +487,13 @@ tests/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
+<<<<<<< .merge_file_o7UoE3
 <<<<<<< .merge_file_4b4TZp
 * [structure.md](../../../gdpr/docs/structure.md)
 * [structure.md](../../../notify/docs/structure.md)
 =======
+=======
+>>>>>>> .merge_file_ate8uJ
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -535,7 +538,10 @@ tests/Unit
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_o7UoE3
 >>>>>>> .merge_file_2Z5jxo
+=======
+>>>>>>> .merge_file_ate8uJ
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
 * [structure.md](../../../Xot/docs/structure.md)

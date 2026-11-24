@@ -7,7 +7,10 @@ status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, ai]
+<<<<<<< .merge_file_y96oGI
 date_originale_nome_file: 2026-10-06
+=======
+>>>>>>> .merge_file_MUPUoR
 ---
 
 # [DEV] PHPStan cleanup — AI
@@ -29,7 +32,11 @@ date_originale_nome_file: 2026-10-06
 - `database/factories/AiActionProposalFactory.php`, `AiToolLogFactory.php`, `AiMessageFactory.php`
 - `tests/Unit/Models/AiActionProposalTest.php` (valori enum + cast di `status`)
 - `app/Actions/Prompt/AIPromptTemplates.php`, `app/Datas/AIPromptTemplates.php`, `app/Services/AIServicePromptTemplates.php` (`const string`)
+<<<<<<< .merge_file_y96oGI
 - `docs/bmad/domain-status-enum.md`, `docs/00-index.md` (write-back)
+=======
+- `docs/bmad/domain-status-enum.md`, `docs/00-INDEX.md` (write-back)
+>>>>>>> .merge_file_MUPUoR
 
 ## Implementation Steps
 

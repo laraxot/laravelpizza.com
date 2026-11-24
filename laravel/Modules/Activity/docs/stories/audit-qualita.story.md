@@ -7,7 +7,10 @@ created: 2026-11-19
 updated: 2026-11-19
 issues: ["laraxot/base_techplanner_fila5#64"]
 tags: [audit, qualita, docs, phpstan, pest]
+<<<<<<< .merge_file_Beigc9
 qmd: "audit qualita story activity"
+=======
+>>>>>>> .merge_file_StqO7P
 ---
 
 # Audit qualita' — modulo Activity

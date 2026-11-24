@@ -1,6 +1,9 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_faTeY5
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QpBHCn
 title: "Contratti"
 type: index
 tags: [contracts, actions, interfaces]
@@ -18,6 +21,7 @@ type: index
 tags: [contracts, actions, interfaces, ui]
 created: 2026-11-18
 updated: 2026-11-24
+<<<<<<< .merge_file_faTeY5
 =======
 title: "Contratti — UI"
 type: index
@@ -25,11 +29,16 @@ owner: UI
 updated: 2026-11-24
 qmd: "UI contract comportamentali assenti blocchi layer condiviso presentazione"
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_QpBHCn
 ---
 
 # Contratti — UI
 
+<<<<<<< .merge_file_faTeY5
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QpBHCn
 ## Metodo Harness
 
 Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
@@ -86,6 +95,7 @@ contratto nello stesso commit.
 - [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; è un elenco precedente a questo README e oggi dichiara «nessun contract», mentre i tre sopra esistono.
 - [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_faTeY5
 =======
 Un contract descrive una singola operazione che muove denaro, dati personali, permessi o produce effetti irreversibili. Standard: [contract-authoring-standard](../../../Xot/docs/contracts/contract-authoring-standard.md); governance: [ADR 0012](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
 
@@ -100,3 +110,5 @@ Se in futuro un'Action UI inizierà a scrivere dati o a decidere accessi, va agg
 - [INDEX.md](INDEX.md): registro operativo e backlog
 - [_template](_template.md): template
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_QpBHCn

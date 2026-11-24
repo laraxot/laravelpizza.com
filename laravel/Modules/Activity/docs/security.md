@@ -144,6 +144,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
 - [`phpstan.md`](#phpstan) - PHPStan security configuration
 - [`CODE_QUALITY_ANALYSIS.md`](code_quality_analysis.md) - Code quality standards
+<<<<<<< .merge_file_0jFBI6
 <<<<<<< .merge_file_c9RQ0Q
 <<<<<<< .merge_file_soQqgw
 <<<<<<< .merge_file_r4rcuz
@@ -153,6 +154,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 >>>>>>> .merge_file_vUQDk0
 =======
 >>>>>>> .merge_file_eqNZth
+=======
+>>>>>>> .merge_file_KGR9lK
 <<<<<<< HEAD
 - [`testing.md`](#testing) - Testing procedures
 =======
@@ -162,6 +165,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 - [`testing.md`](#testing) - Testing procedures
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0jFBI6
 <<<<<<< .merge_file_c9RQ0Q
 <<<<<<< .merge_file_soQqgw
 >>>>>>> .merge_file_tcjHI6
@@ -169,3 +173,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
 >>>>>>> .merge_file_vUQDk0
 =======
 >>>>>>> .merge_file_eqNZth
+=======
+>>>>>>> .merge_file_KGR9lK

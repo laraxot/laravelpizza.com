@@ -1,3 +1,8 @@
+---
+title: "PHPStan Syntax Fixes - Modulo Job"
+type: note
+qmd: "phpstan syntax fixes"
+---
 # PHPStan Syntax Fixes - Modulo Job
 
 **Versione PHPStan**: 1.12.x

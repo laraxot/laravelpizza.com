@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 <<<<<<< .merge_file_vwtPzv
@@ -7,6 +8,8 @@
 >>>>>>> .merge_file_ow5Z5D
 =======
 >>>>>>> .merge_file_2pZU63
+=======
+>>>>>>> .merge_file_WYDSyi
 <<<<<<< HEAD
 title: "Product Launch Plan"
 type: note
@@ -15,6 +18,7 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Product Launch Plan"
 =======
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 >>>>>>> .merge_file_Nxfgh6
@@ -22,12 +26,15 @@ qmd: "Product Launch Plan"
 >>>>>>> .merge_file_ow5Z5D
 =======
 >>>>>>> .merge_file_2pZU63
+=======
+>>>>>>> .merge_file_WYDSyi
 title: "product launch plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "product launch plan"
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 <<<<<<< .merge_file_vwtPzv
@@ -40,6 +47,9 @@ qmd: "product launch plan"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_2pZU63
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WYDSyi
 issues: []
 discussions: []
 ---
@@ -52,6 +62,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 <<<<<<< .merge_file_vwtPzv
@@ -60,6 +71,8 @@ discussions: []
 >>>>>>> .merge_file_ow5Z5D
 =======
 >>>>>>> .merge_file_2pZU63
+=======
+>>>>>>> .merge_file_WYDSyi
 <<<<<<< HEAD
 title: "PRODUCT LAUNCH PLAN"
 =======
@@ -84,6 +97,7 @@ qmd: "PRODUCT LAUNCH PLAN"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 >>>>>>> .merge_file_Nxfgh6
@@ -91,6 +105,8 @@ discussions: []
 >>>>>>> .merge_file_ow5Z5D
 =======
 >>>>>>> .merge_file_2pZU63
+=======
+>>>>>>> .merge_file_WYDSyi
 ## Launch Objectives
 
 1. **Product:** Launch page builder for marketing team
@@ -163,6 +179,7 @@ discussions: []
 | **User Satisfaction** | 4.0/5.0 |
 
 ---
+<<<<<<< .merge_file_ff0sGU
 <<<<<<< .merge_file_vb6v2y
 <<<<<<< .merge_file_Kdk2Nn
 <<<<<<< .merge_file_vwtPzv
@@ -175,3 +192,6 @@ discussions: []
 =======
 
 >>>>>>> .merge_file_2pZU63
+=======
+
+>>>>>>> .merge_file_WYDSyi

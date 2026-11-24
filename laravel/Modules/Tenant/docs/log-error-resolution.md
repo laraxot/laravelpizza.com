@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_JDL4Mp
 ---
 title: "Risoluzione errori di bootstrap e log"
 type: note
 qmd: "log error resolution risoluzione errori bootstrap"
 ---
+=======
+>>>>>>> .merge_file_12Vsub
 # Risoluzione errori di bootstrap e log
 
 ## Causa

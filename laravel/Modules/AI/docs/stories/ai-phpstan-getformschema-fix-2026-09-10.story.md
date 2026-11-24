@@ -9,7 +9,10 @@ status: done
 type: story
 created: 2026-09-10
 agente: claude-sonnet5-qgates-swarm-AI
+<<<<<<< .merge_file_PQlzfU
 date_originale_nome_file: 2026-09-10
+=======
+>>>>>>> .merge_file_zu69GE
 ---
 
 # PHPStan fix - AiActionProposal getFormSchema/getInfolistSchema override illegale + typo TestCase

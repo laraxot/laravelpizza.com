@@ -1,3 +1,8 @@
+---
+title: "Documentation Index"
+type: note
+qmd: "index"
+---
 # Documentation Index
 
 Modulo: Job

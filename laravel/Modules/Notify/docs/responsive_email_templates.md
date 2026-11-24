@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_F49QzQ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_bhmcOB
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F49QzQ
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bhmcOB
 qmd: "responsive email templates"
 issues: []
 discussions: []
@@ -209,9 +215,12 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_F49QzQ
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_bhmcOB
 <<<<<<< .merge_file_UKaNFa
 - [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
 - [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
@@ -219,19 +228,26 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 - [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F49QzQ
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bhmcOB
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](mail-templates/html_email_compatibility.md)
 - [MailPace Integration](mail-templates/mailpace_templates_integration.md)
+<<<<<<< .merge_file_F49QzQ
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bhmcOB
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
 - [MailPace Integration](./mail-templates/mailpace_templates_integration.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_F49QzQ
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -240,3 +256,7 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Pl3g7t
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_bhmcOB

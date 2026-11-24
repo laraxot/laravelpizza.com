@@ -8,6 +8,7 @@ module: Job
 tags: [adr, filament, queue, jobs, resource]
 related:
   - ../bmad/decision-log.md
+qmd: "jobs table read only admin tabella"
 ---
 
 # ADR: `JobResource` senza create ed edit

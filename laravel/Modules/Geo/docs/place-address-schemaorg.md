@@ -109,6 +109,7 @@ Schema::create('addresses', function (Blueprint $table) {
 ## Collegamenti
 - [schema.org/PostalAddress](https://schema.org/PostalAddress)
 - [Geo Module Architecture](./architecture.md)
+<<<<<<< .merge_file_Iv1Xrm
 <<<<<<< .merge_file_p9O7Xt
 <<<<<<< .merge_file_ChucEA
 <<<<<<< .merge_file_BSy7Ez
@@ -118,6 +119,8 @@ Schema::create('addresses', function (Blueprint $table) {
 >>>>>>> .merge_file_ejfzr3
 =======
 >>>>>>> .merge_file_LRdh7r
+=======
+>>>>>>> .merge_file_uKxxaH
 <<<<<<< HEAD
 - [Entità Geografiche](./geo_entities.md)
 =======
@@ -127,6 +130,7 @@ Schema::create('addresses', function (Blueprint $table) {
 - [Entità Geografiche](geo-entities.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Iv1Xrm
 <<<<<<< .merge_file_p9O7Xt
 <<<<<<< .merge_file_ChucEA
 >>>>>>> .merge_file_boqUsO
@@ -134,6 +138,8 @@ Schema::create('addresses', function (Blueprint $table) {
 >>>>>>> .merge_file_ejfzr3
 =======
 >>>>>>> .merge_file_LRdh7r
+=======
+>>>>>>> .merge_file_uKxxaH
 - [location-select.md](./location-select.md)
 - [README.md](./README.md)
 

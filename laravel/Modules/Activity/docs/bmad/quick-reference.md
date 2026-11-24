@@ -29,13 +29,9 @@ module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-<<<<<<< HEAD
-qmd: "quick reference activity bmad"
-=======
 <<<<<<< .merge_file_LipTyB
 <<<<<<< .merge_file_1PQ3ID
 <<<<<<< .merge_file_Ut4Ixt
->>>>>>> 9d535350 (chore(Activity): sync working tree (docs, phpstan fixes, wip))
 ---
 
 # Activity — BMAD Quick Reference

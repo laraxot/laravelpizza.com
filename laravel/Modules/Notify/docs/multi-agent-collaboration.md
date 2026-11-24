@@ -3,7 +3,15 @@ title: "🤖 Multi-Agent Collaboration Guide"
 type: concept
 tags: [multi, agent, collaboration]
 created: 2026-07-14
+<<<<<<< .merge_file_TZkZYC
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_APKNPd
 qmd: "multi-agent-collaboration 🤖 multi-agent collaboration guide"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,12 +20,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_TZkZYC
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_APKNPd
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

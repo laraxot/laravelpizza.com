@@ -197,6 +197,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Documentazione Correlata
 - [Geo JSON Model](./geo_json_model.md)
+<<<<<<< .merge_file_JPtRnW
 <<<<<<< .merge_file_SFle70
 <<<<<<< .merge_file_j6iYqb
 <<<<<<< .merge_file_3G15vv
@@ -207,6 +208,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> .merge_file_Tt5aL0
 =======
 >>>>>>> .merge_file_tz1r3j
+=======
+>>>>>>> .merge_file_c6MeMR
 <<<<<<< HEAD
 - [Comune Unificazione](./comune_unificazione_analisi.md)
 - [Consolidamento Modelli](./consolidamento_modelli_geografici.md)
@@ -219,6 +222,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Consolidamento Modelli](consolidamento-modelli-geografici.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JPtRnW
 <<<<<<< .merge_file_SFle70
 <<<<<<< .merge_file_j6iYqb
 >>>>>>> .merge_file_gEytZG
@@ -226,6 +230,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> .merge_file_Tt5aL0
 =======
 >>>>>>> .merge_file_tz1r3j
+=======
+>>>>>>> .merge_file_c6MeMR
 - [Cache Strategy](./cache_strategy.md)
 
 ### Moduli Collegati

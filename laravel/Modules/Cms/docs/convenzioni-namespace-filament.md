@@ -3,6 +3,7 @@ title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
@@ -103,6 +109,7 @@ namespace Modules\User\App\Filament\Widgets;
 - Per temi custom (es. Themes/One) la build e pubblicazione asset si fa SOLO dalla cartella del tema:
   ```sh
   npm run build
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
@@ -112,6 +119,8 @@ namespace Modules\User\App\Filament\Widgets;
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
 <<<<<<< HEAD
   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -121,6 +130,7 @@ namespace Modules\User\App\Filament\Widgets;
   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
@@ -128,6 +138,8 @@ namespace Modules\User\App\Filament\Widgets;
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
   ```
 - Non usare mai `vendor:publish` per asset dei temi custom.
 - Vedi anche [README tema One](../../../../themes/one/README.md)
@@ -201,6 +213,7 @@ Section::make('Anteprima')
 
 ---
 
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
@@ -209,6 +222,8 @@ Section::make('Anteprima')
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
 title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
@@ -217,6 +232,7 @@ updated: 2026-09-26
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
+<<<<<<< .merge_file_aapFt9
 <<<<<<< .merge_file_ouDDRp
 <<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
@@ -224,4 +240,6 @@ discussions: []
 >>>>>>> .merge_file_fWikIG
 =======
 >>>>>>> .merge_file_QRqSDH
+=======
+>>>>>>> .merge_file_ntw70N
 > **Nota**: Questo documento è linkato anche dal README di Xot per garantire coerenza tra i moduli.

@@ -3,7 +3,15 @@ title: "🚀 Ralph Loop Execution Log - Homepage Bootstrap Italia Fix"
 type: concept
 tags: [ralph, loop, execution]
 created: 2026-07-14
+<<<<<<< .merge_file_gUcnoW
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NfisQ7
 qmd: "ralph-loop-execution 🚀 ralph loop execution log - homepage bootstrap italia fix"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -14,10 +22,13 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< .merge_file_gUcnoW
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NfisQ7
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

@@ -1,3 +1,8 @@
+---
+title: "Task: Job Filament v5 Alignment (Clusters)"
+type: note
+qmd: "job filament v5 task alignment clusters"
+---
 # Task: Job Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo

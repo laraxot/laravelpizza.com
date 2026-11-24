@@ -3,6 +3,7 @@ title: "validate links"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_jamN9w
 <<<<<<< .merge_file_GuTqz2
 <<<<<<< .merge_file_7afGAM
 <<<<<<< .merge_file_kQ2ecI
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_mYpLn8
 =======
 >>>>>>> .merge_file_J6b9VF
+=======
+>>>>>>> .merge_file_tV4Xbs
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jamN9w
 <<<<<<< .merge_file_GuTqz2
 <<<<<<< .merge_file_7afGAM
 >>>>>>> .merge_file_of7i5n
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_mYpLn8
 =======
 >>>>>>> .merge_file_J6b9VF
+=======
+>>>>>>> .merge_file_tV4Xbs
 qmd: "validate links"
 issues: []
 discussions: []
@@ -203,6 +209,7 @@ jobs:
 
 ---
 
+<<<<<<< .merge_file_jamN9w
 <<<<<<< .merge_file_GuTqz2
 <<<<<<< .merge_file_7afGAM
 <<<<<<< .merge_file_kQ2ecI
@@ -211,6 +218,8 @@ jobs:
 >>>>>>> .merge_file_mYpLn8
 =======
 >>>>>>> .merge_file_J6b9VF
+=======
+>>>>>>> .merge_file_tV4Xbs
 title: "validate links"
 type: note
 tags: [documentation]
@@ -219,6 +228,7 @@ updated: 2026-09-26
 qmd: "validate links"
 issues: []
 discussions: []
+<<<<<<< .merge_file_jamN9w
 <<<<<<< .merge_file_GuTqz2
 <<<<<<< .merge_file_7afGAM
 >>>>>>> .merge_file_of7i5n
@@ -226,6 +236,8 @@ discussions: []
 >>>>>>> .merge_file_mYpLn8
 =======
 >>>>>>> .merge_file_J6b9VF
+=======
+>>>>>>> .merge_file_tV4Xbs
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 1.0
 **Integrazione**: Sistema CI/CD e pre-commit hooks

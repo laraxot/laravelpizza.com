@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: tips-1.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "tips risorse esterne"
 ---
 
 # Tips 1 — risorse esterne

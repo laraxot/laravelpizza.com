@@ -7,6 +7,7 @@ priority: High
 created: 2026-09-06
 updated: 2026-09-06
 superseded_by: "./01.Job-phpstan-fix.story.md"
+qmd: "phpstan job fix"
 ---
 
 ## Problema

@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_sUfhEb
 ---
 title: "Correzioni PHPStan per il Modulo Activity"
 type: note
 qmd: "phpstan fixes 1 correzioni activity"
 ---
+=======
+>>>>>>> .merge_file_UuZOKb
 # Correzioni PHPStan per il Modulo Activity
 
 ## Panoramica

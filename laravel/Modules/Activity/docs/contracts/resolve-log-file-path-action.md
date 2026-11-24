@@ -1,6 +1,7 @@
 ---
 title: "Contratto — ResolveLogFilePathAction"
 type: contract
+<<<<<<< .merge_file_JNNYWY
 <<<<<<< .merge_file_7vIxHQ
 <<<<<<< .merge_file_8LMiqh
 <<<<<<< .merge_file_R9cwav
@@ -14,6 +15,8 @@ qmd: "contract ResolveLogFilePathAction activity log viewer path traversal ACT-L
 >>>>>>> .merge_file_sIylQJ
 =======
 >>>>>>> .merge_file_nDKDNS
+=======
+>>>>>>> .merge_file_6n6DOA
 action: "Modules\Activity\Actions\Log\ResolveLogFilePathAction"
 tags: [contract, action, log-viewer, security, filesystem]
 created: 2026-11-24
@@ -22,6 +25,7 @@ related:
   - ../adr/log-viewer-single-path-resolver.md
   - ../../app/Actions/Log/ResolveLogFilePathAction.php
   - ../../tests/Unit/Actions/Log/ResolveLogFilePathActionTest.php
+<<<<<<< .merge_file_JNNYWY
 <<<<<<< .merge_file_7vIxHQ
 <<<<<<< .merge_file_8LMiqh
 >>>>>>> .merge_file_a8cJtC
@@ -29,10 +33,13 @@ related:
 >>>>>>> .merge_file_sIylQJ
 =======
 >>>>>>> .merge_file_nDKDNS
+=======
+>>>>>>> .merge_file_6n6DOA
 ---
 
 # ResolveLogFilePathAction
 
+<<<<<<< .merge_file_JNNYWY
 <<<<<<< .merge_file_7vIxHQ
 <<<<<<< .merge_file_8LMiqh
 <<<<<<< .merge_file_R9cwav
@@ -77,6 +84,8 @@ Unico punto in cui l'input dell'utente del visualizzatore di log (`Filament/Page
 >>>>>>> .merge_file_sIylQJ
 =======
 >>>>>>> .merge_file_nDKDNS
+=======
+>>>>>>> .merge_file_6n6DOA
 L'unico punto del visualizzatore dei log che trasforma un input dell'utente (il file scelto) in un percorso su disco.
 Lettura (`BuildLogViewerStateAction`) e download (`DownloadLogFileAction`) passano tutti da qui. Perché uno solo:
 [ADR un solo risolutore di percorsi](../adr/log-viewer-single-path-resolver.md). Sorgente:
@@ -120,6 +129,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Res
 - Non legge né apre il file: lettura a coda in `ReadLogTailAction`, download in `DownloadLogFileAction`.
 - Non elenca i file: `ListLogFilesAction`.
 - Non accetta estensioni diverse da `.log` "per comodità" (`.txt`, `.gz`): allargare la lista è una decisione di sicurezza.
+<<<<<<< .merge_file_JNNYWY
 <<<<<<< .merge_file_7vIxHQ
 <<<<<<< .merge_file_8LMiqh
 >>>>>>> .merge_file_a8cJtC
@@ -127,3 +137,5 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Res
 >>>>>>> .merge_file_sIylQJ
 =======
 >>>>>>> .merge_file_nDKDNS
+=======
+>>>>>>> .merge_file_6n6DOA

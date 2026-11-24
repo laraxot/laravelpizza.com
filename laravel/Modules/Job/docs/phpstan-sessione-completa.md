@@ -1,5 +1,6 @@
 ---
 created: 2025
+qmd: "phpstan sessione completa tutti moduli"
 ---
 
 # Sessione PHPStan Completa - Tutti i Moduli

@@ -3,16 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Schema;
-<<<<<<< HEAD
-use Modules\AI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
-
-=======
-use PHPUnit\Framework\Assert;
-
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 /*
  * In questa base l'id utente e' un UUID di 36 caratteri. Una colonna intera lo
  * tronca a 0 senza lamentarsi: la riga resta legata a nessuno, o all'utente

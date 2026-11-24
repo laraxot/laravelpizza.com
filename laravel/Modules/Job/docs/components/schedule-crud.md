@@ -1,3 +1,8 @@
+---
+title: "Schedule Crud Component"
+type: note
+qmd: "schedule crud component"
+---
 # Schedule Crud Component
 
 ## Panoramica

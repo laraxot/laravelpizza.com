@@ -443,6 +443,7 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 
 ## 📚 Related Documentation
 
+<<<<<<< .merge_file_n6wPfv
 <<<<<<< .merge_file_uywfw3
 <<<<<<< .merge_file_tmdeqe
 <<<<<<< .merge_file_L3PZ1a
@@ -453,6 +454,8 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 >>>>>>> .merge_file_F54Tdh
 =======
 >>>>>>> .merge_file_ScSNmn
+=======
+>>>>>>> .merge_file_aJCRfS
 <<<<<<< HEAD
 - [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
@@ -470,6 +473,7 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_n6wPfv
 <<<<<<< .merge_file_uywfw3
 <<<<<<< .merge_file_tmdeqe
 >>>>>>> .merge_file_G9kulj
@@ -477,6 +481,8 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 >>>>>>> .merge_file_F54Tdh
 =======
 >>>>>>> .merge_file_ScSNmn
+=======
+>>>>>>> .merge_file_aJCRfS
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.

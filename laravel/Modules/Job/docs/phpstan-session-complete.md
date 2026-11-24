@@ -1,3 +1,8 @@
+---
+title: "Sessione PHPStan Completa - Tutti i Moduli"
+type: note
+qmd: "phpstan session complete sessione completa tutti"
+---
 # Sessione PHPStan Completa - Tutti i Moduli
 **Obiettivo**: Portare tutti i moduli a PHPStan Level 10 (0 errori)
 **Status**: ⏳ IN CORSO

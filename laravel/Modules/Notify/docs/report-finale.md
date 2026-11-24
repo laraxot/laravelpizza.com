@@ -3,8 +3,19 @@ title: "📊 Report Finale - FixCity Sixteen Theme"
 type: concept
 tags: [report, finale]
 created: 2026-07-14
+<<<<<<< .merge_file_xGwjTJ
 updated: 2026-11-23
 qmd: "report-finale 📊 report finale - fixcity sixteen theme"
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+qmd: "report-finale 📊 report finale - fixcity sixteen theme"
+qmd: "report-finale 📊 report finale - ptv sixteen theme"
+=======
+updated: 2026-11-23
+qmd: "report-finale 📊 report finale - fixcity sixteen theme"
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WvwwdU
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -12,12 +23,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_xGwjTJ
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_WvwwdU
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

@@ -1,7 +1,8 @@
 ---
 type: investigation
 title: "Investigation Multi-Agency Job Board Sync"
-links: {github_issue: #XXX}
+links: {github_issue: "#XXX"}
+qmd: "investigation multiagency board sync"
 ---
 # Investigation: Multi-Agency Job Board Sync
 

@@ -6,6 +6,7 @@ status: pointer
 related:
   - ../livewire-widget-brainstorming.md
   - ../livewire-inventory.md
+qmd: "livewire to page brainstorming puntatore"
 ---
 
 # Brainstorming

@@ -1,3 +1,8 @@
+---
+title: "Asset binari"
+type: note
+qmd: "binary assets asset binari"
+---
 # Asset binari
 
 Gli asset binari sono file normali del repository.

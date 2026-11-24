@@ -3,26 +3,35 @@ title: "Bug Fix Report - 2025-01-14"
 type: note
 status: draft
 <<<<<<< HEAD
+<<<<<<< .merge_file_Rd5CBE
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9YE3YD
 updated: 2026-10-08
 tags: [docs, notify, reports]
 qmd: "bug fix report - 2025-01-14 notify"
 =======
+<<<<<<< .merge_file_Rd5CBE
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9YE3YD
 updated: 2026-11-23
 tags: [docs, notify, reports]
 qmd: "bug fix report - 2025-01-14 notify"
 created: 2026-11-23
+<<<<<<< .merge_file_Rd5CBE
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9YE3YD
 >>>>>>> laraxot/dev
 ---
 # Bug Fix Report - 2025-01-14
@@ -190,18 +199,24 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
 <<<<<<< HEAD
+<<<<<<< .merge_file_Rd5CBE
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9YE3YD
 | `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Rd5CBE
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9YE3YD
 
 ## Testing
 
@@ -302,18 +317,24 @@ $user->initializeCurrentTeam();
    - Testing
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_Rd5CBE
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9YE3YD
 3. **Summary Generale**: `docs/bugs/summary.md`
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Rd5CBE
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9YE3YD
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

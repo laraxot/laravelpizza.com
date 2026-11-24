@@ -7,6 +7,7 @@ updated: 2026-06-10
 related:
   - ../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
   - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md
+qmd: "phpstan compliance type"
 ---
 
 # Job Module — PHPStan Type Compliance

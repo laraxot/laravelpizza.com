@@ -11,7 +11,10 @@ related:
   - ../contracts/resolve-log-file-path-action.md
   - ../contracts/authorize-log-access-action.md
   - ../contracts/download-log-file-action.md
+<<<<<<< .merge_file_wqMmds
 qmd: "log viewer single path resolver visualizzatore"
+=======
+>>>>>>> .merge_file_Wxmcq5
 ---
 
 # ADR: visualizzatore dei log con un solo risolutore di percorsi

@@ -4,6 +4,7 @@ type: technical_spec
 tags: [tech spec, job]
 created: 2026-08-04
 updated: 2026-08-04
+qmd: "tech spec technical specification"
 ---
 # Technical Specification - Job Module
 

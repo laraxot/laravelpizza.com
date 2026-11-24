@@ -58,20 +58,32 @@ qmd search "<topic>"
 ./laravel/Modules/UI/docs/
 └── wiki/                    # Knowledge base locale
 <<<<<<< HEAD
+<<<<<<< .merge_file_tjpXnB
 <<<<<<< HEAD
     ├── rules/index.md      # Indice rules modulo-specifiche
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+    ├── rules/index.md      # Indice rules modulo-specifiche
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_lBS2ET
     ├── rules/INDEX.md      # Indice rules modulo-specifiche
     ├── skills/INDEX.md     # Indice skills modulo-specifiche
     ├── commands/INDEX.md   # Indici commands
     └── memories/INDEX.md   # Indice memories
 
 ├── rules/index.md      # Indice rules modulo-specifiche
+<<<<<<< .merge_file_tjpXnB
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+=======
+    ├── rules/index.md      # Indice rules modulo-specifiche
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_lBS2ET
 >>>>>>> laraxot/dev
     ├── skills/index.md     # Indice skills modulo-specifiche
     ├── commands/index.md   # Indici commands

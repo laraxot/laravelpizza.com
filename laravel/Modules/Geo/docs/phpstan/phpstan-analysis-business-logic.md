@@ -307,6 +307,7 @@ use function Safe\json_encode;
 ## 📚 **Documentazione Correlata**
 
 - [Business Logic Factory & Seeder Audit](../business-logic-factory-seeder-audit.md)
+<<<<<<< .merge_file_G3KrAm
 <<<<<<< .merge_file_89rBIg
 <<<<<<< .merge_file_ED411q
 <<<<<<< .merge_file_Rba7Rr
@@ -316,6 +317,8 @@ use function Safe\json_encode;
 >>>>>>> .merge_file_b74irg
 =======
 >>>>>>> .merge_file_D2iGP8
+=======
+>>>>>>> .merge_file_GOWMrE
 <<<<<<< HEAD
 - [PHPStan Critical Rules](./phpstan-critical-rule.md)
 =======
@@ -325,6 +328,7 @@ use function Safe\json_encode;
 - [PHPStan Critical Rules](../phpstan-critical-rule.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_G3KrAm
 <<<<<<< .merge_file_89rBIg
 <<<<<<< .merge_file_ED411q
 >>>>>>> .merge_file_2jxqu7
@@ -332,6 +336,8 @@ use function Safe\json_encode;
 >>>>>>> .merge_file_b74irg
 =======
 >>>>>>> .merge_file_D2iGP8
+=======
+>>>>>>> .merge_file_GOWMrE
 - [Factory Best Practices](../factory-best-practices.md)
 - [Testing Business Behavior Supreme Rule](../testing/testing-business-behavior-supreme-rule.md)
 

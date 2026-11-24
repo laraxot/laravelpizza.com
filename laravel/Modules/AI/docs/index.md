@@ -16,11 +16,7 @@ updated: 2026-09-03
 
 Indice unico e navigabile di `laravel/Modules/AI/docs/`. Organizzato per argomento, non per ordine alfabetico. Nessun file esistente e' stato rinominato o cancellato per produrre questo indice: dove esistono doc duplicati o superati, sono raggruppati nella sezione [Storico / da consolidare](#storico--da-consolidare) invece di essere rimossi.
 
-<<<<<<< HEAD
-Altri indici presenti nella cartella (`00-index.md`, `index.md`) sono tentativi precedenti/parziali: restano al loro posto ma questo `index.md` e' il riferimento aggiornato e completo.
-=======
 Altri indici presenti nella cartella (`00-index.md`, `INDEX.md`) sono tentativi precedenti/parziali: restano al loro posto ma questo `index.md` e' il riferimento aggiornato e completo.
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 ## Start here
 
@@ -137,11 +133,7 @@ La guida numerata `mcp/NN-topic.md` e' la versione canonica di ciascun argomento
 | [dry-kiss-analysis.md](./dry-kiss-analysis.md) | Analisi DRY & KISS |
 | [redundancy-audit-2026-05-21.md](./redundancy-audit-2026-05-21.md) | Audit ridondanza 2026-05-21 |
 | [copilot-redundancy-audit-2026-05-25.md](./copilot-redundancy-audit-2026-05-25.md) | Audit ridondanza 2026-05-25 |
-<<<<<<< HEAD
-| [ponytail-audit-2026-07-02.md](./ponytail-audit.md) | Ponytail audit: SentimentAction driver selection in config |
-=======
 | [ponytail-audit-2026-07-02.md](./ponytail-audit-2026-07-02.md) | Ponytail audit: SentimentAction driver selection in config |
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 | [ponytail-audit-over-engineering.md](./ponytail-audit-over-engineering.md) | Ponytail audit su over-engineering |
 
 ## Governance, convenzioni e hygiene
@@ -189,11 +181,7 @@ Layer di conoscenza compilata, separato dai doc sorgente sopra. Punti di ingress
 | [wiki/schema.md](./wiki/schema.md) | Schema del wiki |
 | [wiki/log.md](./wiki/log.md) | Log del wiki |
 | [llm-wiki.md](./llm-wiki.md) | Mapping del pattern Karpathy applicato a questo modulo |
-<<<<<<< HEAD
-| [llm-wiki/AGENTS.md](./llm-wiki/AGENTS.md) | Istruzioni per gli agenti che alimentano il wiki (canonica) |
-=======
 | [llm-wiki/agents.md](./llm-wiki/agents.md) | Istruzioni per gli agenti che alimentano il wiki (canonica) |
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 ### Concetti (wiki/concepts/)
 
@@ -241,7 +229,7 @@ Le sottocartelle `wiki/decisions/`, `wiki/entities/`, `wiki/glossary/`, `wiki/ho
 |---|---|
 | [raw/README.md](./raw/README.md) | Regole dell'area raw (append-only, pre-sintesi) |
 | [raw/index.md](./raw/index.md) | Cosa appartiene al layer raw |
-| [raw/root-import/CHANGELOG.md](./raw/root-import/changelog.md) | Changelog importato in raw |
+| [raw/root-import/changelog.md](./raw/root-import/changelog.md) | Changelog importato in raw |
 | [sources/README.md](./sources/README.md) | Materiale esterno importato per alimentare il wiki |
 | [outputs/README.md](./outputs/README.md) | Risposte persistenti e report generati dal wiki |
 
@@ -251,11 +239,7 @@ Le sottocartelle `raw/articles/`, `raw/comparisons/`, `raw/concepts/`, `raw/enti
 
 | Doc | Contenuto |
 |---|---|
-<<<<<<< HEAD
-| [root-md-files/CHANGELOG.md](./root-md-files/changelog.md) | Nota di rimando: il changelog canonico e' `../../CHANGELOG.md` nella root del modulo |
-=======
 | [root-md-files/changelog.md](./root-md-files/changelog.md) | Nota di rimando: il changelog canonico e' `../../CHANGELOG.md` nella root del modulo |
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 ## Storico / da consolidare
 
@@ -263,8 +247,8 @@ Questi file non sono stati toccati, ma sono duplicati, stub o snapshot superati 
 
 ### Indici precedenti di questa stessa cartella
 
-- [00-index.md](./00-index.md) - indice precedente centrato sui soli doc "prodotto", con link a `PRD.md`/`product_roadmap.md` ecc. in maiuscolo che non corrispondono ai file reali (minuscoli). Superato da questo `index.md`.
-- [index.md](./index.md) - puntatore molto breve, non aggiornato. Superato da questo `index.md`.
+- [00-index.md](./00-index.md) - indice precedente centrato sui soli doc "prodotto", con link a `PRD.md`/`PRODUCT_ROADMAP.md` ecc. in maiuscolo che non corrispondono ai file reali (minuscoli). Superato da questo `index.md`.
+- [INDEX.md](./INDEX.md) - puntatore molto breve, non aggiornato. Superato da questo `index.md`.
 
 ### Stub "module: theme" che rimandano a Themes/docs/shared-components
 
@@ -305,8 +289,4 @@ Cinque file condividono lo stesso template generico (`**Module:** AI`, `**Versio
 - [phpstan-remediation-2025-12-23.md](./phpstan-remediation-2025-12-23.md) - identico byte per byte a [phpstan-remediation.md](./phpstan-remediation.md) (diff vuoto).
 - [redundancy_analysis.md](./redundancy_analysis.md) - stub di una riga che rimanda a `docs/analysis/redundancies/summary.md` fuori dal modulo.
 - [merge-conflict-files-list.md](./merge-conflict-files-list.md) e [merge-conflicts-list.md](./merge-conflicts-list.md) - due elenchi di file con marker di conflitto da una sessione di merge passata (vedi memoria `project_notify-conflict-remediation-2026-09-03`); presumibilmente risolti, da verificare prima di rimuovere.
-<<<<<<< HEAD
-- [wiki/AGENTS.md](./wiki/AGENTS.md) - copia del template non compilato (placeholder `{{TYPE^}}`, `YYYY-MM-DD`), superata dalla versione reale in [llm-wiki/AGENTS.md](./llm-wiki/AGENTS.md).
-=======
 - [wiki/agents.md](./wiki/agents.md) - copia del template non compilato (placeholder `{{TYPE^}}`, `YYYY-MM-DD`), superata dalla versione reale in [llm-wiki/agents.md](./llm-wiki/agents.md).
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))

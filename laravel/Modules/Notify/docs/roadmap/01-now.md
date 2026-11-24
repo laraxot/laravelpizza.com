@@ -3,7 +3,15 @@ title: "01 now"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_wIbaKY
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_DZRkG1
 qmd: "01 now"
 issues: []
 discussions: []

@@ -1,6 +1,7 @@
 ---
 title: "Contratto — AssertAllowedArtisanCommandAction"
 type: contract
+<<<<<<< .merge_file_Wkh0Ip
 <<<<<<< .merge_file_s2jo1J
 <<<<<<< .merge_file_vP7bDi
 owner: Job
@@ -11,18 +12,24 @@ qmd: "AssertAllowedArtisanCommandAction job whitelist artisan JobStatus JOB-CMD-
 =======
 =======
 >>>>>>> .merge_file_5HsHPm
+=======
+>>>>>>> .merge_file_971BT2
 action: "Modules\Job\Actions\Console\AssertAllowedArtisanCommandAction"
 tags: [contract, action, artisan, security]
 created: 2026-11-24
 updated: 2026-11-24
+<<<<<<< .merge_file_Wkh0Ip
 <<<<<<< .merge_file_s2jo1J
 >>>>>>> .merge_file_IXcDgM
 =======
 >>>>>>> .merge_file_5HsHPm
+=======
+>>>>>>> .merge_file_971BT2
 ---
 
 # AssertAllowedArtisanCommandAction
 
+<<<<<<< .merge_file_Wkh0Ip
 <<<<<<< .merge_file_s2jo1J
 <<<<<<< .merge_file_vP7bDi
 Controlla che un comando Artisan richiesto dal pannello `JobStatus` sia nella whitelist. Codice: `app/Actions/Console/AssertAllowedArtisanCommandAction.php:10-22`. Decisione di fondo: [ADR 0001](../adr/0001-controlli-operativi-solo-super-admin-e-whitelist.md).
@@ -60,6 +67,8 @@ Controlla che un comando Artisan richiesto dal pannello `JobStatus` sia nella wh
 =======
 =======
 >>>>>>> .merge_file_5HsHPm
+=======
+>>>>>>> .merge_file_971BT2
 Sorgente: `app/Actions/Console/AssertAllowedArtisanCommandAction.php`. Perché esiste:
 [ADR allowlist a match esatto](../adr/artisan-commands-from-ui-exact-match-allowlist.md).
 Unico chiamante in produzione: `Filament/Pages/JobStatus.php::artisan()`.
@@ -96,7 +105,10 @@ Unico chiamante in produzione: `Filament/Pages/JobStatus.php::artisan()`.
 - Non costruisce l'elenco: non aggiungere qui comandi "di default"; l'elenco viene dai pulsanti della pagina.
 - Non accetta argomenti separati né li valida: un comando con parametri non è supportato dal pattern.
 - Non è usata da `JobStatusWidget` né da `ScheduleStatusWidget`, che hanno un `in_array` proprio (debito nell'ADR).
+<<<<<<< .merge_file_Wkh0Ip
 <<<<<<< .merge_file_s2jo1J
 >>>>>>> .merge_file_IXcDgM
 =======
 >>>>>>> .merge_file_5HsHPm
+=======
+>>>>>>> .merge_file_971BT2

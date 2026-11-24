@@ -209,9 +209,12 @@ class ExamplePage extends XotBasePage
 ## 🔗 **Collegamenti Documentazione**
 
 - [S3Test Refactoring Analysis](s3test-refactoring-analysis.md)
+<<<<<<< .merge_file_2lrTgB
 <<<<<<< .merge_file_snTbRk
 - [Media Module README](../readme.md)
 =======
+=======
+>>>>>>> .merge_file_AYRlNs
 <<<<<<< HEAD
 - [Media Module README](../README.md)
 =======
@@ -225,7 +228,10 @@ class ExamplePage extends XotBasePage
 - [Media Module README](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2lrTgB
 >>>>>>> .merge_file_qN12l7
+=======
+>>>>>>> .merge_file_AYRlNs
 - [Laraxot Best Practices](../../../../../docs/laraxot-best-practices.md)
 - [PHPStan Guidelines](../../../../../docs/phpstan-guidelines.md)
 

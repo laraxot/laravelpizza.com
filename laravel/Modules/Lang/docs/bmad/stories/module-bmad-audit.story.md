@@ -30,19 +30,25 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Riferimenti
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_LwtzSN
 =======
+>>>>>>> .merge_file_D5WHBS
+=======
 <<<<<<< .merge_file_ZG2VAu
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 =======
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_LwtzSN
+=======
+>>>>>>> .merge_file_D5WHBS
 - [audit](../audit.md)
 - [piano](../piano-miglioramento.md)
 - [ECC](../../ecc/lang-ecc-audit.md)
@@ -50,6 +56,7 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Task
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 <<<<<<< HEAD
 =======
@@ -60,23 +67,33 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_LwtzSN
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_D5WHBS
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
 
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_LwtzSN
 =======
+>>>>>>> .merge_file_D5WHBS
+=======
 >>>>>>> .merge_file_MdEVdA
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 =======
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_LwtzSN
+=======
+>>>>>>> .merge_file_D5WHBS
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
@@ -84,10 +101,13 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Esito
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_LwtzSN
+=======
+>>>>>>> .merge_file_D5WHBS
 Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 =======
 <<<<<<< .merge_file_ZG2VAu
@@ -96,9 +116,12 @@ Baseline consegnata: 0 P0, 3 P1, P2 elencati. Nota: esiste anche `module-bmad-au
 Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 >>>>>>> .merge_file_MdEVdA
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3VKxvo
 <<<<<<< .merge_file_7XcwvR
 =======
 Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_LwtzSN
+=======
+>>>>>>> .merge_file_D5WHBS

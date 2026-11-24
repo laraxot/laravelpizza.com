@@ -37,6 +37,7 @@ npm run build
 2. **Pubblicazione degli asset** - Copia i file compilati nella directory pubblica:
 
 ```bash
+<<<<<<< .merge_file_fSFbky
 <<<<<<< .merge_file_FpKFyO
 <<<<<<< .merge_file_MtKFhr
 <<<<<<< .merge_file_7nSiXX
@@ -46,6 +47,8 @@ npm run build
 >>>>>>> .merge_file_Rgt15P
 =======
 >>>>>>> .merge_file_dz3B1l
+=======
+>>>>>>> .merge_file_QLIDah
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -55,6 +58,7 @@ npm run build
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_fSFbky
 <<<<<<< .merge_file_FpKFyO
 <<<<<<< .merge_file_MtKFhr
 >>>>>>> .merge_file_3nFuHq
@@ -62,6 +66,8 @@ npm run build
 >>>>>>> .merge_file_Rgt15P
 =======
 >>>>>>> .merge_file_dz3B1l
+=======
+>>>>>>> .merge_file_QLIDah
 ```
 
 È fondamentale eseguire entrambi i comandi per vedere le modifiche nel frontend dell'applicazione.

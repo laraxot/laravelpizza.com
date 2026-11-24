@@ -12,7 +12,10 @@ qmd: "ui documentazione indice naming debt kebab-case wiki bmad"
 Ingresso del modulo UI. Nomi: kebab-case, **senza date** nel filename
 ([55-md-conventions](../../../../bashscripts/docs/prompts/55-md-conventions.md)).
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZDFpgQ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XjHNCU
 `index.md` (maiuscolo) e' stub superseded → questo file.
 =======
 <<<<<<< HEAD
@@ -21,9 +24,12 @@ Ingresso del modulo UI. Nomi: kebab-case, **senza date** nel filename
 `index.md` (maiuscolo) e' stub superseded → questo file.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZDFpgQ
 =======
 `INDEX.md` (maiuscolo) e' stub superseded → questo file.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XjHNCU
 
 ## Orientamento
 
@@ -41,18 +47,27 @@ canonico senza data via [docs-clean.md](../../../../bashscripts/docs/prompts/doc
 - `audits/quality-gates.md`
 - `bugfix-*-2025-01-27.md` (+ copie in `archive/`)
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZDFpgQ
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XjHNCU
 - `phpstan-fixes-january.md` / `phpstan-fixes-correzioni-gennaio.md` / `phpstan-fixes-november.md` (+ varianti)
 - `translations-update.md`
 - `wiki/troubleshooting/*-2026-*.md`
 - collisione case: `ARCHITECTURE_2025.md` / `architecture-2025.md` / `architecture_2025.md`
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZDFpgQ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XjHNCU
 =======
 =======
 <<<<<<< .merge_file_Zt0T0k
@@ -65,14 +80,20 @@ canonico senza data via [docs-clean.md](../../../../bashscripts/docs/prompts/doc
 - collisione case: `ARCHITECTURE_2025.md` / `architecture.md` / `architecture_2025.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZDFpgQ
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XjHNCU
 
 ```bash
 python3 -I bashscripts/tools/docs/md-filenames.py check --paths laravel/Modules/UI/docs
 ```
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZDFpgQ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XjHNCU
 =======
 
 ## Mappa delle cartelle
@@ -107,5 +128,8 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`themes/`](themes/) | 2 |
 | [`wiki/`](wiki/index.md) | 119 |
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZDFpgQ
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XjHNCU

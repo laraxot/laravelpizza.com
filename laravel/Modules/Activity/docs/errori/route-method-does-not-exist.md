@@ -320,6 +320,7 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 - [Activity Module - README](../README.md)
 - [XotBase Architecture](../../Xot/docs/xotbase-architecture-complete.md)
 - [Differenza Standalone vs Resource Pages](../../Xot/docs/filament/pages-types.md)
+<<<<<<< .merge_file_KsI3XL
 <<<<<<< .merge_file_VDQMAh
 <<<<<<< .merge_file_1AvsnU
 <<<<<<< .merge_file_YVxOec
@@ -329,6 +330,8 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 >>>>>>> .merge_file_AhzkJ0
 =======
 >>>>>>> .merge_file_yc7WTr
+=======
+>>>>>>> .merge_file_NMHCPt
 <<<<<<< HEAD
 - [Activity Module - README](../README.md)
 =======
@@ -342,6 +345,7 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 - [Activity Module - README](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_KsI3XL
 <<<<<<< .merge_file_VDQMAh
 <<<<<<< .merge_file_1AvsnU
 >>>>>>> .merge_file_MVC1zQ
@@ -349,6 +353,8 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 >>>>>>> .merge_file_AhzkJ0
 =======
 >>>>>>> .merge_file_yc7WTr
+=======
+>>>>>>> .merge_file_NMHCPt
 - [XotBase Architecture](../../xot/docs/xotbase-architecture-complete.md)
 - [Differenza Standalone vs Resource Pages](../../xot/docs/filament/pages-types.md)
 

@@ -1,7 +1,10 @@
+<<<<<<< .merge_file_JD7HAR
 <<<<<<< .merge_file_SbQnln
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_LECYvR
+=======
+>>>>>>> .merge_file_XbEy19
 # Glossario di dominio Lang
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -9,6 +12,7 @@
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_JD7HAR
 <<<<<<< .merge_file_SbQnln
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 =======
@@ -45,3 +49,6 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 =======
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 >>>>>>> .merge_file_LECYvR
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_XbEy19

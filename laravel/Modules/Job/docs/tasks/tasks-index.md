@@ -1,3 +1,8 @@
+---
+title: "Indice task - Modulo Job"
+type: note
+qmd: "tasks indice task"
+---
 # Indice task - Modulo Job
 
 Lista dei task del modulo. Ogni task può essere un file .md separato nella cartella `tasks/`. Dettagli dalla [roadmap](../roadmap.md).

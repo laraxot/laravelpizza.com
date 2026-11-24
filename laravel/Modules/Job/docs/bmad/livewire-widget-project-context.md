@@ -4,6 +4,7 @@ type: constitution
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget project context"
 ---
 
 # Context Job

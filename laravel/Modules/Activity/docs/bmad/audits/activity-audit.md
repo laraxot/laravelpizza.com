@@ -99,6 +99,7 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 - `app/Actions/LogModelUpdatedAction.php:43-44` — `'old' => $model->getOriginal()`, `'new' => $model->getAttributes()`.
 - `app/Actions/LogModelCreatedAction.php:42` — `getAttributes()` completo.
 - `app/Actions/RedactModelAttributesAction.php:19-24` toglie `password`, `remember_token`, `two_factor_*` ma **nessun file di produzione la chiama** (`rg RedactModelAttributesAction` → solo definizione e test).
+<<<<<<< .merge_file_A0p2RL
 <<<<<<< .merge_file_5MGVXY
 <<<<<<< .merge_file_BeGqO3
 <<<<<<< .merge_file_EeHy79
@@ -108,6 +109,8 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> .merge_file_6GVmJy
 =======
 >>>>>>> .merge_file_BbtTVJ
+=======
+>>>>>>> .merge_file_dvtsnR
 <<<<<<< HEAD
 <<<<<<< HEAD
 - Mitigazione reale: il percorso `Adapters\ActivityLogger` / `LogModel*Action` non ha caller fuori da Activity (`rg` su tutti i moduli, escluso `tests`/`docs`): gli altri moduli usano il helper `activity()` di Spatie (es. `User/app/Actions/Activity/LogRegistrationAction.php:21`). Il rischio è quindi **latente**: scatta appena qualcuno adotta l'API del modulo.
@@ -131,6 +134,7 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_A0p2RL
 <<<<<<< .merge_file_5MGVXY
 <<<<<<< .merge_file_BeGqO3
 >>>>>>> .merge_file_fKMiRS
@@ -138,6 +142,8 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> .merge_file_6GVmJy
 =======
 >>>>>>> .merge_file_BbtTVJ
+=======
+>>>>>>> .merge_file_dvtsnR
 
 **Fix:** chiamare `RedactModelAttributesAction` dentro `LogModelCreated/Updated/DeletedAction`; allargare la lista (token API, `*_secret`, codice fiscale se non necessario); test con modello `User`.
 
@@ -180,6 +186,7 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 |---|---|
 | PHPStan `Modules/Activity` (`php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Activity --no-progress`) | **0 errori** (`[OK] No errors`, 2026-11-16) |
 | Pest `Modules/Activity/tests` (via `bashscripts/tools/pest-scratch-db.sh`, DB scratch, host 127.0.0.1) | **parziale**: suite completa non terminata (timeout 900 s, load ≈ 50; 16 pass e 40 ⨯ allo stop, non riproducibili in isolamento: `BaseModelBusinessLogicTest` 21 pass, `ActivityManagementTest` 4 pass); causa dei ⨯ non determinata |
+<<<<<<< .merge_file_A0p2RL
 <<<<<<< .merge_file_5MGVXY
 <<<<<<< .merge_file_BeGqO3
 <<<<<<< .merge_file_EeHy79
@@ -189,6 +196,8 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> .merge_file_6GVmJy
 =======
 >>>>>>> .merge_file_BbtTVJ
+=======
+>>>>>>> .merge_file_dvtsnR
 <<<<<<< HEAD
 <<<<<<< HEAD
 | Pest `Modules/Activity/tests/Feature` (stesso script, run separata dopo i fix della [story](../stories/module-bmad-audit.story.md)) | **0 failed / 181 passed / 9 skipped** (~660 s) |
@@ -211,6 +220,7 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_A0p2RL
 <<<<<<< .merge_file_5MGVXY
 <<<<<<< .merge_file_BeGqO3
 >>>>>>> .merge_file_fKMiRS
@@ -218,6 +228,8 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 >>>>>>> .merge_file_6GVmJy
 =======
 >>>>>>> .merge_file_BbtTVJ
+=======
+>>>>>>> .merge_file_dvtsnR
 
 Pest non è stato lanciato con il DB di test condiviso (`10.100.200.53`): è stato usato lo script
 di scratch DB del repo, che crea e distrugge database usa-e-getta con sola struttura. Nessun

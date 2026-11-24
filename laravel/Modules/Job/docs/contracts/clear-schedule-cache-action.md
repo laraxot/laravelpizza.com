@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_m9wlYD
 <<<<<<< .merge_file_djp61H
 <<<<<<< .merge_file_X52Y6E
 title: "Contratto — ClearScheduleCacheAction (Schedule)"
@@ -20,6 +21,8 @@ Invalida la voce di cache degli schedule. Codice: `app/Actions/Schedule/ClearSch
 =======
 =======
 >>>>>>> .merge_file_Bc5hrt
+=======
+>>>>>>> .merge_file_LNSZBa
 title: "Contratto — ClearScheduleCacheAction"
 type: contract
 action: "Modules\Job\Actions\ClearScheduleCacheAction"
@@ -37,10 +40,13 @@ Sorgente: `app/Actions/ClearScheduleCacheAction.php`. Chiamanti: `Observers/Sche
 ## Input
 
 - Nessun parametro. Legge `config('job::cache.store')` e `config('job::cache.key')`.
+<<<<<<< .merge_file_m9wlYD
 <<<<<<< .merge_file_djp61H
 >>>>>>> .merge_file_QFr01p
 =======
 >>>>>>> .merge_file_Bc5hrt
+=======
+>>>>>>> .merge_file_LNSZBa
 
 ## Output
 
@@ -48,6 +54,7 @@ Sorgente: `app/Actions/ClearScheduleCacheAction.php`. Chiamanti: `Observers/Sche
 
 ## Invarianti
 
+<<<<<<< .merge_file_m9wlYD
 <<<<<<< .merge_file_djp61H
 <<<<<<< .merge_file_X52Y6E
 | ID | Regola | Test |
@@ -73,6 +80,8 @@ Nota su INV-2: `job::cache.*` non e' definita in nessun file del modulo (`config
 =======
 =======
 >>>>>>> .merge_file_Bc5hrt
+=======
+>>>>>>> .merge_file_LNSZBa
 | ID | Regola | Group Pest |
 |---|---|---|
 | JOB-SCHED-CACHE-INV-1 | Cancella una sola chiave (`job::cache.key`) su un solo store (`job::cache.store`), mai un flush dello store. | — |
@@ -95,7 +104,10 @@ Nota su INV-2: `job::cache.*` non e' definita in nessun file del modulo (`config
 - Esiste un duplicato con lo stesso corpo, `Modules\Job\Actions\Schedule\ClearScheduleCacheAction`, senza chiamanti in
   produzione (la story `../stories/job-services-to-actions.story.md` lo dichiara come versione da tenere, il codice usa questa):
   non creare una terza copia; chi consolida sceglie una delle due e aggiorna questo contratto.
+<<<<<<< .merge_file_m9wlYD
 <<<<<<< .merge_file_djp61H
 >>>>>>> .merge_file_QFr01p
 =======
 >>>>>>> .merge_file_Bc5hrt
+=======
+>>>>>>> .merge_file_LNSZBa

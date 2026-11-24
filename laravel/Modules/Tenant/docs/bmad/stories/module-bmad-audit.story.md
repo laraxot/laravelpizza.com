@@ -41,4 +41,12 @@ Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 ape
 
 ## Esito
 
+<<<<<<< .merge_file_qPVfrp
 Audit completato, nessun codice, DB o import toccato. Aperti i 3 P1.
+=======
+<<<<<<< .merge_file_iqb5jp
+Audit completato, nessun codice, DB o import toccato. Aperti i 3 P1.
+=======
+Baseline audit aggiornata: audit completato, nessun codice, DB o import toccato. PHPStan `Modules/Tenant` a 0. Aperti Pest e i 3 P1.
+>>>>>>> .merge_file_XdH1I8
+>>>>>>> .merge_file_kjkycc

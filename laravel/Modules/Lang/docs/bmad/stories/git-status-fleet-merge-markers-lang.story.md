@@ -109,6 +109,7 @@ vuoto/minore; **nessun** `require …/Xot/routes/empty.php`):
 
 `php -l` OK su tutti. `Modules/Lang/app` + `routes` = zero marker.
 
+<<<<<<< .merge_file_Wu4e4D
 <<<<<<< .merge_file_eMHYXg
 ## Claim (2026-11-24) — PHPStan bootstrap blockers
 
@@ -116,9 +117,14 @@ vuoto/minore; **nessun** `require …/Xot/routes/empty.php`):
 |---|---|
 | Marker merge in Actions/routes/lang/`language-switcher`/tests SaveTrans+Pest ripuliti: routes restano vuoti (no `Xot/routes/empty.php`), switcher usa `$locale['url']` da widget, group test HEAD conservati | `rg '^<<<<<<<'` su quei path → 0; `php -l` OK; `./vendor/bin/phpstan analyse Modules --memory-limit=2G` → `[OK] No errors` |
 =======
+=======
+>>>>>>> .merge_file_vXy0Bx
 Residui **fuori scope boot** (tests/views): `tests/**`, `resources/views/components/language-switcher.blade.php`.
 
 Verifica `php artisan about --only=environment`: fallisce ancora per problemi
 vendor/moduli (`HasCustomRelations` / `spatie/laravel-data`), non per
 syntax/marker Lang.
+<<<<<<< .merge_file_Wu4e4D
 >>>>>>> .merge_file_Tcm8qW
+=======
+>>>>>>> .merge_file_vXy0Bx

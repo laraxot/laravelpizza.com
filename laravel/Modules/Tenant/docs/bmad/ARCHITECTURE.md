@@ -4,7 +4,10 @@ type: architecture
 tags: [tenant, multi-tenancy, architecture, core]
 created: 2026-07-09
 updated: 2026-07-09
+<<<<<<< .merge_file_qbcYgf
 qmd: "architecture tenant"
+=======
+>>>>>>> .merge_file_z0iU1O
 ---
 
 # Architecture: Tenant Module

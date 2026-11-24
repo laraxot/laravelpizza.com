@@ -665,6 +665,7 @@ return $alternative;
 
 1. `docs/CODE_QUALITY_ANALYSIS.md` - Add PHPMD fixes section
 2. `docs/README.md` - Update quality metrics
+<<<<<<< .merge_file_wgnrpe
 <<<<<<< .merge_file_hglo3I
 <<<<<<< .merge_file_gFJnHi
 <<<<<<< .merge_file_pBbzXn
@@ -683,6 +684,11 @@ return $alternative;
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_tmZ3AJ
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_6CNT57
 3. `docs/architecture.md` - Document coupling reduction strategies
 
 ### Quality Gates:

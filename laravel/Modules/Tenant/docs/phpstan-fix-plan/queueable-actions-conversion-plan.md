@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Fhc1NB
 ---
 title: "Conversione Tenant Services a Spatie Queueable Actions — Piano Decisionale"
 type: note
 qmd: "queueable actions conversion plan conversione tenant"
 ---
+=======
+>>>>>>> .merge_file_lhya6B
 # Conversione Tenant Services a Spatie Queueable Actions — Piano Decisionale
 
 **Data**: 2026-10-20

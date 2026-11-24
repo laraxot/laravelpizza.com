@@ -82,10 +82,14 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         // produzione e fa smettere al codice di dire una cosa falsa
         // (base_quaeris_fila5#234).
         $segment = request()->segment(1);
+<<<<<<< .merge_file_rt2CL5
 <<<<<<< .merge_file_jiIwsu
 =======
 
 >>>>>>> .merge_file_biji3a
+=======
+
+>>>>>>> .merge_file_o4vDnW
 
         if (\is_string($segment) && \in_array($segment, $langs, true)) {
             app()->setLocale($segment);

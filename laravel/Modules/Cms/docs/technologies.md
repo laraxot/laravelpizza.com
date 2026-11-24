@@ -3,6 +3,7 @@ title: "technologies"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_cFc44b
 <<<<<<< .merge_file_SpfflR
 <<<<<<< .merge_file_F9rDW3
 <<<<<<< .merge_file_JxXolF
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_xKAkVz
 =======
 >>>>>>> .merge_file_Lmoq2p
+=======
+>>>>>>> .merge_file_vMGTjR
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cFc44b
 <<<<<<< .merge_file_SpfflR
 <<<<<<< .merge_file_F9rDW3
 >>>>>>> .merge_file_XXeCLU
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_xKAkVz
 =======
 >>>>>>> .merge_file_Lmoq2p
+=======
+>>>>>>> .merge_file_vMGTjR
 qmd: "technologies"
 issues: []
 discussions: []
@@ -141,6 +147,7 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 ## Collegamenti
 
 - [Architettura](architecture.md)
+<<<<<<< .merge_file_cFc44b
 <<<<<<< .merge_file_SpfflR
 <<<<<<< .merge_file_F9rDW3
 <<<<<<< .merge_file_JxXolF
@@ -150,6 +157,8 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 >>>>>>> .merge_file_xKAkVz
 =======
 >>>>>>> .merge_file_Lmoq2p
+=======
+>>>>>>> .merge_file_vMGTjR
 <<<<<<< HEAD
 - [API](api/README.md)
 =======
@@ -159,6 +168,7 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 - [API](api/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cFc44b
 <<<<<<< .merge_file_SpfflR
 <<<<<<< .merge_file_F9rDW3
 >>>>>>> .merge_file_XXeCLU
@@ -166,6 +176,8 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 >>>>>>> .merge_file_xKAkVz
 =======
 >>>>>>> .merge_file_Lmoq2p
+=======
+>>>>>>> .merge_file_vMGTjR
 - [Frontend](frontoffice/README.md)
 - [Sviluppo](developer/README.md)
 - [Utente](user/README.md)

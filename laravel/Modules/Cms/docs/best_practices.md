@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_h1WFBt
 <<<<<<< .merge_file_1c0eLV
 <<<<<<< .merge_file_KJoPUI
 <<<<<<< .merge_file_HaXkiM
@@ -7,6 +8,8 @@
 >>>>>>> .merge_file_08mBGK
 =======
 >>>>>>> .merge_file_TasaX3
+=======
+>>>>>>> .merge_file_OyrU4L
 <<<<<<< HEAD
 title: "Best Practices"
 type: note
@@ -15,6 +18,7 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Best Practices"
 =======
+<<<<<<< .merge_file_h1WFBt
 <<<<<<< .merge_file_1c0eLV
 <<<<<<< .merge_file_KJoPUI
 >>>>>>> .merge_file_E7MvBi
@@ -22,12 +26,15 @@ qmd: "Best Practices"
 >>>>>>> .merge_file_08mBGK
 =======
 >>>>>>> .merge_file_TasaX3
+=======
+>>>>>>> .merge_file_OyrU4L
 title: "best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "best practices"
+<<<<<<< .merge_file_h1WFBt
 <<<<<<< .merge_file_1c0eLV
 <<<<<<< .merge_file_KJoPUI
 <<<<<<< .merge_file_HaXkiM
@@ -40,6 +47,9 @@ qmd: "best practices"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_TasaX3
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OyrU4L
 issues: []
 discussions: []
 ---
@@ -60,6 +70,7 @@ discussions: []
 - Copri edge case per permessi pagina (draft vs published).
 
 ## Documentazione
+<<<<<<< .merge_file_h1WFBt
 <<<<<<< .merge_file_1c0eLV
 <<<<<<< .merge_file_KJoPUI
 <<<<<<< .merge_file_HaXkiM
@@ -69,6 +80,8 @@ discussions: []
 >>>>>>> .merge_file_08mBGK
 =======
 >>>>>>> .merge_file_TasaX3
+=======
+>>>>>>> .merge_file_OyrU4L
 <<<<<<< HEAD
 - Aggiorna `docs/index.md` con nuovi blocchi disponibili.
 =======
@@ -78,6 +91,7 @@ discussions: []
 - Aggiorna `docs/index.md` con nuovi blocchi disponibili.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_h1WFBt
 <<<<<<< .merge_file_1c0eLV
 <<<<<<< .merge_file_KJoPUI
 >>>>>>> .merge_file_E7MvBi
@@ -85,4 +99,6 @@ discussions: []
 >>>>>>> .merge_file_08mBGK
 =======
 >>>>>>> .merge_file_TasaX3
+=======
+>>>>>>> .merge_file_OyrU4L
 - Documenta flusso approvazione contenuti.

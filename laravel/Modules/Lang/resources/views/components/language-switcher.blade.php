@@ -128,7 +128,10 @@ if (!function_exists('getLanguageUrl')) {
                                 @endif
                             </span>
 
+<<<<<<< .merge_file_8uwzjv
 >>>>>>> .merge_file_Vs7D6R
+=======
+>>>>>>> .merge_file_jnYyhS
                             @if ($locale['code'] === $current_locale)
                                 <x-heroicon-o-check class="w-4 h-4 text-emerald-600 dark:text-emerald-400 ml-auto" aria-hidden="true" />
                             @endif

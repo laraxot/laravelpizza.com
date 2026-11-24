@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: artisan-1.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "artisan risorse esterne"
 ---
 
 # Artisan 1 — risorse esterne

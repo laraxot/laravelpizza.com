@@ -6,6 +6,7 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
+qmd: "schema wiki"
 ---
 
 # Wiki Schema - Job

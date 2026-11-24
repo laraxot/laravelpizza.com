@@ -138,6 +138,7 @@ Grapesjs::make('grapesjs_data')
 ## Collegamenti
 - [Documentazione GrapesJS](docs/grapesjs.md)
 - [Template Management](docs/templates.md)
+<<<<<<< .merge_file_pnijEG
 <<<<<<< .merge_file_tajIsl
 <<<<<<< .merge_file_1lkqiy
 <<<<<<< .merge_file_BWctS2
@@ -147,6 +148,8 @@ Grapesjs::make('grapesjs_data')
 >>>>>>> .merge_file_P8wX5s
 =======
 >>>>>>> .merge_file_INDIRN
+=======
+>>>>>>> .merge_file_nsKGXS
 <<<<<<< HEAD
 - [Notification System](docs/notifications.md) 
 =======
@@ -156,6 +159,7 @@ Grapesjs::make('grapesjs_data')
 - [Notification System](docs/notifications.md) 
 >>>>>>> .merge_file_uWWgp8
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_pnijEG
 <<<<<<< .merge_file_tajIsl
 <<<<<<< .merge_file_1lkqiy
 >>>>>>> .merge_file_o3Yn9Q
@@ -163,3 +167,5 @@ Grapesjs::make('grapesjs_data')
 >>>>>>> .merge_file_P8wX5s
 =======
 >>>>>>> .merge_file_INDIRN
+=======
+>>>>>>> .merge_file_nsKGXS

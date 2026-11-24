@@ -10,4 +10,10 @@ namespace Modules\UI\Services;
  *
  * @deprecated Empty stub; do not use.
  */
+<<<<<<< .merge_file_FkNuPM
 final class ComponentService {}
+=======
+final class ComponentService
+{
+}
+>>>>>>> .merge_file_B7ui5t

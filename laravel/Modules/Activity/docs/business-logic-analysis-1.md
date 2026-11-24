@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_TM36xH
 ---
 title: "Activity Module - Business Logic Analysis"
 type: analysis
 qmd: "business logic analysis 1 activity"
 ---
+=======
+>>>>>>> .merge_file_RF6Rci
 # Activity Module - Business Logic Analysis
 
 ## Overview

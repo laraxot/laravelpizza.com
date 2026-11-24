@@ -44,6 +44,7 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 ### Architettura e Struttura
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< .merge_file_XGDoJA
 - [README](./README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 =======
@@ -63,6 +64,25 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 <<<<<<< .merge_file_OAACNd
 =======
+=======
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+=======
+=======
+=======
+<<<<<<< HEAD
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_m7XdVg
+- [README](README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/readme.md) - Architettura generale del modulo
+=======
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+>>>>>>> .merge_file_tFsau9
 >>>>>>> .merge_file_hap6zq
 <<<<<<< HEAD
 =======
@@ -71,7 +91,10 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_XGDoJA
 >>>>>>> .merge_file_JU0OI9
+=======
+>>>>>>> .merge_file_tFsau9
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -192,6 +215,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
+<<<<<<< .merge_file_XGDoJA
 <<<<<<< .merge_file_OAACNd
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
@@ -200,6 +224,8 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 
 Doc verificati e presenti in `docs/` (non un indice esaustivo):
 =======
+=======
+>>>>>>> .merge_file_tFsau9
 <<<<<<< HEAD
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 =======
@@ -332,6 +358,7 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [data-models.md](./data-models.md)
 - [core-functionality.md](./core-functionality.md)
 - [file-management-architecture.md](./file-management-architecture.md)
+<<<<<<< .merge_file_XGDoJA
 <<<<<<< .merge_file_OAACNd
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
@@ -351,6 +378,8 @@ Le cartelle di import grezzo (`raw/`, `_integration/`), immagini, log e parchegg
 | [`concepts/`](concepts/) | 1 |
 | [`contracts/`](contracts/) | 55 |
 =======
+=======
+>>>>>>> .merge_file_tFsau9
 - [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
@@ -376,11 +405,15 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`bmad/`](bmad/index.md) | 57 |
 | [`concepts/`](concepts/) | 1 |
 | [`contracts/`](contracts/) | 2 |
+<<<<<<< .merge_file_XGDoJA
 >>>>>>> .merge_file_JU0OI9
+=======
+>>>>>>> .merge_file_tFsau9
 | [`development/`](development/) | 2 |
 | [`ecc/`](ecc/) | 2 |
 | [`epics/`](epics/) | 1 |
 | [`filament/`](filament/) | 3 |
+<<<<<<< .merge_file_XGDoJA
 <<<<<<< .merge_file_OAACNd
 | [`html2pdf/`](html2pdf/) | 7 |
 | [`investigation/`](investigation/) | 1 |
@@ -396,6 +429,8 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`support/`](support/) | 2 |
 | [`wiki/`](wiki/) | 90 |
 =======
+=======
+>>>>>>> .merge_file_tFsau9
 | [`investigation/`](investigation/) | 1 |
 | [`llm-wiki/`](llm-wiki/index.md) | 6 |
 | [`performance/`](performance/) | 3 |
@@ -413,4 +448,7 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_XGDoJA
 >>>>>>> .merge_file_JU0OI9
+=======
+>>>>>>> .merge_file_tFsau9

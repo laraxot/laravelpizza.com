@@ -19,10 +19,14 @@ tags: [docs, ui, bmad]
 
 # UI: marker nidificati in README + igiene root
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZvERFJ
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_DzXPFh
 =======
 >>>>>>> laraxot/dev
 
@@ -36,13 +40,19 @@ Innermost-first strip; tenere frontmatter HEAD; footer project-agnostic (niente 
 
 PHPStan `Modules/UI`: 0. Commit deferred.
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZvERFJ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_DzXPFh
 =======
 PHPStan `Modules/UI`: 0. Commit deferred.
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZvERFJ
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_DzXPFh
 
 ## Wave docs 2026-11-23
 
@@ -50,10 +60,16 @@ Risolti marker annidati in `Modules/UI/docs` (47 file, strategia innermost-first
 HEAD preferito, lato non vuoto, unione paragrafi unici). Verifica:
 `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/UI/docs` → vuoto.
 Status: done (docs).
+<<<<<<< .merge_file_ZvERFJ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_DzXPFh
 =======
 PHPStan `Modules/UI`: 0. Commit deferred.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZvERFJ
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_DzXPFh

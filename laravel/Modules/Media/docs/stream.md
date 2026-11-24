@@ -1,11 +1,17 @@
 ---
+<<<<<<< .merge_file_v5PINa
 <<<<<<< .merge_file_dBOmsp
 =======
+=======
+>>>>>>> .merge_file_mjXAuN
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< .merge_file_v5PINa
 >>>>>>> .merge_file_0Qc3PO
+=======
+>>>>>>> .merge_file_mjXAuN
 issues: []
 discussions: []
 title: "Stream"
@@ -17,8 +23,11 @@ updated: 2026-07-14
 qmd: "stream"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_v5PINa
 <<<<<<< .merge_file_dBOmsp
 =======
+=======
+>>>>>>> .merge_file_mjXAuN
 ---
 https://laravel-news.com/temporary-directory
 
@@ -49,7 +58,10 @@ $tmpFile->delete();
 module: theme
 topic: --stream
 canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
+<<<<<<< .merge_file_v5PINa
 >>>>>>> .merge_file_0Qc3PO
+=======
+>>>>>>> .merge_file_mjXAuN
 ---
 https://laravel-news.com/temporary-directory
 
@@ -73,8 +85,11 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
+<<<<<<< .merge_file_v5PINa
 ----------------------------------------------------------------------------
 =======
+=======
+>>>>>>> .merge_file_mjXAuN
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules
 <<<<<<< HEAD
 =======
@@ -83,4 +98,7 @@ See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Mod
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_v5PINa
 >>>>>>> .merge_file_0Qc3PO
+=======
+>>>>>>> .merge_file_mjXAuN

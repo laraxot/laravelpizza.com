@@ -1,3 +1,8 @@
+---
+title: "Job Module - skills Index"
+type: note
+qmd: "skills"
+---
 # Job Module - skills Index
 
 ## Purpose

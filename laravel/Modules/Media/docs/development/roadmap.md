@@ -93,8 +93,11 @@ Overall Module Completion: 60%
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
+<<<<<<< .merge_file_Kl9dkG
 <<<<<<< .merge_file_jOmwPv
 =======
+=======
+>>>>>>> .merge_file_65FGqB
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,7 +108,10 @@ Overall Module Completion: 60%
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Kl9dkG
 >>>>>>> .merge_file_4SHhcP
+=======
+>>>>>>> .merge_file_65FGqB
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
 * [roadmap.md](../../../Notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)

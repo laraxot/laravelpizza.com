@@ -17,6 +17,7 @@ updated: 2026-07-23
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
+<<<<<<< .merge_file_U2Tu38
 <<<<<<< .merge_file_fdlAhJ
 <<<<<<< .merge_file_w86F7l
 <<<<<<< .merge_file_6fykzz
@@ -26,6 +27,8 @@ updated: 2026-07-23
 >>>>>>> .merge_file_yo4QQ7
 =======
 >>>>>>> .merge_file_Dq6JZT
+=======
+>>>>>>> .merge_file_CNydzH
 <<<<<<< HEAD
 1. [README.md](./README.md) - Panoramica completa e Quick Start.
 =======
@@ -39,6 +42,7 @@ updated: 2026-07-23
 1. [README.md](./README.md) - Panoramica completa e Quick Start.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_U2Tu38
 <<<<<<< .merge_file_fdlAhJ
 <<<<<<< .merge_file_w86F7l
 >>>>>>> .merge_file_BTAG4d
@@ -46,6 +50,8 @@ updated: 2026-07-23
 >>>>>>> .merge_file_yo4QQ7
 =======
 >>>>>>> .merge_file_Dq6JZT
+=======
+>>>>>>> .merge_file_CNydzH
 2. [roadmap.md](./roadmap.md) - Visione evolutiva e task aperti.
 3. [philosophy.md](./philosophy.md) - I principi dell'Audit Trail e dell'Event Sourcing.
 

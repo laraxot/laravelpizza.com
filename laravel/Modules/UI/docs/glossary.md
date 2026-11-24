@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_bonKty
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NT8khB
 # Glossario di dominio UI
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -6,6 +9,7 @@
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_bonKty
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 =======
 ---
@@ -39,3 +43,6 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 | Icone disponibili | Elenco delle icone Blade registrate, per i selettori. | `app/Actions/Icon/GetAllIconsAction.php` |
 | Componenti di interfaccia | Componenti Blade condivisi: Logo, Navbar, Sidebar, DarkModeSwitcher, Svg. | `app/View/Components/` |
 >>>>>>> laraxot/dev
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_NT8khB

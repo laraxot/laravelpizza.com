@@ -71,6 +71,7 @@ The module follows the Laraxot architecture principles:
 - `Activity` - Main activity model
 - `ActivityLog` - Detailed activity logging
 
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -80,6 +81,8 @@ The module follows the Laraxot architecture principles:
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -99,6 +102,7 @@ The module follows the Laraxot architecture principles:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -106,6 +110,8 @@ The module follows the Laraxot architecture principles:
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 - [architecture/structure.md](architecture/structure.md) — organizzazione interna dettagliata.
 - [structure.md](structure.md) — nota: contenuto quasi identico a `architecture/structure.md` (stesso titolo "Modulo Activity", 414 vs 413 righe); vedi Storico.
 - [architecture-rules.md](architecture-rules.md) — puntatore alle regole architetturali generali.
@@ -645,6 +651,7 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `product_strategy.md`/`product_strategy.md` · `project-structure.md`/`project-structure.md` ·
 `qmd-setup.md`/`qmd-setup.md` · `quality_report.md`/`QUALITY_REPORT.md` ·
 `query_optimization_analysis.md`/`QUERY_OPTIMIZATION_ANALYSIS.md` (+ stub quasi vuoto `query-optimization-analysis.md`) ·
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -656,6 +663,8 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -685,6 +694,7 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -692,6 +702,8 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 `filament/filament-v4-icon-size-fix.md` (+ `filament-v4-icon-size-fix-attribute.md`, ex `-2.md`, `FILAMENT_V4_ICON_SIZE_FIX.md`, `filament_v4_icon_size_fix.md`) ·
 `filament/filament-v4-upgrade.md` (+ `filament-v4-upgrade-documentation.md`, ex `-2.md`, `FILAMENT_V4_UPGRADE.md`, `filament_v4_upgrade.md`) ·
 `filament/archive/filament-v4-icon-size-fix.md` (+ maiuscolo/underscore) ·
@@ -726,6 +738,7 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `wiki/memories/index.md`/`wiki/memories/index.md` · `wiki/rules/index.md`/`wiki/rules/index.md` ·
 `wiki/skills/index.md`/`wiki/skills/index.md` · `tecnico/laraxot/archive/module-activity.md`/`module_activity.md` ·
 `use_cases/shop/archive/console-commands.md`/`console_commands.md` (entrambi stub vuoti) ·
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -735,6 +748,8 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -755,6 +770,7 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -762,6 +778,8 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 
 **Nota**: `bad-practices.md`, `best-practices.md`, `code-quality.md`, `mcp_server_recommended.md`/`mcp-server-recommended.md`,
 `boost_skill_fix_summary.md`, `phpmd_analysis.md`/`PHPMD_ANALYSIS.md` non sono duplicati del contenuto reale:
@@ -781,6 +799,7 @@ sotto). Coesistono per coincidenza di nome con le varianti che invece hanno cont
 `metodi-duplicati-analisi.md` (+ maiuscolo/underscore) · `modelli-factory-seeder-analisi.md` (+ `-1.md`, underscore) ·
 `phpstan-analysis-november.md`/`phpstan-analysis-november-2025.md` · `phpstan-fixes.md` (+ `-1.md`, stub underscore) ·
 `phpstan-fixes-activity.md` (+ `-1.md`, underscore) · `quality-status.md` (+ `-.md`, `-2025-11.md`; `-nov.md` e' stub) ·
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -790,6 +809,8 @@ sotto). Coesistono per coincidenza di nome con le varianti che invece hanno cont
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 `roadmap-2025.md`/`roadmap-.md` (+ `roadmap-archive.md`, quasi identico con 2 righe di differenza) ·
@@ -813,6 +834,7 @@ sotto). Coesistono per coincidenza di nome con le varianti che invece hanno cont
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -820,6 +842,8 @@ sotto). Coesistono per coincidenza di nome con le varianti che invece hanno cont
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 `event-sourcing-examples-duplicate.md`/`event_sourcing_examples.md` (+ stub `event-sourcing-examples.md`) ·
 `event-sourcing-introduction-duplicate.md`/`event_sourcing_introduction.md` (+ stub `event-sourcing-introduction.md`) ·
 `test-archive-1.md`/`test-archive-2.md` (entrambi vuoti).
@@ -878,6 +902,7 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 `filament/filament-v4-upgrade.md`, `filaments.md`, `file-naming-rules.md`,
 `git-conflicts-resolution-sumy.md`, `guides/event-sourcing.md`, `guides/event_sourcing.md`,
 `jpgraph.md`, `logging_optimization.md`, `login-test-implementation.md`,
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -887,6 +912,8 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -908,6 +935,7 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -915,6 +943,8 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 `metodiuplicati-analisi.md`, `migration-filament.md`, `migration-filament.md`,
 `migrazione-filament.md`, `migrazione-filament.md`, `outputs/README.md`,
 `performance/archive/activity_log_optimization-renamed.md`, `phpinsightss.md`,
@@ -940,6 +970,7 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 - [Xot Module](../xot/docs/index.md) - Core base classes
 
 ## Related Modules
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -948,6 +979,8 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 =======
 =======
 <<<<<<< HEAD
@@ -979,6 +1012,7 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 - [Xot Module](../../Xot/docs/README.md) - Core base classes
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -986,12 +1020,15 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 - [User Module](../User/docs/README.md) - User authentication and management
 - [Notify Module](../Notify/docs/index.md) - Notification system
 - [Xot Module](../Xot/docs/index.md) - Core base classes
 - [User Module](../user/docs/README.md) - User authentication and management
 - [Notify Module](../notify/docs/index.md) - Notification system
 - [Xot Module](../xot/docs/index.md) - Core base classes
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1000,6 +1037,8 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> .merge_file_zeRy6x
@@ -1013,6 +1052,7 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1020,6 +1060,8 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 
 ## Related Modules
 - [User Module](../User/docs/README.md) - User authentication and management
@@ -1028,6 +1070,7 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 - [User Module](../user/docs/README.md) - User authentication and management
 - [Notify Module](../notify/docs/index.md) - Notification system
 - [Xot Module](../xot/docs/index.md) - Core base classes
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1040,6 +1083,9 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_o1eFoZ
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_2TfMdv
 
 Quattro copie parallele dello stesso lotto di file di test/placeholder, quasi tutte a
 0-3 righe (`archived-note.md`, `documentation*.md`, `2024-03-27.md`, `test*.md`,
@@ -1072,6 +1118,7 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 `troubleshooting.md`, `2024-03-27.md`, `archived-note.md`, `documentation.md`,
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1081,6 +1128,8 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< .merge_file_rbZ8Fn
 `documentation-2024-03-27.md`, `documentation-archive-1.md` e i loro equivalenti nelle
 `documentation-archive-1.md` e i loro equivalenti nelle
@@ -1106,6 +1155,7 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1113,6 +1163,8 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 cartelle di import grezzo sopra citate (49 file a 0 righe in tutto il modulo).
 
 ## Numeri di questo audit
@@ -1122,6 +1174,7 @@ cartelle di import grezzo sopra citate (49 file a 0 righe in tutto il modulo).
 - File completamente vuoti (0 righe): 49.
 - File stub con puntatore `canonical:` verso `Themes/docs/shared-components/`: 73 (di cui 6 template `_templates/`, 4 ibridi con contenuto reale aggiuntivo, 63 stub puri).
 - File indicizzati esplicitamente per argomento in questo documento: la quasi totalita' dei restanti file con contenuto reale; le eccezioni (import grezzo/placeholder vuoti) sono referenziate per gruppo con comando `find` riproducibile, non singolarmente.
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1130,6 +1183,8 @@ cartelle di import grezzo sopra citate (49 file a 0 righe in tutto il modulo).
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1148,6 +1203,7 @@ Common issues and solutions:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1155,10 +1211,13 @@ Common issues and solutions:
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 ## Debito naming (date nel filename — flag, non cancellare)
 
 Storici con data nel nome: restano `superseded`/archivio finche' i riferimenti non
 sono migrati. Canonici nuovi: senza data. Misura:
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1167,6 +1226,8 @@ sono migrati. Canonici nuovi: senza data. Misura:
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 =======
 ## Naming dei file (nessuna data nel nome)
 
@@ -1175,6 +1236,7 @@ Audit qualita' #64: tutti i `.md` con data/timestamp nel nome sono stati rinomin
 i placeholder vuoti datati di `raw/root-import/` sono stati rimossi.
 Dettagli: [stories/audit-qualita.story.md](stories/audit-qualita.story.md). Verifica:
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1182,11 +1244,14 @@ Dettagli: [stories/audit-qualita.story.md](stories/audit-qualita.story.md). Veri
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 
 ```bash
 python3 -I bashscripts/tools/docs/md-filenames.py check --paths laravel/Modules/Activity/docs
 ```
 
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1196,6 +1261,8 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status-2025-11.m
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1217,6 +1284,7 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1224,10 +1292,13 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 `stories/phpstan-cleanup-activity.story.md`,
 `bmad/stories/*-20260928*.story.md`, `wiki/troubleshooting/git-merge-conflict-inventory-april.md`,
 `raw/root-import/*2024*`. Procedura: [docs-clean.md](../../../../bashscripts/docs/prompts/docs-clean.md).
 
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1236,6 +1307,8 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1250,6 +1323,7 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1257,10 +1331,13 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 ## Troubleshooting
 
 - Performance log grandi, entry mancanti, config: vedi wiki troubleshooting del modulo.
 - File vuoti/import grezzo: referenziati per gruppo sopra, non cancellare a tappeto.
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 <<<<<<< .merge_file_VFq3CJ
@@ -1269,6 +1346,8 @@ Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> .merge_file_zeRy6x
@@ -1323,6 +1402,7 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vxxf5d
 <<<<<<< .merge_file_SNdWf9
 <<<<<<< .merge_file_uZk3xr
 >>>>>>> .merge_file_5JIQBX
@@ -1330,3 +1410,5 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 >>>>>>> .merge_file_CthHor
 =======
 >>>>>>> .merge_file_o1eFoZ
+=======
+>>>>>>> .merge_file_2TfMdv

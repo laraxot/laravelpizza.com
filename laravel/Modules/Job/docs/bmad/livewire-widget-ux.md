@@ -4,6 +4,7 @@ type: ux-design
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget ux"
 ---
 
 # UX

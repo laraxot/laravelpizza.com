@@ -81,7 +81,7 @@ test('update sostituisce solo la riga con la stessa chiave primaria', function (
     $path = tenantJsonActionTempFile('[{"id":1,"name":"Alpha"},{"id":2,"name":"Beta"}]');
 
     try {
-        $record = (new TestSushiModelForPath)->setJsonPath($path);
+        $record = (new TestSushiModelForPath())->setJsonPath($path);
         $record->forceFill([
             'id' => 2,
             'name' => 'Beta aggiornato',

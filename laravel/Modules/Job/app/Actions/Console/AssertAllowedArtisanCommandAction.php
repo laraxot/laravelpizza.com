@@ -8,6 +8,7 @@ use InvalidArgumentException;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< .merge_file_e1I6su
 <<<<<<< .merge_file_DtZA7L
 <<<<<<< .merge_file_g6KxPb
 <<<<<<< .merge_file_Nt8NZQ
@@ -21,6 +22,9 @@ use Spatie\QueueableAction\QueueableAction;
 =======
  * Rifiuta ogni comando Artisan che non sia identico a una voce dell'allowlist.
 >>>>>>> .merge_file_a7eanX
+=======
+ * Rifiuta ogni comando Artisan che non sia identico a una voce dell'allowlist.
+>>>>>>> .merge_file_jpMAPT
  *
  * @contract docs/contracts/assert-allowed-artisan-command-action.md
  */

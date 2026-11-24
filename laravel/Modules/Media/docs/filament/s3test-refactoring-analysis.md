@@ -141,9 +141,12 @@ protected function getFormSchema(): array
 
 ## 🔗 **Collegamenti Documentazione**
 
+<<<<<<< .merge_file_LI2CgG
 <<<<<<< .merge_file_HASpfp
 - [Media Module README](../readme.md)
 =======
+=======
+>>>>>>> .merge_file_dKtGPl
 <<<<<<< HEAD
 - [Media Module README](../README.md)
 =======
@@ -157,7 +160,10 @@ protected function getFormSchema(): array
 - [Media Module README](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_LI2CgG
 >>>>>>> .merge_file_cM6J43
+=======
+>>>>>>> .merge_file_dKtGPl
 - [Filament Best Practices](../../../../docs/filament-best-practices.md)
 - [Translation Rules](../../../../docs/translation-rules.md)
 - [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)

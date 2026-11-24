@@ -51,6 +51,7 @@ class GeoDataService
      */
     public function __construct()
     {
+<<<<<<< .merge_file_dZSQaV
 <<<<<<< .merge_file_M9ZMEj
 <<<<<<< .merge_file_E7qY8x
 <<<<<<< .merge_file_bi2Zi2
@@ -64,6 +65,9 @@ class GeoDataService
 =======
         $this->validator = new GeoDataValidator();
 >>>>>>> .merge_file_3KgR90
+=======
+        $this->validator = new GeoDataValidator();
+>>>>>>> .merge_file_na5C8g
     }
 
     /**
@@ -86,6 +90,7 @@ class GeoDataService
     /**
      * Ottiene le province di una regione.
      *
+<<<<<<< .merge_file_dZSQaV
 <<<<<<< .merge_file_M9ZMEj
 <<<<<<< .merge_file_E7qY8x
 <<<<<<< .merge_file_bi2Zi2
@@ -102,6 +107,10 @@ class GeoDataService
      * @param string $regionCode Codice della regione
      *
 >>>>>>> .merge_file_3KgR90
+=======
+     * @param string $regionCode Codice della regione
+     *
+>>>>>>> .merge_file_na5C8g
      * @return Collection<int, array{name: string, code: string}>
      */
     public function getProvinces(string $regionCode): Collection
@@ -115,6 +124,7 @@ class GeoDataService
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /** @var Collection<int, array{name: string, code: string}> $empty */
+<<<<<<< .merge_file_dZSQaV
 <<<<<<< .merge_file_M9ZMEj
 <<<<<<< .merge_file_E7qY8x
 <<<<<<< .merge_file_bi2Zi2
@@ -128,6 +138,9 @@ class GeoDataService
 =======
                 $empty = new Collection();
 >>>>>>> .merge_file_3KgR90
+=======
+                $empty = new Collection();
+>>>>>>> .merge_file_na5C8g
 
                 return $empty;
             }
@@ -160,6 +173,7 @@ class GeoDataService
     /**
      * Ottiene le città di una provincia come mappa codice => nome.
      *
+<<<<<<< .merge_file_dZSQaV
 <<<<<<< .merge_file_M9ZMEj
 <<<<<<< .merge_file_E7qY8x
 <<<<<<< .merge_file_bi2Zi2
@@ -176,6 +190,10 @@ class GeoDataService
      * @param string $provinceCode Codice della provincia
      *
 >>>>>>> .merge_file_3KgR90
+=======
+     * @param string $provinceCode Codice della provincia
+     *
+>>>>>>> .merge_file_na5C8g
      * @return Collection<string, string>
      */
     public function getCities(string $provinceCode): Collection
@@ -248,6 +266,7 @@ class GeoDataService
             : [])->firstWhere('code', $provinceCode);
 
         if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
+<<<<<<< .merge_file_dZSQaV
 <<<<<<< .merge_file_M9ZMEj
 <<<<<<< .merge_file_E7qY8x
 <<<<<<< .merge_file_bi2Zi2
@@ -261,6 +280,9 @@ class GeoDataService
 =======
             return new Collection();
 >>>>>>> .merge_file_3KgR90
+=======
+            return new Collection();
+>>>>>>> .merge_file_na5C8g
         }
 
         /** @var array<int, array<string, mixed>> $cities */

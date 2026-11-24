@@ -3,6 +3,7 @@ title: "conflict resolution fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Lh3Lou
 <<<<<<< .merge_file_9iZ408
 <<<<<<< .merge_file_ROg2qW
 <<<<<<< .merge_file_n2A5Rp
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_KEtXzv
 =======
 >>>>>>> .merge_file_Xh4bPE
+=======
+>>>>>>> .merge_file_M5ud90
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Lh3Lou
 <<<<<<< .merge_file_9iZ408
 <<<<<<< .merge_file_ROg2qW
 >>>>>>> .merge_file_EPM9q5
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_KEtXzv
 =======
 >>>>>>> .merge_file_Xh4bPE
+=======
+>>>>>>> .merge_file_M5ud90
 qmd: "conflict resolution fixes"
 issues: []
 discussions: []

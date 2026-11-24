@@ -47,6 +47,6 @@ Ordine di valore: prima l'isolamento fra enti (A), poi chi amministra (B), poi i
 
 ## Epic E — Docs (TEN-P2-05, 06)
 
-- Risolvere le 18 collisioni di maiuscole (tenere il nome minuscolo, `README.md` escluso) e `module-bmad-audit-20260928.story.md`.
+- Risolvere le 18 collisioni di maiuscole (tenere il nome minuscolo, `README.md` escluso) e `module-bmad-baseline-audit.story.md`.
 - Sostituire le citazioni a `TenantService::` con `GetTenantFilePathAction` e riallineare [brainstorming.md](./brainstorming.md).
 - `qmd update` a fine epic.

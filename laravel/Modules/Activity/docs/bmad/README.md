@@ -41,13 +41,9 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
-<<<<<<< HEAD
-qmd: "activity bmad method integration"
-=======
 <<<<<<< .merge_file_VJwg8r
 <<<<<<< .merge_file_Mv2Zna
 <<<<<<< .merge_file_ohyfSA
->>>>>>> 9d535350 (chore(Activity): sync working tree (docs, phpstan fixes, wip))
 ---
 
 # Activity — BMAD Method Integration

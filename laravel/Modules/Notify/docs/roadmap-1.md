@@ -3,7 +3,15 @@ title: "roadmap 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_RpImCM
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_8CeAM0
 qmd: "roadmap 1"
 issues: []
 discussions: []
@@ -17,10 +25,13 @@ discussions: []
 **PHPStan**: ✅ level 10 (0 errori)
 **Filament**: ✅ 4.x Compatibile
 
+<<<<<<< .merge_file_RpImCM
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_8CeAM0
 ---
 
 title: "roadmap 1"
@@ -64,6 +75,7 @@ Notify Module
 ```
 
 ---
+<<<<<<< .merge_file_RpImCM
 <<<<<<< HEAD
 =======
 =======
@@ -71,6 +83,8 @@ Notify Module
 ### 🏗️ Architettura Modulo
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_8CeAM0
 
 ## ✅ COMPLETED FEATURES
 

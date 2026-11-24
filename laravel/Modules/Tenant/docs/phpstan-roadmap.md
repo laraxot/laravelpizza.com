@@ -1,6 +1,9 @@
 ---
 created: 2026-01-30
+<<<<<<< .merge_file_zQgsUp
 qmd: "phpstan roadmap level tenant"
+=======
+>>>>>>> .merge_file_qq6pSJ
 ---
 
 # PHPStan Level 10 Roadmap - Tenant Module

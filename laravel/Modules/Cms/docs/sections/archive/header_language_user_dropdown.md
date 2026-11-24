@@ -3,6 +3,7 @@ title: "header language user dropdown"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_dXnfIj
 <<<<<<< .merge_file_DTvoBp
 <<<<<<< .merge_file_V9qHFM
 <<<<<<< .merge_file_mT7Pum
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_rjvYsw
 =======
 >>>>>>> .merge_file_hZOVVf
+=======
+>>>>>>> .merge_file_70o81P
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dXnfIj
 <<<<<<< .merge_file_DTvoBp
 <<<<<<< .merge_file_V9qHFM
 >>>>>>> .merge_file_9n70o8
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_rjvYsw
 =======
 >>>>>>> .merge_file_hZOVVf
+=======
+>>>>>>> .merge_file_70o81P
 qmd: "header language user dropdown"
 issues: []
 discussions: []
@@ -32,6 +38,7 @@ discussions: []
 # Implementazione del Selettore di Lingua e Dropdown Utente nell'Header
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_dXnfIj
 <<<<<<< .merge_file_DTvoBp
 <<<<<<< .merge_file_V9qHFM
 <<<<<<< .merge_file_mT7Pum
@@ -41,6 +48,8 @@ discussions: []
 >>>>>>> .merge_file_rjvYsw
 =======
 >>>>>>> .merge_file_hZOVVf
+=======
+>>>>>>> .merge_file_70o81P
 <<<<<<< HEAD
 - [Documentazione centrale](/project_docs/README.md)
 =======
@@ -50,6 +59,7 @@ discussions: []
 - [Documentazione centrale](/project_docs/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dXnfIj
 <<<<<<< .merge_file_DTvoBp
 <<<<<<< .merge_file_V9qHFM
 >>>>>>> .merge_file_9n70o8
@@ -57,6 +67,8 @@ discussions: []
 >>>>>>> .merge_file_rjvYsw
 =======
 >>>>>>> .merge_file_hZOVVf
+=======
+>>>>>>> .merge_file_70o81P
 - [Collegamenti documentazione](/project_docs/collegamenti-documentazione.md)
 - [Documentazione sezioni](/project_docs/sections.md)
 - [Sezioni CMS](/laravel/modules/cms/project_docs/sections.md)

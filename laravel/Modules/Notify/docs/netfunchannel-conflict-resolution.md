@@ -3,7 +3,15 @@ title: "netfunchannel conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_baM3tX
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ANw9hk
 qmd: "netfunchannel conflict resolution"
 issues: []
 discussions: []

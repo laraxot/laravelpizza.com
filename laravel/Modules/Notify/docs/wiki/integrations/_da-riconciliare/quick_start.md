@@ -8,18 +8,24 @@ type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
 <<<<<<< HEAD
+<<<<<<< .merge_file_1oYWTm
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qKYO3s
 updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1oYWTm
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_qKYO3s
 status: draft
 ---
 
@@ -535,21 +541,29 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 =======
+<<<<<<< .merge_file_1oYWTm
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 =======
+=======
+>>>>>>> .merge_file_qKYO3s
 <<<<<<< .merge_file_oVXhDb
 - **[Code Quality](./.windsurf/rules/code-quality.md)**
 =======
 - **[Code Quality](../../../ai-agents/code-quality.md)**
+<<<<<<< .merge_file_1oYWTm
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 >>>>>>> .merge_file_UOxjH3
 >>>>>>> laraxot/dev
 =======
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 >>>>>>> laraxot/dev
+=======
+- **[Code Quality](../../../ai-agents/code-quality.md)**
+>>>>>>> .merge_file_UOxjH3
+>>>>>>> .merge_file_qKYO3s
 >>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 

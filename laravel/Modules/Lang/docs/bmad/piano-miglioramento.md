@@ -13,8 +13,11 @@ related:
 
 # Piano di miglioramento — Lang
 
+<<<<<<< .merge_file_aPe5Nk
 <<<<<<< .merge_file_MFwMYE
 =======
+=======
+>>>>>>> .merge_file_K7vHhm
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_oSXWcx
@@ -55,7 +58,10 @@ Derivato dall'[audit](./audits/lang-audit.md).
 =======
 >>>>>>> .merge_file_36WNOd
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aPe5Nk
 >>>>>>> .merge_file_cBhwTv
+=======
+>>>>>>> .merge_file_K7vHhm
 Derivato dall'[audit profondo](./audits/lang-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0.
 
 ## P1

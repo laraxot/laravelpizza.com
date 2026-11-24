@@ -8,6 +8,7 @@ updated: 2026-09-22
 related:
   - ./bmad/stories/12.3.root-hygiene-conflict-markers.story.md
   - ./bmad/stories/12.4.git-hygiene-queue-pid-graphify-out-aaa.story.md
+qmd: "coverage stato qualità"
 ---
 
 # Job — Stato qualità (2026-09-22)

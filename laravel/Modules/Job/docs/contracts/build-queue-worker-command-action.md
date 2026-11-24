@@ -1,6 +1,7 @@
 ---
 title: "Contratto — BuildQueueWorkerCommandAction"
 type: contract
+<<<<<<< .merge_file_gFpqH4
 <<<<<<< .merge_file_U1abi0
 <<<<<<< .merge_file_ubRVC1
 owner: Job
@@ -11,18 +12,24 @@ qmd: "BuildQueueWorkerCommandAction riga shell worker queue:work timeout sleep t
 =======
 =======
 >>>>>>> .merge_file_utSe40
+=======
+>>>>>>> .merge_file_tJcf2H
 action: "Modules\Job\Actions\BuildQueueWorkerCommandAction"
 tags: [contract, action, queue, worker, shell]
 created: 2026-11-24
 updated: 2026-11-24
+<<<<<<< .merge_file_gFpqH4
 <<<<<<< .merge_file_U1abi0
 >>>>>>> .merge_file_hyFQ9o
 =======
 >>>>>>> .merge_file_utSe40
+=======
+>>>>>>> .merge_file_tJcf2H
 ---
 
 # BuildQueueWorkerCommandAction
 
+<<<<<<< .merge_file_gFpqH4
 <<<<<<< .merge_file_U1abi0
 <<<<<<< .merge_file_ubRVC1
 Costruisce la riga di shell con cui `worker:check` avvia `queue:work`. Codice: `app/Actions/BuildQueueWorkerCommandAction.php:14-27`.
@@ -59,6 +66,8 @@ Nessuno: restituisce solo la stringa. Non avvia processi (lo fa `WorkerCheck` co
 =======
 =======
 >>>>>>> .merge_file_utSe40
+=======
+>>>>>>> .merge_file_tJcf2H
 Sorgente: `app/Actions/BuildQueueWorkerCommandAction.php`. Perché esiste:
 [ADR flag del worker dalle impostazioni del tenant](../adr/queue-worker-flags-from-tenant-settings.md).
 Unico chiamante: `Console/Commands/WorkerCheck.php::startQueueListener()`, che passa il risultato a `Safe\exec()`.
@@ -95,7 +104,10 @@ Unico chiamante: `Console/Commands/WorkerCheck.php::startQueueListener()`, che p
 - Non legge `config('queue.*')` né sceglie la connessione o la coda: `queue:work` usa i default dell'applicazione.
 - Non verifica che `--timeout` sia sotto `retry_after` della connessione.
 - Non va estesa con opzioni stringa libere: ogni valore nuovo nella riga passa da una proprietà tipizzata della Data.
+<<<<<<< .merge_file_gFpqH4
 <<<<<<< .merge_file_U1abi0
 >>>>>>> .merge_file_hyFQ9o
 =======
 >>>>>>> .merge_file_utSe40
+=======
+>>>>>>> .merge_file_tJcf2H

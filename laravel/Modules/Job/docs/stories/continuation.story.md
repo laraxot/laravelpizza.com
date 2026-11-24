@@ -4,6 +4,7 @@ title: "Job Module — Table Audit and $model Property"
 type: continuation
 scope: module:Job
 github: {issues: "https://github.com/laraxot/module_xot_fila5/issues/115", discussions: "https://github.com/laraxot/module_xot_fila5/discussions/117"}
+qmd: "continuation story table audit model property"
 ---
 # Job Module — Continuation Task
 

@@ -6,6 +6,7 @@ discussions: []
 title: handoff sessione PHPStan 2026-07-08
 type: chat
 tags: [phpstan, session, lang, job, marker-git, blade-component]
+<<<<<<< .merge_file_fWQhOl
 <<<<<<< .merge_file_fYRT3b
 <<<<<<< .merge_file_PZI4fQ
 <<<<<<< .merge_file_6HE7uO
@@ -15,11 +16,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_8PLz7d
 =======
 >>>>>>> .merge_file_ZmmVtH
+=======
+>>>>>>> .merge_file_4p8eCl
 <<<<<<< HEAD
 updated: 2026-07-08
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_fWQhOl
 <<<<<<< .merge_file_fYRT3b
 <<<<<<< .merge_file_PZI4fQ
 >>>>>>> .merge_file_WfJ8uC
@@ -27,6 +31,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_8PLz7d
 =======
 >>>>>>> .merge_file_ZmmVtH
+=======
+>>>>>>> .merge_file_4p8eCl
 ---
 
 # Handoff — Sessione PHPStan 2026-07-08

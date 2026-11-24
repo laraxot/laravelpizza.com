@@ -58,8 +58,11 @@ related:
 **Conseguenze:** 
 - Migliore leggibilità e gestione dei conflitti in git
 - Necessità di refactor esistente
+<<<<<<< .merge_file_cW7Ka5
 <<<<<<< .merge_file_gbpRQ1
 =======
+=======
+>>>>>>> .merge_file_vBdwvZ
 =======
 >>>>>>> .merge_file_qzJqb1
 <<<<<<< HEAD
@@ -69,7 +72,10 @@ related:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cW7Ka5
 >>>>>>> .merge_file_giek2L
+=======
+>>>>>>> .merge_file_vBdwvZ
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.
 

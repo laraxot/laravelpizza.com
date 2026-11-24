@@ -7,7 +7,10 @@ created: 2026-11-10
 updated: 2026-11-10
 related:
   - "../../../Lang/docs/stories/placeholder-translations.story.md"
+<<<<<<< .merge_file_klwTmb
 qmd: "placeholder translations cleanup story traduzioni segnaposto"
+=======
+>>>>>>> .merge_file_8nSvKc
 ---
 
 # Via le traduzioni segnaposto dai file di lingua

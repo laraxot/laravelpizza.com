@@ -14,6 +14,7 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
+<<<<<<< .merge_file_bbRH5l
 <<<<<<< .merge_file_AYWuuz
 /**
  * @see docs/contracts/write-translation-file-action.md
@@ -22,6 +23,8 @@ use function Safe\unlink;
  */
 =======
 >>>>>>> .merge_file_rAwdUL
+=======
+>>>>>>> .merge_file_ZnYNHE
 class WriteTranslationFileAction
 {
     use QueueableAction;

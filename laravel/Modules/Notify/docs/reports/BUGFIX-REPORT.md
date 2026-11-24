@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_73tnpX
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ExFuvE
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_73tnpX
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ExFuvE
 qmd: "BUGFIX REPORT 2025 01 14"
 issues: []
 discussions: []
@@ -187,18 +193,24 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
 <<<<<<< HEAD
+<<<<<<< .merge_file_73tnpX
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ExFuvE
 | `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_73tnpX
 =======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ExFuvE
 
 ## Testing
 
@@ -299,18 +311,24 @@ $user->initializeCurrentTeam();
    - Testing
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_73tnpX
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ExFuvE
 3. **Summary Generale**: `docs/bugs/summary.md`
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_73tnpX
 =======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ExFuvE
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

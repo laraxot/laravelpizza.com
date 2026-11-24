@@ -4,6 +4,7 @@ type: decision-log
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget decision log"
 ---
 
 # Decision log

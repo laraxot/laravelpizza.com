@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -8,6 +9,8 @@ title: "ADR del modulo Cms"
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 <<<<<<< .merge_file_fEWBfK
 <<<<<<< HEAD
 =======
@@ -17,6 +20,7 @@ title: "Architecture Decision Records"
 =======
 title: "ADR del modulo Cms"
 >>>>>>> .merge_file_eWRiYb
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 >>>>>>> .merge_file_Tm6KMk
@@ -24,6 +28,8 @@ title: "ADR del modulo Cms"
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 type: index
 tags: [adr, decisioni, cms]
 created: 2026-11-18
@@ -32,6 +38,7 @@ updated: 2026-11-24
 
 # ADR del modulo Cms
 
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -40,11 +47,14 @@ updated: 2026-11-24
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 <<<<<<< .merge_file_fEWBfK
 <<<<<<< HEAD
 =======
 ## Metodo Harness
 =======
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 >>>>>>> .merge_file_Tm6KMk
@@ -52,10 +62,13 @@ updated: 2026-11-24
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 Il **perche'** del routing delle pagine pubbliche: chi monta Folio, chi risolve lo slug, cosa puo' raggiungere un URL
 `/{container0}/{slug0}`, quali protezioni puo' chiedere il JSON di una pagina. Sono decisioni di sicurezza (DCP-283) che
 sembrano rigidita' inutili. Una decisione per file, con le alternative scartate; il nome del file e' l'argomento, senza date
 ne' numeri (la data sta nella frontmatter).
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -68,11 +81,15 @@ ne' numeri (la data sta nella frontmatter).
 =======
 >>>>>>> .merge_file_eWRiYb
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_eWRiYb
+>>>>>>> .merge_file_lJhmKr
 
 Leggili prima di: aggiungere un provider o un percorso Folio, esporre un modello da URL, aggiungere un middleware a una pagina.
 
 ## Metodo
 
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -81,11 +98,14 @@ Leggili prima di: aggiungere un provider o un percorso Folio, esporre un modello
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 <<<<<<< .merge_file_fEWBfK
 >>>>>>> laraxot/dev
 Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
 Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
 =======
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 >>>>>>> .merge_file_Tm6KMk
@@ -93,10 +113,13 @@ Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontm
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fondata su un trade-off reale; non e' un diario ne'
 una spiegazione retroattiva inventata. Le decisioni si verificano contro codice e test correnti. Una modifica sostanziale crea
 un nuovo ADR e segna il precedente `superseded` o `deprecated`. Regole: [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md)
 e [ADR di Xot](../../../Xot/docs/adr/README.md).
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -109,6 +132,9 @@ e [ADR di Xot](../../../Xot/docs/adr/README.md).
 =======
 >>>>>>> .merge_file_eWRiYb
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_eWRiYb
+>>>>>>> .merge_file_lJhmKr
 
 ## Formato
 
@@ -135,6 +161,7 @@ Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 ## Conseguenze
 Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
 
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -146,6 +173,8 @@ Comandi o test che esistono e falliscono se la decisione viene violata; solo cio
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 <<<<<<< .merge_file_fEWBfK
 ## Decisioni
 
@@ -172,6 +201,7 @@ Leggili prima di: aggiungere un provider o un percorso Folio, esporre un modello
 Comandi o test che esistono e falliscono se la decisione viene violata; solo cio' che si puo' ripetere.
 ```
 >>>>>>> .merge_file_eWRiYb
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 >>>>>>> .merge_file_Tm6KMk
@@ -179,6 +209,8 @@ Comandi o test che esistono e falliscono se la decisione viene violata; solo cio
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 
 Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 
@@ -188,6 +220,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 - [FolioVoltServiceProvider e' l'unico owner di Folio e Volt](folio-volt-sole-owner.md) — niente `App\Providers\FolioServiceProvider`, niente `Folio::path` nei moduli.
 - [Modelli da URL solo da un elenco esplicito e con la policy view](container0-model-allowlist.md) — `cms.config.container0_models`, nessuna euristica, nessun oracolo di esistenza.
 - [Middleware dei JSON di pagina da un'allowlist](page-middleware-allowlist.md) — solo nomi in `cms.config.page_middleware_allowlist`; protezione incerta = 503.
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 <<<<<<< .merge_file_lHlFdt
@@ -196,11 +229,14 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr
 <<<<<<< .merge_file_fEWBfK
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_eWRiYb
+<<<<<<< .merge_file_gXlrRI
 <<<<<<< .merge_file_TVOy9U
 <<<<<<< .merge_file_yGd2W7
 >>>>>>> .merge_file_Tm6KMk
@@ -208,3 +244,5 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> .merge_file_XobvpW
 =======
 >>>>>>> .merge_file_PmZDvO
+=======
+>>>>>>> .merge_file_lJhmKr

@@ -98,6 +98,7 @@ graph TD
 ## Riferimenti Globali
 
 - [Project Wiki Root](../../docs/wiki/)
+<<<<<<< .merge_file_RU3Wxw
 <<<<<<< .merge_file_s1kFAJ
 <<<<<<< .merge_file_1cDr9r
 <<<<<<< .merge_file_lQUESn
@@ -116,6 +117,11 @@ graph TD
 =======
 <<<<<<< .merge_file_PzcY22
 >>>>>>> .merge_file_1dOjrR
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_PzcY22
+>>>>>>> .merge_file_S28uxM
 - [Global Rules](wiki/rules)
 - [Global Skills](wiki/skills)
 - [Global Commands](wiki/commands)
@@ -124,6 +130,7 @@ graph TD
 - [Global Skills](../../docs/wiki/skills/)
 - [Global Commands](../../docs/wiki/commands/)
 - [Global Memories](../../docs/wiki/memories/)
+<<<<<<< .merge_file_RU3Wxw
 <<<<<<< .merge_file_s1kFAJ
 <<<<<<< .merge_file_1cDr9r
 <<<<<<< .merge_file_lQUESn
@@ -139,11 +146,16 @@ graph TD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_1dOjrR
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S28uxM
 - [Global Rules](../../../../docs/wiki/rules/)
 - [Global Skills](../../../../bashscripts/ai/wiki/skills/)
 - [Global Commands](../../../../bashscripts/ai/wiki/commands/)
 - [Global Memories](../../../../docs/wiki/memories/)
 - Indici locali del modulo: [rules](wiki/rules) · [skills](wiki/skills) · [commands](wiki/commands) · [memories](wiki/memories)
+<<<<<<< .merge_file_RU3Wxw
 <<<<<<< .merge_file_s1kFAJ
 <<<<<<< .merge_file_1cDr9r
 <<<<<<< .merge_file_lQUESn
@@ -152,10 +164,13 @@ graph TD
 >>>>>>> .merge_file_AiVaTd
 =======
 >>>>>>> .merge_file_1dOjrR
+=======
+>>>>>>> .merge_file_S28uxM
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_hfUKHm
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_RU3Wxw
 <<<<<<< .merge_file_s1kFAJ
 <<<<<<< .merge_file_1cDr9r
 >>>>>>> .merge_file_ejk0I1
@@ -163,6 +178,8 @@ graph TD
 >>>>>>> .merge_file_AiVaTd
 =======
 >>>>>>> .merge_file_1dOjrR
+=======
+>>>>>>> .merge_file_S28uxM
 
 ## Setup Iniziale (per nuovi moduli)
 

@@ -2,7 +2,11 @@
 qmd: "activity decision log md"
 type: decision-log
 title: "Decision Log — Activity"
+<<<<<<< .merge_file_eIwIat
 links: {github_issue: "#XXX", discussion: "#XXX"}
+=======
+links: {github_issue: #XXX, discussion: #XXX}
+>>>>>>> .merge_file_OL6TuL
 ---
 # Decision Log — Activity
 

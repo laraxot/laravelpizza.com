@@ -1,3 +1,8 @@
+---
+title: "Job Module - rules Index"
+type: rule
+qmd: "rules"
+---
 # Job Module - rules Index
 
 ## Purpose

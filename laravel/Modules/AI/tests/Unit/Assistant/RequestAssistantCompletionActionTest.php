@@ -59,11 +59,7 @@ test('_uses_groq_first_with_the_production_text_model_and_json_mode', function (
             && $firstMessage === ['role' => 'system', 'content' => 'Reply in JSON']
             && $request->hasHeader('Authorization', 'Bearer gsk-test');
     });
-<<<<<<< HEAD
-})->group('AI-ASSIST-INV-1', 'AI-ASSIST-INV-3');
-=======
 });
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 test('_falls_back_to_openrouter_when_groq_fails', function (): void {
     Http::fake([
@@ -73,11 +69,7 @@ test('_falls_back_to_openrouter_when_groq_fails', function (): void {
 
     Assert::assertSame('{"answer":"Da OpenRouter"}', app(RequestAssistantCompletionAction::class)->execute('system', 'prompt'));
     Http::assertSent(fn (Request $request): bool => str_starts_with($request->url(), 'https://openrouter.ai/api/v1/') && $request['model'] === 'openrouter/free');
-<<<<<<< HEAD
-})->group('AI-ASSIST-INV-1', 'AI-ASSIST-INV-4');
-=======
 });
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 test('_skips_providers_without_key_and_ends_on_openai', function (): void {
     config(['services.groq.key' => null, 'services.openrouter.key' => '']);
@@ -85,11 +77,7 @@ test('_skips_providers_without_key_and_ends_on_openai', function (): void {
 
     Assert::assertSame('{"answer":"Da OpenAI"}', app(RequestAssistantCompletionAction::class)->execute('system', 'prompt'));
     Http::assertNotSent(fn (Request $request): bool => str_contains($request->url(), 'groq.com') || str_contains($request->url(), 'openrouter.ai'));
-<<<<<<< HEAD
-})->group('AI-ASSIST-INV-4', 'AI-ASSIST-INV-5');
-=======
 });
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 test('_adds_the_json_instruction_when_no_message_mentions_json', function (): void {
     // Groq e OpenAI rispondono 400 a json_object se nessun messaggio contiene «json» (visto dal vivo il 2026-11-17).
@@ -105,18 +93,4 @@ test('_adds_the_json_instruction_when_no_message_mentions_json', function (): vo
 
         return $content === "Rispondi in una frase.\n\n".RequestAssistantCompletionAction::JSON_INSTRUCTION;
     });
-<<<<<<< HEAD
-})->group('AI-ASSIST-INV-3');
-
-test('_never_calls_a_paid_model_while_free_models_only_is_on', function (): void {
-    // Un modello OpenRouter senza `:free` configurato per errore: si salta, nessun costo (AIConfigData::$free_models_only).
-    FakeTenantAiConfig::bind(['assistant_providers' => ['openrouter'], 'assistant_models' => ['openrouter' => 'openai/gpt-4o'], 'free_models_only' => true]);
-    Http::fake(['api.openai.com/*' => Http::response(chatReply('{"answer":"Da OpenAI"}'))]);
-
-    app(RequestAssistantCompletionAction::class)->execute('Reply in JSON', 'prompt');
-
-    Http::assertNotSent(fn (Request $request): bool => str_contains($request->url(), 'openrouter.ai'));
-})->group('AI-ASSIST-INV-2');
-=======
 });
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))

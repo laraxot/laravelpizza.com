@@ -3,7 +3,15 @@ title: "notes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_waWl0d
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_8e7PpG
 qmd: "notes"
 issues: []
 discussions: []

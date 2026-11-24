@@ -1,3 +1,8 @@
+---
+title: "DRY & KISS Analysis - Modulo Job"
+type: analysis
+qmd: "dry kiss analysis"
+---
 # DRY & KISS Analysis - Modulo Job
 
 **Data:** 15 Ottobre 2025  

@@ -1,10 +1,10 @@
 ---
-title: "Sprint Planning"
+title: "sprint planning"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "Sprint Planning"
+qmd: "sprint planning"
 issues: []
 discussions: []
 ---
@@ -17,20 +17,12 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "SPRINT PLANNING"
-=======
 title: "sprint planning"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "SPRINT PLANNING"
-=======
 qmd: "sprint planning"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## Sprint Goal

@@ -3,6 +3,7 @@ title: "algolia docsearch old2"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_eHQL7w
 <<<<<<< .merge_file_ADBKMN
 <<<<<<< .merge_file_lviA8I
 <<<<<<< .merge_file_F6sTkp
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_GqG7YI
 =======
 >>>>>>> .merge_file_01UJjy
+=======
+>>>>>>> .merge_file_ZABeyJ
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eHQL7w
 <<<<<<< .merge_file_ADBKMN
 <<<<<<< .merge_file_lviA8I
 >>>>>>> .merge_file_WS2PBT
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_GqG7YI
 =======
 >>>>>>> .merge_file_01UJjy
+=======
+>>>>>>> .merge_file_ZABeyJ
 qmd: "algolia docsearch old2"
 issues: []
 discussions: []

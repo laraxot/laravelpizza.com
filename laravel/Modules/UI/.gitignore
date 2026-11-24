@@ -257,7 +257,10 @@ app/Application
 audit-coverage/
 
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
+<<<<<<< .merge_file_RZEmXF
 # Tooling locale e config agenti (module-theme-root-hygiene)
+=======
+>>>>>>> .merge_file_TQ7gx4
 .agents/
 .codex/
 .cursor/

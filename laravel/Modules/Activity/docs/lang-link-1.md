@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_Dk4Z8D
 ---
 title: "Collegamento alle Traduzioni del Modulo Activity"
 type: note
 qmd: "lang link 1 collegamento alle traduzioni"
 ---
+=======
+>>>>>>> .merge_file_pKHPeD
 # Collegamento alle Traduzioni del Modulo Activity
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).

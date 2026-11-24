@@ -3,10 +3,14 @@ title: "Bug Fix: TableLayoutToggleTableAction Access Level Error - 27 Gennaio 20
 qmd: "ui bugfix table layout action md"
 type: note
 tags: [documentation]
+<<<<<<< .merge_file_AB9WY9
 <<<<<<< HEAD
 created: 2025-01-27
 =======
 >>>>>>> laraxot/dev
+=======
+created: 2025-01-27
+>>>>>>> .merge_file_YM4QT1
 ---
 
 # Bug Fix: TableLayoutToggleTableAction Access Level Error - 27 Gennaio 2025
@@ -195,7 +199,10 @@ curl -I http://127.0.0.1:8001/<nome progetto>/admin/gaia/survey-pdfs
 **Tipo**: Bug Fix
 **Priorità**: Alta
 **Stato**: ✅ Risolto
+<<<<<<< .merge_file_AB9WY9
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_YM4QT1
 
 ---
 

@@ -7,7 +7,10 @@ priority: medium
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, ai]
+<<<<<<< .merge_file_So8lkL
 date_originale_nome_file: 2026-10-06
+=======
+>>>>>>> .merge_file_gcBFpA
 ---
 
 # [STORY] PHPStan cleanup — AI

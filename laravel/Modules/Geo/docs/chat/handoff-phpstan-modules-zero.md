@@ -6,6 +6,7 @@ discussions: []
 title: handoff PHPStan zero moduli
 type: chat
 tags: [handoff, phpstan, bootstrap, quality-gate]
+<<<<<<< .merge_file_agl9dB
 <<<<<<< .merge_file_l2S6XW
 <<<<<<< .merge_file_hTrwmW
 <<<<<<< .merge_file_RNnPUz
@@ -15,11 +16,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_7nSvXx
 =======
 >>>>>>> .merge_file_pdSfzY
+=======
+>>>>>>> .merge_file_i4QNAU
 <<<<<<< HEAD
 updated: 2026-06-15
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_agl9dB
 <<<<<<< .merge_file_l2S6XW
 <<<<<<< .merge_file_hTrwmW
 >>>>>>> .merge_file_Bp3Jt7
@@ -27,6 +31,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_7nSvXx
 =======
 >>>>>>> .merge_file_pdSfzY
+=======
+>>>>>>> .merge_file_i4QNAU
 related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/reflective.md
@@ -71,6 +77,7 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 - Test: solo Pest
 
 **Agente:** Auto (Cursor) · **Data:** 2026-06-15
+<<<<<<< .merge_file_agl9dB
 <<<<<<< .merge_file_l2S6XW
 <<<<<<< .merge_file_hTrwmW
 <<<<<<< .merge_file_RNnPUz
@@ -86,6 +93,10 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_pdSfzY
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i4QNAU
 
 ## Versione unita da `handoff-phpstan-modules-zero-2026-07-07.md` (2026-07-07)
 
@@ -147,6 +158,7 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules --no-progress
 ## Regola nuova da rispettare
 
 **No probe**: non creare file che finiscono per `PhpstanProbeModel.php`, `PhpstanTraitProbe.php` o directory `app/Phpstan`.
+<<<<<<< .merge_file_agl9dB
 <<<<<<< .merge_file_l2S6XW
 <<<<<<< .merge_file_hTrwmW
 <<<<<<< .merge_file_RNnPUz
@@ -159,3 +171,6 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules --no-progress
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_pdSfzY
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_i4QNAU

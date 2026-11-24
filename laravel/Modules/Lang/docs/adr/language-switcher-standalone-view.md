@@ -3,15 +3,21 @@ title: "Lang — vista language switcher standalone"
 type: decision
 status: accepted
 created: 2026-11-23
+<<<<<<< .merge_file_dihgUJ
 <<<<<<< .merge_file_nuvUf8
 updated: 2026-11-24
 =======
+=======
+>>>>>>> .merge_file_xBKkK9
 <<<<<<< HEAD
 updated: 2026-11-23
 =======
 updated: 2026-11-24
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dihgUJ
 >>>>>>> .merge_file_7hfNwW
+=======
+>>>>>>> .merge_file_xBKkK9
 ---
 
 # ADR: vista language switcher standalone

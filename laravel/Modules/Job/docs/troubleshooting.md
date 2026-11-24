@@ -4,6 +4,7 @@ category: "operations"
 owner: "Job"
 status: "active"
 updated: "2026-07-28"
+qmd: "troubleshooting guide"
 ---
 
 # ⚠️ Job Module Troubleshooting Guide

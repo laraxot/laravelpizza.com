@@ -4,6 +4,7 @@ type: prd
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget prd"
 ---
 
 # PRD Job

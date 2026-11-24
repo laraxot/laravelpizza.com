@@ -1,10 +1,13 @@
 ---
 title: "Contratto — AutoLabelAction"
 type: contract
+<<<<<<< .merge_file_tqJ00H
 <<<<<<< .merge_file_3gTbAL
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_KlZJQP
+=======
+>>>>>>> .merge_file_D7BbxM
 action: "Modules\Lang\Actions\Filament\AutoLabelAction"
 tags: [contract, action, filament, translations, labels]
 created: 2026-11-24
@@ -14,6 +17,7 @@ related:
   - ../../app/Actions/Filament/AutoLabelAction.php
   - ../../app/Providers/LangServiceProvider.php
   - ../../tests/Feature/AutoLabelActionContractTest.php
+<<<<<<< .merge_file_tqJ00H
 <<<<<<< .merge_file_3gTbAL
 =======
 owner: Lang
@@ -24,14 +28,19 @@ qmd: "AutoLabelAction etichetta automatica Filament componente chiave traduzione
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_KlZJQP
+=======
+>>>>>>> .merge_file_D7BbxM
 ---
 
 # AutoLabelAction
 
+<<<<<<< .merge_file_tqJ00H
 <<<<<<< .merge_file_3gTbAL
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_KlZJQP
+=======
+>>>>>>> .merge_file_D7BbxM
 Dà a ogni componente Filament (campo, colonna, filtro, entry, step, sezione, azione) l'etichetta e i testi presi dal
 file di lingua del modulo che lo usa. È applicata a **tutti** i componenti da `LangServiceProvider::registerFilamentLabel()`
 con `configureUsing()`. Perché: [ADR etichette dai file di lingua](../adr/filament-labels-from-module-translation-files.md).
@@ -83,6 +92,7 @@ concreta, tradotto da Xot `GetTransKeyAction` (es. `blog::article`); senza class
 - Non crea le chiavi di placeholder, helper text o descrizione: vanno scritte a mano nel file di lingua.
 - Non pulisce i segnaposto salvati in passato: lo fa `CleanPlaceholderTranslationsAction`.
 - Non è la classe omonima `Modules\Xot\Actions\Filament\AutoLabelAction`: quella non è registrata in `configureUsing`.
+<<<<<<< .merge_file_tqJ00H
 <<<<<<< .merge_file_3gTbAL
 =======
 Applica al componente Filament l'etichetta (o helper text, placeholder, icona) presa dal file di lingua, con chiave derivata dalla classe chiamante. Codice: `app/Actions/Filament/AutoLabelAction.php:24-267`.
@@ -125,3 +135,5 @@ Applica al componente Filament l'etichetta (o helper text, placeholder, icona) p
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_KlZJQP
+=======
+>>>>>>> .merge_file_D7BbxM

@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: storage-server-dup.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "storage server dup"
 ---
 
 Wasabi Hot Cloud Storage

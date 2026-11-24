@@ -141,6 +141,7 @@ Il modulo utilizza l'inversion of control tramite:
 
 ---
 
+<<<<<<< .merge_file_lZLQoG
 <<<<<<< .merge_file_CPl2ik
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
@@ -150,6 +151,8 @@ Il modulo utilizza l'inversion of control tramite:
 > `DeleteMediaAction`, `MediaCollections`, `MediaItem`, `CollectionResource`). L'architettura verificata sul codice sta in
 > [bmad/architecture.md](bmad/architecture.md).
 =======
+=======
+>>>>>>> .merge_file_9Gq6Yu
 <<<<<<< HEAD
 <!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
 =======
@@ -172,7 +175,10 @@ created: 2026-08-04
 updated: 2026-08-04
 ---
 # Media Module — Architecture
+<<<<<<< .merge_file_lZLQoG
 >>>>>>> .merge_file_S4PrFD
+=======
+>>>>>>> .merge_file_9Gq6Yu
 
 ## Purpose
 Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.

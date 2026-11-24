@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: links-1.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "links risorse esterne"
 ---
 
 # Links 1 — risorse esterne

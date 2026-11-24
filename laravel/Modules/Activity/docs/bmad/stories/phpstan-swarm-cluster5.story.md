@@ -10,7 +10,10 @@ references:
   - laravel/Modules/Xot/docs/bmad/stories/phpstan-modules-swarm-random-20261006.story.md
   - bashscripts/ai/wiki/memories/multiagent-phpstan-scan-resource-contention.md
   - bashscripts/ai/wiki/memories/phpstan-swarm-single-slot-sequencing.md
+<<<<<<< .merge_file_Q3kkUM
 qmd: "phpstan swarm cluster5 story cluster activity"
+=======
+>>>>>>> .merge_file_HVQeuE
 ---
 
 # PHPStan swarm cluster 5 — Activity
@@ -53,6 +56,7 @@ errori phpstan).
 ## Residuo
 Rilanciare `phpstan analyse Modules/Activity` in finestra quieta e
 chiudere il gate; output atteso 0 errori.
+<<<<<<< .merge_file_Q3kkUM
 <<<<<<< .merge_file_vDN5Pj
 <<<<<<< .merge_file_YthsRe
 <<<<<<< .merge_file_BzciNM
@@ -61,6 +65,8 @@ chiudere il gate; output atteso 0 errori.
 >>>>>>> .merge_file_Yvb5x3
 =======
 >>>>>>> .merge_file_qoBiTo
+=======
+>>>>>>> .merge_file_HVQeuE
 
 ---
 
@@ -69,6 +75,7 @@ chiudere il gate; output atteso 0 errori.
 # phpstan swarm cluster5
 
 Stub alias post-strip data/timestamp. Canonico: [./phpstan-swarm-cluster5.story.md](./phpstan-swarm-cluster5.story.md).
+<<<<<<< .merge_file_Q3kkUM
 <<<<<<< .merge_file_vDN5Pj
 <<<<<<< .merge_file_YthsRe
 >>>>>>> .merge_file_OgmJvA
@@ -76,3 +83,5 @@ Stub alias post-strip data/timestamp. Canonico: [./phpstan-swarm-cluster5.story.
 >>>>>>> .merge_file_Yvb5x3
 =======
 >>>>>>> .merge_file_qoBiTo
+=======
+>>>>>>> .merge_file_HVQeuE

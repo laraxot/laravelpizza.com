@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_6yKn5a
 <<<<<<< .merge_file_7sMLvH
 title: "INDEX contratti — Media"
 type: index
@@ -76,6 +77,8 @@ Comando per le invarianti coperte: `vendor/bin/pest Modules/Media/tests --group=
 Interfacce: [path-generator](path-generator.md) (`PathGenerator`, `PathGeneratorContract`, oggi senza implementazioni).
 Totale: 51 contratti, 1 con copertura Pest completa.
 =======
+=======
+>>>>>>> .merge_file_u0yTrA
 title: "INDEX — Media"
 type: index
 status: active
@@ -94,5 +97,9 @@ Elenco operativo dei contract comportamentali del modulo Media.
 |---|---|---|---|
 | Generazione percorso file | [path-generator](path-generator.md) | `PathGenerator` | MEDIA-INV-1, MEDIA-INV-2, MEDIA-INV-3 |
 
+<<<<<<< .merge_file_6yKn5a
 (End of file - total 16 lines)
 >>>>>>> .merge_file_ChPXeL
+=======
+(End of file - total 16 lines)
+>>>>>>> .merge_file_u0yTrA

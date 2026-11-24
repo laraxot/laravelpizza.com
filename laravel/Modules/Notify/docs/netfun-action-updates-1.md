@@ -3,7 +3,15 @@ title: "netfun action updates 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_K5kf8F
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_zujwUW
 qmd: "netfun action updates 1"
 issues: []
 discussions: []
@@ -325,10 +333,13 @@ Questi miglioramenti garantiscono:
 3. Supporto per diversi tipi di DTO
 4. Normalizzazione corretta dei numeri di telefono
 5. Configurazione standardizzata e coerente
+<<<<<<< .merge_file_K5kf8F
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zujwUW
 
 ---
 
@@ -341,8 +352,11 @@ qmd: "netfun action updates 1"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2023-05-12*
+<<<<<<< .merge_file_K5kf8F
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zujwUW

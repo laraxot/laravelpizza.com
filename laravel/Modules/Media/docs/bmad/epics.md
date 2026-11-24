@@ -56,8 +56,11 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 **Task:**
 - [ ] Task 1
 - [ ] Task 2
+<<<<<<< .merge_file_MgvpTc
 <<<<<<< .merge_file_E8imLa
 =======
+=======
+>>>>>>> .merge_file_aJre6u
 =======
 >>>>>>> .merge_file_xsgdgO
 <<<<<<< HEAD
@@ -67,7 +70,10 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MgvpTc
 >>>>>>> .merge_file_k8XIHv
+=======
+>>>>>>> .merge_file_aJre6u
 ## E6 — Docs e debito (P1-6, P2)
 
 - AC1: nessuna classe inesistente nelle docs (`rg 'UploadMediaAction|ProcessMediaAction|MediaCollections' docs/bmad` → solo nel decision-log/audit come «inesistenti»).

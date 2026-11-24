@@ -3,7 +3,15 @@ title: "✅ PHASE 1 - RICERCA COMPLETATA"
 type: concept
 tags: [phase, research, complete]
 created: 2026-07-14
+<<<<<<< .merge_file_rCVFCI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_QP6Hjx
 qmd: "phase-1-research-complete ✅ phase 1 - ricerca completata"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -14,7 +22,10 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< .merge_file_rCVFCI
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QP6Hjx
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD

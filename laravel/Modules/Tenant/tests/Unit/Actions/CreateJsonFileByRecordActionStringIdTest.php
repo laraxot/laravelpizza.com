@@ -21,7 +21,11 @@ it('computes the next id when stored ids are strings', function (): void {
     $file = tempnam(sys_get_temp_dir(), 'sushi').'.json';
     file_put_contents($file, '[]');
 
+<<<<<<< .merge_file_VN321S
     $record = new class extends Model implements HasSushiToJson
+=======
+    $record = new class() extends Model implements HasSushiToJson
+>>>>>>> .merge_file_f2t6qO
     {
         public static string $file = '';
 

@@ -29,6 +29,7 @@ Questo documento fornisce un indice completo e organizzato di tutta la documenta
 Documenti che forniscono una panoramica generale del modulo Geo, della sua architettura e dei suoi componenti principali.
 
 - [README.md](README.md) - Introduzione generale al modulo Geo
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 <<<<<<< .merge_file_EILOhT
@@ -38,6 +39,8 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 <<<<<<< HEAD
 - [module_geo.md](module_geo.md) - Panoramica dettagliata del modulo
 =======
@@ -47,6 +50,7 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 - [module_geo.md](module-geo.md) - Panoramica dettagliata del modulo
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 >>>>>>> .merge_file_As3voz
@@ -54,6 +58,8 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 - [architecture.md](architecture.md) - Architettura del modulo Geo
 - [structure.md](structure.md) - Struttura del modulo e organizzazione dei file
 - [gestione-dati-geografici-compendio.md](gestione-dati-geografici-compendio.md) - Compendio completo sulla gestione dei dati geografici
@@ -62,6 +68,7 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 
 Documenti relativi ai modelli dati, alle entità geografiche e alle strutture dati utilizzate nel modulo.
 
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 <<<<<<< .merge_file_EILOhT
@@ -71,6 +78,8 @@ Documenti relativi ai modelli dati, alle entità geografiche e alle strutture da
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 <<<<<<< HEAD
 - [geo_entities.md](geo_entities.md) - Entità geografiche principali
 =======
@@ -80,6 +89,7 @@ Documenti relativi ai modelli dati, alle entità geografiche e alle strutture da
 - [geo_entities.md](geo-entities.md) - Entità geografiche principali
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 >>>>>>> .merge_file_As3voz
@@ -87,6 +97,8 @@ Documenti relativi ai modelli dati, alle entità geografiche e alle strutture da
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 - [comune-model.md](comune-model.md) - Documentazione del modello Comune
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md) - Analisi dell'unificazione dei modelli
 - [consolidamento-modelli-geografici.md](consolidamento-modelli-geografici.md) - Documento sul consolidamento
@@ -143,6 +155,7 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 - [filament-integration.md](filament-integration.md) - Integrazione con Filament
 - [filament.md](filament.md) - Utilizzo di Filament nel modulo Geo
 - [squire-integration.md](squire-integration.md) - Integrazione con Squire
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 <<<<<<< .merge_file_EILOhT
@@ -152,6 +165,8 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 <<<<<<< HEAD
 - [address_autocomplete.md](address_autocomplete.md) - Autocompletamento indirizzi
 =======
@@ -161,6 +176,7 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 - [address_autocomplete.md](address-autocomplete.md) - Autocompletamento indirizzi
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 >>>>>>> .merge_file_As3voz
@@ -168,6 +184,8 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 - [autocomplete.md](autocomplete.md) - Funzionalità di autocompletamento
 - [location-select.md](location-select.md) - Selezione della posizione
 
@@ -184,6 +202,7 @@ Documenti specifici per l'analisi e il miglioramento dell'AddressResource.
 Documenti relativi all'integrazione con servizi geografici esterni.
 
 - [here.md](here.md) - Integrazione con HERE
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 <<<<<<< .merge_file_EILOhT
@@ -193,6 +212,8 @@ Documenti relativi all'integrazione con servizi geografici esterni.
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 <<<<<<< HEAD
 - [here_com.md](here_com.md) - Utilizzo dell'API HERE.com
 =======
@@ -202,6 +223,7 @@ Documenti relativi all'integrazione con servizi geografici esterni.
 - [here_com.md](here-com.md) - Utilizzo dell'API HERE.com
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 >>>>>>> .merge_file_As3voz
@@ -209,12 +231,15 @@ Documenti relativi all'integrazione con servizi geografici esterni.
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 - [tomtom_com.md](tomtom_com.md) - Integrazione con TomTom
 
 ## Best Practices
 
 Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 <<<<<<< .merge_file_EILOhT
@@ -226,6 +251,8 @@ Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 <<<<<<< HEAD
 - [__eloquent.md](__eloquent.md) - Best practices per Eloquent
 - [tips_and_links.md](tips_and_links.md) - Suggerimenti e link utili
@@ -241,6 +268,7 @@ Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 - [laravel_packages.md](laravel-packages.md) - Pacchetti Laravel consigliati
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0plIDS
 <<<<<<< .merge_file_7BCx2c
 <<<<<<< .merge_file_8kr5ja
 >>>>>>> .merge_file_As3voz
@@ -248,6 +276,8 @@ Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 >>>>>>> .merge_file_i2NTqK
 =======
 >>>>>>> .merge_file_FjAGrv
+=======
+>>>>>>> .merge_file_ceW8cg
 
 ## Riferimenti API
 

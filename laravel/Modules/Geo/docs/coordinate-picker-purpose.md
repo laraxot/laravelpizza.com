@@ -17,6 +17,7 @@ Il componente **Coordinate Picker** (mappa interattiva) nel wizard di creazione 
 
 ## Nominatim + normalize: fonte unica
 
+<<<<<<< .merge_file_wmgv4c
 <<<<<<< .merge_file_Pz45wx
 <<<<<<< .merge_file_UcJRPO
 <<<<<<< .merge_file_LNcJsT
@@ -37,12 +38,15 @@ Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.s
 >>>>>>> .merge_file_H4TGwC
 =======
 >>>>>>> .merge_file_HdqTg6
+=======
+>>>>>>> .merge_file_BMxgxk
 `CoordinatePickerHelpers` (stesso NS di `XotBaseCoordinateField`) e' l'unica sede di
 `searchAddress` / `reverseGeocode` / `normalizeCoordinate` / `extractCoordinates`.
 `HasCoordinatePicker` e `XotBaseCoordinateField` espongono solo wrapper `#[Exposed]`/`#[Renderless]`
 che delegano: evita corpi Nominatim duplicati nei trait (PHPStan L10 perde i tipi `array<…>` × ogni consumer).
 
 Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md).
+<<<<<<< .merge_file_wmgv4c
 <<<<<<< .merge_file_Pz45wx
 <<<<<<< .merge_file_UcJRPO
 >>>>>>> .merge_file_aSIwnw
@@ -50,6 +54,8 @@ Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.s
 >>>>>>> .merge_file_H4TGwC
 =======
 >>>>>>> .merge_file_HdqTg6
+=======
+>>>>>>> .merge_file_BMxgxk
 
 ## 🧩 Component Extraction Rule (DRY Principle)
 

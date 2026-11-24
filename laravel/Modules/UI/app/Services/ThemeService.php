@@ -11,4 +11,10 @@ namespace Modules\UI\Services;
  *
  * @deprecated Empty stub; do not use.
  */
+<<<<<<< .merge_file_YgRYbp
 final class ThemeService {}
+=======
+final class ThemeService
+{
+}
+>>>>>>> .merge_file_GooCHd

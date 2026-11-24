@@ -146,11 +146,3 @@ ai.code-workspace
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
-<<<<<<< HEAD
-tests/coverage-*.*
-docs/screenshots/
-
-# graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
-tests/graphify-out/
-=======
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))

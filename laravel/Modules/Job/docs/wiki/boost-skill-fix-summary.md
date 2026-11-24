@@ -1,3 +1,8 @@
+---
+title: "Boost Skill Fix Summary - Job Module"
+type: note
+qmd: "boost skill fix summary"
+---
 # Boost Skill Fix Summary - Job Module
 
 **Date**: 2026-03-02

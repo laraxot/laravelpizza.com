@@ -1,10 +1,28 @@
 ---
 title: "Pagine Create - Notify Sixteen Theme"
+<<<<<<< .merge_file_cq3ji3
 type: concept
 tags: [pagine, create]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "pagine-create pagine create - laraxot sixteen theme"
+=======
+<<<<<<< HEAD
+title: "Pagine Create - <nome progetto> Sixteen Theme"
+type: concept
+tags: [pagine, create]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "pagine-create pagine create - laraxot sixteen theme"
+qmd: "pagine-create pagine create - <nome progetto> sixteen theme"
+=======
+type: concept
+tags: [pagine, create]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "pagine-create pagine create - laraxot sixteen theme"
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_21OTrz
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -14,10 +32,13 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< .merge_file_cq3ji3
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_21OTrz
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

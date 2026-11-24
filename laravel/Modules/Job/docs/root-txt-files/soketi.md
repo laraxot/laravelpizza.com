@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: soketi.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "soketi risorse esterne"
 ---
 
 # Soketi — risorse esterne

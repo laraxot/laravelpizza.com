@@ -13,6 +13,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use PHPUnit\Framework\Assert;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 
+<<<<<<< .merge_file_DdpjDy
 <<<<<<< .merge_file_cS37bM
 <<<<<<< .merge_file_w3WNVk
 >>>>>>> .merge_file_y4cZ5d
@@ -20,3 +21,5 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
 >>>>>>> .merge_file_Rjm6w4
 =======
 >>>>>>> .merge_file_aBepNq
+=======
+>>>>>>> .merge_file_KVPxJO

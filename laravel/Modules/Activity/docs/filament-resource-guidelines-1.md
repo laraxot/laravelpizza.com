@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_xg13Ea
 ---
 title: "Activity Module Filament Resource Guidelines"
 type: guide
 qmd: "filament resource guidelines 1 activity"
 ---
+=======
+>>>>>>> .merge_file_Acc6bK
 # Activity Module Filament Resource Guidelines
 
 ## Extension Patterns

@@ -8,7 +8,10 @@ related:
   - ../../app/Actions/GetTenantNameAction.php
   - ../../app/Actions/Config/GetTenantFilePathAction.php
   - ../tenant-config-path-philosophy-debate.md
+<<<<<<< .merge_file_DU9xWW
 qmd: "tenant name from reversed host cartella"
+=======
+>>>>>>> .merge_file_iQXk7Z
 ---
 
 # ADR: il tenant è la cartella di config del dominio invertito

@@ -3,6 +3,7 @@ title: "architecture aration rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_ypxobT
 <<<<<<< .merge_file_OYC5QO
 <<<<<<< .merge_file_cF8vym
 <<<<<<< .merge_file_iE4Xgx
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_C8D0GG
 =======
 >>>>>>> .merge_file_jd6qBn
+=======
+>>>>>>> .merge_file_rxkjx5
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ypxobT
 <<<<<<< .merge_file_OYC5QO
 <<<<<<< .merge_file_cF8vym
 >>>>>>> .merge_file_OzFe11
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_C8D0GG
 =======
 >>>>>>> .merge_file_jd6qBn
+=======
+>>>>>>> .merge_file_rxkjx5
 qmd: "architecture aration rules"
 issues: []
 discussions: []
@@ -255,6 +261,7 @@ function mockXotData(): void {
 
 ---
 
+<<<<<<< .merge_file_ypxobT
 <<<<<<< .merge_file_OYC5QO
 <<<<<<< .merge_file_cF8vym
 <<<<<<< .merge_file_iE4Xgx
@@ -263,6 +270,8 @@ function mockXotData(): void {
 >>>>>>> .merge_file_C8D0GG
 =======
 >>>>>>> .merge_file_jd6qBn
+=======
+>>>>>>> .merge_file_rxkjx5
 title: "architecture aration rules"
 type: note
 tags: [documentation]
@@ -271,6 +280,7 @@ updated: 2026-09-26
 qmd: "architecture aration rules"
 issues: []
 discussions: []
+<<<<<<< .merge_file_ypxobT
 <<<<<<< .merge_file_OYC5QO
 <<<<<<< .merge_file_cF8vym
 >>>>>>> .merge_file_OzFe11
@@ -278,6 +288,8 @@ discussions: []
 >>>>>>> .merge_file_C8D0GG
 =======
 >>>>>>> .merge_file_jd6qBn
+=======
+>>>>>>> .merge_file_rxkjx5
 **Status**: ✅ Regole Stabilite e Validate
 **Enforcement**: Obbligatorio per tutti i nuovi test
 **Review**: Required in code review process

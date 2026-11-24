@@ -33,6 +33,7 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 |---|---|---|
 | Head FO | `resources/views/components/head.blade.php` | `@filamentStyles` |
 | Foot FO | `resources/views/components/foot.blade.php` | `@filamentScripts` |
+<<<<<<< .merge_file_CnEX3M
 <<<<<<< .merge_file_udwVGi
 <<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
@@ -42,6 +43,8 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 >>>>>>> .merge_file_AqH4wF
 =======
 >>>>>>> .merge_file_zrUE5o
+=======
+>>>>>>> .merge_file_8S6c5q
 <<<<<<< HEAD
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
 =======
@@ -51,6 +54,7 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CnEX3M
 <<<<<<< .merge_file_udwVGi
 <<<<<<< .merge_file_iW39oZ
 >>>>>>> .merge_file_1JYKoD
@@ -58,6 +62,8 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 >>>>>>> .merge_file_AqH4wF
 =======
 >>>>>>> .merge_file_zrUE5o
+=======
+>>>>>>> .merge_file_8S6c5q
 | Temi | es. Trattoria `layouts/main` | usano `<x-cms::head />` + `<x-cms::foot />` — **non** duplicare né omettere |
 
 ## Ordine canonico (KISS)
@@ -75,6 +81,7 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 
 - Notifications: **sempre** `@livewire('notifications')`, mai wrappato in `@auth` (doc Filament).
 - `@livewireStyles` / `@livewireScripts`: non richiesti se `livewire.inject_assets` è true e si usano le direttive Filament.
+<<<<<<< .merge_file_CnEX3M
 <<<<<<< .merge_file_udwVGi
 <<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
@@ -87,12 +94,15 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 >>>>>>> .merge_file_AqH4wF
 =======
 >>>>>>> .merge_file_zrUE5o
+=======
+>>>>>>> .merge_file_8S6c5q
 
 ## Anti-pattern
 
 - Rimuovere `@filamentStyles` / `@filamentScripts` “per alleggerire” il FO
 - Mettere notifications solo per utenti autenticati
 - Duplicare le direttive nei temi che già includono `x-cms::head` / `x-cms::foot`
+<<<<<<< .merge_file_CnEX3M
 <<<<<<< .merge_file_udwVGi
 <<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
@@ -102,10 +112,13 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 >>>>>>> .merge_file_AqH4wF
 =======
 >>>>>>> .merge_file_zrUE5o
+=======
+>>>>>>> .merge_file_8S6c5q
 <<<<<<< HEAD
 =======
 - Aggiungere una prop `panelAssets` che non viene valorizzata dai caller
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CnEX3M
 <<<<<<< .merge_file_udwVGi
 <<<<<<< .merge_file_iW39oZ
 >>>>>>> .merge_file_1JYKoD
@@ -113,6 +126,8 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 >>>>>>> .merge_file_AqH4wF
 =======
 >>>>>>> .merge_file_zrUE5o
+=======
+>>>>>>> .merge_file_8S6c5q
 - Aggiungere `@filamentStyles` in `metatags` **e** in `head` sulla stessa pagina (una sola fonte)
 
 ## Verifica

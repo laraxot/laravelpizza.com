@@ -1,5 +1,6 @@
 ---
 created: 2025
+qmd: "phpstan correzioni livello"
 ---
 
 # Correzioni PHPStan Livello 10 - Modulo Job

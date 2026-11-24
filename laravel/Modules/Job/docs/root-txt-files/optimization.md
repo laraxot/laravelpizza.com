@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: optimization.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "optimization risorse esterne"
 ---
 
 # Optimization — risorse esterne

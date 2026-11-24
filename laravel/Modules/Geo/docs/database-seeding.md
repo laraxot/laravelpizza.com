@@ -3,6 +3,7 @@ title: "database seeding"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_ZYeoeh
 <<<<<<< .merge_file_myQj4l
 <<<<<<< .merge_file_EqW5Ip
 <<<<<<< .merge_file_dEecxB
@@ -12,11 +13,14 @@ updated: 2026-11-23
 >>>>>>> .merge_file_GzRUSJ
 =======
 >>>>>>> .merge_file_JZmvUf
+=======
+>>>>>>> .merge_file_VzQbjF
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZYeoeh
 <<<<<<< .merge_file_myQj4l
 <<<<<<< .merge_file_EqW5Ip
 >>>>>>> .merge_file_GF7aon
@@ -24,6 +28,8 @@ updated: 2026-11-23
 >>>>>>> .merge_file_GzRUSJ
 =======
 >>>>>>> .merge_file_JZmvUf
+=======
+>>>>>>> .merge_file_VzQbjF
 qmd: "database seeding"
 issues: []
 discussions: []
@@ -253,6 +259,7 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 
 ## Collegamenti e Riferimenti
 
+<<<<<<< .merge_file_ZYeoeh
 <<<<<<< .merge_file_myQj4l
 <<<<<<< .merge_file_EqW5Ip
 <<<<<<< .merge_file_dEecxB
@@ -263,6 +270,8 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 >>>>>>> .merge_file_GzRUSJ
 =======
 >>>>>>> .merge_file_JZmvUf
+=======
+>>>>>>> .merge_file_VzQbjF
 <<<<<<< HEAD
 - [README BashScripts](../bashscripts/README.md)
 - [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
@@ -275,6 +284,7 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 - [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
 >>>>>>> .merge_file_cvFYDO
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZYeoeh
 <<<<<<< .merge_file_myQj4l
 <<<<<<< .merge_file_EqW5Ip
 >>>>>>> .merge_file_GF7aon
@@ -282,6 +292,8 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 >>>>>>> .merge_file_GzRUSJ
 =======
 >>>>>>> .merge_file_JZmvUf
+=======
+>>>>>>> .merge_file_VzQbjF
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)
 - [Documentazione Modulo <nome modulo>](../laravel/Modules/<nome modulo>/docs/)
 - [Documentazione Modulo <nome progetto>](../laravel/Modules/<nome progetto>/docs/)

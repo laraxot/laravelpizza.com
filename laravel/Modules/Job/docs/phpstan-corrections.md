@@ -1,3 +1,8 @@
+---
+title: "Correzioni PHPStan Livello 10 - Modulo Job"
+type: note
+qmd: "phpstan corrections correzioni livello"
+---
 # Correzioni PHPStan Livello 10 - Modulo Job
 **Errori iniziali**: 31
 **Errori finali**: 0

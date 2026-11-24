@@ -10,7 +10,11 @@ use Modules\Tenant\Actions\GetTenantNameAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< .merge_file_GXDOz0
  * @see docs/contracts/get-tenant-file-path-action.md
+=======
+ * Percorso di un file nella cartella di config del tenant corrente.
+>>>>>>> .merge_file_t154IS
  *
  * @contract docs/contracts/get-tenant-file-path-action.md
  */

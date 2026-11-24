@@ -6,7 +6,10 @@ status: review
 created: 2026-11-19
 updated: 2026-11-19
 issues: ["https://github.com/laraxot/base_techplanner_fila5/issues/64"]
+<<<<<<< .merge_file_YXwEf4
 qmd: "audit qualita story tenant"
+=======
+>>>>>>> .merge_file_jN9eO8
 ---
 
 # Story: audit qualita' del modulo Tenant

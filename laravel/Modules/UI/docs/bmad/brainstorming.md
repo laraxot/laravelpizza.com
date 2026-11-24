@@ -49,7 +49,15 @@ updated: 2026-10-07
 ### D2 — Due enum per il layout
 ### D2 - Due enum per il layout
 
+<<<<<<< HEAD
+`app/Enums/TableLayout.php` è un enum string con `EnumTrait`; `app/Enums/TableLayoutEnum.php` è un enum Filament che implementa `HasColor`, `HasIcon`, `HasLabel`. Le traduzioni delle label sono tracciate in [stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md](stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md).
+=======
+<<<<<<< HEAD
+`app/Enums/TableLayout.php` è un enum string con `EnumTrait`; `app/Enums/TableLayoutEnum.php` è un enum Filament che implementa `HasColor`, `HasIcon`, `HasLabel`. Le traduzioni delle label sono tracciate in [stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md](stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md).
+=======
 `app/Enums/TableLayout.php` è un enum string con `EnumTrait`; `app/Enums/TableLayoutEnum.php` è un enum Filament che implementa `HasColor`, `HasIcon`, `HasLabel`. Le traduzioni delle label sono tracciate in [stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md](stories/story-ui-table-layout-enum-translations.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Domanda**: conversione in enum `HasLabel` o fusione in un unico enum?
 
 ### D3 — Fallback Map/Geocoding duplicati

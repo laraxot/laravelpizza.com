@@ -8,6 +8,7 @@ namespace Modules\Activity\Tests\Unit;
 
 use Filament\Tables\Enums\PaginationMode;
 use Modules\Activity\Tests\Fixtures\CanPaginateHarness;
+<<<<<<< .merge_file_qPVuLD
 <<<<<<< .merge_file_0fRzW1
 <<<<<<< .merge_file_RjjYan
 >>>>>>> .merge_file_WNxoNy
@@ -15,3 +16,5 @@ use Modules\Activity\Tests\Fixtures\CanPaginateHarness;
 >>>>>>> .merge_file_eypTQi
 =======
 >>>>>>> .merge_file_pGUu2D
+=======
+>>>>>>> .merge_file_8K8eMb

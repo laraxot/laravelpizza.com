@@ -9,6 +9,7 @@ tags: [adr, artisan, filament, livewire, security, super-admin]
 related:
   - ../bmad/decision-log.md
   - ../contracts/assert-allowed-artisan-command-action.md
+qmd: "artisan commands from ui exact match"
 ---
 
 # ADR: comandi Artisan dalla UI con allowlist a match esatto

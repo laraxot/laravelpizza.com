@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_OiQuGO
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Kwovhu
 title: "INDEX — UI"
 type: index
 status: active
@@ -18,6 +21,7 @@ Elenco operativo dei contract comportamentali del modulo UI.
 |---|---|---|---|
 | — | Nessun contract comportamentale audit-ato nel modulo UI. | — | — |
 
+<<<<<<< .merge_file_OiQuGO
 (End of file - total 16 lines)
 =======
 title: "INDEX contratti — UI"
@@ -45,3 +49,6 @@ Action da rivalutare per prime se cambiano comportamento (nessuna oggi è ad alt
 
 Totale Action in `app/Actions`: 6 file `.php` (`Block/GetAllBlocksAction`, `Block/ResolveLocalizedBlockDataAction`, `Datetime/GetDaysMappingAction`, `GetUserDataAction`, `Icon/GetAllIconsAction`, `Panel/ApplyCalendarToPanelAction`). Contract formali: 0.
 >>>>>>> laraxot/dev
+=======
+(End of file - total 16 lines)
+>>>>>>> .merge_file_Kwovhu

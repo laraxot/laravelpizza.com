@@ -29,13 +29,9 @@ module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-<<<<<<< HEAD
-qmd: "setup guide activity bmad"
-=======
 <<<<<<< .merge_file_J7kdB9
 <<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
->>>>>>> 9d535350 (chore(Activity): sync working tree (docs, phpstan fixes, wip))
 ---
 
 # Activity — BMAD Setup Guide

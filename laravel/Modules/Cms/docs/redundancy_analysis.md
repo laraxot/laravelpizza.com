@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_5bLDYg
 <<<<<<< .merge_file_jTW88g
 <<<<<<< .merge_file_Mfzxzu
 <<<<<<< .merge_file_7IMU8d
@@ -7,6 +8,8 @@
 >>>>>>> .merge_file_MZzMs5
 =======
 >>>>>>> .merge_file_4yzfL7
+=======
+>>>>>>> .merge_file_DUqcl6
 <<<<<<< HEAD
 title: "Redundancy Analysis"
 type: note
@@ -15,6 +18,7 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Redundancy Analysis"
 =======
+<<<<<<< .merge_file_5bLDYg
 <<<<<<< .merge_file_jTW88g
 <<<<<<< .merge_file_Mfzxzu
 >>>>>>> .merge_file_JFfhX1
@@ -22,12 +26,15 @@ qmd: "Redundancy Analysis"
 >>>>>>> .merge_file_MZzMs5
 =======
 >>>>>>> .merge_file_4yzfL7
+=======
+>>>>>>> .merge_file_DUqcl6
 title: "redundancy analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "redundancy analysis"
+<<<<<<< .merge_file_5bLDYg
 <<<<<<< .merge_file_jTW88g
 <<<<<<< .merge_file_Mfzxzu
 <<<<<<< .merge_file_7IMU8d
@@ -40,6 +47,9 @@ qmd: "redundancy analysis"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_4yzfL7
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_DUqcl6
 issues: []
 discussions: []
 module: theme

@@ -4,7 +4,15 @@ type: index
 status: active
 updated: 2026-11-16
 module: Tenant
+<<<<<<< .merge_file_v537Tk
 qmd: "indice BMAD Tenant audit purpose architecture epics decision log brainstorming stories"
+=======
+<<<<<<< .merge_file_Au0d5g
+qmd: "indice BMAD Tenant audit purpose architecture epics decision log brainstorming stories"
+=======
+qmd: "indice BMAD Tenant audit purpose architecture epics decision log brainstorming piano stories"
+>>>>>>> .merge_file_SoqEhM
+>>>>>>> .merge_file_qdHCE3
 ---
 
 # Indice BMAD — Tenant

@@ -4,7 +4,10 @@ type: reference
 tags: [tenant, api, contracts, services]
 created: 2026-07-09
 updated: 2026-07-09
+<<<<<<< .merge_file_LTmQ3p
 qmd: "api reference tenant"
+=======
+>>>>>>> .merge_file_6xueZ6
 ---
 
 # API Reference: Tenant Module

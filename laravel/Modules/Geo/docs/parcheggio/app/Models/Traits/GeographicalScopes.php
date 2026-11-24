@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Models\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
+<<<<<<< .merge_file_mManIx
 <<<<<<< .merge_file_liFmUX
 <<<<<<< .merge_file_v1y1ok
 <<<<<<< .merge_file_MwVQx9
@@ -15,6 +16,8 @@ use Illuminate\Database\Eloquent\Builder;
 >>>>>>> .merge_file_zwEbSW
 =======
 >>>>>>> .merge_file_OGdU4O
+=======
+>>>>>>> .merge_file_JIl127
 trait GeographicalScopes
 {
     /**

@@ -7,6 +7,7 @@ related:
   - ../../architecture.md
   - ../livewire-widget-architecture.md
   - ../stories/12.3.root-hygiene-conflict-markers.story.md
+qmd: "job architecture spine puntatore"
 ---
 
 # Architecture Job

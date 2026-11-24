@@ -1,6 +1,7 @@
 ---
 title: "Contratto — AuthorizeLogAccessAction"
 type: contract
+<<<<<<< .merge_file_EvZioA
 <<<<<<< .merge_file_9VyYit
 <<<<<<< .merge_file_bFKREA
 <<<<<<< .merge_file_t2MXr9
@@ -14,6 +15,8 @@ qmd: "contract AuthorizeLogAccessAction activity log viewer permesso log.viewAny
 >>>>>>> .merge_file_dui7tX
 =======
 >>>>>>> .merge_file_HJQq7b
+=======
+>>>>>>> .merge_file_3rzbWb
 action: "Modules\Activity\Actions\Log\AuthorizeLogAccessAction"
 tags: [contract, action, log-viewer, authorization]
 created: 2026-11-24
@@ -23,6 +26,7 @@ related:
   - ../../app/Actions/Log/AuthorizeLogAccessAction.php
   - ../../app/Filament/Pages/LogViewer.php
   - ../../tests/Unit/Actions/Log/AuthorizeLogAccessActionTest.php
+<<<<<<< .merge_file_EvZioA
 <<<<<<< .merge_file_9VyYit
 <<<<<<< .merge_file_bFKREA
 >>>>>>> .merge_file_a0NK35
@@ -30,10 +34,13 @@ related:
 >>>>>>> .merge_file_dui7tX
 =======
 >>>>>>> .merge_file_HJQq7b
+=======
+>>>>>>> .merge_file_3rzbWb
 ---
 
 # AuthorizeLogAccessAction
 
+<<<<<<< .merge_file_EvZioA
 <<<<<<< .merge_file_9VyYit
 <<<<<<< .merge_file_bFKREA
 <<<<<<< .merge_file_t2MXr9
@@ -73,6 +80,8 @@ Chi puo' consultare e scaricare i file di log. Regola unica usata da `LogViewer:
 >>>>>>> .merge_file_dui7tX
 =======
 >>>>>>> .merge_file_HJQq7b
+=======
+>>>>>>> .merge_file_3rzbWb
 Chi può consultare e scaricare i file di log dal pannello. Una sola regola per la pagina (`LogViewer::canAccess()`) e
 per il download. Sorgente: `app/Actions/Log/AuthorizeLogAccessAction.php`.
 
@@ -107,6 +116,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Aut
 - Non crea il permesso `log.viewAny`: va creato e assegnato dall'amministrazione dei ruoli.
 - Non usa una Policy Laravel: la pagina non ha un modello; chi aggiunge un'altra via ai log riusa questa Action.
 - Non registra gli accessi ai log.
+<<<<<<< .merge_file_EvZioA
 <<<<<<< .merge_file_9VyYit
 <<<<<<< .merge_file_bFKREA
 >>>>>>> .merge_file_a0NK35
@@ -114,3 +124,5 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Aut
 >>>>>>> .merge_file_dui7tX
 =======
 >>>>>>> .merge_file_HJQq7b
+=======
+>>>>>>> .merge_file_3rzbWb

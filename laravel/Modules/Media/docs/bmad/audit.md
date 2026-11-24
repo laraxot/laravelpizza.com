@@ -4,9 +4,12 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_jYo7V0
 <<<<<<< .merge_file_arOS2s
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 =======
+=======
+>>>>>>> .merge_file_A3Svlj
 <<<<<<< HEAD
 <<<<<<< HEAD
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
@@ -30,7 +33,10 @@ qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard T
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jYo7V0
 >>>>>>> .merge_file_KbhPOY
+=======
+>>>>>>> .merge_file_A3Svlj
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
@@ -41,9 +47,12 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
+<<<<<<< .merge_file_jYo7V0
 <<<<<<< .merge_file_arOS2s
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
 =======
+=======
+>>>>>>> .merge_file_A3Svlj
 <<<<<<< HEAD
 <<<<<<< HEAD
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
@@ -67,14 +76,20 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jYo7V0
 >>>>>>> .merge_file_KbhPOY
+=======
+>>>>>>> .merge_file_A3Svlj
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_jYo7V0
 <<<<<<< .merge_file_arOS2s
 =======
+=======
+>>>>>>> .merge_file_A3Svlj
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -108,7 +123,10 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jYo7V0
 >>>>>>> .merge_file_KbhPOY
+=======
+>>>>>>> .merge_file_A3Svlj
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
 | Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |

@@ -21,6 +21,7 @@ use function Safe\unlink;
  * file `.php` senza nome. Riscrive solo i file di soli dati: un file che chiama funzioni o usa variabili
  * resterebbe "congelato" al valore calcolato qui, quindi non si tocca.
  *
+<<<<<<< .merge_file_ASR79C
 <<<<<<< .merge_file_ZWGIGw
 <<<<<<< .merge_file_lR4Pe4
  * @see docs/contracts/clean-placeholder-translations-action.md
@@ -29,6 +30,8 @@ use function Safe\unlink;
 >>>>>>> .merge_file_KVo8ML
 =======
 >>>>>>> .merge_file_CfN4yf
+=======
+>>>>>>> .merge_file_5nLchp
  * @contract docs/contracts/clean-placeholder-translations-action.md
  */
 class CleanPlaceholderTranslationsAction

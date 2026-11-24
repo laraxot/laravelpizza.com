@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_JR20oC
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_C7EBsh
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JR20oC
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C7EBsh
 qmd: "responsive email templates"
 issues: []
 discussions: []
@@ -211,9 +217,12 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_JR20oC
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_C7EBsh
 <<<<<<< .merge_file_d0wxSz
 - [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
 - [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
@@ -221,19 +230,26 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 - [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JR20oC
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C7EBsh
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](mail-templates/html_email_compatibility.md)
 - [MailPace Integration](mail-templates/mailpace_templates_integration.md)
+<<<<<<< .merge_file_JR20oC
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C7EBsh
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
 - [MailPace Integration](./mail-templates/mailpace_templates_integration.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_JR20oC
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -242,6 +258,10 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_K8JcYa
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_C7EBsh
 # Responsive Email Templates - Guida Completa
 
 ## Introduzione
@@ -429,9 +449,12 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_JR20oC
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_C7EBsh
 <<<<<<< .merge_file_d0wxSz
 - [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
 - [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
@@ -439,19 +462,26 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 - [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JR20oC
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C7EBsh
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](mail-templates/html_email_compatibility.md)
 - [MailPace Integration](mail-templates/mailpace_templates_integration.md)
+<<<<<<< .merge_file_JR20oC
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C7EBsh
 - [Guida ai Layout Email](./mail_layouts_guide.md)
 - [Email Best Practices](./mail-templates/email_best_practices.md)
 - [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
 - [MailPace Integration](./mail-templates/mailpace_templates_integration.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_JR20oC
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -460,3 +490,7 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_K8JcYa
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_C7EBsh

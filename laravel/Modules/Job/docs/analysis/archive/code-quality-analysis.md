@@ -1,3 +1,8 @@
+---
+title: "⚙️ Job Module - Code Quality Analysis Report"
+type: analysis
+qmd: "code quality analysis report"
+---
 # ⚙️ Job Module - Code Quality Analysis Report
 
 **Date**: 2025-11-11

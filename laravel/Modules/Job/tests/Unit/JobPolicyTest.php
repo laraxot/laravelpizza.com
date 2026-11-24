@@ -89,6 +89,7 @@ test('TaskCommentPolicy espone CRUD', function (): void {
 
 test('JobPolicy deny-default su jobs', function (): void {
     $policy = new JobPolicy;
+<<<<<<< .merge_file_bE84r0
 <<<<<<< .merge_file_nksHPZ
 <<<<<<< .merge_file_gEATaP
     $job = new Job;
@@ -98,6 +99,9 @@ test('JobPolicy deny-default su jobs', function (): void {
 =======
     $job = new \Modules\Job\Models\Job;
 >>>>>>> .merge_file_0ULl5c
+=======
+    $job = new \Modules\Job\Models\Job;
+>>>>>>> .merge_file_fUycSv
 
     Assert::assertFalse($policy->viewAny(jobFakeUser()));
     Assert::assertFalse($policy->create(jobFakeUser()));
@@ -107,6 +111,7 @@ test('JobPolicy deny-default su jobs', function (): void {
 });
 
 test('FailedJobPolicy e JobBatchPolicy deny-default', function (): void {
+<<<<<<< .merge_file_bE84r0
 <<<<<<< .merge_file_nksHPZ
 <<<<<<< .merge_file_gEATaP
     $failed = new FailedJob;
@@ -119,6 +124,10 @@ test('FailedJobPolicy e JobBatchPolicy deny-default', function (): void {
     $failed = new \Modules\Job\Models\FailedJob;
     $batch = new \Modules\Job\Models\JobBatch;
 >>>>>>> .merge_file_0ULl5c
+=======
+    $failed = new \Modules\Job\Models\FailedJob;
+    $batch = new \Modules\Job\Models\JobBatch;
+>>>>>>> .merge_file_fUycSv
     foreach ([
         [new FailedJobPolicy, $failed],
         [new JobBatchPolicy, $batch],

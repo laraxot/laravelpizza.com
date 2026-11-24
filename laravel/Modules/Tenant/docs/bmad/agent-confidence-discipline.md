@@ -8,7 +8,10 @@ updated: "2026-05-26"
 related:
   - "../../Xot/docs/wiki/concepts/agent-confidence-discipline.md"
 issue: "https://github.com/provtv/base_ptv_fila5/issues/152"
+<<<<<<< .merge_file_cumhPb
 qmd: "agent confidence discipline disciplina agenti massimizzare"
+=======
+>>>>>>> .merge_file_e2dgN2
 ---
 
 # Disciplina agenti per massimizzare la confidenza

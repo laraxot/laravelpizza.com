@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @see Modules/Cms/docs/bmad/folio-volt-sole-owner.md
  */
 
+<<<<<<< .merge_file_fBCD1R
 <<<<<<< .merge_file_zyTBy4
 <<<<<<< .merge_file_4VPbtG
 <<<<<<< .merge_file_KtTFH1
@@ -19,6 +20,8 @@ use App\Providers\FolioServiceProvider;
 >>>>>>> .merge_file_2ISUPk
 =======
 >>>>>>> .merge_file_ishJhY
+=======
+>>>>>>> .merge_file_6rhERK
 use Modules\Cms\Providers\FolioVoltServiceProvider;
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -33,6 +36,7 @@ uses(TestCase::class);
 test('app providers must not define FolioServiceProvider', function (): void {
     $path = base_path('app/Providers/FolioServiceProvider.php');
     Assert::assertFileDoesNotExist($path);
+<<<<<<< .merge_file_fBCD1R
 <<<<<<< .merge_file_zyTBy4
 <<<<<<< .merge_file_4VPbtG
 <<<<<<< .merge_file_KtTFH1
@@ -46,6 +50,8 @@ test('Cms FolioVoltServiceProvider class exists and is the mount owner', functio
 >>>>>>> .merge_file_2ISUPk
 =======
 >>>>>>> .merge_file_ishJhY
+=======
+>>>>>>> .merge_file_6rhERK
     Assert::assertFalse(class_exists(\App\Providers\FolioServiceProvider::class, false));
 });
 
@@ -55,6 +61,7 @@ test('Cms FolioVoltServiceProvider class exists and is the mount owner', functio
 =======
     Assert::assertTrue(class_exists(FolioVoltServiceProvider::class));
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_fBCD1R
 <<<<<<< .merge_file_zyTBy4
 <<<<<<< .merge_file_4VPbtG
 >>>>>>> .merge_file_Ty1hb7
@@ -62,4 +69,6 @@ test('Cms FolioVoltServiceProvider class exists and is the mount owner', functio
 >>>>>>> .merge_file_2ISUPk
 =======
 >>>>>>> .merge_file_ishJhY
+=======
+>>>>>>> .merge_file_6rhERK
 });

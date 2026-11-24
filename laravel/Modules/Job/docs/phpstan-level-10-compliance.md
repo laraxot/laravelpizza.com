@@ -1,3 +1,8 @@
+---
+title: "PHPStan Level 10 Compliance - Job Module"
+type: note
+qmd: "phpstan level 10 compliance"
+---
 # PHPStan Level 10 Compliance - Job Module
 
 **Ultimo aggiornamento**: [DATE]

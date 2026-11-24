@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 title: "ADR del modulo Media"
 type: index
@@ -8,6 +9,8 @@ created: 2026-11-18
 updated: 2026-11-24
 qmd: "Media adr architecture decision records madr formato"
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 <<<<<<< HEAD
 <<<<<<< HEAD
 title: "Architecture Decision Records"
@@ -27,11 +30,15 @@ type: index
 tags: [adr, decisioni, media]
 created: 2026-11-18
 updated: 2026-11-24
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz
 ---
 
 # ADR del modulo Media
 
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 Il **perche'** delle scelte di Media sugli upload: quanto puo' pesare un file e chi lo decide, come passano le foto da
 telefono, dove stanno i temporanei, chi puo' vedere un allegato e cosa resta nel file salvato (privacy). Una decisione per
@@ -57,6 +64,8 @@ Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rule
 condivisi: [Xot ADR](../../../Xot/docs/adr/README.md); template: [0000-template.md](0000-template.md). Guard:
 `Modules/Xot/tests/Unit/Docs/PackagesHaveContractsAndAdrTest.php`.
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 Il **perche'** delle scelte di Media sugli upload: quanto puo' pesare un file e chi lo decide, come passano le foto da telefono, dove stanno i temporanei, chi puo' vedere un allegato e cosa resta nel file salvato (privacy).
 
 Leggili prima di: cambiare un limite di upload, aggiungere un campo che riceve foto, toccare il percorso o le policy degli upload temporanei, cambiare la visibilita' degli allegati, toccare il trattamento delle immagini salvate o "semplificare" la ri-codifica con un'altra libreria.
@@ -71,7 +80,10 @@ Il nome del file e' l'argomento in kebab-case, senza date ne' numeri (la data st
 
 Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md); standard condivisi: [Xot ADR](../../../Xot/docs/adr/README.md).
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz
 
 ## Formato
 
@@ -79,15 +91,21 @@ Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rule
 ---
 title: "ADR — <decisione in una riga>"
 type: decision
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 status: proposed | accepted | superseded | deprecated
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 <<<<<<< HEAD
 status: accepted | superseded | deprecated
 =======
 status: proposed | accepted | superseded | deprecated
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
 issues: []
@@ -98,18 +116,24 @@ issues: []
 ## Contesto
 Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
 
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 ## Driver
 Facoltativa: vincoli, rischi e obiettivi che pesano sulla scelta.
 
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 <<<<<<< HEAD
 =======
 ## Driver
 Facoltativa: vincoli, rischi e obiettivi che pesano sulla scelta.
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz
 ## Decisione
 Cosa si fa, in concreto, e dove sta nel codice.
 
@@ -118,8 +142,11 @@ Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 
 ## Conseguenze
 Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 <<<<<<< HEAD
 ```
 
@@ -143,7 +170,10 @@ salvate o "semplificare" la ri-codifica con un'altra libreria.
 
 Formato (5 sezioni, frontmatter `type: decision`): [regola canonica](../../../Xot/docs/rules/action-behavioral-contract.md).
 =======
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz
 
 ## Conferma
 Facoltativa: controllo ripetibile (test, guard source-level, review). La presenza dell'ADR non prova l'implementazione.
@@ -152,6 +182,7 @@ Facoltativa: controllo ripetibile (test, guard source-level, review). La presenz
 Comandi e test che esistono davvero; i path `Modules/...php` citati devono esistere.
 ```
 
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 Sono obbligatorie `## Contesto`, `## Decisione`, `## Alternative scartate`, `## Conseguenze`. Almeno un ADR per pacchetto e'
 "sostanziale": ha anche `## Driver` e `## Conferma`.
@@ -159,21 +190,31 @@ Sono obbligatorie `## Contesto`, `## Decisione`, `## Alternative scartate`, `## 
 Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferma`.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_ynlwkW
+=======
+Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferma`.
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_gZB4Nz
 
 ## Decisioni
 
 - [Metadati delle foto tolti sul server con GD](strip-image-metadata-server-side.md) — ri-codifica JPEG/PNG senza Exif, GPS e testo; Imagick misurato e scartato.
 - [Limite di upload effettivo letto nella richiesta web](effective-upload-limit-in-web-request.md) — minimo tra PHP (con margine), regola Livewire e campo.
 - [Foto da fotocamera ridotte nel browser, campo opt-in](camera-photo-browser-resize-opt-in.md) — `CameraPhotoUpload` e `camera-image.js`, mai resize globale.
+<<<<<<< .merge_file_BFYS3h
 <<<<<<< .merge_file_tFEKDH
 - [Upload temporanei con percorso scopato e policy](upload-temporanei-con-percorso-scopato-e-policy.md) — percorsi `tmp/` per scopo (originale, conversione, responsive) e permessi espliciti su `media.*` e `temporary_upload.*`.
 - [Upload temporanei con percorso scopato e policy (copia con prefisso numerico)](0001-upload-temporanei-con-percorso-scopato-e-policy.md) — stesso titolo e stessa decisione del precedente, senza la sezione `## Verifica`; da unificare.
 - [La visibilita' dei media segue il record owner](media-visibility-follows-owner.md) — ownership e policy del dominio ospitante decidono, non Media.
 =======
+=======
+>>>>>>> .merge_file_gZB4Nz
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 - [Upload temporanei con percorso scopato e policy](upload-temporanei-con-percorso-scopato-e-policy.md) — percorsi `tmp/` per scopo (originale, conversione, responsive) e permessi espliciti su `media.*` e `temporary_upload.*`.
 - [La visibilita' dei media segue il record owner](media-visibility-follows-owner.md) — ownership e policy del dominio ospitante decidono, non Media.
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BFYS3h
 >>>>>>> .merge_file_ynlwkW
+=======
+>>>>>>> .merge_file_gZB4Nz

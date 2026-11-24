@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 <<<<<<< .merge_file_VkgGbG
@@ -7,6 +8,8 @@
 >>>>>>> .merge_file_MyXn01
 =======
 >>>>>>> .merge_file_WUNWXQ
+=======
+>>>>>>> .merge_file_jTIuc6
 <<<<<<< HEAD
 title: "User Research"
 type: note
@@ -15,6 +18,7 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "User Research"
 =======
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 >>>>>>> .merge_file_3lhvq1
@@ -22,12 +26,15 @@ qmd: "User Research"
 >>>>>>> .merge_file_MyXn01
 =======
 >>>>>>> .merge_file_WUNWXQ
+=======
+>>>>>>> .merge_file_jTIuc6
 title: "user research"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "user research"
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 <<<<<<< .merge_file_VkgGbG
@@ -40,6 +47,9 @@ qmd: "user research"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_WUNWXQ
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_jTIuc6
 issues: []
 discussions: []
 ---
@@ -52,6 +62,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 <<<<<<< .merge_file_VkgGbG
@@ -60,6 +71,8 @@ discussions: []
 >>>>>>> .merge_file_MyXn01
 =======
 >>>>>>> .merge_file_WUNWXQ
+=======
+>>>>>>> .merge_file_jTIuc6
 <<<<<<< HEAD
 title: "USER RESEARCH"
 =======
@@ -84,6 +97,7 @@ qmd: "USER RESEARCH"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 >>>>>>> .merge_file_3lhvq1
@@ -91,6 +105,8 @@ discussions: []
 >>>>>>> .merge_file_MyXn01
 =======
 >>>>>>> .merge_file_WUNWXQ
+=======
+>>>>>>> .merge_file_jTIuc6
 ## Research Goals
 
 1. Understand content creator workflows
@@ -168,6 +184,7 @@ Non-technical users need onboarding.
 - Add content analytics
 
 ---
+<<<<<<< .merge_file_8u0Bqj
 <<<<<<< .merge_file_G8R9Pw
 <<<<<<< .merge_file_5CIJrX
 <<<<<<< .merge_file_VkgGbG
@@ -180,3 +197,6 @@ Non-technical users need onboarding.
 =======
 
 >>>>>>> .merge_file_WUNWXQ
+=======
+
+>>>>>>> .merge_file_jTIuc6

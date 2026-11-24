@@ -13,8 +13,11 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 
 | Controllo | Stato | Evidenza |
 |---|---|---|
+<<<<<<< .merge_file_nSOr2g
 <<<<<<< .merge_file_wYXlTn
 =======
+=======
+>>>>>>> .merge_file_kx3yOj
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_m1nyST
@@ -26,7 +29,10 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 =======
 >>>>>>> .merge_file_mag8kE
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_nSOr2g
 >>>>>>> .merge_file_OxH1Le
+=======
+>>>>>>> .merge_file_kx3yOj
 | Inventario statico | verificato (2026-11-16) | [audit profondo](../bmad/audits/lang-audit.md) |
 | PHPStan `Modules/Lang` | **0 errori**; 0 anche sul tree `Modules` (2026-11-16) | comando in audit |
 | Pest | parziale: `tests/Feature` 10 pass / 13 fail | [audit § Gate](../bmad/audits/lang-audit.md#gate) |

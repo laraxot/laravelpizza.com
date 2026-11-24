@@ -6,6 +6,7 @@ status: pointer
 related:
   - ../livewire-widget-epics.md
   - ../stories/12.3.root-hygiene-conflict-markers.story.md
+qmd: "livewire epic puntatore"
 ---
 
 # Epic 12

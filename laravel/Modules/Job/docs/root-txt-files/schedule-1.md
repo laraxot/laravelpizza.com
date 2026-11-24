@@ -8,6 +8,7 @@ tags: [migrato-da-txt, job]
 converted_from: schedule-1.txt
 created: 2026-08-24
 updated: 2026-08-24
+qmd: "schedule 1 risorse esterne"
 ---
 
 # Schedule 1 — risorse esterne

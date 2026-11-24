@@ -10,9 +10,12 @@ related:
   - ./audits/lang-audit.md
   - ./decision-log.md
   - ../purpose.md
+<<<<<<< .merge_file_WaGQpi
 <<<<<<< .merge_file_6pyISI
   - ../italian-text-refined-audit-report.md
 =======
+=======
+>>>>>>> .merge_file_n5ghkg
 <<<<<<< HEAD
   - ../italian-text-refined-audit-report.md
 =======
@@ -21,7 +24,10 @@ related:
   - ../italian-text-refined-audit-report.md
 >>>>>>> .merge_file_cU7Cza
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_WaGQpi
 >>>>>>> .merge_file_l0t3Ac
+=======
+>>>>>>> .merge_file_n5ghkg
 ---
 
 # Architettura — Lang
@@ -46,6 +52,7 @@ Verificata sul codice il 2026-11-16 (72 PHP in `app/`, 0 Services). Sostituisce 
 2. **Modifica da pannello.** `EditTranslationFile::mutateFormDataBeforeSave` → `SaveTransAction::persist($key, $content)` → `GetTransPathAction` (`<lang-path>/<locale>/<file>.php`, locale da `app()->getLocale()`) → `SaveArrayAction`. Scrittura voluta anche in produzione.
 3. **Cambio lingua.** `LocaleSwitcherRefresh` → `applyLocale()`: `session('locale')` + `App::setLocale`.
 
+<<<<<<< .merge_file_WaGQpi
 <<<<<<< .merge_file_6pyISI
 ## Autorizzazione
 
@@ -57,12 +64,15 @@ Verificata sul codice il 2026-11-16 (72 PHP in `app/`, 0 Services). Sostituisce 
 - Config: `config/config.php` è letta; `config/lang.php` è caricata come `lang.lang.*` e non letta da nessuno ([P2](./audits/lang-audit.md#p2)).
 
 =======
+=======
+>>>>>>> .merge_file_n5ghkg
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_DANC9m
 **Models:** `BaseModelLang`, `LanguageLine`, `Translation`.
 **Actions:** `SyncTranslationsAction`, `ValidateTranslationsAction`.
 **Filament Resources:** `LangResource` — main admin resource.
+<<<<<<< .merge_file_WaGQpi
 
 **Database Schema:** `lang_table` — tabella primaria con colonne standard Laravel (id, timestamps).
 =======
@@ -84,4 +94,26 @@ Logica in Spatie Queueable Action (16 + `AutoLabelAction`), nessun Service, este
 
 ## Decisioni collegate
 
+=======
+
+**Database Schema:** `lang_table` — tabella primaria con colonne standard Laravel (id, timestamps).
+=======
+>>>>>>> .merge_file_cU7Cza
+>>>>>>> laraxot/dev
+## Autorizzazione
+
+`LangBasePolicy::before()` → `true` per `super-admin` e `lang::admin` (bypass voluto, ADR Xot module-admin-role-policy-bypass); `TranslationFilePolicy`, `TranslationPolicy`, `PostPolicy` ereditano e decidono per permesso (es. `translation_file.viewAny` in `TranslationFilePolicy`; deny-by-default). Nessun `return true` fuori da `before()`.
+
+## Confini e dipendenze
+
+- Dipende da Xot. Usato (file con `use Modules\Lang\`, no test) da Xot 7, Notify 5, Performance 3, IndennitaResponsabilita 1, UI 1. **Non da Activity.**
+- Config: `config/config.php` è letta; `config/lang.php` è caricata come `lang.lang.*` e non letta da nessuno ([P2](./audits/lang-audit.md#p2)).
+
+## Pattern
+
+Logica in Spatie Queueable Action (16 + `AutoLabelAction`), nessun Service, estensione di `XotBaseResource`, `strict_types` ovunque.
+
+## Decisioni collegate
+
+>>>>>>> .merge_file_n5ghkg
 [decision-log.md](./decision-log.md): D-1 (config morta), D-2 (tracker DB), D-3 (`Post`).

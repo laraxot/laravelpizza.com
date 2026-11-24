@@ -4,6 +4,7 @@ type: pointer
 module: Job
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget conversion conversione"
 ---
 
 # Job — canone

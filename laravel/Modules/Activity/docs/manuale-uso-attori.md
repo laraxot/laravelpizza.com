@@ -1,8 +1,11 @@
+<<<<<<< .merge_file_UyShxy
 ---
 title: "Manuale d'uso per attori"
 type: note
 qmd: "manuale uso attori duso"
 ---
+=======
+>>>>>>> .merge_file_rTeh2E
 # Manuale d'uso per attori
 
 ## Scopo

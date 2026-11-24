@@ -9,8 +9,13 @@ use Spatie\LaravelData\Data;
 final class UserData extends Data
 {
     /**
+<<<<<<< .merge_file_WYFJoK
      * @param  array<int, string>  $permissions
      * @param  array<string, mixed>  $settings
+=======
+     * @param array<int, string>   $permissions
+     * @param array<string, mixed> $settings
+>>>>>>> .merge_file_FDP3B8
      */
     public function __construct(
         public int $id,
@@ -20,5 +25,10 @@ final class UserData extends Data
         public ?string $role,
         public array $permissions,
         public array $settings,
+<<<<<<< .merge_file_WYFJoK
     ) {}
+=======
+    ) {
+    }
+>>>>>>> .merge_file_FDP3B8
 }

@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_XKD2ho
 <<<<<<< .merge_file_2FAHe0
 ---
 title: "Glossario di dominio Media"
@@ -34,6 +35,8 @@ Percorsi relativi a `laravel/Modules/Media/`.
 | Diagnostica AWS | Verifiche di credenziali, permessi, bucket e CloudFront. | `app/Actions/Diagnostic/Aws/RunFullAwsDiagnosticAction.php`, `app/Actions/Diagnostic/S3/` |
 | Policy dei media | Autorizzazioni CRUD per `media.*` e `temporary_upload.*`. | `app/Models/Policies/MediaPolicy.php`, `TemporaryUploadPolicy.php` |
 =======
+=======
+>>>>>>> .merge_file_wv080W
 # Glossario di dominio Media
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -41,5 +44,9 @@ Percorsi relativi a `laravel/Modules/Media/`.
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_XKD2ho
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 >>>>>>> .merge_file_AQKuDP
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_wv080W

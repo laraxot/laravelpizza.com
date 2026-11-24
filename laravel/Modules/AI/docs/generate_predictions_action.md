@@ -1,10 +1,10 @@
 ---
-title: "Generate Predictions Action"
+title: "generate predictions action"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "Generate Predictions Action"
+qmd: "generate predictions action"
 issues: []
 discussions: []
 ---
@@ -452,20 +452,12 @@ Log::info('AI Prediction generated', [
 
 ---
 
-<<<<<<< HEAD
-title: "GENERATE PREDICTIONS ACTION"
-=======
 title: "generate predictions action"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "GENERATE PREDICTIONS ACTION"
-=======
 qmd: "generate predictions action"
->>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 **Ultimo aggiornamento**: 2026-03-12  

@@ -1,3 +1,8 @@
+---
+title: "PHPStan Level 10 Roadmap - Job Module"
+type: note
+qmd: "phpstan roadmap level"
+---
 # PHPStan Level 10 Roadmap - Job Module
 
 **Data**: 2026-02-03

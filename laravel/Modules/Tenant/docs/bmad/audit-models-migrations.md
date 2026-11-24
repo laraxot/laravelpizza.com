@@ -3,7 +3,10 @@ title: Tenant Module Models/Migrations Audit
 type: audit
 created: 2026-07-15
 confidence: high
+<<<<<<< .merge_file_txtfN4
 qmd: "audit models migrations tenant modelsmigrations"
+=======
+>>>>>>> .merge_file_BOczpl
 ---
 tags: [docs, tenant, bmad]
 

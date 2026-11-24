@@ -2,11 +2,15 @@
 qmd: "ui investigation ui investigation md"
 type: investigation
 title: "Investigation UI Component System"
+<<<<<<< .merge_file_h2F3e5
 <<<<<<< HEAD
 links: {github_issue: #XXX}
 =======
 links: {github_issue: "#XXX"}
 >>>>>>> laraxot/dev
+=======
+links: {github_issue: #XXX}
+>>>>>>> .merge_file_CEg8dh
 ---
 # Investigation: UI Component System
 

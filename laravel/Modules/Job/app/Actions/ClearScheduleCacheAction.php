@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
+<<<<<<< .merge_file_y4MeFY
 <<<<<<< .merge_file_nKI3fM
 <<<<<<< .merge_file_0MxnHO
 <<<<<<< .merge_file_hUOF3N
@@ -36,6 +37,11 @@ use Webmozart\Assert\Assert;
  *
  * @contract docs/contracts/clear-schedule-cache-action.md
 >>>>>>> .merge_file_1Ak4jO
+=======
+ * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
+ *
+ * @contract docs/contracts/clear-schedule-cache-action.md
+>>>>>>> .merge_file_L5UZiV
  */
 class ClearScheduleCacheAction
 {
