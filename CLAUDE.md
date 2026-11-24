@@ -600,3 +600,17 @@ The project uses PHPStan level 10 (maximum strictness):
 5. ✅ Test changed functionality
 
 ---
+
+## Claude Code setup (repo-level)
+
+- `.claude/settings.json` — shared permissions (allow/deny/ask) for artisan, composer, pint, phpstan, npm, git read ops. `settings.local.json` stays local-only.
+- `.claude/skills` — symlink to `bashscripts/ai/.agents/skills` (canonical agent skills bridge; wiki in `docs/wiki/` is the source of truth, load on-demand).
+- `.mcp.json` — valid MCP config (currently empty `mcpServers`; add stdio servers here when needed, never commit secrets).
+- `.github/agents/` + `.github/skills/` — BMAD/GDS/WDS agent definitions usable by Copilot-style tools.
+- AI attribution convention: see "AI agent contributions" in `.github/CONTRIBUTING.md` (Co-Authored-By trailers, no history rewriting, bot identities only for real bot accounts).
+
+### Running Claude Code for free / cheap on this repo
+
+- **Claude for Open Source**: this repo is public (`laraxot/laravelpizza.com`) — apply at claude.com/contact-sales/claude-for-oss for 6 months of Claude Ultra if you meet a threshold (merged PRs, dependents, OSS criticality).
+- **Ollama**: `ollama launch claude` or `ANTHROPIC_BASE_URL=http://localhost:11434 ANTHROPIC_AUTH_TOKEN=ollama claude --model qwen3-coder` — runs Claude Code against local/cloud Ollama models at $0.
+- **Free plan**: Claude Free has no Claude Code; Pro/Max/Ultra plans include it.
