@@ -19,10 +19,14 @@ Grazie per voler contribuire a LaravelPizza! Questa guida ti aiuterà a contribu
 
 ## 🎯 Code of Conduct
 
+Il progetto adotta il [Code of Conduct](../CODE_OF_CONDUCT.md) in root (Contributor Covenant).
+
 - **Sii rispettoso** con altri contributor
 - **Sii costruttivo** nelle code review
 - **Sii paziente** - siamo tutti qui per imparare
 - **Nessuna tolleranza** per abusi, discriminazione, harassment
+
+Preferisci **fork + pull request**: le PR merged da contributor esterni sono la prova di community reale (vedi anche [claude-for-open-source-eligibility.md](claude-for-open-source-eligibility.md)).
 
 ---
 

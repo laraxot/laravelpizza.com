@@ -48,6 +48,12 @@ bashscripts/
 .cursor
 .gemini
 #.github
+
+# Claude Code: share settings + skills symlink, keep the rest local
+!.claude/
+.claude/*
+!.claude/settings.json
+!.claude/skills
 .github.backup-20260130_174027/
 .iflow
 .junie
