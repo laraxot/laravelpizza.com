@@ -1,7 +1,4 @@
 # OpenSSF Scorecard — improves public trust signals for OSS eligibility reviews.
-# Reader: GitHub Actions. Effect: weekly/push Scorecard SARIF + publish_results.
-# Secrets: none in plain text (OIDC id-token only).
-# User: "fa tutto quello che serve per far diventare questa repo utile ad avere claude code ultra a gratis"
 name: OpenSSF Scorecard
 
 on:
@@ -31,7 +28,7 @@ jobs:
           persist-credentials: false
 
       - name: Run analysis
-        uses: ossf/scorecard-action@05b567a9194ce3058cc58855502894cdb4839dc9 # v2.4.2
+        uses: ossf/scorecard-action@23f22cd43608bae7a1f1fa2603d7314dee9538a5 # v2.6.0
         with:
           results_file: results.sarif
           results_format: sarif
