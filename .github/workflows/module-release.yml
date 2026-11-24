@@ -159,7 +159,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create module release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: "${{ inputs.tag-prefix }}${{ matrix.module }}-${{ steps.calculate-version.outputs.version-string }}"
           name: "${{ matrix.module }} v${{ steps.calculate-version.outputs.version-string }}"
