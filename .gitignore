@@ -151,3 +151,4 @@ bashscripts/
 .claude/
 .kilocode
 bashscripts
+laravel/Modules/Notify/.git.polluted*
