@@ -146,3 +146,7 @@ ai.code-workspace
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

@@ -5,7 +5,6 @@
 # - docs/wiki/rules/root-cleanup-policy.md
 # - docs/wiki/rules/module-theme-root-cleanup.md
 
-
 # -----------------------------------------------------------------------------
 # Forbidden root directories / AI tooling
 /bashscripts/
@@ -26,7 +25,6 @@
 /.ai*
 tests/.claude-audit/
 tests/AuditCoverage/
-
 
 # Documentation cleanup
 docs/archive/
@@ -52,7 +50,6 @@ docs/**/*-[0-9][0-9].md
 docs/**/*_[0-9].md
 docs/**/*_[0-9][0-9].md
 
-
 # Dependencies
 /vendor/
 /node_modules/
@@ -62,13 +59,11 @@ composer.lock
 package-lock.json
 yarn.lock
 
-
 # Python / virtual environments
 .venv/
 venv/
 __pycache__/
 *.py[cod]
-
 
 # Build / compiled artifacts
 /build/
@@ -80,14 +75,12 @@ public/css/compiled/
 public/js/compiled/
 public/mix-manifest.json
 
-
 # Laravel runtime
 /storage/*.key
 /public/storage
 /public/hot
 /public_html/storage
 /public_html/hot
-
 
 # Environment / local configuration
 .env
@@ -100,7 +93,6 @@ config/development.php
 Homestead.yaml
 Homestead.json
 
-
 # IDE / editor
 /.idea/
 /.vscode/
@@ -110,7 +102,6 @@ Homestead.json
 
 .phpintel
 .phpstorm.meta.php
-
 
 # Cache / temporary files
 .php-cs-fixer.cache
@@ -127,7 +118,6 @@ Homestead.json
 
 v8-compile-cache-*
 
-
 # Logs
 *.log
 error_log
@@ -135,7 +125,6 @@ error_log
 npm-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
 
 # Git / merge / rebase leftovers
 .git-rewrite/
@@ -152,7 +141,6 @@ lerna-debug.log*
 *~REMOTE
 *~head
 
-
 # Backup / old files
 *.old
 *.old1
@@ -166,7 +154,6 @@ lerna-debug.log*
 *.bak
 *.new
 
-
 # Legacy directories
 resources/views/Components_old/
 resources/lang/
@@ -176,7 +163,6 @@ database_old/
 database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
-
 
 # UI module specific
 *.fila2
@@ -189,7 +175,6 @@ design_notes.txt
 
 /laravel/
 /public_html/
-
 
 # System files
 .DS_Store
@@ -204,7 +189,6 @@ ehthumbs.db
 *:Zone.Identifier
 
 agentdb.rvf
-
 
 # Root quality tools
 phpstan*
@@ -257,10 +241,7 @@ app/Application
 audit-coverage/
 
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-<<<<<<< .merge_file_RZEmXF
 # Tooling locale e config agenti (module-theme-root-hygiene)
-=======
->>>>>>> .merge_file_TQ7gx4
 .agents/
 .codex/
 .cursor/
@@ -269,3 +250,7 @@ audit-coverage/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
 tests/coverage-*.*
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

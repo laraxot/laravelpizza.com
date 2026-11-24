@@ -139,3 +139,7 @@ docs/archive/
 .git/
 tests/coverage-*.*
 tests/graphify-out/
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

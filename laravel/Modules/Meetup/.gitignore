@@ -28,3 +28,7 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

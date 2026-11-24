@@ -176,3 +176,10 @@ laravel/Modules/Notify/.git.polluted*
 >>>>>>> .merge_file_wpb2EK
 =======
 >>>>>>> .merge_file_N565Kr
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/visual-comparison/
+docs/project/visual-comparison/
+laravel/Modules/*/docs/project/visual-comparison/
+laravel/Modules/*/docs/visual-comparison/
+laravel/Themes/*/docs/visual-comparison/

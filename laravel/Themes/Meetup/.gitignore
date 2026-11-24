@@ -119,3 +119,7 @@ repo.bundle
 *.bundle
 =======
 >>>>>>> .merge_file_CvsJLE
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

@@ -61,3 +61,6 @@ docs/archive/
 *~head
 
 agentdb.rvf
+
+# Local visual-comparison screenshots are generated artifacts.
+docs/project/visual-comparison/

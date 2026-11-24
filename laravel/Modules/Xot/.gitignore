@@ -209,3 +209,7 @@ xot.code-workspace
 .php-cs-fixer.dist.php
 tests/coverage-*.*
 docs/screenshots/
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/
