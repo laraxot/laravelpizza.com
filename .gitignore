@@ -149,3 +149,4 @@ bashscripts/
 .cursor-scratch/
 *.phar
 .claude/
+.kilocode
