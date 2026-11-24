@@ -147,9 +147,9 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
 > Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
 
 - **1. Leggi le regole critiche**
-  - `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
-  - `laravel/Modules/Meetup/docs/rules-index.md`
-  - `laravel/Themes/Meetup/docs/critical-rules-consolidated.md`
+  - `laravel/Modules/Xot/docs/`
+  - [Regole del modulo Meetup](laravel/Modules/Meetup/docs/rules-index.md)
+  - [Regole del tema Meetup](laravel/Themes/Meetup/docs/critical-rules-consolidated.md)
 - **2. Avvia l'ambiente**
   - setup Laravel classico (database, `.env`, ecc.)
   - dal tema Meetup:
