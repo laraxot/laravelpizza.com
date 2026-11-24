@@ -220,8 +220,6 @@ class Post extends BaseModel
     {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Le conversioni proprie di questo modello, in aggiunta a quelle di BaseModel.
@@ -251,5 +249,4 @@ class Post extends BaseModel
             'url_lang' => 'array',
         ]);
     }
->>>>>>> laraxot/dev
 }

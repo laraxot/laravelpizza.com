@@ -27,29 +27,16 @@ return [
             'label' => 'login_at',
         ],
         'ip_address' => [
-<<<<<<< HEAD
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
             'label' => 'ip_address',
         ],
         'user_agent' => [
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-            'label' => 'user_agent',
-=======
-            'label' => 'Indirizzo IP',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'user_agent' => [
             'label' => 'Browser (user agent)',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
->>>>>>> laraxot/dev
         ],
         'toggleColumns' => [
             'tooltip' => '',
@@ -77,17 +64,10 @@ return [
             'description' => '',
         ],
         'user' => [
-<<<<<<< HEAD
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'user',
-=======
             'label' => 'Utente',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
->>>>>>> laraxot/dev
         ],
     ],
     'actions' => [

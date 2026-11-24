@@ -406,6 +406,29 @@ tests_old/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+* [structure.md](../../../gdpr/docs/structure.md)
+* [structure.md](../../../notify/docs/structure.md)
+* [structure.md](../../../xot/docs/structure.md)
+* [structure.md](../../../xot/docs/base/structure.md)
+* [structure.md](../../../xot/docs/config/structure.md)
+* [structure.md](../../../user/docs/structure.md)
+* [structure.md](../../../ui/docs/structure.md)
+* [structure.md](../../../lang/docs/structure.md)
+* [structure.md](../../../job/docs/structure.md)
+* [structure.md](../../../media/docs/structure.md)
+* [structure.md](../../../tenant/docs/structure.md)
+* [structure.md](../../../activity/docs/structure.md)
+* [structure.md](../../../cms/docs/structure.md)
+* [structure.md](../../../cms/docs/themes/structure.md)
+* [structure.md](../../../cms/docs/components/structure.md)
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
 * [structure.md](../../../xot/docs/structure.md)
@@ -420,4 +443,13 @@ tests_old/Unit
 * [structure.md](../../../Activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
+<<<<<<< HEAD
 * [structure.md](../../../Cms/docs/components/structure.md)
+=======
+<<<<<<< HEAD
+* [structure.md](../../../Cms/docs/components/structure.md)
+>>>>>>> laraxot/dev
+=======
+* [structure.md](../../../Cms/docs/components/structure.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

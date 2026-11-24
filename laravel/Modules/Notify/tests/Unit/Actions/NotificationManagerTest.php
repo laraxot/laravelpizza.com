@@ -16,6 +16,11 @@ use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function Safe\class_parents;
+
+>>>>>>> laraxot/dev
 =======
 use function Safe\class_parents;
 

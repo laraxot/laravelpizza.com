@@ -154,7 +154,7 @@ Esempio:
    ↓
 7. Model Lookup: Page::firstWhere('slug', 'events.view')
    ↓
-8. JSON File: config/local/laravelpizza/database/content/pages/events_view.json (slug: events.view)
+8. JSON File: config/local/laravelpizza/database/content/pages/events/view.json (slug: events.view)
    ↓
 9. Content Blocks: Il JSON definisce quale componente renderizzare (events.detail)
    ↓
@@ -177,7 +177,7 @@ config/local/laravelpizza/database/content/pages/
 └── articles.laravel-filament-guide.json          → /it/articles/laravel-filament-guide
 ```
 
-**Pattern**: `{container0}_view.json` per il template di dettaglio (es. `events_view.json` con slug `events.view`)
+**Pattern**: `{container0}/view.json` per il template di dettaglio (es. `events/view.json` con slug `events.view`)
 
 ### Struttura Content Block
 

@@ -29,6 +29,12 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 - [ ] E1–E4 chiuse con test di regressione.
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_6s2Vt8
 
 ## Riferimenti
@@ -37,6 +43,12 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Procedura
@@ -51,17 +63,38 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 - [piano](../piano-miglioramento.md)
 - [ECC](../../ecc/activity-ecc-audit.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_WekVOH
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WekVOH
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WekVOH
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Esito
 
 Baseline audit consegnata: 0 P0, 5 P1, P2 elencati. Chiusura dei P1 demandata alle story figlie di [epics.md](../epics.md).
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_6s2Vt8
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_6s2Vt8
+=======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 PHPStan `Modules/Activity` a 0.
 
@@ -100,6 +133,16 @@ BaseModelBusinessLogicPestTest,CodeQualityTest,FilamentTest}.php`,
 `tests/Feature/Filament/Actions/ListLogActivitiesActionTest.php`,
 `tests/Security/AccessControlTest.php`, `app/Providers/ActivityServiceProvider.php`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_WekVOH
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WekVOH
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WekVOH
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

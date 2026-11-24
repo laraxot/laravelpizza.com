@@ -11,16 +11,22 @@ use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
 use function Safe\imagecreatefromstring;
 use function Safe\imagecreatetruecolor;
+<<<<<<< HEAD
 =======
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
 use function Safe\imagecreatetruecolor;
 use function Safe\imagecreatefromstring;
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 use function Safe\imagefill;
 use function Safe\imagefilledrectangle;
@@ -194,7 +200,11 @@ it('removes GPS and Exif from a JPEG, applies its orientation and updates the st
     Assert::assertSame(strlen($clean), (int) $media->size, 'La colonna size non e\' stata aggiornata.');
     Assert::assertSame('image/jpeg', $media->mime_type);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('MEDIA-STRIP-INV-1', 'MEDIA-STRIP-INV-4');
+>>>>>>> laraxot/dev
 =======
 })->group('MEDIA-STRIP-INV-1', 'MEDIA-STRIP-INV-4');
 >>>>>>> laraxot/dev
@@ -220,7 +230,11 @@ it('removes text and XMP chunks from a PNG and keeps the picture', function (): 
     $media->refresh();
     Assert::assertSame(strlen($clean), (int) $media->size);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('MEDIA-STRIP-INV-2', 'MEDIA-STRIP-INV-4');
+>>>>>>> laraxot/dev
 =======
 })->group('MEDIA-STRIP-INV-2', 'MEDIA-STRIP-INV-4');
 >>>>>>> laraxot/dev
@@ -236,7 +250,11 @@ it('leaves a PDF byte for byte identical and does not touch the record', functio
     $media->refresh();
     Assert::assertSame($size, (int) $media->size);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('MEDIA-STRIP-INV-3');
+>>>>>>> laraxot/dev
 =======
 })->group('MEDIA-STRIP-INV-3');
 >>>>>>> laraxot/dev
@@ -253,7 +271,11 @@ it('control: the same GPS JPEG recorded with another mime type keeps its GPS (th
     Assert::assertIsArray($exif);
     Assert::assertArrayHasKey('GPS', $exif, 'Il controllo "GPS assente" non puo\' mai fallire: exif_read_data non vede il GPS nemmeno dove c\'e\'.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('MEDIA-STRIP-INV-5');
+>>>>>>> laraxot/dev
 =======
 })->group('MEDIA-STRIP-INV-5');
 >>>>>>> laraxot/dev

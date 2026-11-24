@@ -7,6 +7,7 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Modules\Notify\Traits\HasTenantNotifications;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseModel;
 
@@ -15,6 +16,8 @@ use Modules\Xot\Models\BaseModel;
  *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
+ * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
  *
  * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
  * @method static Builder<static>|Notification newModelQuery()
@@ -59,6 +62,8 @@ use Modules\Xot\Models\BaseModel;
  */
 class Notification extends BaseModel
 {
+    use HasTenantNotifications;
+
     /** La chiave e' un UUID char(36): niente auto-increment, altrimenti dopo l'insert l'id diventa '0'. */
     public $incrementing = false;
 

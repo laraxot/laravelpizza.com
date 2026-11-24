@@ -27,12 +27,8 @@ declare(strict_types=1);
                     @endforeach
                 </nav>
 
-<<<<<<< HEAD
-                <div class="flex items-center">
-=======
                 <div class="flex items-center gap-2">
                     <x-lang::language-switcher />
->>>>>>> laraxot/dev
                     <div class="hidden w-[38px] h-[38px] overflow-hidden rounded-full sm:block" x-cloak>
                         <x-ui.light-dark-switch></x-ui.light-dark-switch>
                     </div>
@@ -84,20 +80,12 @@ declare(strict_types=1);
             @else
             <!-- Ospite: azioni di accesso sempre visibili (nessun menu da aprire) -->
             <div class="flex items-center gap-2 sm:gap-3">
-<<<<<<< HEAD
-                <div class="w-[38px] h-[38px] overflow-hidden rounded-full">
-                    <x-ui.light-dark-switch></x-ui.light-dark-switch>
-                </div>
-                <a href="{{ route('login') }}" class="rounded-full px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-slate-200/50 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-white/70 dark:hover:bg-gray-800/70 dark:hover:text-white">{{ __('ui::auth.user_dropdown.login_link') }}</a>
-                <a href="{{ route('register') }}" class="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:hover:bg-blue-400">{{ __('ui::auth.user_dropdown.register_link') }}</a>
-=======
                 <x-lang::language-switcher />
                 <div class="w-[38px] h-[38px] overflow-hidden rounded-full">
                     <x-ui.light-dark-switch></x-ui.light-dark-switch>
                 </div>
                 <a href="{{ url('/'.app()->getLocale().'/auth/login') }}" class="rounded-full px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-slate-200/50 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-white/70 dark:hover:bg-gray-800/70 dark:hover:text-white">{{ __('ui::auth.user_dropdown.login_link') }}</a>
                 <a href="{{ url('/'.app()->getLocale().'/auth/register') }}" class="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:hover:bg-blue-400">{{ __('ui::auth.user_dropdown.register_link') }}</a>
->>>>>>> laraxot/dev
             </div>
             @endauth
         </div>

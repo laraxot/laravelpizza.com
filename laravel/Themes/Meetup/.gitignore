@@ -1,3 +1,9 @@
+.env
+.env.*
+!.env.example
+
+# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
+docs/archive/
 # Auto-generated forbidden paths — do not edit manually
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 
@@ -20,7 +26,6 @@ docs/workbench
 !/scripts/*.cjs
 test-results
 tests/.claude-audit
-# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 # Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
 *~HEAD
 *~BASE
@@ -29,6 +34,14 @@ tests/.claude-audit
 *.orig
 *.rej
 *~head
+
+agentdb.rvf
+
+# claude-audit bridge (non committare)
+audit-coverage/
+tests/AuditCoverage/*
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
+graphify-out/
 tests/AuditCoverage
 /vendor/
 node_modules/
@@ -48,7 +61,6 @@ public_html/storage
 public_html/hot
 
 storage/*.key
-.env
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -85,6 +97,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+audit-shots/
 
 # Strumenti locali/IDE (wiki module-theme-root-hygiene)
 .agents/
@@ -92,12 +105,10 @@ dist-ssr
 .cursor/
 .opencode/
 .qwen/
-audit-coverage/
 rector.php
 phpinsights.php
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
 *.lock
 .windsurf/
-docs/archive/
 docs/screenshots/

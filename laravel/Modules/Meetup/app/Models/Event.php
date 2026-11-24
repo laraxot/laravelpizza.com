@@ -308,8 +308,8 @@ class Event extends BaseModel
      * Scope: events visible to a specific user.
      * Super-admin sees all; published events are public; draft/pending only for owner.
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopeVisibleTo(Builder $query, ?User $user = null): Builder
     {
@@ -330,10 +330,13 @@ class Event extends BaseModel
     }
 
     /**
-     * Scope: only published events.
+     * Scope: only published events (status=published).
+     * Overrides HasCommonScopes::scopePublished (published_at) for Event domain.
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
+     *
+     * @see Modules/Meetup/docs/contracts/event-published-scope.md
      */
     public function scopePublished(Builder $query): Builder
     {
@@ -343,8 +346,8 @@ class Event extends BaseModel
     /**
      * Scope: only upcoming events (start_date >= now).
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopeUpcoming(Builder $query): Builder
     {
@@ -354,8 +357,8 @@ class Event extends BaseModel
     /**
      * Scope: only past events (start_date < now).
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopePast(Builder $query): Builder
     {
@@ -365,8 +368,8 @@ class Event extends BaseModel
     /**
      * Scope: find event by slug column.
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopeBySlug(Builder $query, string $slug): Builder
     {
@@ -376,8 +379,8 @@ class Event extends BaseModel
     /**
      * Scope: filter events for a specific date range.
      *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopeDateRange(Builder $query, Carbon $startDate, Carbon $endDate): Builder
     {

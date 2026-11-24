@@ -16,16 +16,9 @@ class GeocodingService
     /**
      * Geocodifica un indirizzo.
      *
-<<<<<<< HEAD
-     *
      * @return array{latitude: float, longitude: float, address: string}
      *
      * @throws \RuntimeException Se l'indirizzo non viene trovato
-=======
-     * @throws \RuntimeException Se l'indirizzo non viene trovato
-     *
-     * @return array{latitude: float, longitude: float, address: string}
->>>>>>> laraxot/dev
      */
     public function geocodeAddress(string $address): array
     {
@@ -42,11 +35,5 @@ class GeocodingService
         return [];
     }
 
-<<<<<<< HEAD
     public function execute(): void {}
-=======
-    public function execute(): void
-    {
-    }
->>>>>>> laraxot/dev
 }

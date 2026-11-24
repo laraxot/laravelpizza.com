@@ -106,6 +106,12 @@ Regola: `.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc`. Memoria: `.curs
 
 Regola: `.cursor/rules/laravel-localization-mcamara.mdc`. Memoria: `.cursor/memories/laravel-localization-mcamara.md`. Doc: `laravel/Modules/Lang/docs/laravel-localization-mcamara-reference.md`, `laravel/Modules/Cms/docs/folio-routing-locale.md`, `laravel/Modules/Meetup/docs/localization-standard.md`, `laravel/Themes/Meetup/docs/localization-standard.md`.
 
+### 0f. Docblock `@see` verso la docs su ogni classe/metodo toccato (CRITICAL)
+
+**Ogni classe o metodo PHP che crei o modifichi** (in `Modules/` o `Themes/`) porta nel suo docblock un `@see` con il link alla pagina `docs/` che spiega cosa fa e perché, così il prossimo agente AI capisce cosa è stato fatto. Formato: `@see Modules/<Modulo>/docs/<file-kebab>.md` (tema: `Themes/<Tema>/docs/<file-kebab>.md`); link di classe nel docblock della classe, link di metodo nel docblock del metodo. Il file linkato **deve esistere** e si scrive/aggiorna nella stessa modifica (nome minuscolo-con-trattini, senza date); riusa la pagina che copre già l'argomento (DRY), non una pagina per metodo. Vale per ciò che tocchi, non è un backfill dei file intatti.
+
+Prompt (con controllo eseguibile sui file toccati): `bashscripts/docs/prompts/18-struttura-file-php.md`, regola 5.
+
 ### 1. Front Office: Folio + Volt + CMS-Driven Pages ONLY
 
 **NEVER use traditional controllers or routes in web.php/api.php for front office.**
@@ -556,6 +562,9 @@ git push origin feature/your-feature
 14. ❌ Copying theme assets into public_html (`npm run copy`) or replacing the symlink with a folder
     ✅ `public_html/themes/Meetup` is a symlink to `laravel/Themes/Meetup/public`: `npm run build` is enough
 
+15. ❌ Creating or changing a class/method without a docblock `@see` to the doc that explains what was done and why
+    ✅ `@see Modules/<Module>/docs/<kebab-file>.md` (theme: `Themes/Meetup/docs/...`); the file must exist, write or update it in the same change. Rule: `bashscripts/ai/wiki/rules/see-link-docs-on-code-change.md`
+
 ## PHPStan Configuration
 
 The project uses PHPStan level 10 (maximum strictness):
@@ -598,6 +607,7 @@ The project uses PHPStan level 10 (maximum strictness):
 3. ✅ Check docs are lowercase-with-hyphens.md
 4. ✅ Verify no duplicate migrations
 5. ✅ Test changed functionality
+6. ✅ Every class/method created or changed has its `@see Modules/<Module>/docs/<file>.md` docblock and the doc exists
 
 ---
 

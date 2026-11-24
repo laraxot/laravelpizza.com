@@ -21,15 +21,12 @@ use Modules\Xot\Actions\GetTransKeyAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
 /**
  * Etichette, intestazioni, segnaposto e testi d'aiuto dei componenti Filament presi dai file di lingua del modulo che
  * li usa; applicata a tutti i componenti con `configureUsing()` in LangServiceProvider.
  *
  * @contract docs/contracts/auto-label-action.md
  */
->>>>>>> laraxot/dev
 class AutoLabelAction
 {
     use QueueableAction;
@@ -38,13 +35,6 @@ class AutoLabelAction
      * Undocumented function.
      * return number of input added.
      */
-<<<<<<< HEAD
-    public function execute(Field|Entry|BaseFilter|Column|Step|Action|Section $component, string $type = 'label'): Field|Entry|BaseFilter|Column|Step|Action|Section
-    {
-        $backtrace = debug_backtrace();
-        $backtrace_slice = array_slice($backtrace, 2);
-        $class = Arr::first($backtrace_slice, function (array $item) use ($component) {
-=======
     /**
      * Il frame dello stack che identifica chi ha chiesto l'etichetta.
      *
@@ -80,7 +70,6 @@ class AutoLabelAction
         $backtrace_slice = array_slice($backtrace, 2);
 
         $frame = Arr::first($backtrace_slice, function (array $item) use ($component): bool {
->>>>>>> laraxot/dev
             if ($item['function'] === 'execute') {
                 return false;
             }
@@ -103,19 +92,6 @@ class AutoLabelAction
             return false;
         });
 
-<<<<<<< HEAD
-        if (is_array($class)) {
-            $object_class = null;
-            if (isset($class['object'])) {
-                $object_class = $class['object']::class;
-            }
-            if (isset($class['class']) && $object_class === null) {
-                $object_class = $class['class'];
-            }
-            if (is_null($object_class)) {
-                throw new \Exception('No object class found');
-            }
-=======
         return is_array($frame) ? $frame : [];
     }
 
@@ -170,7 +146,6 @@ class AutoLabelAction
                 return $component;
             }
 
->>>>>>> laraxot/dev
             $trans_key = app(GetTransKeyAction::class)->execute($object_class);
         } else {
             $trans_key = 'lang::txt';
@@ -228,11 +203,7 @@ class AutoLabelAction
         // Se la traduzione manca si salva (solo in locale, vedi SaveTransAction) ma solo per l'etichetta:
         // per helper_text, placeholder, description e tooltip il "valore di comodo" era il nome del campo,
         // che poi compariva sotto e dentro i campi ("route", "postal_code"). Meglio nessun testo d'aiuto.
-<<<<<<< HEAD
-        if (is_string($label) && $label_key === $label && $type === 'label') {
-=======
         if (is_string($label) && $label_key === $label && 'label' === $type) {
->>>>>>> laraxot/dev
             app(SaveTransAction::class)->execute($label_key, $default_val ?? $val);
         }
         if ($isAuxiliaryText && is_string($label) && ($label === '' || $label === $val)) {

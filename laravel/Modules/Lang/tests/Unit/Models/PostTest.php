@@ -32,13 +32,19 @@ describe('Post Model', function () {
         $model = new Post;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert::assertArrayHasKey('Modules\Xot\Models\Traits\HasXotFactory', class_uses($model));
 =======
+=======
+>>>>>>> laraxot/dev
         // `class_uses()` elenca solo i trait usati **direttamente**: HasXotFactory
         // arriva da Modules\Lang\Models\BaseModel, quindi li' non compariva e il
         // test accusava il modello di non averlo. `Post::factory()` restituisce
         // PostFactory, cioe' il trait c'era e funzionava (base_quaeris_fila5#234).
         Assert::assertArrayHasKey('Modules\Xot\Models\Traits\HasXotFactory', class_uses_recursive($model));
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     });
 
@@ -125,15 +131,21 @@ describe('Post Model', function () {
         Assert::assertSame('datetime', $casts['created_at']);
         Assert::assertSame('datetime', $casts['updated_at']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert::assertSame('datetime', $casts['deleted_at']);
         Assert::assertSame('datetime', $casts['published_at']);
 =======
+=======
+>>>>>>> laraxot/dev
         Assert::assertSame('datetime', $casts['published_at']);
 
         // `deleted_at` non e' asserita: la tabella `posts` non ha quella colonna
         // e il modello non usa SoftDeletes. Il test la pretendeva, quindi
         // chiedeva un cast per un campo inesistente (base_quaeris_fila5#234).
         Assert::assertArrayNotHasKey('deleted_at', $casts);
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     });
 
@@ -142,15 +154,21 @@ describe('Post Model', function () {
         $casts = $model->getCasts();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert::assertSame('array', $casts['image_resize_src']);
         Assert::assertSame('array', $casts['url_lang']);
 =======
+=======
+>>>>>>> laraxot/dev
         Assert::assertSame('array', $casts['url_lang']);
 
         // `image_resize_src` e' una colonna `string` nella migration e una
         // `@property string|null` nel modello: il cast `array` che questo test
         // pretendeva contraddiceva entrambe (base_quaeris_fila5#234).
         Assert::assertArrayNotHasKey('image_resize_src', $casts);
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     });
 });

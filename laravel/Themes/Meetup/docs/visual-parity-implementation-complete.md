@@ -134,7 +134,7 @@ None - hero icon was already fixed by another AI agent
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build  # Compiled assets
-npm run copy   # Copied to public_html/themes/Meetup
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 **Build Output**:
@@ -209,7 +209,7 @@ public/assets/app-BhEKLQDi.js     5.21 kB │ gzip:  1.96 kB
 - SushiToJsons trait loads data from JSON into "virtual database"
 
 ### 3. Build Process Critical ✅
-- Blade changes require: `npm run build && npm run copy`
+- Blade changes require: `npm run build`
 - Without build: changes not visible in browser
 - Assets must be in `public_html/themes/Meetup/`
 - Vite compilation + Tailwind processing required

@@ -18,6 +18,13 @@ qmd search "Activity commands" --limit 5
 ```
 
 ## See Also
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Root Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Root Wiki](../../../docs/wiki/)
 

@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
-<<<<<<< .merge_file_KsP4gE
-use Modules\Job\Filament\Resources\JobResource\Pages\CreateJob;
-use Modules\Job\Filament\Resources\JobResource\Pages\EditJob;
-=======
-use Modules\Job\Filament\Resources\JobResource\Pages\BoardJobs;
->>>>>>> .merge_file_WCVqxk
 use Modules\Job\Filament\Resources\JobResource\Pages\ListJobs;
 use Modules\Job\Filament\Resources\JobResource\Widgets\JobStatsOverview;
 use Modules\Job\Models\Job;
@@ -29,15 +23,9 @@ class JobResource extends XotBaseResource
     #[Override]
     public static function getPages(): array
     {
-        // D-3: jobs è scritto dalla coda — niente Create/Edit/payload.
+        // D-3: jobs è scritto dalla coda — niente Create/Edit/payload; BoardJobs non esiste più.
         return [
             'index' => ListJobs::route('/'),
-<<<<<<< .merge_file_KsP4gE
-            'create' => CreateJob::route('/create'),
-            'edit' => EditJob::route('/{record}/edit'),
-=======
-            'board' => BoardJobs::route('/board'),
->>>>>>> .merge_file_WCVqxk
         ];
     }
 

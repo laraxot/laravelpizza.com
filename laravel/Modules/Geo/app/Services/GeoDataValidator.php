@@ -64,11 +64,7 @@ class GeoDataValidator
     /**
      * Valida i dati geografici.
      *
-<<<<<<< HEAD
      * @param  array<string, mixed>  $data  Dati da validare
-=======
-     * @param array<string, mixed> $data Dati da validare
->>>>>>> laraxot/dev
      */
     public function validate(array $data): bool
     {
@@ -80,12 +76,8 @@ class GeoDataValidator
     /**
      * Ottiene gli errori di validazione.
      *
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $data  Dati da validare
-=======
      * @param array<string, mixed> $data Dati da validare
      *
->>>>>>> laraxot/dev
      * @return array<string, array<int, string>>
      */
     public function getErrors(array $data): array
@@ -101,11 +93,7 @@ class GeoDataValidator
     /**
      * Verifica l'integrità dei dati.
      *
-<<<<<<< HEAD
      * @param  array<string, mixed>  $data  Dati da verificare
-=======
-     * @param array<string, mixed> $data Dati da verificare
->>>>>>> laraxot/dev
      */
     public function checkIntegrity(array $data): bool
     {
@@ -133,13 +121,8 @@ class GeoDataValidator
     }
 
     /**
-<<<<<<< HEAD
      * @param  array<mixed, mixed>  $region
      * @param  list<string>  $regionCodes
-=======
-     * @param array<mixed, mixed> $region
-     * @param list<string>        $regionCodes
->>>>>>> laraxot/dev
      *
      * @param-out list<string> $regionCodes
      */
@@ -171,13 +154,8 @@ class GeoDataValidator
     }
 
     /**
-<<<<<<< HEAD
      * @param  array<mixed, mixed>  $province
      * @param  list<string>  $provinceCodes
-=======
-     * @param array<mixed, mixed> $province
-     * @param list<string>        $provinceCodes
->>>>>>> laraxot/dev
      *
      * @param-out list<string> $provinceCodes
      */
@@ -218,13 +196,8 @@ class GeoDataValidator
     }
 
     /**
-<<<<<<< HEAD
      * @param  array<mixed, mixed>  $city
      * @param  list<string>  $cityCodes
-=======
-     * @param array<mixed, mixed> $city
-     * @param list<string>        $cityCodes
->>>>>>> laraxot/dev
      *
      * @param-out list<string> $cityCodes
      */

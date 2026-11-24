@@ -14,9 +14,16 @@ use Webmozart\Assert\Assert;
 /**
  * Trait HasTenantNotifications.
  *
- * Fornisce funzionalità per la gestione delle notifiche per tenant.
+ * Log di notifica multi-tenant (NotificationLog), non le database notifications Laravel.
+ * Evitare di combinarlo con Illuminate\Notifications\Notifiable sullo stesso modello
+ * (collisioni su notifications() / unreadNotifications()).
  *
- * Usato da test/unit helpers (es. NotifyTenantDummyModel); non ignorare trait.unused.
+ * Generics: MorphMany/Builder usano `$this` (non TModel) perche morphMany()
+ * restituisce MorphMany<Related, $this> e TModel concreto diverge da $this in PHPStan.
+ *
+ * @property string|int|null $tenant_id
+ *
+ * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
  */
 trait HasTenantNotifications
 {
@@ -45,8 +52,8 @@ trait HasTenantNotifications
     }
 
     /**
-     * @param  Builder<static>  $query
-     * @return Builder<static>
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
      */
     public function scopeForTenant(Builder $query, ?string $tenantId = null): Builder
     {
@@ -60,7 +67,7 @@ trait HasTenantNotifications
      */
     public function belongsToTenant(string $tenantId): bool
     {
-        return $this->tenant_id === $tenantId;
+        return (string) $this->tenant_id === $tenantId;
     }
 
     /**
@@ -89,6 +96,7 @@ trait HasTenantNotifications
         });
 
         static::addGlobalScope('tenant', function (Builder $builder): void {
+            /** @var Builder<static> $builder */
             $model = $builder->getModel();
 
             if (! $model instanceof static) {
@@ -106,11 +114,14 @@ trait HasTenantNotifications
     /**
      * Relazione morph verso NotificationLog filtrata per tenant corrente.
      *
-     * @return MorphMany<NotificationLog, static>
+     * @return MorphMany<NotificationLog, $this>
      */
     protected function tenantNotificationLogs(): MorphMany
     {
-        return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
+        /** @var MorphMany<NotificationLog, $this> $relation */
+        $relation = $this->morphMany(NotificationLog::class, 'notifiable');
+
+        return $relation->where('tenant_id', $this->getTenantId());
     }
 
     /**

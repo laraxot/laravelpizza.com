@@ -8,6 +8,7 @@ updated: 2026-11-24
 
 # ADR del modulo Activity
 
+<<<<<<< HEAD
 Il **perché** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate. Oggi spiegano due
 forme di Activity che sembrano eccessive: i modelli su una connessione dedicata (`activity`) invece della default, e il
 visualizzatore dei log che fa passare ogni percorso scelto dall'utente da un solo risolutore.
@@ -29,6 +30,32 @@ status: accepted | superseded | deprecated
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
 issues: []
+=======
+Il **perche'** delle forme di Activity che sembrano eccessive: i modelli su una connessione dedicata (`activity`) invece
+della default, il visualizzatore dei log che fa passare ogni percorso scelto dall'utente da un solo risolutore, e la
+cronologia di audit che non si riscrive. Una decisione per file, con le alternative scartate; il nome del file e' l'argomento,
+senza date ne' numeri (la data sta nella frontmatter).
+
+Leggili prima di: cambiare `$connection` di un modello del modulo o la configurazione `activitylog`, aggiungere un modo di
+leggere o scaricare file da `storage/logs`, toccare i permessi del visualizzatore, o modificare righe di `activity_log` gia' scritte.
+
+## Metodo
+
+Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fondata su un trade-off reale; non e' un diario ne'
+una spiegazione retroattiva inventata. Le decisioni si verificano contro codice e test correnti. Una modifica sostanziale crea
+un nuovo ADR e segna il precedente `superseded` o `deprecated`. Regole: [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md)
+e [ADR di Xot](../../../Xot/docs/adr/README.md).
+
+## Formato
+
+```markdown
+---
+title: "ADR - <decisione in una riga>"
+type: decision
+status: proposed | accepted | superseded | deprecated
+created: AAAA-MM-GG
+updated: AAAA-MM-GG
+>>>>>>> laraxot/dev
 ---
 
 # ADR: <decisione>
@@ -40,6 +67,7 @@ Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, inci
 Cosa si fa, in concreto, e dove sta nel codice.
 
 ## Alternative scartate
+<<<<<<< HEAD
 Ogni alternativa seria, con il motivo per cui non è stata scelta.
 
 ## Conseguenze
@@ -48,5 +76,21 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 
 ## Indice
 
+=======
+Ogni alternativa seria, con il motivo per cui non e' stata scelta.
+
+## Conseguenze
+Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
+
+## Verifica
+Comandi o test che esistono e falliscono se la decisione viene violata; solo cio' che si puo' ripetere.
+```
+
+Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
+
+## Decisioni
+
+- [L'audit delle attivita' e' append-oriented](activity-audit-is-append-oriented.md) — la cronologia non si riscrive per correggere una visualizzazione; le viste la interpretano.
+>>>>>>> laraxot/dev
 - [I modelli di Activity usano la connessione 'activity'](activity-models-on-dedicated-connection.md) — log separabile in un altro database e rollback dei test coerente; debito: Spatie scrive sulla default.
 - [Visualizzatore dei log: un solo risolutore di percorsi](log-viewer-single-path-resolver.md) — `realpath` e solo `.log` dentro `storage/logs`, una regola di accesso, download a blocchi.

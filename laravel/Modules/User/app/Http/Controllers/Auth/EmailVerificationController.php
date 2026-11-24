@@ -4,23 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Auth;
 
-<<<<<<< HEAD
-=======
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
->>>>>>> laraxot/dev
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-=======
->>>>>>> laraxot/dev
 use Modules\User\Http\Controllers\Controller;
 
 /**
  * Rotta `verification.verify` (PRD-02): segna l'indirizzo come verificato dopo i controlli su utente, id e hash.
+ *
+ * @see Modules/User/docs/email-verification-delivery.md
  *
  * `id` e `hash` si leggono per nome dalla rotta: il dispatcher passa i parametri scalari per posizione, e un prefisso
  * `{lang}` li sposterebbe (`$id` riceverebbe la lingua).

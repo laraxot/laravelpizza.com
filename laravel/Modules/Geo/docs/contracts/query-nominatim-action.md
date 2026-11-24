@@ -2,6 +2,7 @@
 title: "Contratto — QueryNominatimAction"
 type: contract
 action: "Modules\Geo\Actions\Osm\QueryNominatimAction"
+<<<<<<< .merge_file_fro5d2
 <<<<<<< HEAD
 tags: [contract, action]
 created: 2026-11-18
@@ -12,6 +13,8 @@ tags: [contract, action]
 created: 2026-11-18
 updated: 2026-11-18
 =======
+=======
+>>>>>>> .merge_file_M8PqlH
 tags: [contract, action, openstreetmap, nominatim, geocoding, rate-limit, privacy]
 created: 2026-11-18
 updated: 2026-11-24
@@ -20,12 +23,16 @@ related:
   - ../../app/Actions/Osm/QueryNominatimAction.php
   - ../../app/Http/Controllers/NominatimController.php
   - ../../tests/Feature/OsmProxyTest.php
+<<<<<<< .merge_file_fro5d2
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_M8PqlH
 ---
 
 # QueryNominatimAction
 
+<<<<<<< .merge_file_fro5d2
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -67,6 +74,8 @@ Sorgente: `app/Actions/Osm/QueryNominatimAction.php`.
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> .merge_file_M8PqlH
 Ricerca indirizzi e geocodifica inversa su Nominatim passando dal nostro server, nel rispetto della Nominatim Usage
 Policy. Perché esiste: [ADR proxy tile e Nominatim](../adr/osm-proxy-tile-nominatim.md). Sorgente:
 `app/Actions/Osm/QueryNominatimAction.php`; unico chiamante: `app/Http/Controllers/NominatimController.php`
@@ -131,5 +140,8 @@ Configurazione (`geo.config.osm_proxy`): `nominatim.enabled` (interruttore senza
 - Non salva né inoltra l'IP del richiedente; il limite per IP è della rotta (`throttle:30,1`), non dell'Action.
 - Non sceglie la lingua dalla sessione: la passa il controller (`accept-language` in query, poi `Accept-Language`).
 - Non espone `lookup`, `details` o altri endpoint di Nominatim.
+<<<<<<< .merge_file_fro5d2
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_M8PqlH

@@ -15,11 +15,7 @@ return [
      *
      * @var list<string>
      */
-<<<<<<< HEAD
-    'page_middleware_allowlist' => ['auth', 'throttle'],
-=======
     'page_middleware_allowlist' => ['auth', 'guest', 'throttle'],
->>>>>>> laraxot/dev
 
     /*
      * DCP-283 (C-04): contenitori dell'URL (`/{container0}/{slug0}`) per cui `ResolvePageAction` puo' caricare un modello.

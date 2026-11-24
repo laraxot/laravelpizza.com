@@ -189,11 +189,7 @@ return [
         ],
     ],
     'users_chart' => [
-<<<<<<< HEAD
-        'heading' => 'New users',
-=======
         'heading' => 'Users',
->>>>>>> laraxot/dev
         'label' => 'New users',
     ],
 ];

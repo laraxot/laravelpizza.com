@@ -1,6 +1,12 @@
 ---
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_OnWwmx
 title: Brainstorming
 module: Activity
@@ -9,6 +15,12 @@ module: Activity
 ---
 =======
 >>>>>>> .merge_file_t4sByR
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 title: "Activity — brainstorming BMAD"
 type: concept

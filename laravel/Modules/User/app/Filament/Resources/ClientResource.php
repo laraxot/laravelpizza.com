@@ -44,16 +44,10 @@ class ClientResource extends XotBaseResource
     {
         return [
             'index' => ListClients::route('/'),
-<<<<<<< HEAD
             // "/create" prima di "/{record}": altrimenti "create" veniva preso come id del record (404).
             'create' => CreateClient::route('/create'),
             'view' => ViewClient::route('/{record}'),
             'edit' => EditClient::route('/{record}/edit'),
-=======
-            'view' => ViewClient::route('/{record}'),
-            'edit' => EditClient::route('/{record}/edit'),
-            'create' => CreateClient::route('/create'),
->>>>>>> laraxot/dev
         ];
     }
 

@@ -35,11 +35,7 @@
         "livewire/flux": "^2.1.1",
         "livewire/livewire": "*",
         "livewire/volt": "^1.0",
-<<<<<<< HEAD
-        "maatwebsite/excel": "^3.1",
-=======
         "maatwebsite/excel": "^4.0",
->>>>>>> laraxot/dev
         "nwidart/laravel-modules": "^13.0",
         "predis/predis": "*",
         "spatie/cpu-load-health-check": "^1.0",

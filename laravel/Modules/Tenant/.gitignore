@@ -190,3 +190,6 @@ phpinsights.php
 .php-cs-fixer.dist.php
 tests/coverage-*.*
 docs/screenshots/
+
+# graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
+tests/graphify-out/

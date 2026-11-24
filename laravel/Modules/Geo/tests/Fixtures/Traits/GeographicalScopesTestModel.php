@@ -5,14 +5,12 @@ declare(strict_types=1);
 namespace Modules\Geo\Tests\Fixtures\Traits;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Geo\Models\Traits\GeographicalScopes;
+use Modules\Geo\Models\Traits\GeoTrait;
 
-/**
- * Model fixture for the GeographicalScopes contract (scopes costruiti senza toccare il database).
- */
+/** Fixture per gli scope distanza di GeoTrait (SQL + binding, senza DB). */
 final class GeographicalScopesTestModel extends Model
 {
-    use GeographicalScopes;
+    use GeoTrait;
 
     protected $table = 'places';
 }

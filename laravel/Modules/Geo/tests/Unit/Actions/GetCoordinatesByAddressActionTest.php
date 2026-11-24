@@ -11,10 +11,13 @@ use Modules\Geo\Tests\LightTestCase;
 use PHPUnit\Framework\Assert;
 
 uses(LightTestCase::class);
+<<<<<<< .merge_file_knd3P8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_jaKC5o
 
 /*
  * L'action prova più provider; gli ultimi (Nominatim, Open-Meteo) non chiedono chiavi, quindi senza fake i test andavano in rete
@@ -29,8 +32,11 @@ beforeEach(function (): void {
     ]);
 });
 
+<<<<<<< .merge_file_knd3P8
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_jaKC5o
 it('returns null for empty address', function (): void {
     $action = new GetCoordinatesByAddressAction;
 
@@ -38,6 +44,7 @@ it('returns null for empty address', function (): void {
     $result = $action->execute('');
 
     Assert::assertNull($result);
+<<<<<<< .merge_file_knd3P8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -46,6 +53,10 @@ it('returns null for empty address', function (): void {
     Http::assertNothingSent();
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+    // Nessun provider interpellato per un indirizzo vuoto.
+    Http::assertNothingSent();
+>>>>>>> .merge_file_jaKC5o
 });
 
 it('returns null when google api key not configured', function (): void {
@@ -55,18 +66,24 @@ it('returns null when google api key not configured', function (): void {
     Config::set('services.bing.maps_api_key', null);
     Config::set('services.opencage.api_key', null);
 
+<<<<<<< .merge_file_knd3P8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_jaKC5o
     // Azzerare le chiavi non spegne la catena: `GetCoordinatesByAddressAction`
     // prova cinque fornitori, e gli ultimi due — Nominatim e open-meteo — non
     // vogliono chiavi. Senza questo finto il test uscuiva in rete davvero e
     // falliva per timeout (base_quaeris_fila5#241).
     Http::fake(['*' => Http::response([], 200)]);
 
+<<<<<<< .merge_file_knd3P8
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_jaKC5o
     $result = $action->execute('Fake Address XYZ');
 
     Assert::assertNull($result);
@@ -79,6 +96,7 @@ it('returns null for non-existent address with mock', function (): void {
     Config::set('services.bing.maps_api_key', null);
     Config::set('services.opencage.api_key', null);
 
+<<<<<<< .merge_file_knd3P8
 <<<<<<< HEAD
     // Mock empty results from Google
 =======
@@ -90,11 +108,17 @@ it('returns null for non-existent address with mock', function (): void {
     // Mock empty results from Google
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+    // Il finto su Google non bastava: una richiesta che nessuna regola
+    // intercetta passa alla rete vera, e la catena arriva fino a open-meteo,
+    // che non vuole chiavi. La regola `*` in coda chiude il buco.
+>>>>>>> .merge_file_jaKC5o
     Http::fake([
         'maps.googleapis.com/*' => Http::response([
             'status' => 'ZERO_RESULTS',
             'results' => [],
         ], 200),
+<<<<<<< .merge_file_knd3P8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,6 +126,9 @@ it('returns null for non-existent address with mock', function (): void {
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+        '*' => Http::response([], 200),
+>>>>>>> .merge_file_jaKC5o
     ]);
 
     $result = $action->execute('asdfghjklqwertyuizxcvbnm123456789');

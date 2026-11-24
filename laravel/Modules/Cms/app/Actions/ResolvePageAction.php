@@ -20,13 +20,10 @@ use Spatie\QueueableAction\QueueableAction;
  *    elencati in `cms.config.container0_models` (DCP-283, C-04). Nessun modello arbitrario dall'URL.
  * 2. Verifica se esiste una pagina CMS con slug esatto (container.slug).
  * 3. Fallback a una pagina CMS generica (container.view).
-<<<<<<< HEAD
-=======
  *
  * @contract docs/contracts/resolve-page-action.md
  *
  * @see Modules/Cms/docs/contracts/page-resolution-action.md
->>>>>>> laraxot/dev
  */
 final class ResolvePageAction
 {

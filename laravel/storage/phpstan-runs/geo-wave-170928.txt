@@ -1,0 +1,854 @@
+Note: Using configuration file /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/phpstan.neon.
+Instructions for interpreting errors
+---------
+
+Each error has an associated identifier, like `argument.type`
+or `return.missing`.
+
+Each error identifier has documentation at URL https://phpstan.org/error-identifiers/<identifier>
+This page contains code example, explanation why is this an error
+and instruction how to fix it.
+Before fixing the error, fetch the documentation page for its identifier.
+
+The error usually indicates a real bug or incorrect type in the code. Fix the underlying cause, do not just make the error go away.
+Do not add `@phpstan-ignore` comments, `@phpstan-ignore-next-line` comments, or baseline entries to suppress the error.
+Do not use assert() or inline @var PHPDoc tag to override PHPStan's inferred type.
+Do not add type casts just to silence errors.
+Do not widen parameter or return types just to make the error go away.
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker)                
+ ------ ----------------------------------------------------------------------- 
+  98     Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::center() has   
+         parameter $latitude with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::getMapDefault  
+         View() return type has no value type specified in iterable type        
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::searchAddress  
+         () return type has no value type specified in iterable type array.     
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::reverseGeocod  
+         e() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::firstString()  
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::firstString()  
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::extractCoordi  
+         nates() has parameter $data with no value type specified in iterable   
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::extractCoordi  
+         nates() return type has no value type specified in iterable type       
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\CoordinatePicker::mapDefaultVie  
+         wInput() return type has no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\GeopointPicker)                  
+ ------ ----------------------------------------------------------------------- 
+  98     Method Modules\Geo\Filament\Forms\Components\GeopointPicker::center()  
+         has parameter $latitude with no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::getMapDefaultVi  
+         ew() return type has no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::searchAddress()  
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::reverseGeocode(  
+         ) return type has no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::firstString()    
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::firstString()    
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::extractCoordina  
+         tes() has parameter $data with no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::extractCoordina  
+         tes() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\GeopointPicker::mapDefaultViewI  
+         nput() return type has no value type specified in iterable type        
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput)          
+ ------ ----------------------------------------------------------------------- 
+  98     Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::center(  
+         ) has parameter $latitude with no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::getMapD  
+         efaultView() return type has no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::searchA  
+         ddress() return type has no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::reverse  
+         Geocode() return type has no value type specified in iterable type     
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::firstSt  
+         ring() has parameter $data with no value type specified in iterable    
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::firstSt  
+         ring() has parameter $keys with no value type specified in iterable    
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::extract  
+         Coordinates() has parameter $data with no value type specified in      
+         iterable type array.                                                   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::extract  
+         Coordinates() return type has no value type specified in iterable      
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput::mapDefa  
+         ultViewInput() return type has no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput)           
+ ------ ----------------------------------------------------------------------- 
+  98     Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::center()  
+         has parameter $latitude with no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::getMapDe  
+         faultView() return type has no value type specified in iterable type   
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::searchAd  
+         dress() return type has no value type specified in iterable type       
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::reverseG  
+         eocode() return type has no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::firstStr  
+         ing() has parameter $data with no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::firstStr  
+         ing() has parameter $keys with no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::extractC  
+         oordinates() has parameter $data with no value type specified in       
+         iterable type array.                                                   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::extractC  
+         oordinates() return type has no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput::mapDefau  
+         ltViewInput() return type has no value type specified in iterable      
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\LocationPicker)                  
+ ------ ----------------------------------------------------------------------- 
+  98     Method Modules\Geo\Filament\Forms\Components\LocationPicker::center()  
+         has parameter $latitude with no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::getMapDefaultVi  
+         ew() return type has no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::searchAddress()  
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::reverseGeocode(  
+         ) return type has no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::firstString()    
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::firstString()    
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::extractCoordina  
+         tes() has parameter $data with no value type specified in iterable     
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::extractCoordina  
+         tes() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\LocationPicker::mapDefaultViewI  
+         nput() return type has no value type specified in iterable type        
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class                                                       
+         Modules\Geo\Filament\Forms\Components\MapLocationInput)                
+ ------ ----------------------------------------------------------------------- 
+  98     Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::center() has   
+         parameter $latitude with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::getMapDefault  
+         View() return type has no value type specified in iterable type        
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::searchAddress  
+         () return type has no value type specified in iterable type array.     
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::reverseGeocod  
+         e() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::firstString()  
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::firstString()  
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::extractCoordi  
+         nates() has parameter $data with no value type specified in iterable   
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::extractCoordi  
+         nates() return type has no value type specified in iterable type       
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapLocationInput::mapDefaultVie  
+         wInput() return type has no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class Modules\Geo\Filament\Forms\Components\MapPicker)      
+ ------ ----------------------------------------------------------------------- 
+  98     Method Modules\Geo\Filament\Forms\Components\MapPicker::center() has   
+         parameter $latitude with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::getMapDefaultView()   
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::searchAddress()       
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::reverseGeocode()      
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method Modules\Geo\Filament\Forms\Components\MapPicker::firstString()  
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method Modules\Geo\Filament\Forms\Components\MapPicker::firstString()  
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::extractCoordinates()  
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::extractCoordinates()  
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPicker::mapDefaultViewInput(  
+         ) return type has no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class Modules\Geo\Filament\Forms\Components\MapPositioner)  
+ ------ ----------------------------------------------------------------------- 
+  98     Method Modules\Geo\Filament\Forms\Components\MapPositioner::center()   
+         has parameter $latitude with no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::getMapDefaultVie  
+         w() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::searchAddress()   
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::reverseGeocode()  
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::firstString()     
+         has parameter $data with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::firstString()     
+         has parameter $keys with no value type specified in iterable type      
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::extractCoordinat  
+         es() has parameter $data with no value type specified in iterable      
+         type array.                                                            
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::extractCoordinat  
+         es() return type has no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\MapPositioner::mapDefaultViewIn  
+         put() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Filament/Forms/Components/Traits/HasCoordinatePicker.php (in       
+         context of class Modules\Geo\Filament\Forms\Components\PlacePicker)    
+ ------ ----------------------------------------------------------------------- 
+  98     Method Modules\Geo\Filament\Forms\Components\PlacePicker::center()     
+         has parameter $latitude with no value type specified in iterable type  
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  186    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::getMapDefaultView(  
+         ) return type has no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  232    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::searchAddress()     
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  290    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::reverseGeocode()    
+         return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::firstString() has   
+         parameter $data with no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  364    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::firstString() has   
+         parameter $keys with no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  367    Possibly invalid array key type mixed.                                 
+         🪪  offsetAccess.invalidOffset                                         
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::extractCoordinates  
+         () has parameter $data with no value type specified in iterable type   
+         array.                                                                 
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  380    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::extractCoordinates  
+         () return type has no value type specified in iterable type array.     
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  382    Parameter #1 $data of static method                                    
+         Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers::extrac  
+         tCoordinates() expects array<string, mixed>, array given.              
+         🪪  argument.type                                                      
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+  388    Method                                                                 
+         Modules\Geo\Filament\Forms\Components\PlacePicker::mapDefaultViewInpu  
+         t() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                          
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-i  
+         terable-type                                                           
+         ✏️  app/Filament/Forms/Components/Traits/HasCoordinatePicker.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   app/Models/Traits/HasAddress.php                                      
+ ------ ---------------------------------------------------------------------- 
+  37     Trait Modules\Geo\Models\Traits\HasAddress is used zero times and is  
+         not analysed.                                                         
+         🪪  trait.unused                                                      
+         💡  See: https://phpstan.org/blog/how-phpstan-analyses-traits         
+         ✏️  app/Models/Traits/HasAddress.php                                  
+ ------ ---------------------------------------------------------------------- 
+
+ [ERROR] Found 100 errors                                                       
+

@@ -85,10 +85,7 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Team extends BaseTeam
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     protected $fillable = [
         'user_id',
         'name',

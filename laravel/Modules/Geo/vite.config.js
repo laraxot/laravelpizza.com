@@ -1,13 +1,5 @@
 import { defineConfig } from 'vite';
-<<<<<<< HEAD
 import laravel from 'laravel-vite-plugin';
-=======
-<<<<<<< HEAD
-import laravel from 'laravel-vite-plugin';
-=======
-import laravel, { refreshPaths } from 'laravel-vite-plugin';
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
@@ -55,13 +47,6 @@ export default defineConfig({
                 resolve(__dirname, 'resources/css/app.css'),
                 resolve(__dirname, 'resources/js/components/coordinate-picker-lit.js'),
             ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            ...refreshPaths,
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
             refresh: true,
         }),
     ],

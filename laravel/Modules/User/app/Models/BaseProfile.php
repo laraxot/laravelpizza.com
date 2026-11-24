@@ -10,10 +10,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Schema;
-=======
->>>>>>> laraxot/dev
 use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
@@ -214,7 +211,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         });
     }
 
-<<<<<<< HEAD
     /** @var array<string, bool> chiave "connessione.tabella" → l'id è una stringa (UUID/ULID) */
     private static array $stringKeyByTable = [];
 
@@ -260,17 +256,12 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return self::$stringKeyByTable[$cacheKey];
     }
 
-=======
->>>>>>> laraxot/dev
+
     /** @return array<string, string> */
     #[\Override]
     protected function casts(): array
     {
         return [
-<<<<<<< HEAD
-=======
-            'id' => 'integer',
->>>>>>> laraxot/dev
             'uuid' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',

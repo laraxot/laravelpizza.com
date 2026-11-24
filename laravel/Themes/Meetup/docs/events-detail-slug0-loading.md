@@ -65,7 +65,7 @@ $currentAttendees = $event?->attendees_count ?? 0;
    ↓
 7. JSON Lookup: Page::firstWhere('slug', 'events.view')
    ↓
-8. JSON File: events_view.json
+8. JSON File: events/view.json
    ↓
 9. Content Blocks: Carica blocchi dal JSON (view: 'pub_theme::components.blocks.events.detail')
    ↓

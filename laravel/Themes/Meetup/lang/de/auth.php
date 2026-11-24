@@ -51,6 +51,10 @@ return [
             'title' => 'Bestätigen Sie Ihr Passwort',
             'message' => 'Bitte bestätigen Sie Ihr Passwort, bevor Sie fortfahren',
             'label' => 'Passwort bestätigen',
+            'subtitle' => 'Geschützter Bereich: Gib dein Passwort erneut ein, um fortzufahren.',
+            'password' => 'Passwort',
+            'forgot' => 'Passwort vergessen?',
+            'submit' => 'Bestätigen',
         ],
         'forgot' => [
             'label' => 'Passwort vergessen?',
@@ -86,5 +90,14 @@ return [
         'request_another' => [
             'label' => 'klicken Sie hier, um einen neuen anzufordern',
         ],
+        'title' => 'Prüfe deine E-Mails',
+        'subtitle' => 'Wir haben dir einen Link zur Bestätigung deiner E-Mail-Adresse gesendet.',
+        'resend' => 'Nichts angekommen? Neuen Link senden',
+        'logout' => 'Abmelden',
+    ],
+    'login' => [
+        'page_title' => 'Anmelden',
+        'title' => 'Willkommen zurück bei Laravel Pizza Meetups! 🍕',
+        'subtitle' => 'Melde dich an, um an Meetups teilzunehmen und deine Anmeldungen zu verwalten.',
     ],
 ];

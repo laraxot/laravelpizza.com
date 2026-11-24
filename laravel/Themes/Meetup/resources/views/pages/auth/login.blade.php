@@ -3,25 +3,17 @@
 declare(strict_types=1);
 
 use function Laravel\Folio\{middleware, name};
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-// Set locale from URL segment
-$segments = request()->segments();
-$locale = $segments[0] ?? 'it';
-if (in_array($locale, ['it', 'en', 'es', 'de', 'fr', 'ru'], true)) {
-    LaravelLocalization::setLocale($locale);
-    app()->setLocale($locale);
-}
+// La lingua la imposta il middleware SetFolioLocale (modulo Cms). Niente codice con effetti qui: Folio esegue
+// questo blocco anche per leggere name()/middleware() quando si genera route('login') (es. nelle email da CLI),
+// e un setLocale qui cambiava la lingua dell'intera richiesta/processo in 'it'.
 
 middleware(['guest']);
 name('login');
 
 ?>
 
-<x-layouts.app>
-    <x-slot name="title">
-        {{ __('user::login.page.title') }}
-    </x-slot>
+<x-layouts.app :title="__('pub_theme::auth.login.page_title')">
 
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-red-900 relative overflow-hidden py-12 px-4">
         {{-- Background Elements --}}
@@ -34,7 +26,7 @@ name('login');
             <div class="bg-slate-800/80 backdrop-blur-xl shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-700/50">
                 {{-- Header --}}
                 <div class="text-center mb-10">
-                    <a href="{{ \LaravelLocalization::localizeUrl('/') }}" class="inline-block mb-6">
+                    <a href="{{ \LaravelLocalization::localizeUrl('/') }}" class="inline-block mb-6" aria-label="{{ __('pub_theme::navigation.home') }}">
                         <x-filament::icon
                             icon="meetup-logo"
                             class="h-16 w-auto text-red-500"
@@ -42,11 +34,11 @@ name('login');
                     </a>
                     
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                        {{ __('user::login.page.title') }}
+                        {{ __('pub_theme::auth.login.title') }}
                     </h1>
                     
                     <p class="text-base text-slate-300">
-                        {{ __('user::login.page.subtitle') }}
+                        {{ __('pub_theme::auth.login.subtitle') }}
                     </p>
                 </div>
 

@@ -160,7 +160,7 @@ new class extends Component {
 
 **Perché:**
 
-1. **JSON Template**: Il JSON `events_view.json` ha slug `events.view` e contiene il template per il dettaglio
+1. **JSON Template**: Il JSON `events/view.json` ha slug `events.view` e contiene il template per il dettaglio
 2. **Pattern Generico**: `container0.view` funziona per qualsiasi container (`events.view`, `articles.view`, ecc.)
 3. **Slug0 Passato via Data**: `slug0` viene passato tramite `$this->data` ai componenti inclusi
 4. **Componenti Caricano Modello**: I componenti block (es. `events/detail.blade.php`) caricano il modello usando `$slug0`
@@ -178,7 +178,7 @@ new class extends Component {
    ↓
 5. <x-page slug="events.view" :data="$this->data" />
    ↓
-6. JSON: events_view.json (slug: events.view)
+6. JSON: events/view.json (slug: events.view)
    ↓
 7. Component: events/detail.blade.php riceve $slug0 tramite $data
    ↓

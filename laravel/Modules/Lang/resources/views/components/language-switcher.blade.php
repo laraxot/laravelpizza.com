@@ -3,7 +3,6 @@
 declare(strict_types=1);
 ?>
 {{--
-<<<<<<< HEAD
 /**
  * Language Switcher Widget
  * 
@@ -221,7 +220,6 @@ if (!function_exists('getLanguageUrl')) {
 }
 @endphp
 </div>
-=======
     @var string $current_locale
     @var \Illuminate\Support\Collection $available_locales
     Each locale contains its URL resolved by LanguageSwitcherWidget.
@@ -281,4 +279,3 @@ if (!function_exists('getLanguageUrl')) {
             </ul>
         </details>
 </li>
->>>>>>> laraxot/dev

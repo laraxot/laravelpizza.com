@@ -58,3 +58,44 @@ Tolti i marcatori, la CI è ripartita e ha mostrato i problemi che i conflitti n
 
 Regola in più: dopo un sync, **migrare un database vuoto** (non solo quello locale, già migrato) e aprire tutte le
 pagine admin. Un database già migrato nasconde l'ordine sbagliato delle migrazioni.
+<<<<<<< HEAD
+
+## Regressioni silenziose: il sync del 21/11 non lascia marcatori (24/11/2026)
+
+Togliere i marcatori non basta: `git merge-file` risolve da solo i blocchi che non si toccano e così un sync porta
+**indietro nel tempo** file che il progetto aveva già migliorato. Nel solo tema `Themes/Meetup` (`SYNC_BASE` =
+ultimo commit root senza marcatori, `dd46996a4`):
+
+| Classe | File | Esempi di danno |
+|---|---|---|
+| marcatori | 5 | `package.json`, `language-switcher`, `register`, `auth/password/confirm`, `auth/verify` |
+| regressione (contenuto più vecchio di quello del progetto) | 92 | `pages/[slug].blade.php`, `auth/login`, `profile/[id]`, `ui/button`, lang `home`/`events` in 9 lingue, ~60 docs |
+| ambigui (divergono entrambi) | 9 | `events/detail` e `[container0]/[slug0]` perdevano `visibleTo` (bozze pubbliche), la registrazione Livewire e `JSON_HEX_TAG` nel JSON-LD; `vite.config.js` perdeva `base: '/themes/Meetup/'` (404 su font e immagini); `.gitignore` perdeva `.env.*` e `graphify-out/` |
+| cancellati ma ancora usati | 18 | `ui/auth-card`, `ui/auth-field` (usati da `confirm`/`verify`), `errors/page`, `lang/*/errors.php`, 2 script `npm run screenshots`, `.gitattributes` (divieto Git LFS) |
+| `public/` | 44 | 7 font Inter e 3 altri file cancellati, 34 asset con hash vecchi rimessi: il manifest citava file inesistenti |
+
+Cosa ha funzionato, in ordine:
+
+1. `SYNC_BASE=<ultimo commit pulito> python3 -I bashscripts/tools/git/sync-repair/find_sync_regressions.py "$PWD" Themes/Meetup`
+   (senza `--apply` stampa solo i conteggi; la lista per file va in `$OUT/Themes_Meetup.regress.json`). `--apply` ripristina
+   le sole classi `regression` e `deleted-unseen`.
+2. Gli **ambigui** si decidono a mano con `git diff -U0 $SYNC_BASE -- <file>`: vince la versione che ha più
+   controlli (scope, escape, a11y), non quella più recente. I cambi di nome delle chiavi lang del remoto restano.
+3. I **cancellati** vanno confrontati con chi li usa: `git diff --name-status $SYNC_BASE | grep ^D`, poi grep del nome
+   (`x-ui.auth-card`, `errors.page`, script in `package.json`).
+4. Le **chiavi lang** si uniscono, non si sostituiscono: il remoto rinomina (`login.title` sparisce, nasce
+   `*.label`/`*.message`), le viste del progetto usano ancora le vecchie. Si riaggiungono solo le chiavi *referenziate*
+   (mai le morte) con i valori correnti che vincono.
+5. `public/`: tornare allo stato della base (`git show $SYNC_BASE:<file>`), poi controllare che ogni file del
+   `manifest.json` esista. Non lanciare `clean-stale-assets.mjs` se il manifest cita file mancanti: cancellerebbe
+   quello che serve.
+
+Il test `Modules/Meetup/tests/Unit/Architecture/ThemeIntegrityTest.php` (suite `Project`) fa fallire la CI su tre di
+questi danni: script npm che puntano a file mancanti, manifest incoerente con `public/assets`, chiavi `pub_theme::`
+usate dalle viste e assenti da `lang/it` o `lang/en`.
+
+Trappole di shell trovate lavorando: in zsh `"$B:laravel/x"` legge `:l` come modificatore (minuscole), quindi scrivere
+`"${B}:laravel/x"`; `git diff <commit>` ignora i file non tracciati, quindi un file ripristinato ma ancora non
+aggiunto compare come `D`.
+=======
+>>>>>>> laraxot/dev

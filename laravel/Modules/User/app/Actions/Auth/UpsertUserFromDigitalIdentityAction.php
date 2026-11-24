@@ -19,11 +19,8 @@ use Webmozart\Assert\Assert;
  * - Senza email verificata si usa `<metodo>.<CF>@noemail.local` con `email_verified_at` null: l'identità è comunque
  *   garantita (HasVerifiedIdentityAction), ma al cittadino non partono email verso un indirizzo inesistente.
  * - Si conservano solo i dati necessari (vedi la migrazione owner `create_users_table`).
-<<<<<<< HEAD
-=======
  *
  * @contract docs/contracts/upsert-user-from-digital-identity-action.md
->>>>>>> laraxot/dev
  */
 final class UpsertUserFromDigitalIdentityAction
 {

@@ -29,15 +29,12 @@ return [
             'tooltip' => '',
         ],
     ],
-<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
             'label' => '',
         ],
     ],
-=======
->>>>>>> laraxot/dev
     'navigation' => [
         'name' => 'View User',
         'plural' => 'View User',

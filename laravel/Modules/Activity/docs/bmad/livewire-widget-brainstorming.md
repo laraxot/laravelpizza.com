@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Brainstorming: Activity"
+=======
+<<<<<<< HEAD
+title: "Brainstorming — Activity"
+=======
+title: "Brainstorming: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: brainstorming
 module: Activity
 related:

@@ -256,7 +256,7 @@ app/Application
 # Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
 audit-coverage/
 
-# Tooling locale e config agenti (module-theme-root-hygiene)
+# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 .agents/
 .codex/
 .cursor/
@@ -264,8 +264,4 @@ audit-coverage/
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
-<<<<<<< HEAD
-=======
 tests/coverage-*.*
-docs/screenshots/
->>>>>>> laraxot/dev

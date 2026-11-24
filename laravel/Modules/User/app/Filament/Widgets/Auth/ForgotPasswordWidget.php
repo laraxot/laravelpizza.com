@@ -22,20 +22,12 @@ class ForgotPasswordWidget extends XotBaseSchemaWidget
 {
     /**
      * @return class-string<UserForm>
-<<<<<<< HEAD
-=======
-     * @see ../../../../Xot/docs/bmad/livewire-widget-decision-log.md
->>>>>>> laraxot/dev
      */
     protected static function formClass(): string
     {
         return UserForm::class;
     }
 
-<<<<<<< HEAD
-=======
-    /** @see ../../../../Xot/docs/bmad/livewire-widget-decision-log.md */
->>>>>>> laraxot/dev
     protected static function schemaMethod(): string
     {
         return 'getForgotPasswordFormSchema';

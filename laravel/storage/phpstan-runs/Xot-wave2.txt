@@ -1,0 +1,205 @@
+Note: Using configuration file /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/phpstan.neon.
+PHP Fatal error:  During class fetch: Uncaught ParseError: syntax error, unexpected token "<<", expecting end of file in /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/Traits/HasTeams.php:13
+Stack trace:
+#0 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#1 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/BaseUser.php(132): Composer\Autoload\ClassLoader->loadClass()
+#2 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#3 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#4 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/User.php(156): Composer\Autoload\ClassLoader->loadClass()
+#5 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#6 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#7 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#8 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(253): class_exists()
+#9 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(57): Modules\Tenant\Providers\TenantServiceProvider->buildMorphMap()
+#10 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(41): Modules\Tenant\Providers\TenantServiceProvider->registerMorphMap()
+#11 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Providers\TenantServiceProvider->boot()
+#12 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::{closure:Illuminate\Container\BoundMethod::call():35}()
+#13 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#14 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#15 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(803): Illuminate\Container\BoundMethod::call()
+#16 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1159): Illuminate\Container\Container->call()
+#17 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1140): Illuminate\Foundation\Application->bootProvider()
+#18 [internal function]: Illuminate\Foundation\Application->{closure:Illuminate\Foundation\Application::boot():1139}()
+#19 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1139): array_walk()
+#20 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#21 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap()
+#22 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate\Foundation\Application->bootstrapWith()
+#23 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larastan/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootstrap()
+#24 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#25 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan\Command\CommandHelper::{closure:PHPStan\Command\CommandHelper::executeBootstrapFile():506}()
+#26 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan\Command\CommandHelper::executeBootstrapFile()
+#27 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(74): PHPStan\Command\BootstrapFilesRunner->run()
+#28 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan\Command\AnalyserRunner->runAnalyser()
+#29 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan\Command\AnalyseApplication->runAnalyser()
+#30 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan\Command\AnalyseApplication->analyse()
+#31 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan\Command\AnalyseCommand->execute()
+#32 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea\Symfony\Component\Console\Command\Command->run()
+#33 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRunCommand()
+#34 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRun()
+#35 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea\Symfony\Component\Console\Application->run()
+#36 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#37 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan(8): require('...')
+#38 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/bin/phpstan(119): include('...')
+#39 {main} in /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/BaseUser.php on line 132
+Fatal error: During class fetch: Uncaught ParseError: syntax error, unexpected token "<<", expecting end of file in /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/Traits/HasTeams.php:13
+Stack trace:
+#0 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#1 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/BaseUser.php(132): Composer\Autoload\ClassLoader->loadClass()
+#2 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#3 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#4 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/User.php(156): Composer\Autoload\ClassLoader->loadClass()
+#5 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#6 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#7 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#8 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(253): class_exists()
+#9 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(57): Modules\Tenant\Providers\TenantServiceProvider->buildMorphMap()
+#10 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(41): Modules\Tenant\Providers\TenantServiceProvider->registerMorphMap()
+#11 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Providers\TenantServiceProvider->boot()
+#12 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::{closure:Illuminate\Container\BoundMethod::call():35}()
+#13 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#14 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#15 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(803): Illuminate\Container\BoundMethod::call()
+#16 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1159): Illuminate\Container\Container->call()
+#17 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1140): Illuminate\Foundation\Application->bootProvider()
+#18 [internal function]: Illuminate\Foundation\Application->{closure:Illuminate\Foundation\Application::boot():1139}()
+#19 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1139): array_walk()
+#20 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#21 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap()
+#22 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate\Foundation\Application->bootstrapWith()
+#23 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larastan/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootstrap()
+#24 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#25 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan\Command\CommandHelper::{closure:PHPStan\Command\CommandHelper::executeBootstrapFile():506}()
+#26 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan\Command\CommandHelper::executeBootstrapFile()
+#27 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(74): PHPStan\Command\BootstrapFilesRunner->run()
+#28 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan\Command\AnalyserRunner->runAnalyser()
+#29 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan\Command\AnalyseApplication->runAnalyser()
+#30 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan\Command\AnalyseApplication->analyse()
+#31 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan\Command\AnalyseCommand->execute()
+#32 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea\Symfony\Component\Console\Command\Command->run()
+#33 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRunCommand()
+#34 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRun()
+#35 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea\Symfony\Component\Console\Application->run()
+#36 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#37 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpstan(8): require('...')
+#38 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/bin/phpstan(119): include('...')
+#39 {main} in /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/app/Models/BaseUser.php on line 132
+
+In BaseUser.php line 132:
+                                                                               
+  During class fetch: Uncaught ParseError: syntax error, unexpected token "<<  
+  ", expecting end of file in /mnt/nas07/var/www/_bases/base_laravelpizza_fil  
+  a5/laravel/Modules/User/app/Models/Traits/HasTeams.php:13                    
+  Stack trace:                                                                 
+  #0 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/  
+  phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure  
+  :Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()            
+  #1 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/a  
+  pp/Models/BaseUser.php(132): Composer\Autoload\ClassLoader->loadClass()      
+  #2 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/  
+  phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include(  
+  '...')                                                                       
+  #3 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/  
+  phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure  
+  :Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()            
+  #4 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/a  
+  pp/Models/User.php(156): Composer\Autoload\ClassLoader->loadClass()          
+  #5 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/  
+  phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include(  
+  '...')                                                                       
+  #6 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/  
+  phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure  
+  :Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()            
+  #7 [internal function]: Composer\Autoload\ClassLoader->loadClass()           
+  #8 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant  
+  /app/Providers/TenantServiceProvider.php(253): class_exists()                
+  #9 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenant  
+  /app/Providers/TenantServiceProvider.php(57): Modules\Tenant\Providers\Tena  
+  ntServiceProvider->buildMorphMap()                                           
+  #10 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Tenan  
+  t/app/Providers/TenantServiceProvider.php(41): Modules\Tenant\Providers\Ten  
+  antServiceProvider->registerMorphMap()                                       
+  #11 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Pr  
+  oviders\TenantServiceProvider->boot()                                        
+  #12 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\Bou  
+  ndMethod::{closure:Illuminate\Container\BoundMethod::call():35}()            
+  #13 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Contai  
+  ner\Util::unwrapIfClosure()                                                  
+  #14 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Contai  
+  ner\BoundMethod::callBoundMethod()                                           
+  #15 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Container/Container.php(803): Illuminate\Contain  
+  er\BoundMethod::call()                                                       
+  #16 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Application.php(1159): Illuminate\Con  
+  tainer\Container->call()                                                     
+  #17 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Application.php(1140): Illuminate\Fou  
+  ndation\Application->bootProvider()                                          
+  #18 [internal function]: Illuminate\Foundation\Application->{closure:Illumi  
+  nate\Foundation\Application::boot():1139}()                                  
+  #19 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Application.php(1139): array_walk()    
+  #20 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illu  
+  minate\Foundation\Application->boot()                                        
+  #21 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Application.php(350): Illuminate\Foun  
+  dation\Bootstrap\BootProviders->bootstrap()                                  
+  #22 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larave  
+  l/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate\F  
+  oundation\Application->bootstrapWith()                                       
+  #23 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/larast  
+  an/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootst  
+  rap()                                                                        
+  #24 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_o  
+  nce('...')                                                                   
+  #25 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan\C  
+  ommand\CommandHelper::{closure:PHPStan\Command\CommandHelper::executeBootst  
+  rapFile():506}()                                                             
+  #26 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHP  
+  Stan\Command\CommandHelper::executeBootstrapFile()                           
+  #27 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(74): PHPStan\C  
+  ommand\BootstrapFilesRunner->run()                                           
+  #28 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPS  
+  tan\Command\AnalyserRunner->runAnalyser()                                    
+  #29 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPSt  
+  an\Command\AnalyseApplication->runAnalyser()                                 
+  #30 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan\  
+  Command\AnalyseApplication->analyse()                                        
+  #31 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(25  
+  9): PHPStan\Command\AnalyseCommand->execute()                                
+  #32 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868):   
+  _PHPStan_a90af42ea\Symfony\Component\Console\Command\Command->run()          
+  #33 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261):   
+  _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRunCommand()     
+  #34 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157):   
+  _PHPStan_a90af42ea\Symfony\Component\Console\Application->doRun()            
+  #35 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea\Symfony\  
+  Component\Console\Application->run()                                         
+  #36 phar:///mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor  
+  /phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar:///mnt/nas07/  
+  var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpstan/phpstan/phpst  
+  an.phar/bin/phpstan:19}()                                                    
+  #37 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/phpsta  
+  n/phpstan/phpstan(8): require('...')                                         
+  #38 /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/vendor/bin/ph  
+  pstan(119): include('...')                                                   
+  #39 {main}                                                                   
+                                                                               
+

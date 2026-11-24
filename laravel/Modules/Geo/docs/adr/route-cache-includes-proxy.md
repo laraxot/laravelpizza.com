@@ -46,3 +46,11 @@ php artisan route:list --path=api/geo
 ```
 
 Devono comparire `geo.nominatim` e `geo.osm.tile`.
+
+## Verifica
+
+- Controllo del deploy (la Conferma sopra): `php artisan route:list --path=api/geo` deve mostrare `geo.osm.tile` e `geo.nominatim`,
+  definite in `Modules/Geo/routes/api.php`. `route:trans:cache` e' il comando di `mcamara/laravel-localization`.
+- `cd laravel && vendor/bin/pest Modules/Geo/tests/Feature/OsmProxyTest.php` (`Modules/Geo/tests/Feature/OsmProxyTest.php`): una tile
+  valida risponde 200 con `image/png` sull'URL `/api/geo/tiles/osm/...`; con la cache obsoleta risponderebbe 404 HTML.
+  La rigenerazione della cache resta un controllo di deploy: nessun test citato la copre.

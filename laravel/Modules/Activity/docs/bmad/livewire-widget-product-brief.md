@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Product brief: Activity"
+=======
+<<<<<<< HEAD
+title: "Product brief — Activity"
+=======
+title: "Product brief: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: product-brief
 module: Activity
 related:

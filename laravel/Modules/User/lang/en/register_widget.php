@@ -3,15 +3,12 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-=======
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
->>>>>>> laraxot/dev
     'fields' => [
         'first_name' => [
             'label' => 'First Name',

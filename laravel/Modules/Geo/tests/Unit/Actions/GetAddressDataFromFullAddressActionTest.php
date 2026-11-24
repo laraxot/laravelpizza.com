@@ -7,6 +7,7 @@ namespace Modules\Geo\Tests\Unit\Actions;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Promise\Create;
+<<<<<<< .merge_file_WMswM3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RW5JQ1
 use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\Http;
@@ -24,12 +27,16 @@ use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;
 use Modules\Geo\Actions\GoogleMaps\GetAddressFromGoogleMapsAction;
 use Modules\Geo\Actions\Photon\GetAddressFromPhotonAction;
 use Modules\Geo\Datas\Geocoding\AddressData;
+<<<<<<< .merge_file_WMswM3
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RW5JQ1
 use Modules\Geo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
+<<<<<<< .merge_file_WMswM3
 it('returns AddressData when first service succeeds', function (): void {
 <<<<<<< HEAD
     $action = new GetAddressDataFromFullAddressAction;
@@ -40,13 +47,15 @@ it('returns AddressData when first service succeeds', function (): void {
     $action = new GetAddressDataFromFullAddressAction();
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RW5JQ1
 
-    // As this action depends on multiple external services which are difficult to mock,
-    // we can test that it at least has the correct structure and properties
-    Assert::assertCount(0, $action->getErrors());
+it('returns AddressData when first service succeeds', function (): void {
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
 });
 
 it('initializes with empty errors collection', function (): void {
+<<<<<<< .merge_file_WMswM3
 <<<<<<< HEAD
     $action = new GetAddressDataFromFullAddressAction;
 =======
@@ -58,16 +67,17 @@ it('initializes with empty errors collection', function (): void {
 >>>>>>> laraxot/dev
 
     Assert::assertCount(0, $action->getErrors());
+=======
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
+>>>>>>> .merge_file_RW5JQ1
 });
 
 it('executes without throwing error for basic call', function (): void {
-    // Hermetic: every provider must fail without reaching the network.
-    // Laravel Http-based providers (Google, Nominatim, Here, OpenCage) get a fake 503,
-    // Guzzle-based providers (Photon, Bing, Mapbox) get a Client whose handler answers 503.
     Http::preventStrayRequests();
     Http::fake(['*' => Http::response([], 503)]);
     app()->instance(Client::class, new Client([
         'handler' => HandlerStack::create(
+<<<<<<< .merge_file_WMswM3
 <<<<<<< HEAD
             static fn (): PromiseInterface => Create::promiseFor(new Response(503)),
 =======
@@ -77,6 +87,9 @@ it('executes without throwing error for basic call', function (): void {
             static fn (): PromiseInterface => Create::promiseFor(new Response(503)),
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+            static fn (): PromiseInterface => Create::promiseFor(new Response(503)),
+>>>>>>> .merge_file_RW5JQ1
         ),
     ]));
     config([
@@ -88,6 +101,7 @@ it('executes without throwing error for basic call', function (): void {
         'services.opencage.key' => 'test-key',
     ]);
 
+<<<<<<< .merge_file_WMswM3
 <<<<<<< HEAD
     $action = new GetAddressDataFromFullAddressAction;
 =======
@@ -110,12 +124,14 @@ it('executes without throwing error for basic call', function (): void {
 <<<<<<< HEAD
 });
 =======
+=======
+    $action = new GetAddressDataFromFullAddressAction();
+    Assert::assertNull($action->execute('Test Address'));
+    Assert::assertNotEmpty($action->getErrors());
+>>>>>>> .merge_file_RW5JQ1
 })->group('GEO-GEOCODE-INV-2', 'GEO-GEOCODE-INV-3');
 
-/*
- * Contratto: docs/contracts/get-address-data-from-full-address-action.md. I provider si sostituiscono nel container con
- * oggetti che registrano le chiamate: nessuna rete, nessuna chiave.
- *
+/**
  * @return object{calls: list<string>}
  */
 function geocodeProviderStub(?AddressData $result, ?string $failure = null): object
@@ -166,5 +182,8 @@ it('moves to the next provider when one throws, and keeps its message', function
     Assert::assertSame('Milano', $result?->city);
     Assert::assertSame(['photon down'], $action->getErrors()->all());
 })->group('GEO-GEOCODE-INV-2');
+<<<<<<< .merge_file_WMswM3
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RW5JQ1

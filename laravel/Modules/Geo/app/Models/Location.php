@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Carbon;
 use Modules\Geo\Database\Factories\LocationFactory;
+use Modules\Geo\Models\Traits\HasAddress;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -68,6 +69,9 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Location extends BaseModel
 {
+    /** @use HasAddress<Location> */
+    use HasAddress;
+
     protected $fillable = [
         'name',
         'lat',

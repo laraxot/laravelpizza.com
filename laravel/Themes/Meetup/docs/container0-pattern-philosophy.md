@@ -103,7 +103,7 @@ pages/
    - Estrazione parametri ($container0, $slug0)
    - Passaggio a <x-page> con slug "container0.view"
 
-✅ CORRETTO: Il JSON (events_view.json) definisce:
+✅ CORRETTO: Il JSON (events/view.json) definisce:
    - Quale componente renderizzare
    - I dati da passare al componente
 ```

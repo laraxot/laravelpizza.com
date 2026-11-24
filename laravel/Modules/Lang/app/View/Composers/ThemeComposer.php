@@ -36,10 +36,6 @@ class ThemeComposer
             throw new \Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
         }
 
-<<<<<<< HEAD
-        /** @var array<string, array<array-key, mixed>> $langs */
-        $languages = collect($langs)->map(function (array $item, string $locale): array {
-=======
         $languages = collect($langs)->map(function (mixed $item, int|string $key): array {
             $locale = (string) $key;
 
@@ -58,7 +54,6 @@ class ThemeComposer
                 ));
             }
 
->>>>>>> laraxot/dev
             // Ensure $item has the required keys
             if (! isset($item['regional'], $item['name'])) {
                 throw new \InvalidArgumentException(sprintf('Expected array with "regional" and "name" keys at locale %s', $locale));
@@ -144,11 +139,7 @@ class ThemeComposer
         }
 
         // Verifichiamo che il valore del campo sia una stringa o lo convertiamo in modo sicuro
-<<<<<<< HEAD
-        $value = $lang->{$field};
-=======
         $value = $this->langFieldValue($lang, $field);
->>>>>>> laraxot/dev
         if (! is_string($value)) {
             return $field === 'id' ? $currentLocale : '';
         }
@@ -157,8 +148,6 @@ class ThemeComposer
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Legge dal LangData il campo richiesto.
      *
      * ## Perche' `mixed`, che di norma non si usa
@@ -186,7 +175,6 @@ class ThemeComposer
     }
 
     /**
->>>>>>> laraxot/dev
      * Build the URL for the admin panel based on the current route and parameters.
      *
      * @param  string  $locale  The locale code to build URL for

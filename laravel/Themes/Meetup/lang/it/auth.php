@@ -51,6 +51,10 @@ return [
             'title' => 'Conferma la tua password',
             'message' => 'Conferma la tua password prima di continuare',
             'label' => 'Conferma password',
+            'subtitle' => 'È una zona protetta: per continuare scrivi di nuovo la tua password.',
+            'password' => 'Password',
+            'forgot' => 'Password dimenticata?',
+            'submit' => 'Conferma',
         ],
         'forgot' => [
             'label' => 'Hai dimenticato la password?',
@@ -86,5 +90,14 @@ return [
         'request_another' => [
             'label' => 'clicca qui per richiederne un altro',
         ],
+        'title' => 'Controlla la tua email',
+        'subtitle' => 'Ti abbiamo mandato un link per confermare l\'indirizzo email. Aprilo per completare la registrazione.',
+        'resend' => 'Non è arrivata? Mandamene un\'altra',
+        'logout' => 'Esci',
+    ],
+    'login' => [
+        'page_title' => 'Accedi',
+        'title' => 'Bentornato su Laravel Pizza Meetups! 🍕',
+        'subtitle' => 'Accedi per iscriverti ai meetup e gestire le tue prenotazioni.',
     ],
 ];

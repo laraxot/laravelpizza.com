@@ -123,6 +123,13 @@ test('MapPicker searchAddress returns nominatim results on success', function ()
 
     Assert::assertCount(1, $results);
     $first = $results[0];
+    if (! is_array($first)
+        || ! isset($first['lat'], $first['lon'], $first['display_name'])
+        || ! is_string($first['lat'])
+        || ! is_string($first['lon'])
+        || ! is_string($first['display_name'])) {
+        throw new \UnexpectedValueException('Nominatim result has an unexpected shape.');
+    }
     Assert::assertSame('45.4642', $first['lat']);
     Assert::assertSame('9.1900', $first['lon']);
     Assert::assertSame('Milano, Lombardia, Italia', $first['display_name']);

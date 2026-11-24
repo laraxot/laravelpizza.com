@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Activity: BMAD Method Integration"
+=======
+<<<<<<< HEAD
+title: "Activity — BMAD Method Integration"
+=======
+title: "Activity: BMAD Method Integration"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
 alias: "activity"
@@ -17,6 +25,20 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+---
+
+# Activity — BMAD Method Integration
+updated: 2026-10-07
+tags: [docs, activity, bmad]
+qmd: "activity   bmad method integration activity"
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: index
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -27,6 +49,13 @@ qmd: "activity   bmad method integration activity"
 
 ## Kit BMAD owner (canonico)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [BMAD Planning](../bmad-planning.md)
 - [BMAD Brainstorming](../bmad-brainstorming.md)
 - [Filament blueprint](./filament-blueprint.md)

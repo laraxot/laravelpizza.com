@@ -102,6 +102,25 @@ trait GeoTrait
     }
 
     /**
+     * Ordina solo per formula Haversine (senza riscrivere la select).
+     * Binding, mai interpolazione: stesso contratto di {@see scopeWithDistance()}.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeOrderByDistance(Builder $query, float $lat, float $lng): Builder
+    {
+        if (! is_finite($lat) || ! is_finite($lng) || abs($lat) > 90 || abs($lng) > 180) {
+            return $query;
+        }
+
+        return $query->orderByRaw(
+            '6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))',
+            [$lat, $lng, $lat],
+        );
+    }
+
+    /**
      * Filtra le righe il cui poligono JSON (`zone_polygon`) contiene il punto.
      *
      * L'SQL grezzo del progetto deve essere letterale (`literal-string`), quindi il nome della

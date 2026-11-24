@@ -1,0 +1,1 @@
+flock: failed to execute ./vendor/bin/phpstan: No such file or directory

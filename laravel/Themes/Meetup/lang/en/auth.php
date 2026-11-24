@@ -51,6 +51,10 @@ return [
             'title' => 'Confirm your password',
             'message' => 'Please confirm your password before continuing',
             'label' => 'Confirm password',
+            'subtitle' => 'This is a protected area: enter your password again to continue.',
+            'password' => 'Password',
+            'forgot' => 'Forgot your password?',
+            'submit' => 'Confirm',
         ],
         'forgot' => [
             'label' => 'Forgot your password?',
@@ -86,5 +90,14 @@ return [
         'request_another' => [
             'label' => 'click here to request another',
         ],
+        'title' => 'Check your email',
+        'subtitle' => 'We sent you a link to confirm your email address. Open it to finish signing up.',
+        'resend' => 'Didn\'t get it? Send another one',
+        'logout' => 'Sign out',
+    ],
+    'login' => [
+        'page_title' => 'Sign in',
+        'title' => 'Welcome back to Laravel Pizza Meetups! 🍕',
+        'subtitle' => 'Sign in to join meetups and manage your registrations.',
     ],
 ];

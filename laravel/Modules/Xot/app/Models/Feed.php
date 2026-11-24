@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\FeedFactory;
+use Modules\Xot\Models\Traits\HasExtraTrait;
 
 /**
  * Modules\Xot\Models\Feed.
@@ -36,6 +37,8 @@ use Modules\Xot\Database\Factories\FeedFactory;
  */
 class Feed extends BaseModel
 {
+    use HasExtraTrait;
+
     /** @var list<string> */
     protected $fillable = [
         'id',

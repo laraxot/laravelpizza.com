@@ -89,7 +89,7 @@ Dopo implementazione:
 - [ ] Screenshot presi (prima/dopo se necessario)
 - [ ] Documentazione aggiornata
 - [ ] Verifica visiva completata
-- [ ] Build asset eseguito (`npm run build && npm run copy` se CSS/JS modificati)
+- [ ] Build asset eseguito (`npm run build` se CSS/JS modificati)
 
 ---
 
@@ -113,7 +113,7 @@ Dopo modifiche CSS/JS:
 ```bash
 cd Themes/Meetup
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```
 
 ### Screenshot (Da `screenshots-workflow.md`)

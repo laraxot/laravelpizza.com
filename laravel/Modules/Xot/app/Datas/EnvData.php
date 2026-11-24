@@ -72,8 +72,6 @@ class EnvData extends Data implements Wireable
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Il file di ambiente che {@see update()} modifica.
      *
      * In produzione e' `base_path('.env')`, e non cambia. La chiave di
@@ -96,7 +94,6 @@ class EnvData extends Data implements Wireable
     }
 
     /**
->>>>>>> laraxot/dev
      * Scrive su `.env` solo le variabili dichiarate da EnvData: `$data` arriva dallo stato
      * Livewire, modificabile dal client, e le sue chiavi non sono mai nomi di variabile fidati.
      *
@@ -104,9 +101,6 @@ class EnvData extends Data implements Wireable
      */
     public function update(array $data): void
     {
-<<<<<<< HEAD
-        $env_path = base_path('.env');
-=======
         $env_path = self::envFilePath();
 
         if (! File::exists($env_path)) {
@@ -121,7 +115,6 @@ class EnvData extends Data implements Wireable
             throw new \RuntimeException(sprintf('Nessun file di ambiente da modificare in %s.', $env_path));
         }
 
->>>>>>> laraxot/dev
         $env_content = File::get($env_path);
 
         foreach (array_intersect_key($data, get_object_vars($this)) as $k => $v) {

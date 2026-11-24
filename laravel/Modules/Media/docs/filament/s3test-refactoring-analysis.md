@@ -141,7 +141,19 @@ protected function getFormSchema(): array
 
 ## 🔗 **Collegamenti Documentazione**
 
+<<<<<<< HEAD
 - [Media Module README](../README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Media Module README](../readme.md)
+=======
+- [Media Module README](../README.md)
+>>>>>>> laraxot/dev
+=======
+- [Media Module README](../README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Filament Best Practices](../../../../docs/filament-best-practices.md)
 - [Translation Rules](../../../../docs/translation-rules.md)
 - [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)

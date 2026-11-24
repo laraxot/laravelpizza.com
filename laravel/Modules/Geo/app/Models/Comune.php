@@ -132,11 +132,7 @@ class Comune extends BaseModel
     {
         $path = config('geo.comuni_json_path');
 
-<<<<<<< HEAD
         return \is_string($path) && $path !== ''
-=======
-        return \is_string($path) && '' !== $path
->>>>>>> laraxot/dev
             ? $path
             : module_path('Geo', 'resources/json/comuni.json');
     }

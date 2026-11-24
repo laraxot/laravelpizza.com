@@ -30,12 +30,7 @@ final class GeoMapDataset
 
     public function __construct(
         private readonly string $path,
-<<<<<<< HEAD
     ) {}
-=======
-    ) {
-    }
->>>>>>> laraxot/dev
 
     /**
      * @return GeoDataset
@@ -62,11 +57,7 @@ final class GeoMapDataset
 
             $category = $feature['properties']['p'] ?? $feature['properties']['category'] ?? null;
 
-<<<<<<< HEAD
             if (is_string($category) && $category !== '') {
-=======
-            if (is_string($category) && '' !== $category) {
->>>>>>> laraxot/dev
                 $categories[] = $category;
             }
         }
@@ -88,21 +79,12 @@ final class GeoMapDataset
         foreach ($this->getFeatures() as $feature) {
             $geometryType = $feature['geometry']['type'];
 
-<<<<<<< HEAD
             if ($geometryType === 'Point') {
                 $points++;
             }
 
             if ($geometryType === 'Polygon' || $geometryType === 'MultiPolygon') {
                 $zones++;
-=======
-            if ('Point' === $geometryType) {
-                ++$points;
-            }
-
-            if ('Polygon' === $geometryType || 'MultiPolygon' === $geometryType) {
-                ++$zones;
->>>>>>> laraxot/dev
             }
         }
 
@@ -119,11 +101,7 @@ final class GeoMapDataset
      */
     private function getFeatures(): array
     {
-<<<<<<< HEAD
         if ($this->features !== null) {
-=======
-        if (null !== $this->features) {
->>>>>>> laraxot/dev
             return $this->features;
         }
 
@@ -149,12 +127,8 @@ final class GeoMapDataset
     }
 
     /**
-<<<<<<< HEAD
-     * @param  array<array-key, mixed>  $decoded
-=======
      * @param array<array-key, mixed> $decoded
      *
->>>>>>> laraxot/dev
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -162,11 +136,7 @@ final class GeoMapDataset
         $type = $decoded['type'] ?? null;
         $features = $decoded['features'] ?? null;
 
-<<<<<<< HEAD
         if ($type !== 'FeatureCollection' || ! is_array($features)) {
-=======
-        if ('FeatureCollection' !== $type || ! is_array($features)) {
->>>>>>> laraxot/dev
             throw new \RuntimeException('GeoMapWidget dataset is not a valid FeatureCollection.');
         }
 
@@ -179,11 +149,7 @@ final class GeoMapDataset
 
             $normalizedFeature = $this->normalizeFeature($feature);
 
-<<<<<<< HEAD
             if ($normalizedFeature !== null) {
-=======
-            if (null !== $normalizedFeature) {
->>>>>>> laraxot/dev
                 $normalized[] = $normalizedFeature;
             }
         }
@@ -192,12 +158,8 @@ final class GeoMapDataset
     }
 
     /**
-<<<<<<< HEAD
-     * @param  array<array-key, mixed>  $feature
-=======
      * @param array<array-key, mixed> $feature
      *
->>>>>>> laraxot/dev
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -219,11 +181,7 @@ final class GeoMapDataset
 
         $normalizedProperties = $this->normalizeProperties($properties);
 
-<<<<<<< HEAD
         if ($normalizedProperties === null) {
-=======
-        if (null === $normalizedProperties) {
->>>>>>> laraxot/dev
             return null;
         }
 
@@ -238,12 +196,8 @@ final class GeoMapDataset
     }
 
     /**
-<<<<<<< HEAD
-     * @param  array<array-key, mixed>  $properties
-=======
      * @param array<array-key, mixed> $properties
      *
->>>>>>> laraxot/dev
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array
@@ -251,11 +205,7 @@ final class GeoMapDataset
         $normalized = [];
 
         foreach ($properties as $key => $value) {
-<<<<<<< HEAD
             if (! is_string($key) || (! is_scalar($value) && $value !== null)) {
-=======
-            if (! is_string($key) || (! is_scalar($value) && null !== $value)) {
->>>>>>> laraxot/dev
                 return null;
             }
 

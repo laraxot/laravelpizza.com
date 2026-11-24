@@ -1,9 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 # Activity — cosa migliorare (visione, non lamento)
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 title: "Activity: cosa migliorare (visione, non lamento)"
@@ -25,11 +34,20 @@ gate non cattura.
 ## Il vero bug non è nel codice, è nella cartella docs/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 `app/` è pulito: zero `TODO`, zero `FIXME`, zero `dddx(`/`dd(` residui —
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 `app/` è pulito: zero `TODO`, zero `FIXME`, zero `dddx(`/`dd(` residui -
 coerente col `TODO/FIXME/HACK: 0` già misurato in `cosa-migliorare.md`. Chi
@@ -47,6 +65,14 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 - 4 varianti di `business-logic-analysis*.md` (compreso uno SCREAMING_CASE)
 <<<<<<< HEAD
 - `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  `roadmap-archive.md`, `roadmap-vision.md`: sei roadmap per un modulo,
+  nessuna delle quali probabilmente letta prima di scriverne una nuova
+- `README.md`, `readme.md`, `README.md.update`, `readme.md.update`,
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
   `roadmap-archive-1.md`, `roadmap-vision.md` — sei roadmap per un modulo,
   nessuna delle quali probabilmente letta prima di scriverne una nuova
@@ -66,6 +92,10 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
   nessuna delle quali probabilmente letta prima di scriverne una nuova
 - `README.md`, `README.md`, `README.md.update`, `README.md.update`,
 >>>>>>> .merge_file_bjOfCg
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 =======
 <<<<<<< .merge_file_sMVGP2
 - `roadmap.md`, `roadmap.md`, `roadmap.md`, `roadmap-and-issues.md`,
@@ -89,6 +119,11 @@ Questo non è un problema estetico. È un debito di fiducia: se il second
 brain (qmd/graphify) indicizza 705 varianti quasi-identiche, ogni query
 futura su "Activity" restituisce rumore invece di segnale, e il prossimo
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 agente (io compreso, tra un'ora) rischia di leggere `phpstan-fixes-1.md`
 invece di `phpstan-fixes.md` e agire su uno stato vecchio credendolo
@@ -104,6 +139,10 @@ dichiara esplicitamente cosa è sparito (mai "cleanup" generico — vedi
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 agente (io compreso, tra un'ora) rischia di leggere `phpstan-fixes-correzioni-modulo-activity.md`
 invece di `phpstan-fixes.md` e agire su uno stato vecchio credendolo
@@ -122,11 +161,20 @@ a qualche decina di file con un `index.md` vero in testa.
 ## composer.json: la parte tecnica è quasi pronta, manca un pezzo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 Il file è ordinato — `name`, `description`, `keywords` (nove, specifici:
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 Il file è ordinato: `name`, `description`, `keywords` (nove, specifici:
 `event-sourcing`, `cqrs`, `audit-trail`, non genericume), `extra.laravel`
@@ -136,11 +184,20 @@ cablati su phpstan/pest/pint. Chi l'ha scritto sapeva cosa stava facendo.
 Due cose saltano all'occhio:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 1. `"require-dev": {}` — vuoto. Gli script `composer.json` chiamano
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 1. `"require-dev": {}`: vuoto. Gli script `composer.json` chiamano
    `vendor/bin/phpstan`, `vendor/bin/pest`, `vendor/bin/pint`, ma nessuno di
@@ -154,11 +211,20 @@ Due cose saltano all'occhio:
    type-coverage, laravel/pint).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_qXESXB
 2. La chiave `"repositories_comment"` invece di `"repositories"` — qualcuno
 =======
 >>>>>>> .merge_file_bjOfCg
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 2. La chiave `"repositories_comment"` invece di `"repositories"`: qualcuno
    ha "disattivato" le path repositories verso `../Xot`, `../Tenant`,

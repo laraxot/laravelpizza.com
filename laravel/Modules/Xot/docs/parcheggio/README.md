@@ -89,4 +89,7 @@ database — e questa copia va cancellata, non tenuta come riserva.
 **Questi non sono stati esaminati riga per riga**, a differenza dei `.wip` qui
 sopra: sono stati spostati, non giudicati. Prima di copiarne uno nel codice
 vivo, confrontalo con quello che c'e' adesso.
+<<<<<<< HEAD
+=======
 
+>>>>>>> laraxot/dev

@@ -20,11 +20,8 @@ use Modules\Notify\Events\MailDeliveryEventReceived;
  *
  * Risposta 200 anche per eventi sconosciuti: con un errore Mailjet riprova ogni 30 secondi per 24 ore
  * e poi sospende l'URL. 401 solo se il token non coincide con `notify.notify.mailjet_webhook_token`.
-<<<<<<< HEAD
-=======
  *
  * @contract docs/contracts/handle-mailjet-events-action.md
->>>>>>> laraxot/dev
  */
 final class HandleMailjetEventsAction
 {

@@ -43,9 +43,18 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 
 ### Architettura e Struttura
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [README](./README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 =======
+=======
+=======
+<<<<<<< HEAD
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_m7XdVg
 - [README](README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
@@ -53,6 +62,12 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 - [README](./README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 >>>>>>> .merge_file_hap6zq
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -174,7 +189,19 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
+<<<<<<< HEAD
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
+=======
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
+>>>>>>> laraxot/dev
+=======
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 ---
@@ -218,7 +245,19 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 
 ### Architettura e Struttura
 - [README](README.md) - Panoramica generale del modulo
+<<<<<<< HEAD
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Architettura](./architecture/readme.md) - Architettura generale del modulo
+=======
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+>>>>>>> laraxot/dev
+=======
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -287,6 +326,12 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [wiki/index.md](./wiki/index.md)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Mappa delle cartelle
 
@@ -314,4 +359,10 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`stories/`](stories/) | 28 |
 | [`support/`](support/) | 2 |
 | [`wiki/`](wiki/index.md) | 87 |
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

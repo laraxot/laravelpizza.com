@@ -1,10 +1,22 @@
 ---
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_4iFgAE
 qmd: "media bmad stories quality gates phpstan swarm story md"
 =======
 >>>>>>> .merge_file_3PvcCd
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 id: quality-gates-phpstan-swarm-2026-09-23
 slug: media-phpstan-swarm-2026-09-23-verify-clean

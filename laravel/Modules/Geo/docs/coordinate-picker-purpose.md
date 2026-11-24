@@ -15,6 +15,15 @@ discussions: []
 
 Il componente **Coordinate Picker** (mappa interattiva) nel wizard di creazione ticket serve a **georeferenziare le segnalazioni**, ovvero associare coordinate geografiche precise (latitudine/longitudine) a ogni ticket.
 
+## Nominatim + normalize: fonte unica
+
+`CoordinatePickerHelpers` (stesso NS di `XotBaseCoordinateField`) e' l'unica sede di
+`searchAddress` / `reverseGeocode` / `normalizeCoordinate` / `extractCoordinates`.
+`HasCoordinatePicker` e `XotBaseCoordinateField` espongono solo wrapper `#[Exposed]`/`#[Renderless]`
+che delegano: evita corpi Nominatim duplicati nei trait (PHPStan L10 perde i tipi `array<…>` × ogni consumer).
+
+Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md).
+
 ## 🧩 Component Extraction Rule (DRY Principle)
 
 ### ✅ DO - Extract Reusable Components

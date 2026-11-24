@@ -19,6 +19,10 @@ use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function Safe\chmod;
+>>>>>>> laraxot/dev
 =======
 use function Safe\chmod;
 >>>>>>> laraxot/dev
@@ -229,7 +233,10 @@ abstract class TestCase extends XotBaseTestCase
         return new ReadTranslationFileAction;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 
     /**
      * Il filesystem applica i bit di permesso all'utente che esegue i test?
@@ -269,5 +276,8 @@ abstract class TestCase extends XotBaseTestCase
 
         return $enforced;
     }
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 }

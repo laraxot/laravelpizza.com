@@ -6,16 +6,13 @@ namespace Modules\Xot\Filament\Pages;
 
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Widgets\EnvWidget;
 
 /**
  * Impostazioni dell'ambiente (.env) per il super-admin: la pagina mostra EnvWidget.
  * Prima usava la vista della dashboard, che chiama getColumns()/getVisibleWidgets() dei Dashboard: errore 500.
  */
-=======
 
->>>>>>> laraxot/dev
 class EnvPage extends XotBasePage
 {
     use NavigationLabelTrait;
@@ -23,7 +20,6 @@ class EnvPage extends XotBasePage
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-home';
 
-<<<<<<< HEAD
     /**
      * @return array<class-string>
      */
@@ -36,7 +32,5 @@ class EnvPage extends XotBasePage
     {
         return 1;
     }
-=======
     protected string $view = 'xot::filament.pages.dashboard';
->>>>>>> laraxot/dev
 }

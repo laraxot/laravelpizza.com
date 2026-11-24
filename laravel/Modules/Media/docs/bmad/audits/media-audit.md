@@ -5,13 +5,27 @@ status: review
 updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
 =======
+=======
+=======
+<<<<<<< HEAD
+qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_cMA4DX
 qmd: "audit approfondito Media AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
 =======
 qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
 >>>>>>> .merge_file_qFxrh1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 related:
   - ../audit.md
@@ -29,6 +43,12 @@ related:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_cMA4DX
 Source-first (2026-11-16): inventario filesystem, `rg` su policy/marker/label,
 lettura purpose esistente, PHPStan globale Modules già a 0 errori. Nessuna UI
@@ -87,6 +107,12 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 - [Story](../stories/module-bmad-audit.story.md)
 =======
 >>>>>>> .merge_file_qFxrh1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 

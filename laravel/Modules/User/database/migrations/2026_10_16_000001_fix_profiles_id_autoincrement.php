@@ -14,12 +14,10 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
  * string type and the table is empty; otherwise it does nothing.
  * `MODIFY ... AUTO_INCREMENT` exists only on MySQL/MariaDB: on other drivers (sqlite used by
  * the test suites and CI) the migration does nothing instead of failing the whole migrate.
+ *
+ * @see Modules/User/docs/stories/phpstan-merge-bootstrap.story.md
  */
-<<<<<<< HEAD
 return new class extends Migration
-=======
-return new class() extends Migration
->>>>>>> laraxot/dev
 {
     public function up(): void
     {

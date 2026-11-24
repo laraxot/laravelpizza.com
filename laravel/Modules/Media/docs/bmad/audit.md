@@ -5,13 +5,27 @@ status: review
 updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 =======
+=======
+=======
+<<<<<<< HEAD
+qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_lb7wee
 qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 =======
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 >>>>>>> .merge_file_RKyJsP
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
@@ -24,13 +38,27 @@ related:
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
 =======
+=======
+=======
+<<<<<<< HEAD
+**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_lb7wee
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
 =======
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
 >>>>>>> .merge_file_RKyJsP
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Sintesi (2026-11-16)
@@ -39,6 +67,12 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 |---|---:|
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_lb7wee
 | PHP `app/` | 127 |
 | Test | 47 |
@@ -57,6 +91,12 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 - Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
 =======
 >>>>>>> .merge_file_RKyJsP
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |

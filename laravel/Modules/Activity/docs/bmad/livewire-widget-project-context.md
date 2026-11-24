@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Project context: Activity"
+=======
+<<<<<<< HEAD
+title: "Project context — Activity"
+=======
+title: "Project context: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: constitution
 module: Activity
 related:

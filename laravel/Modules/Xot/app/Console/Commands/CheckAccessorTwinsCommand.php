@@ -260,16 +260,11 @@ class CheckAccessorTwinsCommand extends Command
      * Verifica se un metodo `get{X}Attribute()` origina da un trait/vendor class
      * (es. HasFactory::getUseFactoryAttribute, HasTranslations::getTranslatableColumnsFromAttribute).
      * I metodi ereditati da trait vendor non sono accessor di dominio e vanno esclusi.
-<<<<<<< HEAD
-     */
-    /** @phpstan-ignore-next-line missingType.generics */
-=======
      *
      * Risale trait e classi padre, quindi il tipo e' `ReflectionClass<object>`: non solo i Model.
      *
      * @param  \ReflectionClass<covariant object>  $reflection
      */
->>>>>>> laraxot/dev
     private function methodFromVendor(\ReflectionClass $reflection, \ReflectionMethod $method): bool
     {
         $checked = [];

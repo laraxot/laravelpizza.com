@@ -13,8 +13,6 @@ use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
  *
  * A Filament Select component that displays countries with their flags
  * and supports searching by country name using localized translations.
-<<<<<<< HEAD
-=======
  *
  * ## Le due liste e i due agganci
  *
@@ -30,7 +28,6 @@ use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
  * sola giravano in silenzio su tutti i 250 paesi veri. Un test la cui fixture
  * e' morta passa o fallisce per ragioni che non c'entrano con quello che dice
  * (base_quaeris_fila5#234).
->>>>>>> laraxot/dev
  */
 class NationalFlagSelect extends XotBaseSelect
 {
@@ -56,44 +53,7 @@ class NationalFlagSelect extends XotBaseSelect
      */
     protected function getCountryOptions(): array
     {
-<<<<<<< HEAD
-        // countries() restituisce righe array; i test alimentano anche righe sporche (stringhe)
-        /** @var array<array-key, array<array-key, mixed>|string> $countries */
-        $countries = countries();
-        // PHPStan L10: Type narrowing for array offset access
-        $countries = Arr::sort($countries, function (array|string $c) {
-            return is_array($c) && isset($c['name']) ? $c['name'] : '';
-        });
-
-        /** @var array<string, string> $options */
-        $options = [];
-
-        foreach ($countries as $c) {
-            // PHPStan L10: Type narrowing for country array
-            if (! is_array($c) || ! isset($c['iso_3166_1_alpha2'])) {
-                continue;
-            }
-
-            $code = $c['iso_3166_1_alpha2'];
-            if (! is_string($code)) {
-                continue;
-            }
-
-            $flagName = strtolower($code);
-            $localizedLabel = __('lang::countries.'.$flagName);
-
-            $flagSrc = app(AssetAction::class)->execute('lang::svg/flag/'.$flagName.'.svg');
-            $flag = '<img src="'.$flagSrc.'" class="h-4 w-6 mr-2" inline-block />';
-
-            $html = '<span class="flex items-center gap-2">'.$flag.$localizedLabel.'</span>';
-
-            $options[$code] = $html;
-        }
-
-        return $options;
-=======
         return $this->buildOptions($this->sortCountriesByName($this->resolveCountries()));
->>>>>>> laraxot/dev
     }
 
     /**
@@ -108,73 +68,6 @@ class NationalFlagSelect extends XotBaseSelect
             return $this->getCountryOptions();
         }
 
-<<<<<<< HEAD
-        /** @var array<array-key, array<array-key, mixed>|string> $countries */
-        $countries = countries();
-        $searchLower = strtolower($search);
-
-        // Filter countries by search term
-        $filteredCountries = array_filter($countries, function (array|string $country) use ($searchLower) {
-            // PHPStan L10: Type narrowing for country array
-            if (! is_array($country) || ! isset($country['iso_3166_1_alpha2'], $country['name'])) {
-                return false;
-            }
-
-            $code = $country['iso_3166_1_alpha2'];
-            $name = $country['name'];
-
-            if (! is_string($code) || ! is_string($name)) {
-                return false;
-            }
-
-            $flagName = strtolower($code);
-
-            // Get localized country name
-            $localizedName = __('lang::countries.'.$flagName);
-            // PHPStan L10: __() can return string|array, handle both
-            if (is_array($localizedName)) {
-                return str_contains(strtolower($name), $searchLower)
-                    || str_contains(strtolower($code), $searchLower);
-            }
-
-            $localizedNameStr = is_string($localizedName) ? $localizedName : '';
-
-            // Search in both English name and localized name
-            return str_contains(strtolower($name), $searchLower)
-                || str_contains(strtolower($localizedNameStr), $searchLower)
-                || str_contains(strtolower($code), $searchLower);
-        });
-
-        // Sort filtered results by name
-        $filteredCountries = Arr::sort($filteredCountries, function (array|string $c) {
-            return is_array($c) && isset($c['name']) ? $c['name'] : '';
-        });
-
-        // Map to options format with flags
-        /** @var array<string, string> $options */
-        $options = [];
-
-        foreach ($filteredCountries as $c) {
-            // PHPStan L10: Type narrowing for country array
-            if (! is_array($c) || ! isset($c['iso_3166_1_alpha2'])) {
-                continue;
-            }
-
-            $code = $c['iso_3166_1_alpha2'];
-            if (! is_string($code)) {
-                continue;
-            }
-
-            $flagName = strtolower($code);
-            $localizedLabel = __('lang::countries.'.$flagName);
-
-            $flagSrc = app(AssetAction::class)->execute('lang::svg/flag/'.$flagName.'.svg');
-            $flag = '<img src="'.$flagSrc.'" class="h-4 w-6 mr-2" inline-block />';
-
-            $html = '<span class="flex items-center gap-2">'.$flag.$localizedLabel.'</span>';
-
-            $options[$code] = $html;
-=======
         $searchLower = strtolower($search);
 
         $filtered = array_filter(
@@ -245,13 +138,10 @@ class NationalFlagSelect extends XotBaseSelect
                 .$flag
                 .$this->countryLabel($code, $country)
                 .'</span>';
->>>>>>> laraxot/dev
         }
 
         return $options;
     }
-<<<<<<< HEAD
-=======
 
     /**
      * L'etichetta localizzata del paese, sempre come stringa.
@@ -350,5 +240,4 @@ class NationalFlagSelect extends XotBaseSelect
             return is_string($name) ? $name : '';
         });
     }
->>>>>>> laraxot/dev
 }

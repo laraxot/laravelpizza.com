@@ -28,7 +28,11 @@ test('toglie i segnaposto uguali al nome del campo e lascia le traduzioni vere',
     Assert::assertStringContainsString("base_path('x')", file_get_contents($dir.'/it/dynamic.php'));
     Assert::assertFileDoesNotExist($dir.'/it/.php');
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-CLEAN-INV-1', 'LANG-CLEAN-INV-2', 'LANG-CLEAN-INV-3');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-CLEAN-INV-1', 'LANG-CLEAN-INV-2', 'LANG-CLEAN-INV-3');
 >>>>>>> laraxot/dev

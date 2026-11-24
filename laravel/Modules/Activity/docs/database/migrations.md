@@ -36,4 +36,12 @@ Questo documento descrive le migrazioni del database per il modulo Activity. Ogn
 * [migrations.md](../../../Gdpr/docs/migrations.md)
 * [migrations.md](../../../Notify/docs/migrations.md)
 * [migrations.md](../../../Gdpr/docs/migrations.md)
+<<<<<<< HEAD
 * [migrations.md](../../../Notify/docs/migrations.md)
+=======
+<<<<<<< HEAD
+* [migrations.md](../../../Notify/docs/migrations.md)
+=======
+* [migrations.md](../../../Notify/docs/migrations.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

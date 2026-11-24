@@ -292,7 +292,19 @@ workbench/routes
 ## Collegamenti
 
 - [Torna a README](./README.md)
+<<<<<<< HEAD
 - [Torna a README](./README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Torna a README](./readme.md)
+=======
+- [Torna a README](./README.md)
+>>>>>>> laraxot/dev
+=======
+- [Torna a README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 

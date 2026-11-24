@@ -1,0 +1,39 @@
+Note: Using configuration file /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/phpstan.neon.
+PHP Fatal error:  Trait "Modules\Xot\Traits\HasCustomRelations" not found in /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/Xot/app/Models/XotBaseModel.php on line 22
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Trait "Modules\Xot\Traits\HasCustomRelations" not found
+
+  at Modules/Xot/app/Models/XotBaseModel.php:22
+     18▕  * @method static \Illuminate\Database\Eloquent\Factories\Factory<static> factory($count = null, $state = [])
+     19▕  *
+     20▕  * Class XotBaseModel.
+     21▕  */
+  ➜  22▕ abstract class XotBaseModel extends EloquentModel
+     23▕ {
+     24▕     use HasCustomRelations;
+     25▕     use HasXotFactory;
+     26▕     use RelationX;
+
+
+   Whoops\Exception\ErrorException 
+
+  Trait "Modules\Xot\Traits\HasCustomRelations" not found
+
+  at Modules/Xot/app/Models/XotBaseModel.php:22
+     18▕  * @method static \Illuminate\Database\Eloquent\Factories\Factory<static> factory($count = null, $state = [])
+     19▕  *
+     20▕  * Class XotBaseModel.
+     21▕  */
+  ➜  22▕ abstract class XotBaseModel extends EloquentModel
+     23▕ {
+     24▕     use HasCustomRelations;
+     25▕     use HasXotFactory;
+     26▕     use RelationX;
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+

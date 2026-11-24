@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Services;
 
-<<<<<<< HEAD
-use Modules\Xot\Actions\File\AssetAction;
-
-final class UIService
-{
-    public static function asset(string $asset): string
-    {
-        return app(AssetAction::class)->execute($asset);
-    }
-=======
 /**
  * SUPERSEDED — non usare. Residuo on-disk (no-delete senza autorizzazione).
  *
@@ -25,5 +15,4 @@ final class UIService
  */
 final class UIService
 {
->>>>>>> laraxot/dev
 }

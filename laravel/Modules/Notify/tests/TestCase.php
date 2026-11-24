@@ -7,6 +7,10 @@ namespace Modules\Notify\Tests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Modules\Xot\Tests\XotBaseTestCase;
+>>>>>>> laraxot/dev
 =======
 use Modules\Xot\Tests\XotBaseTestCase;
 >>>>>>> laraxot/dev
@@ -20,7 +24,10 @@ use Modules\Notify\Models\NotifyThemeable;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\XotBasePest;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Tests\XotBaseTestCase;
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;

@@ -49,20 +49,6 @@ class TestMailtrap extends Command
         Assert::string($fromAddress);
         Assert::string($fromName);
 
-<<<<<<< HEAD
-        $email = (new MailtrapEmail)
-            ->from(new Address($fromAddress, $fromName))
-            ->to(new Address($recipient))
-            ->subject('You are awesome!')
-            ->category('Integration Test')
-            ->text('Congrats for sending test email with Mailtrap!');
-
-        try {
-            $response = MailtrapClient::initSendingEmails(
-                apiKey: $apiKey,
-                isBulk: false,
-            )->send($email);
-=======
         $email = new MailtrapEmail;
         $email->from(new Address($fromAddress, $fromName));
         $email->to(new Address($recipient));
@@ -76,7 +62,6 @@ class TestMailtrap extends Command
                 isBulk: false,
             );
             $response = $client->send($email);
->>>>>>> laraxot/dev
 
             $this->info('Test email sent successfully!');
             $this->line(print_r(ResponseHelper::toArray($response), true));
