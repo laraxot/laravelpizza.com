@@ -147,3 +147,4 @@ laravel/phpunit.coverage*.*
 ${CLAUDE_PROJECT_DIR:-.}/
 bashscripts/
 .cursor-scratch/
+*.phar
