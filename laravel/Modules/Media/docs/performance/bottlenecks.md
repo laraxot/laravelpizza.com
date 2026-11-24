@@ -240,24 +240,6 @@ Implementare:
 ### Versione HEAD
 
 ## Collegamenti tra versioni di bottlenecks.md
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-* [bottlenecks.md](../../../gdpr/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../xot/docs/bottlenecks.md)
-* [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../xot/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
@@ -267,15 +249,6 @@ Implementare:
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](bottlenecks.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming

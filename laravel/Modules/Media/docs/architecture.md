@@ -141,20 +141,13 @@ Il modulo utilizza l'inversion of control tramite:
 
 ---
 
-<<<<<<< HEAD
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
-=======
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
->>>>>>> laraxot/dev
 
----
-title: "Architecture: Media Module"
-type: architecture
-tags: [module, architecture, media, storage]
-created: 2026-08-04
-updated: 2026-08-04
----
-# Media Module — Architecture
+## Media Module — Architecture (testo unito da ARCHITECTURE.md)
+
+> Attenzione: questa sezione cita classi che nel codice non esistono (`UploadMediaAction`, `ProcessMediaAction`,
+> `DeleteMediaAction`, `MediaCollections`, `MediaItem`, `CollectionResource`). L'architettura verificata sul codice sta in
+> [bmad/architecture.md](bmad/architecture.md).
 
 ## Purpose
 Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.

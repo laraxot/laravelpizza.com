@@ -22,11 +22,7 @@ related:
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
 ## 🎞️ **Video & Image Processing**
-<<<<<<< HEAD
 - 🎥 **[FFmpeg Integration](./ffmpeg-integration.md)** - Guida alla gestione video e codec.
-=======
-- 🎥 **[FFmpeg Integration](wiki/integrations/ffmpeg-integration.md)** - Guida alla gestione video e codec.
->>>>>>> laraxot/dev
 - 🖼️ **[Image Optimization](./file-management-architecture.md)** - Architettura di trasformazione immagini.
 - 🔄 **[Auto Conversions](./conversione-media.md)** - Logic per preview e watermark.
 

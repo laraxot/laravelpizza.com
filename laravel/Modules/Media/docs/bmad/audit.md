@@ -4,33 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
-=======
-=======
-=======
-<<<<<<< HEAD
-qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lb7wee
-qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
-=======
-qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
->>>>>>> .merge_file_RKyJsP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
->>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
@@ -41,74 +15,12 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
-=======
-=======
-=======
-<<<<<<< HEAD
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lb7wee
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
-=======
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
->>>>>>> .merge_file_RKyJsP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
->>>>>>> laraxot/dev
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lb7wee
-| PHP `app/` | 127 |
-| Test | 47 |
-| Resources | 3 |
-| Actions | 51 |
-| Services | 0 |
-| Policy `return true` | 2 |
-| Marker | 0 |
-
-## Lo scopo in una frase **Media custodisce i file che fanno da prova a una decisione, e li rende utilizzabili nei formati che servono senza che il dominio sappia nulla di dischi e conversioni.**
-
-## Gate
-
-- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
-- Pest: da eseguire in ambiente testing non produttivo.
-- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
-=======
->>>>>>> .merge_file_RKyJsP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
 | Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |

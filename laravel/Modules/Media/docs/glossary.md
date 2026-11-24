@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Glossario di dominio Media
-
-<!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
-     Un termine per riga; se glossario e codice non coincidono, vale il codice e si corregge il glossario. -->
-
-| Termine | Significato | Nel codice |
-|---|---|---|
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
-=======
 ---
 title: "Glossario di dominio Media"
 type: glossary
@@ -42,4 +32,3 @@ Percorsi relativi a `laravel/Modules/Media/`.
 | Sottotitoli | Conversione da SRT a VTT ed estrazione del testo. | `app/Actions/Subtitle/ConvertSrtToVttAction.php`, `ExtractSubtitlePlainTextAction.php` |
 | Diagnostica AWS | Verifiche di credenziali, permessi, bucket e CloudFront. | `app/Actions/Diagnostic/Aws/RunFullAwsDiagnosticAction.php`, `app/Actions/Diagnostic/S3/` |
 | Policy dei media | Autorizzazioni CRUD per `media.*` e `temporary_upload.*`. | `app/Models/Policies/MediaPolicy.php`, `TemporaryUploadPolicy.php` |
->>>>>>> laraxot/dev

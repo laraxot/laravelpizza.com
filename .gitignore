@@ -152,3 +152,11 @@ bashscripts/
 .kilocode
 bashscripts
 laravel/Modules/Notify/.git.polluted*
+
+
+
+# Git backup directories
+.git.polluted.bak.*/
+.git.backup*/
+.git.corrupt*/
+.git.old*/

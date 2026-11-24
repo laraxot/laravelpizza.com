@@ -1,11 +1,4 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "Stream"
@@ -40,23 +33,3 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 $tmpFile->delete();
 
 ----------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-module: theme
-topic: --stream
-canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
