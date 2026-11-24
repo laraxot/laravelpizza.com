@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\Route;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/is-admin-route-action.md
+ * @contract docs/contracts/is-admin-route-action.md
+ */
 class IsAdminRouteAction
 {
     use QueueableAction;

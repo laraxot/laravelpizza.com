@@ -18,6 +18,9 @@ use function Safe\preg_match;
  * - DRY: Evita duplicazione di logica di cast int in tutto il progetto
  * - KISS: Logica semplice e diretta, facile da comprendere e mantenere
  * - Robustezza: Gestisce tutti i casi edge e mantiene la type safety
+ *
+ * @see docs/contracts/safe-int-cast-action.md
+ * @contract docs/contracts/safe-int-cast-action.md
  */
 class SafeIntCastAction
 {

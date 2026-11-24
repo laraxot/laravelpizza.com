@@ -15,6 +15,8 @@ use Webmozart\Assert\Assert;
  * Class MorphToManyAction.
  *
  * Handles morphToMany relationship updates for models
+ * @see docs/contracts/update-morph-to-many-action.md
+ * @contract docs/contracts/update-morph-to-many-action.md
  */
 class MorphToManyAction
 {

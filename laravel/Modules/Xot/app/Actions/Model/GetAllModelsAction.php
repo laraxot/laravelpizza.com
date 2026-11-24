@@ -11,6 +11,10 @@ use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-all-models-action.md
+ * @contract docs/contracts/get-all-models-action.md
+ */
 class GetAllModelsAction
 {
     use QueueableAction;

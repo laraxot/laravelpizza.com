@@ -10,7 +10,7 @@ use Symfony\Component\Process\Process;
 uses(TestCase::class);
 
 /*
- * Nessun file tracciato puo' contenere marcatori di conflitto di merge (`<<<<<<< ` / `>>>>>>> ` a inizio riga).
+ * Nessun file tracciato puo' contenere marcatori di conflitto di merge.
  * Il 13/11 un sync ne ha committati 471 (171 PHP, AssetAction compreso): l'app non partiva.
  * Issue: https://github.com/provtv/base_ptv_fila5/issues/263
  */

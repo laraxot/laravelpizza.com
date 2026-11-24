@@ -8,6 +8,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Undocumented class.
+ * @see docs/contracts/url-action.md
+ * @contract docs/contracts/url-action.md
  */
 class UrlAction
 {

@@ -5,10 +5,6 @@ declare(strict_types=1);
 use Modules\Cms\Filament\Resources\PageResource;
 use Modules\Cms\Filament\Resources\PageResource\Schemas\PageForm;
 use Modules\Cms\Models\Page;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -19,7 +15,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 describe('PageResource', function (): void {
     test('page resource has correct model', function (): void {
         $resource = new PageResource;

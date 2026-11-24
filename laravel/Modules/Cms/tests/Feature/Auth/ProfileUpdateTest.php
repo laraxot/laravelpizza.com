@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Feature\Auth;
 
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
 
 // Senza questo binding le closure di `test()`/`it()` restano legate a
@@ -15,7 +13,6 @@ use Modules\Cms\Tests\TestCase;
 // 94 fallimenti «Target class [config] does not exist» nel modulo
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
->>>>>>> laraxot/dev
 
 function cmsProfileGenerateUniqueEmail(): string
 {

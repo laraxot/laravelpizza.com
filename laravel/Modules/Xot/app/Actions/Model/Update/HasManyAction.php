@@ -13,6 +13,10 @@ use Modules\Xot\Datas\RelationData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/update-has-many-action.md
+ * @contract docs/contracts/update-has-many-action.md
+ */
 class HasManyAction
 {
     use QueueableAction;

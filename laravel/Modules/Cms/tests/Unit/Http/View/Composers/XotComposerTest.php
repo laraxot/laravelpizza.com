@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use Modules\Cms\Http\View\Composers\XotComposer;
-<<<<<<< HEAD
-use Modules\Xot\Contracts\UserContract;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
@@ -25,7 +20,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('compose returns early when no authenticated user', function (): void {
     Auth::shouldReceive('user')->once()->andReturn(null);
 

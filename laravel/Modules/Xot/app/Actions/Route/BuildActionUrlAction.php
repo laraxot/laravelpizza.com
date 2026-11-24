@@ -9,6 +9,10 @@ use Illuminate\Routing\Router;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/build-action-url-action.md
+ * @contract docs/contracts/build-action-url-action.md
+ */
 class BuildActionUrlAction
 {
     use QueueableAction;

@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Cms\Models\Page;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -17,7 +13,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 /*
  * DCP-283 (C-03): un campo `middleware` dichiarato ma illeggibile non deve rendere pubblica la pagina.
  * Prima: una stringa diventava null (cast array) e `array_filter(is_string)` toglieva le voci non stringa.

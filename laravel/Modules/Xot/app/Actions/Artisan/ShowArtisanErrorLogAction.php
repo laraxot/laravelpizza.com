@@ -16,6 +16,8 @@ use function Safe\preg_match_all;
 
 /**
  * Replaces Modules\Xot\Services\ArtisanService::errorShow().
+ * @see docs/contracts/show-artisan-error-log-action.md
+ * @contract docs/contracts/show-artisan-error-log-action.md
  */
 class ShowArtisanErrorLogAction
 {

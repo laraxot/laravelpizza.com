@@ -6,10 +6,6 @@ use Filament\Forms\Components\Field;
 use Modules\Cms\Filament\Resources\MenuResource;
 use Modules\Cms\Filament\Resources\MenuResource\Schemas\MenuForm;
 use Modules\Cms\Models\Menu;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -20,7 +16,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 describe('MenuResource', function (): void {
     test('menu resource has correct model', function (): void {
         $resource = new MenuResource;

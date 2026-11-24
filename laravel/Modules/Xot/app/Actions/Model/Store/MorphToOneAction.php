@@ -10,6 +10,10 @@ use Modules\Xot\Actions\Model\CreateMorphToOneRelatedModelAction;
 use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/store-morph-to-one-action.md
+ * @contract docs/contracts/store-morph-to-one-action.md
+ */
 class MorphToOneAction
 {
     use QueueableAction;

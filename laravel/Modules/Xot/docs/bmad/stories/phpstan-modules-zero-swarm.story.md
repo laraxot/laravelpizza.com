@@ -99,8 +99,11 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 
 ## Dev Agent Record
 
-<<<<<<< HEAD
+<<<<<<< .merge_file_FQygdu
+<<<<<<< .merge_file_yRh4PH
 =======
+=======
+>>>>>>> .merge_file_21TRsz
 - Status: `review` — cold gate Modules **`[OK] No errors` EXIT 0** (2026-11-17)
 - AC full-tree: spuntato osservato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**
 - Lock session `phpstan-modules-swarm-session` + lane Activity/Ptv unlock
@@ -108,15 +111,21 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   Pest HostApp richiede DB testing raggiungibile; ridurre thrash multi-agente (max-3)
 - Prossimo: boy-scout ridondanza story phpstan datate in Xot/docs/bmad/stories;
   prompts bashscripts/docs/prompts (subagent); qmd update memoria thrash/cache
->>>>>>> laraxot/dev
+<<<<<<< .merge_file_FQygdu
+>>>>>>> .merge_file_vpfoQ8
+=======
+>>>>>>> .merge_file_21TRsz
 - Status: `done` — allineato a sprint `Xot/phpstan-modules-zero-swarm` (gate finale
   peer sotto flock: JSON `errors=0`/`file_errors=0` + banner `[OK] No errors`)
 - AC full-tree: spuntato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**;
   FeatureFlagsTest 15 passed; AppMiddlewareTest skip DB documentato
 - Debito fuori gate PHPStan: attivare riga `criteri_esclusione.progressione_verticale`
   in campagna 2026 (owner HR); ridurre thrash multi-agente (max-3)
-<<<<<<< HEAD
+<<<<<<< .merge_file_FQygdu
+<<<<<<< .merge_file_yRh4PH
 =======
+=======
+>>>>>>> .merge_file_21TRsz
 - Wave corrente (2026-11-21): marker di conflitto Git annidati in PHP/test e Blade
   risolti semanticamente; il gate `./vendor/bin/phpstan analyse Modules --error-format=raw --no-progress`
   ha restituito exit 0. Pest mirato sui file modificati resta da eseguire.
@@ -155,4 +164,7 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   (`setCellValue` con coordinate array); ignore `method.deprecatedClass`
   rimosso da `ImportValutatoriAction`. Commit: padre `c3109b9028`,
   modulo Xot `4c27f652d` (push laraxot/dev entrambi).
->>>>>>> laraxot/dev
+<<<<<<< .merge_file_FQygdu
+>>>>>>> .merge_file_vpfoQ8
+=======
+>>>>>>> .merge_file_21TRsz

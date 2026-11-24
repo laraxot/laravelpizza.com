@@ -9,6 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\file_get_contents;
 use function Safe\preg_match;
 
+/**
+ * @see docs/contracts/get-class-name-by-path-action.md
+ * @contract docs/contracts/get-class-name-by-path-action.md
+ */
 class GetClassNameByPathAction
 {
     use QueueableAction;

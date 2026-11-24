@@ -78,8 +78,6 @@ qmd: "sigma phpstan analysis"
 issues: []
 discussions: []
 **Nota:** PHPStan non riesce a procedere fino al completamento di questo errore interno.
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `sigma-phpstan-analysis-2026-06-15.md` (2026-06-15)
 
@@ -152,4 +150,3 @@ qmd: "sigma phpstan analysis 2026 06 15"
 issues: []
 discussions: []
 **Nota:** PHPStan non riesce a procedere fino al completamento di questo errore interno.
->>>>>>> laraxot/dev

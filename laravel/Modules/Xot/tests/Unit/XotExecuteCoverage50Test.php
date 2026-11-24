@@ -203,15 +203,12 @@ describe('Xot execute coverage floor 50', function (): void {
         Assert::assertStringStartsWith('Pagina - ', $meta->title);
         Assert::assertSame($meta, $meta->concatDescription('Extra'));
         Assert::assertStringStartsWith('Extra ', (string) $meta->description);
-<<<<<<< HEAD
-=======
 
         // Il logo finto va rimosso: `public_html/` e' la document root, e un
         // file scritto qui resta servito sul web. Questo test e il suo gemello
         // in XotHundredPercentCoverageTest ne lasciavano uno per corsa, e due
         // sono finiti **committati** nel repository (base_quaeris_fila5#244).
         File::deleteDirectory(dirname($logoPath));
->>>>>>> laraxot/dev
     });
 
     test('SecurityMiddleware applica header e rate limit su richiesta GET', function (): void {

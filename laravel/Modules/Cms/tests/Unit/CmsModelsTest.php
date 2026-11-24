@@ -6,10 +6,6 @@ use Modules\Cms\Database\Factories\PageFactory;
 use Modules\Cms\Models\Menu;
 use Modules\Cms\Models\Page;
 use Modules\Cms\Models\Section;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -20,7 +16,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 it('can create a cms page via factory', function (): void {
     $page = PageFactory::new()->createOne([
         'title' => 'Home Page',

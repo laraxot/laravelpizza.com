@@ -1,52 +1,41 @@
 ---
-title: "Contratto — ExecuteArtisanCommandAction"
+title: "ExecuteArtisanCommandAction — contratto"
 type: contract
-action: "Modules\Xot\Actions\ExecuteArtisanCommandAction"
-tags: [contract, action, artisan, process, security]
-created: 2026-11-24
+owner: Xot
+status: accepted
 updated: 2026-11-24
+action: "Modules\\Xot\\Actions\\ExecuteArtisanCommandAction"
+qmd: "ExecuteArtisanCommandAction artisan allowlist comandi process php artisan timeout output migrate passport"
 ---
 
 # ExecuteArtisanCommandAction
 
-Sorgente: `app/Actions/ExecuteArtisanCommandAction.php`. Chiamanti: `Xot/app/Filament/Pages/ArtisanCommandsManager.php`
-(con `SuperAdminOnlyTrait` e `abort_unless(static::canAccess(), 403)` nel metodo) e
-`User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`.
+Esegue un comando Artisan da una lista chiusa di comandi consentiti. Codice: `app/Actions/ExecuteArtisanCommandAction.php` (classe a riga 16, `execute()` a riga 52).
 
 ## Input
 
-- `string $command`: il comando **senza** `php artisan`, comprese eventuali opzioni (`'passport:install --uuids'`).
+- `string $command`: comando senza `php artisan`, deve coincidere con una voce della lista.
 
 ## Output
 
-- `array{command: string, output: list<string>, status: 'completed'|'failed', exitCode: int}`: le righe di stderr sono
-  prefissate da `[ERROR] `.
+- `array{command, output: list<string>, status: 'completed'|'failed', exitCode}`.
 
 ## Invarianti
 
-| ID | Regola | Group Pest |
-|---|---|---|
-| XOT-ARTISAN-EXEC-INV-1 | Esegue solo stringhe **identiche** a una voce di `$allowedCommands`; altrimenti nessun processo parte. | `XOT-ARTISAN-EXEC-INV-1` |
-| XOT-ARTISAN-EXEC-INV-2 | Exit code 0 → `status = 'completed'`; diverso da 0 → `'failed'` con stderr in `output` prefissato `[ERROR]`. | `XOT-ARTISAN-EXEC-INV-2` |
-| XOT-ARTISAN-EXEC-INV-3 | Il processo gira in `base_path()` con timeout di 300 secondi. | — |
+- `EXEC-ARTISAN-INV-1` — Il comando non può essere vuoto e deve coincidere esattamente (`in_array` strict) con una voce di `allowedCommands`, altrimenti `RuntimeException` prima di qualsiasi esecuzione. Test: `tests/Unit/Actions/ExecuteArtisanCommandActionTest.php`.
+- `EXEC-ARTISAN-INV-2` — Il processo è `php artisan <comando>` nella radice dell'app, con timeout 300 secondi. Test: come sopra.
+- `EXEC-ARTISAN-INV-3` — L'output è raccolto in polling di 50 ms; le righe di stderr sono prefissate `[ERROR]`. Test: come sopra.
+- `EXEC-ARTISAN-INV-4` — `status` è `completed` solo se il processo termina con successo. Test: come sopra.
 
 ## Effetti collaterali
 
-- Avvia un processo `php artisan <command>` (`Illuminate\Support\Facades\Process`) e attende la fine, bloccando la
-  richiesta. Gli effetti sono quelli del comando: l'elenco comprende `migrate` (schema del database),
-  `config:cache`/`route:cache`/`view:cache`/`event:cache`, `queue:restart`, `passport:*` (chiavi e client OAuth).
+Esecuzione di un processo PHP. La lista include comandi che modificano dati o schema: `migrate`, `passport:purge` (cancella token), `passport:keys`, `queue:restart`, più i comandi di cache. Nessuna transazione.
 
 ## Errori
 
-- `Webmozart\Assert\InvalidArgumentException` se `$command` è vuoto.
-- `RuntimeException('Comando non consentito: <cmd>')` se non è in elenco.
-- `RuntimeException("Errore durante l'esecuzione del comando …")` che avvolge qualsiasi eccezione del processo
-  (timeout compreso). Un exit code diverso da 0 **non** è un'eccezione: è `status = 'failed'`.
+- `RuntimeException` per comando non consentito o per errori del processo (incapsulati con il codice originale).
 
 ## Non fa
 
-- Non controlla chi chiama: l'autorizzazione (super-admin) è dei chiamanti, e va ripetuta nel metodo Livewire.
-- Non accetta argomenti separati: un'opzione aggiuntiva rende il comando diverso e quindi rifiutato.
-- Non trasmette l'output in tempo reale al browser né emette eventi (i dispatch `artisan-command.*` sono stati rimossi:
-  vedi il commento in `tests/Unit/Actions/ExecuteArtisanCommandActionTest.php`).
-- Non va estesa aggiungendo comandi distruttivi (`migrate:fresh`, `db:wipe`, `db:seed`) all'elenco.
+- Non accetta argomenti aggiuntivi fuori dalla lista.
+- Da valutare: `migrate` è in lista senza `--force`. Su produzione può applicare migrazioni pendenti: va confrontato con la regola sui dati sacri del progetto prima di mantenerlo.

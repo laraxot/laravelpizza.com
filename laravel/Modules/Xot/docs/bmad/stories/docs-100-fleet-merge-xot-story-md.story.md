@@ -1,4 +1,3 @@
-=======
 ---
 title: "Xot - docs-100-fleet-merge-xot-story-md.story.md"
 module: Xot

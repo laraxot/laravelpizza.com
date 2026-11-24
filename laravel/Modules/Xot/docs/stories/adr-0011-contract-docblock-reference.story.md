@@ -9,7 +9,7 @@ issues: []
 discussions: []
 related:
   - docs/contracts/action-behavioral-contract.md
-  - laravel/Modules/Xot/docs/adr/actions-over-services.md
+  - laravel/Modules/Xot/docs/adr/0001-actions-over-services.md
 ---
 
 # Story: @contract docblock reference on Actions — ADR 0011
@@ -40,4 +40,4 @@ Implementare l'ADR 0011: ogni Action in `Modules/*/app/Actions/*.php` deve avere
 ## GitHub (tracciamento)
 
 - Issue: DA CREARE sul repo `laraxot/module_xot_fila5`
-- Comando: `gh issue create --title "ADR 0011: @contract docblock reference on Actions" --body "Vedi ADR in laravel/Modules/Xot/docs/adr/contract-docblock-reference.md"`
+- Comando: `gh issue create --title "ADR 0011: @contract docblock reference on Actions" --body "Vedi ADR in laravel/Modules/Xot/docs/adr/0011-contract-docblock-reference.md"`

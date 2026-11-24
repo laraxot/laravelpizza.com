@@ -38,4 +38,4 @@ Aggiungere un ADR che vieta l'uso di componenti Livewire standalone in tutti i m
 ## GitHub (tracciamento)
 
 - Issue: DA CREARE sul repo `laraxot/module_xot_fila5`
-- Comando: `gh issue create --title "ADR 0008: No standalone Livewire, usare Filament widget" --body "Vedi ADR in laravel/Modules/Xot/docs/adr/filament-widgets-over-standalone-livewire.md"`
+- Comando: `gh issue create --title "ADR 0008: No standalone Livewire, usare Filament widget" --body "Vedi ADR in laravel/Modules/Xot/docs/adr/0008-filament-widgets-over-standalone-livewire.md"`

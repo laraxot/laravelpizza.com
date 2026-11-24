@@ -5,17 +5,16 @@ type: decision
 module: Xot
 tags: [adr, pest, test, testcase, phpstan]
 created: 2026-11-19
-<<<<<<< HEAD
-updated: 2026-11-19
-=======
 updated: 2026-11-24
->>>>>>> laraxot/dev
-status: accepted
+status: superseded by 0007-module-local-pest-testcase-binding.md
 related:
   - ../../tests/Unit/ModulePestBootstrapDoesNotBindTestCaseTest.php
   - ../stories/sync-unrelated-histories-repair.story.md
   - ../../../Rating/docs/testing-and-coverage.md
+superseded_by: 0007-module-local-pest-testcase-binding.md
 ---
+
+> Superseded da [0007-module-local-pest-testcase-binding.md](0007-module-local-pest-testcase-binding.md): stessa decisione (TestCase Pest legato per file); questo file resta come evidenza storica con le misure del 2026-11-19. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.
 
 # ADR: il TestCase si lega per file
 
@@ -50,49 +49,31 @@ nulla. Tolto il binding dal `Pest.php` e aggiunto ai file, 110 test che non part
 - Segnale in PHPStan: `Call to an undefined method PHPUnit\Framework\TestCase::<helper>()` in un test
   vuol dire che il file non lega il proprio TestCase.
 
-<<<<<<< HEAD
-=======
 ## Driver della decisione
 
-- runner root e runner locale devono produrre lo stesso bootstrap e lo stesso risultato;
-- il contesto applicativo deve essere visibile nel file che lo richiede, e restare isolato fra moduli e temi;
-- il controllo statico deve risolvere il TestCase corretto, con una diagnosi PHPStan affidabile sui metodi del
-  TestCase, senza configurazione globale implicita.
+- runner root e runner locale devono produrre lo stesso bootstrap;
+- il contesto applicativo deve essere visibile nel file che lo richiede;
+- il controllo statico deve risolvere il TestCase corretto senza configurazione
+  globale implicita.
 
->>>>>>> laraxot/dev
 ## Alternative scartate
 
 - **Binding solo nel `Pest.php` del modulo**: non gira col runner di root, che è quello usato da CI e
   dagli agenti.
 - **Binding nel `laravel/tests/Pest.php` per cartella** (`uses(...)->in('../Modules/Cms/tests')`):
   un file di root che conosce ogni modulo, e torna il doppio binding con `--test-directory`.
-<<<<<<< HEAD
 
 ## Guardia
 
-`Modules/Xot/tests/Unit/ModulePestBootstrapDoesNotBindTestCaseTest.php` fallisce se un `Pest.php` di
-modulo o tema torna a legare un TestCase.
-=======
-- **Test che dipendono implicitamente da un bootstrap non visibile nel file**: il contesto del test non si legge
-  e cambia a seconda del runner.
+## Conferma
+
+`ModulePestBootstrapDoesNotBindTestCaseTest` controlla che i bootstrap dei
+moduli non registrino un TestCase globale. I test applicativi modificati sono
+verificati con il runner Pest dal contesto `laravel/`.
 
 ## Conseguenze
 
-- Buono: lo stesso file di test passa col runner di root e con `--test-directory`; il binding si vede nel file, e i
-  test si eseguono dal root senza dipendenze implicite.
-- Cattivo: una riga `uses(...)` ripetuta in ogni file che usa l'applicazione, costo intenzionale in cambio della
-  prevedibilità; chi la dimentica lo scopre da PHPStan (`Call to an undefined method
-  PHPUnit\Framework\TestCase::<helper>()`) o dal test che fallisce.
+Il binding per file rende i test eseguibili nello stesso modo dal runner root e dal runner locale del modulo.
 
-## Conferma
-
-- `ModulePestBootstrapDoesNotBindTestCaseTest` controlla che i bootstrap dei moduli non registrino un TestCase
-  globale.
-- I test applicativi modificati sono verificati con il runner Pest dal contesto `laravel/`; un test applicativo senza
-  `uses(...)` si corregge prima del merge.
-
-## Verifica
-
-`cd laravel && vendor/bin/pest Modules/Xot/tests/Unit/ModulePestBootstrapDoesNotBindTestCaseTest.php` fallisce se un
-`Pest.php` di modulo o tema torna a legare un TestCase (`Modules/Xot/tests/Unit/ModulePestBootstrapDoesNotBindTestCaseTest.php`).
->>>>>>> laraxot/dev
+`Modules/Xot/tests/Unit/ModulePestBootstrapDoesNotBindTestCaseTest.php` fallisce se un `Pest.php` di
+modulo o tema torna a legare un TestCase.

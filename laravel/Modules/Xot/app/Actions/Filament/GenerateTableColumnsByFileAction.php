@@ -19,6 +19,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Finder\SplFileInfo as File;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/generate-table-columns-by-file-action.md
+ * @contract docs/contracts/generate-table-columns-by-file-action.md
+ */
 class GenerateTableColumnsByFileAction
 {
     // use CanGenerateForms; // Non disponibile in Filament v4

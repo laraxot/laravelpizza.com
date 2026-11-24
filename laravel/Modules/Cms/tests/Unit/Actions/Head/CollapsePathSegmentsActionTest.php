@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Unit\Actions\Head;
 
 use Modules\Cms\Actions\Head\CollapsePathSegmentsAction;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -19,7 +15,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('a path is reduced to the form the router serves', function (string $path, string $expected): void {
     Assert::assertSame($expected, (new CollapsePathSegmentsAction)->execute($path), $path);
 })->with([

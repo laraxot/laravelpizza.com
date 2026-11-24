@@ -7,16 +7,11 @@ namespace Modules\Cms\Tests\Feature\Auth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt as LivewireVolt;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\actingAs;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -24,7 +19,6 @@ use function Pest\Laravel\actingAs;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 describe('Login Http', function (): void {
     test('login page can be rendered', function (): void {
         $locale = app()->getLocale();

@@ -207,5 +207,5 @@ Nel messaggio di commit va scritto **quali moduli consumatori** sono stati verif
 ## Riferimenti
 
 - [Contratti](README.md) — indice dei contratti del modulo
-- [ADR: Action invece di Service](../adr/actions-over-services.md)
+- [ADR: Action invece di Service](../adr/0001-actions-over-services.md)
 - [ADR: test di architettura con Pest arch](../adr/architecture-tests-pest-arch.md)

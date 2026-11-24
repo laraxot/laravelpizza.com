@@ -13,6 +13,8 @@ use Spatie\QueueableAction\QueueableAction;
  * I componenti di Ptv (filtri anno, azioni di import, ...) sono usati da piu' moduli: passano il
  * modello della tabella (o la pagina) e ricevono gli `anni` della SettingPage di quel modulo.
  * Se il modulo non ha anni configurabili, resta l'elenco che il componente aveva nel codice.
+ * @see docs/contracts/get-year-options-action.md
+ * @contract docs/contracts/get-year-options-action.md
  */
 class GetYearOptionsAction
 {

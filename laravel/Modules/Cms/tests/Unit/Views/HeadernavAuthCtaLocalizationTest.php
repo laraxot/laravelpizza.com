@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -16,7 +12,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('headernav auth ctas use theme localization keys and not legacy auth keys', function (): void {
     $paths = [
         base_path('Modules/Cms/resources/views/components/headernav/simple.blade.php'),

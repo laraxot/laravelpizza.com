@@ -15,6 +15,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/xls-by-model-class-action.md
+ * @contract docs/contracts/xls-by-model-class-action.md
+ */
 class XlsByModelClassAction
 {
     use QueueableAction;

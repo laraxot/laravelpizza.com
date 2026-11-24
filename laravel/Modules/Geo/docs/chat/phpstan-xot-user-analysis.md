@@ -45,8 +45,6 @@ qmd: "phpstan xot user analysis"
 issues: []
 discussions: []
 *Analisi: 2026-06-15 · Memory: 2GB · Tempo: ~2min per modulo*
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `phpstan-xot-user-analysis-2026-06-15.md` (2026-06-15)
 
@@ -86,4 +84,3 @@ qmd: "phpstan xot user analysis 2026 06 15"
 issues: []
 discussions: []
 *Analisi: 2026-06-15 · Memory: 2GB · Tempo: ~2min per modulo*
->>>>>>> laraxot/dev

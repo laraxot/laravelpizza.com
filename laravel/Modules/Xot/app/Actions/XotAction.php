@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\User\Models\Tenant;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/xot-action.md
+ * @contract docs/contracts/xot-action.md
+ */
 class XotAction
 {
     use QueueableAction;

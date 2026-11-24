@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 use Modules\Cms\Models\BaseModelLang;
 use Modules\Cms\Models\Section;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -18,7 +14,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('Section model can be instantiated', function () {
     Assert::assertSame(Section::class, (new Section)::class);
 

@@ -5,26 +5,13 @@ module: Xot
 epic: quality
 status: done
 created: 2026-09-29
-<<<<<<< HEAD
-updated: 2026-09-29
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [quality, git, phpstan, bootstrap, fleet-blocking]
 issues: []
 discussions: []
 related:
   - "./5.254-list-page-table-hooks.story.md"
   - "../../../Progressioni/docs/bmad/stories/ceddiffs-table-class-migration-pending-20260929.story.md"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< .merge_file_2aV7Zi
----
-=======
-=======
->>>>>>> .merge_file_NfDl9p
->>>>>>> laraxot/dev
 
 # Marker di conflitto Git irrisolti — bloccavano tutta la fleet
 
@@ -154,8 +141,6 @@ di ogni run pesante, dato quanto costa in tempo-fleet un bootstrap fatal silenzi
 ## Nota sui link
 
 La story correlata `ceddiffs-table-class-migration-pending-20260929` vive nel modulo Progressioni, non presente in questo repo: il link relativo in `related` era rotto ed e' stato rimosso.
-<<<<<<< HEAD
-=======
 
 ## Wave docs 2026-11-23 (solo `Modules/Xot/docs`)
 
@@ -163,4 +148,3 @@ Marker annidati `.merge_file_*` in documentazione fondazione: **38 file**
 risolti (innermost-first; HEAD preferito; single `phpstan.neon` / no
 `@phpstan-ignore` non contraddetti). Gate:
 `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/Xot/docs` → vuoto.
->>>>>>> laraxot/dev

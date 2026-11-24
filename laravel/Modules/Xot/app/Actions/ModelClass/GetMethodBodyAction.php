@@ -10,6 +10,10 @@ use Webmozart\Assert\Assert;
 
 use function Safe\file;
 
+/**
+ * @see docs/contracts/get-method-body-action.md
+ * @contract docs/contracts/get-method-body-action.md
+ */
 class GetMethodBodyAction
 {
     use QueueableAction;

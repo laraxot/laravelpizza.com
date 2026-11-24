@@ -22,6 +22,9 @@ use Webmozart\Assert\Assert;
  * - Robustezza: Gestisce tutti i casi edge e mantiene type safety
  * - Laravel Way: Rispetta l'architettura Eloquent
  * - Assert: Utilizza webmozart/assert per validazioni robuste
+ *
+ * @see docs/contracts/safe-attribute-cast-action.md
+ * @contract docs/contracts/safe-attribute-cast-action.md
  */
 class SafeAttributeCastAction
 {

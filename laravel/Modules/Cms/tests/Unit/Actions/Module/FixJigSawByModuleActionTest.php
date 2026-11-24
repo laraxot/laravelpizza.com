@@ -5,10 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\File;
 use Mockery\MockInterface;
 use Modules\Cms\Actions\Module\FixJigSawByModuleAction;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use Nwidart\Modules\Laravel\Module;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Finder\SplFileInfo;
@@ -18,8 +15,6 @@ use function Safe\mkdir;
 use function Safe\rmdir;
 use function Safe\unlink;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -27,7 +22,6 @@ use function Safe\unlink;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('FixJigSawByModuleAction can be instantiated', function () {
     Assert::assertTrue(class_exists(FixJigSawByModuleAction::class));
 });

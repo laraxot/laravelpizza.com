@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Config;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-tenant-config-array-action.md
+ * @contract docs/contracts/get-tenant-config-array-action.md
+ */
 class GetTenantConfigArrayAction
 {
     use QueueableAction;

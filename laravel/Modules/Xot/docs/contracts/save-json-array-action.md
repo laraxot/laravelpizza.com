@@ -1,45 +1,43 @@
 ---
-title: "Contratto — SaveJsonArrayAction"
+title: "SaveJsonArrayAction — contratto"
 type: contract
-action: "Modules\Xot\Actions\Arr\SaveJsonArrayAction"
-tags: [contract, action, file, array, json]
-created: 2026-11-24
+owner: Xot
+status: accepted
 updated: 2026-11-24
+action: "Modules\\Xot\\Actions\\Arr\\SaveJsonArrayAction"
+qmd: "SaveJsonArrayAction salva array JSON pretty print crea cartella file_put_contents Safe sovrascrive"
 ---
 
 # SaveJsonArrayAction
 
-Sorgente: `app/Actions/Arr/SaveJsonArrayAction.php`. Si chiama di solito tramite [SaveArrayAction](save-array-action.md)
-con `'json'`; la usano i model che tengono le righe su file JSON del tenant (`Tenant/app/Actions/Json/*`).
+Scrive un array come JSON formattato su file, creando la cartella se manca. Codice: `app/Actions/Arr/SaveJsonArrayAction.php:13-29`.
 
 ## Input
 
-- `array<int|string, mixed> $data`.
-- `string $filename`: percorso assoluto.
+- `array<int|string, mixed> $data` (`execute`, riga 20).
+- `string $filename`: percorso assoluto o relativo di destinazione (riga 20).
 
 ## Output
 
-- `bool`: `true` a scrittura riuscita.
+- `bool`: `(bool)` dei byte scritti da `Safe\file_put_contents` (riga 28).
 
 ## Invarianti
 
-| ID | Regola | Group Pest |
-|---|---|---|
-| XOT-SAVE-JSON-INV-1 | Il file decodificato (`json_decode(…, true)`) ritorna esattamente `$data`, anche quando è `[]`. | `XOT-SAVE-JSON-INV-1` |
-| XOT-SAVE-JSON-INV-2 | La cartella del file viene creata se manca (installazione nuova di un tenant). | — |
+| ID | Regola | Prova nel codice | Test esistente |
+|---|---|---|---|
+| `ARR-SAVEJSON-INV-1` | Il contenuto è `Safe\json_encode($data, JSON_PRETTY_PRINT)`. | riga 22 | `tests/Unit/Actions/ArrayArrActionsTest.php:96`, `tests/Unit/Actions/Arr/SaveArrayActionsTest.php:34` |
+| `ARR-SAVEJSON-INV-2` | La cartella del file viene creata (`File::ensureDirectoryExists`) prima della scrittura. | riga 26 | Test: nessuno |
+| `ARR-SAVEJSON-INV-3` | Un file esistente viene sovrascritto senza backup. | riga 28 | Test: nessuno |
 
 ## Effetti collaterali
 
-- `File::ensureDirectoryExists(dirname($filename))`: può creare cartelle.
-- `Safe\file_put_contents` con `JSON_PRETTY_PRINT`: sovrascrive il file intero.
+Ordine: encode in memoria, creazione della cartella, scrittura del file. Nessuna transazione, nessun evento, nessuna coda.
 
 ## Errori
 
-- `Safe\Exceptions\JsonException` se `$data` non è codificabile (UTF-8 non valido, risorse).
-- `Safe\Exceptions\FilesystemException` se il file non è scrivibile.
+- Le funzioni `Safe\*` lanciano eccezioni su encode o I/O fallito. Nessuna gestione locale.
 
 ## Non fa
 
-- Non usa `JSON_UNESCAPED_UNICODE` né `JSON_UNESCAPED_SLASHES`: accenti e `/` escono come `è` e `\/`.
-- Non distingue lista da oggetto per un array vuoto: `[]` si scrive come `[]`, mai `{}`.
-- Non scrive in modo atomico né prende lock.
+- Non scrive in modo atomico (nessun file temporaneo + rename).
+- Marker `@contract` aggiunto nel docblock della classe.

@@ -18,6 +18,8 @@ use Webmozart\Assert\Assert;
  * This action generates PDF content from an Eloquent model using automatic view
  * convention discovery. It's designed for email attachments, storage operations,
  * and other use cases requiring binary PDF content.
+ * @see docs/contracts/get-pdf-content-by-record-action.md
+ * @contract docs/contracts/get-pdf-content-by-record-action.md
  */
 class GetPdfContentByRecordAction
 {

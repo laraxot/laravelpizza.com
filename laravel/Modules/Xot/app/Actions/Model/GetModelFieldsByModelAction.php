@@ -10,6 +10,10 @@ namespace Modules\Xot\Actions\Model;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-model-fields-by-model-action.md
+ * @contract docs/contracts/get-model-fields-by-model-action.md
+ */
 class GetModelFieldsByModelAction
 {
     use QueueableAction;

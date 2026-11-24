@@ -9,6 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Spipu\Html2Pdf\Html2Pdf;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/spatie-pdf-by-html-action.md
+ * @contract docs/contracts/spatie-pdf-by-html-action.md
+ */
 class SpatiePdfByHtmlAction
 {
     use QueueableAction;

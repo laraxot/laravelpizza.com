@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Config;
 use Modules\Cms\Actions\GetStyleClassAction;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -18,7 +14,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('GetStyleClassAction can be executed', function () {
     Assert::assertTrue(class_exists(GetStyleClassAction::class));
 });

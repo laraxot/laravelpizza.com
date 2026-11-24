@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Http\Request;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-use Symfony\Component\HttpFoundation\Response;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +15,6 @@ use Symfony\Component\HttpFoundation\Response;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('PageSlugMiddleware can be instantiated', function () {
     Assert::assertSame(PageSlugMiddleware::class, (new PageSlugMiddleware)::class);
 

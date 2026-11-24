@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\String;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-str-between-starts-with-action.md
+ * @contract docs/contracts/get-str-between-starts-with-action.md
+ */
 class GetStrBetweenStartsWithAction
 {
     use QueueableAction;

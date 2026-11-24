@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Module;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-module-config-action.md
+ * @contract docs/contracts/get-module-config-action.md
+ */
 class GetModuleConfigAction
 {
     use QueueableAction;

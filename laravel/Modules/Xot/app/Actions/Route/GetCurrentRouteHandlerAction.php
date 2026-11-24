@@ -14,6 +14,9 @@ use Spatie\QueueableAction\QueueableAction;
  * E' il punto unico da cui ricavano modulo, controller, azione e vista le altre
  * `GetCurrentRoute*Action`. Una route a closure non ha un handler `controller`: da li'
  * non si puo' ricavare nulla, quindi si lancia invece di restituire `Closure`.
+ *
+ * @see docs/contracts/get-current-route-handler-action.md
+ * @contract docs/contracts/get-current-route-handler-action.md
  */
 class GetCurrentRouteHandlerAction
 {

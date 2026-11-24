@@ -11,8 +11,7 @@ use function Safe\file_put_contents;
 use function Safe\json_encode;
 
 /**
- * Scrive un array come JSON, creando la cartella se manca.
- *
+ * @see docs/contracts/save-json-array-action.md
  * @contract docs/contracts/save-json-array-action.md
  */
 class SaveJsonArrayAction

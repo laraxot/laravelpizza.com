@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/guess-pivot-full-class-action.md
+ * @contract docs/contracts/guess-pivot-full-class-action.md
+ */
 class GuessPivotFullClassAction
 {
     use QueueableAction;

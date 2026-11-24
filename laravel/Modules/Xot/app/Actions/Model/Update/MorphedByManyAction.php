@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/update-morphed-by-many-action.md
+ * @contract docs/contracts/update-morphed-by-many-action.md
+ */
 class MorphedByManyAction
 {
     use QueueableAction;

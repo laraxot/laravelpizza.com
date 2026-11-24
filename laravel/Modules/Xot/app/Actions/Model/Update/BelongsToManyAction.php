@@ -12,6 +12,10 @@ use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/update-belongs-to-many-action.md
+ * @contract docs/contracts/update-belongs-to-many-action.md
+ */
 class BelongsToManyAction
 {
     use QueueableAction;

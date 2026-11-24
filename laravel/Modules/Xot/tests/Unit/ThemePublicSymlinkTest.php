@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Modules\Xot\Tests\TestCase;
-<<<<<<< HEAD
-=======
 use Symfony\Component\Process\Process;
->>>>>>> laraxot/dev
 
 use function Safe\file_get_contents;
 use function Safe\glob;
@@ -113,8 +110,6 @@ it('nessun tema conserva lo script npm copy', function (?string $link, ?string $
 
     expect(file_get_contents($packageJson))->not->toContain('"copy"');
 })->with(publicAssetLinks('themes', 'Themes/*/public', false));
-<<<<<<< HEAD
-=======
 
 it('il repo base non versiona copie ne link in public_html/assets e public_html/themes', function (): void {
     $repoRoot = themePublicSymlinkRepoRoot();
@@ -136,4 +131,3 @@ it('il repo base non versiona copie ne link in public_html/assets e public_html/
         'public_html/themes/.gitignore',
     ]);
 });
->>>>>>> laraxot/dev

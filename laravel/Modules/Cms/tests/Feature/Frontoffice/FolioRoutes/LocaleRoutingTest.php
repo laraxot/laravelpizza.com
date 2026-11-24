@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Feature\Frontoffice\FolioRoutes;
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -19,7 +15,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 /**
  * @return list<string>
  */

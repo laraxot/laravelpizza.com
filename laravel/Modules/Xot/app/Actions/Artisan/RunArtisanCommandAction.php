@@ -16,6 +16,8 @@ use function Safe\fopen;
  *
  * Runs a single artisan command via the Artisan facade and returns its
  * output wrapped in a `<pre>` block, or the exception message on failure.
+ * @see docs/contracts/run-artisan-command-action.md
+ * @contract docs/contracts/run-artisan-command-action.md
  */
 class RunArtisanCommandAction
 {

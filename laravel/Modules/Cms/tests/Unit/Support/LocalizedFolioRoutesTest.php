@@ -4,16 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Support;
 
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 
 use function Safe\parse_url;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -21,7 +16,6 @@ use function Safe\parse_url;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 /**
  * DCP-123: le rotte Folio hanno lo stesso nome in ogni lingua e vinceva l'ultima registrata (`it`),
  * quindi `route('container0.view')` rimandava a `/it/...` anche da `/en`, `/de`, `/es`.

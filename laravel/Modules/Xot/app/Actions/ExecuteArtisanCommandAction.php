@@ -10,7 +10,11 @@ use Webmozart\Assert\Assert;
 
 /**
  * Classe per eseguire comandi Artisan in modo sicuro.
+<<<<<<< HEAD
+ * @see docs/contracts/execute-artisan-command-action.md
+=======
  *
+>>>>>>> cd6ae37eb (fix: remove HasCommonScopes from XotBaseModel for PHPStan Modules zero)
  * @contract docs/contracts/execute-artisan-command-action.md
  */
 class ExecuteArtisanCommandAction

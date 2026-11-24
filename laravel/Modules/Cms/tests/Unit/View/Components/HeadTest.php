@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\View\Components;
 
-<<<<<<< HEAD
-use Modules\Cms\View\Components\Head;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\Cms\View\Components\Head;
 use PHPUnit\Framework\Assert;
@@ -20,7 +15,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('Head is a class-based component with an optional page title', function (): void {
     $component = new Head('Pagina servizi');
 

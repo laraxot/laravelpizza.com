@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Filament\Actions;
 use Filament\Actions\Action;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/export-button.md
+ * @contract docs/contracts/export-button.md
+ */
 class ExportButton
 {
     use QueueableAction;

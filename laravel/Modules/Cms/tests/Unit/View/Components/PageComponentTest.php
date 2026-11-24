@@ -2,11 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Modules\Cms\View\Components\Page;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\Cms\View\Components\Page;
 use PHPUnit\Framework\Assert;
@@ -18,7 +13,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 /*
 
  * Pure unit tests for Modules\Cms\View\Components\Page (the Blade VIEW component).

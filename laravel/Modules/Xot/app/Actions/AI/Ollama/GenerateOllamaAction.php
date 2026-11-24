@@ -13,6 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
+/**
+ * @see docs/contracts/generate-ollama-action.md
+ * @contract docs/contracts/generate-ollama-action.md
+ */
 class GenerateOllamaAction
 {
     use QueueableAction;

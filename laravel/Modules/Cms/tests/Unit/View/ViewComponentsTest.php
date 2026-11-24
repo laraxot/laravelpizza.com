@@ -2,21 +2,16 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/metatag-population-strategy.md
  */
 
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use Modules\Cms\View\Components\AppLayout;
 use Modules\Cms\View\Components\GuestLayout;
 use Modules\Cms\View\Components\Metatags;
 use PHPUnit\Framework\Assert;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -24,7 +19,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('AppLayout component can be instantiated', function () {
     $component = new AppLayout;
     Assert::assertSame(AppLayout::class, $component::class);

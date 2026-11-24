@@ -13,6 +13,9 @@ use function Safe\preg_replace;
  *
  * Questa action centralizza la logica di normalizzazione dei nomi dei driver
  * per evitare duplicazione di codice e garantire consistenza in tutta l'applicazione.
+ *
+ * @see docs/contracts/normalize-driver-name-action.md
+ * @contract docs/contracts/normalize-driver-name-action.md
  */
 class NormalizeDriverNameAction
 {

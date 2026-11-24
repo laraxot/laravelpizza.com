@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\File;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/create-directory-for-filename-action.md
+ * @contract docs/contracts/create-directory-for-filename-action.md
+ */
 class CreateDirectoryForFilenameAction
 {
     use QueueableAction;

@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Schema;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-fieldnames-by-tablename-action.md
+ * @contract docs/contracts/get-fieldnames-by-tablename-action.md
+ */
 final class GetFieldnamesByTablenameAction
 {
     use QueueableAction;

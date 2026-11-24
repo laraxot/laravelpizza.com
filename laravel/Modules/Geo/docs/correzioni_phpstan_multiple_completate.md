@@ -3,11 +3,7 @@ title: "Correzioni Phpstan Multiple Completate"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "Correzioni Phpstan Multiple Completate"
 issues: []
 discussions: []

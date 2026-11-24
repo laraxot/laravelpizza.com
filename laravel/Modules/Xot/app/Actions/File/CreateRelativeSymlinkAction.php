@@ -19,6 +19,8 @@ use function Safe\symlink;
  * percorso: altro utente o home, container, cartella di release, copia da sviluppo a produzione.
  * Quello relativo dipende solo dalla struttura del repository, quindi funziona ovunque e si può
  * anche versionare.
+ * @see docs/contracts/create-relative-symlink-action.md
+ * @contract docs/contracts/create-relative-symlink-action.md
  */
 class CreateRelativeSymlinkAction
 {

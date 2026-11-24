@@ -24,6 +24,9 @@ use function Safe\preg_replace;
  * for every recursive step of one algorithm, which is not what the
  * Action-per-independent-operation shape is for. They are kept as private
  * methods of this single execute() entrypoint instead.
+ *
+ * @see docs/contracts/register-dynamic-routes-action.md
+ * @contract docs/contracts/register-dynamic-routes-action.md
  */
 class RegisterDynamicRoutesAction
 {

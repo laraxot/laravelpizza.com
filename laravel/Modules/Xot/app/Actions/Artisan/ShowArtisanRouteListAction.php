@@ -11,6 +11,8 @@ use Webmozart\Assert\Assert;
 
 /**
  * Replaces Modules\Xot\Services\ArtisanService::showRouteList().
+ * @see docs/contracts/show-artisan-route-list-action.md
+ * @contract docs/contracts/show-artisan-route-list-action.md
  */
 class ShowArtisanRouteListAction
 {

@@ -1,12 +1,6 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< HEAD
-use Modules\Cms\Tests\TestCase;
-
-uses(TestCase::class);
-
-=======
 
 use Modules\Cms\Tests\TestCase;
 
@@ -17,7 +11,6 @@ use Modules\Cms\Tests\TestCase;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 /** @see Modules/Cms/docs/bmad/folio-volt-sole-owner.md */
->>>>>>> laraxot/dev
 it('SKIP dynamic /it/auth/{type}/register', function (): void {
     $this->markTestSkipped('Dynamic type route requires fixture.');
 });

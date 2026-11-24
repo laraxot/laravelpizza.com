@@ -11,11 +11,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 it('has correct base URL', function (): void {
-<<<<<<< HEAD
-    $service = new HereService;
-=======
     $service = new HereService();
->>>>>>> laraxot/dev
     Assert::assertSame('https://router.hereapi.com/v8/routes', $service->base_url);
 });
 

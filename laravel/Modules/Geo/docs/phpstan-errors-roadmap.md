@@ -462,8 +462,6 @@ Assert::string($config);      // now string
 **Autore**: Claude Code (Sonnet 4.5)
 
 **Revisione**: Required after all fixes implemented
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `phpstan-errors-roadmap-2026-01-12.md` (2026-01-12)
 
@@ -920,4 +918,3 @@ Assert::string($config);      // now string
 **Autore**: Claude Code (Sonnet 4.5)
 
 **Revisione**: Required after all fixes implemented
->>>>>>> laraxot/dev

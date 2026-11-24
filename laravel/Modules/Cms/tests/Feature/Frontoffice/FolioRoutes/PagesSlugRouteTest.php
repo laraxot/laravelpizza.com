@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
 
 // Senza questo binding le closure di `test()`/`it()` restano legate a
@@ -13,7 +11,6 @@ use Modules\Cms\Tests\TestCase;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 it('SKIP dynamic /it/pages/{slug}', function (): void {
     $this->markTestSkipped('Dynamic pages slug requires fixture.');
 });

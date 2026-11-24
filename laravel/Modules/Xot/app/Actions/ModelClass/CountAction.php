@@ -10,6 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Counts records for a given model class using optimized table information.
+ *
+ * @see docs/contracts/count-action.md
+ * @contract docs/contracts/count-action.md
  */
 class CountAction
 {

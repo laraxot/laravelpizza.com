@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/model-class-copy-from-last-year-action.md
+ * @contract docs/contracts/model-class-copy-from-last-year-action.md
+ */
 class CopyFromLastYearAction
 {
     use QueueableAction;

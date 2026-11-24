@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\View;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-view-path-action.md
+ * @contract docs/contracts/get-view-path-action.md
+ */
 class GetViewPathAction
 {
     use QueueableAction;

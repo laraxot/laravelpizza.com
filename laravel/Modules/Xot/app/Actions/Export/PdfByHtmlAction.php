@@ -9,6 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Spipu\Html2Pdf\Html2Pdf;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/export-pdf-by-html-action.md
+ * @contract docs/contracts/export-pdf-by-html-action.md
+ */
 class PdfByHtmlAction
 {
     use QueueableAction;

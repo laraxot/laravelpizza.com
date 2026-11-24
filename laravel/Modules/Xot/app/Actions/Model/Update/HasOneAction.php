@@ -16,6 +16,8 @@ use Webmozart\Assert\Assert;
  * Handles the update operation for HasOne relationships in Eloquent models.
  *
  * @template TModel of Model
+ * @see docs/contracts/update-has-one-action.md
+ * @contract docs/contracts/update-has-one-action.md
  */
 class HasOneAction
 {

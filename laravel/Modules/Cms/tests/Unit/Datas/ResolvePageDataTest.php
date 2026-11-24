@@ -3,11 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Cms\Datas\ResolvePageData;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-use Spatie\LaravelData\Data;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\LaravelData\Data;
@@ -19,7 +14,6 @@ use Spatie\LaravelData\Data;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('ResolvePageData can be instantiated with constructor', function (): void {
     $data = new ResolvePageData('folio', null, 'home');
 

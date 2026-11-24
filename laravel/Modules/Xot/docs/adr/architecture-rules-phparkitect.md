@@ -5,8 +5,8 @@ type: decision
 module: Xot
 tags: [adr, architettura, phparkitect, pest, ci, qualita]
 created: 2026-11-18
-updated: 2026-11-18
-status: superseded
+updated: 2026-11-24
+status: superseded by architecture-tests-pest-arch.md
 superseded_by: architecture-tests-pest-arch.md
 issues:
   - "progetto ospite #732"
@@ -16,6 +16,8 @@ related:
   - ../../tests/Unit/Docs/ModuleCodeIsProjectAgnosticTest.php
   - ../rules/action-behavioral-contract.md
 ---
+
+> Superseded da [architecture-tests-pest-arch.md](architecture-tests-pest-arch.md): PHPArkitect con baseline sostituito da Pest arch(). Nessuna decisione nuova: il canonico prevale, questo file non va esteso.
 
 # ADR: le regole architetturali sulle classi si verificano con PHPArkitect, con baseline
 
@@ -74,8 +76,6 @@ Proposta (da confermare, aggiunge una dipendenza di sviluppo):
 - **PHPat** (estensione di PHPStan): sfrutta PHPStan, gia' a zero in CI, ma lega le regole architetturali all'analisi piu'
   lenta del progetto (minuti su tutti i moduli) e non ha una baseline separata da quella di PHPStan.
 
-<<<<<<< HEAD
-=======
 ## Driver della decisione
 
 - evitare di perdere la motivazione storica della migrazione a Pest arch();
@@ -89,7 +89,6 @@ Questo ADR e' verificato come `superseded` dal link a
 devono essere aggiunte alla suite Pest arch() e non a una configurazione
 PHPArkitect separata.
 
->>>>>>> laraxot/dev
 ## Conseguenze
 
 - Una dipendenza di sviluppo in piu'; nessun codice di produzione cambia.
@@ -100,11 +99,3 @@ PHPArkitect separata.
 - Rischio: la «mirror al root» riporta codice vecchio dai repository dei moduli; la baseline lo intercetta solo se il job CI
   gira. Il job CI del progetto ospite oggi non parte (limite di spesa di GitHub Actions dell'account): finche' non riparte,
   il pre-commit e' l'unico punto di controllo.
-<<<<<<< HEAD
-=======
-
-## Verifica
-
-Superseded: la verifica è quella di [architecture-tests-pest-arch](architecture-tests-pest-arch.md). Nessun controllo
-PHPArkitect resta attivo.
->>>>>>> laraxot/dev

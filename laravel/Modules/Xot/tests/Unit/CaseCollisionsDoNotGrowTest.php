@@ -30,8 +30,6 @@ function repoRoot(): string
     return \dirname(__DIR__, 5);
 }
 
-<<<<<<< HEAD
-=======
 /**
  * Lo strumento di audit sta in un'**altra repository**.
  *
@@ -48,7 +46,6 @@ function collisionAuditMissing(): bool
     return ! is_file(repoRoot().'/bashscripts/tools/audit/audit-case-collisions.py');
 }
 
->>>>>>> laraxot/dev
 function collisionGroups(): int
 {
     $root = repoRoot();
@@ -102,12 +99,8 @@ it('non introduce nuove collisioni case-insensitive', function (): void {
     if ($current < $baseline) {
         file_put_contents($baselineFile, $current."\n");
     }
-<<<<<<< HEAD
-});
-=======
 })->skip(
     // Non `static`: Pest lega la closure di skip all'istanza del test case.
     fn (): bool => collisionAuditMissing(),
     'Richiede la repo laraxot/bashscripts_fila5 clonata accanto a laravel/ (base_quaeris_fila5#244).',
 );
->>>>>>> laraxot/dev

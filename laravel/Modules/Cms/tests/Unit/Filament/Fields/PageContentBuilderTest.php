@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Cms\Filament\Fields\PageContentBuilder;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -17,7 +13,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('PageContentBuilder can be instantiated', function () {
     $field = PageContentBuilder::make('content');
 

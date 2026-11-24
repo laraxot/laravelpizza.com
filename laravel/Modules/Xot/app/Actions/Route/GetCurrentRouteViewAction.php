@@ -8,6 +8,10 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-current-route-view-action.md
+ * @contract docs/contracts/get-current-route-view-action.md
+ */
 class GetCurrentRouteViewAction
 {
     use QueueableAction;

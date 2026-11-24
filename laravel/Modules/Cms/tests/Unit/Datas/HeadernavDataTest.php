@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 use Livewire\Wireable;
 use Modules\Cms\Datas\HeadernavData;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-use Spatie\LaravelData\Data;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\LaravelData\Data;
@@ -20,7 +15,6 @@ use Spatie\LaravelData\Data;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('HeadernavData can be instantiated', function (): void {
     $headernavData = new HeadernavData;
 

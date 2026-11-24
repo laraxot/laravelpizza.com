@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Trend\Format;
 
+/**
+ * @see docs/contracts/sqlite-format-action.md
+ * @contract docs/contracts/sqlite-format-action.md
+ */
 class SqliteFormatAction extends BaseFormatAction
 {
     #[\Override]

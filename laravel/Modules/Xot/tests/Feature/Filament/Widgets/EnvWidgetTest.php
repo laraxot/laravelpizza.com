@@ -46,9 +46,6 @@ function envWidgetLoginAs(bool $isSuperAdmin): void
 }
 
 beforeEach(function (): void {
-<<<<<<< HEAD
-    $this->envPath = base_path('.env');
-=======
     // Un file di ambiente **usa e getta**, non quello della macchina.
     //
     // Qui c'era `base_path('.env')`: questi test scrivevano sul file vero e lo
@@ -81,25 +78,17 @@ beforeEach(function (): void {
 
     config(['xot.env_file' => $this->envPath]);
 
->>>>>>> laraxot/dev
     $this->originalEnvContent = File::get($this->envPath);
     envWidgetLoginAs(true);
 });
 
 afterEach(function (): void {
-<<<<<<< HEAD
-    File::put($this->envPath, $this->originalEnvContent);
-});
-
-it('persists a changed field to the real .env file when the form is submitted', function (): void {
-=======
     if (is_string($this->envPath) && File::exists($this->envPath)) {
         File::delete($this->envPath);
     }
 });
 
 it('persists a changed field to the env file when the form is submitted', function (): void {
->>>>>>> laraxot/dev
     $marker = 'pest-test-'.uniqid('', true);
 
     $widget = new EnvWidget;
@@ -146,11 +135,7 @@ it('mounts with the mail and sms fields pre-filled from the current .env, not em
     expect($data)->toHaveKeys(['mail_mailer', 'mail_host', 'mail_port', 'mail_encryption', 'mail_username', 'mail_password', 'mail_from_address', 'mail_from_name', 'sms_driver', 'netfun_token']);
 });
 
-<<<<<<< HEAD
-it('persists mail_from_address and mail_from_name to the real .env file when changed', function (): void {
-=======
 it('persists mail_from_address and mail_from_name to the env file when changed', function (): void {
->>>>>>> laraxot/dev
     $marker = uniqid('', true);
 
     $widget = new EnvWidget;
@@ -211,11 +196,7 @@ it('does not drop a field that is selected but missing from the GROUPS map', fun
     expect($schema[0])->toBeInstanceOf(Section::class);
 });
 
-<<<<<<< HEAD
-it('refuses to write .env for a user who is not super-admin', function (): void {
-=======
 it('refuses to write the env file for a user who is not super-admin', function (): void {
->>>>>>> laraxot/dev
     envWidgetLoginAs(false);
 
     $widget = new EnvWidget;

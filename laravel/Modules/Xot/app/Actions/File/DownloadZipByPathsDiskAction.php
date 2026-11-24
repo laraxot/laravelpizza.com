@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/download-zip-by-paths-disk-action.md
+ * @contract docs/contracts/download-zip-by-paths-disk-action.md
+ */
 class DownloadZipByPathsDiskAction
 {
     use QueueableAction;

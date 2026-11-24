@@ -9,6 +9,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Replaces Modules\Xot\Services\ArtisanService::errorClear().
+ * @see docs/contracts/clear-artisan-error-log-action.md
+ * @contract docs/contracts/clear-artisan-error-log-action.md
  */
 class ClearArtisanErrorLogAction
 {

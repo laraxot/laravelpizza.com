@@ -16,6 +16,10 @@ use Webmozart\Assert\Assert;
 
 use function Safe\ini_set;
 
+/**
+ * @see docs/contracts/import-csv-action.md
+ * @contract docs/contracts/import-csv-action.md
+ */
 class ImportCsvAction
 {
     use QueueableAction;

@@ -10,6 +10,10 @@ use Modules\Xot\Actions\View\GetViewByModelClassAction;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/pdf-by-model-action.md
+ * @contract docs/contracts/pdf-by-model-action.md
+ */
 class PdfByModelAction
 {
     use QueueableAction;

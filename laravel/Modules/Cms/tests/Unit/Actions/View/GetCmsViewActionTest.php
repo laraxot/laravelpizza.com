@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\View;
 use Modules\Cms\Actions\View\GetCmsViewAction;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -18,7 +14,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('GetCmsViewAction can be instantiated', function () {
     Assert::assertSame(GetCmsViewAction::class, (new GetCmsViewAction)::class);
 

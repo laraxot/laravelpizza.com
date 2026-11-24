@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/guess-pivot-action.md
+ * @contract docs/contracts/guess-pivot-action.md
+ */
 class GuessPivotAction
 {
     use QueueableAction;

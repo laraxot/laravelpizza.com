@@ -14,6 +14,8 @@ use function Safe\glob;
  *
  * Vive in `app/` e non in `tests/`: il codice applicativo non deve dipendere dalla
  * suite di test per sapere dove si trova il database di test.
+ * @see docs/contracts/resolve-shared-sqlite-path-action.md
+ * @contract docs/contracts/resolve-shared-sqlite-path-action.md
  */
 class ResolveSharedSqlitePathAction
 {
