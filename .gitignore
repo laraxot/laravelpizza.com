@@ -144,3 +144,4 @@ laravel/phpunit.coverage*.*
 
 # PID del queue worker locale (file di runtime)
 /cache/
+${CLAUDE_PROJECT_DIR:-.}/
