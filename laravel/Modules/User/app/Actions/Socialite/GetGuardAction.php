@@ -12,13 +12,10 @@ use Illuminate\Contracts\Auth\StatefulGuard;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-guard-action.md
  * @contract docs/contracts/get-guard-action.md
  */
->>>>>>> laraxot/dev
 class GetGuardAction
 {
     use QueueableAction;

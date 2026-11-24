@@ -9,13 +9,10 @@ namespace Modules\User\Actions\Socialite;
 
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-login-redirect-route-action.md
  * @contract docs/contracts/get-login-redirect-route-action.md
  */
->>>>>>> laraxot/dev
 class GetLoginRedirectRouteAction
 {
     use QueueableAction;

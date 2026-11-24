@@ -40,10 +40,7 @@ class LoginWidget extends BaseAuthWidget
 
     /**
      * @return class-string<UserForm>
-<<<<<<< HEAD
-=======
      * @see ../../../../Xot/docs/bmad/livewire-widget-decision-log.md
->>>>>>> laraxot/dev
      */
     protected static function formClass(): string
     {

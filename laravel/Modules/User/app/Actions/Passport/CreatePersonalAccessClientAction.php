@@ -13,12 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Questa action crea un nuovo client OAuth2 con le configurazioni specificate.
  * Invocazione: app(CreateClientAction::class)->execute(...)
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/create-personal-access-client-action.md
  * @contract docs/contracts/create-personal-access-client-action.md
->>>>>>> laraxot/dev
  */
 class CreatePersonalAccessClientAction
 {

@@ -14,10 +14,7 @@ use Modules\User\Enums\AuthThrottleScope;
  * Ogni invio conta, valido o no, e il controllo va fatto PRIMA di validare o scrivere: cosi' chi riempie il modulo in serie non
  * raggiunge ne' la query di unicita' ne' l'invio dell'email. Le chiavi usano l'hash di IP ed email: nella cache non restano dati personali.
  *
-<<<<<<< HEAD
-=======
  * @see docs/contracts/consume-auth-submission-slot-action.md
->>>>>>> laraxot/dev
  * @contract docs/contracts/consume-auth-submission-slot-action.md
  */
 final class ConsumeAuthSubmissionSlotAction

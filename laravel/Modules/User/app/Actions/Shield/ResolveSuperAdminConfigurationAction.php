@@ -12,12 +12,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Raggruppa: isSuperAdminEnabled, getSuperAdminName, isSuperAdminDefinedViaGate,
  * getSuperAdminGateInterceptionStatus
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/resolve-super-admin-configuration-action.md
  * @contract docs/contracts/resolve-super-admin-configuration-action.md
->>>>>>> laraxot/dev
  */
 class ResolveSuperAdminConfigurationAction
 {

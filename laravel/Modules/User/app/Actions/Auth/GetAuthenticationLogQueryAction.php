@@ -11,12 +11,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Restituisce la query builder per i log di autenticazione di un modello autenticabile.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/get-authentication-log-query-action.md
  * @contract docs/contracts/get-authentication-log-query-action.md
->>>>>>> laraxot/dev
  */
 final class GetAuthenticationLogQueryAction
 {

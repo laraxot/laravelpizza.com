@@ -9,13 +9,10 @@ use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Datas\SocialiteEmailDomainAnalysisData;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/analyze-socialite-email-domain-action.md
  * @contract docs/contracts/analyze-socialite-email-domain-action.md
  */
->>>>>>> laraxot/dev
 final class AnalyzeSocialiteEmailDomainAction
 {
     use QueueableAction;

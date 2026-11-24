@@ -14,12 +14,9 @@ use Webmozart\Assert\Assert;
  * Prima `getEmailForPasswordReset()`, se il modello la espone, poi l'attributo `email`.
  * Null se il modello non ha nessuno dei due: chi chiama decide se e come segnalarlo.
  * Un valore che non e' una stringa e' un errore di dati, e la mail non deve partire.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/resolve-notifiable-email-action.md
  * @contract docs/contracts/resolve-notifiable-email-action.md
->>>>>>> laraxot/dev
  */
 final class ResolveNotifiableEmailAction
 {

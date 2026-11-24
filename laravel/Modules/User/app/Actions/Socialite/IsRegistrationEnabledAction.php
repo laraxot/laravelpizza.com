@@ -9,13 +9,10 @@ namespace Modules\User\Actions\Socialite;
 
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/is-registration-enabled-action.md
  * @contract docs/contracts/is-registration-enabled-action.md
  */
->>>>>>> laraxot/dev
 class IsRegistrationEnabledAction
 {
     use QueueableAction;

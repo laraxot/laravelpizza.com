@@ -11,13 +11,10 @@ use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-new-password-action.md
  * @contract docs/contracts/get-new-password-action.md
  */
->>>>>>> laraxot/dev
 class GetNewPasswordAction
 {
     use QueueableAction;

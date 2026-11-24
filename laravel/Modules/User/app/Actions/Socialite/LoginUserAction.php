@@ -17,13 +17,10 @@ use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/login-user-action.md
  * @contract docs/contracts/login-user-action.md
  */
->>>>>>> laraxot/dev
 class LoginUserAction
 {
     use QueueableAction;

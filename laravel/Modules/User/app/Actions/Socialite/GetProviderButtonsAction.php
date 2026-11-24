@@ -9,13 +9,10 @@ namespace Modules\User\Actions\Socialite;
 
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-provider-buttons-action.md
  * @contract docs/contracts/get-provider-buttons-action.md
  */
->>>>>>> laraxot/dev
 class GetProviderButtonsAction
 {
     use QueueableAction;

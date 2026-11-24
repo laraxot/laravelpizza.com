@@ -13,13 +13,10 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/process-callback-action.md
  * @contract docs/contracts/process-callback-action.md
  */
->>>>>>> laraxot/dev
 final class ProcessCallbackAction
 {
     use QueueableAction;

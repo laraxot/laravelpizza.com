@@ -15,13 +15,10 @@ use Laravel\Socialite\Two\InvalidStateException;
 use Modules\User\Events\InvalidState;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/retrieve-oauth-user-action.md
  * @contract docs/contracts/retrieve-oauth-user-action.md
  */
->>>>>>> laraxot/dev
 class RetrieveOauthUserAction
 {
     use QueueableAction;

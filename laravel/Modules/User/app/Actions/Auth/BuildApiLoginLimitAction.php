@@ -15,12 +15,9 @@ use Illuminate\Support\Str;
  * Stesse soglie e stessa chiave del freno G-07 del `LoginWidget` (5 richieste per 60 secondi per `email|IP`, email in minuscolo) e stesso messaggio
  * `user::login.actions.login.throttle`. Una differenza voluta: il widget conta solo i tentativi errati e azzera al successo, il middleware conta
  * ogni richiesta, che per un endpoint API di login e' lo schema standard. Un test blocca la coerenza delle due soglie.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/build-api-login-limit-action.md
  * @contract docs/contracts/build-api-login-limit-action.md
->>>>>>> laraxot/dev
  */
 final class BuildApiLoginLimitAction
 {

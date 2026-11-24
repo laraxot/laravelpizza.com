@@ -7,22 +7,12 @@ namespace Modules\User\Filament\Resources\UserResource\Schemas;
 use Carbon\CarbonInterface;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\CheckboxList;
-<<<<<<< HEAD
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Hidden;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Filament\Schemas\Components\Grid;
-use Filament\Infolists\Components\TextEntry;
-use Filament\Schemas\Components\Component as SchemaComponent;
-=======
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component as SchemaComponent;
 use Filament\Schemas\Components\Grid;
->>>>>>> laraxot/dev
 use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
@@ -31,10 +21,7 @@ use Illuminate\Validation\Rules\Password;
 use Livewire\Component as LivewireComponent;
 use Modules\User\Filament\Forms\Components\UserSection;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
-<<<<<<< HEAD
-=======
 use Modules\User\Models\Role;
->>>>>>> laraxot/dev
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
@@ -103,11 +90,7 @@ class UserForm extends XotBaseResourceForm
                         ->schema([
                             CheckboxList::make('roles')
                                 ->relationship('roles', 'name')
-<<<<<<< HEAD
-                                ->getOptionLabelFromRecordUsing(static fn (Model $record): string => \Modules\User\Models\Role::displayName(SafeStringCastAction::cast($record->getAttribute('name'))))
-=======
                                 ->getOptionLabelFromRecordUsing(static fn (Model $record): string => Role::displayName(SafeStringCastAction::cast($record->getAttribute('name'))))
->>>>>>> laraxot/dev
                                 ->columns(['default' => 1, 'sm' => 2])
                                 ->bulkToggleable(),
                         ]),

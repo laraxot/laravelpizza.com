@@ -17,12 +17,9 @@ use function Safe\class_implements;
  * isWidgetEntityEnabled, isCustomPermissionEntityEnabled, getGeneratorOption,
  * isRolePolicyRegistered, doesResourceHaveCustomPermissions,
  * getResourcePermissionPrefixes, getRoleModel, getPermissionModel, roleResourceExists
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/resolve-permissions-configuration-action.md
  * @contract docs/contracts/resolve-permissions-configuration-action.md
->>>>>>> laraxot/dev
  */
 class ResolvePermissionsConfigurationAction
 {

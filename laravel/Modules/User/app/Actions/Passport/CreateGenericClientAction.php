@@ -9,13 +9,10 @@ use Modules\User\Models\OauthClient;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/create-generic-client-action.md
  * @contract docs/contracts/create-generic-client-action.md
  */
->>>>>>> laraxot/dev
 class CreateGenericClientAction
 {
     use QueueableAction;

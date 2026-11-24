@@ -12,13 +12,10 @@ use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/is-user-allowed-action.md
  * @contract docs/contracts/is-user-allowed-action.md
  */
->>>>>>> laraxot/dev
 class IsUserAllowedAction
 {
     use QueueableAction;

@@ -7,13 +7,10 @@ namespace Modules\User\Actions\Socialite;
 use Modules\User\Exceptions\ProviderNotConfigured;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/validate-provider-action.md
  * @contract docs/contracts/validate-provider-action.md
  */
->>>>>>> laraxot/dev
 class ValidateProviderAction
 {
     use QueueableAction;

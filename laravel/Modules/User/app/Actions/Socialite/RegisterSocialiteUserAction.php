@@ -18,13 +18,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/register-socialite-user-action.md
  * @contract docs/contracts/register-socialite-user-action.md
  */
->>>>>>> laraxot/dev
 class RegisterSocialiteUserAction
 {
     use QueueableAction;

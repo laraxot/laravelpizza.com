@@ -12,12 +12,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Questa action revoca un token di accesso OAuth2, rendendolo immediatamente non valido.
  * Revoca anche il refresh token associato se presente.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/revoke-token-action.md
  * @contract docs/contracts/revoke-token-action.md
->>>>>>> laraxot/dev
  */
 class RevokeTokenAction
 {

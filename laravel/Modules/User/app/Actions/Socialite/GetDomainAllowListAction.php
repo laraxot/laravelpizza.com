@@ -10,13 +10,10 @@ namespace Modules\User\Actions\Socialite;
 use Illuminate\Support\Arr;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-domain-allow-list-action.md
  * @contract docs/contracts/get-domain-allow-list-action.md
  */
->>>>>>> laraxot/dev
 class GetDomainAllowListAction
 {
     use QueueableAction;

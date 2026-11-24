@@ -15,12 +15,9 @@ use function Safe\preg_match;
  * `url.intended` e `LoginWidget::redirectIntended()` lo porterebbe alla dashboard. Il link porta `?redirect=/it/blog/...`: qui il
  * valore diventa `url.intended` solo se e' un percorso interno. Schema, host, `//` e `\` sono rifiutati: il parametro arriva dalla
  * barra degli indirizzi, quindi senza questo controllo il login diventerebbe un redirect aperto verso un sito qualunque.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/store-intended-url-action.md
  * @contract docs/contracts/store-intended-url-action.md
->>>>>>> laraxot/dev
  */
 class StoreIntendedUrlAction
 {

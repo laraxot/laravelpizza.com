@@ -13,13 +13,10 @@ use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/create-socialite-user-action.md
  * @contract docs/contracts/create-socialite-user-action.md
  */
->>>>>>> laraxot/dev
 class CreateSocialiteUserAction
 {
     use QueueableAction;
