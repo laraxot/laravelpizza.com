@@ -27,8 +27,13 @@ use PHPUnit\Framework\Assert;
  * Queste classi esistono solo negli host con lo scheletro completo (ptvx,
  * predict, ...). Gli host con app/ minimale (restaurant, techplanner, ...)
  * non le forniscono: ogni test salta se la classe mancante, invece di fallire.
+<<<<<<< HEAD
  * Assert::assertIs* solo dove il tipo runtime non e' gia' noto a PHPStan
  * (es. elemento di array); mai su return gia' tipizzati (array / const string).
+=======
+ * Assert::assertIs* restringe i valori misti delle classi App\ opzionali
+ * (`hosts()` senza return type, `HOME` costante host): mai cast/`@var` cosmetici.
+>>>>>>> laraxot/dev
  */
 
 uses(TestCase::class);
@@ -39,18 +44,37 @@ test('trust hosts trusts every subdomain of the application url', function (): v
     }
 
     $hostsRaw = (new TrustHosts(app()))->hosts();
+<<<<<<< HEAD
     Assert::assertIsArray($hostsRaw);
     /** @var list<string> $hosts */
     $hosts = [];
     foreach ($hostsRaw as $host) {
         Assert::assertIsString($host);
+=======
+    if (! is_array($hostsRaw)) {
+        Assert::fail('TrustHosts::hosts() deve restituire un array.');
+    }
+
+    $hosts = [];
+    foreach ($hostsRaw as $host) {
+        if (! is_string($host)) {
+            Assert::fail('TrustHosts::hosts() deve restituire solo stringhe.');
+        }
+>>>>>>> laraxot/dev
         $hosts[] = $host;
     }
 
     $appHost = Str::of(Config::string('app.url'))->after('://')->before('/')->value();
 
     Assert::assertCount(1, $hosts);
+<<<<<<< HEAD
     $pattern = $hosts[0];
+=======
+    $pattern = $hosts[0] ?? null;
+    if (! is_string($pattern)) {
+        Assert::fail('TrustHosts deve produrre esattamente un pattern stringa.');
+    }
+>>>>>>> laraxot/dev
     // Il pattern di Laravel e' `^(.+\.)?<host quotato>$`: verifichiamo che copra
     // sia il dominio nudo sia un suo sottodominio, senza replicarne la stringa.
     Assert::assertMatchesRegularExpression('#'.$pattern.'#', $appHost);
@@ -109,9 +133,16 @@ test('redirect if authenticated sends an authenticated user home', function (): 
     );
 
     Assert::assertInstanceOf(RedirectResponse::class, $response);
+<<<<<<< HEAD
     // HOME e' una costante dell'app host: per PHPStan e' mixed finche' non si controlla che sia una stringa.
     $home = RouteServiceProvider::HOME;
     Assert::assertIsString($home);
+=======
+    $home = RouteServiceProvider::HOME;
+    if (! is_string($home)) {
+        Assert::fail('RouteServiceProvider::HOME deve essere una stringa.');
+    }
+>>>>>>> laraxot/dev
     Assert::assertSame(url($home), $response->getTargetUrl());
 });
 

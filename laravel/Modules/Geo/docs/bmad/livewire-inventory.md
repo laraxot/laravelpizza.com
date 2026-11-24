@@ -108,7 +108,15 @@ Nessuna conversione a widget. Unica azione reale: ritiro di `Test` (story 12.1, 
 - [livewire-widget-brainstorming.md](./livewire-widget-brainstorming.md)
 - [livewire-widget-decision-log.md](./livewire-widget-decision-log.md)
 - [livewire-widget-epics.md](./livewire-widget-epics.md)
+<<<<<<< HEAD
 - [livewire-widget-prd.md](./livewire-widget-prd.md)
+=======
+<<<<<<< HEAD
+- [livewire-widget-prd.md](./livewire-widget-prd.md)
+=======
+- livewire-widget-prd.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [livewire-widget-product-brief.md](./livewire-widget-product-brief.md)
 - [livewire-widget-project-context.md](./livewire-widget-project-context.md)
 - [livewire-widget-tech-spec.md](./livewire-widget-tech-spec.md)

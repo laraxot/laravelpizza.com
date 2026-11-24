@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # AI Agent Teams - Coordination Hub
@@ -77,7 +81,15 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same <nome pr
 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
+<<<<<<< HEAD
 - ✅ Update AGENTS.md with commit/push rules
+=======
+<<<<<<< HEAD
+- ✅ Update agents.md with commit/push rules
+=======
+- ✅ Update AGENTS.md with commit/push rules
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 
@@ -241,7 +253,15 @@ git push origin dev
 - **Issue #12**: AI Agent Collaboration
 - **Issue #13**: Documentation Updates
 - **docs/SYNC_TEST_RESULTS.md**: Latest sync test results
+<<<<<<< HEAD
 - **docs/sync_remote_repo_test_plan.md**: Test plan
+=======
+<<<<<<< HEAD
+- **docs/SYNC_REMOTE_REPO_TEST_PLAN.md**: Test plan
+=======
+- **docs/sync_remote_repo_test_plan.md**: Test plan
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

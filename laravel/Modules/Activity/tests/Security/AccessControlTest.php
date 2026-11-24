@@ -15,20 +15,13 @@ use Modules\Activity\Database\Factories\ActivityFactory;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Policies\ActivityPolicy;
 use Modules\Activity\Tests\TestCase;
-<<<<<<< .merge_file_3AGo80
-=======
 use Modules\User\Database\Factories\UserFactory;
->>>>>>> .merge_file_Ix2IHV
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 it('denies activity viewAny to users without permission', function (): void {
-<<<<<<< .merge_file_3AGo80
-    $user = activityCreateUser();
-=======
     $user = TestCase::activityCreateUser();
->>>>>>> .merge_file_Ix2IHV
     $policy = new ActivityPolicy;
 
     Assert::assertFalse($policy->viewAny($user));
@@ -43,11 +36,7 @@ it('allows activity viewAny to users with the correct permission', function (): 
 });
 
 it('denies activity view to users without permission', function (): void {
-<<<<<<< .merge_file_3AGo80
-    $user = activityCreateUser();
-=======
     $user = TestCase::activityCreateUser();
->>>>>>> .merge_file_Ix2IHV
     $policy = new ActivityPolicy;
 
     Assert::assertFalse($policy->view($user));

@@ -264,3 +264,8 @@ audit-coverage/
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

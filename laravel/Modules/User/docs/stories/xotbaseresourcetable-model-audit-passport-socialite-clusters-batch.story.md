@@ -123,8 +123,18 @@ applicabile), mai contro il nome del file.
 
 **Nota metodologica critica**: questo modulo usa connection DB per-model
 diverse da quella di default (`protected $connection = 'user'` → DB fisico
+<<<<<<< HEAD
 `quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
 `quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+=======
+<<<<<<< HEAD
+`quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
+`quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+=======
+`<nome progetto>_user`; `'<nome progetto>'` per il model `Profile` concreto → DB
+`<nome progetto>_data` ma schema separato). Un primo giro di verifica fatto con
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 `Schema::getColumnListing()` (connection di default, senza specificarla) ha
 prodotto **8 falsi positivi** (`grant_types`, `redirect_uris`, `owner_id`,
 `owner_type` su `oauth_clients`; `is_otp`, `type`, `state`,
@@ -157,7 +167,15 @@ BaseUsersTable, ClientsTable.
   `updated_at` nella tabella, e infatti la Table non li referenzia.
 - `BaseProfilesTable.php`: `user.name` (relazione, non verificabile via
   Schema, saltata). `first_name`/`last_name`/`email` presenti su
+<<<<<<< HEAD
   `Schema::connection('quaeris')->getColumnListing('profiles')`. `is_active`
+=======
+<<<<<<< HEAD
+  `Schema::connection('quaeris')->getColumnListing('profiles')`. `is_active`
+=======
+  `Schema::connection('<nome progetto>')->getColumnListing('profiles')`. `is_active`
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   **non presente** sul DB dev corrente via la connection corretta, ma
   verificato come intenzionale: `$fillable`
   [Source: app/Models/BaseProfile.php#L101], cast boolean

@@ -4,7 +4,11 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: Tenant
+<<<<<<< .merge_file_wPsvcd
+qmd: "ECC audit Tenant verification security testing laravel"
+=======
 qmd: "ECC audit Tenant verification security testing laravel php-reviewer security-reviewer database-reviewer architect tenant isolation Host TrustHosts policy password"
+>>>>>>> .merge_file_PtUj7g
 ---
 
 # Audit ECC — Tenant
@@ -69,3 +73,30 @@ Azioni al posto dei service, base Xot, nessuna label hardcoded, array PHP una ch
 
 - [00-index](./00-index.md)
 - [BMAD audit](../bmad/audit.md)
+<<<<<<< .merge_file_wPsvcd
+qmd: "ECC audit Tenant php-reviewer security-reviewer database-reviewer architect tenant isolation Host TrustHosts policy password"
+---
+
+# Audit ECC — Tenant
+
+Mappa finding → capability ECC. Dettaglio: [../bmad/audits/tenant-audit.md](../bmad/audits/tenant-audit.md). Indice: [00-index.md](./00-index.md).
+
+| Capability ECC | Esito | Finding | Azione |
+|---|---|---|---|
+| `security-reviewer` | 3 P1 | TEN-P1-01 Host non fidato; TEN-P1-02 bypass `tenant::admin`; TEN-P1-03 password in chiaro | Epic A, B, C |
+| `php-reviewer` | OK | `strict_types` ovunque, 0 raw SQL, 0 label hardcoded, PHPStan 0 | — |
+| `database-reviewer` | P2 | `tenant_id` senza FK su settings/subscriptions; colonna password `string` | Epic C, D (migrazioni solo additive) |
+| `architect` | P2 | `SushiToJson` vs `SushiToJsons` duplicati; test in namespace di produzione | Epic D |
+| `doc-updater` | P2 | 18 collisioni di maiuscole, 40 citazioni di `TenantService::` inesistente | Epic E |
+| `tdd-guide` | P2 | nessun test sul perimetro `tenant::admin`; 10 test "coverage" | Epic B |
+
+## Gate
+
+- PHPStan `Modules/Tenant`: 0 errori (2026-11-16).
+- Pest: skip documentato (DB test non raggiungibile, bootstrap bloccato). Nessun comando distruttivo.
+
+## Regole PTVX applicate
+
+Azioni al posto dei service, base Xot, nessuna label hardcoded, array PHP una chiave per riga, dati sacri (solo migrate additivo).
+=======
+>>>>>>> .merge_file_PtUj7g

@@ -8,8 +8,13 @@ use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\User\Contracts\TenantContract;
+<<<<<<< HEAD
 use Modules\User\Models\Scopes\TenantScope;
 use Modules\User\Support\AuthenticatedTenantKey;
+=======
+use Modules\User\Infrastructure\Tenant\AuthenticatedTenantKey;
+use Modules\User\Models\Scopes\TenantScope;
+>>>>>>> laraxot/dev
 use Modules\Xot\Datas\XotData;
 
 /**
@@ -33,6 +38,10 @@ trait InteractsWithTenant
      * Relazione con il tenant a cui appartiene il modello.
      *
      * @return BelongsTo<Model&TenantContract, $this>
+<<<<<<< HEAD
+=======
+     * @see Modules/User/docs/architecture/architecture.md
+>>>>>>> laraxot/dev
      */
     public function tenant(): BelongsTo
     {

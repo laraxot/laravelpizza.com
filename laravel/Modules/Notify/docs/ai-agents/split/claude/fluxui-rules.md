@@ -3,7 +3,11 @@ title: "fluxui rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fluxui rules"
 issues: []
 discussions: []
@@ -24,7 +28,10 @@ discussions: []
     <flux:button variant="primary"/>
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### Available Components
 This is correct as of Boost installation, but there may be additional components within the codebase.
 

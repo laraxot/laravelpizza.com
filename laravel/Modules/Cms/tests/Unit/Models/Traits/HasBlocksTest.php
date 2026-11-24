@@ -5,8 +5,21 @@ declare(strict_types=1);
 use Modules\Cms\Models\Page;
 use Modules\Cms\Models\Section;
 use Modules\Cms\Models\Traits\HasBlocks;
+<<<<<<< HEAD
 use PHPUnit\Framework\Assert;
 
+=======
+use Modules\Cms\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+// Senza questo binding le closure di `test()`/`it()` restano legate a
+// PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
+// Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
+// 94 fallimenti «Target class [config] does not exist» nel modulo
+// (base_quaeris_fila5#228).
+uses(TestCase::class);
+
+>>>>>>> laraxot/dev
 // Si usano i modelli reali che adottano il trait (Page, Section): un'anonymous class
 // ereditata da BaseModel farebbe analizzare il trait fuori dal suo contesto e falserebbe
 // i tipi dei suoi metodi.

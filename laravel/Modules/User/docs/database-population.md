@@ -309,7 +309,15 @@ echo "User roles: " . $user->roles()->count() . "\n";
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [README Modulo User](./README.md)
+=======
+<<<<<<< HEAD
+- [README Modulo User](./readme.md)
+=======
+- [README Modulo User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Factory Best Practices](./factory-best-practices.md)
 - [Testing Guidelines](./testing.md)
 - [Database Schema](./database-schema.md)

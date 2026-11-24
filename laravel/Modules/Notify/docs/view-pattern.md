@@ -3,7 +3,11 @@ title: "view pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "view pattern"
 issues: []
 discussions: []
@@ -57,5 +61,15 @@ return view((string) $view);
 ## Collegamenti
 
 - [phpstan_critical_rules](../.cursor/rules/phpstan_critical_rules.md)
+<<<<<<< HEAD
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -26,8 +26,6 @@ class CheckMailDnsAction
     use QueueableAction;
 
     private const string DMARC_PREFIX = 'v=dmarc1';
-<<<<<<< .merge_file_zwy6H7
-=======
 
     private const string HINT_MISSING = 'missing';
 
@@ -38,7 +36,6 @@ class CheckMailDnsAction
     private const string RECORD_CNAME = 'CNAME';
 
     private const string RECORD_TXT = 'TXT';
->>>>>>> .merge_file_dtnA1e
 
     /**
      * @param  array<string, string>  $expectedCnames  label (relative to the domain) => expected target

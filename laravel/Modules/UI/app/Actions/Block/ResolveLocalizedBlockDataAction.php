@@ -9,6 +9,11 @@ use UnexpectedValueException;
 
 /**
  * Risolve dati block localizzati; delega al modulo Cms se presente.
+<<<<<<< HEAD
+=======
+ *
+ * @contract docs/contracts/resolve-localized-block-data-action.md
+>>>>>>> laraxot/dev
  */
 final class ResolveLocalizedBlockDataAction
 {

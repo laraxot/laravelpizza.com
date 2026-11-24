@@ -3,7 +3,11 @@ title: "svg structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "svg structure"
 issues: []
 discussions: []
@@ -201,4 +205,8 @@ qmd: "svg structure"
 issues: []
 discussions: []
 *Struttura SVG creata: Agosto 2025*
+<<<<<<< HEAD
 *Responsabile: DRY + KISS SVG Structure* 
+=======
+*Responsabile: DRY + KISS SVG Structure* 
+>>>>>>> laraxot/dev

@@ -7,6 +7,16 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
+=======
+// Senza questo binding le closure di `test()`/`it()` restano legate a
+// PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
+// Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
+// 94 fallimenti «Target class [config] does not exist» nel modulo
+// (base_quaeris_fila5#228).
+uses(TestCase::class);
+
+>>>>>>> laraxot/dev
 it('renders the public profile route using the localized profile page', function (): void {
     $user = UserFactory::new()->createOne([
         'name' => 'Mario Rossi',

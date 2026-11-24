@@ -31,11 +31,6 @@ use Modules\User\Models\Traits\OauthPersonalAccessClientRelationsTrait;
  */
 class OauthPersonalAccessClient extends BaseModel
 {
-<<<<<<< .merge_file_dZexr7
-    use OauthPersonalAccessClientRelationsTrait;
-
-=======
->>>>>>> .merge_file_ObHPbp
     protected $table = 'oauth_personal_access_clients';
 
     protected $connection = 'user';

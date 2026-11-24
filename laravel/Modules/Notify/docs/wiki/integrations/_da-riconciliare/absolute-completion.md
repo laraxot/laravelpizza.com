@@ -1,5 +1,6 @@
 ---
 title: "🏆 NOTIFY - COMPLETAMENTO ASSOLUTO 100%"
+<<<<<<< HEAD
 title: "🏆 <nome progetto> - COMPLETAMENTO ASSOLUTO 100%"
 type: concept
 tags: [absolute, completion, 100]
@@ -7,6 +8,13 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "absolute-completion-100 🏆 laraxot - completamento assoluto 100%"
 qmd: "absolute-completion-100 🏆 <nome progetto> - completamento assoluto 100%"
+=======
+type: concept
+tags: [absolute, completion, 100]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "absolute-completion-100 🏆 laraxot - completamento assoluto 100%"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

@@ -72,3 +72,8 @@ Da identificare e correggere sistematicamente.
 - [OAuth Resources Corrections](./phpstan-corrections-oauth-resources.md)
 
 ---
+<<<<<<< HEAD
+=======
+
+*Ultimo aggiornamento: 2025-01-22*
+>>>>>>> laraxot/dev

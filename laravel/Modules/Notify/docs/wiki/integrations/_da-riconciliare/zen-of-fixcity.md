@@ -3,7 +3,11 @@ title: "🧘 Zen of <nome progetto> - Complete Philosophy"
 type: concept
 tags: [zen, <nome progetto>]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "zen-of-<nome progetto> 🧘 zen of <nome progetto> - complete philosophy"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

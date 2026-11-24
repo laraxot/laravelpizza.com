@@ -448,7 +448,15 @@ test('NationalFlagSelect finalizeFilteredCountries defensive continue', function
 });
 
 test('SaveTransAction early return when persist disabled in unit tests', function (): void {
+<<<<<<< HEAD
     config(['lang.persist_trans_in_tests' => false]);
+=======
+    // La chiave vera e' questa. Il test impostava `lang.persist_trans_in_tests`,
+    // che in produzione non esiste: la guardia non la legge, quindi il test
+    // passava o falliva per ragioni che non c'entravano con quello che dice.
+    // Vedi il commento in SaveTransAction::execute() (base_quaeris_fila5#234).
+    config(['lang.save_missing_translations' => false]);
+>>>>>>> laraxot/dev
     app()->instance(SaveTransAction::class, new SaveTransAction);
     app(SaveTransAction::class)->execute('lang::should_not_write.nested', 'x');
     Assert::assertFileDoesNotExist(base_path('Modules/Lang/lang/'.app()->getLocale().'/should_not_write.php'));

@@ -20,11 +20,7 @@ class LogUserLoginAction
     use QueueableAction;
 
     public function __construct(
-<<<<<<< .merge_file_5LiGpF
-        public ?UserContract $user = null
-=======
         public ?UserContract $user = null,
->>>>>>> .merge_file_TKWMQU
     ) {}
 
     public function execute(?UserContract $user = null): Activity
@@ -38,11 +34,7 @@ class LogUserLoginAction
             type: 'login',
             user: $user,
             subject: $user,
-<<<<<<< .merge_file_5LiGpF
-            description: 'User logged in'
-=======
             description: 'User logged in',
->>>>>>> .merge_file_TKWMQU
         );
 
         return $action->execute();

@@ -4,8 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature;
 
+<<<<<<< HEAD
 use function Pest\Laravel\get;
 
+=======
+use Modules\Cms\Tests\TestCase;
+
+use function Pest\Laravel\get;
+
+// Senza questo binding le closure di `test()`/`it()` restano legate a
+// PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
+// Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
+// 94 fallimenti «Target class [config] does not exist» nel modulo
+// (base_quaeris_fila5#228).
+uses(TestCase::class);
+
+>>>>>>> laraxot/dev
 describe('Homepage Content Management', function () {
     it('loads homepage content from JSON correctly', function () {
         $response = get('/');

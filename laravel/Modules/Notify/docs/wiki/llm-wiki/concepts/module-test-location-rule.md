@@ -4,7 +4,11 @@ type: concept
 sources: ["raw/articles/module-test-location-rule.md"]
 confidence: high
 created: 2026-04-21
+<<<<<<< HEAD
 updated: 2026-04-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [testing, architecture, laraxot, bounded-context, ddd, modules]
 related:
   - concepts/laraxot-architecture.md

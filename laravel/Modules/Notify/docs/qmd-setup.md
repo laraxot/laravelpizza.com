@@ -5,7 +5,11 @@ discussions: []
 title: "QMD Setup — Module Notify"
 type: documentation
 created: 2026-05-11
+<<<<<<< HEAD
 updated: 2026-05-11
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [qmd, search, docs, performance]
 related:
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md

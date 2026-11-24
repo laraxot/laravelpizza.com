@@ -9,7 +9,15 @@ qmd: "indice BMAD UI audit purpose piano stories"
 
 # Indice BMAD — UI
 
+<<<<<<< HEAD
 - [Purpose](./purpose.md)
+=======
+<<<<<<< HEAD
+- [Purpose](./purpose.md)
+=======
+- [Purpose](../wiki/purpose.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Audit](./audit.md)
 - [Audit dettagliato](./audits/ui-audit.md)
 - [Piano di miglioramento](./piano-miglioramento.md)

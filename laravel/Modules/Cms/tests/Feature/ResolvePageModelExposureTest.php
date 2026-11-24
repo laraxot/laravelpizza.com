@@ -91,7 +91,11 @@ test('un contenitore non elencato non carica nessun modello', function (): void 
 
     Assert::assertNull($result->item);
     Assert::assertSame('cms', $result->renderMode);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-1');
+>>>>>>> laraxot/dev
 
 test('il ramo profile e l euristica del singolare non esistono piu', function (): void {
     $users = dcp283Users();
@@ -100,7 +104,11 @@ test('il ramo profile e l euristica del singolare non esistono piu', function ()
     foreach (['profile', 'user', 'users'] as $container) {
         Assert::assertNull(app(ResolvePageAction::class)->execute($container, $key)->item, $container);
     }
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-1');
+>>>>>>> laraxot/dev
 
 test('un contenitore elencato carica il modello solo se la policy view lo consente', function (): void {
     dcp283Items();
@@ -112,7 +120,11 @@ test('un contenitore elencato carica il modello solo se la policy view lo consen
     Assert::assertInstanceOf(Dcp283Item::class, $result->item);
     Assert::assertSame('model', $result->renderMode);
     Assert::assertSame('dcp283.view', $result->pageSlug);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-2');
+>>>>>>> laraxot/dev
 
 test('una policy che nega rende il modello indistinguibile da non trovato', function (): void {
     dcp283Items();
@@ -120,14 +132,22 @@ test('una policy che nega rende il modello indistinguibile da non trovato', func
     Gate::policy(Dcp283Item::class, Dcp283DenyViewPolicy::class);
 
     Assert::assertNull(app(ResolvePageAction::class)->execute('dcp283', '1')->item);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-2');
+>>>>>>> laraxot/dev
 
 test('senza policy il modello elencato non viene esposto', function (): void {
     dcp283Items();
     config(['cms.config.container0_models' => ['dcp283' => Dcp283Item::class]]);
 
     Assert::assertNull(app(ResolvePageAction::class)->execute('dcp283', '1')->item);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-2');
+>>>>>>> laraxot/dev
 
 test('lo scope globale del modello vale: un record escluso non e raggiungibile', function (): void {
     dcp283Items();
@@ -137,14 +157,22 @@ test('lo scope globale del modello vale: un record escluso non e raggiungibile',
 
     Assert::assertNull(app(ResolvePageAction::class)->execute('dcp283', '2')->item, 'riga nascosta dallo scope');
     Assert::assertInstanceOf(Dcp283Item::class, app(ResolvePageAction::class)->execute('dcp283', '1')->item);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-3');
+>>>>>>> laraxot/dev
 
 test('una voce di configurazione che non e un modello viene ignorata', function (): void {
     config(['cms.config.container0_models' => ['dcp283' => 'Illuminate\\Support\\Facades\\Artisan', 'dcp284' => 12]]);
 
     Assert::assertNull(app(ResolvePageAction::class)->execute('dcp283', '1')->item);
     Assert::assertNull(app(ResolvePageAction::class)->execute('dcp284', '1')->item);
+<<<<<<< HEAD
 });
+=======
+})->group('CMS-RESOLVE-PAGE-INV-4');
+>>>>>>> laraxot/dev
 
 test('blog ed events restano serviti dal finder dei soli contenuti pubblicati', function (): void {
     // Blog e' un modulo opzionale (ResolvePageAction usa il finder solo se Article e ThemeComposer esistono): la classe si risolve per nome.
@@ -173,7 +201,11 @@ test('blog ed events restano serviti dal finder dei soli contenuti pubblicati', 
     Assert::assertNull($action->execute('blog', 'evento-pubblicato')->item, 'un evento non si legge come post');
     Assert::assertNull($action->execute('events', 'post-pubblicato')->item, 'un post non si legge come evento');
     Assert::assertNull($action->execute('blog', 'inesistente')->item);
+<<<<<<< HEAD
 })->skip(
+=======
+})->group('CMS-RESOLVE-PAGE-INV-5')->skip(
+>>>>>>> laraxot/dev
     ! class_exists('Modules\\Blog\\Models\\Article') || ! class_exists('Modules\\Blog\\View\\Composers\\ThemeComposer'),
     'Modulo Blog non installato: ResolvePageAction non usa il finder dei contenuti pubblicati.'
 );

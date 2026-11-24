@@ -3,7 +3,11 @@ title: "installazione"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "installazione"
 issues: []
 discussions: []
@@ -101,4 +105,8 @@ updated: 2026-09-26
 qmd: "installazione"
 issues: []
 discussions: []
+<<<<<<< HEAD
 *Documento creato: 2026-03-31*
+=======
+*Documento creato: 2026-03-31*
+>>>>>>> laraxot/dev

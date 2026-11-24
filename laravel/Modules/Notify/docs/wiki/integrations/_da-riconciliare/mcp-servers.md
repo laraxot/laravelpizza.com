@@ -3,7 +3,11 @@ title: "MCP Servers - Master Index"
 type: concept
 tags: [mcp, servers]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mcp-servers mcp servers - master index"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -154,8 +158,17 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
   - `qmd update` - Re-index collections
   - `qmd embed` - Generate vector embeddings
 - **MCP**: `qmd mcp` (stdio transport)
+<<<<<<< HEAD
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+=======
+<<<<<<< .merge_file_H7459E
+- **Docs**: [qmd-local-docs-search.md](./project/qmd-local-docs-search.md)
+=======
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+>>>>>>> .merge_file_fLLYfv
+>>>>>>> laraxot/dev
 
 ## Configuration
 

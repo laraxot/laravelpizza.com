@@ -2,9 +2,21 @@
 title: "Theme Assets Workflow - CSS/JS Frontend"
 type: note
 status: active
+<<<<<<< HEAD
 updated: 2026-11-11
 tags: [docs, xot, assets, themes, symlink, deploy]
 qmd: "theme assets workflow css js frontend build xot symlink public_html themes npm run copy obsoleto"
+=======
+<<<<<<< .merge_file_AhS8xc
+updated: 2026-11-18
+tags: [docs, xot, themes, deploy]
+qmd: "theme assets workflow - css/js frontend xot symlink public_html themes"
+=======
+updated: 2026-11-11
+tags: [docs, xot, assets, themes, symlink, deploy]
+qmd: "theme assets workflow css js frontend build xot symlink public_html themes npm run copy obsoleto"
+>>>>>>> .merge_file_A5tGLd
+>>>>>>> laraxot/dev
 related:
   - ../app/Console/Commands/ThemeLinkCommand.php
   - ../app/Console/Commands/ModuleLinkCommand.php
@@ -28,6 +40,7 @@ base_<progetto>/
     └── assets/xot     -> ../../laravel/Modules/Xot/public     (symlink relativo)
 ```
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_BdU5Bi
 ### Workflow Corretto
 ```bash
@@ -44,13 +57,31 @@ npm run build
 =======
 ## Come arrivano al browser
 >>>>>>> .merge_file_WZlTKJ
+=======
+<<<<<<< .merge_file_AhS8xc
+- `@vite([...], 'themes/<Tema>')` legge `public_html/themes/<Tema>/manifest.json`, cioè il manifest del tema.
+- `public_html` è la document root: non si cancella né si svuota mai.
+- I symlink sono **relativi** (restano validi se il progetto cambia percorso) e si creano una volta per
+  installazione, in due modi equivalenti:
+  - `deploy.sh` (funzione `link_public`, prima di `composer install`), in modo idempotente. Se al posto del link
+    c'è una cartella vera (vecchia copia, ignorata da git), la sposta in `laravel/storage/backups/` senza
+    cancellarla e crea il link; un link con un percorso diverso viene corretto.
+  - i comandi artisan `php artisan xot:theme-link` e `php artisan xot:module-link` (con `--dry-run` per
+    provare). Dettagli: [console/commands/xot-asset-links.md](console/commands/xot-asset-links.md).
+    I comandi aggiungono anche il nome del link al `.gitignore` della cartella del docroot (`<nome>/` e
+    `<nome>`). In questo repository i link esistenti sono comunque tracciati (`git add -f`), così un clone
+    funziona senza comandi; le due righe sono già presenti, per cui i comandi non modificano il `.gitignore`
+    sul server. Motivi e verifica: [wiki/concepts/public-html-symlink-assets.md](wiki/concepts/public-html-symlink-assets.md).
+=======
+## Come arrivano al browser
+>>>>>>> laraxot/dev
 
 ```
 public_html/themes/<Tema>   ->   ../../laravel/Themes/<Tema>/public      (symlink relativo)
 public_html/assets/<modulo> ->   ../../laravel/Modules/<Modulo>/public   (symlink relativo)
 ```
 
-<<<<<<< .merge_file_BdU5Bi
+<<<<<<< HEAD
 ## ⚠️ NON Fare Mai
 ❌ **NON modificare** `/public/css/` o `/public/js/` direttamente
 ❌ **NON usare** `npm run build` dalla root Laravel
@@ -62,7 +93,7 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 3. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 4. **Verifica risultato** nel browser
 =======
->>>>>>> .merge_file_WZlTKJ
+>>>>>>> laraxot/dev
 - `@vite([...], 'themes/<Tema>')` legge `public_html/themes/<Tema>/manifest.json`, cioè il manifest del tema.
 - `public_html` è la document root: non si cancella né si svuota mai.
 - I symlink sono **relativi** (restano validi se il progetto cambia percorso) e si creano una volta per
@@ -76,6 +107,10 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
     `app/Console/Commands/ThemeLinkCommand.php`, `app/Console/Commands/ModuleLinkCommand.php`.
     I comandi aggiungono anche il nome del link al `.gitignore` della cartella del docroot: il link non si
     committa, lo crea ogni installazione.
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_A5tGLd
+>>>>>>> laraxot/dev
 
 **Perché un symlink e non `npm run copy`:**
 
@@ -89,20 +124,49 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 ## Lavorare su un tema
 
 ```bash
+<<<<<<< HEAD
 <<<<<<< .merge_file_BdU5Bi
 cd Themes/One
 npm install          # Prima volta
 npm run build        # Compila Sass/JS
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
+=======
+>>>>>>> laraxot/dev
 cd laravel/Themes/<Tema>
 npm install      # prima volta
 npm run dev      # sviluppo con hot reload
 npm run build    # produzione: scrive in ./public (servito dal symlink)
+<<<<<<< HEAD
 >>>>>>> .merge_file_WZlTKJ
 ```
 
 Vale per ogni tema: si lavora sempre dalla cartella del tema, mai dalla root Laravel.
+=======
+```
+
+<<<<<<< .merge_file_AhS8xc
+
+## Lavorare su un tema
+
+```bash
+cd Themes/One
+npm install          # Prima volta
+npm run build        # Compila Sass/JS
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+```
+
+### Tema Two
+```bash
+cd Themes/Two
+npm install
+npm run build
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+```
+=======
+Vale per ogni tema: si lavora sempre dalla cartella del tema, mai dalla root Laravel.
+>>>>>>> .merge_file_A5tGLd
+>>>>>>> laraxot/dev
 
 ## package.json e vite.config.js del tema
 
@@ -124,7 +188,10 @@ export default defineConfig({
 });
 ```
 
-<<<<<<< .merge_file_BdU5Bi
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_AhS8xc
+>>>>>>> laraxot/dev
 ## 🐛 Troubleshooting
 
 ### Modifiche Non Visibili?
@@ -142,6 +209,7 @@ export default defineConfig({
 ---
 
 **⚠️ RICORDA**: Il workflow dei temi è DIVERSO dal normale workflow Laravel. Sempre theme → build → copy → public!
+<<<<<<< HEAD
 cd laravel/Themes/Sixteen
 npm install
 npm run dev      # sviluppo con hot reload
@@ -149,7 +217,9 @@ npm run build    # produzione: scrive in ./public (servito dal symlink)
 ```
 
 =======
->>>>>>> .merge_file_WZlTKJ
+=======
+>>>>>>> .merge_file_A5tGLd
+>>>>>>> laraxot/dev
 Lo script `copy` è stato tolto da `package.json` dei temi: non serve più.
 
 ## Non fare
@@ -190,8 +260,16 @@ Modulo nuovo con asset pubblici: crea `Modules/<Modulo>/public`, aggiungi `<modu
 | CSS vecchio dopo una modifica | Build del tema non eseguita o non committata | `npm run build` nel tema e commit di `public/` |
 | Icone di un modulo mancanti (`/assets/<modulo>/svg/*.svg`) | Manca `public_html/assets/<modulo>` | Lo crea `deploy.sh` o `php artisan xot:module-link` (link a `Modules/<Modulo>/public`) |
 | Campo mappa assente nei pannelli (`assets/geo/manifest.json`) | Manca `public_html/assets/geo` o la build Geo non è committata | `deploy.sh` o `xot:module-link`; in sviluppo `cd Modules/Geo && ../../node_modules/.bin/vite build` e commit di `public/` |
+<<<<<<< HEAD
 <<<<<<< .merge_file_BdU5Bi
 | Errori di build | Dipendenze o ambiente | `npm install` nella cartella del tema; verificare versioni di Node/npm; controllare `build.outDir` in `vite.config.js` (deve essere `public`) e le dipendenze in `package.json` |
 =======
 | Errori di build | Dipendenze o ambiente | `npm install` nella cartella del tema; verificare versioni di Node/npm; controllare la sintassi Sass/JS, `build.outDir` in `vite.config.js` (deve essere `public`) e le dipendenze in `package.json` |
 >>>>>>> .merge_file_WZlTKJ
+=======
+<<<<<<< .merge_file_AhS8xc
+| Errori di build | Dipendenze o ambiente | `npm install` nella cartella del tema; verificare versioni di Node/npm; controllare `build.outDir` in `vite.config.js` (deve essere `public`) e le dipendenze in `package.json` |
+=======
+| Errori di build | Dipendenze o ambiente | `npm install` nella cartella del tema; verificare versioni di Node/npm; controllare la sintassi Sass/JS, `build.outDir` in `vite.config.js` (deve essere `public`) e le dipendenze in `package.json` |
+>>>>>>> .merge_file_A5tGLd
+>>>>>>> laraxot/dev

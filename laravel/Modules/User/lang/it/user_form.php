@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< HEAD
         'name' => [
             'label' => 'Nome visualizzato',
             'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
@@ -11,6 +12,8 @@ return [
         'created_at' => [
             'label' => 'Creato il',
         ],
+=======
+>>>>>>> laraxot/dev
         'first_name' => [
             'label' => 'Nome',
             'placeholder' => 'Mario',
@@ -47,12 +50,15 @@ return [
             'helper_text' => 'Sessione prolungata su dispositivo attendibile',
             'placeholder' => 'remember',
         ],
+<<<<<<< HEAD
         'token' => [
             'label' => 'token',
             'description' => 'token',
             'helper_text' => 'token',
             'placeholder' => 'token',
         ],
+=======
+>>>>>>> laraxot/dev
         'state' => [
             'description' => 'state',
             'label' => 'Stato',
@@ -74,6 +80,15 @@ return [
             'helper_text' => 'name',
             'description' => 'name',
         ],
+<<<<<<< HEAD
+=======
+        'token' => [
+            'description' => 'token',
+            'helper_text' => 'token',
+            'label' => 'Token',
+            'placeholder' => 'token',
+        ],
+>>>>>>> laraxot/dev
     ],
     'actions' => [
         'showPassword' => [
@@ -87,7 +102,7 @@ return [
             'tooltip' => 'Nascondi password',
         ],
     ],
-<<<<<<< .merge_file_SDx4Z9
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -99,5 +114,5 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_5sX5E3
+>>>>>>> laraxot/dev
 ];

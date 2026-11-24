@@ -4,6 +4,11 @@ type: guide
 module: Notify
 status: active
 tags: [email, smtp, imap, postfix, dovecot, mailtrap, bmad, ecc]
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Email infrastructure: audit and runbook

@@ -42,14 +42,6 @@ php artisan activity:shop:checkout cart_12345_xxx
 ## Flusso Operativo
 1. Comando CLI → 2. Aggregate → 3. Evento → 4. Proiettore → 5. Modello di lettura → 6. UI/API
 
-<<<<<<< .merge_file_7uhFXH
-| Lingua | Link |
-|--------|------|
-| 🇮🇹 Presentazione | Questo file (`README.md`) |
-| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
-| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
-=======
->>>>>>> .merge_file_Iwrtn8
 ## Best Practice
 - Eventi immutabili e atomici
 - Aggregate root come unico punto di logica di dominio
@@ -91,10 +83,6 @@ php artisan activity:shop:checkout cart_12345_xxx
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
 | 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](../..) |
-<<<<<<< .merge_file_7uhFXH
-=======
-=======
->>>>>>> .merge_file_Iwrtn8
 
 ---
 **Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.**

@@ -3,7 +3,11 @@ title: "migration standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "migration standards"
 issues: []
 discussions: []
@@ -234,4 +238,8 @@ qmd: "migration standards"
 issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
+<<<<<<< HEAD
 *Fonte: laravel/Modules/Xot/docs/MIGRATION_STANDARDS.md* 
+=======
+*Fonte: laravel/Modules/Xot/docs/MIGRATION_STANDARDS.md* 
+>>>>>>> laraxot/dev

@@ -3,7 +3,11 @@ title: "implementazione completa finale"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "implementazione completa finale"
 issues: []
 discussions: []
@@ -723,4 +727,7 @@ TOTALE (Fase 1 + 2):
 **Files Creati/Modificati:** 38  
 **LOC Impatto:** +290 (infrastruttura) che elimina 2,640 LOC totali  
 **Successo:** 🎯 **100%**
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

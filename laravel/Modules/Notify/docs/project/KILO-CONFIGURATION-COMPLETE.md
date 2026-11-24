@@ -3,7 +3,11 @@ title: "KILO CONFIGURATION COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "KILO CONFIGURATION COMPLETE"
 issues: []
 discussions: []
@@ -69,6 +73,13 @@ discussions: []
   
   // Documentazione per contesto AI
   "instructions": [
+<<<<<<< HEAD
+=======
+    "agents.md",
+    "laravel/agents.md"
+    "agents.md",
+    "laravel/agents.md"
+>>>>>>> laraxot/dev
     "AGENTS.md",
     "laravel/AGENTS.md"
   ],
@@ -112,7 +123,15 @@ discussions: []
 | `autoupdate` | boolean | Auto-update | `true` |
 | `snapshot` | boolean | Snapshot | `true` |
 | `mcp` | object | MCP servers | `{}` |
+<<<<<<< HEAD
 | `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
+=======
+<<<<<<< HEAD
+| `instructions` | array | Docs contesto | `["agents.md", ...]` |
+=======
+| `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | `tools` | object | Tool abilitati | `{write, edit, bash...}` |
 | `permission` | object | Permessi | `{bash: "ask", ...}` |
 | `experimental` | object | Feature sperimentali | `{}` |
@@ -196,7 +215,15 @@ Ctrl+Q         - Esci
 Kilo legge automaticamente:
 
 1. **AGENTS.md** - Contesto principale
+<<<<<<< HEAD
 2. **laravel/AGENTS.md** - Contesto Laravel
+=======
+<<<<<<< HEAD
+2. **laravel/agents.md** - Contesto Laravel
+=======
+2. **laravel/AGENTS.md** - Contesto Laravel
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Per Aggiungere Altra Docs
 
@@ -205,6 +232,13 @@ Modifica `.kilo/kilo.jsonc`:
 ```jsonc
 {
   "instructions": [
+<<<<<<< HEAD
+=======
+    "agents.md",
+    "laravel/agents.md",
+    "agents.md",
+    "laravel/agents.md",
+>>>>>>> laraxot/dev
     "AGENTS.md",
     "laravel/AGENTS.md",
     "docs/**/*.md",                    // Tutta la docs

@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_D4lwZp
+created: 2026-10-07
+=======
+>>>>>>> laraxot/dev
 title: "Map Popup Contrast and Fit .story"
 type: note
 tags: [documentation]
@@ -8,6 +14,10 @@ qmd: "Map Popup Contrast and Fit .story"
 date_originale_nome_file: 2026-10-07
 issues: [122]
 discussions: []
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_DbXDE3
+>>>>>>> laraxot/dev
 ---
 
 # Popup dei marker: testo bianco su bianco, popup tagliato, azioni fuori vista

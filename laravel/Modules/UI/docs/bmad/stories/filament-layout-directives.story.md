@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Direttive Filament nel layout UI (progetti senza Cms)"
+=======
+<<<<<<< .merge_file_qpHdt8
+title: "Direttive Filament nel layout UI (PTVX senza Cms)"
+=======
+title: "Direttive Filament nel layout UI (progetti senza Cms)"
+>>>>>>> .merge_file_ClD86L
+>>>>>>> laraxot/dev
 type: story
 status: done
 module: UI
@@ -51,7 +59,41 @@ Nei layout Blade che ospitano componenti Filament/Livewire (stessi obblighi di
 
 ## Acceptance criteria
 
+<<<<<<< HEAD
 - [x] Nei progetti senza `Cms` non viene introdotto `Modules/Cms` né file Cms inesistenti.
 - [x] Layout UI/User: `@filamentStyles` nel `head`, `@filamentScripts` e notifications nudo nel `body`.
+=======
+<<<<<<< .merge_file_qpHdt8
+- [x] Il layout reale contiene `@filamentStyles` nel `head`.
+- [x] Il layout reale contiene `@filamentScripts` nel `body`.
+- [x] Nessun file Cms inesistente viene introdotto.
+## Religione portfolio
+
+`Cms` **non** sta in `base_ptvx_fila5` e non va introdotto. Il contratto
+Filament 5 si impara dai progetti FO che hanno `Cms` (`head`/`foot`), e si
+applica ai layout **reali** di questo progetto: `UI` e `User`.
+
+Fonte: [Configuring your layout](https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout).
+
+Obblighi (stessi di `cms::head` / `cms::foot` altrove):
+
+1. `@filamentStyles` in `<head>` (prima del CSS Vite del tema/app).
+2. `@livewire('notifications')` a fine body **senza** `@auth`.
+3. `@filamentScripts` a fine `<body>`.
+
+## Layout owner in PTVX
+
+- `Modules/UI/.../layouts/main.blade.php` e `master.blade.php`
+- `Modules/User/.../layouts/main.blade.php`
+
+## Acceptance criteria
+
+- [x] Nessun `Modules/Cms` nel checkout PTVX.
+- [x] Layout UI/User: Styles + Scripts + notifications nudo.
+=======
+- [x] Nei progetti senza `Cms` non viene introdotto `Modules/Cms` né file Cms inesistenti.
+- [x] Layout UI/User: `@filamentStyles` nel `head`, `@filamentScripts` e notifications nudo nel `body`.
+>>>>>>> .merge_file_ClD86L
+>>>>>>> laraxot/dev
 - [x] Pest `FilamentLayoutDirectivesTest` verde (file-read, no DB).
 - [x] Memoria portfolio aggiornata col mapping Cms→UI.

@@ -1,7 +1,15 @@
 # User Module - Business Logic Analysis
 
 ## Overview
+<<<<<<< HEAD
 The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
+=======
+<<<<<<< HEAD
+The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
+=======
+The User module provides comprehensive user management, authentication, authorization, and team-based access control for the <nome progetto> platform. It serves as the foundation for all user-related operations across the entire application.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Business Purpose
 - **Authentication**: Secure user authentication with multiple options

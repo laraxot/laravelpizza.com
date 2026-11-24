@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Services\Map;
 
+<<<<<<< HEAD
 use Modules\UI\Contracts\GeocodingServiceContract;
 
 /**
@@ -26,4 +27,16 @@ final class NullGeocodingService implements GeocodingServiceContract
     {
         return [];
     }
+=======
+/**
+ * SUPERSEDED — duplicato di {@see \Modules\UI\Adapters\Map\NullGeocodingServiceAdapter}.
+ *
+ * Zero binding in UIServiceProvider; zero caller. Canonico: Adapters/Map/.
+ * Residuo on-disk (no-delete senza autorizzazione). Vedi debt.php #247.
+ *
+ * @deprecated Use NullGeocodingServiceAdapter instead.
+ */
+final class NullGeocodingService
+{
+>>>>>>> laraxot/dev
 }

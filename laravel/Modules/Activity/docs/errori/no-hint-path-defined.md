@@ -498,14 +498,3 @@ docker-compose restart app
 - [Laraxot Conventions](../../../../docs/laraxot-conventions.md) - Convenzioni generali
 
 ---
-<<<<<<< .merge_file_T4ETaX
-
-**
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Versione Laravel**: 12.35.1
-**Errore Code**: `InvalidArgumentException`
-**Severità**: Alta (blocca funzionalità Activity Log)
-=======
->>>>>>> .merge_file_40D9QM

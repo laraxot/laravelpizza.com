@@ -149,6 +149,11 @@ Tutte le traduzioni seguono la struttura espansa:
 
 - [Laraxot Translation Philosophy](../../xot/docs/translation-philosophy.md)
 - [Translation Standards](../../xot/docs/translation-standards.md)
+<<<<<<< HEAD
+=======
+- [UI Module Documentation](../readme.md)
+
+>>>>>>> laraxot/dev
 - [UI Module Documentation](../README.md)
 
 *Intervento completato il: 2026-01-22*

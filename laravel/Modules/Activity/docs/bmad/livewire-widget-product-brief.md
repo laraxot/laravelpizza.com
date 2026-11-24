@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_IqeWkl
-title: "Product brief — Activity"
-=======
->>>>>>> .merge_file_d5YBaQ
 title: "Product brief: Activity"
 type: product-brief
 module: Activity

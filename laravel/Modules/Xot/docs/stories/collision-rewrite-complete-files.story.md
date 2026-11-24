@@ -140,6 +140,12 @@ Perimetro ridotto dal coordinatore: Codex (`codex`, task `collision-rewrite-2026
 **Verifica dei tre documenti di Codex (sola lettura, un controllo dei lock alle 07:52).** Tutti e tre `FREE`, zero marcatori, front matter valido (`frontmatter-check` 0 invalidi).
 
 - `Cms/docs/00-index.md`: 31 link relativi, 0 rotti, `related` tutto risolto. Elenca solo file esistenti.
+<<<<<<< HEAD
+=======
+- `Cms/docs/stories/docs-organization-cms.story.md`: storico e sezioni intatti (richiesta, analisi, modifiche, verifica, decisioni, coppie divergenti chiuse, aperto); nessuna riga di nessun lato e' andata persa tranne una, e li' la scelta e' sbagliata. Nel blocco «Rinomina con `md-filenames.py apply`» il lato A (nostro) diceva giusto «`coverage-pest-80.md` diventa `coverage-pest.md`»; il lato B (laraxot/dev) diceva «`coverage-pest.md` diventa `coverage-pest.md`», testo senza senso lasciato da una rinomina automatica che ha riscritto anche il nome di partenza. Il file di Codex (riga 30) ha il testo del lato B: va corretta con quello del lato A. Ha anche **un `related` rotto**: `../00-INDEX.md` (il file e' `00-index.md`; il nome in maiuscolo non esiste su filesystem case-sensitive). Non ha una sezione AC esplicita in nessuno dei due lati.
+- `AI/docs/index.md`: 194 link validi e **4 rotti**: il blocco iniziale «Contents» (lato B) punta a `gsd-workflow-guide.md` e `ollama-token-optimization.md`, che non esistono nel modulo (`ollama-token-optimization.md` esiste solo in `Notify/docs/ai-agents/`; il file reale e' `gsd-workflow.md`); piu' `./module-root-hygiene.md` (riga 152) e `./INDEX.md` (riga 255). Inoltre le righe 131 e 138 annotano come «riferimento non presente nel repository» `phpstan-fixes-history.md` e `redundancy-audit.md`, che invece esistono in `AI/docs/`.
+
+>>>>>>> laraxot/dev
 - `Cms/docs/stories/docs-organization-cms.story.md`: storico e sezioni intatti (richiesta, analisi, modifiche, verifica, decisioni, coppie divergenti chiuse, aperto); nessuna riga di nessun lato e' andata persa tranne una, e li' la scelta e' sbagliata. Nel blocco «Rinomina con `md-filenames.py apply`» il lato A (nostro) diceva giusto «`coverage-pest-80.md` diventa `coverage-pest.md`»; il lato B (laraxot/dev) diceva «`coverage-pest.md` diventa `coverage-pest.md`», testo senza senso lasciato da una rinomina automatica che ha riscritto anche il nome di partenza. Il file di Codex (riga 30) ha il testo del lato B: va corretta con quello del lato A. Ha anche **un `related` rotto**: `../00-index.md` (il file e' `00-index.md`; il nome in maiuscolo non esiste su filesystem case-sensitive). Non ha una sezione AC esplicita in nessuno dei due lati.
 - `AI/docs/index.md`: 194 link validi e **4 rotti**: il blocco iniziale «Contents» (lato B) punta a `gsd-workflow-guide.md` e `ollama-token-optimization.md`, che non esistono nel modulo (`ollama-token-optimization.md` esiste solo in `Notify/docs/ai-agents/`; il file reale e' `gsd-workflow.md`); piu' `./module-root-hygiene.md` (riga 152) e `./index.md` (riga 255). Inoltre le righe 131 e 138 annotano come «riferimento non presente nel repository» `phpstan-fixes-history.md` e `redundancy-audit.md`, che invece esistono in `AI/docs/`.
 
@@ -193,4 +199,9 @@ Perimetro: le sei violazioni di `md-filenames.py check` in `User/docs` (quattro 
 - Ritirare le copie con nomi diversi elencate sopra (`phpstan-fixes-2025.md`, `phpstan-fixes-conflict*.md`, `../phpstan_fixes_2025.md`, stub `parse-error-orphan-methods-*`) e allineare `docs/actions-structure.md` in radice (propongo: ritiro o `superseded_by` verso i documenti nuovi).
 - `User/docs/quality-status.md` (radice) ha lo stesso corpo piu' un front matter `module: theme` incollato in fondo, con rinvio a `Themes/docs/shared-components/` inesistente: non toccato.
 - I `issues:`/`discussions:` verso `provtv/base_ptv_fila5` compaiono in centinaia di documenti del modulo; non sono di questo repository (`festionali/base_restaurant_fila5`).
+<<<<<<< HEAD
+=======
+- `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `UI/docs-archive/INDEX.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.
+
+>>>>>>> laraxot/dev
 - `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `UI/docs-archive/index.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.

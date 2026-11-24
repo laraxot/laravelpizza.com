@@ -69,3 +69,11 @@ canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
+
+---
+
+## Contenuto unito da `dry-kiss-analysis.md`
+
+# dry kiss analysis
+
+Stub alias post-strip data/timestamp. Canonico: [./dry-kiss-analysis.md](./dry-kiss-analysis.md).

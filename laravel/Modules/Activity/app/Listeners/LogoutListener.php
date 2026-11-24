@@ -32,12 +32,10 @@ class LogoutListener
         // Handle session duration if last_login_at is available
         // Assuming last_login_at is a Casted Carbon instance or string
         if (isset($event->user->last_login_at)) {
-            /** @var mixed $lastLoginRaw */
             $lastLoginRaw = $event->user->last_login_at;
 
             // Type narrowing for $lastLoginRaw
             if (is_string($lastLoginRaw) || $lastLoginRaw instanceof DateTimeInterface) {
-                /** @var Carbon $lastLogin */
                 $lastLogin = Carbon::parse($lastLoginRaw);
                 $properties['session_duration'] = abs(now()->diffInSeconds($lastLogin));
             }

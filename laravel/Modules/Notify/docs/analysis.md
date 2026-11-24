@@ -3,7 +3,11 @@ title: "analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "analysis"
 issues: []
 discussions: []
@@ -71,7 +75,10 @@ Modules/Notify/
 - Performance testing
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)

@@ -38,7 +38,15 @@ it('fails with a readable error when the model has no address', function () {
 
     expect($action->execute(makeGeocodeTargetModel(null)))->toBeFalse()
         ->and($action->getErrors())->not->toBeEmpty();
+<<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+});
+=======
+})->group('GEO-COORDS-INV-2');
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 it('propagates geocoding provider errors instead of swallowing them', function () {
     $geocoding = Mockery::mock(GetAddressDataFromFullAddressAction::class);
@@ -56,7 +64,15 @@ it('propagates geocoding provider errors instead of swallowing them', function (
             'Google Maps API key non configurata',
             'Nominatim timeout',
         ]);
+<<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+});
+=======
+})->group('GEO-COORDS-INV-3');
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 it('updates latitude and longitude when geocoding succeeds', function () {
     $geocoding = Mockery::mock(GetAddressDataFromFullAddressAction::class);
@@ -76,4 +92,12 @@ it('updates latitude and longitude when geocoding succeeds', function () {
 
     expect($action->execute($model))->toBeTrue()
         ->and($action->getErrors())->toBeEmpty();
+<<<<<<< HEAD
 });
+=======
+<<<<<<< HEAD
+});
+=======
+})->group('GEO-COORDS-INV-1');
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -14,11 +14,7 @@ use function Safe\preg_replace_callback;
  *
  * Fornisce funzionalità per la gestione del tracking delle notifiche.
  *
-<<<<<<< .merge_file_dKXEjp
- * @phpstan-ignore trait.unused
-=======
  * Usato da test/unit helpers (es. NotifyTrackingDummy); non ignorare trait.unused.
->>>>>>> .merge_file_9agGCL
  */
 trait HasNotificationTracking
 {

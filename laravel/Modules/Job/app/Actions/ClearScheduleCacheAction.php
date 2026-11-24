@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Cache;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
+ *
+ * @contract docs/contracts/clear-schedule-cache-action.md
+ */
 class ClearScheduleCacheAction
 {
     use QueueableAction;

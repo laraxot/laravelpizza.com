@@ -14,8 +14,11 @@ use Modules\Geo\Models\Address;
  * Trait HasAddresses.
  *
  * Questo trait fornisce funzionalità per gestire indirizzi multipli su qualsiasi modello.
+<<<<<<< HEAD
  *
  * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+=======
+>>>>>>> laraxot/dev
  */
 trait HasAddresses
 {
@@ -76,7 +79,11 @@ trait HasAddresses
     /**
      * Aggiunge un nuovo indirizzo.
      *
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> laraxot/dev
      */
     public function addAddress(array $data, bool $isPrimary = false): Address
     {

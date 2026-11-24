@@ -143,3 +143,8 @@ test-results/
 cms.code-workspace
 ruvector.db
 .windsurfrules
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

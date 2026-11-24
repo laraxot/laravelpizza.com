@@ -34,3 +34,17 @@ related:
 This module adheres to the **Super Cow Methodology**:
 - **Compliance**: Module now passes PHPStan analysis at Level 10.
 - **Documentation**: Referenced core architecture rules in `Modules/Xot/docs/`.
+
+
+---
+
+<!-- Contenuto unito da updates-2025.md (rimozione date dai nomi file, issue #64) -->
+
+See canonical documentation: ../../../Themes/docs/shared-components/updates.md
+
+
+---
+
+<!-- Contenuto unito da updates-2025-12.md (rimozione date dai nomi file, issue #64) -->
+
+See canonical documentation: ../../../Themes/docs/shared-components/updates-12.md

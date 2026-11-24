@@ -470,17 +470,10 @@ class SchedaObserver
 ---
 
 **
-<<<<<<< .merge_file_OuVNHl
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**=======
-**Ultimo aggiornamento**: 27 Ottobre 2025
-=======
 
 **Ultimo aggiornamento**: 27 Ottobre 2025
 
 **=======
->>>>>>> .merge_file_5OPGsv
 **Severità**: CRITICA (blocca edit in produzione)
 **Workaround**: Disabilitare temporaneamente LogsActivity trait
 **Fix Definitivo**: Refactoring accessor in SchedaTrait

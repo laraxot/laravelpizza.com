@@ -135,3 +135,11 @@ geo.code-workspace
 # Forbidden parallel documentation archive
 docs/archive/
 .git/
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

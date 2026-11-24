@@ -1,5 +1,6 @@
 ---
 title: "🏆 NOTIFY - COMPLETE SUCCESS"
+<<<<<<< HEAD
 title: "🏆 <nome progetto> - COMPLETE SUCCESS"
 type: concept
 tags: [complete, success]
@@ -7,6 +8,13 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "complete-success 🏆 laraxot - complete success"
 qmd: "complete-success 🏆 <nome progetto> - complete success"
+=======
+type: concept
+tags: [complete, success]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "complete-success 🏆 laraxot - complete success"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

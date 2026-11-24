@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Boost Skill Installation - Solution Plan
@@ -149,7 +153,15 @@ The following modules have documentation folders that need updates:
 
 ### Documentation Structure
 Each module's docs folder will receive:
+<<<<<<< HEAD
 1. `boost_skill_fix_summary.md` - Summary of the fix
+=======
+<<<<<<< HEAD
+1. `BOOST_SKILL_FIX_SUMMARY.md` - Summary of the fix
+=======
+1. `boost_skill_fix_summary.md` - Summary of the fix
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 2. `DEPENDENCIES_MANAGEMENT.md` - Best practices for dependency management
 
 ## Risk Assessment

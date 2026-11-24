@@ -3,7 +3,11 @@ title: "🐄✨ MISSIONE SUPER MUCCA - COMPLETAMENTO TOTALE ✨🐄"
 type: concept
 tags: [missione, super, mucca, completata]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "missione-super-mucca-completata 🐄✨ missione super mucca - completamento totale ✨🐄"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

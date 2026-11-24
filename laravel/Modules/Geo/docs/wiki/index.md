@@ -4,7 +4,11 @@ type: index
 module: Geo
 tags: [geo, wiki, index, map-lit, leaflet]
 created: 2026-04-15
+<<<<<<< HEAD
 updated: 2026-06-05
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "geo module wiki index map-lit leaflet marker popup"
 issues:
   - "https://github.com/laraxot/module_geo_fila5/issues/47"
@@ -40,6 +44,19 @@ related:
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)
 - [Concepts](concepts/index.md)
+<<<<<<< HEAD
+=======
+- [Rules](rules/index.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)
+- [Rules](rules/index.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)
+>>>>>>> laraxot/dev
 
 ## Nota frontoffice (tema Sixteen)
 

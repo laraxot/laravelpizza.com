@@ -3,9 +3,14 @@ title: "🎯 PIANO D'AZIONE IMMEDIATO - FixCity Platform"
 type: concept
 tags: [action, plan, immediate]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
 qmd: "action-plan-immediate 🎯 piano d'azione immediato - fixcity platform"
 qmd: "action-plan-immediate 🎯 piano d'azione immediato - ptv platform"
+=======
+updated: 2026-11-23
+qmd: "action-plan-immediate 🎯 piano d'azione immediato - fixcity platform"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

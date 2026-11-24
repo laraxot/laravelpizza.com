@@ -3,7 +3,11 @@ title: "services"
 type: note
 tags: [documentation, notify, debt]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-17
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "services"
 issues: []
 discussions: []

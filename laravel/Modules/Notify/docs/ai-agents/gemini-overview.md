@@ -3,7 +3,11 @@ title: "gemini overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "gemini overview"
 issues: []
 discussions: []
@@ -81,5 +85,13 @@ composer run test
 ## 🔗 Link
 
 - [Indice GEMINI](./gemini-split-index.md)
+<<<<<<< HEAD
 - [gemini.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+- [GEMINI.md originale](../../gemini.md)
+=======
+- [gemini.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

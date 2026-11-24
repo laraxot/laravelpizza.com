@@ -27,6 +27,7 @@ return [
         'Modules\Xot\Actions\Filament\GetNavigationItemByModulename',
         'Modules\Xot\Actions\File\DownloadZipByPathsDiskAction',
         'Modules\Xot\Filament\Traits\NavigationLabelTrait',
+<<<<<<< HEAD
         'Modules\Xot\Services\RouteService',
     ],
     // classi in un namespace Services (regola No Services, DCP-270); NoServicesTest le vede come cartelle
@@ -34,6 +35,20 @@ return [
         'Modules\Xot\Services\Artisan\Handlers\ModuleCommandHandler',
         'Modules\Xot\Services\RouteService',
     ],
+=======
+    ],
+    // classi in un namespace Services (regola No Services, DCP-270); NoServicesTest le vede come cartelle
+    //
+    // Vuota dal 2026-11-20 (base_quaeris_fila5#247). `RouteService` era una copia
+    // morta: tutti e otto i metodi pubblici vivono in `Actions/Route/`, con test.
+    // Via anche dalla chiave `security`, dove stava per i tre `extract($params)`.
+    // `Services/.../ModuleCommandHandler` era un alias di 13 righe che estendeva
+    // l'Action omonima: cancellato l'alias, anche quella restava a zero
+    // riferimenti, quindi sono andate via entrambe. Il comportamento
+    // `module:list/disable/enable` vive in `Actions/Artisan/HandleArtisanActRequestAction`
+    // con `ArtisanActEnum`.
+    'services' => [],
+>>>>>>> laraxot/dev
     // classi che estendono Filament direttamente invece della base Xot (e una seconda XotBaseRelationManager duplicata)
     'xotbase' => [
         'Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager',

@@ -3,7 +3,11 @@ title: "report finale super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "report finale super mucca"
 issues: []
 discussions: []
@@ -475,4 +479,7 @@ cat Modules/User/docs/dry-kiss-analysis.md
 **Ore Investite:** 9  
 **Valore Creato:** Inestimabile  
 **Completamento:** 100% ✅
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

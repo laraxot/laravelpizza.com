@@ -7,7 +7,11 @@ type: concept
 sources: []
 confidence: high
 created: 2026-06-10
+<<<<<<< HEAD
 updated: 2026-06-10
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [migration, notifications, module-owner, notify, user]
 related:
   - ../../../../wiki/rules/one-migration-per-model.md

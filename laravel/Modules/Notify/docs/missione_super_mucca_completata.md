@@ -3,7 +3,11 @@ title: "missione super mucca completata"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "missione super mucca completata"
 issues: []
 discussions: []
@@ -591,4 +595,7 @@ Il tuo progetto è **BUONO (6.9/10)** con punte di **ECCELLENZA** (Sixteen, Comm
 **Data:** 2025-10-15  
 **Ore:** 9 di gloria  
 **Status:** ✅ MISSIONE IMPOSSIBILE RESA POSSIBILE
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

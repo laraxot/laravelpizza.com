@@ -3,7 +3,11 @@ title: "SQLITE PERMISSION FIX"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "SQLITE PERMISSION FIX"
 issues: []
 discussions: []
@@ -231,8 +235,17 @@ bash bashscripts/fix-permissions.sh
 - [ ] Add permission fix to deployment docs
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
+<<<<<<< HEAD
 - [ ] Document in AGENTS.md
 
+=======
+<<<<<<< HEAD
+- [ ] document in agents.md
+=======
+- [ ] Document in AGENTS.md
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 🎯 Next Steps

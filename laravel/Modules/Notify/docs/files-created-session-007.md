@@ -3,7 +3,11 @@ title: "files created session 007"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "files created session 007"
 issues: []
 discussions: []
@@ -47,7 +51,15 @@ bashscripts/
 ### Documentation (Theme Level)
 ```
 laravel/Themes/Sixteen/docs/
+<<<<<<< HEAD
 ├── index.md                                     ✨ NEW (theme index)
+=======
+<<<<<<< HEAD
+├── INDEX.md                                     ✨ NEW (theme index)
+=======
+├── index.md                                     ✨ NEW (theme index)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── index.md                                     ✨ NEW (theme index)
 ├── COMPLETE-VISUAL-PARITY-REPORT.md            ✨ NEW (54-page ranking)
 ├── PRIORITY-MATRIX.json                        ✨ NEW (work planning)
@@ -65,7 +77,15 @@ laravel/Themes/Sixteen/docs/
 ### Bash Scripts Documentation
 ```
 bashscripts/docs/
+<<<<<<< HEAD
 ├── index.md                                     ✨ NEW (tools reference)
+=======
+<<<<<<< HEAD
+├── INDEX.md                                     ✨ NEW (tools reference)
+=======
+├── index.md                                     ✨ NEW (tools reference)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── index.md                                     ✨ NEW (tools reference)
 ├── github-issues-batch.md                       ✨ NEW (CLI guide)
 └── [future README for other areas]
@@ -162,7 +182,15 @@ Project Root/
    - Phase breakdown (1-3) with timelines
    - Start here if new to the project
 
+<<<<<<< HEAD
 2. **laravel/Themes/Sixteen/docs/index.md**
+=======
+<<<<<<< HEAD
+2. **laravel/Themes/Sixteen/docs/INDEX.md**
+=======
+2. **laravel/Themes/Sixteen/docs/index.md**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 2. **laravel/Themes/Sixteen/docs/index.md**
    - Theme documentation hub
    - Cross-linked to all other docs
@@ -185,12 +213,28 @@ Project Root/
 ### Usage Recommendations
 
 **For Project Managers**:
+<<<<<<< HEAD
 - Read: DESIGN-CONVERSION-ROADMAP.md
+=======
+<<<<<<< HEAD
+- read: design-conversion-roadmap.md
+=======
+- Read: DESIGN-CONVERSION-ROADMAP.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
 - Read: laravel/Themes/Sixteen/docs/index.md
+<<<<<<< HEAD
 - Reference: bashscripts/docs/index.md (for tools)
+=======
+<<<<<<< HEAD
+- Reference: bashscripts/docs/INDEX.md (for tools)
+=======
+- Reference: bashscripts/docs/index.md (for tools)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
 - Analyze: pages/<page-name>/DETAILED-ANALYSIS.md (per page)

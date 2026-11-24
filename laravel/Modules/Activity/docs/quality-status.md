@@ -163,3 +163,11 @@ public function withCustomProperties(array $attributes): static
 *
 *PHPStan Version: Latest*
 *PHPMD Version: Latest*
+
+---
+
+## Contenuto unito da `quality-status.md`
+
+# quality status
+
+Stub alias post-strip data/timestamp. Canonico: [./quality-status.md](./quality-status.md).

@@ -3,7 +3,11 @@ title: "SUPER MUCCA FINAL SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "SUPER MUCCA FINAL SUMMARY"
 issues: []
 discussions: []
@@ -384,7 +388,10 @@ Con questi miglioramenti, la documentazione raggiungerà **livello ECCELLENTE**.
 *"La documentazione è il superpotere che rende grande un progetto"* - Super Mucca
 
 **#SuperMucca #DocumentationMatters #MissionCompleted #MUUUU** 🐄✨
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> laraxot/dev

@@ -92,7 +92,15 @@ Nel trait `HasTeams` sono presenti diversi metodi con lo stesso nome ma implemen
 - [ ] Verificare la compatibilità con i moduli che usano il trait
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [Indice documentazione User](./index.md)
+=======
+<<<<<<< HEAD
+- [Indice documentazione User](./index.md)
+=======
+- [Indice documentazione User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Modello User](./models/user.md)
 - [Best practices trait](./best-practices-traits.md)
 - [Refactor checklist](./refactor-checklist.md)

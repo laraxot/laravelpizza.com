@@ -11,6 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 uses(TestCase::class);
 
+// Il middleware legge le lingue da `laravellocalization.supportedLocales`, che cambia da progetto a progetto:
+// il test fissa le sue, cosi' i casi `de`/`es` valgono ovunque.
+beforeEach(function (): void {
+    config(['laravellocalization.supportedLocales' => ['it' => [], 'en' => [], 'de' => [], 'es' => []]]);
+});
+
 /**
  * Un alias di pagina (`chi-siamo` per `about`) risponde 301 al canonico nella stessa lingua, in un solo salto anche quando
  * la richiesta ha pure una copia di forma (lingua maiuscola, slash finale). La mappa si imposta nel test: in produzione

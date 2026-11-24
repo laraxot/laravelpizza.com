@@ -3,7 +3,11 @@ title: "Testing in Notify"
 type: concept
 tags: [notify, testing, pest, phpstan]
 created: 2026-06-05
+<<<<<<< HEAD
 updated: 2026-06-13
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify testing Pest notificationManager test doubles PHPStan"
 issues:
   - "https://github.com/laraxot/module_fixcity_fila5/issues/52"

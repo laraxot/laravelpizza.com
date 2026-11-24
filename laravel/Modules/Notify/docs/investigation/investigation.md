@@ -2,6 +2,11 @@
 type: investigation
 title: "Investigation Email Deliverability"
 links: {github_issue: #XXX}
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 # Investigation: Email Deliverability
 

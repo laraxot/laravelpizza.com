@@ -180,3 +180,13 @@ After fixes:
 *PHPStan: IMPROVED (13 → ~5 errors)*
 *Status: IN PROGRESS*
 *Priority: CRITICAL*
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da quality-11.md (rimozione date dai nomi file, issue #64) -->
+
+See canonical documentation: ../../../Themes/docs/shared-components/quality-1.md
+>>>>>>> laraxot/dev

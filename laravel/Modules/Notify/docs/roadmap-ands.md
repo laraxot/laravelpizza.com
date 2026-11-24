@@ -3,7 +3,11 @@ title: "roadmap ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap ands"
 issues: []
 discussions: []
@@ -270,4 +274,7 @@ class TicketDigest extends Notification implements ShouldQueue
 **Status**: ✅ BUONO  
 **PHPStan**: ✅ 0 errori  
 **Focus**: Real-Time + Push + Preferences
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

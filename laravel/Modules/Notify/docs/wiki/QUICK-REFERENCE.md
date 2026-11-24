@@ -3,7 +3,11 @@ title: "QUICK REFERENCE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "QUICK REFERENCE"
 issues: []
 discussions: []
@@ -96,7 +100,15 @@ related:                               # Optional (array of paths)
 
 ## Naming Conventions
 
+<<<<<<< HEAD
 - **Filenames**: lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+- **filenames**: lowercase-kebab-case.md
+=======
+- **Filenames**: lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - ✅ `lmsr-mechanics.md`
   - ❌ `LMSR_Mechanics.md`
 - **Directories**: lowercase
@@ -151,7 +163,15 @@ qmd serve ./docs/wiki
 ### Before Committing
 
 - [ ] Frontmatter schema valid
+<<<<<<< HEAD
 - [ ] Filename lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+- [ ] filename lowercase-kebab-case.md
+=======
+- [ ] Filename lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Page has 1+ outgoing links
 - [ ] index.md updated (if new page)
 - [ ] log.md updated (if ingestion)
@@ -181,7 +201,19 @@ Templates available:
 ## Related Documentation
 
 - [Complete Integration Guide](wiki/README.md)
+<<<<<<< HEAD
 - [Agent Instructions](wiki/AGENTS.md)
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/readme.md)
+=======
+<<<<<<< HEAD
+- [Agent Instructions](wiki/agents.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/README.md)
+=======
+- [Agent Instructions](wiki/AGENTS.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/readme.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Module Wiki Guide](Modules/Xot/docs/llm-wiki-integration.md)

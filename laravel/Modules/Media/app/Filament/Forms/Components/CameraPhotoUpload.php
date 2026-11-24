@@ -28,4 +28,8 @@ class CameraPhotoUpload extends XotBaseSpatieMediaLibraryFileUpload
             ->automaticallyResizeImagesMode('contain')
             ->automaticallyUpscaleImagesWhenResizing(false);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> laraxot/dev

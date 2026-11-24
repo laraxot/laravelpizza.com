@@ -7,12 +7,19 @@ namespace Modules\Xot\Actions\Export;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+<<<<<<< HEAD
 use Maatwebsite\Excel\Facades\Excel;
 use Modules\Xot\Exports\CollectionExport;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+=======
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Excel as ExcelWriter;
+use Maatwebsite\Excel\Facades\Excel;
+use Modules\Xot\Exports\CollectionExport;
+>>>>>>> laraxot/dev
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -51,7 +58,14 @@ class ExportXlsByCollection
     }
 
     /**
+<<<<<<< HEAD
      * Esporta una collezione in Excel utilizzando PhpSpreadsheet direttamente.
+=======
+     * Esporta una collezione in Excel su disco e restituisce il percorso del file.
+     *
+     * PhpSpreadsheet 1.x è imposto da maatwebsite/excel 3.1 ed è deprecato: non
+     * si usa mai direttamente, si passa sempre da Laravel Excel (CollectionExport).
+>>>>>>> laraxot/dev
      *
      * @param  Collection<int|string, mixed>|EloquentCollection<int, Model>  $rows  La collezione da esportare
      * @param  array<int|string, string>  $fields  Campi da includere nell'export
@@ -60,6 +74,7 @@ class ExportXlsByCollection
      */
     public function executeWithSpreadsheet(Collection|EloquentCollection $rows, array $fields, string $filename): string
     {
+<<<<<<< HEAD
         // Converte EloquentCollection in Support\Collection se necessario
         if ($rows instanceof EloquentCollection) {
             $rows = Collection::make($rows->toArray());
@@ -134,5 +149,14 @@ class ExportXlsByCollection
     protected function convertToSupportCollection(EloquentCollection $eloquentCollection): Collection
     {
         return Collection::make($eloquentCollection->toArray());
+=======
+        $export = new CollectionExport(collection: $rows, fields: $fields);
+
+        // Excel::store() accoda gli export ShouldQueue (CollectionExport lo e'): si
+        // usa raw() + put() per una scrittura sincrona su disco.
+        Storage::disk('local')->put($filename, Excel::raw($export, ExcelWriter::XLSX));
+
+        return Storage::disk('local')->path($filename);
+>>>>>>> laraxot/dev
     }
 }

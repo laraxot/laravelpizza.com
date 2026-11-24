@@ -7,7 +7,7 @@ type: concept
 module: Seo
 tags: [seo, queueable-action, adapters, refactoring, no-services]
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-11-19
 related:
   - ../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
 status: active
@@ -49,6 +49,11 @@ un **Facade coordinator** appartiene a `app/Adapters/`, non a `app/Actions/`.
 - `SeoServiceProvider` aggiornato (binding singleton + `provides()`).
 - Test aggiornati (Feature + Unit).
 - Il vecchio file rinominato `MetatagService.php.bak` (mai `git rm`).
+
+> **Aggiornamento 2026-11-19 (issue #64):** lo stato attuale e' diverso da quanto descritto sopra. La facade `Metatag`
+> punta a `MetatagFacadeAdapter` (stato per richiesta in `MetatagState`, scritture tramite le Action di
+> `app/Actions/Metatag/`). `MetatagManager`, `Services/MetatagService` e i doppioni `app/Data/*` non avevano piu'
+> chiamanti e sono stati rimossi, con i test che coprivano solo loro (i test di `MetatagFacadeAdapter` coprono la stessa API).
 
 ## Nota su GenerateSocialShareLinksAction
 

@@ -306,7 +306,15 @@ public function getTableColumns(): array
 
 - [authentication_performance_optimization.md](./performance/authentication_performance_optimization.md)
 
+<<<<<<< HEAD
 - [authentication_performance_optimization.md](./performance/authentication_performance_optimization.md)
+=======
+<<<<<<< .merge_file_d8st5g
+- [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/authentication-performance-optimization.md)
+=======
+- [authentication_performance_optimization.md](./performance/authentication_performance_optimization.md)
+>>>>>>> .merge_file_2YSkie
+>>>>>>> laraxot/dev
 - [optimization-analysis.md](./optimization-analysis.md)
 - [phpstan-compliance.md](./phpstan-compliance.md)
 

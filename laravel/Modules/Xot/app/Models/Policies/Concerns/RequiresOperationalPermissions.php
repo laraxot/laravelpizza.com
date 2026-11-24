@@ -12,8 +12,11 @@ namespace Modules\Xot\Models\Policies\Concerns;
  * (ADR module-admin-role-policy-bypass): in un impianto di rifiuti l'operatore di piazzale, che ha
  * il ruolo del pannello per usare la pagina di scansione, poteva rettificare pesi ed eliminare
  * conferimenti. Il super-admin resta escluso dai controlli come sempre.
+<<<<<<< HEAD
  *
  * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+=======
+>>>>>>> laraxot/dev
  */
 trait RequiresOperationalPermissions
 {

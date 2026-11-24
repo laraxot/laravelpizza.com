@@ -3,7 +3,11 @@ title: "session 007 summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "session 007 summary"
 issues: []
 discussions: []
@@ -468,4 +472,7 @@ Must achieve ALL criteria:
 *FixCity Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Notify Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Monitoring Subtask 1... Awaiting comparison results...*
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

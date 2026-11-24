@@ -18,10 +18,23 @@ discussions: []
 
 ## Fasi completate
 0. Ricognizione (git blame, lettura file)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+1. BMAD story (file creato in docs/stories/)
+2. Validazione (swarm index.md, nessun conflitto)
+3. Implementazione (3 file, 6 errori → 0)
+4. Quality gate (syntax OK, PHPStan 0, no suppress / no `@phpstan-ignore`)
+=======
+>>>>>>> laraxot/dev
 1. BMAD story (file creato: /tmp/xot_phpstan_story.md + docs/stories/)
 2. Validazione (swarm index.md, nessun conflitto)
 3. Implementazione (3 file, 6 errori → 0)
 4. Quality gate (syntax OK, PHPStan 0, no suppress)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. Sincronizzazione git (fetch laraxot/dev, merge -s resolve, push -u laraxot dev — no --force)
 6. Documentazione (questo file)
 
@@ -44,6 +57,11 @@ discussions: []
 - Coverage: quality gate ripetuto dopo merge, antes/post verificato
 
 ## Coordinamento multi-agente
+<<<<<<< HEAD
+=======
+- `docs/chat/INDEX.md`: Xot presente in swarm (migration-foreignidfor, phpstan-modules-zero)
+
+>>>>>>> laraxot/dev
 - `docs/chat/index.md`: Xot presente in swarm (migration-foreignidfor, phpstan-modules-zero)
 - Nessun conflitto con `phpstan-metalwork-claim` (chiuso) o `platform-duplicate-assignment-standdown`
 - Lock per-file rispettato (solo file Xot toccati)

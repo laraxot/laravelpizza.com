@@ -6,7 +6,11 @@ issues: []
 discussions: []
 title: "organizzativa-money — puntatore"
 type: reference
+<<<<<<< HEAD
 updated: 2026-05-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 related:
   - "../../../../Xot/docs/wiki/concepts/organizzativa-money.md"
 ---

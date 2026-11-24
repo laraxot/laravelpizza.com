@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Unit;
 
 use Carbon\Carbon;
+<<<<<<< HEAD
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use stdClass;
@@ -82,6 +83,131 @@ describe('Authentication Business Logic', function () {
     describe('User Authentication Logic', function () {
         it('validates user account status', function () {
             $user = (object) $this->userData;
+=======
+use PHPUnit\Framework\Assert;
+use stdClass;
+use Modules\User\Tests\TestCase;
+
+uses(TestCase::class);
+
+/*
+ * Le cinque fixture di questo file erano proprieta' dinamiche impostate in `beforeEach()`
+ * (`userTestAuthUserData()`, `userTestAuthTeamData()`, ...). Dentro una closure di Pest `$this` e'
+ * `Pest\PendingCalls\TestCall` — il suo `@mixin` e' `PHPUnit\Framework\TestCase`, non la
+ * TestCase del modulo — quindi quelle proprieta' non esistevano per l'analizzatore e ogni
+ * lettura valeva `mixed`. Da li' nascevano a cascata le segnalazioni su `(object) $mixed`,
+ * `array_merge(mixed, ...)`, `strlen(mixed)`, `in_array(..., mixed)`.
+ *
+ * Qui i dati sono in memoria e non toccano il database: la forma di ogni fixture e'
+ * conoscenza vera sul dominio, e dichiararla come array-shape la rende verificabile.
+ * Il cast `(object)` di una shape costante mantiene i tipi delle proprieta', quindi i test
+ * sotto restano scritti come prima e sono tipizzati fino in fondo.
+ */
+
+/**
+ * @return array{id: int, name: string, email: string, email_verified_at: Carbon, password: string,
+ *     remember_token: string, current_team_id: int, profile_photo_path: string, is_active: bool,
+ *     password_expires_at: Carbon, last_login_at: Carbon, failed_login_attempts: int, locked_until: Carbon|null}
+ */
+function userTestAuthUserData(): array
+{
+    return [
+        'id' => 1001,
+        'name' => 'Mario Rossi',
+        'email' => 'mario.rossi@example.com',
+        'email_verified_at' => Carbon::now()->subDays(5),
+        // Hash bcrypt reale (60 caratteri) della stringa 'password'.
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'remember_token_123',
+        'current_team_id' => 2001,
+        'profile_photo_path' => 'avatars/mario-rossi.jpg',
+        'is_active' => true,
+        'password_expires_at' => Carbon::now()->addDays(90),
+        'last_login_at' => Carbon::now()->subHours(2),
+        'failed_login_attempts' => 0,
+        'locked_until' => null,
+    ];
+}
+
+/**
+ * @return array{id: int, name: string, user_id: int, personal_team: bool, is_active: bool,
+ *     settings: array{timezone: string, language: string, notification_preferences: list<string>}}
+ */
+function userTestAuthTeamData(): array
+{
+    return [
+        'id' => 2001,
+        'name' => 'Studio Medico Milano',
+        'user_id' => 1001, // owner
+        'personal_team' => false,
+        'is_active' => true,
+        'settings' => [
+            'timezone' => 'Europe/Rome',
+            'language' => 'it',
+            'notification_preferences' => ['email', 'sms'],
+        ],
+    ];
+}
+
+/**
+ * @return array{id: int, name: string, guard_name: string, description: string, permissions: list<string>}
+ */
+function userTestAuthRoleData(): array
+{
+    return [
+        'id' => 3001,
+        'name' => 'doctor',
+        'guard_name' => 'web',
+        'description' => 'Healthcare professional with patient access',
+        'permissions' => [
+            'view_patients',
+            'create_appointments',
+            'update_patient_records',
+            'view_medical_history',
+        ],
+    ];
+}
+
+/**
+ * @return array{provider: string, provider_id: string, user_id: int, access_token: string,
+ *     refresh_token: string, expires_at: Carbon, scopes: list<string>}
+ */
+function userTestAuthOauthData(): array
+{
+    return [
+        'provider' => 'google',
+        'provider_id' => 'google_user_123456',
+        'user_id' => 1001,
+        'access_token' => 'oauth_access_token_abc',
+        'refresh_token' => 'oauth_refresh_token_xyz',
+        'expires_at' => Carbon::now()->addHour(),
+        'scopes' => ['email', 'profile'],
+    ];
+}
+
+/**
+ * @return array{id: int, user_id: int, device_name: string, device_type: string, device_id: string,
+ *     push_token: string, last_active: Carbon, is_trusted: bool}
+ */
+function userTestAuthDeviceData(): array
+{
+    return [
+        'id' => 4001,
+        'user_id' => 1001,
+        'device_name' => 'iPhone 14',
+        'device_type' => 'mobile',
+        'device_id' => 'device_uuid_456',
+        'push_token' => 'push_notification_token',
+        'last_active' => Carbon::now()->subMinutes(30),
+        'is_trusted' => true,
+    ];
+}
+
+describe('Authentication Business Logic', function () {
+    describe('User Authentication Logic', function () {
+        it('validates user account status', function () {
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: User must be active and verified
             Assert::assertTrue($user->is_active);
@@ -90,7 +216,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates email format and verification', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Email must be valid format and verified
             Assert::assertMatchesRegularExpression('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $user->email);
@@ -99,7 +229,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('handles password security requirements', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Password must be hashed and have expiration
             Assert::assertStringStartsWith('$2y$', $user->password);
@@ -109,7 +243,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('tracks login attempts and lockouts', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
             $maxAttempts = 5;
             $lockoutMinutes = 30;
 
@@ -118,7 +256,11 @@ describe('Authentication Business Logic', function () {
             Assert::assertNull($user->locked_until);
 
             // Simulate lockout scenario
+<<<<<<< HEAD
             $userLocked = (object) array_merge($this->userData, [
+=======
+            $userLocked = (object) array_merge(userTestAuthUserData(), [
+>>>>>>> laraxot/dev
                 'failed_login_attempts' => 5,
                 'locked_until' => Carbon::now()->addMinutes($lockoutMinutes),
             ]);
@@ -128,7 +270,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('manages session and remember tokens', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Remember token for persistent sessions
             Assert::assertIsString($user->remember_token);
@@ -137,7 +283,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates profile completeness', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: User profile requirements
             Assert::assertNotSame('', $user->name);
@@ -164,8 +314,13 @@ describe('Authentication Business Logic', function () {
 
     describe('Team Management Logic', function () {
         it('validates team ownership and membership', function () {
+<<<<<<< HEAD
             $team = (object) $this->teamData;
             $user = (object) $this->userData;
+=======
+            $team = (object) userTestAuthTeamData();
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: User can own and belong to teams
             Assert::assertSame($user->id, $team->user_id);
@@ -174,8 +329,13 @@ describe('Authentication Business Logic', function () {
         });
 
         it('distinguishes personal vs organizational teams', function () {
+<<<<<<< HEAD
             $team = (object) $this->teamData;
             $user = (object) $this->userData;
+=======
+            $team = (object) userTestAuthTeamData();
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Personal teams vs organizational teams
             Assert::assertFalse($team->personal_team);
@@ -194,7 +354,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates team settings and preferences', function () {
+<<<<<<< HEAD
             $team = (object) $this->teamData;
+=======
+            $team = (object) userTestAuthTeamData();
+>>>>>>> laraxot/dev
             $settings = $team->settings;
 
             // Business Logic: Team settings structure
@@ -209,7 +373,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('handles team switching logic', function () {
+<<<<<<< HEAD
             $user = (object) $this->userData;
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> laraxot/dev
             $availableTeams = [2001, 2002, 2003]; // Teams user belongs to
             $newTeamId = 2002;
 
@@ -218,7 +386,11 @@ describe('Authentication Business Logic', function () {
             Assert::assertContains($newTeamId, $availableTeams);
 
             // Simulate team switch
+<<<<<<< HEAD
             $userAfterSwitch = (object) array_merge($this->userData, [
+=======
+            $userAfterSwitch = (object) array_merge(userTestAuthUserData(), [
+>>>>>>> laraxot/dev
                 'current_team_id' => $newTeamId,
             ]);
 
@@ -228,7 +400,11 @@ describe('Authentication Business Logic', function () {
 
     describe('Role-Based Access Control', function () {
         it('validates role structure and permissions', function () {
+<<<<<<< HEAD
             $role = (object) $this->roleData;
+=======
+            $role = (object) userTestAuthRoleData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Role must have name, guard, and permissions
             Assert::assertIsString($role->name);
@@ -238,7 +414,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates healthcare-specific permissions', function () {
+<<<<<<< HEAD
             $role = (object) $this->roleData;
+=======
+            $role = (object) userTestAuthRoleData();
+>>>>>>> laraxot/dev
             $healthcarePermissions = [
                 'view_patients',
                 'create_patients',
@@ -302,7 +482,11 @@ describe('Authentication Business Logic', function () {
 
     describe('OAuth Integration Logic', function () {
         it('validates OAuth provider configuration', function () {
+<<<<<<< HEAD
             $oauth = (object) $this->oauthData;
+=======
+            $oauth = (object) userTestAuthOauthData();
+>>>>>>> laraxot/dev
             $supportedProviders = ['google', 'facebook', 'azure', 'github'];
 
             // Business Logic: OAuth provider must be supported
@@ -312,7 +496,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('handles OAuth token lifecycle', function () {
+<<<<<<< HEAD
             $oauth = (object) $this->oauthData;
+=======
+            $oauth = (object) userTestAuthOauthData();
+>>>>>>> laraxot/dev
 
             // Business Logic: OAuth tokens have expiration
             Assert::assertIsString($oauth->access_token);
@@ -324,7 +512,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates OAuth scope permissions', function () {
+<<<<<<< HEAD
             $oauth = (object) $this->oauthData;
+=======
+            $oauth = (object) userTestAuthOauthData();
+>>>>>>> laraxot/dev
             $requiredScopes = ['email', 'profile'];
 
             // Business Logic: OAuth must have required scopes
@@ -347,7 +539,11 @@ describe('Authentication Business Logic', function () {
 
     describe('Device Management Logic', function () {
         it('validates device registration', function () {
+<<<<<<< HEAD
             $device = (object) $this->deviceData;
+=======
+            $device = (object) userTestAuthDeviceData();
+>>>>>>> laraxot/dev
             $validDeviceTypes = ['mobile', 'tablet', 'desktop', 'web'];
 
             // Business Logic: Device must be properly registered
@@ -357,7 +553,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('tracks device activity and trust', function () {
+<<<<<<< HEAD
             $device = (object) $this->deviceData;
+=======
+            $device = (object) userTestAuthDeviceData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Device trust and activity tracking
             Assert::assertInstanceOf(Carbon::class, $device->last_active);
@@ -369,7 +569,11 @@ describe('Authentication Business Logic', function () {
         });
 
         it('validates push notification setup', function () {
+<<<<<<< HEAD
             $device = (object) $this->deviceData;
+=======
+            $device = (object) userTestAuthDeviceData();
+>>>>>>> laraxot/dev
 
             // Business Logic: Mobile devices should have push tokens
             if ($device->device_type === 'mobile') {

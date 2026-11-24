@@ -6,7 +6,15 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
+<<<<<<< HEAD
 - [Rules](rules/index.md)
+=======
+<<<<<<< .merge_file_p3coFV
+- [Rules](rules/INDEX.md)
+=======
+- [Rules](rules/index.md)
+>>>>>>> .merge_file_IqaYa2
+>>>>>>> laraxot/dev
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)

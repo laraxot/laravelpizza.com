@@ -132,6 +132,13 @@ richiede lock (`bashscripts/lock/`) prima dell'edit.
 nomi duplicati con solo case/separatore diverso (`BUSINESS-LOGIC-ANALYSIS.md`
 vs `business_logic_analysis.md`, stesso per `code-quality-analysis.md` /
 `CODE_QUALITY_ANALYSIS.md`) e più varianti di index
+<<<<<<< HEAD
+=======
+(`00-INDEX.md`, `00-index.md`, `00-index-1.md`, `INDEX.md`,
+`INDEX_GENERATED.md`). Non toccato qui — da tracciare separatamente.
+
+(`00-INDEX.md`, `00-index.md`, `00-index.md`, `INDEX.md`,
+>>>>>>> laraxot/dev
 (`00-index.md`, `00-index.md`, `00-index-1.md`, `index.md`,
 `INDEX_GENERATED.md`). Non toccato qui — da tracciare separatamente.
 

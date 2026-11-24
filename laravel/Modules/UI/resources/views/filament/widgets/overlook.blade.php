@@ -28,7 +28,11 @@ declare(strict_types=1);
 
         </div>
 
+<<<<<<< HEAD
         <x-filament::icon :icon="$icon"
+=======
+        <x-filament::icon :icon="$icon" :size="24"
+>>>>>>> laraxot/dev
             class="absolute w-auto transition left-2 text-primary-500 h-36 z-1 overlook-icon -bottom-12 opacity-10 dark:opacity-10 group-hover:scale-110 group-hover:-rotate-12 group-hover:opacity-30" />
 
     </x-filament::section>

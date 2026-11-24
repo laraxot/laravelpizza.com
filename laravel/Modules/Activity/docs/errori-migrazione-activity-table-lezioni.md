@@ -181,20 +181,12 @@ Questa lezione è ora memorizzata permanentemente per:
 - [ Models](../../<nome modulo>/docs/model_architecture.md)
 - [Activity Logging](./activity_logging_system.md)
 
-<<<<<<< .merge_file_YnG6Xm
-=======
-=======
->>>>>>> .merge_file_yHpvqA
 - [Regole Migrazioni Laraxot](../../Xot/docs/migration_rules.md)
 - [Polimorfismo UUID](../../Xot/docs/polymorphic_uuid_support.md)
 - [Principi Architetturali](../../../docs/architectural_principles.md)
 
 ### Moduli Correlati
 - [User Module UUID](../../User/docs/uuid_implementation.md)
-<<<<<<< .merge_file_YnG6Xm
-- [SaluteOra Models](../../SaluteOra/docs/model_architecture.md)
-=======
->>>>>>> .merge_file_yHpvqA
 - [ Models](../../<nome modulo>/docs/model_architecture.md)
 - [Activity Logging](./activity_logging_system.md)
 

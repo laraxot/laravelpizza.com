@@ -10,18 +10,11 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-<<<<<<< .merge_file_QSvbYC
-test('LogModelUpdatedAction can be instantiated', function () {
-    $model = new class extends Model
-    {
-        protected $table = 'test_models';
-=======
 test('LogModelUpdatedAction execute persiste updated con subject e causer', function (): void {
     $model = new LogModelUpdatedActionTestModel;
     $model->forceFill(['id' => 'updated-1', 'name' => 'Updated']);
     $model->exists = true;
     $model->syncOriginal();
->>>>>>> .merge_file_bsHFWI
 
     $user = new User;
     $user->forceFill([

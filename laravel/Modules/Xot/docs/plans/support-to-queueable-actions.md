@@ -1,6 +1,12 @@
 ---
 title: "Support to Queueable Actions"
 type: note
+<<<<<<< HEAD
+=======
+status: in-progress
+updated: 2026-11-20
+
+>>>>>>> laraxot/dev
 status: draft
 updated: 2026-10-22
 tags: [docs, xot, plans]
@@ -67,3 +73,56 @@ unverified if that external dependency is unavailable.
 Production `app/Support` = **0**. Faux-Action cleanup: Geo config → `Infrastructure\Config`;
 AI registry → `Adapters`; Blog ArticleDelegates morto rimosso. Ratchet: `NoServicesTest`.
 Process: `docs/second-brain/process/no-app-support-queueable-actions.md`.
+<<<<<<< HEAD
+=======
+
+## Status 2026-11-20: erano tornate
+
+Lo stato del 2026-10-22 diceva «Production `app/Support` = 0». Il 2026-11-20 le
+cartelle erano **sei**, con 11 file, e `NoServicesTest` rosso su entrambe le
+asserzioni che le sorvegliano. Stesso fenomeno dei `Services` cancellati lo
+stesso giorno (base_quaeris_fila5#247): i moduli sono repo separati e il pull le
+riporta.
+
+Le classi erano nove (gli altri due dei file che `NoServicesTest` elencava —
+`TenantScope.php` e `InteractsWithTenant.php` — **usavano** quel namespace senza
+starci dentro). Otto delle nove non avevano chiamanti di produzione, e per
+ognuna esisteva il successore o la copia canonica.
+
+| file | esito |
+|---|---|
+| `AI/app/Support/AiJsonResponseDecoder` | terza copia del decoder; canonica `Actions/AiJsonResponseDecoderAction` |
+| `AI/app/Support/PredictionDraftFallbackTemplates` | canonica `Actions/PredictionDraftFallbackTemplatesAction` |
+| `AI/app/Support/ScalarCaster` | zero riferimenti, in nessuna forma |
+| `AI/app/Actions/Support/MakeAIRequestAction` | gemello morto del vivo in `Actions/`: `handle()` oltre `execute()`, `sleep()` nudo |
+| `AI/app/Actions/Support/RequestChatCompletionAction` | zero riferimenti; `sleep()` nudo anche dopo l'ultimo tentativo |
+| `Geo/app/Support/GeoMapDataset` | zero riferimenti |
+| `Geo/app/Actions/Geo/Support/GeoMapDatasetAction` | zero riferimenti |
+| `Geo/app/Filament/Forms/Components/Support/CoordinatePickerHelpers` | copia rimasta indietro: il vivo e' in `Components/`, che `XotBaseCoordinateField` risolve **senza `use`** perche' e' nel proprio namespace |
+
+La nona era viva: `User/app/Support/AuthenticatedTenantKey`, chiamata da
+`Models\Scopes\TenantScope:32` e da `Models\Traits\InteractsWithTenant:54`,
+quindi nel percorso di ogni query sui modelli con tenancy.
+
+**Non** e' diventato una Action, seguendo la regola scritta qui sopra: non e' un
+caso d'uso, e' un risolutore sincrono dentro uno scope Eloquent, e renderlo
+accodabile aggiungerebbe una risoluzione dal container a ogni query. E' andato in
+`User/app/Infrastructure/Tenant/`, sul precedente di
+`Geo/app/Infrastructure/Config` citato nello stato di ottobre.
+
+Nel passaggio e' emerso che il suo docblock descriveva **un altro progetto**:
+elencava «cameriere, cassa, cucina, bar, HACCP» e parlava di «ristorante», in un
+progetto di sondaggi. Il modulo e' condiviso e si era portato dietro il dominio
+di chi l'aveva scritto per primo. Il codice e' generico (prende il primo tenant),
+la descrizione no: riscritta in termini di organizzazione, con la nota che quel
+`first()` diventa un bug silenzioso il giorno in cui un utente appartiene a due.
+
+Esito: `NoServicesTest` **8 asserzioni su 8 verdi**, da 6 rosse della mattina.
+`phpstan analyse`: `[OK] No errors`.
+
+Il cancello di verifica di questo piano, rimisurato:
+
+```
+find laravel/Modules/*/app laravel/Themes -type d -name Support     (vuoto)
+```
+>>>>>>> laraxot/dev

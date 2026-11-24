@@ -3,9 +3,14 @@ title: "🚀 ROADMAP GENERALE - FixCity Platform"
 type: concept
 tags: [roadmap, project]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
 qmd: "roadmap-project 🚀 roadmap generale - fixcity platform"
 qmd: "roadmap-project 🚀 roadmap generale - ptv platform"
+=======
+updated: 2026-11-23
+qmd: "roadmap-project 🚀 roadmap generale - fixcity platform"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

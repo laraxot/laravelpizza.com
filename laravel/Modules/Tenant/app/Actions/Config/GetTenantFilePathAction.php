@@ -9,6 +9,11 @@ use InvalidArgumentException;
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * Percorso di un file nella cartella di config del tenant corrente.
+ *
+ * @contract docs/contracts/get-tenant-file-path-action.md
+ */
 class GetTenantFilePathAction
 {
     use QueueableAction;

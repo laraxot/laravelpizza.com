@@ -262,17 +262,10 @@ IndennitaResponsabilita::withoutEvents(function (): void {
 ---
 
 **
-<<<<<<< .merge_file_D7L4if
-**Ultimo aggiornamento**: 19 Novembre 2025  
-**Ultimo aggiornamento**: 19 Novembre 2025  
-**=======
-**Ultimo aggiornamento**: 19 Novembre 2025  
-=======
 
 **Ultimo aggiornamento**: 19 Novembre 2025  
 
 **=======
->>>>>>> .merge_file_Ug2Q30
 **Severità**: Alta (blocca operazioni batch)  
 **Soluzione**: Usare `withoutEvents()` durante `firstOrCreate()`
 

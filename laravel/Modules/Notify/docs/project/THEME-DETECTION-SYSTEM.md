@@ -3,7 +3,11 @@ title: "THEME DETECTION SYSTEM"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "THEME DETECTION SYSTEM"
 issues: []
 discussions: []
@@ -408,10 +412,23 @@ new class extends Component {
 
 ### Internal Documents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- → [Layout Architecture](Themes/Sixteen/docs/layout_architecture_and_namespace.md) - Layout hierarchy
+- → [Page Component Architecture](Modules/Cms/docs/page_component_architecture.md) - Page component
+- → [Vite Build System](Themes/Sixteen/docs/vite_manifest_fix_complete.md) - Build process
+- → [Master Index](docs/module_docs_index.md) - Central navigation
+=======
+>>>>>>> laraxot/dev
 - → [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md) - Layout hierarchy
 - → [Page Component Architecture](Modules/Cms/docs/page_component_architecture.md) - Page component
 - → [Vite Build System](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build process
 - → [Master Index](docs/MODULE_DOCS_INDEX.md) - Central navigation
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### External Resources
 

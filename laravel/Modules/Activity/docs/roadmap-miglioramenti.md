@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 # Activity — cosa migliorare (visione, non lamento)
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 ---
 title: "Activity: cosa migliorare (visione, non lamento)"
 type: note
@@ -21,10 +24,13 @@ gate non cattura.
 
 ## Il vero bug non è nel codice, è nella cartella docs/
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 `app/` è pulito: zero `TODO`, zero `FIXME`, zero `dddx(`/`dd(` residui —
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 `app/` è pulito: zero `TODO`, zero `FIXME`, zero `dddx(`/`dd(` residui -
 coerente col `TODO/FIXME/HACK: 0` già misurato in `cosa-migliorare.md`. Chi
 ha scritto la logica di audit-trail e CQRS event sourcing di questo modulo
@@ -39,6 +45,7 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 
 - 6 varianti di `phpstan-fixes*.md`, altre 6 di `phpstan-analysis*.md`
 - 4 varianti di `business-logic-analysis*.md` (compreso uno SCREAMING_CASE)
+<<<<<<< HEAD
 - `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
 <<<<<<< .merge_file_qXESXB
   `roadmap-archive-1.md`, `roadmap-vision.md` — sei roadmap per un modulo,
@@ -59,6 +66,17 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
   nessuna delle quali probabilmente letta prima di scriverne una nuova
 - `README.md`, `README.md`, `README.md.update`, `README.md.update`,
 >>>>>>> .merge_file_bjOfCg
+=======
+<<<<<<< .merge_file_sMVGP2
+- `roadmap.md`, `roadmap.md`, `roadmap.md`, `roadmap-and-issues.md`,
+  `roadmap-archive-1.md`, `roadmap-vision.md`: sei roadmap per un modulo,
+=======
+- `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
+  `roadmap-archive.md`, `roadmap-vision.md`: sei roadmap per un modulo,
+>>>>>>> .merge_file_SFvhbL
+  nessuna delle quali probabilmente letta prima di scriverne una nuova
+- `README.md`, `README.md`, `README.md.update`, `README.md.update`,
+>>>>>>> laraxot/dev
   `readme_update.md`, `readme-update.md`: sei README, contando le
   differenze di case e underscore come se fossero contenuto
 - `test02.md`, `test03.md`, `test04.md`, `test2222.md`, `test444.md`: file
@@ -70,6 +88,7 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 Questo non è un problema estetico. È un debito di fiducia: se il second
 brain (qmd/graphify) indicizza 705 varianti quasi-identiche, ogni query
 futura su "Activity" restituisce rumore invece di segnale, e il prossimo
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 agente (io compreso, tra un'ora) rischia di leggere `phpstan-fixes-1.md`
 invece di `phpstan-fixes.md` e agire su uno stato vecchio credendolo
@@ -84,6 +103,8 @@ recente/completo per `git log -S`, cancellare il resto con un commit che
 dichiara esplicitamente cosa è sparito (mai "cleanup" generico — vedi
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 agente (io compreso, tra un'ora) rischia di leggere `phpstan-fixes-correzioni-modulo-activity.md`
 invece di `phpstan-fixes.md` e agire su uno stato vecchio credendolo
 attuale: esattamente il tipo di errore che [[feedback-verify-code-not-docs]]
@@ -100,10 +121,13 @@ a qualche decina di file con un `index.md` vero in testa.
 
 ## composer.json: la parte tecnica è quasi pronta, manca un pezzo
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 Il file è ordinato — `name`, `description`, `keywords` (nove, specifici:
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 Il file è ordinato: `name`, `description`, `keywords` (nove, specifici:
 `event-sourcing`, `cqrs`, `audit-trail`, non genericume), `extra.laravel`
 con i due service provider giusti, script `analyse`/`test`/`lint` già
@@ -111,10 +135,13 @@ cablati su phpstan/pest/pint. Chi l'ha scritto sapeva cosa stava facendo.
 
 Due cose saltano all'occhio:
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 1. `"require-dev": {}` — vuoto. Gli script `composer.json` chiamano
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 1. `"require-dev": {}`: vuoto. Gli script `composer.json` chiamano
    `vendor/bin/phpstan`, `vendor/bin/pest`, `vendor/bin/pint`, ma nessuno di
    questi pacchetti è dichiarato come dipendenza del modulo. Funziona solo
@@ -126,10 +153,13 @@ Due cose saltano all'occhio:
    `Xot/composer.json` (larastan, pest, pest-plugin-laravel, pestphp
    type-coverage, laravel/pint).
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXESXB
 2. La chiave `"repositories_comment"` invece di `"repositories"` — qualcuno
 =======
 >>>>>>> .merge_file_bjOfCg
+=======
+>>>>>>> laraxot/dev
 2. La chiave `"repositories_comment"` invece di `"repositories"`: qualcuno
    ha "disattivato" le path repositories verso `../Xot`, `../Tenant`,
    `../UI` rinominando la chiave così che Composer la ignori. Funziona (i

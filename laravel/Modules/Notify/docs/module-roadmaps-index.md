@@ -3,7 +3,11 @@ title: "Laraxot Module Roadmaps - Master Index"
 type: concept
 tags: [module, roadmaps, index]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "module-roadmaps-index laraxot module roadmaps - master index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -274,6 +278,10 @@ This document provides an index of all module roadmaps in the Laraxot ecosystem.
 - [Laraxot Architecture Rules](./laravel/Modules/Xot/docs/laraxot-architecture-rules.md)
 - [Project Roadmap](./project-roadmap-1.md)
 - [AGENTS.md](./agents.md)
+<<<<<<< HEAD
+=======
+- [agents.md](./agents.md)
+>>>>>>> laraxot/dev
 - [AGENTS.md](./agents.md)
 - [Getting Started](./quick-start.md)
 

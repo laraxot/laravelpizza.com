@@ -3,6 +3,11 @@ title: Notify — indice BMAD
 type: index
 tags: [docs, bmad, notify]
 qmd: "Notify indice BMAD documentazione"
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Notify — indice BMAD

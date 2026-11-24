@@ -3,7 +3,11 @@ title: "filament resources"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament resources"
 issues: []
 discussions: []
@@ -242,7 +246,10 @@ public static function getTableActions(): array
 
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### Versione Incoming
 
 4. **Validazione JSON**
@@ -255,7 +262,10 @@ public static function getTableActions(): array
    - Struttura gerarchica delle traduzioni
    - Supporto per tooltip e placeholder
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## Collegamenti Bidirezionali
@@ -270,8 +280,18 @@ public static function getTableActions(): array
 - [Gestione Notifiche](../../../../../docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
+<<<<<<< HEAD
 - [XotBaseResource](../../Xot/docs/xotbaseresource.md)
 - [Gestione Template](template-management.md)
+=======
+<<<<<<< .merge_file_wrGwPC
+- [XotBaseResource](../../Xot/docs/XotBaseResource.md)
+- [Gestione Template](../template-management.md)
+=======
+- [XotBaseResource](../../Xot/docs/xotbaseresource.md)
+- [Gestione Template](template-management.md)
+>>>>>>> .merge_file_nTt6D2
+>>>>>>> laraxot/dev
 
 ## Note Importanti
 
@@ -302,6 +322,10 @@ public static function getTableActions(): array
 * [filament-resources.md](../../Patient/docs/filament-resources.md)
 * [filament-resources.md](../../Cms/docs/filament-resources.md)
 
+<<<<<<< HEAD
 
 ---
 
+=======
+---
+>>>>>>> laraxot/dev

@@ -1,13 +1,7 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_BKGROD
-
 namespace Modules\Activity\Tests\Unit\Listeners;
-
-=======
-namespace Modules\Activity\Tests\Unit\Listeners;
->>>>>>> .merge_file_byxCR6
 use Illuminate\Auth\Events\Login;
 use Modules\Activity\Providers\EventServiceProvider;
 use Modules\Activity\Listeners\LoginListener;
@@ -15,7 +9,7 @@ use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('login listener is registered for login event', function () {
     $reflection = new ReflectionClass(EventServiceProvider::class);
@@ -29,20 +23,20 @@ test('login listener is registered for login event', function () {
 });
 
 test('login listener can be instantiated', function () {
-    $listener = new LoginListener;
+    $listener = new LoginListener();
 
     Assert::assertTrue((new ReflectionClass($listener))->hasMethod('handle'));
 });
 
 test('login listener has handle method', function () {
-    $listener = new LoginListener;
+    $listener = new LoginListener();
     $reflection = new ReflectionClass($listener);
 
     Assert::assertTrue($reflection->hasMethod('handle'));
 });
 
 test('login listener handle method is callable', function () {
-    $listener = new LoginListener;
+    $listener = new LoginListener();
 
     $listener->handle();
 });

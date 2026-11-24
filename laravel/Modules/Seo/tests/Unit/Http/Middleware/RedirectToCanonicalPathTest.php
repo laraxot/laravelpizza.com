@@ -10,6 +10,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 uses(TestCase::class);
 
+// Il middleware legge le lingue da `laravellocalization.supportedLocales`, che cambia da progetto a progetto:
+// il test fissa le sue, cosi' i casi `de`/`es` valgono ovunque.
+beforeEach(function (): void {
+    config(['laravellocalization.supportedLocales' => ['it' => [], 'en' => [], 'de' => [], 'es' => []]]);
+});
+
 /**
  * DCP-288 (FO-6-20): la richiesta si costruisce a mano perche' il client di test toglie lo slash finale dall'indirizzo.
  */

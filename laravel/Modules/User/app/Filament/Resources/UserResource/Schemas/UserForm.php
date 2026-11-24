@@ -38,6 +38,7 @@ class UserForm extends XotBaseResourceForm
      */
     public function getFormSchema(): array
     {
+<<<<<<< HEAD
 <<<<<<< .merge_file_5RdNS9
         return [
             'worker' => UserSection::make('worker')->heading(static fn (): string => (string) __('user::user_section.heading')),
@@ -46,6 +47,10 @@ class UserForm extends XotBaseResourceForm
         return [Grid::make(['default' => 1, 'lg' => 12])->schema([
             'main' => Grid::make(1)
 >>>>>>> .merge_file_L9XoHA
+=======
+        return [Grid::make(['default' => 1, 'lg' => 12])->schema([
+            'main' => Grid::make(1)
+>>>>>>> laraxot/dev
                 ->schema([
                     'worker' => UserSection::make('worker')
                         ->heading('Identity')

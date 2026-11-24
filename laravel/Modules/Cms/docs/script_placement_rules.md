@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Script Placement Rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Script Placement Rules"
+=======
+title: "script placement rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "script placement rules"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

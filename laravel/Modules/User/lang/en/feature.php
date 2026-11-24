@@ -11,11 +11,7 @@ return [
         'plural' => 'Features',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_SQE590
-            'description' => 'Gestione delle feature e delle funzionalità',
-=======
             'description' => 'Manage features',
->>>>>>> .merge_file_Mzt05A
         ],
         'label' => 'Feature',
         'sort' => '75',

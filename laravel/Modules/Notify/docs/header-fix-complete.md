@@ -3,9 +3,14 @@ title: "✅ Header FixCity Fixato - 100% Conforme Bootstrap Italia"
 type: concept
 tags: [header, fix, complete]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
 qmd: "header-fix-complete ✅ header fixcity fixato - 100% conforme bootstrap italia"
 qmd: "header-fix-complete ✅ header ptv fixato - 100% conforme bootstrap italia"
+=======
+updated: 2026-11-23
+qmd: "header-fix-complete ✅ header fixcity fixato - 100% conforme bootstrap italia"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

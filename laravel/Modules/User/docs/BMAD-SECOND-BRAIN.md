@@ -4,7 +4,15 @@
 - `main_module=''` → `XotData::getProfileClass()` falliva (`InvalidArgumentException`)
 - `IsProfileTrait.php`: duplicato `use UserContract`
 - `BaseProfile.php`: `id` UUID mancante (`PDOException` 1364)
+<<<<<<< HEAD
 - PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
+=======
+<<<<<<< HEAD
+- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
+=======
+- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `<nome progetto>`)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Fix applicati (SSoT)
 - `Modules\Xot\Contracts\UserContract` / `ProfileContract`

@@ -43,24 +43,11 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @property-read Collection<int, mixed> $changes
  * @property-read Model|null $subject
  *
-<<<<<<< .merge_file_G29uvb
- * @method static ActivityFactory factory($count = null, $state = [])
- * @method static Builder<static> newModelQuery()
- * @method static Builder<static> newQuery()
- * @method static Builder<static> query()
- * @method static static create(array<string, mixed> $attributes = [])
-=======
  * @mixin \Eloquent
->>>>>>> .merge_file_yUCxCF
  */
 class Activity extends SpatieActivity
 {
     use ActivityScopes;
-<<<<<<< .merge_file_G29uvb
-
-    /** > */
-=======
->>>>>>> .merge_file_yUCxCF
     use HasXotFactory;
 
     /** @var string */

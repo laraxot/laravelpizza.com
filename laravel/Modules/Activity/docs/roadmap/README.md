@@ -42,10 +42,6 @@ The Activity module provides comprehensive audit trail and event sourcing capabi
 - [ ] Activity retention policies
 - [ ] Audit report generation
 
-<<<<<<< .merge_file_C6HN3g
----
-=======
->>>>>>> .merge_file_EWKzCI
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |

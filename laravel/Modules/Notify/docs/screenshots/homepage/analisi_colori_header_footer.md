@@ -3,7 +3,11 @@ title: "analisi colori header footer"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "analisi colori header footer"
 issues: []
 discussions: []
@@ -14,6 +18,7 @@ discussions: []
 
 ## Data: {{ date('Y-m-d H:i:s') }}
 
+<<<<<<< HEAD
 ---
 
 title: "analisi colori header footer"
@@ -40,6 +45,10 @@ discussions: []
 
 ---
 
+=======
+## 🎯 Problema Identificato
+
+>>>>>>> laraxot/dev
 ## 1. HEADER - Bootstrap Italia Reference
 
 ### Struttura Ufficiale

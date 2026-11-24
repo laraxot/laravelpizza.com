@@ -3,7 +3,11 @@ title: "qwen memories"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "qwen memories"
 issues: []
 discussions: []
@@ -244,5 +248,13 @@ Usare `cinematic-particles` per background hero:
 
 - [Indice QWEN](./qwen-split-index.md)
 - [memories.md](./memories.md) - Più memorie
+<<<<<<< HEAD
 - [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

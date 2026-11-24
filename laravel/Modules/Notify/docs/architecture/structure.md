@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, structure]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture structure modulo notify frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -456,6 +460,24 @@ tests/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
+<<<<<<< HEAD
+=======
+* [structure.md](../../../gdpr/docs/structure.md)
+* [structure.md](../../../notify/docs/structure.md)
+* [structure.md](../../../xot/docs/structure.md)
+* [structure.md](../../../xot/docs/base/structure.md)
+* [structure.md](../../../xot/docs/config/structure.md)
+* [structure.md](../../../user/docs/structure.md)
+* [structure.md](../../../ui/docs/structure.md)
+* [structure.md](../../../lang/docs/structure.md)
+* [structure.md](../../../job/docs/structure.md)
+* [structure.md](../../../media/docs/structure.md)
+* [structure.md](../../../tenant/docs/structure.md)
+* [structure.md](../../../activity/docs/structure.md)
+* [structure.md](../../../cms/docs/structure.md)
+* [structure.md](../../../cms/docs/themes/structure.md)
+* [structure.md](../../../cms/docs/components/structure.md)
+>>>>>>> laraxot/dev
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../structure.md)
 * [structure.md](../../../xot/docs/structure.md)

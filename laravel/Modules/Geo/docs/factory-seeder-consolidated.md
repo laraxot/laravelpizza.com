@@ -326,7 +326,15 @@ Ho creato uno script intelligente (`smart_populate_models.php`) che:
 - [<nome progetto> Factory](../modules/<nome progetto>/docs/factory-issues-analysis.md)
 - [User Factory](../../User/docs/factory-audit-lessons-learned.md)
 - [Geo Factory](factory-creation-geo-module.md)
+<<<<<<< HEAD
 - [Media Factory](../../Media/docs/README.md)
+=======
+<<<<<<< HEAD
+- [Media Factory](../../Media/docs/readme.md)
+=======
+- [Media Factory](../../Media/docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Documentazione Tecnica
 - [Business Logic](../business-logic-consolidated.md)

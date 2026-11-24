@@ -3,7 +3,11 @@ title: "DOCUMENTATION IMPROVEMENT SUMMARY 2026 03 13"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "DOCUMENTATION IMPROVEMENT SUMMARY 2026 03 13"
 issues: []
 discussions: []
@@ -59,19 +63,43 @@ Successfully implemented a comprehensive documentation governance framework and 
 
 ### Core Documentation
 
+<<<<<<< HEAD
 1. **[DOCUMENTATION_GOVERNANCE.md](docs/DOCUMENTATION_GOVERNANCE.md)**
+=======
+<<<<<<< HEAD
+1. **[DOCUMENTATION_GOVERNANCE.md](docs/documentation_governance.md)**
+=======
+1. **[DOCUMENTATION_GOVERNANCE.md](docs/DOCUMENTATION_GOVERNANCE.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Comprehensive governance framework
    - Standards for all documentation
    - Quality metrics and KPIs
    - Maintenance workflows
 
+<<<<<<< HEAD
 2. **[MASTER_DOCUMENTATION_INDEX.md](docs/MASTER_DOCUMENTATION_INDEX.md)**
+=======
+<<<<<<< HEAD
+2. **[MASTER_DOCUMENTATION_INDEX.md](docs/master_documentation_index.md)**
+=======
+2. **[MASTER_DOCUMENTATION_INDEX.md](docs/MASTER_DOCUMENTATION_INDEX.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Central navigation hub
    - Links to all module docs
    - Links to all theme docs
    - Categorized by topic
 
+<<<<<<< HEAD
 3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)**
+=======
+<<<<<<< HEAD
+3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/documentation_analysis_and_improvement_plan.md)**
+=======
+3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Detailed analysis of current state
    - Identified issues across 3,646 files
    - Implementation plan with timelines
@@ -79,7 +107,15 @@ Successfully implemented a comprehensive documentation governance framework and 
 
 ### Skills
 
+<<<<<<< HEAD
 4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/SKILL.md)**
+=======
+<<<<<<< HEAD
+4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/skill.md)**
+=======
+4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/SKILL.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Documentation management skill
    - When to apply
    - Quality checks
@@ -88,6 +124,11 @@ Successfully implemented a comprehensive documentation governance framework and 
 ### Rules Updates
 
 5. **[AGENTS.md](agents.md)** - Updated
+<<<<<<< HEAD
+=======
+5. **[agents.md](agents.md)** - Updated
+5. **[AGENTS.md](agents.md)** - Updated
+>>>>>>> laraxot/dev
 5. **[AGENTS.md](agents.md)** - Updated
    - Added documentation governance section
    - No temporal strings rule
@@ -310,17 +351,41 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 ## 📚 Resources
 
 ### Documentation
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Governance Framework](docs/documentation_governance.md)
+- [Master Index](docs/master_documentation_index.md)
+- [Improvement Plan](docs/documentation_analysis_and_improvement_plan.md)
+
+### Rules
+- [AGENTS.md](agents.md) - Full standards
+- [agents.md](agents.md) - Full standards
+=======
+>>>>>>> laraxot/dev
 - [Governance Framework](docs/DOCUMENTATION_GOVERNANCE.md)
 - [Master Index](docs/MASTER_DOCUMENTATION_INDEX.md)
 - [Improvement Plan](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
 
 ### Rules
 - [AGENTS.md](agents.md) - Full standards
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [AGENTS.md](agents.md) - Full standards
 - [.windsurfrules](.windsurfrules) - IDE rules
 
 ### Skills
+<<<<<<< HEAD
 - [Documentation Management](laravel/.github/skills/documentation-management/SKILL.md)
+=======
+<<<<<<< HEAD
+- [Documentation Management](laravel/.github/skills/documentation-management/skill.md)
+=======
+- [Documentation Management](laravel/.github/skills/documentation-management/SKILL.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### GitHub
 - Issue #6: Governance Framework

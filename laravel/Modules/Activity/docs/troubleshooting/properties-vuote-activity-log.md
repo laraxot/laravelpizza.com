@@ -358,16 +358,9 @@ $record->update(['stabi' => 999]);
 ---
 
 **
-<<<<<<< .merge_file_UDP0rr
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**=======
-**Ultimo aggiornamento**: 27 Ottobre 2025
-=======
 
 **Ultimo aggiornamento**: 27 Ottobre 2025
 
 **=======
->>>>>>> .merge_file_bKcJiC
 **Severità**: Media (funziona ma properties vuote)
 **Soluzione**: Aggiungere `->logAll()` o `->logOnly()` in getActivitylogOptions()

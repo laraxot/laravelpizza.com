@@ -3,7 +3,11 @@ title: "html"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "html"
 issues: []
 discussions: []
@@ -170,4 +174,12 @@ I componenti HTML del modulo CMS seguono le best practices HTML5 e utilizzano ta
 ## Collegamenti
 - [Elementi Semantici](../html/semantic.md)
 - [Struttura Layout](../structure/layout.md)
+<<<<<<< HEAD
 - [Accessibilità](../accessibility/README.md)
+=======
+<<<<<<< HEAD
+- [Accessibilità](../accessibility/readme.md)
+=======
+- [Accessibilità](../accessibility/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

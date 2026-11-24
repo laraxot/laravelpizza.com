@@ -56,11 +56,15 @@ function comuneModelFixturePath(): string
     return storage_path('framework/testing/geo/comuni-model-test.json');
 }
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_6ptxtS
 uses(TestCase::class);
 =======
 uses(\Modules\Geo\Tests\TestCase::class);
 >>>>>>> .merge_file_rYBRTC
+=======
+uses(\Modules\Geo\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 
 beforeEach(function (): void {
     File::ensureDirectoryExists(\dirname(comuneModelFixturePath()));

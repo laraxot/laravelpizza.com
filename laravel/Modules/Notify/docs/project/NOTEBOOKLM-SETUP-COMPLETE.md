@@ -3,7 +3,11 @@ title: "NOTEBOOKLM SETUP COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "NOTEBOOKLM SETUP COMPLETE"
 issues: []
 discussions: []
@@ -130,8 +134,18 @@ notebooklm/
 ```
 Notebook Name: "Notify Documentation"
 Sources:
+<<<<<<< HEAD
   - AGENTS.md
   - laravel/AGENTS.md
+=======
+<<<<<<< HEAD
+  - agents.md
+  - laravel/agents.md
+=======
+  - AGENTS.md
+  - laravel/AGENTS.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - docs/**/*.md
   - .planning/**/*.md
   - laravel/Modules/docs/README.md
@@ -207,11 +221,25 @@ Result: Gemini connects info from multiple docs
 **Notebook 1: Notify Core**
 ```
 Sources:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  - agents.md
+  - laravel/agents.md
+  - .planning/project.md
+  - .planning/config.json
+  - notify_improvement_plan.md
+=======
+>>>>>>> laraxot/dev
   - AGENTS.md
   - laravel/AGENTS.md
   - .planning/PROJECT.md
   - .planning/config.json
   - NOTIFY_IMPROVEMENT_PLAN.md
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Notebook 2: Module Documentation**
@@ -229,7 +257,15 @@ Sources:
 Sources:
   - laravel/Themes/docs/README.md
   - laravel/Themes/Sixteen/docs/
+<<<<<<< HEAD
   - .planning/THEME_CONTEXT.md
+=======
+<<<<<<< HEAD
+  - .planning/theme_context.md
+=======
+  - .planning/THEME_CONTEXT.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Notebook 4: Technical Guides**
@@ -425,7 +461,15 @@ claude
 "Set up NotebookLM authentication"
 
 # 4. Crea notebook su notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload AGENTS.md, docs/**/*.md
+=======
+<<<<<<< HEAD
+#    - Upload agents.md, docs/**/*.md
+=======
+#    - Upload AGENTS.md, docs/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 5. Aggiungi a library
@@ -463,7 +507,15 @@ claude
 - [x] Skill installato (`~/.claude/skills/notebooklm/`)
 - [ ] Autenticazione completata
 - [ ] Notebook creato su notebooklm.google.com
+<<<<<<< HEAD
 - [ ] Documenti uploadati (AGENTS.md, docs/, etc.)
+=======
+<<<<<<< HEAD
+- [ ] Documenti uploadati (agents.md, docs/, etc.)
+=======
+- [ ] Documenti uploadati (AGENTS.md, docs/, etc.)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Notebook condiviso pubblicamente
 - [ ] Link aggiunto a Claude library
 - [ ] Prima query testata

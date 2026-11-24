@@ -80,6 +80,10 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     use HasFactory;
 
     use HasSlug;
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     use HasTranslations;
 
     /** @var list<string> */

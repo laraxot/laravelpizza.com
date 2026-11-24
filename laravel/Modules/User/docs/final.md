@@ -300,7 +300,15 @@ public function getHeaderActions(): array
 - [Passport Integration](./passport-integration.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Filosofia Modulo User](./filosofia-modulo-user.md)
+<<<<<<< HEAD
 - [README](./README.md)
+=======
+<<<<<<< HEAD
+- [README](./readme.md)
+=======
+- [README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### External Documentation
 - [Laravel Modules](https://nwidart.com/laravel-modules)

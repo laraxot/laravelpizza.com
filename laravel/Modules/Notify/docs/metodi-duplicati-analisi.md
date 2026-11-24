@@ -3,7 +3,11 @@ title: "metodi duplicati analisi"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "metodi duplicati analisi"
 issues: []
 discussions: []
@@ -555,4 +559,8 @@ public function getTableFilters(): array
 3. Kick-off Fase 1
 4. Implementazione ColumnBuilder
 
+<<<<<<< HEAD
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
+=======
+**Domande?** Chiedi alla Super Mucca! 🐄⚡
+>>>>>>> laraxot/dev

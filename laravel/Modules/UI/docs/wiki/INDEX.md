@@ -9,7 +9,17 @@ qmd: "ui module wiki index filament second brain"
 issues:
 discussions:
 related:
+<<<<<<< HEAD
   - "./AGENTS.md"
+=======
+<<<<<<< HEAD
+  - "./agents.md"
+
+- "./AGENTS.md"
+=======
+  - "./AGENTS.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./bmad-method.md"
   - "./context-compression.md"
   - "./log.md"

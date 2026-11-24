@@ -4,7 +4,11 @@ type: concept
 tags: [hasteams, trait, filosofia, correzione]
 created: 2026-07-14
 updated: 2026-07-14
+<<<<<<< HEAD
 qmd: "hasteams-trait-filosofia-e-correzione-completa hasteams trait - filosofia laraxot e strategia di correzione completa"
+=======
+qmd: "hasteams-trait-filosofia-e-correzione-completa-2 hasteams trait - filosofia laraxot e strategia di correzione completa"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -302,7 +306,15 @@ Il trait `HasTeams` ora è:
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User
 - [authentication.md](authentication.md) - Sistema autenticazione User
+<<<<<<< HEAD
 - [index.md](index.md) - Indice generale modulo User
+=======
+<<<<<<< HEAD
+- [index.md](index.md) - Indice generale modulo User
+=======
+- [index.md](./README.md) - Indice generale modulo User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### **⚙️ File .mdc (Cursor/Windsurf)**
 - [/.cursor/rules/hasteams-trait-laraxot.mdc](../../../.cursor/rules/hasteams-trait-laraxot.mdc)
@@ -321,3 +333,7 @@ Il trait `HasTeams` ora è:
 
 **Data correzione**: Gennaio 2025  
 **Status**: ✅ **COMPLETATO**  
+<<<<<<< HEAD
+=======
+**Conformità**: Laraxot PTVX Philosophy, PHPStan Level 9+, Windsurf Rules
+>>>>>>> laraxot/dev

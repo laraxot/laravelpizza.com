@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+use Illuminate\Contracts\Support\Htmlable;
+>>>>>>> laraxot/dev
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
@@ -14,11 +18,12 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< .merge_file_RflM7A
+<<<<<<< HEAD
     $this->page = new CreateUser;
 =======
+    TestCase::$createUserPage = new CreateUser;
     $this->page = new CreateUser();
->>>>>>> .merge_file_7DXs8L
+>>>>>>> laraxot/dev
 });
 
 test('create user page has correct resource', function (): void {

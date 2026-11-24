@@ -22,7 +22,15 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
+=======
+<<<<<<< .merge_file_KfT6Jr
+- [Convenzioni Path](./path-conventions-2.md)
+=======
+- [Convenzioni Path](./path-conventions-user.md)
+>>>>>>> .merge_file_tybSaz
+>>>>>>> laraxot/dev
 - [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Implementazione Logout](./logout-blade-implementation-2.md)
 - [README modulo User](./README.md)

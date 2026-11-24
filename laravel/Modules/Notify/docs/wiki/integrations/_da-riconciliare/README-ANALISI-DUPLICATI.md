@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🐄 Analisi Metodi Duplicati - Guida Rapida
@@ -25,6 +29,30 @@ Questo è il documento PRINCIPALE con:
 - ✅ Piano di implementazione dettagliato
 
 ### Copie nei Moduli
+<<<<<<< HEAD
+=======
+Ogni modulo ha una copia in `Modules/{ModuleName}/docs/METODI_DUPLICATI_ANALISI.md`:
+
+- `Modules/AI/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Activity/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Blog/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Cms/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/App/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/<nome progetto>/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Gdpr/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Geo/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Job/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Lang/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Media/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Notify/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Rating/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Seo/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Tenant/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/UI/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/User/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md`
+>>>>>>> laraxot/dev
 Ogni modulo ha una copia in `Modules/{ModuleName}/docs/metodi_duplicati_analisi.md`:
 
 - `Modules/AI/docs/metodi_duplicati_analisi.md`

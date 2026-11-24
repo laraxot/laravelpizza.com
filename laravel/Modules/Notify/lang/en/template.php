@@ -9,6 +9,7 @@ return [
             'placeholder' => 'Enter template name',
             'help' => 'The identifying name of the template',
             'tooltip' => 'This field is required',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'helper_text' => 'Inserisci un nome descrittivo per il template',
             'description' => '',
@@ -17,11 +18,16 @@ return [
             'helper_text' => 'Enter a descriptive name for the template',
             'description' => ''],
 >>>>>>> .merge_file_ZAlErC
+=======
+            'helper_text' => 'Enter a descriptive name for the template',
+            'description' => ''],
+>>>>>>> laraxot/dev
         'subject' => [
             'label' => 'Subject',
             'placeholder' => 'Enter notification subject',
             'help' => 'The subject that will appear in the notification',
             'tooltip' => 'This field is required',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
             'description' => '',
@@ -30,28 +36,41 @@ return [
             'helper_text' => 'Subject shown in the notification (e.g. email subject)',
             'description' => ''],
 >>>>>>> .merge_file_ZAlErC
+=======
+            'helper_text' => 'Subject shown in the notification (e.g. email subject)',
+            'description' => ''],
+>>>>>>> laraxot/dev
         'body_text' => [
             'label' => 'Text',
             'placeholder' => 'Enter notification text',
             'help' => 'The text content of the notification',
             'tooltip' => 'This field is required',
             'helper_text' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
+=======
+            'description' => ''],
+>>>>>>> laraxot/dev
         'body_html' => [
             'label' => 'HTML',
             'placeholder' => 'Enter notification HTML content',
             'help' => 'The HTML content of the notification',
             'tooltip' => 'This field is required',
             'helper_text' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
+=======
+            'description' => ''],
+>>>>>>> laraxot/dev
         'preview_data' => [
             'label' => 'Preview Data',
             'placeholder' => 'Enter preview data',
             'help' => 'The data used to display the preview',
             'tooltip' => 'JSON format',
             'helper_text' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
         'description' => [
@@ -63,11 +82,19 @@ return [
             'description' => '',
         ],
 =======
+=======
+            'description' => ''],
+        'description' => [
+            'label' => 'Descrizione',
+>>>>>>> laraxot/dev
             'tooltip' => 'Template description',
             'placeholder' => 'e.g. Template for expiry notifications',
             'helper_text' => 'Short description of the template\'s purpose',
             'description' => ''],
+<<<<<<< HEAD
 >>>>>>> .merge_file_ZAlErC
+=======
+>>>>>>> laraxot/dev
         'type' => [
             'label' => 'Tipo',
             'tooltip' => 'Notification type',
@@ -78,6 +105,7 @@ return [
                 'sms' => 'SMS',
                 'push' => 'Push Notification',
                 'telegram' => 'Telegram',
+<<<<<<< HEAD
                 'whatsapp' => 'WhatsApp',
             ],
             'description' => '',
@@ -91,15 +119,25 @@ return [
             'description' => '',
         ],
 =======
+=======
+                'whatsapp' => 'WhatsApp'],
+            'description' => ''],
+        'content' => [
+            'label' => 'Contenuto',
+>>>>>>> laraxot/dev
             'tooltip' => 'Message body',
             'placeholder' => 'Enter the message text',
             'helper_text' => 'Main notification content',
             'description' => ''],
+<<<<<<< HEAD
 >>>>>>> .merge_file_ZAlErC
+=======
+>>>>>>> laraxot/dev
         'variables' => [
             'label' => 'Variabili',
             'tooltip' => 'Variabili disponibili',
             'placeholder' => '{{nome}}, {{email}}, ecc.',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'helper_text' => 'Variabili che possono essere utilizzate nel template',
             'description' => '',
@@ -111,6 +149,8 @@ return [
             'description' => '',
         ],
 =======
+=======
+>>>>>>> laraxot/dev
             'helper_text' => 'Variables that can be used in the template',
             'description' => ''],
         'is_active' => [
@@ -118,24 +158,36 @@ return [
             'tooltip' => 'Template status',
             'helper_text' => 'If active, the template can be used to send notifications',
             'description' => ''],
+<<<<<<< HEAD
 >>>>>>> .merge_file_ZAlErC
+=======
+>>>>>>> laraxot/dev
         'created_at' => [
             'label' => 'Created at',
             'tooltip' => 'Template creation date',
             'helper_text' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
+=======
+            'description' => ''],
+>>>>>>> laraxot/dev
         'updated_at' => [
             'label' => 'Ultima modifica',
             'tooltip' => 'Template last modified date',
             'helper_text' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
     ],
+=======
+            'description' => '']],
+>>>>>>> laraxot/dev
     'navigation' => [
         'label' => 'Notification Templates',
         'group' => [
             'name' => 'Sistema',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'description' => 'Gestione dei modelli per le notifiche',
         ],
@@ -145,16 +197,22 @@ return [
         'sort' => '48',
     ],
 =======
+=======
+>>>>>>> laraxot/dev
             'description' => 'Manage notification templates'],
         'icon' => 'heroicon-o-bell',
         'name' => 'Notification Templates',
         'plural' => 'Notification Templates',
         'sort' => '48'],
+<<<<<<< HEAD
 >>>>>>> .merge_file_ZAlErC
+=======
+>>>>>>> laraxot/dev
     'messages' => [
         'success' => [
             'created' => 'Template created successfully',
             'updated' => 'Template updated successfully',
+<<<<<<< HEAD
             'deleted' => 'Template deleted successfully',
         ],
         'errors' => [
@@ -173,6 +231,11 @@ return [
         'plural' => 'Template Notifiche',
     ],
 =======
+=======
+            'deleted' => 'Template deleted successfully'],
+        'errors' => [
+            'not_found' => 'Template not found',
+>>>>>>> laraxot/dev
             'unauthorized' => 'Unauthorized'],
         'error' => 'An error occurred during the operation',
         'confirmation' => 'Are you sure you want to proceed with this operation?',
@@ -182,12 +245,16 @@ return [
     'resource' => [
         'name' => 'Notification Templates',
         'plural' => 'Notification Templates'],
+<<<<<<< HEAD
 >>>>>>> .merge_file_ZAlErC
+=======
+>>>>>>> laraxot/dev
     'actions' => [
         'preview' => [
             'label' => 'Anteprima',
             'tooltip' => 'Preview the template',
             'icon' => 'heroicon-o-eye',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'success_message' => 'Anteprima generata con successo',
             'error_message' => 'Errore nella generazione dell\'anteprima',
@@ -196,10 +263,15 @@ return [
             'success_message' => 'Preview generated successfully',
             'error_message' => 'Error generating the preview'],
 >>>>>>> .merge_file_ZAlErC
+=======
+            'success_message' => 'Preview generated successfully',
+            'error_message' => 'Error generating the preview'],
+>>>>>>> laraxot/dev
         'duplicate' => [
             'label' => 'Duplica',
             'tooltip' => 'Create a copy of the template',
             'icon' => 'heroicon-o-document-duplicate',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'success_message' => 'Template duplicato con successo',
             'error_message' => 'Errore nella duplicazione del template',
@@ -208,10 +280,15 @@ return [
             'success_message' => 'Template duplicated successfully',
             'error_message' => 'Error duplicating the template'],
 >>>>>>> .merge_file_ZAlErC
+=======
+            'success_message' => 'Template duplicated successfully',
+            'error_message' => 'Error duplicating the template'],
+>>>>>>> laraxot/dev
         'test' => [
             'label' => 'Test',
             'tooltip' => 'Send a test notification',
             'icon' => 'heroicon-o-paper-airplane',
+<<<<<<< HEAD
 <<<<<<< .merge_file_WVr7u3
             'success_message' => 'Notifica di test inviata con successo',
             'error_message' => 'Errore nell\'invio della notifica di test',
@@ -247,3 +324,9 @@ return [
         ],
     ],
 ];
+=======
+            'success_message' => 'Test notification sent successfully',
+            'error_message' => 'Error sending the test notification']],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label'];
+>>>>>>> laraxot/dev

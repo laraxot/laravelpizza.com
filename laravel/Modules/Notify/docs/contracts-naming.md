@@ -5,7 +5,11 @@ discussions: []
 title: "Contracts Naming & Placement"
 type: concept
 created: 2026-07-12
+<<<<<<< HEAD
 updated: 2026-07-12
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [contract, naming, architecture, laraxot, notify]
 related:
   - "./00-index-1.md"

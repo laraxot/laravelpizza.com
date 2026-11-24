@@ -10,10 +10,6 @@ related:
   - ./phpstan-pest-discipline.md
   - ../../stories/3.10.activity-pest-extend-bootstrap.story.md
   - ../../../../Xot/docs/wiki/concepts/pest5-configuring-tests.md
-<<<<<<< .merge_file_lMHoTA
-  - ../../../../../bmad-output/architecture.md
-=======
->>>>>>> .merge_file_yaA9Ia
   - ../../../../../../bmad-output/architecture.md
 tags: [activity, pest, phpstan, bootstrap, extend]
 issues:

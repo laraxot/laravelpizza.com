@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< HEAD
         'user' => [
             'name' => [
                 'label' => 'user.name',
@@ -12,12 +13,25 @@ return [
                 'description' => 'user.name',
             ],
         ],
+=======
+>>>>>>> laraxot/dev
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'name',
             'helper_text' => 'name',
             'description' => 'name',
         ],
+<<<<<<< HEAD
+=======
+        'user' => [
+            'name' => [
+                'label' => 'Utente',
+                'placeholder' => 'user.name',
+                'helper_text' => 'user.name',
+                'description' => 'user.name',
+            ],
+        ],
+>>>>>>> laraxot/dev
         'email' => [
             'label' => 'E-mail',
             'placeholder' => 'email',

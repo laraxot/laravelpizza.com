@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -1828,11 +1832,17 @@ Monitoring:
 
 Frontend:
 [ ] Theme built (npm run build)
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< .merge_file_746m7A
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
 =======
->>>>>>> .merge_file_ybH5Ao
+<<<<<<< .merge_file_oAEdc1
+[ ] Assets deployed (symlink public_html/themes (npm run copy obsoleto))
+[ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_Tj6A91
+>>>>>>> laraxot/dev
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

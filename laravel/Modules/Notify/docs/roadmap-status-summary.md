@@ -3,7 +3,11 @@ title: "📊 ROADMAP STATUS SUMMARY - Ottobre 2025"
 type: concept
 tags: [roadmap, status, summary]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap-status-summary 📊 roadmap status summary - ottobre 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

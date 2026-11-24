@@ -50,7 +50,10 @@ Scansione PHPStan attiva. Primissimi 1000+ errori includono:
 ## Diario
 - 2026-10-06 09:23: story creata, scansioni lanciate, Ptv scan completata (1000+ errori)
 - 2026-10-06 09:50: parallel Incentivi/IndennitaResponsabilita in corso, analisi pattern avviata
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 - 2026-10-06 10:26: Filament v2→v3 namespace migration fix committato
   - Commit: 0143e037 — Fix Qua03fSection.php (Qua00f* già fixati in 6e3bc992ee)
   - Pattern: `Filament\Schemas\Components\Section` → `Filament\Infolists\Components\Section`

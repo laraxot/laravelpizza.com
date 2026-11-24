@@ -36,9 +36,46 @@ class MapFilterLit extends LitElement {
     connectedCallback() {
         super.connectedCallback();
         this._readFilters();
+<<<<<<< HEAD
         this._initFromMap();
     }
 
+=======
+<<<<<<< HEAD
+        this._initialSelected = this._readInitialSelected();
+        this._onGeoMapLoaded = () => {
+            this._initFromMap();
+            this._applyInitialSelection();
+        };
+        document.addEventListener('geo-map-loaded', this._onGeoMapLoaded);
+        this._initFromMap();
+    }
+
+    _readInitialSelected() {
+        try {
+            const parsed = JSON.parse(this.getAttribute('initial-selected') || '[]');
+            return Array.isArray(parsed) ? parsed.map(String).filter(Boolean) : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    _applyInitialSelection() {
+        if (!this._initialSelected?.length) return;
+        this.querySelectorAll('input[data-type]').forEach((input) => {
+            input.checked = this._initialSelected.includes(input.dataset.type || '');
+        });
+        const mapEl = document.getElementById(this.mapId);
+        mapEl?.filterByTypes?.(this._initialSelected);
+        this._updateResultsCount(this._initialSelected);
+    }
+
+=======
+        this._initFromMap();
+    }
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     _readFilters() {
         try {
             const parsed = JSON.parse(this.filters || '[]');
@@ -136,6 +173,17 @@ class MapFilterLit extends LitElement {
                 `)}
             </ul>`;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    disconnectedCallback() {
+        document.removeEventListener('geo-map-loaded', this._onGeoMapLoaded);
+        super.disconnectedCallback();
+    }
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 }
 
 if (!customElements.get('map-filter-lit')) {

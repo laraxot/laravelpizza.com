@@ -37,6 +37,15 @@ related:
 
 ## Indices
 
+<<<<<<< HEAD
+=======
+- [Rules](rules/INDEX.md)
+- [Skills](skills/INDEX.md)
+- [Commands](commands/INDEX.md)
+- [Memories](memories/INDEX.md)
+- [Concepts](concepts/INDEX.md)
+
+>>>>>>> laraxot/dev
 - [Rules](rules/index.md)
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)

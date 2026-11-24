@@ -130,3 +130,5 @@ docs/archive/
 *.orig
 *.rej
 *~head
+tests/coverage-*.*
+docs/screenshots/

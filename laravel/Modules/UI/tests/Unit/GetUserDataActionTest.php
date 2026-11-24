@@ -67,14 +67,22 @@ afterEach(function (): void {
 
 it('restituisce null quando nessuno è autenticato', function (): void {
     Assert::assertNull(app(GetUserDataAction::class)->execute());
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-1');
+>>>>>>> laraxot/dev
 
 it('restituisce null quando l autenticato non è un User del modulo', function (): void {
     // Un Authenticatable qualsiasi non basta: l'azione richiede il modello del dominio.
     Auth::setUser(new GenericUser(['id' => 1, 'name' => 'Estraneo']));
 
     Assert::assertNull(app(GetUserDataAction::class)->execute());
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-1');
+>>>>>>> laraxot/dev
 
 it('mappa identità, nome e email dell utente autenticato', function (): void {
     Auth::setUser(uiAuthUser());
@@ -85,7 +93,11 @@ it('mappa identità, nome e email dell utente autenticato', function (): void {
     Assert::assertSame(42, $data->id);
     Assert::assertSame('Mario Rossi', $data->name);
     Assert::assertSame('mario.rossi@example.test', $data->email);
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-2');
+>>>>>>> laraxot/dev
 
 it('usa profile_photo_path come avatar quando è presente', function (): void {
     Auth::setUser(uiAuthUser(attributes: ['profile_photo_path' => 'avatars/mario.jpg']));
@@ -140,4 +152,8 @@ it('restituisce impostazioni vuote quando il profilo non è caricato', function 
 
     Assert::assertNotNull($data);
     Assert::assertSame([], $data->settings);
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-3');
+>>>>>>> laraxot/dev

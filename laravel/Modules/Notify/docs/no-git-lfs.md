@@ -6,7 +6,11 @@ discussions: []
 title: "Git LFS vietato: linea guida e prototipo .gitattributes"
 type: guideline
 module: Notify
+<<<<<<< HEAD
 updated: 2026-09-01
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git lfs vietato gitattributes prototipo binari blob normali notify puntatori immagini"
 ---
 

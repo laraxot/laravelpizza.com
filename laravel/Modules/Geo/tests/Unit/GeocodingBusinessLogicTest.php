@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit;
 
-<<<<<<< .merge_file_7XFpoX
-=======
 use Modules\Geo\Actions\FilterCoordinatesAction;
->>>>>>> .merge_file_Nd9yDG
 use Modules\Geo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 

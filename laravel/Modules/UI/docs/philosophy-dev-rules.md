@@ -124,6 +124,12 @@ If you think a rule is wrong:
 - `architecture.md` — component organization and Filament patterns
 - `testing.md` — component testing strategies
 
+<<<<<<< HEAD
+=======
+- `ARCHITECTURE.md` — component organization and Filament patterns
+- `TESTING.md` — component testing strategies
+
+>>>>>>> laraxot/dev
 - `architecture.md` — component organization and Filament patterns
 - `testing.md` — component testing strategies
 - `docs/filament-patterns.md` — Filament resource best practices

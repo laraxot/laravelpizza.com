@@ -3,7 +3,11 @@ title: "Files Created in Session 007"
 type: concept
 tags: [files, created, session, 007]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "files-created-session-007 files created in session 007"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -200,7 +204,15 @@ Project Root/
 ### Usage Recommendations
 
 **For Project Managers**:
+<<<<<<< HEAD
 - Read: design-conversion-roadmap.md
+=======
+<<<<<<< HEAD
+- read: design-conversion-roadmap.md
+=======
+- Read: design-conversion-roadmap.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:

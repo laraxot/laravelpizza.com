@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 return [
     'actions' => [
+<<<<<<< HEAD
         'change_password' => 'Change password',
+=======
+>>>>>>> laraxot/dev
         'attach_user' => 'Attach User',
         'associate_user' => 'Associate User',
         'user_actions' => 'User Actions',
@@ -183,6 +186,9 @@ return [
             'label' => 'Organization',
         ],
     ],
+<<<<<<< HEAD
     'label' => 'User',
     'plural_label' => 'Users',
+=======
+>>>>>>> laraxot/dev
 ];

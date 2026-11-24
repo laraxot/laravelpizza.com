@@ -2,9 +2,16 @@
 title: "Piano di miglioramento — Notify"
 type: plan
 status: review
+<<<<<<< HEAD
 updated: 2026-11-16
 module: Notify
 qmd: "piano miglioramento Notify P0 P1 P2 BMAD"
+=======
+updated: 2026-11-23
+module: Notify
+qmd: "piano miglioramento Notify P0 P1 P2 BMAD"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Piano di miglioramento — Notify

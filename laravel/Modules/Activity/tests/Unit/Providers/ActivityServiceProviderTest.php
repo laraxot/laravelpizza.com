@@ -4,15 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Providers;
 
-<<<<<<< .merge_file_RMe6HM
-=======
 use function Safe\json_encode;
->>>>>>> .merge_file_APaeFi
 use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
-use function Safe\json_encode;
 
 uses(TestCase::class);
 

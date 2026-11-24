@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+---
+title: "Git Conflicts Resolution"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
 
 ## Data

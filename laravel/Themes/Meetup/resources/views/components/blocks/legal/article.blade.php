@@ -89,15 +89,9 @@
 
             <aside class="space-y-6">
                 <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-<<<<<<< .merge_file_cqZdQO
-                    <h2 class="text-lg font-bold text-slate-950">{{ __('pub_theme::legal.contacts.title') }}</h2>
-                    <p class="mt-3 text-sm leading-6 text-slate-600">
-                        {{ __('pub_theme::legal.contacts.intro') }}
-=======
                     <h2 class="text-lg font-bold text-slate-950">{{ __('pub_theme::navigation.contact') }}</h2>
                     <p class="mt-3 text-sm leading-6 text-slate-600">
                         {{ __('pub_theme::legal.article.contact_intro.message') }}
->>>>>>> .merge_file_WmzJ9m
                     </p>
 
                     <dl class="mt-5 space-y-4">
@@ -129,15 +123,9 @@
                 </div>
 
                 <div class="rounded-3xl border border-red-100 bg-red-50 p-6">
-<<<<<<< .merge_file_cqZdQO
-                    <h2 class="text-lg font-bold text-red-950">{{ __('pub_theme::legal.note.title') }}</h2>
-                    <p class="mt-3 text-sm leading-6 text-red-900">
-                        {{ __('pub_theme::legal.note.body') }}
-=======
                     <h2 class="text-lg font-bold text-red-950">{{ __('pub_theme::legal.article.note.title') }}</h2>
                     <p class="mt-3 text-sm leading-6 text-red-900">
                         {{ __('pub_theme::legal.article.note.message') }}
->>>>>>> .merge_file_WmzJ9m
                     </p>
                 </div>
             </aside>

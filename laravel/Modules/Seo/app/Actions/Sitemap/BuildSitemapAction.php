@@ -19,6 +19,7 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_replace;
+use function Safe\strtotime;
 
 /**
  * sitemap.xml delle pagine pubbliche in tutte le lingue (Linee guida di design 4.3.9, DCP-166).
@@ -60,8 +61,10 @@ final class BuildSitemapAction
             ));
             foreach ($pageLocales as $locale) {
                 $xml .= "  <url>\n    <loc>".$this->url($locale, $entry['path'])."</loc>\n";
-                if ($entry['lastmod'] !== null) {
-                    $xml .= '    <lastmod>'.$entry['lastmod']->format(DateTimeInterface::ATOM)."</lastmod>\n";
+                // Data dell'ultima modifica (pagina CMS: stringa Y-m-d; fonte taggata: DateTimeInterface): Google la usa per decidere quando ripassare.
+                $lastmod = $entry['lastmod'];
+                if ($lastmod !== null) {
+                    $xml .= '    <lastmod>'.($lastmod instanceof DateTimeInterface ? $lastmod->format(DateTimeInterface::ATOM) : $lastmod)."</lastmod>\n";
                 }
                 if (count($pageLocales) > 1) {
                     foreach ($pageLocales as $alternate) {
@@ -82,7 +85,7 @@ final class BuildSitemapAction
      * `path`: percorso senza lingua ('' per la home, 'privacy', 'tickets/track', 'blog/{slug}', 'tickets/{id}').
      * `written`: lingue in cui la pagina CMS e' scritta (titolo e contenuto); `null` = nessuna restrizione (URL di dettaglio dei moduli).
      *
-     * @return list<array{path: string, written: list<string>|null, lastmod: DateTimeInterface|null}>
+     * @return list<array{path: string, written: list<string>|null, lastmod: DateTimeInterface|string|null}>
      */
     private function indexableEntries(): array
     {
@@ -100,7 +103,11 @@ final class BuildSitemapAction
             if (array_key_exists($path, $aliases)) {
                 continue;
             }
-            $entries['/'.$path] = ['path' => $path, 'written' => app(ResolveWrittenLocalesAction::class)->execute($page), 'lastmod' => null];
+            $entries['/'.$path] = [
+                'path' => $path,
+                'written' => app(ResolveWrittenLocalesAction::class)->execute($page),
+                'lastmod' => $this->lastModified($page),
+            ];
         }
 
         foreach (app()->tagged(SitemapPathsContract::TAG) as $source) {
@@ -130,6 +137,25 @@ final class BuildSitemapAction
         $query = Page::query();
 
         return $query->get();
+    }
+
+    /** Data W3C (`AAAA-MM-GG`) dell'ultima modifica, o null se la pagina non la dichiara. */
+    private function lastModified(Page $page): ?string
+    {
+        $updatedAt = $page->getAttribute('updated_at');
+        if ($updatedAt instanceof \DateTimeInterface) {
+            return $updatedAt->format('Y-m-d');
+        }
+
+        if (\is_string($updatedAt) && $updatedAt !== '') {
+            try {
+                return date('Y-m-d', strtotime($updatedAt));
+            } catch (\Throwable) {
+                return null;
+            }
+        }
+
+        return null;
     }
 
     private function pathOf(string $slug): string

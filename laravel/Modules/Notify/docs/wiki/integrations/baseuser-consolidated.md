@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # baseuser — Consolidated Documentation
@@ -457,7 +461,10 @@ Il refactoring di `BaseUser` per rimuovere i metodi duplicati è:
 
 **Procedere con implementazione!** 🚀
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## baseuser-dry-violation
@@ -920,7 +927,10 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## baseuser-refactoring-completed

@@ -3,6 +3,11 @@ title: "Riorganizzazione docs core Notify"
 type: story
 tags: [docs, bmad, notify, reorganization]
 qmd: "riorganizzazione docs core Notify"
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Story — riorganizzazione docs core: Notify

@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_E3PPd4
-title: "Brainstorming — Activity"
-=======
->>>>>>> .merge_file_uGVKsT
 title: "Brainstorming: Activity"
 type: brainstorming
 module: Activity

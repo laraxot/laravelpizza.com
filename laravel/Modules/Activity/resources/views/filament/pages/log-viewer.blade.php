@@ -17,19 +17,6 @@ use Modules\Activity\Enums\LogLevelEnum;
 
 /** @var \Modules\Activity\Filament\Pages\LogViewer $this */
 $state = $this->getLogState();
-<<<<<<< .merge_file_RjeyS9
-$levelColors = [
-    'EMERGENCY' => 'danger',
-    'ALERT' => 'danger',
-    'CRITICAL' => 'danger',
-    'ERROR' => 'danger',
-    'WARNING' => 'warning',
-    'NOTICE' => 'info',
-    'INFO' => 'info',
-    'DEBUG' => 'gray',
-];
-=======
->>>>>>> .merge_file_e5IjUR
 // Voci molto lunghe (per esempio un log con una sola intestazione seguita da migliaia di righe JSON):
 // si mostrano l'inizio E la fine, perche' le righe piu' recenti sono in fondo.
 $maxBodyChars = 20000;

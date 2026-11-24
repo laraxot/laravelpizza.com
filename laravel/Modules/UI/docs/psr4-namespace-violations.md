@@ -403,6 +403,12 @@ composer dump-autoload = Manifestation of Truth
 
 **Documentazione Interna**:
 - [../../../../docs/modules-index.md](../../../../docs/modules-index.md) - Module Index
+<<<<<<< HEAD
+=======
+- [../../Xot/docs/README.md](../../xot/docs/readme.md) - XotBase Pattern
+- [./README.md](./readme.md) - UI Module Overview
+
+>>>>>>> laraxot/dev
 - [../../Xot/docs/README.md](../../Xot/docs/README.md) - XotBase Pattern
 - [./README.md](./README.md) - UI Module Overview
 

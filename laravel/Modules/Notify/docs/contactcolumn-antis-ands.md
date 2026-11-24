@@ -3,7 +3,11 @@ title: "contactcolumn antis ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "contactcolumn antis ands"
 issues: []
 discussions: []

@@ -14,6 +14,10 @@ use Modules\Cms\Datas\BlockData;
 use Modules\Xot\Datas\XotData;
 
 use function Safe\preg_match;
+<<<<<<< HEAD
+=======
+use function Safe\preg_replace_callback;
+>>>>>>> laraxot/dev
 
 /**
  * Trait for Models that have blocks.

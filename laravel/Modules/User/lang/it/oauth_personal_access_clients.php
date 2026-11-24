@@ -3,6 +3,23 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
+=======
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'client_id' => [
+            'label' => 'Client ID',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+        'updated_at' => [
+            'label' => 'Modificato il',
+        ],
+    ],
+>>>>>>> laraxot/dev
     'actions' => [
         'create' => [
             'icon' => 'create',
@@ -20,6 +37,7 @@ return [
             'icon' => 'edit',
         ],
     ],
+<<<<<<< HEAD
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -34,4 +52,6 @@ return [
             'label' => 'Modificato il',
         ],
     ],
+=======
+>>>>>>> laraxot/dev
 ];

@@ -6,7 +6,11 @@ title: "Sincronizzazione multi-organizzazione (laraxot + provtv)"
 type: concept
 tags: [git, sync, multi-org, laraxot, provtv, quality-gates]
 created: "2026-07-21"
+<<<<<<< HEAD
 updated: "2026-07-29"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 related:
   - "../../../bashscripts/tools/prompts/02-gitmodules-sync.md"
 ---

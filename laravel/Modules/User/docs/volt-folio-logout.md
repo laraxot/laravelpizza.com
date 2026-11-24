@@ -22,7 +22,15 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
+=======
+<<<<<<< .merge_file_xWsMQT
+- [Convenzioni Path](./path-conventions-2.md)
+=======
+- [Convenzioni Path](./path-conventions-user.md)
+>>>>>>> .merge_file_KBDmaN
+>>>>>>> laraxot/dev
 - [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 
@@ -206,7 +214,15 @@ Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
+=======
+<<<<<<< .merge_file_xWsMQT
+- [Convenzioni Path](./path-conventions-2.md)
+=======
+- [Convenzioni Path](./path-conventions-user.md)
+>>>>>>> .merge_file_KBDmaN
+>>>>>>> laraxot/dev
 - [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 

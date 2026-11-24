@@ -3,7 +3,11 @@ title: "git error path does not have our version"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git error path does not have our version"
 issues: []
 discussions: []
@@ -509,7 +513,19 @@ git rebase --continue
 
 ---
 
+<<<<<<< HEAD
 **Last Review**: 2026-03-17
 **Next Review**: As needed
 **Maintainer**: Development Team
+=======
+<<<<<<< .merge_file_GSAw5d
+**Last Review**: 2026-03-17  
+**Next Review**: As needed  
+**Maintainer**: Development Team  
+=======
+**Last Review**: 2026-03-17
+**Next Review**: As needed
+**Maintainer**: Development Team
+>>>>>>> .merge_file_uM7rUJ
+>>>>>>> laraxot/dev
 **Status**: ✅ Complete Reference

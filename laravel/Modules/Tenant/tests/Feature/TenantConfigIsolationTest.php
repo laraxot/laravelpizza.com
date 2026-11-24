@@ -47,7 +47,7 @@ it('rejects path traversal in tenant filename', function (): void {
     }
 
     Assert::fail('Expected path traversal to be rejected.');
-});
+})->group('TENANT-FILE-PATH-INV-2');
 
 it('rejects malicious server name with path traversal', function (): void {
     config(['app.url' => 'http://localhost']);

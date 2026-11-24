@@ -4,12 +4,6 @@ type: reference
 tags: [activity, database, schema]
 created: 2026-07-28
 updated: 2026-07-28
-<<<<<<< .merge_file_V9ftwe
----
-
-# Activity Module — Database Schema
-=======
->>>>>>> .merge_file_bKuoVO
 status: draft
 qmd: "activity module   database schema activity"
 ---

@@ -65,5 +65,5 @@ File non cancellati ma superati, duplicati o con puntatore a documentazione cano
 - [merge-conflicts-list.md](./merge-conflicts-list.md) — stub con canonical `../../docs/shared-components/merge-conflicts-list.md` non presente nel repo
 - [ON-DEMAND-PATTERN.md](./ON-DEMAND-PATTERN.md) — stub con canonical `../../docs/ON-DEMAND-PATTERN.md` (a livello Themes/) non presente nel repo
 - [PERFORMANCE-OPTIMIZATION.md](./PERFORMANCE-OPTIMIZATION.md) — stub con canonical `../../docs/PERFORMANCE-OPTIMIZATION.md` non presente nel repo
-- [PROJECT-STRUCTURE.md](./project-structure.md) — stub con canonical `../../docs/PROJECT-STRUCTURE.md` non presente nel repo
+- [project-structure.md](./project-structure.md) — stub con canonical `../../docs/project-structure.md` non presente nel repo
 - [QMD-SETUP.md](./QMD-SETUP.md) — stub con canonical `../../docs/QMD-SETUP.md` non presente nel repo

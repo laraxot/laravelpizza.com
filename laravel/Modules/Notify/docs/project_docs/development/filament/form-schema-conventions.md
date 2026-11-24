@@ -3,7 +3,11 @@ title: "form schema conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "form schema conventions"
 issues: []
 discussions: []
@@ -159,4 +163,8 @@ qmd: "form schema conventions"
 issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
+<<<<<<< HEAD
 *Fonte: laravel/Modules/Xot/docs/FILAMENT_FORM_SCHEMA_CONVENTIONS.md* 
+=======
+*Fonte: laravel/Modules/Xot/docs/FILAMENT_FORM_SCHEMA_CONVENTIONS.md* 
+>>>>>>> laraxot/dev

@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: superseded
 superseded_by: ai-skills-master-index.md
 ---
@@ -129,8 +133,17 @@ Questa documentazione elenca tutte le skill AI installate e configurate per il p
 
 **Usage**: Skills auto-attivano quando l'agente rileva task rilevanti
 
+<<<<<<< HEAD
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+=======
+<<<<<<< .merge_file_XxtyYp
+**File**: [superpowers/installazione.md](./superpowers/installazione.md)
+=======
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+>>>>>>> .merge_file_58dQrv
+>>>>>>> laraxot/dev
 
 ---
 

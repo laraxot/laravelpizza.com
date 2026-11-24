@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Implementation Status"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Implementation Status"
+=======
+title: "implementation status 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "implementation status 2025 10 02"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

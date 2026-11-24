@@ -74,6 +74,11 @@ updated: 2026-08-24
 
 ---
 
+<<<<<<< HEAD
+=======
+<!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
+
+>>>>>>> laraxot/dev
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
 
 ---

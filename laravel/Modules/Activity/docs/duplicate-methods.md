@@ -1,7 +1,3 @@
-<<<<<<< .merge_file_oA9tKm
-# Metodi duplicati — Activity
-=======
->>>>>>> .merge_file_Q4GwLe
 ---
 title: "Metodi duplicati: Activity"
 type: note

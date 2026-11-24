@@ -30,6 +30,11 @@ use Spatie\QueueableAction\QueueableAction;
  * // Utilizzo asincrono
  * $action->onQueue('geo')->execute($client);
  * ```
+<<<<<<< HEAD
+=======
+ *
+ * @contract docs/contracts/update-coordinates-from-address-action.md
+>>>>>>> laraxot/dev
  */
 class UpdateCoordinatesFromAddressAction
 {

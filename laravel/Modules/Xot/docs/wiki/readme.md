@@ -1,5 +1,10 @@
 ---
 qmd: "xot wiki readme md"
+<<<<<<< HEAD
+=======
+title: "Xot - readme.md"
+
+>>>>>>> laraxot/dev
 title: "Xot - README.md"
 module: Xot
 bmad: true

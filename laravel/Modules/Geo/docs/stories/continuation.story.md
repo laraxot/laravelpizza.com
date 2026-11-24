@@ -1,6 +1,14 @@
 ---
 tags: [documentation]
+<<<<<<< HEAD
 created: 2026-09-26
+=======
+<<<<<<< .merge_file_tUEQR4
+created: 2026-09-11
+=======
+created: 2026-09-26
+>>>>>>> .merge_file_I0nhEH
+>>>>>>> laraxot/dev
 updated: 2026-09-26
 qmd: "continuation 2026 09 11.story"
 issues: []
@@ -10,7 +18,14 @@ title: "Geo Module — Table Audit and $model Property"
 type: continuation
 scope: module:Geo
 github: {issues: "https://github.com/laraxot/module_xot_fila5/issues/115", discussions: "https://github.com/laraxot/module_xot_fila5/discussions/117"}
+<<<<<<< HEAD
 date_originale_nome_file: 2026-09-11
+=======
+<<<<<<< .merge_file_tUEQR4
+=======
+date_originale_nome_file: 2026-09-11
+>>>>>>> .merge_file_I0nhEH
+>>>>>>> laraxot/dev
 ---
 # Geo Module — Continuation Task
 

@@ -5,7 +5,10 @@ type: note
 tags: [documentation]
 ---
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 title: "Xot - swarm-phpstan-modular-docs-org.story.md"
 module: Xot
@@ -36,6 +39,28 @@ SWARM-PHPSTAN-001
 ## Status
 Todo
 
+<<<<<<< HEAD
+=======
+## Checkpoint — ADR e gate documentali
+
+- [x] Consolidati gli ADR Xot canonici per Queueable Actions, Pest, una
+  migrazione owner per modello, documentazione owner-local e punti di
+  estensione Xot.
+- [x] Allineato il frontmatter degli ADR canonici e dichiarati gli alias
+  semantici storici senza cancellare la storia dei link.
+- [x] Aggiunte le sezioni `Driver della decisione` e `Conferma` agli ADR
+  architetturali Xot privi di una di esse.
+- [x] `PackagesHaveContractsAndAdrTest`, manuali actor e PHPStan sui test docs
+  verdi; `vendor/bin/pint --dirty --test` superato.
+- [x] `vendor/bin/phpstan analyse Modules` verificato a zero dopo il fix
+  source-first delle Action Fixcity residue.
+- [x] `php .harness/bin/verify-facts` verificato: 13 fatti superati.
+
+Il lavoro globale di riorganizzazione dei docs resta aperto: i manuali
+duplicati `manuale-utente.md`/`user-manual.md` e i link storici vanno trattati
+con stub e indice owner, non con cancellazioni automatiche.
+
+>>>>>>> laraxot/dev
 ## Passata swarm-docs 2026-10-06 (agente swarm-docs): indici di radice
 
 Claim: `README.md` di `Themes/Zero|One|Three` e `Modules/Rating|Ptv|Sigma` (lock `docs-index-org`, rilasciati). Nessun file spostato, rinominato, cancellato. Story esistenti non toccate.

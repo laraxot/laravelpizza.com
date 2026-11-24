@@ -21,4 +21,12 @@ Come manutentore del modulo User, voglio un `docs/index.md` organizzato per argo
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [../index.md](../index.md)
+=======
+<<<<<<< HEAD
+- [../index.md](../index.md)
+=======
+- [../index.md](../README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

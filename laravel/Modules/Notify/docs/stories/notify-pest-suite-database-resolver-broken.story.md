@@ -12,7 +12,11 @@ slug: notify-pest-suite-database-resolver-broken
 status: ready-for-dev
 cold_gate: null
 created: '2026-09-15'
+<<<<<<< HEAD
 updated: '2026-09-15'
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 repository: "https://github.com/laraxot/module_notify_fila5.git"
 github_issue: "https://github.com/laraxot/module_notify_fila5/issues/70"
 github_discussion: "https://github.com/laraxot/module_notify_fila5/discussions/71"

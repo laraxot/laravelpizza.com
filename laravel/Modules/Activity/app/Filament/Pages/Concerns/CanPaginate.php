@@ -38,15 +38,10 @@ trait CanPaginate
     public function getTablePage(): int
     {
         $page = $this->getPage($this->getPaginationPageName());
-<<<<<<< .merge_file_FUpLBE
-
-        return is_numeric($page) ? (int) $page : 1;
-=======
         if (is_numeric($page)) {
             return (int) $page;
         }
         return 1;
->>>>>>> .merge_file_nscIqb
     }
 
     public function getDefaultRecordsPerPageSelectOption(): int|string
@@ -83,7 +78,6 @@ trait CanPaginate
 
     /**
      * @template TModel of Model
-     *
      * @param  Builder<TModel>  $query
      * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
      */

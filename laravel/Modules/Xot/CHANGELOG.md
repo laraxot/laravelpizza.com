@@ -175,7 +175,15 @@ All notable changes to `:package_name` will be documented in this file.
 
 ---
 
+<<<<<<< HEAD
 ## Contenuto assorbito da `CHANGELOG.md`
+=======
+<<<<<<< HEAD
+## Contenuto assorbito da `changelog.md`
+=======
+## Contenuto assorbito da `CHANGELOG.md`
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Changelog - Modulo Xot
 
@@ -304,6 +312,10 @@ All notable changes to `:package_name` will be documented in this file.
 ## 🔗 Collegamenti
 
 ### Documenti Correlati
+<<<<<<< HEAD
+=======
+- [README.md](./docs/readme.md) - Entry point
+>>>>>>> laraxot/dev
 - [README.md](./docs/README.md) - Entry point
 - [File Locking Pattern](./docs/file-locking-pattern.md) - Nuova regola
 - [Architecture Rules](./docs/laraxot-architecture-rules.md) - Regole base

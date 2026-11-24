@@ -137,8 +137,6 @@ discussions:
 
 ---
 title: "Activity Log"
-<<<<<<< .merge_file_0MSN3z
-=======
 type: log
 module: Activity
 tags: [activity, phpstan, pest, qmd]
@@ -190,7 +188,6 @@ discussions:
 
 ---
 title: "Activity Log"
->>>>>>> .merge_file_MfpIGR
 module: "Activity"
 ---
 
@@ -232,10 +229,6 @@ module: "Activity"
 - La risorsa `/xot/admin/logs` (modulo Xot) non è stata toccata: spostarla o rimuoverla resta una decisione del team.
 - Secondo audit alle linee guida: story anche in Activity, registro `sprint-status.yaml` aggiornato; scostamenti aperti (CSS in linea, TestCase, PHPMD/PHPInsights, chiavi lang) elencati nel concept.
 - Classi base di Xot: usata `XotBasePage` per `LogViewer`; per Action, Data ed eccezione non c'è una base applicabile (vedi il concept). Unico scostamento: i test usano `Tests\TestCase` della root e non il `TestCase` del modulo (manca `database/test_data.sqlite`).
-<<<<<<< .merge_file_0MSN3z
-- Dettagli: [concepts/log-viewer-page-no-ssh.md](concepts/log-viewer-page-no-ssh.md), story [quaeris-admin-log-viewer-no-ssh](../../../Quaeris/docs/stories/quaeris-admin-log-viewer-no-ssh.md).
-=======
->>>>>>> .merge_file_MfpIGR
 - Dettagli: [concepts/log-viewer-page-no-ssh.md](concepts/log-viewer-page-no-ssh.md); la story di origine (`quaeris-admin-log-viewer-no-ssh`) sta nel repo di un altro progetto e non esiste qui.
 
 ---

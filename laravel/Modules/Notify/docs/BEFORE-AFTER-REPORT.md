@@ -3,13 +3,26 @@ title: "Notify Docs Organization — Before/After Report"
 type: report
 status: completed
 module: Notify
+<<<<<<< HEAD
 updated: 2026-10-06
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Before/After Report — Notify Module Docs
 
 ## Before
+<<<<<<< HEAD
 - docs/ contained: bmad/, legacy/ (447 files), wiki/, rules/, stories/, -integration/, README.md files, images
+=======
+<<<<<<< HEAD
+- docs/ contained: bmad/, legacy/ (447 files), wiki/, rules/, stories/, -integration/, readme.md files, images
+=======
+- docs/ contained: bmad/, legacy/ (447 files), wiki/, rules/, stories/, -integration/, README.md files, images
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - No single docs/README.md with BMAD frontmatter
 - legacy/ mixed with active docs (archive not separated)
 - BMAD frontmatter missing from most .md files

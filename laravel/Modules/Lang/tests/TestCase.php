@@ -18,6 +18,10 @@ use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
+=======
+use function Safe\chmod;
+>>>>>>> laraxot/dev
 use function Safe\file_put_contents;
 use function Safe\mkdir;
 use function Safe\unlink;
@@ -224,4 +228,46 @@ abstract class TestCase extends XotBaseTestCase
     {
         return new ReadTranslationFileAction;
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Il filesystem applica i bit di permesso all'utente che esegue i test?
+     *
+     * Serve a un test solo: quello che rende un file illeggibile con
+     * `chmod(0o000)` e pretende l'errore di lettura. **root ignora i bit di
+     * permesso**, quindi dentro un container che gira come root quel test
+     * falliva sempre — e falliva nel modo peggiore, lamentando un'eccezione non
+     * lanciata, cioe' accusando il codice di un difetto che e' dell'ambiente
+     * (base_quaeris_fila5#234).
+     *
+     * La verifica e' diretta: si crea un file, gli si toglie ogni permesso e si
+     * guarda se e' ancora leggibile. Guardare l'uid direbbe «root», che e' la
+     * causa di oggi e non la condizione: i filesystem di Windows non hanno
+     * questi bit, e un volume montato `noacl` nemmeno. La domanda giusta e'
+     * «questo chmod ha effetto qui», e la risposta la da' il filesystem.
+     */
+    public static function permissionBitsEnforced(): bool
+    {
+        $probe = self::readTranslationTestFilePath().'.perm-probe';
+
+        self::createTranslationFile($probe, ['probe' => true]);
+
+        try {
+            chmod($probe, 0o000);
+            $enforced = ! is_readable($probe);
+            chmod($probe, 0o644);
+        } catch (\Throwable) {
+            // Un filesystem che rifiuta la chmod non applica quei bit, per
+            // definizione: la risposta e' no, non un'eccezione addosso al test.
+            $enforced = false;
+        } finally {
+            if (file_exists($probe)) {
+                unlink($probe);
+            }
+        }
+
+        return $enforced;
+    }
+>>>>>>> laraxot/dev
 }

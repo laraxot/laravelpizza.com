@@ -186,7 +186,15 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](widgets_structure.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
+<<<<<<< HEAD
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [User Module Widget Structure](widgets_structure.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)

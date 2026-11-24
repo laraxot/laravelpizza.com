@@ -3,7 +3,11 @@ title: "🚨 CRITICAL: bashscripts/ in .gitignore"
 type: concept
 tags: [bashscripts, gitignore, workaround]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "bashscripts-gitignore-workaround 🚨 critical: bashscripts/ in .gitignore"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -171,8 +175,17 @@ gh run list --repo laraxot/<nome repitory>
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [Multi-Agent Collaboration Guide](../../../multi-agent-collaboration-guide.md)
 - [Multi-Agent Collaboration Guide](../../../multi-agent-collaboration-guide.md)
+=======
+<<<<<<< .merge_file_yCqBXv
+- [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide.md)
+=======
+- [Multi-Agent Collaboration Guide](../../../multi-agent-collaboration-guide.md)
+- [Multi-Agent Collaboration Guide](../../../multi-agent-collaboration-guide.md)
+>>>>>>> .merge_file_rNKgQv
+>>>>>>> laraxot/dev
 - [GitHub Sync Rule](github-sync-rule.md)
 - [AI Rules](../.qwen/ai-rules-critical.md)
 

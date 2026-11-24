@@ -65,7 +65,11 @@ class LanguageSwitcherWidget extends XotBaseSchemaWidget
      * Ottiene le lingue disponibili nel sistema da LaravelLocalization,
      * la stessa fonte usata dai vecchi `Switcher`/`Change`.
      *
+<<<<<<< HEAD
      * @return Collection<int, array{code: string, name: string, native_name: string, flag: string|null}>
+=======
+     * @return Collection<int, array{code: string, name: string, native_name: string, flag: string|null, url: string}>
+>>>>>>> laraxot/dev
      */
     public function getAvailableLocales(): Collection
     {
@@ -83,6 +87,10 @@ class LanguageSwitcherWidget extends XotBaseSchemaWidget
                         ? $properties['native']
                         : (is_string($name) ? $name : $code),
                     'flag' => is_string($properties['flag'] ?? null) ? $properties['flag'] : null,
+<<<<<<< HEAD
+=======
+                    'url' => $this->getLanguageUrl($code),
+>>>>>>> laraxot/dev
                 ];
             })
             ->values();

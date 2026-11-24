@@ -1,5 +1,10 @@
 # Workflow Sviluppo - Modifiche CSS/JS
 
+> **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
+> `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
+> `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
+> [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
+
 ## Data
 [DATE]
 

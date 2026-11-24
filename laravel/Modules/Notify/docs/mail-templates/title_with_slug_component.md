@@ -3,7 +3,11 @@ title: "title with slug component"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "title with slug component"
 issues: []
 discussions: []
@@ -226,9 +230,21 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 
 - [Repository GitHub del Pacchetto](https://github.com/camya/filament-title-with-slug)
 - [Documentazione Filament](https://filamentphp.com/docs)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_jMdAIi
+- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
+- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
+- [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)
+=======
+>>>>>>> laraxot/dev
 - [Implementazione Modello con Slug](model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](resource_slug_implementation.md)
 - [Miglioramenti UI/UX](ui_ux_enhancements.md)
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
 - [Miglioramenti UI/UX](./ui_ux_enhancements.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hsKFsg
+>>>>>>> laraxot/dev

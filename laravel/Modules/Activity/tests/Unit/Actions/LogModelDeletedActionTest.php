@@ -10,17 +10,10 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-<<<<<<< .merge_file_pvdv4M
-test('LogModelDeletedAction can be instantiated', function () {
-    $model = new class extends Model
-    {
-        protected $table = 'test_models';
-=======
 test('LogModelDeletedAction execute persiste deleted con subject e causer', function (): void {
     $model = new LogModelDeletedActionTestModel;
     $model->forceFill(['id' => 'deleted-1', 'name' => 'Deleted']);
     $model->exists = true;
->>>>>>> .merge_file_Am0xmI
 
     $user = new User;
     $user->forceFill([

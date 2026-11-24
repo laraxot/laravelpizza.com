@@ -7,7 +7,11 @@ type: entity
 sources: ["raw/articles/source-filename.md"]
 confidence: high
 created: {{date}}
+<<<<<<< HEAD
 updated: {{date}}
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [person, organization, module]
 related: []
 ---

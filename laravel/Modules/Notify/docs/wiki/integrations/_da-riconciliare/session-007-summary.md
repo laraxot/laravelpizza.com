@@ -3,7 +3,11 @@ title: "SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION"
 type: concept
 tags: [session, 007, summary]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "session-007-summary session 007 - phase 1 execution orchestration"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

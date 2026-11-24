@@ -11,10 +11,21 @@ related:
   - "./assign-module-command.md"
   - "./change-password-command.md"
   - "./console-commands-philosophy.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  - "./console-commands.md"
+  - "./readme.md"
+=======
+>>>>>>> laraxot/dev
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # Filosofia dei Comandi Console - Modulo User
@@ -476,4 +487,7 @@ private function getPasswordLegacy(): string
 
 *Ultimo aggiornamento: 2025-01-27*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

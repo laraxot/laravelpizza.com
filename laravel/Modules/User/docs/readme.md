@@ -1075,7 +1075,11 @@ See [CHANGELOG.md](./CHANGELOG.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
+<<<<<<< HEAD
 See [roadmap.md](./roadmap.md) for details.
+=======
+See [ROADMAP.md](./roadmap.md) for details.
+>>>>>>> laraxot/dev
 
 ---
 
@@ -1088,6 +1092,11 @@ See [roadmap.md](./roadmap.md) for details.
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
+<<<<<<< HEAD
+=======
+- [CLAUDE.md](../../../CLAUDE.md) - Project architecture
+- [Security Guidelines](../../../../docs/security.md)
+>>>>>>> laraxot/dev
 - [CLAUDE.md](../../../claude.md) - Project architecture
 - [Security Guidelines](../../../../docs/SECURITY.md)
 

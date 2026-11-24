@@ -12,3 +12,8 @@ discussions: []
 # Stories Geo
 
 - [GeoMapWidget Filament v5 con pattern farmshops e LOD client-side](./geo-map-widget-farmshops-lod.md)
+<<<<<<< HEAD
+=======
+
+- [Audit qualita' (issue #64)](./audit-qualita.story.md)
+>>>>>>> laraxot/dev

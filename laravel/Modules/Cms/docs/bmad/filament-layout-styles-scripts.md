@@ -33,7 +33,15 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 |---|---|---|
 | Head FO | `resources/views/components/head.blade.php` | `@filamentStyles` |
 | Foot FO | `resources/views/components/foot.blade.php` | `@filamentScripts` |
+<<<<<<< HEAD
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
+=======
+<<<<<<< HEAD
+| Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano sempre le view sopra |
+=======
+| Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | Temi | es. Trattoria `layouts/main` | usano `<x-cms::head />` + `<x-cms::foot />` — **non** duplicare né omettere |
 
 ## Ordine canonico (KISS)
@@ -57,6 +65,10 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 - Rimuovere `@filamentStyles` / `@filamentScripts` “per alleggerire” il FO
 - Mettere notifications solo per utenti autenticati
 - Duplicare le direttive nei temi che già includono `x-cms::head` / `x-cms::foot`
+<<<<<<< HEAD
+=======
+- Aggiungere una prop `panelAssets` che non viene valorizzata dai caller
+>>>>>>> laraxot/dev
 - Aggiungere `@filamentStyles` in `metatags` **e** in `head` sulla stessa pagina (una sola fonte)
 
 ## Verifica

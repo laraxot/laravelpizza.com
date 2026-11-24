@@ -13,42 +13,34 @@ return [
         'EMERGENCY' => [
             'label' => 'EMERGENCY',
             'color' => 'danger',
-            'label' => 'Emergency',
         ],
         'ALERT' => [
             'label' => 'ALERT',
             'color' => 'danger',
-            'label' => 'Alert',
         ],
         'CRITICAL' => [
             'label' => 'CRITICAL',
             'color' => 'danger',
-            'label' => 'Critical',
         ],
         'ERROR' => [
             'label' => 'ERROR',
             'color' => 'danger',
-            'label' => 'Error',
         ],
         'WARNING' => [
             'label' => 'WARNING',
             'color' => 'warning',
-            'label' => 'Warning',
         ],
         'NOTICE' => [
             'label' => 'NOTICE',
             'color' => 'info',
-            'label' => 'Notice',
         ],
         'INFO' => [
             'label' => 'INFO',
             'color' => 'info',
-            'label' => 'Info',
         ],
         'DEBUG' => [
             'label' => 'DEBUG',
             'color' => 'gray',
-            'label' => 'Debug',
         ],
     ],
 ];

@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_nZpyJD
-=======
 ---
 title: "Aggiornamento README Activity - Sezione Testing"
 type: note
@@ -75,7 +73,6 @@ php artisan test Modules/Activity --coverage
 ```
 
 See canonical documentation: ../../../Themes/docs/shared-components/README.md.update
->>>>>>> .merge_file_Ns86UV
 ---
 title: "Aggiornamento README Activity - Sezione Testing"
 type: note

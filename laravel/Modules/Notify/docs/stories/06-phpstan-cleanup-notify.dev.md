@@ -6,7 +6,11 @@ priority: medium
 module: Notify
 story: ./2026-10-06-phpstan-cleanup-notify.story.md
 created: 2026-10-06
+<<<<<<< HEAD
 updated: 2026-10-06
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [notify, phpstan, enum, push, notification-log]
 ---
 

@@ -61,7 +61,11 @@ class GetAddressByLatLngFromGoogleMapsAction
     private function validateInput(float $latitude, float $longitude): void
     {
         $apiKey = config('services.google.maps_api_key');
+<<<<<<< HEAD
         if (! \is_string($apiKey) || $apiKey === '') {
+=======
+        if (! \is_string($apiKey) || '' === $apiKey) {
+>>>>>>> laraxot/dev
             throw new \RuntimeException('Google Maps API key not configured');
         }
         Assert::range($latitude, -90, 90, 'Invalid latitude');

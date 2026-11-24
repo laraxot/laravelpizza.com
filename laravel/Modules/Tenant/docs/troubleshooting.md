@@ -491,6 +491,10 @@ php artisan migrate --database=tenant_123
 
 ---
 
-Navigation: [Documentation Index](index.md) | [README](README.md) | [Patterns](patterns.md)
+Navigation: [Documentation Index](./README.md) | [README](README.md) | [Patterns](patterns.md)
 ---
+<<<<<<< .merge_file_q9VxN8
+Navigation: [Documentation Index](./README.md) | [README](README.md) | [Patterns](patterns.md)
+=======
 Navigation: [Documentation Index](index.md) | [README](README.md) | [Patterns](patterns.md)
+>>>>>>> .merge_file_mR3PWz

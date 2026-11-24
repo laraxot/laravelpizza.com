@@ -47,7 +47,7 @@ it('serves the key file only for the configured key', function (): void {
     Assert::assertSame(INDEXNOW_TEST_KEY, $response->getContent());
 
     expect(fn () => (new ServeIndexNowKeyAction)('ffffffffffffffff'))->toThrow(NotFoundHttpException::class);
-});
+})->group('SEO-INDEXNOW-KEY-INV-1');
 
 it('serves no key file when IndexNow is off or the key is malformed', function (?string $key): void {
     FakeTenantSeoConfig::bind(['indexnow_key' => $key]);
@@ -57,7 +57,7 @@ it('serves no key file when IndexNow is off or the key is malformed', function (
     'no key' => [null],
     'too short' => ['a1b2c3'],
     'bad characters' => ['a1b2c3d4 e5f6/../'],
-]);
+])->group('SEO-INDEXNOW-KEY-INV-2');
 
 it('submits only urls of the site host, once each, to the shared endpoint', function (): void {
     FakeTenantSeoConfig::bind(['indexnow_key' => INDEXNOW_TEST_KEY]);
@@ -76,7 +76,7 @@ it('submits only urls of the site host, once each, to the shared endpoint', func
         && $request['key'] === INDEXNOW_TEST_KEY
         && $request['keyLocation'] === 'https://civic.example/'.INDEXNOW_TEST_KEY.'.txt'
         && $request['urlList'] === ['https://civic.example/it/tickets/1']);
-});
+})->group('SEO-INDEXNOW-INV-2', 'SEO-INDEXNOW-INV-3', 'SEO-INDEXNOW-INV-4');
 
 it('sends nothing without a key and reports a refused submission', function (): void {
     Http::fake(['api.indexnow.org/*' => Http::response('', 403)]);
@@ -87,7 +87,7 @@ it('sends nothing without a key and reports a refused submission', function (): 
 
     FakeTenantSeoConfig::bind(['indexnow_key' => INDEXNOW_TEST_KEY]);
     Assert::assertSame(['submitted' => 0, 'skipped' => 0, 'statuses' => [403]], app(SubmitIndexNowAction::class)->execute(['https://civic.example/it']));
-});
+})->group('SEO-INDEXNOW-INV-1', 'SEO-INDEXNOW-INV-6');
 
 it('splits large submissions at the protocol limit', function (): void {
     FakeTenantSeoConfig::bind(['indexnow_key' => INDEXNOW_TEST_KEY]);
@@ -98,7 +98,7 @@ it('splits large submissions at the protocol limit', function (): void {
 
     Assert::assertSame(SubmitIndexNowAction::MAX_URLS_PER_REQUEST + 1, $result['submitted']);
     Assert::assertSame([200, 200], $result['statuses']);
-});
+})->group('SEO-INDEXNOW-INV-5');
 
 it('keeps the sitemap state untouched when urls are passed by hand', function (): void {
     FakeTenantSeoConfig::bind(['indexnow_key' => INDEXNOW_TEST_KEY]);

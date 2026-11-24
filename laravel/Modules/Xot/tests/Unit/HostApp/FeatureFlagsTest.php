@@ -19,8 +19,13 @@ use PHPUnit\Framework\Assert;
  * App\Support\FeatureFlags exists only in host apps that ship the full skeleton
  * (ptvx, predict, ...). Slim hosts (restaurant, techplanner, ...) do not provide
  * it, so every test skips itself when the class is absent instead of failing.
+<<<<<<< HEAD
  * Assert::assertIs* narrows FeatureFlags::get() (mixed) and pins return contracts;
  * prefer Assert over Pest expect() to avoid argument.templateType su PHPStan max.
+=======
+ * Assert::assertIs* narrows FeatureFlags::get() (mixed); prefer Assert over Pest
+ * expect() to avoid argument.templateType su PHPStan max.
+>>>>>>> laraxot/dev
  */
 
 uses(XotBaseTestCase::class);
@@ -200,7 +205,13 @@ describe('FeatureFlags::all', function (): void {
         }
 
         $all = FeatureFlags::all();
+<<<<<<< HEAD
         Assert::assertIsArray($all);
+=======
+        if (! is_array($all)) {
+            Assert::fail('FeatureFlags::all() deve restituire un array.');
+        }
+>>>>>>> laraxot/dev
 
         Assert::assertArrayHasKey('cache.store', $all);
         Assert::assertSame('redis', $all['cache.store']);

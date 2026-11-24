@@ -5,7 +5,7 @@ type: decision
 module: Seo
 status: accepted
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-24
 issues:
   - "progetto ospite #736"
   - "progetto ospite #738"
@@ -82,3 +82,14 @@ Fatti da cui parte la decisione:
 - I profili ufficiali e i token di verifica sono dati del tenant: finché non ci sono, le proprietà non compaiono.
 - Le pagine restano la leva principale: indicizzabili, veloci (Core Web Vitals) e con contenuto che risponde a una
   domanda reale. Questo ADR mette il sito in condizione di essere trovato, non di salire da solo.
+
+## Verifica
+
+- `cd laravel && vendor/bin/pest Modules/Seo/tests/Feature/IndexNow/IndexNowTest.php`: file della chiave solo per la chiave
+  configurata, invio solo di URL dell'host a `api.indexnow.org` a blocchi da 10.000, niente invio senza chiave, reinvio di
+  una URL della sitemap solo se il suo `<lastmod>` è più recente. Le singole regole hanno un group: vedi i contratti
+  [SubmitIndexNowAction](../contracts/submit-index-now-action.md) e [ServeIndexNowKeyAction](../contracts/serve-index-now-key-action.md).
+- `vendor/bin/pest Modules/Seo/tests/Unit/Actions/Robots/BuildRobotsTxtActionTest.php`: `robots.txt` dichiara la sitemap
+  con URL assoluto.
+- Solo revisione: che nessuno aggiunga `llms.txt` o altri file "per l'AI", e che `sameAs` e i meta di verifica restino
+  condizionati ai dati del tenant (codice in Xot e Cms, fuori da questo modulo).

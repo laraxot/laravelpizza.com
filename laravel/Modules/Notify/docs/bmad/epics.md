@@ -5,9 +5,16 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
 tags: [docs, notify, bmad]
 qmd: "Notify epics user stories canali template hardening"
+=======
+updated: 2026-11-23
+tags: [docs, notify, bmad]
+qmd: "Notify epics user stories canali template hardening"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Epics e User Stories - Modulo Notify

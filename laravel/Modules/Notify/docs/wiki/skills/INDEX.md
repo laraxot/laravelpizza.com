@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_c4T9f5
+---
+title: "Notify Module - skills Index"
+type: index
+tags: [notify, docs, wiki, skills]
+module: Notify
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "notify documentazione wiki skills index notify module - skills index index readme frontmatter qmd search"
+issues:
+  - "https://github.com/laraxot/module_notify_fila5/issues/56"
+discussions:
+  - "https://github.com/laraxot/module_notify_fila5/discussions/57"
+related:
+  - ../../README.md
+  - ../index.md
+  - ../../notifications/readme.md
+  - ../../integrations/readme.md
+  - ../../templates/readme.md
+---
+=======
+>>>>>>> .merge_file_cg8yIq
+>>>>>>> laraxot/dev
 # Notify Module - skills Index
 
 ## Purpose

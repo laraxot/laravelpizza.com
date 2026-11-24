@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # logging — Consolidated Documentation
@@ -280,7 +284,10 @@ Log::info('Batch completed', ['count' => $count]); // ✅ ONE LOG
 
 *Consolidated from: `logging-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Executive Summary
 
 **CRITICAL ISSUE:** Excessive `Log::info()` calls cause **30-50% performance degradation**.
@@ -505,7 +512,10 @@ time curl http://localhost:8000/api/endpoint
 
 *Consolidated from: `logging-optimization-plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Current Issues
 
 ### Excessive Log::info() Calls Found

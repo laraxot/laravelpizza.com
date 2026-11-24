@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_RvoKTr
-title: "Project context — Activity"
-=======
->>>>>>> .merge_file_cfnfcH
 title: "Project context: Activity"
 type: constitution
 module: Activity

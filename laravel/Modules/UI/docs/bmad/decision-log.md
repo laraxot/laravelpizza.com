@@ -1,4 +1,12 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_G0RLBy
+bmad_status: active
+scope: ui-docs
+=======
+>>>>>>> .merge_file_yhNFVS
+>>>>>>> laraxot/dev
 title: "Decision log — UI"
 type: decision-log
 status: review

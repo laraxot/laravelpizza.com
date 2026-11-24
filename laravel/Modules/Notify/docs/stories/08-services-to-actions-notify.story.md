@@ -5,7 +5,11 @@ status: done
 priority: high
 module: Notify
 created: 2026-10-08
+<<<<<<< HEAD
 updated: 2026-10-08
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [notify, services-to-actions, queueable-action, enum, push, dedup, swarm]
 related:
   - ./4.29.notify-services-to-actions.story.md

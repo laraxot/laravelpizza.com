@@ -3,9 +3,14 @@ title: "🏆 FIXCITY - ECCELLENZA 2025"
 type: concept
 tags: [excellence, 2025]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
 qmd: "excellence-2025 🏆 fixcity - eccellenza 2025"
 qmd: "excellence-2025 🏆 ptv - eccellenza 2025"
+=======
+updated: 2026-11-23
+qmd: "excellence-2025 🏆 fixcity - eccellenza 2025"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

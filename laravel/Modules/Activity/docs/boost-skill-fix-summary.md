@@ -2,13 +2,6 @@
 module: theme
 topic: boost_skill_fix_summary
 canonical: ../../../Themes/docs/shared-components/boost-skill-fix-summary-Modules.md
-<<<<<<< .merge_file_WwZIEp
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/boost-skill-fix-summary-Modules.md
-# Boost Skill Fix Summary - Activity Module
-=======
->>>>>>> .merge_file_G9ltv2
 title: "boost skill fix summary"
 type: note
 status: stub

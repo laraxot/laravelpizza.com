@@ -160,7 +160,15 @@ Riferimento a [configuration.md](configuration.md)
 
 ## Testing
 
+<<<<<<< HEAD
 Riferimento a [testing.md](testing.md)
+=======
+<<<<<<< HEAD
+Riferimento a [testing.md](testing.md)
+=======
+Riferimento a testing.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Collegamenti
 

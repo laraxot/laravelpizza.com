@@ -3,7 +3,11 @@ title: "filament rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament rules"
 issues: []
 discussions: []
@@ -42,7 +46,10 @@ Forms\Components\Select::make('user_id')
     ->required(),
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Testing
 - It's important to test Filament functionality for user satisfaction.
 - Ensure that you are authenticated to access the application within the test.

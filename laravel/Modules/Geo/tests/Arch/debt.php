@@ -21,6 +21,20 @@ return [
         'Modules\Geo\Models\ComuneJson',
         'Modules\Geo\Models\GeoJsonModel',
         'Modules\Geo\Models\Traits\SushiToJsons',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        'Modules\Geo\View\Components\PointMap',
+    ],
+    // classi in un namespace Services (regola No Services, DCP-270); NoServicesTest le vede come cartelle
+    //
+    // Vuota dal 2026-11-20: le otto classi erano copie morte senza chiamanti di
+    // produzione, ognuna con un'Action successore che dichiara nel proprio
+    // docblock quale metodo ha sostituito (base_quaeris_fila5#247). La chiave
+    // resta per documentare la regola e rendere esplicito lo zero.
+    'services' => [],
+=======
+>>>>>>> laraxot/dev
         'Modules\Geo\Services\BaseGeoService',
         'Modules\Geo\Services\GoogleMapsService',
         'Modules\Geo\View\Components\PointMap',
@@ -36,4 +50,8 @@ return [
         'Modules\Geo\Services\HereService',
         'Modules\Geo\Services\MapService',
     ],
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ];

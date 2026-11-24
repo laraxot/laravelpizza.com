@@ -19,7 +19,11 @@ test('inbound webhook rejects requests without valid token', function (): void {
         'To' => 'noreply@fixcity.eu',
         'Subject' => 'Test',
     ])->assertUnauthorized();
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 
 test('inbound webhook rejects requests when token is not configured', function (): void {
     config(['notify.notify.inbound_token' => null]);
@@ -28,7 +32,11 @@ test('inbound webhook rejects requests when token is not configured', function (
         'MessageID' => 'abc@postmarkapp.com',
         'From' => 'sender@example.com',
     ])->assertUnauthorized();
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 
 test('inbound webhook stores postmark payload', function (): void {
     $response = $this->postJson('/api/inbound/postmark/test-secret-token', [

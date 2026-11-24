@@ -3,13 +3,20 @@ title: "project architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project architecture"
 issues: []
 discussions: []
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
 > procedimento valido vedi

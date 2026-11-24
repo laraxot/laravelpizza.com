@@ -3,7 +3,11 @@ title: "correzioni phpstan completate 3"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "correzioni phpstan completate 3"
 issues: []
 discussions: []
@@ -27,7 +31,10 @@ discussions: []
 ### Falsi Syntax Errors
 L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano errori di sintassi PHP**. Erano **conflitti git non risolti** lasciati nel codice sorgente dopo merge multipli.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## File Corretti
 
 ### 1. Modules/Notify/app/Actions/EsendexSendAction.php
@@ -343,4 +350,8 @@ I pattern di type safety implementati possono essere applicati a:
 
 *Correzioni completate: 6 Gennaio 2025*  
 *Metodologia: Type safety + Riusabilità*  
+<<<<<<< HEAD
 *Risultato: 0 errori PHPStan Level 9*
+=======
+*Risultato: 0 errori PHPStan Level 9*
+>>>>>>> laraxot/dev

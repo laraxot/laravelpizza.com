@@ -5,10 +5,6 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
-<<<<<<< .merge_file_xRlDOr
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-=======
->>>>>>> .merge_file_3oRlPC
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 status: draft
 qmd: "performance optimization   module **activity** activity"
@@ -24,19 +20,12 @@ qmd: "performance optimization   module **activity** activity"
 **Dopo**: Carico solo what's needed (~2K startup)
 
 ```diff
-<<<<<<< .merge_file_xRlDOr
-- 150+ rules embeddate in agents.md
-- 150+ rules embeddate in AGENTS.md
-+ 0 rules embeddate — tutte on-demand
-- 150+ rules embeddate in agents.md+ 0 rules embeddate — tutte on-demand
-=======
 - 150+ rules embeddate in AGENTS.md
 
 - 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate — tutte on-demand
 
 - 150+ rules embeddate in AGENTS.md+ 0 rules embeddate — tutte on-demand
->>>>>>> .merge_file_3oRlPC
 ```
 
 ### 2. Cache Esterna al Repo

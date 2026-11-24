@@ -371,13 +371,3 @@ class ListMyModelActivities extends ListLogActivities
 - [Xot - Filament Base Components](../../Xot/docs/filament/README.md)
 
 ---
-<<<<<<< .merge_file_mON6Zu
-
-**
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Pattern**: DRY + KISS per Actions riutilizzabili
-**Conformità**: ✅ PHPStan livello 9+, ✅ Pint, ✅ Test Suite
-=======
->>>>>>> .merge_file_EWDDJi

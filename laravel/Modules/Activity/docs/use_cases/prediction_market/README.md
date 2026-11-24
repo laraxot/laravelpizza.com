@@ -38,11 +38,6 @@ Il modulo <nome progetto>ion Market implementa un sistema completo di mercati pr
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |
-<<<<<<< .merge_file_PAkioY
-| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
-| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
-=======
->>>>>>> .merge_file_PorUUe
 | 🇬🇧 Business card | [docs/readme-en.md](../../readme-en.md) |
 | 📚 Wiki tecnica | [./docs/wiki/](../..) |
 

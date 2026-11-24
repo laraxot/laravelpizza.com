@@ -52,10 +52,6 @@ use Parental\HasChildren;
  */
 abstract class BaseTeamUser extends BasePivot
 {
-<<<<<<< .merge_file_RJVJYR
-    use BaseTeamUserRelationsTrait;
-=======
->>>>>>> .merge_file_JIBZbK
     use HasChildren;
 
     protected $connection = 'user';

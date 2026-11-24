@@ -4,7 +4,15 @@ type: plan
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< HEAD
 qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+=======
+<<<<<<< .merge_file_mg11wH
+qmd: "piano miglioramento Media P1 P2 guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+=======
+qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+>>>>>>> .merge_file_ZcDMPy
+>>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
   - ./epics.md
@@ -13,6 +21,46 @@ related:
 
 # Piano di miglioramento — Media
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_mg11wH
+Derivato dall'[audit](./audits/media-audit.md).
+
+## P0
+
+1. Bonificare marker/conflict se presenti (ora: 0).
+2. Chiudere policy troppo permissive (`return true` ≈ 2) con matrice ruolo×ability.
+3. Blocchi sicurezza runtime (auth panel, mass assignment, export) con test negativi.
+
+## P1
+
+1. Portare Services (0) ad Actions Queueable dove applicabile.
+2. Alzare copertura test (attuale 47 test / 127 app PHP).
+3. Allineare Filament (resources=3) a XotBase* e traduzioni Lang.
+4. Spezzare dipendenze inverse verso verticali peer se rilevate con `rg`.
+
+## P2
+
+1. Deduplicare docs BMAD/ECC storici; frontmatter YAML + `qmd` su ogni `.md` attivo.
+2. Rimuovere legacy views/admin_test se dead.
+3. Profiling N+1 e i18n (zero label hardcoded).
+
+## Sequenza
+
+1. Story P0 disgiunte + lock.
+2. PHPStan modulo verde (già ok a livello `Modules`).
+3. Pest mirato o skip documentato.
+4. Aggiornare ECC checklist e QMD.
+
+## Criteri di completamento
+
+- [ ] P0 chiusi con Pest di regressione
+- [ ] PHPStan `Modules/Media` = 0
+- [ ] Pest osservabile o skip motivato
+- [ ] ECC `00-index` aggiornato con esiti
+=======
+>>>>>>> .merge_file_ZcDMPy
+>>>>>>> laraxot/dev
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
 
 ## P1 (ordine consigliato)
@@ -49,5 +97,13 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] `Modules/Media/tests/Unit/Models` → 0 fail
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
+<<<<<<< HEAD
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con gli esiti
+=======
+<<<<<<< .merge_file_mg11wH
+=======
+- [ ] Pest osservabile o skip motivato
+- [ ] ECC `00-index` aggiornato con gli esiti
+>>>>>>> .merge_file_ZcDMPy
+>>>>>>> laraxot/dev

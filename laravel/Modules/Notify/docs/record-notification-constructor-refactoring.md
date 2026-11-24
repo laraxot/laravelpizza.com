@@ -3,7 +3,11 @@ title: "record notification constructor refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "record notification constructor refactoring"
 issues: []
 discussions: []
@@ -181,4 +185,8 @@ qmd: "record notification constructor refactoring"
 issues: []
 discussions: []
 **Author**: iFlow CLI  
+<<<<<<< HEAD
 **Review Status**: Automated Quality Check Passed
+=======
+**Review Status**: Automated Quality Check Passed
+>>>>>>> laraxot/dev

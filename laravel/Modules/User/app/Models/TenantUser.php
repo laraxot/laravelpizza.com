@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -64,6 +67,7 @@ class TenantUser extends BasePivot
         'user_id',
     ];
 
+<<<<<<< HEAD
     /**
      * Il tenant dell'appartenenza (usato dal form del pannello: senza la relazione /user/admin/tenant-users/create
      * dava 500 "The relationship [tenant] does not exist").
@@ -83,6 +87,8 @@ class TenantUser extends BasePivot
         return $this->belongsTo(User::class, 'user_id');
     }
 
+=======
+>>>>>>> laraxot/dev
     /** @return array<string, string> */
     #[\Override]
     protected function casts(): array

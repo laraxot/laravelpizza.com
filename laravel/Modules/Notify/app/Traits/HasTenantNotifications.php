@@ -16,11 +16,7 @@ use Webmozart\Assert\Assert;
  *
  * Fornisce funzionalità per la gestione delle notifiche per tenant.
  *
-<<<<<<< .merge_file_NhRWBb
- * @phpstan-ignore trait.unused
-=======
  * Usato da test/unit helpers (es. NotifyTenantDummyModel); non ignorare trait.unused.
->>>>>>> .merge_file_I8PA9i
  */
 trait HasTenantNotifications
 {

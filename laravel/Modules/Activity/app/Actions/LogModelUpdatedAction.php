@@ -12,6 +12,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Log Model Updated Action.
  *
  * Logs when a model is updated using Queueable Actions
+ *
+ * @contract docs/contracts/log-model-updated-action.md
  */
 class LogModelUpdatedAction
 {
@@ -39,10 +41,11 @@ class LogModelUpdatedAction
             type: 'updated',
             user: $user,
             subject: $model,
+            // password, remember_token e segreti 2FA non entrano mai nel log (RedactModelAttributesAction)
             properties: [
-                'old' => $model->getOriginal(),
-                'new' => $model->getAttributes(),
-                'changes' => $model->getChanges(),
+                'old' => app(RedactModelAttributesAction::class)->execute($model->getOriginal()),
+                'new' => app(RedactModelAttributesAction::class)->execute($model->getAttributes()),
+                'changes' => app(RedactModelAttributesAction::class)->execute($model->getChanges()),
             ],
             description: sprintf('%s updated', class_basename($model))
         );

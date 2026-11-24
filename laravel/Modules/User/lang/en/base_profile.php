@@ -11,11 +11,7 @@ return [
         'plural' => 'Profiles',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_f3HVlU
-            'description' => 'Gestione dei profili',
-=======
             'description' => 'Manage profiles',
->>>>>>> .merge_file_PtPCrc
         ],
         'label' => 'profiles',
         'sort' => '31',

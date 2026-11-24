@@ -5,7 +5,11 @@ title: "notify-conflict-check-2026-04-21.deprecated"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify-conflict-check-2026-04-21.deprecated deprecated"
 status: deprecated
 related:

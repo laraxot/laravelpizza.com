@@ -3,7 +3,11 @@ title: "Boost Skill Installation - Solution Plan"
 type: concept
 tags: [boost, skill, solution, plan]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "boost-skill-solution-plan boost skill installation - solution plan"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

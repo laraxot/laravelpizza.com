@@ -3,7 +3,11 @@ title: "translation file naming"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translation file naming"
 issues: []
 discussions: []
@@ -45,6 +49,12 @@ Se si identifica un file con naming non conforme:
 3. Rimuovere il file con naming errato
 
 ## Riferimenti
+<<<<<<< HEAD
+=======
+- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+- [Best Practices per le Traduzioni](../../lang/docs/translation_keys_best_practices.md)
+- [Best Practices per le Traduzioni](../../lang/docs/translation-keys-best-practices.md)
+>>>>>>> laraxot/dev
 - [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
 - [Best Practices per le Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
 - [Best Practices per le Traduzioni](../../Lang/docs/translation-keys-best-practices.md)

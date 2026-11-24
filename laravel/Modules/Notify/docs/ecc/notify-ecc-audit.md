@@ -2,9 +2,16 @@
 title: "ECC audit operativo — Notify"
 type: ecc-audit
 status: review
+<<<<<<< HEAD
 updated: 2026-11-16
 module: Notify
 qmd: "ECC audit Notify security-review laravel-verification verification-loop webhook policy NotificationLog"
+=======
+updated: 2026-11-23
+module: Notify
+qmd: "ECC audit Notify security-review laravel-verification verification-loop webhook policy NotificationLog"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # ECC audit operativo — Notify

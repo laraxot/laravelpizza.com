@@ -4,7 +4,11 @@
 **Module Version**: 2.5.0
 
 ## 🎯 **Lettura Essenziale**
+<<<<<<< HEAD
 1. [README.md](./README.md) - Panoramica completa del sistema di identità.
+=======
+1. [README.md](./readme.md) - Panoramica completa del sistema di identità.
+>>>>>>> laraxot/dev
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Biometric Auth & AI Moderation.
 3. [philosophy.md](./philosophy.md) - "Essere Unici": la gestione dell'identità digitale.
 

@@ -3,7 +3,11 @@ title: "header language avatar implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "header language avatar implementation"
 issues: []
 discussions: []
@@ -12,7 +16,15 @@ discussions: []
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo Cms](./README.md)
+=======
+<<<<<<< HEAD
+- [README modulo Cms](./readme.md)
+=======
+- [README modulo Cms](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Documentazione User](../../user/project_docs/header_language_avatar_implementation.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)

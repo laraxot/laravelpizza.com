@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, theme, sixteen, analysis]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione theme sixteen analysis index theme sixteen analysis index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

@@ -1,42 +1,27 @@
 ---
-title: "Architecture Decision Records"
+title: "ADR — modulo Tenant"
 type: index
-tags: [adr, decisioni]
+tags: [adr, decisioni, tenant, multi-sito]
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-24
 ---
 
-# Architecture Decision Records
+# ADR del modulo Tenant
 
-Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
-Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
+Il **perché** di come lo stesso codice serve più siti: come si sceglie il tenant dall'host, come le connessioni dei
+moduli restano una sola transazione, perché i test non scrivono sui contenuti versionati del sito.
 
-## Formato
-
-```markdown
----
-title: "ADR — <decisione in una riga>"
-type: decision
-status: accepted | superseded | deprecated
-created: AAAA-MM-GG
-updated: AAAA-MM-GG
-issues: []
----
-
-# ADR: <decisione>
-
-## Contesto
-Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
-
-## Decisione
-Cosa si fa, in concreto, e dove sta nel codice.
-
-## Alternative scartate
-Ogni alternativa seria, con il motivo per cui non e' stata scelta.
-
-## Conseguenze
-Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-```
+Leggili prima di toccare `GetTenantNameAction`, `GetTenantFilePathAction`, `TenantServiceProvider::registerDB()` o i
+trait Sushi. Formato e regole: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
 ## Decisioni
 
+- [Il tenant è la cartella di config del dominio invertito](tenant-name-from-reversed-host.md) — host → `config/com/example/foo`, symlink risolti, niente database.
+- [Connessione per modulo, alias della default](module-connections-alias-default.md) — stessa istanza `Connection` finché la config coincide.
+- [Nei test i contenuti JSON vanno in una copia sotto storage](tenant-json-content-isolated-in-tests.md) — `database/content/` mai scritto dai test.
+
+## Decisioni precedenti (formato libero, non ancora ADR)
+
+- [Rimozione del controllo runningInConsole](../runninginconsole-check-decision.md)
+- [arr-first vs collect-first](../arr-first-vs-collect-first-decision.md)
+- [Decision log](../decision-log.md)

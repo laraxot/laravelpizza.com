@@ -3,7 +3,11 @@ title: "dependency injection patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "dependency injection patterns"
 issues: []
 discussions: []
@@ -110,4 +114,8 @@ updated: 2026-09-26
 qmd: "dependency injection patterns"
 issues: []
 discussions: []
+<<<<<<< HEAD
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+=======
+*Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+>>>>>>> laraxot/dev

@@ -3,7 +3,11 @@ title: "roadmap project"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap project"
 issues: []
 discussions: []
@@ -384,5 +388,8 @@ discussions: []
 **Prossima Revisione**: 2025-02-01  
 **Maintainer**: Development Team  
 **Status**: 🚧 In Progress (40% completato)
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev

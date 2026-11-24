@@ -5,7 +5,15 @@ type: overview
 created: "2026-04-15T08:28:51Z"
 updated: "2026-04-15T08:28:51Z"
 related:
+<<<<<<< HEAD
   - "./AGENTS.md"
+=======
+<<<<<<< HEAD
+  - "./agents.md"
+=======
+  - "./AGENTS.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"

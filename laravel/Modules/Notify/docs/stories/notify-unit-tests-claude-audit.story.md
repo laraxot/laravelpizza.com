@@ -7,7 +7,11 @@ slug: notify-unit-tests-claude-audit-100
 status: ready-for-dev
 priority: high
 created: 2026-09-27
+<<<<<<< HEAD
 updated: 2026-09-27
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/XXXX"
 discussions:

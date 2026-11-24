@@ -46,10 +46,6 @@ qmd search "test isolation connections" --intent="prevent test crosstalk"
 - [testcase-hierarchy-architecture](../concepts/testcase-hierarchy-architecture.md) — Detailed concept page
 
 ### Brainstorm Artifacts (Full Thinking)
-<<<<<<< .merge_file_8saEbf
-- [BRAINSTORM-TestCase-Architecture-2026-06-10.md](../../BRAINSTORM-TestCase-Architecture-2026-06-10.md) — Complete brainstorm with 28 ideas, 7 insights
-=======
->>>>>>> .merge_file_7gg5yf
 - [BRAINSTORM-TestCase-Architecture-2026-06-10.md](../../BRAINSTORM-TestCase-Architecture-laravel-modules.md) — Complete brainstorm with 28 ideas, 7 insights
 
 ### Implementation Guides (TBD)
@@ -57,12 +53,6 @@ qmd search "test isolation connections" --intent="prevent test crosstalk"
 - Per-module testing.md files
 
 ## See Also
-<<<<<<< .merge_file_8saEbf
-- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
-- [Root Wiki Index](../)
-- [Root Concepts (Architecture Decisions)](../../../../../docs/wiki/concepts/)
-=======
->>>>>>> .merge_file_7gg5yf
 - [Root Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Root Wiki Index](../)
 - [Root Concepts (Architecture Decisions)](../../../../../../docs/wiki/concepts)

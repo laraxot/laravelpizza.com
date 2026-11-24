@@ -3,7 +3,11 @@ title: "implementazione refactoring basemodel"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "implementazione refactoring basemodel"
 issues: []
 discussions: []
@@ -552,4 +556,7 @@ Il refactoring BaseModel è un **SUCCESSO TOTALE**:
 **MU-UU-UU! 🐄✨**
 
 *La Super Mucca approva questo refactoring!*
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

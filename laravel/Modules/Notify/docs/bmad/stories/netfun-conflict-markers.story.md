@@ -8,7 +8,11 @@ title: "Notify: marker in SendNetfunSMSAction + lang"
 status: review
 scope: module:Notify
 created: 2026-09-22
+<<<<<<< HEAD
 updated: 2026-09-22
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify netfun conflict markers json_decode redact token isSuccessfulResponse"
 related:
   - ../livewire-inventory.md

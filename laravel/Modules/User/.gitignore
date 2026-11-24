@@ -325,3 +325,17 @@ docs/graphify
 resources/lang
 .merge_file_*
 audit-coverage/
+<<<<<<< HEAD
+=======
+
+# Tooling locale e config agenti (module-theme-root-hygiene)
+.agents/
+.codex/
+.opencode/
+.qwen/
+.php-cs-fixer.php
+.php-cs-fixer.dist.php
+docs/legacy/
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

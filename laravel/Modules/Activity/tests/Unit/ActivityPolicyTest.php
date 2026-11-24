@@ -9,7 +9,7 @@ use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 describe('Activity Policy', function (): void {
     test('user with permission can view', function (): void {
@@ -18,7 +18,7 @@ describe('Activity Policy', function (): void {
         $user = $this->createUnitMock(User::class);
         $user->method('hasPermissionTo')->willReturn(true);
 
-        $policy = new ActivityPolicy;
+        $policy = new ActivityPolicy();
         $result = $policy->view($user);
 
         Assert::assertTrue($result);
@@ -29,7 +29,7 @@ describe('Activity Policy', function (): void {
         $user = $this->createUnitMock(User::class);
         $user->method('hasPermissionTo')->willReturn(false);
 
-        $policy = new ActivityPolicy;
+        $policy = new ActivityPolicy();
         $result = $policy->view($user);
 
         Assert::assertFalse($result);

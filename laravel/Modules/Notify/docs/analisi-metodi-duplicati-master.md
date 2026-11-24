@@ -3,7 +3,11 @@ title: "analisi metodi duplicati master"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "analisi metodi duplicati master"
 issues: []
 discussions: []
@@ -1188,4 +1192,7 @@ Dopo analisi approfondita con **dati REALI dal codebase**, la Super Mucca Divina
 *Versione: 2.0 ULTIMATE*  
 *Data: 2025-10-15*  
 *Status: READY FOR PRODUCTION*
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

@@ -3,7 +3,11 @@ title: "master plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "master plan"
 issues: []
 discussions: []
@@ -503,4 +507,7 @@ FixCity è posizionata per diventare la **piattaforma leader europea** per il ci
 
 **Per domande o approfondimenti**: development@fixcity.io
 **Per domande o approfondimenti**: development@ptv.io
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

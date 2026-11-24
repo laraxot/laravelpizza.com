@@ -4,7 +4,11 @@ type: story
 bmad: true
 status: in-progress
 created: 2026-11-12
+<<<<<<< HEAD
 updated: 2026-11-12
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 owner: module:Notify
 module: Notify
 related:

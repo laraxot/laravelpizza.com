@@ -8,11 +8,6 @@ use Spatie\Translatable\HasTranslations;
 
 /**
  * Trait che estende HasTranslations con tipi di ritorno più stretti.
-<<<<<<< .merge_file_FgpGup
- *
- * @phpstan-ignore trait.unused
-=======
->>>>>>> .merge_file_yhoG2H
  */
 trait HasStrictTranslations
 {

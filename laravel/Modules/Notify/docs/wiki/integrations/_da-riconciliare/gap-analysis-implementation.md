@@ -1,5 +1,6 @@
 ---
 title: "🔍 NOTIFY - GAP ANALYSIS & IMPLEMENTATION PLAN"
+<<<<<<< HEAD
 title: "🔍 <nome progetto> - GAP ANALYSIS & IMPLEMENTATION PLAN"
 type: concept
 tags: [gap, analysis, implementation]
@@ -7,6 +8,13 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "gap-analysis-implementation 🔍 laraxot - gap analysis & implementation plan"
 qmd: "gap-analysis-implementation 🔍 <nome progetto> - gap analysis & implementation plan"
+=======
+type: concept
+tags: [gap, analysis, implementation]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "gap-analysis-implementation 🔍 laraxot - gap analysis & implementation plan"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

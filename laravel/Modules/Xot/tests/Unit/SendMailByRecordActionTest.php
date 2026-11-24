@@ -42,4 +42,8 @@ it('throws if record has no email', function (): void {
     } catch (\InvalidArgumentException $e) {
         Assert::assertSame('Model must have email property', $e->getMessage());
     }
+<<<<<<< HEAD
 });
+=======
+})->group('XOT-MAIL-RECORD-INV-1');
+>>>>>>> laraxot/dev
