@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Modules\Xot\Models\Traits\HasCommonScopes;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
 use Modules\Xot\Traits\HasCustomRelations;
@@ -19,10 +18,13 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Factories\Factory<static> factory($count = null, $state = [])
  *
  * Class XotBaseModel.
+ *
+ * HasCommonScopes NON va qui: scopePublished filtra published_at e rompe
+ * Event::scopePublished (status). Trait solo sui model dominio che lo usano
+ * (es. Notify\NotificationTemplate). Vedi Meetup/docs/contracts/event-published-scope.md.
  */
 abstract class XotBaseModel extends EloquentModel
 {
-    use HasCommonScopes;
     use HasCustomRelations;
     use HasXotFactory;
     use RelationX;

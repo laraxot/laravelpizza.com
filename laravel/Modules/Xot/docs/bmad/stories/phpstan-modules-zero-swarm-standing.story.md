@@ -1,6 +1,6 @@
 ---
 title: "PHPStan Modules zero — standing swarm"
-status: in-progress
+status: verified-zero
 updated: 2026-11-24
 qmd: "phpstan modules zero swarm conflict markers bootstrap"
 ---
@@ -20,13 +20,16 @@ Gate `./vendor/bin/phpstan analyse Modules` must reach 0. Bootstrap failed on me
 | coordinator | bootstrap restore Lang+Notify markers; cold remeasure → **107** (`Geo` 99, `Meetup` 2, `Notify` 6) | 2026-11-24 17:11 |
 | coordinator | **STOP repair su User**: `merge_remote_repo_2.sh laraxot` cwd=`Modules/User` (git gc). Gate bloccato da marker User (`module.json`, `HasTeams.php`). Ripresa dopo uscita sync. | 2026-11-24 17:19 |
 | coordinator | post-sync: AssetAction/PanelMixin/lang parse; cold run **37** (`User` 28 lang dups, `Xot` 8 deadCode/assign, `UI` 1 trait.unused). Geo **0**. | 2026-11-24 17:30 |
+| coordinator | cold after cache clear: **2** Meetup (`Event::scopePublished` vs `HasCommonScopes` su `XotBaseModel`). Root: trait tolto da `XotBaseModel`, resta su `NotificationTemplate`. | 2026-11-24 17:40 |
+| coordinator | **VERIFY ZERO** `./vendor/bin/phpstan analyse Modules` → `file_errors: 0`. Cache stale poteva inventare 594 `class.notFound` su XotBaseModel: sempre `clear-result-cache` prima del conteggio. | 2026-11-24 17:41 |
 | lane-user-lang-2 | User lang `array.duplicateKey` wave | swarm bg |
-| lane-xot-ui-residual | Xot deadCode + RelationX + UI TableLayoutTrait | swarm bg |
+| lane-xot-ui-residual | Xot deadCode + RelationX + UI TableLayoutTrait | **done 2026-11-24** — `analyse Modules/Xot Modules/UI` → **0**. Dead return già assenti (MetatagData/ListRecords/ExportXls); SchemaWidget solo `$resolver()`; `UI\Traits\TableLayoutTrait` in `docs/parcheggio` (vivo: `Filament/Actions/Table`); RelationX ok post-cache-clear; test UI riallineati al trait Filament |
 | lane-geo-types | `HasCoordinatePicker` missingType.iterableValue → delegate Nominatim to helpers | swarm bg `aa649b2e` |
 | lane-meetup-notify | Event `Builder<$this>` + Notify HasTenantNotifications generics | swarm bg `9f3faa4c` |
 | lane-geo-phpstan | `Modules/Geo` PHPStan zero | **done 2026-11-24** — before ~102; after 0 (`analyse Modules/Geo`). Root: HasCoordinatePicker `use` CoordinatePickerHelpers + thin wrappers; removed dead GeographicalScopes/HasPlaceTrait/SushiToJsons/HasAddresses; GeoTrait+orderByDistance; Location uses HasAddress (cross-module trait was unused in Geo scope) |
 | lane-user-lang | User lang `array.duplicateKey` | done — 0 User errors on cold run |
 | lane-xot-notify-traits | Xot/Notify trait.unused | done — wire/parcheggio per censimento cross-base |
+| lane-composer-user-xot-notify | TSV User(7)+Xot(4)+Notify(3) | **done 2026-11-24** — before 7/4/3; after **0/0/0** (`analyse Modules/{User,Xot,Notify}`). User: lang dup keys (peer). Xot: wire `HasCommonScopes`+`HasCustomRelations`→`XotBaseModel`, `HasSchemalessAttributes`→`BaseExtra`, `RequiresOperationalPermissions`→`OperationalXotBasePolicy`, `HasExtraTrait`→`Feed`, `NavigationPageLabelTrait`→`Test`. Notify: rate/tracking→`GenericNotification`; tenant→`TenantNotifiable` (peer). tests esclusi da neon → consumer in `app/`. |
 | lane-xot | `Modules/Xot/app/**` production conflict PHP | 2026-11-24 done — 24 file app PHP: marker rimossi; preferito laraxot/dev su Safe/tipi/Excel/symlink/tenant-register; HEAD su EnvPage/XotBasePage/ListRecords/Metatag filament_primary; no `@phpstan-ignore` |
 | lane-user | `Modules/User/app/**` + migrations/lang conflicts | superseded by lane-user-lang for PHPStan |
 | lane-cms | `Modules/Cms/app/**` + config | 2026-11-24 done — vedi [cms-app-merge-conflict-lane.story.md](../../../Cms/docs/bmad/stories/cms-app-merge-conflict-lane.story.md) |
@@ -55,7 +58,7 @@ PHPStan `paths: Modules/` con `excludePaths: docs/*, tests/*` → i test non con
 | Trait | Decisione |
 |-------|-----------|
 | `RequiresOperationalPermissions` | wired via `OperationalXotBasePolicy` (base Roosko/Waste) |
-| `HasCommonScopes` | wired su `Notify\Models\NotificationTemplate` (DRY `scopeActive`) |
+| `HasCommonScopes` | **solo** `Notify\Models\NotificationTemplate` (DRY `scopeActive`). **Mai** su `XotBaseModel`: rompe `Meetup\Event::scopePublished` (status ≠ published_at) |
 | `HasCustomRelations` | gia' su `XotBaseModel` (consumer piattaforma) |
 | `HasSchemalessAttributes` (Xot) | wired su `BaseExtra` (Spatie resta su Profile) |
 | `HasNotificationRateLimiting` / `Tracking` | wired su `GenericNotification` |

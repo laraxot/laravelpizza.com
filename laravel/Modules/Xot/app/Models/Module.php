@@ -9,6 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\ModuleFactory;
+use Modules\Xot\Models\Traits\HasCommonScopes;
 use Modules\Xot\Models\Traits\ModuleStatus;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
@@ -66,6 +67,7 @@ use function Safe\json_encode;
  */
 final class Module extends BaseModel
 {
+    use HasCommonScopes;
     use ModuleStatus;
     use Sushi;
 

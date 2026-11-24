@@ -88,8 +88,8 @@ return [
         'title' => 'Privacy policy',
         'description' => 'How we handle your personal data.',
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
+    'label' => 'Profile',
+    'plural_label' => 'Profiles',
     'delete_account' => [
         'title' => 'Delete Account',
         'description' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Before proceeding, please download any data you wish to retain.',

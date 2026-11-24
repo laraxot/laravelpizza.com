@@ -189,7 +189,7 @@ return [
         ],
     ],
     'users_chart' => [
-        'heading' => 'Users',
+        'heading' => 'New users',
         'label' => 'New users',
     ],
 ];
